@@ -215,7 +215,7 @@ export default function HomePage() {
           </div>
 
           <div className="bento">
-            <Link href="/article/rainy-2yo-home-play" className="pick pick-a">
+            <Link href="/article/amenohi-ie-asobi-2-3sai" className="pick pick-a">
               <span className="ribbon">Featured</span>
               <div className="thumb" />
               <div className="body">
@@ -224,7 +224,7 @@ export default function HomePage() {
                   <span className="meta-chip sky">雨OK</span>
                   <span className="meta-chip sage">家</span>
                 </div>
-                <h3>雨の日、2歳と家でできる10分遊び。家にあるものだけで7つ。</h3>
+                <h3>雨の日の家遊び10選（2〜3歳）。準備10分で集中30分。</h3>
               </div>
             </Link>
 
@@ -239,10 +239,10 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/article/babycar-lunch-kichijoji" className="pick pick-c">
+            <Link href="/article/shumatsu-ranchi-kodzure" className="pick pick-c">
               <div className="thumb" />
               <div className="body">
-                <h3>吉祥寺ベビーカーOKランチ9選</h3>
+                <h3>予約不要の子連れランチ選び方</h3>
                 <div className="meta">
                   <span className="meta-chip clay">0〜1歳</span>
                   <span className="meta-chip sky">外</span>
@@ -250,10 +250,10 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/article/indoor-spot-tokyo" className="pick pick-d">
+            <Link href="/article/amenohi-indoor-spots-tokyo-15" className="pick pick-d">
               <div className="thumb" />
               <div className="body">
-                <h3>雨でも行ける東京の屋内10か所</h3>
+                <h3>雨でも行ける東京の屋内15か所</h3>
                 <div className="meta">
                   <span className="meta-chip sky">雨OK</span>
                   <span className="meta-chip sage">屋内</span>
@@ -261,10 +261,10 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/article/craft-4yo-home" className="pick pick-e">
+            <Link href="/article/kousaku-4-6sai-10pattern" className="pick pick-e">
               <div className="thumb" />
               <div className="body">
-                <h3>4〜5歳の雨の日工作6つ</h3>
+                <h3>4〜6歳の工作10パターン</h3>
                 <div className="meta">
                   <span className="meta-chip clay">4〜6歳</span>
                   <span className="meta-chip sage">家</span>
@@ -272,10 +272,10 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/article/tsukareta-hi-saitekikai" className="pick pick-f">
+            <Link href="/article/wanope-yoru-kirinukekata" className="pick pick-f">
               <div className="thumb" />
               <div className="body">
-                <h3>疲れた日のための「やらないこと」</h3>
+                <h3>ワンオペ夜の切り抜け方</h3>
                 <div className="meta">
                   <span className="meta-chip ochre">平日夜</span>
                   <span className="meta-chip sage">家</span>
@@ -305,26 +305,13 @@ export default function HomePage() {
             </div>
 
             <div className="seasonal-grid">
-              <Link href="/article/nyuuen-junbi-list" className="seasonal-card">
-                <span className="tag-s">Apr · 入園準備</span>
-                <h3>入園準備リスト。<br />名前つけ・持ち物の完全版</h3>
-                <div className="meta-s">0〜3歳</div>
-              </Link>
-              <Link href="/article/kodure-hanami-tokyo" className="seasonal-card">
-                <span className="tag-s">Apr · 花見</span>
-                <h3>子連れで行ける<br />東京の花見スポット</h3>
-                <div className="meta-s">0〜6歳</div>
-              </Link>
-              <Link href="/article/gw-kodure-tokyo" className="seasonal-card">
-                <span className="tag-s">May · GW</span>
-                <h3>ゴールデンウィーク<br />疲れない家族計画</h3>
-                <div className="meta-s">全年齢</div>
-              </Link>
-              <Link href="/article/kodomo-no-hi-kyaraben" className="seasonal-card">
-                <span className="tag-s">May · 端午の節句</span>
-                <h3>こどもの日<br />簡単キャラ弁と飾り</h3>
-                <div className="meta-s">2〜6歳</div>
-              </Link>
+              {getSeasonalPicks(month).map((p) => (
+                <Link key={p.slug} href={`/article/${p.slug}`} className="seasonal-card">
+                  <span className="tag-s">{p.tag}</span>
+                  <h3 dangerouslySetInnerHTML={{ __html: p.title }} />
+                  <div className="meta-s">{p.age}</div>
+                </Link>
+              ))}
             </div>
           </div>
         </div>
@@ -343,12 +330,12 @@ export default function HomePage() {
             </div>
 
             <div className="concerns">
-              <Concern num="01" title="雨の日で詰んでいる" desc="屋内スポット・家遊び・代替案を年齢別に" href="/issue/rainy-day" />
-              <Concern num="02" title="平日夜が回らない" desc="15分ごはん・保育園後の段取り・寝かしつけ" href="/issue/heijitsu-yoru" />
-              <Concern num="03" title="子連れ外出で失敗したくない" desc="ベビーカー・子ども椅子・おむつ替え台あり" href="/issue/shippai-shinai" />
-              <Concern num="04" title="家で何して遊ぶか決まらない" desc="10分でできる・家にあるもので・準備1分" href="/issue/home-play" />
-              <Concern num="05" title="今日のごはんが決まらない" desc="時短・子どもが食べる・宅食・ミールキット" href="/issue/dinner" />
-              <Concern num="06" title="休日の予定が立たない" desc="年齢別・天気別・半日で戻れる・疲れない" href="/issue/weekend" />
+              <Concern num="01" title="雨の日で詰んでいる" desc="屋内スポット・家遊び・代替案を年齢別に" href="/today?weather=rain&place=home&age=2-3" />
+              <Concern num="02" title="平日夜が回らない" desc="15分ごはん・保育園後の段取り・寝かしつけ" href="/today?day=weekday&duration=60&place=home" />
+              <Concern num="03" title="子連れ外出で失敗したくない" desc="ベビーカー・子ども椅子・おむつ替え台あり" href="/today?place=outside&duration=120&age=0-1" />
+              <Concern num="04" title="家で何して遊ぶか決まらない" desc="10分でできる・家にあるもので・準備1分" href="/today?place=home&duration=15&age=2-3" />
+              <Concern num="05" title="今日のごはんが決まらない" desc="時短・子どもが食べる・宅食・ミールキット" href="/category/today-taberu" />
+              <Concern num="06" title="休日の予定が立たない" desc="年齢別・天気別・半日で戻れる・疲れない" href="/today?day=holiday&duration=240" />
             </div>
           </div>
         </div>
@@ -448,6 +435,87 @@ export default function HomePage() {
   );
 }
 
+// 月ごとの季節記事プール。各月4件。全て実在するslugのみ。
+type SeasonalPick = { slug: string; tag: string; title: string; age: string };
+const SEASONAL_POOL: Record<number, SeasonalPick[]> = {
+  1: [
+    { slug: 'oshougatsu-kodomo-sugoshikata', tag: 'Jan · 正月', title: 'お正月の過ごし方<br />子連れで何する？', age: '1〜6歳' },
+    { slug: 'hatsuzekku-sugoshikata', tag: 'Jan · 初節句', title: '初節句の過ごし方と<br />準備リスト', age: '0〜1歳' },
+    { slug: 'amenohi-ie-asobi-2-3sai', tag: 'Jan · 家遊び', title: '冬の家遊び10選<br />（2〜3歳）', age: '2〜3歳' },
+    { slug: 'kodomo-no-kaze-hatsunetsu-taiou', tag: 'Jan · 風邪対応', title: '子の発熱<br />対応チェックリスト', age: '0〜6歳' },
+  ],
+  2: [
+    { slug: 'hatsuzekku-sugoshikata', tag: 'Feb · 初節句', title: '初節句の過ごし方と<br />準備リスト', age: '0〜1歳' },
+    { slug: 'chiiku-asobi-ie-de-10', tag: 'Feb · 家遊び', title: '家でできる知育遊び<br />10選', age: '1〜4歳' },
+    { slug: 'kodomo-no-kaze-hatsunetsu-taiou', tag: 'Feb · 感染症', title: '子の発熱<br />対応チェックリスト', age: '0〜6歳' },
+    { slug: 'amenohi-indoor-spots-tokyo-15', tag: 'Feb · 屋内', title: '屋内キッズスポット<br />東京15選', age: '0〜6歳' },
+  ],
+  3: [
+    { slug: 'youchien-nyuuen-junbi-list', tag: 'Mar · 入園準備', title: '入園準備リスト。<br />名前つけ・持ち物の完全版', age: '0〜3歳' },
+    { slug: 'sakura-ohanami-kodzure-spots', tag: 'Mar · 花見', title: '子連れで行ける<br />東京の花見スポット', age: '0〜6歳' },
+    { slug: 'ohanami-keikaku-junbi', tag: 'Mar · 花見準備', title: 'お花見の計画と<br />持ち物チェックリスト', age: '0〜6歳' },
+    { slug: 'youji-naraigoto-nansai-kara', tag: 'Mar · 習い事', title: '幼児の習い事<br />何歳から始める？', age: '2〜6歳' },
+  ],
+  4: [
+    { slug: 'youchien-nyuuen-junbi-list', tag: 'Apr · 入園準備', title: '入園準備リスト。<br />名前つけ・持ち物の完全版', age: '0〜3歳' },
+    { slug: 'sakura-ohanami-kodzure-spots', tag: 'Apr · 花見', title: '子連れで行ける<br />東京の花見スポット', age: '0〜6歳' },
+    { slug: 'kosodate-muryou-spots-tokyo', tag: 'Apr · GW', title: 'GWも行ける<br />東京の無料スポット15選', age: '全年齢' },
+    { slug: 'kodomo-no-hi-kyaraben', tag: 'May · 端午の節句', title: 'こどもの日<br />簡単キャラ弁と飾り', age: '2〜6歳' },
+  ],
+  5: [
+    { slug: 'kodomo-no-hi-kyaraben', tag: 'May · 端午の節句', title: 'こどもの日<br />簡単キャラ弁と飾り', age: '2〜6歳' },
+    { slug: 'kosodate-muryou-spots-tokyo', tag: 'May · GW', title: 'GWも行ける<br />東京の無料スポット15選', age: '全年齢' },
+    { slug: 'hatsuzekku-sugoshikata', tag: 'May · 初節句', title: '初節句の過ごし方と<br />準備リスト', age: '0〜1歳' },
+    { slug: 'puuru-mizuasobi-debut', tag: 'May · 水遊び', title: 'プール・水遊び<br />デビューガイド', age: '1〜4歳' },
+  ],
+  6: [
+    { slug: 'amenohi-ie-asobi-2-3sai', tag: 'Jun · 梅雨', title: '雨の日の家遊び<br />10選（2〜3歳）', age: '2〜3歳' },
+    { slug: 'amenohi-ie-asobi-4-6sai', tag: 'Jun · 梅雨', title: '雨の日の家遊び<br />（4〜6歳）', age: '4〜6歳' },
+    { slug: 'amenohi-indoor-spots-tokyo-15', tag: 'Jun · 屋内', title: '屋内キッズスポット<br />東京15選', age: '0〜6歳' },
+    { slug: 'puuru-mizuasobi-debut', tag: 'Jun · 水遊び', title: 'プール・水遊び<br />デビューガイド', age: '1〜4歳' },
+  ],
+  7: [
+    { slug: 'tanabata-kazari-sakusei', tag: 'Jul · 七夕', title: '七夕飾りの作り方<br />（2〜6歳）', age: '2〜6歳' },
+    { slug: 'natsumatsuri-kodzure-koryaku', tag: 'Jul · 夏祭り', title: '夏祭りの子連れ攻略<br />持ち物と動線', age: '0〜6歳' },
+    { slug: 'puuru-mizuasobi-debut', tag: 'Jul · 水遊び', title: 'プール・水遊び<br />デビューガイド', age: '1〜4歳' },
+    { slug: 'moushobi-suzushii-spots', tag: 'Jul · 猛暑', title: '猛暑日ベビーカーで<br />行ける涼しい屋内', age: '0〜6歳' },
+  ],
+  8: [
+    { slug: 'natsumatsuri-kodzure-koryaku', tag: 'Aug · 夏祭り', title: '夏祭りの子連れ攻略<br />持ち物と動線', age: '0〜6歳' },
+    { slug: 'moushobi-suzushii-spots', tag: 'Aug · 猛暑', title: '猛暑日ベビーカーで<br />行ける涼しい屋内', age: '0〜6歳' },
+    { slug: 'puuru-mizuasobi-debut', tag: 'Aug · 水遊び', title: 'プール・水遊び<br />デビューガイド', age: '1〜4歳' },
+    { slug: 'amenohi-indoor-spots-tokyo-15', tag: 'Aug · 屋内', title: '屋内キッズスポット<br />東京15選', age: '0〜6歳' },
+  ],
+  9: [
+    { slug: 'undoukai-motimono-list', tag: 'Sep · 運動会', title: '運動会の持ち物<br />チェックリスト', age: '3〜6歳' },
+    { slug: 'undoukai-obento-jitan-recipe', tag: 'Sep · 運動会', title: '運動会のお弁当<br />時短レシピ', age: '3〜6歳' },
+    { slug: 'shizen-spot-tokyo-youji', tag: 'Sep · 自然', title: '東京の自然スポット<br />10選', age: '3〜6歳' },
+    { slug: 'sakura-ohanami-kodzure-spots', tag: 'Sep · お出かけ', title: '秋の公園デート<br />ベスト候補', age: '0〜6歳' },
+  ],
+  10: [
+    { slug: 'halloween-kodzure-events-2026', tag: 'Oct · ハロウィン', title: '子連れハロウィンイベント<br />2026', age: '2〜6歳' },
+    { slug: 'halloween-kasou-junbi', tag: 'Oct · ハロウィン', title: 'ハロウィン仮装の<br />準備と100均活用', age: '1〜6歳' },
+    { slug: 'undoukai-motimono-list', tag: 'Oct · 運動会', title: '運動会の持ち物<br />チェックリスト', age: '3〜6歳' },
+    { slug: 'shichigosan-nenrei-junbi', tag: 'Nov · 七五三', title: '七五三の年齢と<br />準備ガイド', age: '3〜7歳' },
+  ],
+  11: [
+    { slug: 'shichigosan-nenrei-junbi', tag: 'Nov · 七五三', title: '七五三の年齢と<br />準備ガイド', age: '3〜7歳' },
+    { slug: 'amenohi-ie-asobi-4-6sai', tag: 'Nov · 家遊び', title: '秋冬の家遊び<br />（4〜6歳）', age: '4〜6歳' },
+    { slug: 'shizen-spot-tokyo-youji', tag: 'Nov · 紅葉', title: '紅葉も楽しめる<br />東京の自然スポット', age: '3〜6歳' },
+    { slug: 'xmas-market-kodzure', tag: 'Nov · XMas', title: '子連れクリスマスマーケット<br />攻略ガイド', age: '1〜6歳' },
+  ],
+  12: [
+    { slug: 'xmas-present-nenrei-0-6', tag: 'Dec · XMas', title: 'クリスマスプレゼント<br />年齢別（0〜6歳）', age: '0〜6歳' },
+    { slug: 'xmas-market-kodzure', tag: 'Dec · XMas', title: '子連れクリスマスマーケット<br />攻略ガイド', age: '1〜6歳' },
+    { slug: 'oshougatsu-kodomo-sugoshikata', tag: 'Dec · 年末年始', title: 'お正月の過ごし方<br />子連れで何する？', age: '1〜6歳' },
+    { slug: 'amenohi-ie-asobi-2-3sai', tag: 'Dec · 家遊び', title: '冬の家遊び10選<br />（2〜3歳）', age: '2〜3歳' },
+  ],
+};
+
+function getSeasonalPicks(month: number): SeasonalPick[] {
+  return SEASONAL_POOL[month] ?? SEASONAL_POOL[4];
+}
+
 function Concern({ num, title, desc, href }: { num: string; title: string; desc: string; href: string }) {
   return (
     <Link href={href} className="concern">
@@ -461,17 +529,17 @@ function Concern({ num, title, desc, href }: { num: string; title: string; desc:
 }
 
 const OUTING_TAGS = [
-  { label: 'ベビーカーOK', href: '/tag/babycar' },
-  { label: '雨でもいける', href: '/tag/rain-ok' },
-  { label: '子ども椅子あり', href: '/tag/kids-chair' },
-  { label: 'おむつ替え台', href: '/tag/diaper-table' },
-  { label: 'ワンオペ向き', href: '/tag/onep-friendly' },
-  { label: '兄弟連れ向き', href: '/tag/brothers-ok' },
-  { label: 'ランチしやすい', href: '/tag/lunch-friendly' },
-  { label: '屋内', href: '/tag/indoor' },
-  { label: '猛暑日OK', href: '/tag/heat-ok' },
-  { label: '駅近', href: '/tag/close' },
-  { label: 'エレベーター有', href: '/tag/elevator' },
+  { label: 'ベビーカー選び', href: '/article/babycar-ranking-2026' },
+  { label: '雨でもいける', href: '/today?weather=rain&place=outside' },
+  { label: '屋内キッズスポット', href: '/article/amenohi-indoor-spots-tokyo-15' },
+  { label: '猛暑日OK', href: '/article/moushobi-suzushii-spots' },
+  { label: '自然・公園', href: '/article/shizen-spot-tokyo-youji' },
+  { label: '無料スポット', href: '/article/kosodate-muryou-spots-tokyo' },
+  { label: '子連れランチ', href: '/article/shumatsu-ranchi-kodzure' },
+  { label: 'お花見', href: '/article/sakura-ohanami-kodzure-spots' },
+  { label: '0-1歳と外出', href: '/article/akachan-odekake-3months-1year' },
+  { label: 'ベビーカー選び方', href: '/article/babycar-erabikata' },
+  { label: '抱っこ紐選び方', href: '/article/dakkohimo-ranking-2026' },
 ];
 
 const CATEGORIES = [
