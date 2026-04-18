@@ -7,6 +7,7 @@ categoryName: 季節と行事
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
 hero: https://images.unsplash.com/photo-1542840410-3092f99611a3?auto=format&fit=crop&w=1600&h=900&q=80
+area: "all"
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]
   place: ["park"]

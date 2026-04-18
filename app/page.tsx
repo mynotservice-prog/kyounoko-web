@@ -5,16 +5,14 @@ import { SiteFooter } from '@/components/layout/SiteFooter';
 import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
 import { TodayFinder } from '@/components/top/TodayFinder';
 import { getAllFileArticles } from '@/lib/articles';
+import { getTokyoNow, formatJaLong, monthNameEn } from '@/lib/date';
 
-export const revalidate = 3600; // 1時間ごとに再生成
+export const revalidate = 3600;
 
-// Homepage は layout の default title をそのまま使うので title は上書きしない
-// ただし canonical は明示する（template 上書きで title は layout 側の default のまま）
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
 };
 
-// MicroCMS カテゴリ slug → 日本語名フォールバック
 const CATEGORY_LABEL: Record<string, string> = {
   'today-doko': '今日どこ行く',
   'today-nani': '今日何する',
@@ -29,22 +27,21 @@ const CATEGORY_LABEL: Record<string, string> = {
 };
 
 export default function HomePage() {
-  // Dynamic date for hero's today card
-  const now = new Date();
-  const month = now.getMonth() + 1;
-  const day = now.getDate();
-  const weekday = ['日', '月', '火', '水', '木', '金', '土'][now.getDay()];
-  const dateLine = `${month}月${day}日（${weekday}）`;
-  const monthsEn = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const now = getTokyoNow();
+  const month = now.month;
+  const day = now.day;
+  const dateLine = formatJaLong(now);
+  const monthEn = monthNameEn(now);
 
-  // 最新記事（ファイルベース）
-  const latestArticles = getAllFileArticles().slice(0, 6);
+  const latestArticles = getAllFileArticles().slice(0, 4);
 
   return (
     <>
       <SiteHeader showLiveChip />
 
-      {/* Hero */}
+      {/* ======================================================================
+          First view — Hero + TodayFinder に集中
+          ====================================================================== */}
       <section className="hero">
         <div className="container">
           <div className="hero-grid">
@@ -53,17 +50,16 @@ export default function HomePage() {
               <h1>
                 <span>親の毎日を、</span><br />
                 <span className="accent">ちょっと軽く</span><span>。</span>
-                <span className="small">
-                  子育て家庭の「今日どうする？」を、<br />
-                  条件から3分で決めるサイトです。
-                </span>
               </h1>
-              <p className="lead">
-                0〜6歳の子と過ごす毎日は、選択が多すぎる。天気、年齢、時間、予算、余裕度。きょうのこは、その条件から今日の答えをひとつだけ返します。情報を増やさず、選択肢を絞る。それだけ。
+              <p className="lead" style={{ marginTop: 24 }}>
+                子育て家庭の「今日どうする？」を、条件から3分で決めるサイトです。
+                0〜6歳の子と過ごす毎日は、選択が多すぎる。天気、年齢、時間、予算、余裕度。
+                きょうのこは、その条件から<strong>今日の答えをひとつだけ</strong>返します。
+                情報を増やさず、選択肢を絞る。それだけ。
               </p>
               <div className="hero-actions">
                 <Link href="#finder" className="btn-primary">
-                  条件で探す
+                  条件を入れる
                   <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M5 12h14" />
                     <path d="m12 5 7 7-7 7" />
@@ -78,14 +74,14 @@ export default function HomePage() {
             <div className="today-card">
               <div className="label">Today / 今日</div>
               <div className="date-line">{dateLine}</div>
-              <div className="date-meta">{monthsEn[now.getMonth()]}</div>
+              <div className="date-meta">{monthEn}</div>
               <div className="hint-rows">
-                <div className="hint-row"><span className="key">時間帯</span><span className="val">夕方〜夜</span></div>
-                <div className="hint-row"><span className="key">おすすめ</span><span className="val">家で過ごす</span></div>
-                <div className="hint-row"><span className="key">今夜のヒント</span><span className="val">保育園後15分ごはん</span></div>
+                <div className="hint-row"><span className="key">提案</span><span className="val">条件を入れる</span></div>
+                <div className="hint-row"><span className="key">結果</span><span className="val">答えは1つだけ</span></div>
+                <div className="hint-row"><span className="key">時間</span><span className="val">3分で決まる</span></div>
               </div>
               <Link href="#finder" className="cta">
-                <span>今日の候補を見る</span>
+                <span>今日の答えを出す</span>
                 <span className="arrow">
                   <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M5 12h14" />
@@ -98,14 +94,145 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Finder */}
+      {/* ======================================================================
+          Finder — これがこのサイトの主役
+          ====================================================================== */}
       <div className="container">
         <div className="finder-wrap">
           <TodayFinder />
         </div>
       </div>
 
-      {/* Latest Articles */}
+      {/* ======================================================================
+          今月の季節と行事（時期性がコンセプトと合致するので残す）
+          ====================================================================== */}
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="container">
+          <div className="seasonal-panel">
+            <div className="seasonal-head">
+              <div className="side">
+                <span className="month-num">{month}</span>
+                <div>
+                  <span className="eyebrow">Seasonal</span>
+                  <h2 style={{ marginTop: 6 }}>今月の季節と行事</h2>
+                  <div className="month-label" style={{ marginTop: 4 }}>{monthEn} · {month}月</div>
+                </div>
+              </div>
+              <Link href="/category/gyouji" className="btn-ghost" style={{ borderColor: 'var(--clay)', color: 'var(--clay-deep)', whiteSpace: 'nowrap' }}>
+                一年を見る
+              </Link>
+            </div>
+
+            <div className="seasonal-grid">
+              {getSeasonalPicks(month).map((p) => (
+                <Link key={p.slug} href={`/article/${p.slug}`} className="seasonal-card">
+                  <span className="tag-s">{p.tag}</span>
+                  <h3 dangerouslySetInnerHTML={{ __html: p.title }} />
+                  <div className="meta-s">{p.age}</div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ======================================================================
+          今日の「困ったから」—— 最重要条件のみプリセット、残りはユーザー入力
+          ====================================================================== */}
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="container">
+          <div className="concerns-wrap">
+            <div className="section-head" style={{ borderBottom: 0, marginBottom: 24, paddingBottom: 0 }}>
+              <div>
+                <span className="eyebrow">By concern</span>
+                <h2>今日の「困った」から</h2>
+              </div>
+              <span className="hint">Index / 01〜06</span>
+            </div>
+
+            <div className="concerns">
+              <Concern num="01" title="雨の日で詰んでいる" desc="屋内スポット・家遊び・代替案を条件で絞る" href="/today?weather=rain&place=home" />
+              <Concern num="02" title="平日夜が回らない" desc="15分ごはん・保育園後の段取り・寝かしつけ" href="/today?day=weekday&duration=60&place=home" />
+              <Concern num="03" title="子連れ外出で失敗したくない" desc="ベビーカー・子ども椅子・おむつ替え台あり" href="/today?place=outside" />
+              <Concern num="04" title="家で何して遊ぶか決まらない" desc="10分でできる・家にあるもので・準備1分" href="/today?place=home&duration=15" />
+              <Concern num="05" title="今日のごはんが決まらない" desc="時短・子どもが食べる・宅食・ミールキット" href="/category/today-taberu" />
+              <Concern num="06" title="休日の予定が立たない" desc="年齢別・天気別・半日で戻れる・疲れない" href="/today?day=holiday&duration=240" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ======================================================================
+          カテゴリ（全体マップ。引き続き残す）
+          ====================================================================== */}
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="container">
+          <div className="section-head">
+            <div>
+              <span className="eyebrow">All categories</span>
+              <h2>カテゴリ</h2>
+            </div>
+            <span className="hint">07 sections</span>
+          </div>
+
+          <div className="cat-index">
+            {CATEGORIES.map((cat, i) => (
+              <Link key={cat.slug} href={cat.href} className="cat-item">
+                <span className="cat-idx">{String(i + 1).padStart(2, '0')}</span>
+                <span>
+                  <div className="cat-name">{cat.name}</div>
+                  <div className="cat-desc">{cat.desc}</div>
+                </span>
+                <svg className="cat-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ======================================================================
+          Warm panel — ブランド体験強化
+          ====================================================================== */}
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="container">
+          <div className="warm-panel">
+            <div className="warm-image" role="img" aria-label="あたたかな家庭のイメージ" />
+            <div className="warm-text">
+              <span className="eyebrow">For you</span>
+              <h2>
+                毎日、選ぶことが<br />多すぎる。<br />
+                <span className="accent">その一部を、</span>ちょっとだけ軽く。
+              </h2>
+              <p>子育て中の毎日は、小さな決定の連続です。今日の過ごし方、今夜のごはん、明日の準備。きょうのこは、その一部を引き受けます。</p>
+              <ul className="for-list">
+                <li>共働きで、保育園後の夕飯に毎日困っている</li>
+                <li>雨の日や猛暑日に、代替案が思い浮かばない</li>
+                <li>初めての子育てで、毎日の判断が重い</li>
+                <li>ワンオペで、外出の動線設計が大変</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="voices-strip">
+            <div className="voice-scene voice-s-1">
+              <div className="vline">小さな手を握って歩く、<br />今日の数分を大切にしたい。</div>
+            </div>
+            <div className="voice-scene voice-s-2">
+              <div className="vline">帰ってきて、すぐに<br />ごはんを出せる日。</div>
+            </div>
+            <div className="voice-scene voice-s-3">
+              <div className="vline">疲れた日は、<br />疲れたままでいい。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ======================================================================
+          最新の記事（補足。主役ではないのでフッター近くに移動）
+          ====================================================================== */}
       {latestArticles.length > 0 && (
         <section className="section" style={{ paddingTop: 0 }}>
           <div className="container">
@@ -182,26 +309,6 @@ export default function HomePage() {
                     >
                       {a.title}
                     </h3>
-                    <div
-                      style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        gap: 6,
-                        marginTop: 'auto',
-                      }}
-                    >
-                      {a.quickInfo?.ageRanges?.slice(0, 1).map((age) => (
-                        <span key={age} className="meta-chip clay">{age}歳</span>
-                      ))}
-                      {a.quickInfo?.durationMin ? (
-                        <span className="meta-chip ochre">{a.quickInfo.durationMin}分</span>
-                      ) : null}
-                      {a.quickInfo?.place?.slice(0, 1).map((p) => (
-                        <span key={p} className="meta-chip sage">
-                          {p === 'home' ? '家' : p === 'indoor' ? '屋内' : '外'}
-                        </span>
-                      ))}
-                    </div>
                   </div>
                 </Link>
               ))}
@@ -210,228 +317,26 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* Today's Picks */}
-      <section className="section" style={{ paddingTop: 0 }}>
-        <div className="container">
-          <div className="section-head">
-            <div>
-              <span className="eyebrow">Today&apos;s picks</span>
-              <h2>今日のおすすめ</h2>
-            </div>
-            <span className="hint">{monthsEn[now.getMonth()]} {day}, {now.getFullYear()}</span>
-          </div>
-
-          <div className="bento">
-            <Link href="/article/amenohi-ie-asobi-2-3sai" className="pick pick-a">
-              <span className="ribbon">Featured</span>
-              <div className="thumb" />
-              <div className="body">
-                <div className="meta" style={{ marginBottom: 12 }}>
-                  <span className="meta-chip clay">2〜3歳</span>
-                  <span className="meta-chip sky">雨OK</span>
-                  <span className="meta-chip sage">家</span>
-                </div>
-                <h3>雨の日の家遊び10選（2〜3歳）。準備10分で集中30分。</h3>
-              </div>
-            </Link>
-
-            <Link href="/article/hoikuen-kaeri-15min" className="pick pick-b">
-              <div className="thumb" />
-              <div className="body">
-                <h3>保育園帰りの15分ごはん</h3>
-                <div className="meta">
-                  <span className="meta-chip clay">2〜3歳</span>
-                  <span className="meta-chip ochre">平日夜</span>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/article/shumatsu-ranchi-kodzure" className="pick pick-c">
-              <div className="thumb" />
-              <div className="body">
-                <h3>予約不要の子連れランチ選び方</h3>
-                <div className="meta">
-                  <span className="meta-chip clay">0〜1歳</span>
-                  <span className="meta-chip sky">外</span>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/article/amenohi-indoor-spots-tokyo-15" className="pick pick-d">
-              <div className="thumb" />
-              <div className="body">
-                <h3>雨でも行ける東京の屋内15か所</h3>
-                <div className="meta">
-                  <span className="meta-chip sky">雨OK</span>
-                  <span className="meta-chip sage">屋内</span>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/article/kousaku-4-6sai-10pattern" className="pick pick-e">
-              <div className="thumb" />
-              <div className="body">
-                <h3>4〜6歳の工作10パターン</h3>
-                <div className="meta">
-                  <span className="meta-chip clay">4〜6歳</span>
-                  <span className="meta-chip sage">家</span>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/article/wanope-yoru-kirinukekata" className="pick pick-f">
-              <div className="thumb" />
-              <div className="body">
-                <h3>ワンオペ夜の切り抜け方</h3>
-                <div className="meta">
-                  <span className="meta-chip ochre">平日夜</span>
-                  <span className="meta-chip sage">家</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Seasonal Panel */}
-      <section className="section" style={{ paddingTop: 0 }}>
-        <div className="container">
-          <div className="seasonal-panel">
-            <div className="seasonal-head">
-              <div className="side">
-                <span className="month-num">{month}</span>
-                <div>
-                  <span className="eyebrow">Seasonal</span>
-                  <h2 style={{ marginTop: 6 }}>今月の季節と行事</h2>
-                  <div className="month-label" style={{ marginTop: 4 }}>{monthsEn[now.getMonth()]} · {month}月</div>
-                </div>
-              </div>
-              <Link href="/category/gyouji" className="btn-ghost" style={{ borderColor: 'var(--clay)', color: 'var(--clay-deep)', whiteSpace: 'nowrap' }}>
-                一年を見る
-              </Link>
-            </div>
-
-            <div className="seasonal-grid">
-              {getSeasonalPicks(month).map((p) => (
-                <Link key={p.slug} href={`/article/${p.slug}`} className="seasonal-card">
-                  <span className="tag-s">{p.tag}</span>
-                  <h3 dangerouslySetInnerHTML={{ __html: p.title }} />
-                  <div className="meta-s">{p.age}</div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Concerns */}
-      <section className="section" style={{ paddingTop: 0 }}>
-        <div className="container">
-          <div className="concerns-wrap">
-            <div className="section-head" style={{ borderBottom: 0, marginBottom: 24, paddingBottom: 0 }}>
-              <div>
-                <span className="eyebrow">By concern</span>
-                <h2>今日の「困った」から</h2>
-              </div>
-              <span className="hint">Index / 01〜06</span>
-            </div>
-
-            <div className="concerns">
-              <Concern num="01" title="雨の日で詰んでいる" desc="屋内スポット・家遊び・代替案を年齢別に" href="/today?weather=rain&place=home&age=2-3" />
-              <Concern num="02" title="平日夜が回らない" desc="15分ごはん・保育園後の段取り・寝かしつけ" href="/today?day=weekday&duration=60&place=home" />
-              <Concern num="03" title="子連れ外出で失敗したくない" desc="ベビーカー・子ども椅子・おむつ替え台あり" href="/today?place=outside&duration=120&age=0-1" />
-              <Concern num="04" title="家で何して遊ぶか決まらない" desc="10分でできる・家にあるもので・準備1分" href="/today?place=home&duration=15&age=2-3" />
-              <Concern num="05" title="今日のごはんが決まらない" desc="時短・子どもが食べる・宅食・ミールキット" href="/category/today-taberu" />
-              <Concern num="06" title="休日の予定が立たない" desc="年齢別・天気別・半日で戻れる・疲れない" href="/today?day=holiday&duration=240" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Outing filter */}
+      {/* ======================================================================
+          失敗しない外出（ショートカット集。主役ではないのでフッター近く）
+          ====================================================================== */}
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="outing-panel">
             <div className="section-head" style={{ borderBottom: 0, marginBottom: 0, paddingBottom: 0 }}>
               <div>
-                <span className="eyebrow">Filter by</span>
+                <span className="eyebrow">Shortcuts</span>
                 <h2>失敗しない外出</h2>
               </div>
-              <span className="hint">Tag-based</span>
+              <span className="hint">Quick access</span>
             </div>
             <div className="outing-chips">
-              {OUTING_TAGS.map(tag => (
+              {OUTING_TAGS.map((tag) => (
                 <Link key={tag.href} href={tag.href} className="outing-chip">
                   {tag.label}
                 </Link>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Age picker - TODO: /age/* ページ未実装のため一時非表示 */}
-
-      {/* Warm Panel */}
-      <section className="section" style={{ paddingTop: 0 }}>
-        <div className="container">
-          <div className="warm-panel">
-            <div className="warm-image" role="img" aria-label="あたたかな家庭のイメージ" />
-            <div className="warm-text">
-              <span className="eyebrow">For you</span>
-              <h2>
-                毎日、選ぶことが<br />多すぎる。<br />
-                <span className="accent">その一部を、</span>ちょっとだけ軽く。
-              </h2>
-              <p>子育て中の毎日は、小さな決定の連続です。今日の過ごし方、今夜のごはん、明日の準備。きょうのこは、その一部を引き受けます。</p>
-              <ul className="for-list">
-                <li>共働きで、保育園後の夕飯に毎日困っている</li>
-                <li>雨の日や猛暑日に、代替案が思い浮かばない</li>
-                <li>初めての子育てで、毎日の判断が重い</li>
-                <li>ワンオペで、外出の動線設計が大変</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="voices-strip">
-            <div className="voice-scene voice-s-1">
-              <div className="vline">小さな手を握って歩く、<br />今日の数分を大切にしたい。</div>
-            </div>
-            <div className="voice-scene voice-s-2">
-              <div className="vline">帰ってきて、すぐに<br />ごはんを出せる日。</div>
-            </div>
-            <div className="voice-scene voice-s-3">
-              <div className="vline">疲れた日は、<br />疲れたままでいい。</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Categories Index */}
-      <section className="section" style={{ paddingTop: 0 }}>
-        <div className="container">
-          <div className="section-head">
-            <div>
-              <span className="eyebrow">All categories</span>
-              <h2>カテゴリ</h2>
-            </div>
-            <span className="hint">07 sections</span>
-          </div>
-
-          <div className="cat-index">
-            {CATEGORIES.map((cat, i) => (
-              <Link key={cat.slug} href={cat.href} className="cat-item">
-                <span className="cat-idx">{String(i + 1).padStart(2, '0')}</span>
-                <span>
-                  <div className="cat-name">{cat.name}</div>
-                  <div className="cat-desc">{cat.desc}</div>
-                </span>
-                <svg className="cat-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
-                </svg>
-              </Link>
-            ))}
           </div>
         </div>
       </section>
@@ -545,7 +450,6 @@ const OUTING_TAGS = [
   { label: '子連れランチ', href: '/article/shumatsu-ranchi-kodzure' },
   { label: 'お花見', href: '/article/sakura-ohanami-kodzure-spots' },
   { label: '0-1歳と外出', href: '/article/akachan-odekake-3months-1year' },
-  { label: 'ベビーカー選び方', href: '/article/babycar-erabikata' },
   { label: '抱っこ紐選び方', href: '/article/dakkohimo-ranking-2026' },
 ];
 

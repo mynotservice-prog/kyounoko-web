@@ -7,6 +7,7 @@ hero: https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&f
 metaDescription: 2026年最新ベビーカー選び方ガイド。アップリカ・コンビ・サイベックス・エアバギーを価格・重量・機能・収納性で徹底比較。新生児A型・B型・軽量セカンドまでシーン別に最適解を紹介します。
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
+area: "all"
 quickInfo:
   ageRanges: ["0-1", "1-2", "2-3"]
   place: ["outdoor"]

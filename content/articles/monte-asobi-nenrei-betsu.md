@@ -7,6 +7,7 @@ hero: https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&f
 metaDescription: モンテッソーリ教育の敏感期に基づき、0歳・1歳・2歳・3歳・4-6歳の年齢別に家でできる遊び20選を紹介。100均素材と身近な道具で再現できる具体的な手順と観察ポイント付き。
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
+area: "all"
 quickInfo:
   ageRanges: ["0-1", "1-2", "2-3", "4-6"]
   place: ["home"]

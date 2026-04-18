@@ -7,6 +7,7 @@ hero: https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&f
 metaDescription: 離乳食フリージングの基本を月齢別（5-6/7-8/9-11/12-18ヶ月）に整理。週末2時間で1週間分作り置きする手順・食材リスト・組み合わせテーブルを具体的に紹介します。
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
+area: "all"
 quickInfo:
   ageRanges: ["0-1","1-2"]
   place: ["home"]

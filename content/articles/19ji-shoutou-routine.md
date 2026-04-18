@@ -7,6 +7,7 @@ hero: https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&f
 metaDescription: 共働きで19時消灯を実現するための帰宅〜就寝までの2時間タイムライン。17時保育園迎え、18時夕食、18時30分お風呂、19時就寝の具体的な段取りと、失敗しない仕組み化のコツを紹介します。
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
+area: "all"
 quickInfo:
   ageRanges: ["1-2","2-3","4-6"]
   place: ["home"]

@@ -1,30 +1,42 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { AREAS, type AreaSlug } from '@/lib/area';
+import { useUserSettings } from '@/hooks/useUserSettings';
 
 type State = {
-  age: '0-1' | '2-3' | '4-6';
+  age?: '0-1' | '2-3' | '4-6';
   weather: 'any' | 'sunny' | 'rain' | 'heat' | 'cold';
   place: 'any' | 'home' | 'outside';
   day: 'any' | 'weekday' | 'holiday';
   duration: '15' | '60' | '120' | '240';
   budget: 'any' | 'free' | 'low' | 'mid';
+  area: AreaSlug;
 };
 
 const INITIAL: State = {
-  age: '2-3',
   weather: 'any',
   place: 'any',
   day: 'any',
   duration: '60',
   budget: 'any',
+  area: 'tokyo',
 };
 
 export function TodayFinder() {
+  const [settings, updateSettings] = useUserSettings();
   const [state, setState] = useState<State>(INITIAL);
-  const [matchCount, setMatchCount] = useState<number | null>(null);
   const router = useRouter();
+
+  // 初回マウント時に localStorage から復元
+  useEffect(() => {
+    setState((s) => ({
+      ...s,
+      area: settings.area,
+      age: settings.age ?? s.age,
+    }));
+  }, [settings.area, settings.age]);
 
   // live 日時表示（ヘッダーと同期用）
   useEffect(() => {
@@ -33,36 +45,104 @@ export function TodayFinder() {
       const d = new Date();
       const hh = String(d.getHours()).padStart(2, '0');
       const mm = String(d.getMinutes()).padStart(2, '0');
-      el.textContent = `Today · Tokyo · ${hh}:${mm}`;
+      el.textContent = `Today · ${hh}:${mm}`;
     }
   }, []);
 
   function setValue<K extends keyof State>(key: K, value: State[K]) {
-    setState(s => ({ ...s, [key]: value }));
+    setState((s) => ({ ...s, [key]: value }));
   }
 
   function submit() {
+    // 次回訪問用に area / age を保存
+    updateSettings({ area: state.area, age: state.age });
+
     const params = new URLSearchParams();
     Object.entries(state).forEach(([k, v]) => {
+      if (v === undefined || v === null) return;
+      if (k === 'area' && v === 'all') return;
       if (v !== 'any') params.set(k, String(v));
     });
     router.push(`/today?${params.toString()}`);
   }
 
   function reset() {
-    setState(INITIAL);
-    setMatchCount(null);
+    setState({ ...INITIAL, area: settings.area, age: settings.age });
   }
+
+  // エリアセレクタ（地方ブロックごとにグルーピング）
+  const areaOptions = useMemo(() => {
+    const groups: Record<string, { slug: string; name: string }[]> = {
+      'すべて': [{ slug: 'all', name: 'すべて（エリア非依存）' }],
+      '北海道・東北': [],
+      '関東': [],
+      '中部': [],
+      '関西': [],
+      '中国・四国': [],
+      '九州・沖縄': [],
+    };
+    const blockToGroup: Record<string, string> = {
+      'hokkaido-tohoku': '北海道・東北',
+      'kanto': '関東',
+      'chubu': '中部',
+      'kansai': '関西',
+      'chugoku-shikoku': '中国・四国',
+      'kyushu-okinawa': '九州・沖縄',
+    };
+    for (const a of AREAS) {
+      if (a.slug === 'all') continue;
+      // ブロック自体も候補に含める
+      if (!a.block) continue;
+      const g = blockToGroup[a.block];
+      if (g) groups[g].push({ slug: a.slug, name: a.name });
+    }
+    return groups;
+  }, []);
+
+  const placeDisablesArea = state.place === 'home'; // 家ならエリア非活性
 
   return (
     <div className="finder" id="finder">
       <div className="finder-head">
         <span className="eyebrow">03 min decision</span>
-        <h2>条件を選んで、今日の答えを。</h2>
-        <p>年齢・天気・家or外・時間・予算。あてはまるものを選べば、候補を絞り込みます。</p>
+        <h2>条件を入れたら、今日の答えを1つ返します。</h2>
+        <p>並べません、選ばせません。こちらが決めます。迷いたい時だけ「別の候補を見る」でどうぞ。</p>
       </div>
 
       <div className="finder-grid">
+        {/* エリア */}
+        <div className="field">
+          <label>エリア{placeDisablesArea && <span style={{ fontSize: 10, color: 'var(--ink-mute)', marginLeft: 6 }}>（家で過ごす場合は任意）</span>}</label>
+          <select
+            className="area-select"
+            value={state.area}
+            onChange={(e) => setValue('area', e.target.value as AreaSlug)}
+            disabled={placeDisablesArea}
+            style={{
+              padding: '10px 14px',
+              borderRadius: 999,
+              border: '1px solid var(--line)',
+              background: 'var(--paper-card)',
+              fontSize: 13,
+              fontFamily: 'inherit',
+              cursor: placeDisablesArea ? 'not-allowed' : 'pointer',
+              opacity: placeDisablesArea ? 0.5 : 1,
+            }}
+          >
+            <option value="all">すべて（エリア非依存）</option>
+            {Object.entries(areaOptions).map(([group, items]) => {
+              if (items.length === 0 || group === 'すべて') return null;
+              return (
+                <optgroup key={group} label={group}>
+                  {items.map((o) => (
+                    <option key={o.slug} value={o.slug}>{o.name}</option>
+                  ))}
+                </optgroup>
+              );
+            })}
+          </select>
+        </div>
+
         <ChipGroup
           label="子どもの年齢"
           options={[
@@ -70,8 +150,8 @@ export function TodayFinder() {
             { value: '2-3', label: '2〜3歳' },
             { value: '4-6', label: '4〜6歳' },
           ]}
-          value={state.age}
-          onChange={v => setValue('age', v as State['age'])}
+          value={state.age ?? ''}
+          onChange={(v) => setValue('age', v as State['age'])}
         />
         <ChipGroup
           label="天気"
@@ -83,7 +163,7 @@ export function TodayFinder() {
             { value: 'cold', label: '寒い' },
           ]}
           value={state.weather}
-          onChange={v => setValue('weather', v as State['weather'])}
+          onChange={(v) => setValue('weather', v as State['weather'])}
         />
         <ChipGroup
           label="家 / 外"
@@ -93,7 +173,7 @@ export function TodayFinder() {
             { value: 'outside', label: '外で' },
           ]}
           value={state.place}
-          onChange={v => setValue('place', v as State['place'])}
+          onChange={(v) => setValue('place', v as State['place'])}
         />
         <ChipGroup
           label="平日 / 休日"
@@ -103,7 +183,7 @@ export function TodayFinder() {
             { value: 'holiday', label: '休日' },
           ]}
           value={state.day}
-          onChange={v => setValue('day', v as State['day'])}
+          onChange={(v) => setValue('day', v as State['day'])}
         />
         <ChipGroup
           label="使える時間"
@@ -114,7 +194,7 @@ export function TodayFinder() {
             { value: '240', label: '1日' },
           ]}
           value={state.duration}
-          onChange={v => setValue('duration', v as State['duration'])}
+          onChange={(v) => setValue('duration', v as State['duration'])}
         />
         <ChipGroup
           label="予算感"
@@ -125,13 +205,13 @@ export function TodayFinder() {
             { value: 'mid', label: '〜5,000円' },
           ]}
           value={state.budget}
-          onChange={v => setValue('budget', v as State['budget'])}
+          onChange={(v) => setValue('budget', v as State['budget'])}
         />
       </div>
 
       <div className="finder-foot">
         <button className="btn-primary-light" onClick={submit}>
-          今日のおすすめを見る
+          今日の答えを出す
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M5 12h14" />
             <path d="m12 5 7 7-7 7" />
@@ -141,12 +221,6 @@ export function TodayFinder() {
           条件をリセット
         </button>
       </div>
-
-      {matchCount !== null && (
-        <div className="result-banner visible">
-          選択中の条件で <span className="match">{matchCount}</span> 件の候補があります。
-        </div>
-      )}
     </div>
   );
 }
@@ -163,7 +237,7 @@ function ChipGroup({ label, options, value, onChange }: ChipGroupProps) {
     <div className="field">
       <label>{label}</label>
       <div className="chip-group">
-        {options.map(opt => (
+        {options.map((opt) => (
           <button
             key={opt.value}
             type="button"

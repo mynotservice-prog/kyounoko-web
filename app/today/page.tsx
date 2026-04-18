@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
-import { getMatchedFileArticles, type TodayQuery } from '@/lib/articles';
+import { getTodayAnswer, type TodayQuery, type ArticleMatchDetail } from '@/lib/articles';
+import { getAreaName } from '@/lib/area';
 
 export const revalidate = 3600;
 
@@ -38,12 +39,93 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
 
   const suffix = parts.length ? `（${parts.join('・')}）` : '';
   return {
-    // 親 layout の template (%s｜きょうのこ) が適用されるので、ここでは本文タイトルだけ返す
-    title: `今日のおすすめ${suffix}`,
-    description: '年齢・天気・家or外・時間・予算から、今日の過ごし方の候補を絞り込んだ結果です。',
-    robots: { index: false, follow: true }, // 条件組み合わせ無限のためnoindex
+    title: `今日はこれ${suffix}`,
+    description: '条件から、今日の答えを1つだけ返します。',
+    robots: { index: false, follow: true },
     alternates: { canonical: '/today' },
   };
+}
+
+function QuickMetaRow({ article }: { article: ArticleMatchDetail['article'] }) {
+  const qi = article.quickInfo;
+  const chips: { key: string; label: string; tone: string }[] = [];
+  if (qi?.ageRanges?.[0]) chips.push({ key: 'age', label: `${qi.ageRanges[0]}歳`, tone: 'clay' });
+  if (qi?.place?.[0]) chips.push({ key: 'place', label: qi.place[0] === 'home' ? '家' : qi.place[0] === 'indoor' ? '屋内' : '外', tone: 'sage' });
+  if (qi?.durationMin) chips.push({ key: 'time', label: `${qi.durationMin}分`, tone: 'ochre' });
+  if (qi?.budget) {
+    const bm: Record<string, string> = { free: '無料', low: '〜2,000円', mid: '〜5,000円', high: '5,000円〜' };
+    chips.push({ key: 'budget', label: bm[qi.budget] ?? qi.budget, tone: 'sky' });
+  }
+  if (article.area && article.area !== 'all') {
+    chips.push({ key: 'area', label: getAreaName(article.area), tone: 'clay' });
+  }
+  return (
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+      {chips.map((c) => (
+        <span key={c.key} className={`meta-chip ${c.tone}`}>{c.label}</span>
+      ))}
+    </div>
+  );
+}
+
+function AnswerCard({ detail, featured = false }: { detail: ArticleMatchDetail; featured?: boolean }) {
+  const { article, reasons } = detail;
+  const href = `/article/${article.slug}`;
+
+  if (featured) {
+    return (
+      <article className="answer-hero">
+        <div
+          className="answer-hero-img"
+          role="img"
+          aria-label={article.title}
+          style={{
+            backgroundImage: article.hero ? `url(${article.hero})` : undefined,
+          }}
+        />
+        <div className="answer-hero-body">
+          <span className="answer-eyebrow">Today&apos;s answer — 今日はこれ。</span>
+          <h2 className="answer-title">
+            <Link href={href}>{article.title}</Link>
+          </h2>
+          {reasons.length > 0 && (
+            <ul className="answer-reasons" aria-label="今日これにする理由">
+              {reasons.slice(0, 4).map((r) => (
+                <li key={r}>{r}</li>
+              ))}
+            </ul>
+          )}
+          {article.lede && (
+            <p className="answer-lede">{article.lede}</p>
+          )}
+          <QuickMetaRow article={article} />
+          <Link href={href} className="answer-cta">
+            詳細を見る
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </Link>
+        </div>
+      </article>
+    );
+  }
+
+  // 代替候補の軽量カード
+  return (
+    <Link href={href} className="alt-card">
+      <div
+        className="alt-card-thumb"
+        style={{ backgroundImage: article.hero ? `url(${article.hero})` : undefined }}
+        role="img"
+        aria-label={article.title}
+      />
+      <div className="alt-card-body">
+        <h4 className="alt-card-title">{article.title}</h4>
+        <QuickMetaRow article={article} />
+      </div>
+    </Link>
+  );
 }
 
 export default async function TodayPage({ searchParams }: Props) {
@@ -55,13 +137,14 @@ export default async function TodayPage({ searchParams }: Props) {
     day: firstString(sp.day),
     duration: firstString(sp.duration),
     budget: firstString(sp.budget),
+    area: firstString(sp.area),
   };
 
-  const hasQuery = Object.values(query).some((v) => v);
-  const articles = hasQuery ? getMatchedFileArticles(query, 24) : [];
+  const { top, alternatives, hasQuery, fallbackUsed } = getTodayAnswer(query);
 
   const activeChips: { key: string; label: string }[] = [];
   if (query.age) activeChips.push({ key: 'age', label: labelForValue('age', query.age) });
+  if (query.area && query.area !== 'all') activeChips.push({ key: 'area', label: getAreaName(query.area) });
   if (query.weather && query.weather !== 'any') activeChips.push({ key: 'weather', label: labelForValue('weather', query.weather) });
   if (query.place && query.place !== 'any') activeChips.push({ key: 'place', label: labelForValue('place', query.place) });
   if (query.day && query.day !== 'any') activeChips.push({ key: 'day', label: labelForValue('day', query.day) });
@@ -76,115 +159,72 @@ export default async function TodayPage({ searchParams }: Props) {
         <nav className="breadcrumb" aria-label="パンくず">
           <Link href="/">HOME</Link>
           <span className="sep">/</span>
-          <span>今日のおすすめ</span>
+          <span>今日はこれ</span>
         </nav>
       </div>
 
-      <section className="section" style={{ paddingTop: 24 }}>
-        <div className="container">
-          <header className="page-head" style={{ paddingTop: 16 }}>
-            <span className="eyebrow">Today · 3min match</span>
-            <h1>今日のおすすめ</h1>
-            <p className="lead">
-              {hasQuery
-                ? `選択した条件に合う記事を${articles.length}件ピックアップしました。`
-                : '条件を選ぶと、今日の過ごし方の候補が出ます。トップページの「3分で決める」からどうぞ。'}
-            </p>
-          </header>
-
-          {/* Active filters */}
-          {activeChips.length > 0 && (
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, margin: '24px 0 12px' }} aria-label="選択中の条件">
-              {activeChips.map((c) => (
-                <span key={c.key} className="meta-chip clay" style={{ fontSize: 12 }}>
-                  {c.label}
-                </span>
-              ))}
-              <Link
-                href="/#finder"
-                style={{
-                  fontSize: 12,
-                  color: 'var(--ink-sub)',
-                  textDecoration: 'underline',
-                  alignSelf: 'center',
-                  marginLeft: 8,
-                }}
-              >
-                条件を変更する
-              </Link>
-            </div>
-          )}
+      {/* Active filters */}
+      {activeChips.length > 0 && (
+        <div className="container" style={{ marginTop: 16 }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'center' }}>
+            <span style={{ fontSize: 11, color: 'var(--ink-mute)', letterSpacing: '.12em', marginRight: 4 }}>
+              条件：
+            </span>
+            {activeChips.map((c) => (
+              <span key={c.key} className="meta-chip clay" style={{ fontSize: 12 }}>
+                {c.label}
+              </span>
+            ))}
+            <Link
+              href="/#finder"
+              style={{
+                fontSize: 12,
+                color: 'var(--ink-sub)',
+                textDecoration: 'underline',
+                marginLeft: 8,
+              }}
+            >
+              条件を変える
+            </Link>
+          </div>
         </div>
-      </section>
+      )}
 
-      <section className="section" style={{ paddingTop: 0 }}>
-        <div className="container">
+      <section className="section" style={{ paddingTop: 28 }}>
+        <div className="container-narrow">
           {!hasQuery ? (
             <div style={{ padding: '40px 0', textAlign: 'center', color: 'var(--ink-sub)' }}>
-              <p style={{ marginBottom: 20 }}>まだ条件が選ばれていません。</p>
+              <p style={{ marginBottom: 16, fontSize: 15 }}>まだ条件が選ばれていません。</p>
               <Link href="/#finder" className="btn-primary-light">条件を選ぶ</Link>
             </div>
-          ) : articles.length === 0 ? (
+          ) : !top ? (
             <div style={{ padding: '40px 0', textAlign: 'center', color: 'var(--ink-sub)' }}>
-              <p style={{ marginBottom: 20 }}>
-                条件にぴったりの記事が見つかりませんでした。条件を少しゆるめてみてください。
+              <p style={{ marginBottom: 16, fontSize: 15 }}>
+                今日の条件に合う答えは、まだ準備中です。
               </p>
               <Link href="/#finder" className="btn-primary-light">条件を変える</Link>
             </div>
           ) : (
-            <div
-              style={{
-                display: 'grid',
-                gap: 20,
-                gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-              }}
-            >
-              {articles.map((article) => (
-                <Link
-                  key={article.slug}
-                  href={`/article/${article.slug}`}
-                  style={{
-                    background: 'var(--paper-card)',
-                    border: '1px solid var(--line)',
-                    borderRadius: 'var(--radius-lg)',
-                    overflow: 'hidden',
-                    textDecoration: 'none',
-                    color: 'inherit',
-                    display: 'flex',
-                    flexDirection: 'column',
-                  }}
-                >
-                  <div
-                    style={{
-                      aspectRatio: '16/10',
-                      backgroundColor: 'var(--peach-soft)',
-                      backgroundImage: article.hero ? `url(${article.hero})` : undefined,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                    }}
-                  />
-                  <div style={{ padding: '16px 20px 22px', display: 'flex', flexDirection: 'column', gap: 10, flex: 1 }}>
-                    <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 16, fontWeight: 600, margin: 0, lineHeight: 1.55 }}>
-                      {article.title}
-                    </h3>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 'auto' }}>
-                      {article.quickInfo?.ageRanges?.slice(0, 1).map((age) => (
-                        <span key={age} className="meta-chip clay">{age}歳</span>
-                      ))}
-                      {article.quickInfo?.place?.slice(0, 1).map((p) => (
-                        <span key={p} className="meta-chip sage">{p === 'home' ? '家' : p === 'indoor' ? '屋内' : '外'}</span>
-                      ))}
-                      {article.quickInfo?.weather?.includes('rain' as never) && (
-                        <span className="meta-chip sky">雨OK</span>
-                      )}
-                      {article.quickInfo?.durationMin && (
-                        <span className="meta-chip" style={{ background: 'var(--paper-soft)' }}>{article.quickInfo.durationMin}分</span>
-                      )}
-                    </div>
+            <>
+              {fallbackUsed && (
+                <div className="fallback-note" role="status">
+                  今日の条件にぴったりの答えはまだ準備中ですが、代わりに今日できることを1つ選びました。
+                </div>
+              )}
+
+              <AnswerCard detail={top} featured />
+
+              {alternatives.length > 0 && (
+                <details className="alt-toggle">
+                  <summary>別の候補を見る（{alternatives.length}件）</summary>
+                  <div className="alt-list">
+                    {alternatives.map((alt) => (
+                      <AnswerCard key={alt.article.slug} detail={alt} />
+                    ))}
                   </div>
-                </Link>
-              ))}
-            </div>
+                </details>
+              )}
+            </>
           )}
         </div>
       </section>

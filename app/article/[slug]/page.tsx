@@ -668,6 +668,21 @@ function FileArticleView({ article }: { article: FileArticle }) {
           {/* PR 開示（該当記事のみ） */}
           {hasAffiliate && <PRBadge />}
 
+          {/* 「今日選ぶなら、これ。」— ランキング/N選/比較記事の断定ブロック */}
+          {article.itemList && article.itemList.length > 0 && (
+            <aside className="top-pick-box" aria-label="今日選ぶなら、これ">
+              <span className="top-pick-eyebrow">Today&apos;s pick — 迷ったらこれ</span>
+              <h2 className="top-pick-title">今日選ぶなら、これ。</h2>
+              <div className="top-pick-name">{article.itemList[0].name}</div>
+              {article.itemList[0].description && (
+                <p className="top-pick-desc">{article.itemList[0].description}</p>
+              )}
+              <p className="top-pick-note">
+                他の選択肢も比較したい方は、このまま本編をどうぞ。
+              </p>
+            </aside>
+          )}
+
           {/* TL;DR — AI Overview 抽出を意識した要約ボックス */}
           {article.tldr && (
             <aside className="tldr-box" aria-label="この記事の要約">

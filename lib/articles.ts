@@ -30,6 +30,8 @@ export type FileArticleMeta = {
   lede: string;
   quickInfo?: FileArticleQuickInfo;
   noindex?: boolean;
+  /** エリア絞り込み用。"all" = エリア非依存、"tokyo" 等 = 地域依存。未指定はallと同等扱い。 */
+  area?: string;
 };
 
 export type FileArticleFaq = {
@@ -96,6 +98,7 @@ function parseFrontmatter(raw: string, fallbackSlug: string): { meta: FileArticl
     lede: typeof d.lede === 'string' ? d.lede : (typeof d.metaDescription === 'string' ? d.metaDescription : ''),
     quickInfo: parseQuickInfo(d.quickInfo),
     noindex: typeof d.noindex === 'boolean' ? d.noindex : undefined,
+    area: typeof d.area === 'string' ? d.area : 'all',
   };
 
   return { meta, content };
@@ -594,79 +597,197 @@ export type TodayQuery = {
   day?: string; // "weekday" | "holiday" | "any"
   duration?: string; // "15" | "60" | "120" | "240"
   budget?: string; // "free" | "low" | "mid" | "any"
+  area?: string; // AreaSlug — "all" or 都道府県 / 地方ブロック
 };
 
-/** 記事スコア。高いほど該当。 */
-function scoreArticleForQuery(a: FileArticleMeta, q: TodayQuery): number {
-  let score = 0;
-  const qi = a.quickInfo;
-  if (!qi) return 0;
+/** スコアと一致理由（人間向け自然文）を同時に返す内部結果 */
+export type ArticleMatchDetail = {
+  article: FileArticleMeta;
+  score: number;
+  reasons: string[];
+};
 
-  // 年齢（+10 完全一致 / +3 該当なしだが近接）
-  if (q.age && qi.ageRanges?.length) {
-    if (qi.ageRanges.includes(q.age as never)) score += 10;
-    else score -= 2; // 対象外の可能性
+/**
+ * エリアマッチ判定。記事 area と user area の一致・包含を軽量に判定。
+ * - 記事側 "all" or undefined → 常にマッチ
+ * - ユーザー側 "all" or undefined → 常にマッチ
+ * - 都道府県完全一致
+ * - ブロック（kanto 等）と配下都道府県の相互一致（articles.ts 内の定数で解決）
+ */
+const BLOCK_MEMBERS: Record<string, string[]> = {
+  'hokkaido-tohoku': ['hokkaido','aomori','iwate','miyagi','akita','yamagata','fukushima'],
+  'kanto': ['ibaraki','tochigi','gunma','saitama','chiba','tokyo','kanagawa'],
+  'chubu': ['niigata','toyama','ishikawa','fukui','yamanashi','nagano','gifu','shizuoka','aichi'],
+  'kansai': ['mie','shiga','kyoto','osaka','hyogo','nara','wakayama'],
+  'chugoku-shikoku': ['tottori','shimane','okayama','hiroshima','yamaguchi','tokushima','kagawa','ehime','kochi'],
+  'kyushu-okinawa': ['fukuoka','saga','nagasaki','kumamoto','oita','miyazaki','kagoshima','okinawa'],
+};
+const PREF_TO_BLOCK: Record<string, string> = Object.fromEntries(
+  Object.entries(BLOCK_MEMBERS).flatMap(([b, prefs]) => prefs.map((p) => [p, b] as [string, string]))
+);
+
+function areaMatch(articleArea: string | undefined, userArea: string | undefined): 'exact' | 'block' | 'any' | 'none' {
+  const aa = articleArea ?? 'all';
+  const ua = userArea ?? 'all';
+  if (aa === 'all' || ua === 'all') return 'any';
+  if (aa === ua) return 'exact';
+  if (BLOCK_MEMBERS[aa]?.includes(ua)) return 'block';
+  if (BLOCK_MEMBERS[ua]?.includes(aa)) return 'block';
+  if (PREF_TO_BLOCK[aa] && PREF_TO_BLOCK[aa] === PREF_TO_BLOCK[ua]) return 'block';
+  return 'none';
+}
+
+/** 記事スコア+理由。高いほど該当。 */
+function scoreArticleForQuery(a: FileArticleMeta, q: TodayQuery): { score: number; reasons: string[] } {
+  let score = 0;
+  const reasons: string[] = [];
+  const qi = a.quickInfo;
+
+  // エリア（最優先・符号を大きく）
+  if (q.area && q.area !== 'all') {
+    const m = areaMatch(a.area, q.area);
+    if (m === 'exact') { score += 30; reasons.push('エリア一致'); }
+    else if (m === 'block') { score += 12; reasons.push('エリア近接'); }
+    else if (m === 'any') { score += 2; /* area 非依存 */ }
+    else { score -= 50; } // エリアミスマッチは強く除外
   }
 
-  // 家 / 外（homeとindoorを"家寄り"、outdoorとindoorを"外寄り"にマッピング）
+  if (!qi) return { score, reasons };
+
+  // 年齢
+  if (q.age && qi.ageRanges?.length) {
+    if (qi.ageRanges.includes(q.age as never)) { score += 10; reasons.push(`${q.age}歳向け`); }
+    else score -= 2;
+  }
+
+  // 家 / 外
   if (q.place && q.place !== 'any' && qi.place?.length) {
     if (q.place === 'home') {
-      if (qi.place.includes('home' as never)) score += 8;
-      else if (qi.place.includes('indoor' as never)) score += 4;
+      if (qi.place.includes('home' as never)) { score += 8; reasons.push('家でできる'); }
+      else if (qi.place.includes('indoor' as never)) { score += 4; reasons.push('屋内で過ごせる'); }
       else score -= 2;
     } else if (q.place === 'outside') {
-      if (qi.place.includes('outdoor' as never)) score += 8;
-      else if (qi.place.includes('indoor' as never)) score += 5;
+      if (qi.place.includes('outdoor' as never)) { score += 8; reasons.push('外に出かける'); }
+      else if (qi.place.includes('indoor' as never)) { score += 5; reasons.push('屋内スポット'); }
       else score -= 2;
     }
   }
 
-  // 天気（qi.weather に該当条件が含まれていれば加点）
+  // 天気
   if (q.weather && q.weather !== 'any') {
-    if (qi.weather?.length && qi.weather.includes(q.weather as never)) score += 6;
-    else if (!qi.weather || qi.weather.length === 0) score += 1; // 天気不問記事は汎用
+    if (qi.weather?.length && qi.weather.includes(q.weather as never)) {
+      const labels: Record<string, string> = { rain: '雨でもOK', heat: '猛暑日OK', cold: '寒い日OK', sunny: '晴れ向き' };
+      score += 6;
+      reasons.push(labels[q.weather] ?? q.weather);
+    } else if (!qi.weather || qi.weather.length === 0) {
+      score += 1;
+    }
   }
 
-  // 使える時間（記事のdurationMin ≤ クエリ = OK）
+  // 時間
   if (q.duration && qi.durationMin) {
     const userMin = Number(q.duration);
     if (Number.isFinite(userMin)) {
-      if (qi.durationMin <= userMin) score += 6;
+      if (qi.durationMin <= userMin) { score += 6; reasons.push(`${qi.durationMin}分で完結`); }
       else if (qi.durationMin <= userMin * 1.5) score += 2;
       else score -= 2;
     }
   }
 
-  // 予算（記事の予算 ≤ クエリ予算 = OK）
+  // 予算
   if (q.budget && q.budget !== 'any' && qi.budget) {
     const rank: Record<string, number> = { free: 0, low: 1, mid: 2, high: 3 };
     const u = rank[q.budget] ?? 3;
-    const a = rank[qi.budget] ?? 3;
-    if (a <= u) score += 4;
-    else score -= 2;
+    const ar = rank[qi.budget] ?? 3;
+    if (ar <= u) {
+      const labels: Record<string, string> = { free: '無料', low: '〜2,000円', mid: '〜5,000円', high: '5,000円〜' };
+      score += 4;
+      reasons.push(`予算 ${labels[qi.budget] ?? qi.budget}`);
+    } else score -= 2;
   }
 
-  // 平日/休日（現状メタに day が無いので保留。カテゴリ側で軽く加点）
+  // 平日 / 休日
   if (q.day === 'weekday') {
-    if (a.category === 'today-mawasu' || a.category === 'heijitsu-yoru') score += 2;
+    if (a.category === 'today-mawasu' || a.category === 'heijitsu-yoru') { score += 2; reasons.push('平日夜向き'); }
   } else if (q.day === 'holiday') {
-    if (a.category === 'today-doko' || a.category === 'gyouji') score += 2;
+    if (a.category === 'today-doko' || a.category === 'gyouji') { score += 2; reasons.push('休日向き'); }
   }
 
-  return score;
+  return { score, reasons };
 }
 
 /**
- * TodayFinder 条件にマッチする記事をスコア降順で返す。
+ * TodayFinder 条件にマッチする記事をスコア降順で返す（従来API）。
  * スコアが0以下の記事は除外。最大 limit 件。
  */
 export function getMatchedFileArticles(q: TodayQuery, limit = 24): FileArticleMeta[] {
   return getAllFileArticles()
-    .map((a) => ({ a, s: scoreArticleForQuery(a, q) }))
-    .filter((x) => x.s > 0)
-    .sort((x, y) => y.s - x.s)
+    .map((a) => ({ a, r: scoreArticleForQuery(a, q) }))
+    .filter((x) => x.r.score > 0)
+    .sort((x, y) => {
+      if (y.r.score !== x.r.score) return y.r.score - x.r.score;
+      // 同点は updatedAt 新しい順
+      return (x.a.updatedAt < y.a.updatedAt ? 1 : -1);
+    })
     .slice(0, limit)
     .map((x) => x.a);
+}
+
+/**
+ * 条件から「答えを1つに決める」ためのトップピック取得。
+ *  - score 最大。同点は updatedAt 新しい順。
+ *  - score が 0 以下でも、フォールバックで最新の家遊び系 (area=all) を1件返す。
+ *  - top のほかに「別の候補」を最大2件セットで返す。
+ */
+export function getTodayAnswer(q: TodayQuery): {
+  top: ArticleMatchDetail | null;
+  alternatives: ArticleMatchDetail[];
+  hasQuery: boolean;
+  fallbackUsed: boolean;
+} {
+  const hasQuery = Object.values(q).some((v) => v && v !== 'any' && v !== 'all');
+
+  const scored = getAllFileArticles()
+    .map((article) => {
+      const { score, reasons } = scoreArticleForQuery(article, q);
+      return { article, score, reasons } as ArticleMatchDetail;
+    })
+    .sort((x, y) => {
+      if (y.score !== x.score) return y.score - x.score;
+      return (x.article.updatedAt < y.article.updatedAt ? 1 : -1);
+    });
+
+  if (!hasQuery) {
+    return { top: null, alternatives: [], hasQuery: false, fallbackUsed: false };
+  }
+
+  const positives = scored.filter((x) => x.score > 0);
+
+  if (positives.length > 0) {
+    return {
+      top: positives[0],
+      alternatives: positives.slice(1, 3),
+      hasQuery,
+      fallbackUsed: false,
+    };
+  }
+
+  // Fallback: エリア非依存の家遊び or 段取り系から1件
+  const fallbackCandidates = getAllFileArticles().filter((a) => {
+    const area = a.area ?? 'all';
+    return area === 'all' && (a.category === 'today-nani' || a.category === 'today-mawasu');
+  });
+  fallbackCandidates.sort((a, b) => (a.updatedAt < b.updatedAt ? 1 : -1));
+  const fb = fallbackCandidates[0];
+
+  if (!fb) return { top: null, alternatives: [], hasQuery, fallbackUsed: true };
+
+  return {
+    top: { article: fb, score: 0, reasons: ['エリアに関係なく今日できる候補'] },
+    alternatives: [],
+    hasQuery,
+    fallbackUsed: true,
+  };
 }
 
 /**

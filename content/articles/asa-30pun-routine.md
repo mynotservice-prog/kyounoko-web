@@ -8,6 +8,7 @@ categoryName: 今日どう回す？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
 hero: https://images.unsplash.com/photo-1503428593586-e225b39bddfe?auto=format&fit=crop&w=1600&h=900&q=80
+area: "all"
 quickInfo:
   ageRanges: ["2-3"]
   place: ["home"]

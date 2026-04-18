@@ -7,6 +7,7 @@ hero: https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&f
 metaDescription: スイミングは何歳から？ベビースイミングは0〜6ヶ月から可能で、3歳前後が本格スタートの黄金期。月謝相場・主要スクール比較・効果・デメリットまで、3分で判断できる情報をまとめました。
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
+area: "all"
 quickInfo:
   ageRanges: ["0-1","1-2","2-3","4-6"]
   place: ["indoor"]

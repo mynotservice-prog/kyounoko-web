@@ -7,6 +7,7 @@ hero: https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=
 metaDescription: 2026年最新の抱っこ紐おすすめランキング。エルゴ・アップリカ・コニー・ベビービョルンを価格・重量・装着のしやすさ・対応月齢で比較。新生児から3歳までシーン別に最適解を紹介します。
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
+area: "all"
 quickInfo:
   ageRanges: ["0-1", "1-2", "2-3"]
   place: ["outdoor", "indoor"]

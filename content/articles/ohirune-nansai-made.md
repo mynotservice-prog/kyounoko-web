@@ -7,6 +7,7 @@ hero: https://images.unsplash.com/photo-1503428593586-e225b39bddfe?auto=format&f
 metaDescription: "子どものお昼寝は何歳まで必要？月齢別の理想的な睡眠時間、2回→1回への移行、卒業のサイン、保育園との連携、夜の就寝に影響しない時間帯まで、医学的エビデンスに基づき整理します。"
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
+area: "all"
 quickInfo:
   ageRanges: ["0-1","1-2","2-3","4-6"]
   place: ["home"]
