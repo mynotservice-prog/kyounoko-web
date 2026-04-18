@@ -6,7 +6,7 @@ category: narai
 categoryName: 習い事と学び
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://loremflickr.com/1600/900/english,kids?lock=871752
+hero: https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&h=900&q=80
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]
   place: []

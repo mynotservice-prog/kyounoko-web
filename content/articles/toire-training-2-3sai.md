@@ -6,7 +6,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://loremflickr.com/1600/900/potty,training?lock=286895
+hero: https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1600&h=900&q=80
 quickInfo:
   ageRanges: ["2-3"]
   place: ["home"]

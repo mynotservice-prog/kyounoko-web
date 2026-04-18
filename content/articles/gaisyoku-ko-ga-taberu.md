@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://loremflickr.com/1600/900/restaurant,family?lock=67464
+hero: https://images.unsplash.com/photo-1545193544-312983719627?auto=format&fit=crop&w=1600&h=900&q=80
 quickInfo:
   ageRanges: ["2-3", "4-6"]
   place: ["indoor"]

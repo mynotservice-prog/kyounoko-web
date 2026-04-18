@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://loremflickr.com/1600/900/toddler,crying?lock=351467
+hero: https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1600&h=900&q=80
 quickInfo:
   ageRanges: ["2-3"]
   place: ["home"]

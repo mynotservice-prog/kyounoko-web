@@ -6,7 +6,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://loremflickr.com/1600/900/couple,home?lock=803712
+hero: https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=1600&h=900&q=80
 quickInfo:
   ageRanges: []
   place: ["home"]

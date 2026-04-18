@@ -3,7 +3,7 @@ slug: babycar-ranking-2026
 title: ベビーカーおすすめランキング2026｜アップリカ・コンビ・サイベックス・エアバギー徹底比較
 category: yakudatsu
 categoryName: 役立つもの
-hero: https://loremflickr.com/1600/900/stroller,park?lock=332898
+hero: https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&w=1600&h=900&q=80
 metaDescription: 2026年最新ベビーカー選び方ガイド。アップリカ・コンビ・サイベックス・エアバギーを価格・重量・機能・収納性で徹底比較。新生児A型・B型・軽量セカンドまでシーン別に最適解を紹介します。
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18

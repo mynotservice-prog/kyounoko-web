@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: 2026-04-19
 updatedAt: 2026-04-19
-hero: https://loremflickr.com/1600/900/stroller,park?lock=754652
+hero: https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&h=900&q=80
 quickInfo:
   ageRanges: ["0-1"]
   place: ["indoor", "outdoor"]

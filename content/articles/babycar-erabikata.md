@@ -6,7 +6,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://loremflickr.com/1600/900/stroller,shopping?lock=620701
+hero: https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=1600&h=900&q=80
 quickInfo:
   ageRanges: ["0-1", "2-3"]
   place: []

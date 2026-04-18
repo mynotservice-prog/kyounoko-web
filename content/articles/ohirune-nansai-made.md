@@ -3,7 +3,7 @@ slug: ohirune-nansai-made
 title: "子どものお昼寝は何歳まで？｜月齢別の理想的な睡眠時間と卒業の進め方"
 category: today-mawasu
 categoryName: "今日どう回す？"
-hero: https://loremflickr.com/1600/900/baby,sleep?lock=482522
+hero: https://images.unsplash.com/photo-1503428593586-e225b39bddfe?auto=format&fit=crop&w=1600&h=900&q=80
 metaDescription: "子どものお昼寝は何歳まで必要？月齢別の理想的な睡眠時間、2回→1回への移行、卒業のサイン、保育園との連携、夜の就寝に影響しない時間帯まで、医学的エビデンスに基づき整理します。"
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18

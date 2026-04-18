@@ -7,7 +7,7 @@ category: gyouji
 categoryName: 季節と行事
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://loremflickr.com/1600/900/kimono,child?lock=768816
+hero: https://images.unsplash.com/photo-1481487196290-c152efe083f5?auto=format&fit=crop&w=1600&h=900&q=80
 quickInfo:
   ageRanges: ["2-3", "4-6"]
   place: ["outdoor"]

@@ -6,7 +6,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://loremflickr.com/1600/900/meal,delivery?lock=290515
+hero: https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&w=1600&h=900&q=80
 quickInfo:
   ageRanges: ["2-3", "4-6"]
   place: ["home"]

@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://loremflickr.com/1600/900/indoor,craft?lock=157805
+hero: https://images.unsplash.com/photo-1566004100631-35d015d6a491?auto=format&fit=crop&w=1600&h=900&q=80
 quickInfo:
   ageRanges: ["4-6"]
   place: ["home"]

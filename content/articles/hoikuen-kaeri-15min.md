@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: 2026-04-17
 updatedAt: 2026-04-17
-hero: https://loremflickr.com/1600/900/evening,meal?lock=58774
+hero: https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=1600&h=900&q=80
 quickInfo:
   ageRanges: ["2-3"]
   place: ["home"]
