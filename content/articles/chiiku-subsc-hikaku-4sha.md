@@ -6,7 +6,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /img/pick-craft.jpg
+hero: https://loremflickr.com/1600/900/toys,learning?lock=331869
 quickInfo:
   ageRanges: ["0-1", "1-2", "2-3", "4-6"]
   place: ["home"]

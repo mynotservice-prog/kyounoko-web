@@ -42,3 +42,6 @@ next-env.d.ts
 # IDE
 .vscode/
 .idea/
+
+# local test/maintenance scripts (archived)
+scripts/_archived-*

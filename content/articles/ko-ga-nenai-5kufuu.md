@@ -7,7 +7,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /img/pick-cozy.jpg
+hero: https://loremflickr.com/1600/900/bedtime,baby?lock=909737
 quickInfo:
   ageRanges: ["1-2", "2-3", "4-6"]
   place: ["home"]

@@ -6,7 +6,7 @@ category: gyouji
 categoryName: 季節と行事
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /img/pick-craft.jpg
+hero: https://loremflickr.com/1600/900/halloween,costume?lock=213474
 quickInfo:
   ageRanges: ["2-3", "4-6"]
   place: ["home"]

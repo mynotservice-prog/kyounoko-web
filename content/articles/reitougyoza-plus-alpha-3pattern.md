@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /img/pick-dinner.jpg
+hero: https://loremflickr.com/1600/900/gyoza,kitchen?lock=608471
 quickInfo:
   ageRanges: ["2-3","4-6"]
   place: ["home"]

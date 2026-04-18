@@ -6,7 +6,7 @@ category: narai
 categoryName: 習い事と学び
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /img/pick-indoor.jpg
+hero: https://loremflickr.com/1600/900/worksheet,study?lock=989210
 quickInfo:
   ageRanges: ["2-3", "4-6"]
   place: []

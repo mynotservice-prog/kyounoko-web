@@ -3,7 +3,7 @@ slug: monte-asobi-nenrei-betsu
 title: モンテッソーリの家庭遊び年齢別ガイド｜0歳〜6歳まで敏感期に合わせた20の活動
 category: today-nani
 categoryName: 今日何する？
-hero: /img/pick-home-play.jpg
+hero: https://loremflickr.com/1600/900/montessori,kids?lock=643931
 metaDescription: モンテッソーリ教育の敏感期に基づき、0歳・1歳・2歳・3歳・4-6歳の年齢別に家でできる遊び20選を紹介。100均素材と身近な道具で再現できる具体的な手順と観察ポイント付き。
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18

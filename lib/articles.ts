@@ -474,6 +474,93 @@ export function getAllFileArticleSlugs(): string[] {
   return getAllFileArticles().map((a) => a.slug);
 }
 
+// ==========================================================================
+// 条件検索アルゴリズム（TodayFinder → /today）
+// ==========================================================================
+
+/** TodayFinder から渡される検索条件。すべてオプション。 */
+export type TodayQuery = {
+  age?: string; // "0-1" | "2-3" | "4-6"
+  weather?: string; // "sunny" | "rain" | "heat" | "cold" | "any"
+  place?: string; // "home" | "outside" | "any"
+  day?: string; // "weekday" | "holiday" | "any"
+  duration?: string; // "15" | "60" | "120" | "240"
+  budget?: string; // "free" | "low" | "mid" | "any"
+};
+
+/** 記事スコア。高いほど該当。 */
+function scoreArticleForQuery(a: FileArticleMeta, q: TodayQuery): number {
+  let score = 0;
+  const qi = a.quickInfo;
+  if (!qi) return 0;
+
+  // 年齢（+10 完全一致 / +3 該当なしだが近接）
+  if (q.age && qi.ageRanges?.length) {
+    if (qi.ageRanges.includes(q.age as never)) score += 10;
+    else score -= 2; // 対象外の可能性
+  }
+
+  // 家 / 外（homeとindoorを"家寄り"、outdoorとindoorを"外寄り"にマッピング）
+  if (q.place && q.place !== 'any' && qi.place?.length) {
+    if (q.place === 'home') {
+      if (qi.place.includes('home' as never)) score += 8;
+      else if (qi.place.includes('indoor' as never)) score += 4;
+      else score -= 2;
+    } else if (q.place === 'outside') {
+      if (qi.place.includes('outdoor' as never)) score += 8;
+      else if (qi.place.includes('indoor' as never)) score += 5;
+      else score -= 2;
+    }
+  }
+
+  // 天気（qi.weather に該当条件が含まれていれば加点）
+  if (q.weather && q.weather !== 'any') {
+    if (qi.weather?.length && qi.weather.includes(q.weather as never)) score += 6;
+    else if (!qi.weather || qi.weather.length === 0) score += 1; // 天気不問記事は汎用
+  }
+
+  // 使える時間（記事のdurationMin ≤ クエリ = OK）
+  if (q.duration && qi.durationMin) {
+    const userMin = Number(q.duration);
+    if (Number.isFinite(userMin)) {
+      if (qi.durationMin <= userMin) score += 6;
+      else if (qi.durationMin <= userMin * 1.5) score += 2;
+      else score -= 2;
+    }
+  }
+
+  // 予算（記事の予算 ≤ クエリ予算 = OK）
+  if (q.budget && q.budget !== 'any' && qi.budget) {
+    const rank: Record<string, number> = { free: 0, low: 1, mid: 2, high: 3 };
+    const u = rank[q.budget] ?? 3;
+    const a = rank[qi.budget] ?? 3;
+    if (a <= u) score += 4;
+    else score -= 2;
+  }
+
+  // 平日/休日（現状メタに day が無いので保留。カテゴリ側で軽く加点）
+  if (q.day === 'weekday') {
+    if (a.category === 'today-mawasu' || a.category === 'heijitsu-yoru') score += 2;
+  } else if (q.day === 'holiday') {
+    if (a.category === 'today-doko' || a.category === 'gyouji') score += 2;
+  }
+
+  return score;
+}
+
+/**
+ * TodayFinder 条件にマッチする記事をスコア降順で返す。
+ * スコアが0以下の記事は除外。最大 limit 件。
+ */
+export function getMatchedFileArticles(q: TodayQuery, limit = 24): FileArticleMeta[] {
+  return getAllFileArticles()
+    .map((a) => ({ a, s: scoreArticleForQuery(a, q) }))
+    .filter((x) => x.s > 0)
+    .sort((x, y) => y.s - x.s)
+    .slice(0, limit)
+    .map((x) => x.a);
+}
+
 /**
  * 同カテゴリの関連記事を最大 `limit` 件返す。
  * 同カテゴリで足りない場合は他カテゴリの最新で埋める。

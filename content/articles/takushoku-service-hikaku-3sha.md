@@ -6,7 +6,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /img/pick-dinner.jpg
+hero: https://loremflickr.com/1600/900/meal,delivery?lock=290515
 quickInfo:
   ageRanges: ["2-3", "4-6"]
   place: ["home"]

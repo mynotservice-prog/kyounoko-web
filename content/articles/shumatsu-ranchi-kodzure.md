@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: 2026-04-19
 updatedAt: 2026-04-19
-hero: /img/pick-dinner.jpg
+hero: https://loremflickr.com/1600/900/restaurant,kids?lock=85488
 quickInfo:
   ageRanges: ["2-3", "4-6"]
   place: ["indoor"]

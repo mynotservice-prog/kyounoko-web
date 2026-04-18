@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /img/pick-outdoor.jpg
+hero: https://loremflickr.com/1600/900/pool,kids?lock=613564
 quickInfo:
   ageRanges: ["0-1", "2-3"]
   place: ["outdoor", "indoor"]

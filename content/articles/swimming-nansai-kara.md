@@ -3,7 +3,7 @@ slug: swimming-nansai-kara
 title: 子どものスイミング何歳から？｜0歳から始められる理由と月謝・効果・主要スクール比較
 category: narai
 categoryName: 習い事と学び
-hero: /img/pick-indoor.jpg
+hero: https://loremflickr.com/1600/900/swimming,kids?lock=294880
 metaDescription: スイミングは何歳から？ベビースイミングは0〜6ヶ月から可能で、3歳前後が本格スタートの黄金期。月謝相場・主要スクール比較・効果・デメリットまで、3分で判断できる情報をまとめました。
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18

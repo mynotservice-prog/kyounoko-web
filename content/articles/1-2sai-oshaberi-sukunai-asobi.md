@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /img/pick-home-play.jpg
+hero: https://loremflickr.com/1600/900/toddler,play?lock=92588
 quickInfo:
   ageRanges: ["0-1", "2-3"]
   place: ["home"]

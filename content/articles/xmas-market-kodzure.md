@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /img/pick-outdoor.jpg
+hero: https://loremflickr.com/1600/900/christmas,market?lock=750788
 quickInfo:
   ageRanges: ["2-3", "4-6"]
   place: ["outdoor"]

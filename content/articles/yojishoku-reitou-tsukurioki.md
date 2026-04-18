@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: 2026-04-17
 updatedAt: 2026-04-17
-hero: /img/pick-cozy.jpg
+hero: https://loremflickr.com/1600/900/meal,prep?lock=559081
 quickInfo:
   ageRanges: ["2-3"]
   place: ["home"]

@@ -6,7 +6,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /img/pick-cozy.jpg
+hero: https://loremflickr.com/1600/900/couple,home?lock=803712
 quickInfo:
   ageRanges: []
   place: ["home"]
