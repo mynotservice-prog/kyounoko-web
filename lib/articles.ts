@@ -42,6 +42,12 @@ export type FileArticleHowToStep = {
   text: string;
 };
 
+export type FileArticleItemListItem = {
+  position: number;
+  name: string;
+  description?: string;
+};
+
 export type FileArticle = FileArticleMeta & {
   body: string; // HTML (with id-added h2/h3)
   faqItems: FileArticleFaq[];
@@ -51,6 +57,8 @@ export type FileArticle = FileArticleMeta & {
   tldr: string | null;
   /** HowTo 抽出結果。手順形式の記事のみ非null。 */
   howto: FileArticleHowToStep[] | null;
+  /** ランキング / N選 / 比較記事の項目リスト。ItemList JSON-LD 用。 */
+  itemList: FileArticleItemListItem[] | null;
 };
 
 export type TocItem = {
@@ -236,8 +244,106 @@ function extractTldr(markdown: string): string | null {
     .trim();
 
   if (!plain) return null;
-  // 長すぎる場合は 360 文字で切る（AIO抽出に最適）
-  return plain.length > 360 ? plain.slice(0, 360) + '…' : plain;
+  // 長すぎる場合は 240 文字で切る（AIO抽出向け：100〜200字が理想、余裕込みで240）
+  return plain.length > 240 ? plain.slice(0, 240) + '…' : plain;
+}
+
+// ランキング・N選・比較記事の項目リストを抽出する。ItemList JSON-LD 用。
+// 対象：記事タイトルに「ランキング」「N選」「比較」を含む記事のみ。
+// 抽出パターン：
+//   A) "## 1位：..." "## 2位：..."（最優先）
+//   B) "## 1. ..." "## 2. ..." 数字開始の H2
+// 3件以上抽出できない場合は null。
+function extractItemList(
+  title: string,
+  markdown: string,
+): FileArticleItemListItem[] | null {
+  // タイトル条件：ランキング / N選 / 比較 / 徹底比較 / TOPn / ベスト
+  // ※「選び方」等の誤検知を避けるため、単独「選」は数字＋選パターンのみに限定
+  const isListCandidate =
+    /ランキング|比較|徹底比較|[0-9０-９]+選|[0-9０-９]+パターン|ベスト[0-9０-９]+|TOP\s*[0-9０-９]+/i.test(
+      title,
+    );
+  if (!isListCandidate) return null;
+
+  const lines = markdown.split('\n');
+  const items: FileArticleItemListItem[] = [];
+
+  // パターンA: "## 1位：..." / "## 第1位 ..." / "## No.1 ..."
+  const rankRegex =
+    /^##\s+(?:第)?\s*(?:No\.?\s*)?([0-9０-９]+)\s*位[:：]?\s*(.+?)\s*$/i;
+  // パターンB: "## 1. ..." / "## 1．..."（別途、但し意味的にランキング全体でのみ）
+  const numberDotRegex = /^##\s+([0-9０-９]+)\s*[.．]\s*(.+?)\s*$/;
+
+  let pattern: 'rank' | 'numberDot' | null = null;
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    let m = line.match(rankRegex);
+    let matchedPattern: 'rank' | 'numberDot' | null = null;
+    if (m) {
+      matchedPattern = 'rank';
+    } else {
+      m = line.match(numberDotRegex);
+      if (m) matchedPattern = 'numberDot';
+    }
+    if (!m || !matchedPattern) continue;
+
+    // 一貫性：最初に検出したパターンで揃える
+    if (pattern === null) pattern = matchedPattern;
+    if (pattern !== matchedPattern) continue;
+
+    const position = Number(
+      String(m[1]).replace(/[０-９]/g, (c) =>
+        String.fromCharCode(c.charCodeAt(0) - 0xfee0),
+      ),
+    );
+    const name = m[2]
+      .replace(/\*\*([^*]+)\*\*/g, '$1')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    // 直下の本文（次の ## または ### まで）から短い説明を抽出
+    const descLines: string[] = [];
+    for (let j = i + 1; j < lines.length; j++) {
+      if (/^##\s+/.test(lines[j])) break;
+      if (/^###\s+/.test(lines[j])) break;
+      // 表や画像行はスキップ
+      if (/^\s*\|/.test(lines[j])) continue;
+      if (/^!\[/.test(lines[j])) continue;
+      const t = lines[j].trim();
+      if (!t) continue;
+      if (t.startsWith('-') || t.startsWith('*')) continue;
+      descLines.push(t);
+      if (descLines.join(' ').length >= 120) break;
+    }
+    const description = descLines
+      .join(' ')
+      .replace(/\*\*([^*]+)\*\*/g, '$1')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .slice(0, 160);
+
+    if (Number.isFinite(position) && position > 0 && name) {
+      items.push({
+        position,
+        name,
+        description: description || undefined,
+      });
+    }
+  }
+
+  if (items.length < 3) return null;
+  // position で昇順ソート・重複除去（同 position の2件目以降は捨てる）
+  const seen = new Set<number>();
+  const sorted = items
+    .sort((a, b) => a.position - b.position)
+    .filter((it) => {
+      if (seen.has(it.position)) return false;
+      seen.add(it.position);
+      return true;
+    });
+  return sorted.length >= 3 ? sorted : null;
 }
 
 // 本文中の "## 手順" "## やり方" "## ステップ" セクションから番号付きリストを
@@ -443,6 +549,7 @@ export async function getFileArticle(slug: string): Promise<FileArticle | null> 
     const { body: bodyMd, faq } = extractFaq(content);
     const tldr = extractTldr(bodyMd);
     const howto = extractHowTo(bodyMd);
+    const itemList = extractItemList(meta.title, bodyMd);
     const rawHtml = await renderMarkdownToHtml(bodyMd);
     const { html: bodyHtml, toc } = injectHeadingIdsAndExtractToc(rawHtml);
     const readingTimeMin = estimateReadingTime(bodyMd);
@@ -454,6 +561,7 @@ export async function getFileArticle(slug: string): Promise<FileArticle | null> 
       readingTimeMin,
       tldr,
       howto,
+      itemList,
     };
   }
   return null;

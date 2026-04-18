@@ -1,7 +1,14 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Shippori_Mincho, Noto_Sans_JP, Zen_Maru_Gothic, DM_Serif_Display, Inter } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
+
+// Next.js 15 では theme-color / viewport は viewport export で指定する
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#FBF5E8',
+};
 
 // フォント定義（Next.js が build 時に subset + preload してくれる）
 const shippori = Shippori_Mincho({
@@ -100,6 +107,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
   const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID;
+  // AdSense publisher ID。未設定の間はスニペットを出力しない。
+  // 形式は "pub-XXXXXXXXXXXXXXXX" でも "ca-pub-XXXXXXXXXXXXXXXX" でも受け付けて、
+  // 最終的に ca-pub- 付きの client パラメータに正規化する。
+  const rawAdsensePubId = process.env.NEXT_PUBLIC_ADSENSE_PUB_ID?.trim();
+  const adsenseClient = rawAdsensePubId
+    ? rawAdsensePubId.startsWith('ca-')
+      ? rawAdsensePubId
+      : `ca-${rawAdsensePubId}`
+    : null;
 
   return (
     <html
@@ -107,7 +123,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${shippori.variable} ${notoSans.variable} ${zenMaru.variable} ${dmSerif.variable} ${inter.variable}`}
     >
       <head>
-        <meta name="theme-color" content="#FBF5E8" />
         {/* JSON-LD: WebSite */}
         <script
           type="application/ld+json"
@@ -118,10 +133,34 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               name: 'きょうのこ',
               url: 'https://kyounoko.jp',
               inLanguage: 'ja',
-              potentialAction: {
-                '@type': 'SearchAction',
-                target: 'https://kyounoko.jp/search?q={search_term_string}',
-                'query-input': 'required name=search_term_string',
+              description:
+                '0〜6歳の子がいる家庭向け。天気・年齢・時間帯・予算から、今日の過ごし方を3分で決める意思決定サイトです。',
+              publisher: { '@id': 'https://kyounoko.jp/#organization' },
+            }),
+          }}
+        />
+        {/* JSON-LD: Organization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              '@id': 'https://kyounoko.jp/#organization',
+              name: 'きょうのこ',
+              url: 'https://kyounoko.jp',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://kyounoko.jp/img/ogp-default.jpg',
+                width: 1200,
+                height: 630,
+              },
+              founder: { '@type': 'Person', name: 'ながみー' },
+              contactPoint: {
+                '@type': 'ContactPoint',
+                email: 'service@kyounoko.jp',
+                contactType: 'customer support',
+                availableLanguage: ['Japanese'],
               },
             }),
           }}
@@ -159,6 +198,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               })(window, document, "clarity", "script", "${clarityId}");
             `}
           </Script>
+        )}
+
+        {/* Google AdSense (Auto Ads) — NEXT_PUBLIC_ADSENSE_PUB_ID 設定時のみ出力 */}
+        {adsenseClient && (
+          <Script
+            id="adsense-init"
+            async
+            strategy="afterInteractive"
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`}
+            crossOrigin="anonymous"
+          />
         )}
       </body>
     </html>

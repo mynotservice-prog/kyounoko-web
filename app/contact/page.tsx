@@ -11,8 +11,17 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'HOME', item: 'https://kyounoko.jp/' },
+      { '@type': 'ListItem', position: 2, name: 'お問い合わせ', item: 'https://kyounoko.jp/contact' },
+    ],
+  };
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       <SiteHeader />
       <div className="container-article">
         <nav className="breadcrumb" aria-label="パンくず">

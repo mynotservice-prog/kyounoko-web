@@ -36,9 +36,10 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   if (sp.place) parts.push(labelForValue('place', firstString(sp.place)!));
   if (sp.duration) parts.push(labelForValue('duration', firstString(sp.duration)!));
 
-  const suffix = parts.length ? `｜${parts.join('・')}` : '';
+  const suffix = parts.length ? `（${parts.join('・')}）` : '';
   return {
-    title: `今日のおすすめ${suffix} | きょうのこ`,
+    // 親 layout の template (%s｜きょうのこ) が適用されるので、ここでは本文タイトルだけ返す
+    title: `今日のおすすめ${suffix}`,
     description: '年齢・天気・家or外・時間・予算から、今日の過ごし方の候補を絞り込んだ結果です。',
     robots: { index: false, follow: true }, // 条件組み合わせ無限のためnoindex
     alternates: { canonical: '/today' },

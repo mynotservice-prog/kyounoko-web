@@ -52,10 +52,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
   if (!category) return { title: 'カテゴリが見つかりません' };
 
+  const description = category.description ?? `${category.name}に関する記事一覧です。`;
   return {
     title: category.name,
-    description: category.description ?? `${category.name}に関する記事一覧です。`,
+    description,
     alternates: { canonical: `/category/${slug}` },
+    openGraph: {
+      title: `${category.name}｜きょうのこ`,
+      description,
+      url: `https://kyounoko.jp/category/${slug}`,
+      type: 'website',
+      images: [{ url: '/img/ogp-default.jpg', width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${category.name}｜きょうのこ`,
+      description,
+      images: ['/img/ogp-default.jpg'],
+    },
   };
 }
 

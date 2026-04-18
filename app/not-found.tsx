@@ -1,7 +1,14 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+
+export const metadata: Metadata = {
+  title: 'ページが見つかりません',
+  description: 'お探しのページは移動または削除された可能性があります。',
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (

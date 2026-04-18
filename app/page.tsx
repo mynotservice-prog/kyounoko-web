@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
@@ -6,6 +7,12 @@ import { TodayFinder } from '@/components/top/TodayFinder';
 import { getAllFileArticles } from '@/lib/articles';
 
 export const revalidate = 3600; // 1時間ごとに再生成
+
+// Homepage は layout の default title をそのまま使うので title は上書きしない
+// ただし canonical は明示する（template 上書きで title は layout 側の default のまま）
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+};
 
 // MicroCMS カテゴリ slug → 日本語名フォールバック
 const CATEGORY_LABEL: Record<string, string> = {

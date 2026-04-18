@@ -1401,3 +1401,246 @@ a[href^="/article/"] > div:first-child::after {
   box-shadow: var(--shadow-ele);
   border-color: var(--line-strong) !important;
 }
+
+/* ==========================================================================
+   Ad slot / PR label
+   広告枠・PR/広告ラベルの共通スタイル。景品表示法・ステマ規制に沿い、
+   「広告であること」が視認できるが、読書の邪魔にならない控えめな表記。
+   ========================================================================== */
+
+/* 広告を配置するコンテナ。min-height を持たせて CLS を抑える */
+.ad-slot {
+  display: block;
+  margin: 32px auto;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+  /* AdSense が iframe を挿入する前の空白を安定させる */
+  min-height: 90px;
+  overflow: hidden;
+}
+.ad-slot > ins,
+.ad-slot > iframe {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .ad-slot { margin: 40px auto; min-height: 120px; }
+}
+
+/* 「広告」「スポンサーリンク」用の小さなラベル（.ad-slot の直前に置く想定） */
+.ad-label,
+.pr-label {
+  display: inline-block;
+  font-family: var(--font-inter), Inter, "Noto Sans JP", sans-serif;
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  background: transparent;
+  padding: 2px 6px 2px 0;
+  line-height: 1.6;
+  font-weight: 500;
+  user-select: none;
+}
+
+/* PR ラベルは少しだけ主張を強く（景表法対応：ユーザーが広告と認識できる視認性） */
+.pr-label {
+  color: var(--clay-deep);
+  background: var(--clay-soft);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-weight: 600;
+  letter-spacing: .1em;
+}
+
+/* .ad-slot の中に配置されたときは、枠の上部にひっそり置く */
+.ad-slot .ad-label,
+.ad-slot .pr-label {
+  display: block;
+  text-align: left;
+  margin: 0 0 6px;
+}
+
+/* 文中で PR リンクを示すときのインライン表記: <span class="pr-label">PR</span> */
+p > .pr-label,
+li > .pr-label,
+span > .pr-label {
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+/* ==========================================================================
+   Affiliate link card / group
+   アフィリエイトリンクのカード UI と、それをまとめるグループ。
+   ステマ規制に沿って PR 表示を必ず出す（AffiliateLinkGroup / PRBadge で付与）。
+   ========================================================================== */
+
+/* 記事冒頭に置く開示バッジ */
+.affiliate-pr-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 12px;
+  padding: 10px 14px;
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  font-size: 12.5px;
+  color: var(--ink-sub);
+  line-height: 1.7;
+}
+.affiliate-pr-badge-text {
+  flex: 1;
+}
+
+/* 商品カードグループ */
+.affiliate-group {
+  margin: 48px 0 24px;
+  padding: 22px 22px 26px;
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+.affiliate-pr-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 0 16px;
+  font-size: 11.5px;
+  color: var(--ink-mute);
+  line-height: 1.7;
+}
+.affiliate-group-eyebrow {
+  display: block;
+  font-family: var(--font-inter), Inter, sans-serif;
+  font-size: 10px;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--clay);
+  font-weight: 600;
+  margin: 2px 0 6px;
+}
+.affiliate-group-title {
+  font-family: var(--font-mincho), serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0 0 18px;
+  letter-spacing: .02em;
+  color: var(--ink-sub);
+}
+.affiliate-group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 個別カード */
+.affiliate-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  padding: 16px 18px;
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: inherit;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.affiliate-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--line-strong);
+  box-shadow: 0 6px 18px rgba(201, 96, 62, 0.08);
+}
+@media (min-width: 640px) {
+  .affiliate-card:has(.affiliate-card-thumb) {
+    grid-template-columns: 96px 1fr;
+  }
+}
+
+.affiliate-card-thumb {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  background-color: var(--peach-soft, #F7E7D6);
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--line);
+}
+
+.affiliate-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.affiliate-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.affiliate-provider-tag {
+  display: inline-block;
+  font-family: var(--font-inter), Inter, sans-serif;
+  font-size: 10.5px;
+  letter-spacing: .08em;
+  font-weight: 600;
+  color: var(--clay-deep);
+  background: var(--clay-soft);
+  padding: 2px 8px;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+.affiliate-card-title {
+  font-family: var(--font-mincho), serif;
+  font-size: 15.5px;
+  font-weight: 600;
+  margin: 2px 0 0;
+  line-height: 1.55;
+  color: var(--ink, #2C2820);
+}
+
+.affiliate-card-subtitle {
+  font-size: 12.5px;
+  color: var(--ink-sub);
+  margin: 0;
+  line-height: 1.7;
+}
+
+.affiliate-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.affiliate-card-price {
+  font-family: var(--font-inter), Inter, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--clay-deep);
+  letter-spacing: .02em;
+}
+
+.affiliate-card-cta {
+  font-family: var(--font-inter), Inter, sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--clay);
+  transition: color .2s ease, transform .2s ease;
+}
+.affiliate-card:hover .affiliate-card-cta {
+  color: var(--clay-deep);
+  transform: translateX(2px);
+}

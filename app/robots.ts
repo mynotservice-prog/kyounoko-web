@@ -6,7 +6,8 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/admin/', '/_next/', '/today?*'], // /today の絞り込み結果は noindex 想定
+        // /today は page 側で noindex 指定。クロール自体は許可して noindex を確実に伝える。
+        disallow: ['/api/', '/admin/', '/_next/'],
       },
     ],
     sitemap: 'https://kyounoko.jp/sitemap.xml',

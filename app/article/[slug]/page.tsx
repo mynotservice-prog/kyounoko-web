@@ -14,6 +14,9 @@ import {
 } from '@/lib/articles';
 import { ShareBar } from '@/components/article/ShareBar';
 import { TableOfContents } from '@/components/article/TableOfContents';
+import { PRBadge } from '@/components/affiliate/PRBadge';
+import { AffiliateLinkGroup } from '@/components/affiliate/AffiliateLinkGroup';
+import { getAffiliateProducts } from '@/lib/affiliate-products';
 
 export const revalidate = 3600; // 1時間ごとに再生成
 
@@ -78,16 +81,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (resolved.kind === 'microcms') {
     const article = resolved.data;
+    const description = article.metaDescription ?? article.lede?.substring(0, 120);
+    const ogImages = article.hero
+      ? [{ url: article.hero.url, width: 1600, height: 900 }]
+      : [{ url: '/img/ogp-default.jpg', width: 1200, height: 630 }];
     return {
       title: article.title,
-      description: article.metaDescription ?? article.lede?.substring(0, 120),
+      description,
       openGraph: {
         title: article.title,
-        description: article.metaDescription,
+        description,
+        url: `https://kyounoko.jp/article/${slug}`,
         type: 'article',
         publishedTime: article.publishedAt,
         modifiedTime: article.updatedAtManual ?? article.updatedAt,
-        images: article.hero ? [{ url: article.hero.url, width: 1600, height: 900 }] : [],
+        images: ogImages,
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: article.title,
+        description,
+        images: ogImages.map((i) => i.url),
       },
       alternates: { canonical: `/article/${slug}` },
       robots: article.noindex ? { index: false } : undefined,
@@ -96,16 +110,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   // file-based
   const article = resolved.data;
+  const description = article.metaDescription ?? article.lede?.substring(0, 120);
+  const ogImages = article.hero
+    ? [{ url: article.hero, width: 1600, height: 900 }]
+    : [{ url: '/img/ogp-default.jpg', width: 1200, height: 630 }];
   return {
     title: article.title,
-    description: article.metaDescription ?? article.lede?.substring(0, 120),
+    description,
     openGraph: {
       title: article.title,
-      description: article.metaDescription,
+      description,
+      url: `https://kyounoko.jp/article/${slug}`,
       type: 'article',
       publishedTime: article.publishedAt,
       modifiedTime: article.updatedAt,
-      images: article.hero ? [{ url: article.hero, width: 1600, height: 900 }] : [],
+      images: ogImages,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: article.title,
+      description,
+      images: ogImages.map((i) => i.url),
     },
     alternates: { canonical: `/article/${slug}` },
     robots: article.noindex ? { index: false } : undefined,
@@ -128,13 +153,27 @@ export default async function ArticlePage({ params }: Props) {
   const jsonLdArticle = {
     '@context': 'https://schema.org',
     '@type': 'Article',
+    inLanguage: 'ja',
     headline: article.title,
     description: article.metaDescription,
     datePublished: article.publishedAt,
     dateModified: article.updatedAtManual ?? article.updatedAt,
     author: { '@type': 'Person', name: article.author?.name ?? 'ながみー' },
-    publisher: { '@type': 'Organization', name: 'きょうのこ', logo: { '@type': 'ImageObject', url: 'https://kyounoko.jp/img/ogp-default.png' } },
+    publisher: {
+      '@type': 'Organization',
+      name: 'きょうのこ',
+      url: 'https://kyounoko.jp',
+      logo: { '@type': 'ImageObject', url: 'https://kyounoko.jp/img/ogp-default.jpg' },
+    },
     image: article.hero?.url,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://kyounoko.jp/article/${slug}`,
+    },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.page-head .lead'],
+    },
   };
 
   const jsonLdBreadcrumb = {
@@ -420,23 +459,39 @@ function FileArticleView({ article }: { article: FileArticle }) {
   const publishedLabel = formatJaDate(article.publishedAt);
   const updatedLabel = formatJaDate(article.updatedAt);
   const showUpdated = publishedLabel !== updatedLabel;
+  const affiliateProducts = getAffiliateProducts(article.slug);
+  const hasAffiliate = affiliateProducts.length > 0;
 
   const jsonLdArticle = {
     '@context': 'https://schema.org',
     '@type': 'Article',
+    inLanguage: 'ja',
     headline: article.title,
     description: article.tldr ?? article.metaDescription,
     abstract: article.tldr ?? undefined,
     datePublished: article.publishedAt,
     dateModified: article.updatedAt,
-    author: { '@type': 'Person', name: 'ながみー' },
+    author: {
+      '@type': 'Person',
+      name: 'ながみー',
+      url: 'https://kyounoko.jp/about',
+    },
     publisher: {
       '@type': 'Organization',
       name: 'きょうのこ',
+      url: 'https://kyounoko.jp',
       logo: { '@type': 'ImageObject', url: 'https://kyounoko.jp/img/ogp-default.jpg' },
     },
     image: heroUrlAbsolute,
-    mainEntityOfPage: `https://kyounoko.jp/article/${article.slug}`,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': articleUrl,
+    },
+    // AI読み上げ / 音声アシスタント向け：TL;DR と lede を音声候補として指定
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.tldr-text', '.page-head .lead'],
+    },
   };
 
   const jsonLdBreadcrumb = {
@@ -486,6 +541,24 @@ function FileArticleView({ article }: { article: FileArticle }) {
         }
       : null;
 
+  const jsonLdItemList =
+    article.itemList && article.itemList.length >= 3
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'ItemList',
+          name: article.title,
+          description: article.tldr ?? article.metaDescription,
+          numberOfItems: article.itemList.length,
+          itemListOrder: 'https://schema.org/ItemListOrderAscending',
+          itemListElement: article.itemList.map((it) => ({
+            '@type': 'ListItem',
+            position: it.position,
+            name: it.name,
+            description: it.description,
+          })),
+        }
+      : null;
+
   const mobileActive =
     article.category === 'today-doko' ||
     article.category === 'today-nani' ||
@@ -513,6 +586,12 @@ function FileArticleView({ article }: { article: FileArticle }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdHowTo) }}
+        />
+      )}
+      {jsonLdItemList && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdItemList) }}
         />
       )}
 
@@ -586,6 +665,9 @@ function FileArticleView({ article }: { article: FileArticle }) {
             <p className="lead">{article.lede}</p>
           </header>
 
+          {/* PR 開示（該当記事のみ） */}
+          {hasAffiliate && <PRBadge />}
+
           {/* TL;DR — AI Overview 抽出を意識した要約ボックス */}
           {article.tldr && (
             <aside className="tldr-box" aria-label="この記事の要約">
@@ -637,6 +719,15 @@ function FileArticleView({ article }: { article: FileArticle }) {
 
           {/* Share bar (body 直下) */}
           <ShareBar url={articleUrl} title={article.title} />
+
+          {/* アフィリエイト商品リスト（対象記事のみ） */}
+          {hasAffiliate && (
+            <AffiliateLinkGroup
+              heading="PICK UP"
+              title="この記事で紹介したアイテム"
+              items={affiliateProducts}
+            />
+          )}
 
           {/* FAQ */}
           {article.faqItems.length > 0 && (
