@@ -5,6 +5,11 @@ import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
 import { getArticle, getArticleIds } from '@/lib/microcms';
+import {
+  getAllFileArticleSlugs,
+  getFileArticle,
+  type FileArticle,
+} from '@/lib/articles';
 
 export const revalidate = 3600; // 1時間ごとに再生成
 
@@ -12,22 +17,81 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-// 静的生成：全記事のパスを事前生成
+// MicroCMS のカテゴリslug→日本語名フォールバック（ファイルベース記事用）
+const CATEGORY_NAME_FALLBACK: Record<string, string> = {
+  'today-doko': '今日どこ行く？',
+  'today-nani': '今日何する？',
+  'today-taberu': '今日何食べる？',
+  'today-mawasu': '今日どう回す？',
+  'shippai-shinai': '失敗しない外出',
+  tenki: '天気で決める',
+  'heijitsu-yoru': '平日夜を回す',
+  gyouji: '季節と行事',
+  narai: '習い事と学び',
+  yakudatsu: '役立つもの',
+};
+
+// 静的生成：MicroCMSとファイルベース、両方のパスを事前生成
 export async function generateStaticParams() {
+  const slugs = new Set<string>();
+
   try {
     const articles = await getArticleIds();
-    return articles.map(a => ({ slug: a.slug }));
+    for (const a of articles) slugs.add(a.slug);
   } catch {
-    return [];
+    // ignore - MicroCMS未整備
   }
+
+  for (const s of getAllFileArticleSlugs()) slugs.add(s);
+
+  return Array.from(slugs).map((slug) => ({ slug }));
+}
+
+// MicroCMS -> なければファイルベースからメタ取得
+async function resolveArticle(slug: string): Promise<
+  | { kind: 'microcms'; data: NonNullable<Awaited<ReturnType<typeof getArticle>>> }
+  | { kind: 'file'; data: FileArticle }
+  | null
+> {
+  try {
+    const microCms = await getArticle(slug);
+    if (microCms) return { kind: 'microcms', data: microCms };
+  } catch {
+    // ignore - fall through to file-based
+  }
+
+  const file = await getFileArticle(slug);
+  if (file) return { kind: 'file', data: file };
+
+  return null;
 }
 
 // メタデータ動的生成
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const article = await getArticle(slug);
-  if (!article) return { title: '記事が見つかりません' };
+  const resolved = await resolveArticle(slug);
+  if (!resolved) return { title: '記事が見つかりません' };
 
+  if (resolved.kind === 'microcms') {
+    const article = resolved.data;
+    return {
+      title: article.title,
+      description: article.metaDescription ?? article.lede?.substring(0, 120),
+      openGraph: {
+        title: article.title,
+        description: article.metaDescription,
+        type: 'article',
+        publishedTime: article.publishedAt,
+        modifiedTime: article.updatedAtManual ?? article.updatedAt,
+        images: article.hero ? [{ url: article.hero.url, width: 1600, height: 900 }] : [],
+      },
+      alternates: { canonical: `/article/${slug}` },
+      robots: article.noindex ? { index: false } : undefined,
+    };
+  }
+
+  // file-based
+  const article = resolved.data;
   return {
     title: article.title,
     description: article.metaDescription ?? article.lede?.substring(0, 120),
@@ -36,8 +100,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: article.metaDescription,
       type: 'article',
       publishedTime: article.publishedAt,
-      modifiedTime: article.updatedAtManual ?? article.updatedAt,
-      images: article.hero ? [{ url: article.hero.url, width: 1600, height: 900 }] : [],
+      modifiedTime: article.updatedAt,
+      images: article.hero ? [{ url: article.hero, width: 1600, height: 900 }] : [],
     },
     alternates: { canonical: `/article/${slug}` },
     robots: article.noindex ? { index: false } : undefined,
@@ -46,11 +110,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ArticlePage({ params }: Props) {
   const { slug } = await params;
-  const article = await getArticle(slug);
-  if (!article) notFound();
+  const resolved = await resolveArticle(slug);
+  if (!resolved) notFound();
 
-  const publishedAt = new Date(article.publishedAt);
-  const updatedAt = new Date(article.updatedAtManual ?? article.updatedAt);
+  if (resolved.kind === 'file') {
+    return <FileArticleView article={resolved.data} />;
+  }
+
+  // ===== 以降、既存の MicroCMS 版レンダリング =====
+  const article = resolved.data;
 
   // JSON-LD
   const jsonLdArticle = {
@@ -324,6 +392,281 @@ export default async function ArticlePage({ params }: Props) {
 
       <SiteFooter />
       <MobileStickyNav active={article.category?.slug === 'today-doko' ? 'today-doko' : article.category?.slug === 'today-nani' ? 'today-nani' : article.category?.slug === 'today-taberu' ? 'today-taberu' : undefined} />
+    </>
+  );
+}
+
+// ==========================================================================
+// File-based article view
+// ==========================================================================
+
+function FileArticleView({ article }: { article: FileArticle }) {
+  const categoryName = article.categoryName ?? CATEGORY_NAME_FALLBACK[article.category] ?? article.category;
+  const heroUrlAbsolute = article.hero
+    ? article.hero.startsWith('http')
+      ? article.hero
+      : `https://kyounoko.jp${article.hero}`
+    : undefined;
+
+  const jsonLdArticle = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: article.metaDescription,
+    datePublished: article.publishedAt,
+    dateModified: article.updatedAt,
+    author: { '@type': 'Person', name: 'ながみー' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'きょうのこ',
+      logo: { '@type': 'ImageObject', url: 'https://kyounoko.jp/img/ogp-default.svg' },
+    },
+    image: heroUrlAbsolute,
+    mainEntityOfPage: `https://kyounoko.jp/article/${article.slug}`,
+  };
+
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'HOME', item: 'https://kyounoko.jp/' },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: categoryName,
+        item: `https://kyounoko.jp/category/${article.category}`,
+      },
+      { '@type': 'ListItem', position: 3, name: article.title },
+    ],
+  };
+
+  const jsonLdFaq = article.faqItems.length
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: article.faqItems.map((q) => ({
+          '@type': 'Question',
+          name: q.question,
+          acceptedAnswer: { '@type': 'Answer', text: q.answer },
+        })),
+      }
+    : null;
+
+  const mobileActive =
+    article.category === 'today-doko' ||
+    article.category === 'today-nani' ||
+    article.category === 'today-taberu'
+      ? (article.category as 'today-doko' | 'today-nani' | 'today-taberu')
+      : undefined;
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdArticle) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+      {jsonLdFaq && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
+        />
+      )}
+
+      <SiteHeader currentCategory={article.category as never} />
+
+      {/* Breadcrumb */}
+      <div className="container-article">
+        <nav className="breadcrumb" aria-label="パンくず">
+          <Link href="/">HOME</Link>
+          <span className="sep">/</span>
+          <Link href={`/category/${article.category}`}>{categoryName}</Link>
+          <span className="sep">/</span>
+          <span>{article.title}</span>
+        </nav>
+      </div>
+
+      {/* Article hero image */}
+      {article.hero && (
+        <div className="article-hero" style={{ maxWidth: 920, margin: '8px auto 32px', padding: '0 var(--pad)' }}>
+          <div
+            style={{
+              width: '100%',
+              aspectRatio: '16/9',
+              borderRadius: 'var(--radius-lg)',
+              backgroundImage: `url(${article.hero})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundColor: 'var(--peach-soft)',
+            }}
+            role="img"
+            aria-label={article.title}
+          />
+        </div>
+      )}
+
+      <article className="container-article">
+        <header className="page-head">
+          <Link
+            href={`/category/${article.category}`}
+            className="eyebrow"
+            style={{ textDecoration: 'none' }}
+          >
+            Category · {categoryName}
+          </Link>
+          <h1>{article.title}</h1>
+          <p className="lead">{article.lede}</p>
+        </header>
+
+        {/* Quick Info */}
+        {article.quickInfo && (article.quickInfo.ageRanges?.length || article.quickInfo.durationMin) && (
+          <section
+            style={{
+              background: 'var(--paper-card)',
+              border: '1px solid var(--line)',
+              borderRadius: 'var(--radius-lg)',
+              padding: '20px 22px',
+              margin: '32px 0 40px',
+            }}
+            aria-label="この記事のクイック情報"
+          >
+            <div
+              style={{
+                display: 'grid',
+                gap: 16,
+                gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
+              }}
+            >
+              {article.quickInfo.ageRanges?.length ? (
+                <QuickItem label="AGE" value={article.quickInfo.ageRanges.join(' / ') + '歳'} />
+              ) : null}
+              {article.quickInfo.durationMin ? (
+                <QuickItem label="TIME" value={`${article.quickInfo.durationMin}分`} />
+              ) : null}
+              {article.quickInfo.budget ? (
+                <QuickItem label="BUDGET" value={budgetLabel(article.quickInfo.budget)} />
+              ) : null}
+              {article.quickInfo.weather?.length ? (
+                <QuickItem label="WEATHER" value={article.quickInfo.weather.join(' / ')} />
+              ) : null}
+            </div>
+          </section>
+        )}
+
+        {/* Body */}
+        <div className="prose" dangerouslySetInnerHTML={{ __html: article.body }} />
+
+        {/* FAQ */}
+        {article.faqItems.length > 0 && (
+          <section style={{ margin: '56px 0 24px' }}>
+            <h2
+              style={{
+                fontFamily: 'var(--font-mincho)',
+                fontWeight: 600,
+                fontSize: 22,
+                margin: '0 0 16px',
+              }}
+            >
+              よくある質問
+            </h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+              {article.faqItems.map((q, i) => (
+                <details
+                  key={i}
+                  style={{
+                    background: 'var(--paper-card)',
+                    border: '1px solid var(--line)',
+                    borderRadius: 'var(--radius-md)',
+                    overflow: 'hidden',
+                  }}
+                >
+                  <summary
+                    style={{
+                      padding: '16px 20px',
+                      fontWeight: 600,
+                      fontSize: '14.5px',
+                      cursor: 'pointer',
+                      fontFamily: 'var(--font-mincho)',
+                    }}
+                  >
+                    {q.question}
+                  </summary>
+                  <div
+                    style={{
+                      padding: '0 20px 18px',
+                      fontSize: 14,
+                      color: 'var(--ink-sub)',
+                      borderTop: '1px solid var(--line)',
+                      lineHeight: 1.85,
+                    }}
+                  >
+                    <p style={{ margin: '14px 0 0', whiteSpace: 'pre-wrap' }}>{q.answer}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Author box */}
+        <section
+          style={{
+            background: 'var(--paper-card)',
+            border: '1px solid var(--line)',
+            borderRadius: 'var(--radius-lg)',
+            padding: 24,
+            margin: '56px 0 0',
+            display: 'grid',
+            gridTemplateColumns: '64px 1fr',
+            gap: 20,
+          }}
+        >
+          <div
+            style={{
+              width: 64,
+              height: 64,
+              borderRadius: 999,
+              background: 'var(--clay-soft)',
+              color: 'var(--clay-deep)',
+              display: 'grid',
+              placeItems: 'center',
+              fontWeight: 700,
+              fontSize: 22,
+              fontFamily: 'var(--font-mincho)',
+            }}
+          >
+            こ
+          </div>
+          <div>
+            <p
+              style={{
+                fontFamily: 'var(--font-mincho)',
+                fontSize: 15,
+                fontWeight: 600,
+                margin: '0 0 6px',
+              }}
+            >
+              ながみー（きょうのこ運営）
+            </p>
+            <p
+              style={{
+                fontSize: 13,
+                color: 'var(--ink-sub)',
+                margin: 0,
+                lineHeight: 1.85,
+              }}
+            >
+              共働き家庭で子育て中の運営者。「今日どうする？」を決めやすくするためのサイトを運営しています。
+            </p>
+          </div>
+        </section>
+      </article>
+
+      <SiteFooter />
+      <MobileStickyNav active={mobileActive} />
     </>
   );
 }

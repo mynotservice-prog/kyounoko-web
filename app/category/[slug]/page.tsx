@@ -5,6 +5,7 @@ import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
 import { getCategory, getCategories, getArticlesByCategory } from '@/lib/microcms';
+import { getFileArticlesByCategory, type FileArticleMeta } from '@/lib/articles';
 
 export const revalidate = 3600;
 
@@ -80,6 +81,10 @@ export default async function CategoryPage({ params }: Props) {
     // empty
   }
 
+  // MicroCMS に記事がなければファイルベース記事をフォールバック表示
+  const fileArticles: FileArticleMeta[] =
+    articles.length === 0 ? getFileArticlesByCategory(slug) : [];
+
   const jsonLdBreadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -125,10 +130,10 @@ export default async function CategoryPage({ params }: Props) {
               <span className="eyebrow">Articles</span>
               <h2>{category.name}の記事</h2>
             </div>
-            <span className="hint">{articles.length} 件</span>
+            <span className="hint">{(articles.length + fileArticles.length)} 件</span>
           </div>
 
-          {articles.length === 0 ? (
+          {articles.length === 0 && fileArticles.length === 0 ? (
             <p style={{ color: 'var(--ink-sub)' }}>このカテゴリの記事は準備中です。</p>
           ) : (
             <div style={{ display: 'grid', gap: 20, gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
@@ -168,6 +173,49 @@ export default async function CategoryPage({ params }: Props) {
                         <span key={p} className="meta-chip sage">{p === 'home' ? '家' : p === 'indoor' ? '屋内' : '外'}</span>
                       ))}
                       {article.quickInfo_weather?.includes('rain') && (
+                        <span className="meta-chip sky">雨OK</span>
+                      )}
+                    </div>
+                  </div>
+                </Link>
+              ))}
+
+              {fileArticles.map(article => (
+                <Link
+                  key={`file-${article.slug}`}
+                  href={`/article/${article.slug}`}
+                  style={{
+                    background: 'var(--paper-card)',
+                    border: '1px solid var(--line)',
+                    borderRadius: 'var(--radius-lg)',
+                    overflow: 'hidden',
+                    textDecoration: 'none',
+                    color: 'inherit',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div
+                    style={{
+                      aspectRatio: '16/10',
+                      backgroundColor: 'var(--peach-soft)',
+                      backgroundImage: article.hero ? `url(${article.hero})` : undefined,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                    }}
+                  />
+                  <div style={{ padding: '16px 20px 22px', display: 'flex', flexDirection: 'column', gap: 10, flex: 1 }}>
+                    <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 16, fontWeight: 600, margin: 0, lineHeight: 1.55 }}>
+                      {article.title}
+                    </h3>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 'auto' }}>
+                      {article.quickInfo?.ageRanges?.slice(0, 1).map(age => (
+                        <span key={age} className="meta-chip clay">{age}歳</span>
+                      ))}
+                      {article.quickInfo?.place?.slice(0, 1).map(p => (
+                        <span key={p} className="meta-chip sage">{p === 'home' ? '家' : p === 'indoor' ? '屋内' : '外'}</span>
+                      ))}
+                      {article.quickInfo?.weather?.includes('rain') && (
                         <span className="meta-chip sky">雨OK</span>
                       )}
                     </div>

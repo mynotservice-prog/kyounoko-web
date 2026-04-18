@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { getArticleIds, getCategories } from '@/lib/microcms';
+import { getAllFileArticles } from '@/lib/articles';
 
 const BASE = 'https://kyounoko.jp';
 
@@ -46,19 +47,35 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  // 記事
-  let articlePages: MetadataRoute.Sitemap = [];
+  // 記事（MicroCMS + ファイルベース、slugでマージ）
+  const articleUrlMap = new Map<string, MetadataRoute.Sitemap[number]>();
+
   try {
     const articles = await getArticleIds();
-    articlePages = articles.map(article => ({
+    for (const article of articles) {
+      articleUrlMap.set(article.slug, {
+        url: `${BASE}/article/${article.slug}`,
+        lastModified: new Date(article.updatedAt ?? Date.now()),
+        changeFrequency: 'monthly' as const,
+        priority: 0.6,
+      });
+    }
+  } catch {
+    // MicroCMS 未整備時は無視
+  }
+
+  // ファイルベース記事（MicroCMS にない slug のみ追加）
+  for (const article of getAllFileArticles()) {
+    if (articleUrlMap.has(article.slug)) continue;
+    articleUrlMap.set(article.slug, {
       url: `${BASE}/article/${article.slug}`,
       lastModified: new Date(article.updatedAt ?? Date.now()),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
-    }));
-  } catch {
-    // 記事は空
+    });
   }
+
+  const articlePages: MetadataRoute.Sitemap = Array.from(articleUrlMap.values());
 
   return [...staticPages, ...categoryPages, ...articlePages];
 }
