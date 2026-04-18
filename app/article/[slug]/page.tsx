@@ -8,8 +8,12 @@ import { getArticle, getArticleIds } from '@/lib/microcms';
 import {
   getAllFileArticleSlugs,
   getFileArticle,
+  getRelatedFileArticles,
   type FileArticle,
+  type FileArticleMeta,
 } from '@/lib/articles';
+import { ShareBar } from '@/components/article/ShareBar';
+import { TableOfContents } from '@/components/article/TableOfContents';
 
 export const revalidate = 3600; // 1時間ごとに再生成
 
@@ -407,6 +411,15 @@ function FileArticleView({ article }: { article: FileArticle }) {
       ? article.hero
       : `https://kyounoko.jp${article.hero}`
     : undefined;
+  const articleUrl = `https://kyounoko.jp/article/${article.slug}`;
+  const relatedArticles: FileArticleMeta[] = getRelatedFileArticles(
+    article.slug,
+    article.category,
+    3,
+  );
+  const publishedLabel = formatJaDate(article.publishedAt);
+  const updatedLabel = formatJaDate(article.updatedAt);
+  const showUpdated = publishedLabel !== updatedLabel;
 
   const jsonLdArticle = {
     '@context': 'https://schema.org',
@@ -508,167 +521,280 @@ function FileArticleView({ article }: { article: FileArticle }) {
         </div>
       )}
 
-      <article className="container-article">
-        <header className="page-head">
-          <Link
-            href={`/category/${article.category}`}
-            className="eyebrow"
-            style={{ textDecoration: 'none' }}
-          >
-            Category · {categoryName}
-          </Link>
-          <h1>{article.title}</h1>
-          <p className="lead">{article.lede}</p>
-        </header>
+      <article className="article-layout">
+        <div className="article-main">
+          <header className="page-head">
+            <Link
+              href={`/category/${article.category}`}
+              className="eyebrow"
+              style={{ textDecoration: 'none' }}
+            >
+              Category · {categoryName}
+            </Link>
+            <h1>{article.title}</h1>
 
-        {/* Quick Info */}
-        {article.quickInfo && (article.quickInfo.ageRanges?.length || article.quickInfo.durationMin) && (
+            {/* 記事メタ（読了時間・公開日・更新日） */}
+            <div className="article-meta">
+              <span className="article-meta-item">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3 2" />
+                </svg>
+                約{article.readingTimeMin}分で読める
+              </span>
+              <span className="article-meta-sep" aria-hidden="true">·</span>
+              <span className="article-meta-item">
+                <time dateTime={article.publishedAt}>公開 {publishedLabel}</time>
+              </span>
+              {showUpdated && (
+                <>
+                  <span className="article-meta-sep" aria-hidden="true">·</span>
+                  <span className="article-meta-item">
+                    <time dateTime={article.updatedAt}>更新 {updatedLabel}</time>
+                  </span>
+                </>
+              )}
+            </div>
+
+            <p className="lead">{article.lede}</p>
+          </header>
+
+          {/* Quick Info */}
+          {article.quickInfo && (article.quickInfo.ageRanges?.length || article.quickInfo.durationMin) && (
+            <section
+              style={{
+                background: 'var(--paper-card)',
+                border: '1px solid var(--line)',
+                borderRadius: 'var(--radius-lg)',
+                padding: '20px 22px',
+                margin: '32px 0 32px',
+              }}
+              aria-label="この記事のクイック情報"
+            >
+              <div
+                style={{
+                  display: 'grid',
+                  gap: 16,
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
+                }}
+              >
+                {article.quickInfo.ageRanges?.length ? (
+                  <QuickItem label="AGE" value={article.quickInfo.ageRanges.join(' / ') + '歳'} />
+                ) : null}
+                {article.quickInfo.durationMin ? (
+                  <QuickItem label="TIME" value={`${article.quickInfo.durationMin}分`} />
+                ) : null}
+                {article.quickInfo.budget ? (
+                  <QuickItem label="BUDGET" value={budgetLabel(article.quickInfo.budget)} />
+                ) : null}
+                {article.quickInfo.weather?.length ? (
+                  <QuickItem label="WEATHER" value={article.quickInfo.weather.join(' / ')} />
+                ) : null}
+              </div>
+            </section>
+          )}
+
+          {/* Mobile TOC */}
+          <TableOfContents items={article.toc} variant="mobile" />
+
+          {/* Body */}
+          <div className="prose" dangerouslySetInnerHTML={{ __html: article.body }} />
+
+          {/* Share bar (body 直下) */}
+          <ShareBar url={articleUrl} title={article.title} />
+
+          {/* FAQ */}
+          {article.faqItems.length > 0 && (
+            <section style={{ margin: '56px 0 24px' }}>
+              <h2
+                style={{
+                  fontFamily: 'var(--font-mincho)',
+                  fontWeight: 600,
+                  fontSize: 22,
+                  margin: '0 0 16px',
+                }}
+              >
+                よくある質問
+              </h2>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                {article.faqItems.map((q, i) => (
+                  <details
+                    key={i}
+                    style={{
+                      background: 'var(--paper-card)',
+                      border: '1px solid var(--line)',
+                      borderRadius: 'var(--radius-md)',
+                      overflow: 'hidden',
+                    }}
+                  >
+                    <summary
+                      style={{
+                        padding: '16px 20px',
+                        fontWeight: 600,
+                        fontSize: '14.5px',
+                        cursor: 'pointer',
+                        fontFamily: 'var(--font-mincho)',
+                      }}
+                    >
+                      {q.question}
+                    </summary>
+                    <div
+                      style={{
+                        padding: '0 20px 18px',
+                        fontSize: 14,
+                        color: 'var(--ink-sub)',
+                        borderTop: '1px solid var(--line)',
+                        lineHeight: 1.85,
+                      }}
+                    >
+                      <p style={{ margin: '14px 0 0', whiteSpace: 'pre-wrap' }}>{q.answer}</p>
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Author box */}
           <section
             style={{
               background: 'var(--paper-card)',
               border: '1px solid var(--line)',
               borderRadius: 'var(--radius-lg)',
-              padding: '20px 22px',
-              margin: '32px 0 40px',
+              padding: 24,
+              margin: '56px 0 0',
+              display: 'grid',
+              gridTemplateColumns: '64px 1fr',
+              gap: 20,
             }}
-            aria-label="この記事のクイック情報"
           >
             <div
               style={{
+                width: 64,
+                height: 64,
+                borderRadius: 999,
+                background: 'var(--clay-soft)',
+                color: 'var(--clay-deep)',
                 display: 'grid',
-                gap: 16,
-                gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
-              }}
-            >
-              {article.quickInfo.ageRanges?.length ? (
-                <QuickItem label="AGE" value={article.quickInfo.ageRanges.join(' / ') + '歳'} />
-              ) : null}
-              {article.quickInfo.durationMin ? (
-                <QuickItem label="TIME" value={`${article.quickInfo.durationMin}分`} />
-              ) : null}
-              {article.quickInfo.budget ? (
-                <QuickItem label="BUDGET" value={budgetLabel(article.quickInfo.budget)} />
-              ) : null}
-              {article.quickInfo.weather?.length ? (
-                <QuickItem label="WEATHER" value={article.quickInfo.weather.join(' / ')} />
-              ) : null}
-            </div>
-          </section>
-        )}
-
-        {/* Body */}
-        <div className="prose" dangerouslySetInnerHTML={{ __html: article.body }} />
-
-        {/* FAQ */}
-        {article.faqItems.length > 0 && (
-          <section style={{ margin: '56px 0 24px' }}>
-            <h2
-              style={{
-                fontFamily: 'var(--font-mincho)',
-                fontWeight: 600,
+                placeItems: 'center',
+                fontWeight: 700,
                 fontSize: 22,
-                margin: '0 0 16px',
+                fontFamily: 'var(--font-mincho)',
               }}
             >
-              よくある質問
-            </h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-              {article.faqItems.map((q, i) => (
-                <details
-                  key={i}
-                  style={{
-                    background: 'var(--paper-card)',
-                    border: '1px solid var(--line)',
-                    borderRadius: 'var(--radius-md)',
-                    overflow: 'hidden',
-                  }}
-                >
-                  <summary
-                    style={{
-                      padding: '16px 20px',
-                      fontWeight: 600,
-                      fontSize: '14.5px',
-                      cursor: 'pointer',
-                      fontFamily: 'var(--font-mincho)',
-                    }}
-                  >
-                    {q.question}
-                  </summary>
-                  <div
-                    style={{
-                      padding: '0 20px 18px',
-                      fontSize: 14,
-                      color: 'var(--ink-sub)',
-                      borderTop: '1px solid var(--line)',
-                      lineHeight: 1.85,
-                    }}
-                  >
-                    <p style={{ margin: '14px 0 0', whiteSpace: 'pre-wrap' }}>{q.answer}</p>
-                  </div>
-                </details>
-              ))}
+              こ
+            </div>
+            <div>
+              <p
+                style={{
+                  fontFamily: 'var(--font-mincho)',
+                  fontSize: 15,
+                  fontWeight: 600,
+                  margin: '0 0 6px',
+                }}
+              >
+                ながみー（きょうのこ運営）
+              </p>
+              <p
+                style={{
+                  fontSize: 13,
+                  color: 'var(--ink-sub)',
+                  margin: 0,
+                  lineHeight: 1.85,
+                }}
+              >
+                共働き家庭で子育て中の運営者。「今日どうする？」を決めやすくするためのサイトを運営しています。
+              </p>
             </div>
           </section>
-        )}
 
-        {/* Author box */}
-        <section
-          style={{
-            background: 'var(--paper-card)',
-            border: '1px solid var(--line)',
-            borderRadius: 'var(--radius-lg)',
-            padding: 24,
-            margin: '56px 0 0',
-            display: 'grid',
-            gridTemplateColumns: '64px 1fr',
-            gap: 20,
-          }}
-        >
-          <div
-            style={{
-              width: 64,
-              height: 64,
-              borderRadius: 999,
-              background: 'var(--clay-soft)',
-              color: 'var(--clay-deep)',
-              display: 'grid',
-              placeItems: 'center',
-              fontWeight: 700,
-              fontSize: 22,
-              fontFamily: 'var(--font-mincho)',
-            }}
-          >
-            こ
+          {/* Share bar (author 直下) */}
+          <ShareBar url={articleUrl} title={article.title} label="記事をシェアする" />
+
+          {/* Related articles */}
+          {relatedArticles.length > 0 && (
+            <section style={{ marginTop: 56 }}>
+              <h2
+                style={{
+                  fontFamily: 'var(--font-mincho)',
+                  fontWeight: 600,
+                  fontSize: 22,
+                  margin: '0 0 20px',
+                }}
+              >
+                関連する記事
+              </h2>
+              <div
+                style={{
+                  display: 'grid',
+                  gap: 20,
+                  gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+                }}
+              >
+                {relatedArticles.map((a) => (
+                  <Link
+                    key={a.slug}
+                    href={`/article/${a.slug}`}
+                    style={{
+                      background: 'var(--paper-card)',
+                      border: '1px solid var(--line)',
+                      borderRadius: 'var(--radius-lg)',
+                      overflow: 'hidden',
+                      textDecoration: 'none',
+                      color: 'inherit',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      transition: 'transform .25s ease, box-shadow .25s ease, border-color .25s ease',
+                    }}
+                    className="related-card"
+                  >
+                    <div
+                      style={{
+                        aspectRatio: '16/10',
+                        backgroundColor: 'var(--peach-soft)',
+                        backgroundImage: a.hero ? `url(${a.hero})` : undefined,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                      }}
+                    />
+                    <div style={{ padding: '14px 16px 18px' }}>
+                      <h4
+                        style={{
+                          fontFamily: 'var(--font-mincho)',
+                          fontSize: 14.5,
+                          fontWeight: 600,
+                          margin: 0,
+                          lineHeight: 1.55,
+                        }}
+                      >
+                        {a.title}
+                      </h4>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+        </div>
+
+        {/* Desktop TOC sidebar */}
+        <aside className="article-sidebar" aria-label="記事目次">
+          <div className="article-sidebar-inner">
+            <TableOfContents items={article.toc} variant="desktop" />
           </div>
-          <div>
-            <p
-              style={{
-                fontFamily: 'var(--font-mincho)',
-                fontSize: 15,
-                fontWeight: 600,
-                margin: '0 0 6px',
-              }}
-            >
-              ながみー（きょうのこ運営）
-            </p>
-            <p
-              style={{
-                fontSize: 13,
-                color: 'var(--ink-sub)',
-                margin: 0,
-                lineHeight: 1.85,
-              }}
-            >
-              共働き家庭で子育て中の運営者。「今日どうする？」を決めやすくするためのサイトを運営しています。
-            </p>
-          </div>
-        </section>
+        </aside>
       </article>
 
       <SiteFooter />
       <MobileStickyNav active={mobileActive} />
     </>
   );
+}
+
+function formatJaDate(iso: string): string {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return iso;
+  return `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`;
 }
 
 function QuickItem({ label, value }: { label: string; value: string }) {

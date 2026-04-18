@@ -3,8 +3,23 @@ import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
 import { TodayFinder } from '@/components/top/TodayFinder';
+import { getAllFileArticles } from '@/lib/articles';
 
 export const revalidate = 3600; // 1時間ごとに再生成
+
+// MicroCMS カテゴリ slug → 日本語名フォールバック
+const CATEGORY_LABEL: Record<string, string> = {
+  'today-doko': '今日どこ行く',
+  'today-nani': '今日何する',
+  'today-taberu': '今日何食べる',
+  'today-mawasu': '今日どう回す',
+  'shippai-shinai': '失敗しない外出',
+  tenki: '天気で決める',
+  'heijitsu-yoru': '平日夜を回す',
+  gyouji: '季節と行事',
+  narai: '習い事と学び',
+  yakudatsu: '役立つもの',
+};
 
 export default function HomePage() {
   // Dynamic date for hero's today card
@@ -14,6 +29,9 @@ export default function HomePage() {
   const weekday = ['日', '月', '火', '水', '木', '金', '土'][now.getDay()];
   const dateLine = `${month}月${day}日（${weekday}）`;
   const monthsEn = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+  // 最新記事（ファイルベース）
+  const latestArticles = getAllFileArticles().slice(0, 6);
 
   return (
     <>
@@ -80,8 +98,113 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Latest Articles */}
+      {latestArticles.length > 0 && (
+        <section className="section" style={{ paddingTop: 0 }}>
+          <div className="container">
+            <div className="section-head">
+              <div>
+                <span className="eyebrow">Latest</span>
+                <h2>最新の記事</h2>
+              </div>
+              <span className="hint">{latestArticles.length} articles</span>
+            </div>
+
+            <div
+              style={{
+                display: 'grid',
+                gap: 20,
+                gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+              }}
+            >
+              {latestArticles.map((a) => (
+                <Link
+                  key={a.slug}
+                  href={`/article/${a.slug}`}
+                  className="related-card"
+                  style={{
+                    background: 'var(--paper-card)',
+                    border: '1px solid var(--line)',
+                    borderRadius: 'var(--radius-lg)',
+                    overflow: 'hidden',
+                    textDecoration: 'none',
+                    color: 'inherit',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    transition: 'transform .25s ease, box-shadow .25s ease, border-color .25s ease',
+                  }}
+                >
+                  <div
+                    style={{
+                      aspectRatio: '16/10',
+                      backgroundColor: 'var(--peach-soft)',
+                      backgroundImage: a.hero ? `url(${a.hero})` : undefined,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                    }}
+                  />
+                  <div
+                    style={{
+                      padding: '16px 18px 20px',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: 10,
+                      flex: 1,
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontFamily: 'var(--font-inter), Inter, sans-serif',
+                        fontSize: 10,
+                        letterSpacing: '.16em',
+                        textTransform: 'uppercase',
+                        color: 'var(--clay)',
+                        fontWeight: 600,
+                      }}
+                    >
+                      {a.categoryName ?? CATEGORY_LABEL[a.category] ?? a.category}
+                    </span>
+                    <h3
+                      style={{
+                        fontFamily: 'var(--font-mincho), "Shippori Mincho", serif',
+                        fontSize: 15.5,
+                        fontWeight: 600,
+                        margin: 0,
+                        lineHeight: 1.55,
+                      }}
+                    >
+                      {a.title}
+                    </h3>
+                    <div
+                      style={{
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        gap: 6,
+                        marginTop: 'auto',
+                      }}
+                    >
+                      {a.quickInfo?.ageRanges?.slice(0, 1).map((age) => (
+                        <span key={age} className="meta-chip clay">{age}歳</span>
+                      ))}
+                      {a.quickInfo?.durationMin ? (
+                        <span className="meta-chip ochre">{a.quickInfo.durationMin}分</span>
+                      ) : null}
+                      {a.quickInfo?.place?.slice(0, 1).map((p) => (
+                        <span key={p} className="meta-chip sage">
+                          {p === 'home' ? '家' : p === 'indoor' ? '屋内' : '外'}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Today's Picks */}
-      <section className="section">
+      <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="section-head">
             <div>

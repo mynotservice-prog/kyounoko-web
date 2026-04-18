@@ -38,8 +38,16 @@ export type FileArticleFaq = {
 };
 
 export type FileArticle = FileArticleMeta & {
-  body: string; // HTML
+  body: string; // HTML (with id-added h2/h3)
   faqItems: FileArticleFaq[];
+  toc: TocItem[];
+  readingTimeMin: number;
+};
+
+export type TocItem = {
+  id: string;
+  level: 2 | 3;
+  text: string;
 };
 
 const ARTICLES_DIR = path.join(process.cwd(), 'content', 'articles');
@@ -111,6 +119,72 @@ async function renderMarkdownToHtml(md: string): Promise<string> {
     .use(remarkHtml, { sanitize: false })
     .process(md);
   return String(file);
+}
+
+// 見出しテキストから URL 安全な id を生成する軽量 slugify。
+// 日本語はそのまま保持（日本語 URL fragment は主要ブラウザで機能する）。
+function slugifyHeading(text: string): string {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/<[^>]+>/g, '')
+    .replace(/&[a-z]+;/g, '') // &amp; など
+    .replace(/[\s\u3000]+/g, '-')
+    .replace(/[!"#$%&'()*+,./:;<=>?@[\\\]^`{|}~。、，．・「」『』（）［］【】]/g, '')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+// レンダー済み HTML の <h2>/<h3> に id を付与し、抽出した TOC 配列を返す。
+function injectHeadingIdsAndExtractToc(html: string): { html: string; toc: TocItem[] } {
+  const toc: TocItem[] = [];
+  const usedIds = new Set<string>();
+
+  // 既存 id は温存。無い場合のみ付与。
+  const result = html.replace(
+    /<h([23])(\s[^>]*)?>([\s\S]*?)<\/h\1>/g,
+    (match, levelStr: string, attrs: string | undefined, inner: string) => {
+      const level = Number(levelStr) as 2 | 3;
+      const attrString = attrs ?? '';
+      const existingIdMatch = attrString.match(/\sid\s*=\s*["']([^"']+)["']/);
+      let id: string;
+      if (existingIdMatch) {
+        id = existingIdMatch[1];
+      } else {
+        const base = slugifyHeading(inner) || `section-${toc.length + 1}`;
+        id = base;
+        let n = 2;
+        while (usedIds.has(id)) {
+          id = `${base}-${n++}`;
+        }
+      }
+      usedIds.add(id);
+
+      // タグ内テキスト（HTMLタグ除去）
+      const text = inner.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+      toc.push({ id, level, text });
+
+      if (existingIdMatch) {
+        return match;
+      }
+      return `<h${level}${attrString} id="${id}">${inner}</h${level}>`;
+    },
+  );
+
+  return { html: result, toc };
+}
+
+/**
+ * 日本語テキストの概算読了時間（分）。
+ * ベース 600 文字/分。最低 1 分。
+ */
+export function estimateReadingTime(text: string): number {
+  if (!text) return 1;
+  // HTML タグを除去し、空白を正規化
+  const stripped = text.replace(/<[^>]+>/g, '').replace(/\s+/g, '');
+  const chars = stripped.length;
+  const minutes = Math.max(1, Math.round(chars / 600));
+  return minutes;
 }
 
 // FAQ セクション（"## よくある質問" または "## FAQ"）を本文から抜き出して
@@ -233,8 +307,16 @@ export async function getFileArticle(slug: string): Promise<FileArticle | null> 
     if (meta.slug !== slug) continue;
 
     const { body: bodyMd, faq } = extractFaq(content);
-    const bodyHtml = await renderMarkdownToHtml(bodyMd);
-    return { ...meta, body: bodyHtml, faqItems: faq };
+    const rawHtml = await renderMarkdownToHtml(bodyMd);
+    const { html: bodyHtml, toc } = injectHeadingIdsAndExtractToc(rawHtml);
+    const readingTimeMin = estimateReadingTime(bodyMd);
+    return {
+      ...meta,
+      body: bodyHtml,
+      faqItems: faq,
+      toc,
+      readingTimeMin,
+    };
   }
   return null;
 }
@@ -252,4 +334,22 @@ export function getFileArticlesByCategory(categorySlug: string): FileArticleMeta
  */
 export function getAllFileArticleSlugs(): string[] {
   return getAllFileArticles().map((a) => a.slug);
+}
+
+/**
+ * 同カテゴリの関連記事を最大 `limit` 件返す。
+ * 同カテゴリで足りない場合は他カテゴリの最新で埋める。
+ * 現在の記事は除外する。
+ */
+export function getRelatedFileArticles(
+  currentSlug: string,
+  category: string,
+  limit = 3,
+): FileArticleMeta[] {
+  const all = getAllFileArticles().filter((a) => a.slug !== currentSlug);
+  const sameCat = all.filter((a) => a.category === category);
+  if (sameCat.length >= limit) return sameCat.slice(0, limit);
+
+  const others = all.filter((a) => a.category !== category);
+  return [...sameCat, ...others].slice(0, limit);
 }
