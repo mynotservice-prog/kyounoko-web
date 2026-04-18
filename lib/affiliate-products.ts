@@ -20,8 +20,13 @@ export type AffiliateProduct = AffiliateLinkProps & {
 };
 
 /**
- * href はすべて "#" プレースホルダ。
- * 後日 ASP 発行のトラッキング URL（A8.net / もしもアフィリエイト / Amazon アソシエイト / 楽天 / バリューコマース 等）へ差し替える。
+ * href の運用ルール:
+ *  - provider='rakuten': 楽天市場の商品URL（https://item.rakuten.co.jp/...）を設定。
+ *    AffiliateLink コンポーネントが env が設定されていれば自動でもしも経由にラップ。
+ *    env: NEXT_PUBLIC_MOSHIMO_A_ID / NEXT_PUBLIC_MOSHIMO_RAKUTEN_PC_ID /
+ *         NEXT_PUBLIC_MOSHIMO_RAKUTEN_PL_ID
+ *  - provider='amazon' / 'yahoo' / 'a8' / 'moshimo': 当該ASP発行のトラッキングURLを直書き。
+ *  - '#' はまだ未取得の状態を表すプレースホルダ。
  */
 const PRODUCTS: AffiliateProduct[] = [
   // =======================================================================
@@ -40,7 +45,8 @@ const PRODUCTS: AffiliateProduct[] = [
     id: 'dk-konny',
     slug: 'dakkohimo-ranking-2026',
     provider: 'rakuten',
-    href: '#',
+    // 楽天市場の検索URL。コニー抱っこ紐 FLEX サマー
+    href: 'https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%8B%E3%83%BC+%E6%8A%B1%E3%81%A3%E3%81%93%E7%B4%90+FLEX+%E3%82%B5%E3%83%9E%E3%83%BC/',
     title: 'コニー抱っこ紐 FLEX サマー',
     subtitle: 'スリングタイプ・軽量200gで寝かしつけに強い',
     price: '¥7,900前後',
@@ -67,7 +73,7 @@ const PRODUCTS: AffiliateProduct[] = [
     id: 'dk-boba-wrap',
     slug: 'dakkohimo-ranking-2026',
     provider: 'rakuten',
-    href: '#',
+    href: 'https://search.rakuten.co.jp/search/mall/%E3%83%9C%E3%83%90%E3%83%A9%E3%83%83%E3%83%97+ORIGINAL/',
     title: 'ボバラップ ORIGINAL',
     subtitle: '布タイプで新生児に密着・授乳後の寝かしつけに',
     price: '¥8,800前後',
@@ -89,7 +95,7 @@ const PRODUCTS: AffiliateProduct[] = [
     id: 'bc-combi-atto',
     slug: 'babycar-ranking-2026',
     provider: 'rakuten',
-    href: '#',
+    href: 'https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%B3%E3%83%93+%E3%82%A2%E3%83%83%E3%83%88%E3%83%A6%E3%83%BC%E3%82%B8%E3%83%A5+%E3%82%A8%E3%83%83%E3%82%B0%E3%82%B7%E3%83%A7%E3%83%83%E3%82%AF/',
     title: 'コンビ アットユージュ エッグショック',
     subtitle: '衝撃吸収素材採用・段差に強いハイシート',
     price: '¥52,800前後',
@@ -107,7 +113,7 @@ const PRODUCTS: AffiliateProduct[] = [
     id: 'bc-airbuggy-coco',
     slug: 'babycar-ranking-2026',
     provider: 'rakuten',
-    href: '#',
+    href: 'https://search.rakuten.co.jp/search/mall/%E3%82%A8%E3%82%A2%E3%83%90%E3%82%AE%E3%83%BC+COCO+%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2/',
     title: 'エアバギー COCO プレミア',
     subtitle: '3輪エアタイヤで舗装の悪い道でも安定走行',
     price: '¥77,000前後',
@@ -178,7 +184,7 @@ const PRODUCTS: AffiliateProduct[] = [
     id: 'bch-richell',
     slug: 'baby-chair-ranking',
     provider: 'rakuten',
-    href: '#',
+    href: 'https://search.rakuten.co.jp/search/mall/%E3%83%AA%E3%83%83%E3%83%81%E3%82%A7%E3%83%AB+2WAY+%E3%81%94%E3%81%8D%E3%81%92%E3%82%93%E3%83%81%E3%82%A7%E3%82%A2/',
     title: 'リッチェル 2WAYごきげんチェア',
     subtitle: 'ローチェア・テーブル付きで離乳食初期に便利',
     price: '¥4,800前後',
