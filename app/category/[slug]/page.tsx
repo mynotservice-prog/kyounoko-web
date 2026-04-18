@@ -8,6 +8,20 @@ import { getCategory, getCategories, getArticlesByCategory } from '@/lib/microcm
 
 export const revalidate = 3600;
 
+// MicroCMS未整備時のフォールバック（有効なカテゴリslugと日本語名のマッピング）
+const FALLBACK_CATEGORIES: Record<string, { name: string; description: string; order: number }> = {
+  'today-doko': { name: '今日どこ行く？', order: 1, description: '雨の日・猛暑日・ベビーカー前提・ワンオペでも。0〜6歳の子と安心して過ごせる場所を条件で絞り込みます。' },
+  'today-nani': { name: '今日何する？', order: 2, description: '家で過ごす日の家遊び・工作・絵本。10分単位で、家にあるもので。' },
+  'today-taberu': { name: '今日何食べる？', order: 3, description: '保育園帰りの15分ごはんから、冷凍で回すコツまで。毎日のごはんを軽く。' },
+  'today-mawasu': { name: '今日どう回す？', order: 4, description: '夕方〜寝るまでの段取り。平日夜を乗り切る最小限のルーティン。' },
+  'shippai-shinai': { name: '失敗しない外出', order: 5, description: '天気・年齢・持ち物。外出前の不安を3分で解消するチェックリスト。' },
+  'tenki': { name: '天気で決める', order: 5, description: '雨・猛暑・強風。天気から今日の過ごし方を決める。' },
+  'heijitsu-yoru': { name: '平日夜を回す', order: 6, description: '帰宅後〜就寝までの最短動線。共働きの味方になる工夫集。' },
+  'gyouji': { name: '季節と行事', order: 5, description: '入園・運動会・七五三・ハロウィン。季節ごとの準備と過ごし方。' },
+  'narai': { name: '習い事と学び', order: 6, description: '幼児の習い事と知育。何歳から・どう選ぶか。' },
+  'yakudatsu': { name: '役立つもの', order: 7, description: '宅食・ミールキット・時短家電・ベビー用品。毎日を楽にする道具。' },
+};
+
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -15,15 +29,26 @@ type Props = {
 export async function generateStaticParams() {
   try {
     const { contents } = await getCategories();
-    return contents.map(c => ({ slug: c.slug }));
+    if (contents.length > 0) {
+      return contents.map(c => ({ slug: c.slug }));
+    }
   } catch {
-    return [];
+    // MicroCMS未整備時はフォールバックslugで生成
   }
+  return Object.keys(FALLBACK_CATEGORIES).map(slug => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const category = await getCategory(slug);
+  let category: { name: string; description?: string } | null = null;
+  try {
+    category = await getCategory(slug);
+  } catch {
+    // ignore
+  }
+  if (!category && FALLBACK_CATEGORIES[slug]) {
+    category = FALLBACK_CATEGORIES[slug];
+  }
   if (!category) return { title: 'カテゴリが見つかりません' };
 
   return {
@@ -35,10 +60,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CategoryPage({ params }: Props) {
   const { slug } = await params;
-  const category = await getCategory(slug);
+  let category: Awaited<ReturnType<typeof getCategory>> | null = null;
+  try {
+    category = await getCategory(slug);
+  } catch {
+    // ignore - fallback
+  }
+  if (!category && FALLBACK_CATEGORIES[slug]) {
+    const fb = FALLBACK_CATEGORIES[slug];
+    category = { name: fb.name, slug: slug as never, description: fb.description, order: fb.order } as never;
+  }
   if (!category) notFound();
 
-  const { contents: articles } = await getArticlesByCategory(slug, 24);
+  let articles: Awaited<ReturnType<typeof getArticlesByCategory>>['contents'] = [];
+  try {
+    const result = await getArticlesByCategory(slug, 24);
+    articles = result.contents;
+  } catch {
+    // empty
+  }
 
   const jsonLdBreadcrumb = {
     '@context': 'https://schema.org',
