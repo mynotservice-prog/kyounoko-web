@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /img/pick-craft.svg
+hero: /img/pick-craft.jpg
 quickInfo:
   ageRanges: ["4-6"]
   place: ["home"]

@@ -425,14 +425,15 @@ function FileArticleView({ article }: { article: FileArticle }) {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: article.title,
-    description: article.metaDescription,
+    description: article.tldr ?? article.metaDescription,
+    abstract: article.tldr ?? undefined,
     datePublished: article.publishedAt,
     dateModified: article.updatedAt,
     author: { '@type': 'Person', name: 'ながみー' },
     publisher: {
       '@type': 'Organization',
       name: 'きょうのこ',
-      logo: { '@type': 'ImageObject', url: 'https://kyounoko.jp/img/ogp-default.svg' },
+      logo: { '@type': 'ImageObject', url: 'https://kyounoko.jp/img/ogp-default.jpg' },
     },
     image: heroUrlAbsolute,
     mainEntityOfPage: `https://kyounoko.jp/article/${article.slug}`,
@@ -465,6 +466,26 @@ function FileArticleView({ article }: { article: FileArticle }) {
       }
     : null;
 
+  const jsonLdHowTo =
+    article.howto && article.howto.length >= 3
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'HowTo',
+          name: article.title,
+          description: article.tldr ?? article.metaDescription,
+          image: heroUrlAbsolute,
+          totalTime: article.quickInfo?.durationMin
+            ? `PT${article.quickInfo.durationMin}M`
+            : undefined,
+          step: article.howto.map((s, i) => ({
+            '@type': 'HowToStep',
+            position: i + 1,
+            name: s.name,
+            text: s.text,
+          })),
+        }
+      : null;
+
   const mobileActive =
     article.category === 'today-doko' ||
     article.category === 'today-nani' ||
@@ -486,6 +507,12 @@ function FileArticleView({ article }: { article: FileArticle }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
+        />
+      )}
+      {jsonLdHowTo && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdHowTo) }}
         />
       )}
 
@@ -558,6 +585,14 @@ function FileArticleView({ article }: { article: FileArticle }) {
 
             <p className="lead">{article.lede}</p>
           </header>
+
+          {/* TL;DR — AI Overview 抽出を意識した要約ボックス */}
+          {article.tldr && (
+            <aside className="tldr-box" aria-label="この記事の要約">
+              <span className="tldr-eyebrow">TL;DR · 先に結論</span>
+              <p className="tldr-text">{article.tldr}</p>
+            </aside>
+          )}
 
           {/* Quick Info */}
           {article.quickInfo && (article.quickInfo.ageRanges?.length || article.quickInfo.durationMin) && (

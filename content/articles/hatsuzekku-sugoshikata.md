@@ -7,7 +7,7 @@ category: gyouji
 categoryName: 季節と行事
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /img/pick-craft.svg
+hero: /img/pick-craft.jpg
 quickInfo:
   ageRanges: ["0-1"]
   place: ["home"]

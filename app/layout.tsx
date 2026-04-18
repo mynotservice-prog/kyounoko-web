@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     url: 'https://kyounoko.jp',
     images: [
       {
-        url: '/img/ogp-default.svg',
+        url: '/img/ogp-default.jpg',
         width: 1200,
         height: 630,
         alt: 'きょうのこ',
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'きょうのこ',
     description: '子育て家庭の「今日どうする？」を3分で決める。',
-    images: ['/img/ogp-default.svg'],
+    images: ['/img/ogp-default.jpg'],
   },
   robots: {
     index: true,

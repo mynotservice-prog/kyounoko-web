@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: 2026-04-17
 updatedAt: 2026-04-17
-hero: /img/pick-dinner.svg
+hero: /img/pick-dinner.jpg
 quickInfo:
   ageRanges: ["2-3"]
   place: ["home"]

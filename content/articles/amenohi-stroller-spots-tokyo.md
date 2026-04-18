@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /img/pick-indoor.svg
+hero: /img/pick-indoor.jpg
 quickInfo:
   ageRanges: ["0-1", "2-3"]
   place: ["indoor"]

@@ -6,7 +6,7 @@ category: narai
 categoryName: 習い事と学び
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /img/pick-indoor.svg
+hero: /img/pick-indoor.jpg
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]
   place: []

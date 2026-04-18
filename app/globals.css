@@ -1096,6 +1096,40 @@ input, select { font: inherit; color: inherit; }
 .article-meta-sep { color: var(--line-strong); }
 
 /* ==========================================================================
+   TL;DR summary box (AI Overview 抽出を狙った記事先頭の要約)
+   ========================================================================== */
+.tldr-box {
+  margin: 28px 0 12px;
+  padding: 20px 22px 22px;
+  background: linear-gradient(135deg, #FFFBF3 0%, #FDF1E1 100%);
+  border: 1px solid rgba(201, 96, 62, 0.18);
+  border-left: 4px solid var(--clay);
+  border-radius: var(--radius-lg);
+  position: relative;
+}
+.tldr-box .tldr-eyebrow {
+  display: inline-block;
+  font-family: var(--font-inter), Inter, "Noto Sans JP", sans-serif;
+  font-size: 10px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--clay-deep);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.tldr-box .tldr-text {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.9;
+  color: var(--ink);
+  font-family: var(--font-mincho), "Noto Serif JP", serif;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .tldr-box .tldr-text { font-size: 15.5px; line-height: 2; }
+}
+
+/* ==========================================================================
    Article layout (main + desktop sidebar)
    ========================================================================== */
 .article-layout {

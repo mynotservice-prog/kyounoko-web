@@ -7,7 +7,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /img/pick-cozy.svg
+hero: /img/pick-cozy.jpg
 quickInfo:
   ageRanges: ["2-3", "4-6"]
   place: ["home"]

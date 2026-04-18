@@ -37,11 +37,20 @@ export type FileArticleFaq = {
   answer: string;
 };
 
+export type FileArticleHowToStep = {
+  name: string;
+  text: string;
+};
+
 export type FileArticle = FileArticleMeta & {
   body: string; // HTML (with id-added h2/h3)
   faqItems: FileArticleFaq[];
   toc: TocItem[];
   readingTimeMin: number;
+  /** 結論セクション（"## 結論（先に知りたい人へ）" 等）のプレーンテキスト。AIO向けTL;DR抽出。 */
+  tldr: string | null;
+  /** HowTo 抽出結果。手順形式の記事のみ非null。 */
+  howto: FileArticleHowToStep[] | null;
 };
 
 export type TocItem = {
@@ -187,6 +196,131 @@ export function estimateReadingTime(text: string): number {
   return minutes;
 }
 
+// 結論セクション（## 結論...）のプレーンテキストを抽出する。
+// AIO（AI Overview）向けの短い要約として schema.org の `description` や
+// ページトップの "要約" ブロックで利用する。
+function extractTldr(markdown: string): string | null {
+  const lines = markdown.split('\n');
+  const headingRegex = /^##\s+(結論|要約|この記事の結論|先に結論|TL;DR)/i;
+
+  let start = -1;
+  for (let i = 0; i < lines.length; i++) {
+    if (headingRegex.test(lines[i])) {
+      start = i;
+      break;
+    }
+  }
+  if (start === -1) return null;
+
+  let end = lines.length;
+  for (let i = start + 1; i < lines.length; i++) {
+    if (/^##\s+/.test(lines[i])) {
+      end = i;
+      break;
+    }
+  }
+
+  const body = lines.slice(start + 1, end).join('\n');
+  // マークダウン記号を軽量除去
+  const plain = body
+    .replace(/```[\s\S]*?```/g, '')
+    .replace(/`[^`]+`/g, '')
+    .replace(/!\[[^\]]*\]\([^)]+\)/g, '')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/^[-*+]\s+/gm, '・')
+    .replace(/^\d+\.\s+/gm, '')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/\*([^*]+)\*/g, '$1')
+    .replace(/#+\s*/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  if (!plain) return null;
+  // 長すぎる場合は 360 文字で切る（AIO抽出に最適）
+  return plain.length > 360 ? plain.slice(0, 360) + '…' : plain;
+}
+
+// 本文中の "## 手順" "## やり方" "## ステップ" セクションから番号付きリストを
+// HowTo JSON-LD 用のステップ配列に変換。見つからない場合は null。
+function extractHowTo(markdown: string): FileArticleHowToStep[] | null {
+  const lines = markdown.split('\n');
+  const headingRegex = /^##\s+(.*(手順|やり方|ステップ|作り方|進め方|回し方|乗り切り方).*)$/;
+
+  let start = -1;
+  for (let i = 0; i < lines.length; i++) {
+    if (headingRegex.test(lines[i])) {
+      start = i;
+      break;
+    }
+  }
+  if (start === -1) return null;
+
+  let end = lines.length;
+  for (let i = start + 1; i < lines.length; i++) {
+    if (/^##\s+/.test(lines[i])) {
+      end = i;
+      break;
+    }
+  }
+
+  const section = lines.slice(start + 1, end);
+  const steps: FileArticleHowToStep[] = [];
+
+  // ### 形式のステップ見出し "### ステップ1: ..." を優先的に拾う
+  const h3Step = /^###\s+(?:ステップ\s*)?\d+\s*[:：.．]\s*(.+)$/;
+  const h3Simple = /^###\s+(.+)$/;
+  const orderedItem = /^\s*\d+\.\s+(.+)$/;
+
+  // まず H3 ステップ
+  for (let i = 0; i < section.length; i++) {
+    const line = section[i];
+    const m = line.match(h3Step) || line.match(h3Simple);
+    if (m) {
+      const name = m[1]
+        .replace(/\*\*/g, '')
+        .replace(/^[:：.．]\s*/, '')
+        .trim();
+      const textLines: string[] = [];
+      for (let j = i + 1; j < section.length; j++) {
+        if (/^###\s+/.test(section[j])) break;
+        textLines.push(section[j]);
+      }
+      const text = textLines
+        .join(' ')
+        .replace(/[*_`>#]/g, '')
+        .replace(/^\s*[-*]\s+/gm, '')
+        .replace(/^\s*\d+\.\s+/gm, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+      if (name && text) steps.push({ name, text });
+    }
+  }
+
+  // H3 で拾えない場合は番号付きリストをステップ扱い
+  if (steps.length === 0) {
+    for (const line of section) {
+      const m = line.match(orderedItem);
+      if (m) {
+        const raw = m[1]
+          .replace(/\*\*([^*]+)\*\*/g, '$1')
+          .replace(/\s+/g, ' ')
+          .trim();
+        // 先頭「タイトル：説明」パターンを分解
+        const parts = raw.split(/[：:]/);
+        if (parts.length >= 2) {
+          const name = parts[0].trim();
+          const text = parts.slice(1).join('：').trim();
+          if (name && text) steps.push({ name, text });
+        } else {
+          steps.push({ name: raw.slice(0, 40), text: raw });
+        }
+      }
+    }
+  }
+
+  return steps.length >= 3 ? steps : null;
+}
+
 // FAQ セクション（"## よくある質問" または "## FAQ"）を本文から抜き出して
 // { question, answer } の配列に変換。FAQ セクションは本文側からは取り除く。
 function extractFaq(markdown: string): { body: string; faq: FileArticleFaq[] } {
@@ -307,6 +441,8 @@ export async function getFileArticle(slug: string): Promise<FileArticle | null> 
     if (meta.slug !== slug) continue;
 
     const { body: bodyMd, faq } = extractFaq(content);
+    const tldr = extractTldr(bodyMd);
+    const howto = extractHowTo(bodyMd);
     const rawHtml = await renderMarkdownToHtml(bodyMd);
     const { html: bodyHtml, toc } = injectHeadingIdsAndExtractToc(rawHtml);
     const readingTimeMin = estimateReadingTime(bodyMd);
@@ -316,6 +452,8 @@ export async function getFileArticle(slug: string): Promise<FileArticle | null> 
       faqItems: faq,
       toc,
       readingTimeMin,
+      tldr,
+      howto,
     };
   }
   return null;

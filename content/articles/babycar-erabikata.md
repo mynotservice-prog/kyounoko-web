@@ -6,7 +6,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /img/pick-home-play.svg
+hero: /img/pick-home-play.jpg
 quickInfo:
   ageRanges: ["0-1", "2-3"]
   place: []
