@@ -1,0 +1,35 @@
+{
+  "name": "kyounoko-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "きょうのこ — 子育て家庭の「今日どうする？」を3分で決めるサイト",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "microcms-js-sdk": "^3.2.0",
+    "swr": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.6.0",
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^15.0.0",
+    "prettier": "^3.3.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

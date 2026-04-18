@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="紙と工作道具のイメージ">
+  <defs>
+    <linearGradient id="craftBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FBE8D8"/>
+      <stop offset="1" stop-color="#F8ECCB"/>
+    </linearGradient>
+  </defs>
+
+  <!-- warm table bg -->
+  <rect width="400" height="280" fill="url(#craftBg)"/>
+
+  <!-- wood grain subtle -->
+  <g stroke="#8E3F22" stroke-width="0.4" opacity="0.12" fill="none">
+    <path d="M0 60 Q100 55 200 65 T400 60"/>
+    <path d="M0 180 Q120 175 240 185 T400 180"/>
+  </g>
+
+  <!-- paper sheet (large, tilted) -->
+  <g transform="translate(100,60) rotate(-6 150 100)">
+    <rect x="0" y="0" width="220" height="190" fill="#FCF8EF" stroke="#E3D7BE" stroke-width="1.5"/>
+    <!-- drawing on paper -->
+    <!-- sun -->
+    <circle cx="170" cy="45" r="16" fill="#EBC06A"/>
+    <g stroke="#EBC06A" stroke-width="2" stroke-linecap="round">
+      <line x1="170" y1="20" x2="170" y2="25"/>
+      <line x1="195" y1="45" x2="200" y2="45"/>
+      <line x1="170" y1="65" x2="170" y2="70"/>
+      <line x1="140" y1="45" x2="145" y2="45"/>
+      <line x1="152" y1="27" x2="155" y2="30"/>
+      <line x1="188" y1="27" x2="185" y2="30"/>
+    </g>
+    <!-- house drawing (childlike) -->
+    <rect x="40" y="90" width="70" height="60" fill="none" stroke="#C9603E" stroke-width="2.5"/>
+    <path d="M40 90 L75 60 L110 90" fill="none" stroke="#C9603E" stroke-width="2.5"/>
+    <rect x="65" y="120" width="20" height="30" fill="none" stroke="#8E3F22" stroke-width="2"/>
+    <rect x="48" y="100" width="14" height="10" fill="none" stroke="#C9603E" stroke-width="2"/>
+    <!-- squiggly grass line -->
+    <path d="M20 155 Q35 145 50 155 Q65 145 80 155 Q95 145 110 155 Q125 145 140 155 Q155 145 170 155 Q185 145 200 155" stroke="#8FA37E" stroke-width="2.5" fill="none"/>
+    <!-- flower -->
+    <circle cx="180" cy="145" r="5" fill="#F4B787"/>
+    <circle cx="180" cy="145" r="2" fill="#C9603E"/>
+    <line x1="180" y1="150" x2="180" y2="158" stroke="#8FA37E" stroke-width="1.5"/>
+  </g>
+
+  <!-- colored paper strips -->
+  <rect x="30" y="200" width="80" height="14" fill="#F4B787" stroke="#C9603E" stroke-width="1" transform="rotate(-4 70 207)"/>
+  <rect x="50" y="220" width="75" height="12" fill="#8FA37E" transform="rotate(3 87 226)" opacity="0.85"/>
+  <rect x="280" y="30" width="60" height="14" fill="#EBC06A" stroke="#D8A665" stroke-width="1" transform="rotate(8 310 37)"/>
+
+  <!-- scissors -->
+  <g transform="translate(30,80)">
+    <!-- handles -->
+    <circle cx="0" cy="0" r="10" fill="none" stroke="#C9603E" stroke-width="4"/>
+    <circle cx="0" cy="22" r="10" fill="none" stroke="#C9603E" stroke-width="4"/>
+    <!-- blades -->
+    <path d="M10 3 L55 12 L62 15 L60 17 L55 16 L10 10" fill="#CFBC9C" stroke="#8E3F22" stroke-width="1"/>
+    <path d="M10 19 L55 16 L62 15 L60 13 L55 12 L10 12" fill="#CFBC9C" stroke="#8E3F22" stroke-width="1"/>
+    <circle cx="10" cy="11" r="2" fill="#8E3F22"/>
+  </g>
+
+  <!-- pencil -->
+  <g transform="translate(290,180) rotate(25)">
+    <rect x="0" y="0" width="80" height="8" fill="#EBC06A" stroke="#D8A665" stroke-width="0.5"/>
+    <rect x="80" y="0" width="10" height="8" fill="#F4DDCF"/>
+    <path d="M90 0 L100 4 L90 8 Z" fill="#C9603E"/>
+    <path d="M95 3 L100 4 L95 5 Z" fill="#25201B"/>
+    <!-- eraser -->
+    <rect x="-8" y="0" width="8" height="8" fill="#F4B787"/>
+  </g>
+
+  <!-- crayons scattered -->
+  <g transform="translate(340,110) rotate(40)">
+    <rect x="0" y="0" width="6" height="30" fill="#C9603E"/>
+    <path d="M0 30 L3 36 L6 30 Z" fill="#8E3F22"/>
+    <rect x="0" y="0" width="6" height="4" fill="#8E3F22"/>
+  </g>
+  <g transform="translate(330,130) rotate(-30)">
+    <rect x="0" y="0" width="6" height="28" fill="#8FA37E"/>
+    <path d="M0 28 L3 34 L6 28 Z" fill="#5F6F5B"/>
+    <rect x="0" y="0" width="6" height="4" fill="#5F6F5B"/>
+  </g>
+  <g transform="translate(345,150) rotate(20)">
+    <rect x="0" y="0" width="6" height="30" fill="#7FA3BA"/>
+    <path d="M0 30 L3 36 L6 30 Z" fill="#5D7A8E"/>
+    <rect x="0" y="0" width="6" height="4" fill="#5D7A8E"/>
+  </g>
+
+  <!-- tape roll -->
+  <g transform="translate(60,230)">
+    <circle cx="0" cy="0" r="16" fill="#F4B787" opacity="0.8"/>
+    <circle cx="0" cy="0" r="8" fill="#FBE8D8"/>
+    <circle cx="0" cy="0" r="2" fill="#C9603E"/>
+  </g>
+
+  <!-- small glue/stickers dots -->
+  <circle cx="270" cy="240" r="6" fill="#F4B787" opacity="0.9"/>
+  <circle cx="280" cy="232" r="5" fill="#EBC06A" opacity="0.85"/>
+  <circle cx="290" cy="248" r="5" fill="#8FA37E" opacity="0.85"/>
+</svg>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="きょうのこ OGP画像">
+  <defs>
+    <linearGradient id="ogpBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FBF5E8"/>
+      <stop offset="0.5" stop-color="#FBE8D8"/>
+      <stop offset="1" stop-color="#F8ECCB"/>
+    </linearGradient>
+    <radialGradient id="ogpGlow" cx="0.8" cy="0.2" r="0.5">
+      <stop offset="0" stop-color="#F4B787" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#F4B787" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="logoMark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D16A47"/>
+      <stop offset="1" stop-color="#9E4428"/>
+    </linearGradient>
+  </defs>
+
+  <!-- warm background -->
+  <rect width="1200" height="630" fill="url(#ogpBg)"/>
+  <rect width="1200" height="630" fill="url(#ogpGlow)"/>
+
+  <!-- subtle geometric accents -->
+  <circle cx="120" cy="520" r="110" fill="#F4B787" opacity="0.18"/>
+  <circle cx="1080" cy="180" r="140" fill="#EBC06A" opacity="0.15"/>
+
+  <!-- top-right decorative dots -->
+  <g fill="#C9603E" opacity="0.35">
+    <circle cx="1060" cy="90" r="3"/>
+    <circle cx="1090" cy="70" r="2"/>
+    <circle cx="1120" cy="100" r="2.5"/>
+  </g>
+
+  <!-- main logo mark (large) -->
+  <g transform="translate(120,140)">
+    <rect width="160" height="160" rx="46" fill="url(#logoMark)"/>
+    <text x="80" y="117" text-anchor="middle" font-family="'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', sans-serif" font-size="100" font-weight="900" fill="#FCF8EF">こ</text>
+    <circle cx="130" cy="34" r="9" fill="#FCF8EF" opacity="0.8"/>
+  </g>
+
+  <!-- brand wordmark -->
+  <text x="330" y="200" font-family="'Shippori Mincho', serif" font-weight="700" font-size="68" fill="#25201B" letter-spacing="6">きょうのこ</text>
+
+  <!-- divider rule -->
+  <rect x="330" y="232" width="80" height="2" fill="#C9603E"/>
+
+  <!-- tagline (main) -->
+  <text x="330" y="296" font-family="'Shippori Mincho', serif" font-weight="600" font-size="48" fill="#25201B" letter-spacing="2">子育て家庭の「今日どうする？」を</text>
+  <text x="330" y="360" font-family="'Shippori Mincho', serif" font-weight="600" font-size="48" fill="#C9603E" letter-spacing="2">3分で決める。</text>
+
+  <!-- secondary description -->
+  <text x="120" y="450" font-family="'Noto Sans JP', sans-serif" font-weight="500" font-size="24" fill="#5F5548" letter-spacing="1">天気・年齢・時間帯・予算から、今日の過ごし方の答えをすぐに。</text>
+  <text x="120" y="488" font-family="'Noto Sans JP', sans-serif" font-weight="500" font-size="24" fill="#5F5548" letter-spacing="1">0〜6歳の子がいる家庭のための、意思決定サイトです。</text>
+
+  <!-- bottom brand line -->
+  <g transform="translate(120,560)">
+    <rect x="0" y="0" width="28" height="2" fill="#C9603E"/>
+    <text x="44" y="7" font-family="'Inter', sans-serif" font-weight="500" font-size="16" fill="#968B7B" letter-spacing="4">KYOUNOKO · 親の毎日を、ちょっと軽く。</text>
+  </g>
+
+  <!-- URL -->
+  <text x="1080" y="585" text-anchor="end" font-family="'Inter', sans-serif" font-weight="500" font-size="16" fill="#C9603E" letter-spacing="2">kyounoko.jp</text>
+</svg>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="夜、窓辺の温かいお茶のイメージ">
+  <defs>
+    <linearGradient id="nightSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4A6577"/>
+      <stop offset="0.6" stop-color="#7FA3BA"/>
+      <stop offset="1" stop-color="#D5E2EB"/>
+    </linearGradient>
+    <radialGradient id="windowWarm" cx="0.5" cy="0.5" r="0.9">
+      <stop offset="0" stop-color="#FBE8D8"/>
+      <stop offset="1" stop-color="#F4B787"/>
+    </radialGradient>
+  </defs>
+
+  <!-- interior warm wall -->
+  <rect width="400" height="280" fill="url(#windowWarm)"/>
+
+  <!-- window (center-left) -->
+  <g transform="translate(50,30)">
+    <!-- frame -->
+    <rect x="0" y="0" width="180" height="200" fill="url(#nightSky)" stroke="#C9603E" stroke-width="5"/>
+    <line x1="90" y1="0" x2="90" y2="200" stroke="#C9603E" stroke-width="4"/>
+    <line x1="0" y1="100" x2="180" y2="100" stroke="#C9603E" stroke-width="4"/>
+
+    <!-- crescent moon -->
+    <path d="M130 55 Q110 55 110 75 Q110 95 130 95 Q120 75 130 55 Z" fill="#FCF8EF"/>
+
+    <!-- stars -->
+    <g fill="#FCF8EF">
+      <circle cx="30" cy="30" r="1.5"/>
+      <circle cx="60" cy="20" r="1"/>
+      <circle cx="150" cy="25" r="1.5"/>
+      <circle cx="165" cy="45" r="1"/>
+      <circle cx="25" cy="60" r="1"/>
+      <circle cx="50" cy="80" r="1.5"/>
+      <circle cx="155" cy="85" r="1"/>
+      <circle cx="130" cy="150" r="1"/>
+      <circle cx="40" cy="140" r="1"/>
+      <circle cx="20" cy="170" r="1.5"/>
+    </g>
+
+    <!-- twinkle -->
+    <g stroke="#FCF8EF" stroke-width="0.6" opacity="0.6">
+      <line x1="60" y1="16" x2="60" y2="24"/>
+      <line x1="56" y1="20" x2="64" y2="20"/>
+      <line x1="165" y1="41" x2="165" y2="49"/>
+      <line x1="161" y1="45" x2="169" y2="45"/>
+    </g>
+
+    <!-- distant building silhouette -->
+    <rect x="0" y="160" width="50" height="40" fill="#25201B" opacity="0.45"/>
+    <rect x="5" y="170" width="4" height="6" fill="#EBC06A" opacity="0.9"/>
+    <rect x="15" y="180" width="4" height="6" fill="#EBC06A" opacity="0.9"/>
+    <rect x="35" y="175" width="4" height="6" fill="#EBC06A" opacity="0.9"/>
+    <rect x="130" y="170" width="50" height="30" fill="#25201B" opacity="0.45"/>
+    <rect x="138" y="180" width="4" height="6" fill="#EBC06A" opacity="0.9"/>
+    <rect x="155" y="178" width="4" height="6" fill="#EBC06A" opacity="0.9"/>
+  </g>
+
+  <!-- window sill shelf -->
+  <rect x="30" y="230" width="220" height="10" fill="#C9603E"/>
+  <rect x="30" y="240" width="220" height="3" fill="#8E3F22" opacity="0.5"/>
+
+  <!-- mug on sill -->
+  <g transform="translate(270,180)">
+    <!-- saucer -->
+    <ellipse cx="0" cy="54" rx="45" ry="6" fill="#8E3F22" opacity="0.3"/>
+    <ellipse cx="0" cy="50" rx="42" ry="6" fill="#F4DDCF" stroke="#C9603E" stroke-width="1"/>
+    <!-- mug body -->
+    <path d="M-22 0 L-22 40 Q-22 48 -14 48 L14 48 Q22 48 22 40 L22 0 Z" fill="#FCF8EF" stroke="#C9603E" stroke-width="2"/>
+    <!-- mug band -->
+    <rect x="-22" y="14" width="44" height="6" fill="#EBC06A" opacity="0.8"/>
+    <!-- mug handle -->
+    <path d="M22 8 Q34 8 34 20 Q34 32 22 32" fill="none" stroke="#C9603E" stroke-width="2"/>
+    <!-- tea surface -->
+    <ellipse cx="0" cy="3" rx="20" ry="4" fill="#8E3F22" opacity="0.7"/>
+    <!-- steam -->
+    <g stroke="#FBE8D8" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.8">
+      <path d="M-10 -5 Q-10 -20 -15 -30"/>
+      <path d="M0 -8 Q0 -25 -5 -38"/>
+      <path d="M10 -5 Q10 -22 5 -32"/>
+    </g>
+  </g>
+
+  <!-- small plant/flower -->
+  <g transform="translate(55,185)">
+    <!-- pot -->
+    <path d="M0 35 L3 60 L25 60 L28 35 Z" fill="#C9603E" opacity="0.85"/>
+    <rect x="0" y="33" width="28" height="4" fill="#8E3F22" opacity="0.7"/>
+    <!-- stem -->
+    <path d="M14 33 Q14 10 14 0" stroke="#8FA37E" stroke-width="2" fill="none"/>
+    <!-- leaves -->
+    <ellipse cx="8" cy="20" rx="6" ry="3" fill="#8FA37E" transform="rotate(-20 8 20)"/>
+    <ellipse cx="20" cy="15" rx="6" ry="3" fill="#8FA37E" transform="rotate(20 20 15)"/>
+    <!-- flower -->
+    <circle cx="14" cy="-2" r="5" fill="#F4B787"/>
+    <circle cx="14" cy="-2" r="2" fill="#C9603E"/>
+  </g>
+
+  <!-- book/open book on sill -->
+  <g transform="translate(150,210)">
+    <rect x="0" y="-1" width="70" height="22" fill="#C9603E" opacity="0.85"/>
+    <path d="M0 0 L35 -3 L70 0 L70 21 L35 18 L0 21 Z" fill="#FCF8EF"/>
+    <!-- pages -->
+    <line x1="5" y1="5" x2="30" y2="3" stroke="#C9603E" stroke-width="0.6" opacity="0.5"/>
+    <line x1="5" y1="10" x2="30" y2="8" stroke="#C9603E" stroke-width="0.6" opacity="0.5"/>
+    <line x1="5" y1="15" x2="30" y2="13" stroke="#C9603E" stroke-width="0.6" opacity="0.5"/>
+    <line x1="40" y1="3" x2="65" y2="5" stroke="#C9603E" stroke-width="0.6" opacity="0.5"/>
+    <line x1="40" y1="8" x2="65" y2="10" stroke="#C9603E" stroke-width="0.6" opacity="0.5"/>
+    <line x1="40" y1="13" x2="65" y2="15" stroke="#C9603E" stroke-width="0.6" opacity="0.5"/>
+  </g>
+
+  <!-- ambient warm light -->
+  <ellipse cx="300" cy="230" rx="120" ry="30" fill="#EBC06A" opacity="0.2"/>
+</svg>

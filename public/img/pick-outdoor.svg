@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="屋外カフェと子ども用食器のイメージ">
+  <defs>
+    <linearGradient id="outdoorSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D5E2EB"/>
+      <stop offset="0.5" stop-color="#F4DDCF"/>
+      <stop offset="1" stop-color="#F8ECCB"/>
+    </linearGradient>
+  </defs>
+
+  <!-- sky/bg -->
+  <rect width="400" height="280" fill="url(#outdoorSky)"/>
+
+  <!-- sun light rays -->
+  <circle cx="70" cy="40" r="28" fill="#EBC06A" opacity="0.5"/>
+  <circle cx="70" cy="40" r="18" fill="#EBC06A"/>
+  <g stroke="#EBC06A" stroke-width="2" opacity="0.4" stroke-linecap="round">
+    <line x1="70" y1="5" x2="70" y2="12"/>
+    <line x1="40" y1="40" x2="47" y2="40"/>
+    <line x1="93" y1="40" x2="100" y2="40"/>
+    <line x1="48" y1="18" x2="53" y2="23"/>
+    <line x1="87" y1="62" x2="92" y2="57"/>
+  </g>
+
+  <!-- tree leaves (top left) -->
+  <g opacity="0.75">
+    <ellipse cx="30" cy="60" rx="40" ry="28" fill="#8FA37E"/>
+    <ellipse cx="60" cy="50" rx="30" ry="22" fill="#728670"/>
+    <ellipse cx="15" cy="90" rx="25" ry="20" fill="#728670"/>
+  </g>
+
+  <!-- tree trunk -->
+  <rect x="22" y="100" width="10" height="50" fill="#8E3F22" opacity="0.7"/>
+
+  <!-- ground line -->
+  <rect y="180" width="400" height="100" fill="#DFE7D4" opacity="0.5"/>
+
+  <!-- grass texture -->
+  <g stroke="#8FA37E" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5">
+    <path d="M10 200 Q14 190 18 200"/>
+    <path d="M40 195 Q44 185 48 195"/>
+    <path d="M340 205 Q344 195 348 205"/>
+    <path d="M380 200 Q384 190 388 200"/>
+  </g>
+
+  <!-- cafe table -->
+  <g transform="translate(200,190)">
+    <!-- table surface -->
+    <ellipse cx="0" cy="0" rx="120" ry="25" fill="#FCF8EF" stroke="#C9603E" stroke-width="1"/>
+    <ellipse cx="0" cy="0" rx="110" ry="20" fill="#F4DDCF" opacity="0.5"/>
+    <!-- table leg (partial) -->
+    <rect x="-3" y="15" width="6" height="50" fill="#8E3F22" opacity="0.7"/>
+  </g>
+
+  <!-- main plate on table -->
+  <g transform="translate(200,180)">
+    <ellipse cx="0" cy="2" rx="50" ry="10" fill="#8E3F22" opacity="0.25"/>
+    <ellipse cx="0" cy="0" rx="46" ry="9" fill="#FCF8EF" stroke="#C9603E" stroke-width="1.5"/>
+    <ellipse cx="0" cy="0" rx="34" ry="6.5" fill="#F4DDCF" opacity="0.5"/>
+    <!-- food on plate -->
+    <circle cx="-10" cy="-1" r="5" fill="#EBC06A"/>
+    <circle cx="10" cy="-2" r="4" fill="#8FA37E"/>
+    <circle cx="0" cy="1" r="4" fill="#C9603E"/>
+    <circle cx="-18" cy="1" r="3" fill="#D8A665"/>
+    <circle cx="20" cy="1" r="3" fill="#8FA37E"/>
+  </g>
+
+  <!-- small cup / glass on right -->
+  <g transform="translate(290,165)">
+    <rect x="-10" y="-4" width="20" height="24" rx="2" fill="#D5E2EB" stroke="#7FA3BA" stroke-width="1" opacity="0.85"/>
+    <ellipse cx="0" cy="-2" rx="9" ry="2" fill="#7FA3BA" opacity="0.6"/>
+    <!-- straw -->
+    <rect x="3" y="-15" width="2" height="20" fill="#C9603E" transform="rotate(15 4 -5)"/>
+  </g>
+
+  <!-- bread/side on left -->
+  <g transform="translate(120,170)">
+    <ellipse cx="0" cy="5" rx="22" ry="4" fill="#8E3F22" opacity="0.2"/>
+    <ellipse cx="0" cy="0" rx="20" ry="8" fill="#D8A665"/>
+    <ellipse cx="0" cy="-1" rx="15" ry="5" fill="#EBC06A" opacity="0.8"/>
+    <!-- sesame -->
+    <circle cx="-5" cy="-2" r="0.8" fill="#25201B"/>
+    <circle cx="3" cy="-3" r="0.8" fill="#25201B"/>
+    <circle cx="8" cy="-1" r="0.8" fill="#25201B"/>
+  </g>
+
+  <!-- napkin -->
+  <g transform="translate(250,155)">
+    <rect x="0" y="0" width="36" height="28" fill="#FBE8D8" stroke="#F4B787" stroke-width="1" transform="rotate(-8 18 14)"/>
+    <line x1="5" y1="8" x2="30" y2="5" stroke="#C9603E" stroke-width="0.8" opacity="0.5" transform="rotate(-8 18 14)"/>
+    <line x1="5" y1="14" x2="30" y2="11" stroke="#C9603E" stroke-width="0.8" opacity="0.5" transform="rotate(-8 18 14)"/>
+  </g>
+
+  <!-- utensil (fork) -->
+  <g transform="translate(155,155) rotate(-25)">
+    <rect x="0" y="0" width="3" height="40" fill="#C9603E" rx="1"/>
+    <path d="M-1 -2 L-1 -7 M1 -2 L1 -7 M3 -2 L3 -7 M5 -2 L5 -7" stroke="#C9603E" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- flower accent -->
+  <g transform="translate(340,155)">
+    <path d="M0 15 Q0 5 5 5 L5 15" stroke="#8FA37E" stroke-width="2" fill="none"/>
+    <circle cx="5" cy="3" r="3" fill="#F4B787"/>
+    <circle cx="3" cy="1" r="2" fill="#C9603E"/>
+  </g>
+
+  <!-- falling leaf -->
+  <ellipse cx="110" cy="50" rx="6" ry="3" fill="#D8A665" transform="rotate(30 110 50)"/>
+  <ellipse cx="340" cy="80" rx="5" ry="2.5" fill="#8FA37E" transform="rotate(-20 340 80)"/>
+</svg>
