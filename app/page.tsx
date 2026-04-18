@@ -253,41 +253,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Age picker */}
-      <section className="section" style={{ paddingTop: 0 }}>
-        <div className="container">
-          <div className="section-head">
-            <div>
-              <span className="eyebrow">By age</span>
-              <h2>年齢で探す</h2>
-            </div>
-            <span className="hint">0 — 6</span>
-          </div>
-          <div className="age-panels">
-            <Link href="/age/0-1" className="age-panel a">
-              <div>
-                <div className="age-num">0—1</div>
-                <div className="age-label">ベビーカー前提の日々</div>
-                <div className="age-desc">おむつ替え / 離乳食 / 動線</div>
-              </div>
-            </Link>
-            <Link href="/age/2-3" className="age-panel b">
-              <div>
-                <div className="age-num">2—3</div>
-                <div className="age-label">走り回るイヤイヤ期</div>
-                <div className="age-desc">トイトレ / 外遊び / ごっこ</div>
-              </div>
-            </Link>
-            <Link href="/age/4-6" className="age-panel c">
-              <div>
-                <div className="age-num">4—6</div>
-                <div className="age-label">集中できる時間が伸びる</div>
-                <div className="age-desc">工作 / 習い事 / ひらがな</div>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Age picker - TODO: /age/* ページ未実装のため一時非表示 */}
 
       {/* Warm Panel */}
       <section className="section" style={{ paddingTop: 0 }}>

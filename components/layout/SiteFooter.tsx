@@ -27,15 +27,6 @@ export function SiteFooter() {
           </div>
 
           <div className="footer-col">
-            <h4>By age</h4>
-            <ul>
-              <li><Link href="/age/0-1">0〜1歳</Link></li>
-              <li><Link href="/age/2-3">2〜3歳</Link></li>
-              <li><Link href="/age/4-6">4〜6歳</Link></li>
-            </ul>
-          </div>
-
-          <div className="footer-col">
             <h4>About</h4>
             <ul>
               <li><Link href="/about">運営者情報</Link></li>

@@ -115,41 +115,7 @@ export default async function CategoryPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Age picker */}
-      <section className="section" style={{ paddingTop: 0 }}>
-        <div className="container">
-          <div className="section-head">
-            <div>
-              <span className="eyebrow">By age</span>
-              <h2>年齢から探す</h2>
-            </div>
-            <span className="hint">0 — 6</span>
-          </div>
-          <div className="age-panels">
-            <Link href={`/age/0-1/${slug}`} className="age-panel a">
-              <div>
-                <div className="age-num">0—1</div>
-                <div className="age-label">ベビーカー前提</div>
-                <div className="age-desc">おむつ替え / 離乳食</div>
-              </div>
-            </Link>
-            <Link href={`/age/2-3/${slug}`} className="age-panel b">
-              <div>
-                <div className="age-num">2—3</div>
-                <div className="age-label">走り回る時期</div>
-                <div className="age-desc">軽食OK / 遊具</div>
-              </div>
-            </Link>
-            <Link href={`/age/4-6/${slug}`} className="age-panel c">
-              <div>
-                <div className="age-num">4—6</div>
-                <div className="age-label">体験が楽しめる</div>
-                <div className="age-desc">屋外遊具 / 体験型</div>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Age picker - TODO: /age/* ページ未実装のため一時非表示 */}
 
       {/* Articles grid */}
       <section className="section" style={{ paddingTop: 0 }}>
