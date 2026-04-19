@@ -5,6 +5,21 @@ import { useRouter } from 'next/navigation';
 import { AREAS, type AreaSlug } from '@/lib/area';
 import { useUserSettings } from '@/hooks/useUserSettings';
 
+/**
+ * 天気を クライアント側で Open-Meteo から取得して weather プリセットに使う。
+ * エリアが変わるたびに再取得。
+ */
+async function fetchCurrentWeather(area: string): Promise<{ condition: string; label: string; temperatureC: number } | null> {
+  try {
+    const res = await fetch(`/api/weather?area=${encodeURIComponent(area)}`, { cache: 'no-store' });
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data?.condition ? data : null;
+  } catch {
+    return null;
+  }
+}
+
 type State = {
   age?: '0-1' | '2-3' | '4-6';
   weather: 'any' | 'sunny' | 'rain' | 'heat' | 'cold';
@@ -27,6 +42,7 @@ const INITIAL: State = {
 export function TodayFinder() {
   const [settings, updateSettings] = useUserSettings();
   const [state, setState] = useState<State>(INITIAL);
+  const [currentWeather, setCurrentWeather] = useState<{ condition: string; label: string; temperatureC: number } | null>(null);
   const router = useRouter();
 
   // 初回マウント時に localStorage から復元
@@ -37,6 +53,22 @@ export function TodayFinder() {
       age: settings.age ?? s.age,
     }));
   }, [settings.area, settings.age]);
+
+  // エリアが変わるたびに現在の天気を取得
+  useEffect(() => {
+    if (!state.area || state.area === 'all') {
+      setCurrentWeather(null);
+      return;
+    }
+    let cancelled = false;
+    fetchCurrentWeather(state.area).then((w) => {
+      if (cancelled || !w) return;
+      setCurrentWeather(w);
+      // ユーザーが明示的に 'any' 以外を選んでいたら上書きしない（明示入力優先）
+      setState((s) => (s.weather === 'any' ? { ...s, weather: w.condition as State['weather'] } : s));
+    });
+    return () => { cancelled = true; };
+  }, [state.area]);
 
   // live 日時表示（ヘッダーと同期用）
   useEffect(() => {
@@ -107,6 +139,19 @@ export function TodayFinder() {
         <span className="eyebrow">03 min decision</span>
         <h2>条件を入れたら、今日の答えを1つ返します。</h2>
         <p>並べません、選ばせません。こちらが決めます。迷いたい時だけ「別の候補を見る」でどうぞ。</p>
+        {currentWeather && (
+          <div style={{ marginTop: 14 }}>
+            <span className="weather-chip" title="Open-Meteo・現在の天気">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+              </svg>
+              <span className="weather-chip-label">いまの天気</span>
+              <span>{currentWeather.label} / {Math.round(currentWeather.temperatureC)}°C</span>
+              <span style={{ color: 'var(--ink-mute)', fontSize: 11 }}>自動反映</span>
+            </span>
+          </div>
+        )}
       </div>
 
       <div className="finder-grid">

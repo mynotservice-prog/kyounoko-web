@@ -1382,6 +1382,100 @@ input, select { font: inherit; color: inherit; }
 }
 
 /* ==========================================================================
+   Settings form（/settings）
+   ========================================================================== */
+.settings-form {
+  padding: 20px 0;
+}
+.settings-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.settings-label {
+  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.settings-help {
+  font-size: 12.5px;
+  color: var(--ink-sub);
+  margin: 0;
+  line-height: 1.7;
+}
+.settings-select {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--paper-card);
+  font-size: 13.5px;
+  font-family: inherit;
+  max-width: 100%;
+  cursor: pointer;
+}
+.settings-textarea {
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  background: var(--paper-card);
+  font-size: 13.5px;
+  font-family: inherit;
+  resize: vertical;
+}
+.settings-chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.settings-chip-group .chip {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--ink-sub);
+  cursor: pointer;
+  font-family: inherit;
+  transition: all .15s ease;
+}
+.settings-chip-group .chip:hover:not(:disabled) {
+  border-color: var(--clay);
+  color: var(--clay);
+}
+.settings-chip-group .chip.active {
+  background: var(--clay);
+  color: var(--paper);
+  border-color: var(--clay);
+}
+.settings-chip-group .chip:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+/* ==========================================================================
+   Weather chip (今の天気表示)
+   ========================================================================== */
+.weather-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: var(--honey-soft);
+  border: 1px solid rgba(216, 166, 101, 0.3);
+  border-radius: 999px;
+  font-size: 12.5px;
+  color: var(--ink-sub);
+  font-family: var(--font-inter), Inter, sans-serif;
+  letter-spacing: .02em;
+}
+.weather-chip-label {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ==========================================================================
    Favorite (♡) & Tried (やってみた) ボタン
    ========================================================================== */
 .fav-btn {
