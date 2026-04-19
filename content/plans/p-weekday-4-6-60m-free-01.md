@@ -9,6 +9,7 @@ day: ["weekday"]
 durationMin: 60
 budget: "free"
 area: "all"
+hero: https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1600&h=900&q=80
 seoRelated: "heijitsu-yoru-30pun-routine"
 ---
 

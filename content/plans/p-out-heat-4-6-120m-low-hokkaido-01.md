@@ -9,6 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "low"
 area: "hokkaido"
+hero: https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&w=1600&h=900&q=80
 seoRelated: "amenohi-indoor-spots-tokyo-15"
 ---
 

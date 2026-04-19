@@ -9,6 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "mid"
 area: "fukuoka"
+hero: https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1600&h=900&q=80
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

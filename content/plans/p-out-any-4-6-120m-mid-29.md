@@ -9,6 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "mid"
 area: "all"
+hero: https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=1600&h=900&q=80
 seoRelated: "amenohi-indoor-spots-tokyo-15"
 ---
 

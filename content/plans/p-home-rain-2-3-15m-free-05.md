@@ -9,6 +9,7 @@ day: ["any"]
 durationMin: 15
 budget: "free"
 area: "all"
+hero: https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&w=1600&h=900&q=80
 seoRelated: "iyaiya-shuuchu-asobi"
 ---
 

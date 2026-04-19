@@ -9,6 +9,7 @@ day: ["weekend"]
 durationMin: 120
 budget: "mid"
 area: "all"
+hero: https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1600&h=900&q=80
 seoRelated: "chiiku-asobi-ie-de-10"
 ---
 

@@ -9,6 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "free"
 area: "all"
+hero: https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1600&h=900&q=80
 ---
 
 ## 用意するもの

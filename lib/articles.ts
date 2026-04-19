@@ -759,7 +759,7 @@ function planMatchToAnswer(pm: import('./plans').PlanMatch, heroFromArticle?: st
     title: pm.plan.title,
     shortAnswer: pm.plan.shortAnswer,
     reasons: pm.reasons,
-    hero: heroFromArticle,
+    hero: pm.plan.hero ?? heroFromArticle,
     href: `/plan/${pm.plan.id}`,
     score: pm.score,
   };

@@ -9,6 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "osaka"
+hero: https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=1600&h=900&q=80
 seoRelated: "puuru-mizuasobi-debut"
 ---
 

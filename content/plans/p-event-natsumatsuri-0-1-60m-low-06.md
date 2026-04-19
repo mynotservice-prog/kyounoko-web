@@ -9,6 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "low"
 area: "all"
+hero: https://images.unsplash.com/photo-1502657877623-f66bf489d236?auto=format&fit=crop&w=1600&h=900&q=80
 seoRelated: "natsumatsuri-kodzure-koryaku"
 ---
 

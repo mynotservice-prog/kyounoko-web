@@ -9,6 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "low"
 area: "osaka"
+hero: https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1600&h=900&q=80
 seoRelated: "akachan-odekake-3months-1year"
 ---
 

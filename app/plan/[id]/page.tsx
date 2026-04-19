@@ -67,6 +67,26 @@ export default async function PlanPage({ params }: Props) {
         </nav>
       </div>
 
+      {/* Hero image */}
+      {plan.hero && (
+        <div className="article-hero" style={{ maxWidth: 920, margin: '8px auto 32px', padding: '0 var(--pad)' }}>
+          <div
+            className="article-hero-img"
+            role="img"
+            aria-label={plan.title}
+            style={{
+              width: '100%',
+              aspectRatio: '16 / 9',
+              borderRadius: 'var(--radius-lg)',
+              backgroundImage: `url(${plan.hero})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundColor: 'var(--peach-soft)',
+            }}
+          />
+        </div>
+      )}
+
       <article className="container-article" style={{ paddingTop: 20 }}>
         <header className="page-head">
           <span className="eyebrow">Today&apos;s plan — 今日の行動プラン</span>

@@ -9,6 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "mid"
 area: "all"
+hero: https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1600&h=900&q=80
 seoRelated: "xmas-present-nenrei-0-6"
 ---
 

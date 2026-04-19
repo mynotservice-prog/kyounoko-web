@@ -9,6 +9,7 @@ day: ["holiday"]
 durationMin: 240
 budget: "low"
 area: "tokyo"
+hero: https://images.unsplash.com/photo-1481487196290-c152efe083f5?auto=format&fit=crop&w=1600&h=900&q=80
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

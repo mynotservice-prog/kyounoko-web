@@ -9,6 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "free"
 area: "all"
+hero: https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1600&h=900&q=80
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

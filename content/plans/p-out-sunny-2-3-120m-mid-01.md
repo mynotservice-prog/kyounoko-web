@@ -9,6 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "mid"
 area: "all"
+hero: https://images.unsplash.com/photo-1545193544-312983719627?auto=format&fit=crop&w=1600&h=900&q=80
 seoRelated: "shumatsu-ranchi-kodzure"
 ---
 

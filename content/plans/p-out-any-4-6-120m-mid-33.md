@@ -9,6 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "mid"
 area: "all"
+hero: https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=1600&h=900&q=80
 seoRelated: "kosodate-muryou-spots-tokyo"
 ---
 

@@ -9,6 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "mid"
 area: "all"
+hero: https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=1600&h=900&q=80
 seoRelated: "hatsuzekku-sugoshikata"
 ---
 

@@ -9,6 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "free"
 area: "all"
+hero: https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=1600&h=900&q=80
 seoRelated: "kousaku-4-6sai-10pattern"
 ---
 

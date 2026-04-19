@@ -9,6 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "free"
 area: "all"
+hero: https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?auto=format&fit=crop&w=1600&h=900&q=80
 seoRelated: "akachan-odekake-3months-1year"
 ---
 

@@ -48,6 +48,7 @@ export type PlanMeta = {
   budget: Budget;
   area: string;
   seoRelated?: string;
+  hero?: string;
 };
 
 export type Plan = PlanMeta & {
@@ -94,6 +95,7 @@ function parsePlan(raw: string, fallbackId: string): { meta: PlanMeta; body: str
     budget: (typeof d.budget === 'string' ? d.budget : 'free') as Budget,
     area: typeof d.area === 'string' ? d.area : 'all',
     seoRelated: typeof d.seoRelated === 'string' ? d.seoRelated : undefined,
+    hero: typeof d.hero === 'string' ? d.hero : undefined,
   };
 
   return { meta, body: content };
@@ -208,15 +210,24 @@ function scorePlan(p: PlanMeta, q: PlanQuery): PlanMatch {
     }
   }
 
-  // 時間（記事と同じく <= OK）
+  // 時間（exact match を優先、近接度で重みづけ）
   if (q.duration) {
     const userMin = Number(q.duration);
     if (Number.isFinite(userMin)) {
-      if (p.durationMin <= userMin) {
+      if (p.durationMin === userMin) {
+        score += 15;
+        reasons.push(`${p.durationMin}分ちょうど`);
+      } else if (p.durationMin <= userMin && p.durationMin >= userMin * 0.7) {
+        // 使える時間の70-100%をカバー（ほぼピッタリ）
         score += 10;
         reasons.push(`${p.durationMin}分で完結`);
+      } else if (p.durationMin <= userMin * 0.4) {
+        // 大幅に短い（4時間空いてるのに15分は物足りない）
+        score += 2;
+      } else if (p.durationMin <= userMin) {
+        score += 5;
       } else if (p.durationMin <= userMin * 1.5) {
-        score += 3;
+        score += 1;
       } else {
         score -= 20;
       }

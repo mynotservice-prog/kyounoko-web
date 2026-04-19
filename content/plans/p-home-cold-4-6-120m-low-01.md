@@ -9,6 +9,7 @@ day: ["weekend"]
 durationMin: 120
 budget: "low"
 area: "all"
+hero: https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=1600&h=900&q=80
 seoRelated: "ehon-yomikikase-kotsu"
 ---
 
