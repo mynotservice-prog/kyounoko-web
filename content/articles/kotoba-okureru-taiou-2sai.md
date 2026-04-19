@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 「2歳なのにまだ言葉が少ない」と不安な親向けに、家庭でできる関わり方10、相談目安、発達支援センターの使い方、先輩ママの体験も含めて整理しました。
 quickInfo:
   ageRanges: ["2-3"]

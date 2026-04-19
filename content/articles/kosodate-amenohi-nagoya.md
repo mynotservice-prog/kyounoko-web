@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 雨の日の名古屋でも、幼児が思いきり走れる屋内スポットは意外とたくさんあります。授乳室・ベビーカー動線・駐車場情報まで編集部で実地確認した10選をお届けします。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

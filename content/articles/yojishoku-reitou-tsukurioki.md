@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: 2026-04-17
 updatedAt: 2026-04-17
-hero: https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=1920&h=1080&q=85
 area: "all"
 quickInfo:
   ageRanges: ["2-3"]

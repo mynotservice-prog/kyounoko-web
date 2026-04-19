@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日たべる
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1464746133101-a2c3f88e0dd9?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 「昨日まで食べていたのに、今日はピーマンを全拒否」3歳の野菜嫌いは味覚の急発達が原因。科学的な5つのアプローチと、定番10野菜の神レシピで突破する方法を紹介します。
 quickInfo:
   ageRanges: ["2-3"]

@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 指しゃぶりは3歳頃までは自然な行動。4〜5歳以降も続くと歯並びに影響します。卒業のタイミング、無理なくやめさせる方法、歯科受診の目安を年齢別に整理しました。
 quickInfo:
   ageRanges: ["2-3", "4-6"]

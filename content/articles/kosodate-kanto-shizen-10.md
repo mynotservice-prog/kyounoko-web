@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1473187983305-f615310e7daa?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1445633883498-7f9922d37a3f?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 都心から車で2時間圏内。幼児でも歩ける散策路や、小川で水遊びできる場所、動物と触れ合える牧場を、関東1都6県から10カ所厳選しました。
 quickInfo:
   ageRanges: ["2-3", "4-6"]

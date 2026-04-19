@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 120
 budget: "low"
 area: "kanagawa"
-hero: https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "sakura-ohanami-kodzure-spots"
 ---
 

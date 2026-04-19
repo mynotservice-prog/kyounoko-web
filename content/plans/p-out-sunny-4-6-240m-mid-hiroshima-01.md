@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "hiroshima"
-hero: https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "shumatsu-ranchi-kodzure"
 ---
 

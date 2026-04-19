@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 0〜6歳の予防接種は定期15種+任意3種、合計30回以上。生後2ヶ月スタートの順番、同時接種の考え方、打ち忘れ時の対応、費用を親の目線で1枚に整理しました。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

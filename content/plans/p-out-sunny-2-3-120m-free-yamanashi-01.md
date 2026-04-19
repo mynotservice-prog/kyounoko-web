@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "free"
 area: "yamanashi"
-hero: https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

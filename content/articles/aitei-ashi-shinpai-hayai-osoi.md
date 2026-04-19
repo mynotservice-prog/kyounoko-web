@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 「9ヶ月で歩いたけど早すぎ？」「1歳半でまだ歩かない」と悩む親向けに、歩行開始の目安、早い・遅いの理由、相談タイミングを具体的にまとめました。
 quickInfo:
   ageRanges: ["0-1"]

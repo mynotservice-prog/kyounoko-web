@@ -6,7 +6,7 @@ category: narai
 categoryName: 習い事と学び
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1920&h=1080&q=85
 area: "all"
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

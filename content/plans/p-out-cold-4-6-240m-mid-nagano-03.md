@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "nagano"
-hero: https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1445633883498-7f9922d37a3f?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "yuki-asobi-debut-youji"
 ---
 

@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日たべる
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 18時帰宅・19時就寝の逆算タイムライン。15分で主菜＋副菜が完成する10レシピと、調理時間を半分にする3つの段取りテクをまとめました。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

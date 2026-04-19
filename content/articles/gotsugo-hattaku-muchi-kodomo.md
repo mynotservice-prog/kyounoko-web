@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 「発達が気になるけどどこに相談？」という親向けに、1〜6歳のサイン15項目、相談先と順番、診断までの流れ、家庭でできる関わり方を実用的に整理しました。
 quickInfo:
   ageRanges: ["2-3", "4-6"]

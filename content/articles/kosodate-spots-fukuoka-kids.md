@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 福岡は街も海も山もコンパクトにまとまり、幼児連れのおでかけ効率が抜群。博多・天神を起点に車30分圏で楽しめる12カ所を、地元目線で厳選しました。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

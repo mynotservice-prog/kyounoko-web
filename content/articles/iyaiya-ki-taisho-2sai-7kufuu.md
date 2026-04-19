@@ -6,7 +6,7 @@ category: today-mawasu
 categoryName: 今日まわす
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 「靴を履かない」「すべてイヤ」2歳のイヤイヤ期に心が折れそうなママ・パパへ。発達心理の観点から7つの対処法と、今日から使える声かけフレーズを紹介します。
 quickInfo:
   ageRanges: ["2-3"]

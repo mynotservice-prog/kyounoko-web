@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "low"
 area: "osaka"
-hero: https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "shumatsu-ranchi-kodzure"
 ---
 

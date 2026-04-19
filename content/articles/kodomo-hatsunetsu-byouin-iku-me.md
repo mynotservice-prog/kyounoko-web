@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 子どもの発熱は「何度で病院？」ではなく、年齢・経過時間・全身状態で判断します。0〜6歳の受診タイミング10サイン、夜間の#8000活用、家で様子を見る条件を整理しました。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

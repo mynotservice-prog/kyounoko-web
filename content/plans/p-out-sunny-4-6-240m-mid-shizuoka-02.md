@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "shizuoka"
-hero: https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1476041800959-2f6bb412c8ce?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "shumatsu-ranchi-kodzure"
 ---
 

@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 「鼻水は小児科？耳鼻科？」「目やには眼科でいい？」と迷う親のために、0〜6歳の症状15パターンで受診先を整理。迷ったらまずかかりつけ、という基本も含めて解説します。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 肉や魚を毎日メインにしなくても、野菜と大豆・卵・乳製品で満足度の高い食卓は作れます。幼児も大人もおかわりしたくなる、野菜中心メニュー7品を提案します。
 quickInfo:
   ageRanges: ["2-3", "4-6"]

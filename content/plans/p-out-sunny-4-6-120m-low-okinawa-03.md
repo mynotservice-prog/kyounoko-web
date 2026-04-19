@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "low"
 area: "okinawa"
-hero: https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 
