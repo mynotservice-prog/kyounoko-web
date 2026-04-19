@@ -159,6 +159,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         {/* AdSense 所有権確認用メタタグ */}
         <meta name="google-adsense-account" content="ca-pub-4445473825791494" />
+        {/*
+          AdSense スクリプト: AdSense クローラーが head 内で検出できるよう、
+          afterInteractive でなく、素の <script async> を <head> に直接記述する。
+          Google 推奨の正式フォーマットに一致。
+        */}
+        <script
+          async
+          src={ADSENSE_SCRIPT_SRC}
+          crossOrigin="anonymous"
+        />
       </head>
       <body className="font-sans">
         {children}
@@ -194,14 +204,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </Script>
         )}
 
-        {/* Google AdSense (Auto Ads) — pub ID はコード埋め込みのデフォルト or env で上書き */}
-        <Script
-          id="adsense-init"
-          async
-          strategy="afterInteractive"
-          src={ADSENSE_SCRIPT_SRC}
-          crossOrigin="anonymous"
-        />
+        {/* AdSense スクリプトは head で直接読み込み済み（Google推奨配置） */}
       </body>
     </html>
   );
