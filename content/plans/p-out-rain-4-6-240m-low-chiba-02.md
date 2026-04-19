@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 240
 budget: "low"
 area: "chiba"
-hero: https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://image.pollinations.ai/prompt/%E5%8D%83%E8%91%89%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%EF%BC%9A%E9%9B%A8%E3%81%AE%E6%97%A5%E3%81%AF%E3%82%A4%E3%82%AA%E3%83%B3%E3%83%A2%E3%83%BC%E3%83%AB%E5%B9%95%E5%BC%B5%E6%96%B0%E9%83%BD%E5%BF%83%E3%83%97%E3%83%A9%E3%83%B3%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=1248460657&model=flux
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "free"
 area: "all"
-hero: https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://image.pollinations.ai/prompt/%E3%81%8A%E7%A0%82%E5%A0%B4%E9%81%8A%E3%81%B32%E6%99%82%E9%96%93%E3%81%98%E3%81%A3%E3%81%8F%E3%82%8A%E3%82%B3%E3%83%BC%E3%82%B9%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=1113290887&model=flux
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

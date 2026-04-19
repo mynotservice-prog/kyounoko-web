@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 30
 budget: "free"
 area: "all"
-hero: https://images.unsplash.com/photo-1566004100631-35d015d6a491?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://image.pollinations.ai/prompt/%E7%AE%97%E6%95%B0%E5%95%8F%E9%A1%8C%E5%AF%BE%E6%B1%BA%EF%BC%9A10%E5%95%8F%E5%8B%9D%E8%B2%A0%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=4149283728&model=flux
 seoRelated: "chiku-naraigoto-kumon-shichida-monte"
 ---
 

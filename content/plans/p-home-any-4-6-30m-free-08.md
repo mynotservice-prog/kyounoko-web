@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 30
 budget: "free"
 area: "all"
-hero: https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://image.pollinations.ai/prompt/%E5%AF%9D%E3%82%8B%E5%89%8D%E3%81%AE%E3%83%AA%E3%83%A9%E3%83%83%E3%82%AF%E3%82%B9%E7%9E%91%E6%83%B3%E3%82%BF%E3%82%A4%E3%83%A0%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=3645644431&model=flux
 seoRelated: "ko-ga-nenai-5kufuu"
 ---
 

@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "free"
 area: "all"
-hero: https://images.unsplash.com/photo-1473187983305-f615310e7daa?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://image.pollinations.ai/prompt/%E5%95%86%E5%BA%97%E8%A1%97%E3%81%B6%E3%82%89%E3%82%8A%E6%95%A3%E6%AD%A9%E3%81%A7%E3%81%94%E6%8C%A8%E6%8B%B6%E4%BD%93%E9%A8%93%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=1722043922&model=flux
 seoRelated: "shumatsu-ranchi-kodzure"
 ---
 

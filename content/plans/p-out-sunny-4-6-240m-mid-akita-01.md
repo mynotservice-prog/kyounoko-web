@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "akita"
-hero: https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://image.pollinations.ai/prompt/%E7%A7%8B%E7%94%B0%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%EF%BC%9A%E5%A4%A7%E6%A3%AE%E5%B1%B1%E5%8B%95%E7%89%A9%E5%9C%92%E3%81%A7%E5%8B%95%E7%89%A9%E3%81%9F%E3%81%A1%E3%81%A8%E3%81%B5%E3%82%8C%E3%81%82%E3%81%86240%E5%88%86%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=3143336450&model=flux
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

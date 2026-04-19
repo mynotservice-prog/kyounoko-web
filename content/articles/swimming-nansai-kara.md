@@ -3,7 +3,7 @@ slug: swimming-nansai-kara
 title: 子どものスイミング何歳から？｜0〜6歳の月謝・効果と主要スクール5社比較で失敗しない
 category: narai
 categoryName: 習い事と学び
-hero: https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://image.pollinations.ai/prompt/%E5%AD%90%E3%81%A9%E3%82%82%E3%81%AE%E3%82%B9%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E4%BD%95%E6%AD%B3%E3%81%8B%E3%82%89%EF%BC%9F%2C%20scene%20setting%2C%20parenting%20lifestyle%20context%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=1355489495&model=flux
 metaDescription: スイミングは何歳から？ベビースイミングは0〜6ヶ月から可能で、3歳前後が本格スタートの黄金期。月謝相場・主要スクール比較・効果・デメリットまで、3分で判断できる情報をまとめました。
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18

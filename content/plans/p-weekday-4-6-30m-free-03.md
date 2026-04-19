@@ -9,7 +9,7 @@ day: ["weekday"]
 durationMin: 30
 budget: "free"
 area: "all"
-hero: https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://image.pollinations.ai/prompt/%E3%81%8A%E6%89%8B%E4%BC%9D%E3%81%84%E6%8E%83%E9%99%A4%E6%A9%9F%E5%BD%93%E7%95%AA30%E5%88%86%E3%81%A7%E5%AE%B6%E4%BA%8B%E3%82%92%E7%BF%92%E6%85%A3%E5%8C%96%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=4015866081&model=flux
 seoRelated: "heijitsu-yoru-30pun-routine"
 ---
 

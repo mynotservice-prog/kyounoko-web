@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "low"
 area: "all"
-hero: https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://image.pollinations.ai/prompt/%E9%AD%9A%E9%87%A3%E3%82%8A%E3%81%94%E3%81%A3%E3%81%93%E8%A3%BD%E4%BD%9C%EF%BC%86%E5%AF%BE%E6%88%A6%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=4009577585&model=flux
 seoRelated: "kousaku-4-6sai-10pattern"
 ---
 

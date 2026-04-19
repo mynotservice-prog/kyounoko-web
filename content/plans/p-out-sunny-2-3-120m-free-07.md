@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "free"
 area: "tokyo"
-hero: https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://image.pollinations.ai/prompt/%E6%9D%B1%E4%BA%AC%20%E8%B1%8A%E6%B4%B2%E3%81%90%E3%82%8B%E3%82%8A%E5%85%AC%E5%9C%92%E3%81%A7%E5%BA%83%E3%80%85%E6%95%A3%E6%AD%A9120%E5%88%86%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=1172062128&model=flux
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

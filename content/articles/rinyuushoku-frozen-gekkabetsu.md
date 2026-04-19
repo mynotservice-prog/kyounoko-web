@@ -3,7 +3,7 @@ slug: rinyuushoku-frozen-gekkabetsu
 title: 離乳食フリージング完全ガイド｜5-6ヶ月〜完了期まで月齢別の冷凍ストック1週間レシピ
 category: today-taberu
 categoryName: 今日何食べる？
-hero: https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://image.pollinations.ai/prompt/%E9%9B%A2%E4%B9%B3%E9%A3%9F%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B8%E3%83%B3%E3%82%B0%E5%AE%8C%E5%85%A8%E3%82%AC%E3%82%A4%E3%83%89%2C%20scene%20setting%2C%20parenting%20lifestyle%20context%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=3712790584&model=flux
 metaDescription: 離乳食フリージングの基本を月齢別（5-6/7-8/9-11/12-18ヶ月）に整理。週末2時間で1週間分作り置きする手順・食材リスト・組み合わせテーブルを具体的に紹介します。
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18

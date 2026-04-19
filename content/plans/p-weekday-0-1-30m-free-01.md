@@ -9,7 +9,7 @@ day: ["weekday"]
 durationMin: 30
 budget: "free"
 area: "all"
-hero: https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://image.pollinations.ai/prompt/%E3%81%8A%E9%A2%A8%E5%91%82%E2%86%92%E7%9D%80%E6%9B%BF%E3%81%88%E2%86%92%E6%AD%AF%E7%A3%A8%E3%81%8D30%E5%88%86%E5%8B%95%E7%B7%9A%E3%81%A7%E5%A4%9C%E3%82%92%E4%B8%80%E6%B0%97%E9%80%9A%E8%B2%AB%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=2507295741&model=flux
 seoRelated: "19ji-shoutou-routine"
 ---
 

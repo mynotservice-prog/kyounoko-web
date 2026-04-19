@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: 2026-04-19
 updatedAt: 2026-04-19
-hero: https://images.unsplash.com/photo-1481487196290-c152efe083f5?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://image.pollinations.ai/prompt/%E5%B9%BC%E7%A8%9A%E5%9C%92%E5%85%90%E3%81%A8%E8%A1%8C%E3%81%91%E3%82%8B%E6%9D%B1%E4%BA%AC%E3%81%AE%E8%87%AA%E7%84%B6%E3%82%B9%E3%83%9D%E3%83%83%E3%83%8810%E9%81%B8%20%E8%8A%9D%E7%94%9F%20%E3%83%94%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF%20%E8%99%AB%E5%8F%96%E3%82%8A%2C%20scene%20setting%2C%20parenting%20lifestyle%20context%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=4146084697&model=flux
 area: "tokyo"
 quickInfo:
   ageRanges: ["4-6"]

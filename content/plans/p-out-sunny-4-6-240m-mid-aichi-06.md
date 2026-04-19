@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 240
 budget: "mid"
 area: "aichi"
-hero: https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://image.pollinations.ai/prompt/%E6%84%9B%E7%9F%A5%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%EF%BC%9A%E6%9D%B1%E5%B1%B1%E5%8B%95%E6%A4%8D%E7%89%A9%E5%9C%92%EF%BC%8B%E3%82%B9%E3%82%AB%E3%82%A4%E3%82%BF%E3%83%AF%E3%83%BC%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=2408746871&model=flux
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

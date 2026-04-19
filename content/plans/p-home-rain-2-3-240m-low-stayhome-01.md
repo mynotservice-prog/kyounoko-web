@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "low"
 area: "all"
-hero: https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: https://image.pollinations.ai/prompt/%E9%9B%A8%E3%81%AE%E6%97%A5%E3%81%AE%E5%AE%B6%E3%81%93%E3%82%82%E3%82%8A1%E6%97%A5%202-3%E6%AD%B3%20%EF%BC%9A%E5%B0%8F%E9%BA%A6%E7%B2%89%E3%81%AD%E3%82%93%E3%81%A9%E2%86%92%E3%83%A9%E3%83%B3%E3%83%81%E2%86%92%E3%81%8A%E6%98%BC%E5%AF%9D%E2%86%92%E5%B7%A5%E4%BD%9C%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=3993884668&model=flux
 seoRelated: "amenohi-ie-asobi-2-3sai"
 ---
 
