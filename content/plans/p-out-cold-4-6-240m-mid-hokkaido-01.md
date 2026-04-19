@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 240
 budget: "mid"
 area: "hokkaido"
-hero: https://image.pollinations.ai/prompt/%E6%9C%AD%E5%B9%8C%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%EF%BC%9A%E7%99%BD%E3%81%84%E6%81%8B%E4%BA%BA%E3%83%91%E3%83%BC%E3%82%AF%E3%81%A7%E3%81%8A%E8%8F%93%E5%AD%90%E4%BD%9C%E3%82%8A%E4%BD%93%E9%A8%93240%E5%88%86%E3%83%97%E3%83%A9%E3%83%B3%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=619163558&model=flux
+hero: https://image.pollinations.ai/prompt/%E6%9C%AD%E5%B9%8C%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%EF%BC%9A%E7%99%BD%E3%81%84%E6%81%8B%E4%BA%BA%E3%83%91%E3%83%BC%E3%82%AF%E3%81%A7%E3%81%8A%E8%8F%93%E5%AD%90%E4%BD%9C%E3%82%8A%E4%BD%93%E9%A8%93240%E5%88%86%E3%83%97%E3%83%A9%E3%83%B3%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=619163558&model=flux
 seoRelated: "amenohi-indoor-spots-tokyo-15"
 ---
 

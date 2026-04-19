@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "free"
 area: "all"
-hero: https://image.pollinations.ai/prompt/%E5%AF%92%E3%81%84%E6%97%A5%E3%81%AE%E5%85%90%E7%AB%A5%E9%A4%A8%E3%81%A7%E3%81%BD%E3%81%8B%E3%81%BD%E3%81%8B60%E5%88%86%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=1334155660&model=flux
+hero: https://image.pollinations.ai/prompt/%E5%AF%92%E3%81%84%E6%97%A5%E3%81%AE%E5%85%90%E7%AB%A5%E9%A4%A8%E3%81%A7%E3%81%BD%E3%81%8B%E3%81%BD%E3%81%8B60%E5%88%86%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=1334155660&model=flux
 seoRelated: "akachan-odekake-3months-1year"
 ---
 

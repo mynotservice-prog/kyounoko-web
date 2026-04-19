@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://image.pollinations.ai/prompt/%E5%A4%96%E9%A3%9F%E3%81%A7%E5%AD%90%E3%81%8C%E9%A3%9F%E3%81%B9%E3%82%8B%E5%BA%97%E3%81%AE%E8%A6%8B%E6%A5%B5%E3%82%81%E6%96%B9%2C%20scene%20setting%2C%20parenting%20lifestyle%20context%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=3857270917&model=flux
+hero: https://image.pollinations.ai/prompt/%E5%A4%96%E9%A3%9F%E3%81%A7%E5%AD%90%E3%81%8C%E9%A3%9F%E3%81%B9%E3%82%8B%E5%BA%97%E3%81%AE%E8%A6%8B%E6%A5%B5%E3%82%81%E6%96%B9%2C%20scene%20setting%2C%20parenting%20lifestyle%20context%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=3857270917&model=flux
 area: "all"
 quickInfo:
   ageRanges: ["2-3", "4-6"]

@@ -9,7 +9,7 @@ day: ["weekday"]
 durationMin: 15
 budget: "free"
 area: "all"
-hero: https://image.pollinations.ai/prompt/%E3%81%8A%E9%A2%A8%E5%91%82%E4%B8%8A%E3%81%8C%E3%82%8A15%E5%88%86%E3%82%AF%E3%83%BC%E3%83%AB%E3%83%80%E3%82%A6%E3%83%B3%E3%81%A7%E5%AF%9D%E3%81%8B%E3%81%97%E3%81%A4%E3%81%91%E3%81%AB%E3%81%A4%E3%81%AA%E3%81%90%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=2346171322&model=flux
+hero: https://image.pollinations.ai/prompt/%E3%81%8A%E9%A2%A8%E5%91%82%E4%B8%8A%E3%81%8C%E3%82%8A15%E5%88%86%E3%82%AF%E3%83%BC%E3%83%AB%E3%83%80%E3%82%A6%E3%83%B3%E3%81%A7%E5%AF%9D%E3%81%8B%E3%81%97%E3%81%A4%E3%81%91%E3%81%AB%E3%81%A4%E3%81%AA%E3%81%90%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=2346171322&model=flux
 seoRelated: "19ji-shoutou-routine"
 ---
 

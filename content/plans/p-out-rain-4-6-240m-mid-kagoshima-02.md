@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "kagoshima"
-hero: https://image.pollinations.ai/prompt/%E9%B9%BF%E5%85%90%E5%B3%B6%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%EF%BC%9A%E3%81%84%E3%81%8A%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%81%8B%E3%81%94%E3%81%97%E3%81%BE%E6%B0%B4%E6%97%8F%E9%A4%A8%E3%81%A7%E6%A1%9C%E5%B3%B6%E7%9C%BA%E6%9C%9B%E5%8D%8A%E6%97%A5%E3%83%97%E3%83%A9%E3%83%B3%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=1908437475&model=flux
+hero: https://image.pollinations.ai/prompt/%E9%B9%BF%E5%85%90%E5%B3%B6%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%EF%BC%9A%E3%81%84%E3%81%8A%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%81%8B%E3%81%94%E3%81%97%E3%81%BE%E6%B0%B4%E6%97%8F%E9%A4%A8%E3%81%A7%E6%A1%9C%E5%B3%B6%E7%9C%BA%E6%9C%9B%E5%8D%8A%E6%97%A5%E3%83%97%E3%83%A9%E3%83%B3%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=1908437475&model=flux
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

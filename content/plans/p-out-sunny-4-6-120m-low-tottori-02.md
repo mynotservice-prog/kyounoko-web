@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "low"
 area: "tottori"
-hero: https://image.pollinations.ai/prompt/%E9%B3%A5%E5%8F%96%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%EF%BC%9A%E7%B1%B3%E5%AD%90%E6%B0%B4%E9%B3%A5%E5%85%AC%E5%9C%92%E3%81%A7%E9%87%8E%E9%B3%A5%E8%A6%B3%E5%AF%9F120%E5%88%86%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=510167980&model=flux
+hero: https://image.pollinations.ai/prompt/%E9%B3%A5%E5%8F%96%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%EF%BC%9A%E7%B1%B3%E5%AD%90%E6%B0%B4%E9%B3%A5%E5%85%AC%E5%9C%92%E3%81%A7%E9%87%8E%E9%B3%A5%E8%A6%B3%E5%AF%9F120%E5%88%86%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=510167980&model=flux
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "low"
 area: "all"
-hero: https://image.pollinations.ai/prompt/%E5%8D%9A%E7%89%A9%E9%A4%A8%E3%81%AE%E6%81%90%E7%AB%9C%E3%82%B3%E3%83%BC%E3%83%8A%E3%83%BC%E5%B7%A1%E3%82%8A%20%E9%9B%A8OK%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=428743596&model=flux
+hero: https://image.pollinations.ai/prompt/%E5%8D%9A%E7%89%A9%E9%A4%A8%E3%81%AE%E6%81%90%E7%AB%9C%E3%82%B3%E3%83%BC%E3%83%8A%E3%83%BC%E5%B7%A1%E3%82%8A%20%E9%9B%A8OK%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=428743596&model=flux
 seoRelated: "amenohi-indoor-spots-tokyo-15"
 ---
 

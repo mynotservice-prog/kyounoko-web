@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "nagano"
-hero: https://image.pollinations.ai/prompt/%E9%95%B7%E9%87%8E%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%EF%BC%9A%E8%BB%BD%E4%BA%95%E6%B2%A2%E3%81%8A%E3%82%82%E3%81%A1%E3%82%83%E7%8E%8B%E5%9B%BD%E3%81%A71%E6%97%A5%E3%82%A2%E3%83%88%E3%83%A9%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=3762541913&model=flux
+hero: https://image.pollinations.ai/prompt/%E9%95%B7%E9%87%8E%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%EF%BC%9A%E8%BB%BD%E4%BA%95%E6%B2%A2%E3%81%8A%E3%82%82%E3%81%A1%E3%82%83%E7%8E%8B%E5%9B%BD%E3%81%A71%E6%97%A5%E3%82%A2%E3%83%88%E3%83%A9%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=3762541913&model=flux
 seoRelated: "yuenchi-youji-debut"
 ---
 

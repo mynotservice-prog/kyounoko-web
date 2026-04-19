@@ -3,7 +3,7 @@ slug: 19ji-shoutou-routine
 title: 共働き19時消灯ルーティン｜帰宅から寝かしつけまで2時間の完全タイムライン
 category: today-mawasu
 categoryName: 今日どう回す？
-hero: https://image.pollinations.ai/prompt/%E5%85%B1%E5%83%8D%E3%81%8D19%E6%99%82%E6%B6%88%E7%81%AF%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%2C%20scene%20setting%2C%20parenting%20lifestyle%20context%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=1652137266&model=flux
+hero: https://image.pollinations.ai/prompt/%E5%85%B1%E5%83%8D%E3%81%8D19%E6%99%82%E6%B6%88%E7%81%AF%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%2C%20scene%20setting%2C%20parenting%20lifestyle%20context%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=1652137266&model=flux
 metaDescription: 共働きで19時消灯を実現するための帰宅〜就寝までの2時間タイムライン。17時保育園迎え、18時夕食、18時30分お風呂、19時就寝の具体的な段取りと、失敗しない仕組み化のコツを紹介します。
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18

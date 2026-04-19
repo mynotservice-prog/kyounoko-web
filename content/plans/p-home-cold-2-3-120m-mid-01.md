@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "mid"
 area: "all"
-hero: https://image.pollinations.ai/prompt/%E3%81%8A%E3%81%86%E3%81%A1%E3%83%9F%E3%83%8B%E6%B0%B4%E6%97%8F%E9%A4%A8%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=1599084473&model=flux
+hero: https://image.pollinations.ai/prompt/%E3%81%8A%E3%81%86%E3%81%A1%E3%83%9F%E3%83%8B%E6%B0%B4%E6%97%8F%E9%A4%A8%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=1599084473&model=flux
 seoRelated: "kousaku-4-6sai-10pattern"
 ---
 

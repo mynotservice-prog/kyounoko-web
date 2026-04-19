@@ -9,7 +9,7 @@ day: ["weekend"]
 durationMin: 120
 budget: "free"
 area: "all"
-hero: https://image.pollinations.ai/prompt/%E7%89%A9%E8%AA%9E%E4%BD%9C%E5%AE%B6%E3%83%87%E3%83%93%E3%83%A5%E3%83%BC%EF%BC%9A4%E3%82%B3%E3%83%9E%E6%BC%AB%E7%94%BB%E3%82%92%E6%8F%8F%E3%81%8F%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=1016275544&model=flux
+hero: https://image.pollinations.ai/prompt/%E7%89%A9%E8%AA%9E%E4%BD%9C%E5%AE%B6%E3%83%87%E3%83%93%E3%83%A5%E3%83%BC%EF%BC%9A4%E3%82%B3%E3%83%9E%E6%BC%AB%E7%94%BB%E3%82%92%E6%8F%8F%E3%81%8F%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=1016275544&model=flux
 seoRelated: "ehon-yomikikase-kotsu"
 ---
 

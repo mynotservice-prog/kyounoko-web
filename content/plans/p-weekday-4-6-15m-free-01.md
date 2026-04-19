@@ -9,7 +9,7 @@ day: ["weekday"]
 durationMin: 15
 budget: "free"
 area: "all"
-hero: https://image.pollinations.ai/prompt/15%E5%88%86%E5%A4%95%E9%A3%9F%E2%86%92%E9%A3%9F%E6%B4%97%E6%A9%9F%E3%83%94%E3%83%83%E3%83%94%E4%BD%9C%E6%88%A6%E3%81%A7%E5%BE%8C%E7%89%87%E4%BB%98%E3%81%91%E3%82%92%E5%AD%90%E3%81%A9%E3%82%82%E3%81%A8%E5%AE%8C%E7%B5%90%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=853358183&model=flux
+hero: https://image.pollinations.ai/prompt/15%E5%88%86%E5%A4%95%E9%A3%9F%E2%86%92%E9%A3%9F%E6%B4%97%E6%A9%9F%E3%83%94%E3%83%83%E3%83%94%E4%BD%9C%E6%88%A6%E3%81%A7%E5%BE%8C%E7%89%87%E4%BB%98%E3%81%91%E3%82%92%E5%AD%90%E3%81%A9%E3%82%82%E3%81%A8%E5%AE%8C%E7%B5%90%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=853358183&model=flux
 seoRelated: "heijitsu-yoru-30pun-routine"
 ---
 

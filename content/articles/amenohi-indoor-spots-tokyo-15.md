@@ -3,7 +3,7 @@ slug: amenohi-indoor-spots-tokyo-15
 title: "雨の日に行ける東京の屋内キッズスポット15選｜0〜6歳連れの定番から穴場まで"
 category: today-doko
 categoryName: "今日どこ行く？"
-hero: https://image.pollinations.ai/prompt/%E9%9B%A8%E3%81%AE%E6%97%A5%E3%81%AB%E8%A1%8C%E3%81%91%E3%82%8B%E6%9D%B1%E4%BA%AC%E3%81%AE%E5%B1%8B%E5%86%85%E3%82%AD%E3%83%83%E3%82%BA%E3%82%B9%E3%83%9D%E3%83%83%E3%83%8815%E9%81%B8%2C%20scene%20setting%2C%20parenting%20lifestyle%20context%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=770035930&model=flux
+hero: https://image.pollinations.ai/prompt/%E9%9B%A8%E3%81%AE%E6%97%A5%E3%81%AB%E8%A1%8C%E3%81%91%E3%82%8B%E6%9D%B1%E4%BA%AC%E3%81%AE%E5%B1%8B%E5%86%85%E3%82%AD%E3%83%83%E3%82%BA%E3%82%B9%E3%83%9D%E3%83%83%E3%83%8815%E9%81%B8%2C%20scene%20setting%2C%20parenting%20lifestyle%20context%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=770035930&model=flux
 metaDescription: "雨の日でも安心して遊べる東京の屋内キッズスポット15選。ボーネルンド・キドキド・ASOBono・屋内アスレチック・博物館まで、対象年齢・料金・アクセス・混雑度の具体情報付き。"
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18

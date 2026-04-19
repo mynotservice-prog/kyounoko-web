@@ -9,7 +9,7 @@ day: ["weekday"]
 durationMin: 60
 budget: "free"
 area: "all"
-hero: https://image.pollinations.ai/prompt/%E4%BF%9D%E8%82%B2%E5%9C%92%E9%80%81%E8%BF%8E%E5%BE%8C%E3%81%AE%E8%A6%AA%E3%82%BF%E3%82%B9%E3%82%AF60%E5%88%86%20%E8%A6%AA%E7%9B%AE%E7%B7%9A%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=3053121170&model=flux
+hero: https://image.pollinations.ai/prompt/%E4%BF%9D%E8%82%B2%E5%9C%92%E9%80%81%E8%BF%8E%E5%BE%8C%E3%81%AE%E8%A6%AA%E3%82%BF%E3%82%B9%E3%82%AF60%E5%88%86%20%E8%A6%AA%E7%9B%AE%E7%B7%9A%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=3053121170&model=flux
 seoRelated: "wanope-yoru-kirinukekata"
 ---
 

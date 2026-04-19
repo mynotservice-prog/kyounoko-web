@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 15
 budget: "free"
 area: "all"
-hero: https://image.pollinations.ai/prompt/%E9%8F%A1%E9%81%8A%E3%81%B3%E3%81%A7%E8%87%AA%E5%88%86%E3%81%AE%E9%A1%94%E3%82%92%E7%99%BA%E8%A6%8B%E3%81%99%E3%82%8B15%E5%88%86%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=3348185186&model=flux
+hero: https://image.pollinations.ai/prompt/%E9%8F%A1%E9%81%8A%E3%81%B3%E3%81%A7%E8%87%AA%E5%88%86%E3%81%AE%E9%A1%94%E3%82%92%E7%99%BA%E8%A6%8B%E3%81%99%E3%82%8B15%E5%88%86%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=3348185186&model=flux
 seoRelated: "akachan-15pun-asobi"
 ---
 

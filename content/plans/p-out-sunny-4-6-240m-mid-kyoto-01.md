@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 240
 budget: "mid"
 area: "kyoto"
-hero: https://image.pollinations.ai/prompt/%E4%BA%AC%E9%83%BD%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%20%E6%A2%85%E5%B0%8F%E8%B7%AF%E5%85%AC%E5%9C%92%EF%BC%8B%E4%BA%AC%E9%83%BD%E9%89%84%E9%81%93%E5%8D%9A%E7%89%A9%E9%A4%A8%204-6%E6%AD%B3%EF%BC%8F4%E6%99%82%E9%96%93%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=4266638915&model=flux
+hero: https://image.pollinations.ai/prompt/%E4%BA%AC%E9%83%BD%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%20%E6%A2%85%E5%B0%8F%E8%B7%AF%E5%85%AC%E5%9C%92%EF%BC%8B%E4%BA%AC%E9%83%BD%E9%89%84%E9%81%93%E5%8D%9A%E7%89%A9%E9%A4%A8%204-6%E6%AD%B3%EF%BC%8F4%E6%99%82%E9%96%93%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=4266638915&model=flux
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

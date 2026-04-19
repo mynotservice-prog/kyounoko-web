@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://image.pollinations.ai/prompt/%E9%9B%A8%E3%81%AE%E6%97%A5%E3%81%AE%E5%AE%B6%E9%81%8A%E3%81%B310%E9%81%B8%204%206%E6%AD%B3%E5%90%91%E3%81%91%20%E9%9B%86%E4%B8%AD%E5%8A%9B%E3%81%8C%E8%82%B2%E3%81%A4%E9%9D%99%E3%81%8B%E3%81%AA%E9%81%8A%E3%81%B3%2C%20scene%20setting%2C%20parenting%20lifestyle%20context%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=1064398294&model=flux
+hero: https://image.pollinations.ai/prompt/%E9%9B%A8%E3%81%AE%E6%97%A5%E3%81%AE%E5%AE%B6%E9%81%8A%E3%81%B310%E9%81%B8%204%206%E6%AD%B3%E5%90%91%E3%81%91%20%E9%9B%86%E4%B8%AD%E5%8A%9B%E3%81%8C%E8%82%B2%E3%81%A4%E9%9D%99%E3%81%8B%E3%81%AA%E9%81%8A%E3%81%B3%2C%20scene%20setting%2C%20parenting%20lifestyle%20context%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=1064398294&model=flux
 area: "all"
 quickInfo:
   ageRanges: ["4-6"]

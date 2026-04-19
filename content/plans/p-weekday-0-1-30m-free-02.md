@@ -9,7 +9,7 @@ day: ["weekday"]
 durationMin: 30
 budget: "free"
 area: "all"
-hero: https://image.pollinations.ai/prompt/%E5%AF%9D%E3%82%8B%E5%89%8D%E3%81%AE30%E5%88%86%E7%B5%B5%E6%9C%AC%E3%83%9E%E3%83%A9%E3%82%BD%E3%83%B3%E3%81%A7%E5%AF%9D%E3%81%8B%E3%81%97%E3%81%A4%E3%81%91%E6%88%90%E5%8A%9F%E7%8E%87%E3%82%A2%E3%83%83%E3%83%97%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=2232984253&model=flux
+hero: https://image.pollinations.ai/prompt/%E5%AF%9D%E3%82%8B%E5%89%8D%E3%81%AE30%E5%88%86%E7%B5%B5%E6%9C%AC%E3%83%9E%E3%83%A9%E3%82%BD%E3%83%B3%E3%81%A7%E5%AF%9D%E3%81%8B%E3%81%97%E3%81%A4%E3%81%91%E6%88%90%E5%8A%9F%E7%8E%87%E3%82%A2%E3%83%83%E3%83%97%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=2232984253&model=flux
 seoRelated: "ko-ga-nenai-5kufuu"
 ---
 

@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 120
 budget: "low"
 area: "kyoto"
-hero: https://image.pollinations.ai/prompt/%E5%AE%9D%E3%83%B6%E6%B1%A0%E5%85%AC%E5%9C%92%20%E5%AD%90%E3%81%A9%E3%82%82%E3%81%AE%E6%A5%BD%E5%9C%92%E3%81%A7%E8%B5%B0%E3%82%8A%E5%9B%9E%E3%82%8B2%E6%99%82%E9%96%93%202-3%E6%AD%B3%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=3440026438&model=flux
+hero: https://image.pollinations.ai/prompt/%E5%AE%9D%E3%83%B6%E6%B1%A0%E5%85%AC%E5%9C%92%20%E5%AD%90%E3%81%A9%E3%82%82%E3%81%AE%E6%A5%BD%E5%9C%92%E3%81%A7%E8%B5%B0%E3%82%8A%E5%9B%9E%E3%82%8B2%E6%99%82%E9%96%93%202-3%E6%AD%B3%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=3440026438&model=flux
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

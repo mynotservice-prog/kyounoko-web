@@ -9,7 +9,7 @@ day: ["weekday"]
 durationMin: 15
 budget: "free"
 area: "all"
-hero: https://image.pollinations.ai/prompt/15%E5%88%86%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E5%B4%A9%E3%81%97%E9%9B%86%E4%B8%AD%E3%82%BF%E3%82%A4%E3%83%A0%E3%81%A7%E5%A4%95%E9%A3%9F%E6%BA%96%E5%82%99%E3%81%AE%E3%81%99%E3%81%8D%E9%96%93%E3%82%92%E4%BD%9C%E3%82%8B%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=399624651&model=flux
+hero: https://image.pollinations.ai/prompt/15%E5%88%86%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E5%B4%A9%E3%81%97%E9%9B%86%E4%B8%AD%E3%82%BF%E3%82%A4%E3%83%A0%E3%81%A7%E5%A4%95%E9%A3%9F%E6%BA%96%E5%82%99%E3%81%AE%E3%81%99%E3%81%8D%E9%96%93%E3%82%92%E4%BD%9C%E3%82%8B%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=399624651&model=flux
 seoRelated: "jitanhaden-ranking-7sen"
 ---
 

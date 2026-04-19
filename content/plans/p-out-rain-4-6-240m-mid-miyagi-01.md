@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "miyagi"
-hero: https://image.pollinations.ai/prompt/%E4%BB%99%E5%8F%B0%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%EF%BC%9A%E9%9B%A8%E3%81%AE%E6%97%A5%E3%81%AF%E4%BB%99%E5%8F%B0%E5%B8%82%E7%A7%91%E5%AD%A6%E9%A4%A8%E3%81%A8%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AC%E3%83%83%E3%83%88240%E5%88%86%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=3639462578&model=flux
+hero: https://image.pollinations.ai/prompt/%E4%BB%99%E5%8F%B0%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%EF%BC%9A%E9%9B%A8%E3%81%AE%E6%97%A5%E3%81%AF%E4%BB%99%E5%8F%B0%E5%B8%82%E7%A7%91%E5%AD%A6%E9%A4%A8%E3%81%A8%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AC%E3%83%83%E3%83%88240%E5%88%86%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=3639462578&model=flux
 seoRelated: "shumatsu-ranchi-kodzure"
 ---
 

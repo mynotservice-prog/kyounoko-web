@@ -9,7 +9,7 @@ day: ["weekday"]
 durationMin: 60
 budget: "free"
 area: "all"
-hero: https://image.pollinations.ai/prompt/%E5%AE%B6%E6%97%8F4%E4%BA%BA%E3%81%A7%E5%9B%9E%E3%81%99%E5%A4%95%E9%A3%9F%E2%86%92%E9%A2%A8%E5%91%82%E2%86%92%E5%AF%9D%E3%81%8B%E3%81%97%E3%81%A4%E3%81%9160%E5%88%86%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1600&height=900&nologo=true&seed=60748073&model=flux
+hero: https://image.pollinations.ai/prompt/%E5%AE%B6%E6%97%8F4%E4%BA%BA%E3%81%A7%E5%9B%9E%E3%81%99%E5%A4%95%E9%A3%9F%E2%86%92%E9%A2%A8%E5%91%82%E2%86%92%E5%AF%9D%E3%81%8B%E3%81%97%E3%81%A4%E3%81%9160%E5%88%86%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=60748073&model=flux
 seoRelated: "heijitsu-yoru-30pun-routine"
 ---
 
