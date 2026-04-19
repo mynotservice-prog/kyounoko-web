@@ -6,6 +6,8 @@ import { SiteFooter } from '@/components/layout/SiteFooter';
 import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
 import { getCategory, getCategories, getArticlesByCategory } from '@/lib/microcms';
 import { getFileArticlesByCategory, type FileArticleMeta } from '@/lib/articles';
+import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
+import { getPopularItemsForArticleCategory } from '@/lib/items-catalog';
 
 export const revalidate = 3600;
 
@@ -98,6 +100,9 @@ export default async function CategoryPage({ params }: Props) {
   // MicroCMS に記事がなければファイルベース記事をフォールバック表示
   const fileArticles: FileArticleMeta[] =
     articles.length === 0 ? getFileArticlesByCategory(slug) : [];
+
+  // カテゴリ下部に「このカテゴリで人気の商品」3商品を表示（yakudatsu 含む全カテゴリ対応）
+  const popularItems = getPopularItemsForArticleCategory(slug, 3);
 
   const jsonLdBreadcrumb = {
     '@context': 'https://schema.org',
@@ -277,6 +282,52 @@ export default async function CategoryPage({ params }: Props) {
           )}
         </div>
       </section>
+
+      {/* このカテゴリで人気の商品（カテゴリ→関連カタログマッピングで3商品まで） */}
+      {popularItems.length > 0 && (
+        <section className="section" style={{ paddingTop: 0 }}>
+          <div className="container">
+            <div className="category-popular-items">
+              <div className="category-popular-items-head">
+                <span className="eyebrow">Popular items</span>
+                <h2>このカテゴリで人気の商品</h2>
+              </div>
+              <p className="category-popular-items-pr" role="note">
+                <span className="pr-label">PR</span>
+                <span>
+                  ※本エリアは広告を含みます。リンク経由で購入があった場合、運営に収益が発生することがあります。
+                </span>
+              </p>
+              <div className="category-popular-items-grid">
+                {popularItems.map((item) => (
+                  <AffiliateLink
+                    key={item.id}
+                    href={item.href}
+                    title={item.name}
+                    subtitle={item.subtitle}
+                    price={item.price}
+                    provider={item.provider}
+                    pr={false}
+                  />
+                ))}
+              </div>
+              <div style={{ marginTop: 16, textAlign: 'right' }}>
+                <Link
+                  href="/items"
+                  style={{
+                    fontSize: 13,
+                    color: 'var(--clay)',
+                    textDecoration: 'none',
+                    letterSpacing: '.02em',
+                  }}
+                >
+                  もっと見る（商品カタログ）→
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       <SiteFooter />
       <MobileStickyNav active={slug === 'today-doko' || slug === 'today-nani' || slug === 'today-taberu' ? (slug as 'today-doko' | 'today-nani' | 'today-taberu') : undefined} />

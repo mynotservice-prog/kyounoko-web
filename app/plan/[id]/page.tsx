@@ -12,6 +12,8 @@ import { getFileArticle } from '@/lib/articles';
 import { getAreaName } from '@/lib/area';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { getTagsForPlan } from '@/lib/tags';
+import { FavoriteButton } from '@/components/ui/FavoriteButton';
+import { TriedButton } from '@/components/ui/TriedButton';
 
 export const revalidate = 3600;
 
@@ -150,8 +152,14 @@ export default async function PlanPage({ params }: Props) {
       <article className="container-article" style={{ paddingTop: 20 }}>
         <header className="page-head">
           <span className="eyebrow">Today&apos;s plan — 今日の行動プラン</span>
-          <h1>{plan.title}</h1>
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, justifyContent: 'space-between' }}>
+            <h1 style={{ flex: 1 }}>{plan.title}</h1>
+            <FavoriteButton kind="plan" id={plan.id} size="md" />
+          </div>
           <p className="lead">{plan.shortAnswer}</p>
+          <div style={{ marginTop: 16 }}>
+            <TriedButton kind="plan" id={plan.id} />
+          </div>
         </header>
 
         {/* AdSense: Plan hero 下 */}

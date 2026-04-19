@@ -17,10 +17,13 @@ import { TableOfContents } from '@/components/article/TableOfContents';
 import { PRBadge } from '@/components/affiliate/PRBadge';
 import { AffiliateLinkGroup } from '@/components/affiliate/AffiliateLinkGroup';
 import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
+import { InlineItemCTA } from '@/components/article/InlineItemCTA';
 import { getAffiliateProducts } from '@/lib/affiliate-products';
 import { getRelatedItemsForArticle } from '@/lib/article-product-hints';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { getTagsForArticle } from '@/lib/tags';
+import { FavoriteButton } from '@/components/ui/FavoriteButton';
+import { TriedButton } from '@/components/ui/TriedButton';
 
 export const revalidate = 3600; // 1時間ごとに再生成
 
@@ -466,6 +469,13 @@ function FileArticleView({ article }: { article: FileArticle }) {
   const affiliateProducts = getAffiliateProducts(article.slug);
   const hasAffiliate = affiliateProducts.length > 0;
 
+  // 記事内インライン CTA 用：
+  //   - アフィ対象記事なら先頭商品を、そうでなければキーワード推定の先頭商品を1点だけ使う。
+  //   - どちらも該当しない記事では出さない（null）。
+  const inlineCtaItem = hasAffiliate
+    ? affiliateProducts[0]
+    : getRelatedItemsForArticle(article.slug, article.category, article.title)[0];
+
   const jsonLdArticle = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -667,6 +677,12 @@ function FileArticleView({ article }: { article: FileArticle }) {
             </div>
 
             <p className="lead">{article.lede}</p>
+
+            {/* お気に入り + やってみた */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 16, flexWrap: 'wrap' }}>
+              <FavoriteButton kind="article" id={article.slug} size="md" />
+              <TriedButton kind="article" id={article.slug} />
+            </div>
           </header>
 
           {/* PR 開示（該当記事のみ） */}
@@ -693,6 +709,21 @@ function FileArticleView({ article }: { article: FileArticle }) {
               <span className="tldr-eyebrow">TL;DR · 先に結論</span>
               <p className="tldr-text">{article.tldr}</p>
             </aside>
+          )}
+
+          {/* 記事内インライン CTA（TL;DR 直後に 1 商品だけ） */}
+          {inlineCtaItem && (
+            <InlineItemCTA
+              item={{
+                href: inlineCtaItem.href,
+                title: inlineCtaItem.title,
+                subtitle: inlineCtaItem.subtitle,
+                price: inlineCtaItem.price,
+                imageUrl: inlineCtaItem.imageUrl,
+                provider: inlineCtaItem.provider,
+                pr: false,
+              }}
+            />
           )}
 
           {/* AdSense: 記事中途（TL;DR直後） */}

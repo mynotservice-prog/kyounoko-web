@@ -6,6 +6,7 @@ import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
 import { PRBadge } from '@/components/affiliate/PRBadge';
 import { CategoryTabs } from '@/components/items/CategoryTabs';
 import { CATALOG_ITEMS, CATALOG_CATEGORY_META } from '@/lib/items-catalog';
+import { getTokyoNow } from '@/lib/date';
 
 export const metadata: Metadata = {
   title: '役立つもの',
@@ -26,6 +27,7 @@ export default function ItemsPage() {
 
   const totalItems = CATALOG_ITEMS.length;
   const totalCategories = Object.keys(CATALOG_CATEGORY_META).length;
+  const currentMonth = getTokyoNow().month;
 
   return (
     <>
@@ -63,7 +65,7 @@ export default function ItemsPage() {
       {/* Category tabs + catalog */}
       <section className="section" style={{ paddingTop: 8 }}>
         <div className="container">
-          <CategoryTabs items={CATALOG_ITEMS} />
+          <CategoryTabs items={CATALOG_ITEMS} currentMonth={currentMonth} />
         </div>
       </section>
 

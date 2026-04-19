@@ -461,3 +461,172 @@ export function getCatalogItems(category: CatalogCategory | 'all'): CatalogItem[
   if (category === 'all') return CATALOG_ITEMS;
   return CATALOG_ITEMS.filter((item) => item.category === category);
 }
+
+// ============================================================================
+// 季節／月ごとのおすすめロジック
+//
+// - ホームページ「今月、親たちが選んでいるもの」セクション
+// - /items ページのカテゴリヘッダーに付く「◯月のおすすめ」バッジ
+// で共通して使う。月数 (1-12) をキーに、カテゴリ単位の推奨と
+// カテゴリごとのバッジ文言を返す純粋関数として実装する。
+// ============================================================================
+
+/**
+ * 月ごとのカテゴリ推奨順。ここに並んだカテゴリ順で商品を抽出し、
+ * ホームページの「今月のおすすめ」カード（4〜6枠）を埋める。
+ *
+ * - 3〜4月: 入園準備（抱っこ紐・ベビーカー・絵本）
+ * - 5〜6月: 梅雨／GW（家遊びサブスク・絵本・時短家電）
+ * - 7〜9月: 夏・暑さ対策／運動会（ベビーカー・宅食・時短家電）
+ * - 10〜11月: 七五三・紅葉（ベビーカー・ベビーチェア・絵本）
+ * - 12〜2月: 冬・風邪・クリスマス（知育サブスク・絵本・時短家電）
+ */
+const MONTH_CATEGORY_PRIORITY: Record<number, CatalogCategory[]> = {
+  1: ['chiiku-subsc', 'ehon', 'jitan-kaden', 'takushoku', 'baby-chair'],
+  2: ['chiiku-subsc', 'ehon', 'senzai', 'jitan-kaden', 'takushoku'],
+  3: ['dakkohimo', 'babycar', 'ehon', 'baby-chair', 'senzai'],
+  4: ['dakkohimo', 'babycar', 'baby-chair', 'ehon', 'senzai'],
+  5: ['ehon', 'chiiku-subsc', 'babycar', 'jitan-kaden', 'takushoku'],
+  6: ['chiiku-subsc', 'ehon', 'jitan-kaden', 'senzai', 'takushoku'],
+  7: ['babycar', 'takushoku', 'jitan-kaden', 'dakkohimo', 'ehon'],
+  8: ['babycar', 'takushoku', 'jitan-kaden', 'chiiku-subsc', 'ehon'],
+  9: ['babycar', 'baby-chair', 'takushoku', 'jitan-kaden', 'ehon'],
+  10: ['babycar', 'baby-chair', 'ehon', 'senzai', 'chiiku-subsc'],
+  11: ['babycar', 'ehon', 'baby-chair', 'chiiku-subsc', 'jitan-kaden'],
+  12: ['chiiku-subsc', 'ehon', 'jitan-kaden', 'takushoku', 'baby-chair'],
+};
+
+/**
+ * 月×カテゴリ の「季節バッジ」文言。
+ * /items ページのカテゴリヘッダーに「◯月のおすすめ」として表示する。
+ *
+ * 月ごと全カテゴリにバッジを振るのは逆に情報過多なので、
+ * 「その月に特に推したいカテゴリ」のみに文言を用意する。
+ * 該当がないカテゴリ/月の組み合わせは undefined を返す。
+ */
+const MONTH_CATEGORY_BADGE: Partial<
+  Record<number, Partial<Record<CatalogCategory, string>>>
+> = {
+  1: { 'chiiku-subsc': '冬のおうち時間に', ehon: '冬の読み聞かせに', 'jitan-kaden': '冬の家事軽減に' },
+  2: { 'chiiku-subsc': '冬の室内遊びに', ehon: '冬の読み聞かせに', senzai: '冬の肌トラブル対策に' },
+  3: { dakkohimo: '春の入園準備に', babycar: '春のお出かけに', ehon: '入園前の読み聞かせに' },
+  4: { dakkohimo: '入園シーズンに', babycar: '春のお出かけに', 'baby-chair': '新生活の食卓に', ehon: '入園準備に' },
+  5: { ehon: 'GWのおうち時間に', babycar: 'GWのお出かけに', 'chiiku-subsc': 'こどもの日の知育に' },
+  6: { 'chiiku-subsc': '梅雨の室内遊びに', ehon: '梅雨のおうち時間に', senzai: '梅雨の部屋干しに' },
+  7: { babycar: '夏のお出かけに', takushoku: '夏バテ対策に', 'jitan-kaden': '猛暑の家事軽減に' },
+  8: { babycar: '夏休みのお出かけに', takushoku: '夏バテ対策に', 'jitan-kaden': '猛暑の家事軽減に' },
+  9: { babycar: '運動会シーズンに', 'baby-chair': '秋の食卓に', takushoku: '新学期の平日ごはんに' },
+  10: { babycar: '七五三シーズンに', 'baby-chair': '秋の食卓に', senzai: '秋の敏感肌に' },
+  11: { ehon: '冬支度の読み聞かせに', babycar: '紅葉お出かけに', 'baby-chair': '食卓の見直しに' },
+  12: { 'chiiku-subsc': 'クリスマスプレゼントに', ehon: 'クリスマス絵本に', 'jitan-kaden': '年末の家事軽減に' },
+};
+
+function normalizeMonth(month: number): number {
+  if (!Number.isFinite(month)) return 1;
+  const m = Math.floor(month);
+  if (m < 1) return 1;
+  if (m > 12) return 12;
+  return m;
+}
+
+/**
+ * 「今月のおすすめカテゴリ」の優先順リスト。
+ * month は 1-12（JST）。範囲外はクランプ。
+ */
+export function getMonthlyCategoryPriority(month: number): CatalogCategory[] {
+  const m = normalizeMonth(month);
+  return MONTH_CATEGORY_PRIORITY[m] ?? MONTH_CATEGORY_PRIORITY[4]!;
+}
+
+/**
+ * ホームページの「今月、親たちが選んでいるもの」用に、
+ * 月の推奨カテゴリ優先順から順に各カテゴリ先頭1商品をピックして
+ * 合計 `limit` 件（デフォルト6件）を返す。
+ */
+export function getMonthlyPickedItems(
+  month: number,
+  limit = 6,
+): CatalogItem[] {
+  const priority = getMonthlyCategoryPriority(month);
+  const picked: CatalogItem[] = [];
+  const seen = new Set<string>();
+
+  for (const cat of priority) {
+    const item = CATALOG_ITEMS.find(
+      (it) => it.category === cat && !seen.has(it.id),
+    );
+    if (item) {
+      picked.push(item);
+      seen.add(item.id);
+    }
+    if (picked.length >= limit) break;
+  }
+
+  // 万一 priority だけでは足りない場合は、全カタログから補完
+  if (picked.length < limit) {
+    for (const it of CATALOG_ITEMS) {
+      if (seen.has(it.id)) continue;
+      picked.push(it);
+      seen.add(it.id);
+      if (picked.length >= limit) break;
+    }
+  }
+
+  return picked;
+}
+
+/**
+ * /items ページ用のカテゴリヘッダーバッジ文言。
+ * 該当月にそのカテゴリのバッジが定義されていなければ undefined。
+ */
+export function getSeasonalBadgeForCategory(
+  month: number,
+  category: CatalogCategory,
+): string | undefined {
+  const m = normalizeMonth(month);
+  return MONTH_CATEGORY_BADGE[m]?.[category];
+}
+
+/**
+ * カテゴリ（サイト記事カテゴリ slug → `/category/[slug]`）→
+ * 関連のカタログカテゴリへのマッピング。
+ * カテゴリページ下部「このカテゴリで人気の商品」で使う。
+ */
+const ARTICLE_CATEGORY_TO_CATALOG: Record<string, CatalogCategory[]> = {
+  'today-doko': ['babycar', 'dakkohimo'],
+  'today-nani': ['chiiku-subsc', 'ehon'],
+  'today-taberu': ['takushoku', 'baby-chair'],
+  'today-mawasu': ['jitan-kaden', 'takushoku'],
+  'shippai-shinai': ['babycar', 'dakkohimo'],
+  tenki: ['babycar', 'chiiku-subsc'],
+  'heijitsu-yoru': ['jitan-kaden', 'takushoku'],
+  gyouji: ['ehon', 'dakkohimo'],
+  narai: ['ehon', 'chiiku-subsc'],
+  yakudatsu: ['jitan-kaden', 'takushoku', 'senzai'],
+};
+
+/**
+ * 記事カテゴリ slug を受け取り、「このカテゴリで人気の商品」を最大 `limit` 件返す。
+ * カテゴリ未マッピングの場合は空配列。
+ */
+export function getPopularItemsForArticleCategory(
+  categorySlug: string,
+  limit = 3,
+): CatalogItem[] {
+  const catalogCats = ARTICLE_CATEGORY_TO_CATALOG[categorySlug];
+  if (!catalogCats || catalogCats.length === 0) return [];
+
+  const picked: CatalogItem[] = [];
+  const seen = new Set<string>();
+  for (const cat of catalogCats) {
+    for (const it of CATALOG_ITEMS) {
+      if (it.category !== cat) continue;
+      if (seen.has(it.id)) continue;
+      picked.push(it);
+      seen.add(it.id);
+      if (picked.length >= limit) break;
+    }
+    if (picked.length >= limit) break;
+  }
+  return picked;
+}

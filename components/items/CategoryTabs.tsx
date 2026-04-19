@@ -6,6 +6,7 @@ import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
 import {
   CATALOG_CATEGORIES,
   CATALOG_CATEGORY_META,
+  getSeasonalBadgeForCategory,
   type CatalogCategory,
   type CatalogItem,
 } from '@/lib/items-catalog';
@@ -14,6 +15,11 @@ type TabValue = CatalogCategory | 'all';
 
 type Props = {
   items: CatalogItem[];
+  /**
+   * 「◯月のおすすめ」バッジ判定に使う現在月 (1-12)。
+   * サーバ側で JST から決定して渡す（ハイドレーションの日付差異を防ぐ）。
+   */
+  currentMonth?: number;
 };
 
 const TABS: { value: TabValue; label: string }[] = [
@@ -29,7 +35,7 @@ const TABS: { value: TabValue; label: string }[] = [
  * 「すべて」タブではカテゴリごとのセクションに分けて表示し、
  * 各セクション末尾に関連比較記事へのリンクを添える。
  */
-export function CategoryTabs({ items }: Props) {
+export function CategoryTabs({ items, currentMonth }: Props) {
   const [active, setActive] = React.useState<TabValue>('all');
 
   const visibleCategories: CatalogCategory[] =
@@ -67,6 +73,11 @@ export function CategoryTabs({ items }: Props) {
           const categoryItems = items.filter((item) => item.category === cat);
           if (categoryItems.length === 0) return null;
 
+          const seasonalBadge =
+            typeof currentMonth === 'number'
+              ? getSeasonalBadgeForCategory(currentMonth, cat)
+              : undefined;
+
           return (
             <section
               key={cat}
@@ -76,6 +87,11 @@ export function CategoryTabs({ items }: Props) {
               <header className="catalog-section-head">
                 <h2 id={`catalog-section-${cat}`}>{meta.name}</h2>
                 <p>{meta.tagline}</p>
+                {seasonalBadge && (
+                  <span className="catalog-seasonal-badge">
+                    {currentMonth}月のおすすめ · {seasonalBadge}
+                  </span>
+                )}
               </header>
 
               <div className="catalog-grid">

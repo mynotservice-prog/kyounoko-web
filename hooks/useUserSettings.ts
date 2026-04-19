@@ -15,10 +15,22 @@ const STORAGE_KEY = 'kyounoko.settings.v1';
 
 export type ChildAge = '0-1' | '2-3' | '4-6';
 
+/** 子どもの性格傾向。プラン選定の微調整用。 */
+export type ChildTemperament = 'active' | 'calm' | 'mixed';
+
+/** 子どもの興味分類（複数選択可）。 */
+export type ChildInterest = 'sports' | 'study' | 'creative' | 'nature' | 'music' | 'food';
+
 export type UserSettings = {
   area: AreaSlug;
   age?: ChildAge;
   onboarded?: boolean;
+  /** 子どもの性格傾向（活発 / おとなしい / どちらとも） */
+  temperament?: ChildTemperament;
+  /** 子どもの興味（最大3個） */
+  interests?: ChildInterest[];
+  /** 簡易アレルギーメモ（食事プランでの注意用） */
+  allergyNote?: string;
 };
 
 const DEFAULT_SETTINGS: UserSettings = {
@@ -34,7 +46,16 @@ function readSettings(): UserSettings {
     const area = isValidArea(parsed?.area) ? parsed.area : DEFAULT_SETTINGS.area;
     const age = ['0-1', '2-3', '4-6'].includes(parsed?.age) ? (parsed.age as ChildAge) : undefined;
     const onboarded = typeof parsed?.onboarded === 'boolean' ? parsed.onboarded : undefined;
-    return { area, age, onboarded };
+    const temperament = ['active', 'calm', 'mixed'].includes(parsed?.temperament)
+      ? (parsed.temperament as ChildTemperament)
+      : undefined;
+    const interests = Array.isArray(parsed?.interests)
+      ? (parsed.interests as string[]).filter((x): x is ChildInterest =>
+          ['sports', 'study', 'creative', 'nature', 'music', 'food'].includes(x),
+        )
+      : undefined;
+    const allergyNote = typeof parsed?.allergyNote === 'string' ? parsed.allergyNote : undefined;
+    return { area, age, onboarded, temperament, interests, allergyNote };
   } catch {
     return DEFAULT_SETTINGS;
   }

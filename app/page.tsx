@@ -7,6 +7,8 @@ import { TodayFinder } from '@/components/top/TodayFinder';
 import { getAllFileArticles } from '@/lib/articles';
 import { getTokyoNow, formatJaLong, monthNameEn } from '@/lib/date';
 import { AdSlot } from '@/components/ads/AdSlot';
+import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
+import { getMonthlyPickedItems } from '@/lib/items-catalog';
 
 export const revalidate = 3600;
 
@@ -35,6 +37,7 @@ export default function HomePage() {
   const monthEn = monthNameEn(now);
 
   const latestArticles = getAllFileArticles().slice(0, 4);
+  const monthlyPicks = getMonthlyPickedItems(month, 6);
 
   return (
     <>
@@ -198,6 +201,57 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ======================================================================
+          今月、親たちが選んでいるもの — 季節に合わせたアフィ導線
+          （4〜6月: 入園・GW / 7〜9月: 暑さ対策・運動会 / 10〜12月: 七五三・XMas
+             / 1〜3月: 冬の読み聞かせ・入園準備 など、月数から自動で並び替え）
+          ====================================================================== */}
+      {monthlyPicks.length > 0 && (
+        <section className="section" style={{ paddingTop: 0 }}>
+          <div className="container">
+            <div className="monthly-picks">
+              <div className="monthly-picks-head">
+                <div>
+                  <span className="eyebrow">This month · {monthEn}</span>
+                  <h2>今月、親たちが選んでいるもの</h2>
+                  <p className="monthly-picks-pr" role="note">
+                    <span className="pr-label">PR</span>
+                    <span>
+                      ※本エリアは広告を含みます。{month}月に特に動きのあるアイテムを編集部が選定。
+                    </span>
+                  </p>
+                </div>
+                <Link
+                  href="/items"
+                  className="btn-ghost"
+                  style={{
+                    borderColor: 'var(--clay)',
+                    color: 'var(--clay-deep)',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  カタログ全体を見る →
+                </Link>
+              </div>
+
+              <div className="monthly-picks-rail">
+                {monthlyPicks.map((item) => (
+                  <AffiliateLink
+                    key={item.id}
+                    href={item.href}
+                    title={item.name}
+                    subtitle={item.subtitle}
+                    price={item.price}
+                    provider={item.provider}
+                    pr={false}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ======================================================================
           Warm panel — ブランド体験強化
