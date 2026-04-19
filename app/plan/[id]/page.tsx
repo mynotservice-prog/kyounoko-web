@@ -14,6 +14,7 @@ import { AdSlot } from '@/components/ads/AdSlot';
 import { getTagsForPlan } from '@/lib/tags';
 import { FavoriteButton } from '@/components/ui/FavoriteButton';
 import { TriedButton } from '@/components/ui/TriedButton';
+import { SpotList } from '@/components/common/SpotList';
 
 export const revalidate = 3600;
 
@@ -192,6 +193,17 @@ export default async function PlanPage({ params }: Props) {
 
         {/* Body */}
         <div className="prose" dangerouslySetInnerHTML={{ __html: html }} />
+
+        {/* エリア指定ありの外出プランならおすすめスポット提示 */}
+        {plan.area !== 'all' && plan.place.some((p) => p === 'outdoor' || p === 'indoor') && (
+          <SpotList
+            area={plan.area}
+            age={plan.ageRanges[0] as '0-1' | '2-3' | '4-6' | undefined}
+            place={plan.place.includes('outdoor') ? 'outdoor' : 'indoor'}
+            budget={plan.budget === 'free' ? 'free' : plan.budget === 'low' ? 'low' : plan.budget === 'mid' ? 'mid' : undefined}
+            limit={5}
+          />
+        )}
 
         {/* タグ */}
         {tags.length > 0 && (

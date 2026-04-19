@@ -24,6 +24,7 @@ import { AdSlot } from '@/components/ads/AdSlot';
 import { getTagsForArticle } from '@/lib/tags';
 import { FavoriteButton } from '@/components/ui/FavoriteButton';
 import { TriedButton } from '@/components/ui/TriedButton';
+import { SpotList } from '@/components/common/SpotList';
 
 export const revalidate = 3600; // 1時間ごとに再生成
 
@@ -769,6 +770,15 @@ function FileArticleView({ article }: { article: FileArticle }) {
 
           {/* Body */}
           <div className="prose" dangerouslySetInnerHTML={{ __html: article.body }} />
+
+          {/* エリア紐付き記事なら具体スポット一覧を提示 */}
+          {article.area && article.area !== 'all' && (
+            <SpotList
+              area={article.area}
+              age={article.quickInfo?.ageRanges?.[0] as '0-1' | '2-3' | '4-6' | undefined}
+              limit={6}
+            />
+          )}
 
           {/* Share bar (body 直下) */}
           <ShareBar url={articleUrl} title={article.title} />
