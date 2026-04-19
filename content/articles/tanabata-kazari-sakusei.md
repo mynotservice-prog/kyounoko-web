@@ -6,7 +6,7 @@ category: gyouji
 categoryName: 季節と行事
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=1600&h=900&q=80
+hero: https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=1920&h=1080&q=85
 area: "all"
 quickInfo:
   ageRanges: ["2-3", "4-6"]

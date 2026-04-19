@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "miyagi"
-hero: https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1600&h=900&q=80
+hero: https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "shumatsu-ranchi-kodzure"
 ---
 

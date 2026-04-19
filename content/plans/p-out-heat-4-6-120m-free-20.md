@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "free"
 area: "all"
-hero: https://images.unsplash.com/photo-1505253468034-514d2507d914?auto=format&fit=crop&w=1600&h=900&q=80
+hero: https://images.unsplash.com/photo-1505253468034-514d2507d914?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "moushobi-suzushii-spots"
 ---
 

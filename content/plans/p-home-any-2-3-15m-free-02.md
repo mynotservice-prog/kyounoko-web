@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 15
 budget: "free"
 area: "all"
-hero: https://images.unsplash.com/photo-1503428593586-e225b39bddfe?auto=format&fit=crop&w=1600&h=900&q=80
+hero: https://images.unsplash.com/photo-1503428593586-e225b39bddfe?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "amenohi-ie-asobi-2-3sai"
 ---
 

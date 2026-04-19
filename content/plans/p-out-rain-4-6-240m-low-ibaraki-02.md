@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 240
 budget: "low"
 area: "ibaraki"
-hero: https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=1600&h=900&q=80
+hero: https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

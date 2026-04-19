@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "low"
 area: "all"
-hero: https://images.unsplash.com/photo-1545193544-312983719627?auto=format&fit=crop&w=1600&h=900&q=80
+hero: https://images.unsplash.com/photo-1545193544-312983719627?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "akachan-15pun-asobi"
 ---
 

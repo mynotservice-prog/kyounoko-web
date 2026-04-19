@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "nagasaki"
-hero: https://images.unsplash.com/photo-1558980394-dbb977039a2e?auto=format&fit=crop&w=1600&h=900&q=80
+hero: https://images.unsplash.com/photo-1558980394-dbb977039a2e?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

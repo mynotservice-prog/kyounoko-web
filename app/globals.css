@@ -1223,7 +1223,6 @@ input, select { font: inherit; color: inherit; }
   background-color: var(--peach-soft);
   background-size: cover;
   background-position: center;
-  filter: sepia(0.14) saturate(0.92) brightness(1.03) contrast(0.97);
 }
 .answer-hero-body { padding: 32px 28px 36px; }
 @media (min-width: 768px) { .answer-hero-body { padding: 44px 48px 48px; } }
@@ -1371,7 +1370,6 @@ input, select { font: inherit; color: inherit; }
   background-size: cover;
   background-position: center;
   border-radius: var(--radius-md);
-  filter: sepia(0.14) saturate(0.92) brightness(1.03);
 }
 .alt-card-body { flex: 1; display: flex; flex-direction: column; gap: 8px; }
 .alt-card-title {
@@ -1384,39 +1382,22 @@ input, select { font: inherit; color: inherit; }
 }
 
 /* ==========================================================================
-   Hero image tone unification (warm sepia wash for consistency across sources)
-   — どの画像ソース（loremflickr/unsplash 等）でも きょうのこ のペール暖色トーンに統一
+   Hero image: モダンな現代的発色（sepia filter は廃止、元画像の品質を最大活用）
    ========================================================================== */
 .article-hero-img,
 .article-hero > div[role="img"],
 .related-card > div:first-child,
 .pick .thumb,
 .seasonal-card,
-a[href^="/article/"] > div:first-child {
-  filter: sepia(0.18) saturate(0.88) brightness(1.02) contrast(0.96);
-  transition: filter .3s ease;
+a[href^="/article/"] > div:first-child,
+a[href^="/plan/"] > div:first-child {
+  /* filter なし — 画像本来の鮮度を活かす */
+  transition: transform .3s ease;
 }
-/* hover 時は少しだけオリジナルに寄せて鮮度を出す */
 .related-card:hover > div:first-child,
-a[href^="/article/"]:hover > div:first-child {
-  filter: sepia(0.1) saturate(0.95) brightness(1.04);
-}
-/* 主記事の hero は少しだけ控えめ */
-.article-hero > div[role="img"] {
-  filter: sepia(0.14) saturate(0.92) brightness(1.03) contrast(0.97);
-}
-/* 画像の上に極薄の peach ラッパー（記事カードだけ） */
-.related-card > div:first-child,
-a[href^="/article/"] > div:first-child {
-  position: relative;
-}
-.related-card > div:first-child::after,
-a[href^="/article/"] > div:first-child::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(248,236,203,0.06) 0%, rgba(244,183,135,0.05) 100%);
-  pointer-events: none;
+a[href^="/article/"]:hover > div:first-child,
+a[href^="/plan/"]:hover > div:first-child {
+  transform: scale(1.01);
 }
 
 /* ==========================================================================

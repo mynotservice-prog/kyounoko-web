@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "free"
 area: "hiroshima"
-hero: https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1600&h=900&q=80
+hero: https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "akachan-odekake-3months-1year"
 ---
 

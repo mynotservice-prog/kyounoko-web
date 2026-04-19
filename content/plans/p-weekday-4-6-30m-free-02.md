@@ -9,7 +9,7 @@ day: ["weekday"]
 durationMin: 30
 budget: "free"
 area: "all"
-hero: https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1600&h=900&q=80
+hero: https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "ko-ga-nenai-5kufuu"
 ---
 

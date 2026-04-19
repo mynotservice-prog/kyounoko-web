@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Shippori_Mincho, Noto_Sans_JP, Zen_Maru_Gothic, DM_Serif_Display, Inter } from 'next/font/google';
 import Script from 'next/script';
-import { ADSENSE_SCRIPT_SRC } from '@/lib/adsense';
+import { ADSENSE_SCRIPT_SRC, ADSENSE_CLIENT } from '@/lib/adsense';
 import './globals.css';
 
 // Next.js 15 では theme-color / viewport は viewport export で指定する
@@ -157,18 +157,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }),
           }}
         />
-        {/* AdSense 所有権確認用メタタグ */}
-        <meta name="google-adsense-account" content="ca-pub-4445473825791494" />
-        {/*
-          AdSense スクリプト: AdSense クローラーが head 内で検出できるよう、
-          afterInteractive でなく、素の <script async> を <head> に直接記述する。
-          Google 推奨の正式フォーマットに一致。
-        */}
-        <script
-          async
-          src={ADSENSE_SCRIPT_SRC}
-          crossOrigin="anonymous"
-        />
+        {/* AdSense は env NEXT_PUBLIC_ADSENSE_PUB_ID 設定時のみ出力 */}
+        {ADSENSE_CLIENT && (
+          <>
+            <meta name="google-adsense-account" content={ADSENSE_CLIENT} />
+            <script async src={ADSENSE_SCRIPT_SRC!} crossOrigin="anonymous" />
+          </>
+        )}
       </head>
       <body className="font-sans">
         {children}

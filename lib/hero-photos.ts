@@ -3,7 +3,7 @@
  *
  * 方針:
  * - Unsplash 検証済み photo ID のみ使用（404 を完全排除）
- * - 画像URL は `?auto=format&fit=crop&w=1600&h=900&q=80` 固定でクロップ統一
+ * - 画像URL は `?auto=format&fit=crop&w=1920&h=1080&q=85` 固定でクロップ統一
  * - CSS 側で sepia(0.18) saturate(0.88) brightness(1.02) をかけ
  *   サイトのペール暖色トーンに揃える（globals.css の既存ルール）
  * - slug のキーワードからカテゴリを推定して画像を選ぶ
@@ -130,7 +130,7 @@ const POOL: Record<PhotoCat, string[]> = {
 };
 
 const UNSPLASH_BASE = 'https://images.unsplash.com/photo-';
-const UNSPLASH_QS = '?auto=format&fit=crop&w=1600&h=900&q=80';
+const UNSPLASH_QS = '?auto=format&fit=crop&w=1920&h=1080&q=85';
 
 function photoUrl(id: string): string {
   return `${UNSPLASH_BASE}${id}${UNSPLASH_QS}`;

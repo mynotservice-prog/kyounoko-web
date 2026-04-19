@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "free"
 area: "niigata"
-hero: https://images.unsplash.com/photo-1481487196290-c152efe083f5?auto=format&fit=crop&w=1600&h=900&q=80
+hero: https://images.unsplash.com/photo-1481487196290-c152efe083f5?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "akachan-odekake-3months-1year"
 ---
 

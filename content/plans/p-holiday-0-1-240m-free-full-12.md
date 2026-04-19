@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 240
 budget: "free"
 area: "all"
-hero: https://images.unsplash.com/photo-1464746133101-a2c3f88e0dd9?auto=format&fit=crop&w=1600&h=900&q=80
+hero: https://images.unsplash.com/photo-1464746133101-a2c3f88e0dd9?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "kosodate-muryou-spots-tokyo"
 ---
 

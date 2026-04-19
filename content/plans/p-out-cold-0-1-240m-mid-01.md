@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 240
 budget: "mid"
 area: "tokyo"
-hero: https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?auto=format&fit=crop&w=1600&h=900&q=80
+hero: https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "amenohi-indoor-spots-tokyo-15"
 ---
 

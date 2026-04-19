@@ -35,6 +35,9 @@ export function AdSlot({
   format?: 'auto' | 'fluid' | 'rectangle';
   style?: React.CSSProperties;
 }) {
+  // env 未設定時は完全に出力しない
+  if (!ADSENSE_CLIENT) return null;
+
   const slot = SLOT_IDS[placement];
 
   return (
@@ -48,8 +51,6 @@ export function AdSlot({
         data-ad-format={format}
         data-full-width-responsive="true"
       />
-      {/* AdSense スクリプト本体は app/layout.tsx で global に読み込み済み。
-          各スロットの push はクライアント側で行う必要があるので、小さな inline script で対応。 */}
       <script
         dangerouslySetInnerHTML={{
           __html: `(adsbygoogle = window.adsbygoogle || []).push({});`,

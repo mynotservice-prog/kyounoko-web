@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "yamagata"
-hero: https://images.unsplash.com/photo-1445633883498-7f9922d37a3f?auto=format&fit=crop&w=1600&h=900&q=80
+hero: https://images.unsplash.com/photo-1445633883498-7f9922d37a3f?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

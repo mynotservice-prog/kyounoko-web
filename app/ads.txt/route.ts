@@ -30,14 +30,11 @@ function normalizePubId(raw: string | undefined): string | null {
 }
 
 export function GET(): NextResponse {
-  // env 指定があれば優先、なければ lib/adsense.ts のデフォルト（pub-4445473825791494）
-  const pubId =
-    normalizePubId(process.env.NEXT_PUBLIC_ADSENSE_PUB_ID) ??
-    normalizePubId(ADSENSE_PUB_ID);
+  const pubId = normalizePubId(ADSENSE_PUB_ID ?? undefined);
 
   const body = pubId
     ? `google.com, ${pubId}, DIRECT, f08c47fec0942fa0\n`
-    : '# AdSense publisher ID が設定されていません\n';
+    : '# AdSense publisher ID が未設定です。env NEXT_PUBLIC_ADSENSE_PUB_ID を設定してください。\n';
 
   return new NextResponse(body, {
     status: 200,

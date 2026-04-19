@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "mid"
 area: "tokyo"
-hero: https://images.unsplash.com/photo-1542840410-3092f99611a3?auto=format&fit=crop&w=1600&h=900&q=80
+hero: https://images.unsplash.com/photo-1542840410-3092f99611a3?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "moushobi-suzushii-spots"
 ---
 
