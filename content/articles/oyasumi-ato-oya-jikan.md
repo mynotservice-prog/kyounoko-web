@@ -1,6 +1,6 @@
 ---
 slug: oyasumi-ato-oya-jikan
-title: 子どもを寝かしつけた後の親時間の作り方｜疲れすぎない工夫5つ
+title: 寝かしつけ後の親時間の作り方｜21時〜23時を0〜6歳親が疲れすぎない工夫5つ
 metaDescription: 子就寝後21:00〜23:00の親時間を、疲れすぎずに使う工夫5つ。家事優先度、自分時間の確保、早寝vs夜更かし、翌朝に響かない夜の過ごし方を解説します。
 category: today-mawasu
 categoryName: 今日どう回す？

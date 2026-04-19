@@ -1,6 +1,6 @@
 ---
 slug: swimming-nansai-kara
-title: 子どものスイミング何歳から？｜0歳から始められる理由と月謝・効果・主要スクール比較
+title: 子どものスイミング何歳から？｜0〜6歳の月謝・効果と主要スクール5社比較で失敗しない
 category: narai
 categoryName: 習い事と学び
 hero: https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=1600&h=900&q=80

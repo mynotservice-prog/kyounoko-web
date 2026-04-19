@@ -1,6 +1,6 @@
 ---
 slug: tsuushin-kyouzai-hikaku
-title: 通信教材 幼児向け3社比較｜こどもちゃれんじ・Z会・ポピー
+title: 通信教材 幼児向け3社比較｜2〜6歳のこどもちゃれんじ・Z会・ポピーで続かない悩み解決
 metaDescription: 幼児向け通信教材3社を徹底比較。こどもちゃれんじ・Z会幼児・幼児ポピーの月額・教材量・難易度・親の負担を対象年齢別に実用解説。
 category: narai
 categoryName: 習い事と学び

@@ -16,7 +16,11 @@ import { ShareBar } from '@/components/article/ShareBar';
 import { TableOfContents } from '@/components/article/TableOfContents';
 import { PRBadge } from '@/components/affiliate/PRBadge';
 import { AffiliateLinkGroup } from '@/components/affiliate/AffiliateLinkGroup';
+import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
 import { getAffiliateProducts } from '@/lib/affiliate-products';
+import { getRelatedItemsForArticle } from '@/lib/article-product-hints';
+import { AdSlot } from '@/components/ads/AdSlot';
+import { getTagsForArticle } from '@/lib/tags';
 
 export const revalidate = 3600; // 1時間ごとに再生成
 
@@ -691,6 +695,9 @@ function FileArticleView({ article }: { article: FileArticle }) {
             </aside>
           )}
 
+          {/* AdSense: 記事中途（TL;DR直後） */}
+          <AdSlot placement="article-mid" />
+
           {/* Quick Info */}
           {article.quickInfo && (article.quickInfo.ageRanges?.length || article.quickInfo.durationMin) && (
             <section
@@ -743,6 +750,16 @@ function FileArticleView({ article }: { article: FileArticle }) {
               items={affiliateProducts}
             />
           )}
+
+          {/* 明示マッピング対象外の記事は、キーワード推定で関連商品を自動差し込み */}
+          {!hasAffiliate && (
+            <RelatedItemsCTA
+              items={getRelatedItemsForArticle(article.slug, article.category, article.title)}
+            />
+          )}
+
+          {/* AdSense: 記事末尾（FAQ前） */}
+          <AdSlot placement="article-end" />
 
           {/* FAQ */}
           {article.faqItems.length > 0 && (
@@ -851,6 +868,24 @@ function FileArticleView({ article }: { article: FileArticle }) {
 
           {/* Share bar (author 直下) */}
           <ShareBar url={articleUrl} title={article.title} label="記事をシェアする" />
+
+          {/* タグ（トピッククラスター導線） */}
+          {(() => {
+            const tags = getTagsForArticle(article);
+            if (tags.length === 0) return null;
+            return (
+              <section style={{ marginTop: 40 }}>
+                <span className="eyebrow">Tags · トピックで探す</span>
+                <div className="outing-chips" style={{ marginTop: 12 }}>
+                  {tags.slice(0, 8).map((t) => (
+                    <Link key={t.slug} href={`/tag/${t.slug}`} className="outing-chip">
+                      {t.name}
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            );
+          })()}
 
           {/* Related articles */}
           {relatedArticles.length > 0 && (

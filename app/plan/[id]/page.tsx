@@ -7,9 +7,11 @@ import remarkHtml from 'remark-html';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
-import { getPlan, getAllPlanIds } from '@/lib/plans';
+import { getPlan, getAllPlanIds, getAllPlanMetas } from '@/lib/plans';
 import { getFileArticle } from '@/lib/articles';
 import { getAreaName } from '@/lib/area';
+import { AdSlot } from '@/components/ads/AdSlot';
+import { getTagsForPlan } from '@/lib/tags';
 
 export const revalidate = 3600;
 
@@ -38,6 +40,25 @@ async function renderBody(md: string): Promise<string> {
   return String(file);
 }
 
+/** 本文から "- **時刻** 内容" 形式のタイムラインを抽出し、HowTo ステップ配列に変換。 */
+function extractTimelineSteps(md: string): { name: string; text: string }[] {
+  const steps: { name: string; text: string }[] = [];
+  const lines = md.split('\n');
+  // 行頭が `-` or `*` で、`**0:00-5:00**` のようなタイムスタンプを含む行を拾う
+  const re = /^\s*[-*]\s+\*\*([^*]+)\*\*\s*(.*)$/;
+  for (const line of lines) {
+    const m = line.match(re);
+    if (!m) continue;
+    const name = m[1].trim();
+    const text = m[2].trim();
+    // name が時刻ぽい（数字含む）か、「出発」「帰り」などを含むならステップ扱い
+    if (/\d/.test(name) || /出発|帰り|到着|準備|昼|朝|夕/.test(name)) {
+      if (text) steps.push({ name, text });
+    }
+  }
+  return steps;
+}
+
 export default async function PlanPage({ params }: Props) {
   const { id } = await params;
   const plan = getPlan(id);
@@ -46,6 +67,18 @@ export default async function PlanPage({ params }: Props) {
   const html = await renderBody(plan.body);
   const related = plan.seoRelated ? await getFileArticle(plan.seoRelated) : null;
 
+  // 同じ条件で別のプラン（年齢×場所 が一致する別プラン、最大3件）
+  const siblingPlans = getAllPlanMetas()
+    .filter((p) =>
+      p.id !== plan.id &&
+      p.ageRanges.some((a) => plan.ageRanges.includes(a)) &&
+      p.place.some((pl) => plan.place.includes(pl)) &&
+      (plan.area === 'all' || p.area === plan.area || p.area === 'all')
+    )
+    .slice(0, 3);
+
+  const tags = getTagsForPlan(plan);
+
   const budgetLabels: Record<string, string> = {
     free: '無料',
     low: '〜2,000円',
@@ -53,8 +86,35 @@ export default async function PlanPage({ params }: Props) {
     high: '5,000円〜',
   };
 
+  // HowTo JSON-LD
+  const steps = extractTimelineSteps(plan.body);
+  const jsonLdHowTo =
+    steps.length >= 3
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'HowTo',
+          name: plan.title,
+          description: plan.shortAnswer,
+          totalTime: `PT${plan.durationMin}M`,
+          image: plan.hero,
+          step: steps.map((s, i) => ({
+            '@type': 'HowToStep',
+            position: i + 1,
+            name: s.name,
+            text: s.text,
+          })),
+        }
+      : null;
+
   return (
     <>
+      {jsonLdHowTo && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdHowTo) }}
+        />
+      )}
+
       <SiteHeader />
 
       <div className="container-article">
@@ -94,6 +154,9 @@ export default async function PlanPage({ params }: Props) {
           <p className="lead">{plan.shortAnswer}</p>
         </header>
 
+        {/* AdSense: Plan hero 下 */}
+        <AdSlot placement="plan-below-hero" />
+
         {/* Quick info */}
         <section
           style={{
@@ -121,6 +184,20 @@ export default async function PlanPage({ params }: Props) {
 
         {/* Body */}
         <div className="prose" dangerouslySetInnerHTML={{ __html: html }} />
+
+        {/* タグ */}
+        {tags.length > 0 && (
+          <section style={{ marginTop: 40 }}>
+            <span className="eyebrow">Tags · トピックで探す</span>
+            <div className="outing-chips" style={{ marginTop: 12 }}>
+              {tags.slice(0, 8).map((t) => (
+                <Link key={t.slug} href={`/tag/${t.slug}`} className="outing-chip">
+                  {t.name}
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* 関連するSEO記事（あれば）— "もっと詳しく" */}
         {related && (
@@ -176,6 +253,51 @@ export default async function PlanPage({ params }: Props) {
                 </h3>
               </div>
             </Link>
+          </section>
+        )}
+
+        {/* 同じ条件で別のプラン（プラン横リンク） */}
+        {siblingPlans.length > 0 && (
+          <section style={{ marginTop: 56 }}>
+            <h2 style={{ fontFamily: 'var(--font-mincho)', fontWeight: 600, fontSize: 22, margin: '0 0 16px' }}>
+              似た条件で別のプラン
+            </h2>
+            <div style={{ display: 'grid', gap: 14, gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))' }}>
+              {siblingPlans.map((p) => (
+                <Link
+                  key={p.id}
+                  href={`/plan/${p.id}`}
+                  style={{
+                    background: 'var(--paper-card)',
+                    border: '1px solid var(--line)',
+                    borderRadius: 'var(--radius-md)',
+                    overflow: 'hidden',
+                    textDecoration: 'none',
+                    color: 'inherit',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  {p.hero && (
+                    <div style={{
+                      aspectRatio: '16/10',
+                      backgroundColor: 'var(--peach-soft)',
+                      backgroundImage: `url(${p.hero})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                    }} />
+                  )}
+                  <div style={{ padding: '12px 14px 16px' }}>
+                    <h4 style={{ fontFamily: 'var(--font-mincho)', fontSize: 14, fontWeight: 600, margin: 0, lineHeight: 1.55 }}>
+                      {p.title}
+                    </h4>
+                    <p style={{ fontSize: 11.5, color: 'var(--ink-sub)', margin: '6px 0 0', lineHeight: 1.7 }}>
+                      {p.shortAnswer.slice(0, 50)}...
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </section>
         )}
 

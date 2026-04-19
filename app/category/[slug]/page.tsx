@@ -131,6 +131,43 @@ export default async function CategoryPage({ params }: Props) {
             <h1>{category.name}</h1>
             {category.description && <p className="lead">{category.description}</p>}
           </header>
+
+          {slug === 'yakudatsu' && (
+            <div
+              style={{
+                marginTop: 20,
+                padding: '18px 20px',
+                background: 'var(--clay-soft)',
+                border: '1px solid var(--line-strong)',
+                borderRadius: 'var(--radius-lg)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: 16,
+                flexWrap: 'wrap',
+              }}
+            >
+              <div>
+                <strong
+                  style={{
+                    fontFamily: 'var(--font-mincho)',
+                    fontSize: 17,
+                    color: 'var(--clay-deep)',
+                    display: 'block',
+                    marginBottom: 4,
+                  }}
+                >
+                  商品カタログを見る
+                </strong>
+                <span style={{ fontSize: 13, color: 'var(--ink-sub)' }}>
+                  抱っこ紐・ベビーカー・宅食など、カテゴリ別に比較商品をまとめています。
+                </span>
+              </div>
+              <Link href="/items" className="btn-primary" style={{ whiteSpace: 'nowrap' }}>
+                商品カタログへ →
+              </Link>
+            </div>
+          )}
         </div>
       </section>
 

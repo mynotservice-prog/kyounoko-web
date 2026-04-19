@@ -1,6 +1,6 @@
 ---
 slug: yojishoku-reitou-tsukurioki
-title: 冷凍で回す幼児食。平日の負担を半減する仕込み日のルーティン（2〜3歳向け）
+title: 冷凍で回す幼児食｜2〜3歳の平日負担を半減する仕込み日ルーティン8品
 metaDescription: 週末90分の仕込みで、平日の幼児食が10分で出せる。2〜3歳が食べる冷凍ストック8品と、解凍〜盛り付けまでのルーティン。
 category: today-taberu
 categoryName: 今日何食べる？

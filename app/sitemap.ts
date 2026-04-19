@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { getArticleIds, getCategories } from '@/lib/microcms';
 import { getAllFileArticles } from '@/lib/articles';
+import { getAllTags } from '@/lib/tags';
 
 const BASE = 'https://kyounoko.jp';
 
@@ -79,5 +80,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const articlePages: MetadataRoute.Sitemap = Array.from(articleUrlMap.values());
 
-  return [...staticPages, ...categoryPages, ...articlePages];
+  // タグページ
+  const tagPages: MetadataRoute.Sitemap = getAllTags().map((t) => ({
+    url: `${BASE}/tag/${t.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.5,
+  }));
+
+  return [...staticPages, ...categoryPages, ...articlePages, ...tagPages];
 }

@@ -1,6 +1,6 @@
 ---
 slug: ehon-yomikikase-kotsu
-title: 絵本の読み聞かせコツ（年齢別）子が聞かない時の5つの工夫
+title: 絵本の読み聞かせコツ｜0〜6歳年齢別に子が聞かない・飽きる時の5つの工夫
 metaDescription: 0〜6歳の絵本読み聞かせのコツを年齢別に解説。聞かない・飽きる時の5つの工夫、年齢別おすすめ絵本リスト、仕掛け絵本から長編まで実践的にまとめました。
 category: today-nani
 categoryName: 今日何する？

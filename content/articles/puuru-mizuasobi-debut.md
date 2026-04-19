@@ -1,6 +1,6 @@
 ---
 slug: puuru-mizuasobi-debut
-title: プール・水遊びデビューはいつから？生後何ヶ月からOK？親の準備リスト
+title: プール・水遊びデビュー｜生後6ヶ月〜2歳の時期別準備リストで失敗しない
 metaDescription: 赤ちゃんのプール・水遊びデビュー時期の目安と準備。生後6ヶ月・1歳・2歳以降のできること別、ベビースイミング教室比較、自宅プール・公園の水遊び場まで整理。
 category: today-doko
 categoryName: 今日どこ行く？

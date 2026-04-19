@@ -1,6 +1,6 @@
 ---
 slug: babycar-erabikata
-title: ベビーカーの選び方｜A型・B型・バギー完全比較【用途別】
+title: ベビーカーの選び方｜0〜3歳で後悔しないA型・B型・バギー完全比較4用途別
 metaDescription: ベビーカーのA型・B型・バギーの違いと、都心徒歩派・電車通勤・車メイン・セカンドバギー別の使い分けを解説。コンビ・ピジョン・アップリカ・サイベックス・ドゥーナの予算別おすすめも。
 category: yakudatsu
 categoryName: 役立つもの

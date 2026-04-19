@@ -6,6 +6,7 @@ import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
 import { TodayFinder } from '@/components/top/TodayFinder';
 import { getAllFileArticles } from '@/lib/articles';
 import { getTokyoNow, formatJaLong, monthNameEn } from '@/lib/date';
+import { AdSlot } from '@/components/ads/AdSlot';
 
 export const revalidate = 3600;
 
@@ -101,6 +102,11 @@ export default function HomePage() {
         <div className="finder-wrap">
           <TodayFinder />
         </div>
+      </div>
+
+      {/* AdSense: Finder 下 */}
+      <div className="container" style={{ marginTop: 12 }}>
+        <AdSlot placement="home-below-finder" />
       </div>
 
       {/* ======================================================================

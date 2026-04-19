@@ -1,6 +1,6 @@
 ---
 slug: halloween-kodzure-events-2026
-title: ハロウィン子連れイベント完全ガイド｜都内・年齢別
+title: ハロウィン子連れイベント2026完全ガイド｜都内で0〜6歳と参加できる10選
 metaDescription: 10月末のハロウィンを子連れで楽しむガイド。表参道ヒルズ・六本木ヒルズ・ららぽーとのトリックオアトリート、町内会イベント、仮装選びと安全対策まで年齢別に整理。
 category: today-doko
 categoryName: 今日どこ行く？

@@ -1898,3 +1898,149 @@ span > .pr-label {
   color: var(--clay-deep);
   transform: translateX(2px);
 }
+
+/* ==========================================================================
+   Related items CTA — 記事末尾、キーワード推定で出す関連商品セクション
+   AffiliateLinkGroup ほど強く主張せず、記事に溶け込ませるデザイン。
+   PR 開示は必須。AffiliateLink が rel="sponsored nofollow noopener" を継承。
+   ========================================================================== */
+.related-items-cta {
+  margin: 48px 0 24px;
+  padding: 20px 22px 24px;
+  background: linear-gradient(180deg, #FFFDF8 0%, #FDF6EC 100%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+.related-items-cta-pr {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 0 14px;
+  font-size: 11.5px;
+  color: var(--ink-mute);
+  line-height: 1.7;
+}
+.related-items-cta-title {
+  font-family: var(--font-mincho), serif;
+  font-weight: 600;
+  font-size: 16.5px;
+  letter-spacing: .02em;
+  margin: 0 0 16px;
+  color: var(--ink, #2C2820);
+}
+.related-items-cta-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 720px) {
+  .related-items-cta-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ==========================================================================
+   Items catalog — /items ページ（役立つもの）用レイアウト
+   カテゴリタブ + カテゴリ別セクション + 関連記事リンク。
+   .affiliate-card を活用してカード内スタイルは共通化。
+   ========================================================================== */
+.catalog-hero {
+  padding-top: 16px;
+}
+.catalog-hero .affiliate-pr-badge {
+  margin-top: 20px;
+}
+
+.catalog-category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 0 20px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 28px;
+}
+.catalog-category-tab {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: var(--paper-card);
+  color: var(--ink-sub);
+  font-family: var(--font-inter), Inter, "Noto Sans JP", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .02em;
+  padding: 8px 14px;
+  border-radius: var(--radius-chip);
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, transform .15s ease;
+}
+.catalog-category-tab:hover {
+  border-color: var(--clay);
+  color: var(--clay);
+}
+.catalog-category-tab.is-active {
+  background: var(--clay);
+  border-color: var(--clay);
+  color: #FFFBF3;
+}
+
+.catalog-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.catalog-section {
+  scroll-margin-top: 80px;
+}
+.catalog-section-head {
+  margin-bottom: 18px;
+}
+.catalog-section-head h2 {
+  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: .02em;
+  margin: 0 0 4px;
+}
+.catalog-section-head p {
+  font-size: 13.5px;
+  color: var(--ink-sub);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.catalog-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) {
+  .catalog-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 960px) {
+  .catalog-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.catalog-section-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 20px;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--line);
+}
+.catalog-section-link {
+  font-size: 13px;
+  color: var(--clay);
+  text-decoration: none;
+  letter-spacing: .02em;
+  transition: color .15s ease, transform .15s ease;
+}
+.catalog-section-link:hover {
+  color: var(--clay-deep);
+  transform: translateX(2px);
+}

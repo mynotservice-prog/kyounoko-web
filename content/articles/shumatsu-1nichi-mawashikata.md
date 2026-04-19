@@ -1,6 +1,6 @@
 ---
 slug: shumatsu-1nichi-mawashikata
-title: 休日の1日の回し方：子ども主導 vs 親主導どちらが正解？
+title: 休日の1日の回し方｜2〜6歳が退屈しない土日タイムスケジュール3パターン
 subtitle: 休日は「主導権」を日ごとに切り替えて、親も子も満たす
 metaDescription: 休日の起床〜就寝を、子ども主導の日と親主導の日の2パターンで設計。午前外出型・午後のんびり型・雨の日型、親の疲れ具合別の提案まで。
 category: today-mawasu
