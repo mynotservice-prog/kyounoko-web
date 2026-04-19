@@ -1,36 +1,24 @@
 /**
  * AdSense 共通設定。
  *
- * Publisher ID は環境変数 NEXT_PUBLIC_ADSENSE_PUB_ID から取得。
- * 未設定時は null → 全ての AdSense 関連出力が無効化される。
+ * Publisher ID は公開情報なので、コードにデフォルト値として埋め込む。
+ * Vercel env NEXT_PUBLIC_ADSENSE_PUB_ID で上書き可能。
  *
- * AdSense の再登録/申請時は:
- *   1. AdSense 管理画面でサイトを登録して Publisher ID を取得
- *   2. Vercel env に NEXT_PUBLIC_ADSENSE_PUB_ID を設定（ca- あり/なしどちらでも可）
- *   3. Redeploy
- *   4. 以降、ads.txt / meta / script / AdSlot 全てが自動配信
+ * 現在の状態: AdSense 審査中（ads.txt/meta/script 配信で審査通過を待つ）
  */
 
-const raw = process.env.NEXT_PUBLIC_ADSENSE_PUB_ID?.trim();
+const DEFAULT_PUB_ID = 'pub-4445473825791494';
 
-/** ca-pub-XXX 正規化済みの client。未設定時は null（AdSense完全無効）。 */
-export const ADSENSE_CLIENT: string | null = raw
-  ? raw.startsWith('ca-')
-    ? raw
-    : `ca-${raw}`
-  : null;
+const raw = (process.env.NEXT_PUBLIC_ADSENSE_PUB_ID ?? DEFAULT_PUB_ID).trim();
 
-/** pub-XXX 形式（ads.txt 用）。未設定時は null。 */
-export const ADSENSE_PUB_ID: string | null = raw
-  ? raw.startsWith('ca-')
-    ? raw.slice(3)
-    : raw
-  : null;
+/** ca-pub-XXX 正規化済みの client。常に有効値。 */
+export const ADSENSE_CLIENT: string = raw.startsWith('ca-') ? raw : `ca-${raw}`;
 
-/** スクリプトの src URL。未設定時は null。 */
-export const ADSENSE_SCRIPT_SRC: string | null = ADSENSE_CLIENT
-  ? `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`
-  : null;
+/** pub-XXX 形式（ads.txt 用）。 */
+export const ADSENSE_PUB_ID: string = raw.startsWith('ca-') ? raw.slice(3) : raw;
 
-/** AdSense が有効化されているかのフラグ（テンプレート側の条件分岐用）。 */
-export const ADSENSE_ENABLED = Boolean(ADSENSE_CLIENT);
+/** スクリプトの src URL。 */
+export const ADSENSE_SCRIPT_SRC: string = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`;
+
+/** AdSense が有効化されているかのフラグ（常に true、コンポーネント側の条件分岐互換用）。 */
+export const ADSENSE_ENABLED = true;

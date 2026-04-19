@@ -157,13 +157,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }),
           }}
         />
-        {/* AdSense は env NEXT_PUBLIC_ADSENSE_PUB_ID 設定時のみ出力 */}
-        {ADSENSE_CLIENT && (
-          <>
-            <meta name="google-adsense-account" content={ADSENSE_CLIENT} />
-            <script async src={ADSENSE_SCRIPT_SRC!} crossOrigin="anonymous" />
-          </>
-        )}
+        {/* AdSense 所有権確認メタタグ */}
+        <meta name="google-adsense-account" content={ADSENSE_CLIENT} />
+        {/* AdSense スクリプト（Google 推奨: head 内に async で配置） */}
+        <script async src={ADSENSE_SCRIPT_SRC} crossOrigin="anonymous" />
       </head>
       <body className="font-sans">
         {children}

@@ -35,9 +35,6 @@ export function AdSlot({
   format?: 'auto' | 'fluid' | 'rectangle';
   style?: React.CSSProperties;
 }) {
-  // env 未設定時は完全に出力しない
-  if (!ADSENSE_CLIENT) return null;
-
   const slot = SLOT_IDS[placement];
 
   return (
