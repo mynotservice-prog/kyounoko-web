@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Shippori_Mincho, Noto_Sans_JP, Zen_Maru_Gothic, DM_Serif_Display, Inter } from 'next/font/google';
 import Script from 'next/script';
+import { ADSENSE_SCRIPT_SRC } from '@/lib/adsense';
 import './globals.css';
 
 // Next.js 15 では theme-color / viewport は viewport export で指定する
@@ -107,15 +108,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
   const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID;
-  // AdSense publisher ID。未設定の間はスニペットを出力しない。
-  // 形式は "pub-XXXXXXXXXXXXXXXX" でも "ca-pub-XXXXXXXXXXXXXXXX" でも受け付けて、
-  // 最終的に ca-pub- 付きの client パラメータに正規化する。
-  const rawAdsensePubId = process.env.NEXT_PUBLIC_ADSENSE_PUB_ID?.trim();
-  const adsenseClient = rawAdsensePubId
-    ? rawAdsensePubId.startsWith('ca-')
-      ? rawAdsensePubId
-      : `ca-${rawAdsensePubId}`
-    : null;
 
   return (
     <html
@@ -165,6 +157,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }),
           }}
         />
+        {/* AdSense 所有権確認用メタタグ */}
+        <meta name="google-adsense-account" content="ca-pub-4445473825791494" />
       </head>
       <body className="font-sans">
         {children}
@@ -200,16 +194,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </Script>
         )}
 
-        {/* Google AdSense (Auto Ads) — NEXT_PUBLIC_ADSENSE_PUB_ID 設定時のみ出力 */}
-        {adsenseClient && (
-          <Script
-            id="adsense-init"
-            async
-            strategy="afterInteractive"
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`}
-            crossOrigin="anonymous"
-          />
-        )}
+        {/* Google AdSense (Auto Ads) — pub ID はコード埋め込みのデフォルト or env で上書き */}
+        <Script
+          id="adsense-init"
+          async
+          strategy="afterInteractive"
+          src={ADSENSE_SCRIPT_SRC}
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   );

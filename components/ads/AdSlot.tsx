@@ -1,15 +1,14 @@
 import * as React from 'react';
+import { ADSENSE_CLIENT } from '@/lib/adsense';
 
 /**
  * AdSense 広告スロット。
  *
- * 環境変数 `NEXT_PUBLIC_ADSENSE_PUB_ID` が設定されていない時は出さない。
+ * Publisher ID は lib/adsense.ts のデフォルト（ca-pub-4445473825791494）、
+ * env NEXT_PUBLIC_ADSENSE_PUB_ID で上書き可能。
  *
- * 使い方（layout.tsx の AdSense スクリプトが先にロードされている前提）:
- *   <AdSlot placement="article-mid" />
- *
- * Slot ID はユーザーがAdSense管理画面で発行して env に入れてもらう。
- * 未設定時は「responsive auto ad」として機能する（Auto Ads設定との併用前提）。
+ * 各スロットの Slot ID は AdSense管理画面で「広告ユニット」発行後、
+ * env NEXT_PUBLIC_ADSENSE_SLOT_* で指定。未設定時は auto 表示。
  */
 
 type AdPlacement =
@@ -36,10 +35,6 @@ export function AdSlot({
   format?: 'auto' | 'fluid' | 'rectangle';
   style?: React.CSSProperties;
 }) {
-  const rawPubId = process.env.NEXT_PUBLIC_ADSENSE_PUB_ID?.trim();
-  if (!rawPubId) return null; // 未承認/未設定時は完全に出さない
-
-  const client = rawPubId.startsWith('ca-') ? rawPubId : `ca-${rawPubId}`;
   const slot = SLOT_IDS[placement];
 
   return (
@@ -48,7 +43,7 @@ export function AdSlot({
       <ins
         className="adsbygoogle"
         style={{ display: 'block', minHeight: 100 }}
-        data-ad-client={client}
+        data-ad-client={ADSENSE_CLIENT}
         data-ad-slot={slot ?? ''}
         data-ad-format={format}
         data-full-width-responsive="true"

@@ -1,8 +1,9 @@
 import { NextResponse } from 'next/server';
+import { ADSENSE_PUB_ID } from '@/lib/adsense';
 
 // ads.txt を動的に返す Route Handler。
-// 環境変数 NEXT_PUBLIC_ADSENSE_PUB_ID に AdSense の publisher ID を
-// 設定することで、承認後に中身を差し替えられる。
+// Publisher ID は lib/adsense.ts のデフォルト（pub-4445473825791494）を使用。
+// 環境変数 NEXT_PUBLIC_ADSENSE_PUB_ID で上書き可能。
 //
 // NEXT_PUBLIC_ADSENSE_PUB_ID 形式:
 //   - 「pub-1234567890123456」  （ca- プレフィックスなし）
@@ -29,24 +30,19 @@ function normalizePubId(raw: string | undefined): string | null {
 }
 
 export function GET(): NextResponse {
-  const pubId = normalizePubId(process.env.NEXT_PUBLIC_ADSENSE_PUB_ID);
+  // env 指定があれば優先、なければ lib/adsense.ts のデフォルト（pub-4445473825791494）
+  const pubId =
+    normalizePubId(process.env.NEXT_PUBLIC_ADSENSE_PUB_ID) ??
+    normalizePubId(ADSENSE_PUB_ID);
 
-  // 公式推奨フォーマット: "google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0"
   const body = pubId
     ? `google.com, ${pubId}, DIRECT, f08c47fec0942fa0\n`
-    : [
-        '# AdSense 申請前のプレースホルダです。',
-        '# 承認後、環境変数 NEXT_PUBLIC_ADSENSE_PUB_ID に publisher ID を設定すると',
-        '# 以下の一行が自動的に生成されます。',
-        '# google.com, pub-PLACEHOLDER, DIRECT, f08c47fec0942fa0',
-        '',
-      ].join('\n');
+    : '# AdSense publisher ID が設定されていません\n';
 
   return new NextResponse(body, {
     status: 200,
     headers: {
       'Content-Type': 'text/plain; charset=utf-8',
-      // クローラーが頻繁に叩きすぎないよう短めにキャッシュ
       'Cache-Control': 'public, max-age=3600, s-maxage=3600',
     },
   });
