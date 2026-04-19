@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 120
 budget: "low"
 area: "all"
-hero: https://image.pollinations.ai/prompt/%E6%B6%88%E9%98%B2%E7%BD%B2%E8%A6%8B%E5%AD%A6%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%AB%E5%8F%82%E5%8A%A0%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=54470299&model=flux
+hero: https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "kosodate-muryou-spots-tokyo"
 ---
 

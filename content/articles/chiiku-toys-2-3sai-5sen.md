@@ -6,7 +6,7 @@ category: narai
 categoryName: 習いごと
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://image.pollinations.ai/prompt/%E7%9F%A5%E8%82%B2%E7%8E%A9%E5%85%B72%E6%AD%B33%E6%AD%B3%E3%81%8A%E3%81%99%E3%81%99%E3%82%81, scene setting, parenting lifestyle context, photorealistic, soft natural light, warm tones, Japanese lifestyle, magazine editorial style, no text, no faces, shot from behind or cropped?width=1216&height=832&nologo=true&seed=147829&model=flux
+hero: https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 2〜3歳は脳の発達が急速に進む黄金期。発達段階に合わせた知育玩具5選と、長く使える選び方のコツ、予算別おすすめを体験談付きで紹介します。
 quickInfo:
   ageRanges: ["2-3"]

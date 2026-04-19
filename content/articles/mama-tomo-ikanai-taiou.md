@@ -6,7 +6,7 @@ category: today-mawasu
 categoryName: 今日まわす
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://image.pollinations.ai/prompt/%E3%83%9E%E3%83%9E%E5%8F%8B%E4%BB%98%E3%81%8D%E5%90%88%E3%81%84%E8%8B%A6%E6%89%8B, scene setting, parenting lifestyle context, photorealistic, soft natural light, warm tones, Japanese lifestyle, magazine editorial style, no text, no faces, shot from behind or cropped?width=1216&height=832&nologo=true&seed=927481&model=flux
+hero: https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 「ママ友ランチが気まずい」「LINEグループが怖い」そんな悩みは多くのママが経験しています。無理せず子育てを楽しむ7つの方法と、距離感のコツを紹介します。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

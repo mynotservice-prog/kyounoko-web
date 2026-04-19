@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "free"
 area: "all"
-hero: https://image.pollinations.ai/prompt/%E5%9B%B3%E6%9B%B8%E9%A4%A8%E3%81%AE%E8%AA%AD%E3%81%BF%E8%81%9E%E3%81%8B%E3%81%9B%E4%BC%9A%E3%81%AB%E5%8F%82%E5%8A%A0%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=592221164&model=flux
+hero: https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "amenohi-indoor-spots-tokyo-15"
 ---
 

@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "low"
 area: "gifu"
-hero: https://image.pollinations.ai/prompt/%E5%B2%90%E9%98%9C%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%EF%BC%9A%E9%96%A2%E5%B8%82%E3%83%A2%E3%83%8D%E3%81%AE%E6%B1%A0%E3%81%A8%E6%9D%BF%E5%8F%96%E3%81%AE%E8%87%AA%E7%84%B6%E6%95%A3%E7%AD%96%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=1646140286&model=flux
+hero: https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

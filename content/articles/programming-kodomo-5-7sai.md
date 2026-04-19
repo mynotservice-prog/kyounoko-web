@@ -6,7 +6,7 @@ category: narai
 categoryName: 習いごと
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://image.pollinations.ai/prompt/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E5%AD%90%E3%81%A9%E3%82%825%E6%AD%B3%E3%81%8B%E3%82%897%E6%AD%B3, scene setting, parenting lifestyle context, photorealistic, soft natural light, warm tones, Japanese lifestyle, magazine editorial style, no text, no faces, shot from behind or cropped?width=1216&height=832&nologo=true&seed=783914&model=flux
+hero: https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 小学校でプログラミングが必修化、早めに触れさせたい親は急増中。5〜7歳から始められる無料・低価格の教材10選と、続けるコツ、教室の選び方を解説します。
 quickInfo:
   ageRanges: ["4-6"]

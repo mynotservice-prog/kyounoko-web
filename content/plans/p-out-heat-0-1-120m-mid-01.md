@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "mid"
 area: "all"
-hero: https://image.pollinations.ai/prompt/%E6%B0%B4%E6%97%8F%E9%A4%A8%E3%81%A7%E9%9D%99%E3%81%8B%E3%81%AA%E6%B0%B4%E6%A7%BD%E3%82%BF%E3%82%A4%E3%83%A0120%E5%88%86%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=2562280484&model=flux
+hero: https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "moushobi-suzushii-spots"
 ---
 

@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "low"
 area: "miyagi"
-hero: https://image.pollinations.ai/prompt/%E4%BB%99%E5%8F%B0%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%EF%BC%9A%E4%B8%83%E5%8C%97%E7%94%B0%E5%85%AC%E5%9C%92%E3%81%A7%E6%B0%B4%E9%81%8A%E3%81%B3%E3%81%A8%E3%82%A2%E3%82%B9%E3%83%AC%E3%83%81%E3%83%83%E3%82%AF120%E5%88%86%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=789151427&model=flux
+hero: https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "puuru-mizuasobi-debut"
 ---
 

@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日たべる
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://image.pollinations.ai/prompt/%E9%A3%9F%E5%8D%93%E3%82%A4%E3%83%A4%E3%82%A4%E3%83%A4%E5%AD%90%E3%81%A9%E3%82%82%E5%AF%BE%E5%BF%9C, scene setting, parenting lifestyle context, photorealistic, soft natural light, warm tones, Japanese lifestyle, magazine editorial style, no text, no faces, shot from behind or cropped?width=1216&height=832&nologo=true&seed=294816&model=flux
+hero: https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 「座らない」「食べない」「泣く」食卓でのイヤイヤに疲れたママ・パパへ。発達段階を理解した7つの工夫と、食事時間を20分に収める声かけテクを紹介します。
 quickInfo:
   ageRanges: ["2-3"]

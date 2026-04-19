@@ -3,7 +3,7 @@ slug: ohirune-nansai-made
 title: "子どものお昼寝は何歳まで？｜0〜5歳月齢別の理想睡眠時間と寝ない時の卒業5ステップ"
 category: today-mawasu
 categoryName: "今日どう回す？"
-hero: https://image.pollinations.ai/prompt/%E5%AD%90%E3%81%A9%E3%82%82%E3%81%AE%E3%81%8A%E6%98%BC%E5%AF%9D%E3%81%AF%E4%BD%95%E6%AD%B3%E3%81%BE%E3%81%A7%EF%BC%9F%2C%20scene%20setting%2C%20parenting%20lifestyle%20context%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=3451525661&model=flux
+hero: https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?auto=format&fit=crop&w=1920&h=1080&q=85
 metaDescription: "子どものお昼寝は何歳まで必要？月齢別の理想的な睡眠時間、2回→1回への移行、卒業のサイン、保育園との連携、夜の就寝に影響しない時間帯まで、医学的エビデンスに基づき整理します。"
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18

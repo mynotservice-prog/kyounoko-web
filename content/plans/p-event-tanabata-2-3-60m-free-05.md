@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "free"
 area: "all"
-hero: https://image.pollinations.ai/prompt/%E4%B8%83%E5%A4%95%E5%BD%93%E6%97%A5%EF%BC%9A%E7%9F%AD%E5%86%8A%E9%A3%BE%E3%82%8A%EF%BC%8B%E5%AE%B6%E3%81%A7%E6%98%9F%E5%BA%A7%E8%A6%B3%E5%AF%9F%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=2145008441&model=flux
+hero: https://images.unsplash.com/photo-1502657877623-f66bf489d236?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "tanabata-kazari-sakusei"
 ---
 

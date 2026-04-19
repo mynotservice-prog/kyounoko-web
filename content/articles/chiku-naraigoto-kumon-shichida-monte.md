@@ -6,7 +6,7 @@ category: narai
 categoryName: 習い事と学び
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://image.pollinations.ai/prompt/%E7%9F%A5%E8%82%B2%E7%B3%BB%E7%BF%92%E3%81%84%E4%BA%8B3%E7%A4%BE%E6%AF%94%E8%BC%83%2C%20scene%20setting%2C%20parenting%20lifestyle%20context%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=1905153087&model=flux
+hero: https://images.unsplash.com/photo-1517840901100-8179e982acb7?auto=format&fit=crop&w=1920&h=1080&q=85
 area: "all"
 quickInfo:
   ageRanges: ["2-3", "4-6"]

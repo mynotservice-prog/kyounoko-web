@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこいく
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://image.pollinations.ai/prompt/%E9%9B%AA%E9%81%8A%E3%81%B3%E3%83%87%E3%83%93%E3%83%A5%E3%83%BC2%E6%AD%B3, scene setting, parenting lifestyle context, photorealistic, soft natural light, warm tones, Japanese lifestyle, magazine editorial style, no text, no faces, shot from behind or cropped?width=1216&height=832&nologo=true&seed=284951&model=flux
+hero: https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 2歳は雪遊びデビューに最適なタイミング。防寒・持ち物・近場スポット・体調管理まで、初めての雪体験を楽しく安全にするためのガイドをまとめました。
 quickInfo:
   ageRanges: ["2-3"]

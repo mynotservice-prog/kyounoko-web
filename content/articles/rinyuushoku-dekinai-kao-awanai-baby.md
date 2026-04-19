@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日たべる
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://image.pollinations.ai/prompt/%E9%9B%A2%E4%B9%B3%E9%A3%9F%E3%82%92%E9%A3%9F%E3%81%B9%E3%81%AA%E3%81%84%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93%E5%AF%BE%E5%BF%9C, scene setting, parenting lifestyle context, photorealistic, soft natural light, warm tones, Japanese lifestyle, magazine editorial style, no text, no faces, shot from behind or cropped?width=1216&height=832&nologo=true&seed=482913&model=flux
+hero: https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 「スプーンを口に入れても顔を背ける」「口を開けてくれない」離乳食を始めたばかりの赤ちゃんに戸惑うママ・パパへ。月齢別の原因と、今日から試せる7つの工夫を体験談つきで紹介します。
 quickInfo:
   ageRanges: ["0-1"]

@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこいく
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://image.pollinations.ai/prompt/%E7%B4%85%E8%91%89%E3%82%B9%E3%83%9D%E3%83%83%E3%83%88%E9%96%A2%E6%9D%B1%E5%AD%90%E9%80%A3%E3%82%8C, scene setting, parenting lifestyle context, photorealistic, soft natural light, warm tones, Japanese lifestyle, magazine editorial style, no text, no faces, shot from behind or cropped?width=1216&height=832&nologo=true&seed=614283&model=flux
+hero: https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 11月下旬〜12月初旬、関東の紅葉が最盛期。子連れでも安心して楽しめるベビーカーOK・アクセス良好な10スポットを、家族目線で厳選しました。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

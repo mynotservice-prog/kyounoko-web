@@ -6,7 +6,7 @@ category: narai
 categoryName: 習いごと
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://image.pollinations.ai/prompt/%E5%AE%B6%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B%E8%8B%B1%E8%AA%9E%E9%81%8A%E3%81%B3%EF%BC%94%E6%AD%B3%E3%81%8B%E3%82%896%E6%AD%B3, scene setting, parenting lifestyle context, photorealistic, soft natural light, warm tones, Japanese lifestyle, magazine editorial style, no text, no faces, shot from behind or cropped?width=1216&height=832&nologo=true&seed=583497&model=flux
+hero: https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 英語教室は月1万円超え、でも家でなら0円から始められます。4〜6歳の黄金期に親子で楽しめる英語遊び10選で、無理なく英語に親しむ方法を紹介します。
 quickInfo:
   ageRanges: ["4-6"]

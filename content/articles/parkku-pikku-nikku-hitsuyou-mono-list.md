@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこいく
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://image.pollinations.ai/prompt/%E5%85%AC%E5%9C%92%E3%83%94%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF%E6%8C%81%E3%81%A1%E7%89%A9%E3%83%AA%E3%82%B9%E3%83%88, scene setting, parenting lifestyle context, photorealistic, soft natural light, warm tones, Japanese lifestyle, magazine editorial style, no text, no faces, shot from behind or cropped?width=1216&height=832&nologo=true&seed=593418&model=flux
+hero: https://images.unsplash.com/photo-1502657877623-f66bf489d236?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 公園ピクニック、毎回何か忘れて後悔していませんか？必須20アイテムと季節別の追加品、荷物を軽くする最小構成まで、忘れ物ゼロで楽しめるリストを作成しました。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

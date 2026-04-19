@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://image.pollinations.ai/prompt/%E3%81%8A%E3%81%97%E3%82%83%E3%81%B9%E3%82%8A%E3%81%8C%E5%B0%91%E3%81%AA%E3%81%841%202%E6%AD%B3%E3%81%AE%E5%AD%90%E3%81%A8%E9%81%8A%E3%81%B6%E9%89%84%E6%9D%BF%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B37%E3%81%A4%2C%20scene%20setting%2C%20parenting%20lifestyle%20context%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=1815702598&model=flux
+hero: https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1920&h=1080&q=85
 area: "all"
 quickInfo:
   ageRanges: ["0-1", "2-3"]

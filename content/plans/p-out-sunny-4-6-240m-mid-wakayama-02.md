@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 240
 budget: "mid"
 area: "wakayama"
-hero: https://image.pollinations.ai/prompt/%E5%92%8C%E6%AD%8C%E5%B1%B1%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%EF%BC%9A%E3%82%A2%E3%83%89%E3%83%99%E3%83%B3%E3%83%81%E3%83%A3%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%81%A7%E3%83%91%E3%83%B3%E3%83%80%E3%81%AB%E4%BC%9A%E3%81%864%E6%99%82%E9%96%93%E3%83%97%E3%83%A9%E3%83%B3%204-6%E6%AD%B3%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=3298244359&model=flux
+hero: https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

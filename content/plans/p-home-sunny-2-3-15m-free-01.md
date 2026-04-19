@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 15
 budget: "free"
 area: "all"
-hero: https://image.pollinations.ai/prompt/%E7%AA%93%E8%BE%BA%E3%81%AE%E5%BD%B1%E7%B5%B5%E9%81%8A%E3%81%B3%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=1625699017&model=flux
+hero: https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "chiiku-asobi-ie-de-10"
 ---
 

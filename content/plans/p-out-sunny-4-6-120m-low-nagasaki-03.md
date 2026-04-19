@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "low"
 area: "nagasaki"
-hero: https://image.pollinations.ai/prompt/%E9%95%B7%E5%B4%8E%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%EF%BC%9A%E3%82%B0%E3%83%A9%E3%83%90%E3%83%BC%E5%9C%92%E3%81%A7%E5%9D%82%E3%81%A8%E3%83%AC%E3%83%88%E3%83%AD%E6%B4%8B%E9%A4%A8%E6%95%A3%E7%AD%96%E3%83%97%E3%83%A9%E3%83%B3%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=3879998811&model=flux
+hero: https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日たべる
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://image.pollinations.ai/prompt/%E6%9C%9D%E3%81%94%E3%81%AF%E3%82%93%E3%81%A8%E3%81%8A%E5%BC%81%E5%BD%93%E5%90%8C%E6%99%8215%E5%88%86, scene setting, parenting lifestyle context, photorealistic, soft natural light, warm tones, Japanese lifestyle, magazine editorial style, no text, no faces, shot from behind or cropped?width=1216&height=832&nologo=true&seed=647183&model=flux
+hero: https://images.unsplash.com/photo-1464746133101-a2c3f88e0dd9?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 出発まで残り15分、朝ごはんとお弁当を同時進行で完成させるワーママの技術。逆算タイムライン、前夜の仕込み、同時調理の3原則を体験談つきで紹介します。
 quickInfo:
   ageRanges: ["2-3", "4-6"]

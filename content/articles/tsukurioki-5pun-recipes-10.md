@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日たべる
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://image.pollinations.ai/prompt/%E4%BD%9C%E3%82%8A%E7%BD%AE%E3%81%8D%E3%83%AC%E3%82%B7%E3%83%94%EF%BC%95%E5%88%86, scene setting, parenting lifestyle context, photorealistic, soft natural light, warm tones, Japanese lifestyle, magazine editorial style, no text, no faces, shot from behind or cropped?width=1216&height=832&nologo=true&seed=314827&model=flux
+hero: https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 「平日の夕食を15分以内で出したい」そんなワーママの救世主が5分作り置き。週末1時間で10品仕込めば、月〜金のごはんがメインおかず＋副菜2品で完成します。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

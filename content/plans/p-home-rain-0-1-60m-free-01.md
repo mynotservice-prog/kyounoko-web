@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "free"
 area: "all"
-hero: https://image.pollinations.ai/prompt/%E9%9B%A8%E3%81%AE%E6%97%A5%E3%81%AE%E5%AE%A4%E5%86%85%E6%8E%A2%E6%A4%9C%E3%83%84%E3%82%A2%E3%83%BC60%E5%88%86%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=749672790&model=flux
+hero: https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "0-1sai-ie-asobi-10pun"
 ---
 

@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 120
 budget: "free"
 area: "ibaraki"
-hero: https://image.pollinations.ai/prompt/%E8%8C%A8%E5%9F%8E%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%EF%BC%9A%E5%9B%BD%E5%96%B6%E3%81%B2%E3%81%9F%E3%81%A1%E6%B5%B7%E6%B5%9C%E5%85%AC%E5%9C%92%E3%81%A7%E8%8A%B1%E3%81%A8%E3%82%B7%E3%83%A3%E3%83%9C%E3%83%B3%E7%8E%89%E3%83%97%E3%83%A9%E3%83%B3%2C%20scene%20setting%2C%20family%20activity%20objects%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=1908503838&model=flux
+hero: https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=1920&h=1080&q=85
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

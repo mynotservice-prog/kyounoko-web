@@ -6,7 +6,7 @@ category: gyouji
 categoryName: 季節と行事
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://image.pollinations.ai/prompt/%E5%AD%90%E9%80%A3%E3%82%8C%E3%81%8A%E8%8A%B1%E8%A6%8B%E3%81%AE%E5%AE%8C%E5%85%A8%E6%BA%96%E5%82%99%2C%20scene%20setting%2C%20parenting%20lifestyle%20context%2C%20photorealistic%2C%20soft%20natural%20light%2C%20warm%20tones%2C%20Japanese%20lifestyle%2C%20magazine%20editorial%20style%2C%20no%20text%2C%20no%20faces%2C%20shot%20from%20behind%20or%20cropped?width=1216&height=832&nologo=true&seed=443509369&model=flux
+hero: https://images.unsplash.com/photo-1481487196290-c152efe083f5?auto=format&fit=crop&w=1920&h=1080&q=85
 area: "all"
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

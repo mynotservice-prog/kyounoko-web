@@ -6,7 +6,7 @@ category: today-mawasu
 categoryName: 今日まわす
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://image.pollinations.ai/prompt/%E6%84%9F%E8%A6%9A%E9%81%8E%E6%95%8F%E3%81%AE%E5%AD%90%E3%81%A9%E3%82%82%E5%AF%BE%E5%BF%9C, scene setting, parenting lifestyle context, photorealistic, soft natural light, warm tones, Japanese lifestyle, magazine editorial style, no text, no faces, shot from behind or cropped?width=1216&height=832&nologo=true&seed=372841&model=flux
+hero: https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1920&h=1080&q=85
 lede: 「服のタグを嫌がる」「掃除機の音で泣く」「食感に敏感」感覚過敏のわが子の困りごとに悩むママ・パパへ。原因と家庭でできる7つの工夫を紹介します。
 quickInfo:
   ageRanges: ["2-3", "4-6"]
