@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
-import { getTodayAnswer, type TodayQuery, type ArticleMatchDetail } from '@/lib/articles';
+import { getTodayAnswer, type TodayQuery, type TodayAnswerResult } from '@/lib/articles';
 import { getAreaName } from '@/lib/area';
 
 export const revalidate = 3600;
@@ -46,18 +46,28 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   };
 }
 
-function QuickMetaRow({ article }: { article: ArticleMatchDetail['article'] }) {
-  const qi = article.quickInfo;
+function QuickMetaRow({ answer }: { answer: TodayAnswerResult }) {
   const chips: { key: string; label: string; tone: string }[] = [];
-  if (qi?.ageRanges?.[0]) chips.push({ key: 'age', label: `${qi.ageRanges[0]}歳`, tone: 'clay' });
-  if (qi?.place?.[0]) chips.push({ key: 'place', label: qi.place[0] === 'home' ? '家' : qi.place[0] === 'indoor' ? '屋内' : '外', tone: 'sage' });
-  if (qi?.durationMin) chips.push({ key: 'time', label: `${qi.durationMin}分`, tone: 'ochre' });
-  if (qi?.budget) {
+  if (answer.plan) {
+    const p = answer.plan.plan;
+    if (p.ageRanges[0]) chips.push({ key: 'age', label: `${p.ageRanges[0]}歳`, tone: 'clay' });
+    if (p.place[0]) chips.push({ key: 'place', label: p.place[0] === 'home' ? '家' : p.place[0] === 'indoor' ? '屋内' : '外', tone: 'sage' });
+    chips.push({ key: 'time', label: `${p.durationMin}分`, tone: 'ochre' });
     const bm: Record<string, string> = { free: '無料', low: '〜2,000円', mid: '〜5,000円', high: '5,000円〜' };
-    chips.push({ key: 'budget', label: bm[qi.budget] ?? qi.budget, tone: 'sky' });
-  }
-  if (article.area && article.area !== 'all') {
-    chips.push({ key: 'area', label: getAreaName(article.area), tone: 'clay' });
+    chips.push({ key: 'budget', label: bm[p.budget] ?? p.budget, tone: 'sky' });
+    if (p.area && p.area !== 'all') chips.push({ key: 'area', label: getAreaName(p.area), tone: 'clay' });
+  } else if (answer.article) {
+    const qi = answer.article.article.quickInfo;
+    if (qi?.ageRanges?.[0]) chips.push({ key: 'age', label: `${qi.ageRanges[0]}歳`, tone: 'clay' });
+    if (qi?.place?.[0]) chips.push({ key: 'place', label: qi.place[0] === 'home' ? '家' : qi.place[0] === 'indoor' ? '屋内' : '外', tone: 'sage' });
+    if (qi?.durationMin) chips.push({ key: 'time', label: `${qi.durationMin}分`, tone: 'ochre' });
+    if (qi?.budget) {
+      const bm: Record<string, string> = { free: '無料', low: '〜2,000円', mid: '〜5,000円', high: '5,000円〜' };
+      chips.push({ key: 'budget', label: bm[qi.budget] ?? qi.budget, tone: 'sky' });
+    }
+    if (answer.article.article.area && answer.article.article.area !== 'all') {
+      chips.push({ key: 'area', label: getAreaName(answer.article.article.area), tone: 'clay' });
+    }
   }
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
@@ -68,39 +78,41 @@ function QuickMetaRow({ article }: { article: ArticleMatchDetail['article'] }) {
   );
 }
 
-function AnswerCard({ detail, featured = false }: { detail: ArticleMatchDetail; featured?: boolean }) {
-  const { article, reasons } = detail;
-  const href = `/article/${article.slug}`;
-
+function AnswerCard({ answer, featured = false }: { answer: TodayAnswerResult; featured?: boolean }) {
+  const isPlan = answer.kind === 'plan';
   if (featured) {
     return (
       <article className="answer-hero">
-        <div
-          className="answer-hero-img"
-          role="img"
-          aria-label={article.title}
-          style={{
-            backgroundImage: article.hero ? `url(${article.hero})` : undefined,
-          }}
-        />
+        {answer.hero && (
+          <div
+            className="answer-hero-img"
+            role="img"
+            aria-label={answer.title}
+            style={{ backgroundImage: `url(${answer.hero})` }}
+          />
+        )}
         <div className="answer-hero-body">
-          <span className="answer-eyebrow">Today&apos;s answer — 今日はこれ。</span>
+          <span className="answer-eyebrow">
+            {isPlan ? 'Today — 今日はこれ。' : 'Today — 今日の候補'}
+          </span>
           <h2 className="answer-title">
-            <Link href={href}>{article.title}</Link>
+            <Link href={answer.href}>{answer.title}</Link>
           </h2>
-          {reasons.length > 0 && (
+          {answer.shortAnswer && (
+            <p className="answer-lede" style={{ fontSize: 15, fontWeight: 500, color: 'var(--ink)' }}>
+              {answer.shortAnswer}
+            </p>
+          )}
+          {answer.reasons.length > 0 && (
             <ul className="answer-reasons" aria-label="今日これにする理由">
-              {reasons.slice(0, 4).map((r) => (
+              {answer.reasons.slice(0, 5).map((r) => (
                 <li key={r}>{r}</li>
               ))}
             </ul>
           )}
-          {article.lede && (
-            <p className="answer-lede">{article.lede}</p>
-          )}
-          <QuickMetaRow article={article} />
-          <Link href={href} className="answer-cta">
-            詳細を見る
+          <QuickMetaRow answer={answer} />
+          <Link href={answer.href} className="answer-cta">
+            {isPlan ? 'プランの詳細を見る' : '詳細を見る'}
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M5 12h14" />
               <path d="m12 5 7 7-7 7" />
@@ -111,18 +123,17 @@ function AnswerCard({ detail, featured = false }: { detail: ArticleMatchDetail; 
     );
   }
 
-  // 代替候補の軽量カード
   return (
-    <Link href={href} className="alt-card">
+    <Link href={answer.href} className="alt-card">
       <div
         className="alt-card-thumb"
-        style={{ backgroundImage: article.hero ? `url(${article.hero})` : undefined }}
+        style={{ backgroundImage: answer.hero ? `url(${answer.hero})` : undefined }}
         role="img"
-        aria-label={article.title}
+        aria-label={answer.title}
       />
       <div className="alt-card-body">
-        <h4 className="alt-card-title">{article.title}</h4>
-        <QuickMetaRow article={article} />
+        <h4 className="alt-card-title">{answer.title}</h4>
+        <QuickMetaRow answer={answer} />
       </div>
     </Link>
   );
@@ -163,7 +174,6 @@ export default async function TodayPage({ searchParams }: Props) {
         </nav>
       </div>
 
-      {/* Active filters */}
       {activeChips.length > 0 && (
         <div className="container" style={{ marginTop: 16 }}>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'center' }}>
@@ -212,14 +222,14 @@ export default async function TodayPage({ searchParams }: Props) {
                 </div>
               )}
 
-              <AnswerCard detail={top} featured />
+              <AnswerCard answer={top} featured />
 
               {alternatives.length > 0 && (
                 <details className="alt-toggle">
                   <summary>別の候補を見る（{alternatives.length}件）</summary>
                   <div className="alt-list">
-                    {alternatives.map((alt) => (
-                      <AnswerCard key={alt.article.slug} detail={alt} />
+                    {alternatives.map((alt, i) => (
+                      <AnswerCard key={i} answer={alt} />
                     ))}
                   </div>
                 </details>

@@ -734,19 +734,86 @@ export function getMatchedFileArticles(q: TodayQuery, limit = 24): FileArticleMe
 }
 
 /**
+ * Plan または Article を指す統合結果型。
+ * ファインダーは Plan 優先で返し、Plan がなければ Article フォールバック。
+ */
+export type TodayAnswerResult = {
+  kind: 'plan' | 'article';
+  // Plan の場合
+  plan?: import('./plans').PlanMatch;
+  // Article フォールバックの場合
+  article?: ArticleMatchDetail;
+  // 画面表示用の共通情報
+  title: string;
+  shortAnswer: string;
+  reasons: string[];
+  hero?: string;
+  href: string;
+  score: number;
+};
+
+function planMatchToAnswer(pm: import('./plans').PlanMatch, heroFromArticle?: string): TodayAnswerResult {
+  return {
+    kind: 'plan',
+    plan: pm,
+    title: pm.plan.title,
+    shortAnswer: pm.plan.shortAnswer,
+    reasons: pm.reasons,
+    hero: heroFromArticle,
+    href: `/plan/${pm.plan.id}`,
+    score: pm.score,
+  };
+}
+
+function articleToAnswer(amd: ArticleMatchDetail): TodayAnswerResult {
+  return {
+    kind: 'article',
+    article: amd,
+    title: amd.article.title,
+    shortAnswer: amd.article.lede?.slice(0, 120) ?? amd.article.metaDescription?.slice(0, 120) ?? '',
+    reasons: amd.reasons,
+    hero: amd.article.hero,
+    href: `/article/${amd.article.slug}`,
+    score: amd.score,
+  };
+}
+
+/**
  * 条件から「答えを1つに決める」ためのトップピック取得。
- *  - score 最大。同点は updatedAt 新しい順。
- *  - score が 0 以下でも、フォールバックで最新の家遊び系 (area=all) を1件返す。
- *  - top のほかに「別の候補」を最大2件セットで返す。
+ *  - Plan（content/plans/）から優先的に1件選ぶ
+ *  - Plan がなければ既存記事（content/articles/）からフォールバック
+ *  - 代替候補はプランから最大2件、なければ記事から補充
  */
 export function getTodayAnswer(q: TodayQuery): {
-  top: ArticleMatchDetail | null;
-  alternatives: ArticleMatchDetail[];
+  top: TodayAnswerResult | null;
+  alternatives: TodayAnswerResult[];
   hasQuery: boolean;
   fallbackUsed: boolean;
 } {
   const hasQuery = Object.values(q).some((v) => v && v !== 'any' && v !== 'all');
 
+  if (!hasQuery) {
+    return { top: null, alternatives: [], hasQuery: false, fallbackUsed: false };
+  }
+
+  // --- 1) Plan 優先 ---
+  // 動的 import を使わない（Node ESM の挙動が不安定なため require 的に相対 import）
+  // 本ファイルは server-only なので同期 import で OK
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { pickTopPlan, getAlternativePlans } = require('./plans') as typeof import('./plans');
+
+  const topPlan = pickTopPlan(q);
+  if (topPlan) {
+    const altPlans = getAlternativePlans(q, topPlan.plan.id, 2);
+    return {
+      top: planMatchToAnswer(topPlan),
+      alternatives: altPlans.map((p) => planMatchToAnswer(p)),
+      hasQuery,
+      fallbackUsed: false,
+    };
+  }
+
+  // --- 2) Article フォールバック ---
   const scored = getAllFileArticles()
     .map((article) => {
       const { score, reasons } = scoreArticleForQuery(article, q);
@@ -757,22 +824,18 @@ export function getTodayAnswer(q: TodayQuery): {
       return (x.article.updatedAt < y.article.updatedAt ? 1 : -1);
     });
 
-  if (!hasQuery) {
-    return { top: null, alternatives: [], hasQuery: false, fallbackUsed: false };
-  }
-
   const positives = scored.filter((x) => x.score > 0);
 
   if (positives.length > 0) {
     return {
-      top: positives[0],
-      alternatives: positives.slice(1, 3),
+      top: articleToAnswer(positives[0]),
+      alternatives: positives.slice(1, 3).map(articleToAnswer),
       hasQuery,
       fallbackUsed: false,
     };
   }
 
-  // Fallback: エリア非依存の家遊び or 段取り系から1件
+  // --- 3) 最終フォールバック：エリア非依存の家遊び or 段取り ---
   const fallbackCandidates = getAllFileArticles().filter((a) => {
     const area = a.area ?? 'all';
     return area === 'all' && (a.category === 'today-nani' || a.category === 'today-mawasu');
@@ -783,7 +846,7 @@ export function getTodayAnswer(q: TodayQuery): {
   if (!fb) return { top: null, alternatives: [], hasQuery, fallbackUsed: true };
 
   return {
-    top: { article: fb, score: 0, reasons: ['エリアに関係なく今日できる候補'] },
+    top: articleToAnswer({ article: fb, score: 0, reasons: ['エリアに関係なく今日できる候補'] }),
     alternatives: [],
     hasQuery,
     fallbackUsed: true,
