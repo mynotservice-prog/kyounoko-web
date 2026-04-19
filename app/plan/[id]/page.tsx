@@ -220,7 +220,7 @@ export default async function PlanPage({ params }: Props) {
             >
               <div
                 style={{
-                  aspectRatio: '16 / 6',
+                  aspectRatio: '16 / 9',
                   backgroundColor: 'var(--peach-soft)',
                   backgroundImage: related.hero ? `url(${related.hero})` : undefined,
                   backgroundSize: 'cover',

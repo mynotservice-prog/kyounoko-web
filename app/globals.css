@@ -1382,16 +1382,18 @@ input, select { font: inherit; color: inherit; }
 }
 
 /* ==========================================================================
-   Hero image: モダンな現代的発色（sepia filter は廃止、元画像の品質を最大活用）
+   Hero image: モダンな現代的発色 + アスペクト比維持（潰れ防止）
    ========================================================================== */
 .article-hero-img,
 .article-hero > div[role="img"],
 .related-card > div:first-child,
 .pick .thumb,
-.seasonal-card,
 a[href^="/article/"] > div:first-child,
 a[href^="/plan/"] > div:first-child {
-  /* filter なし — 画像本来の鮮度を活かす */
+  /* 潰れ/伸び防止: cover で必ずトリミング、リピート禁止 */
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
   transition: transform .3s ease;
 }
 .related-card:hover > div:first-child,
