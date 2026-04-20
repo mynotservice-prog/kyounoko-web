@@ -343,7 +343,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     id: 'ts-tsurukame',
     category: 'takushoku',
     provider: 'a8',
-    href: 'https://tsurukame-kitchen.com/',
+    href: 'https://px.a8.net/svt/ejp?a8mat=4B1PLT+BLCVUA+48GW+626XU',
     name: 'Dr.つるかめキッチン',
     subtitle: '管理栄養士+医師監修・塩分／糖質など制限食に強い',
     price: '1食 ¥663〜',
