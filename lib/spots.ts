@@ -20,7 +20,8 @@ export type SpotCategory =
   | 'amusement'    // 遊園地・テーマパーク
   | 'indoor'       // 屋内遊戯施設（雨の日）
   | 'farm'         // 牧場
-  | 'seasonal';    // 季節体験（いちご狩り等）
+  | 'seasonal'     // 季節体験（いちご狩り等）
+  | 'restaurant';  // 子連れOKレストラン
 
 export type SpotPlace = 'indoor' | 'outdoor' | 'mixed';
 
@@ -49,6 +50,13 @@ export type Spot = {
   hiddenTip?: string;    // 穴場ポイント「予約制で混雑回避」「平日午前が狙い目」等
   nearby?: string;       // 近隣セット提案「徒歩10分の海の中道海浜公園と1日セット」等
   popular?: boolean;     // エディターが「ママに人気」として推すスポット（トップページ表示用）
+  ward?: string;         // 東京23区の区名（例: '中野区'）、その他市区町村
+  // レストラン向けフラグ
+  strollerAccess?: boolean;  // ベビーカー入店可
+  babyChair?: boolean;       // ベビーチェア完備
+  kidsMenu?: boolean;        // キッズメニューあり
+  privateRoom?: boolean;     // 個室あり
+  babyFood?: boolean;        // 離乳食持ち込みOK / 提供あり
 };
 
 /** 47都道府県分のスポットマップ。不足県は一般的な推奨のみ。 */
@@ -1149,6 +1157,18 @@ export function getPopularSpots(limit = 6): { area: AreaSlug; spot: Spot }[] {
   return result.slice(0, limit);
 }
 
+/** 東京23区名で絞り込み（city または ward を見る） */
+export function getSpotsForWard(ward: string): Spot[] {
+  const result: Spot[] = [];
+  for (const list of [SPOTS.tokyo ?? [], TOKYO_RESTAURANTS]) {
+    for (const s of list) {
+      const target = s.ward ?? s.city ?? '';
+      if (target.includes(ward)) result.push(s);
+    }
+  }
+  return result;
+}
+
 /** スポットカテゴリを日本語ラベルに変換 */
 export const SPOT_CATEGORY_LABEL: Record<SpotCategory, string> = {
   zoo: '動物園',
@@ -1159,4 +1179,90 @@ export const SPOT_CATEGORY_LABEL: Record<SpotCategory, string> = {
   indoor: '屋内施設',
   farm: '牧場',
   seasonal: '季節体験',
+  restaurant: '子連れOKレストラン',
 };
+
+/** 東京23区の子連れOKレストラン（ベビーカー入店・キッズメニュー等の情報付き） */
+export const TOKYO_RESTAURANTS: Spot[] = [
+  {
+    name: 'IKEA レストラン（新三郷・立川・原宿等）', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
+    ward: '複数', city: '新三郷/立川/原宿/渋谷ほか',
+    note: 'キッズメニュー100円、ベビーカーそのまま、離乳食無料',
+    pricing: { adult: '800-1,500円', elementary: '100円〜（キッズメニュー）', preschool: '100円〜', infant: '離乳食無料' },
+    strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
+    hiddenTip: '離乳食（レトルトと同等）は無料で提供、ベビーチェア大量に完備',
+  },
+  {
+    name: 'COCO&#39;S（ココス）', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
+    ward: '複数', city: 'ファミレスチェーン',
+    note: 'キッズメニュー豊富、バルーン配布、塗り絵サービス',
+    pricing: { adult: '900-1,500円', elementary: '499円〜', preschool: '499円〜', infant: '離乳食200円' },
+    strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
+    hiddenTip: '離乳食（5ヶ月〜）200円、誕生日デザート無料サービス',
+  },
+  {
+    name: 'ガスト', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
+    ward: '複数', city: 'ファミレスチェーン',
+    note: 'キッズメニュー豊富、猫型配膳ロボット、離乳食あり',
+    pricing: { adult: '700-1,300円', elementary: '329円〜', preschool: '329円〜', infant: '離乳食214円' },
+    strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
+    hiddenTip: '配膳ロボット「BellaBot」が子どもに大人気、離乳食メニュー常設',
+  },
+  {
+    name: 'サイゼリヤ', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
+    ward: '複数', city: 'ファミレスチェーン',
+    note: 'コスパ最強、ミラノ風ドリア300円、子ども食器あり',
+    pricing: { adult: '800円目安', elementary: '子ども食器無料', preschool: 'ミニサイズメニューあり', infant: '持ち込み可' },
+    strollerAccess: true, babyChair: true, kidsMenu: false,
+    hiddenTip: 'ソフトドリンクバー190円、ミニサイズや子ども食器・スプーン無料',
+  },
+  {
+    name: 'くら寿司', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
+    ward: '複数', city: '回転寿司チェーン',
+    note: 'ビッくらポンでおもちゃ当選、個室風ボックス席あり',
+    pricing: { adult: '1,000-1,500円', elementary: '500円〜', preschool: '無料（取り皿のみ）', infant: '無料' },
+    strollerAccess: true, babyChair: true, kidsMenu: true,
+    hiddenTip: '5皿で1回「ビッくらポン」抽選、おもちゃカプセルが楽しみ',
+  },
+  {
+    name: 'スシロー', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
+    ward: '複数', city: '回転寿司チェーン',
+    note: 'タッチパネル注文、キッズメニューセット500円',
+    pricing: { adult: '1,000-1,500円', elementary: '500円〜（キッズセット）', preschool: '500円〜', infant: '無料' },
+    strollerAccess: true, babyChair: true, kidsMenu: true,
+    hiddenTip: 'キッズプレート500円（エビフライ+デザート+ジュース）、子ども専用前掛けあり',
+  },
+  {
+    name: 'ジョナサン', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
+    ward: '複数', city: 'ファミレスチェーン',
+    note: '離乳食・塗り絵・キッズプレート、すかいらーく系',
+    pricing: { adult: '1,000-1,500円', elementary: '399円〜', preschool: '399円〜', infant: '離乳食214円' },
+    strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
+    hiddenTip: 'キッズプレート399円（5歳以下100円）、ハッピーセット的に',
+  },
+  {
+    name: '上島珈琲店・キッズ向けカフェ', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
+    ward: '複数', city: 'カフェチェーン',
+    note: 'キッズドリンク、子連れ歓迎、ベビーカー入店可',
+    pricing: { adult: '500-800円', elementary: '250円〜', preschool: '250円〜', infant: 'お湯提供' },
+    strollerAccess: true, babyChair: false, kidsMenu: false,
+    hiddenTip: '赤ちゃん連れにもやさしく、お湯や離乳食の温めに対応してくれる店舗多数',
+  },
+  {
+    name: 'ビバパエリア／スペインバル（中野・吉祥寺）', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
+    ward: '中野区', city: '中野',
+    note: 'スペイン料理、パエリア、個室あり',
+    pricing: { adult: '2,000-3,000円', elementary: 'シェア可', preschool: '取り分けOK', infant: '持ち込み可' },
+    strollerAccess: true, babyChair: true, kidsMenu: false, privateRoom: true,
+    hiddenTip: '予約推奨、個室でママ会にも',
+  },
+  {
+    name: '東京ドームシティ ラクーア内 キッズOK店舗群', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
+    ward: '文京区', city: '水道橋',
+    note: 'ドームシティ内、子連れOK店舗多数、キッズスペース併設も',
+    pricing: { adult: '1,500-2,500円', elementary: '子どもメニューあり店多数', preschool: '取り分け可', infant: '持ち込み可店あり' },
+    strollerAccess: true, babyChair: true, kidsMenu: true,
+    hiddenTip: '遊んだ後に便利、ラクーアフロアマップで「ファミリーOK」店を確認',
+  },
+];
+
