@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { AREAS, type AreaSlug } from '@/lib/area';
 import { useUserSettings } from '@/hooks/useUserSettings';
+import { AnswerPreview } from './AnswerPreview';
 
 /**
  * 天気を クライアント側で Open-Meteo から取得して weather プリセットに使う。
@@ -139,6 +140,9 @@ export function TodayFinder() {
         <span className="eyebrow">3分で、今日が決まる</span>
         <h2>迷わない、今日のすごし方。</h2>
         <p>天気・年齢・時間を入れると、おすすめを1つご提案します。気分に合わなければ別の候補もすぐ見られます。</p>
+
+        {/* 「こう出ます」のサンプルプレビュー（押す前に体験を見せる） */}
+        <AnswerPreview />
         {currentWeather && (
           <div style={{ marginTop: 14 }}>
             <span className="weather-chip" title="Open-Meteo・現在の天気">
