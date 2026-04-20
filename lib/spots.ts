@@ -34,6 +34,20 @@ export type Spot = {
   city?: string;         // 市区町村（ざっくり）
   note?: string;         // 一言メモ（30-50文字）
   budget?: 'free' | 'low' | 'mid' | 'high';  // 入園料目安
+  // ---- Instagram人気アカウントから学んだ情報密度UP項目 ----
+  pricing?: {
+    adult?: string;      // '2,300円'
+    elementary?: string; // '1,100円'
+    preschool?: string;  // '400円（3歳以上）'
+    infant?: string;     // '無料（3歳未満）'
+  };
+  reservation?: 'required' | 'recommended' | 'none';  // 予約制の有無
+  crowdLevel?: {
+    weekday?: 'low' | 'mid' | 'high';
+    holiday?: 'low' | 'mid' | 'high';
+  };
+  hiddenTip?: string;    // 穴場ポイント「予約制で混雑回避」「平日午前が狙い目」等
+  nearby?: string;       // 近隣セット提案「徒歩10分の海の中道海浜公園と1日セット」等
 };
 
 /** 47都道府県分のスポットマップ。不足県は一般的な推奨のみ。 */
@@ -99,14 +113,66 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     { name: 'キッザニア東京（※千葉寄り）', category: 'indoor', place: 'indoor', ages: ['4-6'], city: '江東区', note: '職業体験の定番、雨天OK（※東京都内）', budget: 'high' },
   ],
   tokyo: [
-    { name: '上野動物園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '台東区', note: 'ジャイアントパンダに会える、駅近', budget: 'low' },
-    { name: '多摩動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '日野市', note: '広大で歩きがい、ライオンバスが名物', budget: 'low' },
-    { name: '葛西臨海水族園', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '江戸川区', note: 'マグロの群泳大水槽、広い公園に併設', budget: 'low' },
-    { name: 'サンシャイン水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '豊島区', note: '屋上「天空のペンギン」が人気、池袋直結', budget: 'mid' },
-    { name: 'キッザニア東京', category: 'indoor', place: 'indoor', ages: ['4-6'], city: '江東区', note: '100種以上の職業体験、人気で予約推奨', budget: 'high' },
-    { name: '井の頭恩賜公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '武蔵野市', note: '池のボート・動物園・散策、無料で過ごせる', budget: 'free' },
-    { name: '国立科学博物館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '台東区', note: '恐竜化石と日本の自然史、雨天の鉄板', budget: 'low' },
-    { name: 'アネビートリムパーク（ららぽーと各所等）', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3'], city: '複数', note: 'ヨーロッパ遊具の屋内パーク、0-3歳に最適', budget: 'mid' },
+    {
+      name: '上野動物園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '台東区', note: 'ジャイアントパンダに会える、駅近', budget: 'low',
+      pricing: { adult: '600円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'mid', holiday: 'high' },
+      hiddenTip: '平日10時開園直後が狙い目。パンダ舎は整理券配布制のため公式サイトで当日の運用を確認',
+      nearby: '上野公園の噴水広場・国立科学博物館と組み合わせて1日コース',
+    },
+    {
+      name: '多摩動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '日野市', note: '広大で歩きがい、ライオンバスが名物', budget: 'low',
+      pricing: { adult: '600円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'ベビーカー貸出あり。園内は坂が多いため抱っこ紐併用推奨',
+    },
+    {
+      name: '葛西臨海水族園', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '江戸川区', note: 'マグロの群泳大水槽、広い公園に併設', budget: 'low',
+      pricing: { adult: '700円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: '雨の日の平日は空いていてのんびり回れる。ペンギン舎の裏側が穴場',
+      nearby: '葛西臨海公園の芝生広場（無料）でピクニックとセット',
+    },
+    {
+      name: 'サンシャイン水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '豊島区', note: '屋上「天空のペンギン」が人気、池袋直結', budget: 'mid',
+      pricing: { adult: '2,600〜2,800円', elementary: '1,300〜1,400円', preschool: '800〜900円（4歳〜）', infant: '無料（3歳以下）' },
+      reservation: 'recommended',
+      crowdLevel: { weekday: 'mid', holiday: 'high' },
+      hiddenTip: '公式サイトで日時指定券が購入可能、休日は予約必須レベル',
+      nearby: '同ビル内のプラネタリウム・ショッピングモールで雨天1日コース',
+    },
+    {
+      name: 'キッザニア東京', category: 'indoor', place: 'indoor', ages: ['4-6'], city: '江東区', note: '100種以上の職業体験、人気で予約推奨', budget: 'high',
+      pricing: { adult: '2,000〜3,500円', elementary: '4,500〜7,000円', preschool: '4,500〜7,000円', infant: '無料（2歳以下）' },
+      reservation: 'required',
+      crowdLevel: { weekday: 'mid', holiday: 'high' },
+      hiddenTip: '公式予約サイトで3ヶ月前から受付、平日第2部（16-21時）が比較的取りやすい',
+    },
+    {
+      name: '井の頭恩賜公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '武蔵野市', note: '池のボート・動物園・散策、無料で過ごせる', budget: 'free',
+      pricing: { adult: '無料（公園入場）', elementary: '無料', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: '桜シーズンは朝7-9時が狙い目。ボート（別料金700〜800円/30分）は休日混雑',
+      nearby: '吉祥寺駅徒歩5分、ランチは駅前のアトレでベビーカーOKの店多数',
+    },
+    {
+      name: '国立科学博物館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '台東区', note: '恐竜化石と日本の自然史、雨天の鉄板', budget: 'low',
+      pricing: { adult: '630円', elementary: '無料（高校生以下）', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '特別展開催中は混雑、常設展目当てなら比較的空いている。ベビーカーOK',
+    },
+    {
+      name: 'アネビートリムパーク（ららぽーと各所等）', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3'], city: '複数', note: 'ヨーロッパ遊具の屋内パーク、0-3歳に最適', budget: 'mid',
+      pricing: { adult: '600円（保護者）', preschool: '1,200円（平日フリーパス）', infant: '600円（6ヶ月〜）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: '雨の日の休日は整理券配布で入場制限、平日午前がベスト',
+    },
   ],
   kanagawa: [
     { name: '横浜・八景島シーパラダイス', category: 'aquarium', place: 'mixed', ages: ['2-3', '4-6'], city: '横浜市', note: '水族館＋遊園地＋海、1日コース', budget: 'high' },
