@@ -48,6 +48,7 @@ export type Spot = {
   };
   hiddenTip?: string;    // 穴場ポイント「予約制で混雑回避」「平日午前が狙い目」等
   nearby?: string;       // 近隣セット提案「徒歩10分の海の中道海浜公園と1日セット」等
+  popular?: boolean;     // エディターが「ママに人気」として推すスポット（トップページ表示用）
 };
 
 /** 47都道府県分のスポットマップ。不足県は一般的な推奨のみ。 */
@@ -60,6 +61,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '冬季（12-3月）限定のペンギン散歩は11時・14時半頃、開始30分前に場所取り推奨',
+      popular: true,
     },
     {
       name: '札幌市円山動物園', category: 'zoo', place: 'mixed', ages: ['2-3', '4-6'], city: '札幌市', note: '屋内展示も多く悪天候でも遊べる', budget: 'low',
@@ -193,6 +195,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '日本で唯一シャチのパフォーマンスが見られる。最前列は水しぶきで濡れる、レインコート推奨',
       nearby: '鴨川温泉と合わせて1泊プランが鉄板',
+      popular: true,
     },
     {
       name: 'マザー牧場', category: 'farm', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '富津市', note: '動物と触れ合い＋収穫体験＋ミニ遊園地', budget: 'mid',
@@ -217,6 +220,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '平日10時開園直後が狙い目。パンダ舎は整理券配布制のため公式サイトで当日の運用を確認',
       nearby: '上野公園の噴水広場・国立科学博物館と組み合わせて1日コース',
+      popular: true,
     },
     {
       name: '多摩動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '日野市', note: '広大で歩きがい、ライオンバスが名物', budget: 'low',
@@ -232,6 +236,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '雨の日の平日は空いていてのんびり回れる。ペンギン舎の裏側が穴場',
       nearby: '葛西臨海公園の芝生広場（無料）でピクニックとセット',
+      popular: true,
     },
     {
       name: 'サンシャイン水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '豊島区', note: '屋上「天空のペンギン」が人気、池袋直結', budget: 'mid',
@@ -279,6 +284,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'ワンデーパス（全施設）が割安。夕方17時以降のナイトパスはさらにお得',
       nearby: '八景島駅直結、1日フルで遊べる',
+      popular: true,
     },
     {
       name: 'よこはま動物園ズーラシア', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '横浜市', note: '世界の気候帯別展示、広大', budget: 'low',
@@ -355,6 +361,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '公式サイトで前売り券（最大30%オフ）推奨。平日は待ち時間ほぼなし',
       nearby: '同エリアのメイカーズ・ピア＋シーライフで1日フル',
+      popular: true,
     },
     {
       name: '名古屋港水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '名古屋市', note: 'シャチとベルーガ、屋内広い', budget: 'mid',
@@ -439,6 +446,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '閉館2時間前（15時以降）が狙い目、ジンベエザメ給餌タイム狙いなら11時/14時半頃',
       nearby: '天保山マーケットプレース（隣接）でランチ＋観覧車で1日コース',
+      popular: true,
     },
     {
       name: 'ニフレル', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '吹田市', note: '「生きるミュージアム」、動物と間近', budget: 'mid',
@@ -480,10 +488,36 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
   ],
   hyogo: [
-    { name: '神戸どうぶつ王国', category: 'zoo', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '神戸市', note: '全天候型、動物と距離が近い', budget: 'mid' },
-    { name: '姫路セントラルパーク', category: 'zoo', place: 'mixed', ages: ['2-3', '4-6'], city: '姫路市', note: 'サファリ＋遊園地＋プール', budget: 'mid' },
-    { name: '須磨海浜水族園（スマスイ新）', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '神戸市', note: '2024年リニューアルの水族館', budget: 'mid' },
-    { name: 'ニジゲンノモリ（淡路島）', category: 'amusement', place: 'outdoor', ages: ['4-6'], city: '淡路市', note: 'クレヨンしんちゃんアドベンチャーパーク等', budget: 'mid' },
+    {
+      name: '神戸どうぶつ王国', category: 'zoo', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '神戸市', note: '全天候型、動物と距離が近い', budget: 'mid',
+      pricing: { adult: '2,500円', elementary: '1,500円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '屋内展示多く雨の日もOK。カピバラやハシビロコウが近い',
+      nearby: 'ポートライナー「計算科学センター」駅直結、神戸空港と組み合わせ',
+    },
+    {
+      name: '姫路セントラルパーク', category: 'zoo', place: 'mixed', ages: ['2-3', '4-6'], city: '姫路市', note: 'サファリ＋遊園地＋プール', budget: 'mid',
+      pricing: { adult: '3,800円', elementary: '2,000円', preschool: '1,200円（3歳以上）', infant: '無料（2歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: 'マイカーサファリ（自家用車で巡回）が人気。夏はプール、冬はアイススケートも併設',
+    },
+    {
+      name: '須磨シーワールド', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '神戸市', note: '2024年リニューアル、西日本初のシャチ展示', budget: 'mid',
+      pricing: { adult: '3,700円', elementary: '1,800円', preschool: '1,100円（4歳以上）', infant: '無料（3歳以下）' },
+      reservation: 'recommended',
+      crowdLevel: { weekday: 'mid', holiday: 'high' },
+      hiddenTip: '2024年6月リニューアル、シャチパフォーマンス人気で事前予約必須',
+      nearby: '須磨海浜公園でピクニックセット',
+    },
+    {
+      name: 'ニジゲンノモリ（淡路島）', category: 'amusement', place: 'outdoor', ages: ['4-6'], city: '淡路市', note: 'クレヨンしんちゃんアドベンチャーパーク等', budget: 'mid',
+      pricing: { adult: '1,000-3,500円（エリア別）', elementary: '500-2,000円', preschool: '無料〜1,000円（3歳以上）', infant: '無料（2歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'エリアごとのチケット制、小さい子は「クレヨンしんちゃん」と「ドラゴンクエストアイランド」が楽しめる',
+    },
   ],
   nara: [
     { name: '奈良公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '奈良市', note: '鹿と触れ合える、東大寺と一緒に', budget: 'free' },
@@ -507,9 +541,27 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     { name: '渋川動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '玉野市', note: '動物にエサやり、リーズナブル', budget: 'low' },
   ],
   hiroshima: [
-    { name: '安佐動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '広島市', note: '起伏ある園内、キリン舎が見どころ', budget: 'low' },
-    { name: 'みろくの里', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '福山市', note: '昭和レトロなミニ遊園地', budget: 'mid' },
-    { name: '広島市こども文化科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '広島市', note: 'プラネタリウムと体験展示、入館無料', budget: 'free' },
+    {
+      name: '安佐動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '広島市', note: '起伏ある園内、キリン舎が見どころ', budget: 'low',
+      pricing: { adult: '510円', elementary: '170円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '園内坂多し、ベビーカー＋抱っこ紐併用推奨。広島駅から車30分',
+    },
+    {
+      name: 'みろくの里', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '福山市', note: '昭和レトロなミニ遊園地', budget: 'mid',
+      pricing: { adult: '1,400円', elementary: '900円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'いつか来た道エリア（昭和30年代再現）が大人も懐かしい。乗り放題パス（4,000円程度）がお得',
+    },
+    {
+      name: '広島市こども文化科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '広島市', note: 'プラネタリウムと体験展示、入館無料', budget: 'free',
+      pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料', },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '入館完全無料、プラネタリウム別料金510円。原爆ドーム隣接でアクセス最高',
+    },
   ],
   yamaguchi: [
     { name: '秋吉台サファリランド', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '美祢市', note: 'マイカーサファリと遊園地', budget: 'mid' },
@@ -523,7 +575,20 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     { name: '四国水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '宇多津町', note: '2020年開業、瀬戸内海の生き物', budget: 'mid' },
   ],
   ehime: [
-    { name: 'とべ動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '砥部町', note: '西日本有数の動物園、ホッキョクグマ', budget: 'low' },
+    {
+      name: 'とべ動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '砥部町', note: '西日本有数の動物園、ホッキョクグマ', budget: 'low',
+      pricing: { adult: '500円', elementary: '100円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '西日本最大級、ホッキョクグマ「ピース」が人気。松山駅から車40分',
+    },
+    {
+      name: 'えひめこどもの城', category: 'park', place: 'mixed', ages: ['2-3', '4-6'], city: '松山市', note: '大型遊具と工作体験、無料入場', budget: 'free',
+      pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '入場無料の大型こども向け複合施設。モノレールやボートは別料金300-400円',
+    },
   ],
   kochi: [
     { name: 'のいち動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '香南市', note: '展示のクオリティ高さで評価高い', budget: 'low' },
@@ -539,6 +604,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'イルカショー後の17時前が比較的空いている。九州の海再現水槽が大人も楽しい',
       nearby: '海の中道海浜公園と1日セット（駅共通）',
+      popular: true,
     },
     {
       name: '海の中道海浜公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '福岡市', note: '動物の森＋大型遊具＋花、1日遊べる', budget: 'low',
@@ -568,13 +634,45 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     { name: '佐賀県立宇宙科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '武雄市', note: 'プラネタリウムと体験展示', budget: 'low' },
   ],
   nagasaki: [
-    { name: 'ハウステンボス', category: 'amusement', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '佐世保市', note: 'ヨーロッパ風テーマパーク、1日コース', budget: 'high' },
-    { name: '長崎バイオパーク', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '西海市', note: 'カバや鹿に直接触れられる', budget: 'mid' },
-    { name: '長崎ペンギン水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '長崎市', note: 'ペンギン種類数日本一', budget: 'low' },
+    {
+      name: 'ハウステンボス', category: 'amusement', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '佐世保市', note: 'ヨーロッパ風テーマパーク、1日コース', budget: 'high',
+      pricing: { adult: '7,400円', elementary: '4,800円', preschool: '4,100円（4歳以上）', infant: '無料（3歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: '夜のイルミネーション「光の王国」は17時以降のナイトチケットがお得。佐世保駅から直通バス1時間',
+      nearby: '佐世保市内のホテルで1泊必須級の広さ',
+    },
+    {
+      name: '長崎バイオパーク', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '西海市', note: 'カバや鹿に直接触れられる', budget: 'mid',
+      pricing: { adult: '1,900円', elementary: '1,100円', preschool: '800円（3歳以上）', infant: '無料（2歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'フリーフライングエリアで鳥が肩に乗る体験。餌やり（エサ代200-300円）が大人気',
+    },
+    {
+      name: '長崎ペンギン水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '長崎市', note: 'ペンギン種類数日本一', budget: 'low',
+      pricing: { adult: '520円', elementary: '310円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '世界最多9種類のペンギン展示、ふれあいビーチでペンギン散歩（土日祝）',
+    },
   ],
   kumamoto: [
-    { name: '熊本市動植物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '熊本市', note: '動物園＋植物園＋遊園地の複合', budget: 'low' },
-    { name: '阿蘇カドリー・ドミニオン', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '阿蘇市', note: 'クマ牧場とミニブタショー', budget: 'mid' },
+    {
+      name: '熊本市動植物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '熊本市', note: '動物園＋植物園＋遊園地の複合', budget: 'low',
+      pricing: { adult: '500円', elementary: '100円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '動物園＋遊園地（10種類の乗り物、各100-200円）＋植物園で1日フル。熊本駅から市電で30分',
+    },
+    {
+      name: '阿蘇カドリー・ドミニオン', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '阿蘇市', note: 'クマ牧場とミニブタショー', budget: 'mid',
+      pricing: { adult: '2,600円', elementary: '1,600円', preschool: '1,000円（3歳以上）', infant: '無料（2歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'みやざわ劇場のミニブタ・犬のパフォーマンスが大人気。阿蘇山観光とセットで1日コース',
+      nearby: '阿蘇ファームランドと組み合わせ',
+    },
   ],
   oita: [
     { name: 'うみたまご', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '大分市', note: 'セイウチショーとタッチプール', budget: 'mid' },
@@ -596,6 +694,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '16時以降の夕方入館券（1,510円、8割価格）が狙い目。那覇から車で約2時間、日帰り強行はキツイ',
       nearby: '海洋博公園内にエメラルドビーチ（無料）、オキちゃん劇場（イルカショー）で1日フル',
+      popular: true,
     },
     {
       name: '沖縄こどもの国', category: 'zoo', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '沖縄市', note: '動物園＋こどもの遊具、リーズナブル', budget: 'low',
@@ -658,6 +757,27 @@ export function filterSpots(
   }
   if (opts.limit) list = list.slice(0, opts.limit);
   return list;
+}
+
+/**
+ * エディターがキュレーションした人気スポットを返す。
+ * - popular: true フラグ付きのスポットを対象
+ * - 全都道府県横断で area 情報も併せて返す
+ * - 将来 GA4 PV連動に差し替え可能な設計
+ */
+export function getPopularSpots(limit = 6): { area: AreaSlug; spot: Spot }[] {
+  const result: { area: AreaSlug; spot: Spot }[] = [];
+  for (const [areaKey, list] of Object.entries(SPOTS)) {
+    if (!list) continue;
+    for (const spot of list) {
+      if (spot.popular) {
+        result.push({ area: areaKey as AreaSlug, spot });
+      }
+    }
+  }
+  // slug 的ソートで毎回同じ順番（deterministic）
+  result.sort((a, b) => a.spot.name.localeCompare(b.spot.name, 'ja'));
+  return result.slice(0, limit);
 }
 
 /** スポットカテゴリを日本語ラベルに変換 */

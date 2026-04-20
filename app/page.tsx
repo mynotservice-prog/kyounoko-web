@@ -5,6 +5,7 @@ import { SiteFooter } from '@/components/layout/SiteFooter';
 import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
 import { TodayFinder } from '@/components/top/TodayFinder';
 import { WeeklyPick } from '@/components/top/WeeklyPick';
+import { PopularSpots } from '@/components/top/PopularSpots';
 import { getAllFileArticles } from '@/lib/articles';
 import { getTokyoNow, formatJaLong, monthNameEn } from '@/lib/date';
 import { AdSlot } from '@/components/ads/AdSlot';
@@ -118,6 +119,11 @@ export default function HomePage() {
           Instagram人気アカウントの「今週末ここ行こう」訴求を転用
           ====================================================================== */}
       <WeeklyPick month={month} />
+
+      {/* ======================================================================
+          ママが選ぶ人気スポット（Editor's pick / 年中表示）
+          ====================================================================== */}
+      <PopularSpots />
 
       {/* ======================================================================
           今月の季節と行事（時期性がコンセプトと合致するので残す）
