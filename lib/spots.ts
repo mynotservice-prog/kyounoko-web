@@ -142,20 +142,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     { name: 'スパリゾートハワイアンズ', category: 'amusement', place: 'indoor', ages: ['2-3', '4-6'], city: 'いわき市', note: '年中温水プール、雨天・冬もOK', budget: 'high' },
   ],
 
-  // ===== 関東 =====
-  ibaraki: [
-    { name: 'アクアワールド茨城県大洗水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '大洗町', note: 'サメ展示種数日本一、マンボウも', budget: 'mid' },
-    { name: '国営ひたち海浜公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: 'ひたちなか市', note: 'ネモフィラ・コキアの絶景、遊具も充実', budget: 'low' },
-  ],
-  tochigi: [
-    { name: '那須どうぶつ王国', category: 'zoo', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '那須町', note: '室内外で動物と触れ合える、雨天も楽しい', budget: 'mid' },
-    { name: '那須ハイランドパーク', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '那須町', note: '小さい子向けアトラクションも多い', budget: 'high' },
-    { name: '宇都宮動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '宇都宮市', note: '遊園地併設、動物との距離が近い', budget: 'low' },
-  ],
-  gunma: [
-    { name: '群馬サファリパーク', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '富岡市', note: '車から動物に餌やりできる', budget: 'mid' },
-    { name: 'ぐんまこどもの国', category: 'park', place: 'mixed', ages: ['2-3', '4-6'], city: '太田市', note: '大型遊具と体験施設、入園無料', budget: 'free' },
-  ],
+  // ===== 関東（ibaraki/tochigi/gunma は下部に詳細版あり）=====
   saitama: [
     {
       name: '東武動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '宮代町', note: '動物園＋遊園地のハイブリッド', budget: 'mid',
@@ -335,23 +322,193 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     { name: '福井県立恐竜博物館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '勝山市', note: '国内最大級の恐竜展示、子どもに大人気', budget: 'low' },
     { name: '越前松島水族館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '坂井市', note: 'イルカにタッチできる', budget: 'mid' },
   ],
-  yamanashi: [
-    { name: '富士急ハイランド', category: 'amusement', place: 'outdoor', ages: ['4-6'], city: '富士吉田市', note: 'トーマスランドは0-6歳向け', budget: 'high' },
-    { name: '山梨県立富士湧水の里水族館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '忍野村', note: '淡水魚の水族館、入館料安い', budget: 'low' },
+  shizuoka: [
+    {
+      name: '富士サファリパーク', category: 'zoo', place: 'mixed', ages: ['2-3', '4-6'], city: '裾野市', note: '車から動物観察＋ふれあい', budget: 'mid',
+      pricing: { adult: '3,200円', elementary: '2,000円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: 'マイカーorジャングルバス（別料金1,500円/人）、天気悪いとライオン等が屋内、朝一10時開園直後が見応えあり',
+      popular: true,
+    },
+    {
+      name: '伊豆アニマルキングダム', category: 'zoo', place: 'mixed', ages: ['2-3', '4-6'], city: '東伊豆町', note: 'ホワイトタイガーに大接近、遊具もあり', budget: 'mid',
+      pricing: { adult: '2,800円', elementary: '1,400円', preschool: '700円（4歳以上）', infant: '無料（3歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'ホワイトタイガーと至近距離、動物エリア＋遊園地＋プレイゾーンが一体',
+    },
+    {
+      name: '東海大学海洋科学博物館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '静岡市', note: '機械の博物館併設', budget: 'low',
+      pricing: { adult: '1,800円（共通券）', elementary: '900円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '海洋科学博物館と自然史博物館の共通券でお得、三保の松原もすぐ',
+    },
+    {
+      name: 'ぐりんぱ（富士山2合目）', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '裾野市', note: 'シルバニアビレッジ等、小さい子向け', budget: 'mid',
+      pricing: { adult: '1,300円（入園のみ）', elementary: '850円', preschool: '無料（3歳以下）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'シルバニアビレッジがあり0-6歳に最適、冬季休業あり要確認',
+    },
   ],
   nagano: [
-    { name: '茶臼山動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '長野市', note: 'レッサーパンダ発祥の動物園', budget: 'low' },
-    { name: '軽井沢おもちゃ王国', category: 'amusement', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '嬬恋村※隣県寄り', note: '室内プレイスペースとミニ遊園地', budget: 'mid' },
+    {
+      name: '茶臼山動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '長野市', note: 'レッサーパンダ発祥の動物園', budget: 'low',
+      pricing: { adult: '600円', elementary: '100円（小中）', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'レッサーパンダの飼育頭数日本有数、春秋が動物が活発',
+    },
+    {
+      name: '軽井沢おもちゃ王国', category: 'amusement', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '嬬恋村※群馬側', note: '室内プレイスペースとミニ遊園地', budget: 'mid',
+      pricing: { adult: '1,300円（入園）', elementary: '900円', preschool: '900円（3歳以上）', infant: '無料（2歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: '11エリアの室内おもちゃ部屋、雨天OK、乗り放題パス（3,300円）が断然お得',
+    },
   ],
   gifu: [
-    { name: '世界淡水魚園水族館 アクア・トトぎふ', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '各務原市', note: '世界最大級の淡水魚水族館', budget: 'mid' },
-    { name: '各務原市民公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '各務原市', note: 'アクア・トトに隣接、併せて1日', budget: 'free' },
+    {
+      name: '世界淡水魚園水族館 アクア・トトぎふ', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '各務原市', note: '世界最大級の淡水魚水族館', budget: 'mid',
+      pricing: { adult: '1,780円', elementary: '880円', preschool: '440円（3歳以上）', infant: '無料（2歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'オアシスパーク（無料遊具広場）隣接、水族館は所要90分',
+      nearby: '河川環境楽園オアシスパーク＋アクア・トト＋観覧車で1日コース',
+    },
+    {
+      name: '各務原市民公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '各務原市', note: 'アクア・トトに隣接、併せて1日', budget: 'free',
+      pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '駐車場無料、芝生広場でピクニック可',
+    },
   ],
-  shizuoka: [
-    { name: '富士サファリパーク', category: 'zoo', place: 'mixed', ages: ['2-3', '4-6'], city: '裾野市', note: '車から動物観察＋ふれあい', budget: 'mid' },
-    { name: '伊豆アニマルキングダム', category: 'zoo', place: 'mixed', ages: ['2-3', '4-6'], city: '東伊豆町', note: 'ホワイトタイガーに大接近、遊具もあり', budget: 'mid' },
-    { name: '東海大学海洋科学博物館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '静岡市', note: '機械の博物館併設', budget: 'low' },
-    { name: 'ぐりんぱ（富士山2合目）', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '裾野市', note: 'シルバニアビレッジ等、小さい子向け', budget: 'mid' },
+  shiga: [
+    {
+      name: '琵琶湖博物館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '草津市', note: '淡水魚展示と琵琶湖の歴史、広い', budget: 'low',
+      pricing: { adult: '800円', elementary: '無料（高校生以下）', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '体験型展示「ディスカバリールーム」が人気、水族館と博物館の中間的な施設',
+      nearby: '隣接のからすま半島公園で芝生遊び',
+    },
+    {
+      name: 'ブルーメの丘', category: 'farm', place: 'outdoor', ages: ['2-3', '4-6'], city: '日野町', note: '動物ふれあい＋収穫体験＋遊具', budget: 'low',
+      pricing: { adult: '1,000円', elementary: '600円', preschool: '300円（4歳以上）', infant: '無料（3歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '季節ごとの収穫体験（いちご・ブルーベリー・芋掘り）がおすすめ',
+    },
+  ],
+  mie: [
+    {
+      name: '鳥羽水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '鳥羽市', note: '飼育種類数日本一、ジュゴン展示', budget: 'mid',
+      pricing: { adult: '2,800円', elementary: '1,600円', preschool: '800円（3歳以上）', infant: '無料（2歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '日本で唯一のジュゴン展示、約1,200種の魚。所要2-3時間',
+      popular: true,
+    },
+    {
+      name: '志摩スペイン村', category: 'amusement', place: 'mixed', ages: ['2-3', '4-6'], city: '志摩市', note: 'スペイン村パルケエスパーニャ', budget: 'high',
+      pricing: { adult: '5,400円', elementary: '3,600円', preschool: '3,000円（3歳以上）', infant: '無料（2歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '他テーマパークに比べて空いていて乗り物に乗りやすい、ナイトチケット（15時〜）2,900円がお得',
+    },
+  ],
+  kagoshima: [
+    {
+      name: 'いおワールドかごしま水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '鹿児島市', note: 'ジンベエザメ展示、桜島も望める', budget: 'mid',
+      pricing: { adult: '1,500円', elementary: '750円', preschool: '350円（4歳以上）', infant: '無料（3歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '桜島をバックにジンベエザメ、イルカパフォーマンスは1日4回',
+    },
+    {
+      name: '平川動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '鹿児島市', note: 'コアラ舎と遊園地併設', budget: 'low',
+      pricing: { adult: '500円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '桜島を望む絶景動物園、遊園地（乗り物100-200円）併設',
+    },
+  ],
+  tochigi: [
+    {
+      name: '那須どうぶつ王国', category: 'zoo', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '那須町', note: '室内外で動物と触れ合える、雨天も楽しい', budget: 'mid',
+      pricing: { adult: '2,600円', elementary: '1,200円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: '王国ファーム（屋内）と王国タウン（屋外）、園内バス移動あり。雨天でも楽しめる',
+      popular: true,
+    },
+    {
+      name: '那須ハイランドパーク', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '那須町', note: '小さい子向けアトラクションも多い', budget: 'high',
+      pricing: { adult: '1,800円（入園）', elementary: '1,300円', preschool: '800円（3歳以上）', infant: '無料（2歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: '身長制限のない幼児向けアトラクション多数、1DAYパスポート（5,600円）がお得',
+    },
+    {
+      name: '宇都宮動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '宇都宮市', note: '遊園地併設、動物との距離が近い', budget: 'low',
+      pricing: { adult: '1,400円（遊園地セット）', elementary: '700円', preschool: '700円（3歳以上）', infant: '無料（2歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'キリンの餌やり100円、動物に近づける小規模動物園の良さ',
+    },
+  ],
+  ibaraki: [
+    {
+      name: 'アクアワールド茨城県大洗水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '大洗町', note: 'サメ展示種数日本一、マンボウも', budget: 'mid',
+      pricing: { adult: '2,300円', elementary: '1,100円', preschool: '400円（3歳以上）', infant: '無料（2歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: 'キッズスペース（1回20分、予約制）が穴場、イルカショー最終回（15-16時）が空いている',
+      nearby: '大洗海岸と大洗磯前神社で1日コース',
+    },
+    {
+      name: '国営ひたち海浜公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: 'ひたちなか市', note: 'ネモフィラ・コキアの絶景、遊具も充実', budget: 'low',
+      pricing: { adult: '450円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: '4月下旬のネモフィラ・10月のコキアはSNS映え絶景、朝8-9時到着推奨',
+      popular: true,
+    },
+  ],
+  gunma: [
+    {
+      name: '群馬サファリパーク', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '富岡市', note: '車から動物に餌やりできる', budget: 'mid',
+      pricing: { adult: '2,700円', elementary: '1,400円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'エサやりバス（別料金1,500円）で至近距離で動物と触れ合える',
+    },
+    {
+      name: 'ぐんまこどもの国', category: 'park', place: 'mixed', ages: ['2-3', '4-6'], city: '太田市', note: '大型遊具と体験施設、入園無料', budget: 'free',
+      pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '入園・駐車場無料、有料施設（児童館200円、乗り物100円）のみ別料金',
+    },
+  ],
+  yamanashi: [
+    {
+      name: '富士急ハイランド', category: 'amusement', place: 'outdoor', ages: ['4-6'], city: '富士吉田市', note: 'トーマスランドは0-6歳向け', budget: 'high',
+      pricing: { adult: '6,000〜8,000円', elementary: '4,400〜6,000円', preschool: '2,100〜3,000円（3歳以上）', infant: '無料（2歳以下）' },
+      reservation: 'recommended',
+      crowdLevel: { weekday: 'mid', holiday: 'high' },
+      hiddenTip: 'トーマスランドエリアのフリーパスのみ（2,500円）があり、絶叫マシン苦手な家族にも',
+    },
+    {
+      name: '山梨県立富士湧水の里水族館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '忍野村', note: '淡水魚の水族館、入館料安い', budget: 'low',
+      pricing: { adult: '420円', elementary: '200円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '忍野八海の近く、淡水魚メインで30-60分で回れるサイズ',
+    },
   ],
   aichi: [
     {
@@ -396,15 +553,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
   ],
 
-  // ===== 関西 =====
-  mie: [
-    { name: '鳥羽水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '鳥羽市', note: '飼育種類数日本一、ジュゴン展示', budget: 'mid' },
-    { name: '志摩スペイン村', category: 'amusement', place: 'mixed', ages: ['2-3', '4-6'], city: '志摩市', note: 'スペイン村パルケエスパーニャ', budget: 'high' },
-  ],
-  shiga: [
-    { name: '琵琶湖博物館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '草津市', note: '淡水魚展示と琵琶湖の歴史、広い', budget: 'low' },
-    { name: 'ブルーメの丘', category: 'farm', place: 'outdoor', ages: ['2-3', '4-6'], city: '日野町', note: '動物ふれあい＋収穫体験＋遊具', budget: 'low' },
-  ],
+  // ===== 関西（mie/shiga は上部に詳細版あり）=====
   kyoto: [
     {
       name: '京都水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '京都市', note: 'オオサンショウウオ、梅小路公園直結', budget: 'mid',
@@ -682,10 +831,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   miyazaki: [
     { name: '宮崎市フェニックス自然動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '宮崎市', note: '遊園地併設、フラミンゴショー', budget: 'low' },
   ],
-  kagoshima: [
-    { name: 'いおワールドかごしま水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '鹿児島市', note: 'ジンベエザメ展示、桜島も望める', budget: 'mid' },
-    { name: '平川動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '鹿児島市', note: 'コアラ舎と遊園地併設', budget: 'low' },
-  ],
+  // kagoshima は上部の詳細版を参照
   okinawa: [
     {
       name: '沖縄美ら海水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '本部町', note: 'ジンベエザメとマンタの大水槽', budget: 'mid',
