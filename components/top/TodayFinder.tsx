@@ -136,9 +136,9 @@ export function TodayFinder() {
   return (
     <div className="finder" id="finder">
       <div className="finder-head">
-        <span className="eyebrow">03 min decision</span>
-        <h2>条件を入れたら、今日の答えを1つ返します。</h2>
-        <p>並べません、選ばせません。こちらが決めます。迷いたい時だけ「別の候補を見る」でどうぞ。</p>
+        <span className="eyebrow">3分で、今日が決まる</span>
+        <h2>迷わない、今日のすごし方。</h2>
+        <p>天気・年齢・時間を入れると、おすすめを1つご提案します。気分に合わなければ別の候補もすぐ見られます。</p>
         {currentWeather && (
           <div style={{ marginTop: 14 }}>
             <span className="weather-chip" title="Open-Meteo・現在の天気">
