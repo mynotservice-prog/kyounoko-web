@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 120
 budget: "free"
 area: "chiba"
-hero: https://images.unsplash.com/photo-1476041800959-2f6bb412c8ce?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/japan-rural-03.png
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

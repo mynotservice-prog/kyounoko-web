@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/baby-01.png
 area: "all"
 quickInfo:
   ageRanges: ["0-1"]

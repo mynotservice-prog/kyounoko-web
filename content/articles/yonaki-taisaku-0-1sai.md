@@ -6,7 +6,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://images.unsplash.com/photo-1507371341162-763b5e419408?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/autumn-01.png
 area: "all"
 quickInfo:
   ageRanges: ["0-1"]

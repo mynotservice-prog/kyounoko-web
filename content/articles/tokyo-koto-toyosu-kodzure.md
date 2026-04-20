@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: "2026-04-20"
 updatedAt: "2026-04-20"
-hero: https://images.unsplash.com/photo-1542840410-3092f99611a3?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/tokyo-01.png
 lede: 江東区の豊洲・有明エリアは、23区でも屈指の子連れフレンドリーゾーン。大型商業施設・広い公園・水辺・屋内遊び場が歩いて回れる距離にコンパクトに集まっています。この記事では2〜6歳ファミリーが週末 or 平日お出かけに使える江東区エリアのスポットを整理しました。
 quickInfo:
   ageRanges: ["2-3", "4-6"]

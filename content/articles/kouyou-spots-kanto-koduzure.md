@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこいく
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1507371341162-763b5e419408?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/autumn-03.png
 lede: 11月下旬〜12月初旬、関東の紅葉が最盛期。子連れでも安心して楽しめるベビーカーOK・アクセス良好な10スポットを、家族目線で厳選しました。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

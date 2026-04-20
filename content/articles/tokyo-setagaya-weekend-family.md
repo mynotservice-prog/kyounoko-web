@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: "2026-04-20"
 updatedAt: "2026-04-20"
-hero: https://images.unsplash.com/photo-1542840410-3092f99611a3?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/tokyo-01.png
 lede: 世田谷区は23区随一の子育てファミリーエリア。4〜6歳の週末、どこに連れて行けば飽きないか迷いますよね。この記事では砧・駒沢・二子玉川・三軒茶屋の各エリアから、週末に半日〜1日使えるおでかけ先を実用目線でまとめました。
 quickInfo:
   ageRanges: ["4-6"]

@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: 2026-04-19
 updatedAt: 2026-04-19
-hero: https://images.unsplash.com/photo-1502657877623-f66bf489d236?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/summer-water-03.png
 area: "tokyo"
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

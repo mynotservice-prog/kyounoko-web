@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/sleeping-02.png
 lede: 小麦アレルギーと診断されたら、パン・麺・揚げ物の衣など毎日のメニューに工夫が必要。米粉・米麺を使った代替レシピ7つで、家族が同じ食卓を囲めます。
 quickInfo:
   ageRanges: ["2-3", "4-6"]

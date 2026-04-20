@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "mid"
 area: "all"
-hero: https://images.unsplash.com/photo-1418985991508-e47386d96a71?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/winter-snow-03.png
 seoRelated: "xmas-present-nenrei-0-6"
 ---
 

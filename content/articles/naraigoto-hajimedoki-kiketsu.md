@@ -6,7 +6,7 @@ category: narai
 categoryName: 習いごと
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/toddler-play-01.png
 lede: 「習い事はいつから？」「どう選ぶ？」迷う親向けに、発達段階と家庭の余裕から適期を見極める7チェックリスト、体験レッスン活用法、やめ時の判断基準まで解説します。
 quickInfo:
   ageRanges: ["2-3", "4-6"]

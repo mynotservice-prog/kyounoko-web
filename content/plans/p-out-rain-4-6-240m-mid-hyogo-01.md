@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "hyogo"
-hero: https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/home-cozy-03.png
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

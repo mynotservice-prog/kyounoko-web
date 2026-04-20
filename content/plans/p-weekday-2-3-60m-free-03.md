@@ -9,7 +9,7 @@ day: ["weekday"]
 durationMin: 60
 budget: "free"
 area: "all"
-hero: https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/home-cozy-03.png
 seoRelated: "hoikuen-kaeri-15min"
 ---
 

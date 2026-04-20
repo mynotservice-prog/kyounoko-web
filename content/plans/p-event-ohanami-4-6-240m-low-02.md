@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 240
 budget: "low"
 area: "all"
-hero: https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/sakura-02.png
 seoRelated: "sakura-ohanami-kodzure-spots"
 ---
 

@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: "2026-04-20"
 updatedAt: "2026-04-20"
-hero: https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/home-cozy-03.png
 lede: 目黒区の平日午前は、0〜3歳連れにとってゴールデンタイム。定番の大型公園は空いているし、児童館・図書館のおはなし会も平日メイン。この記事では目黒区で0〜3歳とゆったり過ごせる穴場的な公園と屋内スポットをまとめました。
 quickInfo:
   ageRanges: ["0-1", "2-3"]

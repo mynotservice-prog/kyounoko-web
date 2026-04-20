@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/toddler-play-01.png
 lede: 一人遊びは集中力と自己発見の宝庫。1〜5歳の年齢別の集中時間、環境作りの具体手順、親が見守るスタンスを整理し、子の成長と親の休息を両立するコツをまとめました。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

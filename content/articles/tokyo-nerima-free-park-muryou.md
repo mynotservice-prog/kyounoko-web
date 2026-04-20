@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: "2026-04-20"
 updatedAt: "2026-04-20"
-hero: https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/tokyo-03.png
 lede: 練馬区は23区の中でも大型公園の宝庫。光が丘公園・石神井公園など、入場無料で半日以上遊べるスポットがそろっています。この記事では2〜6歳ファミリーが週末に通える練馬区の無料大型公園を5つ、動線・駐車場・遊具のタイプに触れながら紹介します。
 quickInfo:
   ageRanges: ["2-3", "4-6"]

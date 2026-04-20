@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこいく
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1502657877623-f66bf489d236?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/park-01.png
 lede: 公園ピクニック、毎回何か忘れて後悔していませんか？必須20アイテムと季節別の追加品、荷物を軽くする最小構成まで、忘れ物ゼロで楽しめるリストを作成しました。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

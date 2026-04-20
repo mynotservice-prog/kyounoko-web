@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 60
 budget: "free"
 area: "aichi"
-hero: https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/japan-rural-01.png
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

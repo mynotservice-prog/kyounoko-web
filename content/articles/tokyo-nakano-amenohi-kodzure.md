@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: "2026-04-20"
 updatedAt: "2026-04-20"
-hero: https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/tokyo-03.png
 lede: 中野区で雨の日、0〜3歳を連れて外に出たい…でもベビーカーで動ける屋内ってどこ？という超ローカルな疑問に答えます。中野駅・新井薬師前・沼袋・鷺ノ宮の各エリアから、雨でも濡れずに過ごせるスポットを近所目線でまとめました。
 quickInfo:
   ageRanges: ["0-1", "2-3"]

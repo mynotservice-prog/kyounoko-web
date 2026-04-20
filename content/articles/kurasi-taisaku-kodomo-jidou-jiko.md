@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/home-cozy-03.png
 lede: 子どもの事故の約7割は家の中で起きます。0〜6歳の月齢別・部屋別に、見落としがちな20の危険ポイントと具体的な対策、応急処置まで整理しました。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

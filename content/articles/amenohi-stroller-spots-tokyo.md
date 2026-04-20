@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://images.unsplash.com/photo-1558980394-dbb977039a2e?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/tokyo-02.png
 area: "tokyo"
 quickInfo:
   ageRanges: ["0-1", "2-3"]

@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/nature-03.png
 lede: 富士山・八ヶ岳・南アルプス。3つの山並みに囲まれた山梨は、幼児連れの自然体験と果物狩りの宝庫です。首都圏から車で2時間の距離で満喫できるスポットを厳選しました。
 quickInfo:
   ageRanges: ["2-3", "4-6"]

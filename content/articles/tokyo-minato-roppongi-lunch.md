@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: "2026-04-20"
 updatedAt: "2026-04-20"
-hero: https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/family-dinner-02.png
 lede: 港区・六本木エリアは「大人の街」イメージが強いですが、六本木ヒルズ・東京ミッドタウンなど大型商業施設のレストラン街は意外なほど子連れに優しい。この記事では2〜6歳ファミリーが六本木・麻布十番で安心してランチを楽しめる選び方をまとめました。
 quickInfo:
   ageRanges: ["2-3", "4-6"]

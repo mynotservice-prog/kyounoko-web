@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: "2026-04-20"
 updatedAt: "2026-04-20"
-hero: https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/baby-01.png
 lede: 文京区は大学・出版社・児童書文化が根付いた「本と子どもに優しい街」。0歳児と一緒にママがホッとできる絵本カフェ・ベビーカーOKカフェが、本郷・小石川・千駄木エリアに点在しています。この記事では0〜1歳ママが平日午前に使える文京区のカフェの選び方をまとめました。
 quickInfo:
   ageRanges: ["0-1"]

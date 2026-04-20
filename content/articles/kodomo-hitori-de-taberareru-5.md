@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/family-dinner-03.png
 lede: 「自分で食べたい！」の時期が来たら、献立を見直す絶好のチャンス。手づかみ・フォーク初心者の子が一人でパクパク食べられる5パターンを紹介します。
 quickInfo:
   ageRanges: ["2-3", "4-6"]

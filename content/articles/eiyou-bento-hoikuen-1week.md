@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/food-japan-03.png
 lede: 保育園のお弁当週、朝のバタバタで毎日ワンパターンに…そんな時に役立つ1週間5日分のメニュー案と、買い物・前日準備のテンプレートを公開します。
 quickInfo:
   ageRanges: ["2-3", "4-6"]

@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/food-kitchen-02.png
 lede: 鶏肉は安くて使いやすく、幼児の食卓の主役。でも部位ごとに向き不向きがあります。もも・むね・ささみ・ひき肉を使い分ける10レシピを分量付きで紹介します。
 quickInfo:
   ageRanges: ["2-3", "4-6"]

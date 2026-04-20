@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/japan-rural-01.png
 lede: 雨の日の横浜は、みなとみらい・桜木町・新横浜エリアに屋内型スポットが集中しています。授乳室・動線・雨天時のアクセスまで、子連れ前提で10カ所ご紹介。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

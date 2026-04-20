@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "low"
 area: "all"
-hero: https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/park-02.png
 seoRelated: "halloween-kodzure-events-2026"
 ---
 

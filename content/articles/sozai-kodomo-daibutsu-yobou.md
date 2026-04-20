@@ -6,7 +6,7 @@ category: today-mawasu
 categoryName: 今日まわす
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/home-cozy-03.png
 lede: 子どもの死因1位は不慮の事故。家庭内で起きる怪我の8割は事前対策で防げます。年齢別の危険箇所と25項目チェックリストで、今日から安全な家づくりを。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

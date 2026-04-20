@@ -7,7 +7,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://images.unsplash.com/photo-1545193544-312983719627?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/food-fruit-02.png
 area: "all"
 quickInfo:
   ageRanges: ["2-3"]

@@ -6,7 +6,7 @@ category: narai
 categoryName: 習いごと
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/toddler-play-01.png
 lede: 2〜3歳は脳の発達が急速に進む黄金期。発達段階に合わせた知育玩具5選と、長く使える選び方のコツ、予算別おすすめを体験談付きで紹介します。
 quickInfo:
   ageRanges: ["2-3"]

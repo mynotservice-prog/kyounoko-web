@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/food-sweet-02.png
 lede: 3歳になると「お手伝いしたい！」が爆発する時期。混ぜる・丸める・飾るなど、子どもに任せる工程を設計した5つのレシピで、週末のおやつ作りを家族の時間に。
 quickInfo:
   ageRanges: ["2-3", "4-6"]

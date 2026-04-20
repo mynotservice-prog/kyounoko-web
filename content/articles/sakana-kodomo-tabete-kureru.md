@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/food-japan-02.png
 lede: 「魚は食べない」「骨が嫌」という幼児に悩む家庭は多いもの。臭み取り・骨の処理・食べやすい味付けで、子が自分から箸を伸ばす7レシピを紹介します。
 quickInfo:
   ageRanges: ["2-3", "4-6"]

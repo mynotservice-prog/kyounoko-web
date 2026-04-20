@@ -9,7 +9,7 @@ day: ["weekday"]
 durationMin: 15
 budget: "free"
 area: "all"
-hero: https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/home-cozy-03.png
 seoRelated: "19ji-shoutou-routine"
 ---
 

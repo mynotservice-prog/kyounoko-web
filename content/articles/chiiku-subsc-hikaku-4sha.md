@@ -6,7 +6,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/toddler-play-02.png
 area: "all"
 quickInfo:
   ageRanges: ["0-1", "1-2", "2-3", "4-6"]

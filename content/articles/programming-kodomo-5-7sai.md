@@ -6,7 +6,7 @@ category: narai
 categoryName: 習いごと
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1517840901100-8179e982acb7?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/kid-study-03.png
 lede: 小学校でプログラミングが必修化、早めに触れさせたい親は急増中。5〜7歳から始められる無料・低価格の教材10選と、続けるコツ、教室の選び方を解説します。
 quickInfo:
   ageRanges: ["4-6"]

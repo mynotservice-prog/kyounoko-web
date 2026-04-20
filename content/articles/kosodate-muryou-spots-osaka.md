@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1476041800959-2f6bb412c8ce?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/japan-rural-03.png
 lede: 週末の予算を気にせず、子連れでも一日楽しめる。大阪市内と近郊から、筆者と編集部で実際に確認した無料（または超低額）のおでかけ先を15カ所厳選しました。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

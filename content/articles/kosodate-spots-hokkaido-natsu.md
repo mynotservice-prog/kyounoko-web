@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?auto=format&fit=crop&w=1920&h=1080&q=85
+hero: /hero/nature-01.png
 lede: 夏の北海道は幼児連れの旅にこそぴったり。本州が猛暑の時期にも25〜28℃の過ごしやすさで、自然体験と街歩きを両立できる10スポットをご紹介します。
 quickInfo:
   ageRanges: ["2-3", "4-6"]
