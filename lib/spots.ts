@@ -93,12 +93,29 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
   ],
   aomori: [
-    { name: '浅虫水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '青森市', note: 'イルカショーとトンネル水槽', budget: 'low' },
-    { name: '青森県営浅虫水族館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '青森市', note: '本州最北の水族館', budget: 'low' },
+    {
+      name: '浅虫水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '青森市', note: 'イルカショーとトンネル水槽', budget: 'low',
+      pricing: { adult: '1,030円', elementary: '510円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '本州最北の水族館、イルカパフォーマンスは1日3回。青森駅から青い森鉄道で20分',
+    },
   ],
   iwate: [
-    { name: '盛岡市動物公園 ZOOMO', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '盛岡市', note: '自然豊かでゾウ・キリンも', budget: 'low' },
-    { name: '岩手県立児童館 いわて子どもの森', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '一戸町', note: '雨の日・冬の屋内遊び場の定番', budget: 'free' },
+    {
+      name: '盛岡市動物公園 ZOOMO', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '盛岡市', note: '自然豊かでゾウ・キリンも', budget: 'low',
+      pricing: { adult: '500円', elementary: '200円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '2023年リニューアルで体験型に進化、盛岡駅からバス35分',
+    },
+    {
+      name: '岩手県立児童館 いわて子どもの森', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '一戸町', note: '雨の日・冬の屋内遊び場の定番', budget: 'free',
+      pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '入館完全無料、大型屋内遊具とアスレチック、雪国の冬に最適',
+    },
   ],
   miyagi: [
     {
@@ -131,15 +148,46 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
   ],
   akita: [
-    { name: '秋田市大森山動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '秋田市', note: 'ゾウ・キリンに近づける設計', budget: 'low' },
-    { name: '男鹿水族館 GAO', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '男鹿市', note: '日本海の大水槽、シロクマも', budget: 'mid' },
+    {
+      name: '秋田市大森山動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '秋田市', note: 'ゾウ・キリンに近づける設計', budget: 'low',
+      pricing: { adult: '730円', elementary: '無料（高校生以下）', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'キリンと近接できる数少ない動物園。秋田駅からバスで25分',
+    },
+    {
+      name: '男鹿水族館 GAO', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '男鹿市', note: '日本海の大水槽、シロクマも', budget: 'mid',
+      pricing: { adult: '1,300円', elementary: '500円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '日本海を望む絶景水族館、ホッキョクグマ「豪太」が人気',
+    },
   ],
   yamagata: [
-    { name: '加茂水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '鶴岡市', note: 'クラゲ展示数世界一、幻想的で静か', budget: 'low' },
+    {
+      name: '加茂水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '鶴岡市', note: 'クラゲ展示数世界一、幻想的で静か', budget: 'low',
+      pricing: { adult: '1,500円', elementary: '750円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'クラゲ展示種類数世界一、ギネス記録、直径5mのクラゲ水槽が圧巻',
+      popular: true,
+    },
   ],
   fukushima: [
-    { name: 'アクアマリンふくしま', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: 'いわき市', note: '海底トンネルと体験型展示が充実', budget: 'mid' },
-    { name: 'スパリゾートハワイアンズ', category: 'amusement', place: 'indoor', ages: ['2-3', '4-6'], city: 'いわき市', note: '年中温水プール、雨天・冬もOK', budget: 'high' },
+    {
+      name: 'アクアマリンふくしま', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: 'いわき市', note: '海底トンネルと体験型展示が充実', budget: 'mid',
+      pricing: { adult: '1,850円', elementary: '900円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'タッチプール、海獣展示、屋外遊び場もあり一日遊べる',
+    },
+    {
+      name: 'スパリゾートハワイアンズ', category: 'amusement', place: 'indoor', ages: ['2-3', '4-6'], city: 'いわき市', note: '年中温水プール、雨天・冬もOK', budget: 'high',
+      pricing: { adult: '3,570円', elementary: '2,250円', preschool: '1,640円（3歳以上）', infant: '無料（2歳以下）' },
+      reservation: 'recommended',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: 'ウォーターパーク「ウォーターパーク パレス」は小さい子向けプールあり、温泉と組み合わせ1泊2日が王道',
+    },
   ],
 
   // ===== 関東（ibaraki/tochigi/gunma は下部に詳細版あり）=====
@@ -307,20 +355,62 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
 
   // ===== 中部 =====
   niigata: [
-    { name: '新潟県立自然科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '新潟市', note: '恐竜ロボット・プラネタリウム', budget: 'low' },
-    { name: 'マリンピア日本海', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '新潟市', note: '日本海側最大級、イルカショー', budget: 'low' },
+    {
+      name: '新潟県立自然科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '新潟市', note: '恐竜ロボット・プラネタリウム', budget: 'low',
+      pricing: { adult: '580円', elementary: '100円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '屋内5フロアと屋外遊具で1日遊べる、雨天の鉄板',
+    },
+    {
+      name: 'マリンピア日本海', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '新潟市', note: '日本海側最大級、イルカショー', budget: 'low',
+      pricing: { adult: '1,500円', elementary: '600円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '日本海側最大級、イルカパフォーマンスは1日3-4回',
+    },
   ],
   toyama: [
-    { name: '魚津水族館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '魚津市', note: '富山湾の深海魚展示', budget: 'low' },
-    { name: 'ミラージュランド', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '魚津市', note: '小規模で0-6歳に丁度良い遊園地', budget: 'low' },
+    {
+      name: '魚津水族館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '魚津市', note: '富山湾の深海魚展示', budget: 'low',
+      pricing: { adult: '1,100円', elementary: '550円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '富山湾特有のホタルイカやミラージュランド隣接',
+    },
+    {
+      name: 'ミラージュランド', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '魚津市', note: '小規模で0-6歳に丁度良い遊園地', budget: 'low',
+      pricing: { adult: '無料（入園）', elementary: '乗り物各300-500円', preschool: '乗り物各300-500円', infant: '無料（一部乗り物）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '入園無料、乗り物のみ別料金。小さい子向けアトラクションが揃う',
+    },
   ],
   ishikawa: [
-    { name: 'のとじま水族館', category: 'aquarium', place: 'mixed', ages: ['2-3', '4-6'], city: '七尾市', note: 'ジンベエザメ展示、能登半島の景色も', budget: 'mid' },
-    { name: '石川県立自然史資料館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '金沢市', note: '化石・動植物標本', budget: 'free' },
+    {
+      name: 'のとじま水族館', category: 'aquarium', place: 'mixed', ages: ['2-3', '4-6'], city: '七尾市', note: 'ジンベエザメ展示、能登半島の景色も', budget: 'mid',
+      pricing: { adult: '1,890円', elementary: '510円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'ジンベエザメが日本海側で唯一見られる水族館、能登和倉温泉と組み合わせ',
+    },
   ],
   fukui: [
-    { name: '福井県立恐竜博物館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '勝山市', note: '国内最大級の恐竜展示、子どもに大人気', budget: 'low' },
-    { name: '越前松島水族館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '坂井市', note: 'イルカにタッチできる', budget: 'mid' },
+    {
+      name: '福井県立恐竜博物館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '勝山市', note: '国内最大級の恐竜展示、子どもに大人気', budget: 'low',
+      pricing: { adult: '1,000円', elementary: '500円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'required',
+      crowdLevel: { weekday: 'mid', holiday: 'high' },
+      hiddenTip: '日時指定の完全予約制、土日は数ヶ月前から埋まる。恐竜ロボットが圧巻',
+      popular: true,
+    },
+    {
+      name: '越前松島水族館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '坂井市', note: 'イルカにタッチできる', budget: 'mid',
+      pricing: { adult: '2,200円', elementary: '1,100円', preschool: '600円（3歳以上）', infant: '無料（2歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'イルカタッチ＆給餌体験（別料金）、東尋坊から車10分',
+    },
   ],
   shizuoka: [
     {
@@ -669,25 +759,78 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
   ],
   nara: [
-    { name: '奈良公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '奈良市', note: '鹿と触れ合える、東大寺と一緒に', budget: 'free' },
-    { name: '生駒山上遊園地', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '生駒市', note: '小さい子向けレトロ遊園地', budget: 'low' },
+    {
+      name: '奈良公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '奈良市', note: '鹿と触れ合える、東大寺と一緒に', budget: 'free',
+      pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'mid', holiday: 'high' },
+      hiddenTip: 'シカせんべい（200円）で餌やり体験、2歳以降に。小さい子は怖がる場合あり距離感注意',
+      popular: true,
+      nearby: '東大寺・興福寺・奈良国立博物館と徒歩圏',
+    },
+    {
+      name: '生駒山上遊園地', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '生駒市', note: '小さい子向けレトロ遊園地', budget: 'low',
+      pricing: { adult: '無料（入園）', elementary: '乗り物各400円', preschool: '乗り物各400円（3歳以上）', infant: '無料（2歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '入園無料、生駒ケーブルで山頂へ。大阪を一望できる絶景遊園地',
+    },
   ],
   wakayama: [
-    { name: 'アドベンチャーワールド', category: 'zoo', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '白浜町', note: 'パンダ・サファリ・遊園地の複合型', budget: 'high' },
-    { name: '和歌山県立自然博物館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '海南市', note: '大水槽と化石展示', budget: 'low' },
+    {
+      name: 'アドベンチャーワールド', category: 'zoo', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '白浜町', note: 'パンダ・サファリ・遊園地の複合型', budget: 'high',
+      pricing: { adult: '5,300円', elementary: '3,300円', preschool: '2,000円（4歳以上）', infant: '無料（3歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'mid', holiday: 'high' },
+      hiddenTip: 'ジャイアントパンダ3頭飼育（全国最多）、動物園＋水族館＋サファリ＋遊園地の複合型',
+      nearby: '白浜温泉と合わせて1-2泊プラン',
+    },
   ],
 
   // ===== 中国・四国 =====
   tottori: [
-    { name: '鳥取砂丘', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '鳥取市', note: '砂遊びの究極形、らくだ体験も', budget: 'free' },
-    { name: '鳥取砂丘こどもの国', category: 'park', place: 'mixed', ages: ['2-3', '4-6'], city: '鳥取市', note: 'アスレチックと体験工房', budget: 'low' },
+    {
+      name: '鳥取砂丘', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '鳥取市', note: '砂遊びの究極形、らくだ体験も', budget: 'free',
+      pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'ラクダ乗車体験（別料金600円〜）、砂の美術館（有料）併設',
+      popular: true,
+      nearby: '砂の美術館＋鳥取砂丘こどもの国で1日コース',
+    },
+    {
+      name: '鳥取砂丘こどもの国', category: 'park', place: 'mixed', ages: ['2-3', '4-6'], city: '鳥取市', note: 'アスレチックと体験工房', budget: 'low',
+      pricing: { adult: '500円', elementary: '200円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '砂丘隣接、大型遊具と屋内プレイエリアの複合',
+    },
   ],
   shimane: [
-    { name: '島根県立しまね海洋館アクアス', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '浜田市', note: 'シロイルカのバブルリングが名物', budget: 'low' },
+    {
+      name: '島根県立しまね海洋館アクアス', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '浜田市', note: 'シロイルカのバブルリングが名物', budget: 'low',
+      pricing: { adult: '1,550円', elementary: '500円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'シロイルカのバブルリングは1日4-5回公演、無料で見られる',
+    },
   ],
   okayama: [
-    { name: 'おもちゃ王国（岡山）', category: 'amusement', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '玉野市', note: 'おもちゃの部屋が多数、0-6歳に最適', budget: 'mid' },
-    { name: '渋川動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '玉野市', note: '動物にエサやり、リーズナブル', budget: 'low' },
+    {
+      name: 'おもちゃ王国（岡山）', category: 'amusement', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '玉野市', note: 'おもちゃの部屋が多数、0-6歳に最適', budget: 'mid',
+      pricing: { adult: '800円（入園）', elementary: '800円', preschool: '800円（2歳以上）', infant: '無料（1歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '室内おもちゃ部屋が11以上、雨天OK、乗り放題パス（3,300円）推奨',
+      popular: true,
+    },
+    {
+      name: '渋川動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '玉野市', note: '動物にエサやり、リーズナブル', budget: 'low',
+      pricing: { adult: '900円', elementary: '400円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '動物との距離が近く、餌やり（100円）が豊富。渋川海岸に近い',
+    },
   ],
   hiroshima: [
     {
@@ -713,15 +856,45 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
   ],
   yamaguchi: [
-    { name: '秋吉台サファリランド', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '美祢市', note: 'マイカーサファリと遊園地', budget: 'mid' },
-    { name: '下関市立しものせき水族館 海響館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '下関市', note: 'フグ展示種類世界一', budget: 'mid' },
+    {
+      name: '秋吉台サファリランド', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '美祢市', note: 'マイカーサファリと遊園地', budget: 'mid',
+      pricing: { adult: '2,700円', elementary: '1,700円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'マイカー入園可（動物たちが間近）、遊園地もあり1日コース',
+    },
+    {
+      name: '下関市立しものせき水族館 海響館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '下関市', note: 'フグ展示種類世界一', budget: 'mid',
+      pricing: { adult: '2,090円', elementary: '940円', preschool: '410円（3歳以上）', infant: '無料（2歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'フグ展示種類世界一、イルカ・アシカショーは1日3回。下関駅から徒歩7分',
+    },
   ],
   tokushima: [
-    { name: '徳島県立あすたむらんど', category: 'park', place: 'mixed', ages: ['2-3', '4-6'], city: '板野町', note: '科学館と大型遊具、無料エリアあり', budget: 'free' },
+    {
+      name: '徳島県立あすたむらんど', category: 'park', place: 'mixed', ages: ['2-3', '4-6'], city: '板野町', note: '科学館と大型遊具、無料エリアあり', budget: 'free',
+      pricing: { adult: '無料（入園）', elementary: '科学館別料金', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '入園完全無料、大型遊具「子ども科学館」（別料金600円）と芝生広場',
+    },
   ],
   kagawa: [
-    { name: 'NEWレオマワールド', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '丸亀市', note: '0-6歳向けアトラクション充実', budget: 'mid' },
-    { name: '四国水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '宇多津町', note: '2020年開業、瀬戸内海の生き物', budget: 'mid' },
+    {
+      name: 'NEWレオマワールド', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '丸亀市', note: '0-6歳向けアトラクション充実', budget: 'mid',
+      pricing: { adult: '1,800円（入園）', elementary: '1,200円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '0-6歳向けアトラクション「ドキドキタウン」が充実、フリーパス4,300円',
+    },
+    {
+      name: '四国水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '宇多津町', note: '2020年開業、瀬戸内海の生き物', budget: 'mid',
+      pricing: { adult: '2,400円', elementary: '1,300円', preschool: '600円（3歳以上）', infant: '無料（2歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: '2020年開業で綺麗、夕方は夕日シルエットの演出が美しい',
+    },
   ],
   ehime: [
     {
@@ -740,8 +913,20 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
   ],
   kochi: [
-    { name: 'のいち動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '香南市', note: '展示のクオリティ高さで評価高い', budget: 'low' },
-    { name: '桂浜水族館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '高知市', note: '小規模だが見せ方が独創的', budget: 'low' },
+    {
+      name: 'のいち動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '香南市', note: '展示のクオリティ高さで評価高い', budget: 'low',
+      pricing: { adult: '470円', elementary: '無料（18歳以下）', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '全国ランキング常連の動物園、展示の質が高く小規模でも見応え十分',
+    },
+    {
+      name: '桂浜水族館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '高知市', note: '小規模だが見せ方が独創的', budget: 'low',
+      pricing: { adult: '1,500円', elementary: '750円', preschool: '400円（3歳以上）', infant: '無料（2歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '桂浜の海辺、レトロな昭和水族館の味わい、坂本龍馬像とセット',
+    },
   ],
 
   // ===== 九州・沖縄 =====
@@ -780,7 +965,20 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
   ],
   saga: [
-    { name: '佐賀県立宇宙科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '武雄市', note: 'プラネタリウムと体験展示', budget: 'low' },
+    {
+      name: '佐賀県立宇宙科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '武雄市', note: 'プラネタリウムと体験展示', budget: 'low',
+      pricing: { adult: '520円', elementary: '310円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'プラネタリウム別料金（大人520円）、武雄温泉と組み合わせ',
+    },
+    {
+      name: '神野公園こども遊園地', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '佐賀市', note: '入園無料の昔ながらの遊園地', budget: 'low',
+      pricing: { adult: '無料（入園）', elementary: '乗り物各150-250円', preschool: '乗り物各150-250円', infant: '無料（一部）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '入園無料、乗り物のみ別料金。懐かしいレトロ遊具',
+    },
   ],
   nagasaki: [
     {
@@ -824,12 +1022,37 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
   ],
   oita: [
-    { name: 'うみたまご', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '大分市', note: 'セイウチショーとタッチプール', budget: 'mid' },
-    { name: '高崎山自然動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '大分市', note: '野生の猿の群れが来る、うみたまご隣接', budget: 'low' },
-    { name: 'ハーモニーランド', category: 'amusement', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '日出町', note: 'サンリオの屋外テーマパーク', budget: 'mid' },
+    {
+      name: 'うみたまご', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '大分市', note: 'セイウチショーとタッチプール', budget: 'mid',
+      pricing: { adult: '2,600円', elementary: '1,300円', preschool: '850円（4歳以上）', infant: '無料（3歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'セイウチとのふれあい、タッチプール、高崎山と隣接で1日コース',
+    },
+    {
+      name: '高崎山自然動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '大分市', note: '野生の猿の群れが来る、うみたまご隣接', budget: 'low',
+      pricing: { adult: '520円', elementary: '260円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '野生の猿1000頭以上が山から下りてくる、エサやりタイム11時/14時',
+      nearby: 'うみたまごと徒歩5分、セットで半日-1日コース',
+    },
+    {
+      name: 'ハーモニーランド', category: 'amusement', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '日出町', note: 'サンリオの屋外テーマパーク', budget: 'mid',
+      pricing: { adult: '3,600円', elementary: '2,600円', preschool: '2,600円（3歳以上）', infant: '無料（2歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: 'サンリオの屋外テーマパーク、小さい子向けアトラクション充実、アフタヌーンパス（昼以降割引）も',
+    },
   ],
   miyazaki: [
-    { name: '宮崎市フェニックス自然動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '宮崎市', note: '遊園地併設、フラミンゴショー', budget: 'low' },
+    {
+      name: '宮崎市フェニックス自然動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '宮崎市', note: '遊園地併設、フラミンゴショー', budget: 'low',
+      pricing: { adult: '840円', elementary: '420円', preschool: '無料（未就学児）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'フラミンゴショーが珍しい、遊園地乗り物も別料金100-400円',
+    },
   ],
   // kagoshima は上部の詳細版を参照
   okinawa: [

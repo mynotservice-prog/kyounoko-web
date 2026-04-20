@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { getPopularSpots, SPOT_CATEGORY_LABEL } from '@/lib/spots';
+import { SPOT_CATEGORY_LABEL } from '@/lib/spots';
+import { getPopularSpotsFromGA4 } from '@/lib/ga4-popularity';
 import { getAreaName } from '@/lib/area';
 
 /**
@@ -11,8 +12,8 @@ import { getAreaName } from '@/lib/area';
  *
  * 将来的に GA4 PV連動に差し替え可能な設計（getPopularSpots の実装を差し替えるだけ）。
  */
-export function PopularSpots() {
-  const picks = getPopularSpots(6);
+export async function PopularSpots() {
+  const picks = await getPopularSpotsFromGA4(6);
   if (picks.length === 0) return null;
 
   return (

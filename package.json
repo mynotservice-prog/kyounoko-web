@@ -11,6 +11,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@google-analytics/data": "^5.2.1",
     "gray-matter": "^4.0.3",
     "microcms-js-sdk": "^3.2.0",
     "next": "^15.0.0",
