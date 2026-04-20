@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 240
 budget: "low"
 area: "all"
-hero: /hero/toddler-play-01.png
+hero: /hero/classroom-03.png
 seoRelated: "undoukai-motimono-list"
 ---
 

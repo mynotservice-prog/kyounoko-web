@@ -6,7 +6,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /hero/baby-02.png
+hero: /hero/stroller-03.png
 area: "all"
 quickInfo:
   ageRanges: ["0-1", "2-3"]

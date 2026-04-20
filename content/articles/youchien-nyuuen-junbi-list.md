@@ -6,7 +6,7 @@ category: gyouji
 categoryName: 季節と行事
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /hero/kid-study-02.png
+hero: /hero/classroom-01.png
 area: "all"
 quickInfo:
   ageRanges: ["2-3", "4-6"]

@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /hero/toddler-play-01.png
+hero: /hero/classroom-03.png
 area: "all"
 quickInfo:
   ageRanges: ["4-6"]

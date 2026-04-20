@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /hero/home-cozy-01.png
+hero: /hero/medical-01.png
 area: "all"
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

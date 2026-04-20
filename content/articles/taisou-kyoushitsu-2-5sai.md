@@ -6,7 +6,7 @@ category: narai
 categoryName: 習い事と学び
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /hero/kid-study-03.png
+hero: /hero/classroom-02.png
 area: "all"
 quickInfo:
   ageRanges: ["2-3", "4-6"]

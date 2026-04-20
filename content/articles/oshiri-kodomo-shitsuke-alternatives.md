@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: /hero/home-cozy-02.png
+hero: /hero/parent-child-02.png
 lede: 「叱らない子育て」を実践したい親向けに、年齢別の声かけパターン10、怒りをコントロールする技法、代替行動の作り方を実用的にまとめました。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

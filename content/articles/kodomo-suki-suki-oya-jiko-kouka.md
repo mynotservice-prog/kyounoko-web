@@ -6,7 +6,7 @@ category: today-mawasu
 categoryName: 今日まわす
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: /hero/family-dinner-01.png
+hero: /hero/parent-child-01.png
 lede: 「子どもの自己肯定感を育てたい」と願うパパママへ。日本の子どもの自己肯定感は世界最低レベル。毎日使える10の魔法の声かけフレーズで、自信を持った子に育てましょう。
 quickInfo:
   ageRanges: ["2-3", "4-6"]

@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /hero/family-dinner-01.png
+hero: /hero/parent-child-01.png
 area: "all"
 quickInfo:
   ageRanges: ["2-3"]

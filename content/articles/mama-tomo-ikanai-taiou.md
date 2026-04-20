@@ -6,7 +6,7 @@ category: today-mawasu
 categoryName: 今日まわす
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: /hero/family-dinner-01.png
+hero: /hero/parent-child-01.png
 lede: 「ママ友ランチが気まずい」「LINEグループが怖い」そんな悩みは多くのママが経験しています。無理せず子育てを楽しむ7つの方法と、距離感のコツを紹介します。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

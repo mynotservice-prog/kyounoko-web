@@ -6,7 +6,7 @@ category: today-mawasu
 categoryName: 今日まわす
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: /hero/family-dinner-01.png
+hero: /hero/parent-child-01.png
 lede: 毎日のように起きる兄弟喧嘩にうんざりしているパパママへ。発達心理の観点から、年齢差別の仲裁法と仲良し兄弟に育つ7つのコツを紹介します。
 quickInfo:
   ageRanges: ["2-3", "4-6"]

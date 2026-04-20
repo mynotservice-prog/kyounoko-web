@@ -6,7 +6,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-04-18
 updatedAt: 2026-04-18
-hero: /hero/food-kitchen-01.png
+hero: /hero/commerce-02.png
 area: "all"
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

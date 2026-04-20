@@ -6,7 +6,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: "2026-04-19"
 updatedAt: "2026-04-19"
-hero: /hero/home-cozy-01.png
+hero: /hero/screen-time-03.png
 lede: スマホ・YouTubeの使い方で悩む親に、WHO推奨時間、0〜6歳の年齢別ルール20、依存を防ぐ仕掛け、ペアレンタルコントロールの設定まで実用的にまとめました。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]
