@@ -4,6 +4,7 @@ import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
 import { TodayFinder } from '@/components/top/TodayFinder';
+import { WeeklyPick } from '@/components/top/WeeklyPick';
 import { getAllFileArticles } from '@/lib/articles';
 import { getTokyoNow, formatJaLong, monthNameEn } from '@/lib/date';
 import { AdSlot } from '@/components/ads/AdSlot';
@@ -111,6 +112,12 @@ export default function HomePage() {
       <div className="container" style={{ marginTop: 12 }}>
         <AdSlot placement="home-below-finder" />
       </div>
+
+      {/* ======================================================================
+          今週のおすすめ（季節の具体スポット）
+          Instagram人気アカウントの「今週末ここ行こう」訴求を転用
+          ====================================================================== */}
+      <WeeklyPick month={month} />
 
       {/* ======================================================================
           今月の季節と行事（時期性がコンセプトと合致するので残す）
