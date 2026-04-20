@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: "2026-04-20"
 updatedAt: "2026-04-20"
-hero: /hero/family-dinner-03.png
+hero: /hero/family-dinner-02.png
 lede: 上野動物園・浅草寺は子連れ観光の定番。帰りのランチは**アトレ上野・エキュート上野**や浅草の大型店を使うと動線がラク。10店を条件別にまとめました。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

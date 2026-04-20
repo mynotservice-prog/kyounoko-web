@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: "2026-04-20"
 updatedAt: "2026-04-20"
-hero: /hero/family-dinner-03.png
+hero: /hero/family-dinner-01.png
 lede: 六本木・麻布は大人の街イメージですが、**東京ミッドタウン・六本木ヒルズ・麻布台ヒルズ**などの大型商業施設は子連れ動線が整っています。10店を条件別にまとめました。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

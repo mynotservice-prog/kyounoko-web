@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: "2026-04-20"
 updatedAt: "2026-04-20"
-hero: /hero/family-dinner-03.png
+hero: /hero/family-dinner-01.png
 lede: 品川駅は新幹線利用者・ビジネス客多めの駅ですが、**アトレ品川・エキュート品川**の駅ビルはベビーカー動線が整い、子連れランチに使える店が揃っています。10店を条件別にまとめました。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]

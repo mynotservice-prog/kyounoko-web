@@ -25,6 +25,7 @@ import { getTagsForArticle } from '@/lib/tags';
 import { FavoriteButton } from '@/components/ui/FavoriteButton';
 import { TriedButton } from '@/components/ui/TriedButton';
 import { SpotList } from '@/components/common/SpotList';
+import { EditorialDisclosure } from '@/components/article/EditorialDisclosure';
 
 export const revalidate = 3600; // 1時間ごとに再生成
 
@@ -652,6 +653,14 @@ function FileArticleView({ article }: { article: FileArticle }) {
             >
               Category · {categoryName}
             </Link>
+
+            {/* PR 開示: ヘッダ最上部に配置してファーストビューで表示（ステマ規制対応） */}
+            {hasAffiliate && (
+              <div style={{ margin: '12px 0 16px' }}>
+                <PRBadge />
+              </div>
+            )}
+
             <h1>{article.title}</h1>
 
             {/* 記事メタ（読了時間・公開日・更新日） */}
@@ -685,9 +694,6 @@ function FileArticleView({ article }: { article: FileArticle }) {
               <TriedButton kind="article" id={article.slug} />
             </div>
           </header>
-
-          {/* PR 開示（該当記事のみ） */}
-          {hasAffiliate && <PRBadge />}
 
           {/* 「今日選ぶなら、これ。」— ランキング/N選/比較記事の断定ブロック */}
           {article.itemList && article.itemList.length > 0 && (
@@ -767,6 +773,11 @@ function FileArticleView({ article }: { article: FileArticle }) {
 
           {/* Mobile TOC */}
           <TableOfContents items={article.toc} variant="mobile" />
+
+          {/* ランキング・比較記事には景表法対応の評価基準開示 */}
+          {(article.slug.includes('ranking') || article.slug.includes('hikaku') || article.title.includes('ランキング') || article.title.includes('比較')) && (
+            <EditorialDisclosure variant="ranking" />
+          )}
 
           {/* Body */}
           <div className="prose" dangerouslySetInnerHTML={{ __html: article.body }} />

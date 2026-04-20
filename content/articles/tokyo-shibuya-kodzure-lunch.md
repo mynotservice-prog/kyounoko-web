@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: "2026-04-20"
 updatedAt: "2026-04-20"
-hero: /hero/family-dinner-03.png
+hero: /hero/family-dinner-01.png
 lede: 渋谷駅は大人向けの店が多いイメージですが、駅ビル・ヒカリエ・スクランブルスクエアなど**子連れ動線の整った商業施設**を使えば安心です。個室・ベビー椅子ありの10店をまとめました。
 quickInfo:
   ageRanges: ["0-1", "2-3", "4-6"]
