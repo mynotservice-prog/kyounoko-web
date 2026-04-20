@@ -1,11 +1,19 @@
 import type { MetadataRoute } from 'next';
+
+/**
+ * Next.js metadata route として出力される /sitemap.xml。
+ * urlset 形式で全URLを1ファイルに集約する（分割版は sitemap-*.xml で配信）。
+ *
+ * 方針: 分割版（sitemap-articles.xml 等）と併存させて、Search Console から
+ * どちらを送っても動くようにしている。
+ */
+
 import { getArticleIds, getCategories } from '@/lib/microcms';
 import { getAllFileArticles } from '@/lib/articles';
 import { getAllTags } from '@/lib/tags';
 
 const BASE = 'https://kyounoko.jp';
 
-// MicroCMS未整備時のフォールバックカテゴリslug
 const FALLBACK_CATEGORY_SLUGS = [
   'today-doko',
   'today-nani',
@@ -17,8 +25,6 @@ const FALLBACK_CATEGORY_SLUGS = [
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  // 静的ページ
-  // 法的ページ等の lastModified は固定日にしておく（毎ビルドで変わると "更新された" と誤認される）
   const legalLastMod = new Date('2026-04-17');
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE, lastModified: new Date(), changeFrequency: 'daily', priority: 1 },
@@ -29,7 +35,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/terms`, lastModified: legalLastMod, changeFrequency: 'yearly', priority: 0.3 },
   ];
 
-  // カテゴリ（MicroCMS優先、なければフォールバック）
   let categorySlugs: string[] = FALLBACK_CATEGORY_SLUGS;
   let categoryLastMod: Record<string, Date> = {};
   try {
@@ -40,9 +45,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         categories.map(c => [c.slug, new Date(c.updatedAt ?? Date.now())])
       );
     }
-  } catch {
-    // フォールバック
-  }
+  } catch {}
+
   const categoryPages: MetadataRoute.Sitemap = categorySlugs.map(slug => ({
     url: `${BASE}/category/${slug}`,
     lastModified: categoryLastMod[slug] ?? new Date(),
@@ -50,9 +54,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  // 記事（MicroCMS + ファイルベース、slugでマージ）
   const articleUrlMap = new Map<string, MetadataRoute.Sitemap[number]>();
-
   try {
     const articles = await getArticleIds();
     for (const article of articles) {
@@ -63,11 +65,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.6,
       });
     }
-  } catch {
-    // MicroCMS 未整備時は無視
-  }
+  } catch {}
 
-  // ファイルベース記事（MicroCMS にない slug のみ追加）
   for (const article of getAllFileArticles()) {
     if (articleUrlMap.has(article.slug)) continue;
     articleUrlMap.set(article.slug, {
@@ -80,7 +79,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const articlePages: MetadataRoute.Sitemap = Array.from(articleUrlMap.values());
 
-  // タグページ
+  // Plans は noindex なのでsitemapから除外（Search Consoleの「noindex除外」を回避）
+
   const tagPages: MetadataRoute.Sitemap = getAllTags().map((t) => ({
     url: `${BASE}/tag/${t.slug}`,
     lastModified: new Date(),

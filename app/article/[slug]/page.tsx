@@ -26,6 +26,7 @@ import { FavoriteButton } from '@/components/ui/FavoriteButton';
 import { TriedButton } from '@/components/ui/TriedButton';
 import { SpotList } from '@/components/common/SpotList';
 import { EditorialDisclosure } from '@/components/article/EditorialDisclosure';
+import { getExtraSchemasForArticle } from '@/lib/article-schema-enhancers';
 
 export const revalidate = 3600; // 1時間ごとに再生成
 
@@ -575,6 +576,9 @@ function FileArticleView({ article }: { article: FileArticle }) {
         }
       : null;
 
+  // 記事タイプ別の追加スキーマ（Recipe / Course / Event）
+  const extraSchemas = getExtraSchemasForArticle(article, articleUrl, heroUrlAbsolute ?? '');
+
   const mobileActive =
     article.category === 'today-doko' ||
     article.category === 'today-nani' ||
@@ -610,6 +614,14 @@ function FileArticleView({ article }: { article: FileArticle }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdItemList) }}
         />
       )}
+      {/* 記事タイプ別の追加スキーマ: Recipe / Course / Event */}
+      {extraSchemas.map((s, i) => (
+        <script
+          key={`extra-schema-${i}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }}
+        />
+      ))}
 
       <SiteHeader currentCategory={article.category as never} />
 
