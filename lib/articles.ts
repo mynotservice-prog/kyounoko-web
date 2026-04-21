@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import remarkHtml from 'remark-html';
+import { injectInternalLinks } from './auto-internal-links';
 import type { AgeRange, Budget, PlaceType, Weather } from './types';
 
 // ==========================================================================
@@ -554,7 +555,8 @@ export async function getFileArticle(slug: string): Promise<FileArticle | null> 
     const howto = extractHowTo(bodyMd);
     const itemList = extractItemList(meta.title, bodyMd);
     const rawHtml = await renderMarkdownToHtml(bodyMd);
-    const { html: bodyHtml, toc } = injectHeadingIdsAndExtractToc(rawHtml);
+    const htmlWithLinks = injectInternalLinks(rawHtml, meta.slug);
+    const { html: bodyHtml, toc } = injectHeadingIdsAndExtractToc(htmlWithLinks);
     const readingTimeMin = estimateReadingTime(bodyMd);
     return {
       ...meta,

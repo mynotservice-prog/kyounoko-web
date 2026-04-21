@@ -991,6 +991,10 @@ input, select { font: inherit; color: inherit; }
   border-bottom-color: var(--clay-deep);
   background: var(--clay-soft);
 }
+/* 自動注入された内部リンクは少し控えめに（手動で書いた文章の一部に見える配慮） */
+.prose a.auto-internal-link {
+  border-bottom: 1px dotted rgba(201, 96, 62, 0.4);
+}
 
 .prose blockquote {
   margin: 1.6em 0;
