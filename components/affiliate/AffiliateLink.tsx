@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { wrapMoshimoRakuten } from '@/lib/moshimo';
+import { wrapAmazonAssociate } from '@/lib/amazon';
 
 export type AffiliateProvider =
   | 'amazon'
@@ -46,9 +47,13 @@ export function AffiliateLink({
 }: AffiliateLinkProps) {
   const providerLabel = PROVIDER_LABELS[provider];
 
-  // 楽天プロバイダの場合、env 設定済みなら自動的にもしも経由URLに変換。
-  // 未設定 or 楽天URL以外なら href をそのまま使う（wrap 関数が no-op で返す）。
-  const finalHref = provider === 'rakuten' ? wrapMoshimoRakuten(href) : href;
+  // provider別にアフィリエイトトラッキングを自動付与:
+  //  - rakuten: もしも経由URL（NEXT_PUBLIC_MOSHIMO_* が設定されていれば）
+  //  - amazon : アソシエイトtag（NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG が設定されていれば）
+  // env 未設定 or 対象ドメイン外なら wrap関数は元URLをそのまま返す（no-op）。
+  let finalHref = href;
+  if (provider === 'rakuten') finalHref = wrapMoshimoRakuten(href);
+  else if (provider === 'amazon') finalHref = wrapAmazonAssociate(href);
 
   return (
     <a
