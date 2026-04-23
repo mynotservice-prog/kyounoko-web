@@ -2,15 +2,27 @@
  * 記事のカテゴリ/slug/タイトル から、追加の Schema.org JSON-LD を生成する。
  *
  * 既存の Article + BreadcrumbList + FAQ + HowTo + ItemList に加えて、
- * 記事タイプ別の特化スキーマ（Recipe, Product, Course, Event）を付与することで
+ * 記事タイプ別の特化スキーマ（Recipe, Course）を付与することで
  * リッチリザルト（検索結果での画像・評価・所要時間表示）と
  * AI検索の引用精度（ChatGPT / Perplexity 等）を向上させる。
  *
  * 付与ロジック:
- * - Recipe: 朝食・幼児食・お弁当・作り置き等の食事系記事
+ * - Recipe: 朝食・幼児食・お弁当・作り置き等の食事系記事で、かつ HowTo と 所要時間 が揃っているもの
  * - Course: 習い事・通信教育等の教育系記事
- * - Event: 桜・ハロウィン・クリスマス・七五三等の季節行事
- * - Product: 単一商品レビュー/紹介記事（ランキングは ItemList を既に使用）
+ *
+ * ## Event スキーマを使わない理由
+ * 当サイトの季節行事記事（七五三・ハロウィン等）は「情報ガイド」であって、
+ * 特定日時に特定場所で開催される Event ではない。
+ * Event スキーマは startDate と 適切な location（Place/PostalAddress）が必須のため、
+ * 情報記事に無理に付与するとSearch Consoleで重大エラーになる。
+ *
+ * ## Recipe スキーマの条件
+ * Google の Recipe リッチリザルト要件（recipeInstructions 推奨・prepTime/totalTime 推奨）を
+ * 満たすため、以下が揃っている場合のみ付与:
+ * - article.howto（3ステップ以上）→ recipeInstructions
+ * - article.quickInfo.durationMin → totalTime / prepTime / cookTime
+ *
+ * 条件未達の記事には Recipe スキーマを付与せず、通常の Article スキーマのみに留める。
  */
 
 import type { FileArticle } from './articles';
@@ -34,15 +46,6 @@ const COURSE_SLUG_PATTERNS = [
   /kumon|gakken|shichida|tsuushin|chiku/,
   /swimming|soccer|yakyu|taisou|sports|piano/,
   /eigo|programming|chiiku/,
-  /shichigosan-narai/,  // not actually a 習い事
-];
-
-/** イベント系 */
-const EVENT_SLUG_PATTERNS = [
-  /hanami|sakura|ohanami/,
-  /halloween|hanabi|oshougatsu|natsumatsuri|hinamatsuri|tanabata|kodomonohi|setsubun|shichigosan/,
-  /xmas|christmas|kurisumasu/,
-  /undoukai/,
 ];
 
 function matchesAny(s: string, patterns: RegExp[]): boolean {
@@ -51,8 +54,22 @@ function matchesAny(s: string, patterns: RegExp[]): boolean {
 
 type Schema = Record<string, unknown>;
 
-/** Recipe schema（レシピ記事用）*/
+/**
+ * Recipe schema（レシピ記事用）
+ * Google Search Console の Recipe リッチリザルト重大エラーを回避するため、
+ * recipeInstructions（howto） と 所要時間（durationMin）が両方揃っている場合のみ付与。
+ */
 function buildRecipe(article: FileArticle, url: string, imageUrl: string): Schema | null {
+  const hasSteps = !!article.howto && article.howto.length >= 3;
+  const hasDuration = !!article.quickInfo?.durationMin;
+
+  // 必須フィールドが揃わない記事には Recipe スキーマを付与しない
+  if (!hasSteps || !hasDuration) {
+    return null;
+  }
+
+  const durationMin = article.quickInfo!.durationMin!;
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Recipe',
@@ -61,25 +78,18 @@ function buildRecipe(article: FileArticle, url: string, imageUrl: string): Schem
     image: imageUrl,
     author: { '@type': 'Person', name: 'ながみー' },
     datePublished: article.publishedAt,
-    // 所要時間（分）を PT{N}M で
-    ...(article.quickInfo?.durationMin && {
-      totalTime: `PT${article.quickInfo.durationMin}M`,
-      prepTime: `PT${Math.floor(article.quickInfo.durationMin * 0.3)}M`,
-      cookTime: `PT${Math.floor(article.quickInfo.durationMin * 0.7)}M`,
-    }),
+    totalTime: `PT${durationMin}M`,
+    prepTime: `PT${Math.max(1, Math.floor(durationMin * 0.3))}M`,
+    cookTime: `PT${Math.max(1, Math.floor(durationMin * 0.7))}M`,
     recipeCategory: '子ども向け料理',
     recipeCuisine: '和食',
     keywords: '幼児食,子ども,時短,ベビー',
-    // 材料はHowToから抜くと量が多すぎるので省略（HowToに任せる）
-    ...(article.howto && article.howto.length >= 3 && {
-      recipeInstructions: article.howto.map((s, i) => ({
-        '@type': 'HowToStep',
-        position: i + 1,
-        name: s.name,
-        text: s.text,
-      })),
-    }),
-    // 子ども向けなので recipeYield は1-2人分
+    recipeInstructions: article.howto!.map((s, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+    })),
     recipeYield: '1-2人分（親子）',
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
   };
@@ -104,28 +114,10 @@ function buildCourse(article: FileArticle, url: string, imageUrl: string): Schem
   };
 }
 
-/** Event schema（季節行事記事用）*/
-function buildEvent(article: FileArticle, url: string, imageUrl: string): Schema | null {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Event',
-    name: article.title,
-    description: article.tldr ?? article.metaDescription,
-    image: imageUrl,
-    organizer: { '@type': 'Organization', name: 'きょうのこ編集部' },
-    eventStatus: 'https://schema.org/EventScheduled',
-    // 日時は記事自体が「情報ガイド」なので実際の年の開催日は記事内で明記している前提
-    // 発生年を仮置きしないようにここでは startDate を省略
-    location: {
-      '@type': 'VirtualLocation',
-      url: url,
-    },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-  };
-}
-
 /**
  * 記事に応じて追加スキーマを返す。該当しなければ空配列。
+ *
+ * Event スキーマは意図的に含めない（情報ガイド記事は Event ではない）。
  */
 export function getExtraSchemasForArticle(
   article: FileArticle,
@@ -138,7 +130,6 @@ export function getExtraSchemasForArticle(
   // カテゴリでの優先判定
   const isFood = article.category === 'today-taberu';
   const isNarai = article.category === 'narai';
-  const isEvent = article.category === 'gyouji';
 
   if (isFood || matchesAny(slug, RECIPE_SLUG_PATTERNS)) {
     const s = buildRecipe(article, url, imageUrl);
@@ -146,10 +137,6 @@ export function getExtraSchemasForArticle(
   }
   if (isNarai || matchesAny(slug, COURSE_SLUG_PATTERNS)) {
     const s = buildCourse(article, url, imageUrl);
-    if (s) schemas.push(s);
-  }
-  if (isEvent || matchesAny(slug, EVENT_SLUG_PATTERNS)) {
-    const s = buildEvent(article, url, imageUrl);
     if (s) schemas.push(s);
   }
 
