@@ -329,16 +329,8 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     price: '1食 ¥599〜',
     articleSlug: 'takushoku-service-hikaku-3sha',
   },
-  {
-    id: 'ts-mitsuboshi',
-    category: 'takushoku',
-    provider: 'moshimo',
-    href: 'https://mitsuboshi-farm.jp/',
-    name: '三ツ星ファーム',
-    subtitle: '一流シェフ監修・おかずのみの冷凍デリ',
-    price: '1食 ¥626〜',
-    articleSlug: 'takushoku-service-hikaku-3sha',
-  },
+  // NOTE: ts-mitsuboshi (三ツ星ファーム) は もしも未承認 + 素URLで遷移不可のため削除。
+  // もしも経由で承認され次第、正規のアフィリエイトURLで再追加する。
   {
     id: 'ts-tsurukame',
     category: 'takushoku',
@@ -431,16 +423,8 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     price: '月額 ¥2,460〜',
     articleSlug: 'ehon-yomikikase-kotsu',
   },
-  {
-    id: 'eh-fukuinkan',
-    category: 'ehon',
-    provider: 'moshimo',
-    href: 'https://www.fukuinkan.co.jp/goods_magazine.php',
-    name: '福音館書店 月刊絵本',
-    subtitle: '「こどものとも」「かがくのとも」など定期購読',
-    price: '月額 ¥440〜',
-    articleSlug: 'ehon-yomikikase-kotsu',
-  },
+  // NOTE: eh-fukuinkan (福音館書店 月刊絵本) は リンク先404 + もしも未承認で遷移不可のため削除。
+  // 正規URLかアフィリエイト承認URLが取得でき次第、再追加する。
   {
     id: 'eh-ehonnavi',
     category: 'ehon',
