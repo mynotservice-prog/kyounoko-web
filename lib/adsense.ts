@@ -4,7 +4,11 @@
  * Publisher ID は公開情報なので、コードにデフォルト値として埋め込む。
  * Vercel env NEXT_PUBLIC_ADSENSE_PUB_ID で上書き可能。
  *
- * 現在の状態: AdSense 審査中（ads.txt/meta/script 配信で審査通過を待つ）
+ * ## 表示制御
+ * - ads.txt / meta / pub-id は常に配信（AdSense 審査用）
+ * - 広告スロット（<ins>）とスクリプト読み込みは ADSENSE_ENABLED が true のときのみ表示
+ * - 審査通過前は env `NEXT_PUBLIC_ADSENSE_ENABLED=true` を設定しない限り非表示
+ *   → 空の「広告」ラベルだけが残るUX劣化を防ぐ
  */
 
 const DEFAULT_PUB_ID = 'pub-4445473825791494';
@@ -20,5 +24,10 @@ export const ADSENSE_PUB_ID: string = raw.startsWith('ca-') ? raw.slice(3) : raw
 /** スクリプトの src URL。 */
 export const ADSENSE_SCRIPT_SRC: string = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`;
 
-/** AdSense が有効化されているかのフラグ（常に true、コンポーネント側の条件分岐互換用）。 */
-export const ADSENSE_ENABLED = true;
+/**
+ * AdSense 広告を実際にレンダリングするかどうか。
+ * 審査通過後に Vercel env `NEXT_PUBLIC_ADSENSE_ENABLED=true` を設定することで有効化。
+ * デフォルト false（広告枠は非表示）。
+ */
+export const ADSENSE_ENABLED: boolean =
+  process.env.NEXT_PUBLIC_ADSENSE_ENABLED?.trim().toLowerCase() === 'true';

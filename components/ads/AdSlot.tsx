@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ADSENSE_CLIENT } from '@/lib/adsense';
+import { ADSENSE_CLIENT, ADSENSE_ENABLED } from '@/lib/adsense';
 
 /**
  * AdSense 広告スロット。
@@ -35,6 +35,10 @@ export function AdSlot({
   format?: 'auto' | 'fluid' | 'rectangle';
   style?: React.CSSProperties;
 }) {
+  // AdSense 審査通過前は広告枠自体を非表示にする（空の「広告」ラベルだけ残るのを防ぐ）。
+  // env `NEXT_PUBLIC_ADSENSE_ENABLED=true` を設定すると表示に切り替わる。
+  if (!ADSENSE_ENABLED) return null;
+
   const slot = SLOT_IDS[placement];
 
   return (
