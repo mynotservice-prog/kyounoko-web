@@ -319,16 +319,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
   // ========================================================================
   // 冷凍宅食（3）
   // ========================================================================
-  {
-    id: 'ts-nosh',
-    category: 'takushoku',
-    provider: 'a8',
-    href: 'https://nosh.jp/',
-    name: 'nosh（ナッシュ）',
-    subtitle: '糖質30g・塩分2.5g以下の冷凍弁当。メニュー80種以上',
-    price: '1食 ¥599〜',
-    articleSlug: 'takushoku-service-hikaku-3sha',
-  },
+  // NOTE: ts-nosh は アフィ未承認のため削除（提携承認後に再追加）
   // NOTE: ts-mitsuboshi (三ツ星ファーム) は もしも未承認 + 素URLで遷移不可のため削除。
   // もしも経由で承認され次第、正規のアフィリエイトURLで再追加する。
   {
@@ -411,29 +402,38 @@ export const CATALOG_ITEMS: CatalogItem[] = [
   },
 
   // ========================================================================
-  // 絵本・読み聞かせ ehon（3）— 新規
+  // 絵本・読み聞かせ ehon（3）— 楽天で買える定番絵本セット（楽天プロモ提携済）
+  // 旧 eh-challenge-ehon / eh-ehonnavi / eh-fukuinkan は アフィ未承認のため代替商品で置換
   // ========================================================================
   {
-    id: 'eh-challenge-ehon',
+    id: 'eh-guritogura-set',
     category: 'ehon',
-    provider: 'a8',
-    href: 'https://www2.shimajiro.co.jp/',
-    name: 'こどもちゃれんじ 絵本',
-    subtitle: '月齢に合わせた絵本+付録。初めての知育にも',
-    price: '月額 ¥2,460〜',
+    provider: 'rakuten',
+    href: 'https://search.rakuten.co.jp/search/mall/%E3%81%90%E3%82%8A%E3%81%A8%E3%81%90%E3%82%89+%E7%B5%B5%E6%9C%AC+%E3%82%BB%E3%83%83%E3%83%88/',
+    name: 'ぐりとぐら 絵本セット',
+    subtitle: '0歳〜幼児期の鉄板。世代を超えて愛される福音館書店の名作',
+    price: '¥3,000〜',
     articleSlug: 'ehon-yomikikase-kotsu',
   },
-  // NOTE: eh-fukuinkan (福音館書店 月刊絵本) は リンク先404 + もしも未承認で遷移不可のため削除。
-  // 正規URLかアフィリエイト承認URLが取得でき次第、再追加する。
   {
-    id: 'eh-ehonnavi',
+    id: 'eh-bestseller-0-3',
     category: 'ehon',
-    provider: 'a8',
-    href: 'https://www.ehonnavi.net/',
-    name: '絵本ナビ プレミアム',
-    subtitle: '人気絵本が全ページ試し読み。年齢別に探せる',
-    price: '月額 ¥580〜',
-    articleSlug: 'seal-book-ranking',
+    provider: 'rakuten',
+    href: 'https://search.rakuten.co.jp/search/mall/%E7%B5%B5%E6%9C%AC+0%E6%AD%B3+1%E6%AD%B3+2%E6%AD%B3+3%E6%AD%B3+%E3%82%BB%E3%83%83%E3%83%88+%E3%83%99%E3%82%B9%E3%83%88%E3%82%BB%E3%83%A9%E3%83%BC/',
+    name: '0〜3歳の絵本ベストセラーセット',
+    subtitle: 'いないいないばあ・しろくまちゃんのほっとけーき等、定番セット',
+    price: '¥2,000〜',
+    articleSlug: 'ehon-yomikikase-kotsu',
+  },
+  {
+    id: 'eh-mikke-search',
+    category: 'ehon',
+    provider: 'rakuten',
+    href: 'https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%83%E3%82%B1+%E7%B5%B5%E6%9C%AC+%E5%AD%A6%E7%A0%94/',
+    name: 'ミッケ！シリーズ（学研）',
+    subtitle: '4-6歳に人気の探し絵絵本。集中力を引き出す定番',
+    price: '¥1,300〜',
+    articleSlug: 'ehon-yomikikase-kotsu',
   },
 ];
 

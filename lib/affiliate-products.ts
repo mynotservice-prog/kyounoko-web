@@ -211,15 +211,7 @@ const PRODUCTS: AffiliateProduct[] = [
   // =======================================================================
   // 宅食サービス比較3社
   // =======================================================================
-  {
-    id: 'ts-nosh',
-    slug: 'takushoku-service-hikaku-3sha',
-    provider: 'a8',
-    href: 'https://nosh.jp/',
-    title: 'nosh（ナッシュ）',
-    subtitle: '糖質30g・塩分2.5g以下の冷凍弁当。メニュー80種以上',
-    price: '1食 ¥599〜',
-  },
+  // NOTE: ts-nosh はアフィ未承認のため削除
   // NOTE: ts-mitsuboshi (三ツ星ファーム) は もしも未承認 + 素URLで遷移不可のため削除。
 
   {
