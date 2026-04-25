@@ -1,11 +1,11 @@
 ---
 slug: oshiri-kodomo-shitsuke-alternatives
-title: 叱らない子育ての具体手法｜0〜6歳の声かけ10パターンと代替行動
-metaDescription: 叱らない子育てを実践したい親のために、年齢別の声かけパターン10、怒りをコントロールする親の技法、効果的な代替行動を具体例とともに解説します。
+title: 叱らない子育て【0-6歳】声かけ10パターン・代替行動
+metaDescription: 子を怒鳴ってしまい後悔していませんか。0-6歳の叱らない子育てを、年齢別の声かけ10パターン、怒りをコントロールする親の技法、代替行動の作り方で整理。具体フレーズと実例つきで、今日から試せます。
 category: today-nani
 categoryName: 今日何する？
 publishedAt: "2026-04-19"
-updatedAt: "2026-04-19"
+updatedAt: "2026-04-25"
 hero: /hero/parent-child-02.png
 lede: 「叱らない子育て」を実践したい親向けに、年齢別の声かけパターン10、怒りをコントロールする技法、代替行動の作り方を実用的にまとめました。
 quickInfo:

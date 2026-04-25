@@ -1,11 +1,11 @@
 ---
 slug: xmas-present-nenrei-0-6
-title: クリスマスプレゼント選び｜0〜6歳年齢別おすすめ30選
-metaDescription: 0〜6歳のクリスマスプレゼントを年齢別に30選。ブロック・絵本・知育玩具・楽器・乗り物を予算別に紹介。祖父母との調整法もまとめ。
+title: クリスマスプレゼント30選【0-6歳】年齢別・予算別
+metaDescription: クリスマスプレゼント選びで何を買うか迷っていませんか。0-6歳の年齢別おすすめ30選を、ブロック・絵本・知育玩具・楽器・乗り物の5ジャンル別に整理。予算別ランキング、祖父母との重複調整、飽きない工夫まで3分で確認できます。
 category: gyouji
 categoryName: 季節と行事
 publishedAt: 2026-04-18
-updatedAt: 2026-04-18
+updatedAt: 2026-04-25
 hero: /hero/winter-snow-03.png
 area: "all"
 quickInfo:

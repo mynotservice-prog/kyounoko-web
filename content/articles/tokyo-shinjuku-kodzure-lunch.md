@@ -1,11 +1,11 @@
 ---
 slug: tokyo-shinjuku-kodzure-lunch
-title: 新宿駅周辺 子連れランチ10選（ベビーカー入店OK中心）
-metaDescription: 新宿駅徒歩5分圏内の子連れOKランチ10選。ベビーカー入店可・キッズメニュー・個室など条件別にセレクト。0〜6歳の子と楽しくランチ。
+title: 新宿 子連れランチ10選【0-6歳】ベビーカーOK店
+metaDescription: 新宿駅で子連れランチの店探しに困っていませんか。徒歩5分圏内のベビーカー入店OK・キッズメニュー・個室対応店を10店厳選。年齢別おすすめ、混雑時間、ベビーカー動線まで整理し、当日でも迷わず予約できます。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: "2026-04-20"
-updatedAt: "2026-04-20"
+updatedAt: "2026-04-25"
 hero: /hero/family-dinner-01.png
 lede: 新宿駅周辺で子連れランチの店選びは難しい…。ベビーカーごと入れる店、キッズメニューがある店、個室がある店を条件別に10選集めました。駅ビル中心に動線を組むと、0〜6歳連れでも迷いません。
 quickInfo:

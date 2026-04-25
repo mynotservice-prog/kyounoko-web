@@ -1,11 +1,11 @@
 ---
 slug: baby-senzai-ranking
-title: ベビー用洗剤・柔軟剤ランキング6品｜新生児〜6歳の肌荒れしない選び方
-metaDescription: 新生児〜6歳向けの洗濯洗剤・柔軟剤6品（アラウ、さらさ、ピジョン、ミッフィー等）を蛍光剤・香り・価格・詰め替えで比較。大人と一緒に洗うか別かの判断基準も解説。
+title: ベビー洗剤ランキング6選【新生児-6歳】肌荒れ対策
+metaDescription: 赤ちゃんの肌荒れに悩んでいませんか。新生児-6歳向け洗剤・柔軟剤6品をアラウ・さらさ・ピジョン・ミッフィー等で比較表に整理。蛍光剤の有無、香り、詰め替え価格、大人と一緒に洗える判断基準まで3分で確認できます。
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-04-18
-updatedAt: 2026-04-18
+updatedAt: 2026-04-25
 hero: /hero/bath-02.png
 area: "all"
 quickInfo:

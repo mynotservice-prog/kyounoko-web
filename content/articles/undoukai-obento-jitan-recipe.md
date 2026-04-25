@@ -1,11 +1,11 @@
 ---
 slug: undoukai-obento-jitan-recipe
-title: 運動会のお弁当｜時短・見映え・子が食べるレシピ8つ
-metaDescription: 運動会のお弁当を時短・見映え・子が食べるの3軸で両立する8レシピを、前夜仕込み・冷凍活用・見映えテクつきで解説。保冷バッグ・持ち運び・家族分の量まで整理します。
+title: 運動会お弁当8レシピ【2-6歳】時短と見映え両立
+metaDescription: 運動会のお弁当作りで朝3時起きしていませんか。時短・見映え・子が食べるの3軸を両立する8レシピを、前夜仕込み・冷凍活用・色バランスのテクで整理。保冷バッグ、持ち運び、家族分の量まで3分で確認でき、当日の朝が楽になります。
 category: gyouji
 categoryName: 季節と行事
 publishedAt: 2026-04-18
-updatedAt: 2026-04-18
+updatedAt: 2026-04-25
 hero: /hero/food-japan-02.png
 area: "all"
 quickInfo:

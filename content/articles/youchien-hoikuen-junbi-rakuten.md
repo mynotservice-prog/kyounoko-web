@@ -1,11 +1,11 @@
 ---
 slug: youchien-hoikuen-junbi-rakuten
-title: 楽天で揃える幼稚園・保育園入園グッズ20選【2026年入園版】
-metaDescription: 幼稚園・保育園の入園準備で必要な通園バッグ・上履き・水筒・お弁当箱・コップ袋など20品を楽天で効率的に揃えるリスト。名前付けグッズや防災頭巾カバーなどニッチ品まで網羅します。
+title: 楽天 入園グッズ20選【2026年入園】幼稚園・保育園
+metaDescription: 入園準備で買い忘れていませんか。通園バッグ・上履き・水筒・お弁当箱・コップ袋など20品を楽天で効率的に揃えるリスト。名前付けグッズや防災頭巾カバーまで網羅し、買う順番とポイント還元のコツで迷わず準備できます。
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-04-24'
-updatedAt: '2026-04-24'
+updatedAt: '2026-04-25'
 hero: /hero/classroom-01.png
 area: national
 quickInfo:

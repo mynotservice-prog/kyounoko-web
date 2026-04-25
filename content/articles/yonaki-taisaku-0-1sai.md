@@ -1,11 +1,11 @@
 ---
 slug: yonaki-taisaku-0-1sai
-title: 夜泣き対策｜0〜1歳の夜泣きを軽減する5つの方法
-metaDescription: 0〜1歳の夜泣きを軽減する5つの方法。生活リズム、寝室環境、授乳・ミルク、抱っこvsトントン、ネントレの具体手順と、月齢別の特徴、親の仮眠術を解説します。
+title: 夜泣き対策【0-1歳】軽減する5つの方法・親もラク
+metaDescription: 夜泣きで親も限界になっていませんか。0-1歳の夜泣きを軽減する5つの方法を、生活リズム・寝室環境・授乳・抱っこvsトントン・ネントレの手順で整理。月齢別の特徴、親の仮眠術まで3分で確認でき、今夜から試せます。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-04-18
-updatedAt: 2026-04-18
+updatedAt: 2026-04-25
 hero: /hero/autumn-01.png
 area: "all"
 quickInfo:

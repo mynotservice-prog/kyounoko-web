@@ -1,12 +1,12 @@
 ---
 slug: shichigosan-nenrei-junbi
-title: 七五三の年齢別準備（3歳・5歳・7歳）
+title: 七五三 準備ガイド【3歳・5歳・7歳】予算3-20万円
 subtitle: 服装・神社・撮影・食事会まで、歳ごとの段取りを整理
-metaDescription: 3歳・5歳・7歳の七五三準備ガイド。意味・服装・神社選び・写真撮影・食事会の段取り、着物レンタルvs購入、予算相場（3〜20万円）を年齢別にまとめました。
+metaDescription: 七五三の準備で何から始めるか迷っていませんか。3歳・5歳・7歳それぞれの服装・神社選び・写真撮影・食事会の段取りを年齢別に整理。着物レンタルvs購入、予算相場3-20万円、当日の流れまで3分で確認でき、迷わず計画できます。
 category: gyouji
 categoryName: 季節と行事
 publishedAt: 2026-04-18
-updatedAt: 2026-04-18
+updatedAt: 2026-04-25
 hero: /hero/autumn-03.png
 area: "all"
 quickInfo:

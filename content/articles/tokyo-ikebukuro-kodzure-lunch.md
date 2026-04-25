@@ -1,11 +1,11 @@
 ---
 slug: tokyo-ikebukuro-kodzure-lunch
-title: 池袋駅周辺 子連れランチ10選（サンシャイン直結多数）
-metaDescription: 池袋駅徒歩圏内の子連れOKランチ10選。サンシャインシティ・ルミネ池袋・西武東武など駅ビル中心にセレクト。0〜6歳連れでも安心。
+title: 池袋 子連れランチ10選【0-6歳】サンシャイン直結
+metaDescription: 池袋で子連れランチの店探しに困っていませんか。サンシャインシティ・ルミネ池袋・西武・東武など駅ビルの10店をベビーカーOK・キッズメニュー条件で厳選。サンシャイン水族館やナンジャタウン帰りの動線まで3分で確認できます。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: "2026-04-20"
-updatedAt: "2026-04-24"
+updatedAt: "2026-04-25"
 hero: /hero/family-dinner-03.png
 lede: 池袋駅はサンシャインシティ・西武・東武・ルミネ・エソラと**駅ビルが多く子連れ動線が強い**エリア。サンシャイン水族館・ナンジャタウン帰りにも使える10店をまとめました。
 quickInfo:

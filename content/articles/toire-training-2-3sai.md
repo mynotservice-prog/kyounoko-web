@@ -1,11 +1,11 @@
 ---
 slug: toire-training-2-3sai
-title: トイレトレーニング進め方｜2〜3歳が1ヶ月で外れる5ステップ
-metaDescription: 2〜3歳のトイレトレーニングを1ヶ月で完了する5ステップ。時期の見極め、必要な道具、失敗時の対処、保育園との連携、夜のオムツ外しまでを解説します。
+title: トイトレ進め方【2-3歳】1ヶ月で外れる5ステップ
+metaDescription: トイトレでイライラが続いていませんか。2-3歳のトイレトレーニングを1ヶ月で進める5ステップを、開始時期の見極め、道具リスト、失敗時の対処、保育園との連携、夜オムツ外しまで整理。3分で迷わず始められます。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-04-18
-updatedAt: 2026-04-18
+updatedAt: 2026-04-25
 hero: /hero/toddler-play-01.png
 area: "all"
 quickInfo:

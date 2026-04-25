@@ -1,11 +1,11 @@
 ---
 slug: tokyo-ueno-kodzure-lunch
-title: 上野・浅草エリア 子連れランチ10選（動物園帰りに）
-metaDescription: 上野・浅草の子連れランチ10選。上野動物園・浅草寺帰りに寄れるベビーカーOK・キッズメニュー対応の店を条件別に厳選。
+title: 上野・浅草 子連れランチ10選【0-6歳】動物園帰りOK
+metaDescription: 上野動物園や浅草寺の帰りに子連れランチの店探しで困っていませんか。アトレ上野・エキュート上野・浅草の大型店から、ベビーカーOK・キッズメニュー対応10店を厳選。観光動線、混雑時間まで整理し迷わず選べます。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: "2026-04-20"
-updatedAt: "2026-04-24"
+updatedAt: "2026-04-25"
 hero: /hero/family-dinner-02.png
 lede: 上野動物園・浅草寺は子連れ観光の定番。帰りのランチは**アトレ上野・エキュート上野**や浅草の大型店を使うと動線がラク。10店を条件別にまとめました。
 quickInfo:

@@ -1,11 +1,11 @@
 ---
 slug: 3sai-shoushoku-taisaku
-title: 3歳の小食対策｜食べない子が食べるようになる5ステップ
-metaDescription: 3歳前後の小食・偏食に悩む親向け。原因別の対処と、無理強いせずに食べる量が増える5ステップ。相談すべきタイミング、実際に食べるレシピ例も紹介します。
+title: 3歳の小食・偏食 5ステップ【食べない子】量が増える
+metaDescription: 3歳が全然食べず栄養が心配ですよね。小食・偏食の原因別対処と、無理強いせず食べる量が増える5ステップを整理。相談すべきタイミング、実際に食べるレシピ例、親のNG行動まで3分で確認でき、今夜から試せます。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: 2026-04-18
-updatedAt: 2026-04-18
+updatedAt: 2026-04-25
 hero: /hero/family-dinner-02.png
 area: "all"
 quickInfo:

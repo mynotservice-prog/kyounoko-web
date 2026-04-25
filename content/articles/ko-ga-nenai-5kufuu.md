@@ -1,12 +1,12 @@
 ---
 slug: ko-ga-nenai-5kufuu
-title: 子が寝ない時の対処法：入眠がスムーズになる5つの工夫
+title: 子が寝ない【1-6歳】寝かしつけ30分短縮 5つの工夫
 subtitle: 環境・運動量・儀式の3軸で寝付きを変える
-metaDescription: 寝付きが悪い1〜6歳向け、入眠がスムーズになる5つの工夫。環境調整・日中の運動量・入眠儀式・ルーティン・NGパターンと年齢別睡眠時間目安。
+metaDescription: 寝かしつけに1時間以上かかっていませんか。1-6歳の入眠がスムーズになる5つの工夫を環境・日中の運動量・入眠儀式の3軸で整理。NGパターン、年齢別睡眠時間の目安、実例フレーズまで3分で確認でき、今夜から試せます。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-04-18
-updatedAt: 2026-04-18
+updatedAt: 2026-04-25
 hero: /hero/sleeping-03.png
 area: "all"
 quickInfo:

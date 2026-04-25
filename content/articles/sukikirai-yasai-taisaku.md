@@ -1,11 +1,11 @@
 ---
 slug: sukikirai-yasai-taisaku
-title: 幼児の好き嫌い対策：食べない野菜を食べさせる5パターン
-metaDescription: 2〜6歳の野菜嫌い対策5パターン。みじん切り混ぜ込み・甘い味付け・形変え・選ばせる・栽培。ピーマン・なす・きのこ・ほうれん草・トマト別の具体テクも紹介。
+title: 野菜嫌い対策5パターン【2-6歳】食べない子が完食
+metaDescription: 子が野菜を全く食べず困っていませんか。2-6歳の野菜嫌い対策5パターンを、みじん切り混ぜ込み・甘い味付け・形変え・選ばせる・栽培で整理。ピーマン・なす・きのこ・ほうれん草・トマト別の具体テクで今夜から実践できます。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: 2026-04-18
-updatedAt: 2026-04-18
+updatedAt: 2026-04-25
 hero: /hero/food-fruit-02.png
 area: "all"
 quickInfo:

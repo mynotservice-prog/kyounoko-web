@@ -1,11 +1,11 @@
 ---
 slug: seal-book-ranking
-title: シールブックおすすめランキング｜集中する5選（外出先でも使える）
-metaDescription: 1〜5歳向けのシールブック5選を、無印良品・ダイソー・セリア・KUMON・学研で比較。対象年齢・シール量・再剥離性・価格を整理し、外食・病院待ち・電車での活用シーンも紹介します。
+title: シールブックおすすめ5選【1-5歳】外出先で集中する定番
+metaDescription: 外食や病院待ちで子がぐずりませんか。1-5歳向けシールブック5冊を無印・ダイソー・セリア・KUMON・学研で比較。対象年齢、シール量、再剥離性、価格を表で整理。電車移動も乗り切れる選び方を3分で確認できます。
 category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-04-18
-updatedAt: 2026-04-18
+updatedAt: 2026-04-25
 hero: /hero/toddler-play-03.png
 area: "all"
 quickInfo:

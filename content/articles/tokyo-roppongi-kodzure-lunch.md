@@ -1,11 +1,11 @@
 ---
 slug: tokyo-roppongi-kodzure-lunch
-title: 六本木・麻布 子連れランチ10選（ミッドタウン中心）
-metaDescription: 六本木・麻布の子連れランチ10選。東京ミッドタウン・六本木ヒルズ・麻布台ヒルズ中心に、ベビーカーOK・個室対応店を厳選。
+title: 六本木・麻布 子連れランチ10選【0-6歳】ヒルズ周辺
+metaDescription: 六本木・麻布で子連れOKの店が見つからず困っていませんか。東京ミッドタウン・六本木ヒルズ・麻布台ヒルズのベビーカー入店OK・個室対応店10店を厳選。年齢別おすすめ、平日／週末の動線まで整理し迷わず選べます。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: "2026-04-20"
-updatedAt: "2026-04-20"
+updatedAt: "2026-04-25"
 hero: /hero/family-dinner-01.png
 lede: 六本木・麻布は大人の街イメージですが、**東京ミッドタウン・六本木ヒルズ・麻布台ヒルズ**などの大型商業施設は子連れ動線が整っています。10店を条件別にまとめました。
 quickInfo:

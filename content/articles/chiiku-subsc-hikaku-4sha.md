@@ -1,11 +1,11 @@
 ---
 slug: chiiku-subsc-hikaku-4sha
-title: 知育玩具サブスク徹底比較｜トイサブ・ChaChaCha・AndTOYBOX・キッズラボラトリー4社の月額と特徴
-metaDescription: 知育玩具サブスク主要4社を徹底比較。月額・対象年齢・1回の数・交換頻度・プランナーの質・衛生管理・特典を表で一覧。0歳〜6歳まで、お子さまのタイプ別にベストな1社を選べます。
+title: 知育玩具サブスク4社比較【0-6歳】月額3000円から
+metaDescription: 知育玩具サブスクどれを選ぶか迷っていませんか。トイサブ・ChaChaCha・AndTOYBOX・キッズラボラトリー4社を、月額・対象年齢・1回の数・交換頻度・プランナー・衛生管理で比較表に整理。子のタイプ別おすすめが3分で決まります。
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-04-18
-updatedAt: 2026-04-18
+updatedAt: 2026-04-25
 hero: /hero/toddler-play-02.png
 area: "all"
 quickInfo:

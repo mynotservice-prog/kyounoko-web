@@ -1,11 +1,11 @@
 ---
 slug: reitou-shokuhin-ranking
-title: 冷凍食品 幼児向けランキング｜買ってよかった15品目
-metaDescription: 2〜6歳の子が実際に食べる冷凍食品15品目ランキング。ニチレイ、味の素、大阪王将、コープ、業務スーパーの具体的商品名と価格、子の食べやすさを比較します。
+title: 幼児が食べる冷凍食品ランキング15選【2-6歳】時短おかず
+metaDescription: 子の冷凍食品選びで迷っていませんか。2-6歳が実際に完食する15品目を、ニチレイ・味の素・大阪王将・コープ・業務スーパーで比較。価格表、食べやすさレビュー、主菜副菜の組み合わせ例で平日の夕飯がラクになります。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: 2026-04-18
-updatedAt: 2026-04-18
+updatedAt: 2026-04-25
 hero: /hero/food-japan-03.png
 area: "all"
 quickInfo:

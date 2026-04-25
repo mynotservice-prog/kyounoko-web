@@ -1,11 +1,11 @@
 ---
 slug: kumon-vs-gakken-hikaku
-title: 公文式 vs 学研教室｜2〜6歳どっちを選ぶ？月謝・宿題量など5項目で徹底比較
-metaDescription: 公文式と学研教室を幼児期（2〜6歳）視点で比較。カリキュラム、月謝、宿題量、進度、教室数の5項目で違いを解説。向き不向き、併用の可否、切り替えタイミングまで。
+title: 公文 vs 学研教室【2-6歳】5項目で比較・どっち選ぶ
+metaDescription: 公文と学研、どちらにすべきか迷っていませんか。2-6歳視点でカリキュラム・月謝・宿題量・進度・教室数の5項目を比較表に整理。向き不向きの判断軸、併用の可否、切り替えタイミングまで3分で結論を出せます。
 category: narai
 categoryName: 習い事と学び
 publishedAt: 2026-04-18
-updatedAt: 2026-04-18
+updatedAt: 2026-04-25
 hero: /hero/kid-study-03.png
 area: "all"
 quickInfo:

@@ -1,11 +1,11 @@
 ---
 slug: asagohan-5pun-reshipi-20
-title: 5分で作れる朝ごはんレシピ20選｜1歳〜6歳の年齢別・栄養素別に整理
-metaDescription: 調理5分以内で作れる朝ごはんレシピ20選。炭水化物・たんぱく質・野菜・果物・乳製品の5大栄養素バランスを取りながら、1歳〜6歳の年齢別に具体的な組み合わせを紹介します。
+title: 朝ごはん5分レシピ20選【1-6歳】栄養バランスも両立
+metaDescription: 朝の準備でバタバタしていませんか。5分以内で作れる朝ごはん20レシピを、炭水化物・たんぱく質・野菜・果物・乳製品の5大栄養素別に整理。1-6歳の年齢別組み合わせ例、買い置きリスト、前夜の仕込みまで3分で確認できます。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: 2026-04-18
-updatedAt: 2026-04-18
+updatedAt: 2026-04-25
 hero: /hero/food-fruit-03.png
 area: "all"
 quickInfo:

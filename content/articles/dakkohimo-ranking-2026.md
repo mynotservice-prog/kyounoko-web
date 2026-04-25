@@ -1,12 +1,12 @@
 ---
 slug: dakkohimo-ranking-2026
-title: 抱っこ紐おすすめランキング2026｜エルゴ・アップリカ・コニー・ベビービョルンを比較
+title: 抱っこ紐ランキング2026【新生児-3歳】定番5本比較
+metaDescription: 抱っこ紐選びで肩や腰が心配ですよね。エルゴ・アップリカ・コニー・ベビービョルン・ボバを価格・重量・装着のしやすさ・対応月齢で比較表に整理。新生児から3歳まで、シーン別の使い分けと買い替えタイミングを3分で確認できます。
 category: yakudatsu
 categoryName: 役立つもの
 hero: /hero/stroller-03.png
-metaDescription: 2026年最新の抱っこ紐おすすめランキング。エルゴ・アップリカ・コニー・ベビービョルンを価格・重量・装着のしやすさ・対応月齢で比較。新生児から3歳までシーン別に最適解を紹介します。
 publishedAt: 2026-04-18
-updatedAt: 2026-04-18
+updatedAt: 2026-04-25
 area: "all"
 quickInfo:
   ageRanges: ["0-1", "1-2", "2-3"]

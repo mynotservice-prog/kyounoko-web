@@ -1,11 +1,11 @@
 ---
 slug: youji-naraigoto-nansai-kara
-title: 幼児の習い事、何歳から始める？目的別・費用別の選び方6パターン
-metaDescription: 2〜6歳の習い事を目的別に6パターンで比較。スイミング・体操・ピアノ・英語・知育・造形の開始年齢目安、月謝相場、効果、向き不向きを親目線で解説。
+title: 幼児の習い事【2-6歳】目的別6パターンで選び方ガイド
+metaDescription: 子の習い事選びで何から始めるか迷っていませんか。2-6歳の習い事をスイミング・体操・ピアノ・英語・知育・造形の6パターン別に整理。開始年齢の目安、月謝相場、効果、向き不向きの判断軸、辞めどきまで3分で確認できます。
 category: narai
 categoryName: 習い事と学び
 publishedAt: 2026-04-18
-updatedAt: 2026-04-18
+updatedAt: 2026-04-25
 hero: /hero/classroom-03.png
 area: "all"
 quickInfo:
