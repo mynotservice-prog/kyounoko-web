@@ -101,6 +101,29 @@ export default function HomePage() {
       </section>
 
       {/* ======================================================================
+          迷ったらこの3つ — ファーストビュー直下の即時遷移カード
+          条件入力をスキップしてすぐ記事に飛ばしたい人向けの導線。
+          finder の前にあえて置くことで、入力疲れの直帰を防ぐ。
+          ====================================================================== */}
+      <div className="container">
+        <div className="quick-three">
+          {getQuickThree(month).map((q) => (
+            <Link key={q.href} href={q.href} className="quick-three-card">
+              <span className="label">{q.label}</span>
+              <h3>{q.title}</h3>
+              <p>{q.desc}</p>
+              <span className="arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* ======================================================================
           Finder — これがこのサイトの主役
           ====================================================================== */}
       <div className="container">
@@ -141,7 +164,7 @@ export default function HomePage() {
                 </div>
               </div>
               <Link href="/category/gyouji" className="btn-ghost" style={{ borderColor: 'var(--clay)', color: 'var(--clay-deep)', whiteSpace: 'nowrap' }}>
-                一年を見る
+                {month}月の行事を全部見る →
               </Link>
             </div>
 
@@ -244,7 +267,7 @@ export default function HomePage() {
                     whiteSpace: 'nowrap',
                   }}
                 >
-                  カタログ全体を見る →
+                  人気アイテム30選を見る →
                 </Link>
               </div>
 
@@ -499,6 +522,71 @@ const SEASONAL_POOL: Record<number, SeasonalPick[]> = {
 
 function getSeasonalPicks(month: number): SeasonalPick[] {
   return SEASONAL_POOL[month] ?? SEASONAL_POOL[4];
+}
+
+// ============================================================================
+// 「迷ったらこの3つ」— ファーストビュー直下の即時遷移カード
+// 月で内容を切り替えて、季節の人気・困りごと別解決を即提示する。
+// ============================================================================
+type QuickThreePick = { label: string; title: string; desc: string; href: string };
+
+function getQuickThree(month: number): QuickThreePick[] {
+  // 季節パック（人気記事への即時遷移カード3つ）
+  if (month >= 3 && month <= 5) {
+    return [
+      { label: '今月の人気', title: '東京の花見スポット', desc: '子連れで行ける、ベビーカーOKの桜の名所。', href: '/article/sakura-ohanami-kodzure-spots' },
+      { label: '困った別解', title: '雨の日の屋内15選', desc: '東京の屋内キッズスポットで、雨でも詰まない。', href: '/article/amenohi-indoor-spots-tokyo-15' },
+      { label: '迷わない', title: '今日の答えを出す', desc: '条件を入れると、3分で1つに決まります。', href: '#finder' },
+    ];
+  }
+  if (month === 6) {
+    return [
+      { label: '今月の人気', title: '雨でもいける屋内15選', desc: '梅雨の救世主。東京の屋内キッズスポット。', href: '/article/amenohi-indoor-spots-tokyo-15' },
+      { label: '家でやる', title: '雨の日の家遊び10選', desc: '2〜3歳が10分で集中する遊びを集めました。', href: '/article/amenohi-ie-asobi-2-3sai' },
+      { label: '迷わない', title: '今日の答えを出す', desc: '条件を入れると、3分で1つに決まります。', href: '#finder' },
+    ];
+  }
+  if (month >= 7 && month <= 8) {
+    return [
+      { label: '今月の人気', title: '猛暑日OKな涼しい屋内', desc: 'ベビーカーで行ける、暑さから逃げられる場所。', href: '/article/moushobi-suzushii-spots' },
+      { label: '楽しい夏', title: 'プール・水遊びデビュー', desc: '0〜1歳から始められる水遊びの始め方。', href: '/article/puuru-mizuasobi-debut' },
+      { label: '迷わない', title: '今日の答えを出す', desc: '条件を入れると、3分で1つに決まります。', href: '#finder' },
+    ];
+  }
+  if (month >= 9 && month <= 10) {
+    return [
+      { label: '今月の人気', title: '運動会の持ち物リスト', desc: '当日に困らない持ち物・服装の完全版。', href: '/article/undoukai-motimono-list' },
+      { label: '時短ごはん', title: '運動会の時短お弁当', desc: '前日仕込みOKの簡単レシピ集。', href: '/article/undoukai-obento-jitan-recipe' },
+      { label: '迷わない', title: '今日の答えを出す', desc: '条件を入れると、3分で1つに決まります。', href: '#finder' },
+    ];
+  }
+  if (month === 11) {
+    return [
+      { label: '今月の人気', title: '七五三の年齢と準備', desc: '何歳で・何を準備する？ 年齢別の完全ガイド。', href: '/article/shichigosan-nenrei-junbi' },
+      { label: '紅葉', title: '東京の自然スポット', desc: '紅葉も楽しめる、子連れOKの公園。', href: '/article/shizen-spot-tokyo-youji' },
+      { label: '迷わない', title: '今日の答えを出す', desc: '条件を入れると、3分で1つに決まります。', href: '#finder' },
+    ];
+  }
+  if (month === 12) {
+    return [
+      { label: '今月の人気', title: 'クリスマスプレゼント年齢別', desc: '0〜6歳まで、年齢別の本気の選び方。', href: '/article/xmas-present-nenrei-0-6' },
+      { label: '冬のお出かけ', title: '子連れXmasマーケット攻略', desc: '混雑回避の動線と寒さ対策。', href: '/article/xmas-market-kodzure' },
+      { label: '迷わない', title: '今日の答えを出す', desc: '条件を入れると、3分で1つに決まります。', href: '#finder' },
+    ];
+  }
+  if (month === 1 || month === 2) {
+    return [
+      { label: '今月の人気', title: 'お正月の子連れの過ごし方', desc: '帰省・初詣・寝落ち、全部の段取り。', href: '/article/oshougatsu-kodomo-sugoshikata' },
+      { label: '体調管理', title: '子の発熱対応リスト', desc: '保育園を休む基準、受診目安、家での対応。', href: '/article/kodomo-no-kaze-hatsunetsu-taiou' },
+      { label: '迷わない', title: '今日の答えを出す', desc: '条件を入れると、3分で1つに決まります。', href: '#finder' },
+    ];
+  }
+  // 4月（入園シーズン）/ default
+  return [
+    { label: '今月の人気', title: '入園準備リスト完全版', desc: '名前つけ・持ち物・名前ペン、これ1本で。', href: '/article/youchien-nyuuen-junbi-list' },
+    { label: 'GWに使える', title: '東京の無料スポット15選', desc: 'GWも安心、お金をかけずに楽しい場所。', href: '/article/kosodate-muryou-spots-tokyo' },
+    { label: '迷わない', title: '今日の答えを出す', desc: '条件を入れると、3分で1つに決まります。', href: '#finder' },
+  ];
 }
 
 function Concern({ num, title, desc, href }: { num: string; title: string; desc: string; href: string }) {

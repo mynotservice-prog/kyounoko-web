@@ -872,3 +872,44 @@ export function getRelatedFileArticles(
   const others = all.filter((a) => a.category !== category);
   return [...sameCat, ...others].slice(0, limit);
 }
+
+/**
+ * TodayFinder の条件結果ページ用：top answer に関連する記事を
+ * スコア順に最大 `limit` 件返す。
+ *
+ * - excludeSlug があれば除外（articleフォールバック時の本人除外）
+ * - excludeRelatedSlug があれば除外（プランの seoRelated と被らない）
+ * - スコア > 0 のみ。条件が緩い場合は最新記事で補充して必ず limit 件返す。
+ */
+export function getRelatedArticlesForQuery(
+  q: TodayQuery,
+  options?: {
+    excludeSlugs?: string[];
+    limit?: number;
+  },
+): FileArticleMeta[] {
+  const limit = options?.limit ?? 4;
+  const exclude = new Set(options?.excludeSlugs ?? []);
+
+  const scored = getAllFileArticles()
+    .filter((a) => !exclude.has(a.slug))
+    .map((article) => {
+      const { score } = scoreArticleForQuery(article, q);
+      return { article, score };
+    })
+    .sort((x, y) => {
+      if (y.score !== x.score) return y.score - x.score;
+      return x.article.updatedAt < y.article.updatedAt ? 1 : -1;
+    });
+
+  const positives = scored.filter((x) => x.score > 0).map((x) => x.article);
+  if (positives.length >= limit) return positives.slice(0, limit);
+
+  // 不足分は最新で補充
+  const filler = scored
+    .filter((x) => x.score <= 0)
+    .map((x) => x.article)
+    .filter((a) => !positives.find((p) => p.slug === a.slug));
+
+  return [...positives, ...filler].slice(0, limit);
+}

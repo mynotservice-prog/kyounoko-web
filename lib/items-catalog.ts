@@ -614,3 +614,59 @@ export function getPopularItemsForArticleCategory(
   }
   return picked;
 }
+
+/**
+ * TodayFinder の条件（place / age / weather / day）から
+ * 「あったら便利な3アイテム」を返す。/today の結果ページで使用。
+ *
+ * - place=outside → ベビーカー / 抱っこ紐
+ * - place=home + duration<=60 → 知育サブスク / 絵本
+ * - day=weekday → 時短家電 / 宅食
+ * - 上記いずれにも該当しなければ jitan-kaden / takushoku を default
+ */
+export function getItemsForTodayQuery(query: {
+  place?: string;
+  day?: string;
+  duration?: string;
+  age?: string;
+  weather?: string;
+}, limit = 3): CatalogItem[] {
+  const cats: CatalogCategory[] = [];
+
+  if (query.place === 'outside') {
+    cats.push('babycar', 'dakkohimo');
+  } else if (query.place === 'home') {
+    if (query.age === '0-1') {
+      cats.push('chiiku-subsc', 'baby-chair', 'ehon');
+    } else {
+      cats.push('chiiku-subsc', 'ehon');
+    }
+  }
+
+  if (query.day === 'weekday') {
+    cats.push('jitan-kaden', 'takushoku');
+  }
+
+  if (query.weather === 'rain' || query.weather === 'heat' || query.weather === 'cold') {
+    cats.push('chiiku-subsc', 'ehon');
+  }
+
+  // デフォルト補完
+  if (cats.length === 0) {
+    cats.push('jitan-kaden', 'takushoku', 'babycar');
+  }
+
+  const picked: CatalogItem[] = [];
+  const seen = new Set<string>();
+  for (const cat of cats) {
+    for (const it of CATALOG_ITEMS) {
+      if (it.category !== cat) continue;
+      if (seen.has(it.id)) continue;
+      picked.push(it);
+      seen.add(it.id);
+      if (picked.length >= limit) break;
+    }
+    if (picked.length >= limit) break;
+  }
+  return picked;
+}

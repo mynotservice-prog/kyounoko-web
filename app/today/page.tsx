@@ -3,13 +3,35 @@ import Link from 'next/link';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
-import { getTodayAnswer, type TodayQuery, type TodayAnswerResult } from '@/lib/articles';
+import {
+  getTodayAnswer,
+  getRelatedArticlesForQuery,
+  type TodayQuery,
+  type TodayAnswerResult,
+  type FileArticleMeta,
+} from '@/lib/articles';
 import { getAreaName } from '@/lib/area';
+import { getItemsForTodayQuery } from '@/lib/items-catalog';
+import { ShareBar } from '@/components/article/ShareBar';
+import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
 
 export const revalidate = 3600;
 
 type Props = {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
+};
+
+const CATEGORY_LABEL: Record<string, string> = {
+  'today-doko': '今日どこ行く',
+  'today-nani': '今日何する',
+  'today-taberu': '今日何食べる',
+  'today-mawasu': '今日どう回す',
+  'shippai-shinai': '失敗しない外出',
+  tenki: '天気で決める',
+  'heijitsu-yoru': '平日夜を回す',
+  gyouji: '季節と行事',
+  narai: '習い事と学び',
+  yakudatsu: '役立つもの',
 };
 
 function firstString(v: string | string[] | undefined): string | undefined {
@@ -139,6 +161,74 @@ function AnswerCard({ answer, featured = false }: { answer: TodayAnswerResult; f
   );
 }
 
+function RelatedArticleCard({ article }: { article: FileArticleMeta }) {
+  return (
+    <Link href={`/article/${article.slug}`} className="today-related-card">
+      <div
+        className="today-related-thumb"
+        style={{ backgroundImage: article.hero ? `url(${article.hero})` : undefined }}
+        role="img"
+        aria-label={article.title}
+      />
+      <div className="today-related-body">
+        <span className="today-related-cat">
+          {article.categoryName ?? CATEGORY_LABEL[article.category] ?? article.category}
+        </span>
+        <h4 className="today-related-title">{article.title}</h4>
+      </div>
+    </Link>
+  );
+}
+
+/**
+ * 結果ページから親カテゴリへの橋渡しチップ。
+ * top answer の category または query.place / day から派生して、
+ * 「もっと見る」誘導を作る。
+ */
+function buildRelatedCategoryChips(
+  query: TodayQuery,
+  top: TodayAnswerResult | null,
+): { label: string; href: string }[] {
+  const chips: { label: string; href: string }[] = [];
+  const seen = new Set<string>();
+
+  function push(label: string, href: string) {
+    if (seen.has(href)) return;
+    seen.add(href);
+    chips.push({ label, href });
+  }
+
+  // top answer の category
+  if (top?.article?.article.category) {
+    const cat = top.article.article.category;
+    push(`${CATEGORY_LABEL[cat] ?? cat}を全部見る`, `/category/${cat}`);
+  }
+
+  // query から派生
+  if (query.place === 'home') {
+    push('家で過ごす（今日何する）', '/category/today-nani');
+  } else if (query.place === 'outside') {
+    push('お出かけ（今日どこ行く）', '/category/today-doko');
+  }
+
+  if (query.day === 'weekday') {
+    push('平日夜を回す', '/category/today-mawasu');
+  } else if (query.day === 'holiday') {
+    push('季節と行事', '/category/gyouji');
+  }
+
+  if (query.weather === 'rain') {
+    push('雨でもいける屋内', '/article/amenohi-indoor-spots-tokyo-15');
+  } else if (query.weather === 'heat') {
+    push('猛暑日OKな涼しい屋内', '/article/moushobi-suzushii-spots');
+  }
+
+  // 補完：常に「失敗しない外出」を入れる
+  push('失敗しない外出のコツ', '/category/shippai-shinai');
+
+  return chips.slice(0, 5);
+}
+
 export default async function TodayPage({ searchParams }: Props) {
   const sp = await searchParams;
   const query: TodayQuery = {
@@ -161,6 +251,28 @@ export default async function TodayPage({ searchParams }: Props) {
   if (query.day && query.day !== 'any') activeChips.push({ key: 'day', label: labelForValue('day', query.day) });
   if (query.duration) activeChips.push({ key: 'duration', label: labelForValue('duration', query.duration) });
   if (query.budget && query.budget !== 'any') activeChips.push({ key: 'budget', label: labelForValue('budget', query.budget) });
+
+  // 関連記事の算出（top答えと、プランのseoRelatedを除外）
+  const excludeSlugs: string[] = [];
+  if (top?.article) excludeSlugs.push(top.article.article.slug);
+  if (top?.plan?.plan.seoRelated) excludeSlugs.push(top.plan.plan.seoRelated);
+  const relatedArticles = top
+    ? getRelatedArticlesForQuery(query, { excludeSlugs, limit: 4 })
+    : [];
+
+  // 関連グッズ
+  const relatedItems = top ? getItemsForTodayQuery(query, 3) : [];
+
+  // 関連カテゴリチップ
+  const categoryChips = top ? buildRelatedCategoryChips(query, top) : [];
+
+  // シェア用URL（条件付きで再現可能なURL）
+  const shareParams = new URLSearchParams();
+  Object.entries(query).forEach(([k, v]) => {
+    if (v && v !== 'any' && v !== 'all') shareParams.set(k, String(v));
+  });
+  const shareUrl = `https://kyounoko.jp/today${shareParams.toString() ? `?${shareParams.toString()}` : ''}`;
+  const shareTitle = top ? `今日はこれ：${top.title}` : '今日の答え - きょうのこ';
 
   return (
     <>
@@ -224,16 +336,114 @@ export default async function TodayPage({ searchParams }: Props) {
 
               <AnswerCard answer={top} featured />
 
+              {/* 別の候補を inline で常時表示（旧 details 折りたたみは廃止） */}
               {alternatives.length > 0 && (
-                <details className="alt-toggle">
-                  <summary>別の候補を見る（{alternatives.length}件）</summary>
+                <section className="today-alts">
+                  <h3 className="today-section-title">
+                    <span className="today-section-eyebrow">Alternatives</span>
+                    今日とは別の選択肢
+                  </h3>
+                  <p className="today-section-lede">
+                    気分が違うとき、人数や時間が変わったときの代替案。
+                  </p>
                   <div className="alt-list">
                     {alternatives.map((alt, i) => (
                       <AnswerCard key={i} answer={alt} />
                     ))}
                   </div>
-                </details>
+                </section>
               )}
+
+              {/* 関連記事 — 直帰防止のメイン導線 */}
+              {relatedArticles.length > 0 && (
+                <section className="today-related">
+                  <h3 className="today-section-title">
+                    <span className="today-section-eyebrow">More to read</span>
+                    この条件で読まれている記事
+                  </h3>
+                  <p className="today-section-lede">
+                    同じ条件で関心を集めているガイド・比較・準備リスト。
+                  </p>
+                  <div className="today-related-grid">
+                    {relatedArticles.map((a) => (
+                      <RelatedArticleCard key={a.slug} article={a} />
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {/* あったら便利グッズ — プランの「準備リスト」補完 */}
+              {relatedItems.length > 0 && (
+                <section className="today-items">
+                  <p className="today-items-pr" role="note">
+                    <span className="pr-label">PR</span>
+                    <span>※本エリアは広告を含みます。条件に合う家庭で利用率の高いアイテムです。</span>
+                  </p>
+                  <h3 className="today-section-title" style={{ marginTop: 4 }}>
+                    <span className="today-section-eyebrow">Useful items</span>
+                    今日の条件で、あったら便利なもの
+                  </h3>
+                  <div className="today-items-grid">
+                    {relatedItems.map((item) => (
+                      <AffiliateLink
+                        key={item.id}
+                        href={item.href}
+                        title={item.name}
+                        subtitle={item.subtitle}
+                        price={item.price}
+                        provider={item.provider}
+                        pr={false}
+                      />
+                    ))}
+                  </div>
+                  <Link href="/items" className="today-items-more">
+                    カタログ全体を見る →
+                  </Link>
+                </section>
+              )}
+
+              {/* シェア（X / LINE / Facebook / Copy） */}
+              <ShareBar url={shareUrl} title={shareTitle} label="この答えをシェアする" />
+
+              {/* 関連カテゴリへの回遊チップ */}
+              {categoryChips.length > 0 && (
+                <section style={{ marginTop: 40 }}>
+                  <span className="eyebrow">More · もっと探す</span>
+                  <div className="outing-chips" style={{ marginTop: 12 }}>
+                    {categoryChips.map((c) => (
+                      <Link key={c.href} href={c.href} className="outing-chip">
+                        {c.label}
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {/* 最後の回遊CTA */}
+              <section
+                style={{
+                  marginTop: 48,
+                  padding: '20px 22px',
+                  background: 'var(--paper-card)',
+                  border: '1px solid var(--line)',
+                  borderRadius: 'var(--radius-md)',
+                }}
+              >
+                <p
+                  style={{
+                    fontSize: 13.5,
+                    color: 'var(--ink-sub)',
+                    margin: '0 0 14px',
+                    lineHeight: 1.85,
+                  }}
+                >
+                  今日の答えはこれでOK？ 別の条件で試す or トップに戻って違うコンセプトから探す。
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
+                  <Link href="/#finder" className="btn-primary-light">別の条件で探す</Link>
+                  <Link href="/" className="btn-light-ghost">トップに戻る</Link>
+                </div>
+              </section>
             </>
           )}
         </div>

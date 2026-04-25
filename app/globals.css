@@ -2364,3 +2364,198 @@ span > .pr-label {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+/* ==========================================================================
+   /today 結果ページ — 関連記事・関連グッズ・代替案セクション
+   ========================================================================== */
+.today-section-title {
+  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-weight: 600;
+  font-size: 19px;
+  letter-spacing: .02em;
+  margin: 0 0 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.today-section-eyebrow {
+  font-family: var(--font-inter), Inter, sans-serif;
+  font-size: 10.5px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--clay);
+  font-weight: 600;
+}
+.today-section-lede {
+  font-size: 13px;
+  color: var(--ink-sub);
+  line-height: 1.85;
+  margin: 0 0 16px;
+}
+
+/* 代替案セクション */
+.today-alts {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+/* 関連記事グリッド */
+.today-related {
+  margin-top: 40px;
+}
+.today-related-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) {
+  .today-related-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.today-related-card {
+  display: flex;
+  gap: 14px;
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.today-related-card:hover {
+  border-color: var(--clay);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 18px -10px rgba(0, 0, 0, .12);
+}
+.today-related-thumb {
+  flex-shrink: 0;
+  width: 92px;
+  height: 92px;
+  background-color: var(--peach-soft);
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-md);
+}
+.today-related-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+}
+.today-related-cat {
+  font-family: var(--font-inter), Inter, sans-serif;
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--clay);
+  font-weight: 600;
+}
+.today-related-title {
+  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+/* 関連グッズセクション */
+.today-items {
+  margin-top: 40px;
+  padding: 22px 22px 24px;
+  background: linear-gradient(180deg, #FFFDF8 0%, #FDF6EC 100%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+.today-items-pr {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 0 8px;
+  font-size: 11.5px;
+  color: var(--ink-mute);
+  line-height: 1.7;
+}
+.today-items-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+  margin-top: 14px;
+}
+@media (min-width: 720px) {
+  .today-items-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+.today-items-more {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 12.5px;
+  color: var(--clay-deep);
+  text-decoration: none;
+  letter-spacing: .04em;
+}
+.today-items-more:hover { text-decoration: underline; }
+
+/* ==========================================================================
+   ホーム「迷ったらこの3つ」— ファーストビュー直下の即時遷移カード
+   ========================================================================== */
+.quick-three {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+  margin: 28px 0 0;
+}
+@media (min-width: 720px) {
+  .quick-three { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+}
+.quick-three-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px 18px 20px;
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+  position: relative;
+}
+.quick-three-card:hover {
+  border-color: var(--clay);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px -12px rgba(60, 40, 20, .15);
+}
+.quick-three-card .label {
+  font-family: var(--font-inter), Inter, sans-serif;
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--clay);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.quick-three-card h3 {
+  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.quick-three-card p {
+  font-size: 12.5px;
+  color: var(--ink-sub);
+  margin: 4px 0 0;
+  line-height: 1.7;
+}
+.quick-three-card .arrow {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  color: var(--clay);
+  transition: transform .2s ease;
+}
+.quick-three-card:hover .arrow { transform: translateX(3px); }
