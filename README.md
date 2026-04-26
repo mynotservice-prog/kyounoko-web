@@ -4,6 +4,70 @@
 
 ---
 
+## SEO 自動化（IndexNow / RSS / Atom / SearchAction）
+
+### IndexNow（Bing / Yandex / Seznam 即時通知）
+
+公開済み記事を IndexNow に通知して、Google 以外の主要サーチエンジンの
+インデックス更新を即座に促す。
+
+- 設定: `.env.local` に `INDEXNOW_KEY=229166d73b10f1630ed52857e67c427b` を追加（または独自キー）
+- キー検証ファイル: `public/{INDEXNOW_KEY}.txt`（中身はキー本体）
+- Vercel 環境変数にも `INDEXNOW_KEY` を登録すること
+- 任意で `INDEXNOW_TRIGGER_TOKEN` を設定すれば、`/api/indexnow/submit`
+  への呼び出しを `?token=...` または `Authorization: Bearer ...` で保護できる
+
+#### 使い方
+
+全記事を一括で通知（GET）:
+
+```bash
+curl https://kyounoko.jp/api/indexnow/submit
+# トークン保護時:
+curl "https://kyounoko.jp/api/indexnow/submit?token=$INDEXNOW_TRIGGER_TOKEN"
+```
+
+特定 URL のみ通知（POST）:
+
+```bash
+curl -X POST https://kyounoko.jp/api/indexnow/submit \
+  -H 'Content-Type: application/json' \
+  -d '{"urls":["https://kyounoko.jp/article/babycar-ranking-2026"]}'
+```
+
+ローカル/CI から手動でも叩ける:
+
+```bash
+INDEXNOW_KEY=xxxx npx tsx scripts/notify-indexnow.ts            # 全記事
+INDEXNOW_KEY=xxxx npx tsx scripts/notify-indexnow.ts /article/foo /article/bar
+```
+
+### RSS / Atom フィード
+
+- RSS 2.0: `https://kyounoko.jp/feed.xml`
+- Atom 1.0: `https://kyounoko.jp/atom.xml`
+- 最新 50 記事（updatedAt 降順）
+- HTML head に `<link rel="alternate">` で discovery 済
+
+### サイト内検索 + WebSite SearchAction
+
+- `/search?q=XXX` で記事タイトル / lede / metaDescription を全文検索
+- WebSite JSON-LD の `potentialAction.SearchAction` で SERP の Sitelinks Search
+  Box 表示を狙う
+
+### Google Search Console URL Inspection API（任意）
+
+実装は IndexNow に絞った。GSC URL Inspection API はサービスアカウント / OAuth 設定が
+必須でユーザー作業を要するため、本リポジトリでは未実装。導入したい場合は以下:
+
+1. Google Cloud Console でプロジェクト作成 → Search Console API を有効化
+2. サービスアカウント発行 → JSON キーを取得
+3. Search Console の対象プロパティに、サービスアカウントのメールを「ユーザー」として追加
+4. `google-auth-library` + `googleapis` を導入し、`indexing.urlNotifications.publish`
+   を叩く（IndexNow と同様の使い方）
+
+---
+
 ## 実装済み（このフォルダの内容）
 
 ### ページ

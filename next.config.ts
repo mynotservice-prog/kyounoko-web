@@ -58,8 +58,8 @@ const nextConfig: NextConfig = {
       { source: '/tag/diaper-table', destination: '/tag/odekake', permanent: true },
       { source: '/tag/heat-ok', destination: '/tag/moushobi', permanent: true },
 
-      // 旧 /search テンプレートURL（SearchAction 残骸）→ トップへ
-      { source: '/search', destination: '/', permanent: true },
+      // /search はサイト内検索ページ実装に切り替え済（SearchAction 用）。
+      // ここでリダイレクトすると WebSite SearchAction が無効化されるので残さない。
     ];
   },
 

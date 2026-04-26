@@ -88,6 +88,74 @@ const LINK_RULES: LinkRule[] = [
   { keyword: '雨の日', targetSlug: 'amenohi-ie-asobi-2-3sai', priority: 7 },
   { keyword: '水遊び', targetSlug: 'puuru-mizuasobi-debut', priority: 8 },
   { keyword: 'お花見スポット', targetSlug: 'sakura-ohanami-kodzure-spots', priority: 10 },
+
+  // ===== 追加分（V2 拡張 / 主要トピック逆引き） =====================================
+  // ▼ 子連れ・ランチ・外食・公園・ピクニック
+  { keyword: '子連れランチ', targetSlug: 'shumatsu-ranchi-kodzure', priority: 9 },
+  { keyword: '子連れ外食', targetSlug: 'gaisyoku-ko-ga-taberu', priority: 8 },
+  { keyword: '外食', targetSlug: 'gaisyoku-ko-ga-taberu', priority: 6 },
+  { keyword: 'ベビーカーで行ける', targetSlug: 'amenohi-stroller-spots-tokyo', priority: 9 },
+  { keyword: '無料スポット', targetSlug: 'kosodate-muryou-spots-tokyo', priority: 7 },
+  { keyword: '公園', targetSlug: 'tokyo-nerima-free-park-muryou', priority: 5 },
+  { keyword: 'ピクニック', targetSlug: 'parkku-pikku-nikku-hitsuyou-mono-list', priority: 9 },
+  { keyword: '紅葉', targetSlug: 'kouyou-spots-kanto-koduzure', priority: 8 },
+
+  // ▼ 食事系（朝・夕・お弁当・幼児食）
+  { keyword: '朝ごはん', targetSlug: 'asagohan-5pun-pattern-10', priority: 8 },
+  { keyword: '朝食パターン', targetSlug: 'asagohan-5pun-pattern-10', priority: 9 },
+  { keyword: '夕飯', targetSlug: 'yuuhan-dinner-15pun-10recipes', priority: 8 },
+  { keyword: '夕食', targetSlug: 'yuuhan-dinner-15pun-10recipes', priority: 7 },
+  { keyword: 'おやつ', targetSlug: 'okashi-tezukuri-oyatsu-kodomo', priority: 7 },
+  { keyword: '魚料理', targetSlug: 'sakana-kodomo-tabete-kureru', priority: 8 },
+  { keyword: 'チキン料理', targetSlug: 'chicken-kodomo-10pattern', priority: 7 },
+  { keyword: '少食', targetSlug: '3sai-shoushoku-taisaku', priority: 8 },
+
+  // ▼ 習い事の追加
+  { keyword: 'モンテッソーリ', targetSlug: 'monte-asobi-nenrei-betsu', priority: 9 },
+  { keyword: 'プログラミング', targetSlug: 'programming-kodomo-5-7sai', priority: 9 },
+  { keyword: '七田', targetSlug: 'chiku-naraigoto-kumon-shichida-monte', priority: 8 },
+  { keyword: '習い事をやめたい', targetSlug: 'naraigoto-yametai-taiou', priority: 10 },
+
+  // ▼ 絵本・知育・サブスク
+  { keyword: 'おもちゃ', targetSlug: 'omocha-year-by-age', priority: 6 },
+  { keyword: 'おもちゃサブスク', targetSlug: 'chiiku-subsc-hikaku-4sha', priority: 10 },
+  { keyword: '子育てサブスク', targetSlug: 'kosodate-subsc-3sha-hikaku', priority: 9 },
+  { keyword: '工作', targetSlug: 'kousaku-4-6sai-10pattern', priority: 7 },
+
+  // ▼ 行事の追加
+  { keyword: '夏祭り', targetSlug: 'natsumatsuri-kodzure-koryaku', priority: 9 },
+  { keyword: '七夕', targetSlug: 'tanabata-kazari-sakusei', priority: 9 },
+  { keyword: 'お正月', targetSlug: 'oshougatsu-kodomo-sugoshikata', priority: 9 },
+  { keyword: 'クリスマスマーケット', targetSlug: 'xmas-market-kodzure', priority: 9 },
+  { keyword: 'ハロウィン仮装', targetSlug: 'halloween-kasou-junbi', priority: 10 },
+  { keyword: 'お宮参り', targetSlug: 'hatsuzekku-sugoshikata', priority: 8 },
+
+  // ▼ 保育園・幼稚園・入園
+  { keyword: '保育園', targetSlug: 'hoikuen-sougei-jitan', priority: 7 },
+  { keyword: '保育園送迎', targetSlug: 'hoikuen-sougei-jitan', priority: 9 },
+  { keyword: '幼稚園', targetSlug: 'youchien-nyuuen-junbi-list', priority: 7 },
+  { keyword: '入園準備', targetSlug: 'youchien-nyuuen-junbi-list', priority: 10 },
+
+  // ▼ 育児疲れ・ワンオペ・寝かしつけ系の補強
+  { keyword: 'ワンオペ', targetSlug: 'wanope-yoru-kirinukekata', priority: 9 },
+  { keyword: 'ワンオペ育児', targetSlug: 'wanope-yoru-kirinukekata', priority: 10 },
+  { keyword: '夜のルーティン', targetSlug: '19ji-shoutou-routine', priority: 8 },
+  { keyword: '平日夜', targetSlug: 'heijitsu-yoru-30pun-routine', priority: 8 },
+  { keyword: '朝のルーティン', targetSlug: 'asa-30pun-routine', priority: 8 },
+
+  // ▼ しつけ・対応の補強
+  { keyword: '兄弟げんか', targetSlug: 'kenka-kyoudai-chuusai-houhou', priority: 9 },
+  { keyword: 'きょうだい', targetSlug: 'kyoudai-asobi-nenrei-sa', priority: 6 },
+  { keyword: '言葉の遅れ', targetSlug: 'kotoba-okureru-taiou-2sai', priority: 9 },
+  { keyword: 'スマホルール', targetSlug: 'kodomo-smartphone-ruleset-age-betsu', priority: 9 },
+
+  // ▼ 通信教育・教材
+  { keyword: '通信教材', targetSlug: 'tsuushin-kyouzai-hikaku', priority: 9 },
+
+  // ▼ 健康・体調
+  { keyword: '発熱', targetSlug: 'kodomo-no-kaze-hatsunetsu-taiou', priority: 8 },
+  { keyword: '予防接種', targetSlug: 'yobou-sesshu-schedule-0-6sai', priority: 9 },
+  { keyword: 'アレルギー', targetSlug: 'mugi-aleergi-meal-kodomo', priority: 8 },
 ];
 
 // 長いキーワード優先（「知育玩具」>「知育」）、priority 高い順

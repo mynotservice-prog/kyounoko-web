@@ -123,6 +123,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${shippori.variable} ${notoSans.variable} ${zenMaru.variable} ${dmSerif.variable} ${inter.variable}`}
     >
       <head>
+        {/* RSS / Atom フィード discovery（検索エンジンとフィードリーダー両対応） */}
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="きょうのこ - 最新記事 (RSS)"
+          href="https://kyounoko.jp/feed.xml"
+        />
+        <link
+          rel="alternate"
+          type="application/atom+xml"
+          title="きょうのこ - 最新記事 (Atom)"
+          href="https://kyounoko.jp/atom.xml"
+        />
         {/* JSON-LD: WebSite */}
         <script
           type="application/ld+json"
@@ -130,12 +143,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
+              '@id': 'https://kyounoko.jp/#website',
               name: 'きょうのこ',
+              alternateName: 'kyounoko',
               url: 'https://kyounoko.jp',
               inLanguage: 'ja',
               description:
                 '0〜6歳の子がいる家庭向け。天気・年齢・時間帯・予算から、今日の過ごし方を3分で決める意思決定サイトです。',
               publisher: { '@id': 'https://kyounoko.jp/#organization' },
+              // SERP の Sitelinks Search Box 表示要件
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: {
+                  '@type': 'EntryPoint',
+                  urlTemplate: 'https://kyounoko.jp/search?q={search_term_string}',
+                },
+                'query-input': 'required name=search_term_string',
+              },
             }),
           }}
         />

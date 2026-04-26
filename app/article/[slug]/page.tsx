@@ -160,17 +160,25 @@ export default async function ArticlePage({ params }: Props) {
   const article = resolved.data;
 
   // JSON-LD
+  const articleUrl = `https://kyounoko.jp/article/${slug}`;
   const jsonLdArticle = {
     '@context': 'https://schema.org',
     '@type': 'Article',
+    '@id': `${articleUrl}#article`,
     inLanguage: 'ja',
     headline: article.title,
     description: article.metaDescription,
     datePublished: article.publishedAt,
     dateModified: article.updatedAtManual ?? article.updatedAt,
-    author: { '@type': 'Person', name: article.author?.name ?? 'ながみー' },
+    author: {
+      '@type': 'Person',
+      '@id': 'https://kyounoko.jp/about#author',
+      name: article.author?.name ?? 'ながみー',
+      url: 'https://kyounoko.jp/about',
+    },
     publisher: {
       '@type': 'Organization',
+      '@id': 'https://kyounoko.jp/#organization',
       name: 'きょうのこ',
       url: 'https://kyounoko.jp',
       logo: { '@type': 'ImageObject', url: 'https://kyounoko.jp/img/ogp-default.jpg' },
@@ -178,7 +186,8 @@ export default async function ArticlePage({ params }: Props) {
     image: article.hero?.url,
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://kyounoko.jp/article/${slug}`,
+      '@id': articleUrl,
+      url: articleUrl,
     },
     speakable: {
       '@type': 'SpeakableSpecification',
@@ -210,6 +219,10 @@ export default async function ArticlePage({ params }: Props) {
 
   return (
     <>
+      {/* LCP 改善: MicroCMS 記事の hero 画像を最優先で先読み */}
+      {article.hero?.url && (
+        <link rel="preload" as="image" href={`${article.hero.url}?w=1600`} fetchPriority="high" />
+      )}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdArticle) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       {jsonLdFaq && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />}
@@ -479,30 +492,44 @@ function FileArticleView({ article }: { article: FileArticle }) {
     ? affiliateProducts[0]
     : getRelatedItemsForArticle(article.slug, article.category, article.title)[0];
 
+  // 概算 wordCount（HTMLタグ除去後の文字数）。Google Article リッチリザルトの
+  // 推奨フィールド。日本語は文字数 = ほぼ語数として扱う。
+  const articleWordCount = (() => {
+    const stripped = article.body.replace(/<[^>]+>/g, '').replace(/\s+/g, '');
+    return stripped.length;
+  })();
+
   const jsonLdArticle = {
     '@context': 'https://schema.org',
     '@type': 'Article',
+    '@id': `${articleUrl}#article`,
     inLanguage: 'ja',
     headline: article.title,
     description: article.tldr ?? article.metaDescription,
     abstract: article.tldr ?? undefined,
     datePublished: article.publishedAt,
     dateModified: article.updatedAt,
+    wordCount: articleWordCount,
+    timeRequired: `PT${article.readingTimeMin}M`,
     author: {
       '@type': 'Person',
+      '@id': 'https://kyounoko.jp/about#author',
       name: 'ながみー',
       url: 'https://kyounoko.jp/about',
     },
     publisher: {
       '@type': 'Organization',
+      '@id': 'https://kyounoko.jp/#organization',
       name: 'きょうのこ',
       url: 'https://kyounoko.jp',
       logo: { '@type': 'ImageObject', url: 'https://kyounoko.jp/img/ogp-default.jpg' },
     },
     image: heroUrlAbsolute,
+    // canonical URL と一致した @id を持つ WebPage を mainEntityOfPage として参照
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': articleUrl,
+      url: articleUrl,
     },
     // AI読み上げ / 音声アシスタント向け：TL;DR と lede を音声候補として指定
     speakable: {
@@ -588,6 +615,10 @@ function FileArticleView({ article }: { article: FileArticle }) {
 
   return (
     <>
+      {/* LCP 改善: hero 画像を最優先で先読み（CSS background のため Next.js Image priority が効かない） */}
+      {article.hero && (
+        <link rel="preload" as="image" href={article.hero} fetchPriority="high" />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdArticle) }}
