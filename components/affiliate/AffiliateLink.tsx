@@ -33,6 +33,36 @@ const PROVIDER_LABELS: Record<AffiliateProvider, string> = {
 };
 
 /**
+ * provider 別の CTA 文言（買う動機を明示）。
+ * 「○○で見る」だと弱いので、楽天はポイント還元、Amazon は配送、A8/もしもは特典を訴求。
+ */
+const PROVIDER_CTA: Record<AffiliateProvider, string> = {
+  amazon: 'Amazonで価格を見る →',
+  rakuten: '楽天で価格・ポイント還元を見る →',
+  yahoo: 'Yahoo!ショッピングで見る →',
+  a8: '公式サイトで詳細を見る →',
+  moshimo: '公式サイトで詳細を見る →',
+  valuecommerce: 'お得な購入先を見る →',
+  other: '公式サイトを見る →',
+};
+
+/**
+ * provider 別の補足キャッチコピー（CTA下に表示）。
+ * 楽天: ポイント還元
+ * Amazon: プライム配送
+ * A8/もしも: 公式特典
+ */
+const PROVIDER_SUBCTA: Record<AffiliateProvider, string> = {
+  amazon: 'プライム会員なら最短翌日着',
+  rakuten: 'お買い物マラソン期間でポイントUP',
+  yahoo: 'PayPayポイント還元あり',
+  a8: '公式特典・キャンペーン適用可',
+  moshimo: '公式特典・キャンペーン適用可',
+  valuecommerce: '比較してお得な店舗で購入',
+  other: '',
+};
+
+/**
  * アフィリエイトリンクの共通カード UI。
  * 景品表示法・ステマ規制対応のため、rel="sponsored nofollow noopener" と PR 表示を強制する。
  */
@@ -81,9 +111,14 @@ export function AffiliateLink({
         <div className="affiliate-card-footer">
           {price && <span className="affiliate-card-price">{price}</span>}
           <span className="affiliate-card-cta" aria-hidden="true">
-            {providerLabel}で見る →
+            {PROVIDER_CTA[provider]}
           </span>
         </div>
+        {PROVIDER_SUBCTA[provider] && (
+          <p className="affiliate-card-subcta" aria-hidden="true">
+            {PROVIDER_SUBCTA[provider]}
+          </p>
+        )}
       </div>
     </a>
   );

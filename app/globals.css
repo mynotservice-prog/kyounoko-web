@@ -2068,6 +2068,13 @@ span > .pr-label {
   color: var(--clay-deep);
   transform: translateX(2px);
 }
+.affiliate-card-subcta {
+  margin: 4px 0 0;
+  font-size: 11px;
+  color: var(--ink-muted, #888);
+  letter-spacing: .02em;
+  font-weight: 500;
+}
 
 /* ==========================================================================
    Related items CTA — 記事末尾、キーワード推定で出す関連商品セクション
