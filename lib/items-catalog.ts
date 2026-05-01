@@ -17,6 +17,7 @@ export const CATALOG_CATEGORIES = [
   'senzai',
   'jitan-kaden',
   'ehon',
+  'shokuiku',
 ] as const;
 
 export type CatalogCategory = (typeof CATALOG_CATEGORIES)[number];
@@ -111,6 +112,15 @@ export const CATALOG_CATEGORY_META: Record<CatalogCategory, CatalogCategoryMeta>
     relatedArticles: [
       { slug: 'seal-book-ranking', label: 'シールブックランキングを見る' },
       { slug: 'ehon-yomikikase-kotsu', label: '絵本の読み聞かせのコツを読む' },
+    ],
+  },
+  shokuiku: {
+    id: 'shokuiku',
+    name: '食育・栄養補助',
+    tagline: '野菜不足・食わず嫌い・好き嫌いをサポート。',
+    relatedArticles: [
+      { slug: 'sukikirai-yasai-taisaku', label: '野菜嫌い対策を読む' },
+      { slug: 'yasai-tabenai-3sai-taisaku', label: '3歳の野菜嫌い対策を読む' },
     ],
   },
 };
@@ -434,6 +444,20 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     subtitle: '4-6歳に人気の探し絵絵本。集中力を引き出す定番',
     price: '¥1,300〜',
     articleSlug: 'ehon-yomikikase-kotsu',
+  },
+
+  // ========================================================================
+  // 食育・栄養補助 shokuiku — A8提携プログラム
+  // ========================================================================
+  {
+    id: 'sk-kodomo-banana-aojiru',
+    category: 'shokuiku',
+    provider: 'a8',
+    href: 'https://px.a8.net/svt/ejp?a8mat=4B3G6E+FP0DV6+32AU+BXYE9',
+    name: 'こどもバナナ青汁（Senobiru）',
+    subtitle: '94.1%のお子様が「美味しい」と回答。19種類のフルーツと野菜を配合した青汁',
+    price: '¥3,980前後',
+    articleSlug: 'sukikirai-yasai-taisaku',
   },
 ];
 
