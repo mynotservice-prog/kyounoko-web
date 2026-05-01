@@ -469,6 +469,36 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     price: '月額 ¥3,700〜',
     articleSlug: 'chiiku-subsc-hikaku-4sha',
   },
+  {
+    id: 'cs-kodomochallenge',
+    category: 'chiiku-subsc',
+    provider: 'a8',
+    href: 'https://px.a8.net/svt/ejp?a8mat=4B1PLT+A94RUA+3OR6+669JM',
+    name: 'こどもちゃれんじ（ベネッセ）',
+    subtitle: '0-6歳の年齢別教材。しまじろうで親しまれる定番の通信教材',
+    price: '月額 ¥2,460〜',
+    articleSlug: 'tsuushin-kyouzai-hikaku',
+  },
+  {
+    id: 'ts-mogumo',
+    category: 'takushoku',
+    provider: 'a8',
+    href: 'https://px.a8.net/svt/ejp?a8mat=4B3G6E+F9J44Y+5CLW+5ZEMP',
+    name: 'mogumo（モグモ）',
+    subtitle: '累計300万食突破。1-3歳向け幼児食冷凍宅配。栄養士監修で野菜たっぷり',
+    price: '1食 ¥390〜',
+    articleSlug: 'yojishoku-reitou-tsukurioki',
+  },
+  {
+    id: 'sk-firstspoon',
+    category: 'shokuiku',
+    provider: 'a8',
+    href: 'https://px.a8.net/svt/ejp?a8mat=4B3G6E+FAPZCI+4Z42+601S1',
+    name: 'ファーストスプーン（離乳食宅配）',
+    subtitle: '忙しいパパとママをサポート！冷凍離乳食の宅配。月齢に合わせて届く',
+    price: '1食 ¥360〜',
+    articleSlug: 'rinyuushoku-frozen-gekkabetsu',
+  },
 ];
 
 /**
