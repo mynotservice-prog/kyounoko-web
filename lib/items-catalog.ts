@@ -459,6 +459,16 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     price: '¥3,980前後',
     articleSlug: 'sukikirai-yasai-taisaku',
   },
+  {
+    id: 'cs-wonderbox',
+    category: 'chiiku-subsc',
+    provider: 'a8',
+    href: 'https://px.a8.net/svt/ejp?a8mat=4B3G6E+G1IHKI+4GM8+5YRHE',
+    name: 'ワンダーボックス（WonderBox）',
+    subtitle: '4-10歳向けSTEAM通信教材。アプリ＋ワークブックで思考力・創造力を育む',
+    price: '月額 ¥3,700〜',
+    articleSlug: 'chiiku-subsc-hikaku-4sha',
+  },
 ];
 
 /**
