@@ -30,7 +30,9 @@ export const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow';
  * デフォルト値をハードコードして env 設定なしでも動作させる。
  * Vercel env で `INDEXNOW_KEY` を設定すれば上書き可能。
  */
-const DEFAULT_INDEXNOW_KEY = '229166d73b10f1630ed52857e67c427b';
+// IndexNow に最初に登録した key を使い続ける必要がある（別キーは 403 UserForbiddedToAccessSite になる）。
+// public/{KEY}.txt も同じキーで配置済み。
+const DEFAULT_INDEXNOW_KEY = 'bf80742bae2245c39301924f62257c9c';
 
 export type IndexNowResult = {
   ok: boolean;
