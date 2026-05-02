@@ -31,3 +31,12 @@ export const ADSENSE_SCRIPT_SRC: string = `https://pagead2.googlesyndication.com
  */
 export const ADSENSE_ENABLED: boolean =
   process.env.NEXT_PUBLIC_ADSENSE_ENABLED?.trim().toLowerCase() === 'true';
+
+/**
+ * Auto Ads（自動広告）を有効にするか。
+ * 審査通過後 env `NEXT_PUBLIC_ADSENSE_AUTO_ADS=true` で有効化。
+ * Auto Ads はGoogleが最適な位置に自動で広告を配置する仕組み。
+ * 個別 AdSlot より管理が楽だが、配置の自由度は下がる。
+ */
+export const ADSENSE_AUTO_ADS: boolean =
+  process.env.NEXT_PUBLIC_ADSENSE_AUTO_ADS?.trim().toLowerCase() === 'true';

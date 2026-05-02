@@ -87,6 +87,13 @@ export const metadata: Metadata = {
     description: '子育て家庭の「今日どうする？」を3分で決める。',
     images: ['/img/ogp-default.jpg'],
   },
+  // Pinterest 連携: 子育て層の主要な視覚SNS流入源
+  // pinterest:image / pinterest:description で Pin の見栄えを最適化
+  other: {
+    'pinterest-rich-pin': 'true',
+    'pinterest:image': 'https://kyounoko.jp/img/ogp-default.jpg',
+    'pinterest:description': '子育て家庭の「今日どうする？」を3分で決めるサイト。0-6歳の天気・年齢・予算別に決定をサポート',
+  },
   robots: {
     index: true,
     follow: true,
