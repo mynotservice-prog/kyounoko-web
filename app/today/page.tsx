@@ -10,6 +10,7 @@ import {
   type TodayAnswerResult,
   type FileArticleMeta,
 } from '@/lib/articles';
+import { buildDayPlan, type DayPlanSlot } from '@/lib/plans';
 import { getAreaName } from '@/lib/area';
 import { getItemsForTodayQuery } from '@/lib/items-catalog';
 import { ShareBar } from '@/components/article/ShareBar';
@@ -247,10 +248,8 @@ export default async function TodayPage({ searchParams }: Props) {
 
   // 「家で過ごす」モード（home）かつ年齢指定があるとき、1日通しプランを生成。
   // 朝食・午前活動・昼食・午後活動・おやつ・夕食 の6スロット。
-  let dayPlan: Awaited<ReturnType<typeof import('@/lib/plans').buildDayPlan>> | null = null;
+  let dayPlan: DayPlanSlot[] | null = null;
   if (query.mode === 'home' && query.age && (query.duration === '240' || !query.duration)) {
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    const { buildDayPlan } = require('@/lib/plans') as typeof import('@/lib/plans');
     dayPlan = buildDayPlan({
       age: query.age,
       weather: query.weather,
