@@ -331,6 +331,40 @@ input, select { font: inherit; color: inherit; }
   margin: 0; max-width: 540px;
 }
 
+/* 時刻ヒント（finder内で表示） */
+.finder-time-hint {
+  margin: 18px 0 0;
+  padding: 10px 14px;
+  background: rgba(201, 96, 62, 0.06);
+  border-radius: 10px;
+  font-size: 12.5px;
+  color: var(--ink-sub);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.finder-time-hint span[aria-hidden] { font-size: 14px; }
+
+/* 「迷ったらお任せで」ボタン */
+.btn-magic {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #c9603e, #ff7e5f);
+  color: #fff;
+  border: none;
+  padding: 11px 18px;
+  font-size: 13.5px;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all .2s ease;
+  box-shadow: 0 3px 10px rgba(201,96,62,0.25);
+  font-family: inherit;
+}
+.btn-magic:hover { transform: translateY(-1px); box-shadow: 0 5px 14px rgba(201,96,62,0.35); }
+.btn-magic span[aria-hidden] { font-size: 14px; }
+
 /* 1日通しプラン（home モード×240分） */
 .day-plan { margin-top: 36px; padding-top: 28px; border-top: 1px solid rgba(201,96,62,0.14); }
 .day-plan-list { list-style: none; padding: 0; margin: 18px 0 0; display: flex; flex-direction: column; gap: 14px; }

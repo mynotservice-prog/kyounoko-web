@@ -41,6 +41,15 @@ export function SiteHeader({ currentCategory, showLiveChip = false }: Props) {
         </nav>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           {showLiveChip && <LiveChip />}
+          <Link href="/search" aria-label="サイト内検索" title="サイト内検索" style={{
+            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+            width: 36, height: 36, color: 'var(--ink-sub)',
+          }}>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+          </Link>
           <Link href="/favorites" aria-label="お気に入り" title="お気に入り" style={{
             display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
             width: 36, height: 36, color: 'var(--ink-sub)',

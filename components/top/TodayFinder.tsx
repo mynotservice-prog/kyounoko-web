@@ -65,20 +65,64 @@ function applyModeDefaults(s: State, mode: Mode): State {
   }
 }
 
+/**
+ * 現在時刻と曜日からユーザーが今ほしいモードを推定する。
+ * - 朝6-9 / 昼11-13 / 夕17-20 → eat（食事提案）
+ * - 9-11 → 平日 do、休日 go
+ * - 14-17 → 平日 home、休日 go
+ * - その他 → do（汎用）
+ */
+function getDefaultModeByTime(now: Date = new Date()): { mode: Mode; mealTime: MealTime } {
+  const h = now.getHours();
+  const day = now.getDay(); // 0=Sun, 6=Sat
+  const isHoliday = day === 0 || day === 6;
+
+  if (h >= 6 && h < 9) return { mode: 'eat', mealTime: 'breakfast' };
+  if (h >= 11 && h < 13) return { mode: 'eat', mealTime: 'lunch' };
+  if (h >= 14 && h < 16) return { mode: 'eat', mealTime: 'snack' };
+  if (h >= 17 && h < 20) return { mode: 'eat', mealTime: 'dinner' };
+  if (h >= 9 && h < 11) return { mode: isHoliday ? 'go' : 'do', mealTime: 'any' };
+  if (h >= 13 && h < 17) return { mode: isHoliday ? 'go' : 'home', mealTime: 'any' };
+  // 夜以降や深夜：家で過ごすモード
+  return { mode: 'home', mealTime: 'any' };
+}
+
+/** 時刻に応じた1行ヒントメッセージ */
+function getTimeHint(mode: Mode, mealTime: MealTime, now: Date = new Date()): string {
+  const h = now.getHours();
+  const m = now.getMinutes();
+  const time = `${h}:${String(m).padStart(2, '0')}`;
+  if (mode === 'eat') {
+    if (mealTime === 'breakfast') return `${time}・朝ごはんの時間。5分で出せるメニューから`;
+    if (mealTime === 'lunch') return `${time}・お昼ごはん。家にあるものでサクッと`;
+    if (mealTime === 'snack') return `${time}・おやつタイム。10分で作れる甘いもの`;
+    if (mealTime === 'dinner') return `${time}・夕食準備。15分で食卓に出せるもの`;
+  }
+  if (mode === 'go') return `${time}・お出かけタイム。エリアと時間で1つ選びます`;
+  if (mode === 'home') return `${time}・家でゆっくり。年齢に合った遊びを1つ`;
+  return `${time}・今日何しよう？を3分で決めます`;
+}
+
 export function TodayFinder() {
   const [settings, updateSettings] = useUserSettings();
   const [state, setState] = useState<State>(INITIAL);
   const [currentWeather, setCurrentWeather] = useState<{ condition: string; label: string; temperatureC: number } | null>(null);
   const router = useRouter();
 
-  // 初回マウント時に localStorage から復元
+  // 初回マウント時に localStorage から復元 + 時刻自動でモード決定
+  // ユーザーがまだモード明示してないとき（ INITIAL.mode='do' のまま）だけ時刻で上書き
+  const [autoModeApplied, setAutoModeApplied] = useState(false);
   useEffect(() => {
-    setState((s) => ({
-      ...s,
-      area: settings.area,
-      age: settings.age ?? s.age,
-    }));
-  }, [settings.area, settings.age]);
+    setState((s) => {
+      const next = { ...s, area: settings.area, age: settings.age ?? s.age };
+      if (!autoModeApplied) {
+        const { mode: autoMode, mealTime: autoMealTime } = getDefaultModeByTime();
+        return { ...applyModeDefaults(next, autoMode), mealTime: autoMealTime };
+      }
+      return next;
+    });
+    setAutoModeApplied(true);
+  }, [settings.area, settings.age]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // エリアが変わるたびに現在の天気を取得
   useEffect(() => {
@@ -130,6 +174,33 @@ export function TodayFinder() {
 
   function reset() {
     setState({ ...INITIAL, area: settings.area, age: settings.age });
+  }
+
+  /**
+   * 「迷ったらお任せで」ボタン：現在時刻ベースの最適モードを設定し、
+   * デフォルト年齢/エリアを localStorage から取って即 submit。
+   * 入力が面倒なユーザー向けのワンタップ救済。
+   */
+  function submitAuto() {
+    const { mode: autoMode, mealTime: autoMealTime } = getDefaultModeByTime();
+    const autoState: State = applyModeDefaults(
+      {
+        ...INITIAL,
+        age: settings.age ?? '2-3',
+        area: settings.area ?? 'tokyo',
+        mealTime: autoMealTime,
+      },
+      autoMode,
+    );
+    updateSettings({ area: autoState.area, age: autoState.age });
+
+    const params = new URLSearchParams();
+    Object.entries(autoState).forEach(([k, v]) => {
+      if (v === undefined || v === null) return;
+      if (k === 'area' && v === 'all') return;
+      if (v !== 'any') params.set(k, String(v));
+    });
+    router.push(`/today?${params.toString()}`);
   }
 
   // エリアセレクタ（地方ブロックごとにグルーピング）
@@ -365,6 +436,12 @@ export function TodayFinder() {
         )}
       </div>
 
+      {/* 時刻ベースのヒント（モードが時刻と一致しているときに表示） */}
+      <p className="finder-time-hint" aria-live="polite">
+        <span aria-hidden="true">⏰</span>
+        {getTimeHint(state.mode, state.mealTime)}
+      </p>
+
       <div className="finder-foot">
         <button className="btn-primary-light" onClick={submit}>
           今日の答えを出す
@@ -372,6 +449,15 @@ export function TodayFinder() {
             <path d="M5 12h14" />
             <path d="m12 5 7 7-7 7" />
           </svg>
+        </button>
+        <button
+          className="btn-magic"
+          onClick={submitAuto}
+          title="現在時刻と保存済み設定からおまかせで決めます"
+          aria-label="迷ったらお任せで提案"
+        >
+          <span aria-hidden="true">✨</span>
+          迷ったらお任せで
         </button>
         <button className="btn-light-ghost" onClick={reset}>
           条件をリセット

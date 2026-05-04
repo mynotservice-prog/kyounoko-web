@@ -4,6 +4,7 @@ import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
 import { getAllFileArticles, type FileArticleMeta } from '@/lib/articles';
+import { getAllPlanMetas, type PlanMeta } from '@/lib/plans';
 
 /**
  * サイト内検索ページ。
@@ -50,6 +51,15 @@ function matchesQuery(article: FileArticleMeta, q: string): boolean {
   return fields.some((f) => f.includes(nq));
 }
 
+function matchesPlan(plan: PlanMeta, q: string): boolean {
+  const nq = normalize(q);
+  if (!nq) return true;
+  const fields = [plan.title, plan.shortAnswer, plan.id]
+    .filter(Boolean)
+    .map((v) => normalize(String(v)));
+  return fields.some((f) => f.includes(nq));
+}
+
 export default async function SearchPage({ searchParams }: Props) {
   const sp = await searchParams;
   const q = (sp.q ?? '').trim();
@@ -57,6 +67,11 @@ export default async function SearchPage({ searchParams }: Props) {
   const filtered = q
     ? all.filter((a) => matchesQuery(a, q))
     : [...all].sort((a, b) => a.title.localeCompare(b.title, 'ja'));
+
+  // プランも q に部分一致で検索（最大20件、上位スコア順）
+  const filteredPlans: PlanMeta[] = q
+    ? getAllPlanMetas().filter((p) => matchesPlan(p, q)).slice(0, 20)
+    : [];
 
   return (
     <>
@@ -134,7 +149,54 @@ export default async function SearchPage({ searchParams }: Props) {
           </button>
         </form>
 
-        {filtered.length === 0 ? (
+        {filteredPlans.length > 0 && (
+          <section style={{ marginBottom: 28 }}>
+            <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 17, marginBottom: 12 }}>
+              プラン（{filteredPlans.length}件）
+            </h2>
+            <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gap: 10 }}>
+              {filteredPlans.map((p) => (
+                <li
+                  key={p.id}
+                  style={{
+                    background: 'var(--paper-card)',
+                    border: '1px solid var(--line)',
+                    borderRadius: 'var(--radius-md)',
+                    padding: '12px 16px',
+                  }}
+                >
+                  <Link href={`/plan/${p.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
+                      <span style={{
+                        fontSize: 10,
+                        fontWeight: 700,
+                        letterSpacing: '.1em',
+                        color: '#fff',
+                        background: 'var(--clay)',
+                        padding: '2px 8px',
+                        borderRadius: 999,
+                      }}>{p.kind === 'meal' ? 'レシピ' : 'プラン'}</span>
+                      <h3 style={{ fontSize: 15, fontWeight: 600, margin: 0, lineHeight: 1.45 }}>
+                        {p.title}
+                      </h3>
+                    </div>
+                    <p style={{ fontSize: 13, color: 'var(--ink-sub)', margin: 0, lineHeight: 1.6 }}>
+                      {p.shortAnswer.slice(0, 110)}
+                    </p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {filtered.length > 0 && q && (
+          <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 17, marginBottom: 12 }}>
+            記事（{filtered.length}件）
+          </h2>
+        )}
+
+        {filtered.length === 0 && filteredPlans.length === 0 && q ? (
           <div
             style={{
               padding: 40,
