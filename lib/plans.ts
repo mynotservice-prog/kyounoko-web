@@ -103,18 +103,27 @@ function parsePlan(raw: string, fallbackId: string): { meta: PlanMeta; body: str
     ? d.mealTime.filter((x): x is string => typeof x === 'string')
     : undefined;
 
-  // hero の自動マッチング:
-  // - frontmatter で明示的に指定があり、かつ home-cozy（汎用フォールバック）以外ならそれを優先
-  // - home-cozy 系 or 未指定 の場合は title+shortAnswer からマッチした画像で上書き
-  // これにより「家遊び全部 home-cozy 3画像」のミスマッチを解消する
-  const explicitHero = typeof d.hero === 'string' ? d.hero : undefined;
-  const isFallbackHero = !explicitHero || /\/hero\/home-cozy-/.test(explicitHero);
-  let matchedHero = isFallbackHero
-    ? pickHeroForText(`${d.title} ${d.shortAnswer}`, typeof d.id === 'string' ? d.id : fallbackId)
-    : explicitHero;
-  // .png → .webp 変換（94%サイズ削減）。明示指定の .png も対象にする。
-  if (matchedHero?.endsWith('.png')) {
-    matchedHero = matchedHero.replace(/\.png$/, '.webp');
+  // hero の自動マッチング（優先順位）:
+  //   1. /photos/<id>.webp が存在する → Pexels取得のリアル写真を最優先（料理・スポット等）
+  //   2. frontmatter 明示指定（home-cozy 以外）→ ユーザー指定を尊重
+  //   3. home-cozy フォールバック or 未指定 → title+shortAnswer からカテゴリ画像を自動マッチ
+  const planId = typeof d.id === 'string' ? d.id : fallbackId;
+  const pexelsCandidate = path.join(process.cwd(), 'public', 'photos', `${planId}.webp`);
+  const hasPexelsPhoto = fs.existsSync(pexelsCandidate);
+
+  let matchedHero: string;
+  if (hasPexelsPhoto) {
+    matchedHero = `/photos/${planId}.webp`;
+  } else {
+    const explicitHero = typeof d.hero === 'string' ? d.hero : undefined;
+    const isFallbackHero = !explicitHero || /\/hero\/home-cozy-/.test(explicitHero);
+    matchedHero = isFallbackHero
+      ? pickHeroForText(`${d.title} ${d.shortAnswer}`, planId)
+      : explicitHero;
+    // .png → .webp 変換（94%サイズ削減）。明示指定の .png も対象にする。
+    if (matchedHero?.endsWith('.png')) {
+      matchedHero = matchedHero.replace(/\.png$/, '.webp');
+    }
   }
 
   const meta: PlanMeta = {
