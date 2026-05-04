@@ -22,8 +22,8 @@ import { getAllPlanMetas, type PlanMeta } from '@/lib/plans';
  * - 軽量実装（160記事程度なら線形検索で十分）
  */
 
-export const dynamic = 'force-static';
-export const revalidate = 3600;
+// 検索クエリ毎に動的レンダリング（クエリのバリエーションが多いため static は不向き）
+export const dynamic = 'force-dynamic';
 
 type Props = {
   searchParams: Promise<{ q?: string }>;
