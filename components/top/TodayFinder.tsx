@@ -21,7 +21,11 @@ async function fetchCurrentWeather(area: string): Promise<{ condition: string; l
   }
 }
 
+type Mode = 'go' | 'do' | 'eat' | 'home';
+type MealTime = 'any' | 'breakfast' | 'lunch' | 'dinner' | 'snack';
+
 type State = {
+  mode: Mode;
   age?: '0-1' | '2-3' | '4-6';
   weather: 'any' | 'sunny' | 'rain' | 'heat' | 'cold';
   place: 'any' | 'home' | 'outside';
@@ -29,16 +33,37 @@ type State = {
   duration: '15' | '60' | '120' | '240';
   budget: 'any' | 'free' | 'low' | 'mid';
   area: AreaSlug;
+  mealTime: MealTime;
 };
 
 const INITIAL: State = {
+  mode: 'do',
   weather: 'any',
   place: 'any',
   day: 'any',
   duration: '60',
   budget: 'any',
   area: 'tokyo',
+  mealTime: 'any',
 };
+
+/**
+ * モード切替時に place を自動セットして整合性を取る。
+ * - 'go' は外出固定、'home' は家固定、'do'/'eat' は any
+ */
+function applyModeDefaults(s: State, mode: Mode): State {
+  switch (mode) {
+    case 'go':
+      return { ...s, mode, place: 'outside' };
+    case 'home':
+      return { ...s, mode, place: 'home' };
+    case 'eat':
+      return { ...s, mode, place: 'home' }; // 食事は基本家で作る前提
+    case 'do':
+    default:
+      return { ...s, mode };
+  }
+}
 
 export function TodayFinder() {
   const [settings, updateSettings] = useUserSettings();
@@ -84,6 +109,10 @@ export function TodayFinder() {
 
   function setValue<K extends keyof State>(key: K, value: State[K]) {
     setState((s) => ({ ...s, [key]: value }));
+  }
+
+  function setMode(m: Mode) {
+    setState((s) => applyModeDefaults(s, m));
   }
 
   function submit() {
@@ -132,14 +161,52 @@ export function TodayFinder() {
     return groups;
   }, []);
 
-  const placeDisablesArea = state.place === 'home'; // 家ならエリア非活性
+  const placeDisablesArea = state.mode === 'home' || state.mode === 'eat' || state.place === 'home'; // 家・食事ならエリア非活性
+
+  // モードに応じて表示する入力フィールドを切り替える
+  const showArea = state.mode === 'go' || state.mode === 'do';
+  const showWeather = state.mode !== 'eat'; // 食事は天気非依存
+  const showPlaceChip = state.mode === 'do'; // do モードのみ家/外を選べる
+  const showDay = state.mode === 'go' || state.mode === 'do';
+  const showBudget = state.mode === 'go' || state.mode === 'eat';
+  const showMealTime = state.mode === 'eat';
+
+  const HEAD_COPY: Record<Mode, { eyebrow: string; title: string; lead: string }> = {
+    go: { eyebrow: 'どこ行く？を3分で', title: '今日、どこに連れて行く？', lead: 'エリア・天気・年齢・時間・予算からおすすめおでかけ先を1つ提案。周辺のベビーカーOK店もまとめて。' },
+    do: { eyebrow: '何する？を3分で', title: '今日、何して遊ぶ？', lead: '家でも外でも、年齢・時間・場所から「今日これ」を1つ提案。気分に合わなければ別候補もすぐ見られます。' },
+    eat: { eyebrow: '何食べる？を3分で', title: '今日、何食べる？', lead: '朝・昼・夜・おやつから、年齢と所要時間に合うレシピを1つ提案。家にあるもので作れる現実解。' },
+    home: { eyebrow: '家でどう過ごす？を3分で', title: '今日、家でどう過ごす？', lead: '雨・猛暑・寒い日でも、年齢・時間に合った室内の遊びを提案。家ごもりを「今日も楽しかった」に。' },
+  };
+  const headCopy = HEAD_COPY[state.mode];
 
   return (
     <div className="finder" id="finder">
       <div className="finder-head">
-        <span className="eyebrow">3分で、今日が決まる</span>
-        <h2>迷わない、今日のすごし方。</h2>
-        <p>天気・年齢・時間を入れると、おすすめを1つご提案します。気分に合わなければ別の候補もすぐ見られます。</p>
+        <span className="eyebrow">{headCopy.eyebrow}</span>
+        <h2>{headCopy.title}</h2>
+        <p>{headCopy.lead}</p>
+
+        {/* モードタブ：4軸切替 */}
+        <div className="mode-tabs" role="tablist" aria-label="提案モード切替">
+          {([
+            { v: 'go', icon: '🚗', label: 'どこ行く' },
+            { v: 'do', icon: '🎨', label: '何する' },
+            { v: 'eat', icon: '🍽️', label: '何食べる' },
+            { v: 'home', icon: '🏠', label: '家で過ごす' },
+          ] as { v: Mode; icon: string; label: string }[]).map((m) => (
+            <button
+              key={m.v}
+              type="button"
+              role="tab"
+              aria-selected={state.mode === m.v}
+              className={`mode-tab ${state.mode === m.v ? 'active' : ''}`}
+              onClick={() => setMode(m.v)}
+            >
+              <span aria-hidden="true">{m.icon}</span>
+              {m.label}
+            </button>
+          ))}
+        </div>
 
         {/* 「こう出ます」のサンプルプレビュー（押す前に体験を見せる） */}
         <AnswerPreview />
@@ -159,7 +226,8 @@ export function TodayFinder() {
       </div>
 
       <div className="finder-grid">
-        {/* エリア */}
+        {/* エリア（go/do モードのみ） */}
+        {showArea && (
         <div className="field">
           <label>エリア{placeDisablesArea && <span style={{ fontSize: 10, color: 'var(--ink-mute)', marginLeft: 6 }}>（家で過ごす場合は任意）</span>}</label>
           <select
@@ -191,6 +259,7 @@ export function TodayFinder() {
             })}
           </select>
         </div>
+        )}
 
         <ChipGroup
           label="子どもの年齢"
@@ -202,6 +271,24 @@ export function TodayFinder() {
           value={state.age ?? ''}
           onChange={(v) => setValue('age', v as State['age'])}
         />
+
+        {/* 食事時間帯（eat モードのみ） */}
+        {showMealTime && (
+          <ChipGroup
+            label="食事の時間帯"
+            options={[
+              { value: 'any', label: 'どれでも' },
+              { value: 'breakfast', label: '朝食' },
+              { value: 'lunch', label: '昼食' },
+              { value: 'dinner', label: '夕食' },
+              { value: 'snack', label: 'おやつ' },
+            ]}
+            value={state.mealTime}
+            onChange={(v) => setValue('mealTime', v as MealTime)}
+          />
+        )}
+
+        {showWeather && (
         <ChipGroup
           label="天気"
           options={[
@@ -214,6 +301,9 @@ export function TodayFinder() {
           value={state.weather}
           onChange={(v) => setValue('weather', v as State['weather'])}
         />
+        )}
+
+        {showPlaceChip && (
         <ChipGroup
           label="家 / 外"
           options={[
@@ -224,6 +314,9 @@ export function TodayFinder() {
           value={state.place}
           onChange={(v) => setValue('place', v as State['place'])}
         />
+        )}
+
+        {showDay && (
         <ChipGroup
           label="平日 / 休日"
           options={[
@@ -234,28 +327,42 @@ export function TodayFinder() {
           value={state.day}
           onChange={(v) => setValue('day', v as State['day'])}
         />
+        )}
+
         <ChipGroup
-          label="使える時間"
-          options={[
-            { value: '15', label: '15分' },
-            { value: '60', label: '1時間' },
-            { value: '120', label: '半日' },
-            { value: '240', label: '1日' },
-          ]}
+          label={state.mode === 'eat' ? '調理時間' : '使える時間'}
+          options={
+            state.mode === 'eat'
+              ? [
+                  { value: '15', label: '5〜15分' },
+                  { value: '60', label: '〜30分' },
+                  { value: '120', label: '〜1時間' },
+                  { value: '240', label: 'たっぷり' },
+                ]
+              : [
+                  { value: '15', label: '15分' },
+                  { value: '60', label: '1時間' },
+                  { value: '120', label: '半日' },
+                  { value: '240', label: '1日' },
+                ]
+          }
           value={state.duration}
           onChange={(v) => setValue('duration', v as State['duration'])}
         />
+
+        {showBudget && (
         <ChipGroup
           label="予算感"
           options={[
             { value: 'any', label: 'こだわらない' },
-            { value: 'free', label: '無料' },
+            { value: 'free', label: '無料〜500円' },
             { value: 'low', label: '〜2,000円' },
             { value: 'mid', label: '〜5,000円' },
           ]}
           value={state.budget}
           onChange={(v) => setValue('budget', v as State['budget'])}
         />
+        )}
       </div>
 
       <div className="finder-foot">

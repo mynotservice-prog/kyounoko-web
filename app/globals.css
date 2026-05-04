@@ -331,6 +331,46 @@ input, select { font: inherit; color: inherit; }
   margin: 0; max-width: 540px;
 }
 
+/* モードタブ：4軸切替 */
+.mode-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0 6px;
+  padding: 6px;
+  background: rgba(201, 96, 62, 0.06);
+  border-radius: 14px;
+  border: 1px solid rgba(201, 96, 62, 0.12);
+}
+.mode-tab {
+  flex: 1 1 calc(50% - 4px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--ink-sub);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .18s ease;
+  white-space: nowrap;
+}
+.mode-tab:hover { background: rgba(255,255,255,0.7); color: var(--ink); }
+.mode-tab.active {
+  background: #FFFBF3;
+  color: var(--clay);
+  border-color: var(--clay);
+  box-shadow: 0 2px 8px rgba(201,96,62,0.18);
+}
+.mode-tab span[aria-hidden] { font-size: 16px; }
+@media (min-width: 640px) {
+  .mode-tab { flex: 1 1 auto; }
+}
+
 .finder-grid {
   display: grid;
   gap: 20px;

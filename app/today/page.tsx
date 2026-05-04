@@ -239,6 +239,8 @@ export default async function TodayPage({ searchParams }: Props) {
     duration: firstString(sp.duration),
     budget: firstString(sp.budget),
     area: firstString(sp.area),
+    mode: firstString(sp.mode) as TodayQuery['mode'],
+    mealTime: firstString(sp.mealTime) as TodayQuery['mealTime'],
   };
 
   const { top, alternatives, hasQuery, fallbackUsed } = getTodayAnswer(query);

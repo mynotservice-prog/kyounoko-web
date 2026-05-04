@@ -600,6 +600,10 @@ export type TodayQuery = {
   duration?: string; // "15" | "60" | "120" | "240"
   budget?: string; // "free" | "low" | "mid" | "any"
   area?: string; // AreaSlug — "all" or 都道府県 / 地方ブロック
+  /** Finder モード。'go'(どこ行く)/'do'(何する)/'eat'(何食べる)/'home'(家で過ごす) */
+  mode?: 'go' | 'do' | 'eat' | 'home';
+  /** 'eat' モード時の食事時間帯。 */
+  mealTime?: 'breakfast' | 'lunch' | 'dinner' | 'snack';
 };
 
 /** スコアと一致理由（人間向け自然文）を同時に返す内部結果 */

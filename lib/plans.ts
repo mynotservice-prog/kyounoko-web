@@ -35,6 +35,17 @@ import type { AgeRange, Budget, PlaceType, Weather } from './types';
 const PLANS_DIR = path.join(process.cwd(), 'content', 'plans');
 
 export type PlanDay = 'any' | 'weekday' | 'holiday';
+export type PlanKind = 'activity' | 'meal';
+export type MealTime = 'breakfast' | 'lunch' | 'dinner' | 'snack';
+
+/**
+ * Finder のモード。UI のタブ単位で、出力する Plan の kind と入力フォーカスを切り替える。
+ * - 'go'   : 外出スポット中心（place=outside で activity プラン）
+ * - 'do'   : 何して遊ぶか（家・外問わず activity プラン）
+ * - 'eat'  : 何を食べる（meal プラン）
+ * - 'home' : 家でどう過ごす（place=home で activity プラン）
+ */
+export type FinderMode = 'go' | 'do' | 'eat' | 'home';
 
 export type PlanMeta = {
   id: string;
@@ -49,6 +60,10 @@ export type PlanMeta = {
   area: string;
   seoRelated?: string;
   hero?: string;
+  /** 'activity' は遊び・おでかけ系（既存）。'meal' は食事提案。frontmatter で指定なければ activity。 */
+  kind: PlanKind;
+  /** kind='meal' のとき朝/昼/夜/おやつ のどれか。 */
+  mealTime?: MealTime[];
 };
 
 export type Plan = PlanMeta & {
@@ -83,6 +98,10 @@ function parsePlan(raw: string, fallbackId: string): { meta: PlanMeta; body: str
     ? d.day.filter((x): x is string => typeof x === 'string')
     : ['any'];
 
+  const mealTime = Array.isArray(d.mealTime)
+    ? d.mealTime.filter((x): x is string => typeof x === 'string')
+    : undefined;
+
   const meta: PlanMeta = {
     id: typeof d.id === 'string' ? d.id : fallbackId,
     title: d.title,
@@ -96,6 +115,8 @@ function parsePlan(raw: string, fallbackId: string): { meta: PlanMeta; body: str
     area: typeof d.area === 'string' ? d.area : 'all',
     seoRelated: typeof d.seoRelated === 'string' ? d.seoRelated : undefined,
     hero: typeof d.hero === 'string' ? d.hero : undefined,
+    kind: (d.kind === 'meal' ? 'meal' : 'activity') as PlanKind,
+    mealTime: mealTime ? (mealTime as MealTime[]) : undefined,
   };
 
   return { meta, body: content };
@@ -161,6 +182,13 @@ export type PlanQuery = {
   duration?: string;
   budget?: string;
   area?: string;
+  /**
+   * Finder モード。'eat' のときは meal プラン、それ以外は activity プランを優先。
+   * 未指定なら全 kind から選ぶ（後方互換）。
+   */
+  mode?: FinderMode;
+  /** 'eat' モード時の食事帯。breakfast/lunch/dinner/snack。 */
+  mealTime?: MealTime;
 };
 
 export type PlanMatch = {
@@ -172,6 +200,43 @@ export type PlanMatch = {
 function scorePlan(p: PlanMeta, q: PlanQuery): PlanMatch {
   let score = 0;
   const reasons: string[] = [];
+
+  // Finder モードによる kind フィルタ（最優先・不一致は強い減点で弾く）
+  // - 'eat' モード: meal プランのみ。activity が混ざると邪魔。
+  // - 'go'/'do'/'home' モード: activity プランのみ。meal は別タブで扱う。
+  // - mode 未指定（後方互換）: kind で絞らない
+  if (q.mode) {
+    if (q.mode === 'eat') {
+      if (p.kind !== 'meal') return { plan: p, score: -1000, reasons: [] };
+    } else {
+      if (p.kind === 'meal') return { plan: p, score: -1000, reasons: [] };
+    }
+  }
+
+  // mealTime 一致（'eat' モード時、朝/昼/夜/おやつのどれかが指定されたら強く加点）
+  if (q.mode === 'eat' && q.mealTime && p.mealTime?.includes(q.mealTime)) {
+    score += 30;
+    const labels: Record<MealTime, string> = {
+      breakfast: '朝食',
+      lunch: '昼食',
+      dinner: '夕食',
+      snack: 'おやつ',
+    };
+    reasons.push(labels[q.mealTime]);
+  }
+
+  // 'go' モード時は外出系を強く優遇（home プランは弾く）
+  if (q.mode === 'go') {
+    if (p.place.includes('home' as PlaceType) && !p.place.includes('outdoor' as PlaceType) && !p.place.includes('indoor' as PlaceType)) {
+      return { plan: p, score: -1000, reasons: [] };
+    }
+  }
+  // 'home' モード時は家プランを強く優遇（outdoor のみは弾く）
+  if (q.mode === 'home') {
+    if (p.place.includes('outdoor' as PlaceType) && !p.place.includes('home' as PlaceType) && !p.place.includes('indoor' as PlaceType)) {
+      return { plan: p, score: -1000, reasons: [] };
+    }
+  }
 
   // 年齢（コア条件：不一致は -100 で弾く）
   if (q.age) {
