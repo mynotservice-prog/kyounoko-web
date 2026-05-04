@@ -95,8 +95,18 @@ function parseFrontmatter(raw: string, fallbackSlug: string): { meta: FileArticl
     categoryName: typeof d.categoryName === 'string' ? d.categoryName : undefined,
     publishedAt: toIsoDate(d.publishedAt) ?? new Date().toISOString(),
     updatedAt: toIsoDate(d.updatedAt) ?? toIsoDate(d.publishedAt) ?? new Date().toISOString(),
-    // hero は .png なら .webp に自動置換（94%サイズ削減・WebP化）
-    hero: typeof d.hero === 'string' ? d.hero.replace(/\.png$/, '.webp') : undefined,
+    // hero の優先順位:
+    //   1. /photos/article-<slug>.webp（Pexels実写真）が存在 → 最優先
+    //   2. frontmatter 指定があれば .png→.webp 変換して使用
+    //   3. なければ undefined（呼び出し側でフォールバック）
+    hero: (() => {
+      const slug = typeof d.slug === 'string' ? d.slug : fallbackSlug;
+      const pexelsCandidate = path.join(process.cwd(), 'public', 'photos', `article-${slug}.webp`);
+      if (fs.existsSync(pexelsCandidate)) {
+        return `/photos/article-${slug}.webp`;
+      }
+      return typeof d.hero === 'string' ? d.hero.replace(/\.png$/, '.webp') : undefined;
+    })(),
     lede: typeof d.lede === 'string' ? d.lede : (typeof d.metaDescription === 'string' ? d.metaDescription : ''),
     quickInfo: parseQuickInfo(d.quickInfo),
     noindex: typeof d.noindex === 'boolean' ? d.noindex : undefined,
