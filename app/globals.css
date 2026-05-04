@@ -331,6 +331,46 @@ input, select { font: inherit; color: inherit; }
   margin: 0; max-width: 540px;
 }
 
+/* 1日通しプラン（home モード×240分） */
+.day-plan { margin-top: 36px; padding-top: 28px; border-top: 1px solid rgba(201,96,62,0.14); }
+.day-plan-list { list-style: none; padding: 0; margin: 18px 0 0; display: flex; flex-direction: column; gap: 14px; }
+.day-plan-slot { display: grid; grid-template-columns: 110px 1fr; gap: 16px; align-items: stretch; }
+.day-plan-slot.empty .day-plan-card { opacity: .55; }
+.day-plan-time {
+  display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
+  padding: 12px 12px 12px 0; border-right: 2px solid rgba(201,96,62,0.18);
+}
+.day-plan-icon { font-size: 22px; margin-bottom: 4px; }
+.day-plan-clock {
+  font-family: var(--font-display, "DM Serif Display", serif);
+  font-size: 22px; font-weight: 600; color: var(--clay); line-height: 1;
+}
+.day-plan-label { font-size: 11px; color: var(--ink-mute); letter-spacing: .14em; margin-top: 4px; text-transform: uppercase; }
+.day-plan-card {
+  display: block; background: var(--paper-card); border: 1px solid rgba(201,96,62,0.16);
+  border-radius: 14px; padding: 14px 16px; transition: all .18s ease;
+  text-decoration: none; color: var(--ink);
+}
+.day-plan-card:hover { border-color: var(--clay); background: #FFFBF3; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(201,96,62,0.12); }
+.day-plan-card.empty { background: rgba(201,96,62,0.04); color: var(--ink-mute); font-size: 13px; }
+.day-plan-title { font-weight: 600; font-size: 15px; margin-bottom: 4px; line-height: 1.4; }
+.day-plan-short { font-size: 13px; color: var(--ink-sub); line-height: 1.5; margin-bottom: 6px; }
+.day-plan-meta { font-size: 11px; color: var(--ink-mute); letter-spacing: .04em; }
+@media (max-width: 540px) {
+  .day-plan-slot { grid-template-columns: 80px 1fr; gap: 10px; }
+  .day-plan-clock { font-size: 18px; }
+}
+
+/* 「いま人気」バッジ */
+.trending-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 3px 10px; border-radius: 999px;
+  background: linear-gradient(135deg, #ff7e5f, #c9603e);
+  color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .04em;
+  box-shadow: 0 2px 6px rgba(201,96,62,0.25);
+}
+.trending-badge::before { content: "🔥"; font-size: 11px; }
+
 /* モードタブ：4軸切替 */
 .mode-tabs {
   display: flex;

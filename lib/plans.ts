@@ -330,7 +330,30 @@ function scorePlan(p: PlanMeta, q: PlanQuery): PlanMatch {
     else { score -= 60; }
   }
 
+  // SNSトレンド一致ボーナス（2026年5月時点のIG調査ベース）
+  // 「無料」「予約不要」「鬼リピ」「コスパ」「秒で完食」「鉄板」「失敗しない」
+  // 等のキーワードが title/shortAnswer に含まれるプランを優遇。
+  if (isTrendingPlan(p)) {
+    score += 5;
+    reasons.push('いま人気');
+  }
+
   return { plan: p, score, reasons };
+}
+
+/**
+ * Plan の title / shortAnswer に SNSトレンド語が含まれているかを判定。
+ * これがトレンドスコアの源泉になる（ハードコードのキュレーション）。
+ */
+const TREND_KEYWORDS = [
+  '無料', '予約不要', '鬼リピ', 'コスパ', '秒で', '鉄板', '失敗しない',
+  '保存版', '0円', '5分', '10分', '15分', '神', '実は', 'ガチで',
+  '家にあるもの', '冷凍', '時短',
+];
+
+export function isTrendingPlan(p: PlanMeta): boolean {
+  const text = `${p.title}${p.shortAnswer}`;
+  return TREND_KEYWORDS.some((kw) => text.includes(kw));
 }
 
 /**
@@ -349,6 +372,99 @@ export function pickTopPlan(q: PlanQuery): PlanMatch | null {
     });
 
   return scored[0] ?? null;
+}
+
+/**
+ * 「家で過ごす1日」モード用：朝食・午前活動・昼食・午後活動・おやつ・夕食 を時刻つきで返す。
+ * 各 mealTime / 場面ごとに条件に合うプランを1つずつピック。
+ */
+export type DayPlanSlot = {
+  /** 表示名："朝食" "午前の遊び" など */
+  label: string;
+  /** タイムライン上の時刻表示："7:30" "10:00" など */
+  time: string;
+  /** 該当プラン（なければ null） */
+  plan: PlanMeta | null;
+  /** スロットに紐づくアイコン */
+  icon: string;
+};
+
+export function buildDayPlan(q: PlanQuery): DayPlanSlot[] {
+  const age = q.age;
+  // 共通条件：家中心、平日／休日は q.day を尊重
+  const baseQuery = (overrides: Partial<PlanQuery>): PlanQuery => ({
+    age,
+    place: 'home',
+    weather: q.weather,
+    day: q.day,
+    ...overrides,
+  });
+
+  const pickFor = (filter: (p: PlanMeta) => boolean, q2: PlanQuery): PlanMeta | null => {
+    const scored = getAllPlanMetas()
+      .filter(filter)
+      .map((p) => scorePlan(p, q2))
+      .filter((m) => m.score > 0)
+      .sort((a, b) => b.score - a.score);
+    return scored[0]?.plan ?? null;
+  };
+
+  return [
+    {
+      label: '朝食',
+      time: '7:30',
+      icon: '🌅',
+      plan: pickFor(
+        (p) => p.kind === 'meal' && p.mealTime?.includes('breakfast') === true,
+        baseQuery({ mode: 'eat', mealTime: 'breakfast' as MealTime, duration: '15' }),
+      ),
+    },
+    {
+      label: '午前の遊び',
+      time: '10:00',
+      icon: '🎨',
+      plan: pickFor(
+        (p) => p.kind === 'activity' && p.place.includes('home' as PlaceType),
+        baseQuery({ mode: 'home', duration: '60' }),
+      ),
+    },
+    {
+      label: '昼食',
+      time: '12:00',
+      icon: '🍙',
+      plan: pickFor(
+        (p) => p.kind === 'meal' && p.mealTime?.includes('lunch') === true,
+        baseQuery({ mode: 'eat', mealTime: 'lunch' as MealTime, duration: '15' }),
+      ),
+    },
+    {
+      label: '午後の遊び',
+      time: '15:00',
+      icon: '📚',
+      plan: pickFor(
+        (p) => p.kind === 'activity' && p.place.includes('home' as PlaceType),
+        baseQuery({ mode: 'home', duration: '60' }),
+      ),
+    },
+    {
+      label: 'おやつ',
+      time: '15:30',
+      icon: '🍰',
+      plan: pickFor(
+        (p) => p.kind === 'meal' && p.mealTime?.includes('snack') === true,
+        baseQuery({ mode: 'eat', mealTime: 'snack' as MealTime, duration: '15' }),
+      ),
+    },
+    {
+      label: '夕食',
+      time: '18:00',
+      icon: '🌙',
+      plan: pickFor(
+        (p) => p.kind === 'meal' && p.mealTime?.includes('dinner') === true,
+        baseQuery({ mode: 'eat', mealTime: 'dinner' as MealTime, duration: '15' }),
+      ),
+    },
+  ];
 }
 
 /**

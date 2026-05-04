@@ -245,6 +245,20 @@ export default async function TodayPage({ searchParams }: Props) {
 
   const { top, alternatives, hasQuery, fallbackUsed } = getTodayAnswer(query);
 
+  // 「家で過ごす」モード（home）かつ年齢指定があるとき、1日通しプランを生成。
+  // 朝食・午前活動・昼食・午後活動・おやつ・夕食 の6スロット。
+  let dayPlan: Awaited<ReturnType<typeof import('@/lib/plans').buildDayPlan>> | null = null;
+  if (query.mode === 'home' && query.age && (query.duration === '240' || !query.duration)) {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { buildDayPlan } = require('@/lib/plans') as typeof import('@/lib/plans');
+    dayPlan = buildDayPlan({
+      age: query.age,
+      weather: query.weather,
+      day: query.day,
+      area: query.area,
+    });
+  }
+
   const activeChips: { key: string; label: string }[] = [];
   if (query.age) activeChips.push({ key: 'age', label: labelForValue('age', query.age) });
   if (query.area && query.area !== 'all') activeChips.push({ key: 'area', label: getAreaName(query.area) });
@@ -337,6 +351,42 @@ export default async function TodayPage({ searchParams }: Props) {
               )}
 
               <AnswerCard answer={top} featured />
+
+              {/* 「家で過ごす」モードの1日通しプラン（朝食〜夕食） */}
+              {dayPlan && (
+                <section className="day-plan">
+                  <h3 className="today-section-title">
+                    <span className="today-section-eyebrow">Full day at home</span>
+                    家で過ごす1日のタイムライン
+                  </h3>
+                  <p className="today-section-lede">
+                    朝食から夕食まで、家で過ごす1日の流れを6スロットで提案。
+                    各カードをタップすると詳細プランへ。
+                  </p>
+                  <ol className="day-plan-list">
+                    {dayPlan.map((slot, i) => (
+                      <li key={i} className={`day-plan-slot ${slot.plan ? '' : 'empty'}`}>
+                        <div className="day-plan-time">
+                          <span className="day-plan-icon" aria-hidden="true">{slot.icon}</span>
+                          <span className="day-plan-clock">{slot.time}</span>
+                          <span className="day-plan-label">{slot.label}</span>
+                        </div>
+                        {slot.plan ? (
+                          <Link href={`/plan/${slot.plan.id}`} className="day-plan-card">
+                            <div className="day-plan-title">{slot.plan.title}</div>
+                            <div className="day-plan-short">{slot.plan.shortAnswer}</div>
+                            <div className="day-plan-meta">
+                              {slot.plan.durationMin}分 · {slot.plan.budget === 'free' ? '0円〜' : slot.plan.budget === 'low' ? '〜2,000円' : '〜5,000円'}
+                            </div>
+                          </Link>
+                        ) : (
+                          <div className="day-plan-card empty">この時間帯のプランは準備中</div>
+                        )}
+                      </li>
+                    ))}
+                  </ol>
+                </section>
+              )}
 
               {/* 別の候補を inline で常時表示（旧 details 折りたたみは廃止） */}
               {alternatives.length > 0 && (
