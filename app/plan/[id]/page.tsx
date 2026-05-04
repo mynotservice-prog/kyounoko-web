@@ -16,7 +16,8 @@ import { FavoriteButton } from '@/components/ui/FavoriteButton';
 import { TriedButton } from '@/components/ui/TriedButton';
 import { SpotList } from '@/components/common/SpotList';
 
-export const revalidate = 3600;
+// hero 画像の自動マッチング更新を即時反映するため revalidate を短縮（5分）
+export const revalidate = 300;
 
 type Props = {
   params: Promise<{ id: string }>;
