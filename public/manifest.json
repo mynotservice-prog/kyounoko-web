@@ -1,0 +1,59 @@
+{
+  "name": "きょうのこ｜今日どうする？を3分で",
+  "short_name": "きょうのこ",
+  "description": "0〜6歳の子がいる家庭向け。天気・年齢・時間・予算から、今日の過ごし方・食事を3分で決める意思決定サイト。",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FBF5E8",
+  "theme_color": "#C9603E",
+  "lang": "ja",
+  "categories": ["lifestyle", "kids", "parenting"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "今日どこ行く",
+      "short_name": "どこ行く",
+      "description": "おでかけスポット提案",
+      "url": "/today?mode=go"
+    },
+    {
+      "name": "今日何食べる",
+      "short_name": "何食べる",
+      "description": "年齢別レシピ提案",
+      "url": "/today?mode=eat"
+    },
+    {
+      "name": "家でどう過ごす",
+      "short_name": "家で過ごす",
+      "description": "室内遊び＋1日通しプラン",
+      "url": "/today?mode=home"
+    },
+    {
+      "name": "お気に入り",
+      "short_name": "お気に入り",
+      "description": "保存したプラン一覧",
+      "url": "/favorites"
+    }
+  ]
+}

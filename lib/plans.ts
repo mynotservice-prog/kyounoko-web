@@ -109,9 +109,13 @@ function parsePlan(raw: string, fallbackId: string): { meta: PlanMeta; body: str
   // これにより「家遊び全部 home-cozy 3画像」のミスマッチを解消する
   const explicitHero = typeof d.hero === 'string' ? d.hero : undefined;
   const isFallbackHero = !explicitHero || /\/hero\/home-cozy-/.test(explicitHero);
-  const matchedHero = isFallbackHero
+  let matchedHero = isFallbackHero
     ? pickHeroForText(`${d.title} ${d.shortAnswer}`, typeof d.id === 'string' ? d.id : fallbackId)
     : explicitHero;
+  // .png → .webp 変換（94%サイズ削減）。明示指定の .png も対象にする。
+  if (matchedHero?.endsWith('.png')) {
+    matchedHero = matchedHero.replace(/\.png$/, '.webp');
+  }
 
   const meta: PlanMeta = {
     id: typeof d.id === 'string' ? d.id : fallbackId,

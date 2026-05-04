@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Shippori_Mincho, Noto_Sans_JP, Zen_Maru_Gothic, DM_Serif_Display, Inter } from 'next/font/google';
 import Script from 'next/script';
 import { ADSENSE_SCRIPT_SRC, ADSENSE_CLIENT, ADSENSE_ENABLED } from '@/lib/adsense';
+import { PWARegister } from '@/components/common/PWARegister';
 import './globals.css';
 
 // Next.js 15 では theme-color / viewport は viewport export で指定する
@@ -108,9 +109,20 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/img/favicon.svg', type: 'image/svg+xml' },
+      { url: '/icons/favicon-32.png', sizes: '32x32', type: 'image/png' },
       { url: '/favicon.ico', sizes: '32x32' },
     ],
-    apple: '/img/apple-touch-icon.svg',
+    apple: [
+      { url: '/icons/apple-touch-icon-180.png', sizes: '180x180' },
+      { url: '/icons/apple-touch-icon-167.png', sizes: '167x167' },
+      { url: '/icons/apple-touch-icon-152.png', sizes: '152x152' },
+    ],
+  },
+  manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'きょうのこ',
   },
   alternates: {
     canonical: '/',
@@ -238,6 +250,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         )}
 
         {/* AdSense スクリプトは head で直接読み込み済み（Google推奨配置） */}
+
+        {/* PWA: Service Worker 登録（本番のみ） */}
+        <PWARegister />
       </body>
     </html>
   );

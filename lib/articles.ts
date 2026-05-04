@@ -95,7 +95,8 @@ function parseFrontmatter(raw: string, fallbackSlug: string): { meta: FileArticl
     categoryName: typeof d.categoryName === 'string' ? d.categoryName : undefined,
     publishedAt: toIsoDate(d.publishedAt) ?? new Date().toISOString(),
     updatedAt: toIsoDate(d.updatedAt) ?? toIsoDate(d.publishedAt) ?? new Date().toISOString(),
-    hero: typeof d.hero === 'string' ? d.hero : undefined,
+    // hero は .png なら .webp に自動置換（94%サイズ削減・WebP化）
+    hero: typeof d.hero === 'string' ? d.hero.replace(/\.png$/, '.webp') : undefined,
     lede: typeof d.lede === 'string' ? d.lede : (typeof d.metaDescription === 'string' ? d.metaDescription : ''),
     quickInfo: parseQuickInfo(d.quickInfo),
     noindex: typeof d.noindex === 'boolean' ? d.noindex : undefined,

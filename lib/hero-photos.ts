@@ -72,8 +72,12 @@ const POOL: Record<PhotoCat, string[]> = {
   'outdoor-generic': ['/hero/park-01.png', '/hero/nature-01.png', '/hero/park-02.png'],
 };
 
+/**
+ * 画像URLを返す。.png は .webp に自動置換（94%サイズ削減）。
+ * 旧 .png ファイルも残しているため fallback は別途必要なら呼び出し側で。
+ */
 function photoUrl(path: string): string {
-  return path;
+  return path.replace(/\.png$/, '.webp');
 }
 
 /** slug 文字列からカテゴリを推定する（優先度順に判定）。 */
