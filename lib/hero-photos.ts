@@ -169,6 +169,102 @@ function inferCategoryFromSlug(slug: string): PhotoCat {
 }
 
 /**
+ * 日本語タイトル / 本文込みでカテゴリ推定する強化版。
+ * inferCategoryFromSlug は slug（英字スラグ）前提なので、日本語の plan title /
+ * shortAnswer を渡してもマッチが弱い。これを補うため、日本語キーワードを直接見る
+ * 別レイヤーを追加。slug 推定で 'home-cozy'（汎用フォールバック）になった場合のみ
+ * 日本語キーワードで上書きする。
+ */
+function inferCategoryFromText(text: string): PhotoCat {
+  const fromSlug = inferCategoryFromSlug(text);
+  if (fromSlug !== 'home-cozy') return fromSlug;
+
+  const t = text;
+  // 食事系（既存hero設定を優先するためplan側でガード予定だが、念のため）
+  if (/朝ごはん|朝食/.test(t)) return 'food-fruit';
+  if (/お弁当|キャラ弁|弁当/.test(t)) return 'food-japan';
+  if (/おやつ|デザート|お菓子|スイーツ/.test(t)) return 'food-sweet';
+  if (/夕食|夕ごはん|晩ごはん|ディナー/.test(t)) return 'family-dinner';
+  if (/離乳食|幼児食|赤ちゃん.*食/.test(t)) return 'food-japan';
+  if (/野菜|果物|フルーツ/.test(t)) return 'food-fruit';
+  if (/魚|肉|料理|レシピ|調理|キッチン/.test(t)) return 'food-kitchen';
+
+  // 工作・お絵かき
+  if (/工作|折り紙|お絵かき|絵を描|塗り絵|ぬりえ|シール|シール遊び|粘土|貼り絵/.test(t)) return 'kid-craft';
+
+  // 絵本・読書
+  if (/絵本|読み聞かせ|読書/.test(t)) return 'kid-learn';
+
+  // 音楽
+  if (/音楽|ピアノ|リトミック|歌|楽器|ダンス/.test(t)) return 'piano';
+
+  // 学習・知育
+  if (/知育|文字|ひらがな|数字|英語|学習|ドリル/.test(t)) return 'kid-study';
+
+  // 室内運動
+  if (/体操|ジャンプ|跳ぶ|走る|サーキット|室内運動|身体|運動遊び/.test(t)) return 'classroom';
+
+  // お風呂
+  if (/お風呂|シャワー|入浴/.test(t)) return 'bath';
+
+  // 水遊び・夏
+  if (/水遊び|プール|プール開き|ホース|びしょ濡れ/.test(t)) return 'summer-water';
+
+  // 自然・公園
+  if (/公園|外遊び|遊具|滑り台|砂場/.test(t)) return 'park';
+  if (/散歩|お散歩|自然|花|植物|虫取り/.test(t)) return 'nature';
+
+  // 季節
+  if (/秋|紅葉|どんぐり|落ち葉|松ぼっくり/.test(t)) return 'autumn';
+  if (/雪|冬|スキー|そり/.test(t)) return 'winter-snow';
+  if (/桜|お花見|春/.test(t)) return 'sakura';
+
+  // 寝かしつけ
+  if (/夜泣き|寝かしつけ|お昼寝|睡眠|寝ない/.test(t)) return 'sleeping';
+
+  // 医療
+  if (/熱|発熱|風邪|病気|薬|アレルギー/.test(t)) return 'medical';
+
+  // しつけ
+  if (/イヤイヤ|しつけ|声かけ|叱る|きょうだい|ケンカ|喧嘩|友達/.test(t)) return 'parent-child';
+
+  // 商品
+  if (/ベビーカー|抱っこ紐|チャイルドシート|ベビー用品/.test(t)) return 'stroller';
+  if (/ランキング|比較|選び方|おすすめ.*選/.test(t)) return 'commerce';
+
+  // 室内遊び（汎用）
+  if (/紙コップ|風船|積み木|ブロック|お絵かき|手遊び|室内|秘密基地|テント|お店屋さん|ごっこ遊び/.test(t)) return 'toddler-play';
+
+  // 0-1歳系
+  if (/赤ちゃん|0歳|1歳/.test(t)) return 'baby';
+
+  // 2-6歳系
+  if (/2歳|3歳|4歳|5歳|6歳/.test(t)) return 'toddler-play';
+
+  // 親子コミュニケーション
+  if (/家族|親子|ふれあい|スキンシップ/.test(t)) return 'parent-child';
+
+  return fromSlug; // home-cozy のまま
+}
+
+/**
+ * テキスト（タイトル+本文）からヒーロー画像URLを決定する。
+ * plan/article のタイトル+短答を渡せば、内容に合った画像を deterministic に返す。
+ */
+export function pickHeroForText(text: string, seed?: string): string {
+  const category = inferCategoryFromText(text);
+  const pool = POOL[category];
+  const seedStr = seed ?? text;
+  let hash = 0;
+  for (let i = 0; i < seedStr.length; i++) {
+    hash = ((hash << 5) - hash) + seedStr.charCodeAt(i);
+    hash |= 0;
+  }
+  const idx = Math.abs(hash) % pool.length;
+  return photoUrl(pool[idx]);
+}
+
+/**
  * slug からヒーロー画像URLを決定する。
  * 同じslugは常に同じ画像を返す（deterministic）。
  */

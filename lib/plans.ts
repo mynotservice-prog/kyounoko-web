@@ -31,6 +31,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 import type { AgeRange, Budget, PlaceType, Weather } from './types';
+import { pickHeroForText } from './hero-photos';
 
 const PLANS_DIR = path.join(process.cwd(), 'content', 'plans');
 
@@ -102,6 +103,16 @@ function parsePlan(raw: string, fallbackId: string): { meta: PlanMeta; body: str
     ? d.mealTime.filter((x): x is string => typeof x === 'string')
     : undefined;
 
+  // hero の自動マッチング:
+  // - frontmatter で明示的に指定があり、かつ home-cozy（汎用フォールバック）以外ならそれを優先
+  // - home-cozy 系 or 未指定 の場合は title+shortAnswer からマッチした画像で上書き
+  // これにより「家遊び全部 home-cozy 3画像」のミスマッチを解消する
+  const explicitHero = typeof d.hero === 'string' ? d.hero : undefined;
+  const isFallbackHero = !explicitHero || /\/hero\/home-cozy-/.test(explicitHero);
+  const matchedHero = isFallbackHero
+    ? pickHeroForText(`${d.title} ${d.shortAnswer}`, typeof d.id === 'string' ? d.id : fallbackId)
+    : explicitHero;
+
   const meta: PlanMeta = {
     id: typeof d.id === 'string' ? d.id : fallbackId,
     title: d.title,
@@ -114,7 +125,7 @@ function parsePlan(raw: string, fallbackId: string): { meta: PlanMeta; body: str
     budget: (typeof d.budget === 'string' ? d.budget : 'free') as Budget,
     area: typeof d.area === 'string' ? d.area : 'all',
     seoRelated: typeof d.seoRelated === 'string' ? d.seoRelated : undefined,
-    hero: typeof d.hero === 'string' ? d.hero : undefined,
+    hero: matchedHero,
     kind: (d.kind === 'meal' ? 'meal' : 'activity') as PlanKind,
     mealTime: mealTime ? (mealTime as MealTime[]) : undefined,
   };
