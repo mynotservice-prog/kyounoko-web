@@ -11,7 +11,7 @@ import { WeeklyPick } from '@/components/top/WeeklyPick';
 import { PopularSpots } from '@/components/top/PopularSpots';
 import { getAllFileArticles } from '@/lib/articles';
 import { getTokyoNow, formatJaLong, monthNameEn } from '@/lib/date';
-import { AdSlot } from '@/components/ads/AdSlot';
+// import { AdSlot } from '@/components/ads/AdSlot'; // home-below-finder削除に伴い未使用
 import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
 import { getMonthlyPickedItems } from '@/lib/items-catalog';
 
@@ -173,10 +173,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* AdSense: Finder 下 */}
-      <div className="container" style={{ marginTop: 12 }}>
-        <AdSlot placement="home-below-finder" />
-      </div>
+      {/* AdSense home-below-finder は2026-05に削除
+          - StationSearchの直下で空枠だけが残るUX不良
+          - AdSense承認・配信開始が確認できたら別配置で再導入予定 */}
 
       {/* ======================================================================
           今週のおすすめ（季節の具体スポット）
