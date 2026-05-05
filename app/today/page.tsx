@@ -397,6 +397,38 @@ export default async function TodayPage({ searchParams }: Props) {
                 </section>
               )}
 
+              {/* 駅から探すCTA: 東京エリア × 外モード時のみ表示
+                  484駅×3,000ページの巨大ロングテール群への入り口。
+                  「もっと細かく駅で絞りたい」ニーズに応える */}
+              {query.area === 'tokyo' && (query.place !== 'home') && (
+                <section style={{ margin: '32px 0' }}>
+                  <Link href="/station" style={{
+                    display: 'block',
+                    background: 'linear-gradient(135deg, rgba(201,96,62,0.08), rgba(201,96,62,0.03))',
+                    border: '1px solid rgba(201,96,62,0.20)',
+                    borderRadius: 16,
+                    padding: '20px 24px',
+                    textDecoration: 'none',
+                    color: 'var(--ink)',
+                  }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
+                      <div style={{ flex: 1, minWidth: 220 }}>
+                        <div style={{ fontSize: 11, color: 'var(--clay-deep)', fontWeight: 600, letterSpacing: '0.05em', marginBottom: 4 }}>
+                          DEEPER · 駅から絞り込む
+                        </div>
+                        <div style={{ fontSize: 17, fontWeight: 600, marginBottom: 2 }}>
+                          東京エリアの駅から子連れOK店を探す
+                        </div>
+                        <div style={{ fontSize: 12, color: 'var(--ink-mute)' }}>
+                          23区484駅・40路線対応 / ベビーカーOK・個室・雨の日OK等で絞り込み可
+                        </div>
+                      </div>
+                      <span style={{ fontSize: 22, color: 'var(--clay-deep)', flexShrink: 0 }}>→</span>
+                    </div>
+                  </Link>
+                </section>
+              )}
+
               {/* 「家で過ごす」モードの1日通しプラン（朝食〜夕食） */}
               {dayPlan && (
                 <section className="day-plan">

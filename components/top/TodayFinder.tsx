@@ -232,7 +232,9 @@ export function TodayFinder() {
     return groups;
   }, []);
 
-  const placeDisablesArea = state.mode === 'home' || state.mode === 'eat' || state.place === 'home'; // 家・食事ならエリア非活性
+  // 'home' モードと、do/eat の '家' 選択時はエリア非活性。
+  // eat × outside は外で食べる前提なのでエリア選択を有効化（駅指定で店舗絞り込み可能）。
+  const placeDisablesArea = state.mode === 'home' || state.place === 'home';
 
   // モードに応じて表示する入力フィールドを切り替える
   // eat モードでも place を選べる（家で作る/外で食べる）。'外で食べる'を選ぶとエリアも有効化
