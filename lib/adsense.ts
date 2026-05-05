@@ -40,3 +40,25 @@ export const ADSENSE_ENABLED: boolean =
  */
 export const ADSENSE_AUTO_ADS: boolean =
   process.env.NEXT_PUBLIC_ADSENSE_AUTO_ADS?.trim().toLowerCase() === 'true';
+
+/**
+ * AdSense 広告ユニットのスロットID（pub-4445473825791494 配下）。
+ *
+ * - DISPLAY: 一般的なディスプレイ広告（auto / レスポンシブ）
+ * - IN_ARTICLE: 記事本文中インライン広告（in-article fluid）
+ * - IN_FEED: 一覧・フィード用ネイティブ広告（in-feed fluid + layout-key）
+ *
+ * 公開情報なのでデフォルト値をハードコード。env で上書き可能。
+ */
+export const ADSENSE_SLOT_DISPLAY: string =
+  (process.env.NEXT_PUBLIC_ADSENSE_SLOT_DISPLAY ?? '7826131694').trim();
+
+export const ADSENSE_SLOT_IN_ARTICLE: string =
+  (process.env.NEXT_PUBLIC_ADSENSE_SLOT_IN_ARTICLE ?? '1853643928').trim();
+
+export const ADSENSE_SLOT_IN_FEED: string =
+  (process.env.NEXT_PUBLIC_ADSENSE_SLOT_IN_FEED ?? '5792888939').trim();
+
+/** インフィード広告ユニットの layout-key（AdSense管理画面で発行された値）。 */
+export const ADSENSE_IN_FEED_LAYOUT_KEY: string =
+  (process.env.NEXT_PUBLIC_ADSENSE_IN_FEED_LAYOUT_KEY ?? '-7b+d9+1p+m+22').trim();
