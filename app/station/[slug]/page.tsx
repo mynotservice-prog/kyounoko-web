@@ -200,28 +200,302 @@ export default async function StationPage({ params }: Props) {
             </div>
           </header>
 
-          {/* TL;DR */}
-          <section className="station-tldr" style={{
+          {/* TL;DR — 各項目クリックで該当セクションへスムーズスクロール */}
+          <section id="section-tldr" className="station-tldr" style={{
             background: 'rgba(201,96,62,0.06)',
             padding: '20px 24px',
             borderRadius: 16,
             margin: '32px 0',
           }}>
             <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 12 }}>30秒でわかる｜{station.name}駅 子連れ攻略</h2>
+            <p style={{ fontSize: 11, color: 'var(--ink-mute)', margin: '0 0 10px' }}>
+              ↓ 気になる項目をタップすると該当セクションへ移動します
+            </p>
             <ul style={{ paddingLeft: 20, margin: 0, lineHeight: 1.9 }}>
-              <li><strong>チェーン店</strong>: {chains.length}店（ファミレス・カフェ等）</li>
+              <li>
+                <a href="#section-chains" style={{ color: 'var(--ink)', textDecoration: 'none', borderBottom: '1px dotted var(--clay-deep)' }}>
+                  <strong>チェーン店</strong>: {chains.length}店（ファミレス・カフェ等）
+                </a>
+              </li>
               {indies.length > 0 && (
-                <li><strong>個人店・話題店</strong>: {indies.length}店（雑誌・SNS掲載・人気店）</li>
+                <li>
+                  <a href="#section-indies" style={{ color: 'var(--ink)', textDecoration: 'none', borderBottom: '1px dotted var(--clay-deep)' }}>
+                    <strong>個人店・話題店</strong>: {indies.length}店（雑誌・SNS掲載・人気店）
+                  </a>
+                </li>
               )}
-              <li><strong>ベビーカーで余裕入店できる店</strong>: {chains.filter(c => c.stroller === 'good').length + indies.filter(r => r.strollerOk).length}店</li>
-              <li><strong>キッズメニューあり</strong>: {chains.filter(c => c.kidsMenu).length + indies.filter(r => r.kidsMenu).length}店</li>
-              <li><strong>個室・仕切り席あり</strong>: {chains.filter(c => c.privateRoom).length + indies.filter(r => r.privateRoom).length}店</li>
-              <li><strong>離乳食持込OK</strong>: {chains.filter(c => c.babyFoodOk).length}店</li>
-              <li><strong>ランチ800円以内</strong>: {chains.filter(c => c.lunchPrice === '〜800').length}店</li>
+              <li>
+                <a href="#section-stroller" style={{ color: 'var(--ink)', textDecoration: 'none', borderBottom: '1px dotted var(--clay-deep)' }}>
+                  <strong>ベビーカーで余裕入店できる店</strong>: {chains.filter(c => c.stroller === 'good').length + indies.filter(r => r.strollerOk).length}店
+                </a>
+              </li>
+              <li>
+                <a href="#section-kidsmenu" style={{ color: 'var(--ink)', textDecoration: 'none', borderBottom: '1px dotted var(--clay-deep)' }}>
+                  <strong>キッズメニューあり</strong>: {chains.filter(c => c.kidsMenu).length + indies.filter(r => r.kidsMenu).length}店
+                </a>
+              </li>
+              <li>
+                <a href="#section-private" style={{ color: 'var(--ink)', textDecoration: 'none', borderBottom: '1px dotted var(--clay-deep)' }}>
+                  <strong>個室・仕切り席あり</strong>: {chains.filter(c => c.privateRoom).length + indies.filter(r => r.privateRoom).length}店
+                </a>
+              </li>
+              <li>
+                <a href="#section-babyfood" style={{ color: 'var(--ink)', textDecoration: 'none', borderBottom: '1px dotted var(--clay-deep)' }}>
+                  <strong>離乳食持込OK</strong>: {chains.filter(c => c.babyFoodOk).length}店
+                </a>
+              </li>
+              <li>
+                <a href="#section-budget" style={{ color: 'var(--ink)', textDecoration: 'none', borderBottom: '1px dotted var(--clay-deep)' }}>
+                  <strong>ランチ800円以内</strong>: {chains.filter(c => c.lunchPrice === '〜800').length}店
+                </a>
+              </li>
             </ul>
           </section>
 
-          {/* カテゴリ別店舗リスト */}
+          {/* ===== サイトならでは: 年齢別おすすめ動線 =====
+              0-1歳 / 2-3歳 / 4-6歳 で「この駅で迷ったらこれ」を3つずつデータから自動抽出 */}
+          {(() => {
+            // 0-1歳向け: ベビーカー◎ + キッズチェア + 離乳食持込OK の重み付け
+            const babies = chains
+              .map(c => ({ c, score: (c.stroller === 'good' ? 3 : c.stroller === 'ok' ? 1 : 0) + (c.babyChair ? 2 : 0) + (c.babyFoodOk ? 2 : 0) }))
+              .filter(x => x.score >= 4)
+              .sort((a, b) => b.score - a.score)
+              .slice(0, 3)
+              .map(x => x.c);
+            // 2-3歳向け: キッズメニュー + キッズチェア + ファミリー価格帯
+            const toddlers = chains
+              .map(c => ({ c, score: (c.kidsMenu ? 3 : 0) + (c.babyChair ? 2 : 0) + (c.lunchPrice === '〜800' || c.lunchPrice === '〜1,500' ? 1 : 0) }))
+              .filter(x => x.score >= 3)
+              .sort((a, b) => b.score - a.score)
+              .slice(0, 3)
+              .map(x => x.c);
+            // 4-6歳向け: キッズメニュー + 個室/座敷 + メニューバラエティ
+            const kids = chains
+              .map(c => ({ c, score: (c.kidsMenu ? 3 : 0) + (c.privateRoom ? 2 : 0) + (c.category === 'family-restaurant' || c.category === 'sushi' || c.category === 'yakiniku' ? 2 : 0) }))
+              .filter(x => x.score >= 3)
+              .sort((a, b) => b.score - a.score)
+              .slice(0, 3)
+              .map(x => x.c);
+            if (babies.length === 0 && toddlers.length === 0 && kids.length === 0) return null;
+            return (
+              <section id="section-by-age" style={{ margin: '40px 0' }}>
+                <header style={{ marginBottom: 16 }}>
+                  <span className="eyebrow" style={{ color: 'var(--clay-deep)' }}>子供の年齢で迷ったら</span>
+                  <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 22, marginTop: 4, marginBottom: 6 }}>
+                    年齢別おすすめ動線
+                  </h2>
+                  <p style={{ fontSize: 13, color: 'var(--ink-sub)', margin: 0 }}>
+                    {station.name}駅周辺の店から、子供の年齢に合うTOP3を自動抽出。「迷ったらここ」をすぐ決められます。
+                  </p>
+                </header>
+                <div style={{ display: 'grid', gap: 14, gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
+                  {[
+                    { label: '0〜1歳と入れる店', sub: 'ベビーカー◎+ベビーチェア+離乳食持込', list: babies, color: '#7B1FA2' },
+                    { label: '2〜3歳と楽しむ店', sub: 'キッズメニュー+キッズチェア+ファミリー価格', list: toddlers, color: '#1565C0' },
+                    { label: '4〜6歳が満足する店', sub: 'キッズメニュー+個室+メニュー多彩', list: kids, color: '#E65100' },
+                  ].map((g) => g.list.length > 0 && (
+                    <div key={g.label} style={{
+                      background: 'var(--paper-card)',
+                      border: '1px solid rgba(201,96,62,0.16)',
+                      borderRadius: 12,
+                      padding: '14px 16px',
+                    }}>
+                      <div style={{ fontSize: 13, fontWeight: 600, color: g.color, marginBottom: 2 }}>{g.label}</div>
+                      <div style={{ fontSize: 11, color: 'var(--ink-mute)', marginBottom: 10 }}>{g.sub}</div>
+                      <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+                        {g.list.map((c, i) => (
+                          <li key={c.slug} style={{
+                            padding: '6px 0',
+                            borderTop: i === 0 ? 'none' : '1px solid rgba(201,96,62,0.10)',
+                            fontSize: 14,
+                          }}>
+                            <strong>{i + 1}. {c.name}</strong>
+                            <span style={{ fontSize: 11, color: 'var(--ink-mute)', marginLeft: 6 }}>ランチ {c.lunchPrice}円</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            );
+          })()}
+
+          {/* ===== サイトならでは: シーン別おすすめピックアップ =====
+              「赤ちゃん初めて」「ご褒美・お祝い」「雨の日」「サクッと800円」を実データから抽出 */}
+          {(() => {
+            const firstBaby = chains.filter(c => c.stroller === 'good' && c.babyChair && c.babyFoodOk).slice(0, 4);
+            const treat = [
+              ...chains.filter(c => c.privateRoom && (c.lunchPrice === '〜2,500' || c.lunchPrice === '〜4,000' || c.lunchPrice === '4,000〜')),
+              ...indies.filter(r => r.privateRoom && (r.priceLunch === '〜3,500円' || r.priceLunch === '〜5,000円' || r.priceLunch === '5,000円〜')).map(r => ({ name: r.name, lunchPrice: r.priceLunch.replace(/円$/, '').replace(/〜/, '〜'), _indie: true } as { name: string; lunchPrice: string; _indie?: boolean })),
+            ].slice(0, 4);
+            const rainy = chains.filter(c => c.category === 'mall-food' || c.category === 'family-restaurant' || c.category === 'cafe').filter(c => c.stroller !== 'limited').slice(0, 4);
+            const cheap = chains.filter(c => c.lunchPrice === '〜800').slice(0, 4);
+            const scenes = [
+              { id: 'first-baby', label: '赤ちゃん初めての外食', emoji: '👶', desc: 'ベビーカー◎+ベビーチェア+離乳食持込OK', list: firstBaby },
+              { id: 'treat', label: '誕生日・ご褒美ランチ', emoji: '🎉', desc: '個室/仕切り席+少しグレード上の価格帯', list: treat },
+              { id: 'rainy', label: '雨の日でも安心', emoji: '☔', desc: '駅直結or屋内モール内+ベビーカー対応', list: rainy },
+              { id: 'cheap', label: 'サクッと800円以内', emoji: '💴', desc: '財布に優しい子連れランチ定番', list: cheap },
+            ].filter(s => s.list.length > 0);
+            if (scenes.length === 0) return null;
+            return (
+              <section id="section-by-scene" style={{ margin: '40px 0' }}>
+                <header style={{ marginBottom: 16 }}>
+                  <span className="eyebrow" style={{ color: 'var(--clay-deep)' }}>こんな日に行くなら</span>
+                  <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 22, marginTop: 4, marginBottom: 6 }}>
+                    シーン別ピックアップ
+                  </h2>
+                  <p style={{ fontSize: 13, color: 'var(--ink-sub)', margin: 0 }}>
+                    {station.name}駅で「初めての外食」「ご褒美」「雨の日」など、シーンごとに最適な店を厳選しました。
+                  </p>
+                </header>
+                <div style={{ display: 'grid', gap: 14, gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
+                  {scenes.map((s) => (
+                    <div key={s.id} style={{
+                      background: '#fffaf6',
+                      border: '1px solid rgba(201,96,62,0.20)',
+                      borderRadius: 12,
+                      padding: '14px 16px',
+                    }}>
+                      <div style={{ fontSize: 14, fontWeight: 600, marginBottom: 4 }}>
+                        <span style={{ marginRight: 6 }}>{s.emoji}</span>{s.label}
+                      </div>
+                      <div style={{ fontSize: 11, color: 'var(--ink-mute)', marginBottom: 10 }}>{s.desc}</div>
+                      <ul style={{ margin: 0, padding: 0, listStyle: 'none', fontSize: 13 }}>
+                        {s.list.map((c, i) => (
+                          <li key={i} style={{ padding: '5px 0', borderTop: i === 0 ? 'none' : '1px solid rgba(201,96,62,0.10)' }}>
+                            <strong>{c.name}</strong>
+                            <span style={{ fontSize: 11, color: 'var(--ink-mute)', marginLeft: 6 }}>{c.lunchPrice}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            );
+          })()}
+
+          {/* ===== サイトならでは: 駅の使い方Tips ===== */}
+          <section id="section-tips" style={{
+            margin: '40px 0',
+            padding: '20px 24px',
+            background: 'linear-gradient(135deg, rgba(20,147,209,0.05), rgba(201,96,62,0.04))',
+            border: '1px solid rgba(20,147,209,0.18)',
+            borderRadius: 12,
+          }}>
+            <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 12 }}>
+              {station.name}駅 子連れランチの使い方Tips
+            </h2>
+            <ul style={{ paddingLeft: 20, margin: 0, lineHeight: 1.85, fontSize: 14, color: 'var(--ink-sub)' }}>
+              <li><strong>{station.scale === 'terminal' ? 'ターミナル駅は' : station.scale === 'major' ? '主要駅は' : 'この駅は'}</strong>
+                {station.scale === 'terminal' ? '休日12時前後・平日18時以降が混雑のピーク。子連れなら開店直後（11時台）or 14時台が狙い目。' : station.scale === 'major' ? '平日昼下がり（14-16時）が空いていてベビーカーで動きやすい時間帯。' : '比較的空いていて、平日も週末もベビーカーで余裕を持って入れる店が多め。'}
+              </li>
+              {station.lines.length >= 4 && (
+                <li><strong>路線が{station.lines.length}本</strong>通っているので、別エリアからの合流に便利。途中下車ランチのハブにも◎。</li>
+              )}
+              <li><strong>事前予約</strong>: 個室・座敷ありの店は週末は2-3日前までに電話予約が無難。「子連れ」「ベビーカー」「ベビーチェア」を伝えると席を配慮してもらえます。</li>
+              <li><strong>離乳食持込</strong>: 上記でOKの店は事前一声かけがマナー。「持込OK」表記でも、混雑時間は遠慮するのが角が立たない使い方。</li>
+              {station.familyFriendly && <li><strong>{wardName}は</strong>もともとファミリー比率が高いエリア。日曜午前は特に子連れが多く、お互いさま感があって過ごしやすい。</li>}
+              <li><strong>ベビーカー動線</strong>: 駅から徒歩5分以内のチェーン店なら、駅構内のエレベーター→改札→歩道のエレベーター動線が確保されているケースが多い。事前にGoogle Mapsストリートビューで確認すると安心。</li>
+            </ul>
+          </section>
+
+          {/* ===== 条件別フィルタービュー（TL;DRからのジャンプ先） =====
+              ベビーカー◎ / キッズメニュー / 個室 / 離乳食持込 / 800円以内 のフィルタ */}
+          {(() => {
+            const filters = [
+              {
+                id: 'section-stroller',
+                label: 'ベビーカーで余裕入店できる店',
+                emoji: '🚼',
+                desc: 'ベビーカーのまま余裕を持って入れる店。狭い通路で気を遣うストレスなし',
+                items: [
+                  ...chains.filter(c => c.stroller === 'good').map(c => ({ name: c.name, price: `${c.lunchPrice}円`, type: 'チェーン' })),
+                  ...indies.filter(r => r.strollerOk).map(r => ({ name: r.name, price: r.priceLunch, type: '個人店' })),
+                ],
+              },
+              {
+                id: 'section-kidsmenu',
+                label: 'キッズメニューあり',
+                emoji: '🍱',
+                desc: 'お子様メニューがある店。取り分け不要で偏食気味の子も安心',
+                items: [
+                  ...chains.filter(c => c.kidsMenu).map(c => ({ name: c.name, price: `${c.lunchPrice}円`, type: 'チェーン' })),
+                  ...indies.filter(r => r.kidsMenu).map(r => ({ name: r.name, price: r.priceLunch, type: '個人店' })),
+                ],
+              },
+              {
+                id: 'section-private',
+                label: '個室・仕切り席あり',
+                emoji: '🚪',
+                desc: '個室・座敷・半個室で気兼ねなく食事できる店',
+                items: [
+                  ...chains.filter(c => c.privateRoom).map(c => ({ name: c.name, price: `${c.lunchPrice}円`, type: 'チェーン' })),
+                  ...indies.filter(r => r.privateRoom).map(r => ({ name: r.name, price: r.priceLunch, type: '個人店' })),
+                ],
+              },
+              {
+                id: 'section-babyfood',
+                label: '離乳食持込OK',
+                emoji: '🍼',
+                desc: '離乳食を持ち込める店。ベビーフード派にも自宅冷凍派にも',
+                items: chains.filter(c => c.babyFoodOk).map(c => ({ name: c.name, price: `${c.lunchPrice}円`, type: 'チェーン' })),
+              },
+              {
+                id: 'section-budget',
+                label: 'ランチ800円以内',
+                emoji: '💴',
+                desc: '財布に優しい子連れランチ定番',
+                items: chains.filter(c => c.lunchPrice === '〜800').map(c => ({ name: c.name, price: `${c.lunchPrice}円`, type: 'チェーン' })),
+              },
+            ].filter(f => f.items.length > 0);
+
+            if (filters.length === 0) return null;
+            return (
+              <section style={{ margin: '40px 0' }}>
+                <header style={{ marginBottom: 16 }}>
+                  <span className="eyebrow" style={{ color: 'var(--clay-deep)' }}>条件で絞り込み</span>
+                  <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 22, marginTop: 4, marginBottom: 6 }}>
+                    こだわり条件別の店一覧
+                  </h2>
+                </header>
+                <div style={{ display: 'grid', gap: 14 }}>
+                  {filters.map((f) => (
+                    <div key={f.id} id={f.id} style={{
+                      background: 'var(--paper-card)',
+                      border: '1px solid rgba(201,96,62,0.16)',
+                      borderRadius: 12,
+                      padding: '14px 18px',
+                      scrollMarginTop: 80, // ヘッダ固定時の見え方調整
+                    }}>
+                      <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 2 }}>
+                        <span style={{ marginRight: 6 }}>{f.emoji}</span>{f.label}
+                        <span style={{ fontSize: 12, color: 'var(--ink-mute)', fontWeight: 400, marginLeft: 8 }}>{f.items.length}店</span>
+                      </div>
+                      <div style={{ fontSize: 11, color: 'var(--ink-mute)', marginBottom: 10 }}>{f.desc}</div>
+                      <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'grid', gap: 4, gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))' }}>
+                        {f.items.slice(0, 12).map((item, i) => (
+                          <li key={i} style={{ fontSize: 13, padding: '4px 0' }}>
+                            <strong>{item.name}</strong>
+                            <span style={{ fontSize: 11, color: 'var(--ink-mute)', marginLeft: 6 }}>{item.type} / {item.price}</span>
+                          </li>
+                        ))}
+                        {f.items.length > 12 && (
+                          <li style={{ fontSize: 11, color: 'var(--ink-mute)', padding: '4px 0' }}>
+                            …ほか {f.items.length - 12}店
+                          </li>
+                        )}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            );
+          })()}
+
+          {/* チェーン店リスト（カテゴリ別） — anchor target */}
+          <div id="section-chains" style={{ scrollMarginTop: 80 }} />
           {Array.from(byCategory.entries()).map(([cat, list]) => (
             <section key={cat} className="station-category" style={{ marginBottom: 36 }}>
               <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 22, marginBottom: 16 }}>
@@ -261,13 +535,14 @@ export default async function StationPage({ params }: Props) {
             </section>
           ))}
 
-          {/* 個人店・話題店セクション */}
+          {/* 個人店・話題店セクション — anchor target */}
           {indies.length > 0 && (
-            <section className="station-indies" style={{
+            <section id="section-indies" className="station-indies" style={{
               marginTop: 8,
               marginBottom: 36,
               paddingTop: 32,
               borderTop: '2px dashed rgba(201,96,62,0.18)',
+              scrollMarginTop: 80,
             }}>
               <header style={{ marginBottom: 24 }}>
                 <span className="eyebrow" style={{ color: 'var(--clay-deep)' }}>チェーンじゃない、ローカルの実力店</span>
