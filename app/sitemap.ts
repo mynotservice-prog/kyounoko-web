@@ -13,6 +13,9 @@ import { getAllFileArticles } from '@/lib/articles';
 import { getAllTags } from '@/lib/tags';
 import { TOKYO_STATIONS } from '@/lib/tokyo-stations';
 import { TOKYO_LINES } from '@/lib/tokyo-lines';
+import { getStationWithChains } from '@/lib/station-restaurants';
+import { getIndieRestaurantsByStation } from '@/lib/indie-restaurants';
+import { STATION_CONDITIONS, hasMatchingItems } from '@/lib/station-conditions';
 
 const BASE = 'https://kyounoko.jp';
 
@@ -117,5 +120,28 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.55,
   }));
 
-  return [...staticPages, ...categoryPages, ...articlePages, ...tagPages, ...stationIndex, ...stationPages, ...lineIndex, ...linePages];
+  // 駅×条件ロングテールページ（最大484駅×4条件=1,936ページ、該当0件の組合せは除外）
+  const stationConditionPages: MetadataRoute.Sitemap = [];
+  for (const s of TOKYO_STATIONS) {
+    const data = getStationWithChains(s.slug);
+    const chains = data?.chains ?? [];
+    const indies = getIndieRestaurantsByStation(s.slug);
+    for (const cond of STATION_CONDITIONS) {
+      if (!hasMatchingItems(chains, indies, cond.slug)) continue;
+      stationConditionPages.push({
+        url: `${BASE}/station/${s.slug}/${cond.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.45,
+      });
+    }
+  }
+
+  // /data/* AIO参照用データセットページ
+  const dataPages: MetadataRoute.Sitemap = [
+    { url: `${BASE}/data`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.7 },
+    { url: `${BASE}/data/restaurants`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 },
+  ];
+
+  return [...staticPages, ...categoryPages, ...articlePages, ...tagPages, ...stationIndex, ...stationPages, ...lineIndex, ...linePages, ...stationConditionPages, ...dataPages];
 }

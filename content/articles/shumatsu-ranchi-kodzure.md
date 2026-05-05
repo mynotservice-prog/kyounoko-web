@@ -1,6 +1,6 @@
 ---
 slug: shumatsu-ranchi-kodzure
-title: 週末の子連れランチ、予約不要で入れる店の選び方7パターン
+title: 【2026年版】週末の子連れランチ7選｜予約不要で入れる店の選び方
 metaDescription: 週末の子連れランチで予約不要・キッズメニューあり・ベビーカーOKの店7パターン。ファミレス、うどん、フードコート、子連れカフェなど実地目線で紹介します。
 category: today-doko
 categoryName: 今日どこ行く？

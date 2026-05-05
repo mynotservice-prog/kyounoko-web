@@ -1,6 +1,6 @@
 ---
 slug: shokutaku-iyaiya-kodomo-taisaku
-title: 食卓でイヤイヤする2〜4歳の対処法｜食事時間が10分短くなる7つの工夫
+title: 【2-4歳】食卓イヤイヤ対処法7選｜2026年版・食事時間が10分短縮
 metaDescription: 食卓でイヤイヤが激しい2〜4歳の子どもへの対処法を完全解説。原因別の7つの工夫、NG対応、声かけフレーズ、食事時間を20分に収めるコツ、体験談まで。毎日の食卓を楽しい時間に変えます。
 category: today-taberu
 categoryName: 今日たべる

@@ -1,6 +1,6 @@
 ---
 slug: heijitsu-yoru-30pun-routine
-title: 平日夜の30分ルーティン｜2〜3歳の18:30〜20:30を回す最小動線4ブロック
+title: 【2-3歳】平日夜30分ルーティン4ブロック｜2026年版・寝かしつけ術
 metaDescription: 平日夜の帰宅18:30〜就寝20:30の2時間を、30分ブロック×4で回すルーティン設計。2〜3歳想定、親が疲弊しない順番と道具をまとめました。
 category: today-mawasu
 categoryName: 今日どう回す？

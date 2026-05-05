@@ -1,6 +1,6 @@
 ---
 slug: tokyo-toshima-ikebukuro-rain
-title: 豊島区・池袋駅周辺 雨の日の屋内遊び場
+title: 【2026最新】池袋 雨の日の屋内遊び場10選｜駅直結で0〜6歳OK
 metaDescription: 豊島区・池袋駅周辺で雨の日に子連れで使える屋内遊び場ガイド。サンシャインシティ・東武池袋・西武池袋・ルミネなど大型商業施設を、0〜6歳ファミリー目線で使い分け。
 category: today-doko
 categoryName: 今日どこ行く？

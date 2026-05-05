@@ -1,6 +1,6 @@
 ---
 slug: shumatsu-gohan-tsukurioki-nashi
-title: 共働き家庭の土日ごはん｜作り置きなしで回す7パターン
+title: 【2026年版】共働き家庭の土日ごはん7パターン｜作り置きなしで回す
 metaDescription: 共働きの土日、3食×2日=6食を作り置きなしで乗り切る具体パターン。外食・惣菜・冷凍食品を組み合わせて親の負担を最小化、2〜6歳も満足する土日ごはん設計。
 category: today-taberu
 categoryName: 今日何食べる？

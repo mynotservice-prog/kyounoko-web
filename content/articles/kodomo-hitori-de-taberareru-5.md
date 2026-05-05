@@ -1,6 +1,6 @@
 ---
 slug: kodomo-hitori-de-taberareru-5
-title: 子が自分で食べられる献立5選｜手づかみ・フォーク初心者にやさしい
+title: 【2026年版】子が自分で食べる献立5選｜手づかみ・フォーク初心者
 metaDescription: 2〜4歳の「自分で食べたい」気持ちを応援する、手づかみ・フォークで食べやすい献立を5パターン紹介。分量・手順・食べこぼし対策まで実用目線でまとめました。
 category: today-taberu
 categoryName: 今日何食べる

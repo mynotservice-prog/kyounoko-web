@@ -1,6 +1,6 @@
 ---
 slug: tokyo-shinagawa-ooimachi-weekend
-title: 品川区 大井町・武蔵小山の週末スポット
+title: 【2026年版】品川区の週末子連れスポット8選｜大井町・武蔵小山
 metaDescription: 品川区・大井町・武蔵小山エリアの2〜6歳ファミリー向け週末おでかけガイド。しながわ水族館・大井競馬場周辺・武蔵小山商店街などをローカル目線でまとめました。
 category: today-doko
 categoryName: 今日どこ行く？

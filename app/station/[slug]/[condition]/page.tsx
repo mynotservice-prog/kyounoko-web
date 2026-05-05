@@ -7,7 +7,6 @@ import {
   getStationBySlug,
   TOKYO_STATIONS,
   WARD_NAMES,
-  type TokyoStation,
 } from '@/lib/tokyo-stations';
 import {
   getStationWithChains,
@@ -23,45 +22,60 @@ import {
 } from '@/lib/indie-restaurants';
 import {
   STATION_CONDITIONS,
+  getConditionBySlug,
   filterChainsByCondition,
   filterIndiesByCondition,
+  hasMatchingItems,
+  type StationConditionSlug,
 } from '@/lib/station-conditions';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400; // 24h
 
 type Props = {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; condition: string }>;
 };
 
 /**
- * 全484駅分の静的パスを事前生成。
+ * 484駅 × 4条件 のうち、該当店舗が1件以上ある組み合わせのみを事前生成。
  */
 export async function generateStaticParams() {
-  return TOKYO_STATIONS.map((s) => ({ slug: s.slug }));
+  const params: Array<{ slug: string; condition: string }> = [];
+  for (const station of TOKYO_STATIONS) {
+    const data = getStationWithChains(station.slug);
+    const chains = data?.chains ?? [];
+    const indies = getIndieRestaurantsByStation(station.slug);
+    for (const cond of STATION_CONDITIONS) {
+      if (hasMatchingItems(chains, indies, cond.slug)) {
+        params.push({ slug: station.slug, condition: cond.slug });
+      }
+    }
+  }
+  return params;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, condition } = await params;
   const station = getStationBySlug(slug);
-  if (!station) {
+  const cond = getConditionBySlug(condition);
+  if (!station || !cond) {
     return {
-      title: '駅が見つかりません',
+      title: 'ページが見つかりません',
       robots: { index: false, follow: false },
     };
   }
   const wardName = WARD_NAMES[station.ward] ?? '';
-  const title = `${station.name}駅 子連れランチおすすめ｜ベビーカーOK・キッズメニュー店ガイド【${wardName}】`;
-  const description = `${station.name}駅周辺で子連れOK・ベビーカー入店OKのファミレス・カフェ・チェーン店に加え、雑誌やSNSで話題の個人店・人気店も厳選。キッズメニュー・キッズチェア・個室・離乳食持込可など子連れ目線で全項目チェック。${wardName}で子どもとランチ・カフェに困らない実用ガイド。`;
+  const title = `${station.name}駅 ${cond.titlePart}子連れOKランチ・カフェ｜ベビーカーOK店ガイド`;
+  const description = `${station.name}駅周辺で${cond.metaPart}の子連れランチ・カフェを厳選。${cond.description}${wardName}で${cond.label}の選び方に迷ったらまずここから。`;
   return {
     title,
     description,
-    alternates: { canonical: `/station/${slug}` },
+    alternates: { canonical: `/station/${slug}/${condition}` },
     openGraph: {
       title,
       description,
       type: 'article',
-      url: `https://kyounoko.jp/station/${slug}`,
+      url: `https://kyounoko.jp/station/${slug}/${condition}`,
     },
   };
 }
@@ -77,17 +91,32 @@ const STROLLER_DESC: Record<Chain['stroller'], string> = {
   limited: '混雑時は折り畳み推奨',
 };
 
-export default async function StationPage({ params }: Props) {
-  const { slug } = await params;
+export default async function StationConditionPage({ params }: Props) {
+  const { slug, condition } = await params;
   const station = getStationBySlug(slug);
   if (!station) notFound();
+  const cond = getConditionBySlug(condition);
+  if (!cond) notFound();
 
   const data = getStationWithChains(slug);
   if (!data) notFound();
-  const { chains } = data;
 
-  // 個人店（チェーン以外の話題店・人気店）
-  const indies = getIndieRestaurantsByStation(slug);
+  const allIndies = getIndieRestaurantsByStation(slug);
+  const conditionSlug: StationConditionSlug = cond.slug;
+  const chains = filterChainsByCondition(data.chains, conditionSlug);
+  const indies = filterIndiesByCondition(allIndies, conditionSlug);
+
+  // 0件の組み合わせは generateStaticParams で除外しているが、念のため
+  if (chains.length + indies.length === 0) notFound();
+
+  const wardName = WARD_NAMES[station.ward] ?? '';
+
+  // チェーンをカテゴリ別にグルーピング
+  const byCategory = new Map<ChainCategory, Chain[]>();
+  for (const c of chains) {
+    if (!byCategory.has(c.category)) byCategory.set(c.category, []);
+    byCategory.get(c.category)!.push(c);
+  }
 
   // 個人店をジャンル別にグルーピング
   const indiesByGenre = new Map<IndieGenre, IndieRestaurant[]>();
@@ -96,21 +125,30 @@ export default async function StationPage({ params }: Props) {
     indiesByGenre.get(r.genre)!.push(r);
   }
 
-  const wardName = WARD_NAMES[station.ward] ?? '';
+  // 同じ駅の他条件（残り3条件）— 該当0件のものは除外
+  const otherConditions = STATION_CONDITIONS.filter((c) => c.slug !== conditionSlug)
+    .map((c) => {
+      const cn = filterChainsByCondition(data.chains, c.slug).length;
+      const inn = filterIndiesByCondition(allIndies, c.slug).length;
+      return { cond: c, count: cn + inn };
+    })
+    .filter((x) => x.count > 0);
 
-  // カテゴリ別グルーピング
-  const byCategory = new Map<ChainCategory, Chain[]>();
-  for (const c of chains) {
-    if (!byCategory.has(c.category)) byCategory.set(c.category, []);
-    byCategory.get(c.category)!.push(c);
-  }
-
-  // 同じ区の他駅（ナビゲーション用）
-  const sameWardStations = TOKYO_STATIONS
+  // 同区の他駅（同じ条件で該当ありの駅）
+  const sameWardSameCondition = TOKYO_STATIONS
     .filter((s) => s.ward === station.ward && s.slug !== station.slug)
-    .slice(0, 12);
+    .map((s) => {
+      const sd = getStationWithChains(s.slug);
+      const sc = sd?.chains ?? [];
+      const si = getIndieRestaurantsByStation(s.slug);
+      const has = hasMatchingItems(sc, si, conditionSlug);
+      return { station: s, has };
+    })
+    .filter((x) => x.has)
+    .slice(0, 12)
+    .map((x) => x.station);
 
-  // JSON-LD: ItemList で各チェーン+個人店を列挙
+  // JSON-LD ItemList
   const allItemsForLd = [
     ...chains.map((c) => ({
       name: c.name,
@@ -128,8 +166,8 @@ export default async function StationPage({ params }: Props) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: `${station.name}駅 子連れランチ・ベビーカーOK店`,
-    description: `${station.name}駅周辺の子連れ歓迎チェーン店・個人店リスト`,
+    name: `${station.name}駅 ${cond.titlePart}子連れランチ`,
+    description: `${station.name}駅周辺で${cond.metaPart}の店舗リスト`,
     numberOfItems: allItemsForLd.length,
     itemListElement: allItemsForLd.map((c, i) => ({
       '@type': 'ListItem',
@@ -150,6 +188,7 @@ export default async function StationPage({ params }: Props) {
       { '@type': 'ListItem', position: 1, name: 'HOME', item: 'https://kyounoko.jp/' },
       { '@type': 'ListItem', position: 2, name: '駅別子連れランチ', item: 'https://kyounoko.jp/station' },
       { '@type': 'ListItem', position: 3, name: `${station.name}駅`, item: `https://kyounoko.jp/station/${slug}` },
+      { '@type': 'ListItem', position: 4, name: cond.label, item: `https://kyounoko.jp/station/${slug}/${condition}` },
     ],
   };
 
@@ -165,63 +204,38 @@ export default async function StationPage({ params }: Props) {
           <span className="sep">/</span>
           <Link href="/station">駅別ランチ</Link>
           <span className="sep">/</span>
-          <span>{station.name}駅</span>
+          <Link href={`/station/${slug}`}>{station.name}駅</Link>
+          <span className="sep">/</span>
+          <span>{cond.label}</span>
         </nav>
       </div>
 
       <section className="section">
         <div className="container-narrow">
           <header className="page-head">
-            <span className="eyebrow">{wardName} · {station.lines[0]}沿線</span>
+            <span className="eyebrow">{wardName} · {station.name}駅 / 条件で絞る</span>
             <h1>
-              {station.name}駅 子連れランチおすすめ
+              {station.name}駅 {cond.titlePart}子連れOKランチ・カフェ
               <small style={{ display: 'block', fontSize: '0.5em', fontWeight: 400, color: 'var(--ink-sub)', marginTop: 8 }}>
-                ベビーカーOK・キッズメニュー・個室あり店ガイド
+                {cond.tagline}
               </small>
             </h1>
             <p className="lead">
-              {station.name}駅から徒歩5〜10分圏内にある、子連れOKのファミレス・カフェ・チェーン店に加え、
-              雑誌やSNSで話題の<strong>個人店・人気店</strong>も厳選してご紹介。
-              ベビーカー入店可否、キッズメニュー、キッズチェア、個室、離乳食持込OKまで全項目チェックしました。
-              {wardName}で子連れランチ場所に迷ったらまずココから。
+              {station.name}駅周辺で<strong>{cond.metaPart}</strong>の店舗だけを抽出してご紹介。
+              {cond.description}
+              {wardName}で{cond.label}のお店選びに迷ったらまずここから。
             </p>
 
             <div className="station-summary" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 20 }}>
-              <span className="meta-chip clay">{station.lines.length}路線</span>
-              <span className="meta-chip clay">チェーン{chains.length}店</span>
+              <span className="meta-chip clay">該当 {chains.length + indies.length}店</span>
+              {chains.length > 0 && <span className="meta-chip clay">チェーン{chains.length}店</span>}
               {indies.length > 0 && <span className="meta-chip clay">個人店{indies.length}店</span>}
               {station.scale === 'terminal' && <span className="meta-chip clay">ターミナル駅</span>}
               {station.scale === 'major' && <span className="meta-chip clay">主要駅</span>}
-              {station.familyFriendly && <span className="meta-chip clay">ファミリー多め</span>}
-            </div>
-
-            <div style={{ marginTop: 18, fontSize: 13, color: 'var(--ink-sub)' }}>
-              <strong>路線:</strong> {station.lines.join(' / ')}
             </div>
           </header>
 
-          {/* TL;DR */}
-          <section className="station-tldr" style={{
-            background: 'rgba(201,96,62,0.06)',
-            padding: '20px 24px',
-            borderRadius: 16,
-            margin: '32px 0',
-          }}>
-            <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 12 }}>30秒でわかる｜{station.name}駅 子連れ攻略</h2>
-            <ul style={{ paddingLeft: 20, margin: 0, lineHeight: 1.9 }}>
-              <li><strong>チェーン店</strong>: {chains.length}店（ファミレス・カフェ等）</li>
-              {indies.length > 0 && (
-                <li><strong>個人店・話題店</strong>: {indies.length}店（雑誌・SNS掲載・人気店）</li>
-              )}
-              <li><strong>ベビーカーで余裕入店できる店</strong>: {chains.filter(c => c.stroller === 'good').length + indies.filter(r => r.strollerOk).length}店</li>
-              <li><strong>キッズメニューあり</strong>: {chains.filter(c => c.kidsMenu).length + indies.filter(r => r.kidsMenu).length}店</li>
-              <li><strong>個室・仕切り席あり</strong>: {chains.filter(c => c.privateRoom).length + indies.filter(r => r.privateRoom).length}店</li>
-              <li><strong>離乳食持込OK</strong>: {chains.filter(c => c.babyFoodOk).length}店</li>
-              <li><strong>ランチ800円以内</strong>: {chains.filter(c => c.lunchPrice === '〜800').length}店</li>
-            </ul>
-          </section>
-
-          {/* カテゴリ別店舗リスト */}
+          {/* チェーン店リスト（条件 'indie' 以外） */}
           {Array.from(byCategory.entries()).map(([cat, list]) => (
             <section key={cat} className="station-category" style={{ marginBottom: 36 }}>
               <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 22, marginBottom: 16 }}>
@@ -261,7 +275,7 @@ export default async function StationPage({ params }: Props) {
             </section>
           ))}
 
-          {/* 個人店・話題店セクション */}
+          {/* 個人店リスト */}
           {indies.length > 0 && (
             <section className="station-indies" style={{
               marginTop: 8,
@@ -275,8 +289,7 @@ export default async function StationPage({ params }: Props) {
                   {station.name}駅の個人店・話題店 <span style={{ fontSize: 14, color: 'var(--ink-mute)', fontWeight: 400 }}>{indies.length}店</span>
                 </h2>
                 <p style={{ fontSize: 14, color: 'var(--ink-sub)', lineHeight: 1.7, margin: 0 }}>
-                  雑誌・TV・SNSで取り上げられた{station.name}エリアの実力店から、子連れで利用しやすい店舗を厳選。
-                  チェーン店だけでなく、ご当地ならではの一軒で家族の食事をワンランク豊かに。
+                  雑誌・TV・SNSで取り上げられた{station.name}エリアの実力店から、{cond.label}条件に合う店舗を厳選。
                   <small style={{ display: 'block', marginTop: 6, fontSize: 12, color: 'var(--ink-mute)' }}>
                     ※ 設備情報は公式・取材情報ベース。お子様連れ利用は店舗への事前確認をおすすめします。
                   </small>
@@ -326,68 +339,58 @@ export default async function StationPage({ params }: Props) {
             </section>
           )}
 
-          {/* 条件で絞り込む */}
-          {(() => {
-            const conditionLinks = STATION_CONDITIONS.map((c) => {
-              const cn = filterChainsByCondition(chains, c.slug).length;
-              const inn = filterIndiesByCondition(indies, c.slug).length;
-              return { cond: c, count: cn + inn };
-            }).filter((x) => x.count > 0);
-            if (conditionLinks.length === 0) return null;
-            return (
-              <section className="station-conditions-cta" style={{
-                marginTop: 48,
-                paddingTop: 32,
-                borderTop: '1px solid rgba(201,96,62,0.14)',
-              }}>
-                <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 12 }}>
-                  {station.name}駅をもっと条件で絞る
-                </h2>
-                <p style={{ fontSize: 13, color: 'var(--ink-sub)', marginTop: 0, marginBottom: 16 }}>
-                  雨の日・個室・赤ちゃん連れなど、シーン別の絞り込みページもあります。
-                </p>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12 }}>
-                  {conditionLinks.map(({ cond: oc, count }) => (
-                    <Link
-                      key={oc.slug}
-                      href={`/station/${slug}/${oc.slug}`}
-                      style={{
-                        display: 'block',
-                        background: 'var(--paper-card)',
-                        border: '1px solid rgba(201,96,62,0.20)',
-                        borderRadius: 12,
-                        padding: '14px 16px',
-                        textDecoration: 'none',
-                        color: 'inherit',
-                      }}
-                    >
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 6 }}>
-                        <strong style={{ fontSize: 15 }}>{oc.label}</strong>
-                        <span style={{
-                          fontSize: 11,
-                          background: 'rgba(201,96,62,0.10)',
-                          color: 'var(--clay-deep)',
-                          padding: '2px 8px',
-                          borderRadius: 999,
-                        }}>{count}店</span>
-                      </div>
-                      <div style={{ fontSize: 12, color: 'var(--ink-sub)', lineHeight: 1.5 }}>{oc.tagline}</div>
-                    </Link>
-                  ))}
-                </div>
-              </section>
-            );
-          })()}
-
-          {/* 同じ区の他駅 */}
-          {sameWardStations.length > 0 && (
-            <section className="station-related" style={{ marginTop: 48, paddingTop: 32, borderTop: '1px solid rgba(201,96,62,0.14)' }}>
+          {/* 他の条件で同駅を見る */}
+          {otherConditions.length > 0 && (
+            <section className="station-other-conditions" style={{
+              marginTop: 36,
+              padding: '24px 0',
+              borderTop: '1px solid rgba(201,96,62,0.14)',
+            }}>
               <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 12 }}>
-                {wardName}の他の駅もチェック
+                他の条件で{station.name}駅を見る
+              </h2>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12 }}>
+                {otherConditions.map(({ cond: oc, count }) => (
+                  <Link
+                    key={oc.slug}
+                    href={`/station/${slug}/${oc.slug}`}
+                    className="condition-card"
+                    style={{
+                      display: 'block',
+                      background: 'var(--paper-card)',
+                      border: '1px solid rgba(201,96,62,0.20)',
+                      borderRadius: 12,
+                      padding: '14px 16px',
+                      textDecoration: 'none',
+                      color: 'inherit',
+                    }}
+                  >
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 6 }}>
+                      <strong style={{ fontSize: 15 }}>{oc.label}</strong>
+                      <span style={{
+                        fontSize: 11,
+                        background: 'rgba(201,96,62,0.10)',
+                        color: 'var(--clay-deep)',
+                        padding: '2px 8px',
+                        borderRadius: 999,
+                      }}>{count}店</span>
+                    </div>
+                    <div style={{ fontSize: 12, color: 'var(--ink-sub)', lineHeight: 1.5 }}>{oc.tagline}</div>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* 同じ条件の他駅 */}
+          {sameWardSameCondition.length > 0 && (
+            <section className="station-related" style={{ marginTop: 36, paddingTop: 32, borderTop: '1px solid rgba(201,96,62,0.14)' }}>
+              <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 12 }}>
+                {wardName}の他の駅で「{cond.label}」を見る
               </h2>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                {sameWardStations.map((s) => (
-                  <Link key={s.slug} href={`/station/${s.slug}`} className="chip">
+                {sameWardSameCondition.map((s) => (
+                  <Link key={s.slug} href={`/station/${s.slug}/${conditionSlug}`} className="chip">
                     {s.name}
                   </Link>
                 ))}
@@ -395,10 +398,12 @@ export default async function StationPage({ params }: Props) {
             </section>
           )}
 
-          {/* 戻る・他のエリア */}
+          {/* 戻る */}
           <section style={{ marginTop: 36, padding: '24px 0', textAlign: 'center', color: 'var(--ink-sub)' }}>
             <p style={{ fontSize: 14 }}>
-              他の駅・エリアを見る → <Link href="/station" style={{ color: 'var(--clay-deep)' }}>駅別ガイド一覧</Link>
+              <Link href={`/station/${slug}`} style={{ color: 'var(--clay-deep)' }}>← {station.name}駅トップに戻る</Link>
+              {' / '}
+              <Link href="/station" style={{ color: 'var(--clay-deep)' }}>駅別ガイド一覧</Link>
             </p>
           </section>
         </div>

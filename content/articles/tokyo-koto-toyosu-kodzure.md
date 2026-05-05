@@ -1,6 +1,6 @@
 ---
 slug: tokyo-koto-toyosu-kodzure
-title: 江東区・豊洲/有明エリアの子連れスポット
+title: 【2026年版】豊洲・有明の子連れスポット8選｜ベビーカーで回れる
 metaDescription: 江東区・豊洲・有明エリアの子連れおでかけ完全ガイド。大型商業施設・水辺公園・屋内遊び場を、2〜6歳ファミリー目線でまとめたローカルガイド。ベビーカー動線も明記。
 category: today-doko
 categoryName: 今日どこ行く？

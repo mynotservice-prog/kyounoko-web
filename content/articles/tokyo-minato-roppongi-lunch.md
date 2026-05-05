@@ -1,6 +1,6 @@
 ---
 slug: tokyo-minato-roppongi-lunch
-title: 港区 六本木・麻布十番の子連れランチ穴場
+title: 【2026年版】六本木・麻布十番の子連れランチ10選｜穴場と予約のコツ
 metaDescription: 港区・六本木・麻布十番で2〜6歳ファミリー向けの子連れランチ穴場の探し方。商業施設レストラン街・六本木ヒルズ・東京ミッドタウンをベース基地に使うローカルガイド。
 category: today-doko
 categoryName: 今日どこ行く？

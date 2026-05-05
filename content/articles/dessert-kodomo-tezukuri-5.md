@@ -1,6 +1,6 @@
 ---
 slug: dessert-kodomo-tezukuri-5
-title: 子どもと作るお菓子5種｜3歳から一緒に楽しめる簡単スイーツ
+title: 【3歳から】子どもと作るお菓子レシピ5選｜2026年版・簡単手作り
 metaDescription: 幼児と一緒に作れる簡単お菓子を5種厳選。材料・手順・子どもに任せる工程・危ない工程の見極めまで、家族のおやつタイムが楽しくなるレシピです。
 category: today-taberu
 categoryName: 今日何食べる
