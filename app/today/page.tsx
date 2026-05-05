@@ -11,6 +11,8 @@ import {
   type FileArticleMeta,
 } from '@/lib/articles';
 import { buildDayPlan, type DayPlanSlot } from '@/lib/plans';
+import { getKidFriendlyRestaurants, type Spot } from '@/lib/spots';
+import type { AreaSlug } from '@/lib/area';
 import { getAreaName } from '@/lib/area';
 import { getItemsForTodayQuery } from '@/lib/items-catalog';
 import { ShareBar } from '@/components/article/ShareBar';
@@ -258,6 +260,16 @@ export default async function TodayPage({ searchParams }: Props) {
     });
   }
 
+  // eat × 外で食べる モード：子連れOKレストラン（ファミレス特集）を表示
+  let restaurants: { area: AreaSlug; spot: Spot }[] = [];
+  if (query.mode === 'eat' && query.place === 'outside') {
+    restaurants = getKidFriendlyRestaurants(query.area, {
+      age: query.age as '0-1' | '2-3' | '4-6' | undefined,
+      budget: query.budget as 'free' | 'low' | 'mid' | 'high' | undefined,
+      limit: 12,
+    });
+  }
+
   const activeChips: { key: string; label: string }[] = [];
   if (query.age) activeChips.push({ key: 'age', label: labelForValue('age', query.age) });
   if (query.area && query.area !== 'all') activeChips.push({ key: 'area', label: getAreaName(query.area) });
@@ -350,6 +362,40 @@ export default async function TodayPage({ searchParams }: Props) {
               )}
 
               <AnswerCard answer={top} featured />
+
+              {/* 食べる×外で食べる モード：子連れOKファミレス特集 */}
+              {restaurants.length > 0 && (
+                <section className="restaurant-spots">
+                  <h3 className="today-section-title">
+                    <span className="today-section-eyebrow">Family-friendly restaurants</span>
+                    子連れ歓迎ファミレス・カフェ {restaurants.length}店
+                  </h3>
+                  <p className="today-section-lede">
+                    ベビーカー入店OK・キッズメニュー・キッズチェアありの実在店舗。
+                    {query.area && query.area !== 'all'
+                      ? `${getAreaName(query.area)}エリアから厳選。`
+                      : '全国の人気店を popular順で。'}
+                  </p>
+                  <ul className="restaurant-list">
+                    {restaurants.map(({ spot }, i) => (
+                      <li key={i} className="restaurant-card">
+                        <div className="restaurant-name">
+                          {spot.popular && <span className="trending-badge">人気</span>}
+                          <span dangerouslySetInnerHTML={{ __html: spot.name }} />
+                        </div>
+                        {spot.note && <p className="restaurant-note">{spot.note}</p>}
+                        {spot.hiddenTip && <p className="restaurant-tip">💡 {spot.hiddenTip}</p>}
+                        <div className="restaurant-meta">
+                          {spot.ages?.length > 0 && (
+                            <span>対象: {spot.ages.join(' / ')}歳</span>
+                          )}
+                          {spot.budget && <span>予算: {spot.budget === 'free' ? '無料' : spot.budget === 'low' ? '〜2,000円' : spot.budget === 'mid' ? '〜5,000円' : '5,000円〜'}</span>}
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
 
               {/* 「家で過ごす」モードの1日通しプラン（朝食〜夕食） */}
               {dayPlan && (

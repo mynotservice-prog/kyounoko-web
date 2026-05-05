@@ -1157,6 +1157,48 @@ export function getPopularSpots(limit = 6): { area: AreaSlug; spot: Spot }[] {
   return result.slice(0, limit);
 }
 
+/**
+ * eat×外で食べる モード用：エリア内の子連れOKレストラン（restaurant カテゴリ）を返す。
+ * - エリア未指定（all）なら人気レストラン横断で
+ * - エリア指定なら都道府県内のrestaurantのみ
+ * - 年齢で絞り込み（その年齢が ages に含まれる店）
+ * - 上位 limit 件を popular フラグ優先で並べる
+ */
+export function getKidFriendlyRestaurants(
+  area: string | undefined,
+  opts: { age?: AgeTag; budget?: 'free' | 'low' | 'mid' | 'high'; limit?: number } = {}
+): { area: AreaSlug; spot: Spot }[] {
+  const result: { area: AreaSlug; spot: Spot }[] = [];
+
+  const targetAreas: [AreaSlug, Spot[]][] =
+    !area || area === 'all'
+      ? (Object.entries(SPOTS) as [AreaSlug, Spot[]][])
+      : SPOTS[area as AreaSlug]
+        ? [[area as AreaSlug, SPOTS[area as AreaSlug]!]]
+        : [];
+
+  for (const [areaKey, list] of targetAreas) {
+    for (const spot of list) {
+      if (spot.category !== 'restaurant') continue;
+      if (opts.age && !spot.ages.includes(opts.age)) continue;
+      if (opts.budget) {
+        const order = { free: 0, low: 1, mid: 2, high: 3 };
+        if (spot.budget && order[spot.budget] > order[opts.budget]) continue;
+      }
+      result.push({ area: areaKey, spot });
+    }
+  }
+
+  // popular優先 → 名前ソート
+  result.sort((a, b) => {
+    if (a.spot.popular && !b.spot.popular) return -1;
+    if (!a.spot.popular && b.spot.popular) return 1;
+    return a.spot.name.localeCompare(b.spot.name, 'ja');
+  });
+
+  return result.slice(0, opts.limit ?? 12);
+}
+
 /** 東京23区名で絞り込み（city または ward を見る） */
 export function getSpotsForWard(ward: string): Spot[] {
   const result: Spot[] = [];

@@ -365,6 +365,41 @@ input, select { font: inherit; color: inherit; }
 .btn-magic:hover { transform: translateY(-1px); box-shadow: 0 5px 14px rgba(201,96,62,0.35); }
 .btn-magic span[aria-hidden] { font-size: 14px; }
 
+/* eat × 外で食べる モード：レストラン特集 */
+.restaurant-spots { margin-top: 36px; padding-top: 28px; border-top: 1px solid rgba(201,96,62,0.14); }
+.restaurant-list {
+  list-style: none; padding: 0; margin: 18px 0 0;
+  display: grid; gap: 14px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) {
+  .restaurant-list { grid-template-columns: 1fr 1fr; }
+}
+.restaurant-card {
+  background: var(--paper-card);
+  border: 1px solid rgba(201,96,62,0.16);
+  border-radius: 12px;
+  padding: 14px 16px;
+  transition: all .18s ease;
+}
+.restaurant-card:hover { border-color: var(--clay); box-shadow: 0 4px 12px rgba(201,96,62,0.12); }
+.restaurant-name {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  font-weight: 600; font-size: 15px; margin-bottom: 6px; color: var(--ink); line-height: 1.4;
+}
+.restaurant-note { font-size: 13px; color: var(--ink-sub); line-height: 1.6; margin: 0 0 6px; }
+.restaurant-tip {
+  font-size: 12px; color: var(--clay-deep, #c9603e); line-height: 1.5;
+  margin: 0 0 8px; background: rgba(201,96,62,0.06);
+  padding: 6px 10px; border-radius: 6px;
+}
+.restaurant-meta {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  font-size: 11px; color: var(--ink-mute);
+  padding-top: 6px; border-top: 1px dashed rgba(201,96,62,0.14);
+}
+.restaurant-meta span { white-space: nowrap; }
+
 /* 1日通しプラン（home モード×240分） */
 .day-plan { margin-top: 36px; padding-top: 28px; border-top: 1px solid rgba(201,96,62,0.14); }
 .day-plan-list { list-style: none; padding: 0; margin: 18px 0 0; display: flex; flex-direction: column; gap: 14px; }

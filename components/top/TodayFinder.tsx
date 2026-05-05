@@ -235,17 +235,21 @@ export function TodayFinder() {
   const placeDisablesArea = state.mode === 'home' || state.mode === 'eat' || state.place === 'home'; // 家・食事ならエリア非活性
 
   // モードに応じて表示する入力フィールドを切り替える
-  const showArea = state.mode === 'go' || state.mode === 'do';
+  // eat モードでも place を選べる（家で作る/外で食べる）。'外で食べる'を選ぶとエリアも有効化
+  const eatOutside = state.mode === 'eat' && state.place === 'outside';
+  const showArea = state.mode === 'go' || state.mode === 'do' || eatOutside;
   const showWeather = state.mode !== 'eat'; // 食事は天気非依存
-  const showPlaceChip = state.mode === 'do'; // do モードのみ家/外を選べる
+  const showPlaceChip = state.mode === 'do' || state.mode === 'eat'; // do/eat モードで家/外を選べる
   const showDay = state.mode === 'go' || state.mode === 'do';
   const showBudget = state.mode === 'go' || state.mode === 'eat';
-  const showMealTime = state.mode === 'eat';
+  const showMealTime = state.mode === 'eat' && state.place !== 'outside'; // 外食時は時間帯非表示
 
   const HEAD_COPY: Record<Mode, { eyebrow: string; title: string; lead: string }> = {
     go: { eyebrow: 'どこ行く？を3分で', title: '今日、どこに連れて行く？', lead: 'エリア・天気・年齢・時間・予算からおすすめおでかけ先を1つ提案。周辺のベビーカーOK店もまとめて。' },
     do: { eyebrow: '何する？を3分で', title: '今日、何して遊ぶ？', lead: '家でも外でも、年齢・時間・場所から「今日これ」を1つ提案。気分に合わなければ別候補もすぐ見られます。' },
-    eat: { eyebrow: '何食べる？を3分で', title: '今日、何食べる？', lead: '朝・昼・夜・おやつから、年齢と所要時間に合うレシピを1つ提案。家にあるもので作れる現実解。' },
+    eat: eatOutside
+      ? { eyebrow: '外で食べる？を3分で', title: '今日、どこで食べる？', lead: 'エリア・年齢・予算からベビーカーOK・キッズメニューありの子連れ歓迎ファミレス・カフェを提案。' }
+      : { eyebrow: '何食べる？を3分で', title: '今日、何食べる？', lead: '朝・昼・夜・おやつから、年齢と所要時間に合うレシピを1つ提案。家にあるもので作れる現実解。' },
     home: { eyebrow: '家でどう過ごす？を3分で', title: '今日、家でどう過ごす？', lead: '雨・猛暑・寒い日でも、年齢・時間に合った室内の遊びを提案。家ごもりを「今日も楽しかった」に。' },
   };
   const headCopy = HEAD_COPY[state.mode];
@@ -376,12 +380,19 @@ export function TodayFinder() {
 
         {showPlaceChip && (
         <ChipGroup
-          label="家 / 外"
-          options={[
-            { value: 'any', label: 'どちらも' },
-            { value: 'home', label: '家で' },
-            { value: 'outside', label: '外で' },
-          ]}
+          label={state.mode === 'eat' ? '家で作る / 外で食べる' : '家 / 外'}
+          options={
+            state.mode === 'eat'
+              ? [
+                  { value: 'home', label: '家で作る' },
+                  { value: 'outside', label: '外で食べる' },
+                ]
+              : [
+                  { value: 'any', label: 'どちらも' },
+                  { value: 'home', label: '家で' },
+                  { value: 'outside', label: '外で' },
+                ]
+          }
           value={state.place}
           onChange={(v) => setValue('place', v as State['place'])}
         />
