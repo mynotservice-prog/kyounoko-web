@@ -9,7 +9,8 @@
  * リフレッシュする戦略にしている。
  */
 
-const CACHE_VERSION = 'v1-2026-05-04';
+// 画像リフレッシュ（日本人化）反映のためバージョンアップ → 旧キャッシュ全削除
+const CACHE_VERSION = 'v2-2026-05-05-photos';
 const RUNTIME_CACHE = `kyounoko-runtime-${CACHE_VERSION}`;
 const STATIC_CACHE = `kyounoko-static-${CACHE_VERSION}`;
 
