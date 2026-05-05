@@ -149,6 +149,14 @@ input, select { font: inherit; color: inherit; }
 }
 @media (min-width: 1100px) { .nav-desktop { display: flex; } }
 
+/* ハンバーガーメニュー: モバイルでのみ表示 */
+.header-hamburger { display: inline-flex; }
+@media (min-width: 1100px) { .header-hamburger { display: none; } }
+/* デスクトップ時に出すアイコン: 小さい画面では非表示 */
+.header-icon-desktop, .header-cta-desktop { display: none; }
+@media (min-width: 768px) { .header-icon-desktop { display: inline-flex; } }
+@media (min-width: 768px) { .header-cta-desktop { display: inline-block; } }
+
 .live-chip {
   display: none; align-items: center; gap: 8px;
   font-size: 11px; color: var(--ink-sub); letter-spacing: .04em;

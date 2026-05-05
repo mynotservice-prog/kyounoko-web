@@ -454,29 +454,9 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* ======================================================================
-          失敗しない外出（ショートカット集。主役ではないのでフッター近く）
-          ====================================================================== */}
-      <section className="section" style={{ paddingTop: 0 }}>
-        <div className="container">
-          <div className="outing-panel">
-            <div className="section-head" style={{ borderBottom: 0, marginBottom: 0, paddingBottom: 0 }}>
-              <div>
-                <span className="eyebrow">Shortcuts</span>
-                <h2>失敗しない外出</h2>
-              </div>
-              <span className="hint">Quick access</span>
-            </div>
-            <div className="outing-chips">
-              {OUTING_TAGS.map((tag) => (
-                <Link key={tag.href} href={tag.href} className="outing-chip">
-                  {tag.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* 「失敗しない外出」セクションは2026-05に削除
+          - 主要ナビ（Header / StationSearch / TodayFinder / 季節と行事）と機能重複
+          - スクロール疲れの主因だったため統合方針 */}
 
       <SiteFooter />
       <MobileStickyNav active="today-doko" />
@@ -642,18 +622,7 @@ function Concern({ num, title, desc, href }: { num: string; title: string; desc:
   );
 }
 
-const OUTING_TAGS = [
-  { label: 'ベビーカー選び', href: '/article/babycar-ranking-2026' },
-  { label: '雨でもいける', href: '/today?weather=rain&place=outside' },
-  { label: '屋内キッズスポット', href: '/article/amenohi-indoor-spots-tokyo-15' },
-  { label: '猛暑日OK', href: '/article/moushobi-suzushii-spots' },
-  { label: '自然・公園', href: '/article/shizen-spot-tokyo-youji' },
-  { label: '無料スポット', href: '/article/kosodate-muryou-spots-tokyo' },
-  { label: '子連れランチ', href: '/article/shumatsu-ranchi-kodzure' },
-  { label: 'お花見', href: '/article/sakura-ohanami-kodzure-spots' },
-  { label: '0-1歳と外出', href: '/article/akachan-odekake-3months-1year' },
-  { label: '抱っこ紐選び方', href: '/article/dakkohimo-ranking-2026' },
-];
+// OUTING_TAGS は「失敗しない外出」セクション削除に伴い未使用化（保持しても問題ないが将来削除可）
 
 const CATEGORIES = [
   { slug: 'today-doko', href: '/category/today-doko', name: '今日どこ行く', desc: 'おでかけ / 屋内 / 雨でも行ける' },

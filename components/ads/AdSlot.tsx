@@ -5,6 +5,7 @@ import {
   ADSENSE_SLOT_DISPLAY,
   ADSENSE_SLOT_IN_ARTICLE,
   ADSENSE_SLOT_IN_FEED,
+  ADSENSE_SLOT_MULTIPLEX,
   ADSENSE_IN_FEED_LAYOUT_KEY,
 } from '@/lib/adsense';
 
@@ -26,23 +27,25 @@ import {
  */
 
 type AdPlacement =
-  | 'article-mid'    // 記事中途（TL;DR直後）
-  | 'article-end'    // 記事末尾（FAQ後）
-  | 'plan-below-hero' // プランhero下
-  | 'home-below-finder' // トップFinder下
+  | 'article-mid'        // 記事中途（TL;DR直後）
+  | 'article-end'        // 記事末尾（FAQ後）
+  | 'article-related'    // 関連記事ブロック上（Multiplex）
+  | 'plan-below-hero'    // プランhero下
+  | 'home-below-finder'  // トップFinder下
   | 'sidebar';
 
 /**
  * 配置タイプごとに使う「広告ユニット種別」と「スロットID」を決定する。
  * 同じ広告ユニットを複数の配置で再利用してOK（AdSense規約上問題なし）。
  */
-type UnitType = 'display' | 'in-article' | 'in-feed';
+type UnitType = 'display' | 'in-article' | 'in-feed' | 'multiplex';
 
 const PLACEMENT_TO_UNIT: Record<AdPlacement, { type: UnitType; slot: string }> = {
   'home-below-finder': { type: 'display', slot: ADSENSE_SLOT_DISPLAY },
   'article-end':       { type: 'display', slot: ADSENSE_SLOT_DISPLAY },
   'plan-below-hero':   { type: 'display', slot: ADSENSE_SLOT_DISPLAY },
   'article-mid':       { type: 'in-article', slot: ADSENSE_SLOT_IN_ARTICLE },
+  'article-related':   { type: 'multiplex', slot: ADSENSE_SLOT_MULTIPLEX },
   sidebar:             { type: 'in-feed', slot: ADSENSE_SLOT_IN_FEED },
 };
 
@@ -77,6 +80,9 @@ export function AdSlot({
   } else if (unit.type === 'in-feed') {
     insProps['data-ad-format'] = 'fluid';
     insProps['data-ad-layout-key'] = ADSENSE_IN_FEED_LAYOUT_KEY;
+    insStyle = { display: 'block' };
+  } else if (unit.type === 'multiplex') {
+    insProps['data-ad-format'] = 'autorelaxed';
     insStyle = { display: 'block' };
   }
 

@@ -27,6 +27,7 @@ import { TriedButton } from '@/components/ui/TriedButton';
 import { SpotList } from '@/components/common/SpotList';
 import { EditorialDisclosure } from '@/components/article/EditorialDisclosure';
 import { getExtraSchemasForArticle } from '@/lib/article-schema-enhancers';
+import { buildStationLinkForArticle } from '@/lib/article-station-link';
 
 export const revalidate = 3600; // 1時間ごとに再生成
 
@@ -613,6 +614,14 @@ function FileArticleView({ article }: { article: FileArticle }) {
       ? (article.category as 'today-doko' | 'today-nani' | 'today-taberu')
       : undefined;
 
+  // 記事から関連する東京23区内の駅を推定し、駅ページへのCTAを生成
+  const stationLink = buildStationLinkForArticle({
+    title: article.title,
+    metaDescription: article.metaDescription,
+    body: article.body,
+    quickInfo: article.quickInfo,
+  });
+
   return (
     <>
       {/* LCP 改善: hero 画像を最優先で先読み（CSS background のため Next.js Image priority が効かない） */}
@@ -907,6 +916,41 @@ function FileArticleView({ article }: { article: FileArticle }) {
               </div>
             </section>
           )}
+
+          {/* 駅ページへのCTA（東京23区記事のみ。駅検出できた場合のみ表示） */}
+          {stationLink && (
+            <section style={{ margin: '48px 0 0' }}>
+              <Link href={stationLink.href} style={{
+                display: 'block',
+                background: 'linear-gradient(135deg, rgba(201,96,62,0.08), rgba(201,96,62,0.03))',
+                border: '1px solid rgba(201,96,62,0.20)',
+                borderRadius: 16,
+                padding: '20px 24px',
+                textDecoration: 'none',
+                color: 'var(--ink)',
+              }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
+                  <div style={{ flex: 1, minWidth: 220 }}>
+                    <div style={{ fontSize: 11, color: 'var(--clay-deep)', fontWeight: 600, letterSpacing: '0.05em', marginBottom: 4 }}>
+                      ALSO RECOMMENDED · 駅から探す
+                    </div>
+                    <div style={{ fontSize: 17, fontWeight: 600, marginBottom: 2 }}>
+                      {stationLink.label}
+                    </div>
+                    <div style={{ fontSize: 12, color: 'var(--ink-mute)' }}>
+                      ベビーカーOK・キッズメニュー・個室・離乳食持込まで全項目チェック
+                    </div>
+                  </div>
+                  <span style={{
+                    fontSize: 22, color: 'var(--clay-deep)', flexShrink: 0,
+                  }}>→</span>
+                </div>
+              </Link>
+            </section>
+          )}
+
+          {/* AdSense Multiplex（関連コンテンツ風 / 回遊喚起） */}
+          <AdSlot placement="article-related" style={{ marginTop: 32 }} />
 
           {/* Author box */}
           <section

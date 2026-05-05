@@ -59,6 +59,14 @@ export const ADSENSE_SLOT_IN_ARTICLE: string =
 export const ADSENSE_SLOT_IN_FEED: string =
   (process.env.NEXT_PUBLIC_ADSENSE_SLOT_IN_FEED ?? '5792888939').trim();
 
+/**
+ * Multiplex 広告（関連コンテンツ風グリッド）のスロットID。
+ * 記事末尾やページ末尾でユーザー回遊が止まる場所に最適。
+ * data-ad-format="autorelaxed" で配信される。
+ */
+export const ADSENSE_SLOT_MULTIPLEX: string =
+  (process.env.NEXT_PUBLIC_ADSENSE_SLOT_MULTIPLEX ?? '7598900988').trim();
+
 /** インフィード広告ユニットの layout-key（AdSense管理画面で発行された値）。 */
 export const ADSENSE_IN_FEED_LAYOUT_KEY: string =
   (process.env.NEXT_PUBLIC_ADSENSE_IN_FEED_LAYOUT_KEY ?? '-7b+d9+1p+m+22').trim();
