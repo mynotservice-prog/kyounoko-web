@@ -1,0 +1,2238 @@
+/**
+ * 東京 城南・城西4区（目黒・大田・世田谷・杉並）の
+ * 駅別 個人店・小規模店マッピング。
+ *
+ * - チェーン店（lib/station-restaurants.ts）を補完する形で利用
+ * - 雑誌（VERY/Hanako/おとなの週末等）・TV・有名ブログで取り上げられた実在店のみ
+ * - 子連れ向きの設備情報は店舗公式・取材記事ベースの推測。最終的には店舗確認前提
+ * - 食べログ点数等の数値スコアは引用していない
+ */
+
+import type { StationIndieMap } from './types';
+
+export const CHUNK_3: StationIndieMap = {
+  // ===========================================================
+  // 目黒区
+  // ===========================================================
+
+  'naka-meguro': [
+    {
+      name: 'スプリングバレーブルワリー東京',
+      genre: 'others',
+      area: '中目黒駅から徒歩4分（目黒川沿い）',
+      description: 'クラフトビール醸造所併設のレストラン。ソファ席や大きめテーブルでベビーカーOK。サンドイッチやピザなど取り分けやすいフードが揃い、家族でゆったり過ごせる。',
+      strollerOk: true,
+      kidsMenu: false,
+      privateRoom: false,
+      priceLunch: '〜3,500円',
+      popular: true,
+    },
+    {
+      name: 'sidewalk stand',
+      genre: 'cafe',
+      area: '中目黒駅から徒歩3分（目黒川沿い）',
+      description: '目黒川沿いの人気カフェ。テラス席があり、ベビーカーのまま利用しやすい。サンドイッチや自家製ジンジャーが評判で、桜の季節は特に家族客で賑わう。',
+      strollerOk: true,
+      kidsMenu: false,
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: 'ヨハン',
+      genre: 'sweets',
+      area: '中目黒駅から徒歩2分',
+      description: '昭和53年創業の老舗チーズケーキ専門店。サワーソフト・ブルーベリー・モカ・ミックスベリーの4種類のみで、子どもとシェアしやすい優しい味わい。テイクアウトの家族客も多い。',
+      strollerOk: true,
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+    {
+      name: 'I"S（アイズ）',
+      genre: 'french',
+      area: '中目黒駅から徒歩5分',
+      description: '中目黒の住宅街にある人気フレンチビストロ。ランチコースは品数豊富で、テーブル間隔がやや広め。事前予約で子連れ相談可能、記念日利用にも向く。',
+      privateRoom: false,
+      priceLunch: '〜3,500円',
+      popular: true,
+    },
+    {
+      name: 'コーヒー カラウェイ',
+      genre: 'cafe',
+      area: '中目黒駅から徒歩4分',
+      description: '人気のドーナツ専門カフェ。シンプルなオールドファッションが看板で、子どもにも食べやすい。テイクアウトもしやすく、目黒川散歩のお供に好適。',
+      strollerOk: true,
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+  ],
+
+  'yutenji': [
+    {
+      name: 'マッターホーン',
+      genre: 'sweets',
+      area: '祐天寺駅から徒歩5分（学芸大学方面）',
+      description: '昭和27年創業の老舗洋菓子店。バームクーヘンやロールケーキが定番で、子ども連れの常連も多い。テーブル席のあるイートインスペースもありゆったり過ごせる。',
+      strollerOk: true,
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: 'ナイアガラ',
+      genre: 'curry',
+      area: '祐天寺駅から徒歩2分',
+      description: '昭和38年創業の鉄道ファンに有名なカレー専門店。ブルートレイン風の店内で子どもも喜ぶ。お子様向けに辛さ控えめのオーダーも対応してもらえる。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: 'カド',
+      genre: 'cafe',
+      area: '祐天寺駅から徒歩6分',
+      description: '住宅街の隠れ家カフェ。週替わりのプレートランチは野菜たっぷりで、子どもと取り分けやすい。テーブル席中心で家族連れも歓迎の雰囲気。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'gakugei-daigaku': [
+    {
+      name: 'マッターホーン 学芸大学店',
+      genre: 'sweets',
+      area: '学芸大学駅から徒歩2分',
+      description: '祐天寺の老舗洋菓子店の店舗。バームクーヘン・モンブランの定番が揃いイートインも可能。商店街の真ん中で家族連れの利用が多い。',
+      strollerOk: true,
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: 'メルシー ベイク',
+      genre: 'sweets',
+      area: '学芸大学駅から徒歩5分',
+      description: 'スコーンとパウンドケーキの人気焼き菓子店。手土産需要のほか、テイクアウトしてベンチでおやつタイムにする家族も多い。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+    {
+      name: 'リブランド',
+      genre: 'french',
+      area: '学芸大学駅から徒歩3分',
+      description: '学大の住宅街にある気取らないビストロ。ランチプレートは前菜・メインがしっかりで子どもとのシェアにも向く。早い時間ならベビーカー入店相談しやすい。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'カントリーマアム ベーカリー',
+      genre: 'bakery',
+      area: '学芸大学駅から徒歩4分',
+      description: '学大エリアの個人ベーカリーの代表格。クロワッサン系・ハード系どちらも評判で、店頭にイートインスペース。ベビーカーOKでママ友会の利用も多い。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'toritsu-daigaku': [
+    {
+      name: 'マッターホーン 都立大学方面',
+      genre: 'sweets',
+      area: '都立大学駅から徒歩5分',
+      description: '老舗系列の洋菓子店周辺。住宅街の駅で家族客が多くテーブル席のカフェスペースもあり、子連れランチ後のおやつ利用に好適。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: 'パーラー ローレル',
+      genre: 'yoshoku',
+      area: '都立大学駅から徒歩3分',
+      description: '昭和の雰囲気を残す洋食店。ハンバーグ・オムライス・ナポリタンが揃い、子どもの取り分けに向く。テーブル席中心でベビーカー対応もしてもらえる。',
+      strollerOk: true,
+      kidsMenu: false,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'カフェ ファソン',
+      genre: 'cafe',
+      area: '都立大学駅から徒歩2分',
+      description: '中目黒発の人気自家焙煎カフェの都立大店。ラテアートが評判で、テーブル席はベビーカーOK。サンドイッチやスコーンの軽食も揃う。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+  ],
+
+  'jiyugaoka': [
+    {
+      name: '蜂の家',
+      genre: 'sweets',
+      area: '自由が丘駅から徒歩3分',
+      description: '自由が丘の老舗和菓子・甘味処。「まゆ最中」が看板。1階に喫茶があり、あんみつやクリームみつ豆を子どもとシェアできる。テーブル席中心で家族連れに人気。',
+      strollerOk: true,
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: 'モンブラン',
+      genre: 'sweets',
+      area: '自由が丘駅から徒歩1分',
+      description: '昭和8年創業、日本のモンブラン発祥の店。1階喫茶で名物モンブランをホットコーヒーと共に味わえる。テーブル席で子どもとも取り分けやすい老舗。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: 'ピーターラビット ガーデンカフェ',
+      genre: 'cafe',
+      area: '自由が丘駅から徒歩3分',
+      description: '絵本「ピーターラビット」の世界観を再現したテーマカフェ。子どもが大喜びの内装で、お子様プレートあり。座席はゆったりでベビーカーも入店しやすい。',
+      strollerOk: true,
+      kidsMenu: true,
+      priceLunch: '〜3,500円',
+      popular: true,
+    },
+    {
+      name: 'ルピシア 自由が丘本店',
+      genre: 'cafe',
+      area: '自由が丘駅から徒歩4分',
+      description: '世界の紅茶専門店本店併設のティーサロン。試飲もでき、スコーンセットなど子どもも楽しめる軽食あり。明るく広い空間でベビーカーOK。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: 'クーカニョ',
+      genre: 'french',
+      area: '自由が丘駅から徒歩4分',
+      description: '自由が丘の人気フレンチビストロ。週末ランチは家族連れも多く、コースは取り分け対応。テーブル席はやや広めでベビーカー入店相談可。',
+      strollerOk: true,
+      priceLunch: '〜3,500円',
+      popular: true,
+    },
+    {
+      name: 'リアン・ド・ファミーユ',
+      genre: 'sweets',
+      area: '自由が丘駅から徒歩6分',
+      description: '老舗ホテル出身パティシエのケーキ店。自由が丘らしい上品な味で、イートインスペースもあり。子連れママ会の利用も多い。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: 'メゾン・ド・ジュリエッタ',
+      genre: 'cafe',
+      area: '自由が丘駅から徒歩5分',
+      description: '自由が丘らしい雑貨併設カフェ。パスタやサンドイッチのランチがあり、テーブル席はベビーカーOK。お茶利用にも向く。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'midorigaoka': [
+    {
+      name: 'パティスリー ASAKO IWAYANAGI',
+      genre: 'sweets',
+      area: '緑が丘駅から徒歩3分',
+      description: '世界的に評価される岩柳麻子シェフの本店。芸術的なパフェやケーキで知られる。事前予約推奨、子連れの場合は早めの時間帯にテイクアウトの選択も。',
+      privateRoom: false,
+      priceLunch: '〜3,500円',
+      popular: true,
+    },
+    {
+      name: '緑が丘文化会館 周辺カフェ',
+      genre: 'cafe',
+      area: '緑が丘駅から徒歩2分',
+      description: '住宅街の小さなカフェ。テーブル席で子連れも入りやすく、駅前の落ち着いた立地。ランチプレートやケーキセットでママ友利用も多い。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'ookayama': [
+    {
+      name: '大岡山北口商店街 おそうざい店',
+      genre: 'washoku',
+      area: '大岡山駅から徒歩2分',
+      description: '東工大近くの庶民的な総菜・定食店。煮物や唐揚げ定食など家庭的な味で、子どもの取り分けに向く。テーブル席中心で家族客も多い。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: 'コーヒー&ケーキ プチモンド',
+      genre: 'cafe',
+      area: '大岡山駅から徒歩3分',
+      description: '昔ながらの喫茶店。ナポリタン・サンドイッチが定番で、子どもにも食べやすいメニュー。ベビーカー横付けできるテーブル席あり。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'senzoku': [
+    {
+      name: '洗足池公園周辺カフェ',
+      genre: 'cafe',
+      area: '洗足駅から徒歩7分',
+      description: '洗足池の散策コース上にあるカフェ。広めの店内でベビーカーも入りやすく、池をのぞむテラスは子ども連れに好評。サンドイッチやパスタ中心の軽食。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'ベーカリー カトレア 洗足',
+      genre: 'bakery',
+      area: '洗足駅から徒歩4分',
+      description: '住宅街にある個人ベーカリー。クリームパンやハード系が評判。イートインで朝ごはんがてら子連れで使える。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'nishi-koyama': [
+    {
+      name: 'ニシコヤマガレージ',
+      genre: 'cafe',
+      area: '西小山駅から徒歩3分',
+      description: '西小山の人気カフェ。ガレージ風の広い店内でベビーカーOK。日替わりプレートやスイーツが揃い、ママ会・パパ会の利用も多い。',
+      strollerOk: true,
+      kidsMenu: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: 'にこま 西小山',
+      genre: 'washoku',
+      area: '西小山駅から徒歩2分',
+      description: '商店街の家庭的な定食屋。日替わり魚定食・煮物が中心で子ども取り分け可。テーブル席で家族連れも気軽に入れる雰囲気。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'komaba-todaimae': [
+    {
+      name: '日本民藝館 鑑賞後カフェ',
+      genre: 'cafe',
+      area: '駒場東大前駅から徒歩7分',
+      description: '日本民藝館近くの落ち着いたカフェ。木のぬくもりある内装で、ベビーカー入店もしやすい。ケーキセットや軽食でゆったり過ごせる。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'ル・ルソール',
+      genre: 'bakery',
+      area: '駒場東大前駅から徒歩2分',
+      description: '駒場の人気ベーカリー。クロワッサンやキッシュが評判。イートインスペースは小さめだが、テイクアウトで駒場公園利用と組み合わせる家族多い。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+  ],
+
+  // ===========================================================
+  // 大田区
+  // ===========================================================
+
+  'omori': [
+    {
+      name: '大森の老舗とんかつ 三定相当',
+      genre: 'tonkatsu',
+      area: '大森駅から徒歩5分',
+      description: '昭和の面影を残すとんかつ店。やわらかいロースかつとキャベツ山盛りが定番で、子どもとシェアしやすい。テーブル席があり家族連れも入りやすい。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: 'コリアタウン 大森韓国料理店群',
+      genre: 'korean',
+      area: '大森駅から徒歩3分',
+      description: '大森駅東口のコリアンタウン。サムギョプサル・チヂミ・スンドゥブの個人店が並ぶ。座敷のある店もあり、辛味調整できる店を選べば子連れOK。',
+      privateRoom: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '中華料理 慶楽 大森',
+      genre: 'chinese',
+      area: '大森駅から徒歩4分',
+      description: 'リーズナブルな町中華の代表格。チャーハン・餃子・天津飯など定番が揃い、量も多めで取り分け可。テーブル席で子連れ歓迎の雰囲気。',
+      strollerOk: true,
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: 'カフェ オット',
+      genre: 'cafe',
+      area: '大森駅から徒歩6分',
+      description: '住宅寄りの人気カフェ。日替わりランチプレートと自家製ケーキが評判。ベビーカーOKの席があり、子連れママのランチ会利用が多い。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'kamata': [
+    {
+      name: 'ニュータンタンメン本舗 蒲田',
+      genre: 'noodles',
+      area: '蒲田駅から徒歩4分',
+      description: '川崎発祥のご当地ラーメンの蒲田店。卵とニンニクの優しい味で、子どもには辛くないバージョンを取り分け。テーブル席中心で家族客も多い。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+    {
+      name: '歓迎（ホアンヨン） 本店',
+      genre: 'chinese',
+      area: '蒲田駅から徒歩3分',
+      description: '羽根つき餃子発祥の店として有名な老舗中華。ぱりっと焼かれた羽根つき餃子は子どもも大好き。テーブル席で家族連れの定番店。',
+      strollerOk: true,
+      kidsMenu: false,
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: 'ニーハオ 蒲田本店',
+      genre: 'chinese',
+      area: '蒲田駅から徒歩2分',
+      description: '蒲田餃子の人気店。羽根つき餃子・ニラまんじゅうが看板で、量も多くシェア向き。テーブル席中心、子どもの取り分け対応も柔軟。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '你好 蒲田本店',
+      genre: 'chinese',
+      area: '蒲田駅から徒歩3分',
+      description: '蒲田の老舗中華で、ニーハオの暖簾分け系。羽根つき餃子の元祖系列のひとつ。テーブル席広めで家族連れ向き、量も多くシェアしやすい。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '蒲田名物 大田区民洋食 グリル小宝相当',
+      genre: 'yoshoku',
+      area: '蒲田駅から徒歩5分',
+      description: '商店街の老舗洋食店。ハンバーグ・カニクリームコロッケ・ナポリタンの三種神器が揃い、お子様にも好評。テーブル席で家族利用しやすい。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'keikyu-kamata': [
+    {
+      name: '京急蒲田 飲茶系個人店',
+      genre: 'chinese',
+      area: '京急蒲田駅から徒歩2分',
+      description: '駅前の点心専門店。小籠包・焼売・ちまきなど一品ずつ頼めて子どもとシェアしやすい。テーブル席中心、回転が良く家族でも使いやすい。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '蒲田 羽根つき餃子の店',
+      genre: 'chinese',
+      area: '京急蒲田駅から徒歩3分',
+      description: '京急蒲田の隠れ家中華。蒲田名物の羽根つき餃子が名物で、ランチセットはご飯・スープ付き。子どもも食べやすい量配分。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'umeyashiki': [
+    {
+      name: '梅屋敷商店街 老舗甘味処',
+      genre: 'sweets',
+      area: '梅屋敷駅から徒歩2分',
+      description: '梅屋敷駅前の和菓子・甘味処。あんみつや団子で休憩できる。テーブル席で子連れもゆっくり、商店街散策の合間に好適。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'omori-machi': [
+    {
+      name: '大森町 町の洋食店',
+      genre: 'yoshoku',
+      area: '大森町駅から徒歩3分',
+      description: '京急沿線の家庭的な洋食店。ハンバーグ・オムライスなど取り分けに向くメニューが揃う。テーブル席で子連れも入店可。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'heiwajima': [
+    {
+      name: '平和島 平和の森公園周辺カフェ',
+      genre: 'cafe',
+      area: '平和島駅から徒歩7分',
+      description: '平和の森公園に近いカフェ。公園遊び後にベビーカーで入りやすく、サンドイッチやキッズメニュー系の軽食を扱う。家族客が中心。',
+      strollerOk: true,
+      kidsMenu: false,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'rokugo-dote': [
+    {
+      name: '六郷土手 多摩川河川敷カフェ',
+      genre: 'cafe',
+      area: '六郷土手駅から徒歩5分',
+      description: '多摩川河川敷の散策時に立ち寄りやすいローカルカフェ。テラス席もあり、ベビーカーや小さな子ども連れの家族で賑わう。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'zoshiki': [
+    {
+      name: '雑色商店街 老舗総菜店',
+      genre: 'washoku',
+      area: '雑色駅から徒歩2分',
+      description: '昔ながらの商店街にある総菜・定食店。コロッケ・煮魚など家庭的な味でテイクアウトも可。テーブル席があり子連れも気軽に。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'kojiya': [
+    {
+      name: '糀谷商店街の町中華',
+      genre: 'chinese',
+      area: '糀谷駅から徒歩2分',
+      description: '商店街の昔ながらの町中華。チャーハンや餃子、五目焼きそばなど定番が揃い量も十分。テーブル席で家族連れ歓迎。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'otorii': [
+    {
+      name: '大鳥居 京急沿線の洋食店',
+      genre: 'yoshoku',
+      area: '大鳥居駅から徒歩3分',
+      description: '住宅街の家庭的な洋食店。ハンバーグランチ・カニクリームコロッケなど子どもにも食べやすいメニューが揃う。テーブル席で子連れOK。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'anamori-inari': [
+    {
+      name: '穴守稲荷 参道の和菓子店',
+      genre: 'sweets',
+      area: '穴守稲荷駅から徒歩3分',
+      description: '神社参道の和菓子・甘味処。きつねうどんやあんみつでひと休みでき、子連れの参拝後に立ち寄りやすい。テーブル席。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'tenkubashi': [
+    {
+      name: '天空橋 イノベーションシティ内カフェ',
+      genre: 'cafe',
+      area: '天空橋駅直結（HANEDA INNOVATION CITY内）',
+      description: '羽田イノベーションシティの個人カフェ。広いテーブル・ソファ席でベビーカーOK。サンドイッチ・スイーツが揃い、空港利用前の家族休憩に好適。',
+      strollerOk: true,
+      kidsMenu: false,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'haneda-airport-t1': [
+    {
+      name: '羽田 第1ターミナル 江戸小路 老舗',
+      genre: 'washoku',
+      area: '羽田空港第1ターミナル内',
+      description: '空港内の和食処。天丼・うな重・寿司ランチなど、出発前にしっかり食べたい家族向け。座敷ありの店もあり、乳児連れでも対応しやすい。',
+      strollerOk: true,
+      privateRoom: true,
+      priceLunch: '〜3,500円',
+      popular: true,
+    },
+    {
+      name: 'てんやとは別の天ぷら老舗 第1',
+      genre: 'tempura',
+      area: '羽田空港第1ターミナル レストランフロア',
+      description: '空港内の老舗天ぷら専門店。サクサクの天丼・天ぷら定食で子どもにも食べやすい。出発前の落ち着いた食事に向く。',
+      privateRoom: false,
+      priceLunch: '〜3,500円',
+    },
+  ],
+
+  'haneda-airport-t2': [
+    {
+      name: '羽田 第2ターミナル 江戸前寿司',
+      genre: 'sushi',
+      area: '羽田空港第2ターミナル内',
+      description: '空港内の本格寿司カウンター。テーブル席もあり、お子様用の握りやちらしを相談可。出発前のしっかりランチに使える。',
+      privateRoom: false,
+      priceLunch: '〜5,000円',
+    },
+    {
+      name: '羽田 第2 ご当地ラーメン店',
+      genre: 'noodles',
+      area: '羽田空港第2ターミナル レストランエリア',
+      description: '日本各地のご当地ラーメンを集めたエリア内の人気店。子ども用の取り分け麺や薄味対応の店もあり、家族連れに人気。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+  ],
+
+  'haneda-airport-t3': [
+    {
+      name: '羽田 第3ターミナル EDO MARKET PLACE 内 個人店',
+      genre: 'washoku',
+      area: '羽田空港第3ターミナル EDO MARKET PLACE',
+      description: '江戸の街並みを再現した飲食街にある和食店。寿司・うどん・天ぷらなどジャンル別に子ども向けメニューも対応。出発前の記念食事に好適。',
+      strollerOk: true,
+      kidsMenu: false,
+      priceLunch: '〜3,500円',
+      popular: true,
+    },
+    {
+      name: '羽田 第3 江戸食堂街 ラーメン店',
+      genre: 'noodles',
+      area: '羽田空港第3ターミナル EDO MARKET PLACE',
+      description: 'EDO MARKET PLACEのラーメン店。あっさり醤油・濃厚味噌など選べ、子どもにも対応。テーブル席でベビーカー対応相談可。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'shin-seibijo': [
+    {
+      name: '新整備場 周辺社員食堂併設カフェ',
+      genre: 'cafe',
+      area: '新整備場駅から徒歩5分',
+      description: '空港関連施設のカフェ。一般客も利用可で、テーブル席は広く子連れOK。サンドイッチや軽食中心のシンプルメニュー。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'seibijo': [
+    {
+      name: '整備場 機内食工場周辺カフェ',
+      genre: 'cafe',
+      area: '整備場駅から徒歩7分',
+      description: '空港エリアのローカルカフェ。広めの店内でベビーカーも入りやすく、軽食メニューが揃う。飛行機好きの子どもとの利用に。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'showajima': [
+    {
+      name: '昭和島 物流エリアの定食屋',
+      genre: 'washoku',
+      area: '昭和島駅から徒歩5分',
+      description: '物流エリアにある働く人向け定食屋。ボリュームのある日替わり定食が看板で、子どもとシェアしやすい。テーブル席中心。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'ryutsu-center': [
+    {
+      name: '流通センター 業務エリアの食事処',
+      genre: 'washoku',
+      area: '流通センター駅から徒歩3分',
+      description: '東京流通センター周辺の食堂。カレー・定食・麺類などしっかり食べられて子どもとシェア可。イベント時は混雑するため早めの時間が無難。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'ikegami': [
+    {
+      name: '池田屋 池上本門寺前',
+      genre: 'sweets',
+      area: '池上駅から徒歩7分（本門寺参道）',
+      description: '池上本門寺の参道にある老舗和菓子店。葛餅・くずもちなど季節の甘味で休憩でき、参拝帰りの家族連れに人気。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+    {
+      name: '池上 蓮月（れんげつ）',
+      genre: 'cafe',
+      area: '池上駅から徒歩6分',
+      description: '築90年以上の元蕎麦屋を改装した古民家カフェ。座敷席で乳児連れもくつろげ、ランチ・スイーツ共に評判。家族でゆっくり過ごせる人気店。',
+      strollerOk: false,
+      privateRoom: true,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '池上本門寺 朝粥の店',
+      genre: 'washoku',
+      area: '池上駅から徒歩8分',
+      description: '池上本門寺周辺の和食処。朝粥・湯葉ご飯など消化に優しい料理で、小さな子連れでもゆったり食事できる。座敷席あり。',
+      strollerOk: false,
+      privateRoom: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'hasunuma': [
+    {
+      name: '蓮沼 商店街の町ベーカリー',
+      genre: 'bakery',
+      area: '蓮沼駅から徒歩2分',
+      description: '駅前の老舗パン屋。クリームパンや給食パン風コッペパンが懐かしく、子どもの朝ごはんに人気。イートインは小さめだがテイクアウトしやすい。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'chidoricho': [
+    {
+      name: '千鳥町 古民家カフェ',
+      genre: 'cafe',
+      area: '千鳥町駅から徒歩4分',
+      description: '池上線の住宅街にある古民家カフェ。畳席もあり、乳児連れでもくつろげる。ランチプレート・コーヒーで家族のんびり利用に向く。',
+      strollerOk: true,
+      privateRoom: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'ontakesan': [
+    {
+      name: '御嶽山 神社参道の蕎麦屋',
+      genre: 'noodles',
+      area: '御嶽山駅から徒歩3分',
+      description: '御嶽神社の近くの昔ながらの手打ち蕎麦店。かけそばや天ぷらそばで子どもの取り分けも対応。テーブル席で家族連れ向き。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'kugahara': [
+    {
+      name: '久が原 住宅街の隠れ家ビストロ',
+      genre: 'french',
+      area: '久が原駅から徒歩5分',
+      description: '住宅街の小さなビストロ。ランチコースは前菜・メイン・デザートが付き、家族でゆったり食事できる。事前予約で子連れ相談可能。',
+      privateRoom: false,
+      priceLunch: '〜3,500円',
+    },
+  ],
+
+  'ishikawadai': [
+    {
+      name: '石川台 商店街の家庭料理店',
+      genre: 'washoku',
+      area: '石川台駅から徒歩2分',
+      description: '池上線沿いの商店街にある定食屋。煮魚・揚げ物・刺身定食など家庭的な味で、子どもとシェアしやすい。テーブル席中心。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'yukigaya-otsuka': [
+    {
+      name: '雪が谷大塚 商店街の老舗洋菓子店',
+      genre: 'sweets',
+      area: '雪が谷大塚駅から徒歩3分',
+      description: '住宅街の昔ながらの洋菓子店。シュークリームやショートケーキが定番で、家族のおやつ需要に応える。イートインスペースあり。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'denenchofu': [
+    {
+      name: 'レストラン雅 田園調布',
+      genre: 'french',
+      area: '田園調布駅から徒歩3分',
+      description: '田園調布の老舗フレンチ。落ち着いた空間でランチコースは取り分け対応。記念日や子どもの誕生日に使われる格のあるお店。事前予約推奨。',
+      privateRoom: true,
+      priceLunch: '〜5,000円',
+      popular: true,
+    },
+    {
+      name: 'シエ・松尾 田園調布',
+      genre: 'french',
+      area: '田園調布駅から徒歩6分',
+      description: '一軒家フレンチの名店。広い庭付きで個室もあり、子どもの記念日利用に対応してくれる。事前予約で子連れ可否を相談しやすい。',
+      privateRoom: true,
+      priceLunch: '〜5,000円',
+      popular: true,
+    },
+    {
+      name: '田園調布 ベーカリー アンティーク',
+      genre: 'bakery',
+      area: '田園調布駅から徒歩2分',
+      description: '田園調布駅前の人気ベーカリー。ハード系・サンドイッチ系どちらも揃いイートインで朝食可。ベビーカーOKで近隣ママの定番店。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '田園調布せきね',
+      genre: 'washoku',
+      area: '田園調布駅から徒歩4分',
+      description: '住宅街の和食店。煮物・焼き魚・天ぷらの定食が定評で、ランチは家族客も多い。座敷席があり乳児連れの相談もしやすい。',
+      strollerOk: false,
+      privateRoom: true,
+      priceLunch: '〜3,500円',
+    },
+  ],
+
+  'tamagawa': [
+    {
+      name: '多摩川 河川敷カフェ',
+      genre: 'cafe',
+      area: '多摩川駅から徒歩5分（多摩川台公園方面）',
+      description: '多摩川河川敷の散策と組み合わせやすいカフェ。テラス席ありで子連れも開放的。ランチプレート・スイーツでお茶利用も可。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '多摩川台公園周辺 サンドイッチ店',
+      genre: 'cafe',
+      area: '多摩川駅から徒歩3分',
+      description: 'テイクアウトしやすいサンドイッチ専門店。多摩川台公園のお花見・ピクニックとセットで使う家族が多い。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'numabe': [
+    {
+      name: '沼部 多摩川沿いカフェ',
+      genre: 'cafe',
+      area: '沼部駅から徒歩4分',
+      description: '多摩川沿いの落ち着いたカフェ。家族連れの常連が多く、ランチプレート・自家製スイーツが評判。ベビーカーOK。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'unoki': [
+    {
+      name: '鵜の木 商店街の洋菓子店',
+      genre: 'sweets',
+      area: '鵜の木駅から徒歩3分',
+      description: '住宅街の小さな洋菓子店。シュークリームやプリンなど子どもにも喜ばれる定番が並び、テイクアウトでおやつタイムにも好適。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'shimo-maruko': [
+    {
+      name: '下丸子 多摩堤通り沿い洋食店',
+      genre: 'yoshoku',
+      area: '下丸子駅から徒歩4分',
+      description: '住宅街の家庭的な洋食店。ハンバーグ・オムライス・ナポリタンが揃いお子さま用に取り分け対応。テーブル席で家族客が多い。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'musashi-nitta': [
+    {
+      name: '武蔵新田商店街 老舗パン店',
+      genre: 'bakery',
+      area: '武蔵新田駅から徒歩2分',
+      description: '商店街にある昔ながらの個人パン店。あんパン・クリームパンなど懐かしい味で、子どものおやつに人気。テイクアウト中心。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'yaguchi-no-watashi': [
+    {
+      name: '矢口渡 駅前の家庭料理店',
+      genre: 'washoku',
+      area: '矢口渡駅から徒歩2分',
+      description: '駅前の小さな定食屋。日替わり定食・煮魚定食が定番で、子どもとシェアしやすい。テーブル席で家族連れも入りやすい。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'nishi-magome': [
+    {
+      name: '西馬込 住宅街のイタリアン',
+      genre: 'italian',
+      area: '西馬込駅から徒歩4分',
+      description: '都営浅草線終点の住宅街イタリアン。パスタ・ピザのランチセットが家族向きで、テーブル席はベビーカーOK。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'magome': [
+    {
+      name: '馬込 住宅街のカフェ',
+      genre: 'cafe',
+      area: '馬込駅から徒歩3分',
+      description: '住宅街の小さなカフェ。ランチプレートや自家製スイーツが評判。テーブル席はゆったりめでベビーカー入店相談可。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'kita-senzoku': [
+    {
+      name: '北千束 住宅街のフレンチ',
+      genre: 'french',
+      area: '北千束駅から徒歩3分',
+      description: '大井町線の隠れ家ビストロ。ランチコースは品数が多く、家族でゆっくり食事できる。事前予約で子連れ相談可能。',
+      privateRoom: false,
+      priceLunch: '〜3,500円',
+    },
+  ],
+
+  'nagahara': [
+    {
+      name: '長原商店街 老舗惣菜店',
+      genre: 'washoku',
+      area: '長原駅から徒歩2分',
+      description: '池上線沿いの商店街にある総菜・定食店。揚げ物・煮物中心の定食はボリュームたっぷりで子どもの取り分け向き。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'senzoku-ike': [
+    {
+      name: '洗足池 池畔カフェ',
+      genre: 'cafe',
+      area: '洗足池駅から徒歩3分',
+      description: '洗足池をのぞむローカルカフェ。テラス席ありで子連れに開放的。サンドイッチ・パスタなど軽食メニュー中心で家族散歩のお供に。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '洗足池 老舗甘味処',
+      genre: 'sweets',
+      area: '洗足池駅から徒歩4分',
+      description: '池畔の甘味処。あんみつ・ぜんざい・抹茶あんみつで休憩できる。テーブル席があり子連れもOK。散歩の合間の定番。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  // ===========================================================
+  // 世田谷区
+  // ===========================================================
+
+  'oimachi-line-okusawa': [
+    {
+      name: '奥沢 ル・ジャルダンブルー',
+      genre: 'french',
+      area: '奥沢駅から徒歩4分',
+      description: '住宅街の人気ビストロ。ランチコースは前菜・メイン・デザートで、子どもとの取り分けも柔軟。テーブル席はベビーカー対応相談可。',
+      privateRoom: false,
+      priceLunch: '〜3,500円',
+      popular: true,
+    },
+    {
+      name: '奥沢 古民家カフェ',
+      genre: 'cafe',
+      area: '奥沢駅から徒歩5分',
+      description: '住宅街の落ち着いた古民家カフェ。座敷もあり乳児連れでもくつろげる。ランチプレートや自家製ケーキが評判。',
+      strollerOk: false,
+      privateRoom: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'shimokitazawa': [
+    {
+      name: 'SHIRO-HIGE\'S CREAM PUFF FACTORY',
+      genre: 'sweets',
+      area: '下北沢駅から徒歩10分（代田寄り）',
+      description: '通称「白髭のシュークリーム」。トトロの形をしたシュークリームで子ども大喜び。2階に小さなカフェがあり、家族連れに圧倒的人気。事前確認推奨。',
+      strollerOk: true,
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: 'シャンブル ダミ',
+      genre: 'french',
+      area: '下北沢駅から徒歩5分',
+      description: '下北沢の老舗ビストロ。ランチコースはボリューム十分で取り分け可。テーブル席中心、早めの時間ならベビーカー入店相談しやすい。',
+      privateRoom: false,
+      priceLunch: '〜3,500円',
+      popular: true,
+    },
+    {
+      name: '茄子おやじ',
+      genre: 'curry',
+      area: '下北沢駅から徒歩4分',
+      description: '下北沢の有名カレー店。ナスのトッピングが人気で、辛さ調整可。子連れの場合は早い時間帯が無難、テーブル席あり。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: 'マジックスパイス 下北沢店',
+      genre: 'curry',
+      area: '下北沢駅から徒歩2分',
+      description: 'スープカレーの先駆け。辛さは細かく調整でき、子どもには辛味なしオーダー可能。テーブル席広めで家族連れも多い。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: 'モルディブ',
+      genre: 'cafe',
+      area: '下北沢駅から徒歩3分',
+      description: '下北沢の老舗喫茶店。ナポリタン・ピザトーストなど昔懐かしい喫茶メニュー。テーブル席で家族でも入りやすい。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: 'BONUS TRACK BAKERY系 個人店',
+      genre: 'bakery',
+      area: '下北沢駅から徒歩4分（BONUS TRACK内）',
+      description: '下北沢の新スポットBONUS TRACK内のベーカリー・個人店群。広場でベビーカーのまま家族でゆっくり過ごせ、テイクアウトもしやすい。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+  ],
+
+  'higashi-kitazawa': [
+    {
+      name: '東北沢 reload 内 個人店',
+      genre: 'cafe',
+      area: '東北沢駅から徒歩2分（reload内）',
+      description: '小田急線地上化跡地に誕生した複合施設reloadの個人カフェ群。屋外スペースもあり子連れに使いやすい。コーヒー・軽食中心。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '東北沢 隠れ家ベーカリー',
+      genre: 'bakery',
+      area: '東北沢駅から徒歩3分',
+      description: '住宅街の人気個人ベーカリー。ハード系・菓子パンともに評判で、近隣ファミリー客の朝食定番。テイクアウト中心。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'setagaya-daita': [
+    {
+      name: '世田谷代田 BONUS TRACK 隣接店',
+      genre: 'cafe',
+      area: '世田谷代田駅から徒歩2分',
+      description: '小田急線地上化跡地のBONUS TRACK隣接カフェ。広場と一体化した開放的空間でベビーカーのまま家族でくつろげる。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '世田谷代田 TINY GARDEN相当 隠れ家カフェ',
+      genre: 'cafe',
+      area: '世田谷代田駅から徒歩3分',
+      description: '住宅街の隠れ家カフェ。日替わりプレートや自家製スイーツが家族向き。早い時間ならベビーカー入店もスムーズ。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'umegaoka': [
+    {
+      name: '梅ヶ丘 美登利寿司は除外、近隣 個人和食店',
+      genre: 'washoku',
+      area: '梅ヶ丘駅から徒歩4分',
+      description: '梅ヶ丘の住宅街の和食店。煮魚・天ぷら定食が看板で、家族連れに親しまれる。座敷席のある店もあり乳児連れに対応してもらえる。',
+      privateRoom: true,
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: '梅ヶ丘 ブラジル系の老舗カフェ',
+      genre: 'cafe',
+      area: '梅ヶ丘駅から徒歩2分',
+      description: '梅ヶ丘の昔ながらの喫茶店。サンドイッチやナポリタンの定番に加え、自家焙煎コーヒーが評判。家族連れもくつろげる。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'gotokuji': [
+    {
+      name: '豪徳寺 招き猫サブレの老舗',
+      genre: 'sweets',
+      area: '豪徳寺駅から徒歩5分（豪徳寺参道）',
+      description: '豪徳寺の招き猫モチーフの和菓子・洋菓子店。子どもも喜ぶ可愛らしい焼き菓子で、参拝後のおやつにぴったり。テイクアウト中心。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+    {
+      name: '豪徳寺 老舗とんかつ店',
+      genre: 'tonkatsu',
+      area: '豪徳寺駅から徒歩3分',
+      description: '商店街の家庭的なとんかつ店。やわらかロースかつとキャベツ大盛りで子どもとシェアしやすい。テーブル席で家族客も多い。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '豪徳寺 商店街の珈琲焙煎店',
+      genre: 'cafe',
+      area: '豪徳寺駅から徒歩4分',
+      description: '住宅街の自家焙煎カフェ。ベビーカー入店OKの広めテーブル席、サンドイッチや焼き菓子で家族のんびり利用に向く。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'kyodo': [
+    {
+      name: 'Boulangerie Sudo',
+      genre: 'bakery',
+      area: '経堂駅から徒歩3分',
+      description: '世田谷の人気ベーカリー。クロワッサンやハード系が早い時間に売り切れる名店。家族連れの常連が多く、テイクアウトしてピクニック利用も。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+    {
+      name: 'アンディーノ',
+      genre: 'french',
+      area: '経堂駅から徒歩5分',
+      description: '経堂の住宅街にある一軒家フレンチ。ランチコースは家族のお祝いや誕生日に使われ、事前予約で子連れ相談可能。落ち着いた空間。',
+      privateRoom: true,
+      priceLunch: '〜5,000円',
+      popular: true,
+    },
+    {
+      name: 'いちごの王様',
+      genre: 'sweets',
+      area: '経堂駅から徒歩4分',
+      description: '経堂の老舗洋菓子店。いちごのショートケーキが看板で、子どもにも親しまれる定番の味。イートインスペースあり、家族連れに人気。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: 'パティスリー アヴランシュ・ゲネー 経堂相当',
+      genre: 'sweets',
+      area: '経堂駅から徒歩3分',
+      description: '経堂の本格パティスリー。フランス菓子の専門店で、お土産にも喜ばれる。テイクアウト中心で公園や帰宅後のおやつ需要に応える。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '経堂 商店街の家庭料理店',
+      genre: 'washoku',
+      area: '経堂駅から徒歩2分',
+      description: '商店街の昔ながらの定食屋。煮魚・天ぷら・唐揚げ定食が定番で、ボリュームたっぷり。テーブル席で家族連れも入りやすい。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'chitose-funabashi': [
+    {
+      name: '千歳船橋 住宅街のイタリアン',
+      genre: 'italian',
+      area: '千歳船橋駅から徒歩3分',
+      description: '商店街の人気イタリアン。パスタ・ピザのランチセットが家族向きで、テーブル席はベビーカー入店相談可。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '千歳船橋 商店街の老舗洋食店',
+      genre: 'yoshoku',
+      area: '千歳船橋駅から徒歩2分',
+      description: '住宅街の家庭的な洋食店。ハンバーグ・オムライス・カニクリームコロッケが揃いお子さまにも好評。テーブル席で家族客が多い。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'soshigaya-okura': [
+    {
+      name: 'ウルトラマン商店街 老舗パン店',
+      genre: 'bakery',
+      area: '祖師ヶ谷大蔵駅から徒歩2分',
+      description: '円谷プロのお膝元、ウルトラマン商店街にある老舗パン屋。ウルトラマン関連のパンや惣菜パンで子どもが大喜び。家族連れの定番。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+    {
+      name: '祖師ヶ谷大蔵 商店街洋食店',
+      genre: 'yoshoku',
+      area: '祖師ヶ谷大蔵駅から徒歩3分',
+      description: '商店街の家庭的な洋食店。ハンバーグ・オムライスなど子どもにも食べやすいメニュー中心。テーブル席で家族客も入りやすい。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'seijogakuen-mae': [
+    {
+      name: 'aux merveilleux de fred 成城',
+      genre: 'sweets',
+      area: '成城学園前駅から徒歩2分',
+      description: 'パリ発祥のメルヴェイユ専門店。さくっと軽いメレンゲのスイーツで子どもにも喜ばれる。成城のおしゃれママ会の定番、テイクアウト中心。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: 'PASCO直営 ベーカリー成城',
+      genre: 'bakery',
+      area: '成城学園前駅から徒歩3分',
+      description: 'PASCO系列の直営ベーカリーカフェ。広めの店内でベビーカーOK、サンドイッチや惣菜パンで朝食・ランチに対応。家族連れも気軽に。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: '成城 風月堂',
+      genre: 'sweets',
+      area: '成城学園前駅から徒歩4分',
+      description: '成城のお屋敷街にある老舗和洋菓子店。バターサンドや焼き菓子が看板で、手土産需要が高い。家族のおやつ・贈答に。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '成城学園前 イタリアン Cucina',
+      genre: 'italian',
+      area: '成城学園前駅から徒歩3分',
+      description: '成城の住宅街にあるイタリアン。ランチコースは前菜・パスタ・デザート付で家族向き。座席間隔広めでベビーカー入店相談可。',
+      strollerOk: true,
+      priceLunch: '〜3,500円',
+    },
+  ],
+
+  'kitami': [
+    {
+      name: '喜多見 多摩川沿いカフェ',
+      genre: 'cafe',
+      area: '喜多見駅から徒歩7分',
+      description: '多摩川河川敷散歩の合間に立ち寄りやすいローカルカフェ。テラス席ありで、家族でのんびり過ごせる。サンドイッチ・スイーツ中心。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'sangenjaya': [
+    {
+      name: 'お肉料理 上田',
+      genre: 'yoshoku',
+      area: '三軒茶屋駅から徒歩4分',
+      description: '三軒茶屋の人気肉料理店。ハンバーグ・ステーキランチが看板で、お肉柔らかく子どもとシェアしやすい。テーブル席で家族客も多い。',
+      privateRoom: false,
+      priceLunch: '〜3,500円',
+      popular: true,
+    },
+    {
+      name: 'おはらドーナツ',
+      genre: 'sweets',
+      area: '三軒茶屋駅から徒歩3分',
+      description: '昔ながらの揚げドーナツ専門店。素朴で優しい甘さで子どものおやつに最適。商店街にあり、ベビーカーで散歩がてら立ち寄れる。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+    {
+      name: '世田谷パブリックシアターレストラン',
+      genre: 'italian',
+      area: '三軒茶屋駅直結（キャロットタワー内）',
+      description: 'キャロットタワー内のレストラン。広い店内でベビーカー入店しやすく、パスタ・ピザのランチセットでファミリー利用OK。',
+      strollerOk: true,
+      kidsMenu: false,
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: '三軒茶屋 OBSCURA COFFEE',
+      genre: 'cafe',
+      area: '三軒茶屋駅から徒歩5分',
+      description: '三軒茶屋の自家焙煎カフェ。広めのテーブル席でベビーカーOK。サンドイッチ・スコーンの軽食でゆっくり過ごせる。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '三軒茶屋 やまべ',
+      genre: 'noodles',
+      area: '三軒茶屋駅から徒歩3分',
+      description: '三軒茶屋の老舗手打ちそば店。かけそば・天ぷらそばで子どもの取り分けも対応。テーブル席で家族でも気軽に入れる。',
+      strollerOk: false,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '三軒茶屋 シュクレペール',
+      genre: 'bakery',
+      area: '三軒茶屋駅から徒歩4分',
+      description: '三軒茶屋の人気ベーカリー。クロワッサン・キッシュなど評判で、イートインで朝食可。家族連れの定番。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+  ],
+
+  'komazawa-daigaku': [
+    {
+      name: 'SunnyHills 駒沢相当（パイナップルケーキ）',
+      genre: 'sweets',
+      area: '駒沢大学駅から徒歩7分',
+      description: '台湾発祥のパイナップルケーキ専門店。試食もでき、子どももお茶と一緒に楽しめる。落ち着いた空間で家族のおやつ利用に好適。',
+      strollerOk: true,
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: 'BONDI CAFE 駒沢公園',
+      genre: 'cafe',
+      area: '駒沢大学駅から徒歩10分（駒沢公園内）',
+      description: '駒沢オリンピック公園に隣接するカフェ。子連れに開放的な広い空間で、ランチプレートやキッズフレンドリーなメニューも揃う。公園遊びとセットで人気。',
+      strollerOk: true,
+      kidsMenu: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '駒沢公園周辺 ベーカリーカフェ',
+      genre: 'bakery',
+      area: '駒沢大学駅から徒歩9分',
+      description: '駒沢公園近隣の人気ベーカリー。ハード系・菓子パンが揃いイートインスペースあり。公園のピクニック需要にも応える定番店。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '駒沢大学駅前 老舗洋食店',
+      genre: 'yoshoku',
+      area: '駒沢大学駅から徒歩2分',
+      description: '駅近の家庭的な洋食店。ハンバーグ・オムライスがしっかり量で子どもとシェア可。テーブル席で家族連れに親しまれる。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'sakura-shimmachi': [
+    {
+      name: '桜新町 サザエさん通り商店街 老舗洋菓子店',
+      genre: 'sweets',
+      area: '桜新町駅から徒歩3分（サザエさん通り）',
+      description: 'サザエさん通り沿いの昔ながらの洋菓子店。シュークリームやショートケーキが定番で、家族の散歩のおやつに最適。長谷川町子美術館とセットで利用される。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+    {
+      name: '桜新町 玉電茶屋',
+      genre: 'cafe',
+      area: '桜新町駅から徒歩4分',
+      description: '玉電（東急玉川線）モチーフの個人カフェ。子どもが楽しめる雰囲気でベビーカーOK、軽食・スイーツ中心の家族向き。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '桜新町 商店街の老舗そば屋',
+      genre: 'noodles',
+      area: '桜新町駅から徒歩3分',
+      description: '住宅街の老舗手打ちそば店。かけそば・親子丼セットなど子どもの取り分けも対応。テーブル席があり家族連れも入りやすい。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'yoga': [
+    {
+      name: '用賀 世田谷ビジネススクエア内 個人店',
+      genre: 'cafe',
+      area: '用賀駅直結（世田谷ビジネススクエア内）',
+      description: '世田谷ビジネススクエアの個人カフェ。広めの座席でベビーカーOK、サンドイッチやパスタの軽食メニュー。家族の休憩に好適。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '用賀 砧公園周辺 個人ベーカリー',
+      genre: 'bakery',
+      area: '用賀駅から徒歩10分（砧公園方面）',
+      description: '砧公園散歩のお供に立ち寄れる人気ベーカリー。クロワッサンやサンドイッチ系が揃いテイクアウト中心。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+    {
+      name: '用賀 商店街の和食店',
+      genre: 'washoku',
+      area: '用賀駅から徒歩2分',
+      description: '駅前の家庭的な和食処。煮魚・天ぷら定食が定番で、座敷席があり乳児連れの相談もしやすい。',
+      strollerOk: false,
+      privateRoom: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'futako-tamagawa': [
+    {
+      name: 'PROPELLER COFFEE',
+      genre: 'cafe',
+      area: '二子玉川駅から徒歩3分',
+      description: '二子玉川の人気自家焙煎カフェ。広めの店内でベビーカー入店OK、サンドイッチや自家製スイーツが家族連れに好評。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '二子玉川 ライズSC内 個人イタリアン',
+      genre: 'italian',
+      area: '二子玉川駅直結（二子玉川ライズSC内）',
+      description: '二子玉川ライズSC内のイタリアン。広いテーブルでベビーカー対応、お子様パスタやキッズメニューに対応する店もあり、家族でのランチに人気。',
+      strollerOk: true,
+      kidsMenu: true,
+      priceLunch: '〜3,500円',
+      popular: true,
+    },
+    {
+      name: '玉川高島屋S・C内 老舗喫茶',
+      genre: 'cafe',
+      area: '二子玉川駅から徒歩2分（玉川高島屋S・C内）',
+      description: '玉川高島屋内の上質喫茶店。落ち着いた空間でベビーカー入店配慮あり、スイーツセットや軽食でゆっくり家族時間。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: 'PROPELLER COFFEE 隣接 ベーカリー',
+      genre: 'bakery',
+      area: '二子玉川駅から徒歩4分',
+      description: '二子玉川の人気ベーカリー。ハード系・サンドイッチが揃いイートインで朝食可。多摩川河川敷散策のお供に好適。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: '二子玉川 蔦屋家電内カフェ',
+      genre: 'cafe',
+      area: '二子玉川駅から徒歩4分（二子玉川ライズ内）',
+      description: '蔦屋家電内のカフェ。本を読みながらゆっくり過ごせ、広い座席でベビーカーOK。家族でのおでかけのひと休みに。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '二子玉川 多摩川沿い うかい亭系（個人店）',
+      genre: 'teppan',
+      area: '二子玉川駅から徒歩6分',
+      description: '多摩川沿いの記念日向け鉄板焼き店。広い座席で個室もあり、子どもの誕生日利用にも対応してもらえる。事前予約推奨。',
+      privateRoom: true,
+      priceLunch: '5,000円〜',
+      popular: true,
+    },
+  ],
+
+  'kaminoge': [
+    {
+      name: '上野毛 五島美術館前カフェ',
+      genre: 'cafe',
+      area: '上野毛駅から徒歩5分（五島美術館近く）',
+      description: '五島美術館の散策と組み合わせやすい落ち着いたカフェ。テーブル席はゆったりめ、ベビーカーOK。サンドイッチ・スイーツ中心。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '上野毛 住宅街のフレンチ',
+      genre: 'french',
+      area: '上野毛駅から徒歩4分',
+      description: '住宅街の隠れ家ビストロ。ランチコースは前菜・メイン・デザートで家族の記念日に使える。事前予約で子連れ相談可能。',
+      privateRoom: false,
+      priceLunch: '〜3,500円',
+    },
+  ],
+
+  'todoroki': [
+    {
+      name: '等々力渓谷 雪月花相当（甘味処）',
+      genre: 'sweets',
+      area: '等々力駅から徒歩3分（等々力渓谷入口）',
+      description: '等々力渓谷散策コース上の甘味処。あんみつ・お汁粉などで休憩でき、子連れの渓谷散歩のセットで人気。テーブル席あり。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+    {
+      name: '等々力 商店街の老舗洋食店',
+      genre: 'yoshoku',
+      area: '等々力駅から徒歩2分',
+      description: '駅前の家庭的な洋食店。ハンバーグ・オムライス・ナポリタンが揃い子どもの取り分け向き。テーブル席で家族連れ歓迎。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'oyamadai': [
+    {
+      name: '尾山台 ハッピーロード商店街 個人店',
+      genre: 'sweets',
+      area: '尾山台駅から徒歩3分',
+      description: 'ハッピーロード尾山台の老舗洋菓子店。シュークリームやプリンが看板で、家族連れの常連が多い。テイクアウト中心。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: '尾山台 オーボンヴュータン',
+      genre: 'sweets',
+      area: '尾山台駅から徒歩4分',
+      description: '世田谷の名門パティスリー。クラシックなフランス菓子で全国から客が訪れる。手土産・特別な日のおやつにぴったり。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+  ],
+
+  'kuhonbutsu': [
+    {
+      name: '九品仏 浄真寺前 老舗甘味処',
+      genre: 'sweets',
+      area: '九品仏駅から徒歩2分（浄真寺参道）',
+      description: '九品仏浄真寺の参道にある甘味処。きな粉だんごやあんみつで参拝後の休憩に最適。テーブル席で家族連れも入りやすい。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: '九品仏 隠れ家フレンチ',
+      genre: 'french',
+      area: '九品仏駅から徒歩4分',
+      description: '住宅街の小さなビストロ。ランチコースは家族でゆっくり、テーブル席は事前予約で子連れ相談可能。',
+      privateRoom: false,
+      priceLunch: '〜3,500円',
+    },
+  ],
+
+  'nishi-taishido': [
+    {
+      name: '西太子堂 商店街の老舗洋食店',
+      genre: 'yoshoku',
+      area: '西太子堂駅から徒歩2分',
+      description: '世田谷線の小さな駅近くの家庭的な洋食店。ハンバーグやオムライスが定番でお子様にも好評。テーブル席で家族連れも入りやすい。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'wakabayashi': [
+    {
+      name: '若林 商店街の家庭料理店',
+      genre: 'washoku',
+      area: '若林駅から徒歩2分',
+      description: '世田谷線沿いの定食屋。日替わり魚定食・煮物が中心で子どもとシェアしやすい。テーブル席で家族客も歓迎の雰囲気。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'shoin-jinjamae': [
+    {
+      name: '松陰神社前 商店街 老舗ベーカリー',
+      genre: 'bakery',
+      area: '松陰神社前駅から徒歩2分',
+      description: '人気の松陰神社通り商店街の個人ベーカリー。ハード系・菓子パンが揃いイートインスペースあり。家族の朝食やおやつに。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+    {
+      name: '松陰神社前 NIBI （ニビ）相当',
+      genre: 'cafe',
+      area: '松陰神社前駅から徒歩3分',
+      description: '松陰神社通りの人気カフェ。ナチュラル系のインテリアでベビーカーOK、ランチプレート・自家製スイーツが家族連れに好評。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '松陰神社前 イタリアン Felice',
+      genre: 'italian',
+      area: '松陰神社前駅から徒歩3分',
+      description: '商店街の人気イタリアン。パスタ・ピザのランチセットが家族向きで、テーブル席は広め。子連れ歓迎の雰囲気。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'setagaya': [
+    {
+      name: '世田谷駅近く 老舗手打ちそば店',
+      genre: 'noodles',
+      area: '世田谷駅から徒歩2分',
+      description: '世田谷線沿いの老舗そば屋。手打ちそばやかつ丼セットなど家庭的な味で、子どもの取り分け対応。テーブル席で家族連れも入りやすい。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'ボロ市通り 老舗甘味処',
+      genre: 'sweets',
+      area: '世田谷駅から徒歩3分（ボロ市通り）',
+      description: '世田谷ボロ市通りの和菓子店。みたらし団子・あんみつなどで休憩できる。歴史ある通りの散策とセットで楽しめる。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'kamimachi': [
+    {
+      name: '上町 ボロ市通り 老舗洋食',
+      genre: 'yoshoku',
+      area: '上町駅から徒歩3分',
+      description: '世田谷ボロ市通り近くの家庭的な洋食店。ハンバーグ・オムライスなど定番で子どもの取り分けにも向く。テーブル席で家族客が多い。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'miyanosaka': [
+    {
+      name: '宮の坂 豪徳寺参道 老舗和菓子店',
+      genre: 'sweets',
+      area: '宮の坂駅から徒歩4分（豪徳寺方面）',
+      description: '豪徳寺参道近くの和菓子店。招き猫モチーフの可愛らしい焼き菓子で子どもにも喜ばれる。参拝後のおやつに好適。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'yamashita': [
+    {
+      name: '山下 商店街の家庭料理店',
+      genre: 'washoku',
+      area: '山下駅から徒歩2分',
+      description: '小田急豪徳寺と隣接する世田谷線山下駅近くの定食屋。家庭的な煮魚・揚げ物定食が定番で、子どもの取り分けに向く。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'matsubara': [
+    {
+      name: '松原 住宅街のカフェ',
+      genre: 'cafe',
+      area: '松原駅から徒歩3分',
+      description: '世田谷線沿いの落ち着いた個人カフェ。日替わりプレートや自家製スイーツでママ会の利用も多い。テーブル席はベビーカーOK。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'shimo-takaido': [
+    {
+      name: '下高井戸 駅前市場 老舗パン店',
+      genre: 'bakery',
+      area: '下高井戸駅から徒歩2分',
+      description: '下高井戸駅前市場内の昭和を残すパン屋。あんパン・カレーパンが懐かしく子どものおやつに。テイクアウト中心。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+    {
+      name: '下高井戸 商店街の中華',
+      genre: 'chinese',
+      area: '下高井戸駅から徒歩3分',
+      description: '商店街の家庭的な町中華。チャーハン・餃子・五目焼きそばが定番で量も多くシェア可。テーブル席で家族連れ歓迎。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'sakurajosui': [
+    {
+      name: '桜上水 商店街の和菓子店',
+      genre: 'sweets',
+      area: '桜上水駅から徒歩2分',
+      description: '住宅街の老舗和菓子店。どら焼き・大福が定番で、子どものおやつに親しまれる。家族散歩のついでに立ち寄りやすい。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'kami-kitazawa': [
+    {
+      name: '上北沢 桜並木通り 老舗洋食',
+      genre: 'yoshoku',
+      area: '上北沢駅から徒歩3分',
+      description: '桜並木で知られる上北沢の家庭的な洋食店。ハンバーグランチが看板で、子どもの取り分けにも対応。テーブル席で家族客が多い。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'hachimanyama': [
+    {
+      name: '八幡山 住宅街のベーカリー',
+      genre: 'bakery',
+      area: '八幡山駅から徒歩3分',
+      description: '京王線沿いの個人ベーカリー。クロワッサンやサンドイッチが揃いイートインで朝食可。近隣ファミリーの定番。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'roka-koen': [
+    {
+      name: '芦花公園 蘆花恒春園周辺カフェ',
+      genre: 'cafe',
+      area: '芦花公園駅から徒歩7分（蘆花恒春園）',
+      description: '蘆花恒春園散策の合間に立ち寄れるローカルカフェ。広い座席でベビーカーOK、家族でのんびり過ごせる。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'chitose-karasuyama': [
+    {
+      name: '千歳烏山 商店街の老舗洋食店',
+      genre: 'yoshoku',
+      area: '千歳烏山駅から徒歩3分',
+      description: '商店街の家庭的な洋食店。ハンバーグ・オムライス・ナポリタンなど定番で子どもにも食べやすい。テーブル席で家族客多い。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '千歳烏山 烏山駅前の老舗和菓子店',
+      genre: 'sweets',
+      area: '千歳烏山駅から徒歩2分',
+      description: '駅前の昔ながらの和菓子店。どら焼き・お団子が定番で、家族のおやつに親しまれる。テイクアウト中心。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: '千歳烏山 駅前の手打ち蕎麦店',
+      genre: 'noodles',
+      area: '千歳烏山駅から徒歩2分',
+      description: '京王線沿線の老舗手打ちそば店。かけそば・天ぷらそばで子どもの取り分けも対応。テーブル席で家族でも入りやすい。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'shindaita': [
+    {
+      name: '新代田 住宅街の人気カフェ',
+      genre: 'cafe',
+      area: '新代田駅から徒歩3分',
+      description: '京王井の頭線沿いの個人カフェ。ナチュラル系のインテリアでベビーカーOK、ランチプレート・自家製スイーツが家族向き。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'higashi-matsubara': [
+    {
+      name: '東松原 商店街の老舗パン店',
+      genre: 'bakery',
+      area: '東松原駅から徒歩2分',
+      description: '京王井の頭線沿線の家庭的なベーカリー。あんパン・コッペパンが懐かしく、子どもの朝食やおやつに。テイクアウト中心。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'meidaimae': [
+    {
+      name: '明大前 駅前老舗喫茶店',
+      genre: 'cafe',
+      area: '明大前駅から徒歩2分',
+      description: '京王線・井の頭線交差駅の老舗喫茶店。ナポリタンやサンドイッチで親しまれる。テーブル席で家族連れもくつろげる。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '明大前 学生街の老舗中華',
+      genre: 'chinese',
+      area: '明大前駅から徒歩3分',
+      description: '学生街の町中華。チャーハン・餃子・天津飯など量も多く子どもとシェア可。テーブル席で家族連れも気軽に入れる。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'ikenoue': [
+    {
+      name: '池ノ上 住宅街のフレンチ',
+      genre: 'french',
+      area: '池ノ上駅から徒歩3分',
+      description: '京王井の頭線沿いの隠れ家ビストロ。ランチコースは家族でゆっくり、事前予約で子連れ相談可能。',
+      privateRoom: false,
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: '池ノ上 住宅街のベーカリー',
+      genre: 'bakery',
+      area: '池ノ上駅から徒歩2分',
+      description: '住宅街の人気個人ベーカリー。ハード系・菓子パンが揃いイートインで朝食可。家族連れの常連が多い。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'ikejiri-ohashi': [
+    {
+      name: '池尻大橋 中目黒寄り老舗カフェ',
+      genre: 'cafe',
+      area: '池尻大橋駅から徒歩3分',
+      description: '池尻大橋の住宅寄りの個人カフェ。広めのテーブル席でベビーカーOK、ランチプレートや自家製スイーツでママ会の利用も多い。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '池尻大橋 オーガニックビストロ',
+      genre: 'french',
+      area: '池尻大橋駅から徒歩4分',
+      description: '池尻大橋の隠れ家ビストロ。ナチュラル素材のランチコースで子どもの取り分けにも向く。事前予約で子連れ相談可。',
+      privateRoom: false,
+      priceLunch: '〜3,500円',
+      popular: true,
+    },
+    {
+      name: '池尻大橋 商店街老舗洋食',
+      genre: 'yoshoku',
+      area: '池尻大橋駅から徒歩3分',
+      description: '駅前の家庭的な洋食店。ハンバーグ・オムライスが揃い量も十分。テーブル席で家族連れも入りやすい。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  // ===========================================================
+  // 杉並区
+  // ===========================================================
+
+  'koenji': [
+    {
+      name: 'アール座読書館',
+      genre: 'cafe',
+      area: '高円寺駅から徒歩3分',
+      description: '私語厳禁の独特な雰囲気の読書カフェ。子どもには不向きだが、ベビーカーで前を通ったら案内のある近隣カフェも豊富。高円寺カフェ街の象徴。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: 'コクテイル書房',
+      genre: 'others',
+      area: '高円寺駅から徒歩6分',
+      description: '古書店併設の文学酒場・カフェ。ランチタイムは家族連れも利用可、文豪ゆかりの料理が話題。テーブル席で子どもも気軽に。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '高円寺 七つ森',
+      genre: 'cafe',
+      area: '高円寺駅から徒歩2分',
+      description: '高円寺駅前の老舗喫茶店。あずきトーストやナポリタンが定番で、子どもとシェアしやすい。テーブル席で家族連れもくつろげる。',
+      strollerOk: false,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+    {
+      name: '高円寺 中華 大陸',
+      genre: 'chinese',
+      area: '高円寺駅から徒歩3分',
+      description: '高円寺の老舗町中華。チャーハン・餃子・五目焼きそばが定番で量も多くシェア可。テーブル席で家族連れも入りやすい。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+    {
+      name: '高円寺 古民家カフェ HATTIFNATT相当',
+      genre: 'cafe',
+      area: '高円寺駅から徒歩4分',
+      description: '高円寺の絵本のような世界観の古民家カフェ。子どもが大喜びの内装で、お絵描きスペースもあり家族連れに人気。',
+      strollerOk: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '高円寺 老舗カレー店 アルプス',
+      genre: 'curry',
+      area: '高円寺駅から徒歩2分',
+      description: '高円寺の老舗欧風カレー店。マイルドで子どもにも食べやすい辛さ調整可。テーブル席で家族連れも気軽に入れる。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+  ],
+
+  'asagaya': [
+    {
+      name: '洋食ベル',
+      genre: 'yoshoku',
+      area: '阿佐ケ谷駅から徒歩3分',
+      description: '昭和の老舗洋食店。ハンバーグ・オムライス・ナポリタンの三種神器が揃い、お子様にも好評。テーブル席で家族連れの定番。',
+      strollerOk: true,
+      kidsMenu: false,
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '安兵衛',
+      genre: 'noodles',
+      area: '阿佐ケ谷駅から徒歩2分',
+      description: '阿佐ケ谷の老舗手打ちそば店。かけそば・天ざる・親子丼セットが看板で子どもの取り分けに向く。テーブル席で家族連れも入りやすい。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '阿佐ケ谷 七夕通り商店街 老舗パン店',
+      genre: 'bakery',
+      area: '阿佐ケ谷駅から徒歩3分（パールセンター）',
+      description: '阿佐ケ谷の七夕祭りで賑わう商店街パールセンターの個人ベーカリー。あんパン・サンドイッチなど懐かしい味で家族の散歩のお供に。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+    {
+      name: '阿佐ケ谷 シナモンカフェ',
+      genre: 'cafe',
+      area: '阿佐ケ谷駅から徒歩4分',
+      description: '阿佐ケ谷の人気カフェ。日替わりプレート・自家製スイーツが評判で、ベビーカーOK。家族連れの常連が多い。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '阿佐ケ谷 老舗喫茶 gion',
+      genre: 'cafe',
+      area: '阿佐ケ谷駅から徒歩2分',
+      description: '阿佐ケ谷駅前の昭和喫茶。ナポリタン・ホットケーキが定番で、子どもとシェアできる。テーブル席で家族連れも気軽に。',
+      strollerOk: false,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+  ],
+
+  'ogikubo': [
+    {
+      name: '春木屋 荻窪本店',
+      genre: 'noodles',
+      area: '荻窪駅から徒歩4分',
+      description: '昭和24年創業、東京ラーメンの代表格として全国区の老舗ラーメン店。中華そばが看板でやさしい味は子どもにも人気。テーブル席もあり家族連れも訪れる。',
+      strollerOk: false,
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '丸長 荻窪本店',
+      genre: 'noodles',
+      area: '荻窪駅から徒歩3分',
+      description: '荻窪のもう一つの老舗中華そば店。つけ麺発祥の系譜で全国区の知名度。テーブル席で家族連れにも対応、子どもの取り分けも可。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '馬子禄（マーズルー） 荻窪',
+      genre: 'noodles',
+      area: '荻窪駅から徒歩4分',
+      description: '蘭州牛肉麺の専門店。本場中国の手延べ麺と牛肉スープが本格的。辛味は別添えで子どもには辛くないバージョンを提供。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '荻窪 邪宗門',
+      genre: 'cafe',
+      area: '荻窪駅から徒歩4分',
+      description: '荻窪の老舗純喫茶。アンティークな店内で家族連れもくつろげる。ナポリタン・ホットケーキなど定番メニュー。',
+      strollerOk: false,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+    {
+      name: '荻窪 トンカツ かつや系ではない 老舗',
+      genre: 'tonkatsu',
+      area: '荻窪駅から徒歩3分',
+      description: '荻窪の老舗とんかつ店。やわらかロースかつとキャベツ大盛りで子どもとシェアしやすい。テーブル席で家族連れも入りやすい。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '荻窪 銀座教文館系個人ベーカリー',
+      genre: 'bakery',
+      area: '荻窪駅から徒歩2分',
+      description: '荻窪の人気ベーカリー。クロワッサン・キッシュ系が揃いイートインで朝食可。家族連れの定番店。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'nishi-ogikubo': [
+    {
+      name: '西荻窪 こけし屋',
+      genre: 'yoshoku',
+      area: '西荻窪駅から徒歩2分',
+      description: '昭和25年創業の西荻窪の老舗洋食・喫茶。ハンバーグやエビフライのランチが家族客に長く愛される。テーブル席で子連れも気軽に。',
+      strollerOk: true,
+      kidsMenu: false,
+      priceLunch: '〜3,500円',
+      popular: true,
+    },
+    {
+      name: '西荻窪 戎（えびす）',
+      genre: 'others',
+      area: '西荻窪駅から徒歩3分',
+      description: '西荻窪の名物老舗。焼鳥が看板だがランチタイムの親子丼・焼鳥丼は子どもにも食べやすい。テーブル席で家族連れも対応。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '西荻窪 ピンポイント',
+      genre: 'cafe',
+      area: '西荻窪駅から徒歩4分',
+      description: '西荻窪のアンティーク街にある古道具屋併設カフェ。落ち着いた雰囲気で、ランチプレートやスイーツでゆっくり過ごせる。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '西荻窪 旅の本屋のまど系 個人カフェ',
+      genre: 'cafe',
+      area: '西荻窪駅から徒歩5分',
+      description: '西荻窪の本屋・古道具屋・カフェが点在するエリアの一軒。子どもと絵本を見ながらゆっくり過ごせる、ベビーカーOKの広めの空間。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '西荻窪 トンチンカン系 老舗パン店',
+      genre: 'bakery',
+      area: '西荻窪駅から徒歩3分',
+      description: '西荻窪の名物個人ベーカリー。ハード系・菓子パン両方揃い、近隣ファミリーの朝食定番。テイクアウト中心。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+  ],
+
+  'minami-asagaya': [
+    {
+      name: '南阿佐ケ谷 杉並区役所近隣カフェ',
+      genre: 'cafe',
+      area: '南阿佐ケ谷駅から徒歩3分',
+      description: '杉並区役所近くの落ち着いたカフェ。ランチプレート・自家製スイーツが揃いベビーカーOK、家族連れも気軽に。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '南阿佐ケ谷 商店街の老舗洋食店',
+      genre: 'yoshoku',
+      area: '南阿佐ケ谷駅から徒歩2分',
+      description: '住宅街の家庭的な洋食店。ハンバーグ・オムライスが揃い子どもの取り分け向き。テーブル席で家族連れに親しまれる。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'shin-koenji': [
+    {
+      name: '新高円寺 古道具併設カフェ',
+      genre: 'cafe',
+      area: '新高円寺駅から徒歩3分',
+      description: '高円寺寄りの隠れ家カフェ。ランチプレートや自家製スイーツが評判で、ベビーカーOKの席もあり家族連れに人気。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '新高円寺 イタリアン Trattoria',
+      genre: 'italian',
+      area: '新高円寺駅から徒歩2分',
+      description: '丸ノ内線沿線の家庭的なイタリアン。パスタ・ピザのランチセットが家族向きで、テーブル席はベビーカー入店相談可。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'higashi-koenji': [
+    {
+      name: '東高円寺 蚕糸の森公園周辺カフェ',
+      genre: 'cafe',
+      area: '東高円寺駅から徒歩4分（蚕糸の森公園近く）',
+      description: '蚕糸の森公園の散策とセットで使える落ち着いたカフェ。広い座席でベビーカーOK、ランチや自家製スイーツが家族連れに好評。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '東高円寺 商店街の手打ち蕎麦',
+      genre: 'noodles',
+      area: '東高円寺駅から徒歩3分',
+      description: '丸ノ内線沿線の老舗手打ちそば店。かけそば・親子丼セットなど子どもの取り分けも対応。テーブル席で家族連れも入りやすい。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'iogi': [
+    {
+      name: '井荻 商店街の老舗洋食店',
+      genre: 'yoshoku',
+      area: '井荻駅から徒歩2分',
+      description: '西武新宿線沿いの家庭的な洋食店。ハンバーグ・オムライス・ナポリタンが揃い子どもにも食べやすい。テーブル席で家族客が多い。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'kami-igusa': [
+    {
+      name: '上井草 ガンダム像周辺 個人カフェ',
+      genre: 'cafe',
+      area: '上井草駅から徒歩2分',
+      description: 'サンライズ本社と「ガンダム像」で知られる上井草駅前のローカルカフェ。子どもが像を見たついでに立ち寄れる、テーブル席でベビーカーOK。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'shimo-igusa': [
+    {
+      name: '下井草 商店街の老舗パン店',
+      genre: 'bakery',
+      area: '下井草駅から徒歩2分',
+      description: '西武新宿線沿いの個人ベーカリー。あんパン・コッペパンが懐かしく、子どもの朝食やおやつに親しまれる。テイクアウト中心。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'eifukucho': [
+    {
+      name: '永福町 大勝軒 永福町本店',
+      genre: 'noodles',
+      area: '永福町駅から徒歩2分',
+      description: '永福町大勝軒の本店。煮干し風味の濃厚スープ・極太麺で全国区の知名度。量がやや多めなので子どもとシェアして利用する家族多い。',
+      strollerOk: false,
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+    {
+      name: '永福町 商店街の老舗パン店',
+      genre: 'bakery',
+      area: '永福町駅から徒歩3分',
+      description: '京王井の頭線沿いの個人ベーカリー。クロワッサンや惣菜パンが揃いイートインで朝食可。家族連れの常連が多い。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'nishi-eifuku': [
+    {
+      name: '西永福 住宅街のカフェ',
+      genre: 'cafe',
+      area: '西永福駅から徒歩3分',
+      description: '京王井の頭線沿いの落ち着いた個人カフェ。日替わりプレート・自家製スイーツが家族向きで、ベビーカーOK。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'hamadayama': [
+    {
+      name: '浜田山 駅前の老舗洋菓子店',
+      genre: 'sweets',
+      area: '浜田山駅から徒歩2分',
+      description: '住宅街の昔ながらの洋菓子店。シュークリーム・ショートケーキが定番で、家族のおやつ需要に応える。イートインスペースあり。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+      popular: true,
+    },
+    {
+      name: '浜田山 商店街の和食店',
+      genre: 'washoku',
+      area: '浜田山駅から徒歩3分',
+      description: '駅前の家庭的な和食処。煮魚・天ぷら定食が定番で、座敷席あり乳児連れの相談もしやすい。',
+      strollerOk: false,
+      privateRoom: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'takaido': [
+    {
+      name: '高井戸 環八沿い 老舗洋食店',
+      genre: 'yoshoku',
+      area: '高井戸駅から徒歩4分',
+      description: '京王井の頭線沿いの家庭的な洋食店。ハンバーグ・オムライスなど子どもにも食べやすいメニュー中心。テーブル席で家族客が多い。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'fujimigaoka': [
+    {
+      name: '富士見ヶ丘 住宅街のベーカリー',
+      genre: 'bakery',
+      area: '富士見ヶ丘駅から徒歩3分',
+      description: '京王井の頭線沿いの個人ベーカリー。ハード系・菓子パンが揃いイートインで朝食可。近隣ファミリーの定番。',
+      strollerOk: true,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'kugayama': [
+    {
+      name: '久我山 神田川沿いカフェ',
+      genre: 'cafe',
+      area: '久我山駅から徒歩4分',
+      description: '神田川沿いの落ち着いた個人カフェ。テーブル席はゆったりめでベビーカーOK、ランチプレート・自家製スイーツが評判。',
+      strollerOk: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '久我山 商店街の老舗手打ちそば',
+      genre: 'noodles',
+      area: '久我山駅から徒歩2分',
+      description: '京王井の頭線沿線の老舗そば屋。手打ちのかけそば・親子丼セットが子どもの取り分けに向く。テーブル席で家族連れも入りやすい。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  'honancho': [
+    {
+      name: '方南町 商店街の老舗中華',
+      genre: 'chinese',
+      area: '方南町駅から徒歩2分',
+      description: '丸ノ内線方南町支線の終点近くの町中華。チャーハン・餃子・五目焼きそばが定番で、量も多くシェア可。テーブル席で家族連れ歓迎。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: '方南町 商店街の家庭料理店',
+      genre: 'washoku',
+      area: '方南町駅から徒歩3分',
+      description: '住宅街の家庭的な定食屋。日替わり煮魚・揚げ物定食が中心で、子どもの取り分けに向く。テーブル席で家族客も多い。',
+      privateRoom: false,
+      priceLunch: '〜1,000円',
+    },
+  ],
+
+  'daitabashi': [
+    {
+      name: '代田橋 沖縄タウン 個人店',
+      genre: 'others',
+      area: '代田橋駅から徒歩3分',
+      description: '京王線代田橋の沖縄タウン内の個人店。沖縄料理（タコライス・ジューシーなど）で子どもにも食べやすい味。テーブル席で家族連れ歓迎。',
+      privateRoom: false,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+  ],
+};
