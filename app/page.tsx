@@ -4,6 +4,9 @@ import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
 import { TodayFinder } from '@/components/top/TodayFinder';
+import { StationSearch } from '@/components/top/StationSearch';
+import { TOKYO_STATIONS, WARD_NAMES } from '@/lib/tokyo-stations';
+import { TOKYO_LINES } from '@/lib/tokyo-lines';
 import { WeeklyPick } from '@/components/top/WeeklyPick';
 import { PopularSpots } from '@/components/top/PopularSpots';
 import { getAllFileArticles } from '@/lib/articles';
@@ -131,6 +134,44 @@ export default function HomePage() {
           <TodayFinder />
         </div>
       </div>
+
+      {/* ======================================================================
+          駅・路線から探す（東京23区484駅×40路線対応）
+          TodayFinderで見つからないユーザー向けに「駅で直接探す」導線を提供
+          ====================================================================== */}
+      <section className="section" style={{ paddingTop: 32, paddingBottom: 32 }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: 18 }}>
+            <span className="eyebrow" style={{ color: 'var(--clay-deep)' }}>東京23区 484駅 × 40路線対応</span>
+            <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 24, marginTop: 6, marginBottom: 6 }}>
+              駅・路線から子連れOKランチを探す
+            </h2>
+            <p style={{ fontSize: 13, color: 'var(--ink-sub)', margin: 0 }}>
+              通勤通学・お出かけ・通り道の駅から、ベビーカーOK・キッズメニュー店を一発検索
+            </p>
+          </div>
+          <StationSearch
+            stations={TOKYO_STATIONS.map((s) => ({
+              type: 'station' as const,
+              slug: s.slug,
+              name: s.name,
+              kana: s.kana,
+              ward: s.ward,
+              wardLabel: WARD_NAMES[s.ward] ?? s.ward,
+              lines: s.lines,
+              scale: s.scale,
+            }))}
+            lines={TOKYO_LINES.map((l) => ({
+              type: 'line' as const,
+              slug: l.slug,
+              name: l.name,
+              matchName: l.matchName,
+              color: l.color,
+              operator: l.operator,
+            }))}
+          />
+        </div>
+      </section>
 
       {/* AdSense: Finder 下 */}
       <div className="container" style={{ marginTop: 12 }}>
