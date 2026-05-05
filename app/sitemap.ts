@@ -11,6 +11,7 @@ import type { MetadataRoute } from 'next';
 import { getArticleIds, getCategories } from '@/lib/microcms';
 import { getAllFileArticles } from '@/lib/articles';
 import { getAllTags } from '@/lib/tags';
+import { TOKYO_STATIONS } from '@/lib/tokyo-stations';
 
 const BASE = 'https://kyounoko.jp';
 
@@ -88,5 +89,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }));
 
-  return [...staticPages, ...categoryPages, ...articlePages, ...tagPages];
+  // 駅別子連れランチページ（23区484駅）
+  const stationIndex: MetadataRoute.Sitemap = [{
+    url: `${BASE}/station`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }];
+  const stationPages: MetadataRoute.Sitemap = TOKYO_STATIONS.map((s) => ({
+    url: `${BASE}/station/${s.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: s.scale === 'terminal' ? 0.7 : s.scale === 'major' ? 0.6 : 0.5,
+  }));
+
+  return [...staticPages, ...categoryPages, ...articlePages, ...tagPages, ...stationIndex, ...stationPages];
 }
