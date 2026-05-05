@@ -9,7 +9,8 @@ type Props = {
     | 'today-mawasu'
     | 'gyouji'
     | 'narai'
-    | 'items';
+    | 'items'
+    | 'station';
   showLiveChip?: boolean;
 };
 
@@ -20,6 +21,7 @@ const NAV_ITEMS = [
   { key: 'today-mawasu', href: '/category/today-mawasu', label: '今日どう回す' },
   { key: 'gyouji', href: '/category/gyouji', label: '季節と行事' },
   { key: 'narai', href: '/category/narai', label: '習い事' },
+  { key: 'station', href: '/station', label: '駅別ランチ' },
   { key: 'items', href: '/items', label: '役立つもの' },
 ] as const;
 

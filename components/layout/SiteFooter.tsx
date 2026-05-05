@@ -27,6 +27,16 @@ export function SiteFooter() {
           </div>
 
           <div className="footer-col">
+            <h4>東京23区 駅別ガイド</h4>
+            <ul>
+              <li><Link href="/station">駅別ランチ（484駅）</Link></li>
+              <li><Link href="/station/line">路線別（40路線）</Link></li>
+              <li><Link href="/data/restaurants">全店舗比較表</Link></li>
+              <li><Link href="/data">データセット一覧</Link></li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
             <h4>About</h4>
             <ul>
               <li><Link href="/about">運営者情報</Link></li>
