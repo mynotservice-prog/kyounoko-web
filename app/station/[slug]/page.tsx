@@ -666,18 +666,39 @@ export default async function StationPage({ params }: Props) {
             );
           })()}
 
-          {/* 同じ区の他駅 */}
+          {/* 同じ区の他駅 — scaleバッジ付きカード化で視覚的に強化 */}
           {sameWardStations.length > 0 && (
             <section className="station-related" style={{ marginTop: 48, paddingTop: 32, borderTop: '1px solid rgba(201,96,62,0.14)' }}>
-              <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 12 }}>
-                {wardName}の他の駅もチェック
-              </h2>
-              <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                {sameWardStations.map((s) => (
-                  <Link key={s.slug} href={`/station/${s.slug}`} className="chip">
-                    {s.name}
-                  </Link>
-                ))}
+              <header className="kn-section-head">
+                <span className="eyebrow">SAME WARD · 区内の他駅</span>
+                <h2>{wardName}の他の駅もチェック</h2>
+                <p className="section-lede">同じ{wardName}内の他駅も子連れランチのカバー範囲。お住まいや勤務先に近い駅で見つけてみてください。</p>
+              </header>
+              <div style={{ display: 'grid', gap: 8, gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', marginTop: 16 }}>
+                {sameWardStations.map((s) => {
+                  const scaleColor = s.scale === 'terminal' ? '#C62828' : s.scale === 'major' ? '#E65100' : '#9E9E9E';
+                  const scaleLabel = s.scale === 'terminal' ? 'ターミナル' : s.scale === 'major' ? '主要駅' : '駅';
+                  return (
+                    <Link
+                      key={s.slug}
+                      href={`/station/${s.slug}`}
+                      style={{
+                        display: 'block',
+                        background: 'var(--paper-card)',
+                        border: '1px solid rgba(201,96,62,0.16)',
+                        borderLeft: `4px solid ${scaleColor}`,
+                        borderRadius: 10,
+                        padding: '10px 12px',
+                        textDecoration: 'none',
+                        color: 'var(--ink)',
+                        transition: 'border-color 0.15s, transform 0.15s',
+                      }}
+                    >
+                      <div style={{ fontSize: 14, fontWeight: 600, marginBottom: 2 }}>{s.name}駅</div>
+                      <div style={{ fontSize: 10, color: scaleColor, fontWeight: 600 }}>{scaleLabel}</div>
+                    </Link>
+                  );
+                })}
               </div>
             </section>
           )}
