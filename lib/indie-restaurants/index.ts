@@ -8,17 +8,36 @@ import { CHUNK_2 } from './chunk-2';
 import { CHUNK_3 } from './chunk-3';
 import { CHUNK_4 } from './chunk-4';
 import { CHUNK_5 } from './chunk-5';
+import { CHUNK_6 } from './chunk-6';
 import type { StationIndieMap, IndieRestaurant, IndieGenre } from './types';
 
 export type { IndieRestaurant, IndieGenre, StationIndieMap } from './types';
 
-export const STATION_INDIE_MAP: StationIndieMap = {
-  ...CHUNK_1,
-  ...CHUNK_2,
-  ...CHUNK_3,
-  ...CHUNK_4,
-  ...CHUNK_5,
-};
+/**
+ * chunk-6 は既存駅への追加店舗を含む。マージ時に既存配列に対して重複なく concat する。
+ */
+function mergeIndieMaps(...maps: StationIndieMap[]): StationIndieMap {
+  const result: StationIndieMap = {};
+  for (const map of maps) {
+    for (const [slug, list] of Object.entries(map)) {
+      if (result[slug]) {
+        result[slug] = [...result[slug], ...list];
+      } else {
+        result[slug] = [...list];
+      }
+    }
+  }
+  return result;
+}
+
+export const STATION_INDIE_MAP: StationIndieMap = mergeIndieMaps(
+  CHUNK_1,
+  CHUNK_2,
+  CHUNK_3,
+  CHUNK_4,
+  CHUNK_5,
+  CHUNK_6,
+);
 
 /**
  * 駅slugから個人店リストを取得。未登録駅は空配列。
