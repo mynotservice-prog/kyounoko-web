@@ -26,6 +26,7 @@ import {
   filterChainsByCondition,
   filterIndiesByCondition,
 } from '@/lib/station-conditions';
+import { StickySectionNav } from '@/components/station/StickySectionNav';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400; // 24h
@@ -153,9 +154,20 @@ export default async function StationPage({ params }: Props) {
     ],
   };
 
+  // スティッキーセクションナビ用の項目
+  const stickyNavItems = [
+    { href: '#section-tldr', label: '30秒攻略' },
+    { href: '#section-by-age', label: '年齢別' },
+    { href: '#section-by-scene', label: 'シーン別' },
+    { href: '#section-tips', label: '使い方' },
+    { href: '#section-chains', label: 'チェーン', count: chains.length },
+    ...(indies.length > 0 ? [{ href: '#section-indies', label: '個人店', count: indies.length }] : []),
+  ];
+
   return (
     <>
       <SiteHeader />
+      <StickySectionNav items={stickyNavItems} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
 
