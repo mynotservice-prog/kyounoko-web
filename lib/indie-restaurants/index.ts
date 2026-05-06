@@ -1,6 +1,6 @@
 /**
  * 23区全駅の個人店マッピング統合エントリ。
- * chunk-1〜7 を結合して全駅から参照できる単一の StationIndieMap を提供する。
+ * chunk-1〜8 を結合して全駅から参照できる単一の StationIndieMap を提供する。
  */
 
 import { CHUNK_1 } from './chunk-1';
@@ -10,6 +10,7 @@ import { CHUNK_4 } from './chunk-4';
 import { CHUNK_5 } from './chunk-5';
 import { CHUNK_6 } from './chunk-6';
 import { CHUNK_7 } from './chunk-7';
+import { CHUNK_8 } from './chunk-8';
 import type { StationIndieMap, IndieRestaurant, IndieGenre } from './types';
 
 export type { IndieRestaurant, IndieGenre, StationIndieMap } from './types';
@@ -39,6 +40,7 @@ export const STATION_INDIE_MAP: StationIndieMap = mergeIndieMaps(
   CHUNK_5,
   CHUNK_6,
   CHUNK_7,
+  CHUNK_8,
 );
 
 /**
