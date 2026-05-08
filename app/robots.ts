@@ -1,14 +1,25 @@
 import type { MetadataRoute } from 'next';
 
+/**
+ * robots.txt 設定。
+ *
+ * 【重要】/_next/ は元々Disallowしていたが、Googleが「robots.txtでブロック」を473件
+ * 報告していたため修正。/_next/static/ には CSS/JS が含まれるため、
+ * Googlebotがページをフルレンダリングするには Allow が必要。
+ * /api/ と /admin/ のみブロック。
+ */
 export default function robots(): MetadataRoute.Robots {
+  // /api/ と /admin/ はサイトの内部・管理画面なので非公開
+  const baseDisallow = ['/api/', '/admin/'];
+
   return {
     rules: [
       // ===== 一般クローラー（Google等）=====
+      // /_next/ は Allow に変更（GoogleがCSS/JSを取得してSPA的にレンダリングできるよう）
       {
         userAgent: '*',
         allow: '/',
-        // /today, /plan/* は page 側で noindex、admin/api/_next は非公開
-        disallow: ['/api/', '/admin/', '/_next/'],
+        disallow: baseDisallow,
       },
 
       // ===== Googleサービス =====
@@ -20,24 +31,24 @@ export default function robots(): MetadataRoute.Robots {
 
       // ===== AI検索クローラー（AIO対策の中核）=====
       // ChatGPT / ChatGPT Search からの引用を受け入れる
-      { userAgent: 'GPTBot', allow: '/', disallow: ['/api/', '/admin/', '/_next/'] },
-      { userAgent: 'OAI-SearchBot', allow: '/', disallow: ['/api/', '/admin/', '/_next/'] },
-      { userAgent: 'ChatGPT-User', allow: '/', disallow: ['/api/', '/admin/', '/_next/'] },
+      { userAgent: 'GPTBot', allow: '/', disallow: baseDisallow },
+      { userAgent: 'OAI-SearchBot', allow: '/', disallow: baseDisallow },
+      { userAgent: 'ChatGPT-User', allow: '/', disallow: baseDisallow },
 
       // Anthropic Claude（ClaudeBot / claude-web）
-      { userAgent: 'ClaudeBot', allow: '/', disallow: ['/api/', '/admin/', '/_next/'] },
-      { userAgent: 'anthropic-ai', allow: '/', disallow: ['/api/', '/admin/', '/_next/'] },
-      { userAgent: 'claude-web', allow: '/', disallow: ['/api/', '/admin/', '/_next/'] },
+      { userAgent: 'ClaudeBot', allow: '/', disallow: baseDisallow },
+      { userAgent: 'anthropic-ai', allow: '/', disallow: baseDisallow },
+      { userAgent: 'claude-web', allow: '/', disallow: baseDisallow },
 
       // Perplexity（AI検索で成長中）
-      { userAgent: 'PerplexityBot', allow: '/', disallow: ['/api/', '/admin/', '/_next/'] },
-      { userAgent: 'Perplexity-User', allow: '/', disallow: ['/api/', '/admin/', '/_next/'] },
+      { userAgent: 'PerplexityBot', allow: '/', disallow: baseDisallow },
+      { userAgent: 'Perplexity-User', allow: '/', disallow: baseDisallow },
 
       // CommonCrawl（多くのLLM学習データソース）
-      { userAgent: 'CCBot', allow: '/', disallow: ['/api/', '/admin/', '/_next/'] },
+      { userAgent: 'CCBot', allow: '/', disallow: baseDisallow },
 
       // Meta AI（Llama）
-      { userAgent: 'Meta-ExternalAgent', allow: '/', disallow: ['/api/', '/admin/', '/_next/'] },
+      { userAgent: 'Meta-ExternalAgent', allow: '/', disallow: baseDisallow },
       { userAgent: 'FacebookBot', allow: '/' },
 
       // Bing / Copilot
