@@ -22,20 +22,42 @@ export default function AboutPage() {
   const jsonLdPerson = {
     '@context': 'https://schema.org',
     '@type': 'Person',
+    '@id': 'https://kyounoko.jp/about#author',
     name: 'ながみー',
+    alternateName: 'kyounoko-editor',
     url: 'https://kyounoko.jp/about',
+    image: 'https://kyounoko.jp/img/ogp-default.jpg',
     jobTitle: 'きょうのこ 編集長',
+    description: '0〜6歳の子を育てる共働きパパ。きょうのこ編集長として、家族の日常を3分で決めるための実用的な子育て情報を発信。実体験と一次情報に基づいた信頼性の高いコンテンツを心がけています。',
     worksFor: {
       '@type': 'Organization',
+      '@id': 'https://kyounoko.jp/#organization',
       name: 'きょうのこ',
       url: 'https://kyounoko.jp',
     },
-    knowsAbout: ['子育て', '幼児食', '共働き育児', 'おでかけ', '家遊び', 'Webメディア運営'],
+    knowsAbout: [
+      '子育て', '幼児食', '共働き育児', '寝かしつけ', '時短家事',
+      'おでかけ計画', '家遊び', '知育', 'ベビー用品選び',
+      '東京23区子連れスポット', 'Webメディア運営',
+    ],
+    knowsLanguage: 'ja',
+  };
+  const jsonLdAboutPage = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    '@id': 'https://kyounoko.jp/about',
+    url: 'https://kyounoko.jp/about',
+    name: '運営者情報',
+    description: 'きょうのこの運営者・編集方針・情報の選定基準・問い合わせ窓口について',
+    inLanguage: 'ja',
+    isPartOf: { '@id': 'https://kyounoko.jp/#website' },
+    about: { '@id': 'https://kyounoko.jp/about#author' },
   };
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPerson) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdAboutPage) }} />
       <SiteHeader />
       <div className="container-article">
         <nav className="breadcrumb" aria-label="パンくず">
