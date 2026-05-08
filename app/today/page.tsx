@@ -72,34 +72,89 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
 }
 
 function QuickMetaRow({ answer }: { answer: TodayAnswerResult }) {
-  const chips: { key: string; label: string; tone: string }[] = [];
+  const chips: { key: string; label: string; tone: string; emoji?: string }[] = [];
   if (answer.plan) {
     const p = answer.plan.plan;
-    if (p.ageRanges[0]) chips.push({ key: 'age', label: `${p.ageRanges[0]}歳`, tone: 'clay' });
-    if (p.place[0]) chips.push({ key: 'place', label: p.place[0] === 'home' ? '家' : p.place[0] === 'indoor' ? '屋内' : '外', tone: 'sage' });
-    chips.push({ key: 'time', label: `${p.durationMin}分`, tone: 'ochre' });
+    if (p.ageRanges[0]) chips.push({ key: 'age', label: `${p.ageRanges[0]}歳`, tone: 'clay', emoji: '👶' });
+    if (p.place[0]) chips.push({ key: 'place', label: p.place[0] === 'home' ? '家' : p.place[0] === 'indoor' ? '屋内' : '外', tone: 'sage', emoji: p.place[0] === 'home' ? '🏠' : '🚶' });
+    chips.push({ key: 'time', label: `${p.durationMin}分`, tone: 'ochre', emoji: '⏱' });
     const bm: Record<string, string> = { free: '無料', low: '〜2,000円', mid: '〜5,000円', high: '5,000円〜' };
-    chips.push({ key: 'budget', label: bm[p.budget] ?? p.budget, tone: 'sky' });
-    if (p.area && p.area !== 'all') chips.push({ key: 'area', label: getAreaName(p.area), tone: 'clay' });
+    chips.push({ key: 'budget', label: bm[p.budget] ?? p.budget, tone: 'sky', emoji: '💴' });
+    if (p.area && p.area !== 'all') chips.push({ key: 'area', label: getAreaName(p.area), tone: 'clay', emoji: '📍' });
   } else if (answer.article) {
     const qi = answer.article.article.quickInfo;
-    if (qi?.ageRanges?.[0]) chips.push({ key: 'age', label: `${qi.ageRanges[0]}歳`, tone: 'clay' });
-    if (qi?.place?.[0]) chips.push({ key: 'place', label: qi.place[0] === 'home' ? '家' : qi.place[0] === 'indoor' ? '屋内' : '外', tone: 'sage' });
-    if (qi?.durationMin) chips.push({ key: 'time', label: `${qi.durationMin}分`, tone: 'ochre' });
+    if (qi?.ageRanges?.[0]) chips.push({ key: 'age', label: `${qi.ageRanges[0]}歳`, tone: 'clay', emoji: '👶' });
+    if (qi?.place?.[0]) chips.push({ key: 'place', label: qi.place[0] === 'home' ? '家' : qi.place[0] === 'indoor' ? '屋内' : '外', tone: 'sage', emoji: qi.place[0] === 'home' ? '🏠' : '🚶' });
+    if (qi?.durationMin) chips.push({ key: 'time', label: `${qi.durationMin}分`, tone: 'ochre', emoji: '⏱' });
     if (qi?.budget) {
       const bm: Record<string, string> = { free: '無料', low: '〜2,000円', mid: '〜5,000円', high: '5,000円〜' };
-      chips.push({ key: 'budget', label: bm[qi.budget] ?? qi.budget, tone: 'sky' });
+      chips.push({ key: 'budget', label: bm[qi.budget] ?? qi.budget, tone: 'sky', emoji: '💴' });
     }
     if (answer.article.article.area && answer.article.article.area !== 'all') {
-      chips.push({ key: 'area', label: getAreaName(answer.article.article.area), tone: 'clay' });
+      chips.push({ key: 'area', label: getAreaName(answer.article.article.area), tone: 'clay', emoji: '📍' });
     }
   }
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
       {chips.map((c) => (
-        <span key={c.key} className={`meta-chip ${c.tone}`}>{c.label}</span>
+        <span key={c.key} className={`meta-chip ${c.tone}`}>
+          {c.emoji && <span aria-hidden="true" style={{ marginRight: 4, fontSize: '1.05em' }}>{c.emoji}</span>}
+          {c.label}
+        </span>
       ))}
     </div>
+  );
+}
+
+/**
+ * 「やる前の3秒準備」ブロック — 結果カードの直下に挿入。
+ * Plan種別ごとに具体的な準備物・回避ポイントを出すことで、結果1個出した後の
+ * "実行までの距離"を縮める。Finderの実用度UP施策。
+ */
+function PreparedBlock({ answer }: { answer: TodayAnswerResult }) {
+  if (!answer.plan) return null;
+  const p = answer.plan.plan;
+  const isMeal = p.kind === 'meal';
+  const isHome = p.place.includes('home');
+  const isOutdoor = p.place.includes('outdoor');
+
+  // プラン種別ごとに「失敗回避3ポイント」を動的生成
+  const tips: string[] = [];
+  if (isMeal) {
+    tips.push('調理前に食材を全部出しておく — 途中で「あれがない」を防ぐ');
+    tips.push('味付けは大人より薄め、慣れないものは小さじ1から');
+    tips.push('子供が食べ始めたら30秒は様子観察（誤嚥・アレルギー兆候）');
+  } else if (isHome) {
+    tips.push('道具を全部出してから始める — 中断ストレス減');
+    tips.push('開始前にトイレ・水分・おやつを済ませておく');
+    tips.push('子の集中が切れたら「もう1回」より「別のに切替」が正解');
+  } else if (isOutdoor) {
+    tips.push('出発前にトイレ・着替え・水筒・保険証 を再確認');
+    tips.push('混雑回避は朝イチか14時以降がベスト');
+    tips.push('予定の8割が回れたら大成功、無理に詰め込まない');
+  } else {
+    tips.push('まず5分やってみる — 続くか判断は後');
+    tips.push('「うまくいかない日」は別案に切替OK');
+    tips.push('終了時に子と「楽しかった」を確認、習慣化のキー');
+  }
+
+  return (
+    <aside
+      style={{
+        marginTop: 24,
+        padding: '18px 20px',
+        background: 'linear-gradient(135deg, rgba(20,147,209,0.06), rgba(201,96,62,0.04))',
+        border: '1px solid rgba(20,147,209,0.18)',
+        borderRadius: 14,
+      }}
+    >
+      <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', color: 'var(--clay-deep)', textTransform: 'uppercase', marginBottom: 8 }}>
+        ⚠️ やる前に3秒で確認
+      </div>
+      <ul style={{ margin: 0, paddingLeft: 18, fontSize: 13.5, color: 'var(--ink-sub)', lineHeight: 1.85 }}>
+        {tips.map((t, i) => <li key={i}>{t}</li>)}
+      </ul>
+    </aside>
   );
 }
 
@@ -136,6 +191,7 @@ function AnswerCard({ answer, featured = false }: { answer: TodayAnswerResult; f
             </ul>
           )}
           <QuickMetaRow answer={answer} />
+          <PreparedBlock answer={answer} />
           <Link href={answer.href} className="answer-cta">
             {isPlan ? 'プランの詳細を見る' : '詳細を見る'}
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
