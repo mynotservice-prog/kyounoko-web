@@ -67,10 +67,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const wardName = WARD_NAMES[station.ward] ?? '';
   const title = `${station.name}駅 ${cond.titlePart}子連れOKランチ・カフェ｜ベビーカーOK店ガイド`;
   const description = `${station.name}駅周辺で${cond.metaPart}の子連れランチ・カフェを厳選。${cond.description}${wardName}で${cond.label}の選び方に迷ったらまずここから。`;
+
+  // 該当店舗数で薄いコンテンツを判定 → noindex（テンプレ重複扱い回避）
+  const data = getStationWithChains(slug);
+  const chainsBase = data?.chains ?? [];
+  const indiesBase = getIndieRestaurantsByStation(slug);
+  const matchedChains = filterChainsByCondition(chainsBase, condition as StationConditionSlug);
+  const matchedIndies = filterIndiesByCondition(indiesBase, condition as StationConditionSlug);
+  const matchedCount = matchedChains.length + matchedIndies.length;
+  // 3件未満は質が薄いので noindex（クロール済み未登録回避）
+  const shouldNoindex = matchedCount < 3;
+
   return {
     title,
     description,
     alternates: { canonical: `/station/${slug}/${condition}` },
+    robots: shouldNoindex ? { index: false, follow: true } : undefined,
     openGraph: {
       title,
       description,
