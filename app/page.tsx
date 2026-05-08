@@ -11,7 +11,7 @@ import { WeeklyPick } from '@/components/top/WeeklyPick';
 import { PopularSpots } from '@/components/top/PopularSpots';
 import { getAllFileArticles } from '@/lib/articles';
 import { getTokyoNow, formatJaLong, monthNameEn } from '@/lib/date';
-// import { AdSlot } from '@/components/ads/AdSlot'; // home-below-finder削除に伴い未使用
+import { AdSlot } from '@/components/ads/AdSlot';
 import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
 import { getMonthlyPickedItems } from '@/lib/items-catalog';
 
@@ -187,6 +187,12 @@ export default function HomePage() {
           ママが選ぶ人気スポット（Editor's pick / 年中表示）
           ====================================================================== */}
       <PopularSpots />
+
+      {/* AdSense: WeeklyPick/PopularSpots後の自然な区切り
+          Multiplex（autorelaxed）は未充填時に自動非表示なので空枠リスク低 */}
+      <div className="container" style={{ marginTop: 24, marginBottom: 24 }}>
+        <AdSlot placement="article-related" />
+      </div>
 
       {/* ======================================================================
           今月の季節と行事（時期性がコンセプトと合致するので残す）

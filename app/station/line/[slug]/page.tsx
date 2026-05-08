@@ -11,6 +11,7 @@ import {
 import { WARD_NAMES } from '@/lib/tokyo-stations';
 import { getStationWithChains } from '@/lib/station-restaurants';
 import { getIndieRestaurantsByStation } from '@/lib/indie-restaurants';
+import { AdSlot } from '@/components/ads/AdSlot';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -257,6 +258,9 @@ export default async function LinePage({ params }: Props) {
               </div>
             </section>
           )}
+
+          {/* AdSense: 路線ページ末尾の関連コンテンツ風広告 */}
+          <AdSlot placement="article-related" style={{ marginTop: 32 }} />
 
           {/* 他の路線 */}
           <section style={{ marginTop: 48, paddingTop: 32, borderTop: '1px solid rgba(201,96,62,0.14)' }}>

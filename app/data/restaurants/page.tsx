@@ -12,6 +12,7 @@ import {
 } from '@/lib/data-aggregations';
 import { RestaurantsTable } from './RestaurantsTable';
 import { CsvDownloadButton } from './CsvDownloadButton';
+import { AdSlot } from '@/components/ads/AdSlot';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -230,6 +231,9 @@ export default function DataRestaurantsPage() {
               <li><Link href="/data">データセット一覧（/data）</Link></li>
             </ul>
           </section>
+
+          {/* AdSense: データセットページ末尾 */}
+          <AdSlot placement="article-related" style={{ marginTop: 32 }} />
         </div>
       </section>
 

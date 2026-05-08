@@ -8,6 +8,7 @@ import { getCategory, getCategories, getArticlesByCategory } from '@/lib/microcm
 import { getFileArticlesByCategory, type FileArticleMeta } from '@/lib/articles';
 import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
 import { getPopularItemsForArticleCategory } from '@/lib/items-catalog';
+import { AdSlot } from '@/components/ads/AdSlot';
 
 export const revalidate = 3600;
 
@@ -328,6 +329,11 @@ export default async function CategoryPage({ params }: Props) {
           </div>
         </section>
       )}
+
+      {/* AdSense: カテゴリページ末尾の関連コンテンツ風広告 */}
+      <div className="container" style={{ marginTop: 24, marginBottom: 24 }}>
+        <AdSlot placement="article-related" />
+      </div>
 
       <SiteFooter />
       <MobileStickyNav active={slug === 'today-doko' || slug === 'today-nani' || slug === 'today-taberu' ? (slug as 'today-doko' | 'today-nani' | 'today-taberu') : undefined} />

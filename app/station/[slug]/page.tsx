@@ -27,6 +27,7 @@ import {
   filterIndiesByCondition,
 } from '@/lib/station-conditions';
 import { StickySectionNav } from '@/components/station/StickySectionNav';
+import { AdSlot } from '@/components/ads/AdSlot';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400; // 24h
@@ -702,6 +703,9 @@ export default async function StationPage({ params }: Props) {
               </div>
             </section>
           )}
+
+          {/* AdSense: 駅ページ末尾の関連コンテンツ風広告 */}
+          <AdSlot placement="article-related" style={{ marginTop: 32 }} />
 
           {/* 戻る・他のエリア */}
           <section style={{ marginTop: 36, padding: '24px 0', textAlign: 'center', color: 'var(--ink-sub)' }}>

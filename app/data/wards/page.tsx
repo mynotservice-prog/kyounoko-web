@@ -5,6 +5,7 @@ import { SiteFooter } from '@/components/layout/SiteFooter';
 import { buildWardMetrics, getDataSummary } from '@/lib/data-aggregations';
 import { WardsTable } from './WardsTable';
 import { CsvDownloadButton } from '../restaurants/CsvDownloadButton';
+import { AdSlot } from '@/components/ads/AdSlot';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -256,6 +257,9 @@ export default function DataWardsPage() {
               <li><Link href="/data">データセット一覧</Link></li>
             </ul>
           </section>
+
+          {/* AdSense: データセットページ末尾 */}
+          <AdSlot placement="article-related" style={{ marginTop: 32 }} />
         </div>
       </section>
 
