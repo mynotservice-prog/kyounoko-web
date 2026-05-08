@@ -58,6 +58,17 @@ const nextConfig: NextConfig = {
       { source: '/tag/diaper-table', destination: '/tag/odekake', permanent: true },
       { source: '/tag/heat-ok', destination: '/tag/moushobi', permanent: true },
 
+      // ===== 旧記事URL → 現存する近い記事へ（Search Console 5xx/404対策）=====
+      // Search Consoleが「サーバーエラー」として報告していたが実態は404の旧URL群
+      { source: '/article/indoor-spot-tokyo', destination: '/article/amenohi-indoor-spots-tokyo-15', permanent: true },
+      { source: '/article/kodure-hanami-tokyo', destination: '/article/sakura-ohanami-kodzure-spots', permanent: true },
+      { source: '/article/rainy-2yo-home-play', destination: '/article/amenohi-ie-asobi-2-3sai', permanent: true },
+      { source: '/article/nyuuen-junbi-list', destination: '/article/youchien-nyuuen-junbi-list', permanent: true },
+      { source: '/article/craft-4yo-home', destination: '/article/kousaku-4-6sai-10pattern', permanent: true },
+      { source: '/article/tsukareta-hi-saitekikai', destination: '/category/today-mawasu', permanent: true },
+      { source: '/article/babycar-lunch-kichijoji', destination: '/article/bebycar-ok-cafe-15', permanent: true },
+      { source: '/article/gw-kodure-tokyo', destination: '/article/kosodate-muryou-spots-tokyo', permanent: true },
+
       // /search はサイト内検索ページ実装に切り替え済（SearchAction 用）。
       // ここでリダイレクトすると WebSite SearchAction が無効化されるので残さない。
     ];
