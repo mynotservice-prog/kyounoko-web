@@ -9,6 +9,8 @@ import {
   getStationsOnLine,
 } from '@/lib/tokyo-lines';
 import { WARD_NAMES } from '@/lib/tokyo-stations';
+import { getStationWithChains } from '@/lib/station-restaurants';
+import { getIndieRestaurantsByStation } from '@/lib/indie-restaurants';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -47,6 +49,47 @@ export default async function LinePage({ params }: Props) {
   const major = stations.filter((s) => s.scale === 'major');
   const minor = stations.filter((s) => s.scale === 'minor');
 
+  // 各駅の店舗数を集計してTOP3 + 集計値
+  const stationStats = stations.map((s) => {
+    const data = getStationWithChains(s.slug);
+    const chainCount = data?.chains.length ?? 0;
+    const indieCount = getIndieRestaurantsByStation(s.slug).length;
+    return { station: s, chainCount, indieCount, total: chainCount + indieCount };
+  });
+  const top3 = [...stationStats].sort((a, b) => b.total - a.total).slice(0, 3);
+  const totalShops = stationStats.reduce((sum, x) => sum + x.total, 0);
+  const totalIndies = stationStats.reduce((sum, x) => sum + x.indieCount, 0);
+
+  // operator別のTipsテンプレ
+  const operatorTips: Record<typeof line.operator, string[]> = {
+    JR: [
+      'JRはホームと改札の間にエレベーター動線が整備されているため、ベビーカーでも比較的スムーズ。',
+      '休日昼下がり（13-15時）は混雑が落ち着くのでファミリーには狙い目。',
+      '主要駅は駅ナカ商業施設（エキュート/Dila/グランスタ）が充実、雨でも濡れず食事できる。',
+    ],
+    'tokyo-metro': [
+      '東京メトロは駅エレベーター位置が出口番号と紐付いているため、事前にメトロ公式アプリで動線確認推奨。',
+      'ホーム→改札→地上の3段階移動でベビーカー2回分のリフト操作が発生する駅もある。抱っこ紐併用が無難。',
+      '主要駅の地下街（銀座・新宿・池袋等）はモール直結で雨の日に強い。',
+    ],
+    toei: [
+      '都営地下鉄も全駅にエレベーターはあるが、出口によっては改札から遠回りになる場合あり。',
+      '大江戸線は深い駅（六本木・青山一丁目・麻布十番）が多くエレベーター移動の時間がかかる、余裕持って。',
+      '都営共通一日券（700円）は子連れの乗り降り多い日にお得。',
+    ],
+    private: [
+      '私鉄は改札・通路が狭めの駅もあるが、各駅停車中心の運用なら混雑は緩やか。',
+      '東急（東横・田園都市）はファミリーエリア通過、休日昼以降は混雑必至。',
+      '京王・小田急・西武・東武は住宅エリアを通るため、平日昼下がりが一番空いている。',
+    ],
+  };
+  const tips = operatorTips[line.operator];
+
+  const operatorLabel =
+    line.operator === 'JR' ? 'JR東日本' :
+    line.operator === 'tokyo-metro' ? '東京メトロ' :
+    line.operator === 'toei' ? '都営地下鉄' : '私鉄';
+
   return (
     <>
       <SiteHeader />
@@ -76,10 +119,83 @@ export default async function LinePage({ params }: Props) {
               </small>
             </h1>
             <p className="lead">
-              {line.name}沿線で子連れランチ・カフェに使えるチェーン店を、駅単位で全駅チェック。
+              {line.name}沿線で子連れランチ・カフェに使えるチェーン店＋個人店を、駅単位で全駅チェック。
               ベビーカー入店◎、キッズメニュー、キッズチェア、個室、離乳食持込までの可否を全部確認できます。
             </p>
+
+            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 18, fontSize: 13 }}>
+              <span className="meta-chip clay">{operatorLabel}</span>
+              <span className="meta-chip clay">全{stations.length}駅</span>
+              <span className="meta-chip clay">{totalShops.toLocaleString()}店舗</span>
+              {totalIndies > 0 && <span className="meta-chip clay">個人店{totalIndies}店</span>}
+              {terminal.length > 0 && <span className="meta-chip clay">ターミナル{terminal.length}駅</span>}
+            </div>
           </header>
+
+          {/* おすすめ駅TOP3 — 子連れランチに最も使いやすい駅をスコアリング */}
+          {top3.length > 0 && top3[0].total > 0 && (
+            <section style={{ margin: '36px 0' }}>
+              <div className="kn-section-head">
+                <span className="eyebrow" style={{ color: line.color }}>RECOMMENDED · 沿線おすすめ駅</span>
+                <h2>子連れランチに使いやすいTOP3</h2>
+                <p className="section-lede">
+                  {line.name}沿線の{stations.length}駅から、店舗数・選択肢の多さで上位3駅を抽出。「{line.name}でランチどこ？」と聞かれたらまずこの3駅。
+                </p>
+              </div>
+              <div style={{ display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', marginTop: 16 }}>
+                {top3.map((x, i) => (
+                  <Link
+                    key={x.station.slug}
+                    href={`/station/${x.station.slug}`}
+                    style={{
+                      display: 'block',
+                      background: 'var(--paper-card)',
+                      border: '1px solid rgba(201,96,62,0.16)',
+                      borderTop: `3px solid ${line.color}`,
+                      borderRadius: 12,
+                      padding: '14px 16px',
+                      textDecoration: 'none',
+                      color: 'var(--ink)',
+                    }}
+                  >
+                    <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 4 }}>
+                      <span style={{
+                        fontSize: 11, fontWeight: 700, color: line.color,
+                        letterSpacing: '0.05em',
+                      }}>#{i + 1}</span>
+                      <span style={{ fontSize: 17, fontWeight: 600 }}>{x.station.name}駅</span>
+                    </div>
+                    <div style={{ fontSize: 11, color: 'var(--ink-mute)', marginBottom: 6 }}>
+                      {WARD_NAMES[x.station.ward]} · {x.station.lines.length}路線乗入
+                    </div>
+                    <div style={{ display: 'flex', gap: 12, fontSize: 13 }}>
+                      <span><strong>{x.total}</strong>店舗</span>
+                      <span style={{ color: 'var(--ink-sub)' }}>うち個人店{x.indieCount}</span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* 沿線使い方Tips */}
+          <section style={{
+            margin: '36px 0',
+            padding: '20px 24px',
+            background: 'linear-gradient(135deg, rgba(20,147,209,0.05), rgba(201,96,62,0.04))',
+            border: '1px solid rgba(20,147,209,0.18)',
+            borderRadius: 12,
+          }}>
+            <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 12 }}>
+              {line.name}を子連れで使うTips
+            </h2>
+            <ul style={{ paddingLeft: 20, margin: 0, lineHeight: 1.85, fontSize: 14, color: 'var(--ink-sub)' }}>
+              {tips.map((tip, i) => <li key={i} style={{ marginBottom: 6 }}>{tip}</li>)}
+              <li style={{ marginBottom: 6 }}>
+                沿線で「雨の日も安心」「個室あり」等の条件で絞りたいときは、各駅ページの<strong>条件別フィルタ</strong>から絞り込めます。
+              </li>
+            </ul>
+          </section>
 
           {terminal.length > 0 && (
             <section style={{ marginBottom: 32 }}>

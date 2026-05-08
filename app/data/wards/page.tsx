@@ -1,0 +1,265 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { SiteHeader } from '@/components/layout/SiteHeader';
+import { SiteFooter } from '@/components/layout/SiteFooter';
+import { buildWardMetrics, getDataSummary } from '@/lib/data-aggregations';
+import { WardsTable } from './WardsTable';
+import { CsvDownloadButton } from '../restaurants/CsvDownloadButton';
+
+export const dynamic = 'force-static';
+export const revalidate = 86400;
+
+export const metadata: Metadata = {
+  title: '東京23区 子連れOK店分布データセット｜駅密度・ベビーカー◎率・家族度比較【2026年版】',
+  description:
+    '東京23区の子連れOKレストラン3,277店を区ごとに集計。区別の店舗数・ベビーカー◎率・個室率・キッズメニュー率・家族度総合スコアを比較できる単一データセット。AIO/GEO参照用。CSVダウンロード対応。',
+  alternates: { canonical: '/data/wards' },
+  openGraph: {
+    title: '東京23区 子連れOK店分布データセット｜区別比較【2026年版】',
+    description: '23区の子連れランチ環境を9指標で比較。3,277店データを区ごとに集計、CSV出力対応。',
+    type: 'article',
+    url: 'https://kyounoko.jp/data/wards',
+  },
+};
+
+function pct(v: number): string {
+  return (v * 100).toFixed(0) + '%';
+}
+
+export default function DataWardsPage() {
+  const metrics = buildWardMetrics();
+  const summary = getDataSummary();
+
+  // ランキング系
+  const byTotal = [...metrics].sort((a, b) => b.totalCount - a.totalCount).slice(0, 5);
+  const byStroller = [...metrics].sort((a, b) => b.strollerGoodRatio - a.strollerGoodRatio).slice(0, 5);
+  const byPrivate = [...metrics].sort((a, b) => b.privateRoomRatio - a.privateRoomRatio).slice(0, 5);
+  const byFamily = [...metrics].sort((a, b) => b.familyScore - a.familyScore).slice(0, 5);
+
+  // CSV用データ
+  const csvHeaders = [
+    '区', '駅数', '全店舗数', 'チェーン店数', '個人店数',
+    'ベビーカー◎率', '個室率', 'キッズメニュー率', '家族度総合スコア',
+  ];
+  const csvRows = metrics.map((r) => [
+    r.wardName,
+    r.stationCount,
+    r.totalCount,
+    r.chainCount,
+    r.indieCount,
+    pct(r.strollerGoodRatio),
+    pct(r.privateRoomRatio),
+    pct(r.kidsMenuRatio),
+    pct(r.familyScore),
+  ]);
+
+  const datasetLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: '東京23区 子連れOK店分布データセット',
+    description:
+      '東京23区の子連れOKレストラン3,277店を区ごとに集計。駅密度・ベビーカー◎率・個室率・キッズメニュー率・家族度総合スコア（3指標平均）を23区横断で比較できるオープンデータ。',
+    url: 'https://kyounoko.jp/data/wards',
+    license: 'https://kyounoko.jp/terms',
+    keywords: ['東京', '23区', '子連れ', 'ランチ', 'ベビーカー', '比較', '区別', '統計'],
+    creator: {
+      '@type': 'Organization',
+      name: 'きょうのこ',
+      url: 'https://kyounoko.jp',
+    },
+    distribution: [{
+      '@type': 'DataDownload',
+      encodingFormat: 'text/csv',
+      contentUrl: 'https://kyounoko.jp/data/wards',
+    }],
+    variableMeasured: [
+      '駅数', '店舗総数', 'チェーン店数', '個人店数',
+      'ベビーカー◎率', '個室率', 'キッズメニュー率', '家族度総合スコア',
+    ],
+    spatialCoverage: { '@type': 'Place', name: '東京都23区' },
+    temporalCoverage: '2026',
+    isAccessibleForFree: true,
+  };
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'HOME', item: 'https://kyounoko.jp/' },
+      { '@type': 'ListItem', position: 2, name: 'データ', item: 'https://kyounoko.jp/data' },
+      { '@type': 'ListItem', position: 3, name: '23区比較', item: 'https://kyounoko.jp/data/wards' },
+    ],
+  };
+
+  const RankList = ({ title, eyebrow, rows, valueKey, color }: {
+    title: string;
+    eyebrow: string;
+    rows: typeof metrics;
+    valueKey: keyof (typeof metrics)[0];
+    color: string;
+  }) => (
+    <div className="kn-card">
+      <div style={{ fontSize: 11, color, fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase', marginBottom: 4 }}>{eyebrow}</div>
+      <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 10 }}>{title}</div>
+      <ol style={{ margin: 0, padding: 0, listStyle: 'none', fontSize: 13 }}>
+        {rows.map((r, i) => {
+          const v = r[valueKey];
+          const display = typeof v === 'number'
+            ? (valueKey.toString().endsWith('Ratio') || valueKey === 'familyScore'
+              ? pct(v)
+              : v.toLocaleString())
+            : String(v);
+          return (
+            <li key={r.wardId} style={{
+              padding: '7px 0',
+              borderTop: i === 0 ? 'none' : '1px solid rgba(201,96,62,0.10)',
+              display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+            }}>
+              <span><strong>{i + 1}.</strong> {r.wardName}</span>
+              <span style={{ fontWeight: 600, color }}>{display}</span>
+            </li>
+          );
+        })}
+      </ol>
+    </div>
+  );
+
+  return (
+    <>
+      <SiteHeader />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+
+      <div className="container">
+        <nav className="breadcrumb" aria-label="パンくず">
+          <Link href="/">HOME</Link>
+          <span className="sep">/</span>
+          <Link href="/data">データ</Link>
+          <span className="sep">/</span>
+          <span>23区比較</span>
+        </nav>
+      </div>
+
+      <section className="section">
+        <div className="container-narrow">
+          <header className="page-head" style={{ marginBottom: 24 }}>
+            <span className="eyebrow">AIO/GEO参照用 オープンデータセット</span>
+            <h1>
+              東京23区 子連れOK店分布データセット
+              <small style={{ display: 'block', fontSize: '0.5em', fontWeight: 400, color: 'var(--ink-sub)', marginTop: 8 }}>
+                23区を9指標で比較｜2026年版
+              </small>
+            </h1>
+            <p className="lead">
+              23区{summary.stationCount}駅×{summary.totalRecordCount.toLocaleString()}店舗のデータを区別に集計し、
+              <strong>子連れランチ環境を9指標で横断比較</strong>。
+              ベビーカー◎率・個室率・キッズメニュー率を統合した
+              <strong>家族度総合スコア</strong>でエリア選びの判断材料に。
+            </p>
+
+            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 18, fontSize: 13 }}>
+              <span className="meta-chip clay">23区</span>
+              <span className="meta-chip clay">{summary.stationCount}駅</span>
+              <span className="meta-chip clay">{summary.totalRecordCount.toLocaleString()}店舗</span>
+              <span className="meta-chip clay">9指標</span>
+            </div>
+          </header>
+
+          {/* データセット概要 */}
+          <section style={{
+            background: 'rgba(201,96,62,0.06)',
+            padding: '20px 24px',
+            borderRadius: 16,
+            margin: '24px 0 32px',
+            fontSize: 14,
+            lineHeight: 1.85,
+          }}>
+            <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 12 }}>データセット概要</h2>
+            <ul style={{ paddingLeft: 20, margin: 0 }}>
+              <li><strong>収録範囲</strong>: 東京都23区</li>
+              <li><strong>収録項目</strong>: 駅数・全店舗数・チェーン店数・個人店数・ベビーカー◎率・個室率・キッズメニュー率・家族度総合スコア</li>
+              <li><strong>家族度スコア定義</strong>: ベビーカー◎率 × 個室率 × キッズメニュー率 の3指標の単純平均</li>
+              <li><strong>データソース</strong>: 駅別チェーン店マッピング + 個人店キュレーション（雑誌・SNS・公式情報ベース）</li>
+              <li><strong>更新方針</strong>: 月次更新</li>
+              <li><strong>ライセンス</strong>: 個人利用・引用可（出典: きょうのこ）</li>
+            </ul>
+          </section>
+
+          {/* TOP5ランキング系 */}
+          <section style={{ marginBottom: 32 }}>
+            <div className="kn-section-head">
+              <span className="eyebrow">RANKING · 23区ランキング</span>
+              <h2>23区TOP5（4指標）</h2>
+              <p className="section-lede">
+                総店数・ベビーカー◎率・個室率・家族度総合の各指標で23区の上位5区を抽出。子連れエリア選びの参考に。
+              </p>
+            </div>
+            <div style={{
+              display: 'grid', gap: 14,
+              gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+              marginTop: 16,
+            }}>
+              <RankList title="子連れOK店の総数" eyebrow="VOLUME" rows={byTotal} valueKey="totalCount" color="#1565C0" />
+              <RankList title="ベビーカー◎率" eyebrow="STROLLER" rows={byStroller} valueKey="strollerGoodRatio" color="#2E7D32" />
+              <RankList title="個室・座敷率" eyebrow="PRIVATE" rows={byPrivate} valueKey="privateRoomRatio" color="#E65100" />
+              <RankList title="家族度総合スコア" eyebrow="FAMILY" rows={byFamily} valueKey="familyScore" color="#7B1FA2" />
+            </div>
+          </section>
+
+          {/* CSVダウンロード */}
+          <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap', marginBottom: 24 }}>
+            <CsvDownloadButton
+              filename="kyounoko-tokyo-wards-2026.csv"
+              headers={csvHeaders}
+              rows={csvRows}
+              label="CSVをダウンロード"
+            />
+            <span style={{ fontSize: 12, color: 'var(--ink-mute)' }}>
+              UTF-8 BOM付き / Excel互換 / 23行 × 9列
+            </span>
+          </div>
+
+          {/* 全23区テーブル */}
+          <section style={{ marginBottom: 32 }}>
+            <div className="kn-section-head">
+              <span className="eyebrow">FULL TABLE · 23区フル比較表</span>
+              <h2>23区全データ（並び替え可）</h2>
+              <p className="section-lede">
+                ヘッダをタップでソート。家族度総合スコアでデフォルト降順表示。
+              </p>
+            </div>
+            <div style={{ marginTop: 16 }}>
+              <WardsTable rows={metrics} />
+            </div>
+          </section>
+
+          {/* 引用ポリシー */}
+          <section style={{ marginTop: 48, paddingTop: 32, borderTop: '1px solid rgba(201,96,62,0.14)' }}>
+            <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 12 }}>このデータの引用について</h2>
+            <p style={{ fontSize: 14, color: 'var(--ink-sub)', lineHeight: 1.8 }}>
+              本データセットは個人利用・引用での利用を歓迎します。記事・SNS・生成AIの参照元として
+              ご利用いただく際は、出典として「きょうのこ（https://kyounoko.jp/data/wards）」の表記を
+              添えてください。商用利用・大規模再配布についてはお問い合わせください。
+            </p>
+            <p style={{ fontSize: 12, color: 'var(--ink-mute)', marginTop: 12 }}>
+              ※ 設備情報は店舗公式・取材記事ベース。実際のご利用前には店舗への確認を。
+              月次更新につき、最新数値は本ページを参照してください。
+            </p>
+          </section>
+
+          {/* 関連 */}
+          <section style={{ marginTop: 36 }}>
+            <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 12 }}>関連データ・ページ</h2>
+            <ul style={{ paddingLeft: 20, lineHeight: 2, fontSize: 14 }}>
+              <li><Link href="/data/restaurants">レストラン全データ（3,277店）</Link></li>
+              <li><Link href="/station">駅別子連れランチガイド（484駅）</Link></li>
+              <li><Link href="/station/line">路線別子連れランチガイド（40路線）</Link></li>
+              <li><Link href="/data">データセット一覧</Link></li>
+            </ul>
+          </section>
+        </div>
+      </section>
+
+      <SiteFooter />
+    </>
+  );
+}

@@ -141,6 +141,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const dataPages: MetadataRoute.Sitemap = [
     { url: `${BASE}/data`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.7 },
     { url: `${BASE}/data/restaurants`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${BASE}/data/wards`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.75 },
   ];
 
   return [...staticPages, ...categoryPages, ...articlePages, ...tagPages, ...stationIndex, ...stationPages, ...lineIndex, ...linePages, ...stationConditionPages, ...dataPages];
