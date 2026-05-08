@@ -7,6 +7,7 @@ import { PRBadge } from '@/components/affiliate/PRBadge';
 import { CategoryTabs } from '@/components/items/CategoryTabs';
 import { CATALOG_ITEMS, CATALOG_CATEGORY_META } from '@/lib/items-catalog';
 import { getTokyoNow } from '@/lib/date';
+import { AdSlot } from '@/components/ads/AdSlot';
 
 export const metadata: Metadata = {
   title: '役立つもの',
@@ -99,6 +100,11 @@ export default function ItemsPage() {
           </div>
         </div>
       </section>
+
+      {/* AdSense: 商品ページ末尾の関連コンテンツ風広告 */}
+      <div className="container" style={{ marginTop: 24, marginBottom: 24 }}>
+        <AdSlot placement="article-related" />
+      </div>
 
       <SiteFooter />
       <MobileStickyNav />
