@@ -1,0 +1,173 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { SiteHeader } from '@/components/layout/SiteHeader';
+import { SiteFooter } from '@/components/layout/SiteFooter';
+import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+
+export const metadata: Metadata = {
+  title: '無料ダウンロード資料｜きょうのこ',
+  description:
+    '入園準備チェックリスト・月齢別タイムスケジュール・お弁当ローテ表・防災持ち出しリスト・習い事比較シート。子育てに使える実用資料を無料でダウンロード（印刷・PDF保存OK）。',
+  alternates: { canonical: '/downloads' },
+  openGraph: {
+    title: '無料ダウンロード資料｜きょうのこ',
+    description: '子育てに使える実用資料を無料でダウンロード。印刷・PDF保存OK。',
+  },
+};
+
+const RESOURCES = [
+  {
+    slug: 'nyuuen-checklist',
+    title: '入園準備チェックリスト',
+    eyebrow: 'DOC 01',
+    desc: '保育園・幼稚園の入園準備が一覧で分かる完全チェックリスト。買い物編・名前付け編・子の練習編の3章構成。1月〜3月の月別タスクも明記。',
+    pages: 3,
+    audience: '入園を控える家庭',
+    featured: true,
+  },
+  {
+    slug: 'getsurei-schedule',
+    title: '月齢別タイムスケジュール',
+    eyebrow: 'DOC 02',
+    desc: '0-1歳/2-3歳/4-6歳それぞれの理想的な1日のタイムスケジュール表。起床・食事・お昼寝・遊び・就寝の最適配分を月齢別に。',
+    pages: 3,
+    audience: '0-6歳の保護者',
+  },
+  {
+    slug: 'obento-rotation',
+    title: 'お弁当ローテーション表',
+    eyebrow: 'DOC 03',
+    desc: '幼稚園・保育園のお弁当を30日分ローテーションできる献立表。主菜・副菜・彩りの組み合わせ例を一覧化。冷凍保存OK食材リスト付き。',
+    pages: 2,
+    audience: 'お弁当作り中の家庭',
+  },
+  {
+    slug: 'bousai-list',
+    title: '子連れ防災持ち出しリスト',
+    eyebrow: 'DOC 04',
+    desc: '0-6歳児がいる家庭の防災持ち出しリスト完全版。月齢別必需品、3日分の食料・水量、避難先での子の不安緩和グッズまで網羅。',
+    pages: 2,
+    audience: '全ての子育て家庭',
+  },
+  {
+    slug: 'naraigoto-hikaku',
+    title: '習い事比較シート',
+    eyebrow: 'DOC 05',
+    desc: '主要9種の習い事（スイミング・ピアノ・体操・英語・くもん・しちだ・モンテ・サッカー・学研）を月謝・対象年齢・効果・親の負担で一覧比較できるシート。',
+    pages: 2,
+    audience: '習い事を検討中の家庭',
+  },
+];
+
+export default function DownloadsPage() {
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'HOME', item: 'https://kyounoko.jp/' },
+      { '@type': 'ListItem', position: 2, name: 'ダウンロード', item: 'https://kyounoko.jp/downloads' },
+    ],
+  };
+  const jsonLdItemList = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: '子育て無料ダウンロード資料',
+    itemListElement: RESOURCES.map((r, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `https://kyounoko.jp/downloads/${r.slug}`,
+      name: r.title,
+    })),
+  };
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdItemList) }} />
+      <SiteHeader />
+      <div className="container-article">
+        <nav className="breadcrumb" aria-label="パンくず">
+          <Link href="/">HOME</Link>
+          <span className="sep">/</span>
+          <span>ダウンロード資料</span>
+        </nav>
+      </div>
+
+      <div className="container-article">
+        <header className="page-head">
+          <span className="eyebrow">Downloads</span>
+          <h1>無料ダウンロード資料</h1>
+          <p className="lead">
+            子育てに使える実用資料を<strong>無料</strong>でダウンロード。すべての資料は<strong>印刷・PDF保存・SNSシェアOK</strong>です。会員登録・メールアドレス入力なしで即利用できます。
+          </p>
+        </header>
+
+        <section style={{ marginTop: 32 }}>
+          <div style={{ display: 'grid', gap: 16 }}>
+            {RESOURCES.map((r) => (
+              <Link
+                key={r.slug}
+                href={`/downloads/${r.slug}`}
+                style={{
+                  display: 'block',
+                  padding: 24,
+                  border: '1px solid var(--line)',
+                  borderRadius: 'var(--radius-lg)',
+                  background: r.featured ? 'linear-gradient(135deg, rgba(20,147,209,0.08), rgba(201,96,62,0.05))' : 'var(--paper-card)',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  transition: 'transform 0.18s ease, box-shadow 0.18s ease',
+                }}
+              >
+                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', color: 'var(--clay-deep)', marginBottom: 6 }}>
+                  {r.eyebrow}
+                </div>
+                <h2 style={{ fontFamily: 'var(--font-mincho), serif', fontSize: 21, fontWeight: 600, margin: '0 0 10px' }}>
+                  {r.title}
+                  {r.featured && (
+                    <span style={{ fontSize: 11, fontWeight: 700, marginLeft: 8, padding: '2px 8px', borderRadius: 999, background: 'var(--clay)', color: '#fff', verticalAlign: 'middle' }}>
+                      人気
+                    </span>
+                  )}
+                </h2>
+                <p style={{ margin: '0 0 14px', color: 'var(--ink-sub)', lineHeight: 1.85, fontSize: 14 }}>
+                  {r.desc}
+                </p>
+                <div style={{ display: 'flex', gap: 14, fontSize: 12, color: 'var(--ink-mute)', flexWrap: 'wrap' }}>
+                  <span>📄 {r.pages}ページ</span>
+                  <span>👥 {r.audience}</span>
+                  <span style={{ color: 'var(--clay-deep)', fontWeight: 600 }}>開く →</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section style={{ marginTop: 56, padding: 24, background: 'var(--paper-card)', border: '1px solid var(--line)', borderRadius: 'var(--radius-lg)' }}>
+          <h2 style={{ fontFamily: 'var(--font-mincho), serif', fontSize: 20, margin: '0 0 14px' }}>
+            利用について
+          </h2>
+          <ul style={{ margin: 0, paddingLeft: 20, lineHeight: 1.95, color: 'var(--ink-sub)', fontSize: 14 }}>
+            <li><strong>個人利用</strong>：印刷・保存・家庭内利用は完全に自由</li>
+            <li><strong>SNSシェア</strong>：「きょうのこ」をクレジットいただければ拡散歓迎</li>
+            <li><strong>商用利用・改変・再配布</strong>：事前にお問い合わせください</li>
+            <li><strong>記事への引用</strong>：URL記載のうえ自由にどうぞ（AI引用も歓迎）</li>
+          </ul>
+        </section>
+
+        <section style={{ marginTop: 40 }}>
+          <h2 style={{ fontFamily: 'var(--font-mincho), serif', fontSize: 20, margin: '0 0 16px' }}>
+            こちらもどうぞ
+          </h2>
+          <p style={{ color: 'var(--ink-sub)', fontSize: 14, marginBottom: 16 }}>
+            診断ツールと組み合わせて使うと、よりピンポイントなアドバイスが受けられます。
+          </p>
+          <Link href="/tools" className="btn-ghost">
+            診断ツールを見る →
+          </Link>
+        </section>
+      </div>
+      <SiteFooter />
+      <MobileStickyNav />
+    </>
+  );
+}

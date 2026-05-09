@@ -373,6 +373,124 @@ export default function HomePage() {
       </section>
 
       {/* ======================================================================
+          無料ツール・ダウンロード資料セクション
+          被リンク獲得・サイト回遊UPの中核コンテンツ
+          ====================================================================== */}
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="container">
+          <div className="section-head">
+            <div>
+              <span className="eyebrow">Tools & Downloads</span>
+              <h2>無料ツール＆資料</h2>
+            </div>
+            <Link href="/tools" className="hint" style={{ textDecoration: 'none', color: 'var(--clay-deep)' }}>
+              すべて見る →
+            </Link>
+          </div>
+
+          <div
+            style={{
+              display: 'grid',
+              gap: 16,
+              gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+            }}
+          >
+            <Link
+              href="/tools/babycar-shindan"
+              style={{
+                display: 'block',
+                padding: 20,
+                background: 'linear-gradient(135deg, rgba(20,147,209,0.08), rgba(201,96,62,0.05))',
+                border: '1px solid var(--line)',
+                borderRadius: 'var(--radius-lg)',
+                textDecoration: 'none',
+                color: 'inherit',
+              }}
+            >
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', color: 'var(--clay-deep)', marginBottom: 6 }}>
+                🎯 診断ツール
+              </div>
+              <h3 style={{ fontFamily: 'var(--font-mincho), serif', fontSize: 17, fontWeight: 600, margin: '0 0 8px' }}>
+                ベビーカー診断
+              </h3>
+              <p style={{ margin: 0, fontSize: 13, color: 'var(--ink-sub)', lineHeight: 1.7 }}>
+                5問→あなたに合う3モデル提案
+              </p>
+            </Link>
+
+            <Link
+              href="/tools/naraigoto-match"
+              style={{
+                display: 'block',
+                padding: 20,
+                background: 'var(--paper-card)',
+                border: '1px solid var(--line)',
+                borderRadius: 'var(--radius-lg)',
+                textDecoration: 'none',
+                color: 'inherit',
+              }}
+            >
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', color: 'var(--clay-deep)', marginBottom: 6 }}>
+                🎯 診断ツール
+              </div>
+              <h3 style={{ fontFamily: 'var(--font-mincho), serif', fontSize: 17, fontWeight: 600, margin: '0 0 8px' }}>
+                習い事マッチング診断
+              </h3>
+              <p style={{ margin: 0, fontSize: 13, color: 'var(--ink-sub)', lineHeight: 1.7 }}>
+                主要9種からTOP3提案
+              </p>
+            </Link>
+
+            <Link
+              href="/downloads/nyuuen-checklist"
+              style={{
+                display: 'block',
+                padding: 20,
+                background: 'var(--paper-card)',
+                border: '1px solid var(--line)',
+                borderRadius: 'var(--radius-lg)',
+                textDecoration: 'none',
+                color: 'inherit',
+              }}
+            >
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', color: 'var(--clay-deep)', marginBottom: 6 }}>
+                📄 ダウンロード
+              </div>
+              <h3 style={{ fontFamily: 'var(--font-mincho), serif', fontSize: 17, fontWeight: 600, margin: '0 0 8px' }}>
+                入園準備チェックリスト
+              </h3>
+              <p style={{ margin: 0, fontSize: 13, color: 'var(--ink-sub)', lineHeight: 1.7 }}>
+                印刷・PDF保存OK
+              </p>
+            </Link>
+
+            <Link
+              href="/downloads/getsurei-schedule"
+              style={{
+                display: 'block',
+                padding: 20,
+                background: 'var(--paper-card)',
+                border: '1px solid var(--line)',
+                borderRadius: 'var(--radius-lg)',
+                textDecoration: 'none',
+                color: 'inherit',
+              }}
+            >
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', color: 'var(--clay-deep)', marginBottom: 6 }}>
+                📄 ダウンロード
+              </div>
+              <h3 style={{ fontFamily: 'var(--font-mincho), serif', fontSize: 17, fontWeight: 600, margin: '0 0 8px' }}>
+                月齢別タイムスケジュール
+              </h3>
+              <p style={{ margin: 0, fontSize: 13, color: 'var(--ink-sub)', lineHeight: 1.7 }}>
+                0-6歳の理想的な1日
+              </p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ======================================================================
           最新の記事（補足。主役ではないのでフッター近くに移動）
           ====================================================================== */}
       {latestArticles.length > 0 && (

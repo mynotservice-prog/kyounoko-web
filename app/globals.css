@@ -2767,3 +2767,108 @@ span > .pr-label {
   transition: transform .2s ease;
 }
 .quick-three-card:hover .arrow { transform: translateX(3px); }
+
+/* ==========================================================================
+ * /downloads — 印刷用スタイル
+ * ========================================================================== */
+.print-doc {
+  background: #fff;
+  padding: 24px 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  max-width: 760px;
+  margin: 0 auto;
+}
+.print-doc h2 {
+  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 24px 0 10px;
+  border-bottom: 1.5px solid var(--clay);
+  padding-bottom: 6px;
+}
+.print-doc h3 {
+  font-family: var(--font-mincho), serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 18px 0 8px;
+  color: var(--clay-deep);
+}
+.print-doc table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 12px 0;
+}
+.print-doc table th,
+.print-doc table td {
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+.print-doc table th {
+  background: var(--paper-card);
+  font-weight: 600;
+}
+.print-doc ul.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+.print-doc ul.checklist li {
+  position: relative;
+  padding: 6px 0 6px 28px;
+  border-bottom: 1px dashed var(--line);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.print-doc ul.checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid var(--ink-mute);
+  border-radius: 4px;
+}
+.print-cta {
+  text-align: center;
+  margin: 24px 0;
+}
+.print-cta button {
+  background: var(--clay);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+.print-cta button:hover { background: var(--clay-deep); }
+
+@media print {
+  .site-header,
+  .site-footer,
+  .mobile-nav,
+  .breadcrumb,
+  .print-cta,
+  .ad-slot,
+  nav { display: none !important; }
+  body { background: #fff !important; padding: 0 !important; }
+  .container-article { max-width: 100% !important; padding: 0 !important; }
+  .print-doc {
+    border: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    box-shadow: none !important;
+    page-break-inside: auto;
+  }
+  .print-doc h2 { page-break-after: avoid; }
+  .print-doc table, .print-doc ul { page-break-inside: avoid; }
+  a { color: var(--ink) !important; text-decoration: none !important; }
+  a[href]:after { content: ''; }
+}

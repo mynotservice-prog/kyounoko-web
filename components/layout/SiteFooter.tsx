@@ -37,6 +37,17 @@ export function SiteFooter() {
           </div>
 
           <div className="footer-col">
+            <h4>無料ツール・資料</h4>
+            <ul>
+              <li><Link href="/tools">診断ツール</Link></li>
+              <li><Link href="/tools/babycar-shindan">ベビーカー診断</Link></li>
+              <li><Link href="/tools/naraigoto-match">習い事マッチング</Link></li>
+              <li><Link href="/downloads">ダウンロード資料</Link></li>
+              <li><Link href="/downloads/nyuuen-checklist">入園準備リスト</Link></li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
             <h4>About</h4>
             <ul>
               <li><Link href="/about">運営者情報</Link></li>

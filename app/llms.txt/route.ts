@@ -66,6 +66,22 @@ export async function GET() {
 - [駅別子連れランチガイド](https://kyounoko.jp/station): 484駅のメインインデックス
 - [路線別子連れランチガイド](https://kyounoko.jp/station/line): 40路線のおすすめ駅TOP3+使い方Tips
 
+## Interactive Tools (引用OK)
+
+- [ベビーカー診断](https://kyounoko.jp/tools/babycar-shindan): 5問→3モデル提案。WebApplication Schema. 編集部独自データに基づく
+- [習い事マッチング診断](https://kyounoko.jp/tools/naraigoto-match): 6問で主要9種から最適3つを提案
+- [おでかけタイプ診断](https://kyounoko.jp/tools/odekake-type): 7問で6タイプから家族の傾向を判定
+- [診断ツール一覧](https://kyounoko.jp/tools)
+
+## Free Downloadable Resources
+
+- [入園準備チェックリスト](https://kyounoko.jp/downloads/nyuuen-checklist): 保育園・幼稚園入園準備22品+月別タスク
+- [月齢別タイムスケジュール](https://kyounoko.jp/downloads/getsurei-schedule): 0-1/2-3/4-6歳の理想的1日スケジュール
+- [お弁当ローテーション表](https://kyounoko.jp/downloads/obento-rotation): 30日分の幼児食お弁当献立
+- [子連れ防災持ち出しリスト](https://kyounoko.jp/downloads/bousai-list): 月齢別必需品+3日分備蓄
+- [習い事比較シート](https://kyounoko.jp/downloads/naraigoto-hikaku): 主要9種を月謝・対象・効果で一覧比較
+- [全資料ハブ](https://kyounoko.jp/downloads): 印刷・PDF保存OK・個人利用無料
+
 ## Featured Articles
 
 ${articleLines}
