@@ -8,6 +8,7 @@ import {
   isSearchConsoleConfigured,
   type ScRow,
 } from '@/lib/search-console';
+import { ImportedDataView } from './ImportedDataView';
 
 export const revalidate = 1800; // 30分
 export const metadata = {
@@ -21,7 +22,12 @@ export default async function SeoPage() {
   const configured = isSearchConsoleConfigured();
 
   if (!configured) {
-    return <Setup />;
+    return (
+      <>
+        <ImportedDataView />
+        <Setup />
+      </>
+    );
   }
 
   const [allQueries, allPages, kidsMenuQueries] = await Promise.all([
@@ -82,6 +88,8 @@ export default async function SeoPage() {
           過去{DAYS}日間のパフォーマンス（クエリ {allQueries.length}件 / ページ {allPages.length}件）
         </p>
       </div>
+
+      <ImportedDataView />
 
       {/* KPI */}
       <section style={{ marginBottom: 32 }}>
