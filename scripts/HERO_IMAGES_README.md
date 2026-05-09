@@ -1,13 +1,20 @@
 # Hero画像 AI生成パイプライン
 
-全記事のヒーロー画像をDALL-E 3で「温かみあるイラスト風」に統一するためのスクリプト群。
+全記事のヒーロー画像を「温かみあるイラスト風」に統一するためのスクリプト群。
+
+## 🎯 推奨: Gemini 2.5 Flash Image（無料）
+
+**完全無料で1日500枚まで生成可能** な Google の nano-banana モデルが推奨です。
+全320本ならそのまま1日で完了、コスト¥0。
+
+OpenAI DALL-E 3版（有料）も残してあるので、画質を比べたい場合や枯渇時の代替に使えます。
 
 ## 全体フロー
 
 ```
 1. ドライラン（プロンプト確認）
    ↓
-2. 本番生成（OpenAI APIコール）
+2. 本番生成（Gemini無料 or DALL-E 3有料）
    ↓
 3. frontmatter更新（hero: を新画像に切り替え）
    ↓
@@ -16,7 +23,17 @@
 
 ## 1. 事前準備
 
-### OpenAI APIキーの取得
+### A. Gemini APIキーの取得（無料・推奨）
+
+1. https://aistudio.google.com/app/apikey にアクセス（Googleアカウントでログイン）
+2. 「Create API key」で発行
+3. 課金設定**不要**。1日500枚までの無料枠で全320記事カバーできる
+
+```bash
+export GEMINI_API_KEY=AIza...
+```
+
+### B. OpenAI APIキーの取得（有料・代替）
 
 ChatGPT Plusだけでは不可。**OpenAI Platform** で別途APIキーが必要です。
 
@@ -24,15 +41,8 @@ ChatGPT Plusだけでは不可。**OpenAI Platform** で別途APIキーが必要
 2. 「Create new secret key」でキー発行
 3. https://platform.openai.com/account/billing で **少なくとも$30程度をクレジット入金**（HD画質で約$26、+余裕）
 
-### 環境変数の設定
-
 ```bash
 export OPENAI_API_KEY=sk-proj-xxxx
-```
-
-`.env.local`に書く場合:
-```
-OPENAI_API_KEY=sk-proj-xxxx
 ```
 
 ## 2. ドライラン（無料）
@@ -57,6 +67,28 @@ node scripts/dry-run-prompts.mjs --quality=hd
 
 ## 3. 本番生成
 
+### 🎯 Gemini版（推奨・無料）
+
+```bash
+# まず1本だけテスト
+GEMINI_API_KEY=AIza... node scripts/generate-hero-images-gemini.mjs --slug=babycar-ranking-2026
+
+# 結果を確認: public/hero-ai/babycar-ranking-2026.png
+
+# 良ければ全件（約3-4時間、¥0）
+GEMINI_API_KEY=AIza... node scripts/generate-hero-images-gemini.mjs
+
+# レート制限緩和されてるなら間隔短縮（デフォルト35秒）
+GEMINI_API_KEY=AIza... node scripts/generate-hero-images-gemini.mjs --delay=20
+
+# 既存も強制再生成
+GEMINI_API_KEY=AIza... node scripts/generate-hero-images-gemini.mjs --force
+```
+
+**コスト**: 1日500枚まで完全無料。320本ならそのまま1日で完了。
+
+### DALL-E 3版（有料・代替）
+
 ⚠️ **コスト発生**します。実行前に必ずドライラン+コスト確認。
 
 ```bash
@@ -78,7 +110,7 @@ OPENAI_API_KEY=sk-... node scripts/generate-hero-images.mjs --concurrency=3
 OPENAI_API_KEY=sk-... node scripts/generate-hero-images.mjs --force
 ```
 
-### コスト目安（DALL-E 3 / 1792x1024）
+**コスト目安（DALL-E 3 / 1792x1024）**
 
 | 画質 | 1枚あたり | 320本フル |
 |---|---|---|

@@ -89,23 +89,32 @@ export default function ImageGenPage() {
             lineHeight: 1.7,
           }}
         >
-{`# 1. ドライラン（無料・プロンプト確認）
+{`# === 推奨: Gemini 2.5 Flash Image（無料・1日500枚） ===
+
+# 1. APIキー取得: https://aistudio.google.com/app/apikey
+export GEMINI_API_KEY=AIza...
+
+# 2. ドライラン（無料・プロンプト確認）
 node scripts/dry-run-prompts.mjs
 
-# 2. 1本だけテスト生成
-export OPENAI_API_KEY=sk-proj-xxxx
-node scripts/generate-hero-images.mjs --slug=babycar-ranking-2026
+# 3. 1本だけテスト生成
+node scripts/generate-hero-images-gemini.mjs --slug=babycar-ranking-2026
 
-# 3. 全件生成（約$13、30〜60分）
-node scripts/generate-hero-images.mjs
+# 4. 全件生成（約3-4時間、¥0）
+node scripts/generate-hero-images-gemini.mjs
 
-# 4. frontmatter に反映
+# 5. frontmatter に反映
 node scripts/apply-hero-ai.mjs
 
-# 5. コミット & デプロイ
+# 6. コミット & デプロイ
 git add public/hero-ai/ content/articles/
-git commit -m "feat(images): hero画像をDALL-E 3イラストに差し替え"
-git push origin main`}
+git commit -m "feat(images): hero画像をGemini AIイラストに差し替え"
+git push origin main
+
+
+# === 代替: DALL-E 3（有料・$13〜26、30〜60分） ===
+# export OPENAI_API_KEY=sk-...
+# node scripts/generate-hero-images.mjs`}
         </pre>
         <p style={{ fontSize: 11, color: 'var(--ink-mute)', marginTop: 10, marginBottom: 0 }}>
           詳細: <code>scripts/HERO_IMAGES_README.md</code>
