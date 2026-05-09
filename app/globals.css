@@ -3,6 +3,36 @@
 @tailwind utilities;
 
 /* ==========================================================================
+   Core Web Vitals 最適化
+   ========================================================================== */
+
+/* 画像のCLS防止: aspect-ratio で領域確保 */
+img, video, iframe { max-width: 100%; height: auto; }
+
+/* 折りたたみ可能セクションを画面外でスキップしてLCP/INP改善
+   （スクロール到達時に遅延レンダリングされる） */
+.section,
+.related-card,
+.alt-card,
+.today-related-card {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
+/* スクロール挙動 */
+html { scroll-behavior: smooth; }
+
+/* アクセシビリティ: 動きを減らす設定の尊重（INP改善にも寄与） */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================================
    デザイントークン
    ========================================================================== */
 :root {
