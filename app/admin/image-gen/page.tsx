@@ -89,26 +89,30 @@ export default function ImageGenPage() {
             lineHeight: 1.7,
           }}
         >
-{`# === 推奨: Gemini 2.5 Flash Image（無料・1日500枚） ===
+{`# === 推奨: Cloudflare Workers AI / flux-1-schnell（完全無料・クレカ不要） ===
 
-# 1. APIキー取得: https://aistudio.google.com/app/apikey
-export GEMINI_API_KEY=AIza...
+# 1. https://dash.cloudflare.com/sign-up で無料アカウント作成
+#    Account ID をコピー
+# 2. https://dash.cloudflare.com/profile/api-tokens で API Token 発行
+#    Permissions: Account → Workers AI → Read
+export CLOUDFLARE_ACCOUNT_ID=xxxxxxxxx
+export CLOUDFLARE_API_TOKEN=xxxxxxxxx
 
-# 2. ドライラン（無料・プロンプト確認）
+# 3. ドライラン（無料・プロンプト確認）
 node scripts/dry-run-prompts.mjs
 
-# 3. 1本だけテスト生成
-node scripts/generate-hero-images-gemini.mjs --slug=babycar-ranking-2026
+# 4. 1本だけテスト生成
+node scripts/generate-hero-images-cloudflare.mjs --slug=babycar-ranking-2026
 
-# 4. 全件生成（約3-4時間、¥0）
-node scripts/generate-hero-images-gemini.mjs
+# 5. 全件生成（30〜60分、¥0）
+node scripts/generate-hero-images-cloudflare.mjs
 
-# 5. frontmatter に反映
+# 6. frontmatter に反映
 node scripts/apply-hero-ai.mjs
 
-# 6. コミット & デプロイ
+# 7. コミット & デプロイ
 git add public/hero-ai/ content/articles/
-git commit -m "feat(images): hero画像をGemini AIイラストに差し替え"
+git commit -m "feat(images): hero画像をAIイラストに差し替え"
 git push origin main
 
 

@@ -2,12 +2,13 @@
 
 全記事のヒーロー画像を「温かみあるイラスト風」に統一するためのスクリプト群。
 
-## 🎯 推奨: Gemini 2.5 Flash Image（無料）
+## 🎯 推奨: Cloudflare Workers AI / flux-1-schnell（完全無料・課金登録不要）
 
-**完全無料で1日500枚まで生成可能** な Google の nano-banana モデルが推奨です。
-全320本ならそのまま1日で完了、コスト¥0。
+**クレカ登録すら不要で、無料tier 1日10,000 neuron相当**で動く。320本なら確実に無料枠内。
+Black Forest Labs の FLUX.1 [schnell] は12Bパラメータの強力モデル。
 
-OpenAI DALL-E 3版（有料）も残してあるので、画質を比べたい場合や枯渇時の代替に使えます。
+⚠️ Gemini 2.5 Flash Image (nano-banana) は実測で「limit: 0」だったため非推奨に変更。
+OpenAI DALL-E 3版（有料）も代替として残してあります。
 
 ## 全体フロー
 
@@ -23,17 +24,26 @@ OpenAI DALL-E 3版（有料）も残してあるので、画質を比べたい�
 
 ## 1. 事前準備
 
-### A. Gemini APIキーの取得（無料・推奨）
+### A. Cloudflare認証情報の取得（無料・推奨）
 
-1. https://aistudio.google.com/app/apikey にアクセス（Googleアカウントでログイン）
-2. 「Create API key」で発行
-3. 課金設定**不要**。1日500枚までの無料枠で全320記事カバーできる
+1. https://dash.cloudflare.com/sign-up で無料アカウント作成（**クレカ不要**）
+2. ダッシュボード右下に表示される「Account ID」をコピー
+3. https://dash.cloudflare.com/profile/api-tokens で API Token 発行
+   - 「Create Token」→「Custom token」
+   - Permissions: **Account → Workers AI → Read**
+   - Account Resources: 自分のアカウント
+4. 環境変数を設定:
 
 ```bash
-export GEMINI_API_KEY=AIza...
+export CLOUDFLARE_ACCOUNT_ID=xxxxxxxxx
+export CLOUDFLARE_API_TOKEN=xxxxxxxxx
 ```
 
-### B. OpenAI APIキーの取得（有料・代替）
+### B. Gemini APIキー（実測で無料枠ゼロのため非推奨）
+
+実装は残してあるが、課金有効化が必要なので Cloudflare を推奨。
+
+### C. OpenAI APIキーの取得（有料・代替）
 
 ChatGPT Plusだけでは不可。**OpenAI Platform** で別途APIキーが必要です。
 
@@ -67,25 +77,31 @@ node scripts/dry-run-prompts.mjs --quality=hd
 
 ## 3. 本番生成
 
-### 🎯 Gemini版（推奨・無料）
+### 🎯 Cloudflare版（推奨・完全無料）
 
 ```bash
+export CLOUDFLARE_ACCOUNT_ID=xxxxxxxxx
+export CLOUDFLARE_API_TOKEN=xxxxxxxxx
+
 # まず1本だけテスト
-GEMINI_API_KEY=AIza... node scripts/generate-hero-images-gemini.mjs --slug=babycar-ranking-2026
+node scripts/generate-hero-images-cloudflare.mjs --slug=babycar-ranking-2026
 
-# 結果を確認: public/hero-ai/babycar-ranking-2026.png
+# 結果確認: public/hero-ai/babycar-ranking-2026.png
 
-# 良ければ全件（約3-4時間、¥0）
-GEMINI_API_KEY=AIza... node scripts/generate-hero-images-gemini.mjs
+# 良ければ全件（30〜60分、¥0）
+node scripts/generate-hero-images-cloudflare.mjs
 
-# レート制限緩和されてるなら間隔短縮（デフォルト35秒）
-GEMINI_API_KEY=AIza... node scripts/generate-hero-images-gemini.mjs --delay=20
+# 品質UP（steps 8、若干遅くなる）
+node scripts/generate-hero-images-cloudflare.mjs --steps=8
+
+# 並列数UP
+node scripts/generate-hero-images-cloudflare.mjs --concurrency=3
 
 # 既存も強制再生成
-GEMINI_API_KEY=AIza... node scripts/generate-hero-images-gemini.mjs --force
+node scripts/generate-hero-images-cloudflare.mjs --force
 ```
 
-**コスト**: 1日500枚まで完全無料。320本ならそのまま1日で完了。
+**コスト**: 完全無料（無料tier 10,000 neuron/日内）。320本なら確実に枠内。
 
 ### DALL-E 3版（有料・代替）
 
