@@ -32,6 +32,9 @@ yarn-error.log*
 .env*
 !.env.example
 
+# scripts intermediate (image-prompts dry-run output)
+/tmp/
+
 # vercel
 .vercel
 
