@@ -5,7 +5,7 @@ metaDescription: 入園準備で買い忘れていませんか。通園バッグ
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-04-24'
-updatedAt: \"2026-05-08\"
+updatedAt: "2026-05-08"
 hero: /hero/classroom-01.png
 area: national
 quickInfo:
