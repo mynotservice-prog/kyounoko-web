@@ -1,20 +1,28 @@
 ---
 slug: tokyo-23ku-data-comparison-jiyugaoka-futako
 title: 自由が丘 vs 二子玉川 vs 田園調布｜世田谷ファミリーエリア徹底比較
-metaDescription: ファミリー人気の世田谷3駅をきょうのこ独自集計データで徹底比較。自由が丘24店・二子玉川16店・田園調布の店舗数、ベビーカー◎率、個室率、ジャンル分布まで独自データで解説。引っ越し先選びの参考に。
+metaDescription: >-
+  ファミリー人気の世田谷3駅をきょうのこ独自集計データで徹底比較。自由が丘24店・二子玉川16店・田園調布の店舗数、ベビーカー◎率、個室率、ジャンル分布まで独自データで解説。引っ越し先選びの参考に。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/parent-child-02.png
-lede: 「子育てするなら自由が丘？二子玉川？田園調布？」きょうのこ独自データで世田谷の3大ファミリー駅を**店舗数・ベビーカー◎率・個室率・ジャンル分布**で比較。引っ越し検討中の家族に向けた独自分析記事です。
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-23ku-data-comparison-jiyugaoka-futako.jpg
+lede: >-
+  「子育てするなら自由が丘？二子玉川？田園調布？」きょうのこ独自データで世田谷の3大ファミリー駅を**店舗数・ベビーカー◎率・個室率・ジャンル分布**で比較。引っ越し検討中の家族に向けた独自分析記事です。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - any
   durationMin: 60
-  budget: "mid"
+  budget: mid
 area: tokyo
+legacyHero: /hero/parent-child-02.png
 ---
 
 ## 結論（先に知りたい人へ）

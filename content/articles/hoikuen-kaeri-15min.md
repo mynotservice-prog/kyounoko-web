@@ -4,17 +4,20 @@ title: 保育園帰りの15分ごはん。作り置きなしで回す8パター�
 metaDescription: 保育園帰りから夕飯まで30分しかない日の救世主。2〜3歳が食べる、作り置きなしの15分レシピ8パターン。冷凍と缶詰を使って疲れた日でも回せます。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: 2026-04-17
-updatedAt: 2026-05-08
-hero: /hero/home-cozy-01.png
-area: "all"
+publishedAt: 2026-04-17T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/hoikuen-kaeri-15min.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3"]
-  place: ["home"]
+  ageRanges:
+    - 2-3
+  place:
+    - home
   weather: []
   durationMin: 15
-  budget: "low"
+  budget: low
 lede: 保育園帰りから夕飯まで30分しかない日の救世主。2〜3歳が食べる、作り置きなしの15分レシピ8パターン。冷凍と缶詰を使って疲れた日でも回せます。
+legacyHero: /hero/home-cozy-01.png
 ---
 
 実は、ガチで時短に振り切るなら、平日の夕飯は「作り置きしない」が正解。Instagramで月間数百万リーチを稼ぐ時短レシピアカウントの共通点は、**冷凍と缶詰を主役にして手作り信仰を捨てている**こと。この記事の8パターンは、すべて2〜3歳が「秒で完食」した実績のあるレシピで、保育園お迎え→夕飯提供までを30分以内に収めるための運用設計です。

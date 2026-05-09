@@ -1,20 +1,27 @@
 ---
 slug: tokyo-minato-roppongi-lunch
 title: 【2026年版】六本木・麻布十番の子連れランチ10選｜穴場と予約のコツ
-metaDescription: 港区・六本木・麻布十番で2〜6歳ファミリー向けの子連れランチ穴場の探し方。商業施設レストラン街・六本木ヒルズ・東京ミッドタウンをベース基地に使うローカルガイド。
+metaDescription: >-
+  港区・六本木・麻布十番で2〜6歳ファミリー向けの子連れランチ穴場の探し方。商業施設レストラン街・六本木ヒルズ・東京ミッドタウンをベース基地に使うローカルガイド。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-04-20"
-updatedAt: "2026-05-08"
-hero: /hero/family-dinner-02.png
-lede: 港区・六本木エリアは「大人の街」イメージが強いですが、六本木ヒルズ・東京ミッドタウンなど大型商業施設のレストラン街は意外なほど子連れに優しい。この記事では2〜6歳ファミリーが六本木・麻布十番で安心してランチを楽しめる選び方をまとめました。
+publishedAt: '2026-04-20'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-minato-roppongi-lunch.jpg
+lede: >-
+  港区・六本木エリアは「大人の街」イメージが強いですが、六本木ヒルズ・東京ミッドタウンなど大型商業施設のレストラン街は意外なほど子連れに優しい。この記事では2〜6歳ファミリーが六本木・麻布十番で安心してランチを楽しめる選び方をまとめました。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["indoor"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - indoor
+  weather:
+    - any
   durationMin: 90
-  budget: "low"
+  budget: low
 area: tokyo
+legacyHero: /hero/family-dinner-02.png
 ---
 
 ## 結論（先に知りたい人へ）

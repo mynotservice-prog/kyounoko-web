@@ -1,20 +1,28 @@
 ---
 slug: tokyo-meguro-weekday-hidden
 title: 目黒区 平日午前の穴場公園・屋内（0〜3歳）
-metaDescription: 目黒区で0〜3歳と平日午前に過ごせる穴場公園・屋内スポット。林試の森公園・駒場公園・碑文谷公園などを、ベビーカー動線と混雑耐性から選んだローカル目線のガイド。
+metaDescription: >-
+  目黒区で0〜3歳と平日午前に過ごせる穴場公園・屋内スポット。林試の森公園・駒場公園・碑文谷公園などを、ベビーカー動線と混雑耐性から選んだローカル目線のガイド。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-04-20"
-updatedAt: "2026-05-08"
-hero: /hero/home-cozy-03.png
-lede: 目黒区の平日午前は、0〜3歳連れにとってゴールデンタイム。定番の大型公園は空いているし、児童館・図書館のおはなし会も平日メイン。この記事では目黒区で0〜3歳とゆったり過ごせる穴場的な公園と屋内スポットをまとめました。
+publishedAt: '2026-04-20'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-meguro-weekday-hidden.jpg
+lede: >-
+  目黒区の平日午前は、0〜3歳連れにとってゴールデンタイム。定番の大型公園は空いているし、児童館・図書館のおはなし会も平日メイン。この記事では目黒区で0〜3歳とゆったり過ごせる穴場的な公園と屋内スポットをまとめました。
 quickInfo:
-  ageRanges: ["0-1", "2-3"]
-  place: ["outdoor", "indoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+  place:
+    - outdoor
+    - indoor
+  weather:
+    - any
   durationMin: 90
-  budget: "free"
+  budget: free
 area: tokyo
+legacyHero: /hero/home-cozy-03.png
 ---
 
 ## 結論（先に知りたい人へ）

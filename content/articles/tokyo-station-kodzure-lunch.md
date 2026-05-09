@@ -4,17 +4,24 @@ title: 東京駅周辺 子連れランチ10選（グランスタ・キッチン�
 metaDescription: 東京駅の子連れランチ10選。グランスタ東京・キッチンストリート・大丸東京など駅ナカ・駅ビル中心に、ベビーカーOK・キッズ対応店を厳選。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: "2026-04-20"
-updatedAt: "2026-05-08"
-hero: /hero/family-dinner-03.png
-lede: 東京駅は**グランスタ東京・キッチンストリート・大丸東京**など駅ナカ・駅ビルが充実。新幹線利用や帰省前の子連れランチにも使える10店を条件別にまとめました。
+publishedAt: '2026-04-20'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-station-kodzure-lunch.jpg
+lede: >-
+  東京駅は**グランスタ東京・キッチンストリート・大丸東京**など駅ナカ・駅ビルが充実。新幹線利用や帰省前の子連れランチにも使える10店を条件別にまとめました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["indoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - indoor
+  weather:
+    - any
   durationMin: 60
-  budget: "mid"
+  budget: mid
 area: tokyo
+legacyHero: /hero/family-dinner-03.png
 ---
 
 ## TL;DR（先に結論）

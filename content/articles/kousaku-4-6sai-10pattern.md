@@ -1,20 +1,25 @@
 ---
 slug: kousaku-4-6sai-10pattern
 title: 4〜6歳と一緒にできる工作10パターン（家にあるもので）｜飾れる・遊べる保存版
-metaDescription: 4〜6歳と家の材料で作れる工作10選。ハサミ・ノリが使える年齢向けに、難易度・所要時間・完成品の飾り方、準備物の100均/Amazon別開示、安全注意まで明記した保存版。買い足し不要で回せます。
+metaDescription: >-
+  4〜6歳と家の材料で作れる工作10選。ハサミ・ノリが使える年齢向けに、難易度・所要時間・完成品の飾り方、準備物の100均/Amazon別開示、安全注意まで明記した保存版。買い足し不要で回せます。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/classroom-01.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/kousaku-4-6sai-10pattern.jpg
+area: all
 quickInfo:
-  ageRanges: ["4-6"]
-  place: ["home"]
+  ageRanges:
+    - 4-6
+  place:
+    - home
   weather: []
   durationMin: 30
-  budget: "free"
-lede: 実は4〜6歳の工作は「親が事前にカット→子が組む」分業で集中30分超。家の紙コップ・段ボール・折り紙で完成し、玄関に飾れるクオリティを狙う鉄板10本を保存版で。
+  budget: free
+lede: >-
+  実は4〜6歳の工作は「親が事前にカット→子が組む」分業で集中30分超。家の紙コップ・段ボール・折り紙で完成し、玄関に飾れるクオリティを狙う鉄板10本を保存版で。
+legacyHero: /hero/classroom-01.png
 ---
 
 ## 30秒でわかる答え｜4〜6歳の工作10パターン

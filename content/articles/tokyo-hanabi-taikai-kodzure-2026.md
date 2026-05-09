@@ -1,20 +1,27 @@
 ---
 slug: tokyo-hanabi-taikai-kodzure-2026
 title: 【2026年版】東京の子連れOK花火大会10選｜ベビーカーで行ける穴場
-metaDescription: 2026年の東京で子連れOKの花火大会10選。隅田川・神宮・東京湾・葛飾・足立・八王子の中から、ベビーカーで行ける穴場・席取り・退場ルートを子連れ視点で紹介します。
+metaDescription: >-
+  2026年の東京で子連れOKの花火大会10選。隅田川・神宮・東京湾・葛飾・足立・八王子の中から、ベビーカーで行ける穴場・席取り・退場ルートを子連れ視点で紹介します。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-05-07"
-updatedAt: "2026-05-08"
-hero: /hero/summer-water-02.png
-lede: 大規模花火は混雑で子連れには厳しいですが、選び方次第でベビーカーOKの穴場もあります。2026年に開催見込みの東京の花火大会から、子連れに優しい10会場をピックアップしました。
+publishedAt: '2026-05-07'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-hanabi-taikai-kodzure-2026.jpg
+lede: >-
+  大規模花火は混雑で子連れには厳しいですが、選び方次第でベビーカーOKの穴場もあります。2026年に開催見込みの東京の花火大会から、子連れに優しい10会場をピックアップしました。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["sunny"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - sunny
   durationMin: 180
-  budget: "low"
+  budget: low
 area: tokyo
+legacyHero: /hero/summer-water-02.png
 ---
 
 ## 結論（先に知りたい人へ）

@@ -1,20 +1,28 @@
 ---
 slug: kosodate-tsukareta-jikan-no-tsukaikata-50
 title: 「もう疲れた」夜の30分の使い方50パターン｜疲労回復行動カタログ
-metaDescription: 育児で「もう疲れた」夜の30分、何をするか迷ったらこのカタログ。疲労回復に効く具体的すぎる行動50パターンを「やらない」より「これだけやる」視点で羅列。明日への充電に。
+metaDescription: >-
+  育児で「もう疲れた」夜の30分、何をするか迷ったらこのカタログ。疲労回復に効く具体的すぎる行動50パターンを「やらない」より「これだけやる」視点で羅列。明日への充電に。
 category: today-mawasu
 categoryName: 今日どう回す？
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/home-cozy-01.png
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kosodate-tsukareta-jikan-no-tsukaikata-50.jpg
 area: all
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "low"
-lede: 育児で疲れ果てた夜、30分だけ自分のために使えるとしたら何する？「やらない」より「これだけやる」を50パターン具体化。明日への充電が一番効く行動を選んでください。
+  budget: low
+lede: >-
+  育児で疲れ果てた夜、30分だけ自分のために使えるとしたら何する？「やらない」より「これだけやる」を50パターン具体化。明日への充電が一番効く行動を選んでください。
+legacyHero: /hero/home-cozy-01.png
 ---
 
 ## 結論（先に知りたい人へ）

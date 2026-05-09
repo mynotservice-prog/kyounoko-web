@@ -4,16 +4,23 @@ title: 子連れお花見ベストスポット8選｜東京都内・混雑回避
 metaDescription: 東京都内で子連れお花見におすすめの8スポット。ベビーカー動線・トイレ・シート敷ける広さ・混雑回避の時間帯まで、0〜6歳と行く前提で比較しました。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/sakura-02.png
-area: "tokyo"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/sakura-ohanami-kodzure-spots.jpg
+area: tokyo
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["sunny"]
-  budget: "free"
-lede: 子連れのお花見は「トイレ・ベビーカー動線・シートを広げられる芝生」の3点を先に決めると一気に楽になります。都内で0〜6歳と行ける8スポットを、混雑のピーク時間ごと比較しました。
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - sunny
+  budget: free
+lede: >-
+  子連れのお花見は「トイレ・ベビーカー動線・シートを広げられる芝生」の3点を先に決めると一気に楽になります。都内で0〜6歳と行ける8スポットを、混雑のピーク時間ごと比較しました。
+legacyHero: /hero/sakura-02.png
 ---
 
 ## 結論（先に知りたい人へ）

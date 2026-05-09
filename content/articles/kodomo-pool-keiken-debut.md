@@ -4,17 +4,22 @@ title: 【3〜6歳】子供のスイミングデビュー完全ガイド｜時�
 metaDescription: 3〜6歳の子供のスイミングデビュー完全ガイド。始める時期、教室選びのチェックポイント、初回準備、月謝相場、ベビースイミングとの違いを実例付きで解説します。
 category: yakudatsu
 categoryName: 役立つもの
-publishedAt: "2026-05-07"
-updatedAt: "2026-05-08"
-hero: /hero/summer-water-03.png
+publishedAt: '2026-05-07'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kodomo-pool-keiken-debut.jpg
 lede: スイミングは子供の習い事ランキング上位の定番。3〜6歳でデビューする子の時期選び・教室選び・準備物・初回の心得を、月謝相場や送迎事情まで含めて整理します。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["indoor"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - indoor
+  weather:
+    - any
   durationMin: 60
-  budget: "mid"
+  budget: mid
 area: all
+legacyHero: /hero/summer-water-03.png
 ---
 
 ## 結論（先に知りたい人へ）

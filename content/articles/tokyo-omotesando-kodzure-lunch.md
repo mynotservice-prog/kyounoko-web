@@ -1,20 +1,28 @@
 ---
 slug: tokyo-omotesando-kodzure-lunch
 title: 表参道・原宿 子連れランチ10選【0-6歳】カフェ兼用
-metaDescription: 表参道・原宿で子連れOKの店探しに困っていませんか。表参道ヒルズ・東急プラザ表参道原宿のベビーカーOK・カフェ兼用可10店を厳選。年齢別おすすめ、ベビーカー動線、平日／週末の混み具合まで整理し迷わず選べます。
+metaDescription: >-
+  表参道・原宿で子連れOKの店探しに困っていませんか。表参道ヒルズ・東急プラザ表参道原宿のベビーカーOK・カフェ兼用可10店を厳選。年齢別おすすめ、ベビーカー動線、平日／週末の混み具合まで整理し迷わず選べます。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: "2026-04-20"
-updatedAt: "2026-05-08"
-hero: /hero/family-dinner-01.png
-lede: 表参道・原宿は大人の街イメージですが、**表参道ヒルズ・東急プラザ表参道原宿**は子連れ動線が整い、カフェ兼用で使える店が揃います。10店を条件別にまとめました。
+publishedAt: '2026-04-20'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-omotesando-kodzure-lunch.jpg
+lede: >-
+  表参道・原宿は大人の街イメージですが、**表参道ヒルズ・東急プラザ表参道原宿**は子連れ動線が整い、カフェ兼用で使える店が揃います。10店を条件別にまとめました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["indoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - indoor
+  weather:
+    - any
   durationMin: 60
-  budget: "mid"
+  budget: mid
 area: tokyo
+legacyHero: /hero/family-dinner-01.png
 ---
 
 ## このページの見方

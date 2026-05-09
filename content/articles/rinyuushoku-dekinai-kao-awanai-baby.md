@@ -1,20 +1,26 @@
 ---
 slug: rinyuushoku-dekinai-kao-awanai-baby
 title: 離乳食を食べない赤ちゃん完全対応7ステップ｜月齢別の工夫
-metaDescription: 離乳食を食べない赤ちゃんに悩むママ・パパへ。5〜6ヶ月、7〜8ヶ月、9〜11ヶ月、1歳代の月齢別に、食べない理由と具体的な7つの工夫、体験談、医師に相談すべき目安までまとめました。
+metaDescription: >-
+  離乳食を食べない赤ちゃんに悩むママ・パパへ。5〜6ヶ月、7〜8ヶ月、9〜11ヶ月、1歳代の月齢別に、食べない理由と具体的な7つの工夫、体験談、医師に相談すべき目安までまとめました。
 category: today-taberu
 categoryName: 今日たべる
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/food-japan-03.png
-lede: 「スプーンを口に入れても顔を背ける」「口を開けてくれない」離乳食を始めたばかりの赤ちゃんに戸惑うママ・パパへ。月齢別の原因と、今日から試せる7つの工夫を体験談つきで紹介します。
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/rinyuushoku-dekinai-kao-awanai-baby.jpg
+lede: >-
+  「スプーンを口に入れても顔を背ける」「口を開けてくれない」離乳食を始めたばかりの赤ちゃんに戸惑うママ・パパへ。月齢別の原因と、今日から試せる7つの工夫を体験談つきで紹介します。
 quickInfo:
-  ageRanges: ["0-1"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "free"
-area: "all"
+  budget: free
+area: all
+legacyHero: /hero/food-japan-03.png
 ---
 
 ## 結論（先に知りたい人へ）

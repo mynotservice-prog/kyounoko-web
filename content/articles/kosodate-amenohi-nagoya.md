@@ -4,17 +4,26 @@ title: 名古屋で雨の日に使える子連れ屋内スポット10選｜0〜6
 metaDescription: 名古屋市内と近郊から、雨の日・猛暑日・寒波日に助かる屋内スポットを10カ所厳選。駐車場・授乳室・対象年齢・混雑のコツまで、子連れ前提で実用的にまとめました。
 category: today-doko
 categoryName: 今日どこ行く
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/japan-rural-02.png
-lede: 雨の日の名古屋でも、幼児が思いきり走れる屋内スポットは意外とたくさんあります。実はこの10スポット、ガチで「予約不要・ベビーOK・冷暖房完備」を全クリアした中部地区の鉄板リスト。授乳室・ベビーカー動線まで完全開示します。
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kosodate-amenohi-nagoya.jpg
+lede: >-
+  雨の日の名古屋でも、幼児が思いきり走れる屋内スポットは意外とたくさんあります。実はこの10スポット、ガチで「予約不要・ベビーOK・冷暖房完備」を全クリアした中部地区の鉄板リスト。授乳室・ベビーカー動線まで完全開示します。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["indoor"]
-  weather: ["rain", "heat", "cold"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - indoor
+  weather:
+    - rain
+    - heat
+    - cold
   durationMin: 240
-  budget: "low"
-area: "aichi"
+  budget: low
+area: aichi
+legacyHero: /hero/japan-rural-02.png
 ---
 
 ## ⚡ ひと目でわかる｜名古屋雨の日サマリー

@@ -1,20 +1,25 @@
 ---
 slug: iyaiya-osaete-tsukeru-shitsuke
 title: イヤイヤ期しつけ線引き【2-3歳】譲る5つ・譲らない5つ
-metaDescription: イヤイヤ期のしつけ、どこまで譲るべきか迷っていませんか。2-3歳で譲っていい5場面、譲れない5場面を具体的に整理。声かけ例、限界ラインの見極め、親の疲労を減らすコツまで3分で確認でき、明日から判断軸が明確になります。
+metaDescription: >-
+  イヤイヤ期のしつけ、どこまで譲るべきか迷っていませんか。2-3歳で譲っていい5場面、譲れない5場面を具体的に整理。声かけ例、限界ラインの見極め、親の疲労を減らすコツまで3分で確認でき、明日から判断軸が明確になります。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/parent-child-03.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/iyaiya-osaete-tsukeru-shitsuke.jpg
 lede: イヤイヤ期は譲るべきか、しつけるべきか。2〜3歳の現場で役立つ「譲っていい5つ」「譲れない5つ」の判断軸、声かけ例、親の疲労を減らすコツまでまとめました。
 quickInfo:
-  ageRanges: ["2-3"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "free"
-area: "all"
+  budget: free
+area: all
+legacyHero: /hero/parent-child-03.png
 ---
 
 ## 結論（先に知りたい人へ）

@@ -4,17 +4,22 @@ title: お盆の子連れ帰省 新幹線・飛行機完全ガイド｜0〜3歳�
 metaDescription: お盆の子連れ帰省を0〜3歳と乗り切る完全ガイド。新幹線の座席戦略、飛行機の機内食・荷物、車の休憩タイミング、混雑回避の予約タイミングを具体的に解説します。
 category: today-mawasu
 categoryName: 今日どう回す？
-publishedAt: "2026-05-06"
-updatedAt: "2026-05-08"
-hero: /hero/baby-02.png
+publishedAt: '2026-05-06'
+updatedAt: '2026-05-09'
+hero: /hero-ai/obon-kisei-shintetsu-baby.jpg
 lede: お盆の帰省は0〜3歳との移動が最大の山場。新幹線・飛行機・車のそれぞれで、子の負担を最小化する座席戦略・荷物・休憩タイミングを年齢別にナビゲートします。
 quickInfo:
-  ageRanges: ["0-1", "2-3"]
-  place: ["outdoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+  place:
+    - outdoor
+  weather:
+    - any
   durationMin: 240
-  budget: "high"
+  budget: high
 area: all
+legacyHero: /hero/baby-02.png
 ---
 
 ## 結論（先に知りたい人へ）

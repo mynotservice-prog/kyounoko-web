@@ -1,20 +1,28 @@
 ---
 slug: tokyo-shinagawa-kodzure-lunch
 title: 品川 子連れランチ10選【0-6歳】駅ビル中心で迷わない
-metaDescription: 品川駅で子連れランチの店探しに困っていませんか。アトレ品川・エキュート品川など駅ビル中心に、ベビーカー入店OK・キッズメニュー・個室の10店を厳選。年齢別おすすめ、新幹線移動前後の動線まで整理し3分で決まります。
+metaDescription: >-
+  品川駅で子連れランチの店探しに困っていませんか。アトレ品川・エキュート品川など駅ビル中心に、ベビーカー入店OK・キッズメニュー・個室の10店を厳選。年齢別おすすめ、新幹線移動前後の動線まで整理し3分で決まります。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: "2026-04-20"
-updatedAt: "2026-05-08"
-hero: /hero/family-dinner-01.png
-lede: 品川駅は新幹線利用者・ビジネス客多めの駅ですが、**アトレ品川・エキュート品川**の駅ビルはベビーカー動線が整い、子連れランチに使える店が揃っています。10店を条件別にまとめました。
+publishedAt: '2026-04-20'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-shinagawa-kodzure-lunch.jpg
+lede: >-
+  品川駅は新幹線利用者・ビジネス客多めの駅ですが、**アトレ品川・エキュート品川**の駅ビルはベビーカー動線が整い、子連れランチに使える店が揃っています。10店を条件別にまとめました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["indoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - indoor
+  weather:
+    - any
   durationMin: 60
-  budget: "mid"
+  budget: mid
 area: tokyo
+legacyHero: /hero/family-dinner-01.png
 ---
 
 ## TL;DR（3行要約）

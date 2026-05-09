@@ -1,19 +1,27 @@
 ---
 slug: natsuyasumi-keikaku-2026-kodzure
 title: 【2026年版】夏休みの過ごし方完全ガイド｜0〜6歳と楽しむ計画リスト
-metaDescription: 2026年の夏休み（7〜8月）を0〜6歳の子と過ごす計画ガイド。月別おすすめプラン、家こもり・お出かけ・帰省・旅行のバランス、東京周辺の子連れスポットまで具体的に解説します。
+metaDescription: >-
+  2026年の夏休み（7〜8月）を0〜6歳の子と過ごす計画ガイド。月別おすすめプラン、家こもり・お出かけ・帰省・旅行のバランス、東京周辺の子連れスポットまで具体的に解説します。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-05-05"
-updatedAt: "2026-05-08"
-hero: /hero/tokyo-03.png
+publishedAt: '2026-05-05'
+updatedAt: '2026-05-09'
+hero: /hero-ai/natsuyasumi-keikaku-2026-kodzure.jpg
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["indoor", "outdoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - indoor
+    - outdoor
+  weather:
+    - any
   durationMin: 180
-  budget: "mid"
+  budget: mid
 area: tokyo
+legacyHero: /hero/tokyo-03.png
 ---
 
 ## 結論（先に知りたい人へ）

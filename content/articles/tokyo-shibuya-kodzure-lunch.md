@@ -1,20 +1,28 @@
 ---
 slug: tokyo-shibuya-kodzure-lunch
 title: 渋谷 子連れランチ10選【0-6歳】個室・ベビー椅子あり
-metaDescription: 渋谷駅で子連れランチの店探しに困っていませんか。徒歩5分圏内の個室・ベビー椅子・キッズメニュー対応10店を、ヒカリエ・スクランブルスクエアなど駅ビル中心に厳選。年齢別おすすめ、混雑時間まで整理し迷わず予約できます。
+metaDescription: >-
+  渋谷駅で子連れランチの店探しに困っていませんか。徒歩5分圏内の個室・ベビー椅子・キッズメニュー対応10店を、ヒカリエ・スクランブルスクエアなど駅ビル中心に厳選。年齢別おすすめ、混雑時間まで整理し迷わず予約できます。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: "2026-04-20"
-updatedAt: "2026-05-08"
-hero: /hero/family-dinner-01.png
-lede: 渋谷駅は大人向けの店が多いイメージですが、駅ビル・ヒカリエ・スクランブルスクエアなど**子連れ動線の整った商業施設**を使えば安心です。個室・ベビー椅子ありの10店をまとめました。
+publishedAt: '2026-04-20'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-shibuya-kodzure-lunch.jpg
+lede: >-
+  渋谷駅は大人向けの店が多いイメージですが、駅ビル・ヒカリエ・スクランブルスクエアなど**子連れ動線の整った商業施設**を使えば安心です。個室・ベビー椅子ありの10店をまとめました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["indoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - indoor
+  weather:
+    - any
   durationMin: 60
-  budget: "mid"
+  budget: mid
 area: tokyo
+legacyHero: /hero/family-dinner-01.png
 ---
 
 ## TL;DR（先に結論）

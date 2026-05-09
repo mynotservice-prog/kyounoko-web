@@ -1,20 +1,28 @@
 ---
 slug: tokyo-23ku-family-friendly-area-rankings-3
 title: ファミリー目線で選ぶ東京23区の住みやすさTOP3｜世田谷・江戸川・杉並比較
-metaDescription: ファミリー視点で東京23区を比較し、世田谷区・江戸川区・杉並区のTOP3を選定。子連れランチ環境・保育園待機児童数・公園密度・教育環境の4軸でランキング化した独自比較記事。
+metaDescription: >-
+  ファミリー視点で東京23区を比較し、世田谷区・江戸川区・杉並区のTOP3を選定。子連れランチ環境・保育園待機児童数・公園密度・教育環境の4軸でランキング化した独自比較記事。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/tokyo-01.png
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-23ku-family-friendly-area-rankings-3.jpg
 area: tokyo
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - any
   durationMin: 60
-  budget: "low"
-lede: 東京23区から「ファミリー目線で住みやすい」TOP3を選定。世田谷・江戸川・杉並の3区を子連れランチ・保育・公園・教育の4軸で比較し、家庭タイプ別の向き不向きをまとめました。
+  budget: low
+lede: >-
+  東京23区から「ファミリー目線で住みやすい」TOP3を選定。世田谷・江戸川・杉並の3区を子連れランチ・保育・公園・教育の4軸で比較し、家庭タイプ別の向き不向きをまとめました。
+legacyHero: /hero/tokyo-01.png
 ---
 
 ## 結論（先に知りたい人へ）

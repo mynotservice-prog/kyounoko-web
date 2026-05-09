@@ -1,20 +1,28 @@
 ---
 slug: kosodate-kanto-shizen-10
 title: 関東の子連れ自然スポット10選｜森・川・牧場で五感を育てる一日
-metaDescription: 関東1都6県から、幼児連れで安心して自然体験できるスポットを10カ所厳選。アクセス・ベビーカー可否・季節のおすすめ・雨天代替案まで、子育て目線で実用的に紹介します。
+metaDescription: >-
+  関東1都6県から、幼児連れで安心して自然体験できるスポットを10カ所厳選。アクセス・ベビーカー可否・季節のおすすめ・雨天代替案まで、子育て目線で実用的に紹介します。
 category: today-doko
 categoryName: 今日どこ行く
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/nature-03.png
-lede: 都心から車で2時間圏内。実はこの10スポット、ガチで「片道2時間以内・歩行1km以下・トイレ2箇所以上」を全クリアした関東1都6県の自然体験リスト。マザー牧場・那須どうぶつ王国・ムーミンバレーパークまで料金・予約まで完全開示。
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kosodate-kanto-shizen-10.jpg
+lede: >-
+  都心から車で2時間圏内。実はこの10スポット、ガチで「片道2時間以内・歩行1km以下・トイレ2箇所以上」を全クリアした関東1都6県の自然体験リスト。マザー牧場・那須どうぶつ王国・ムーミンバレーパークまで料金・予約まで完全開示。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["sunny", "any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - sunny
+    - any
   durationMin: 240
-  budget: "low"
-area: "kanto"
+  budget: low
+area: kanto
+legacyHero: /hero/nature-03.png
 ---
 
 ## ⚡ ひと目でわかる｜関東自然スポットサマリー

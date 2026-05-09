@@ -4,17 +4,24 @@ title: 【2026年版】品川区の週末子連れスポット8選｜大井町�
 metaDescription: 品川区・大井町・武蔵小山エリアの2〜6歳ファミリー向け週末おでかけガイド。しながわ水族館・大井競馬場周辺・武蔵小山商店街などをローカル目線でまとめました。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-04-20"
-updatedAt: "2026-05-08"
-hero: /hero/tokyo-01.png
-lede: 品川区の大井町・武蔵小山は、23区の中でも「生活感と週末遊びが両立する」子育てエリア。しながわ水族館・大井競馬場周辺の公園・武蔵小山の商店街など、大げさすぎないファミリー向けスポットが揃います。この記事では2〜6歳の週末プランを実用目線でまとめました。
+publishedAt: '2026-04-20'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-shinagawa-ooimachi-weekend.jpg
+lede: >-
+  品川区の大井町・武蔵小山は、23区の中でも「生活感と週末遊びが両立する」子育てエリア。しながわ水族館・大井競馬場周辺の公園・武蔵小山の商店街など、大げさすぎないファミリー向けスポットが揃います。この記事では2〜6歳の週末プランを実用目線でまとめました。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["outdoor", "indoor"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+    - indoor
+  weather:
+    - any
   durationMin: 180
-  budget: "low"
+  budget: low
 area: tokyo
+legacyHero: /hero/tokyo-01.png
 ---
 
 ## 結論（先に知りたい人へ）

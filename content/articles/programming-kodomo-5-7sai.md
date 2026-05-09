@@ -1,20 +1,25 @@
 ---
 slug: programming-kodomo-5-7sai
 title: 5〜7歳のプログラミング入門｜無料で始められる教材10選
-metaDescription: 小学校プログラミング必修化で注目の5〜7歳向け入門。ScratchJr・ViscuitなどScreenベース、キュベット・Oziboなどロボット系、無料・有料教材を網羅。始め方、続け方、教室の選び方まで解説。
+metaDescription: >-
+  小学校プログラミング必修化で注目の5〜7歳向け入門。ScratchJr・ViscuitなどScreenベース、キュベット・Oziboなどロボット系、無料・有料教材を網羅。始め方、続け方、教室の選び方まで解説。
 category: narai
 categoryName: 習いごと
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/kid-study-03.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/programming-kodomo-5-7sai.jpg
 lede: 小学校でプログラミングが必修化、早めに触れさせたい親は急増中。5〜7歳から始められる無料・低価格の教材10選と、続けるコツ、教室の選び方を解説します。
 quickInfo:
-  ageRanges: ["4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "low"
-area: "all"
+  budget: low
+area: all
+legacyHero: /hero/kid-study-03.png
 ---
 
 ## 結論（先に知りたい人へ）

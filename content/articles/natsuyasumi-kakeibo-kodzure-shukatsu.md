@@ -4,17 +4,24 @@ title: 夏休みの家計対策ガイド｜外食・お出かけ・帰省コス�
 metaDescription: 夏休みの家計対策ガイド。0〜6歳の子と過ごす夏の食費・外食・お出かけ・帰省コストを管理する具体策と、節約Tipsを家計簿アプリ活用例とともに紹介します。
 category: yakudatsu
 categoryName: 役立つもの
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/home-cozy-03.png
-lede: 夏休みは子供の食費・お出かけ・帰省で家計が一気に圧迫されます。0〜6歳の子と過ごす40日間の出費を予算化し、メリハリをつけて使う具体的な家計術をまとめました。
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/natsuyasumi-kakeibo-kodzure-shukatsu.jpg
+lede: >-
+  夏休みは子供の食費・お出かけ・帰省で家計が一気に圧迫されます。0〜6歳の子と過ごす40日間の出費を予算化し、メリハリをつけて使う具体的な家計術をまとめました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 60
-  budget: "low"
+  budget: low
 area: all
+legacyHero: /hero/home-cozy-03.png
 ---
 
 ## 結論（先に知りたい人へ）

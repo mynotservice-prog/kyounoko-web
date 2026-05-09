@@ -4,17 +4,22 @@ title: 【夏弁当】傷まない子供向けレシピ7選｜保冷術と詰め
 metaDescription: 夏の弁当が傷まない子供向けレシピ7選。保冷剤の使い方、詰め方の順番、避けるべき食材、おすすめの主菜・副菜・主食を実用的に紹介します。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: "2026-05-07"
-updatedAt: "2026-05-08"
-hero: /hero/food-japan-01.png
+publishedAt: '2026-05-07'
+updatedAt: '2026-05-09'
+hero: /hero-ai/natsu-bento-itamanai-recipe-7.jpg
 lede: 7〜8月の保育園・幼稚園・遠足弁当は「傷まないこと」が最優先。子供向けの傷まないレシピ7選と、詰め方の順序・保冷術・避けるべき食材を実用的にまとめます。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
-  weather: ["sunny"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - sunny
   durationMin: 30
-  budget: "low"
+  budget: low
 area: all
+legacyHero: /hero/food-japan-01.png
 ---
 
 ## 結論（先に知りたい人へ）

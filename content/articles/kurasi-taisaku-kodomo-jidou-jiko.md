@@ -4,17 +4,23 @@ title: 家の中の子ども事故予防チェック｜0〜6歳の部屋別対�
 metaDescription: 家庭内事故は子どもの事故の約7割。0〜6歳の部屋別（リビング・キッチン・浴室・寝室）に具体的な対策20項目、月齢別の危険ポイント、応急処置まで整理しました。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/home-cozy-03.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kurasi-taisaku-kodomo-jidou-jiko.jpg
 lede: 子どもの事故の約7割は家の中で起きます。0〜6歳の月齢別・部屋別に、見落としがちな20の危険ポイントと具体的な対策、応急処置まで整理しました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 60
-  budget: "low"
-area: "all"
+  budget: low
+area: all
+legacyHero: /hero/home-cozy-03.png
 ---
 
 ## 結論（先に知りたい人へ）

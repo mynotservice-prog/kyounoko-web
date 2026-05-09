@@ -5,16 +5,19 @@ subtitle: 飾り・食事・招待客の段取りを性別別に整理
 metaDescription: 男の子（こどもの日）・女の子（ひな祭り）それぞれの初節句ガイド。飾り・食事・招待客・写真撮影・お祝いの受け取り方とお返しの段取りを完全網羅。
 category: gyouji
 categoryName: 季節と行事
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/baby-02.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/hatsuzekku-sugoshikata.jpg
+area: all
 quickInfo:
-  ageRanges: ["0-1"]
-  place: ["home"]
+  ageRanges:
+    - 0-1
+  place:
+    - home
   weather: []
-  budget: "mid"
+  budget: mid
 lede: 初節句（男の子5月5日・女の子3月3日）の過ごし方ガイド。飾り・食事・招待客・写真撮影・お祝いとお返しの段取りを性別別に整理しました。
+legacyHero: /hero/baby-02.png
 ---
 
 ## 結論（先に知りたい人へ）

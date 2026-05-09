@@ -4,17 +4,24 @@ title: 【2026年版】夏祭り子連れ攻略ガイド｜服装・持ち物・
 metaDescription: 2026年の夏祭りを0〜6歳の子と乗り切る攻略ガイド。服装・持ち物・トイレ事情・迷子対策・屋台選び・花火タイミングまで、混雑回避の具体策を網羅します。
 category: today-mawasu
 categoryName: 今日どう回す？
-publishedAt: "2026-05-06"
-updatedAt: "2026-05-08"
-hero: /hero/park-02.png
-lede: 2026年の夏祭りを0〜6歳と楽しむなら、混雑ピークと屋台ラッシュを避ける段取りが命。服装・持ち物・トイレ事情・迷子対策を踏まえ、子連れ向きの動線を組み立てます。
+publishedAt: '2026-05-06'
+updatedAt: '2026-05-09'
+hero: /hero-ai/natsumatsuri-kodzure-koryaku-2026.jpg
+lede: >-
+  2026年の夏祭りを0〜6歳と楽しむなら、混雑ピークと屋台ラッシュを避ける段取りが命。服装・持ち物・トイレ事情・迷子対策を踏まえ、子連れ向きの動線を組み立てます。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["sunny"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - sunny
   durationMin: 90
-  budget: "low"
+  budget: low
 area: all
+legacyHero: /hero/park-02.png
 ---
 
 ## 結論（先に知りたい人へ）

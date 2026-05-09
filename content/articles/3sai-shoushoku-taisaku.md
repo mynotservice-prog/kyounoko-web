@@ -1,19 +1,25 @@
 ---
 slug: 3sai-shoushoku-taisaku
 title: 【3歳の小食】食べる量が増える5ステップ｜2026年版・偏食対策
-metaDescription: 3歳が全然食べず栄養が心配ですよね。小食・偏食の原因別対処と、無理強いせず食べる量が増える5ステップを整理。相談すべきタイミング、実際に食べるレシピ例、親のNG行動まで3分で確認でき、今夜から試せます。
+metaDescription: >-
+  3歳が全然食べず栄養が心配ですよね。小食・偏食の原因別対処と、無理強いせず食べる量が増える5ステップを整理。相談すべきタイミング、実際に食べるレシピ例、親のNG行動まで3分で確認でき、今夜から試せます。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/family-dinner-02.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/3sai-shoushoku-taisaku.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
-  budget: "low"
-lede: 3歳の小食は「量」「味」「見た目」「食感」「環境」のどれかが引っかかっているだけ。原因を切り分け、無理強いしない境界線を守れば、1〜2か月で食べる量は増えます。
+  budget: low
+lede: >-
+  3歳の小食は「量」「味」「見た目」「食感」「環境」のどれかが引っかかっているだけ。原因を切り分け、無理強いしない境界線を守れば、1〜2か月で食べる量は増えます。
+legacyHero: /hero/family-dinner-02.png
 ---
 
 ## 結論（先に知りたい人へ）

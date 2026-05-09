@@ -1,19 +1,25 @@
 ---
 slug: akachan-asemo-taisaku-2026
 title: 【2026年版】赤ちゃんのあせも対策完全ガイド｜予防・ケア・受診目安
-metaDescription: 2026年版・赤ちゃんのあせも対策ガイド。汗拭き・着替え・室温の予防法、症状別の家庭ケア、受診を検討する目安を子連れ視点でまとめ。0〜2歳の梅雨〜夏の肌トラブルに備えます。
+metaDescription: >-
+  2026年版・赤ちゃんのあせも対策ガイド。汗拭き・着替え・室温の予防法、症状別の家庭ケア、受診を検討する目安を子連れ視点でまとめ。0〜2歳の梅雨〜夏の肌トラブルに備えます。
 category: yakudatsu
 categoryName: 役立つもの
-publishedAt: "2026-05-05"
-updatedAt: "2026-05-08"
-hero: /hero/baby-01.png
+publishedAt: '2026-05-05'
+updatedAt: '2026-05-09'
+hero: /hero-ai/akachan-asemo-taisaku-2026.jpg
 quickInfo:
-  ageRanges: ["0-1", "2-3"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "low"
+  budget: low
 area: all
+legacyHero: /hero/baby-01.png
 ---
 
 ## 結論（先に知りたい人へ）

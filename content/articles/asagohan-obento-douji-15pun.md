@@ -1,20 +1,26 @@
 ---
 slug: asagohan-obento-douji-15pun
 title: 朝ごはん＋お弁当15分同時調理【共働き】時短ガイド
-metaDescription: 朝の15分で朝食とお弁当を同時に作れず困っていませんか。共働きママの段取り術を、逆算タイムライン、前夜仕込み、同時調理のテク、定番おかず5パターンで整理。子の身支度と並行する動線まで3分で確認でき、明日から試せます。
+metaDescription: >-
+  朝の15分で朝食とお弁当を同時に作れず困っていませんか。共働きママの段取り術を、逆算タイムライン、前夜仕込み、同時調理のテク、定番おかず5パターンで整理。子の身支度と並行する動線まで3分で確認でき、明日から試せます。
 category: today-taberu
 categoryName: 今日たべる
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/food-fruit-03.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/asagohan-obento-douji-15pun.jpg
 lede: 出発まで残り15分、朝ごはんとお弁当を同時進行で完成させるワーママの技術。逆算タイムライン、前夜の仕込み、同時調理の3原則を体験談つきで紹介します。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 15
-  budget: "low"
-area: "all"
+  budget: low
+area: all
+legacyHero: /hero/food-fruit-03.png
 ---
 
 ## 結論（先に知りたい人へ）

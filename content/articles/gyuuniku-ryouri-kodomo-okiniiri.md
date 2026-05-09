@@ -4,17 +4,22 @@ title: こどもが喜ぶ牛肉料理7選｜2〜6歳が「おかわり」する�
 metaDescription: 幼児が食べやすい固さ・味付けで作る牛肉レシピを7品厳選。切り落とし・薄切り・ひき肉の3素材別に、分量・手順・つまずきポイント・アレンジまで詳しく解説します。
 category: today-taberu
 categoryName: 今日何食べる
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/food-kitchen-02.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/gyuuniku-ryouri-kodomo-okiniiri.jpg
 lede: 牛肉は鉄分・たんぱく質の宝庫ですが、「噛み切れない」「味が濃すぎる」で幼児が食べない失敗も多め。子が進んで食べる7レシピを、分量・手順とともに紹介します。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "mid"
-area: "all"
+  budget: mid
+area: all
+legacyHero: /hero/food-kitchen-02.png
 ---
 
 ## 結論（先に知りたい人へ）

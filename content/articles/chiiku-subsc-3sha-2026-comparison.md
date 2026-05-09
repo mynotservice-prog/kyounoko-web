@@ -1,20 +1,28 @@
 ---
 slug: chiiku-subsc-3sha-2026-comparison
 title: 【2026年】知育サブスク3社徹底比較｜こどもちゃれんじ・Z会・ワンダーボックス
-metaDescription: こどもちゃれんじ・Z会幼児・ワンダーボックスの3社を、料金・教材内容・対象年齢・解約しやすさ・続けやすさの5軸で徹底比較。実体験ベースで「うちはどれ？」を3分で判断。
+metaDescription: >-
+  こどもちゃれんじ・Z会幼児・ワンダーボックスの3社を、料金・教材内容・対象年齢・解約しやすさ・続けやすさの5軸で徹底比較。実体験ベースで「うちはどれ？」を3分で判断。
 category: narai
 categoryName: 習い事と学び
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/kid-learn-01.png
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/chiiku-subsc-3sha-2026-comparison.jpg
 area: all
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "low"
-lede: こどもちゃれんじ・Z会幼児・ワンダーボックス、知育サブスクの3定番を徹底比較。料金・内容・対象・解約しやすさ・続けやすさの5軸で並べ、家庭タイプ別の選び方も整理しました。
+  budget: low
+lede: >-
+  こどもちゃれんじ・Z会幼児・ワンダーボックス、知育サブスクの3定番を徹底比較。料金・内容・対象・解約しやすさ・続けやすさの5軸で並べ、家庭タイプ別の選び方も整理しました。
+legacyHero: /hero/kid-learn-01.png
 ---
 
 ## 結論（先に知りたい人へ）

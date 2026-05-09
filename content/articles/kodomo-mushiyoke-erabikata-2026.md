@@ -1,19 +1,26 @@
 ---
 slug: kodomo-mushiyoke-erabikata-2026
 title: 【2026年版】子供の虫よけの選び方｜0歳から使える安心ブランド比較
-metaDescription: 2026年最新の子供向け虫よけ選び方ガイド。ディート濃度・イカリジン・ハーブ系の使い分けを年齢別に解説。0歳・1〜3歳・4〜6歳それぞれに合う安心タイプの比較表付き。
+metaDescription: >-
+  2026年最新の子供向け虫よけ選び方ガイド。ディート濃度・イカリジン・ハーブ系の使い分けを年齢別に解説。0歳・1〜3歳・4〜6歳それぞれに合う安心タイプの比較表付き。
 category: today-mawasu
 categoryName: 今日どう回す？
-publishedAt: "2026-05-05"
-updatedAt: "2026-05-08"
-hero: /hero/nature-02.png
+publishedAt: '2026-05-05'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kodomo-mushiyoke-erabikata-2026.jpg
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - any
   durationMin: 10
-  budget: "low"
+  budget: low
 area: all
+legacyHero: /hero/nature-02.png
 ---
 
 ## 結論（先に知りたい人へ）

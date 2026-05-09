@@ -1,19 +1,25 @@
 ---
 slug: rakuten-marathon-kosodate-10sen
 title: 楽天マラソン 子育てグッズ10選【2026】最大+9%還元
-metaDescription: 楽天マラソンで何を買うべきか迷っていませんか。子育て世帯向けに10店舗買い回りで損しない厳選10品を、ベビーカー・抱っこ紐・知育玩具・おむつ・洗剤などのカテゴリ別に整理。ポイント還元を最大化する買う順番も3分で確認できます。
+metaDescription: >-
+  楽天マラソンで何を買うべきか迷っていませんか。子育て世帯向けに10店舗買い回りで損しない厳選10品を、ベビーカー・抱っこ紐・知育玩具・おむつ・洗剤などのカテゴリ別に整理。ポイント還元を最大化する買う順番も3分で確認できます。
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-04-24'
-updatedAt: "2026-05-08"
-hero: /hero/commerce-01.png
+updatedAt: '2026-05-09'
+hero: /hero-ai/rakuten-marathon-kosodate-10sen.jpg
 area: national
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home", "outdoor"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+    - outdoor
   weather: []
   durationMin: 30
-  budget: "mid"
+  budget: mid
 lede: お買い物マラソンの10店舗買い回りは、子育て世帯にとって最大級のポイント還元チャンス。本記事では10カテゴリから厳選した定番商品と選び方をまとめました。
 tldr: |-
   - お買い物マラソンは10店舗買い回りで最大+9%還元（上限あり）
@@ -21,6 +27,7 @@ tldr: |-
   - SPU（スーパーポイントアップ）との併用で合計10〜15%還元も狙える
 tags:
   - muryou
+legacyHero: /hero/commerce-01.png
 ---
 
 ## TL;DR

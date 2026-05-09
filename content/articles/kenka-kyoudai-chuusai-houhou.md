@@ -1,20 +1,26 @@
 ---
 slug: kenka-kyoudai-chuusai-houhou
 title: 兄弟喧嘩の仲裁方法｜ケガなくきょうだいが仲良くなる7つのコツ
-metaDescription: 兄弟喧嘩に疲れたパパママへ。年齢差別の仲裁法、叩く・奪うへの対応、上の子・下の子の気持ちのケア、親が介入すべきタイミング、仲良し兄弟に育てる7つのコツを体験談つきで解説します。
+metaDescription: >-
+  兄弟喧嘩に疲れたパパママへ。年齢差別の仲裁法、叩く・奪うへの対応、上の子・下の子の気持ちのケア、親が介入すべきタイミング、仲良し兄弟に育てる7つのコツを体験談つきで解説します。
 category: today-mawasu
 categoryName: 今日まわす
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/parent-child-01.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kenka-kyoudai-chuusai-houhou.jpg
 lede: 毎日のように起きる兄弟喧嘩にうんざりしているパパママへ。発達心理の観点から、年齢差別の仲裁法と仲良し兄弟に育つ7つのコツを紹介します。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "free"
-area: "all"
+  budget: free
+area: all
+legacyHero: /hero/parent-child-01.png
 ---
 
 ## TL;DR（3行まとめ）

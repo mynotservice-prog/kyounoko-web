@@ -1,21 +1,33 @@
 ---
 slug: chiiku-subsc-hikaku-4sha
 title: 知育玩具サブスク4社比較【0-6歳】月額3000円から
-metaDescription: 知育玩具サブスクどれを選ぶか迷っていませんか。トイサブ・ChaChaCha・AndTOYBOX・キッズラボラトリー4社を、月額・対象年齢・1回の数・交換頻度・プランナー・衛生管理で比較表に整理。子のタイプ別おすすめが3分で決まります。
+metaDescription: >-
+  知育玩具サブスクどれを選ぶか迷っていませんか。トイサブ・ChaChaCha・AndTOYBOX・キッズラボラトリー4社を、月額・対象年齢・1回の数・交換頻度・プランナー・衛生管理で比較表に整理。子のタイプ別おすすめが3分で決まります。
 category: yakudatsu
 categoryName: 役立つもの
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/toddler-play-02.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/chiiku-subsc-hikaku-4sha.jpg
+area: all
 quickInfo:
-  ageRanges: ["0-1", "1-2", "2-3", "4-6"]
-  place: ["home"]
+  ageRanges:
+    - 0-1
+    - 1-2
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
   durationMin: 5
-  budget: "mid"
-lede: 知育玩具サブスクは月額3,000〜4,000円で、対象年齢と個別プランナーの質で差がつきます。トイサブ・Cha Cha Cha・AndTOYBOX・キッズラボラトリーの4社を徹底比較します。
-speakableSummary: 知育玩具サブスクの主要4社は、業界最大手のトイサブ！（月3,674円・3ヶ月〜6歳・継続率97%）、コスパのCha Cha Cha（月3,910円・初月1円キャンペーンあり）、事前確認できるAnd TOYBOX（月3,278円〜・LINEで交換依頼可）、30日返金保証のキッズラボラトリー（月2,574円〜・送料別途1,100円）。月額目安は3,000〜4,500円で、目的別に選ぶのが基本とされます。料金は2026年4月時点で公式要確認。
+  budget: mid
+lede: >-
+  知育玩具サブスクは月額3,000〜4,000円で、対象年齢と個別プランナーの質で差がつきます。トイサブ・Cha Cha
+  Cha・AndTOYBOX・キッズラボラトリーの4社を徹底比較します。
+speakableSummary: >-
+  知育玩具サブスクの主要4社は、業界最大手のトイサブ！（月3,674円・3ヶ月〜6歳・継続率97%）、コスパのCha Cha
+  Cha（月3,910円・初月1円キャンペーンあり）、事前確認できるAnd
+  TOYBOX（月3,278円〜・LINEで交換依頼可）、30日返金保証のキッズラボラトリー（月2,574円〜・送料別途1,100円）。月額目安は3,000〜4,500円で、目的別に選ぶのが基本とされます。料金は2026年4月時点で公式要確認。
+legacyHero: /hero/toddler-play-02.png
 ---
 
 ## 30秒でわかる答え｜知育サブスク4社

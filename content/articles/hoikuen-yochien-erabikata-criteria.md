@@ -1,20 +1,26 @@
 ---
 slug: hoikuen-yochien-erabikata-criteria
 title: 保育園 vs 幼稚園 vs こども園｜2026年版・選び方の決定版チェックリスト
-metaDescription: 保育園・幼稚園・こども園の違いを共働き/専業家庭別に整理。各園の特徴、向いている家庭、見学時の20項目チェックリストを2026年版で解説。決定版の選び方ガイド。
+metaDescription: >-
+  保育園・幼稚園・こども園の違いを共働き/専業家庭別に整理。各園の特徴、向いている家庭、見学時の20項目チェックリストを2026年版で解説。決定版の選び方ガイド。
 category: yakudatsu
 categoryName: 役立つもの
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/classroom-01.png
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/hoikuen-yochien-erabikata-criteria.jpg
 area: all
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
   place: []
   weather: []
   durationMin: 60
-  budget: "mid"
-lede: 保育園・幼稚園・こども園、結局どこに入れる？2026年版で「共働きor専業」「教育方針」「料金」の3視点から整理。最後に見学20項目チェックリストで判断スピードを上げます。
+  budget: mid
+lede: >-
+  保育園・幼稚園・こども園、結局どこに入れる？2026年版で「共働きor専業」「教育方針」「料金」の3視点から整理。最後に見学20項目チェックリストで判断スピードを上げます。
+legacyHero: /hero/classroom-01.png
 ---
 
 ## 結論（先に知りたい人へ）

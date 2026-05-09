@@ -4,17 +4,22 @@ title: 【夏休み】東京の子連れOKおばけ屋敷5選｜怖さ控えめ�
 metaDescription: 夏休みに楽しめる東京の子連れOKおばけ屋敷5選。怖さ控えめで初体験向け、年齢適合・所要時間・料金を子連れ視点で紹介します。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/tokyo-01.png
-lede: 「おばけ屋敷デビュー」を考える親に向けて、東京の子連れOK系のお化け屋敷を5箇所ピックアップ。怖さレベル・年齢適合・料金・所要時間まで子連れ視点でナビゲートします。
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/obake-yashiki-kodzure-tokyo.jpg
+lede: >-
+  「おばけ屋敷デビュー」を考える親に向けて、東京の子連れOK系のお化け屋敷を5箇所ピックアップ。怖さレベル・年齢適合・料金・所要時間まで子連れ視点でナビゲートします。
 quickInfo:
-  ageRanges: ["4-6"]
-  place: ["indoor"]
-  weather: ["any"]
+  ageRanges:
+    - 4-6
+  place:
+    - indoor
+  weather:
+    - any
   durationMin: 30
-  budget: "low"
+  budget: low
 area: tokyo
+legacyHero: /hero/tokyo-01.png
 ---
 
 ## 結論（先に知りたい人へ）

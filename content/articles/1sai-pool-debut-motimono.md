@@ -1,19 +1,24 @@
 ---
 slug: 1sai-pool-debut-motimono
 title: 【1歳】はじめてのプールデビュー持ち物リスト｜失敗しない準備ガイド
-metaDescription: 1歳のプールデビューに必要な15項目の持ち物チェックリスト。スイムパンツ・UVラッシュガード・タオル・着替えなど、家庭プールから公共プールまで失敗しない準備を解説。
+metaDescription: >-
+  1歳のプールデビューに必要な15項目の持ち物チェックリスト。スイムパンツ・UVラッシュガード・タオル・着替えなど、家庭プールから公共プールまで失敗しない準備を解説。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: "2026-05-05"
-updatedAt: "2026-05-08"
-hero: /hero/summer-water-02.png
+publishedAt: '2026-05-05'
+updatedAt: '2026-05-09'
+hero: /hero-ai/1sai-pool-debut-motimono.jpg
 quickInfo:
-  ageRanges: ["0-1"]
-  place: ["outdoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+  place:
+    - outdoor
+  weather:
+    - any
   durationMin: 60
-  budget: "low"
+  budget: low
 area: all
+legacyHero: /hero/summer-water-02.png
 ---
 
 ## 結論（先に知りたい人へ）

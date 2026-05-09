@@ -4,17 +4,23 @@ title: 子供と楽しむ虫取り完全ガイド｜カブト・クワガタ・�
 metaDescription: 子供との虫取り完全ガイド。カブトムシ・クワガタ・セミの採集時期と場所、道具選び、捕獲方法、飼育の注意点を子連れ視点で詳しく解説します。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/nature-01.png
-lede: 「虫が好き」な子に応える夏の定番アクティビティ。カブト・クワガタ・セミの採集時期、必要な道具、捕獲のコツ、飼育の基本まで、4〜6歳と楽しむ虫取りをまとめました。
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/mushikago-kodomo-kankatsu.jpg
+lede: >-
+  「虫が好き」な子に応える夏の定番アクティビティ。カブト・クワガタ・セミの採集時期、必要な道具、捕獲のコツ、飼育の基本まで、4〜6歳と楽しむ虫取りをまとめました。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["sunny"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - sunny
   durationMin: 120
-  budget: "low"
+  budget: low
 area: all
+legacyHero: /hero/nature-01.png
 ---
 
 ## 結論（先に知りたい人へ）

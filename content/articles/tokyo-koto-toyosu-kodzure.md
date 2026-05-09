@@ -1,20 +1,29 @@
 ---
 slug: tokyo-koto-toyosu-kodzure
 title: 【2026年版】豊洲・有明の子連れスポット8選｜ベビーカーで回れる
-metaDescription: 江東区・豊洲・有明エリアの子連れおでかけ完全ガイド。大型商業施設・水辺公園・屋内遊び場を、2〜6歳ファミリー目線でまとめたローカルガイド。ベビーカー動線も明記。
+metaDescription: >-
+  江東区・豊洲・有明エリアの子連れおでかけ完全ガイド。大型商業施設・水辺公園・屋内遊び場を、2〜6歳ファミリー目線でまとめたローカルガイド。ベビーカー動線も明記。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-04-20"
-updatedAt: "2026-05-08"
-hero: /hero/tokyo-01.png
-lede: 江東区の豊洲・有明エリアは、23区でも屈指の子連れフレンドリーゾーン。大型商業施設・広い公園・水辺・屋内遊び場が歩いて回れる距離にコンパクトに集まっています。この記事では2〜6歳ファミリーが週末 or 平日お出かけに使える江東区エリアのスポットを整理しました。
+publishedAt: '2026-04-20'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-koto-toyosu-kodzure.jpg
+lede: >-
+  江東区の豊洲・有明エリアは、23区でも屈指の子連れフレンドリーゾーン。大型商業施設・広い公園・水辺・屋内遊び場が歩いて回れる距離にコンパクトに集まっています。この記事では2〜6歳ファミリーが週末
+  or 平日お出かけに使える江東区エリアのスポットを整理しました。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["outdoor", "indoor"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+    - indoor
+  weather:
+    - any
   durationMin: 180
-  budget: "low"
+  budget: low
 area: tokyo
+legacyHero: /hero/tokyo-01.png
 ---
 
 ## 結論（先に知りたい人へ）

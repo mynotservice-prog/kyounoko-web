@@ -1,20 +1,28 @@
 ---
 slug: tokyo-line-family-friendly-ranking
 title: 子連れ移動に強い東京の路線TOP10｜駅密度×ベビーカー◎率で算出
-metaDescription: きょうのこ独自集計で東京の40路線を比較。駅あたり子連れOK店数とベビーカー◎率を組み合わせた「路線家族度」で、子連れ移動に強い路線TOP10を発表。引っ越しや沿線選びの独自データ分析。
+metaDescription: >-
+  きょうのこ独自集計で東京の40路線を比較。駅あたり子連れOK店数とベビーカー◎率を組み合わせた「路線家族度」で、子連れ移動に強い路線TOP10を発表。引っ越しや沿線選びの独自データ分析。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/parent-child-01.png
-lede: 「どの沿線に住むと子連れに便利？」きょうのこ独自集計で東京40路線を分析。**駅あたり店舗数×ベビーカー◎率**で算出した「路線家族度TOP10」を発表します。引っ越し・保育園選びの独自データ。
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-line-family-friendly-ranking.jpg
+lede: >-
+  「どの沿線に住むと子連れに便利？」きょうのこ独自集計で東京40路線を分析。**駅あたり店舗数×ベビーカー◎率**で算出した「路線家族度TOP10」を発表します。引っ越し・保育園選びの独自データ。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - any
   durationMin: 60
-  budget: "low"
+  budget: low
 area: tokyo
+legacyHero: /hero/parent-child-01.png
 ---
 
 ## 結論（先に知りたい人へ）

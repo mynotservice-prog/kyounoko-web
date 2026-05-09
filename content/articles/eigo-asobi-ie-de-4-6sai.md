@@ -1,20 +1,25 @@
 ---
 slug: eigo-asobi-ie-de-4-6sai
 title: 家でできる英語遊び4〜6歳向け10選｜英語教室なしでも身につく方法
-metaDescription: 英語教室に通わずに家で英語力を育てる4〜6歳向けの遊び10選。歌・絵本・動画・ゲーム・英会話の日常化まで、親が英語苦手でも続けられる具体的な進め方、教材比較、体験談を紹介します。
+metaDescription: >-
+  英語教室に通わずに家で英語力を育てる4〜6歳向けの遊び10選。歌・絵本・動画・ゲーム・英会話の日常化まで、親が英語苦手でも続けられる具体的な進め方、教材比較、体験談を紹介します。
 category: narai
 categoryName: 習いごと
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/kid-study-03.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/eigo-asobi-ie-de-4-6sai.jpg
 lede: 英語教室は月1万円超え、でも家でなら0円から始められます。4〜6歳の黄金期に親子で楽しめる英語遊び10選で、無理なく英語に親しむ方法を紹介します。
 quickInfo:
-  ageRanges: ["4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "low"
-area: "all"
+  budget: low
+area: all
+legacyHero: /hero/kid-study-03.png
 ---
 
 ## TL;DR（先に結論）

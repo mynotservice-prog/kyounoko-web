@@ -4,17 +4,23 @@ title: 夏の冷房と子供｜エアコン温度・湿度・服装の正解2026
 metaDescription: 2026年版・夏のエアコン使用ガイド。子供がいる家庭のエアコン温度・湿度・服装の正解を年齢別に解説。冷えすぎ防止と熱中症対策の両立術を紹介します。
 category: yakudatsu
 categoryName: 役立つもの
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/home-cozy-02.png
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kuura-bonyu-shokujimae-jiki.jpg
 lede: 「冷房の効きすぎ」と「熱中症」の間で迷う夏。0〜6歳の子がいる家庭の、エアコン温度・湿度・服装の正解をシーン別にナビゲートします。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
-  weather: ["sunny"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - sunny
   durationMin: 30
-  budget: "low"
+  budget: low
 area: all
+legacyHero: /hero/home-cozy-02.png
 ---
 
 ## 結論（先に知りたい人へ）

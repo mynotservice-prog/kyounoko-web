@@ -1,20 +1,27 @@
 ---
 slug: tokyo-suginami-stroller-lunch
 title: 杉並区 ベビーカーOKランチ10選（0〜2歳ママ向け）
-metaDescription: 杉並区で0〜2歳連れで入りやすいベビーカーOKランチ10選。高円寺・阿佐ヶ谷・荻窪・西荻窪の4駅エリア別に、ベビーカー動線・子連れ歓迎度・近所のママ目線でまとめました。
+metaDescription: >-
+  杉並区で0〜2歳連れで入りやすいベビーカーOKランチ10選。高円寺・阿佐ヶ谷・荻窪・西荻窪の4駅エリア別に、ベビーカー動線・子連れ歓迎度・近所のママ目線でまとめました。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-04-20"
-updatedAt: "2026-05-08"
-hero: /hero/family-dinner-03.png
-lede: 杉並区は子連れに優しいカフェ・定食屋が多いエリア。でも0〜2歳連れでベビーカーのまま入れる店は限られます。この記事では高円寺・阿佐ヶ谷・荻窪・西荻窪の4駅エリアから、ベビーカーで入りやすいランチ候補を10件、ママ目線でまとめました。
+publishedAt: '2026-04-20'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-suginami-stroller-lunch.jpg
+lede: >-
+  杉並区は子連れに優しいカフェ・定食屋が多いエリア。でも0〜2歳連れでベビーカーのまま入れる店は限られます。この記事では高円寺・阿佐ヶ谷・荻窪・西荻窪の4駅エリアから、ベビーカーで入りやすいランチ候補を10件、ママ目線でまとめました。
 quickInfo:
-  ageRanges: ["0-1", "2-3"]
-  place: ["indoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+  place:
+    - indoor
+  weather:
+    - any
   durationMin: 60
-  budget: "low"
+  budget: low
 area: tokyo
+legacyHero: /hero/family-dinner-03.png
 ---
 
 ## 結論（先に知りたい人へ）

@@ -1,20 +1,28 @@
 ---
 slug: tokyo-23ku-family-score-ranking-2026
 title: 【2026年版】東京23区 子連れ家族度ランキング｜独自データで見える23区の住みやすさ
-metaDescription: きょうのこ編集部が独自集計した3,277件の子連れOK店データから、ベビーカー◎率・個室率・キッズメニュー率の3指標で算出した東京23区の家族度総合スコアランキング。引っ越しや家族外食に役立つ独自データ分析。
+metaDescription: >-
+  きょうのこ編集部が独自集計した3,277件の子連れOK店データから、ベビーカー◎率・個室率・キッズメニュー率の3指標で算出した東京23区の家族度総合スコアランキング。引っ越しや家族外食に役立つ独自データ分析。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/tokyo-01.png
-lede: 「23区で本当に子連れに優しいのはどこ？」食べログには載らない**独自集計3,277店データ**から、ベビーカー◎率／個室率／キッズメニュー率の3指標で出した「家族度総合スコア」TOP5を公開します。
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-23ku-family-score-ranking-2026.jpg
+lede: >-
+  「23区で本当に子連れに優しいのはどこ？」食べログには載らない**独自集計3,277店データ**から、ベビーカー◎率／個室率／キッズメニュー率の3指標で出した「家族度総合スコア」TOP5を公開します。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - any
   durationMin: 60
-  budget: "low"
+  budget: low
 area: tokyo
+legacyHero: /hero/tokyo-01.png
 ---
 
 ## 結論（先に知りたい人へ）

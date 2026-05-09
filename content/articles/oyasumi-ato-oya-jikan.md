@@ -1,20 +1,23 @@
 ---
 slug: oyasumi-ato-oya-jikan
 title: 寝かしつけ後の親時間の作り方｜21時〜23時を0〜6歳親が疲れすぎない工夫5つ
-metaDescription: 子就寝後21:00〜23:00の親時間を、疲れすぎずに使う工夫5つ。家事優先度、自分時間の確保、早寝vs夜更かし、翌朝に響かない夜の過ごし方を解説します。
+metaDescription: '子就寝後21:00〜23:00の親時間を、疲れすぎずに使う工夫5つ。家事優先度、自分時間の確保、早寝vs夜更かし、翌朝に響かない夜の過ごし方を解説します。'
 category: today-mawasu
 categoryName: 今日どう回す？
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/sleeping-03.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/oyasumi-ato-oya-jikan.jpg
+area: all
 quickInfo:
   ageRanges: []
-  place: ["home"]
+  place:
+    - home
   weather: []
   durationMin: 60
-  budget: "free"
-lede: 「実は寝かしつけ後の2時間が、親の正気を保つ最重要時間」――家事に消えがちな夜時間を、ガチで自分のために使う鉄板の5工夫を、SNSで話題のリアル運用つきで完全公開します。
+  budget: free
+lede: >-
+  「実は寝かしつけ後の2時間が、親の正気を保つ最重要時間」――家事に消えがちな夜時間を、ガチで自分のために使う鉄板の5工夫を、SNSで話題のリアル運用つきで完全公開します。
+legacyHero: /hero/sleeping-03.png
 ---
 
 ## ⚡ ひと目でわかる｜寝かしつけ後の親時間サマリー

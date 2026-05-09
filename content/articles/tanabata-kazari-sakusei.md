@@ -1,19 +1,25 @@
 ---
 slug: tanabata-kazari-sakusei
 title: 七夕の飾り・短冊作り｜3歳から作れる折り紙アイデア10
-metaDescription: 七夕（7/7）の飾りと短冊作りを、3歳から作れる折り紙10種類と年齢別願い事例つきで紹介。笹の準備、保育園の七夕行事、当日のそうめんレシピまで家族で楽しむヒントをまとめました。
+metaDescription: >-
+  七夕（7/7）の飾りと短冊作りを、3歳から作れる折り紙10種類と年齢別願い事例つきで紹介。笹の準備、保育園の七夕行事、当日のそうめんレシピまで家族で楽しむヒントをまとめました。
 category: gyouji
 categoryName: 季節と行事
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/park-03.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/tanabata-kazari-sakusei.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
-  budget: "low"
-lede: 七夕の飾りを家族で楽しむ全ガイド。3歳から作れる折り紙アイデア10種類、短冊の願い事例、笹の準備方法、当日のそうめんレシピまで、七夕を豊かに過ごすヒントをまとめました。
+  budget: low
+lede: >-
+  七夕の飾りを家族で楽しむ全ガイド。3歳から作れる折り紙アイデア10種類、短冊の願い事例、笹の準備方法、当日のそうめんレシピまで、七夕を豊かに過ごすヒントをまとめました。
+legacyHero: /hero/park-03.png
 ---
 
 ## 結論（先に知りたい人へ）

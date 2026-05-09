@@ -1,20 +1,25 @@
 ---
 slug: chiiku-toys-2-3sai-5sen
 title: 知育玩具2〜3歳おすすめ5選｜発達を伸ばす定番おもちゃの選び方
-metaDescription: 2〜3歳の知育玩具を発達段階に合わせて5つ厳選。手先の器用さ・言葉・認知・ごっこ遊び・運動それぞれを伸ばす定番おもちゃ、選び方のポイント、長く使える工夫、予算別おすすめまで解説。
+metaDescription: >-
+  2〜3歳の知育玩具を発達段階に合わせて5つ厳選。手先の器用さ・言葉・認知・ごっこ遊び・運動それぞれを伸ばす定番おもちゃ、選び方のポイント、長く使える工夫、予算別おすすめまで解説。
 category: narai
 categoryName: 習いごと
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/toddler-play-01.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/chiiku-toys-2-3sai-5sen.jpg
 lede: 2〜3歳は脳の発達が急速に進む時期。発達段階に合わせた知育玩具5選と、長く使える選び方のコツ、予算別おすすめを体験談付きで紹介します。
 quickInfo:
-  ageRanges: ["2-3"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "mid"
-area: "all"
+  budget: mid
+area: all
+legacyHero: /hero/toddler-play-01.png
 ---
 
 ## TL;DR（先に結論）

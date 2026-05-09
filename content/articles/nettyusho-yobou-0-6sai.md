@@ -1,20 +1,29 @@
 ---
 slug: nettyusho-yobou-0-6sai
 title: 【0〜6歳】熱中症予防完全ガイド｜症状・水分・服装・受診目安
-metaDescription: 0〜6歳の子の熱中症予防完全ガイド。WBGT指標・水分補給目安・服装・症状サイン・受診タイミングを年齢別に解説。夏のお出かけ前に親が押さえる予防策をまとめます。
+metaDescription: >-
+  0〜6歳の子の熱中症予防完全ガイド。WBGT指標・水分補給目安・服装・症状サイン・受診タイミングを年齢別に解説。夏のお出かけ前に親が押さえる予防策をまとめます。
 category: yakudatsu
 categoryName: 役立つもの
-publishedAt: "2026-05-07"
-updatedAt: "2026-05-08"
-hero: /hero/medical-01.png
-lede: 0〜6歳は体温調節が未発達で熱中症リスクが大人の2倍。WBGT指標・水分補給の量と頻度・服装の選び方・症状サインと受診目安まで、親が押さえるべき予防対策を年齢別にまとめます。
+publishedAt: '2026-05-07'
+updatedAt: '2026-05-09'
+hero: /hero-ai/nettyusho-yobou-0-6sai.jpg
+lede: >-
+  0〜6歳は体温調節が未発達で熱中症リスクが大人の2倍。WBGT指標・水分補給の量と頻度・服装の選び方・症状サインと受診目安まで、親が押さえるべき予防対策を年齢別にまとめます。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["outdoor", "home"]
-  weather: ["sunny"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+    - home
+  weather:
+    - sunny
   durationMin: 30
-  budget: "low"
+  budget: low
 area: all
+legacyHero: /hero/medical-01.png
 ---
 
 ## 結論（先に知りたい人へ）

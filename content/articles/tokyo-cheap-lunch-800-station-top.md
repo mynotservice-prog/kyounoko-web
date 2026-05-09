@@ -1,20 +1,28 @@
 ---
 slug: tokyo-cheap-lunch-800-station-top
 title: 800円以内で子連れランチできる駅TOP15｜財布に優しい家族外食
-metaDescription: 子連れランチは1人800円を超えると家計に響く。きょうのこ独自集計3,277店データから、800円以内で子連れOKな店が多い東京の駅TOP15を発表。節約家族の外食戦略を独自データで分析。
+metaDescription: >-
+  子連れランチは1人800円を超えると家計に響く。きょうのこ独自集計3,277店データから、800円以内で子連れOKな店が多い東京の駅TOP15を発表。節約家族の外食戦略を独自データで分析。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/food-japan-01.png
-lede: 「子連れ外食したいけど予算が……」――そんな家族のため、きょうのこ独自集計から**ランチ800円以下×子連れOK店**が多い駅TOP15をデータで抽出。節約しながら週末ランチを楽しむ独自戦略を解説します。
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-cheap-lunch-800-station-top.jpg
+lede: >-
+  「子連れ外食したいけど予算が……」――そんな家族のため、きょうのこ独自集計から**ランチ800円以下×子連れOK店**が多い駅TOP15をデータで抽出。節約しながら週末ランチを楽しむ独自戦略を解説します。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["indoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - indoor
+  weather:
+    - any
   durationMin: 60
-  budget: "low"
+  budget: low
 area: tokyo
+legacyHero: /hero/food-japan-01.png
 ---
 
 ## 結論（先に知りたい人へ）

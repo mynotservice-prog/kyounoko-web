@@ -4,17 +4,23 @@ title: 東京の子連れ川遊びスポット10選｜浅瀬で安心の水場�
 metaDescription: 東京で0〜6歳と楽しめる川遊びスポット10選。多摩川・奥多摩・檜原村など浅瀬で安心の水場、駐車場・トイレ・水深・アクセスを子連れ視点で紹介します。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-05-06"
-updatedAt: "2026-05-08"
-hero: /hero/summer-water-01.png
-lede: 海より「都内から日帰り川遊び」が0〜6歳には扱いやすい選択肢。多摩川・奥多摩・檜原村で浅瀬・トイレあり・駐車場ありの子連れ向けスポットを10箇所、安全ポイントとあわせてまとめました。
+publishedAt: '2026-05-06'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-kawaasobi-spots-10.jpg
+lede: >-
+  海より「都内から日帰り川遊び」が0〜6歳には扱いやすい選択肢。多摩川・奥多摩・檜原村で浅瀬・トイレあり・駐車場ありの子連れ向けスポットを10箇所、安全ポイントとあわせてまとめました。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["sunny"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - sunny
   durationMin: 240
-  budget: "low"
+  budget: low
 area: tokyo
+legacyHero: /hero/summer-water-01.png
 ---
 
 ## 結論（先に知りたい人へ）

@@ -1,20 +1,29 @@
 ---
 slug: kosodate-muryou-spots-osaka
 title: 【2026年版】大阪の無料子連れスポット15選｜0〜6歳が一日遊べる
-metaDescription: 大阪で入場無料、または親子ワンコインで楽しめる子連れスポットを15カ所厳選。屋内外バランスよく紹介し、対象年齢・アクセス・混雑度・注意点まで実用目線でまとめました。
+metaDescription: >-
+  大阪で入場無料、または親子ワンコインで楽しめる子連れスポットを15カ所厳選。屋内外バランスよく紹介し、対象年齢・アクセス・混雑度・注意点まで実用目線でまとめました。
 category: today-doko
 categoryName: 今日どこ行く
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/japan-rural-03.png
-lede: 週末の予算を気にせず、子連れでも一日楽しめる。実はこの15スポット、大阪で「0円〜260円・予約不要・1日中遊べる」を全クリアしたガチで穴場のリスト。年間で7〜10万円の節約効果まで開示します。
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kosodate-muryou-spots-osaka.jpg
+lede: >-
+  週末の予算を気にせず、子連れでも一日楽しめる。実はこの15スポット、大阪で「0円〜260円・予約不要・1日中遊べる」を全クリアしたガチで穴場のリスト。年間で7〜10万円の節約効果まで開示します。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["outdoor", "indoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+    - indoor
+  weather:
+    - any
   durationMin: 240
-  budget: "free"
-area: "osaka"
+  budget: free
+area: osaka
+legacyHero: /hero/japan-rural-03.png
 ---
 
 ## ⚡ ひと目でわかる｜大阪無料スポットサマリー

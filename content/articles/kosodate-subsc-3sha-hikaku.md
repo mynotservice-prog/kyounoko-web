@@ -1,19 +1,27 @@
 ---
 slug: kosodate-subsc-3sha-hikaku
 title: 子育てサブスク比較【0-6歳】絵本・おもちゃ・服どれ
-metaDescription: サブスクどれが続くか迷っていませんか。0-6歳向け絵本（WORLDLIBRARY）・おもちゃ（トイサブ・チャチャチャ）・服（キッズローブ・Kids MaryRose）を、月額・対象年齢・満足度・解約しやすさで比較。3ジャンルから3分で1社決まります。
+metaDescription: >-
+  サブスクどれが続くか迷っていませんか。0-6歳向け絵本（WORLDLIBRARY）・おもちゃ（トイサブ・チャチャチャ）・服（キッズローブ・Kids
+  MaryRose）を、月額・対象年齢・満足度・解約しやすさで比較。3ジャンルから3分で1社決まります。
 category: yakudatsu
 categoryName: 役立つもの
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/commerce-02.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/kosodate-subsc-3sha-hikaku.jpg
+area: all
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
-  budget: "mid"
-lede: 絵本・おもちゃ・服のサブスクはどれも便利ですが、続く家と続かない家がはっきり分かれます。3ジャンル・代表6社を比較し、「うちに合う1〜2本」の選び方を整理しました。
+  budget: mid
+lede: >-
+  絵本・おもちゃ・服のサブスクはどれも便利ですが、続く家と続かない家がはっきり分かれます。3ジャンル・代表6社を比較し、「うちに合う1〜2本」の選び方を整理しました。
+legacyHero: /hero/commerce-02.png
 ---
 
 ## 結論（先に知りたい人へ）

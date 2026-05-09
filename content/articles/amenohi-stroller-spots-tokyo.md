@@ -4,17 +4,23 @@ title: 雨の日にベビーカーで行ける都内の屋内スポット7選（
 metaDescription: 雨の日にベビーカーで0〜3歳と行ける都内の屋内スポット7選。動線・オムツ替え・授乳室・料金を実地目線で比較。抱っこ紐不要で回れる施設を厳選。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/tokyo-02.png
-area: "tokyo"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/amenohi-stroller-spots-tokyo.jpg
+area: tokyo
 quickInfo:
-  ageRanges: ["0-1", "2-3"]
-  place: ["indoor"]
-  weather: ["rain"]
+  ageRanges:
+    - 0-1
+    - 2-3
+  place:
+    - indoor
+  weather:
+    - rain
   durationMin: 120
-  budget: "low"
-lede: 雨の日にベビーカーで0〜3歳と出かけるなら「屋根のある動線」「オムツ替え2台以上」「入り口からエレベーター」の3条件で絞るのが一番早い。実はこの7スポット、ガチで「ベビーカー1台で全館一周＋濡れずに到着」できる都内の穴場です。料金・予約・所要時間まで全部開示します。
+  budget: low
+lede: >-
+  雨の日にベビーカーで0〜3歳と出かけるなら「屋根のある動線」「オムツ替え2台以上」「入り口からエレベーター」の3条件で絞るのが一番早い。実はこの7スポット、ガチで「ベビーカー1台で全館一周＋濡れずに到着」できる都内の穴場です。料金・予約・所要時間まで全部開示します。
+legacyHero: /hero/tokyo-02.png
 ---
 
 ## ⚡ ひと目でわかる｜雨の日ベビーカー外出サマリー

@@ -1,20 +1,26 @@
 ---
 slug: gotsugo-hattaku-muchi-kodomo
 title: 発達で気になる兆候・専門家相談の目安｜1〜6歳サイン15と相談フロー
-metaDescription: 1〜6歳で発達が気になる時に見るべき兆候15、保健センター・小児科・発達支援センターへの相談フローを具体的に解説。相談すべき基準、診断の流れ、家庭でできる関わり方までまとめました。
+metaDescription: >-
+  1〜6歳で発達が気になる時に見るべき兆候15、保健センター・小児科・発達支援センターへの相談フローを具体的に解説。相談すべき基準、診断の流れ、家庭でできる関わり方までまとめました。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/baby-01.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/gotsugo-hattaku-muchi-kodomo.jpg
 lede: 「発達が気になるけどどこに相談？」という親向けに、1〜6歳のサイン15項目、相談先と順番、診断までの流れ、家庭でできる関わり方を実用的に整理しました。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "free"
-area: "all"
+  budget: free
+area: all
+legacyHero: /hero/baby-01.png
 ---
 
 ## 結論（先に知りたい人へ）

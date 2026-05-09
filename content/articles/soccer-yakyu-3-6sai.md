@@ -1,19 +1,24 @@
 ---
 slug: soccer-yakyu-3-6sai
 title: 幼児向けサッカー・野球教室の選び方｜3〜6歳が続く・辞めない5つのコツ
-metaDescription: 3〜6歳のサッカー・野球教室の選び方を解説。探し方、費用、練習内容、続けさせるコツ、親のサポート、送迎、ユニフォーム代、ベガルタ・FC東京・リトルリーグ等の大手も紹介。
+metaDescription: >-
+  3〜6歳のサッカー・野球教室の選び方を解説。探し方、費用、練習内容、続けさせるコツ、親のサポート、送迎、ユニフォーム代、ベガルタ・FC東京・リトルリーグ等の大手も紹介。
 category: narai
 categoryName: 習い事と学び
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/classroom-01.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/soccer-yakyu-3-6sai.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["outdoor"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
   weather: []
-  budget: "mid"
+  budget: mid
 lede: 3〜6歳のサッカー・野球教室は「まずは楽しく体を動かす」が第一。選び方の基準、続けるコツ、親のサポートの現実、大手クラブのスクール事情までまとめました。
+legacyHero: /hero/classroom-01.png
 ---
 
 ## 結論（先に知りたい人へ）

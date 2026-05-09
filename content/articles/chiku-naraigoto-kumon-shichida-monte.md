@@ -4,16 +4,19 @@ title: 知育系習い事3社比較｜2〜6歳の公文・七田・モンテを�
 metaDescription: 知育系3教室（公文式・七田式・モンテッソーリ）の特徴・対象年齢・月謝・教室雰囲気・向いている子・家庭でできる要素を徹底比較。
 category: narai
 categoryName: 習い事と学び
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/kid-study-01.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/chiku-naraigoto-kumon-shichida-monte.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
+  ageRanges:
+    - 2-3
+    - 4-6
   place: []
   weather: []
-  budget: "mid"
+  budget: mid
 lede: 知育系3教室（公文式・七田式・モンテッソーリ）を徹底比較。特徴・月謝・向いている子・家庭でできる要素・続けやすさを親目線で解説。
+legacyHero: /hero/kid-study-01.png
 ---
 
 ## 結論（先に知りたい人へ）

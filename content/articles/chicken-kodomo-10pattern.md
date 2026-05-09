@@ -4,17 +4,22 @@ title: 鶏肉料理10パターン｜こどもが食べるレシピをもも・�
 metaDescription: 2〜6歳の幼児が食べやすい鶏肉レシピを10品厳選。もも肉・むね肉・ささみ・ひき肉の部位別に、分量・手順・ぱさつき対策・お弁当活用まで実用目線でまとめました。
 category: today-taberu
 categoryName: 今日何食べる
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/food-kitchen-02.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/chicken-kodomo-10pattern.jpg
 lede: 鶏肉は安くて使いやすく、幼児の食卓の主役。でも部位ごとに向き不向きがあります。もも・むね・ささみ・ひき肉を使い分ける10レシピを分量付きで紹介します。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "low"
-area: "all"
+  budget: low
+area: all
+legacyHero: /hero/food-kitchen-02.png
 ---
 
 ## 結論（先に知りたい人へ）

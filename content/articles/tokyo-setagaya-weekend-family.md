@@ -1,20 +1,27 @@
 ---
 slug: tokyo-setagaya-weekend-family
 title: 世田谷区 週末の家族おでかけガイド（4〜6歳）
-metaDescription: 世田谷区で4〜6歳の家族週末おでかけガイド。砧公園・駒沢オリンピック公園・二子玉川エリアなど、広い公園と商業施設を組み合わせた1日プランをローカル目線で紹介。
+metaDescription: >-
+  世田谷区で4〜6歳の家族週末おでかけガイド。砧公園・駒沢オリンピック公園・二子玉川エリアなど、広い公園と商業施設を組み合わせた1日プランをローカル目線で紹介。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-04-20"
-updatedAt: "2026-05-08"
-hero: /hero/tokyo-01.png
-lede: 世田谷区は23区随一の子育てファミリーエリア。4〜6歳の週末、どこに連れて行けば飽きないか迷いますよね。この記事では砧・駒沢・二子玉川・三軒茶屋の各エリアから、週末に半日〜1日使えるおでかけ先を実用目線でまとめました。
+publishedAt: '2026-04-20'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-setagaya-weekend-family.jpg
+lede: >-
+  世田谷区は23区随一の子育てファミリーエリア。4〜6歳の週末、どこに連れて行けば飽きないか迷いますよね。この記事では砧・駒沢・二子玉川・三軒茶屋の各エリアから、週末に半日〜1日使えるおでかけ先を実用目線でまとめました。
 quickInfo:
-  ageRanges: ["4-6"]
-  place: ["outdoor", "indoor"]
-  weather: ["any"]
+  ageRanges:
+    - 4-6
+  place:
+    - outdoor
+    - indoor
+  weather:
+    - any
   durationMin: 180
-  budget: "low"
+  budget: low
 area: tokyo
+legacyHero: /hero/tokyo-01.png
 ---
 
 ## 結論（先に知りたい人へ）

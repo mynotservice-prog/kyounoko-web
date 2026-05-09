@@ -1,19 +1,28 @@
 ---
 slug: chiiku-asobi-ie-de-10
 title: 家でできる知育遊び10選｜1〜3歳の指先・記憶力・考える力を育てる【保存版】
-metaDescription: 1〜3歳向けの家でできる知育遊び10選を、指先系・記憶系・思考系に分けて紹介。必要なもの・所要時間・学べる力・親の関わり方・100均/Amazon別準備リストを整理した保存版。
+metaDescription: >-
+  1〜3歳向けの家でできる知育遊び10選を、指先系・記憶系・思考系に分けて紹介。必要なもの・所要時間・学べる力・親の関わり方・100均/Amazon別準備リストを整理した保存版。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/toddler-play-01.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/chiiku-asobi-ie-de-10.jpg
+area: all
 quickInfo:
-  ageRanges: ["0-1", "2-3"]
-  place: ["home"]
-  weather: ["rainy", "cold", "hot"]
-  budget: "low"
-lede: 実は1〜3歳の知育、高価な教材を買わなくても家にあるもので8割完結する。指先・記憶・思考の3ジャンル10種を、所要時間・学べる力・親の関わり方つきで保存版で。
+  ageRanges:
+    - 0-1
+    - 2-3
+  place:
+    - home
+  weather:
+    - rainy
+    - cold
+    - hot
+  budget: low
+lede: >-
+  実は1〜3歳の知育、高価な教材を買わなくても家にあるもので8割完結する。指先・記憶・思考の3ジャンル10種を、所要時間・学べる力・親の関わり方つきで保存版で。
+legacyHero: /hero/toddler-play-01.png
 ---
 
 ## 30秒でわかる答え｜1〜3歳の家でできる知育遊び

@@ -4,16 +4,23 @@ title: 【6ヶ月〜2歳】プールデビュー準備リスト｜2026年版・�
 metaDescription: 赤ちゃんのプール・水遊びデビュー時期の目安と準備。生後6ヶ月・1歳・2歳以降のできること別、ベビースイミング教室比較、自宅プール・公園の水遊び場まで整理。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/summer-water-03.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/puuru-mizuasobi-debut.jpg
+area: all
 quickInfo:
-  ageRanges: ["0-1", "2-3"]
-  place: ["outdoor", "indoor"]
-  weather: ["heat"]
-  budget: "low"
-lede: 赤ちゃんのプールデビューは「生後6ヶ月以降・首すわり後」が一般的な目安。実はこの記事、ガチで小児科医3名に確認した安全基準＋ベビースイミング3社比較＋公園水遊び場の料金開示まで、デビュー〜習慣化までを完全ガイドします。
+  ageRanges:
+    - 0-1
+    - 2-3
+  place:
+    - outdoor
+    - indoor
+  weather:
+    - heat
+  budget: low
+lede: >-
+  赤ちゃんのプールデビューは「生後6ヶ月以降・首すわり後」が一般的な目安。実はこの記事、ガチで小児科医3名に確認した安全基準＋ベビースイミング3社比較＋公園水遊び場の料金開示まで、デビュー〜習慣化までを完全ガイドします。
+legacyHero: /hero/summer-water-03.png
 ---
 
 ## ⚡ ひと目でわかる｜プールデビューサマリー

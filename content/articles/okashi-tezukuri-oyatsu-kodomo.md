@@ -1,20 +1,28 @@
 ---
 slug: okashi-tezukuri-oyatsu-kodomo
 title: 手作りおやつ簡単レシピ10選｜材料3つ・混ぜるだけの子どもおやつ
-metaDescription: 子どもと一緒に作れる手作りおやつを10選厳選。材料3つ以下、混ぜて焼くだけの簡単レシピ、砂糖控えめ・アレルギー対応版、保存方法まで。幼児から小学生まで大満足のラインナップです。
+metaDescription: >-
+  子どもと一緒に作れる手作りおやつを10選厳選。材料3つ以下、混ぜて焼くだけの簡単レシピ、砂糖控えめ・アレルギー対応版、保存方法まで。幼児から小学生まで大満足のラインナップです。
 category: today-taberu
 categoryName: 今日たべる
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/food-sweet-01.png
-lede: 雨の日や休日の午後、子どもと一緒に作れる簡単おやつ10選。材料3つ・混ぜるだけで、幼児から小学生まで大満足。砂糖控えめでアレルギー対応もできる定番レシピを厳選しました。
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/okashi-tezukuri-oyatsu-kodomo.jpg
+lede: >-
+  雨の日や休日の午後、子どもと一緒に作れる簡単おやつ10選。材料3つ・混ぜるだけで、幼児から小学生まで大満足。砂糖控えめでアレルギー対応もできる定番レシピを厳選しました。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
-  weather: ["any", "rain"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
+    - rain
   durationMin: 30
-  budget: "low"
-area: "all"
+  budget: low
+area: all
+legacyHero: /hero/food-sweet-01.png
 ---
 
 ## TL;DR（先に結論）

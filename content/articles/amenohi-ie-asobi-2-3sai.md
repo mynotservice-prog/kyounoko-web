@@ -1,20 +1,26 @@
 ---
 slug: amenohi-ie-asobi-2-3sai
 title: 雨の日の家遊び10選（2〜3歳向け）準備10分で集中30分｜100均で完結する保存版
-metaDescription: 雨の日ずっと家にいる2〜3歳と親のための家遊び10選。準備10分以内、集中30分、親も疲れない構成。必要物・所要時間・手離し度・100均/Amazon別調達リスト・片付け5分テクまで明記した保存版。
+metaDescription: >-
+  雨の日ずっと家にいる2〜3歳と親のための家遊び10選。準備10分以内、集中30分、親も疲れない構成。必要物・所要時間・手離し度・100均/Amazon別調達リスト・片付け5分テクまで明記した保存版。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/toddler-play-01.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/amenohi-ie-asobi-2-3sai.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3"]
-  place: ["home"]
-  weather: ["rain"]
+  ageRanges:
+    - 2-3
+  place:
+    - home
+  weather:
+    - rain
   durationMin: 30
-  budget: "free"
-lede: 実はこの年齢、雨の日が一番ガチで集中する。2〜3歳と家にこもる1日を救う10パターンを準備10分以内・集中30分・親半分手離し設計で。100均で全部揃う、片付け5分の鉄板を保存版で。
+  budget: free
+lede: >-
+  実はこの年齢、雨の日が一番ガチで集中する。2〜3歳と家にこもる1日を救う10パターンを準備10分以内・集中30分・親半分手離し設計で。100均で全部揃う、片付け5分の鉄板を保存版で。
+legacyHero: /hero/toddler-play-01.png
 ---
 
 ## 30秒でわかる答え｜2〜3歳の雨の日家遊び

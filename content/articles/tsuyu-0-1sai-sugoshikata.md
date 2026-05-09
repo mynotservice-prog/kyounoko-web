@@ -1,19 +1,24 @@
 ---
 slug: tsuyu-0-1sai-sugoshikata
 title: 【0〜1歳】梅雨の1日の過ごし方｜雨が続く時の家ルーティン完全ガイド
-metaDescription: 0〜1歳の梅雨の1日タイムラインを6スロットで設計。朝の散歩代替、感覚遊び、お昼寝、夕方の絵本まで、雨が続く週の家ルーティンを子連れ視点で具体的に解説します。
+metaDescription: >-
+  0〜1歳の梅雨の1日タイムラインを6スロットで設計。朝の散歩代替、感覚遊び、お昼寝、夕方の絵本まで、雨が続く週の家ルーティンを子連れ視点で具体的に解説します。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: "2026-05-05"
-updatedAt: "2026-05-08"
-hero: /hero/baby-02.png
+publishedAt: '2026-05-05'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tsuyu-0-1sai-sugoshikata.jpg
 quickInfo:
-  ageRanges: ["0-1"]
-  place: ["home"]
-  weather: ["rain"]
+  ageRanges:
+    - 0-1
+  place:
+    - home
+  weather:
+    - rain
   durationMin: 60
-  budget: "free"
+  budget: free
 area: all
+legacyHero: /hero/baby-02.png
 ---
 
 ## 結論（先に知りたい人へ）

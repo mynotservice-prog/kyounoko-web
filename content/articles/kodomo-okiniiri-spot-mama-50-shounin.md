@@ -1,20 +1,27 @@
 ---
 slug: kodomo-okiniiri-spot-mama-50-shounin
 title: ママ50人にきいた｜本当に行ってよかった東京の子連れスポット30
-metaDescription: 編集部のママネットワーク50人に聞いた、本当に行ってよかった東京の子連れスポット30選。SNS・ブログの公開情報も集約し、王道から穴場まで「もう一度行きたい」スポットだけを厳選。
+metaDescription: >-
+  編集部のママネットワーク50人に聞いた、本当に行ってよかった東京の子連れスポット30選。SNS・ブログの公開情報も集約し、王道から穴場まで「もう一度行きたい」スポットだけを厳選。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/park-01.png
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kodomo-okiniiri-spot-mama-50-shounin.jpg
 area: tokyo
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - any
   durationMin: 120
-  budget: "low"
+  budget: low
 lede: 編集部のママネットワーク50人と、SNS・ブログ公開情報を集約。「もう一度行きたい」と複数票が集まった東京の子連れスポット30を、ジャンル別に整理しました。
+legacyHero: /hero/park-01.png
 ---
 
 ## 結論（先に知りたい人へ）

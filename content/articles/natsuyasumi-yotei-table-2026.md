@@ -1,20 +1,30 @@
 ---
 slug: natsuyasumi-yotei-table-2026
 title: 【2026年版】夏休みの予定表テンプレート｜0〜6歳子連れ計画術
-metaDescription: 2026年夏休み（7月下旬〜8月末）の予定表テンプレート。0〜6歳子連れの6週間カレンダー、遊び・帰省・自由研究・家族時間のバランス設計を具体的に紹介します。
+metaDescription: >-
+  2026年夏休み（7月下旬〜8月末）の予定表テンプレート。0〜6歳子連れの6週間カレンダー、遊び・帰省・自由研究・家族時間のバランス設計を具体的に紹介します。
 category: today-mawasu
 categoryName: 今日どう回す？
-publishedAt: "2026-05-05"
-updatedAt: "2026-05-08"
-hero: /hero/home-cozy-01.png
-lede: 2026年の夏休みを「行き当たりばったり」で過ごすと、後半に親子で疲弊します。0〜6歳の子と6週間の予定表を作る具体テンプレと、遊び・帰省・自由研究のバランス設計を紹介します。
+publishedAt: '2026-05-05'
+updatedAt: '2026-05-09'
+hero: /hero-ai/natsuyasumi-yotei-table-2026.jpg
+lede: >-
+  2026年の夏休みを「行き当たりばったり」で過ごすと、後半に親子で疲弊します。0〜6歳の子と6週間の予定表を作る具体テンプレと、遊び・帰省・自由研究のバランス設計を紹介します。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home", "outdoor", "indoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+    - outdoor
+    - indoor
+  weather:
+    - any
   durationMin: 60
-  budget: "low"
+  budget: low
 area: all
+legacyHero: /hero/home-cozy-01.png
 ---
 
 ## 結論（先に知りたい人へ）

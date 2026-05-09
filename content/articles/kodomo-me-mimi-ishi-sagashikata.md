@@ -1,20 +1,28 @@
 ---
 slug: kodomo-me-mimi-ishi-sagashikata
 title: 小児科・耳鼻科・眼科の使い分け｜0〜6歳の症状別受診先ガイド15パターン
-metaDescription: 子どもの症状で小児科・耳鼻科・眼科のどこに行くか迷う親向けに、15の症状パターンで受診先を整理。中耳炎・結膜炎・鼻づまりなど迷いやすいケースを具体的に解説します。
+metaDescription: >-
+  子どもの症状で小児科・耳鼻科・眼科のどこに行くか迷う親向けに、15の症状パターンで受診先を整理。中耳炎・結膜炎・鼻づまりなど迷いやすいケースを具体的に解説します。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/medical-02.png
-lede: 「鼻水は小児科？耳鼻科？」「目やには眼科でいい？」と迷う親のために、0〜6歳の症状15パターンで受診先を整理。迷ったらまずかかりつけ、という基本も含めて解説します。
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kodomo-me-mimi-ishi-sagashikata.jpg
+lede: >-
+  「鼻水は小児科？耳鼻科？」「目やには眼科でいい？」と迷う親のために、0〜6歳の症状15パターンで受診先を整理。迷ったらまずかかりつけ、という基本も含めて解説します。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "free"
-area: "all"
+  budget: free
+area: all
+legacyHero: /hero/medical-02.png
 ---
 
 ## 結論（先に知りたい人へ）

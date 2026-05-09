@@ -4,17 +4,24 @@ title: 福岡の子連れおでかけスポット12選｜博多・天神・近�
 metaDescription: 福岡市内と近郊から、幼児連れで安心して遊べるスポットを12カ所厳選。博多駅徒歩圏・天神・糸島・海の中道まで、アクセス・料金・対象年齢を実用目線で紹介します。
 category: today-doko
 categoryName: 今日どこ行く
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/japan-rural-02.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kosodate-spots-fukuoka-kids.jpg
 lede: 福岡は街も海も山もコンパクトにまとまり、幼児連れのおでかけ効率が抜群。博多・天神を起点に車30分圏で楽しめる12カ所を、地元目線で厳選しました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["outdoor", "indoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+    - indoor
+  weather:
+    - any
   durationMin: 240
-  budget: "low"
-area: "fukuoka"
+  budget: low
+area: fukuoka
+legacyHero: /hero/japan-rural-02.png
 ---
 
 ## 結論（先に知りたい人へ）

@@ -4,17 +4,21 @@ title: 保育園前の朝ごはん献立｜朝起きてから15分で完成す�
 metaDescription: 朝起きて15分で作って食べて登園準備まで終わる朝ごはん献立7パターン。月〜日の7日分、前夜仕込み・冷凍ストック・買ってくるOKな運用を具体的に紹介します。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/food-fruit-02.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/asagohan-hoikuen-15pun.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
   durationMin: 15
-  budget: "low"
+  budget: low
 lede: 朝起きて15分で「作る→食べる→片付ける」まで終わる朝ごはんの献立7パターン。前夜の1工程仕込みと冷凍ストックを組み合わせれば、月〜日で飽きずに回ります。
+legacyHero: /hero/food-fruit-02.png
 ---
 
 実は、保育園前の15分朝食を回している家庭ほど「作らない日」を週1〜2回入れています。Instagramで人気の家事ハックアカウントの共通点は、**月〜金で5パターン固定＋週末は買ってくる**運用にしていること。この記事の7日分献立は、すべて2〜3歳が「秒で完食」した実績のある15分タイムライン設計です。

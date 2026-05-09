@@ -1,20 +1,25 @@
 ---
 slug: asagohan-5pun-pattern-10
 title: 保育園前の朝ごはん5分パターン10種：2〜3歳が食べる・栄養も最低限OK
-metaDescription: 朝5分で作れる2〜3歳の朝ごはん10パターン。「炭水化物＋たんぱく質＋果物/野菜」の3点セットでローテ、栄養もギリギリOK。前日夜の仕込みと食べない日の対処も。
+metaDescription: >-
+  朝5分で作れる2〜3歳の朝ごはん10パターン。「炭水化物＋たんぱく質＋果物/野菜」の3点セットでローテ、栄養もギリギリOK。前日夜の仕込みと食べない日の対処も。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/food-fruit-02.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/asagohan-5pun-pattern-10.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3"]
-  place: ["home"]
+  ageRanges:
+    - 2-3
+  place:
+    - home
   weather: []
   durationMin: 5
-  budget: "low"
-lede: 朝5分で作れる2〜3歳の朝ごはん10パターン。「炭水化物＋たんぱく質＋果物/野菜」の3点セットでローテし、ワンパターン化しない工夫と、食べない日の対処も紹介します。
+  budget: low
+lede: >-
+  朝5分で作れる2〜3歳の朝ごはん10パターン。「炭水化物＋たんぱく質＋果物/野菜」の3点セットでローテし、ワンパターン化しない工夫と、食べない日の対処も紹介します。
+legacyHero: /hero/food-fruit-02.png
 ---
 
 実は、保育園前の朝ごはんで一番大事なのは「凝った料理」ではなく「**型を10個持つこと**」。Instagramで人気の朝ごはんアカウントの共通点は、**3点セットの型を持って毎朝5分で組み立てる運用**にしていること。この記事の10パターンは、すべて2〜3歳が「秒で完食」した実績のある朝食設計です。

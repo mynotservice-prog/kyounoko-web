@@ -4,17 +4,22 @@ title: 【2026年版】子が自分で食べる献立5選｜手づかみ・フ�
 metaDescription: 2〜4歳の「自分で食べたい」気持ちを応援する、手づかみ・フォークで食べやすい献立を5パターン紹介。分量・手順・食べこぼし対策まで実用目線でまとめました。
 category: today-taberu
 categoryName: 今日何食べる
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/family-dinner-03.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kodomo-hitori-de-taberareru-5.jpg
 lede: 「自分で食べたい！」の時期が来たら、献立を見直す絶好のチャンス。手づかみ・フォーク初心者の子が一人でパクパク食べられる5パターンを紹介します。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "low"
-area: "all"
+  budget: low
+area: all
+legacyHero: /hero/family-dinner-03.png
 ---
 
 ## TL;DR（先に結論）

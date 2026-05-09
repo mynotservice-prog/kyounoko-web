@@ -1,20 +1,30 @@
 ---
 slug: tokyo-ginza-kodzure-lunch
 title: 銀座・有楽町 子連れランチ10選【0-6歳】デパート内
-metaDescription: 銀座・有楽町で子連れOKの店探しに困っていませんか。松屋銀座・銀座三越・GINZA SIX・ルミネ有楽町などデパートのベビーカーOK・個室対応10店を厳選。年齢別おすすめ、平日／週末の混み具合まで整理し迷わず選べます。
+metaDescription: >-
+  銀座・有楽町で子連れOKの店探しに困っていませんか。松屋銀座・銀座三越・GINZA
+  SIX・ルミネ有楽町などデパートのベビーカーOK・個室対応10店を厳選。年齢別おすすめ、平日／週末の混み具合まで整理し迷わず選べます。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: "2026-04-20"
-updatedAt: "2026-05-08"
-hero: /hero/family-dinner-01.png
-lede: 銀座・有楽町は大人の街イメージですが、**デパート（銀座三越・松屋銀座・GINZA SIX）とルミネ有楽町**は子連れ動線が整っています。10店を条件別にまとめました。
+publishedAt: '2026-04-20'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-ginza-kodzure-lunch.jpg
+lede: >-
+  銀座・有楽町は大人の街イメージですが、**デパート（銀座三越・松屋銀座・GINZA
+  SIX）とルミネ有楽町**は子連れ動線が整っています。10店を条件別にまとめました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["indoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - indoor
+  weather:
+    - any
   durationMin: 60
-  budget: "mid"
+  budget: mid
 area: tokyo
+legacyHero: /hero/family-dinner-01.png
 ---
 
 ## TL;DR（3行要約）

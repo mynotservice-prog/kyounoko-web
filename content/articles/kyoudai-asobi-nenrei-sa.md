@@ -1,18 +1,24 @@
 ---
 slug: kyoudai-asobi-nenrei-sa
 title: 兄弟で一緒に楽しめる家遊び7選（年齢差別・1歳差/3歳差/5歳差）｜ケンカ防止の保存版
-metaDescription: 兄弟姉妹で同時に楽しめる家遊び7選を年齢差別に紹介。1歳差・3歳差・5歳差での遊び方、ケンカ防止の親の介入ポイント、役割分担のコツ、準備物の100均/Amazon別開示まで完全保存版。
+metaDescription: >-
+  兄弟姉妹で同時に楽しめる家遊び7選を年齢差別に紹介。1歳差・3歳差・5歳差での遊び方、ケンカ防止の親の介入ポイント、役割分担のコツ、準備物の100均/Amazon別開示まで完全保存版。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/toddler-play-03.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/kyoudai-asobi-nenrei-sa.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
-  budget: "free"
-lede: 実は兄弟遊びは「同じ遊びを違うレベルで」が9割成功する。1歳差・3歳差・5歳差の3パターンで、ケンカ防止の介入タイミングと役割分担のコツまで保存版で。親が30分手を離せる鉄板7本。
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  budget: free
+lede: >-
+  実は兄弟遊びは「同じ遊びを違うレベルで」が9割成功する。1歳差・3歳差・5歳差の3パターンで、ケンカ防止の介入タイミングと役割分担のコツまで保存版で。親が30分手を離せる鉄板7本。
+legacyHero: /hero/toddler-play-03.png
 ---
 
 ## 30秒でわかる答え｜兄弟で一緒に楽しめる家遊び

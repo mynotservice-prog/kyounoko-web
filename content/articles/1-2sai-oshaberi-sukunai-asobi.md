@@ -4,15 +4,19 @@ title: おしゃべりが少ない1〜2歳の子と遊ぶ鉄板パターン7つ
 metaDescription: まだ会話できない1〜2歳と一緒に楽しめる遊び7選。親がイライラしない関わり方、言葉かけ例、発達的な意味までセットで解説。毎日のネタ切れを救います。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/toddler-play-01.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/1-2sai-oshaberi-sukunai-asobi.jpg
+area: all
 quickInfo:
-  ageRanges: ["0-1", "2-3"]
-  place: ["home"]
-  budget: "free"
+  ageRanges:
+    - 0-1
+    - 2-3
+  place:
+    - home
+  budget: free
 lede: まだおしゃべりができない1〜2歳と、親が息切れせずに過ごす遊び7つ。発達的な意味・言葉かけ例・親の関わり方をセットで紹介します。
+legacyHero: /hero/toddler-play-01.png
 ---
 
 ## 結論（先に知りたい人へ）

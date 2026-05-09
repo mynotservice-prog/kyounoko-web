@@ -3,18 +3,23 @@ slug: rinyuushoku-frozen-gekkabetsu
 title: 離乳食フリージング完全ガイド｜5-6ヶ月〜完了期まで月齢別の冷凍ストック1週間レシピ
 category: today-taberu
 categoryName: 今日何食べる？
-hero: /hero/food-japan-02.png
-metaDescription: 離乳食フリージングの基本を月齢別（5-6/7-8/9-11/12-18ヶ月）に整理。週末2時間で1週間分作り置きする手順・食材リスト・組み合わせテーブルを具体的に紹介します。
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-area: "all"
+hero: /hero-ai/rinyuushoku-frozen-gekkabetsu.jpg
+metaDescription: >-
+  離乳食フリージングの基本を月齢別（5-6/7-8/9-11/12-18ヶ月）に整理。週末2時間で1週間分作り置きする手順・食材リスト・組み合わせテーブルを具体的に紹介します。
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+area: all
 quickInfo:
-  ageRanges: ["0-1","1-2"]
-  place: ["home"]
+  ageRanges:
+    - 0-1
+    - 1-2
+  place:
+    - home
   weather: []
   durationMin: 120
-  budget: "low"
+  budget: low
 lede: 離乳食を毎日作るのは無理。週末2時間のフリージングで1週間回す方法を月齢別に紹介。食材リスト・組み合わせ例・解凍手順まで、失敗しない運用を完全に解説します。
+legacyHero: /hero/food-japan-02.png
 ---
 
 実は、離乳食を「鬼リピ」してくれる子の家庭ほど、毎日0から作っていません。週末2時間で月齢別に1週間分まとめて冷凍する仕組みさえ作れば、平日はレンジ500W・1分半で「秒で完食」のごはんが出せます。Instagramで月間数十万リーチを稼ぐ離乳食アカウントの共通点は、**月齢別に「型」を持つこと**と、**冷凍前提で食材を3層に整理していること**。この記事では、5-6ヶ月から完了期までの全月齢を対象に、買い物・仕込み・解凍・盛り付け・リメイクまでを1本にまとめます。

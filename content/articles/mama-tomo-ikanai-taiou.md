@@ -1,20 +1,27 @@
 ---
 slug: mama-tomo-ikanai-taiou
 title: ママ友付き合いが苦手な人へ｜無理せず子育てを楽しむ7つの方法
-metaDescription: ママ友付き合いに疲れた、そもそも作りたくないと悩むママへ。無理せず子育てを楽しむ7つの方法、挨拶・距離感のコツ、LINE断り方例文、子どもの友達作りへの影響まで詳しく解説します。
+metaDescription: >-
+  ママ友付き合いに疲れた、そもそも作りたくないと悩むママへ。無理せず子育てを楽しむ7つの方法、挨拶・距離感のコツ、LINE断り方例文、子どもの友達作りへの影響まで詳しく解説します。
 category: today-mawasu
 categoryName: 今日まわす
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/parent-child-01.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/mama-tomo-ikanai-taiou.jpg
 lede: 「ママ友ランチが気まずい」「LINEグループが怖い」そんな悩みは多くのママが経験しています。無理せず子育てを楽しむ7つの方法と、距離感のコツを紹介します。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "free"
-area: "all"
+  budget: free
+area: all
+legacyHero: /hero/parent-child-01.png
 ---
 
 ## TL;DR（先に結論）

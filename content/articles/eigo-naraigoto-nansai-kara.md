@@ -1,19 +1,25 @@
 ---
 slug: eigo-naraigoto-nansai-kara
 title: 英語の習い事いつから【0-6歳】年齢別選び方ガイド
-metaDescription: 英語をいつから始めるべきか迷っていませんか。0-1歳・2-3歳・4-6歳の年齢別おすすめを、親子教室・フォニックス・本格英会話で整理。オンラインvs通学の比較、費用相場、スクール選びのコツまで3分で確認でき、迷わず選べます。
+metaDescription: >-
+  英語をいつから始めるべきか迷っていませんか。0-1歳・2-3歳・4-6歳の年齢別おすすめを、親子教室・フォニックス・本格英会話で整理。オンラインvs通学の比較、費用相場、スクール選びのコツまで3分で確認でき、迷わず選べます。
 category: narai
 categoryName: 習い事と学び
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/kid-study-02.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/eigo-naraigoto-nansai-kara.jpg
+area: all
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
   place: []
   weather: []
-  budget: "mid"
-lede: 英語の習い事を始める年齢に正解はありませんが、0〜1歳・2〜3歳・4〜6歳で選ぶべき内容は大きく違います。年齢別の目安、オンラインと通学型の比較、具体的なスクール名まで整理しました。
+  budget: mid
+lede: >-
+  英語の習い事を始める年齢に正解はありませんが、0〜1歳・2〜3歳・4〜6歳で選ぶべき内容は大きく違います。年齢別の目安、オンラインと通学型の比較、具体的なスクール名まで整理しました。
+legacyHero: /hero/kid-study-02.png
 ---
 
 ## 結論（先に知りたい人へ）

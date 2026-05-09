@@ -1,20 +1,25 @@
 ---
 slug: aitei-ashi-shinpai-hayai-osoi
 title: 歩き出しが早い遅いの目安｜0〜1歳の月齢別チェックと相談タイミング
-metaDescription: 赤ちゃんの歩き出しが早い・遅いと感じた時の月齢別目安、筋肉や骨格への影響、1歳6ヶ月で歩かない時の相談目安を整理。焦らず発達を見守る親の心構えまでまとめました。
+metaDescription: >-
+  赤ちゃんの歩き出しが早い・遅いと感じた時の月齢別目安、筋肉や骨格への影響、1歳6ヶ月で歩かない時の相談目安を整理。焦らず発達を見守る親の心構えまでまとめました。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/baby-01.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/aitei-ashi-shinpai-hayai-osoi.jpg
 lede: 「9ヶ月で歩いたけど早すぎ？」「1歳半でまだ歩かない」と悩む親向けに、歩行開始の目安、早い・遅いの理由、相談タイミングを具体的にまとめました。
 quickInfo:
-  ageRanges: ["0-1"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "free"
-area: "all"
+  budget: free
+area: all
+legacyHero: /hero/baby-01.png
 ---
 
 ## 結論（先に知りたい人へ）

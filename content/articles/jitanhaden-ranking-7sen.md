@@ -1,19 +1,26 @@
 ---
 slug: jitanhaden-ranking-7sen
 title: 時短家電ランキング7選【共働き必須】親がラクになる
-metaDescription: 家事で1日が終わっていませんか。子育て家庭が買ってよかった時短家電7選を、ドラム式洗濯乾燥機・食洗機・ロボット掃除機・電気圧力鍋・ホットクックなどで比較。価格、時短効果、欠点をまとめて、買う優先順位が3分で決まります。
+metaDescription: >-
+  家事で1日が終わっていませんか。子育て家庭が買ってよかった時短家電7選を、ドラム式洗濯乾燥機・食洗機・ロボット掃除機・電気圧力鍋・ホットクックなどで比較。価格、時短効果、欠点をまとめて、買う優先順位が3分で決まります。
 category: yakudatsu
 categoryName: 役立つもの
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/commerce-01.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/jitanhaden-ranking-7sen.jpg
+area: all
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
-  budget: "high"
-lede: 子育て家庭にとって、時短家電は「親の自由時間を買う」投資です。買ってよかった7選をランキング形式で、価格・時短効果・子育て家庭ならではの使い方・欠点まで整理しました。
+  budget: high
+lede: >-
+  子育て家庭にとって、時短家電は「親の自由時間を買う」投資です。買ってよかった7選をランキング形式で、価格・時短効果・子育て家庭ならではの使い方・欠点まで整理しました。
+legacyHero: /hero/commerce-01.png
 ---
 
 ## 結論（先に知りたい人へ）

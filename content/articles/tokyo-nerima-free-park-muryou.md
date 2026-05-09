@@ -1,20 +1,27 @@
 ---
 slug: tokyo-nerima-free-park-muryou
 title: 練馬区 無料で遊べる大型公園ファミリー5選
-metaDescription: 練馬区で無料で1日遊べる大型公園5選。光が丘公園・石神井公園・武蔵関公園などエリアごとに、2〜6歳の遊び場、ベビーカー動線、駐車場事情まで実用情報に振り切ったローカルガイド。
+metaDescription: >-
+  練馬区で無料で1日遊べる大型公園5選。光が丘公園・石神井公園・武蔵関公園などエリアごとに、2〜6歳の遊び場、ベビーカー動線、駐車場事情まで実用情報に振り切ったローカルガイド。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-04-20"
-updatedAt: "2026-05-08"
-hero: /hero/tokyo-03.png
-lede: 練馬区は23区の中でも大型公園の宝庫。光が丘公園・石神井公園など、入場無料で半日以上遊べるスポットがそろっています。この記事では2〜6歳ファミリーが週末に通える練馬区の無料大型公園を5つ、動線・駐車場・遊具のタイプに触れながら紹介します。
+publishedAt: '2026-04-20'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-nerima-free-park-muryou.jpg
+lede: >-
+  練馬区は23区の中でも大型公園の宝庫。光が丘公園・石神井公園など、入場無料で半日以上遊べるスポットがそろっています。この記事では2〜6歳ファミリーが週末に通える練馬区の無料大型公園を5つ、動線・駐車場・遊具のタイプに触れながら紹介します。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - any
   durationMin: 120
-  budget: "free"
+  budget: free
 area: tokyo
+legacyHero: /hero/tokyo-03.png
 ---
 
 ## 結論（先に知りたい人へ）

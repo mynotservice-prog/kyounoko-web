@@ -1,20 +1,28 @@
 ---
 slug: ohirune-nansai-made
-title: "子どものお昼寝は何歳まで？｜0〜5歳月齢別の理想睡眠時間と寝ない時の卒業5ステップ"
+title: 子どものお昼寝は何歳まで？｜0〜5歳月齢別の理想睡眠時間と寝ない時の卒業5ステップ
 category: today-mawasu
-categoryName: "今日どう回す？"
-hero: /hero/sleeping-01.png
-metaDescription: "子どものお昼寝は何歳まで必要？月齢別の理想的な睡眠時間、2回→1回への移行、卒業のサイン、保育園との連携、夜の就寝に影響しない時間帯まで、医学的エビデンスに基づき整理します。"
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-area: "all"
+categoryName: 今日どう回す？
+hero: /hero-ai/ohirune-nansai-made.jpg
+metaDescription: >-
+  子どものお昼寝は何歳まで必要？月齢別の理想的な睡眠時間、2回→1回への移行、卒業のサイン、保育園との連携、夜の就寝に影響しない時間帯まで、医学的エビデンスに基づき整理します。
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+area: all
 quickInfo:
-  ageRanges: ["0-1","1-2","2-3","4-6"]
-  place: ["home"]
+  ageRanges:
+    - 0-1
+    - 1-2
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
   durationMin: 90
-  budget: "free"
-lede: "「実はお昼寝の正解は『何歳まで』ではなく『日中の機嫌』」――月齢別の鉄板スケジュールと、2回→1回・1回→卒業への移行を、SNSで話題のリアル運用つきで完全公開。寝ない・寝すぎる沼から抜け出す具体策をまとめました。"
+  budget: free
+lede: >-
+  「実はお昼寝の正解は『何歳まで』ではなく『日中の機嫌』」――月齢別の鉄板スケジュールと、2回→1回・1回→卒業への移行を、SNSで話題のリアル運用つきで完全公開。寝ない・寝すぎる沼から抜け出す具体策をまとめました。
+legacyHero: /hero/sleeping-01.png
 ---
 
 ## ⚡ ひと目でわかる｜お昼寝何歳までサマリー

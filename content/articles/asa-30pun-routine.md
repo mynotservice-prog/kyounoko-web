@@ -1,21 +1,25 @@
 ---
 slug: asa-30pun-routine
-title: 朝の30分ルーティン｜2〜3歳の保育園送迎を6:30〜7:30でバタバタしない7手順
-subtitle: 6:30起床から7:30出発まで、60分を30分ブロック×2で回す
-metaDescription: 平日朝の起床6:30〜家出発7:30の60分を30分ブロック×2で回す設計。2〜3歳想定、子のペース別3パターンと前夜準備で、朝のバタバタをなくします。
+title: '朝の30分ルーティン｜2〜3歳の保育園送迎を6:30〜7:30でバタバタしない7手順'
+subtitle: '6:30起床から7:30出発まで、60分を30分ブロック×2で回す'
+metaDescription: '平日朝の起床6:30〜家出発7:30の60分を30分ブロック×2で回す設計。2〜3歳想定、子のペース別3パターンと前夜準備で、朝のバタバタをなくします。'
 category: today-mawasu
 categoryName: 今日どう回す？
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/food-fruit-02.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/asa-30pun-routine.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3"]
-  place: ["home"]
+  ageRanges:
+    - 2-3
+  place:
+    - home
   weather: []
   durationMin: 60
-  budget: "free"
-lede: 「実は朝のバタバタは前夜で7割決まる」――2〜3歳の保育園送迎で毎朝心折れているママ・パパへ。6:30起床〜7:30出発の60分を30分ブロックで回す鉄板ルーティンを、子のペース別3パターンつきで完全公開します。
+  budget: free
+lede: >-
+  「実は朝のバタバタは前夜で7割決まる」――2〜3歳の保育園送迎で毎朝心折れているママ・パパへ。6:30起床〜7:30出発の60分を30分ブロックで回す鉄板ルーティンを、子のペース別3パターンつきで完全公開します。
+legacyHero: /hero/food-fruit-02.png
 ---
 
 ## ⚡ ひと目でわかる｜朝ルーティンサマリー

@@ -1,20 +1,27 @@
 ---
 slug: kodomo-gerizamu-moudiarrhea-taiou
 title: 子どもの下痢・嘔吐対処｜0〜6歳の家庭ケア7ステップと脱水サイン5つ
-metaDescription: 子どもの下痢嘔吐時の家庭ケアを、経口補水液の与え方・食事再開の目安・脱水サイン5つで具体的に解説。ノロ・ロタが疑われるとき、小児科受診すべきタイミングまで0〜6歳向けにまとめました。
+metaDescription: >-
+  子どもの下痢嘔吐時の家庭ケアを、経口補水液の与え方・食事再開の目安・脱水サイン5つで具体的に解説。ノロ・ロタが疑われるとき、小児科受診すべきタイミングまで0〜6歳向けにまとめました。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/medical-02.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kodomo-gerizamu-moudiarrhea-taiou.jpg
 lede: 子どもの下痢嘔吐で最も怖いのは脱水。経口補水液の与え方、食事再開の目安、ノロ・ロタの感染拡大を防ぐ消毒、受診タイミングを0〜6歳向けに整理しました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "low"
-area: "all"
+  budget: low
+area: all
+legacyHero: /hero/medical-02.png
 ---
 
 ## 結論（先に知りたい人へ）

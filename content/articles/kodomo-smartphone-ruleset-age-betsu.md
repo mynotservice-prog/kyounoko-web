@@ -1,20 +1,28 @@
 ---
 slug: kodomo-smartphone-ruleset-age-betsu
 title: スマホ・YouTubeルール年齢別｜0〜6歳の視聴時間と内容の約束20
-metaDescription: 子どものスマホ・YouTube・タブレットの適切な使い方を、0〜6歳の年齢別視聴時間、内容の選び方、依存を防ぐ20のルールで解説。WHO推奨時間、家庭での約束の作り方までまとめました。
+metaDescription: >-
+  子どものスマホ・YouTube・タブレットの適切な使い方を、0〜6歳の年齢別視聴時間、内容の選び方、依存を防ぐ20のルールで解説。WHO推奨時間、家庭での約束の作り方までまとめました。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/screen-time-03.png
-lede: スマホ・YouTubeの使い方で悩む親に、WHO推奨時間、0〜6歳の年齢別ルール20、依存を防ぐ仕掛け、ペアレンタルコントロールの設定まで実用的にまとめました。
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kodomo-smartphone-ruleset-age-betsu.jpg
+lede: >-
+  スマホ・YouTubeの使い方で悩む親に、WHO推奨時間、0〜6歳の年齢別ルール20、依存を防ぐ仕掛け、ペアレンタルコントロールの設定まで実用的にまとめました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "free"
-area: "all"
+  budget: free
+area: all
+legacyHero: /hero/screen-time-03.png
 ---
 
 ## 結論（先に知りたい人へ）

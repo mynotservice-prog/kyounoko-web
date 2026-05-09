@@ -4,17 +4,23 @@ title: 夏の北海道子連れおでかけ10選｜札幌・道央・道東で�
 metaDescription: 夏の北海道で幼児連れでも安心して楽しめるスポットを10カ所厳選。札幌中心部から富良野・美瑛・道東まで、涼しい気候とアクセスを活かした旅行プランを紹介します。
 category: today-doko
 categoryName: 今日どこ行く
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/nature-01.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kosodate-spots-hokkaido-natsu.jpg
 lede: 夏の北海道は幼児連れの旅にこそぴったり。本州が猛暑の時期にも25〜28℃の過ごしやすさで、自然体験と街歩きを両立できる10スポットをご紹介します。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["outdoor", "indoor"]
-  weather: ["sunny"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+    - indoor
+  weather:
+    - sunny
   durationMin: 240
-  budget: "mid"
-area: "hokkaido"
+  budget: mid
+area: hokkaido
+legacyHero: /hero/nature-01.png
 ---
 
 ## TL;DR（先に結論）

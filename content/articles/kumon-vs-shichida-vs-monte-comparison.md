@@ -1,20 +1,26 @@
 ---
 slug: kumon-vs-shichida-vs-monte-comparison
 title: くもん vs 七田式 vs モンテッソーリ徹底比較｜0-6歳の習い事3大流派の違い
-metaDescription: くもん・七田式・モンテッソーリの違いを「教育哲学・教材・料金・対象年齢・効果実感」の5軸で徹底比較。0-6歳の習い事3大流派、それぞれが伸ばす力と、家庭に合う流派の選び方をまとめました。
+metaDescription: >-
+  くもん・七田式・モンテッソーリの違いを「教育哲学・教材・料金・対象年齢・効果実感」の5軸で徹底比較。0-6歳の習い事3大流派、それぞれが伸ばす力と、家庭に合う流派の選び方をまとめました。
 category: narai
 categoryName: 習い事と学び
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/kid-study-02.png
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kumon-vs-shichida-vs-monte-comparison.jpg
 area: all
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
   place: []
   weather: []
   durationMin: 60
-  budget: "mid"
-lede: 0-6歳の習い事3大流派、くもん・七田式・モンテッソーリ。教育哲学・教材・料金・対象年齢・効果実感の5軸で違いを並べ、「うちはどれが合う？」を3分で判断できる比較表にまとめました。
+  budget: mid
+lede: >-
+  0-6歳の習い事3大流派、くもん・七田式・モンテッソーリ。教育哲学・教材・料金・対象年齢・効果実感の5軸で違いを並べ、「うちはどれが合う？」を3分で判断できる比較表にまとめました。
+legacyHero: /hero/kid-study-02.png
 ---
 
 ## 結論（先に知りたい人へ）

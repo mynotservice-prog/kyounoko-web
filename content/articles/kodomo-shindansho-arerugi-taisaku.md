@@ -1,20 +1,28 @@
 ---
 slug: kodomo-shindansho-arerugi-taisaku
 title: 子どものアレルギー診断と家庭対応｜0〜6歳の食物・皮膚・喘息3つの見分け方
-metaDescription: 子どものアレルギーの種類と診断の流れ、食物・アトピー・喘息の家庭対応を整理。検査の受け方、除去食のルール、緊急時のエピペン使用まで、0〜6歳の親が知っておくべき対策をまとめました。
+metaDescription: >-
+  子どものアレルギーの種類と診断の流れ、食物・アトピー・喘息の家庭対応を整理。検査の受け方、除去食のルール、緊急時のエピペン使用まで、0〜6歳の親が知っておくべき対策をまとめました。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/medical-03.png
-lede: 子どもの3大アレルギー（食物・アトピー・喘息）の見分け方、検査の受け方、家庭対応を整理。0〜6歳の時期に合わせた対策と、救急受診の目安まで実用的にまとめました。
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kodomo-shindansho-arerugi-taisaku.jpg
+lede: >-
+  子どもの3大アレルギー（食物・アトピー・喘息）の見分け方、検査の受け方、家庭対応を整理。0〜6歳の時期に合わせた対策と、救急受診の目安まで実用的にまとめました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 60
-  budget: "low"
-area: "all"
+  budget: low
+area: all
+legacyHero: /hero/medical-03.png
 ---
 
 ## 結論（先に知りたい人へ）

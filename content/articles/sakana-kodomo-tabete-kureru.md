@@ -4,17 +4,22 @@ title: 魚を子が食べるレシピ7選｜魚嫌い幼児がパクパク食べ
 metaDescription: 魚が苦手な2〜6歳の幼児でも食べてくれるレシピを7品厳選。骨の処理・臭み取り・味付けの工夫まで、分量と手順を添えて実用的にまとめました。
 category: today-taberu
 categoryName: 今日何食べる
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/food-japan-02.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/sakana-kodomo-tabete-kureru.jpg
 lede: 「魚は食べない」「骨が嫌」という幼児に悩む家庭は多いもの。臭み取り・骨の処理・食べやすい味付けで、子が自分から箸を伸ばす7レシピを紹介します。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "mid"
-area: "all"
+  budget: mid
+area: all
+legacyHero: /hero/food-japan-02.png
 ---
 
 ## TL;DR（先に結論）

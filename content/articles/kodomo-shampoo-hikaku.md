@@ -1,19 +1,26 @@
 ---
 slug: kodomo-shampoo-hikaku
 title: 子どもシャンプー比較5社【0-6歳】敏感肌向け定番
-metaDescription: 子の肌トラブルで悩んでいませんか。0-6歳向けシャンプー・ボディソープ5社（ミノン・ピジョン・メリーズ・アトピタ・キュレル）を成分・泡立ち・価格・敏感肌対応で比較表に整理。年齢別おすすめ、乳児湿疹の対応まで3分で確認できます。
+metaDescription: >-
+  子の肌トラブルで悩んでいませんか。0-6歳向けシャンプー・ボディソープ5社（ミノン・ピジョン・メリーズ・アトピタ・キュレル）を成分・泡立ち・価格・敏感肌対応で比較表に整理。年齢別おすすめ、乳児湿疹の対応まで3分で確認できます。
 category: yakudatsu
 categoryName: 役立つもの
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/bath-01.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/kodomo-shampoo-hikaku.jpg
+area: all
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
-  budget: "low"
-lede: 子どものシャンプー・ボディソープは敏感肌対応の有無で使用感が全然違います。ミノン・ピジョン・メリーズ・アトピタ・キュレル5社を成分・泡立ち・価格で比較しました。
+  budget: low
+lede: >-
+  子どものシャンプー・ボディソープは敏感肌対応の有無で使用感が全然違います。ミノン・ピジョン・メリーズ・アトピタ・キュレル5社を成分・泡立ち・価格で比較しました。
+legacyHero: /hero/bath-01.png
 ---
 
 ## 結論（先に知りたい人へ）

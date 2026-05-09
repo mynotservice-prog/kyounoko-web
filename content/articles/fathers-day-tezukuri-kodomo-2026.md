@@ -1,19 +1,26 @@
 ---
 slug: fathers-day-tezukuri-kodomo-2026
 title: 【2026年版】父の日の手作りプレゼント8選｜パパが本気で喜ぶ子供と作るギフト
-metaDescription: 2026年の父の日（6月21日）に向けた、0〜6歳の子と作れる手作りプレゼント8選。ネクタイカード、似顔絵Tシャツ、お手伝い券など、パパが本当に喜ぶ実用アイデアを年齢別に紹介。
+metaDescription: >-
+  2026年の父の日（6月21日）に向けた、0〜6歳の子と作れる手作りプレゼント8選。ネクタイカード、似顔絵Tシャツ、お手伝い券など、パパが本当に喜ぶ実用アイデアを年齢別に紹介。
 category: today-mawasu
 categoryName: 今日どう回す？
-publishedAt: "2026-05-05"
-updatedAt: "2026-05-08"
-hero: /hero/kid-craft-02.png
+publishedAt: '2026-05-05'
+updatedAt: '2026-05-09'
+hero: /hero-ai/fathers-day-tezukuri-kodomo-2026.jpg
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 60
-  budget: "low"
+  budget: low
 area: all
+legacyHero: /hero/kid-craft-02.png
 ---
 
 ## 結論（先に知りたい人へ）

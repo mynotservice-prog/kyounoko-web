@@ -1,19 +1,26 @@
 ---
 slug: halloween-kodzure-events-2026
 title: ハロウィン子連れイベント2026【0-6歳】東京10選
-metaDescription: ハロウィンを子連れでどこに行くか迷っていませんか。東京の0-6歳向け10選を、表参道ヒルズ・六本木ヒルズ・ららぽーとのトリックオアトリート、町内会イベント、商業施設別に整理。仮装選び、安全対策、混雑時間まで3分で確認できます。
+metaDescription: >-
+  ハロウィンを子連れでどこに行くか迷っていませんか。東京の0-6歳向け10選を、表参道ヒルズ・六本木ヒルズ・ららぽーとのトリックオアトリート、町内会イベント、商業施設別に整理。仮装選び、安全対策、混雑時間まで3分で確認できます。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/park-01.png
-area: "tokyo"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/halloween-kodzure-events-2026.jpg
+area: tokyo
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["outdoor", "indoor"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+    - indoor
   weather: []
-  budget: "low"
-lede: 子連れハロウィンは、渋谷の仮装大会に行くより「商業施設のトリックオアトリート」「ファミリー向けパーティー」「近所のご近所イベント」の3つが本命。年齢別に安全な楽しみ方を整理します。
+  budget: low
+lede: >-
+  子連れハロウィンは、渋谷の仮装大会に行くより「商業施設のトリックオアトリート」「ファミリー向けパーティー」「近所のご近所イベント」の3つが本命。年齢別に安全な楽しみ方を整理します。
+legacyHero: /hero/park-01.png
 ---
 
 ## 結論（先に知りたい人へ）

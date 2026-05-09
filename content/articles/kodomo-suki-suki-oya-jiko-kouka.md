@@ -1,20 +1,27 @@
 ---
 slug: kodomo-suki-suki-oya-jiko-kouka
 title: 子どもの自己肯定感が上がる声かけ10選｜今日から使える魔法の言葉
-metaDescription: 自己肯定感の高い子に育てる声かけを発達心理の観点から10選厳選。NG・OKフレーズ比較、年齢別の伝え方、叱る時の工夫、兄弟差への配慮まで。毎日の習慣で子どもが自信を持つ育て方を解説します。
+metaDescription: >-
+  自己肯定感の高い子に育てる声かけを発達心理の観点から10選厳選。NG・OKフレーズ比較、年齢別の伝え方、叱る時の工夫、兄弟差への配慮まで。毎日の習慣で子どもが自信を持つ育て方を解説します。
 category: today-mawasu
 categoryName: 今日まわす
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/parent-child-01.png
-lede: 「子どもの自己肯定感を育てたい」と願うパパママへ。日本の子どもの自己肯定感は世界最低レベル。実はやっちゃダメな声かけと、ガチで効いた魔法の10フレーズを、SNSで話題の「沼ったママの本音」混みでまとめました。
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kodomo-suki-suki-oya-jiko-kouka.jpg
+lede: >-
+  「子どもの自己肯定感を育てたい」と願うパパママへ。日本の子どもの自己肯定感は世界最低レベル。実はやっちゃダメな声かけと、ガチで効いた魔法の10フレーズを、SNSで話題の「沼ったママの本音」混みでまとめました。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 15
-  budget: "free"
-area: "all"
+  budget: free
+area: all
+legacyHero: /hero/parent-child-01.png
 ---
 
 ## ⚡ ひと目でわかる｜自己肯定感UP声かけサマリー

@@ -4,17 +4,23 @@ title: 吉祥寺駅周辺 子連れランチ10選（井の頭公園と一緒に�
 metaDescription: 吉祥寺駅徒歩圏内の子連れランチ10選。アトレ吉祥寺・キラリナ京王吉祥寺・コピスなど駅ビル中心に、井の頭公園帰りにも使える店を厳選。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: "2026-04-20"
-updatedAt: "2026-05-08"
-hero: /hero/family-dinner-03.png
+publishedAt: '2026-04-20'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-kichijoji-kodzure-lunch.jpg
 lede: 吉祥寺は子連れに人気の街。**アトレ吉祥寺・キラリナ・コピス吉祥寺**の駅ビル中心に、井の頭公園帰りに使えるランチ10店を条件別にまとめました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["indoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - indoor
+  weather:
+    - any
   durationMin: 60
-  budget: "mid"
+  budget: mid
 area: tokyo
+legacyHero: /hero/family-dinner-03.png
 ---
 
 ## TL;DR（3行要約）

@@ -1,20 +1,28 @@
 ---
 slug: kouyou-spots-kanto-koduzure
 title: 紅葉スポット関東子連れ10選｜ベビーカーOK・アクセス良好ランキング
-metaDescription: 子連れで楽しめる関東の紅葉スポット10選。ベビーカー対応、駐車場の有無、ピーク時期、トイレ・おむつ替え設備、周辺のランチ情報まで。東京・神奈川・埼玉・千葉から厳選した家族向けランキングです。
+metaDescription: >-
+  子連れで楽しめる関東の紅葉スポット10選。ベビーカー対応、駐車場の有無、ピーク時期、トイレ・おむつ替え設備、周辺のランチ情報まで。東京・神奈川・埼玉・千葉から厳選した家族向けランキングです。
 category: today-doko
 categoryName: 今日どこいく
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/autumn-03.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kouyou-spots-kanto-koduzure.jpg
 lede: 11月下旬〜12月初旬、関東の紅葉が最盛期。子連れでも安心して楽しめるベビーカーOK・アクセス良好な10スポットを、家族目線で厳選しました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["sunny", "cold"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - sunny
+    - cold
   durationMin: 240
-  budget: "low"
-area: "tokyo"
+  budget: low
+area: tokyo
+legacyHero: /hero/autumn-03.png
 ---
 
 ## 結論（先に知りたい人へ）

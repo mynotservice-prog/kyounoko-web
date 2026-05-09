@@ -1,20 +1,28 @@
 ---
 slug: tokyo-park-ranking-mom50-vote
 title: ママ100人投票｜東京の子連れ公園ランキングTOP30
-metaDescription: 編集部のママネットワーク100人＋公開情報の集約から、東京の子連れ公園を「行きやすさ・設備・子の喜び度」3軸で投票形式ランキング化。TOP30の特徴と向いている家庭を解説。
+metaDescription: >-
+  編集部のママネットワーク100人＋公開情報の集約から、東京の子連れ公園を「行きやすさ・設備・子の喜び度」3軸で投票形式ランキング化。TOP30の特徴と向いている家庭を解説。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/park-02.png
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-park-ranking-mom50-vote.jpg
 area: tokyo
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - any
   durationMin: 120
-  budget: "low"
-lede: 編集部のママネットワーク100人＋SNS公開情報を集約し、「行きやすさ・設備・子の喜び度」の3軸で東京の子連れ公園TOP30をランキング化。週末の行き先選びに使える独自データです。
+  budget: low
+lede: >-
+  編集部のママネットワーク100人＋SNS公開情報を集約し、「行きやすさ・設備・子の喜び度」の3軸で東京の子連れ公園TOP30をランキング化。週末の行き先選びに使える独自データです。
+legacyHero: /hero/park-02.png
 ---
 
 ## 結論（先に知りたい人へ）

@@ -1,20 +1,28 @@
 ---
 slug: tokyo-rainy-strong-station-data
 title: 東京で雨の日に強い駅TOP15｜地下街・モール直結データから算出
-metaDescription: 雨の日の子連れ外出は心折れる。きょうのこ独自集計3,277店データから、地下街・モール直結率が高く雨でも子連れOK店が使える東京の駅TOP15を独自抽出。引きこもり回避の独自データ記事。
+metaDescription: >-
+  雨の日の子連れ外出は心折れる。きょうのこ独自集計3,277店データから、地下街・モール直結率が高く雨でも子連れOK店が使える東京の駅TOP15を独自抽出。引きこもり回避の独自データ記事。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/tokyo-01.png
-lede: 雨の日に小さな子を連れて外食――心が折れる経験ありませんか？きょうのこ独自集計から**地下街・モール直結率が高い駅TOP15**を抽出。雨でも濡れずに子連れOK店に到達できる独自データ記事です。
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-rainy-strong-station-data.jpg
+lede: >-
+  雨の日に小さな子を連れて外食――心が折れる経験ありませんか？きょうのこ独自集計から**地下街・モール直結率が高い駅TOP15**を抽出。雨でも濡れずに子連れOK店に到達できる独自データ記事です。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["indoor"]
-  weather: ["rain"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - indoor
+  weather:
+    - rain
   durationMin: 60
-  budget: "low"
+  budget: low
 area: tokyo
+legacyHero: /hero/tokyo-01.png
 ---
 
 ## 結論（先に知りたい人へ）

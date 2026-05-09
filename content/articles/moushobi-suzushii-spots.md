@@ -4,17 +4,24 @@ title: 猛暑日にベビーカーで行ける涼しい屋内スポット（0〜
 metaDescription: 35度超の猛暑日に0〜6歳を連れて行ける都内の涼しい屋内スポット7選。冷房しっかり、ベビーカーOK、オムツ替えあり、無料〜1000円以下で選びました。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: 2026-04-19
-updatedAt: "2026-05-08"
-hero: /hero/summer-water-03.png
-area: "tokyo"
+publishedAt: 2026-04-19T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/moushobi-suzushii-spots.jpg
+area: tokyo
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["indoor"]
-  weather: ["heat"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - indoor
+  weather:
+    - heat
   durationMin: 180
-  budget: "low"
-lede: 35度を超える猛暑日に子連れで外は無理。実はこの7スポット、ガチで「冷房完備・駅直結・無料〜¥1,000以下」を全クリアした都内の避難所です。0歳からOK、ベビーカーで一周可、コスパ最強の組み合わせを開示します。
+  budget: low
+lede: >-
+  35度を超える猛暑日に子連れで外は無理。実はこの7スポット、ガチで「冷房完備・駅直結・無料〜¥1,000以下」を全クリアした都内の避難所です。0歳からOK、ベビーカーで一周可、コスパ最強の組み合わせを開示します。
+legacyHero: /hero/summer-water-03.png
 ---
 
 ## ⚡ ひと目でわかる｜猛暑日避難サマリー

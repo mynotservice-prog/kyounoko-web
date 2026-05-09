@@ -56,9 +56,13 @@ for (const [slug, entry] of entries) {
     missingCount++;
     continue;
   }
-  // 生成済み画像が存在するかチェック
-  const imgPath = path.join(ROOT, 'public', `hero-ai/${slug}.png`);
-  if (!fs.existsSync(imgPath)) {
+  // 生成済み画像が存在するかチェック（.jpg を優先、なければ .png）
+  const jpgPath = path.join(ROOT, 'public', `hero-ai/${slug}.jpg`);
+  const pngPath = path.join(ROOT, 'public', `hero-ai/${slug}.png`);
+  let ext;
+  if (fs.existsSync(jpgPath)) ext = 'jpg';
+  else if (fs.existsSync(pngPath)) ext = 'png';
+  else {
     console.warn(`  ⚠ 画像ファイルなし: ${slug}`);
     missingCount++;
     continue;
@@ -67,7 +71,7 @@ for (const [slug, entry] of entries) {
   const raw = fs.readFileSync(file, 'utf8');
   const parsed = matter(raw);
   const data = parsed.data;
-  const newHero = `/hero-ai/${slug}.png`;
+  const newHero = `/hero-ai/${slug}.${ext}`;
 
   if (data.hero === newHero) {
     skipCount++;

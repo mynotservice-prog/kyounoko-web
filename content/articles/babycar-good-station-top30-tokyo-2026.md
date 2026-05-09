@@ -1,20 +1,27 @@
 ---
 slug: babycar-good-station-top30-tokyo-2026
 title: 東京23区 ベビーカー◎率TOP30駅｜本当に動きやすい駅はどこ？
-metaDescription: ベビーカーで実際に入店できる店の比率は駅で大きく違う。きょうのこ独自集計3,277店データから、ベビーカー◎率が高い東京23区の駅TOP30を独自に抽出。モール／地下街／住宅エリアの共通点を分析。
+metaDescription: >-
+  ベビーカーで実際に入店できる店の比率は駅で大きく違う。きょうのこ独自集計3,277店データから、ベビーカー◎率が高い東京23区の駅TOP30を独自に抽出。モール／地下街／住宅エリアの共通点を分析。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/stroller-01.png
-lede: 「ベビーカーで入れる店を探すのに毎回疲れる」――そんな悩みを解決する独自データ。きょうのこ集計で**ベビーカー◎率**が高い駅TOP30を発表します。住宅街と商業モール直結駅が上位を占めました。
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/babycar-good-station-top30-tokyo-2026.jpg
+lede: >-
+  「ベビーカーで入れる店を探すのに毎回疲れる」――そんな悩みを解決する独自データ。きょうのこ集計で**ベビーカー◎率**が高い駅TOP30を発表します。住宅街と商業モール直結駅が上位を占めました。
 quickInfo:
-  ageRanges: ["0-1", "2-3"]
-  place: ["outdoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+  place:
+    - outdoor
+  weather:
+    - any
   durationMin: 60
-  budget: "low"
+  budget: low
 area: tokyo
+legacyHero: /hero/stroller-01.png
 ---
 
 ## 結論（先に知りたい人へ）

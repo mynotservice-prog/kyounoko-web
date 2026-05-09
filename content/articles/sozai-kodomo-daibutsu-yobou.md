@@ -1,20 +1,28 @@
 ---
 slug: sozai-kodomo-daibutsu-yobou
 title: 子どもの怪我予防チェックリスト｜家庭内事故を防ぐ25項目
-metaDescription: 家庭内で起きやすい子どもの怪我・事故を予防する25項目チェックリスト。年齢別の危険箇所、転倒・誤飲・やけど・溺水・転落の予防策、救急の目安、応急処置まで完全ガイドです。
+metaDescription: >-
+  家庭内で起きやすい子どもの怪我・事故を予防する25項目チェックリスト。年齢別の危険箇所、転倒・誤飲・やけど・溺水・転落の予防策、救急の目安、応急処置まで完全ガイドです。
 category: today-mawasu
 categoryName: 今日まわす
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/home-cozy-03.png
-lede: 子どもの死因1位は不慮の事故。実は家庭内で起きる怪我の8割は、事前対策で防げるとされます。年齢別の危険箇所と25項目チェックリストで、今日から「ガチで安全」な家づくりを始めましょう。
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/sozai-kodomo-daibutsu-yobou.jpg
+lede: >-
+  子どもの死因1位は不慮の事故。実は家庭内で起きる怪我の8割は、事前対策で防げるとされます。年齢別の危険箇所と25項目チェックリストで、今日から「ガチで安全」な家づくりを始めましょう。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "low"
-area: "all"
+  budget: low
+area: all
+legacyHero: /hero/home-cozy-03.png
 ---
 
 ## ⚡ ひと目でわかる｜怪我予防サマリー

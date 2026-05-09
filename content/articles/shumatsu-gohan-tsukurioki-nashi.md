@@ -4,17 +4,21 @@ title: 【2026年版】共働き家庭の土日ごはん7パターン｜作り�
 metaDescription: 共働きの土日、3食×2日=6食を作り置きなしで乗り切る具体パターン。外食・惣菜・冷凍食品を組み合わせて親の負担を最小化、2〜6歳も満足する土日ごはん設計。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/food-kitchen-03.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/shumatsu-gohan-tsukurioki-nashi.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3","4-6"]
-  place: ["home"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
   durationMin: 20
-  budget: "low"
+  budget: low
 lede: 共働きの土日、3食×2日=6食を作り置きなしで乗り切る具体パターン。外食・惣菜・冷凍食品を組み合わせて親の負担を最小化し、2〜6歳も満足する土日ごはん設計。
+legacyHero: /hero/food-kitchen-03.png
 ---
 
 実は、共働き家庭が一番疲れるのは「土日も自炊」のプレッシャー。Instagramで月間数百万リーチを稼ぐ家事ラクアカウントの共通点は、**週末は外食・惣菜・冷凍食品をフル活用して罪悪感ゼロ**で過ごしていること。この記事では、土日6食のうち**自炊は最大3食まで**に振り切った運用を、家族構成・疲労度別に7パターンで紹介します。

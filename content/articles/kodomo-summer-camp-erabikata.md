@@ -4,17 +4,21 @@ title: 子供のサマーキャンプ選び方完全ガイド｜年齢別・初�
 metaDescription: 子供のサマーキャンプ選び方完全ガイド。民間vs自治体の比較、対象年齢、選定基準、初参加の準備、料金相場、安全面のチェックポイントを解説します。
 category: yakudatsu
 categoryName: 役立つもの
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/nature-03.png
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kodomo-summer-camp-erabikata.jpg
 lede: 夏休みの定番イベント、サマーキャンプ。民間と自治体で何が違う？年齢別の選び方は？初参加で何を準備する？子供を送り出す親が悩むポイントを整理しました。
 quickInfo:
-  ageRanges: ["4-6"]
-  place: ["outdoor"]
-  weather: ["sunny"]
+  ageRanges:
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - sunny
   durationMin: 480
-  budget: "high"
+  budget: high
 area: all
+legacyHero: /hero/nature-03.png
 ---
 
 ## 結論（先に知りたい人へ）

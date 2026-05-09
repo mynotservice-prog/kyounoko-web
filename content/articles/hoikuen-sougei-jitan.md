@@ -4,17 +4,23 @@ title: 保育園送迎の時短術｜朝の15分を短縮する5つの工夫
 metaDescription: 保育園の朝の送迎を15分短縮する5つの工夫。前夜準備、朝のタイムブロック、自転車vs徒歩、雨雪の日対応まで、共働き家庭の朝を楽にする実践術をまとめました。
 category: today-mawasu
 categoryName: 今日どう回す？
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/home-cozy-02.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/hoikuen-sougei-jitan.jpg
+area: all
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["outdoor"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
   weather: []
   durationMin: 15
-  budget: "free"
-lede: 「実は朝の遅れの原因は前夜にある」――毎朝バタバタの共働きママ・パパへ。前夜9割・朝1割の鉄板分担と、ガチで効く時短5工夫を、雨・雪・強風・猛暑のプランBつきで完全公開します。
+  budget: free
+lede: >-
+  「実は朝の遅れの原因は前夜にある」――毎朝バタバタの共働きママ・パパへ。前夜9割・朝1割の鉄板分担と、ガチで効く時短5工夫を、雨・雪・強風・猛暑のプランBつきで完全公開します。
+legacyHero: /hero/home-cozy-02.png
 ---
 
 ## ⚡ ひと目でわかる｜送迎時短サマリー

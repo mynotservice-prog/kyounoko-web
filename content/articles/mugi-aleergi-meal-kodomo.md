@@ -4,17 +4,22 @@ title: 小麦アレルギー幼児のレシピ7選｜米粉・米麺で作る代
 metaDescription: 小麦アレルギーの幼児向けに、米粉・米麺・コーン粉で作れる代替レシピを7品厳選。分量・手順・市販食材の選び方まで、実用目線でわかりやすくまとめました。
 category: today-taberu
 categoryName: 今日何食べる
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/medical-02.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/mugi-aleergi-meal-kodomo.jpg
 lede: 小麦アレルギーと診断されたら、パン・麺・揚げ物の衣など毎日のメニューに工夫が必要。米粉・米麺を使った代替レシピ7つで、家族が同じ食卓を囲めます。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "mid"
-area: "all"
+  budget: mid
+area: all
+legacyHero: /hero/medical-02.png
 ---
 
 ## 結論（先に知りたい人へ）

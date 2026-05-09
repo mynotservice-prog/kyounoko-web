@@ -1,26 +1,29 @@
 ---
 slug: amenohi-indoor-spots-tokyo-15
-title: "雨の日に行ける東京の屋内キッズスポット15選｜0〜6歳連れの定番から穴場まで"
+title: 雨の日に行ける東京の屋内キッズスポット15選｜0〜6歳連れの定番から穴場まで
 category: today-doko
-categoryName: "今日どこ行く？"
-hero: /hero/tokyo-02.png
-metaDescription: "雨の日でも安心して遊べる東京の屋内キッズスポット15選。ボーネルンド・キドキド・ASOBono・屋内アスレチック・博物館まで、対象年齢・料金・アクセス・混雑度の具体情報付き。"
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-area: "tokyo"
+categoryName: 今日どこ行く？
+hero: /hero-ai/amenohi-indoor-spots-tokyo-15.jpg
+metaDescription: >-
+  雨の日でも安心して遊べる東京の屋内キッズスポット15選。ボーネルンド・キドキド・ASOBono・屋内アスレチック・博物館まで、対象年齢・料金・アクセス・混雑度の具体情報付き。
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+area: tokyo
 quickInfo:
   ageRanges:
-    - "0-1"
-    - "1-2"
-    - "2-3"
-    - "4-6"
+    - 0-1
+    - 1-2
+    - 2-3
+    - 4-6
   place:
     - indoor
   weather:
     - rain
   durationMin: 180
   budget: mid
-lede: "雨の日の「どこ行く問題」は、屋内の選択肢を持っているかで決まります。実はこの15スポット、ガチで「予約不要・ベビーOK・ベビーカーで一周可」を全クリアした都内の定番＋穴場。料金・予約・年齢別おすすめ度まで全部開示します。"
+lede: >-
+  雨の日の「どこ行く問題」は、屋内の選択肢を持っているかで決まります。実はこの15スポット、ガチで「予約不要・ベビーOK・ベビーカーで一周可」を全クリアした都内の定番＋穴場。料金・予約・年齢別おすすめ度まで全部開示します。
+legacyHero: /hero/tokyo-02.png
 ---
 
 ## ⚡ ひと目でわかる｜雨の日屋内スポットサマリー

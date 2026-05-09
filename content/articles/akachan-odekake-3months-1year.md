@@ -4,16 +4,20 @@ title: 【2026年版】0〜1歳のお出かけ先15選｜生後3ヶ月から行�
 metaDescription: 生後3ヶ月から1歳までの赤ちゃん連れで無理なく行けるお出かけ先15選。授乳室・ベビーカー動線・短時間で帰れるスポットを月齢別に紹介します。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: 2026-04-19
-updatedAt: 2026-05-08
-hero: /hero/baby-03.png
-area: "all"
+publishedAt: 2026-04-19T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/akachan-odekake-3months-1year.jpg
+area: all
 quickInfo:
-  ageRanges: ["0-1"]
-  place: ["indoor", "outdoor"]
+  ageRanges:
+    - 0-1
+  place:
+    - indoor
+    - outdoor
   durationMin: 90
-  budget: "free"
+  budget: free
 lede: 首すわり前後の生後3ヶ月から、歩き始め前の1歳まで。無理なく短時間で帰れる、授乳室・ベビーカー動線重視のお出かけ先を月齢別に15箇所紹介します。
+legacyHero: /hero/baby-03.png
 ---
 
 ## 結論（先に知りたい人へ）

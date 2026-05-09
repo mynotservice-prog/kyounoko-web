@@ -1,20 +1,26 @@
 ---
 slug: tokyo-bunkyo-baby-cafe
 title: 文京区 0歳児と行ける絵本カフェ・ベビーカーOK店
-metaDescription: 文京区で0歳児と一緒にママが落ち着ける絵本カフェ・ベビーカーOKカフェの選び方。本郷・小石川・白山・千駄木エリアを中心に、0〜1歳ママの平日午前目線でまとめたローカルガイド。
+metaDescription: >-
+  文京区で0歳児と一緒にママが落ち着ける絵本カフェ・ベビーカーOKカフェの選び方。本郷・小石川・白山・千駄木エリアを中心に、0〜1歳ママの平日午前目線でまとめたローカルガイド。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-04-20"
-updatedAt: "2026-05-08"
-hero: /hero/baby-01.png
-lede: 文京区は大学・出版社・児童書文化が根付いた「本と子どもに優しい街」。0歳児と一緒にママがホッとできる絵本カフェ・ベビーカーOKカフェが、本郷・小石川・千駄木エリアに点在しています。この記事では0〜1歳ママが平日午前に使える文京区のカフェの選び方をまとめました。
+publishedAt: '2026-04-20'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-bunkyo-baby-cafe.jpg
+lede: >-
+  文京区は大学・出版社・児童書文化が根付いた「本と子どもに優しい街」。0歳児と一緒にママがホッとできる絵本カフェ・ベビーカーOKカフェが、本郷・小石川・千駄木エリアに点在しています。この記事では0〜1歳ママが平日午前に使える文京区のカフェの選び方をまとめました。
 quickInfo:
-  ageRanges: ["0-1"]
-  place: ["indoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+  place:
+    - indoor
+  weather:
+    - any
   durationMin: 60
-  budget: "low"
+  budget: low
 area: tokyo
+legacyHero: /hero/baby-01.png
 ---
 
 ## 結論（先に知りたい人へ）

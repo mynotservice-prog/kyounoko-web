@@ -1,20 +1,26 @@
 ---
 slug: obentou-jitan-8patterns
 title: 幼児お弁当 時短テク8つ【2-6歳】朝10分で完成
-metaDescription: 幼稚園や遠足のお弁当作りに毎朝30分かかっていませんか。朝10分で完成する時短テク8つを、冷凍ブロッコリー常備・卵焼き前夜仕込み・ご飯型抜き・ふりかけローテ・冷食活用で整理。彩りバランスの目安まで3分で確認できます。
+metaDescription: >-
+  幼稚園や遠足のお弁当作りに毎朝30分かかっていませんか。朝10分で完成する時短テク8つを、冷凍ブロッコリー常備・卵焼き前夜仕込み・ご飯型抜き・ふりかけローテ・冷食活用で整理。彩りバランスの目安まで3分で確認できます。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/food-japan-02.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/obentou-jitan-8patterns.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3","4-6"]
-  place: ["home"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
   durationMin: 10
-  budget: "low"
-lede: 幼稚園・遠足向け幼児お弁当を朝10分で作る時短テク8つ。冷凍ブロッコリー常備・卵焼き前夜仕込み・ご飯型抜き・ふりかけローテ・冷食活用など具体的な方法を紹介します。
+  budget: low
+lede: >-
+  幼稚園・遠足向け幼児お弁当を朝10分で作る時短テク8つ。冷凍ブロッコリー常備・卵焼き前夜仕込み・ご飯型抜き・ふりかけローテ・冷食活用など具体的な方法を紹介します。
+legacyHero: /hero/food-japan-02.png
 ---
 
 実は、お弁当が完食される家庭ほどキャラ弁を作っていません。Instagramで人気のお弁当アカウント（@obentolife系）の共通点は、**前夜3分の仕込みと冷凍食品をフル活用して、朝は組み立てだけ**にしていること。この記事の8テクは、すべて2〜6歳が「秒で完食」した実績のある時短設計で、毎朝のイライラをゼロにします。

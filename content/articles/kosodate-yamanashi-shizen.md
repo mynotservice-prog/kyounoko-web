@@ -4,17 +4,24 @@ title: 山梨の子連れ自然・農業体験おでかけ10選｜週末2日で�
 metaDescription: 山梨県内から、幼児でも楽しめる自然体験・果物狩り・牧場・温泉スポットを10カ所厳選。季節ごとの見どころ・アクセス・注意点まで、子育て世帯に寄せて解説します。
 category: today-doko
 categoryName: 今日どこ行く
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/nature-03.png
-lede: 富士山・八ヶ岳・南アルプス。3つの山並みに囲まれた山梨は、幼児連れの自然体験と果物狩りの宝庫です。首都圏から車で2時間の距離で満喫できるスポットを厳選しました。
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kosodate-yamanashi-shizen.jpg
+lede: >-
+  富士山・八ヶ岳・南アルプス。3つの山並みに囲まれた山梨は、幼児連れの自然体験と果物狩りの宝庫です。首都圏から車で2時間の距離で満喫できるスポットを厳選しました。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["sunny", "any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - sunny
+    - any
   durationMin: 240
-  budget: "mid"
-area: "yamanashi"
+  budget: mid
+area: yamanashi
+legacyHero: /hero/nature-03.png
 ---
 
 ## 結論（先に知りたい人へ）

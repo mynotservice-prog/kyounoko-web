@@ -1,20 +1,27 @@
 ---
 slug: babycar-vs-dakkohimo-tsukaiwake-data
 title: 【月齢別】ベビーカー vs 抱っこ紐 使い分けガイド｜実体験ベース
-metaDescription: ベビーカーと抱っこ紐、いつどっち？0-3ヶ月/4-6ヶ月/7-12ヶ月/13ヶ月+の月齢4フェーズ×シチュエーションで「どちらが優位か」を判断。実体験ベースの比較表＋失敗談からの学びをまとめました。
+metaDescription: >-
+  ベビーカーと抱っこ紐、いつどっち？0-3ヶ月/4-6ヶ月/7-12ヶ月/13ヶ月+の月齢4フェーズ×シチュエーションで「どちらが優位か」を判断。実体験ベースの比較表＋失敗談からの学びをまとめました。
 category: yakudatsu
 categoryName: 役立つもの
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/stroller-01.png
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/babycar-vs-dakkohimo-tsukaiwake-data.jpg
 area: tokyo
 quickInfo:
-  ageRanges: ["0-1", "2-3"]
-  place: ["outdoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+  place:
+    - outdoor
+  weather:
+    - any
   durationMin: 60
-  budget: "low"
-lede: ベビーカーと抱っこ紐、どっちを使うか毎回悩みませんか。月齢4フェーズとシチュエーション別に、実体験から見えた「優位な方」をマトリクスで整理。お出かけ前の判断スピードが上がります。
+  budget: low
+lede: >-
+  ベビーカーと抱っこ紐、どっちを使うか毎回悩みませんか。月齢4フェーズとシチュエーション別に、実体験から見えた「優位な方」をマトリクスで整理。お出かけ前の判断スピードが上がります。
+legacyHero: /hero/stroller-01.png
 ---
 
 ## 結論（先に知りたい人へ）

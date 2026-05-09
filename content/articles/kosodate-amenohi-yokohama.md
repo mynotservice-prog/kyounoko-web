@@ -1,20 +1,30 @@
 ---
 slug: kosodate-amenohi-yokohama
 title: 横浜で雨の日に助かる子連れ屋内スポット10選｜0〜6歳対応
-metaDescription: 横浜エリアで雨の日・猛暑日・寒波日に役立つ屋内の子連れスポットを10カ所厳選。駐車場・授乳室・対象年齢・混雑回避まで、実際に子連れで動いた目線でまとめました。
+metaDescription: >-
+  横浜エリアで雨の日・猛暑日・寒波日に役立つ屋内の子連れスポットを10カ所厳選。駐車場・授乳室・対象年齢・混雑回避まで、実際に子連れで動いた目線でまとめました。
 category: today-doko
 categoryName: 今日どこ行く
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/japan-rural-01.png
-lede: 雨の日の横浜は、みなとみらい・桜木町・新横浜エリアに屋内型スポットが集中。実はこの10スポット、ガチで「予約不要・ベビーOK・駅直結」を全クリアしたコスパ最強のリスト。0〜6歳の年齢別に料金・動線まで完全開示します。
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kosodate-amenohi-yokohama.jpg
+lede: >-
+  雨の日の横浜は、みなとみらい・桜木町・新横浜エリアに屋内型スポットが集中。実はこの10スポット、ガチで「予約不要・ベビーOK・駅直結」を全クリアしたコスパ最強のリスト。0〜6歳の年齢別に料金・動線まで完全開示します。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["indoor"]
-  weather: ["rain", "heat", "cold"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - indoor
+  weather:
+    - rain
+    - heat
+    - cold
   durationMin: 240
-  budget: "low"
-area: "kanagawa"
+  budget: low
+area: kanagawa
+legacyHero: /hero/japan-rural-01.png
 ---
 
 ## ⚡ ひと目でわかる｜横浜雨の日サマリー

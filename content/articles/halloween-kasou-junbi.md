@@ -1,19 +1,24 @@
 ---
 slug: halloween-kasou-junbi
 title: ハロウィン仮装・飾り15アイデア【3-6歳】100均で作れる
-metaDescription: ハロウィン仮装の準備で何から始めるか迷っていませんか。3-6歳向けに、市販＋100均素材で作る15アイデアを整理。仮装、飾りつけ、フィンガーフード、お菓子交換マナー、年齢別おすすめまで3分で確認でき、当日まで迷わず準備できます。
+metaDescription: >-
+  ハロウィン仮装の準備で何から始めるか迷っていませんか。3-6歳向けに、市販＋100均素材で作る15アイデアを整理。仮装、飾りつけ、フィンガーフード、お菓子交換マナー、年齢別おすすめまで3分で確認でき、当日まで迷わず準備できます。
 category: gyouji
 categoryName: 季節と行事
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/park-01.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/halloween-kasou-junbi.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
-  budget: "low"
+  budget: low
 lede: 3〜6歳のハロウィン仮装・飾り・フードを15アイデアで網羅。市販と手作りの使い分け、年齢別おすすめ、お菓子交換マナーまでまるごと。
+legacyHero: /hero/park-01.png
 ---
 
 ## 結論（先に知りたい人へ）

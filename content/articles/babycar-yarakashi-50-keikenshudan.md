@@ -1,20 +1,26 @@
 ---
 slug: babycar-yarakashi-50-keikenshudan
 title: ママ100人に聞いた｜ベビーカーで「やらかした」失敗エピソード50連発
-metaDescription: ベビーカーで「やらかした」失敗談をママ100人＋SNS公開情報から集約。駅で詰む・改札で焦る・段差で転ぶ等のエピソード50本を「対策セット」で紹介。明日からの予防チェックに。
+metaDescription: >-
+  ベビーカーで「やらかした」失敗談をママ100人＋SNS公開情報から集約。駅で詰む・改札で焦る・段差で転ぶ等のエピソード50本を「対策セット」で紹介。明日からの予防チェックに。
 category: today-mawasu
 categoryName: 今日どう回す？
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/stroller-03.png
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/babycar-yarakashi-50-keikenshudan.jpg
 area: tokyo
 quickInfo:
-  ageRanges: ["0-1", "2-3"]
-  place: ["outdoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+  place:
+    - outdoor
+  weather:
+    - any
   durationMin: 30
-  budget: "low"
+  budget: low
 lede: ベビーカーでの「やらかし」を100人＋SNS公開情報から集約。駅で詰む・改札で焦る・段差で転ぶ・買い物カゴが落ちる…リアル50連発を対策セットで紹介します。
+legacyHero: /hero/stroller-03.png
 ---
 
 ## 結論（先に知りたい人へ）

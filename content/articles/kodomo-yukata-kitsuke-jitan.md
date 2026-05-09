@@ -4,17 +4,23 @@ title: 【1〜6歳】子供の浴衣の着付け時短ガイド｜夏祭り当�
 metaDescription: 1〜6歳の子供の浴衣を10分で着付ける時短ガイド。年齢別サイズ・帯の結び方・トイレ対応・ぐずり対策・夏祭り当日の段取りを写真感覚でナビゲートします。
 category: today-mawasu
 categoryName: 今日どう回す？
-publishedAt: "2026-05-06"
-updatedAt: "2026-05-08"
-hero: /hero/parent-child-01.png
-lede: 夏祭り当日、浴衣の着付けに30分以上かかって出発が遅れる…が定番のトラブル。1〜6歳の子と10分で完了する時短手順、サイズ選び、ぐずり対策、トイレ対応を年齢別にナビゲートします。
+publishedAt: '2026-05-06'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kodomo-yukata-kitsuke-jitan.jpg
+lede: >-
+  夏祭り当日、浴衣の着付けに30分以上かかって出発が遅れる…が定番のトラブル。1〜6歳の子と10分で完了する時短手順、サイズ選び、ぐずり対策、トイレ対応を年齢別にナビゲートします。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
-  weather: ["sunny"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - sunny
   durationMin: 15
-  budget: "low"
+  budget: low
 area: all
+legacyHero: /hero/parent-child-01.png
 ---
 
 ## 結論（先に知りたい人へ）

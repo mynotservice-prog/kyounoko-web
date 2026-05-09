@@ -4,16 +4,21 @@ title: 【2026年版】週末の子連れランチ7選｜予約不要で入れ�
 metaDescription: 週末の子連れランチで予約不要・キッズメニューあり・ベビーカーOKの店7パターン。ファミレス、うどん、フードコート、子連れカフェなど実地目線で紹介します。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: 2026-04-19
-updatedAt: 2026-05-08
-hero: /hero/family-dinner-01.png
-area: "all"
+publishedAt: 2026-04-19T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/shumatsu-ranchi-kodzure.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["indoor"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - indoor
   durationMin: 60
-  budget: "mid"
-lede: 週末のお昼、予約してなくてもふらっと入れる子連れ向けランチ店。キッズメニューがあって、ベビーカーOKで、子どもが食べる。そんな7パターンを実地目線でまとめました。
+  budget: mid
+lede: >-
+  週末のお昼、予約してなくてもふらっと入れる子連れ向けランチ店。キッズメニューがあって、ベビーカーOKで、子どもが食べる。そんな7パターンを実地目線でまとめました。
+legacyHero: /hero/family-dinner-01.png
 ---
 
 ## 結論（先に知りたい人へ）

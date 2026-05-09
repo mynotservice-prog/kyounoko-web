@@ -4,16 +4,21 @@ title: 【3-6歳】ピアノを習わせる前の5つのこと｜2026年版・�
 metaDescription: ピアノを習わせる前の5つの疑問を整理。楽器購入費、月謝、継続率、発表会、自宅練習、ヤマハ・カワイ・個人教室の違い、電子ピアノとアップライトの選び方を解説。
 category: narai
 categoryName: 習い事と学び
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/piano-03.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/piano-narai-before-5things.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
-  budget: "high"
-lede: ピアノは幼児の習い事の定番ですが、月謝以外にかかる費用と親の関わりを知らずに始めると後悔しやすい習い事でもあります。始める前に押さえておきたい5つのポイントを整理しました。
+  budget: high
+lede: >-
+  ピアノは幼児の習い事の定番ですが、月謝以外にかかる費用と親の関わりを知らずに始めると後悔しやすい習い事でもあります。始める前に押さえておきたい5つのポイントを整理しました。
+legacyHero: /hero/piano-03.png
 ---
 
 ## 結論（先に知りたい人へ）

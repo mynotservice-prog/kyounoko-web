@@ -4,17 +4,23 @@ title: 【3歳から】子どもと作るお菓子レシピ5選｜2026年版・�
 metaDescription: 幼児と一緒に作れる簡単お菓子を5種厳選。材料・手順・子どもに任せる工程・危ない工程の見極めまで、家族のおやつタイムが楽しくなるレシピです。
 category: today-taberu
 categoryName: 今日何食べる
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/food-sweet-02.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/dessert-kodomo-tezukuri-5.jpg
 lede: 3歳になると「お手伝いしたい！」が爆発する時期。混ぜる・丸める・飾るなど、子どもに任せる工程を設計した5つのレシピで、週末のおやつ作りを家族の時間に。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
-  weather: ["rain", "any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - rain
+    - any
   durationMin: 60
-  budget: "low"
-area: "all"
+  budget: low
+area: all
+legacyHero: /hero/food-sweet-02.png
 ---
 
 ## 結論（先に知りたい人へ）

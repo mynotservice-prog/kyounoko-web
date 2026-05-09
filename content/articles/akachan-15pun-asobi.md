@@ -1,19 +1,24 @@
 ---
 slug: akachan-15pun-asobi
 title: 0歳の赤ちゃんと遊ぶ15分パターン10選（月齢別・発達促進）｜ワンオペ育児の保存版
-metaDescription: 0歳の赤ちゃんと家で遊べる15分パターン10選。0-3ヶ月、4-6ヶ月、7-9ヶ月、10-12ヶ月の月齢別に、発達を促す遊びと親の関わり方、安全注意・準備物を100均/Amazon別に整理した保存版。
+metaDescription: >-
+  0歳の赤ちゃんと家で遊べる15分パターン10選。0-3ヶ月、4-6ヶ月、7-9ヶ月、10-12ヶ月の月齢別に、発達を促す遊びと親の関わり方、安全注意・準備物を100均/Amazon別に整理した保存版。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/baby-01.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/akachan-15pun-asobi.jpg
+area: all
 quickInfo:
-  ageRanges: ["0-1"]
-  place: ["home"]
+  ageRanges:
+    - 0-1
+  place:
+    - home
   durationMin: 15
-  budget: "free"
-lede: 実は0歳の遊びで一番効くのは、おもちゃより親の声・顔・匂い。月齢別の発達に合った15分遊びを、0-3ヶ月の手遊びから10-12ヶ月のハイハイ促進まで保存版で。準備0分・道具なしで回せます。
+  budget: free
+lede: >-
+  実は0歳の遊びで一番効くのは、おもちゃより親の声・顔・匂い。月齢別の発達に合った15分遊びを、0-3ヶ月の手遊びから10-12ヶ月のハイハイ促進まで保存版で。準備0分・道具なしで回せます。
+legacyHero: /hero/baby-01.png
 ---
 
 ## 30秒でわかる答え｜0歳の15分遊び

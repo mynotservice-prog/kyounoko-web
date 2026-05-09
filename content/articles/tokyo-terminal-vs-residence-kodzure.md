@@ -1,20 +1,28 @@
 ---
 slug: tokyo-terminal-vs-residence-kodzure
 title: ターミナル駅 vs 住宅街駅｜子連れ目線で実は使いやすいのはどっち？
-metaDescription: 渋谷・新宿・池袋などターミナル駅と、自由が丘・三軒茶屋・経堂などの住宅街駅、子連れにはどちらが便利か。きょうのこ独自集計3,277店データで店舗数・ベビーカー◎率・個室率を比較した独自分析。
+metaDescription: >-
+  渋谷・新宿・池袋などターミナル駅と、自由が丘・三軒茶屋・経堂などの住宅街駅、子連れにはどちらが便利か。きょうのこ独自集計3,277店データで店舗数・ベビーカー◎率・個室率を比較した独自分析。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/tokyo-03.png
-lede: 「子連れランチは渋谷？それとも住宅街？」きょうのこ独自データで、ターミナル駅と住宅街駅の**店舗数・ベビーカー◎率・個室率**を直接比較。意外な勝者が見える独自分析記事です。
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-terminal-vs-residence-kodzure.jpg
+lede: >-
+  「子連れランチは渋谷？それとも住宅街？」きょうのこ独自データで、ターミナル駅と住宅街駅の**店舗数・ベビーカー◎率・個室率**を直接比較。意外な勝者が見える独自分析記事です。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - any
   durationMin: 60
-  budget: "low"
+  budget: low
 area: tokyo
+legacyHero: /hero/tokyo-03.png
 ---
 
 ## 結論（先に知りたい人へ）

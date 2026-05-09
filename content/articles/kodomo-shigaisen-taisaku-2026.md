@@ -1,19 +1,26 @@
 ---
 slug: kodomo-shigaisen-taisaku-2026
 title: 【2026年版】子供の紫外線対策完全ガイド｜0〜6歳の日焼け止めの選び方
-metaDescription: 2026年最新の子供向け紫外線対策ガイド。SPF/PA表記の見方、年齢別の日焼け止めの選び方、塗り方のコツまで。0〜6歳の梅雨明け〜真夏のUV対策を子連れ視点で解説。
+metaDescription: >-
+  2026年最新の子供向け紫外線対策ガイド。SPF/PA表記の見方、年齢別の日焼け止めの選び方、塗り方のコツまで。0〜6歳の梅雨明け〜真夏のUV対策を子連れ視点で解説。
 category: today-mawasu
 categoryName: 今日どう回す？
-publishedAt: "2026-05-05"
-updatedAt: "2026-05-08"
-hero: /hero/summer-water-01.png
+publishedAt: '2026-05-05'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kodomo-shigaisen-taisaku-2026.jpg
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - any
   durationMin: 10
-  budget: "low"
+  budget: low
 area: all
+legacyHero: /hero/summer-water-01.png
 ---
 
 ## 結論（先に知りたい人へ）

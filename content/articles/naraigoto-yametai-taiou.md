@@ -4,16 +4,19 @@ title: 習い事を辞めたいと言われたら｜3〜6歳の親の対処3パ�
 metaDescription: 子が「習い事辞めたい」と言った時の対処を3パターンで解説。判断基準、親が陥る罠、先生への相談、辞めた後のフォローまで実用的にまとめ。
 category: narai
 categoryName: 習い事と学び
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/classroom-03.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/naraigoto-yametai-taiou.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
+  ageRanges:
+    - 2-3
+    - 4-6
   place: []
   weather: []
-  budget: "free"
+  budget: free
 lede: 子が「習い事を辞めたい」と言った時、親が取るべき3パターンの対処法。判断基準、親の陥りがちな罠、先生への相談、辞めた後のメンタルフォローを解説。
+legacyHero: /hero/classroom-03.png
 ---
 
 ## 結論（先に知りたい人へ）

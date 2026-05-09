@@ -1,19 +1,25 @@
 ---
 slug: kodomo-tsuyu-shokuyoku-fushin-recipe
 title: 【梅雨】子供の食欲不振 対策レシピ7選｜食べないときに作る簡単料理
-metaDescription: 梅雨で食欲が落ちた0〜6歳向けの簡単レシピ7選。冷やしうどん・そうめん・冷しゃぶ・冷やしトマトパスタ・お粥アレンジなど、15分以内で作れる食べやすいメニューをまとめました。
+metaDescription: >-
+  梅雨で食欲が落ちた0〜6歳向けの簡単レシピ7選。冷やしうどん・そうめん・冷しゃぶ・冷やしトマトパスタ・お粥アレンジなど、15分以内で作れる食べやすいメニューをまとめました。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: "2026-05-05"
-updatedAt: "2026-05-08"
-hero: /hero/food-japan-02.png
+publishedAt: '2026-05-05'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kodomo-tsuyu-shokuyoku-fushin-recipe.jpg
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "low"
+  budget: low
 area: all
+legacyHero: /hero/food-japan-02.png
 ---
 
 ## 結論（先に知りたい人へ）

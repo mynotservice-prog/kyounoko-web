@@ -1,20 +1,27 @@
 ---
 slug: kankaku-kabin-kodomo-taisaku
 title: 感覚過敏な子の対応ガイド｜服・音・食感の困りごと別の工夫
-metaDescription: 服のタグが痛い、掃除機の音で泣く、食感に敏感といった感覚過敏の子への対応を完全解説。種類別の特徴、家庭でできる7つの工夫、療育の受け方、グッズ紹介、小児科受診の目安まで。
+metaDescription: >-
+  服のタグが痛い、掃除機の音で泣く、食感に敏感といった感覚過敏の子への対応を完全解説。種類別の特徴、家庭でできる7つの工夫、療育の受け方、グッズ紹介、小児科受診の目安まで。
 category: today-mawasu
 categoryName: 今日まわす
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/parent-child-02.png
-lede: 「服のタグを嫌がる」「掃除機の音で泣く」「食感に敏感」――実はそれ、わがままじゃなくて感覚過敏かも。沼ったママ100人の声を集めて、ガチで効いた工夫7つと、刺さるグッズ・相談先までまとめました。
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kankaku-kabin-kodomo-taisaku.jpg
+lede: >-
+  「服のタグを嫌がる」「掃除機の音で泣く」「食感に敏感」――実はそれ、わがままじゃなくて感覚過敏かも。沼ったママ100人の声を集めて、ガチで効いた工夫7つと、刺さるグッズ・相談先までまとめました。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "low"
-area: "all"
+  budget: low
+area: all
+legacyHero: /hero/parent-child-02.png
 ---
 
 ## ⚡ ひと目でわかる｜感覚過敏対応サマリー

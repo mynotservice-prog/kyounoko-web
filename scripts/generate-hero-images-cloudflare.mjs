@@ -19,7 +19,7 @@
  *   ... --force                       # 既存も再生成
  *
  * 出力:
- *   public/hero-ai/<slug>.png
+ *   public/hero-ai/<slug>.jpg
  *   public/hero-ai/manifest.json
  */
 
@@ -89,7 +89,7 @@ let targets = allPrompts;
 if (slugFilter) targets = targets.filter((p) => p.slug === slugFilter);
 if (!force) {
   targets = targets.filter((p) => {
-    const dest = path.join(OUT_DIR, `${p.slug}.png`);
+    const dest = path.join(OUT_DIR, `${p.slug}.jpg`);
     return !fs.existsSync(dest);
   });
 }
@@ -116,7 +116,7 @@ await sleep(3000);
 const ENDPOINT = `https://api.cloudflare.com/client/v4/accounts/${accountId}/ai/run/@cf/black-forest-labs/flux-1-schnell`;
 
 async function generateOne(item, index) {
-  const dest = path.join(OUT_DIR, `${item.slug}.png`);
+  const dest = path.join(OUT_DIR, `${item.slug}.jpg`);
   const log = `[${index + 1}/${targets.length}] ${item.slug}`;
   try {
     const res = await fetch(ENDPOINT, {
@@ -159,7 +159,7 @@ async function generateOne(item, index) {
     return {
       slug: item.slug,
       ok: true,
-      file: `/hero-ai/${item.slug}.png`,
+      file: `/hero-ai/${item.slug}.jpg`,
       generatedAt: new Date().toISOString(),
       model: 'flux-1-schnell',
       steps,

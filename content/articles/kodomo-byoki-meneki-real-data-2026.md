@@ -4,17 +4,24 @@ title: 0-6歳の病気・発熱データ年表｜実体験から見る「いつ�
 metaDescription: 0-6歳の月齢別罹患傾向を年表化。保育園入園後の3ヶ月地獄期、月齢別に多い病気、症状別の受診目安をまとめました。医療免責付き。受診判断は必ず小児科で。
 category: yakudatsu
 categoryName: 役立つもの
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/medical-01.png
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kodomo-byoki-meneki-real-data-2026.jpg
 area: all
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "low"
-lede: 0-6歳の子はいつ病気になりやすい？月齢別の罹患傾向、保育園入園後の地獄期、症状別受診目安を年表でまとめました。本記事は一般情報で、受診判断は必ず小児科医にご相談ください。
+  budget: low
+lede: >-
+  0-6歳の子はいつ病気になりやすい？月齢別の罹患傾向、保育園入園後の地獄期、症状別受診目安を年表でまとめました。本記事は一般情報で、受診判断は必ず小児科医にご相談ください。
+legacyHero: /hero/medical-01.png
 ---
 
 ## 結論（先に知りたい人へ）

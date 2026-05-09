@@ -4,17 +4,22 @@ title: 【小学生】1日でできる自由研究10選｜夏休み駆け込み�
 metaDescription: 小学生の夏休み自由研究を1日で仕上げる10アイデア。スライム・観察日記・押し花・料理実験など、駆け込み対応OKのテーマと材料・まとめ方を具体的に紹介します。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: "2026-05-05"
-updatedAt: "2026-05-08"
-hero: /hero/kid-craft-01.png
-lede: 8月終盤、自由研究がまだ手付かず。そんな時に1日で完成する自由研究10選を、低学年・高学年別に紹介。材料調達からまとめ方、写真の撮り方まで具体的にナビゲートします。
+publishedAt: '2026-05-05'
+updatedAt: '2026-05-09'
+hero: /hero-ai/natsuyasumi-jiyu-kenkyu-1nichi-10.jpg
+lede: >-
+  8月終盤、自由研究がまだ手付かず。そんな時に1日で完成する自由研究10選を、低学年・高学年別に紹介。材料調達からまとめ方、写真の撮り方まで具体的にナビゲートします。
 quickInfo:
-  ageRanges: ["4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 360
-  budget: "low"
+  budget: low
 area: all
+legacyHero: /hero/kid-craft-01.png
 ---
 
 ## 結論（先に知りたい人へ）

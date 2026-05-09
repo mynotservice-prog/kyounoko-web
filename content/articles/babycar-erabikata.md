@@ -1,19 +1,23 @@
 ---
 slug: babycar-erabikata
 title: ベビーカー選び方【0-3歳】A型・B型・バギー4用途別
-metaDescription: ベビーカー選びで失敗したくないですよね。A型・B型・バギーの違いと、都心徒歩派・電車通勤・車メイン・セカンドバギー別の使い分けを整理。コンビ・ピジョン・アップリカ・サイベックスの予算別おすすめまで3分で確認できます。
+metaDescription: >-
+  ベビーカー選びで失敗したくないですよね。A型・B型・バギーの違いと、都心徒歩派・電車通勤・車メイン・セカンドバギー別の使い分けを整理。コンビ・ピジョン・アップリカ・サイベックスの予算別おすすめまで3分で確認できます。
 category: yakudatsu
 categoryName: 役立つもの
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/stroller-03.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/babycar-erabikata.jpg
+area: all
 quickInfo:
-  ageRanges: ["0-1", "2-3"]
+  ageRanges:
+    - 0-1
+    - 2-3
   place: []
   weather: []
-  budget: "mid"
+  budget: mid
 lede: ベビーカーはA型・B型・バギーで用途が全然違います。都心徒歩派・電車通勤・車メイン・セカンドバギー派それぞれの選び方と、ブランド別の予算を整理しました。
+legacyHero: /hero/stroller-03.png
 ---
 
 ## 結論（先に知りたい人へ）

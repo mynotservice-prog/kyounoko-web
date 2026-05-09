@@ -4,17 +4,22 @@ title: 冷凍餃子＋αで作る幼児食3パターン（15分・2〜3歳向け
 metaDescription: 味の素・王将・大阪王将の冷凍餃子を主役にした2〜6歳向け幼児食3パターン。中華スープ＋野菜炒め、漬物風サラダ、うどん入り中華風。15分で完成の具体手順。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/food-japan-01.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/reitougyoza-plus-alpha-3pattern.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3","4-6"]
-  place: ["home"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
   durationMin: 15
-  budget: "low"
-lede: 味の素・王将・大阪王将の冷凍餃子を主役にした2〜6歳向け幼児食3パターン。中華スープ＋野菜炒め、漬物風サラダ、うどん入り中華風。15分で完成の具体手順を紹介します。
+  budget: low
+lede: >-
+  味の素・王将・大阪王将の冷凍餃子を主役にした2〜6歳向け幼児食3パターン。中華スープ＋野菜炒め、漬物風サラダ、うどん入り中華風。15分で完成の具体手順を紹介します。
+legacyHero: /hero/food-japan-01.png
 ---
 
 実は、共働き家庭の幼児食で一番リピされているのは「冷凍餃子」。Instagramで人気の時短レシピアカウントの共通点は、**冷凍餃子を「サブのおかず」ではなく「主役」に据えている**こと。この記事の3パターンは、すべて2〜6歳が「秒で完食」した実績のある15分以内の家族ごはん設計です。

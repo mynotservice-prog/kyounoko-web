@@ -4,16 +4,19 @@ title: イヤイヤ期の子が集中する遊び5つ（2〜3歳）機嫌回復�
 metaDescription: イヤイヤ期2〜3歳が静かに集中する遊び5選。水遊び・お米遊び・シール貼り放題など、発達心理の視点から「なぜ効くか」まで解説。逆効果になる場面も明記。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/parent-child-01.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/iyaiya-shuuchu-asobi.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3"]
-  place: ["home"]
+  ageRanges:
+    - 2-3
+  place:
+    - home
   weather: []
-  budget: "free"
+  budget: free
 lede: イヤイヤがピークの2〜3歳が、不思議と静かに集中する遊びを5つ。機嫌回復にも効く、発達心理の背景つき。逆効果になる場面もセットで紹介します。
+legacyHero: /hero/parent-child-01.png
 ---
 
 ## 結論（先に知りたい人へ）

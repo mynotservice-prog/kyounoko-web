@@ -5,16 +5,22 @@ subtitle: 休日は「主導権」を日ごとに切り替えて、親も子も�
 metaDescription: 休日の起床〜就寝を、子ども主導の日と親主導の日の2パターンで設計。午前外出型・午後のんびり型・雨の日型、親の疲れ具合別の提案まで。
 category: today-mawasu
 categoryName: 今日どう回す？
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/home-cozy-01.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/shumatsu-1nichi-mawashikata.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home", "outdoor"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+    - outdoor
   weather: []
-  budget: "free"
-lede: 「実は休日の正解は『主導権の交代』」――毎週末ヘトヘトのママ・パパへ。子主導の日と親主導の日を切り替える鉄板ルーティンを、ガチで効いた疲労度別の選び方つきでまとめました。
+  budget: free
+lede: >-
+  「実は休日の正解は『主導権の交代』」――毎週末ヘトヘトのママ・パパへ。子主導の日と親主導の日を切り替える鉄板ルーティンを、ガチで効いた疲労度別の選び方つきでまとめました。
+legacyHero: /hero/home-cozy-01.png
 ---
 
 ## ⚡ ひと目でわかる｜休日の回し方サマリー

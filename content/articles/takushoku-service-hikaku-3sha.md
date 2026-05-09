@@ -1,19 +1,25 @@
 ---
 slug: takushoku-service-hikaku-3sha
 title: 子育て家庭の宅食サービス3社比較｜2〜6歳が食べる・nosh・三ツ星・ヨシケイの違い
-metaDescription: nosh・三ツ星ファーム・ヨシケイを「子どもが食べるか」「調理時間」「費用」「栄養」で比較。子育て家庭はヨシケイ＋nosh併用がベスト、理由と使い分けを解説。
+metaDescription: >-
+  nosh・三ツ星ファーム・ヨシケイを「子どもが食べるか」「調理時間」「費用」「栄養」で比較。子育て家庭はヨシケイ＋nosh併用がベスト、理由と使い分けを解説。
 category: yakudatsu
 categoryName: 役立つもの
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/family-dinner-03.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/takushoku-service-hikaku-3sha.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
-  budget: "mid"
-lede: nosh・三ツ星ファーム・ヨシケイを「子どもが食べるか」「調理時間」「費用」「栄養」で比較。子育て家庭はヨシケイ＋nosh併用がベスト、その理由と使い分けを解説します。
+  budget: mid
+lede: >-
+  nosh・三ツ星ファーム・ヨシケイを「子どもが食べるか」「調理時間」「費用」「栄養」で比較。子育て家庭はヨシケイ＋nosh併用がベスト、その理由と使い分けを解説します。
+legacyHero: /hero/family-dinner-03.png
 ---
 
 ## 結論（先に知りたい人へ）

@@ -4,17 +4,25 @@ title: 夏休みの子供を祖父母に預ける時の準備リスト｜安心�
 metaDescription: 夏休みに子供を祖父母に預ける時の準備リスト完全版。アレルギー・薬・生活リズム・緊急連絡・食事ルールの引き継ぎを子連れ視点で網羅します。
 category: today-mawasu
 categoryName: 今日どう回す？
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/parent-child-02.png
-lede: 夏休みに子供を祖父母（実家）に預ける時、引き継ぎ漏れで体調を崩したりトラブルになる事例は意外と多いもの。アレルギー・薬・生活リズム・緊急時連絡まで、A4 1枚にまとめる引き継ぎ術を整理しました。
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/natsu-yobi-kosodate-grandparent.jpg
+lede: >-
+  夏休みに子供を祖父母（実家）に預ける時、引き継ぎ漏れで体調を崩したりトラブルになる事例は意外と多いもの。アレルギー・薬・生活リズム・緊急時連絡まで、A4
+  1枚にまとめる引き継ぎ術を整理しました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 60
-  budget: "low"
+  budget: low
 area: all
+legacyHero: /hero/parent-child-02.png
 ---
 
 ## 結論（先に知りたい人へ）

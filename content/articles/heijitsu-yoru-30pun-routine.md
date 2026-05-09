@@ -1,20 +1,24 @@
 ---
 slug: heijitsu-yoru-30pun-routine
 title: 【2-3歳】平日夜30分ルーティン4ブロック｜2026年版・寝かしつけ術
-metaDescription: 平日夜の帰宅18:30〜就寝20:30の2時間を、30分ブロック×4で回すルーティン設計。2〜3歳想定、親が疲弊しない順番と道具をまとめました。
+metaDescription: '平日夜の帰宅18:30〜就寝20:30の2時間を、30分ブロック×4で回すルーティン設計。2〜3歳想定、親が疲弊しない順番と道具をまとめました。'
 category: today-mawasu
 categoryName: 今日どう回す？
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/home-cozy-02.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/heijitsu-yoru-30pun-routine.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3"]
-  place: ["home"]
+  ageRanges:
+    - 2-3
+  place:
+    - home
   weather: []
   durationMin: 30
-  budget: "free"
-lede: 平日18:30帰宅から20:30就寝までの2時間を、30分ブロック×4で回す設計。順番を固定し、各ブロックの時間を切ることで、親も子も疲弊しない夜が作れます。
+  budget: free
+lede: >-
+  平日18:30帰宅から20:30就寝までの2時間を、30分ブロック×4で回す設計。順番を固定し、各ブロックの時間を切ることで、親も子も疲弊しない夜が作れます。
+legacyHero: /hero/home-cozy-02.png
 ---
 
 ## 結論（先に知りたい人へ）

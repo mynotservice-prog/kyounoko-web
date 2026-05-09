@@ -1,20 +1,25 @@
 ---
 slug: 0-1sai-ie-asobi-10pun
 title: 0〜1歳と家でできる10分遊び8パターン（道具なし・準備なし）｜ワンオペ救済の保存版
-metaDescription: 0〜1歳と家でできる10分遊び8パターン。家事の合間にワンオペで回せる、既製玩具不要の遊び。月齢目安・集中時間・危険ポイント・準備物の100均/Amazon別開示まで明記した保存版。
+metaDescription: >-
+  0〜1歳と家でできる10分遊び8パターン。家事の合間にワンオペで回せる、既製玩具不要の遊び。月齢目安・集中時間・危険ポイント・準備物の100均/Amazon別開示まで明記した保存版。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/baby-02.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/0-1sai-ie-asobi-10pun.jpg
+area: all
 quickInfo:
-  ageRanges: ["0-1"]
-  place: ["home"]
+  ageRanges:
+    - 0-1
+  place:
+    - home
   weather: []
   durationMin: 10
-  budget: "free"
-lede: 実は0〜1歳は「親の道具」が一番食いつく。「あと10分だけ機嫌よくいて」を救う8パターンを既製玩具ゼロ・準備ゼロ・親の手が半分離せる設計で。月齢・集中時間・危険ポイント完全公開の保存版。
+  budget: free
+lede: >-
+  実は0〜1歳は「親の道具」が一番食いつく。「あと10分だけ機嫌よくいて」を救う8パターンを既製玩具ゼロ・準備ゼロ・親の手が半分離せる設計で。月齢・集中時間・危険ポイント完全公開の保存版。
+legacyHero: /hero/baby-02.png
 ---
 
 ## 30秒でわかる答え｜0〜1歳の10分遊び

@@ -4,17 +4,22 @@ title: 幼稚園児と行ける東京の自然スポット10選（芝生・ピ�
 metaDescription: 4〜6歳の幼稚園児が走り回れる東京の自然スポット10選。昭和記念公園、葛西臨海、井の頭公園など実在の場所を駐車場・アクセス・料金まで具体的に紹介。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: 2026-04-19
-updatedAt: "2026-05-08"
-hero: /hero/tokyo-02.png
-area: "tokyo"
+publishedAt: 2026-04-19T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/shizen-spot-tokyo-youji.jpg
+area: tokyo
 quickInfo:
-  ageRanges: ["4-6"]
-  place: ["outdoor"]
-  weather: ["sunny"]
+  ageRanges:
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - sunny
   durationMin: 240
-  budget: "free"
-lede: 4〜6歳の幼稚園児が全力で走り回れて、芝生・虫取り・ピクニックができる東京の自然スポット10選。実はこの中に日本最大級165haの公園、関東最大の水郷96ha、都内唯一の砂浜公園が含まれる、ガチで穴場と定番のハイブリッドリストです。
+  budget: free
+lede: >-
+  4〜6歳の幼稚園児が全力で走り回れて、芝生・虫取り・ピクニックができる東京の自然スポット10選。実はこの中に日本最大級165haの公園、関東最大の水郷96ha、都内唯一の砂浜公園が含まれる、ガチで穴場と定番のハイブリッドリストです。
+legacyHero: /hero/tokyo-02.png
 ---
 
 ## ⚡ ひと目でわかる｜自然スポットサマリー

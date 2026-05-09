@@ -5,16 +5,22 @@ subtitle: 伝統遊び・初詣・おせち・お年玉を年齢に合わせて
 metaDescription: 0〜2歳・3〜5歳・6歳以上のお正月の過ごし方。福笑い・かるた・凧揚げなど伝統遊びから、初詣・おせち・お年玉の意味説明まで、年齢別に完全整理。
 category: gyouji
 categoryName: 季節と行事
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/park-01.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/oshougatsu-kodomo-sugoshikata.jpg
+area: all
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home", "outdoor"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+    - outdoor
   weather: []
-  budget: "low"
+  budget: low
 lede: 0〜2歳・3〜5歳・6歳以上の年齢別お正月の過ごし方ガイド。伝統遊び・初詣・おせち・お年玉の意味説明、帰省時の過ごし方まで完全網羅しました。
+legacyHero: /hero/park-01.png
 ---
 
 ## 結論（先に知りたい人へ）

@@ -1,19 +1,22 @@
 ---
 slug: shussan-junbi-rakuten-0sai
 title: 楽天で揃える出産準備リスト30品【2026】0歳完全版
-metaDescription: 出産準備で何が必須か迷っていませんか。妊娠中から産後1ヶ月までに揃える30品を、ねんね・授乳・おむつ・おでかけ・衣類・お風呂の6カテゴリで整理。必要度3段階の評価、楽天検索リンク、ポイント活用術で迷わず揃えられます。
+metaDescription: >-
+  出産準備で何が必須か迷っていませんか。妊娠中から産後1ヶ月までに揃える30品を、ねんね・授乳・おむつ・おでかけ・衣類・お風呂の6カテゴリで整理。必要度3段階の評価、楽天検索リンク、ポイント活用術で迷わず揃えられます。
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-04-24'
-updatedAt: "2026-05-08"
-hero: /hero/baby-01.png
+updatedAt: '2026-05-09'
+hero: /hero-ai/shussan-junbi-rakuten-0sai.jpg
 area: national
 quickInfo:
-  ageRanges: ["0-1"]
-  place: ["home"]
+  ageRanges:
+    - 0-1
+  place:
+    - home
   weather: []
   durationMin: 30
-  budget: "mid"
+  budget: mid
 lede: 出産準備は「ねんね・授乳・おむつ・おでかけ・衣類・お風呂」の6カテゴリに整理すると過不足なく揃います。楽天で買える定番30品を必要度付きでまとめました。
 tldr: |-
   - 必要度★3の必須品（20品）を優先、★1のあったら便利系は産後に追加で十分
@@ -21,6 +24,7 @@ tldr: |-
   - 里帰り・自宅出産で必要品の順序が変わるため、タイムラインで整理
 tags:
   - muryou
+legacyHero: /hero/baby-01.png
 ---
 
 ## TL;DR

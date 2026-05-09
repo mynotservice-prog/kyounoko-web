@@ -4,16 +4,23 @@ title: 子連れで行ける東京の無料スポット15選（公園・図書�
 metaDescription: 完全無料または子ども無料でしっかり遊べる東京の子連れスポット15選。23区＋多摩の大型公園、水遊び、屋内児童館、動物ふれあい、図書館まで実地目線で紹介。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: 2026-04-19
-updatedAt: 2026-05-08
-hero: /hero/tokyo-03.png
-area: "tokyo"
+publishedAt: 2026-04-19T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/kosodate-muryou-spots-tokyo.jpg
+area: tokyo
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["indoor", "outdoor"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - indoor
+    - outdoor
   durationMin: 180
-  budget: "free"
-lede: お金をかけずに子どもと1日過ごせる場所、東京にはちゃんとあります。実はこの15スポット、ガチで「0円〜500円・予約不要・1日中遊べる」を全クリアした23区＋多摩のコスパ最強リスト。年間で7〜12万円の節約効果まで開示します。
+  budget: free
+lede: >-
+  お金をかけずに子どもと1日過ごせる場所、東京にはちゃんとあります。実はこの15スポット、ガチで「0円〜500円・予約不要・1日中遊べる」を全クリアした23区＋多摩のコスパ最強リスト。年間で7〜12万円の節約効果まで開示します。
+legacyHero: /hero/tokyo-03.png
 ---
 
 ## ⚡ ひと目でわかる｜無料スポットサマリー

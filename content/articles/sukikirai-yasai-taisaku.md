@@ -1,19 +1,24 @@
 ---
 slug: sukikirai-yasai-taisaku
 title: 【2-6歳】野菜嫌い完食レシピ5選｜2026年版・ピーマンも食べる
-metaDescription: 子が野菜を全く食べず困っていませんか。2-6歳の野菜嫌い対策5パターンを、みじん切り混ぜ込み・甘い味付け・形変え・選ばせる・栽培で整理。ピーマン・なす・きのこ・ほうれん草・トマト別の具体テクで今夜から実践できます。
+metaDescription: >-
+  子が野菜を全く食べず困っていませんか。2-6歳の野菜嫌い対策5パターンを、みじん切り混ぜ込み・甘い味付け・形変え・選ばせる・栽培で整理。ピーマン・なす・きのこ・ほうれん草・トマト別の具体テクで今夜から実践できます。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/food-fruit-02.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/sukikirai-yasai-taisaku.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3","4-6"]
-  place: ["home"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
-  budget: "low"
+  budget: low
 lede: 2〜6歳の野菜嫌い対策5パターン。みじん切り混ぜ込み・甘い味付け・形変え・選ばせる・栽培。ピーマン・なす・きのこ・ほうれん草・トマト別の具体テクも紹介。
+legacyHero: /hero/food-fruit-02.png
 ---
 
 実は、子の野菜嫌いを解決する家庭ほど「無理に食べさせない」を貫いています。Instagramで人気の幼児食アカウントの共通点は、**5パターンを使い分けて、親がイライラしない設計に振り切っている**こと。この記事では、ピーマン・なす・きのこ・ほうれん草・トマトの「ガチ嫌い5強」を、2〜6歳が「秒で完食」した実績のあるテクで攻略します。

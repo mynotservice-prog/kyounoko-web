@@ -1,19 +1,23 @@
 ---
 slug: chiiku-toys-rakuten-1-3sai-ranking
 title: 楽天 知育玩具ランキング10選【1-3歳】2026年版
-metaDescription: 1-3歳の知育玩具選びで迷っていませんか。楽天で買える定番10種を木製ブロック・型はめ・ルーピング・パズル等で発達段階別に整理。価格比較表、口コミ要約、ポイント還元の最大化テクまで、3分で買うべき1点が決まります。
+metaDescription: >-
+  1-3歳の知育玩具選びで迷っていませんか。楽天で買える定番10種を木製ブロック・型はめ・ルーピング・パズル等で発達段階別に整理。価格比較表、口コミ要約、ポイント還元の最大化テクまで、3分で買うべき1点が決まります。
 category: today-mawasu
 categoryName: 今日なにする？
 publishedAt: '2026-04-24'
-updatedAt: 2026-05-08
-hero: /hero/toddler-play-01.png
+updatedAt: '2026-05-09'
+hero: /hero-ai/chiiku-toys-rakuten-1-3sai-ranking.jpg
 area: national
 quickInfo:
-  ageRanges: ["0-1", "2-3"]
-  place: ["home"]
+  ageRanges:
+    - 0-1
+    - 2-3
+  place:
+    - home
   weather: []
   durationMin: 30
-  budget: "mid"
+  budget: mid
 lede: 1〜3歳の発達に合わせて選ばれることの多い知育玩具を10カテゴリに整理。楽天で買える定番商品と、成長段階別の選び方のポイントをまとめました。
 tldr: |-
   - 1歳は「手の発達」、2歳は「想像力」、3歳は「ルール遊び」で選ぶと外れにくい
@@ -23,6 +27,7 @@ tags:
   - asobi-kousaku
   - 0-1sai
   - 2-3sai
+legacyHero: /hero/toddler-play-01.png
 ---
 
 ## TL;DR

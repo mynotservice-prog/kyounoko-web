@@ -1,19 +1,23 @@
 ---
 slug: rinyuu-youji-shoku-grid-rakuten
 title: 楽天 離乳食グッズ20選【5ヶ月-3歳】長く使える定番
-metaDescription: 離乳食グッズ選びで何から揃えるか迷っていませんか。5ヶ月-3歳まで長く使える楽天定番20品を調理器具・食器・スプーン・椅子・冷凍トレー別に整理。時期別の必須リスト、選び方、口コミ要約で迷わず買い物できます。
+metaDescription: >-
+  離乳食グッズ選びで何から揃えるか迷っていませんか。5ヶ月-3歳まで長く使える楽天定番20品を調理器具・食器・スプーン・椅子・冷凍トレー別に整理。時期別の必須リスト、選び方、口コミ要約で迷わず買い物できます。
 category: today-taberu
 categoryName: 今日食べるもの
 publishedAt: '2026-04-24'
-updatedAt: "2026-05-08"
-hero: /hero/food-kitchen-01.png
+updatedAt: '2026-05-09'
+hero: /hero-ai/rinyuu-youji-shoku-grid-rakuten.jpg
 area: national
 quickInfo:
-  ageRanges: ["0-1", "2-3"]
-  place: ["home"]
+  ageRanges:
+    - 0-1
+    - 2-3
+  place:
+    - home
   weather: []
   durationMin: 30
-  budget: "mid"
+  budget: mid
 lede: 離乳食初期（5ヶ月）〜幼児食完了期（3歳）まで使える楽天グッズを調理・食器・便利家電に分けて20品紹介。時期別の必須アイテムと選び方をまとめました。
 tldr: |-
   - ブレンダー・冷凍トレー・シリコンマットの3点で離乳食準備は8割完了
@@ -23,6 +27,7 @@ tags:
   - muryou
   - 0-1sai
   - 2-3sai
+legacyHero: /hero/food-kitchen-01.png
 ---
 
 ## TL;DR

@@ -4,17 +4,22 @@ title: 東京で子連れ虫取りができる場所10選｜公園・自然林�
 metaDescription: 東京で子連れ虫取りができる10スポット。公園・自然林・林道から、カブトムシ・クワガタ・セミ・バッタ・トンボが捕れる場所を子連れ視点で紹介します。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/nature-02.png
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-kodomo-mushiyoke-spot.jpg
 lede: 東京でも工夫すれば子連れ虫取りは十分楽しめます。区部の身近な公園から多摩エリアの本格的な雑木林まで、4〜6歳と虫取りに行ける10スポットをまとめました。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["sunny"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - sunny
   durationMin: 120
-  budget: "low"
+  budget: low
 area: tokyo
+legacyHero: /hero/nature-02.png
 ---
 
 ## 結論（先に知りたい人へ）

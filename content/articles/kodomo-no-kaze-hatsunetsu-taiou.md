@@ -1,19 +1,26 @@
 ---
 slug: kodomo-no-kaze-hatsunetsu-taiou
 title: 子どもの風邪・発熱対応｜0〜6歳の家庭ケアと受診の見極め5つ・夜間休日の動き
-metaDescription: 0〜6歳の子が風邪・発熱したときの家庭ケア、受診のタイミング、#8000の活用、解熱剤の使い方、保育園登園判断を整理。夜間・休日の対応パターンも含めて解説します。
+metaDescription: >-
+  0〜6歳の子が風邪・発熱したときの家庭ケア、受診のタイミング、#8000の活用、解熱剤の使い方、保育園登園判断を整理。夜間・休日の対応パターンも含めて解説します。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/medical-01.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/kodomo-no-kaze-hatsunetsu-taiou.jpg
+area: all
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
-  budget: "low"
-lede: 子どもの風邪・発熱は「家でケアするか、病院へ行くか」の判断が難しい。受診の見極め5つ、家庭でのケア、夜間の#8000活用、保育園の登園判断を1枚の地図に整理しました。
+  budget: low
+lede: >-
+  子どもの風邪・発熱は「家でケアするか、病院へ行くか」の判断が難しい。受診の見極め5つ、家庭でのケア、夜間の#8000活用、保育園の登園判断を1枚の地図に整理しました。
+legacyHero: /hero/medical-01.png
 ---
 
 ## 結論（先に知りたい人へ）

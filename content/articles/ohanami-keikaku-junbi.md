@@ -4,16 +4,23 @@ title: 子連れお花見の完全準備｜0〜6歳の持ち物・時間帯・�
 metaDescription: 0〜6歳と行くお花見の持ち物リスト、混雑を避ける時間帯、すぐ作れるおにぎり弁当5パターン、トイレ・アレルギー・天気急変への対処を親目線でまとめました。
 category: gyouji
 categoryName: 季節と行事
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/sakura-02.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/ohanami-keikaku-junbi.jpg
+area: all
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["park"]
-  weather: ["sunny", "cloudy"]
-  budget: "low"
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - park
+  weather:
+    - sunny
+    - cloudy
+  budget: low
 lede: 0〜6歳と行くお花見の持ち物・時間帯・弁当をまるごと解説。準備30分、滞在1時間を目安に、無理なく満開を楽しむ実用ガイド。
+legacyHero: /hero/sakura-02.png
 ---
 
 ## 結論（先に知りたい人へ）

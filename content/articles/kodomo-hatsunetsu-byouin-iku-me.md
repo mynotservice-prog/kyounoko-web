@@ -1,20 +1,28 @@
 ---
 slug: kodomo-hatsunetsu-byouin-iku-me
 title: 子どもの発熱で病院行く目安｜0〜6歳の受診タイミング10サイン・夜間判断
-metaDescription: 子どもの発熱で小児科受診すべき目安を、体温・時間・症状の3軸で具体的に解説。38.5度超えた夜、3日続く高熱、ぐったりの見分け方や#8000活用まで、0〜6歳の親が迷わない判断基準をまとめました。
+metaDescription: >-
+  子どもの発熱で小児科受診すべき目安を、体温・時間・症状の3軸で具体的に解説。38.5度超えた夜、3日続く高熱、ぐったりの見分け方や#8000活用まで、0〜6歳の親が迷わない判断基準をまとめました。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/medical-02.png
-lede: 子どもの発熱は「何度で病院？」ではなく、年齢・経過時間・全身状態で判断します。0〜6歳の受診タイミング10サイン、夜間の#8000活用、家で様子を見る条件を整理しました。
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kodomo-hatsunetsu-byouin-iku-me.jpg
+lede: >-
+  子どもの発熱は「何度で病院？」ではなく、年齢・経過時間・全身状態で判断します。0〜6歳の受診タイミング10サイン、夜間の#8000活用、家で様子を見る条件を整理しました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "free"
-area: "all"
+  budget: free
+area: all
+legacyHero: /hero/medical-02.png
 ---
 
 ## 結論（先に知りたい人へ）

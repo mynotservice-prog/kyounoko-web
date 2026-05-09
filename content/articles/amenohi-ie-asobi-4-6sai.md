@@ -1,20 +1,26 @@
 ---
 slug: amenohi-ie-asobi-4-6sai
 title: 雨の日の家遊び10選（4〜6歳向け）集中力が育つ静かな遊び｜準備5分・遊び30分の保存版
-metaDescription: 4〜6歳が雨の日に家で集中して遊べる10種を完全保存版で。知育ドリル、折り紙、粘土、実験キットなど、難易度・所要時間・親の関与度・片付け難度・準備物を100均/Amazon別に整理した実地ベースの遊び集。
+metaDescription: >-
+  4〜6歳が雨の日に家で集中して遊べる10種を完全保存版で。知育ドリル、折り紙、粘土、実験キットなど、難易度・所要時間・親の関与度・片付け難度・準備物を100均/Amazon別に整理した実地ベースの遊び集。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/classroom-03.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/amenohi-ie-asobi-4-6sai.jpg
+area: all
 quickInfo:
-  ageRanges: ["4-6"]
-  place: ["home"]
-  weather: ["rain"]
+  ageRanges:
+    - 4-6
+  place:
+    - home
+  weather:
+    - rain
   durationMin: 30
-  budget: "free"
-lede: 実はこの遊び、4〜6歳が一番ガチで集中する。雨の日に家でずっと過ごすなら「集中型の静かな遊び10種」をローテで回すのが親の体力を削らないコツ。準備5分・遊び30分・片付け5分の鉄板10本を保存版で。
+  budget: free
+lede: >-
+  実はこの遊び、4〜6歳が一番ガチで集中する。雨の日に家でずっと過ごすなら「集中型の静かな遊び10種」をローテで回すのが親の体力を削らないコツ。準備5分・遊び30分・片付け5分の鉄板10本を保存版で。
+legacyHero: /hero/classroom-03.png
 ---
 
 ## 30秒でわかる答え｜4〜6歳の雨の日家遊び

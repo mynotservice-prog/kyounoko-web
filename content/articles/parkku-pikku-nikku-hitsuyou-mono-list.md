@@ -1,20 +1,27 @@
 ---
 slug: parkku-pikku-nikku-hitsuyou-mono-list
 title: 公園ピクニック持ち物リスト完全版｜忘れがちな20アイテムと最小構成
-metaDescription: 公園ピクニックに必要な20アイテムを完全リストアップ。レジャーシート・お弁当・日焼け対策・遊び道具・赤ちゃん連れ追加アイテムまで。荷物を軽くする最小構成、季節別の調整も解説します。
+metaDescription: >-
+  公園ピクニックに必要な20アイテムを完全リストアップ。レジャーシート・お弁当・日焼け対策・遊び道具・赤ちゃん連れ追加アイテムまで。荷物を軽くする最小構成、季節別の調整も解説します。
 category: today-doko
 categoryName: 今日どこいく
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/park-01.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/parkku-pikku-nikku-hitsuyou-mono-list.jpg
 lede: 公園ピクニック、毎回何か忘れて後悔していませんか？必須20アイテムと季節別の追加品、荷物を軽くする最小構成まで、忘れ物ゼロで楽しめるリストを作成しました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["sunny"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - sunny
   durationMin: 240
-  budget: "low"
-area: "all"
+  budget: low
+area: all
+legacyHero: /hero/park-01.png
 ---
 
 ## 結論（先に知りたい人へ）

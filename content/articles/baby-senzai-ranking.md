@@ -1,19 +1,25 @@
 ---
 slug: baby-senzai-ranking
 title: ベビー洗剤ランキング6選【新生児-6歳】肌荒れ対策
-metaDescription: 赤ちゃんの肌荒れに悩んでいませんか。新生児-6歳向け洗剤・柔軟剤6品をアラウ・さらさ・ピジョン・ミッフィー等で比較表に整理。蛍光剤の有無、香り、詰め替え価格、大人と一緒に洗える判断基準まで3分で確認できます。
+metaDescription: >-
+  赤ちゃんの肌荒れに悩んでいませんか。新生児-6歳向け洗剤・柔軟剤6品をアラウ・さらさ・ピジョン・ミッフィー等で比較表に整理。蛍光剤の有無、香り、詰め替え価格、大人と一緒に洗える判断基準まで3分で確認できます。
 category: yakudatsu
 categoryName: 役立つもの
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/bath-02.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/baby-senzai-ranking.jpg
+area: all
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
-  budget: "low"
+  budget: low
 lede: ベビー用洗剤は蛍光剤無添加かどうかで選ぶ基準が大きく変わります。新生児から使える6品を、価格・香り・詰め替え・大人との共用可否で比較しました。
+legacyHero: /hero/bath-02.png
 ---
 
 ## 結論（先に知りたい人へ）

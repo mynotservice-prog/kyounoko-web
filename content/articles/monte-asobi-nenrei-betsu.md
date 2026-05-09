@@ -3,18 +3,26 @@ slug: monte-asobi-nenrei-betsu
 title: モンテッソーリの家庭遊び年齢別ガイド｜0歳〜6歳まで敏感期に合わせた20の活動【保存版】
 category: today-nani
 categoryName: 今日何する？
-hero: /hero/classroom-03.png
-metaDescription: モンテッソーリ教育の敏感期に基づき、0歳・1歳・2歳・3歳・4-6歳の年齢別に家でできる遊び20選を紹介。100均素材と身近な道具で再現できる具体的な手順、観察ポイント、準備物を3層で開示した保存版。
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-area: "all"
+hero: /hero-ai/monte-asobi-nenrei-betsu.jpg
+metaDescription: >-
+  モンテッソーリ教育の敏感期に基づき、0歳・1歳・2歳・3歳・4-6歳の年齢別に家でできる遊び20選を紹介。100均素材と身近な道具で再現できる具体的な手順、観察ポイント、準備物を3層で開示した保存版。
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+area: all
 quickInfo:
-  ageRanges: ["0-1", "1-2", "2-3", "4-6"]
-  place: ["home"]
+  ageRanges:
+    - 0-1
+    - 1-2
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
   durationMin: 15
-  budget: "low"
-lede: 実はモンテッソーリ、家でも100均で再現できる。「子どもが今やりたいこと」に応える教育法を、敏感期×年齢別の20活動で保存版に。集中30分が当たり前になる、家庭版モンテの鉄板20選。
+  budget: low
+lede: >-
+  実はモンテッソーリ、家でも100均で再現できる。「子どもが今やりたいこと」に応える教育法を、敏感期×年齢別の20活動で保存版に。集中30分が当たり前になる、家庭版モンテの鉄板20選。
+legacyHero: /hero/classroom-03.png
 ---
 
 ## 30秒でわかる答え｜モンテッソーリ家庭遊び

@@ -1,20 +1,28 @@
 ---
 slug: tokyo-station-kodzure-shop-density-top20-2026
 title: 【独自集計】東京の子連れOK店が多い駅TOP20｜上野・銀座・自由が丘ほか
-metaDescription: きょうのこ編集部が484駅・3,277店を独自集計。子連れOK店の絶対数が多い駅TOP20を発表。1位上野27店、2位銀座24店、同率自由が丘24店。なぜこの駅が上位なのか、駅ごとの特徴を徹底分析した独自データ記事。
+metaDescription: >-
+  きょうのこ編集部が484駅・3,277店を独自集計。子連れOK店の絶対数が多い駅TOP20を発表。1位上野27店、2位銀座24店、同率自由が丘24店。なぜこの駅が上位なのか、駅ごとの特徴を徹底分析した独自データ記事。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/tokyo-02.png
-lede: 子連れで「とりあえずどこか食べに行こう」と思った時、**選択肢の多さ**は最重要の判断基準。きょうのこ独自集計で484駅×3,277店から「子連れOK店が多い駅TOP20」を抽出しました。
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-station-kodzure-shop-density-top20-2026.jpg
+lede: >-
+  子連れで「とりあえずどこか食べに行こう」と思った時、**選択肢の多さ**は最重要の判断基準。きょうのこ独自集計で484駅×3,277店から「子連れOK店が多い駅TOP20」を抽出しました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - any
   durationMin: 60
-  budget: "low"
+  budget: low
 area: tokyo
+legacyHero: /hero/tokyo-02.png
 ---
 
 ## 結論（先に知りたい人へ）

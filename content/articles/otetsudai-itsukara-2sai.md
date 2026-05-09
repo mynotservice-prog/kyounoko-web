@@ -3,19 +3,26 @@ slug: otetsudai-itsukara-2sai
 title: お手伝いいつから？2歳から始めた家事ごっこ実践リスト
 category: today-mawasu
 categoryName: 今日まわす
-hero: /hero/family-dinner-01.png
-metaDescription: お手伝いは何歳から？2歳の家事ごっこから6歳の本格的なお手伝いまで、年齢別の実践リストを30個以上掲載。やる気を引き出す声かけ・続けるコツ・きょうだい対応まで実体験ベースで整理しました。
-publishedAt: 2026-05-02
-updatedAt: "2026-05-08"
-area: "all"
+hero: /hero-ai/otetsudai-itsukara-2sai.jpg
+metaDescription: >-
+  お手伝いは何歳から？2歳の家事ごっこから6歳の本格的なお手伝いまで、年齢別の実践リストを30個以上掲載。やる気を引き出す声かけ・続けるコツ・きょうだい対応まで実体験ベースで整理しました。
+publishedAt: 2026-05-02T00:00:00.000Z
+updatedAt: '2026-05-09'
+area: all
 quickInfo:
-  ageRanges: ["1-2", "2-3", "4-6"]
-  place: ["indoor"]
+  ageRanges:
+    - 1-2
+    - 2-3
+    - 4-6
+  place:
+    - indoor
   weather: []
   durationMin: 10
-  budget: "low"
+  budget: low
 lede: お手伝いは「2歳の家事ごっこ」から始められます。年齢別にできる30以上のお手伝いリストと、やる気を引き出す声かけ・続けるコツを実践ベースで整理しました。
-speakableSummary: お手伝いは2歳の家事ごっこから本格的にスタートできるとされる経験則。1歳半〜2歳でおもちゃ片付け、2〜3歳で食器運び・掃除のマネ事、4〜6歳で配膳・掃除機・お風呂掃除など実用的な作業に挑戦できる傾向。やる気を引き出す声かけと、ゆるい目標設定が長続きのコツ。家庭ごとに自由に取り入れるのが現実的。
+speakableSummary: >-
+  お手伝いは2歳の家事ごっこから本格的にスタートできるとされる経験則。1歳半〜2歳でおもちゃ片付け、2〜3歳で食器運び・掃除のマネ事、4〜6歳で配膳・掃除機・お風呂掃除など実用的な作業に挑戦できる傾向。やる気を引き出す声かけと、ゆるい目標設定が長続きのコツ。家庭ごとに自由に取り入れるのが現実的。
+legacyHero: /hero/family-dinner-01.png
 ---
 
 ## 30秒でわかる答え｜お手伝いいつから

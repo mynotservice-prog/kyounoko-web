@@ -4,16 +4,21 @@ title: 外食で子が食べる店の見極め方｜5つのチェック項目と
 metaDescription: 外食で子が食べない問題を防ぐ5つのチェック項目と、実際に食べる子連れOK店10選。キッズメニュー・椅子・待ち時間・静かな時間帯の見極め方を解説。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: 2026-04-18
-updatedAt: 2026-05-08
-hero: /hero/family-dinner-01.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/gaisyoku-ko-ga-taberu.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["indoor"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - indoor
   weather: []
-  budget: "mid"
-lede: 外食で「子が食べない」問題を防ぐには、店選びの段階で勝負が決まっています。チェック項目5つと、実際に食べる子連れOK店10選で、外食ストレスを減らしましょう。
+  budget: mid
+lede: >-
+  外食で「子が食べない」問題を防ぐには、店選びの段階で勝負が決まっています。チェック項目5つと、実際に食べる子連れOK店10選で、外食ストレスを減らしましょう。
+legacyHero: /hero/family-dinner-01.png
 ---
 
 ## 結論（先に知りたい人へ）

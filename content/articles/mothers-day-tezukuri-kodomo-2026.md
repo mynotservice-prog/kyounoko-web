@@ -1,19 +1,26 @@
 ---
 slug: mothers-day-tezukuri-kodomo-2026
 title: 【2026年版】母の日の手作りプレゼント10選｜0〜6歳の子と一緒に作れるアイデア
-metaDescription: 2026年の母の日（5月10日）に向けて、0〜6歳の子と一緒に作れる手作りプレゼント10選。100均材料中心で30分以内、手形足形アートから折り紙の花まで年齢別に紹介します。
+metaDescription: >-
+  2026年の母の日（5月10日）に向けて、0〜6歳の子と一緒に作れる手作りプレゼント10選。100均材料中心で30分以内、手形足形アートから折り紙の花まで年齢別に紹介します。
 category: today-mawasu
 categoryName: 今日どう回す？
-publishedAt: "2026-05-05"
-updatedAt: "2026-05-08"
-hero: /hero/kid-craft-01.png
+publishedAt: '2026-05-05'
+updatedAt: '2026-05-09'
+hero: /hero-ai/mothers-day-tezukuri-kodomo-2026.jpg
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 60
-  budget: "low"
+  budget: low
 area: all
+legacyHero: /hero/kid-craft-01.png
 ---
 
 ## 結論（先に知りたい人へ）

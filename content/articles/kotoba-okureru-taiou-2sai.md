@@ -1,20 +1,25 @@
 ---
 slug: kotoba-okureru-taiou-2sai
 title: 2歳で言葉が遅い時の対応｜発語ゼロ・単語のみの家庭ケア10と相談目安
-metaDescription: 2歳で言葉が出ない・遅いと感じた時の家庭でできる関わり方10、2語文が出ない時の相談目安、発達相談窓口の使い方を具体的に解説。焦らず進める親の心構えまでまとめました。
+metaDescription: >-
+  2歳で言葉が出ない・遅いと感じた時の家庭でできる関わり方10、2語文が出ない時の相談目安、発達相談窓口の使い方を具体的に解説。焦らず進める親の心構えまでまとめました。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/kid-learn-02.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kotoba-okureru-taiou-2sai.jpg
 lede: 「2歳なのにまだ言葉が少ない」と不安な親向けに、家庭でできる関わり方10、相談目安、発達支援センターの使い方、先輩ママの体験も含めて整理しました。
 quickInfo:
-  ageRanges: ["2-3"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "free"
-area: "all"
+  budget: free
+area: all
+legacyHero: /hero/kid-learn-02.png
 ---
 
 ## 結論（先に知りたい人へ）

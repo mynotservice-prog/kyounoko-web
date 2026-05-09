@@ -1,20 +1,28 @@
 ---
 slug: kodomo-hitori-asobi-anzen-kankyou
 title: 一人遊びできる環境作り｜1〜5歳の集中時間を伸ばす部屋と玩具5工夫
-metaDescription: 一人遊びを長く楽しめる環境作りを、年齢別の集中時間目安、部屋のレイアウト、おもちゃの選び方、親の関わり方5つで解説。子の集中力を伸ばしつつ親の自由時間も作るコツを整理しました。
+metaDescription: >-
+  一人遊びを長く楽しめる環境作りを、年齢別の集中時間目安、部屋のレイアウト、おもちゃの選び方、親の関わり方5つで解説。子の集中力を伸ばしつつ親の自由時間も作るコツを整理しました。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/toddler-play-01.png
-lede: 一人遊びは集中力と自己発見の宝庫。1〜5歳の年齢別の集中時間、環境作りの具体手順、親が見守るスタンスを整理し、子の成長と親の休息を両立するコツをまとめました。
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kodomo-hitori-asobi-anzen-kankyou.jpg
+lede: >-
+  一人遊びは集中力と自己発見の宝庫。1〜5歳の年齢別の集中時間、環境作りの具体手順、親が見守るスタンスを整理し、子の成長と親の休息を両立するコツをまとめました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "low"
-area: "all"
+  budget: low
+area: all
+legacyHero: /hero/toddler-play-01.png
 ---
 
 ## 結論（先に知りたい人へ）

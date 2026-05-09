@@ -1,20 +1,28 @@
 ---
 slug: tokyo-station-private-room-ranking
 title: 個室・座敷で子連れランチできる駅TOP15｜誕生日・お祝い・帰省時に
-metaDescription: 子連れの誕生日・お食い初め・祖父母会食には個室や座敷が必須。きょうのこ独自集計3,277店データから、個室・座敷率が高い東京23区の駅TOP15を発表。和食／洋食／中華のジャンル分布も独自分析。
+metaDescription: >-
+  子連れの誕生日・お食い初め・祖父母会食には個室や座敷が必須。きょうのこ独自集計3,277店データから、個室・座敷率が高い東京23区の駅TOP15を発表。和食／洋食／中華のジャンル分布も独自分析。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/family-dinner-02.png
-lede: 子連れ会食で「個室を取れるか」は失敗確率を大きく左右します。きょうのこ独自集計（3,277店）から**個室・座敷率TOP15駅**を発表。お食い初め・誕生日・帰省時の集合場所選びに使える独自データです。
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/tokyo-station-private-room-ranking.jpg
+lede: >-
+  子連れ会食で「個室を取れるか」は失敗確率を大きく左右します。きょうのこ独自集計（3,277店）から**個室・座敷率TOP15駅**を発表。お食い初め・誕生日・帰省時の集合場所選びに使える独自データです。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["indoor"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - indoor
+  weather:
+    - any
   durationMin: 90
-  budget: "mid"
+  budget: mid
 area: tokyo
+legacyHero: /hero/family-dinner-02.png
 ---
 
 ## 結論（先に知りたい人へ）

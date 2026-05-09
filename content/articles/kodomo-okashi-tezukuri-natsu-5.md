@@ -4,17 +4,23 @@ title: 夏休みの子供と作るおやつ5選｜火を使わない簡単レシ
 metaDescription: 夏休みに子供と作るおやつ5選。火を使わない安全レシピで、フルーツポンチ・ゼリー・かき氷・寒天・スムージーボウルを年齢別に紹介します。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: "2026-05-08"
-updatedAt: "2026-05-08"
-hero: /hero/food-sweet-01.png
-lede: 暑い夏は「火を使わない」「冷たい」「子と一緒に作れる」の3条件が揃ったおやつが正解。手作り感のある5レシピを、必要な道具・材料・年齢別の役割分担まで解説します。
+publishedAt: '2026-05-08'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kodomo-okashi-tezukuri-natsu-5.jpg
+lede: >-
+  暑い夏は「火を使わない」「冷たい」「子と一緒に作れる」の3条件が揃ったおやつが正解。手作り感のある5レシピを、必要な道具・材料・年齢別の役割分担まで解説します。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "low"
+  budget: low
 area: all
+legacyHero: /hero/food-sweet-01.png
 ---
 
 ## 結論（先に知りたい人へ）

@@ -4,17 +4,24 @@ title: 【手作りかき氷】子供と作る簡単シロップ5種｜0歳か�
 metaDescription: 手作りかき氷を子供と作るための簡単シロップ5種。イチゴ・ブルーベリー・抹茶・キウイ・はちみつレモンを年齢別の安全レシピで紹介します。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: "2026-05-07"
-updatedAt: "2026-05-08"
-hero: /hero/food-fruit-01.png
-lede: 市販シロップは色素が強く、量も多すぎ。手作りシロップなら無添加で子供向けの味に調整できます。0歳から食べられる果物ベース5種類のレシピと、かき氷器選びの基本をまとめました。
+publishedAt: '2026-05-07'
+updatedAt: '2026-05-09'
+hero: /hero-ai/kakigori-kodomo-tezukuri-recipe.jpg
+lede: >-
+  市販シロップは色素が強く、量も多すぎ。手作りシロップなら無添加で子供向けの味に調整できます。0歳から食べられる果物ベース5種類のレシピと、かき氷器選びの基本をまとめました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
-  weather: ["sunny"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - sunny
   durationMin: 30
-  budget: "low"
+  budget: low
 area: all
+legacyHero: /hero/food-fruit-01.png
 ---
 
 ## 結論（先に知りたい人へ）

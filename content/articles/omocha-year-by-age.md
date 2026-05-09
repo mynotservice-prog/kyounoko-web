@@ -1,19 +1,27 @@
 ---
 slug: omocha-year-by-age
 title: 買ってよかった幼児向けおもちゃ10選（年齢別：0〜6歳）
-metaDescription: 0〜6歳の年齢別・買ってよかったおもちゃ10選を厳選。積木・ピタゴラス・プラレール・LEGO DUPLO・お人形・台所・パズル・絵本棚・シルバニア・公文知育系の価格と長く使える度を解説。
+metaDescription: >-
+  0〜6歳の年齢別・買ってよかったおもちゃ10選を厳選。積木・ピタゴラス・プラレール・LEGO
+  DUPLO・お人形・台所・パズル・絵本棚・シルバニア・公文知育系の価格と長く使える度を解説。
 category: yakudatsu
 categoryName: 役立つもの
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/toddler-play-03.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-09'
+hero: /hero-ai/omocha-year-by-age.jpg
+area: all
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
-  budget: "mid"
-lede: 0〜6歳の幼児期、買ってよかったおもちゃは年齢でガラッと変わります。定番10選を年齢別・価格・長く使える度で整理しました。迷ったらこの10個から選べば外しません。
+  budget: mid
+lede: >-
+  0〜6歳の幼児期、買ってよかったおもちゃは年齢でガラッと変わります。定番10選を年齢別・価格・長く使える度で整理しました。迷ったらこの10個から選べば外しません。
+legacyHero: /hero/toddler-play-03.png
 ---
 
 ## 結論（先に知りたい人へ）
