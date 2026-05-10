@@ -54,6 +54,12 @@ export type DataRow = {
   kidsMenu: boolean;
   /** 個室・座敷あり。 */
   privateRoom: boolean;
+  /** キッズチェア（高さ調整できる子供用椅子）あり。 */
+  kidsChair: boolean;
+  /** 子供用スプーン・フォーク・取り皿の提供あり。 */
+  kidsCutlery: boolean;
+  /** 店内にキッズスペース・遊び場あり。 */
+  kidsSpace: boolean;
   /** ランチ価格帯（表記ゆれを許容、文字列）。 */
   priceRange: string;
 };
@@ -98,6 +104,10 @@ export function buildAllDataRows(): DataRow[] {
         stroller: chain.stroller,
         kidsMenu: chain.kidsMenu,
         privateRoom: chain.privateRoom,
+        kidsChair: chain.babyChair === true,
+        // チェーン店ヒューリスティック: キッズメニューあり = カトラリー提供ありが標準
+        kidsCutlery: chain.kidsCutlery ?? chain.kidsMenu === true,
+        kidsSpace: chain.kidsSpace === true,
         priceRange: chain.lunchPrice,
       });
     }
@@ -119,6 +129,9 @@ export function buildAllDataRows(): DataRow[] {
       stroller: indieFlat.strollerOk ? 'good' : 'unknown',
       kidsMenu: indieFlat.kidsMenu === true,
       privateRoom: indieFlat.privateRoom === true,
+      kidsChair: indieFlat.kidsChair === true,
+      kidsCutlery: indieFlat.kidsCutlery === true,
+      kidsSpace: indieFlat.kidsSpace === true,
       priceRange: indieFlat.priceLunch,
     });
   }

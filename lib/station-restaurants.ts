@@ -48,6 +48,10 @@ export type Chain = {
   privateRoom: boolean;
   /** 離乳食持込OK */
   babyFoodOk: boolean;
+  /** 子供用スプーン・フォーク・取り皿の提供あり */
+  kidsCutlery?: boolean;
+  /** 店内にキッズスペース・遊び場あり */
+  kidsSpace?: boolean;
   /** 平均ランチ価格帯（円） */
   lunchPrice: '〜800' | '〜1,500' | '〜2,500' | '〜4,000' | '4,000〜';
   /** 駅周辺で見つかりやすさ。'common'=ほぼどの主要駅にも、'major-only'=ターミナル中心、'specific'=特定エリアのみ */

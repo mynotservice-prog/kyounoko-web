@@ -15,7 +15,7 @@ type Props = {
 
 type SortKey = keyof Pick<
   DataRow,
-  'name' | 'station' | 'ward' | 'category' | 'stroller' | 'kidsMenu' | 'privateRoom' | 'priceRange' | 'type'
+  'name' | 'station' | 'ward' | 'category' | 'stroller' | 'kidsMenu' | 'privateRoom' | 'kidsChair' | 'kidsCutlery' | 'kidsSpace' | 'priceRange' | 'type'
 >;
 
 const STROLLER_RANK: Record<DataRow['stroller'], number> = {
@@ -59,6 +59,9 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
   const [onlyKidsMenu, setOnlyKidsMenu] = useState(false);
   const [onlyStrollerOK, setOnlyStrollerOK] = useState(false);
   const [onlyPrivateRoom, setOnlyPrivateRoom] = useState(false);
+  const [onlyKidsChair, setOnlyKidsChair] = useState(false);
+  const [onlyKidsCutlery, setOnlyKidsCutlery] = useState(false);
+  const [onlyKidsSpace, setOnlyKidsSpace] = useState(false);
 
   const filtered = useMemo(() => {
     const kw = keyword.trim().toLowerCase();
@@ -70,9 +73,12 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
       if (onlyKidsMenu && !r.kidsMenu) return false;
       if (onlyStrollerOK && r.stroller !== 'ok' && r.stroller !== 'good') return false;
       if (onlyPrivateRoom && !r.privateRoom) return false;
+      if (onlyKidsChair && !r.kidsChair) return false;
+      if (onlyKidsCutlery && !r.kidsCutlery) return false;
+      if (onlyKidsSpace && !r.kidsSpace) return false;
       return true;
     });
-  }, [rows, ward, category, type, keyword, onlyKidsMenu, onlyStrollerOK, onlyPrivateRoom]);
+  }, [rows, ward, category, type, keyword, onlyKidsMenu, onlyStrollerOK, onlyPrivateRoom, onlyKidsChair, onlyKidsCutlery, onlyKidsSpace]);
 
   const sorted = useMemo(() => {
     const copy = [...filtered];
@@ -84,6 +90,9 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
           break;
         case 'kidsMenu':
         case 'privateRoom':
+        case 'kidsChair':
+        case 'kidsCutlery':
+        case 'kidsSpace':
           cmp = (a[sortKey] ? 1 : 0) - (b[sortKey] ? 1 : 0);
           break;
         case 'priceRange':
@@ -162,6 +171,9 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
         {[
           { key: 'kidsMenu', label: '🍽 キッズメニューあり', state: onlyKidsMenu, set: setOnlyKidsMenu },
           { key: 'stroller', label: '👶 ベビーカーOK', state: onlyStrollerOK, set: setOnlyStrollerOK },
+          { key: 'kidsChair', label: '🪑 キッズチェアあり', state: onlyKidsChair, set: setOnlyKidsChair },
+          { key: 'kidsCutlery', label: '🥄 子供用カトラリー', state: onlyKidsCutlery, set: setOnlyKidsCutlery },
+          { key: 'kidsSpace', label: '🎈 キッズスペース', state: onlyKidsSpace, set: setOnlyKidsSpace },
           { key: 'privateRoom', label: '🚪 個室あり', state: onlyPrivateRoom, set: setOnlyPrivateRoom },
         ].map((c) => (
           <button
@@ -185,13 +197,16 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
             {c.label}
           </button>
         ))}
-        {(onlyKidsMenu || onlyStrollerOK || onlyPrivateRoom) && (
+        {(onlyKidsMenu || onlyStrollerOK || onlyPrivateRoom || onlyKidsChair || onlyKidsCutlery || onlyKidsSpace) && (
           <button
             type="button"
             onClick={() => {
               setOnlyKidsMenu(false);
               setOnlyStrollerOK(false);
               setOnlyPrivateRoom(false);
+              setOnlyKidsChair(false);
+              setOnlyKidsCutlery(false);
+              setOnlyKidsSpace(false);
               setPage(1);
             }}
             style={{
@@ -259,6 +274,9 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
               <th style={thStyle} onClick={() => handleSort('category')}>カテゴリ{sortIcon('category')}</th>
               <th style={thStyle} onClick={() => handleSort('stroller')}>ベビーカー{sortIcon('stroller')}</th>
               <th style={thStyle} onClick={() => handleSort('kidsMenu')}>キッズメニュー{sortIcon('kidsMenu')}</th>
+              <th style={thStyle} onClick={() => handleSort('kidsChair')}>キッズチェア{sortIcon('kidsChair')}</th>
+              <th style={thStyle} onClick={() => handleSort('kidsCutlery')}>子供用カトラリー{sortIcon('kidsCutlery')}</th>
+              <th style={thStyle} onClick={() => handleSort('kidsSpace')}>キッズスペース{sortIcon('kidsSpace')}</th>
               <th style={thStyle} onClick={() => handleSort('privateRoom')}>個室{sortIcon('privateRoom')}</th>
               <th style={thStyle} onClick={() => handleSort('priceRange')}>価格帯{sortIcon('priceRange')}</th>
               <th style={thStyle} onClick={() => handleSort('type')}>種別{sortIcon('type')}</th>
@@ -267,7 +285,7 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
           <tbody>
             {view.length === 0 ? (
               <tr>
-                <td style={{ ...tdStyle, textAlign: 'center', color: 'var(--ink-mute, #948477)', padding: 24 }} colSpan={9}>
+                <td style={{ ...tdStyle, textAlign: 'center', color: 'var(--ink-mute, #948477)', padding: 24 }} colSpan={12}>
                   該当データがありません
                 </td>
               </tr>
@@ -282,6 +300,9 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
                   <td style={tdStyle}>{r.category}</td>
                   <td style={{ ...tdStyle, textAlign: 'center', fontWeight: 600 }}>{STROLLER_LABEL[r.stroller]}</td>
                   <td style={{ ...tdStyle, textAlign: 'center' }}>{r.kidsMenu ? '○' : '—'}</td>
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>{r.kidsChair ? '○' : '—'}</td>
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>{r.kidsCutlery ? '○' : '—'}</td>
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>{r.kidsSpace ? '○' : '—'}</td>
                   <td style={{ ...tdStyle, textAlign: 'center' }}>{r.privateRoom ? '○' : '—'}</td>
                   <td style={tdStyle}>{r.priceRange}</td>
                   <td style={tdStyle}>

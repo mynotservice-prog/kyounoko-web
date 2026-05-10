@@ -39,6 +39,12 @@ export type IndieRestaurant = {
   kidsMenu?: boolean;
   /** 個室・座敷あり */
   privateRoom?: boolean;
+  /** キッズチェア（高さ調整できる子供用椅子）あり */
+  kidsChair?: boolean;
+  /** 子供用スプーン・フォーク・取り皿の提供あり */
+  kidsCutlery?: boolean;
+  /** 店内にキッズスペース・遊び場あり */
+  kidsSpace?: boolean;
   /** ランチ価格帯 */
   priceLunch: '〜1,000円' | '〜2,000円' | '〜3,500円' | '〜5,000円' | '5,000円〜';
   /** メディア掲載・SNSで話題等の人気フラグ */
