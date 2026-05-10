@@ -55,6 +55,10 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
   const [sortKey, setSortKey] = useState<SortKey>('ward');
   const [sortAsc, setSortAsc] = useState(true);
   const [page, setPage] = useState(1);
+  // 子連れ系条件フィルタ（複数同時ON可）
+  const [onlyKidsMenu, setOnlyKidsMenu] = useState(false);
+  const [onlyStrollerOK, setOnlyStrollerOK] = useState(false);
+  const [onlyPrivateRoom, setOnlyPrivateRoom] = useState(false);
 
   const filtered = useMemo(() => {
     const kw = keyword.trim().toLowerCase();
@@ -63,9 +67,12 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
       if (category !== 'all' && r.category !== category) return false;
       if (type !== 'all' && r.type !== type) return false;
       if (kw && !r.name.toLowerCase().includes(kw) && !r.station.toLowerCase().includes(kw)) return false;
+      if (onlyKidsMenu && !r.kidsMenu) return false;
+      if (onlyStrollerOK && r.stroller !== 'ok' && r.stroller !== 'good') return false;
+      if (onlyPrivateRoom && !r.privateRoom) return false;
       return true;
     });
-  }, [rows, ward, category, type, keyword]);
+  }, [rows, ward, category, type, keyword, onlyKidsMenu, onlyStrollerOK, onlyPrivateRoom]);
 
   const sorted = useMemo(() => {
     const copy = [...filtered];
@@ -148,6 +155,58 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
             {w.label}
           </button>
         ))}
+      </div>
+
+      {/* 子連れ条件フィルタチップ（クイックトグル） */}
+      <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 14 }} role="group" aria-label="子連れ条件フィルタ">
+        {[
+          { key: 'kidsMenu', label: '🍽 キッズメニューあり', state: onlyKidsMenu, set: setOnlyKidsMenu },
+          { key: 'stroller', label: '👶 ベビーカーOK', state: onlyStrollerOK, set: setOnlyStrollerOK },
+          { key: 'privateRoom', label: '🚪 個室あり', state: onlyPrivateRoom, set: setOnlyPrivateRoom },
+        ].map((c) => (
+          <button
+            key={c.key}
+            type="button"
+            onClick={() => { c.set(!c.state); setPage(1); }}
+            aria-pressed={c.state}
+            style={{
+              padding: '6px 14px',
+              fontSize: 12.5,
+              border: '1.5px solid',
+              borderColor: c.state ? 'var(--clay-deep, #B0432B)' : 'rgba(20,147,209,0.3)',
+              background: c.state ? 'var(--clay-deep, #B0432B)' : 'rgba(20,147,209,0.04)',
+              color: c.state ? '#fff' : 'var(--ink, #2b2117)',
+              borderRadius: 999,
+              cursor: 'pointer',
+              fontWeight: c.state ? 600 : 500,
+              transition: 'all .15s ease',
+            }}
+          >
+            {c.label}
+          </button>
+        ))}
+        {(onlyKidsMenu || onlyStrollerOK || onlyPrivateRoom) && (
+          <button
+            type="button"
+            onClick={() => {
+              setOnlyKidsMenu(false);
+              setOnlyStrollerOK(false);
+              setOnlyPrivateRoom(false);
+              setPage(1);
+            }}
+            style={{
+              padding: '6px 12px',
+              fontSize: 11.5,
+              border: 'none',
+              background: 'transparent',
+              color: 'var(--ink-mute, #968B7B)',
+              cursor: 'pointer',
+              textDecoration: 'underline',
+            }}
+          >
+            条件クリア
+          </button>
+        )}
       </div>
 
       <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 14, alignItems: 'center' }}>
