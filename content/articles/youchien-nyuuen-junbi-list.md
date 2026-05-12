@@ -297,3 +297,5 @@ legacyHero: /hero/classroom-01.png
 ## 関連記事
 
 - [幼児の習い事、何歳から始める？目的別・費用別の選び方6パターン](/article/youji-naraigoto-nansai-kara)
+- [入園準備 名前付け時短テク10選](/article/nyuuen-namaetsuke-jitan-tech-10)
+- [衣替え 子供服の収納テクと処分基準](/article/koromogae-kodomofuku-shuunou-shobun)

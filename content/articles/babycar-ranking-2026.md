@@ -172,6 +172,8 @@ A型は新生児から使える万能型、B型は軽量・コンパクトでお
 - [/items で関連商品を見る](/items)
 - [ベビーカー選び方A型B型バギー](/article/babycar-erabikata)
 - [抱っこ紐おすすめランキング2026](/article/dakkohimo-ranking-2026)
+- [ジュニアシート2-3歳比較15選](/article/junior-seat-2-3sai-hikaku-15)
+- [ベビーゲート階段用ランキング7選](/article/babygate-kaidan-ranking-7-2026)
 
 ## よくある質問
 

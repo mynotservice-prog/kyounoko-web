@@ -472,6 +472,8 @@ legacyHero: /hero/tokyo-02.png
 ## 関連記事
 
 - [0〜1歳と家でできる10分遊び8パターン（道具なし・準備なし）](/article/0-1sai-ie-asobi-10pun)
+- [東京の屋内プール子連れOK10選](/article/tokyo-okunai-pool-kodzure-10)
+- [関東の紫陽花スポット子連れOK10選](/article/kanto-ajisai-kodzure-spot-10)
 - [雨の日に行ける都内の屋内スポット15選（2〜6歳と行ける）](/article/amenohi-indoor-spots-tokyo-15)
 - [猛暑日にベビーカーで行ける涼しい屋内スポット](/article/moushobi-suzushii-spots)
 - [無料で1日遊べる東京の子育てスポット7選](/article/kosodate-muryou-spots-tokyo)

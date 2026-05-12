@@ -570,6 +570,7 @@ A. **個人差の範囲**ですが、5歳近くまで続く場合は発達相談
 ## 関連記事
 
 - [子どもの自己肯定感が上がる声かけ10選｜今日から使える魔法の言葉](/article/kodomo-suki-suki-oya-jiko-kouka)
+- [2歳のかんしゃく対応 効果のあった声かけTOP10](/article/2sai-kanshaku-koekake-top10)
 - [感覚過敏な子の対応ガイド｜服・音・食感の困りごと別の工夫](/article/kankaku-kabin-kodomo-taisaku)
 - [朝の30分ルーティン｜2〜3歳の保育園送迎を6:30〜7:30でバタバタしない7手順](/article/asa-30pun-routine)
 - [ワンオペ夜の切り抜け方｜2〜6歳の18:30〜20:30を1人で回す10の工夫](/article/wanope-yoru-kirinukekata)

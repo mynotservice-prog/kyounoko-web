@@ -340,6 +340,7 @@ A. 平日ランチは予約なしOK、休日11時30分以降は混雑するた�
 
 - [子連れモーニング10選｜コメダ・ガスト・スタバの朝食メニュー比較](/article/kodzure-morning-cafe-10)
 - [サイゼリヤ子連れ攻略法｜キッズメニュー・取り分け・ベビーカーの全知識](/article/kodzure-saize-koryaku)
+- [離乳食持ち込みOKレストラン東京15選](/article/rinyuushoku-mochikomi-ok-tokyo-15)
 - [キッズスペースありのランチスポット10選](/article/kids-space-lunch-10)
 - [個室で子連れランチ完全ガイド](/article/koshitsu-kodzure-lunch)
 - [子連れ歓迎の和食チェーン10選](/article/kodzure-washoku-chain-10)
