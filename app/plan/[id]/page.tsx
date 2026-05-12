@@ -15,6 +15,8 @@ import { getTagsForPlan } from '@/lib/tags';
 import { FavoriteButton } from '@/components/ui/FavoriteButton';
 import { TriedButton } from '@/components/ui/TriedButton';
 import { SpotList } from '@/components/common/SpotList';
+import { getRelatedArticlesForPlan } from '@/lib/cross-links';
+import { CrossLinkCards } from '@/components/article/CrossLinkCards';
 
 // hero 画像の自動マッチング更新を即時反映するため revalidate を短縮（5分）
 export const revalidate = 300;
@@ -70,6 +72,14 @@ export default async function PlanPage({ params }: Props) {
 
   const html = await renderBody(plan.body);
   const related = plan.seoRelated ? await getFileArticle(plan.seoRelated) : null;
+
+  // この行動に役立つ記事（プラン → 記事の双方向リンク）
+  // - seoRelated はすでに別セクションで出すので除外
+  // - 4 件まで提示（plan の kind / place / area で優先度を切り替え）
+  const crossLinkedArticles = getRelatedArticlesForPlan(plan, {
+    limit: 4,
+    excludeSlugs: plan.seoRelated ? [plan.seoRelated] : [],
+  });
 
   // 同じ条件で別のプラン（年齢×場所 が一致する別プラン、最大3件）
   const siblingPlans = getAllPlanMetas()
@@ -275,6 +285,22 @@ export default async function PlanPage({ params }: Props) {
               </div>
             </Link>
           </section>
+        )}
+
+        {/* この行動に役立つ記事（プラン → 記事の双方向リンク） */}
+        {crossLinkedArticles.length > 0 && (
+          <CrossLinkCards
+            eyebrow="Related articles · 実際の体験談・選び方"
+            heading="このプランに役立つ記事"
+            defaultEyebrow="Article"
+            items={crossLinkedArticles.map((a) => ({
+              href: `/article/${a.slug}`,
+              title: a.title,
+              description: a.lede || a.metaDescription,
+              hero: a.hero,
+              eyebrow: a.categoryName ?? 'Article',
+            }))}
+          />
         )}
 
         {/* 同じ条件で別のプラン（プラン横リンク） */}

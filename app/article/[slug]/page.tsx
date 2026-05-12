@@ -28,6 +28,8 @@ import { SpotList } from '@/components/common/SpotList';
 import { EditorialDisclosure } from '@/components/article/EditorialDisclosure';
 import { getExtraSchemasForArticle } from '@/lib/article-schema-enhancers';
 import { buildStationLinkForArticle } from '@/lib/article-station-link';
+import { getRelatedPlansForArticle } from '@/lib/cross-links';
+import { CrossLinkCards } from '@/components/article/CrossLinkCards';
 
 export const revalidate = 3600; // 1時間ごとに再生成
 
@@ -480,6 +482,8 @@ function FileArticleView({ article }: { article: FileArticle }) {
     article.category,
     3,
   );
+  // 記事 → プラン（クロスリンク）。記事の category / area / 年齢で最大3件
+  const relatedPlans = getRelatedPlansForArticle(article, { limit: 3 });
   const publishedLabel = formatJaDate(article.publishedAt);
   const updatedLabel = formatJaDate(article.updatedAt);
   const showUpdated = publishedLabel !== updatedLabel;
@@ -500,6 +504,14 @@ function FileArticleView({ article }: { article: FileArticle }) {
     return stripped.length;
   })();
 
+  // クロスリンクされたプランを mentions に積む（AEO 強化：エンティティ関係をクローラに明示）
+  const mentions = relatedPlans.map((p) => ({
+    '@type': 'HowTo' as const,
+    name: p.title,
+    description: p.shortAnswer,
+    url: `https://kyounoko.jp/plan/${p.id}`,
+  }));
+
   const jsonLdArticle = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -512,6 +524,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
     dateModified: article.updatedAt,
     wordCount: articleWordCount,
     timeRequired: `PT${article.readingTimeMin}M`,
+    ...(mentions.length > 0 ? { mentions } : {}),
     author: {
       '@type': 'Person',
       '@id': 'https://kyounoko.jp/about#author',
@@ -1025,6 +1038,22 @@ function FileArticleView({ article }: { article: FileArticle }) {
               </section>
             );
           })()}
+
+          {/* この記事の悩みに使えるプラン（記事 → プランの双方向リンク） */}
+          {relatedPlans.length > 0 && (
+            <CrossLinkCards
+              eyebrow="Today's plan · この記事の悩みに使えるプラン"
+              heading="今日そのまま試せる行動プラン"
+              defaultEyebrow="Plan"
+              items={relatedPlans.map((p) => ({
+                href: `/plan/${p.id}`,
+                title: p.title,
+                description: p.shortAnswer,
+                hero: p.hero,
+                eyebrow: p.kind === 'meal' ? 'Meal plan' : 'Activity plan',
+              }))}
+            />
+          )}
 
           {/* Related articles */}
           {relatedArticles.length > 0 && (
