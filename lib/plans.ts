@@ -116,7 +116,11 @@ function parsePlan(raw: string, fallbackId: string): { meta: PlanMeta; body: str
   const hasPlanAi = fs.existsSync(planAiCandidate);
 
   let matchedHero: string;
-  if (hasPlanAi) {
+  const planAiWebpCandidate = path.join(process.cwd(), 'public', 'hero-ai', `${planId}.webp`);
+  const hasPlanAiWebp = fs.existsSync(planAiWebpCandidate);
+  if (hasPlanAiWebp) {
+    matchedHero = `/hero-ai/${planId}.webp`;
+  } else if (hasPlanAi) {
     matchedHero = `/hero-ai/${planId}.jpg`;
   } else {
     const explicitHero = typeof d.hero === 'string' ? d.hero : undefined;
@@ -126,10 +130,10 @@ function parsePlan(raw: string, fallbackId: string): { meta: PlanMeta; body: str
       // 未指定 or 汎用 home-cozy → タイトル+短答からAIカテゴリ画像を自動マッチ
       matchedHero = pickHeroForText(`${d.title} ${d.shortAnswer}`, planId);
     } else {
-      // 明示指定の /hero/<cat>-NN.<ext> → 新AI画像 /hero-ai/cat-<cat>-NN.jpg にマップ
+      // 明示指定の /hero/<cat>-NN.<ext> → 新AI画像 /hero-ai/cat-<cat>-NN.webp にマップ
       const aiMatch = explicitHero!.match(/^\/hero\/([a-z-]+)-(\d{2})\.(png|webp|jpg|jpeg)$/i);
       if (aiMatch) {
-        matchedHero = `/hero-ai/cat-${aiMatch[1]}-${aiMatch[2]}.jpg`;
+        matchedHero = `/hero-ai/cat-${aiMatch[1]}-${aiMatch[2]}.webp`;
       } else if (explicitHero!.startsWith('/photos/')) {
         // 旧Pexels実写指定は無視してAIカテゴリにフォールバック
         matchedHero = pickHeroForText(`${d.title} ${d.shortAnswer}`, planId);
@@ -140,6 +144,12 @@ function parsePlan(raw: string, fallbackId: string): { meta: PlanMeta; body: str
         }
       }
     }
+  }
+  // WebP対応: /hero-ai/*.jpg は同名の.webpがあれば.webpを優先
+  if (matchedHero?.startsWith('/hero-ai/') && matchedHero.endsWith('.jpg')) {
+    const webpAlt = matchedHero.replace(/\.jpg$/, '.webp');
+    const webpFs = path.join(process.cwd(), 'public', webpAlt.replace(/^\//, ''));
+    if (fs.existsSync(webpFs)) matchedHero = webpAlt;
   }
 
   const meta: PlanMeta = {

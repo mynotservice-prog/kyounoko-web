@@ -95,17 +95,28 @@ function parseFrontmatter(raw: string, fallbackSlug: string): { meta: FileArticl
     categoryName: typeof d.categoryName === 'string' ? d.categoryName : undefined,
     publishedAt: toIsoDate(d.publishedAt) ?? new Date().toISOString(),
     updatedAt: toIsoDate(d.updatedAt) ?? toIsoDate(d.publishedAt) ?? new Date().toISOString(),
-    // hero の優先順位:
-    //   1. /photos/article-<slug>.webp（Pexels実写真）が存在 → 最優先
-    //   2. frontmatter 指定があれば .png→.webp 変換して使用
-    //   3. なければ undefined（呼び出し側でフォールバック）
+    // hero の優先順位（v4 AI統一 + WebP最適化）:
+    //   1. /hero-ai/<slug>.webp（AI生成イラスト + WebP変換済み） → 最優先
+    //   2. /photos/article-<slug>.webp（Pexels実写、legacy） → 互換用
+    //   3. frontmatter 指定があれば .png/.jpg → .webp 自動変換
+    //   4. なければ undefined（呼び出し側でフォールバック）
     hero: (() => {
       const slug = typeof d.slug === 'string' ? d.slug : fallbackSlug;
+      const heroAiWebp = path.join(process.cwd(), 'public', 'hero-ai', `${slug}.webp`);
+      if (fs.existsSync(heroAiWebp)) {
+        return `/hero-ai/${slug}.webp`;
+      }
+      const heroAiJpg = path.join(process.cwd(), 'public', 'hero-ai', `${slug}.jpg`);
+      if (fs.existsSync(heroAiJpg)) {
+        return `/hero-ai/${slug}.jpg`;
+      }
       const pexelsCandidate = path.join(process.cwd(), 'public', 'photos', `article-${slug}.webp`);
       if (fs.existsSync(pexelsCandidate)) {
         return `/photos/article-${slug}.webp`;
       }
-      return typeof d.hero === 'string' ? d.hero.replace(/\.png$/, '.webp') : undefined;
+      if (typeof d.hero !== 'string') return undefined;
+      // .png / .jpg を .webp に正規化（同名のwebpがあれば使う）
+      return d.hero.replace(/\.(png|jpg|jpeg)$/i, '.webp');
     })(),
     lede: typeof d.lede === 'string' ? d.lede : (typeof d.metaDescription === 'string' ? d.metaDescription : ''),
     quickInfo: parseQuickInfo(d.quickInfo),

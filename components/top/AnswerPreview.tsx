@@ -156,7 +156,7 @@ export function AnswerPreview() {
             style={{
               width: 120,
               height: 120,
-              background: 'url(/hero-ai/cat-toddler-play-01.jpg) center/cover no-repeat',
+              background: 'url(/hero-ai/cat-toddler-play-01.webp) center/cover no-repeat',
               borderRadius: 8,
               flexShrink: 0,
               display: 'none',

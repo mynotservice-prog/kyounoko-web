@@ -18,6 +18,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
+import sharp from 'sharp';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -209,11 +210,25 @@ async function generateOne(item, index) {
     if (!b64) return { slug: item.slug, ok: false, error: 'no image' };
     const buf = Buffer.from(b64, 'base64');
     fs.writeFileSync(dest, buf);
-    console.log(`  ✓ ${log} → ${(buf.length / 1024).toFixed(0)}KB`);
+    // WebP変換（1600x900, quality=82）も同時生成 — 約87%サイズ削減
+    const webpDest = dest.replace(/\.jpg$/, '.webp');
+    let webpSize = 0;
+    try {
+      await sharp(buf)
+        .resize(1600, 900, { fit: 'cover', position: 'center' })
+        .webp({ quality: 82, effort: 4 })
+        .toFile(webpDest);
+      webpSize = fs.statSync(webpDest).size;
+    } catch (werr) {
+      console.error(`    ⚠ webp変換失敗: ${werr.message}`);
+    }
+    console.log(
+      `  ✓ ${log} → jpg ${(buf.length / 1024).toFixed(0)}KB / webp ${(webpSize / 1024).toFixed(0)}KB`,
+    );
     return {
       slug: item.slug,
       ok: true,
-      file: `/hero-ai/${item.slug}.jpg`,
+      file: `/hero-ai/${item.slug}.webp`,
       generatedAt: new Date().toISOString(),
     };
   } catch (err) {
