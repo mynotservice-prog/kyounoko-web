@@ -696,6 +696,7 @@ export const CHUNK_7: StationIndieMap = {
       area: '吉祥寺駅から徒歩5分',
       description: '吉祥寺の老舗カレー店。ポークカレーやチキンカレーがマイルドで、子どもにも食べやすい辛さ。家族連れの常連が多い。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
       popular: true,
     },
