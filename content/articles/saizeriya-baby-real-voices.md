@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-09'
-hero: /hero/family-dinner-02.png
+updatedAt: '2026-05-12'
+hero: /hero-ai/saizeriya-baby-real-voices.jpg
 lede: >-
   「子連れサイゼ、実際どう？」という疑問に、SNS・レビュー・ブログから読み取れる傾向を統合してお答えします。個別投稿の引用は避け、約180件規模の声から抽出した頻出パターンと数値感だけを編集部視点でフラットに整理した実体験まとめです。
 quickInfo:
@@ -22,6 +22,7 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
+legacyHero: /hero/family-dinner-02.png
 ---
 
 ベビーカーでサイゼに入った家庭の声を統合すると、「平日昼なら高確率で入れる／混雑帯は工夫が必要」というのが全体像でした。

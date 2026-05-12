@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-09'
-hero: /hero/family-dinner-02.png
+updatedAt: '2026-05-12'
+hero: /hero-ai/shabuyou-kodzure-koryaku.jpg
 lede: >-
   「しゃぶ葉って子供いくらから？離乳食持込OK？」を1記事で解決。**3歳以下は基本無料**＋年齢別の食べ放題料金が明確で、子連れ家族の利用率が高いしゃぶしゃぶチェーン。0-6歳のお子様連れで使い倒すコツを保存版でまとめました。
 quickInfo:
@@ -22,6 +22,7 @@ quickInfo:
   durationMin: 90
   budget: low
 area: tokyo
+legacyHero: /hero/family-dinner-02.png
 ---
 
 **結論：しゃぶ葉は3歳以下無料・小学生半額の家族向け食べ放題。離乳食持ち込みOK店舗多数で子連れに優しい設計です。**

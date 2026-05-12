@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-09'
-hero: /hero/family-dinner-02.png
+updatedAt: '2026-05-12'
+hero: /hero-ai/gusto-kodzure-koryaku.jpg
 lede: >-
   「ガストはベビーカーで入れる？離乳食は温めてくれる？」を1記事で解決。すかいらーくグループ最大手の**ガスト**は子連れ動線が最も整ったファミレスのひとつ。キッズメニュー・配膳ロボット・ベビーチェアまで、0-6歳の家族が知っておきたい全知識を保存版でまとめました。
 quickInfo:
@@ -22,6 +22,7 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
+legacyHero: /hero/family-dinner-02.png
 ---
 
 **結論：ガストはベビーカー入店OK・ベビーチェア完備・離乳食温め対応の店舗多数で、子連れファミレスの最有力候補です。**

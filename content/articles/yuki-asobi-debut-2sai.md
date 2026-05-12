@@ -1,20 +1,25 @@
 ---
 slug: yuki-asobi-debut-2sai
 title: 雪遊びデビュー2歳｜防寒・準備・近場スポット完全ガイド
-metaDescription: 2歳の雪遊びデビューに必要な防寒ウェア、持ち物、近場で楽しめるスポット、体調管理の注意点まで完全ガイド。初めての雪体験を安全に楽しませるコツ、アレルギー・風邪対策も解説します。
+metaDescription: >-
+  2歳の雪遊びデビューに必要な防寒ウェア、持ち物、近場で楽しめるスポット、体調管理の注意点まで完全ガイド。初めての雪体験を安全に楽しませるコツ、アレルギー・風邪対策も解説します。
 category: today-doko
 categoryName: 今日どこいく
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/winter-snow-03.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-12'
+hero: /hero-ai/yuki-asobi-debut-2sai.jpg
 lede: 2歳は雪遊びデビューに最適なタイミング。防寒・持ち物・近場スポット・体調管理まで、初めての雪体験を楽しく安全にするためのガイドをまとめました。
 quickInfo:
-  ageRanges: ["2-3"]
-  place: ["outdoor"]
-  weather: ["cold"]
+  ageRanges:
+    - 2-3
+  place:
+    - outdoor
+  weather:
+    - cold
   durationMin: 240
-  budget: "mid"
-area: "all"
+  budget: mid
+area: all
+legacyHero: /hero/winter-snow-03.png
 ---
 
 ## 結論（先に知りたい人へ）

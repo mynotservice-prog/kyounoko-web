@@ -1,19 +1,24 @@
 ---
 slug: tsuyu-4-6sai-shitsunai-asobi-10
 title: 【4〜6歳】梅雨の室内遊び10選｜体力発散できる家遊びアイデア集
-metaDescription: 4〜6歳の梅雨の体力発散に効く室内遊び10選。バランスボール・段ボール基地・室内サーキット・紙コップタワーなど、雨が続く日に体を動かせる家遊びを所要時間と必要なものでまとめました。
+metaDescription: >-
+  4〜6歳の梅雨の体力発散に効く室内遊び10選。バランスボール・段ボール基地・室内サーキット・紙コップタワーなど、雨が続く日に体を動かせる家遊びを所要時間と必要なものでまとめました。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: "2026-05-05"
-updatedAt: "2026-05-08"
-hero: /hero/toddler-play-01.png
+publishedAt: '2026-05-05'
+updatedAt: '2026-05-12'
+hero: /hero-ai/tsuyu-4-6sai-shitsunai-asobi-10.jpg
 quickInfo:
-  ageRanges: ["4-6"]
-  place: ["home"]
-  weather: ["rain"]
+  ageRanges:
+    - 4-6
+  place:
+    - home
+  weather:
+    - rain
   durationMin: 60
-  budget: "low"
+  budget: low
 area: all
+legacyHero: /hero/toddler-play-01.png
 ---
 
 ## 結論（先に知りたい人へ）

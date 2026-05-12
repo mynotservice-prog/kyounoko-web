@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-09'
-hero: /hero/family-dinner-02.png
+updatedAt: '2026-05-12'
+hero: /hero-ai/jonathan-kodzure-koryaku.jpg
 lede: >-
   「ジョナサンって離乳食温めてくれる？」をすぐ解決。すかいらーくグループの**ジョナサン**は、ガストよりも落ち着いた雰囲気で、朝食モーニングと平日ランチの子連れ利用に強いファミレス。0-6歳の家族が知っておきたい全知識を、現場目線でまとめました。
 quickInfo:
@@ -22,6 +22,7 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
+legacyHero: /hero/family-dinner-02.png
 ---
 
 **結論：ジョナサンはベビーカー入店OK・ベビーチェア完備・離乳食温め依頼OKの子連れフレンドリーなファミレスです。**

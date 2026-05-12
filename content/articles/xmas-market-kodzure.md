@@ -1,19 +1,26 @@
 ---
 slug: xmas-market-kodzure
 title: 東京クリスマスマーケット子連れ2026【0-6歳】4会場攻略
-metaDescription: クリスマスマーケットで子連れの動線が心配ですよね。東京4会場（品川・六本木・恵比寿・ソラマチ）の混雑ピーク、食事事情、防寒対策、ベビーカー動線を比較表に整理。年齢別おすすめ、滞在時間まで3分で確認でき、迷わず計画できます。
+metaDescription: >-
+  クリスマスマーケットで子連れの動線が心配ですよね。東京4会場（品川・六本木・恵比寿・ソラマチ）の混雑ピーク、食事事情、防寒対策、ベビーカー動線を比較表に整理。年齢別おすすめ、滞在時間まで3分で確認でき、迷わず計画できます。
 category: today-doko
 categoryName: 今日どこ行く？
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/winter-snow-03.png
-area: "tokyo"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-12'
+hero: /hero-ai/xmas-market-kodzure.jpg
+area: tokyo
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["cold"]
-  budget: "mid"
-lede: 東京のクリスマスマーケットは「混雑ピーク」「防寒」「ベビーカー動線」の3つを押さえると子連れでも満喫できます。品川・六本木・恵比寿・ソラマチを比較して、親の疲れない回り方を紹介します。
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - cold
+  budget: mid
+lede: >-
+  東京のクリスマスマーケットは「混雑ピーク」「防寒」「ベビーカー動線」の3つを押さえると子連れでも満喫できます。品川・六本木・恵比寿・ソラマチを比較して、親の疲れない回り方を紹介します。
+legacyHero: /hero/winter-snow-03.png
 ---
 
 ## 結論（先に知りたい人へ）

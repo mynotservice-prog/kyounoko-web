@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-09'
-hero: /hero/family-dinner-02.png
+updatedAt: '2026-05-12'
+hero: /hero-ai/bamiyan-kodzure-koryaku.jpg
 lede: >-
   「バーミヤンって子連れで使える？取り分けは何が向いてる？」を1記事で解決。**すかいらーく系の中華ファミレス・バーミヤン**は、餃子・チャーハン・ラーメンなど子の取り分け鉄板メニューが豊富。0-6歳の家族で活用するコツを保存版でまとめました。
 quickInfo:
@@ -22,6 +22,7 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
+legacyHero: /hero/family-dinner-02.png
 ---
 
 **結論：バーミヤンはベビーカー入店OK・ベビーチェア完備・取り分け中華メニュー豊富で、家族3人2,500円台のコスパで楽しめます。**

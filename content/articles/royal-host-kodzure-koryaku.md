@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-09'
-hero: /hero/family-dinner-02.png
+updatedAt: '2026-05-12'
+hero: /hero-ai/royal-host-kodzure-koryaku.jpg
 lede: >-
   「ロイヤルホストってちょっと高いけど子連れOK？」を1記事で解決。**上質ファミレスの代表格・ロイホ**は、ボックス席・落ち着いた店内・誕生日特典で家族の記念日利用に強いブランド。0-6歳の家族で活用するコツを保存版でまとめました。
 quickInfo:
@@ -22,6 +22,7 @@ quickInfo:
   durationMin: 75
   budget: low
 area: tokyo
+legacyHero: /hero/family-dinner-02.png
 ---
 
 **結論：ロイヤルホストは子連れOK。上質ファミレスの代表格として、ボックス席・落ち着いた店内・誕生日特典で家族の記念日にも使えます。**

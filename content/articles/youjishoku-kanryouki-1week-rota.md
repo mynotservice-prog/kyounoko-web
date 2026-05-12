@@ -4,17 +4,20 @@ title: 幼児食完了期（1歳半〜3歳）の献立1週間ローテ例【共�
 metaDescription: 1歳半〜3歳の幼児食完了期・共働き家庭向けの夕飯献立1週間ローテ例。月〜日の7日分、調理15分以内、冷凍と使い回しで食材ロスも最小化します。
 category: today-taberu
 categoryName: 今日何食べる？
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/food-japan-02.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-12'
+hero: /hero-ai/youjishoku-kanryouki-1week-rota.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3"]
-  place: ["home"]
+  ageRanges:
+    - 2-3
+  place:
+    - home
   weather: []
   durationMin: 20
-  budget: "low"
+  budget: low
 lede: 1歳半〜3歳の幼児食完了期・共働き家庭向けの夕飯献立1週間ローテ例。月〜日の7日分、調理15分以内、食材使い回しと冷凍活用で負担を最小化します。
+legacyHero: /hero/food-japan-02.png
 ---
 
 実は、幼児食完了期で「鬼リピ」される家庭ほど、毎日違うメニューを作っていません。Instagramで人気の幼児食アカウントの共通点は、**1週間ローテを固定して、食材も使い回しで決め打ち**にしていること。この記事の7日分献立は、すべて1.5〜3歳が「秒で完食」した実績のある時短設計で、月曜の買い物1回で7日分が回ります。

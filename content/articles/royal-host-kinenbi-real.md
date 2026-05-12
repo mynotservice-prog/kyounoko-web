@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-09'
-hero: /hero/family-dinner-02.png
+updatedAt: '2026-05-12'
+hero: /hero-ai/royal-host-kinenbi-real.jpg
 lede: >-
   「ロイヤルホストで家族の記念日って、特別感ある？」という疑問に、SNS・レビューから読み取れる傾向で答えます。約120件規模の声を編集部が冷静に整理した、ワンランク上のファミレス体験のリアルまとめです。
 quickInfo:
@@ -22,6 +22,7 @@ quickInfo:
   durationMin: 90
   budget: low
 area: tokyo
+legacyHero: /hero/family-dinner-02.png
 ---
 
 ロイヤルホストは「**子連れでも特別感を演出できる、ワンランク上のファミレス**」という位置づけが、集計から鮮明に浮かび上がりました。

@@ -1,13 +1,12 @@
 ---
 slug: dennys-arerugen-real
 title: デニーズの低アレルゲンキッズメニューを試した家庭の声｜安心感のリアル
-metaDescription: >-
-  デニーズの低アレルゲンキッズメニューを試した家庭約110件の声を傾向分析。安心感、選びやすさ、店員対応、家族の感想を編集部がフラットに集計しました。
+metaDescription: デニーズの低アレルゲンキッズメニューを試した家庭約110件の声を傾向分析。安心感、選びやすさ、店員対応、家族の感想を編集部がフラットに集計しました。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-09'
-hero: /hero/family-dinner-02.png
+updatedAt: '2026-05-12'
+hero: /hero-ai/dennys-arerugen-real.jpg
 lede: >-
   「デニーズの低アレルゲンメニュー、実際どう？」という不安に、SNS・レビューから読み取れる傾向で答えます。約110件規模の声を編集部が冷静に整理した、アレルギー対応外食のリアルまとめです。
 quickInfo:
@@ -22,6 +21,7 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
+legacyHero: /hero/family-dinner-02.png
 ---
 
 デニーズは「**低アレルゲンキッズメニューの選びやすさ**」で多くの家庭から評価されている、という傾向が読み取れました。

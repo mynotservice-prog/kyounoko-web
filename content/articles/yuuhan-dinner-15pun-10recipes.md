@@ -1,20 +1,27 @@
 ---
 slug: yuuhan-dinner-15pun-10recipes
 title: 【15分で完成】共働き家庭の晩ごはん10レシピ｜2026年版・帰宅後すぐ
-metaDescription: 帰宅後の晩ごはん作りに毎日疲れていませんか。15分で完成する主菜＋副菜10セットを厳選。フライパン1つ・レンジ併用・下味冷凍の段取りテク、材料の常備リスト、18時帰宅-19時就寝の逆算タイムラインまで3分で確認できます。
+metaDescription: >-
+  帰宅後の晩ごはん作りに毎日疲れていませんか。15分で完成する主菜＋副菜10セットを厳選。フライパン1つ・レンジ併用・下味冷凍の段取りテク、材料の常備リスト、18時帰宅-19時就寝の逆算タイムラインまで3分で確認できます。
 category: today-taberu
 categoryName: 今日たべる
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/food-kitchen-02.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-12'
+hero: /hero-ai/yuuhan-dinner-15pun-10recipes.jpg
 lede: 18時帰宅・19時就寝の逆算タイムライン。15分で主菜＋副菜が完成する10レシピと、調理時間を半分にする3つの段取りテクをまとめました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 15
-  budget: "low"
-area: "all"
+  budget: low
+area: all
+legacyHero: /hero/food-kitchen-02.png
 ---
 
 ## TL;DR（先に結論）

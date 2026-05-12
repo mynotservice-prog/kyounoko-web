@@ -5,16 +5,23 @@ subtitle: 天気別・観覧場所別・学年別で忘れ物ゼロの当日を
 metaDescription: 運動会の必需品＋便利グッズの完全リスト。晴れ・曇り・雨予報別、校庭・体育館別、学年別に必要なものを整理。前日準備タイムラインとチェックリスト付き。
 category: gyouji
 categoryName: 季節と行事
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/classroom-02.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-12'
+hero: /hero-ai/undoukai-motimono-list.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["outdoor"]
-  weather: ["sunny", "cloudy", "rain"]
-  budget: "low"
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - outdoor
+  weather:
+    - sunny
+    - cloudy
+    - rain
+  budget: low
 lede: 運動会の必需品＋便利グッズのフル一覧。天気別・観覧場所別・学年別の必要なものと、前日準備タイムライン、チェックリストまで完全網羅しました。
+legacyHero: /hero/classroom-02.png
 ---
 
 ## 結論（先に知りたい人へ）

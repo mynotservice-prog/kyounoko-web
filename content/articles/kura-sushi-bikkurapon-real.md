@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-09'
-hero: /hero/family-dinner-02.png
+updatedAt: '2026-05-12'
+hero: /hero-ai/kura-sushi-bikkurapon-real.jpg
 lede: >-
   「くら寿司のビッくらポン、子供にはどれくらい刺さる？」という疑問に、SNS・レビューから読み取れる傾向で答えます。約170件規模の声を編集部が冷静に整理した、回転寿司の子連れリアルまとめです。
 quickInfo:
@@ -21,6 +21,7 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
+legacyHero: /hero/family-dinner-02.png
 ---
 
 くら寿司は「**ビッくらポンが3-6歳の子に強烈に刺さる**」という子連れヒットポイントが、集計から非常に明確に読み取れました。

@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-09'
-hero: /hero/family-dinner-02.png
+updatedAt: '2026-05-12'
+hero: /hero-ai/gusto-rinyu-warm-real.jpg
 lede: >-
   「ガストって離乳食、温めてくれる？」という疑問に、SNSとレビューから読み取れる傾向で答えます。Pepper配膳ロボが普及した今、店員さんの動き方も変わりつつあり、その実情を約150件規模の声から編集部が冷静に整理しました。
 quickInfo:
@@ -22,6 +22,7 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
+legacyHero: /hero/family-dinner-02.png
 ---
 
 「ガストで離乳食を温めてもらえた」という声は多く存在し、店舗判断ながら対応してくれる傾向が強く読み取れました。

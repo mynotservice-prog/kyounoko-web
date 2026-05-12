@@ -4,17 +4,22 @@ title: 野菜中心の献立入門｜幼児も満足するベジタブル主菜7
 metaDescription: 肉・魚を控えめにしつつ、2〜6歳の幼児が満足できる野菜中心の献立を7品紹介。大豆・卵・乳製品でたんぱく質を補い、分量・手順・栄養バランスまで実用解説。
 category: today-taberu
 categoryName: 今日何食べる
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/food-fruit-01.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-12'
+hero: /hero-ai/vegetarian-meal-kodomo-introduction.jpg
 lede: 肉や魚を毎日メインにしなくても、野菜と大豆・卵・乳製品で満足度の高い食卓は作れます。幼児も大人もおかわりしたくなる、野菜中心メニュー7品を提案します。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "low"
-area: "all"
+  budget: low
+area: all
+legacyHero: /hero/food-fruit-01.png
 ---
 
 ## 結論（先に知りたい人へ）

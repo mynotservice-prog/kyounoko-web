@@ -1,20 +1,27 @@
 ---
 slug: yobou-sesshu-schedule-0-6sai
 title: 予防接種スケジュール0〜6歳｜定期接種15種と任意接種3種の年齢別一覧
-metaDescription: 0〜6歳の予防接種スケジュールを定期接種15種・任意接種3種で一覧化。生後2ヶ月スタートの順番、同時接種のメリット、打ち忘れ時の対応、費用目安まで親が迷わないように整理しました。
+metaDescription: >-
+  0〜6歳の予防接種スケジュールを定期接種15種・任意接種3種で一覧化。生後2ヶ月スタートの順番、同時接種のメリット、打ち忘れ時の対応、費用目安まで親が迷わないように整理しました。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/medical-02.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-12'
+hero: /hero-ai/yobou-sesshu-schedule-0-6sai.jpg
 lede: 0〜6歳の予防接種は定期15種+任意3種、合計30回以上。生後2ヶ月スタートの順番、同時接種の考え方、打ち忘れ時の対応、費用を親の目線で1枚に整理しました。
 quickInfo:
-  ageRanges: ["0-1", "2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "low"
-area: "all"
+  budget: low
+area: all
+legacyHero: /hero/medical-02.png
 ---
 
 ## 結論（先に知りたい人へ）

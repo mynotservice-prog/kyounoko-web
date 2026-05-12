@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-09'
-hero: /hero/family-dinner-02.png
+updatedAt: '2026-05-12'
+hero: /hero-ai/yayoiken-toribunke-real.jpg
 lede: >-
   「やよい軒の定食って、子供と取り分けやすい？」という疑問に、SNS・レビューの傾向で答えます。約140件規模の声から、定食の構成・食券機・ご飯おかわりの使い勝手を編集部が冷静にまとめました。
 quickInfo:
@@ -22,6 +22,7 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
+legacyHero: /hero/family-dinner-02.png
 ---
 
 やよい軒は「**ご飯・味噌汁・主菜・副菜が分かれた定食スタイル**」が取り分けに向いている、という声が圧倒的多数でした。

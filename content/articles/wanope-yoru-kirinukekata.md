@@ -1,21 +1,26 @@
 ---
 slug: wanope-yoru-kirinukekata
-title: ワンオペ夜の切り抜け方｜2〜6歳の18:30〜20:30を1人で回す10の工夫
-subtitle: 配偶者不在でも18:30〜20:30を回すサバイバル戦略
+title: 'ワンオペ夜の切り抜け方｜2〜6歳の18:30〜20:30を1人で回す10の工夫'
+subtitle: '配偶者不在でも18:30〜20:30を回すサバイバル戦略'
 metaDescription: ワンオペの夜（帰宅〜就寝）を切り抜ける10テク。お風呂1人で入れるコツ・寝かしつけ効率化・家事優先順位・心の持ち方。2〜3歳と4〜6歳別。
 category: today-mawasu
 categoryName: 今日どう回す？
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/home-cozy-01.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-12'
+hero: /hero-ai/wanope-yoru-kirinukekata.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
   durationMin: 120
-  budget: "free"
-lede: 「実はワンオペ夜の正解は完璧を捨てること」――18:30〜20:30の2時間を1人で回すサバイバル戦略10選を、ガチで効いた最小動線つきで完全公開。お疲れママ・パパへの救済記事です。
+  budget: free
+lede: >-
+  「実はワンオペ夜の正解は完璧を捨てること」――18:30〜20:30の2時間を1人で回すサバイバル戦略10選を、ガチで効いた最小動線つきで完全公開。お疲れママ・パパへの救済記事です。
+legacyHero: /hero/home-cozy-01.png
 ---
 
 ## ⚡ ひと目でわかる｜ワンオペ夜サマリー

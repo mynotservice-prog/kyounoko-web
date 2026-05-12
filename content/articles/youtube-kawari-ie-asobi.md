@@ -1,19 +1,25 @@
 ---
 slug: youtube-kawari-ie-asobi
 title: YouTubeの代わりになる家遊び10選｜子が飽きずに集中する保存版
-metaDescription: 2〜6歳がYouTubeから離れて集中できる家遊び10種。身体系・静か系・創作系・ごっこ系を網羅。準備物の100均/Amazon別開示、YouTube依存からの段階的脱却法と「5分だけ」テク完全公開の保存版。
+metaDescription: >-
+  2〜6歳がYouTubeから離れて集中できる家遊び10種。身体系・静か系・創作系・ごっこ系を網羅。準備物の100均/Amazon別開示、YouTube依存からの段階的脱却法と「5分だけ」テク完全公開の保存版。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/toddler-play-03.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-12'
+hero: /hero-ai/youtube-kawari-ie-asobi.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
   durationMin: 30
-  budget: "free"
-lede: 実はYouTube禁止より「代替遊びの提示」が9割成功する。「身体・静か・創作・ごっこ」の4系統から鉄板10種をローテし、依存から段階的脱却する保存版テクを5分だけテクと共に公開。
+  budget: free
+lede: >-
+  実はYouTube禁止より「代替遊びの提示」が9割成功する。「身体・静か・創作・ごっこ」の4系統から鉄板10種をローテし、依存から段階的脱却する保存版テクを5分だけテクと共に公開。
+legacyHero: /hero/toddler-play-03.png
 ---
 
 ## 30秒でわかる答え｜YouTubeの代わりになる家遊び

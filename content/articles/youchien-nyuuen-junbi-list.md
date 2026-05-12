@@ -4,16 +4,20 @@ title: 幼稚園入園準備リスト完全版｜3〜4歳が3月までにやる�
 metaDescription: 4月幼稚園入園に向けて3月までにやることを網羅。持ち物リスト、生活リズムの整え方、予防接種と書類、心構えの4領域を時期別チェックリスト付きで解説。
 category: gyouji
 categoryName: 季節と行事
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/classroom-01.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-12'
+hero: /hero-ai/youchien-nyuuen-junbi-list.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
   weather: []
-  budget: "mid"
+  budget: mid
 lede: 4月入園に向けて3月までにやるべきことを「持ち物」「生活リズム」「健康・書類」「心構え」の4領域でまとめた完全チェックリスト。最優先は生活リズムの移行です。
+legacyHero: /hero/classroom-01.png
 ---
 
 ## 結論（先に知りたい人へ）

@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-09'
-hero: /hero/family-dinner-02.png
+updatedAt: '2026-05-12'
+hero: /hero-ai/cocos-kodzure-koryaku.jpg
 lede: >-
   「子連れファミレスで一番キッズメニューが充実しているのは？」と聞かれたら**ココス**が筆頭候補。キッズプレートのバリエーション・誕生日特典・キッズスペースまで、子連れ家族のために設計されたファミレスを保存版で攻略します。
 quickInfo:
@@ -22,6 +22,7 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
+legacyHero: /hero/family-dinner-02.png
 ---
 
 **結論：ココスはキッズメニュー充実度業界トップクラス。誕生日特典・ベビーチェア・離乳食対応まで、子連れ家族のために設計されたファミレスです。**

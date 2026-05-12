@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-09'
-hero: /hero/family-dinner-02.png
+updatedAt: '2026-05-12'
+hero: /hero-ai/cocos-birthday-real.jpg
 lede: >-
   「ココスの誕生日特典って、実際どんな感じ？」という疑問に、SNS・レビューから読み取れる傾向で答えます。約130件の声を編集部が冷静に整理した、家族の記念日演出のリアルまとめです。
 quickInfo:
@@ -22,6 +22,7 @@ quickInfo:
   durationMin: 90
   budget: low
 area: tokyo
+legacyHero: /hero/family-dinner-02.png
 ---
 
 ココスは「**子の誕生日演出に強いファミレス**」というポジションが、集計から鮮明に浮かび上がりました。

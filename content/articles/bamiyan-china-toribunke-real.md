@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-09'
-hero: /hero/family-dinner-02.png
+updatedAt: '2026-05-12'
+hero: /hero-ai/bamiyan-china-toribunke-real.jpg
 lede: >-
   「バーミヤンって子供と中華、楽しめる？」という疑問に、SNS・レビューから読み取れる傾向で答えます。約150件規模の声を編集部が冷静に整理した、中華ファミレスのリアルまとめです。
 quickInfo:
@@ -22,6 +22,7 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
+legacyHero: /hero/family-dinner-02.png
 ---
 
 バーミヤンは「**辛さなしのメニューが豊富で、取り分けやすい中華の定番**」というポジションが集計から読み取れました。

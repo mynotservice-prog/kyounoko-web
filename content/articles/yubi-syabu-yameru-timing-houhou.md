@@ -1,20 +1,26 @@
 ---
 slug: yubi-syabu-yameru-timing-houhou
 title: 指しゃぶり卒業の方法とタイミング｜2〜5歳の歯並び影響と7ステップ
-metaDescription: 指しゃぶりをやめさせる時期の目安、歯並びへの影響、無理なく卒業させる7つの方法を年齢別に解説。叱らないアプローチ、歯科受診の目安まで2〜5歳の親向けに整理しました。
+metaDescription: >-
+  指しゃぶりをやめさせる時期の目安、歯並びへの影響、無理なく卒業させる7つの方法を年齢別に解説。叱らないアプローチ、歯科受診の目安まで2〜5歳の親向けに整理しました。
 category: today-nani
 categoryName: 今日何する？
-publishedAt: "2026-04-19"
-updatedAt: "2026-05-08"
-hero: /hero/baby-01.png
+publishedAt: '2026-04-19'
+updatedAt: '2026-05-12'
+hero: /hero-ai/yubi-syabu-yameru-timing-houhou.jpg
 lede: 指しゃぶりは3歳頃までは自然な行動。4〜5歳以降も続くと歯並びに影響します。卒業のタイミング、無理なくやめさせる方法、歯科受診の目安を年齢別に整理しました。
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
-  place: ["home"]
-  weather: ["any"]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 30
-  budget: "free"
-area: "all"
+  budget: free
+area: all
+legacyHero: /hero/baby-01.png
 ---
 
 ## 結論（先に知りたい人へ）

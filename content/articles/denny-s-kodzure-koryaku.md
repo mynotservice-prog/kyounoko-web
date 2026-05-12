@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-09'
-hero: /hero/family-dinner-02.png
+updatedAt: '2026-05-12'
+hero: /hero-ai/denny-s-kodzure-koryaku.jpg
 lede: >-
   「デニーズって子連れOK？低アレルゲンのキッズメニューってあるの？」を1記事で解決。**セブン＆アイ系のデニーズ**は、低アレルゲンキッズメニューを取り入れたファミリーフレンドリーなファミレス。0-6歳の家族で活用するコツを保存版でまとめました。
 quickInfo:
@@ -22,6 +22,7 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
+legacyHero: /hero/family-dinner-02.png
 ---
 
 **結論：デニーズはベビーカー入店OK・ベビーチェア完備・低アレルゲンキッズメニューありのファミリーフレンドリーなファミレスです。**

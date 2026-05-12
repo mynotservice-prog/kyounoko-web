@@ -1,19 +1,23 @@
 ---
 slug: youji-naraigoto-nansai-kara
 title: 幼児の習い事【2-6歳】目的別6パターンで選び方ガイド
-metaDescription: 子の習い事選びで何から始めるか迷っていませんか。2-6歳の習い事をスイミング・体操・ピアノ・英語・知育・造形の6パターン別に整理。開始年齢の目安、月謝相場、効果、向き不向きの判断軸、辞めどきまで3分で確認できます。
+metaDescription: >-
+  子の習い事選びで何から始めるか迷っていませんか。2-6歳の習い事をスイミング・体操・ピアノ・英語・知育・造形の6パターン別に整理。開始年齢の目安、月謝相場、効果、向き不向きの判断軸、辞めどきまで3分で確認できます。
 category: narai
 categoryName: 習い事と学び
-publishedAt: 2026-04-18
-updatedAt: "2026-05-08"
-hero: /hero/classroom-03.png
-area: "all"
+publishedAt: 2026-04-18T00:00:00.000Z
+updatedAt: '2026-05-12'
+hero: /hero-ai/youji-naraigoto-nansai-kara.jpg
+area: all
 quickInfo:
-  ageRanges: ["2-3", "4-6"]
+  ageRanges:
+    - 2-3
+    - 4-6
   place: []
   weather: []
-  budget: "mid"
+  budget: mid
 lede: 2〜6歳の習い事を目的別に分類し、開始年齢・月謝・効果・向き不向きを6パターンで比較。選ぶ3基準と辞めどきまで、失敗しない習い事の決め方。
+legacyHero: /hero/classroom-03.png
 ---
 
 ## 結論（先に知りたい人へ）
