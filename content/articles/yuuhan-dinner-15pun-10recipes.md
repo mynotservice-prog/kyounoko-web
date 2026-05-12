@@ -22,6 +22,7 @@ quickInfo:
   budget: low
 area: all
 legacyHero: /hero/food-kitchen-02.png
+youtubeSearch: '夕飯 15分 簡単 レシピ 子供'
 ---
 
 ## TL;DR（先に結論）

@@ -19,6 +19,7 @@ quickInfo:
   budget: low
 area: all
 legacyHero: /hero/toddler-play-01.png
+youtubeSearch: '幼児 室内 体力発散 家遊び'
 ---
 
 ## 結論（先に知りたい人へ）

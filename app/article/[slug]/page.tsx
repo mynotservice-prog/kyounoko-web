@@ -30,6 +30,8 @@ import { getExtraSchemasForArticle } from '@/lib/article-schema-enhancers';
 import { buildStationLinkForArticle } from '@/lib/article-station-link';
 import { getRelatedPlansForArticle } from '@/lib/cross-links';
 import { CrossLinkCards } from '@/components/article/CrossLinkCards';
+import { YouTubeEmbed } from '@/components/article/YouTubeEmbed';
+import { YouTubeSearchLink } from '@/components/article/YouTubeSearchLink';
 
 export const revalidate = 3600; // 1時間ごとに再生成
 
@@ -846,6 +848,16 @@ function FileArticleView({ article }: { article: FileArticle }) {
 
           {/* Body */}
           <div className="prose" dangerouslySetInnerHTML={{ __html: article.body }} />
+
+          {/* YouTube 埋め込み（frontmatter `youtube:` が指定された記事のみ） */}
+          {article.youtube && (
+            <YouTubeEmbed videoId={article.youtube} title={article.title} />
+          )}
+
+          {/* YouTube 検索リンク（frontmatter `youtubeSearch:` が指定された記事のみ） */}
+          {article.youtubeSearch && (
+            <YouTubeSearchLink query={article.youtubeSearch} />
+          )}
 
           {/* エリア紐付き記事なら具体スポット一覧を提示 */}
           {article.area && article.area !== 'all' && (

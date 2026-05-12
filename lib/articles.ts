@@ -34,6 +34,18 @@ export type FileArticleMeta = {
   noindex?: boolean;
   /** エリア絞り込み用。"all" = エリア非依存、"tokyo" 等 = 地域依存。未指定はallと同等扱い。 */
   area?: string;
+  /**
+   * YouTube 動画 ID（"abc123XYZ" 形式 / 11文字英数 + `-_`）。
+   * 設定されていれば本文末尾に <YouTubeEmbed /> を表示する。
+   * 動画 URL は入れず、必ず ID だけを記述する。
+   */
+  youtube?: string;
+  /**
+   * YouTube 検索リンク用のクエリ（記事タイトルの主要キーワード推奨）。
+   * 設定されていれば本文末尾に <YouTubeSearchLink /> を表示する。
+   * 動画 ID 不要なので全記事で安全に利用できる。
+   */
+  youtubeSearch?: string;
 };
 
 export type FileArticleFaq = {
@@ -111,9 +123,43 @@ function parseFrontmatter(raw: string, fallbackSlug: string): { meta: FileArticl
     quickInfo: parseQuickInfo(d.quickInfo),
     noindex: typeof d.noindex === 'boolean' ? d.noindex : undefined,
     area: typeof d.area === 'string' ? d.area : 'all',
+    youtube: parseYouTubeId(d.youtube),
+    youtubeSearch:
+      typeof d.youtubeSearch === 'string' && d.youtubeSearch.trim()
+        ? d.youtubeSearch.trim()
+        : undefined,
   };
 
   return { meta, content };
+}
+
+/**
+ * frontmatter の `youtube` フィールドから動画 ID を抽出する。
+ * - "abc123XYZ_-" のような素の 11 文字 ID をそのまま受ける
+ * - "https://youtu.be/<id>" や "https://www.youtube.com/watch?v=<id>" もパース
+ * - "https://www.youtube.com/embed/<id>" もパース
+ * - 不正値は undefined（埋め込みは表示されない）
+ */
+function parseYouTubeId(v: unknown): string | undefined {
+  if (typeof v !== 'string') return undefined;
+  const raw = v.trim();
+  if (!raw) return undefined;
+
+  // URL の場合は ID 部分を抜き出す
+  const patterns = [
+    /(?:youtu\.be\/)([A-Za-z0-9_-]{6,20})/,
+    /(?:youtube\.com\/watch\?[^\s]*[?&]v=)([A-Za-z0-9_-]{6,20})/,
+    /(?:youtube(?:-nocookie)?\.com\/embed\/)([A-Za-z0-9_-]{6,20})/,
+    /(?:youtube\.com\/shorts\/)([A-Za-z0-9_-]{6,20})/,
+  ];
+  for (const re of patterns) {
+    const m = raw.match(re);
+    if (m) return m[1];
+  }
+
+  // 素のIDか
+  if (/^[A-Za-z0-9_-]{6,20}$/.test(raw)) return raw;
+  return undefined;
 }
 
 function toIsoDate(v: unknown): string | null {

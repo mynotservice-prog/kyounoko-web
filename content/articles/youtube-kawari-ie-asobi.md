@@ -20,6 +20,7 @@ quickInfo:
 lede: >-
   実はYouTube禁止より「代替遊びの提示」が9割成功する。「身体・静か・創作・ごっこ」の4系統から鉄板10種をローテし、依存から段階的脱却する保存版テクを5分だけテクと共に公開。
 legacyHero: /hero/toddler-play-03.png
+youtubeSearch: '子供 集中できる 家遊び'
 ---
 
 ## 30秒でわかる答え｜YouTubeの代わりになる家遊び
