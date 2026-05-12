@@ -231,6 +231,24 @@ export type PlanQuery = {
   mode?: FinderMode;
   /** 'eat' モード時の食事帯。breakfast/lunch/dinner/snack。 */
   mealTime?: MealTime;
+  /**
+   * 時刻ヒント。0-23 の時。指定があると朝/昼/夕/夜に応じて
+   * meal の mealTime や activity の継続時間に小さなブーストを与える。
+   * 未指定なら時刻による補正なし。
+   */
+  hourHint?: number;
+};
+
+/**
+ * 年齢の近接マップ。指定年齢に完全一致しない場合の「一段階広げる」フォールバック用。
+ * 例: q.age='2-3' に対し plan.ages=['0-1'] or ['4-6'] は隣接として小さく許容する。
+ * これにより「1-2」のような周辺記法も拾える（content/plans/ の m-* に '1-2' あり）。
+ */
+const AGE_NEIGHBORS: Record<string, string[]> = {
+  '0-1': ['1-2'],
+  '1-2': ['0-1', '2-3'],
+  '2-3': ['1-2', '4-6'],
+  '4-6': ['2-3'],
 };
 
 export type PlanMatch = {
@@ -280,13 +298,21 @@ function scorePlan(p: PlanMeta, q: PlanQuery): PlanMatch {
     }
   }
 
-  // 年齢（コア条件：不一致は -100 で弾く）
+  // 年齢（コア条件：不一致は -100 で弾く。ただし隣接年齢は弱く許容）
   if (q.age) {
     if (p.ageRanges.includes(q.age as AgeRange)) {
       score += 20;
       reasons.push(`${q.age}歳向け`);
     } else {
-      score -= 100;
+      const neighbors = AGE_NEIGHBORS[q.age] ?? [];
+      const hitNeighbor = neighbors.some((n) => (p.ageRanges as string[]).includes(n));
+      if (hitNeighbor) {
+        // 隣接年齢は弱マッチ（強くは推さないが排除はしない）
+        score += 4;
+        reasons.push(`${q.age}歳前後にも`);
+      } else {
+        score -= 100;
+      }
     }
   }
 
@@ -380,6 +406,26 @@ function scorePlan(p: PlanMeta, q: PlanQuery): PlanMatch {
     reasons.push('いま人気');
   }
 
+  // 時刻ヒント — 朝/昼/夕/夜に応じて mealTime や duration を弱補正。
+  // 強く効かせると検索意図を上書きしてしまうので、+1〜+3 程度の薄い加点に留める。
+  if (typeof q.hourHint === 'number' && Number.isFinite(q.hourHint)) {
+    const h = q.hourHint;
+    const slot: MealTime | null =
+      h >= 5 && h < 10 ? 'breakfast' :
+      h >= 10 && h < 14 ? 'lunch' :
+      h >= 14 && h < 17 ? 'snack' :
+      h >= 17 && h < 21 ? 'dinner' :
+      null;
+    if (slot && p.kind === 'meal' && p.mealTime?.includes(slot)) {
+      score += 3;
+      // ラベルは重複を避けるため reasons に追加しない
+    }
+    // 夜（21時以降）は短時間の家プラン寄りに微調整
+    if ((h >= 21 || h < 5) && p.kind === 'activity' && p.place.includes('home' as PlaceType) && p.durationMin <= 30) {
+      score += 2;
+    }
+  }
+
   return { plan: p, score, reasons };
 }
 
@@ -402,18 +448,51 @@ export function isTrendingPlan(p: PlanMeta): boolean {
  * プランから「今日の答え」を1つ返す。
  * - 完全一致優先（年齢/場所/天気 の全てが合致）
  * - 同スコアは shortAnswer 長さの短い方を優先（簡潔さ）
- * - 見つからなければ null
+ * - 一致が見つからなければ条件を段階的に緩めて再試行する
+ *   ① そのまま → ② weather='any' に緩和 → ③ area='all' に緩和 → ④ 両方緩和
+ *
+ * 緩和フォールバックで採用された場合も結果は `PlanMatch` を返す。
+ * 呼び出し側で「条件を緩めました」表示をしたい場合は reasons 末尾に
+ * 「条件を一部緩和」が入るのでそれをトリガーに使う。
  */
 export function pickTopPlan(q: PlanQuery): PlanMatch | null {
-  const scored = getAllPlanMetas()
-    .map((p) => scorePlan(p, q))
-    .filter((m) => m.score > 0)
-    .sort((a, b) => {
-      if (b.score !== a.score) return b.score - a.score;
-      return a.plan.shortAnswer.length - b.plan.shortAnswer.length;
-    });
+  const tryQuery = (qq: PlanQuery, relaxedNote?: string): PlanMatch | null => {
+    const scored = getAllPlanMetas()
+      .map((p) => scorePlan(p, qq))
+      .filter((m) => m.score > 0)
+      .sort((a, b) => {
+        if (b.score !== a.score) return b.score - a.score;
+        return a.plan.shortAnswer.length - b.plan.shortAnswer.length;
+      });
+    const top = scored[0];
+    if (!top) return null;
+    if (relaxedNote) top.reasons.push(relaxedNote);
+    return top;
+  };
 
-  return scored[0] ?? null;
+  // ① そのまま
+  const r1 = tryQuery(q);
+  if (r1) return r1;
+
+  // ② 天気を 'any' に緩和（雨でも家でできる遊びはそんなに天気依存しない）
+  if (q.weather && q.weather !== 'any') {
+    const r2 = tryQuery({ ...q, weather: 'any' }, '天気条件を緩和');
+    if (r2) return r2;
+  }
+
+  // ③ エリアを 'all' に緩和（家プランは元から all なので主に外出系の救済）
+  if (q.area && q.area !== 'all') {
+    const r3 = tryQuery({ ...q, area: 'all' }, 'エリアを全国に拡大');
+    if (r3) return r3;
+  }
+
+  // ④ 天気＋エリア両方緩和
+  if ((q.weather && q.weather !== 'any') || (q.area && q.area !== 'all')) {
+    const r4 = tryQuery({ ...q, weather: 'any', area: 'all' }, '天気・エリアを緩和');
+    if (r4) return r4;
+  }
+
+  return null;
 }
 
 /**
@@ -510,12 +589,51 @@ export function buildDayPlan(q: PlanQuery): DayPlanSlot[] {
 }
 
 /**
- * 現在の上位3プランを返す（別の候補表示用・最大2件に絞って呼び出し側で使う）。
+ * 「別の候補」を返す。スコア順そのままだと類似プランが並びやすいため、
+ * できるだけ「ジャンルの違う」プランを混ぜる多様性フィルタを掛ける。
+ *
+ * 多様性の軸：
+ *   - place（home / indoor / outdoor）が違う
+ *   - durationMin の区分（≤15 / 16-60 / 61-120 / 121+）が違う
+ *   - budget が違う
+ * 上記いずれかが既選プランと異なれば「別ジャンル」として優先採用する。
  */
 export function getAlternativePlans(q: PlanQuery, excludeId: string, limit = 2): PlanMatch[] {
-  return getAllPlanMetas()
+  const all = getAllPlanMetas()
     .map((p) => scorePlan(p, q))
     .filter((m) => m.score > 0 && m.plan.id !== excludeId)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit);
+    .sort((a, b) => b.score - a.score);
+
+  if (all.length <= limit) return all.slice(0, limit);
+
+  // duration bucket
+  const dbucket = (n: number): string => (n <= 15 ? 'xs' : n <= 60 ? 's' : n <= 120 ? 'm' : 'l');
+  const placeKey = (m: PlanMatch): string => m.plan.place.slice().sort().join(',');
+
+  const picked: PlanMatch[] = [];
+  const seen = new Set<string>();
+
+  // 1st: highest scoring
+  picked.push(all[0]);
+  seen.add(`${placeKey(all[0])}|${dbucket(all[0].plan.durationMin)}|${all[0].plan.budget}`);
+
+  // 2nd〜: 多様性のあるものを優先。同じシグネチャはスキップ。
+  for (const m of all.slice(1)) {
+    if (picked.length >= limit) break;
+    const sig = `${placeKey(m)}|${dbucket(m.plan.durationMin)}|${m.plan.budget}`;
+    if (seen.has(sig)) continue;
+    picked.push(m);
+    seen.add(sig);
+  }
+
+  // 多様性で足りなければスコア順で補充
+  if (picked.length < limit) {
+    for (const m of all.slice(1)) {
+      if (picked.length >= limit) break;
+      if (picked.some((p) => p.plan.id === m.plan.id)) continue;
+      picked.push(m);
+    }
+  }
+
+  return picked.slice(0, limit);
 }

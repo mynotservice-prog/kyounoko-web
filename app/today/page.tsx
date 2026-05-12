@@ -107,6 +107,38 @@ function QuickMetaRow({ answer }: { answer: TodayAnswerResult }) {
 }
 
 /**
+ * 「いいところ」を1行で訴求する強調チップ群。
+ * 結果カードの shortAnswer 直下に置いて、ユーザーが秒で「自分向き」と判断できるようにする。
+ * メタチップ（年齢/時間/予算）と違って“感情面のメリット”を強調する役割。
+ */
+function HighlightChips({ answer }: { answer: TodayAnswerResult }) {
+  if (!answer.plan) return null;
+  const p = answer.plan.plan;
+  const chips: { label: string; tone: string }[] = [];
+  if (p.durationMin <= 15) chips.push({ label: '⏱ 5分で始められる', tone: 'sage' });
+  if (p.budget === 'free') chips.push({ label: '💰 完全無料', tone: 'ochre' });
+  if (p.place.includes('home') && !p.place.includes('outdoor')) chips.push({ label: '🏠 家にあるものでOK', tone: 'sky' });
+  if (p.place.includes('outdoor') || p.place.includes('indoor')) chips.push({ label: '🚶 予約不要で行ける', tone: 'sky' });
+  if (p.weather.includes('rain')) chips.push({ label: '☔ 雨でもいける', tone: 'clay' });
+  if (p.weather.includes('heat')) chips.push({ label: '🥵 猛暑日OK', tone: 'clay' });
+  if (p.weather.includes('cold')) chips.push({ label: '❄️ 寒い日OK', tone: 'clay' });
+  if (chips.length === 0) return null;
+  return (
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 8, marginBottom: 4 }}>
+      {chips.slice(0, 4).map((c) => (
+        <span
+          key={c.label}
+          className={`meta-chip ${c.tone}`}
+          style={{ fontSize: 11.5, fontWeight: 600 }}
+        >
+          {c.label}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+/**
  * 「やる前の3秒準備」ブロック — 結果カードの直下に挿入。
  * Plan種別ごとに具体的な準備物・回避ポイントを出すことで、結果1個出した後の
  * "実行までの距離"を縮める。Finderの実用度UP施策。
@@ -183,6 +215,7 @@ function AnswerCard({ answer, featured = false }: { answer: TodayAnswerResult; f
               {answer.shortAnswer}
             </p>
           )}
+          <HighlightChips answer={answer} />
           {answer.reasons.length > 0 && (
             <ul className="answer-reasons" aria-label="今日これにする理由">
               {answer.reasons.slice(0, 5).map((r) => (
