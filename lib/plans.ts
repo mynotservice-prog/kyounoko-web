@@ -32,6 +32,7 @@ import path from 'node:path';
 import matter from 'gray-matter';
 import type { AgeRange, Budget, PlaceType, Weather } from './types';
 import { pickHeroForText } from './hero-photos';
+import HERO_MANIFEST from './hero-manifest.json';
 
 const PLANS_DIR = path.join(process.cwd(), 'content', 'plans');
 
@@ -103,25 +104,22 @@ function parsePlan(raw: string, fallbackId: string): { meta: PlanMeta; body: str
     ? d.mealTime.filter((x): x is string => typeof x === 'string')
     : undefined;
 
-  // hero の自動マッチング（v4: AIイラスト統一）:
-  //   1. /hero-ai/<planId>.jpg が存在 → プラン固有のAIイラスト最優先
-  //   2. frontmatter 明示指定の /hero/<cat>-NN.png → /hero-ai/cat-<cat>-NN.jpg にマップ
+  // hero の自動マッチング（v5: build-time manifest 経由）:
+  //   1. hero-manifest.json に登録されたプラン固有AIイラスト → 最優先
+  //   2. frontmatter 明示指定の /hero/<cat>-NN.png → /hero-ai/cat-<cat>-NN.webp にマップ
   //   3. 未指定 / 汎用 home-cozy → title+shortAnswer からAIカテゴリ画像を自動マッチ
   //
   // 旧 /photos/<id>.webp（Pexels実写）は v3 までは最優先だったが、
   // サイト全体の「温かみあるイラスト風」世界観統一のため v4 で廃止。
-  // 必要なら /hero-ai/<planId>.jpg を個別に生成して差し替え可能。
+  // v5 で fs.existsSync を廃止し、build-time manifest 経由に統一
+  // → Vercel File Tracing が public/ を巻き込まなくなり Function サイズが激減。
   const planId = typeof d.id === 'string' ? d.id : fallbackId;
-  const planAiCandidate = path.join(process.cwd(), 'public', 'hero-ai', `${planId}.jpg`);
-  const hasPlanAi = fs.existsSync(planAiCandidate);
 
   let matchedHero: string;
-  const planAiWebpCandidate = path.join(process.cwd(), 'public', 'hero-ai', `${planId}.webp`);
-  const hasPlanAiWebp = fs.existsSync(planAiWebpCandidate);
-  if (hasPlanAiWebp) {
-    matchedHero = `/hero-ai/${planId}.webp`;
-  } else if (hasPlanAi) {
-    matchedHero = `/hero-ai/${planId}.jpg`;
+  const fromManifest = (HERO_MANIFEST.planHero as Record<string, string>)[planId];
+  if (fromManifest) {
+    // build-time に生成したプラン固有AIイラスト
+    matchedHero = fromManifest;
   } else {
     const explicitHero = typeof d.hero === 'string' ? d.hero : undefined;
     const isFallbackHero =
@@ -144,12 +142,6 @@ function parsePlan(raw: string, fallbackId: string): { meta: PlanMeta; body: str
         }
       }
     }
-  }
-  // WebP対応: /hero-ai/*.jpg は同名の.webpがあれば.webpを優先
-  if (matchedHero?.startsWith('/hero-ai/') && matchedHero.endsWith('.jpg')) {
-    const webpAlt = matchedHero.replace(/\.jpg$/, '.webp');
-    const webpFs = path.join(process.cwd(), 'public', webpAlt.replace(/^\//, ''));
-    if (fs.existsSync(webpFs)) matchedHero = webpAlt;
   }
 
   const meta: PlanMeta = {

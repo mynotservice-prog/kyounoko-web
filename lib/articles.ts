@@ -5,6 +5,7 @@ import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import remarkHtml from 'remark-html';
 import { injectInternalLinks } from './auto-internal-links';
+import HERO_MANIFEST from './hero-manifest.json';
 import type { AgeRange, Budget, PlaceType, Weather } from './types';
 
 // ==========================================================================
@@ -95,27 +96,15 @@ function parseFrontmatter(raw: string, fallbackSlug: string): { meta: FileArticl
     categoryName: typeof d.categoryName === 'string' ? d.categoryName : undefined,
     publishedAt: toIsoDate(d.publishedAt) ?? new Date().toISOString(),
     updatedAt: toIsoDate(d.updatedAt) ?? toIsoDate(d.publishedAt) ?? new Date().toISOString(),
-    // hero の優先順位（v4 AI統一 + WebP最適化）:
-    //   1. /hero-ai/<slug>.webp（AI生成イラスト + WebP変換済み） → 最優先
-    //   2. /photos/article-<slug>.webp（Pexels実写、legacy） → 互換用
-    //   3. frontmatter 指定があれば .png/.jpg → .webp 自動変換
-    //   4. なければ undefined（呼び出し側でフォールバック）
+    // hero の優先順位（v5: build-time manifest 経由で Vercel File Tracing を回避）:
+    //   1. hero-manifest.json に登録された slug の URL（hero-ai webp > hero-ai jpg > photos webp）
+    //   2. frontmatter 指定があれば .png/.jpg → .webp 自動変換
+    //   3. なければ undefined（呼び出し側でフォールバック）
     hero: (() => {
       const slug = typeof d.slug === 'string' ? d.slug : fallbackSlug;
-      const heroAiWebp = path.join(process.cwd(), 'public', 'hero-ai', `${slug}.webp`);
-      if (fs.existsSync(heroAiWebp)) {
-        return `/hero-ai/${slug}.webp`;
-      }
-      const heroAiJpg = path.join(process.cwd(), 'public', 'hero-ai', `${slug}.jpg`);
-      if (fs.existsSync(heroAiJpg)) {
-        return `/hero-ai/${slug}.jpg`;
-      }
-      const pexelsCandidate = path.join(process.cwd(), 'public', 'photos', `article-${slug}.webp`);
-      if (fs.existsSync(pexelsCandidate)) {
-        return `/photos/article-${slug}.webp`;
-      }
+      const fromManifest = (HERO_MANIFEST.articleHero as Record<string, string>)[slug];
+      if (fromManifest) return fromManifest;
       if (typeof d.hero !== 'string') return undefined;
-      // .png / .jpg を .webp に正規化（同名のwebpがあれば使う）
       return d.hero.replace(/\.(png|jpg|jpeg)$/i, '.webp');
     })(),
     lede: typeof d.lede === 'string' ? d.lede : (typeof d.metaDescription === 'string' ? d.metaDescription : ''),
