@@ -777,6 +777,8 @@ export const CHUNK_7: StationIndieMap = {
       stepFree: true,
       seatingType: ['table'],
       strollerToSeat: true,
+      nursingRoom: true,
+      diaperChangingTable: true,
       priceLunch: '〜3,500円',
       popular: true,
     },
