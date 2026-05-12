@@ -541,6 +541,11 @@ export default async function StationPage({ params }: Props) {
                       {c.babyChair && <span style={{ background: '#F3E5F5', color: '#7B1FA2', padding: '4px 10px', borderRadius: 999 }}>キッズチェア</span>}
                       {c.privateRoom && <span style={{ background: '#FFF3E0', color: '#E65100', padding: '4px 10px', borderRadius: 999 }}>個室あり</span>}
                       {c.babyFoodOk && <span style={{ background: '#E0F7FA', color: '#00838F', padding: '4px 10px', borderRadius: 999 }}>離乳食持込OK</span>}
+                      {c.stepFree && <span style={{ background: '#F1F8E9', color: '#558B2F', padding: '4px 10px', borderRadius: 999 }}>段差なし</span>}
+                      {c.seatingType?.includes('zashiki') && <span style={{ background: '#FFF8E1', color: '#8D6E00', padding: '4px 10px', borderRadius: 999 }}>座敷あり</span>}
+                      {c.diaperChangingTable && <span style={{ background: '#FCE4EC', color: '#AD1457', padding: '4px 10px', borderRadius: 999 }}>おむつ替え台</span>}
+                      {c.nursingRoom && <span style={{ background: '#F3E5F5', color: '#6A1B9A', padding: '4px 10px', borderRadius: 999 }}>授乳室</span>}
+                      {c.shareDish && <span style={{ background: '#E8EAF6', color: '#283593', padding: '4px 10px', borderRadius: 999 }}>取り分けOK</span>}
                     </div>
                   </article>
                 ))}

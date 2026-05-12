@@ -15,7 +15,23 @@ type Props = {
 
 type SortKey = keyof Pick<
   DataRow,
-  'name' | 'station' | 'ward' | 'category' | 'stroller' | 'kidsMenu' | 'privateRoom' | 'kidsChair' | 'kidsCutlery' | 'kidsSpace' | 'priceRange' | 'type'
+  | 'name'
+  | 'station'
+  | 'ward'
+  | 'category'
+  | 'stroller'
+  | 'kidsMenu'
+  | 'privateRoom'
+  | 'kidsChair'
+  | 'kidsCutlery'
+  | 'kidsSpace'
+  | 'priceRange'
+  | 'type'
+  | 'stepFree'
+  | 'diaperChangingTable'
+  | 'nursingRoom'
+  | 'bringBabyFood'
+  | 'shareDish'
 >;
 
 const STROLLER_RANK: Record<DataRow['stroller'], number> = {
@@ -62,6 +78,13 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
   const [onlyKidsChair, setOnlyKidsChair] = useState(false);
   const [onlyKidsCutlery, setOnlyKidsCutlery] = useState(false);
   const [onlyKidsSpace, setOnlyKidsSpace] = useState(false);
+  // 子連れ目線フィルタ（v6 追加: 6項目）
+  const [onlyStepFree, setOnlyStepFree] = useState(false);
+  const [onlyZashiki, setOnlyZashiki] = useState(false);
+  const [onlyDiaper, setOnlyDiaper] = useState(false);
+  const [onlyNursing, setOnlyNursing] = useState(false);
+  const [onlyBabyFood, setOnlyBabyFood] = useState(false);
+  const [onlyShareDish, setOnlyShareDish] = useState(false);
 
   const filtered = useMemo(() => {
     const kw = keyword.trim().toLowerCase();
@@ -76,9 +99,16 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
       if (onlyKidsChair && !r.kidsChair) return false;
       if (onlyKidsCutlery && !r.kidsCutlery) return false;
       if (onlyKidsSpace && !r.kidsSpace) return false;
+      // v6 子連れ目線フィルタ（個人店は undefined なので fallthrough = 表示しない）
+      if (onlyStepFree && !r.stepFree) return false;
+      if (onlyZashiki && !(r.seatingType?.includes('zashiki'))) return false;
+      if (onlyDiaper && !r.diaperChangingTable) return false;
+      if (onlyNursing && !r.nursingRoom) return false;
+      if (onlyBabyFood && !r.bringBabyFood) return false;
+      if (onlyShareDish && !r.shareDish) return false;
       return true;
     });
-  }, [rows, ward, category, type, keyword, onlyKidsMenu, onlyStrollerOK, onlyPrivateRoom, onlyKidsChair, onlyKidsCutlery, onlyKidsSpace]);
+  }, [rows, ward, category, type, keyword, onlyKidsMenu, onlyStrollerOK, onlyPrivateRoom, onlyKidsChair, onlyKidsCutlery, onlyKidsSpace, onlyStepFree, onlyZashiki, onlyDiaper, onlyNursing, onlyBabyFood, onlyShareDish]);
 
   const sorted = useMemo(() => {
     const copy = [...filtered];
@@ -93,6 +123,11 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
         case 'kidsChair':
         case 'kidsCutlery':
         case 'kidsSpace':
+        case 'stepFree':
+        case 'diaperChangingTable':
+        case 'nursingRoom':
+        case 'bringBabyFood':
+        case 'shareDish':
           cmp = (a[sortKey] ? 1 : 0) - (b[sortKey] ? 1 : 0);
           break;
         case 'priceRange':
@@ -175,6 +210,12 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
           { key: 'kidsCutlery', label: '🥄 子供用カトラリー', state: onlyKidsCutlery, set: setOnlyKidsCutlery },
           { key: 'kidsSpace', label: '🎈 キッズスペース', state: onlyKidsSpace, set: setOnlyKidsSpace },
           { key: 'privateRoom', label: '🚪 個室あり', state: onlyPrivateRoom, set: setOnlyPrivateRoom },
+          { key: 'stepFree', label: '🚫📐 段差なし', state: onlyStepFree, set: setOnlyStepFree },
+          { key: 'zashiki', label: '🟫 座敷あり', state: onlyZashiki, set: setOnlyZashiki },
+          { key: 'diaper', label: '👶 おむつ替え台', state: onlyDiaper, set: setOnlyDiaper },
+          { key: 'nursing', label: '🤱 授乳室', state: onlyNursing, set: setOnlyNursing },
+          { key: 'babyFood', label: '🍼 離乳食持込OK', state: onlyBabyFood, set: setOnlyBabyFood },
+          { key: 'shareDish', label: '🥢 取り分けOK', state: onlyShareDish, set: setOnlyShareDish },
         ].map((c) => (
           <button
             key={c.key}
@@ -197,7 +238,7 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
             {c.label}
           </button>
         ))}
-        {(onlyKidsMenu || onlyStrollerOK || onlyPrivateRoom || onlyKidsChair || onlyKidsCutlery || onlyKidsSpace) && (
+        {(onlyKidsMenu || onlyStrollerOK || onlyPrivateRoom || onlyKidsChair || onlyKidsCutlery || onlyKidsSpace || onlyStepFree || onlyZashiki || onlyDiaper || onlyNursing || onlyBabyFood || onlyShareDish) && (
           <button
             type="button"
             onClick={() => {
@@ -207,6 +248,12 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
               setOnlyKidsChair(false);
               setOnlyKidsCutlery(false);
               setOnlyKidsSpace(false);
+              setOnlyStepFree(false);
+              setOnlyZashiki(false);
+              setOnlyDiaper(false);
+              setOnlyNursing(false);
+              setOnlyBabyFood(false);
+              setOnlyShareDish(false);
               setPage(1);
             }}
             style={{
@@ -265,7 +312,7 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
 
       {/* テーブル */}
       <div style={{ overflowX: 'auto', border: '1px solid rgba(201,96,62,0.16)', borderRadius: 10, background: '#fff' }}>
-        <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 920 }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 1400 }}>
           <thead>
             <tr>
               <th style={thStyle} onClick={() => handleSort('name')}>店名{sortIcon('name')}</th>
@@ -278,6 +325,11 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
               <th style={thStyle} onClick={() => handleSort('kidsCutlery')}>子供用カトラリー{sortIcon('kidsCutlery')}</th>
               <th style={thStyle} onClick={() => handleSort('kidsSpace')}>キッズスペース{sortIcon('kidsSpace')}</th>
               <th style={thStyle} onClick={() => handleSort('privateRoom')}>個室{sortIcon('privateRoom')}</th>
+              <th style={thStyle} onClick={() => handleSort('stepFree')}>段差{sortIcon('stepFree')}</th>
+              <th style={thStyle}>座敷</th>
+              <th style={thStyle} onClick={() => handleSort('diaperChangingTable')}>おむつ替え{sortIcon('diaperChangingTable')}</th>
+              <th style={thStyle} onClick={() => handleSort('nursingRoom')}>授乳{sortIcon('nursingRoom')}</th>
+              <th style={thStyle} onClick={() => handleSort('shareDish')}>取分{sortIcon('shareDish')}</th>
               <th style={thStyle} onClick={() => handleSort('priceRange')}>価格帯{sortIcon('priceRange')}</th>
               <th style={thStyle} onClick={() => handleSort('type')}>種別{sortIcon('type')}</th>
             </tr>
@@ -285,7 +337,7 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
           <tbody>
             {view.length === 0 ? (
               <tr>
-                <td style={{ ...tdStyle, textAlign: 'center', color: 'var(--ink-mute, #948477)', padding: 24 }} colSpan={12}>
+                <td style={{ ...tdStyle, textAlign: 'center', color: 'var(--ink-mute, #948477)', padding: 24 }} colSpan={17}>
                   該当データがありません
                 </td>
               </tr>
@@ -304,6 +356,11 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
                   <td style={{ ...tdStyle, textAlign: 'center' }}>{r.kidsCutlery ? '○' : '—'}</td>
                   <td style={{ ...tdStyle, textAlign: 'center' }}>{r.kidsSpace ? '○' : '—'}</td>
                   <td style={{ ...tdStyle, textAlign: 'center' }}>{r.privateRoom ? '○' : '—'}</td>
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>{r.stepFree ? '○' : '—'}</td>
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>{r.seatingType?.includes('zashiki') ? '○' : '—'}</td>
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>{r.diaperChangingTable ? '○' : '—'}</td>
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>{r.nursingRoom ? '○' : '—'}</td>
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>{r.shareDish ? '○' : '—'}</td>
                   <td style={tdStyle}>{r.priceRange}</td>
                   <td style={tdStyle}>
                     <span style={{

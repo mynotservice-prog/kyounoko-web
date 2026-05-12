@@ -20,6 +20,7 @@ import {
   TOTAL_STATION_CHAIN_RECORDS,
   type Chain,
   type ChainCategory,
+  type SeatingType,
 } from './station-restaurants';
 import {
   STATION_INDIE_MAP,
@@ -62,6 +63,23 @@ export type DataRow = {
   kidsSpace: boolean;
   /** ランチ価格帯（表記ゆれを許容、文字列）。 */
   priceRange: string;
+  // ===== 子連れ目線フィールド（v6 追加、個人店は当面 undefined）=====
+  /** 入口・店内に段差なし（ベビーカーそのまま入店可） */
+  stepFree?: boolean;
+  /** 用意のある席タイプ */
+  seatingType?: SeatingType[];
+  /** おむつ替え台あり */
+  diaperChangingTable?: boolean;
+  /** 授乳室・授乳スペースあり */
+  nursingRoom?: boolean;
+  /** 離乳食持ち込みOK（公式に明記） */
+  bringBabyFood?: boolean;
+  /** 取り分け前提のメニュー */
+  shareDish?: boolean;
+  /** ベビーカーで席まで（たたまずに済む通路幅） */
+  strollerToSeat?: boolean;
+  /** アレルゲン表示あり */
+  allergenInfo?: boolean;
 };
 
 /** 簡易ハッシュ（id衝突回避用、決定的）。 */
@@ -109,6 +127,14 @@ export function buildAllDataRows(): DataRow[] {
         kidsCutlery: chain.kidsCutlery ?? chain.kidsMenu === true,
         kidsSpace: chain.kidsSpace === true,
         priceRange: chain.lunchPrice,
+        stepFree: chain.stepFree,
+        seatingType: chain.seatingType,
+        diaperChangingTable: chain.diaperChangingTable,
+        nursingRoom: chain.nursingRoom,
+        bringBabyFood: chain.bringBabyFood,
+        shareDish: chain.shareDish,
+        strollerToSeat: chain.strollerToSeat,
+        allergenInfo: chain.allergenInfo,
       });
     }
   }
@@ -253,4 +279,4 @@ export function getDataSummary(): DataSummary {
 
 // 再エクスポート（page.tsxから一括import用）
 export { CHAIN_CATEGORY_LABEL, INDIE_GENRE_LABEL };
-export type { Chain, ChainCategory, IndieRestaurant, IndieGenre, TokyoStation, TokyoWard };
+export type { Chain, ChainCategory, SeatingType, IndieRestaurant, IndieGenre, TokyoStation, TokyoWard };
