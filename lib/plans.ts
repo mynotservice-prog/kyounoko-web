@@ -105,7 +105,7 @@ function parsePlan(raw: string, fallbackId: string): { meta: PlanMeta; body: str
 
   // hero の自動マッチング（優先順位）:
   //   1. /photos/<id>.webp が存在する → Pexels取得のリアル写真を最優先（料理・スポット等）
-  //   2. frontmatter 明示指定（home-cozy 以外）→ ユーザー指定を尊重
+  //   2. frontmatter 明示指定の /hero/<cat>-NN.png → /hero-ai/cat-<cat>-NN.jpg にマップ（v4 AI統一）
   //   3. home-cozy フォールバック or 未指定 → title+shortAnswer からカテゴリ画像を自動マッチ
   const planId = typeof d.id === 'string' ? d.id : fallbackId;
   const pexelsCandidate = path.join(process.cwd(), 'public', 'photos', `${planId}.webp`);
@@ -116,13 +116,23 @@ function parsePlan(raw: string, fallbackId: string): { meta: PlanMeta; body: str
     matchedHero = `/photos/${planId}.webp`;
   } else {
     const explicitHero = typeof d.hero === 'string' ? d.hero : undefined;
-    const isFallbackHero = !explicitHero || /\/hero\/home-cozy-/.test(explicitHero);
-    matchedHero = isFallbackHero
-      ? pickHeroForText(`${d.title} ${d.shortAnswer}`, planId)
-      : explicitHero;
-    // .png → .webp 変換（94%サイズ削減）。明示指定の .png も対象にする。
-    if (matchedHero?.endsWith('.png')) {
-      matchedHero = matchedHero.replace(/\.png$/, '.webp');
+    const isFallbackHero =
+      !explicitHero || /\/hero\/home-cozy-/.test(explicitHero);
+    if (isFallbackHero) {
+      // 未指定 or 汎用 home-cozy → タイトル+短答からAIカテゴリ画像を自動マッチ
+      matchedHero = pickHeroForText(`${d.title} ${d.shortAnswer}`, planId);
+    } else {
+      // 明示指定の /hero/<cat>-NN.<ext> → 新AI画像 /hero-ai/cat-<cat>-NN.jpg にマップ
+      // 該当しなければ .png → .webp に変換（legacy fallback）
+      const aiMatch = explicitHero!.match(/^\/hero\/([a-z-]+)-(\d{2})\.(png|webp|jpg|jpeg)$/i);
+      if (aiMatch) {
+        matchedHero = `/hero-ai/cat-${aiMatch[1]}-${aiMatch[2]}.jpg`;
+      } else {
+        matchedHero = explicitHero!;
+        if (matchedHero?.endsWith('.png')) {
+          matchedHero = matchedHero.replace(/\.png$/, '.webp');
+        }
+      }
     }
   }
 

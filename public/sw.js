@@ -9,8 +9,8 @@
  * リフレッシュする戦略にしている。
  */
 
-// 画像リフレッシュ（日本人化）反映のためバージョンアップ → 旧キャッシュ全削除
-const CACHE_VERSION = 'v2-2026-05-05-photos';
+// 画像リフレッシュ（カテゴリ画像AIイラスト化）反映のためバージョンアップ → 旧キャッシュ全削除
+const CACHE_VERSION = 'v3-2026-05-12-cat-ai';
 const RUNTIME_CACHE = `kyounoko-runtime-${CACHE_VERSION}`;
 const STATIC_CACHE = `kyounoko-static-${CACHE_VERSION}`;
 
@@ -56,7 +56,8 @@ self.addEventListener('fetch', (event) => {
   if (
     /\.(?:png|webp|jpg|jpeg|svg|ico|css|js|woff2?|ttf)$/.test(url.pathname) ||
     url.pathname.startsWith('/icons/') ||
-    url.pathname.startsWith('/hero/')
+    url.pathname.startsWith('/hero/') ||
+    url.pathname.startsWith('/hero-ai/')
   ) {
     event.respondWith(
       caches.open(RUNTIME_CACHE).then((cache) =>

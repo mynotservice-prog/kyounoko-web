@@ -1,11 +1,12 @@
 /**
  * Plan / Article 両方で使うヒーロー画像のユニファイドライブラリ。
  *
- * v3: ChatGPT (DALL-E 3) で生成したローカル画像に移行（2026年4月）。
- *     - 全21カテゴリ×3枚 = 61枚（kid-learnは1枚）
- *     - すべて /public/hero/ に配置、静的配信
- *     - Unsplash レート制限・URL変更リスクから解放
- *     - 足りないカテゴリは類似カテゴリにフォールバック
+ * v4: Cloudflare Workers AI (flux-1-schnell) でカテゴリ別の温かみあるイラストに移行（2026年5月）。
+ *     - 全28カテゴリ×3枚 = 84枚を /public/hero-ai/cat-<category>-NN.jpg に配置
+ *     - 記事側hero-ai統一(/hero-ai/<slug>.jpg)と世界観を完全に揃える
+ *     - 旧 /hero/<category>-NN.webp は legacy として残すが本ライブラリからは不参照
+ *
+ * v3（旧）: ChatGPT (DALL-E 3) 生成 → /public/hero/*.png/webp
  */
 
 type PhotoCat =
@@ -39,44 +40,46 @@ type PhotoCat =
   | 'commerce'        // 買い物・ランキング・比較
   | 'outdoor-generic';
 
-/** カテゴリ別のローカル画像プール（/public/hero/ 配下） */
+/** カテゴリ別のローカル画像プール（/public/hero-ai/ 配下、AI生成イラスト統一） */
 const POOL: Record<PhotoCat, string[]> = {
-  baby: ['/hero/baby-01.png', '/hero/baby-02.png', '/hero/baby-03.png'],
-  'toddler-play': ['/hero/toddler-play-01.png', '/hero/toddler-play-02.png', '/hero/toddler-play-03.png'],
-  'kid-study': ['/hero/kid-study-01.png', '/hero/kid-study-02.png', '/hero/kid-study-03.png'],
-  'kid-craft': ['/hero/kid-craft-01.png', '/hero/kid-craft-02.png', '/hero/kid-craft-03.png'],
-  'family-dinner': ['/hero/family-dinner-01.png', '/hero/family-dinner-02.png', '/hero/family-dinner-03.png'],
-  'home-cozy': ['/hero/home-cozy-01.png', '/hero/home-cozy-02.png', '/hero/home-cozy-03.png'],
-  'food-japan': ['/hero/food-japan-01.png', '/hero/food-japan-02.png', '/hero/food-japan-03.png'],
-  'food-kitchen': ['/hero/food-kitchen-01.png', '/hero/food-kitchen-02.png', '/hero/food-kitchen-03.png'],
-  'food-fruit': ['/hero/food-fruit-01.png', '/hero/food-fruit-02.png', '/hero/food-fruit-03.png'],
-  'food-sweet': ['/hero/food-sweet-01.png', '/hero/food-sweet-02.png', '/hero/food-sweet-03.png'],
-  park: ['/hero/park-01.png', '/hero/park-02.png', '/hero/park-03.png'],
-  nature: ['/hero/nature-01.png', '/hero/nature-02.png', '/hero/nature-03.png'],
-  autumn: ['/hero/autumn-01.png', '/hero/autumn-02.png', '/hero/autumn-03.png'],
-  'winter-snow': ['/hero/winter-snow-01.png', '/hero/winter-snow-02.png', '/hero/winter-snow-03.png'],
-  'summer-water': ['/hero/summer-water-01.png', '/hero/summer-water-02.png', '/hero/summer-water-03.png'],
-  sakura: ['/hero/sakura-01.png', '/hero/sakura-02.png', '/hero/sakura-03.png'],
-  tokyo: ['/hero/tokyo-01.png', '/hero/tokyo-02.png', '/hero/tokyo-03.png'],
-  'japan-rural': ['/hero/japan-rural-01.png', '/hero/japan-rural-02.png', '/hero/japan-rural-03.png'],
-  sleeping: ['/hero/sleeping-01.png', '/hero/sleeping-02.png', '/hero/sleeping-03.png'],
-  bath: ['/hero/bath-01.png', '/hero/bath-02.png', '/hero/bath-03.png'],
-  'kid-learn': ['/hero/kid-learn-01.png', '/hero/kid-learn-02.png', '/hero/kid-learn-03.png'],
-  classroom: ['/hero/classroom-01.png', '/hero/classroom-02.png', '/hero/classroom-03.png'],
-  piano: ['/hero/piano-01.png', '/hero/piano-02.png', '/hero/piano-03.png'],
-  stroller: ['/hero/stroller-01.png', '/hero/stroller-03.png'],
-  medical: ['/hero/medical-01.png', '/hero/medical-02.png', '/hero/medical-03.png'],
-  'parent-child': ['/hero/parent-child-01.png', '/hero/parent-child-02.png', '/hero/parent-child-03.png'],
-  'screen-time': ['/hero/screen-time-01.png', '/hero/screen-time-02.png', '/hero/screen-time-03.png'],
-  commerce: ['/hero/commerce-01.png', '/hero/commerce-02.png', '/hero/commerce-03.png'],
-  'outdoor-generic': ['/hero/park-01.png', '/hero/nature-01.png', '/hero/park-02.png'],
+  baby: ['/hero-ai/cat-baby-01.jpg', '/hero-ai/cat-baby-02.jpg', '/hero-ai/cat-baby-03.jpg'],
+  'toddler-play': ['/hero-ai/cat-toddler-play-01.jpg', '/hero-ai/cat-toddler-play-02.jpg', '/hero-ai/cat-toddler-play-03.jpg'],
+  'kid-study': ['/hero-ai/cat-kid-study-01.jpg', '/hero-ai/cat-kid-study-02.jpg', '/hero-ai/cat-kid-study-03.jpg'],
+  'kid-craft': ['/hero-ai/cat-kid-craft-01.jpg', '/hero-ai/cat-kid-craft-02.jpg', '/hero-ai/cat-kid-craft-03.jpg'],
+  'family-dinner': ['/hero-ai/cat-family-dinner-01.jpg', '/hero-ai/cat-family-dinner-02.jpg', '/hero-ai/cat-family-dinner-03.jpg'],
+  'home-cozy': ['/hero-ai/cat-home-cozy-01.jpg', '/hero-ai/cat-home-cozy-02.jpg', '/hero-ai/cat-home-cozy-03.jpg'],
+  'food-japan': ['/hero-ai/cat-food-japan-01.jpg', '/hero-ai/cat-food-japan-02.jpg', '/hero-ai/cat-food-japan-03.jpg'],
+  'food-kitchen': ['/hero-ai/cat-food-kitchen-01.jpg', '/hero-ai/cat-food-kitchen-02.jpg', '/hero-ai/cat-food-kitchen-03.jpg'],
+  'food-fruit': ['/hero-ai/cat-food-fruit-01.jpg', '/hero-ai/cat-food-fruit-02.jpg', '/hero-ai/cat-food-fruit-03.jpg'],
+  'food-sweet': ['/hero-ai/cat-food-sweet-01.jpg', '/hero-ai/cat-food-sweet-02.jpg', '/hero-ai/cat-food-sweet-03.jpg'],
+  park: ['/hero-ai/cat-park-01.jpg', '/hero-ai/cat-park-02.jpg', '/hero-ai/cat-park-03.jpg'],
+  nature: ['/hero-ai/cat-nature-01.jpg', '/hero-ai/cat-nature-02.jpg', '/hero-ai/cat-nature-03.jpg'],
+  autumn: ['/hero-ai/cat-autumn-01.jpg', '/hero-ai/cat-autumn-02.jpg', '/hero-ai/cat-autumn-03.jpg'],
+  'winter-snow': ['/hero-ai/cat-winter-snow-01.jpg', '/hero-ai/cat-winter-snow-02.jpg', '/hero-ai/cat-winter-snow-03.jpg'],
+  'summer-water': ['/hero-ai/cat-summer-water-01.jpg', '/hero-ai/cat-summer-water-02.jpg', '/hero-ai/cat-summer-water-03.jpg'],
+  sakura: ['/hero-ai/cat-sakura-01.jpg', '/hero-ai/cat-sakura-02.jpg', '/hero-ai/cat-sakura-03.jpg'],
+  tokyo: ['/hero-ai/cat-tokyo-01.jpg', '/hero-ai/cat-tokyo-02.jpg', '/hero-ai/cat-tokyo-03.jpg'],
+  'japan-rural': ['/hero-ai/cat-japan-rural-01.jpg', '/hero-ai/cat-japan-rural-02.jpg', '/hero-ai/cat-japan-rural-03.jpg'],
+  sleeping: ['/hero-ai/cat-sleeping-01.jpg', '/hero-ai/cat-sleeping-02.jpg', '/hero-ai/cat-sleeping-03.jpg'],
+  bath: ['/hero-ai/cat-bath-01.jpg', '/hero-ai/cat-bath-02.jpg', '/hero-ai/cat-bath-03.jpg'],
+  'kid-learn': ['/hero-ai/cat-kid-learn-01.jpg', '/hero-ai/cat-kid-learn-02.jpg', '/hero-ai/cat-kid-learn-03.jpg'],
+  classroom: ['/hero-ai/cat-classroom-01.jpg', '/hero-ai/cat-classroom-02.jpg', '/hero-ai/cat-classroom-03.jpg'],
+  piano: ['/hero-ai/cat-piano-01.jpg', '/hero-ai/cat-piano-02.jpg', '/hero-ai/cat-piano-03.jpg'],
+  stroller: ['/hero-ai/cat-stroller-01.jpg', '/hero-ai/cat-stroller-02.jpg', '/hero-ai/cat-stroller-03.jpg'],
+  medical: ['/hero-ai/cat-medical-01.jpg', '/hero-ai/cat-medical-02.jpg', '/hero-ai/cat-medical-03.jpg'],
+  'parent-child': ['/hero-ai/cat-parent-child-01.jpg', '/hero-ai/cat-parent-child-02.jpg', '/hero-ai/cat-parent-child-03.jpg'],
+  'screen-time': ['/hero-ai/cat-screen-time-01.jpg', '/hero-ai/cat-screen-time-02.jpg', '/hero-ai/cat-screen-time-03.jpg'],
+  commerce: ['/hero-ai/cat-commerce-01.jpg', '/hero-ai/cat-commerce-02.jpg', '/hero-ai/cat-commerce-03.jpg'],
+  'outdoor-generic': ['/hero-ai/cat-outdoor-generic-01.jpg', '/hero-ai/cat-outdoor-generic-02.jpg', '/hero-ai/cat-outdoor-generic-03.jpg'],
 };
 
 /**
- * 画像URLを返す。.png は .webp に自動置換（94%サイズ削減）。
- * 旧 .png ファイルも残しているため fallback は別途必要なら呼び出し側で。
+ * 画像URLを返す。
+ * - /hero-ai/*.jpg はそのまま返す（AI生成イラスト、v4以降）
+ * - /hero/*.png は .webp に自動置換（v3以前のlegacyフォールバック用）
  */
 function photoUrl(path: string): string {
+  if (path.startsWith('/hero-ai/')) return path;
   return path.replace(/\.png$/, '.webp');
 }
 
