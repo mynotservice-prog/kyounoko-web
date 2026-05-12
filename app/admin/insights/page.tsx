@@ -1,11 +1,17 @@
 import Link from 'next/link';
-import { getAllArticleInsights, getInsightsSummary } from '@/lib/article-insights';
+import {
+  getAllArticleInsights,
+  getInsightsSummary,
+  getRestaurantFieldCoverage,
+  type RestaurantFieldCoverageRow,
+} from '@/lib/article-insights';
 
 export const revalidate = 3600;
 
 export default function InsightsPage() {
   const insights = getAllArticleInsights();
   const summary = getInsightsSummary(insights);
+  const restaurantCoverage = getRestaurantFieldCoverage();
 
   // 改善対象抽出（品質スコアでソート、低い順）
   const lowestScoreTop10 = [...insights].sort((a, b) => a.qualityScore - b.qualityScore).slice(0, 10);
@@ -172,6 +178,15 @@ export default function InsightsPage() {
       <section style={{ marginBottom: 32 }}>
         <h2 style={SectionH2}>🏆 品質スコア高い記事 TOP10</h2>
         <ArticleTable rows={topQualityTop10} highlight="qualityScore" />
+      </section>
+
+      {/* レストラン情報充実度 */}
+      <section style={{ marginBottom: 32 }}>
+        <h2 style={SectionH2}>🍽 レストラン情報充実度（チェーン+個人店）</h2>
+        <p style={{ fontSize: 12, color: 'var(--ink-mute)', margin: '4px 0 12px' }}>
+          子連れ目線フィールドの記入率。チェーン側で埋まっていてもまだ手付かずの項目を優先的に強化する。
+        </p>
+        <RestaurantCoverageTable rows={restaurantCoverage} />
       </section>
 
       <div style={{ marginTop: 40, padding: 20, background: 'var(--paper-card)', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)' }}>
@@ -380,6 +395,102 @@ function ArticleTable({ rows, highlight }: { rows: ArticleInsights[]; highlight?
               </Td>
             </tr>
           ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function RestaurantCoverageTable({ rows }: { rows: RestaurantFieldCoverageRow[] }) {
+  // 記入率の降順で表示（充実してる順）
+  const sorted = [...rows].sort((a, b) => b.ratio - a.ratio);
+  return (
+    <div
+      style={{
+        background: '#fff',
+        border: '1px solid var(--line)',
+        borderRadius: 'var(--radius-md)',
+        overflow: 'auto',
+      }}
+    >
+      <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, minWidth: 640 }}>
+        <thead>
+          <tr style={{ background: 'var(--paper-deep)' }}>
+            <Th>指標</Th>
+            <Th>全体（バー）</Th>
+            <Th align="right">全体</Th>
+            <Th align="right">チェーン</Th>
+            <Th align="right">個人店</Th>
+          </tr>
+        </thead>
+        <tbody>
+          {sorted.map((r) => {
+            const totalPct = r.totalTotal === 0 ? 0 : Math.round((r.totalHave / r.totalTotal) * 100);
+            const chainPct = r.chainTotal === 0 ? 0 : Math.round((r.chainHave / r.chainTotal) * 100);
+            const indiePct = r.indieTotal === 0 ? 0 : Math.round((r.indieHave / r.indieTotal) * 100);
+            const barColor =
+              totalPct >= 70 ? 'var(--sage)' : totalPct >= 30 ? 'var(--ochre)' : 'var(--clay)';
+            return (
+              <tr key={r.field} style={{ borderTop: '1px solid var(--line)' }}>
+                <Td>
+                  <span style={{ fontWeight: 500 }}>{r.label}</span>
+                </Td>
+                <Td>
+                  <div
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns: '1fr 44px',
+                      alignItems: 'center',
+                      gap: 8,
+                      minWidth: 160,
+                    }}
+                  >
+                    <div
+                      style={{
+                        background: 'var(--paper-deep)',
+                        height: 14,
+                        borderRadius: 3,
+                        overflow: 'hidden',
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: `${totalPct}%`,
+                          background: barColor,
+                          height: '100%',
+                          transition: 'width 0.3s ease',
+                        }}
+                      />
+                    </div>
+                    <span style={{ fontSize: 12, color: 'var(--ink-sub)', textAlign: 'right', fontVariantNumeric: 'tabular-nums' }}>
+                      {totalPct}%
+                    </span>
+                  </div>
+                </Td>
+                <Td align="right">
+                  <span style={{ fontVariantNumeric: 'tabular-nums' }}>
+                    {r.totalHave.toLocaleString()}/{r.totalTotal.toLocaleString()}
+                  </span>
+                </Td>
+                <Td align="right">
+                  <span style={{ fontVariantNumeric: 'tabular-nums', color: 'var(--ink-sub)' }}>
+                    {chainPct}%
+                    <span style={{ fontSize: 10, color: 'var(--ink-mute)', marginLeft: 4 }}>
+                      ({r.chainHave}/{r.chainTotal})
+                    </span>
+                  </span>
+                </Td>
+                <Td align="right">
+                  <span style={{ fontVariantNumeric: 'tabular-nums', color: 'var(--ink-sub)' }}>
+                    {indiePct}%
+                    <span style={{ fontSize: 10, color: 'var(--ink-mute)', marginLeft: 4 }}>
+                      ({r.indieHave}/{r.indieTotal})
+                    </span>
+                  </span>
+                </Td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>

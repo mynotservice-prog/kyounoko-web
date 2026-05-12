@@ -18,6 +18,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 import { getAllFileArticles } from './articles';
+import { buildAllDataRows, type DataRow } from './data-aggregations';
 
 export type ArticleInsights = {
   slug: string;
@@ -304,4 +305,76 @@ export function getInsightsSummary(insights: ArticleInsights[]): InsightsSummary
     heroUsage,
     scoreBuckets,
   };
+}
+
+// ================== レストラン情報充実度 ==================
+
+/** 1指標分の記入率行。 */
+export type RestaurantFieldCoverageRow = {
+  /** フィールドキー（DataRow のプロパティ名・seatingType-zashiki 等の派生キー）。 */
+  field: string;
+  /** UI 表示ラベル。 */
+  label: string;
+  /** チェーン側で「記入あり」と判定された件数。 */
+  chainHave: number;
+  /** チェーン総件数（駅×チェーン展開後）。 */
+  chainTotal: number;
+  /** 個人店側で「記入あり」と判定された件数。 */
+  indieHave: number;
+  /** 個人店総件数。 */
+  indieTotal: number;
+  /** 全体「記入あり」件数（chainHave + indieHave）。 */
+  totalHave: number;
+  /** 全体総件数（chainTotal + indieTotal）。 */
+  totalTotal: number;
+  /** 全体記入率（0-1）。 */
+  ratio: number;
+};
+
+/**
+ * /admin/insights の「レストラン情報充実度」セクション用データ。
+ *
+ * 個人店データには子連れ目線フィールド（stepFree 等）が undefined のままなので、
+ * partial true 比較は `=== true` で行う。
+ */
+export function getRestaurantFieldCoverage(): RestaurantFieldCoverageRow[] {
+  const rows = buildAllDataRows();
+  const chainRows = rows.filter((r) => r.type === 'chain');
+  const indieRows = rows.filter((r) => r.type === 'indie');
+
+  const defs: { field: string; label: string; predicate: (r: DataRow) => boolean }[] = [
+    { field: 'stroller', label: 'ベビーカー◎', predicate: (r) => r.stroller === 'good' },
+    { field: 'kidsMenu', label: 'キッズメニュー', predicate: (r) => r.kidsMenu === true },
+    { field: 'kidsChair', label: 'キッズチェア', predicate: (r) => r.kidsChair === true },
+    { field: 'privateRoom', label: '個室・座敷', predicate: (r) => r.privateRoom === true },
+    { field: 'kidsSpace', label: 'キッズスペース', predicate: (r) => r.kidsSpace === true },
+    { field: 'kidsCutlery', label: '子供用カトラリー', predicate: (r) => r.kidsCutlery === true },
+    { field: 'stepFree', label: '段差なし', predicate: (r) => r.stepFree === true },
+    {
+      field: 'seatingType-zashiki',
+      label: '座敷席',
+      predicate: (r) => Array.isArray(r.seatingType) && r.seatingType.includes('zashiki'),
+    },
+    { field: 'diaperChangingTable', label: 'おむつ替え台', predicate: (r) => r.diaperChangingTable === true },
+    { field: 'nursingRoom', label: '授乳室', predicate: (r) => r.nursingRoom === true },
+    { field: 'shareDish', label: '取り分けOK', predicate: (r) => r.shareDish === true },
+  ];
+
+  return defs.map(({ field, label, predicate }): RestaurantFieldCoverageRow => {
+    const chainHave = chainRows.filter(predicate).length;
+    const indieHave = indieRows.filter(predicate).length;
+    const totalHave = chainHave + indieHave;
+    const totalTotal = chainRows.length + indieRows.length;
+    return {
+      field,
+      label,
+      chainHave,
+      chainTotal: chainRows.length,
+      indieHave,
+      indieTotal: indieRows.length,
+      totalHave,
+      totalTotal,
+      ratio: totalTotal === 0 ? 0 : totalHave / totalTotal,
+    };
+  });
 }
