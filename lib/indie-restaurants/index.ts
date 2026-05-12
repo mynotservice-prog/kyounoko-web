@@ -21,6 +21,7 @@ import { CHUNK_15 } from './chunk-15';
 import { CHUNK_16 } from './chunk-16';
 import { CHUNK_17 } from './chunk-17';
 import { CHUNK_18 } from './chunk-18';
+import { CHUNK_19 } from './chunk-19';
 import type { StationIndieMap, IndieRestaurant, IndieGenre } from './types';
 
 export type { IndieRestaurant, IndieGenre, StationIndieMap } from './types';
@@ -61,6 +62,7 @@ export const STATION_INDIE_MAP: StationIndieMap = mergeIndieMaps(
   CHUNK_16,
   CHUNK_17,
   CHUNK_18,
+  CHUNK_19,
 );
 
 /**
