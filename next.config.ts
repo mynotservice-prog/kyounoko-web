@@ -77,6 +77,21 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ['microcms-js-sdk'],
   },
+
+  // Vercel Function バンドルから public/ 配下の静的画像を除外する。
+  // lib/articles.ts や lib/plans.ts が hero画像の存在確認のため
+  // path.join(process.cwd(), 'public', ...) + fs.existsSync を使うため、
+  // Next.js が「実行時に必要な可能性あり」と判断して /api/* のFunctionに
+  // 画像ファイルを巻き込み、300MB上限超過でビルド失敗するのを防ぐ。
+  outputFileTracingExcludes: {
+    '*': [
+      'public/hero-ai/**',
+      'public/hero/**',
+      'public/photos/**',
+      'public/icons/**',
+      '.next/cache/**',
+    ],
+  },
 };
 
 export default nextConfig;
