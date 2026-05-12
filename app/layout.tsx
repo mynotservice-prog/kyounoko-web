@@ -16,6 +16,13 @@ export const viewport: Viewport = {
 // SEO対応: preload は main body font（Noto Sans JP）のみに絞り込み、
 // 他のフォントは `preload: false` でHTML頭のバイト量を激減させる（485 preload → ~80程度）。
 // これによりGooglebotのクロール効率とLCPが大幅改善。
+//
+// CWV メモ（フォントウェイト削減候補・優先度低）:
+//   - Shippori_Mincho: 600 は数か所のみ → 500/700 だけにすると CSS バイト減
+//   - Zen_Maru_Gothic: 900 はほぼ未使用 → 500/700 だけで十分
+//   - Inter: 500 は数か所のみ → 400/600 だけにできる
+// ただし font-display: swap + preload: false なので LCP への悪影響は小さく、
+// 削減は次フェーズ（実測 + Lighthouse 指摘ベース）で対応する方針。
 const notoSans = Noto_Sans_JP({
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
@@ -142,6 +149,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${shippori.variable} ${notoSans.variable} ${zenMaru.variable} ${dmSerif.variable} ${inter.variable}`}
     >
       <head>
+        {/* Core Web Vitals: 主要サードパーティドメインへの早期接続。
+            dns-prefetch + preconnect を併記しておく（preconnect 非対応ブラウザ向けに dns-prefetch がフォールバック）。
+            AdSense / GA / Clarity は async でロードされるが、TLS handshake を並行化することで TBT/INP を軽減。 */}
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://www.clarity.ms" />
         {/* RSS / Atom フィード discovery（検索エンジンとフィードリーダー両対応） */}
         <link
           rel="alternate"
@@ -253,9 +268,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </>
         )}
 
-        {/* Microsoft Clarity */}
+        {/* Microsoft Clarity
+            CWV対策: lazyOnload に変更（idle中にロード、INP/TBT に効く）。
+            Clarity はセッション計測なので afterInteractive → lazyOnload にしてもデータ取得への影響は限定的。 */}
         {clarityId && (
-          <Script id="clarity-init" strategy="afterInteractive">
+          <Script id="clarity-init" strategy="lazyOnload">
             {`
               (function(c,l,a,r,i,t,y){
                 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};

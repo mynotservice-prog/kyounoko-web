@@ -1052,6 +1052,9 @@ input, select { font: inherit; color: inherit; }
 .site-footer {
   background: var(--ink); color: var(--paper);
   padding: 64px 0 32px; margin-top: 40px;
+  /* CWV: ページ末尾なので content-visibility で初回ペイントから除外 */
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 600px;
 }
 .footer-grid {
   display: grid; gap: 40px;
@@ -2072,9 +2075,14 @@ a[href^="/plan/"]:hover > div:first-child {
   max-width: 100%;
   text-align: center;
   position: relative;
-  /* AdSense が iframe を挿入する前の空白を安定させる */
-  min-height: 90px;
+  /* AdSense が iframe を挿入する前の空白を安定させる
+     CWV: モバイル広告は最終的に 250〜280px 程度になるので、
+     初期 min-height を 250px にしておくと iframe 挿入後の CLS がほぼ消える。 */
+  min-height: 250px;
   overflow: hidden;
+  /* below-fold な広告枠は描画コスト/レイアウト計算を抑えるため content-visibility を活用 */
+  content-visibility: auto;
+  contain-intrinsic-size: 250px;
 }
 .ad-slot > ins,
 .ad-slot > iframe {
@@ -2082,8 +2090,17 @@ a[href^="/plan/"]:hover > div:first-child {
   margin: 0 auto;
   max-width: 100%;
 }
+/* placement 別の固定高さ：iframe 挿入後の最終サイズに近い値を確保 */
+.ad-slot[data-placement="article-mid"] { min-height: 250px; contain-intrinsic-size: 250px; }
+.ad-slot[data-placement="article-end"] { min-height: 280px; contain-intrinsic-size: 280px; }
+.ad-slot[data-placement="article-related"] { min-height: 600px; contain-intrinsic-size: 600px; }
+.ad-slot[data-placement="plan-below-hero"] { min-height: 280px; contain-intrinsic-size: 280px; }
+.ad-slot[data-placement="home-below-finder"] { min-height: 280px; contain-intrinsic-size: 280px; }
+.ad-slot[data-placement="sidebar"] { min-height: 600px; contain-intrinsic-size: 600px; }
 @media (min-width: 768px) {
-  .ad-slot { margin: 40px auto; min-height: 120px; }
+  .ad-slot { margin: 40px auto; min-height: 280px; contain-intrinsic-size: 280px; }
+  .ad-slot[data-placement="article-related"] { min-height: 400px; contain-intrinsic-size: 400px; }
+  .ad-slot[data-placement="sidebar"] { min-height: 600px; contain-intrinsic-size: 600px; }
 }
 
 /* 「広告」「スポンサーリンク」用の小さなラベル（.ad-slot の直前に置く想定） */
@@ -2879,6 +2896,22 @@ span > .pr-label {
   font-family: inherit;
 }
 .print-cta button:hover { background: var(--clay-deep); }
+
+/* ==========================================================================
+   Core Web Vitals 補助
+   - below-fold な「重い」セクションに content-visibility: auto を適用すると
+     初回レンダリング時にビューポート外要素のレイアウト/ペイントをスキップでき、
+     LCP / TBT / INP が改善する。
+   - contain-intrinsic-size はスクロール時のジャンプ防止のためのプレースホルダ高。
+   - aspect-ratio で高さが決まる画像カードのグリッドにのみ適用（CLS を避ける）。
+   ========================================================================== */
+.cv-auto-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 800px;
+}
+/* 記事末尾の「関連する記事」「タグ」「クロスリンク」グリッドは大半が下方にあるので
+   content-visibility を効かせる（aspect-ratio で高さが決まる thumbnail のみ含むので CLS リスク低）。 */
+.related-card { contain: layout paint; }
 
 @media print {
   .site-header,

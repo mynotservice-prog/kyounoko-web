@@ -197,7 +197,7 @@ export default function HomePage() {
       {/* ======================================================================
           今月の季節と行事（時期性がコンセプトと合致するので残す）
           ====================================================================== */}
-      <section className="section" style={{ paddingTop: 0 }}>
+      <section className="section cv-auto-section" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="seasonal-panel">
             <div className="seasonal-head">
@@ -230,7 +230,7 @@ export default function HomePage() {
       {/* ======================================================================
           今日の「困ったから」—— 最重要条件のみプリセット、残りはユーザー入力
           ====================================================================== */}
-      <section className="section" style={{ paddingTop: 0 }}>
+      <section className="section cv-auto-section" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="concerns-wrap">
             <div className="section-head" style={{ borderBottom: 0, marginBottom: 24, paddingBottom: 0 }}>
@@ -256,7 +256,7 @@ export default function HomePage() {
       {/* ======================================================================
           カテゴリ（全体マップ。引き続き残す）
           ====================================================================== */}
-      <section className="section" style={{ paddingTop: 0 }}>
+      <section className="section cv-auto-section" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="section-head">
             <div>
@@ -290,7 +290,7 @@ export default function HomePage() {
              / 1〜3月: 冬の読み聞かせ・入園準備 など、月数から自動で並び替え）
           ====================================================================== */}
       {monthlyPicks.length > 0 && (
-        <section className="section" style={{ paddingTop: 0 }}>
+        <section className="section cv-auto-section" style={{ paddingTop: 0 }}>
           <div className="container">
             <div className="monthly-picks">
               <div className="monthly-picks-head">
@@ -338,7 +338,7 @@ export default function HomePage() {
       {/* ======================================================================
           Warm panel — ブランド体験強化
           ====================================================================== */}
-      <section className="section" style={{ paddingTop: 0 }}>
+      <section className="section cv-auto-section" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="warm-panel">
             <div className="warm-image" role="img" aria-label="あたたかな家庭のイメージ" />
@@ -376,7 +376,7 @@ export default function HomePage() {
           無料ツール・ダウンロード資料セクション
           被リンク獲得・サイト回遊UPの中核コンテンツ
           ====================================================================== */}
-      <section className="section" style={{ paddingTop: 0 }}>
+      <section className="section cv-auto-section" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="section-head">
             <div>
@@ -494,7 +494,7 @@ export default function HomePage() {
           最新の記事（補足。主役ではないのでフッター近くに移動）
           ====================================================================== */}
       {latestArticles.length > 0 && (
-        <section className="section" style={{ paddingTop: 0 }}>
+        <section className="section cv-auto-section" style={{ paddingTop: 0 }}>
           <div className="container">
             <div className="section-head">
               <div>

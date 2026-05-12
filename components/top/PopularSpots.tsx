@@ -17,7 +17,7 @@ export async function PopularSpots() {
   if (picks.length === 0) return null;
 
   return (
-    <section className="section" style={{ paddingTop: 40 }}>
+    <section className="section cv-auto-section" style={{ paddingTop: 40 }}>
       <div className="container">
         <div style={{ marginBottom: 20 }}>
           <span className="eyebrow">Editor's pick</span>

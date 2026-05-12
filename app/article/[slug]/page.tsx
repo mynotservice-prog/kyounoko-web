@@ -1057,7 +1057,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
 
           {/* Related articles */}
           {relatedArticles.length > 0 && (
-            <section style={{ marginTop: 56 }}>
+            <section className="cv-auto-section" style={{ marginTop: 56 }}>
               <h2
                 style={{
                   fontFamily: 'var(--font-mincho)',

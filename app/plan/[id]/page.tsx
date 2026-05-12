@@ -122,6 +122,10 @@ export default async function PlanPage({ params }: Props) {
 
   return (
     <>
+      {/* LCP 改善: hero 画像を最優先で先読み（CSS background のため Next.js Image priority が効かない） */}
+      {plan.hero && (
+        <link rel="preload" as="image" href={plan.hero} fetchPriority="high" />
+      )}
       {jsonLdHowTo && (
         <script
           type="application/ld+json"
@@ -305,7 +309,7 @@ export default async function PlanPage({ params }: Props) {
 
         {/* 同じ条件で別のプラン（プラン横リンク） */}
         {siblingPlans.length > 0 && (
-          <section style={{ marginTop: 56 }}>
+          <section className="cv-auto-section" style={{ marginTop: 56 }}>
             <h2 style={{ fontFamily: 'var(--font-mincho)', fontWeight: 600, fontSize: 22, margin: '0 0 16px' }}>
               似た条件で別のプラン
             </h2>

@@ -180,7 +180,7 @@ export default async function CategoryPage({ params }: Props) {
       {/* Age picker - TODO: /age/* ページ未実装のため一時非表示 */}
 
       {/* Articles grid */}
-      <section className="section" style={{ paddingTop: 0 }}>
+      <section className="section cv-auto-section" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="section-head">
             <div>

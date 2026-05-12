@@ -96,6 +96,7 @@ export function WeeklyPick({ month }: Props) {
 
   return (
     <section
+      className="cv-auto-section"
       style={{
         background: 'linear-gradient(135deg, var(--peach-soft) 0%, #fff7ee 100%)',
         padding: '56px 0',
