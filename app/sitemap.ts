@@ -12,6 +12,7 @@ import { getArticleIds, getCategories } from '@/lib/microcms';
 import { getAllFileArticles } from '@/lib/articles';
 import { getAllTags } from '@/lib/tags';
 import { TOKYO_STATIONS } from '@/lib/tokyo-stations';
+import { KANSAI_STATIONS } from '@/lib/kansai-stations';
 import { TOKYO_LINES } from '@/lib/tokyo-lines';
 import { getStationWithChains } from '@/lib/station-restaurants';
 import { getIndieRestaurantsByStation } from '@/lib/indie-restaurants';
@@ -116,6 +117,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: 'monthly' as const,
     priority: s.scale === 'terminal' ? 0.7 : s.scale === 'major' ? 0.6 : 0.5,
   }));
+  // 関西駅ページ（大阪・京都・神戸）
+  const kansaiStationPages: MetadataRoute.Sitemap = KANSAI_STATIONS.map((s) => ({
+    url: `${BASE}/station/${s.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: s.scale === 'terminal' ? 0.7 : s.scale === 'major' ? 0.6 : 0.5,
+  }));
   // 路線別ページ（40路線）
   const lineIndex: MetadataRoute.Sitemap = [{
     url: `${BASE}/station/line`,
@@ -154,5 +162,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/data/wards`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.75 },
   ];
 
-  return [...staticPages, ...categoryPages, ...articlePages, ...tagPages, ...stationIndex, ...stationPages, ...lineIndex, ...linePages, ...stationConditionPages, ...dataPages];
+  return [...staticPages, ...categoryPages, ...articlePages, ...tagPages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...lineIndex, ...linePages, ...stationConditionPages, ...dataPages];
 }

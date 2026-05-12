@@ -4,11 +4,11 @@ import { notFound } from 'next/navigation';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import {
-  getStationBySlug,
-  TOKYO_STATIONS,
-  WARD_NAMES,
-  type TokyoStation,
-} from '@/lib/tokyo-stations';
+  findStationBySlug,
+  getAllStations,
+  getSameAreaStations,
+  type AnyStation,
+} from '@/lib/all-stations';
 import {
   getStationWithChains,
   CHAIN_CATEGORY_LABEL,
@@ -37,22 +37,22 @@ type Props = {
 };
 
 /**
- * 全484駅分の静的パスを事前生成。
+ * 全駅（東京23区 + 関西主要駅）分の静的パスを事前生成。
  */
 export async function generateStaticParams() {
-  return TOKYO_STATIONS.map((s) => ({ slug: s.slug }));
+  return getAllStations().map((s) => ({ slug: s.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const station = getStationBySlug(slug);
+  const station = findStationBySlug(slug);
   if (!station) {
     return {
       title: '駅が見つかりません',
       robots: { index: false, follow: false },
     };
   }
-  const wardName = WARD_NAMES[station.ward] ?? '';
+  const wardName = station.regionLabel;
   const title = `${station.name}駅 子連れランチおすすめ｜ベビーカーOK・キッズメニュー店ガイド【${wardName}】`;
   const description = `${station.name}駅周辺で子連れOK・ベビーカー入店OKのファミレス・カフェ・チェーン店に加え、雑誌やSNSで話題の個人店・人気店も厳選。キッズメニュー・キッズチェア・個室・離乳食持込可など子連れ目線で全項目チェック。${wardName}で子どもとランチ・カフェに困らない実用ガイド。`;
   return {
@@ -81,15 +81,19 @@ const STROLLER_DESC: Record<Chain['stroller'], string> = {
 
 export default async function StationPage({ params }: Props) {
   const { slug } = await params;
-  const station = getStationBySlug(slug);
+  const station = findStationBySlug(slug);
   if (!station) notFound();
 
+  // 東京駅は STATION_CHAIN_MAPPING にチェーンが登録されている。
+  // 関西駅は現状チェーン未登録のため、見つからない場合は空配列でフォールバック。
   const data = getStationWithChains(slug);
-  if (!data) notFound();
-  const { chains } = data;
+  const chains: Chain[] = data?.chains ?? [];
 
   // 個人店（チェーン以外の話題店・人気店）
   const indies = getIndieRestaurantsByStation(slug);
+
+  // 駅情報も個人店もない場合のみ 404（不正 slug 防止）。
+  if (!data && indies.length === 0) notFound();
 
   // 個人店をジャンル別にグルーピング
   const indiesByGenre = new Map<IndieGenre, IndieRestaurant[]>();
@@ -98,7 +102,7 @@ export default async function StationPage({ params }: Props) {
     indiesByGenre.get(r.genre)!.push(r);
   }
 
-  const wardName = WARD_NAMES[station.ward] ?? '';
+  const wardName = station.regionLabel;
 
   // カテゴリ別グルーピング
   const byCategory = new Map<ChainCategory, Chain[]>();
@@ -107,10 +111,8 @@ export default async function StationPage({ params }: Props) {
     byCategory.get(c.category)!.push(c);
   }
 
-  // 同じ区の他駅（ナビゲーション用）
-  const sameWardStations = TOKYO_STATIONS
-    .filter((s) => s.ward === station.ward && s.slug !== station.slug)
-    .slice(0, 12);
+  // 同じエリアの他駅（東京なら同区、関西なら同府/県）
+  const sameWardStations = getSameAreaStations(station, 12);
 
   // JSON-LD: ItemList で各チェーン+個人店を列挙
   const allItemsForLd = [
@@ -621,6 +623,9 @@ export default async function StationPage({ params }: Props) {
 
           {/* 条件で絞り込む */}
           {(() => {
+            // 条件別ページ（/station/[slug]/[condition]）は現状チェーン中心で
+            // 東京駅のみに対応。関西駅の場合はリンク先が 404 になるためセクションごと非表示。
+            if (station.region !== 'tokyo') return null;
             const conditionLinks = STATION_CONDITIONS.map((c) => {
               const cn = filterChainsByCondition(chains, c.slug).length;
               const inn = filterIndiesByCondition(indies, c.slug).length;
@@ -676,7 +681,7 @@ export default async function StationPage({ params }: Props) {
           {sameWardStations.length > 0 && (
             <section className="station-related" style={{ marginTop: 48, paddingTop: 32, borderTop: '1px solid rgba(201,96,62,0.14)' }}>
               <header className="kn-section-head">
-                <span className="eyebrow">SAME WARD · 区内の他駅</span>
+                <span className="eyebrow">{station.region === 'tokyo' ? 'SAME WARD · 区内の他駅' : 'SAME AREA · エリア内の他駅'}</span>
                 <h2>{wardName}の他の駅もチェック</h2>
                 <p className="section-lede">同じ{wardName}内の他駅も子連れランチのカバー範囲。お住まいや勤務先に近い駅で見つけてみてください。</p>
               </header>

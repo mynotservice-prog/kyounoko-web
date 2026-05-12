@@ -6,6 +6,7 @@ import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
 import { TodayFinder } from '@/components/top/TodayFinder';
 import { StationSearch } from '@/components/top/StationSearch';
 import { TOKYO_STATIONS, WARD_NAMES } from '@/lib/tokyo-stations';
+import { KANSAI_STATIONS, PREFECTURE_NAMES } from '@/lib/kansai-stations';
 import { TOKYO_LINES } from '@/lib/tokyo-lines';
 import { WeeklyPick } from '@/components/top/WeeklyPick';
 import { PopularSpots } from '@/components/top/PopularSpots';
@@ -151,16 +152,28 @@ export default function HomePage() {
             </p>
           </div>
           <StationSearch
-            stations={TOKYO_STATIONS.map((s) => ({
-              type: 'station' as const,
-              slug: s.slug,
-              name: s.name,
-              kana: s.kana,
-              ward: s.ward,
-              wardLabel: WARD_NAMES[s.ward] ?? s.ward,
-              lines: s.lines,
-              scale: s.scale,
-            }))}
+            stations={[
+              ...TOKYO_STATIONS.map((s) => ({
+                type: 'station' as const,
+                slug: s.slug,
+                name: s.name,
+                kana: s.kana,
+                ward: s.ward,
+                wardLabel: WARD_NAMES[s.ward] ?? s.ward,
+                lines: s.lines,
+                scale: s.scale,
+              })),
+              ...KANSAI_STATIONS.map((s) => ({
+                type: 'station' as const,
+                slug: s.slug,
+                name: s.name,
+                kana: s.kana,
+                ward: s.prefecture,
+                wardLabel: PREFECTURE_NAMES[s.prefecture],
+                lines: s.lines,
+                scale: s.scale,
+              })),
+            ]}
             lines={TOKYO_LINES.map((l) => ({
               type: 'line' as const,
               slug: l.slug,

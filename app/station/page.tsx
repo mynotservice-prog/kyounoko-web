@@ -3,18 +3,25 @@ import Link from 'next/link';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { TOKYO_STATIONS, WARD_NAMES, type TokyoWard, type TokyoStation } from '@/lib/tokyo-stations';
+import {
+  KANSAI_STATIONS,
+  PREFECTURE_NAMES,
+  PREFECTURE_REGION_LABEL,
+  type KansaiPrefecture,
+  type KansaiStation,
+} from '@/lib/kansai-stations';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: '東京23区 駅別 子連れランチ・ベビーカーOK店ガイド｜きょうのこ',
-  description: '東京23区全484駅の周辺で子連れOK・ベビーカー入店OKのファミレス・カフェ・チェーン店を駅別にチェック。キッズメニュー、キッズチェア、個室、離乳食持込までの可否を全部表示。',
+  title: '駅別 子連れランチ・ベビーカーOK店ガイド｜東京23区・関西｜きょうのこ',
+  description: '東京23区全484駅と大阪・京都・神戸の主要駅で、子連れOK・ベビーカー入店OKのファミレス・カフェ・チェーン店および個人店を駅別にチェック。キッズメニュー、キッズチェア、個室、離乳食持込までの可否を全部表示。',
   alternates: { canonical: '/station' },
 };
 
 export default function StationIndexPage() {
-  // 区別グルーピング
+  // 東京: 区別グルーピング
   const byWard = new Map<TokyoWard, TokyoStation[]>();
   for (const s of TOKYO_STATIONS) {
     if (!byWard.has(s.ward)) byWard.set(s.ward, []);
@@ -28,6 +35,14 @@ export default function StationIndexPage() {
     'shibuya', 'nakano', 'suginami', 'toshima', 'kita', 'arakawa',
     'itabashi', 'nerima', 'adachi', 'katsushika', 'edogawa',
   ];
+
+  // 関西: 府/県別グルーピング
+  const byPrefecture = new Map<KansaiPrefecture, KansaiStation[]>();
+  for (const s of KANSAI_STATIONS) {
+    if (!byPrefecture.has(s.prefecture)) byPrefecture.set(s.prefecture, []);
+    byPrefecture.get(s.prefecture)!.push(s);
+  }
+  const prefectureOrder: KansaiPrefecture[] = ['osaka', 'kyoto', 'hyogo'];
 
   return (
     <>
@@ -44,43 +59,105 @@ export default function StationIndexPage() {
       <section className="section">
         <div className="container-narrow">
           <header className="page-head" style={{ marginBottom: 32 }}>
-            <span className="eyebrow">東京23区 全484駅対応</span>
+            <span className="eyebrow">東京23区 全484駅 + 関西主要18駅</span>
             <h1>駅別 子連れランチ・ベビーカーOK店ガイド</h1>
             <p className="lead">
-              東京23区の全駅で、子連れOK・ベビーカー入店可・キッズメニューありの飲食チェーンを駅単位で網羅。
+              東京23区の全駅と、関西エリア（大阪・京都・神戸）の主要駅で、子連れOK・ベビーカー入店可・キッズメニューありの飲食チェーンや話題の個人店を駅単位で網羅。
               ターミナル駅から住宅地の小さな駅まで、行きたい駅をクリックすれば即わかる。
             </p>
           </header>
 
-          {wardOrder.map((ward) => {
-            const stations = byWard.get(ward);
-            if (!stations || stations.length === 0) return null;
-            const wardName = WARD_NAMES[ward];
-            const sorted = [...stations].sort((a, b) => {
-              if (a.scale !== b.scale) {
-                const order = { terminal: 0, major: 1, minor: 2 };
-                return order[a.scale] - order[b.scale];
-              }
-              return a.name.localeCompare(b.name, 'ja');
-            });
-            return (
-              <section key={ward} style={{ marginBottom: 36 }}>
-                <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 20, marginBottom: 14 }}>
-                  {wardName} <span style={{ fontSize: 13, color: 'var(--ink-mute)', fontWeight: 400 }}>{stations.length}駅</span>
-                </h2>
-                <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-                  {sorted.map((s) => (
-                    <Link key={s.slug} href={`/station/${s.slug}`} className="chip" style={{
-                      fontWeight: s.scale === 'terminal' ? 600 : s.scale === 'major' ? 500 : 400,
-                      borderColor: s.scale === 'terminal' ? 'var(--clay)' : undefined,
-                    }}>
-                      {s.name}
-                    </Link>
-                  ))}
-                </div>
-              </section>
-            );
-          })}
+          {/* ===== 東京23区 ===== */}
+          <section style={{ marginBottom: 48 }}>
+            <h2 style={{
+              fontFamily: 'var(--font-mincho)',
+              fontSize: 24,
+              marginBottom: 8,
+              paddingBottom: 8,
+              borderBottom: '2px solid rgba(201,96,62,0.18)',
+            }}>
+              東京23区 <span style={{ fontSize: 13, color: 'var(--ink-mute)', fontWeight: 400 }}>{TOKYO_STATIONS.length}駅</span>
+            </h2>
+            <p style={{ fontSize: 13, color: 'var(--ink-sub)', marginTop: 0, marginBottom: 24 }}>
+              ターミナル駅・主要駅・一般駅をスケール順で表示。
+            </p>
+
+            {wardOrder.map((ward) => {
+              const stations = byWard.get(ward);
+              if (!stations || stations.length === 0) return null;
+              const wardName = WARD_NAMES[ward];
+              const sorted = [...stations].sort((a, b) => {
+                if (a.scale !== b.scale) {
+                  const order = { terminal: 0, major: 1, minor: 2 };
+                  return order[a.scale] - order[b.scale];
+                }
+                return a.name.localeCompare(b.name, 'ja');
+              });
+              return (
+                <section key={ward} style={{ marginBottom: 36 }}>
+                  <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 20, marginBottom: 14 }}>
+                    {wardName} <span style={{ fontSize: 13, color: 'var(--ink-mute)', fontWeight: 400 }}>{stations.length}駅</span>
+                  </h3>
+                  <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                    {sorted.map((s) => (
+                      <Link key={s.slug} href={`/station/${s.slug}`} className="chip" style={{
+                        fontWeight: s.scale === 'terminal' ? 600 : s.scale === 'major' ? 500 : 400,
+                        borderColor: s.scale === 'terminal' ? 'var(--clay)' : undefined,
+                      }}>
+                        {s.name}
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              );
+            })}
+          </section>
+
+          {/* ===== 関西エリア ===== */}
+          <section style={{ marginBottom: 48 }}>
+            <h2 style={{
+              fontFamily: 'var(--font-mincho)',
+              fontSize: 24,
+              marginBottom: 8,
+              paddingBottom: 8,
+              borderBottom: '2px solid rgba(201,96,62,0.18)',
+            }}>
+              関西エリア <span style={{ fontSize: 13, color: 'var(--ink-mute)', fontWeight: 400 }}>{KANSAI_STATIONS.length}駅</span>
+            </h2>
+            <p style={{ fontSize: 13, color: 'var(--ink-sub)', marginTop: 0, marginBottom: 24 }}>
+              大阪・京都・神戸の主要駅で、雑誌・SNSで話題の個人店を中心にカバー。
+            </p>
+
+            {prefectureOrder.map((pref) => {
+              const stations = byPrefecture.get(pref);
+              if (!stations || stations.length === 0) return null;
+              const prefName = PREFECTURE_NAMES[pref];
+              const sorted = [...stations].sort((a, b) => {
+                if (a.scale !== b.scale) {
+                  const order = { terminal: 0, major: 1, minor: 2 };
+                  return order[a.scale] - order[b.scale];
+                }
+                return a.name.localeCompare(b.name, 'ja');
+              });
+              return (
+                <section key={pref} style={{ marginBottom: 36 }}>
+                  <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 20, marginBottom: 14 }}>
+                    {prefName}（{PREFECTURE_REGION_LABEL[pref]}） <span style={{ fontSize: 13, color: 'var(--ink-mute)', fontWeight: 400 }}>{stations.length}駅</span>
+                  </h3>
+                  <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                    {sorted.map((s) => (
+                      <Link key={s.slug} href={`/station/${s.slug}`} className="chip" style={{
+                        fontWeight: s.scale === 'terminal' ? 600 : s.scale === 'major' ? 500 : 400,
+                        borderColor: s.scale === 'terminal' ? 'var(--clay)' : undefined,
+                      }}>
+                        {s.name}
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              );
+            })}
+          </section>
         </div>
       </section>
 
