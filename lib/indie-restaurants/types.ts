@@ -24,6 +24,14 @@ export type IndieGenre =
   | 'asian'        // タイ・ベトナム・エスニック
   | 'others';      // その他
 
+/** 席のタイプ（station-restaurants.ts の SeatingType と互換） */
+export type IndieSeatingType =
+  | 'box'     // ボックス席
+  | 'table'   // 通常テーブル席
+  | 'counter' // カウンター席
+  | 'zashiki' // 座敷・小上がり
+  | 'terrace';// テラス・オープン席
+
 export type IndieRestaurant = {
   /** 店名（実在の店舗名） */
   name: string;
@@ -45,6 +53,24 @@ export type IndieRestaurant = {
   kidsCutlery?: boolean;
   /** 店内にキッズスペース・遊び場あり */
   kidsSpace?: boolean;
+  // ===== 子連れ目線フィールド（v6 追加）=====
+  /** 入口・店内に段差なし（ベビーカーそのまま入店可） */
+  stepFree?: boolean;
+  /** 用意のある席タイプ */
+  seatingType?: IndieSeatingType[];
+  /** おむつ替え台あり（多目的トイレ含む） */
+  diaperChangingTable?: boolean;
+  /** 授乳室・授乳スペースあり */
+  nursingRoom?: boolean;
+  /** 離乳食持ち込みOK（公式・取材ベース） */
+  bringBabyFood?: boolean;
+  /** 取り分け前提のメニュー（シェア・小皿・小盛り対応） */
+  shareDish?: boolean;
+  /** ベビーカーで席まで（たたまずに済む通路幅） */
+  strollerToSeat?: boolean;
+  /** アレルゲン表示あり（公式メニューに記載） */
+  allergenInfo?: boolean;
+  // =============================================
   /** ランチ価格帯 */
   priceLunch: '〜1,000円' | '〜2,000円' | '〜3,500円' | '〜5,000円' | '5,000円〜';
   /** メディア掲載・SNSで話題等の人気フラグ */

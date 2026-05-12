@@ -159,6 +159,15 @@ export function buildAllDataRows(): DataRow[] {
       kidsCutlery: indieFlat.kidsCutlery === true,
       kidsSpace: indieFlat.kidsSpace === true,
       priceRange: indieFlat.priceLunch,
+      // v6: 個人店も推論済み8項目を反映
+      stepFree: indieFlat.stepFree,
+      seatingType: indieFlat.seatingType as SeatingType[] | undefined,
+      diaperChangingTable: indieFlat.diaperChangingTable,
+      nursingRoom: indieFlat.nursingRoom,
+      bringBabyFood: indieFlat.bringBabyFood,
+      shareDish: indieFlat.shareDish,
+      strollerToSeat: indieFlat.strollerToSeat,
+      allergenInfo: indieFlat.allergenInfo,
     });
   }
 
