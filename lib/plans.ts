@@ -103,17 +103,21 @@ function parsePlan(raw: string, fallbackId: string): { meta: PlanMeta; body: str
     ? d.mealTime.filter((x): x is string => typeof x === 'string')
     : undefined;
 
-  // hero の自動マッチング（優先順位）:
-  //   1. /photos/<id>.webp が存在する → Pexels取得のリアル写真を最優先（料理・スポット等）
-  //   2. frontmatter 明示指定の /hero/<cat>-NN.png → /hero-ai/cat-<cat>-NN.jpg にマップ（v4 AI統一）
-  //   3. home-cozy フォールバック or 未指定 → title+shortAnswer からカテゴリ画像を自動マッチ
+  // hero の自動マッチング（v4: AIイラスト統一）:
+  //   1. /hero-ai/<planId>.jpg が存在 → プラン固有のAIイラスト最優先
+  //   2. frontmatter 明示指定の /hero/<cat>-NN.png → /hero-ai/cat-<cat>-NN.jpg にマップ
+  //   3. 未指定 / 汎用 home-cozy → title+shortAnswer からAIカテゴリ画像を自動マッチ
+  //
+  // 旧 /photos/<id>.webp（Pexels実写）は v3 までは最優先だったが、
+  // サイト全体の「温かみあるイラスト風」世界観統一のため v4 で廃止。
+  // 必要なら /hero-ai/<planId>.jpg を個別に生成して差し替え可能。
   const planId = typeof d.id === 'string' ? d.id : fallbackId;
-  const pexelsCandidate = path.join(process.cwd(), 'public', 'photos', `${planId}.webp`);
-  const hasPexelsPhoto = fs.existsSync(pexelsCandidate);
+  const planAiCandidate = path.join(process.cwd(), 'public', 'hero-ai', `${planId}.jpg`);
+  const hasPlanAi = fs.existsSync(planAiCandidate);
 
   let matchedHero: string;
-  if (hasPexelsPhoto) {
-    matchedHero = `/photos/${planId}.webp`;
+  if (hasPlanAi) {
+    matchedHero = `/hero-ai/${planId}.jpg`;
   } else {
     const explicitHero = typeof d.hero === 'string' ? d.hero : undefined;
     const isFallbackHero =
@@ -123,10 +127,12 @@ function parsePlan(raw: string, fallbackId: string): { meta: PlanMeta; body: str
       matchedHero = pickHeroForText(`${d.title} ${d.shortAnswer}`, planId);
     } else {
       // 明示指定の /hero/<cat>-NN.<ext> → 新AI画像 /hero-ai/cat-<cat>-NN.jpg にマップ
-      // 該当しなければ .png → .webp に変換（legacy fallback）
       const aiMatch = explicitHero!.match(/^\/hero\/([a-z-]+)-(\d{2})\.(png|webp|jpg|jpeg)$/i);
       if (aiMatch) {
         matchedHero = `/hero-ai/cat-${aiMatch[1]}-${aiMatch[2]}.jpg`;
+      } else if (explicitHero!.startsWith('/photos/')) {
+        // 旧Pexels実写指定は無視してAIカテゴリにフォールバック
+        matchedHero = pickHeroForText(`${d.title} ${d.shortAnswer}`, planId);
       } else {
         matchedHero = explicitHero!;
         if (matchedHero?.endsWith('.png')) {
