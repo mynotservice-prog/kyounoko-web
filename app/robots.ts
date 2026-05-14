@@ -4,60 +4,68 @@ import type { MetadataRoute } from 'next';
  * robots.txt 設定。
  *
  * 【重要】/_next/ は元々Disallowしていたが、Googleが「robots.txtでブロック」を473件
- * 報告していたため修正。/_next/static/ には CSS/JS が含まれるため、
- * Googlebotがページをフルレンダリングするには Allow が必要。
- * /api/ と /admin/ のみブロック。
+ * （全て /_next/static/media/*.woff2 フォントファイル）報告していたため修正。
+ * /_next/static/ には CSS/JS/フォントが含まれ、Googlebotがページを
+ * フルレンダリングするには Allow が必須。
+ *
+ * 念のため `/_next/` を明示的に Allow して曖昧さを完全排除する。
+ * （`Allow: /` だけでも /_next/ は許可されるが、明示することで
+ *  Search Console の robots.txt パーサが確実に「許可」と判定する）
+ *
+ * Disallow するのは /api/ と /admin/ のみ。
  */
 export default function robots(): MetadataRoute.Robots {
   // /api/ と /admin/ はサイトの内部・管理画面なので非公開
   const baseDisallow = ['/api/', '/admin/'];
+  // Next.js の静的アセット（CSS/JS/フォント/画像）を明示的に許可
+  const baseAllow = ['/', '/_next/'];
 
   return {
     rules: [
       // ===== 一般クローラー（Google等）=====
-      // /_next/ は Allow に変更（GoogleがCSS/JSを取得してSPA的にレンダリングできるよう）
+      // /_next/ を明示 Allow（CSS/JS/フォントを取得してフルレンダリング可能に）
       {
         userAgent: '*',
-        allow: '/',
+        allow: baseAllow,
         disallow: baseDisallow,
       },
 
       // ===== Googleサービス =====
-      { userAgent: 'Mediapartners-Google', allow: '/' },     // AdSense
-      { userAgent: 'AdsBot-Google', allow: '/' },
-      { userAgent: 'AdsBot-Google-Mobile', allow: '/' },
-      { userAgent: 'Googlebot-Image', allow: '/' },          // Google画像検索
-      { userAgent: 'Google-Extended', allow: '/' },          // Gemini/Bard学習
+      { userAgent: 'Mediapartners-Google', allow: baseAllow },     // AdSense
+      { userAgent: 'AdsBot-Google', allow: baseAllow },
+      { userAgent: 'AdsBot-Google-Mobile', allow: baseAllow },
+      { userAgent: 'Googlebot-Image', allow: baseAllow },          // Google画像検索
+      { userAgent: 'Google-Extended', allow: baseAllow },          // Gemini/Bard学習
 
       // ===== AI検索クローラー（AIO対策の中核）=====
       // ChatGPT / ChatGPT Search からの引用を受け入れる
-      { userAgent: 'GPTBot', allow: '/', disallow: baseDisallow },
-      { userAgent: 'OAI-SearchBot', allow: '/', disallow: baseDisallow },
-      { userAgent: 'ChatGPT-User', allow: '/', disallow: baseDisallow },
+      { userAgent: 'GPTBot', allow: baseAllow, disallow: baseDisallow },
+      { userAgent: 'OAI-SearchBot', allow: baseAllow, disallow: baseDisallow },
+      { userAgent: 'ChatGPT-User', allow: baseAllow, disallow: baseDisallow },
 
       // Anthropic Claude（ClaudeBot / claude-web）
-      { userAgent: 'ClaudeBot', allow: '/', disallow: baseDisallow },
-      { userAgent: 'anthropic-ai', allow: '/', disallow: baseDisallow },
-      { userAgent: 'claude-web', allow: '/', disallow: baseDisallow },
+      { userAgent: 'ClaudeBot', allow: baseAllow, disallow: baseDisallow },
+      { userAgent: 'anthropic-ai', allow: baseAllow, disallow: baseDisallow },
+      { userAgent: 'claude-web', allow: baseAllow, disallow: baseDisallow },
 
       // Perplexity（AI検索で成長中）
-      { userAgent: 'PerplexityBot', allow: '/', disallow: baseDisallow },
-      { userAgent: 'Perplexity-User', allow: '/', disallow: baseDisallow },
+      { userAgent: 'PerplexityBot', allow: baseAllow, disallow: baseDisallow },
+      { userAgent: 'Perplexity-User', allow: baseAllow, disallow: baseDisallow },
 
       // CommonCrawl（多くのLLM学習データソース）
-      { userAgent: 'CCBot', allow: '/', disallow: baseDisallow },
+      { userAgent: 'CCBot', allow: baseAllow, disallow: baseDisallow },
 
       // Meta AI（Llama）
-      { userAgent: 'Meta-ExternalAgent', allow: '/', disallow: baseDisallow },
-      { userAgent: 'FacebookBot', allow: '/' },
+      { userAgent: 'Meta-ExternalAgent', allow: baseAllow, disallow: baseDisallow },
+      { userAgent: 'FacebookBot', allow: baseAllow },
 
       // Bing / Copilot
-      { userAgent: 'bingbot', allow: '/' },
-      { userAgent: 'BingPreview', allow: '/' },
+      { userAgent: 'bingbot', allow: baseAllow },
+      { userAgent: 'BingPreview', allow: baseAllow },
 
       // Applebot（Siri・Spotlight・Apple Intelligence）
-      { userAgent: 'Applebot', allow: '/' },
-      { userAgent: 'Applebot-Extended', allow: '/' },
+      { userAgent: 'Applebot', allow: baseAllow },
+      { userAgent: 'Applebot-Extended', allow: baseAllow },
     ],
     sitemap: [
       'https://kyounoko.jp/sitemap.xml',
