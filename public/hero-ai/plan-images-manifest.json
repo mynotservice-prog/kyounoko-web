@@ -1,0 +1,332 @@
+{
+  "m-asa-1-2-10m-free-01": {
+    "slug": "m-asa-1-2-10m-free-01",
+    "ok": true,
+    "file": "/hero-ai/m-asa-1-2-10m-free-01.webp",
+    "generatedAt": "2026-05-14T01:04:20.536Z"
+  },
+  "m-asa-0-1-15m-free-01": {
+    "slug": "m-asa-0-1-15m-free-01",
+    "ok": true,
+    "file": "/hero-ai/m-asa-0-1-15m-free-01.webp",
+    "generatedAt": "2026-05-14T01:04:20.914Z"
+  },
+  "m-asa-1-2-10m-free-02": {
+    "slug": "m-asa-1-2-10m-free-02",
+    "ok": true,
+    "file": "/hero-ai/m-asa-1-2-10m-free-02.webp",
+    "generatedAt": "2026-05-14T01:04:21.131Z"
+  },
+  "m-asa-1-2-10m-free-03": {
+    "slug": "m-asa-1-2-10m-free-03",
+    "ok": true,
+    "file": "/hero-ai/m-asa-1-2-10m-free-03.webp",
+    "generatedAt": "2026-05-14T01:04:21.451Z"
+  },
+  "m-asa-1-2-5m-free-01": {
+    "slug": "m-asa-1-2-5m-free-01",
+    "ok": true,
+    "file": "/hero-ai/m-asa-1-2-5m-free-01.webp",
+    "generatedAt": "2026-05-14T01:04:22.822Z"
+  },
+  "m-asa-1-2-5m-free-02": {
+    "slug": "m-asa-1-2-5m-free-02",
+    "ok": true,
+    "file": "/hero-ai/m-asa-1-2-5m-free-02.webp",
+    "generatedAt": "2026-05-14T01:04:23.401Z"
+  },
+  "m-asa-2-3-10m-free-01": {
+    "slug": "m-asa-2-3-10m-free-01",
+    "ok": true,
+    "file": "/hero-ai/m-asa-2-3-10m-free-01.webp",
+    "generatedAt": "2026-05-14T01:04:23.495Z"
+  },
+  "m-asa-2-3-10m-free-02": {
+    "slug": "m-asa-2-3-10m-free-02",
+    "ok": true,
+    "file": "/hero-ai/m-asa-2-3-10m-free-02.webp",
+    "generatedAt": "2026-05-14T01:04:24.950Z"
+  },
+  "m-asa-2-3-10m-free-03": {
+    "slug": "m-asa-2-3-10m-free-03",
+    "ok": true,
+    "file": "/hero-ai/m-asa-2-3-10m-free-03.webp",
+    "generatedAt": "2026-05-14T01:04:25.725Z"
+  },
+  "m-asa-2-3-15m-low-01": {
+    "slug": "m-asa-2-3-15m-low-01",
+    "ok": true,
+    "file": "/hero-ai/m-asa-2-3-15m-low-01.webp",
+    "generatedAt": "2026-05-14T01:04:26.360Z"
+  },
+  "m-asa-2-3-10m-free-04": {
+    "slug": "m-asa-2-3-10m-free-04",
+    "ok": true,
+    "file": "/hero-ai/m-asa-2-3-10m-free-04.webp",
+    "generatedAt": "2026-05-14T01:04:26.893Z"
+  },
+  "m-asa-2-3-15m-low-02": {
+    "slug": "m-asa-2-3-15m-low-02",
+    "ok": true,
+    "file": "/hero-ai/m-asa-2-3-15m-low-02.webp",
+    "generatedAt": "2026-05-14T01:04:27.400Z"
+  },
+  "m-asa-2-3-15m-low-03": {
+    "slug": "m-asa-2-3-15m-low-03",
+    "ok": true,
+    "file": "/hero-ai/m-asa-2-3-15m-low-03.webp",
+    "generatedAt": "2026-05-14T01:04:28.450Z"
+  },
+  "m-asa-2-3-5m-free-01": {
+    "slug": "m-asa-2-3-5m-free-01",
+    "ok": true,
+    "file": "/hero-ai/m-asa-2-3-5m-free-01.webp",
+    "generatedAt": "2026-05-14T01:04:28.958Z"
+  },
+  "m-asa-4-6-10m-free-01": {
+    "slug": "m-asa-4-6-10m-free-01",
+    "ok": true,
+    "file": "/hero-ai/m-asa-4-6-10m-free-01.webp",
+    "generatedAt": "2026-05-14T01:04:29.531Z"
+  },
+  "m-asa-4-6-10m-free-02": {
+    "slug": "m-asa-4-6-10m-free-02",
+    "ok": true,
+    "file": "/hero-ai/m-asa-4-6-10m-free-02.webp",
+    "generatedAt": "2026-05-14T01:04:30.487Z"
+  },
+  "m-asa-4-6-15m-low-01": {
+    "slug": "m-asa-4-6-15m-low-01",
+    "ok": true,
+    "file": "/hero-ai/m-asa-4-6-15m-low-01.webp",
+    "generatedAt": "2026-05-14T01:04:31.329Z"
+  },
+  "m-asa-4-6-10m-free-03": {
+    "slug": "m-asa-4-6-10m-free-03",
+    "ok": true,
+    "file": "/hero-ai/m-asa-4-6-10m-free-03.webp",
+    "generatedAt": "2026-05-14T01:04:31.697Z"
+  },
+  "m-asa-4-6-15m-low-02": {
+    "slug": "m-asa-4-6-15m-low-02",
+    "ok": true,
+    "file": "/hero-ai/m-asa-4-6-15m-low-02.webp",
+    "generatedAt": "2026-05-14T01:04:31.710Z"
+  },
+  "m-asa-4-6-15m-low-03": {
+    "slug": "m-asa-4-6-15m-low-03",
+    "ok": true,
+    "file": "/hero-ai/m-asa-4-6-15m-low-03.webp",
+    "generatedAt": "2026-05-14T01:04:33.416Z"
+  },
+  "m-hiru-1-2-15m-free-02": {
+    "slug": "m-hiru-1-2-15m-free-02",
+    "ok": true,
+    "file": "/hero-ai/m-hiru-1-2-15m-free-02.webp",
+    "generatedAt": "2026-05-14T01:04:33.964Z"
+  },
+  "m-hiru-2-3-10m-free-01": {
+    "slug": "m-hiru-2-3-10m-free-01",
+    "ok": true,
+    "file": "/hero-ai/m-hiru-2-3-10m-free-01.webp",
+    "generatedAt": "2026-05-14T01:04:35.109Z"
+  },
+  "m-hiru-2-3-15m-low-01": {
+    "slug": "m-hiru-2-3-15m-low-01",
+    "ok": true,
+    "file": "/hero-ai/m-hiru-2-3-15m-low-01.webp",
+    "generatedAt": "2026-05-14T01:04:36.091Z"
+  },
+  "m-hiru-2-3-20m-low-01": {
+    "slug": "m-hiru-2-3-20m-low-01",
+    "ok": true,
+    "file": "/hero-ai/m-hiru-2-3-20m-low-01.webp",
+    "generatedAt": "2026-05-14T01:04:36.963Z"
+  },
+  "m-hiru-2-3-20m-low-02": {
+    "slug": "m-hiru-2-3-20m-low-02",
+    "ok": true,
+    "file": "/hero-ai/m-hiru-2-3-20m-low-02.webp",
+    "generatedAt": "2026-05-14T01:04:38.168Z"
+  },
+  "m-hiru-4-6-15m-low-01": {
+    "slug": "m-hiru-4-6-15m-low-01",
+    "ok": true,
+    "file": "/hero-ai/m-hiru-4-6-15m-low-01.webp",
+    "generatedAt": "2026-05-14T01:04:38.931Z"
+  },
+  "m-hiru-1-2-15m-free-01": {
+    "slug": "m-hiru-1-2-15m-free-01",
+    "ok": true,
+    "file": "/hero-ai/m-hiru-1-2-15m-free-01.webp",
+    "generatedAt": "2026-05-14T01:04:38.960Z"
+  },
+  "m-hiru-4-6-15m-low-02": {
+    "slug": "m-hiru-4-6-15m-low-02",
+    "ok": true,
+    "file": "/hero-ai/m-hiru-4-6-15m-low-02.webp",
+    "generatedAt": "2026-05-14T01:04:40.216Z"
+  },
+  "m-hiru-4-6-15m-low-03": {
+    "slug": "m-hiru-4-6-15m-low-03",
+    "ok": true,
+    "file": "/hero-ai/m-hiru-4-6-15m-low-03.webp",
+    "generatedAt": "2026-05-14T01:04:40.820Z"
+  },
+  "m-hiru-4-6-20m-low-01": {
+    "slug": "m-hiru-4-6-20m-low-01",
+    "ok": true,
+    "file": "/hero-ai/m-hiru-4-6-20m-low-01.webp",
+    "generatedAt": "2026-05-14T01:04:40.972Z"
+  },
+  "m-yatsu-1-2-10m-free-01": {
+    "slug": "m-yatsu-1-2-10m-free-01",
+    "ok": true,
+    "file": "/hero-ai/m-yatsu-1-2-10m-free-01.webp",
+    "generatedAt": "2026-05-14T01:04:41.832Z"
+  },
+  "m-yatsu-2-3-10m-free-01": {
+    "slug": "m-yatsu-2-3-10m-free-01",
+    "ok": true,
+    "file": "/hero-ai/m-yatsu-2-3-10m-free-01.webp",
+    "generatedAt": "2026-05-14T01:04:42.917Z"
+  },
+  "m-yatsu-4-6-10m-free-01": {
+    "slug": "m-yatsu-4-6-10m-free-01",
+    "ok": true,
+    "file": "/hero-ai/m-yatsu-4-6-10m-free-01.webp",
+    "generatedAt": "2026-05-14T01:04:42.930Z"
+  },
+  "m-yatsu-4-6-15m-low-01": {
+    "slug": "m-yatsu-4-6-15m-low-01",
+    "ok": true,
+    "file": "/hero-ai/m-yatsu-4-6-15m-low-01.webp",
+    "generatedAt": "2026-05-14T01:04:44.448Z"
+  },
+  "m-yatsu-2-3-15m-low-01": {
+    "slug": "m-yatsu-2-3-15m-low-01",
+    "ok": true,
+    "file": "/hero-ai/m-yatsu-2-3-15m-low-01.webp",
+    "generatedAt": "2026-05-14T01:04:45.945Z"
+  },
+  "m-yoru-1-2-15m-low-01": {
+    "slug": "m-yoru-1-2-15m-low-01",
+    "ok": true,
+    "file": "/hero-ai/m-yoru-1-2-15m-low-01.webp",
+    "generatedAt": "2026-05-14T01:04:46.002Z"
+  },
+  "m-yoru-1-2-15m-low-02": {
+    "slug": "m-yoru-1-2-15m-low-02",
+    "ok": true,
+    "file": "/hero-ai/m-yoru-1-2-15m-low-02.webp",
+    "generatedAt": "2026-05-14T01:04:46.141Z"
+  },
+  "m-yoru-1-2-20m-low-01": {
+    "slug": "m-yoru-1-2-20m-low-01",
+    "ok": true,
+    "file": "/hero-ai/m-yoru-1-2-20m-low-01.webp",
+    "generatedAt": "2026-05-14T01:04:46.682Z"
+  },
+  "m-yoru-2-3-15m-low-02": {
+    "slug": "m-yoru-2-3-15m-low-02",
+    "ok": true,
+    "file": "/hero-ai/m-yoru-2-3-15m-low-02.webp",
+    "generatedAt": "2026-05-14T01:04:48.504Z"
+  },
+  "m-yoru-2-3-15m-low-01": {
+    "slug": "m-yoru-2-3-15m-low-01",
+    "ok": true,
+    "file": "/hero-ai/m-yoru-2-3-15m-low-01.webp",
+    "generatedAt": "2026-05-14T01:04:48.643Z"
+  },
+  "m-yoru-2-3-15m-low-04": {
+    "slug": "m-yoru-2-3-15m-low-04",
+    "ok": true,
+    "file": "/hero-ai/m-yoru-2-3-15m-low-04.webp",
+    "generatedAt": "2026-05-14T01:04:49.458Z"
+  },
+  "m-yoru-2-3-15m-low-03": {
+    "slug": "m-yoru-2-3-15m-low-03",
+    "ok": true,
+    "file": "/hero-ai/m-yoru-2-3-15m-low-03.webp",
+    "generatedAt": "2026-05-14T01:04:49.854Z"
+  },
+  "m-yoru-2-3-20m-low-03": {
+    "slug": "m-yoru-2-3-20m-low-03",
+    "ok": true,
+    "file": "/hero-ai/m-yoru-2-3-20m-low-03.webp",
+    "generatedAt": "2026-05-14T01:04:50.756Z"
+  },
+  "m-yoru-2-3-20m-mid-01": {
+    "slug": "m-yoru-2-3-20m-mid-01",
+    "ok": true,
+    "file": "/hero-ai/m-yoru-2-3-20m-mid-01.webp",
+    "generatedAt": "2026-05-14T01:04:51.299Z"
+  },
+  "m-yoru-4-6-15m-low-02": {
+    "slug": "m-yoru-4-6-15m-low-02",
+    "ok": true,
+    "file": "/hero-ai/m-yoru-4-6-15m-low-02.webp",
+    "generatedAt": "2026-05-14T01:04:51.899Z"
+  },
+  "m-yoru-4-6-15m-low-03": {
+    "slug": "m-yoru-4-6-15m-low-03",
+    "ok": true,
+    "file": "/hero-ai/m-yoru-4-6-15m-low-03.webp",
+    "generatedAt": "2026-05-14T01:04:52.109Z"
+  },
+  "m-yoru-4-6-20m-low-02": {
+    "slug": "m-yoru-4-6-20m-low-02",
+    "ok": true,
+    "file": "/hero-ai/m-yoru-4-6-20m-low-02.webp",
+    "generatedAt": "2026-05-14T01:04:53.589Z"
+  },
+  "m-yoru-4-6-20m-low-01": {
+    "slug": "m-yoru-4-6-20m-low-01",
+    "ok": true,
+    "file": "/hero-ai/m-yoru-4-6-20m-low-01.webp",
+    "generatedAt": "2026-05-14T01:04:54.193Z"
+  },
+  "m-yoru-4-6-30m-mid-01": {
+    "slug": "m-yoru-4-6-30m-mid-01",
+    "ok": true,
+    "file": "/hero-ai/m-yoru-4-6-30m-mid-01.webp",
+    "generatedAt": "2026-05-14T01:04:54.718Z"
+  },
+  "m-yoru-4-6-20m-mid-01": {
+    "slug": "m-yoru-4-6-20m-mid-01",
+    "ok": true,
+    "file": "/hero-ai/m-yoru-4-6-20m-mid-01.webp",
+    "generatedAt": "2026-05-14T01:04:55.388Z"
+  },
+  "p-event-halloween-2-3-120m-low-09": {
+    "slug": "p-event-halloween-2-3-120m-low-09",
+    "ok": true,
+    "file": "/hero-ai/p-event-halloween-2-3-120m-low-09.webp",
+    "generatedAt": "2026-05-14T01:04:56.446Z"
+  },
+  "p-event-halloween-4-6-60m-low-10": {
+    "slug": "p-event-halloween-4-6-60m-low-10",
+    "ok": true,
+    "file": "/hero-ai/p-event-halloween-4-6-60m-low-10.webp",
+    "generatedAt": "2026-05-14T01:04:57.530Z"
+  },
+  "p-event-hanabi-2-3-120m-low-08": {
+    "slug": "p-event-hanabi-2-3-120m-low-08",
+    "ok": true,
+    "file": "/hero-ai/p-event-hanabi-2-3-120m-low-08.webp",
+    "generatedAt": "2026-05-14T01:04:57.698Z"
+  },
+  "p-event-hinamatsuri-2-3-60m-low-18": {
+    "slug": "p-event-hinamatsuri-2-3-60m-low-18",
+    "ok": true,
+    "file": "/hero-ai/p-event-hinamatsuri-2-3-60m-low-18.webp",
+    "generatedAt": "2026-05-14T01:04:58.587Z"
+  },
+  "p-event-birthday-4-6-120m-mid-20": {
+    "slug": "p-event-birthday-4-6-120m-mid-20",
+    "ok": true,
+    "file": "/hero-ai/p-event-birthday-4-6-120m-mid-20.webp",
+    "generatedAt": "2026-05-14T01:04:58.835Z"
+  }
+}
