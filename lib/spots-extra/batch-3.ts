@@ -1,0 +1,61 @@
+import type { Spot } from '../spots';
+import type { AreaSlug } from '../area';
+
+/** スポット拡充バッチ3（中部・東海）。SPOTS に name 単位でマージされる。 */
+export const SPOTS_EXTRA_3: Partial<Record<AreaSlug, Spot[]>> = {
+  fukui: [
+    { name: '福井県立恐竜博物館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '勝山市', note: '恐竜王国ふくいの象徴。骨格展示が圧巻で化石発掘体験もでき半日たっぷり遊べる', budget: 'low' },
+    { name: '越前松島水族館', category: 'aquarium', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '坂井市', note: '見てふれて学べる体験型水族館。ペンギンの散歩や魚へのえさやりが子どもに人気', budget: 'low' },
+    { name: '福井県児童科学館 エンゼルランドふくい', category: 'museum', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '坂井市', note: '科学展示とプラネタリウム、屋外大型遊具がそろう複合施設で一日中楽しめる', budget: 'low' },
+    { name: '鯖江市西山動物園', category: 'zoo', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '鯖江市', note: '入園無料の小さな動物園。レッサーパンダが多数いて屋内施設で雨でも観察できる', budget: 'free', hiddenTip: '併設の西山公園にパンダ型遊具のこぱんだらんどがあり小さい子も遊べる' },
+    { name: '西山公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '鯖江市', note: '約56ヘクタールの広大な公園。立体的なアスレチックや芝生広場でのびのび遊べる', budget: 'free' },
+  ],
+  gifu: [
+    { name: '世界淡水魚園水族館 アクア・トトぎふ', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '各務原市', note: '世界最大級の淡水魚水族館。長良川の魚から世界の淡水生物まで約220種を展示', budget: 'low' },
+    { name: '河川環境楽園 オアシスパーク', category: 'park', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '各務原市', note: '水族館や観覧車、川遊びができる無料の大型公園。グルメやBBQ施設も併設', budget: 'free' },
+    { name: 'ぎふ清流里山公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '美濃加茂市', note: '里山を再現した入園無料の体験型公園。芝すべりやゴーカート、牧場でのふれあいも', budget: 'free' },
+    { name: '岐阜県こどもの国', category: 'park', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '養老町', note: '養老公園内にある児童遊園地。地形を生かした遊具で1歳から小学生まで遊べる', budget: 'free' },
+    { name: '木曽三川公園センター', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '海津市', note: '木曽三川にはさまれた自然豊かな大型公園。展望タワーや遊具で一日たっぷり遊べる', budget: 'free' },
+    { name: 'ピュアハートキッズランド大垣', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '大垣市', note: '東海最大級の屋内遊び場。ボールプールや砂場、大型遊具で天候を気にせず遊べる', budget: 'low' },
+  ],
+  shizuoka: [
+    { name: '静岡市立日本平動物園', category: 'zoo', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '静岡市', note: '猛獣館299やフライングメガドームが見どころ。屋内施設も多く雨の日も楽しめる', budget: 'low' },
+    { name: '富士サファリパーク', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '裾野市', note: '富士山麓で約60種900頭が暮らす。マイカーやバスで野生動物を間近に観察できる', budget: 'mid' },
+    { name: '浜松市動物園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '浜松市', note: '浜名湖畔に約100種の動物。霊長類の展示は国内最大級で隣接の遊園地と合わせて遊べる', budget: 'low' },
+    { name: '静岡科学館る・く・る', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '静岡市', note: 'JR静岡駅南口すぐの参加体験型科学館。見る・きく・さわるで遊びながら学べる', budget: 'low' },
+    { name: '伊豆ぐらんぱる公園', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '伊東市', note: '東京ドーム約5個分の広大な敷地。アトラクションやアスレチックで一日遊べる', budget: 'mid' },
+    { name: '伊豆アニマルキングダム', category: 'zoo', place: 'mixed', ages: ['2-3', '4-6'], city: '東伊豆町', note: 'キリンやライオンへのえさやりなど動物との距離が近い。遊園地エリアも併設', budget: 'mid' },
+    { name: '沼津港深海水族館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '沼津市', note: '深海魚をテーマにしたユニークな水族館。沼津港の複合施設内で雨でも楽しめる', budget: 'low' },
+  ],
+  aichi: [
+    { name: '東山動植物園', category: 'zoo', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '名古屋市', note: '飼育種類数日本一の動物園と植物園が一体。コアラやゾウなど人気動物に会える', budget: 'low' },
+    { name: '名古屋港水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '名古屋市', note: '約500種の海の生きものを展示。シャチやイルカパフォーマンスが見もので授乳室も完備', budget: 'mid' },
+    { name: '名古屋市科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '名古屋市', note: '世界最大級のプラネタリウムが目印。約260種の体験展示で科学を楽しく学べる', budget: 'low' },
+    { name: '豊橋総合動植物公園 のんほいパーク', category: 'zoo', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '豊橋市', note: '動物園・植物園・自然史博物館・遊園地がそろう総合公園。一日中遊べる広さ', budget: 'low' },
+    { name: '愛知県児童総合センター', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '長久手市', note: '愛・地球博記念公園内にある屋内遊び場。体を使う遊具や工作で家ではできない遊びができる', budget: 'low' },
+    { name: 'レゴランド・ジャパン', category: 'amusement', place: 'mixed', ages: ['2-3', '4-6'], city: '名古屋市', note: '2歳から12歳の子と家族が楽しめるテーマパーク。レゴの世界観のアトラクションが充実', budget: 'high' },
+    { name: '安城産業文化公園デンパーク', category: 'park', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '安城市', note: '四季の花と緑が楽しめる公園。国内最大級の大型木製アスレチック遊具がある', budget: 'low' },
+    { name: '愛知こどもの国', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '西尾市', note: 'ゴーカートや本物の蒸気機関車に乗れる広大な児童遊園。自然の中でのびのび遊べる', budget: 'free' },
+  ],
+  mie: [
+    { name: '鳥羽水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '鳥羽市', note: '飼育種類数日本一の水族館。ジュゴンに会えるのは日本でここだけ、自由通路で回れる', budget: 'mid' },
+    { name: '名古屋アンパンマンこどもミュージアム＆パーク', category: 'amusement', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '桑名市', note: 'アンパンマンの世界を体験できる施設。虹のすべりだいなど小さい子向け遊具が充実', budget: 'mid' },
+    { name: 'ナガシマスパーランド', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '桑名市', note: '絶叫マシンから子ども専用エリアまでそろう大型遊園地。温泉やアウトレットも隣接', budget: 'high' },
+    { name: '鈴鹿サーキット', category: 'amusement', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '鈴鹿市', note: '0歳から乗れる乗り物や子どもが自分で運転できるアトラクションがそろう遊園地', budget: 'mid' },
+    { name: '伊勢シーパラダイス', category: 'aquarium', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '伊勢市', note: 'セイウチやアザラシなど海獣とのふれあいが充実した水族館。距離が近く子どもが喜ぶ', budget: 'low' },
+    { name: '志摩スペイン村', category: 'amusement', place: 'mixed', ages: ['2-3', '4-6'], city: '志摩市', note: 'スペインの街並みを再現したテーマパーク。コースターデビュー向けや屋内型の乗り物も', budget: 'high' },
+  ],
+  shiga: [
+    { name: '滋賀県立びわ湖こどもの国', category: 'park', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '高島市', note: '琵琶湖畔の大型児童館。全長40mの大型遊具や冒険水路、屋内のプレイルームもある', budget: 'free' },
+    { name: '滋賀県立琵琶湖博物館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '草津市', note: '湖と人間をテーマにした総合博物館。国内最大級の淡水生物の水族展示室が見もの', budget: 'low' },
+    { name: '草津市立水生植物公園みずの森', category: 'park', place: 'mixed', ages: ['2-3', '4-6'], city: '草津市', note: 'ハスやスイレンなど水生植物がメインの植物公園。中学生以下は入園無料', budget: 'low', hiddenTip: '隣接の琵琶湖博物館とセットで回ると一日たっぷり楽しめる' },
+    { name: '滋賀農業公園ブルーメの丘', category: 'farm', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '日野町', note: '花と動物にふれあえる体験型の農業公園。水あそびやアスレチックも楽しめる', budget: 'mid' },
+  ],
+  nara: [
+    { name: '奈良公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '奈良市', note: '東大寺や春日大社が隣接する広大な都市公園。約1300頭の鹿とふれあえる', budget: 'free' },
+    { name: '奈良県営馬見丘陵公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '河合町', note: '入園無料の大型公園。北エリアに大型遊具や噴水のある徒渉池、大芝生広場がある', budget: 'free' },
+    { name: 'うだ・アニマルパーク', category: 'farm', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '宇陀市', note: '入園無料の県営動物公園。ポニー乗馬や乳搾り、ヤギ・羊へのえさやりが体験できる', budget: 'free' },
+    { name: '橿原市昆虫館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '橿原市', note: '香久山公園内の自然史博物館。放蝶温室で四季を問わず舞うチョウを観察できる', budget: 'low' },
+    { name: '生駒山上遊園地', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '生駒市', note: '生駒山の山頂にある入園無料の遊園地。大阪平野や大和盆地を一望できる', budget: 'low' },
+  ],
+};

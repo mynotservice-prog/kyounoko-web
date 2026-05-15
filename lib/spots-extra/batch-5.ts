@@ -1,0 +1,70 @@
+import type { Spot } from '../spots';
+import type { AreaSlug } from '../area';
+
+/** スポット拡充バッチ5（中国・四国・福岡）。SPOTS に name 単位でマージされる。 */
+export const SPOTS_EXTRA_5: Partial<Record<AreaSlug, Spot[]>> = {
+  hiroshima: [
+    { name: '広島市安佐動物公園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '広島市', note: '167種以上の動物に会える。ぴーちくパークでポニー乗馬や小動物とのふれあいも', budget: 'low' },
+    { name: 'みやじマリン 宮島水族館', category: 'aquarium', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '廿日市市', note: '宮島にある体験型水族館。380種以上を展示する中国地方有数の規模', budget: 'low' },
+    { name: 'みろくの里', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '福山市', note: '20種以上の遊具や恐竜パーク、昭和の町並み再現エリアがある総合レジャー施設', budget: 'mid' },
+    { name: 'マリホ水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '広島市', note: '広島市西区のマリーナホップ内にある屋内水族館。雨の日でも楽しめる', budget: 'low' },
+    { name: '福山市立動物園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '福山市', note: 'ゾウやキリンに会え、ふれあいゾーンも。中学生以下は入園無料', budget: 'free' },
+    { name: 'ヌマジ交通ミュージアム', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '広島市', note: '世界の乗り物や交通の歴史を学べる科学館。体験教室やシアターも', budget: 'low', hiddenTip: '毎週土曜日は子ども入館料無料' },
+    { name: 'ピュアハートキッズランド広島府中', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '安芸郡府中町', note: '大型ショッピングモール内の屋内遊び場。天候を気にせず体を動かせる', budget: 'mid' },
+  ],
+  yamaguchi: [
+    { name: '海響館（下関市立しものせき水族館）', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '下関市', note: '関門海峡の潮流を再現した大水槽や日本最大級のペンギン村が見どころ', budget: 'mid' },
+    { name: '秋吉台自然動物公園サファリランド', category: 'zoo', place: 'mixed', ages: ['2-3', '4-6'], city: '美祢市', note: 'マイカーやエサやりバスで野生動物を間近に。ふれあい広場も人気', budget: 'mid' },
+    { name: 'ときわ動物園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '宇部市', note: '霊長類の展示が充実。ときわ公園内にあり遊園地や植物館も併設', budget: 'low' },
+    { name: '愛宕山ふくろう公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '岩国市', note: '巨大なふくろうの遊具がシンボル。アスレチックで冒険気分が味わえる', budget: 'free' },
+    { name: '吉香公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '岩国市', note: '大噴水の広場が夏の水遊びスポットに。錦帯橋のたもとの広い公園', budget: 'free' },
+    { name: '長門おもちゃ美術館', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '長門市', note: '木の香りに包まれた館内で木のおもちゃ遊び。五感で楽しめる体験型施設', budget: 'low' },
+    { name: 'キッズランドUS フジグラン山口店', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '山口市', note: 'エアートランポリンやボールプールが揃う室内遊び場。親子で遊べる', budget: 'mid' },
+  ],
+  tokushima: [
+    { name: 'とくしま動物園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '徳島市', note: '隣接のとくしまファミリーランドと合わせて遊べる。動物展示が充実', budget: 'low' },
+    { name: 'とくしまファミリーランド', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '徳島市', note: '観覧車やメリーゴーランドなど小さな子でも楽しめる遊園地', budget: 'low' },
+    { name: '日和佐うみがめ博物館カレッタ', category: 'museum', place: 'mixed', ages: ['2-3', '4-6'], city: '海部郡美波町', note: '世界でも珍しいウミガメ専門の博物館。子ガメから大ガメまで飼育', budget: 'low' },
+    { name: '月見ヶ丘海浜公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '板野郡松茂町', note: '芝生広場やクレーターをイメージした遊具、夏のじゃぶじゃぶ池が人気', budget: 'free' },
+    { name: '日峯大神子広域公園こども広場', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '徳島市', note: 'アスレチック遊具と展望広場のある広域公園。のびのび体を動かせる', budget: 'free' },
+    { name: '板野町歴史文化公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '板野郡板野町', note: 'イタノザウルスの骨格遊具が人気の公園。恐竜好きの子どもにおすすめ', budget: 'free' },
+    { name: '徳島県立あすたむらんど', category: 'museum', place: 'mixed', ages: ['2-3', '4-6'], city: '板野郡板野町', note: '科学体験施設と屋外の遊具エリアを併せ持つ大型公園。1日遊べる', budget: 'low' },
+  ],
+  kagawa: [
+    { name: '四国水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '綾歌郡宇多津町', note: '鳴門のうず潮や四万十川など四国の水景をテーマにした水族館', budget: 'mid' },
+    { name: 'しろとり動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '東かがわ市', note: 'ゾウやキリンにエサやり体験ができ、動物との距離が近い動物園', budget: 'mid' },
+    { name: '国営讃岐まんのう公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '仲多度郡まんのう町', note: 'ロング滑り台やふわふわドーム、水遊び広場が揃う四国唯一の国営公園', budget: 'low' },
+    { name: 'さぬきこどもの国', category: 'park', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '高松市', note: '高松空港隣接で飛行機が間近に見える。屋内外の遊具が充実', budget: 'free' },
+    { name: '讃岐おもちゃ美術館', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '高松市', note: '香川県産の木材を使ったおもちゃで遊べる体験型ミュージアム', budget: 'low' },
+    { name: 'BOAT KIDS PARK Mooovi まるがめ', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '丸亀市', note: 'からだ・あたま・こころを育むがコンセプト。年齢別エリアが充実', budget: 'free' },
+    { name: 'NEWレオマワールド', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '丸亀市', note: '四国最大級の遊園地。小さな子向けのアトラクションも揃う', budget: 'mid' },
+  ],
+  ehime: [
+    { name: '愛媛県立とべ動物園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '伊予郡砥部町', note: '147種を飼育する中四国有数の動物園。段差が少なくベビーカーでも安心', budget: 'low' },
+    { name: 'えひめこどもの城', category: 'park', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '松山市', note: '広大な敷地に大型遊具やアスレチック、体験施設が揃う子ども向け公園', budget: 'free' },
+    { name: 'おさかな館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '大洲市', note: '淡水魚を中心とした珍しい水族館。世界最大級のピラルクが見られる', budget: 'low' },
+    { name: 'トンデミ愛媛', category: 'indoor', place: 'indoor', ages: ['4-6'], city: '伊予郡松前町', note: '全天候型の屋内アスレチック施設。雨の日でも体を思いきり動かせる', budget: 'mid' },
+    { name: '鉄道歴史パーク in SAIJO', category: 'museum', place: 'mixed', ages: ['2-3', '4-6'], city: '西条市', note: '実物車両を展示する鉄道テーマの施設。電車好きの子どもにおすすめ', budget: 'free' },
+    { name: 'タオル美術館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '今治市', note: 'タオルの製造工程を見学できる体験型ミュージアム。庭園やショップも', budget: 'low' },
+    { name: 'ザキッズ 松山三越店', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '松山市', note: '0歳から遊べる全天候型の室内遊び場。多彩な遊具が揃う', budget: 'mid' },
+  ],
+  kochi: [
+    { name: 'のいち動物公園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '香南市', note: '自然に近い環境の展示で評価が高い動物園。18歳未満は入園無料', budget: 'free' },
+    { name: '桂浜水族館', category: 'aquarium', place: 'mixed', ages: ['2-3', '4-6'], city: '高知市', note: '桂浜にある水族館。トドやアシカ、ペンギンとの距離が近くふれあいも', budget: 'low' },
+    { name: '秦山公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '香南市', note: '超ロングローラー滑り台やふわふわドームなど大型遊具が揃う人気公園', budget: 'free' },
+    { name: '比島交通公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '高知市', note: '本物のSL展示やゴーカートで交通ルールを学べる公園。入園無料', budget: 'free' },
+    { name: 'わんぱーくこうち', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '高知市', note: '動物園を併設し夏は水遊びも楽しめる入園無料の総合公園', budget: 'free' },
+    { name: '創造広場アクトランド', category: 'museum', place: 'mixed', ages: ['2-3', '4-6'], city: '香南市', note: '人力で動かす遊具やジャングルジムが揃う。入場・遊具利用が無料', budget: 'free' },
+    { name: '佐川おもちゃ美術館', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '高岡郡佐川町', note: '木のおもちゃで遊べる体験型ミュージアム。道の駅佐川にある', budget: 'low' },
+  ],
+  fukuoka: [
+    { name: 'マリンワールド海の中道', category: 'aquarium', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '福岡市', note: '九州の海をテーマに約350種を展示。屋根付きプールのイルカショーも', budget: 'mid' },
+    { name: '福岡市動物園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '福岡市', note: '市街地近くにある動物園。植物園も併設し1日ゆっくり過ごせる', budget: 'low' },
+    { name: '海の中道海浜公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '福岡市', note: '海沿いの広大な国営公園。動物の森や大型遊具、サイクリングコースも', budget: 'low' },
+    { name: 'のこのしまアイランドパーク', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '福岡市', note: '能古島にある自然公園。アスレチックやミニ動物園、ロープスキーで遊べる', budget: 'low' },
+    { name: '到津の森公園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '北九州市', note: '約100種の動物展示に観覧車などの遊具も。ふれあい動物園が人気', budget: 'low' },
+    { name: '北九州市立いのちのたび博物館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '北九州市', note: '恐竜の骨格標本や動く恐竜ロボットが見どころの西日本最大級の自然史博物館', budget: 'low' },
+    { name: '響灘緑地（グリーンパーク）', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '北九州市', note: '大芝生広場やバラ園、熱帯生態園がある北九州市内最大の都市公園', budget: 'low' },
+    { name: 'キッザニア福岡', category: 'indoor', place: 'indoor', ages: ['4-6'], city: '福岡市', note: 'さまざまな職業を体験できる施設。専用通貨を使った社会体験ができる', budget: 'high' },
+  ],
+};

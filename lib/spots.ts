@@ -12,6 +12,7 @@
 
 import type { AreaSlug } from './area';
 import { KID_REPORTS } from './kid-reports';
+import { SPOTS_EXTRA } from './spots-extra';
 
 export type SpotCategory =
   | 'zoo'          // 動物園
@@ -3701,6 +3702,24 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     popular: true,
   },
 ];
+
+// ============================================================================
+// スポット拡充バッチ（SPOTS_EXTRA）のマージ
+//
+// lib/spots-extra/ の全国47都道府県の追加スポットを、SPOTS の各都道府県配列に
+// 結合する。name が既存スポットと完全一致するものは重複として除外。
+// モジュール読み込み時に一度だけ実行。
+// ============================================================================
+for (const [area, extraList] of Object.entries(SPOTS_EXTRA) as [
+  AreaSlug,
+  Spot[],
+][]) {
+  if (!extraList || extraList.length === 0) continue;
+  const existing = SPOTS[area] ?? [];
+  const existingNames = new Set(existing.map((s) => s.name));
+  const toAdd = extraList.filter((s) => !existingNames.has(s.name));
+  SPOTS[area] = [...existing, ...toAdd];
+}
 
 // ============================================================================
 // 一次情報レポート（KID_REPORTS）のマージ

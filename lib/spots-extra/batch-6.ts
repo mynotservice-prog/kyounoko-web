@@ -1,0 +1,62 @@
+import type { Spot } from '../spots';
+import type { AreaSlug } from '../area';
+
+/** スポット拡充バッチ6（九州・沖縄）。SPOTS に name 単位でマージされる。 */
+export const SPOTS_EXTRA_6: Partial<Record<AreaSlug, Spot[]>> = {
+  saga: [
+    { name: '佐賀県立宇宙科学館「ゆめぎんが」', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '武雄市', note: '科学を体験しながら学べる科学館。天体や地球の展示が充実し雨の日も安心。', budget: 'low' },
+    { name: 'あそびパーク モラージュ佐賀店', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '佐賀市', note: 'ショッピングモール内の屋内遊び場。エア遊具や砂遊びコーナーがあり雨天向き。', budget: 'low' },
+    { name: 'キッズユーエスランド 佐賀大和店', category: 'indoor', place: 'indoor', ages: ['2-3', '4-6'], city: '佐賀市', note: '体を動かして遊べる屋内遊園地。ジャングルジムやトランポリンが揃う。', budget: 'low' },
+    { name: 'BOAT KIDS PARK Moooviからつ', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '唐津市', note: 'ボーネルンド監修の屋内遊び場。年齢別ゾーンで小さな子も安心して遊べる。', budget: 'low' },
+    { name: '吉野ヶ里歴史公園', category: 'park', place: 'mixed', ages: ['2-3', '4-6'], city: '神埼市', note: '弥生時代の集落を復元した広大な歴史公園。芝生広場や遊具でのびのび過ごせる。', budget: 'low' },
+    { name: '神野公園こども遊園地', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '佐賀市', note: '佐賀市街地にある昔ながらのこども遊園地。小さな子向けの乗り物が充実。', budget: 'low' },
+  ],
+  nagasaki: [
+    { name: '長崎ペンギン水族館', category: 'aquarium', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '長崎市', note: '世界有数の種類のペンギンに会える水族館。ふれあいや屋外プールも楽しい。', budget: 'low' },
+    { name: '九十九島水族館海きらら', category: 'aquarium', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '佐世保市', note: '九十九島の海を再現した大水槽やイルカショーが見どころの水族館。', budget: 'low' },
+    { name: '九十九島動植物園森きらら', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '佐世保市', note: 'ペンギンやサルなど身近な動物に会える動植物園。希少なツシマヤマネコも。', budget: 'low' },
+    { name: '長崎東公園', category: 'park', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '長崎市', note: 'リニューアルした大型遊具広場やふれあいビーチ、屋内施設で一日遊べる公園。', budget: 'free' },
+    { name: '長崎市科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '長崎市', note: '体験展示やプラネタリウムが揃う科学館。雨の日でも科学を楽しく学べる。', budget: 'low' },
+    { name: 'あぐりの丘', category: 'park', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '長崎市', note: '広い芝生や動物とのふれあい、全天候型のあぐりドームもある丘の公園。', budget: 'free' },
+  ],
+  kumamoto: [
+    { name: '熊本市動植物園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '熊本市', note: '約120種の動物と豊かな植物が楽しめる動植物園。遊園地エリアも併設。', budget: 'low' },
+    { name: '阿蘇ファームランド', category: 'amusement', place: 'mixed', ages: ['2-3', '4-6'], city: '阿蘇郡南阿蘇村', note: '広大な敷地に運動施設やふれあい動物、体験施設が揃う一日遊べるスポット。', budget: 'mid' },
+    { name: '坪井川公園（ひごっこジャングル）', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '熊本市', note: '熊本城をイメージした超大型複合遊具「ひごっこジャングル」が人気の公園。', budget: 'free' },
+    { name: '岡岳公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '熊本市', note: '3世代で楽しめる4ゾーン構成の公園。長いスライダーや芝スキーが楽しい。', budget: 'free' },
+    { name: 'あそ☆ビバ', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '阿蘇市', note: '阿蘇内牧温泉街の大型公園。阿蘇の名所をモチーフにした遊具がそろう。', budget: 'free' },
+    { name: 'The Kids 熊本店', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '熊本市', note: '0歳から遊べる全天候型の室内遊び場。幼児から小学生まで楽しめる遊具が充実。', budget: 'low' },
+  ],
+  oita: [
+    { name: '大分マリーンパレス水族館「うみたまご」', category: 'aquarium', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '大分市', note: 'セイウチやアザラシのショーやタッチプールが楽しい水族館。屋外遊び場も。', budget: 'mid' },
+    { name: '高崎山自然動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '大分市', note: '野生のニホンザルを間近で観察できる自然動物園。うみたまごとセットで人気。', budget: 'low' },
+    { name: '九州自然動物公園アフリカンサファリ', category: 'zoo', place: 'mixed', ages: ['2-3', '4-6'], city: '宇佐市', note: '車やジャングルバスで野生動物を観察できる日本最大級のサファリパーク。', budget: 'mid' },
+    { name: 'るるパーク（大分農業文化公園）', category: 'park', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '杵築市', note: 'ダム湖を囲む広大な公園。大型遊具やボート、フラワーガーデンが楽しめる。', budget: 'free' },
+    { name: '城島高原パーク', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '別府市', note: '木製コースター「ジュピター」など約40のアトラクションがある遊園地。', budget: 'mid' },
+    { name: 'ザキッズ 大分トキハ店', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '大分市', note: '0歳から遊べる全天候型の室内遊び場。幼児から小学生向けの遊具が揃う。', budget: 'low' },
+  ],
+  miyazaki: [
+    { name: '宮崎市フェニックス自然動物園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '宮崎市', note: '約90種の動物に加え、ゴーカートやおとぎ列車の遊園地エリアもある動物園。', budget: 'low' },
+    { name: '宮崎科学技術館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '宮崎市', note: '宮崎駅近くの科学館。約120点の体験展示で科学や宇宙の不思議に触れられる。', budget: 'low' },
+    { name: '天ヶ城公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '宮崎市', note: '桜やツツジの名所。複合アスレチックや広い芝生広場で思い切り遊べる公園。', budget: 'free' },
+    { name: '皇子原公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '西諸県郡高原町', note: '霧島連山の麓にある自然豊かな公園。遊歩道や遊具で親子で気軽に遊べる。', budget: 'free' },
+    { name: 'キッズランドUS南宮崎店', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '宮崎市', note: 'ジャングルジムやボールプール、トランポリンが揃う屋内遊園地。雨の日向き。', budget: 'low' },
+    { name: 'ASOBI PARK', category: 'indoor', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '宮崎市', note: '巨大ボールプールやエア遊具のある屋内外複合キッズパーク。ベビーコーナーも。', budget: 'low' },
+  ],
+  kagoshima: [
+    { name: 'いおワールドかごしま水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '鹿児島市', note: '桜島を望む水族館。ジンベエザメの黒潮大水槽やイルカの時間が見どころ。', budget: 'low' },
+    { name: '平川動物公園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '鹿児島市', note: 'コアラやホワイトタイガーが人気の動物公園。水族館との共通券もありお得。', budget: 'low' },
+    { name: '鹿児島市立科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '鹿児島市', note: '宇宙や科学技術を学べる科学館。ドーム型のプラネタリウム「宇宙劇場」も。', budget: 'low' },
+    { name: '鹿児島県立吉野公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '鹿児島市', note: '約30haの緑豊かな県立公園。入園無料でピクニックや外遊びにおすすめ。', budget: 'free' },
+    { name: '鹿児島市中央公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '鹿児島市', note: '市中心部の公園。芝生広場や霧の噴水、夏は水遊びスポットとして賑わう。', budget: 'free' },
+  ],
+  okinawa: [
+    { name: '沖縄美ら海水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '国頭郡本部町', note: '海洋博公園内の大型水族館。ジンベエザメの巨大水槽やタッチプールが人気。', budget: 'mid' },
+    { name: 'DMMかりゆし水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '豊見城市', note: '映像演出を取り入れた没入型水族館。屋内なので天候を気にせず楽しめる。', budget: 'mid' },
+    { name: '沖縄こどもの国', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '沖縄市', note: '琉球弧の珍しい生物を飼育する動物園。小動物とのふれあいや乗馬体験も。', budget: 'low' },
+    { name: 'ネオパークオキナワ', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '名護市', note: '約100種の動物がのびのび暮らす自然動物公園。餌やりやふれあいが楽しめる。', budget: 'low' },
+    { name: 'ナゴパイナップルパーク', category: 'amusement', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '名護市', note: '自動運転のパイナップル号で植物園を見学できるテーマパーク。小さな子も安心。', budget: 'low' },
+    { name: 'おきなわワールド', category: 'amusement', place: 'mixed', ages: ['2-3', '4-6'], city: '南城市', note: '全長5kmの巨大鍾乳洞「玉泉洞」が必見の体験テーマパーク。沖縄文化も学べる。', budget: 'mid' },
+    { name: 'ザキッズ 沖縄パレットくもじ店', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '那覇市', note: '0歳から遊べる全天候型の室内遊び場。雨の日や暑い日の遊び場におすすめ。', budget: 'low' },
+  ],
+};
