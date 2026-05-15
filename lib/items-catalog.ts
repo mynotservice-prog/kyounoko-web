@@ -698,8 +698,8 @@ export const CATALOG_ITEMS: CatalogItem[] = [
   {
     id: 'ka-philips-sonicare-kids',
     category: 'kids-appliance',
-    provider: 'amazon',
-    href: 'https://www.amazon.co.jp/s?k=%E3%83%95%E3%82%A3%E3%83%AA%E3%83%83%E3%83%97%E3%82%BD%E3%83%8B%E3%83%83%E3%82%AF%E3%82%B7%E3%82%A2+kids',
+    provider: 'rakuten',
+    href: 'https://search.rakuten.co.jp/search/mall/%E3%83%95%E3%82%A3%E3%83%AA%E3%83%83%E3%83%97%E3%82%B9+%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC+%E3%82%AD%E3%83%83%E3%82%BA/',
     name: 'フィリップス ソニッケアー キッズ',
     subtitle: '3歳〜小学生向け電動歯ブラシ。アプリ連動で楽しく磨き残しを減らせる',
     price: '¥5,000〜',
@@ -707,8 +707,8 @@ export const CATALOG_ITEMS: CatalogItem[] = [
   {
     id: 'ka-braun-oral-b-kids',
     category: 'kids-appliance',
-    provider: 'amazon',
-    href: 'https://www.amazon.co.jp/s?k=%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3+%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB+%E3%82%AD%E3%83%83%E3%82%BA',
+    provider: 'rakuten',
+    href: 'https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3+%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB+%E3%82%AD%E3%83%83%E3%82%BA/',
     name: 'ブラウン オーラルB キッズ',
     subtitle: '3歳〜対応の丸型回転ヘッド。アプリ連動・ディズニーキャラ付モデルが人気',
     price: '¥3,500〜',
