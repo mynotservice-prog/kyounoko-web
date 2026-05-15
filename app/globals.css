@@ -10,8 +10,10 @@
 img, video, iframe { max-width: 100%; height: auto; }
 
 /* 折りたたみ可能セクションを画面外でスキップしてLCP/INP改善
-   （スクロール到達時に遅延レンダリングされる） */
-.section,
+   （スクロール到達時に遅延レンダリングされる）
+   ※ .section--allow-overflow が付いたものは含まない
+     （absolute配置の子要素がセクション外まで広がるケース対策） */
+.section:not(.section--allow-overflow),
 .related-card,
 .alt-card,
 .today-related-card {

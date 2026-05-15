@@ -137,13 +137,15 @@ export default function HomePage() {
       </div>
 
       {/* ======================================================================
-          駅・路線から探す（東京23区484駅×40路線対応）
+          駅・路線から探す（東京23区+関西主要駅 × 40路線対応）
           TodayFinderで見つからないユーザー向けに「駅で直接探す」導線を提供
-          ====================================================================== */}
-      <section className="section" style={{ paddingTop: 32, paddingBottom: 32 }}>
+          ※ section--allow-overflow:
+             サジェスト(absolute)が section の content-visibility:auto に
+             paint contain されて見切れる現象を回避する。 */}
+      <section className="section section--allow-overflow" style={{ paddingTop: 32, paddingBottom: 32 }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: 18 }}>
-            <span className="eyebrow" style={{ color: 'var(--clay-deep)' }}>東京23区 484駅 × 40路線対応</span>
+            <span className="eyebrow" style={{ color: 'var(--clay-deep)' }}>東京23区 + 関西主要駅 × 40路線対応</span>
             <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 24, marginTop: 6, marginBottom: 6 }}>
               駅・路線から子連れOKランチを探す
             </h2>
