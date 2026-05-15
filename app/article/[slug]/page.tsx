@@ -494,10 +494,14 @@ function FileArticleView({ article }: { article: FileArticle }) {
 
   // 記事内インライン CTA 用：
   //   - アフィ対象記事なら先頭商品を、そうでなければキーワード推定の先頭商品を1点だけ使う。
+  //   - インラインは本文を遮る位置なので、カテゴリ単位の広いフォールバックは使わず
+  //     キーワードが的確にマッチした記事のみに絞る（allowCategoryFallback: false）。
   //   - どちらも該当しない記事では出さない（null）。
   const inlineCtaItem = hasAffiliate
     ? affiliateProducts[0]
-    : getRelatedItemsForArticle(article.slug, article.category, article.title)[0];
+    : getRelatedItemsForArticle(article.slug, article.category, article.title, {
+        allowCategoryFallback: false,
+      })[0];
 
   // 概算 wordCount（HTMLタグ除去後の文字数）。Google Article リッチリザルトの
   // 推奨フィールド。日本語は文字数 = ほぼ語数として扱う。

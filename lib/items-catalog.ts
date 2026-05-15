@@ -1240,3 +1240,58 @@ export function getItemsForTodayQuery(query: {
   }
   return picked;
 }
+
+/**
+ * プラン（content/plans/*.md）の属性から「あったら便利な3アイテム」を返す。
+ * /plan/[id] ページの本文下に控えめなアフィCTAとして表示する。
+ *
+ * - kind=meal           → 冷凍宅食 / ベビーチェア
+ * - place に outdoor/indoor → ベビーカー / 抱っこ紐
+ * - place に home        → 知育玩具 / 絵本 / 知育サブスク（0-1歳はベビーチェアも）
+ * - いずれにも該当しなければ 時短家電 / 知育玩具 / 宅食 を default
+ */
+export function getItemsForPlan(
+  plan: {
+    place?: string[];
+    kind?: string;
+    ageRanges?: string[];
+  },
+  limit = 3,
+): CatalogItem[] {
+  const cats: CatalogCategory[] = [];
+  const place = plan.place ?? [];
+  const age0 = plan.ageRanges?.[0];
+
+  if (plan.kind === 'meal') {
+    cats.push('takushoku', 'baby-chair');
+  }
+  if (place.includes('outdoor') || place.includes('indoor')) {
+    cats.push('babycar', 'dakkohimo');
+  }
+  if (place.includes('home')) {
+    if (age0 === '0-1') {
+      cats.push('ehon', 'baby-chair', 'chiiku-subsc');
+    } else {
+      cats.push('educational-toy', 'ehon', 'chiiku-subsc');
+    }
+  }
+
+  // デフォルト補完
+  if (cats.length === 0) {
+    cats.push('jitan-kaden', 'educational-toy', 'takushoku');
+  }
+
+  const picked: CatalogItem[] = [];
+  const seen = new Set<string>();
+  for (const cat of cats) {
+    for (const it of CATALOG_ITEMS) {
+      if (it.category !== cat) continue;
+      if (seen.has(it.id)) continue;
+      picked.push(it);
+      seen.add(it.id);
+      if (picked.length >= limit) break;
+    }
+    if (picked.length >= limit) break;
+  }
+  return picked;
+}

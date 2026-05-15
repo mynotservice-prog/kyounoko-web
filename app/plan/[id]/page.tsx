@@ -17,6 +17,8 @@ import { TriedButton } from '@/components/ui/TriedButton';
 import { SpotList } from '@/components/common/SpotList';
 import { getRelatedArticlesForPlan } from '@/lib/cross-links';
 import { CrossLinkCards } from '@/components/article/CrossLinkCards';
+import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
+import { getItemsForPlan } from '@/lib/items-catalog';
 
 // hero 画像の自動マッチング更新を即時反映するため revalidate を短縮（5分）
 export const revalidate = 300;
@@ -92,6 +94,13 @@ export default async function PlanPage({ params }: Props) {
     .slice(0, 3);
 
   const tags = getTagsForPlan(plan);
+
+  // このプランの属性（place / kind / age）に合った「あると便利なもの」3点。
+  // 530本のプランページは従来アフィ導線が無かったため、ここで控えめに補完する。
+  const planItems = getItemsForPlan(
+    { place: plan.place, kind: plan.kind, ageRanges: plan.ageRanges },
+    3,
+  );
 
   const budgetLabels: Record<string, string> = {
     free: '無料',
@@ -217,6 +226,21 @@ export default async function PlanPage({ params }: Props) {
             place={plan.place.includes('outdoor') ? 'outdoor' : 'indoor'}
             budget={plan.budget === 'free' ? 'free' : plan.budget === 'low' ? 'low' : plan.budget === 'mid' ? 'mid' : undefined}
             limit={5}
+          />
+        )}
+
+        {/* このプランに、あると便利なもの（アフィCTA） */}
+        {planItems.length > 0 && (
+          <RelatedItemsCTA
+            label="このプランに、あると便利なもの"
+            items={planItems.map((it) => ({
+              href: it.href,
+              title: it.name,
+              subtitle: it.subtitle,
+              price: it.price,
+              provider: it.provider,
+              pr: false,
+            }))}
           />
         )}
 
@@ -351,6 +375,9 @@ export default async function PlanPage({ params }: Props) {
             </div>
           </section>
         )}
+
+        {/* AdSense Multiplex（ページ後半の回遊喚起） */}
+        <AdSlot placement="article-related" style={{ marginTop: 48 }} />
 
         {/* フィードバック誘導 */}
         <section style={{ marginTop: 56, padding: '20px 22px', background: 'var(--paper-card)', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)' }}>

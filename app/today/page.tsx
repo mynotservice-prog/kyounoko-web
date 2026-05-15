@@ -17,6 +17,7 @@ import { getAreaName } from '@/lib/area';
 import { getItemsForTodayQuery } from '@/lib/items-catalog';
 import { ShareBar } from '@/components/article/ShareBar';
 import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
+import { AdSlot } from '@/components/ads/AdSlot';
 
 export const revalidate = 3600;
 
@@ -452,6 +453,11 @@ export default async function TodayPage({ searchParams }: Props) {
 
               <AnswerCard answer={top} featured />
 
+              {/* AdSense: 結果カード直下（in-article）。
+                  /today は TodayFinder の全トラフィックが着地する最重要ページ。
+                  本文相当のコンテンツが下に続くので in-article フォーマットが自然。 */}
+              <AdSlot placement="article-mid" style={{ marginTop: 28 }} />
+
               {/* 食べる×外で食べる モード：子連れOKファミレス特集 */}
               {restaurants.length > 0 && (
                 <section className="restaurant-spots">
@@ -619,6 +625,9 @@ export default async function TodayPage({ searchParams }: Props) {
                   </Link>
                 </section>
               )}
+
+              {/* AdSense Multiplex（回遊喚起 / ページ後半の自然な切れ目） */}
+              <AdSlot placement="article-related" style={{ marginTop: 36 }} />
 
               {/* シェア（X / LINE / Facebook / Copy） */}
               <ShareBar url={shareUrl} title={shareTitle} label="この答えをシェアする" />

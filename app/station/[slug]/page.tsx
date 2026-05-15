@@ -28,6 +28,8 @@ import {
 } from '@/lib/station-conditions';
 import { StickySectionNav } from '@/components/station/StickySectionNav';
 import { AdSlot } from '@/components/ads/AdSlot';
+import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
+import { getItemsForTodayQuery } from '@/lib/items-catalog';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400; // 24h
@@ -713,6 +715,24 @@ export default async function StationPage({ params }: Props) {
               </div>
             </section>
           )}
+
+          {/* 駅＝子連れでお出かけの文脈。外出時にあると便利なものを控えめに提示。 */}
+          {(() => {
+            const outingItems = getItemsForTodayQuery({ place: 'outside' }, 3);
+            return outingItems.length > 0 ? (
+              <RelatedItemsCTA
+                label="子連れでのお出かけに、あると便利なもの"
+                items={outingItems.map((it) => ({
+                  href: it.href,
+                  title: it.name,
+                  subtitle: it.subtitle,
+                  price: it.price,
+                  provider: it.provider,
+                  pr: false,
+                }))}
+              />
+            ) : null;
+          })()}
 
           {/* AdSense: 駅ページ末尾の関連コンテンツ風広告 */}
           <AdSlot placement="article-related" style={{ marginTop: 32 }} />
