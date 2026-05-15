@@ -206,9 +206,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@type': 'Organization',
               '@id': 'https://kyounoko.jp/#organization',
               name: 'きょうのこ',
-              alternateName: 'kyounoko',
+              alternateName: ['kyounoko', 'きょうのこ｜子育ての「今日どうする」'],
               url: 'https://kyounoko.jp',
+              slogan: '子育て家庭の「今日どうする？」を3分で決める',
               description: '0〜6歳の子を育てる家庭向けに、毎日の「今日どうする？」を3分で決められる意思決定支援サイト。条件に合う1つの答えを返すTodayFinder、東京23区484駅の子連れOK店データベース、290+本の実用記事を提供。',
+              // 公式SNS等 — Google のエンティティ認識（指名検索）を強化する sameAs
+              sameAs: [
+                'https://www.instagram.com/kyounoko_family_plan/',
+              ],
               logo: {
                 '@type': 'ImageObject',
                 '@id': 'https://kyounoko.jp/#logo',
