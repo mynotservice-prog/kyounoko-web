@@ -233,4 +233,160 @@ export const CHUNK_20: StationIndieMap = {
       popular: true,
     },
   ],
+
+  // ===========================================================
+  // 明治神宮前（渋谷区・原宿）
+  // ===========================================================
+  'meiji-jingumae': [
+    {
+      name: 'FAMiRES（ファミレス）',
+      genre: 'yoshoku',
+      area: '明治神宮前駅から徒歩4分（東急プラザ原宿 ハラカド 5F）',
+      description:
+        'sio（鳥羽周作）グループが手がける「令和のファミリーレストラン」。鉄板ハンバーグやオムライス、プリンなどファミレス定番を一段上の味で。ボックス席〜テラス席まで99席、商業施設の上層階で子連れでも入りやすい。',
+      strollerOk: true,
+      seatingType: ['box', 'table', 'terrace'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+      popular: true,
+    },
+  ],
+
+  // ===========================================================
+  // 荻窪（杉並区）
+  // ===========================================================
+  'ogikubo': [
+    {
+      name: 'ラ・ヴォーリァマッタ 荻窪店',
+      genre: 'italian',
+      area: '荻窪駅から徒歩5分',
+      description:
+        '窯焼きピザが自慢のイタリアン。ベビーカー入店OKで子連れ客も多く、賑やかな雰囲気なので気兼ねなく利用できる。',
+      strollerOk: true,
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'orq.（オルク）',
+      genre: 'french',
+      area: '荻窪駅から徒歩5分',
+      description:
+        '全国から厳選した野菜と炭火焼料理のビストロ。2階だがベビーカーは店の人が運んでくれる。店内は広々、奥に座敷もありママ会にも。',
+      privateRoom: true,
+      seatingType: ['zashiki', 'table'],
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: '魚耕 荻窪本店',
+      genre: 'washoku',
+      area: '荻窪駅北口から徒歩3分',
+      description:
+        '畳の座敷席は掘りごたつに変更も可能。プライベートな個室空間で、子連れのママ会にぴったりの和食店。',
+      privateRoom: true,
+      seatingType: ['zashiki', 'table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'パンとcafe えだおね',
+      genre: 'bakery',
+      area: '荻窪駅から徒歩7分',
+      description:
+        'カフェでランチもできる荻窪の人気パン屋。店内が広々していてベビーカーでの入店も可能、子連れ客も多い。',
+      strollerOk: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  // ===========================================================
+  // 自由が丘（目黒区）
+  // ===========================================================
+  'jiyugaoka': [
+    {
+      name: 'LATTE GRAPHIC（ラテ グラフィック）自由が丘',
+      genre: 'cafe',
+      area: '自由が丘駅から徒歩3分',
+      description:
+        'キッズチェア・子ども用食器に加え、洗えるスタイやおもちゃの貸出も。授乳室にはおむつ替え台と調乳用のお湯まであり、広くてベビーカーのまま入れる。',
+      strollerOk: true,
+      kidsChair: true,
+      kidsCutlery: true,
+      seatingType: ['table'],
+      diaperChangingTable: true,
+      nursingRoom: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '花きゃべつ',
+      genre: 'sweets',
+      area: '自由が丘駅から徒歩5分',
+      description:
+        'パンケーキ専門店。ランチタイムは日替りランチセットあり。ベビーカー入店OK、オープンテラスや絵本も用意。',
+      strollerOk: true,
+      seatingType: ['table', 'terrace'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '和良自由が丘工房＆WARA CAFE',
+      genre: 'cafe',
+      area: '自由が丘駅から徒歩3分',
+      description:
+        '子供用ハイチェアあり、米粉パン食べ放題のランチが人気。取り分けできるスープなどもあり、子連れランチにぴったり。',
+      kidsChair: true,
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'Bareburger 自由が丘店',
+      genre: 'yoshoku',
+      area: '自由が丘駅から徒歩3分',
+      description:
+        'オーガニック食材のハンバーガー店。ベビーカー入店OK、ハイチェア・おむつシートありと子連れへの配慮が手厚い。',
+      strollerOk: true,
+      kidsChair: true,
+      seatingType: ['box', 'table'],
+      diaperChangingTable: true,
+      priceLunch: '〜2,000円',
+    },
+  ],
+
+  // ===========================================================
+  // 高円寺（杉並区）
+  // ===========================================================
+  'koenji': [
+    {
+      name: 'カフェ アンリ・ファーブル',
+      genre: 'cafe',
+      area: '高円寺駅から徒歩5分（座・高円寺 2階）',
+      description:
+        '劇場「座・高円寺」2階のカフェ。地元産の有機野菜を使ったイタリアン中心で、広い店内はベビーカーや車いすで入店可。施設内におむつ交換台、キッズメニューもあり。',
+      strollerOk: true,
+      kidsMenu: true,
+      seatingType: ['table'],
+      diaperChangingTable: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'Ailnoir（アイルノワール）',
+      genre: 'cafe',
+      area: '高円寺駅から徒歩5分',
+      description:
+        '席によってはベビーカーのまま入店でき、子供用の椅子もあるカフェ。落ち着いた雰囲気でゆっくり過ごせる。',
+      strollerOk: true,
+      kidsChair: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'ベイビーキングキッチン',
+      genre: 'yoshoku',
+      area: '高円寺駅から徒歩5分',
+      description:
+        '屋根裏部屋の秘密基地をイメージした店内。大人も食べられるお子様ランチがあり、ソファ席で子連れもくつろぎやすい。',
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+  ],
 };
