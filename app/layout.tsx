@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Shippori_Mincho, Noto_Sans_JP, Zen_Maru_Gothic, DM_Serif_Display, Inter } from 'next/font/google';
 import Script from 'next/script';
-import { ADSENSE_SCRIPT_SRC, ADSENSE_CLIENT, ADSENSE_ENABLED } from '@/lib/adsense';
+import { ADSENSE_SCRIPT_SRC, ADSENSE_CLIENT, ADSENSE_PUB_ID_CONFIGURED } from '@/lib/adsense';
 import { PWARegister } from '@/components/common/PWARegister';
 import './globals.css';
 
@@ -247,8 +247,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         {/* AdSense 所有権確認メタタグ（審査中も含めて常に配信） */}
         <meta name="google-adsense-account" content={ADSENSE_CLIENT} />
-        {/* AdSense スクリプト: 審査通過後に env NEXT_PUBLIC_ADSENSE_ENABLED=true で有効化 */}
-        {ADSENSE_ENABLED && (
+        {/* AdSense スクリプト（adsbygoogle.js）。
+            審査用クローラがこのコードを検出できないと、サイトのステータスが
+            「準備中」から進まない。そのため ADSENSE_ENABLED ではなく
+            pub ID の有無（ADSENSE_PUB_ID_CONFIGURED）で制御し、審査前から常時設置する。
+            実際の広告枠 <ins>（AdSlot）は ADSENSE_ENABLED で別途制御しているため、
+            審査前にこのスクリプトを置いても空の広告枠が表示されることはない。 */}
+        {ADSENSE_PUB_ID_CONFIGURED && (
           <script async src={ADSENSE_SCRIPT_SRC} crossOrigin="anonymous" />
         )}
       </head>

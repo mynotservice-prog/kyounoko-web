@@ -77,6 +77,14 @@ export function AffiliateLink({
 }: AffiliateLinkProps) {
   const providerLabel = PROVIDER_LABELS[provider];
 
+  // href の健全性チェック（ランタイム防御）。
+  // # / 空文字 / http(s) 以外のスキームは「遷移しない壊れたリンク」なので
+  // カードごと描画しない。データ側は scripts/check-affiliate-links.mjs が
+  // ビルド時に検査するが、ここでも二重に防御して壊れたリンクをユーザーに見せない。
+  if (typeof href !== 'string' || !/^https?:\/\//i.test(href.trim())) {
+    return null;
+  }
+
   // provider別にアフィリエイトトラッキングを自動付与:
   //  - rakuten: もしも経由URL（NEXT_PUBLIC_MOSHIMO_* が設定されていれば）
   //  - amazon : アソシエイトtag（NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG が設定されていれば）

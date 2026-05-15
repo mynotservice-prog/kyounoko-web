@@ -33,6 +33,22 @@ export const ADSENSE_ENABLED: boolean =
   process.env.NEXT_PUBLIC_ADSENSE_ENABLED?.trim().toLowerCase() === 'true';
 
 /**
+ * 有効な Publisher ID（pub-XXXXXXXXXXXXXXXX）が設定されているか。
+ *
+ * 【重要】AdSense の審査・承認には、サイトに AdSense コード（adsbygoogle.js）が
+ * 常時設置されていることが前提。審査用クローラがコードを検出できないと、
+ * サイトのステータスが「準備中」から進まない。
+ * そのため <script> の読み込みは ADSENSE_ENABLED ではなくこのフラグで制御し、
+ * pub ID さえあれば審査前から常にスクリプトを設置する。
+ *
+ * 一方、実際に表示される広告枠 <ins>（AdSlot コンポーネント）は引き続き
+ * ADSENSE_ENABLED で制御するため、審査前に空の広告枠が出ることはない。
+ */
+export const ADSENSE_PUB_ID_CONFIGURED: boolean = /^pub-\d{10,}$/.test(
+  ADSENSE_PUB_ID,
+);
+
+/**
  * Auto Ads（自動広告）を有効にするか。
  * 審査通過後 env `NEXT_PUBLIC_ADSENSE_AUTO_ADS=true` で有効化。
  * Auto Ads はGoogleが最適な位置に自動で広告を配置する仕組み。
