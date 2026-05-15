@@ -389,4 +389,31 @@ export const CHUNK_20: StationIndieMap = {
       priceLunch: '〜2,000円',
     },
   ],
+
+  // ===========================================================
+  // 三軒茶屋（世田谷区）
+  // ===========================================================
+  'sangenjaya': [
+    {
+      name: 'やおやのファミリーレストラン',
+      genre: 'yoshoku',
+      area: '三軒茶屋駅から徒歩4分',
+      description:
+        '靴を脱いで上がれる座敷席と個室があり、裏のエレベーターを使えばベビーカーでも入店可能。野菜中心のメニューで子連れに人気。',
+      strollerOk: true,
+      privateRoom: true,
+      seatingType: ['zashiki', 'table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'LUPOPO cafe & gallery',
+      genre: 'cafe',
+      area: '三軒茶屋駅から徒歩5分',
+      description:
+        'ハンドメイド雑貨のギャラリーを併設したカフェ。混雑していなければベビーカーで入店でき、子連れ客も多い。電話で事前予約も可能。',
+      strollerOk: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+  ],
 };
