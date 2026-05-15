@@ -10,7 +10,16 @@
 import type { Chain } from './station-restaurants';
 import type { IndieRestaurant } from './indie-restaurants';
 
-export type StationConditionSlug = 'rainy' | 'private-room' | 'baby' | 'indie';
+export type StationConditionSlug =
+  | 'rainy'
+  | 'private-room'
+  | 'baby'
+  | 'indie'
+  // v2: チェーン系SEOロングテール拡張（ファミレス/回転寿司/焼肉/キッズメニュー）
+  | 'famiresu'
+  | 'kaitenzushi'
+  | 'yakiniku'
+  | 'kids-menu';
 
 export type StationCondition = {
   /** URL slug（/station/[slug]/[condition]） */
@@ -64,6 +73,42 @@ export const STATION_CONDITIONS: readonly StationCondition[] = [
       'チェーン店を除外し、雑誌・SNSで話題の個人店・実力店だけを掲載。ご当地ならではの一軒で、家族の食事をワンランク豊かにしたい人向け。',
     tagline: 'チェーン以外、ご当地の実力店・人気店だけ',
   },
+  {
+    slug: 'famiresu',
+    label: 'ファミレス',
+    titlePart: 'ファミレスで気軽に',
+    metaPart: 'ファミレス（サイゼ・ガスト・ジョナサン等）で子連れランチ',
+    description:
+      'サイゼリヤ・ガスト・ジョナサン・デニーズ・ロイヤルホスト・ココス・バーミヤンなど、子連れ定番のファミレスだけを抽出。キッズメニュー・ベビーチェア・ボックス席が揃い、ベビーカーでも入りやすい店舗を集めました。',
+    tagline: 'キッズメニュー・ベビーチェア完備の子連れ定番ファミレス',
+  },
+  {
+    slug: 'kaitenzushi',
+    label: '回転寿司・お寿司',
+    titlePart: '回転寿司・お寿司',
+    metaPart: '回転寿司（スシロー・くら寿司・はま寿司等）で子連れOK',
+    description:
+      'スシロー・くら寿司・はま寿司などの回転寿司チェーンと、子連れで使える寿司店を抽出。タッチパネル注文・ボックス席・アレルゲン表示が揃い、子どもが飽きにくいのも回転寿司の魅力です。',
+    tagline: 'タッチパネル注文・ボックス席で子どもが飽きにくい',
+  },
+  {
+    slug: 'yakiniku',
+    label: '焼肉・しゃぶしゃぶ',
+    titlePart: '焼肉・しゃぶしゃぶ',
+    metaPart: '焼肉・しゃぶしゃぶ（牛角・しゃぶ葉等）で子連れOK',
+    description:
+      '牛角・しゃぶ葉などの焼肉・しゃぶしゃぶチェーンと、子連れで使える焼肉店を抽出。個室・座敷ありの店舗が中心で、取り分けやすく特別な日の家族の食事に向いています。',
+    tagline: '個室・座敷ありで取り分けやすい焼肉・しゃぶしゃぶ',
+  },
+  {
+    slug: 'kids-menu',
+    label: 'キッズメニューあり',
+    titlePart: 'キッズメニューあり',
+    metaPart: 'キッズメニュー・お子様セットがある子連れ歓迎店',
+    description:
+      'お子様プレート・キッズセットなど、子ども向けメニューが用意されている店舗だけを抽出。注文に迷わず、子どもの食べる量と好みに合わせやすい、子連れ歓迎の店を集めました。',
+    tagline: 'お子様プレート・キッズセットが用意された店',
+  },
 ] as const;
 
 const CONDITION_BY_SLUG = new Map<StationConditionSlug, StationCondition>(
@@ -98,6 +143,20 @@ function isRainyIndie(r: IndieRestaurant): boolean {
 }
 
 /**
+ * ファミレス判定用のチェーンslug集合。
+ * category だけだと サイゼ(italian)・バーミヤン(chinese) を取りこぼすため明示。
+ */
+const FAMIRESU_SLUGS = new Set([
+  'saizeriya',
+  'gusto',
+  'jonathan',
+  'denny-s',
+  'royal-host',
+  'cocos',
+  'bamiyan',
+]);
+
+/**
  * チェーン店を条件でフィルタ。
  * 'indie' 条件はチェーンを全除外する（=空配列）。
  */
@@ -117,6 +176,16 @@ export function filterChainsByCondition(
       );
     case 'indie':
       return [];
+    case 'famiresu':
+      return chains.filter(
+        (c) => c.category === 'family-restaurant' || FAMIRESU_SLUGS.has(c.slug),
+      );
+    case 'kaitenzushi':
+      return chains.filter((c) => c.category === 'sushi');
+    case 'yakiniku':
+      return chains.filter((c) => c.category === 'yakiniku');
+    case 'kids-menu':
+      return chains.filter((c) => c.kidsMenu === true);
     default:
       return [];
   }
@@ -139,6 +208,17 @@ export function filterIndiesByCondition(
       return indies.filter((r) => r.strollerOk === true);
     case 'indie':
       return [...indies];
+    case 'famiresu':
+      // ファミレスは本質的にチェーン業態。個人店は対象外。
+      return [];
+    case 'kaitenzushi':
+      // 寿司・海鮮ジャンルの個人店もお寿司の選択肢として併載。
+      return indies.filter((r) => r.genre === 'sushi');
+    case 'yakiniku':
+      // 焼肉・韓国（サムギョプサル等）の個人店を併載。
+      return indies.filter((r) => r.genre === 'yakiniku' || r.genre === 'korean');
+    case 'kids-menu':
+      return indies.filter((r) => r.kidsMenu === true);
     default:
       return [];
   }
