@@ -150,7 +150,23 @@ A. **店舗・時期により絵本やシール、ぬり絵などのキッズグ
 
 ## 関連記事
 
+ジョナサンと同じすかいらーく系のファミレスや、近い価格帯のチェーンもあわせて見ておくと、その日の気分・予算に合わせて選びやすくなります。
+
+**ファミレス系チェーン攻略**
+
+- [ガストの子連れ攻略｜キッズメニュー・離乳食・ベビーチェア](/article/gusto-kodzure-koryaku)
+- [デニーズの子連れ攻略｜パンケーキ・ボックス席](/article/denny-s-kodzure-koryaku)
+- [ロイヤルホストの子連れ攻略｜落ち着いた家族向け](/article/royal-host-kodzure-koryaku)
+- [ココスの子連れ攻略｜誕生日サービス・ぬりえ](/article/cocos-kodzure-koryaku)
 - [サイゼリヤ子連れ完全攻略](/article/kodzure-saize-koryaku)
+
+**ほかの選択肢**
+
+- [マクドナルドの子連れ攻略｜プレイランド・ハッピーセット](/article/mcdonalds-kodzure-koryaku)
+- [すき家の子連れ攻略｜ボックス席・牛丼ミニ](/article/sukiya-kodzure-koryaku)
+
+**まとめ・データ**
+
 - [子連れOKファミレス王道15選](/article/kodzure-famires-15sen)
 - [子連れ歓迎の和食チェーン10選](/article/kodzure-washoku-chain-10)
-- [子連れ向けレストランデータ](/data/restaurants)
+- [子連れ向けレストランデータ（全1,700店）](/data/restaurants)

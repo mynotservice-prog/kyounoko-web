@@ -153,7 +153,24 @@ A. **すかいらーく公式アプリ・LINE公式アカウント**で頻繁に
 
 ## 関連記事
 
+ガストと同じすかいらーく系のファミレスや、近い使い勝手のチェーンもあわせて見ておくと、その日の予算・気分で選び分けやすくなります。
+
+**ファミレス系チェーン攻略**
+
+- [ジョナサンの子連れ攻略｜すかいらーく系の落ち着いた一軒](/article/jonathan-kodzure-koryaku)
+- [デニーズの子連れ攻略｜パンケーキ・ボックス席](/article/denny-s-kodzure-koryaku)
+- [ロイヤルホストの子連れ攻略｜記念日にも](/article/royal-host-kodzure-koryaku)
+- [ココスの子連れ攻略｜誕生日サービス・ぬりえ](/article/cocos-kodzure-koryaku)
+- [バーミヤンの子連れ攻略｜取り分けやすい中華ファミレス](/article/bamiyan-kodzure-koryaku)
 - [サイゼリヤ子連れ完全攻略](/article/kodzure-saize-koryaku)
+
+**ほかの選択肢**
+
+- [マクドナルドの子連れ攻略｜プレイランド・ハッピーセット](/article/mcdonalds-kodzure-koryaku)
+- [すき家の子連れ攻略｜ボックス席・牛丼ミニ](/article/sukiya-kodzure-koryaku)
+
+**まとめ・データ**
+
 - [子連れOKファミレス王道15選](/article/kodzure-famires-15sen)
 - [子連れ歓迎の和食チェーン10選](/article/kodzure-washoku-chain-10)
-- [子連れ向けレストランデータ](/data/restaurants)
+- [子連れ向けレストランデータ（全1,700店）](/data/restaurants)

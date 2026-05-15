@@ -161,7 +161,20 @@ A. **野菜10種類以上、肉数種類、デザート、ドリンクバー**�
 
 ## 関連記事
 
+しゃぶ葉と同じ「取り分けやすい・特別な日に使える」焼肉・鍋系チェーンや、日常使いのファミレスもあわせてどうぞ。
+
+**焼肉・鍋・特別な日に**
+
+- [牛角の子連れ攻略｜個室・座敷・焼肉の安全配慮](/article/gyukaku-kodzure-koryaku)
+- [子連れOK 焼肉・しゃぶしゃぶ7選](/article/kodzure-yakiniku-shabu-7)
+
+**日常使いのファミレスも**
+
+- [ガストの子連れ攻略｜キッズメニュー・離乳食・ベビーチェア](/article/gusto-kodzure-koryaku)
 - [サイゼリヤ子連れ完全攻略](/article/kodzure-saize-koryaku)
+
+**まとめ・データ**
+
 - [子連れOKファミレス王道15選](/article/kodzure-famires-15sen)
 - [子連れ歓迎の和食チェーン10選](/article/kodzure-washoku-chain-10)
-- [子連れ向けレストランデータ](/data/restaurants)
+- [子連れ向けレストランデータ（全1,700店）](/data/restaurants)

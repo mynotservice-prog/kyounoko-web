@@ -153,7 +153,21 @@ A. **やよい軒公式サイトで全メニューのアレルゲン表示**あ�
 
 ## 関連記事
 
+やよい軒と同じ「定食・和食」で取り分けしやすいチェーンや、近い使い勝手のお店もあわせてどうぞ。
+
+**定食・和食チェーン攻略**
+
+- [大戸屋の子連れ攻略｜定食の取り分け・栄養バランス](/article/ootoya-kodzure-koryaku)
+- [すき家の子連れ攻略｜ボックス席・牛丼ミニ](/article/sukiya-kodzure-koryaku)
+- [丸亀製麺の子連れ攻略｜うどん取り分けのコツ](/article/marugame-kodzure-koryaku)
+
+**ファミレスも候補に**
+
+- [ガストの子連れ攻略｜キッズメニュー・離乳食・ベビーチェア](/article/gusto-kodzure-koryaku)
 - [サイゼリヤ子連れ完全攻略](/article/kodzure-saize-koryaku)
-- [子連れOKファミレス王道15選](/article/kodzure-famires-15sen)
+
+**まとめ・データ**
+
 - [子連れ歓迎の和食チェーン10選](/article/kodzure-washoku-chain-10)
-- [子連れ向けレストランデータ](/data/restaurants)
+- [子連れOKファミレス王道15選](/article/kodzure-famires-15sen)
+- [子連れ向けレストランデータ（全1,700店）](/data/restaurants)

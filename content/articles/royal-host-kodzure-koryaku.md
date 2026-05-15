@@ -160,7 +160,23 @@ A. **記念日・節目の祝い**には他ファミレスにない満足度。�
 
 ## 関連記事
 
+ロイヤルホストは記念日向けの一段上のファミレス。日常使いのチェーンや落ち着いた和食もあわせて、シーンで使い分けると便利です。
+
+**ファミレス系チェーン攻略**
+
+- [ガストの子連れ攻略｜キッズメニュー・離乳食・ベビーチェア](/article/gusto-kodzure-koryaku)
+- [ジョナサンの子連れ攻略｜すかいらーく系の落ち着いた一軒](/article/jonathan-kodzure-koryaku)
+- [デニーズの子連れ攻略｜パンケーキ・ボックス席](/article/denny-s-kodzure-koryaku)
+- [ココスの子連れ攻略｜誕生日サービス・ぬりえ](/article/cocos-kodzure-koryaku)
 - [サイゼリヤ子連れ完全攻略](/article/kodzure-saize-koryaku)
+
+**落ち着いて食べたい日に**
+
+- [大戸屋の子連れ攻略｜定食の取り分け・栄養バランス](/article/ootoya-kodzure-koryaku)
+- [コメダ珈琲店の子連れ攻略｜ソファ席・モーニング](/article/komeda-kodzure-koryaku)
+
+**まとめ・データ**
+
 - [子連れOKファミレス王道15選](/article/kodzure-famires-15sen)
 - [子連れ歓迎の和食チェーン10選](/article/kodzure-washoku-chain-10)
-- [子連れ向けレストランデータ](/data/restaurants)
+- [子連れ向けレストランデータ（全1,700店）](/data/restaurants)

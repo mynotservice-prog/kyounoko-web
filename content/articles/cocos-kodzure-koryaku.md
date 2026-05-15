@@ -160,7 +160,23 @@ A. **未就学児は無料の店舗が多い**。小学生は子供料金（200�
 
 ## 関連記事
 
+ココスと同じく子連れ歓迎のファミレス各店も、キッズメニューや誕生日サービスの違いで選び分けられます。
+
+**ファミレス系チェーン攻略**
+
+- [ガストの子連れ攻略｜キッズメニュー・離乳食・ベビーチェア](/article/gusto-kodzure-koryaku)
+- [ジョナサンの子連れ攻略｜すかいらーく系の落ち着いた一軒](/article/jonathan-kodzure-koryaku)
+- [デニーズの子連れ攻略｜パンケーキ・ボックス席](/article/denny-s-kodzure-koryaku)
+- [ロイヤルホストの子連れ攻略｜記念日にも](/article/royal-host-kodzure-koryaku)
+- [バーミヤンの子連れ攻略｜取り分けやすい中華ファミレス](/article/bamiyan-kodzure-koryaku)
 - [サイゼリヤ子連れ完全攻略](/article/kodzure-saize-koryaku)
+
+**ほかの選択肢**
+
+- [マクドナルドの子連れ攻略｜プレイランド・ハッピーセット](/article/mcdonalds-kodzure-koryaku)
+
+**まとめ・データ**
+
 - [子連れOKファミレス王道15選](/article/kodzure-famires-15sen)
 - [子連れ歓迎の和食チェーン10選](/article/kodzure-washoku-chain-10)
-- [子連れ向けレストランデータ](/data/restaurants)
+- [子連れ向けレストランデータ（全1,700店）](/data/restaurants)

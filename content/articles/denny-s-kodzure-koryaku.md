@@ -160,7 +160,23 @@ A. **デニーズ公式サイト・店内タブレット**で全メニューの�
 
 ## 関連記事
 
+デニーズと近い価格帯・客層のファミレスや、その日の予算で選べるチェーンもあわせて見ておくと便利です。
+
+**ファミレス系チェーン攻略**
+
+- [ガストの子連れ攻略｜キッズメニュー・離乳食・ベビーチェア](/article/gusto-kodzure-koryaku)
+- [ジョナサンの子連れ攻略｜すかいらーく系の落ち着いた一軒](/article/jonathan-kodzure-koryaku)
+- [ロイヤルホストの子連れ攻略｜落ち着いた家族向け](/article/royal-host-kodzure-koryaku)
+- [ココスの子連れ攻略｜誕生日サービス・ぬりえ](/article/cocos-kodzure-koryaku)
 - [サイゼリヤ子連れ完全攻略](/article/kodzure-saize-koryaku)
+
+**ほかの選択肢**
+
+- [マクドナルドの子連れ攻略｜プレイランド・ハッピーセット](/article/mcdonalds-kodzure-koryaku)
+- [コメダ珈琲店の子連れ攻略｜ソファ席・モーニング](/article/komeda-kodzure-koryaku)
+
+**まとめ・データ**
+
 - [子連れOKファミレス王道15選](/article/kodzure-famires-15sen)
 - [子連れ歓迎の和食チェーン10選](/article/kodzure-washoku-chain-10)
-- [子連れ向けレストランデータ](/data/restaurants)
+- [子連れ向けレストランデータ（全1,700店）](/data/restaurants)
