@@ -11,6 +11,7 @@
  */
 
 import type { AreaSlug } from './area';
+import { KID_REPORTS } from './kid-reports';
 
 export type SpotCategory =
   | 'zoo'          // 動物園
@@ -863,6 +864,61 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
         stayNote: '普通に半日〜1日。0歳でもピクニックで3〜5時間は過ごせる。',
         cautionNote: 'とにかく広く親が疲れる。西立川口からの入園がかなり楽。夏は暑さ対策が必須。',
       },
+    },
+    // ===== 運営者が実際に子連れで訪問したスポット（kidReport は lib/kid-reports.ts から name 一致でマージ）=====
+    {
+      name: '石神井公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '練馬区', ward: '練馬区', note: '2つの池を囲む緑地、ボートと木陰の散策路', budget: 'free',
+    },
+    {
+      name: '野川公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '調布市', note: '野川沿いの広大な自然公園、自然観察園とわき水', budget: 'free',
+    },
+    {
+      name: '武蔵野公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '府中市', note: '野川沿いの自然豊かな公園、苗圃とくじら山', budget: 'free',
+    },
+    {
+      name: '府中の森公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '府中市', note: '大型遊具と芝生広場、府中市美術館に隣接', budget: 'free',
+    },
+    {
+      name: '武蔵国分寺公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '国分寺市', note: '円形広場と霧の噴水、広い芝生でのんびり', budget: 'free',
+    },
+    {
+      name: '神代植物公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3'], city: '調布市', note: 'バラ園と大温室、舗装された散策路でベビーカー快適', budget: 'low',
+    },
+    {
+      name: '林試の森公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '品川区', ward: '品川区', note: '巨木と木陰が多い緑地、夏はじゃぶじゃぶ池', budget: 'free',
+    },
+    {
+      name: '多摩六都科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '西東京市', note: '世界最大級のプラネタリウムと体験型展示', budget: 'low',
+    },
+    {
+      name: '杉並アニメーションミュージアム', category: 'museum', place: 'indoor', ages: ['4-6'], city: '杉並区', ward: '杉並区', note: '日本のアニメの歴史を学べる体験型ミュージアム、入館無料', budget: 'free',
+    },
+    {
+      name: '0123吉祥寺・0123はらっぱ', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3'], city: '武蔵野市', note: '0〜3歳の親子のための武蔵野市の屋内施設', budget: 'free',
+    },
+    {
+      name: '京王あそびの森 HUGHUG', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '日野市', note: '高幡不動駅前の屋内遊び場、大型ネット遊具が名物', budget: 'mid',
+    },
+    {
+      name: 'しながわ水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '品川区', ward: '品川区', note: 'トンネル水槽とイルカショー、しながわ区民公園内', budget: 'low',
+    },
+    {
+      name: '板橋区立こども動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '板橋区', ward: '板橋区', note: 'モルモットふれあいとポニー乗馬、入園無料', budget: 'free',
+    },
+    {
+      name: '江戸川区自然動物園（行船公園）', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '江戸川区', ward: '江戸川区', note: '行船公園内のふれあい動物園、入園無料', budget: 'free',
+    },
+    {
+      name: '足立区生物園', category: 'zoo', place: 'indoor', ages: ['2-3', '4-6'], city: '足立区', ward: '足立区', note: '昆虫から大型動物まで、屋内中心で雨の日もOK', budget: 'low',
+    },
+    {
+      name: '江戸東京たてもの園', category: 'museum', place: 'mixed', ages: ['2-3', '4-6'], city: '小金井市', note: '小金井公園内、復元建造物を歩いて見学できる野外博物館', budget: 'low',
+    },
+    {
+      name: '京王れーるランド', category: 'museum', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '日野市', note: '多摩動物公園駅前、運転シミュレーターとプラレール', budget: 'low',
+    },
+    {
+      name: '府中市郷土の森博物館', category: 'museum', place: 'mixed', ages: ['2-3', '4-6'], city: '府中市', note: '復元建物とプラネタリウム、梅園と自然観察', budget: 'low',
     },
     {
       name: '葛西臨海公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '江戸川区', ward: '江戸川区', note: '水族園併設、芝生広場と観覧車', budget: 'free',
@@ -3630,4 +3686,20 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     popular: true,
   },
 ];
+
+// ============================================================================
+// 一次情報レポート（KID_REPORTS）のマージ
+//
+// lib/kid-reports.ts の KID_REPORTS を、スポット name の完全一致で SPOTS 内の
+// 各スポットに添付する。モジュール読み込み時に一度だけ実行。
+// すでにインラインで kidReport を持つスポット（先行7件）は尊重し、上書きしない。
+// ============================================================================
+for (const areaList of Object.values(SPOTS)) {
+  if (!areaList) continue;
+  for (const spot of areaList) {
+    if (!spot.kidReport && KID_REPORTS[spot.name]) {
+      spot.kidReport = KID_REPORTS[spot.name];
+    }
+  }
+}
 
