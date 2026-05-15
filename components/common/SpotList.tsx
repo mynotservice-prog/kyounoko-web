@@ -1,4 +1,4 @@
-import { filterSpots, type Spot, type AgeTag, SPOT_CATEGORY_LABEL } from '@/lib/spots';
+import { filterSpots, type Spot, type AgeTag, type KidReport, SPOT_CATEGORY_LABEL } from '@/lib/spots';
 import { getAreaName } from '@/lib/area';
 
 type Props = {
@@ -211,7 +211,74 @@ function SpotCard({ spot }: { spot: Spot }) {
           → {spot.nearby}
         </div>
       )}
+
+      {/* 運営者の一次情報レポート（実際に子連れで訪問して記録した実体験） */}
+      {spot.kidReport && <KidReportBlock report={spot.kidReport} />}
     </article>
+  );
+}
+
+/**
+ * 運営者が実際に子連れで訪問して記録した一次情報レポート。
+ * 「運営者が訪問して確認」バッジで、公開情報の寄せ集めではない実体験であることを明示する。
+ */
+function KidReportBlock({ report }: { report: KidReport }) {
+  const rows: { label: string; value: string }[] = [
+    { label: '行った年齢', value: report.visitAge },
+    { label: 'ベビーカー動線', value: report.strollerNote },
+    { label: '土日の混雑・狙い目', value: report.crowdNote },
+    { label: 'おむつ替え・授乳', value: report.diaperNote },
+    { label: '滞在時間の目安', value: report.stayNote },
+    { label: 'ヒヤッとした点・注意', value: report.cautionNote },
+  ];
+  return (
+    <div
+      style={{
+        marginTop: 4,
+        background: '#fbf6ee',
+        border: '1px solid #e7d9c4',
+        borderRadius: 8,
+        padding: '10px 12px',
+      }}
+    >
+      <div
+        style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: 4,
+          fontSize: 10,
+          fontWeight: 700,
+          letterSpacing: '.03em',
+          color: '#9a6b3f',
+          background: '#f1e2cb',
+          padding: '2px 8px',
+          borderRadius: 999,
+          marginBottom: 8,
+        }}
+      >
+        ✔ 運営者が実際に子連れで訪問して確認
+      </div>
+      <dl style={{ margin: 0, display: 'grid', gap: 6 }}>
+        {rows.map((r) => (
+          <div key={r.label}>
+            <dt
+              style={{
+                fontSize: 10,
+                fontWeight: 700,
+                color: '#c4704f',
+                letterSpacing: '.03em',
+                marginBottom: 1,
+              }}
+            >
+              {r.label}
+            </dt>
+            <dd style={{ margin: 0, fontSize: 11.5, color: 'var(--ink-sub)', lineHeight: 1.65 }}>
+              {r.value}
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </div>
   );
 }
 

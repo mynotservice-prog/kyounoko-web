@@ -27,6 +27,28 @@ export type SpotPlace = 'indoor' | 'outdoor' | 'mixed';
 
 export type AgeTag = '0-1' | '2-3' | '4-6';
 
+/**
+ * 運営者が実際に子連れで訪問して記録した一次情報レポート。
+ * ※ここに入れるのは運営者ながみーの実体験のみ。公開情報・口コミは混ぜない。
+ * UI では「運営者が訪問して確認」バッジ付きで表示する。
+ */
+export type KidReport = {
+  /** 情報の出どころ。'visited' = 運営者が実際に子連れで訪問して確認 */
+  source: 'visited';
+  /** 訪問した時期の子の年齢感（例: '1歳ごろ', '0歳の散歩〜4歳'） */
+  visitAge: string;
+  /** ベビーカー動線（押しやすさ・押しにくい場所・置き場・館内可否など） */
+  strollerNote: string;
+  /** 土日の混雑と、空いている狙い目の時間帯 */
+  crowdNote: string;
+  /** おむつ替え・授乳ができる場所 */
+  diaperNote: string;
+  /** 実際に過ごせた滞在時間の目安 */
+  stayNote: string;
+  /** ヒヤッとした点・年齢的に注意したい場所 */
+  cautionNote: string;
+};
+
 export type Spot = {
   name: string;
   category: SpotCategory;
@@ -57,6 +79,8 @@ export type Spot = {
   kidsMenu?: boolean;        // キッズメニューあり
   privateRoom?: boolean;     // 個室あり
   babyFood?: boolean;        // 離乳食持ち込みOK / 提供あり
+  // ---- 運営者の一次情報（実際に子連れで訪問して記録）----
+  kidReport?: KidReport;
 };
 
 /** 47都道府県分のスポットマップ。不足県は一般的な推奨のみ。 */
@@ -393,6 +417,15 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: '平日10時開園直後が狙い目。パンダ舎は整理券配布制のため公式サイトで当日の運用を確認',
       nearby: '上野公園の噴水広場・国立科学博物館と組み合わせて1日コース',
       popular: true,
+      kidReport: {
+        source: 'visited',
+        visitAge: '1.5〜4歳ごろが特に反応が良い（0歳でも散歩需要あり）',
+        strollerNote: '貸出ベビーカーあり、基本は回れる。ただし坂、西園・東園の移動、パンダ周辺はかなり混む。ベビーカー置き場はパンダ列付近など一部にあるが、押したまま移動する人も多い。',
+        crowdNote: '土日はかなり並ぶので開園直後がおすすめ。パンダ目当ての日は特に混雑する。',
+        diaperNote: '園内はかなり整備されていて、多目的トイレも多め。',
+        stayNote: '2〜5時間。子によって差が大きい。',
+        cautionNote: 'とにかく広く、坂で親が疲れる。子の目線だと動物が見えにくく抱っこが増えがち。夏はかなり暑い。',
+      },
     },
     {
       name: '多摩動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '日野市', note: '広大で歩きがい、ライオンバスが名物', budget: 'low',
@@ -409,6 +442,15 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: '雨の日の平日は空いていてのんびり回れる。ペンギン舎の裏側が穴場',
       nearby: '葛西臨海公園の芝生広場（無料）でピクニックとセット',
       popular: true,
+      kidReport: {
+        source: 'visited',
+        visitAge: '0〜3歳と相性が良い（暗い空間が平気なら0歳でも）',
+        strollerNote: '館内はスロープが多くかなり回りやすい。ベビーカー置き場は入口付近にあるが、押したまま回る人も多い。',
+        crowdNote: '入場は比較的スムーズで、上野動物園よりかなり楽。',
+        diaperNote: 'おむつ替え・授乳設備あり。多目的トイレも比較的使いやすい。',
+        stayNote: '1.5〜3時間くらい。隣接の葛西臨海公園と合わせると半日コースになりやすい。',
+        cautionNote: '暗くて怖がる子もいる。マグロの大水槽は人が集まりやすい。海風が強い日はかなり寒い。',
+      },
     },
     {
       name: 'サンシャイン水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '豊島区', note: '屋上「天空のペンギン」が人気、池袋直結', budget: 'mid',
@@ -432,6 +474,15 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '桜シーズンは朝7-9時が狙い目。ボート（別料金700〜800円/30分）は休日混雑',
       nearby: '吉祥寺駅徒歩5分、ランチは駅前のアトレでベビーカーOKの店多数',
+      kidReport: {
+        source: 'visited',
+        visitAge: '1歳ごろ',
+        strollerNote: '池の周りは舗装路が多く基本は回りやすい。一部の砂利道・動物園側の坂・池沿いの細道は押しにくい。',
+        crowdNote: 'かなり混む。吉祥寺駅側の入口・ボート周辺・カフェ周辺は昼前〜15時がピーク。朝8〜10時か16時以降が狙い目で、午前中はかなり快適。',
+        diaperNote: '比較的しっかりある。スポーツ施設管理センターや井の頭自然文化園が使いやすく、授乳室はカーテン式＋おむつ台あり。動物園側はおむつ替え設備が多め。',
+        stayNote: '1歳の子で約2時間が目安。',
+        cautionNote: '砂利道・坂・池沿いの細道はベビーカーが進みにくいので、抱っこ紐の併用が安心。',
+      },
     },
     {
       name: '国立科学博物館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '台東区', note: '恐竜化石と日本の自然史、雨天の鉄板', budget: 'low',
@@ -580,6 +631,15 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'プラレールエリア・ボールプール・ままごとエリアが揃う。土日は1日券（1,800円）と整理券制併用',
       popular: true,
+      kidReport: {
+        source: 'visited',
+        visitAge: '1〜5歳ごろが特に楽しめる（0歳専用エリアあり）',
+        strollerNote: '館内はエレベーターありで回れるが、休日はかなり混むので、押し続けるより入口近くのベビーカー置き場に置いて遊ぶスタイルが現実的。',
+        crowdNote: '休日は入場で並ぶ。開場直後がかなり重要で、昼前から一気に混む。',
+        diaperNote: 'かなり充実。ラクーア周辺も含めて赤ちゃん設備が強い。',
+        stayNote: '1.5〜4時間くらい。',
+        cautionNote: '土日はかなりカオス。ハイハイ期の子は踏まれないよう注意。休日午後は人密度が高い。雨の日の逃げ場として非常に人気。',
+      },
     },
     {
       name: '東京おもちゃ美術館', category: 'museum', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '新宿区', ward: '新宿区', note: '木のおもちゃで遊べる体験型ミュージアム', budget: 'mid',
@@ -753,6 +813,31 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'チリリンランド（自転車3歳〜）は無料貸出、補助輪外しの練習に最適',
+      kidReport: {
+        source: 'visited',
+        visitAge: '0歳の散歩〜4歳ごろ（歩き始め前後に特に活躍）',
+        strollerNote: 'かなり良い。道幅が広く舗装もきれいで段差が少ない。ただしサイクリングコース横やランナーが多い時間帯は注意。',
+        crowdNote: '午前〜昼は人が多めだが、広いので圧迫感は少ない。朝8〜10時か夕方が狙い目。',
+        diaperNote: '公園管理所周辺・売店近く・体育館側に多目的トイレあり。授乳設備は簡易的なので、車内やケープを使う人も多い。',
+        stayNote: '0〜1歳で1.5〜3時間。2歳以降は遊具＋自転車で半日コースになりやすい。',
+        cautionNote: '自転車のスピードが速い人がいるので動線に注意。真夏はかなり暑く、遊具エリアは休日混雑する。',
+      },
+    },
+    {
+      name: '小金井公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '小金井市', note: '園路が広くフラットでベビーカーが快適、江戸東京たてもの園を併設', budget: 'free',
+      pricing: { adult: '無料（公園入場）', elementary: '無料', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '井の頭公園より道幅が広く人が分散するので、ベビーカーでもストレスが少ない',
+      kidReport: {
+        source: 'visited',
+        visitAge: '1歳ごろ',
+        strollerNote: 'かなり優秀。園路が広くフラットで、井の頭公園より道幅が広く人も分散するのでストレスが少ない。芝生エリアは押しにくいが、メインの導線は問題なし。',
+        crowdNote: '広いので「激混み感」は井の頭より弱い。ただし遊具周辺・桜の時期・BBQエリアは混む。朝9〜10時か15時以降が狙い目。',
+        diaperNote: 'サービスセンターや江戸東京たてもの園周辺に授乳・おむつ替えあり。多目的トイレやビジターセンターが使いやすい。',
+        stayNote: '長く居られるタイプ。0〜1歳でもピクニック・散歩・シート遊びで2〜4時間。2歳を超えると半日〜1日コースになりやすい。',
+        cautionNote: '夏は日陰が少ないエリアがある。とにかく広いので親が疲れやすく、自転車エリアの近くは要注意。遊具は休日かなり混む。',
+      },
     },
     {
       name: '木場公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '江東区', ward: '江東区', note: 'ふれあい広場と都市緑化植物園', budget: 'free',
@@ -769,6 +854,15 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'こどもの森のふわふわドームと雲の海（巨大トランポリン）が大人気。レンタサイクル必須級の広さ',
       popular: true,
+      kidReport: {
+        source: 'visited',
+        visitAge: '0歳〜小学生まで（年齢を問わず使いやすい）',
+        strollerNote: '最強クラス。園路が広くスロープが多く段差が少ない。レンタルベビーカーもあり。芝生や日本庭園側は少しガタつく。',
+        crowdNote: '広すぎて全体には分散されるが、ふわふわドーム・水遊び・花イベントは激混み。開園直後が狙い目。',
+        diaperNote: 'かなり充実。授乳室・おむつ台が多く、赤ちゃん連れへの配慮が強い。',
+        stayNote: '普通に半日〜1日。0歳でもピクニックで3〜5時間は過ごせる。',
+        cautionNote: 'とにかく広く親が疲れる。西立川口からの入園がかなり楽。夏は暑さ対策が必須。',
+      },
     },
     {
       name: '葛西臨海公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '江戸川区', ward: '江戸川区', note: '水族園併設、芝生広場と観覧車', budget: 'free',
@@ -2149,6 +2243,11 @@ export function filterSpots(
     const cap = order[opts.budget];
     list = list.filter((s) => (s.budget ? order[s.budget] <= cap : true));
   }
+  // 一次情報レポート（運営者が訪問して確認した実体験）付きのスポットを優先表示。
+  // limit で件数が絞られても、独自性の高いスポットが埋もれないようにする。
+  list = [...list].sort(
+    (a, b) => Number(Boolean(b.kidReport)) - Number(Boolean(a.kidReport)),
+  );
   if (opts.limit) list = list.slice(0, opts.limit);
   return list;
 }
