@@ -793,6 +793,182 @@ export const CHAINS: Chain[] = [
     ubiquity: 'specific',
     description: '巨大ピザ・ホットドッグが安い。会員制倉庫店併設。23区内店舗は少ない。',
   },
+  // ===== 拡充チェーン（v7 追加・全駅の選択肢底上げ）=====
+  {
+    slug: 'bikkuri-donkey', name: 'びっくりドンキー', category: 'family-restaurant',
+    stroller: 'good', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true, kidsCutlery: true,
+    stepFree: true, seatingType: ['box', 'table'], shareDish: true, strollerToSeat: true, allergenInfo: true,
+    lunchPrice: '〜1,500', ubiquity: 'common',
+    description: 'ハンバーグ専門ファミレス。木製ベビーチェア完備、ボックス席中心で子連れ定番。',
+  },
+  {
+    slug: 'nakau', name: 'なか卯', category: 'gyudon',
+    stroller: 'ok', kidsMenu: false, babyChair: false, privateRoom: false, babyFoodOk: true,
+    seatingType: ['table', 'counter'], shareDish: true, allergenInfo: true,
+    lunchPrice: '〜800', ubiquity: 'common',
+    description: '親子丼・うどんが看板。和風で取り分けしやすくミニサイズも。回転が速い。',
+  },
+  {
+    slug: 'matsunoya', name: '松のや', category: 'washoku',
+    stroller: 'ok', kidsMenu: false, babyChair: false, privateRoom: false, babyFoodOk: true,
+    seatingType: ['table', 'counter'], shareDish: true, allergenInfo: true,
+    lunchPrice: '〜800', ubiquity: 'common',
+    description: '松屋系のとんかつ専門。定食はご飯・味噌汁付きで取り分けやすい。券売機式。',
+  },
+  {
+    slug: 'katsuya', name: 'かつや', category: 'washoku',
+    stroller: 'ok', kidsMenu: false, babyChair: true, privateRoom: false, babyFoodOk: true,
+    seatingType: ['box', 'table', 'counter'], shareDish: true, allergenInfo: true,
+    lunchPrice: '〜800', ubiquity: 'common',
+    description: '手頃なとんかつ・カツ丼。ボックス席のある店舗が多く、ご飯ものを取り分けやすい。',
+  },
+  {
+    slug: 'tenya', name: '天丼てんや', category: 'washoku',
+    stroller: 'ok', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true,
+    seatingType: ['table', 'counter'], shareDish: true, allergenInfo: true,
+    lunchPrice: '〜800', ubiquity: 'common',
+    description: 'リーズナブルな天丼・天ぷら。お子様天丼あり、駅ビル内店舗も多い。',
+  },
+  {
+    slug: 'hanamaru-udon', name: 'はなまるうどん', category: 'noodles',
+    stroller: 'ok', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true, kidsCutlery: true,
+    seatingType: ['table', 'counter'], shareDish: true, allergenInfo: true,
+    lunchPrice: '〜800', ubiquity: 'common',
+    description: 'セルフ式うどん。やわらかいうどんは取り分けに最適、こどもセットあり。',
+  },
+  {
+    slug: 'ringer-hut', name: 'リンガーハット', category: 'noodles',
+    stroller: 'ok', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true,
+    seatingType: ['box', 'table', 'counter'], shareDish: true, allergenInfo: true,
+    lunchPrice: '〜1,500', ubiquity: 'common',
+    description: '長崎ちゃんぽん・皿うどん。野菜たっぷりで取り分けやすく、お子様メニューも。',
+  },
+  {
+    slug: 'hidakaya', name: '日高屋', category: 'chinese',
+    stroller: 'limited', kidsMenu: false, babyChair: false, privateRoom: false, babyFoodOk: true,
+    seatingType: ['table', 'counter'], shareDish: true,
+    lunchPrice: '〜800', ubiquity: 'common',
+    description: '駅前立地の中華そばチェーン。手頃で取り分けやすいが、小型店が多くベビーカーは要確認。',
+  },
+  {
+    slug: 'osaka-ohsho', name: '大阪王将', category: 'chinese',
+    stroller: 'ok', kidsMenu: false, babyChair: true, privateRoom: false, babyFoodOk: true,
+    seatingType: ['box', 'table', 'counter'], shareDish: true, allergenInfo: true,
+    lunchPrice: '〜1,500', ubiquity: 'common',
+    description: '餃子・炒飯の中華チェーン。ボックス席のある店舗が多く、取り分け前提のメニューが豊富。',
+  },
+  {
+    slug: 'mister-donut', name: 'ミスタードーナツ', category: 'bakery',
+    stroller: 'good', kidsMenu: false, babyChair: true, privateRoom: false, babyFoodOk: true,
+    seatingType: ['box', 'table', 'counter'], shareDish: true, allergenInfo: true,
+    lunchPrice: '〜800', ubiquity: 'common',
+    description: 'ドーナツに加え点心・麺類も。ベビーチェアありの店舗が多く、休憩利用にも。',
+  },
+  {
+    slug: 'saint-marc-cafe', name: 'サンマルクカフェ', category: 'cafe',
+    stroller: 'ok', kidsMenu: false, babyChair: true, privateRoom: false, babyFoodOk: true,
+    seatingType: ['table', 'counter', 'terrace'],
+    lunchPrice: '〜800', ubiquity: 'common',
+    description: 'チョコクロが看板のカフェ。ベビーチェアありの店舗が多く、軽食・休憩に。',
+  },
+  {
+    slug: 'veloce', name: 'カフェ・ベローチェ', category: 'cafe',
+    stroller: 'limited', kidsMenu: false, babyChair: false, privateRoom: false, babyFoodOk: true,
+    seatingType: ['table', 'counter'],
+    lunchPrice: '〜800', ubiquity: 'common',
+    description: '低価格のセルフカフェ。駅前小型店が多くベビーカーは要確認だが、短時間の休憩に便利。',
+  },
+  {
+    slug: 'pronto', name: 'プロント', category: 'cafe',
+    stroller: 'ok', kidsMenu: false, babyChair: false, privateRoom: false, babyFoodOk: true,
+    seatingType: ['table', 'counter'],
+    lunchPrice: '〜1,500', ubiquity: 'common',
+    description: '昼はカフェ・パスタ。駅近に多く、軽いランチや休憩に使いやすい。',
+  },
+  {
+    slug: 'kappa-sushi', name: 'かっぱ寿司', category: 'sushi',
+    stroller: 'good', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true, kidsCutlery: true,
+    stepFree: true, seatingType: ['box', 'table'], shareDish: true, strollerToSeat: true, allergenInfo: true,
+    lunchPrice: '〜1,500', ubiquity: 'common',
+    description: '回転寿司チェーン。ボックス席・ベビーチェア完備、サイドメニューも豊富で取り分けやすい。',
+  },
+  {
+    slug: 'freshness-burger', name: 'フレッシュネスバーガー', category: 'fast-food',
+    stroller: 'ok', kidsMenu: false, babyChair: true, privateRoom: false, babyFoodOk: true,
+    seatingType: ['table', 'counter', 'terrace'], allergenInfo: true,
+    lunchPrice: '〜1,500', ubiquity: 'common',
+    description: '野菜多めのこだわりバーガー。落ち着いた雰囲気でベビーチェアありの店舗も。',
+  },
+  {
+    slug: 'kushikatsu-tanaka', name: '串カツ田中', category: 'washoku',
+    stroller: 'good', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true,
+    seatingType: ['box', 'table', 'counter'], shareDish: true, allergenInfo: true,
+    lunchPrice: '〜2,500', ubiquity: 'common',
+    description: '串カツ店だが家族客向け施策が手厚い。お子様メニュー・ベビーチェアあり、昼営業の店舗も。',
+  },
+  {
+    slug: 'yakiniku-king', name: '焼肉きんぐ', category: 'yakiniku',
+    stroller: 'good', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true, kidsCutlery: true,
+    stepFree: true, seatingType: ['box', 'table'], shareDish: true, strollerToSeat: true, allergenInfo: true,
+    lunchPrice: '〜2,500', ubiquity: 'major-only',
+    description: '食べ放題焼肉。ボックス席・ベビーチェア完備、お子様メニューやデザートも充実。',
+  },
+  {
+    slug: 'onyasai', name: 'しゃぶしゃぶ温野菜', category: 'yakiniku',
+    stroller: 'ok', kidsMenu: true, babyChair: true, privateRoom: true, babyFoodOk: true,
+    seatingType: ['box', 'table', 'zashiki'], shareDish: true, allergenInfo: true,
+    lunchPrice: '〜2,500', ubiquity: 'major-only',
+    description: 'しゃぶしゃぶ食べ放題。個室・座敷のある店舗が多く、鍋を取り分けて食べやすい。',
+  },
+  {
+    slug: 'bronco-billy', name: 'ブロンコビリー', category: 'family-restaurant',
+    stroller: 'good', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true, kidsCutlery: true,
+    stepFree: true, seatingType: ['box', 'table'], shareDish: true, strollerToSeat: true, allergenInfo: true,
+    lunchPrice: '〜2,500', ubiquity: 'major-only',
+    description: 'ステーキ・ハンバーグのファミレス。サラダバーが人気、ボックス席・ベビーチェア完備。',
+  },
+  {
+    slug: 'musashino-mori-coffee', name: 'むさしの森珈琲', category: 'cafe',
+    stroller: 'good', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true,
+    stepFree: true, seatingType: ['box', 'table'], shareDish: true, strollerToSeat: true, allergenInfo: true,
+    lunchPrice: '〜1,500', ubiquity: 'major-only',
+    description: 'すかいらーく系の落ち着いたカフェ。ふんわりパンケーキが看板、ボックス席で子連れもくつろぎやすい。',
+  },
+  {
+    slug: 'hoshino-coffee', name: '星乃珈琲店', category: 'cafe',
+    stroller: 'ok', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true,
+    seatingType: ['box', 'table'],
+    lunchPrice: '〜1,500', ubiquity: 'major-only',
+    description: '昭和喫茶風の落ち着いたカフェ。スフレパンケーキが名物、ソファ席のある店舗も多い。',
+  },
+  {
+    slug: 'kamakura-pasta', name: '鎌倉パスタ', category: 'italian',
+    stroller: 'ok', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true,
+    seatingType: ['box', 'table'], shareDish: true, allergenInfo: true,
+    lunchPrice: '〜1,500', ubiquity: 'major-only',
+    description: '生パスタと焼きたてパン食べ放題。お子様メニュー・ベビーチェアあり、ゆったり座席。',
+  },
+  {
+    slug: 'goemon', name: '洋麺屋五右衛門', category: 'italian',
+    stroller: 'ok', kidsMenu: false, babyChair: true, privateRoom: false, babyFoodOk: true,
+    seatingType: ['table'], shareDish: true,
+    lunchPrice: '〜1,500', ubiquity: 'major-only',
+    description: '和風スパゲティの専門店。落ち着いた雰囲気でパスタは取り分けしやすい。駅ビル内店舗が多い。',
+  },
+  {
+    slug: 'fujiya-restaurant', name: '不二家レストラン', category: 'family-restaurant',
+    stroller: 'good', kidsMenu: true, babyChair: true, privateRoom: false, babyFoodOk: true, kidsCutlery: true,
+    seatingType: ['box', 'table'], shareDish: true, allergenInfo: true,
+    lunchPrice: '〜1,500', ubiquity: 'major-only',
+    description: 'ペコちゃんでおなじみのファミリーレストラン。お子様メニュー・ケーキが充実、ボックス席中心。',
+  },
+  {
+    slug: 'tonkatsu-wako', name: 'とんかつ和幸', category: 'washoku',
+    stroller: 'ok', kidsMenu: false, babyChair: true, privateRoom: false, babyFoodOk: true,
+    seatingType: ['table', 'counter'], shareDish: true, allergenInfo: true,
+    lunchPrice: '〜2,500', ubiquity: 'major-only',
+    description: '駅ビル・デパートに多いとんかつ専門店。ご飯・キャベツ・味噌汁おかわり可で取り分けやすい。',
+  },
 ];
 
 /**
@@ -1307,9 +1483,25 @@ export const STATION_CHAIN_MAPPING: Record<string, string[]> = {
  * @returns 該当駅周辺のチェーン店配列。マッピングが無い駅は空配列。
  */
 export function getChainsForStation(stationSlug: string): Chain[] {
-  const slugs = STATION_CHAIN_MAPPING[stationSlug];
-  if (!slugs) return [];
-  return slugs
+  const explicit = STATION_CHAIN_MAPPING[stationSlug];
+  if (!explicit) return [];
+  // 明示マッピングに加え、ubiquity で全駅／主要駅に自動付与してランチ選択肢を底上げする。
+  //  - 'common'     … ほぼどの駅周辺にもある定番チェーン → マッピング済み全駅に付与
+  //  - 'major-only' … ターミナル・主要駅中心のチェーン → terminal/major 駅に付与
+  // ※駅周辺の店舗有無は変動するため、サイト上は「事前確認推奨」の前提で表示する。
+  const scale = TOKYO_STATIONS.find((s) => s.slug === stationSlug)?.scale;
+  const slugs = new Set(explicit);
+  for (const c of CHAINS) {
+    if (c.ubiquity === 'common') {
+      slugs.add(c.slug);
+    } else if (
+      c.ubiquity === 'major-only' &&
+      (scale === 'terminal' || scale === 'major')
+    ) {
+      slugs.add(c.slug);
+    }
+  }
+  return [...slugs]
     .map((s) => CHAIN_BY_SLUG.get(s))
     .filter((c): c is Chain => c !== undefined);
 }
