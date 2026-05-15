@@ -25,6 +25,13 @@ import { CHUNK_18 } from './chunk-18';
 import { CHUNK_19 } from './chunk-19';
 import { CHUNK_20 } from './chunk-20';
 import { CHUNK_21 } from './chunk-21';
+import { CHUNK_22 } from './chunk-22';
+import { CHUNK_23 } from './chunk-23';
+import { CHUNK_24 } from './chunk-24';
+import { CHUNK_25 } from './chunk-25';
+import { CHUNK_26 } from './chunk-26';
+import { CHUNK_27 } from './chunk-27';
+import { CHUNK_28 } from './chunk-28';
 import { CHUNK_KANSAI } from './chunk-kansai';
 import type { StationIndieMap, IndieRestaurant, IndieGenre } from './types';
 
@@ -69,6 +76,13 @@ export const STATION_INDIE_MAP: StationIndieMap = mergeIndieMaps(
   CHUNK_19,
   CHUNK_20,
   CHUNK_21,
+  CHUNK_22,
+  CHUNK_23,
+  CHUNK_24,
+  CHUNK_25,
+  CHUNK_26,
+  CHUNK_27,
+  CHUNK_28,
   CHUNK_KANSAI,
 );
 
