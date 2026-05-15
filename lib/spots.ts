@@ -133,6 +133,21 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '本州最北の水族館、イルカパフォーマンスは1日3回。青森駅から青い森鉄道で20分',
     },
+    {
+      name: 'The Kids（ザ・キッズ）', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '青森市', note: '0歳から遊べる全天候型の室内遊び場。大型遊具で全身を使って遊べる', budget: 'low',
+    },
+    {
+      name: 'こどもはっち', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3'], city: '八戸市', note: '八戸市中心街にある、0歳〜就学前の親子向け屋内施設', budget: 'free',
+    },
+    {
+      name: '八食センター', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '八戸市', note: '約60店舗の市場。忍者テーマの複合遊具がある無料の室内遊び場を併設', budget: 'free',
+    },
+    {
+      name: '八戸公園（こどもの国）', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '八戸市', note: '無料で遊べる遊園地。実際に使われた機関車・消防車の展示もある', budget: 'free',
+    },
+    {
+      name: '新青森県総合運動公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '青森市', note: '無料の遊具広場に大型複合遊具。広々とした空間で乳幼児向け遊具も', budget: 'free',
+    },
   ],
   iwate: [
     {
