@@ -351,8 +351,13 @@ export default async function TodayPage({ searchParams }: Props) {
   }
 
   // eat × 外で食べる モード：子連れOKレストラン（ファミレス特集）を表示
+  // このモードでは AnswerCard を出さず、レストラン一覧自体を主答えにする。
+  // （meal プランは place=home に偏っているため、AnswerCard で関係ない記事フォールバックが
+  //  出てしまっていた問題への対応：花見・クリスマスマーケット等の無関係な top に着地しないよう
+  //  isEatOutside の時は top をスキップして restaurant 一覧をヒーローにする）
+  const isEatOutside = query.mode === 'eat' && query.place === 'outside';
   let restaurants: { area: AreaSlug; spot: Spot }[] = [];
-  if (query.mode === 'eat' && query.place === 'outside') {
+  if (isEatOutside) {
     restaurants = getKidFriendlyRestaurants(query.area, {
       age: query.age as '0-1' | '2-3' | '4-6' | undefined,
       budget: query.budget as 'free' | 'low' | 'mid' | 'high' | undefined,
@@ -436,7 +441,7 @@ export default async function TodayPage({ searchParams }: Props) {
               <p style={{ marginBottom: 16, fontSize: 15 }}>まだ条件が選ばれていません。</p>
               <Link href="/#finder" className="btn-primary-light">条件を選ぶ</Link>
             </div>
-          ) : !top ? (
+          ) : !top && !isEatOutside ? (
             <div style={{ padding: '40px 0', textAlign: 'center', color: 'var(--ink-sub)' }}>
               <p style={{ marginBottom: 16, fontSize: 15 }}>
                 今日の条件に合う答えは、まだ準備中です。
@@ -445,13 +450,59 @@ export default async function TodayPage({ searchParams }: Props) {
             </div>
           ) : (
             <>
-              {fallbackUsed && (
+              {fallbackUsed && !isEatOutside && (
                 <div className="fallback-note" role="status">
                   今日の条件にぴったりの答えはまだ準備中ですが、代わりに今日できることを1つ選びました。
                 </div>
               )}
 
-              <AnswerCard answer={top} featured />
+              {/* 「外で食べる」モードは AnswerCard を表示せず、
+                  下のレストラン一覧自体を主答えとして見せる。
+                  代わりにヒーロー帯で意図を明示する。 */}
+              {isEatOutside ? (
+                <div
+                  style={{
+                    padding: '24px 24px 22px',
+                    borderRadius: 16,
+                    background: 'linear-gradient(135deg, rgba(201,96,62,0.10), rgba(201,96,62,0.03))',
+                    border: '1px solid rgba(201,96,62,0.20)',
+                    marginBottom: 24,
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: 11,
+                      letterSpacing: '0.08em',
+                      color: 'var(--clay-deep)',
+                      fontWeight: 600,
+                      marginBottom: 6,
+                    }}
+                  >
+                    EAT OUT · 外で食べる
+                  </div>
+                  <h2
+                    style={{
+                      fontFamily: 'var(--font-mincho)',
+                      fontSize: 22,
+                      lineHeight: 1.45,
+                      margin: '0 0 8px',
+                    }}
+                  >
+                    {query.area && query.area !== 'all'
+                      ? `${getAreaName(query.area)}で、子連れ歓迎の外食をする。`
+                      : '今日は外で、子連れ歓迎のお店で食べる。'}
+                  </h2>
+                  <p style={{ fontSize: 13, color: 'var(--ink-sub)', margin: 0, lineHeight: 1.7 }}>
+                    ベビーカー入店OK・キッズメニュー・キッズチェアが揃った
+                    ファミレス／カフェ／個人店から、条件に合うお店を{restaurants.length}件ピックアップ。
+                    {query.area === 'tokyo'
+                      ? '駅単位でさらに細かく探したい場合は下の「駅から絞り込む」へ。'
+                      : ''}
+                  </p>
+                </div>
+              ) : (
+                top && <AnswerCard answer={top} featured />
+              )}
 
               {/* AdSense: 結果カード直下（in-article）。
                   /today は TodayFinder の全トラフィックが着地する最重要ページ。
@@ -560,8 +611,9 @@ export default async function TodayPage({ searchParams }: Props) {
                 </section>
               )}
 
-              {/* 別の候補を inline で常時表示（旧 details 折りたたみは廃止） */}
-              {alternatives.length > 0 && (
+              {/* 別の候補を inline で常時表示（旧 details 折りたたみは廃止）
+                  ※ 外で食べるモードでは alternative は家レシピ系プランになりがちなので非表示 */}
+              {alternatives.length > 0 && !isEatOutside && (
                 <section className="today-alts">
                   <h3 className="today-section-title">
                     <span className="today-section-eyebrow">Alternatives</span>
