@@ -7,6 +7,7 @@ import { TodayFinder } from '@/components/top/TodayFinder';
 import { StationSearch } from '@/components/top/StationSearch';
 import { TOKYO_STATIONS, WARD_NAMES } from '@/lib/tokyo-stations';
 import { KANSAI_STATIONS, PREFECTURE_NAMES } from '@/lib/kansai-stations';
+import { KANAGAWA_STATIONS, KANAGAWA_CITY_NAMES } from '@/lib/kanagawa-stations';
 import { TOKYO_LINES } from '@/lib/tokyo-lines';
 import { WeeklyPick } from '@/components/top/WeeklyPick';
 import { PopularSpots } from '@/components/top/PopularSpots';
@@ -145,7 +146,7 @@ export default function HomePage() {
       <section className="section section--allow-overflow" style={{ paddingTop: 32, paddingBottom: 32 }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: 18 }}>
-            <span className="eyebrow" style={{ color: 'var(--clay-deep)' }}>東京23区 + 関西主要駅 × 40路線対応</span>
+            <span className="eyebrow" style={{ color: 'var(--clay-deep)' }}>東京23区 + 神奈川 + 関西主要駅 × 40路線対応</span>
             <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 24, marginTop: 6, marginBottom: 6 }}>
               駅・路線から子連れOKランチを探す
             </h2>
@@ -172,6 +173,16 @@ export default function HomePage() {
                 kana: s.kana,
                 ward: s.prefecture,
                 wardLabel: PREFECTURE_NAMES[s.prefecture],
+                lines: s.lines,
+                scale: s.scale,
+              })),
+              ...KANAGAWA_STATIONS.map((s) => ({
+                type: 'station' as const,
+                slug: s.slug,
+                name: s.name,
+                kana: s.kana,
+                ward: s.city,
+                wardLabel: KANAGAWA_CITY_NAMES[s.city],
                 lines: s.lines,
                 scale: s.scale,
               })),
