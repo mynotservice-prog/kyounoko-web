@@ -28,8 +28,15 @@ import {
   type KanagawaStation,
   type KanagawaCity,
 } from './kanagawa-stations';
+import {
+  SAICHI_STATIONS,
+  SAICHI_PREFECTURE_NAMES,
+  SAICHI_PREFECTURE_LABEL,
+  type SaiChiStation,
+  type SaiChiPrefecture,
+} from './saitama-chiba-stations';
 
-export type StationRegion = 'tokyo' | 'kansai' | 'kanagawa';
+export type StationRegion = 'tokyo' | 'kansai' | 'kanagawa' | 'saichi';
 
 export type TokyoAnyStation = TokyoStation & {
   region: 'tokyo';
@@ -49,7 +56,13 @@ export type KanagawaAnyStation = KanagawaStation & {
   regionLabel: string;
 };
 
-export type AnyStation = TokyoAnyStation | KansaiAnyStation | KanagawaAnyStation;
+export type SaiChiAnyStation = SaiChiStation & {
+  region: 'saichi';
+  /** 表示用のエリアラベル（県名） */
+  regionLabel: string;
+};
+
+export type AnyStation = TokyoAnyStation | KansaiAnyStation | KanagawaAnyStation | SaiChiAnyStation;
 
 function toTokyoAny(s: TokyoStation): TokyoAnyStation {
   return {
@@ -75,19 +88,28 @@ function toKanagawaAny(s: KanagawaStation): KanagawaAnyStation {
   };
 }
 
+function toSaiChiAny(s: SaiChiStation): SaiChiAnyStation {
+  return {
+    ...s,
+    region: 'saichi',
+    regionLabel: SAICHI_PREFECTURE_NAMES[s.prefecture],
+  };
+}
+
 /**
- * 全駅（東京+関西+神奈川）を返す。
+ * 全駅（東京+関西+神奈川+埼玉/千葉）を返す。
  */
 export function getAllStations(): AnyStation[] {
   return [
     ...TOKYO_STATIONS.map(toTokyoAny),
     ...KANSAI_STATIONS.map(toKansaiAny),
     ...KANAGAWA_STATIONS.map(toKanagawaAny),
+    ...SAICHI_STATIONS.map(toSaiChiAny),
   ];
 }
 
 /**
- * slug から駅を検索（東京・関西・神奈川を横断）。
+ * slug から駅を検索（東京・関西・神奈川・埼玉/千葉を横断）。
  */
 export function findStationBySlug(slug: string): AnyStation | undefined {
   const tokyo = TOKYO_STATIONS.find((s) => s.slug === slug);
@@ -96,11 +118,17 @@ export function findStationBySlug(slug: string): AnyStation | undefined {
   if (kansai) return toKansaiAny(kansai);
   const kanagawa = KANAGAWA_STATIONS.find((s) => s.slug === slug);
   if (kanagawa) return toKanagawaAny(kanagawa);
+  const saichi = SAICHI_STATIONS.find((s) => s.slug === slug);
+  if (saichi) return toSaiChiAny(saichi);
   return undefined;
 }
 
 /**
- * 同じエリアの他駅（東京なら同じ ward、関西なら同じ prefecture、神奈川なら同じ city）を返す。
+ * 同じエリアの他駅を返す。
+ * - 東京: 同じ ward
+ * - 関西: 同じ prefecture
+ * - 神奈川: 同じ city
+ * - 埼玉/千葉: 同じ prefecture
  */
 export function getSameAreaStations(station: AnyStation, limit = 12): AnyStation[] {
   if (station.region === 'tokyo') {
@@ -115,10 +143,16 @@ export function getSameAreaStations(station: AnyStation, limit = 12): AnyStation
       .slice(0, limit)
       .map(toKansaiAny);
   }
-  return KANAGAWA_STATIONS
-    .filter((s) => s.city === station.city && s.slug !== station.slug)
+  if (station.region === 'kanagawa') {
+    return KANAGAWA_STATIONS
+      .filter((s) => s.city === station.city && s.slug !== station.slug)
+      .slice(0, limit)
+      .map(toKanagawaAny);
+  }
+  return SAICHI_STATIONS
+    .filter((s) => s.prefecture === station.prefecture && s.slug !== station.slug)
     .slice(0, limit)
-    .map(toKanagawaAny);
+    .map(toSaiChiAny);
 }
 
 export {
@@ -127,5 +161,7 @@ export {
   PREFECTURE_REGION_LABEL,
   KANAGAWA_CITY_NAMES,
   KANAGAWA_CITY_LABEL,
+  SAICHI_PREFECTURE_NAMES,
+  SAICHI_PREFECTURE_LABEL,
 };
-export type { TokyoWard, KansaiPrefecture, KanagawaCity };
+export type { TokyoWard, KansaiPrefecture, KanagawaCity, SaiChiPrefecture };
