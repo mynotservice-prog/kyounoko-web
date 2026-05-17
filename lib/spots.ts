@@ -105,6 +105,15 @@ export type Spot = {
   summerCool?: boolean;
   /** 屋外の噴水/水場/水深目安（10-30cm等の浅瀬）。waterPlay=true で使う補助情報 */
   waterDepth?: string;
+  // ---- 駅近フラグ（A+B：駅×施設の橋渡し）----
+  /**
+   * 最寄り駅 slug（lib/tokyo-stations.ts / kansai-stations.ts /
+   * kanagawa-stations.ts / saitama-chiba-stations.ts のいずれか）。
+   * 駅ページから「近隣のおでかけスポット」セクションで参照される。
+   */
+  nearestStation?: string;
+  /** 最寄り駅からの徒歩分数（公式情報・取材記事ベース） */
+  walkMinutes?: number;
   // ---- 公園遊具タグ ----
   /**
    * 公園内に設置されている遊具タイプ。park カテゴリで使うフラグ。
@@ -429,6 +438,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     // ===== 商業施設・体験（千葉）=====
     {
       name: '東京ディズニーランド', category: 'amusement', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '浦安市', note: '世界的に有名なテーマパーク、ベビーセンター完備', budget: 'high',
+      nearestStation: 'maihama',
+      walkMinutes: 5,
       pricing: { adult: '7,900〜10,900円', elementary: '4,700〜6,500円', preschool: '4,700〜6,500円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
@@ -437,6 +448,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '東京ディズニーシー', category: 'amusement', place: 'mixed', ages: ['2-3', '4-6'], city: '浦安市', note: '海をテーマにしたディズニーパーク', budget: 'high',
+      nearestStation: 'maihama',
+      walkMinutes: 12,
       pricing: { adult: '7,900〜10,900円', elementary: '4,700〜6,500円', preschool: '4,700〜6,500円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
@@ -445,6 +458,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '三井アウトレットパーク幕張', category: 'indoor', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '千葉市', note: '海浜幕張駅徒歩1分、子連れ動線◎', budget: 'low',
+      nearestStation: 'kaihimmakuhari',
+      walkMinutes: 1,
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'モーリーファンタジー（屋内遊園地）と幕張海浜公園が徒歩圏',
@@ -452,6 +467,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'イオンモール幕張新都心', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '千葉市', note: '日本最大級のイオンモール', budget: 'low',
+      nearestStation: 'kaihimmakuhari',
+      walkMinutes: 17,
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'カンドゥー（職業体験施設、4歳〜）が併設、雨天1日コース可',
@@ -505,6 +522,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   tokyo: [
     {
       name: '上野動物園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '台東区', note: 'ジャイアントパンダに会える、駅近', budget: 'low',
+      nearestStation: 'ueno',
+      walkMinutes: 5,
       pricing: { adult: '600円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
@@ -530,6 +549,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '葛西臨海水族園', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '江戸川区', note: 'マグロの群泳大水槽、広い公園に併設', budget: 'low',
+      nearestStation: 'kasai-rinkai-koen',
+      walkMinutes: 5,
       pricing: { adult: '700円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
@@ -550,6 +571,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'サンシャイン水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '豊島区', note: '屋上「天空のペンギン」が人気、池袋直結', budget: 'mid',
+      nearestStation: 'ikebukuro',
+      walkMinutes: 10,
       pricing: { adult: '2,600〜2,800円', elementary: '1,300〜1,400円', preschool: '800〜900円（4歳〜）', infant: '無料（3歳以下）' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
@@ -560,6 +583,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'キッザニア東京', category: 'indoor', place: 'indoor', ages: ['4-6'], city: '江東区', note: '100種以上の職業体験、人気で予約推奨', budget: 'high',
+      nearestStation: 'toyosu',
+      walkMinutes: 8,
       pricing: { adult: '2,000〜3,500円', elementary: '4,500〜7,000円', preschool: '4,500〜7,000円', infant: '無料（2歳以下）' },
       reservation: 'required',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
@@ -585,6 +610,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '国立科学博物館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '台東区', note: '恐竜化石と日本の自然史、雨天の鉄板', budget: 'low',
+      nearestStation: 'ueno',
+      walkMinutes: 5,
       pricing: { adult: '630円', elementary: '無料（高校生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -602,6 +629,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     // ===== 商業施設・モール（東京）=====
     {
       name: '玉川高島屋S・C', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '世田谷区', ward: '世田谷区', note: '本館と南館でベビー設備充実、屋上庭園で気分転換', budget: 'low',
+      nearestStation: 'futako-tamagawa',
+      walkMinutes: 1,
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '南館7階に授乳室・キッズトイレ・離乳食ルームが集約。屋上庭園「パンとエスプレッソとガーデン」は子連れに人気',
@@ -610,6 +639,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '二子玉川ライズ・ショッピングセンター', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '世田谷区', ward: '世田谷区', note: '全館ベビーカー動線完備、ルーフガーデンで休憩可', budget: 'low',
+      nearestStation: 'futako-tamagawa',
+      walkMinutes: 2,
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'タウンフロント4階のベビールームと、リボン通り屋外エリアで雨でも晴れでも回遊しやすい',
@@ -618,6 +649,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '麻布台ヒルズ', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '港区', ward: '港区', note: '2023年開業、ベビールーム複数で乳児連れに優しい', budget: 'low',
+      nearestStation: 'kamiyacho',
+      walkMinutes: 1,
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '中央広場「ヒルズプラザ」の芝生で休憩、屋内動線でベビーカーOK',
@@ -632,6 +665,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '日本橋三越本店', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '中央区', ward: '中央区', note: '7階「こどもの街」とベビー休憩室が手厚い', budget: 'low',
+      nearestStation: 'mitsukoshimae',
+      walkMinutes: 1,
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '本館7階のベビー休憩室は授乳室・調乳器・離乳食レンジ完備、土日も比較的空いている',
@@ -639,6 +674,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'GINZA SIX', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '中央区', ward: '中央区', note: '屋上庭園「GINZA SIX ガーデン」で芝生休憩可', budget: 'low',
+      nearestStation: 'ginza',
+      walkMinutes: 2,
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '4階に広めのベビールーム、屋上庭園は無料開放で都心の散歩スポット',
@@ -646,6 +683,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '渋谷スクランブルスクエア', category: 'indoor', place: 'indoor', ages: ['2-3', '4-6'], city: '渋谷区', ward: '渋谷区', note: '駅直結、SHIBUYA SKYは4歳以上におすすめ', budget: 'mid',
+      nearestStation: 'shibuya',
+      walkMinutes: 1,
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: 'SHIBUYA SKYは事前予約推奨、ベビーカーは展望台前で預ける必要あり',
@@ -653,6 +692,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'KITTE丸の内', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '千代田区', ward: '千代田区', note: '東京駅直結、屋上庭園から駅が見える', budget: 'free',
+      nearestStation: 'tokyo',
+      walkMinutes: 1,
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '屋上庭園「KITTEガーデン」は無料、東京駅丸の内駅舎を間近に見られる電車好きキッズの聖地',
@@ -660,6 +701,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '東京ミッドタウン（六本木）', category: 'indoor', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '港区', ward: '港区', note: '芝生広場と屋内モール、通年で過ごせる', budget: 'low',
+      nearestStation: 'roppongi',
+      walkMinutes: 1,
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'ミッドタウン・ガーデンの芝生でピクニック、冬はイルミネーション、夏は水遊び（噴水）',
@@ -667,6 +710,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '東京ミッドタウン日比谷', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '千代田区', ward: '千代田区', note: '日比谷公園隣接、6階パークビューガーデン', budget: 'low',
+      nearestStation: 'hibiya',
+      walkMinutes: 1,
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'mid' },
       hiddenTip: '6階の屋上庭園は無料で日比谷公園を一望、屋内ベビールームも完備',
@@ -674,6 +719,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'ダイバーシティ東京プラザ', category: 'indoor', place: 'indoor', ages: ['2-3', '4-6'], city: '江東区', ward: '江東区', note: '実物大ガンダム立像、お台場の老舗モール', budget: 'low',
+      nearestStation: 'daiba',
+      walkMinutes: 5,
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '夜のガンダム演出（19時/19時半/20時）は無料、フェスティバル広場で休憩しやすい',
@@ -681,6 +728,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'アクアシティお台場', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '港区', ward: '港区', note: 'レインボーブリッジを望むモール、ベビールーム複数', budget: 'low',
+      nearestStation: 'odaiba-kaihinkoen',
+      walkMinutes: 1,
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '海側のデッキで景色＋写真、ベビーカー貸出（無料）あり',
@@ -696,6 +745,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '東京ソラマチ', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '墨田区', ward: '墨田区', note: 'スカイツリー併設、子連れ動線が広い', budget: 'low',
+      nearestStation: 'oshiage',
+      walkMinutes: 1,
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '4階「すみだ水族館」とプラネタリウム、7階のベビールームが広め',
@@ -717,6 +768,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'ららテラス武蔵小杉', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '川崎市', note: '駅直結、コンパクトで子連れ動線◎', budget: 'low',
+      nearestStation: 'musashi-kosugi',
+      walkMinutes: 1,
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'グランツリー武蔵小杉と合わせて回遊しやすい、3階のキッズスペース無料',
@@ -731,6 +784,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'マルイファミリー溝口', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '川崎市', note: '駅直結で「ファミリー」と名がつく通り子育て層向き', budget: 'low',
+      nearestStation: 'mizonokuchi',
+      walkMinutes: 1,
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '4階のキッズフロア、ベビーカー貸出と授乳室の場所が分かりやすい',
@@ -747,6 +802,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     // ===== 屋内遊び場（東京）=====
     {
       name: 'ASOBono!（東京ドームシティ アソボーノ）', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '文京区', ward: '文京区', note: '都内最大級の屋内遊び場、雨の日の鉄板', budget: 'mid',
+      nearestStation: 'korakuen',
+      walkMinutes: 3,
       pricing: { adult: '1,000円', preschool: '1,000円（6ヶ月〜小学生）', infant: '無料（6ヶ月未満）' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'high' },
@@ -814,6 +871,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '科学技術館（北の丸公園）', category: 'museum', place: 'indoor', ages: ['4-6'], city: '千代田区', ward: '千代田区', note: '体験型展示で4歳以上が楽しめる科学館', budget: 'low',
+      nearestStation: 'kudanshita',
+      walkMinutes: 7,
       pricing: { adult: '950円', elementary: '500円', preschool: '500円（3歳以上）', infant: '無料（2歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -822,6 +881,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '日本科学未来館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '江東区', ward: '江東区', note: 'お台場、ASIMOやGeo-Cosmosが目玉', budget: 'low',
+      nearestStation: 'telecom-center',
+      walkMinutes: 4,
       pricing: { adult: '630円', elementary: '210円', preschool: '無料（未就学児）', infant: '無料' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'high' },
@@ -830,6 +891,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'がすてなーに ガスの科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '江東区', ward: '江東区', note: '豊洲、入館無料の体験型科学館', budget: 'free',
+      nearestStation: 'toyosu',
+      walkMinutes: 6,
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -839,6 +902,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'パナソニックセンター東京 AkeruE', category: 'museum', place: 'indoor', ages: ['4-6'], city: '江東区', ward: '江東区', note: '有明、創造体験型ミュージアム', budget: 'low',
+      nearestStation: 'ariake',
+      walkMinutes: 2,
       pricing: { adult: '500円', elementary: '無料（18歳以下）', preschool: '無料', infant: '無料' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -854,6 +919,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '東京都現代美術館 こどもアトリエ', category: 'museum', place: 'indoor', ages: ['4-6'], city: '江東区', ward: '江東区', note: '木場公園隣接、子ども向けプログラムあり', budget: 'low',
+      nearestStation: 'kiyosumi-shirakawa',
+      walkMinutes: 9,
       pricing: { adult: '500円（コレクション展）', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -863,6 +930,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'すみだ水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '墨田区', ward: '墨田区', note: 'スカイツリータウン内、ベビーカー入場可', budget: 'mid',
+      nearestStation: 'oshiage',
+      walkMinutes: 7,
       pricing: { adult: '2,500円', elementary: '1,200円', preschool: '800円（3歳以上）', infant: '無料（2歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
@@ -873,6 +942,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'マクセル アクアパーク品川', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '港区', ward: '港区', note: '品川駅徒歩2分、音と光の演出', budget: 'mid',
+      nearestStation: 'shinagawa',
+      walkMinutes: 2,
       pricing: { adult: '2,500円', elementary: '1,300円', preschool: '800円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
@@ -882,6 +953,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'カワスイ 川崎水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '川崎市', note: '川崎駅直結、世界の淡水魚展示', budget: 'mid',
+      nearestStation: 'kawasaki',
+      walkMinutes: 1,
       pricing: { adult: '2,000円', elementary: '1,200円', preschool: '600円（未就学児）', infant: '無料（3歳未満）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -906,6 +979,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '東京都水の科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '江東区', ward: '江東区', note: '有明、入館無料の体験型施設', budget: 'free',
+      nearestStation: 'kokusai-tenjijo',
+      walkMinutes: 8,
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -914,6 +989,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '東京消防庁 消防博物館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '新宿区', ward: '新宿区', note: '四谷三丁目駅直結、入館無料', budget: 'free',
+      nearestStation: 'yotsuya-sanchome',
+      walkMinutes: 1,
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -922,6 +999,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '地下鉄博物館（葛西）', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '江戸川区', ward: '江戸川区', note: '葛西駅高架下、運転シミュレータあり', budget: 'low',
+      nearestStation: 'kasai',
+      walkMinutes: 1,
       pricing: { adult: '220円', elementary: '100円', preschool: '無料（未就学児）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -930,6 +1009,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'JAL工場見学 SKY MUSEUM（羽田）', category: 'museum', place: 'indoor', ages: ['4-6'], city: '大田区', ward: '大田区', note: '飛行機の整備工場が見学できる', budget: 'free',
+      nearestStation: 'shin-seibijo',
+      walkMinutes: 2,
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'required',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
@@ -938,6 +1019,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'ANA機体工場見学（羽田）', category: 'museum', place: 'indoor', ages: ['4-6'], city: '大田区', ward: '大田区', note: 'ANAの整備工場見学、無料', budget: 'free',
+      nearestStation: 'shin-seibijo',
+      walkMinutes: 15,
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'required',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
@@ -948,6 +1031,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     // ===== 公園（東京）=====
     {
       name: '砧公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '世田谷区', ward: '世田谷区', note: '広大な芝生広場とみんなのひろば（遊具）', budget: 'free',
+      nearestStation: 'seijogakuen-mae',
+      walkMinutes: 15,
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -956,6 +1041,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '駒沢オリンピック公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '世田谷区', ward: '世田谷区', note: 'チリリンランド（自転車練習場）と大型遊具', budget: 'free',
+      nearestStation: 'komazawa-daigaku',
+      walkMinutes: 15,
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -989,6 +1076,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '木場公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '江東区', ward: '江東区', note: 'ふれあい広場と都市緑化植物園', budget: 'free',
+      nearestStation: 'kiba',
+      walkMinutes: 5,
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -1036,6 +1125,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '林試の森公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '品川区', ward: '品川区', note: '巨木と木陰が多い緑地、夏はじゃぶじゃぶ池', budget: 'free',
+      nearestStation: 'musashi-koyama',
+      walkMinutes: 10,
       waterPlay: true,
     },
     {
@@ -1056,6 +1147,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'しながわ水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '品川区', ward: '品川区', note: 'トンネル水槽とイルカショー、しながわ区民公園内', budget: 'low',
+      nearestStation: 'omori-kaigan',
+      walkMinutes: 8,
       summerCool: true,
       waterPlay: true,
     },
@@ -1083,6 +1176,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '葛西臨海公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '江戸川区', ward: '江戸川区', note: '水族園併設、芝生広場と観覧車', budget: 'free',
+      nearestStation: 'kasai-rinkai-koen',
+      walkMinutes: 1,
       pricing: { adult: '無料（公園）', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -1105,6 +1200,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '光が丘公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '練馬区', ward: '練馬区', note: '都内有数の広さ、芝生広場とアスレチック', budget: 'free',
+      nearestStation: 'hikarigaoka',
+      walkMinutes: 8,
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -1120,6 +1217,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '舎人公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '足立区', ward: '足立区', note: '日暮里舎人ライナー舎人公園駅前、大型遊具', budget: 'free',
+      nearestStation: 'toneri-koen',
+      walkMinutes: 1,
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -1128,6 +1227,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '東京港野鳥公園', category: 'park', place: 'outdoor', ages: ['4-6'], city: '大田区', ward: '大田区', note: '大井埠頭、自然観察と探鳥', budget: 'low',
+      nearestStation: 'ryutsu-center',
+      walkMinutes: 15,
       pricing: { adult: '300円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -1135,6 +1236,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '夢の島公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '江東区', ward: '江東区', note: '熱帯植物館と広い芝生、BBQ可', budget: 'low',
+      nearestStation: 'shin-kiba',
+      walkMinutes: 5,
       pricing: { adult: '250円（熱帯植物館）', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -1143,6 +1246,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '清澄庭園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '江東区', ward: '江東区', note: '回遊式庭園、池に大きな鯉と亀', budget: 'low',
+      nearestStation: 'kiyosumi-shirakawa',
+      walkMinutes: 3,
       pricing: { adult: '150円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -1150,6 +1255,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '小石川後楽園', category: 'park', place: 'outdoor', ages: ['4-6'], city: '文京区', ward: '文京区', note: '東京ドーム隣接、季節の花が見事', budget: 'low',
+      nearestStation: 'iidabashi',
+      walkMinutes: 8,
       pricing: { adult: '300円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -1157,6 +1264,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '新宿御苑', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '新宿区', ward: '新宿区', note: '広大な芝生と複数の庭園様式', budget: 'low',
+      nearestStation: 'shinjuku-gyoemmae',
+      walkMinutes: 5,
       pricing: { adult: '500円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
@@ -1175,6 +1284,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '等々力渓谷', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '世田谷区', ward: '世田谷区', note: '都心の自然渓谷、夏は涼スポット', budget: 'free',
+      nearestStation: 'todoroki',
+      walkMinutes: 3,
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -1182,6 +1293,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'お台場海浜公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '港区', ward: '港区', note: 'お台場ビーチで夏の水遊び', budget: 'free',
+      nearestStation: 'odaiba-kaihinkoen',
+      walkMinutes: 3,
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
@@ -1190,6 +1303,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '神田明神', category: 'seasonal', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '千代田区', ward: '千代田区', note: 'お宮参り・七五三の名所', budget: 'free',
+      nearestStation: 'akihabara',
+      walkMinutes: 7,
       pricing: { adult: '無料（参拝）', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'high' },
@@ -1197,6 +1312,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '浅草寺・仲見世', category: 'seasonal', place: 'outdoor', ages: ['2-3', '4-6'], city: '台東区', ward: '台東区', note: '初詣・七五三、和菓子も楽しめる', budget: 'free',
+      nearestStation: 'asakusa',
+      walkMinutes: 5,
       pricing: { adult: '無料（参拝）', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'high', holiday: 'high' },
@@ -1205,6 +1322,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '明治神宮', category: 'seasonal', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '渋谷区', ward: '渋谷区', note: 'お宮参り・初詣の定番', budget: 'free',
+      nearestStation: 'harajuku',
+      walkMinutes: 1,
       pricing: { adult: '無料（参拝）', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
@@ -1213,6 +1332,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     // ===== 追加スポット =====
     {
       name: '東京都美術館 アートスタディルーム', category: 'museum', place: 'indoor', ages: ['4-6'], city: '台東区', ward: '台東区', note: '上野、子ども向けアートワークショップ', budget: 'free',
+      nearestStation: 'ueno',
+      walkMinutes: 10,
       pricing: { adult: '無料（常設）', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -1221,6 +1342,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '東京国立博物館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '台東区', ward: '台東区', note: '上野、ファミリー向けプログラムあり', budget: 'low',
+      nearestStation: 'ueno',
+      walkMinutes: 10,
       pricing: { adult: '1,000円', elementary: '無料（高校生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -1229,6 +1352,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '国立新美術館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '港区', ward: '港区', note: '六本木、企画展中心の現代美術館', budget: 'low',
+      nearestStation: 'nogizaka',
+      walkMinutes: 1,
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: 'ベビーカーOK、館内のミュージアムカフェは子連れでも入りやすい',
@@ -1236,6 +1361,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '東京タワー', category: 'amusement', place: 'mixed', ages: ['2-3', '4-6'], city: '港区', ward: '港区', note: '展望台と隣接の芝公園', budget: 'mid',
+      nearestStation: 'akabanebashi',
+      walkMinutes: 5,
       pricing: { adult: '1,500〜3,300円', elementary: '900〜2,200円', preschool: '700〜1,500円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
@@ -1244,6 +1371,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '東京スカイツリー展望デッキ', category: 'amusement', place: 'indoor', ages: ['2-3', '4-6'], city: '墨田区', ward: '墨田区', note: '世界最高クラスの自立式電波塔', budget: 'mid',
+      nearestStation: 'tokyo-skytree',
+      walkMinutes: 1,
       pricing: { adult: '2,100〜3,100円', elementary: '950〜1,400円', preschool: '550〜850円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
@@ -1267,6 +1396,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '東京臨海広域防災公園 そなエリア東京', category: 'museum', place: 'indoor', ages: ['4-6'], city: '江東区', ward: '江東区', note: '防災体験ツアー、入場無料', budget: 'free',
+      nearestStation: 'kokusai-tenjijo',
+      walkMinutes: 4,
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -1383,6 +1514,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '上野恩賜公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '台東区', ward: '台東区', note: '動物園・博物館の集合スポット', budget: 'free',
+      nearestStation: 'ueno',
+      walkMinutes: 1,
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
@@ -1391,6 +1524,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '日比谷公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '千代田区', ward: '千代田区', note: '都心の歴史ある公園、噴水と遊具', budget: 'free',
+      nearestStation: 'hibiya',
+      walkMinutes: 1,
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'mid' },
@@ -1399,6 +1534,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '代々木公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '渋谷区', ward: '渋谷区', note: '広大な芝生でピクニック', budget: 'free',
+      nearestStation: 'harajuku',
+      walkMinutes: 3,
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
@@ -1406,6 +1543,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'お台場 シンボルプロムナード公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '港区', ward: '港区', note: 'お台場の中心、レインボーブリッジ眺望', budget: 'free',
+      nearestStation: 'odaiba-kaihinkoen',
+      walkMinutes: 5,
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
@@ -1447,6 +1586,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '横浜アンパンマンこどもミュージアム', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3'], city: '横浜市', note: 'みなとみらい直結、0-3歳の定番', budget: 'mid',
+      nearestStation: 'minato-mirai',
+      walkMinutes: 5,
       pricing: { adult: '2,200〜2,600円', elementary: '2,200〜2,600円', preschool: '2,200〜2,600円（1歳以上全員）', infant: '無料（1歳未満）' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
@@ -1475,6 +1616,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     // ===== 商業施設・モール（神奈川）=====
     {
       name: 'MARK IS みなとみらい', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '横浜市', note: '駅直結、屋上ガーデンとキッズエリア', budget: 'low',
+      nearestStation: 'minato-mirai',
+      walkMinutes: 1,
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '4階のキッズエリアと授乳室、屋上「みんなの庭」で芝生休憩',
@@ -1482,6 +1625,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '横浜ベイクォーター', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '横浜市', note: '横浜駅徒歩7分、海沿いのモール', budget: 'low',
+      nearestStation: 'yokohama',
+      walkMinutes: 7,
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'デッキで電車・船が見える、ベビールームと多目的トイレが各階あり',
@@ -1489,6 +1634,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'コレットマーレ桜木町', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '横浜市', note: '桜木町駅直結、映画館とレストラン', budget: 'low',
+      nearestStation: 'sakuragicho',
+      walkMinutes: 2,
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '5階のキッズエリアと授乳室、桜木町駅から徒歩2分',
@@ -1496,6 +1643,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'グランツリー武蔵小杉', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '川崎市', note: '武蔵小杉駅徒歩4分、子連れ向け店舗多数', budget: 'low',
+      nearestStation: 'musashi-kosugi',
+      walkMinutes: 4,
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '4階「キッズパーク」屋上庭園とふわふわドーム（無料）、雨でも晴れでも遊べる',
@@ -1510,6 +1659,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'みなとみらい東急スクエア', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '横浜市', note: 'みなとみらい駅直結、子連れ動線◎', budget: 'low',
+      nearestStation: 'minato-mirai',
+      walkMinutes: 1,
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'みなとみらい線駅直結、横浜美術館も近い',
@@ -1519,6 +1670,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     // ===== 屋内遊び場・体験（神奈川）=====
     {
       name: '原鉄道模型博物館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '横浜市', note: '世界最大級のジオラマ、電車好き必訪', budget: 'mid',
+      nearestStation: 'yokohama',
+      walkMinutes: 5,
       pricing: { adult: '1,200円', elementary: '700円', preschool: '500円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -1527,6 +1680,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'カップヌードルミュージアム横浜', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '横浜市', note: 'みなとみらい、オリジナルカップヌードル作り', budget: 'low',
+      nearestStation: 'minato-mirai',
+      walkMinutes: 8,
       pricing: { adult: '500円', elementary: '無料（高校生以下）', preschool: '無料', infant: '無料' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
@@ -1535,6 +1690,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '川崎市 藤子・F・不二雄ミュージアム', category: 'museum', place: 'mixed', ages: ['2-3', '4-6'], city: '川崎市', note: 'ドラえもんの世界観、登戸駅シャトルバス', budget: 'mid',
+      nearestStation: 'noborito',
+      walkMinutes: 16,
       pricing: { adult: '1,000円', elementary: '500円', preschool: '400円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'required',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
@@ -1544,6 +1701,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'シルク博物館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '横浜市', note: '横浜開港の歴史、繭から糸取り体験', budget: 'low',
+      nearestStation: 'kannai',
+      walkMinutes: 8,
       pricing: { adult: '500円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'low' },
@@ -1614,6 +1773,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '生田緑地', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '川崎市', note: '日本民家園・科学館・プラネタリウム', budget: 'low',
+      nearestStation: 'noborito',
+      walkMinutes: 12,
       pricing: { adult: '500円（民家園）', elementary: '無料（高校生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -2641,6 +2802,26 @@ export function getKidFriendlyRestaurants(
   });
 
   return result.slice(0, opts.limit ?? 12);
+}
+
+/**
+ * 駅slugから「徒歩X分以内」のスポットを取得。
+ * 駅ページの「近隣のおでかけスポット」セクションで使用。
+ * walkMinutes 昇順、最大 limit 件。
+ */
+export function getSpotsByNearestStation(stationSlug: string, opts: { maxWalkMinutes?: number; limit?: number } = {}): Spot[] {
+  const max = opts.maxWalkMinutes ?? 15;
+  const result: Spot[] = [];
+  for (const list of Object.values(SPOTS)) {
+    if (!list) continue;
+    for (const s of list) {
+      if (s.nearestStation !== stationSlug) continue;
+      if ((s.walkMinutes ?? Infinity) > max) continue;
+      result.push(s);
+    }
+  }
+  result.sort((a, b) => (a.walkMinutes ?? 99) - (b.walkMinutes ?? 99));
+  return result.slice(0, opts.limit ?? 8);
 }
 
 /** 東京23区名で絞り込み（city または ward を見る） */

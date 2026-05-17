@@ -21,6 +21,7 @@ import {
   type IndieRestaurant,
   type IndieGenre,
 } from '@/lib/indie-restaurants';
+import { getSpotsByNearestStation, SPOT_CATEGORY_LABEL } from '@/lib/spots';
 import {
   STATION_CONDITIONS,
   filterChainsByCondition,
@@ -93,6 +94,8 @@ export default async function StationPage({ params }: Props) {
 
   // 個人店（チェーン以外の話題店・人気店）
   const indies = getIndieRestaurantsByStation(slug);
+  // 駅から徒歩15分以内のおでかけスポット（公園・水族館・屋内遊び場等）
+  const nearbySpots = getSpotsByNearestStation(slug, { maxWalkMinutes: 15, limit: 8 });
 
   // 駅情報も個人店もない場合のみ 404（不正 slug 防止）。
   if (!data && indies.length === 0) notFound();
@@ -167,6 +170,7 @@ export default async function StationPage({ params }: Props) {
     { href: '#section-tips', label: '使い方' },
     { href: '#section-chains', label: 'チェーン', count: chains.length },
     ...(indies.length > 0 ? [{ href: '#section-indies', label: '個人店', count: indies.length }] : []),
+    ...(nearbySpots.length > 0 ? [{ href: '#section-nearby-spots', label: '近隣スポット', count: nearbySpots.length }] : []),
   ];
 
   return (
@@ -678,6 +682,63 @@ export default async function StationPage({ params }: Props) {
               </section>
             );
           })()}
+
+          {/* 近隣のおでかけスポット（公園・水族館・屋内遊び場等）
+              駅 × おでかけ施設の橋渡し。徒歩15分以内に絞って表示。 */}
+          {nearbySpots.length > 0 && (
+            <section
+              id="section-nearby-spots"
+              style={{
+                margin: '40px 0',
+                padding: '24px',
+                background: 'rgba(46,125,127,0.04)',
+                border: '1px solid rgba(46,125,127,0.18)',
+                borderRadius: 16,
+              }}
+            >
+              <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 22, marginTop: 0, marginBottom: 6 }}>
+                {station.name}駅から徒歩で行けるおでかけスポット
+              </h2>
+              <p style={{ fontSize: 13, color: 'var(--ink-sub)', marginTop: 0, marginBottom: 18 }}>
+                公園・水族館・屋内遊び場など、{station.name}駅から徒歩15分以内の子連れ向けスポット {nearbySpots.length} 件。
+                ランチ後の遊び場探しに。
+              </p>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 12 }}>
+                {nearbySpots.map((s) => (
+                  <div
+                    key={s.name}
+                    style={{
+                      background: '#fff',
+                      border: '1px solid rgba(46,125,127,0.20)',
+                      borderRadius: 12,
+                      padding: '14px 16px',
+                    }}
+                  >
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 8, marginBottom: 6 }}>
+                      <strong style={{ fontSize: 14, flex: 1 }} dangerouslySetInnerHTML={{ __html: s.name }} />
+                      {typeof s.walkMinutes === 'number' && (
+                        <span style={{ fontSize: 11, background: 'rgba(46,125,127,0.12)', color: '#1f5557', padding: '2px 8px', borderRadius: 999, whiteSpace: 'nowrap' }}>
+                          徒歩{s.walkMinutes}分
+                        </span>
+                      )}
+                    </div>
+                    <div style={{ fontSize: 11, color: 'var(--ink-mute)', marginBottom: 6 }}>
+                      {SPOT_CATEGORY_LABEL[s.category]}
+                      {s.budget && ` · ${s.budget === 'free' ? '無料' : s.budget === 'low' ? '〜500円' : s.budget === 'mid' ? '〜2,000円' : '2,000円〜'}`}
+                      {s.waterPlay && ' · 水遊びOK'}
+                      {s.summerCool && ' · 涼しい屋内'}
+                    </div>
+                    {s.note && (
+                      <p style={{ fontSize: 12, color: 'var(--ink-sub)', margin: 0, lineHeight: 1.6 }}>{s.note}</p>
+                    )}
+                    {s.hiddenTip && (
+                      <p style={{ fontSize: 11, color: 'var(--clay-deep)', marginTop: 6, marginBottom: 0, lineHeight: 1.5 }}>💡 {s.hiddenTip}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* 同じ区の他駅 — scaleバッジ付きカード化で視覚的に強化 */}
           {sameWardStations.length > 0 && (
