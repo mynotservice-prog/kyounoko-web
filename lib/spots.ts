@@ -29,6 +29,21 @@ export type SpotPlace = 'indoor' | 'outdoor' | 'mixed';
 
 export type AgeTag = '0-1' | '2-3' | '4-6';
 
+/** 公園内の遊具タイプ（park カテゴリで使うタグ）。 */
+export type PlaygroundFeature =
+  | 'large-slide'   // 大型滑り台（ジャンボ滑り台）
+  | 'long-slide'    // ロングすべり台/ローラーすべり台（50m〜）
+  | 'fuwafuwa'      // ふわふわドーム/エアトランポリン
+  | 'athletic'      // アスレチック・複合遊具
+  | 'tarzan'        // ターザンロープ/ジップライン
+  | 'climbing'      // クライミングウォール/ボルダリング
+  | 'spider-net'    // クモの巣ネット/ロープジム
+  | 'swing'         // 大型ブランコ
+  | 'sandbox'       // 砂場
+  | 'bbq'           // BBQエリア
+  | 'cycling'       // サイクリングコース/レンタサイクル
+  | 'mini-train';   // 子供向けミニ電車
+
 /**
  * 運営者が実際に子連れで訪問して記録した一次情報レポート。
  * ※ここに入れるのは運営者ながみーの実体験のみ。公開情報・口コミは混ぜない。
@@ -90,6 +105,23 @@ export type Spot = {
   summerCool?: boolean;
   /** 屋外の噴水/水場/水深目安（10-30cm等の浅瀬）。waterPlay=true で使う補助情報 */
   waterDepth?: string;
+  // ---- 公園遊具タグ ----
+  /**
+   * 公園内に設置されている遊具タイプ。park カテゴリで使うフラグ。
+   * - large-slide: 大型滑り台（ジャンボ滑り台/巨大滑り台）
+   * - long-slide: ロングすべり台（ローラー含む50m〜）
+   * - fuwafuwa: ふわふわドーム/エアトランポリン
+   * - athletic: アスレチック（複合遊具）
+   * - tarzan: ターザンロープ/ジップライン
+   * - climbing: クライミングウォール/ボルダリング
+   * - spider-net: クモの巣ネット/ロープジム
+   * - swing: ブランコ（複数または大型）
+   * - sandbox: 砂場
+   * - bbq: BBQエリア
+   * - cycling: サイクリングコース/レンタサイクル
+   * - mini-train: 子供向けミニ電車・パークトレイン
+   */
+  playgroundFeatures?: PlaygroundFeature[];
   // ---- 運営者の一次情報（実際に子連れで訪問して記録）----
   kidReport?: KidReport;
 };
@@ -164,6 +196,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '新青森県総合運動公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '青森市', note: '無料の遊具広場に大型複合遊具。広々とした空間で乳幼児向け遊具も', budget: 'free',
+      playgroundFeatures: ['athletic'],
     },
   ],
   iwate: [
@@ -335,6 +368,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '巨大エアートランポリン「ぽんぽこマウンテン」が無料、4月のチューリップが絶景',
+      playgroundFeatures: ['athletic'],
     },
     {
       name: 'NACK5スタジアム大宮・大宮公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: 'さいたま市', note: '小動物園と児童遊園地、入園無料', budget: 'free',
@@ -390,6 +424,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'ボート池・アスレチック・美術館・動物ふれあい全部ある総合公園。春の花、夏の水遊び、秋の紅葉とオールシーズン',
+      playgroundFeatures: ['athletic'],
     },
     // ===== 商業施設・体験（千葉）=====
     {
@@ -934,6 +969,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
         stayNote: '0〜1歳で1.5〜3時間。2歳以降は遊具＋自転車で半日コースになりやすい。',
         cautionNote: '自転車のスピードが速い人がいるので動線に注意。真夏はかなり暑く、遊具エリアは休日混雑する。',
       },
+      playgroundFeatures: ['athletic'],
     },
     {
       name: '小金井公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '小金井市', note: '園路が広くフラットでベビーカーが快適、江戸東京たてもの園を併設', budget: 'free',
@@ -989,6 +1025,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '府中の森公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '府中市', note: '大型遊具と芝生広場、府中市美術館に隣接', budget: 'free',
+      playgroundFeatures: ['athletic'],
     },
     {
       name: '武蔵国分寺公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '国分寺市', note: '円形広場と霧の噴水、広い芝生でのんびり', budget: 'free',
@@ -1072,6 +1109,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '60ha超の広さ、バーベキュー広場（要予約）も併設',
+      playgroundFeatures: ['athletic'],
     },
     {
       name: '水元公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '葛飾区', ward: '葛飾区', note: '水郷の景観、菖蒲園が見事', budget: 'free',
@@ -1086,6 +1124,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '園内に「あさひの広場」のローラーすべり台、夏は噴水で水遊び',
+      playgroundFeatures: ['athletic'],
     },
     {
       name: '東京港野鳥公園', category: 'park', place: 'outdoor', ages: ['4-6'], city: '大田区', ward: '大田区', note: '大井埠頭、自然観察と探鳥', budget: 'low',
@@ -1100,6 +1139,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '熱帯植物館は雨天時の屋内避難に便利、冬も暖かい',
+      playgroundFeatures: ['bbq'],
     },
     {
       name: '清澄庭園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '江東区', ward: '江東区', note: '回遊式庭園、池に大きな鯉と亀', budget: 'low',
@@ -1909,6 +1949,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '入園・駐車場無料、有料施設（児童館200円、乗り物100円）のみ別料金',
+      playgroundFeatures: ['athletic'],
     },
     // ===== 体験・温泉・季節（群馬）=====
     {
@@ -2185,6 +2226,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '砂丘隣接、大型遊具と屋内プレイエリアの複合',
+      playgroundFeatures: ['athletic'],
     },
   ],
   shimane: [
@@ -2264,6 +2306,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '入園完全無料、大型遊具「子ども科学館」（別料金600円）と芝生広場',
+      playgroundFeatures: ['athletic'],
     },
   ],
   kagawa: [
@@ -2298,6 +2341,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '入場無料の大型こども向け複合施設。モノレールやボートは別料金300-400円',
+      playgroundFeatures: ['athletic'],
     },
   ],
   kochi: [
@@ -2339,6 +2383,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '300ha超の広大公園、レンタサイクルで周遊推奨。春のネモフィラ、秋のコスモスが絶景',
       nearby: 'マリンワールド海の中道と組み合わせ1日フル',
+      playgroundFeatures: ['athletic'],
     },
     {
       name: '福岡市動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '福岡市', note: 'リニューアル後の植物園併設', budget: 'low',

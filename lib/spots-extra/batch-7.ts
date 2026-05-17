@@ -310,6 +310,7 @@ export const SPOTS_EXTRA_7: Partial<Record<AreaSlug, Spot[]>> = {
       freeWaterPlay: true,
       waterDepth: '5〜15cm',
       hiddenTip: '夏季のみ稼働、駐車場は有料。柏の葉キャンパス駅から徒歩・バスで',
+      playgroundFeatures: ['athletic'],
     },
   ],
   saitama: [
