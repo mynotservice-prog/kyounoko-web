@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
 updatedAt: '2026-05-14'
-hero: /hero-ai/cat-food-japan-03.webp
+hero: /hero-ai/cat-food-fruit-02.jpg
 area: tokyo
 quickInfo:
   ageRanges:

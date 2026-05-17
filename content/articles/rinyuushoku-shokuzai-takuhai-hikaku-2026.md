@@ -7,7 +7,7 @@ publishedAt: '2026-05-12'
 updatedAt: '2026-05-12'
 category: yakudatsu
 categoryName: 役立つもの
-hero: /hero-ai/cat-food-japan-01.webp
+hero: /hero-ai/cat-food-kitchen-02.jpg
 quickInfo:
   ageRanges:
     - 0-1

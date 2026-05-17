@@ -7,7 +7,7 @@ publishedAt: '2026-05-12'
 updatedAt: '2026-05-12'
 category: today-mawasu
 categoryName: 今日どう回す？
-hero: /hero-ai/cat-food-kitchen-02.webp
+hero: /hero-ai/cat-food-japan-01.jpg
 quickInfo:
   ageRanges:
     - 0-1

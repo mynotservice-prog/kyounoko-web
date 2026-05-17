@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
 updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-japan-02.webp
+hero: /hero-ai/chicken-kodomo-10pattern.webp
 area: all
 quickInfo:
   ageRanges:

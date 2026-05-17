@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
 updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-japan-03.webp
+hero: /hero-ai/dessert-kodomo-tezukuri-5.webp
 area: all
 quickInfo:
   ageRanges:
