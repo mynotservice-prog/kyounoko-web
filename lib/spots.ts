@@ -81,6 +81,15 @@ export type Spot = {
   kidsMenu?: boolean;        // キッズメニューあり
   privateRoom?: boolean;     // 個室あり
   babyFood?: boolean;        // 離乳食持ち込みOK / 提供あり
+  // ---- 夏季向けフラグ ----
+  /** 水遊び可（じゃぶじゃぶ池/噴水/プール/水族館タッチプール等） */
+  waterPlay?: boolean;
+  /** 無料の水遊び場（じゃぶじゃぶ池等、入園料/利用料が0円） */
+  freeWaterPlay?: boolean;
+  /** 真夏に涼しい屋内（冷房完備、外気と遮断された施設） */
+  summerCool?: boolean;
+  /** 屋外の噴水/水場/水深目安（10-30cm等の浅瀬）。waterPlay=true で使う補助情報 */
+  waterDepth?: string;
   // ---- 運営者の一次情報（実際に子連れで訪問して記録）----
   kidReport?: KidReport;
 };
@@ -117,6 +126,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '新さっぽろ駅直結、1時間で回れる手頃なサイズ。小さい子連れで疲れない',
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: '北海道こどもの国', category: 'park', place: 'mixed', ages: ['2-3', '4-6'], city: '砂川市', note: '世界の七不思議を再現した遊具群', budget: 'free',
@@ -133,15 +144,20 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '本州最北の水族館、イルカパフォーマンスは1日3回。青森駅から青い森鉄道で20分',
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: 'The Kids（ザ・キッズ）', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '青森市', note: '0歳から遊べる全天候型の室内遊び場。大型遊具で全身を使って遊べる', budget: 'low',
+      summerCool: true,
     },
     {
       name: 'こどもはっち', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3'], city: '八戸市', note: '八戸市中心街にある、0歳〜就学前の親子向け屋内施設', budget: 'free',
+      summerCool: true,
     },
     {
       name: '八食センター', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '八戸市', note: '約60店舗の市場。忍者テーマの複合遊具がある無料の室内遊び場を併設', budget: 'free',
+      summerCool: true,
     },
     {
       name: '八戸公園（こどもの国）', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '八戸市', note: '無料で遊べる遊園地。実際に使われた機関車・消防車の展示もある', budget: 'free',
@@ -164,6 +180,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '入館完全無料、大型屋内遊具とアスレチック、雪国の冬に最適',
+      summerCool: true,
     },
   ],
   miyagi: [
@@ -173,6 +190,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'JR中野栄駅から徒歩15分、シャトルバスあり。イルカパフォーマンスは1日4-5回',
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: '八木山動物公園 フジサキの杜', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '仙台市', note: '地下鉄でアクセス良好、アフリカ園が人気', budget: 'low',
@@ -187,6 +206,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '日時指定入館券制、休日は事前購入必須。1階のショッピングモール部分は無料で入れる',
+      summerCool: true,
     },
     {
       name: 'スリーエム仙台市科学館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '仙台市', note: '体験型展示で4歳以上が楽しめる', budget: 'low',
@@ -194,6 +214,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '地下鉄東西線旭ヶ丘駅から徒歩5分。プラネタリウム別料金250円、小学生以上がおすすめ',
+      summerCool: true,
     },
   ],
   akita: [
@@ -210,6 +231,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '日本海を望む絶景水族館、ホッキョクグマ「豪太」が人気',
+      summerCool: true,
+      waterPlay: true,
     },
   ],
   yamagata: [
@@ -220,6 +243,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'クラゲ展示種類数世界一、ギネス記録、直径5mのクラゲ水槽が圧巻',
       popular: true,
+      summerCool: true,
+      waterPlay: true,
     },
   ],
   fukushima: [
@@ -229,6 +254,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'タッチプール、海獣展示、屋外遊び場もあり一日遊べる',
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: 'スパリゾートハワイアンズ', category: 'amusement', place: 'indoor', ages: ['2-3', '4-6'], city: 'いわき市', note: '年中温水プール、雨天・冬もOK', budget: 'high',
@@ -236,6 +263,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'ウォーターパーク「ウォーターパーク パレス」は小さい子向けプールあり、温泉と組み合わせ1泊2日が王道',
+      summerCool: true,
+      waterPlay: true,
     },
   ],
 
@@ -254,6 +283,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'てっぱく抽選（シミュレータ）は入館時にエントリー必須。D51運転台は常時体験可',
+      summerCool: true,
     },
     {
       name: 'トーベ・ヤンソンあけぼの子どもの森公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '飯能市', note: 'ムーミン童話の世界観を再現した無料公園', budget: 'free',
@@ -276,12 +306,14 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'モーリーファンタジー（屋内遊園地）とノエビアスタジアム（無料広場）',
+      summerCool: true,
     },
     {
       name: 'コクーンシティ（さいたま新都心）', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: 'さいたま市', note: 'さいたま新都心駅直結', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'コクーン2のキッズエリアと授乳室、駅直結でベビーカー動線最良',
+      summerCool: true,
     },
     {
       name: '川越鉄道公園 西武園ゆうえんち', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '所沢市', note: '昭和レトロな世界観、未就学児向け乗り物多数', budget: 'mid',
@@ -323,6 +355,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '実機展示30機以上、未就学児無料。隣接の航空公園も広大',
+      summerCool: true,
     },
     {
       name: 'むさしの村', category: 'amusement', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '加須市', note: '幼児向け遊園地と動物ふれあい', budget: 'mid',
@@ -341,6 +374,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: '日本で唯一シャチのパフォーマンスが見られる。最前列は水しぶきで濡れる、レインコート推奨',
       nearby: '鴨川温泉と合わせて1泊プランが鉄板',
       popular: true,
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: 'マザー牧場', category: 'farm', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '富津市', note: '動物と触れ合い＋収穫体験＋ミニ遊園地', budget: 'mid',
@@ -378,12 +413,14 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'モーリーファンタジー（屋内遊園地）と幕張海浜公園が徒歩圏',
+      summerCool: true,
     },
     {
       name: 'イオンモール幕張新都心', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '千葉市', note: '日本最大級のイオンモール', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'カンドゥー（職業体験施設、4歳〜）が併設、雨天1日コース可',
+      summerCool: true,
     },
     {
       name: 'カンドゥー（イオンモール幕張新都心）', category: 'indoor', place: 'indoor', ages: ['4-6'], city: '千葉市', note: 'キッザニア類似の職業体験', budget: 'mid',
@@ -391,6 +428,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: 'キッザニア東京より予約取りやすい、平日午後がベスト',
+      summerCool: true,
     },
     {
       name: '航空科学博物館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '芝山町', note: '成田空港隣接、飛行機の離発着が見える', budget: 'low',
@@ -398,6 +436,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '展望台から成田空港の滑走路一望、フライトシミュレータ体験（300円）も',
+      summerCool: true,
     },
     {
       name: '千葉市動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '千葉市', note: '立ちポーズで有名な「風太」のいる動物園', budget: 'low',
@@ -411,18 +450,21 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '宿泊型施設、夏の磯遊びとマザー牧場・鴨川シーワールドへのハブ',
+      waterPlay: true,
     },
     {
       name: '酒々井プレミアム・アウトレット', category: 'indoor', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '酒々井町', note: '成田空港近く、ベビールーム充実', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '無料キッズプレイランド「アシナガランド」併設、芝生でピクニック可',
+      summerCool: true,
     },
     {
       name: 'ふくろうの杜（流山）', category: 'indoor', place: 'indoor', ages: ['4-6'], city: '流山市', note: 'ふくろうカフェ的体験施設', budget: 'mid',
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'ふくろうとふれあえる小規模施設、4歳以上推奨',
+      summerCool: true,
     },
   ],
   tokyo: [
@@ -468,6 +510,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
         stayNote: '1.5〜3時間くらい。隣接の葛西臨海公園と合わせると半日コースになりやすい。',
         cautionNote: '暗くて怖がる子もいる。マグロの大水槽は人が集まりやすい。海風が強い日はかなり寒い。',
       },
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: 'サンシャイン水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '豊島区', note: '屋上「天空のペンギン」が人気、池袋直結', budget: 'mid',
@@ -476,6 +520,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '公式サイトで日時指定券が購入可能、休日は予約必須レベル',
       nearby: '同ビル内のプラネタリウム・ショッピングモールで雨天1日コース',
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: 'キッザニア東京', category: 'indoor', place: 'indoor', ages: ['4-6'], city: '江東区', note: '100種以上の職業体験、人気で予約推奨', budget: 'high',
@@ -483,6 +529,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'required',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '公式予約サイトで3ヶ月前から受付、平日第2部（16-21時）が比較的取りやすい',
+      summerCool: true,
     },
     {
       name: '井の頭恩賜公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '武蔵野市', note: '池のボート・動物園・散策、無料で過ごせる', budget: 'free',
@@ -507,6 +554,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '特別展開催中は混雑、常設展目当てなら比較的空いている。ベビーカーOK',
+      summerCool: true,
     },
     {
       name: 'アネビートリムパーク（ららぽーと各所等）', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3'], city: '複数', note: 'ヨーロッパ遊具の屋内パーク、0-3歳に最適', budget: 'mid',
@@ -514,6 +562,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '雨の日の休日は整理券配布で入場制限、平日午前がベスト',
+      summerCool: true,
     },
     // ===== 商業施設・モール（東京）=====
     {
@@ -522,6 +571,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '南館7階に授乳室・キッズトイレ・離乳食ルームが集約。屋上庭園「パンとエスプレッソとガーデン」は子連れに人気',
       nearby: '二子玉川駅徒歩1分、二子玉川公園と組み合わせ',
+      summerCool: true,
     },
     {
       name: '二子玉川ライズ・ショッピングセンター', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '世田谷区', ward: '世田谷区', note: '全館ベビーカー動線完備、ルーフガーデンで休憩可', budget: 'low',
@@ -529,66 +579,77 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'タウンフロント4階のベビールームと、リボン通り屋外エリアで雨でも晴れでも回遊しやすい',
       popular: true,
+      summerCool: true,
     },
     {
       name: '麻布台ヒルズ', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '港区', ward: '港区', note: '2023年開業、ベビールーム複数で乳児連れに優しい', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '中央広場「ヒルズプラザ」の芝生で休憩、屋内動線でベビーカーOK',
+      summerCool: true,
     },
     {
       name: 'IKEA Tokyo-Bay（船橋）', category: 'indoor', place: 'indoor', ages: ['2-3', '4-6'], city: '船橋市', note: 'スモーランド（無料一時預かり）と広いレストラン', budget: 'low',
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'スモーランドは身長条件あり（おむつ外れ・身長100-135cm）、1時間無料で利用可',
+      summerCool: true,
     },
     {
       name: '日本橋三越本店', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '中央区', ward: '中央区', note: '7階「こどもの街」とベビー休憩室が手厚い', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '本館7階のベビー休憩室は授乳室・調乳器・離乳食レンジ完備、土日も比較的空いている',
+      summerCool: true,
     },
     {
       name: 'GINZA SIX', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '中央区', ward: '中央区', note: '屋上庭園「GINZA SIX ガーデン」で芝生休憩可', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '4階に広めのベビールーム、屋上庭園は無料開放で都心の散歩スポット',
+      summerCool: true,
     },
     {
       name: '渋谷スクランブルスクエア', category: 'indoor', place: 'indoor', ages: ['2-3', '4-6'], city: '渋谷区', ward: '渋谷区', note: '駅直結、SHIBUYA SKYは4歳以上におすすめ', budget: 'mid',
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: 'SHIBUYA SKYは事前予約推奨、ベビーカーは展望台前で預ける必要あり',
+      summerCool: true,
     },
     {
       name: 'KITTE丸の内', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '千代田区', ward: '千代田区', note: '東京駅直結、屋上庭園から駅が見える', budget: 'free',
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '屋上庭園「KITTEガーデン」は無料、東京駅丸の内駅舎を間近に見られる電車好きキッズの聖地',
+      summerCool: true,
     },
     {
       name: '東京ミッドタウン（六本木）', category: 'indoor', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '港区', ward: '港区', note: '芝生広場と屋内モール、通年で過ごせる', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'ミッドタウン・ガーデンの芝生でピクニック、冬はイルミネーション、夏は水遊び（噴水）',
+      summerCool: true,
     },
     {
       name: '東京ミッドタウン日比谷', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '千代田区', ward: '千代田区', note: '日比谷公園隣接、6階パークビューガーデン', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'mid' },
       hiddenTip: '6階の屋上庭園は無料で日比谷公園を一望、屋内ベビールームも完備',
+      summerCool: true,
     },
     {
       name: 'ダイバーシティ東京プラザ', category: 'indoor', place: 'indoor', ages: ['2-3', '4-6'], city: '江東区', ward: '江東区', note: '実物大ガンダム立像、お台場の老舗モール', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '夜のガンダム演出（19時/19時半/20時）は無料、フェスティバル広場で休憩しやすい',
+      summerCool: true,
     },
     {
       name: 'アクアシティお台場', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '港区', ward: '港区', note: 'レインボーブリッジを望むモール、ベビールーム複数', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '海側のデッキで景色＋写真、ベビーカー貸出（無料）あり',
+      summerCool: true,
     },
     {
       name: 'グランベリーパーク（南町田）', category: 'indoor', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '町田市', note: 'スヌーピーミュージアム併設、屋外型モール', budget: 'low',
@@ -596,48 +657,56 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '隣接の鶴間公園（無料）で芝生遊び、駅直結でベビーカー動線最良',
       nearby: 'スヌーピーミュージアム＋鶴間公園で1日コース',
+      summerCool: true,
     },
     {
       name: '東京ソラマチ', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '墨田区', ward: '墨田区', note: 'スカイツリー併設、子連れ動線が広い', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '4階「すみだ水族館」とプラネタリウム、7階のベビールームが広め',
+      summerCool: true,
     },
     {
       name: 'ららぽーと立川立飛', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '立川市', note: '駅直結、ベビーカーで全館回遊可能', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '2階の「あそびにキッチン」やキッズスペース、1階のベビールームが広い',
+      summerCool: true,
     },
     {
       name: 'イオンモールむさし村山', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '武蔵村山市', note: '都内有数の大型モール、屋内遊び場も併設', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '無料キッズスペース＋有料のモーリーファンタジー（屋内遊園地）併設',
+      summerCool: true,
     },
     {
       name: 'ららテラス武蔵小杉', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '川崎市', note: '駅直結、コンパクトで子連れ動線◎', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'グランツリー武蔵小杉と合わせて回遊しやすい、3階のキッズスペース無料',
+      summerCool: true,
     },
     {
       name: '吉祥寺アトレ・キラリナ京王吉祥寺', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '武蔵野市', note: '駅直結、井の頭公園に近く子連れランチ充実', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: 'アトレ吉祥寺東館にベビールーム、井の頭公園散歩前後に立ち寄りやすい',
+      summerCool: true,
     },
     {
       name: 'マルイファミリー溝口', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '川崎市', note: '駅直結で「ファミリー」と名がつく通り子育て層向き', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '4階のキッズフロア、ベビーカー貸出と授乳室の場所が分かりやすい',
+      summerCool: true,
     },
     {
       name: 'ルミネ町田', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '町田市', note: '駅直結のファッション系モール、子連れ動線あり', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: 'ルミネ7階のベビー休憩室は授乳・調乳器・離乳食レンジ完備で本格的',
+      summerCool: true,
     },
 
     // ===== 屋内遊び場（東京）=====
@@ -657,6 +726,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
         stayNote: '1.5〜4時間くらい。',
         cautionNote: '土日はかなりカオス。ハイハイ期の子は踏まれないよう注意。休日午後は人密度が高い。雨の日の逃げ場として非常に人気。',
       },
+      summerCool: true,
     },
     {
       name: '東京おもちゃ美術館', category: 'museum', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '新宿区', ward: '新宿区', note: '木のおもちゃで遊べる体験型ミュージアム', budget: 'mid',
@@ -664,6 +734,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '四谷の旧校舎を活用、木のぬくもりに包まれた空間。日時指定予約制で混雑が緩やか',
+      summerCool: true,
     },
     {
       name: 'レゴランド・ディスカバリー・センター東京', category: 'indoor', place: 'indoor', ages: ['2-3', '4-6'], city: '港区', ward: '港区', note: 'お台場、3-10歳向けの屋内レゴ施設', budget: 'mid',
@@ -671,6 +742,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'デックス東京ビーチ内、平日朝一が空いている。WEB事前購入で割安',
+      summerCool: true,
     },
     {
       name: 'サンリオピューロランド', category: 'amusement', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '多摩市', note: '全天候型インドアテーマパーク', budget: 'mid',
@@ -679,6 +751,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '完全屋内型、ベビーカー貸出あり。アフタヌーンパス（14時〜）が割安',
       popular: true,
+      summerCool: true,
     },
     {
       name: 'ファンタジーキッズリゾート お台場', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '江東区', ward: '江東区', note: 'ふわふわ遊具・砂遊び・乗り物が揃う', budget: 'mid',
@@ -686,6 +759,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'ヴィーナスフォート跡地の東京ベイ有明ワシントンホテル近辺、平日フリーパス推奨',
+      summerCool: true,
     },
     {
       name: 'キドキドよみうりランド店', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '稲城市', note: 'ボーネルンド運営、よみうりランド内', budget: 'mid',
@@ -693,6 +767,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'よみうりランド入園料別、雨天時の屋内避難先として便利',
+      summerCool: true,
     },
     {
       name: 'スモールワールズTOKYO', category: 'indoor', place: 'indoor', ages: ['2-3', '4-6'], city: '江東区', ward: '江東区', note: '世界最大級のミニチュア・テーマパーク', budget: 'mid',
@@ -700,6 +775,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '有明、写真映え抜群。完全屋内で雨天OK、ベビーカー入場可',
+      summerCool: true,
     },
     {
       name: '科学技術館（北の丸公園）', category: 'museum', place: 'indoor', ages: ['4-6'], city: '千代田区', ward: '千代田区', note: '体験型展示で4歳以上が楽しめる科学館', budget: 'low',
@@ -707,6 +783,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '北の丸公園内、皇居散歩と組み合わせやすい。ボタン・ハンドル操作の体験展示が多い',
+      summerCool: true,
     },
     {
       name: '日本科学未来館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '江東区', ward: '江東区', note: 'お台場、ASIMOやGeo-Cosmosが目玉', budget: 'low',
@@ -714,6 +791,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'ドームシアター（プラネタリウム的）は別料金、当日整理券。平日午前が狙い目',
+      summerCool: true,
     },
     {
       name: 'がすてなーに ガスの科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '江東区', ward: '江東区', note: '豊洲、入館無料の体験型科学館', budget: 'free',
@@ -722,6 +800,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '完全無料、豊洲駅徒歩6分。ららぽーと豊洲と組み合わせて雨天1日コース',
       nearby: 'ららぽーと豊洲＋アネビートリムパークと組み合わせ',
+      summerCool: true,
     },
     {
       name: 'パナソニックセンター東京 AkeruE', category: 'museum', place: 'indoor', ages: ['4-6'], city: '江東区', ward: '江東区', note: '有明、創造体験型ミュージアム', budget: 'low',
@@ -729,12 +808,14 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '18歳以下無料、ものづくり体験ワークショップが豊富',
+      summerCool: true,
     },
     {
       name: 'ベビーパーク KIDS PARK（複数）', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3'], city: '複数', note: '0-3歳特化の屋内遊び場', budget: 'mid',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '0-3歳特化のため4歳以上の兄姉がいる家族はやや物足りない場合あり',
+      summerCool: true,
     },
     {
       name: '東京都現代美術館 こどもアトリエ', category: 'museum', place: 'indoor', ages: ['4-6'], city: '江東区', ward: '江東区', note: '木場公園隣接、子ども向けプログラムあり', budget: 'low',
@@ -743,6 +824,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'コレクション展は中学生以下無料、木場公園と合わせて半日コース',
       nearby: '木場公園と組み合わせ',
+      summerCool: true,
     },
     {
       name: 'すみだ水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '墨田区', ward: '墨田区', note: 'スカイツリータウン内、ベビーカー入場可', budget: 'mid',
@@ -751,6 +833,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: 'ベビーカーのまま入場OK、屋内型で雨天最適。ペンギン水槽が大人気',
       popular: true,
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: 'マクセル アクアパーク品川', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '港区', ward: '港区', note: '品川駅徒歩2分、音と光の演出', budget: 'mid',
@@ -758,6 +842,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: 'イルカパフォーマンスの照明演出が圧巻、品川プリンスホテル内アクセス良好',
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: 'カワスイ 川崎水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '川崎市', note: '川崎駅直結、世界の淡水魚展示', budget: 'mid',
@@ -765,12 +851,15 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '川崎ルフロン10階、駅直結で雨天最強。アマゾン川エリアが見応えあり',
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: 'NHKスタジオパーク（渋谷）', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '渋谷区', ward: '渋谷区', note: 'おかあさんといっしょ等の体験展示※2024年休館中', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '※建て替えで2024年から休館中、再開時期は公式サイトで要確認',
+      summerCool: true,
     },
     {
       name: 'トリックアートミュージアム高尾山', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '八王子市', note: '高尾山口駅前、屋内で写真映え', budget: 'low',
@@ -778,6 +867,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '高尾山ハイキング前後の雨宿りスポットとして最適',
+      summerCool: true,
     },
     {
       name: '東京都水の科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '江東区', ward: '江東区', note: '有明、入館無料の体験型施設', budget: 'free',
@@ -785,6 +875,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '完全無料、水の循環体験が楽しい。有明スポーツセンター隣接で1日コース',
+      summerCool: true,
     },
     {
       name: '東京消防庁 消防博物館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '新宿区', ward: '新宿区', note: '四谷三丁目駅直結、入館無料', budget: 'free',
@@ -792,6 +883,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '消防車・ヘリコプター展示、消防士なりきり体験が無料で楽しい',
+      summerCool: true,
     },
     {
       name: '地下鉄博物館（葛西）', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '江戸川区', ward: '江戸川区', note: '葛西駅高架下、運転シミュレータあり', budget: 'low',
@@ -799,6 +891,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '電車好きキッズの聖地、運転シミュレータ無料、220円で1日遊べる',
+      summerCool: true,
     },
     {
       name: 'JAL工場見学 SKY MUSEUM（羽田）', category: 'museum', place: 'indoor', ages: ['4-6'], city: '大田区', ward: '大田区', note: '飛行機の整備工場が見学できる', budget: 'free',
@@ -806,6 +899,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'required',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '完全予約制で6ヶ月前から受付、人気で土日は瞬殺。平日午後が比較的取りやすい',
+      summerCool: true,
     },
     {
       name: 'ANA機体工場見学（羽田）', category: 'museum', place: 'indoor', ages: ['4-6'], city: '大田区', ward: '大田区', note: 'ANAの整備工場見学、無料', budget: 'free',
@@ -813,6 +907,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'required',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '4歳以上対象、完全予約制。JALと同じく半年前受付',
+      summerCool: true,
     },
 
     // ===== 公園（東京）=====
@@ -880,6 +975,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
         stayNote: '普通に半日〜1日。0歳でもピクニックで3〜5時間は過ごせる。',
         cautionNote: 'とにかく広く親が疲れる。西立川口からの入園がかなり楽。夏は暑さ対策が必須。',
       },
+      waterPlay: true,
     },
     // ===== 運営者が実際に子連れで訪問したスポット（kidReport は lib/kid-reports.ts から name 一致でマージ）=====
     {
@@ -896,27 +992,35 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '武蔵国分寺公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '国分寺市', note: '円形広場と霧の噴水、広い芝生でのんびり', budget: 'free',
+      waterPlay: true,
     },
     {
       name: '神代植物公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3'], city: '調布市', note: 'バラ園と大温室、舗装された散策路でベビーカー快適', budget: 'low',
     },
     {
       name: '林試の森公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '品川区', ward: '品川区', note: '巨木と木陰が多い緑地、夏はじゃぶじゃぶ池', budget: 'free',
+      waterPlay: true,
     },
     {
       name: '多摩六都科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '西東京市', note: '世界最大級のプラネタリウムと体験型展示', budget: 'low',
+      summerCool: true,
     },
     {
       name: '杉並アニメーションミュージアム', category: 'museum', place: 'indoor', ages: ['4-6'], city: '杉並区', ward: '杉並区', note: '日本のアニメの歴史を学べる体験型ミュージアム、入館無料', budget: 'free',
+      summerCool: true,
     },
     {
       name: '0123吉祥寺・0123はらっぱ', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3'], city: '武蔵野市', note: '0〜3歳の親子のための武蔵野市の屋内施設', budget: 'free',
+      summerCool: true,
     },
     {
       name: '京王あそびの森 HUGHUG', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '日野市', note: '高幡不動駅前の屋内遊び場、大型ネット遊具が名物', budget: 'mid',
+      summerCool: true,
     },
     {
       name: 'しながわ水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '品川区', ward: '品川区', note: 'トンネル水槽とイルカショー、しながわ区民公園内', budget: 'low',
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: '板橋区立こども動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '板橋区', ward: '板橋区', note: 'モルモットふれあいとポニー乗馬、入園無料', budget: 'free',
@@ -926,15 +1030,19 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '足立区生物園', category: 'zoo', place: 'indoor', ages: ['2-3', '4-6'], city: '足立区', ward: '足立区', note: '昆虫から大型動物まで、屋内中心で雨の日もOK', budget: 'low',
+      summerCool: true,
     },
     {
       name: '江戸東京たてもの園', category: 'museum', place: 'mixed', ages: ['2-3', '4-6'], city: '小金井市', note: '小金井公園内、復元建造物を歩いて見学できる野外博物館', budget: 'low',
+      summerCool: true,
     },
     {
       name: '京王れーるランド', category: 'museum', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '日野市', note: '多摩動物公園駅前、運転シミュレーターとプラレール', budget: 'low',
+      summerCool: true,
     },
     {
       name: '府中市郷土の森博物館', category: 'museum', place: 'mixed', ages: ['2-3', '4-6'], city: '府中市', note: '復元建物とプラネタリウム、梅園と自然観察', budget: 'low',
+      summerCool: true,
     },
     {
       name: '葛西臨海公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '江戸川区', ward: '江戸川区', note: '水族園併設、芝生広場と観覧車', budget: 'free',
@@ -1038,6 +1146,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '遊泳は禁止だが水際遊びはOK、シャワー設備あり。夕日とレインボーブリッジの撮影スポット',
+      waterPlay: true,
     },
     {
       name: '神田明神', category: 'seasonal', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '千代田区', ward: '千代田区', note: 'お宮参り・七五三の名所', budget: 'free',
@@ -1068,6 +1177,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '常設展は無料、子ども向けワークショップ「とびらラボ」が定期開催',
+      summerCool: true,
     },
     {
       name: '東京国立博物館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '台東区', ward: '台東区', note: '上野、ファミリー向けプログラムあり', budget: 'low',
@@ -1075,12 +1185,14 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '高校生以下無料、月1の「親子ギャラリーツアー」が好評',
+      summerCool: true,
     },
     {
       name: '国立新美術館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '港区', ward: '港区', note: '六本木、企画展中心の現代美術館', budget: 'low',
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: 'ベビーカーOK、館内のミュージアムカフェは子連れでも入りやすい',
+      summerCool: true,
     },
     {
       name: '東京タワー', category: 'amusement', place: 'mixed', ages: ['2-3', '4-6'], city: '港区', ward: '港区', note: '展望台と隣接の芝公園', budget: 'mid',
@@ -1097,12 +1209,14 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: 'ベビーカーOK、ガラス床は2歳以降に大ヒット。日時指定券で並ばずに済む',
       popular: true,
+      summerCool: true,
     },
     {
       name: '台場海浜公園 ビーチ', category: 'seasonal', place: 'outdoor', ages: ['2-3', '4-6'], city: '港区', ward: '港区', note: 'お台場ビーチで夏の砂遊び', budget: 'free',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '潮干狩りは禁止だが砂遊びはOK、夏のシャワー設備あり',
+      waterPlay: true,
     },
     {
       name: '城南島海浜公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '大田区', ward: '大田区', note: '羽田の飛行機が間近に見える', budget: 'free',
@@ -1117,6 +1231,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '完全無料、地震体験ツアー（タブレット式）が貴重。4歳以上に教育的価値',
+      summerCool: true,
     },
     {
       name: '東京駅前 行幸通り・丸の内仲通り', category: 'seasonal', place: 'outdoor', ages: ['2-3', '4-6'], city: '千代田区', ward: '千代田区', note: '冬のイルミネーション散策', budget: 'free',
@@ -1131,6 +1246,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '4歳以下無料、水のエリアあるので濡れてもいい服装で。日時指定推奨',
       popular: true,
+      summerCool: true,
     },
     {
       name: 'チームラボボーダレス（麻布台ヒルズ）', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '港区', ward: '港区', note: '2024年移転オープン、デジタルアート', budget: 'mid',
@@ -1138,6 +1254,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'recommended',
       crowdLevel: { weekday: 'high', holiday: 'high' },
       hiddenTip: '麻布台ヒルズ内、2024年2月オープン。混雑激しく事前予約必須',
+      summerCool: true,
     },
     {
       name: 'ぐりんぱから一足のばして・羽村市動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '羽村市', note: 'コンパクトな動物園、入園料安い', budget: 'low',
@@ -1169,6 +1286,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '高校生以下無料、囲炉裏体験など昔遊び。雨でも軒下で過ごせる',
       nearby: '生田緑地',
+      summerCool: true,
     },
     {
       name: '池袋防災館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '豊島区', ward: '豊島区', note: '池袋駅徒歩5分、無料の防災体験', budget: 'free',
@@ -1176,6 +1294,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '無料、地震・消火・煙体験など2時間コース。4歳以上に教育的',
+      summerCool: true,
     },
     {
       name: '本所防災館（墨田区）', category: 'museum', place: 'indoor', ages: ['4-6'], city: '墨田区', ward: '墨田区', note: '東京消防庁、無料防災体験ツアー', budget: 'free',
@@ -1183,6 +1302,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '完全無料、4歳以上の防災体験。事前予約でツアー型見学',
+      summerCool: true,
     },
     {
       name: 'リトルプラネット（複数）', category: 'indoor', place: 'indoor', ages: ['2-3', '4-6'], city: '複数', note: '次世代型テーマパーク、デジタル遊び場', budget: 'mid',
@@ -1190,12 +1310,14 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '砂遊びARや投影お絵かきなどデジタル＋アナログのハイブリッド体験',
+      summerCool: true,
     },
     {
       name: 'モーリーファンタジー（複数イオン内）', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '複数', note: 'イオン併設の屋内遊園地', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '時間制プレイ（30分300円〜）と乗り物別料金、無料の試遊コーナーも',
+      summerCool: true,
     },
     {
       name: 'グランパーク田町・キッズスペース', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3'], city: '港区', ward: '港区', note: 'オフィスビル内の無料キッズスペース', budget: 'free',
@@ -1203,6 +1325,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'low' },
       hiddenTip: '田町駅徒歩3分、無料の屋内キッズスペース。空いていて穴場',
+      summerCool: true,
     },
     {
       name: '昭和記念公園 こどもの森レインボーハンモック', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '立川市', note: '昭和記念公園内の名物遊具', budget: 'low',
@@ -1232,6 +1355,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'mid' },
       hiddenTip: 'にれの木広場の遊具、夏のイベント多数。日比谷ミッドタウンと組み合わせ',
+      waterPlay: true,
     },
     {
       name: '代々木公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '渋谷区', ward: '渋谷区', note: '広大な芝生でピクニック', budget: 'free',
@@ -1271,6 +1395,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: 'ワンデーパス（全施設）が割安。夕方17時以降のナイトパスはさらにお得',
       nearby: '八景島駅直結、1日フルで遊べる',
       popular: true,
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: 'よこはま動物園ズーラシア', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '横浜市', note: '世界の気候帯別展示、広大', budget: 'low',
@@ -1285,6 +1411,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '日時指定入館券制、土日は1ヶ月前に売切れも。平日17時以降の半額タイムが狙い目',
+      summerCool: true,
     },
     {
       name: '新江ノ島水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '藤沢市', note: '相模湾大水槽とクラゲ展示', budget: 'mid',
@@ -1293,6 +1420,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'イルカショー最終回（16時台）が空いている。江ノ島観光と組み合わせ',
       nearby: '江ノ島展望台・鎌倉大仏と合わせて1日コース',
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: '箱根彫刻の森美術館', category: 'museum', place: 'outdoor', ages: ['2-3', '4-6'], city: '箱根町', note: '野外彫刻＋子ども向けアート遊具', budget: 'mid',
@@ -1301,6 +1430,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '「ネットの森」（巨大ハンモック型遊具）が子どもに大人気。箱根登山鉄道彫刻の森駅から徒歩2分',
       nearby: '箱根湯本温泉と合わせて1泊プラン',
+      summerCool: true,
     },
     // ===== 商業施設・モール（神奈川）=====
     {
@@ -1308,36 +1438,42 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '4階のキッズエリアと授乳室、屋上「みんなの庭」で芝生休憩',
+      summerCool: true,
     },
     {
       name: '横浜ベイクォーター', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '横浜市', note: '横浜駅徒歩7分、海沿いのモール', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'デッキで電車・船が見える、ベビールームと多目的トイレが各階あり',
+      summerCool: true,
     },
     {
       name: 'コレットマーレ桜木町', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '横浜市', note: '桜木町駅直結、映画館とレストラン', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '5階のキッズエリアと授乳室、桜木町駅から徒歩2分',
+      summerCool: true,
     },
     {
       name: 'グランツリー武蔵小杉', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '川崎市', note: '武蔵小杉駅徒歩4分、子連れ向け店舗多数', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '4階「キッズパーク」屋上庭園とふわふわドーム（無料）、雨でも晴れでも遊べる',
+      summerCool: true,
     },
     {
       name: 'テラスモール湘南', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '藤沢市', note: '辻堂駅直結、ファミリー向け大型モール', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '4階「リトルプラネット」（屋内デジタル遊び場）あり、雨天時の避難先',
+      summerCool: true,
     },
     {
       name: 'みなとみらい東急スクエア', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '横浜市', note: 'みなとみらい駅直結、子連れ動線◎', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'みなとみらい線駅直結、横浜美術館も近い',
+      summerCool: true,
     },
 
     // ===== 屋内遊び場・体験（神奈川）=====
@@ -1347,6 +1483,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '横浜駅徒歩5分、世界最大級の鉄道模型ジオラマ。日時指定推奨',
+      summerCool: true,
     },
     {
       name: 'カップヌードルミュージアム横浜', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '横浜市', note: 'みなとみらい、オリジナルカップヌードル作り', budget: 'low',
@@ -1354,6 +1491,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: 'マイカップヌードルファクトリー（500円/個）の予約は当日整理券、午前狙い目',
+      summerCool: true,
     },
     {
       name: '川崎市 藤子・F・不二雄ミュージアム', category: 'museum', place: 'mixed', ages: ['2-3', '4-6'], city: '川崎市', note: 'ドラえもんの世界観、登戸駅シャトルバス', budget: 'mid',
@@ -1362,6 +1500,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '完全予約制（10時/12時/14時/16時の4回入場）、ローソンで前売り購入',
       popular: true,
+      summerCool: true,
     },
     {
       name: 'シルク博物館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '横浜市', note: '横浜開港の歴史、繭から糸取り体験', budget: 'low',
@@ -1369,6 +1508,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'low' },
       hiddenTip: '繭から糸取り体験（要予約・無料）が珍しい、馬車道駅徒歩3分',
+      summerCool: true,
     },
     {
       name: '神奈川県立 生命の星・地球博物館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '小田原市', note: '小田原、恐竜骨格と地球の歴史', budget: 'low',
@@ -1376,6 +1516,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '入生田駅徒歩3分、巨大な恐竜骨格と動物剥製。中学生以下無料で良コスパ',
+      summerCool: true,
     },
     {
       name: '小田原こどもの森公園わんぱくらんど', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '小田原市', note: '無料の大型公園、SLや遊具豊富', budget: 'free',
@@ -1391,6 +1532,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '東急こどもの国線終点、牧場・プール（夏）・スケート（冬）と通年型',
       popular: true,
+      waterPlay: true,
     },
     {
       name: '辻堂海浜公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '藤沢市', note: '夏の交通公園とジャンボプール', budget: 'low',
@@ -1398,6 +1540,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '交通公園で自転車練習無料、夏は本格プール（別料金）併設',
+      waterPlay: true,
     },
     {
       name: '湘南台文化センターこども館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '藤沢市', note: '湘南台駅直結、無料の科学体験', budget: 'low',
@@ -1405,6 +1548,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '入館無料、プラネタリウム別料金（大人400円）。雨天時の救世主',
+      summerCool: true,
     },
     {
       name: 'はまぎん こども宇宙科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '横浜市', note: '洋光台、プラネタリウムと体験展示', budget: 'low',
@@ -1412,6 +1556,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '5階建ての宇宙テーマ館、未就学児無料で良コスパ',
+      summerCool: true,
     },
     {
       name: '箱根湯本駅前 旧街道周辺', category: 'seasonal', place: 'outdoor', ages: ['2-3', '4-6'], city: '箱根町', note: '日帰り温泉と寄木細工体験', budget: 'mid',
@@ -1425,6 +1570,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '小田急片瀬江ノ島駅徒歩3分、家族用海の家多数。シャワー有料',
+      waterPlay: true,
     },
     {
       name: '生田緑地', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '川崎市', note: '日本民家園・科学館・プラネタリウム', budget: 'low',
@@ -1444,6 +1590,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '屋内5フロアと屋外遊具で1日遊べる、雨天の鉄板',
+      summerCool: true,
     },
     {
       name: 'マリンピア日本海', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '新潟市', note: '日本海側最大級、イルカショー', budget: 'low',
@@ -1451,6 +1598,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '日本海側最大級、イルカパフォーマンスは1日3-4回',
+      summerCool: true,
+      waterPlay: true,
     },
   ],
   toyama: [
@@ -1460,6 +1609,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '富山湾特有のホタルイカやミラージュランド隣接',
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: 'ミラージュランド', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '魚津市', note: '小規模で0-6歳に丁度良い遊園地', budget: 'low',
@@ -1476,6 +1627,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'ジンベエザメが日本海側で唯一見られる水族館、能登和倉温泉と組み合わせ',
+      summerCool: true,
+      waterPlay: true,
     },
   ],
   fukui: [
@@ -1486,6 +1639,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '日時指定の完全予約制、土日は数ヶ月前から埋まる。恐竜ロボットが圧巻',
       popular: true,
+      summerCool: true,
     },
     {
       name: '越前松島水族館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '坂井市', note: 'イルカにタッチできる', budget: 'mid',
@@ -1493,6 +1647,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'イルカタッチ＆給餌体験（別料金）、東尋坊から車10分',
+      summerCool: true,
+      waterPlay: true,
     },
   ],
   shizuoka: [
@@ -1517,6 +1673,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '海洋科学博物館と自然史博物館の共通券でお得、三保の松原もすぐ',
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: 'ぐりんぱ（富士山2合目）', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '裾野市', note: 'シルバニアビレッジ等、小さい子向け', budget: 'mid',
@@ -1550,6 +1708,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'オアシスパーク（無料遊具広場）隣接、水族館は所要90分',
       nearby: '河川環境楽園オアシスパーク＋アクア・トト＋観覧車で1日コース',
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: '各務原市民公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '各務原市', note: 'アクア・トトに隣接、併せて1日', budget: 'free',
@@ -1567,6 +1727,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '体験型展示「ディスカバリールーム」が人気、水族館と博物館の中間的な施設',
       nearby: '隣接のからすま半島公園で芝生遊び',
+      summerCool: true,
     },
     {
       name: 'ブルーメの丘', category: 'farm', place: 'outdoor', ages: ['2-3', '4-6'], city: '日野町', note: '動物ふれあい＋収穫体験＋遊具', budget: 'low',
@@ -1584,6 +1745,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '日本で唯一のジュゴン展示、約1,200種の魚。所要2-3時間',
       popular: true,
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: '志摩スペイン村', category: 'amusement', place: 'mixed', ages: ['2-3', '4-6'], city: '志摩市', note: 'スペイン村パルケエスパーニャ', budget: 'high',
@@ -1600,6 +1763,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '桜島をバックにジンベエザメ、イルカパフォーマンスは1日4回',
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: '平川動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '鹿児島市', note: 'コアラ舎と遊園地併設', budget: 'low',
@@ -1668,6 +1833,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '屋外展示のSLと宇宙服試着が無料、屋内体験展示も豊富',
+      summerCool: true,
     },
   ],
   ibaraki: [
@@ -1678,6 +1844,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'キッズスペース（1回20分、予約制）が穴場、イルカショー最終回（15-16時）が空いている',
       nearby: '大洗海岸と大洗磯前神社で1日コース',
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: '国営ひたち海浜公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: 'ひたちなか市', note: 'ネモフィラ・コキアの絶景、遊具も充実', budget: 'low',
@@ -1701,6 +1869,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'プラネタリウム別料金、屋外にH-II ロケット実物大模型',
+      summerCool: true,
     },
     {
       name: 'JAXA筑波宇宙センター', category: 'museum', place: 'indoor', ages: ['4-6'], city: 'つくば市', note: '宇宙開発の展示館、入館無料', budget: 'free',
@@ -1708,6 +1877,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '完全無料、実物大ロケット屋外展示。施設見学ツアー（要予約・無料）あり',
+      summerCool: true,
     },
     {
       name: '国営ひたち海浜公園 大観覧車', category: 'amusement', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: 'ひたちなか市', note: 'プレジャーガーデン内のミニ遊園地', budget: 'low',
@@ -1722,6 +1892,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'low' },
       hiddenTip: '大洗水族館の帰りに寄りやすい、未就学児無料',
+      summerCool: true,
     },
   ],
   gunma: [
@@ -1746,6 +1917,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '伊香保温泉から車5分、おもちゃ・人形・名車の複合館。雨天時の救世主',
+      summerCool: true,
     },
     {
       name: 'こんにゃくパーク', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '甘楽町', note: '無料工場見学＋無料こんにゃくバイキング', budget: 'free',
@@ -1753,6 +1925,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '完全無料の工場見学＋バイキング、土日は1時間待ちも。平日推奨',
+      summerCool: true,
     },
     {
       name: '群馬県立 ぐんま昆虫の森', category: 'museum', place: 'mixed', ages: ['2-3', '4-6'], city: '桐生市', note: '昆虫観察と里山体験', budget: 'low',
@@ -1760,6 +1933,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '高校生以下無料、温室の生きたチョウ観察と里山散策で1日',
+      summerCool: true,
     },
     {
       name: '富岡製糸場', category: 'museum', place: 'mixed', ages: ['4-6'], city: '富岡市', note: '世界遺産、4歳以上の歴史学習', budget: 'low',
@@ -1767,6 +1941,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '世界遺産だがコンパクトで未就学児無料、1時間程度で回れる',
+      summerCool: true,
     },
     {
       name: '草津温泉 湯畑周辺', category: 'seasonal', place: 'outdoor', ages: ['2-3', '4-6'], city: '草津町', note: '日本三大名泉、湯もみショー', budget: 'low',
@@ -1789,6 +1964,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '忍野八海の近く、淡水魚メインで30-60分で回れるサイズ',
+      summerCool: true,
+      waterPlay: true,
     },
   ],
   aichi: [
@@ -1808,6 +1985,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'イルカパフォーマンスは1日3-4回、最終回が空いている。シャチ公開トレーニングは事前確認必須',
       nearby: '南極観測船ふじ（同敷地内、大人300円）と組み合わせ',
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: '東山動植物園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '名古屋市', note: 'コアラ・イケメンゴリラ、遊園地併設', budget: 'low',
@@ -1843,6 +2022,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'イルカLIVE「キラメキ」は1日3-4回、開園直後が混雑前で狙い目',
       nearby: '梅小路公園＋京都鉄道博物館で半日-1日コース',
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: '京都市動物園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '京都市', note: '岡崎エリア、平安神宮や美術館も近い', budget: 'low',
@@ -1866,6 +2047,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'SLスチーム号（別料金300円）は1日4-5便、午前の回が比較的空いている',
+      summerCool: true,
     },
   ],
   osaka: [
@@ -1877,6 +2059,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: '閉館2時間前（15時以降）が狙い目、ジンベエザメ給餌タイム狙いなら11時/14時半頃',
       nearby: '天保山マーケットプレース（隣接）でランチ＋観覧車で1日コース',
       popular: true,
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: 'ニフレル', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '吹田市', note: '「生きるミュージアム」、動物と間近', budget: 'mid',
@@ -1885,6 +2069,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '万博記念公園駅直結、ベビーカー可。ホワイトタイガーの展示が圧巻',
       nearby: 'EXPOCITYのららぽーと＋観覧車で雨天1日コース',
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: 'キッズプラザ大阪', category: 'indoor', place: 'indoor', ages: ['2-3', '4-6'], city: '大阪市', note: '体験型のこども博物館、雨天OK', budget: 'low',
@@ -1892,6 +2078,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '5階「こどもタウン」の実際の店舗そっくりな作りが子どもに大ヒット。平日が圧倒的におすすめ',
+      summerCool: true,
     },
     {
       name: '天王寺動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '大阪市', note: '都心の動物園、駅近', budget: 'low',
@@ -1932,6 +2119,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'マイカーサファリ（自家用車で巡回）が人気。夏はプール、冬はアイススケートも併設',
+      waterPlay: true,
     },
     {
       name: '須磨シーワールド', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '神戸市', note: '2024年リニューアル、西日本初のシャチ展示', budget: 'mid',
@@ -1940,6 +2128,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '2024年6月リニューアル、シャチパフォーマンス人気で事前予約必須',
       nearby: '須磨海浜公園でピクニックセット',
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: 'ニジゲンノモリ（淡路島）', category: 'amusement', place: 'outdoor', ages: ['4-6'], city: '淡路市', note: 'クレヨンしんちゃんアドベンチャーパーク等', budget: 'mid',
@@ -2004,6 +2194,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'シロイルカのバブルリングは1日4-5回公演、無料で見られる',
+      summerCool: true,
+      waterPlay: true,
     },
   ],
   okayama: [
@@ -2044,6 +2236,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '入館完全無料、プラネタリウム別料金510円。原爆ドーム隣接でアクセス最高',
+      summerCool: true,
     },
   ],
   yamaguchi: [
@@ -2060,6 +2253,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'フグ展示種類世界一、イルカ・アシカショーは1日3回。下関駅から徒歩7分',
+      summerCool: true,
+      waterPlay: true,
     },
   ],
   tokushima: [
@@ -2085,6 +2280,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '2020年開業で綺麗、夕方は夕日シルエットの演出が美しい',
+      summerCool: true,
+      waterPlay: true,
     },
   ],
   ehime: [
@@ -2117,6 +2314,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '桂浜の海辺、レトロな昭和水族館の味わい、坂本龍馬像とセット',
+      summerCool: true,
+      waterPlay: true,
     },
   ],
 
@@ -2130,6 +2329,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: 'イルカショー後の17時前が比較的空いている。九州の海再現水槽が大人も楽しい',
       nearby: '海の中道海浜公園と1日セット（駅共通）',
       popular: true,
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: '海の中道海浜公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '福岡市', note: '動物の森＋大型遊具＋花、1日遊べる', budget: 'low',
@@ -2153,6 +2354,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '平日フリーパス（1,200円程度）がお得。休日は整理券制になることも',
+      summerCool: true,
     },
   ],
   saga: [
@@ -2162,6 +2364,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'プラネタリウム別料金（大人520円）、武雄温泉と組み合わせ',
+      summerCool: true,
     },
     {
       name: '神野公園こども遊園地', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '佐賀市', note: '入園無料の昔ながらの遊園地', budget: 'low',
@@ -2193,6 +2396,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '世界最多9種類のペンギン展示、ふれあいビーチでペンギン散歩（土日祝）',
+      summerCool: true,
+      waterPlay: true,
     },
   ],
   kumamoto: [
@@ -2219,6 +2424,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'セイウチとのふれあい、タッチプール、高崎山と隣接で1日コース',
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: '高崎山自然動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '大分市', note: '野生の猿の群れが来る、うみたまご隣接', budget: 'low',
@@ -2255,6 +2462,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: '16時以降の夕方入館券（1,510円、8割価格）が狙い目。那覇から車で約2時間、日帰り強行はキツイ',
       nearby: '海洋博公園内にエメラルドビーチ（無料）、オキちゃん劇場（イルカショー）で1日フル',
       popular: true,
+      summerCool: true,
+      waterPlay: true,
     },
     {
       name: '沖縄こどもの国', category: 'zoo', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '沖縄市', note: '動物園＋こどもの遊具、リーズナブル', budget: 'low',
@@ -2278,6 +2487,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '那覇空港から車で20分、イーアス沖縄豊崎内で買い物とセット。雨天時の強い味方',
       nearby: 'イーアス沖縄豊崎（大型商業施設）で1日滞在可',
+      summerCool: true,
+      waterPlay: true,
     },
   ],
 };
@@ -2421,6 +2632,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '800-1,500円', elementary: '100円〜（キッズメニュー）', preschool: '100円〜', infant: '離乳食無料' },
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: '離乳食（レトルトと同等）は無料で提供、ベビーチェア大量に完備',
+      summerCool: true,
   },
   {
     name: 'COCO&#39;S（ココス）', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2429,6 +2641,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '900-1,500円', elementary: '499円〜', preschool: '499円〜', infant: '離乳食200円' },
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: '離乳食（5ヶ月〜）200円、誕生日デザート無料サービス',
+      summerCool: true,
   },
   {
     name: 'ガスト', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2437,6 +2650,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '700-1,300円', elementary: '329円〜', preschool: '329円〜', infant: '離乳食214円' },
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: '配膳ロボット「BellaBot」が子どもに大人気、離乳食メニュー常設',
+      summerCool: true,
   },
   {
     name: 'サイゼリヤ', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2445,6 +2659,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '800円目安', elementary: '子ども食器無料', preschool: 'ミニサイズメニューあり', infant: '持ち込み可' },
     strollerAccess: true, babyChair: true, kidsMenu: false,
     hiddenTip: 'ソフトドリンクバー190円、ミニサイズや子ども食器・スプーン無料',
+      summerCool: true,
   },
   {
     name: 'くら寿司', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2453,6 +2668,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,000-1,500円', elementary: '500円〜', preschool: '無料（取り皿のみ）', infant: '無料' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '5皿で1回「ビッくらポン」抽選、おもちゃカプセルが楽しみ',
+      summerCool: true,
   },
   {
     name: 'スシロー', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2461,6 +2677,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,000-1,500円', elementary: '500円〜（キッズセット）', preschool: '500円〜', infant: '無料' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'キッズプレート500円（エビフライ+デザート+ジュース）、子ども専用前掛けあり',
+      summerCool: true,
   },
   {
     name: 'ジョナサン', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2469,6 +2686,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,000-1,500円', elementary: '399円〜', preschool: '399円〜', infant: '離乳食214円' },
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: 'キッズプレート399円（5歳以下100円）、ハッピーセット的に',
+      summerCool: true,
   },
   {
     name: '上島珈琲店・キッズ向けカフェ', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2477,6 +2695,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '500-800円', elementary: '250円〜', preschool: '250円〜', infant: 'お湯提供' },
     strollerAccess: true, babyChair: false, kidsMenu: false,
     hiddenTip: '赤ちゃん連れにもやさしく、お湯や離乳食の温めに対応してくれる店舗多数',
+      summerCool: true,
   },
   {
     name: 'ビバパエリア／スペインバル（中野・吉祥寺）', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2485,6 +2704,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '2,000-3,000円', elementary: 'シェア可', preschool: '取り分けOK', infant: '持ち込み可' },
     strollerAccess: true, babyChair: true, kidsMenu: false, privateRoom: true,
     hiddenTip: '予約推奨、個室でママ会にも',
+      summerCool: true,
   },
   {
     name: '東京ドームシティ ラクーア内 キッズOK店舗群', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2493,6 +2713,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,500-2,500円', elementary: '子どもメニューあり店多数', preschool: '取り分け可', infant: '持ち込み可店あり' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '遊んだ後に便利、ラクーアフロアマップで「ファミリーOK」店を確認',
+      summerCool: true,
   },
   // ===== 全国チェーン系 ファミレス =====
   {
@@ -2502,6 +2723,8 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,000-1,800円', elementary: '500円〜', preschool: '500円〜', infant: '離乳食提供あり' },
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: 'お子様プレートにおもちゃ付き、塗り絵・クレヨン配布',
+      summerCool: true,
+      waterPlay: true,
   },
   {
     name: 'バーミヤン', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2510,6 +2733,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '800-1,500円', elementary: '399円〜', preschool: '399円〜', infant: '離乳食214円' },
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: '猫型配膳ロボットが大人気、点心セットは取り分けしやすい',
+      summerCool: true,
   },
   {
     name: 'ビッグボーイ', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2518,6 +2742,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,200-2,000円', elementary: '499円〜', preschool: '無料（小学生未満、条件あり）', infant: '無料' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '未就学児はサラダバー無料の店舗あり、長居しても嫌な顔されない',
+      summerCool: true,
   },
   {
     name: 'フォルクス', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2526,6 +2751,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,800-2,800円', elementary: '800円〜', preschool: '800円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'サラダバー付きランチは子どもに野菜を食べさせやすい',
+      summerCool: true,
   },
   {
     name: 'ロイヤルホスト', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2534,6 +2760,8 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,500-2,500円', elementary: '680円〜', preschool: '680円〜', infant: '離乳食提供あり' },
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: 'ゆったりした席配置でベビーカーのまま入店しやすい',
+      summerCool: true,
+      waterPlay: true,
   },
   {
     name: '和食さと', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2542,6 +2770,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,500-2,500円', elementary: '499円〜', preschool: '無料（未就学児、食べ放題時）' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '食べ放題コースは未就学児無料の店舗多く、コスパ良し',
+      summerCool: true,
   },
   {
     name: '華屋与兵衛', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2550,6 +2779,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,200-2,200円', elementary: '550円〜', preschool: '550円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '座敷席多く赤ちゃん連れでも寝かせられる、おむつ替え台完備',
+      summerCool: true,
   },
   {
     name: 'ステーキガスト', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2558,6 +2788,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,200-2,000円', elementary: '399円〜', preschool: '399円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'サラダバー食べ放題で子どもも飽きにくい、席間広め',
+      summerCool: true,
   },
   {
     name: 'びっくりドンキー', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2566,6 +2797,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,000-1,800円', elementary: '550円〜', preschool: '550円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'ミニハンバーグ150g単位で注文可、取り分けに便利',
+      summerCool: true,
   },
   {
     name: 'カプリチョーザ', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2574,6 +2806,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,500-2,500円', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'パスタ1皿シェア前提の量、家族3人で2皿注文が定番',
+      summerCool: true,
   },
   // ===== 全国チェーン系 ファストフード =====
   {
@@ -2583,6 +2816,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '600-1,000円', elementary: '520円〜（ハッピーセット）', preschool: '520円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '一部店舗にプレイランド完備、雨の日の遊び場として便利',
+      summerCool: true,
   },
   {
     name: 'モスバーガー', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2591,6 +2825,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '700-1,200円', elementary: '590円〜', preschool: '590円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'ワイワイセットにおもちゃ付き、離乳食提供店舗もあり',
+      summerCool: true,
   },
   {
     name: 'ケンタッキーフライドチキン', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2599,6 +2834,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '800-1,500円', elementary: '550円〜', preschool: '550円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'カーネルキッズセットにおもちゃ付き、骨なしケンタッキー注文で子どもも安心',
+      summerCool: true,
   },
   {
     name: 'フレッシュネスバーガー', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2607,6 +2843,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '900-1,500円', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true,
     hiddenTip: 'バンズ・パティが比較的小さめで子どもも食べやすい',
+      summerCool: true,
   },
   // ===== 全国チェーン系 麺・丼 =====
   {
@@ -2616,6 +2853,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '800-1,200円', elementary: '480円〜', preschool: '480円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '野菜たっぷり麺は子どもの野菜不足解消に、麺少なめ注文も可',
+      summerCool: true,
   },
   {
     name: '丸亀製麺', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2624,6 +2862,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '500-900円', elementary: '280円〜（キッズうどん）', preschool: '280円〜', infant: 'うどん小分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'キッズうどん280円（小盛+いなり）、麺を柔らかめに茹で直してくれる店舗も',
+      summerCool: true,
   },
   {
     name: 'なか卯', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2632,6 +2871,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '500-900円', elementary: '390円〜', preschool: '390円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'ミニ親子丼+ミニうどんセットで取り分けにも便利',
+      summerCool: true,
   },
   {
     name: '松屋', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2640,6 +2880,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '500-900円', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true,
     hiddenTip: '朝定食は子どもも食べやすい、味噌汁無料がうれしい',
+      summerCool: true,
   },
   {
     name: 'すき家', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2648,6 +2889,8 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '500-900円', elementary: '390円〜（お子様牛丼）', preschool: '390円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'お子様牛丼セット（おもちゃ付き）あり、牛丼チェーンでは一番子連れ向き',
+      summerCool: true,
+      waterPlay: true,
   },
   {
     name: '吉野家', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2656,6 +2899,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '500-900円', elementary: 'ミニ牛丼348円〜', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true,
     hiddenTip: 'ミニ牛丼は子どもサイズ、カウンター席の店舗ではテーブル席確認を',
+      summerCool: true,
   },
   // ===== 全国チェーン系 その他 =====
   {
@@ -2665,6 +2909,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '600-900円', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true,
     hiddenTip: 'フードコート併設店舗がベビーカー連れに便利、たこ小さめの「たこ焼き」注文可',
+      summerCool: true,
   },
   {
     name: 'ミスタードーナツ', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2673,6 +2918,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '500-900円', elementary: '380円〜（キッズセット）', preschool: '380円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'ポン・デ・キッズセットにおもちゃ付き、ベビーチェア完備店多い',
+      summerCool: true,
   },
   {
     name: '焼肉きんぐ', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2681,6 +2927,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '3,000-4,500円（食べ放題）', elementary: '半額前後', preschool: '無料（未就学児）', infant: '無料' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '未就学児無料＋キッズメニュー（ソフトクリーム・ポテト等）で家族コスパ最強',
+      summerCool: true,
   },
   {
     name: 'しゃぶ葉', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2689,6 +2936,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,800-2,800円', elementary: '半額', preschool: '無料（未就学児）', infant: '無料' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '未就学児無料、うどん・おにぎり・ソフトクリーム食べ放題で子どもも満足',
+      summerCool: true,
   },
   {
     name: 'かっぱ寿司', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2697,6 +2945,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,000-1,500円', elementary: '480円〜', preschool: '480円〜', infant: '無料' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '新幹線型レーンでお寿司が運ばれてくる演出が子どもに大人気',
+      summerCool: true,
   },
   {
     name: 'はま寿司', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2705,6 +2954,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,000-1,500円', elementary: '399円〜（キッズセット）', preschool: '399円〜', infant: '無料' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '平日一皿100円、キッズセット（おもちゃ付き）でコスパ良し',
+      summerCool: true,
   },
   // ===== 関西エリア =====
   {
@@ -2714,6 +2964,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '800-1,500円', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true,
     hiddenTip: '豚まん1個から注文可、焼売・餃子も子どもに人気',
+      summerCool: true,
   },
   {
     name: 'お好み焼き 鶴橋風月', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2722,6 +2973,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,500-2,500円', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '鉄板の熱には注意、取り皿でしっかり冷ましてから',
+      summerCool: true,
   },
   {
     name: '祇園辻利／都路里', category: 'restaurant', place: 'indoor', ages: ['4-6'],
@@ -2731,6 +2983,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true,
     hiddenTip: '祇園本店は行列必至、伊勢丹店のほうが比較的空いている',
     reservation: 'none',
+      summerCool: true,
   },
   {
     name: '志津香', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2740,6 +2993,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true,
     hiddenTip: '奈良公園観光時のランチに、釜めしは炊き上げに25分かかるので時間に余裕を',
     reservation: 'recommended',
+      summerCool: true,
   },
   // ===== 北海道 =====
   {
@@ -2749,6 +3003,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,000-1,500円', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true,
     hiddenTip: '新千歳空港店はフードコート内でベビーカー連れも安心',
+      summerCool: true,
   },
   {
     name: '松尾ジンギスカン', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2757,6 +3012,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '2,000-3,500円', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true,
     hiddenTip: '味付けジンギスカンは子どもにも食べやすい甘め、鉄板の熱に注意',
+      summerCool: true,
   },
   {
     name: 'ロイズチョコレートワールド', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2765,6 +3021,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '500-1,500円', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true,
     hiddenTip: 'フライト前の時間潰しに最適、見学無料＋限定スイーツあり',
+      summerCool: true,
   },
   // ===== 東北 =====
   {
@@ -2774,6 +3031,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,800-2,800円', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true,
     hiddenTip: 'テールスープは子どもも飲みやすい、仙台駅直結店が便利',
+      summerCool: true,
   },
   // ===== 名古屋エリア =====
   {
@@ -2783,6 +3041,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '600-1,200円', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'ボックス席広くベビーカーたたまずOK、モーニング（11時まで）はドリンク代でトースト付き',
+      summerCool: true,
   },
   {
     name: '矢場とん', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2791,6 +3050,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,500-2,500円', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true,
     hiddenTip: '味噌ダレ別皿に頼めば子どもはソースなしで食べられる',
+      summerCool: true,
   },
   {
     name: '世界の山ちゃん', category: 'restaurant', place: 'indoor', ages: ['4-6'],
@@ -2799,6 +3059,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '2,000-3,000円', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true,
     hiddenTip: '手羽先は小さい子には骨が危険、唐揚げ・焼き鳥のほうが安心',
+      summerCool: true,
   },
   // ===== 福岡エリア =====
   {
@@ -2808,6 +3069,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '1,000-1,500円', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true,
     hiddenTip: '味集中カウンターは仕切りで子連れに不向き、テーブル席がある店舗を選ぶ',
+      summerCool: true,
   },
   {
     name: 'ひょうたん寿司', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2817,6 +3079,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true,
     hiddenTip: 'ランチ開店前（11時）に並ぶと待ち時間短縮、2階席あり',
     reservation: 'recommended',
+      summerCool: true,
   },
   {
     name: '元祖長浜屋', category: 'restaurant', place: 'indoor', ages: ['4-6'],
@@ -2824,6 +3087,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     note: '長浜ラーメン元祖、回転早い庶民派',
     pricing: { adult: '500-900円', elementary: '取り分け可', preschool: '取り分け可' },
     hiddenTip: 'カウンター中心、小さい子連れには席の狭さがネック。早朝営業もあり',
+      summerCool: true,
   },
   // ===== 追加100店舗：ベビーカーOK・子連れ歓迎の食事店 =====
   // ===== 東京（25店舗） =====
@@ -2835,6 +3099,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: '広い座席で禁煙、滞在1〜1.5時間が目安。子連れに優しい接客で人気',
     popular: true,
+      summerCool: true,
   },
   {
     name: '東京ステーションホテル ロビーラウンジ', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2844,6 +3109,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, privateRoom: true,
     hiddenTip: '東京駅地下から雨に濡れずアクセス、滞在1.5〜2時間。新幹線待ちにも',
     popular: true,
+      summerCool: true,
   },
   {
     name: '丸ビル 5・6Fレストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2852,6 +3118,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,800円〜', elementary: 'キッズメニューあり店多数', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '東京駅丸の内南口から徒歩3分、館内エレベーター完備。滞在1〜1.5時間',
+      summerCool: true,
   },
   {
     name: 'タリーズコーヒー（Tully\'s）キッズメニュー対応店', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2860,6 +3127,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '500-900円', elementary: 'キッズドリンク300円〜', preschool: '300円〜', infant: 'お湯対応' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '一部店舗にキッズメニューあり、離乳食を温めてもらえる店舗多数。滞在1時間',
+      summerCool: true,
   },
   {
     name: '渋谷ヒカリエ ShinQs ダイニング', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2869,6 +3137,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '渋谷駅地下直結、ベビー休憩室完備。滞在1〜1.5時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: '二子玉川ライズ S.C. レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2878,6 +3147,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, privateRoom: true, babyFood: true,
     hiddenTip: '駅直結で雨の日も安心、ベビールーム充実。滞在1〜2時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: 'お台場ヴィーナスフォート跡地～アクアシティお台場 レストラン', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2886,6 +3156,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: 'キッズメニュー600円〜', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'ゆりかもめ台場駅直結、フードコート利用が便利。滞在1〜1.5時間',
+      summerCool: true,
   },
   {
     name: '六本木ヒルズ ヒルサイド・レストラン群', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2894,6 +3165,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ2,000円〜', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true, privateRoom: true,
     hiddenTip: '日比谷線六本木駅直結、ベビールーム完備。滞在1.5〜2時間',
+      summerCool: true,
   },
   {
     name: '池袋サンシャインシティ レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2903,6 +3175,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '水族館・展望台帰りに利用しやすい、館内ベビールーム多数。滞在1〜1.5時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: '東京スカイツリータウン ソラマチ レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2912,6 +3185,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '押上駅直結、6F・7F・30F・31Fに飲食店、ベビールームも各階に。滞在1〜2時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: '新宿高島屋 14Fダイニング', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2920,6 +3194,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,800円〜', elementary: 'キッズメニュー店舗あり', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '新宿駅新南口直結、ベビールーム完備で離乳食も温めOK。滞在1.5時間',
+      summerCool: true,
   },
   {
     name: 'ルミネ新宿 レストラン街', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2928,6 +3203,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: 'キッズメニュー店舗による', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '新宿駅南口直結、エレベーター完備。滞在1〜1.5時間',
+      summerCool: true,
   },
   {
     name: 'グランスタ東京 駅構内ダイニング', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2936,6 +3212,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true,
     hiddenTip: '改札内外両方にあり、新幹線移動の前後に便利。滞在1時間',
+      summerCool: true,
   },
   {
     name: 'グランベリーパーク レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2945,6 +3222,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: '田園都市線南町田グランベリーパーク駅直結、スヌーピーミュージアム隣接。滞在1.5〜2時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: 'ららぽーと豊洲 レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2954,6 +3232,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: 'ゆりかもめ豊洲駅直結、館内ベビールーム充実。滞在1.5時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: 'コストコ 多摩境倉庫 フードコート', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -2962,6 +3241,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ホットドッグ200円〜', elementary: 'シェア可', preschool: 'シェア可' },
     strollerAccess: true, babyChair: false,
     hiddenTip: '会員限定、ホットドッグ＋ドリンクで200円のコスパ最強。滞在30分〜1時間',
+      summerCool: true,
   },
   {
     name: '上野松坂屋 上野フロンティアタワー レストラン', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2970,6 +3250,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true, privateRoom: true,
     hiddenTip: '上野動物園・科学博物館帰りに利用しやすい。滞在1〜1.5時間',
+      summerCool: true,
   },
   {
     name: 'マークイズみなとみらい・吉祥寺パルコ系列 レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2978,6 +3259,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: 'キッズメニューあり', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '吉祥寺駅から徒歩5分、井の頭公園散歩のあとに。滞在1〜1.5時間',
+      summerCool: true,
   },
   {
     name: 'アトレ吉祥寺 レストランフロア', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2986,6 +3268,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: 'キッズメニュー店舗による', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '吉祥寺駅直結、ベビールーム完備。滞在1〜1.5時間',
+      summerCool: true,
   },
   {
     name: '北千住マルイ レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -2994,6 +3277,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '北千住駅西口直結、ベビールーム完備。滞在1〜1.5時間',
+      summerCool: true,
   },
   {
     name: '錦糸町オリナス レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3002,6 +3286,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '錦糸町駅北口から徒歩5分、ファミリー向け店舗多め。滞在1〜1.5時間',
+      summerCool: true,
   },
   {
     name: '蒲田グランデュオ レストランフロア', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3010,6 +3295,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '蒲田駅東口直結、エレベーター完備で雨の日も安心。滞在1時間',
+      summerCool: true,
   },
   {
     name: 'アトレ大森 レストラン', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3018,6 +3304,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '大森駅東口直結、滞在1〜1.5時間',
+      summerCool: true,
   },
   {
     name: '中野サンモール～中野ブロードウェイ周辺 ファミレス・カフェ', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3026,6 +3313,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,200円〜', elementary: 'キッズメニュー400円〜', preschool: '400円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '中野駅北口から徒歩3分、ファミリー向けチェーン多数。滞在1時間',
+      summerCool: true,
   },
   {
     name: 'IKEA 立川 レストラン', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3035,6 +3323,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: '立川駅から無料シャトルバスあり、キッズスペース併設で食後も遊べる。滞在1.5〜2時間',
     popular: true,
+      summerCool: true,
   },
   // ===== 神奈川（8店舗） =====
   {
@@ -3045,6 +3334,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, privateRoom: true,
     hiddenTip: 'みなとみらい線みなとみらい駅から徒歩5分、館内ベビールーム完備。滞在1.5時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: '横浜赤レンガ倉庫 レストランフロア', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -3053,6 +3343,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,800円〜', elementary: 'キッズメニューあり', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '馬車道駅から徒歩6分、海風感じる広場で食後も歩きやすい。滞在1.5時間',
+      summerCool: true,
   },
   {
     name: 'ららぽーと横浜 レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3062,6 +3353,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: 'JR横浜線鴨居駅から徒歩7分、ベビールーム充実。滞在1.5〜2時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: 'IKEA 港北 レストラン', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3070,6 +3362,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '800-1,500円', elementary: '100円〜（キッズメニュー）', preschool: '100円〜', infant: '離乳食無料' },
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: 'センター北駅から徒歩7分、平日は空いていて狙い目。滞在1.5時間',
+      summerCool: true,
   },
   {
     name: 'ラゾーナ川崎プラザ レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3079,6 +3372,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR川崎駅西口直結、ベビールーム複数。滞在1.5時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: '川崎アゼリア・チネチッタ周辺 レストラン', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -3087,6 +3381,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR川崎駅東口地下街、雨の日も安心。滞在1時間',
+      summerCool: true,
   },
   {
     name: '湘南T-SITE（藤沢） カフェ＆レストラン', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3095,6 +3390,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: 'キッズメニューあり店舗', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '辻堂駅から徒歩20分、絵本に囲まれたカフェも。滞在1〜1.5時間',
+      summerCool: true,
   },
   {
     name: '鎌倉小町通り ファミリー向けカフェ', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -3103,6 +3399,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true,
     hiddenTip: 'JR鎌倉駅東口から徒歩2分、観光途中の休憩に。滞在1時間',
+      summerCool: true,
   },
   // ===== 大阪（8店舗） =====
   {
@@ -3113,6 +3410,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, privateRoom: true, babyFood: true,
     hiddenTip: 'JR大阪駅・梅田駅直結、ベビールーム多数。滞在1.5〜2時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: 'ルクア大阪 バルチカ', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -3121,6 +3419,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR大阪駅直結、ランチタイムがおすすめ。滞在1〜1.5時間',
+      summerCool: true,
   },
   {
     name: 'なんばパークス レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3130,6 +3429,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '南海なんば駅直結、屋上庭園で食後の散歩も。滞在1.5時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: 'なんばCITY レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3138,6 +3438,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '南海なんば駅直結、ベビールーム完備。滞在1〜1.5時間',
+      summerCool: true,
   },
   {
     name: 'あべのハルカス ダイニングフロア', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3147,6 +3448,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, privateRoom: true,
     hiddenTip: 'JR天王寺駅直結、近鉄あべの橋駅直結。滞在1.5〜2時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: 'あべのキューズモール レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3155,6 +3457,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR天王寺駅から徒歩3分、ファミリー向け店舗多数。滞在1.5時間',
+      summerCool: true,
   },
   {
     name: 'ららぽーとEXPOCITY レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3164,6 +3467,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: '大阪モノレール万博記念公園駅から徒歩2分、ニフレル隣接。滞在1.5〜2時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: 'IKEA 鶴浜 レストラン', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3172,6 +3476,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '800-1,500円', elementary: '100円〜（キッズメニュー）', preschool: '100円〜', infant: '離乳食無料' },
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: 'JR大正駅から無料シャトルバス、平日は混雑少なめ。滞在1.5時間',
+      summerCool: true,
   },
   // ===== 愛知（6店舗） =====
   {
@@ -3182,6 +3487,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, privateRoom: true,
     hiddenTip: 'JR名古屋駅直結、ベビールーム完備。滞在1.5時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: 'ミッドランドスクエア レストラン街', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -3190,6 +3496,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ2,000円〜', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true, privateRoom: true,
     hiddenTip: '名古屋駅桜通口から徒歩3分、トヨタグループ本社ビル内。滞在1.5時間',
+      summerCool: true,
   },
   {
     name: 'オアシス21 レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3198,6 +3505,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '地下鉄栄駅直結、水の宇宙船周辺で食後の散策も。滞在1時間',
+      summerCool: true,
   },
   {
     name: 'ららぽーと名古屋みなとアクルス レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3207,6 +3515,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: '地下鉄名港線名古屋港駅から徒歩5分、館内ベビールーム充実。滞在1.5〜2時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: 'スガキヤ（中京圏チェーン）', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -3215,6 +3524,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '500-900円', elementary: 'キッズラーメン350円〜', preschool: '350円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'フードコート展開店舗が多くベビーカー連れに便利、ソフトクリームも有名。滞在30分〜1時間',
+      summerCool: true,
   },
   {
     name: 'IKEA 長久手 レストラン', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3223,6 +3533,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '800-1,500円', elementary: '100円〜（キッズメニュー）', preschool: '100円〜', infant: '離乳食無料' },
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: 'リニモ公園西駅から徒歩5分、ジブリパーク帰りに利用しやすい。滞在1.5時間',
+      summerCool: true,
   },
   // ===== 福岡（5店舗） =====
   {
@@ -3233,6 +3544,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, privateRoom: true,
     hiddenTip: 'JR博多駅直結9-10F、ベビールーム完備。滞在1.5時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: 'キャナルシティ博多 レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3242,6 +3554,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '博多駅から徒歩10分、噴水ショーが食後の楽しみに。滞在1.5時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: '天神地下街・ソラリアプラザ レストラン', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3250,6 +3563,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '地下鉄天神駅直結、雨の日も安心。滞在1〜1.5時間',
+      summerCool: true,
   },
   {
     name: 'ららぽーと福岡 レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3259,6 +3573,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: 'JR竹下駅から徒歩9分、館内ベビールーム充実。滞在1.5〜2時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: 'マリノアシティ福岡 レストラン街', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -3267,6 +3582,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR下山門駅からバス、観覧車併設で食後の楽しみも。滞在1.5時間',
+      summerCool: true,
   },
   // ===== 北海道（5店舗） =====
   {
@@ -3277,6 +3593,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, privateRoom: true,
     hiddenTip: 'JR札幌駅直結、ベビールーム完備。滞在1.5時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: '大丸札幌店 レストランフロア', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -3285,6 +3602,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ2,000円〜', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR札幌駅南口直結、ベビー休憩室完備。滞在1.5時間',
+      summerCool: true,
   },
   {
     name: 'サッポロファクトリー レストラン', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3293,6 +3611,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '地下鉄バスセンター前駅から徒歩3分、アトリウムが開放的。滞在1.5時間',
+      summerCool: true,
   },
   {
     name: 'JRタワー T38 展望レストラン', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -3301,6 +3620,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ2,500円〜', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, privateRoom: true,
     hiddenTip: 'JR札幌駅直結、ランチは展望料金込みでお得。滞在1.5〜2時間',
+      summerCool: true,
   },
   {
     name: '新千歳空港 ターミナルビル ファミリーレストラン', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3309,6 +3629,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜', infant: '離乳食持ち込みOK' },
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: '搭乗前の食事に、館内ベビールーム多数。滞在1〜1.5時間',
+      summerCool: true,
   },
   // ===== 京都（5店舗） =====
   {
@@ -3319,6 +3640,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, privateRoom: true,
     hiddenTip: 'JR京都駅直結、ベビールーム完備。滞在1.5時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: 'イオンモール京都桂川 レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3327,6 +3649,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜', infant: '離乳食持ち込みOK' },
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: 'JR桂川駅直結、館内ベビールーム多数。滞在1.5〜2時間',
+      summerCool: true,
   },
   {
     name: '京都四条河原町 OPA・高島屋 レストランフロア', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -3335,6 +3658,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,800円〜', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '阪急京都河原町駅直結、観光途中のランチに。滞在1.5時間',
+      summerCool: true,
   },
   {
     name: '京都ポルタ 地下街レストラン', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3343,6 +3667,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR京都駅地下直結、雨の日も安心。滞在1時間',
+      summerCool: true,
   },
   {
     name: 'ヨドバシ梅田＆ヨドバシ京都 レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3351,6 +3676,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '京都駅烏丸口から徒歩3分、ファミリー向け店舗多数。滞在1〜1.5時間',
+      summerCool: true,
   },
   // ===== 兵庫（5店舗） =====
   {
@@ -3361,6 +3687,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: 'JR神戸駅から徒歩5分、海を見ながら食事。滞在1.5〜2時間',
     popular: true,
+      summerCool: true,
   },
   {
     name: '神戸三宮センタープラザ レストラン', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
@@ -3369,6 +3696,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR三宮駅から徒歩3分、地下街で雨の日も安心。滞在1時間',
+      summerCool: true,
   },
   {
     name: 'ららぽーと甲子園 レストラン街', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3377,6 +3705,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜', infant: '離乳食持ち込みOK' },
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: '阪神甲子園駅から徒歩5分、館内ベビールーム充実。滞在1.5〜2時間',
+      summerCool: true,
   },
   {
     name: 'IKEA 神戸 レストラン', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3385,6 +3714,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: '800-1,500円', elementary: '100円〜（キッズメニュー）', preschool: '100円〜', infant: '離乳食無料' },
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: '阪神青木駅から徒歩約12分、平日狙い目。滞在1.5時間',
+      summerCool: true,
   },
   {
     name: '姫路駅前 ピオレ姫路 レストランフロア', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
@@ -3393,6 +3723,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR姫路駅直結、姫路城観光帰りに。滞在1〜1.5時間',
+      summerCool: true,
   },
   // ===== その他37県（残り33店舗、1〜2店舗ずつ）=====
   // 青森
@@ -3403,6 +3734,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR青森駅徒歩1分、地元食材ビュッフェ。滞在1〜1.5時間',
+      summerCool: true,
   },
   // 岩手
   {
@@ -3412,6 +3744,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR盛岡駅直結、新幹線移動の前後に。滞在1時間',
+      summerCool: true,
   },
   // 宮城
   {
@@ -3422,6 +3755,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR仙台駅直結、ベビールーム完備。滞在1〜1.5時間',
     popular: true,
+      summerCool: true,
   },
   // 秋田
   {
@@ -3431,6 +3765,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR秋田駅直結、新幹線移動の合間に。滞在1時間',
+      summerCool: true,
   },
   // 茨城
   {
@@ -3440,6 +3775,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜', infant: '離乳食持ち込みOK' },
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: 'つくばエクスプレス研究学園駅から徒歩7分、館内ベビールーム充実。滞在1.5時間',
+      summerCool: true,
   },
   // 栃木
   {
@@ -3449,6 +3785,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '車利用がメイン、駐車場無料。滞在1.5時間',
+      summerCool: true,
   },
   // 群馬
   {
@@ -3458,6 +3795,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜', infant: '離乳食持ち込みOK' },
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: 'JR高崎問屋町駅から徒歩10分、館内ベビールーム多数。滞在1.5〜2時間',
+      summerCool: true,
   },
   // 埼玉
   {
@@ -3468,6 +3806,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: '東武東上線鶴瀬駅から徒歩約15分、ベビールーム充実。滞在1.5〜2時間',
     popular: true,
+      summerCool: true,
   },
   // 千葉
   {
@@ -3478,6 +3817,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: 'JR舞浜駅直結、ディズニー帰りに。滞在1.5時間',
     popular: true,
+      summerCool: true,
   },
   // 新潟
   {
@@ -3487,6 +3827,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR新潟駅直結、新幹線移動の前後に。滞在1時間',
+      summerCool: true,
   },
   // 富山
   {
@@ -3496,6 +3837,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR富山駅直結、滞在1時間',
+      summerCool: true,
   },
   // 石川
   {
@@ -3505,6 +3847,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR金沢駅直結、新幹線移動の前後に。滞在1〜1.5時間',
+      summerCool: true,
   },
   // 長野
   {
@@ -3514,6 +3857,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR長野駅直結、新幹線移動の前後に。滞在1時間',
+      summerCool: true,
   },
   // 岐阜
   {
@@ -3523,6 +3867,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR岐阜駅直結、滞在1時間',
+      summerCool: true,
   },
   // 静岡
   {
@@ -3533,6 +3878,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR静岡駅直結、新幹線移動の前後に。滞在1時間',
     popular: true,
+      summerCool: true,
   },
   // 三重
   {
@@ -3542,6 +3888,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜', infant: '離乳食持ち込みOK' },
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: '車利用がメイン、館内ベビールーム多数。滞在1.5時間',
+      summerCool: true,
   },
   // 滋賀
   {
@@ -3551,6 +3898,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR瀬田駅からバス、車利用が便利。滞在1.5時間',
+      summerCool: true,
   },
   // 奈良
   {
@@ -3560,6 +3908,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '近鉄奈良駅から徒歩5分、奈良公園観光時に。滞在1〜1.5時間',
+      summerCool: true,
   },
   // 和歌山
   {
@@ -3569,6 +3918,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜', infant: '離乳食持ち込みOK' },
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: '車利用がメイン、館内ベビールーム多数。滞在1.5時間',
+      summerCool: true,
   },
   // 岡山
   {
@@ -3579,6 +3929,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: 'JR岡山駅から徒歩5分、館内ベビールーム充実。滞在1.5〜2時間',
     popular: true,
+      summerCool: true,
   },
   // 広島
   {
@@ -3589,6 +3940,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR広島駅直結、新幹線移動の前後に。滞在1時間',
     popular: true,
+      summerCool: true,
   },
   // 山口
   {
@@ -3598,6 +3950,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR下関駅直結、滞在1時間',
+      summerCool: true,
   },
   // 徳島
   {
@@ -3607,6 +3960,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR徳島駅直結、滞在1時間',
+      summerCool: true,
   },
   // 香川
   {
@@ -3616,6 +3970,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR高松駅から徒歩3分、滞在1時間',
+      summerCool: true,
   },
   // 愛媛
   {
@@ -3625,6 +3980,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,500円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '伊予鉄道大街道電停から徒歩3分、滞在1〜1.5時間',
+      summerCool: true,
   },
   // 高知
   {
@@ -3634,6 +3990,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜', infant: '離乳食持ち込みOK' },
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: '車利用がメイン、館内ベビールーム多数。滞在1.5時間',
+      summerCool: true,
   },
   // 佐賀
   {
@@ -3643,6 +4000,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: '車利用がメイン、館内ベビールーム多数。滞在1.5時間',
+      summerCool: true,
   },
   // 長崎
   {
@@ -3652,6 +4010,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR長崎駅直結、滞在1〜1.5時間',
+      summerCool: true,
   },
   // 熊本
   {
@@ -3662,6 +4021,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: 'JR熊本駅直結、ベビールーム完備。滞在1〜1.5時間',
     popular: true,
+      summerCool: true,
   },
   // 大分
   {
@@ -3671,6 +4031,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜' },
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR大分駅直結、滞在1〜1.5時間',
+      summerCool: true,
   },
   // 宮崎
   {
@@ -3680,6 +4041,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     pricing: { adult: 'ランチ1,300円〜', elementary: 'キッズメニュー500円〜', preschool: '500円〜', infant: '離乳食持ち込みOK' },
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: '車利用がメイン、館内ベビールーム多数。滞在1.5時間',
+      summerCool: true,
   },
   // 鹿児島
   {
@@ -3690,6 +4052,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true,
     hiddenTip: 'JR鹿児島中央駅直結、観覧車併設で食後の楽しみも。滞在1.5時間',
     popular: true,
+      summerCool: true,
   },
   // 沖縄
   {
@@ -3700,6 +4063,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
     hiddenTip: '那覇空港から車約30分、館内ベビールーム充実。滞在1.5〜2時間',
     popular: true,
+      summerCool: true,
   },
 ];
 
