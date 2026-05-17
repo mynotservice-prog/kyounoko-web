@@ -26,6 +26,7 @@ export const CHUNK_33: StationIndieMap = {
       description:
         'JAZZが流れる落ち着いた空間でいただける手作りパスタが看板のカフェ。トキワ荘をモチーフにした「トキワ荘青春セット」など個性派メニューが並び、ジャズライブも開催。マンガミュージアム散策のついでに親子で気軽に立ち寄れる。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -44,6 +45,7 @@ export const CHUNK_33: StationIndieMap = {
       description:
         '昭和の漫画家たちが通ったことで知られる老舗中華料理店。チャーハンやラーメンなど定番メニューを昭和の佇まいの店内で味わえる。お子さんが食べやすいシンプルな町中華メニューが揃い、地元家族の利用も多い。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -176,6 +178,8 @@ export const CHUNK_33: StationIndieMap = {
         '元宴会場をリノベーションした古民家風カフェ。ソファ席が多く、キャンドル灯る落ち着いた空間でハンドドリップコーヒーや家庭料理を楽しめる。ベビーカーごと入れる広めの店内で、ランチからディナーまで通し営業も嬉しい。',
       strollerOk: true,
       seatingType: ['table', 'box'],
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -245,6 +249,8 @@ export const CHUNK_33: StationIndieMap = {
       strollerOk: true,
       seatingType: ['table'],
       shareDish: true,
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -254,6 +260,7 @@ export const CHUNK_33: StationIndieMap = {
       description:
         'グリーンカレーやトムヤムクン、ラクサなどのエスニック麺料理で知られる店。カフェのような明るい内装で女性ひとりでも入りやすく、家族でゆっくり食べられる。優しい辛さに調整できるメニューもあり子連れにも◎。',
       seatingType: ['table', 'counter'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -278,6 +285,7 @@ export const CHUNK_33: StationIndieMap = {
       description:
         '静かな住宅街にある緑に囲まれたイタリアンカフェ。看板のピザ「ビスマルク」やモーニングのキッシュが人気で、ランチタイムにじっくり過ごせる。テラス感のある席もあり、お子さん連れでもゆったり長居しやすい。',
       seatingType: ['table', 'terrace'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -369,6 +377,7 @@ export const CHUNK_33: StationIndieMap = {
       description:
         '本格中華の隠れた人気店。冷やし中華や麺料理、定食が揃い、味付けがあっさりめでお子さんにも食べやすい。地元密着型で気取らずに入りやすく、家族の中華ランチに頼りになる一軒。',
       seatingType: ['table', 'counter'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -384,6 +393,7 @@ export const CHUNK_33: StationIndieMap = {
       description:
         '老舗の天ぷらそば店。ぷりぷりのエビ天と特製汁の組み合わせが看板で、地元家族のお祝い使いや日常使いに長く親しまれる。座席ゆったりで子ども用の取り皿も頼みやすい、安心の街の名店。',
       seatingType: ['table', 'zashiki'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -447,6 +457,7 @@ export const CHUNK_33: StationIndieMap = {
       description:
         '日本の旬を活かしたイタリアンを掲げるトラットリア。ランチは前菜ビュッフェ付きでお子さんにも好評。テーブル席広めで、家族や友人とゆっくり食事を楽しめる。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜3,500円',
     },
     {
@@ -471,6 +482,7 @@ export const CHUNK_33: StationIndieMap = {
       description:
         '昼は定食、夜は居酒屋として営業するカフェ＆ダイニング。家庭的な定食メニューが揃い、子ども用の取り皿対応も気軽に頼める。地元の家族連れで穏やかなランチタイムが流れる新規開店の親しみやすい一軒。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -487,6 +499,8 @@ export const CHUNK_33: StationIndieMap = {
         'ジャーマンクラフトビールとドイツ料理を楽しめるカジュアルダイニング。広々した店内でベビーカーごと入店でき、有明ガーデン内のため周辺施設で休憩しやすい。家族でランチからディナーまで対応できる。',
       strollerOk: true,
       seatingType: ['table', 'box'],
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜3,500円',
     },
   ],

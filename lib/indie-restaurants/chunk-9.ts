@@ -491,6 +491,7 @@ export const CHUNK_9: StationIndieMap = {
       stepFree: true,
       seatingType: ['table'],
       strollerToSeat: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
       popular: true,
     },

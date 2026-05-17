@@ -23,6 +23,8 @@ export const CHUNK_26: StationIndieMap = {
         '白い建物が街並みになじむ、田園調布で長く続くイタリアン。ランチは3種のパスタコースから選べ、キッズメニューはボロネーゼやカルボナーラを用意。落ち着いた雰囲気で家族の食事に。',
       kidsMenu: true,
       seatingType: ['table'],
+      shareDish: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -33,6 +35,8 @@ export const CHUNK_26: StationIndieMap = {
         'イートインのあるデリカテッセン。玄米ごはんと野菜たっぷりのプレートが中心で体にやさしい。全7席と小さめだが、ベビーカーで入れる席もあり子連れに配慮した造り。',
       strollerOk: true,
       seatingType: ['table'],
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -61,6 +65,9 @@ export const CHUNK_26: StationIndieMap = {
       kidsChair: true,
       seatingType: ['zashiki', 'table'],
       bringBabyFood: true,
+      stepFree: true,
+      strollerToSeat: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -70,6 +77,7 @@ export const CHUNK_26: StationIndieMap = {
       description:
         '閑静な住宅街に佇む一軒家レストラン。1階は木漏れ日の差すカフェで、オリジナルケーキやカフェ仕立てのイタリアンを提供。テラス席もあり、子連れでものびのび過ごせる開放的な空間。',
       seatingType: ['table', 'terrace'],
+      shareDish: true,
       priceLunch: '〜3,500円',
     },
   ],
@@ -99,6 +107,8 @@ export const CHUNK_26: StationIndieMap = {
         'ポップでおしゃれなダイナー風のタコス店。ソファ席が多くベビーカーのまま入店でき、無添加・グルテンフリーやヴィーガン対応のメニューもあって子連れでも選びやすい。',
       strollerOk: true,
       seatingType: ['box', 'table'],
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -110,6 +120,8 @@ export const CHUNK_26: StationIndieMap = {
       strollerOk: true,
       seatingType: ['table'],
       diaperChangingTable: true,
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -126,6 +138,8 @@ export const CHUNK_26: StationIndieMap = {
         '西福寺通り沿いのビル地下にあるカフェダイニング。エレベーターがあるためベビーカーでも来店しやすい。3日ごとに替わる日替わりランチは、メインを肉か魚から選べて副菜も充実。',
       strollerOk: true,
       seatingType: ['table'],
+      stepFree: false,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -154,6 +168,12 @@ export const CHUNK_26: StationIndieMap = {
       kidsSpace: true,
       seatingType: ['table'],
       allergenInfo: true,
+      stepFree: true,
+      diaperChangingTable: true,
+      bringBabyFood: true,
+      shareDish: true,
+      strollerToSeat: true,
+      kidsChair: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -163,6 +183,7 @@ export const CHUNK_26: StationIndieMap = {
       description:
         '温かみのあるレトロな内装のスパニッシュ＆イタリアンバル。パスタ・リゾット・パエリアから選べるランチセットがあり、アットホームな雰囲気で子連れでも入りやすい。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -174,6 +195,7 @@ export const CHUNK_26: StationIndieMap = {
       strollerOk: true,
       privateRoom: true,
       seatingType: ['zashiki', 'table'],
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -185,6 +207,9 @@ export const CHUNK_26: StationIndieMap = {
       strollerOk: true,
       kidsMenu: true,
       seatingType: ['table'],
+      stepFree: true,
+      strollerToSeat: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -195,6 +220,8 @@ export const CHUNK_26: StationIndieMap = {
         'パイとケーキが自慢の洋菓子カフェ。ランチタイムは子ども連れの来店もOKで、ベビーカーのまま入店できる。食後に名物のパイやケーキを家族で楽しめる。',
       strollerOk: true,
       seatingType: ['table'],
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -213,6 +240,11 @@ export const CHUNK_26: StationIndieMap = {
       kidsMenu: true,
       kidsChair: true,
       seatingType: ['table'],
+      stepFree: true,
+      bringBabyFood: true,
+      shareDish: true,
+      strollerToSeat: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -238,6 +270,8 @@ export const CHUNK_26: StationIndieMap = {
         '駅近のカフェダイニング。ベビーカー入店OKで、テラス席やソファ席があり子連れでもゆったり過ごせる。食事からスイーツまで揃い、ランチにもカフェ利用にも使いやすい。',
       strollerOk: true,
       seatingType: ['table', 'terrace'],
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -248,6 +282,8 @@ export const CHUNK_26: StationIndieMap = {
         '砧公園内の世田谷美術館にあるカフェ。50席以上の広い店内はベビーカー入店OKで、緑を望むテラス席も。公園あそびの前後の休憩や、子連れランチに向く。',
       strollerOk: true,
       seatingType: ['table', 'terrace'],
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -274,6 +310,9 @@ export const CHUNK_26: StationIndieMap = {
         'バリアフリーで車いす・ベビーカーでも余裕の広さのコミュニティカフェ。ソファ席があり妊婦や赤ちゃん連れもゆったり。ランチメニューのほかパウチの離乳食も購入できる。',
       strollerOk: true,
       seatingType: ['table'],
+      stepFree: true,
+      bringBabyFood: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -291,6 +330,9 @@ export const CHUNK_26: StationIndieMap = {
       strollerOk: true,
       bringBabyFood: true,
       seatingType: ['table'],
+      stepFree: true,
+      shareDish: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -303,6 +345,10 @@ export const CHUNK_26: StationIndieMap = {
       privateRoom: true,
       kidsCutlery: true,
       seatingType: ['table'],
+      stepFree: true,
+      bringBabyFood: true,
+      shareDish: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -315,6 +361,7 @@ export const CHUNK_26: StationIndieMap = {
       privateRoom: true,
       seatingType: ['zashiki', 'table'],
       bringBabyFood: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -332,6 +379,7 @@ export const CHUNK_26: StationIndieMap = {
       strollerOk: true,
       stepFree: true,
       seatingType: ['table'],
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -357,6 +405,7 @@ export const CHUNK_26: StationIndieMap = {
       description:
         'おしゃれなカジュアルイタリアン。ランチは1,000円前後とリーズナブルで気軽に立ち寄れる。肩肘張らない雰囲気で、子連れでもさっとランチを済ませたい時に向く。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -374,6 +423,7 @@ export const CHUNK_26: StationIndieMap = {
       kidsChair: true,
       kidsCutlery: true,
       seatingType: ['table', 'terrace'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -409,6 +459,10 @@ export const CHUNK_26: StationIndieMap = {
       strollerOk: true,
       kidsChair: true,
       seatingType: ['table', 'terrace'],
+      stepFree: true,
+      bringBabyFood: true,
+      shareDish: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -418,6 +472,7 @@ export const CHUNK_26: StationIndieMap = {
       description:
         '閑静な住宅街にある台湾料理店。子連れやベビーカーにとてもやさしく、ソファ席があってくつろぎやすい。本格的な台湾の家庭の味を家族で楽しめる。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -428,6 +483,8 @@ export const CHUNK_26: StationIndieMap = {
         '複合施設グッドイートヴィレッジ1階のカフェ。ベビーカー入店OKでソファ席もあり、オートミールのパンケーキや国産食材の手作りハンバーガーなど体にやさしいメニューが揃う。',
       strollerOk: true,
       seatingType: ['table'],
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -437,6 +494,7 @@ export const CHUNK_26: StationIndieMap = {
       description:
         '駅すぐの多国籍カフェ。インドネシア料理を中心に幅広いメニューが揃い、スタッフの対応もやさしい。駅近で立ち寄りやすく、子連れのランチにも使いやすい。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -454,6 +512,7 @@ export const CHUNK_26: StationIndieMap = {
       strollerOk: true,
       stepFree: true,
       seatingType: ['table'],
+      strollerToSeat: true,
       priceLunch: '〜1,000円',
     },
     {
@@ -463,6 +522,7 @@ export const CHUNK_26: StationIndieMap = {
       description:
         '十号坂商店街のガレット専門店。木・金はサラダとポタージュ付きのランチセット、土・日は前菜も付くブランチセットを用意。子どもでも食べやすいメニューがある。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -491,6 +551,7 @@ export const CHUNK_26: StationIndieMap = {
         '明るくほっと和む雰囲気のイタリアン。おむつ替えの部屋を完備し、ベビーカーは2階まで運んでくれるなど、きめ細やかな配慮がうれしい。子連れランチに使いやすい。',
       seatingType: ['table'],
       diaperChangingTable: true,
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -543,6 +604,7 @@ export const CHUNK_26: StationIndieMap = {
         '南インドの本格的な家庭料理が味わえるカフェ。子連れの家族にやさしい雰囲気でベビーカーもOK。平日は数量限定のランチプレートが楽しめる。',
       strollerOk: true,
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -562,6 +624,8 @@ export const CHUNK_26: StationIndieMap = {
         '西部開拓時代の酒場をテーマにしたカフェバー。ベビーカー入店OKで、日替わりで3種類ほどのランチメニューを用意。個性的な内装で気分を変えてランチを楽しめる。',
       strollerOk: true,
       seatingType: ['table'],
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -572,6 +636,8 @@ export const CHUNK_26: StationIndieMap = {
         '昭和34年創業のコーヒー豆卸問屋が手がけるカフェ。本格的なコーヒーが味わえ、ベビーカー入店もOK。落ち着いた雰囲気で子連れの休憩に向く。',
       strollerOk: true,
       seatingType: ['table'],
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -588,6 +654,8 @@ export const CHUNK_26: StationIndieMap = {
         'スパイスとハーブが自慢の自然派カフェ。アンティーク家具の並ぶおしゃれな店内で、ランチタイムは奥のソファ席ならベビーカー入店も可能。子連れにも人気の一軒。',
       strollerOk: true,
       seatingType: ['table'],
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -599,6 +667,7 @@ export const CHUNK_26: StationIndieMap = {
       kidsSpace: true,
       seatingType: ['zashiki', 'table'],
       diaperChangingTable: true,
+      kidsChair: true,
       priceLunch: '〜1,000円',
     },
     {
@@ -610,6 +679,9 @@ export const CHUNK_26: StationIndieMap = {
       strollerOk: true,
       kidsMenu: true,
       seatingType: ['table'],
+      stepFree: true,
+      strollerToSeat: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -627,6 +699,8 @@ export const CHUNK_26: StationIndieMap = {
       strollerOk: true,
       kidsChair: true,
       seatingType: ['table', 'terrace'],
+      bringBabyFood: true,
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -637,6 +711,8 @@ export const CHUNK_26: StationIndieMap = {
         'カジュアルフレンチのレストラン。幼児・赤ちゃん・ベビーカーいずれもOKで子連れに寛容。自家製天然酵母パンの販売もあり、ランチ後のお土産選びも楽しめる。',
       strollerOk: true,
       seatingType: ['table'],
+      bringBabyFood: true,
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -649,6 +725,9 @@ export const CHUNK_26: StationIndieMap = {
       seatingType: ['table'],
       diaperChangingTable: true,
       nursingRoom: true,
+      stepFree: true,
+      shareDish: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {

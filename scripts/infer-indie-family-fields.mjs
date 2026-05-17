@@ -134,6 +134,37 @@ function inferOne(obj) {
     // 個人店はほぼ false / undefined
   }
 
+  // ---- kidsChair (新規・保守的) ----
+  // description で明示されているか、kidsMenu + privateRoom があれば推論
+  if (obj.kidsChair === undefined) {
+    if (/キッズチェア|子供用椅子|子ども用椅子|お子様椅子|お子様用椅子|ハイチェア|ベビーチェア/.test(d)) {
+      result.kidsChair = true;
+    } else if (obj.kidsMenu === true && obj.kidsCutlery === true) {
+      // キッズメニューもカトラリーもあるならチェアもある確度高
+      result.kidsChair = true;
+    } else if (obj.kidsSpace === true) {
+      result.kidsChair = true;
+    }
+  }
+
+  // ---- kidsMenu (新規・保守的) ----
+  if (obj.kidsMenu === undefined) {
+    if (/キッズメニュー|お子様メニュー|お子さまメニュー|お子様ランチ|キッズランチ|お子様プレート|キッズプレート/.test(d)) {
+      result.kidsMenu = true;
+    }
+    // それ以外は推論しない（誤誘導リスク）
+  }
+
+  // ---- kidsCutlery (新規・保守的) ----
+  if (obj.kidsCutlery === undefined) {
+    if (/子供用カトラリー|子ども用カトラリー|お子様用フォーク|お子様用スプーン|キッズ用フォーク|プラスチックスプーン提供|取り皿用意/.test(d)) {
+      result.kidsCutlery = true;
+    } else if (obj.kidsMenu === true || result.kidsMenu === true) {
+      // キッズメニューがあるならカトラリーも基本ある
+      result.kidsCutlery = true;
+    }
+  }
+
   return result;
 }
 
@@ -219,9 +250,10 @@ function processChunk(filePath) {
 }
 
 // メイン
+// chunk-NN.ts と chunk-NN[a-z].ts と chunk-kansai.ts を対象
 const files = fs
   .readdirSync(DIR)
-  .filter((f) => /^chunk-\d+\.ts$/.test(f))
+  .filter((f) => /^chunk-(\d+[a-z]?|kansai)\.ts$/.test(f))
   .sort();
 
 let grandTotalObjs = 0;

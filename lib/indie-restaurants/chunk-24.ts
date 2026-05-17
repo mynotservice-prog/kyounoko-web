@@ -27,6 +27,8 @@ export const CHUNK_24: StationIndieMap = {
       bringBabyFood: true,
       kidsCutlery: true,
       seatingType: ['table'],
+      shareDish: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -39,6 +41,7 @@ export const CHUNK_24: StationIndieMap = {
       bringBabyFood: true,
       kidsCutlery: true,
       seatingType: ['zashiki', 'table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -53,6 +56,10 @@ export const CHUNK_24: StationIndieMap = {
       kidsSpace: true,
       kidsCutlery: true,
       seatingType: ['table'],
+      stepFree: true,
+      diaperChangingTable: true,
+      shareDish: true,
+      kidsChair: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -83,6 +90,10 @@ export const CHUNK_24: StationIndieMap = {
       kidsSpace: true,
       kidsCutlery: true,
       seatingType: ['table'],
+      stepFree: true,
+      diaperChangingTable: true,
+      shareDish: true,
+      kidsChair: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -93,6 +104,7 @@ export const CHUNK_24: StationIndieMap = {
         '広いホールのテーブル席や座敷に加え7つの個室がある韓国料理店。個室なら子どもがぐずっても周りに気兼ねなくランチでき、グループでのママ会にも使いやすい。',
       privateRoom: true,
       seatingType: ['zashiki', 'table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -109,6 +121,9 @@ export const CHUNK_24: StationIndieMap = {
         'ピザやパスタが楽しめる広々としたイタリアン。ベビーカーのまま入店でき、ランチセットはサラダ・スープ・デザート・ドリンク付き。ライスやパスタの大盛りが無料で家族での食事に向く。',
       strollerOk: true,
       seatingType: ['table'],
+      stepFree: true,
+      shareDish: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -120,6 +135,7 @@ export const CHUNK_24: StationIndieMap = {
       strollerOk: true,
       privateRoom: true,
       seatingType: ['zashiki', 'table'],
+      strollerToSeat: true,
       priceLunch: '〜1,000円',
     },
     {
@@ -135,6 +151,8 @@ export const CHUNK_24: StationIndieMap = {
       kidsCutlery: true,
       seatingType: ['table'],
       shareDish: true,
+      strollerToSeat: true,
+      kidsChair: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -165,6 +183,7 @@ export const CHUNK_24: StationIndieMap = {
       description:
         '本郷弓町のクスの大木が目印の創作イタリアン。トスカーナ料理と日本の四季を大切にした落ち着いた一軒家で、ランチコースをゆっくり味わえる。記念日や少人数のママ会向き。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜5,000円',
     },
   ],
@@ -250,6 +269,7 @@ export const CHUNK_24: StationIndieMap = {
       privateRoom: true,
       seatingType: ['zashiki', 'table'],
       shareDish: true,
+      strollerToSeat: true,
       priceLunch: '〜3,500円',
     },
     {
@@ -270,6 +290,7 @@ export const CHUNK_24: StationIndieMap = {
         '浅草の下町洋食の名店。ナポリタンやグラタン、ハンバーグなど子どもにも人気の王道メニューが揃い取り分けに最適。ベビーカーは入口で預ける形だが子ども用椅子を貸してもらえる。',
       seatingType: ['counter', 'table'],
       shareDish: true,
+      kidsChair: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -280,6 +301,7 @@ export const CHUNK_24: StationIndieMap = {
         '創業約80年の老舗うなぎ店。1階はテーブル席、2階にはお座敷個室があり、靴を脱いでくつろげるので子連れの食事に向く。駅近で観光の合間にも立ち寄りやすい。',
       privateRoom: true,
       seatingType: ['zashiki', 'table'],
+      stepFree: false,
       priceLunch: '〜3,500円',
     },
   ],
@@ -313,6 +335,7 @@ export const CHUNK_24: StationIndieMap = {
       privateRoom: true,
       seatingType: ['zashiki', 'table'],
       shareDish: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -325,6 +348,7 @@ export const CHUNK_24: StationIndieMap = {
       kidsChair: true,
       kidsCutlery: true,
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -370,6 +394,9 @@ export const CHUNK_24: StationIndieMap = {
       kidsChair: true,
       seatingType: ['table', 'terrace'],
       diaperChangingTable: true,
+      stepFree: true,
+      nursingRoom: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -381,6 +408,9 @@ export const CHUNK_24: StationIndieMap = {
       strollerOk: true,
       kidsMenu: true,
       seatingType: ['table', 'terrace'],
+      stepFree: true,
+      strollerToSeat: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -419,6 +449,8 @@ export const CHUNK_24: StationIndieMap = {
       kidsChair: true,
       seatingType: ['zashiki', 'table'],
       diaperChangingTable: true,
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -430,6 +462,7 @@ export const CHUNK_24: StationIndieMap = {
       kidsChair: true,
       kidsSpace: true,
       seatingType: ['table', 'terrace'],
+      diaperChangingTable: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -473,6 +506,7 @@ export const CHUNK_24: StationIndieMap = {
       kidsCutlery: true,
       seatingType: ['table'],
       diaperChangingTable: true,
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
   ],

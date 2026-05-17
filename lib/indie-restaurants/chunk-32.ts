@@ -27,6 +27,8 @@ export const CHUNK_32: StationIndieMap = {
       strollerOk: true,
       shareDish: true,
       seatingType: ['table'],
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -54,6 +56,7 @@ export const CHUNK_32: StationIndieMap = {
       description:
         'シェアキッチンやイートインスペースを兼ね備えたコミュニティカフェ。地域の方と食を通じてまちのことを学ぶというコンセプトで、親子で気兼ねなく長く過ごせる地元密着の場づくりが嬉しい。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -69,6 +72,7 @@ export const CHUNK_32: StationIndieMap = {
       description:
         '都内の名門ホテル出身シェフ夫妻が営むアットホームなフレンチ。フランス語で「我が家」を意味する名の通り、ランチコースで季節食材の一皿一皿を丁寧に楽しめる住宅地の隠れ家。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜3,500円',
     },
     {
@@ -102,6 +106,7 @@ export const CHUNK_32: StationIndieMap = {
       description:
         'イタリア郷土料理に強い名店として知られ、元イタリア大統領からもお墨付きを受けたという評価のあるイタリアン。本格的ながらランチでも楽しめ、家族の記念日ランチにも使いやすい一軒。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜3,500円',
     },
     {
@@ -262,6 +267,7 @@ export const CHUNK_32: StationIndieMap = {
       description:
         '名物「ふわふわ卵のオムライス」が人気のダイニングカフェ。1階と地下フロアがあり、地下席はベビーカーをそばに置いて落ち着けるため、家族でゆっくりランチを楽しめる選択肢に。',
       seatingType: ['table'],
+      stepFree: false,
       priceLunch: '〜2,000円',
     },
     {
@@ -296,6 +302,7 @@ export const CHUNK_32: StationIndieMap = {
       description:
         'シェフのこだわりが光る本格パスタ店。選べるパスタ・サラダ・コーヒーが付く1,300円のランチセットが好評で、家族で取り分けたい場合は事前相談で対応してもらいやすいアットホームな雰囲気。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -320,6 +327,7 @@ export const CHUNK_32: StationIndieMap = {
       description:
         '「廉価な贅沢」をコンセプトに本格フレンチをワインと共に楽しめるビストロカフェ。7種の前菜・メイン・バケット・デザート・コーヒーが付くgavaセットなど、家族ランチに使いやすいセット構成。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜3,500円',
     },
     {
@@ -512,6 +520,7 @@ export const CHUNK_32: StationIndieMap = {
       description:
         '「女子が気軽に入れる中華」をコンセプトに、白壁と木目調の店内が中華料理店らしくないおしゃれな空間。手作り小籠包・点心が看板で、備前焼の器も雰囲気を演出する。子連れランチにも合う一軒。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {

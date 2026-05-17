@@ -69,6 +69,7 @@ export const CHUNK_34: StationIndieMap = {
       description:
         '地元の方々に長く愛される街の中華屋さん。絶品チャーハンや坦々麺が看板メニューで、家庭的な味付けは子どもにも食べやすい。気取らず入れる雰囲気で、家族で気軽に町中華ランチを楽しめる。',
       seatingType: ['table', 'counter'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -113,6 +114,7 @@ export const CHUNK_34: StationIndieMap = {
       kidsChair: true,
       seatingType: ['table', 'box'],
       privateRoom: true,
+      shareDish: true,
       priceLunch: '〜3,500円',
     },
     {
@@ -157,6 +159,7 @@ export const CHUNK_34: StationIndieMap = {
       description:
         '創業100年を超える老舗魚屋から毎日届く生牡蠣と、Tボーンステーキが自慢のNYスタイルイタリアン。テラス席も完備された大人の隠れ家。少しおしゃれをしてお祝いの家族ランチに向かいたい時に。',
       seatingType: ['table', 'terrace'],
+      shareDish: true,
       priceLunch: '〜3,500円',
     },
     {
@@ -185,6 +188,7 @@ export const CHUNK_34: StationIndieMap = {
       description:
         'ネパール料理のカフェ。平日のみ1日20食限定のランチセットがあり、日替わりカレーとナンまたはライスとサラダが付く。落ち着いたカフェ風の店内で、子連れランチでもゆっくり過ごしやすい。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -218,6 +222,7 @@ export const CHUNK_34: StationIndieMap = {
       description:
         '上池台にある地元密着のイタリアン。水〜日の昼夜営業で、ランチは生パスタや窯焼きピザが揃う。テーブル席メインで、お子さん連れでも気構えず利用でき、家族のイタリアンランチに頼りになる一軒。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -271,6 +276,11 @@ export const CHUNK_34: StationIndieMap = {
       diaperChangingTable: true,
       strollerOk: true,
       seatingType: ['table'],
+      stepFree: true,
+      bringBabyFood: true,
+      shareDish: true,
+      strollerToSeat: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -280,6 +290,7 @@ export const CHUNK_34: StationIndieMap = {
       description:
         '都心の喧騒から離れた静かな住宅街にあるアットホームな鉄板焼きステーキハウス。リラックスして食事を楽しめる雰囲気で、家族の記念日ランチにも合う。少しおしゃれをして親子で訪れたい一軒。',
       seatingType: ['counter', 'table'],
+      shareDish: true,
       priceLunch: '〜3,500円',
     },
     {
@@ -289,6 +300,7 @@ export const CHUNK_34: StationIndieMap = {
       description:
         'ノスタルジックで落ち着いた雰囲気の地元密着型居酒屋。土日昼の家族利用も歓迎されており、定食メニューも揃う。子ども用の取り皿対応も気軽に頼める、近所の頼れる町の食事処。',
       seatingType: ['table', 'counter'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -314,6 +326,9 @@ export const CHUNK_34: StationIndieMap = {
         '本格イタリアンの隠れ家レストラン。日替わりランチは玄米とパスタが選べるワンプレートで、「ローストポーク」や「イイダコのトマト煮込み」などバラエティ豊富。ドリンク付き880円〜とコスパも◎、ベビーカーOK。',
       strollerOk: true,
       seatingType: ['table'],
+      stepFree: true,
+      shareDish: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -338,6 +353,7 @@ export const CHUNK_34: StationIndieMap = {
       description:
         '無農薬野菜や高知から直送の鮮魚を使ったフレンチ。全席テーブル席で、ランチタイムはママ友会や婦人会にも向いた環境。少し特別な日の家族ランチや祖父母を交えたお祝いに、おすすめできる一軒。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜3,500円',
     },
     {
@@ -357,6 +373,7 @@ export const CHUNK_34: StationIndieMap = {
       description:
         'ランチ800円〜とコスパに優れた町中華の人気店。定食メニューが揃い、地元の家族連れにも親しまれる。気取らないテーブル席中心で、お子さん連れでも気構えず利用しやすい街の頼れる一軒。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜1,000円',
     },
   ],
@@ -383,6 +400,7 @@ export const CHUNK_34: StationIndieMap = {
         '駅近のヘルシー中華を掲げる個人店。アットホームな雰囲気で子連れでも入りやすく、半個室のテーブル席もある。野菜中心のメニューが揃い、家族で気軽に中華ランチを楽しみたい時に頼れる一軒。',
       privateRoom: true,
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -494,6 +512,9 @@ export const CHUNK_34: StationIndieMap = {
       kidsMenu: true,
       strollerOk: true,
       seatingType: ['table'],
+      stepFree: true,
+      strollerToSeat: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -513,6 +534,8 @@ export const CHUNK_34: StationIndieMap = {
         'スペシャルティコーヒーを提供する施設内カフェ。テラス席もあり、広い通路を含めお子さんがのびのび過ごせる。羽田イノベーションシティ散策のひと休みや、軽食ランチを家族で楽しめる落ち着いた一軒。',
       strollerOk: true,
       seatingType: ['table', 'counter', 'terrace'],
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -528,6 +551,7 @@ export const CHUNK_34: StationIndieMap = {
       description:
         'ワインと煮込み料理がメインの隠れ家ビストロ。ランチで数量限定提供する神保町「ボンディ」直伝のカレーは知る人ぞ知る人気メニュー。落ち着いた席で、お子さん連れでも気を遣わずに過ごせる雰囲気。',
       seatingType: ['table', 'counter'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {

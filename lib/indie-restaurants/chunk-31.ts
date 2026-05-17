@@ -26,6 +26,7 @@ export const CHUNK_31: StationIndieMap = {
         '子育てをきっかけにオープンした親子で楽しめるカフェ。隣が緑道で子どもが少し外で遊べる気軽さがあり、土日はご近所家族が集まる。ホットサンドなどの軽食とスイーツが楽しめる。',
       kidsMenu: true,
       seatingType: ['table'],
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -68,6 +69,7 @@ export const CHUNK_31: StationIndieMap = {
       description:
         '各国大使館で料理を振る舞っていた経歴を持つシェフのフレンチ。2,200円のランチコースが好評で一皿一皿丁寧。シェフ一人で切り盛りするため事前予約推奨、支払いは現金のみ。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜3,500円',
     },
     {
@@ -102,6 +104,7 @@ export const CHUNK_31: StationIndieMap = {
       description:
         '蔦が絡まる欧風の一軒家カフェ。1階で先に注文・会計を済ませ、リビングのように広がる2階席で自由に過ごせる気軽さがあり、子連れでもゆっくり食事ができるパスタ・ピザの店。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -111,6 +114,7 @@ export const CHUNK_31: StationIndieMap = {
       description:
         '蔦が絡まる外観の欧風一軒家カフェで、もっちりした生地のガレットがおすすめ。落ち着いた席間で、ベビーカーをそばに置いて静かに食事したいファミリーにも合う隠れ家。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -145,6 +149,8 @@ export const CHUNK_31: StationIndieMap = {
         '2023年1月オープンのテニスクラブ Lete Tennis Club 併設カフェ。緑をたっぷり配した庭を眺められるテラス席があり、ベビーカーで入店もでき、予約制で落ち着いて子連れランチが楽しめる。',
       strollerOk: true,
       seatingType: ['table', 'terrace'],
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -179,6 +185,8 @@ export const CHUNK_31: StationIndieMap = {
         'ベビーカー入店可のカフェで、季節を映す緑豊かな庭を眺められるテラス席が人気。テラスはワンちゃんもOKという開放的な雰囲気で、子連れランチや散歩途中の休憩に向く。',
       strollerOk: true,
       seatingType: ['table', 'terrace'],
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -195,6 +203,8 @@ export const CHUNK_31: StationIndieMap = {
         '西小山の商店街にあるインドカレー店。店内が広くファミレス感覚で使いやすく、店員が子どもにジュースを出してくれるなど子連れに優しい接客。甘めカレーのお子様メニューもある。',
       kidsMenu: true,
       seatingType: ['table'],
+      shareDish: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -214,6 +224,7 @@ export const CHUNK_31: StationIndieMap = {
       description:
         'にこま通り商店街にあるパニーノ専門店。手作りパニーノは具沢山で、ベビーカーの停めやすい商店街立地。テイクアウトもでき、子連れランチの選択肢として親しまれている。',
       seatingType: ['table', 'counter'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -239,6 +250,7 @@ export const CHUNK_31: StationIndieMap = {
         '旬の食材を使う創作フレンチを 1,000円前後のランチで楽しめる店。落ち着いた店内には片側ソファ席があり、ベビーカー入店もOKで、フレンチを子連れで気軽に味わえる貴重なお店。',
       strollerOk: true,
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -250,6 +262,7 @@ export const CHUNK_31: StationIndieMap = {
       privateRoom: true,
       kidsCutlery: true,
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -259,6 +272,7 @@ export const CHUNK_31: StationIndieMap = {
       description:
         '昔ながらのそば屋ながら店内が広々と落ち着いた雰囲気で、テーブル間隔が広く子連れでも入りやすい。ゆったり食事ができ、子どもの取り分けにも対応しやすい和の定番メニュー。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -269,6 +283,8 @@ export const CHUNK_31: StationIndieMap = {
         'インド・ネパール料理がメインのカフェ。甘めのカレーやチーズナンは子どもでも食べやすく、店内は広くゆったり。ベンチシート席があり、子どもと一緒でもくつろいで座れる。',
       kidsMenu: true,
       seatingType: ['table'],
+      shareDish: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -281,6 +297,8 @@ export const CHUNK_31: StationIndieMap = {
       strollerOk: true,
       kidsMenu: true,
       seatingType: ['table'],
+      strollerToSeat: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -297,6 +315,7 @@ export const CHUNK_31: StationIndieMap = {
         '乳幼児連れでも安心がコンセプトのナポリピッツァの店。店内におむつ交換台とゆりかごを備え、ランチは前菜・ドリンク・デザート付きのお得なセット。古材を使った落ち着いた家具。',
       diaperChangingTable: true,
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -308,6 +327,10 @@ export const CHUNK_31: StationIndieMap = {
       strollerOk: true,
       kidsSpace: true,
       seatingType: ['table'],
+      stepFree: true,
+      diaperChangingTable: true,
+      strollerToSeat: true,
+      kidsChair: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -343,6 +366,8 @@ export const CHUNK_31: StationIndieMap = {
       kidsMenu: true,
       kidsChair: true,
       seatingType: ['table'],
+      bringBabyFood: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -387,6 +412,9 @@ export const CHUNK_31: StationIndieMap = {
       kidsMenu: true,
       kidsSpace: true,
       seatingType: ['table'],
+      diaperChangingTable: true,
+      kidsChair: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -422,6 +450,9 @@ export const CHUNK_31: StationIndieMap = {
       strollerOk: true,
       kidsMenu: true,
       seatingType: ['table'],
+      stepFree: true,
+      strollerToSeat: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
     {

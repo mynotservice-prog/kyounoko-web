@@ -30,6 +30,7 @@ export const CHUNK_38: StationIndieMap = {
         'フカヒレと担々麺を看板にする本格中華の店。温玉担々セットや満腹ラーメンセットなど、ボリュームのある中華メニューを地下街でリーズナブルに楽しめる。地下街なので雨でもベビーカーで動きやすい家族向きの立地。',
       seatingType: ['table'],
       shareDish: true,
+      stepFree: false,
       priceLunch: '〜2,000円',
     },
     {
@@ -64,6 +65,7 @@ export const CHUNK_38: StationIndieMap = {
         '担々麺とフカヒレ料理を売りにする本格中華。新宿サブナード地下街にあり、温玉担々セットや満腹ラーメンセットなどのランチが定番。地下街で雨でもベビーカーで移動しやすい家族向きの立地。',
       seatingType: ['table'],
       shareDish: true,
+      stepFree: false,
       priceLunch: '〜2,000円',
     },
     {
@@ -107,6 +109,8 @@ export const CHUNK_38: StationIndieMap = {
       kidsChair: true,
       seatingType: ['table', 'zashiki'],
       privateRoom: true,
+      bringBabyFood: true,
+      kidsCutlery: true,
       priceLunch: '〜3,500円',
     },
     {
@@ -116,6 +120,7 @@ export const CHUNK_38: StationIndieMap = {
       description:
         '大井競馬場の場内にあるイタリアンレストラン。レース観戦やフリーマーケット利用の合間に立ち寄れるロケーションで、パスタやピザなど子どもにも食べやすいメニューが揃う。広いスタンド内で動きやすい。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -142,6 +147,8 @@ export const CHUNK_38: StationIndieMap = {
         'ヤマト運輸の社会貢献型ベーカリーカフェ。週替わりのパスタ・グラタン・リゾット・丼ランチが11:00〜14:00で楽しめる。ベビーカーでも利用しやすい広い店内で、子連れに優しい雰囲気。',
       strollerOk: true,
       seatingType: ['table'],
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
   ],

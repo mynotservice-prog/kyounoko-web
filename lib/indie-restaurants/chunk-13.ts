@@ -251,6 +251,7 @@ export const CHUNK_13: StationIndieMap = {
       privateRoom: true,
       kidsMenu: true,
       seatingType: ['table', 'zashiki'],
+      kidsCutlery: true,
       priceLunch: '5,000円〜',
       popular: true,
     },

@@ -27,6 +27,8 @@ export const CHUNK_36: StationIndieMap = {
         '西武新宿駅すぐのカジュアル洋食ダイニング。ベビーカーでも入店OKと公表されており、ハンバーガーやプレートランチなどメニューも子連れに使いやすい。買い物前後の昼食に立ち寄りやすい立地。',
       strollerOk: true,
       seatingType: ['table'],
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -36,6 +38,7 @@ export const CHUNK_36: StationIndieMap = {
       description:
         '和食とフレンチを融合したコースを楽しめる隠れ家。ランチは5皿で3,500円程度と新宿でゆっくり食事したい家族の特別日に向く。事前予約で席のリクエストもしやすい一軒。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜5,000円',
     },
     {
@@ -78,6 +81,7 @@ export const CHUNK_36: StationIndieMap = {
       description:
         '生パスタが看板の小さなイタリアン。ランチは10:00〜14:00、月・火休み。コンパクトな店構えで、混雑前の早めの時間帯ならベビーカー連れでも入りやすい。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -100,6 +104,9 @@ export const CHUNK_36: StationIndieMap = {
       seatingType: ['table'],
       diaperChangingTable: true,
       bringBabyFood: true,
+      stepFree: true,
+      shareDish: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
       popular: true,
     },
@@ -202,6 +209,8 @@ export const CHUNK_36: StationIndieMap = {
         'ドッグランも併設するおしゃれなカフェバー。日中はランチ・カフェ利用ができ、テーブル間隔が広め。ベビーカーでも入りやすい個人店として地元で知られる。',
       strollerOk: true,
       seatingType: ['table'],
+      stepFree: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -212,6 +221,7 @@ export const CHUNK_36: StationIndieMap = {
         '日暮里駅近くの老舗カフェ＆レストラン。モーニングからランチ、洋食・和食の定食まで揃い、キッズメニューもあり子連れで使いやすい昭和レトロな店構え。',
       kidsMenu: true,
       seatingType: ['table'],
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -229,6 +239,9 @@ export const CHUNK_36: StationIndieMap = {
       strollerOk: true,
       kidsMenu: true,
       seatingType: ['table'],
+      stepFree: true,
+      strollerToSeat: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -242,6 +255,7 @@ export const CHUNK_36: StationIndieMap = {
       seatingType: ['table'],
       stepFree: true,
       shareDish: true,
+      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -260,6 +274,7 @@ export const CHUNK_36: StationIndieMap = {
       description:
         '一軒家の1階を改装した、週末中心営業の台湾ごはんと台湾スイーツのカフェ。家庭的でゆったり過ごせる店内で、ルーロー飯などをファミリーで楽しめる。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -275,6 +290,7 @@ export const CHUNK_36: StationIndieMap = {
       description:
         'ビル2階の落ち着いた洋風カフェ。自家製パンを使ったトーストプレートが看板で、サラダ・キャロットラペが添えられる。木目基調の静かな店内は子連れもくつろぎやすい。',
       seatingType: ['table'],
+      stepFree: false,
       priceLunch: '〜2,000円',
     },
     {
@@ -303,6 +319,7 @@ export const CHUNK_36: StationIndieMap = {
         'チキンカツや煮込みハンバーグなど家庭的な洋食を、スープ・ライス付きで楽しめる地元の洋食カフェ。子どもが食べやすい優しい味付けで、ご家族の昼食に使いやすい。',
       kidsCutlery: true,
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -350,6 +367,7 @@ export const CHUNK_36: StationIndieMap = {
       area: '牛田駅から徒歩圏（北千住駅から徒歩8分）',
       description:
         '1961年（昭和36年）創業の昔ながらの町のパン屋さん。素朴な菓子パン・惣菜パンが並び、テイクアウトで川沿いの散歩おやつにも。子どもの好きなパンが揃う下町の名店。',
+      seatingType: ['table'],
       priceLunch: '〜1,000円',
     },
   ],
@@ -374,6 +392,7 @@ export const CHUNK_36: StationIndieMap = {
       description:
         '56種のおにぎりが選べる創業55年の老舗おにぎり専門店。注文後に握る出来立てが食べられ、テイクアウトすれば公園など外でも子どもとシェアできる。電話予約で行列回避が可能。',
       seatingType: ['counter'],
+      shareDish: true,
       priceLunch: '〜1,000円',
       popular: true,
     },
@@ -389,6 +408,7 @@ export const CHUNK_36: StationIndieMap = {
       area: '谷在家駅から徒歩圏（鹿浜公園そば）',
       description:
         '小さな公園の向かいで営む地元密着の手作りパン屋。素朴で安心な味のパンが並び、ベビーカーで公園遊びの行き帰りに立ち寄って外でも食べられる。',
+      seatingType: ['table'],
       priceLunch: '〜1,000円',
     },
     {
@@ -451,6 +471,8 @@ export const CHUNK_36: StationIndieMap = {
       area: '青井駅から徒歩約5分',
       description:
         '昔ながらの製法で焼く街のパン屋。惣菜パン・菓子パンともに種類豊富で、テイクアウトして公園や家族とシェアして食べやすい。地元ファミリーに愛される一軒。',
+      seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜1,000円',
     },
     {
@@ -459,6 +481,7 @@ export const CHUNK_36: StationIndieMap = {
       area: '青井駅から徒歩約9分',
       description:
         '朝7:30から営業し、日曜・祝日も開いているベーカリー。朝の散歩ついでにパンを買って公園で食べる、という子連れの定番ルートに使いやすい。',
+      seatingType: ['table'],
       priceLunch: '〜1,000円',
     },
   ],

@@ -228,6 +228,7 @@ export const CHUNK_5: StationIndieMap = {
       privateRoom: true,
       seatingType: ['table', 'zashiki'],
       shareDish: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -372,6 +373,7 @@ export const CHUNK_5: StationIndieMap = {
       seatingType: ['table', 'zashiki'],
       nursingRoom: true,
       strollerToSeat: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -688,6 +690,7 @@ export const CHUNK_5: StationIndieMap = {
       seatingType: ['table', 'zashiki'],
       nursingRoom: true,
       strollerToSeat: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -729,6 +732,7 @@ export const CHUNK_5: StationIndieMap = {
       seatingType: ['table'],
       shareDish: true,
       strollerToSeat: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -799,6 +803,7 @@ export const CHUNK_5: StationIndieMap = {
       seatingType: ['table'],
       shareDish: true,
       strollerToSeat: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -1238,6 +1243,7 @@ export const CHUNK_5: StationIndieMap = {
       nursingRoom: true,
       strollerToSeat: true,
       diaperChangingTable: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -1437,6 +1443,7 @@ export const CHUNK_5: StationIndieMap = {
       seatingType: ['table', 'zashiki'],
       nursingRoom: true,
       strollerToSeat: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
     {
@@ -1796,6 +1803,7 @@ export const CHUNK_5: StationIndieMap = {
       seatingType: ['table', 'zashiki'],
       nursingRoom: true,
       strollerToSeat: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
       popular: true,
     },
@@ -2263,6 +2271,7 @@ export const CHUNK_5: StationIndieMap = {
       seatingType: ['table'],
       shareDish: true,
       strollerToSeat: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -2502,6 +2511,7 @@ export const CHUNK_5: StationIndieMap = {
       seatingType: ['table'],
       shareDish: true,
       strollerToSeat: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -2573,6 +2583,7 @@ export const CHUNK_5: StationIndieMap = {
       seatingType: ['table', 'terrace'],
       shareDish: true,
       strollerToSeat: true,
+      kidsCutlery: true,
       priceLunch: '〜2,000円',
       popular: true,
     },

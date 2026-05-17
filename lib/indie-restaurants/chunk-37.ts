@@ -45,6 +45,7 @@ export const CHUNK_37: StationIndieMap = {
       description:
         '1987年開業の老舗タイ料理店。ガパオライスやグリーンカレーなど定番タイ料理をランチで提供する個人店で、ビル内2階上の落ち着いた店内。家族で本格タイランチを楽しみたい日に。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -86,6 +87,7 @@ export const CHUNK_37: StationIndieMap = {
       description:
         '昔ながらの街の焼肉店。お得なランチセットメニューが充実しており、テーブル席中心で家族でゆっくり食事しやすい。煙の少ない店内なので、ベビーカー連れの早めの時間帯に向く。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -197,6 +199,7 @@ export const CHUNK_37: StationIndieMap = {
       description:
         '東京タワーやレインボーブリッジを望む高層フレンチ。ランチは前菜＋鮮魚と肉のWメインのコースが3,500円で、窓側席のリクエストも可能。家族の記念日ランチに向く眺望自慢の一軒。',
       seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜5,000円',
     },
   ],
@@ -213,6 +216,9 @@ export const CHUNK_37: StationIndieMap = {
         'Hi-NODE 1階の運河沿いイタリアン＆スパニッシュ。ランチは14:30までで、平日11:30〜・土曜11:00〜の通し営業。広めの店内とテラスがあり、ベビーカーでも入りやすい湾岸ロケーション。',
       strollerOk: true,
       seatingType: ['table', 'terrace'],
+      stepFree: true,
+      shareDish: true,
+      strollerToSeat: true,
       priceLunch: '〜3,500円',
     },
   ],
