@@ -178,7 +178,7 @@ export default function EditorialPolicyPage() {
             記事内容に誤りを見つけた場合、または編集方針についてのご意見・取材・監修のお申し出は、下記までご連絡ください。
           </p>
           <ul>
-            <li>メール：<a href="mailto:service@remegift.jp">service@remegift.jp</a></li>
+            <li>メール：<a href="mailto:service@kyounoko.jp">service@kyounoko.jp</a></li>
             <li><Link href="/contact">お問い合わせフォーム</Link></li>
           </ul>
 

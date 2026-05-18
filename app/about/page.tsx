@@ -51,7 +51,7 @@ export default function AboutPage() {
       '季節・行事の家庭での過ごし方',
     ],
     knowsLanguage: 'ja',
-    email: 'mailto:service@remegift.jp',
+    email: 'mailto:service@kyounoko.jp',
   };
   const jsonLdAboutPage = {
     '@context': 'https://schema.org',
@@ -209,7 +209,7 @@ export default function AboutPage() {
             <Link href="/contact">お問い合わせページ</Link> または下記メール宛にお願いします。
           </p>
           <ul>
-            <li>メール：<a href="mailto:service@remegift.jp">service@remegift.jp</a></li>
+            <li>メール：<a href="mailto:service@kyounoko.jp">service@kyounoko.jp</a></li>
             <li><Link href="/contact">お問い合わせフォーム</Link></li>
           </ul>
 

@@ -104,7 +104,7 @@ export default function SupervisorsPage() {
             <li>ご連絡先（メール推奨）</li>
           </ul>
           <ul>
-            <li>監修お問い合わせ先：<a href="mailto:service@remegift.jp">service@remegift.jp</a></li>
+            <li>監修お問い合わせ先：<a href="mailto:service@kyounoko.jp">service@kyounoko.jp</a></li>
             <li><Link href="/contact">お問い合わせフォーム</Link></li>
           </ul>
 

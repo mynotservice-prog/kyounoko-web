@@ -51,6 +51,9 @@ export function SiteFooter() {
             <h4>About</h4>
             <ul>
               <li><Link href="/about">運営者情報</Link></li>
+              <li><Link href="/authors/nagamy">著者: ながみー</Link></li>
+              <li><Link href="/editorial-policy">編集方針</Link></li>
+              <li><Link href="/supervisors">監修者募集</Link></li>
               <li><Link href="/contact">お問い合わせ</Link></li>
               <li><Link href="/privacy">プライバシー</Link></li>
               <li><Link href="/terms">利用規約</Link></li>

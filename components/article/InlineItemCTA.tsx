@@ -8,8 +8,12 @@ export type InlineItemCTAProps = {
   /** 差し込む 1 商品 */
   item: AffiliateLinkProps;
   /**
-   * マイクロコピー。デフォルトは「この記事を読んだ方の◯%が気になっています」。
-   * 数字を出すかどうかは記事側で調整可。
+   * マイクロコピー。デフォルトは「この記事に関連するアイテム」。
+   * 記事側で「2歳児ママに人気」「梅雨時に売れています」など具体に上書き可。
+   *
+   * NOTE: 架空のクリック率/購入率(「読者の◯%」)は景表法・優良誤認のリスクが
+   * あるため、デフォルト文言に数値表現は含めない。実測値を示すときも必ず
+   * 計測期間と母数を明記すること。
    */
   note?: string;
 };
@@ -26,8 +30,7 @@ export type InlineItemCTAProps = {
  * 最初の H2 直前に差し込む運用も可能。
  */
 export function InlineItemCTA({ item, note }: InlineItemCTAProps) {
-  const microCopy =
-    note ?? 'この記事を読んだ方の約38%が、次にこの商品をチェックしています。';
+  const microCopy = note ?? 'この記事に関連するアイテム';
 
   return (
     <aside className="inline-item-cta" aria-label="記事内のおすすめアイテム">

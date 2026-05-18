@@ -816,9 +816,6 @@ function FileArticleView({ article }: { article: FileArticle }) {
             />
           )}
 
-          {/* AdSense: 記事中途（TL;DR直後） */}
-          <AdSlot placement="article-mid" />
-
           {/* Quick Info */}
           {article.quickInfo && (article.quickInfo.ageRanges?.length || article.quickInfo.durationMin) && (
             <section
@@ -884,8 +881,8 @@ function FileArticleView({ article }: { article: FileArticle }) {
             />
           )}
 
-          {/* Share bar (body 直下) */}
-          <ShareBar url={articleUrl} title={article.title} />
+          {/* 旧: body 直下の ShareBar はここに置いていたが、末尾(著者ブロック直下)と
+              重複していたため削除。離脱ポイントを増やさない方針。 */}
 
           {/* アフィリエイト商品リスト（対象記事のみ） */}
           {hasAffiliate && (
@@ -1141,6 +1138,19 @@ function FileArticleView({ article }: { article: FileArticle }) {
                       >
                         {a.title}
                       </h4>
+                      {/* カテゴリ名を出して「同ジャンルの深掘り/別軸の発見」を区別させる */}
+                      {a.categoryName ? (
+                        <p
+                          style={{
+                            fontSize: 12,
+                            color: 'var(--ink-mute)',
+                            margin: '8px 0 0',
+                            letterSpacing: '.02em',
+                          }}
+                        >
+                          {a.categoryName}
+                        </p>
+                      ) : null}
                     </div>
                   </Link>
                 ))}
