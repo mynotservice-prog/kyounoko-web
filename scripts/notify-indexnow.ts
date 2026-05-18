@@ -65,14 +65,10 @@ async function main() {
   // .env.local から環境変数を読み込む（インライン INDEXNOW_KEY=... が無くてもOK）
   loadDotenv();
 
+  // lib/indexnow.ts に DEFAULT_INDEXNOW_KEY がハードコードされている。
+  // env で上書きしたい場合のみ INDEXNOW_KEY を立てる運用。
+  // → env が無いだけではエラーにしない。lib 側でフォールバックする。
   const args = process.argv.slice(2);
-
-  if (!process.env.INDEXNOW_KEY) {
-    console.error('[notify-indexnow] INDEXNOW_KEY is not set.');
-    console.error('  -> .env.local に INDEXNOW_KEY=... を書くか、');
-    console.error('     INDEXNOW_KEY=xxxx npx tsx scripts/notify-indexnow.ts ... のように渡してください。');
-    process.exit(1);
-  }
 
   if (args.length === 0) {
     console.log('[notify-indexnow] submitting all articles ...');
