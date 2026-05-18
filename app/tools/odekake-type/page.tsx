@@ -228,6 +228,7 @@ export default function OdekakeTypePage() {
           resultTitle="あなたのおでかけタイプ TOP3"
           ctaBackHref="/today"
           ctaBackLabel="TodayFinderを使う"
+          toolId="odekake-type"
         />
 
         <section style={{ marginTop: 56 }}>

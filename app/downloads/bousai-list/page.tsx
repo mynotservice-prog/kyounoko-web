@@ -82,7 +82,7 @@ export default function Page() {
           </p>
         </header>
 
-        <PrintButton />
+        <PrintButton docId="bousai-list" />
 
         <article className="print-doc">
           <h2>使い方</h2>
@@ -204,7 +204,7 @@ export default function Page() {
           </p>
         </article>
 
-        <PrintButton />
+        <PrintButton docId="bousai-list" />
 
         <section style={{ marginTop: 40 }}>
           <h2 style={{ fontFamily: 'var(--font-mincho), serif', fontSize: 20, margin: '0 0 16px' }}>

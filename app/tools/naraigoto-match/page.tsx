@@ -252,6 +252,7 @@ export default function NaraigotoMatchPage() {
           resultTitle="お子さんに合う習い事 TOP3"
           ctaBackHref="/category/narai"
           ctaBackLabel="習い事カテゴリを見る"
+          toolId="naraigoto-match"
         />
 
         <section style={{ marginTop: 56 }}>

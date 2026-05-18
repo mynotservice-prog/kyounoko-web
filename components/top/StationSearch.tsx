@@ -3,6 +3,7 @@
 import { useState, useMemo, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { trackEvent } from '@/lib/analytics';
 
 type StationItem = {
   type: 'station';
@@ -92,6 +93,9 @@ export function StationSearch({ stations, lines }: Props) {
 
   const navigateTo = (item: SearchItem) => {
     const url = item.type === 'station' ? `/station/${item.slug}` : `/station/line/${item.slug}`;
+    if (item.type === 'station') {
+      trackEvent('station_search_select', { station_slug: item.slug });
+    }
     setOpen(false);
     setQuery('');
     router.push(url);

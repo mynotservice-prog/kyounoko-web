@@ -31,6 +31,7 @@ import { StickySectionNav } from '@/components/station/StickySectionNav';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
 import { getItemsForTodayQuery } from '@/lib/items-catalog';
+import { PersonalizedHint } from '@/components/common/PersonalizedHint';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400; // 24h
@@ -272,6 +273,10 @@ export default async function StationPage({ params }: Props) {
               </li>
             </ul>
           </section>
+
+          {/* ===== パーソナライズ: 設定済みの子の年齢に応じたチェックポイント =====
+              SSR 非依存（クライアントのみ）。未設定なら設定への軽い CTA のみ。 */}
+          <PersonalizedHint context="station" contextLabel={`${station.name}駅`} fallback="cta" />
 
           {/* ===== サイトならでは: 年齢別おすすめ動線 =====
               0-1歳 / 2-3歳 / 4-6歳 で「この駅で迷ったらこれ」を3つずつデータから自動抽出 */}

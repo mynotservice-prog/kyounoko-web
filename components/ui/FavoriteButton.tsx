@@ -1,6 +1,7 @@
 'use client';
 
 import { useFavorites, type FavKind } from '@/hooks/useFavorites';
+import { trackEvent } from '@/lib/analytics';
 
 /**
  * お気に入り (♡) ボタン。
@@ -30,6 +31,8 @@ export function FavoriteButton({
       onClick={(e) => {
         e.preventDefault();
         e.stopPropagation();
+        // 切替前の状態で「これから追加か解除か」を判定し、対応イベントを送る
+        trackEvent(fav ? 'favorite_remove' : 'favorite_add', { type: kind, slug: id });
         toggleFav(kind, id);
       }}
     >

@@ -1,6 +1,7 @@
 'use client';
 
 import { useTriedCounter, type TriedKind } from '@/hooks/useTriedCounter';
+import { trackEvent } from '@/lib/analytics';
 
 /**
  * 「やってみた」ボタン & 表示。
@@ -26,6 +27,7 @@ export function TriedButton({
         onClick={(e) => {
           e.preventDefault();
           e.stopPropagation();
+          trackEvent('tried_click', { slug: id });
           increment();
         }}
       >

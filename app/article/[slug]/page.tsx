@@ -32,6 +32,10 @@ import { getRelatedPlansForArticle } from '@/lib/cross-links';
 import { CrossLinkCards } from '@/components/article/CrossLinkCards';
 import { YouTubeEmbed } from '@/components/article/YouTubeEmbed';
 import { YouTubeSearchLink } from '@/components/article/YouTubeSearchLink';
+import { PersonalizedHint } from '@/components/common/PersonalizedHint';
+
+// パーソナライズ枠を出すカテゴリ（今日の◯◯系のみ）
+const PERSONALIZED_HINT_CATEGORIES = new Set(['today-doko', 'today-nani', 'today-taberu']);
 
 export const revalidate = 3600; // 1時間ごとに再生成
 
@@ -272,6 +276,11 @@ export default async function ArticlePage({ params }: Props) {
           <h1>{article.title}</h1>
           <p className="lead">{article.lede}</p>
         </header>
+
+        {/* パーソナライズ枠: 今日◯◯系カテゴリのみ表示。クライアントオンリー。 */}
+        {article.category?.slug && PERSONALIZED_HINT_CATEGORIES.has(article.category.slug) && (
+          <PersonalizedHint context="article" fallback="cta" />
+        )}
 
         {/* 記事メタ: E-E-A-T のため著者・公開日・更新日を明示。
             ファイル版(FileArticleView)と表示構造を揃えている。 */}
@@ -816,6 +825,11 @@ function FileArticleView({ article }: { article: FileArticle }) {
               <TriedButton kind="article" id={article.slug} />
             </div>
           </header>
+
+          {/* パーソナライズ枠: 今日◯◯系カテゴリのみ表示。クライアントオンリー。 */}
+          {PERSONALIZED_HINT_CATEGORIES.has(article.category) && (
+            <PersonalizedHint context="article" fallback="cta" />
+          )}
 
           {/* 「今日選ぶなら、これ。」— ランキング/N選/比較記事の断定ブロック */}
           {article.itemList && article.itemList.length > 0 && (

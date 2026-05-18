@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { trackEvent } from '@/lib/analytics';
 
 type Props = {
   url: string;
@@ -10,6 +11,7 @@ export function CopyLinkButton({ url }: Props) {
   const [copied, setCopied] = useState(false);
 
   async function handleCopy() {
+    trackEvent('share_click', { platform: 'copy' });
     try {
       if (typeof navigator !== 'undefined' && navigator.clipboard) {
         await navigator.clipboard.writeText(url);

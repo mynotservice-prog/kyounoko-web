@@ -1,6 +1,9 @@
+'use client';
+
 import * as React from 'react';
 import { wrapMoshimoRakuten } from '@/lib/moshimo';
 import { wrapAmazonAssociate } from '@/lib/amazon';
+import { trackEvent } from '@/lib/analytics';
 
 export type AffiliateProvider =
   | 'amazon'
@@ -20,6 +23,8 @@ export type AffiliateLinkProps = {
   provider: AffiliateProvider;
   /** PR バッジを表示するか（デフォルト true） */
   pr?: boolean;
+  /** GA4 イベントで item_id として送る識別子（任意）。商品ID / slug など。 */
+  itemId?: string;
 };
 
 const PROVIDER_LABELS: Record<AffiliateProvider, string> = {
@@ -74,6 +79,7 @@ export function AffiliateLink({
   imageUrl,
   provider,
   pr = true,
+  itemId,
 }: AffiliateLinkProps) {
   const providerLabel = PROVIDER_LABELS[provider];
 
@@ -100,6 +106,11 @@ export function AffiliateLink({
       target="_blank"
       rel="sponsored nofollow noopener"
       data-provider={provider}
+      // クリックを GA4 に送る。item_id は明示渡しがなければ title をフォールバックに使う
+      // （タイトル文字列でも識別性は十分。長すぎる場合は呼び出し側で itemId を明示すること）。
+      onClick={() => {
+        trackEvent('affiliate_click', { provider, item_id: itemId ?? title });
+      }}
     >
       {imageUrl && (
         <div

@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { AREAS, type AreaSlug } from '@/lib/area';
 import { useUserSettings } from '@/hooks/useUserSettings';
+import { trackEvent } from '@/lib/analytics';
 import { AnswerPreview } from './AnswerPreview';
 
 /**
@@ -163,6 +164,14 @@ export function TodayFinder() {
     // 次回訪問用に area / age を保存
     updateSettings({ area: state.area, age: state.age });
 
+    trackEvent('today_finder_search', {
+      mode: state.mode,
+      age: state.age,
+      area: state.area,
+      weather: state.weather,
+      time: state.duration,
+    });
+
     const params = new URLSearchParams();
     Object.entries(state).forEach(([k, v]) => {
       if (v === undefined || v === null) return;
@@ -182,6 +191,7 @@ export function TodayFinder() {
    * 入力が面倒なユーザー向けのワンタップ救済。
    */
   function submitAuto() {
+    trackEvent('today_finder_random');
     const { mode: autoMode, mealTime: autoMealTime } = getDefaultModeByTime();
     const autoState: State = applyModeDefaults(
       {

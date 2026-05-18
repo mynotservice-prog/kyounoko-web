@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import { trackEvent } from '@/lib/analytics';
 
 /**
  * ベビーカー診断 — 5問→3モデル提案。
@@ -166,12 +167,23 @@ const RECOMMENDATIONS: Recommendation[] = [
   },
 ];
 
+const TOOL_ID = 'babycar-shindan';
+
 export function BabycarShindanClient() {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Record<string, Tag[]>>({});
 
   const isLast = step >= QUESTIONS.length;
   const currentQ = QUESTIONS[step];
+
+  // 開始イベントは初回マウントで1回のみ
+  const startedRef = useRef(false);
+  const completedRef = useRef(false);
+  useEffect(() => {
+    if (startedRef.current) return;
+    startedRef.current = true;
+    trackEvent('shindan_start', { tool_id: TOOL_ID });
+  }, []);
 
   const handleSelect = (tags: Tag[]) => {
     if (!currentQ) return;
@@ -182,6 +194,7 @@ export function BabycarShindanClient() {
   const handleReset = () => {
     setStep(0);
     setAnswers({});
+    completedRef.current = false;
   };
 
   // 集計してスコアリング
@@ -195,6 +208,13 @@ export function BabycarShindanClient() {
   })
     .sort((a, b) => b.score - a.score)
     .slice(0, 3);
+
+  // 完了イベント: isLast 遷移時に1度だけ
+  useEffect(() => {
+    if (!isLast || completedRef.current) return;
+    completedRef.current = true;
+    trackEvent('shindan_complete', { tool_id: TOOL_ID, result: scored[0]?.rec.id });
+  }, [isLast, scored]);
 
   return (
     <div style={{ marginTop: 32 }}>

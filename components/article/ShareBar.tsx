@@ -1,4 +1,7 @@
+'use client';
+
 import { CopyLinkButton } from './CopyLinkButton';
+import { trackEvent } from '@/lib/analytics';
 
 type Props = {
   url: string;
@@ -9,7 +12,7 @@ type Props = {
 /**
  * 記事のシェアバー。
  * X (Twitter), LINE, Facebook, リンクコピー。
- * サーバーコンポーネント（コピーだけクライアント側）。
+ * GA4 イベント送信のため client component 化。
  */
 export function ShareBar({ url, title, label = 'この記事をシェアする' }: Props) {
   const encodedUrl = encodeURIComponent(url);
@@ -29,6 +32,7 @@ export function ShareBar({ url, title, label = 'この記事をシェアする' 
           rel="noopener noreferrer"
           className="share-btn share-btn-x"
           aria-label="Xでシェア"
+          onClick={() => trackEvent('share_click', { platform: 'x' })}
         >
           <svg
             viewBox="0 0 24 24"
@@ -47,6 +51,7 @@ export function ShareBar({ url, title, label = 'この記事をシェアする' 
           rel="noopener noreferrer"
           className="share-btn share-btn-line"
           aria-label="LINEでシェア"
+          onClick={() => trackEvent('share_click', { platform: 'line' })}
         >
           <svg
             viewBox="0 0 24 24"
@@ -65,6 +70,7 @@ export function ShareBar({ url, title, label = 'この記事をシェアする' 
           rel="noopener noreferrer"
           className="share-btn share-btn-fb"
           aria-label="Facebookでシェア"
+          onClick={() => trackEvent('share_click', { platform: 'facebook' })}
         >
           <svg
             viewBox="0 0 24 24"

@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import Link from 'next/link';
+import { trackEvent } from '@/lib/analytics';
 
 /**
  * 汎用診断エンジン。タグベースのスコアリングで上位N候補を提示する。
@@ -39,6 +40,8 @@ export type ShindanEngineProps<T extends string> = {
   ctaBackLabel?: string;
   /** 診断後に追加で表示する任意のコンテンツ（補足解説など） */
   resultExtra?: ReactNode;
+  /** GA4 イベントに送る診断ツール識別子（例: babycar-shindan, odekake-type） */
+  toolId?: string;
 };
 
 export function ShindanEngine<T extends string>({
@@ -49,12 +52,26 @@ export function ShindanEngine<T extends string>({
   ctaBackHref = '/tools',
   ctaBackLabel = '他の診断ツールを見る',
   resultExtra,
+  toolId,
 }: ShindanEngineProps<T>) {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Record<string, T[]>>({});
 
   const isLast = step >= questions.length;
   const currentQ = questions[step];
+
+  // 初回マウント時に shindan_start を一度だけ送信。リセットでは再発火しない
+  // （ユーザー視点で「同じツールを再診断」は1セッション扱いにしたいため）。
+  const startedRef = useRef(false);
+  // 完了イベント用のフラグ。isLast 遷移時に1度だけ shindan_complete を送る。
+  // handleReset から触りたいので handleReset より上で宣言する。
+  const completedRef = useRef(false);
+
+  useEffect(() => {
+    if (startedRef.current) return;
+    startedRef.current = true;
+    trackEvent('shindan_start', { tool_id: toolId });
+  }, [toolId]);
 
   const handleSelect = (tags: T[]) => {
     if (!currentQ) return;
@@ -65,6 +82,8 @@ export function ShindanEngine<T extends string>({
   const handleReset = () => {
     setStep(0);
     setAnswers({});
+    // 再診断時にもう一度 shindan_complete を送るため、完了フラグはクリアする
+    completedRef.current = false;
   };
 
   const allTags: T[] = Object.values(answers).flat();
@@ -78,6 +97,16 @@ export function ShindanEngine<T extends string>({
     })
     .sort((a, b) => b.score - a.score)
     .slice(0, topN);
+
+  // isLast に遷移した瞬間に1度だけ shindan_complete を送る。
+  useEffect(() => {
+    if (!isLast || completedRef.current) return;
+    completedRef.current = true;
+    trackEvent('shindan_complete', {
+      tool_id: toolId,
+      result: scored[0]?.rec.id,
+    });
+  }, [isLast, scored, toolId]);
 
   return (
     <div style={{ marginTop: 32 }}>

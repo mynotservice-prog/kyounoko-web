@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from 'react';
 import type { TocItem } from '@/lib/articles';
+import { trackEvent } from '@/lib/analytics';
 
 type Props = {
   items: TocItem[];
@@ -59,7 +60,7 @@ export function TableOfContents({ items, variant }: Props) {
           <ol className="toc-list">
             {tree.map((node) => (
               <li key={node.item.id} className="toc-item toc-item-h2">
-                <a href={`#${node.item.id}`}>
+                <a href={`#${node.item.id}`} onClick={() => trackEvent('toc_click', { heading_id: node.item.id })}>
                   <span className="toc-num">{String(node.index).padStart(2, '0')}</span>
                   <span className="toc-text">{node.item.text}</span>
                 </a>
@@ -67,7 +68,7 @@ export function TableOfContents({ items, variant }: Props) {
                   <ol className="toc-sublist">
                     {node.children.map((child) => (
                       <li key={child.id} className="toc-item toc-item-h3">
-                        <a href={`#${child.id}`}>
+                        <a href={`#${child.id}`} onClick={() => trackEvent('toc_click', { heading_id: child.id })}>
                           <span className="toc-sub-dot" aria-hidden="true">┗</span>
                           <span className="toc-text">{child.text}</span>
                         </a>
@@ -94,7 +95,7 @@ export function TableOfContents({ items, variant }: Props) {
       <ol className="toc-list">
         {tree.map((node) => (
           <li key={node.item.id} className="toc-item toc-item-h2">
-            <a href={`#${node.item.id}`}>
+            <a href={`#${node.item.id}`} onClick={() => trackEvent('toc_click', { heading_id: node.item.id })}>
               <span className="toc-num">{String(node.index).padStart(2, '0')}</span>
               <span className="toc-text">{node.item.text}</span>
             </a>
@@ -102,7 +103,7 @@ export function TableOfContents({ items, variant }: Props) {
               <ol className="toc-sublist">
                 {node.children.map((child) => (
                   <li key={child.id} className="toc-item toc-item-h3">
-                    <a href={`#${child.id}`}>
+                    <a href={`#${child.id}`} onClick={() => trackEvent('toc_click', { heading_id: child.id })}>
                       <span className="toc-sub-dot" aria-hidden="true">└</span>
                       <span className="toc-text">{child.text}</span>
                     </a>

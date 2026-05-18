@@ -17,6 +17,8 @@ import { getTokyoNow, formatJaLong, monthNameEn } from '@/lib/date';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
 import { getMonthlyPickedItems } from '@/lib/items-catalog';
+import { HeroCTA } from '@/components/top/HeroCTA';
+import { PersonalizedHint } from '@/components/common/PersonalizedHint';
 
 export const revalidate = 3600;
 
@@ -70,13 +72,9 @@ export default function HomePage() {
                 情報を増やさず、選択肢を絞る。それだけ。
               </p>
               <div className="hero-actions">
-                <Link href="#finder" className="btn-primary">
-                  条件を入れる
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
-                </Link>
+                {/* A/Bテスト hero-cta-2026-05: A=「条件を入れる」/ B=「今日のヒントを見る」
+                    HeroCTA は client component。クリックで hero_cta_click を variant 付き送信。 */}
+                <HeroCTA href="#finder" />
                 <Link href="/about" className="btn-ghost">
                   このサイトについて
                 </Link>
@@ -105,6 +103,14 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ======================================================================
+          パーソナライズ枠 — 設定済みの子の年齢に応じた「今日のおすすめ」軽案内
+          クライアントのみ（hydrate後 fade-in）。未設定なら何も出さない。
+          ====================================================================== */}
+      <div className="container" style={{ marginTop: 8 }}>
+        <PersonalizedHint context="top" fallback="hidden" />
+      </div>
 
       {/* ======================================================================
           迷ったらこの3つ — ファーストビュー直下の即時遷移カード
