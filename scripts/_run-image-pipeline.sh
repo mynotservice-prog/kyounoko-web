@@ -2,15 +2,21 @@
 # ============================================================
 # 新規記事の hero画像 一括生成パイプライン
 #
-# 使い方:
-#   1. Cloudflare認証情報を環境変数で設定(初回のみ)
-#      export CLOUDFLARE_ACCOUNT_ID=xxxxxx
-#      export CLOUDFLARE_API_TOKEN=xxxxxx
+# 使い方(初回):
+#   1. /Users/nagaminehideki/Developer/kyounoko-web/.env.local に下記を追記
+#         CLOUDFLARE_ACCOUNT_ID=f9e83dcbdc0fcdacf9bc56288cac5429
+#         CLOUDFLARE_API_TOKEN=<発行したトークン>
+#      (.env.local は .gitignore で git 対象外)
 #
 #   2. このスクリプトを実行
 #      bash scripts/_run-image-pipeline.sh
 #
+# 使い方(2回目以降):
+#   - .env.local がそのまま使われるので、コマンド1発:
+#       bash scripts/_run-image-pipeline.sh
+#
 # 動作:
+#   - .env.local の認証情報を自動読込
 #   - tmp/image-prompts.json から未生成の記事を検出
 #   - Cloudflare Workers AI (flux-1-schnell) で画像生成
 #   - WebP変換
@@ -20,23 +26,43 @@
 
 set -e
 
+cd "$(dirname "$0")/.."
+
+# .env.local があれば自動読込
+# CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN をここに書いておけば、
+# 毎回 export する必要なし。
+# .env.local は .gitignore で git 対象外。
+if [ -f .env.local ]; then
+  set -a
+  # shellcheck disable=SC1091
+  source .env.local
+  set +a
+fi
+
 # 認証チェック
 if [ -z "$CLOUDFLARE_ACCOUNT_ID" ] || [ -z "$CLOUDFLARE_API_TOKEN" ]; then
   echo "❌ Cloudflare認証情報が未設定です"
   echo ""
-  echo "下記を実行してから再実行してください:"
-  echo "  export CLOUDFLARE_ACCOUNT_ID=xxxxxx"
-  echo "  export CLOUDFLARE_API_TOKEN=xxxxxx"
+  echo "プロジェクトルートの .env.local に下記を追記してください:"
+  echo "  CLOUDFLARE_ACCOUNT_ID=f9e83dcbdc0fcdacf9bc56288cac5429"
+  echo "  CLOUDFLARE_API_TOKEN=<発行したトークン>"
   echo ""
-  echo "認証情報の取得手順:"
-  echo "  1. https://dash.cloudflare.com/ にログイン"
-  echo "  2. 右下の Account ID をコピー"
-  echo "  3. https://dash.cloudflare.com/profile/api-tokens で API Token 発行"
-  echo "     Permissions: Account → Workers AI → Read"
+  echo "API Token の発行:"
+  echo "  https://dash.cloudflare.com/profile/api-tokens"
+  echo "    Create Custom Token → Permissions: Account → Workers AI → Read"
+  echo ""
+  echo "次回からは .env.local が自動読込されるので、このスクリプトを叩くだけでOK"
   exit 1
 fi
 
-cd "$(dirname "$0")/.."
+# Account IDが '<...>' や 'xxxxxx' のままになっていないかチェック(よくあるコピペミス)
+case "$CLOUDFLARE_ACCOUNT_ID" in
+  *xxxxxx*|*\<*\>*)
+    echo "❌ CLOUDFLARE_ACCOUNT_ID がサンプル値のままです: $CLOUDFLARE_ACCOUNT_ID"
+    echo "   .env.local を編集して実IDに置換してください"
+    exit 1
+    ;;
+esac
 
 echo "============================================"
 echo "▶ きょうのこ hero画像 生成パイプライン"
@@ -54,6 +80,13 @@ node scripts/generate-hero-images-cloudflare.mjs
 echo ""
 
 echo "▶ Step 3/5: WebP 変換"
+# sharp のネイティブモジュールが現在のOS用に入っているかチェック
+# 入ってなければ Apple Silicon / Intel 用バイナリを自動再インストール
+if ! node -e "require('sharp')" 2>/dev/null; then
+  echo "  ⚠ sharp のネイティブモジュールが見つからないため再インストール中..."
+  npm install --include=optional sharp >/dev/null 2>&1 || npm rebuild sharp >/dev/null 2>&1
+  echo "  ✓ sharp 再インストール完了"
+fi
 node scripts/convert-hero-ai-to-webp.mjs
 echo ""
 
