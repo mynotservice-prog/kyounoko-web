@@ -10,6 +10,7 @@ publishedAt: 2026-04-18T00:00:00.000Z
 updatedAt: '2026-05-09'
 hero: /hero-ai/babycar-erabikata.jpg
 area: all
+interactive: BabyCarRouteEstimator
 quickInfo:
   ageRanges:
     - 0-1

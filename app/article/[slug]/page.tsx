@@ -33,6 +33,9 @@ import { CrossLinkCards } from '@/components/article/CrossLinkCards';
 import { YouTubeEmbed } from '@/components/article/YouTubeEmbed';
 import { YouTubeSearchLink } from '@/components/article/YouTubeSearchLink';
 import { PersonalizedHint } from '@/components/common/PersonalizedHint';
+import { AgeMonthCalculator } from '@/components/interactive/AgeMonthCalculator';
+import { BabyCarRouteEstimator } from '@/components/interactive/BabyCarRouteEstimator';
+import { NaptimeFitFinder } from '@/components/interactive/NaptimeFitFinder';
 
 // パーソナライズ枠を出すカテゴリ（今日の◯◯系のみ）
 const PERSONALIZED_HINT_CATEGORIES = new Set(['today-doko', 'today-nani', 'today-taberu']);
@@ -101,9 +104,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (resolved.kind === 'microcms') {
     const article = resolved.data;
     const description = article.metaDescription ?? article.lede?.substring(0, 120);
+    // hero がある記事は記事画像優先、無ければ /api/og で動的生成。
+    // /api/og は queryString からタイトルとカテゴリを受けて 1200x630 の OGP を返す。
+    const dynamicOg = `/api/og?title=${encodeURIComponent(article.title)}&cat=${encodeURIComponent(article.category?.slug ?? '')}`;
     const ogImages = article.hero
       ? [{ url: article.hero.url, width: 1600, height: 900 }]
-      : [{ url: '/img/ogp-default.jpg', width: 1200, height: 630 }];
+      : [{ url: dynamicOg, width: 1200, height: 630 }];
     return {
       title: article.title,
       description,
@@ -130,9 +136,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // file-based
   const article = resolved.data;
   const description = article.metaDescription ?? article.lede?.substring(0, 120);
+  // hero がある記事は記事画像優先、無ければ /api/og で動的生成。
+  const dynamicOg = `/api/og?title=${encodeURIComponent(article.title)}&cat=${encodeURIComponent(article.category)}`;
   const ogImages = article.hero
     ? [{ url: article.hero, width: 1600, height: 900 }]
-    : [{ url: '/img/ogp-default.jpg', width: 1200, height: 630 }];
+    : [{ url: dynamicOg, width: 1200, height: 630 }];
   return {
     title: article.title,
     description,
@@ -868,6 +876,11 @@ function FileArticleView({ article }: { article: FileArticle }) {
               }}
             />
           )}
+
+          {/* インタラクティブ図解（frontmatter `interactive:` で指定された記事のみ） */}
+          {article.interactive === 'AgeMonthCalculator' && <AgeMonthCalculator />}
+          {article.interactive === 'BabyCarRouteEstimator' && <BabyCarRouteEstimator />}
+          {article.interactive === 'NaptimeFitFinder' && <NaptimeFitFinder />}
 
           {/* Quick Info */}
           {article.quickInfo && (article.quickInfo.ageRanges?.length || article.quickInfo.durationMin) && (

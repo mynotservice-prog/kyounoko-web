@@ -21,6 +21,7 @@ quickInfo:
   durationMin: 30
   budget: low
 area: all
+interactive: AgeMonthCalculator
 legacyHero: /hero/medical-02.png
 ---
 

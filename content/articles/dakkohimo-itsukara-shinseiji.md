@@ -10,6 +10,7 @@ metaDescription: >-
 publishedAt: 2026-05-02T00:00:00.000Z
 updatedAt: '2026-05-09'
 area: all
+interactive: BabyCarRouteEstimator
 quickInfo:
   ageRanges:
     - 0-1

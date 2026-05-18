@@ -46,6 +46,14 @@ export type FileArticleMeta = {
    * 動画 ID 不要なので全記事で安全に利用できる。
    */
   youtubeSearch?: string;
+  /**
+   * 本文に組み込むインタラクティブ図解コンポーネント名。
+   * - AgeMonthCalculator: 月齢計算機
+   * - BabyCarRouteEstimator: ベビーカー所要時間
+   * - NaptimeFitFinder: お昼寝時刻診断
+   * TL;DR と Quick Info の間にレンダーされる。
+   */
+  interactive?: 'AgeMonthCalculator' | 'BabyCarRouteEstimator' | 'NaptimeFitFinder';
 };
 
 export type FileArticleFaq = {
@@ -127,6 +135,12 @@ function parseFrontmatter(raw: string, fallbackSlug: string): { meta: FileArticl
     youtubeSearch:
       typeof d.youtubeSearch === 'string' && d.youtubeSearch.trim()
         ? d.youtubeSearch.trim()
+        : undefined,
+    interactive:
+      d.interactive === 'AgeMonthCalculator' ||
+      d.interactive === 'BabyCarRouteEstimator' ||
+      d.interactive === 'NaptimeFitFinder'
+        ? d.interactive
         : undefined,
   };
 

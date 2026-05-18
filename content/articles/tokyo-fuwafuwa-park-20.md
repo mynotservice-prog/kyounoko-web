@@ -19,6 +19,7 @@ quickInfo:
   durationMin: 180
   budget: free
 area: tokyo
+interactive: BabyCarRouteEstimator
 ---
 
 ## 結論（TL;DR）

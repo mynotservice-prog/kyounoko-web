@@ -8,6 +8,7 @@ publishedAt: 2026-04-18T00:00:00.000Z
 updatedAt: '2026-05-09'
 hero: /hero-ai/heijitsu-yoru-30pun-routine.jpg
 area: all
+interactive: NaptimeFitFinder
 quickInfo:
   ageRanges:
     - 2-3
