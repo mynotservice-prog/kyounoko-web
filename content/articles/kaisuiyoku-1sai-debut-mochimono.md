@@ -6,6 +6,7 @@ category: today-doko
 categoryName: 今日どこいく
 publishedAt: '2026-05-18'
 updatedAt: '2026-05-18'
+hero: /hero-ai/kaisuiyoku-1sai-debut-mochimono.webp
 lede: '1歳の海デビューはプールとは別物。砂・潮風・直射日光・トイレ問題と向き合うフル装備が必要です。ながみー家が息子1歳の夏に失敗から学んだ持ち物リストを共有します。'
 quickInfo:
   ageRanges:

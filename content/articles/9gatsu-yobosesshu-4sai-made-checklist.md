@@ -4,6 +4,7 @@ metaDescription: '9月は予防接種の見直しに適した時期。4歳まで
 category: yakudatsu
 publishedAt: '2026-05-18'
 updatedAt: '2026-05-18'
+hero: /hero-ai/9gatsu-yobosesshu-4sai-made-checklist.webp
 area: all
 lede: 9月は秋〜冬の感染症シーズン前に予防接種を見直す時期。4歳までに済ませる定期接種・任意接種を、母子手帳の確認ポイントと接種漏れの相談先までチェックリスト形式でまとめました。
 quickInfo:

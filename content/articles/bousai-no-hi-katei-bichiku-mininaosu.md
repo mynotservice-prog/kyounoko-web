@@ -4,6 +4,7 @@ metaDescription: '9月1日の防災の日に、0-5歳の子がいる家庭の備
 category: yakudatsu
 publishedAt: '2026-05-18'
 updatedAt: '2026-05-18'
+hero: /hero-ai/bousai-no-hi-katei-bichiku-mininaosu.webp
 area: all
 lede: 9月1日の防災の日は、子のいる家庭の備蓄を見直す絶好のタイミング。0-5歳特有の必需品(おむつ・ミルク・離乳食・常備薬)と、防災の日に親子でやる更新ルールをまとめました。
 quickInfo:

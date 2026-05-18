@@ -37,6 +37,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <nav style={{ display: 'flex', gap: 16, fontSize: 13 }}>
           <Link href="/admin/insights" style={{ color: 'var(--clay-deep)', textDecoration: 'none', fontWeight: 600 }}>📊 Insights</Link>
           <Link href="/admin/events" style={{ color: 'var(--clay-deep)', textDecoration: 'none', fontWeight: 600 }}>📡 Events</Link>
+          <Link href="/admin/ab" style={{ color: 'var(--clay-deep)', textDecoration: 'none', fontWeight: 600 }}>🧪 A/B</Link>
           <Link href="/admin/seo" style={{ color: 'var(--clay-deep)', textDecoration: 'none', fontWeight: 600 }}>📈 SEO</Link>
           <Link href="/admin/image-gen" style={{ color: 'var(--clay-deep)', textDecoration: 'none', fontWeight: 600 }}>🎨 Image Gen</Link>
           <Link href="/admin/articles" style={{ color: 'var(--ink-sub)', textDecoration: 'none' }}>記事</Link>
