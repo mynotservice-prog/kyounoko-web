@@ -238,7 +238,7 @@ function Kpi({ label, value, unit, sub, warn }: { label: string; value: number; 
         {label}
       </div>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 4 }}>
-        <span style={{ fontFamily: 'var(--font-display), serif', fontSize: 28, fontWeight: 700, color: warn ? 'var(--clay-deep)' : 'var(--ink)' }}>
+        <span style={{ fontFamily: 'var(--font-mincho), serif', fontSize: 28, fontWeight: 700, color: warn ? 'var(--clay-deep)' : 'var(--ink)' }}>
           {value.toLocaleString()}
         </span>
         {unit && <span style={{ fontSize: 12, color: 'var(--ink-sub)' }}>{unit}</span>}

@@ -569,11 +569,19 @@ export default function HomePage() {
                     style={{
                       aspectRatio: '16/10',
                       backgroundColor: 'var(--peach-soft)',
-                      backgroundImage: a.hero ? `url(${a.hero})` : undefined,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
+                      overflow: 'hidden',
                     }}
-                  />
+                  >
+                    {a.hero && (
+                      <img
+                        src={a.hero}
+                        alt={a.title}
+                        loading="lazy"
+                        decoding="async"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                      />
+                    )}
+                  </div>
                   <div
                     style={{
                       padding: '16px 18px 20px',

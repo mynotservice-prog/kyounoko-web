@@ -109,9 +109,11 @@ input, select { font: inherit; color: inherit; }
 .container-narrow { max-width: 820px; margin: 0 auto; padding: 0 var(--pad); }
 
 /* Typography utilities */
+/* フォント整理: Zen Maru Gothic / DM Serif Display は廃止し Shippori Mincho に統合。
+   font-maru / font-display クラスは後方互換のため Shippori Mincho にエイリアス。 */
 .font-mincho { font-family: var(--font-mincho), "Shippori Mincho", serif; }
-.font-maru { font-family: var(--font-maru), "Zen Maru Gothic", sans-serif; }
-.font-display { font-family: var(--font-display), "DM Serif Display", serif; }
+.font-maru { font-family: var(--font-mincho), "Shippori Mincho", serif; }
+.font-display { font-family: var(--font-mincho), "Shippori Mincho", serif; }
 .font-inter { font-family: var(--font-inter), "Inter", sans-serif; }
 
 /* Section */
@@ -508,7 +510,7 @@ input, select { font: inherit; color: inherit; }
 }
 .day-plan-icon { font-size: 22px; margin-bottom: 4px; }
 .day-plan-clock {
-  font-family: var(--font-display, "DM Serif Display", serif);
+  font-family: var(--font-mincho), "Shippori Mincho", serif;
   font-size: 22px; font-weight: 600; color: var(--clay); line-height: 1;
 }
 .day-plan-label { font-size: 11px; color: var(--ink-mute); letter-spacing: .14em; margin-top: 4px; text-transform: uppercase; }
@@ -751,8 +753,8 @@ input, select { font: inherit; color: inherit; }
 }
 .seasonal-head .side { display: flex; align-items: baseline; gap: 20px; }
 .seasonal-head .month-num {
-  font-family: var(--font-display), "DM Serif Display", serif;
-  font-style: italic; font-weight: 400;
+  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-style: italic; font-weight: 500;
   font-size: 72px; line-height: 1;
   color: var(--clay-deep);
 }
@@ -842,7 +844,7 @@ input, select { font: inherit; color: inherit; }
 .concern:hover h3 { color: var(--clay); }
 
 .concern .num {
-  font-family: var(--font-display), "DM Serif Display", serif;
+  font-family: var(--font-mincho), "Shippori Mincho", serif;
   font-style: italic; font-size: 40px; line-height: 1;
   color: var(--clay); flex-shrink: 0;
   min-width: 44px;
@@ -906,7 +908,7 @@ input, select { font: inherit; color: inherit; }
 .age-panel.c { background: linear-gradient(165deg, var(--sky-soft), #DDEAF0); color: var(--sky); }
 
 .age-panel .age-num {
-  font-family: var(--font-display), "DM Serif Display", serif;
+  font-family: var(--font-mincho), "Shippori Mincho", serif;
   font-style: italic; font-size: 56px; line-height: 1;
   margin-bottom: 12px;
 }

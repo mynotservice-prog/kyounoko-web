@@ -213,11 +213,19 @@ export default async function CategoryPage({ params }: Props) {
                     style={{
                       aspectRatio: '16/10',
                       backgroundColor: 'var(--peach-soft)',
-                      backgroundImage: article.hero ? `url(${article.hero.url}?w=800)` : undefined,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
+                      overflow: 'hidden',
                     }}
-                  />
+                  >
+                    {article.hero && (
+                      <img
+                        src={`${article.hero.url}?w=800`}
+                        alt={article.title}
+                        loading="lazy"
+                        decoding="async"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                      />
+                    )}
+                  </div>
                   <div style={{ padding: '16px 20px 22px', display: 'flex', flexDirection: 'column', gap: 10, flex: 1 }}>
                     <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 16, fontWeight: 600, margin: 0, lineHeight: 1.55 }}>
                       {article.title}
@@ -256,11 +264,19 @@ export default async function CategoryPage({ params }: Props) {
                     style={{
                       aspectRatio: '16/10',
                       backgroundColor: 'var(--peach-soft)',
-                      backgroundImage: article.hero ? `url(${article.hero})` : undefined,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
+                      overflow: 'hidden',
                     }}
-                  />
+                  >
+                    {article.hero && (
+                      <img
+                        src={article.hero}
+                        alt={article.title}
+                        loading="lazy"
+                        decoding="async"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                      />
+                    )}
+                  </div>
                   <div style={{ padding: '16px 20px 22px', display: 'flex', flexDirection: 'column', gap: 10, flex: 1 }}>
                     <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 16, fontWeight: 600, margin: 0, lineHeight: 1.55 }}>
                       {article.title}

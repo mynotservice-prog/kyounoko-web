@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Shippori_Mincho, Noto_Sans_JP, Zen_Maru_Gothic, DM_Serif_Display, Inter } from 'next/font/google';
+import { Shippori_Mincho, Noto_Sans_JP, Inter } from 'next/font/google';
 import Script from 'next/script';
 import { ADSENSE_SCRIPT_SRC, ADSENSE_CLIENT, ADSENSE_PUB_ID_CONFIGURED } from '@/lib/adsense';
 import { PWARegister } from '@/components/common/PWARegister';
@@ -14,12 +14,17 @@ export const viewport: Viewport = {
 
 // フォント定義
 // SEO対応: preload は main body font（Noto Sans JP）のみに絞り込み、
-// 他のフォントは `preload: false` でHTML頭のバイト量を激減させる（485 preload → ~80程度）。
+// 他のフォントは `preload: false` でHTML頭のバイト量を激減させる。
 // これによりGooglebotのクロール効率とLCPが大幅改善。
+//
+// 構成（3 フォント体制）:
+//   - Noto Sans JP: 本文 sans
+//   - Shippori Mincho: 見出し・大きな display 数字（旧 DM Serif Display の用途も統合）
+//   - Inter: eyebrow / category / 小さな英字
+// 旧 Zen Maru Gothic / DM Serif Display は廃止。--font-display は --font-mincho にフォールバック。
 //
 // CWV メモ（フォントウェイト削減候補・優先度低）:
 //   - Shippori_Mincho: 600 は数か所のみ → 500/700 だけにすると CSS バイト減
-//   - Zen_Maru_Gothic: 900 はほぼ未使用 → 500/700 だけで十分
 //   - Inter: 500 は数か所のみ → 400/600 だけにできる
 // ただし font-display: swap + preload: false なので LCP への悪影響は小さく、
 // 削減は次フェーズ（実測 + Lighthouse 指摘ベース）で対応する方針。
@@ -34,20 +39,6 @@ const shippori = Shippori_Mincho({
   weight: ['500', '600', '700'],
   subsets: ['latin'],
   variable: '--font-mincho',
-  display: 'swap',
-  preload: false,
-});
-const zenMaru = Zen_Maru_Gothic({
-  weight: ['500', '700', '900'],
-  subsets: ['latin'],
-  variable: '--font-maru',
-  display: 'swap',
-  preload: false,
-});
-const dmSerif = DM_Serif_Display({
-  weight: ['400'],
-  subsets: ['latin'],
-  variable: '--font-display',
   display: 'swap',
   preload: false,
 });
@@ -146,7 +137,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="ja"
-      className={`${shippori.variable} ${notoSans.variable} ${zenMaru.variable} ${dmSerif.variable} ${inter.variable}`}
+      className={`${shippori.variable} ${notoSans.variable} ${inter.variable}`}
     >
       <head>
         {/* Core Web Vitals: 主要サードパーティドメインへの早期接続。

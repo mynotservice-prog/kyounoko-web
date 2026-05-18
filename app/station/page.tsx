@@ -67,8 +67,80 @@ export default function StationIndexPage() {
             </p>
           </header>
 
+          {/* ===== クイックジャンプ ===== */}
+          <nav
+            aria-label="エリア クイックジャンプ"
+            style={{
+              marginBottom: 40,
+              padding: '16px 18px',
+              background: 'rgba(255, 251, 243, 0.7)',
+              border: '1px solid rgba(201,96,62,0.15)',
+              borderRadius: 12,
+            }}
+          >
+            <p style={{
+              margin: 0,
+              marginBottom: 10,
+              fontSize: 12,
+              fontWeight: 600,
+              letterSpacing: '0.04em',
+              color: 'var(--ink-sub)',
+            }}>
+              東京23区へジャンプ
+            </p>
+            <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 16 }}>
+              {wardOrder.map((ward) => {
+                const stations = byWard.get(ward);
+                if (!stations || stations.length === 0) return null;
+                return (
+                  <a
+                    key={ward}
+                    href={`#ward-${ward}`}
+                    className="chip"
+                    style={{ fontSize: 12.5 }}
+                  >
+                    {WARD_NAMES[ward]}
+                    <span style={{ marginLeft: 4, color: 'var(--ink-mute)', fontSize: 11 }}>
+                      {stations.length}
+                    </span>
+                  </a>
+                );
+              })}
+            </div>
+
+            <p style={{
+              margin: 0,
+              marginBottom: 10,
+              fontSize: 12,
+              fontWeight: 600,
+              letterSpacing: '0.04em',
+              color: 'var(--ink-sub)',
+            }}>
+              関西エリアへジャンプ
+            </p>
+            <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+              {prefectureOrder.map((pref) => {
+                const stations = byPrefecture.get(pref);
+                if (!stations || stations.length === 0) return null;
+                return (
+                  <a
+                    key={pref}
+                    href={`#pref-${pref}`}
+                    className="chip"
+                    style={{ fontSize: 12.5 }}
+                  >
+                    {PREFECTURE_NAMES[pref]}
+                    <span style={{ marginLeft: 4, color: 'var(--ink-mute)', fontSize: 11 }}>
+                      {stations.length}
+                    </span>
+                  </a>
+                );
+              })}
+            </div>
+          </nav>
+
           {/* ===== 東京23区 ===== */}
-          <section style={{ marginBottom: 48 }}>
+          <section id="region-tokyo" style={{ marginBottom: 48, scrollMarginTop: 124 }}>
             <h2 style={{
               fontFamily: 'var(--font-mincho)',
               fontSize: 24,
@@ -94,9 +166,37 @@ export default function StationIndexPage() {
                 return a.name.localeCompare(b.name, 'ja');
               });
               return (
-                <section key={ward} style={{ marginBottom: 36 }}>
-                  <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 20, marginBottom: 14 }}>
-                    {wardName} <span style={{ fontSize: 13, color: 'var(--ink-mute)', fontWeight: 400 }}>{stations.length}駅</span>
+                <section
+                  key={ward}
+                  id={`ward-${ward}`}
+                  style={{ marginBottom: 36, scrollMarginTop: 124 }}
+                >
+                  <h3 style={{
+                    fontFamily: 'var(--font-mincho)',
+                    fontSize: 20,
+                    marginBottom: 14,
+                    display: 'flex',
+                    alignItems: 'baseline',
+                    justifyContent: 'space-between',
+                    gap: 12,
+                    flexWrap: 'wrap',
+                  }}>
+                    <span>
+                      {wardName} <span style={{ fontSize: 13, color: 'var(--ink-mute)', fontWeight: 400 }}>{stations.length}駅</span>
+                    </span>
+                    <a
+                      href="#region-tokyo"
+                      style={{
+                        fontSize: 11,
+                        color: 'var(--ink-mute)',
+                        textDecoration: 'none',
+                        fontWeight: 400,
+                        letterSpacing: '0.04em',
+                      }}
+                      aria-label="クイックジャンプに戻る"
+                    >
+                      ↑ 一覧へ戻る
+                    </a>
                   </h3>
                   <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
                     {sorted.map((s) => (
@@ -114,7 +214,7 @@ export default function StationIndexPage() {
           </section>
 
           {/* ===== 関西エリア ===== */}
-          <section style={{ marginBottom: 48 }}>
+          <section id="region-kansai" style={{ marginBottom: 48, scrollMarginTop: 124 }}>
             <h2 style={{
               fontFamily: 'var(--font-mincho)',
               fontSize: 24,
@@ -140,9 +240,37 @@ export default function StationIndexPage() {
                 return a.name.localeCompare(b.name, 'ja');
               });
               return (
-                <section key={pref} style={{ marginBottom: 36 }}>
-                  <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 20, marginBottom: 14 }}>
-                    {prefName}（{PREFECTURE_REGION_LABEL[pref]}） <span style={{ fontSize: 13, color: 'var(--ink-mute)', fontWeight: 400 }}>{stations.length}駅</span>
+                <section
+                  key={pref}
+                  id={`pref-${pref}`}
+                  style={{ marginBottom: 36, scrollMarginTop: 124 }}
+                >
+                  <h3 style={{
+                    fontFamily: 'var(--font-mincho)',
+                    fontSize: 20,
+                    marginBottom: 14,
+                    display: 'flex',
+                    alignItems: 'baseline',
+                    justifyContent: 'space-between',
+                    gap: 12,
+                    flexWrap: 'wrap',
+                  }}>
+                    <span>
+                      {prefName}（{PREFECTURE_REGION_LABEL[pref]}） <span style={{ fontSize: 13, color: 'var(--ink-mute)', fontWeight: 400 }}>{stations.length}駅</span>
+                    </span>
+                    <a
+                      href="#region-kansai"
+                      style={{
+                        fontSize: 11,
+                        color: 'var(--ink-mute)',
+                        textDecoration: 'none',
+                        fontWeight: 400,
+                        letterSpacing: '0.04em',
+                      }}
+                      aria-label="クイックジャンプに戻る"
+                    >
+                      ↑ 一覧へ戻る
+                    </a>
                   </h3>
                   <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
                     {sorted.map((s) => (

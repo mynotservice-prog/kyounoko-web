@@ -18,7 +18,7 @@ export default function NotFound() {
         <div style={{ padding: '96px 0 120px', textAlign: 'center' }}>
           <span
             style={{
-              fontFamily: 'var(--font-display)',
+              fontFamily: 'var(--font-mincho)',
               fontStyle: 'italic',
               fontSize: 'clamp(96px, 18vw, 160px)',
               color: 'var(--clay)',

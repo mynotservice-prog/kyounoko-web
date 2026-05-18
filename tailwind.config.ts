@@ -31,8 +31,9 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-sans)', 'Noto Sans JP', 'Hiragino Sans', 'sans-serif'],
         mincho: ['var(--font-mincho)', 'Shippori Mincho', 'Hiragino Mincho ProN', 'serif'],
-        maru: ['var(--font-maru)', 'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', 'sans-serif'],
-        display: ['var(--font-display)', 'DM Serif Display', 'serif'],
+        // display は Shippori Mincho に統合（旧 DM Serif Display）。
+        // 既存の `font-display` クラスは mincho にエイリアスして見た目を維持。
+        display: ['var(--font-mincho)', 'Shippori Mincho', 'Hiragino Mincho ProN', 'serif'],
         inter: ['var(--font-inter)', 'Inter', 'sans-serif'],
       },
       borderRadius: {

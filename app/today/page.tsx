@@ -240,12 +240,17 @@ function AnswerCard({ answer, featured = false }: { answer: TodayAnswerResult; f
 
   return (
     <Link href={answer.href} className="alt-card">
-      <div
-        className="alt-card-thumb"
-        style={{ backgroundImage: answer.hero ? `url(${answer.hero})` : undefined }}
-        role="img"
-        aria-label={answer.title}
-      />
+      <div className="alt-card-thumb" style={{ overflow: 'hidden' }}>
+        {answer.hero && (
+          <img
+            src={answer.hero}
+            alt={answer.title}
+            loading="lazy"
+            decoding="async"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+        )}
+      </div>
       <div className="alt-card-body">
         <h4 className="alt-card-title">{answer.title}</h4>
         <QuickMetaRow answer={answer} />

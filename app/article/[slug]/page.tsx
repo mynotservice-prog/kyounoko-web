@@ -472,16 +472,22 @@ export default async function ArticlePage({ params }: Props) {
                   }}
                 >
                   <div
-                    role="img"
-                    aria-label={a.title}
                     style={{
                       aspectRatio: '16/10',
                       backgroundColor: 'var(--peach-soft)',
-                      backgroundImage: a.hero ? `url(${a.hero.url}?w=800)` : undefined,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
+                      overflow: 'hidden',
                     }}
-                  />
+                  >
+                    {a.hero && (
+                      <img
+                        src={`${a.hero.url}?w=800`}
+                        alt={a.title}
+                        loading="lazy"
+                        decoding="async"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                      />
+                    )}
+                  </div>
                   <div style={{ padding: '16px 18px 20px' }}>
                     <h4 style={{ fontFamily: 'var(--font-mincho)', fontSize: 15, fontWeight: 600, margin: 0, lineHeight: 1.55 }}>
                       {a.title}
@@ -1152,16 +1158,22 @@ function FileArticleView({ article }: { article: FileArticle }) {
                     className="related-card"
                   >
                     <div
-                      role="img"
-                      aria-label={a.title}
                       style={{
                         aspectRatio: '16/10',
                         backgroundColor: 'var(--peach-soft)',
-                        backgroundImage: a.hero ? `url(${a.hero})` : undefined,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
+                        overflow: 'hidden',
                       }}
-                    />
+                    >
+                      {a.hero && (
+                        <img
+                          src={a.hero}
+                          alt={a.title}
+                          loading="lazy"
+                          decoding="async"
+                          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                        />
+                      )}
+                    </div>
                     <div style={{ padding: '14px 16px 18px' }}>
                       <h4
                         style={{

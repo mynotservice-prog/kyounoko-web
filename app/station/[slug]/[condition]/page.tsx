@@ -141,28 +141,48 @@ export default async function StationConditionPage({ params }: Props) {
     indiesByGenre.get(r.genre)!.push(r);
   }
 
-  // 同じ駅の他条件（残り3条件）— 該当0件のものは除外
+  // 同じ駅の他条件 — 該当3件以上のものに絞り、回遊価値の高い順（件数降順）で上位3件
   const otherConditions = STATION_CONDITIONS.filter((c) => c.slug !== conditionSlug)
     .map((c) => {
       const cn = filterChainsByCondition(data.chains, c.slug).length;
       const inn = filterIndiesByCondition(allIndies, c.slug).length;
       return { cond: c, count: cn + inn };
     })
-    .filter((x) => x.count > 0);
+    .filter((x) => x.count >= 3)
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 3);
 
-  // 同区の他駅（同じ条件で該当ありの駅）
-  const sameWardSameCondition = TOKYO_STATIONS
-    .filter((s) => s.ward === station.ward && s.slug !== station.slug)
-    .map((s) => {
+  // 同じ条件で探せる近隣駅: 同区内優先、不足分は同region(=東京23区)から補完。
+  // matchedCount>=3 のみを対象とし、回遊しても薄ページに送らない（404体験防止）。
+  type NeighborCandidate = { station: typeof TOKYO_STATIONS[number]; count: number };
+  const neighborSameCondition: NeighborCandidate[] = [];
+  const seenSlugs = new Set<string>([station.slug]);
+
+  const collectNeighbors = (filter: (s: typeof TOKYO_STATIONS[number]) => boolean) => {
+    for (const s of TOKYO_STATIONS) {
+      if (seenSlugs.has(s.slug)) continue;
+      if (!filter(s)) continue;
       const sd = getStationWithChains(s.slug);
       const sc = sd?.chains ?? [];
       const si = getIndieRestaurantsByStation(s.slug);
-      const has = hasMatchingItems(sc, si, conditionSlug);
-      return { station: s, has };
-    })
-    .filter((x) => x.has)
-    .slice(0, 12)
-    .map((x) => x.station);
+      const cn = filterChainsByCondition(sc, conditionSlug).length;
+      const inn = filterIndiesByCondition(si, conditionSlug).length;
+      const cnt = cn + inn;
+      if (cnt >= 3) {
+        neighborSameCondition.push({ station: s, count: cnt });
+        seenSlugs.add(s.slug);
+      }
+    }
+  };
+  // 1st: 同区
+  collectNeighbors((s) => s.ward === station.ward);
+  // 2nd fallback: 同region(東京23区) — 5件に満たない場合のみ
+  if (neighborSameCondition.length < 5) {
+    collectNeighbors((s) => s.ward !== station.ward);
+  }
+  // 件数の多い順で上位5
+  neighborSameCondition.sort((a, b) => b.count - a.count);
+  const topNeighbors = neighborSameCondition.slice(0, 5);
 
   // JSON-LD ItemList
   const allItemsForLd = [
@@ -382,71 +402,117 @@ export default async function StationConditionPage({ params }: Props) {
             </section>
           )}
 
-          {/* 他の条件で同駅を見る */}
+          {/* 同じ条件で探せる近隣駅（カード形式・5件） */}
+          {topNeighbors.length > 0 && (
+            <section className="station-related" style={{
+              marginTop: 36,
+              paddingTop: 32,
+              borderTop: '1px solid rgba(201,96,62,0.14)',
+            }}>
+              <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 6 }}>
+                同じ条件で探せる近隣駅
+              </h2>
+              <p style={{ fontSize: 13, color: 'var(--ink-mute)', marginTop: 0, marginBottom: 14 }}>
+                {wardName ? `${wardName}を中心に、` : ''}「{cond.label}」で店舗が3件以上ある駅をピックアップ。
+              </p>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                gap: 12,
+              }}>
+                {topNeighbors.map(({ station: s, count }) => {
+                  const sameWard = s.ward === station.ward;
+                  const sWardName = WARD_NAMES[s.ward] ?? '';
+                  return (
+                    <Link
+                      key={s.slug}
+                      href={`/station/${s.slug}/${conditionSlug}`}
+                      className="condition-card"
+                      style={{
+                        display: 'block',
+                        background: 'var(--paper-card)',
+                        border: '1px solid rgba(201,96,62,0.20)',
+                        borderRadius: 12,
+                        padding: '14px 16px',
+                        textDecoration: 'none',
+                        color: 'inherit',
+                      }}
+                    >
+                      <div style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'baseline',
+                        gap: 8,
+                        marginBottom: 6,
+                      }}>
+                        <strong style={{ fontSize: 15 }}>{s.name}駅</strong>
+                        <span style={{
+                          fontSize: 11,
+                          background: 'rgba(201,96,62,0.10)',
+                          color: 'var(--clay-deep)',
+                          padding: '2px 8px',
+                          borderRadius: 999,
+                          whiteSpace: 'nowrap',
+                        }}>{count}店</span>
+                      </div>
+                      <div style={{ fontSize: 12, color: 'var(--ink-sub)', lineHeight: 1.5 }}>
+                        {sWardName}{sameWard ? '（同区内）' : ''} · {cond.label}
+                      </div>
+                    </Link>
+                  );
+                })}
+              </div>
+            </section>
+          )}
+
+          {/* 同じ駅で別の条件を試す（チップ形式・3件） */}
           {otherConditions.length > 0 && (
             <section className="station-other-conditions" style={{
               marginTop: 36,
-              padding: '24px 0',
+              paddingTop: 32,
               borderTop: '1px solid rgba(201,96,62,0.14)',
             }}>
-              <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 12 }}>
-                他の条件で{station.name}駅を見る
+              <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 6 }}>
+                同じ駅で別の条件を試す
               </h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12 }}>
+              <p style={{ fontSize: 13, color: 'var(--ink-mute)', marginTop: 0, marginBottom: 14 }}>
+                {station.name}駅周辺で店舗が3件以上ある条件から、回遊価値の高いものを抜粋。
+              </p>
+              <div className="chip-group" style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                 {otherConditions.map(({ cond: oc, count }) => (
                   <Link
                     key={oc.slug}
                     href={`/station/${slug}/${oc.slug}`}
-                    className="condition-card"
-                    style={{
-                      display: 'block',
-                      background: 'var(--paper-card)',
-                      border: '1px solid rgba(201,96,62,0.20)',
-                      borderRadius: 12,
-                      padding: '14px 16px',
-                      textDecoration: 'none',
-                      color: 'inherit',
-                    }}
+                    className="chip"
+                    aria-label={`${station.name}駅 ${oc.label} ${count}店`}
                   >
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 6 }}>
-                      <strong style={{ fontSize: 15 }}>{oc.label}</strong>
-                      <span style={{
-                        fontSize: 11,
-                        background: 'rgba(201,96,62,0.10)',
-                        color: 'var(--clay-deep)',
-                        padding: '2px 8px',
-                        borderRadius: 999,
-                      }}>{count}店</span>
-                    </div>
-                    <div style={{ fontSize: 12, color: 'var(--ink-sub)', lineHeight: 1.5 }}>{oc.tagline}</div>
+                    {oc.label}
+                    <span style={{
+                      marginLeft: 6,
+                      fontSize: 11,
+                      color: 'var(--clay-deep)',
+                      fontWeight: 600,
+                    }}>{count}</span>
                   </Link>
                 ))}
               </div>
             </section>
           )}
 
-          {/* 同じ条件の他駅 */}
-          {sameWardSameCondition.length > 0 && (
-            <section className="station-related" style={{ marginTop: 36, paddingTop: 32, borderTop: '1px solid rgba(201,96,62,0.14)' }}>
-              <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 12 }}>
-                {wardName}の他の駅で「{cond.label}」を見る
-              </h2>
-              <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                {sameWardSameCondition.map((s) => (
-                  <Link key={s.slug} href={`/station/${s.slug}/${conditionSlug}`} className="chip">
-                    {s.name}
-                  </Link>
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* 戻る */}
-          <section style={{ marginTop: 36, padding: '24px 0', textAlign: 'center', color: 'var(--ink-sub)' }}>
-            <p style={{ fontSize: 14 }}>
+          {/* 戻る（駅一覧/駅トップ/路線一覧へのリンク） */}
+          <section style={{
+            marginTop: 36,
+            padding: '24px 0',
+            textAlign: 'center',
+            color: 'var(--ink-sub)',
+            borderTop: '1px solid rgba(201,96,62,0.14)',
+          }}>
+            <p style={{ fontSize: 14, lineHeight: 2 }}>
               <Link href={`/station/${slug}`} style={{ color: 'var(--clay-deep)' }}>← {station.name}駅トップに戻る</Link>
               {' / '}
               <Link href="/station" style={{ color: 'var(--clay-deep)' }}>駅別ガイド一覧</Link>
+              {' / '}
+              <Link href="/station/line" style={{ color: 'var(--clay-deep)' }}>路線一覧</Link>
             </p>
           </section>
         </div>

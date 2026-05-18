@@ -97,11 +97,19 @@ export function CrossLinkCards({
               style={{
                 aspectRatio: '16 / 10',
                 backgroundColor: 'var(--peach-soft)',
-                backgroundImage: it.hero ? `url(${it.hero})` : undefined,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
+                overflow: 'hidden',
               }}
-            />
+            >
+              {it.hero && (
+                <img
+                  src={it.hero}
+                  alt={it.title}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              )}
+            </div>
             <div style={{ padding: '14px 16px 18px', display: 'flex', flexDirection: 'column', gap: 6 }}>
               <span
                 style={{
