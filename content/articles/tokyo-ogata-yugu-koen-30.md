@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-17'
 updatedAt: '2026-05-17'
-hero: /hero-ai/tokyo-park-ranking-mom50-vote.jpg
+hero: /hero-ai/cat-park-01.webp
 lede: >-
   東京の大型遊具・アスレチック公園を「子どもが体を動かせて、親も座っていられる」基準で30か所まとめました。ふわふわドーム・ロングすべり台・ターザンロープ・複合遊具・クライミング・砂場・BBQ。0〜6歳の月齢と、駐車場・トイレ・日陰・水場の有無まで子連れ目線で整理しています。
 quickInfo:
