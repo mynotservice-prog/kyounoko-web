@@ -734,8 +734,20 @@ function FileArticleView({ article }: { article: FileArticle }) {
 
             <h1>{article.title}</h1>
 
-            {/* 記事メタ（読了時間・公開日・更新日） */}
+            {/* 記事メタ（著者・読了時間・公開日・更新日）
+                E-E-A-T 強化: 著者表示を最前面に置き、誰が書いた記事かを明示する。 */}
             <div className="article-meta">
+              <span className="article-meta-item">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 12l3 3" />
+                  <path d="M8 12a4 4 0 1 1 8 0a4 4 0 0 1-8 0" />
+                </svg>
+                <Link href="/authors/nagamy" style={{ color: 'inherit', textDecoration: 'none' }}>
+                  著者: <strong>ながみー</strong>
+                </Link>
+              </span>
+              <span className="article-meta-sep" aria-hidden="true">·</span>
               <span className="article-meta-item">
                 <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <circle cx="12" cy="12" r="9" />

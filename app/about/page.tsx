@@ -5,8 +5,9 @@ import { SiteFooter } from '@/components/layout/SiteFooter';
 import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
 
 export const metadata: Metadata = {
-  title: '運営者情報',
-  description: 'きょうのこの運営者「ながみー」の自己紹介、運営方針、情報の選定基準、執筆・編集ポリシー、お問い合わせ窓口をまとめています。体験に根ざした一次情報と、専門家確認を前提とした信頼できるコンテンツ作りをお約束します。',
+  title: '運営者情報 | きょうのこ',
+  description:
+    'きょうのこは、2歳の息子と東京23区に暮らす30代前半の会社員「ながみー」が、平日夜と休日の実訪問をもとに運営する個人メディアです。サイトの方針、扱う情報・扱わない情報、編集体制、お問い合わせ先をまとめています。',
   alternates: { canonical: '/about' },
 };
 
@@ -25,10 +26,17 @@ export default function AboutPage() {
     '@id': 'https://kyounoko.jp/about#author',
     name: 'ながみー',
     alternateName: 'kyounoko-editor',
-    url: 'https://kyounoko.jp/about',
+    url: 'https://kyounoko.jp/authors/nagamy',
+    mainEntityOfPage: 'https://kyounoko.jp/about',
     image: 'https://kyounoko.jp/img/ogp-default.jpg',
-    jobTitle: 'きょうのこ 編集長',
-    description: '0〜6歳の子を育てる共働きパパ。きょうのこ編集長として、家族の日常を3分で決めるための実用的な子育て情報を発信。実体験と一次情報に基づいた信頼性の高いコンテンツを心がけています。',
+    jobTitle: 'きょうのこ 編集長 / 運営者',
+    description:
+      '東京23区に住む30代前半の会社員。2歳の息子を育てる父親として、平日夜と休日に都内駅前の個人店・公園を実訪問し、子連れ目線の一次情報を蓄積しています。',
+    homeLocation: {
+      '@type': 'Place',
+      name: '東京23区',
+      address: { '@type': 'PostalAddress', addressLocality: '東京都', addressCountry: 'JP' },
+    },
     worksFor: {
       '@type': 'Organization',
       '@id': 'https://kyounoko.jp/#organization',
@@ -36,11 +44,14 @@ export default function AboutPage() {
       url: 'https://kyounoko.jp',
     },
     knowsAbout: [
-      '子育て', '幼児食', '共働き育児', '寝かしつけ', '時短家事',
-      'おでかけ計画', '家遊び', '知育', 'ベビー用品選び',
-      '東京23区子連れスポット', 'Webメディア運営',
+      '駅周辺の子連れランチ',
+      '東京23区の子連れスポット',
+      '個人店の子連れ訪問記録',
+      '幼児食・離乳食レシピ',
+      '季節・行事の家庭での過ごし方',
     ],
     knowsLanguage: 'ja',
+    email: 'mailto:service@remegift.jp',
   };
   const jsonLdAboutPage = {
     '@context': 'https://schema.org',
@@ -48,120 +59,177 @@ export default function AboutPage() {
     '@id': 'https://kyounoko.jp/about',
     url: 'https://kyounoko.jp/about',
     name: '運営者情報',
-    description: 'きょうのこの運営者・編集方針・情報の選定基準・問い合わせ窓口について',
+    description:
+      'きょうのこの運営者「ながみー」と、サイトの方針・編集体制・扱う情報の範囲についてのページ。',
     inLanguage: 'ja',
     isPartOf: { '@id': 'https://kyounoko.jp/#website' },
     about: { '@id': 'https://kyounoko.jp/about#author' },
   };
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPerson) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdAboutPage) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPerson) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdAboutPage) }}
+      />
       <SiteHeader />
       <div className="container-article">
         <nav className="breadcrumb" aria-label="パンくず">
-          <Link href="/">HOME</Link><span className="sep">/</span><span>運営者情報</span>
+          <Link href="/">HOME</Link>
+          <span className="sep">/</span>
+          <span>運営者情報</span>
         </nav>
       </div>
       <div className="container-article">
         <header className="page-head">
           <span className="eyebrow">About</span>
           <h1>運営者情報</h1>
-          <p className="lead">きょうのこの運営者、運営方針、情報の選定基準、問い合わせ窓口についてお伝えします。読者の毎日を軽くするメディアとして、実体験と一次情報に基づいた信頼できる内容を届けることを第一に考えています。</p>
+          <p className="lead">
+            きょうのこは、東京23区在住の30代前半の会社員「ながみー」が、2歳の息子と一緒に平日夜・休日に都内の駅前個人店や公園を実訪問しながら作っている個人メディアです。
+            運営者・編集方針・扱う情報の範囲・お問い合わせ窓口についてまとめています。
+          </p>
         </header>
 
         <article className="prose">
-          <h2>このサイトについて</h2>
-          <p><strong>きょうのこ</strong>は、0〜6歳の子がいる家庭の「今日どうする？」を3分で決めるための情報サイトです。天気・子どもの年齢・時間帯・予算といった条件から、今日の過ごし方の答えを絞り込んでお届けします。</p>
-          <p>情報量を競うのではなく、<strong>「今日これで十分」と思える選択肢をひとつに絞る</strong>こと。迷って疲れる時間を、子どもと向き合う時間に変えることが、当サイトの存在理由です。</p>
-
-          <h2>運営者プロフィール</h2>
-          <div style={{ background: 'var(--paper-card)', border: '1px solid var(--line)', borderRadius: 'var(--radius-lg)', padding: 24, margin: '24px 0' }}>
-            <p style={{ margin: '0 0 12px', fontFamily: 'var(--font-mincho), serif', fontSize: 18, fontWeight: 600, color: 'var(--ink)' }}>ながみー｜きょうのこ編集長</p>
+          <h2>ながみーについて</h2>
+          <div
+            style={{
+              background: 'var(--paper-card)',
+              border: '1px solid var(--line)',
+              borderRadius: 'var(--radius-lg)',
+              padding: 24,
+              margin: '24px 0',
+            }}
+          >
+            <p
+              style={{
+                margin: '0 0 12px',
+                fontFamily: 'var(--font-mincho), serif',
+                fontSize: 18,
+                fontWeight: 600,
+                color: 'var(--ink)',
+              }}
+            >
+              ながみー（kyounoko-editor）｜きょうのこ 運営者
+            </p>
             <p style={{ margin: 0, fontSize: 14, color: 'var(--ink-sub)', lineHeight: 1.9 }}>
-              共働き家庭で0〜6歳の子どもを育てながら、Webメディア・ブログを複数運営してきた編集者。日々の意思決定の多さに消耗した経験から、「選択肢を絞り、今日に集中できる」メディアを作りたいという想いで<strong>きょうのこ</strong>を立ち上げました。平日は仕事と保育園送迎、休日は家族と過ごしながら、実際に試したあそび・ごはん・おでかけ先を素材に記事を書いています。
+              30代前半の会社員。妻と2歳の息子と一緒に東京23区で暮らしています。
+              平日の夜と休日に、息子をベビーカーや抱っこ紐で連れて、都内の駅前にある個人店や公園を実際に訪問し、
+              「子連れで本当に入れるか」「動線・段差・トイレ・離乳食対応・混雑」などを自分の目で確認して記録しています。
+              本業の業界・会社名は公開していませんが、運営に利害関係のある業種ではありません。
+              詳しいプロフィールは <Link href="/authors/nagamy">著者ページ</Link> にまとめています。
             </p>
           </div>
 
-          <h3>Experience（体験）</h3>
+          <h3>立ち位置</h3>
           <ul>
-            <li>自身が0〜6歳の子を育てる<strong>現役の親</strong>として、日々の育児に取り組んでいます。</li>
-            <li>記事で紹介するあそび・ごはん・おもちゃ・おでかけ先は、原則として<strong>編集部が実際に試したもの</strong>を掲載しています。</li>
-            <li>試した結果の「よかった点」だけでなく、<strong>うまくいかなかった点・向き不向き</strong>も併記します。</li>
+            <li>監修者を抱える編集部ではなく、<strong>1人で運営している個人メディア</strong>です。</li>
+            <li>記事の最終責任は運営者ながみー本人にあります。</li>
+            <li>専門家による監修は<strong>現在準備中</strong>で、医療・健康・お金に関わる領域については後述の方針に沿って扱っています。</li>
           </ul>
 
-          <h3>Expertise（専門性）</h3>
+          <h2>サイトの方針</h2>
+          <p>
+            きょうのこは「<strong>量より質</strong>」を重視します。
+            子育て関連の検索結果には、行ったこともない店舗を口コミだけでまとめた記事や、根拠の薄い健康情報が氾濫しています。
+            その隙間に、<strong>実際に子連れで訪問した一次情報</strong> と <strong>公式ソース由来の二次情報</strong> をきちんと切り分けて出すことに、個人メディアの価値があると考えています。
+          </p>
           <ul>
-            <li>複数の子育て・ライフスタイル系 Web メディアの編集・運営に携わってきた経験があります。</li>
-            <li>SEO・UX・情報設計の知見を活かし、<strong>「迷う前に答えが見える」情報構造</strong>を設計しています。</li>
-            <li>医療・健康・発達・法律・金融などの個別判断が必要な分野では、必ず<strong>一次情報（厚生労働省・消費者庁・各学会・メーカー公式等）</strong>を確認のうえで執筆します。</li>
+            <li><strong>Experience（体験）</strong>: 訪問日付つきの実訪問レポートを核に据える</li>
+            <li><strong>Expertise（専門性）</strong>: 子連れ外出と幼児食まわりに領域を絞り、専門外には踏み込まない</li>
+            <li><strong>Authoritativeness（権威性）</strong>: 監修不在の現状を隠さず、公式ソースを必ず明示する</li>
+            <li><strong>Trust（信頼性）</strong>: 利益相反・更新日・限界（不確実な点）を明文化する</li>
           </ul>
 
-          <h3>Authoritativeness（権威性）</h3>
+          <h2>どんな情報を出しているか</h2>
+          <p>主に次の4分野を扱っています。</p>
           <ul>
-            <li>執筆者は<strong>実名またはペンネーム</strong>で明示します。架空の「監修者」「専門家」を装うことはしません。</li>
-            <li>医療・発達等の記事は、必要に応じて小児科医・保健師・管理栄養士等、<strong>実在する専門家の確認</strong>を経た上で公開します。監修がある場合は、記事内に<strong>監修者氏名・所属・資格</strong>を明記します。</li>
-            <li>当サイトは、参加アフィリエイトプログラム・広告配信サービスを明示し、スポンサーによる記事の内容干渉を受けません。</li>
+            <li>
+              <strong>駅 × 個人店マッピング</strong>：
+              東京23区の駅周辺で、子連れランチに使える個人店を駅単位で整理しています（<Link href="/station">駅別ランチ</Link>）。
+              一部のスポットには、ながみー本人が実訪問した <strong>KidReports（訪問日付つきメモ）</strong> を併記しています。
+            </li>
+            <li>
+              <strong>子連れ向けレシピ</strong>：
+              幼児食・取り分け・常備菜など、家庭で実際に作って息子に出したものを中心に紹介します。
+            </li>
+            <li>
+              <strong>おでかけスポット</strong>：
+              公園・屋内施設・季節イベントなど、ベビーカー動線や授乳・おむつ対応の情報を含めて紹介します。
+            </li>
+            <li>
+              <strong>季節記事</strong>：
+              入園・運動会・梅雨・夏の暑さ対策など、その時期に必要になる情報を整理してまとめます。
+            </li>
           </ul>
 
-          <h3>Trust（信頼性）</h3>
+          <h2>どんな情報は出さないか</h2>
+          <p>逆に、次のようなコンテンツは扱いません。</p>
           <ul>
-            <li><strong>公開日・最終更新日</strong>を記事冒頭に明示し、情報が古くなった場合は速やかに更新します。</li>
-            <li>アフィリエイトリンクやタイアップ記事には、<strong>「PR」「広告」</strong>等のラベルを景品表示法に従って表示します。</li>
-            <li>読者からの指摘・訂正依頼は、<a href="mailto:service@kyounoko.jp">service@kyounoko.jp</a> または<Link href="/contact">お問い合わせフォーム</Link>にて受け付けています。</li>
+            <li>
+              <strong>食べログ等の口コミの引用・転載</strong>はしません。
+              著作権上の問題に加え、Google AdSense のスパムポリシー（スケーリングされたコンテンツ）の観点からも、一次情報以外の口コミに頼った記事は作りません。
+            </li>
+            <li>
+              <strong>医師にしかできない判断</strong>（症状の診断・受診の要否・服薬の指示など）は行いません。
+              そのような領域については、必ず厚生労働省・各学会・主治医など公式ソースに案内します。
+            </li>
+            <li>
+              <strong>薬機法に抵触する効果断定</strong>（「治る」「効く」「やせる」など）はしません。
+              市販育児用品・食品・コスメについても、効能・効果を断定する表現は避けます。
+            </li>
+            <li>
+              <strong>架空の監修者</strong>を装ったり、<strong>AIだけで量産</strong>した訪問レポートを掲載したりしません。
+            </li>
           </ul>
 
-          <h2>サイト情報</h2>
-          <div style={{ background: 'var(--paper-card)', border: '1px solid var(--line)', borderRadius: 'var(--radius-lg)', padding: 24, margin: '24px 0' }}>
-            <table style={{ borderCollapse: 'collapse', width: '100%', fontSize: 14 }}>
-              <tbody>
-                <tr><td style={{ padding: '10px 0', fontWeight: 600, width: 110 }}>サイト名</td><td>きょうのこ</td></tr>
-                <tr><td style={{ padding: '10px 0', fontWeight: 600 }}>URL</td><td><a href="https://kyounoko.jp">https://kyounoko.jp</a></td></tr>
-                <tr><td style={{ padding: '10px 0', fontWeight: 600 }}>運営者</td><td>ながみー</td></tr>
-                <tr><td style={{ padding: '10px 0', fontWeight: 600 }}>設立</td><td>2026年</td></tr>
-                <tr><td style={{ padding: '10px 0', fontWeight: 600 }}>所在地</td><td>お問い合わせフォームよりご確認ください</td></tr>
-                <tr><td style={{ padding: '10px 0', fontWeight: 600 }}>連絡先</td><td><a href="mailto:service@kyounoko.jp">service@kyounoko.jp</a></td></tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h2>運営方針</h2>
-
-          <h3>情報の選定基準</h3>
+          <h2>実訪問の記録について</h2>
+          <p>
+            きょうのこには <strong>KidReports（キッドレポート）</strong> という仕組みがあり、
+            運営者ながみー本人が子連れで訪問した日付・気付き・ベビーカー動線・混雑感などを、
+            通常の解説記事とは別レイヤーで保存しています。
+            これは AdSense ポリシーが重視する「<strong>体験に基づくオリジナルなコンテンツ</strong>」を担保するためのものです。
+          </p>
           <ul>
-            <li><strong>一次情報を優先</strong>します。公的機関（厚生労働省・消費者庁・自治体等）、学会、メーカー公式資料を基礎にしています。</li>
-            <li><strong>体験ベース</strong>で選びます。編集部が実際に使った・食べた・行った・試したものを中心に掲載します。</li>
-            <li><strong>販促ありき</strong>では選びません。アフィリエイト報酬や広告単価の高さを掲載理由にしません。</li>
-            <li><strong>安全性に疑義がある情報</strong>（医療・食事制限・発達など）は、必要に応じて専門家に確認のうえ掲載します。</li>
+            <li>各レポートには <strong>訪問日付</strong> を含めるよう運用しています（記憶の補正・経年劣化の透明化のため）。</li>
+            <li>訪問していないスポットを「訪問済み」として記載することはありません。Web調査ベースの情報は、見出しや本文で明確に切り分けます。</li>
+            <li>店舗情報（営業時間・メニュー等）は変化が早いため、本文中に「<strong>来店前に公式情報を必ず確認してください</strong>」の注意書きを付けています。</li>
           </ul>
-
-          <h3>執筆・編集フロー</h3>
-          <ol>
-            <li>編集部が体験・一次情報の収集を行う</li>
-            <li>事実確認（ダブルチェック）を行う</li>
-            <li>必要に応じて専門家に確認を依頼</li>
-            <li>公開後も新情報があれば随時アップデート</li>
-          </ol>
-
-          <h3>情報の鮮度について</h3>
-          <p>記事冒頭に<strong>公開日</strong>と<strong>最終更新日</strong>を明記しています。情報が古くなっている・事実と異なる等のご指摘をいただいた場合は、速やかに内容を確認し、必要な更新を行います。</p>
-
-          <h3>広告・アフィリエイトについて</h3>
-          <p>本サイトは、Google AdSense 等の第三者配信広告サービス、および Amazon アソシエイト、楽天アフィリエイト、A8.net 等のアフィリエイトプログラムを利用しており、その収益によって運営されています。紹介する商品・サービスは、編集部が<strong>実際に使ったもの</strong>、または<strong>信頼できる一次情報に基づくもの</strong>のみを掲載します。</p>
-          <p>アフィリエイトリンクまたはタイアップ記事を含むコンテンツには、景品表示法およびステルスマーケティング規制に基づき、「PR」「広告」等の表記を明示します。広告掲載によって記事の内容が歪められることはありません。</p>
-
-          <h2>読者の方へのお願い</h2>
-          <p>きょうのこの記事は、子育てに関する情報の<strong>参考</strong>としてご活用ください。お子さんの発達・体調・食事・教育・安全に関わる個別の判断は、必ず<strong>専門家（小児科医・保健師・管理栄養士等）または公的機関の最新情報</strong>をご確認のうえ、保護者の責任においてご判断ください。</p>
 
           <h2>お問い合わせ</h2>
-          <p>取材依頼・広告掲載のご相談・記事内容に関するご指摘・その他のお問い合わせは、下記窓口までお願いします。</p>
+          <p>
+            記事内容の誤りのご指摘、取材・掲載・監修のご相談、その他のお問い合わせは、
+            <Link href="/contact">お問い合わせページ</Link> または下記メール宛にお願いします。
+          </p>
           <ul>
-            <li>メール：<a href="mailto:service@kyounoko.jp">service@kyounoko.jp</a></li>
+            <li>メール：<a href="mailto:service@remegift.jp">service@remegift.jp</a></li>
             <li><Link href="/contact">お問い合わせフォーム</Link></li>
           </ul>
 
-          <p style={{ marginTop: 48, fontSize: 12, color: 'var(--ink-mute)' }}>最終更新：2026年4月19日</p>
+          <h2>編集方針詳細</h2>
+          <p>
+            情報の集め方、正確性チェック、利益相反の開示、YMYL領域での扱いなど、運営の細かいルールは
+            <Link href="/editorial-policy"> 編集方針ページ </Link>
+            に独立して掲載しています。
+          </p>
+
+          <h2>監修について</h2>
+          <p>
+            きょうのこは現状、<strong>専門家による継続的な監修体制をまだ持っていません</strong>。
+            その事実を隠さず明示するため、<Link href="/supervisors">監修者ページ</Link> を別途用意し、
+            将来の監修者導入計画と、現状の代替策（公式ソースへの明示的リンク）を公開しています。
+          </p>
+
+          <p style={{ marginTop: 48, fontSize: 12, color: 'var(--ink-mute)' }}>
+            最終更新：2026年5月18日
+          </p>
         </article>
       </div>
       <SiteFooter />
