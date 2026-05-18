@@ -273,6 +273,36 @@ export default async function ArticlePage({ params }: Props) {
           <p className="lead">{article.lede}</p>
         </header>
 
+        {/* 記事メタ: E-E-A-T のため著者・公開日・更新日を明示。
+            ファイル版(FileArticleView)と表示構造を揃えている。 */}
+        <div className="article-meta">
+          <span className="article-meta-item">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+              <circle cx="12" cy="9" r="4" />
+              <path d="M5 21c0-3.866 3.134-7 7-7s7 3.134 7 7" />
+            </svg>
+            <Link href="/authors/nagamy" style={{ color: 'inherit', textDecoration: 'none' }}>
+              著者: <strong>ながみー</strong>
+            </Link>
+          </span>
+          {article.publishedAt && (
+            <>
+              <span className="article-meta-sep" aria-hidden="true">·</span>
+              <span className="article-meta-item">
+                公開: {new Date(article.publishedAt).toLocaleDateString('ja-JP')}
+              </span>
+            </>
+          )}
+          {article.updatedAt && article.updatedAt !== article.publishedAt && (
+            <>
+              <span className="article-meta-sep" aria-hidden="true">·</span>
+              <span className="article-meta-item">
+                更新: {new Date(article.updatedAt).toLocaleDateString('ja-JP')}
+              </span>
+            </>
+          )}
+        </div>
+
         {/* Quick Info */}
         {(article.quickInfo_ageRanges || article.quickInfo_durationMin) && (
           <section
@@ -334,6 +364,7 @@ export default async function ArticlePage({ params }: Props) {
               {article.faq.map((q, i) => (
                 <details
                   key={i}
+                  className="faq-item"
                   style={{
                     background: 'var(--paper-card)',
                     border: '1px solid var(--line)',
@@ -920,6 +951,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
                 {article.faqItems.map((q, i) => (
                   <details
                     key={i}
+                    className="faq-item"
                     style={{
                       background: 'var(--paper-card)',
                       border: '1px solid var(--line)',

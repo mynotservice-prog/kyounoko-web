@@ -19,6 +19,7 @@ import { getRelatedArticlesForPlan } from '@/lib/cross-links';
 import { CrossLinkCards } from '@/components/article/CrossLinkCards';
 import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
 import { getItemsForPlan } from '@/lib/items-catalog';
+import { PlanTimeline } from '@/components/plan/PlanTimeline';
 
 // hero 画像の自動マッチング更新を即時反映するため revalidate を短縮（5分）
 export const revalidate = 300;
@@ -214,6 +215,11 @@ export default async function PlanPage({ params }: Props) {
             )}
           </div>
         </section>
+
+        {/* Timeline 可視化（タイムスタンプ付き箇条書きがある場合のみ表示。
+            markdown 本文の手順箇条書きはそのまま下に残るので、SEO/HowTo を壊さず
+            「ステップ・時間軸が見えにくい」ユーザー監査指摘の解消だけ追加で行う） */}
+        {steps.length >= 2 && <PlanTimeline steps={steps} />}
 
         {/* Body */}
         <div className="prose" dangerouslySetInnerHTML={{ __html: html }} />

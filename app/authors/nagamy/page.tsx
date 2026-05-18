@@ -7,7 +7,7 @@ import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
 export const metadata: Metadata = {
   title: 'ながみー（kyounoko-editor） | 著者プロフィール | きょうのこ',
   description:
-    'きょうのこの運営者・編集者「ながみー」のプロフィールページ。2歳の息子を育てる30代前半の会社員として、東京23区内の駅前個人店・公園を子連れで実訪問し、KidReportsとして記録しています。守備範囲と専門外の領域も明示します。',
+    'きょうのこの運営者・編集者「ながみー」のプロフィールページ。4歳の娘と2歳の息子を育てる30代後半の会社員として、東京23区内の駅前個人店・公園を子連れで実訪問し、KidReportsとして記録しています。守備範囲と専門外の領域も明示します。',
   alternates: { canonical: '/authors/nagamy' },
 };
 
@@ -37,7 +37,7 @@ export default function AuthorNagamyPage() {
     image: 'https://kyounoko.jp/img/ogp-default.jpg',
     jobTitle: 'きょうのこ 運営者・編集者',
     description:
-      '東京23区在住、30代前半の会社員。2歳の息子を育てる父親として、平日夜と休日に都内駅前の個人店・公園を子連れで実訪問し、一次情報として記録している。',
+      '東京23区在住、30代後半の会社員。4歳の娘と2歳の息子を育てる父親として、平日夜と休日に都内駅前の個人店・公園を子連れで実訪問し、一次情報として記録している。',
     homeLocation: {
       '@type': 'Place',
       name: '東京23区',
@@ -85,8 +85,8 @@ export default function AuthorNagamyPage() {
           <span className="eyebrow">Author</span>
           <h1>ながみー（kyounoko-editor）</h1>
           <p className="lead">
-            きょうのこの運営者・編集者。30代前半の会社員、東京23区在住、2歳の息子を育てる父親。
-            平日の夜と休日に、息子を連れて都内駅前の個人店・公園を実訪問し、子連れ目線の一次情報を蓄積しています。
+            きょうのこの運営者・編集者。30代後半の会社員、東京23区在住、4歳の娘と2歳の息子を育てる父親。
+            平日の夜と休日に、子どもたちを連れて都内駅前の個人店・公園を実訪問し、子連れ目線の一次情報を蓄積しています。
           </p>
         </header>
 
@@ -109,11 +109,11 @@ export default function AuthorNagamyPage() {
                 </tr>
                 <tr>
                   <td style={{ padding: '10px 0', fontWeight: 600 }}>年代</td>
-                  <td>30代前半</td>
+                  <td>30代後半</td>
                 </tr>
                 <tr>
                   <td style={{ padding: '10px 0', fontWeight: 600 }}>家族</td>
-                  <td>妻、2歳の息子（長男）</td>
+                  <td>妻、4歳の娘（長女）、2歳の息子（長男）</td>
                 </tr>
                 <tr>
                   <td style={{ padding: '10px 0', fontWeight: 600 }}>居住</td>
@@ -125,7 +125,7 @@ export default function AuthorNagamyPage() {
                 </tr>
                 <tr>
                   <td style={{ padding: '10px 0', fontWeight: 600 }}>子連れ外食歴</td>
-                  <td>約3年（息子の生後数か月から現在まで継続）</td>
+                  <td>約4年（長女の生後数か月から現在まで、長男誕生後も継続）</td>
                 </tr>
                 <tr>
                   <td style={{ padding: '10px 0', fontWeight: 600 }}>訪問頻度</td>
@@ -141,7 +141,7 @@ export default function AuthorNagamyPage() {
             </table>
           </div>
           <p>
-            日々の生活の中で、「<strong>2歳の子を連れて、無理なくその店に入れるか</strong>」「<strong>その公園は本当にベビーカーで回れるか</strong>」を、自分の足で確かめて記録することを続けています。
+            日々の生活の中で、「<strong>2歳と4歳の子どもを連れて、無理なくその店に入れるか</strong>」「<strong>その公園は本当にベビーカーで回れるか</strong>」「<strong>キッズメニューが上の子(4歳)/下の子(2歳)それぞれに合うか</strong>」を、自分の足で確かめて記録することを続けています。
             運営者個人としてのバックグラウンドや細かい運営方針は、<Link href="/about">運営者情報</Link>と<Link href="/editorial-policy">編集方針</Link>にもまとめています。
           </p>
 
@@ -168,7 +168,7 @@ export default function AuthorNagamyPage() {
             </li>
             <li>
               <strong>子連れ向けスポット情報</strong>：
-              公園・屋内施設・季節イベントなど、0〜3歳児を連れての実際の動き方。
+              公園・屋内施設・季節イベントなど、0〜5歳児を連れての実際の動き方。
             </li>
             <li>
               <strong>家庭で作る幼児食・取り分けレシピ</strong>：

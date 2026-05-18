@@ -2011,6 +2011,79 @@ a[href^="/plan/"]:hover > div:first-child {
   overflow: hidden;
 }
 
+/* TOC: H3 サブリスト（H2 直下に階層インデント） */
+.toc .toc-sublist {
+  list-style: none;
+  padding: 4px 0 4px 36px;
+  margin: 2px 0 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.toc .toc-item-h3 a {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 8px;
+  padding: 6px 6px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  color: var(--ink-mute);
+  line-height: 1.55;
+  transition: background .2s ease, color .2s ease;
+}
+.toc .toc-item-h3 a:hover {
+  background: var(--paper-deep);
+  color: var(--ink-sub);
+}
+.toc .toc-sub-dot {
+  font-size: 10px;
+  color: var(--clay);
+  opacity: .6;
+  text-align: center;
+  line-height: 1.7;
+}
+.toc-desktop .toc-item-h3 a {
+  border-left: 2px solid transparent;
+}
+.toc-desktop .toc-item-h3 a:hover {
+  border-left-color: var(--clay-soft);
+  padding-left: 8px;
+}
+
+/* TOC: 「目次へ戻る」FAB（モバイル専用） */
+.toc-fab {
+  position: fixed;
+  right: 16px;
+  bottom: 80px; /* mobile-nav と被らない位置 */
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background: var(--clay);
+  color: #fff;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 18px -6px rgba(60, 30, 10, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity .25s ease, transform .25s ease, visibility .25s;
+  z-index: 90;
+  padding: 0;
+}
+.toc-fab.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.toc-fab:hover { background: var(--clay-deep); }
+.toc-fab:active { transform: translateY(0) scale(0.96); }
+@media (min-width: 1100px) {
+  .toc-fab { display: none; }
+}
+
 /* ==========================================================================
    Share bar
    ========================================================================== */
@@ -2955,4 +3028,149 @@ span > .pr-label {
   .print-doc table, .print-doc ul { page-break-inside: avoid; }
   a { color: var(--ink) !important; text-decoration: none !important; }
   a[href]:after { content: ''; }
+}
+
+/* ==========================================================================
+   Plan Timeline（プラン詳細ページのタイムライン可視化）
+   - 縦罫線 + 番号バッジで「ステップ・時間軸」を視覚化
+   - 既存の paper-card / sage / peach トークンを使用
+   - モバイル(<600px)で破綻しないよう padding / 罫線位置を調整
+   ========================================================================== */
+.plan-timeline {
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px 8px;
+  margin: 28px 0 32px;
+}
+.plan-timeline-eyebrow {
+  display: inline-block;
+  font-family: var(--font-inter), Inter, sans-serif;
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+  font-weight: 600;
+}
+.plan-timeline-heading {
+  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 6px 0 18px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.plan-timeline-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* 縦の時間軸ライン。badge の中央(=left + badge幅/2) を通るよう
+     左 padding と border 位置を揃える。 */
+  position: relative;
+  padding-left: 18px;
+  border-left: 2px solid var(--sage-soft);
+  margin-left: 12px;
+}
+.plan-timeline-item {
+  position: relative;
+  padding: 0 0 22px 18px;
+}
+.plan-timeline-item:last-child {
+  padding-bottom: 6px;
+}
+.plan-timeline-badge {
+  position: absolute;
+  /* badge を border ライン上に重ねるため、自身の幅/2 + border幅/2 だけ左に出す */
+  left: -32px;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--clay);
+  color: #fff;
+  font-family: var(--font-inter), Inter, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 0 0 4px var(--paper-card);
+}
+.plan-timeline-body {
+  display: block;
+}
+.plan-timeline-time {
+  display: inline-block;
+  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--clay-deep);
+  background: var(--peach-soft);
+  padding: 2px 10px;
+  border-radius: var(--radius-chip);
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+.plan-timeline-text {
+  margin: 4px 0 0;
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: var(--ink-sub);
+}
+
+@media (max-width: 600px) {
+  .plan-timeline {
+    padding: 18px 16px 4px;
+    margin: 22px 0 26px;
+  }
+  .plan-timeline-heading {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+  .plan-timeline-list {
+    padding-left: 14px;
+    margin-left: 10px;
+  }
+  .plan-timeline-item {
+    padding: 0 0 18px 14px;
+  }
+  .plan-timeline-badge {
+    left: -26px;
+    width: 22px;
+    height: 22px;
+    font-size: 11px;
+    box-shadow: 0 0 0 3px var(--paper-card);
+  }
+  .plan-timeline-time {
+    font-size: 13.5px;
+  }
+  .plan-timeline-text {
+    font-size: 13.5px;
+    line-height: 1.8;
+  }
+}
+
+/* ==========================================================================
+   FAQ <details> 押下フィードバック
+   - .faq-item は FAQ セクション専用のスコープ（.toc-mobile / .alt-toggle に影響しない）
+   - :active で peach-soft、open 時に bold + clay 左罫線で「開いた感」
+   - summary に min-height: 52px で十分なタップターゲットを確保
+   ========================================================================== */
+.faq-item > summary {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  transition: background-color .15s ease, border-left-color .2s ease;
+  border-left: 3px solid transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+.faq-item > summary:active {
+  background-color: var(--peach-soft);
+}
+.faq-item[open] > summary {
+  font-weight: 700;
+  color: var(--clay-deep);
+  border-left: 3px solid var(--clay);
+  background-color: rgba(251, 232, 216, 0.35); /* peach-soft の薄め */
 }

@@ -121,6 +121,10 @@ export default async function StationConditionPage({ params }: Props) {
   // 0件の組み合わせは generateStaticParams で除外しているが、念のため
   if (chains.length + indies.length === 0) notFound();
 
+  // 該当店舗数（noindex 判定と同じロジック）。3件未満なら薄いコンテンツの旨を案内バナーで表示。
+  const matchedCount = chains.length + indies.length;
+  const isThinResult = matchedCount < 3;
+
   const wardName = WARD_NAMES[station.ward] ?? '';
 
   // チェーンをカテゴリ別にグルーピング
@@ -237,6 +241,33 @@ export default async function StationConditionPage({ params }: Props) {
               {cond.description}
               {wardName}で{cond.label}のお店選びに迷ったらまずここから。
             </p>
+
+            {isThinResult && (
+              <div
+                role="status"
+                style={{
+                  marginTop: 16,
+                  padding: '14px 16px',
+                  background: 'var(--peach-soft)',
+                  color: 'var(--clay)',
+                  border: '1px solid rgba(201,96,62,0.20)',
+                  borderRadius: 10,
+                  fontSize: 13.5,
+                  lineHeight: 1.7,
+                }}
+              >
+                現在この条件で実訪問済み店舗は <strong>{matchedCount}件</strong>です。
+                より多くの選択肢は
+                <Link href={`/station/${slug}`} style={{ color: 'var(--clay-deep)', fontWeight: 600, margin: '0 2px' }}>
+                  駅トップに戻る
+                </Link>
+                や
+                <Link href={`/station/${slug}`} style={{ color: 'var(--clay-deep)', fontWeight: 600, margin: '0 2px' }}>
+                  同じエリアの近隣駅一覧
+                </Link>
+                をご覧ください。
+              </div>
+            )}
 
             <div className="station-summary" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 20 }}>
               <span className="meta-chip clay">該当 {chains.length + indies.length}店</span>

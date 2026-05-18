@@ -11,7 +11,22 @@ import {
 import { WARD_NAMES } from '@/lib/tokyo-stations';
 import { getStationWithChains } from '@/lib/station-restaurants';
 import { getIndieRestaurantsByStation } from '@/lib/indie-restaurants';
+import {
+  STATION_CONDITIONS,
+  filterChainsByCondition,
+  filterIndiesByCondition,
+  type StationConditionSlug,
+} from '@/lib/station-conditions';
 import { AdSlot } from '@/components/ads/AdSlot';
+
+// 路線ページの「条件で探す」セクションで露出する主要条件（4種）。
+// 8種すべて出すと過剰なので、子連れニーズが強くロングテール検索ボリュームのある4つに絞る。
+const FEATURED_CONDITIONS: readonly StationConditionSlug[] = [
+  'baby',
+  'private-room',
+  'kids-menu',
+  'rainy',
+] as const;
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -60,6 +75,28 @@ export default async function LinePage({ params }: Props) {
   const top3 = [...stationStats].sort((a, b) => b.total - a.total).slice(0, 3);
   const totalShops = stationStats.reduce((sum, x) => sum + x.total, 0);
   const totalIndies = stationStats.reduce((sum, x) => sum + x.indieCount, 0);
+
+  // 「条件で探す」セクション用: 店舗数の多い駅TOP5に対して、条件別ジャンプリンクを生成。
+  // 各駅で 該当0件の条件は除外（リンク先が空ページになることを防ぐ）。
+  const topStationsForConditions = [...stationStats]
+    .filter((x) => x.total > 0)
+    .sort((a, b) => b.total - a.total)
+    .slice(0, 5);
+  const conditionJumps = topStationsForConditions.map((x) => {
+    const data = getStationWithChains(x.station.slug);
+    const chainsBase = data?.chains ?? [];
+    const indiesBase = getIndieRestaurantsByStation(x.station.slug);
+    const conds = FEATURED_CONDITIONS.map((slug) => {
+      const cond = STATION_CONDITIONS.find((c) => c.slug === slug);
+      if (!cond) return null;
+      const cn = filterChainsByCondition(chainsBase, slug).length;
+      const inn = filterIndiesByCondition(indiesBase, slug).length;
+      const count = cn + inn;
+      if (count === 0) return null;
+      return { slug, label: cond.label, count };
+    }).filter((c): c is { slug: StationConditionSlug; label: string; count: number } => c !== null);
+    return { station: x.station, total: x.total, conds };
+  }).filter((x) => x.conds.length > 0);
 
   // operator別のTipsテンプレ
   const operatorTips: Record<typeof line.operator, string[]> = {
@@ -174,6 +211,67 @@ export default async function LinePage({ params }: Props) {
                       <span style={{ color: 'var(--ink-sub)' }}>うち個人店{x.indieCount}</span>
                     </div>
                   </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* 条件で探す — 主要駅×条件のロングテールジャンプ */}
+          {conditionJumps.length > 0 && (
+            <section style={{ margin: '36px 0' }}>
+              <div className="kn-section-head">
+                <span className="eyebrow" style={{ color: 'var(--sage-deep)' }}>FILTER · 条件で探す</span>
+                <h2>主要駅 × 条件で絞り込む</h2>
+                <p className="section-lede">
+                  {line.name}沿線の主要駅から、「ベビーカー◎」「個室」「キッズメニュー」「雨の日」など気になる条件で直接ジャンプ。条件にマッチする店舗だけのページに飛びます。
+                </p>
+              </div>
+              <div style={{ display: 'grid', gap: 14, marginTop: 16 }}>
+                {conditionJumps.map((x) => (
+                  <div
+                    key={x.station.slug}
+                    style={{
+                      background: 'var(--paper-card)',
+                      border: '1px solid rgba(143,163,126,0.22)',
+                      borderLeft: `4px solid ${line.color}`,
+                      borderRadius: 12,
+                      padding: '14px 16px',
+                    }}
+                  >
+                    <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, flexWrap: 'wrap', marginBottom: 10 }}>
+                      <Link
+                        href={`/station/${x.station.slug}`}
+                        style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', textDecoration: 'none' }}
+                      >
+                        {x.station.name}駅
+                      </Link>
+                      <span style={{ fontSize: 11, color: 'var(--ink-mute)' }}>
+                        {WARD_NAMES[x.station.ward]} · {x.total}店舗
+                      </span>
+                    </div>
+                    <div className="outing-chips" style={{ marginTop: 0 }}>
+                      {x.conds.map((c) => (
+                        <Link
+                          key={c.slug}
+                          href={`/station/${x.station.slug}/${c.slug}`}
+                          className="outing-chip"
+                          style={{ textDecoration: 'none', color: 'var(--ink-sub)' }}
+                        >
+                          {c.label}
+                          <span style={{
+                            fontSize: 11,
+                            color: 'var(--sage-deep)',
+                            background: 'var(--sage-soft)',
+                            padding: '1px 7px',
+                            borderRadius: 999,
+                            marginLeft: 2,
+                          }}>
+                            {c.count}
+                          </span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </div>
             </section>
