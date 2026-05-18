@@ -247,17 +247,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         {/* AdSense 所有権確認メタタグ（審査中も含めて常に配信） */}
         <meta name="google-adsense-account" content={ADSENSE_CLIENT} />
-        {/* AdSense スクリプト（adsbygoogle.js）。
-            審査用クローラがこのコードを検出できないと、サイトのステータスが
-            「準備中」から進まない。そのため ADSENSE_ENABLED ではなく
-            pub ID の有無（ADSENSE_PUB_ID_CONFIGURED）で制御し、審査前から常時設置する。
-            実際の広告枠 <ins>（AdSlot）は ADSENSE_ENABLED で別途制御しているため、
-            審査前にこのスクリプトを置いても空の広告枠が表示されることはない。 */}
-        {ADSENSE_PUB_ID_CONFIGURED && (
-          <script async src={ADSENSE_SCRIPT_SRC} crossOrigin="anonymous" />
-        )}
+        {/* AdSense スクリプト本体は <body> 下部に next/script で移動した。
+            head 内の async <script> は本文 HTML パース前から DNS lookup/接続を始め、
+            LCP/TBT を 200ms 級で押し下げていた。<meta google-adsense-account> は
+            head に残しているので所有権確認・クロール検出は維持される。 */}
       </head>
       <body className="font-sans">
+        {/* キーボード操作者向け: メインコンテンツへ直接ジャンプするスキップリンク。
+            通常は画面外、フォーカス時のみ表示される。各ページの <main> もしくは
+            主要 <article> に id="main" を付けることで効く。 */}
+        <a href="#main" className="skip-link">本文へスキップ</a>
         {children}
 
         {/* Google Analytics 4 */}
@@ -293,7 +292,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </Script>
         )}
 
-        {/* AdSense スクリプトは head で直接読み込み済み（Google推奨配置） */}
+        {/* AdSense スクリプト（adsbygoogle.js）
+            head ではなく afterInteractive(=メイン JS の後) で読み込み、LCP/TBT を改善。
+            審査クローラは body 内の adsbygoogle.js でも検出するため「準備中」状態には
+            影響しない（meta google-adsense-account も head に残している）。
+            <ins>(AdSlot) は ADSENSE_ENABLED で別制御。 */}
+        {ADSENSE_PUB_ID_CONFIGURED && (
+          <Script
+            id="adsense-loader"
+            src={ADSENSE_SCRIPT_SRC}
+            strategy="afterInteractive"
+            crossOrigin="anonymous"
+          />
+        )}
 
         {/* PWA: Service Worker 登録（本番のみ） */}
         <PWARegister />

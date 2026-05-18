@@ -306,8 +306,9 @@ export function TodayFinder() {
         {/* エリア（go/do モードのみ） */}
         {showArea && (
         <div className="field">
-          <label>エリア{placeDisablesArea && <span style={{ fontSize: 10, color: 'var(--ink-mute)', marginLeft: 6 }}>（家で過ごす場合は任意）</span>}</label>
+          <label htmlFor="today-area">エリア{placeDisablesArea && <span style={{ fontSize: 10, color: 'var(--ink-mute)', marginLeft: 6 }}>（家で過ごす場合は任意）</span>}</label>
           <select
+            id="today-area"
             className="area-select"
             value={state.area}
             onChange={(e) => setValue('area', e.target.value as AreaSlug)}
@@ -488,9 +489,12 @@ type ChipGroupProps = {
 };
 
 function ChipGroup({ label, options, value, onChange }: ChipGroupProps) {
+  // チップ群はラジオ的選択。<label> は単一のフォームコントロールに紐付かないため
+  // role="group" + aria-labelledby で同等の意味づけにする。
+  const groupId = `chip-group-${label.replace(/[^a-zA-Z0-9]/g, '_')}`;
   return (
-    <div className="field">
-      <label>{label}</label>
+    <div className="field" role="group" aria-labelledby={groupId}>
+      <span id={groupId} className="field-label">{label}</span>
       <div className="chip-group">
         {options.map((opt) => (
           <button
@@ -498,6 +502,7 @@ function ChipGroup({ label, options, value, onChange }: ChipGroupProps) {
             type="button"
             className={`chip ${opt.value === value ? 'active' : ''}`}
             onClick={() => onChange(opt.value)}
+            aria-pressed={opt.value === value}
           >
             {opt.label}
           </button>

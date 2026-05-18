@@ -472,6 +472,8 @@ export default async function ArticlePage({ params }: Props) {
                   }}
                 >
                   <div
+                    role="img"
+                    aria-label={a.title}
                     style={{
                       aspectRatio: '16/10',
                       backgroundColor: 'var(--peach-soft)',
@@ -1150,6 +1152,8 @@ function FileArticleView({ article }: { article: FileArticle }) {
                     className="related-card"
                   >
                     <div
+                      role="img"
+                      aria-label={a.title}
                       style={{
                         aspectRatio: '16/10',
                         backgroundColor: 'var(--peach-soft)',

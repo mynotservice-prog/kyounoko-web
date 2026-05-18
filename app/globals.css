@@ -49,6 +49,10 @@ html { scroll-behavior: smooth; }
      #6F6555 に濃く変更(約 5.0:1 でAA通過)。breadcrumb/meta/hint 等で広範囲使用。 */
   --ink-mute: #6F6555;
   --clay: #C9603E;
+  /* WCAG AA対応: --clay (#C9603E) は --paper(#FBF5E8) 上で 3.6:1 と AA未達。
+     本文サイズのテキスト用に少し濃い --clay-text (#A04722, 約 4.7:1 でAA通過) を用意。
+     ボタン背景など白文字との組み合わせは --clay のままで問題ない。 */
+  --clay-text: #A04722;
   --clay-deep: #8E3F22;
   --clay-soft: #F4DDCF;
   --peach: #F4B787;
@@ -138,7 +142,7 @@ input, select { font: inherit; color: inherit; }
   font-family: var(--font-inter), Inter, sans-serif;
   font-size: 11px; font-weight: 500;
   letter-spacing: .24em; text-transform: uppercase;
-  color: var(--clay);
+  color: var(--clay-text);
   margin-bottom: 10px;
 }
 .eyebrow::before {
@@ -580,7 +584,8 @@ input, select { font: inherit; color: inherit; }
 }
 @media (min-width: 760px) { .finder-grid { grid-template-columns: repeat(3, 1fr); } }
 
-.field label {
+.field label,
+.field .field-label {
   display: block;
   font-family: var(--font-inter), Inter, sans-serif;
   font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
@@ -1225,7 +1230,7 @@ input, select { font: inherit; color: inherit; }
 .prose li > p { margin: .4em 0; }
 
 .prose a {
-  color: var(--clay);
+  color: var(--clay-text);
   text-decoration: none;
   border-bottom: 1px solid rgba(201, 96, 62, 0.35);
   transition: color .2s ease, border-color .2s ease, background .2s ease;
@@ -1342,7 +1347,8 @@ input, select { font: inherit; color: inherit; }
   align-items: center;
   gap: 6px;
 }
-.article-meta-item svg { color: var(--clay); }
+.article-meta-item svg { color: var(--clay-text); }
+.article-meta-item a { color: var(--clay-text); }
 .article-meta-sep { color: var(--line-strong); }
 
 /* ==========================================================================
@@ -3029,6 +3035,32 @@ span > .pr-label {
   a { color: var(--ink) !important; text-decoration: none !important; }
   a[href]:after { content: ''; }
 }
+
+/* ==========================================================================
+   Accessibility: focus-visible & skip-link
+   WCAG AA: キーボード操作時のフォーカスを必ず可視化する。
+   pointer 操作の :focus は隠す（:focus:not(:focus-visible) で outline: none）。
+   ========================================================================== */
+:focus-visible {
+  outline: 2px solid var(--clay-deep);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+button:focus-visible, a:focus-visible, [role="button"]:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--clay-deep);
+  outline-offset: 2px;
+}
+button:focus:not(:focus-visible), a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.skip-link {
+  position: absolute; top: -40px; left: 8px;
+  background: var(--clay-deep); color: white;
+  padding: 8px 14px; border-radius: 6px;
+  z-index: 100; transition: top .2s;
+}
+.skip-link:focus { top: 8px; }
 
 /* ==========================================================================
    Plan Timeline（プラン詳細ページのタイムライン可視化）

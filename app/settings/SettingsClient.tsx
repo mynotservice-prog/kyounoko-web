@@ -93,9 +93,10 @@ export function SettingsClient() {
     <div className="settings-form" style={{ marginTop: 32, display: 'flex', flexDirection: 'column', gap: 28 }}>
       {/* エリア */}
       <div className="settings-field">
-        <label className="settings-label">エリア</label>
+        <label className="settings-label" htmlFor="settings-area">エリア</label>
         <p className="settings-help">お住まいの都道府県。おでかけ系のプランをここに合わせて絞ります。</p>
         <select
+          id="settings-area"
           value={area}
           onChange={(e) => setArea(e.target.value as AreaSlug)}
           className="settings-select"
@@ -115,8 +116,8 @@ export function SettingsClient() {
       </div>
 
       {/* 年齢 */}
-      <div className="settings-field">
-        <label className="settings-label">お子さんの年齢</label>
+      <div className="settings-field" role="group" aria-labelledby="settings-age-label">
+        <span id="settings-age-label" className="settings-label">お子さんの年齢</span>
         <p className="settings-help">当てはまる範囲を1つ選んでください。</p>
         <div className="settings-chip-group">
           <button type="button" className={`chip ${!age ? 'active' : ''}`} onClick={() => setAge('')}>未設定</button>
@@ -134,8 +135,8 @@ export function SettingsClient() {
       </div>
 
       {/* 性格傾向 */}
-      <div className="settings-field">
-        <label className="settings-label">性格の傾向</label>
+      <div className="settings-field" role="group" aria-labelledby="settings-temperament-label">
+        <span id="settings-temperament-label" className="settings-label">性格の傾向</span>
         <p className="settings-help">プランのテンポ・内容を微調整します。</p>
         <div className="settings-chip-group">
           <button type="button" className={`chip ${!temperament ? 'active' : ''}`} onClick={() => setTemperament('')}>未設定</button>
@@ -154,8 +155,8 @@ export function SettingsClient() {
       </div>
 
       {/* 興味 */}
-      <div className="settings-field">
-        <label className="settings-label">興味がある分野（最大3つ）</label>
+      <div className="settings-field" role="group" aria-labelledby="settings-interests-label">
+        <span id="settings-interests-label" className="settings-label">興味がある分野（最大3つ）</span>
         <p className="settings-help">選ぶと、関連するプランが上位に表示されやすくなります。</p>
         <div className="settings-chip-group">
           {INTEREST_OPTIONS.map((o) => {
@@ -177,9 +178,10 @@ export function SettingsClient() {
 
       {/* アレルギー */}
       <div className="settings-field">
-        <label className="settings-label">アレルギー・食事制限メモ（任意）</label>
+        <label className="settings-label" htmlFor="settings-allergy">アレルギー・食事制限メモ（任意）</label>
         <p className="settings-help">食事系のプラン選定で注意喚起します（本文には入りません）。</p>
         <textarea
+          id="settings-allergy"
           value={allergyNote}
           onChange={(e) => setAllergyNote(e.target.value)}
           placeholder="例: 卵アレルギー、乳製品不可 など"

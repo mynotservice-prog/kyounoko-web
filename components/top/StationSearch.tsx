@@ -143,7 +143,6 @@ export function StationSearch({ stations, lines }: Props) {
             borderRadius: 12,
             border: '2px solid rgba(201,96,62,0.20)',
             background: '#fff',
-            outline: 'none',
             color: 'var(--ink)',
             boxShadow: open ? '0 4px 20px rgba(201,96,62,0.12)' : 'none',
             transition: 'box-shadow 0.15s, border-color 0.15s',
