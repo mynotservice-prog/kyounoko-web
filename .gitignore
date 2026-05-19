@@ -49,6 +49,10 @@ next-env.d.ts
 # local test/maintenance scripts (archived)
 scripts/_archived-*
 
+# backup files (sed -i .bak / mv-aside leftovers - typically from in-sandbox edits where unlink is restricted)
+*.bak
+*.bak.*
+
 # 大型unsplash素材（参照ゼロ・2026-05退役）
 public/new_hero/
 public/hero/

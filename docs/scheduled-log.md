@@ -69,7 +69,7 @@
 - E-E-A-T: ながみー（編集長／4歳娘＆2歳息子の父）著者明示 ✅／去年の梅雨に新聞紙ローテで30分稼いだ実体験エピソード ✅／気象庁「梅雨入り平年値」公式リンク・厚生労働省「保育所保育指針」公式PDF引用・WHO 5歳未満児ガイドライン引用 ✅／医師相談推奨1文（誤飲・運動発達・アレルギー・噛みつきの4文脈）✅
 - 画像生成: ❌ 失敗（Cloudflare Workers AI HTTP 429: "you have used up your daily free allocation of 10,000 neurons"）→ `image_generation_pending` に `tsuyu-ie-asobi-0-6sai-15pattern` を追加（これで pending は9件）。本文のみ commit / push。
 - tsc --noEmit: ✅ エラーゼロ
-- commit hash: （下のコミット参照）
+- commit hash: `f5cedaa`
 - queue クリーンアップ: `new_articles` から `tsuyu-ie-asobi-0-6sai-15pattern` を削除（残り5件: tanabata-kazari / famires-kodzure-ranking / yakiniku-chain / kaiten-sushi-chain / udon-chain）
 - 次サイクル向け引き継ぎメモ:
   - **画像未生成 slug が9件たまった**: starbucks / yayoiken-vs-saize / gusto-vs-jonathan / komeda / ootoya / matsuya / yoshinoya / chichi-no-hi-purezento-2-6sai-tedukuri-15sen / tsuyu-ie-asobi-0-6sai-15pattern。**JST 09:00（UTC 0:00）リセット後の最初のサイクル**でバッチ生成最効率。`for slug in starbucks-kodzure-koryaku yayoiken-vs-saize-kodzure-douchi gusto-vs-jonathan-kodzure-douchi komeda-kodzure-koryaku ootoya-kodzure-koryaku matsuya-kodzure-koryaku yoshinoya-kodzure-koryaku chichi-no-hi-purezento-2-6sai-tedukuri-15sen tsuyu-ie-asobi-0-6sai-15pattern; do node scripts/generate-hero-images-cloudflare.mjs --slug=$slug --steps=8; done` で連続実行可（約2,700 neuron で枠内）→ `node scripts/apply-hero-ai.mjs` で frontmatter 反映＆commit。**注意**: 今サイクルでも 09:30 JST 時点で 429。UTC 0:00 リセットは **JST で 09:00**だが、リセット直後でも前日分の残カウントが反映されているケースがあるので、次サイクル（11:30）で再試行が現実的。
@@ -128,7 +128,7 @@
 - E-E-A-T: ながみー（編集長／4歳娘＆2歳息子の父）著者明示 ✅／2歳息子の眠気タイミングを焼肉きんぐ家族個室で乗り切った実体験＋4歳娘の誕生日を牛角半個室で祝った実体験＋じゅうじゅうカルビ ランチ食べ放題で諭吉以内に収まった実体験 ✅／焼肉きんぐ・あみやき亭・じゅうじゅうカルビ・叙々苑の各公式サイトURL引用＋厚生労働省「食物アレルギーの栄養食事指導の手引き」参照 ✅／医師相談推奨1文（火傷・煙誤嚥・喉つまり・アレルゲンの4文脈）✅
 - 画像生成: ❌ 失敗（Cloudflare Workers AI HTTP 429: "you have used up your daily free allocation of 10,000 neurons"）→ `image_generation_pending` に `yakiniku-chain-kodzure-5sha-hikaku` を追加（これで pending は12件）。本文のみ commit / push。**注意**: JST 2026-05-20 早朝（UTC 0:30）時点でもまだ 429 継続。Cycle #6 で予測した「UTC リセット直後でも前日カウントが残存」が引き続き当てはまる。**次サイクルでの再試行か、JST 09:00 完全リセット待ち**が現実的。
 - tsc --noEmit: ✅ エラーゼロ
-- commit hash: （下のコミット参照）
+- commit hash: `f4351f6`
 - queue クリーンアップ: `new_articles` から `yakiniku-chain-kodzure-5sha-hikaku` を削除（残り2件: kaiten-sushi-chain / udon-chain）。`image_generation_pending` に追加。
 - 次サイクル向け引き継ぎメモ:
   - **画像未生成 slug が12件たまった**: starbucks / yayoiken-vs-saize / gusto-vs-jonathan / komeda / ootoya / matsuya / yoshinoya / chichi-no-hi-purezento-2-6sai-tedukuri-15sen / tsuyu-ie-asobi-0-6sai-15pattern / famires-kodzure-ranking-2026-10sen / tanabata-kazari-tedukuri-0-6sai-7shurui / yakiniku-chain-kodzure-5sha-hikaku。**次サイクル（JST 11:30 想定）でバッチ生成再試行を最優先**に。バッチコマンド: `cd /Users/nagaminehideki/Developer/kyounoko-web && export $(grep -v '^#' .env.local | xargs) && for slug in starbucks-kodzure-koryaku yayoiken-vs-saize-kodzure-douchi gusto-vs-jonathan-kodzure-douchi komeda-kodzure-koryaku ootoya-kodzure-koryaku matsuya-kodzure-koryaku yoshinoya-kodzure-koryaku chichi-no-hi-purezento-2-6sai-tedukuri-15sen tsuyu-ie-asobi-0-6sai-15pattern famires-kodzure-ranking-2026-10sen tanabata-kazari-tedukuri-0-6sai-7shurui yakiniku-chain-kodzure-5sha-hikaku; do node scripts/generate-hero-images-cloudflare.mjs --slug=$slug --steps=8; done` で連続実行可（約3,600 neuron で枠内）→ `node scripts/apply-hero-ai.mjs` で frontmatter 反映＆commit。
@@ -149,7 +149,7 @@
 - E-E-A-T: ながみー（編集長／4歳娘＆2歳息子の父）著者明示 ✅／月2ペースで通った実体験＋4歳娘がビッくらポン！のために週次でくら寿司を希望する実体験＋2歳息子が0-1歳期にスシロー高速レーンに反応した実体験 ✅／くら寿司・スシロー・はま寿司・かっぱ寿司・がってん寿司の各公式サイトURL引用＋消費者庁「食物アレルギー表示について」公式リンク引用 ✅／医師相談推奨1文（生魚デビュー・アレルゲン初摂取・小骨誤嚥の3文脈）✅
 - 画像生成: ❌ 失敗（Cloudflare Workers AI HTTP 429: "you have used up your daily free allocation of 10,000 neurons"）→ `image_generation_pending` に `kaiten-sushi-chain-kodzure-5sha-hikaku` を追加（これで pending は13件）。本文のみ commit / push。**注意**: JST 2026-05-20 11:30 時点でも 429継続。Cycle #6→#7 で予測した「UTC リセット直後でも前日カウントが反映するラグが半日以上ある」がさらに半日以上経った今サイクルでも継続。**Cloudflare の "daily" カウントは UTC日付ではなく利用開始からの24時間ロール式の可能性**が浮上（Cycle #1（5/19 00:00 JST = UTC 5/18 15:00）から24h後 ≒ JST 5/20 00:00 リセット予測でもまだ失敗）。**次サイクル（JST 13:30）で再試行**、それでも失敗なら諦めて執筆優先で運用継続。
 - tsc --noEmit: ✅ エラーゼロ
-- commit hash: （下のコミット参照）
+- commit hash: `b3909da`
 - queue クリーンアップ: `new_articles` から `kaiten-sushi-chain-kodzure-5sha-hikaku` を削除（残り1件のみ: udon-chain-kodzure-4sha-hikaku）。`image_generation_pending` に追加。
 - 次サイクル向け引き継ぎメモ:
   - **画像未生成 slug が13件たまった**: starbucks / yayoiken-vs-saize / gusto-vs-jonathan / komeda / ootoya / matsuya / yoshinoya / chichi-no-hi-purezento-2-6sai-tedukuri-15sen / tsuyu-ie-asobi-0-6sai-15pattern / famires-kodzure-ranking-2026-10sen / tanabata-kazari-tedukuri-0-6sai-7shurui / yakiniku-chain-kodzure-5sha-hikaku / kaiten-sushi-chain-kodzure-5sha-hikaku。**次サイクル（JST 13:30 想定）でバッチ生成再試行**を最優先に。バッチコマンド: `cd /Users/nagaminehideki/Developer/kyounoko-web && set -a && . ./.env.local && set +a && for slug in starbucks-kodzure-koryaku yayoiken-vs-saize-kodzure-douchi gusto-vs-jonathan-kodzure-douchi komeda-kodzure-koryaku ootoya-kodzure-koryaku matsuya-kodzure-koryaku yoshinoya-kodzure-koryaku chichi-no-hi-purezento-2-6sai-tedukuri-15sen tsuyu-ie-asobi-0-6sai-15pattern famires-kodzure-ranking-2026-10sen tanabata-kazari-tedukuri-0-6sai-7shurui yakiniku-chain-kodzure-5sha-hikaku kaiten-sushi-chain-kodzure-5sha-hikaku; do node scripts/generate-hero-images-cloudflare.mjs --slug=$slug --steps=8; done` で連続実行可（約3,900 neuron で枠内）→ `node scripts/apply-hero-ai.mjs` で frontmatter 反映＆commit。**バッチ生成は1サイクル丸ごと使う想定**で別cycleに割り当てるのが効率的。
@@ -169,7 +169,7 @@
 - E-E-A-T: ながみー（編集長／4歳娘＆2歳息子の父）著者明示 ✅／丸亀の麺カット＋つゆ薄め依頼で2歳息子の麺切れリスクを乗り切った実体験＋4歳娘の誕生月につるとんたん半個室で祝った実体験＋4歳娘の小学校入学前トレーニングで東京麺通団に通った実体験 ✅／丸亀製麺・はなまるうどん・つるとんたん・東京麺通団の各公式サイトURL引用＋消費者庁「食物アレルギー表示について」＋厚生労働省「乳幼児の窒息予防」公式リンク引用 ✅／医師相談推奨1文（窒息・そばアレルギー・離乳食新規食材導入の3文脈）✅
 - 画像生成: ❌ 失敗（Cloudflare Workers AI HTTP 429: "you have used up your daily free allocation of 10,000 neurons"）→ `image_generation_pending` に `udon-chain-kodzure-4sha-hikaku` を追加（これで pending は14件）。本文のみ commit / push。**注意**: JST 2026-05-20 13:30 時点でも 429継続。Cycle #6→#7→#8 で予測した「Cloudflare Workers AI Free は厳密な日次リセット制ではなく過去24-48時間の累積利用量で制御している可能性」が引き続き当てはまる。**Workers Paid プラン（月5ドル）への切り替えが現実的**（ながみーさん帰宅後の判断事項）。
 - tsc --noEmit: ✅ エラーゼロ
-- commit hash: （下のコミット参照）
+- commit hash: `e265257`
 - queue クリーンアップ: `new_articles` から `udon-chain-kodzure-4sha-hikaku` を削除（**残り0件 = new_articles 完全枯渇**）。`image_generation_pending` に追加（14件目）。
 - 次サイクル向け引き継ぎメモ:
   - **🎯 new_articles 完全枯渇**: Cycle #1〜#9 で当初計画の new_articles 全件（starbucks / gusto-vs-jonathan / chichi-no-hi-purezento / tsuyu-ie-asobi / famires-ranking / tanabata-kazari / yakiniku-chain / kaiten-sushi-chain / udon-chain）9本を完遂。**次サイクル以降は rewrite_targets フェーズに完全移行**。最優先は `kodzure-saize-koryaku`（318imp / CTR 3.1% / pos 10.6→8位狙い）→ 結論ファースト＋FAQ追加＋ベビーカー入店事前確認章追加でリライト。次に `shabuyou-kodzure-koryaku`（255imp / 離乳食持込ルール強化）、`jonathan-kodzure-koryaku`（243imp / 離乳食温め見出し化）、`gusto-kodzure-koryaku`（244imp / CTR 1.2%最低 / 離乳食冒頭リード）、`kodzure-famires-15sen`（223imp / TOP10スリム化）、`bamiyan-kodzure-koryaku`（168imp / 1-2歳向けメニュー）、`kodomo-no-hi-kyaraben`（156imp / HowTo schema化）の順。Search Console impression 順で対応するのが王道。
@@ -237,7 +237,7 @@
 - E-E-A-T: ながみー（編集長／4歳娘＋2歳息子の父）著者明示 ✅（フロント直下の「著者と更新メモ」セクションで首都圏10店舗以上・月1〜2回ペース利用の実地経験を冒頭明示）／月1〜2回利用の家族リアル実体験＋4歳娘の幼児コース運用＋2歳息子の3歳以下無料取り分け運用＋大人100分コースの実体験＋持参品・滞在時間・家族4人合計4,500-5,000円の具体的実数 ✅／しゃぶ葉公式サイト・しゃぶ葉公式メニュー・厚生労働省「授乳・離乳の支援ガイド」公式リンク3本引用 ✅／医師相談推奨1文（離乳食持ち込みルール内のアレルゲン項目、安全と医師相談セクション末尾の2文脈で、かかりつけ小児科医・管理栄養士相談を明記）✅
 - 画像生成: ✅ スキップ（既存 public/hero-ai/shabuyou-kodzure-koryaku.jpg / .webp が既に存在 → リライトのため再生成不要）。frontmatter `hero: /hero-ai/shabuyou-kodzure-koryaku.jpg` は変更なし。Cycle #10 と同じ rewrite_targets 用の運用パターン踏襲。
 - tsc --noEmit: ✅ エラーゼロ
-- commit hash: （下のコミット参照）
+- commit hash: `0cd1707` (push 成功 3be5365..0cd1707)
 - queue クリーンアップ: `rewrite_targets` から `shabuyou-kodzure-koryaku` を削除（残り5件: jonathan / gusto / kodzure-famires-15sen / bamiyan / kodomo-no-hi-kyaraben）。`image_generation_pending` は変更なし（14件のまま）。`cycles_completed` 10→11、`last_run_at` 更新。
 - 次サイクル向け引き継ぎメモ:
   - **次に着手すべき記事**: Cycle #10 引き継ぎメモの「impression 2位の shabuyou を片付けた後に gusto を着手するのが ROI 的に正解」に従い、**`gusto-kodzure-koryaku`（Search Console 244imp / CTR 1.2% 最低、rewrite_targets 中で最も改善余地大）**を次サイクルで着手推奨。狙い: 離乳食を冒頭にリード、Pepper配膳ロボのファミリー目線レビュー追記。Cycle #10・#11 で確立した4セクション標準スキーマ（結論／著者と更新メモ／ながみー家のリアル／安全と医師相談）をそのまま流用。配膳ロボットは今回 shabuyou でも FAQ で触れたので、ガスト記事ではより詳細にレビューすると差別化が立つ。impression 順だと jonathan（243imp）が次だが、**CTR 1.2% の gusto は CTR改善の ROI が最大**のため、優先順位を入れ替えるのが合理的。
