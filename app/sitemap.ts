@@ -157,6 +157,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // 駅×条件ロングテールページ（restaurant 系 + spot 系。該当0件の組合せは除外）
   const stationConditionPages: MetadataRoute.Sitemap = [];
+  // Tokyo: restaurant + spot
   for (const s of TOKYO_STATIONS) {
     const data = getStationWithChains(s.slug);
     const chains = data?.chains ?? [];
@@ -174,6 +175,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         lastModified: new Date(),
         changeFrequency: 'monthly' as const,
         priority: k === 'spot' ? 0.5 : 0.45,
+      });
+    }
+  }
+  // 非Tokyo: spot 系のみ
+  const nonTokyoStations = [
+    ...KANSAI_STATIONS.map((s) => s.slug),
+    ...KANAGAWA_STATIONS.map((s) => s.slug),
+    ...SAICHI_STATIONS.map((s) => s.slug),
+  ];
+  for (const slug of nonTokyoStations) {
+    const { all: spotsAll } = getSpotsForStation(slug);
+    for (const cond of STATION_CONDITIONS) {
+      if (getConditionKind(cond.slug) !== 'spot') continue;
+      if (!hasMatchingSpots(spotsAll, cond.slug)) continue;
+      stationConditionPages.push({
+        url: `${BASE}/station/${slug}/${cond.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.5,
       });
     }
   }

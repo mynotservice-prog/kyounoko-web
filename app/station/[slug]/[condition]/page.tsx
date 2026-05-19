@@ -45,12 +45,13 @@ type Props = {
 };
 
 /**
- * 484駅 × N条件 のうち、該当アイテム（店舗 or スポット）が1件以上ある組み合わせを事前生成。
- * - restaurant 系: チェーン店・個人店をフィルタ
- * - spot 系: SPOTS（駅周辺 + ward フォールバック）をフィルタ
+ * 全駅 × N条件 のうち、該当アイテム（店舗 or スポット）が1件以上ある組み合わせを事前生成。
+ * - restaurant 系: チェーン店・個人店をフィルタ（東京駅のみ）
+ * - spot 系: SPOTS（駅周辺 + 地域フォールバック）をフィルタ（全駅対象）
  */
 export async function generateStaticParams() {
   const params: Array<{ slug: string; condition: string }> = [];
+  // 1) Tokyo: restaurant + spot
   for (const station of TOKYO_STATIONS) {
     const data = getStationWithChains(station.slug);
     const chains = data?.chains ?? [];
@@ -67,29 +68,44 @@ export async function generateStaticParams() {
       }
     }
   }
+  // 2) 非Tokyo（Kanagawa/Kansai/Saichi）: spot 系のみ
+  const { getAllStations } = await import('@/lib/all-stations');
+  for (const station of getAllStations()) {
+    if (station.region === 'tokyo') continue;
+    const { all: spotsAll } = getSpotsForStation(station.slug);
+    for (const cond of STATION_CONDITIONS) {
+      if (getConditionKind(cond.slug) !== 'spot') continue;
+      if (hasMatchingSpots(spotsAll, cond.slug)) {
+        params.push({ slug: station.slug, condition: cond.slug });
+      }
+    }
+  }
   return params;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug, condition } = await params;
-  const station = getStationBySlug(slug);
+  const kind = getConditionKind(condition as StationConditionSlug);
+  // restaurant 系はTokyo駅のみ。spot 系は全駅対応のため findStationBySlug を使う
+  const station = kind === 'restaurant' ? getStationBySlug(slug) : null;
+  const anyStation = kind === 'spot' ? findStationBySlug(slug) : null;
   const cond = getConditionBySlug(condition);
-  if (!station || !cond) {
+  if ((!station && !anyStation) || !cond) {
     return {
       title: 'ページが見つかりません',
       robots: { index: false, follow: false },
     };
   }
-  const wardName = WARD_NAMES[station.ward] ?? '';
-  const kind = getConditionKind(condition as StationConditionSlug);
+  const wardName = station ? (WARD_NAMES[station.ward] ?? '') : (anyStation?.regionLabel ?? '');
+  const stationName = (station ?? anyStation)!.name;
   const title =
     kind === 'spot'
-      ? `${station.name}駅 ${cond.titlePart}｜${wardName}の子連れスポットガイド`
-      : `${station.name}駅 ${cond.titlePart}子連れOKランチ・カフェ｜ベビーカーOK店ガイド`;
+      ? `${stationName}駅 ${cond.titlePart}｜${wardName}の子連れスポットガイド`
+      : `${stationName}駅 ${cond.titlePart}子連れOKランチ・カフェ｜ベビーカーOK店ガイド`;
   const description =
     kind === 'spot'
-      ? `${station.name}駅周辺で${cond.metaPart}を厳選。${cond.description}${wardName}の${cond.label}を探すならまずここから。`
-      : `${station.name}駅周辺で${cond.metaPart}の子連れランチ・カフェを厳選。${cond.description}${wardName}で${cond.label}の選び方に迷ったらまずここから。`;
+      ? `${stationName}駅周辺で${cond.metaPart}を厳選。${cond.description}${wardName}の${cond.label}を探すならまずここから。`
+      : `${stationName}駅周辺で${cond.metaPart}の子連れランチ・カフェを厳選。${cond.description}${wardName}で${cond.label}の選び方に迷ったらまずここから。`;
 
   // 該当アイテム数で薄いコンテンツを判定 → noindex
   let matchedCount = 0;

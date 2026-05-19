@@ -178,3 +178,27 @@
   - **dry-run-prompts.mjs を引数なしで実行**して tmp/image-prompts.json を 413件に更新済み（udon-chain-kodzure-4sha-hikaku も含む）。次回 generate を回す時はそのまま `--slug=<slug>` で叩ける。
   - **「ランキング4部作」の総括**: Cycle #5・#7・#8・#9 で確立した **「5社（または4社）×5軸×10点＝50点満点スコアランキング」スキーマ**は今後の比較記事の標準フォーマット化候補。各記事に「結論／評価方法／総合ランキング表／1位〜N位個別解説／年齢ステージ別1位／5項目の深掘り／安全と医師相談／ながみー家の使い分け／FAQ／関連記事」のH2構成を踏襲することで、ユーザー側の予測可能性と回遊率が高まる。次の比較記事（カフェチェーン拡張版・牛丼ランキング版・しゃぶしゃぶランキング版など）の new_articles 追加時もこのスキーマを流用推奨。
   - **AdSense審査向け品質チェック**: 今サイクルも E-E-A-T 4要素（著者明示／実体験／公式引用／医師相談）と quality_standards 全項目（1500字超・H2 5個超・FAQ 5問超・内部リンク3本超・画像必須）を全充足。pending 画像は未配置だが frontmatter の `hero: /hero-ai/udon-chain-kodzure-4sha-hikaku.jpg` は事前に書いてあるので、ながみーさん帰宅後のバッチ生成成功時点で自動的に表示される設計（webp変換は `node scripts/convert-hero-ai-to-webp.mjs` で対応）。
+
+---
+
+## 2026-05-20 04:27 JST — IndexNow 週次送信 (kyounoko-indexnow-weekly)
+
+- **submitted_count**: 2,321 URLs（kind=all で生成。spots + articles + plans 全カテゴリ）
+- **queue 生成コマンド**: `npx tsx scripts/indexnow-build-queue.mjs --max=9000 --kind=all`
+  - 注: 素の `node` 実行では `lib/station-spots.ts` → `./spots`（拡張子なしTSインポート）が ESM resolver で解決できず ERR_MODULE_NOT_FOUND になるため、tsx 経由で実行する必要があった。今後同じ罠を避けるなら docs/indexnow-setup.md のコマンドを `npx tsx` に書き換えるか、`scripts/indexnow-build-queue.mjs` を `.ts` にして既存 tsx 環境に寄せるのが安全。
+- **送信結果**:
+  - `https://api.indexnow.org/IndexNow` (Bing): **status 403** ❌
+    - errorCode: `SiteVerificationNotCompleted`
+    - 原因: 認証キーファイル `https://kyounoko.jp/c68e60e8f4b025a51c97f20076ce5c09.txt` が **HTTP 404**（本番未デプロイ）。`public/c68e60e8f4b025a51c97f20076ce5c09.txt` はローカルに存在するが **git untracked** で main の origin にも push されていない（`git status` で Untracked files に表示）。同じ public/ 配下にある `229166d73b10f1630ed52857e67c427b.txt`（package.json postbuild の既定キー）と `bf80742bae2245c39301924f62257c9c.txt` は HTTP 200 で公開済み。
+  - `https://yandex.com/indexnow` (Yandex): **status 202** ✅
+    - Yandex は受理（2,321 URLs 全件）。Yandex 側の IndexNow は Bing と独立した認証フローのため、キーファイル不在でも受理されるケースがある。
+- **ログ反映**: `docs/indexnow-submitted.log` に 2,321 URL を追記、`docs/indexnow-queue.txt` を空に。
+- **次サイクルへの引き継ぎ（ながみーさん要対応）**:
+  1. **Bing/IndexNow 認証復旧（最優先）**: 以下のいずれかを実施
+     - **(A) 推奨**: `git add public/c68e60e8f4b025a51c97f20076ce5c09.txt && git commit -m "chore(indexnow): add c68e60... verification key" && git push` → Vercel が自動デプロイ → 翌週の本タスクで 200 OK / Bing 受理になるはず。
+     - **(B) 代替**: `scripts/indexnow-submit.mjs` の `KEY = 'c68e60e8f4b025a51c97f20076ce5c09'` を、既に公開済みの `229166d73b10f1630ed52857e67c427b` か `bf80742bae2245c39301924f62257c9c` に書き換える。`docs/indexnow-setup.md` のキー記述も合わせて更新。こちらだと再デプロイ不要で即運用可。
+  2. **Yandex は今週分受理済み** なので、Bing 復旧後の翌週から両方カバーされる想定。
+  3. **scripts/indexnow-build-queue.mjs の実行コマンド修正**: `docs/indexnow-setup.md` の手順を `node` → `npx tsx` に直す（または .ts 化）。本タスクの SKILL.md も同様に修正推奨。
+- **失敗時対処の判断ログ**: 
+  - 403 が出たが、SKILL.md の指示「ネットワークエラーは1時間後に1回だけ再試行」は **403 (SiteVerificationNotCompleted) には該当しない**（再試行しても認証は通らない）ため再試行は省略。Yandex は既に受理されており、Bing 側はキーファイル本番反映が前提条件のため、ながみーさんの手動対応待ち。
+  - 429 (TooManyRequests) は発生せず（2,321 URL / 上限10,000）。
