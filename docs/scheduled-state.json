@@ -1,19 +1,11 @@
 {
   "$schema": "Scheduled-task state file for 旅行中 autonomous work.",
   "$description": "Claude scheduled task が2時間おきにこのファイルを読み、queue から1記事ピック→作業→state更新する。",
-  "last_run_at": "2026-05-19T11:30:00.000Z",
-  "cycles_completed": 5,
+  "last_run_at": "2026-05-19T13:30:00.000Z",
+  "cycles_completed": 6,
 
   "queues": {
     "new_articles": [
-      {
-        "slug": "tanabata-kazari-tedukuri-0-6sai-7shurui",
-        "title_draft": "【2026年版】七夕飾り 手作り 子どもと作る7種｜0〜6歳の幼児でも楽しめる",
-        "keywords": ["七夕飾り 手作り 子供", "七夕 工作 幼児", "七夕 折り紙 2歳"],
-        "category": "gyouji",
-        "target_publish": "2026-06-02",
-        "image_prompt_hint": "warm illustration of small child making Tanabata paper decorations with parent, bamboo branches, soft pastel colors"
-      },
       {
         "slug": "yakiniku-chain-kodzure-5sha-hikaku",
         "title_draft": "焼肉チェーン5社 子連れ徹底比較｜叙々苑・牛角・焼肉きんぐ・じゅうじゅうカルビ・あみやき亭",
@@ -82,7 +74,8 @@
       "yoshinoya-kodzure-koryaku",
       "chichi-no-hi-purezento-2-6sai-tedukuri-15sen",
       "tsuyu-ie-asobi-0-6sai-15pattern",
-      "famires-kodzure-ranking-2026-10sen"
+      "famires-kodzure-ranking-2026-10sen",
+      "tanabata-kazari-tedukuri-0-6sai-7shurui"
     ]
   },
 
