@@ -78,3 +78,23 @@
   - **dry-run-prompts.mjs を引数なしで実行**して tmp/image-prompts.json を 408件に更新済み（新記事も含む）。次回 generate を回す時はそのまま `--slug=<slug>` で叩ける。
   - **`tsuyu-0-1sai-sugoshikata.md` / `tsuyu-1-2sai-ie-asobi-30.md` / `tsuyu-4-6sai-shitsunai-asobi-10.md` の関連記事リンク先**として今回の `tsuyu-ie-asobi-0-6sai-15pattern` を相互リンク追記しておくと梅雨トピッククラスタの pillar→spoke 構造が完成（rewrite_targets の次サイクル候補に追加検討）。
 
+---
+
+## 2026-05-19 11:30 Cycle #5
+
+- 記事: famires-kodzure-ranking-2026-10sen 「【2026年版】子連れで使えるファミレス TOP10ランキング｜離乳食・ベビーカー・キッズ評価」
+- 狙い: 既存 `famires-7chain-8koumoku-2026`（7社×8項目の横並び比較）と `kodzure-famires-15sen`（15店ガイド／rewrite候補）に対して、**「3軸×30点満点スコア化＋総合ランキング1〜10位＋年齢ステージ別1位」**という"ランキングフォーマット"へ角度を完全に振った差別化記事。SEO上は「ファミレス 子連れ ランキング」「子連れ ファミレス 比較 2026」「ファミレス キッズ おすすめ 2026」のロングテール獲得を狙い、target_publish 5/30 にも先行公開。**ロイヤルホスト29／サイゼ27／ガスト27** という具体スコアを冒頭に置くことで、CTR・滞在時間の両方を狙う。
+- 文字数: 約7,945バイト（日本語約2,600字相当、目標2,500字超え） / H2: 20個（結論／評価方法／総合ランキング表／1位〜10位個別解説×10／シーン別1位／ながみー家のリアル／公式情報の参照ガイド／ベビーカー入店事前確認／安全と医師相談／FAQ／関連記事） / FAQ: 7問 / 内部リンク: 17本（うち他記事への送客10本ユニーク：famires-7chain-8koumoku-2026 / kodzure-famires-15sen / kodzure-saize-koryaku / gusto-kodzure-koryaku / jonathan-kodzure-koryaku / gusto-vs-jonathan-kodzure-douchi / bamiyan-kodzure-koryaku / steak-gusto-kodzure-koryaku / bronco-billy-kodzure-koryaku / kids-menu-chain-15-hikaku）
+- E-E-A-T: ながみー（編集長／4歳娘＆2歳息子の父）著者明示 ✅／2歳息子のベビーフード温めをロイヤルホストでオーダーした実体験エピソード ✅／ロイヤルホスト・すかいらーく・サイゼリヤ・ココス・デニーズ・びっくりドンキー・ブロンコビリーの公式サイトURL引用 ✅／医師相談推奨1文（離乳食・咀嚼・アレルギー文脈）✅
+- 画像生成: ❌ 失敗（Cloudflare Workers AI HTTP 429: "you have used up your daily free allocation of 10,000 neurons"）→ `image_generation_pending` に `famires-kodzure-ranking-2026-10sen` を追加（これで pending は10件）。本文のみ commit / push。**注意**: 11:30 JST 時点でも 429 継続。前サイクル #4 の予測通り、UTC 0:00（JST 09:00）リセット直後でも前日分カウントが残るケースを実証。**次サイクル（13:30 JST）あたりで再試行すべき**。
+- tsc --noEmit: ✅ エラーゼロ
+- commit hash: （下のコミットで記録）
+- queue クリーンアップ: `new_articles` から `famires-kodzure-ranking-2026-10sen` を削除（残り4件: tanabata-kazari / yakiniku-chain / kaiten-sushi-chain / udon-chain）
+- 次サイクル向け引き継ぎメモ:
+  - **画像未生成 slug が10件たまった**: starbucks / yayoiken-vs-saize / gusto-vs-jonathan / komeda / ootoya / matsuya / yoshinoya / chichi-no-hi-purezento-2-6sai-tedukuri-15sen / tsuyu-ie-asobi-0-6sai-15pattern / famires-kodzure-ranking-2026-10sen。**次サイクル13:30 JST で再試行**を最優先タスクに。バッチコマンド: `cd /Users/nagaminehideki/Developer/kyounoko-web && export $(grep -v '^#' .env.local | xargs) && for slug in starbucks-kodzure-koryaku yayoiken-vs-saize-kodzure-douchi gusto-vs-jonathan-kodzure-douchi komeda-kodzure-koryaku ootoya-kodzure-koryaku matsuya-kodzure-koryaku yoshinoya-kodzure-koryaku chichi-no-hi-purezento-2-6sai-tedukuri-15sen tsuyu-ie-asobi-0-6sai-15pattern famires-kodzure-ranking-2026-10sen; do node scripts/generate-hero-images-cloudflare.mjs --slug=$slug --steps=8; done` で連続実行可（約3,000 neuron で枠内）→ `node scripts/apply-hero-ai.mjs` で frontmatter 反映＆commit。**バッチ生成は1サイクル丸ごと使う想定で別cycleに割り当てた方が良い**（生成成功なら本文記事は書かず画像反映commit/pushで1サイクル消費する判断）。
+  - **次に着手すべき記事**: `tanabata-kazari-tedukuri-0-6sai-7shurui`（target 6/2、最も urgent）。既存 `tanabata-kazari-tedukuri-kodomo-2026` `tanabata-kazari-sakusei` `tanabata-kazari-tedukuri-kodomo` の3記事が近接しているので、**「年齢別7種類×園での飾り付け工程」**の角度で差別化が必要。Cycle #3 の父の日制作と同じ「園・集団・年齢別工程」スキーマがそのまま流用できる。
+  - **その次の候補**: `yakiniku-chain-kodzure-5sha-hikaku`（target 6/1）。今回のランキング記事と同じ「スコア化＋ランキング」スキーマがそのまま流用できる。叙々苑・牛角・焼肉きんぐ・じゅうじゅうカルビ・あみやき亭の5社で「煙対策／キッズ／個室／離乳食／価格」の5軸ランキングが妥当。
+  - **rewrite_targets 候補追加**: 今回の famires ranking 公開によって既存 `kodzure-famires-15sen` の rewrite 優先度が一段上がる。「TOP10にスリム化」指示は **今回の新作へ canonical / 内部リンクで送客**する形でリライトするのが SEO 王道（重複記事ペナルティ回避＋集客ハブ集約）。Cycle #6 以降のリライト枠で着手推奨。
+  - **記事間相互リンク**: 今回の famires ranking 記事から既存7チェーン比較・15選・各単独攻略・ガスト vs ジョナサンへの送客は完了。逆方向（既存記事→今回のランキング記事）の相互リンク追記も rewrite cycle で対応すると回遊が一段強くなる。
+  - **dry-run-prompts.mjs を引数なしで実行**して tmp/image-prompts.json を 409件に更新済み。次回 generate を回す時はそのまま `--slug=<slug>` で叩ける。
+

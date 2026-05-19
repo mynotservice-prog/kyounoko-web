@@ -1,8 +1,8 @@
 {
   "$schema": "Scheduled-task state file for 旅行中 autonomous work.",
   "$description": "Claude scheduled task が2時間おきにこのファイルを読み、queue から1記事ピック→作業→state更新する。",
-  "last_run_at": "2026-05-19T09:30:00.000Z",
-  "cycles_completed": 4,
+  "last_run_at": "2026-05-19T11:30:00.000Z",
+  "cycles_completed": 5,
 
   "queues": {
     "new_articles": [
@@ -13,14 +13,6 @@
         "category": "gyouji",
         "target_publish": "2026-06-02",
         "image_prompt_hint": "warm illustration of small child making Tanabata paper decorations with parent, bamboo branches, soft pastel colors"
-      },
-      {
-        "slug": "famires-kodzure-ranking-2026-10sen",
-        "title_draft": "【2026年版】子連れで使えるファミレス TOP10ランキング｜離乳食・ベビーカー・キッズ評価",
-        "keywords": ["ファミレス 子連れ おすすめ ランキング", "子連れ ファミレス 比較 2026"],
-        "category": "today-taberu",
-        "target_publish": "2026-05-30",
-        "image_prompt_hint": "warm illustration of various family restaurants arranged like a ranking chart, with family icons"
       },
       {
         "slug": "yakiniku-chain-kodzure-5sha-hikaku",
@@ -89,7 +81,8 @@
       "matsuya-kodzure-koryaku",
       "yoshinoya-kodzure-koryaku",
       "chichi-no-hi-purezento-2-6sai-tedukuri-15sen",
-      "tsuyu-ie-asobi-0-6sai-15pattern"
+      "tsuyu-ie-asobi-0-6sai-15pattern",
+      "famires-kodzure-ranking-2026-10sen"
     ]
   },
 
