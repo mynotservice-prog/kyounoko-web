@@ -110,6 +110,25 @@ export default async function PlanPage({ params }: Props) {
     high: '5,000円〜',
   };
 
+  // 全体の表記揺れを抑える：weather / place の日本語ラベル
+  const weatherJaLabels: Record<string, string> = {
+    sunny: '晴れ',
+    rain: '雨',
+    cold: '寒い日',
+    heat: '暑い日',
+    snow: '雪',
+    wind: '強風',
+    cloudy: '曇り',
+    humid: '湿気',
+    any: '天気不問',
+  };
+  const placeJaLabels: Record<string, string> = {
+    home: '家',
+    indoor: '屋内',
+    outdoor: '外',
+  };
+  const weatherJa = (w: string) => weatherJaLabels[w] ?? w;
+
   // HowTo JSON-LD
   const steps = extractTimelineSteps(plan.body);
   const jsonLdHowTo =
@@ -203,23 +222,26 @@ export default async function PlanPage({ params }: Props) {
           aria-label="このプランのクイック情報"
         >
           <div style={{ display: 'grid', gap: 16, gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))' }}>
-            <QuickItem label="AGE" value={plan.ageRanges.join(' / ') + '歳'} />
-            <QuickItem label="TIME" value={`${plan.durationMin}分`} />
-            <QuickItem label="BUDGET" value={budgetLabels[plan.budget] ?? plan.budget} />
-            {plan.area !== 'all' && <QuickItem label="AREA" value={getAreaName(plan.area)} />}
+            <QuickItem label="年齢" value={plan.ageRanges.join(' / ') + '歳'} />
+            <QuickItem label="所要時間" value={`${plan.durationMin}分`} />
+            <QuickItem label="予算" value={budgetLabels[plan.budget] ?? plan.budget} />
+            {plan.area !== 'all' && <QuickItem label="エリア" value={getAreaName(plan.area)} />}
             {plan.weather.length > 0 && (
-              <QuickItem label="WEATHER" value={plan.weather.join(' / ')} />
+              <QuickItem label="天気" value={plan.weather.map(weatherJa).join(' / ')} />
             )}
             {plan.place.length > 0 && (
-              <QuickItem label="PLACE" value={plan.place.map((p) => p === 'home' ? '家' : p === 'indoor' ? '屋内' : '外').join(' / ')} />
+              <QuickItem label="場所" value={plan.place.map((p) => placeJaLabels[p] ?? p).join(' / ')} />
             )}
           </div>
         </section>
 
-        {/* Timeline 可視化（タイムスタンプ付き箇条書きがある場合のみ表示。
-            markdown 本文の手順箇条書きはそのまま下に残るので、SEO/HowTo を壊さず
-            「ステップ・時間軸が見えにくい」ユーザー監査指摘の解消だけ追加で行う） */}
-        {steps.length >= 2 && <PlanTimeline steps={steps} />}
+        {/* Timeline 可視化。
+            本文 markdown 内に「## ○○タイムライン」見出しがある場合は本文側の表示を優先して
+            重複を回避する（ユーザー監査指摘）。markdown 側に時刻入り箇条書きが無いプランだけ
+            視覚的タイムラインを補完表示する。 */}
+        {steps.length >= 2 && !/^##\s.*タイムライン/m.test(plan.body) && (
+          <PlanTimeline steps={steps} />
+        )}
 
         {/* Body */}
         <div className="prose" dangerouslySetInnerHTML={{ __html: html }} />

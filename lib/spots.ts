@@ -105,6 +105,26 @@ export type Spot = {
   summerCool?: boolean;
   /** 屋外の噴水/水場/水深目安（10-30cm等の浅瀬）。waterPlay=true で使う補助情報 */
   waterDepth?: string;
+  // ---- 子連れ向け必須設備情報 ----
+  /**
+   * 子連れで訪問する前に必ず知りたい設備情報。
+   * UI ではどの施設にも統一して表示し、未確認なら「公式サイトでご確認ください」と注記する。
+   * 'yes' = あり、'no' = なし、未指定 = 未確認（unknown 扱い）
+   */
+  facilities?: {
+    /** 多目的トイレ/ベビーカーで入れるトイレ */
+    bathroom?: 'yes' | 'no';
+    /** おむつ替えシート/台 */
+    diaperChange?: 'yes' | 'no';
+    /** 授乳室・授乳スペース */
+    nursingRoom?: 'yes' | 'no';
+    /** 屋内のキッズスペース/プレイエリア */
+    kidsSpace?: 'yes' | 'no';
+    /** ベビーカー貸出（無料/有料問わず） */
+    strollerRental?: 'yes' | 'no';
+    /** 補足メモ（「2階のみ」「土日は予約優先」など、運営者が現地で確認した一言） */
+    note?: string;
+  };
   // ---- 駅近フラグ（A+B：駅×施設の橋渡し）----
   /**
    * 最寄り駅 slug（lib/tokyo-stations.ts / kansai-stations.ts /
@@ -146,6 +166,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '冬季（12-3月）限定のペンギン散歩は11時・14時半頃、開始30分前に場所取り推奨',
       popular: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+        strollerRental: 'yes',
+      },
     },
     {
       name: '札幌市円山動物園', category: 'zoo', place: 'mixed', ages: ['2-3', '4-6'], city: '札幌市', note: '屋内展示も多く悪天候でも遊べる', budget: 'low',
@@ -287,6 +313,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       popular: true,
       summerCool: true,
       waterPlay: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+        strollerRental: 'yes',
+      },
     },
   ],
   fukushima: [
@@ -419,6 +451,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       popular: true,
       summerCool: true,
       waterPlay: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+        strollerRental: 'yes',
+      },
     },
     {
       name: 'マザー牧場', category: 'farm', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '富津市', note: '動物と触れ合い＋収穫体験＋ミニ遊園地', budget: 'mid',
@@ -455,6 +493,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '2024年「ファンタジースプリングス」開業、未就学児向けにマーメイドラグーンが定番',
       popular: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+        strollerRental: 'yes',
+      },
     },
     {
       name: '三井アウトレットパーク幕張', category: 'indoor', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '千葉市', note: '海浜幕張駅徒歩1分、子連れ動線◎', budget: 'low',
@@ -539,6 +583,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
         stayNote: '2〜5時間。子によって差が大きい。',
         cautionNote: 'とにかく広く、坂で親が疲れる。子の目線だと動物が見えにくく抱っこが増えがち。夏はかなり暑い。',
       },
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+        strollerRental: 'yes',
+      },
     },
     {
       name: '多摩動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '日野市', note: '広大で歩きがい、ライオンバスが名物', budget: 'low',
@@ -568,6 +618,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       },
       summerCool: true,
       waterPlay: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+        strollerRental: 'yes',
+      },
     },
     {
       name: 'サンシャイン水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '豊島区', note: '屋上「天空のペンギン」が人気、池袋直結', budget: 'mid',
@@ -646,6 +702,11 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: 'タウンフロント4階のベビールームと、リボン通り屋外エリアで雨でも晴れでも回遊しやすい',
       popular: true,
       summerCool: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        kidsSpace: 'yes',
+      },
     },
     {
       name: '麻布台ヒルズ', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '港区', ward: '港区', note: '2023年開業、ベビールーム複数で乳児連れに優しい', budget: 'low',
@@ -844,6 +905,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: '完全屋内型、ベビーカー貸出あり。アフタヌーンパス（14時〜）が割安',
       popular: true,
       summerCool: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+        strollerRental: 'yes',
+      },
     },
     {
       name: 'ファンタジーキッズリゾート お台場', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '江東区', ward: '江東区', note: 'ふわふわ遊具・砂遊び・乗り物が揃う', budget: 'mid',
@@ -939,6 +1006,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       popular: true,
       summerCool: true,
       waterPlay: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+        strollerRental: 'yes',
+      },
     },
     {
       name: 'マクセル アクアパーク品川', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '港区', ward: '港区', note: '品川駅徒歩2分、音と光の演出', budget: 'mid',
@@ -1101,6 +1174,10 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
         cautionNote: 'とにかく広く親が疲れる。西立川口からの入園がかなり楽。夏は暑さ対策が必須。',
       },
       waterPlay: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+      },
     },
     // ===== 運営者が実際に子連れで訪問したスポット（kidReport は lib/kid-reports.ts から name 一致でマージ）=====
     {
@@ -1271,6 +1348,10 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'ベビーカー貸出（無料・先着）あり、芝生でピクニック向き。ボール遊び・自転車・ペット入園は禁止',
       popular: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+      },
     },
 
     // ===== 季節限定（東京）=====
@@ -1368,6 +1449,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '4階のフォレストパーク（屋内アスレチック）が雨天時に便利、隣の芝公園も無料',
       popular: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+        strollerRental: 'yes',
+      },
     },
     {
       name: '東京スカイツリー展望デッキ', category: 'amusement', place: 'indoor', ages: ['2-3', '4-6'], city: '墨田区', ward: '墨田区', note: '世界最高クラスの自立式電波塔', budget: 'mid',
@@ -1379,6 +1466,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: 'ベビーカーOK、ガラス床は2歳以降に大ヒット。日時指定券で並ばずに済む',
       popular: true,
       summerCool: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+        strollerRental: 'yes',
+      },
     },
     {
       name: '台場海浜公園 ビーチ', category: 'seasonal', place: 'outdoor', ages: ['2-3', '4-6'], city: '港区', ward: '港区', note: 'お台場ビーチで夏の砂遊び', budget: 'free',
@@ -1418,6 +1511,11 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: '4歳以下無料、水のエリアあるので濡れてもいい服装で。日時指定推奨',
       popular: true,
       summerCool: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+      },
     },
     {
       name: 'チームラボボーダレス（麻布台ヒルズ）', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '港区', ward: '港区', note: '2024年移転オープン、デジタルアート', budget: 'mid',
@@ -1449,6 +1547,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'らんらんらんどに身長制限ゼロのアトラクション多数、グッジョバ!! も人気',
       popular: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+        strollerRental: 'yes',
+      },
     },
     {
       name: '日本民家園', category: 'museum', place: 'outdoor', ages: ['4-6'], city: '川崎市', note: '生田緑地内、古民家野外博物館', budget: 'low',
@@ -1557,6 +1661,10 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '冬のイルミネーション（11-3月）は関東三大イルミネーション、車利用前提',
       popular: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+      },
     },
     {
       name: 'こどもの国（横浜・冬のスケート）', category: 'seasonal', place: 'mixed', ages: ['4-6'], city: '横浜市', note: '冬季限定の屋外スケート場', budget: 'low',
@@ -1576,6 +1684,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       popular: true,
       summerCool: true,
       waterPlay: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+        strollerRental: 'yes',
+      },
     },
     {
       name: 'よこはま動物園ズーラシア', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '横浜市', note: '世界の気候帯別展示、広大', budget: 'low',
@@ -1698,6 +1812,11 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: '完全予約制（10時/12時/14時/16時の4回入場）、ローソンで前売り購入',
       popular: true,
       summerCool: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+      },
     },
     {
       name: 'シルク博物館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '横浜市', note: '横浜開港の歴史、繭から糸取り体験', budget: 'low',
@@ -1732,6 +1851,10 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: '東急こどもの国線終点、牧場・プール（夏）・スケート（冬）と通年型',
       popular: true,
       waterPlay: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+      },
     },
     {
       name: '辻堂海浜公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '藤沢市', note: '夏の交通公園とジャンボプール', budget: 'low',
@@ -1841,6 +1964,11 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: '日時指定の完全予約制、土日は数ヶ月前から埋まる。恐竜ロボットが圧巻',
       popular: true,
       summerCool: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+      },
     },
     {
       name: '越前松島水族館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '坂井市', note: 'イルカにタッチできる', budget: 'mid',
@@ -1860,6 +1988,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'マイカーorジャングルバス（別料金1,500円/人）、天気悪いとライオン等が屋内、朝一10時開園直後が見応えあり',
       popular: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+        strollerRental: 'yes',
+      },
     },
     {
       name: '伊豆アニマルキングダム', category: 'zoo', place: 'mixed', ages: ['2-3', '4-6'], city: '東伊豆町', note: 'ホワイトタイガーに大接近、遊具もあり', budget: 'mid',
@@ -1948,6 +2082,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       popular: true,
       summerCool: true,
       waterPlay: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+        strollerRental: 'yes',
+      },
     },
     {
       name: '志摩スペイン村', category: 'amusement', place: 'mixed', ages: ['2-3', '4-6'], city: '志摩市', note: 'スペイン村パルケエスパーニャ', budget: 'high',
@@ -1983,6 +2123,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '王国ファーム（屋内）と王国タウン（屋外）、園内バス移動あり。雨天でも楽しめる',
       popular: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+        strollerRental: 'yes',
+      },
     },
     {
       name: '那須ハイランドパーク', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '那須町', note: '小さい子向けアトラクションも多い', budget: 'high',
@@ -2055,6 +2201,10 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '4月下旬のネモフィラ・10月のコキアはSNS映え絶景、朝8-9時到着推奨',
       popular: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+      },
     },
     // ===== 体験・季節（茨城）=====
     {
@@ -2179,6 +2329,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: '公式サイトで前売り券（最大30%オフ）推奨。平日は待ち時間ほぼなし',
       nearby: '同エリアのメイカーズ・ピア＋シーライフで1日フル',
       popular: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+        strollerRental: 'yes',
+      },
     },
     {
       name: '名古屋港水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '名古屋市', note: 'シャチとベルーガ、屋内広い', budget: 'mid',
@@ -2263,6 +2419,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       popular: true,
       summerCool: true,
       waterPlay: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+        strollerRental: 'yes',
+      },
     },
     {
       name: 'ニフレル', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '吹田市', note: '「生きるミュージアム」、動物と間近', budget: 'mid',
@@ -2350,6 +2512,10 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: 'シカせんべい（200円）で餌やり体験、2歳以降に。小さい子は怖がる場合あり距離感注意',
       popular: true,
       nearby: '東大寺・興福寺・奈良国立博物館と徒歩圏',
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+      },
     },
     {
       name: '生駒山上遊園地', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '生駒市', note: '小さい子向けレトロ遊園地', budget: 'low',
@@ -2380,6 +2546,10 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: 'ラクダ乗車体験（別料金600円〜）、砂の美術館（有料）併設',
       popular: true,
       nearby: '砂の美術館＋鳥取砂丘こどもの国で1日コース',
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+      },
     },
     {
       name: '鳥取砂丘こどもの国', category: 'park', place: 'mixed', ages: ['2-3', '4-6'], city: '鳥取市', note: 'アスレチックと体験工房', budget: 'low',
@@ -2409,6 +2579,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '室内おもちゃ部屋が11以上、雨天OK、乗り放題パス（3,300円）推奨',
       popular: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+        strollerRental: 'yes',
+      },
     },
     {
       name: '渋川動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '玉野市', note: '動物にエサやり、リーズナブル', budget: 'low',
@@ -2536,6 +2712,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       popular: true,
       summerCool: true,
       waterPlay: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+        strollerRental: 'yes',
+      },
     },
     {
       name: '海の中道海浜公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '福岡市', note: '動物の森＋大型遊具＋花、1日遊べる', budget: 'low',
@@ -2670,6 +2852,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       popular: true,
       summerCool: true,
       waterPlay: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+        nursingRoom: 'yes',
+        strollerRental: 'yes',
+      },
     },
     {
       name: '沖縄こどもの国', category: 'zoo', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '沖縄市', note: '動物園＋こどもの遊具、リーズナブル', budget: 'low',

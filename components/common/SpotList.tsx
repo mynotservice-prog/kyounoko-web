@@ -1,6 +1,15 @@
 import { filterSpots, type Spot, type AgeTag, type KidReport, SPOT_CATEGORY_LABEL } from '@/lib/spots';
 import { getAreaName } from '@/lib/area';
 
+// 子連れ向け施設情報の表示ラベル。すべての施設で統一表示する。
+const FACILITY_LABELS: { key: keyof NonNullable<Spot['facilities']>; label: string; icon: string }[] = [
+  { key: 'bathroom', label: '多目的トイレ', icon: '🚻' },
+  { key: 'diaperChange', label: 'おむつ替え', icon: '👶' },
+  { key: 'nursingRoom', label: '授乳室', icon: '🍼' },
+  { key: 'kidsSpace', label: 'キッズスペース', icon: '🧸' },
+  { key: 'strollerRental', label: 'ベビーカー貸出', icon: '🛒' },
+];
+
 type Props = {
   area?: string;
   age?: AgeTag;
@@ -79,16 +88,36 @@ function SpotCard({ spot }: { spot: Spot }) {
   const weekdayCrowd = spot.crowdLevel?.weekday;
   const holidayCrowd = spot.crowdLevel?.holiday;
 
+  // スポット名と都市で Google Maps を検索する外部リンクにする。
+  // 公式サイトURLが Spot 型に未実装のため、Google Maps への遷移で実用性を担保。
+  const mapsQuery = encodeURIComponent(
+    [spot.name, spot.city, spot.ward].filter(Boolean).join(' '),
+  );
+  const mapsHref = `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`;
   return (
     <article
       style={{
         background: 'var(--paper-card)',
         border: '1px solid var(--line)',
         borderRadius: 'var(--radius-md)',
-        padding: '14px 16px',
+        padding: 0,
+        display: 'flex',
+        flexDirection: 'column',
+        overflow: 'hidden',
+      }}
+    >
+    <a
+      href={mapsHref}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`${spot.name} を Google Maps で開く`}
+      style={{
         display: 'flex',
         flexDirection: 'column',
         gap: 8,
+        padding: '14px 16px',
+        color: 'inherit',
+        textDecoration: 'none',
       }}
     >
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, fontSize: 10, letterSpacing: '.08em' }}>
@@ -212,9 +241,86 @@ function SpotCard({ spot }: { spot: Spot }) {
         </div>
       )}
 
+      {/* 子連れ向け施設情報（全施設に統一表示）。未確認項目は公式サイト確認を促す */}
+      <FacilitiesBlock facilities={spot.facilities} />
+
       {/* 運営者の一次情報レポート（実際に子連れで訪問して記録した実体験） */}
       {spot.kidReport && <KidReportBlock report={spot.kidReport} />}
+      <span style={{ marginTop: 4, fontSize: 11, color: 'var(--sage-deep)', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+        📍 Google Mapsで開く
+      </span>
+    </a>
     </article>
+  );
+}
+
+/**
+ * 子連れで訪問する前に必ず確認したい設備情報を統一表示するブロック。
+ * - すべての施設カードに表示する（情報の有無に関わらず）
+ * - 確認済み: ✅ あり / ❌ なし
+ * - 未確認: △ 公式で確認 とする（嘘の情報を載せない）
+ */
+function FacilitiesBlock({ facilities }: { facilities?: Spot['facilities'] }) {
+  const note = facilities?.note;
+  return (
+    <div
+      style={{
+        marginTop: 4,
+        background: '#f6f9f4',
+        border: '1px solid #d6e3cd',
+        borderRadius: 8,
+        padding: '8px 10px',
+      }}
+    >
+      <div
+        style={{
+          fontSize: 10,
+          fontWeight: 700,
+          letterSpacing: '.05em',
+          color: 'var(--sage-deep)',
+          marginBottom: 6,
+        }}
+      >
+        子連れ向け設備
+      </div>
+      <ul
+        style={{
+          margin: 0,
+          padding: 0,
+          listStyle: 'none',
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: '3px 8px',
+          fontSize: 11,
+          lineHeight: 1.4,
+        }}
+      >
+        {FACILITY_LABELS.map(({ key, label, icon }) => {
+          const v = facilities?.[key];
+          const mark =
+            v === 'yes' ? { sym: '✅', color: 'var(--sage-deep)' } :
+            v === 'no'  ? { sym: '❌', color: '#a86b6b' } :
+            { sym: '△', color: 'var(--ink-mute)' };
+          return (
+            <li key={key} style={{ display: 'flex', alignItems: 'center', gap: 4, color: 'var(--ink-sub)' }}>
+              <span aria-hidden style={{ width: 14, textAlign: 'center' }}>{icon}</span>
+              <span style={{ flex: 1 }}>{label}</span>
+              <span style={{ color: mark.color, fontWeight: 600 }} title={v ? '' : '未確認 - 公式サイトでご確認ください'}>
+                {mark.sym}
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+      {note && (
+        <p style={{ margin: '6px 0 0', fontSize: 10.5, color: 'var(--ink-mute)', lineHeight: 1.5 }}>
+          ※ {note}
+        </p>
+      )}
+      <p style={{ margin: '6px 0 0', fontSize: 10, color: 'var(--ink-mute)', lineHeight: 1.4 }}>
+        △ は未確認。最新は公式サイトでご確認ください。
+      </p>
+    </div>
   );
 }
 

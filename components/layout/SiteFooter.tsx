@@ -58,6 +58,25 @@ export function SiteFooter() {
               <li><Link href="/privacy">プライバシー</Link></li>
               <li><Link href="/terms">利用規約</Link></li>
             </ul>
+            <h4 style={{ marginTop: 18 }}>Follow</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://www.instagram.com/kyounoko_family_plan/"
+                  target="_blank"
+                  rel="noopener noreferrer me"
+                  aria-label="きょうのこ 公式Instagram（@kyounoko_family_plan）を別タブで開く"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}
+                >
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                  </svg>
+                  Instagram @kyounoko_family_plan
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 

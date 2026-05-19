@@ -82,6 +82,10 @@ export const SPOTS_EXTRA_7: Partial<Record<AreaSlug, Spot[]>> = {
       waterDepth: '10〜20cm',
       hiddenTip: '例年7月中旬〜8月末、10:00-16:00。小3以下対象、外気温25℃未満や雨天は休止',
       popular: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+      },
     },
     {
       name: '和田堀公園 じゃぶじゃぶ池',
@@ -144,6 +148,10 @@ export const SPOTS_EXTRA_7: Partial<Record<AreaSlug, Spot[]>> = {
       waterDepth: '10〜30cm',
       hiddenTip: '例年7月中旬〜8月末、10:00-12:00/13:00-16:00。小3以下対象、舎人公園駅直結',
       popular: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+      },
     },
     {
       name: '武蔵野公園 じゃぶじゃぶ池',
@@ -265,6 +273,10 @@ export const SPOTS_EXTRA_7: Partial<Record<AreaSlug, Spot[]>> = {
       waterDepth: '幼児用は20cm前後',
       hiddenTip: '夏期7月〜9月のみ。入園料(大人600円・小中200円・3歳〜100円)＋プール利用料。土日朝が比較的空く',
       popular: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+      },
     },
     {
       name: '辻堂海浜公園 ジャンボプール',
@@ -301,6 +313,10 @@ export const SPOTS_EXTRA_7: Partial<Record<AreaSlug, Spot[]>> = {
       waterDepth: '大人の膝程度',
       hiddenTip: 'GWと7〜9月入水可。オムツが取れていない子は入水不可、更衣室あり水着持参を',
       popular: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+      },
     },
     {
       name: '県立青葉の森公園 水の広場',

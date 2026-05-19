@@ -335,16 +335,16 @@ export default async function ArticlePage({ params }: Props) {
           >
             <div style={{ display: 'grid', gap: 16, gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))' }}>
               {article.quickInfo_ageRanges?.length && (
-                <QuickItem label="AGE" value={article.quickInfo_ageRanges.join(' / ')} />
+                <QuickItem label="年齢" value={ageLabel(article.quickInfo_ageRanges)} />
               )}
               {article.quickInfo_durationMin && (
-                <QuickItem label="TIME" value={`${article.quickInfo_durationMin}分`} />
+                <QuickItem label="所要時間" value={`${article.quickInfo_durationMin}分`} />
               )}
               {article.quickInfo_budget && (
-                <QuickItem label="BUDGET" value={budgetLabel(article.quickInfo_budget)} />
+                <QuickItem label="予算" value={budgetLabel(article.quickInfo_budget)} />
               )}
               {article.quickInfo_weather?.length && (
-                <QuickItem label="WEATHER" value={article.quickInfo_weather.join(' / ')} />
+                <QuickItem label="天気" value={weatherJaList(article.quickInfo_weather)} />
               )}
             </div>
           </section>
@@ -867,10 +867,10 @@ function FileArticleView({ article }: { article: FileArticle }) {
             </aside>
           )}
 
-          {/* TL;DR — AI Overview 抽出を意識した要約ボックス */}
+          {/* 記事の要約（AI Overview 抽出を意識） */}
           {article.tldr && (
-            <aside className="tldr-box" aria-label="この記事の要約">
-              <span className="tldr-eyebrow">TL;DR · 先に結論</span>
+            <aside className="tldr-box" aria-label="この記事のまとめ">
+              <span className="tldr-eyebrow">まとめ</span>
               <p className="tldr-text">{article.tldr}</p>
             </aside>
           )}
@@ -915,16 +915,16 @@ function FileArticleView({ article }: { article: FileArticle }) {
                 }}
               >
                 {article.quickInfo.ageRanges?.length ? (
-                  <QuickItem label="AGE" value={article.quickInfo.ageRanges.join(' / ') + '歳'} />
+                  <QuickItem label="年齢" value={ageLabel(article.quickInfo.ageRanges)} />
                 ) : null}
                 {article.quickInfo.durationMin ? (
-                  <QuickItem label="TIME" value={`${article.quickInfo.durationMin}分`} />
+                  <QuickItem label="所要時間" value={`${article.quickInfo.durationMin}分`} />
                 ) : null}
                 {article.quickInfo.budget ? (
-                  <QuickItem label="BUDGET" value={budgetLabel(article.quickInfo.budget)} />
+                  <QuickItem label="予算" value={budgetLabel(article.quickInfo.budget)} />
                 ) : null}
                 {article.quickInfo.weather?.length ? (
-                  <QuickItem label="WEATHER" value={article.quickInfo.weather.join(' / ')} />
+                  <QuickItem label="天気" value={weatherJaList(article.quickInfo.weather)} />
                 ) : null}
               </div>
             </section>
@@ -1286,4 +1286,25 @@ function budgetLabel(b: string) {
     case 'high': return '5,000円〜';
     default: return b;
   }
+}
+
+/** 天気の英語キーを日本語へ。一覧/カンマ区切りも対応 */
+function weatherJaList(values: string[]): string {
+  const map: Record<string, string> = {
+    sunny: '晴れ',
+    rain: '雨',
+    cold: '寒い日',
+    heat: '暑い日',
+    snow: '雪',
+    wind: '強風',
+    cloudy: '曇り',
+    humid: '湿気',
+    any: '天気不問',
+  };
+  return values.map((v) => map[v] ?? v).join(' / ');
+}
+
+/** 年齢の表記揺れを抑える（"0-1" → "0-1歳" 等） */
+function ageLabel(values: string[]): string {
+  return values.map((v) => (v.endsWith('歳') ? v : `${v}歳`)).join(' / ');
 }
