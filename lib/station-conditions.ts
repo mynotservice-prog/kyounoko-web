@@ -19,7 +19,22 @@ export type StationConditionSlug =
   | 'famiresu'
   | 'kaitenzushi'
   | 'yakiniku'
-  | 'kids-menu';
+  | 'kids-menu'
+  // v3: スポット系SEO拡張（駅×遊び場/公園/雨の日）。レストランデータではなく SPOTS を表示
+  | 'asobiba'
+  | 'kouen'
+  | 'ame-asobiba';
+
+/**
+ * 条件の種別。restaurant 系はチェーン店/個人店データ、spot 系は SPOTS を表示する。
+ */
+export type ConditionKind = 'restaurant' | 'spot';
+
+export function getConditionKind(slug: StationConditionSlug): ConditionKind {
+  return slug === 'asobiba' || slug === 'kouen' || slug === 'ame-asobiba'
+    ? 'spot'
+    : 'restaurant';
+}
 
 export type StationCondition = {
   /** URL slug（/station/[slug]/[condition]） */
@@ -108,6 +123,34 @@ export const STATION_CONDITIONS: readonly StationCondition[] = [
     description:
       'お子様プレート・キッズセットなど、子ども向けメニューが用意されている店舗だけを抽出。注文に迷わず、子どもの食べる量と好みに合わせやすい、子連れ歓迎の店を集めました。',
     tagline: 'お子様プレート・キッズセットが用意された店',
+  },
+  // ===== v3: スポット系（駅×遊び場/公園/雨の日） =====
+  {
+    slug: 'asobiba',
+    label: '子連れ遊び場',
+    titlePart: '子連れで行ける遊び場',
+    metaPart: '室内遊び場・キッズスペース・遊園地・水族館・動物園',
+    description:
+      '室内遊び場・キッズパーク・動物園・水族館・科学館など、子連れで楽しめる定番スポットを駅周辺で厳選。雨の日でも遊べる屋内施設、ベビーカーで入れる施設、入園料目安まで掲載しています。',
+    tagline: '室内遊び場・キッズパーク・動物園・水族館・科学館を網羅',
+  },
+  {
+    slug: 'kouen',
+    label: '公園・大型遊具',
+    titlePart: '公園・大型遊具',
+    metaPart: '大型遊具・じゃぶじゃぶ池・ふわふわドームのある公園',
+    description:
+      '駅周辺の子連れで楽しめる公園を厳選。大型滑り台・ふわふわドーム・アスレチック・じゃぶじゃぶ池など、子どもが思いきり遊べる遊具のある公園を中心に紹介します。',
+    tagline: '大型滑り台・ふわふわドーム・水遊びができる公園',
+  },
+  {
+    slug: 'ame-asobiba',
+    label: '雨の日の遊び場',
+    titlePart: '雨の日でも遊べる屋内施設',
+    metaPart: '雨の日・梅雨・台風でも子連れで遊べる屋内施設',
+    description:
+      '雨の日・梅雨・台風・真夏の暑い日でも子連れで遊べる屋内施設を駅周辺で厳選。室内遊び場・水族館・科学館・博物館など、天気に左右されずに過ごせるスポットを集めました。',
+    tagline: '雨でも・暑くても・寒くても遊べる屋内スポット',
   },
 ] as const;
 

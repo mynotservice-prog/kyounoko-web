@@ -26,7 +26,9 @@ import {
   STATION_CONDITIONS,
   filterChainsByCondition,
   filterIndiesByCondition,
+  getConditionKind,
 } from '@/lib/station-conditions';
+import { getSpotsForStation, filterSpotsByCondition } from '@/lib/station-spots';
 import { StickySectionNav } from '@/components/station/StickySectionNav';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
@@ -637,10 +639,15 @@ export default async function StationPage({ params }: Props) {
             // 条件別ページ（/station/[slug]/[condition]）は現状チェーン中心で
             // 東京駅のみに対応。関西駅の場合はリンク先が 404 になるためセクションごと非表示。
             if (station.region !== 'tokyo') return null;
+            const { all: spotsAll } = getSpotsForStation(slug);
             const conditionLinks = STATION_CONDITIONS.map((c) => {
-              const cn = filterChainsByCondition(chains, c.slug).length;
-              const inn = filterIndiesByCondition(indies, c.slug).length;
-              return { cond: c, count: cn + inn };
+              const k = getConditionKind(c.slug);
+              const count =
+                k === 'restaurant'
+                  ? filterChainsByCondition(chains, c.slug).length +
+                    filterIndiesByCondition(indies, c.slug).length
+                  : filterSpotsByCondition(spotsAll, c.slug).length;
+              return { cond: c, count, kind: k };
             }).filter((x) => x.count > 0);
             if (conditionLinks.length === 0) return null;
             return (
@@ -656,7 +663,7 @@ export default async function StationPage({ params }: Props) {
                   雨の日・個室・赤ちゃん連れなど、シーン別の絞り込みページもあります。
                 </p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12 }}>
-                  {conditionLinks.map(({ cond: oc, count }) => (
+                  {conditionLinks.map(({ cond: oc, count, kind }) => (
                     <Link
                       key={oc.slug}
                       href={`/station/${slug}/${oc.slug}`}
@@ -674,11 +681,11 @@ export default async function StationPage({ params }: Props) {
                         <strong style={{ fontSize: 15 }}>{oc.label}</strong>
                         <span style={{
                           fontSize: 11,
-                          background: 'rgba(201,96,62,0.10)',
-                          color: 'var(--clay-deep)',
+                          background: kind === 'spot' ? 'rgba(46,125,127,0.10)' : 'rgba(201,96,62,0.10)',
+                          color: kind === 'spot' ? 'var(--sage-deep)' : 'var(--clay-deep)',
                           padding: '2px 8px',
                           borderRadius: 999,
-                        }}>{count}店</span>
+                        }}>{count}{kind === 'spot' ? '件' : '店'}</span>
                       </div>
                       <div style={{ fontSize: 12, color: 'var(--ink-sub)', lineHeight: 1.5 }}>{oc.tagline}</div>
                     </Link>

@@ -26,8 +26,16 @@ import {
   filterChainsByCondition,
   filterIndiesByCondition,
   hasMatchingItems,
+  getConditionKind,
   type StationConditionSlug,
 } from '@/lib/station-conditions';
+import {
+  getSpotsForStation,
+  filterSpotsByCondition,
+  hasMatchingSpots,
+} from '@/lib/station-spots';
+import { findStationBySlug } from '@/lib/all-stations';
+import { StationSpotConditionView } from '@/components/station/StationSpotConditionView';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400; // 24h
@@ -37,7 +45,9 @@ type Props = {
 };
 
 /**
- * 484駅 × 4条件 のうち、該当店舗が1件以上ある組み合わせのみを事前生成。
+ * 484駅 × N条件 のうち、該当アイテム（店舗 or スポット）が1件以上ある組み合わせを事前生成。
+ * - restaurant 系: チェーン店・個人店をフィルタ
+ * - spot 系: SPOTS（駅周辺 + ward フォールバック）をフィルタ
  */
 export async function generateStaticParams() {
   const params: Array<{ slug: string; condition: string }> = [];
@@ -45,8 +55,14 @@ export async function generateStaticParams() {
     const data = getStationWithChains(station.slug);
     const chains = data?.chains ?? [];
     const indies = getIndieRestaurantsByStation(station.slug);
+    const { all: spotsAll } = getSpotsForStation(station.slug);
     for (const cond of STATION_CONDITIONS) {
-      if (hasMatchingItems(chains, indies, cond.slug)) {
+      const kind = getConditionKind(cond.slug);
+      const ok =
+        kind === 'restaurant'
+          ? hasMatchingItems(chains, indies, cond.slug)
+          : hasMatchingSpots(spotsAll, cond.slug);
+      if (ok) {
         params.push({ slug: station.slug, condition: cond.slug });
       }
     }
@@ -65,16 +81,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
   const wardName = WARD_NAMES[station.ward] ?? '';
-  const title = `${station.name}駅 ${cond.titlePart}子連れOKランチ・カフェ｜ベビーカーOK店ガイド`;
-  const description = `${station.name}駅周辺で${cond.metaPart}の子連れランチ・カフェを厳選。${cond.description}${wardName}で${cond.label}の選び方に迷ったらまずここから。`;
+  const kind = getConditionKind(condition as StationConditionSlug);
+  const title =
+    kind === 'spot'
+      ? `${station.name}駅 ${cond.titlePart}｜${wardName}の子連れスポットガイド`
+      : `${station.name}駅 ${cond.titlePart}子連れOKランチ・カフェ｜ベビーカーOK店ガイド`;
+  const description =
+    kind === 'spot'
+      ? `${station.name}駅周辺で${cond.metaPart}を厳選。${cond.description}${wardName}の${cond.label}を探すならまずここから。`
+      : `${station.name}駅周辺で${cond.metaPart}の子連れランチ・カフェを厳選。${cond.description}${wardName}で${cond.label}の選び方に迷ったらまずここから。`;
 
-  // 該当店舗数で薄いコンテンツを判定 → noindex（テンプレ重複扱い回避）
-  const data = getStationWithChains(slug);
-  const chainsBase = data?.chains ?? [];
-  const indiesBase = getIndieRestaurantsByStation(slug);
-  const matchedChains = filterChainsByCondition(chainsBase, condition as StationConditionSlug);
-  const matchedIndies = filterIndiesByCondition(indiesBase, condition as StationConditionSlug);
-  const matchedCount = matchedChains.length + matchedIndies.length;
+  // 該当アイテム数で薄いコンテンツを判定 → noindex
+  let matchedCount = 0;
+  if (kind === 'restaurant') {
+    const data = getStationWithChains(slug);
+    const chainsBase = data?.chains ?? [];
+    const indiesBase = getIndieRestaurantsByStation(slug);
+    const matchedChains = filterChainsByCondition(chainsBase, condition as StationConditionSlug);
+    const matchedIndies = filterIndiesByCondition(indiesBase, condition as StationConditionSlug);
+    matchedCount = matchedChains.length + matchedIndies.length;
+  } else {
+    const { all } = getSpotsForStation(slug);
+    matchedCount = filterSpotsByCondition(all, condition as StationConditionSlug).length;
+  }
   // 3件未満は質が薄いので noindex（クロール済み未登録回避）
   const shouldNoindex = matchedCount < 3;
 
@@ -110,11 +139,32 @@ export default async function StationConditionPage({ params }: Props) {
   const cond = getConditionBySlug(condition);
   if (!cond) notFound();
 
+  const conditionSlug: StationConditionSlug = cond.slug;
+  const kind = getConditionKind(conditionSlug);
+
+  // ---- spot 系条件は別ビューで描画して早期 return ----
+  if (kind === 'spot') {
+    const anyStation = findStationBySlug(slug);
+    if (!anyStation) notFound();
+    const { all: spotsAll } = getSpotsForStation(slug);
+    const spotsMatched = filterSpotsByCondition(spotsAll, conditionSlug);
+    if (spotsMatched.length === 0) notFound();
+    const isThin = spotsMatched.length < 3;
+    return (
+      <StationSpotConditionView
+        station={anyStation}
+        cond={cond}
+        spotsAll={spotsAll}
+        spotsMatched={spotsMatched}
+        isThin={isThin}
+      />
+    );
+  }
+
   const data = getStationWithChains(slug);
   if (!data) notFound();
 
   const allIndies = getIndieRestaurantsByStation(slug);
-  const conditionSlug: StationConditionSlug = cond.slug;
   const chains = filterChainsByCondition(data.chains, conditionSlug);
   const indies = filterIndiesByCondition(allIndies, conditionSlug);
 

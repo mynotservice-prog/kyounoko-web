@@ -18,7 +18,8 @@ import { SAICHI_STATIONS } from '@/lib/saitama-chiba-stations';
 import { TOKYO_LINES } from '@/lib/tokyo-lines';
 import { getStationWithChains } from '@/lib/station-restaurants';
 import { getIndieRestaurantsByStation } from '@/lib/indie-restaurants';
-import { STATION_CONDITIONS, hasMatchingItems } from '@/lib/station-conditions';
+import { STATION_CONDITIONS, hasMatchingItems, getConditionKind } from '@/lib/station-conditions';
+import { getSpotsForStation, hasMatchingSpots } from '@/lib/station-spots';
 
 const BASE = 'https://kyounoko.jp';
 
@@ -154,19 +155,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.55,
   }));
 
-  // 駅×条件ロングテールページ（最大484駅×4条件=1,936ページ、該当0件の組合せは除外）
+  // 駅×条件ロングテールページ（restaurant 系 + spot 系。該当0件の組合せは除外）
   const stationConditionPages: MetadataRoute.Sitemap = [];
   for (const s of TOKYO_STATIONS) {
     const data = getStationWithChains(s.slug);
     const chains = data?.chains ?? [];
     const indies = getIndieRestaurantsByStation(s.slug);
+    const { all: spotsAll } = getSpotsForStation(s.slug);
     for (const cond of STATION_CONDITIONS) {
-      if (!hasMatchingItems(chains, indies, cond.slug)) continue;
+      const k = getConditionKind(cond.slug);
+      const ok =
+        k === 'restaurant'
+          ? hasMatchingItems(chains, indies, cond.slug)
+          : hasMatchingSpots(spotsAll, cond.slug);
+      if (!ok) continue;
       stationConditionPages.push({
         url: `${BASE}/station/${s.slug}/${cond.slug}`,
         lastModified: new Date(),
         changeFrequency: 'monthly' as const,
-        priority: 0.45,
+        priority: k === 'spot' ? 0.5 : 0.45,
       });
     }
   }
