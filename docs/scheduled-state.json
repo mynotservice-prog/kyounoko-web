@@ -1,20 +1,11 @@
 {
   "$schema": "Scheduled-task state file for 旅行中 autonomous work.",
   "$description": "Claude scheduled task が2時間おきにこのファイルを読み、queue から1記事ピック→作業→state更新する。",
-  "last_run_at": "2026-05-19T05:16:49.000Z",
-  "cycles_completed": 2,
+  "last_run_at": "2026-05-19T07:25:00.000Z",
+  "cycles_completed": 3,
 
   "queues": {
     "new_articles": [
-      {
-        "slug": "chichi-no-hi-purezento-2-6sai-tedukuri-15sen",
-        "title_draft": "【2026年版】父の日プレゼント 子ども手作り15選｜2〜6歳が幼稚園・保育園で作れる",
-        "keywords": ["父の日 プレゼント 手作り 子ども", "父の日 工作 2歳", "父の日 メッセージカード 幼児"],
-        "category": "gyouji",
-        "target_publish": "2026-05-25",
-        "image_prompt_hint": "warm illustration of small Japanese child holding a handmade father's day card, soft watercolor",
-        "note": "既存 chichinohi-purezento-kodomo-tedukuri と内容が近接。書く場合は『幼稚園・保育園で作れる』角度＋園での工程感に明確な差別化が必要"
-      },
       {
         "slug": "tsuyu-ie-asobi-0-6sai-15pattern",
         "title_draft": "【2026年版】梅雨の室内遊び 0〜6歳向け15パターン｜雨の日でも飽きないアイデア",
@@ -105,7 +96,8 @@
       "komeda-kodzure-koryaku",
       "ootoya-kodzure-koryaku",
       "matsuya-kodzure-koryaku",
-      "yoshinoya-kodzure-koryaku"
+      "yoshinoya-kodzure-koryaku",
+      "chichi-no-hi-purezento-2-6sai-tedukuri-15sen"
     ]
   },
 
