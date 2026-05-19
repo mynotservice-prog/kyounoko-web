@@ -203,6 +203,29 @@ export default function AboutPage() {
             <li>店舗情報（営業時間・メニュー等）は変化が早いため、本文中に「<strong>来店前に公式情報を必ず確認してください</strong>」の注意書きを付けています。</li>
           </ul>
 
+          <h2>公式SNS</h2>
+          <p>
+            最新の子連れスポット情報・季節企画・記事更新のお知らせは、公式Instagramでも発信しています。
+          </p>
+          <ul>
+            <li>
+              Instagram：
+              <a
+                href="https://www.instagram.com/kyounoko_family_plan/"
+                target="_blank"
+                rel="noopener noreferrer me"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}
+              >
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+                @kyounoko_family_plan
+              </a>
+            </li>
+          </ul>
+
           <h2>お問い合わせ</h2>
           <p>
             記事内容の誤りのご指摘、取材・掲載・監修のご相談、その他のお問い合わせは、

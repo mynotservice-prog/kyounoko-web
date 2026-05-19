@@ -78,6 +78,24 @@ export function SiteHeader({ currentCategory, showLiveChip = false }: Props) {
               <path d="m21 21-4.3-4.3" />
             </svg>
           </Link>
+          <a
+            href="https://www.instagram.com/kyounoko_family_plan/"
+            target="_blank"
+            rel="noopener noreferrer me"
+            aria-label="公式Instagram @kyounoko_family_plan を開く"
+            title="公式Instagram @kyounoko_family_plan"
+            className="header-icon-desktop"
+            style={{
+              display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+              width: 36, height: 36, color: 'var(--ink-sub)',
+            }}
+          >
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
           <Link href="/favorites" aria-label="お気に入り" title="お気に入り" className="header-icon-desktop" style={{
             display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
             width: 36, height: 36, color: 'var(--ink-sub)',
@@ -215,6 +233,28 @@ export function SiteHeader({ currentCategory, showLiveChip = false }: Props) {
                   {item.label}
                 </Link>
               ))}
+              <a
+                href="https://www.instagram.com/kyounoko_family_plan/"
+                target="_blank"
+                rel="noopener noreferrer me"
+                onClick={() => setDrawerOpen(false)}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 8,
+                  padding: '8px 12px',
+                  fontSize: 13,
+                  color: 'var(--ink-sub)',
+                  textDecoration: 'none',
+                }}
+              >
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+                公式Instagram @kyounoko_family_plan
+              </a>
             </nav>
           </div>
         </div>
