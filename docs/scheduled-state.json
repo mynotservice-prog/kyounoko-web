@@ -1,20 +1,11 @@
 {
   "$schema": "Scheduled-task state file for 旅行中 autonomous work.",
   "$description": "Claude scheduled task が2時間おきにこのファイルを読み、queue から1記事ピック→作業→state更新する。",
-  "last_run_at": "2026-05-19T07:25:00.000Z",
-  "cycles_completed": 3,
+  "last_run_at": "2026-05-19T09:30:00.000Z",
+  "cycles_completed": 4,
 
   "queues": {
     "new_articles": [
-      {
-        "slug": "tsuyu-ie-asobi-0-6sai-15pattern",
-        "title_draft": "【2026年版】梅雨の室内遊び 0〜6歳向け15パターン｜雨の日でも飽きないアイデア",
-        "keywords": ["梅雨 室内遊び 子供", "雨の日 家遊び 1歳 2歳", "梅雨 おうち遊び 幼児"],
-        "category": "today-nani",
-        "target_publish": "2026-05-28",
-        "image_prompt_hint": "warm illustration of toddler playing indoors with toys near a rainy window, cozy living room, soft watercolor",
-        "note": "tsuyu-0-1sai-sugoshikata / tsuyu-1-2sai-ie-asobi-30 / tsuyu-4-6sai-shitsunai-asobi-10 の3記事を統合するハブ的pillar記事として書ける"
-      },
       {
         "slug": "tanabata-kazari-tedukuri-0-6sai-7shurui",
         "title_draft": "【2026年版】七夕飾り 手作り 子どもと作る7種｜0〜6歳の幼児でも楽しめる",
@@ -97,7 +88,8 @@
       "ootoya-kodzure-koryaku",
       "matsuya-kodzure-koryaku",
       "yoshinoya-kodzure-koryaku",
-      "chichi-no-hi-purezento-2-6sai-tedukuri-15sen"
+      "chichi-no-hi-purezento-2-6sai-tedukuri-15sen",
+      "tsuyu-ie-asobi-0-6sai-15pattern"
     ]
   },
 
