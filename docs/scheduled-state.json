@@ -1,17 +1,13 @@
 {
   "$schema": "Scheduled-task state file for 旅行中 autonomous work.",
   "$description": "Claude scheduled task が2時間おきにこのファイルを読み、queue から1記事ピック→作業→state更新する。",
-  "last_run_at": "2026-05-20T04:30:00.000Z",
-  "cycles_completed": 9,
+  "last_run_at": "2026-05-20T06:30:00.000Z",
+  "cycles_completed": 10,
 
   "queues": {
     "new_articles": [],
 
     "rewrite_targets": [
-      {
-        "slug": "kodzure-saize-koryaku",
-        "reason": "Search Console: 318imp / CTR 3.1%。pos 10.6→8位に上げるべく構成見直し。FAQ追加、結論ファースト強化"
-      },
       {
         "slug": "shabuyou-kodzure-koryaku",
         "reason": "Search Console: 255imp / CTR 3.5%。離乳食持込ルールの章を強化、3歳以下無料の説明を冒頭に"

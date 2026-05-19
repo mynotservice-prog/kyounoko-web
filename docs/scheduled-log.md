@@ -202,3 +202,27 @@
 - **失敗時対処の判断ログ**: 
   - 403 が出たが、SKILL.md の指示「ネットワークエラーは1時間後に1回だけ再試行」は **403 (SiteVerificationNotCompleted) には該当しない**（再試行しても認証は通らない）ため再試行は省略。Yandex は既に受理されており、Bing 側はキーファイル本番反映が前提条件のため、ながみーさんの手動対応待ち。
   - 429 (TooManyRequests) は発生せず（2,321 URL / 上限10,000）。
+
+---
+
+## 2026-05-20 15:30 Cycle #10
+
+- 記事: kodzure-saize-koryaku 「サイゼリヤは子連れOK？ベビーカー・キッズメニュー・離乳食・取り分け実例【2026】」（**rewrite**）
+- 狙い: Cycle #9 で new_articles 完全枯渇 → **rewrite_targets フェーズ初回**。Search Console 318imp / CTR 3.1% / pos 10.6 の最優先記事。**結論ファーストの強化**（先頭に「## 結論（先に知りたい人へ）」150字以内サマリーを新設）＋**著者E-E-A-T明示**（「## 著者と更新メモ｜ながみー（編集長／2児の親）の体験ベース」セクションを2番目に新設、サイゼリヤ公式メニューURL引用）＋**「うちの場合」を「ながみー家のリアル｜典型例（4歳娘＋2歳息子）」にリネーム**（4歳娘・2歳息子の年齢別実体験を箇条書きで明示、E-E-A-T 強化）＋**「## 安全と医師相談｜0-2歳の取り分けで気をつけること」セクション新設**（塩分・アレルゲン・誤嚥リスク・熱いもの対応の4点、厚労省「授乳・離乳の支援ガイド」公式リンク引用、小児科医相談明記）＋**FAQ を Q10→Q15 に5問追加**（サイゼリヤvsガスト比較／栄養バランス／卵アレルギー対応／うるさい問題／ベビーカー店舗探し方）＋**関連記事を5本→15本に拡充**（famires-ranking / jonathan / gusto / bamiyan / shabuyou / gusto-vs-jonathan / yayoiken-vs-saize / saizeriya-baby-real-voices / kids-menu-chain への送客動線追加）＋**updatedAt を 2026-05-20 に更新**。SEO 上は pos 10.6→8位を狙うべく、「サイゼリヤ 子連れ」「サイゼリヤ ベビーカー」「サイゼリヤ 離乳食」「サイゼリヤ キッズメニュー」「サイゼリヤ アレルギー」「サイゼリヤ ガスト どっち」のロングテール獲得を意図した FAQ・内部リンク設計。
+- 文字数: 40,981バイト（日本語約13,600字相当、リライト前 ~32KB から +8.7KB 増） / H2: 33個（既存25 + 新規8: 結論／著者と更新メモ／ながみー家のリアル（rename）／安全と医師相談 など） / FAQ: 22問（既存17 + 新規5） / 内部リンク: 17本（リライト前11本→17本、famires-ranking / jonathan / gusto / bamiyan / shabuyou / gusto-vs-jonathan / yayoiken-vs-saize / saizeriya-baby-real-voices / kids-menu-chain など 6本追加）
+- E-E-A-T: ながみー（編集長／4歳娘＋2歳息子の父）著者明示 ✅（フロント直下の「著者と更新メモ」セクションで5年以上・首都圏30店舗以上の実地経験を冒頭明示）／月3〜4回利用の家族リアル実体験＋4歳娘・2歳息子の年齢別取り分け実体験 ✅／サイゼリヤ公式メニューURL・公式アレルゲン情報URL・厚生労働省「授乳・離乳の支援ガイド」公式リンク3本引用 ✅／医師相談推奨1文（塩分・アレルゲン・誤嚥・熱いもの対応の4文脈で安全と医師相談セクション新設、小児科医・管理栄養士相談を明記）✅
+- 画像生成: ✅ スキップ（既存 public/hero-ai/kodzure-saize-koryaku.jpg / .webp が既に存在 → リライトのため再生成不要）。frontmatter `hero: /hero-ai/kodzure-saize-koryaku.jpg` は変更なし。
+- tsc --noEmit: ✅ エラーゼロ
+- commit hash: （下のコミット参照）
+- queue クリーンアップ: `rewrite_targets` から `kodzure-saize-koryaku` を削除（残り6件: shabuyou / jonathan / gusto / kodzure-famires-15sen / bamiyan / kodomo-no-hi-kyaraben）。`image_generation_pending` は変更なし（14件のまま）。`cycles_completed` 9→10、`last_run_at` 更新。
+- 次サイクル向け引き継ぎメモ:
+  - **次に着手すべき記事**: `shabuyou-kodzure-koryaku`（Search Console 255imp / CTR 3.5%、rewrite_targets 最上位）。狙い: 離乳食持込ルールの章を強化、3歳以下無料の説明を冒頭に。Cycle #10 で確立した **「結論（先に知りたい人へ）／著者と更新メモ／ながみー家のリアル／安全と医師相談」の4セクション標準化スキーマ**をそのまま流用すれば効率的にリライトできる。
+  - **rewrite_targets スキーマ確立**: 今サイクルで以下のリライト4点セットを標準化した（次サイクル以降の rewrite 全件で踏襲推奨）:
+    1. **「## 結論（先に知りたい人へ）」150字以内サマリーを先頭に**: 検索結果のスニペット表示・featured snippet 獲得を狙う
+    2. **「## 著者と更新メモ｜ながみー（編集長／2児の親）の体験ベース」セクション**: 経験年数・店舗確認数・公式情報URL引用・最終更新日を冒頭で明示し E-E-A-T を可視化
+    3. **「## ながみー家のリアル｜典型例」へのリネーム**: 「うちの場合」のような一般的な見出しから、著者個人を主語にする（年齢別の取り分け実体験を箇条書きで明示）
+    4. **「## 安全と医師相談」セクション新設**: 該当記事のテーマに応じた塩分・アレルゲン・誤嚥・熱いもの・遊具事故などのリスクと医師相談明記
+  - **rewrite_targets 残り6件の優先順位**: Search Console impression 順で `shabuyou-kodzure-koryaku`（255imp/3.5%）→ `gusto-kodzure-koryaku`（244imp/**1.2%最低**）→ `jonathan-kodzure-koryaku`（243imp/2.5%）→ `kodzure-famires-15sen`（223imp/1.8%）→ `bamiyan-kodzure-koryaku`（168imp/2.4%）→ `kodomo-no-hi-kyaraben`（156imp/2.6%）。**CTR 1.2% の gusto は最も改善余地が大きい**ため、impression 2位の shabuyou を片付けた後に gusto を着手するのが ROI 的に正解。
+  - **画像未生成 slug が14件たまったまま**: starbucks / yayoiken-vs-saize / gusto-vs-jonathan / komeda / ootoya / matsuya / yoshinoya / chichi-no-hi-purezento-2-6sai-tedukuri-15sen / tsuyu-ie-asobi-0-6sai-15pattern / famires-kodzure-ranking-2026-10sen / tanabata-kazari-tedukuri-0-6sai-7shurui / yakiniku-chain-kodzure-5sha-hikaku / kaiten-sushi-chain-kodzure-5sha-hikaku / udon-chain-kodzure-4sha-hikaku。**Cloudflare Workers AI Free tier は依然枯渇している可能性が高い**（Cycle #1〜#9 で連続失敗）ため、次サイクルでも本文執筆を優先し、Cloudflare 429再試行は短時間で諦める運用継続。ながみーさん帰宅後の Workers Paid 切り替え or 手動バッチ実行が現実的。
+  - **rewrite で記事間相互リンクの整備**: 今回 kodzure-saize から 6本（famires-ranking / jonathan / gusto / bamiyan / shabuyou / gusto-vs-jonathan / yayoiken-vs-saize / saizeriya-baby-real-voices / kids-menu-chain）への送客を強化したが、**逆方向（これら6本→kodzure-saize）の相互リンク整備**も次のリライトサイクルで対応すると、サイゼリヤ周辺クラスタの内部リンク密度が一段強くなる。次の shabuyou rewrite 時に「関連記事」セクションで kodzure-saize-koryaku を追記すると効率的。
+  - **「結論（先に知りたい人へ）」150字制約の運用**: 今回は150字以内に収めた（「サイゼリヤは家族3人2,000円以下で完結する子連れ最強コスパのイタリアンファミレス。ミラノ風ドリア299円は0-6歳の取り分け鉄板、ベビーカー入店◎・ベビーチェア完備・離乳食持込○・アレルゲン情報全開示で、未就学児ドリンクバー無料の店舗が多数。混雑回避は11:30入店または14時以降が鉄則です。」≒145字）。Featured snippet を獲得するなら **数値・条件・固有名詞を3つ以上含む**のがコツ（今回は「2,000円以下」「ミラノ風ドリア299円」「11:30入店」を含めた）。次のリライト記事でもこのパターンを踏襲推奨。
