@@ -1,0 +1,166 @@
+{
+  "$schema": "Scheduled-task state file for 旅行中 autonomous work.",
+  "$description": "Claude scheduled task が2時間おきにこのファイルを読み、queue から1記事ピック→作業→state更新する。",
+  "last_run_at": "2026-05-19T00:00:00.000Z",
+  "cycles_completed": 1,
+
+  "queues": {
+    "new_articles": [
+      {
+        "slug": "chichi-no-hi-purezento-2-6sai-tedukuri-15sen",
+        "title_draft": "【2026年版】父の日プレゼント 子ども手作り15選｜2〜6歳が幼稚園・保育園で作れる",
+        "keywords": ["父の日 プレゼント 手作り 子ども", "父の日 工作 2歳", "父の日 メッセージカード 幼児"],
+        "category": "gyouji",
+        "target_publish": "2026-05-25",
+        "image_prompt_hint": "warm illustration of small Japanese child holding a handmade father's day card, soft watercolor"
+      },
+      {
+        "slug": "tsuyu-ie-asobi-0-6sai-15pattern",
+        "title_draft": "【2026年版】梅雨の室内遊び 0〜6歳向け15パターン｜雨の日でも飽きないアイデア",
+        "keywords": ["梅雨 室内遊び 子供", "雨の日 家遊び 1歳 2歳", "梅雨 おうち遊び 幼児"],
+        "category": "today-nani",
+        "target_publish": "2026-05-28",
+        "image_prompt_hint": "warm illustration of toddler playing indoors with toys near a rainy window, cozy living room, soft watercolor"
+      },
+      {
+        "slug": "tanabata-kazari-tedukuri-0-6sai-7shurui",
+        "title_draft": "【2026年版】七夕飾り 手作り 子どもと作る7種｜0〜6歳の幼児でも楽しめる",
+        "keywords": ["七夕飾り 手作り 子供", "七夕 工作 幼児", "七夕 折り紙 2歳"],
+        "category": "gyouji",
+        "target_publish": "2026-06-02",
+        "image_prompt_hint": "warm illustration of small child making Tanabata paper decorations with parent, bamboo branches, soft pastel colors"
+      },
+      {
+        "slug": "yayoiken-vs-saize-kodzure-douchi",
+        "title_draft": "やよい軒 vs サイゼリヤ｜子連れでどっちが使える？年齢別・予算別の使い分け【2026】",
+        "keywords": ["やよい軒 サイゼ 子連れ どっち", "ファミレス 子連れ 比較", "和食 イタリアン 子供 ランチ"],
+        "category": "today-taberu",
+        "target_publish": "2026-05-23",
+        "image_prompt_hint": "warm illustration of family deciding between two restaurants, mom holding toddler in front of restaurant signs"
+      },
+      {
+        "slug": "gusto-vs-jonathan-kodzure-douchi",
+        "title_draft": "ガスト vs ジョナサン｜すかいらーく系どっちが子連れ向き？離乳食・キッズ徹底比較【2026】",
+        "keywords": ["ガスト ジョナサン どっち", "すかいらーく系 子連れ", "ファミレス 離乳食 比較"],
+        "category": "today-taberu",
+        "target_publish": "2026-05-26",
+        "image_prompt_hint": "warm illustration of family with toddler at family restaurant table, food and high chair visible"
+      },
+      {
+        "slug": "famires-kodzure-ranking-2026-10sen",
+        "title_draft": "【2026年版】子連れで使えるファミレス TOP10ランキング｜離乳食・ベビーカー・キッズ評価",
+        "keywords": ["ファミレス 子連れ おすすめ ランキング", "子連れ ファミレス 比較 2026"],
+        "category": "today-taberu",
+        "target_publish": "2026-05-30",
+        "image_prompt_hint": "warm illustration of various family restaurants arranged like a ranking chart, with family icons"
+      },
+      {
+        "slug": "yakiniku-chain-kodzure-5sha-hikaku",
+        "title_draft": "焼肉チェーン5社 子連れ徹底比較｜叙々苑・牛角・焼肉きんぐ・じゅうじゅうカルビ・あみやき亭",
+        "keywords": ["焼肉 子連れ チェーン", "焼肉 キッズメニュー 比較", "焼肉 ベビーカー 入店"],
+        "category": "today-taberu",
+        "target_publish": "2026-06-01",
+        "image_prompt_hint": "warm illustration of family enjoying yakiniku at restaurant, toddler in high chair, kids menu visible"
+      },
+      {
+        "slug": "kaiten-sushi-chain-kodzure-5sha-hikaku",
+        "title_draft": "回転寿司5社 子連れ徹底比較｜スシロー・くら寿司・はま寿司・かっぱ寿司・がってん寿司",
+        "keywords": ["回転寿司 子連れ おすすめ", "回転寿司 キッズメニュー 比較", "スシロー くら寿司 子連れ"],
+        "category": "today-taberu",
+        "target_publish": "2026-06-03",
+        "image_prompt_hint": "warm illustration of family at conveyor sushi restaurant, kid watching plates moving"
+      },
+      {
+        "slug": "udon-chain-kodzure-4sha-hikaku",
+        "title_draft": "うどんチェーン4社 子連れ比較｜丸亀製麺・はなまるうどん・東京麺通団・つるとんたん",
+        "keywords": ["うどん 子連れ チェーン", "丸亀製麺 子供", "はなまる うどん キッズ"],
+        "category": "today-taberu",
+        "target_publish": "2026-06-05",
+        "image_prompt_hint": "warm illustration of small child eating udon noodles with parent, casual restaurant"
+      },
+      {
+        "slug": "komeda-kodzure-koryaku",
+        "title_draft": "コメダ珈琲は子連れOK？モーニング・キッズプレート・ベビーカー入店・離乳食【2026】",
+        "keywords": ["コメダ 子連れ", "コメダ モーニング 子供", "コメダ ベビーカー"],
+        "category": "today-taberu",
+        "target_publish": "2026-05-27",
+        "image_prompt_hint": "warm illustration of family at retro Japanese coffee shop, toddler at table with morning toast"
+      },
+      {
+        "slug": "ootoya-kodzure-koryaku",
+        "title_draft": "大戸屋は子連れOK？ベビーカー・お子様セット・離乳食持込・取り分け鉄板【2026】",
+        "keywords": ["大戸屋 子連れ", "大戸屋 キッズメニュー", "大戸屋 ベビーカー"],
+        "category": "today-taberu",
+        "target_publish": "2026-05-29",
+        "image_prompt_hint": "warm illustration of family eating Japanese teishoku set meals together, toddler in high chair"
+      },
+      {
+        "slug": "matsuya-kodzure-koryaku",
+        "title_draft": "松屋は子連れOK？ベビーカー入店・お子様カレー・取り分け牛丼【2026】",
+        "keywords": ["松屋 子連れ", "松屋 子供", "松屋 ベビーカー"],
+        "category": "today-taberu",
+        "target_publish": "2026-06-02",
+        "image_prompt_hint": "warm illustration of parent with small child at gyudon restaurant counter"
+      },
+      {
+        "slug": "yoshinoya-kodzure-koryaku",
+        "title_draft": "吉野家は子連れOK？お子様セット・ベビーチェア・取り分け牛丼【2026】",
+        "keywords": ["吉野家 子連れ", "吉野家 お子様", "吉野家 ベビーチェア"],
+        "category": "today-taberu",
+        "target_publish": "2026-06-04",
+        "image_prompt_hint": "warm illustration of toddler eating gyudon with parent at family-friendly restaurant"
+      }
+    ],
+
+    "rewrite_targets": [
+      {
+        "slug": "kodzure-saize-koryaku",
+        "reason": "Search Console: 318imp / CTR 3.1%。pos 10.6→8位に上げるべく構成見直し。FAQ追加、結論ファースト強化"
+      },
+      {
+        "slug": "shabuyou-kodzure-koryaku",
+        "reason": "Search Console: 255imp / CTR 3.5%。離乳食持込ルールの章を強化、3歳以下無料の説明を冒頭に"
+      },
+      {
+        "slug": "jonathan-kodzure-koryaku",
+        "reason": "Search Console: 243imp / CTR 2.5%。「離乳食温め」を見出しに明示、ガストとの差別化を冒頭で"
+      },
+      {
+        "slug": "gusto-kodzure-koryaku",
+        "reason": "Search Console: 244imp / CTR 1.2% ← 最低。離乳食を冒頭にリード、Pepper配膳ロボのファミリー目線レビュー追記"
+      },
+      {
+        "slug": "kodzure-famires-15sen",
+        "reason": "Search Console: 223imp / CTR 1.8% / pos 13.9。タイトル見直し、TOP10にスリム化（記事内アンカーで増減対応）"
+      },
+      {
+        "slug": "bamiyan-kodzure-koryaku",
+        "reason": "Search Console: 168imp / CTR 2.4%。1〜2歳向けメニューを明示、餃子アレルゲン情報を独立節に"
+      },
+      {
+        "slug": "kodomo-no-hi-kyaraben",
+        "reason": "Search Console: 156imp / CTR 2.6%。実例写真の代替テキスト、こいのぼり弁当の段取りを HowTo schema 化"
+      }
+    ],
+
+    "indexnow_priority": [],
+    "image_generation_pending": ["starbucks-kodzure-koryaku"]
+  },
+
+  "quality_standards": {
+    "char_count_min": 1500,
+    "char_count_target": 2500,
+    "faq_items_min": 5,
+    "internal_links_min": 3,
+    "h2_count_min": 5,
+    "image_required": true,
+    "ee_a_t_required": ["著者ながみー明示", "実体験エピソード", "公式情報引用"],
+    "adsense_safety": [
+      "医療/発達/安全系は専門家相談を明記",
+      "アフィリエイトはPRバッジ必須",
+      "他サイト転載なし、固有名詞は公開情報ベース"
+    ]
+  },
+
+  "notes": "1サイクル=1記事をきっちり仕上げる。スケジュールは1サイクル=2時間。new_articlesから優先で取り、次にrewrite_targets。"
+}
