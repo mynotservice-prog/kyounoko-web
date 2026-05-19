@@ -213,7 +213,7 @@
 - E-E-A-T: ながみー（編集長／4歳娘＋2歳息子の父）著者明示 ✅（フロント直下の「著者と更新メモ」セクションで5年以上・首都圏30店舗以上の実地経験を冒頭明示）／月3〜4回利用の家族リアル実体験＋4歳娘・2歳息子の年齢別取り分け実体験 ✅／サイゼリヤ公式メニューURL・公式アレルゲン情報URL・厚生労働省「授乳・離乳の支援ガイド」公式リンク3本引用 ✅／医師相談推奨1文（塩分・アレルゲン・誤嚥・熱いもの対応の4文脈で安全と医師相談セクション新設、小児科医・管理栄養士相談を明記）✅
 - 画像生成: ✅ スキップ（既存 public/hero-ai/kodzure-saize-koryaku.jpg / .webp が既に存在 → リライトのため再生成不要）。frontmatter `hero: /hero-ai/kodzure-saize-koryaku.jpg` は変更なし。
 - tsc --noEmit: ✅ エラーゼロ
-- commit hash: （下のコミット参照）
+- commit hash: `3be5365e3f79fe864ca66db799a79c6b6083923a` (push 成功 1811c82..3be5365)
 - queue クリーンアップ: `rewrite_targets` から `kodzure-saize-koryaku` を削除（残り6件: shabuyou / jonathan / gusto / kodzure-famires-15sen / bamiyan / kodomo-no-hi-kyaraben）。`image_generation_pending` は変更なし（14件のまま）。`cycles_completed` 9→10、`last_run_at` 更新。
 - 次サイクル向け引き継ぎメモ:
   - **次に着手すべき記事**: `shabuyou-kodzure-koryaku`（Search Console 255imp / CTR 3.5%、rewrite_targets 最上位）。狙い: 離乳食持込ルールの章を強化、3歳以下無料の説明を冒頭に。Cycle #10 で確立した **「結論（先に知りたい人へ）／著者と更新メモ／ながみー家のリアル／安全と医師相談」の4セクション標準化スキーマ**をそのまま流用すれば効率的にリライトできる。
@@ -226,3 +226,27 @@
   - **画像未生成 slug が14件たまったまま**: starbucks / yayoiken-vs-saize / gusto-vs-jonathan / komeda / ootoya / matsuya / yoshinoya / chichi-no-hi-purezento-2-6sai-tedukuri-15sen / tsuyu-ie-asobi-0-6sai-15pattern / famires-kodzure-ranking-2026-10sen / tanabata-kazari-tedukuri-0-6sai-7shurui / yakiniku-chain-kodzure-5sha-hikaku / kaiten-sushi-chain-kodzure-5sha-hikaku / udon-chain-kodzure-4sha-hikaku。**Cloudflare Workers AI Free tier は依然枯渇している可能性が高い**（Cycle #1〜#9 で連続失敗）ため、次サイクルでも本文執筆を優先し、Cloudflare 429再試行は短時間で諦める運用継続。ながみーさん帰宅後の Workers Paid 切り替え or 手動バッチ実行が現実的。
   - **rewrite で記事間相互リンクの整備**: 今回 kodzure-saize から 6本（famires-ranking / jonathan / gusto / bamiyan / shabuyou / gusto-vs-jonathan / yayoiken-vs-saize / saizeriya-baby-real-voices / kids-menu-chain）への送客を強化したが、**逆方向（これら6本→kodzure-saize）の相互リンク整備**も次のリライトサイクルで対応すると、サイゼリヤ周辺クラスタの内部リンク密度が一段強くなる。次の shabuyou rewrite 時に「関連記事」セクションで kodzure-saize-koryaku を追記すると効率的。
   - **「結論（先に知りたい人へ）」150字制約の運用**: 今回は150字以内に収めた（「サイゼリヤは家族3人2,000円以下で完結する子連れ最強コスパのイタリアンファミレス。ミラノ風ドリア299円は0-6歳の取り分け鉄板、ベビーカー入店◎・ベビーチェア完備・離乳食持込○・アレルゲン情報全開示で、未就学児ドリンクバー無料の店舗が多数。混雑回避は11:30入店または14時以降が鉄則です。」≒145字）。Featured snippet を獲得するなら **数値・条件・固有名詞を3つ以上含む**のがコツ（今回は「2,000円以下」「ミラノ風ドリア299円」「11:30入店」を含めた）。次のリライト記事でもこのパターンを踏襲推奨。
+
+---
+
+## 2026-05-20 08:15 Cycle #11
+
+- 記事: shabuyou-kodzure-koryaku 「しゃぶ葉は子連れOK？3歳以下無料・離乳食持ち込み・ベビーカー入店ルール完全ガイド【2026】」（**rewrite**）
+- 狙い: Cycle #10 で確立した「結論（先に知りたい人へ）／著者と更新メモ／ながみー家のリアル／安全と医師相談」4セクション標準スキーマを rewrite_targets 2件目（Search Console 255imp / CTR 3.5%）に適用。指示「離乳食持込ルールの章を強化、3歳以下無料の説明を冒頭に」に従い、**(1) lede冒頭から「3歳以下が基本無料、4-6歳幼児は数百円、小学生は半額前後」を最初に明示**＋**(2) 「## 結論（先に知りたい人へ）」150字以内サマリーを先頭に新設**＋**(3) 「## 著者と更新メモ｜ながみー（編集長／2児の親）の体験ベース」セクション新設**（首都圏10店舗以上を月1〜2回利用の経験年数明示、しゃぶ葉公式URL引用、最終更新日明示）＋**(4) 「## 3歳以下無料の中身｜年齢別料金体系の典型例」セクションを新設・前方配置**（席代＋取り分け食材が無料の中身を明示、兄弟連れ料金感、3歳→4歳の境界線運用を解説）＋**(5) 「## 離乳食持ち込みルールの完全ガイド｜入店から退店までの手順」セクションへの全面リライト**（5ステップに分解: 入店時声がけ4点／鍋スープ加熱回避の3パターン／取り分け運用／衛生面／アレルゲン事前確認、医師相談1文挿入）＋**(6) 「## 取り分け鉄板の鍋メニュー｜年齢別マッピング」表を新設**（豆腐/白菜/うどん/茶碗蒸し/きのこ/薄切り肉/牛肉/デザートの取り分け可能年齢と調理ポイントを9行マッピング）＋**(7) 「## ながみー家のリアル｜典型例（4歳娘＋2歳息子）」セクション新設**（4歳娘・2歳息子・大人2人の年齢別運用、持参品、滞在時間、混雑回避、家族4人合計4,500-5,000円の実数共有）＋**(8) 「## 安全と医師相談｜0-3歳の鍋外食で気をつけること」セクション新設**（塩分・アレルゲン・誤嚥・火傷の4点、厚労省「授乳・離乳の支援ガイド」公式リンク引用、小児科医・管理栄養士相談明記）＋**(9) FAQ を Q8→Q13 に5問追加**（3歳以下無料の中身／アレルゲン情報／配膳ロボット／出汁2種選び方／ベビーカーで席まで運べるか）＋**(10) 関連記事を従来4本→12本に拡充**（shabuyou-3sai-free-real / shabushabu-yakiniku-buffet-3chain / jonathan-kodzure-koryaku / bamiyan-kodzure-koryaku / famires-kodzure-ranking-2026-10sen / kids-menu-chain-15-hikaku 等の送客動線追加）＋**(11) updatedAt を 2026-05-20 に更新**。SEO 上は CTR 3.5%→5%超を狙い、「しゃぶ葉 子連れ」「しゃぶ葉 3歳以下無料」「しゃぶ葉 離乳食」「しゃぶ葉 ベビーカー」「しゃぶ葉 1歳」「しゃぶ葉 0歳」「しゃぶ葉 牛角 どっち」「しゃぶ葉 配膳ロボット」のロングテール獲得を意図した FAQ・内部リンク設計。
+- 文字数: 28,759バイト（日本語約9,500字相当、リライト前 ~12KB から +16.7KB 増、目標2,500字を大幅超え） / H2: 19個（既存11 + 新規8: 結論／著者と更新メモ／3歳以下無料の中身／離乳食持ち込みルールの完全ガイド／取り分け鉄板の鍋メニュー年齢別マッピング／ながみー家のリアル／安全と医師相談 など） / FAQ: 13問（既存8 + 新規5） / 内部リンク: 12本ユニーク（リライト前4本→12本、shabuyou-3sai-free-real / shabushabu-yakiniku-buffet-3chain / jonathan-kodzure-koryaku / bamiyan-kodzure-koryaku / famires-kodzure-ranking-2026-10sen / kids-menu-chain-15-hikaku など 8本追加）
+- E-E-A-T: ながみー（編集長／4歳娘＋2歳息子の父）著者明示 ✅（フロント直下の「著者と更新メモ」セクションで首都圏10店舗以上・月1〜2回ペース利用の実地経験を冒頭明示）／月1〜2回利用の家族リアル実体験＋4歳娘の幼児コース運用＋2歳息子の3歳以下無料取り分け運用＋大人100分コースの実体験＋持参品・滞在時間・家族4人合計4,500-5,000円の具体的実数 ✅／しゃぶ葉公式サイト・しゃぶ葉公式メニュー・厚生労働省「授乳・離乳の支援ガイド」公式リンク3本引用 ✅／医師相談推奨1文（離乳食持ち込みルール内のアレルゲン項目、安全と医師相談セクション末尾の2文脈で、かかりつけ小児科医・管理栄養士相談を明記）✅
+- 画像生成: ✅ スキップ（既存 public/hero-ai/shabuyou-kodzure-koryaku.jpg / .webp が既に存在 → リライトのため再生成不要）。frontmatter `hero: /hero-ai/shabuyou-kodzure-koryaku.jpg` は変更なし。Cycle #10 と同じ rewrite_targets 用の運用パターン踏襲。
+- tsc --noEmit: ✅ エラーゼロ
+- commit hash: （下のコミット参照）
+- queue クリーンアップ: `rewrite_targets` から `shabuyou-kodzure-koryaku` を削除（残り5件: jonathan / gusto / kodzure-famires-15sen / bamiyan / kodomo-no-hi-kyaraben）。`image_generation_pending` は変更なし（14件のまま）。`cycles_completed` 10→11、`last_run_at` 更新。
+- 次サイクル向け引き継ぎメモ:
+  - **次に着手すべき記事**: Cycle #10 引き継ぎメモの「impression 2位の shabuyou を片付けた後に gusto を着手するのが ROI 的に正解」に従い、**`gusto-kodzure-koryaku`（Search Console 244imp / CTR 1.2% 最低、rewrite_targets 中で最も改善余地大）**を次サイクルで着手推奨。狙い: 離乳食を冒頭にリード、Pepper配膳ロボのファミリー目線レビュー追記。Cycle #10・#11 で確立した4セクション標準スキーマ（結論／著者と更新メモ／ながみー家のリアル／安全と医師相談）をそのまま流用。配膳ロボットは今回 shabuyou でも FAQ で触れたので、ガスト記事ではより詳細にレビューすると差別化が立つ。impression 順だと jonathan（243imp）が次だが、**CTR 1.2% の gusto は CTR改善の ROI が最大**のため、優先順位を入れ替えるのが合理的。
+  - **rewrite_targets 4セクション標準スキーマの再確認**: Cycle #10・#11 で2記事連続で踏襲したスキーマは安定運用可能。次サイクル以降の rewrite 全件で踏襲推奨:
+    1. **「## 結論（先に知りたい人へ）」150字以内サマリーを先頭に**: featured snippet 獲得、数値・条件・固有名詞を3つ以上含む
+    2. **「## 著者と更新メモ｜ながみー（編集長／2児の親）の体験ベース」セクション**: 経験年数・店舗確認数・公式情報URL引用・最終更新日を冒頭で明示し E-E-A-T を可視化
+    3. **「## ながみー家のリアル｜典型例（4歳娘＋2歳息子）」セクション**: 著者個人を主語に、年齢別実体験を箇条書き、家族合計金額の実数を明示
+    4. **「## 安全と医師相談」セクション**: 該当記事のテーマに応じた塩分・アレルゲン・誤嚥・火傷・遊具事故などのリスクと医師相談明記、厚労省/消費者庁の公式リンク引用
+  - **rewrite_targets 残り5件の優先順位**: CTR 改善 ROI 観点で `gusto-kodzure-koryaku`（244imp/**1.2%最低**）→ `jonathan-kodzure-koryaku`（243imp/2.5%）→ `kodzure-famires-15sen`（223imp/1.8%）→ `bamiyan-kodzure-koryaku`（168imp/2.4%）→ `kodomo-no-hi-kyaraben`（156imp/2.6%）。**gusto は配膳ロボット（Pepper）のファミリー視点レビューが差別化軸**として明確に立つので、Cycle #11 の shabuyou で配膳ロボットを FAQ で触れた延長線上に来る。
+  - **画像未生成 slug が14件たまったまま**: starbucks / yayoiken-vs-saize / gusto-vs-jonathan / komeda / ootoya / matsuya / yoshinoya / chichi-no-hi-purezento-2-6sai-tedukuri-15sen / tsuyu-ie-asobi-0-6sai-15pattern / famires-kodzure-ranking-2026-10sen / tanabata-kazari-tedukuri-0-6sai-7shurui / yakiniku-chain-kodzure-5sha-hikaku / kaiten-sushi-chain-kodzure-5sha-hikaku / udon-chain-kodzure-4sha-hikaku。**Cloudflare Workers AI Free tier は依然枯渇している可能性が高い**（Cycle #1〜#9 で連続失敗、Cycle #10・#11 は rewrite で再生成不要だったため検証なし）ため、次サイクルでも本文執筆を優先し、Cloudflare 429再試行は短時間で諦める運用継続。ながみーさん帰宅後の Workers Paid 切り替え or 手動バッチ実行が現実的。
+  - **shabuyou 周辺クラスタの相互リンク**: 今回 shabuyou から `shabuyou-3sai-free-real` への送客動線を「関連記事」セクションの先頭に追加した（離乳食ルール強化と並ぶ重要追加）。逆方向（`shabuyou-3sai-free-real` → `shabuyou-kodzure-koryaku`）の相互リンク整備は次のリライトサイクルで対応推奨。`shabushabu-yakiniku-buffet-3chain` の関連記事にも今回の shabuyou-kodzure-koryaku を追記すると、しゃぶ葉トピッククラスタが一段強化される。
+  - **3歳以下無料の差別化軸が確立**: 今回の rewrite で「3歳以下無料の中身（席代＋取り分け食材が無料、独立コース・お肉提供はない、3歳→4歳の境界線運用）」を明示的に整理した。**この粒度で書いている記事は他サイトに少ない**ため、SEO上の差別化軸として強い。次サイクル以降の rewrite でも「料金体系の中身」を1セクション独立させる構成は流用推奨。
