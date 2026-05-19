@@ -181,9 +181,15 @@ function PlanCard({ p }: { p: PlanRow }) {
         >
           {p.shortAnswer || p.bodyPreview || '（概要なし）'}
         </p>
-        <div style={{ marginTop: 'auto', paddingTop: 6, display: 'flex', fontSize: 10, color: 'var(--ink-mute)' }}>
+        <div style={{ marginTop: 'auto', paddingTop: 6, display: 'flex', gap: 8, fontSize: 10, color: 'var(--ink-mute)', alignItems: 'center' }}>
           <span style={{ opacity: 0.7 }}>{p.id}</span>
-          <Link href={`/plan/${p.id}`} target="_blank" style={{ marginLeft: 'auto', color: 'var(--sage-deep)' }}>
+          <Link
+            href={`/admin/plans/${p.id}/edit`}
+            style={{ marginLeft: 'auto', color: 'var(--clay-deep, #C9603E)', fontWeight: 600 }}
+          >
+            ✏️ 編集
+          </Link>
+          <Link href={`/plan/${p.id}`} target="_blank" style={{ color: 'var(--sage-deep)' }}>
             公開↗
           </Link>
         </div>

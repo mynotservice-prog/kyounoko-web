@@ -189,9 +189,15 @@ function ArticleCard({ row }: { row: ArticleRow }) {
         >
           {row.lede || row.bodyPreview || '（導入文なし）'}
         </p>
-        <div style={{ marginTop: 'auto', paddingTop: 8, display: 'flex', gap: 8, fontSize: 10, color: 'var(--ink-mute)' }}>
+        <div style={{ marginTop: 'auto', paddingTop: 8, display: 'flex', gap: 8, fontSize: 10, color: 'var(--ink-mute)', alignItems: 'center' }}>
           <span>{row.updatedAt.slice(0, 10)}</span>
-          <Link href={`/article/${row.slug}`} target="_blank" style={{ marginLeft: 'auto', color: 'var(--sage-deep)' }}>
+          <Link
+            href={`/admin/articles/${row.slug}/edit`}
+            style={{ marginLeft: 'auto', color: 'var(--clay-deep, #C9603E)', fontWeight: 600 }}
+          >
+            ✏️ 編集
+          </Link>
+          <Link href={`/article/${row.slug}`} target="_blank" style={{ color: 'var(--sage-deep)' }}>
             公開↗
           </Link>
         </div>

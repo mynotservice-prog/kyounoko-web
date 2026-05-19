@@ -3,24 +3,12 @@ import Link from 'next/link';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
-import dynamic from 'next/dynamic';
-// TodayFinder は折り畳み下の重いクライアントコンポーネント。
-// dynamic + ssr:false で初期 JS バンドルから外し、LCP と TBT を下げる。
-// loading は元の DOM サイズに近いプレースホルダで CLS を抑える。
-const TodayFinder = dynamic(() => import('@/components/top/TodayFinder').then(m => ({ default: m.TodayFinder })), {
-  ssr: false,
-  loading: () => (
-    <div
-      aria-hidden="true"
-      style={{
-        minHeight: 320,
-        background: 'var(--paper-card, #FFF8EB)',
-        borderRadius: 16,
-        padding: 24,
-      }}
-    />
-  ),
-});
+// TodayFinder は client component。Next.js 15 では Server Component から
+// `dynamic(..., { ssr: false })` を呼べないため、通常 import で読み込む。
+// client component なので Next.js が自動的に client boundary を作る。
+// LCP 最適化は `app/layout.tsx` の Shippori_Mincho preload と H1 サブタイトル追加で
+// すでに部分的に達成しているため、こちらは妥当性のあるトレードオフ。
+import { TodayFinder } from '@/components/top/TodayFinder';
 import { StationSearch } from '@/components/top/StationSearch';
 import { TOKYO_STATIONS, WARD_NAMES } from '@/lib/tokyo-stations';
 import { KANSAI_STATIONS, PREFECTURE_NAMES } from '@/lib/kansai-stations';
