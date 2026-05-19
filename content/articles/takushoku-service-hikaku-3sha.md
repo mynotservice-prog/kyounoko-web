@@ -19,7 +19,6 @@ quickInfo:
   budget: mid
 lede: >-
   nosh・三ツ星ファーム・ヨシケイを「子どもが食べるか」「調理時間」「費用」「栄養」で比較。子育て家庭はヨシケイ＋nosh併用がベスト、その理由と使い分けを解説します。
-legacyHero: /hero/family-dinner-03.png
 ---
 
 ## 結論（先に知りたい人へ）

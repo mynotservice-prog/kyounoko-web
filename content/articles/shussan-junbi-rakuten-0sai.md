@@ -24,7 +24,6 @@ tldr: |-
   - 里帰り・自宅出産で必要品の順序が変わるため、タイムラインで整理
 tags:
   - muryou
-legacyHero: /hero/baby-01.png
 ---
 
 ## TL;DR

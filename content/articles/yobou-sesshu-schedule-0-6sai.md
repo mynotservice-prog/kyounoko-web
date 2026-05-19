@@ -22,7 +22,6 @@ quickInfo:
   budget: low
 area: all
 interactive: AgeMonthCalculator
-legacyHero: /hero/medical-02.png
 ---
 
 ## 結論（先に知りたい人へ）

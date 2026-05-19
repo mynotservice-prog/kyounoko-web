@@ -22,7 +22,6 @@ quickInfo:
   durationMin: 30
   budget: low
 area: all
-legacyHero: /hero/home-cozy-03.png
 ---
 
 ## ⚡ ひと目でわかる｜怪我予防サマリー

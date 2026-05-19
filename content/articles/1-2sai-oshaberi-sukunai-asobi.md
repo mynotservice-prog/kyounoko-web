@@ -16,7 +16,6 @@ quickInfo:
     - home
   budget: free
 lede: まだおしゃべりができない1〜2歳と、親が息切れせずに過ごす遊び7つ。発達的な意味・言葉かけ例・親の関わり方をセットで紹介します。
-legacyHero: /hero/toddler-play-01.png
 youtubeSearch: '1歳 2歳 言葉 引き出す 遊び'
 ---
 

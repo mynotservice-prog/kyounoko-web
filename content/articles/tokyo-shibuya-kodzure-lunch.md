@@ -22,7 +22,6 @@ quickInfo:
   durationMin: 60
   budget: mid
 area: tokyo
-legacyHero: /hero/family-dinner-01.png
 ---
 
 ## TL;DR（先に結論）

@@ -21,7 +21,6 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
-legacyHero: /hero/family-dinner-02.png
 ---
 
 ジョナサンのモーニングは「**早朝〜9時台が空いていて子連れに優しい**」というのが集計から見える共通認識でした。

@@ -20,7 +20,6 @@ quickInfo:
   durationMin: 30
   budget: free
 area: all
-legacyHero: /hero/parent-child-01.png
 ---
 
 ## TL;DR（3行まとめ）

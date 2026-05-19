@@ -27,7 +27,6 @@ tags:
   - asobi-kousaku
   - 0-1sai
   - 2-3sai
-legacyHero: /hero/toddler-play-01.png
 ---
 
 ## TL;DR

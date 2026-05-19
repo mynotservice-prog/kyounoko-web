@@ -27,7 +27,6 @@ tags:
   - muryou
   - 2-3sai
   - 4-6sai
-legacyHero: /hero/classroom-01.png
 ---
 
 ## TL;DR

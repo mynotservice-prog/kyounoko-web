@@ -22,7 +22,6 @@ quickInfo:
   durationMin: 30
   budget: low
 area: all
-legacyHero: /hero/food-sweet-01.png
 ---
 
 ## TL;DR（先に結論）

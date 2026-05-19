@@ -19,7 +19,6 @@ quickInfo:
   durationMin: 30
   budget: mid
 area: all
-legacyHero: /hero/toddler-play-01.png
 ---
 
 ## TL;DR（先に結論）

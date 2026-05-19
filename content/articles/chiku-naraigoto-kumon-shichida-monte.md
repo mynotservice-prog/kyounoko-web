@@ -16,7 +16,6 @@ quickInfo:
   weather: []
   budget: mid
 lede: 知育系3教室（公文式・七田式・モンテッソーリ）を徹底比較。特徴・月謝・向いている子・家庭でできる要素・続けやすさを親目線で解説。
-legacyHero: /hero/kid-study-01.png
 ---
 
 ## 結論（先に知りたい人へ）

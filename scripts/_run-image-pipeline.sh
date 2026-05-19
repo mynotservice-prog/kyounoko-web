@@ -28,6 +28,21 @@ set -e
 
 cd "$(dirname "$0")/.."
 
+# git の一時ロックファイルが前回中断で残っていた場合、安全に掃除
+# (.git/{index,HEAD,refs/heads/*}.lock は git 進行中だけ作られる一時ファイルで、
+#  通常は処理終了時に自動で消える。残骸はデータではないので消して安全。)
+for lock in .git/index.lock .git/HEAD.lock; do
+  if [ -f "$lock" ]; then
+    # 5分以上前のロックは確実に残骸(短いものは別プロセス動作中の可能性ありで触らない)
+    if [ -n "$(find "$lock" -mmin +5 2>/dev/null)" ]; then
+      echo "⚠ 古い $lock を検出、削除して続行"
+      rm -f "$lock"
+    fi
+  fi
+done
+# refs 配下も(ブランチごとに別ファイル)
+find .git/refs -name "*.lock" -mmin +5 -delete 2>/dev/null || true
+
 # .env.local があれば自動読込
 # CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN をここに書いておけば、
 # 毎回 export する必要なし。

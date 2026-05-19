@@ -22,7 +22,6 @@ quickInfo:
   durationMin: 45
   budget: low
 area: tokyo
-legacyHero: /hero/family-dinner-02.png
 ---
 
 **結論：やよい軒は子連れOK。ベビーチェアあり店舗も多く、ご飯おかわり自由＋取り分け前提の和定食で家族3人2,000円台で完結します。**

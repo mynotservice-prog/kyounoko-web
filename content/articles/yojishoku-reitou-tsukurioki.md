@@ -18,7 +18,6 @@ quickInfo:
   durationMin: 90
   budget: low
 lede: 週末90分の仕込みで、平日の幼児食が10分で出せる。2〜3歳が食べる冷凍ストック8品と、解凍〜盛り付けまでのルーティン。
-legacyHero: /hero/food-kitchen-03.png
 ---
 
 ## 結論（先に知りたい人へ）

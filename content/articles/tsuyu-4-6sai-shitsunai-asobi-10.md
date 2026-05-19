@@ -18,7 +18,6 @@ quickInfo:
   durationMin: 60
   budget: low
 area: all
-legacyHero: /hero/toddler-play-01.png
 youtubeSearch: '幼児 室内 体力発散 家遊び'
 ---
 

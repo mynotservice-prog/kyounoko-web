@@ -20,7 +20,6 @@ quickInfo:
   durationMin: 90
   budget: low
 area: tokyo
-legacyHero: /hero/family-dinner-02.png
 ---
 
 ロイヤルホストは「**子連れでも特別感を演出できる、ワンランク上のファミレス**」という位置づけが、集計から鮮明に浮かび上がりました。

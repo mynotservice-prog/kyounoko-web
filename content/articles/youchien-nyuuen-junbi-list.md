@@ -17,7 +17,6 @@ quickInfo:
   weather: []
   budget: mid
 lede: 4月入園に向けて3月までにやるべきことを「持ち物」「生活リズム」「健康・書類」「心構え」の4領域でまとめた完全チェックリスト。最優先は生活リズムの移行です。
-legacyHero: /hero/classroom-01.png
 ---
 
 ## 結論（先に知りたい人へ）

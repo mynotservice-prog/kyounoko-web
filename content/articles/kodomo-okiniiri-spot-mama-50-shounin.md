@@ -21,7 +21,6 @@ quickInfo:
   durationMin: 120
   budget: low
 lede: 編集部のママネットワーク50人と、SNS・ブログ公開情報を集約。「もう一度行きたい」と複数票が集まった東京の子連れスポット30を、ジャンル別に整理しました。
-legacyHero: /hero/park-01.png
 ---
 
 ## 結論（先に知りたい人へ）

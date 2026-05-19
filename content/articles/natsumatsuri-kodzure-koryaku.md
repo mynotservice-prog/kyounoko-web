@@ -19,7 +19,6 @@ quickInfo:
     - sunny
   budget: low
 lede: 0〜6歳と行く夏祭りの攻略法を年齢別に。抱っこ紐vs歩き、屋台選び、音対策、浴衣、迷子、帰宅時間までまるごと解説。
-legacyHero: /hero/park-02.png
 ---
 
 ## 結論（先に知りたい人へ）

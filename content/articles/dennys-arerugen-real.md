@@ -20,7 +20,6 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
-legacyHero: /hero/family-dinner-02.png
 ---
 
 デニーズは「**低アレルゲンキッズメニューの選びやすさ**」で多くの家庭から評価されている、という傾向が読み取れました。

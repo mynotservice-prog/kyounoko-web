@@ -22,7 +22,6 @@ quickInfo:
   durationMin: 90
   budget: low
 area: tokyo
-legacyHero: /hero/family-dinner-02.png
 ---
 
 しゃぶ葉は「**3歳以下無料が効くうちにファミリー外食の基地として使い倒す**」家庭が多い、というのが集計の結論でした。

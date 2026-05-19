@@ -20,7 +20,6 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
-legacyHero: /hero/family-dinner-02.png
 ---
 
 「ガストで離乳食を温めてもらえた」という声は多く存在し、店舗判断ながら対応してくれる傾向が強く読み取れました。

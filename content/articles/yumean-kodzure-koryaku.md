@@ -22,7 +22,6 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
-legacyHero: /hero/family-dinner-02.png
 ---
 
 **結論：夢庵はすかいらーく系の和食ファミレスで、座敷席が充実。乳児の寝かしつけ・離乳食・法事や七五三の節目祝いまで対応できる希少なチェーンです。**

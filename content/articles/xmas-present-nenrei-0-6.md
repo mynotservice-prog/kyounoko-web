@@ -19,7 +19,6 @@ quickInfo:
   weather: []
   budget: mid
 lede: 0〜6歳のクリスマスプレゼントを年齢別に合計30アイテム。予算別の選び方、祖父母との重複調整、飽きない工夫まで親目線で解説。
-legacyHero: /hero/winter-snow-03.png
 ---
 
 ## 結論（先に知りたい人へ）

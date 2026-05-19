@@ -16,7 +16,6 @@ quickInfo:
   weather: []
   budget: mid
 lede: 2〜5歳の体操教室を主要3社＋地域教室で比較。月謝、曜日、マット跳び箱鉄棒の内容、先生の質、発表会、選び方と辞めどきを実用的にまとめ。
-legacyHero: /hero/classroom-02.png
 ---
 
 ## 結論（先に知りたい人へ）

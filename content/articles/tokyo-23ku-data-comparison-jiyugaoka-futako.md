@@ -20,7 +20,6 @@ quickInfo:
   durationMin: 60
   budget: mid
 area: tokyo
-legacyHero: /hero/parent-child-02.png
 ---
 
 ## 結論（先に知りたい人へ）

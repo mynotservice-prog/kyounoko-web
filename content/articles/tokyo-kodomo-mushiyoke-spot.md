@@ -19,7 +19,6 @@ quickInfo:
   durationMin: 120
   budget: low
 area: tokyo
-legacyHero: /hero/nature-02.png
 ---
 
 ## 結論（先に知りたい人へ）

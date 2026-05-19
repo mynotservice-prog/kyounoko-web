@@ -20,7 +20,6 @@ quickInfo:
   weather: []
   budget: low
 lede: 0〜2歳・3〜5歳・6歳以上の年齢別お正月の過ごし方ガイド。伝統遊び・初詣・おせち・お年玉の意味説明、帰省時の過ごし方まで完全網羅しました。
-legacyHero: /hero/park-01.png
 ---
 
 ## 結論（先に知りたい人へ）

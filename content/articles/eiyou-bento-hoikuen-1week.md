@@ -20,7 +20,6 @@ quickInfo:
   durationMin: 30
   budget: low
 area: all
-legacyHero: /hero/food-japan-03.png
 ---
 
 ## TL;DR（3行まとめ）

@@ -22,7 +22,6 @@ quickInfo:
   durationMin: 30
   budget: free
 area: all
-legacyHero: /hero/screen-time-03.png
 ---
 
 ## 結論（先に知りたい人へ）

@@ -23,7 +23,6 @@ quickInfo:
   durationMin: 240
   budget: free
 area: osaka
-legacyHero: /hero/japan-rural-03.png
 ---
 
 ## ⚡ ひと目でわかる｜大阪無料スポットサマリー

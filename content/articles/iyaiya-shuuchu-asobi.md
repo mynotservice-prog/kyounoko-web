@@ -16,7 +16,6 @@ quickInfo:
   weather: []
   budget: free
 lede: イヤイヤがピークの2〜3歳が、不思議と静かに集中する遊びを5つ。機嫌回復にも効く、発達心理の背景つき。逆効果になる場面もセットで紹介します。
-legacyHero: /hero/parent-child-01.png
 youtubeSearch: 'イヤイヤ期 集中 遊び'
 ---
 

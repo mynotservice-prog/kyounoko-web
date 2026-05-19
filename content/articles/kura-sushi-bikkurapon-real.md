@@ -21,7 +21,6 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
-legacyHero: /hero/family-dinner-02.png
 ---
 
 くら寿司は「**ビッくらポンが3-6歳の子に強烈に刺さる**」という子連れヒットポイントが、集計から非常に明確に読み取れました。

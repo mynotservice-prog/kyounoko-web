@@ -22,7 +22,6 @@ quickInfo:
   durationMin: 90
   budget: free
 area: tokyo
-legacyHero: /hero/home-cozy-03.png
 ---
 
 ## 結論（先に知りたい人へ）

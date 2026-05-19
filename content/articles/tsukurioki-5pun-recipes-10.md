@@ -23,7 +23,6 @@ quickInfo:
   durationMin: 60
   budget: low
 area: all
-legacyHero: /hero/food-kitchen-03.png
 ---
 
 ## 30秒でわかる答え｜作り置き5分レシピ

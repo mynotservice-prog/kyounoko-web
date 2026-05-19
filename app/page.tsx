@@ -3,7 +3,24 @@ import Link from 'next/link';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
-import { TodayFinder } from '@/components/top/TodayFinder';
+import dynamic from 'next/dynamic';
+// TodayFinder は折り畳み下の重いクライアントコンポーネント。
+// dynamic + ssr:false で初期 JS バンドルから外し、LCP と TBT を下げる。
+// loading は元の DOM サイズに近いプレースホルダで CLS を抑える。
+const TodayFinder = dynamic(() => import('@/components/top/TodayFinder').then(m => ({ default: m.TodayFinder })), {
+  ssr: false,
+  loading: () => (
+    <div
+      aria-hidden="true"
+      style={{
+        minHeight: 320,
+        background: 'var(--paper-card, #FFF8EB)',
+        borderRadius: 16,
+        padding: 24,
+      }}
+    />
+  ),
+});
 import { StationSearch } from '@/components/top/StationSearch';
 import { TOKYO_STATIONS, WARD_NAMES } from '@/lib/tokyo-stations';
 import { KANSAI_STATIONS, PREFECTURE_NAMES } from '@/lib/kansai-stations';
@@ -65,10 +82,13 @@ export default function HomePage() {
                 <span>親の毎日を、</span><br />
                 <span className="accent">ちょっと軽く</span><span>。</span>
               </h1>
-              <p className="lead" style={{ marginTop: 24 }}>
-                子育て家庭の「今日どうする？」を、条件から3分で決めるサイトです。
-                0〜6歳の子と過ごす毎日は、選択が多すぎる。天気、年齢、時間、予算、余裕度。
-                きょうのこは、その条件から<strong>今日の答えをひとつだけ</strong>返します。
+              {/* SEO: H1 直下に、検索クエリで頻出する重要語（子育て・今日どうする・天気・年齢・予算）
+                  を含む簡潔なサブタイトルを置く。視覚的なリードコピーは別ブロックに移動。 */}
+              <p className="hero-subtitle" style={{ marginTop: 12, fontSize: 16, color: 'var(--ink-soft, #6f6960)', lineHeight: 1.6 }}>
+                子育て家庭の「今日どうする？」を、<strong>天気・年齢・時間・予算</strong>から3分で決める。0〜6歳の家族向けの意思決定サイト。
+              </p>
+              <p className="lead" style={{ marginTop: 16 }}>
+                選択が多すぎる毎日に、きょうのこは<strong>今日の答えをひとつだけ</strong>返します。
                 情報を増やさず、選択肢を絞る。それだけ。
               </p>
               <div className="hero-actions">

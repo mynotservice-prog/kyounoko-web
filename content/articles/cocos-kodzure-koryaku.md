@@ -22,7 +22,6 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
-legacyHero: /hero/family-dinner-02.png
 ---
 
 **結論：ココスはキッズメニュー充実度業界トップクラス。誕生日特典・ベビーチェア・離乳食対応まで、子連れ家族のために設計されたファミレスです。**

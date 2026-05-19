@@ -210,7 +210,94 @@ async function renderMarkdownToHtml(md: string): Promise<string> {
     .use(remarkGfm)
     .use(remarkHtml, { sanitize: false })
     .process(md);
-  return String(file);
+  let html = String(file);
+  // 本文 markdown 内に裸で書かれた楽天/Amazon URLを、env 設定があれば
+  // 自動でアフィリエイト経由URLに変換する。これにより、AffiliateLink コンポーネントを
+  // 使わずに記事に直接埋め込まれた商品リンクも収益化される（楽天31本など）。
+  html = wrapAffiliateLinksInHtml(html);
+  return html;
+}
+
+/**
+ * HTML 文字列内の `<a href="...">` を走査し、楽天/Amazon ドメインを
+ * 自動的にアフィリエイト経由URLに変換する。env 未設定なら元のまま。
+ *
+ * 対応:
+ *  - https://item.rakuten.co.jp/... / https://search.rakuten.co.jp/...
+ *    → もしも経由（NEXT_PUBLIC_MOSHIMO_* env が必要）
+ *  - https://www.amazon.co.jp/... / https://amzn.to/... / amzn.asia
+ *    → Amazonアソシエイトタグ付与（NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG env が必要）
+ *  - 既に moshimo / af.moshimo を経由しているURLは触らない
+ *  - 既に tag= が付いている Amazon URLも触らない
+ *
+ * セキュリティ: アフィリエイトドメイン外への遷移には触らない（誤改ざん防止）。
+ */
+function wrapAffiliateLinksInHtml(html: string): string {
+  return html.replace(
+    /(<a\s[^>]*?href=)(["'])([^"']+)(["'])([^>]*>)/gi,
+    (match, prefix, q1, href, q2, suffix) => {
+      const trimmed = href.trim();
+      // 既にもしも経由なら触らない
+      if (/^https?:\/\/af\.moshimo\.com\//i.test(trimmed)) return match;
+      // 楽天
+      if (/^https?:\/\/([^/]*\.)?rakuten\.co\.jp\//i.test(trimmed)) {
+        const wrapped = wrapMoshimoRakutenInline(trimmed);
+        if (wrapped !== trimmed) {
+          // rel と target を付与（既存があれば置換、なければ追加）
+          return ensureRelAndTarget(prefix + q1 + wrapped + q2 + suffix);
+        }
+        return match;
+      }
+      // Amazon
+      if (/^https?:\/\/([^/]*\.)?(amazon\.co\.jp|amazon\.com|amzn\.to|amzn\.asia)\//i.test(trimmed)) {
+        const wrapped = wrapAmazonAssociateInline(trimmed);
+        if (wrapped !== trimmed) {
+          return ensureRelAndTarget(prefix + q1 + wrapped + q2 + suffix);
+        }
+        return match;
+      }
+      return match;
+    }
+  );
+}
+
+/** 楽天URL → もしも経由URL（lib/moshimo.ts と同等ロジック、インライン化） */
+function wrapMoshimoRakutenInline(productUrl: string): string {
+  const a_id = process.env.NEXT_PUBLIC_MOSHIMO_A_ID?.trim();
+  const p_id = process.env.NEXT_PUBLIC_MOSHIMO_RAKUTEN_P_ID?.trim() ?? '54';
+  const pc_id = process.env.NEXT_PUBLIC_MOSHIMO_RAKUTEN_PC_ID?.trim();
+  const pl_id = process.env.NEXT_PUBLIC_MOSHIMO_RAKUTEN_PL_ID?.trim();
+  if (!a_id || !pc_id || !pl_id) return productUrl;
+  const params = new URLSearchParams({ a_id, p_id, pc_id, pl_id, url: productUrl });
+  return `https://af.moshimo.com/af/c/click?${params.toString()}`;
+}
+
+/** Amazon URL → tag= 付き URL（lib/amazon.ts と同等ロジック、インライン化） */
+function wrapAmazonAssociateInline(productUrl: string): string {
+  const tag = process.env.NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG?.trim();
+  if (!tag) return productUrl;
+  try {
+    const url = new URL(productUrl);
+    if (url.searchParams.has('tag')) return productUrl;
+    url.searchParams.set('tag', tag);
+    return url.toString();
+  } catch {
+    return productUrl;
+  }
+}
+
+/** アフィリエイトリンクには rel="sponsored nofollow noopener" と target="_blank" を強制 */
+function ensureRelAndTarget(aTagOpen: string): string {
+  let s = aTagOpen;
+  if (/\srel\s*=/.test(s)) {
+    s = s.replace(/\srel\s*=\s*["'][^"']*["']/i, ' rel="sponsored nofollow noopener"');
+  } else {
+    s = s.replace(/<a\s/i, '<a rel="sponsored nofollow noopener" ');
+  }
+  if (!/\starget\s*=/.test(s)) {
+    s = s.replace(/<a\s/i, '<a target="_blank" ');
+  }
+  return s;
 }
 
 // 見出しテキストから URL 安全な id を生成する軽量 slugify。
@@ -508,7 +595,9 @@ function extractFaq(markdown: string): { body: string; faq: FileArticleFaq[] } {
   const lines = markdown.split('\n');
 
   // FAQ セクションの開始行を検出
-  const faqHeadingRegex = /^##\s+(よくある質問|FAQ|Q&A)\s*$/i;
+  // 「## よくある質問」「## FAQ」「## Q&A」「## FAQ｜よくある質問」「## よくある質問 (FAQ)」など
+  // 区切り（｜・|・/ ・空白＋カッコ）を許容する。
+  const faqHeadingRegex = /^##\s+(?:よくある質問|FAQ|Q&A|Q ?and ?A)(?:\s*[｜|/／・\-–—()（）\s].*)?$/i;
   let faqStart = -1;
   for (let i = 0; i < lines.length; i++) {
     if (faqHeadingRegex.test(lines[i])) {
@@ -534,16 +623,18 @@ function extractFaq(markdown: string): { body: string; faq: FileArticleFaq[] } {
   const faq: FileArticleFaq[] = [];
 
   // 2つの形式に対応:
-  // 形式A: ### Q: question ... 以降の段落が answer
+  // 形式A: ### Q: question / ### Q. question / ### Q1. question / ### Q：question
+  //       以降の段落が answer
   // 形式B: **Q. question** \n **A.** answer
-  const h3QRegex = /^###\s+(?:Q[\s.:：]?\s*)?(.+?)\s*$/i;
+  // Q の直後に番号 (Q1, Q2, ..., Q99) を許容する。
+  const h3QRegex = /^###\s+(?:Q\d*[\s.:：]?\s*)?(.+?)\s*$/i;
 
   let i = 0;
   while (i < faqLines.length) {
     const line = faqLines[i];
     const m = line.match(h3QRegex);
-    if (m && (line.includes('Q:') || line.includes('Q：') || line.toLowerCase().includes('q.') || /^###\s+Q/i.test(line))) {
-      const question = m[1].replace(/^Q[\s.:：]?\s*/i, '').trim();
+    if (m && (line.includes('Q:') || line.includes('Q：') || /Q\d*\./i.test(line) || /^###\s+Q\d*/i.test(line))) {
+      const question = m[1].replace(/^Q\d*[\s.:：]?\s*/i, '').trim();
       // 以降の行を次の ### or 末尾まで集める
       const answerLines: string[] = [];
       i++;

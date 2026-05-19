@@ -22,7 +22,6 @@ quickInfo:
   durationMin: 75
   budget: low
 area: tokyo
-legacyHero: /hero/family-dinner-02.png
 ---
 
 **結論：ロイヤルホストは子連れOK。上質ファミレスの代表格として、ボックス席・落ち着いた店内・誕生日特典で家族の記念日にも使えます。**

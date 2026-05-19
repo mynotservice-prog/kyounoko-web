@@ -17,7 +17,6 @@ quickInfo:
   durationMin: 90
   budget: free
 lede: 首すわり前後の生後3ヶ月から、歩き始め前の1歳まで。無理なく短時間で帰れる、授乳室・ベビーカー動線重視のお出かけ先を月齢別に15箇所紹介します。
-legacyHero: /hero/baby-03.png
 ---
 
 ## 結論（先に知りたい人へ）

@@ -27,7 +27,6 @@ tags:
   - muryou
   - 0-1sai
   - 2-3sai
-legacyHero: /hero/food-kitchen-01.png
 ---
 
 ## TL;DR

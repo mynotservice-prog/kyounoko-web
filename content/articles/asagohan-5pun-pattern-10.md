@@ -19,7 +19,6 @@ quickInfo:
   budget: low
 lede: >-
   朝5分で作れる2〜3歳の朝ごはん10パターン。「炭水化物＋たんぱく質＋果物/野菜」の3点セットでローテし、ワンパターン化しない工夫と、食べない日の対処も紹介します。
-legacyHero: /hero/food-fruit-02.png
 youtubeSearch: '朝ごはん 5分 簡単 子供'
 ---
 

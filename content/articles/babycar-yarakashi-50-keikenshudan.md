@@ -20,7 +20,6 @@ quickInfo:
   durationMin: 30
   budget: low
 lede: ベビーカーでの「やらかし」を100人＋SNS公開情報から集約。駅で詰む・改札で焦る・段差で転ぶ・買い物カゴが落ちる…リアル50連発を対策セットで紹介します。
-legacyHero: /hero/stroller-03.png
 ---
 
 ## 結論（先に知りたい人へ）

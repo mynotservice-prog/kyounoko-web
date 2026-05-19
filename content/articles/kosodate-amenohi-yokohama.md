@@ -24,7 +24,6 @@ quickInfo:
   durationMin: 240
   budget: low
 area: kanagawa
-legacyHero: /hero/japan-rural-01.png
 ---
 
 ## ⚡ ひと目でわかる｜横浜雨の日サマリー

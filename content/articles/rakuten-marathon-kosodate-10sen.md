@@ -27,7 +27,6 @@ tldr: |-
   - SPU（スーパーポイントアップ）との併用で合計10〜15%還元も狙える
 tags:
   - muryou
-legacyHero: /hero/commerce-01.png
 ---
 
 ## TL;DR

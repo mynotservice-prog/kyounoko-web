@@ -18,7 +18,6 @@ quickInfo:
   weather: []
   budget: mid
 lede: 3〜6歳のサッカー・野球教室は「まずは楽しく体を動かす」が第一。選び方の基準、続けるコツ、親のサポートの現実、大手クラブのスクール事情までまとめました。
-legacyHero: /hero/classroom-01.png
 ---
 
 ## 結論（先に知りたい人へ）

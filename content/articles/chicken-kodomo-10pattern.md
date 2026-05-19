@@ -19,7 +19,6 @@ quickInfo:
   durationMin: 30
   budget: low
 area: all
-legacyHero: /hero/food-kitchen-02.png
 ---
 
 ## 結論（先に知りたい人へ）

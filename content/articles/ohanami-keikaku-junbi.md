@@ -20,7 +20,6 @@ quickInfo:
     - cloudy
   budget: low
 lede: 0〜6歳と行くお花見の持ち物・時間帯・弁当をまるごと解説。準備30分、滞在1時間を目安に、無理なく満開を楽しむ実用ガイド。
-legacyHero: /hero/sakura-02.png
 ---
 
 ## 結論（先に知りたい人へ）

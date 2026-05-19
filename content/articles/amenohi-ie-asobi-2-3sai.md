@@ -20,7 +20,6 @@ quickInfo:
   budget: free
 lede: >-
   実はこの年齢、雨の日が一番ガチで集中する。2〜3歳と家にこもる1日を救う10パターンを準備10分以内・集中30分・親半分手離し設計で。100均で全部揃う、片付け5分の鉄板を保存版で。
-legacyHero: /hero/toddler-play-01.png
 youtubeSearch: '雨の日 家遊び 2歳 3歳'
 ---
 

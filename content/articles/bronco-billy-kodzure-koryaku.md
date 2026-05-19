@@ -22,7 +22,6 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
-legacyHero: /hero/family-dinner-02.png
 ---
 
 **結論：ブロンコビリーはロードサイドの広い店内・サラダバー・キッズメニュー完備で、ステーキ系チェーンの中では子連れ歓迎度が最も高い一軒です。**

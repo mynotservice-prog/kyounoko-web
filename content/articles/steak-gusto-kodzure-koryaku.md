@@ -22,7 +22,6 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
-legacyHero: /hero/family-dinner-02.png
 ---
 
 **結論：ステーキガストはすかいらーく系のステーキ業態で、サラダバー＋カレーバーで子用食事も完結。ガストと同じ子連れインフラを継承する隠れ優良チェーンです。**

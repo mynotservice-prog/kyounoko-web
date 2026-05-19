@@ -22,7 +22,6 @@ quickInfo:
   durationMin: 90
   budget: low
 area: tokyo
-legacyHero: /hero/family-dinner-02.png
 ---
 
 ココスは「**子の誕生日演出に強いファミレス**」というポジションが、集計から鮮明に浮かび上がりました。

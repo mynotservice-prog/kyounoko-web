@@ -22,7 +22,6 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
-legacyHero: /hero/family-dinner-02.png
 ---
 
 **結論：デニーズはベビーカー入店OK・ベビーチェア完備・低アレルゲンキッズメニューありのファミリーフレンドリーなファミレスです。**

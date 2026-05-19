@@ -20,7 +20,6 @@ quickInfo:
   durationMin: 240
   budget: mid
 area: hokkaido
-legacyHero: /hero/nature-01.png
 ---
 
 ## TL;DR（先に結論）

@@ -19,7 +19,6 @@ quickInfo:
   weather: []
   budget: mid
 lede: 七五三の年齢別準備を完全網羅。3歳・5歳・7歳それぞれの意味、服装、神社選び、写真撮影、食事会の段取り、予算相場まで年齢別に整理しました。
-legacyHero: /hero/autumn-03.png
 ---
 
 ## 結論（先に知りたい人へ）

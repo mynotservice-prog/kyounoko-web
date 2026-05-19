@@ -22,7 +22,6 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
-legacyHero: /hero/family-dinner-02.png
 ---
 
 **結論：バーミヤンはベビーカー入店OK・ベビーチェア完備・取り分け中華メニュー豊富で、家族3人2,500円台のコスパで楽しめます。**

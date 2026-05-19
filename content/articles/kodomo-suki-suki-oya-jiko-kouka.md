@@ -21,7 +21,6 @@ quickInfo:
   durationMin: 15
   budget: free
 area: all
-legacyHero: /hero/parent-child-01.png
 ---
 
 ## ⚡ ひと目でわかる｜自己肯定感UP声かけサマリー

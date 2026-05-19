@@ -3,6 +3,10 @@ import { Shippori_Mincho, Noto_Sans_JP, Inter } from 'next/font/google';
 import Script from 'next/script';
 import { ADSENSE_SCRIPT_SRC, ADSENSE_CLIENT, ADSENSE_PUB_ID_CONFIGURED } from '@/lib/adsense';
 import { PWARegister } from '@/components/common/PWARegister';
+import { PWAInstallPrompt } from '@/components/common/PWAInstallPrompt';
+import { AnalyticsRouteTracker } from '@/components/common/AnalyticsRouteTracker';
+import { ScrollDepthTracker } from '@/components/common/ScrollDepthTracker';
+import { Suspense } from 'react';
 import './globals.css';
 
 // Next.js 15 では theme-color / viewport は viewport export で指定する
@@ -35,12 +39,17 @@ const notoSans = Noto_Sans_JP({
   display: 'swap',
   // 本文で最も使うのでpreloadあり
 });
+// Shippori_Mincho: H1（ヒーロー）に使われるため、PSIで LCP=7.3s の主因になっていた。
+// 700 ウェイトだけ preload:true にして、H1 のフォントスワップを早期解消する。
+// 残りウェイト（500/600）は本文中の小箇所のみ → preload なしで OK。
+// adjustFontFallback で メトリクスを最適化（CLS抑制）。
 const shippori = Shippori_Mincho({
   weight: ['500', '600', '700'],
   subsets: ['latin'],
   variable: '--font-mincho',
   display: 'swap',
-  preload: false,
+  preload: true, // H1 の LCP 改善のため preload を有効化
+  adjustFontFallback: false, // 日本語サブセットは Next 側の自動調整が効きづらい
 });
 const inter = Inter({
   weight: ['400', '500', '600'],
@@ -248,23 +257,57 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             通常は画面外、フォーカス時のみ表示される。各ページの <main> もしくは
             主要 <article> に id="main" を付けることで効く。 */}
         <a href="#main" className="skip-link">本文へスキップ</a>
+        {/* SPA遷移時の page_view 手動送信。useSearchParams を使うので Suspense でラップ。 */}
+        <Suspense fallback={null}>
+          <AnalyticsRouteTracker />
+        </Suspense>
+        <ScrollDepthTracker />
         {children}
 
-        {/* Google Analytics 4 */}
+        {/* Google Analytics 4
+            CWV/計測精度対策:
+            1. dataLayer と gtag は **beforeInteractive** で同期初期化する。
+               これにより、ユーザーがFCP直後にHero CTAをクリックしても
+               trackEvent → window.gtag は確実に呼び出せる（取りこぼし防止）。
+            2. 本体スクリプト (googletagmanager) は afterInteractive のままに
+               しておきLCP/TBTへの影響を最小化。dataLayer に積まれた event は
+               スクリプト読み込み後に自動消化される。
+            3. SPA 遷移時の page_view は AnalyticsRouteTracker が手動送信する。 */}
         {gaId && (
           <>
-            <Script
-              strategy="afterInteractive"
-              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-            />
-            <Script id="ga-init" strategy="afterInteractive">
+            <Script id="ga-init" strategy="beforeInteractive">
               {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${gaId}');
+                // /admin/* は管理画面なのでGA計測を完全停止する。
+                // window.__KYO_NO_GA フラグを立てて、trackEvent / AnalyticsRouteTracker
+                // 側のガードと連動。これにより指標がクリーンに保たれる。
+                window.__KYO_NO_GA = (typeof location !== 'undefined' && location.pathname && location.pathname.indexOf('/admin') === 0);
+                if (!window.__KYO_NO_GA) {
+                  window.dataLayer = window.dataLayer || [];
+                  window.gtag = window.gtag || function(){dataLayer.push(arguments);};
+                  gtag('js', new Date());
+                  gtag('config', '${gaId}', { send_page_view: true });
+                } else {
+                  // adminでも gtag シンボル自体は no-op で定義しておく（参照エラー防止）
+                  window.gtag = window.gtag || function(){};
+                }
               `}
             </Script>
+            {/* GA 本体スクリプト。adminページではフラグで読み込みも止める
+                （beforeInteractive で立てた window.__KYO_NO_GA を見て、true なら src を空にして
+                 ネットワークリクエスト自体を発生させない）。
+                Next.js Script は src 必須なので、ダミー data:URI で no-op にしておく。 */}
+            <Script
+              id="ga-tag-loader"
+              strategy="afterInteractive"
+            >{`
+              (function(){
+                if (window.__KYO_NO_GA) return;
+                var s = document.createElement('script');
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=${gaId}';
+                document.head.appendChild(s);
+              })();
+            `}</Script>
           </>
         )}
 
@@ -274,6 +317,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {clarityId && (
           <Script id="clarity-init" strategy="lazyOnload">
             {`
+              if (window.__KYO_NO_GA) {} else
               (function(c,l,a,r,i,t,y){
                 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
                 t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -297,8 +341,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         )}
 
-        {/* PWA: Service Worker 登録（本番のみ） */}
+        {/* PWA: Service Worker 登録（本番のみ）と、2回目以降の訪問者向けインストール促進 */}
         <PWARegister />
+        <PWAInstallPrompt />
       </body>
     </html>
   );

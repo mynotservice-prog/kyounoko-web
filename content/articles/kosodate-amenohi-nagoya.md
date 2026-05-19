@@ -23,7 +23,6 @@ quickInfo:
   durationMin: 240
   budget: low
 area: aichi
-legacyHero: /hero/japan-rural-02.png
 ---
 
 ## ⚡ ひと目でわかる｜名古屋雨の日サマリー

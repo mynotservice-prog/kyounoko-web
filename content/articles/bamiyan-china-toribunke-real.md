@@ -20,7 +20,6 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
-legacyHero: /hero/family-dinner-02.png
 ---
 
 バーミヤンは「**辛さなしのメニューが豊富で、取り分けやすい中華の定番**」というポジションが集計から読み取れました。

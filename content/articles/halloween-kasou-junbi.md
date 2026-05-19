@@ -18,7 +18,6 @@ quickInfo:
   weather: []
   budget: low
 lede: 3〜6歳のハロウィン仮装・飾り・フードを15アイデアで網羅。市販と手作りの使い分け、年齢別おすすめ、お菓子交換マナーまでまるごと。
-legacyHero: /hero/park-01.png
 ---
 
 ## 結論（先に知りたい人へ）

@@ -22,7 +22,6 @@ quickInfo:
   durationMin: 240
   budget: low
 area: kanto
-legacyHero: /hero/nature-03.png
 ---
 
 ## ⚡ ひと目でわかる｜関東自然スポットサマリー

@@ -17,7 +17,6 @@ quickInfo:
   weather: []
   budget: mid
 lede: 2〜6歳の習い事を目的別に分類し、開始年齢・月謝・効果・向き不向きを6パターンで比較。選ぶ3基準と辞めどきまで、失敗しない習い事の決め方。
-legacyHero: /hero/classroom-03.png
 ---
 
 ## 結論（先に知りたい人へ）

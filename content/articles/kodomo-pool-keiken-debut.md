@@ -19,7 +19,6 @@ quickInfo:
   durationMin: 60
   budget: mid
 area: all
-legacyHero: /hero/summer-water-03.png
 ---
 
 ## 結論（先に知りたい人へ）

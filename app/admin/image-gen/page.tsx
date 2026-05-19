@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import Link from 'next/link';
 import { getAllArticleInsights } from '@/lib/article-insights';
+import { RegenerateHeroButton } from '@/components/admin/RegenerateHeroButton';
 
 export const revalidate = 60;
 export const metadata = {
@@ -167,6 +168,7 @@ git push origin main
                   <Th>現画像</Th>
                   <Th>タイトル</Th>
                   <Th>カテゴリ</Th>
+                  <Th>アクション</Th>
                 </tr>
               </thead>
               <tbody>
@@ -193,6 +195,9 @@ git push origin main
                       <div style={{ fontSize: 10, color: 'var(--ink-mute)', marginTop: 2 }}>{a.slug}</div>
                     </Td>
                     <Td>{a.categoryName}</Td>
+                    <Td>
+                      <RegenerateHeroButton slug={a.slug} currentHero={a.hero} />
+                    </Td>
                   </tr>
                 ))}
               </tbody>
@@ -296,6 +301,10 @@ function CompareCard({ article, entry }: { article: { slug: string; title: strin
             {article.categoryName} · {entry.quality} · {entry.generatedAt?.slice(0, 10)}
           </div>
         </Link>
+        {/* 画像が微妙なときの再生成ボタン */}
+        <div style={{ marginTop: 10 }}>
+          <RegenerateHeroButton slug={article.slug} currentHero={article.hero} />
+        </div>
       </div>
     </article>
   );

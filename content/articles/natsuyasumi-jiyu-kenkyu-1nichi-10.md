@@ -19,7 +19,6 @@ quickInfo:
   durationMin: 360
   budget: low
 area: all
-legacyHero: /hero/kid-craft-01.png
 ---
 
 ## 結論（先に知りたい人へ）

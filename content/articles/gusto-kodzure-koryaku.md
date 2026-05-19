@@ -22,7 +22,6 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
-legacyHero: /hero/family-dinner-02.png
 ---
 
 **結論：ガストはベビーカー入店OK・ベビーチェア完備・離乳食温め対応の店舗多数で、子連れファミレスの最有力候補です。**

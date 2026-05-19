@@ -5,11 +5,35 @@ import type { AffiliateLinkProps } from '@/components/affiliate/AffiliateLink';
  * これ以外の slug ではアフィリエイト UI は表示しない。
  */
 export const AFFILIATE_TARGET_SLUGS = [
+  // 既存
   'dakkohimo-ranking-2026',
   'babycar-ranking-2026',
   'chiiku-subsc-hikaku-4sha',
   'baby-chair-ranking',
   'takushoku-service-hikaku-3sha',
+  // 2026-05 追加（A8 こどもちゃれんじ・ワンダーボックス系）
+  'chiiku-subsc-3sha-2026-comparison',
+  'chiku-naraigoto-kumon-shichida-monte',
+  'eigo-naraigoto-nansai-kara',
+  'naraigoto-hajimedoki-kiketsu',
+  'naraigoto-itsukara-0-6sai',
+  'eigo-kyouzai-3brand-2-6sai',
+  'chiiku-toys-3brand-2-4sai',
+  '3sai-hiragana-yomenai-ouchi-gakushuu',
+  // 離乳食宅配（モグモ・ファーストスプーン）
+  'rinyuushoku-frozen-gekkabetsu',
+  'yojishoku-reitou-tsukurioki',
+  'kodomo-obento-reitou-stock-5sen',
+  'youjishoku-kanryouki-1week-rota',
+  'rinyuushoku-dekinai-kao-awanai-baby',
+  'kodomo-asa-udon-tamagotoji-rinyuushoku-go',
+  // 写真スタジオ（スタジオシエル）
+  'keirou-no-hi-4sai-photo-message-card',
+  'kodomo-natsu-photo-toshi-kata-5',
+  // ベビー用品（Hariti）
+  'shussan-junbi-rakuten-0sai',
+  // もしも 提携（絵本・写真・英語・知育サブスク補強）
+  'ehon-yomikikase-kotsu',
 ] as const;
 
 export type AffiliateTargetSlug = (typeof AFFILIATE_TARGET_SLUGS)[number];
@@ -224,6 +248,184 @@ const PRODUCTS: AffiliateProduct[] = [
     price: '1食 ¥663〜',
   },
 ];
+
+// =======================================================================
+// 2026-05 追加：A8.net 提携プログラム
+// 同一プログラムを複数記事にまたがって表示するためのヘルパー。
+// 1個のプログラム定義から、対象 slug 配列分の AffiliateProduct を展開する。
+// =======================================================================
+
+type A8ProgramDef = Omit<AffiliateProduct, 'slug'> & { slugs: readonly AffiliateTargetSlug[] };
+
+function expand(defs: A8ProgramDef[]): AffiliateProduct[] {
+  const out: AffiliateProduct[] = [];
+  for (const def of defs) {
+    const { slugs, ...rest } = def;
+    for (const slug of slugs) {
+      out.push({ ...rest, slug });
+    }
+  }
+  return out;
+}
+
+const A8_PROGRAMS_2026_05: AffiliateProduct[] = expand([
+  // ---- ① こどもちゃれんじ・進研ゼミ（最強プログラム / EPC 349.57） ----
+  {
+    id: 'a8-kodomochallenge',
+    provider: 'a8',
+    href: 'https://px.a8.net/svt/ejp?a8mat=4B1PLT+A94RUA+3OR6+73HJ5',
+    title: 'こどもちゃれんじ・進研ゼミ（ベネッセ）',
+    subtitle: '0歳〜中学生まで、資料請求は無料。年齢別教材・付録・添削指導',
+    price: '資料請求 無料 / 入会 月額¥1,990〜',
+    slugs: [
+      'chiiku-subsc-hikaku-4sha',
+      'chiiku-subsc-3sha-2026-comparison',
+      'chiku-naraigoto-kumon-shichida-monte',
+      'eigo-naraigoto-nansai-kara',
+      'naraigoto-hajimedoki-kiketsu',
+      'naraigoto-itsukara-0-6sai',
+      'eigo-kyouzai-3brand-2-6sai',
+      'chiiku-toys-3brand-2-4sai',
+      '3sai-hiragana-yomenai-ouchi-gakushuu',
+    ],
+  },
+  // ---- ② ワンダーボックス（STEAM通信教材 / EPC 28.58） ----
+  {
+    id: 'a8-wonderbox',
+    provider: 'a8',
+    href: 'https://px.a8.net/svt/ejp?a8mat=4B3G6E+G1IHKI+4GM8+61Z82',
+    title: 'ワンダーボックス',
+    subtitle: '4〜10歳のSTEAM通信教材。思考力・創造力を遊びながら育てる',
+    price: '月額¥3,700〜 / 体験教材あり',
+    slugs: [
+      'chiiku-subsc-hikaku-4sha',
+      'chiiku-subsc-3sha-2026-comparison',
+      'chiku-naraigoto-kumon-shichida-monte',
+      'eigo-kyouzai-3brand-2-6sai',
+      'chiiku-toys-3brand-2-4sai',
+      'naraigoto-hajimedoki-kiketsu',
+    ],
+  },
+  // ---- ③ モグモ（幼児向け冷凍宅食 / EPC 97.46） ----
+  {
+    id: 'a8-mogumo',
+    provider: 'a8',
+    href: 'https://px.a8.net/svt/ejp?a8mat=4B3G6E+F9J44Y+5CLW+5ZEMP',
+    title: 'モグモ（幼児向け冷凍宅食）',
+    subtitle: '累計300万食突破。管理栄養士監修の幼児食を冷凍で宅配',
+    price: '初回¥980〜（送料込）',
+    slugs: [
+      'rinyuushoku-frozen-gekkabetsu',
+      'yojishoku-reitou-tsukurioki',
+      'kodomo-obento-reitou-stock-5sen',
+      'youjishoku-kanryouki-1week-rota',
+    ],
+  },
+  // ---- ④ ファーストスプーン（離乳食宅配 / 報酬 15%） ----
+  {
+    id: 'a8-firstspoon',
+    provider: 'a8',
+    href: 'https://px.a8.net/svt/ejp?a8mat=4B3G6E+FAPZCI+4Z42+601S1',
+    title: 'ファーストスプーン（離乳食宅配）',
+    subtitle: '中期〜完了期の離乳食を冷凍で宅配。アレルゲン明記・国産食材',
+    price: 'お試しセット¥1,980〜',
+    slugs: [
+      'rinyuushoku-frozen-gekkabetsu',
+      'rinyuushoku-dekinai-kao-awanai-baby',
+      'kodomo-asa-udon-tamagotoji-rinyuushoku-go',
+    ],
+  },
+  // ---- ⑤ スタジオシエル（フォトスタジオ / 来店¥1,000〜4,000） ----
+  {
+    id: 'a8-studio-ciel',
+    provider: 'a8',
+    href: 'https://px.a8.net/svt/ejp?a8mat=4B3G6E+FRZJW2+5HBC+5ZU2A',
+    title: 'Total Photostudio スタジオシエル',
+    subtitle: 'お宮参り・百日・節句・七五三・誕生日。衣装無料レンタル多数',
+    price: '撮影予約 無料',
+    slugs: [
+      'keirou-no-hi-4sai-photo-message-card',
+      'kodomo-natsu-photo-toshi-kata-5',
+    ],
+  },
+  // ---- ⑥ Hariti（ベビー・キッズアイテム / 購入10%） ----
+  {
+    id: 'a8-hariti',
+    provider: 'a8',
+    href: 'https://px.a8.net/svt/ejp?a8mat=4B3U75+5URGXE+5EV0+5YJRM',
+    title: 'Hariti（ベビー・キッズ子育てアイテム）',
+    subtitle: '安心・安全にこだわった0歳〜のベビー・キッズ用品ブランド',
+    price: '¥1,500〜',
+    slugs: [
+      'shussan-junbi-rakuten-0sai',
+      'chiiku-toys-3brand-2-4sai',
+    ],
+  },
+]);
+
+// 既存 PRODUCTS の末尾に A8 プログラムを追加した実体を再構成
+PRODUCTS.push(...A8_PROGRAMS_2026_05);
+
+// =======================================================================
+// 2026-05 追加：もしもアフィリエイト 提携プログラム（4件）
+// =======================================================================
+const MOSHIMO_PROGRAMS_2026_05: AffiliateProduct[] = expand([
+  // ---- ① WORLDLIBRARY Personal Gift（世界の絵本 定期便ギフト）900円 ----
+  {
+    id: 'mo-worldlibrary-gift',
+    provider: 'moshimo',
+    href: 'https://af.moshimo.com/af/c/click?a_id=5574901&p_id=7439&pc_id=21456&pl_id=93445',
+    title: 'WORLDLIBRARY Personal Gift（世界の絵本 定期便ギフト）',
+    subtitle: '0歳〜の英語・多言語絵本を毎月。出産祝い・誕生日プレゼントにも',
+    price: '月額¥1,300〜（送料込）',
+    slugs: ['ehon-yomikikase-kotsu', 'chiiku-toys-3brand-2-4sai'],
+  },
+  // ---- ② Famm（ファミリー向けモデル無料撮影会）1,200円 ----
+  {
+    id: 'mo-famm',
+    provider: 'moshimo',
+    href: 'https://af.moshimo.com/af/c/click?a_id=5574914&p_id=6082&pc_id=17067&pl_id=78041',
+    title: 'Famm｜ベビー・キッズ・ファミリー無料撮影会',
+    subtitle: '全国で開催のTV CM モデルオーディション＆無料撮影会。プロ撮影が無料',
+    price: '撮影予約 無料',
+    slugs: [
+      'shussan-junbi-rakuten-0sai',
+      'keirou-no-hi-4sai-photo-message-card',
+      'kodomo-natsu-photo-toshi-kata-5',
+    ],
+  },
+  // ---- ③ Baby English Labo（0〜3歳から始める英語絵本）2,310円 ----
+  {
+    id: 'mo-baby-english-labo',
+    provider: 'moshimo',
+    href: 'https://af.moshimo.com/af/c/click?a_id=5574925&p_id=4132&pc_id=10470&pl_id=56583',
+    title: 'Baby English Labo（0〜3歳の英語絵本学習）',
+    subtitle: '英語の絵本＋音源＋ガイドで自然に英語耳が育つ定期コース',
+    price: '月額¥3,036〜 / 資料請求は無料',
+    slugs: [
+      'eigo-naraigoto-nansai-kara',
+      'eigo-kyouzai-3brand-2-6sai',
+      'ehon-yomikikase-kotsu',
+    ],
+  },
+  // ---- ④ トイサブ！ファーストセレクション（はじめての知育玩具）2,500円 ----
+  {
+    id: 'mo-toysub-first',
+    provider: 'moshimo',
+    href: 'https://af.moshimo.com/af/c/click?a_id=5497153&p_id=4587&pc_id=11989&pl_id=61358',
+    title: 'トイサブ！ファーストセレクション',
+    subtitle: '0〜1歳向けの月齢に合った知育玩具を厳選。初回購入で送料無料',
+    price: '一括¥3,490（送料込）',
+    slugs: [
+      'chiiku-subsc-hikaku-4sha',
+      'chiiku-subsc-3sha-2026-comparison',
+      'chiiku-toys-3brand-2-4sai',
+      'shussan-junbi-rakuten-0sai',
+    ],
+  },
+]);
+
+PRODUCTS.push(...MOSHIMO_PROGRAMS_2026_05);
 
 /**
  * 指定 slug に紐づくアフィリエイト商品を返す。

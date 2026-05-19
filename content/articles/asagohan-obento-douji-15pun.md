@@ -20,7 +20,6 @@ quickInfo:
   durationMin: 15
   budget: low
 area: all
-legacyHero: /hero/food-fruit-03.png
 youtubeSearch: '朝ごはん お弁当 同時 時短'
 ---
 

@@ -22,7 +22,6 @@ quickInfo:
   budget: low
 lede: >-
   実は1〜3歳の知育、高価な教材を買わなくても家にあるもので8割完結する。指先・記憶・思考の3ジャンル10種を、所要時間・学べる力・親の関わり方つきで保存版で。
-legacyHero: /hero/toddler-play-01.png
 youtubeSearch: '知育遊び 家でできる 1歳 2歳 3歳'
 ---
 

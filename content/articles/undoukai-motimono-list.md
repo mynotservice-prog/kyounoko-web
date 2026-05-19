@@ -21,7 +21,6 @@ quickInfo:
     - rain
   budget: low
 lede: 運動会の必需品＋便利グッズのフル一覧。天気別・観覧場所別・学年別の必要なものと、前日準備タイムライン、チェックリストまで完全網羅しました。
-legacyHero: /hero/classroom-02.png
 ---
 
 ## 結論（先に知りたい人へ）

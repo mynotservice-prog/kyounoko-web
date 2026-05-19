@@ -21,7 +21,6 @@ quickInfo:
   durationMin: 180
   budget: low
 area: tokyo
-legacyHero: /hero/summer-water-02.png
 ---
 
 ## 結論（先に知りたい人へ）

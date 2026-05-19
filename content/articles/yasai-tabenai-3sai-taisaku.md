@@ -22,7 +22,6 @@ quickInfo:
   durationMin: 30
   budget: low
 area: all
-legacyHero: /hero/food-fruit-03.png
 ---
 
 ## 30秒でわかる答え｜3歳の野菜嫌い

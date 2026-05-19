@@ -24,7 +24,6 @@ quickInfo:
   durationMin: 30
   budget: free
 area: all
-legacyHero: /hero/parent-child-01.png
 ---
 
 ## ⚡ ひと目でわかる｜2歳イヤイヤ期サマリー

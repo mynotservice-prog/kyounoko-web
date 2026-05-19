@@ -2,7 +2,7 @@
 slug: kodomo-obento-reitou-stock-5sen
 title: お弁当冷凍ストック5選｜朝レンジ1分のレシピ
 metaDescription: >-
-  週末まとめ作りで朝楽になる子供向けお弁当の冷凍ストック5選。アレルゲンと月齢適性も明示。
+  週末まとめ作りで朝楽になる子供向けお弁当の冷凍ストック5選。レンジ1分で解凍OKな主菜・副菜・ご飯系のレシピを、保存期間・解凍温度・アレルゲン・月齢適性つきで紹介。共働き家庭の朝負担を10分減らす保存版。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'

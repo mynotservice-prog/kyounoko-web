@@ -21,7 +21,6 @@ quickInfo:
   weather: []
   budget: low
 lede: シールブックは1〜5歳の子の集中力と手先を伸ばす最強アイテム。外出先の待ち時間にも強い5冊を、対象年齢・シール量・再剥離性・価格で比較しました。
-legacyHero: /hero/toddler-play-03.png
 ---
 
 ## 結論（先に知りたい人へ）

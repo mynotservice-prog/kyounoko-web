@@ -20,7 +20,6 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
-legacyHero: /hero/family-dinner-02.png
 ---
 
 やよい軒は「**ご飯・味噌汁・主菜・副菜が分かれた定食スタイル**」が取り分けに向いている、という声が圧倒的多数でした。

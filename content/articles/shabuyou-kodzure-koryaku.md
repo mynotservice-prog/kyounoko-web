@@ -22,7 +22,6 @@ quickInfo:
   durationMin: 90
   budget: low
 area: tokyo
-legacyHero: /hero/family-dinner-02.png
 ---
 
 **結論：しゃぶ葉は3歳以下無料・小学生半額の家族向け食べ放題。離乳食持ち込みOK店舗多数で子連れに優しい設計です。**

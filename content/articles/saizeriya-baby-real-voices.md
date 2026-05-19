@@ -20,7 +20,6 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
-legacyHero: /hero/family-dinner-02.png
 ---
 
 ベビーカーでサイゼに入った家庭の声を統合すると、「平日昼なら高確率で入れる／混雑帯は工夫が必要」というのが全体像でした。

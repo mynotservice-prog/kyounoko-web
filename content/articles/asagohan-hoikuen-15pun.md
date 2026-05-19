@@ -18,7 +18,6 @@ quickInfo:
   durationMin: 15
   budget: low
 lede: 朝起きて15分で「作る→食べる→片付ける」まで終わる朝ごはんの献立7パターン。前夜の1工程仕込みと冷凍ストックを組み合わせれば、月〜日で飽きずに回ります。
-legacyHero: /hero/food-fruit-02.png
 youtubeSearch: '保育園 朝ごはん 15分 時短'
 ---
 

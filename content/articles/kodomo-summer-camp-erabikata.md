@@ -18,7 +18,6 @@ quickInfo:
   durationMin: 480
   budget: high
 area: all
-legacyHero: /hero/nature-03.png
 ---
 
 ## 結論（先に知りたい人へ）

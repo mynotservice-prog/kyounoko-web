@@ -19,7 +19,6 @@ quickInfo:
   weather: []
   budget: mid
 lede: ベビーカーはA型・B型・バギーで用途が全然違います。都心徒歩派・電車通勤・車メイン・セカンドバギー派それぞれの選び方と、ブランド別の予算を整理しました。
-legacyHero: /hero/stroller-03.png
 ---
 
 ## 結論（先に知りたい人へ）

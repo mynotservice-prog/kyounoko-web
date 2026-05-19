@@ -19,7 +19,6 @@ quickInfo:
   durationMin: 30
   budget: low
 area: all
-legacyHero: /hero/kid-study-03.png
 ---
 
 ## TL;DR（先に結論）

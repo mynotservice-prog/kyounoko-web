@@ -18,7 +18,6 @@ quickInfo:
   budget: mid
 lede: >-
   外食で「子が食べない」問題を防ぐには、店選びの段階で勝負が決まっています。チェック項目5つと、実際に食べる子連れOK店10選で、外食ストレスを減らしましょう。
-legacyHero: /hero/family-dinner-01.png
 ---
 
 ## 結論（先に知りたい人へ）

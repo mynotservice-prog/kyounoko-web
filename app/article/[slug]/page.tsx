@@ -30,6 +30,7 @@ import { getExtraSchemasForArticle } from '@/lib/article-schema-enhancers';
 import { buildStationLinkForArticle } from '@/lib/article-station-link';
 import { getRelatedPlansForArticle } from '@/lib/cross-links';
 import { CrossLinkCards } from '@/components/article/CrossLinkCards';
+import { SituationFallback } from '@/components/article/SituationFallback';
 import { YouTubeEmbed } from '@/components/article/YouTubeEmbed';
 import { YouTubeSearchLink } from '@/components/article/YouTubeSearchLink';
 import { PersonalizedHint } from '@/components/common/PersonalizedHint';
@@ -416,6 +417,9 @@ export default async function ArticlePage({ params }: Props) {
           </section>
         )}
 
+        {/* 困った別解（回遊強化＋未登録記事への内部リンク獲得） */}
+        <SituationFallback />
+
         {/* Author box */}
         {article.author && (
           <section
@@ -546,7 +550,16 @@ function FileArticleView({ article }: { article: FileArticle }) {
   const updatedLabel = formatJaDate(article.updatedAt);
   const showUpdated = publishedLabel !== updatedLabel;
   const affiliateProducts = getAffiliateProducts(article.slug);
-  const hasAffiliate = affiliateProducts.length > 0;
+  // hasAffiliate は次のいずれかで true:
+  //   1. affiliate-products.ts に登録された記事（カード表示あり）
+  //   2. 記事本文に楽天/Amazon/もしも/A8/バリュコマ等のアフィリエイト系URLが含まれる
+  // これにより、affiliate-products.ts に未登録だが本文に楽天URLを含む記事
+  // （楽天ランキング系の記事など）でも PRBadge を強制表示する → ステマ規制・AdSense ポリシー対応。
+  const bodyHasAffiliateUrl =
+    /(?:amzn\.to|amazon\.co\.jp\/[^\s"<]*tag=|item\.rakuten\.co\.jp|search\.rakuten\.co\.jp|hb\.afl\.rakuten|afl\.moshimo\.com|a8\.net|valuecommerce\.ne\.jp|px\.a8\.net|tg\.socdm\.com|booking\.com)/i.test(
+      article.body || ''
+    );
+  const hasAffiliate = affiliateProducts.length > 0 || bodyHasAffiliateUrl;
 
   // 記事内インライン CTA 用：
   //   - アフィ対象記事なら先頭商品を、そうでなければキーワード推定の先頭商品を1点だけ使う。

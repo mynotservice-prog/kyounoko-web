@@ -16,7 +16,6 @@ quickInfo:
   weather: []
   budget: free
 lede: 子が「習い事を辞めたい」と言った時、親が取るべき3パターンの対処法。判断基準、親の陥りがちな罠、先生への相談、辞めた後のメンタルフォローを解説。
-legacyHero: /hero/classroom-03.png
 ---
 
 ## 結論（先に知りたい人へ）

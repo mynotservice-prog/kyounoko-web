@@ -19,7 +19,6 @@ quickInfo:
   durationMin: 30
   budget: low
 area: all
-legacyHero: /hero/parent-child-02.png
 ---
 
 ## ⚡ ひと目でわかる｜感覚過敏対応サマリー
