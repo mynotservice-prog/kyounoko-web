@@ -1,8 +1,8 @@
 {
   "$schema": "Scheduled-task state file for 旅行中 autonomous work.",
   "$description": "Claude scheduled task が2時間おきにこのファイルを読み、queue から1記事ピック→作業→state更新する。",
-  "last_run_at": "2026-05-19T00:00:00.000Z",
-  "cycles_completed": 1,
+  "last_run_at": "2026-05-19T05:16:49.000Z",
+  "cycles_completed": 2,
 
   "queues": {
     "new_articles": [
@@ -12,7 +12,8 @@
         "keywords": ["父の日 プレゼント 手作り 子ども", "父の日 工作 2歳", "父の日 メッセージカード 幼児"],
         "category": "gyouji",
         "target_publish": "2026-05-25",
-        "image_prompt_hint": "warm illustration of small Japanese child holding a handmade father's day card, soft watercolor"
+        "image_prompt_hint": "warm illustration of small Japanese child holding a handmade father's day card, soft watercolor",
+        "note": "既存 chichinohi-purezento-kodomo-tedukuri と内容が近接。書く場合は『幼稚園・保育園で作れる』角度＋園での工程感に明確な差別化が必要"
       },
       {
         "slug": "tsuyu-ie-asobi-0-6sai-15pattern",
@@ -20,7 +21,8 @@
         "keywords": ["梅雨 室内遊び 子供", "雨の日 家遊び 1歳 2歳", "梅雨 おうち遊び 幼児"],
         "category": "today-nani",
         "target_publish": "2026-05-28",
-        "image_prompt_hint": "warm illustration of toddler playing indoors with toys near a rainy window, cozy living room, soft watercolor"
+        "image_prompt_hint": "warm illustration of toddler playing indoors with toys near a rainy window, cozy living room, soft watercolor",
+        "note": "tsuyu-0-1sai-sugoshikata / tsuyu-1-2sai-ie-asobi-30 / tsuyu-4-6sai-shitsunai-asobi-10 の3記事を統合するハブ的pillar記事として書ける"
       },
       {
         "slug": "tanabata-kazari-tedukuri-0-6sai-7shurui",
@@ -29,22 +31,6 @@
         "category": "gyouji",
         "target_publish": "2026-06-02",
         "image_prompt_hint": "warm illustration of small child making Tanabata paper decorations with parent, bamboo branches, soft pastel colors"
-      },
-      {
-        "slug": "yayoiken-vs-saize-kodzure-douchi",
-        "title_draft": "やよい軒 vs サイゼリヤ｜子連れでどっちが使える？年齢別・予算別の使い分け【2026】",
-        "keywords": ["やよい軒 サイゼ 子連れ どっち", "ファミレス 子連れ 比較", "和食 イタリアン 子供 ランチ"],
-        "category": "today-taberu",
-        "target_publish": "2026-05-23",
-        "image_prompt_hint": "warm illustration of family deciding between two restaurants, mom holding toddler in front of restaurant signs"
-      },
-      {
-        "slug": "gusto-vs-jonathan-kodzure-douchi",
-        "title_draft": "ガスト vs ジョナサン｜すかいらーく系どっちが子連れ向き？離乳食・キッズ徹底比較【2026】",
-        "keywords": ["ガスト ジョナサン どっち", "すかいらーく系 子連れ", "ファミレス 離乳食 比較"],
-        "category": "today-taberu",
-        "target_publish": "2026-05-26",
-        "image_prompt_hint": "warm illustration of family with toddler at family restaurant table, food and high chair visible"
       },
       {
         "slug": "famires-kodzure-ranking-2026-10sen",
@@ -77,38 +63,6 @@
         "category": "today-taberu",
         "target_publish": "2026-06-05",
         "image_prompt_hint": "warm illustration of small child eating udon noodles with parent, casual restaurant"
-      },
-      {
-        "slug": "komeda-kodzure-koryaku",
-        "title_draft": "コメダ珈琲は子連れOK？モーニング・キッズプレート・ベビーカー入店・離乳食【2026】",
-        "keywords": ["コメダ 子連れ", "コメダ モーニング 子供", "コメダ ベビーカー"],
-        "category": "today-taberu",
-        "target_publish": "2026-05-27",
-        "image_prompt_hint": "warm illustration of family at retro Japanese coffee shop, toddler at table with morning toast"
-      },
-      {
-        "slug": "ootoya-kodzure-koryaku",
-        "title_draft": "大戸屋は子連れOK？ベビーカー・お子様セット・離乳食持込・取り分け鉄板【2026】",
-        "keywords": ["大戸屋 子連れ", "大戸屋 キッズメニュー", "大戸屋 ベビーカー"],
-        "category": "today-taberu",
-        "target_publish": "2026-05-29",
-        "image_prompt_hint": "warm illustration of family eating Japanese teishoku set meals together, toddler in high chair"
-      },
-      {
-        "slug": "matsuya-kodzure-koryaku",
-        "title_draft": "松屋は子連れOK？ベビーカー入店・お子様カレー・取り分け牛丼【2026】",
-        "keywords": ["松屋 子連れ", "松屋 子供", "松屋 ベビーカー"],
-        "category": "today-taberu",
-        "target_publish": "2026-06-02",
-        "image_prompt_hint": "warm illustration of parent with small child at gyudon restaurant counter"
-      },
-      {
-        "slug": "yoshinoya-kodzure-koryaku",
-        "title_draft": "吉野家は子連れOK？お子様セット・ベビーチェア・取り分け牛丼【2026】",
-        "keywords": ["吉野家 子連れ", "吉野家 お子様", "吉野家 ベビーチェア"],
-        "category": "today-taberu",
-        "target_publish": "2026-06-04",
-        "image_prompt_hint": "warm illustration of toddler eating gyudon with parent at family-friendly restaurant"
       }
     ],
 
@@ -144,7 +98,15 @@
     ],
 
     "indexnow_priority": [],
-    "image_generation_pending": ["starbucks-kodzure-koryaku"]
+    "image_generation_pending": [
+      "starbucks-kodzure-koryaku",
+      "yayoiken-vs-saize-kodzure-douchi",
+      "gusto-vs-jonathan-kodzure-douchi",
+      "komeda-kodzure-koryaku",
+      "ootoya-kodzure-koryaku",
+      "matsuya-kodzure-koryaku",
+      "yoshinoya-kodzure-koryaku"
+    ]
   },
 
   "quality_standards": {
