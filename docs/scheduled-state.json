@@ -1,19 +1,11 @@
 {
   "$schema": "Scheduled-task state file for 旅行中 autonomous work.",
   "$description": "Claude scheduled task が2時間おきにこのファイルを読み、queue から1記事ピック→作業→state更新する。",
-  "last_run_at": "2026-05-20T00:30:00.000Z",
-  "cycles_completed": 7,
+  "last_run_at": "2026-05-20T02:30:00.000Z",
+  "cycles_completed": 8,
 
   "queues": {
     "new_articles": [
-      {
-        "slug": "kaiten-sushi-chain-kodzure-5sha-hikaku",
-        "title_draft": "回転寿司5社 子連れ徹底比較｜スシロー・くら寿司・はま寿司・かっぱ寿司・がってん寿司",
-        "keywords": ["回転寿司 子連れ おすすめ", "回転寿司 キッズメニュー 比較", "スシロー くら寿司 子連れ"],
-        "category": "today-taberu",
-        "target_publish": "2026-06-03",
-        "image_prompt_hint": "warm illustration of family at conveyor sushi restaurant, kid watching plates moving"
-      },
       {
         "slug": "udon-chain-kodzure-4sha-hikaku",
         "title_draft": "うどんチェーン4社 子連れ比較｜丸亀製麺・はなまるうどん・東京麺通団・つるとんたん",
@@ -68,7 +60,8 @@
       "tsuyu-ie-asobi-0-6sai-15pattern",
       "famires-kodzure-ranking-2026-10sen",
       "tanabata-kazari-tedukuri-0-6sai-7shurui",
-      "yakiniku-chain-kodzure-5sha-hikaku"
+      "yakiniku-chain-kodzure-5sha-hikaku",
+      "kaiten-sushi-chain-kodzure-5sha-hikaku"
     ]
   },
 
