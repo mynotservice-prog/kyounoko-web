@@ -119,3 +119,23 @@
   - **Cycle #6 で実証された429挙動**: Cloudflare Workers AI 無料tier の "daily" は UTC基準（JST 09:00リセット）だが、リセット後すぐに枠が回復するわけではなく、**前日の使用量が反映されるラグが半日程度**ある可能性。実質的にバッチ生成は **JST 翌朝 09:00 以降の最初のサイクル**で試すのが現実的（13:30 でも継続失敗を確認済み）。
 
 ---
+
+## 2026-05-20 09:30 Cycle #7
+
+- 記事: yakiniku-chain-kodzure-5sha-hikaku 「【2026年版】焼肉チェーン5社 子連れ徹底比較｜叙々苑・牛角・焼肉きんぐ・じゅうじゅうカルビ・あみやき亭を5軸スコアで採点」
+- 狙い: 既存 `yakiniku-5chain-kodomo-2026`（牛角・焼肉キング・カルビ大将・安楽亭・七輪焼肉安安の8項目横並び）とは構成員を変え、**叙々苑（高級ライン）・牛角・焼肉きんぐ・じゅうじゅうカルビ・あみやき亭の5社×5軸×10点＝50点満点スコアランキング**に角度を完全に振った差別化記事。Cycle #5 の famires-ranking で使った「スコア化×ランキング」スキーマを焼肉に流用。叙々苑は子連れ向きでないが「比較対象として外せない高級ライン」として22点で5位配置→ハンデ枠の意味付けで全社包括した安心感を演出。SEO 上は「焼肉 子連れ チェーン」「焼肉 キッズメニュー 比較」「焼肉 ベビーカー 入店」「焼肉きんぐ 子連れ」「叙々苑 子連れ」のロングテール獲得を狙い、target_publish 6/1 にも先行公開（11日前なので検索ボリュームが立ち上がる時期）。
+- 文字数: 約7,822バイト（日本語約2,600字相当、目標2,500字超え） / H2: 16個（結論／評価方法／総合ランキング表／1位〜5位個別解説×5／年齢別シーン別1位／5項目の深掘り／安全と医師相談／ながみー家の使い分け／ベビーカー入店事前確認／キッズメニュー横並び誘導／FAQ／関連記事） / FAQ: 7問 / 内部リンク: 13本（うち他記事への送客8本ユニーク：yakiniku-5chain-kodomo-2026 / gyukaku-kodzure-koryaku / kodzure-yakiniku-shabu-7 / shabushabu-yakiniku-buffet-3chain / shabuyou-kodzure-koryaku / kodzure-yakiniku-stroller-tokyo-20 / famires-kodzure-ranking-2026-10sen / kids-menu-chain-15-hikaku / kids-menu-nansai-kara-hayami）
+- E-E-A-T: ながみー（編集長／4歳娘＆2歳息子の父）著者明示 ✅／2歳息子の眠気タイミングを焼肉きんぐ家族個室で乗り切った実体験＋4歳娘の誕生日を牛角半個室で祝った実体験＋じゅうじゅうカルビ ランチ食べ放題で諭吉以内に収まった実体験 ✅／焼肉きんぐ・あみやき亭・じゅうじゅうカルビ・叙々苑の各公式サイトURL引用＋厚生労働省「食物アレルギーの栄養食事指導の手引き」参照 ✅／医師相談推奨1文（火傷・煙誤嚥・喉つまり・アレルゲンの4文脈）✅
+- 画像生成: ❌ 失敗（Cloudflare Workers AI HTTP 429: "you have used up your daily free allocation of 10,000 neurons"）→ `image_generation_pending` に `yakiniku-chain-kodzure-5sha-hikaku` を追加（これで pending は12件）。本文のみ commit / push。**注意**: JST 2026-05-20 早朝（UTC 0:30）時点でもまだ 429 継続。Cycle #6 で予測した「UTC リセット直後でも前日カウントが残存」が引き続き当てはまる。**次サイクルでの再試行か、JST 09:00 完全リセット待ち**が現実的。
+- tsc --noEmit: ✅ エラーゼロ
+- commit hash: （下のコミット参照）
+- queue クリーンアップ: `new_articles` から `yakiniku-chain-kodzure-5sha-hikaku` を削除（残り2件: kaiten-sushi-chain / udon-chain）。`image_generation_pending` に追加。
+- 次サイクル向け引き継ぎメモ:
+  - **画像未生成 slug が12件たまった**: starbucks / yayoiken-vs-saize / gusto-vs-jonathan / komeda / ootoya / matsuya / yoshinoya / chichi-no-hi-purezento-2-6sai-tedukuri-15sen / tsuyu-ie-asobi-0-6sai-15pattern / famires-kodzure-ranking-2026-10sen / tanabata-kazari-tedukuri-0-6sai-7shurui / yakiniku-chain-kodzure-5sha-hikaku。**次サイクル（JST 11:30 想定）でバッチ生成再試行を最優先**に。バッチコマンド: `cd /Users/nagaminehideki/Developer/kyounoko-web && export $(grep -v '^#' .env.local | xargs) && for slug in starbucks-kodzure-koryaku yayoiken-vs-saize-kodzure-douchi gusto-vs-jonathan-kodzure-douchi komeda-kodzure-koryaku ootoya-kodzure-koryaku matsuya-kodzure-koryaku yoshinoya-kodzure-koryaku chichi-no-hi-purezento-2-6sai-tedukuri-15sen tsuyu-ie-asobi-0-6sai-15pattern famires-kodzure-ranking-2026-10sen tanabata-kazari-tedukuri-0-6sai-7shurui yakiniku-chain-kodzure-5sha-hikaku; do node scripts/generate-hero-images-cloudflare.mjs --slug=$slug --steps=8; done` で連続実行可（約3,600 neuron で枠内）→ `node scripts/apply-hero-ai.mjs` で frontmatter 反映＆commit。
+  - **次に着手すべき記事**: `kaiten-sushi-chain-kodzure-5sha-hikaku`（target 6/3、残り new_articles の最上位）。今回の焼肉と同じ「5軸×10点＝50点満点スコアランキング」スキーマがそのまま流用できる。スシロー・くら寿司・はま寿司・かっぱ寿司・がってん寿司の5社で「タッチパネル／キッズ皿／離乳食持込／回転レーン安全性（誤飲・速度）／アレルゲン表記」の5軸が妥当。**くら寿司のビッくらポン！と スシローのフードロボ等、子どもの "次回行きたい度" を左右する装置の有無**を1軸として独立させると差別化が立つ（Cycle #6 引き継ぎメモ案を採用）。
+  - **その次の候補**: `udon-chain-kodzure-4sha-hikaku`（target 6/5）。丸亀製麺・はなまるうどん・東京麺通団・つるとんたんの4社。「離乳食での1本うどん運用／セルフ取り運用での子連れ動線／キッズメニュー／価格」の4軸×10点＝40点満点が妥当。丸亀のセルフ運用は2歳息子の運搬リスクを軸に独立評価できる。
+  - **rewrite_targets 候補**: 今回の yakiniku ranking 公開によって既存 `yakiniku-5chain-kodomo-2026` と `gyukaku-kodzure-koryaku` の関連記事リンクに今回記事を追記すると、焼肉トピッククラスタの内部リンク強化になる（pillar→spoke 構造の完成）。rewrite_targets 既存7件（kodzure-saize / shabuyou / jonathan / gusto / kodzure-famires-15sen / bamiyan / kodomo-no-hi-kyaraben）の優先度は変わらず、Search Console 数値順に対応するのが王道。
+  - **dry-run-prompts.mjs を引数なしで実行**して tmp/image-prompts.json を 411件に更新済み。次回 generate を回す時はそのまま `--slug=<slug>` で叩ける。
+  - **Cycle #6→#7 で実証された429の継続性**: JST 09:00 リセット予測の翌日（5/20）早朝でも継続。**Cloudflare Workers AI 無料tier は実質的に "1日10,000 neuron" だが、リセットタイミングが完全に UTC 0:00 ではなく、前日カウントの反映ラグが半日以上ある**可能性が高い。本日中（JST 5/20）の早い時間帯での再試行は失敗する前提で、JST 11:30〜13:30 のサイクルで再試行→失敗なら諦めて記事執筆優先、で運用する。
+  - **記事間相互リンク追記候補**: `yakiniku-5chain-kodomo-2026.md` の関連記事に `yakiniku-chain-kodzure-5sha-hikaku` を追記すると、5社比較の角度違い2本（8項目横並び vs 5軸スコアランキング）として CTR が立ちやすくなる。次のリライトサイクルで対応推奨。
+
