@@ -1,8 +1,8 @@
 {
   "$schema": "Scheduled-task state file for 旅行中 autonomous work.",
   "$description": "Claude scheduled task が2時間おきにこのファイルを読み、queue から1記事ピック→作業→state更新する。",
-  "last_run_at": "2026-05-20T21:13:12.000Z",
-  "cycles_completed": 22,
+  "last_run_at": "2026-05-20T23:13:53.000Z",
+  "cycles_completed": 23,
 
   "queues": {
     "new_articles": [],
@@ -30,7 +30,8 @@
       "shabushabu-chain-kodzure-ranking-2026-5sha",
       "bento-takeout-chain-kodzure-4sha",
       "conveni-kodzure-kids-shokuzai-4sha",
-      "ramen-chain-kodzure-ranking-2026-5sha"
+      "ramen-chain-kodzure-ranking-2026-5sha",
+      "mochikaeri-sushi-chain-kodzure-4sha"
     ]
   },
 
