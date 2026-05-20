@@ -1,17 +1,13 @@
 {
   "$schema": "Scheduled-task state file for 旅行中 autonomous work.",
   "$description": "Claude scheduled task が2時間おきにこのファイルを読み、queue から1記事ピック→作業→state更新する。",
-  "last_run_at": "2026-05-20T14:30:00.000Z",
-  "cycles_completed": 14,
+  "last_run_at": "2026-05-20T16:30:00.000Z",
+  "cycles_completed": 15,
 
   "queues": {
     "new_articles": [],
 
     "rewrite_targets": [
-      {
-        "slug": "bamiyan-kodzure-koryaku",
-        "reason": "Search Console: 168imp / CTR 2.4%。1〜2歳向けメニューを明示、餃子アレルゲン情報を独立節に"
-      },
       {
         "slug": "kodomo-no-hi-kyaraben",
         "reason": "Search Console: 156imp / CTR 2.6%。実例写真の代替テキスト、こいのぼり弁当の段取りを HowTo schema 化"
