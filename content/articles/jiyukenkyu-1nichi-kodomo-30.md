@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう過ごす？
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/natsu-yasumi-kodomo-asobi-ie-de.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/jiyukenkyu-1nichi-kodomo-30.jpg
 lede: >-
   自由研究は夏休み終盤の最大の壁。本記事は「1日で完結する」ことだけにフォーカスした30アイデアを、理科・社会・工作・料理・観察・体験の6カテゴリで紹介。学年別の難易度、まとめ方テンプレ、写真の撮り方、提出までのスケジュールまで網羅しました。
 quickInfo:
@@ -20,6 +20,7 @@ quickInfo:
   durationMin: 30
   budget: low
 area: all
+legacyHero: /hero-ai/natsu-yasumi-kodomo-asobi-ie-de.webp
 ---
 
 ## TL;DR（先に知りたい人へ）

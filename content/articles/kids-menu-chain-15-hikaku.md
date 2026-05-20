@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/kodzure-famires-15sen.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kids-menu-chain-15-hikaku.jpg
 lede: >-
   「結局どのチェーンのキッズメニューが一番うちの子に合う？」を1ページで解決。**価格・対象年齢・アレルゲン・取り分け可否・ドリンクバー無料年齢**を15チェーン横並びで比較し、0-6歳の家族目線で最適な選び方を提示します。
 quickInfo:
@@ -22,6 +22,7 @@ quickInfo:
   durationMin: 90
   budget: low
 area: tokyo
+legacyHero: /hero-ai/kodzure-famires-15sen.webp
 ---
 
 **結論：価格最安狙いはサイゼリヤ・バーミヤン、栄養バランス重視ならジョナサン・ロイヤルホスト、量で選ぶならココス・デニーズ。0-2歳は「取り分け派」、3-6歳は「キッズメニュー派」が基本戦略です。**

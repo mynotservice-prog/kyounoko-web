@@ -1,13 +1,12 @@
 ---
 slug: yoshinoya-kodzure-koryaku
 title: 吉野家は子連れOK？ベビーカー・キッズメニュー・牛皿/ミニ盛り・離乳食【2026】
-metaDescription: >-
-  吉野家はベビーカーで入れる？キッズ牛丼セット、牛皿(取り分け用)、ベビーチェア、ロードサイド店vs駅前店の使い分け、離乳食持込まで0-6歳家族目線で解説。
+metaDescription: 吉野家はベビーカーで入れる？キッズ牛丼セット、牛皿(取り分け用)、ベビーチェア、ロードサイド店vs駅前店の使い分け、離乳食持込まで0-6歳家族目線で解説。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/sukiya-kodzure-koryaku.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/yoshinoya-kodzure-koryaku.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -22,7 +21,8 @@ quickInfo:
   budget: low
 lede: >-
   「吉野家は子連れOK？ベビーカーで席まで入れる？」を1記事で解決。吉野家はキッズ牛丼セット・牛皿(取り分け用)・ライス小盛りといった子連れに使えるメニューが揃い、店舗形態が「駅前店」と「ロードサイド店」で大きく違うため使い分けがポイントです。0-6歳の家族目線で、店舗タイプ別の立ち回り、年齢別の食べさせ方、アタマ大盛り・つゆだく等のオーダー活用まで保存版でまとめました。
-youtubeSearch: '吉野家 子連れ ベビーカー'
+youtubeSearch: 吉野家 子連れ ベビーカー
+legacyHero: /hero-ai/sukiya-kodzure-koryaku.webp
 ---
 
 **結論：吉野家はキッズ牛丼セット・牛皿(取り分け用)・ライス小盛りが揃い、ロードサイド店ならベビーカーで席まで入れる店舗が一般的。駅前カウンター店は時短利用向きで、店舗タイプを使い分けると0-6歳でも快適に利用できます。設備は店舗差があるので事前確認をおすすめします。**

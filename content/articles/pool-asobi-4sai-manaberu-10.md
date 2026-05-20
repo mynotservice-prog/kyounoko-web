@@ -1,12 +1,13 @@
 ---
 slug: pool-asobi-4sai-manaberu-10
 title: プール 4歳 学べる遊び10選｜兄妹で参加できる遊び方
-metaDescription: 4歳娘と2歳息子が一緒に楽しめるプール遊び10選。水慣れ・体幹・数の理解まで「遊びながら学べる」遊び方を、ながみー家の実体験で整理。家庭用プールでも公営プールでもそのまま使えます。
+metaDescription: >-
+  4歳娘と2歳息子が一緒に楽しめるプール遊び10選。水慣れ・体幹・数の理解まで「遊びながら学べる」遊び方を、ながみー家の実体験で整理。家庭用プールでも公営プールでもそのまま使えます。
 category: today-nani
 categoryName: 今日なにする
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-lede: 'プールはただ入るだけでなく、遊び方次第で学びの宝庫。4歳娘と2歳息子が一緒に楽しめる10の遊びを、安全配慮と兄妹差込みで紹介します。'
+updatedAt: '2026-05-20'
+lede: プールはただ入るだけでなく、遊び方次第で学びの宝庫。4歳娘と2歳息子が一緒に楽しめる10の遊びを、安全配慮と兄妹差込みで紹介します。
 quickInfo:
   ageRanges:
     - 2-3
@@ -18,6 +19,7 @@ quickInfo:
   durationMin: 60
   budget: low
 area: all
+hero: /hero-ai/pool-asobi-4sai-manaberu-10.jpg
 ---
 
 ## TL;DR（先に知りたい人へ）

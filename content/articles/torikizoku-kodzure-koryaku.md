@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/kodzure-morning-cafe-10.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/torikizoku-kodzure-koryaku.jpg
 lede: >-
   「鳥貴族って子連れで入れる？焼き鳥は何歳から？煙とか大丈夫？」を1記事で解決。**全品税込350円均一**の焼き鳥チェーンとして知られる鳥貴族は、**17時開店すぐの早めディナー**を狙えば子連れでもリーズナブルに楽しめる選択肢です。串焼きはタンパク質源として子の取り分けに優秀で、家族3-4人でも安価に満足度の高い夕食が組めます。0-6歳のお子様連れで鳥貴族を最大限活用するコツを保存版でまとめました。
 quickInfo:
@@ -21,6 +21,7 @@ quickInfo:
   durationMin: 75
   budget: low
 area: tokyo
+legacyHero: /hero-ai/kodzure-morning-cafe-10.webp
 ---
 
 **結論：鳥貴族は子連れOK（早めディナーが現実解）。全品税込350円の焼き鳥チェーンで、17時開店すぐ＋座敷席またはテーブル席なら子連れでも楽しめる、家計にやさしい夕食オプションです。**

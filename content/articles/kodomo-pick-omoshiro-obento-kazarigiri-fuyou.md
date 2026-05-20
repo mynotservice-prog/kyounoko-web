@@ -1,12 +1,13 @@
 ---
 slug: kodomo-pick-omoshiro-obento-kazarigiri-fuyou
-title: "飾り切り不要・ピックで作るオモシロお弁当｜不器用さん向け3秒テクで子も大喜び"
-metaDescription: "ハム花や卵キャラの飾り切りは一切不要、ピックを刺すだけで子受け抜群の彩りお弁当が完成します。彩り・栄養・速さを同時に取れる時短テク。アレルゲンと月齢適性も明示した、不器用さん救済のながみー家定番お弁当レシピです。"
+title: 飾り切り不要・ピックで作るオモシロお弁当｜不器用さん向け3秒テクで子も大喜び
+metaDescription: >-
+  ハム花や卵キャラの飾り切りは一切不要、ピックを刺すだけで子受け抜群の彩りお弁当が完成します。彩り・栄養・速さを同時に取れる時短テク。アレルゲンと月齢適性も明示した、不器用さん救済のながみー家定番お弁当レシピです。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-sweet-01.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-pick-omoshiro-obento-kazarigiri-fuyou.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -17,8 +18,10 @@ quickInfo:
   weather: []
   durationMin: 5
   budget: low
-lede: "結論、飾り切り技術ゼロでも、ピック1本で「映えお弁当」は作れます。3秒刺すだけで彩り・栄養・かわいさが同時に揃う、不器用さん救済テク。ながみー家の幼稚園お弁当で4歳娘から圧倒的支持を得ているレシピです。"
-youtubeSearch: 'ピック お弁当 簡単 デコ'
+lede: >-
+  結論、飾り切り技術ゼロでも、ピック1本で「映えお弁当」は作れます。3秒刺すだけで彩り・栄養・かわいさが同時に揃う、不器用さん救済テク。ながみー家の幼稚園お弁当で4歳娘から圧倒的支持を得ているレシピです。
+youtubeSearch: ピック お弁当 簡単 デコ
+legacyHero: /hero-ai/cat-food-sweet-01.jpg
 ---
 
 ## TL;DR｜30秒でわかる答え

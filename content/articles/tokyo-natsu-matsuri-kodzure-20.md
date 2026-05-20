@@ -5,8 +5,8 @@ metaDescription: 東京+関東の子連れOK夏祭り20選。屋台の楽しみ�
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/natsuyasumi-jiyu-kenkyu-1nichi-10.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/tokyo-natsu-matsuri-kodzure-20.jpg
 lede: >-
   夏祭り・縁日・盆踊りは、子供にとって「夏休みの記憶の核」になる体験。とはいえ屋台の人波・暑さ・迷子リスクは想像以上で、対策なしで突入すると親が消耗します。東京+関東の子連れフレンドリーな夏祭り20選と、屋台攻略3戦略・迷子対策・月齢別ガイドを0〜6歳目線でまとめました。
 quickInfo:
@@ -20,6 +20,7 @@ quickInfo:
   durationMin: 180
   budget: low
 area: tokyo
+legacyHero: /hero-ai/natsuyasumi-jiyu-kenkyu-1nichi-10.webp
 ---
 
 ## TL;DR（先に結論）

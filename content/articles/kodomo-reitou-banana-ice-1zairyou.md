@@ -1,13 +1,12 @@
 ---
 slug: kodomo-reitou-banana-ice-1zairyou
 title: 冷凍バナナアイス｜材料1つの子供おやつレシピ
-metaDescription: >-
-  冷凍バナナをミキサーにかけるだけの材料1つのアイス。砂糖・乳製品不使用、1歳から食べられる。アレルゲンと月齢適性も明示。
+metaDescription: 冷凍バナナをミキサーにかけるだけの材料1つのアイス。砂糖・乳製品不使用、1歳から食べられる。アレルゲンと月齢適性も明示。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-fruit-02.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-reitou-banana-ice-1zairyou.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,9 +18,9 @@ quickInfo:
   weather: []
   durationMin: 5
   budget: low
-lede: >-
-  材料は完熟バナナだけ。冷凍してミキサーやフォークで潰せばクリーミーなアイスに変身する、罪悪感ゼロ・1歳卒業期からOKの自然派おやつです。
-youtubeSearch: '冷凍バナナ アイス 材料1つ'
+lede: 材料は完熟バナナだけ。冷凍してミキサーやフォークで潰せばクリーミーなアイスに変身する、罪悪感ゼロ・1歳卒業期からOKの自然派おやつです。
+youtubeSearch: 冷凍バナナ アイス 材料1つ
+legacyHero: /hero-ai/cat-food-fruit-02.webp
 ---
 
 ## TL;DR｜30秒でわかる答え

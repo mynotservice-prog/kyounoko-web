@@ -1,12 +1,13 @@
 ---
 slug: natsuyasumi-hirugohan-mainichi-idea-20
 title: 夏休みのお昼ご飯 毎日違うアイデア20選｜2歳と4歳の食べ方差
-metaDescription: 夏休みのお昼ご飯ネタを20パターン、ながみー家が4歳娘と2歳息子で実際に回したリアル順で公開。年齢差による食べ方の違いと、毎日違うレパートリーで親が消耗しない設計を共有します。
+metaDescription: >-
+  夏休みのお昼ご飯ネタを20パターン、ながみー家が4歳娘と2歳息子で実際に回したリアル順で公開。年齢差による食べ方の違いと、毎日違うレパートリーで親が消耗しない設計を共有します。
 category: today-taberu
 categoryName: 今日何食べる
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-lede: '夏休み40日間、毎日お昼ご飯を考えるのは精神的に重い作業。我が家の4歳娘+2歳息子が完食したお昼ご飯20パターンを、所要時間と兄妹差つきで整理しました。'
+updatedAt: '2026-05-20'
+lede: 夏休み40日間、毎日お昼ご飯を考えるのは精神的に重い作業。我が家の4歳娘+2歳息子が完食したお昼ご飯20パターンを、所要時間と兄妹差つきで整理しました。
 quickInfo:
   ageRanges:
     - 2-3
@@ -18,6 +19,7 @@ quickInfo:
   durationMin: 30
   budget: low
 area: all
+hero: /hero-ai/natsuyasumi-hirugohan-mainichi-idea-20.jpg
 ---
 
 ## TL;DR（先に知りたい人へ）

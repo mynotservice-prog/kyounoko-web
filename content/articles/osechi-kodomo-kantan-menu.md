@@ -1,13 +1,12 @@
 ---
 slug: osechi-kodomo-kantan-menu
 title: 子供と楽しむおせち料理｜年齢別おすすめメニュー&簡単アレンジ10種【0-6歳】
-metaDescription: >-
-  子供と楽しむおせち料理。年齢別おすすめメニュー、簡単アレンジ、市販おせちの活用、アレルゲン配慮、お重詰めの基本まで0-6歳家族目線で完全解説。
+metaDescription: 子供と楽しむおせち料理。年齢別おすすめメニュー、簡単アレンジ、市販おせちの活用、アレルゲン配慮、お重詰めの基本まで0-6歳家族目線で完全解説。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/hahanohi-purezento-kodomo-tedukuri.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/osechi-kodomo-kantan-menu.jpg
 quickInfo:
   ageRanges:
     - 0-1
@@ -20,6 +19,7 @@ quickInfo:
   durationMin: 120
   budget: low
 area: tokyo
+legacyHero: /hero-ai/hahanohi-purezento-kodomo-tedukuri.webp
 ---
 
 ## TL;DR（先に結論）

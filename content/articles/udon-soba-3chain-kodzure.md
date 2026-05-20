@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
+updatedAt: '2026-05-20'
 area: all
 lede: >-
   「うどんなら子連れでも入りやすい」のは本当か。**ベビーカー入店・キッズチェア・キッズメニュー・取り分け・離乳食持込・おむつ替え・個室・価格帯**の8項目で、丸亀製麺・はなまるうどん・富士そばを◎○△✕評価し、子連れ最強の選択肢を整理しました。
@@ -21,6 +21,7 @@ quickInfo:
     - any
   durationMin: 30
   budget: low
+hero: /hero-ai/udon-soba-3chain-kodzure.jpg
 ---
 
 ## TL;DR（先に知りたい人へ）

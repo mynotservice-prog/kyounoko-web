@@ -1,13 +1,12 @@
 ---
 slug: kodomo-banana-kinako-yogurt-1sai-asagohan
 title: バナナきな粉ヨーグルト｜1歳〜の3分朝食レシピ
-metaDescription: >-
-  1歳から食べられるバナナ・きな粉・ヨーグルトを混ぜるだけの3分朝食。たんぱく質・カルシウム・食物繊維が同時に取れる時短レシピ。アレルゲンと月齢適性も明示。
+metaDescription: 1歳から食べられるバナナ・きな粉・ヨーグルトを混ぜるだけの3分朝食。たんぱく質・カルシウム・食物繊維が同時に取れる時短レシピ。アレルゲンと月齢適性も明示。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-fruit-02.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-banana-kinako-yogurt-1sai-asagohan.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,7 +19,8 @@ quickInfo:
   budget: low
 lede: >-
   1歳の朝食デビューにぴったりな3分メニュー。バナナの自然な甘みときな粉のたんぱく質、ヨーグルトのカルシウムが一皿で揃い、スプーン1本で食べさせやすい構成です。
-youtubeSearch: 'バナナ きな粉 ヨーグルト 朝ごはん'
+youtubeSearch: バナナ きな粉 ヨーグルト 朝ごはん
+legacyHero: /hero-ai/cat-food-fruit-02.webp
 ---
 
 ## TL;DR｜30秒でわかる答え

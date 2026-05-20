@@ -1,12 +1,13 @@
 ---
 slug: kodomo-netsuchusho-3sain-real-2026
 title: 子ども熱中症｜親が見るべき初期サイン3つ（2歳と4歳の違い）
-metaDescription: 2026年の暑い夏、4歳娘と2歳息子それぞれで違う熱中症の初期サイン3つを、ながみー家の実体験ベースで整理。「言葉で訴えない子」「ぼーっとする子」のリアルなサインと親の動き方を共有します。
+metaDescription: >-
+  2026年の暑い夏、4歳娘と2歳息子それぞれで違う熱中症の初期サイン3つを、ながみー家の実体験ベースで整理。「言葉で訴えない子」「ぼーっとする子」のリアルなサインと親の動き方を共有します。
 category: today-nani
 categoryName: 今日なにする
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-lede: '熱中症のサインは年齢で出方が変わります。2歳息子は「機嫌」、4歳娘は「口数」。ながみー家が公園で実際に拾った初期サイン3つと、その場の動き方を共有します。'
+updatedAt: '2026-05-20'
+lede: 熱中症のサインは年齢で出方が変わります。2歳息子は「機嫌」、4歳娘は「口数」。ながみー家が公園で実際に拾った初期サイン3つと、その場の動き方を共有します。
 quickInfo:
   ageRanges:
     - 0-1
@@ -19,6 +20,7 @@ quickInfo:
   durationMin: 5
   budget: free
 area: all
+hero: /hero-ai/kodomo-netsuchusho-3sain-real-2026.jpg
 ---
 
 ## TL;DR（先に知りたい人へ）

@@ -1,12 +1,13 @@
 ---
 slug: kodomo-udon-suki-hakusai-butabara-tamago
-title: "うどんすき｜白菜豚バラ卵で15分・鍋1つ完結の家族取り分けレシピ"
-metaDescription: "出汁の旨味で白菜と豚バラを煮込み卵でとじるうどんすき。鍋1つ・15分で炭水化物・たんぱく質・野菜が同時に取れる完結メニュー。アレルゲン・月齢適性を明示した、ながみー家の平日夜を救う取り分けOKの救済夕食レシピです。"
+title: うどんすき｜白菜豚バラ卵で15分・鍋1つ完結の家族取り分けレシピ
+metaDescription: >-
+  出汁の旨味で白菜と豚バラを煮込み卵でとじるうどんすき。鍋1つ・15分で炭水化物・たんぱく質・野菜が同時に取れる完結メニュー。アレルゲン・月齢適性を明示した、ながみー家の平日夜を救う取り分けOKの救済夕食レシピです。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-japan-03.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-udon-suki-hakusai-butabara-tamago.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -17,7 +18,9 @@ quickInfo:
   weather: []
   durationMin: 15
   budget: low
-lede: "結論、平日夜の主食・主菜・野菜は鍋1つ15分で揃います。出汁で白菜と豚バラを煮込み卵でとじるうどんすきは、家族取り分けOKの完結メニュー。2歳と4歳のスプーンが止まらない、ながみー家の救済夕食です。"
+lede: >-
+  結論、平日夜の主食・主菜・野菜は鍋1つ15分で揃います。出汁で白菜と豚バラを煮込み卵でとじるうどんすきは、家族取り分けOKの完結メニュー。2歳と4歳のスプーンが止まらない、ながみー家の救済夕食です。
+legacyHero: /hero-ai/cat-food-japan-03.jpg
 ---
 
 ## TL;DR｜30秒でわかる答え

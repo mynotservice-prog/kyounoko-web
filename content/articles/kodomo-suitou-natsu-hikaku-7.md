@@ -6,8 +6,8 @@ metaDescription: >-
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/natsu-yasumi-kodomo-asobi-ie-de.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-suitou-natsu-hikaku-7.jpg
 lede: >-
   子供の水筒は「容量・素材・飲み口」の3つの軸で選びます。保育園は300〜500ml、年長で500〜600ml、小学校低学年で600〜800ml、高学年で800〜1000mlが一般的な目安。本記事ではステンレス・プラ・ガラスの素材比較、ストロー・直飲み・コップの違い、保温性能、お手入れまで解説します。
 quickInfo:
@@ -22,6 +22,7 @@ quickInfo:
   durationMin: 30
   budget: low
 area: all
+legacyHero: /hero-ai/natsu-yasumi-kodomo-asobi-ie-de.webp
 ---
 
 ## TL;DR（先に知りたい人へ）

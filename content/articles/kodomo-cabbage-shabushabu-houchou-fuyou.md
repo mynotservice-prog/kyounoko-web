@@ -1,13 +1,12 @@
 ---
 slug: kodomo-cabbage-shabushabu-houchou-fuyou
 title: 包丁不要キャベツしゃぶしゃぶ｜10分の夕食レシピ
-metaDescription: >-
-  包丁を使わず手でちぎるキャベツしゃぶしゃぶ。子供と一緒に作れる10分の夕食。アレルゲンと月齢適性も明示。
+metaDescription: 包丁を使わず手でちぎるキャベツしゃぶしゃぶ。子供と一緒に作れる10分の夕食。アレルゲンと月齢適性も明示。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-japan-02.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-cabbage-shabushabu-houchou-fuyou.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,9 +17,9 @@ quickInfo:
   weather: []
   durationMin: 10
   budget: low
-lede: >-
-  包丁ゼロで手で千切りキャベツを作り、薄切り豚肉と一緒に煮るだけのお手軽しゃぶしゃぶ。家族で「ちぎる」工程を共有でき、子の食育にもなります。
-youtubeSearch: 'キャベツ しゃぶしゃぶ 10分 簡単'
+lede: 包丁ゼロで手で千切りキャベツを作り、薄切り豚肉と一緒に煮るだけのお手軽しゃぶしゃぶ。家族で「ちぎる」工程を共有でき、子の食育にもなります。
+youtubeSearch: キャベツ しゃぶしゃぶ 10分 簡単
+legacyHero: /hero-ai/cat-food-japan-02.webp
 ---
 
 ## TL;DR｜30秒でわかる答え

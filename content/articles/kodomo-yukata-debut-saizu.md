@@ -1,12 +1,13 @@
 ---
 slug: kodomo-yukata-debut-saizu
 title: 子供の浴衣デビューは何歳から？サイズ選び・着付け5分・帯結び3パターン
-metaDescription: 子供の浴衣デビューは0歳〜OK。月齢別サイズ目安(80/90/100/110/120)、着付け5分の手順、帯結び3パターン、お祭り当日のトラブル対策、洗濯方法まで0-6歳の親目線で完全解説。
+metaDescription: >-
+  子供の浴衣デビューは0歳〜OK。月齢別サイズ目安(80/90/100/110/120)、着付け5分の手順、帯結び3パターン、お祭り当日のトラブル対策、洗濯方法まで0-6歳の親目線で完全解説。
 category: today-mawasu
 categoryName: 今日どう回す
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/hahanohi-purezento-kodomo-tedukuri.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-yukata-debut-saizu.jpg
 lede: >-
   子供の浴衣デビューは何歳から？答えは「0歳の甚平からOK」。月齢別の80〜120サイズ早見表、着付け5分の3ステップ、子供でも崩れにくい帯結び3パターン、お祭り当日のトイレ・着崩れ・暑さ対策まで、0〜6歳の親目線で迷わない手順をまとめます。
 quickInfo:
@@ -21,6 +22,7 @@ quickInfo:
   durationMin: 30
   budget: low
 area: all
+legacyHero: /hero-ai/hahanohi-purezento-kodomo-tedukuri.webp
 ---
 
 ## TL;DR（先に知りたい人へ）

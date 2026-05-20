@@ -1,13 +1,12 @@
 ---
 slug: uotami-kodzure-koryaku
 title: 魚民は子連れOK？ランチタイム・個室・キッズメニュー・座敷席【2026】
-metaDescription: >-
-  魚民は子連れで入れる？モンテローザ系居酒屋のランチ営業店、個室・座敷席、キッズメニュー、家族の集まりやランチ会の使い方を0-6歳家族目線で解説。
+metaDescription: 魚民は子連れで入れる？モンテローザ系居酒屋のランチ営業店、個室・座敷席、キッズメニュー、家族の集まりやランチ会の使い方を0-6歳家族目線で解説。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/kodzure-morning-cafe-10.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/uotami-kodzure-koryaku.jpg
 lede: >-
   「魚民って子連れで入れる？個室は？ランチはやってる？」を1記事で解決。**モンテローザグループの代表居酒屋業態**で、**個室・座敷席が豊富**なため、実はファミリー利用との相性が良いチェーンです。ランチ営業店舗を狙えば1,000円前後でお得に使え、夜は早めの時間帯に個室確保で誕生日会や法事の食事会にも活躍します。0-6歳のお子様連れで魚民を最大限活用するコツを保存版でまとめました。
 quickInfo:
@@ -22,6 +21,7 @@ quickInfo:
   durationMin: 90
   budget: low
 area: tokyo
+legacyHero: /hero-ai/kodzure-morning-cafe-10.webp
 ---
 
 **結論：魚民は子連れOK。モンテローザ系の代表居酒屋で、ランチ営業店舗・個室・座敷席が豊富。家族のお祝いや法事のランチ会に使いやすい和食居酒屋です。**

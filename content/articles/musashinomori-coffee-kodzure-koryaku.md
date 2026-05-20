@@ -1,13 +1,12 @@
 ---
 slug: musashinomori-coffee-kodzure-koryaku
 title: むさしの森珈琲は子連れOK？ベビーカー・パンケーキ・キッズメニュー・モーニング【2026】
-metaDescription: >-
-  むさしの森珈琲はベビーカーで入れる？すかいらーくのカフェ業態、ふわふわパンケーキ、キッズメニュー、ベビーチェア、モーニングまで0-6歳家族目線で解説。
+metaDescription: むさしの森珈琲はベビーカーで入れる？すかいらーくのカフェ業態、ふわふわパンケーキ、キッズメニュー、ベビーチェア、モーニングまで0-6歳家族目線で解説。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/kodzure-morning-cafe-10.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/musashinomori-coffee-kodzure-koryaku.jpg
 lede: >-
   「むさしの森珈琲って子連れで入れる？ベビーカーは？パンケーキは何歳から？」を1記事で解決。**すかいらーくグループの本格カフェ業態**で、コメダよりやや落ち着いた雰囲気と、ふわふわのリコッタパンケーキが看板。ロードサイド型店舗が多くベビーカーの取り回しがしやすい点も、子連れ家族には大きな魅力です。0-6歳のお子様連れでむさしの森珈琲を最大限活用するコツを保存版でまとめました。
 quickInfo:
@@ -22,6 +21,7 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
+legacyHero: /hero-ai/kodzure-morning-cafe-10.webp
 ---
 
 **結論：むさしの森珈琲は子連れOK。すかいらーくグループの本格カフェ業態で、ベビーチェア・キッズメニュー・離乳食持ち込みに柔軟対応。ふわふわパンケーキ＆モーニングが家族の朝活に最適です。**

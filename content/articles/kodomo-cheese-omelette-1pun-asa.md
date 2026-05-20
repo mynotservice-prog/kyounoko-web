@@ -1,13 +1,12 @@
 ---
 slug: kodomo-cheese-omelette-1pun-asa
 title: 朝オムレツ・チーズ入り｜1分卵焼きレシピ
-metaDescription: >-
-  1分でできるチーズ入りオムレツ。フライパン1つ・材料3つで朝のたんぱく質を確保。3歳から大人まで取り分けOKの時短レシピ。
+metaDescription: 1分でできるチーズ入りオムレツ。フライパン1つ・材料3つで朝のたんぱく質を確保。3歳から大人まで取り分けOKの時短レシピ。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-kitchen-01.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-cheese-omelette-1pun-asa.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,9 +17,9 @@ quickInfo:
   weather: []
   durationMin: 5
   budget: low
-lede: >-
-  材料3つ・フライパン1つで作る1分オムレツ。とろけるチーズで満足感を底上げし、朝のたんぱく質1回分をサクッと確保できます。
-youtubeSearch: 'チーズ オムレツ 朝ごはん 簡単'
+lede: 材料3つ・フライパン1つで作る1分オムレツ。とろけるチーズで満足感を底上げし、朝のたんぱく質1回分をサクッと確保できます。
+youtubeSearch: チーズ オムレツ 朝ごはん 簡単
+legacyHero: /hero-ai/cat-food-kitchen-01.webp
 ---
 
 ## TL;DR｜30秒でわかる答え

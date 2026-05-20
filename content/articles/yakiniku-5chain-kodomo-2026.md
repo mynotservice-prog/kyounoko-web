@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
+updatedAt: '2026-05-20'
 area: all
 lede: >-
   「焼肉に2歳と4歳を連れていって大丈夫？」を解消する1ページ。**ベビーカー入店・キッズチェア・キッズメニュー・取り分け・離乳食持込・おむつ替え・個室・価格帯**の8項目で、牛角・焼肉キング・カルビ大将・安楽亭・七輪焼肉安安を◎○△✕評価しました。
@@ -20,6 +20,7 @@ quickInfo:
     - any
   durationMin: 90
   budget: mid
+hero: /hero-ai/yakiniku-5chain-kodomo-2026.jpg
 ---
 
 ## TL;DR（先に知りたい人へ）

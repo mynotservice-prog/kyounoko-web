@@ -1,13 +1,12 @@
 ---
 slug: hatsumoude-kodzure-kanto-15
 title: 初詣 子連れ完全ガイド｜関東の安全スポット15選&ベビーカー動線・マナー
-metaDescription: >-
-  初詣の子連れ完全ガイド。関東の安全な神社15選、ベビーカー動線、混雑回避時間、参拝マナー、防寒対策、年齢別の参加方法まで0-6歳家族目線で。
+metaDescription: 初詣の子連れ完全ガイド。関東の安全な神社15選、ベビーカー動線、混雑回避時間、参拝マナー、防寒対策、年齢別の参加方法まで0-6歳家族目線で。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/hahanohi-purezento-kodomo-tedukuri.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/hatsumoude-kodzure-kanto-15.jpg
 quickInfo:
   ageRanges:
     - 0-1
@@ -20,6 +19,7 @@ quickInfo:
   durationMin: 120
   budget: low
 area: tokyo
+legacyHero: /hero-ai/hahanohi-purezento-kodomo-tedukuri.webp
 ---
 
 ## TL;DR（先に結論）

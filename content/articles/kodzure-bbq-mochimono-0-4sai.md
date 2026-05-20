@@ -1,12 +1,13 @@
 ---
 slug: kodzure-bbq-mochimono-0-4sai
 title: 子連れBBQ 何持っていく？0〜4歳向け持ち物リスト完全版
-metaDescription: 0〜4歳の子連れBBQで本当に必要だった持ち物を、4歳娘+2歳息子のながみー家が実体験ベースで整理。火傷・熱中症・退屈の3大リスクへの備えを含めて公開します。
+metaDescription: >-
+  0〜4歳の子連れBBQで本当に必要だった持ち物を、4歳娘+2歳息子のながみー家が実体験ベースで整理。火傷・熱中症・退屈の3大リスクへの備えを含めて公開します。
 category: today-doko
 categoryName: 今日どこいく
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-lede: '子連れBBQは食事の場ではなく「外で過ごす5時間の段取り」。0歳の昼寝、2歳の脱走、4歳の退屈。3つの軸で持ち物を組むと、現地で慌てません。'
+updatedAt: '2026-05-20'
+lede: 子連れBBQは食事の場ではなく「外で過ごす5時間の段取り」。0歳の昼寝、2歳の脱走、4歳の退屈。3つの軸で持ち物を組むと、現地で慌てません。
 quickInfo:
   ageRanges:
     - 0-1
@@ -19,6 +20,7 @@ quickInfo:
   durationMin: 300
   budget: mid
 area: all
+hero: /hero-ai/kodzure-bbq-mochimono-0-4sai.jpg
 ---
 
 ## TL;DR（先に知りたい人へ）

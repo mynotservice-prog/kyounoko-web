@@ -1,13 +1,12 @@
 ---
 slug: kodomo-marshmallow-chocolate-bar-5min
 title: 5分マシュマロチョコバー｜子供のおやつレシピ
-metaDescription: >-
-  マシュマロとチョコを溶かして固めるだけの5分おやつ。火を使わない、レンジ加熱のみ。アレルゲンと月齢適性も明示。
+metaDescription: マシュマロとチョコを溶かして固めるだけの5分おやつ。火を使わない、レンジ加熱のみ。アレルゲンと月齢適性も明示。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-sweet-01.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-marshmallow-chocolate-bar-5min.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,9 +17,9 @@ quickInfo:
   weather: []
   durationMin: 5
   budget: low
-lede: >-
-  マシュマロとチョコレートをレンジで溶かしてシリアルと混ぜ、固めるだけの5分おやつ。3歳以上が楽しめる手軽な手作りスイーツです。
-youtubeSearch: 'マシュマロ チョコバー 5分 おやつ'
+lede: マシュマロとチョコレートをレンジで溶かしてシリアルと混ぜ、固めるだけの5分おやつ。3歳以上が楽しめる手軽な手作りスイーツです。
+youtubeSearch: マシュマロ チョコバー 5分 おやつ
+legacyHero: /hero-ai/cat-food-sweet-01.webp
 ---
 
 ## TL;DR｜30秒でわかる答え

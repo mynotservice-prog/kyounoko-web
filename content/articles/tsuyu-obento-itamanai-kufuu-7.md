@@ -4,10 +4,10 @@ title: 梅雨の食中毒対策 お弁当が傷まない7つの工夫【保育�
 metaDescription: >-
   梅雨〜真夏のお弁当が傷まないようにする7つの工夫を、保育園・遠足・お出かけシーンで使える形で整理。保冷剤の置き方、おかずの選び方、ご飯の冷まし方、抗菌シート活用まで。子どものお腹を守る基本ルールをまとめました。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
+updatedAt: '2026-05-20'
 category: today-mawasu
 categoryName: 今日どう回す？
-hero: /hero-ai/cat-food-japan-01.jpg
+hero: /hero-ai/tsuyu-obento-itamanai-kufuu-7.jpg
 quickInfo:
   ageRanges:
     - 0-1
@@ -23,6 +23,7 @@ quickInfo:
 area: all
 lede: >-
   梅雨〜真夏のお弁当は「気温・湿度・時間」で一気にリスクが上がります。お子さんのお腹を守るために、保育園バッグや遠足で実践したい7つの工夫を、調理から詰め方・持ち運びまで整理しました。今日の朝から使える即実践版です。
+legacyHero: /hero-ai/cat-food-japan-01.jpg
 ---
 
 ## 結論（先に知りたい人へ）

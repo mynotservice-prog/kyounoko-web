@@ -1,13 +1,12 @@
 ---
 slug: kodomo-asa-udon-tamagotoji-rinyuushoku-go
 title: 朝うどん卵とじ｜離乳食後期〜OKの5分朝ごはん
-metaDescription: >-
-  冷凍うどんと卵で作る5分の朝うどん。離乳食後期から幼児期まで対応の優しい味付け。アレルゲンと月齢別の取り分け方も明示。
+metaDescription: 冷凍うどんと卵で作る5分の朝うどん。離乳食後期から幼児期まで対応の優しい味付け。アレルゲンと月齢別の取り分け方も明示。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-japan-03.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-asa-udon-tamagotoji-rinyuushoku-go.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,9 +17,9 @@ quickInfo:
   weather: []
   durationMin: 5
   budget: low
-lede: >-
-  冷凍うどん1玉を使って5分で温まる朝うどん。卵でとじてたんぱく質も補い、離乳食後期から幼児まで幅広く対応する優しい味です。
-youtubeSearch: 'うどん 卵とじ 朝ごはん レシピ'
+lede: 冷凍うどん1玉を使って5分で温まる朝うどん。卵でとじてたんぱく質も補い、離乳食後期から幼児まで幅広く対応する優しい味です。
+youtubeSearch: うどん 卵とじ 朝ごはん レシピ
+legacyHero: /hero-ai/cat-food-japan-03.webp
 ---
 
 ## TL;DR｜30秒でわかる答え

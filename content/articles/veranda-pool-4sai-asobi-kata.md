@@ -1,12 +1,13 @@
 ---
 slug: veranda-pool-4sai-asobi-kata
 title: ベランダプール 4歳まで楽しめる遊び方｜水量管理と兄妹同居
-metaDescription: ベランダプールを4歳まで楽しむための水量管理・遊びネタ・兄妹同居の段取りを、ながみー家の4歳娘+2歳息子の経験から整理。設営10分・撤収15分の現実的な運用を共有します。
+metaDescription: >-
+  ベランダプールを4歳まで楽しむための水量管理・遊びネタ・兄妹同居の段取りを、ながみー家の4歳娘+2歳息子の経験から整理。設営10分・撤収15分の現実的な運用を共有します。
 category: today-nani
 categoryName: 今日何する
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-lede: '夏のベランダプールは「水量と段取り」で楽しさが決まる。4歳娘と2歳息子が30分集中できる遊び方、設営と撤収の現実時間、安全管理を共有します。'
+updatedAt: '2026-05-20'
+lede: 夏のベランダプールは「水量と段取り」で楽しさが決まる。4歳娘と2歳息子が30分集中できる遊び方、設営と撤収の現実時間、安全管理を共有します。
 quickInfo:
   ageRanges:
     - 0-1
@@ -19,6 +20,7 @@ quickInfo:
   durationMin: 60
   budget: low
 area: all
+hero: /hero-ai/veranda-pool-4sai-asobi-kata.jpg
 ---
 
 ## TL;DR（先に知りたい人へ）

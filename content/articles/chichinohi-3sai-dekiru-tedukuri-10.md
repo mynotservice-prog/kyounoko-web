@@ -4,10 +4,10 @@ title: 父の日 子供と作る簡単プレゼント 3歳でもできる10選�
 metaDescription: >-
   2026年の父の日（6月21日）、3歳児でも自分の手で作れる簡単プレゼント10選。手形カード・似顔絵うちわ・ペットボトル小物入れ・お手伝い券など、ハサミなしOKのアイデアと100均素材で安全に作れる工程を整理しました。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
+updatedAt: '2026-05-20'
 category: today-mawasu
 categoryName: 今日どう回す？
-hero: /hero-ai/cat-kid-craft-01.webp
+hero: /hero-ai/chichinohi-3sai-dekiru-tedukuri-10.jpg
 quickInfo:
   ageRanges:
     - 2-3
@@ -21,6 +21,7 @@ quickInfo:
 area: all
 lede: >-
   2026年の父の日は6月21日（日）。「3歳の子が自分の手で作れる」を軸に、ハサミなしOK・100均素材中心・30分以内で完成する10アイデアを整理しました。パパが本気で喜ぶ「子どもの今しかない作品」を、無理なく作れる工程で紹介します。
+legacyHero: /hero-ai/cat-kid-craft-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

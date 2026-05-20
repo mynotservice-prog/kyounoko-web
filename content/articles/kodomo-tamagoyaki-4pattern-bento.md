@@ -1,13 +1,12 @@
 ---
 slug: kodomo-tamagoyaki-4pattern-bento
 title: 1分卵焼き4パターン｜お弁当の彩りレシピ
-metaDescription: >-
-  チーズ・ねぎ・しらす・海苔の4種類の卵焼きを1分ずつで作る方法。お弁当の彩りと栄養を同時に確保。アレルゲンと月齢適性も明示。
+metaDescription: チーズ・ねぎ・しらす・海苔の4種類の卵焼きを1分ずつで作る方法。お弁当の彩りと栄養を同時に確保。アレルゲンと月齢適性も明示。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-sweet-03.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-tamagoyaki-4pattern-bento.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,8 +17,8 @@ quickInfo:
   weather: []
   durationMin: 5
   budget: low
-lede: >-
-  卵2個でローテできる4種類の卵焼きレシピ。チーズ・ねぎ・しらす・海苔それぞれで朝1分、お弁当の主役を担います。
+lede: 卵2個でローテできる4種類の卵焼きレシピ。チーズ・ねぎ・しらす・海苔それぞれで朝1分、お弁当の主役を担います。
+legacyHero: /hero-ai/cat-food-sweet-03.jpg
 ---
 
 ## TL;DR｜30秒でわかる答え

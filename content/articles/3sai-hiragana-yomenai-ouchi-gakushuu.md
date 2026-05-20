@@ -4,10 +4,10 @@ title: 3歳でひらがな読めない 焦らなくていい理由とおうち�
 metaDescription: >-
   3歳でひらがなが読めなくて心配……それ、実は標準的な発達範囲とされる場合が多いです。焦らずできるおうち学習法10選、絵本の選び方、教材の比較ポイントを発達段階の目安と一緒にまとめました。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
+updatedAt: '2026-05-20'
 category: today-mawasu
 categoryName: 今日どう回す？
-hero: /hero-ai/cat-kid-study-01.webp
+hero: /hero-ai/3sai-hiragana-yomenai-ouchi-gakushuu.jpg
 quickInfo:
   ageRanges:
     - 2-3
@@ -21,6 +21,7 @@ quickInfo:
 area: all
 lede: >-
   「3歳でひらがな全然読めない」「同い年の子は読めるのに」――SNSで他の子の様子が見えるだけに焦りますよね。実は3歳時点でひらがなが読めないのは標準的な範囲内とされることが多く、無理に教える必要はないというのが定説。焦らずできるおうち学習法をまとめました。
+legacyHero: /hero-ai/cat-kid-study-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

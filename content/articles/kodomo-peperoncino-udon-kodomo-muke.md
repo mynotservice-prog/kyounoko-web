@@ -1,12 +1,13 @@
 ---
 slug: kodomo-peperoncino-udon-kodomo-muke
-title: "子供向けペペロンチーノ風うどん｜辛味ゼロ・フライパン1つで10分の主食レシピ"
-metaDescription: "唐辛子なしのガーリックオイルで仕立てる、辛味ゼロのペペロンチーノ風うどん。フライパン1つ・10分で完成、ピリ辛が苦手な子も大満足。アレルゲン・月齢適性を明示した、ながみー家の2歳児リピ確定の時短主食レシピです。"
+title: 子供向けペペロンチーノ風うどん｜辛味ゼロ・フライパン1つで10分の主食レシピ
+metaDescription: >-
+  唐辛子なしのガーリックオイルで仕立てる、辛味ゼロのペペロンチーノ風うどん。フライパン1つ・10分で完成、ピリ辛が苦手な子も大満足。アレルゲン・月齢適性を明示した、ながみー家の2歳児リピ確定の時短主食レシピです。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-japan-02.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-peperoncino-udon-kodomo-muke.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -17,8 +18,10 @@ quickInfo:
   weather: []
   durationMin: 10
   budget: low
-lede: "結論、唐辛子ゼロでもうどんなら「ペペロン感」は出せます。フライパン1つ・10分で完成する辛味ゼロの子供向け主食レシピ。ピリ辛が苦手な2歳児にもリピされた、ながみー家の救済メニューです。"
-youtubeSearch: 'ペペロンチーノ風 うどん 子供'
+lede: >-
+  結論、唐辛子ゼロでもうどんなら「ペペロン感」は出せます。フライパン1つ・10分で完成する辛味ゼロの子供向け主食レシピ。ピリ辛が苦手な2歳児にもリピされた、ながみー家の救済メニューです。
+youtubeSearch: ペペロンチーノ風 うどん 子供
+legacyHero: /hero-ai/cat-food-japan-02.jpg
 ---
 
 ## TL;DR｜30秒でわかる答え

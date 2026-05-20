@@ -1,13 +1,12 @@
 ---
 slug: kodomo-butter-rice-onigiri-sake-flake
 title: バターご飯おにぎり｜鮭フレーク海苔の5分レシピ
-metaDescription: >-
-  バターと鮭フレーク・海苔で握る5分のおにぎり。冷ご飯活用OK、お弁当・朝ごはん両用。アレルゲンと月齢適性も明示。
+metaDescription: バターと鮭フレーク・海苔で握る5分のおにぎり。冷ご飯活用OK、お弁当・朝ごはん両用。アレルゲンと月齢適性も明示。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-japan-01.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-butter-rice-onigiri-sake-flake.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,9 +17,9 @@ quickInfo:
   weather: []
   durationMin: 5
   budget: low
-lede: >-
-  炊きたて・冷ご飯どちらでも5分で握れる、バターのコクと鮭の旨みが溶けるおにぎり。子の朝食欲が止まらない味付けで、お弁当への流用もOKです。
-youtubeSearch: 'バター おにぎり 鮭フレーク'
+lede: 炊きたて・冷ご飯どちらでも5分で握れる、バターのコクと鮭の旨みが溶けるおにぎり。子の朝食欲が止まらない味付けで、お弁当への流用もOKです。
+youtubeSearch: バター おにぎり 鮭フレーク
+legacyHero: /hero-ai/cat-food-japan-01.jpg
 ---
 
 ## TL;DR｜30秒でわかる答え

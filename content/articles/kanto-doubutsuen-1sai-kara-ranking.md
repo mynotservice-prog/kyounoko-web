@@ -4,10 +4,10 @@ title: 関東 1歳から行ける動物園 ベビーカー貸出ありランキ�
 metaDescription: >-
   関東で1歳から楽しめる動物園を、ベビーカー貸出・授乳室・おむつ替え対応・歩く距離・園内バス有無で整理。上野・多摩・井の頭・千葉・埼玉こども動物自然公園などをファミリー目線で比較した保存版ランキング。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
+updatedAt: '2026-05-20'
 category: today-doko
 categoryName: 今日どこ行く
-hero: /hero-ai/cat-nature-01.webp
+hero: /hero-ai/kanto-doubutsuen-1sai-kara-ranking.jpg
 quickInfo:
   ageRanges:
     - 0-1
@@ -22,6 +22,7 @@ quickInfo:
 area: tokyo
 lede: >-
   「1歳でも楽しめる動物園、関東でどこがおすすめ？」――歩く距離・ベビーカー貸出・授乳室・園内バスなど、ファミリー目線で選ぶ動物園10選を整理しました。1歳から3歳までデビューに使える順でランキング化しています。
+legacyHero: /hero-ai/cat-nature-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

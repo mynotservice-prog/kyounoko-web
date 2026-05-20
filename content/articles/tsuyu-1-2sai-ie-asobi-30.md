@@ -4,10 +4,10 @@ title: 6月の梅雨 1-2歳と家で過ごす30の遊び【飽きさせない完
 metaDescription: >-
   6月の梅雨を1〜2歳と家で乗り切る30の遊びアイデアを保存版で整理。準備5分以内・100均素材中心・親の負担少なめを軸に、室内運動・感覚遊び・水遊び・お手伝いまで網羅。0歳後半〜3歳前半の親が今日からそのまま使えるリスト集です。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
+updatedAt: '2026-05-20'
 category: today-mawasu
 categoryName: 今日どう回す？
-hero: /hero-ai/cat-toddler-play-01.webp
+hero: /hero-ai/tsuyu-1-2sai-ie-asobi-30.jpg
 quickInfo:
   ageRanges:
     - 0-1
@@ -21,7 +21,8 @@ quickInfo:
 area: all
 lede: >-
   「もう外で発散できない」「家にいるとぐずる」――1〜2歳と過ごす梅雨は、親のメンタルも消耗しがち。準備5分・100均素材中心で回せる30の遊びを、室内運動・感覚あそび・お手伝い系まで30個まとめました。今日からそのまま使えるリストです。
-youtubeSearch: '1歳 2歳 室内遊び アイデア'
+youtubeSearch: 1歳 2歳 室内遊び アイデア
+legacyHero: /hero-ai/cat-toddler-play-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

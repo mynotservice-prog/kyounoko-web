@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-kitchen-02.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-obento-reitou-stock-5sen.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,9 +18,9 @@ quickInfo:
   weather: []
   durationMin: 5
   budget: low
-lede: >-
-  週末30分の作り置きで、平日朝のお弁当作りが1分に短縮。子供向けの優しい味付けでローテできる5品を独自レシピで紹介します。
-youtubeSearch: 'お弁当 冷凍ストック 作り置き 子供'
+lede: 週末30分の作り置きで、平日朝のお弁当作りが1分に短縮。子供向けの優しい味付けでローテできる5品を独自レシピで紹介します。
+youtubeSearch: お弁当 冷凍ストック 作り置き 子供
+legacyHero: /hero-ai/cat-food-kitchen-02.webp
 ---
 
 ## TL;DR｜30秒でわかる答え

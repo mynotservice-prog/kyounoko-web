@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/hahanohi-purezento-kodomo-tedukuri.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/christmas-cake-kodzure-erabikata.jpg
 quickInfo:
   ageRanges:
     - 0-1
@@ -20,6 +20,7 @@ quickInfo:
   durationMin: 120
   budget: low
 area: tokyo
+legacyHero: /hero-ai/hahanohi-purezento-kodomo-tedukuri.webp
 ---
 
 ## TL;DR（先に結論）

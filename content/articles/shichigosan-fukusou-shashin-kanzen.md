@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/natsumatsuri-kodzure-koryaku.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/shichigosan-fukusou-shashin-kanzen.jpg
 quickInfo:
   ageRanges:
     - 2-3
@@ -19,7 +19,9 @@ quickInfo:
   durationMin: 180
   budget: low
 area: tokyo
-lede: 七五三は「服装・写真・お参り」の3点を同時に決めるのが難所。3歳5歳7歳の年齢別に準備リスト、着物vs洋装、スタジオ比較、当日の段取り、失敗パターンまで家族目線でまるごとまとめました。
+lede: >-
+  七五三は「服装・写真・お参り」の3点を同時に決めるのが難所。3歳5歳7歳の年齢別に準備リスト、着物vs洋装、スタジオ比較、当日の段取り、失敗パターンまで家族目線でまるごとまとめました。
+legacyHero: /hero-ai/natsumatsuri-kodzure-koryaku.jpg
 ---
 
 ## TL;DR（先に知りたい人へ）

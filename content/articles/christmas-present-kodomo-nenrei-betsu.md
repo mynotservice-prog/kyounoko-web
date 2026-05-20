@@ -1,13 +1,12 @@
 ---
 slug: christmas-present-kodomo-nenrei-betsu
 title: 子供のクリスマスプレゼント 年齢別おすすめ完全ガイド｜0歳〜6歳【予算・贈り方】
-metaDescription: >-
-  子供のクリスマスプレゼント年齢別ガイド。0歳/1歳/2歳/3歳/4-6歳の発達に合わせたおすすめ、予算相場、サプライズの演出、失敗パターンまで完全解説。
+metaDescription: 子供のクリスマスプレゼント年齢別ガイド。0歳/1歳/2歳/3歳/4-6歳の発達に合わせたおすすめ、予算相場、サプライズの演出、失敗パターンまで完全解説。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/hahanohi-purezento-kodomo-tedukuri.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/christmas-present-kodomo-nenrei-betsu.jpg
 quickInfo:
   ageRanges:
     - 0-1
@@ -20,6 +19,7 @@ quickInfo:
   durationMin: 120
   budget: low
 area: tokyo
+legacyHero: /hero-ai/hahanohi-purezento-kodomo-tedukuri.webp
 ---
 
 ## TL;DR（先に結論）

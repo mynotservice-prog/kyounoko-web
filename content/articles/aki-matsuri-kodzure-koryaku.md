@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/natsumatsuri-kodzure-koryaku.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/aki-matsuri-kodzure-koryaku.jpg
 quickInfo:
   ageRanges:
     - 2-3
@@ -19,7 +19,9 @@ quickInfo:
   durationMin: 180
   budget: low
 area: tokyo
-lede: 秋祭りの子連れ攻略。屋台選び、迷子対策、東京近郊の人気秋祭り10選、寒暖差対策、おすすめ時間帯まで0-6歳家族目線で。夏祭りより快適な気候で楽しめる秋祭りを家族の年中行事に。
+lede: >-
+  秋祭りの子連れ攻略。屋台選び、迷子対策、東京近郊の人気秋祭り10選、寒暖差対策、おすすめ時間帯まで0-6歳家族目線で。夏祭りより快適な気候で楽しめる秋祭りを家族の年中行事に。
+legacyHero: /hero-ai/natsumatsuri-kodzure-koryaku.jpg
 ---
 
 ## TL;DR（先に知りたい人へ）

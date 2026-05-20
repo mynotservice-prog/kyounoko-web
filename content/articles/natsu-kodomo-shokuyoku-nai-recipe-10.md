@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/natsu-yasumi-kodomo-asobi-ie-de.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/natsu-kodomo-shokuyoku-nai-recipe-10.jpg
 lede: >-
   夏は子供の食欲が落ちやすい季節。原因は「暑さによる体力低下」「水分でお腹が満たされる」「冷たいものの食べ過ぎ」など複合的です。本記事は0-6歳向けに、冷たくて栄養バランスのとれる10レシピと、水分補給・見た目の工夫・受診の目安まで網羅しました。
 quickInfo:
@@ -22,6 +22,7 @@ quickInfo:
   durationMin: 30
   budget: low
 area: all
+legacyHero: /hero-ai/natsu-yasumi-kodomo-asobi-ie-de.webp
 ---
 
 ## TL;DR（先に知りたい人へ）

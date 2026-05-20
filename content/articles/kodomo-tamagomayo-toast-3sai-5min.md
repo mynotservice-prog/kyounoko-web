@@ -1,13 +1,12 @@
 ---
 slug: kodomo-tamagomayo-toast-3sai-5min
 title: 卵マヨトースト5分朝ごはん｜3歳〜OK 包丁不要レシピ
-metaDescription: >-
-  卵2個とマヨ・チーズで完成する3歳から楽しめる5分朝食。包丁不要・電子レンジ活用・取り分けにも対応。卵・乳・小麦アレルゲンと月齢適性も明示。
+metaDescription: 卵2個とマヨ・チーズで完成する3歳から楽しめる5分朝食。包丁不要・電子レンジ活用・取り分けにも対応。卵・乳・小麦アレルゲンと月齢適性も明示。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-fruit-01.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-tamagomayo-toast-3sai-5min.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,8 +17,8 @@ quickInfo:
   weather: []
   durationMin: 5
   budget: low
-lede: >-
-  朝の5分でできる卵マヨトースト。3歳から食べられる甘めで優しい味付けと、包丁を使わずスプーンだけで完結する手順で、忙しい平日でも安全にサッと作れます。
+lede: 朝の5分でできる卵マヨトースト。3歳から食べられる甘めで優しい味付けと、包丁を使わずスプーンだけで完結する手順で、忙しい平日でも安全にサッと作れます。
+legacyHero: /hero-ai/cat-food-fruit-01.webp
 ---
 
 ## TL;DR｜30秒でわかる答え

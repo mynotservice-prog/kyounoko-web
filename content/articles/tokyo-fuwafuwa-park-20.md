@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-17'
-updatedAt: '2026-05-17'
-hero: /hero-ai/cat-park-02.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/tokyo-fuwafuwa-park-20.jpg
 quickInfo:
   ageRanges:
     - 2-3
@@ -20,6 +20,7 @@ quickInfo:
   budget: free
 area: tokyo
 interactive: BabyCarRouteEstimator
+legacyHero: /hero-ai/cat-park-02.webp
 ---
 
 ## 結論（TL;DR）

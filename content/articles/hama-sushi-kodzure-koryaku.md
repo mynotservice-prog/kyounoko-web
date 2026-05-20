@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
-updatedAt: '2026-05-14'
-hero: /hero-ai/cat-food-japan-01.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/hama-sushi-kodzure-koryaku.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -22,7 +22,8 @@ quickInfo:
   budget: low
 lede: >-
   「はま寿司はベビーカーで入れる？子連れで安く済ませられる？」を1記事で解決。平日のお得な価格と広めのボックス席で、家族で気軽に使える回転寿司。0-6歳の家族がはま寿司を使いこなすコツを、うどんの取り分けや混雑回避まで保存版でまとめました。
-youtubeSearch: 'はま寿司 子連れ ベビーカー'
+youtubeSearch: はま寿司 子連れ ベビーカー
+legacyHero: /hero-ai/cat-food-japan-01.webp
 ---
 
 **結論：はま寿司は段差の少ない入口・広めのボックス席・ベビーチェア・おむつ替え台のある店舗が多く、平日の価格が手ごろで子連れに使いやすい回転寿司です。設備は店舗差があるので事前確認をおすすめします。**

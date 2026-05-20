@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
+updatedAt: '2026-05-20'
 area: all
 lede: >-
   「子連れで入れるカフェ＝チェーンの喫茶系」が結論。**ベビーカー入店・キッズチェア・キッズメニュー・取り分け・離乳食持込・おむつ替え・個室・価格帯**の8項目で、コメダ珈琲店・上島珈琲店・星乃珈琲店を◎○△✕評価しました。
@@ -21,6 +21,7 @@ quickInfo:
     - any
   durationMin: 60
   budget: low
+hero: /hero-ai/cafe-3chain-kodzure-hikaku.jpg
 ---
 
 ## TL;DR（先に知りたい人へ）

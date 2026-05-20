@@ -1,12 +1,14 @@
 ---
 slug: kodomo-camp-debut-0-2sai-souviru
 title: 子連れキャンプデビュー 0-2歳 装備リスト｜ながみー家の経験
-metaDescription: 0歳・1歳・2歳の子連れキャンプデビューで本当に必要な装備を完全リスト化。ながみー家が息子1歳半でキャンプ場に行った実体験から、削れない装備と省ける装備を仕分けしました。
+metaDescription: >-
+  0歳・1歳・2歳の子連れキャンプデビューで本当に必要な装備を完全リスト化。ながみー家が息子1歳半でキャンプ場に行った実体験から、削れない装備と省ける装備を仕分けしました。
 category: today-doko
 categoryName: 今日どこいく
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-lede: '0〜2歳の子連れキャンプは「装備が9割」。SNSの映えキャンプを参考にすると現地で詰みます。ながみー家が息子1歳半デビューで学んだ削れない装備と省ける装備を共有します。'
+updatedAt: '2026-05-20'
+lede: >-
+  0〜2歳の子連れキャンプは「装備が9割」。SNSの映えキャンプを参考にすると現地で詰みます。ながみー家が息子1歳半デビューで学んだ削れない装備と省ける装備を共有します。
 quickInfo:
   ageRanges:
     - 0-1
@@ -18,6 +20,7 @@ quickInfo:
   durationMin: 480
   budget: high
 area: all
+hero: /hero-ai/kodomo-camp-debut-0-2sai-souviru.jpg
 ---
 
 ## TL;DR（先に知りたい人へ）

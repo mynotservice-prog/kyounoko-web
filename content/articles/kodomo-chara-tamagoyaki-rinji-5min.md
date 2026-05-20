@@ -1,13 +1,12 @@
 ---
 slug: kodomo-chara-tamagoyaki-rinji-5min
 title: 5分で完成キャラ卵焼き｜電子レンジで作る朝ごはんレシピ
-metaDescription: >-
-  電子レンジで作る5分のキャラ卵焼き。フライパン不要・包丁不要で、3歳から楽しめる甘さ控えめの味付け。アレルゲンと取り分け方も明示。
+metaDescription: 電子レンジで作る5分のキャラ卵焼き。フライパン不要・包丁不要で、3歳から楽しめる甘さ控えめの味付け。アレルゲンと取り分け方も明示。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-fruit-01.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-chara-tamagoyaki-rinji-5min.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,9 +17,9 @@ quickInfo:
   weather: []
   durationMin: 5
   budget: low
-lede: >-
-  フライパンを出さずレンジ1台で完成するキャラ卵焼き。型抜きとピックでお弁当にも転用でき、朝の5分でしっかりたんぱく質を補えます。
-youtubeSearch: 'キャラ 卵焼き 簡単 レンジ'
+lede: フライパンを出さずレンジ1台で完成するキャラ卵焼き。型抜きとピックでお弁当にも転用でき、朝の5分でしっかりたんぱく質を補えます。
+youtubeSearch: キャラ 卵焼き 簡単 レンジ
+legacyHero: /hero-ai/cat-food-fruit-01.jpg
 ---
 
 ## TL;DR｜30秒でわかる答え

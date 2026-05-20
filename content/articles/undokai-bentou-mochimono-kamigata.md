@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/natsumatsuri-kodzure-koryaku.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/undokai-bentou-mochimono-kamigata.jpg
 quickInfo:
   ageRanges:
     - 2-3
@@ -19,7 +19,9 @@ quickInfo:
   durationMin: 180
   budget: low
 area: tokyo
-lede: 運動会は弁当・持ち物・髪型・座席・暑さ寒さ対策の総合戦。0-6歳家族向けに、現実的に作れる弁当アイデア、必須持ち物、年齢別おすすめ、失敗回避リストを通しでまとめました。
+lede: >-
+  運動会は弁当・持ち物・髪型・座席・暑さ寒さ対策の総合戦。0-6歳家族向けに、現実的に作れる弁当アイデア、必須持ち物、年齢別おすすめ、失敗回避リストを通しでまとめました。
+legacyHero: /hero-ai/natsumatsuri-kodzure-koryaku.jpg
 ---
 
 ## TL;DR（先に知りたい人へ）

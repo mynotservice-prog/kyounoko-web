@@ -1,13 +1,12 @@
 ---
 slug: kodomo-renji-mushipan-3pattern-oyatsu
 title: レンジで蒸しパン3パターン｜子供おやつレシピ
-metaDescription: >-
-  プレーン・かぼちゃ・ココアの3種類の蒸しパンをレンジで5分。子供のおやつにぴったり。アレルゲンと月齢適性も明示。
+metaDescription: プレーン・かぼちゃ・ココアの3種類の蒸しパンをレンジで5分。子供のおやつにぴったり。アレルゲンと月齢適性も明示。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-sweet-01.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-renji-mushipan-3pattern-oyatsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,9 +17,9 @@ quickInfo:
   weather: []
   durationMin: 5
   budget: low
-lede: >-
-  ホットケーキミックスを使った3パターンの蒸しパンを、マグカップとレンジだけで5分。プレーン・かぼちゃ・ココアで気分や栄養に合わせて選べます。
-youtubeSearch: 'レンジ 蒸しパン 子供 おやつ'
+lede: ホットケーキミックスを使った3パターンの蒸しパンを、マグカップとレンジだけで5分。プレーン・かぼちゃ・ココアで気分や栄養に合わせて選べます。
+youtubeSearch: レンジ 蒸しパン 子供 おやつ
+legacyHero: /hero-ai/cat-food-sweet-01.jpg
 ---
 
 ## TL;DR｜30秒でわかる答え

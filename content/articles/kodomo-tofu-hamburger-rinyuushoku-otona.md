@@ -1,12 +1,13 @@
 ---
 slug: kodomo-tofu-hamburger-rinyuushoku-otona
-title: "豆腐ハンバーグ｜離乳食後期から大人まで取り分け1回完結の家族レシピ"
-metaDescription: "鶏ひき肉と豆腐を半々で混ぜた柔らか豆腐ハンバーグです。離乳食後期から大人まで同じレシピで取り分けが完結します。アレルゲンと月齢適性も明示した、ながみー家の調理1回で家族全員満足を叶える殿堂入りの主菜レシピです。"
+title: 豆腐ハンバーグ｜離乳食後期から大人まで取り分け1回完結の家族レシピ
+metaDescription: >-
+  鶏ひき肉と豆腐を半々で混ぜた柔らか豆腐ハンバーグです。離乳食後期から大人まで同じレシピで取り分けが完結します。アレルゲンと月齢適性も明示した、ながみー家の調理1回で家族全員満足を叶える殿堂入りの主菜レシピです。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-fruit-01.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-tofu-hamburger-rinyuushoku-otona.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,7 +19,9 @@ quickInfo:
   weather: []
   durationMin: 15
   budget: low
-lede: "結論、家族の主菜は1回の調理で完結できます。鶏ひき肉と豆腐を半々で混ぜた柔らか豆腐ハンバーグは、離乳食後期から大人まで取り分け対応。ながみー家の「もう別メニュー作らない」を叶えた取り分けの王様レシピです。"
+lede: >-
+  結論、家族の主菜は1回の調理で完結できます。鶏ひき肉と豆腐を半々で混ぜた柔らか豆腐ハンバーグは、離乳食後期から大人まで取り分け対応。ながみー家の「もう別メニュー作らない」を叶えた取り分けの王様レシピです。
+legacyHero: /hero-ai/cat-food-fruit-01.jpg
 ---
 
 ## TL;DR｜30秒でわかる答え

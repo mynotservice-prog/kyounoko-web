@@ -5,8 +5,8 @@ metaDescription: 4歳と2歳の兄妹で同時に楽しめる自由研究5テー
 category: today-nani
 categoryName: 今日何する
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-lede: '兄妹の年齢差を欠点ではなく素材として使う自由研究。4歳娘が記録係、2歳息子が触る係。役割分担で同時参加させると、夏休みの2時間が静かに流れます。'
+updatedAt: '2026-05-20'
+lede: 兄妹の年齢差を欠点ではなく素材として使う自由研究。4歳娘が記録係、2歳息子が触る係。役割分担で同時参加させると、夏休みの2時間が静かに流れます。
 quickInfo:
   ageRanges:
     - 2-3
@@ -18,6 +18,7 @@ quickInfo:
   durationMin: 90
   budget: low
 area: all
+hero: /hero-ai/kyoudai-jiyukenkyu-4sai-2sai-coop.jpg
 ---
 
 ## TL;DR（先に知りたい人へ）

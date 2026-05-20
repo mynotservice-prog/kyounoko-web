@@ -1,13 +1,12 @@
 ---
 slug: mcdonalds-kodzure-koryaku
 title: マクドナルドは子連れOK？ベビーカー・ハッピーセット・離乳食・キッズスペース【2026】
-metaDescription: >-
-  マクドナルドはベビーカーで入れる？ハッピーセット全種類、離乳食持込、ベビーチェア、キッズスペース付き店舗、混雑回避まで0-6歳の家族目線で解説。
+metaDescription: マクドナルドはベビーカーで入れる？ハッピーセット全種類、離乳食持込、ベビーチェア、キッズスペース付き店舗、混雑回避まで0-6歳の家族目線で解説。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
-updatedAt: '2026-05-14'
-hero: /hero-ai/cat-food-japan-02.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/mcdonalds-kodzure-koryaku.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -22,7 +21,8 @@ quickInfo:
   budget: low
 lede: >-
   「マクドナルドはベビーカーで入れる？プレイランドのある店舗はどこ？」を1記事で解決。ハッピーセット・ベビーチェア・おむつ替え台のある店舗が多く、子連れの強い味方になるファストフード。0-6歳の家族がマクドナルドを使いこなすコツを保存版でまとめました。
-youtubeSearch: 'マクドナルド 子連れ ベビーカー'
+youtubeSearch: マクドナルド 子連れ ベビーカー
+legacyHero: /hero-ai/cat-food-japan-02.jpg
 ---
 
 **結論：マクドナルドは段差の少ない入口・ベビーチェア・おむつ替え台のある店舗が多く、ハッピーセットを軸に子連れで使いやすいファストフードです。設備は店舗差が大きいので事前確認をおすすめします。**

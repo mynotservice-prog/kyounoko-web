@@ -1,13 +1,12 @@
 ---
 slug: sushiro-kodzure-koryaku
 title: スシローは子連れOK？ベビーカー・キッズメニュー・離乳食・うに/まぐろ取り分け【2026】
-metaDescription: >-
-  スシローはベビーカーで入れる？キッズメニュー全種類、離乳食持込、ベビーチェア、子供の取り分けに最適なネタ、混雑回避時間まで0-6歳の家族目線で解説。
+metaDescription: スシローはベビーカーで入れる？キッズメニュー全種類、離乳食持込、ベビーチェア、子供の取り分けに最適なネタ、混雑回避時間まで0-6歳の家族目線で解説。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
-updatedAt: '2026-05-14'
-hero: /hero-ai/cat-food-kitchen-03.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/sushiro-kodzure-koryaku.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -22,7 +21,8 @@ quickInfo:
   budget: low
 lede: >-
   「スシローはベビーカーで入れる？子どもが食べられるメニューはある？」を1記事で解決。広いボックス席とタッチパネル注文で子連れ家族の利用が多い回転寿司。0-6歳の家族がスシローを使いこなすコツを、キッズメニューやアレルゲン検索の使い方まで保存版でまとめました。
-youtubeSearch: 'スシロー 子連れ ベビーカー'
+youtubeSearch: スシロー 子連れ ベビーカー
+legacyHero: /hero-ai/cat-food-kitchen-03.jpg
 ---
 
 **結論：スシローは段差の少ない入口・広めのボックス席・ベビーチェア・おむつ替え台のある店舗が多く、子連れの回転寿司として使いやすいチェーンです。設備は店舗差があるので事前確認をおすすめします。**

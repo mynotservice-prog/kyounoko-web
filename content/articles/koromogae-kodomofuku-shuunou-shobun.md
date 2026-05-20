@@ -4,10 +4,10 @@ title: 衣替え 子供服の収納テクと処分基準【先輩ママ200人調
 metaDescription: >-
   子供服の衣替えで毎回パンパンになる収納問題。先輩ママ200人の声を集計し、サイズ別たたみ方・処分基準・お下がり保管ルール・買い替えタイミングまでを整理。0〜6歳の家庭で年2回ラクに回せる収納テクをまとめました。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
+updatedAt: '2026-05-20'
 category: today-mawasu
 categoryName: 今日どう回す？
-hero: /hero-ai/cat-home-cozy-02.webp
+hero: /hero-ai/koromogae-kodomofuku-shuunou-shobun.jpg
 quickInfo:
   ageRanges:
     - 0-1
@@ -22,6 +22,7 @@ quickInfo:
 area: all
 lede: >-
   「タンスがパンパン、でも捨てられない」――子供服の衣替えは、サイズアウト判定と処分基準を持っていないと毎年同じ場所で詰みます。先輩ママ200人の声と編集部の聞き取りを集計し、5月・10月の衣替えをサクッと回す手順をまとめました。
+legacyHero: /hero-ai/cat-home-cozy-02.webp
 ---
 
 ## 結論（先に知りたい人へ）

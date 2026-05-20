@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
-updatedAt: '2026-05-14'
-hero: /hero-ai/cat-food-kitchen-01.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/kura-sushi-kodzure-koryaku.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -22,7 +22,8 @@ quickInfo:
   budget: low
 lede: >-
   「くら寿司はベビーカーで入れる？回転レーンは子どもに危なくない？」を1記事で解決。ビッくらポンやタッチパネル注文で子どもが楽しめて、ボックス席が広く子連れ家族の利用が多い回転寿司。0-6歳の家族がくら寿司を使いこなすコツを保存版でまとめました。
-youtubeSearch: 'くら寿司 子連れ ベビーカー'
+youtubeSearch: くら寿司 子連れ ベビーカー
+legacyHero: /hero-ai/cat-food-kitchen-01.jpg
 ---
 
 **結論：くら寿司は段差の少ない入口・広めのボックス席・ベビーチェア・おむつ替え台のある店舗が多く、子連れの回転寿司として使いやすいチェーンです。設備は店舗差があるので事前確認をおすすめします。**

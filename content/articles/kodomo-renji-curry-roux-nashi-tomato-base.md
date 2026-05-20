@@ -1,13 +1,12 @@
 ---
 slug: kodomo-renji-curry-roux-nashi-tomato-base
 title: レンジで5分カレー｜ルーなしトマトベースの子供レシピ
-metaDescription: >-
-  ルー不使用、トマトベースの優しい辛さゼロカレー。電子レンジで5分。アレルゲンと月齢適性も明示。
+metaDescription: ルー不使用、トマトベースの優しい辛さゼロカレー。電子レンジで5分。アレルゲンと月齢適性も明示。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-sweet-02.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-renji-curry-roux-nashi-tomato-base.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,9 +17,9 @@ quickInfo:
   weather: []
   durationMin: 5
   budget: low
-lede: >-
-  カレールーを使わずトマト缶とカレー粉少量で作る、辛味ゼロの子供向けカレー。電子レンジ5分で完成して、夕食やお弁当にすぐ活躍します。
-youtubeSearch: 'レンジ カレー ルー無し トマト 子供'
+lede: カレールーを使わずトマト缶とカレー粉少量で作る、辛味ゼロの子供向けカレー。電子レンジ5分で完成して、夕食やお弁当にすぐ活躍します。
+youtubeSearch: レンジ カレー ルー無し トマト 子供
+legacyHero: /hero-ai/cat-food-sweet-02.jpg
 ---
 
 ## TL;DR｜30秒でわかる答え

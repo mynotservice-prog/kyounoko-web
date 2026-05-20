@@ -1,12 +1,13 @@
 ---
 slug: kodomo-renji-cup-nimono-ninjin-kabocha
-title: "レンジ3分カップ煮物｜人参かぼちゃのお弁当副菜・鍋いらず時短レシピ"
-metaDescription: "耐熱カップに材料を入れてレンジ3分、鍋なし・洗い物ゼロで完成する人参かぼちゃの煮物。お弁当の彩り副菜から離乳食卒業期の取り分けまで対応。アレルゲン・月齢適性も明示した、ながみー家定番の朝ラク副菜時短レシピです。"
+title: レンジ3分カップ煮物｜人参かぼちゃのお弁当副菜・鍋いらず時短レシピ
+metaDescription: >-
+  耐熱カップに材料を入れてレンジ3分、鍋なし・洗い物ゼロで完成する人参かぼちゃの煮物。お弁当の彩り副菜から離乳食卒業期の取り分けまで対応。アレルゲン・月齢適性も明示した、ながみー家定番の朝ラク副菜時短レシピです。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/dessert-kodomo-tezukuri-5.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-renji-cup-nimono-ninjin-kabocha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,8 +19,10 @@ quickInfo:
   weather: []
   durationMin: 5
   budget: low
-lede: "結論、お弁当の彩り副菜はレンジ3分で完成します。鍋を出さず洗い物もカップ1つ、人参とかぼちゃの優しい味の煮物。離乳食卒業期から幼稚園のお弁当まで対応する、ながみー家の朝ラク定番です。"
-youtubeSearch: '人参 かぼちゃ レンジ 煮物 お弁当'
+lede: >-
+  結論、お弁当の彩り副菜はレンジ3分で完成します。鍋を出さず洗い物もカップ1つ、人参とかぼちゃの優しい味の煮物。離乳食卒業期から幼稚園のお弁当まで対応する、ながみー家の朝ラク定番です。
+youtubeSearch: 人参 かぼちゃ レンジ 煮物 お弁当
+legacyHero: /hero-ai/dessert-kodomo-tezukuri-5.webp
 ---
 
 ## TL;DR｜30秒でわかる答え

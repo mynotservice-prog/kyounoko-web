@@ -1,13 +1,12 @@
 ---
 slug: kodomo-buta-kimchi-kara-nashi-fp1
 title: フライパン1つ豚キムチ風｜辛くない子供版レシピ
-metaDescription: >-
-  キムチを使わず甘めの味付けで再現する子供向け豚キムチ風。フライパン1つ・10分で完成。アレルゲンと月齢適性も明示。
+metaDescription: キムチを使わず甘めの味付けで再現する子供向け豚キムチ風。フライパン1つ・10分で完成。アレルゲンと月齢適性も明示。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/gyuuniku-ryouri-kodomo-okiniiri.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-buta-kimchi-kara-nashi-fp1.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,9 +17,9 @@ quickInfo:
   weather: []
   durationMin: 10
   budget: low
-lede: >-
-  辛いキムチを使わず白菜・トマトケチャップ・砂糖で甘めの旨味を再現した子供向け「豚キムチ風」。フライパン1つで10分、夕食の主菜に活躍します。
-youtubeSearch: '豚キムチ風 辛くない 子供'
+lede: 辛いキムチを使わず白菜・トマトケチャップ・砂糖で甘めの旨味を再現した子供向け「豚キムチ風」。フライパン1つで10分、夕食の主菜に活躍します。
+youtubeSearch: 豚キムチ風 辛くない 子供
+legacyHero: /hero-ai/gyuuniku-ryouri-kodomo-okiniiri.webp
 ---
 
 ## TL;DR｜30秒でわかる答え

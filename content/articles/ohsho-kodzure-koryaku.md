@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
-updatedAt: '2026-05-14'
-hero: /hero-ai/cat-food-fruit-03.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/ohsho-kodzure-koryaku.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -22,7 +22,8 @@ quickInfo:
   budget: low
 lede: >-
   「餃子の王将は子連れで行ける？中華って取り分けしやすい？」を1記事で解決。チャーハンや餃子など家族でシェアしやすいメニューが多く、小皿対応もしてもらいやすい中華チェーン。0-6歳の家族が王将を使いこなすコツを、混雑時間帯の回避まで保存版でまとめました。
-youtubeSearch: '餃子の王将 子連れ ベビーカー'
+youtubeSearch: 餃子の王将 子連れ ベビーカー
+legacyHero: /hero-ai/cat-food-fruit-03.jpg
 ---
 
 **結論：餃子の王将は取り分けしやすい中華メニューがそろい、小皿対応もしてもらいやすく子連れで使えるチェーンです。入口に段差のある店舗もあるので、ベビーカー利用時は事前確認をおすすめします。**

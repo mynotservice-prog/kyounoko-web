@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
+updatedAt: '2026-05-20'
 area: all
 lede: >-
   「結局どのファミレスがうちの子連れに合うのか」を1ページで解決。**ベビーカー入店・キッズチェア・キッズメニュー・取り分け・離乳食持込・おむつ替え・個室・価格帯**の8項目を、4歳娘と2歳息子を連れて実訪問した30代パパ目線で◎○△✕評価しました。
@@ -21,6 +21,7 @@ quickInfo:
     - any
   durationMin: 90
   budget: low
+hero: /hero-ai/famires-7chain-8koumoku-2026.jpg
 ---
 
 ## TL;DR（先に知りたい人へ）

@@ -1,12 +1,13 @@
 ---
 slug: kodomo-sake-hoiruyaki-oven-fuyou
-title: "鮭のホイル焼き｜オーブンなし・フライパン10分で柔らか仕上げの子供レシピ"
-metaDescription: "オーブンを出さなくてもフライパン1つ10分で完成する、ふっくら柔らかい鮭のホイル焼き。骨ほぐしも簡単で取り分けに最適。アレルゲン・月齢適性を明示した、2歳と4歳が無言で食べた、ながみー家リピ確定の主菜レシピです。"
+title: 鮭のホイル焼き｜オーブンなし・フライパン10分で柔らか仕上げの子供レシピ
+metaDescription: >-
+  オーブンを出さなくてもフライパン1つ10分で完成する、ふっくら柔らかい鮭のホイル焼き。骨ほぐしも簡単で取り分けに最適。アレルゲン・月齢適性を明示した、2歳と4歳が無言で食べた、ながみー家リピ確定の主菜レシピです。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-fruit-03.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-sake-hoiruyaki-oven-fuyou.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -17,8 +18,10 @@ quickInfo:
   weather: []
   durationMin: 10
   budget: low
-lede: "結論、オーブン不要。フライパンと蓋だけで10分、ふっくら柔らかい鮭のホイル焼きが完成します。骨もほぐしやすく、2歳と4歳が無言で食べ進めた、ながみー家リピ確定の取り分け主菜レシピです。"
-youtubeSearch: '鮭 ホイル焼き フライパン 子供'
+lede: >-
+  結論、オーブン不要。フライパンと蓋だけで10分、ふっくら柔らかい鮭のホイル焼きが完成します。骨もほぐしやすく、2歳と4歳が無言で食べ進めた、ながみー家リピ確定の取り分け主菜レシピです。
+youtubeSearch: 鮭 ホイル焼き フライパン 子供
+legacyHero: /hero-ai/cat-food-fruit-03.jpg
 ---
 
 ## TL;DR｜30秒でわかる答え

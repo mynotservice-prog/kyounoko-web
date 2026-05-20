@@ -1,13 +1,12 @@
 ---
 slug: kodomo-fruit-yogurt-bowl-asa
 title: フルーツヨーグルトボウル｜3分朝ごはんレシピ
-metaDescription: >-
-  ヨーグルトと果物・グラノーラで作る3分朝食ボウル。1歳から大人まで取り分け対応の万能メニュー。アレルゲンと月齢適性も明示。
+metaDescription: ヨーグルトと果物・グラノーラで作る3分朝食ボウル。1歳から大人まで取り分け対応の万能メニュー。アレルゲンと月齢適性も明示。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-sweet-02.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-fruit-yogurt-bowl-asa.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,9 +18,9 @@ quickInfo:
   weather: []
   durationMin: 3
   budget: low
-lede: >-
-  ヨーグルトに季節の果物とグラノーラをのせるだけの3分ボウル。スプーン1本で食べやすく、1歳卒業期から幼児・大人まで一皿で完結します。
-youtubeSearch: 'フルーツ ヨーグルト ボウル 朝ごはん'
+lede: ヨーグルトに季節の果物とグラノーラをのせるだけの3分ボウル。スプーン1本で食べやすく、1歳卒業期から幼児・大人まで一皿で完結します。
+youtubeSearch: フルーツ ヨーグルト ボウル 朝ごはん
+legacyHero: /hero-ai/cat-food-sweet-02.webp
 ---
 
 ## TL;DR｜30秒でわかる答え

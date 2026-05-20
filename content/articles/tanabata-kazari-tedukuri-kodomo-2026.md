@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう過ごす？
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/natsu-yasumi-kodomo-asobi-ie-de.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/tanabata-kazari-tedukuri-kodomo-2026.jpg
 lede: >-
   七夕の飾りは「100均で揃う材料」と「年齢に合った難易度」を押さえれば、0歳から6歳までどの年齢でも家で作れます。本記事は10種類の飾りを写真風の手順説明・材料表・年齢別の役割分担まで含めて、保存版でまとめました。
 quickInfo:
@@ -22,6 +22,7 @@ quickInfo:
   durationMin: 30
   budget: low
 area: all
+legacyHero: /hero-ai/natsu-yasumi-kodomo-asobi-ie-de.webp
 ---
 
 ## 結論（先に知りたい人へ）

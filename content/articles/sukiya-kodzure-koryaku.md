@@ -1,13 +1,12 @@
 ---
 slug: sukiya-kodzure-koryaku
 title: すき家は子連れOK？ベビーカー・牛丼ミニ・離乳食・ボックス席【2026】
-metaDescription: >-
-  すき家はベビーカーで入れる？牛丼ミニ、キッズメニュー、離乳食持込、ベビーチェア、ボックス席の使い方まで0-6歳の家族目線で解説。
+metaDescription: すき家はベビーカーで入れる？牛丼ミニ、キッズメニュー、離乳食持込、ベビーチェア、ボックス席の使い方まで0-6歳の家族目線で解説。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
-updatedAt: '2026-05-14'
-hero: /hero-ai/cat-food-fruit-02.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/sukiya-kodzure-koryaku.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -22,7 +21,8 @@ quickInfo:
   budget: low
 lede: >-
   「すき家はベビーカーで入れる？牛丼チェーンで子連れって大丈夫？」を1記事で解決。牛丼チェーンの中ではボックス席やお子様セットが充実し、子連れでも使いやすいすき家。0-6歳の家族が使いこなすコツを、牛丼ミニの取り分けやテイクアウト活用まで保存版でまとめました。
-youtubeSearch: 'すき家 子連れ ベビーカー'
+youtubeSearch: すき家 子連れ ベビーカー
+legacyHero: /hero-ai/cat-food-fruit-02.jpg
 ---
 
 **結論：すき家は牛丼チェーンの中ではボックス席・お子様セット・ベビーチェアがそろい、段差の少ない入口の店舗も多く、子連れで使いやすいチェーンです。設備は店舗差があるので事前確認をおすすめします。**

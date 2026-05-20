@@ -4,10 +4,10 @@ title: 関東の紫陽花スポット 子連れOK10選【6月のおでかけ完�
 metaDescription: >-
   関東で子連れOKの紫陽花スポット10選。ベビーカー対応・授乳室・おむつ替え・歩く距離をファミリー目線で整理。鎌倉・箱根・高尾・茨城・東京都内まで、6月の梅雨を楽しむお出かけ先を保存版でまとめました。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
+updatedAt: '2026-05-20'
 category: today-doko
 categoryName: 今日どこ行く
-hero: /hero-ai/cat-nature-02.webp
+hero: /hero-ai/kanto-ajisai-kodzure-spot-10.jpg
 quickInfo:
   ageRanges:
     - 0-1
@@ -23,6 +23,7 @@ quickInfo:
 area: tokyo
 lede: >-
   「梅雨でも外で楽しめる場所が欲しい」「紫陽花が綺麗な季節に子連れで行きたい」――関東の紫陽花スポットから、ベビーカー対応・授乳室・歩く距離を整理した10選を保存版でまとめました。6月のお出かけ計画にどうぞ。
+legacyHero: /hero-ai/cat-nature-02.webp
 ---
 
 ## 結論（先に知りたい人へ）

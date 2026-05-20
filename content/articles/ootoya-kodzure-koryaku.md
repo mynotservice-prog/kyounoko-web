@@ -1,13 +1,12 @@
 ---
 slug: ootoya-kodzure-koryaku
 title: 大戸屋は子連れOK？ベビーカー・お子様メニュー・離乳食・取り分け定食【2026】
-metaDescription: >-
-  大戸屋はベビーカーで入れる？お子様メニュー、離乳食持込、ベビーチェア、取り分けやすい和定食、混雑回避まで0-6歳の家族目線で解説。
+metaDescription: 大戸屋はベビーカーで入れる？お子様メニュー、離乳食持込、ベビーチェア、取り分けやすい和定食、混雑回避まで0-6歳の家族目線で解説。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
-updatedAt: '2026-05-14'
-hero: /hero-ai/cat-food-japan-03.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/ootoya-kodzure-koryaku.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -22,7 +21,8 @@ quickInfo:
   budget: low
 lede: >-
   「大戸屋は子連れで行ける？定食って取り分けしやすい？」を1記事で解決。野菜たっぷりの和定食で栄養バランスがよく、落ち着いた雰囲気で子連れにも使いやすい和食チェーン。0-6歳の家族が大戸屋を使いこなすコツを、取り分けや混雑回避まで保存版でまとめました。
-youtubeSearch: '大戸屋 子連れ ベビーカー'
+youtubeSearch: 大戸屋 子連れ ベビーカー
+legacyHero: /hero-ai/cat-food-japan-03.jpg
 ---
 
 **結論：大戸屋は段差の少ない入口・ボックス席・ベビーチェア・おむつ替え台のある店舗が多く、野菜中心の和定食で子連れにも使いやすいチェーンです。設備は店舗差があるので事前確認をおすすめします。**

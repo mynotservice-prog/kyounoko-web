@@ -1,12 +1,14 @@
 ---
 slug: kodomo-natsukaze-byouin-iku-5moyasu
 title: 子ども夏風邪 病院いくべきタイミング｜5つの目安
-metaDescription: 子どもの夏風邪で病院に行くか家で様子見か、判断に迷う親へ。ながみー家の小児科通院体験を元に「いま行く・朝まで様子見・救急電話」を分ける5つの目安を整理しました。
+metaDescription: >-
+  子どもの夏風邪で病院に行くか家で様子見か、判断に迷う親へ。ながみー家の小児科通院体験を元に「いま行く・朝まで様子見・救急電話」を分ける5つの目安を整理しました。
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-lede: '夏風邪は冬と違って熱が高くなりやすく、ぐったり度合いも分かりにくい。「いま受診」「朝まで様子見」「救急電話」の3択を、子の様子から判断する5つの目安をまとめます。'
+updatedAt: '2026-05-20'
+lede: >-
+  夏風邪は冬と違って熱が高くなりやすく、ぐったり度合いも分かりにくい。「いま受診」「朝まで様子見」「救急電話」の3択を、子の様子から判断する5つの目安をまとめます。
 quickInfo:
   ageRanges:
     - 0-1
@@ -19,6 +21,7 @@ quickInfo:
   durationMin: 30
   budget: low
 area: all
+hero: /hero-ai/kodomo-natsukaze-byouin-iku-5moyasu.jpg
 ---
 
 ## TL;DR（先に知りたい人へ）

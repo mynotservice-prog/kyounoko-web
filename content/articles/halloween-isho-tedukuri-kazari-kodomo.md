@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/natsumatsuri-kodzure-koryaku.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/halloween-isho-tedukuri-kazari-kodomo.jpg
 quickInfo:
   ageRanges:
     - 2-3
@@ -19,7 +19,9 @@ quickInfo:
   durationMin: 180
   budget: low
 area: tokyo
-lede: ハロウィンの子供衣装(手作り/購入)、家の飾り付け、パーティご飯、トリックオアトリート、安全配慮まで0-6歳家族目線で。100均で作れる衣装5パターンと失敗回避リスト付き。
+lede: >-
+  ハロウィンの子供衣装(手作り/購入)、家の飾り付け、パーティご飯、トリックオアトリート、安全配慮まで0-6歳家族目線で。100均で作れる衣装5パターンと失敗回避リスト付き。
+legacyHero: /hero-ai/natsumatsuri-kodzure-koryaku.jpg
 ---
 
 ## TL;DR（先に知りたい人へ）

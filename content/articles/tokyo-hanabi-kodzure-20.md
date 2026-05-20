@@ -1,12 +1,13 @@
 ---
 slug: tokyo-hanabi-kodzure-20
 title: 子連れで行ける東京近郊の花火大会20選｜ベビーカーOK・有料席・混雑回避を子連れ目線で
-metaDescription: 東京+神奈川/千葉/埼玉で子連れでも楽しめる花火大会20選。ベビーカー入場可否、有料席の有無、混雑回避ルート、トイレ・授乳室、帰りの混雑対策まで0-6歳の家族目線で解説。
+metaDescription: >-
+  東京+神奈川/千葉/埼玉で子連れでも楽しめる花火大会20選。ベビーカー入場可否、有料席の有無、混雑回避ルート、トイレ・授乳室、帰りの混雑対策まで0-6歳の家族目線で解説。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/natsumatsuri-kodzure-koryaku-2026.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/tokyo-hanabi-kodzure-20.jpg
 lede: >-
   花火大会は子連れにとって「待ち時間」「人混み」「帰り道」の3つが最大の壁。例年の傾向と会場特性から、0〜6歳の家族でも無理なく楽しめる東京近郊の花火大会を20会場ピックアップし、ベビーカー可否・有料席・混雑回避の動線まで子連れ目線でまとめます。
 quickInfo:
@@ -20,6 +21,7 @@ quickInfo:
   durationMin: 180
   budget: low
 area: tokyo
+legacyHero: /hero-ai/natsumatsuri-kodzure-koryaku-2026.webp
 ---
 
 ## TL;DR（先に結論）

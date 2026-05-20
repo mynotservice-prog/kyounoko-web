@@ -1,13 +1,12 @@
 ---
 slug: komeda-kodzure-koryaku
 title: コメダ珈琲店は子連れOK？ベビーカー・キッズメニュー・離乳食・モーニング【2026】
-metaDescription: >-
-  コメダ珈琲店はベビーカーで入れる？モーニングメニュー、キッズメニュー、ベビーチェア、シロノワール子供向け、ボックス席の活用まで0-6歳の家族目線で解説。
+metaDescription: コメダ珈琲店はベビーカーで入れる？モーニングメニュー、キッズメニュー、ベビーチェア、シロノワール子供向け、ボックス席の活用まで0-6歳の家族目線で解説。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
-updatedAt: '2026-05-14'
-hero: /hero-ai/cat-home-cozy-01.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/komeda-kodzure-koryaku.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -22,7 +21,8 @@ quickInfo:
   budget: low
 lede: >-
   「コメダ珈琲店はベビーカーで入れる？子連れでも落ち着いて過ごせる？」を1記事で解決。広いソファ席とゆったりした空間で、子連れでもくつろぎやすいカフェ。0-6歳の家族がコメダを使いこなすコツを、モーニングやシェアの工夫まで保存版でまとめました。
-youtubeSearch: 'コメダ珈琲店 子連れ ベビーカー'
+youtubeSearch: コメダ珈琲店 子連れ ベビーカー
+legacyHero: /hero-ai/cat-home-cozy-01.webp
 ---
 
 **結論：コメダ珈琲店は段差の少ない入口・広いソファ席・ベビーチェア・おむつ替え台のある店舗が多く、子連れでもゆったり過ごしやすいカフェです。設備は店舗差があるので事前確認をおすすめします。**

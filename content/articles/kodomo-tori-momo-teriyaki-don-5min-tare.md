@@ -1,13 +1,12 @@
 ---
 slug: kodomo-tori-momo-teriyaki-don-5min-tare
 title: 鶏ももの照り焼き丼｜5分タレで作る夕食レシピ
-metaDescription: >-
-  5分タレで漬けて焼くだけの鶏もも照り焼き丼。10分で完成、丼で一品完結。アレルゲンと月齢適性も明示。
+metaDescription: 5分タレで漬けて焼くだけの鶏もも照り焼き丼。10分で完成、丼で一品完結。アレルゲンと月齢適性も明示。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/chicken-kodomo-10pattern.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-tori-momo-teriyaki-don-5min-tare.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,8 +17,8 @@ quickInfo:
   weather: []
   durationMin: 10
   budget: low
-lede: >-
-  醤油・みりん・砂糖を1：1：1の覚えやすい配合で作る照り焼きタレを、5分で鶏ももに絡めて丼に。家族みんなが食べやすい甘めの味付けで夕食の主役を担います。
+lede: 醤油・みりん・砂糖を1：1：1の覚えやすい配合で作る照り焼きタレを、5分で鶏ももに絡めて丼に。家族みんなが食べやすい甘めの味付けで夕食の主役を担います。
+legacyHero: /hero-ai/chicken-kodomo-10pattern.webp
 ---
 
 ## TL;DR｜30秒でわかる答え

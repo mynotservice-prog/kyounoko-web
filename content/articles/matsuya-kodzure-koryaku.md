@@ -1,13 +1,12 @@
 ---
 slug: matsuya-kodzure-koryaku
 title: 松屋は子連れOK？ベビーカー・キッズメニュー・牛丼ミニ・小皿取り分け【2026】
-metaDescription: >-
-  松屋はベビーカーで入れる？キッズメニュー、牛丼ミニ/小皿取り分け、ベビーチェア、券売機操作、混雑回避まで0-6歳の家族目線で解説。
+metaDescription: 松屋はベビーカーで入れる？キッズメニュー、牛丼ミニ/小皿取り分け、ベビーチェア、券売機操作、混雑回避まで0-6歳の家族目線で解説。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/sukiya-kodzure-koryaku.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/matsuya-kodzure-koryaku.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -22,7 +21,8 @@ quickInfo:
   budget: low
 lede: >-
   「松屋は子連れで入れる？ベビーカーや券売機ってどうすれば？」を1記事で解決。松屋は牛めしに加え、小皿サイドメニューと味噌汁無料が強みで、取り分け前提の子連れ運用と相性がよいチェーンです。0-6歳の家族目線で、駅前狭小店舗での立ち回り、券売機操作の段取り、小皿(150円〜)を使った取り分け、年齢別の食べさせ方まで保存版でまとめました。
-youtubeSearch: '松屋 子連れ ベビーカー'
+youtubeSearch: 松屋 子連れ ベビーカー
+legacyHero: /hero-ai/sukiya-kodzure-koryaku.webp
 ---
 
 **結論：松屋は駅前狭小店舗が中心で店内動線は厳しめですが、小皿サイドメニュー(150円〜)・味噌汁無料・牛めしミニで取り分けがしやすく、券売機の段取りさえ押さえれば0-6歳でも30分で完結できる手堅いチェーンです。設備は店舗差が大きいので事前確認をおすすめします。**

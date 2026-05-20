@@ -1,13 +1,12 @@
 ---
 slug: otoshidama-souba-pochibukuro-tedukuri
 title: お年玉の相場&お年玉袋手作りアイデア｜0-6歳の渡し方・管理方法【完全ガイド】
-metaDescription: >-
-  お年玉の年齢別相場、お年玉袋の手作りアイデア、子供への渡し方、お金の管理方法、ぽち袋デザイン10種類まで0-6歳家族目線で完全解説。
+metaDescription: お年玉の年齢別相場、お年玉袋の手作りアイデア、子供への渡し方、お金の管理方法、ぽち袋デザイン10種類まで0-6歳家族目線で完全解説。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/hahanohi-purezento-kodomo-tedukuri.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/otoshidama-souba-pochibukuro-tedukuri.jpg
 quickInfo:
   ageRanges:
     - 0-1
@@ -20,6 +19,7 @@ quickInfo:
   durationMin: 120
   budget: low
 area: tokyo
+legacyHero: /hero-ai/hahanohi-purezento-kodomo-tedukuri.webp
 ---
 
 ## TL;DR（先に結論）

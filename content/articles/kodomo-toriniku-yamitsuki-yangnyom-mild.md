@@ -1,12 +1,13 @@
 ---
 slug: kodomo-toriniku-yamitsuki-yangnyom-mild
-title: "鶏むね肉でやみつきヤンニョム風｜コチュジャンなし15分の子供向けレシピ"
-metaDescription: "コチュジャン控えめで甘めにアレンジした、子供が箸を止めないマイルドヤンニョム風鶏むね。15分で完成し家族で取り分けOK。アレルゲン・月齢適性も明示した、2歳と4歳がご飯おかわりするながみー家殿堂入り夕食レシピです。"
+title: 鶏むね肉でやみつきヤンニョム風｜コチュジャンなし15分の子供向けレシピ
+metaDescription: >-
+  コチュジャン控えめで甘めにアレンジした、子供が箸を止めないマイルドヤンニョム風鶏むね。15分で完成し家族で取り分けOK。アレルゲン・月齢適性も明示した、2歳と4歳がご飯おかわりするながみー家殿堂入り夕食レシピです。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/chicken-kodomo-10pattern.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-toriniku-yamitsuki-yangnyom-mild.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -17,7 +18,9 @@ quickInfo:
   weather: []
   durationMin: 15
   budget: low
-lede: "結論、辛味ゼロでも「やみつき」は再現できます。コチュジャンなしの甘めヤンニョムだれで仕立てる鶏むね肉レシピは、15分・家族で取り分けOK。2歳と4歳がご飯をおかわりした、ながみー家殿堂入りの夕食です。"
+lede: >-
+  結論、辛味ゼロでも「やみつき」は再現できます。コチュジャンなしの甘めヤンニョムだれで仕立てる鶏むね肉レシピは、15分・家族で取り分けOK。2歳と4歳がご飯をおかわりした、ながみー家殿堂入りの夕食です。
+legacyHero: /hero-ai/chicken-kodomo-10pattern.webp
 ---
 
 ## TL;DR｜30秒でわかる答え

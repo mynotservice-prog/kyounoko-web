@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-19'
-updatedAt: '2026-05-19'
+updatedAt: '2026-05-20'
 area: all
 lede: >-
   「子連れランチで使えるファミレス、結局どこが一番強い？」を**離乳食・ベビーカー・キッズ評価の3軸×30点満点**でスコア化。10チェーンを総合ランキング1位から10位まで並べ、**0-1歳期／2-3歳期／4-6歳期の各シーン別1位**も発表します。4歳娘＆2歳息子を連れて実際に訪問した編集長ながみー（2児の親）の現場メモ付きで、選び方を1記事で完結。
@@ -21,6 +21,7 @@ quickInfo:
     - any
   durationMin: 90
   budget: low
+hero: /hero-ai/famires-kodzure-ranking-2026-10sen.jpg
 ---
 
 ## 結論（先に知りたい人へ）

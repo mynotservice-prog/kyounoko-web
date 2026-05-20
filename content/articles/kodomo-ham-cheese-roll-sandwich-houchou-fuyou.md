@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-kitchen-03.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-ham-cheese-roll-sandwich-houchou-fuyou.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,9 +18,9 @@ quickInfo:
   weather: []
   durationMin: 3
   budget: low
-lede: >-
-  サンドイッチ用パンを使って包丁ゼロで作るくるくるサンド。手づかみ食べが進む3歳〜6歳に最適で、お弁当にも詰めやすい一品です。
-youtubeSearch: 'くるくる サンドイッチ 包丁不要 朝ごはん'
+lede: サンドイッチ用パンを使って包丁ゼロで作るくるくるサンド。手づかみ食べが進む3歳〜6歳に最適で、お弁当にも詰めやすい一品です。
+youtubeSearch: くるくる サンドイッチ 包丁不要 朝ごはん
+legacyHero: /hero-ai/cat-food-kitchen-03.webp
 ---
 
 ## TL;DR｜30秒でわかる答え

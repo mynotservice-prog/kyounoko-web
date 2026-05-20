@@ -1,13 +1,12 @@
 ---
 slug: kodomo-frypan-doria-1pan-10min
 title: フライパンで作るドリア｜10分の子供向けレシピ
-metaDescription: >-
-  オーブン不要、フライパン1つで完成する子供向けドリア。10分・ホワイトソース手作り。アレルゲンと月齢適性も明示。
+metaDescription: オーブン不要、フライパン1つで完成する子供向けドリア。10分・ホワイトソース手作り。アレルゲンと月齢適性も明示。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-kitchen-01.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-frypan-doria-1pan-10min.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,7 +19,8 @@ quickInfo:
   budget: low
 lede: >-
   オーブンを使わずフライパンで仕上げるドリア。ホワイトソースも市販品なしで作れ、10分で家族の夕食メインに。子供が大好きなチーズの香ばしさが食欲を引き出します。
-youtubeSearch: 'フライパン ドリア 10分 簡単'
+youtubeSearch: フライパン ドリア 10分 簡単
+legacyHero: /hero-ai/cat-food-kitchen-01.jpg
 ---
 
 ## TL;DR｜30秒でわかる答え

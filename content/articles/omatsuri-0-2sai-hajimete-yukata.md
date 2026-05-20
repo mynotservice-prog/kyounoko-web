@@ -5,8 +5,8 @@ metaDescription: 0〜2歳のはじめての浴衣デビューを、ながみー�
 category: gyouji
 categoryName: 行事
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-lede: '0〜2歳の浴衣デビューは「着る時間より脱ぐ場面の段取り」が9割。甚平との使い分け、おむつ事情、写真タイミングを我が家の失敗付きで共有します。'
+updatedAt: '2026-05-20'
+lede: 0〜2歳の浴衣デビューは「着る時間より脱ぐ場面の段取り」が9割。甚平との使い分け、おむつ事情、写真タイミングを我が家の失敗付きで共有します。
 quickInfo:
   ageRanges:
     - 0-1
@@ -18,6 +18,7 @@ quickInfo:
   durationMin: 120
   budget: mid
 area: all
+hero: /hero-ai/omatsuri-0-2sai-hajimete-yukata.jpg
 ---
 
 ## TL;DR（先に知りたい人へ）

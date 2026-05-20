@@ -1,13 +1,12 @@
 ---
 slug: kodomo-renji-mushipan-5min-asa
 title: レンジで蒸しパン｜5分朝ごはんレシピ
-metaDescription: >-
-  電子レンジで5分の蒸しパン。ホットケーキミックス活用で材料3つ・洗い物1つ。3歳から取り分けOK、アレルゲンと月齢適性も明示。
+metaDescription: 電子レンジで5分の蒸しパン。ホットケーキミックス活用で材料3つ・洗い物1つ。3歳から取り分けOK、アレルゲンと月齢適性も明示。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-sweet-02.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-renji-mushipan-5min-asa.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,9 +17,9 @@ quickInfo:
   weather: []
   durationMin: 5
   budget: low
-lede: >-
-  ホットケーキミックスを耐熱マグで混ぜてレンジ2分。蒸し器も型もいらないシンプル蒸しパンで、朝の主食やおやつにすぐ活躍します。
-youtubeSearch: 'レンジ 蒸しパン 5分 朝ごはん'
+lede: ホットケーキミックスを耐熱マグで混ぜてレンジ2分。蒸し器も型もいらないシンプル蒸しパンで、朝の主食やおやつにすぐ活躍します。
+youtubeSearch: レンジ 蒸しパン 5分 朝ごはん
+legacyHero: /hero-ai/cat-food-sweet-02.jpg
 ---
 
 ## TL;DR｜30秒でわかる答え

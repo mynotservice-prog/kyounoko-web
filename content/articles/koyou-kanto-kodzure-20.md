@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/natsumatsuri-kodzure-koryaku.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/koyou-kanto-kodzure-20.jpg
 quickInfo:
   ageRanges:
     - 2-3
@@ -19,7 +19,9 @@ quickInfo:
   durationMin: 180
   budget: low
 area: tokyo
-lede: 関東の子連れOK紅葉スポット20選。ベビーカー入場可、駐車場の広さ、見頃時期、入園料、月齢別おすすめ、防寒対策、撮影のコツまで0-6歳家族目線で。今秋のお出かけプランの基盤に。
+lede: >-
+  関東の子連れOK紅葉スポット20選。ベビーカー入場可、駐車場の広さ、見頃時期、入園料、月齢別おすすめ、防寒対策、撮影のコツまで0-6歳家族目線で。今秋のお出かけプランの基盤に。
+legacyHero: /hero-ai/natsumatsuri-kodzure-koryaku.jpg
 ---
 
 ## TL;DR（先に知りたい人へ）

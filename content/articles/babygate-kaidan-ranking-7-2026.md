@@ -4,10 +4,10 @@ title: 2026年最新 ベビーゲート 階段用ランキング7選【はしご
 metaDescription: >-
   ベビーゲートの階段用を比較選定。はしご型・突っ張り型・ネジ固定型の3タイプの違い、価格・安全性・取り付け工事の有無を整理。階段上での使用は突っ張り型を避けるべき理由など、購入前に知っておきたい安全のポイントもまとめました。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
+updatedAt: '2026-05-20'
 category: yakudatsu
 categoryName: 役立つもの
-hero: /hero-ai/cat-home-cozy-01.webp
+hero: /hero-ai/babygate-kaidan-ranking-7-2026.jpg
 quickInfo:
   ageRanges:
     - 0-1
@@ -21,6 +21,7 @@ quickInfo:
 area: all
 lede: >-
   「ハイハイ・つかまり立ち期、階段から落ちないか毎日ヒヤヒヤ」――ベビーゲートは安全のための必需品。ただし「階段上ではどのタイプを選ぶか」で安全性が大きく変わります。タイプ別の特性と2026年の人気7モデルを整理しました。
+legacyHero: /hero-ai/cat-home-cozy-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

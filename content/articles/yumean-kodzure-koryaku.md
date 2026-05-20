@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/gusto-kodzure-koryaku.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/yumean-kodzure-koryaku.jpg
 lede: >-
   「夢庵は座敷席で子連れにも使える？お子様御膳はどんな内容？」を1記事で解決。すかいらーくグループの**和食ファミレス**である夢庵は、**座敷席が充実**しており、寝かしつけ・離乳食・法事や七五三のお祝いシーンまで対応できる希少な一軒。0-6歳家族目線で保存版でまとめました。
 quickInfo:
@@ -22,6 +22,7 @@ quickInfo:
   durationMin: 60
   budget: low
 area: tokyo
+legacyHero: /hero-ai/gusto-kodzure-koryaku.jpg
 ---
 
 **結論：夢庵はすかいらーく系の和食ファミレスで、座敷席が充実。乳児の寝かしつけ・離乳食・法事や七五三の節目祝いまで対応できる希少なチェーンです。**

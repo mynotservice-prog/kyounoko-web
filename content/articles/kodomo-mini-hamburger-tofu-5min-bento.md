@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-fruit-02.jpg
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-mini-hamburger-tofu-5min-bento.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,9 +18,9 @@ quickInfo:
   weather: []
   durationMin: 5
   budget: low
-lede: >-
-  ひき肉と豆腐を半々で混ぜた、柔らかくて子供が噛みやすいミニハンバーグ。お弁当のミニサイズ4個分が5分で焼け、ふっくらジューシーに仕上がります。
-youtubeSearch: '豆腐 ミニ ハンバーグ お弁当'
+lede: ひき肉と豆腐を半々で混ぜた、柔らかくて子供が噛みやすいミニハンバーグ。お弁当のミニサイズ4個分が5分で焼け、ふっくらジューシーに仕上がります。
+youtubeSearch: 豆腐 ミニ ハンバーグ お弁当
+legacyHero: /hero-ai/cat-food-fruit-02.jpg
 ---
 
 ## TL;DR｜30秒でわかる答え

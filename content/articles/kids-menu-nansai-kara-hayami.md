@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
-hero: /hero-ai/kids-menu-nansai-kara-hayami.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kids-menu-nansai-kara-hayami.jpg
 lede: >-
   「ガストのお子様メニューって何歳から？」「サイゼに年齢制限ってあるの？」「しゃぶ葉は何歳から有料？」——子連れ外食で必ず迷うこれらの疑問を、**ファミレス・食べ放題・カフェ12チェーンを横断する早見表**で一気に解決します。
 quickInfo:
@@ -22,6 +22,7 @@ quickInfo:
   durationMin: 90
   budget: low
 area: tokyo
+legacyHero: /hero-ai/kids-menu-nansai-kara-hayami.webp
 ---
 
 **結論：「お子様メニュー何歳から」は明確な下限なしのチェーンが多数派、ただし離乳食完了期（1歳半〜）が現実的な目安。「ドリンクバー・食べ放題」は未就学児（6歳まで）を境に料金が変わる店が大半です。**

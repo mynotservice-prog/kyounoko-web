@@ -1,13 +1,12 @@
 ---
 slug: kodomo-sokuseki-fruit-jelly-oyatsu
 title: 即席フルーツゼリー｜5分の子供おやつレシピ
-metaDescription: >-
-  ゼラチンと果物・ジュースで作る5分の即席ゼリー。冷蔵庫で1時間で固まる。アレルゲンと月齢適性も明示。
+metaDescription: ゼラチンと果物・ジュースで作る5分の即席ゼリー。冷蔵庫で1時間で固まる。アレルゲンと月齢適性も明示。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-fruit-03.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-sokuseki-fruit-jelly-oyatsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,8 +17,8 @@ quickInfo:
   weather: []
   durationMin: 5
   budget: low
-lede: >-
-  市販の100%果汁ジュースと粉ゼラチンで作る、添加物最少の即席ゼリー。色とりどりの果物を入れて、子供の目も心も惹きつけるおやつに仕上がります。
+lede: 市販の100%果汁ジュースと粉ゼラチンで作る、添加物最少の即席ゼリー。色とりどりの果物を入れて、子供の目も心も惹きつけるおやつに仕上がります。
+legacyHero: /hero-ai/cat-food-fruit-03.webp
 ---
 
 ## TL;DR｜30秒でわかる答え

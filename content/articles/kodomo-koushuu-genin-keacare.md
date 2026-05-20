@@ -4,10 +4,10 @@ title: 子供の口臭 原因と気になるときのケア法【1〜6歳のお�
 metaDescription: >-
   子供の口臭が気になる原因と、1〜6歳でできるお口ケアの基本を整理。歯磨きの仕方、水分補給、口呼吸対策、生活習慣の見直しまで。気になる時の小児歯科受診目安も紹介。家庭で今日から始められるケア法を保存版でまとめました。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
+updatedAt: '2026-05-20'
 category: yakudatsu
 categoryName: 役立つもの
-hero: /hero-ai/cat-medical-01.webp
+hero: /hero-ai/kodomo-koushuu-genin-keacare.jpg
 quickInfo:
   ageRanges:
     - 0-1
@@ -22,6 +22,7 @@ quickInfo:
 area: all
 lede: >-
   「うちの子、なんだか口が臭うかも」――1〜6歳でも口臭が気になることはあります。多くは一過性で生活習慣の見直しで気になりにくくなるケースもありますが、長引く場合は小児歯科の受診が安心。原因と家庭ケアの基本をまとめました。
+legacyHero: /hero-ai/cat-medical-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

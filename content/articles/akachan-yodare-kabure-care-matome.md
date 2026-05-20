@@ -4,10 +4,10 @@ title: 赤ちゃんのよだれかぶれ ケア情報まとめ【0〜1歳の予�
 metaDescription: >-
   赤ちゃんのよだれかぶれが気になる時のケア情報を整理。スキンケアの基本、スタイ・タオルの選び方、皮膚科受診の目安まで。「治す」ではなく「気にならない肌環境を保つ」ための家庭ケアの基本を保存版でまとめました。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
+updatedAt: '2026-05-20'
 category: yakudatsu
 categoryName: 役立つもの
-hero: /hero-ai/cat-baby-02.webp
+hero: /hero-ai/akachan-yodare-kabure-care-matome.jpg
 quickInfo:
   ageRanges:
     - 0-1
@@ -20,6 +20,7 @@ quickInfo:
 area: all
 lede: >-
   「ほっぺた・あご・首が赤くなって心配」――よだれの多い時期に多くのご家庭が悩む「よだれかぶれ」。家庭でできるスキンケアの基本と、皮膚科受診の目安、便利アイテムまでを情報整理。本記事は医療行為を目的としたものではなく、参考情報として家庭ケアの基本をまとめています。
+legacyHero: /hero-ai/cat-baby-02.webp
 ---
 
 ## 結論（先に知りたい人へ）

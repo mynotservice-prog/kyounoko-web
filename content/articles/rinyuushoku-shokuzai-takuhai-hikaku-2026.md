@@ -2,12 +2,13 @@
 slug: rinyuushoku-shokuzai-takuhai-hikaku-2026
 title: 離乳食食材セット 宅配サービス比較 2026年版【コープ・パルシステム他5社】
 metaDescription: >-
-  離乳食食材セットの宅配サービスを比較。コープデリ・パルシステム・オイシックス・カインデスト・the kindestなど主要5社の価格・配達範囲・無添加対応・離乳食メニューを2026年版で整理。月齢別の選び方も紹介。
+  離乳食食材セットの宅配サービスを比較。コープデリ・パルシステム・オイシックス・カインデスト・the
+  kindestなど主要5社の価格・配達範囲・無添加対応・離乳食メニューを2026年版で整理。月齢別の選び方も紹介。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
+updatedAt: '2026-05-20'
 category: yakudatsu
 categoryName: 役立つもの
-hero: /hero-ai/cat-food-kitchen-02.jpg
+hero: /hero-ai/rinyuushoku-shokuzai-takuhai-hikaku-2026.jpg
 quickInfo:
   ageRanges:
     - 0-1
@@ -20,6 +21,7 @@ quickInfo:
 area: all
 lede: >-
   「離乳食、毎日作るのもう限界」――生協やネット宅配の離乳食食材セットがあると一気にラクになります。コープ・パルシステム・オイシックス・カインデスト等の主要5社を価格・配達範囲・離乳食対応で比較。月齢別の選び方もまとめました。
+legacyHero: /hero-ai/cat-food-kitchen-02.jpg
 ---
 
 ## 結論（先に知りたい人へ）

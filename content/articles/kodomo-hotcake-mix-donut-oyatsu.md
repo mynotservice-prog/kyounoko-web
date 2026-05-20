@@ -1,12 +1,13 @@
 ---
 slug: kodomo-hotcake-mix-donut-oyatsu
-title: "ホットケーキミックスで揚げ焼きドーナツ｜10分・少量油で完成のおやつレシピ"
-metaDescription: "市販のホットケーキミックスとフライパン1つで10分、少量の油で揚げ焼きドーナツが完成。子供のおやつや休日の手作りに。アレルゲン・月齢適性も明示した、ながみー家の2歳4歳に愛される失敗しない王道おやつレシピです。"
+title: ホットケーキミックスで揚げ焼きドーナツ｜10分・少量油で完成のおやつレシピ
+metaDescription: >-
+  市販のホットケーキミックスとフライパン1つで10分、少量の油で揚げ焼きドーナツが完成。子供のおやつや休日の手作りに。アレルゲン・月齢適性も明示した、ながみー家の2歳4歳に愛される失敗しない王道おやつレシピです。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-sweet-02.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-hotcake-mix-donut-oyatsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -17,8 +18,10 @@ quickInfo:
   weather: []
   durationMin: 10
   budget: low
-lede: "結論、油たっぷりの揚げ鍋は不要。フライパンに油を薄く敷くだけで、ホットケーキミックスから10分でドーナツが完成します。2歳と4歳の兄妹がいるながみー家で何度もリピしている、失敗しないおやつレシピです。"
-youtubeSearch: 'ホットケーキミックス ドーナツ おやつ'
+lede: >-
+  結論、油たっぷりの揚げ鍋は不要。フライパンに油を薄く敷くだけで、ホットケーキミックスから10分でドーナツが完成します。2歳と4歳の兄妹がいるながみー家で何度もリピしている、失敗しないおやつレシピです。
+youtubeSearch: ホットケーキミックス ドーナツ おやつ
+legacyHero: /hero-ai/cat-food-sweet-02.webp
 ---
 
 ## TL;DR｜30秒でわかる答え

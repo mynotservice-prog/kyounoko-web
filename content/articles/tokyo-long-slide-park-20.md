@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-17'
-updatedAt: '2026-05-17'
-hero: /hero-ai/cat-park-03.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/tokyo-long-slide-park-20.jpg
 quickInfo:
   ageRanges:
     - 2-3
@@ -19,6 +19,7 @@ quickInfo:
   durationMin: 120
   budget: free
 area: tokyo
+legacyHero: /hero-ai/cat-park-03.webp
 ---
 
 ## 結論（TL;DR）

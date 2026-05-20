@@ -1,12 +1,13 @@
 ---
 slug: kodomo-cereal-tounyu-pudding-mae-shikomi
-title: "朝5分・前夜仕込みのシリアル豆乳プリン｜卵なし1歳から食べられる救済レシピ"
-metaDescription: "朝バタつく日に効く、前夜5分仕込みのシリアル豆乳プリン。卵不使用で1歳卒業期から食べられ、朝はスプーンで完結。アレルゲン・月齢適性も明示した、2歳と4歳がいるながみー家のリピ確定の救済朝ごはん保存版レシピです。"
+title: 朝5分・前夜仕込みのシリアル豆乳プリン｜卵なし1歳から食べられる救済レシピ
+metaDescription: >-
+  朝バタつく日に効く、前夜5分仕込みのシリアル豆乳プリン。卵不使用で1歳卒業期から食べられ、朝はスプーンで完結。アレルゲン・月齢適性も明示した、2歳と4歳がいるながみー家のリピ確定の救済朝ごはん保存版レシピです。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-12'
-hero: /hero-ai/cat-food-fruit-03.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/kodomo-cereal-tounyu-pudding-mae-shikomi.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -17,8 +18,10 @@ quickInfo:
   weather: []
   durationMin: 5
   budget: low
-lede: "結論、前夜5分仕込みで朝はスプーン1本完結。卵不使用・1歳卒業期から食べられるシリアル豆乳プリンは、ながみー家の「朝ピンチ」を3年救い続けた定番。アレルゲンと月齢適性まで明示した保存版レシピです。"
-youtubeSearch: 'シリアル 豆乳 プリン 朝ごはん'
+lede: >-
+  結論、前夜5分仕込みで朝はスプーン1本完結。卵不使用・1歳卒業期から食べられるシリアル豆乳プリンは、ながみー家の「朝ピンチ」を3年救い続けた定番。アレルゲンと月齢適性まで明示した保存版レシピです。
+youtubeSearch: シリアル 豆乳 プリン 朝ごはん
+legacyHero: /hero-ai/cat-food-fruit-03.webp
 ---
 
 ## TL;DR｜30秒でわかる答え

@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
-updatedAt: '2026-05-14'
-hero: /hero-ai/cat-food-kitchen-01.webp
+updatedAt: '2026-05-20'
+hero: /hero-ai/gyukaku-kodzure-koryaku.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -22,7 +22,8 @@ quickInfo:
   budget: low
 lede: >-
   「牛角は子連れで行ける？焼肉って小さい子だと危なくない？」を1記事で解決。個室や座敷のある店舗が多く、やけど対策を押さえれば子連れでも焼肉を楽しめるチェーン。0-6歳の家族が牛角を使いこなすコツを、キッズメニューや安全配慮まで保存版でまとめました。
-youtubeSearch: '牛角 子連れ ベビーカー'
+youtubeSearch: 牛角 子連れ ベビーカー
+legacyHero: /hero-ai/cat-food-kitchen-01.webp
 ---
 
 **結論：牛角は段差の少ない入口・個室や座敷のある店舗が多く、キッズメニューもそろっていて子連れでも焼肉を楽しめるチェーンです。火を使うため、やけど対策と座る位置の工夫が必要です。設備は店舗差があるので事前確認をおすすめします。**

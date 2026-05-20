@@ -1,22 +1,32 @@
 ---
 slug: kodzure-restaurant-erabikata-kanzen-guide
-title: "子連れレストランの選び方完全ガイド｜段差・座敷・授乳室・アレルゲンまで【2026】"
-metaDescription: "ベビーカーで入れる？座敷ある？離乳食持ち込みOK？子連れ外食で失敗しない12のチェックポイントを完全網羅。チェーン33ブランドの実データつき。"
-publishedAt: "2026-05-12"
-updatedAt: "2026-05-12"
-category: "today-taberu"
-categoryName: "今日何食べる"
-hero: "/hero-ai/cat-family-dinner-01.webp"
-area: "all"
-lede: "外食前の3分チェックで、子連れランチが10倍ラクになります。本記事は、ベビーカー入店・段差・座敷・キッズチェア・離乳食持ち込み・授乳室・アレルゲン表示など12項目の判断基準と、各項目で強いチェーン店を整理した完全ガイドです。"
-ageRanges: ["0-1", "1-2", "2-3", "4-6"]
+title: 子連れレストランの選び方完全ガイド｜段差・座敷・授乳室・アレルゲンまで【2026】
+metaDescription: ベビーカーで入れる？座敷ある？離乳食持ち込みOK？子連れ外食で失敗しない12のチェックポイントを完全網羅。チェーン33ブランドの実データつき。
+publishedAt: '2026-05-12'
+updatedAt: '2026-05-20'
+category: today-taberu
+categoryName: 今日何食べる
+hero: /hero-ai/kodzure-restaurant-erabikata-kanzen-guide.jpg
+area: all
+lede: >-
+  外食前の3分チェックで、子連れランチが10倍ラクになります。本記事は、ベビーカー入店・段差・座敷・キッズチェア・離乳食持ち込み・授乳室・アレルゲン表示など12項目の判断基準と、各項目で強いチェーン店を整理した完全ガイドです。
+ageRanges:
+  - 0-1
+  - 1-2
+  - 2-3
+  - 4-6
 quickInfo:
-  ageRanges: ["0-1", "1-2", "2-3", "4-6"]
+  ageRanges:
+    - 0-1
+    - 1-2
+    - 2-3
+    - 4-6
   place:
     - indoor
   weather:
     - any
   budget: low
+legacyHero: /hero-ai/cat-family-dinner-01.webp
 ---
 
 ## TL;DR｜まず読む3行まとめ
