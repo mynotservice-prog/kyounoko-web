@@ -1,21 +1,13 @@
 {
   "$schema": "Scheduled-task state file for 旅行中 autonomous work.",
   "$description": "Claude scheduled task が2時間おきにこのファイルを読み、queue から1記事ピック→作業→state更新する。",
-  "last_run_at": "2026-05-19T23:15:25.000Z",
-  "cycles_completed": 11,
+  "last_run_at": "2026-05-20T12:30:00.000Z",
+  "cycles_completed": 13,
 
   "queues": {
     "new_articles": [],
 
     "rewrite_targets": [
-      {
-        "slug": "jonathan-kodzure-koryaku",
-        "reason": "Search Console: 243imp / CTR 2.5%。「離乳食温め」を見出しに明示、ガストとの差別化を冒頭で"
-      },
-      {
-        "slug": "gusto-kodzure-koryaku",
-        "reason": "Search Console: 244imp / CTR 1.2% ← 最低。離乳食を冒頭にリード、Pepper配膳ロボのファミリー目線レビュー追記"
-      },
       {
         "slug": "kodzure-famires-15sen",
         "reason": "Search Console: 223imp / CTR 1.8% / pos 13.9。タイトル見直し、TOP10にスリム化（記事内アンカーで増減対応）"
