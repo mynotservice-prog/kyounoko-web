@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T15:13:57.905Z",
+  "generatedAt": "2026-05-21T17:14:22.655Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -48,6 +48,7 @@
     "booster-3type-2-7sai": "/hero-ai/booster-3type-2-7sai.webp",
     "bousai-no-hi-katei-bichiku-mininaosu": "/hero-ai/bousai-no-hi-katei-bichiku-mininaosu.webp",
     "bronco-billy-kodzure-koryaku": "/hero-ai/bronco-billy-kodzure-koryaku.webp",
+    "burger-chain-kodzure-ranking-2026-5sha": "/hero-ai/burger-chain-kodzure-ranking-2026-5sha.jpg",
     "cafe-3chain-kodzure-hikaku": "/hero-ai/cafe-3chain-kodzure-hikaku.webp",
     "cafe-chain-kodzure-ranking-2026-6sha": "/hero-ai/cafe-chain-kodzure-ranking-2026-6sha.jpg",
     "chichi-no-hi-purezento-2-6sai-tedukuri-15sen": "/hero-ai/chichi-no-hi-purezento-2-6sai-tedukuri-15sen.webp",
@@ -962,8 +963,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 427,
-    "articleHeroCount": 427,
+    "articleSlugs": 428,
+    "articleHeroCount": 428,
     "planIds": 530,
     "planHeroCount": 530
   }

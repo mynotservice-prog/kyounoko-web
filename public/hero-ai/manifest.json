@@ -3390,5 +3390,13 @@
     "generatedAt": "2026-05-21T15:13:52.600Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "burger-chain-kodzure-ranking-2026-5sha": {
+    "slug": "burger-chain-kodzure-ranking-2026-5sha",
+    "ok": true,
+    "file": "/hero-ai/burger-chain-kodzure-ranking-2026-5sha.jpg",
+    "generatedAt": "2026-05-21T17:14:17.581Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }
