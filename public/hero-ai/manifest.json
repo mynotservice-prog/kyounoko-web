@@ -3278,5 +3278,85 @@
     "generatedAt": "2026-05-20T01:32:05.680Z",
     "model": "flux-1-schnell",
     "steps": 4
+  },
+  "kakigori-softcream-chain-kodzure-hikaku": {
+    "slug": "kakigori-softcream-chain-kodzure-hikaku",
+    "ok": true,
+    "file": "/hero-ai/kakigori-softcream-chain-kodzure-hikaku.jpg",
+    "generatedAt": "2026-05-21T03:14:37.554Z",
+    "model": "flux-1-schnell",
+    "steps": 8
+  },
+  "natsumatsuri-yatai-gourmet-kodzure-guide": {
+    "slug": "natsumatsuri-yatai-gourmet-kodzure-guide",
+    "ok": true,
+    "file": "/hero-ai/natsumatsuri-yatai-gourmet-kodzure-guide.jpg",
+    "generatedAt": "2026-05-21T05:13:56.536Z",
+    "model": "flux-1-schnell",
+    "steps": 8
+  },
+  "bento-takeout-chain-kodzure-4sha": {
+    "slug": "bento-takeout-chain-kodzure-4sha",
+    "ok": true,
+    "file": "/hero-ai/bento-takeout-chain-kodzure-4sha.jpg",
+    "generatedAt": "2026-05-21T05:15:24.116Z",
+    "model": "flux-1-schnell",
+    "steps": 8
+  },
+  "cafe-chain-kodzure-ranking-2026-6sha": {
+    "slug": "cafe-chain-kodzure-ranking-2026-6sha",
+    "ok": true,
+    "file": "/hero-ai/cafe-chain-kodzure-ranking-2026-6sha.jpg",
+    "generatedAt": "2026-05-21T05:15:24.323Z",
+    "model": "flux-1-schnell",
+    "steps": 8
+  },
+  "gyudon-chain-kodzure-ranking-2026-4sha": {
+    "slug": "gyudon-chain-kodzure-ranking-2026-4sha",
+    "ok": true,
+    "file": "/hero-ai/gyudon-chain-kodzure-ranking-2026-4sha.jpg",
+    "generatedAt": "2026-05-21T05:15:26.453Z",
+    "model": "flux-1-schnell",
+    "steps": 8
+  },
+  "conveni-kodzure-kids-shokuzai-4sha": {
+    "slug": "conveni-kodzure-kids-shokuzai-4sha",
+    "ok": true,
+    "file": "/hero-ai/conveni-kodzure-kids-shokuzai-4sha.jpg",
+    "generatedAt": "2026-05-21T05:15:26.572Z",
+    "model": "flux-1-schnell",
+    "steps": 8
+  },
+  "mochikaeri-sushi-chain-kodzure-4sha": {
+    "slug": "mochikaeri-sushi-chain-kodzure-4sha",
+    "ok": true,
+    "file": "/hero-ai/mochikaeri-sushi-chain-kodzure-4sha.jpg",
+    "generatedAt": "2026-05-21T05:15:28.633Z",
+    "model": "flux-1-schnell",
+    "steps": 8
+  },
+  "ramen-chain-kodzure-ranking-2026-5sha": {
+    "slug": "ramen-chain-kodzure-ranking-2026-5sha",
+    "ok": true,
+    "file": "/hero-ai/ramen-chain-kodzure-ranking-2026-5sha.jpg",
+    "generatedAt": "2026-05-21T05:15:28.954Z",
+    "model": "flux-1-schnell",
+    "steps": 8
+  },
+  "shabushabu-chain-kodzure-ranking-2026-5sha": {
+    "slug": "shabushabu-chain-kodzure-ranking-2026-5sha",
+    "ok": true,
+    "file": "/hero-ai/shabushabu-chain-kodzure-ranking-2026-5sha.jpg",
+    "generatedAt": "2026-05-21T05:15:30.813Z",
+    "model": "flux-1-schnell",
+    "steps": 8
+  },
+  "teishoku-chain-kodzure-ranking-4sha": {
+    "slug": "teishoku-chain-kodzure-ranking-4sha",
+    "ok": true,
+    "file": "/hero-ai/teishoku-chain-kodzure-ranking-4sha.jpg",
+    "generatedAt": "2026-05-21T05:15:31.382Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }

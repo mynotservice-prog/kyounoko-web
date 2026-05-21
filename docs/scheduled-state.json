@@ -1,8 +1,8 @@
 {
   "$schema": "Scheduled-task state file for 旅行中 autonomous work.",
   "$description": "Claude scheduled task が2時間おきにこのファイルを読み、queue から1記事ピック→作業→state更新する。",
-  "last_run_at": "2026-05-21T01:13:06.000Z",
-  "cycles_completed": 24,
+  "last_run_at": "2026-05-21T05:16:22.000Z",
+  "cycles_completed": 26,
 
   "queues": {
     "new_articles": [],
@@ -10,30 +10,7 @@
     "rewrite_targets": [],
 
     "indexnow_priority": [],
-    "image_generation_pending": [
-      "starbucks-kodzure-koryaku",
-      "yayoiken-vs-saize-kodzure-douchi",
-      "gusto-vs-jonathan-kodzure-douchi",
-      "komeda-kodzure-koryaku",
-      "ootoya-kodzure-koryaku",
-      "matsuya-kodzure-koryaku",
-      "yoshinoya-kodzure-koryaku",
-      "chichi-no-hi-purezento-2-6sai-tedukuri-15sen",
-      "tsuyu-ie-asobi-0-6sai-15pattern",
-      "famires-kodzure-ranking-2026-10sen",
-      "tanabata-kazari-tedukuri-0-6sai-7shurui",
-      "yakiniku-chain-kodzure-5sha-hikaku",
-      "kaiten-sushi-chain-kodzure-5sha-hikaku",
-      "udon-chain-kodzure-4sha-hikaku",
-      "cafe-chain-kodzure-ranking-2026-6sha",
-      "gyudon-chain-kodzure-ranking-2026-4sha",
-      "shabushabu-chain-kodzure-ranking-2026-5sha",
-      "bento-takeout-chain-kodzure-4sha",
-      "conveni-kodzure-kids-shokuzai-4sha",
-      "ramen-chain-kodzure-ranking-2026-5sha",
-      "mochikaeri-sushi-chain-kodzure-4sha",
-      "teishoku-chain-kodzure-ranking-4sha"
-    ]
+    "image_generation_pending": []
   },
 
   "quality_standards": {
