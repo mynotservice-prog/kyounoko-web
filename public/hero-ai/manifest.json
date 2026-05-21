@@ -3398,5 +3398,21 @@
     "generatedAt": "2026-05-21T17:14:17.581Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "mos-burger-kodzure-koryaku": {
+    "slug": "mos-burger-kodzure-koryaku",
+    "ok": true,
+    "file": "/hero-ai/mos-burger-kodzure-koryaku.jpg",
+    "generatedAt": "2026-05-21T19:12:20.105Z",
+    "model": "flux-1-schnell",
+    "steps": 8
+  },
+  "freshness-burger-kodzure-koryaku": {
+    "slug": "freshness-burger-kodzure-koryaku",
+    "ok": true,
+    "file": "/hero-ai/freshness-burger-kodzure-koryaku.jpg",
+    "generatedAt": "2026-05-21T21:13:23.319Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }

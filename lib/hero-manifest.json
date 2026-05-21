@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T17:14:22.655Z",
+  "generatedAt": "2026-05-21T21:13:27.604Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -85,6 +85,7 @@
     "famires-7chain-8koumoku-2026": "/hero-ai/famires-7chain-8koumoku-2026.webp",
     "famires-kodzure-ranking-2026-10sen": "/hero-ai/famires-kodzure-ranking-2026-10sen.webp",
     "fathers-day-tezukuri-kodomo-2026": "/hero-ai/fathers-day-tezukuri-kodomo-2026.webp",
+    "freshness-burger-kodzure-koryaku": "/hero-ai/freshness-burger-kodzure-koryaku.jpg",
     "gaisyoku-ko-ga-taberu": "/hero-ai/gaisyoku-ko-ga-taberu.webp",
     "gotsugo-hattaku-muchi-kodomo": "/hero-ai/gotsugo-hattaku-muchi-kodomo.webp",
     "gusto-kodzure-koryaku": "/hero-ai/gusto-kodzure-koryaku.webp",
@@ -241,6 +242,7 @@
     "mcdonalds-kodzure-koryaku": "/hero-ai/mcdonalds-kodzure-koryaku.webp",
     "mochikaeri-sushi-chain-kodzure-4sha": "/hero-ai/mochikaeri-sushi-chain-kodzure-4sha.jpg",
     "monte-asobi-nenrei-betsu": "/hero-ai/monte-asobi-nenrei-betsu.webp",
+    "mos-burger-kodzure-koryaku": "/hero-ai/mos-burger-kodzure-koryaku.jpg",
     "mothers-day-tezukuri-kodomo-2026": "/hero-ai/mothers-day-tezukuri-kodomo-2026.webp",
     "moushobi-suzushii-spots": "/hero-ai/moushobi-suzushii-spots.webp",
     "mugi-aleergi-meal-kodomo": "/hero-ai/mugi-aleergi-meal-kodomo.webp",
@@ -963,8 +965,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 428,
-    "articleHeroCount": 428,
+    "articleSlugs": 430,
+    "articleHeroCount": 430,
     "planIds": 530,
     "planHeroCount": 530
   }
