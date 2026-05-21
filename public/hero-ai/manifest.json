@@ -3382,5 +3382,13 @@
     "generatedAt": "2026-05-21T13:13:13.204Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "cocoichi-kodzure-koryaku": {
+    "slug": "cocoichi-kodzure-koryaku",
+    "ok": true,
+    "file": "/hero-ai/cocoichi-kodzure-koryaku.jpg",
+    "generatedAt": "2026-05-21T15:13:52.600Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }

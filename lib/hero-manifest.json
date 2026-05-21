@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T13:13:18.419Z",
+  "generatedAt": "2026-05-21T15:13:57.905Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -64,6 +64,7 @@
     "child-seat-0-7sai-5brand": "/hero-ai/child-seat-0-7sai-5brand.webp",
     "christmas-cake-kodzure-erabikata": "/hero-ai/christmas-cake-kodzure-erabikata.webp",
     "christmas-present-kodomo-nenrei-betsu": "/hero-ai/christmas-present-kodomo-nenrei-betsu.webp",
+    "cocoichi-kodzure-koryaku": "/hero-ai/cocoichi-kodzure-koryaku.jpg",
     "cocos-birthday-real": "/hero-ai/cocos-birthday-real.webp",
     "cocos-kodzure-koryaku": "/hero-ai/cocos-kodzure-koryaku.webp",
     "conveni-kodzure-kids-shokuzai-4sha": "/hero-ai/conveni-kodzure-kids-shokuzai-4sha.jpg",
@@ -961,8 +962,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 426,
-    "articleHeroCount": 426,
+    "articleSlugs": 427,
+    "articleHeroCount": 427,
     "planIds": 530,
     "planHeroCount": 530
   }
