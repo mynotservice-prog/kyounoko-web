@@ -160,6 +160,7 @@ A. うどんなどの麺、海苔を使った軍艦、大きめのネタは、�
 - [くら寿司子連れ攻略｜ビッくらポンと取り分けのリアル](/article/kura-sushi-kodzure-koryaku)：くら寿司の店内利用の楽しみ方。
 - [くら寿司ビッくらポンは何歳から楽しめる？実体験レビュー](/article/kura-sushi-bikkurapon-real)：エンタメ装置の実態を子ども目線で。
 - [はま寿司子連れ攻略｜ロードサイド店の使い勝手レビュー](/article/hama-sushi-kodzure-koryaku)：はま寿司の店内・受け取りの実体験。
+- [かっぱ寿司子連れ攻略｜ベビーカー・お子様セット・新幹線レーンの実体験](/article/kappa-sushi-kodzure-koryaku)：かっぱ寿司の店内・受け取りの実体験。
 - [【2026年版】テイクアウト弁当チェーン子連れランキング4社](/article/bento-takeout-chain-kodzure-4sha)：寿司以外の持ち帰りも検討するなら。
 - [【2026年版】コンビニ子連れキッズ食材ランキング4社](/article/conveni-kodzure-kids-shokuzai-4sha)：もっと手軽な中食の選び方。
 - [子連れ向けデリ・テイクアウト10選](/article/kodzure-deli-takeout-10)：公園ピクニックにも使える持ち帰りまとめ。

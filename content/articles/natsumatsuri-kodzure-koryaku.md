@@ -5,7 +5,7 @@ metaDescription: 0〜6歳と行く夏祭り・盆踊りの歩き方、屋台選�
 category: gyouji
 categoryName: 季節と行事
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-05-21'
 hero: /hero-ai/natsumatsuri-kodzure-koryaku.jpg
 area: all
 quickInfo:
@@ -211,3 +211,4 @@ lede: 0〜6歳と行く夏祭りの攻略法を年齢別に。抱っこ紐vs歩�
 
 - [こどもの日のキャラ弁＆飾り5選](/article/kodomo-no-hi-kyaraben)
 - [子連れお花見の完全準備](/article/ohanami-keikaku-junbi)
+- [【2026年版】夏祭り・縁日の屋台グルメ子連れ完全ガイド｜定番15品は何歳から？](/article/natsumatsuri-yatai-gourmet-kodzure-guide)

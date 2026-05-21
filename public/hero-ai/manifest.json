@@ -3366,5 +3366,13 @@
     "generatedAt": "2026-05-21T07:12:31.100Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "natsu-drink-chain-kodzure-ranking-2026-5sha": {
+    "slug": "natsu-drink-chain-kodzure-ranking-2026-5sha",
+    "ok": true,
+    "file": "/hero-ai/natsu-drink-chain-kodzure-ranking-2026-5sha.jpg",
+    "generatedAt": "2026-05-21T09:13:24.164Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }

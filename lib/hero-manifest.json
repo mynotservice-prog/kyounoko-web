@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T07:12:38.122Z",
+  "generatedAt": "2026-05-21T09:13:28.851Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -248,6 +248,7 @@
     "naraigoto-itsukara-0-6sai": "/hero-ai/naraigoto-itsukara-0-6sai.webp",
     "naraigoto-yametai-taiou": "/hero-ai/naraigoto-yametai-taiou.webp",
     "natsu-bento-itamanai-recipe-7": "/hero-ai/natsu-bento-itamanai-recipe-7.webp",
+    "natsu-drink-chain-kodzure-ranking-2026-5sha": "/hero-ai/natsu-drink-chain-kodzure-ranking-2026-5sha.jpg",
     "natsu-kodomo-shokuyoku-nai-recipe-10": "/hero-ai/natsu-kodomo-shokuyoku-nai-recipe-10.webp",
     "natsu-yasumi-kodomo-asobi-ie-de": "/hero-ai/natsu-yasumi-kodomo-asobi-ie-de.webp",
     "natsu-yobi-kosodate-grandparent": "/hero-ai/natsu-yobi-kosodate-grandparent.webp",
@@ -959,8 +960,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 424,
-    "articleHeroCount": 424,
+    "articleSlugs": 425,
+    "articleHeroCount": 425,
     "planIds": 530,
     "planHeroCount": 530
   }

@@ -5,7 +5,7 @@ metaDescription: 2026年の夏祭りを0〜6歳の子と乗り切る攻略ガイ
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-06'
-updatedAt: '2026-05-09'
+updatedAt: '2026-05-21'
 hero: /hero-ai/natsumatsuri-kodzure-koryaku-2026.jpg
 lede: >-
   2026年の夏祭りを0〜6歳と楽しむなら、混雑ピークと屋台ラッシュを避ける段取りが命。服装・持ち物・トイレ事情・迷子対策を踏まえ、子連れ向きの動線を組み立てます。
@@ -173,3 +173,4 @@ area: all
 
 - [夏祭りの子連れ攻略｜0〜6歳別の歩き方・持ち物・食事](/article/natsumatsuri-kodzure-koryaku)
 - [【2026年版】東京の子連れOK花火大会10選](/article/tokyo-hanabi-taikai-kodzure-2026)
+- [【2026年版】夏祭り・縁日の屋台グルメ子連れ完全ガイド｜定番15品は何歳から？](/article/natsumatsuri-yatai-gourmet-kodzure-guide)

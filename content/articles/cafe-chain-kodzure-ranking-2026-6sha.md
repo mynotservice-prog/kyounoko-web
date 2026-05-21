@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-20'
-updatedAt: '2026-05-20'
+updatedAt: '2026-05-21'
 area: all
 lede: >-
   「結局どのカフェなら子連れで気がねなく入れる？」を **5軸×10点=50点満点スコア** で採点しました。**コメダ44点／スタバ37点／上島35点／タリーズ33点／サンマルク28点／ドトール24点** が結論。0〜6歳の年齢ステージ別1位と、ベビーカー入店・離乳食持込・キッズドリンク・座席広さ・価格まで、首都圏で実訪問した一次データで比較します。
@@ -33,7 +33,7 @@ heroAlt: 都心のカフェで子連れ家族がベビーカーを横付けし�
 - **著者**: ながみー（編集長・4歳娘＆2歳息子の父／30代パパ）
 - **取材ベース**: 首都圏のスタバ・タリーズ・ドトール・サンマルク・コメダ・上島珈琲店の6チェーンを **延べ80店舗以上**、**5年以上にわたり月3〜5回ペース** で家族利用した一次データ
 - **公式参照**: スターバックス公式メニュー [www.starbucks.co.jp](https://www.starbucks.co.jp/menu/) ／タリーズ公式 [www.tullys.co.jp](https://www.tullys.co.jp/) ／ドトール公式 [www.doutor.co.jp](https://www.doutor.co.jp/) ／サンマルク公式 [www.saint-marc-hd.com](https://www.saint-marc-hd.com/) ／コメダ公式 [www.komeda.co.jp](https://www.komeda.co.jp/) ／上島珈琲店公式 [www.ueshima-coffee-ten.jp](https://www.ueshima-coffee-ten.jp/) （いずれも2026年5月時点で参照）
-- **最終更新**: 2026年5月20日
+- **最終更新**: 2026年5月21日
 - **注**: 各社の店舗ごとに座席・サービスの差は大きく、本記事のスコアは「同チェーンの首都圏標準的な店舗で家族3人が30〜60分滞在したときの体験」を基準にしています。アレルゲン情報・離乳食ルール・価格は変動するため、最終確認は必ず公式サイトで行ってください。
 
 ## 評価方法｜5軸×10点=50点満点
@@ -207,3 +207,5 @@ A. **0-2歳の離乳食ありなら[ファミレス（ガスト・サイゼ・�
 - [ファミレス子連れランキング2026年版TOP10｜離乳食・ベビーカー・キッズ評価](/article/famires-kodzure-ranking-2026-10sen)
 - [うどんチェーン4社 子連れ徹底比較｜丸亀・はなまる・東京麺通団・つるとんたん](/article/udon-chain-kodzure-4sha-hikaku)
 - [子連れキッズメニュー15チェーン徹底比較｜価格・年齢区分・アレルゲン](/article/kids-menu-chain-15-hikaku)
+- [【2026年版】夏のひんやりスイーツ・かき氷チェーン子連れランキング5社](/article/kakigori-softcream-chain-kodzure-hikaku)
+- [【2026年版】夏のドリンク子連れチェーン比較ランキング5社｜タピオカ・フラペチーノは何歳から？](/article/natsu-drink-chain-kodzure-ranking-2026-5sha)

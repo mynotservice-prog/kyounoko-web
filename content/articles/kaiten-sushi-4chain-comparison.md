@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-05-21'
 area: all
 lede: >-
   「結局、子連れの回転寿司はどこを選べばいい？」を1ページで決着。**ベビーカー入店・キッズチェア・キッズメニュー・取り分け・離乳食持込・おむつ替え・個室・価格帯**の8項目で、スシロー・くら寿司・はま寿司・かっぱ寿司を◎○△✕評価しました。
@@ -77,7 +77,7 @@ hero: /hero-ai/kaiten-sushi-4chain-comparison.jpg
 
 ## 内部リンク
 
-- 各チェーン単独の攻略は[スシロー 子連れ攻略](/article/sushiro-kodzure-koryaku)・[くら寿司 子連れ攻略](/article/kura-sushi-kodzure-koryaku)・[はま寿司 子連れ攻略](/article/hama-sushi-kodzure-koryaku)に詳細あり。
+- 各チェーン単独の攻略は[スシロー 子連れ攻略](/article/sushiro-kodzure-koryaku)・[くら寿司 子連れ攻略](/article/kura-sushi-kodzure-koryaku)・[はま寿司 子連れ攻略](/article/hama-sushi-kodzure-koryaku)・[かっぱ寿司 子連れ攻略](/article/kappa-sushi-kodzure-koryaku)に詳細あり。
 - くら寿司のビッくらポン体験記は[くら寿司 ビッくらポン リアル](/article/kura-sushi-bikkurapon-real)。
 - 和食全体の比較は[子連れ和食チェーン10選](/article/kodzure-washoku-chain-10)。
 

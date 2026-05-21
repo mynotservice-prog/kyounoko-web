@@ -5,7 +5,7 @@ metaDescription: コメダ珈琲店はベビーカーで入れる？モーニン
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
-updatedAt: '2026-05-20'
+updatedAt: '2026-05-21'
 hero: /hero-ai/komeda-kodzure-koryaku.jpg
 area: tokyo
 quickInfo:
@@ -107,6 +107,8 @@ legacyHero: /hero-ai/cat-home-cozy-01.webp
 - [ガストの子連れ攻略｜キッズメニュー・離乳食・ベビーチェア](/article/gusto-kodzure-koryaku)
 - [子連れモーニング10選](/article/kodzure-morning-cafe-10)
 - [子連れOKファミレス王道15選](/article/kodzure-famires-15sen)
+- [【2026年版】夏のひんやりスイーツ・かき氷チェーン子連れランキング5社](/article/kakigori-softcream-chain-kodzure-hikaku)
+- [【2026年版】夏のドリンク子連れチェーン比較ランキング5社](/article/natsu-drink-chain-kodzure-ranking-2026-5sha)
 - [子連れ向けレストランデータ](/data/restaurants)
 
 ## よくある質問
