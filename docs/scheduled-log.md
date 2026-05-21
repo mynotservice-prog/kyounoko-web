@@ -716,3 +716,26 @@
     3. **ランキング型（季節第4弾）**: 夏スイーツ(#25)・夏祭り屋台(#26)・夏ドリンク(#28)で夏の中食/スイーツ/ドリンクはほぼ網羅。次は秋（運動会・遠足のお弁当チェーン、ハロウィン）方面の仕込みも検討可。
   - **画像 backlog はゼロのまま**: Cloudflare Workers AI は #25〜#28 安定。新作時は都度 hero 生成すれば足りる。429再発時のみ image_generation_pending に積んで本文優先 commit。
   - **2026-05-21 20:14 JST 時点で旅行終了（5/23土朝）まで残り 約1.3日**: 残りサイクルは2時間に1サイクルで約8〜9サイクル分。ながみーさん帰宅後の最大ROIタスクは ①Search Console URL検査リクエスト（**#25〜#28の4新記事を優先＝#28は今回ようやく本番化したので特に重要**） ②Cloudflare Workers の挙動継続確認 ③IndexNow キーファイル本番反映 ④**本サイクルでupdatedAtを当日更新した11記事**も再クロール対象に含めると回遊強化が早く反映される。
+
+
+## 2026-05-21 22:13 Cycle #30
+
+- 記事: bikkuri-donkey-kodzure-koryaku 「びっくりドンキーは子連れOK？お子さまメニュー・ハンバーグ取り分け・ベビーカー入店を徹底解説【2026】」（**新規企画／new_articles・rewrite_targets枯渇後の手順(c)で新作企画**）
+- 種別: **単独店攻略型（ファミレス single-store）**。Cycle #29 引き継ぎメモ「次は新作（content生成）に戻す／format はランキング・ガイド・単独攻略を循環」に沿って単独攻略型を選択（#27 かっぱ寿司以来）。format ローテーション: #25ランキング→#26ガイド→#27単独攻略→#28ランキング→#29リライト→**#30単独攻略**。
+- 狙い（gap分析）: 既存スラッグを横断調査したところ、子連れ人気の高いファミレスのうち**びっくりドンキーだけ単独攻略記事が未作成**だった（兄弟記事 gusto / jonathan / denny / cocos / royal-host / saize / bamiyan はすべて存在）。ハンバーグ専門店という独自業態で「**柔らかい名物ハンバーグの取り分けやすさ**」を軸に差別化でき、兄弟ファミレス群への内部リンクも豊富に張れる強gap。SEO 上は「びっくりドンキー 子連れ」「びっくりドンキー お子さまメニュー 何歳から」「びっくりドンキー ベビーカー」「びっくりドンキー ハンバーグ 取り分け」「びっくりドンキー 離乳食」のロングテール獲得を狙い target_publish 2026-05-21 で即時公開。
+- 差別化軸（今サイクルの独自性）: 兄弟ファミレス single-store スキーマ（結論→著者クレジット→3つの理由(差別化表)→子連れチェックリスト表→ベビーカー/お子さまメニュー/取り分け・離乳食/混雑回避→ながみー家リアル→安全と医師相談→年齢別早見表→FAQ→30秒チェックリスト→関連記事）を踏襲しつつ、**ハンバーグ専門店ならではの「ソース前に少量取り分け・崩しやすさ・メニュー選びのシンプルさ」を独自H2で深掘り**。すかいらーく系（ガスト/ジョナサン）・サイゼリヤ・ステーキガストとの使い分けを明示し回遊を設計。
+- 文字数: 本文 約9,020字（frontmatter込みの空白除去カウント／URL・slug含むため日本語実質は目標1,500〜2,500字を大幅超過＝深掘りで充実） / H2: 14個 / FAQ: 8問（各80〜200字） / 内部リンク: ユニーク14 slug（全て実在検証済み: gusto-kodzure-koryaku / jonathan-kodzure-koryaku / kodzure-saize-koryaku / denny-s-kodzure-koryaku / royal-host-kodzure-koryaku / cocos-kodzure-koryaku / bamiyan-kodzure-koryaku / steak-gusto-kodzure-koryaku / kodzure-famires-15sen / famires-kodzure-ranking-2026-10sen / gusto-vs-jonathan-kodzure-douchi / kids-menu-nansai-kara-hayami / kids-menu-chain-15-hikaku / nettyusho-yobou-0-6sai）
+- E-E-A-T: ながみー（きょうのこ編集長／4歳娘＆2歳息子の父）著者明示 ✅／実体験エピソード ✅（土日12時に飛び込みで20分以上待ち2歳息子がぐずった→以後ピーク回避を徹底／2歳息子に大人ハンバーグをソース前に少量取り分け＋ベビーフード補助／木製ディッシュの特別感で子が盛り上がる、の実体験）／公的・公式情報引用 ✅（びっくりドンキー公式 bikkuri-donkey.com／運営アレフ aleph-inc.co.jp／厚労省「授乳・離乳の支援ガイド2019年改定版」／消費者庁「食品による子供の窒息事故」）／医師相談推奨1文 ✅（安全H2の引用ブロックで、食事・アレルギー・発達・体調の判断はかかりつけ小児科医／管理栄養士／保健師に相談、緊急時119・迷うとき#8000を明記。「本記事は医療助言ではない」も付記）
+- アフィリエイト: なし（PRBadge 不要のため未設置）
+- AdSense安全配慮: 固有名詞・店舗情報は**すべて公開情報の要約**＋「店舗・時期で変わる／公式要確認」を全表に明記。メニュー名・価格は断定せず「目安」表記。他サイト転載なし。
+- 画像生成: ✅ **成功**。`set -a; . ./.env.local; set +a` で CLOUDFLARE_ACCOUNT_ID/API_TOKEN を読み込み → `node scripts/dry-run-prompts.mjs`（プロンプト426件に更新）→ `node scripts/generate-hero-images-cloudflare.mjs --slug=bikkuri-donkey-kodzure-koryaku --steps=8`（flux-1-schnell・約535KB・失敗0・0.1分）。**Cloudflare Workers AI Free tier が #25〜#30 と6サイクル連続で安定稼働（429なし）**。`public/hero-ai/bikkuri-donkey-kodzure-koryaku.jpg` を確認、frontmatter の hero パスと一致。`node scripts/build-hero-manifest.mjs` で lib/hero-manifest.json を再生成（articles 426/426・plans 530/530、manifest entry が .jpg を指すことを確認）。**apply-hero-ai.mjs は既存記事の updatedAt を当日に書き換えるため意図的に未実行（manifest 再生成のみで hero 解決／frontmatter の hero は手動で記入済み）**。
+- tsc --noEmit: ✅ エラーゼロ（exit code 0）
+- git: 作業開始時に `git log --oneline -5` と `git status` で #29（a5167b5）が HEAD=origin/main に push済みであることを確認してから着手（#29 の教訓を遵守）。本サイクルの新記事＋hero画像1枚＋public/hero-ai/manifest.json＋lib/hero-manifest.json＋tmp/image-prompts.json＋scheduled-state.json＋scheduled-log.md を1コミットに集約して push（ハッシュは git log 参照。1サイクル1commit/1push 厳守）。
+- queue クリーンアップ: **new_articles・rewrite_targets は引き続き空**、image_generation_pending も空のまま（画像生成成功のため追加なし）。`cycles_completed` 29→30、`last_run_at` 更新。
+- 次サイクル向け引き継ぎメモ:
+  - **🎯 git検証を必ず最初に**: 各サイクル開始時に `git log --oneline -3` と `git status` で前サイクルが本当に push されたか確認（#28の未push事故の教訓）。次サイクル開始時は HEAD が #30 のコミットになっていることを確認。
+  - **🎯 逆方向リンク追記（リライト）が1本分たまった＝候補**: 新作 #30 bikkuri-donkey に対し、既存 pillar/sibling からの逆リンクが未対応。次サイクルでリライトを選ぶなら、①kodzure-famires-15sen / famires-kodzure-ranking-2026-10sen（ファミレスpillar）②gusto / jonathan / steak-gusto（ハンバーグ・すかいらーく系の隣接）から bikkuri-donkey へ逆リンクを張ると回遊が閉じる（updatedAt は当日に変わるが手動編集なので可）。ただし #29 で4クラスタを閉じた直後なので、リライトより**新作優先でも可**。
+  - **🎯 残りの単独攻略 gap（次の単独攻略候補）**: 横断調査で判明した未作成チェーン＝**ビックリドンキーは今回で解消**。なお未作成で需要が見込めるのは: kfc（ケンタッキー）／misdo（ミスタードーナツ）／kourakuen（幸楽苑）／ringer-hut（リンガーハット）／baskin（サーティワン）／bikkuri-donkey以外の未作成 famires。これらは公開情報ベース明記で単独攻略化可能。
+  - **🎯 format循環の次の一手**: #30が単独攻略だったので、次は**ガイド型 or ランキング型 or リライト**がバランス良い。ガイド型 gap 候補（#26スキーマ流用）: 運動会のお弁当安全／夏の室内涼みスポット／花火大会の屋台フード安全。ランキング型: 夏は #25/#26/#28 でほぼ網羅済みのため秋方面（運動会・遠足のお弁当チェーン、ハロウィン）の仕込みも検討可。
+  - **画像 backlog はゼロのまま**: Cloudflare Workers AI が #25〜#30 と6サイクル連続安定（429なし）。新作時は都度 hero 生成で足りる。429再発時のみ image_generation_pending に積んで本文優先 commit。
+  - **2026-05-21 22:13 JST 時点で旅行終了（5/23土朝）まで残り 約1.1日**: 残りサイクルは2時間に1サイクルで約7〜8サイクル分。ながみーさん帰宅後の最大ROIタスクは ①Search Console URL検査リクエスト（**#25〜#30の新記事を優先**） ②Cloudflare Workers の挙動継続確認（Free安定なら Paid 切替不要） ③IndexNow キーファイル本番反映。

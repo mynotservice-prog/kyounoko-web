@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T09:13:28.851Z",
+  "generatedAt": "2026-05-21T13:13:18.419Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -44,6 +44,7 @@
     "bebycar-ok-cafe-15": "/hero-ai/bebycar-ok-cafe-15.webp",
     "bedlight-3type-kodomo": "/hero-ai/bedlight-3type-kodomo.webp",
     "bento-takeout-chain-kodzure-4sha": "/hero-ai/bento-takeout-chain-kodzure-4sha.jpg",
+    "bikkuri-donkey-kodzure-koryaku": "/hero-ai/bikkuri-donkey-kodzure-koryaku.jpg",
     "booster-3type-2-7sai": "/hero-ai/booster-3type-2-7sai.webp",
     "bousai-no-hi-katei-bichiku-mininaosu": "/hero-ai/bousai-no-hi-katei-bichiku-mininaosu.webp",
     "bronco-billy-kodzure-koryaku": "/hero-ai/bronco-billy-kodzure-koryaku.webp",
@@ -960,8 +961,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 425,
-    "articleHeroCount": 425,
+    "articleSlugs": 426,
+    "articleHeroCount": 426,
     "planIds": 530,
     "planHeroCount": 530
   }

@@ -3374,5 +3374,13 @@
     "generatedAt": "2026-05-21T09:13:24.164Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "bikkuri-donkey-kodzure-koryaku": {
+    "slug": "bikkuri-donkey-kodzure-koryaku",
+    "ok": true,
+    "file": "/hero-ai/bikkuri-donkey-kodzure-koryaku.jpg",
+    "generatedAt": "2026-05-21T13:13:13.204Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }
