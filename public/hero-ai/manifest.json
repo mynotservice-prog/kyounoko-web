@@ -3470,5 +3470,13 @@
     "generatedAt": "2026-05-22T11:15:02.244Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "hottomotto-kodzure-koryaku": {
+    "slug": "hottomotto-kodzure-koryaku",
+    "ok": true,
+    "file": "/hero-ai/hottomotto-kodzure-koryaku.jpg",
+    "generatedAt": "2026-05-22T13:16:13.824Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }
