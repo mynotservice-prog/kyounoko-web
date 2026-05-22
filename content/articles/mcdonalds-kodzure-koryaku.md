@@ -5,7 +5,7 @@ metaDescription: マクドナルドはベビーカーで入れる？ハッピー
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
-updatedAt: '2026-05-21'
+updatedAt: '2026-05-22'
 hero: /hero-ai/mcdonalds-kodzure-koryaku.jpg
 area: tokyo
 quickInfo:
@@ -103,6 +103,8 @@ legacyHero: /hero-ai/cat-food-japan-02.jpg
 
 ## 関連記事
 
+- [ケンタッキー（KFC）は子連れOK？キッズメニュー・低アレルゲンチキンセット・骨なしチキンの選び方](/article/kfc-kodzure-koryaku)
+- [モスバーガーは子連れOK？モスワイワイセット・低アレルゲンメニュー・待ち対策](/article/mos-burger-kodzure-koryaku)
 - [サイゼリヤはベビーカーOK？子連れ完全攻略](/article/kodzure-saize-koryaku)
 - [ガストの子連れ攻略｜キッズメニュー・離乳食・ベビーチェア](/article/gusto-kodzure-koryaku)
 - [子連れOKファミレス王道15選](/article/kodzure-famires-15sen)

@@ -250,6 +250,7 @@ A. **アレルギー配慮や出来たての味を重視するならモス**、�
 
 - [ハンバーガー子連れチェーン比較ランキング5社｜マクドナルド・モス・他](/article/burger-chain-kodzure-ranking-2026-5sha)
 - [マクドナルドは子連れOK？ベビーカー・ハッピーセット・離乳食・キッズスペース](/article/mcdonalds-kodzure-koryaku)
+- [ケンタッキー（KFC）は子連れOK？キッズメニュー・低アレルゲンチキンセット・骨なしチキンの選び方](/article/kfc-kodzure-koryaku)
 - [キッズメニュー何歳から早見表｜0-7歳の対応年齢](/article/kids-menu-nansai-kara-hayami)
 - [チェーン別キッズメニュー15社比較](/article/kids-menu-chain-15-hikaku)
 - [離乳食の持ち込みOKなチェーン15選](/article/rinyuushoku-mochikomi-chain-15)
