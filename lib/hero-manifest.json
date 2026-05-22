@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T08:08:57.649Z",
+  "generatedAt": "2026-05-22T09:16:25.010Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -226,6 +226,7 @@
     "kotoba-okureru-taiou-2sai": "/hero-ai/kotoba-okureru-taiou-2sai.webp",
     "kouen-debyu-nankagetsu": "/hero-ai/kouen-debyu-nankagetsu.webp",
     "kouen-tomodachi-chikadukenai": "/hero-ai/kouen-tomodachi-chikadukenai.webp",
+    "kourakuen-kodzure-koryaku": "/hero-ai/kourakuen-kodzure-koryaku.webp",
     "kousaku-4-6sai-10pattern": "/hero-ai/kousaku-4-6sai-10pattern.webp",
     "kouyou-spots-kanto-koduzure": "/hero-ai/kouyou-spots-kanto-koduzure.webp",
     "koyou-kanto-kodzure-20": "/hero-ai/koyou-kanto-kodzure-20.webp",
@@ -970,8 +971,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 435,
-    "articleHeroCount": 435,
+    "articleSlugs": 436,
+    "articleHeroCount": 436,
     "planIds": 530,
     "planHeroCount": 530
   }

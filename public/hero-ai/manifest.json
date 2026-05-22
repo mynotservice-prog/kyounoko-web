@@ -3454,5 +3454,13 @@
     "generatedAt": "2026-05-22T08:08:52.502Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "kourakuen-kodzure-koryaku": {
+    "slug": "kourakuen-kodzure-koryaku",
+    "ok": true,
+    "file": "/hero-ai/kourakuen-kodzure-koryaku.jpg",
+    "generatedAt": "2026-05-22T09:16:18.906Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }
