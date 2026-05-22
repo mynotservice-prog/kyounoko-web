@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T19:14:13.239Z",
+  "generatedAt": "2026-05-22T21:15:11.598Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -311,6 +311,7 @@
     "reibou-tsukeppanashi-kodomo-taion": "/hero-ai/reibou-tsukeppanashi-kodomo-taion.webp",
     "reitou-shokuhin-ranking": "/hero-ai/reitou-shokuhin-ranking.webp",
     "reitougyoza-plus-alpha-3pattern": "/hero-ai/reitougyoza-plus-alpha-3pattern.webp",
+    "ringer-hut-kodzure-koryaku": "/hero-ai/ringer-hut-kodzure-koryaku.webp",
     "rinyuu-youji-shoku-grid-rakuten": "/hero-ai/rinyuu-youji-shoku-grid-rakuten.webp",
     "rinyuushoku-dekinai-kao-awanai-baby": "/hero-ai/rinyuushoku-dekinai-kao-awanai-baby.webp",
     "rinyuushoku-frozen-gekkabetsu": "/hero-ai/rinyuushoku-frozen-gekkabetsu.webp",
@@ -976,8 +977,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 441,
-    "articleHeroCount": 441,
+    "articleSlugs": 442,
+    "articleHeroCount": 442,
     "planIds": 530,
     "planHeroCount": 530
   }

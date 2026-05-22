@@ -3502,5 +3502,13 @@
     "generatedAt": "2026-05-22T19:14:08.696Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "ringer-hut-kodzure-koryaku": {
+    "slug": "ringer-hut-kodzure-koryaku",
+    "ok": true,
+    "file": "/hero-ai/ringer-hut-kodzure-koryaku.jpg",
+    "generatedAt": "2026-05-22T21:15:07.090Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }
