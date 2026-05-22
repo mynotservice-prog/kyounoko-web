@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-22'
-updatedAt: '2026-05-22'
+updatedAt: '2026-05-23'
 hero: /hero-ai/gaishoku-chain-kodomo-anzen-guide.jpg
 heroAlt: 外食チェーンのテーブルで、親が子ども用に熱いスープを冷まし、麺を短く切って取り分けている様子（イラスト）
 area: all
@@ -103,7 +103,7 @@ youtubeSearch: 子連れ 外食 チェーン 安全 何歳から 取り分け �
 
 **ラーメン・中華麺**：熱々スープ・高塩分・長い麺の“三重苦”。薄めて・冷まして・短く切って・少量ずつ。→ [幸楽苑](/article/kourakuen-kodzure-koryaku)／[ラーメンチェーン子連れランキング5社](/article/ramen-chain-kodzure-ranking-2026-5sha)／[うどんチェーン4社比較](/article/udon-chain-kodzure-4sha-hikaku)
 
-**ファミレス・牛丼・和食**：取り分けの自由度が高い分、味の濃さに注意。座敷やキッズチェアの有無も事前確認を。→ [ファミレス子連れランキング10選](/article/famires-kodzure-ranking-2026-10sen)／[牛丼チェーン子連れランキング4社](/article/gyudon-chain-kodzure-ranking-2026-4sha)
+**ファミレス・牛丼・定食・和食**：取り分けの自由度が高い分、味の濃さに注意。和定食は焼き魚の小骨も要チェック。座敷やキッズチェアの有無も事前確認を。→ [ファミレス子連れランキング10選](/article/famires-kodzure-ranking-2026-10sen)／[牛丼チェーン子連れランキング4社](/article/gyudon-chain-kodzure-ranking-2026-4sha)／[定食チェーン子連れランキング4社](/article/teishoku-chain-kodzure-ranking-4sha)／[まいどおおきに食堂](/article/maido-ookini-shokudo-kodzure-koryaku)
 
 **カフェ・スイーツ・アイス**：もちもち系の窒息、固いコーン、糖分・冷たさに注意。量を決めて楽しむのが基本。→ [ミスタードーナツ](/article/misdo-kodzure-koryaku)／[サーティワン（31）](/article/baskin-robbins-31-kodzure-koryaku)／[カフェチェーン子連れランキング6社](/article/cafe-chain-kodzure-ranking-2026-6sha)／[かき氷・ソフトクリームチェーン比較](/article/kakigori-softcream-chain-kodzure-hikaku)
 
@@ -219,6 +219,7 @@ A. **本ガイドの「業態別・子連れ安全メモ」から各お店の攻
 - [ミスタードーナツの子連れ攻略](/article/misdo-kodzure-koryaku)
 - [サーティワン（31）の子連れ攻略](/article/baskin-robbins-31-kodzure-koryaku)
 - [ほっともっとの子連れ攻略](/article/hottomotto-kodzure-koryaku)
+- [まいどおおきに食堂の子連れ攻略](/article/maido-ookini-shokudo-kodzure-koryaku)
 
 **安全・おうち時間**
 

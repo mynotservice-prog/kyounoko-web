@@ -1,8 +1,8 @@
 {
   "$schema": "Scheduled-task state file for 旅行中 autonomous work.",
   "$description": "Claude scheduled task が2時間おきにこのファイルを読み、queue から1記事ピック→作業→state更新する。",
-  "last_run_at": "2026-05-22T13:16:51.921Z",
-  "cycles_completed": 42,
+  "last_run_at": "2026-05-22T15:16:45.073Z",
+  "cycles_completed": 43,
   "queues": {
     "new_articles": [],
     "rewrite_targets": [],

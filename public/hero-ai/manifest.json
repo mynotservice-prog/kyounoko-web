@@ -3478,5 +3478,13 @@
     "generatedAt": "2026-05-22T13:16:13.824Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "maido-ookini-shokudo-kodzure-koryaku": {
+    "slug": "maido-ookini-shokudo-kodzure-koryaku",
+    "ok": true,
+    "file": "/hero-ai/maido-ookini-shokudo-kodzure-koryaku.jpg",
+    "generatedAt": "2026-05-22T15:16:26.029Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }
