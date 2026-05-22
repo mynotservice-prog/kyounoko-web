@@ -182,6 +182,7 @@ A. ミニストップのソフトクリームやマクドナルドのソフト�
 - [【2026年版】カフェチェーン子連れランキング6社](/article/cafe-chain-kodzure-ranking-2026-6sha)：座って涼みたいときのカフェ全体の比較。
 - [スタバは子連れOK？キッズドリンク・離乳食持込・モバイルオーダー活用](/article/starbucks-kodzure-koryaku)：フラペチーノなど冷たいドリンクの選択肢に。
 - [ミスタードーナツは子連れOK？グッズ付きキッズセット・もちもち系の窒息対策](/article/misdo-kodzure-koryaku)：おやつ・カフェ休憩のドーナツ専門店。テイクアウトでおうちおやつにも。
+- [サーティワン（31）は子連れOK？キッズサイズ・コーンかカップか・冷たいアイスは何歳から](/article/baskin-robbins-31-kodzure-koryaku)：ランキングでも取り上げたサーティワンの単独攻略。アレルギー・年齢の目安も詳しく。
 - [東京の子連れOKかき氷20選](/article/tokyo-kakigori-kodzure-20)：専門店の本格かき氷を探すなら。
 - [【手作りかき氷】子供と作る簡単シロップ5種](/article/kakigori-kodomo-tezukuri-recipe)：おうちで安く安全に楽しむなら。
 - [猛暑日OKな涼しい屋内30選](/article/moushobi-suzushii-spots)：暑い日に避難できる屋内スポット。

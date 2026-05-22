@@ -3446,5 +3446,13 @@
     "generatedAt": "2026-05-22T05:14:12.972Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "baskin-robbins-31-kodzure-koryaku": {
+    "slug": "baskin-robbins-31-kodzure-koryaku",
+    "ok": true,
+    "file": "/hero-ai/baskin-robbins-31-kodzure-koryaku.jpg",
+    "generatedAt": "2026-05-22T08:08:52.502Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }

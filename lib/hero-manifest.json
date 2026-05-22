@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T05:14:17.639Z",
+  "generatedAt": "2026-05-22T08:08:57.649Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -41,6 +41,7 @@
     "babygate-kaidan-ranking-7-2026": "/hero-ai/babygate-kaidan-ranking-7-2026.webp",
     "bamiyan-china-toribunke-real": "/hero-ai/bamiyan-china-toribunke-real.webp",
     "bamiyan-kodzure-koryaku": "/hero-ai/bamiyan-kodzure-koryaku.webp",
+    "baskin-robbins-31-kodzure-koryaku": "/hero-ai/baskin-robbins-31-kodzure-koryaku.webp",
     "bebycar-ok-cafe-15": "/hero-ai/bebycar-ok-cafe-15.webp",
     "bedlight-3type-kodomo": "/hero-ai/bedlight-3type-kodomo.webp",
     "bento-takeout-chain-kodzure-4sha": "/hero-ai/bento-takeout-chain-kodzure-4sha.webp",
@@ -969,8 +970,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 434,
-    "articleHeroCount": 434,
+    "articleSlugs": 435,
+    "articleHeroCount": 435,
     "planIds": 530,
     "planHeroCount": 530
   }

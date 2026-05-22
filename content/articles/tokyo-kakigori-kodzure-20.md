@@ -5,7 +5,7 @@ metaDescription: 東京で子連れに優しい かき氷20選。無添加・自
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-21'
+updatedAt: '2026-05-22'
 hero: /hero-ai/tokyo-kakigori-kodzure-20.jpg
 lede: >-
   東京のかき氷店は行列必至の名店が多く、子連れだと「2時間待ち」で挫折しがち。無添加シロップ・天然氷・キッズサイズ対応・ベビーカー入店可など、0〜6歳の親目線で本当に行きやすい20店を、エリア別・並びにくい時間帯付きで紹介します。
@@ -227,3 +227,4 @@ A. 冷たいもので胃腸が冷えただけなら**白湯と温かいスープ
 - [じゃぶじゃぶ池30選](/article/jabujabuike-mizuasobi-tokyo-30)：水遊び後の涼みかき氷コース
 - [猛暑日OK屋内30選](/article/moushobi-suzushii-spots)：暑さしのぎの屋内スポットまとめ
 - [【2026年版】かき氷・ひんやりスイーツチェーン子連れランキング5社](/article/kakigori-softcream-chain-kodzure-hikaku)：チェーン店で手軽に食べるかき氷・ソフトの比較
+- [サーティワン（31）は子連れOK？キッズサイズ・コーンかカップか・冷たいアイスは何歳から](/article/baskin-robbins-31-kodzure-koryaku)：チェーンのアイスを単独で深掘り。乳・卵アレルギーの選択肢も。
