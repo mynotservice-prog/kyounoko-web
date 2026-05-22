@@ -3510,5 +3510,13 @@
     "generatedAt": "2026-05-22T21:15:07.090Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "onyasai-kodzure-koryaku": {
+    "slug": "onyasai-kodzure-koryaku",
+    "ok": true,
+    "file": "/hero-ai/onyasai-kodzure-koryaku.jpg",
+    "generatedAt": "2026-05-22T23:15:43.872Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }

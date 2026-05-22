@@ -105,6 +105,8 @@ youtubeSearch: 子連れ 外食 チェーン 安全 何歳から 取り分け �
 
 **ファミレス・牛丼・定食・和食**：取り分けの自由度が高い分、味の濃さに注意。和定食は焼き魚の小骨も要チェック。座敷やキッズチェアの有無も事前確認を。→ [ファミレス子連れランキング10選](/article/famires-kodzure-ranking-2026-10sen)／[牛丼チェーン子連れランキング4社](/article/gyudon-chain-kodzure-ranking-2026-4sha)／[定食チェーン子連れランキング4社](/article/teishoku-chain-kodzure-ranking-4sha)／[まいどおおきに食堂](/article/maido-ookini-shokudo-kodzure-koryaku)
 
+**しゃぶしゃぶ・鍋**：煙が出ず火傷リスクが低めで0-3歳に向く一方、自分で火を通すぶん「生焼け肉の食中毒」が最大の固有リスク。子ども用は中までしっかり加熱を。熱い鍋・湯気のやけど、餅・きのこ・しらたきの誤嚥にも注意。二色鍋でまろやかだし側を子ども用にすると取り分けがラク。→ [しゃぶしゃぶ温野菜](/article/onyasai-kodzure-koryaku)／[しゃぶ葉](/article/shabuyou-kodzure-koryaku)／[しゃぶしゃぶチェーン子連れランキング5社](/article/shabushabu-chain-kodzure-ranking-2026-5sha)
+
 **カフェ・スイーツ・アイス**：もちもち系の窒息、固いコーン、糖分・冷たさに注意。量を決めて楽しむのが基本。→ [ミスタードーナツ](/article/misdo-kodzure-koryaku)／[サーティワン（31）](/article/baskin-robbins-31-kodzure-koryaku)／[カフェチェーン子連れランキング6社](/article/cafe-chain-kodzure-ranking-2026-6sha)／[かき氷・ソフトクリームチェーン比較](/article/kakigori-softcream-chain-kodzure-hikaku)
 
 **テイクアウト弁当**：店内に座らないので待ち時間ストレスは少ない一方、できたて熱々のやけど・揚げ物と濃いめのタレの塩分、そして「持ち歩き時間の食中毒」が固有の論点。受け取ったら早めに、暑い日は保冷を。量り売りで薄味を少量だけ組めるオリジンは離乳食期に便利（イートインのある店も）。テイクアウト全体の安全の型は[テイクアウト・お弁当を子連れで安全に食べる完全ガイド](/article/takeout-bento-kodzure-anzen-guide)に1本でまとめています。→ [ほっともっと](/article/hottomotto-kodzure-koryaku)／[オリジン弁当](/article/origin-bento-kodzure-koryaku)／[テイクアウト弁当チェーン子連れランキング4社](/article/bento-takeout-chain-kodzure-4sha)
@@ -222,6 +224,7 @@ A. **本ガイドの「業態別・子連れ安全メモ」から各お店の攻
 - [ほっともっとの子連れ攻略](/article/hottomotto-kodzure-koryaku)
 - [オリジン弁当の子連れ攻略](/article/origin-bento-kodzure-koryaku)
 - [まいどおおきに食堂の子連れ攻略](/article/maido-ookini-shokudo-kodzure-koryaku)
+- [しゃぶしゃぶ温野菜の子連れ攻略](/article/onyasai-kodzure-koryaku)
 
 **安全・おうち時間**
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T21:15:11.598Z",
+  "generatedAt": "2026-05-22T23:15:47.738Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -289,6 +289,7 @@
     "omatsuri-0-2sai-hajimete-yukata": "/hero-ai/omatsuri-0-2sai-hajimete-yukata.webp",
     "omocha-year-by-age": "/hero-ai/omocha-year-by-age.webp",
     "online-school-eigo-3brand-2026": "/hero-ai/online-school-eigo-3brand-2026.webp",
+    "onyasai-kodzure-koryaku": "/hero-ai/onyasai-kodzure-koryaku.webp",
     "ootoya-kodzure-koryaku": "/hero-ai/ootoya-kodzure-koryaku.webp",
     "origin-bento-kodzure-koryaku": "/hero-ai/origin-bento-kodzure-koryaku.webp",
     "orusu-ban-nansai-kara": "/hero-ai/orusu-ban-nansai-kara.webp",
@@ -977,8 +978,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 442,
-    "articleHeroCount": 442,
+    "articleSlugs": 443,
+    "articleHeroCount": 443,
     "planIds": 530,
     "planHeroCount": 530
   }

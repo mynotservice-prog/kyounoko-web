@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-21'
-updatedAt: '2026-05-21'
+updatedAt: '2026-05-23'
 area: all
 lede: >-
   「煙が出ないしゃぶしゃぶ」は0-6歳の家族外食で最強カテゴリの一つ。**しゃぶ葉・しゃぶしゃぶ温野菜・ゆず庵・かごの屋・木曽路** の5チェーンを **5軸×10点=50点満点スコア** で採点しました。結論は **しゃぶ葉44点／温野菜38点／ゆず庵35点／かごの屋32点／木曽路28点**。0-1歳・2-3歳・4-6歳の年齢ステージ別1位、ベビーカー入店・キッズメニュー・離乳食持込・出汁の薄さ・座席タイプ・価格まで、首都圏で実訪問した一次データで横並びにします。
@@ -80,6 +80,8 @@ heroAlt: 家族4人がしゃぶしゃぶ鍋を囲み、子どもの皿に取り�
 出汁は **すきやき／寄せ鍋／豆乳／キムチ／カレー** など6種以上から選択でき、子用には寄せ鍋だしか豆乳だしが取り分けに優しい。コース型の食べ放題なので注文回数が少なく、子連れの「都度オーダーが大変問題」が起きにくい。
 
 **懸念点**: 駅前ビル型は通路幅が狭くベビーカーで2台同時入店ができないことが多い。**事前に電話で「ベビーカーで何名」を伝える** か、ロードサイド・モール型を選ぶのが正解。価格は家族3〜4人で6,000〜9,000円が目安で、しゃぶ葉より2,000〜3,000円高い。
+
+二色鍋で「子ども用のまろやかな薄味だし」と「大人用の濃いだし」を同じ鍋で同時に作れる取り分けのコツ、未就学児無料・小学生半額の料金、生焼け肉の食中毒対策まで、温野菜だけを深掘りした単独攻略は[しゃぶしゃぶ温野菜の子連れ攻略](/article/onyasai-kodzure-koryaku)にまとめています。
 
 ## 3位｜ゆず庵（35点）｜寿司＋しゃぶしゃぶで「子の好み吸収力」最強
 
@@ -279,7 +281,7 @@ A. 本記事は **子連れ目線の評価に絞っており、肉質・タレ�
 
 ## 関連記事｜しゃぶしゃぶ・外食チェーンランキングシリーズ
 
-- 単独攻略：[しゃぶ葉 子連れ攻略](/article/shabuyou-kodzure-koryaku)／[しゃぶ葉「3歳以下無料」のリアル](/article/shabuyou-3sai-free-real)
+- 単独攻略：[しゃぶ葉 子連れ攻略](/article/shabuyou-kodzure-koryaku)／[しゃぶ葉「3歳以下無料」のリアル](/article/shabuyou-3sai-free-real)／[しゃぶしゃぶ温野菜 子連れ攻略（二色鍋・未就学児無料・生焼け対策）](/article/onyasai-kodzure-koryaku)
 - カテゴリ比較：[しゃぶしゃぶ食べ放題3チェーン子連れ比較（しゃぶ葉・温野菜・木曽路）](/article/shabushabu-yakiniku-buffet-3chain)
 - 焼肉カテゴリ：[焼肉5チェーン子連れ比較](/article/yakiniku-5chain-kodomo-2026)／[子連れOK焼肉・しゃぶしゃぶ7選](/article/kodzure-yakiniku-shabu-7)
 - 外食チェーンランキング7部作：[ファミレス10選](/article/famires-kodzure-ranking-2026-10sen)／[カフェ6社](/article/cafe-chain-kodzure-ranking-2026-6sha)／[牛丼4社](/article/gyudon-chain-kodzure-ranking-2026-4sha)／[うどん4社](/article/udon-chain-kodzure-4sha-hikaku)／[回転寿司4社](/article/kaiten-sushi-4chain-comparison)
