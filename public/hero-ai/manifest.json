@@ -3462,5 +3462,13 @@
     "generatedAt": "2026-05-22T09:16:18.906Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "gaishoku-chain-kodomo-anzen-guide": {
+    "slug": "gaishoku-chain-kodomo-anzen-guide",
+    "ok": true,
+    "file": "/hero-ai/gaishoku-chain-kodomo-anzen-guide.jpg",
+    "generatedAt": "2026-05-22T11:15:02.244Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T09:16:25.010Z",
+  "generatedAt": "2026-05-22T11:15:06.323Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -88,6 +88,7 @@
     "famires-kodzure-ranking-2026-10sen": "/hero-ai/famires-kodzure-ranking-2026-10sen.webp",
     "fathers-day-tezukuri-kodomo-2026": "/hero-ai/fathers-day-tezukuri-kodomo-2026.webp",
     "freshness-burger-kodzure-koryaku": "/hero-ai/freshness-burger-kodzure-koryaku.webp",
+    "gaishoku-chain-kodomo-anzen-guide": "/hero-ai/gaishoku-chain-kodomo-anzen-guide.webp",
     "gaisyoku-ko-ga-taberu": "/hero-ai/gaisyoku-ko-ga-taberu.webp",
     "gotsugo-hattaku-muchi-kodomo": "/hero-ai/gotsugo-hattaku-muchi-kodomo.webp",
     "gusto-kodzure-koryaku": "/hero-ai/gusto-kodzure-koryaku.webp",
@@ -971,8 +972,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 436,
-    "articleHeroCount": 436,
+    "articleSlugs": 437,
+    "articleHeroCount": 437,
     "planIds": 530,
     "planHeroCount": 530
   }

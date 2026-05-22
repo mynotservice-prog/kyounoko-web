@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-05-22'
 hero: /hero-ai/kids-menu-nansai-kara-hayami.jpg
 lede: >-
   「ガストのお子様メニューって何歳から？」「サイゼに年齢制限ってあるの？」「しゃぶ葉は何歳から有料？」——子連れ外食で必ず迷うこれらの疑問を、**ファミレス・食べ放題・カフェ12チェーンを横断する早見表**で一気に解決します。
@@ -237,6 +237,7 @@ A. **多くのチェーンで小学生から有料**（または半額）です�
 
 ## 関連記事
 
+- [外食チェーンで子どもの塩分・やけど・誤嚥を防ぐ完全ガイド](/article/gaishoku-chain-kodomo-anzen-guide)
 - [キッズメニュー比較15選（ハブ）](/article/kids-menu-chain-15-hikaku)
 - [ガスト 子連れ攻略](/article/gusto-kodzure-koryaku)
 - [ジョナサン 子連れ攻略](/article/jonathan-kodzure-koryaku)
