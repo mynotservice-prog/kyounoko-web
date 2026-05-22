@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T03:15:21.755Z",
+  "generatedAt": "2026-05-22T05:14:17.639Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -242,6 +242,7 @@
     "marugame-kodzure-koryaku": "/hero-ai/marugame-kodzure-koryaku.webp",
     "matsuya-kodzure-koryaku": "/hero-ai/matsuya-kodzure-koryaku.webp",
     "mcdonalds-kodzure-koryaku": "/hero-ai/mcdonalds-kodzure-koryaku.webp",
+    "misdo-kodzure-koryaku": "/hero-ai/misdo-kodzure-koryaku.webp",
     "mochikaeri-sushi-chain-kodzure-4sha": "/hero-ai/mochikaeri-sushi-chain-kodzure-4sha.webp",
     "monte-asobi-nenrei-betsu": "/hero-ai/monte-asobi-nenrei-betsu.webp",
     "mos-burger-kodzure-koryaku": "/hero-ai/mos-burger-kodzure-koryaku.webp",
@@ -968,8 +969,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 433,
-    "articleHeroCount": 433,
+    "articleSlugs": 434,
+    "articleHeroCount": 434,
     "planIds": 530,
     "planHeroCount": 530
   }

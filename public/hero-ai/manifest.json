@@ -3438,5 +3438,13 @@
     "generatedAt": "2026-05-22T03:15:17.855Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "misdo-kodzure-koryaku": {
+    "slug": "misdo-kodzure-koryaku",
+    "ok": true,
+    "file": "/hero-ai/misdo-kodzure-koryaku.jpg",
+    "generatedAt": "2026-05-22T05:14:12.972Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }
