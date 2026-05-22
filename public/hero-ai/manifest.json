@@ -3486,5 +3486,13 @@
     "generatedAt": "2026-05-22T15:16:26.029Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "origin-bento-kodzure-koryaku": {
+    "slug": "origin-bento-kodzure-koryaku",
+    "ok": true,
+    "file": "/hero-ai/origin-bento-kodzure-koryaku.jpg",
+    "generatedAt": "2026-05-22T17:15:26.492Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }
