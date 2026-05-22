@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "low"
 area: "all"
-hero: /hero/home-cozy-02.png
+hero: /hero/home-cozy-02.webp
 ---
 
 雨の休日に、初めてのシール貼りを含めた創作遊びを楽しむ2時間です。

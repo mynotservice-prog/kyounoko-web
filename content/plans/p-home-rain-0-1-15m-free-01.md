@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 15
 budget: "free"
 area: "all"
-hero: /hero/home-cozy-01.png
+hero: /hero/home-cozy-01.webp
 seoRelated: "0-1sai-ie-asobi-10pun"
 ---
 

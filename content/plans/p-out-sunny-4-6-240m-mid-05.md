@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 240
 budget: "mid"
 area: "all"
-hero: /hero/home-cozy-02.png
+hero: /hero/home-cozy-02.webp
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

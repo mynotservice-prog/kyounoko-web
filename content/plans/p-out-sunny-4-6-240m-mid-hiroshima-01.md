@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "hiroshima"
-hero: /hero/japan-rural-01.png
+hero: /hero/japan-rural-01.webp
 seoRelated: "shumatsu-ranchi-kodzure"
 ---
 

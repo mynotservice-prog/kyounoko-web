@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "niigata"
-hero: /hero/nature-02.png
+hero: /hero/nature-02.webp
 seoRelated: "shumatsu-ranchi-kodzure"
 ---
 

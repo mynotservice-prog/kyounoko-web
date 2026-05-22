@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "free"
 area: "all"
-hero: /hero/home-cozy-03.png
+hero: /hero/home-cozy-03.webp
 ---
 
 寒い朝にじっくり体を温めながら、赤ちゃんと活動モードに入る2時間です。

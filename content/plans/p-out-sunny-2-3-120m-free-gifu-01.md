@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "free"
 area: "gifu"
-hero: /hero/nature-02.png
+hero: /hero/nature-02.webp
 seoRelated: "mizuasobi-park-youji"
 ---
 

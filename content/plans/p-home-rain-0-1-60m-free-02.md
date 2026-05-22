@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "free"
 area: "all"
-hero: /hero/home-cozy-03.png
+hero: /hero/home-cozy-03.webp
 ---
 
 雨音と家の中の楽器もどきで、親子の小さな音楽会を開く60分です。

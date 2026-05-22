@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "free"
 area: "fukui"
-hero: /hero/home-cozy-01.png
+hero: /hero/home-cozy-01.webp
 seoRelated: "park-asobi-youji-debut"
 ---
 

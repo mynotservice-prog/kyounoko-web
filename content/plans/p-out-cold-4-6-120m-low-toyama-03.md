@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "low"
 area: "toyama"
-hero: /hero/home-cozy-02.png
+hero: /hero/home-cozy-02.webp
 seoRelated: "hakubutsukan-youji-asobikata"
 ---
 

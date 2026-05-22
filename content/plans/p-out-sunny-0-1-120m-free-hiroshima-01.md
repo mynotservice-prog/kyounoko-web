@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "free"
 area: "hiroshima"
-hero: /hero/japan-rural-03.png
+hero: /hero/japan-rural-03.webp
 seoRelated: "akachan-odekake-3months-1year"
 ---
 

@@ -11,7 +11,7 @@ day: ["any"]
 durationMin: 15
 budget: "low"
 area: "all"
-hero: /hero/food-sweet-01.png
+hero: /hero/food-sweet-01.webp
 seoRelated: "asagohan-5pun-reshipi-20"
 ---
 

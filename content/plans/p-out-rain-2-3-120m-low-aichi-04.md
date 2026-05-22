@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 120
 budget: "low"
 area: "aichi"
-hero: /hero/japan-rural-03.png
+hero: /hero/japan-rural-03.webp
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 15
 budget: "free"
 area: "all"
-hero: /hero/home-cozy-03.png
+hero: /hero/home-cozy-03.webp
 ---
 
 玄関に座って、家族の長靴や傘を見せて話しかける15分プランです。

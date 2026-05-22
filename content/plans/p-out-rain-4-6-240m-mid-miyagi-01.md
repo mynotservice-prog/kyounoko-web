@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "miyagi"
-hero: /hero/home-cozy-03.png
+hero: /hero/home-cozy-03.webp
 seoRelated: "shumatsu-ranchi-kodzure"
 ---
 

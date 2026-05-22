@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "all"
-hero: /hero/park-02.png
+hero: /hero/park-02.webp
 seoRelated: "natsumatsuri-kodzure-koryaku"
 ---
 

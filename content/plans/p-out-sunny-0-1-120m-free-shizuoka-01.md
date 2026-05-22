@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "free"
 area: "shizuoka"
-hero: /hero/japan-rural-02.png
+hero: /hero/japan-rural-02.webp
 seoRelated: "akachan-odekake-3months-1year"
 ---
 

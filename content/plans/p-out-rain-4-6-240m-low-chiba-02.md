@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 240
 budget: "low"
 area: "chiba"
-hero: /hero/japan-rural-03.png
+hero: /hero/japan-rural-03.webp
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

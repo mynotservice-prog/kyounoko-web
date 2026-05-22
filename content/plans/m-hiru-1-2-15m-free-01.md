@@ -11,7 +11,7 @@ day: ["any"]
 durationMin: 15
 budget: "free"
 area: "all"
-hero: /hero/food-japan-01.png
+hero: /hero/food-japan-01.webp
 seoRelated: "hoikuen-kaeri-15min"
 ---
 

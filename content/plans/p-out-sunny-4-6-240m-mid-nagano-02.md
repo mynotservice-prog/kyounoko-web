@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "nagano"
-hero: /hero/nature-01.png
+hero: /hero/nature-01.webp
 seoRelated: "yuenchi-youji-debut"
 ---
 

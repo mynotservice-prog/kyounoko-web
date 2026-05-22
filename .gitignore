@@ -55,4 +55,7 @@ scripts/_archived-*
 
 # 大型unsplash素材（参照ゼロ・2026-05退役）
 public/new_hero/
-public/hero/
+# public/hero/ の重いPNGのみ除外。プランが参照する軽量webpは追跡する
+public/hero/*.png
+# sed等の一時バックアップ
+*.bak

@@ -9,7 +9,7 @@ day: ["weekday"]
 durationMin: 15
 budget: "free"
 area: "all"
-hero: /hero/home-cozy-01.png
+hero: /hero/home-cozy-01.webp
 seoRelated: "19ji-shoutou-routine"
 ---
 

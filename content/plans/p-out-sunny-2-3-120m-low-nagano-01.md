@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "low"
 area: "nagano"
-hero: /hero/nature-01.png
+hero: /hero/nature-01.webp
 seoRelated: "doubutuen-debut-youji"
 ---
 

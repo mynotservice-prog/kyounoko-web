@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "low"
 area: "tottori"
-hero: /hero/home-cozy-01.png
+hero: /hero/home-cozy-01.webp
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

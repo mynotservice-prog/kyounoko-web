@@ -9,7 +9,7 @@ day: ["weekday"]
 durationMin: 60
 budget: "free"
 area: "all"
-hero: /hero/home-cozy-03.png
+hero: /hero/home-cozy-03.webp
 seoRelated: "heijitsu-yoru-30pun-routine"
 ---
 

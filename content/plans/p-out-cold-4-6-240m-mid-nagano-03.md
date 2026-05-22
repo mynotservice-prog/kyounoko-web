@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "nagano"
-hero: /hero/nature-02.png
+hero: /hero/nature-02.webp
 seoRelated: "yuki-asobi-debut-youji"
 ---
 

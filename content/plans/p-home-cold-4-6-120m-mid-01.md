@@ -9,7 +9,7 @@ day: ["weekend"]
 durationMin: 120
 budget: "mid"
 area: "all"
-hero: /hero/home-cozy-01.png
+hero: /hero/home-cozy-01.webp
 seoRelated: "chiiku-asobi-ie-de-10"
 ---
 

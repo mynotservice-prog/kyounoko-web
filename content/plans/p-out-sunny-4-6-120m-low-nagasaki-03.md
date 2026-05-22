@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "low"
 area: "nagasaki"
-hero: /hero/autumn-03.png
+hero: /hero/autumn-03.webp
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

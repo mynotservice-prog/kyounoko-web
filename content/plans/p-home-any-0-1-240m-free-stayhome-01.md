@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "free"
 area: "all"
-hero: /hero/home-cozy-01.png
+hero: /hero/home-cozy-01.webp
 seoRelated: "yonaki-taisaku-0-1sai"
 ---
 

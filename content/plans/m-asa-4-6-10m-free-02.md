@@ -11,7 +11,7 @@ day: ["any"]
 durationMin: 10
 budget: "free"
 area: "all"
-hero: /hero/food-japan-02.png
+hero: /hero/food-japan-02.webp
 seoRelated: "asagohan-5pun-reshipi-20"
 ---
 

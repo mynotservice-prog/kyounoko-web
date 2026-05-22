@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 240
 budget: "low"
 area: "kanagawa"
-hero: /hero/japan-rural-02.png
+hero: /hero/japan-rural-02.webp
 seoRelated: "sakura-ohanami-kodzure-spots"
 ---
 

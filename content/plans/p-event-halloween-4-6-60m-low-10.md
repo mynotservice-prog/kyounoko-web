@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "low"
 area: "all"
-hero: /hero/park-02.png
+hero: /hero/park-02.webp
 seoRelated: "halloween-kasou-junbi"
 ---
 

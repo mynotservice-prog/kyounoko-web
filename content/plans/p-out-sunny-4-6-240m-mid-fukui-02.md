@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "fukui"
-hero: /hero/home-cozy-02.png
+hero: /hero/home-cozy-02.webp
 seoRelated: "kyoryu-hakubutsukan-manabi"
 ---
 

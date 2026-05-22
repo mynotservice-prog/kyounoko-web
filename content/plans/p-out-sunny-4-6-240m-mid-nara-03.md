@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "nara"
-hero: /hero/home-cozy-02.png
+hero: /hero/home-cozy-02.webp
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

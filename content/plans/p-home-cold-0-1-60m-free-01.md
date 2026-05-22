@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "free"
 area: "all"
-hero: /hero/home-cozy-02.png
+hero: /hero/home-cozy-02.webp
 ---
 
 いつもより長めのお風呂で、ぽかぽか温まりながら遊ぶ60分プランです。

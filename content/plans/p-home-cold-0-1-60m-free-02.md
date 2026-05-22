@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "free"
 area: "all"
-hero: /hero/home-cozy-03.png
+hero: /hero/home-cozy-03.webp
 ---
 
 寒い朝にベッドからすぐ出ずに、布団の中で遊んで過ごす60分です。

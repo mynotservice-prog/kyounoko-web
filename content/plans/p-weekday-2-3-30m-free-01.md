@@ -9,7 +9,7 @@ day: ["weekday"]
 durationMin: 30
 budget: "free"
 area: "all"
-hero: /hero/home-cozy-03.png
+hero: /hero/home-cozy-03.webp
 seoRelated: "jitanhaden-ranking-7sen"
 ---
 

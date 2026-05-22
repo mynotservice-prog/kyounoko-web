@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "low"
 area: "yamanashi"
-hero: /hero/nature-01.png
+hero: /hero/nature-01.webp
 seoRelated: "hakubutsukan-youji-asobikata"
 ---
 

@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "mid"
 area: "hyogo"
-hero: /hero/home-cozy-02.png
+hero: /hero/home-cozy-02.webp
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

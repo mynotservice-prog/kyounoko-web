@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "low"
 area: "miyazaki"
-hero: /hero/autumn-03.png
+hero: /hero/autumn-03.webp
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

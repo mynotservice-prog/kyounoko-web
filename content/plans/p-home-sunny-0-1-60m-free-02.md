@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "free"
 area: "all"
-hero: /hero/home-cozy-02.png
+hero: /hero/home-cozy-02.webp
 ---
 
 晴れた日の窓から差し込む光と影を使って遊ぶ60分プランです。

@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "free"
 area: "all"
-hero: /hero/home-cozy-01.png
+hero: /hero/home-cozy-01.webp
 ---
 
 エアコンの効いた部屋でゆったり過ごしながら、家中を少しずつ巡る60分です。

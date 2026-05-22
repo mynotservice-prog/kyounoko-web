@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "mid"
 area: "yamanashi"
-hero: /hero/nature-02.png
+hero: /hero/nature-02.webp
 seoRelated: "yuenchi-youji-debut"
 ---
 

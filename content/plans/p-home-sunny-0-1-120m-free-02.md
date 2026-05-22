@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "free"
 area: "all"
-hero: /hero/home-cozy-01.png
+hero: /hero/home-cozy-01.webp
 ---
 
 晴れた日の洗濯物干しを、赤ちゃんと一緒にお手伝いごっこで過ごす2時間です。

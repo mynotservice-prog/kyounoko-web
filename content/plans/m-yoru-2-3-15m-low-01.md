@@ -11,7 +11,7 @@ day: ["any"]
 durationMin: 15
 budget: "low"
 area: "all"
-hero: /hero/family-dinner-01.png
+hero: /hero/family-dinner-01.webp
 seoRelated: "yuuhan-dinner-15pun-10recipes"
 ---
 

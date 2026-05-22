@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "low"
 area: "okinawa"
-hero: /hero/japan-rural-02.png
+hero: /hero/japan-rural-02.webp
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

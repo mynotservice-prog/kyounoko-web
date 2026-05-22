@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "low"
 area: "osaka"
-hero: /hero/japan-rural-02.png
+hero: /hero/japan-rural-02.webp
 seoRelated: "shumatsu-ranchi-kodzure"
 ---
 

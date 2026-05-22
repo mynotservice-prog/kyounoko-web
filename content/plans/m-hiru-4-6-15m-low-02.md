@@ -11,7 +11,7 @@ day: ["any"]
 durationMin: 15
 budget: "low"
 area: "all"
-hero: /hero/food-kitchen-03.png
+hero: /hero/food-kitchen-03.webp
 seoRelated: "obentou-jitan-8patterns"
 ---
 

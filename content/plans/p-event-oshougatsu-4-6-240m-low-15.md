@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 240
 budget: "low"
 area: "all"
-hero: /hero/park-03.png
+hero: /hero/park-03.webp
 seoRelated: "oshougatsu-kodomo-sugoshikata"
 ---
 

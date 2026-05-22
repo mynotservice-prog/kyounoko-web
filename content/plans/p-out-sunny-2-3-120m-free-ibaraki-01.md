@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 120
 budget: "free"
 area: "ibaraki"
-hero: /hero/autumn-01.png
+hero: /hero/autumn-01.webp
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

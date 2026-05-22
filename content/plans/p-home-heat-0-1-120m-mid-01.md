@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 120
 budget: "mid"
 area: "all"
-hero: /hero/home-cozy-01.png
+hero: /hero/home-cozy-01.webp
 ---
 
 小型のビニールプールで家の中で水遊びを楽しむ、夏の2時間プランです。

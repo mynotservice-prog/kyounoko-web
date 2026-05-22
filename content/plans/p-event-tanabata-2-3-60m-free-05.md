@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "free"
 area: "all"
-hero: /hero/park-01.png
+hero: /hero/park-01.webp
 seoRelated: "tanabata-kazari-sakusei"
 ---
 

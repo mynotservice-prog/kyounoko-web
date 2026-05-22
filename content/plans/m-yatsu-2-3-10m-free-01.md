@@ -11,7 +11,7 @@ day: ["any"]
 durationMin: 10
 budget: "free"
 area: "all"
-hero: /hero/food-fruit-02.png
+hero: /hero/food-fruit-02.webp
 seoRelated: "okashi-tezukuri-oyatsu-kodomo"
 ---
 

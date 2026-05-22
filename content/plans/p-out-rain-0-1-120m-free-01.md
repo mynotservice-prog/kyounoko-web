@@ -9,7 +9,7 @@ day: ["weekday"]
 durationMin: 120
 budget: "free"
 area: "all"
-hero: /hero/home-cozy-02.png
+hero: /hero/home-cozy-02.webp
 seoRelated: "amenohi-indoor-spots-tokyo-15"
 ---
 

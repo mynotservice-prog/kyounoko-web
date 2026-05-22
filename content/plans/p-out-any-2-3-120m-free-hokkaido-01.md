@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "free"
 area: "hokkaido"
-hero: /hero/nature-01.png
+hero: /hero/nature-01.webp
 seoRelated: "amenohi-indoor-spots-tokyo-15"
 ---
 

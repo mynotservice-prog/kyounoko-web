@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "free"
 area: "fukuoka"
-hero: /hero/japan-rural-01.png
+hero: /hero/japan-rural-01.webp
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

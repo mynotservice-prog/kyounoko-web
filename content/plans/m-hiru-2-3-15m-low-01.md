@@ -11,7 +11,7 @@ day: ["any"]
 durationMin: 15
 budget: "low"
 area: "all"
-hero: /hero/food-japan-02.png
+hero: /hero/food-japan-02.webp
 seoRelated: "obentou-jitan-8patterns"
 ---
 

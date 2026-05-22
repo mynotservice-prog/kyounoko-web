@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "free"
 area: "niigata"
-hero: /hero/nature-01.png
+hero: /hero/nature-01.webp
 seoRelated: "akachan-odekake-3months-1year"
 ---
 

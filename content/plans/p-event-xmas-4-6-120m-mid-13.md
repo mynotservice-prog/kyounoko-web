@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "mid"
 area: "all"
-hero: /hero/winter-snow-03.png
+hero: /hero/winter-snow-03.webp
 seoRelated: "xmas-present-nenrei-0-6"
 ---
 

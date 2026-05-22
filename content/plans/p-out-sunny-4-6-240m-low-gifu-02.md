@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "low"
 area: "gifu"
-hero: /hero/nature-02.png
+hero: /hero/nature-02.webp
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "low"
 area: "all"
-hero: /hero/home-cozy-01.png
+hero: /hero/home-cozy-01.webp
 seoRelated: "3sai-shoushoku-taisaku"
 ---
 

@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 120
 budget: "free"
 area: "kyoto"
-hero: /hero/japan-rural-02.png
+hero: /hero/japan-rural-02.webp
 seoRelated: "shizen-spot-tokyo-youji"
 ---
 

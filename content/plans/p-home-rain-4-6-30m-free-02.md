@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 30
 budget: "free"
 area: "all"
-hero: /hero/home-cozy-02.png
+hero: /hero/home-cozy-02.webp
 seoRelated: "kousaku-4-6sai-10pattern"
 ---
 

@@ -11,7 +11,7 @@ day: ["any"]
 durationMin: 30
 budget: "mid"
 area: "all"
-hero: /hero/family-dinner-01.png
+hero: /hero/family-dinner-01.webp
 seoRelated: "reitougyoza-plus-alpha-3pattern"
 ---
 

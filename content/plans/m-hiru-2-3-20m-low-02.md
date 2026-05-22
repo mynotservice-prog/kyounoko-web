@@ -11,7 +11,7 @@ day: ["any"]
 durationMin: 20
 budget: "low"
 area: "all"
-hero: /hero/food-japan-03.png
+hero: /hero/food-japan-03.webp
 seoRelated: "shumatsu-gohan-tsukurioki-nashi"
 ---
 

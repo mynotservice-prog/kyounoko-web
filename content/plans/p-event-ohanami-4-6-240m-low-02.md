@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 240
 budget: "low"
 area: "all"
-hero: /hero/sakura-02.png
+hero: /hero/sakura-02.webp
 seoRelated: "sakura-ohanami-kodzure-spots"
 ---
 

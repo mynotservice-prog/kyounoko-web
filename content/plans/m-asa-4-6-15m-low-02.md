@@ -11,7 +11,7 @@ day: ["any"]
 durationMin: 15
 budget: "low"
 area: "all"
-hero: /hero/food-kitchen-02.png
+hero: /hero/food-kitchen-02.webp
 seoRelated: "asagohan-5pun-reshipi-20"
 ---
 

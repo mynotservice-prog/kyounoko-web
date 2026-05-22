@@ -11,7 +11,7 @@ day: ["any"]
 durationMin: 20
 budget: "mid"
 area: "all"
-hero: /hero/food-japan-03.png
+hero: /hero/food-japan-03.webp
 seoRelated: "yuuhan-dinner-15pun-10recipes"
 ---
 

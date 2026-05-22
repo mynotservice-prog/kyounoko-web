@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 120
 budget: "low"
 area: "all"
-hero: /hero/sakura-01.png
+hero: /hero/sakura-01.webp
 seoRelated: "ohanami-keikaku-junbi"
 ---
 

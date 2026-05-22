@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 120
 budget: "free"
 area: "all"
-hero: /hero/home-cozy-01.png
+hero: /hero/home-cozy-01.webp
 ---
 
 暖房の効いた部屋で家族みんなでくつろぐ、寒い日の2時間プランです。

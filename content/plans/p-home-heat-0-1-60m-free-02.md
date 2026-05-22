@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 60
 budget: "free"
 area: "all"
-hero: /hero/home-cozy-02.png
+hero: /hero/home-cozy-02.webp
 ---
 
 洗面器に水を張って、暑い日のおうち水遊びを楽しむ60分プランです。

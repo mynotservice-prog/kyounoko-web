@@ -9,7 +9,7 @@ day: ["any"]
 durationMin: 240
 budget: "low"
 area: "all"
-hero: /hero/park-01.png
+hero: /hero/park-01.webp
 seoRelated: "kodomo-no-hi-kyaraben"
 ---
 

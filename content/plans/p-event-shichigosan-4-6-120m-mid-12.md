@@ -9,7 +9,7 @@ day: ["holiday"]
 durationMin: 120
 budget: "mid"
 area: "all"
-hero: /hero/autumn-01.png
+hero: /hero/autumn-01.webp
 seoRelated: "shichigosan-nenrei-junbi"
 ---
 

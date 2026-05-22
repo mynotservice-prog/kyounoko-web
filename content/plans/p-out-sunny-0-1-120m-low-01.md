@@ -9,7 +9,7 @@ day: ["weekday"]
 durationMin: 120
 budget: "low"
 area: "all"
-hero: /hero/home-cozy-02.png
+hero: /hero/home-cozy-02.webp
 seoRelated: "kosodate-muryou-spots-tokyo"
 ---
 

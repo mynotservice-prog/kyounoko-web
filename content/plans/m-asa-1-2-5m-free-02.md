@@ -11,7 +11,7 @@ day: ["any"]
 durationMin: 5
 budget: "free"
 area: "all"
-hero: /hero/food-fruit-03.png
+hero: /hero/food-fruit-03.webp
 seoRelated: "asagohan-5pun-pattern-10"
 ---
 
