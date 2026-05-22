@@ -3494,5 +3494,13 @@
     "generatedAt": "2026-05-22T17:15:26.492Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "takeout-bento-kodzure-anzen-guide": {
+    "slug": "takeout-bento-kodzure-anzen-guide",
+    "ok": true,
+    "file": "/hero-ai/takeout-bento-kodzure-anzen-guide.jpg",
+    "generatedAt": "2026-05-22T19:14:08.696Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }

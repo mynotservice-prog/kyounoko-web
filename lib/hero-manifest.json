@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T17:15:30.866Z",
+  "generatedAt": "2026-05-22T19:14:13.239Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -348,6 +348,7 @@
     "swim-school-3brand-3-6sai": "/hero-ai/swim-school-3brand-3-6sai.webp",
     "swimming-nansai-kara": "/hero-ai/swimming-nansai-kara.webp",
     "taisou-kyoushitsu-2-5sai": "/hero-ai/taisou-kyoushitsu-2-5sai.webp",
+    "takeout-bento-kodzure-anzen-guide": "/hero-ai/takeout-bento-kodzure-anzen-guide.webp",
     "takushoku-service-hikaku-3sha": "/hero-ai/takushoku-service-hikaku-3sha.webp",
     "tanabata-kazari-sakusei": "/hero-ai/tanabata-kazari-sakusei.webp",
     "tanabata-kazari-tedukuri-0-6sai-7shurui": "/hero-ai/tanabata-kazari-tedukuri-0-6sai-7shurui.webp",
@@ -975,8 +976,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 440,
-    "articleHeroCount": 440,
+    "articleSlugs": 441,
+    "articleHeroCount": 441,
     "planIds": 530,
     "planHeroCount": 530
   }

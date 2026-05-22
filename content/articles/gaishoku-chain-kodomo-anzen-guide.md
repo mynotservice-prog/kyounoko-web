@@ -107,7 +107,7 @@ youtubeSearch: 子連れ 外食 チェーン 安全 何歳から 取り分け �
 
 **カフェ・スイーツ・アイス**：もちもち系の窒息、固いコーン、糖分・冷たさに注意。量を決めて楽しむのが基本。→ [ミスタードーナツ](/article/misdo-kodzure-koryaku)／[サーティワン（31）](/article/baskin-robbins-31-kodzure-koryaku)／[カフェチェーン子連れランキング6社](/article/cafe-chain-kodzure-ranking-2026-6sha)／[かき氷・ソフトクリームチェーン比較](/article/kakigori-softcream-chain-kodzure-hikaku)
 
-**テイクアウト弁当**：店内に座らないので待ち時間ストレスは少ない一方、できたて熱々のやけど・揚げ物と濃いめのタレの塩分、そして「持ち歩き時間の食中毒」が固有の論点。受け取ったら早めに、暑い日は保冷を。量り売りで薄味を少量だけ組めるオリジンは離乳食期に便利（イートインのある店も）。→ [ほっともっと](/article/hottomotto-kodzure-koryaku)／[オリジン弁当](/article/origin-bento-kodzure-koryaku)／[テイクアウト弁当チェーン子連れランキング4社](/article/bento-takeout-chain-kodzure-4sha)
+**テイクアウト弁当**：店内に座らないので待ち時間ストレスは少ない一方、できたて熱々のやけど・揚げ物と濃いめのタレの塩分、そして「持ち歩き時間の食中毒」が固有の論点。受け取ったら早めに、暑い日は保冷を。量り売りで薄味を少量だけ組めるオリジンは離乳食期に便利（イートインのある店も）。テイクアウト全体の安全の型は[テイクアウト・お弁当を子連れで安全に食べる完全ガイド](/article/takeout-bento-kodzure-anzen-guide)に1本でまとめています。→ [ほっともっと](/article/hottomotto-kodzure-koryaku)／[オリジン弁当](/article/origin-bento-kodzure-koryaku)／[テイクアウト弁当チェーン子連れランキング4社](/article/bento-takeout-chain-kodzure-4sha)
 
 **離乳食期**：取り分けが難しい時期は、離乳食の持ち込みOKなお店を選ぶのが安心。→ [離乳食の持ち込みOKなチェーン15選](/article/rinyuushoku-mochikomi-chain-15)
 
