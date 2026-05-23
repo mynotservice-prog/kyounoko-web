@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-22'
-updatedAt: '2026-05-22'
+updatedAt: '2026-05-24'
 hero: /hero-ai/kourakuen-kodzure-koryaku.jpg
 heroAlt: 幸楽苑のボックス席で、家族が子ども用に中華そばの麺を短く切って取り分けている様子（イラスト）
 area: all
@@ -292,6 +292,7 @@ A. **がっつり中華そば・餃子で家族シェアなら幸楽苑**、薄�
 
 **ラーメン・麺類・中華系**
 
+- [子連れラーメンを安全に楽しむ完全ガイド｜やけど・高塩分・長い麺の誤嚥・トッピング・アレルギー](/article/kodzure-ramen-anzen-kanzen-guide)
 - [ラーメン・中華麺チェーン子連れランキング5社｜幸楽苑が総合1位](/article/ramen-chain-kodzure-ranking-2026-5sha)
 - [うどんチェーン4社 子連れ徹底比較](/article/udon-chain-kodzure-4sha-hikaku)
 - [バーミヤンの子連れ攻略｜中華ファミレスの楽しみ方](/article/bamiyan-kodzure-koryaku)

@@ -3582,5 +3582,13 @@
     "generatedAt": "2026-05-23T15:16:03.954Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "kodzure-ramen-anzen-kanzen-guide": {
+    "slug": "kodzure-ramen-anzen-kanzen-guide",
+    "ok": true,
+    "file": "/hero-ai/kodzure-ramen-anzen-kanzen-guide.jpg",
+    "generatedAt": "2026-05-23T17:18:10.597Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }
