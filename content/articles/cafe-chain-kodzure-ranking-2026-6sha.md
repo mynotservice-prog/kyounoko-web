@@ -201,6 +201,7 @@ A. **0-2歳の離乳食ありなら[ファミレス（ガスト・サイゼ・�
 
 ### 子連れカフェのテーマ別深掘り
 
+- [子連れカフェを安全に楽しむ完全ガイド｜カフェイン・はちみつ・砂糖/黒糖・氷やタピオカの誤嚥・熱いドリンクのやけど](/article/kodzure-cafe-anzen-kanzen-guide)
 - [ベビーカーOKカフェ15選｜駅×店舗別の動線深掘り](/article/bebycar-ok-cafe-15)
 - [子連れモーニング10選｜コメダ・ガスト・スタバ徹底比較](/article/kodzure-morning-cafe-10)
 - [武蔵野茂木珈琲 子連れ完全攻略｜ベビーカー入店・離乳食・座席タイプ](/article/musashinomori-coffee-kodzure-koryaku)

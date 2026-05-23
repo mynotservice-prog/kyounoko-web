@@ -3598,5 +3598,13 @@
     "generatedAt": "2026-05-23T19:15:21.569Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "kodzure-cafe-anzen-kanzen-guide": {
+    "slug": "kodzure-cafe-anzen-kanzen-guide",
+    "ok": true,
+    "file": "/hero-ai/kodzure-cafe-anzen-kanzen-guide.jpg",
+    "generatedAt": "2026-05-23T21:14:10.507Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }

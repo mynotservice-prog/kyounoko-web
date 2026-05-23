@@ -109,7 +109,7 @@ youtubeSearch: 子連れ 外食 チェーン 安全 何歳から 取り分け �
 
 **焼肉（網焼き）**：自分で焼くぶん「生焼け肉の食中毒」が最大の固有リスク。食べ放題だと次々焼いて焼きが甘くなりがちなので、子ども用は中まで白く加熱を。高温の網・鉄板・トングのやけど、ホルモン・厚切り肉・脂身の誤嚥、たれの塩分にも注意。子どもは焼き場から離れた奥側に座らせ、生肉トングと取り箸を分けるのが鉄則。テーブルオーダー式の食べ放題なら、ビュッフェ台に取りに立って子から目を離す心配がなく子連れに安心です。なお外側が焼けても中が生になりやすい成形肉・結着肉は中心部までよく加熱が必要で、自然肉・無添加（結着肉不使用）をうたう安楽亭は「子に食べさせる肉」を素材から選びやすい一方、座敷×焼き網は「下ろした子が網に近づく」固有リスクにも注意。煙・やけど・生焼け・誤嚥を年齢別にまとめた[子連れ焼肉を安全に楽しむ完全ガイド](/article/kodzure-yakiniku-anzen-kanzen-guide)も用意しています。→ [焼肉きんぐ（焼肉キング）](/article/yakiniku-king-kodzure-koryaku)／[牛角](/article/gyukaku-kodzure-koryaku)／[安楽亭（自然肉・無添加／座敷）](/article/anrakutei-kodzure-koryaku)／[焼肉5チェーン子連れ比較ランキング](/article/yakiniku-5chain-kodomo-2026)
 
-**カフェ・スイーツ・アイス**：もちもち系の窒息、固いコーン、糖分・冷たさに注意。量を決めて楽しむのが基本。→ [ミスタードーナツ](/article/misdo-kodzure-koryaku)／[サーティワン（31）](/article/baskin-robbins-31-kodzure-koryaku)／[カフェチェーン子連れランキング6社](/article/cafe-chain-kodzure-ranking-2026-6sha)／[かき氷・ソフトクリームチェーン比較](/article/kakigori-softcream-chain-kodzure-hikaku)
+**カフェ・スイーツ・アイス**：もちもち系の窒息、固いコーン、糖分・冷たさに注意。量を決めて楽しむのが基本。カフェは“ミルク珈琲・ラテ”でも油断できないカフェイン、はちみつ入りドリンク（1歳未満NG）、砂糖・黒糖のとりすぎ、氷・タピオカ・フローズンの誤嚥、熱いドリンクのやけどが固有の論点。これらを年齢別にまとめた[子連れカフェを安全に楽しむ完全ガイド](/article/kodzure-cafe-anzen-kanzen-guide)も用意しています。→ [ミスタードーナツ](/article/misdo-kodzure-koryaku)／[サーティワン（31）](/article/baskin-robbins-31-kodzure-koryaku)／[カフェチェーン子連れランキング6社](/article/cafe-chain-kodzure-ranking-2026-6sha)／[かき氷・ソフトクリームチェーン比較](/article/kakigori-softcream-chain-kodzure-hikaku)
 
 **テイクアウト弁当**：店内に座らないので待ち時間ストレスは少ない一方、できたて熱々のやけど・揚げ物と濃いめのタレの塩分、そして「持ち歩き時間の食中毒」が固有の論点。受け取ったら早めに、暑い日は保冷を。量り売りで薄味を少量だけ組めるオリジンは離乳食期に便利（イートインのある店も）。テイクアウト全体の安全の型は[テイクアウト・お弁当を子連れで安全に食べる完全ガイド](/article/takeout-bento-kodzure-anzen-guide)に1本でまとめています。→ [ほっともっと](/article/hottomotto-kodzure-koryaku)／[オリジン弁当](/article/origin-bento-kodzure-koryaku)／[テイクアウト弁当チェーン子連れランキング4社](/article/bento-takeout-chain-kodzure-4sha)
 
@@ -216,6 +216,7 @@ A. **本ガイドの「業態別・子連れ安全メモ」から各お店の攻
 
 **業態別の安全ガイド**
 
+- [子連れカフェを安全に楽しむ完全ガイド（カフェイン・はちみつ・砂糖/黒糖・氷やタピオカの誤嚥・熱いドリンクのやけど）](/article/kodzure-cafe-anzen-kanzen-guide)
 - [子連れラーメンを安全に楽しむ完全ガイド（やけど・高塩分・長い麺の誤嚥・トッピング・アレルギー）](/article/kodzure-ramen-anzen-kanzen-guide)
 - [子連れしゃぶしゃぶ・鍋を安全に楽しむ完全ガイド（生焼け・やけど・誤嚥・座敷の段差）](/article/kodzure-shabushabu-nabe-anzen-kanzen-guide)
 - [子連れ焼肉を安全に楽しむ完全ガイド（煙・やけど・生焼け・誤嚥）](/article/kodzure-yakiniku-anzen-kanzen-guide)
