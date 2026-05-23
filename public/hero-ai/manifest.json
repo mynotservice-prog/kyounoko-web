@@ -3606,5 +3606,13 @@
     "generatedAt": "2026-05-23T21:14:10.507Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "sanmarc-cafe-kodzure-koryaku": {
+    "slug": "sanmarc-cafe-kodzure-koryaku",
+    "ok": true,
+    "file": "/hero-ai/sanmarc-cafe-kodzure-koryaku.jpg",
+    "generatedAt": "2026-05-23T23:14:23.095Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }

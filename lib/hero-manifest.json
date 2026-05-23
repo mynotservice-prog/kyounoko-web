@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T21:14:14.764Z",
+  "generatedAt": "2026-05-23T23:14:26.495Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -331,6 +331,7 @@
     "saizeriya-baby-real-voices": "/hero-ai/saizeriya-baby-real-voices.webp",
     "sakana-kodomo-tabete-kureru": "/hero-ai/sakana-kodomo-tabete-kureru.webp",
     "sakura-ohanami-kodzure-spots": "/hero-ai/sakura-ohanami-kodzure-spots.webp",
+    "sanmarc-cafe-kodzure-koryaku": "/hero-ai/sanmarc-cafe-kodzure-koryaku.webp",
     "seal-book-ranking": "/hero-ai/seal-book-ranking.webp",
     "shabushabu-chain-kodzure-ranking-2026-5sha": "/hero-ai/shabushabu-chain-kodzure-ranking-2026-5sha.webp",
     "shabushabu-yakiniku-buffet-3chain": "/hero-ai/shabushabu-yakiniku-buffet-3chain.webp",
@@ -989,8 +990,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 454,
-    "articleHeroCount": 454,
+    "articleSlugs": 455,
+    "articleHeroCount": 455,
     "planIds": 530,
     "planHeroCount": 530
   }
