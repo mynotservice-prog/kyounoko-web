@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T11:16:14.987Z",
+  "generatedAt": "2026-05-23T13:16:50.276Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -106,6 +106,7 @@
     "halloween-kasou-junbi": "/hero-ai/halloween-kasou-junbi.webp",
     "halloween-kodzure-events-2026": "/hero-ai/halloween-kodzure-events-2026.webp",
     "hama-sushi-kodzure-koryaku": "/hero-ai/hama-sushi-kodzure-koryaku.webp",
+    "hanamaru-udon-kodzure-koryaku": "/hero-ai/hanamaru-udon-kodzure-koryaku.webp",
     "hasami-tsukaenai-itsukara-renshu": "/hero-ai/hasami-tsukaenai-itsukara-renshu.webp",
     "hatattsu-mileage-0-6sai-checklist": "/hero-ai/hatattsu-mileage-0-6sai-checklist.webp",
     "hatsumoude-kodzure-kanto-15": "/hero-ai/hatsumoude-kodzure-kanto-15.webp",
@@ -984,8 +985,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 449,
-    "articleHeroCount": 449,
+    "articleSlugs": 450,
+    "articleHeroCount": 450,
     "planIds": 530,
     "planHeroCount": 530
   }
