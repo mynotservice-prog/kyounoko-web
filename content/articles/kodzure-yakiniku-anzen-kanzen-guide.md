@@ -175,6 +175,7 @@ youtubeSearch: 子連れ 焼肉 何歳から 安全 やけど 生焼け 誤嚥 �
 - **まずは横並びで比べたい**：[焼肉5チェーン子連れ比較ランキング](/article/yakiniku-5chain-kodomo-2026)（ベビーカー入店・キッズチェア・取り分け・離乳食持込・おむつ替え・個室・価格の8項目で比較）。
 - **ワンオペ・0-3歳で席を立ちたくない**：テーブルオーダー食べ放題の[焼肉きんぐ（焼肉キング）](/article/yakiniku-king-kodzure-koryaku)。
 - **煙対策・席選びを重視**：[牛角の子連れ攻略](/article/gyukaku-kodzure-koryaku)。
+- **コスパよく・座敷でゆっくり・肉の素材も気になる**：自然肉100％・無添加（結着肉不使用）をうたう[安楽亭の子連れ攻略](/article/anrakutei-kodzure-koryaku)。
 - **焼肉はまだ早い0-2歳・煙が苦手**：[しゃぶしゃぶ食べ放題3チェーン子連れ比較](/article/shabushabu-yakiniku-buffet-3chain)や[しゃぶしゃぶ温野菜の子連れ攻略](/article/onyasai-kodzure-koryaku)、[しゃぶ葉の子連れ攻略](/article/shabuyou-kodzure-koryaku)。
 - **寿司もしゃぶも食べたい・好みが割れる**：[ゆず庵の子連れ攻略（寿司＋しゃぶしゃぶ）](/article/yuzuan-kodzure-koryaku)。
 - **座敷でゆっくり・和食も食べたい**：[かごの屋の子連れ攻略（座敷・掘りごたつ・御膳）](/article/kagonoya-kodzure-koryaku)。
@@ -252,6 +253,7 @@ A. 主要な焼肉チェーンは公式でアレルゲン情報を提供して�
 - [焼肉5チェーン子連れ比較ランキング](/article/yakiniku-5chain-kodomo-2026)（ベビーカー入店・キッズチェア・取り分け・個室・価格の8項目で比較）
 - [焼肉きんぐ（焼肉キング）の子連れ攻略](/article/yakiniku-king-kodzure-koryaku)（テーブルオーダー食べ放題・幼児無料・生焼け対策）
 - [牛角の子連れ攻略（焼肉・煙対策）](/article/gyukaku-kodzure-koryaku)
+- [安楽亭の子連れ攻略（自然肉・無添加・座敷でゆっくり）](/article/anrakutei-kodzure-koryaku)
 - [子連れOK焼肉・しゃぶしゃぶ7選](/article/kodzure-yakiniku-shabu-7)
 - [子連れ焼肉 ベビーカー入店 東京20選](/article/kodzure-yakiniku-stroller-tokyo-20)
 - [しゃぶしゃぶ食べ放題3チェーン子連れ比較](/article/shabushabu-yakiniku-buffet-3chain)

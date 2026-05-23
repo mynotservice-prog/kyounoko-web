@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T07:17:41.116Z",
+  "generatedAt": "2026-05-23T09:16:50.772Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -23,6 +23,7 @@
     "amenohi-ie-asobi-4-6sai": "/hero-ai/amenohi-ie-asobi-4-6sai.webp",
     "amenohi-indoor-spots-tokyo-15": "/hero-ai/amenohi-indoor-spots-tokyo-15.webp",
     "amenohi-stroller-spots-tokyo": "/hero-ai/amenohi-stroller-spots-tokyo.webp",
+    "anrakutei-kodzure-koryaku": "/hero-ai/anrakutei-kodzure-koryaku.webp",
     "asa-30pun-routine": "/hero-ai/asa-30pun-routine.webp",
     "asagohan-5pun-pattern-10": "/hero-ai/asagohan-5pun-pattern-10.webp",
     "asagohan-5pun-reshipi-20": "/hero-ai/asagohan-5pun-reshipi-20.webp",
@@ -982,8 +983,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 447,
-    "articleHeroCount": 447,
+    "articleSlugs": 448,
+    "articleHeroCount": 448,
     "planIds": 530,
     "planHeroCount": 530
   }
