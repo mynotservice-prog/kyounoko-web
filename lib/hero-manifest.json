@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T01:15:45.758Z",
+  "generatedAt": "2026-05-23T03:16:49.484Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -129,6 +129,7 @@
     "jonathan-kodzure-koryaku": "/hero-ai/jonathan-kodzure-koryaku.webp",
     "jonathan-morning-real": "/hero-ai/jonathan-morning-real.webp",
     "junior-seat-2-3sai-hikaku-15": "/hero-ai/junior-seat-2-3sai-hikaku-15.webp",
+    "kagonoya-kodzure-koryaku": "/hero-ai/kagonoya-kodzure-koryaku.webp",
     "kaisuiyoku-1sai-debut-mochimono": "/hero-ai/kaisuiyoku-1sai-debut-mochimono.webp",
     "kaiten-sushi-4chain-comparison": "/hero-ai/kaiten-sushi-4chain-comparison.webp",
     "kakigori-kodomo-tezukuri-recipe": "/hero-ai/kakigori-kodomo-tezukuri-recipe.webp",
@@ -979,8 +980,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 444,
-    "articleHeroCount": 444,
+    "articleSlugs": 445,
+    "articleHeroCount": 445,
     "planIds": 530,
     "planHeroCount": 530
   }

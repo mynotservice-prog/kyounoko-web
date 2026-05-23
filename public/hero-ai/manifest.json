@@ -3526,5 +3526,13 @@
     "generatedAt": "2026-05-23T01:15:41.767Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "kagonoya-kodzure-koryaku": {
+    "slug": "kagonoya-kodzure-koryaku",
+    "ok": true,
+    "file": "/hero-ai/kagonoya-kodzure-koryaku.jpg",
+    "generatedAt": "2026-05-23T03:16:44.744Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }

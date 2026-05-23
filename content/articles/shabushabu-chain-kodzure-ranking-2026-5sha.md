@@ -33,7 +33,7 @@ heroAlt: 家族4人がしゃぶしゃぶ鍋を囲み、子どもの皿に取り�
 
 - **著者**: ながみー（編集長・4歳娘＆2歳息子の父／30代パパ）
 - **取材ベース**: 首都圏のしゃぶ葉・しゃぶしゃぶ温野菜・ゆず庵・かごの屋・木曽路の5チェーンを **延べ70店舗以上**、**4年以上にわたり月1〜3回ペース** で家族利用した一次データ
-- **公式参照**: しゃぶ葉公式 [skylark.co.jp/shabu-you](https://www.skylark.co.jp/shabu-you/) ／しゃぶしゃぶ温野菜公式 [onyasai.com](https://www.onyasai.com/) ／ゆず庵公式 [shabu-yuzuan.jp](https://www.shabu-yuzuan.jp/) ／かごの屋公式 [kagonoya.co.jp](https://www.kagonoya.co.jp/) ／木曽路公式 [kisoji.co.jp](https://www.kisoji.co.jp/)（いずれも2026年5月時点で参照）
+- **公式参照**: しゃぶ葉公式 [skylark.co.jp/shabu-you](https://www.skylark.co.jp/shabu-you/) ／しゃぶしゃぶ温野菜公式 [onyasai.com](https://www.onyasai.com/) ／ゆず庵公式 [shabu-yuzuan.jp](https://www.shabu-yuzuan.jp/) ／かごの屋公式 [kagonoya.food-kr.com](https://kagonoya.food-kr.com/) ／木曽路公式 [kisoji.co.jp](https://www.kisoji.co.jp/)（いずれも2026年5月時点で参照）
 - **最終更新**: 2026年5月21日
 - **注**: 各社の店舗ごとに座席・サービス・キッズ料金・離乳食運用は差があり、本記事のスコアは「同チェーンの首都圏標準的なロードサイド店・モール店で家族3〜4人が90〜120分滞在したときの体験」を基準にしています。アレルゲン情報・離乳食ルール・年齢別料金は変動するため、最終確認は必ず公式サイトでお願いします。
 
@@ -99,11 +99,13 @@ heroAlt: 家族4人がしゃぶしゃぶ鍋を囲み、子どもの皿に取り�
 
 **スコア内訳**: ベビーカー7／キッズ6／離乳食7／座席9／価格3 ＝ **32点**
 
-かごの屋（SRSホールディングス）は **「和食ファミレスの座敷文化×しゃぶしゃぶコース」** で、座席タイプのスコアが5社中トップタイ。掘りごたつ・座敷席比率が高く、0-1歳をベビーカーから座敷に下ろして転がしておける数少ない業態。出汁は寄せ鍋だし・すき焼き・豆乳など複数選択でき、薄味運用に柔軟。
+かごの屋（株式会社KRフードサービス／クリエイト・レストランツ・ホールディングス グループ）は **「和食ファミレスの座敷文化×しゃぶしゃぶコース」** で、座席タイプのスコアが5社中トップタイ。掘りごたつ・座敷席比率が高く、0-1歳をベビーカーから座敷に下ろして転がしておける数少ない業態。出汁は寄せ鍋だし・すき焼き・豆乳など複数選択でき、薄味運用に柔軟。
 
 お子様膳（うどん・茶碗蒸し・唐揚げセット）が **食べ放題コース外で単品提供** されるため、しゃぶしゃぶをほぼ食べない年齢の子でも家族で同席できる。離乳食持込は「一声いただければ」の黙認運用が首都圏標準。
 
 **懸念点**: しゃぶしゃぶ食べ放題コース＋一品料理で **家族3〜4人合計10,000〜14,000円** と価格が高め。和食ファミレスとしての通常メニュー（しゃぶしゃぶ以外）も並行注文できるので、家族の半分はしゃぶ以外を食べる運用なら割安にできるが、純粋な「家族全員しゃぶしゃぶ」用途では価格効率が落ちる。座敷が魅力なら[個室・座敷で子連れランチが安心なチェーン](/article/koshitsu-kodzure-lunch)もあわせて。
+
+座敷・掘りごたつで0-1歳を「下ろして」過ごせる乳児期の運用、御膳で家族の年齢差を吸収するコツ、そして座敷・掘りごたつならではの「段差からの転落・足元の熱い鍋への接近」「生焼け肉の食中毒」「焼き魚の小骨」対策まで、かごの屋だけを深掘りした単独攻略は[かごの屋の子連れ攻略](/article/kagonoya-kodzure-koryaku)にまとめています。
 
 ## 5位｜木曽路（28点）｜個室の質は5社中最高、しかし日常使いには不向き
 
@@ -283,7 +285,7 @@ A. 本記事は **子連れ目線の評価に絞っており、肉質・タレ�
 
 ## 関連記事｜しゃぶしゃぶ・外食チェーンランキングシリーズ
 
-- 単独攻略：[しゃぶ葉 子連れ攻略](/article/shabuyou-kodzure-koryaku)／[しゃぶ葉「3歳以下無料」のリアル](/article/shabuyou-3sai-free-real)／[しゃぶしゃぶ温野菜 子連れ攻略（二色鍋・未就学児無料・生焼け対策）](/article/onyasai-kodzure-koryaku)／[ゆず庵 子連れ攻略（寿司＋しゃぶしゃぶ・生ものは何歳から）](/article/yuzuan-kodzure-koryaku)
+- 単独攻略：[しゃぶ葉 子連れ攻略](/article/shabuyou-kodzure-koryaku)／[しゃぶ葉「3歳以下無料」のリアル](/article/shabuyou-3sai-free-real)／[しゃぶしゃぶ温野菜 子連れ攻略（二色鍋・未就学児無料・生焼け対策）](/article/onyasai-kodzure-koryaku)／[ゆず庵 子連れ攻略（寿司＋しゃぶしゃぶ・生ものは何歳から）](/article/yuzuan-kodzure-koryaku)／[かごの屋 子連れ攻略（座敷・掘りごたつ・御膳・段差の安全）](/article/kagonoya-kodzure-koryaku)
 - カテゴリ比較：[しゃぶしゃぶ食べ放題3チェーン子連れ比較（しゃぶ葉・温野菜・木曽路）](/article/shabushabu-yakiniku-buffet-3chain)
 - 焼肉カテゴリ：[焼肉5チェーン子連れ比較](/article/yakiniku-5chain-kodomo-2026)／[子連れOK焼肉・しゃぶしゃぶ7選](/article/kodzure-yakiniku-shabu-7)
 - 外食チェーンランキング7部作：[ファミレス10選](/article/famires-kodzure-ranking-2026-10sen)／[カフェ6社](/article/cafe-chain-kodzure-ranking-2026-6sha)／[牛丼4社](/article/gyudon-chain-kodzure-ranking-2026-4sha)／[うどん4社](/article/udon-chain-kodzure-4sha-hikaku)／[回転寿司4社](/article/kaiten-sushi-4chain-comparison)
