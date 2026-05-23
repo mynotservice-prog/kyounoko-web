@@ -198,7 +198,7 @@ heroAlt: 家族4人がしゃぶしゃぶ鍋を囲み、子どもの皿に取り�
 - **やけど**：IHコンロ＋鍋の縁は十分に熱い。**コンロを子の手の届かない位置に配置、取り分けは親が確定してから手渡し**。0-2歳は親と子の席を入れ替えて鍋から最も遠い位置に座らせるのが鉄則。
 - **アレルギー除去・食事制限・体調不良時の判断**：本記事は一般的な外食情報のまとめであり、個別の医学的助言ではありません。アレルギー・体調・発達状況・既往症などの個別事情がある場合は **必ずかかりつけの小児科医・管理栄養士・自治体の母子保健窓口・保健師に相談** してください。急な体調変化（嘔吐の継続・呼吸が苦しい・蕁麻疹が広がる等）の際は救急119、夜間の判断に迷う時は小児救急電話相談 **#8000** をご利用ください。
 
-しゃぶしゃぶ食材の取り分け・包丁不要の調理について深掘りしたい場合は[キャベツ＋しゃぶしゃぶは包丁不要で時短](/article/kodomo-cabbage-shabushabu-houchou-fuyou)もあわせて。
+生焼け肉の食中毒・やけど・餅やしらたきの誤嚥・座敷の段差まで、しゃぶしゃぶ・鍋の安全対策を1本に体系化した[子連れしゃぶしゃぶ・鍋を安全に楽しむ完全ガイド](/article/kodzure-shabushabu-nabe-anzen-kanzen-guide)もあわせてどうぞ。しゃぶしゃぶ食材の取り分け・包丁不要の調理について深掘りしたい場合は[キャベツ＋しゃぶしゃぶは包丁不要で時短](/article/kodomo-cabbage-shabushabu-houchou-fuyou)を参照してください。
 
 ## ベビーカー入店事前確認テンプレ｜電話で5つだけ確認
 
@@ -286,6 +286,7 @@ A. 本記事は **子連れ目線の評価に絞っており、肉質・タレ�
 ## 関連記事｜しゃぶしゃぶ・外食チェーンランキングシリーズ
 
 - 単独攻略：[しゃぶ葉 子連れ攻略](/article/shabuyou-kodzure-koryaku)／[しゃぶ葉「3歳以下無料」のリアル](/article/shabuyou-3sai-free-real)／[しゃぶしゃぶ温野菜 子連れ攻略（二色鍋・未就学児無料・生焼け対策）](/article/onyasai-kodzure-koryaku)／[ゆず庵 子連れ攻略（寿司＋しゃぶしゃぶ・生ものは何歳から）](/article/yuzuan-kodzure-koryaku)／[かごの屋 子連れ攻略（座敷・掘りごたつ・御膳・段差の安全）](/article/kagonoya-kodzure-koryaku)
+- 安全ガイド：[子連れしゃぶしゃぶ・鍋を安全に楽しむ完全ガイド（生焼け・やけど・誤嚥・座敷の段差）](/article/kodzure-shabushabu-nabe-anzen-kanzen-guide)
 - カテゴリ比較：[しゃぶしゃぶ食べ放題3チェーン子連れ比較（しゃぶ葉・温野菜・木曽路）](/article/shabushabu-yakiniku-buffet-3chain)
 - 焼肉カテゴリ：[焼肉5チェーン子連れ比較](/article/yakiniku-5chain-kodomo-2026)／[子連れOK焼肉・しゃぶしゃぶ7選](/article/kodzure-yakiniku-shabu-7)
 - 外食チェーンランキング7部作：[ファミレス10選](/article/famires-kodzure-ranking-2026-10sen)／[カフェ6社](/article/cafe-chain-kodzure-ranking-2026-6sha)／[牛丼4社](/article/gyudon-chain-kodzure-ranking-2026-4sha)／[うどん4社](/article/udon-chain-kodzure-4sha-hikaku)／[回転寿司4社](/article/kaiten-sushi-4chain-comparison)

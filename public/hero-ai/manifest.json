@@ -3558,5 +3558,13 @@
     "generatedAt": "2026-05-23T09:16:46.711Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "kodzure-shabushabu-nabe-anzen-kanzen-guide": {
+    "slug": "kodzure-shabushabu-nabe-anzen-kanzen-guide",
+    "ok": true,
+    "file": "/hero-ai/kodzure-shabushabu-nabe-anzen-kanzen-guide.jpg",
+    "generatedAt": "2026-05-23T11:16:10.539Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }

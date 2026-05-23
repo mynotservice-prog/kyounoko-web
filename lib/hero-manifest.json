@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T09:16:50.772Z",
+  "generatedAt": "2026-05-23T11:16:14.987Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -211,6 +211,7 @@
     "kodzure-morning-cafe-10": "/hero-ai/kodzure-morning-cafe-10.webp",
     "kodzure-restaurant-erabikata-kanzen-guide": "/hero-ai/kodzure-restaurant-erabikata-kanzen-guide.webp",
     "kodzure-saize-koryaku": "/hero-ai/kodzure-saize-koryaku.webp",
+    "kodzure-shabushabu-nabe-anzen-kanzen-guide": "/hero-ai/kodzure-shabushabu-nabe-anzen-kanzen-guide.webp",
     "kodzure-washoku-chain-10": "/hero-ai/kodzure-washoku-chain-10.webp",
     "kodzure-yakiniku-anzen-kanzen-guide": "/hero-ai/kodzure-yakiniku-anzen-kanzen-guide.webp",
     "kodzure-yakiniku-shabu-7": "/hero-ai/kodzure-yakiniku-shabu-7.webp",
@@ -983,8 +984,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 448,
-    "articleHeroCount": 448,
+    "articleSlugs": 449,
+    "articleHeroCount": 449,
     "planIds": 530,
     "planHeroCount": 530
   }
