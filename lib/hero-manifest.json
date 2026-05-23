@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T23:15:47.738Z",
+  "generatedAt": "2026-05-23T01:15:45.758Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -442,6 +442,7 @@
     "yuki-asobi-debut-2sai": "/hero-ai/yuki-asobi-debut-2sai.webp",
     "yumean-kodzure-koryaku": "/hero-ai/yumean-kodzure-koryaku.webp",
     "yuuhan-dinner-15pun-10recipes": "/hero-ai/yuuhan-dinner-15pun-10recipes.webp",
+    "yuzuan-kodzure-koryaku": "/hero-ai/yuzuan-kodzure-koryaku.webp",
     "zansho-bate-shokuyokunai-recipe-5": "/hero-ai/zansho-bate-shokuyokunai-recipe-5.webp",
     "zetteria-kodzure-koryaku": "/hero-ai/zetteria-kodzure-koryaku.webp"
   },
@@ -978,8 +979,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 443,
-    "articleHeroCount": 443,
+    "articleSlugs": 444,
+    "articleHeroCount": 444,
     "planIds": 530,
     "planHeroCount": 530
   }

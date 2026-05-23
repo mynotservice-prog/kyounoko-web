@@ -105,7 +105,7 @@ youtubeSearch: 子連れ 外食 チェーン 安全 何歳から 取り分け �
 
 **ファミレス・牛丼・定食・和食**：取り分けの自由度が高い分、味の濃さに注意。和定食は焼き魚の小骨も要チェック。座敷やキッズチェアの有無も事前確認を。→ [ファミレス子連れランキング10選](/article/famires-kodzure-ranking-2026-10sen)／[牛丼チェーン子連れランキング4社](/article/gyudon-chain-kodzure-ranking-2026-4sha)／[定食チェーン子連れランキング4社](/article/teishoku-chain-kodzure-ranking-4sha)／[まいどおおきに食堂](/article/maido-ookini-shokudo-kodzure-koryaku)
 
-**しゃぶしゃぶ・鍋**：煙が出ず火傷リスクが低めで0-3歳に向く一方、自分で火を通すぶん「生焼け肉の食中毒」が最大の固有リスク。子ども用は中までしっかり加熱を。熱い鍋・湯気のやけど、餅・きのこ・しらたきの誤嚥にも注意。二色鍋でまろやかだし側を子ども用にすると取り分けがラク。→ [しゃぶしゃぶ温野菜](/article/onyasai-kodzure-koryaku)／[しゃぶ葉](/article/shabuyou-kodzure-koryaku)／[しゃぶしゃぶチェーン子連れランキング5社](/article/shabushabu-chain-kodzure-ranking-2026-5sha)
+**しゃぶしゃぶ・鍋**：煙が出ず火傷リスクが低めで0-3歳に向く一方、自分で火を通すぶん「生焼け肉の食中毒」が最大の固有リスク。子ども用は中までしっかり加熱を。熱い鍋・湯気のやけど、餅・きのこ・しらたきの誤嚥にも注意。二色鍋でまろやかだし側を子ども用にすると取り分けがラク。寿司も食べ放題のゆず庵では「生もの（生魚・寿司ネタ）は何歳から」も加わる。→ [しゃぶしゃぶ温野菜](/article/onyasai-kodzure-koryaku)／[しゃぶ葉](/article/shabuyou-kodzure-koryaku)／[ゆず庵（寿司＋しゃぶしゃぶ）](/article/yuzuan-kodzure-koryaku)／[しゃぶしゃぶチェーン子連れランキング5社](/article/shabushabu-chain-kodzure-ranking-2026-5sha)
 
 **カフェ・スイーツ・アイス**：もちもち系の窒息、固いコーン、糖分・冷たさに注意。量を決めて楽しむのが基本。→ [ミスタードーナツ](/article/misdo-kodzure-koryaku)／[サーティワン（31）](/article/baskin-robbins-31-kodzure-koryaku)／[カフェチェーン子連れランキング6社](/article/cafe-chain-kodzure-ranking-2026-6sha)／[かき氷・ソフトクリームチェーン比較](/article/kakigori-softcream-chain-kodzure-hikaku)
 
@@ -225,6 +225,7 @@ A. **本ガイドの「業態別・子連れ安全メモ」から各お店の攻
 - [オリジン弁当の子連れ攻略](/article/origin-bento-kodzure-koryaku)
 - [まいどおおきに食堂の子連れ攻略](/article/maido-ookini-shokudo-kodzure-koryaku)
 - [しゃぶしゃぶ温野菜の子連れ攻略](/article/onyasai-kodzure-koryaku)
+- [ゆず庵の子連れ攻略（寿司＋しゃぶしゃぶ）](/article/yuzuan-kodzure-koryaku)
 
 **安全・おうち時間**
 

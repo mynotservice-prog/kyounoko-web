@@ -33,7 +33,7 @@ heroAlt: 家族4人がしゃぶしゃぶ鍋を囲み、子どもの皿に取り�
 
 - **著者**: ながみー（編集長・4歳娘＆2歳息子の父／30代パパ）
 - **取材ベース**: 首都圏のしゃぶ葉・しゃぶしゃぶ温野菜・ゆず庵・かごの屋・木曽路の5チェーンを **延べ70店舗以上**、**4年以上にわたり月1〜3回ペース** で家族利用した一次データ
-- **公式参照**: しゃぶ葉公式 [skylark.co.jp/shabu-you](https://www.skylark.co.jp/shabu-you/) ／しゃぶしゃぶ温野菜公式 [onyasai.com](https://www.onyasai.com/) ／ゆず庵公式 [yuzu-an.com](https://www.yuzu-an.com/) ／かごの屋公式 [kagonoya.co.jp](https://www.kagonoya.co.jp/) ／木曽路公式 [kisoji.co.jp](https://www.kisoji.co.jp/)（いずれも2026年5月時点で参照）
+- **公式参照**: しゃぶ葉公式 [skylark.co.jp/shabu-you](https://www.skylark.co.jp/shabu-you/) ／しゃぶしゃぶ温野菜公式 [onyasai.com](https://www.onyasai.com/) ／ゆず庵公式 [shabu-yuzuan.jp](https://www.shabu-yuzuan.jp/) ／かごの屋公式 [kagonoya.co.jp](https://www.kagonoya.co.jp/) ／木曽路公式 [kisoji.co.jp](https://www.kisoji.co.jp/)（いずれも2026年5月時点で参照）
 - **最終更新**: 2026年5月21日
 - **注**: 各社の店舗ごとに座席・サービス・キッズ料金・離乳食運用は差があり、本記事のスコアは「同チェーンの首都圏標準的なロードサイド店・モール店で家族3〜4人が90〜120分滞在したときの体験」を基準にしています。アレルゲン情報・離乳食ルール・年齢別料金は変動するため、最終確認は必ず公式サイトでお願いします。
 
@@ -87,11 +87,13 @@ heroAlt: 家族4人がしゃぶしゃぶ鍋を囲み、子どもの皿に取り�
 
 **スコア内訳**: ベビーカー7／キッズ9／離乳食6／座席7／価格6 ＝ **35点**
 
-ゆず庵（FOOD & LIFE COMPANIES／スシローGHD）は **「寿司＋しゃぶしゃぶの食べ放題」** という独自業態。子どもが「お肉気分じゃない」となっても寿司・天ぷら・うどん・茶碗蒸し・デザートで吸収でき、**メニュー網羅性は5社中最強**。タッチパネル注文＋レーン搬送の店舗もあり、エンタメ性で4歳娘の滞在時間が伸びる。
+ゆず庵（株式会社物語コーポレーション）は **「寿司＋しゃぶしゃぶの食べ放題」** という独自業態。子どもが「お肉気分じゃない」となっても寿司・天ぷら・うどん・茶碗蒸し・デザートで吸収でき、**メニュー網羅性は5社中最強**。タッチパネル注文＋レーン搬送の店舗もあり、エンタメ性で4歳娘の滞在時間が伸びる。
 
 座席は半個室・掘りごたつ比率が高く、ベビーカーは入口で畳むケースが多いがベビーチェアは常備。**「寿司は4歳娘・しゃぶしゃぶは大人・取り分けは2歳息子」** という三世代分業が成立する貴重な業態。
 
 **懸念点**: 食べ放題コースが100〜120分の時間制で、0-1歳連れだと時間設計がややタイト。タッチパネル前の取り合いが起きるので、子の手が届かない位置に置く配慮が必要。離乳食持込は店舗ごとに運用が違うので、入店時に必ず確認してください。価格は家族3〜4人で7,000〜10,000円が目安。
+
+寿司＋しゃぶしゃぶの「子の好み吸収力」、幼児無料・小学生半額の料金、そしてゆず庵ならではの「生もの（生魚・寿司ネタ）は何歳から」「生焼け肉の食中毒対策」まで、ゆず庵だけを深掘りした単独攻略は[ゆず庵の子連れ攻略](/article/yuzuan-kodzure-koryaku)にまとめています。
 
 ## 4位｜かごの屋（32点）｜和食ファミレス×しゃぶしゃぶの「座敷文化」
 
@@ -281,7 +283,7 @@ A. 本記事は **子連れ目線の評価に絞っており、肉質・タレ�
 
 ## 関連記事｜しゃぶしゃぶ・外食チェーンランキングシリーズ
 
-- 単独攻略：[しゃぶ葉 子連れ攻略](/article/shabuyou-kodzure-koryaku)／[しゃぶ葉「3歳以下無料」のリアル](/article/shabuyou-3sai-free-real)／[しゃぶしゃぶ温野菜 子連れ攻略（二色鍋・未就学児無料・生焼け対策）](/article/onyasai-kodzure-koryaku)
+- 単独攻略：[しゃぶ葉 子連れ攻略](/article/shabuyou-kodzure-koryaku)／[しゃぶ葉「3歳以下無料」のリアル](/article/shabuyou-3sai-free-real)／[しゃぶしゃぶ温野菜 子連れ攻略（二色鍋・未就学児無料・生焼け対策）](/article/onyasai-kodzure-koryaku)／[ゆず庵 子連れ攻略（寿司＋しゃぶしゃぶ・生ものは何歳から）](/article/yuzuan-kodzure-koryaku)
 - カテゴリ比較：[しゃぶしゃぶ食べ放題3チェーン子連れ比較（しゃぶ葉・温野菜・木曽路）](/article/shabushabu-yakiniku-buffet-3chain)
 - 焼肉カテゴリ：[焼肉5チェーン子連れ比較](/article/yakiniku-5chain-kodomo-2026)／[子連れOK焼肉・しゃぶしゃぶ7選](/article/kodzure-yakiniku-shabu-7)
 - 外食チェーンランキング7部作：[ファミレス10選](/article/famires-kodzure-ranking-2026-10sen)／[カフェ6社](/article/cafe-chain-kodzure-ranking-2026-6sha)／[牛丼4社](/article/gyudon-chain-kodzure-ranking-2026-4sha)／[うどん4社](/article/udon-chain-kodzure-4sha-hikaku)／[回転寿司4社](/article/kaiten-sushi-4chain-comparison)
