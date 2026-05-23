@@ -3542,5 +3542,13 @@
     "generatedAt": "2026-05-23T05:17:09.706Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "kodzure-yakiniku-anzen-kanzen-guide": {
+    "slug": "kodzure-yakiniku-anzen-kanzen-guide",
+    "ok": true,
+    "file": "/hero-ai/kodzure-yakiniku-anzen-kanzen-guide.jpg",
+    "generatedAt": "2026-05-23T07:17:35.122Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }

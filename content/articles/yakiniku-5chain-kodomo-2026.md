@@ -82,12 +82,13 @@ hero: /hero-ai/yakiniku-5chain-kodomo-2026.jpg
 - 単独攻略は[牛角 子連れ攻略](/article/gyukaku-kodzure-koryaku)が詳しいです。
 - 焼肉×しゃぶの広い比較は[子連れOK焼肉・しゃぶしゃぶ7選](/article/kodzure-yakiniku-shabu-7)。
 - ベビーカーで入りやすい焼肉店リストは[子連れ焼肉 ベビーカー入店 東京20選](/article/kodzure-yakiniku-stroller-tokyo-20)。
+- 煙・やけど・生焼け肉の食中毒・誤嚥を年齢別に防ぐ食べ方は[子連れ焼肉を安全に楽しむ完全ガイド](/article/kodzure-yakiniku-anzen-kanzen-guide)で徹底解説しています。
 
 ## よくある質問
 
 ### Q1. 焼肉は何歳から連れていけますか？
 
-A. 火傷リスクと煙の刺激を考えると、本格的に楽しめるのは3歳から。0-2歳は煙の少ない[しゃぶしゃぶ食べ放題](/article/shabushabu-yakiniku-buffet-3chain)や、無煙ロースター完備の焼肉キング・牛角の家族個室を選ぶのが現実的です。
+A. 火傷リスクと煙の刺激を考えると、本格的に楽しめるのは3歳から。0-2歳は煙の少ない[しゃぶしゃぶ食べ放題](/article/shabushabu-yakiniku-buffet-3chain)や、無煙ロースター完備の焼肉キング・牛角の家族個室を選ぶのが現実的です。年齢別の食べ方ややけど・生焼け対策は[子連れ焼肉を安全に楽しむ完全ガイド](/article/kodzure-yakiniku-anzen-kanzen-guide)も参考にしてください。
 
 ### Q2. キッズ料金は何歳まで無料？
 

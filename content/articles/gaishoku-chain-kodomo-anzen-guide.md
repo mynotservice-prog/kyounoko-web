@@ -107,7 +107,7 @@ youtubeSearch: 子連れ 外食 チェーン 安全 何歳から 取り分け �
 
 **しゃぶしゃぶ・鍋**：煙が出ず火傷リスクが低めで0-3歳に向く一方、自分で火を通すぶん「生焼け肉の食中毒」が最大の固有リスク。子ども用は中までしっかり加熱を。熱い鍋・湯気のやけど、餅・きのこ・しらたきの誤嚥にも注意。二色鍋でまろやかだし側を子ども用にすると取り分けがラク。寿司も食べ放題のゆず庵では「生もの（生魚・寿司ネタ）は何歳から」も加わる。座敷・掘りごたつが多いかごの屋では「段差からの転落・足元の熱い鍋への接近」「焼き魚の小骨」も固有の注意点。→ [しゃぶしゃぶ温野菜](/article/onyasai-kodzure-koryaku)／[しゃぶ葉](/article/shabuyou-kodzure-koryaku)／[ゆず庵（寿司＋しゃぶしゃぶ）](/article/yuzuan-kodzure-koryaku)／[かごの屋（座敷・掘りごたつ・御膳）](/article/kagonoya-kodzure-koryaku)／[しゃぶしゃぶチェーン子連れランキング5社](/article/shabushabu-chain-kodzure-ranking-2026-5sha)
 
-**焼肉（網焼き）**：自分で焼くぶん「生焼け肉の食中毒」が最大の固有リスク。食べ放題だと次々焼いて焼きが甘くなりがちなので、子ども用は中まで白く加熱を。高温の網・鉄板・トングのやけど、ホルモン・厚切り肉・脂身の誤嚥、たれの塩分にも注意。子どもは焼き場から離れた奥側に座らせ、生肉トングと取り箸を分けるのが鉄則。テーブルオーダー式の食べ放題なら、ビュッフェ台に取りに立って子から目を離す心配がなく子連れに安心です。→ [焼肉きんぐ（焼肉キング）](/article/yakiniku-king-kodzure-koryaku)／[牛角](/article/gyukaku-kodzure-koryaku)／[焼肉5チェーン子連れ比較ランキング](/article/yakiniku-5chain-kodomo-2026)
+**焼肉（網焼き）**：自分で焼くぶん「生焼け肉の食中毒」が最大の固有リスク。食べ放題だと次々焼いて焼きが甘くなりがちなので、子ども用は中まで白く加熱を。高温の網・鉄板・トングのやけど、ホルモン・厚切り肉・脂身の誤嚥、たれの塩分にも注意。子どもは焼き場から離れた奥側に座らせ、生肉トングと取り箸を分けるのが鉄則。テーブルオーダー式の食べ放題なら、ビュッフェ台に取りに立って子から目を離す心配がなく子連れに安心です。煙・やけど・生焼け・誤嚥を年齢別にまとめた[子連れ焼肉を安全に楽しむ完全ガイド](/article/kodzure-yakiniku-anzen-kanzen-guide)も用意しています。→ [焼肉きんぐ（焼肉キング）](/article/yakiniku-king-kodzure-koryaku)／[牛角](/article/gyukaku-kodzure-koryaku)／[焼肉5チェーン子連れ比較ランキング](/article/yakiniku-5chain-kodomo-2026)
 
 **カフェ・スイーツ・アイス**：もちもち系の窒息、固いコーン、糖分・冷たさに注意。量を決めて楽しむのが基本。→ [ミスタードーナツ](/article/misdo-kodzure-koryaku)／[サーティワン（31）](/article/baskin-robbins-31-kodzure-koryaku)／[カフェチェーン子連れランキング6社](/article/cafe-chain-kodzure-ranking-2026-6sha)／[かき氷・ソフトクリームチェーン比較](/article/kakigori-softcream-chain-kodzure-hikaku)
 
