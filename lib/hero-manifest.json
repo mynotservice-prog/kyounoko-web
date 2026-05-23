@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T03:16:49.484Z",
+  "generatedAt": "2026-05-23T05:17:13.888Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -426,6 +426,7 @@
     "xmas-market-kodzure": "/hero-ai/xmas-market-kodzure.webp",
     "xmas-present-nenrei-0-6": "/hero-ai/xmas-present-nenrei-0-6.webp",
     "yakiniku-5chain-kodomo-2026": "/hero-ai/yakiniku-5chain-kodomo-2026.webp",
+    "yakiniku-king-kodzure-koryaku": "/hero-ai/yakiniku-king-kodzure-koryaku.webp",
     "yasai-tabenai-3sai-taisaku": "/hero-ai/yasai-tabenai-3sai-taisaku.webp",
     "yayoiken-kodzure-koryaku": "/hero-ai/yayoiken-kodzure-koryaku.webp",
     "yayoiken-toribunke-real": "/hero-ai/yayoiken-toribunke-real.webp",
@@ -980,8 +981,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 445,
-    "articleHeroCount": 445,
+    "articleSlugs": 446,
+    "articleHeroCount": 446,
     "planIds": 530,
     "planHeroCount": 530
   }

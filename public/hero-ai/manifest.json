@@ -3534,5 +3534,13 @@
     "generatedAt": "2026-05-23T03:16:44.744Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "yakiniku-king-kodzure-koryaku": {
+    "slug": "yakiniku-king-kodzure-koryaku",
+    "ok": true,
+    "file": "/hero-ai/yakiniku-king-kodzure-koryaku.jpg",
+    "generatedAt": "2026-05-23T05:17:09.706Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }
