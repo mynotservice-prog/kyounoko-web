@@ -168,6 +168,7 @@ A. スタバ店内に授乳室はなく、おむつ替え台も全店配備で�
 
 - [コメダ珈琲店は子連れOK？ベビーカー・キッズメニュー・離乳食・モーニング【2026】](/article/komeda-kodzure-koryaku)
 - [タリーズコーヒーは子連れにラク？ミルク系の取り分け・はちみつ/カフェインの安全・ベビーカー入店【2026】](/article/tullys-coffee-kodzure-koryaku)
+- [上島珈琲店は子連れにラク？席間広めの落ち着き・黒糖ミルク珈琲のカフェイン注意・ベビーカー入店【2026】](/article/ueshima-coffee-kodzure-koryaku)
 - [カフェ3チェーン子連れ比較｜コメダ・上島珈琲・星乃8項目早見表](/article/cafe-3chain-kodzure-hikaku)
 - [武蔵野森珈琲は子連れOK？ベビーカー・キッズメニュー・モーニング攻略【2026】](/article/musashinomori-coffee-kodzure-koryaku)
 - [【2026年版】夏のドリンク子連れチェーン比較ランキング5社｜タピオカ・フラペチーノは何歳から？](/article/natsu-drink-chain-kodzure-ranking-2026-5sha)

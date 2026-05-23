@@ -173,6 +173,7 @@ A. 静かに座って一杯ならタリーズ、キッズドリンクとモバ�
 - [夏のドリンク子連れチェーンランキング5社｜タピオカ・フラペチーノは何歳から](/article/natsu-drink-chain-kodzure-ranking-2026-5sha)
 - [コメダ珈琲店 子連れ完全攻略｜モーニング・取り分け・離乳食](/article/komeda-kodzure-koryaku)
 - [スタバは子連れOK？ベビーカー入店・キッズドリンク・モバイルオーダー](/article/starbucks-kodzure-koryaku)
+- [上島珈琲店 子連れ完全攻略｜席間広めの落ち着き・黒糖ミルク珈琲のカフェイン注意](/article/ueshima-coffee-kodzure-koryaku)
 - [カフェ3チェーン子連れ比較｜コメダ・上島珈琲・星乃8項目早見表](/article/cafe-3chain-kodzure-hikaku)
 - [ベビーカーOKカフェ15選｜駅×店舗別の動線深掘り](/article/bebycar-ok-cafe-15)
 - [子連れモーニングカフェ10選](/article/kodzure-morning-cafe-10)

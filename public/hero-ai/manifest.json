@@ -3590,5 +3590,13 @@
     "generatedAt": "2026-05-23T17:18:10.597Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "ueshima-coffee-kodzure-koryaku": {
+    "slug": "ueshima-coffee-kodzure-koryaku",
+    "ok": true,
+    "file": "/hero-ai/ueshima-coffee-kodzure-koryaku.jpg",
+    "generatedAt": "2026-05-23T19:15:21.569Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }

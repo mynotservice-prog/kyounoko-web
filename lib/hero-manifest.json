@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T17:18:16.038Z",
+  "generatedAt": "2026-05-23T19:15:26.825Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -419,6 +419,7 @@
     "tullys-coffee-kodzure-koryaku": "/hero-ai/tullys-coffee-kodzure-koryaku.webp",
     "udon-chain-kodzure-4sha-hikaku": "/hero-ai/udon-chain-kodzure-4sha-hikaku.webp",
     "udon-soba-3chain-kodzure": "/hero-ai/udon-soba-3chain-kodzure.webp",
+    "ueshima-coffee-kodzure-koryaku": "/hero-ai/ueshima-coffee-kodzure-koryaku.webp",
     "undokai-bentou-mochimono-kamigata": "/hero-ai/undokai-bentou-mochimono-kamigata.webp",
     "undoukai-9gatsu-oya-junbi-list": "/hero-ai/undoukai-9gatsu-oya-junbi-list.webp",
     "undoukai-jitan-bento-3sai": "/hero-ai/undoukai-jitan-bento-3sai.webp",
@@ -987,8 +988,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 452,
-    "articleHeroCount": 452,
+    "articleSlugs": 453,
+    "articleHeroCount": 453,
     "planIds": 530,
     "planHeroCount": 530
   }
