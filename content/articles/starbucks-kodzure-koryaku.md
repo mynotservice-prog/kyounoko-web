@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-19'
-updatedAt: '2026-05-21'
+updatedAt: '2026-05-24'
 hero: /hero-ai/starbucks-kodzure-koryaku.jpg
 lede: >-
   「スタバって子連れで入っていいの？」「離乳食、持ち込んでも怒られない？」を1記事で解決。ロードサイド店・モール内店・駅前小型店ごとの動きやすさ、0-6歳に頼めるドリンク／フード、モバイルオーダーでの時短術まで、**4歳娘＆2歳息子と毎週スタバに通うながみー**が実体験ベースで整理しました。
@@ -167,6 +167,7 @@ A. スタバ店内に授乳室はなく、おむつ替え台も全店配備で�
 **カフェチェーン比較**
 
 - [コメダ珈琲店は子連れOK？ベビーカー・キッズメニュー・離乳食・モーニング【2026】](/article/komeda-kodzure-koryaku)
+- [タリーズコーヒーは子連れにラク？ミルク系の取り分け・はちみつ/カフェインの安全・ベビーカー入店【2026】](/article/tullys-coffee-kodzure-koryaku)
 - [カフェ3チェーン子連れ比較｜コメダ・上島珈琲・星乃8項目早見表](/article/cafe-3chain-kodzure-hikaku)
 - [武蔵野森珈琲は子連れOK？ベビーカー・キッズメニュー・モーニング攻略【2026】](/article/musashinomori-coffee-kodzure-koryaku)
 - [【2026年版】夏のドリンク子連れチェーン比較ランキング5社｜タピオカ・フラペチーノは何歳から？](/article/natsu-drink-chain-kodzure-ranking-2026-5sha)

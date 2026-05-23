@@ -3574,5 +3574,13 @@
     "generatedAt": "2026-05-23T13:16:45.255Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "tullys-coffee-kodzure-koryaku": {
+    "slug": "tullys-coffee-kodzure-koryaku",
+    "ok": true,
+    "file": "/hero-ai/tullys-coffee-kodzure-koryaku.jpg",
+    "generatedAt": "2026-05-23T15:16:03.954Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }
