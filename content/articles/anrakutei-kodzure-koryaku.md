@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: anrakutei-kodzure-koryaku
 title: 安楽亭は子連れにラク？自然肉・無添加で「子に食べさせる肉」を選びやすい・座敷でゆっくり・ランチのコスパ・成形肉と加熱の食中毒対策まで徹底解説【2026】
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: maido-ookini-shokudo-kodzure-koryaku
 title: まいどおおきに食堂は子連れにラク？カフェテリア式の取り分け・ごはん大中小・だし巻き卵は何歳から・焼き魚の小骨対策まで徹底解説【2026】
 metaDescription: >-

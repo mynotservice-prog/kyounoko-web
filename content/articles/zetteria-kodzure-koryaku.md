@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: zetteria-kodzure-koryaku
 title: ゼッテリア（旧ロッテリア）は子連れOK？おもちゃ付きキッズメニュー・絶品バーガー・ふるポテの分け合いを徹底解説【2026】
 metaDescription: >-

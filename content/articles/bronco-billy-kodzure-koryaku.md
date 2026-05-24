@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: bronco-billy-kodzure-koryaku
 title: ブロンコビリーは子連れOK？ベビーカー・キッズメニュー・サラダバー・炭火ハンバーグ取り分け【2026】
 metaDescription: >-

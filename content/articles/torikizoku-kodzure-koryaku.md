@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: torikizoku-kodzure-koryaku
 title: 鳥貴族は子連れOK？ベビーカー・キッズ向け・座敷席・早めディナー活用【2026】
 metaDescription: >-

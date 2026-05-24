@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: origin-bento-kodzure-koryaku
 title: オリジン弁当は子連れにラク？量り売り惣菜の取り分け・キッチンオリジンのイートイン・揚げ物は何歳から・持ち歩きの食中毒対策まで徹底解説【2026】
 metaDescription: >-

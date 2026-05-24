@@ -86,7 +86,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   } catch {}
 
+  // AdSense審査対策（2026-05）: noindex 記事はsitemapから除外する
+  const noindexSlugs = new Set<string>();
   for (const article of getAllFileArticles()) {
+    if (article.noindex) {
+      noindexSlugs.add(article.slug);
+      articleUrlMap.delete(article.slug);
+      continue;
+    }
     if (articleUrlMap.has(article.slug)) continue;
     articleUrlMap.set(article.slug, {
       url: `${BASE}/article/${article.slug}`,
@@ -95,6 +102,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
     });
   }
+  // microCMS側で先に入っていた noindex slug も除去
+  for (const slug of noindexSlugs) articleUrlMap.delete(slug);
 
   const articlePages: MetadataRoute.Sitemap = Array.from(articleUrlMap.values());
 

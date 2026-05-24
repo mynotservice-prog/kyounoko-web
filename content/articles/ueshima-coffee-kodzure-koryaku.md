@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: ueshima-coffee-kodzure-koryaku
 title: 上島珈琲店は子連れにラク？席間広めの落ち着き・黒糖ミルク珈琲のカフェイン注意・ベビーカー入店まで徹底解説【2026】
 metaDescription: >-

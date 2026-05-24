@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: ikea-restaurant-kodzure-koryaku
 title: IKEAレストランは子連れ最強？ベビーカー・キッズメニュー・離乳食無料・スモーランド預け【0-6歳】
 metaDescription: >-

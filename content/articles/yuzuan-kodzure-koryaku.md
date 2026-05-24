@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: yuzuan-kodzure-koryaku
 title: ゆず庵は子連れにラク？寿司＋しゃぶしゃぶ食べ放題の子の好み吸収力・幼児無料・生ものは何歳から・生焼け肉の食中毒対策まで徹底解説【2026】
 metaDescription: >-

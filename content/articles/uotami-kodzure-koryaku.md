@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: uotami-kodzure-koryaku
 title: 魚民は子連れOK？ランチタイム・個室・キッズメニュー・座敷席【2026】
 metaDescription: 魚民は子連れで入れる？モンテローザ系居酒屋のランチ営業店、個室・座敷席、キッズメニュー、家族の集まりやランチ会の使い方を0-6歳家族目線で解説。

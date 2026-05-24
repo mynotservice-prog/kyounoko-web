@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: musashinomori-coffee-kodzure-koryaku
 title: むさしの森珈琲は子連れOK？ベビーカー・パンケーキ・キッズメニュー・モーニング【2026】
 metaDescription: むさしの森珈琲はベビーカーで入れる？すかいらーくのカフェ業態、ふわふわパンケーキ、キッズメニュー、ベビーチェア、モーニングまで0-6歳家族目線で解説。

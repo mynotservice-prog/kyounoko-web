@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: yumean-kodzure-koryaku
 title: 夢庵は子連れOK？ベビーカー・座敷席・キッズメニュー・離乳食・和食ファミレス【2026】
 metaDescription: >-

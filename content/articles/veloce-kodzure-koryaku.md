@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: veloce-kodzure-koryaku
 title: ベローチェは子連れOK？ベビーカー・キッズメニュー・離乳食・モーニング・席選び【2026】
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kagonoya-kodzure-koryaku
 title: かごの屋は子連れにラク？座敷・掘りごたつで0-1歳を下ろせる和食しゃぶしゃぶ・御膳の取り分け・段差の安全対策まで徹底解説【2026】
 metaDescription: >-

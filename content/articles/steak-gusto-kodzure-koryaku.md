@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: steak-gusto-kodzure-koryaku
 title: ステーキガストは子連れOK？ベビーカー・サラダバー・キッズメニュー・離乳食【2026】
 metaDescription: >-

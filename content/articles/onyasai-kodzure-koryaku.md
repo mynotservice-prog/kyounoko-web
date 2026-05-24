@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: onyasai-kodzure-koryaku
 title: しゃぶしゃぶ温野菜は子連れにラク？二色鍋で薄味だし取り分け・未就学児無料・生焼け肉の食中毒対策まで徹底解説【2026】
 metaDescription: >-

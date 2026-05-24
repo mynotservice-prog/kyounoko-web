@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: freshness-burger-kodzure-koryaku
 title: フレッシュネスバーガーは子連れOK？4種のキッズセット・絵本コラボのおまけ・落ち着いた雰囲気を徹底解説【2026】
 metaDescription: >-
