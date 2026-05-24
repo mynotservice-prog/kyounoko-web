@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-24T01:16:53.117Z",
+  "generatedAt": "2026-05-24T03:14:00.913Z",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "1-2sai-oshaberi-sukunai-asobi": "/hero-ai/1-2sai-oshaberi-sukunai-asobi.webp",
@@ -79,6 +79,7 @@
     "dennys-arerugen-real": "/hero-ai/dennys-arerugen-real.webp",
     "denshi-mosquito-4brand-anzen": "/hero-ai/denshi-mosquito-4brand-anzen.webp",
     "dessert-kodomo-tezukuri-5": "/hero-ai/dessert-kodomo-tezukuri-5.webp",
+    "doutor-kodzure-koryaku": "/hero-ai/doutor-kodzure-koryaku.webp",
     "ehon-yomikikase-kotsu": "/hero-ai/ehon-yomikikase-kotsu.webp",
     "eigo-asobi-ie-de-4-6sai": "/hero-ai/eigo-asobi-ie-de-4-6sai.webp",
     "eigo-kyouzai-3brand-2-6sai": "/hero-ai/eigo-kyouzai-3brand-2-6sai.webp",
@@ -991,8 +992,8 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 456,
-    "articleHeroCount": 456,
+    "articleSlugs": 457,
+    "articleHeroCount": 457,
     "planIds": 530,
     "planHeroCount": 530
   }

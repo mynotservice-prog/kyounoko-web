@@ -109,6 +109,7 @@ legacyHero: /hero-ai/cat-home-cozy-01.webp
 - [タリーズコーヒーの子連れ攻略｜ミルク系・はちみつ/カフェインの安全](/article/tullys-coffee-kodzure-koryaku)
 - [上島珈琲店の子連れ攻略｜席間広めの落ち着き・黒糖ミルク珈琲のカフェイン注意](/article/ueshima-coffee-kodzure-koryaku)
 - [サンマルクカフェの子連れ攻略｜焼きたてチョコクロのやけど注意・キッズセット](/article/sanmarc-cafe-kodzure-koryaku)
+- [ドトールコーヒーの子連れ攻略｜価格最強だが席間タイト・ミラノサンドの取り分け・紅茶のカフェイン注意](/article/doutor-kodzure-koryaku)
 - [カフェチェーン子連れランキング6社](/article/cafe-chain-kodzure-ranking-2026-6sha)
 - [子連れカフェを安全に楽しむ完全ガイド｜カフェイン・はちみつ・砂糖・氷やタピオカの誤嚥・やけど](/article/kodzure-cafe-anzen-kanzen-guide)
 - [子連れモーニング10選](/article/kodzure-morning-cafe-10)

@@ -156,6 +156,7 @@ youtubeSearch: 子連れ カフェ 何歳から カフェイン はちみつ フ
 - **モバイルオーダーでサッと**：[スタバの子連れ攻略](/article/starbucks-kodzure-koryaku)。並ばず受け取れるとぐずり対策に有効。
 - **ミルク系を頼みたい**：[タリーズコーヒーの子連れ攻略](/article/tullys-coffee-kodzure-koryaku)（はちみつ・カフェインの注意も）。
 - **おやつ（焼きたてパン）で子が喜ぶ店**：[サンマルクカフェの子連れ攻略](/article/sanmarc-cafe-kodzure-koryaku)（焼きたてチョコクロの中のチョコが熱い＝やけど注意も）。
+- **安く・短時間・テイクアウトで済ませたい**：[ドトールコーヒーの子連れ攻略](/article/doutor-kodzure-koryaku)（席間タイトの攻略・ミラノサンドの熱さ・ロイヤルミルクティー＝紅茶のカフェイン注意も）。
 - **比較して決めたい**：[カフェチェーン子連れランキング6社](/article/cafe-chain-kodzure-ranking-2026-6sha)、[カフェ3チェーン子連れ比較（コメダ・上島・星乃）](/article/cafe-3chain-kodzure-hikaku)。
 
 お店全般の選び方は[子連れレストランの選び方完全ガイド](/article/kodzure-restaurant-erabikata-kanzen-guide)もあわせてどうぞ。

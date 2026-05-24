@@ -170,6 +170,7 @@ A. スタバ店内に授乳室はなく、おむつ替え台も全店配備で�
 - [タリーズコーヒーは子連れにラク？ミルク系の取り分け・はちみつ/カフェインの安全・ベビーカー入店【2026】](/article/tullys-coffee-kodzure-koryaku)
 - [上島珈琲店は子連れにラク？席間広めの落ち着き・黒糖ミルク珈琲のカフェイン注意・ベビーカー入店【2026】](/article/ueshima-coffee-kodzure-koryaku)
 - [サンマルクカフェは子連れにラク？焼きたてチョコクロのやけど注意・キッズセット・ベビーカー入店【2026】](/article/sanmarc-cafe-kodzure-koryaku)
+- [ドトールコーヒーは子連れにラク？価格最強だが席間タイト・ミラノサンドの取り分け・紅茶のカフェイン注意【2026】](/article/doutor-kodzure-koryaku)
 - [カフェ3チェーン子連れ比較｜コメダ・上島珈琲・星乃8項目早見表](/article/cafe-3chain-kodzure-hikaku)
 - [子連れカフェを安全に楽しむ完全ガイド｜カフェイン・はちみつ・砂糖/黒糖・氷やタピオカの誤嚥・熱いドリンクのやけど](/article/kodzure-cafe-anzen-kanzen-guide)
 - [武蔵野森珈琲は子連れOK？ベビーカー・キッズメニュー・モーニング攻略【2026】](/article/musashinomori-coffee-kodzure-koryaku)

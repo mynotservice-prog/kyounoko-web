@@ -188,6 +188,7 @@ A. チョコクロでの"子の食いつき"とキッズセット狙いならサ
 - [スタバは子連れOK？ベビーカー入店・キッズドリンク・モバイルオーダー](/article/starbucks-kodzure-koryaku)
 - [タリーズコーヒー 子連れ完全攻略｜ミルク系の取り分け・はちみつ/カフェインの安全](/article/tullys-coffee-kodzure-koryaku)
 - [上島珈琲店は子連れにラク？席間広め・黒糖ミルク珈琲のカフェイン注意](/article/ueshima-coffee-kodzure-koryaku)
+- [ドトールコーヒーは子連れにラク？価格最強だが席間タイト・ミラノサンドの取り分け・紅茶のカフェイン注意](/article/doutor-kodzure-koryaku)
 - [子連れカフェを安全に楽しむ完全ガイド｜カフェイン・はちみつ・砂糖/黒糖・氷やタピオカの誤嚥・やけど](/article/kodzure-cafe-anzen-kanzen-guide)
 - [ベビーカーOKカフェ15選｜駅×店舗別の動線深掘り](/article/bebycar-ok-cafe-15)
 - [子連れモーニングカフェ10選](/article/kodzure-morning-cafe-10)
