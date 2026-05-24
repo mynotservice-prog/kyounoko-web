@@ -1609,3 +1609,24 @@
   - **🎯 commit前の品質チェック定型化**: tsc --noEmit ＋ 内部リンク実在 for ループ ＋ 逆リンク重複 grep -c ＋ frontmatter必須キー grep ＋ 非日本語混入 grep -cP（新記事＋逆リンクファイル全部）＋ かかりつけ医/PRBadge/著者明示 grep をセットで実施。今サイクルも全てクリア。
   - **画像 backlog はゼロのまま**: Cloudflare Workers AI が #25〜#61 と37サイクル連続安定（429なし）。新作時は都度 hero 生成で足りる。429再発時のみ image_generation_pending に積んで本文優先 commit。
   - **⚠️ 旅行終了（5/23土朝）に到達済み・帰宅済みの可能性大**: 本サイクル(#61)は 2026-05-24 12:14 JST 実行。ながみーさん帰宅後の最大ROIタスクは ①Search Console URL検査リクエスト（**#25〜#61の新記事を優先＝#61 doutor-kodzure-koryaku（ドトール単独＝カフェ6/6コンプ）が最新／逆リンク追記した cafe-chain-kodzure-ranking-2026-6sha（カフェランキング）・komeda・starbucks・tullys・ueshima・sanmarc（兄弟単独5社）・kodzure-cafe-anzen-kanzen-guide（カフェ安全ガイド）も再クロール対象＝カフェクラスタが コメダ＋スタバ＋タリーズ＋上島＋サンマルク＋ドトールの6単独＋ランキング＋3社比較＋安全ガイドで完全に束ねられた**） ②Cloudflare Workers の挙動継続確認（Free安定なら Paid 切替不要） ③IndexNow キーファイル本番反映。
+
+---
+
+## 2026-05-25 06:03 JST — IndexNow 週次送信 (kyounoko-indexnow-weekly)
+
+- **submitted_count**: 1,089 URLs（queue 生成は sitemap.xml から 1,090 URL 取得 → 送信時に無効な 1 件をスキップして 1,089 件を1バッチ送信）
+- **queue 生成コマンド**: `node scripts/indexnow-build-queue.mjs --max=9000 --kind=all`（✅ 素の `node` で正常動作）
+  - 前回（05-20）の ERR_MODULE_NOT_FOUND 罠は解消済み。現行スクリプトは本番 `https://kyounoko.jp/sitemap.xml` を直接フェッチして URL を取得する TS非依存実装になっており、`npx tsx` は不要になった。SKILL.md の手順（`node` 実行）通りで問題なし。
+- **送信結果**:
+  - `https://api.indexnow.org/IndexNow` (Bing): **status 200** ✅ — 前回の 403 (SiteVerificationNotCompleted) から復旧。
+  - `https://yandex.com/indexnow` (Yandex): **status 202** ✅ — 受理（先週に続き安定）。
+- **bing_status**: 200 OK / **yandex_status**: 202 Accepted / **失敗**: なし
+- **認証キー検証**: `https://kyounoko.jp/c68e60e8f4b025a51c97f20076ce5c09.txt` が **HTTP 200**（本番デプロイ済み・公開確認）。前回の 404（未デプロイ）が解消されたため Bing 側の SiteVerification が完了し、200 受理に至った。**ながみーさんの手動対応（キーファイルの git add → push → Vercel デプロイ）が反映済みと判断。Bing/Yandex 両方カバーの定常運用に復帰**。
+- **ログ反映**: `docs/indexnow-submitted.log` に 1,089 URL を追記、`docs/indexnow-queue.txt` を空にクリア。
+- **失敗時対処の判断ログ**:
+  - 403／404／429／ネットワークエラーいずれも発生せず。再試行（SKILL.md のネットワークエラー時1回再試行）は不要。
+  - 429 (TooManyRequests) なし（1,089 URL / 上限10,000、max=9000 マージン内）。
+- **次サイクルへの引き継ぎ**:
+  1. **Bing 認証は復旧完了**。キーファイルが本番 200 を返す限り、今後は毎週 Bing(200)+Yandex(202) の両受理が継続する想定。特段の手動対応は不要。
+  2. **submitted_count が前回 2,321 → 今回 1,089 に減少**したのは、queue 生成方式の違い（前回 tsx 経由で spots/articles/plans を全列挙＝2,321／今回は sitemap.xml ベース＝1,090）による。sitemap が正典なので 1,090 が現行サイトの実 URL 数。意図的な縮小ではなく実態反映。
+  3. Google は IndexNow 非対応のため引き続き sitemap でカバー（本タスク対象外）。
