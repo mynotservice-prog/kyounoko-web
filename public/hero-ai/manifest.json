@@ -3614,5 +3614,13 @@
     "generatedAt": "2026-05-23T23:14:23.095Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "kodzure-udon-anzen-kanzen-guide": {
+    "slug": "kodzure-udon-anzen-kanzen-guide",
+    "ok": true,
+    "file": "/hero-ai/kodzure-udon-anzen-kanzen-guide.jpg",
+    "generatedAt": "2026-05-24T01:16:47.263Z",
+    "model": "flux-1-schnell",
+    "steps": 8
   }
 }

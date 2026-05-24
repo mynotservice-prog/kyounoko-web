@@ -264,6 +264,7 @@ A. 一般にうどんの方が薄味で、太くてやわらかい麺のぶん�
 **業態横断の安全・選び方**
 
 - [外食チェーンで子どもの塩分・やけど・誤嚥を防ぐ完全ガイド](/article/gaishoku-chain-kodomo-anzen-guide)
+- [子連れうどんを安全に楽しむ完全ガイド](/article/kodzure-udon-anzen-kanzen-guide)
 - [子連れしゃぶしゃぶ・鍋を安全に楽しむ完全ガイド](/article/kodzure-shabushabu-nabe-anzen-kanzen-guide)
 - [子連れ焼肉を安全に楽しむ完全ガイド](/article/kodzure-yakiniku-anzen-kanzen-guide)
 - [子連れレストランの選び方完全ガイド](/article/kodzure-restaurant-erabikata-kanzen-guide)

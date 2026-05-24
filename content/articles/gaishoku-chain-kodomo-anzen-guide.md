@@ -103,6 +103,8 @@ youtubeSearch: 子連れ 外食 チェーン 安全 何歳から 取り分け �
 
 **ラーメン・中華麺**：熱々スープ・高塩分・長い麺の“三重苦”。薄めて・冷まして・短く切って・少量ずつ。ちゃんぽんは野菜ごと取り分けられて栄養面◎だが、皿うどんの固い揚げ麺は口内ケガ・窒息に注意。コーン・うずら卵・餃子の熱い肉汁などトッピングの危険も加わる。やけど・高塩分・長い麺の誤嚥・トッピング・アレルギーを年齢別にまとめた[子連れラーメンを安全に楽しむ完全ガイド](/article/kodzure-ramen-anzen-kanzen-guide)も用意しています。→ [幸楽苑](/article/kourakuen-kodzure-koryaku)／[リンガーハット](/article/ringer-hut-kodzure-koryaku)／[餃子の王将](/article/ohsho-kodzure-koryaku)／[ラーメンチェーン子連れランキング5社](/article/ramen-chain-kodzure-ranking-2026-5sha)／[うどんチェーン4社比較](/article/udon-chain-kodzure-4sha-hikaku)
 
+**うどん・そば**：薄味でやわらかく外食デビューに向く一方、長く太くつるっとした麺は“噛まずに飲み込めてしまう”ため誤嚥に注意。1〜2cmに切って、すすらせず、つゆは薄めて飲み干させない。釜揚げの熱湯・熱いつゆ・天ぷらのやけど、釜玉・月見の生卵（低年齢は避ける）、天つゆ・天かす・薬味の塩分も論点。丸亀・はなまるなどセルフ店は熱いトレーを自分で運ぶ段取り（2人体制）が要ります。そばを扱う店は同じ茹で湯のコンタミに注意。長い麺の誤嚥・やけど・塩分・天ぷら・生卵・アレルギーを年齢別にまとめた[子連れうどんを安全に楽しむ完全ガイド](/article/kodzure-udon-anzen-kanzen-guide)も用意しています。→ [丸亀製麺](/article/marugame-kodzure-koryaku)／[はなまるうどん](/article/hanamaru-udon-kodzure-koryaku)／[うどんチェーン4社比較](/article/udon-chain-kodzure-4sha-hikaku)／[うどん・そば3チェーン子連れ比較](/article/udon-soba-3chain-kodzure)
+
 **ファミレス・牛丼・定食・和食**：取り分けの自由度が高い分、味の濃さに注意。和定食は焼き魚の小骨も要チェック。座敷やキッズチェアの有無も事前確認を。→ [ファミレス子連れランキング10選](/article/famires-kodzure-ranking-2026-10sen)／[牛丼チェーン子連れランキング4社](/article/gyudon-chain-kodzure-ranking-2026-4sha)／[定食チェーン子連れランキング4社](/article/teishoku-chain-kodzure-ranking-4sha)／[まいどおおきに食堂](/article/maido-ookini-shokudo-kodzure-koryaku)
 
 **しゃぶしゃぶ・鍋**：煙が出ず火傷リスクが低めで0-3歳に向く一方、自分で火を通すぶん「生焼け肉の食中毒」が最大の固有リスク。子ども用は中までしっかり加熱を。熱い鍋・湯気のやけど、餅・きのこ・しらたきの誤嚥にも注意。二色鍋でまろやかだし側を子ども用にすると取り分けがラク。寿司も食べ放題のゆず庵では「生もの（生魚・寿司ネタ）は何歳から」も加わる。座敷・掘りごたつが多いかごの屋では「段差からの転落・足元の熱い鍋への接近」「焼き魚の小骨」も固有の注意点。生焼け・やけど・餅やしらたきの誤嚥・座敷の段差を年齢別にまとめた[子連れしゃぶしゃぶ・鍋を安全に楽しむ完全ガイド](/article/kodzure-shabushabu-nabe-anzen-kanzen-guide)も用意しています。→ [しゃぶしゃぶ温野菜](/article/onyasai-kodzure-koryaku)／[しゃぶ葉](/article/shabuyou-kodzure-koryaku)／[ゆず庵（寿司＋しゃぶしゃぶ）](/article/yuzuan-kodzure-koryaku)／[かごの屋（座敷・掘りごたつ・御膳）](/article/kagonoya-kodzure-koryaku)／[しゃぶしゃぶチェーン子連れランキング5社](/article/shabushabu-chain-kodzure-ranking-2026-5sha)
@@ -218,6 +220,7 @@ A. **本ガイドの「業態別・子連れ安全メモ」から各お店の攻
 
 - [子連れカフェを安全に楽しむ完全ガイド（カフェイン・はちみつ・砂糖/黒糖・氷やタピオカの誤嚥・熱いドリンクのやけど）](/article/kodzure-cafe-anzen-kanzen-guide)
 - [子連れラーメンを安全に楽しむ完全ガイド（やけど・高塩分・長い麺の誤嚥・トッピング・アレルギー）](/article/kodzure-ramen-anzen-kanzen-guide)
+- [子連れうどんを安全に楽しむ完全ガイド（長い麺の誤嚥・釜揚げと熱いつゆのやけど・つゆの塩分・天ぷら・釜玉の生卵）](/article/kodzure-udon-anzen-kanzen-guide)
 - [子連れしゃぶしゃぶ・鍋を安全に楽しむ完全ガイド（生焼け・やけど・誤嚥・座敷の段差）](/article/kodzure-shabushabu-nabe-anzen-kanzen-guide)
 - [子連れ焼肉を安全に楽しむ完全ガイド（煙・やけど・生焼け・誤嚥）](/article/kodzure-yakiniku-anzen-kanzen-guide)
 
