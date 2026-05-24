@@ -205,5 +205,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/data/wards`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.75 },
   ];
 
-  return [...staticPages, ...categoryPages, ...articlePages, ...tagPages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...kanagawaStationPages, ...saichiStationPages, ...lineIndex, ...linePages, ...stationConditionPages, ...dataPages];
+  // AdSense審査対策（2026-05）: 駅×条件ページ（stationConditionPages）は全件noindexにしたため
+  // sitemapからも除外する。noindexページをsitemapに残すと「クロール済み未登録」やテンプレ薄ページ
+  // 判定の温床になるため。AdSense承認後に再追加予定。
+  // 旧: ...linePages, ...stationConditionPages, ...dataPages
+  void stationConditionPages; // 生成ロジックは保持（再開を容易にするため）
+  return [...staticPages, ...categoryPages, ...articlePages, ...tagPages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...kanagawaStationPages, ...saichiStationPages, ...lineIndex, ...linePages, ...dataPages];
 }

@@ -107,21 +107,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? `${stationName}駅周辺で${cond.metaPart}を厳選。${cond.description}${wardName}の${cond.label}を探すならまずここから。`
       : `${stationName}駅周辺で${cond.metaPart}の子連れランチ・カフェを厳選。${cond.description}${wardName}で${cond.label}の選び方に迷ったらまずここから。`;
 
-  // 該当アイテム数で薄いコンテンツを判定 → noindex
-  let matchedCount = 0;
-  if (kind === 'restaurant') {
-    const data = getStationWithChains(slug);
-    const chainsBase = data?.chains ?? [];
-    const indiesBase = getIndieRestaurantsByStation(slug);
-    const matchedChains = filterChainsByCondition(chainsBase, condition as StationConditionSlug);
-    const matchedIndies = filterIndiesByCondition(indiesBase, condition as StationConditionSlug);
-    matchedCount = matchedChains.length + matchedIndies.length;
-  } else {
-    const { all } = getSpotsForStation(slug);
-    matchedCount = filterSpotsByCondition(all, condition as StationConditionSlug).length;
-  }
-  // 3件未満は質が薄いので noindex（クロール済み未登録回避）
-  const shouldNoindex = matchedCount < 3;
+  // AdSense審査対策（2026-05）: 駅×条件ページはテンプレ薄ページ判定を避けるため
+  // 全件 noindex にする。AdSense承認後に段階的に再開予定（>=3件のみ index 等）。
+  // 元の閾値ロジックは下記コメントを参照のこと。
+  //   let matchedCount = ...（restaurant: chains+indies / spot: spots）
+  //   const shouldNoindex = matchedCount < 3;
+  const shouldNoindex = true;
 
   return {
     title,
