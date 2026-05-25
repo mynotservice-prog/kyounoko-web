@@ -25,6 +25,8 @@ import { getMonthlyPickedItems } from '@/lib/items-catalog';
 import { HeroCTA } from '@/components/top/HeroCTA';
 import { PersonalizedHint } from '@/components/common/PersonalizedHint';
 import { TodayHighlight } from '@/components/top/TodayHighlight';
+import { PopularRanking } from '@/components/top/PopularRanking';
+import { POPULAR_ARTICLE_SLUGS } from '@/lib/popular-articles';
 
 export const revalidate = 3600;
 
@@ -71,6 +73,19 @@ export default function HomePage() {
     .filter((a) => a.category === 'today-taberu' && a.hero)
     .slice(0, 40)
     .map(toPick);
+
+  // よく読まれている記事ランキング（Search Console 実データ順）
+  const articleBySlug = new Map(allArticles.map((a) => [a.slug, a]));
+  const popularItems = POPULAR_ARTICLE_SLUGS
+    .map((slug) => articleBySlug.get(slug))
+    .filter((a): a is NonNullable<typeof a> => Boolean(a))
+    .map((a, i) => ({
+      rank: i + 1,
+      title: a.title,
+      href: `/article/${a.slug}`,
+      hero: a.hero,
+      categoryName: a.categoryName,
+    }));
 
   return (
     <>
@@ -174,6 +189,13 @@ export default function HomePage() {
           今日のきょうのこ — 日替わりで変わる「毎日来たい」再訪セクション
           ====================================================================== */}
       <TodayHighlight asobiPool={asobiPool} gohanPool={gohanPool} />
+
+      {/* ======================================================================
+          よく読まれている記事ランキング（Search Console 実データ・回遊強化）
+          ====================================================================== */}
+      <div style={{ marginTop: 8 }}>
+        <PopularRanking items={popularItems} />
+      </div>
 
       {/* ======================================================================
           駅・路線から探す（東京23区+関西主要駅 × 40路線対応）
