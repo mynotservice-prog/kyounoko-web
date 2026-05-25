@@ -34,6 +34,12 @@ export const AFFILIATE_TARGET_SLUGS = [
   'shussan-junbi-rakuten-0sai',
   // もしも 提携（絵本・写真・英語・知育サブスク補強）
   'ehon-yomikikase-kotsu',
+  // 2026-05 追加：知育玩具・プレゼント系（トイサブ等サブスクの高単価導線を併載）
+  'chiiku-toys-2-3sai-5sen',
+  'omocha-year-by-age',
+  'chiiku-asobi-ie-de-10',
+  'xmas-present-nenrei-0-6',
+  'christmas-present-kodomo-nenrei-betsu',
 ] as const;
 
 export type AffiliateTargetSlug = (typeof AFFILIATE_TARGET_SLUGS)[number];
@@ -287,6 +293,12 @@ const A8_PROGRAMS_2026_05: AffiliateProduct[] = expand([
       'eigo-kyouzai-3brand-2-6sai',
       'chiiku-toys-3brand-2-4sai',
       '3sai-hiragana-yomenai-ouchi-gakushuu',
+      // 2026-05 追加：知育玩具・プレゼント記事にも高単価教材の導線を併載
+      'chiiku-toys-2-3sai-5sen',
+      'omocha-year-by-age',
+      'chiiku-asobi-ie-de-10',
+      'xmas-present-nenrei-0-6',
+      'christmas-present-kodomo-nenrei-betsu',
     ],
   },
   // ---- ② ワンダーボックス（STEAM通信教材 / EPC 28.58） ----
@@ -421,6 +433,12 @@ const MOSHIMO_PROGRAMS_2026_05: AffiliateProduct[] = expand([
       'chiiku-subsc-3sha-2026-comparison',
       'chiiku-toys-3brand-2-4sai',
       'shussan-junbi-rakuten-0sai',
+      // 2026-05 追加：知育玩具・プレゼント記事にも高単価サブスク導線を併載
+      'chiiku-toys-2-3sai-5sen',
+      'omocha-year-by-age',
+      'chiiku-asobi-ie-de-10',
+      'xmas-present-nenrei-0-6',
+      'christmas-present-kodomo-nenrei-betsu',
     ],
   },
 ]);
