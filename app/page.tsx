@@ -24,6 +24,7 @@ import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
 import { getMonthlyPickedItems } from '@/lib/items-catalog';
 import { HeroCTA } from '@/components/top/HeroCTA';
 import { PersonalizedHint } from '@/components/common/PersonalizedHint';
+import { TodayHighlight } from '@/components/top/TodayHighlight';
 
 export const revalidate = 3600;
 
@@ -51,8 +52,25 @@ export default function HomePage() {
   const dateLine = formatJaLong(now);
   const monthEn = monthNameEn(now);
 
-  const latestArticles = getAllFileArticles().slice(0, 4);
+  const allArticles = getAllFileArticles();
+  const latestArticles = allArticles.slice(0, 4);
   const monthlyPicks = getMonthlyPickedItems(month, 6);
+
+  // 「今日のきょうのこ」用の日替わり候補プール（画像のある記事に限定）
+  const toPick = (a: (typeof allArticles)[number]) => ({
+    title: a.title,
+    href: `/article/${a.slug}`,
+    hero: a.hero,
+    categoryName: a.categoryName,
+  });
+  const asobiPool = allArticles
+    .filter((a) => (a.category === 'today-nani' || a.category === 'gyouji') && a.hero)
+    .slice(0, 40)
+    .map(toPick);
+  const gohanPool = allArticles
+    .filter((a) => a.category === 'today-taberu' && a.hero)
+    .slice(0, 40)
+    .map(toPick);
 
   return (
     <>
@@ -151,6 +169,11 @@ export default function HomePage() {
           <TodayFinder />
         </div>
       </div>
+
+      {/* ======================================================================
+          今日のきょうのこ — 日替わりで変わる「毎日来たい」再訪セクション
+          ====================================================================== */}
+      <TodayHighlight asobiPool={asobiPool} gohanPool={gohanPool} />
 
       {/* ======================================================================
           駅・路線から探す（東京23区+関西主要駅 × 40路線対応）
