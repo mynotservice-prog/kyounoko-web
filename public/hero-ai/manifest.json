@@ -3630,5 +3630,69 @@
     "generatedAt": "2026-05-24T03:13:56.872Z",
     "model": "flux-1-schnell",
     "steps": 8
+  },
+  "hitomishiri-atooi-itsumade": {
+    "slug": "hitomishiri-atooi-itsumade",
+    "ok": true,
+    "file": "/hero-ai/hitomishiri-atooi-itsumade.jpg",
+    "generatedAt": "2026-05-26T04:42:21.287Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "jiyukenkyu-kit-osusume-2026": {
+    "slug": "jiyukenkyu-kit-osusume-2026",
+    "ok": true,
+    "file": "/hero-ai/jiyukenkyu-kit-osusume-2026.jpg",
+    "generatedAt": "2026-05-26T04:42:22.216Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "katei-pool-osusume-ranking-2026": {
+    "slug": "katei-pool-osusume-ranking-2026",
+    "ok": true,
+    "file": "/hero-ai/katei-pool-osusume-ranking-2026.jpg",
+    "generatedAt": "2026-05-26T04:42:23.525Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-handy-fan-neck-cooler-2026": {
+    "slug": "kodomo-handy-fan-neck-cooler-2026",
+    "ok": true,
+    "file": "/hero-ai/kodomo-handy-fan-neck-cooler-2026.jpg",
+    "generatedAt": "2026-05-26T04:42:24.761Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodzure-outdoor-leisure-goods-2026": {
+    "slug": "kodzure-outdoor-leisure-goods-2026",
+    "ok": true,
+    "file": "/hero-ai/kodzure-outdoor-leisure-goods-2026.jpg",
+    "generatedAt": "2026-05-26T04:42:26.662Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "mizuasobi-omocha-osusume-2026": {
+    "slug": "mizuasobi-omocha-osusume-2026",
+    "ok": true,
+    "file": "/hero-ai/mizuasobi-omocha-osusume-2026.jpg",
+    "generatedAt": "2026-05-26T04:42:27.163Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "sotsunyu-danyu-susumekata": {
+    "slug": "sotsunyu-danyu-susumekata",
+    "ok": true,
+    "file": "/hero-ai/sotsunyu-danyu-susumekata.jpg",
+    "generatedAt": "2026-05-26T04:42:29.201Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "yubishaburi-itsumade-yamesaseru": {
+    "slug": "yubishaburi-itsumade-yamesaseru",
+    "ok": true,
+    "file": "/hero-ai/yubishaburi-itsumade-yamesaseru.jpg",
+    "generatedAt": "2026-05-26T04:42:29.530Z",
+    "model": "flux-1-schnell",
+    "steps": 4
   }
 }

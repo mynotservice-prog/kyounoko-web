@@ -6,8 +6,8 @@ metaDescription: >-
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-05-25T00:00:00.000Z
-updatedAt: '2026-05-25'
-hero: /hero/summer-water-02.webp
+updatedAt: '2026-05-26'
+hero: /hero-ai/kodomo-handy-fan-neck-cooler-2026.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +22,7 @@ quickInfo:
 lede: >-
   猛暑が続く夏、ベビーカーや抱っこ紐の中は地面の照り返しで大人より数℃高くなると言われます。子供の熱中症対策に、ハンディファン・ネッククーラー・ベビーカー用ファンは強い味方。ただし羽根の指はさみ・低温やけど・落下などのリスクもあります。本記事は安全設計を最優先に、年齢・使うシーン別のおすすめタイプと選び方を整理しました。
 seoRelated: kodomo-netsuchusho-3sain-real-2026
+legacyHero: /hero/summer-water-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／東京23区在住）](/authors/nagamy)・最終更新 2026年5月

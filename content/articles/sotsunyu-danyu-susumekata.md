@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-25T00:00:00.000Z
-updatedAt: '2026-05-25'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-05-26'
+hero: /hero-ai/sotsunyu-danyu-susumekata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +22,7 @@ quickInfo:
 lede: >-
   「卒乳・断乳はいつ、どう進めればいい？」は多くの家庭が悩むテーマです。本記事は卒乳と断乳の違いから、始める時期の目安、1〜2週間前からの準備、授乳回数の減らし方、夜間断乳のコツ、張り・しこりなどおっぱいトラブルの対処までを、無理のない進め方として整理しました。焦らず、親子のペースで進めるのが一番です。
 seoRelated: yonaki-taisaku-0-1sai
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

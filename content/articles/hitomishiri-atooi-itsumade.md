@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-25T00:00:00.000Z
-updatedAt: '2026-05-25'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-05-26'
+hero: /hero-ai/hitomishiri-atooi-itsumade.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +22,7 @@ quickInfo:
 lede: >-
   「トイレにも行けない」「後追いがつらい」——人見知り・後追いは、ワンオペ育児で特に消耗するテーマです。でもこれは赤ちゃんが「特定の人を信頼できるようになった」愛着の発達の証でもあります。本記事はいつから始まりいつまで続くか、ピークの乗り越え方、預けるときのコツ、ひどい/ない場合の考え方を整理しました。
 seoRelated: yonaki-taisaku-0-1sai
+legacyHero: /hero/parent-child-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-05-25T00:00:00.000Z
-updatedAt: '2026-05-25'
-hero: /hero/kid-craft-01.webp
+updatedAt: '2026-05-26'
+hero: /hero-ai/jiyukenkyu-kit-osusume-2026.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
 lede: >-
   夏休みの自由研究、「テーマが決まらない」「材料を揃える時間がない」で親子ともに消耗しがちです。市販の自由研究キットなら、材料・手順・まとめ方シートが全部入りで、1日〜数日で完成します。本記事は未就学〜小学校低学年向けに、実験・工作・観察・結晶・スライムなどジャンル別に15キットを比較。所要時間と親の手間を軸に「これを買えば終わる」を厳選しました。
 seoRelated: jiyukenkyu-1nichi-kodomo-30
+legacyHero: /hero/kid-craft-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／東京23区在住）](/authors/nagamy)・最終更新 2026年5月

@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-25T00:00:00.000Z
-updatedAt: '2026-05-25'
-hero: /hero/baby-02.webp
+updatedAt: '2026-05-26'
+hero: /hero-ai/yubishaburi-itsumade-yamesaseru.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -23,6 +23,7 @@ quickInfo:
 lede: >-
   指しゃぶりは赤ちゃんの自然な行動で、多くは成長とともに自然に減っていきます。一方で「いつまで大丈夫？」「歯並びに影響する？」と心配になるのも当然です。本記事は年齢別に、見守ってよい時期、やめさせ方のコツ、叱らずに卒業させる声かけ、専門家に相談すべきサインを整理しました。焦って無理にやめさせる必要はありません。
 seoRelated: sotsunyu-danyu-susumekata
+legacyHero: /hero/baby-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

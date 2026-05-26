@@ -6,8 +6,8 @@ metaDescription: >-
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-05-25T00:00:00.000Z
-updatedAt: '2026-05-25'
-hero: /hero/summer-water-01.webp
+updatedAt: '2026-05-26'
+hero: /hero-ai/katei-pool-osusume-ranking-2026.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +22,7 @@ quickInfo:
 lede: >-
   夏の家庭用プール、サイズと年齢が合っていないと「すぐ飽きる・水がもったいない・片付けが地獄」になりがちです。本記事は0〜6歳の年齢別に、ベビープール・サークルタイプ・大型滑り台付きまで12タイプを比較。庭/ベランダの広さ、空気入れの手間、水量、収納まで踏まえて「これを買えば失敗しない」を3分で判断できるようにまとめました。
 seoRelated: puuru-mizuasobi-debut
+legacyHero: /hero/summer-water-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／東京23区在住）](/authors/nagamy)・最終更新 2026年5月

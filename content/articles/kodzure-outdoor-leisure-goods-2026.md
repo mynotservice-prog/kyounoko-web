@@ -6,8 +6,8 @@ metaDescription: >-
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-05-25T00:00:00.000Z
-updatedAt: '2026-05-25'
-hero: /hero/park-01.webp
+updatedAt: '2026-05-26'
+hero: /hero-ai/kodzure-outdoor-leisure-goods-2026.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +22,7 @@ quickInfo:
 lede: >-
   公園やピクニックで子連れがいちばん困るのが「日よけ」と「赤ちゃんの居場所」。ワンタッチテントやタープがあれば、お昼寝・授乳・オムツ替え・荷物置きの拠点ができて、滞在の快適さが段違いになります。本記事はUVカット・設営の手軽さ・収納サイズを軸に、子連れ公園レジャーで本当に役立つ12アイテムを比較しました。
 seoRelated: jabujabuike-mizuasobi-tokyo-30
+legacyHero: /hero/park-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／東京23区在住）](/authors/nagamy)・最終更新 2026年5月

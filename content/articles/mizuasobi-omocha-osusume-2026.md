@@ -6,8 +6,8 @@ metaDescription: >-
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-05-25T00:00:00.000Z
-updatedAt: '2026-05-25'
-hero: /hero/summer-water-03.webp
+updatedAt: '2026-05-26'
+hero: /hero-ai/mizuasobi-omocha-osusume-2026.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +22,7 @@ quickInfo:
 lede: >-
   プール本体だけ買って「すぐ飽きた」を防ぐ鍵が、水遊びおもちゃです。0〜1歳はお風呂でも使えるカップやじょうろ、2〜3歳は水車やシャワー、4〜6歳は水鉄砲や水風船と、年齢で刺さるおもちゃは大きく変わります。本記事は安全性（誤飲・対人ルール）と実用性（水量・収納・お風呂兼用）を軸に、年齢別15選を比較しました。
 seoRelated: katei-pool-osusume-ranking-2026
+legacyHero: /hero/summer-water-03.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／東京23区在住）](/authors/nagamy)・最終更新 2026年5月
