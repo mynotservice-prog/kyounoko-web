@@ -79,6 +79,7 @@ legacyHero: /hero-ai/cat-food-kitchen-02.jpg
 - **離乳食対応**：ベビー＆キッズコーナーあり
 - **配達**：ヤマト便で全国配送
 - **特徴**：「ちゃんとオイシックス」の定期便がベース
+- [Oisixのおためしセット（送料無料・1,980円）を試す](https://px.a8.net/svt/ejp?a8mat=4B41ZB+9H5EEQ+3RK+2TWC6P)
 
 ### 4. the kindest（ザ・カインデスト）
 

@@ -95,7 +95,7 @@ seoRelated: chiiku-subsc-3sha-2026-comparison
 
 ## 子供向けオンライン英会話 おすすめ8選
 
-### 01. QQキッズ
+### 01. QQキッズ（QQEnglish）
 
 - 4歳〜中学生対象
 - 全員子供英会話の有資格講師
@@ -103,6 +103,7 @@ seoRelated: chiiku-subsc-3sha-2026-comparison
 - 月4回プランから始められる
 - 無料体験2回
 - 価格目安：月2,980〜10,980円
+- [QQ Englishの無料体験を申し込む](https://px.a8.net/svt/ejp?a8mat=4B41ZB+9FYJ76+4HHM+5ZU29)
 
 ### 02. リップルキッズパーク
 
@@ -134,6 +135,7 @@ seoRelated: chiiku-subsc-3sha-2026-comparison
 - 欧米のネイティブ・準ネイティブ講師
 - ゲーム感覚の独自プラットフォーム
 - 価格目安：月5,000〜18,000円
+- [NovaKidの無料体験を申し込む](https://px.a8.net/svt/ejp?a8mat=4B41ZB+9GJYSY+4KYW+61RIA)
 
 ### 06. クラウティ
 
