@@ -226,7 +226,8 @@ async function renderMarkdownToHtml(md: string): Promise<string> {
  *  - https://item.rakuten.co.jp/... / https://search.rakuten.co.jp/...
  *    → もしも経由（NEXT_PUBLIC_MOSHIMO_* env が必要）
  *  - https://www.amazon.co.jp/... / https://amzn.to/... / amzn.asia
- *    → Amazonアソシエイトタグ付与（NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG env が必要）
+ *    → もしも経由優先（NEXT_PUBLIC_MOSHIMO_AMAZON_PC_ID + PL_ID + 共通A_ID）
+ *    → なければ直接タグ付与（NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG）
  *  - 既に moshimo / af.moshimo を経由しているURLは触らない
  *  - 既に tag= が付いている Amazon URLも触らない
  *
@@ -272,8 +273,30 @@ function wrapMoshimoRakutenInline(productUrl: string): string {
   return `https://af.moshimo.com/af/c/click?${params.toString()}`;
 }
 
-/** Amazon URL → tag= 付き URL（lib/amazon.ts と同等ロジック、インライン化） */
+/**
+ * Amazon URL のラッピング（lib/amazon.ts と同等ロジック、インライン化）
+ * 優先順位:
+ *   1. もしも経由Amazon（NEXT_PUBLIC_MOSHIMO_AMAZON_PC_ID + PL_ID + 共通A_ID）
+ *   2. Amazonアソシエイト直接タグ（NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG）
+ *   3. どちらも未設定なら素通し
+ */
 function wrapAmazonAssociateInline(productUrl: string): string {
+  // 1. もしも経由Amazon優先
+  const m_a_id = process.env.NEXT_PUBLIC_MOSHIMO_A_ID?.trim();
+  const m_p_id = process.env.NEXT_PUBLIC_MOSHIMO_AMAZON_P_ID?.trim() ?? '170';
+  const m_pc_id = process.env.NEXT_PUBLIC_MOSHIMO_AMAZON_PC_ID?.trim();
+  const m_pl_id = process.env.NEXT_PUBLIC_MOSHIMO_AMAZON_PL_ID?.trim();
+  if (m_a_id && m_pc_id && m_pl_id) {
+    const params = new URLSearchParams({
+      a_id: m_a_id,
+      p_id: m_p_id,
+      pc_id: m_pc_id,
+      pl_id: m_pl_id,
+      url: productUrl,
+    });
+    return `https://af.moshimo.com/af/c/click?${params.toString()}`;
+  }
+  // 2. 直接タグ
   const tag = process.env.NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG?.trim();
   if (!tag) return productUrl;
   try {

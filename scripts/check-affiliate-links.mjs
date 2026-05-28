@@ -66,7 +66,13 @@ const hasMoshimo = Boolean(
     process.env.NEXT_PUBLIC_MOSHIMO_RAKUTEN_PC_ID &&
     process.env.NEXT_PUBLIC_MOSHIMO_RAKUTEN_PL_ID,
 );
-const hasAmazon = Boolean(process.env.NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG);
+const hasMoshimoAmazon = Boolean(
+  process.env.NEXT_PUBLIC_MOSHIMO_A_ID &&
+    process.env.NEXT_PUBLIC_MOSHIMO_AMAZON_PC_ID &&
+    process.env.NEXT_PUBLIC_MOSHIMO_AMAZON_PL_ID,
+);
+const hasAmazonTag = Boolean(process.env.NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG);
+const hasAmazon = hasMoshimoAmazon || hasAmazonTag;
 
 if ((providerCount.rakuten || 0) > 0 && !hasMoshimo) {
   warnings.push(
@@ -75,7 +81,7 @@ if ((providerCount.rakuten || 0) > 0 && !hasMoshimo) {
 }
 if ((providerCount.amazon || 0) > 0 && !hasAmazon) {
   warnings.push(
-    `amazon ${providerCount.amazon}件: NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG が未設定 — リンクは遷移するが収益化されません`,
+    `amazon ${providerCount.amazon}件: もしも経由Amazon（NEXT_PUBLIC_MOSHIMO_AMAZON_PC_ID/PL_ID）または NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG のどちらも未設定 — リンクは遷移するが収益化されません`,
   );
 }
 
