@@ -1052,14 +1052,78 @@ export function getTodayAnswer(q: TodayQuery): {
 export function getRelatedFileArticles(
   currentSlug: string,
   category: string,
-  limit = 3,
+  limit = 6,
 ): FileArticleMeta[] {
-  const all = getAllFileArticles().filter((a) => a.slug !== currentSlug);
-  const sameCat = all.filter((a) => a.category === category);
-  if (sameCat.length >= limit) return sameCat.slice(0, limit);
+  const all = getAllFileArticles().filter(
+    (a) => a.slug !== currentSlug && !a.noindex, // noindex記事を関連から除外（SEO悪化防止）
+  );
 
-  const others = all.filter((a) => a.category !== category);
-  return [...sameCat, ...others].slice(0, limit);
+  // 自身の情報を取得して類似スコアを計算
+  const current = getAllFileArticles().find((a) => a.slug === currentSlug);
+  const currentQuick = current?.quickInfo;
+  // 自身の seoRelated を取得（明示的な関連指定）
+  const currentSeoRelated = (current as { seoRelated?: string } | undefined)?.seoRelated;
+  // タイトルからキーワード抽出（2文字以上の連続漢字/カナを取り出す簡易版）
+  const titleKeywords = current
+    ? Array.from(current.title.match(/[一-龯]{2,}|[゠-ヿ]{2,}/g) ?? []).filter(
+        (w) => !['とは', '記事', 'おすすめ', '完全', 'ガイド', 'まとめ'].includes(w),
+      )
+    : [];
+
+  function scoreRelated(a: FileArticleMeta): number {
+    let score = 0;
+    // 1) 明示的な seoRelated 互参照は最大スコア
+    const aSeoRelated = (a as { seoRelated?: string }).seoRelated;
+    if (aSeoRelated === currentSlug) score += 100;
+    if (currentSeoRelated === a.slug) score += 100;
+    // 2) 同じカテゴリは強い相関
+    if (a.category === category) score += 20;
+    // 3) quickInfo の重複（年齢・シーン・天気・予算）
+    const q = a.quickInfo;
+    if (currentQuick && q) {
+      // 年齢の重複数
+      const ageOverlap = (currentQuick.ageRanges ?? []).filter((r) =>
+        (q.ageRanges ?? []).includes(r),
+      ).length;
+      score += ageOverlap * 5;
+      // 場所の重複
+      const placeOverlap = (currentQuick.place ?? []).filter((p) =>
+        (q.place ?? []).includes(p),
+      ).length;
+      score += placeOverlap * 4;
+      // 天気の重複（"any"だけ一致は無視）
+      const weatherOverlap = (currentQuick.weather ?? []).filter(
+        (w) => w !== 'any' && (q.weather ?? []).includes(w),
+      ).length;
+      score += weatherOverlap * 4;
+      // 予算が同じ
+      if (currentQuick.budget && q.budget && currentQuick.budget === q.budget) score += 2;
+    }
+    // 4) タイトルキーワードの重複
+    const titleOverlap = titleKeywords.filter((kw) => a.title.includes(kw)).length;
+    score += titleOverlap * 8;
+    // 5) 新しさボーナス（同じ日でも更新が新しい方を優先）
+    const daysOld = (Date.now() - new Date(a.updatedAt).getTime()) / (1000 * 60 * 60 * 24);
+    if (daysOld < 30) score += 2;
+    if (daysOld < 7) score += 2;
+    return score;
+  }
+
+  const scored = all
+    .map((a) => ({ article: a, score: scoreRelated(a) }))
+    .sort((x, y) => {
+      if (y.score !== x.score) return y.score - x.score;
+      return x.article.updatedAt < y.article.updatedAt ? 1 : -1;
+    });
+
+  // スコアつき上位を返す
+  const positives = scored.filter((x) => x.score > 0).map((x) => x.article);
+  if (positives.length >= limit) return positives.slice(0, limit);
+  // 不足は同カテゴリ・最新で補充
+  const sameCat = all
+    .filter((a) => a.category === category && !positives.find((p) => p.slug === a.slug))
+    .sort((x, y) => (x.updatedAt < y.updatedAt ? 1 : -1));
+  return [...positives, ...sameCat].slice(0, limit);
 }
 
 /**

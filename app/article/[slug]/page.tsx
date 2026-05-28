@@ -139,6 +139,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const description = article.metaDescription ?? article.lede?.substring(0, 120);
   // hero がある記事は記事画像優先、無ければ /api/og で動的生成。
   const dynamicOg = `/api/og?title=${encodeURIComponent(article.title)}&cat=${encodeURIComponent(article.category)}`;
+  const heroAbsolute = article.hero
+    ? (article.hero.startsWith('http') ? article.hero : `https://kyounoko.jp${article.hero}`)
+    : `https://kyounoko.jp${dynamicOg}`;
   const ogImages = article.hero
     ? [{ url: article.hero, width: 1600, height: 900 }]
     : [{ url: dynamicOg, width: 1200, height: 630 }];
@@ -159,6 +162,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: article.title,
       description,
       images: ogImages.map((i) => i.url),
+    },
+    // Pinterest Rich Pins 対応：記事毎の hero 画像をピン素材として明示
+    other: {
+      'pinterest-rich-pin': 'true',
+      'pinterest:image': heroAbsolute,
+      'pinterest:description': description ?? '',
+      'pinterest:title': article.title,
     },
     alternates: { canonical: `/article/${slug}` },
     robots: article.noindex ? { index: false } : undefined,
