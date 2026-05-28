@@ -69,7 +69,6 @@ legacyHero: /hero/kid-craft-01.webp
 - 数時間〜1日で大きな結晶が育つ。見た目のインパクト大
 - まとめ方シート付きが多く、レポートまで完結しやすい
 - [楽天で「自由研究 結晶 キット」を探す](https://search.rakuten.co.jp/search/mall/自由研究 結晶 キット/)
-- [Amazonで「自由研究 結晶 キット」を探す](https://www.amazon.co.jp/s?k=自由研究+結晶+キット)
 
 #### 02. スライム実験キット
 
@@ -80,7 +79,6 @@ legacyHero: /hero/kid-craft-01.webp
 
 - 浮力・表面張力・光の屈折など、理科っぽさ重視の子に
 - [楽天で「自由研究 実験 キット」を探す](https://search.rakuten.co.jp/search/mall/自由研究 実験 キット/)
-- [Amazonで「自由研究 実験キット 小学生」を探す](https://www.amazon.co.jp/s?k=自由研究+実験キット+小学生)
 
 ### 工作・作って残る系
 
@@ -110,7 +108,6 @@ legacyHero: /hero/kid-craft-01.webp
 #### 08. 天気・雲・気温の観察セット
 
 - 毎日決まった時間に記録するだけ。低学年でも続けやすい
-- [Amazonで「自由研究 観察キット」を探す](https://www.amazon.co.jp/s?k=自由研究+観察キット)
 
 ### 理科っぽさ重視（電気・水・分解）
 
@@ -131,7 +128,6 @@ legacyHero: /hero/kid-craft-01.webp
 - 30分〜1時間で完成。初めての自由研究や弟妹の分にも
 - 色水の混色、砂遊び観察、磁石でくっつくもの探しなど
 - [楽天で「自由研究 低学年 キット」を探す](https://search.rakuten.co.jp/search/mall/自由研究 低学年 キット/)
-- [Amazonで「自由研究 幼児 キット」を探す](https://www.amazon.co.jp/s?k=自由研究+幼児+キット)
 
 ## キットを買わずにやる選択肢も
 

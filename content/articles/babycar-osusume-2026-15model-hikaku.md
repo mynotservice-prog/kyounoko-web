@@ -86,7 +86,6 @@ seoRelated: babycar-erabikata
 - 楽天/Amazonでセールに乗ると 5万円台前半まで落ちる
 - **デメリット**: タイヤ径が小さく、砂利の公園は得意ではない
 - [楽天で「コンビ スゴカル4キャス compact」の最新価格を見る](https://search.rakuten.co.jp/search/mall/コンビ+スゴカル4キャス+compact/)
-- [Amazonで「コンビ スゴカル4キャス compact」を見る](https://www.amazon.co.jp/s?k=コンビ+スゴカル4キャス+compact&tag=service0aa9e-22)
 
 ### 2. コンビ スゴカル minimo
 
@@ -126,7 +125,6 @@ seoRelated: babycar-erabikata
 - 片手で畳めて自立、これがB型最大の判断軸
 - A型の1台目を持っていて「2台目」を探している人の第一候補
 - [楽天で「ピジョン ビングル BB1」を見る](https://search.rakuten.co.jp/search/mall/ピジョン+ビングル+BB1/)
-- [Amazonで「ピジョン ビングル BB1」を見る](https://www.amazon.co.jp/s?k=ピジョン+ビングル+BB1&tag=service0aa9e-22)
 
 ### 7. コンビ F2 plus AF
 

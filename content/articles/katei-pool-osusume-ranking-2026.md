@@ -72,7 +72,6 @@ legacyHero: /hero/summer-water-01.webp
 - 背もたれ・空気枕付きなら、おすわり前の赤ちゃんも安心
 - 水深は5〜10cmで十分。日よけ屋根付きを選ぶと真夏も安心
 - [楽天で「ベビープール 屋根付き」を探す](https://search.rakuten.co.jp/search/mall/ベビープール 屋根付き/)
-- [Amazonで「ベビープール 屋根付き」を探す](https://www.amazon.co.jp/s?k=ベビープール+屋根付き)
 
 #### 02. ふかふかマット付き水遊びマット
 
@@ -87,7 +86,6 @@ legacyHero: /hero/summer-water-01.webp
 - 立って遊べる安定の円形。2〜3歳が一番長く遊べるサイズ感
 - 軽くて畳みやすく、ベランダ〜小さな庭にちょうど良い
 - [楽天で「子供プール 120cm」を探す](https://search.rakuten.co.jp/search/mall/子供プール 120cm/)
-- [Amazonで「家庭用プール 120cm」を探す](https://www.amazon.co.jp/s?k=家庭用プール+120cm)
 
 #### 04. 四角プール（脚付き・縁が高め）
 
@@ -108,7 +106,6 @@ legacyHero: /hero/summer-water-01.webp
 - 滑り台付きで盛り上がり度が段違い。4〜6歳が大満足
 - 水量が多いので、設置場所と排水を事前に確認
 - [楽天で「滑り台付き プール」を探す](https://search.rakuten.co.jp/search/mall/滑り台付き プール/)
-- [Amazonで「滑り台付き プール 大型」を探す](https://www.amazon.co.jp/s?k=滑り台付き+プール+大型)
 
 #### 07. 噴水（シャワー）付きプール
 
@@ -129,7 +126,6 @@ legacyHero: /hero/summer-water-01.webp
 - 厚手素材（0.3mm以上）はパンクしにくく長持ち
 - 屋根（サンシェード）付きが真夏は安心
 - [楽天で「家庭用プール 大型 屋根付き」を探す](https://search.rakuten.co.jp/search/mall/家庭用プール 大型 屋根付き/)
-- [Amazonで「ファミリープール 大型」を探す](https://www.amazon.co.jp/s?k=ファミリープール+大型)
 
 ## 一緒に揃えると満足度が上がる5アイテム
 

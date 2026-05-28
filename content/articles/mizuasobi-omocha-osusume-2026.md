@@ -66,7 +66,6 @@ legacyHero: /hero/summer-water-03.webp
 - 水をすくう・移す・こぼすの繰り返しが0〜1歳に刺さる
 - お風呂でも使えて通年活躍
 - [楽天で「お風呂 おもちゃ カップ」を探す](https://search.rakuten.co.jp/search/mall/お風呂 おもちゃ カップ/)
-- [Amazonで「水遊び カップ ベビー」を探す](https://www.amazon.co.jp/s?k=水遊び+カップ+ベビー)
 
 #### 02. じょうろ・シャワー玩具
 
@@ -84,7 +83,6 @@ legacyHero: /hero/summer-water-03.webp
 
 - 水を流すと車が回る。因果関係が分かる2〜3歳が大満足
 - [楽天で「ウォーターテーブル 水遊び」を探す](https://search.rakuten.co.jp/search/mall/ウォーターテーブル 水遊び/)
-- [Amazonで「水遊び 水車 おもちゃ」を探す](https://www.amazon.co.jp/s?k=水遊び+水車+おもちゃ)
 
 #### 05. 的当て・水でっぽう（簡単タイプ）
 
@@ -103,7 +101,6 @@ legacyHero: /hero/summer-water-03.webp
 - ポンプで加圧して飛ばす本格派。兄弟・友達と盛り上がる
 - 「顔を狙わない」ルールを決めてから
 - [楽天で「水鉄砲 強力 飛距離」を探す](https://search.rakuten.co.jp/search/mall/水鉄砲 強力 飛距離/)
-- [Amazonで「水鉄砲 子供 強力」を探す](https://www.amazon.co.jp/s?k=水鉄砲+子供+強力)
 
 #### 08. 電動 水鉄砲（連射タイプ）
 
@@ -121,7 +118,6 @@ legacyHero: /hero/summer-water-03.webp
 - 背負える大容量タンク型、的当てセット、スポンジボールなど
 - 年齢と「自分で扱えるか」で選ぶ
 - [楽天で「水遊び おもちゃ セット」を探す](https://search.rakuten.co.jp/search/mall/水遊び おもちゃ セット/)
-- [Amazonで「水遊び おもちゃ 4歳」を探す](https://www.amazon.co.jp/s?k=水遊び+おもちゃ+4歳)
 
 ## 安全に遊ぶためのルールと片付け
 

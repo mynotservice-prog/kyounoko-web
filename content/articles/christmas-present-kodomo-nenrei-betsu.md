@@ -258,7 +258,6 @@ legacyHero: /hero-ai/hahanohi-purezento-kodomo-tedukuri.webp
 記事で紹介したクリスマスプレゼントは、各通販サイトの最新価格・レビューを見比べて選ぶのがおすすめです。型番や在庫は時期で変わるため、購入前に必ず最新情報をご確認ください。
 
 - [楽天で「クリスマスプレゼント 子供 人気」を探す](https://search.rakuten.co.jp/search/mall/%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%9E%E3%82%B9%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88%20%E5%AD%90%E4%BE%9B%20%E4%BA%BA%E6%B0%97/)
-- [Amazonで「クリスマスプレゼント 子供 人気」を探す](https://www.amazon.co.jp/s?k=%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%9E%E3%82%B9%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88%20%E5%AD%90%E4%BE%9B%20%E4%BA%BA%E6%B0%97)
 
 > ※ 上記リンクには広告（アフィリエイト）を含みます。価格・仕様は各販売店の表示が最新です。
 

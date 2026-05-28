@@ -71,7 +71,6 @@ legacyHero: /hero/summer-water-02.webp
 - ベビーカーの幌やバーに挟んで使える。羽根なしで指はさみの心配が少ない
 - 角度調整・USB充電式が便利。送風は顔に直接当て続けない位置に
 - [楽天で「ベビーカー 扇風機 羽根なし」を探す](https://search.rakuten.co.jp/search/mall/ベビーカー 扇風機 羽根なし/)
-- [Amazonで「ベビーカー ファン クリップ」を探す](https://www.amazon.co.jp/s?k=ベビーカー+ファン+クリップ)
 
 ### 歩く子向け（3歳〜）
 
@@ -80,7 +79,6 @@ legacyHero: /hero/summer-water-02.webp
 - 両手が空くので外遊び・登園に便利。羽根なしタイプが子供には安心
 - 軽量モデルを選ぶと首が疲れにくい
 - [楽天で「子供 首掛け扇風機 羽根なし」を探す](https://search.rakuten.co.jp/search/mall/子供 首掛け扇風機 羽根なし/)
-- [Amazonで「ネックファン 子供 羽根なし」を探す](https://www.amazon.co.jp/s?k=ネックファン+子供+羽根なし)
 
 ### 移動全般（2歳〜）
 
@@ -97,7 +95,6 @@ legacyHero: /hero/summer-water-02.webp
 - 自分で持って使える年齢に。指ガード付き・軽量を選ぶ
 - ストラップ付きだと落下防止に
 - [楽天で「ハンディファン 子供 安全」を探す](https://search.rakuten.co.jp/search/mall/ハンディファン 子供 安全/)
-- [Amazonで「携帯扇風機 子供 指ガード」を探す](https://www.amazon.co.jp/s?k=携帯扇風機+子供+指ガード)
 
 ## ファン・クーラーだけに頼らない熱中症対策
 
