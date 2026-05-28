@@ -2,6 +2,31 @@
 
 母の日記事（83ユーザー単月）の再現を狙うための、年間季節企画ストック。各テーマで「[年]年版 ○○○ 子供 [手作り|プレゼント|スポット] 20選」フォーマットで執筆する。
 
+## 2026-05-28 追加：構造化＆自動IndexNow送信
+
+季節企画を **lib/seasonal-calendar.ts** に中央データ化し、ホームに「今月の特集」セクションを追加。
+さらに月初に `scripts/seasonal-indexnow.mjs` を実行することで、今月＋翌月の特集記事を自動でIndexNow送信する仕組みを構築。
+
+### 関連ファイル
+
+- `lib/seasonal-calendar.ts` — 中央データ（月→特集・スラッグ）
+- `components/top/SeasonalHighlight.tsx` — HOME表示コンポーネント
+- `scripts/seasonal-indexnow.mjs` — 月初実行のIndexNow送信スクリプト
+- `docs/seasonal-content-calendar.md` — このドキュメント
+
+### 月初の運用
+
+毎月1日に `node scripts/seasonal-indexnow.mjs` を実行 → 今月＋翌月の特集記事をBing/Yandexに通知。
+
+### 新規記事追加時のチェックリスト
+
+新しく季節関連記事を書いたら：
+
+- [ ] `lib/seasonal-calendar.ts` の該当月の `slugs` に追加
+- [ ] `scripts/seasonal-indexnow.mjs` の SEASONAL マップにも追加（libと同期）
+- [ ] IndexNow 送信
+- [ ] 該当ピラーページから内部リンク
+
 ## 着手タイミングのルール
 
 - 記事公開は **本番イベントの 6〜8 週間前** （Google にインデックスされる時間 + ロングテール拾われる時間を考慮）

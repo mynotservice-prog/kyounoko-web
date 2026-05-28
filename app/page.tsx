@@ -27,6 +27,8 @@ import { PersonalizedHint } from '@/components/common/PersonalizedHint';
 import { TodayHighlight } from '@/components/top/TodayHighlight';
 import { PopularRanking } from '@/components/top/PopularRanking';
 import { POPULAR_ARTICLE_SLUGS } from '@/lib/popular-articles';
+import { SeasonalHighlight } from '@/components/top/SeasonalHighlight';
+import { getCurrentSeasonalEntry } from '@/lib/seasonal-calendar';
 
 export const revalidate = 3600;
 
@@ -76,6 +78,15 @@ export default function HomePage() {
 
   // よく読まれている記事ランキング（Search Console 実データ順）
   const articleBySlug = new Map(allArticles.map((a) => [a.slug, a]));
+
+  // 今月の季節特集（lib/seasonal-calendar.ts から）
+  const seasonal = getCurrentSeasonalEntry();
+  const seasonalArticles = seasonal
+    ? seasonal.slugs
+        .map((slug) => articleBySlug.get(slug))
+        .filter((a): a is NonNullable<typeof a> => Boolean(a))
+    : [];
+
   const popularItems = POPULAR_ARTICLE_SLUGS
     .map((slug) => articleBySlug.get(slug))
     .filter((a): a is NonNullable<typeof a> => Boolean(a))
@@ -189,6 +200,22 @@ export default function HomePage() {
           今日のきょうのこ — 日替わりで変わる「毎日来たい」再訪セクション
           ====================================================================== */}
       <TodayHighlight asobiPool={asobiPool} gohanPool={gohanPool} />
+
+      {/* ======================================================================
+          今月の季節特集（lib/seasonal-calendar.ts）
+          検索ボリュームが上がるタイミングで該当記事をHOME上部に表示。
+          ====================================================================== */}
+      {seasonal && seasonalArticles.length > 0 && (
+        <div style={{ marginTop: 8 }}>
+          <SeasonalHighlight
+            month={seasonal.month}
+            label={seasonal.label}
+            description={seasonal.description}
+            themes={seasonal.themes}
+            articles={seasonalArticles}
+          />
+        </div>
+      )}
 
       {/* ======================================================================
           よく読まれている記事ランキング（Search Console 実データ・回遊強化）
