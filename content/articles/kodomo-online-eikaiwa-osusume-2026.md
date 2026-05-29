@@ -306,6 +306,6 @@ A. **兄妹割引・アカウント共有可の教室** を選ぶとコスパ良
 ## 関連記事
 
 - [知育サブスク3社徹底比較](/article/chiiku-subsc-3sha-2026-comparison)
-- [子供の習い事ランキング](/article/naraigoto-ranking)
-- [家庭で英語に触れる工夫](/article/eigo-ie-de-furemase-5kufuu)
+- [子供の習い事ランキング](/article/kodomo-naraigoto-tsuduki-kotsu)
+- [家庭で英語に触れる工夫](/article/eigo-asobi-ie-de-4-6sai)
 - [学資保険の選び方完全ガイド](/article/gakushi-hoken-erabikata-2026)

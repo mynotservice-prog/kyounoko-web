@@ -281,5 +281,5 @@ A. 雨の日 or 防汚目的で使う家庭多数。1〜2年生で買う、ま�
 
 - [小学校入学準備 完全リスト](/article/shougakkou-nyugaku-junbi-kanzen-list)
 - [入園準備 完全ガイド](/article/youchien-hoikuen-junbi-rakuten)
-- [子供の習い事ランキング](/article/naraigoto-ranking)
+- [子供の習い事ランキング](/article/kodomo-naraigoto-tsuduki-kotsu)
 - [学資保険の選び方完全ガイド](/article/gakushi-hoken-erabikata-2026)

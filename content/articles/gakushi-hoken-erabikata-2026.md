@@ -245,5 +245,5 @@ A. **17歳 or 18歳満期** が大学入学資金に直接使えて便利。AO�
 
 - [知育サブスク3社徹底比較](/article/chiiku-subsc-3sha-2026-comparison)
 - [家計簿 子連れ就活の見直し](/article/natsuyasumi-kakeibo-kodzure-shukatsu)
-- [子供の習い事ランキング](/article/naraigoto-ranking)
+- [子供の習い事ランキング](/article/kodomo-naraigoto-tsuduki-kotsu)
 - [入園準備リスト 完全ガイド](/article/youchien-hoikuen-junbi-rakuten)

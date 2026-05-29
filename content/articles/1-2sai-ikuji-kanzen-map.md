@@ -212,6 +212,19 @@ A. 入園後1〜2ヶ月は標準的な経過。免疫獲得期と思って病児
 
 A. 上の子最優先の時間を1日30分作る。「お兄ちゃん・お姉ちゃんになったね」より「あなたも大切」を伝える。
 
+## 1〜2歳の「いつから？」よくある疑問
+
+- [おむつ卒業 いつ？](/article/kodomo-omutsu-sotsugyou-itsu)
+- [子どもがよく転ぶ 心配？](/article/kodomo-yoku-korobu-shinpai)
+- [噛む癖 対処法](/article/kodomo-kamu-kuse-taisho)
+- [自転車 いつから？](/article/kodomo-jitensha-itsukara)
+- [チョコレート いつから？](/article/kodomo-chocolate-itsukara)
+- [アイス いつから？](/article/kodomo-aisu-itsukara)
+- [ジュース いつから？](/article/kodomo-juice-itsukara)
+- [子どもが喋らない 心配は何歳から？](/article/kodomo-shaberu-itsukara)
+- [おしゃぶり いつまで？](/article/akachan-oshaburi-itsumade)
+- [おもちゃ いつから？](/article/akachan-omosharya-itsukara)
+
 ## 関連ピラーページ
 
 - [0歳の育児 完全マップ](/article/0sai-ikuji-kanzen-map)

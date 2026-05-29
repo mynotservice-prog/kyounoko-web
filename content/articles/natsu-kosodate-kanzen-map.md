@@ -270,6 +270,12 @@ legacyHero: /hero/summer-water-01.webp
 - [0歳の育児 完全マップ](/article/0sai-ikuji-kanzen-map)
 - [1〜2歳の育児 完全マップ](/article/1-2sai-ikuji-kanzen-map)
 - [3〜6歳の育児 完全マップ](/article/3-6sai-ikuji-kanzen-map)
+## 夏の「いつから？」よくある疑問
+
+- [プール いつから？月齢別の入水時期](/article/kodomo-pool-itsukara)
+- [アイス いつから食べさせていい？](/article/kodomo-aisu-itsukara)
+- [ジュース いつから？麦茶・水との使い分け](/article/kodomo-juice-itsukara)
+- [おしゃぶり いつまで？卒業時期](/article/akachan-oshaburi-itsumade)
 
 ## 夏の子育てで迷ったら戻ってきてください
 

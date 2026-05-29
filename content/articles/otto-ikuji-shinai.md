@@ -133,8 +133,8 @@ lede: >-
 
 ## 関連記事
 
-- [共働き家事分担の作り方｜公平に回すコツとモメない仕組み](/article/tomobataraki-kaji)
-- [父親の育休の取り方｜制度・準備・職場交渉完全ガイド](/article/ikukyu-chichi-toru)
+- [共働き家事分担の作り方｜公平に回すコツとモメない仕組み](/article/tomobataraki-kaji-bunkatsu)
+- [父親の育休の取り方｜制度・準備・職場交渉完全ガイド](/article/ikukyu-fukuki-junbi)
 - [ワンオペ育児がつらい時の対処法｜原因・乗り切る方法・相談先完全ガイド](/article/wanope-tsurai-taisho)
 - [義実家の育児ストレス対処法｜原因・距離の取り方・配偶者との連携完全ガイド](/article/giczitsuka-stress)
 

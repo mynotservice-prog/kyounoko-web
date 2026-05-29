@@ -153,7 +153,7 @@ lede: >-
 ## 関連記事
 
 - [1歳の発達 完全ガイド](/article/1sai-hattatsu-kanzen-guide)
-- [0歳の育児 完全マップ](/article/0sai-ikuji.kanzen-map)
+- [0歳の育児 完全マップ](/article/0sai-ikuji-kanzen-map.kanzen-map)
 - [1〜2歳の育児 完全マップ](/article/1-2sai-ikuji-kanzen-map)
 - [3〜6歳の育児 完全マップ](/article/3-6sai-ikuji-kanzen-map)
 

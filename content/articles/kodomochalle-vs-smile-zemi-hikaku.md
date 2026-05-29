@@ -229,6 +229,6 @@ legacyHero: /hero/kid-study-02.webp
 ## 関連記事
 
 - [知育サブスク3社徹底比較](/article/chiiku-subsc-3sha-2026-comparison)
-- [子供の習い事ランキング](/article/naraigoto-ranking)
+- [子供の習い事ランキング](/article/kodomo-naraigoto-tsuduki-kotsu)
 - [子供オンライン英会話比較](/article/kodomo-online-eikaiwa-osusume-2026)
 - [3〜6歳の育児 完全マップ](/article/3-6sai-ikuji-kanzen-map)

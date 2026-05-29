@@ -295,7 +295,7 @@ A. **基本は個室なし**ですが、**奥の角席・壁際のボックス�
 
 ### Q. ジョナサンに座敷席はある？
 
-A. **座敷席は基本なし**。すかいらーく系はガスト・ジョナサンともに椅子席メインです。座敷重視なら[和食さと](/article/satou-kodzure-koryaku) や[しゃぶ葉](/article/shabuyou-kodzure-koryaku)などの和食チェーンを検討してください。
+A. **座敷席は基本なし**。すかいらーく系はガスト・ジョナサンともに椅子席メインです。座敷重視なら[和食さと](/article/kodzure-yakiniku-anzen-kanzen-guide) や[しゃぶ葉](/article/shabuyou-kodzure-koryaku)などの和食チェーンを検討してください。
 
 ### Q. 駐車場は広い？ベビーカー積み下ろしは？
 

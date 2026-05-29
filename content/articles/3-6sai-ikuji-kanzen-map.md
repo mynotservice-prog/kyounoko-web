@@ -65,7 +65,7 @@ legacyHero: /hero/classroom-01.webp
 
 **この時期の重要記事**：
 - [ランドセル選び完全ガイド 2026](/article/randoseru-erabikata-osusume-2026)
-- [子供の習い事ランキング](/article/naraigoto-ranking)
+- [子供の習い事ランキング](/article/kodomo-naraigoto-tsuduki-kotsu)
 - [子供オンライン英会話比較](/article/kodomo-online-eikaiwa-osusume-2026)
 
 ### 6歳：就学準備期
@@ -103,7 +103,7 @@ legacyHero: /hero/classroom-01.webp
 
 ### 習い事・知育
 
-- [子供の習い事ランキング](/article/naraigoto-ranking)
+- [子供の習い事ランキング](/article/kodomo-naraigoto-tsuduki-kotsu)
 - [幼児の習い事 何歳から](/article/youji-naraigoto-nansai-kara)
 - [子供オンライン英会話比較](/article/kodomo-online-eikaiwa-osusume-2026)
 - [オンライン英会話3社比較](/article/online-school-eigo-3brand-2026)
@@ -154,7 +154,7 @@ legacyHero: /hero/classroom-01.webp
 
 ### 駅別おでかけ（東京23区）
 
-- [東京駅別子連れランチ](/article/station)
+- [東京駅別子連れランチ](/station)
 - 各駅×条件（子連れOK・離乳食OK・ベビーカーOK）の詳細はサイト内の駅別ガイドで
 
 ## 3〜6歳児の健診スケジュール
@@ -237,6 +237,35 @@ A. 「身の回りのこと自分で」「早寝早起き」「集中して座�
 
 - [0歳の育児 完全マップ](/article/0sai-ikuji-kanzen-map)
 - [1〜2歳の育児 完全マップ](/article/1-2sai-ikuji-kanzen-map)
+
+## 3〜6歳の「いつから？何歳から？」よくある疑問
+
+習い事・生活習慣・親離れ系のよくある疑問はこちらから。
+
+### 習い事
+- [ピアノ いつから？](/article/kodomo-piano-itsukara)
+- [スイミング いつから？](/article/kodomo-swim-itsukara)
+- [体操 いつから？](/article/kodomo-taisou-itsukara)
+- [サッカー いつから？](/article/kodomo-soccer-itsukara)
+- [そろばん いつから？](/article/kodomo-soroban-itsukara)
+- [公文 いつから？](/article/kodomo-kumon-itsukara)
+
+### 生活・自立
+- [包丁を使わせる いつから？](/article/kodomo-houchou-itsukara)
+- [お小遣い いつから？](/article/kodomo-okozukai-itsukara)
+- [一人寝 いつから？](/article/kodomo-hitorine-itsukara)
+- [一人風呂 いつから？](/article/kodomo-bath-hitori-itsukara)
+- [ドライヤー 自分で いつから？](/article/kodomo-hairdry-itsukara)
+- [留守番 いつから？](/article/kodomo-rusuban-itsukara)
+
+### 食べ物・娯楽
+- [チョコレート いつから？](/article/kodomo-chocolate-itsukara)
+- [アイス いつから？](/article/kodomo-aisu-itsukara)
+- [ジュース いつから？](/article/kodomo-juice-itsukara)
+- [ゲーム いつから？](/article/kodomo-game-itsukara)
+- [タブレット いつから？](/article/kodomo-tablet-itsukara)
+- [映画館 いつから？](/article/kodomo-eigakan-itsukara)
+- [七五三 何歳？](/article/kodomo-shashin-nensho-mokuyasu)
 
 ## 3〜6歳児育児で迷ったら戻ってきてください
 

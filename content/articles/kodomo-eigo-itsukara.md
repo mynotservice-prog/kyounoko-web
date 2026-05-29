@@ -175,5 +175,5 @@ legacyHero: /hero/kid-study-01.webp
 
 - [子供オンライン英会話比較](/article/kodomo-online-eikaiwa-osusume-2026)
 - [オンライン英会話3社比較](/article/online-school-eigo-3brand-2026)
-- [子供の習い事ランキング](/article/naraigoto-ranking)
+- [子供の習い事ランキング](/article/kodomo-naraigoto-tsuduki-kotsu)
 - [3〜6歳の育児 完全マップ](/article/3-6sai-ikuji-kanzen-map)

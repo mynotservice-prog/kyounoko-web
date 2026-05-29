@@ -150,6 +150,6 @@ A. **丸亀製麺は郊外ロードサイド型のテーブル席多い店舗**�
 - はなまるうどんの単独攻略は[はなまるうどんは子連れにラク？にこはなセット・かけ小・セルフ式の段取り](/article/hanamaru-udon-kodzure-koryaku)。にこはなセットや天ぷら・長い麺の安全までまとめています。
 - 3チェーン比較版（富士そば含む）は[うどん・そば3チェーン子連れ比較｜丸亀・はなまる・富士そば8項目](/article/udon-soba-3chain-kodzure)。
 - ファミレス全体は[【2026年版】子連れで使えるファミレス TOP10ランキング](/article/famires-kodzure-ranking-2026-10sen)、和食チェーンは[子連れ歓迎の和食チェーン10選](/article/kodzure-washoku-chain-10)。
-- 同じスキーマの姉妹編は[【2026年版】焼肉チェーン5社 子連れ徹底比較](/article/yakiniku-chain-kodzure-5sha-hikaku)と[【2026年版】回転寿司5社 子連れ徹底比較](/article/kaiten-sushi-chain-kodzure-5sha-hikaku)。
+- 同じスキーマの姉妹編は[【2026年版】焼肉チェーン5社 子連れ徹底比較](/article/kodzure-yakiniku-shabu-7)と[【2026年版】回転寿司5社 子連れ徹底比較](/article/kaiten-sushi-4chain-comparison)。
 - 朝うどんの取り分けは[朝うどん卵とじ｜離乳食後の取り分けレシピ](/article/kodomo-asa-udon-tamagotoji-rinyuushoku-go)、牛丼チェーンの早見表は[牛丼4チェーン子連れ早見表](/article/gyudon-4chain-kodzure-hayami)も合わせてどうぞ。
 - 長い麺の誤嚥・釜揚げと熱いつゆのやけど・つゆの塩分・天ぷら・釜玉の生卵を年齢別にまとめた[子連れうどんを安全に楽しむ完全ガイド](/article/kodzure-udon-anzen-kanzen-guide)もどうぞ。

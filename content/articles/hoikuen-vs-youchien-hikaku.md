@@ -242,5 +242,5 @@ legacyHero: /hero/classroom-02.webp
 
 - [保育園入園準備 0〜2歳完全リスト](/article/hoikuen-nyuuen-junbi-0-2sai-kanzen-list)
 - [入園準備 完全ガイド](/article/youchien-hoikuen-junbi-rakuten)
-- [子供の習い事ランキング](/article/naraigoto-ranking)
+- [子供の習い事ランキング](/article/kodomo-naraigoto-tsuduki-kotsu)
 - [1〜2歳の育児 完全マップ](/article/1-2sai-ikuji-kanzen-map)

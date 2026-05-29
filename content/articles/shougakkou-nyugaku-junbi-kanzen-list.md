@@ -263,5 +263,5 @@ A. 子が **自分で削れる手動** が学校での状況に近い。電動�
 
 - [ランドセル選び完全ガイド](/article/randoseru-erabikata-osusume-2026)
 - [入園準備 完全ガイド](/article/youchien-hoikuen-junbi-rakuten)
-- [子供の習い事ランキング](/article/naraigoto-ranking)
+- [子供の習い事ランキング](/article/kodomo-naraigoto-tsuduki-kotsu)
 - [学資保険の選び方完全ガイド](/article/gakushi-hoken-erabikata-2026)

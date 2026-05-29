@@ -137,5 +137,5 @@ lede: >-
 
 - [育休復帰の準備](/article/ikukyu-fukuki-junbi)
 - [保育園が不安](/article/hoikuen-fuan-kaisho)
-- [共働き 家事分担](/article/tomobataraki-kaji-bunkatsu)
+- [共働き 家事分担](/article/tomobataraki-kaji-bunkatsu-bunkatsu)
 - [0歳児育児 完全マップ](/article/0sai-ikuji-kanzen-map)

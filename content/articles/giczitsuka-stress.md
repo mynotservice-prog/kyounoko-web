@@ -144,7 +144,7 @@ LINEで直接送らず、**「みてね」等のアプリ**で月1回まとめ�
 ## 関連記事
 
 - [夫が育児しない時の解決法｜原因と対話術・分担の作り方完全ガイド](/article/otto-ikuji-shinai)
-- [共働き家事分担の作り方｜公平に回すコツとモメない仕組み](/article/tomobataraki-kaji)
+- [共働き家事分担の作り方｜公平に回すコツとモメない仕組み](/article/tomobataraki-kaji-bunkatsu)
 - [ママ友トラブルの対処法｜原因・解決策・距離の取り方完全ガイド](/article/mamatomo-trouble)
 - [育児ノイローゼのサイン｜原因・症状チェック・対処法・相談先完全ガイド](/article/ikuji-noroze-sign)
 

@@ -145,5 +145,5 @@ SNS・周囲の声・育児書――どれも参考にはなりますが、**正
 
 - [兄弟差 育てる葛藤](/article/kyoudai-sa-katsuyu)
 - [一人っ子の育て方](/article/hitorikko-sodateru)
-- [共働き 家事分担](/article/tomobataraki-kaji-bunkatsu)
+- [共働き 家事分担](/article/tomobataraki-kaji-bunkatsu-bunkatsu)
 - [3〜6歳児育児 完全マップ](/article/3-6sai-ikuji-kanzen-map)
