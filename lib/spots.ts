@@ -3024,6 +3024,66 @@ export function getSpotsForWard(ward: string): Spot[] {
   return result;
 }
 
+/**
+ * スポット名から URL slug を生成する。
+ * 日本語スポット名 → 英数字 slug。
+ * - 全角→半角、記号削除
+ * - 同名スポット衝突回避のため、エリア名＋市区町村名のハッシュを末尾に付ける
+ *
+ * 例: 'よみうりランド (川崎市)' → 'yomiuri-land-kawasaki-1a2b'
+ */
+export function spotToSlug(spot: Spot, area: AreaSlug | string): string {
+  const base = spot.name
+    .replace(/[（(].*?[）)]/g, '') // 括弧書き除外
+    .trim();
+  // 簡易ローマ字化はしない。代わりに crc32 風の短ハッシュ + name の安全なエンコードで一意性確保。
+  const cityPart = spot.ward ?? spot.city ?? '';
+  const hashInput = `${area}|${base}|${cityPart}`;
+  // 簡易ハッシュ（衝突防止用、短く 4文字）
+  let h = 0;
+  for (let i = 0; i < hashInput.length; i++) {
+    h = ((h << 5) - h + hashInput.charCodeAt(i)) | 0;
+  }
+  const hash = Math.abs(h).toString(36).padStart(4, '0').slice(-4);
+  // URL slug 部分は日本語タイトルから安全な文字だけを残す（最大40文字）
+  const safe = encodeURIComponent(base).replace(/%[0-9A-F]{2}/gi, '-').replace(/-+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
+  return `${safe}-${hash}`;
+}
+
+/**
+ * 全エリアの全スポットをフラットに列挙（一意slug付き）。
+ * sitemap, app/spot/[slug] の静的生成で使う。
+ */
+export function getAllSpotsWithSlug(): Array<{ slug: string; area: AreaSlug | string; spot: Spot }> {
+  const all: Array<{ slug: string; area: AreaSlug | string; spot: Spot }> = [];
+  const seen = new Set<string>();
+  for (const [area, list] of Object.entries(SPOTS)) {
+    if (!list) continue;
+    for (const s of list) {
+      const slug = spotToSlug(s, area);
+      if (seen.has(slug)) continue;
+      seen.add(slug);
+      all.push({ slug, area, spot: s });
+    }
+  }
+  for (const s of TOKYO_RESTAURANTS) {
+    const slug = spotToSlug(s, 'tokyo');
+    if (seen.has(slug)) continue;
+    seen.add(slug);
+    all.push({ slug, area: 'tokyo', spot: s });
+  }
+  return all;
+}
+
+/**
+ * slug からスポットを取得（個別ページ用）。
+ */
+export function getSpotBySlug(
+  slug: string,
+): { slug: string; area: AreaSlug | string; spot: Spot } | undefined {
+  return getAllSpotsWithSlug().find((x) => x.slug === slug);
+}
+
 /** スポットカテゴリを日本語ラベルに変換 */
 export const SPOT_CATEGORY_LABEL: Record<SpotCategory, string> = {
   zoo: '動物園',

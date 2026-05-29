@@ -10,6 +10,7 @@ import type { MetadataRoute } from 'next';
 
 import { getArticleIds, getCategories } from '@/lib/microcms';
 import { getAllFileArticles } from '@/lib/articles';
+import { getAllSpotsWithSlug } from '@/lib/spots';
 import { getAllTags } from '@/lib/tags';
 import { TOKYO_STATIONS } from '@/lib/tokyo-stations';
 import { KANSAI_STATIONS } from '@/lib/kansai-stations';
@@ -39,6 +40,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: BASE, lastModified: new Date(), changeFrequency: 'daily', priority: 1 },
     { url: `${BASE}/items`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE}/recipes`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/spots`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/tools`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/tools/babycar-shindan`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/tools/naraigoto-match`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
@@ -220,5 +222,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // 判定の温床になるため。AdSense承認後に再追加予定。
   // 旧: ...linePages, ...stationConditionPages, ...dataPages
   void stationConditionPages; // 生成ロジックは保持（再開を容易にするため）
-  return [...staticPages, ...categoryPages, ...articlePages, ...tagPages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...kanagawaStationPages, ...saichiStationPages, ...lineIndex, ...linePages, ...dataPages];
+
+  // スポット個別ページ（プログラマティックSEO第3弾、2026-05追加）
+  // isIndexable() の条件を満たすスポットのみsitemapに含める（薄ページ判定回避）。
+  const spotPages = getAllSpotsWithSlug()
+    .filter((x) => {
+      const s = x.spot;
+      let score = 0;
+      if (s.note && s.note.length >= 25) score++;
+      if (s.facilities && Object.keys(s.facilities).length >= 2) score++;
+      if (s.pricing && Object.keys(s.pricing).length >= 1) score++;
+      if (s.hiddenTip && s.hiddenTip.length >= 15) score++;
+      if (s.nearestStation) score++;
+      if (s.ward || s.city) score++;
+      return score >= 3;
+    })
+    .map((x) => ({
+      url: `${BASE}/spot/${x.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    }));
+
+  return [...staticPages, ...categoryPages, ...articlePages, ...tagPages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...kanagawaStationPages, ...saichiStationPages, ...lineIndex, ...linePages, ...dataPages, ...spotPages];
 }
