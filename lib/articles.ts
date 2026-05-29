@@ -54,6 +54,13 @@ export type FileArticleMeta = {
    * TL;DR と Quick Info の間にレンダーされる。
    */
   interactive?: 'AgeMonthCalculator' | 'BabyCarRouteEstimator' | 'NaptimeFitFinder';
+  /**
+   * 監修者情報（E-E-A-T強化）。
+   * 医療・栄養・教育・金融など専門領域の記事に設定すると、記事冒頭に
+   * 「監修：○○（小児科医）」のラベルが表示される。
+   * lib/supervisors.ts の id を指定する。
+   */
+  supervisor?: string;
 };
 
 export type FileArticleFaq = {
@@ -142,6 +149,7 @@ function parseFrontmatter(raw: string, fallbackSlug: string): { meta: FileArticl
       d.interactive === 'NaptimeFitFinder'
         ? d.interactive
         : undefined,
+    supervisor: typeof d.supervisor === 'string' ? d.supervisor : undefined,
   };
 
   return { meta, content };

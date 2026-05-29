@@ -20,6 +20,8 @@ import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
 import { InlineItemCTA } from '@/components/article/InlineItemCTA';
 import { getAffiliateProducts } from '@/lib/affiliate-products';
 import { getRelatedItemsForArticle } from '@/lib/article-product-hints';
+import { getSupervisor } from '@/lib/supervisors';
+import { SupervisorLabel } from '@/components/article/SupervisorLabel';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { getTagsForArticle } from '@/lib/tags';
 import { FavoriteButton } from '@/components/ui/FavoriteButton';
@@ -597,6 +599,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
     url: `https://kyounoko.jp/plan/${p.id}`,
   }));
 
+  const supForJsonLd = getSupervisor(article.supervisor);
   const jsonLdArticle = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -610,6 +613,17 @@ function FileArticleView({ article }: { article: FileArticle }) {
     wordCount: articleWordCount,
     timeRequired: `PT${article.readingTimeMin}M`,
     ...(mentions.length > 0 ? { mentions } : {}),
+    ...(supForJsonLd
+      ? {
+          reviewedBy: {
+            '@type': 'Person',
+            name: supForJsonLd.name,
+            jobTitle: supForJsonLd.qualification,
+            affiliation: supForJsonLd.affiliation,
+            url: supForJsonLd.url,
+          },
+        }
+      : {}),
     author: {
       '@type': 'Person',
       '@id': 'https://kyounoko.jp/about#author',
@@ -876,6 +890,12 @@ function FileArticleView({ article }: { article: FileArticle }) {
               </p>
             </aside>
           )}
+
+          {/* 監修者ラベル（E-E-A-T強化）。frontmatter の `supervisor: id` で表示 */}
+          {(() => {
+            const sup = getSupervisor(article.supervisor);
+            return sup ? <SupervisorLabel supervisor={sup} /> : null;
+          })()}
 
           {/* 記事の要約（AI Overview 抽出を意識） */}
           {article.tldr && (
