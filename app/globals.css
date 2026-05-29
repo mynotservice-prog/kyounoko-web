@@ -3208,3 +3208,229 @@ button:focus:not(:focus-visible), a:focus:not(:focus-visible) {
   border-left: 3px solid var(--clay);
   background-color: rgba(251, 232, 216, 0.35); /* peach-soft の薄め */
 }
+
+/* ==========================================================================
+   モバイル最適化（2026-05 追加）
+   - 目的：iPhone（375-414px）/ Android（360-412px）で「見やすい」を担保
+   - 致命的問題 3 つ：(1) TOCジャンプ位置 (2) ヘッダタップ領域 (3) テーブル横スクロール
+   - 重要 4 つ：余白圧縮 / 行間調整 / iframe縦長防止 / 横はみ出し防止
+   ========================================================================== */
+
+/* (A) 共通：横スクロール撲滅。長い文字列・URL・タグも折り返す */
+html, body { overflow-x: hidden; }
+.prose a, .prose code, .prose li, .prose p, .prose h1, .prose h2, .prose h3, .prose h4 {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* (B) iframe（YouTube以外の埋め込み・広告枠など）の縦長暴走を防止
+   YouTubeEmbed は aspectRatio: '16 / 9' で囲んでいるので影響なし */
+iframe:not([class*="adsbygoogle"]):not([id*="aswift"]) {
+  max-width: 100%;
+}
+
+/* (C) スクロールマージンをモバイルで適正化
+   旧: 全画面で 124px → モバイルの sticky ヘッダ 68px しかないため余白が大きすぎ
+   sticky article 内ナビ込みでも 80px で十分 */
+@media (max-width: 1099px) {
+  .prose h2,
+  .prose h3,
+  [id^="section-"] {
+    scroll-margin-top: 80px;
+  }
+}
+
+/* (D) ヘッダのタップ領域改善：iOS HIG / Material は 44pt 推奨
+   モバイル時のみ width/height 44px を強制（インライン style を上書き） */
+@media (max-width: 767px) {
+  .site-header .bar {
+    gap: 8px; /* 20px → 8px：ロゴ + 検索 + ハンバーガー の3要素に最適 */
+    height: 60px; /* 68 → 60：垂直スペース節約 */
+  }
+  .site-header .bar > div:last-child {
+    gap: 4px !important; /* 右クラスタ内のgapを詰める */
+  }
+  .site-header a[aria-label="サイト内検索"],
+  .site-header .header-hamburger {
+    width: 44px !important;
+    height: 44px !important;
+  }
+  .logo { font-size: 17px; gap: 8px; }
+  .logo-mark { width: 30px; height: 30px; }
+}
+
+/* (E) テーブル横スクロールのヒント表示
+   テーブルが画面より広い時に「→」を右端にうっすら見せて、横スクロール可と分かるようにする */
+@media (max-width: 767px) {
+  .prose table {
+    position: relative;
+    /* 影で「まだ続く」を示唆 */
+    background:
+      linear-gradient(to right, var(--paper-card) 30%, rgba(255,255,255,0)) left center / 20px 100% no-repeat,
+      linear-gradient(to right, rgba(255,255,255,0), var(--paper-card) 70%) right center / 20px 100% no-repeat,
+      linear-gradient(to right, rgba(201,96,62,.18), rgba(201,96,62,0)) left center / 8px 100% no-repeat,
+      linear-gradient(to left, rgba(201,96,62,.18), rgba(201,96,62,0)) right center / 8px 100% no-repeat;
+    background-attachment: local, local, scroll, scroll;
+  }
+  .prose table th,
+  .prose table td {
+    padding: 8px 10px;
+    font-size: 13px;
+    white-space: nowrap; /* セル内は折り返さず、全体で横スクロール */
+  }
+  /* 最初の列は折り返してOK（見出し列が長い時の対策） */
+  .prose table th:first-child,
+  .prose table td:first-child {
+    white-space: normal;
+    min-width: 100px;
+  }
+}
+
+/* (F) Hero on mobile：余白さらに圧縮（極狭幅対策）*/
+@media (max-width: 480px) {
+  .hero { padding: 32px 0 24px; }
+  .hero h1 { font-size: clamp(24px, 7.2vw, 32px); line-height: 1.3; margin-bottom: 14px; }
+  .hero .lead { font-size: 14.5px; line-height: 1.7; margin-bottom: 20px; }
+  .hero-actions { gap: 10px; }
+  .hero-actions .btn-primary,
+  .hero-actions .btn-ghost { flex: 1 1 auto; justify-content: center; padding: 12px 14px; font-size: 13.5px; }
+}
+
+/* (G) Today's Card の余白圧縮（モバイル）*/
+@media (max-width: 480px) {
+  .today-card { padding: 20px 18px; border-radius: 20px; }
+  .today-card .date-line { font-size: 18px; }
+  .today-card .hint-rows { padding: 14px 0 18px; gap: 10px; margin-bottom: 18px; }
+  .hint-row { font-size: 12.5px; }
+  .today-card .cta { padding: 12px 14px; font-size: 13.5px; }
+}
+
+/* (H) Finder（条件で探す）モバイル最適化 */
+@media (max-width: 480px) {
+  .finder { padding: 22px 16px; border-radius: 16px; }
+  .finder-head { margin-bottom: 20px; }
+  .finder-head .eyebrow { margin-bottom: 10px; }
+  .finder-head h2 { font-size: 19px; line-height: 1.4; }
+  .finder-head p { font-size: 13.5px; }
+}
+
+/* (I) Section / Container さらに圧縮 */
+@media (max-width: 480px) {
+  .section { padding: 36px 0; }
+  .section-head { margin-bottom: 24px; padding-bottom: 12px; }
+  .section-head h2 { font-size: clamp(20px, 5.5vw, 26px); }
+  .section-head .hint { font-size: 11px; }
+}
+
+/* (J) 記事ヘッダー(.answer-hero / .page-head)モバイル */
+@media (max-width: 480px) {
+  .answer-hero-body { padding: 24px 20px 28px; }
+  .answer-title { font-size: clamp(20px, 5.4vw, 26px); line-height: 1.4; margin-bottom: 16px; }
+  .answer-reasons { gap: 6px 10px; }
+  .answer-reasons li { font-size: 12.5px; }
+  .answer-lede { font-size: 13.5px; line-height: 1.85; }
+  .answer-cta { padding: 12px 20px; font-size: 12.5px; }
+  .page-head { padding: 20px 0 24px; }
+  .page-head h1 { font-size: clamp(22px, 6vw, 30px); }
+  .page-head .lead { font-size: 14px; }
+}
+
+/* (K) 記事本文 .prose のモバイル余白・行間最適化 */
+@media (max-width: 480px) {
+  .prose { font-size: 15px; line-height: 1.88; }
+  .prose h2 { margin: 40px 0 14px; font-size: 19px; padding-left: 12px; border-left-width: 3px; }
+  .prose h3 { margin: 28px 0 10px; font-size: 16px; }
+  .prose h4 { margin: 22px 0 8px; font-size: 14.5px; }
+  .prose p { margin: 1em 0; }
+  .prose ul, .prose ol { padding-left: 1.3em; margin: 1em 0; }
+  .prose blockquote { padding: 12px 14px; margin: 1.3em 0; font-size: .94em; }
+  .prose pre { padding: 12px 14px; font-size: .85em; }
+}
+
+/* (L) TL;DR / Top-Pick / 各種カードの圧縮 */
+@media (max-width: 480px) {
+  .top-pick-box { padding: 22px 20px 24px; margin: 24px 0 18px; border-radius: 16px; }
+  .top-pick-box .top-pick-title { font-size: 18px; line-height: 1.4; }
+  .top-pick-box .top-pick-name { font-size: 16px; padding: 8px 12px; }
+  .top-pick-box .top-pick-desc { font-size: 13px; line-height: 1.8; }
+  .tldr-box { padding: 16px 18px 18px; margin: 22px 0 10px; border-radius: 14px; }
+  .tldr-box .tldr-text { font-size: 13.5px; line-height: 1.8; }
+}
+
+/* (M) Article Meta（日付・読み時間）の調整 */
+@media (max-width: 480px) {
+  .article-meta { font-size: 11.5px; gap: 8px; margin-bottom: 16px; }
+  .breadcrumb { font-size: 10.5px; padding: 14px 0 0; }
+  .breadcrumb .sep { margin: 0 6px; }
+}
+
+/* (N) スティッキー下部ナビとの被り対策（リンクが隠れないように） */
+@media (max-width: 767px) {
+  body { padding-bottom: 76px; } /* 既存80pxを若干圧縮 */
+  .article-layout { padding-bottom: 24px; }
+}
+
+/* (O) 画像のborder-radius調整（モバイルでは小さく） */
+@media (max-width: 480px) {
+  .prose img { border-radius: 10px; margin: 1em 0; }
+}
+
+/* (P) FAQ summary タップ領域は既に 52px だが、字を調整 */
+@media (max-width: 480px) {
+  .faq-item > summary {
+    min-height: 48px;
+    padding: 12px 14px;
+    font-size: 14.5px;
+  }
+}
+
+/* (Q) safe-area 対応：iPhone のノッチ/ホームインジケータ対策 */
+.container,
+.container-article,
+.container-narrow {
+  padding-left: max(var(--pad, 20px), env(safe-area-inset-left));
+  padding-right: max(var(--pad, 20px), env(safe-area-inset-right));
+}
+@media (max-width: 600px) {
+  .container,
+  .container-article,
+  .container-narrow {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+}
+@media (max-width: 380px) {
+  .container,
+  .container-article,
+  .container-narrow {
+    padding-left: max(14px, env(safe-area-inset-left));
+    padding-right: max(14px, env(safe-area-inset-right));
+  }
+}
+
+/* (R) フッタの余白圧縮 */
+@media (max-width: 480px) {
+  .site-footer { padding: 40px 0 28px; }
+  .footer-grid { padding-bottom: 28px; gap: 28px; }
+  .footer-col h4 { margin-bottom: 12px; }
+  .footer-col li { margin-bottom: 8px; }
+  .footer-col a { font-size: 13px; }
+  .copy { padding-top: 20px; font-size: 10.5px; gap: 8px; }
+}
+
+/* (S) seasonal-grid / age-panels：狭画面で読みやすく */
+@media (max-width: 540px) {
+  .seasonal-grid { grid-template-columns: 1fr 1fr !important; gap: 12px; }
+  .age-panels { grid-template-columns: 1fr !important; }
+}
+
+/* (T) 関連記事カード等のhoverをモバイルで無効化（誤発火防止） */
+@media (hover: none) {
+  .related-card:hover,
+  .pick:hover,
+  .alt-card:hover { transform: none !important; }
+}
+
+/* (U) スクロール時のヘッダー隠し対策で記事H2のスクロール位置がズレる場合の補助 */
+:target { scroll-margin-top: 80px; }
+@media (min-width: 1100px) { :target { scroll-margin-top: 124px; } }
