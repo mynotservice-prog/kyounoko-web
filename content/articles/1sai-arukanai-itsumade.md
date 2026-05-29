@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-01.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/1sai-arukanai-itsumade.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +20,7 @@ quickInfo:
   budget: free
 lede: >-
   「1歳過ぎたのにまだ歩かない」「つかまり立ちもしない」と心配な親は多い。本記事は1歳児の歩行発達の標準、心配な月齢の目安、発達相談を考える時期、家庭でできるサポートまで完全ガイド。個人差が大きい1歳の発達を、安心して見守るための判断軸をまとめました。
+legacyHero: /hero/baby-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

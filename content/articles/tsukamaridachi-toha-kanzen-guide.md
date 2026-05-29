@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-01.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/tsukamaridachi-toha-kanzen-guide.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
 lede: >-
   つかまり立ちは赤ちゃんが家具などにつかまって立つ動作で、生後8〜11ヶ月頃に始まります。本記事はつかまり立ちの定義、時期、関わり方、安全対策、遅い場合の対応まで完全ガイド。事故予防と発達のサポートで安全に歩行へ移行する判断軸をまとめました。
 seoRelated: hai-hai-shinai-tsuri-bai-kara
+legacyHero: /hero/baby-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

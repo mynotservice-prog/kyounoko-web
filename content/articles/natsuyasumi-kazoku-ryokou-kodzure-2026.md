@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/park-02.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/natsuyasumi-kazoku-ryokou-kodzure-2026.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -23,6 +23,7 @@ quickInfo:
 lede: >-
   夏休みの子連れ国内旅行は「年齢適合の目的地＋無理ない移動＋早めの予約」で失敗しません。本記事は0歳から6歳まで年齢別のおすすめ目的地、予算目安、新幹線・飛行機・車の選び方、ホテル選びの判断軸、持ち物リスト、当日のタイムスケジュール例まで2026年版で完全ガイド。失敗しない子連れ旅行のコツを実体験ベースでまとめました。
 seoRelated: obon-kisei-shintetsu-baby
+legacyHero: /hero/park-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

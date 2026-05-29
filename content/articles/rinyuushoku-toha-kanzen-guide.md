@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-01.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/rinyuushoku-toha-kanzen-guide.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +20,7 @@ quickInfo:
   budget: low
 lede: >-
   「離乳食って何？」「いつから始めるの？」「何を食べさせればいい？」——0歳児のママ・パパが最初に直面する大きな悩みです。本記事は離乳食の基本から、開始時期、各ステージの量・食材・進め方、必要な道具、よくあるトラブルまで完全ガイド。育児書・保健師の情報を分かりやすく整理した入門書として、初めての離乳食を不安なくスタートしましょう。
+legacyHero: /hero/baby-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

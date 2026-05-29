@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-03.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodomo-sandal-natsu-osusume-2026.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -23,6 +23,7 @@ quickInfo:
 lede: >-
   子供サンダル選びは「脱げにくさ」「滑りにくさ」「足の発達への配慮」の3軸で決まります。本記事は0歳から6歳まで年齢別、男女別のおすすめサンダル15タイプを2026年版で徹底比較。水陸両用の選び方、サイズ感、海・プール・公園・夏祭りで使い分けるベストな選択を実体験ベースで解説する保存版です。
 seoRelated: kodzure-outdoor-leisure-goods-2026
+legacyHero: /hero/baby-03.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

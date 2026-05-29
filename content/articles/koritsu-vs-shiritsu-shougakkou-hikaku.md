@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/classroom-03.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/koritsu-vs-shiritsu-shougakkou-hikaku.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
 lede: >-
   「うちの子、公立と私立どちらがいい？」を2026年版で完全比較。学費・教育方針・通学・受験準備・卒業後の進路の5項目で徹底解説。中学受験を見据えた選択、家庭の経済力、子どもの性格との相性、後悔しない進学先選びの判断軸まで完全ガイドします。
 seoRelated: shougakkou-nyugaku-junbi-kanzen-list
+legacyHero: /hero/classroom-03.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

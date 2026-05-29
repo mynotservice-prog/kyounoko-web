@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/babyfood-toha-kanzen-guide.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
 lede: >-
   ベビーフードは「忙しいママ・パパの味方」で、栄養バランスも高品質。本記事はベビーフードの定義、種類、月齢別の選び方、安全性、手作りとの併用法、お出かけ時の活用まで完全ガイド。罪悪感なく上手に活用するための判断軸をまとめました。
 seoRelated: rinyuushoku-toha-kanzen-guide
+legacyHero: /hero/food-japan-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

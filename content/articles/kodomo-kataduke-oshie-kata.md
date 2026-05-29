@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-03.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodomo-kataduke-oshie-kata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   「子供がお片付けしない」「言わないと動かない」——多くの家庭が悩むテーマ。本記事は年齢別のお片付け習慣化のステップ、声かけのコツ、収納の工夫、ゲーム感覚での導入まで完全ガイド。叱らずに自然に身につく方法をまとめました。
+legacyHero: /hero/baby-03.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

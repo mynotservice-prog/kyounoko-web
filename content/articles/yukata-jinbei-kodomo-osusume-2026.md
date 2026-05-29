@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/park-03.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/yukata-jinbei-kodomo-osusume-2026.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -23,6 +23,7 @@ quickInfo:
 lede: >-
   子供の浴衣・甚平は「サイズ感」と「着付けの簡単さ」で当日の機嫌が決まります。本記事は0歳から6歳まで年齢別のおすすめタイプ、結び帯付き・マジックテープ式など着付けゼロのモデル、お祭り当日の持ち物、男女別の柄選びのコツを2026年版で完全解説。毎年買い替える前提のコスパも実体験で判断軸を整理しました。
 seoRelated: kodzure-outdoor-leisure-goods-2026
+legacyHero: /hero/park-03.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

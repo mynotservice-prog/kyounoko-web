@@ -6,8 +6,8 @@ metaDescription: >-
 category: narai
 categoryName: 習い事と学び
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/kid-study-01.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodomo-online-eikaiwa-osusume-2026.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +22,7 @@ quickInfo:
 lede: >-
   子供向けオンライン英会話は「年齢適合＋講師の質＋親のサポート負担」の3軸で選びます。本記事は3歳から小学校6年までの年齢別おすすめ8社を、料金・講師の質・教材・無料体験・キャンセル制度の観点で2026年版に徹底比較。いつから始めるべきか、効果が出る続け方、無料体験の使い倒し方まで完全ガイド。家計に無理なく続けられる教室を選ぶための判断軸をまとめました。
 seoRelated: chiiku-subsc-3sha-2026-comparison
+legacyHero: /hero/kid-study-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

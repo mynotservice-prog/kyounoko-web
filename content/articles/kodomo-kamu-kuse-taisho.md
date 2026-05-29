@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-03.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodomo-kamu-kuse-taisho.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: free
 lede: >-
   「子供が友達を噛む」「親を噛んでくる」——1〜3歳によくある「噛む癖」の悩み。本記事は原因別の対処法、友達を噛んだ時の対応、保育園での対応まで完全ガイド。多くは2〜3歳までに自然に落ち着く一時的なものです。
+legacyHero: /hero/baby-03.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

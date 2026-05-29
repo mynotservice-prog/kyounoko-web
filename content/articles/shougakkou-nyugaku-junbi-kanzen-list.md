@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/classroom-02.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/shougakkou-nyugaku-junbi-kanzen-list.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
 lede: >-
   小学校入学準備は「学用品＋生活習慣＋お名前付け」の3軸で進めます。本記事は2026年版で、ランドセル・文房具・体操着・上履きなど学用品の完全リスト、1月〜3月の月別スケジュール、早寝早起きや身の回りのことの習慣化、お名前付けの効率化テクまで完全ガイド。来年小学校入学のご家庭向けに、慌てないための判断軸をまとめました。
 seoRelated: randoseru-erabikata-osusume-2026
+legacyHero: /hero/classroom-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

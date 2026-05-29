@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/park-02.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodomo-jitensha-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: mid
 lede: >-
   「子供の自転車、いつから乗せる？」を年齢別に完全ガイド。三輪車・ストライダー・補助輪付き・補助輪なしまでの目安、サイズ選び、練習のコツ、安全対策まで完全解説。年齢に合った自転車選びの判断軸をまとめました。
+legacyHero: /hero/park-02.webp
 ---
 
 ## 結論

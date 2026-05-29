@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-03.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kami-omotsu-vs-nuno-omotsu-hikaku.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   「紙オムツと布オムツ、どちらがいい？」を2026年版で完全比較。コスト・手間・吸収力・肌への影響・環境負荷の6項目で徹底解説。ライフスタイル別のおすすめ、ハイブリッド使用法、布オムツデビューのコツまで完全ガイド。家庭の状況で最適な選択を。
+legacyHero: /hero/baby-03.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

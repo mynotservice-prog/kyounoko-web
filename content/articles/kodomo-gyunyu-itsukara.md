@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-01.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodomo-gyunyu-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,8 +19,8 @@ quickInfo:
     - any
   durationMin: 5
   budget: low
-lede: >-
-  「牛乳はいつから飲ませる？」を完全ガイド。離乳食期の調理用、1歳の飲用デビュー、量の目安、アレルギー対策、フォローアップミルクとの違いまで解説します。
+lede: 「牛乳はいつから飲ませる？」を完全ガイド。離乳食期の調理用、1歳の飲用デビュー、量の目安、アレルギー対策、フォローアップミルクとの違いまで解説します。
+legacyHero: /hero/baby-01.webp
 ---
 
 ## 結論

@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-02.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/akachan-yoku-haku-genin-taisho.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +20,7 @@ quickInfo:
   budget: free
 lede: >-
   赤ちゃんが授乳後・離乳食後に吐くのは多くが「吐き戻し」で心配不要。本記事は吐き戻しと嘔吐の見分け方、原因、受診すべき症状、月齢別の対応を完全ガイド。危険サインを見逃さないための判断軸をまとめました。
+legacyHero: /hero/baby-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

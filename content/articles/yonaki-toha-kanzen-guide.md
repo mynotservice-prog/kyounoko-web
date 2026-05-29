@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-02.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/yonaki-toha-kanzen-guide.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +22,7 @@ quickInfo:
 lede: >-
   「夜泣きって何？」「いつまで続くの？」「対処法は？」——0〜2歳の最も消耗する育児の悩み、夜泣き。本記事は夜泣きの定義、原因、月齢別の特徴、効果的な対処法、夫婦で乗り越えるコツ、長引く場合の専門家相談の目安まで完全ガイド。睡眠不足の毎日を少しでも楽にするための実用ガイドです。
 seoRelated: akachan-nekashitsuke-kanzen-guide-0-1sai
+legacyHero: /hero/baby-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

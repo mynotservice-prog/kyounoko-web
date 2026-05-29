@@ -2,12 +2,13 @@
 slug: kodomo-uso-tsuku-3sai-taisho
 title: 3〜6歳の子供が嘘をつく｜原因と対処法・叱り方完全ガイド
 metaDescription: >-
-  3〜6歳の子供が嘘をつく理由と対処法を完全解説。発達段階としての嘘、想像と現実の区別、叱る vs 受け止める、悪意のある嘘の見分け方、嘘をつかない子に育てる関わり方まで2026年版で網羅した保存版です。
+  3〜6歳の子供が嘘をつく理由と対処法を完全解説。発達段階としての嘘、想像と現実の区別、叱る vs
+  受け止める、悪意のある嘘の見分け方、嘘をつかない子に育てる関わり方まで2026年版で網羅した保存版です。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-03.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodomo-uso-tsuku-3sai-taisho.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「うちの子嘘ばかりつく」「3歳でもう嘘？」——3〜6歳の子供の嘘は発達の自然な過程。本記事は嘘の種類、年齢別の意味、対処法、叱り方を完全ガイド。「嘘＝悪」と決めつけず、成長として受け止める対応をまとめました。
+legacyHero: /hero/baby-03.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

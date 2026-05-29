@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-01.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodomo-hachimitsu-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,8 +19,8 @@ quickInfo:
     - any
   durationMin: 5
   budget: free
-lede: >-
-  「はちみつは何歳から？」を完全ガイド。1歳未満は絶対NG、ボツリヌス症のリスク、1歳以降の与え方、代替案まで解説します。
+lede: 「はちみつは何歳から？」を完全ガイド。1歳未満は絶対NG、ボツリヌス症のリスク、1歳以降の与え方、代替案まで解説します。
+legacyHero: /hero/baby-01.webp
 ---
 
 ## 結論

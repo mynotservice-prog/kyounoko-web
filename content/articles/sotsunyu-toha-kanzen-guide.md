@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/sotsunyu-toha-kanzen-guide.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +22,7 @@ quickInfo:
 lede: >-
   「卒乳って何？」「断乳と何が違うの？」「いつ始めるべき？」——0〜2歳の母乳ママが直面する大きな決断、卒乳。本記事は卒乳の定義、断乳との違い、時期の目安、無理のない進め方、おっぱいトラブル対処、子どもがぐずる時の乗り越え方まで完全ガイド。親子に無理のない卒乳・断乳の判断軸をまとめました。
 seoRelated: sotsunyu-danyu-susumekata
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

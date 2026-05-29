@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-03.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodomo-suiminji-mokuyasu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,8 +20,8 @@ quickInfo:
     - any
   durationMin: 10
   budget: free
-lede: >-
-  「子供の理想的な睡眠時間は？」を月齢・年齢別に完全ガイド。夜・昼寝・合計の目安、不足のサイン、リズムの整え方まで解説します。
+lede: 「子供の理想的な睡眠時間は？」を月齢・年齢別に完全ガイド。夜・昼寝・合計の目安、不足のサイン、リズムの整え方まで解説します。
+legacyHero: /hero/baby-03.webp
 ---
 
 ## 結論｜月齢・年齢別の必要睡眠時間

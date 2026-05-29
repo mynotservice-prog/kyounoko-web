@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-03.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/1sai-hattatsu-kanzen-guide.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
 lede: >-
   1歳児は「歩く・話す・自我が芽生える」一気に成長する時期。本記事は月齢別（12〜24ヶ月）の運動・言葉・心の発達目安、関わり方のコツ、心配な時のサイン、おすすめ知育玩具まで完全ガイド。我が家の実体験を交えて、1歳児の成長を楽しみ、健やかに育てるための判断軸をまとめました。
 seoRelated: hitomishiri-atooi-itsumade
+legacyHero: /hero/baby-03.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

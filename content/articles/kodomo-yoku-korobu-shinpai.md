@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/park-02.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodomo-yoku-korobu-shinpai.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -23,6 +23,7 @@ quickInfo:
 lede: >-
   「うちの子よく転ぶ」「つまずくことが多い」——1〜6歳の親が気になる悩み。本記事は転倒の原因、年齢別の正常範囲、運動能力との関係、靴選びの重要性、発達相談の目安まで完全ガイド。
 seoRelated: 1sai-arukanai-itsumade
+legacyHero: /hero/park-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

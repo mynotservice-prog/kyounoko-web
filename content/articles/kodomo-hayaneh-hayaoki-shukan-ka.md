@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-03.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodomo-hayaneh-hayaoki-shukan-ka.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: free
 lede: >-
   「子供を早く寝かせたい」「朝なかなか起きない」——2〜6歳の生活リズム作りの悩み。本記事は年齢別の理想就寝・起床時間、習慣化のコツ、入眠儀式、夜寝ない時の対処、小学校入学準備まで完全ガイド。1週間で習慣化する具体策をまとめました。
+legacyHero: /hero/baby-03.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

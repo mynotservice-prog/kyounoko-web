@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/summer-water-01.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/natsu-kosodate-kanzen-map.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -23,6 +23,7 @@ quickInfo:
 lede: >-
   0〜6歳の夏の子育ては「熱中症対策・水遊び・夏休みの過ごし方」が大きなテーマ。本ページは6月〜8月の子育てで知りたいこと（熱中症・プール&海・自由研究・夏祭り・お盆帰省・夏服選び・夏のスポット）をすべて網羅したナレッジハブです。各テーマの詳細記事リンクから、必要な情報にすぐアクセスできます。
 seoRelated: 0sai-ikuji-kanzen-map
+legacyHero: /hero/summer-water-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

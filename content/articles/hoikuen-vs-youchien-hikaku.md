@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/classroom-02.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/hoikuen-vs-youchien-hikaku.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -23,6 +23,7 @@ quickInfo:
 lede: >-
   「保育園と幼稚園、どちらに入れるべき？」を2026年版で完全比較。預かり時間・費用・カリキュラム・親の負担の違いから、共働き・専業家庭それぞれのおすすめ、認定こども園の選択肢、入園準備までガイド。家庭の状況で最適な選択ができるようまとめました。
 seoRelated: hoikuen-nyuuen-junbi-0-2sai-kanzen-list
+legacyHero: /hero/classroom-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

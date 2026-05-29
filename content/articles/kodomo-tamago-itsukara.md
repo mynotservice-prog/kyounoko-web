@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-02.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodomo-tamago-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,8 +19,8 @@ quickInfo:
     - any
   durationMin: 5
   budget: low
-lede: >-
-  「卵はいつから？」を完全ガイド。卵黄6ヶ月、全卵9ヶ月、生卵は3歳以降。アレルギー対策、進め方、量の目安まで解説します。
+lede: 「卵はいつから？」を完全ガイド。卵黄6ヶ月、全卵9ヶ月、生卵は3歳以降。アレルギー対策、進め方、量の目安まで解説します。
+legacyHero: /hero/baby-02.webp
 ---
 
 ## 結論

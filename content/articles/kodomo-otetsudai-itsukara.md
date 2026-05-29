@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-03.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodomo-otetsudai-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,8 +19,8 @@ quickInfo:
     - any
   durationMin: 10
   budget: free
-lede: >-
-  「お手伝いはいつから？」を年齢別に解説。2歳から始められること、声かけのコツ、習慣化、お小遣いとの関係まで完全ガイド。
+lede: 「お手伝いはいつから？」を年齢別に解説。2歳から始められること、声かけのコツ、習慣化、お小遣いとの関係まで完全ガイド。
+legacyHero: /hero/baby-03.webp
 ---
 
 ## 結論

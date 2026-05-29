@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-02.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/bonyu-vs-milk-hikaku.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +20,7 @@ quickInfo:
   budget: low
 lede: >-
   「母乳とミルク、どちらがいい？」を2026年版で完全比較。栄養・免疫・経済性・親の負担の5項目で徹底解説。完全母乳・完全ミルク・混合栄養のメリットとデメリット、母乳が出ない場合の対処、ミルクの選び方まで完全ガイド。家庭の状況で最適な選択を見つけましょう。
+legacyHero: /hero/baby-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

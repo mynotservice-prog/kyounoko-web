@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-01.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/babycar-a-vs-b-katanonoshi-hikaku.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +22,7 @@ quickInfo:
 lede: >-
   「ベビーカーはA型・B型どっちを買う？」を2026年版で完全比較。対象月齢・重さ・リクライニング・収納・走行性の6項目で徹底解説。新生児からA型1本、A型→B型乗り換え、両方持つの3パターンのコスパ比較、購入タイミングまで完全ガイド。
 seoRelated: babycar-osusume-2026-15model-hikaku
+legacyHero: /hero/baby-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

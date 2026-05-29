@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/commerce-02.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/rakuten-vs-amazon-kosodate-hikaku.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -23,6 +23,7 @@ quickInfo:
 lede: >-
   「子育てに必要なものは楽天とAmazon、どっちで買うべき？」を2026年版で完全比較。価格・ポイント・配送・品揃え・定期便・セールの6項目で徹底解説。おむつ・離乳食・絵本・服のカテゴリ別おすすめ、使い分けのコツまでガイドします。
 seoRelated: kodzure-credit-card-osusume-2026
+legacyHero: /hero/commerce-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

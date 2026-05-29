@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-03.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/iyaiya-ki-toha-kanzen-guide.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +22,7 @@ quickInfo:
 lede: >-
   「イヤイヤ期って何？」「いつまで続くの？」「対処法は？」——1〜3歳の親が必ず通る道、イヤイヤ期。本記事はイヤイヤ期の定義、原因、時期、対処法、親の心構え、長引く場合の対応まで完全ガイド。「子どもの自我が育つ大切な時期」と理解した上で、消耗しすぎない関わり方をまとめました。
 seoRelated: 2sai-kanshaku-koekake-top10
+legacyHero: /hero/baby-03.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

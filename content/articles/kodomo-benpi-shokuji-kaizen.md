@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-01.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodomo-benpi-shokuji-kaizen.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   「子供がうんちが出ない」「3日以上便が出ない」——0〜6歳の便秘は意外に多い悩み。本記事は食事改善（食物繊維・水分・乳酸菌）、運動、便秘薬の使い方、受診の目安まで完全ガイド。家庭でできる改善と医療への適切な相談タイミングを整理しました。
+legacyHero: /hero/baby-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

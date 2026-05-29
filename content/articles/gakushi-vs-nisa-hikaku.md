@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/commerce-01.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/gakushi-vs-nisa-hikaku.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -23,6 +23,7 @@ quickInfo:
 lede: >-
   「教育資金は学資保険？それともつみたてNISA？」を2026年版で完全比較。返戻率・リスク・流動性・税制優遇・親の保障の5項目で徹底解説。家庭タイプ別おすすめ、両方併用する場合の配分、年齢別シミュレーションまで完全ガイド。長期教育資金準備の最適解を見つけましょう。
 seoRelated: gakushi-hoken-erabikata-2026
+legacyHero: /hero/commerce-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

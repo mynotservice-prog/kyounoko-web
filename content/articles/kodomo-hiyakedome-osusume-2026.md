@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-01.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodomo-hiyakedome-osusume-2026.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -23,6 +23,7 @@ quickInfo:
 lede: >-
   子供の日焼け止め選びは「年齢適合」「落としやすさ」「肌への優しさ」の3軸が重要です。本記事は0歳から使えるノンケミカル・敏感肌対応・ウォータープルーフ・全身用など、用途別に12製品タイプを徹底比較。SPF/PA表記の正しい読み方、海・プール・公園での使い分け、塗り直し頻度、トラブル予防まで2026年版で完全ガイド。
 seoRelated: kodomo-shigaisen-taisaku-2026
+legacyHero: /hero/baby-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

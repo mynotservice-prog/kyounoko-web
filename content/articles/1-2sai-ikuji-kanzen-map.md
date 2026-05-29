@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-02.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/1-2sai-ikuji-kanzen-map.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: free
 lede: >-
   1〜2歳児は「歩く・話す・自我が芽生える」一気に成長する時期。本ページは1〜2歳児育児を「発達・イヤイヤ期・言葉・食事・睡眠・トイトレ・保育園・遊び」の8軸で完全網羅。各テーマの詳細記事リンクから、必要な情報にすぐアクセスできる育児ナレッジハブです。困った時に何度でも戻ってきてください。
+legacyHero: /hero/baby-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

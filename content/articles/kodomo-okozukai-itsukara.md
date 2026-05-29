@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/commerce-02.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodomo-okozukai-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,8 +18,8 @@ quickInfo:
     - any
   durationMin: 10
   budget: low
-lede: >-
-  「お小遣いはいつから？いくら？」を年齢別に完全ガイド。定額制vs報酬制、お小遣い帳、貯金教育、キャッシュレス対応まで解説します。
+lede: 「お小遣いはいつから？いくら？」を年齢別に完全ガイド。定額制vs報酬制、お小遣い帳、貯金教育、キャッシュレス対応まで解説します。
+legacyHero: /hero/commerce-02.webp
 ---
 
 ## 結論

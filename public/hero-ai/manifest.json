@@ -3694,5 +3694,605 @@
     "generatedAt": "2026-05-26T04:42:29.530Z",
     "model": "flux-1-schnell",
     "steps": 4
+  },
+  "0sai-ikuji-kanzen-map": {
+    "slug": "0sai-ikuji-kanzen-map",
+    "ok": true,
+    "file": "/hero-ai/0sai-ikuji-kanzen-map.jpg",
+    "generatedAt": "2026-05-29T01:22:41.000Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "1sai-hattatsu-kanzen-guide": {
+    "slug": "1sai-hattatsu-kanzen-guide",
+    "ok": true,
+    "file": "/hero-ai/1sai-hattatsu-kanzen-guide.jpg",
+    "generatedAt": "2026-05-29T01:22:44.053Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "2sai-tomodachi-asobenai-taisho": {
+    "slug": "2sai-tomodachi-asobenai-taisho",
+    "ok": true,
+    "file": "/hero-ai/2sai-tomodachi-asobenai-taisho.jpg",
+    "generatedAt": "2026-05-29T01:22:44.842Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "akachan-nekashitsuke-kanzen-guide-0-1sai": {
+    "slug": "akachan-nekashitsuke-kanzen-guide-0-1sai",
+    "ok": true,
+    "file": "/hero-ai/akachan-nekashitsuke-kanzen-guide-0-1sai.jpg",
+    "generatedAt": "2026-05-29T01:22:47.209Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "akachan-omosharya-itsukara": {
+    "slug": "akachan-omosharya-itsukara",
+    "ok": true,
+    "file": "/hero-ai/akachan-omosharya-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:22:48.756Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "akachan-yoku-haku-genin-taisho": {
+    "slug": "akachan-yoku-haku-genin-taisho",
+    "ok": true,
+    "file": "/hero-ai/akachan-yoku-haku-genin-taisho.jpg",
+    "generatedAt": "2026-05-29T01:22:49.519Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "babycar-a-vs-b-katanonoshi-hikaku": {
+    "slug": "babycar-a-vs-b-katanonoshi-hikaku",
+    "ok": true,
+    "file": "/hero-ai/babycar-a-vs-b-katanonoshi-hikaku.jpg",
+    "generatedAt": "2026-05-29T01:22:51.424Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "babycar-fan-cooler-sheet-2026": {
+    "slug": "babycar-fan-cooler-sheet-2026",
+    "ok": true,
+    "file": "/hero-ai/babycar-fan-cooler-sheet-2026.jpg",
+    "generatedAt": "2026-05-29T01:22:51.855Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "babyfood-toha-kanzen-guide": {
+    "slug": "babyfood-toha-kanzen-guide",
+    "ok": true,
+    "file": "/hero-ai/babyfood-toha-kanzen-guide.jpg",
+    "generatedAt": "2026-05-29T01:22:53.673Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "bonyu-vs-milk-hikaku": {
+    "slug": "bonyu-vs-milk-hikaku",
+    "ok": true,
+    "file": "/hero-ai/bonyu-vs-milk-hikaku.jpg",
+    "generatedAt": "2026-05-29T01:22:53.920Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "gakushi-hoken-erabikata-2026": {
+    "slug": "gakushi-hoken-erabikata-2026",
+    "ok": true,
+    "file": "/hero-ai/gakushi-hoken-erabikata-2026.jpg",
+    "generatedAt": "2026-05-29T01:22:55.749Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "gakushi-vs-nisa-hikaku": {
+    "slug": "gakushi-vs-nisa-hikaku",
+    "ok": true,
+    "file": "/hero-ai/gakushi-vs-nisa-hikaku.jpg",
+    "generatedAt": "2026-05-29T01:22:56.664Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "hoikuen-nyuuen-junbi-0-2sai-kanzen-list": {
+    "slug": "hoikuen-nyuuen-junbi-0-2sai-kanzen-list",
+    "ok": true,
+    "file": "/hero-ai/hoikuen-nyuuen-junbi-0-2sai-kanzen-list.jpg",
+    "generatedAt": "2026-05-29T01:22:58.435Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "hoikuen-vs-youchien-hikaku": {
+    "slug": "hoikuen-vs-youchien-hikaku",
+    "ok": true,
+    "file": "/hero-ai/hoikuen-vs-youchien-hikaku.jpg",
+    "generatedAt": "2026-05-29T01:22:59.116Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "iyaiya-ki-toha-kanzen-guide": {
+    "slug": "iyaiya-ki-toha-kanzen-guide",
+    "ok": true,
+    "file": "/hero-ai/iyaiya-ki-toha-kanzen-guide.jpg",
+    "generatedAt": "2026-05-29T01:23:00.663Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kami-omotsu-vs-nuno-omotsu-hikaku": {
+    "slug": "kami-omotsu-vs-nuno-omotsu-hikaku",
+    "ok": true,
+    "file": "/hero-ai/kami-omotsu-vs-nuno-omotsu-hikaku.jpg",
+    "generatedAt": "2026-05-29T01:23:02.481Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-aisu-itsukara": {
+    "slug": "kodomo-aisu-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-aisu-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:23:03.091Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-benpi-shokuji-kaizen": {
+    "slug": "kodomo-benpi-shokuji-kaizen",
+    "ok": true,
+    "file": "/hero-ai/kodomo-benpi-shokuji-kaizen.jpg",
+    "generatedAt": "2026-05-29T01:23:04.942Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-chocolate-itsukara": {
+    "slug": "kodomo-chocolate-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-chocolate-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:23:05.237Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-eigo-itsukara": {
+    "slug": "kodomo-eigo-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-eigo-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:23:08.003Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-eigakan-itsukara": {
+    "slug": "kodomo-eigakan-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-eigakan-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:23:08.358Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-gyunyu-itsukara": {
+    "slug": "kodomo-gyunyu-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-gyunyu-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:23:10.582Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-hachimitsu-itsukara": {
+    "slug": "kodomo-hachimitsu-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-hachimitsu-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:23:10.692Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-hanamizu-tsuduku-byouin": {
+    "slug": "kodomo-hanamizu-tsuduku-byouin",
+    "ok": true,
+    "file": "/hero-ai/kodomo-hanamizu-tsuduku-byouin.jpg",
+    "generatedAt": "2026-05-29T01:23:13.225Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-hayaneh-hayaoki-shukan-ka": {
+    "slug": "kodomo-hayaneh-hayaoki-shukan-ka",
+    "ok": true,
+    "file": "/hero-ai/kodomo-hayaneh-hayaoki-shukan-ka.jpg",
+    "generatedAt": "2026-05-29T01:23:13.331Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-hiyakedome-osusume-2026": {
+    "slug": "kodomo-hiyakedome-osusume-2026",
+    "ok": true,
+    "file": "/hero-ai/kodomo-hiyakedome-osusume-2026.jpg",
+    "generatedAt": "2026-05-29T01:23:15.935Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-houchou-itsukara": {
+    "slug": "kodomo-houchou-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-houchou-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:23:16.362Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-jitensha-itsukara": {
+    "slug": "kodomo-jitensha-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-jitensha-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:23:17.988Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-juice-itsukara": {
+    "slug": "kodomo-juice-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-juice-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:23:18.498Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "1sai-arukanai-itsumade": {
+    "slug": "1sai-arukanai-itsumade",
+    "ok": true,
+    "file": "/hero-ai/1sai-arukanai-itsumade.jpg",
+    "generatedAt": "2026-05-29T01:26:49.479Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "1-2sai-ikuji-kanzen-map": {
+    "slug": "1-2sai-ikuji-kanzen-map",
+    "ok": true,
+    "file": "/hero-ai/1-2sai-ikuji-kanzen-map.jpg",
+    "generatedAt": "2026-05-29T01:26:50.039Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "akachan-oshaburi-itsumade": {
+    "slug": "akachan-oshaburi-itsumade",
+    "ok": true,
+    "file": "/hero-ai/akachan-oshaburi-itsumade.jpg",
+    "generatedAt": "2026-05-29T01:26:52.475Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "3-6sai-ikuji-kanzen-map": {
+    "slug": "3-6sai-ikuji-kanzen-map",
+    "ok": true,
+    "file": "/hero-ai/3-6sai-ikuji-kanzen-map.jpg",
+    "generatedAt": "2026-05-29T01:26:52.597Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-kamu-kuse-taisho": {
+    "slug": "kodomo-kamu-kuse-taisho",
+    "ok": true,
+    "file": "/hero-ai/kodomo-kamu-kuse-taisho.jpg",
+    "generatedAt": "2026-05-29T01:26:54.969Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-hitorine-itsukara": {
+    "slug": "kodomo-hitorine-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-hitorine-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:26:55.073Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-kataduke-oshie-kata": {
+    "slug": "kodomo-kataduke-oshie-kata",
+    "ok": true,
+    "file": "/hero-ai/kodomo-kataduke-oshie-kata.jpg",
+    "generatedAt": "2026-05-29T01:26:57.511Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-kaze-hayaku-naosu-kanzen-guide": {
+    "slug": "kodomo-kaze-hayaku-naosu-kanzen-guide",
+    "ok": true,
+    "file": "/hero-ai/kodomo-kaze-hayaku-naosu-kanzen-guide.jpg",
+    "generatedAt": "2026-05-29T01:26:58.018Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-kumon-itsukara": {
+    "slug": "kodomo-kumon-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-kumon-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:26:59.974Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-okozukai-itsukara": {
+    "slug": "kodomo-okozukai-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-okozukai-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:27:00.891Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-omutsu-sotsugyou-itsu": {
+    "slug": "kodomo-omutsu-sotsugyou-itsu",
+    "ok": true,
+    "file": "/hero-ai/kodomo-omutsu-sotsugyou-itsu.jpg",
+    "generatedAt": "2026-05-29T01:27:11.661Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-onesho-itsumade-taisho": {
+    "slug": "kodomo-onesho-itsumade-taisho",
+    "ok": true,
+    "file": "/hero-ai/kodomo-onesho-itsumade-taisho.jpg",
+    "generatedAt": "2026-05-29T01:27:12.211Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-online-eikaiwa-osusume-2026": {
+    "slug": "kodomo-online-eikaiwa-osusume-2026",
+    "ok": true,
+    "file": "/hero-ai/kodomo-online-eikaiwa-osusume-2026.jpg",
+    "generatedAt": "2026-05-29T01:27:15.216Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-otetsudai-itsukara": {
+    "slug": "kodomo-otetsudai-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-otetsudai-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:27:16.435Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-piano-itsukara": {
+    "slug": "kodomo-piano-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-piano-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:27:17.590Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-pool-itsukara": {
+    "slug": "kodomo-pool-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-pool-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:27:19.818Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-rusuban-itsukara": {
+    "slug": "kodomo-rusuban-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-rusuban-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:27:20.529Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-sandal-natsu-osusume-2026": {
+    "slug": "kodomo-sandal-natsu-osusume-2026",
+    "ok": true,
+    "file": "/hero-ai/kodomo-sandal-natsu-osusume-2026.jpg",
+    "generatedAt": "2026-05-29T01:27:22.099Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-shaberu-itsukara": {
+    "slug": "kodomo-shaberu-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-shaberu-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:27:23.512Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-shokuji-tachiaruki-taisho": {
+    "slug": "kodomo-shokuji-tachiaruki-taisho",
+    "ok": true,
+    "file": "/hero-ai/kodomo-shokuji-tachiaruki-taisho.jpg",
+    "generatedAt": "2026-05-29T01:27:24.536Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-smartphone-itsukara": {
+    "slug": "kodomo-smartphone-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-smartphone-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:27:26.558Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-soccer-itsukara": {
+    "slug": "kodomo-soccer-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-soccer-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:27:26.949Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-soroban-itsukara": {
+    "slug": "kodomo-soroban-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-soroban-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:27:29.685Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-suiminji-mokuyasu": {
+    "slug": "kodomo-suiminji-mokuyasu",
+    "ok": true,
+    "file": "/hero-ai/kodomo-suiminji-mokuyasu.jpg",
+    "generatedAt": "2026-05-29T01:27:29.823Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-suitou-mugicha-pitcher-2026": {
+    "slug": "kodomo-suitou-mugicha-pitcher-2026",
+    "ok": true,
+    "file": "/hero-ai/kodomo-suitou-mugicha-pitcher-2026.jpg",
+    "generatedAt": "2026-05-29T01:27:32.579Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-swim-itsukara": {
+    "slug": "kodomo-swim-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-swim-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:27:32.596Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-taisou-itsukara": {
+    "slug": "kodomo-taisou-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-taisou-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:27:35.382Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-tablet-itsukara": {
+    "slug": "kodomo-tablet-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-tablet-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:27:35.858Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-tamago-itsukara": {
+    "slug": "kodomo-tamago-itsukara",
+    "ok": true,
+    "file": "/hero-ai/kodomo-tamago-itsukara.jpg",
+    "generatedAt": "2026-05-29T01:27:38.190Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-uso-tsuku-3sai-taisho": {
+    "slug": "kodomo-uso-tsuku-3sai-taisho",
+    "ok": true,
+    "file": "/hero-ai/kodomo-uso-tsuku-3sai-taisho.jpg",
+    "generatedAt": "2026-05-29T01:27:38.209Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomo-yoku-korobu-shinpai": {
+    "slug": "kodomo-yoku-korobu-shinpai",
+    "ok": true,
+    "file": "/hero-ai/kodomo-yoku-korobu-shinpai.jpg",
+    "generatedAt": "2026-05-29T01:27:48.401Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomochalle-vs-smile-zemi-hikaku": {
+    "slug": "kodomochalle-vs-smile-zemi-hikaku",
+    "ok": true,
+    "file": "/hero-ai/kodomochalle-vs-smile-zemi-hikaku.jpg",
+    "generatedAt": "2026-05-29T01:27:48.427Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "koritsu-vs-shiritsu-shougakkou-hikaku": {
+    "slug": "koritsu-vs-shiritsu-shougakkou-hikaku",
+    "ok": true,
+    "file": "/hero-ai/koritsu-vs-shiritsu-shougakkou-hikaku.jpg",
+    "generatedAt": "2026-05-29T01:27:50.462Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodzure-credit-card-osusume-2026": {
+    "slug": "kodzure-credit-card-osusume-2026",
+    "ok": true,
+    "file": "/hero-ai/kodzure-credit-card-osusume-2026.jpg",
+    "generatedAt": "2026-05-29T01:27:51.840Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "natsuyasumi-kazoku-ryokou-kodzure-2026": {
+    "slug": "natsuyasumi-kazoku-ryokou-kodzure-2026",
+    "ok": true,
+    "file": "/hero-ai/natsuyasumi-kazoku-ryokou-kodzure-2026.jpg",
+    "generatedAt": "2026-05-29T01:27:54.660Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "natsu-kosodate-kanzen-map": {
+    "slug": "natsu-kosodate-kanzen-map",
+    "ok": true,
+    "file": "/hero-ai/natsu-kosodate-kanzen-map.jpg",
+    "generatedAt": "2026-05-29T01:27:54.995Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "rakuten-vs-amazon-kosodate-hikaku": {
+    "slug": "rakuten-vs-amazon-kosodate-hikaku",
+    "ok": true,
+    "file": "/hero-ai/rakuten-vs-amazon-kosodate-hikaku.jpg",
+    "generatedAt": "2026-05-29T01:27:56.988Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "randoseru-erabikata-osusume-2026": {
+    "slug": "randoseru-erabikata-osusume-2026",
+    "ok": true,
+    "file": "/hero-ai/randoseru-erabikata-osusume-2026.jpg",
+    "generatedAt": "2026-05-29T01:27:57.190Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "sango-utsu-toha-kanzen-guide": {
+    "slug": "sango-utsu-toha-kanzen-guide",
+    "ok": true,
+    "file": "/hero-ai/sango-utsu-toha-kanzen-guide.jpg",
+    "generatedAt": "2026-05-29T01:27:59.340Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "rinyuushoku-toha-kanzen-guide": {
+    "slug": "rinyuushoku-toha-kanzen-guide",
+    "ok": true,
+    "file": "/hero-ai/rinyuushoku-toha-kanzen-guide.jpg",
+    "generatedAt": "2026-05-29T01:27:59.375Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "shokumotsu-allergy-toha-kanzen-guide": {
+    "slug": "shokumotsu-allergy-toha-kanzen-guide",
+    "ok": true,
+    "file": "/hero-ai/shokumotsu-allergy-toha-kanzen-guide.jpg",
+    "generatedAt": "2026-05-29T01:28:01.771Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "shougakkou-nyugaku-junbi-kanzen-list": {
+    "slug": "shougakkou-nyugaku-junbi-kanzen-list",
+    "ok": true,
+    "file": "/hero-ai/shougakkou-nyugaku-junbi-kanzen-list.jpg",
+    "generatedAt": "2026-05-29T01:28:01.888Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "tsukamaridachi-toha-kanzen-guide": {
+    "slug": "tsukamaridachi-toha-kanzen-guide",
+    "ok": true,
+    "file": "/hero-ai/tsukamaridachi-toha-kanzen-guide.jpg",
+    "generatedAt": "2026-05-29T01:28:03.911Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "sotsunyu-toha-kanzen-guide": {
+    "slug": "sotsunyu-toha-kanzen-guide",
+    "ok": true,
+    "file": "/hero-ai/sotsunyu-toha-kanzen-guide.jpg",
+    "generatedAt": "2026-05-29T01:28:04.180Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "yonaki-toha-kanzen-guide": {
+    "slug": "yonaki-toha-kanzen-guide",
+    "ok": true,
+    "file": "/hero-ai/yonaki-toha-kanzen-guide.jpg",
+    "generatedAt": "2026-05-29T01:28:08.435Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "yukata-jinbei-kodomo-osusume-2026": {
+    "slug": "yukata-jinbei-kodomo-osusume-2026",
+    "ok": true,
+    "file": "/hero-ai/yukata-jinbei-kodomo-osusume-2026.jpg",
+    "generatedAt": "2026-05-29T01:28:09.130Z",
+    "model": "flux-1-schnell",
+    "steps": 4
   }
 }

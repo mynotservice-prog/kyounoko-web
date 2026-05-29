@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/sango-utsu-toha-kanzen-guide.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +20,7 @@ quickInfo:
   budget: free
 lede: >-
   産後うつは10〜15%の産後ママが経験するとされる、産後数週間〜数ヶ月以内に発症するうつ症状。本記事は産後うつの定義、マタニティブルーとの違い、症状、自己チェック、対処法、パートナーのサポートまで完全ガイド。「自分は弱いから」ではなく「適切な対応で回復する」病気として理解しましょう。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

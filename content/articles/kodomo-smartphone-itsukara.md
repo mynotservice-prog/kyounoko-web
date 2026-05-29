@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-03.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodomo-smartphone-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,8 +18,8 @@ quickInfo:
     - any
   durationMin: 10
   budget: high
-lede: >-
-  「スマホは何歳から？」を年齢別に完全解説。キッズスマホ・通常スマホの選び方、フィルタリング、使用時間ルール、依存対策まで完全ガイド。
+lede: 「スマホは何歳から？」を年齢別に完全解説。キッズスマホ・通常スマホの選び方、フィルタリング、使用時間ルール、依存対策まで完全ガイド。
+legacyHero: /hero/baby-03.webp
 ---
 
 ## 結論

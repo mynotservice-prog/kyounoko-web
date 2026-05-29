@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/classroom-01.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/3-6sai-ikuji-kanzen-map.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +20,7 @@ quickInfo:
   budget: free
 lede: >-
   3〜6歳児は「社会性が育つ・読み書きが始まる・小学校への準備期」の重要な時期。本ページは3〜6歳児育児を「発達・園生活・習い事・小学校準備・友達関係・季節行事・知育」の7軸で完全網羅。各テーマの詳細記事リンクから、必要な情報にすぐアクセスできるナレッジハブです。困った時に何度でも戻ってきてください。
+legacyHero: /hero/classroom-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

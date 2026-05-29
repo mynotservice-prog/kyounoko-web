@@ -6,8 +6,8 @@ metaDescription: >-
 category: narai
 categoryName: 習い事と学び
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/kid-study-01.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodomo-eigo-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,9 +20,9 @@ quickInfo:
     - any
   durationMin: 10
   budget: mid
-lede: >-
-  「子供の英語、何歳から？」を完全ガイド。0歳の絵本から小学校以降の本格学習まで、年齢別のおすすめ方法、教材・スクール、メリット・デメリットを解説します。
+lede: 「子供の英語、何歳から？」を完全ガイド。0歳の絵本から小学校以降の本格学習まで、年齢別のおすすめ方法、教材・スクール、メリット・デメリットを解説します。
 seoRelated: kodomo-online-eikaiwa-osusume-2026
+legacyHero: /hero/kid-study-01.webp
 ---
 
 ## 結論

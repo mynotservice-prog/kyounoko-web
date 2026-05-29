@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/commerce-02.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodzure-credit-card-osusume-2026.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -23,6 +23,7 @@ quickInfo:
 lede: >-
   子育て世帯にとってクレジットカード選びは「ポイント還元率＋家族カード＋公共料金支払い」が重要な軸。本記事は2026年版で年会費無料・高還元・楽天/Amazon特化・幼児教育費に強いカード10枚を比較。共働き家庭の支出パターンに合わせた選び方、家族カードのメリット、ポイントの賢い貯め方・使い方まで完全ガイド。子育て世帯の家計最適化のための判断軸をまとめました。
 seoRelated: gakushi-hoken-erabikata-2026
+legacyHero: /hero/commerce-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

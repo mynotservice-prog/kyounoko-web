@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/summer-water-03.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodomo-suitou-mugicha-pitcher-2026.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -23,6 +23,7 @@ quickInfo:
 lede: >-
   子供の水筒・麦茶ピッチャー選びは「年齢に合う容量」「洗いやすさ」「保冷力」の3軸で決まります。本記事は0歳から6歳まで年齢別のおすすめタイプ、ストロー型・コップ型・ダイレクト型の使い分け、保冷力比較、衛生管理のコツ、保育園入園のサイズ選びまで2026年版で完全ガイド。熱中症対策の必須アイテムを失敗せずに選ぶ判断軸を整理しました。
 seoRelated: kodomo-netsuchusho-3sain-real-2026
+legacyHero: /hero/summer-water-03.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

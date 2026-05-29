@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-03.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/kodomo-rusuban-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,8 +18,8 @@ quickInfo:
     - any
   durationMin: 10
   budget: free
-lede: >-
-  「子供の留守番はいつから？」を年齢別に解説。小学校低学年からの目安、ルール、緊急時の対応、防犯対策まで完全ガイド。
+lede: 「子供の留守番はいつから？」を年齢別に解説。小学校低学年からの目安、ルール、緊急時の対応、防犯対策まで完全ガイド。
+legacyHero: /hero/baby-03.webp
 ---
 
 ## 結論

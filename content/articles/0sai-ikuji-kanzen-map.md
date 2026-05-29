@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-01.webp
+updatedAt: '2026-05-29'
+hero: /hero-ai/0sai-ikuji-kanzen-map.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +20,7 @@ quickInfo:
   budget: free
 lede: >-
   0歳児の育児は、月齢ごとに変化する発達・授乳・睡眠・遊びを正しく把握することが大切です。本ページは0〜12ヶ月の育児を「発達・授乳/離乳食・睡眠・遊び・健診・トラブル対処」の6軸で完全網羅。各テーマの詳細記事リンクから、必要な情報にすぐアクセスできる育児ナレッジハブです。困ったときに何度でも戻ってきてください。
+legacyHero: /hero/baby-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月
