@@ -76,6 +76,53 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
+  // 2026-05: SEO戦略のため priority を差別化
+  // - ピラーページ(0.9)：「育児マップ」型の総合ガイド。クロール優先
+  // - キラー記事(0.8)：高購買意欲 or 高ボリュームの中核記事
+  // - 通常記事(0.6)：その他
+  // Googleは priority を相対指標としてのみ参照（絶対値ではない）が、
+  // クロール頻度の優先度シグナルとして機能する
+  const PILLAR_SLUGS = new Set<string>([
+    '0sai-ikuji-kanzen-map',
+    '1-2sai-ikuji-kanzen-map',
+    '3-6sai-ikuji-kanzen-map',
+    'natsu-kosodate-kanzen-map',
+  ]);
+  const KILLER_SLUGS = new Set<string>([
+    // 育児/離乳食/食物アレルギー など基幹用語
+    'rinyuushoku-toha-kanzen-guide',
+    'shokumotsu-allergy-toha-kanzen-guide',
+    'sango-utsu-toha-kanzen-guide',
+    'yonaki-toha-kanzen-guide',
+    'sotsunyu-toha-kanzen-guide',
+    'iyaiya-ki-toha-kanzen-guide',
+    'babyfood-toha-kanzen-guide',
+    'tsukamaridachi-toha-kanzen-guide',
+    // キラー記事（高購買意欲・ベビーカー・チャイルドシート 等）
+    'babycar-osusume-2026-hikaku',
+    'babycar-a-vs-b',
+    'akachan-nekashitsuke-kanzen-guide-0-1sai',
+    'natsuyasumi-kazoku-ryokou-kodzure-2026',
+    'tsuyu-shitsunai-asobi-kanzen-guide-0-6sai',
+    'kodomo-kaze-hayaku-naosu-kanzen-guide',
+    'kodomo-netsuchusho-3sain-real-2026',
+    'shichigosan-nenrei-junbi',
+    'randoseru-erabikata-osusume-2026',
+    'shougakkou-nyugaku-junbi-kanzen-list',
+    'hoikuen-nyuuen-junbi-0-2sai-kanzen-list',
+    'hoikuen-vs-youchien-hikaku',
+    'kodomochalle-vs-smile-zemi',
+    'kaiten-sushi-4chain-comparison',
+    'famires-7chain-8koumoku-2026',
+    'famires-kodzure-ranking-2026-10sen',
+    'kids-menu-chain-15-hikaku',
+  ]);
+  function getArticlePriority(slug: string): number {
+    if (PILLAR_SLUGS.has(slug)) return 0.9;
+    if (KILLER_SLUGS.has(slug)) return 0.8;
+    return 0.6;
+  }
+
   const articleUrlMap = new Map<string, MetadataRoute.Sitemap[number]>();
   try {
     const articles = await getArticleIds();
@@ -84,7 +131,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         url: `${BASE}/article/${article.slug}`,
         lastModified: new Date(article.updatedAt ?? Date.now()),
         changeFrequency: 'monthly' as const,
-        priority: 0.6,
+        priority: getArticlePriority(article.slug),
       });
     }
   } catch {}
@@ -102,7 +149,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${BASE}/article/${article.slug}`,
       lastModified: new Date(article.updatedAt ?? Date.now()),
       changeFrequency: 'monthly' as const,
-      priority: 0.6,
+      priority: getArticlePriority(article.slug),
     });
   }
   // microCMS側で先に入っていた noindex slug も除去

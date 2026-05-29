@@ -71,6 +71,36 @@ const nextConfig: NextConfig = {
 
       // /search はサイト内検索ページ実装に切り替え済（SearchAction 用）。
       // ここでリダイレクトすると WebSite SearchAction が無効化されるので残さない。
+
+      // ===== 2026-05 追加: コンテンツ内 壊れた内部リンク 14個 → 既存記事に301 =====
+      // sed で本文内のリンクは置換済みだが、Google が古いURLをキャッシュしている可能性、
+      // および外部からの被リンク救済のため 301 リダイレクトを設定する。
+      { source: '/article/0sai-ikuji', destination: '/article/0sai-ikuji-kanzen-map', permanent: true },
+      { source: '/article/eigo-ie-de-furemase-5kufuu', destination: '/article/eigo-asobi-ie-de-4-6sai', permanent: true },
+      { source: '/article/ikukyu-chichi-toru', destination: '/article/ikukyu-fukuki-junbi', permanent: true },
+      { source: '/article/kaiten-sushi-chain-kodzure-5sha-hikaku', destination: '/article/kaiten-sushi-4chain-comparison', permanent: true },
+      { source: '/article/kodomo-okane-okozukai-itsukara', destination: '/article/kodomo-okozukai-itsukara', permanent: true },
+      { source: '/article/kyaraben-kantan-techniques-7', destination: '/article/kodomo-no-hi-kyaraben', permanent: true },
+      { source: '/article/naraigoto-ranking', destination: '/article/kodomo-naraigoto-tsuduki-kotsu', permanent: true },
+      { source: '/article/satou-kodzure-koryaku', destination: '/article/kodzure-yakiniku-anzen-kanzen-guide', permanent: true },
+      { source: '/article/station', destination: '/station', permanent: true },
+      { source: '/article/tomobataraki-kaji', destination: '/article/tomobataraki-kaji-bunkatsu', permanent: true },
+      { source: '/article/wanope-mawashi-kihon', destination: '/article/wanope-ikuji-toha', permanent: true },
+      { source: '/article/yakiniku-chain-kodzure-5sha-hikaku', destination: '/article/kodzure-yakiniku-shabu-7', permanent: true },
+      { source: '/article/yojishoku-kanryouki-1week-rota', destination: '/article/yojishoku-reitou-tsukurioki', permanent: true },
+      { source: '/article/furusato-nouzei-kosodate-ikuji', destination: '/category/today-mawasu', permanent: true },
+
+      // ===== 旧 /plans, /plan ルート救済 =====
+      { source: '/plans', destination: '/', permanent: true },
+      { source: '/plan', destination: '/', permanent: true },
+
+      // ===== 大文字混じり URL のフォールバック =====
+      // Next.js のデフォルトは大文字小文字を区別する。Google が大文字版を拾った場合に対応
+      { source: '/Article/:slug*', destination: '/article/:slug*', permanent: true },
+      { source: '/Tag/:slug*', destination: '/tag/:slug*', permanent: true },
+      { source: '/Category/:slug*', destination: '/category/:slug*', permanent: true },
+      { source: '/Spot/:slug*', destination: '/spot/:slug*', permanent: true },
+      { source: '/Station/:slug*', destination: '/station/:slug*', permanent: true },
     ];
   },
 
