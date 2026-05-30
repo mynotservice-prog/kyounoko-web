@@ -5,8 +5,8 @@ metaDescription: 保育園の選び方を完全ガイド。認可・認可外・
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/classroom-03.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/hoikuen-erabikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +20,7 @@ quickInfo:
   durationMin: 30
   budget: mid
 lede: 保育園選びは共働き家庭の運命を左右する大仕事。認可認可外の違い、点数の仕組み、見学チェックリスト、申込スケジュール、入園準備までを一気通貫で整理しました。
+legacyHero: /hero/classroom-03.webp
 ---
 
 ## 結論（時期・必要なもの）

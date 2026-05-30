@@ -1,12 +1,13 @@
 ---
 slug: jonathan-koshitsu
 title: ジョナサンの個室・半個室｜店舗別の対応と子連れ確保のコツ
-metaDescription: ジョナサンに個室はある？完全個室は希少だが半個室・ハイバックボックス席は充実。すかいらーくアプリ予約で席指定する方法と、子連れランチで個室相当を確保するコツを解説します。
+metaDescription: >-
+  ジョナサンに個室はある？完全個室は希少だが半個室・ハイバックボックス席は充実。すかいらーくアプリ予約で席指定する方法と、子連れランチで個室相当を確保するコツを解説します。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/jonathan-koshitsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 60
   budget: low
-lede: ジョナサンには完全個室は少ないですが、すかいらーくグループ標準のハイバックボックス・半個室は充実。アプリ予約で「奥のボックス席希望」と備考に書くだけで子連れに優しい席に案内されます。
+lede: >-
+  ジョナサンには完全個室は少ないですが、すかいらーくグループ標準のハイバックボックス・半個室は充実。アプリ予約で「奥のボックス席希望」と備考に書くだけで子連れに優しい席に案内されます。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

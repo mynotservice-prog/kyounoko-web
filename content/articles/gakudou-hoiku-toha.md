@@ -1,12 +1,13 @@
 ---
 slug: gakudou-hoiku-toha
 title: 学童保育とは｜定義・料金・申請方法・公立と民間の違い完全ガイド
-metaDescription: 学童保育とは何か、対象年齢・料金・申請方法・公立（放課後児童クラブ）と民間学童の違いを完全解説。小1の壁を乗り越えるための情報を、2026年5月時点の一般情報でやさしく整理しました。
+metaDescription: >-
+  学童保育とは何か、対象年齢・料金・申請方法・公立（放課後児童クラブ）と民間学童の違いを完全解説。小1の壁を乗り越えるための情報を、2026年5月時点の一般情報でやさしく整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/classroom-02.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/gakudou-hoiku-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +20,7 @@ quickInfo:
   budget: low
 lede: >-
   「小学校入学後、放課後はどう過ごす？」——共働き家庭が必ず直面する「小1の壁」の中心が学童保育です。本記事は2026年5月時点の一般情報をもとに、学童保育の基本・料金・申請方法・公立と民間の違いをやさしく整理しました。
+legacyHero: /hero/classroom-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

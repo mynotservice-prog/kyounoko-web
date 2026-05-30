@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/gyukaku-kids-menu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: mid
 lede: >-
   牛角は焼肉のイメージが強いですが、お子様プレート・キッズうどん・カレーなど未就学児向けのキッズメニューが用意されている店舗が一般的。焼肉が食べられない子もしっかりおなかを満たせます。年齢別の選び方と、大人メニューから安全に取り分けるコツをまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

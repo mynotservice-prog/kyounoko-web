@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/commerce-03.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/costco-kodzure-koryaku.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   コストコは**子連れ家庭のオアシス**でもあり、**地獄**でもあります。違いは「**事前準備**」だけ。カート争奪戦・フードコート・オムツ替え動線・年齢別おすすめ商品を保存版でまとめました。
+legacyHero: /hero/commerce-03.webp
 ---
 
 **結論：コストコ子連れの成功は「平日10時開店」「ファミリーカート確保」「フードコート14時以降」の3点セットがすべて。これを押さえれば家族みんなで快適に楽しめます。**

@@ -1,12 +1,13 @@
 ---
 slug: cocoichi-omutsu
 title: CoCo壱でオムツ替えできる？店舗タイプ別の設備事情完全ガイド【2026】
-metaDescription: CoCo壱（ココイチ）でオムツ替えできる？に正直回答。店舗内オムツ替え台は少数派、ロードサイド大型店の一部のみ。SC内店舗は施設多目的トイレ利用が現実解。0-2歳ママパパ向け店舗タイプ別ガイド。
+metaDescription: >-
+  CoCo壱（ココイチ）でオムツ替えできる？に正直回答。店舗内オムツ替え台は少数派、ロードサイド大型店の一部のみ。SC内店舗は施設多目的トイレ利用が現実解。0-2歳ママパパ向け店舗タイプ別ガイド。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-02.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/cocoichi-omutsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 45
   budget: low
-lede: CoCo壱番屋でオムツ替えできるの？に正直回答。店内トイレにオムツ替え台がある店舗は少数派で、ロードサイド大型店の一部のみ対応。SC内店舗は施設の多目的トイレを使う運用が現実的。0-2歳ママパパ向け、店舗タイプ別の設備事情をまとめました。
+lede: >-
+  CoCo壱番屋でオムツ替えできるの？に正直回答。店内トイレにオムツ替え台がある店舗は少数派で、ロードサイド大型店の一部のみ対応。SC内店舗は施設の多目的トイレを使う運用が現実的。0-2歳ママパパ向け、店舗タイプ別の設備事情をまとめました。
+legacyHero: /hero/food-japan-02.webp
 ---
 
 **結論：CoCo壱の店舗内オムツ替え台は少数派。ロードサイド大型店の一部で対応、SC内・駅前店は施設側の設備を使うのが現実解です。**

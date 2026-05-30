@@ -1,12 +1,13 @@
 ---
 slug: churaumi-aquarium-kosodate
 title: 美ら海水族館子連れ完全攻略｜ベビーカー・授乳室・混雑回避【2026年版】
-metaDescription: 沖縄美ら海水族館を子連れで楽しむための完全攻略ガイド。ベビーカー貸出、授乳室、混雑回避時間、周辺レストラン、駐車場情報、お得な前売券まで。0歳から小学生まで満足できる回り方を2026年最新版で解説。
+metaDescription: >-
+  沖縄美ら海水族館を子連れで楽しむための完全攻略ガイド。ベビーカー貸出、授乳室、混雑回避時間、周辺レストラン、駐車場情報、お得な前売券まで。0歳から小学生まで満足できる回り方を2026年最新版で解説。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/summer-water-03.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/churaumi-aquarium-kosodate.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: 沖縄観光No.1の人気スポット、美ら海水族館。ジンベエザメの巨大水槽は0歳から楽しめる「日本一の絵本」のような存在。本記事では混雑回避、ベビーカー・授乳室情報、周辺施設まで、子連れで失敗しない回り方を2026年最新版でまとめました。
+lede: >-
+  沖縄観光No.1の人気スポット、美ら海水族館。ジンベエザメの巨大水槽は0歳から楽しめる「日本一の絵本」のような存在。本記事では混雑回避、ベビーカー・授乳室情報、周辺施設まで、子連れで失敗しない回り方を2026年最新版でまとめました。
+legacyHero: /hero/summer-water-03.webp
 ---
 
 ## 結論（先に知りたい人へ）

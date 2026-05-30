@@ -1,12 +1,13 @@
 ---
 slug: gijikka-stress-kaisho
 title: 義実家育児ストレスの解消法｜よくある悩み・対処法・夫の巻き込み方
-metaDescription: 義実家での育児ストレス（過干渉・古い育児観の押し付け・お菓子問題・帰省疲れ）の原因と解消法、夫を味方につける対話術、距離の取り方まで完全ガイド。「嫁が我慢する」時代は終わりました。
+metaDescription: >-
+  義実家での育児ストレス（過干渉・古い育児観の押し付け・お菓子問題・帰省疲れ）の原因と解消法、夫を味方につける対話術、距離の取り方まで完全ガイド。「嫁が我慢する」時代は終わりました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/gijikka-stress-kaisho.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「義母の育児アドバイスが古い」「お菓子を勝手に与えられる」「帰省するたびに疲弊する」――義実家でのストレスは、多くの親が抱える隠れた悩みです。本記事は具体的なトラブル類型、解消の3ステップ、夫を味方につける対話術、最終手段としての距離の取り方まで網羅。「嫁が我慢する」時代は終わりました。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 ## 結論

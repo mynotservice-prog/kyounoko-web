@@ -1,12 +1,13 @@
 ---
 slug: atami-akachan-yado
 title: 熱海の赤ちゃん歓迎宿｜0歳OK・客室露天・駅近完全ガイド【2026年版】
-metaDescription: 熱海の赤ちゃん歓迎宿を厳選紹介。0歳OK、客室露天風呂、駅近、離乳食対応、ベビー備品レンタル充実の宿を2026年5月時点で整理。失敗しない宿選びのコツと予約前確認リスト付き。
+metaDescription: >-
+  熱海の赤ちゃん歓迎宿を厳選紹介。0歳OK、客室露天風呂、駅近、離乳食対応、ベビー備品レンタル充実の宿を2026年5月時点で整理。失敗しない宿選びのコツと予約前確認リスト付き。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/autumn-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/atami-akachan-yado.jpg
 area: kanto
 quickInfo:
   ageRanges:
@@ -19,7 +20,10 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: 熱海で赤ちゃんと泊まるなら「駅近5分以内」「客室露天 or 貸切無料」「離乳食対応」「ベビー備品レンタル」の4条件で選ぶと失敗ゼロ。0歳〜3歳の温泉デビューに最適な宿を2026年最新情報で予算別に厳選紹介します。
+lede: >-
+  熱海で赤ちゃんと泊まるなら「駅近5分以内」「客室露天 or
+  貸切無料」「離乳食対応」「ベビー備品レンタル」の4条件で選ぶと失敗ゼロ。0歳〜3歳の温泉デビューに最適な宿を2026年最新情報で予算別に厳選紹介します。
+legacyHero: /hero/autumn-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

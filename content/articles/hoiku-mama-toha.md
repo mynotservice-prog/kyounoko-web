@@ -1,12 +1,13 @@
 ---
 slug: hoiku-mama-toha
 title: 保育ママとは｜定義・料金・申し込み方法・保育園との違い完全ガイド
-metaDescription: 保育ママ（家庭的保育事業）とは何か、対象年齢・料金・申し込み方法・保育園との違いを完全解説。少人数で家庭的な雰囲気で0〜2歳児を預けたい家庭向けの選択肢を、2026年5月時点の一般情報で分かりやすく整理しました。
+metaDescription: >-
+  保育ママ（家庭的保育事業）とは何か、対象年齢・料金・申し込み方法・保育園との違いを完全解説。少人数で家庭的な雰囲気で0〜2歳児を預けたい家庭向けの選択肢を、2026年5月時点の一般情報で分かりやすく整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/hoiku-mama-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   「保育ママって何？保育園とどう違う？」——0〜2歳の小さな子を、家庭的な雰囲気でじっくり保育してほしい家庭に選ばれているのが「保育ママ（家庭的保育事業）」です。本記事は2026年5月時点の一般情報をもとに、保育ママの基本・料金・申し込み方法・保育園との違いをやさしく整理しました。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

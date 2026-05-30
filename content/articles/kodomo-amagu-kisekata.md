@@ -1,12 +1,13 @@
 ---
 slug: kodomo-amagu-kisekata
 title: 子供の雨具の着せ方｜レインコート・長靴・傘の手順とコツ完全ガイド
-metaDescription: 子供の雨具の着せ方を保存版で解説。レインコート・ポンチョ・レインウェア上下・長靴・傘の選び方と着せ方手順、嫌がる子の対処、保育園の登園対応、ベビーカー時の雨対策、サイズ目安まで、雨の日の登園・お出かけがスムーズに進みます。
+metaDescription: >-
+  子供の雨具の着せ方を保存版で解説。レインコート・ポンチョ・レインウェア上下・長靴・傘の選び方と着せ方手順、嫌がる子の対処、保育園の登園対応、ベビーカー時の雨対策、サイズ目安まで、雨の日の登園・お出かけがスムーズに進みます。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-03.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/kodomo-amagu-kisekata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   雨の日の子供の着替えは「時間がない・嫌がる・濡れる」の三重苦。コツは「家の中で着せる」「フードはゴム調整」「長靴は中敷きで脱げ防止」。年齢に合わせてポンチョ→上下セパレートと進化させると活動の幅が広がります。本記事では、年齢別の選び方・着せ方手順・嫌がる時の対処・お手入れまで保存版で解説します。
+legacyHero: /hero/baby-03.webp
 ---
 
 ## 結論

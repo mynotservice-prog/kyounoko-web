@@ -1,12 +1,13 @@
 ---
 slug: kamakura-kodzure-spot
 title: 鎌倉の子連れスポット｜大仏・江ノ電・海・ランチ完全ガイド【2026年版】
-metaDescription: 鎌倉を子連れで楽しむ完全ガイド。大仏・鶴岡八幡宮・由比ヶ浜・江ノ電など0〜6歳と楽しめる王道スポット、ベビーカー観光のコツ、子連れランチ、ハイキングを2026年5月時点の最新情報で整理。
+metaDescription: >-
+  鎌倉を子連れで楽しむ完全ガイド。大仏・鶴岡八幡宮・由比ヶ浜・江ノ電など0〜6歳と楽しめる王道スポット、ベビーカー観光のコツ、子連れランチ、ハイキングを2026年5月時点の最新情報で整理。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/autumn-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/kamakura-kodzure-spot.jpg
 area: kanto
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: 鎌倉は東京から横須賀線で約60分、大仏・江ノ電・海・寺社・グルメが揃う関東屈指の日帰り子連れ観光地。0〜6歳と楽しめる王道スポット、ベビーカー動線、混雑回避のコツを2026年最新情報でまとめます。
+lede: >-
+  鎌倉は東京から横須賀線で約60分、大仏・江ノ電・海・寺社・グルメが揃う関東屈指の日帰り子連れ観光地。0〜6歳と楽しめる王道スポット、ベビーカー動線、混雑回避のコツを2026年最新情報でまとめます。
+legacyHero: /hero/autumn-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

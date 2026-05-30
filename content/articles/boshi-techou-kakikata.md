@@ -1,12 +1,13 @@
 ---
 slug: boshi-techou-kakikata
 title: 母子手帳 書き方｜記入のコツ・残しておきたい欄・成長記録の活用法
-metaDescription: 母子手帳の書き方を完全ガイド。妊娠中・出産後・乳幼児期の記入欄、書き忘れがちなポイント、メモ欄の活用法、健診時の使い方まで初産ママにも分かりやすく解説します。
+metaDescription: >-
+  母子手帳の書き方を完全ガイド。妊娠中・出産後・乳幼児期の記入欄、書き忘れがちなポイント、メモ欄の活用法、健診時の使い方まで初産ママにも分かりやすく解説します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/boshi-techou-kakikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +20,7 @@ quickInfo:
   durationMin: 30
   budget: low
 lede: 母子手帳は妊娠中から学童まで続く貴重な記録。書く欄の使い方、書き忘れがちなポイント、健診時の活用、保管とコピーの判断まで、産前産後の親に向けて整理します。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 ## 結論（時期・必要なもの）

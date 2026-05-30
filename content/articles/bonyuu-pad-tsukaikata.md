@@ -1,12 +1,13 @@
 ---
 slug: bonyuu-pad-tsukaikata
 title: 母乳パッドの使い方｜貼り方・交換頻度・選び方完全ガイド
-metaDescription: 母乳パッドの使い方を保存版で解説。正しい貼り方の手順、交換タイミング、使い捨て・洗える布・シリコン型の使い分け、乳首トラブル予防、外出時の持ち歩き、肌荒れ対策まで、産後すぐから安心して使えます。
+metaDescription: >-
+  母乳パッドの使い方を保存版で解説。正しい貼り方の手順、交換タイミング、使い捨て・洗える布・シリコン型の使い分け、乳首トラブル予防、外出時の持ち歩き、肌荒れ対策まで、産後すぐから安心して使えます。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-02.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/bonyuu-pad-tsukaikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +20,7 @@ quickInfo:
   budget: low
 lede: >-
   母乳パッドは産後の母乳漏れから服を守り、乳首を清潔に保つ必須アイテム。基本は「乳首を中心にして円形をピタッと貼る」「2〜3時間で交換」「濡れたら即替える」。本記事では、タイプ別の貼り方手順・交換頻度・選び方・肌トラブル対策まで保存版で解説します。
+legacyHero: /hero/baby-02.webp
 ---
 
 ## 結論

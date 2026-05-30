@@ -1,13 +1,12 @@
 ---
 slug: costco-stroller
 title: コストコのベビーカー入店・カート完全ガイド｜大型カート併用のコツ【2026年】
-metaDescription: >-
-  コストコはベビーカーで入店OK？大型カートとの併用は？子供を乗せられるカートはある？店内動線・レジ・駐車場までを子連れ目線で詳しく解説します。
+metaDescription: コストコはベビーカーで入店OK？大型カートとの併用は？子供を乗せられるカートはある？店内動線・レジ・駐車場までを子連れ目線で詳しく解説します。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/commerce-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/costco-stroller.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   コストコは**ベビーカーで入店OK**ですが、大型カートとの併用は難易度高め。子供を乗せられる**ファミリーカート**の存在や、レジ・駐車場動線を子連れ目線でまるっと整理しました。
+legacyHero: /hero/commerce-01.webp
 ---
 
 **結論：コストコはベビーカー入店OK。子供を乗せられるファミリーカートが各倉庫店に多数あり、上の子はそちらを活用するのが定番。下の子はベビーカーで対応します。**

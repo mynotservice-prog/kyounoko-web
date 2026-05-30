@@ -1,12 +1,13 @@
 ---
 slug: hitorikko-sodateru
 title: 一人っ子の育て方｜メリット・気をつけたい点・社会性の育み方完全ガイド
-metaDescription: 一人っ子育児のメリット（じっくり関われる・教育投資できる）と気をつけたい点（過保護・社会性）、社会性の育み方、周囲の声への対処、親の心の整え方を完全解説。「一人っ子はかわいそう」は古い思い込みです。
+metaDescription: >-
+  一人っ子育児のメリット（じっくり関われる・教育投資できる）と気をつけたい点（過保護・社会性）、社会性の育み方、周囲の声への対処、親の心の整え方を完全解説。「一人っ子はかわいそう」は古い思い込みです。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/hitorikko-sodateru.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: free
 lede: >-
   「一人っ子はかわいそう」「わがままに育つ」「兄弟がいないと社会性が…」――一人っ子の親なら一度は言われた言葉ですよね。本記事はメリット・気をつけたい点・社会性の育み方・周囲の声への対処を完全ガイド。「一人っ子だから不幸」という研究的根拠はありません。安心して読み進めてください。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 ## 結論

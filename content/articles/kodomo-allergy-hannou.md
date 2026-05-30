@@ -1,12 +1,13 @@
 ---
 slug: kodomo-allergy-hannou
 title: 子供のアレルギー反応 緊急対処｜アナフィラキシー・エピペン・119完全ガイド【0〜12歳】
-metaDescription: 子供のアレルギー反応の緊急対処を完全解説。アナフィラキシーの症状、エピペンの使い方、119番のタイミング、原因食材・物質、再発防止まで2026年最新版で網羅した保存版です。
+metaDescription: >-
+  子供のアレルギー反応の緊急対処を完全解説。アナフィラキシーの症状、エピペンの使い方、119番のタイミング、原因食材・物質、再発防止まで2026年最新版で網羅した保存版です。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/kodomo-allergy-hannou.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -23,6 +24,7 @@ quickInfo:
   budget: free
 lede: >-
   「食べた直後に蕁麻疹」「顔が腫れて呼吸が苦しそう」——アレルギー反応、特にアナフィラキシーは命に関わる緊急事態。本記事ではエピペンの使い方、119番のタイミング、原因物質、再発防止まで完全解説。1秒の判断が命を救います。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

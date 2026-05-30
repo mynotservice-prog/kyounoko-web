@@ -1,12 +1,13 @@
 ---
 slug: gw-0-6sai-sugoshikata
 title: GW（ゴールデンウィーク）の0〜6歳児 過ごし方｜お出かけ・自宅・帰省ガイド
-metaDescription: GWの0〜6歳の過ごし方を年齢別に解説。混雑回避のお出かけ先、新幹線・車での帰省、自宅で楽しむアイデア、五月病予防、生活リズム維持、寒暖差対策まで完全網羅した実践ガイド。
+metaDescription: >-
+  GWの0〜6歳の過ごし方を年齢別に解説。混雑回避のお出かけ先、新幹線・車での帰省、自宅で楽しむアイデア、五月病予防、生活リズム維持、寒暖差対策まで完全網羅した実践ガイド。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/gw-0-6sai-sugoshikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,7 +21,9 @@ quickInfo:
     - warm
   durationMin: 30
   budget: free
-lede: GWは気候も良く外遊びにぴったりですが、混雑・渋滞・寒暖差・生活リズムの乱れなど、子連れには悩ましい時期。本記事では0〜6歳まで年齢別に、GWを楽しく過ごすコツを服装・食事・遊び・お出かけ・体調管理の5軸でまとめます。
+lede: >-
+  GWは気候も良く外遊びにぴったりですが、混雑・渋滞・寒暖差・生活リズムの乱れなど、子連れには悩ましい時期。本記事では0〜6歳まで年齢別に、GWを楽しく過ごすコツを服装・食事・遊び・お出かけ・体調管理の5軸でまとめます。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論

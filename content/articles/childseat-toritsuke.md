@@ -1,12 +1,13 @@
 ---
 slug: childseat-toritsuke
 title: チャイルドシートの取り付け方｜ISOFIX・シートベルト式の手順とコツ完全ガイド
-metaDescription: チャイルドシートの取り付け方を、ISOFIX式・シートベルト式の2方式別に手順とコツで完全解説。後ろ向き/前向き、新生児から学童までの月齢別ポイント、グラつきチェック、失敗あるあるまで保存版で紹介。事故から子供を守る必須情報です。
+metaDescription: >-
+  チャイルドシートの取り付け方を、ISOFIX式・シートベルト式の2方式別に手順とコツで完全解説。後ろ向き/前向き、新生児から学童までの月齢別ポイント、グラつきチェック、失敗あるあるまで保存版で紹介。事故から子供を守る必須情報です。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/childseat-toritsuke.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +23,7 @@ quickInfo:
   budget: low
 lede: >-
   チャイルドシートは取り付けが命。間違った取り付けは事故時の安全性を半減させます。本記事では、ISOFIX式・シートベルト式の2方式別の8ステップ手順、後ろ向き/前向きの切り替えタイミング、グラつきチェックの方法まで保存版で解説。我が家のリアルも紹介します。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 ## 結論

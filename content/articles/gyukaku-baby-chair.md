@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/gyukaku-baby-chair.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: mid
 lede: >-
   牛角は焼肉チェーンの中でも子連れ利用が多く、ベビーチェアを常備する店舗が一般的です。ただし全店ではなく、ハイチェア/ローチェアのタイプ・数も店舗差あり。予約時のひと声と席選びで、焼肉デビューも安心して楽しめます。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

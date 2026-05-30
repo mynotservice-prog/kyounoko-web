@@ -5,8 +5,8 @@ metaDescription: はま寿司のベビーチェアは何種類？ベビーカー
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/hamasushi-baby-chair.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   「はま寿司にベビーチェアはある？腰すわり前でも使える？」を1記事で解決。ロードサイド型に強いはま寿司のベビーチェア事情を、種類・確保のコツ・代替案まで0-2歳家族の目線で保存版にまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

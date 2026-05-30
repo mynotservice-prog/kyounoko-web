@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/anrakutei-baby-chair.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: mid
 lede: >-
   安楽亭は家族向け焼肉チェーンの代表格で、ベビーチェアの常備率が高く子連れ歓迎の姿勢が強いお店です。座敷席・ハイチェア・ローチェアの組み合わせで赤ちゃんから未就学児まで対応可能。予約時のひと声と席選びで安心して焼肉デビューを楽しめます。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

@@ -5,8 +5,8 @@ metaDescription: 子供アルバムの書き方を完全ガイド。何を書く
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/kodomo-album-kakikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +20,7 @@ quickInfo:
   durationMin: 30
   budget: low
 lede: 子供アルバムは「続けること」が一番難しい。何を書くか・どう仕組み化するか・写真をどう選ぶかを整理し、紙とデジタルの併用で挫折しない型を紹介します。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 ## 結論（時期・必要なもの）

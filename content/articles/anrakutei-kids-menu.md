@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/anrakutei-kids-menu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: mid
 lede: >-
   安楽亭は家族向け焼肉チェーンらしくキッズメニューが充実。お子様プレート、キッズうどん、ハンバーグ、カレーなどラインナップが豊富で、焼肉が食べられない子もしっかり満足できます。年齢別の選び方と大人メニューからの取り分けのコツをまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

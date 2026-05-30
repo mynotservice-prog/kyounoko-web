@@ -1,12 +1,13 @@
 ---
 slug: half-birthday-jun
 title: ハーフバースデー 準備｜生後6か月の祝い方・飾り付け・撮影完全ガイド
-metaDescription: ハーフバースデー（生後6か月）の祝い方を完全ガイド。飾り付けアイデア、寝相アート、ケーキの選び方、衣装、家族で楽しむ簡単な段取りまで初心者向けに整理しました。
+metaDescription: >-
+  ハーフバースデー（生後6か月）の祝い方を完全ガイド。飾り付けアイデア、寝相アート、ケーキの選び方、衣装、家族で楽しむ簡単な段取りまで初心者向けに整理しました。
 category: gyouji
 categoryName: 季節と行事
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/half-birthday-jun.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,6 +19,7 @@ quickInfo:
   durationMin: 30
   budget: low
 lede: ハーフバースデー（生後6か月）は家族だけで気軽に祝える記念日。飾り付け・寝相アート・ケーキ・衣装まで、100均と通販を活用した低予算プランをご紹介します。
+legacyHero: /hero/baby-01.webp
 ---
 
 ## 結論（時期・必要なもの）

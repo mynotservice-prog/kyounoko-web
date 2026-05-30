@@ -1,12 +1,13 @@
 ---
 slug: aki-2sai-sugoshikata
 title: 秋の2歳児 過ごし方｜服装・食事・遊び・お出かけ完全ガイド
-metaDescription: 2歳の秋の過ごし方を解説。イヤイヤ期の寒暖差対応、食欲の秋を活かす幼児食、どんぐり・落ち葉遊び、紅葉狩り、運動会、ハロウィン、感染症対策、予防接種スケジュールまで網羅。
+metaDescription: >-
+  2歳の秋の過ごし方を解説。イヤイヤ期の寒暖差対応、食欲の秋を活かす幼児食、どんぐり・落ち葉遊び、紅葉狩り、運動会、ハロウィン、感染症対策、予防接種スケジュールまで網羅。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/autumn-03.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/aki-2sai-sugoshikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,7 +19,9 @@ quickInfo:
     - cool
   durationMin: 30
   budget: free
-lede: 秋の2歳児は、走る・登る・拾う・並べるなど運動と探索が一気に高度化する時期。イヤイヤ期と寒暖差、感染症シーズンが重なるため、大人の対応力も問われます。本記事では服装・食事・遊び・お出かけ・体調管理の5軸で、2歳の秋を快適に楽しむコツをまとめます。
+lede: >-
+  秋の2歳児は、走る・登る・拾う・並べるなど運動と探索が一気に高度化する時期。イヤイヤ期と寒暖差、感染症シーズンが重なるため、大人の対応力も問われます。本記事では服装・食事・遊び・お出かけ・体調管理の5軸で、2歳の秋を快適に楽しむコツをまとめます。
+legacyHero: /hero/autumn-03.webp
 ---
 
 ## 結論

@@ -1,12 +1,14 @@
 ---
 slug: fujiq-thomas-land-kosodate
 title: 富士急トーマスランド 子連れ攻略｜2〜6歳向け動線・予算・持ち物【2026年】
-metaDescription: 富士急ハイランド内トーマスランドを2〜6歳子連れで攻略する完全ガイド。アトラクション11種の身長制限・パスポート vs 個別料金・混雑回避・周辺ホテル情報まで、初訪問でも失敗しないノウハウ全網羅。
+metaDescription: >-
+  富士急ハイランド内トーマスランドを2〜6歳子連れで攻略する完全ガイド。アトラクション11種の身長制限・パスポート vs
+  個別料金・混雑回避・周辺ホテル情報まで、初訪問でも失敗しないノウハウ全網羅。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/fujiq-thomas-land-kosodate.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +23,7 @@ quickInfo:
   budget: mid
 lede: >-
   富士急ハイランド内のトーマスランドは、日本唯一のトーマス公式エリア。2歳から乗れるアトラクションが揃い、絶叫マシン苦手のパパママも安心です。年齢別動線・チケット選び・持ち物まで、初訪問の不安を一気に解消します。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

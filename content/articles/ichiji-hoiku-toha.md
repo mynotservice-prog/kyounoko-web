@@ -1,12 +1,13 @@
 ---
 slug: ichiji-hoiku-toha
 title: 一時保育とは｜定義・料金・申し込み方法・利用条件完全ガイド
-metaDescription: 一時保育とは何か、料金相場・申し込み方法・利用できる条件を完全解説。保育園に在籍しない家庭でも単発で預けられる仕組みで、リフレッシュ・通院・育休中の上の子預けに便利。2026年5月時点の一般情報でやさしく整理しました。
+metaDescription: >-
+  一時保育とは何か、料金相場・申し込み方法・利用できる条件を完全解説。保育園に在籍しない家庭でも単発で預けられる仕組みで、リフレッシュ・通院・育休中の上の子預けに便利。2026年5月時点の一般情報でやさしく整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/ichiji-hoiku-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   「保育園に通っていないけど、たまに数時間預けたい」——そんな時に頼れるのが一時保育です。リフレッシュ・通院・冠婚葬祭・育休中の上の子預けなど用途は様々。本記事は2026年5月時点の一般情報をもとに、一時保育の基本・料金・申し込み方法・利用条件をやさしく整理しました。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

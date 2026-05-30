@@ -1,12 +1,13 @@
 ---
 slug: futaime-timing
 title: 二人目のタイミング｜年齢差別メリット・家計・体力・夫婦合意完全ガイド
-metaDescription: 二人目を考えるタイミングを完全解説。年齢差別（1〜2歳差／3歳差／4歳以上）のメリット・デメリット、家計・体力・夫婦合意の整え方、上の子ケアまで網羅。「正解はない」けど判断材料を揃えれば決められます。
+metaDescription: >-
+  二人目を考えるタイミングを完全解説。年齢差別（1〜2歳差／3歳差／4歳以上）のメリット・デメリット、家計・体力・夫婦合意の整え方、上の子ケアまで網羅。「正解はない」けど判断材料を揃えれば決められます。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/futaime-timing.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「二人目、いつ？」「年齢差はどれくらいがいい？」「家計や体力は大丈夫？」――二人目のタイミング、悩みますよね。本記事は年齢差別のメリット・デメリット、家計・体力・夫婦合意の整え方、上の子へのケアまで完全ガイド。「正解はない」前提で、あなたの判断材料を揃えます。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 ## 結論

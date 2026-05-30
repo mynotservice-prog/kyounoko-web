@@ -5,8 +5,8 @@ metaDescription: 初宮参り（お宮参り）はいつ？男女別の時期、
 category: gyouji
 categoryName: 季節と行事
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/hatsumiya-mairi-itsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -17,7 +17,9 @@ quickInfo:
     - any
   durationMin: 30
   budget: mid
-lede: 初宮参りは赤ちゃんが氏神様に初めてご挨拶する伝統行事。生後1か月の時期、初穂料、服装、写真撮影、祖父母を呼ぶかどうかまで、ママの産後体調に配慮した段取りで整理します。
+lede: >-
+  初宮参りは赤ちゃんが氏神様に初めてご挨拶する伝統行事。生後1か月の時期、初穂料、服装、写真撮影、祖父母を呼ぶかどうかまで、ママの産後体調に配慮した段取りで整理します。
+legacyHero: /hero/baby-01.webp
 ---
 
 ## 結論（時期・必要なもの）

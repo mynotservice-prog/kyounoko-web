@@ -1,12 +1,13 @@
 ---
 slug: fuji-q-area-kosodate
 title: 富士五湖エリアの子連れ完全ガイド｜トーマスランド・遊び場・宿【2026年版】
-metaDescription: 富士五湖エリアを子連れで楽しむ完全ガイド。富士急ハイランド・トーマスランド、河口湖、忍野八海、子連れ遊び場、おすすめ宿の選び方を2026年5月時点の最新情報で実地目線で整理。
+metaDescription: >-
+  富士五湖エリアを子連れで楽しむ完全ガイド。富士急ハイランド・トーマスランド、河口湖、忍野八海、子連れ遊び場、おすすめ宿の選び方を2026年5月時点の最新情報で実地目線で整理。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/autumn-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/fuji-q-area-kosodate.jpg
 area: kanto
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: 富士五湖エリアは河口湖・山中湖を中心に、トーマスランド、忍野八海、富士サファリパーク、フォレストアドベンチャーなど0〜6歳と楽しめる施設が密集。広いエリアを効率よく回るプランと宿選びを2026年最新情報でまとめます。
+lede: >-
+  富士五湖エリアは河口湖・山中湖を中心に、トーマスランド、忍野八海、富士サファリパーク、フォレストアドベンチャーなど0〜6歳と楽しめる施設が密集。広いエリアを効率よく回るプランと宿選びを2026年最新情報でまとめます。
+legacyHero: /hero/autumn-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

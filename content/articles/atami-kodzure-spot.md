@@ -1,12 +1,13 @@
 ---
 slug: atami-kodzure-spot
 title: 熱海の子連れスポット｜ビーチ・サンビーチ・宿・回り方完全ガイド【2026年版】
-metaDescription: 熱海を子連れで楽しむ完全ガイド。サンビーチ、熱海城、来宮神社、MOA美術館など0〜6歳と楽しめるスポット、ベビーカー観光のコツ、赤ちゃん歓迎宿選びを2026年5月時点の最新情報で整理。
+metaDescription: >-
+  熱海を子連れで楽しむ完全ガイド。サンビーチ、熱海城、来宮神社、MOA美術館など0〜6歳と楽しめるスポット、ベビーカー観光のコツ、赤ちゃん歓迎宿選びを2026年5月時点の最新情報で整理。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/autumn-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/atami-kodzure-spot.jpg
 area: kanto
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: 熱海は東京から新幹線こだまで約45分、海・温泉・観光すべてが駅から徒歩〜タクシー圏内。0〜6歳と日帰り〜1泊で楽しめるサンビーチ、熱海城、MOA美術館、来宮神社などを2026年最新情報でまとめます。
+lede: >-
+  熱海は東京から新幹線こだまで約45分、海・温泉・観光すべてが駅から徒歩〜タクシー圏内。0〜6歳と日帰り〜1泊で楽しめるサンビーチ、熱海城、MOA美術館、来宮神社などを2026年最新情報でまとめます。
+legacyHero: /hero/autumn-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

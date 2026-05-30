@@ -1,12 +1,13 @@
 ---
 slug: babysitter-toha
 title: ベビーシッターとは｜定義・料金相場・依頼方法・利用補助完全ガイド
-metaDescription: ベビーシッターとは何か、料金相場、依頼方法、安全な選び方、自治体・企業の利用補助、トラブル防止のポイントまで完全解説。共働き・ワンオペ家庭の強い味方になる利用法を、2026年5月時点の一般情報でやさしく整理しました。
+metaDescription: >-
+  ベビーシッターとは何か、料金相場、依頼方法、安全な選び方、自治体・企業の利用補助、トラブル防止のポイントまで完全解説。共働き・ワンオペ家庭の強い味方になる利用法を、2026年5月時点の一般情報でやさしく整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/babysitter-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: high
 lede: >-
   「ベビーシッターを頼むって大丈夫？」「料金はいくら？」——共働き・ワンオペで疲れた時、ベビーシッターは強い味方です。本記事では2026年5月時点の一般情報をもとに、ベビーシッターの基本・料金相場・依頼方法・選び方・補助制度・トラブル防止のポイントまでやさしく整理しました。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

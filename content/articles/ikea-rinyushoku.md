@@ -1,13 +1,12 @@
 ---
 slug: ikea-rinyushoku
 title: IKEAの離乳食｜販売・持ち込み・温め・取り分け完全ガイド【2026年】
-metaDescription: >-
-  IKEAレストランで離乳食は売ってる？持ち込みOK？温めサービスはある？スウェーデン発の家具店IKEAの離乳食事情を、月齢別に解説する保存版ガイドです。
+metaDescription: IKEAレストランで離乳食は売ってる？持ち込みOK？温めサービスはある？スウェーデン発の家具店IKEAの離乳食事情を、月齢別に解説する保存版ガイドです。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/commerce-03.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/ikea-rinyushoku.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +20,7 @@ quickInfo:
   budget: low
 lede: >-
   「IKEAで離乳食って売ってる？」「持ち込んだら温めてくれる？」と気になるママパパへ。IKEAレストランは離乳食販売アリ・持ち込みOK・温めサービスありの**子連れ最強ファミレス級**の対応。月齢別に取り分けレシピまで紹介します。
+legacyHero: /hero/commerce-03.webp
 ---
 
 **結論：IKEAは離乳食を販売しており、持ち込みもOK。電子レンジでの温めサービスもあり、子連れ家族にとってショッピング施設で最強クラスの対応です。**

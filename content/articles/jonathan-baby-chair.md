@@ -1,12 +1,13 @@
 ---
 slug: jonathan-baby-chair
 title: ジョナサンのベビーチェア｜種類・対象月齢・確保のコツ完全ガイド
-metaDescription: ジョナサンのベビーチェアはすかいらーくグループ共通仕様。ハイチェア・ローチェア・テーブル固定型の3タイプから選べ、腰すわり前から使える店舗も。月齢別の選び方と確保のコツを解説します。
+metaDescription: >-
+  ジョナサンのベビーチェアはすかいらーくグループ共通仕様。ハイチェア・ローチェア・テーブル固定型の3タイプから選べ、腰すわり前から使える店舗も。月齢別の選び方と確保のコツを解説します。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/jonathan-baby-chair.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 60
   budget: low
-lede: ジョナサンのベビーチェアはすかいらーくグループ共通仕様で「ハイチェア」「ローチェア」「テーブル固定型」の3タイプ。首すわり後5-6ヶ月から使える店舗もあり、月齢の幅広さがファミレス上位の対応力です。
+lede: >-
+  ジョナサンのベビーチェアはすかいらーくグループ共通仕様で「ハイチェア」「ローチェア」「テーブル固定型」の3タイプ。首すわり後5-6ヶ月から使える店舗もあり、月齢の幅広さがファミレス上位の対応力です。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

@@ -1,13 +1,12 @@
 ---
 slug: costco-baby-chair
 title: コストコのベビーチェア｜フードコート・設置場所・対象年齢ガイド【2026年】
-metaDescription: >-
-  コストコのフードコートでベビーチェアは借りられる？台数・場所・対象月齢・確保のコツ・テラス席利用まで、子連れコストコの食事タイムを攻略する保存版です。
+metaDescription: コストコのフードコートでベビーチェアは借りられる？台数・場所・対象月齢・確保のコツ・テラス席利用まで、子連れコストコの食事タイムを攻略する保存版です。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/commerce-03.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/costco-baby-chair.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   コストコのフードコートは安くて美味しいですが、**ベビーチェアの数は意外と少なめ**。台数・場所・確保のコツを事前に把握しておけば、子連れでも快適にホットドッグタイムを楽しめます。
+legacyHero: /hero/commerce-03.webp
 ---
 
 **結論：コストコのフードコートにはベビーチェア（ハイチェア）が各倉庫店に4〜10台配備。場所はフードコート入口近くで、土日昼間は争奪戦になります。**

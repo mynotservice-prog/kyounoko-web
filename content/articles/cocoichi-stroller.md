@@ -1,12 +1,13 @@
 ---
 slug: cocoichi-stroller
 title: CoCo壱はベビーカーで入れる？店舗タイプ別の入店可否と動線完全ガイド【2026】
-metaDescription: CoCo壱（ココイチ）にベビーカーで入っていい？に現場目線で正直回答。ロードサイド店は◎、SC内店舗はSC動線次第、駅前店は△が現実。0-2歳ママパパ向けに店舗タイプ別の入店可否と置き場所のリアルをまとめました。
+metaDescription: >-
+  CoCo壱（ココイチ）にベビーカーで入っていい？に現場目線で正直回答。ロードサイド店は◎、SC内店舗はSC動線次第、駅前店は△が現実。0-2歳ママパパ向けに店舗タイプ別の入店可否と置き場所のリアルをまとめました。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/cocoichi-stroller.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 45
   budget: low
-lede: CoCo壱番屋にベビーカーで入っていいの？という疑問に正直回答。ファミリー層比率が高いカレーチェーンとして、ロードサイド店はほぼ◎、SC内店舗はSC動線次第、駅前店は△。店舗タイプ別の入店可否と置き場所のリアルをまとめました。
+lede: >-
+  CoCo壱番屋にベビーカーで入っていいの？という疑問に正直回答。ファミリー層比率が高いカレーチェーンとして、ロードサイド店はほぼ◎、SC内店舗はSC動線次第、駅前店は△。店舗タイプ別の入店可否と置き場所のリアルをまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 **結論：CoCo壱のベビーカー入店はロードサイド店なら◎、SC内店舗はSC動線次第、駅前店は△。畳んで席横が基本マナーで、ファミリー層比率が高いので案内自体は柔軟です。**

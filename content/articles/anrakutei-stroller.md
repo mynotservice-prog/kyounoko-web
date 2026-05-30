@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/anrakutei-stroller.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: mid
 lede: >-
   安楽亭はロードサイド大型店舗中心の焼肉チェーンで、ベビーカーで席まで入店できる店舗がほとんど。家族向けの店舗設計で段差が少なく、座敷席・テーブル席ともに対応可能です。子連れ焼肉の定番として、子育て家族が頼れるチェーンです。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

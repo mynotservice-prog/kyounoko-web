@@ -1,12 +1,13 @@
 ---
 slug: benesse-vs-dwe
 title: ベネッセ vs DWE（ディズニー英語システム）完全比較【2026年版】｜料金・効果・続けやすさ
-metaDescription: ベネッセこどもちゃれんじEnglishとDWEを6項目で比較。月謝・教材・効果・対象年齢・親の関与・中古市場まで徹底解説。コスパ重視・本気で英語習得したい家庭タイプ別おすすめを完全紹介。
+metaDescription: >-
+  ベネッセこどもちゃれんじEnglishとDWEを6項目で比較。月謝・教材・効果・対象年齢・親の関与・中古市場まで徹底解説。コスパ重視・本気で英語習得したい家庭タイプ別おすすめを完全紹介。
 category: narai
 categoryName: 習いごと
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/kid-study-03.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/benesse-vs-dwe.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: mid
 lede: >-
   「こどもちゃれんじEnglishとDWE、どっちが本気で英語が身につく？」を2026年版で完全比較。ちゃれんじは月3,000円台のお手軽スタート、DWEは100万円超の本格教材で完全英語環境が強み。月謝・教材・効果・対象年齢・親の関与・中古市場の6項目で徹底解説し、コスパ重視・本気で英語習得したい家庭タイプ別おすすめまで整理しました。
+legacyHero: /hero/kid-study-03.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

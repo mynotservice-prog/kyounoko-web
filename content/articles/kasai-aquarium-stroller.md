@@ -1,12 +1,13 @@
 ---
 slug: kasai-aquarium-stroller
 title: 葛西臨海水族園 ベビーカー｜貸出無料・動線・置き場完全ガイド【2026年】
-metaDescription: 葛西臨海水族園のベビーカー事情を徹底解説。レンタル無料・自前持ち込みOK・館内のバリアフリー動線・大水槽前の置き場・隣接公園との組み合わせまで、0〜3歳連れに必要な情報を全網羅。
+metaDescription: >-
+  葛西臨海水族園のベビーカー事情を徹底解説。レンタル無料・自前持ち込みOK・館内のバリアフリー動線・大水槽前の置き場・隣接公園との組み合わせまで、0〜3歳連れに必要な情報を全網羅。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/kasai-aquarium-stroller.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   葛西臨海水族園は全館バリアフリー設計、ベビーカーごと観覧が基本。レンタルは無料で、自前持ち込みもOK。動線・置き場・隣接公園との組み合わせまで、0〜3歳連れに必要な情報を一気に整理しました。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

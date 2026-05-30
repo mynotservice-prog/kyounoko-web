@@ -1,12 +1,13 @@
 ---
 slug: baby-jama-iwareta
 title: ベビーカー邪魔と言われた｜原因・対処法・心の守り方完全ガイド
-metaDescription: 「ベビーカー邪魔」と言われた経験への対処法を完全解説。なぜ言われるのか背景、その場での切り返し、傷ついた心の癒し方、迷惑にならない使い方のコツまで網羅。「あなただけじゃない」のメッセージとともに。
+metaDescription: >-
+  「ベビーカー邪魔」と言われた経験への対処法を完全解説。なぜ言われるのか背景、その場での切り返し、傷ついた心の癒し方、迷惑にならない使い方のコツまで網羅。「あなただけじゃない」のメッセージとともに。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/baby-jama-iwareta.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: free
 lede: >-
   電車で、エレベーターで、店内で――「ベビーカー邪魔」と言われた経験は、思った以上に心に深く刺さります。本記事はなぜそんな言葉が向けられるのか背景、その場での対処法、心の癒し方、トラブルを減らす使い方のコツを完全ガイド。「あなただけじゃない」「悪いのは言った相手」――まずそこから始めましょう。
+legacyHero: /hero/baby-01.webp
 ---
 
 ## 結論

@@ -1,12 +1,13 @@
 ---
 slug: kami-ehon-vs-denshi-ehon
 title: 紙絵本 vs 電子絵本 完全比較【2026年版】｜効果・コスト・続けやすさ
-metaDescription: 紙絵本と電子絵本（アプリ・サブスク）を6項目で比較。語彙・コスト・収納・対象年齢・スクリーンタイム・親子のふれあいを徹底解説。0歳〜未就学児の家庭タイプ別おすすめを完全紹介。
+metaDescription: >-
+  紙絵本と電子絵本（アプリ・サブスク）を6項目で比較。語彙・コスト・収納・対象年齢・スクリーンタイム・親子のふれあいを徹底解説。0歳〜未就学児の家庭タイプ別おすすめを完全紹介。
 category: today-nani
 categoryName: 今日なにする
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/kid-study-03.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/kami-ehon-vs-denshi-ehon.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   「紙の絵本と電子絵本、どっちが子どもにいい？」を2026年版で完全比較。紙絵本は語彙力・親子コミュニケーションが強み、電子絵本は持ち運び・コスパ・コンテンツ量が強み。語彙・コスト・収納・対象年齢・スクリーンタイム・親子のふれあいの6項目で徹底解説し、0歳〜未就学児の家庭タイプ別おすすめまで整理しました。
+legacyHero: /hero/kid-study-03.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

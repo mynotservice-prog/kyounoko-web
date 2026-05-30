@@ -1,12 +1,13 @@
 ---
 slug: jonathan-stroller
 title: ジョナサンのベビーカー入店｜通路幅・席タイプ・店舗別対応まとめ
-metaDescription: ジョナサンはベビーカーで入れる？すかいらーくグループ共通の入店対応。郊外型・駅前型での通路幅、混雑時の折りたたみ案内、ベビーカーごと席に着くコツまで子連れ目線で解説します。
+metaDescription: >-
+  ジョナサンはベビーカーで入れる？すかいらーくグループ共通の入店対応。郊外型・駅前型での通路幅、混雑時の折りたたみ案内、ベビーカーごと席に着くコツまで子連れ目線で解説します。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/jonathan-stroller.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 60
   budget: low
-lede: ジョナサンはすかいらーくグループ共通でベビーカー入店OK。郊外型は通路幅が広く畳まずに席まで通せます。アプリ予約時にベビーカー利用を伝えるだけで入口近くの席に案内される運用です。
+lede: >-
+  ジョナサンはすかいらーくグループ共通でベビーカー入店OK。郊外型は通路幅が広く畳まずに席まで通せます。アプリ予約時にベビーカー利用を伝えるだけで入口近くの席に案内される運用です。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

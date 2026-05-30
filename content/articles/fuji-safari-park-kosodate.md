@@ -1,12 +1,13 @@
 ---
 slug: fuji-safari-park-kosodate
 title: 富士サファリパーク 子連れ完全攻略｜回り方・ジャングルバス・宿【2026年版】
-metaDescription: 富士サファリパークを子連れで攻略する完全ガイド。ジャングルバスの予約、マイカー周遊、ふれあいゾーン、授乳室、料金、混雑回避、宿選びを2026年5月時点の最新情報で整理。0〜6歳と楽しむコツも解説。
+metaDescription: >-
+  富士サファリパークを子連れで攻略する完全ガイド。ジャングルバスの予約、マイカー周遊、ふれあいゾーン、授乳室、料金、混雑回避、宿選びを2026年5月時点の最新情報で整理。0〜6歳と楽しむコツも解説。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/autumn-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/fuji-safari-park-kosodate.jpg
 area: kanto
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: 富士サファリパークは静岡県裾野市、富士山麓のサファリ型動物園。マイカー乗入れ＋ジャングルバス＋ふれあいゾーンで、0歳から楽しめる関東屈指の子連れスポット。混雑回避・予約のコツ・周辺宿を2026年最新情報でまとめます。
+lede: >-
+  富士サファリパークは静岡県裾野市、富士山麓のサファリ型動物園。マイカー乗入れ＋ジャングルバス＋ふれあいゾーンで、0歳から楽しめる関東屈指の子連れスポット。混雑回避・予約のコツ・周辺宿を2026年最新情報でまとめます。
+legacyHero: /hero/autumn-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

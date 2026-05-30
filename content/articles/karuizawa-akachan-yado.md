@@ -1,12 +1,13 @@
 ---
 slug: karuizawa-akachan-yado
 title: 軽井沢の赤ちゃん歓迎宿｜0歳OK・離乳食・コテージ完全ガイド【2026年版】
-metaDescription: 軽井沢の赤ちゃん歓迎宿を厳選紹介。0歳OK、離乳食対応、ベビー備品貸出、コテージタイプ、星野リゾート系まで2026年5月時点で整理。失敗しない宿選びのコツと予約前確認リスト付き。
+metaDescription: >-
+  軽井沢の赤ちゃん歓迎宿を厳選紹介。0歳OK、離乳食対応、ベビー備品貸出、コテージタイプ、星野リゾート系まで2026年5月時点で整理。失敗しない宿選びのコツと予約前確認リスト付き。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/autumn-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/karuizawa-akachan-yado.jpg
 area: kanto
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: 軽井沢で赤ちゃんと泊まるなら「コテージ型」「ベビー備品レンタル充実」「離乳食対応」「夜のレストラン部屋食可」が4大条件。0歳〜3歳の親が安心して泊まれる宿を、エリア別・予算別に2026年最新情報でまとめます。
+lede: >-
+  軽井沢で赤ちゃんと泊まるなら「コテージ型」「ベビー備品レンタル充実」「離乳食対応」「夜のレストラン部屋食可」が4大条件。0歳〜3歳の親が安心して泊まれる宿を、エリア別・予算別に2026年最新情報でまとめます。
+legacyHero: /hero/autumn-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

@@ -1,12 +1,13 @@
 ---
 slug: baby-oil-tsukaikata
 title: ベビーオイルの使い方｜マッサージ・保湿・耳鼻ケアの手順完全ガイド
-metaDescription: ベビーオイルの使い方を保存版で解説。全身マッサージ・乾燥肌の保湿・耳掃除・鼻のかさぶたケア・乳児湿疹のケア別の手順、量の目安、ベビーローションとの使い分け、選び方のポイントまで、はじめてのスキンケアでも安心して使えます。
+metaDescription: >-
+  ベビーオイルの使い方を保存版で解説。全身マッサージ・乾燥肌の保湿・耳掃除・鼻のかさぶたケア・乳児湿疹のケア別の手順、量の目安、ベビーローションとの使い分け、選び方のポイントまで、はじめてのスキンケアでも安心して使えます。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-03.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/baby-oil-tsukaikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   ベビーオイルは「全身マッサージ・保湿・耳鼻ケア」の3役をこなす万能アイテム。お風呂上がりに数滴を温めた手のひらで伸ばすだけで肌バリアがしっかり整います。基本は「少量・温める・優しく」。本記事では、用途別の手順・適量の目安・ローションとの使い分け・失敗あるあるまで保存版で解説します。
+legacyHero: /hero/baby-03.webp
 ---
 
 ## 結論

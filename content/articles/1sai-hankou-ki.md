@@ -1,12 +1,13 @@
 ---
 slug: 1sai-hankou-ki
 title: 1歳児の反抗期｜原因・対処法・月齢別対応完全ガイド【1〜2歳】
-metaDescription: 1歳児の反抗期がきつい…のけぞる・噛む・「イヤ」連発に悩む方へ。1歳前半から始まる「プレ反抗期」は自我の芽生え。原因・月齢別対応・叱らないコツ・発達相談の目安を整理しました。
+metaDescription: >-
+  1歳児の反抗期がきつい…のけぞる・噛む・「イヤ」連発に悩む方へ。1歳前半から始まる「プレ反抗期」は自我の芽生え。原因・月齢別対応・叱らないコツ・発達相談の目安を整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/1sai-hankou-ki.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: free
 lede: >-
   「抱っこを嫌がってのけぞる」「着替えで毎回大泣き」「ご飯をひっくり返す」――1歳児の反抗的な行動に悩む親は少なくありません。実は1歳前半から「魔の2歳児」の予兆である**プレ反抗期**が始まることがあり、これは**自我の芽生え**という大切な発達段階。本記事では月齢別の特徴と、消耗しすぎない関わり方を整理します。
+legacyHero: /hero/baby-01.webp
 ---
 
 ## 結論

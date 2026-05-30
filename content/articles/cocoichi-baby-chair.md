@@ -1,12 +1,13 @@
 ---
 slug: cocoichi-baby-chair
 title: CoCo壱番屋のベビーチェア事情｜種類・対応月齢・店舗差を完全解説【2026】
-metaDescription: CoCo壱（ココイチ）のベビーチェアって何台？腰すわり前から使える？に正直回答。0-2歳ママパパが知りたい種類・対応月齢・店舗差・席リクエストのコツを完全ガイド。
+metaDescription: >-
+  CoCo壱（ココイチ）のベビーチェアって何台？腰すわり前から使える？に正直回答。0-2歳ママパパが知りたい種類・対応月齢・店舗差・席リクエストのコツを完全ガイド。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/cocoichi-baby-chair.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 45
   budget: low
-lede: CoCo壱番屋にベビーチェアはあるの？何ヶ月から使える？ベルト付き？という疑問に正直回答。ココイチはカレーチェーンの中でもベビーチェア装備が比較的整っており、ロードサイド店なら1-2台確保されています。種類・対応月齢・席リクエストのコツをまとめました。
+lede: >-
+  CoCo壱番屋にベビーチェアはあるの？何ヶ月から使える？ベルト付き？という疑問に正直回答。ココイチはカレーチェーンの中でもベビーチェア装備が比較的整っており、ロードサイド店なら1-2台確保されています。種類・対応月齢・席リクエストのコツをまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 **結論：CoCo壱の店舗には木製ベビーチェアが基本配置。腰すわり後（7-8ヶ月以降）から使えます。ロードサイド店なら1-2台確保、駅前店は店舗差大きめ。**

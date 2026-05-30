@@ -1,12 +1,13 @@
 ---
 slug: baby-rucksack-erabikata
 title: ベビーリュックの選び方｜サイズ・素材・年齢別の選び方完全ガイド
-metaDescription: ベビーリュックの選び方を保存版で解説。年齢別のサイズ目安、素材の特徴、迷子防止ハーネス、ファーストプレゼント向けデザイン、保育園・お出かけ別の使い分け、人気ブランドの傾向まで、はじめてのリュック選びがスムーズに進みます。
+metaDescription: >-
+  ベビーリュックの選び方を保存版で解説。年齢別のサイズ目安、素材の特徴、迷子防止ハーネス、ファーストプレゼント向けデザイン、保育園・お出かけ別の使い分け、人気ブランドの傾向まで、はじめてのリュック選びがスムーズに進みます。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/commerce-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/baby-rucksack-erabikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   ベビーリュックは「ファーストバースデー記念」「自分で持ちたい時期」「保育園用」と用途で選ぶポイントが違います。基本は「年齢×目的×素材」の3軸で絞り込む。1歳前後はミニサイズ、2歳からは少し大きめ、3歳以上は通園対応。本記事では、年齢別の選び方・素材比較・人気ブランド傾向・失敗あるあるまで保存版で解説します。
+legacyHero: /hero/commerce-01.webp
 ---
 
 ## 結論

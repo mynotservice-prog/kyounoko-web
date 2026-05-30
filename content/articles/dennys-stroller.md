@@ -1,12 +1,13 @@
 ---
 slug: dennys-stroller
 title: デニーズのベビーカー入店｜店舗タイプ別の通路幅と席選びガイド
-metaDescription: デニーズはベビーカーで入れる？郊外型・駅前型・商業施設型での通路幅と入店難易度を整理。畳む必要があるケースと、混雑時の対応、ベビーカー入店成功率を上げる時間帯まで解説します。
+metaDescription: >-
+  デニーズはベビーカーで入れる？郊外型・駅前型・商業施設型での通路幅と入店難易度を整理。畳む必要があるケースと、混雑時の対応、ベビーカー入店成功率を上げる時間帯まで解説します。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/dennys-stroller.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 60
   budget: low
-lede: デニーズはベビーカー入店OKの店舗が大半。郊外型なら畳まずに席まで通せる店舗が多い一方、駅前小型店は混雑時に折りたたみを案内されることがあります。店舗タイプ別の判断基準を整理します。
+lede: >-
+  デニーズはベビーカー入店OKの店舗が大半。郊外型なら畳まずに席まで通せる店舗が多い一方、駅前小型店は混雑時に折りたたみを案内されることがあります。店舗タイプ別の判断基準を整理します。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

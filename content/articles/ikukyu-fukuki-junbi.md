@@ -1,12 +1,13 @@
 ---
 slug: ikukyu-fukuki-junbi
 title: 育休復帰の準備｜タイムライン・チェックリスト・家計・心構え完全ガイド
-metaDescription: 育休復帰の準備を「3ヶ月前・1ヶ月前・直前」の3段階で完全網羅。保育園送迎ルート、家事分担、職場連絡、家計再設計、メンタル準備まで。先輩ママのリアルなアドバイスとともに、安心して復帰できる準備を解説します。
+metaDescription: >-
+  育休復帰の準備を「3ヶ月前・1ヶ月前・直前」の3段階で完全網羅。保育園送迎ルート、家事分担、職場連絡、家計再設計、メンタル準備まで。先輩ママのリアルなアドバイスとともに、安心して復帰できる準備を解説します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/ikukyu-fukuki-junbi.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: free
 lede: >-
   育休復帰3ヶ月前。「何から準備すれば？」――その不安、本記事が時系列で解消します。3ヶ月前・1ヶ月前・直前の3段階で必要な準備、保育園・職場・家事・家計・メンタルすべてカバー。先輩ママのリアルな知恵をふんだんに盛り込んだ、保存版チェックリストです。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 ## 結論

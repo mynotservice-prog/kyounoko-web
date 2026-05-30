@@ -1,12 +1,13 @@
 ---
 slug: byouji-hoiku-toha
 title: 病児保育とは｜定義・料金・予約方法・利用条件完全ガイド
-metaDescription: 病児保育とは何か、対象年齢・料金・予約方法・利用できる病気の範囲を完全解説。共働き家庭が突然の発熱で困った時の駆け込み寺。事前登録が必須なので、健康なうちに準備を。2026年5月時点の一般情報でやさしく整理しました。
+metaDescription: >-
+  病児保育とは何か、対象年齢・料金・予約方法・利用できる病気の範囲を完全解説。共働き家庭が突然の発熱で困った時の駆け込み寺。事前登録が必須なので、健康なうちに準備を。2026年5月時点の一般情報でやさしく整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-03.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/byouji-hoiku-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   「子どもが熱出した、でも仕事が休めない」——共働き家庭の最大級ピンチを助けるのが病児保育です。本記事は2026年5月時点の一般情報をもとに、病児保育の基本・対象・料金・予約方法・利用の流れ・事前登録のコツをやさしく整理しました。
+legacyHero: /hero/baby-03.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

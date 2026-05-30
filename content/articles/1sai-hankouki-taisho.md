@@ -1,12 +1,13 @@
 ---
 slug: 1sai-hankouki-taisho
 title: 1歳の反抗期｜原因・対処法・年齢別対応完全ガイド【0〜2歳】
-metaDescription: 1歳の反抗期がきつい…？「魔の2歳」より前の1歳前半から始まる「プレ反抗期」は自我の芽生え。原因・月齢別対応・叱らないコツ・発達相談の目安を整理。早めの理解で楽になります。
+metaDescription: >-
+  1歳の反抗期がきつい…？「魔の2歳」より前の1歳前半から始まる「プレ反抗期」は自我の芽生え。原因・月齢別対応・叱らないコツ・発達相談の目安を整理。早めの理解で楽になります。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/1sai-hankouki-taisho.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: free
 lede: >-
   「まだ1歳なのにイヤイヤがすごい」「のけぞって泣く・物を投げる」――1歳の反抗期に戸惑う親は多いもの。実は1歳前半から**「プレ反抗期」**として自我の芽生えが始まるとされ、2歳イヤイヤ期の前段階と考えられています。本記事では月齢別の対応と、叱らない関わり方を整理しました。
+legacyHero: /hero/baby-01.webp
 ---
 
 ## 結論

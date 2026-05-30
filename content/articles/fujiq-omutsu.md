@@ -1,12 +1,13 @@
 ---
 slug: fujiq-omutsu
 title: 富士急ハイランド オムツ替え｜ベビールーム3箇所・全マップ完全ガイド【2026年】
-metaDescription: 富士急ハイランドのおむつ替え環境を徹底解説。トーマスランド・本園のベビールーム3箇所の位置・設備・授乳室・調乳設備・販売の有無まで、0〜2歳連れの「困った」を全部解決する保存版。
+metaDescription: >-
+  富士急ハイランドのおむつ替え環境を徹底解説。トーマスランド・本園のベビールーム3箇所の位置・設備・授乳室・調乳設備・販売の有無まで、0〜2歳連れの「困った」を全部解決する保存版。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/fujiq-omutsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: mid
 lede: >-
   富士急ハイランドのおむつ替えはベビールーム3箇所＋多目的トイレで対応。屋外型なので場所の把握が満足度を左右します。位置・設備・授乳室・調乳設備まで、0〜2歳連れに必要な情報を一気に整理しました。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

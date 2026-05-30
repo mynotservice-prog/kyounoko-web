@@ -5,8 +5,8 @@ metaDescription: 100日祝い（百日祝い）のやり方を完全ガイド。
 category: gyouji
 categoryName: 季節と行事
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-03.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/100ka-iwai-yarikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,6 +18,7 @@ quickInfo:
   durationMin: 30
   budget: mid
 lede: 100日祝い（百日祝い）の本来の意味、お食い初めとの関係、自宅で無理なくできる簡略版から本格版まで、時期・予算・撮影アイデアを整理しました。
+legacyHero: /hero/baby-03.webp
 ---
 
 ## 結論（時期・必要なもの）

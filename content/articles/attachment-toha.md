@@ -1,12 +1,13 @@
 ---
 slug: attachment-toha
 title: アタッチメントとは｜定義・形成時期・育て方・愛着完全ガイド
-metaDescription: アタッチメント（愛着）とは何か、いつ・どのように形成されるのか、安定した愛着を育むコツを完全解説。安全基地としての親の関わり方や、愛着スタイルの種類まで2026年5月時点の発達心理学の知見をもとにやさしく整理しました。
+metaDescription: >-
+  アタッチメント（愛着）とは何か、いつ・どのように形成されるのか、安定した愛着を育むコツを完全解説。安全基地としての親の関わり方や、愛着スタイルの種類まで2026年5月時点の発達心理学の知見をもとにやさしく整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/attachment-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「子育てで大事なのは愛着形成」と聞くけれど、具体的に何をすればいい？——アタッチメント（愛着）は、子どもの心の発達の基盤となる大切な概念です。本記事は2026年5月時点の発達心理学の一般情報をもとに、アタッチメントの基本・形成時期・育てるコツをやさしく整理しました。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

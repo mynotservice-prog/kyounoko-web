@@ -1,12 +1,13 @@
 ---
 slug: kasai-aquarium-kosodate
 title: 葛西臨海水族園 子連れ攻略｜0〜6歳向け動線・予算・周辺公園組合せ【2026年】
-metaDescription: 葛西臨海水族園を0〜6歳子連れで攻略する完全ガイド。マグロ大水槽・ペンギン展示・年齢別動線・隣接の葛西臨海公園との組み合わせ・予算目安まで、初訪問でも失敗しないノウハウ全網羅。
+metaDescription: >-
+  葛西臨海水族園を0〜6歳子連れで攻略する完全ガイド。マグロ大水槽・ペンギン展示・年齢別動線・隣接の葛西臨海公園との組み合わせ・予算目安まで、初訪問でも失敗しないノウハウ全網羅。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/kasai-aquarium-kosodate.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   葛西臨海水族園は都営の水族館で入園料も手頃。マグロ大水槽は圧巻の迫力、ペンギン展示も豊富で0〜6歳の子連れに大人気。年齢別動線・隣接の葛西臨海公園との組み合わせまで、初訪問の不安を解消する完全ガイドです。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

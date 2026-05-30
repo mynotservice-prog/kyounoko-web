@@ -1,12 +1,13 @@
 ---
 slug: karuizawa-kodzure-spot
 title: 軽井沢の子連れスポット｜遊び場・宿・回り方完全ガイド【2026年版】
-metaDescription: 軽井沢を子連れで楽しむ完全ガイド。0〜6歳と回れる自然系・室内系スポット7選、ベビーカー観光のコツ、避暑地・冬の楽しみ方、宿選び。2026年5月時点の最新情報で実地目線で整理しました。
+metaDescription: >-
+  軽井沢を子連れで楽しむ完全ガイド。0〜6歳と回れる自然系・室内系スポット7選、ベビーカー観光のコツ、避暑地・冬の楽しみ方、宿選び。2026年5月時点の最新情報で実地目線で整理しました。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/autumn-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/karuizawa-kodzure-spot.jpg
 area: kanto
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: 軽井沢は東京から新幹線で約70分、避暑・自然・ショッピングが揃う子連れ天国。アウトレット、雲場池、軽井沢おもちゃ王国、星野エリアなど0〜6歳と楽しめるスポットを2026年最新情報で7つ厳選。回り方・宿選びまで網羅します。
+lede: >-
+  軽井沢は東京から新幹線で約70分、避暑・自然・ショッピングが揃う子連れ天国。アウトレット、雲場池、軽井沢おもちゃ王国、星野エリアなど0〜6歳と楽しめるスポットを2026年最新情報で7つ厳選。回り方・宿選びまで網羅します。
+legacyHero: /hero/autumn-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

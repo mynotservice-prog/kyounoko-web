@@ -1,12 +1,13 @@
 ---
 slug: fujiq-stroller
 title: 富士急ハイランド ベビーカー入園｜貸出・置き場・動線完全ガイド【2026年】
-metaDescription: 富士急ハイランドのベビーカー事情を徹底解説。貸出料金・トーマスランド動線・アトラクション置き場・授乳室までの動線・天候別の注意点まで、0〜3歳連れの「困った」を解決する保存版。
+metaDescription: >-
+  富士急ハイランドのベビーカー事情を徹底解説。貸出料金・トーマスランド動線・アトラクション置き場・授乳室までの動線・天候別の注意点まで、0〜3歳連れの「困った」を解決する保存版。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/fujiq-stroller.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: mid
 lede: >-
   富士急ハイランドはトーマスランド・リサとガスパールタウンを中心に、ベビーカーで一周可能な広大な屋外パーク。ただし起伏のあるエリアもあり、動線設計が満足度を左右します。貸出・持ち込み・動線・置き場まで一気に整理しました。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

@@ -1,12 +1,13 @@
 ---
 slug: fuyu-1sai-sugoshikata
 title: 冬の1歳児 過ごし方｜服装・食事・遊び・お出かけ完全ガイド
-metaDescription: 1歳の冬の過ごし方を解説。寒さ・乾燥・感染症から守る服装、温活幼児食、室内・室外遊び、おでかけ、加湿・保湿・予防接種・暖房の使い方、運動不足解消法まで網羅した実践ガイド。
+metaDescription: >-
+  1歳の冬の過ごし方を解説。寒さ・乾燥・感染症から守る服装、温活幼児食、室内・室外遊び、おでかけ、加湿・保湿・予防接種・暖房の使い方、運動不足解消法まで網羅した実践ガイド。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-02.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/fuyu-1sai-sugoshikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,7 +19,9 @@ quickInfo:
     - cold
   durationMin: 30
   budget: free
-lede: 冬の1歳児は、外遊びが減り運動不足や生活リズムの乱れが起きやすい時期。感染症シーズン真っ只中で、家族みんなの体調管理も大変です。本記事では服装・食事・遊び・お出かけ・体調管理の5軸で、1歳の冬を健やかに過ごすコツをまとめます。
+lede: >-
+  冬の1歳児は、外遊びが減り運動不足や生活リズムの乱れが起きやすい時期。感染症シーズン真っ只中で、家族みんなの体調管理も大変です。本記事では服装・食事・遊び・お出かけ・体調管理の5軸で、1歳の冬を健やかに過ごすコツをまとめます。
+legacyHero: /hero/baby-02.webp
 ---
 
 ## 結論

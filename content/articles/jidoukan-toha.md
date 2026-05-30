@@ -1,12 +1,13 @@
 ---
 slug: jidoukan-toha
 title: 児童館とは｜定義・利用方法・年齢・無料の特徴完全ガイド
-metaDescription: 児童館とは何か、誰が使えるのか、利用料金・開館時間・遊べる内容を完全解説。0歳から18歳まで無料で使える地域の遊び場で、雨の日・暑い日・寒い日の救世主。2026年5月時点の一般情報でやさしく整理しました。
+metaDescription: >-
+  児童館とは何か、誰が使えるのか、利用料金・開館時間・遊べる内容を完全解説。0歳から18歳まで無料で使える地域の遊び場で、雨の日・暑い日・寒い日の救世主。2026年5月時点の一般情報でやさしく整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/classroom-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/jidoukan-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「児童館って何があるの？」「赤ちゃん連れでも行ける？」——児童館は0〜18歳までが無料で使える地域の屋内遊び場です。本記事は2026年5月時点の一般情報をもとに、児童館の基本・利用方法・年齢別の楽しみ方・支援センターとの違いをやさしく整理しました。
+legacyHero: /hero/classroom-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

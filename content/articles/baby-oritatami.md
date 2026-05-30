@@ -1,12 +1,13 @@
 ---
 slug: baby-oritatami
 title: ベビーカーの折りたたみ方｜ワンタッチ・両手の手順とコツ完全ガイド
-metaDescription: ベビーカーの折りたたみ方を、ワンタッチ式・両手式・A型/B型別に手順・コツで完全解説。電車・バス・車載・玄関収納のシーン別ベストプラクティス、折りたためない時の対処法、失敗あるあるまで保存版で紹介します。
+metaDescription: >-
+  ベビーカーの折りたたみ方を、ワンタッチ式・両手式・A型/B型別に手順・コツで完全解説。電車・バス・車載・玄関収納のシーン別ベストプラクティス、折りたためない時の対処法、失敗あるあるまで保存版で紹介します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/baby-oritatami.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   ベビーカーの折りたたみ方は、ワンタッチ式と両手式で大きく異なります。電車・バス・車載のシーンで「もたつかない」ことが重要。本記事では、折りたたみの基本手順から、シーン別のコツ、折りたためない時の対処法まで保存版で解説。我が家のリアルも紹介します。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 ## 結論

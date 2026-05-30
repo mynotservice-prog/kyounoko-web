@@ -1,13 +1,12 @@
 ---
 slug: ikea-stroller
 title: IKEAベビーカー入店・カート完全ガイド｜店舗別動線と注意点【2026年】
-metaDescription: >-
-  IKEAはベビーカーで入店OK？ショッピングカートとベビーカーの併用、エスカレーター・エレベーター動線、レストラン横付け可否を子連れ目線で詳しく解説します。
+metaDescription: IKEAはベビーカーで入店OK？ショッピングカートとベビーカーの併用、エスカレーター・エレベーター動線、レストラン横付け可否を子連れ目線で詳しく解説します。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/commerce-02.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/ikea-stroller.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   IKEAは**店内全てベビーカーで回れる**子連れ歓迎の家具店。ただし、ショッピングカートとベビーカーの併用には少しコツがいります。エスカレーター・エレベーター・カート・レストラン動線を、子連れ家族の目線でまるっと整理しました。
+legacyHero: /hero/commerce-02.webp
 ---
 
 **結論：IKEAはベビーカー入店完全OK。全店エレベーター完備で、レストラン・ショールーム・倉庫まで全エリア対応。ただし、大きな家具を買う日はカート併用に注意。**

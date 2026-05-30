@@ -1,12 +1,13 @@
 ---
 slug: hana-suiki-tsukaikata
 title: 鼻吸い器の使い方｜手動・電動の手順・コツ・お手入れ完全ガイド
-metaDescription: 鼻吸い器の使い方を手動・電動別に保存版で解説。吸引のタイミング、嫌がる赤ちゃんの押さえ方、効果的な角度、お手入れと洗浄、中耳炎リスクを下げる耳ケア、電動と手動の選び方まで、はじめてでも正しく安全に鼻水を吸い出せます。
+metaDescription: >-
+  鼻吸い器の使い方を手動・電動別に保存版で解説。吸引のタイミング、嫌がる赤ちゃんの押さえ方、効果的な角度、お手入れと洗浄、中耳炎リスクを下げる耳ケア、電動と手動の選び方まで、はじめてでも正しく安全に鼻水を吸い出せます。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/hana-suiki-tsukaikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   鼻水を放っておくと中耳炎・睡眠不足・食欲低下の原因に。鼻吸い器は赤ちゃんの「自分でかめない時期」の必須アイテムです。コツは「お風呂後の温まった鼻」「ノズルは上向きに入れず壁に沿わせる」「短時間で何度も」。本記事では、手動・電動別の手順・嫌がる時の対処・お手入れまで保存版で解説します。
+legacyHero: /hero/baby-01.webp
 ---
 
 ## 結論

@@ -1,12 +1,13 @@
 ---
 slug: jonathan-kids-menu
 title: ジョナサンのキッズメニュー｜値段・対象年齢・アレルゲン対応まとめ
-metaDescription: ジョナサンのキッズメニューはお子様ハンバーグ・お子様プレート・お子様うどん中心。価格帯450-700円、ガストより少し落ち着いた構成。アレルゲン情報の確認方法と取り分けOKメニューを解説。
+metaDescription: >-
+  ジョナサンのキッズメニューはお子様ハンバーグ・お子様プレート・お子様うどん中心。価格帯450-700円、ガストより少し落ち着いた構成。アレルゲン情報の確認方法と取り分けOKメニューを解説。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/jonathan-kids-menu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 60
   budget: low
-lede: ジョナサンのキッズメニューはお子様ハンバーグ・お子様プレート・お子様うどんなど3-5種類。価格帯は450-700円とすかいらーくグループのなかでも手頃。落ち着いた雰囲気で食事できるのが特徴です。
+lede: >-
+  ジョナサンのキッズメニューはお子様ハンバーグ・お子様プレート・お子様うどんなど3-5種類。価格帯は450-700円とすかいらーくグループのなかでも手頃。落ち着いた雰囲気で食事できるのが特徴です。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

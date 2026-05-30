@@ -5,8 +5,8 @@ metaDescription: ガストのベビーチェアって何種類ある？腰すわ
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/gusto-baby-chair.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +19,9 @@ quickInfo:
     - any
   durationMin: 45
   budget: low
-lede: ガストにベビーチェアはあるの？何ヶ月から使える？ベルト付き？という疑問に正直回答。ガストはファミレスの中でもベビーチェア装備が比較的整っており、店舗ごとに数台確保されています。種類・対応月齢・席リクエストのコツをまとめました。
+lede: >-
+  ガストにベビーチェアはあるの？何ヶ月から使える？ベルト付き？という疑問に正直回答。ガストはファミレスの中でもベビーチェア装備が比較的整っており、店舗ごとに数台確保されています。種類・対応月齢・席リクエストのコツをまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 **結論：ガストには木製ベビーチェアと豆椅子型の2タイプが基本配置。腰すわり後（7-8ヶ月以降）から使えます。混雑時は数が少ないので、ピーク前後の入店が確実。**

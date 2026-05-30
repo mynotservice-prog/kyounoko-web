@@ -1,12 +1,13 @@
 ---
 slug: hoikuen-fuan-kaisho
 title: 保育園が不安｜入園前の心配・解消法・慣らし保育のコツ完全ガイド
-metaDescription: 保育園入園前の不安（泣かないか・先生は優しいか・病気をもらわないか・愛着不足にならないか）を完全解消。原因の整理、対処法、慣らし保育の乗り切り方、先輩ママの体験まで網羅。「あなたの選択は間違ってない」と背中を押します。
+metaDescription: >-
+  保育園入園前の不安（泣かないか・先生は優しいか・病気をもらわないか・愛着不足にならないか）を完全解消。原因の整理、対処法、慣らし保育の乗り切り方、先輩ママの体験まで網羅。「あなたの選択は間違ってない」と背中を押します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/hoikuen-fuan-kaisho.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: free
 lede: >-
   「保育園で泣き続けるんじゃないか」「愛着が不十分になるんじゃ」「病気をもらいまくるのでは」――保育園入園前の不安は尽きません。本記事は不安の正体を整理し、根拠ある対処法、慣らし保育の乗り切り方、先輩ママのリアル体験を完全ガイド。「保育園に預けるあなたの選択は間違ってません」と背中を押します。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 ## 結論

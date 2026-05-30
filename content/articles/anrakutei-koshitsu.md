@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/anrakutei-koshitsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: mid
 lede: >-
   安楽亭は家族向け焼肉チェーンらしく、座敷・掘りごたつ・半個室を備えた店舗が多いのが特徴。完全個室は限定的なものの、座敷席や仕切り付きボックス席で家族のプライベート感を確保できます。予約時のひと声で席選びがスムーズになります。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

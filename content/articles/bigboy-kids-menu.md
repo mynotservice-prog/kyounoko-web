@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/bigboy-kids-menu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: mid
 lede: >-
   ビッグボーイはキッズメニュー＋サラダバー・スープバー・カレーバー・ライスバーが利用できる家族向けハンバーグ＆ステーキチェーン。未就学児でも好きなものを選べて、家族でコスパよく外食できる定番です。年齢別の選び方をまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

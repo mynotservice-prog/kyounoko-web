@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/bigboy-koshitsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: mid
 lede: >-
   ビッグボーイに完全個室はほぼありませんが、ボックス席・壁側席・半個室仕様の店舗で家族のプライベート感を確保できます。子連れには壁側のボックス席が定番。座席タイプ別の使い分けと予約のコツで、ハンバーグ＆ステーキを快適に楽しめます。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/bigboy-baby-chair.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: mid
 lede: >-
   ビッグボーイはハンバーグ・ステーキを楽しめる家族向けチェーンで、ベビーチェアはほぼ全店常備。サラダバー・スープバー付きで子連れにも頼れるお店です。熱い鉄板提供のため、座る位置と取り分けに配慮すれば家族外食の定番になります。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

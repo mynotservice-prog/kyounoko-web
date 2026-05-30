@@ -1,12 +1,13 @@
 ---
 slug: famisapo-toha
 title: ファミサポとは｜定義・料金・登録方法・利用条件完全ガイド
-metaDescription: ファミサポ（ファミリー・サポート・センター）とは何か、料金・登録方法・利用できる場面を完全解説。地域住民の助け合いで成り立つ送迎・預かり支援は、共働き・ワンオペ家庭の強い味方。2026年5月時点の一般情報でやさしく整理しました。
+metaDescription: >-
+  ファミサポ（ファミリー・サポート・センター）とは何か、料金・登録方法・利用できる場面を完全解説。地域住民の助け合いで成り立つ送迎・預かり支援は、共働き・ワンオペ家庭の強い味方。2026年5月時点の一般情報でやさしく整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/famisapo-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   「保育園のお迎えに間に合わない」「学童帰りを少し預かってほしい」——そんな日常の困りごとに、地域の助け合いで応えるのがファミサポ（ファミリー・サポート・センター）です。本記事は2026年5月時点の一般情報をもとに、ファミサポの基本・料金・登録方法・利用条件をやさしく整理しました。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

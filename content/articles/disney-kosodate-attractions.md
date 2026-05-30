@@ -1,12 +1,13 @@
 ---
 slug: disney-kosodate-attractions
 title: ディズニーランド 0歳〜OKアトラクション完全ガイド｜身長制限なし・親同伴で乗れる15選【2026年版】
-metaDescription: 東京ディズニーランド、0歳・1歳・2歳の赤ちゃんでも乗れるアトラクションを完全網羅。身長制限なし・親同伴OKの15選、乗り物の刺激度、暗さ、音量、ベビーカー駐車場所まで2026年最新情報で解説します。
+metaDescription: >-
+  東京ディズニーランド、0歳・1歳・2歳の赤ちゃんでも乗れるアトラクションを完全網羅。身長制限なし・親同伴OKの15選、乗り物の刺激度、暗さ、音量、ベビーカー駐車場所まで2026年最新情報で解説します。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/disney-kosodate-attractions.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,7 +19,9 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: 0歳でも乗れるディズニーアトラクションは想像以上に多い！本記事では身長制限なし・親同伴OKのアトラクションを15個厳選し、刺激度・暗さ・音量・ベビーカー対応まで実体験ベースで完全解説します。
+lede: >-
+  0歳でも乗れるディズニーアトラクションは想像以上に多い！本記事では身長制限なし・親同伴OKのアトラクションを15個厳選し、刺激度・暗さ・音量・ベビーカー対応まで実体験ベースで完全解説します。
+legacyHero: /hero/park-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

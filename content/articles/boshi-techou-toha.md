@@ -1,12 +1,13 @@
 ---
 slug: boshi-techou-toha
 title: 母子手帳とは｜定義・もらい方・使い方・電子化まで完全ガイド
-metaDescription: 母子手帳（母子健康手帳）とは何か、いつ・どこでもらえるのか、書き方・活用法・電子母子手帳アプリまで完全解説。妊娠中から小学校入学前まで使う1冊の役割を、2026年5月時点の情報でやさしく整理しました。
+metaDescription: >-
+  母子手帳（母子健康手帳）とは何か、いつ・どこでもらえるのか、書き方・活用法・電子母子手帳アプリまで完全解説。妊娠中から小学校入学前まで使う1冊の役割を、2026年5月時点の情報でやさしく整理しました。
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/commerce-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/boshi-techou-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   妊娠が分かったらまず手にする「母子手帳」。何のためのもので、いつどこでもらい、どう使うの？——母子手帳は妊娠から就学前まで親子の健康記録を1冊にまとめる大切な公的書類です。本記事は2026年5月時点の一般情報をもとに、もらい方から活用のコツまで整理しました。
+legacyHero: /hero/commerce-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

@@ -1,12 +1,13 @@
 ---
 slug: izu-kodzure-spot
 title: 伊豆の子連れスポット｜海・水族館・宿・回り方完全ガイド【2026年版】
-metaDescription: 伊豆半島を子連れで楽しむ完全ガイド。0〜6歳と楽しめる海水浴場・水族館・動物園・観光スポット、ベビーカー対応、赤ちゃん歓迎宿選びを2026年5月時点の最新情報で実地目線で整理。
+metaDescription: >-
+  伊豆半島を子連れで楽しむ完全ガイド。0〜6歳と楽しめる海水浴場・水族館・動物園・観光スポット、ベビーカー対応、赤ちゃん歓迎宿選びを2026年5月時点の最新情報で実地目線で整理。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/autumn-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/izu-kodzure-spot.jpg
 area: kanto
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: 伊豆半島は東京から特急踊り子で約2時間、海・温泉・自然・観光施設が揃う子連れ旅行先。0〜6歳と楽しめる遠浅ビーチ、水族館、サファリ系施設、赤ちゃん歓迎宿の選び方を2026年最新情報でまとめます。
+lede: >-
+  伊豆半島は東京から特急踊り子で約2時間、海・温泉・自然・観光施設が揃う子連れ旅行先。0〜6歳と楽しめる遠浅ビーチ、水族館、サファリ系施設、赤ちゃん歓迎宿の選び方を2026年最新情報でまとめます。
+legacyHero: /hero/autumn-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

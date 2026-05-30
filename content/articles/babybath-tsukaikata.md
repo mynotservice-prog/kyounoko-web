@@ -1,12 +1,13 @@
 ---
 slug: babybath-tsukaikata
 title: ベビーバスの使い方｜選び方・置き場所・8ステップ手順完全ガイド
-metaDescription: ベビーバスの使い方を、種類別の選び方・置き場所のコツ・準備・8ステップの沐浴手順までまとめた保存版。空気で膨らます/プラスチック/シンク用の使い分け、いつまで使えるかの目安、失敗あるあると我が家のリアルも紹介します。
+metaDescription: >-
+  ベビーバスの使い方を、種類別の選び方・置き場所のコツ・準備・8ステップの沐浴手順までまとめた保存版。空気で膨らます/プラスチック/シンク用の使い分け、いつまで使えるかの目安、失敗あるあると我が家のリアルも紹介します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/bath-02.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/babybath-tsukaikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +20,7 @@ quickInfo:
   budget: low
 lede: >-
   ベビーバスは新生児期の沐浴に使う赤ちゃん用のお風呂で、種類により置き場所や使い勝手が大きく違います。本記事では、ベビーバスの選び方から実際の使い方手順、お湯の温度・置き場所のコツ、失敗あるあるまで保存版で解説。我が家のリアルな試行錯誤も紹介します。
+legacyHero: /hero/bath-02.webp
 ---
 
 ## 結論

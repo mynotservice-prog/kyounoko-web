@@ -1,12 +1,13 @@
 ---
 slug: chiiku-omocha-toha
 title: 知育玩具とは｜定義・効果・年齢別おもちゃ選びの完全ガイド
-metaDescription: 知育玩具とは何か、いつから・どんなおもちゃを選べばよいか、定番ブランドとレンタルサービスまで完全解説。モンテッソーリ・STEM・木製おもちゃの違いや年齢別の選び方を2026年5月時点の情報でやさしく整理しました。
+metaDescription: >-
+  知育玩具とは何か、いつから・どんなおもちゃを選べばよいか、定番ブランドとレンタルサービスまで完全解説。モンテッソーリ・STEM・木製おもちゃの違いや年齢別の選び方を2026年5月時点の情報でやさしく整理しました。
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-03.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/chiiku-omocha-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: 1000-5000
 lede: >-
   「知育玩具って普通のおもちゃと何が違うの？」——知育玩具は子どもの発達を促す目的で設計されたおもちゃの総称。本記事は2026年5月時点の発達心理・幼児教育の一般情報をもとに、選び方と年齢別おすすめをやさしく整理しました。
+legacyHero: /hero/baby-03.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

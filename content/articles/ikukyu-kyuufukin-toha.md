@@ -1,12 +1,13 @@
 ---
 slug: ikukyu-kyuufukin-toha
 title: 育休給付金とは｜定義・支給額・申請方法・期間完全ガイド【2026年版】
-metaDescription: 育休給付金（育児休業給付金）とは何か、支給額の計算方法、申請の流れ、支給期間、2025年4月開始の出生後休業支援給付金まで2026年最新情報で完全解説。育休中の家計を支える雇用保険制度の使い方を分かりやすくまとめました。
+metaDescription: >-
+  育休給付金（育児休業給付金）とは何か、支給額の計算方法、申請の流れ、支給期間、2025年4月開始の出生後休業支援給付金まで2026年最新情報で完全解説。育休中の家計を支える雇用保険制度の使い方を分かりやすくまとめました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/commerce-02.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/ikukyu-kyuufukin-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: free
 lede: >-
   「育休中は給料が出ないって本当？」「いくらもらえる？」——育休に入る前に必ず気になる経済面の話。育休給付金は雇用保険から支給される非課税の給付で、休業中の家計を支える大切な制度です。本記事では2026年5月時点の最新情報をもとに、育休給付金の計算方法・申請手順・2025年の改正ポイントをやさしく整理しました。
+legacyHero: /hero/commerce-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

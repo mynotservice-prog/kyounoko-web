@@ -5,8 +5,8 @@ metaDescription: はなまるうどんのベビーチェアって何台？腰す
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/hanamarudon-baby-chair.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +19,9 @@ quickInfo:
     - any
   durationMin: 30
   budget: low
-lede: はなまるうどんにベビーチェアはあるの？何ヶ月から使える？という疑問に正直回答。セルフうどんチェーンとしての設計上、ベビーチェア装備は店舗差が大きく、ロードサイド・SC内なら基本配置あり。種類・対応月齢・席リクエストのコツをまとめました。
+lede: >-
+  はなまるうどんにベビーチェアはあるの？何ヶ月から使える？という疑問に正直回答。セルフうどんチェーンとしての設計上、ベビーチェア装備は店舗差が大きく、ロードサイド・SC内なら基本配置あり。種類・対応月齢・席リクエストのコツをまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 **結論：はなまるうどんの店舗には木製ベビーチェアが基本配置。腰すわり後（7-8ヶ月以降）から使えます。ロードサイド・SC内なら1-2台確保、駅前小型店は店舗差大きめ。**

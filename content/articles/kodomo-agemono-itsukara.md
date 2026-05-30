@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-kitchen-03.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/kodomo-agemono-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +19,9 @@ quickInfo:
     - any
   durationMin: 10
   budget: low
-lede: 「揚げ物はいつから？」を完全ガイド。基本は1歳〜1歳半から少量、唐揚げは1歳半〜2歳、天ぷらは1歳半〜。月齢別の目安、脂質対策、種類別の判断、油の選び方まで解説します。
+lede: >-
+  「揚げ物はいつから？」を完全ガイド。基本は1歳〜1歳半から少量、唐揚げは1歳半〜2歳、天ぷらは1歳半〜。月齢別の目安、脂質対策、種類別の判断、油の選び方まで解説します。
+legacyHero: /hero/food-kitchen-03.webp
 ---
 
 ## 結論

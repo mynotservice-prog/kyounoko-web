@@ -1,12 +1,13 @@
 ---
 slug: hakone-kodzure-spot
 title: 箱根の子連れおすすめスポット｜宿・回り方・コツ完全ガイド【2026年版】
-metaDescription: 箱根を子連れで楽しむための完全ガイド。0〜6歳と回りやすいスポット7選、ベビーカーOKの観光ルート、赤ちゃん歓迎の宿、移動のコツを2026年5月時点の情報で実地目線で整理しました。
+metaDescription: >-
+  箱根を子連れで楽しむための完全ガイド。0〜6歳と回りやすいスポット7選、ベビーカーOKの観光ルート、赤ちゃん歓迎の宿、移動のコツを2026年5月時点の情報で実地目線で整理しました。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/autumn-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/hakone-kodzure-spot.jpg
 area: kanto
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: 箱根は新宿から特急ロマンスカーで約85分、子連れでも日帰り〜1泊で行ける関東屈指の温泉観光地。ベビーカーで回れる美術館、赤ちゃんOKの温泉、登山電車・ロープウェイ・海賊船と乗り物三昧。0〜6歳と無理なく楽しむ回り方と宿選びをまとめます。
+lede: >-
+  箱根は新宿から特急ロマンスカーで約85分、子連れでも日帰り〜1泊で行ける関東屈指の温泉観光地。ベビーカーで回れる美術館、赤ちゃんOKの温泉、登山電車・ロープウェイ・海賊船と乗り物三昧。0〜6歳と無理なく楽しむ回り方と宿選びをまとめます。
+legacyHero: /hero/autumn-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

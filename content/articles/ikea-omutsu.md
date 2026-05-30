@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/commerce-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/ikea-omutsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   IKEAでは**全店にオムツ替えスペースが完備**されていますが、場所と台数は店舗により異なります。多目的トイレ・ベビールーム・授乳室併設エリアの場所をマップ感覚で把握できれば、ショッピング中のオムツ替えで困りません。
+legacyHero: /hero/commerce-01.webp
 ---
 
 **結論：IKEAは全店オムツ替え可能。1階・2階の両方に多目的トイレを設置し、旗艦店にはベビールーム（授乳室併設）も完備しています。**

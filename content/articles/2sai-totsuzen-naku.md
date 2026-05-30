@@ -1,12 +1,13 @@
 ---
 slug: 2sai-totsuzen-naku
 title: 2歳が突然泣く｜原因・対処法・年齢別対応完全ガイド【1〜3歳】
-metaDescription: 2歳児が理由もなく突然泣き出す…？原因不明の泣きに悩む方へ。1〜3歳の発達段階別に「言葉にできない感情」「眠気・低血糖」「予兆」「対処法」「発達相談の目安」を整理しました。
+metaDescription: >-
+  2歳児が理由もなく突然泣き出す…？原因不明の泣きに悩む方へ。1〜3歳の発達段階別に「言葉にできない感情」「眠気・低血糖」「予兆」「対処法」「発達相談の目安」を整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-03.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/2sai-totsuzen-naku.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: free
 lede: >-
   「機嫌よく遊んでいたのに突然号泣」「理由を聞いても言わない」――2歳児の突然泣きは多くの親を悩ませます。実は2歳児の脳は**感情の波が大きく言語化が追いつかない**段階で、突然泣きは発達段階上ごく普通。本記事では原因の見極め方と、消耗しない対応を整理します。
+legacyHero: /hero/baby-03.webp
 ---
 
 ## 結論

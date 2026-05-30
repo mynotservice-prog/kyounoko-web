@@ -1,12 +1,13 @@
 ---
 slug: babyfood-vs-tedukuri
 title: ベビーフード vs 手作り離乳食 完全比較【2026年版】｜栄養・コスト・時短で選ぶ
-metaDescription: 市販ベビーフードと手作り離乳食を6項目で比較。栄養・コスト・時短・添加物・量の調整・外出時の便利さを徹底解説。共働き・専業・経済性重視の家庭タイプ別おすすめを完全紹介します。
+metaDescription: >-
+  市販ベビーフードと手作り離乳食を6項目で比較。栄養・コスト・時短・添加物・量の調整・外出時の便利さを徹底解説。共働き・専業・経済性重視の家庭タイプ別おすすめを完全紹介します。
 category: today-taberu
 categoryName: 今日たべる
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-kitchen-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/babyfood-vs-tedukuri.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   「ベビーフードと手作り離乳食、どっちがいい？」を2026年版で完全比較。市販BFは時短・衛生・栄養設計が強み、手作りはコスト・量調整・素材の柔軟性が強み。栄養・コスト・時短・添加物・量の調整・外出時の便利さの6項目で徹底解説し、共働き・専業・経済性重視の家庭タイプ別おすすめまで整理しました。
+legacyHero: /hero/food-kitchen-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

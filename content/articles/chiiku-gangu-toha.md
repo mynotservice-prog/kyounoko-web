@@ -1,12 +1,13 @@
 ---
 slug: chiiku-gangu-toha
 title: 知育玩具とは｜定義・選び方・年齢別おすすめ・効果完全ガイド
-metaDescription: 知育玩具とは何か、年齢別の選び方・効果・人気タイプを完全解説。0歳〜6歳向けに発達段階に合ったおもちゃの種類と、長く遊べる選び方を2026年5月時点の一般情報でやさしく整理しました。
+metaDescription: >-
+  知育玩具とは何か、年齢別の選び方・効果・人気タイプを完全解説。0歳〜6歳向けに発達段階に合ったおもちゃの種類と、長く遊べる選び方を2026年5月時点の一般情報でやさしく整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/kid-study-02.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/chiiku-gangu-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   「知育玩具って普通のおもちゃと何が違う？」「どれを選べば？」——おもちゃ売り場で迷うママ・パパは多いはず。本記事は2026年5月時点の一般情報をもとに、知育玩具の基本・選び方・年齢別おすすめ・期待できる効果をやさしく整理しました。
+legacyHero: /hero/kid-study-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

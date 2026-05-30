@@ -1,12 +1,13 @@
 ---
 slug: aki-3-6sai-sugoshikata
 title: 秋の3〜6歳児 過ごし方｜服装・食事・遊び・お出かけ完全ガイド
-metaDescription: 3〜6歳の秋の過ごし方を解説。寒暖差対応の服装、食欲の秋の食育、芋掘り・どんぐり遊び、運動会、ハロウィン、紅葉狩り、感染症対策、年長児の小学校準備まで網羅した実践ガイド。
+metaDescription: >-
+  3〜6歳の秋の過ごし方を解説。寒暖差対応の服装、食欲の秋の食育、芋掘り・どんぐり遊び、運動会、ハロウィン、紅葉狩り、感染症対策、年長児の小学校準備まで網羅した実践ガイド。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/autumn-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/aki-3-6sai-sugoshikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,7 +19,9 @@ quickInfo:
     - cool
   durationMin: 30
   budget: free
-lede: 秋の3〜6歳児は、運動会・ハロウィン・芋掘りなど行事が目白押し。気候が良く活動範囲が広がる一方、寒暖差・感染症・乾燥にも注意したい時期です。本記事では服装・食事・遊び・お出かけ・体調管理の5軸で、3〜6歳の秋を充実させるコツをまとめます。
+lede: >-
+  秋の3〜6歳児は、運動会・ハロウィン・芋掘りなど行事が目白押し。気候が良く活動範囲が広がる一方、寒暖差・感染症・乾燥にも注意したい時期です。本記事では服装・食事・遊び・お出かけ・体調管理の5軸で、3〜6歳の秋を充実させるコツをまとめます。
+legacyHero: /hero/autumn-01.webp
 ---
 
 ## 結論

@@ -1,12 +1,13 @@
 ---
 slug: fuyu-2sai-sugoshikata
 title: 冬の2歳児 過ごし方｜服装・食事・遊び・お出かけ完全ガイド
-metaDescription: 2歳の冬の過ごし方を解説。イヤイヤ期の寒さ対策、温活幼児食、室内運動・雪遊び、感染症対策、おでかけ、加湿・保湿・予防接種、運動不足解消、生活リズムまで網羅した実践ガイド。
+metaDescription: >-
+  2歳の冬の過ごし方を解説。イヤイヤ期の寒さ対策、温活幼児食、室内運動・雪遊び、感染症対策、おでかけ、加湿・保湿・予防接種、運動不足解消、生活リズムまで網羅した実践ガイド。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-03.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/fuyu-2sai-sugoshikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,7 +19,9 @@ quickInfo:
     - cold
   durationMin: 30
   budget: free
-lede: 冬の2歳児は、イヤイヤ期と寒さと感染症の三重苦。「上着着ない」「マスクしない」「外出ない」と毎日小バトル。本記事では服装・食事・遊び・お出かけ・体調管理の5軸で、2歳の冬を笑顔で乗り切るコツをまとめます。
+lede: >-
+  冬の2歳児は、イヤイヤ期と寒さと感染症の三重苦。「上着着ない」「マスクしない」「外出ない」と毎日小バトル。本記事では服装・食事・遊び・お出かけ・体調管理の5軸で、2歳の冬を笑顔で乗り切るコツをまとめます。
+legacyHero: /hero/baby-03.webp
 ---
 
 ## 結論

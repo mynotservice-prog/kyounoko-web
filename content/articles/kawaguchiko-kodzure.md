@@ -1,12 +1,13 @@
 ---
 slug: kawaguchiko-kodzure
 title: 河口湖の子連れスポット｜富士山ビュー・遊び場・宿完全ガイド【2026年版】
-metaDescription: 河口湖を子連れで楽しむ完全ガイド。富士山ビュー絶景スポット、0〜6歳と遊べるアスレチック・美術館・湖畔、ベビーカー観光、赤ちゃん歓迎宿の選び方を2026年5月時点の最新情報で実地目線で整理。
+metaDescription: >-
+  河口湖を子連れで楽しむ完全ガイド。富士山ビュー絶景スポット、0〜6歳と遊べるアスレチック・美術館・湖畔、ベビーカー観光、赤ちゃん歓迎宿の選び方を2026年5月時点の最新情報で実地目線で整理。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/autumn-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/kawaguchiko-kodzure.jpg
 area: kanto
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: 河口湖は新宿から高速バスで約1時間45分、富士山と湖と森が揃う子連れ天国。0歳から楽しめる湖畔遊歩道、3歳〜のアスレチック、雨でも遊べる美術館。赤ちゃん歓迎宿も豊富で2026年最新の家族旅行先として人気上昇中。
+lede: >-
+  河口湖は新宿から高速バスで約1時間45分、富士山と湖と森が揃う子連れ天国。0歳から楽しめる湖畔遊歩道、3歳〜のアスレチック、雨でも遊べる美術館。赤ちゃん歓迎宿も豊富で2026年最新の家族旅行先として人気上昇中。
+legacyHero: /hero/autumn-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

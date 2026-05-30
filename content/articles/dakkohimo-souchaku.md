@@ -1,12 +1,13 @@
 ---
 slug: dakkohimo-souchaku
 title: 抱っこ紐の装着方法｜エルゴ・ベビービョルン共通の手順とコツ完全ガイド
-metaDescription: 抱っこ紐の装着方法を、横抱き・縦抱き・対面抱き・前向き抱き・おんぶの5パターン別に手順とコツで解説。エルゴ・ベビービョルン・コニーなど主要メーカー共通のポイント、新生児からの月齢別ポイント、失敗あるあるまで保存版で紹介します。
+metaDescription: >-
+  抱っこ紐の装着方法を、横抱き・縦抱き・対面抱き・前向き抱き・おんぶの5パターン別に手順とコツで解説。エルゴ・ベビービョルン・コニーなど主要メーカー共通のポイント、新生児からの月齢別ポイント、失敗あるあるまで保存版で紹介します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/dakkohimo-souchaku.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   抱っこ紐は装着の手順とコツを知るだけで、ぐずる赤ちゃんが10秒で落ち着き、ママの腰の負担も激減します。本記事では、対面抱き・前向き抱き・おんぶの基本3パターンを8ステップで解説。エルゴ・ベビービョルン・コニーなど主要メーカー共通のポイントも保存版でまとめます。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 ## 結論

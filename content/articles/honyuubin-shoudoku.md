@@ -1,12 +1,13 @@
 ---
 slug: honyuubin-shoudoku
 title: 哺乳瓶の消毒方法｜煮沸・電子レンジ・薬液の3方法を手順とコツで完全解説
-metaDescription: 哺乳瓶の消毒方法を、煮沸・電子レンジ・薬液（ミルトン）の3つの方法別に手順・必要な道具・所要時間・メリット/デメリットで徹底比較。いつまで必要か、毎回必要かの疑問も解消、新生児〜離乳食期まで使える保存版です。
+metaDescription: >-
+  哺乳瓶の消毒方法を、煮沸・電子レンジ・薬液（ミルトン）の3つの方法別に手順・必要な道具・所要時間・メリット/デメリットで徹底比較。いつまで必要か、毎回必要かの疑問も解消、新生児〜離乳食期まで使える保存版です。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-kitchen-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/honyuubin-shoudoku.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +20,7 @@ quickInfo:
   budget: low
 lede: >-
   哺乳瓶の消毒方法には煮沸・電子レンジ・薬液の3種類があり、それぞれ手順・時間・コストが違います。生後3〜4ヶ月までは毎回消毒が推奨。本記事では、3方法の手順をステップで解説し、コツ・失敗あるある・我が家のリアルまで保存版でまとめます。
+legacyHero: /hero/food-kitchen-01.webp
 ---
 
 ## 結論

@@ -1,12 +1,13 @@
 ---
 slug: cocos-baby-chair
 title: ココスのベビーチェア｜種類・対象月齢・確保しやすさを徹底解説
-metaDescription: ココスはファミレス屈指のベビー対応。ハイチェア・ローチェア・バンボ型を備える店舗が多く、首すわり後から使える店も。月齢別の選び方と確保のコツ、ココスならではの強みを解説。
+metaDescription: >-
+  ココスはファミレス屈指のベビー対応。ハイチェア・ローチェア・バンボ型を備える店舗が多く、首すわり後から使える店も。月齢別の選び方と確保のコツ、ココスならではの強みを解説。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/cocos-baby-chair.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 60
   budget: low
-lede: ココスはファミレス屈指の子連れ対応で、ベビーチェアの種類も豊富。ハイチェア・ローチェア・バンボ型の3タイプを置く店舗が多く、首すわり後の5-6ヶ月から快適に座れる店もあります。
+lede: >-
+  ココスはファミレス屈指の子連れ対応で、ベビーチェアの種類も豊富。ハイチェア・ローチェア・バンボ型の3タイプを置く店舗が多く、首すわり後の5-6ヶ月から快適に座れる店もあります。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

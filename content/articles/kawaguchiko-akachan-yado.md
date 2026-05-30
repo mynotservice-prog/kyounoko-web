@@ -1,12 +1,13 @@
 ---
 slug: kawaguchiko-akachan-yado
 title: 河口湖の赤ちゃん歓迎宿｜0歳OK・富士山ビュー・離乳食完全ガイド【2026年版】
-metaDescription: 河口湖の赤ちゃん歓迎宿を厳選紹介。0歳OK、富士山ビュー客室、離乳食対応、ベビー備品貸出、客室温泉付き宿を2026年5月時点で整理。失敗しない宿選びと予約時の確認リストも掲載。
+metaDescription: >-
+  河口湖の赤ちゃん歓迎宿を厳選紹介。0歳OK、富士山ビュー客室、離乳食対応、ベビー備品貸出、客室温泉付き宿を2026年5月時点で整理。失敗しない宿選びと予約時の確認リストも掲載。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/autumn-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/kawaguchiko-akachan-yado.jpg
 area: kanto
 quickInfo:
   ageRanges:
@@ -19,7 +20,10 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: 河口湖で赤ちゃんと泊まるなら「富士山ビュー客室」「客室温泉 or 貸切風呂」「離乳食対応」「ベビー備品レンタル」が4大条件。0歳〜3歳の親に本当に優しい宿を、エリア別・予算別に2026年最新情報でまとめます。
+lede: >-
+  河口湖で赤ちゃんと泊まるなら「富士山ビュー客室」「客室温泉 or
+  貸切風呂」「離乳食対応」「ベビー備品レンタル」が4大条件。0歳〜3歳の親に本当に優しい宿を、エリア別・予算別に2026年最新情報でまとめます。
+legacyHero: /hero/autumn-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/gyukaku-stroller.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: mid
 lede: >-
   牛角はベビーカーで席まで通せる店舗が多いものの、立地によって段差や通路幅に差があります。商業施設内とロードサイドではベビーカー利用しやすさが異なるため、事前確認と予約時のひと声で、子連れ焼肉のハードルがぐっと下がります。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

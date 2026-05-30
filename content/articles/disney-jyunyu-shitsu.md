@@ -1,12 +1,13 @@
 ---
 slug: disney-jyunyu-shitsu
 title: ディズニーランド 授乳室の場所・設備・混雑回避 完全ガイド【2026年版】
-metaDescription: 東京ディズニーランドの授乳室はベビーセンター内に完備。本記事では2か所のベビーセンターの場所・個室授乳室の数・調乳用お湯・電子レンジ・男性入室可否・混雑時間帯まで2026年最新情報で完全解説します。
+metaDescription: >-
+  東京ディズニーランドの授乳室はベビーセンター内に完備。本記事では2か所のベビーセンターの場所・個室授乳室の数・調乳用お湯・電子レンジ・男性入室可否・混雑時間帯まで2026年最新情報で完全解説します。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/disney-jyunyu-shitsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -17,7 +18,9 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: ディズニーランドの授乳室はベビーセンター内に完備。個室の鍵付き授乳室・調乳用のお湯・電子レンジ・おむつ替え台までフル装備です。本記事では2か所の場所・設備・混雑時間・男性入室OK範囲を実体験で解説します。
+lede: >-
+  ディズニーランドの授乳室はベビーセンター内に完備。個室の鍵付き授乳室・調乳用のお湯・電子レンジ・おむつ替え台までフル装備です。本記事では2か所の場所・設備・混雑時間・男性入室OK範囲を実体験で解説します。
+legacyHero: /hero/park-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

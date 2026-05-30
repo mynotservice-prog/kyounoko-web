@@ -1,12 +1,13 @@
 ---
 slug: kobanare-dekinai-oya
 title: 子離れできない親｜原因・自覚チェック・距離の取り方完全ガイド
-metaDescription: 「子どもが心配で離せない」「過干渉と言われた」――子離れできない親の自覚サイン、原因（不安・自己同一視）、年齢別の適切な距離、自分軸を取り戻す方法を完全解説。子の自立を支える親になるための実践ガイドです。
+metaDescription: >-
+  「子どもが心配で離せない」「過干渉と言われた」――子離れできない親の自覚サイン、原因（不安・自己同一視）、年齢別の適切な距離、自分軸を取り戻す方法を完全解説。子の自立を支える親になるための実践ガイドです。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/kobanare-dekinai-oya.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: free
 lede: >-
   「子どもから目を離せない」「習い事も全部付き添わないと不安」「夫に過干渉と言われた」――その気持ち、否定する必要はありません。子離れできない親の背景には不安・愛情・自己同一視があり、自覚することで変えられます。本記事は自覚チェック、原因、年齢別距離の取り方、自分軸を取り戻す方法を完全ガイド。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 ## 結論

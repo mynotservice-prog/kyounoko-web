@@ -1,12 +1,13 @@
 ---
 slug: cocoichi-kids-menu
 title: CoCo壱のお子様カレー徹底解説｜年齢別おすすめ・甘口の辛さ・特典の完全ガイド【2026】
-metaDescription: CoCo壱（ココイチ）のお子様カレーを子連れ目線で徹底解説。年齢別おすすめ、甘口の辛さレベル、特典シール、ハッピーカレー、価格、アレルゲン情報まで。0-6歳ママパパが知りたい中身を完全ガイド。
+metaDescription: >-
+  CoCo壱（ココイチ）のお子様カレーを子連れ目線で徹底解説。年齢別おすすめ、甘口の辛さレベル、特典シール、ハッピーカレー、価格、アレルゲン情報まで。0-6歳ママパパが知りたい中身を完全ガイド。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/cocoichi-kids-menu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 45
   budget: low
-lede: CoCo壱番屋の「お子様カレー（ハッピーカレー）」を子連れ目線で完全解説。甘口で食べやすく、おまけシール付きで子の食いつき抜群。年齢別おすすめ、取り分け運用、特典の活用法をまとめました。
+lede: >-
+  CoCo壱番屋の「お子様カレー（ハッピーカレー）」を子連れ目線で完全解説。甘口で食べやすく、おまけシール付きで子の食いつき抜群。年齢別おすすめ、取り分け運用、特典の活用法をまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 **結論：CoCo壱のお子様カレー（ハッピーカレー）は甘口・適量・おまけシール付きの優等生メニュー。2歳半以降から完食しやすく、子連れカレーランチの鉄板選択肢です。**

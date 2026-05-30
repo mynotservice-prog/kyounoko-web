@@ -1,12 +1,13 @@
 ---
 slug: giczitsuka-stress
 title: 義実家の育児ストレス対処法｜原因・距離の取り方・配偶者との連携完全ガイド
-metaDescription: 義実家の育児ストレス（口出し・古い育児論・押し付け）の対処法を網羅。原因分析、配偶者との連携の作り方、距離の取り方、断り方、相談先まで解説。「我慢が美徳」を脱して健全な関係を作るためのガイドです。
+metaDescription: >-
+  義実家の育児ストレス（口出し・古い育児論・押し付け）の対処法を網羅。原因分析、配偶者との連携の作り方、距離の取り方、断り方、相談先まで解説。「我慢が美徳」を脱して健全な関係を作るためのガイドです。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-03.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/giczitsuka-stress.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「義実家に行くたびに育児に口を出されて疲弊」「古い育児論を押し付けられる」――義実家との育児観の違いは大きなストレス要因です。本記事は義実家ストレスの原因、配偶者との連携の作り方、上手な距離の取り方、断り方の例文まで完全ガイド。我慢の限界が来る前に、戦略的に対処しましょう。
+legacyHero: /hero/parent-child-03.webp
 ---
 
 ## 結論

@@ -1,12 +1,13 @@
 ---
 slug: dennys-baby-chair
 title: デニーズのベビーチェア｜種類・対象月齢・確保しやすさを店舗別に解説
-metaDescription: デニーズのベビーチェアはハイチェア中心、腰すわり後7ヶ月から使えます。郊外型と駅前型での在庫数の差、混雑時の確保コツ、ローチェア対応店舗の見分け方まで子連れ目線で網羅。
+metaDescription: >-
+  デニーズのベビーチェアはハイチェア中心、腰すわり後7ヶ月から使えます。郊外型と駅前型での在庫数の差、混雑時の確保コツ、ローチェア対応店舗の見分け方まで子連れ目線で網羅。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/dennys-baby-chair.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 60
   budget: low
-lede: デニーズのベビーチェアは「ハイチェア中心+一部店舗にローチェア」。腰すわり後7ヶ月頃から座れる店舗が多く、平日昼ならほぼ確実に確保できます。店舗タイプ別の在庫傾向と確保のコツをまとめました。
+lede: >-
+  デニーズのベビーチェアは「ハイチェア中心+一部店舗にローチェア」。腰すわり後7ヶ月頃から座れる店舗が多く、平日昼ならほぼ確実に確保できます。店舗タイプ別の在庫傾向と確保のコツをまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

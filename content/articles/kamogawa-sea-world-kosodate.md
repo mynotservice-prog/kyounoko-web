@@ -1,12 +1,13 @@
 ---
 slug: kamogawa-sea-world-kosodate
 title: 鴨川シーワールド 子連れ攻略｜年齢別動線・シャチショー攻略【2026年】
-metaDescription: 千葉の鴨川シーワールドを0〜6歳子連れで攻略する完全ガイド。シャチ・ベルーガ・イルカショー時間・年齢別動線・予算目安・周辺ホテル情報まで、初訪問でも失敗しないノウハウを全網羅。
+metaDescription: >-
+  千葉の鴨川シーワールドを0〜6歳子連れで攻略する完全ガイド。シャチ・ベルーガ・イルカショー時間・年齢別動線・予算目安・周辺ホテル情報まで、初訪問でも失敗しないノウハウを全網羅。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/kamogawa-sea-world-kosodate.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: mid
 lede: >-
   鴨川シーワールドは日本でシャチに会える数少ない水族館。シャチ・ベルーガ・イルカ・アシカの4大ショーを軸に楽しむ構成で、0〜6歳の子連れに大人気。年齢別動線・ショー攻略・持ち物まで、初訪問でも失敗しない情報を全網羅します。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

@@ -1,12 +1,13 @@
 ---
 slug: dennys-kids-menu
 title: デニーズのキッズメニュー｜値段・対象年齢・アレルゲン情報まとめ
-metaDescription: デニーズのキッズメニューはお子様プレート・キッズハンバーグ・うどん系の3本柱。価格帯500-800円、未就学児中心。アレルゲン表記の見方、取り分けOKメニュー、誕生日特典までまとめて解説します。
+metaDescription: >-
+  デニーズのキッズメニューはお子様プレート・キッズハンバーグ・うどん系の3本柱。価格帯500-800円、未就学児中心。アレルゲン表記の見方、取り分けOKメニュー、誕生日特典までまとめて解説します。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/dennys-kids-menu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 60
   budget: low
-lede: デニーズのキッズメニューは「お子様プレート」「キッズハンバーグ」「お子様うどん」など3-4種類の固定ラインナップ。価格帯は500-800円で、アレルゲン情報も公式開示。未就学児が満足できる定番構成です。
+lede: >-
+  デニーズのキッズメニューは「お子様プレート」「キッズハンバーグ」「お子様うどん」など3-4種類の固定ラインナップ。価格帯は500-800円で、アレルゲン情報も公式開示。未就学児が満足できる定番構成です。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

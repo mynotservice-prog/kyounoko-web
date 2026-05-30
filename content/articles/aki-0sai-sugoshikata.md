@@ -5,8 +5,8 @@ metaDescription: 0歳の秋の過ごし方を月齢別に解説。寒暖差対�
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/autumn-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/aki-0sai-sugoshikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,7 +18,9 @@ quickInfo:
     - cool
   durationMin: 30
   budget: free
-lede: 秋は0歳の赤ちゃんにとって、夏の暑さから解放されてお出かけしやすい絶好の季節。一方で朝晩の冷え込み、乾燥、感染症の流行入りなど注意点も多くあります。本記事では服装・食事・遊び・お出かけ・体調管理の5軸で、0歳の秋を快適に過ごすコツをまとめます。
+lede: >-
+  秋は0歳の赤ちゃんにとって、夏の暑さから解放されてお出かけしやすい絶好の季節。一方で朝晩の冷え込み、乾燥、感染症の流行入りなど注意点も多くあります。本記事では服装・食事・遊び・お出かけ・体調管理の5軸で、0歳の秋を快適に過ごすコツをまとめます。
+legacyHero: /hero/autumn-01.webp
 ---
 
 ## 結論

@@ -1,12 +1,13 @@
 ---
 slug: kamogawa-sea-world-stroller
 title: 鴨川シーワールド ベビーカー｜貸出・置き場・シャチショー動線【2026年】
-metaDescription: 鴨川シーワールドのベビーカー事情を徹底解説。レンタル300円・自前持ち込みOK・シャチショー会場のベビーカー置き場・坂道動線・雨天時の対応まで、0〜3歳連れに必要な情報を全網羅。
+metaDescription: >-
+  鴨川シーワールドのベビーカー事情を徹底解説。レンタル300円・自前持ち込みOK・シャチショー会場のベビーカー置き場・坂道動線・雨天時の対応まで、0〜3歳連れに必要な情報を全網羅。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/kamogawa-sea-world-stroller.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: mid
 lede: >-
   鴨川シーワールドは海沿いの屋外型水族館で、敷地内に高低差あり。ベビーカーで一周できますが、動線設計が満足度を左右します。レンタル・持ち込み・ショー会場の置き場まで、0〜3歳連れに必須情報を整理しました。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

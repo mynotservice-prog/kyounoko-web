@@ -277,6 +277,32 @@ legacyHero: /hero/summer-water-01.webp
 - [ジュース いつから？麦茶・水との使い分け](/article/kodomo-juice-itsukara)
 - [おしゃぶり いつまで？卒業時期](/article/akachan-oshaburi-itsumade)
 
+## エリア別「水遊び場」検索
+
+近所で水遊びできるスポットを区市別に。
+
+### 東京23区
+- [中央区](/article/mizuasobi-chuo-tokyo) / [港区](/article/mizuasobi-minato-tokyo) / [新宿区](/article/mizuasobi-shinjuku-tokyo) / [文京区](/article/mizuasobi-bunkyo-tokyo) / [台東区](/article/mizuasobi-taito-tokyo) / [墨田区](/article/mizuasobi-sumida-tokyo) / [江東区](/article/mizuasobi-koto-tokyo)
+- [品川区](/article/mizuasobi-shinagawa-tokyo) / [目黒区](/article/mizuasobi-meguro-tokyo) / [大田区](/article/mizuasobi-ota-tokyo) / [世田谷区](/article/mizuasobi-setagaya-tokyo) / [渋谷区](/article/mizuasobi-shibuya-tokyo) / [中野区](/article/mizuasobi-nakano-tokyo) / [杉並区](/article/mizuasobi-suginami-tokyo)
+- [豊島区](/article/mizuasobi-toshima-tokyo) / [北区](/article/mizuasobi-kita-tokyo) / [板橋区](/article/mizuasobi-itabashi-tokyo) / [練馬区](/article/mizuasobi-nerima-tokyo) / [足立区](/article/mizuasobi-adachi-tokyo) / [江戸川区](/article/mizuasobi-edogawa-tokyo)
+
+### 主要都市
+- [横浜市](/article/mizuasobi-yokohama) / [川崎市](/article/mizuasobi-kawasaki) / [さいたま市](/article/mizuasobi-saitama) / [千葉市](/article/mizuasobi-chiba) / [船橋市](/article/mizuasobi-funabashi)
+- [大阪市](/article/mizuasobi-osaka) / [京都市](/article/mizuasobi-kyoto) / [神戸市](/article/mizuasobi-kobe) / [名古屋市](/article/mizuasobi-nagoya) / [福岡市](/article/mizuasobi-fukuoka)
+
+## エリア別「子供の室内遊び場」検索
+
+雨の日・酷暑日の駆け込み先を区市別に。
+
+### 東京23区
+- [中央区](/article/shitsunai-asobi-chuo-tokyo) / [港区](/article/shitsunai-asobi-minato-tokyo) / [新宿区](/article/shitsunai-asobi-shinjuku-tokyo) / [文京区](/article/shitsunai-asobi-bunkyo-tokyo) / [台東区](/article/shitsunai-asobi-taito-tokyo) / [墨田区](/article/shitsunai-asobi-sumida-tokyo) / [江東区](/article/shitsunai-asobi-koto-tokyo)
+- [品川区](/article/shitsunai-asobi-shinagawa-tokyo) / [目黒区](/article/shitsunai-asobi-meguro-tokyo) / [大田区](/article/shitsunai-asobi-ota-tokyo) / [世田谷区](/article/shitsunai-asobi-setagaya-tokyo) / [渋谷区](/article/shitsunai-asobi-shibuya-tokyo) / [中野区](/article/shitsunai-asobi-nakano-tokyo) / [杉並区](/article/shitsunai-asobi-suginami-tokyo)
+- [豊島区](/article/shitsunai-asobi-toshima-tokyo) / [北区](/article/shitsunai-asobi-kita-tokyo) / [板橋区](/article/shitsunai-asobi-itabashi-tokyo) / [練馬区](/article/shitsunai-asobi-nerima-tokyo) / [足立区](/article/shitsunai-asobi-adachi-tokyo) / [江戸川区](/article/shitsunai-asobi-edogawa-tokyo)
+
+### 主要都市
+- [横浜市](/article/shitsunai-asobi-yokohama) / [川崎市](/article/shitsunai-asobi-kawasaki) / [さいたま市](/article/shitsunai-asobi-saitama) / [千葉市](/article/shitsunai-asobi-chiba) / [船橋市](/article/shitsunai-asobi-funabashi)
+- [大阪市](/article/shitsunai-asobi-osaka) / [京都市](/article/shitsunai-asobi-kyoto) / [神戸市](/article/shitsunai-asobi-kobe) / [名古屋市](/article/shitsunai-asobi-nagoya) / [福岡市](/article/shitsunai-asobi-fukuoka)
+
 ## 夏の子育てで迷ったら戻ってきてください
 
 このページは夏の子育ての **「総合地図」** です。何度でも戻ってきて、必要な情報にアクセスしてください。

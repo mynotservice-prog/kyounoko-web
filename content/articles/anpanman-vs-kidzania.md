@@ -1,12 +1,13 @@
 ---
 slug: anpanman-vs-kidzania
 title: アンパンマンミュージアム vs キッザニア 完全比較【2026年版】｜対象年齢・料金・楽しみ方
-metaDescription: アンパンマンミュージアムとキッザニアを6項目で比較。対象年齢・料金・滞在時間・体験内容・予約のしやすさ・アクセスを徹底解説。1〜3歳・4〜10歳の家庭タイプ別おすすめを完全紹介。
+metaDescription: >-
+  アンパンマンミュージアムとキッザニアを6項目で比較。対象年齢・料金・滞在時間・体験内容・予約のしやすさ・アクセスを徹底解説。1〜3歳・4〜10歳の家庭タイプ別おすすめを完全紹介。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-02.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/anpanman-vs-kidzania.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: mid
 lede: >-
   「アンパンマンミュージアムとキッザニア、どっちに連れて行く？」を2026年版で完全比較。アンパンマンは1〜3歳の小さな子向け、キッザニアは3〜15歳の職業体験テーマパーク。対象年齢・料金・滞在時間・体験内容・予約のしやすさ・アクセスの6項目で徹底解説し、1〜3歳・4〜10歳の家庭タイプ別おすすめまで整理しました。
+legacyHero: /hero/park-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

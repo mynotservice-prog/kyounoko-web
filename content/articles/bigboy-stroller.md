@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/bigboy-stroller.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: mid
 lede: >-
   ビッグボーイはロードサイド大型店舗が中心で、ベビーカーで席まで入店できる店舗がほとんど。段差なし入口、広い通路、家族客慣れしたスタッフ対応で、子連れ家族の頼れるチェーンです。鉄板提供の油はねへの注意は必要ですが、入店動線は良好です。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

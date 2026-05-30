@@ -1,12 +1,13 @@
 ---
 slug: hakone-akachan-yado
 title: 箱根の赤ちゃん歓迎の宿｜0歳OK・離乳食・ベビー備品まで完全ガイド【2026年版】
-metaDescription: 箱根の赤ちゃん歓迎の宿を厳選紹介。0歳OK、離乳食対応、ベビーベッド・ベビーバス貸出、添い寝無料、客室露天付きなど条件別に2026年5月時点の情報で整理。失敗しない宿選びのコツも解説。
+metaDescription: >-
+  箱根の赤ちゃん歓迎の宿を厳選紹介。0歳OK、離乳食対応、ベビーベッド・ベビーバス貸出、添い寝無料、客室露天付きなど条件別に2026年5月時点の情報で整理。失敗しない宿選びのコツも解説。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/autumn-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/hakone-akachan-yado.jpg
 area: kanto
 quickInfo:
   ageRanges:
@@ -18,7 +19,9 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: 箱根で赤ちゃんと泊まるなら「客室露天」「離乳食対応」「ベビーベッド・ベビーバス貸出」「添い寝無料」の4条件をチェック。0歳〜3歳の赤ちゃん連れに本当に優しい宿を、エリア別・予算別に2026年最新情報でまとめます。
+lede: >-
+  箱根で赤ちゃんと泊まるなら「客室露天」「離乳食対応」「ベビーベッド・ベビーバス貸出」「添い寝無料」の4条件をチェック。0歳〜3歳の赤ちゃん連れに本当に優しい宿を、エリア別・予算別に2026年最新情報でまとめます。
+legacyHero: /hero/autumn-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

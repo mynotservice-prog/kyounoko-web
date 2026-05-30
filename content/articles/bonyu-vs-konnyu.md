@@ -1,12 +1,13 @@
 ---
 slug: bonyu-vs-konnyu
 title: 完全母乳 vs 混合栄養 完全比較【2026年版】｜メリット・進め方・移行
-metaDescription: 完全母乳と混合栄養（母乳＋ミルク）を6項目で比較。栄養・親の負担・経済性・夜間授乳・外出・移行のしやすさを徹底解説。共働き・専業・体調不良時の家庭タイプ別おすすめを完全紹介します。
+metaDescription: >-
+  完全母乳と混合栄養（母乳＋ミルク）を6項目で比較。栄養・親の負担・経済性・夜間授乳・外出・移行のしやすさを徹底解説。共働き・専業・体調不良時の家庭タイプ別おすすめを完全紹介します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-03.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/bonyu-vs-konnyu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +20,7 @@ quickInfo:
   budget: low
 lede: >-
   「完全母乳と混合栄養、どっちがいい？」を2026年版で完全比較。完全母乳は栄養・免疫が最強、混合栄養は負担分散と柔軟性が強み。栄養・親の負担・経済性・夜間授乳・外出・移行のしやすさの6項目で徹底解説し、共働き・専業・体調不良時の家庭タイプ別おすすめまで整理しました。
+legacyHero: /hero/baby-03.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

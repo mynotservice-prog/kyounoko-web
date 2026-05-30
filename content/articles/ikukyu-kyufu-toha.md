@@ -1,12 +1,13 @@
 ---
 slug: ikukyu-kyufu-toha
 title: 育休給付金とは｜計算方法・支給期間・申請手続きの完全ガイド
-metaDescription: 育休給付金（育児休業給付金）とは何か、いつ・いくらもらえるのか、計算方法から申請手続きまで完全解説。180日まで67%・181日以降50%の給付率、社会保険料免除と合わせた手取りまで2026年5月時点の情報でやさしく整理しました。
+metaDescription: >-
+  育休給付金（育児休業給付金）とは何か、いつ・いくらもらえるのか、計算方法から申請手続きまで完全解説。180日まで67%・181日以降50%の給付率、社会保険料免除と合わせた手取りまで2026年5月時点の情報でやさしく整理しました。
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/commerce-03.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/ikukyu-kyufu-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +20,7 @@ quickInfo:
   budget: free
 lede: >-
   「育休中の生活費はどうなるの？」「いくらもらえるの？」——育児休業給付金は雇用保険から支給される所得補償で、休業開始から180日までは賃金の67%、それ以降は50%が原則です。本記事は2026年5月時点の制度概要をやさしく整理しました。
+legacyHero: /hero/commerce-03.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

@@ -1,12 +1,13 @@
 ---
 slug: ikuji-kyugyou-toha
 title: 育児休業とは｜定義・期間・対象・取り方の完全ガイド
-metaDescription: 育児休業（育休）とは何か、いつ・誰が・どれくらい取れるのか、申請手続きや給付金の関係まで完全解説。原則1歳まで・最長2歳まで延長可能な制度の使い方を、2026年5月時点の育児・介護休業法の情報でやさしく整理しました。
+metaDescription: >-
+  育児休業（育休）とは何か、いつ・誰が・どれくらい取れるのか、申請手続きや給付金の関係まで完全解説。原則1歳まで・最長2歳まで延長可能な制度の使い方を、2026年5月時点の育児・介護休業法の情報でやさしく整理しました。
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/commerce-02.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/ikuji-kyugyou-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +20,7 @@ quickInfo:
   budget: free
 lede: >-
   「育休っていつから・いくつまで取れるの？」「パパも取れるの？」——育児休業は子どもが原則1歳になるまで取得できる、育児・介護休業法に基づく労働者の権利です。本記事は2026年5月時点の制度概要をやさしく整理しました。
+legacyHero: /hero/commerce-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

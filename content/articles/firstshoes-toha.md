@@ -1,12 +1,13 @@
 ---
 slug: firstshoes-toha
 title: ファーストシューズとは｜定義・いつから・選び方の完全ガイド
-metaDescription: ファーストシューズとは何か、いつから履かせるべきか、サイズ・素材・形状の選び方まで完全解説。歩き始めの足を守る大切な1足のチェックポイントと、メーカー別の特徴を2026年5月時点の情報でやさしく整理しました。
+metaDescription: >-
+  ファーストシューズとは何か、いつから履かせるべきか、サイズ・素材・形状の選び方まで完全解説。歩き始めの足を守る大切な1足のチェックポイントと、メーカー別の特徴を2026年5月時点の情報でやさしく整理しました。
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/firstshoes-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: under-5000
 lede: >-
   「初めての靴っていつから・どんなものを選べば？」——ファーストシューズは歩き始めの赤ちゃんの足を守る大切な1足。本記事は2026年5月時点の小児整形外科・シューフィッターの一般情報をもとに、選び方とチェックポイントをやさしく整理しました。
+legacyHero: /hero/baby-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

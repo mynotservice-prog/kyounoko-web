@@ -1,12 +1,13 @@
 ---
 slug: ikuji-kyuugyou-toha
 title: 育児休業とは｜定義・期間・申請方法・育休給付金完全ガイド【2026年版】
-metaDescription: 育児休業とは何か、対象者・期間・申請方法・延長条件・パパ育休（産後パパ育休）まで完全解説。2022年改正の出生時育児休業や2025年以降の柔軟化制度も整理し、2026年5月時点の最新情報でわかりやすくまとめました。
+metaDescription: >-
+  育児休業とは何か、対象者・期間・申請方法・延長条件・パパ育休（産後パパ育休）まで完全解説。2022年改正の出生時育児休業や2025年以降の柔軟化制度も整理し、2026年5月時点の最新情報でわかりやすくまとめました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-05-30'
+hero: /hero-ai/ikuji-kyuugyou-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: free
 lede: >-
   「育休っていつから取れる？」「期間は？」「パパも取れる？」——働きながら子育てする家庭にとって、育児休業（育休）は家計と暮らしを左右する大事な制度です。本記事は2026年5月時点の最新情報をもとに、育児休業の基本・対象者・期間・申請方法・パパ育休の活用方法までやさしく整理しました。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月
