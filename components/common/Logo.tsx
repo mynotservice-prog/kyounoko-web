@@ -15,7 +15,7 @@ export function Logo({ variant = 'light' }: Props) {
   const isDark = variant === 'dark';
   return (
     <Link href="/" className="logo" aria-label="きょうのこ トップへ">
-      <span className="logo-mark" style={{ display: 'inline-flex' }}>
+      <span className="logo-mark">
         <Image
           src="/img/kyounoko-logo-mark.webp"
           alt=""
@@ -23,10 +23,13 @@ export function Logo({ variant = 'light' }: Props) {
           height={34}
           priority
           style={{
+            width: '100%',
+            height: '100%',
             borderRadius: '50%',
             // ダークフッター上では明るいパディング背景で浮かせる
             background: isDark ? 'rgba(252,248,239,0.95)' : 'transparent',
             padding: isDark ? 1 : 0,
+            objectFit: 'cover',
           }}
         />
       </span>

@@ -169,6 +169,14 @@ input, select { font: inherit; color: inherit; }
   display: flex; align-items: center; gap: 10px;
   font-family: var(--font-mincho), "Shippori Mincho", serif; font-weight: 700;
   font-size: 19px; letter-spacing: .04em;
+  min-width: 0; /* flex shrink を許容 */
+  max-width: 100%;
+}
+/* 「きょうのこ」テキストの折返し防止（縦書きバグ回避） */
+.logo > span:not(.logo-mark) {
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1;
 }
 .logo-mark {
   width: 34px; height: 34px;
@@ -176,6 +184,7 @@ input, select { font: inherit; color: inherit; }
   flex-shrink: 0;
   line-height: 0;
 }
+.logo-mark img { border-radius: 50%; display: block; }
 .logo-mark svg { display: block; width: 100%; height: 100%; }
 .logo:hover .logo-mark svg .lm-bg { filter: saturate(1.08); }
 .logo-mark svg .lm-bg { transition: filter .2s ease; }
