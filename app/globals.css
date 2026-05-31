@@ -3267,6 +3267,19 @@ iframe:not([class*="adsbygoogle"]):not([id*="aswift"]) {
   .logo { font-size: 17px; gap: 8px; }
   .logo-mark { width: 30px; height: 30px; }
 }
+/* (D-2) 極小画面はロゴテキストを非表示にしてアイコンのみ
+   理由: 360px幅端末で「きょうのこ」テキストが右端要素と衝突しやすいため。
+   aria-label="きょうのこ トップへ" は Link に残っているのでスクリーンリーダーでは読み上げ可能 */
+@media (max-width: 600px) {
+  .logo > span:not(.logo-mark) {
+    /* sr-only: 視覚非表示だがアクセシビリティツリーには残す */
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+  .logo { gap: 0; }
+}
 
 /* (E) テーブル横スクロールのヒント表示
    テーブルが画面より広い時に「→」を右端にうっすら見せて、横スクロール可と分かるようにする */
