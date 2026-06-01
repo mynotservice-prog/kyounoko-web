@@ -1630,3 +1630,24 @@
   1. **Bing 認証は復旧完了**。キーファイルが本番 200 を返す限り、今後は毎週 Bing(200)+Yandex(202) の両受理が継続する想定。特段の手動対応は不要。
   2. **submitted_count が前回 2,321 → 今回 1,089 に減少**したのは、queue 生成方式の違い（前回 tsx 経由で spots/articles/plans を全列挙＝2,321／今回は sitemap.xml ベース＝1,090）による。sitemap が正典なので 1,090 が現行サイトの実 URL 数。意図的な縮小ではなく実態反映。
   3. Google は IndexNow 非対応のため引き続き sitemap でカバー（本タスク対象外）。
+
+---
+
+## 2026-06-01 06:04 JST — IndexNow 週次送信 (kyounoko-indexnow-weekly)
+
+- **submitted_count**: 2,087 URLs（queue 生成は sitemap.xml から 2,088 URL 取得 → 送信時に無効な 1 件をスキップして 2,087 件を1バッチ送信）
+- **queue 生成コマンド**: `node scripts/indexnow-build-queue.mjs --max=9000 --kind=all` → ✅ 正常完了（`filtered (kind=all): 2088 / wrote 2088 URLs to docs/indexnow-queue.txt (max=9000)`）
+- **送信結果**:
+  - `https://api.indexnow.org/IndexNow` (Bing): **status 200** ✅
+  - `https://yandex.com/indexnow` (Yandex): **status 202** ✅
+- **bing_status**: 200 OK / **yandex_status**: 202 Accepted / **失敗**: なし
+- **ログ反映**: `docs/indexnow-submitted.log` に 2,087 URL を追記、`docs/indexnow-queue.txt` を空にクリア。
+- **失敗時対処の判断ログ**:
+  - 403／404／429／ネットワークエラーいずれも発生せず。再試行は不要。
+  - 429 (TooManyRequests) なし（2,087 URL / 上限10,000、max=9000 マージン内）。
+- **前週比較**: submitted_count が前回 1,089 → 今回 2,087（+998件、約 1.92倍）。sitemap.xml の URL 総数が 1,090→2,088 に増加しており、この1週間でサイト規模がほぼ倍増した実態を反映。きょうのこサイトのコンテンツ拡張（新規記事・spot・plan ページ）が大量に投入された結果と判断。
+- **次サイクルへの引き継ぎ**:
+  1. Bing(200)+Yandex(202) の両受理が3週連続で安定。認証は完全に定着、特段の手動対応は不要。
+  2. URL 数が急増したが、IndexNow 1日上限 10,000 に対してまだ余裕あり（現在2割使用）。コンテンツ拡張ペースが続いても max=9000 設定で当面安全。
+  3. 来週も同手順（build → submit → log → commit）で問題なし。
+  4. git pull --rebase 時に `.git/ORIG_HEAD.lock` の残骸が原因で fatal が発生したが、`git fetch origin main` で確認した結果 ローカル HEAD = origin/main で同期済みだったため pull スキップで実害なし。次回も同じ症状が出る可能性があるため、もし pull が失敗したら `git fetch && git rev-list --left-right --count HEAD...origin/main` で同期状況を確認すれば判断できる。
