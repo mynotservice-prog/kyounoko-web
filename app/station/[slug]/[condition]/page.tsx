@@ -107,12 +107,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? `${stationName}駅周辺で${cond.metaPart}を厳選。${cond.description}${wardName}の${cond.label}を探すならまずここから。`
       : `${stationName}駅周辺で${cond.metaPart}の子連れランチ・カフェを厳選。${cond.description}${wardName}で${cond.label}の選び方に迷ったらまずここから。`;
 
-  // AdSense審査対策（2026-05）: 駅×条件ページはテンプレ薄ページ判定を避けるため
-  // 全件 noindex にする。AdSense承認後に段階的に再開予定（>=3件のみ index 等）。
-  // 元の閾値ロジックは下記コメントを参照のこと。
-  //   let matchedCount = ...（restaurant: chains+indies / spot: spots）
-  //   const shouldNoindex = matchedCount < 3;
-  const shouldNoindex = true;
+  // 2026-05 再開: AdSense承認済みのため、駅×条件ページを段階的にindex化。
+  // 「matchedCount >= 3 件」の充実ページのみ index、薄ページは noindex を維持。
+  // これでプログラマティックSEOの全面再開（〜1万ページ目標）を実現する。
+  let matchedCount = 0;
+  if (kind === 'restaurant' && station) {
+    const stationData = getStationWithChains(station.slug);
+    const chains = stationData
+      ? filterChainsByCondition(stationData.chains, condition as StationConditionSlug)
+      : [];
+    const indies = filterIndiesByCondition(
+      getIndieRestaurantsByStation(station.slug),
+      condition as StationConditionSlug,
+    );
+    matchedCount = chains.length + indies.length;
+  } else if (kind === 'spot' && anyStation) {
+    const { all: spotsAll } = getSpotsForStation(slug);
+    const spotsMatched = filterSpotsByCondition(spotsAll, condition as StationConditionSlug);
+    matchedCount = spotsMatched.length;
+  }
+  const shouldNoindex = matchedCount < 3;
 
   return {
     title,

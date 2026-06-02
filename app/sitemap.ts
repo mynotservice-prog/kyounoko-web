@@ -19,8 +19,8 @@ import { SAICHI_STATIONS } from '@/lib/saitama-chiba-stations';
 import { TOKYO_LINES } from '@/lib/tokyo-lines';
 import { getStationWithChains } from '@/lib/station-restaurants';
 import { getIndieRestaurantsByStation } from '@/lib/indie-restaurants';
-import { STATION_CONDITIONS, hasMatchingItems, getConditionKind } from '@/lib/station-conditions';
-import { getSpotsForStation, hasMatchingSpots } from '@/lib/station-spots';
+import { STATION_CONDITIONS, hasMatchingItems, getConditionKind, filterChainsByCondition, filterIndiesByCondition } from '@/lib/station-conditions';
+import { getSpotsForStation, hasMatchingSpots, filterSpotsByCondition } from '@/lib/station-spots';
 
 const BASE = 'https://kyounoko.jp';
 
@@ -214,7 +214,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.55,
   }));
 
-  // 駅×条件ロングテールページ（restaurant 系 + spot 系。該当0件の組合せは除外）
+  // 駅×条件ロングテールページ（restaurant 系 + spot 系）
+  // 2026-05 再開: matchedCount >= 3 件の充実ページのみsitemapに含める。
+  // ページ側 generateMetadata でも同じ閾値で noindex 判定しているため整合性が取れる。
+  // これでプログラマティックSEO 数千ページが検索エンジンに公開される。
+  const STATION_CONDITION_MIN_MATCHES = 3;
   const stationConditionPages: MetadataRoute.Sitemap = [];
   // Tokyo: restaurant + spot
   for (const s of TOKYO_STATIONS) {
@@ -224,16 +228,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const { all: spotsAll } = getSpotsForStation(s.slug);
     for (const cond of STATION_CONDITIONS) {
       const k = getConditionKind(cond.slug);
-      const ok =
-        k === 'restaurant'
-          ? hasMatchingItems(chains, indies, cond.slug)
-          : hasMatchingSpots(spotsAll, cond.slug);
-      if (!ok) continue;
+      let matchedCount = 0;
+      if (k === 'restaurant') {
+        if (!hasMatchingItems(chains, indies, cond.slug)) continue;
+        const cMatched = filterChainsByCondition(chains, cond.slug);
+        const iMatched = filterIndiesByCondition(indies, cond.slug);
+        matchedCount = cMatched.length + iMatched.length;
+      } else {
+        if (!hasMatchingSpots(spotsAll, cond.slug)) continue;
+        matchedCount = filterSpotsByCondition(spotsAll, cond.slug).length;
+      }
+      if (matchedCount < STATION_CONDITION_MIN_MATCHES) continue;
       stationConditionPages.push({
         url: `${BASE}/station/${s.slug}/${cond.slug}`,
         lastModified: new Date(),
         changeFrequency: 'monthly' as const,
-        priority: k === 'spot' ? 0.5 : 0.45,
+        priority: k === 'spot' ? 0.55 : 0.5,
       });
     }
   }
@@ -248,11 +258,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const cond of STATION_CONDITIONS) {
       if (getConditionKind(cond.slug) !== 'spot') continue;
       if (!hasMatchingSpots(spotsAll, cond.slug)) continue;
+      const matchedCount = filterSpotsByCondition(spotsAll, cond.slug).length;
+      if (matchedCount < STATION_CONDITION_MIN_MATCHES) continue;
       stationConditionPages.push({
         url: `${BASE}/station/${slug}/${cond.slug}`,
         lastModified: new Date(),
         changeFrequency: 'monthly' as const,
-        priority: 0.5,
+        priority: 0.55,
       });
     }
   }
@@ -264,11 +276,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/data/wards`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.75 },
   ];
 
-  // AdSense審査対策（2026-05）: 駅×条件ページ（stationConditionPages）は全件noindexにしたため
-  // sitemapからも除外する。noindexページをsitemapに残すと「クロール済み未登録」やテンプレ薄ページ
-  // 判定の温床になるため。AdSense承認後に再追加予定。
-  // 旧: ...linePages, ...stationConditionPages, ...dataPages
-  void stationConditionPages; // 生成ロジックは保持（再開を容易にするため）
+  // 2026-05 再開: AdSense承認済み + matchedCount >= 3 フィルタ済みのため、
+  // 駅×条件ページをsitemapに含めて公開する（プログラマティックSEO拡張）。
 
   // スポット個別ページ（プログラマティックSEO第3弾、2026-05追加）
   // isIndexable() の条件を満たすスポットのみsitemapに含める（薄ページ判定回避）。
@@ -291,5 +300,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
     }));
 
-  return [...staticPages, ...categoryPages, ...articlePages, ...tagPages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...kanagawaStationPages, ...saichiStationPages, ...lineIndex, ...linePages, ...dataPages, ...spotPages];
+  return [...staticPages, ...categoryPages, ...articlePages, ...tagPages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...kanagawaStationPages, ...saichiStationPages, ...lineIndex, ...linePages, ...stationConditionPages, ...dataPages, ...spotPages];
 }

@@ -235,15 +235,34 @@ export default async function ArticlePage({ params }: Props) {
     ],
   };
 
+  // 2026-05 FAQ schema 無効対策: markdown/HTML を plain text 化＋空/短すぎる Q/A を除外
+  const stripFaqMd = (text: string): string =>
+    text
+      .replace(/<[^>]+>/g, '')
+      .replace(/\*\*(.+?)\*\*/g, '$1')
+      .replace(/\*(.+?)\*/g, '$1')
+      .replace(/__(.+?)__/g, '$1')
+      .replace(/\[(.+?)\]\([^)]+\)/g, '$1')
+      .replace(/`([^`]+)`/g, '$1')
+      .replace(/^[-*•]\s+/gm, '')
+      .replace(/^>\s+/gm, '')
+      .replace(/\n{2,}/g, ' ')
+      .replace(/\n/g, ' ')
+      .replace(/\s{2,}/g, ' ')
+      .trim();
+
   const jsonLdFaq = article.faq?.length
     ? {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        mainEntity: article.faq.map(q => ({
-          '@type': 'Question',
-          name: q.question,
-          acceptedAnswer: { '@type': 'Answer', text: q.answer },
-        })),
+        mainEntity: article.faq
+          .map(q => ({ question: stripFaqMd(q.question), answer: stripFaqMd(q.answer) }))
+          .filter(q => q.question.length >= 5 && q.answer.length >= 20)
+          .map(q => ({
+            '@type': 'Question',
+            name: q.question,
+            acceptedAnswer: { '@type': 'Answer', text: q.answer },
+          })),
       }
     : null;
 
@@ -666,15 +685,39 @@ function FileArticleView({ article }: { article: FileArticle }) {
     ],
   };
 
+  // FAQ schema: Google の Rich Results 仕様では Answer text に markdown 記号や
+  // 過度な HTML が残るとエラー扱いになるため、plain text 化する。
+  // 2026-05: Search Console「無効2件」対策。
+  const stripFaqMarkdown = (text: string): string =>
+    text
+      .replace(/\*\*(.+?)\*\*/g, '$1')          // **太字**
+      .replace(/\*(.+?)\*/g, '$1')              // *italic*
+      .replace(/__(.+?)__/g, '$1')              // __bold__
+      .replace(/\[(.+?)\]\([^)]+\)/g, '$1')     // [text](url)
+      .replace(/`([^`]+)`/g, '$1')              // `code`
+      .replace(/^[-*•]\s+/gm, '')               // bullet
+      .replace(/^>\s+/gm, '')                   // quote
+      .replace(/\n{2,}/g, ' ')                  // multi newlines → space
+      .replace(/\n/g, ' ')                      // 残った newline → space
+      .replace(/\s{2,}/g, ' ')                  // 連続空白
+      .trim();
+
   const jsonLdFaq = article.faqItems.length
     ? {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        mainEntity: article.faqItems.map((q) => ({
-          '@type': 'Question',
-          name: q.question,
-          acceptedAnswer: { '@type': 'Answer', text: q.answer },
-        })),
+        mainEntity: article.faqItems
+          .map((q) => ({
+            question: stripFaqMarkdown(q.question),
+            answer: stripFaqMarkdown(q.answer),
+          }))
+          // Google 仕様: 空 or 短すぎる Q/A は除外（無効判定回避）
+          .filter((q) => q.question.length >= 5 && q.answer.length >= 20)
+          .map((q) => ({
+            '@type': 'Question',
+            name: q.question,
+            acceptedAnswer: { '@type': 'Answer', text: q.answer },
+          })),
       }
     : null;
 
