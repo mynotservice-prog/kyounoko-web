@@ -5,8 +5,8 @@ metaDescription: くら寿司は離乳食持ち込みOK？温めやお湯は頼�
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kurasushi-rinyushoku-mochikomi.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   「くら寿司に離乳食って持ち込んでいいの？温めも頼めるの？」を1記事で解決。公式方針と店舗対応のリアル、レトルト温めのお願いの仕方、現実的なオペレーションまで0-1歳家族の目線で保存版にまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

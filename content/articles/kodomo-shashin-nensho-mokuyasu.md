@@ -1,20 +1,27 @@
 ---
 slug: kodomo-shashin-nensho-mokuyasu
 title: 子供の写真年間枚数の目安｜0〜6歳の撮影量・保存・整理完全ガイド
-metaDescription: 子供の写真は年間何枚撮る？0歳・1歳・2歳〜6歳の撮影量目安、保存方法、Googleフォト・iCloud活用、整理のコツ、フォトブック作成、データバックアップまで2026年版で完全解説します。
+metaDescription: >-
+  子供の写真は年間何枚撮る？0歳・1歳・2歳〜6歳の撮影量目安、保存方法、Googleフォト・iCloud活用、整理のコツ、フォトブック作成、データバックアップまで2026年版で完全解説します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-29'
-hero: /hero/baby-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-shashin-nensho-mokuyasu.jpg
 area: all
 quickInfo:
-  ageRanges: [0-1, 2-3, 4-6]
-  place: [home]
-  weather: [any]
+  ageRanges:
+    - 0-1
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 10
   budget: low
 lede: 「子供の写真、何枚撮る？」年齢別目安・保存・整理を完全解説。
+legacyHero: /hero/baby-02.webp
 ---
 
 ## 結論｜年間撮影枚数目安

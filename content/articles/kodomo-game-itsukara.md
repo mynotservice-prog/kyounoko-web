@@ -1,20 +1,26 @@
 ---
 slug: kodomo-game-itsukara
 title: 子供のゲームはいつから？年齢別の時間・選び方・依存対策完全ガイド
-metaDescription: 子供のゲームは何歳から？3歳・4歳・5歳・6歳・小学校のゲーム時間目安、Switch・iPad、教育的ゲーム、ルール作り、依存対策、視力への影響まで2026年版で完全解説します。
+metaDescription: >-
+  子供のゲームは何歳から？3歳・4歳・5歳・6歳・小学校のゲーム時間目安、Switch・iPad、教育的ゲーム、ルール作り、依存対策、視力への影響まで2026年版で完全解説します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/baby-03.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-game-itsukara.jpg
 area: all
 quickInfo:
-  ageRanges: [2-3, 4-6]
-  place: [home]
-  weather: [any]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 10
   budget: mid
 lede: 「子供のゲームはいつから？」年齢別の時間・選び方・ルールを完全解説。
+legacyHero: /hero/baby-03.webp
 ---
 
 ## 結論｜年齢別ゲーム時間の目安

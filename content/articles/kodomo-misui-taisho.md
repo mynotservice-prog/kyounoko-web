@@ -1,12 +1,13 @@
 ---
 slug: kodomo-misui-taisho
 title: 子供の誤飲 緊急対処｜119のタイミング・吐かせ方・予防完全ガイド【0〜6歳】
-metaDescription: 子供の誤飲時の緊急対処を完全解説。119のタイミング、吐かせていいもの・ダメなもの、ボタン電池・タバコ等の危険物別対応、予防まで2026年最新版で網羅した保存版です。
+metaDescription: >-
+  子供の誤飲時の緊急対処を完全解説。119のタイミング、吐かせていいもの・ダメなもの、ボタン電池・タバコ等の危険物別対応、予防まで2026年最新版で網羅した保存版です。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-misui-taisho.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「気づいたら子供が何か飲み込んでいた」——誤飲は0〜3歳のヒヤリ事故の代表格。本記事では119のタイミング、吐かせていいもの・ダメなもの、ボタン電池・タバコ等の危険物別対応、予防まで完全ガイド。1秒の判断が命を救います。
+legacyHero: /hero/baby-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

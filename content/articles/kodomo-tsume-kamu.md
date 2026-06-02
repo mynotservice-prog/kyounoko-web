@@ -1,12 +1,13 @@
 ---
 slug: kodomo-tsume-kamu
 title: 子供が爪を噛む癖｜原因・対処法・年齢別対応完全ガイド【2〜6歳】
-metaDescription: 子供の爪噛み癖が気になる…叱るほど悪化する場合の対応に悩む方へ。2〜6歳の「不安・退屈・口寂しさ」など原因と、叱らず減らす関わり方・受診の目安を整理しました。
+metaDescription: >-
+  子供の爪噛み癖が気になる…叱るほど悪化する場合の対応に悩む方へ。2〜6歳の「不安・退屈・口寂しさ」など原因と、叱らず減らす関わり方・受診の目安を整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/kid-study-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-tsume-kamu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: free
 lede: >-
   「気づいたら爪を噛んでいる」「叱ってもやめない」――子供の爪噛みは多くの親が気にする癖です。原因は**指しゃぶりの延長・不安・退屈**などで、叱るとかえって強化されることがあります。本記事では原因と、叱らず徐々に減らす関わり方を整理します。
+legacyHero: /hero/kid-study-02.webp
 ---
 
 ## 結論

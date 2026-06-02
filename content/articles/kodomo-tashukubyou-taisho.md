@@ -1,12 +1,13 @@
 ---
 slug: kodomo-tashukubyou-taisho
 title: 子供の手足口病の対処｜症状・原因・家庭ケア・受診目安完全ガイド【0〜6歳】
-metaDescription: 子供の手足口病の対処法を0〜6歳向けに完全解説。発疹の特徴、口内炎で食べない時の食事工夫、登園目安、すぐ受診すべきサイン、髄膜炎合併の見極めポイント、#8000活用まで2026年版で詳しくまとめました。我が家の口内炎地獄の実体験も紹介。
+metaDescription: >-
+  子供の手足口病の対処法を0〜6歳向けに完全解説。発疹の特徴、口内炎で食べない時の食事工夫、登園目安、すぐ受診すべきサイン、髄膜炎合併の見極めポイント、#8000活用まで2026年版で詳しくまとめました。我が家の口内炎地獄の実体験も紹介。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-tashukubyou-taisho.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   手足口病は夏に保育園で大流行する感染症で、名前の通り手・足・口に発疹が出るのが特徴です。多くは軽症で1週間で治りますが、口内炎の痛みで水分が取れず脱水になることも。本記事では0〜6歳向けに手足口病の症状・対処・受診目安・登園判断を完全解説。我が家のヒヤッと体験も交えて紹介します。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

@@ -1,12 +1,13 @@
 ---
 slug: lego-vs-duplo
 title: レゴ vs デュプロ 完全比較【2026年版】｜年齢・難易度・互換性で選ぶ
-metaDescription: レゴクラシックとデュプロを6項目で比較。対象年齢・パーツサイズ・難易度・互換性・収納・価格まで徹底解説。1歳・3歳・5歳の家庭タイプ別おすすめを完全紹介します。
+metaDescription: >-
+  レゴクラシックとデュプロを6項目で比較。対象年齢・パーツサイズ・難易度・互換性・収納・価格まで徹底解説。1歳・3歳・5歳の家庭タイプ別おすすめを完全紹介します。
 category: today-nani
 categoryName: 今日なにする
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/kid-study-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/lego-vs-duplo.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: mid
 lede: >-
   「レゴとデュプロ、子どもに買うならどっち？」を2026年版で完全比較。デュプロは1.5歳〜の大きなブロック、レゴクラシックは4歳〜の細かなブロックで難易度高め。対象年齢・パーツサイズ・難易度・互換性・収納・価格の6項目で徹底解説し、1歳・3歳・5歳の家庭タイプ別おすすめまで整理しました。
+legacyHero: /hero/kid-study-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

@@ -5,8 +5,8 @@ metaDescription: 子供の習い事を続けるコツを完全ガイド。やる
 category: narai
 categoryName: 習い事
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/classroom-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-naraigoto-tsuduki-kotsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +19,7 @@ quickInfo:
   durationMin: 30
   budget: mid
 lede: 習い事は始めるより続けるほうが難しい。やる気の波・スランプ・親の送迎負担、それぞれの乗り越え方と「やめどき」の判断基準を整理しました。
+legacyHero: /hero/classroom-01.webp
 ---
 
 ## 結論（時期・必要なもの）

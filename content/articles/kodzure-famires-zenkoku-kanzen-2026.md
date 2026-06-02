@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodzure-famires-zenkoku-kanzen-2026.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -23,6 +23,7 @@ quickInfo:
 lede: >-
   「子連れで行けるファミレスはどこ？」「ベビーチェアあるのは？」「個室は？」——0〜6歳の親が抱える疑問を全部解決する完全ガイド。ガスト、サイゼリヤ、ジョナサン、デニーズ、ロイヤルホスト、ココス、ビッグボーイ、ステーキガスト、ジョイフル、和食さとの主要10チェーンを徹底比較。ベビーチェア・キッズメニュー・個室・離乳食・アレルギー対応・駐車場まで、項目ごとに表で一覧化しました。
 seoRelated: famires-7chain-8koumoku-2026
+legacyHero: /hero/food-japan-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

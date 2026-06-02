@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-tamago-kake-gohan-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +19,9 @@ quickInfo:
     - any
   durationMin: 5
   budget: low
-lede: 「卵かけご飯はいつから？」を完全ガイド。生卵は3歳まで原則NG、加熱卵で代用すれば1歳から楽しめます。サルモネラ菌対策、月齢別の目安、新鮮卵の選び方、加熱の目安まで、子供に安全な与え方を解説します。
+lede: >-
+  「卵かけご飯はいつから？」を完全ガイド。生卵は3歳まで原則NG、加熱卵で代用すれば1歳から楽しめます。サルモネラ菌対策、月齢別の目安、新鮮卵の選び方、加熱の目安まで、子供に安全な与え方を解説します。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論｜開始時期

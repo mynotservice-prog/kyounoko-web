@@ -5,8 +5,8 @@ metaDescription: 子供の手形・足形はいつから取れる？新生児か
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-handprint-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +19,7 @@ quickInfo:
   durationMin: 30
   budget: low
 lede: 赤ちゃんの手形・足形は新生児から取れる成長記念。インク・粘土・キット別の取り方、寝ている時を狙うコツ、節目に残すスケジュールまで実体験ベースで紹介します。
+legacyHero: /hero/baby-02.webp
 ---
 
 ## 結論（時期・必要なもの）

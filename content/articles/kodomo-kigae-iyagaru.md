@@ -1,12 +1,13 @@
 ---
 slug: kodomo-kigae-iyagaru
 title: 子供が着替えを嫌がる｜原因・対処法・年齢別対応完全ガイド【1〜6歳】
-metaDescription: 「着替えやだ！」毎朝バトル…子供の着替え嫌がりに悩む方へ。1〜6歳のイヤイヤ期・感覚過敏・こだわり期の原因と、年齢別声かけ・服選びのコツ・受診の目安を整理しました。
+metaDescription: >-
+  「着替えやだ！」毎朝バトル…子供の着替え嫌がりに悩む方へ。1〜6歳のイヤイヤ期・感覚過敏・こだわり期の原因と、年齢別声かけ・服選びのコツ・受診の目安を整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-kigae-iyagaru.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「朝の着替えで30分」「裸で逃げ回る」「特定の服しか着ない」――着替えバトルは多くの家庭の朝の悩み。原因は**イヤイヤ期・感覚過敏・服のこだわり**など多様です。本記事では年齢別の原因と、着替えをスムーズにする声かけ・服選び・ルーティンを整理します。
+legacyHero: /hero/baby-02.webp
 ---
 
 ## 結論

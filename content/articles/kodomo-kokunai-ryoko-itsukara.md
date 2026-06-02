@@ -1,12 +1,13 @@
 ---
 slug: kodomo-kokunai-ryoko-itsukara
 title: 子供の国内旅行はいつから？年齢別デビュー目安・準備・注意点完全ガイド
-metaDescription: 子供の国内旅行は何歳から？0歳・1歳・2歳・3歳以降の年齢別目安、移動手段の選び方、宿選びのコツ、持ち物リスト、体調管理の注意点まで2026年版で完全解説。初めての家族旅行を成功させる実践ノウハウ。
+metaDescription: >-
+  子供の国内旅行は何歳から？0歳・1歳・2歳・3歳以降の年齢別目安、移動手段の選び方、宿選びのコツ、持ち物リスト、体調管理の注意点まで2026年版で完全解説。初めての家族旅行を成功させる実践ノウハウ。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/autumn-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-kokunai-ryoko-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 120
   budget: mid
-lede: 「子供の国内旅行はいつから？」を完全ガイド。0歳の近場おでかけから、1〜2歳の1泊2日デビュー、3歳以降の本格旅行まで、年齢別の楽しみ方・移動手段の選び方・宿選びのコツ・持ち物・体調管理の注意点を、我が家の体験談とあわせてまとめました。
+lede: >-
+  「子供の国内旅行はいつから？」を完全ガイド。0歳の近場おでかけから、1〜2歳の1泊2日デビュー、3歳以降の本格旅行まで、年齢別の楽しみ方・移動手段の選び方・宿選びのコツ・持ち物・体調管理の注意点を、我が家の体験談とあわせてまとめました。
+legacyHero: /hero/autumn-01.webp
 ---
 
 ## 結論｜年齢別早見表

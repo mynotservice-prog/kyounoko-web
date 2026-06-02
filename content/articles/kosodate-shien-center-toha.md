@@ -1,12 +1,13 @@
 ---
 slug: kosodate-shien-center-toha
 title: 子育て支援センターとは｜定義・利用方法・児童館との違い完全ガイド
-metaDescription: 子育て支援センターとは何か、いつから・どうやって利用するのか、児童館との違いまで完全解説。0歳から未就学児が無料で遊べる地域の交流拠点について、2026年5月時点の地域子育て支援拠点事業の情報でやさしく整理しました。
+metaDescription: >-
+  子育て支援センターとは何か、いつから・どうやって利用するのか、児童館との違いまで完全解説。0歳から未就学児が無料で遊べる地域の交流拠点について、2026年5月時点の地域子育て支援拠点事業の情報でやさしく整理しました。
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kosodate-shien-center-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: free
 lede: >-
   「子どもと家でしんどい…どこか気軽に行ける場所は？」——子育て支援センターは0歳から未就学児と保護者が無料で利用できる地域の交流拠点。本記事は2026年5月時点の地域子育て支援拠点事業の一般情報をもとに、使い方をやさしく整理しました。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

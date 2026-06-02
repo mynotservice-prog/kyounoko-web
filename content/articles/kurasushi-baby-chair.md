@@ -1,12 +1,13 @@
 ---
 slug: kurasushi-baby-chair
 title: くら寿司のベビーチェア｜種類・確保のコツ・対応店舗完全ガイド【2026】
-metaDescription: くら寿司のベビーチェアは何種類？ベビーシート完備の店舗が多い？腰すわり前から使える対応はある？混雑時の確保のコツや代替案まで0-2歳家族目線で徹底解説します。
+metaDescription: >-
+  くら寿司のベビーチェアは何種類？ベビーシート完備の店舗が多い？腰すわり前から使える対応はある？混雑時の確保のコツや代替案まで0-2歳家族目線で徹底解説します。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kurasushi-baby-chair.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   「くら寿司にベビーチェアはある？腰すわり前の赤ちゃんはどうすれば？」を1記事で解決。回転寿司の中でもファミリー層にやさしいくら寿司のベビーチェア事情を、種類・確保のコツ・代替案まで0-2歳家族の目線で保存版にまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

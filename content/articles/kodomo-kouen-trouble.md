@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-kouen-trouble.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「公園に行くたびに何かトラブルが…」「他の親との距離感が難しい」——公園育児あるあるの悩み。本記事はよくある事例別の対処法、親同士の付き合い方、けが・連れ去りへの備えまで完全ガイド。公園は社会性を学ぶ最高の場でもあります。
+legacyHero: /hero/park-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

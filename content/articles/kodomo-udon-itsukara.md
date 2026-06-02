@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-03.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-udon-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +19,9 @@ quickInfo:
     - any
   durationMin: 10
   budget: low
-lede: 「うどんはいつから？」を完全ガイド。離乳食初期5〜6ヶ月からくたくたに煮て可。月齢別の量、小麦アレルギー対策、塩分処理、トッピング別の判断、お店デビューまで解説します。
+lede: >-
+  「うどんはいつから？」を完全ガイド。離乳食初期5〜6ヶ月からくたくたに煮て可。月齢別の量、小麦アレルギー対策、塩分処理、トッピング別の判断、お店デビューまで解説します。
+legacyHero: /hero/food-japan-03.webp
 ---
 
 ## 結論

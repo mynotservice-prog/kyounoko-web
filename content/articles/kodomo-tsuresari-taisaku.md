@@ -1,12 +1,13 @@
 ---
 slug: kodomo-tsuresari-taisaku
 title: 子供の連れ去り対策｜手口・予防・家庭での教育完全ガイド【3〜10歳】
-metaDescription: 子供の連れ去り対策を完全解説。実際の手口、年齢別の教え方、GPS・防犯ブザー等の備え、登下校の安全、不審者目撃時の通報まで2026年最新版で網羅した保存版です。
+metaDescription: >-
+  子供の連れ去り対策を完全解説。実際の手口、年齢別の教え方、GPS・防犯ブザー等の備え、登下校の安全、不審者目撃時の通報まで2026年最新版で網羅した保存版です。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-tsuresari-taisaku.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   「子供が連れ去られる」は他人事ではありません。本記事では実際の手口、年齢別の教え方、GPS・防犯ブザー等の備え、登下校の安全、不審者目撃時の通報まで完全ガイド。「いかのおすし」を超える、現代版の具体的対策を解説します。
+legacyHero: /hero/park-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

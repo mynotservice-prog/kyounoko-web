@@ -1,12 +1,13 @@
 ---
 slug: kodomo-kigae-jibun-de
 title: 子供が着替えを自分で｜原因・年齢別練習法完全ガイド【1〜6歳】
-metaDescription: 子供にいつから着替えを自分でさせる？1〜6歳の発達段階別の着替えステップ・服選びのコツ・「自分でやりたい」を伸ばす関わり方・できない時の受診目安を整理しました。
+metaDescription: >-
+  子供にいつから着替えを自分でさせる？1〜6歳の発達段階別の着替えステップ・服選びのコツ・「自分でやりたい」を伸ばす関わり方・できない時の受診目安を整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/kid-craft-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-kigae-jibun-de.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「いつから着替えを自分で？」「すぐ手を出してしまう」――着替えの自立は焦らなくて大丈夫ですが、ステップ感を知っていると関わり方が楽になります。本記事では年齢別の着替え発達ステップ・自分でやる気を伸ばす声かけ・つまずきポイントを整理します。
+legacyHero: /hero/kid-craft-01.webp
 ---
 
 ## 結論

@@ -2,12 +2,13 @@
 slug: kodomo-jitensha-hojorin-nashi
 title: 子供の自転車 補助輪なしはいつから？年齢別練習法・コツ完全ガイド
 catchTitle: 子供の自転車 補助輪なしはいつから？年齢別練習法・コツ完全ガイド
-metaDescription: 子供の補助輪なし自転車は何歳から？2歳・3歳・4歳・5歳の年齢別目安、ストライダーからの移行、最短マスターの練習ステップ、転倒対策、必須装備まで2026年版で完全解説します。
+metaDescription: >-
+  子供の補助輪なし自転車は何歳から？2歳・3歳・4歳・5歳の年齢別目安、ストライダーからの移行、最短マスターの練習ステップ、転倒対策、必須装備まで2026年版で完全解説します。
 category: today-mawasu
 categoryName: 今日まわす
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-jitensha-hojorin-nashi.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,10 @@ quickInfo:
     - sunny
   durationMin: 60
   budget: mid
-lede: 「子供の自転車 補助輪なしはいつから？」を完全ガイド。3歳ストライダー卒業組、4〜5歳の補助輪卒業組、最短1日でマスターする練習ステップ、転倒対策、ヘルメット選びまで、我が家のリアル体験とあわせてまとめました。
+lede: >-
+  「子供の自転車
+  補助輪なしはいつから？」を完全ガイド。3歳ストライダー卒業組、4〜5歳の補助輪卒業組、最短1日でマスターする練習ステップ、転倒対策、ヘルメット選びまで、我が家のリアル体験とあわせてまとめました。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論｜年齢別早見表

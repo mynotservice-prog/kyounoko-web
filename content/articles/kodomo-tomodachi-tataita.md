@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-tomodachi-tataita.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -23,6 +23,7 @@ quickInfo:
   budget: free
 lede: >-
   「うちの子が友達を叩いてしまった」——その場で謝るべきか、家で叱るべきか、悩む親は多いはず。本記事は原因の見立て、その場での声かけ、相手親への謝罪、繰り返さない関わり方まで完全ガイド。叩く行為は言葉が追いつかないSOSでもあります。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

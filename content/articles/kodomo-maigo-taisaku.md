@@ -1,12 +1,13 @@
 ---
 slug: kodomo-maigo-taisaku
 title: 子供の迷子対策｜事前準備・はぐれた時の対応・捜索完全ガイド【1〜6歳】
-metaDescription: 子供の迷子対策を完全解説。GPS・名札・約束ごと等の事前準備、はぐれた瞬間の対応、警察・施設への通報、再発防止まで2026年最新版で網羅した保存版です。我が家のヒヤリ体験も。
+metaDescription: >-
+  子供の迷子対策を完全解説。GPS・名札・約束ごと等の事前準備、はぐれた瞬間の対応、警察・施設への通報、再発防止まで2026年最新版で網羅した保存版です。我が家のヒヤリ体験も。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-maigo-taisaku.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   「気づいたら子供がいない」——商業施設・公園・駅で起きる迷子。本記事ではGPS・名札・約束ごとの事前準備、はぐれた瞬間の対応フロー、警察・施設への通報、再発防止まで完全ガイド。1秒の判断遅れが命に関わることも。事前準備が最大の予防です。
+legacyHero: /hero/park-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

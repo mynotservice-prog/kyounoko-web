@@ -1,12 +1,13 @@
 ---
 slug: kodomo-hitoride-nerenai
 title: 子供が一人で寝れない｜原因・年齢別対処・寝かしつけ卒業完全ガイド【1〜10歳】
-metaDescription: 子供が一人で寝れない原因と対処法を完全解説。分離不安・夜泣き・添い寝卒業のコツ、安心グッズ、就寝ルーティン、無理させない判断基準まで2026年最新版で網羅した保存版です。
+metaDescription: >-
+  子供が一人で寝れない原因と対処法を完全解説。分離不安・夜泣き・添い寝卒業のコツ、安心グッズ、就寝ルーティン、無理させない判断基準まで2026年最新版で網羅した保存版です。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-hitoride-nerenai.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   「ママいないと寝れない」「一人だと怖い」——子供が一人で寝られないのは発達上自然なこと。本記事では原因、年齢別の卒業ステップ、安心グッズ、就寝ルーティン、無理させない判断基準まで完全解説。焦らず子供のペースで自立を育てる方法を紹介します。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

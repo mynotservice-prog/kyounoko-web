@@ -1,12 +1,13 @@
 ---
 slug: legoland-stroller
 title: レゴランド・ジャパン ベビーカー｜貸出・置き場・動線完全ガイド【2026年】
-metaDescription: レゴランド・ジャパンのベビーカー事情を徹底解説。貸出料金500円・自前持ち込みOK・8エリアの動線・アトラクション置き場ルール・雨天時の対応まで、0〜3歳連れに必要な情報を全網羅。
+metaDescription: >-
+  レゴランド・ジャパンのベビーカー事情を徹底解説。貸出料金500円・自前持ち込みOK・8エリアの動線・アトラクション置き場ルール・雨天時の対応まで、0〜3歳連れに必要な情報を全網羅。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/legoland-stroller.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: mid
 lede: >-
   レゴランド・ジャパンは屋外型の大型テーマパーク。8エリアをまたぐ移動はベビーカーが必須レベルの広さです。貸出・持ち込み・動線・置き場まで、0〜3歳連れの「困った」を全部解決する保存版。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

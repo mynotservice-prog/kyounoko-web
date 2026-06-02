@@ -5,8 +5,8 @@ metaDescription: 子供の習い事を辞める時の声かけと判断基準を
 category: narai
 categoryName: 習い事
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-naraigoto-yameru-koe.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +19,7 @@ quickInfo:
   durationMin: 30
   budget: low
 lede: 子供が「習い事を辞めたい」と言った時、親の声かけ次第で本人の気持ちと関係性は大きく変わる。判断基準・本人と先生への伝え方・円満退会までを実例で整理します。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 ## 結論（時期・必要なもの）

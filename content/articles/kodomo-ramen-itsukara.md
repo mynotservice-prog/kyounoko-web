@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-ramen-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +19,9 @@ quickInfo:
     - any
   durationMin: 10
   budget: low
-lede: 「ラーメンはいつから？」を完全ガイド。麺は1歳から短くカット、スープは2歳以降薄めて少量。塩分・アレルギー対策、ラーメン屋デビュー、トッピング別の判断まで解説します。
+lede: >-
+  「ラーメンはいつから？」を完全ガイド。麺は1歳から短くカット、スープは2歳以降薄めて少量。塩分・アレルギー対策、ラーメン屋デビュー、トッピング別の判断まで解説します。
+legacyHero: /hero/food-japan-02.webp
 ---
 
 ## 結論

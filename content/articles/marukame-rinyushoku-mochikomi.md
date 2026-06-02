@@ -5,8 +5,8 @@ metaDescription: 丸亀製麺は離乳食持ち込み可？温めお願いはで
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/marukame-rinyushoku-mochikomi.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   「丸亀製麺に離乳食持ち込んでいいの？うどんも取り分けできる？」を1記事で解決。公式方針と店舗対応のリアル、レトルト温めの可否、うどん取り分けとの併用テクまで0-1歳家族目線で保存版にまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

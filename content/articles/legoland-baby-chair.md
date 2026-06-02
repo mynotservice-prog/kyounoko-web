@@ -1,12 +1,13 @@
 ---
 slug: legoland-baby-chair
 title: レゴランド・ジャパン ベビーチェア｜レストラン別設置状況完全ガイド【2026年】
-metaDescription: レゴランド・ジャパンのベビーチェア事情をレストラン別に解説。8エリアの飲食店の設置数・キッズメニュー・離乳食持ち込みルール・アレルゲン対応・予約の要否まで、0〜3歳連れの食事計画に必須情報。
+metaDescription: >-
+  レゴランド・ジャパンのベビーチェア事情をレストラン別に解説。8エリアの飲食店の設置数・キッズメニュー・離乳食持ち込みルール・アレルゲン対応・予約の要否まで、0〜3歳連れの食事計画に必須情報。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/legoland-baby-chair.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: mid
 lede: >-
   レゴランド・ジャパンの園内レストランは、全店舗にベビーチェアあり。離乳食持ち込み・電子レンジ利用OK、アレルゲン対応も整っています。店舗別の設置数・キッズメニュー・予約ルールまで、食事まわりを一気に整理しました。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

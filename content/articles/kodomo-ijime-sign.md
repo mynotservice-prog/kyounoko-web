@@ -1,12 +1,13 @@
 ---
 slug: kodomo-ijime-sign
 title: 子供のいじめのサイン｜気づくポイント・親の対応・相談先完全ガイド【3〜12歳】
-metaDescription: 子供のいじめのサインを見逃さないためのチェックリストを完全解説。表情・身体・持ち物・行動の変化、親がやるべき初動、学校・相談機関への伝え方、やってはいけない対応まで2026年最新版で網羅した保存版です。
+metaDescription: >-
+  子供のいじめのサインを見逃さないためのチェックリストを完全解説。表情・身体・持ち物・行動の変化、親がやるべき初動、学校・相談機関への伝え方、やってはいけない対応まで2026年最新版で網羅した保存版です。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-ijime-sign.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「最近、子供の様子がおかしい」——いじめは早期発見が何より大切。本記事ではいじめのサインを表情・身体・持ち物・行動の4軸でチェックリスト化。親がまずやるべき初動、学校・相談先への伝え方、やってはいけない対応まで完全解説します。子供のSOSに気づける親になりましょう。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

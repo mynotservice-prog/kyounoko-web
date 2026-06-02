@@ -1,13 +1,12 @@
 ---
 slug: kodomo-hoikuen-trouble
 title: 子供の保育園トラブル｜よくある事例・先生との伝え方・解決ステップ完全ガイド【0〜6歳】
-metaDescription: >-
-  保育園で起きる子供のトラブル事例と対処法を完全解説。友達関係・先生との関係・けが・噛みつき・連絡帳の活用・転園判断まで2026年最新版で網羅した保存版です。
+metaDescription: 保育園で起きる子供のトラブル事例と対処法を完全解説。友達関係・先生との関係・けが・噛みつき・連絡帳の活用・転園判断まで2026年最新版で網羅した保存版です。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/classroom-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-hoikuen-trouble.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -23,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「保育園でけがをして帰ってきた」「先生との相性が…」——保育園に通う家庭なら誰もが直面する悩み。本記事はよくある事例別の対処法、先生との伝え方、解決までのステップ、転園判断の目安まで完全ガイド。早期の相談がトラブル長期化を防ぎます。
+legacyHero: /hero/classroom-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

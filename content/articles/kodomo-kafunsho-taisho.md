@@ -1,12 +1,13 @@
 ---
 slug: kodomo-kafunsho-taisho
 title: 子供の花粉症の対処法｜原因・症状・受診目安・予防完全ガイド【0〜6歳】
-metaDescription: 子供の花粉症の対処法を0〜6歳向けに完全解説。スギ・ヒノキ・イネ科・ブタクサの飛散時期、低年齢化の傾向、家庭ケア、薬の選び方、すぐ受診すべきサイン、舌下免疫療法まで2026年版で詳しくまとめました。我が家の花粉症対策も交えて紹介。
+metaDescription: >-
+  子供の花粉症の対処法を0〜6歳向けに完全解説。スギ・ヒノキ・イネ科・ブタクサの飛散時期、低年齢化の傾向、家庭ケア、薬の選び方、すぐ受診すべきサイン、舌下免疫療法まで2026年版で詳しくまとめました。我が家の花粉症対策も交えて紹介。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-kafunsho-taisho.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   子供の花粉症は低年齢化が進み、3歳までに発症する子も増えています。本記事では0〜6歳向けに、花粉症の症状・飛散時期・家庭ケア・薬の選び方・受診すべきサイン・舌下免疫療法まで完全解説します。「春になると目をこする・くしゃみ連発」のお子さんの対応を、我が家の体験を交えて紹介します。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

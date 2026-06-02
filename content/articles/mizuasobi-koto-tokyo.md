@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/summer-water-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/mizuasobi-koto-tokyo.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -24,6 +24,7 @@ quickInfo:
   budget: free
 lede: >-
   暑い夏、徒歩圏内で子供と水遊びさせたい——豊洲・有明など湾岸エリアの開発が進む江東区。木場公園・猿江恩賜公園など大型公園のじゃぶじゃぶ池が充実しており、子育て世代に大人気のエリアです。本記事では江東区で**2026年夏に行ける水遊び場5選**を、対象年齢・設備・無料/有料・ベストシーズンつきで完全ガイド。猛暑日のお出かけプランの参考にどうぞ。
+legacyHero: /hero/summer-water-01.webp
 ---
 
 ## 結論｜江東区の水遊び場おすすめTOP3

@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-kitchen-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-nuts-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +19,9 @@ quickInfo:
     - any
   durationMin: 5
   budget: low
-lede: 「ナッツ類はいつから？」を完全ガイド。アーモンド・くるみ・カシューナッツなど、粒は5歳まで誤嚥NG。ペーストなら9ヶ月頃から少量可。種類別の特徴とアレルギー対策まで解説します。
+lede: >-
+  「ナッツ類はいつから？」を完全ガイド。アーモンド・くるみ・カシューナッツなど、粒は5歳まで誤嚥NG。ペーストなら9ヶ月頃から少量可。種類別の特徴とアレルギー対策まで解説します。
+legacyHero: /hero/food-kitchen-02.webp
 ---
 
 ## 結論

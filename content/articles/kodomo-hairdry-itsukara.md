@@ -1,20 +1,26 @@
 ---
 slug: kodomo-hairdry-itsukara
 title: 子供がドライヤーを使えるのはいつから？年齢別の安全な使い方と火傷対策
-metaDescription: 子供がドライヤーを使えるのは何歳から？2歳・3歳・4歳・5歳の目安、火傷・感電対策、安全なドライヤーの選び方、髪が長い子の乾かし方まで2026年版で完全解説します。
+metaDescription: >-
+  子供がドライヤーを使えるのは何歳から？2歳・3歳・4歳・5歳の目安、火傷・感電対策、安全なドライヤーの選び方、髪が長い子の乾かし方まで2026年版で完全解説します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-28'
-hero: /hero/bath-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-hairdry-itsukara.jpg
 area: all
 quickInfo:
-  ageRanges: [2-3, 4-6]
-  place: [home]
-  weather: [any]
+  ageRanges:
+    - 2-3
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 5
   budget: free
 lede: 「子供のドライヤーはいつから？」年齢別の安全な使い方を完全解説。
+legacyHero: /hero/bath-02.webp
 ---
 
 ## 結論｜年齢別ドライヤー目安

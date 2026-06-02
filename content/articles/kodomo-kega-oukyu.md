@@ -1,12 +1,13 @@
 ---
 slug: kodomo-kega-oukyu
 title: 子供のけがの応急処置｜原因・症状・対処法・受診目安完全ガイド【0〜6歳】
-metaDescription: 子供のけがの応急処置を0〜6歳向けに完全解説。切り傷・擦り傷・打撲・捻挫・頭部打撲・骨折疑いへの対応、止血の方法、月齢別の注意点、すぐ受診すべきサイン、救急車の判断基準まで2026年版で詳しくまとめました。我が家のけが体験も交えて紹介。
+metaDescription: >-
+  子供のけがの応急処置を0〜6歳向けに完全解説。切り傷・擦り傷・打撲・捻挫・頭部打撲・骨折疑いへの対応、止血の方法、月齢別の注意点、すぐ受診すべきサイン、救急車の判断基準まで2026年版で詳しくまとめました。我が家のけが体験も交えて紹介。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-kega-oukyu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   子供のけがは日常的に起きる出来事ですが、判断を誤ると命に関わるケースも。本記事では0〜6歳向けに、切り傷・擦り傷・打撲・捻挫・頭部打撲などの応急処置・受診すべきサイン・救急車の判断基準を完全解説します。「いま病院？様子見？」を即判断できる手順を、我が家の体験を交えて紹介します。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

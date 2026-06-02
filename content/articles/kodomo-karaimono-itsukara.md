@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-kitchen-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-karaimono-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,7 +18,9 @@ quickInfo:
     - any
   durationMin: 5
   budget: low
-lede: 「辛い物はいつから？」を完全ガイド。刺激物は5〜6歳以降が安心、本格的な辛さは小学生以降。月齢別の目安、カプサイシンの影響、胡椒・わさび・からしの判断まで解説します。
+lede: >-
+  「辛い物はいつから？」を完全ガイド。刺激物は5〜6歳以降が安心、本格的な辛さは小学生以降。月齢別の目安、カプサイシンの影響、胡椒・わさび・からしの判断まで解説します。
+legacyHero: /hero/food-kitchen-01.webp
 ---
 
 ## 結論

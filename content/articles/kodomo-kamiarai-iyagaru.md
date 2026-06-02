@@ -1,12 +1,13 @@
 ---
 slug: kodomo-kamiarai-iyagaru
 title: 子供が髪洗いを嫌がる｜原因・対処法・年齢別対応完全ガイド【1〜6歳】
-metaDescription: 髪洗いだけ毎回大泣き…子供の髪洗い嫌がりに悩む方へ。1〜6歳の「目に水・シャンプー怖い」など原因と、シャンプーハット活用法・年齢別対応・受診の目安を整理しました。
+metaDescription: >-
+  髪洗いだけ毎回大泣き…子供の髪洗い嫌がりに悩む方へ。1〜6歳の「目に水・シャンプー怖い」など原因と、シャンプーハット活用法・年齢別対応・受診の目安を整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/bath-03.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-kamiarai-iyagaru.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「お風呂は好きなのに、髪洗いだけ毎回バトル」――そんな悩みは非常に多いもの。子供の髪洗い嫌いは**目に水が入る恐怖**が最大の原因です。本記事では年齢別の対応と、シャンプーハット活用・流し方の工夫など、髪洗いを劇的に楽にするコツを整理します。
+legacyHero: /hero/bath-03.webp
 ---
 
 ## 結論

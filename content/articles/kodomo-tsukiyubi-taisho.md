@@ -1,12 +1,13 @@
 ---
 slug: kodomo-tsukiyubi-taisho
 title: 子供の突き指の対処法｜応急処置・受診目安・骨折との見分け方完全ガイド【3〜12歳】
-metaDescription: 子供の突き指の対処法を完全解説。RICE処置の正しい手順、骨折・脱臼との見分け方、引っ張ってはいけない理由、受診目安、予防まで2026年最新版で網羅した保存版です。
+metaDescription: >-
+  子供の突き指の対処法を完全解説。RICE処置の正しい手順、骨折・脱臼との見分け方、引っ張ってはいけない理由、受診目安、予防まで2026年最新版で網羅した保存版です。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-tsukiyubi-taisho.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   「ボールが指に当たって痛い」「ドアに挟んだ」——突き指は子供によくあるケガ。でも「引っ張る」は間違い。本記事では正しい応急処置（RICE）、骨折・脱臼との見分け方、受診目安、予防まで完全解説します。我が家の突き指体験談も交えて紹介。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

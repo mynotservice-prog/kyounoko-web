@@ -1,12 +1,13 @@
 ---
 slug: mamatomo-trouble-taisho
 title: ママ友トラブルの対処法｜よくある原因・距離の取り方・関係修復ガイド
-metaDescription: ママ友トラブルの代表例（マウンティング・グループライン疲れ・噂話・お下がり問題）と原因、今日からできる対処法、上手な距離の取り方、関係を切るときのコツまで網羅。「ママ友って必要？」の問いにも答えます。
+metaDescription: >-
+  ママ友トラブルの代表例（マウンティング・グループライン疲れ・噂話・お下がり問題）と原因、今日からできる対処法、上手な距離の取り方、関係を切るときのコツまで網羅。「ママ友って必要？」の問いにも答えます。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/mamatomo-trouble-taisho.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「グループラインが疲れる」「マウントを取られた」「子ども同士のケンカで気まずい」――ママ友トラブルは多くの親が抱える悩みです。本記事はよくあるトラブル類型、対処法、距離の取り方、そして「ママ友って本当に必要？」という根本的な問いまで。あなたの心が軽くなるヒントを集めました。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 ## 結論

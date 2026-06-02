@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-omocha-toriai.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -23,6 +23,7 @@ quickInfo:
   budget: free
 lede: >-
   「またおもちゃの取り合いで泣いた」「兄弟げんかが絶えない」——1〜6歳の親なら誰もが直面する悩み。本記事は発達段階別の声かけ、親の介入タイミング、貸し借りを教える順序まで完全ガイド。取り合いは「自分」と「他者」を学ぶ大事な経験です。
+legacyHero: /hero/park-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

@@ -1,12 +1,13 @@
 ---
 slug: kodomo-hasami-itsukara
 title: 子供のハサミはいつから？年齢別目安・選び方・練習法完全ガイド
-metaDescription: 子供のハサミは何歳から？2歳・3歳・4歳・5歳の年齢別目安、安全ハサミの選び方、一回切り・直線切り・曲線切りへの段階、安全な持たせ方、必須ルールまで2026年版で完全解説します。
+metaDescription: >-
+  子供のハサミは何歳から？2歳・3歳・4歳・5歳の年齢別目安、安全ハサミの選び方、一回切り・直線切り・曲線切りへの段階、安全な持たせ方、必須ルールまで2026年版で完全解説します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/kid-craft-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-hasami-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,7 +19,9 @@ quickInfo:
     - any
   durationMin: 15
   budget: low
-lede: 「子供のハサミはいつから？」を完全ガイド。2歳の安全ハサミデビューから、3〜4歳の直線切り、5〜6歳の曲線切り・形を切り抜くまで段階的に解説。ハサミの選び方、安全ルール、自宅練習法まで網羅します。
+lede: >-
+  「子供のハサミはいつから？」を完全ガイド。2歳の安全ハサミデビューから、3〜4歳の直線切り、5〜6歳の曲線切り・形を切り抜くまで段階的に解説。ハサミの選び方、安全ルール、自宅練習法まで網羅します。
+legacyHero: /hero/kid-craft-01.webp
 ---
 
 ## 結論：年齢別 ハサミデビュー目安

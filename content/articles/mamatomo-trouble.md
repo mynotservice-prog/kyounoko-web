@@ -1,12 +1,13 @@
 ---
 slug: mamatomo-trouble
 title: ママ友トラブルの対処法｜原因・解決策・距離の取り方完全ガイド
-metaDescription: ママ友トラブルでよくある事例（マウント・グループ内対立・SNS問題）の対処法を網羅。なぜトラブルが起きるのか、上手な距離の取り方、付き合わなくていい関係の見極め方、相談先まで解説。
+metaDescription: >-
+  ママ友トラブルでよくある事例（マウント・グループ内対立・SNS問題）の対処法を網羅。なぜトラブルが起きるのか、上手な距離の取り方、付き合わなくていい関係の見極め方、相談先まで解説。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/mamatomo-trouble.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「ママ友グループのLINEが憂鬱」「マウントを取られて疲弊」――ママ友トラブルは育児ストレスの大きな要因です。本記事はトラブルの原因、対処法、距離の取り方、付き合わなくていい関係の見極めまで完全ガイド。「無理して友達を作る必要はない」を前提に、健全な距離感を解説します。
+legacyHero: /hero/park-02.webp
 ---
 
 ## 結論

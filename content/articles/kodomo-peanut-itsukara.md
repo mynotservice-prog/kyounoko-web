@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-kitchen-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-peanut-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +19,9 @@ quickInfo:
     - any
   durationMin: 5
   budget: low
-lede: 「ピーナッツはいつから？」を完全ガイド。粒は5歳まで誤嚥NG、ペーストなら9ヶ月頃から少量可。月齢別の目安量、重篤になりやすいアレルギー対策、初めての安全な与え方まで解説します。
+lede: >-
+  「ピーナッツはいつから？」を完全ガイド。粒は5歳まで誤嚥NG、ペーストなら9ヶ月頃から少量可。月齢別の目安量、重篤になりやすいアレルギー対策、初めての安全な与え方まで解説します。
+legacyHero: /hero/food-kitchen-01.webp
 ---
 
 ## 結論

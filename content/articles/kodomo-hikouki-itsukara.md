@@ -1,12 +1,13 @@
 ---
 slug: kodomo-hikouki-itsukara
 title: 子供の飛行機はいつから？年齢別目安・機内対策・座席選び完全ガイド
-metaDescription: 子供の飛行機デビューは何歳から？0歳・1歳・2歳・3歳以降の年齢別目安、耳抜き・ぐずり対策、座席選び（バシネット・通路側）、必須持ち物、預け荷物のルールまで2026年版で完全解説します。
+metaDescription: >-
+  子供の飛行機デビューは何歳から？0歳・1歳・2歳・3歳以降の年齢別目安、耳抜き・ぐずり対策、座席選び（バシネット・通路側）、必須持ち物、預け荷物のルールまで2026年版で完全解説します。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-hikouki-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 60
   budget: mid
-lede: 「子供の飛行機デビューはいつから？」を完全ガイド。生後8日から搭乗可能、0歳・1歳・2歳の機内対策、耳抜き・ぐずり対策、座席選び、預け荷物のルールまで航空会社別の情報をまとめました。
+lede: >-
+  「子供の飛行機デビューはいつから？」を完全ガイド。生後8日から搭乗可能、0歳・1歳・2歳の機内対策、耳抜き・ぐずり対策、座席選び、預け荷物のルールまで航空会社別の情報をまとめました。
+legacyHero: /hero/baby-02.webp
 ---
 
 ## 結論：年齢別 飛行機デビュー目安

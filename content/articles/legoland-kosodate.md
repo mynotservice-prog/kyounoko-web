@@ -1,12 +1,13 @@
 ---
 slug: legoland-kosodate
 title: レゴランド・ジャパン 子連れ攻略｜2〜6歳向け動線・予算・持ち物【2026年】
-metaDescription: 名古屋のレゴランド・ジャパンを2〜6歳子連れで攻略する完全ガイド。年齢別動線・40アトラクション一覧・チケット選び・周辺ホテル・節約術まで、初訪問でも失敗しない情報を全網羅。
+metaDescription: >-
+  名古屋のレゴランド・ジャパンを2〜6歳子連れで攻略する完全ガイド。年齢別動線・40アトラクション一覧・チケット選び・周辺ホテル・節約術まで、初訪問でも失敗しない情報を全網羅。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/legoland-kosodate.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: mid
 lede: >-
   名古屋のレゴランド・ジャパンは2〜12歳をメインターゲットにしたレゴ世界観の屋外テーマパーク。アトラクションが小さい子向け中心なので、絶叫系が苦手なファミリーにも最適。年齢別動線・予算・持ち物を初訪問向けに整理しました。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

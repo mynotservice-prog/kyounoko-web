@@ -1,12 +1,13 @@
 ---
 slug: kodomo-taionkei-tsukaikata
 title: 体温計の使い方｜脇・耳・おでこ式の手順・正確に測るコツ完全ガイド
-metaDescription: 子供の体温計の使い方を脇式・耳式・非接触式別に保存版で解説。正確に測るタイミング、嫌がる赤ちゃんの押さえ方、平熱を知る方法、発熱判断の目安、体温計の選び方とお手入れまで、はじめての発熱でも慌てずに対応できます。
+metaDescription: >-
+  子供の体温計の使い方を脇式・耳式・非接触式別に保存版で解説。正確に測るタイミング、嫌がる赤ちゃんの押さえ方、平熱を知る方法、発熱判断の目安、体温計の選び方とお手入れまで、はじめての発熱でも慌てずに対応できます。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-taionkei-tsukaikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   体温計は「正しく挟む・正しく当てる」だけで結果が0.5℃変わります。脇式は脇の中央深く、耳式は耳の穴の角度合わせ、おでこ式は2〜3cm離してまっすぐ。基本は「測る前に汗を拭く」「平常時の平熱を知っておく」。本記事では、タイプ別の手順・嫌がる時の対処・発熱判断の目安まで保存版で解説します。
+legacyHero: /hero/baby-02.webp
 ---
 
 ## 結論

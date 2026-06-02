@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/summer-water-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/mizuasobi-kobe.jpg
 area: hyogo
 quickInfo:
   ageRanges:
@@ -23,6 +23,7 @@ quickInfo:
   budget: free
 lede: >-
   神戸市の「無料で水遊びできる場所」を1記事で完全網羅。**入園料0円・水着不要・水深5〜30cmの浅瀬**で0〜6歳がのびのび遊べる神戸の海浜・親水公園・噴水を、水深・開放期間・トイレ・ベビーカー動線つきでガイド。2026年夏の保存版です。
+legacyHero: /hero/summer-water-01.webp
 ---
 
 ## 結論｜神戸市の水遊び場TOP3

@@ -5,8 +5,8 @@ metaDescription: 子供の成長記録を続けるコツを完全ガイド。身
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-seichouroku-kotsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +20,7 @@ quickInfo:
   durationMin: 30
   budget: low
 lede: 子供の成長記録は「続ける仕組み」が肝心。身長体重・初めての一歩・名言・写真をどう残すか、紙とアプリを併用した挫折しないルーティンを実例で紹介します。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 ## 結論（時期・必要なもの）

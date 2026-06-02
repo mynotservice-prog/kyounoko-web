@@ -1,12 +1,13 @@
 ---
 slug: kodomo-shuchu-mijikai
 title: 子供の集中力が短い｜原因・対処法・年齢別対応完全ガイド【1〜6歳】
-metaDescription: 子供の集中力が短くて発達障害が心配…？1〜6歳の集中時間の目安は「年齢＋1分」とされる発達段階の特徴です。原因・年齢別対応・伸ばす遊び・発達相談の目安を整理しました。
+metaDescription: >-
+  子供の集中力が短くて発達障害が心配…？1〜6歳の集中時間の目安は「年齢＋1分」とされる発達段階の特徴です。原因・年齢別対応・伸ばす遊び・発達相談の目安を整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/kid-study-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-shuchu-mijikai.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「うちの子、集中力なさすぎ…発達障害かも？」と心配になる親は多いもの。実は幼児の集中時間は**「年齢＋1分」**が目安とされ、3歳で4分続けば十分という発達段階上の特徴があります。本記事では年齢別の集中時間の目安と、無理なく伸ばす遊び・関わり方を整理しました。
+legacyHero: /hero/kid-study-01.webp
 ---
 
 ## 結論

@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-fruit-03.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-grape-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +19,9 @@ quickInfo:
     - any
   durationMin: 5
   budget: low
-lede: 「ぶどうはいつから？」を完全ガイド。皮むき・刻みなら7〜8ヶ月から可ですが、丸ごとは窒息事故多発の最危険食材。4等分カットの徹底、月齢別の進め方、品種別の目安、安全な食べさせ方を解説します。
+lede: >-
+  「ぶどうはいつから？」を完全ガイド。皮むき・刻みなら7〜8ヶ月から可ですが、丸ごとは窒息事故多発の最危険食材。4等分カットの徹底、月齢別の進め方、品種別の目安、安全な食べさせ方を解説します。
+legacyHero: /hero/food-fruit-03.webp
 ---
 
 ## 結論｜開始時期

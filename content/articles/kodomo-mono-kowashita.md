@@ -1,12 +1,13 @@
 ---
 slug: kodomo-mono-kowashita
 title: 子供が物を壊した時｜謝罪・弁償・保険・しつけ完全ガイド【1〜6歳】
-metaDescription: 子供が他人の物を壊した時の対応を完全解説。その場での謝罪、弁償の判断、個人賠償責任保険の使い方、年齢別のしつけ、店舗・友達の家での対応まで2026年最新版で網羅した保存版です。
+metaDescription: >-
+  子供が他人の物を壊した時の対応を完全解説。その場での謝罪、弁償の判断、個人賠償責任保険の使い方、年齢別のしつけ、店舗・友達の家での対応まで2026年最新版で網羅した保存版です。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-mono-kowashita.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +23,7 @@ quickInfo:
   budget: free
 lede: >-
   「友達のおもちゃを壊した」「お店で商品を倒した」——どう謝る？弁償する？どこまで子供に伝える？本記事では年齢別の対応、個人賠償責任保険の使い方、店舗・友達の家での具体的な対処、しつけのコツまで完全解説します。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

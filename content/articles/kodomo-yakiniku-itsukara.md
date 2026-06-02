@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-yakiniku-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +19,7 @@ quickInfo:
   durationMin: 30
   budget: low
 lede: 「焼肉はいつから？」を完全ガイド。柔らかい部位・赤身は1歳半〜2歳、焼肉店デビューは3歳から。部位別の判断、火傷・タレ対策、ホルモンの目安まで解説します。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

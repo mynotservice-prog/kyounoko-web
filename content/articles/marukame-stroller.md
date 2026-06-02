@@ -5,8 +5,8 @@ metaDescription: 丸亀製麺はベビーカーで入れる？セルフ式での
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/marukame-stroller.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   「丸亀製麺ってベビーカーで入れる？セルフ式だしトレー運搬どうする？」を1記事で解決。店舗タイプ別のベビーカー対応、セルフ動線のオペレーション、混雑時の判断基準まで0-2歳家族目線で保存版にまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

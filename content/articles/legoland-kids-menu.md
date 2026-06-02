@@ -1,12 +1,13 @@
 ---
 slug: legoland-kids-menu
 title: レゴランド・ジャパン キッズメニュー｜全レストランの価格・内容・アレルゲン【2026年】
-metaDescription: レゴランド・ジャパンのキッズメニューを全レストラン横断で解説。価格・内容・アレルゲン対応・離乳食提供・コスパ評価まで、2〜6歳連れの食事計画に役立つ完全比較ガイドです。
+metaDescription: >-
+  レゴランド・ジャパンのキッズメニューを全レストラン横断で解説。価格・内容・アレルゲン対応・離乳食提供・コスパ評価まで、2〜6歳連れの食事計画に役立つ完全比較ガイドです。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/legoland-kids-menu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: mid
 lede: >-
   レゴランド・ジャパンのキッズメニューは店舗ごとに個性があり、価格帯は700〜1,000円。レゴブロック型ポテト・キャラクター系プレート等、写真映えするメニューが豊富です。全店舗の内容と選び方を一気に整理しました。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

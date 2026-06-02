@@ -1,12 +1,13 @@
 ---
 slug: kosodate-shien-toha
 title: 子育て支援センターとは｜定義・利用方法・年齢・サービス完全ガイド
-metaDescription: 子育て支援センターとは何か、対象年齢・利用方法・できることを完全解説。0歳から未就学児向けの遊び場＋育児相談ができる無料施設で、孤独な育児を支える地域の拠点。2026年5月時点の一般情報でやさしく整理しました。
+metaDescription: >-
+  子育て支援センターとは何か、対象年齢・利用方法・できることを完全解説。0歳から未就学児向けの遊び場＋育児相談ができる無料施設で、孤独な育児を支える地域の拠点。2026年5月時点の一般情報でやさしく整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kosodate-shien-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: free
 lede: >-
   「初めての育児で誰に相談すればいい？」「赤ちゃんと家にこもりがち」——そんな悩みを抱える人にぜひ知ってほしいのが、子育て支援センターです。本記事は2026年5月時点の一般情報をもとに、子育て支援センターの基本・利用方法・サービス内容・児童館との違いをやさしく整理しました。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

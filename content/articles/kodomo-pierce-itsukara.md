@@ -1,12 +1,13 @@
 ---
 slug: kodomo-pierce-itsukara
 title: 子供のピアスはいつから？年齢別目安・病院選び・ケア完全ガイド
-metaDescription: 子供のピアスは何歳から？小学生・中学生・高校生の年齢別目安、ファーストピアスの選び方、医療機関での施術、自分で開ける危険性、アフターケアまで2026年版で完全解説します。
+metaDescription: >-
+  子供のピアスは何歳から？小学生・中学生・高校生の年齢別目安、ファーストピアスの選び方、医療機関での施術、自分で開ける危険性、アフターケアまで2026年版で完全解説します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/kid-study-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-pierce-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -17,7 +18,9 @@ quickInfo:
     - any
   durationMin: 30
   budget: mid
-lede: 「子供のピアスはいつから？」を完全ガイド。法律上の年齢、医療機関での施術が必要な理由、ファーストピアスの選び方、安心の病院選び、トラブル予防のアフターケアまで親が知るべき情報をまとめました。
+lede: >-
+  「子供のピアスはいつから？」を完全ガイド。法律上の年齢、医療機関での施術が必要な理由、ファーストピアスの選び方、安心の病院選び、トラブル予防のアフターケアまで親が知るべき情報をまとめました。
+legacyHero: /hero/kid-study-01.webp
 ---
 
 ## 結論：年齢別 ピアスデビュー目安

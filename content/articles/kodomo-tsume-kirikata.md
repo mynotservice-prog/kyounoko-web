@@ -1,12 +1,13 @@
 ---
 slug: kodomo-tsume-kirikata
 title: 子供の爪切りの方法｜新生児から幼児までの手順・頻度・コツ完全ガイド
-metaDescription: 子供の爪切りを保存版で解説。新生児・乳児・幼児別の道具の選び方、深爪・巻き爪を防ぐ切り方、嫌がる時の対処、最適なタイミング、足の爪のケアまで、はじめてでも安心して爪切りができるようになります。
+metaDescription: >-
+  子供の爪切りを保存版で解説。新生児・乳児・幼児別の道具の選び方、深爪・巻き爪を防ぐ切り方、嫌がる時の対処、最適なタイミング、足の爪のケアまで、はじめてでも安心して爪切りができるようになります。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-03.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-tsume-kirikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   子供の爪は薄く伸びるのが早いので、放っておくと顔を引っ掻いたり巻き爪の原因に。新生児は週2〜3回、幼児でも週1回はチェックを。基本は「明るい場所・寝てる時間・少しずつカーブ」。本記事では、月齢別の道具・手順・嫌がる時の対処・深爪リスクまで保存版で解説します。
+legacyHero: /hero/baby-03.webp
 ---
 
 ## 結論

@@ -1,12 +1,13 @@
 ---
 slug: kodomo-teashikuchi-taisho
 title: 子供の手足口病の対処法｜原因・症状・受診目安・登園目安完全ガイド【0〜6歳】
-metaDescription: 子供の手足口病の対処法を0〜6歳向けに完全解説。手足・口の水疱、発熱、口内炎で食事拒否の対応、月齢別の症状、家庭ケア、すぐ受診すべきサイン、登園・登校の目安まで2026年版で詳しくまとめました。我が家の手足口病実体験も交えて紹介。
+metaDescription: >-
+  子供の手足口病の対処法を0〜6歳向けに完全解説。手足・口の水疱、発熱、口内炎で食事拒否の対応、月齢別の症状、家庭ケア、すぐ受診すべきサイン、登園・登校の目安まで2026年版で詳しくまとめました。我が家の手足口病実体験も交えて紹介。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-teashikuchi-taisho.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   子供の手足口病は夏に流行する代表的な感染症で、口の中の痛みで食事拒否が一番のつらいポイント。本記事では0〜6歳向けに、手足口病の症状・原因・月齢別の対応・口内炎ケア・受診すべきサイン・登園目安までを完全解説します。我が家の体験を交えて、食べられない時期の乗り切り方もまとめました。
+legacyHero: /hero/baby-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

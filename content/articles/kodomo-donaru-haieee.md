@@ -1,12 +1,13 @@
 ---
 slug: kodomo-donaru-haieee
 title: 子供が怒鳴る・大声を出す｜原因・対処法・年齢別対応完全ガイド【1〜6歳】
-metaDescription: 子供が「ハイーー！」と急に怒鳴る・大声を出すのに困っていませんか？1〜6歳の発達段階別に原因（自己主張・興奮・聴覚過敏）・年齢別対応・親の声かけ・発達相談の目安を整理しました。
+metaDescription: >-
+  子供が「ハイーー！」と急に怒鳴る・大声を出すのに困っていませんか？1〜6歳の発達段階別に原因（自己主張・興奮・聴覚過敏）・年齢別対応・親の声かけ・発達相談の目安を整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-donaru-haieee.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「外食中に急に『ハイーー！』」「気分が乗ると延々と叫ぶ」――子供の怒鳴り声に悩む親は少なくありません。1〜6歳の大声は**自己主張・楽しい興奮・声の調節がまだ未熟**が原因のことが多く、発達段階上ごく自然な行動です。本記事では年齢別の対応と、家・外での切り替え方を整理します。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 ## 結論

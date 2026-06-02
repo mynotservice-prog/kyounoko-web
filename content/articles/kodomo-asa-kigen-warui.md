@@ -1,12 +1,13 @@
 ---
 slug: kodomo-asa-kigen-warui
 title: 子供が起きてすぐ機嫌悪い｜原因・対処法・年齢別対応完全ガイド【1〜6歳】
-metaDescription: 子供が朝起きた瞬間から機嫌悪い…毎朝怒鳴り合いに疲れていませんか？1〜6歳の「睡眠慣性」「低血糖」など原因と、機嫌よく1日を始めるルーティン・受診の目安を整理しました。
+metaDescription: >-
+  子供が朝起きた瞬間から機嫌悪い…毎朝怒鳴り合いに疲れていませんか？1〜6歳の「睡眠慣性」「低血糖」など原因と、機嫌よく1日を始めるルーティン・受診の目安を整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-03.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-asa-kigen-warui.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「目を開けるなり泣き出す」「『おはよう』と言っただけで激怒」――朝の機嫌の悪さは、子供本人も親もつらいもの。原因の多くは**睡眠慣性（起きた直後のぼんやり状態）**と**低血糖**で、対応次第で大幅に改善します。本記事では年齢別の原因と、機嫌よく1日を始めるルーティンを整理します。
+legacyHero: /hero/parent-child-03.webp
 ---
 
 ## 結論

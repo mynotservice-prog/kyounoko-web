@@ -1,12 +1,13 @@
 ---
 slug: kouen-mamatomo-nigate
 title: 公園でママ友が苦手｜原因・対処法・気楽に過ごすコツ完全ガイド
-metaDescription: 公園のママ友との関わりが苦手な人へ。なぜ気疲れするのか原因、無理せず子どもを遊ばせる方法、最低限のマナー、心地よい距離感の作り方を完全解説。「ぼっち公園」も全然OKです。
+metaDescription: >-
+  公園のママ友との関わりが苦手な人へ。なぜ気疲れするのか原因、無理せず子どもを遊ばせる方法、最低限のマナー、心地よい距離感の作り方を完全解説。「ぼっち公園」も全然OKです。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kouen-mamatomo-nigate.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   公園に行くと、すでにできているママ友グループが気になって輪に入れない。話しかけられるのが疲れる。「ぼっち公園」になりがちで罪悪感――。本記事はそんな悩みの原因と対処法、無理せず子どもを遊ばせるコツ、心地よい距離感の作り方を完全ガイド。「ぼっち公園」全然OKです。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 ## 結論

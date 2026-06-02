@@ -1,12 +1,13 @@
 ---
 slug: kodomo-akumu-tsuduku
 title: 子供の悪夢が続く｜原因・夜驚症との違い・対処法完全ガイド【2〜10歳】
-metaDescription: 子供の悪夢が続く時の原因と対処法を完全解説。夜驚症との見分け方、ストレス・トラウマとの関係、寝室環境の改善、受診目安まで2026年最新版で網羅した保存版です。
+metaDescription: >-
+  子供の悪夢が続く時の原因と対処法を完全解説。夜驚症との見分け方、ストレス・トラウマとの関係、寝室環境の改善、受診目安まで2026年最新版で網羅した保存版です。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-akumu-tsuduku.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「夜中に泣いて起きる」「同じ夢を見る」——子供の悪夢は3〜6歳に多く、発達上の自然現象。でも続くと親子ともに疲弊。本記事では悪夢の原因、夜驚症との見分け方、寝室環境の改善、受診目安まで完全解説します。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

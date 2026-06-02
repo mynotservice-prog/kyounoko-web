@@ -5,8 +5,8 @@ metaDescription: 子供が自分の髪を抜く…抜毛症かもと心配な方
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/kid-study-03.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-kami-nuku.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +20,7 @@ quickInfo:
   budget: free
 lede: >-
   「子供が自分の髪を抜いている」――気づくとドキッとする行動です。多くは**不安・退屈・触覚的な癖**で、軽いものは成長で自然消失することもあります。一方で**抜毛症（トリコチロマニア）**の可能性もあるため、見極めと適切な相談先を知っておくことが大切です。
+legacyHero: /hero/kid-study-03.webp
 ---
 
 ## 結論

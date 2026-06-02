@@ -1,20 +1,25 @@
 ---
 slug: kodomo-bath-hitori-itsukara
 title: 子供が一人でお風呂はいつから？年齢別の安全対策と練習の進め方
-metaDescription: 子供が一人でお風呂は何歳から？4歳・5歳・6歳・小学校の目安、安全対策、練習のステップ、シャンプー・体洗いの自立、湯加減チェック、滑り対策まで2026年版で完全解説します。
+metaDescription: >-
+  子供が一人でお風呂は何歳から？4歳・5歳・6歳・小学校の目安、安全対策、練習のステップ、シャンプー・体洗いの自立、湯加減チェック、滑り対策まで2026年版で完全解説します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-29'
-hero: /hero/bath-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-bath-hitori-itsukara.jpg
 area: all
 quickInfo:
-  ageRanges: [4-6]
-  place: [home]
-  weather: [any]
+  ageRanges:
+    - 4-6
+  place:
+    - home
+  weather:
+    - any
   durationMin: 15
   budget: free
 lede: 「一人でお風呂はいつから？」年齢別の安全対策・進め方を完全解説。
+legacyHero: /hero/bath-01.webp
 ---
 
 ## 結論｜年齢別の一人風呂目安

@@ -1,12 +1,13 @@
 ---
 slug: kodomo-ichirinsha-itsukara
 title: 子供の一輪車はいつから？年齢別目安・サイズ選び・練習法完全ガイド
-metaDescription: 子供の一輪車は何歳から？小学生・幼児の年齢別目安、タイヤサイズ選び、5ステップ練習法、ヘルメット・プロテクター、家庭で乗れるようになる時短コツまで2026年版で完全解説します。
+metaDescription: >-
+  子供の一輪車は何歳から？小学生・幼児の年齢別目安、タイヤサイズ選び、5ステップ練習法、ヘルメット・プロテクター、家庭で乗れるようになる時短コツまで2026年版で完全解説します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-ichirinsha-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -17,7 +18,9 @@ quickInfo:
     - sunny
   durationMin: 60
   budget: mid
-lede: 「子供の一輪車はいつから？」を完全ガイド。5歳・小学1年生からの一輪車デビュー、タイヤサイズの選び方、自宅でできる5ステップ練習法、安全対策、必須装備まで網羅。学校の体育で困らないノウハウをまとめました。
+lede: >-
+  「子供の一輪車はいつから？」を完全ガイド。5歳・小学1年生からの一輪車デビュー、タイヤサイズの選び方、自宅でできる5ステップ練習法、安全対策、必須装備まで網羅。学校の体育で困らないノウハウをまとめました。
+legacyHero: /hero/park-02.webp
 ---
 
 ## 結論：年齢別 一輪車デビュー目安

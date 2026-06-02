@@ -1,12 +1,13 @@
 ---
 slug: kodomo-kega-saseta
 title: 子供が友達にケガをさせた時｜謝罪・連絡・治療費完全ガイド【1〜6歳】
-metaDescription: 子供が友達にケガをさせた時の対応を完全解説。その場での謝罪、相手親への連絡、治療費・保険、繰り返さないための関わり方、保育園・学校との連携まで2026年最新版で網羅した保存版です。
+metaDescription: >-
+  子供が友達にケガをさせた時の対応を完全解説。その場での謝罪、相手親への連絡、治療費・保険、繰り返さないための関わり方、保育園・学校との連携まで2026年最新版で網羅した保存版です。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-kega-saseta.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +23,7 @@ quickInfo:
   budget: free
 lede: >-
   「子供が友達にケガをさせてしまった」——焦り・罪悪感・どう対応すべきかで頭が真っ白に。本記事ではその場での謝罪、相手親への連絡、治療費・保険、繰り返さないための関わり方まで完全ガイド。誠実な初動が一番の解決策です。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

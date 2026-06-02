@@ -5,8 +5,8 @@ metaDescription: 丸亀製麺にベビーチェアは何種類ある？セルフ
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/marukame-baby-chair.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   「丸亀製麺にベビーチェアはある？セルフ式だからどのタイミングで確保？」を1記事で解決。うどんで取り分けやすい丸亀製麺のベビーチェア事情を、種類・配備状況・確保のコツまで0-2歳家族目線で保存版にまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

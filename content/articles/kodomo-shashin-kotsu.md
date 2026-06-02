@@ -1,12 +1,13 @@
 ---
 slug: kodomo-shashin-kotsu
 title: 子供の写真撮り方コツ｜自然な表情・構図・スマホ設定完全ガイド
-metaDescription: 子供の写真の撮り方コツを保存版で解説。自然な笑顔を引き出す声かけ、目線を合わせる構図、スマホのカメラ設定、屋内・屋外の光の使い方、月齢別フォト記録のアイデア、ブレ防止のコツまで、スマホ1台で「お気に入りの1枚」が撮れるようになります。
+metaDescription: >-
+  子供の写真の撮り方コツを保存版で解説。自然な笑顔を引き出す声かけ、目線を合わせる構図、スマホのカメラ設定、屋内・屋外の光の使い方、月齢別フォト記録のアイデア、ブレ防止のコツまで、スマホ1台で「お気に入りの1枚」が撮れるようになります。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-shashin-kotsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   子供の写真は「カメラ目線・笑顔」より「自然な瞬間」を狙うのがコツ。基本は「子供の目線まで降りる」「光は窓辺で逆光気味」「連写で動きを残す」。スマホのカメラ機能を使いこなせば一眼レフ並みの仕上がりに。本記事では、構図・光・声かけ・スマホ設定・月齢別アイデアまで保存版で解説します。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 ## 結論

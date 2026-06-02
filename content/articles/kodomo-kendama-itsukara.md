@@ -1,12 +1,13 @@
 ---
 slug: kodomo-kendama-itsukara
 title: 子供のけん玉はいつから？年齢別目安・選び方・技の段階完全ガイド
-metaDescription: 子供のけん玉は何歳から？3歳・4歳・5歳・小学生の年齢別目安、けん玉のサイズ選び、もしかめ・とめけんへの段階、認定級、自宅練習法まで2026年版で完全解説します。
+metaDescription: >-
+  子供のけん玉は何歳から？3歳・4歳・5歳・小学生の年齢別目安、けん玉のサイズ選び、もしかめ・とめけんへの段階、認定級、自宅練習法まで2026年版で完全解説します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/kid-craft-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-kendama-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,7 +19,9 @@ quickInfo:
     - any
   durationMin: 15
   budget: low
-lede: 「子供のけん玉はいつから？」を完全ガイド。3歳のおもちゃ感覚デビューから、4〜5歳の大皿・小皿、小学生のもしかめ・とめけんまで段階的に解説。サイズ選び、認定級、自宅練習法まで網羅します。
+lede: >-
+  「子供のけん玉はいつから？」を完全ガイド。3歳のおもちゃ感覚デビューから、4〜5歳の大皿・小皿、小学生のもしかめ・とめけんまで段階的に解説。サイズ選び、認定級、自宅練習法まで網羅します。
+legacyHero: /hero/kid-craft-02.webp
 ---
 
 ## 結論：年齢別 けん玉デビュー目安

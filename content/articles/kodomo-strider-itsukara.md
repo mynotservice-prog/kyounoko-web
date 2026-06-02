@@ -1,12 +1,13 @@
 ---
 slug: kodomo-strider-itsukara
 title: 子供のストライダーはいつから？年齢別目安・選び方・練習法完全ガイド
-metaDescription: 子供のストライダーは何歳から？1歳半・2歳・3歳・4歳の年齢別目安、サイズ選び、12インチ・14インチの違い、ヘルメット選び、補助輪なし自転車への移行まで2026年版で完全解説します。
+metaDescription: >-
+  子供のストライダーは何歳から？1歳半・2歳・3歳・4歳の年齢別目安、サイズ選び、12インチ・14インチの違い、ヘルメット選び、補助輪なし自転車への移行まで2026年版で完全解説します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-strider-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - sunny
   durationMin: 30
   budget: mid
-lede: 「子供のストライダーはいつから？」を完全ガイド。1歳半〜推奨年齢、サイズ選び、12・14インチの違い、必須装備、補助輪なし自転車への移行まで網羅。バランス感覚を育てる秀逸な乗り物の活用法をまとめました。
+lede: >-
+  「子供のストライダーはいつから？」を完全ガイド。1歳半〜推奨年齢、サイズ選び、12・14インチの違い、必須装備、補助輪なし自転車への移行まで網羅。バランス感覚を育てる秀逸な乗り物の活用法をまとめました。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論：年齢別 ストライダーデビュー目安

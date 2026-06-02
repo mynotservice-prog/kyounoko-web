@@ -1,12 +1,13 @@
 ---
 slug: kodomo-toppatsuhasshin-taisho
 title: 子供の突発性発疹の対処｜症状・経過・受診目安・家庭ケア完全ガイド
-metaDescription: 子供の突発性発疹の対処法を0〜2歳向けに完全解説。3日間の高熱→解熱→発疹の典型経過、家庭でできるケア、けいれん時の対応、すぐ受診すべきサイン、登園目安、#8000活用まで2026年版で詳しくまとめました。我が家の初めての高熱体験も紹介。
+metaDescription: >-
+  子供の突発性発疹の対処法を0〜2歳向けに完全解説。3日間の高熱→解熱→発疹の典型経過、家庭でできるケア、けいれん時の対応、すぐ受診すべきサイン、登園目安、#8000活用まで2026年版で詳しくまとめました。我が家の初めての高熱体験も紹介。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-toppatsuhasshin-taisho.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   突発性発疹は生後6か月〜2歳の多くが経験する「人生初の高熱」になりやすい感染症です。3日間の高熱の後、解熱とともに発疹が出るのが典型的。多くは軽症ですが、熱性けいれんが起きやすく、親をびっくりさせます。本記事では0〜2歳向けに突発性発疹の症状・対処・受診目安を完全解説。我が家の初体験も紹介します。
+legacyHero: /hero/baby-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

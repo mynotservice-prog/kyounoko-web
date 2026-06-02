@@ -1,12 +1,13 @@
 ---
 slug: kodomo-shokuji-jikan-kakaru
 title: 子供の食事に時間がかかる｜原因・対処法・年齢別対応完全ガイド【1〜6歳】
-metaDescription: 子供の食事に時間がかかって毎食1時間…悩んでいませんか？1〜6歳の発達段階別に「時間がかかる原因」「叱らない切り上げ方」「集中して食べる工夫」を整理。発達相談の目安と免責も明記。
+metaDescription: >-
+  子供の食事に時間がかかって毎食1時間…悩んでいませんか？1〜6歳の発達段階別に「時間がかかる原因」「叱らない切り上げ方」「集中して食べる工夫」を整理。発達相談の目安と免責も明記。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-shokuji-jikan-kakaru.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「もう1時間…まだ半分も食べてない」「食事のたびに私がイライラして自己嫌悪」――子供の食事に時間がかかる悩みは、1〜6歳のほぼ全家庭で起きる発達段階上のあるあるとされます。原因の多くは「集中力の短さ」と「自我の発達」。本記事では年齢別の自然な傾向と、叱らずに切り上げるコツを整理しました。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 ## 結論

@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-sushi-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +20,7 @@ quickInfo:
   durationMin: 10
   budget: low
 lede: 「お寿司はいつから？」を完全ガイド。生魚は3歳以降が安心、加熱ネタ・たまご寿司は1歳半から可。ネタ別の判断、回転寿司デビュー、食中毒リスクまで解説します。
+legacyHero: /hero/food-japan-02.webp
 ---
 
 ## 結論

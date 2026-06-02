@@ -1,12 +1,13 @@
 ---
 slug: kodomo-kami-kirikata
 title: 子供の髪の毛の切り方｜セルフカット手順・前髪・後ろ髪のコツ完全ガイド
-metaDescription: 子供の髪の毛の切り方を保存版で解説。前髪・サイド・後ろ髪のセルフカット手順、嫌がる子のあやし方、必要な道具、失敗しないブロッキング、初めての美容院デビュー判断まで、おうちで安心して切れるようになります。
+metaDescription: >-
+  子供の髪の毛の切り方を保存版で解説。前髪・サイド・後ろ髪のセルフカット手順、嫌がる子のあやし方、必要な道具、失敗しないブロッキング、初めての美容院デビュー判断まで、おうちで安心して切れるようになります。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-kami-kirikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   子供の髪は伸びるのが早く、美容院に毎回連れて行くのも大変。前髪だけ・後ろだけのセルフカットなら家で5〜10分でできます。基本は「霧吹きで濡らす→少量ずつブロッキング→縦に持ってハサミは縦に入れる」。本記事では、子供用ハサミの選び方・部位別の切り方手順・嫌がる子への対処・失敗あるあるまで保存版で解説します。
+legacyHero: /hero/baby-02.webp
 ---
 
 ## 結論

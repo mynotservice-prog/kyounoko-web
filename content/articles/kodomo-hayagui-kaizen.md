@@ -1,12 +1,13 @@
 ---
 slug: kodomo-hayagui-kaizen
 title: 子供の早食いを改善｜原因・対処法・年齢別対応完全ガイド【2〜6歳】
-metaDescription: 子供の早食いが心配…丸呑み・誤嚥・肥満リスクが気になる方へ。2〜6歳の発達段階別に「早食いの原因」「噛む練習の工夫」「叱らない対応」を整理。発達相談の目安と免責も明記。
+metaDescription: >-
+  子供の早食いが心配…丸呑み・誤嚥・肥満リスクが気になる方へ。2〜6歳の発達段階別に「早食いの原因」「噛む練習の工夫」「叱らない対応」を整理。発達相談の目安と免責も明記。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-hayagui-kaizen.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: free
 lede: >-
   「ほとんど噛まずに丸呑みしてる」「3分でごちそうさま」――子供の早食いはのどに詰まるリスクや肥満傾向との関連が指摘される一方、保育園で「早く食べないと」という圧力からくるケースも。本記事では2〜6歳の年齢別に、原因と「ゆっくり噛む」を引き出す工夫を整理しました。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 ## 結論

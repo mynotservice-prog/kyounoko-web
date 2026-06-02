@@ -1,12 +1,13 @@
 ---
 slug: kodomo-shower-iyagaru
 title: 子供がシャワーを嫌がる｜原因・対処法・年齢別対応完全ガイド【1〜6歳】
-metaDescription: シャワーになると大泣き…子供のシャワー嫌がりに悩む方へ。1〜6歳の「水音・水圧・顔濡れ」など原因と、年齢別対応・段階的に慣らす方法・受診の目安を整理しました。
+metaDescription: >-
+  シャワーになると大泣き…子供のシャワー嫌がりに悩む方へ。1〜6歳の「水音・水圧・顔濡れ」など原因と、年齢別対応・段階的に慣らす方法・受診の目安を整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/bath-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-shower-iyagaru.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「湯船は大丈夫なのにシャワーになると大泣き」「夏のプール後のシャワーが地獄」――子供のシャワー嫌いは多くの親が経験します。原因は**水音・水圧・顔濡れ・温度**など。本記事では年齢別の原因と、シャワー恐怖を段階的に克服する方法を整理します。
+legacyHero: /hero/bath-02.webp
 ---
 
 ## 結論

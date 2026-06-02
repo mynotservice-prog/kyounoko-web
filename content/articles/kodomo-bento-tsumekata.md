@@ -1,12 +1,13 @@
 ---
 slug: kodomo-bento-tsumekata
 title: 子供のお弁当の詰め方｜彩り・隙間埋め・衛生のコツ完全ガイド
-metaDescription: 子供のお弁当の詰め方を保存版で解説。彩り3色・隙間埋め・冷ましてから詰める手順、保育園・幼稚園・遠足別の詰め方アイデア、傷みにくくする衛生対策、食べやすい一口サイズの工夫、毎朝の時短テクまで、お弁当作りがぐっと楽しくなります。
+metaDescription: >-
+  子供のお弁当の詰め方を保存版で解説。彩り3色・隙間埋め・冷ましてから詰める手順、保育園・幼稚園・遠足別の詰め方アイデア、傷みにくくする衛生対策、食べやすい一口サイズの工夫、毎朝の時短テクまで、お弁当作りがぐっと楽しくなります。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-bento-tsumekata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   子供のお弁当は「彩り・食べやすさ・傷みにくさ」の3点が要。基本は「赤・黄・緑の3色を入れる」「冷ましてから詰める」「ご飯と汁気は遮断する」。15分で完成する型を持てば毎朝のお弁当作りが激変します。本記事では、詰め方の手順・色合わせ・衛生対策・失敗あるあるまで保存版で解説します。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

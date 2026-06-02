@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-fruit-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-petittomato-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +20,7 @@ quickInfo:
   durationMin: 5
   budget: low
 lede: 「プチトマトはいつから？」を完全ガイド。丸ごとは5歳まで誤嚥NG、4等分なら1歳から可。安全な切り方、ヘタ・皮の扱い、お弁当での注意点まで解説します。
+legacyHero: /hero/food-fruit-02.webp
 ---
 
 ## 結論

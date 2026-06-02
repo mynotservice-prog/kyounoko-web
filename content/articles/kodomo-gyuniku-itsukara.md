@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-kitchen-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-gyuniku-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +19,9 @@ quickInfo:
     - any
   durationMin: 5
   budget: low
-lede: 「牛肉はいつから？」を完全ガイド。赤身の薄切りなら9〜11ヶ月から、ひき肉は1歳〜、ステーキは3歳〜が目安。月齢別の進め方、部位別の選び方、量の目安、鉄分補給の活用法を解説します。
+lede: >-
+  「牛肉はいつから？」を完全ガイド。赤身の薄切りなら9〜11ヶ月から、ひき肉は1歳〜、ステーキは3歳〜が目安。月齢別の進め方、部位別の選び方、量の目安、鉄分補給の活用法を解説します。
+legacyHero: /hero/food-kitchen-02.webp
 ---
 
 ## 結論｜開始時期

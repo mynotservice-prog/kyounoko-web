@@ -1,12 +1,13 @@
 ---
 slug: kodomo-kyuni-kowagaru
 title: 子供が急に怖がる｜原因・心のケア・受診目安完全ガイド【1〜6歳】
-metaDescription: 子供が急に怖がるようになった時の原因と対処法を完全解説。発達上の自然な怖がり、トラウマ・不安障害の見分け方、心のケア、受診目安まで2026年最新版で網羅した保存版です。
+metaDescription: >-
+  子供が急に怖がるようになった時の原因と対処法を完全解説。発達上の自然な怖がり、トラウマ・不安障害の見分け方、心のケア、受診目安まで2026年最新版で網羅した保存版です。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-kyuni-kowagaru.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +23,7 @@ quickInfo:
   budget: free
 lede: >-
   「昨日まで平気だったのに急に怖がる」「お風呂・トイレ・暗闇を怖がるように」——子供が急に怖がる背景は発達上の自然な変化のことが大半。本記事では原因、心のケア、トラウマや不安障害との見分け方、受診目安まで完全解説します。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

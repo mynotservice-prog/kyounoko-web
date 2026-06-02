@@ -1,12 +1,13 @@
 ---
 slug: kodomo-donaru-taisho
 title: 子供が怒鳴られた時の反応と対処｜原因・影響・年齢別対応完全ガイド【1〜6歳】
-metaDescription: 子供を怒鳴ってしまった後の反応が心配…？1〜6歳が怒鳴られた時に見せる反応と心理的影響、自己嫌悪に陥らない親の対処法、関係修復のコツを整理。発達相談の目安と免責も明記。
+metaDescription: >-
+  子供を怒鳴ってしまった後の反応が心配…？1〜6歳が怒鳴られた時に見せる反応と心理的影響、自己嫌悪に陥らない親の対処法、関係修復のコツを整理。発達相談の目安と免責も明記。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-donaru-taisho.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「怒鳴ってしまった後、子の反応が固まる・無表情になる」「翌日からよそよそしい」――怒鳴った後の自己嫌悪は親なら誰でも経験するもの。本記事では子供が怒鳴られた時に見せる反応の意味と、関係修復のコツ、親が自分を責めすぎないための整理を年齢別にまとめました。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 ## 結論

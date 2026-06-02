@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-fruit-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-lemon-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +19,9 @@ quickInfo:
     - any
   durationMin: 5
   budget: low
-lede: 「レモンはいつから？」を完全ガイド。果汁少量は7〜8ヶ月から風味づけ可、そのまま食べるのは2〜3歳から。月齢別の目安、酸味対策、皮の扱い、ビタミンC補給ポイントまで解説します。
+lede: >-
+  「レモンはいつから？」を完全ガイド。果汁少量は7〜8ヶ月から風味づけ可、そのまま食べるのは2〜3歳から。月齢別の目安、酸味対策、皮の扱い、ビタミンC補給ポイントまで解説します。
+legacyHero: /hero/food-fruit-01.webp
 ---
 
 ## 結論

@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-kitchen-03.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-onsen-tamago-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +20,7 @@ quickInfo:
   durationMin: 5
   budget: low
 lede: 「温泉卵はいつから？」を完全ガイド。半熟卵は基本2歳以降、できれば3歳から。サルモネラ食中毒対策、月齢別の目安、選び方、安全な作り方まで解説します。
+legacyHero: /hero/food-kitchen-03.webp
 ---
 
 ## 結論

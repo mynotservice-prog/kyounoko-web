@@ -1,12 +1,13 @@
 ---
 slug: kodomo-kaigai-ryokou-itsukara
 title: 子供との海外旅行はいつから？年齢別目安・国選び・準備完全ガイド
-metaDescription: 子供との海外旅行は何歳から？0歳・1歳・2歳・3歳以降の年齢別目安、おすすめ渡航先、パスポート・予防接種、機内対策、必須持ち物、時差・水・食事の注意点まで2026年版で完全解説します。
+metaDescription: >-
+  子供との海外旅行は何歳から？0歳・1歳・2歳・3歳以降の年齢別目安、おすすめ渡航先、パスポート・予防接種、機内対策、必須持ち物、時差・水・食事の注意点まで2026年版で完全解説します。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-kaigai-ryokou-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: 「子供との海外旅行はいつから？」を完全ガイド。0歳の里帰り・近場、2〜3歳のアジアリゾート、4歳以降のヨーロッパまで年齢別に解説。パスポート取得、機内対策、時差・水・食事のリスク管理まで網羅します。
+lede: >-
+  「子供との海外旅行はいつから？」を完全ガイド。0歳の里帰り・近場、2〜3歳のアジアリゾート、4歳以降のヨーロッパまで年齢別に解説。パスポート取得、機内対策、時差・水・食事のリスク管理まで網羅します。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 ## 結論：年齢別 海外旅行デビュー目安

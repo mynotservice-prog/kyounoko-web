@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/summer-water-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/mizuasobi-funabashi.jpg
 area: chiba
 quickInfo:
   ageRanges:
@@ -23,6 +23,7 @@ quickInfo:
   budget: free
 lede: >-
   船橋市の水遊び場を1記事で完全網羅。**水深5〜30cmの浅瀬**で0〜6歳がのびのび遊べる船橋の親水公園・じゃぶじゃぶ池・噴水を、水深・開放期間・トイレ・ベビーカー動線つきでガイド。アンデルセン公園を筆頭に2026年夏のお出かけ保存版です。
+legacyHero: /hero/summer-water-01.webp
 ---
 
 ## 結論｜船橋市の水遊び場TOP3

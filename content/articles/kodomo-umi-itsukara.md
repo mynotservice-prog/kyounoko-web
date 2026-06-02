@@ -1,12 +1,13 @@
 ---
 slug: kodomo-umi-itsukara
 title: 子供の海はいつから？年齢別デビュー目安・持ち物・安全対策完全ガイド
-metaDescription: 子供の海デビューは何歳から？0歳・1歳・2歳・3歳以降の年齢別目安、足だけ・砂遊び・海水浴の進め方、紫外線対策、必須持ち物リスト、溺水を防ぐ安全対策まで2026年版で完全解説します。
+metaDescription: >-
+  子供の海デビューは何歳から？0歳・1歳・2歳・3歳以降の年齢別目安、足だけ・砂遊び・海水浴の進め方、紫外線対策、必須持ち物リスト、溺水を防ぐ安全対策まで2026年版で完全解説します。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/summer-water-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-umi-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - sunny
   durationMin: 120
   budget: mid
-lede: 「子供の海デビューはいつから？」を完全ガイド。0歳から砂浜で過ごす方法、1歳の足だけデビュー、2歳以降の海水浴、紫外線・溺水対策、年齢別の必須持ち物まで網羅。安全に楽しむための実践ノウハウをまとめました。
+lede: >-
+  「子供の海デビューはいつから？」を完全ガイド。0歳から砂浜で過ごす方法、1歳の足だけデビュー、2歳以降の海水浴、紫外線・溺水対策、年齢別の必須持ち物まで網羅。安全に楽しむための実践ノウハウをまとめました。
+legacyHero: /hero/summer-water-01.webp
 ---
 
 ## 結論：年齢別 海デビュー目安

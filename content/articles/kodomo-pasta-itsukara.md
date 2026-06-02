@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-kitchen-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-pasta-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +20,7 @@ quickInfo:
   durationMin: 10
   budget: low
 lede: 「パスタはいつから？」を完全ガイド。離乳食中期7〜8ヶ月から細かく刻んで可。月齢別の目安、ソース別の選び方、お店デビュー、塩分・トマト対策まで解説します。
+legacyHero: /hero/food-kitchen-01.webp
 ---
 
 ## 結論

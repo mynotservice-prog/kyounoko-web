@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-tkg-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,7 +18,9 @@ quickInfo:
     - any
   durationMin: 5
   budget: low
-lede: 「卵かけご飯はいつから？」を完全ガイド。生卵は基本5〜6歳以降、それまでは加熱卵で代替を。サルモネラ食中毒リスク、月齢別の目安、安全な選び方、加熱TKGレシピまで解説します。
+lede: >-
+  「卵かけご飯はいつから？」を完全ガイド。生卵は基本5〜6歳以降、それまでは加熱卵で代替を。サルモネラ食中毒リスク、月齢別の目安、安全な選び方、加熱TKGレシピまで解説します。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

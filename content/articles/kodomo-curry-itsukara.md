@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-kitchen-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-curry-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +19,9 @@ quickInfo:
     - any
   durationMin: 15
   budget: low
-lede: 「カレーはいつから？」を完全ガイド。離乳食用カレーは7〜8ヶ月、市販甘口ルーは1歳半〜2歳から。月齢別の目安、辛さの調整、市販ルー比較、CoCo壱デビューまで解説します。
+lede: >-
+  「カレーはいつから？」を完全ガイド。離乳食用カレーは7〜8ヶ月、市販甘口ルーは1歳半〜2歳から。月齢別の目安、辛さの調整、市販ルー比較、CoCo壱デビューまで解説します。
+legacyHero: /hero/food-kitchen-02.webp
 ---
 
 ## 結論

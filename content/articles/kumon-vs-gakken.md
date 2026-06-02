@@ -1,12 +1,13 @@
 ---
 slug: kumon-vs-gakken
 title: 公文 vs 学研教室 完全比較【2026年版】｜料金・教材・教え方の違いで選ぶ
-metaDescription: 公文と学研教室を6項目で比較。月謝・教材・指導スタイル・進度・教科・通いやすさまでを徹底解説。先取り派・基礎固め派・3歳から始めたい家庭タイプ別おすすめを完全紹介します。
+metaDescription: >-
+  公文と学研教室を6項目で比較。月謝・教材・指導スタイル・進度・教科・通いやすさまでを徹底解説。先取り派・基礎固め派・3歳から始めたい家庭タイプ別おすすめを完全紹介します。
 category: narai
 categoryName: 習いごと
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/kid-study-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kumon-vs-gakken.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +20,7 @@ quickInfo:
   budget: mid
 lede: >-
   「公文と学研教室、どっちが我が子に合う？」を2026年版で完全比較。公文は同じ教科を反復して先取りするスタイル、学研教室は学校に沿った基礎固めスタイル。月謝・教材・指導スタイル・進度・教科・通いやすさの6項目で徹底解説し、先取り派・基礎固め派・3歳から始めたい家庭タイプ別おすすめまで整理しました。
+legacyHero: /hero/kid-study-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

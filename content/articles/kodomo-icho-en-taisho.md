@@ -1,12 +1,13 @@
 ---
 slug: kodomo-icho-en-taisho
 title: 子供の胃腸炎の対処｜症状・脱水予防・受診目安・家庭ケア完全ガイド
-metaDescription: 子供の感染性胃腸炎（ノロ・ロタ・アデノ）の対処法を0〜6歳向けに完全解説。経口補水液の飲ませ方、嘔吐後の食事段階、家庭での感染予防、すぐ受診すべきサイン、登園目安、#8000活用まで2026年版で詳しくまとめました。我が家のロタ地獄体験も紹介。
+metaDescription: >-
+  子供の感染性胃腸炎（ノロ・ロタ・アデノ）の対処法を0〜6歳向けに完全解説。経口補水液の飲ませ方、嘔吐後の食事段階、家庭での感染予防、すぐ受診すべきサイン、登園目安、#8000活用まで2026年版で詳しくまとめました。我が家のロタ地獄体験も紹介。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-icho-en-taisho.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   子供の感染性胃腸炎は冬〜春に流行し、嘔吐・下痢で家族みんなが疲弊する病気です。特効薬はなく、脱水を防ぐケアが最大のポイント。本記事では0〜6歳向けに、胃腸炎の症状・経口補水液の飲ませ方・食事の段階・受診目安を完全解説。我が家のロタウイルスで家族全滅した実体験も交えて紹介します。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

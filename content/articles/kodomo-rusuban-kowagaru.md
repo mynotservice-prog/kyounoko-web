@@ -1,12 +1,13 @@
 ---
 slug: kodomo-rusuban-kowagaru
 title: 子供が留守番を怖がる｜原因・段階的トレーニング・安心対策完全ガイド【5〜10歳】
-metaDescription: 子供が留守番を怖がる原因と対処法を完全解説。年齢別の練習ステップ、安心グッズ、防犯対策、不安サインへの寄り添い方、無理させない判断基準まで2026年最新版で網羅した保存版です。
+metaDescription: >-
+  子供が留守番を怖がる原因と対処法を完全解説。年齢別の練習ステップ、安心グッズ、防犯対策、不安サインへの寄り添い方、無理させない判断基準まで2026年最新版で網羅した保存版です。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-rusuban-kowagaru.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +20,7 @@ quickInfo:
   budget: low
 lede: >-
   「ママ、行かないで」「一人は怖い」——留守番への不安は成長過程で誰もが通る道。本記事では怖がる原因、段階的に慣らすステップ、安心グッズ、防犯対策、無理させない判断基準まで完全ガイド。子供のペースを尊重しながら自立を育てる方法を解説します。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

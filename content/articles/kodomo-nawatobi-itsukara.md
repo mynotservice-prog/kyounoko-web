@@ -1,12 +1,13 @@
 ---
 slug: kodomo-nawatobi-itsukara
 title: 子供の縄跳びはいつから？年齢別目安・縄選び・練習法完全ガイド
-metaDescription: 子供の縄跳びは何歳から？3歳・4歳・5歳・6歳の年齢別目安、縄の長さの調整、前跳び・あや跳び・二重跳びへの段階、自宅練習法、運動会・体育で困らないコツまで2026年版で完全解説します。
+metaDescription: >-
+  子供の縄跳びは何歳から？3歳・4歳・5歳・6歳の年齢別目安、縄の長さの調整、前跳び・あや跳び・二重跳びへの段階、自宅練習法、運動会・体育で困らないコツまで2026年版で完全解説します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/kid-craft-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-nawatobi-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,7 +19,9 @@ quickInfo:
     - sunny
   durationMin: 15
   budget: low
-lede: 「子供の縄跳びはいつから？」を完全ガイド。3歳のジャンプデビューから、4歳の前跳び、5〜6歳のあや跳び・二重跳びまで段階別に解説。縄の選び方、自宅練習法、運動会・体育で活きるコツまで網羅します。
+lede: >-
+  「子供の縄跳びはいつから？」を完全ガイド。3歳のジャンプデビューから、4歳の前跳び、5〜6歳のあや跳び・二重跳びまで段階別に解説。縄の選び方、自宅練習法、運動会・体育で活きるコツまで網羅します。
+legacyHero: /hero/kid-craft-01.webp
 ---
 
 ## 結論：年齢別 縄跳びデビュー目安

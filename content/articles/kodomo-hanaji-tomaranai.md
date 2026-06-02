@@ -1,12 +1,13 @@
 ---
 slug: kodomo-hanaji-tomaranai
 title: 子供の鼻血が止まらない｜原因・症状・対処法・受診目安完全ガイド【0〜6歳】
-metaDescription: 子供の鼻血が止まらないときの対処法を0〜6歳向けに完全解説。正しい止血法、間違った対処（上を向かせる・首をトントン）、繰り返す鼻血の原因、すぐ受診すべきサイン、予防まで2026年版で詳しくまとめました。我が家の鼻血頻発体験も交えて紹介。
+metaDescription: >-
+  子供の鼻血が止まらないときの対処法を0〜6歳向けに完全解説。正しい止血法、間違った対処（上を向かせる・首をトントン）、繰り返す鼻血の原因、すぐ受診すべきサイン、予防まで2026年版で詳しくまとめました。我が家の鼻血頻発体験も交えて紹介。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-hanaji-tomaranai.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   子供の鼻血が止まらないとき、「上を向かせる」「首をトントン」は間違い。本記事では0〜6歳向けに、鼻血の正しい止血法・原因・繰り返す場合の対応・受診すべきサイン・予防までを完全解説します。「またか…」と慌てず対応できる手順を、我が家の鼻血頻発体験を交えて紹介します。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

@@ -5,8 +5,8 @@ metaDescription: 子供の演劇出演を完全ガイド。オーディション
 category: gyouji
 categoryName: 季節と行事
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/classroom-03.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-engeki-shusha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -17,7 +17,9 @@ quickInfo:
     - any
   durationMin: 30
   budget: mid
-lede: 子供が演劇に出演する機会は、保育園・幼稚園・小学校から地域劇団・劇団員養成まで多様。オーディション・稽古・親のサポート・記念撮影のコツを実体験ベースで紹介します。
+lede: >-
+  子供が演劇に出演する機会は、保育園・幼稚園・小学校から地域劇団・劇団員養成まで多様。オーディション・稽古・親のサポート・記念撮影のコツを実体験ベースで紹介します。
+legacyHero: /hero/classroom-03.webp
 ---
 
 ## 結論（時期・必要なもの）

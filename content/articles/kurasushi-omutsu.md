@@ -5,8 +5,8 @@ metaDescription: くら寿司にオムツ替え台はある？多目的トイレ
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kurasushi-omutsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   「くら寿司のトイレにオムツ替え台ある？多目的トイレも？」を1記事で解決。新型店と旧型店の差、モール内店舗との比較、ない店舗での代替手段まで0-2歳家族の目線で保存版にまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

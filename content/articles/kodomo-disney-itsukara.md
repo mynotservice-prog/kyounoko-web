@@ -1,12 +1,13 @@
 ---
 slug: kodomo-disney-itsukara
 title: 子供とディズニーはいつから？年齢別の楽しみ方・身長制限・攻略法完全ガイド
-metaDescription: 子供のディズニーデビューは何歳から？0歳・1歳・2歳・3歳以降の年齢別目安、アトラクション身長制限、ベビーカー利用、4歳まで無料の入園料、攻略のコツまで2026年版で完全解説します。
+metaDescription: >-
+  子供のディズニーデビューは何歳から？0歳・1歳・2歳・3歳以降の年齢別目安、アトラクション身長制限、ベビーカー利用、4歳まで無料の入園料、攻略のコツまで2026年版で完全解説します。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-disney-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - sunny
   durationMin: 480
   budget: high
-lede: 「子供とディズニーはいつから？」を完全ガイド。0歳のベビーカー入園から、3歳のキャラクターグリーティング、4歳以降のアトラクションまで年齢別に解説。身長制限・ベビーセンター・必須持ち物まで網羅します。
+lede: >-
+  「子供とディズニーはいつから？」を完全ガイド。0歳のベビーカー入園から、3歳のキャラクターグリーティング、4歳以降のアトラクションまで年齢別に解説。身長制限・ベビーセンター・必須持ち物まで網羅します。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 ## 結論：年齢別 ディズニーデビュー目安

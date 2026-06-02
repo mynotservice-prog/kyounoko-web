@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-gyu-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +19,9 @@ quickInfo:
     - any
   durationMin: 15
   budget: low
-lede: 「牛肉はいつから？」を完全ガイド。離乳食中期9〜11ヶ月から赤身ミンチで可。月齢別の目安、部位別の判断、ステーキ・しゃぶしゃぶデビュー、鉄分補給ポイントまで解説します。
+lede: >-
+  「牛肉はいつから？」を完全ガイド。離乳食中期9〜11ヶ月から赤身ミンチで可。月齢別の目安、部位別の判断、ステーキ・しゃぶしゃぶデビュー、鉄分補給ポイントまで解説します。
+legacyHero: /hero/food-japan-02.webp
 ---
 
 ## 結論

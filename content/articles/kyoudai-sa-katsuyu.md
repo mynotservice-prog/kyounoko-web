@@ -1,12 +1,13 @@
 ---
 slug: kyoudai-sa-katsuyu
 title: 兄弟を平等に育てる葛藤｜原因・対処法・声かけの実例完全ガイド
-metaDescription: 「上の子に厳しくしてしまう」「下の子をかわいいと思える時間が短い」――兄弟育児の葛藤の原因と対処法、平等の本当の意味、年齢別の声かけ実例、上の子フォローまで完全解説。自責から解放されるガイドです。
+metaDescription: >-
+  「上の子に厳しくしてしまう」「下の子をかわいいと思える時間が短い」――兄弟育児の葛藤の原因と対処法、平等の本当の意味、年齢別の声かけ実例、上の子フォローまで完全解説。自責から解放されるガイドです。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kyoudai-sa-katsuyu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: free
 lede: >-
   「上の子につい厳しくしてしまう」「下の子をゆっくり見てあげられない」「平等にできてない自分が嫌」――兄弟育児の葛藤、本当に苦しいですよね。本記事は葛藤の原因、平等の本当の意味、年齢別の声かけ実例、上の子フォローまで完全ガイド。「あなただけじゃない」「完璧な親はいない」と寄り添います。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 ## 結論

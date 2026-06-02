@@ -1,12 +1,13 @@
 ---
 slug: kodomo-biyouin-itsukara
 title: 子供の美容院デビューはいつから？年齢別目安・選び方・乗り切り方完全ガイド
-metaDescription: 子供の美容院デビューは何歳から？1歳・2歳・3歳以降の年齢別目安、キッズカット専門店、料金相場、泣かないコツ、自宅カットとの比較まで2026年版で完全解説します。
+metaDescription: >-
+  子供の美容院デビューは何歳から？1歳・2歳・3歳以降の年齢別目安、キッズカット専門店、料金相場、泣かないコツ、自宅カットとの比較まで2026年版で完全解説します。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-03.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-biyouin-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 60
   budget: mid
-lede: 「子供の美容院デビューはいつから？」を完全ガイド。1歳前後の初カット、キッズ専門店の選び方、料金相場、泣かないコツ、自宅カットとの使い分けまで網羅。初めての美容院をスムーズに乗り切るノウハウをまとめました。
+lede: >-
+  「子供の美容院デビューはいつから？」を完全ガイド。1歳前後の初カット、キッズ専門店の選び方、料金相場、泣かないコツ、自宅カットとの使い分けまで網羅。初めての美容院をスムーズに乗り切るノウハウをまとめました。
+legacyHero: /hero/baby-03.webp
 ---
 
 ## 結論：年齢別 美容院デビュー目安

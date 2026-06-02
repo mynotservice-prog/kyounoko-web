@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-fruit-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-petit-tomato-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +19,9 @@ quickInfo:
     - any
   durationMin: 5
   budget: low
-lede: 「プチトマトはいつから？」を完全ガイド。湯むき・刻みなら5〜6ヶ月から可ですが、丸ごとは窒息事故の多い「最危険食材」。4等分カットの徹底、月齢別の進め方、安全な切り方を解説します。
+lede: >-
+  「プチトマトはいつから？」を完全ガイド。湯むき・刻みなら5〜6ヶ月から可ですが、丸ごとは窒息事故の多い「最危険食材」。4等分カットの徹底、月齢別の進め方、安全な切り方を解説します。
+legacyHero: /hero/food-fruit-02.webp
 ---
 
 ## 結論｜開始時期

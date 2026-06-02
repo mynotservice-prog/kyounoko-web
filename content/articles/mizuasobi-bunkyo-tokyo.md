@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/summer-water-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/mizuasobi-bunkyo-tokyo.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -24,6 +24,7 @@ quickInfo:
   budget: free
 lede: >-
   暑い夏、徒歩圏内で子供と水遊びさせたい——六義園・小石川後楽園など文化的スポットの多い文京区。子連れには六義公園・教育の森公園など、緑豊かな区立公園の水遊び施設が人気です。本記事では文京区で**2026年夏に行ける水遊び場5選**を、対象年齢・設備・無料/有料・ベストシーズンつきで完全ガイド。猛暑日のお出かけプランの参考にどうぞ。
+legacyHero: /hero/summer-water-01.webp
 ---
 
 ## 結論｜文京区の水遊び場おすすめTOP3

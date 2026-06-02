@@ -1,12 +1,13 @@
 ---
 slug: kodomo-yubi-shaburi-yamenai
 title: 子供の指しゃぶりやめさせ方｜原因・対処法・年齢別対応完全ガイド【1〜6歳】
-metaDescription: 指しゃぶりがやめられない…歯並びや園での目が気になる方へ。1〜6歳の発達段階別の指しゃぶりの意味・卒業時期の目安・叱らずやめさせる方法・受診の目安を整理しました。
+metaDescription: >-
+  指しゃぶりがやめられない…歯並びや園での目が気になる方へ。1〜6歳の発達段階別の指しゃぶりの意味・卒業時期の目安・叱らずやめさせる方法・受診の目安を整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-03.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-yubi-shaburi-yamenai.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「もう4歳なのに指しゃぶりが続く」「歯並びが気になる」――指しゃぶり卒業は多くの親の悩みです。実は**3歳までは生理的な行動**で見守りでOK、本格的に対応するのは**4〜5歳以降**が目安とされます。本記事では年齢別の意味と、叱らない卒業のステップを整理します。
+legacyHero: /hero/baby-03.webp
 ---
 
 ## 結論

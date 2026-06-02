@@ -1,12 +1,13 @@
 ---
 slug: kodomo-yuuenchi-itsukara
 title: 子供の遊園地はいつから？年齢別の楽しみ方・身長制限・持ち物完全ガイド
-metaDescription: 子供の遊園地デビューは何歳から？0歳・1歳・2歳・3歳以降の年齢別目安、アトラクションの身長制限、ベビーカー利用、混雑回避のコツ、必須持ち物まで2026年版で完全解説します。
+metaDescription: >-
+  子供の遊園地デビューは何歳から？0歳・1歳・2歳・3歳以降の年齢別目安、アトラクションの身長制限、ベビーカー利用、混雑回避のコツ、必須持ち物まで2026年版で完全解説します。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-yuuenchi-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - sunny
   durationMin: 240
   budget: high
-lede: 「子供の遊園地はいつから？」を完全ガイド。0歳のベビーカー散歩から、2〜3歳のメリーゴーランド、4歳以降の絶叫マシンまで年齢別に解説。身長制限・混雑回避・必須持ち物まで網羅します。
+lede: >-
+  「子供の遊園地はいつから？」を完全ガイド。0歳のベビーカー散歩から、2〜3歳のメリーゴーランド、4歳以降の絶叫マシンまで年齢別に解説。身長制限・混雑回避・必須持ち物まで網羅します。
+legacyHero: /hero/park-02.webp
 ---
 
 ## 結論：年齢別 遊園地デビュー目安

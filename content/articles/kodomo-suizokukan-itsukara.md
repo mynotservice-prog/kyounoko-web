@@ -1,12 +1,13 @@
 ---
 slug: kodomo-suizokukan-itsukara
 title: 子供と水族館はいつから？年齢別の楽しみ方・回り方・持ち物完全ガイド
-metaDescription: 子供の水族館デビューは何歳から？0歳・1歳・2歳・3歳以降の年齢別目安、暗さへの対応、混雑回避、イルカショー鑑賞、必須持ち物、雨の日活用法まで2026年版で完全解説します。
+metaDescription: >-
+  子供の水族館デビューは何歳から？0歳・1歳・2歳・3歳以降の年齢別目安、暗さへの対応、混雑回避、イルカショー鑑賞、必須持ち物、雨の日活用法まで2026年版で完全解説します。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-suizokukan-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 180
   budget: low
-lede: 「子供と水族館はいつから？」を完全ガイド。0歳の暗い空間デビューから、2〜3歳の魚探し、4歳以降のイルカショーまで年齢別に解説。混雑回避、ベビーカー使用、雨の日活用法、必須持ち物まで網羅します。
+lede: >-
+  「子供と水族館はいつから？」を完全ガイド。0歳の暗い空間デビューから、2〜3歳の魚探し、4歳以降のイルカショーまで年齢別に解説。混雑回避、ベビーカー使用、雨の日活用法、必須持ち物まで網羅します。
+legacyHero: /hero/baby-01.webp
 ---
 
 ## 結論：年齢別 水族館デビュー目安

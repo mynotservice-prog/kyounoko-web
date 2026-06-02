@@ -1,12 +1,13 @@
 ---
 slug: kodomo-ochitsukinai-taisho
 title: 子供が落ち着きない｜原因・対処法・年齢別対応完全ガイド【1〜6歳】
-metaDescription: 子供が落ち着きなくて心配…発達障害？1〜6歳は「動きたい」が発達上自然な時期。原因・年齢別対応・落ち着く環境づくり・発達相談の目安を整理。叱らない関わり方が大切です。
+metaDescription: >-
+  子供が落ち着きなくて心配…発達障害？1〜6歳は「動きたい」が発達上自然な時期。原因・年齢別対応・落ち着く環境づくり・発達相談の目安を整理。叱らない関わり方が大切です。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-03.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-ochitsukinai-taisho.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「ご飯中も立ち歩く」「電車でじっとしてられない」「ずっと走り回ってる」――子供の落ち着きのなさに悩む親は多いもの。実は幼児期は**「動き＝学習」**の時期で、じっとできないのは発達段階上自然とされます。本記事では年齢別の傾向と、無理なく落ち着ける関わり方・環境を整理しました。
+legacyHero: /hero/parent-child-03.webp
 ---
 
 ## 結論

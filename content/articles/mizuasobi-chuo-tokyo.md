@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/summer-water-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/mizuasobi-chuo-tokyo.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -24,6 +24,7 @@ quickInfo:
   budget: free
 lede: >-
   暑い夏、徒歩圏内で子供と水遊びさせたい——オフィス街のイメージが強い中央区ですが、月島・佃島・浜町など下町エリアには子連れで通える水遊び場が点在しています。本記事では中央区で**2026年夏に行ける水遊び場5選**を、対象年齢・設備・無料/有料・ベストシーズンつきで完全ガイド。猛暑日のお出かけプランの参考にどうぞ。
+legacyHero: /hero/summer-water-01.webp
 ---
 
 ## 結論｜中央区の水遊び場おすすめTOP3

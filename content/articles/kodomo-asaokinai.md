@@ -1,12 +1,13 @@
 ---
 slug: kodomo-asaokinai
 title: 子供が朝起きない｜原因・対処法・年齢別対応完全ガイド【2〜6歳】
-metaDescription: 子供が朝起きない…毎朝バトルになる方へ。2〜6歳の発達段階別に「睡眠時間が足りない」「夜更かし」「室温・光」など原因を整理。気持ちよく起きるルーティン・受診の目安も解説。
+metaDescription: >-
+  子供が朝起きない…毎朝バトルになる方へ。2〜6歳の発達段階別に「睡眠時間が足りない」「夜更かし」「室温・光」など原因を整理。気持ちよく起きるルーティン・受診の目安も解説。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/sleeping-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-asaokinai.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「何度起こしても起きない」「無理やり起こすと号泣」「保育園に毎朝遅刻寸前」――子供が朝起きないのに悩む親は多いもの。多くは**睡眠時間の絶対量不足**か**入眠時刻の遅さ**が原因です。本記事では年齢別の必要睡眠時間と、気持ちよく起きるルーティンを整理します。
+legacyHero: /hero/sleeping-02.webp
 ---
 
 ## 結論

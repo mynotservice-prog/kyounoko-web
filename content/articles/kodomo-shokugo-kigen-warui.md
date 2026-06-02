@@ -1,12 +1,13 @@
 ---
 slug: kodomo-shokugo-kigen-warui
 title: 子供が食後に機嫌悪い｜原因・対処法・年齢別対応完全ガイド【1〜6歳】
-metaDescription: 食後になると急に泣く・怒る…子供の食後の不機嫌に悩む方へ。1〜6歳の「眠気」「血糖値の急変動」「食べすぎ」など原因と、食後を穏やかに過ごす工夫・受診の目安を整理しました。
+metaDescription: >-
+  食後になると急に泣く・怒る…子供の食後の不機嫌に悩む方へ。1〜6歳の「眠気」「血糖値の急変動」「食べすぎ」など原因と、食後を穏やかに過ごす工夫・受診の目安を整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-shokugo-kigen-warui.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「食べ終わった瞬間に号泣」「ごちそうさまの直後にぐずる」――食後の急な不機嫌は多くの親が経験します。原因の多くは**食後の眠気・血糖値スパイク・食べ疲れ**で、対応を変えれば穏やかな食後にできます。本記事では年齢別の原因と、食後リカバリーの工夫を整理します。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 ## 結論

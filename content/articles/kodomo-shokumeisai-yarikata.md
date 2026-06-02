@@ -1,12 +1,13 @@
 ---
 slug: kodomo-shokumeisai-yarikata
 title: 子供の食い初め｜お食い初めの本来の意味・準備・地域差完全ガイド
-metaDescription: 子供の食い初め（お食い初め・百日の祝い・歯固めの儀）の本来の意味と地域差を整理。祝い膳・歯固め石・服装・写真撮影・略式バージョンまで現代家庭向けに解説します。
+metaDescription: >-
+  子供の食い初め（お食い初め・百日の祝い・歯固めの儀）の本来の意味と地域差を整理。祝い膳・歯固め石・服装・写真撮影・略式バージョンまで現代家庭向けに解説します。
 category: gyouji
 categoryName: 季節と行事
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-shokumeisai-yarikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,6 +19,7 @@ quickInfo:
   durationMin: 30
   budget: mid
 lede: 「子供の食い初め」とは何か。お食い初め・百日祝い・歯固めの儀の意味、地域差、現代家庭向けの略式バージョンまで、初心者にも分かりやすく解説します。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論（時期・必要なもの）

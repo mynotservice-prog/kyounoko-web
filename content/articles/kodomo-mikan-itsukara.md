@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-fruit-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-mikan-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +19,9 @@ quickInfo:
     - any
   durationMin: 5
   budget: low
-lede: 「みかんはいつから？」を完全ガイド。果汁は5〜6ヶ月、果肉は7〜8ヶ月から薄皮を取って可。月齢別の目安、薄皮の扱い、食べ過ぎでの柑皮症、選び方まで解説します。
+lede: >-
+  「みかんはいつから？」を完全ガイド。果汁は5〜6ヶ月、果肉は7〜8ヶ月から薄皮を取って可。月齢別の目安、薄皮の扱い、食べ過ぎでの柑皮症、選び方まで解説します。
+legacyHero: /hero/food-fruit-01.webp
 ---
 
 ## 結論

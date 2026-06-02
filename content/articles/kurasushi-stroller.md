@@ -1,12 +1,13 @@
 ---
 slug: kurasushi-stroller
 title: くら寿司はベビーカーで入店OK？席横付け可能な店舗の見分け方【2026】
-metaDescription: くら寿司はベビーカーで入店できる？席まで横付けできる店舗の見分け方、たたむ判断基準、ボックス席のスペース、ピーク時の対応まで0-2歳家族目線で徹底解説します。
+metaDescription: >-
+  くら寿司はベビーカーで入店できる？席まで横付けできる店舗の見分け方、たたむ判断基準、ボックス席のスペース、ピーク時の対応まで0-2歳家族目線で徹底解説します。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kurasushi-stroller.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   「くら寿司ってベビーカーごと席に入れる？畳まなきゃダメ？」を1記事で解決。店舗タイプ別のベビーカー対応、ボックス席横付け可否、入口段差、ピーク時の判断基準まで0-2歳家族の目線で保存版にまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

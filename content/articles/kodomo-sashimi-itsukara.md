@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-03.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-sashimi-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +20,7 @@ quickInfo:
   durationMin: 5
   budget: low
 lede: 「刺身はいつから？」を完全ガイド。生魚は基本3歳以降、できれば5〜6歳から。魚種別の判断、アニサキス・食中毒・水銀リスク、安全な与え方まで解説します。
+legacyHero: /hero/food-japan-03.webp
 ---
 
 ## 結論

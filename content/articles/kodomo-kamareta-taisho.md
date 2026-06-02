@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-kamareta-taisho.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -23,6 +23,7 @@ quickInfo:
   budget: free
 lede: >-
   「保育園で友達に噛まれて帰ってきた」「公園で噛まれて泣いている」——1〜5歳によくあるトラブル。本記事は傷の手当ての手順、先生・相手親への伝え方、子供の心のケアまで完全ガイド。噛む側も噛まれる側も発達途上の自然な姿です。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

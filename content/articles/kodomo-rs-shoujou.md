@@ -1,12 +1,13 @@
 ---
 slug: kodomo-rs-shoujou
 title: 子供のRSウイルス症状｜原因・対処法・受診目安完全ガイド【0〜6歳】
-metaDescription: 子供のRSウイルス症状を0〜6歳向けに完全解説。風邪との違い、月齢別の重症化リスク、ゼーゼー・呼吸困難など見逃せないサイン、家庭ケア、すぐ受診すべきタイミング、予防策まで2026年版で詳しくまとめました。我が家のRS入院体験も交えて紹介。
+metaDescription: >-
+  子供のRSウイルス症状を0〜6歳向けに完全解説。風邪との違い、月齢別の重症化リスク、ゼーゼー・呼吸困難など見逃せないサイン、家庭ケア、すぐ受診すべきタイミング、予防策まで2026年版で詳しくまとめました。我が家のRS入院体験も交えて紹介。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-rs-shoujou.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   子供のRSウイルスは2歳までにほぼ100%が感染する身近な感染症ですが、0歳児・早産児では重症化することも。本記事では0〜6歳向けに、RSの症状・風邪との違い・月齢別の重症化リスク・家庭ケア・受診すべきサインまで完全解説します。我が家のRS入院体験も交えて、見逃せないサインをまとめました。
+legacyHero: /hero/baby-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

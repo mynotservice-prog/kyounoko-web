@@ -5,8 +5,8 @@ metaDescription: 子供の運動会の準備を完全ガイド。お弁当・場
 category: gyouji
 categoryName: 季節と行事
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/classroom-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-undoukai-junbi.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +19,7 @@ quickInfo:
   durationMin: 30
   budget: mid
 lede: 運動会は親の準備力が問われる一大イベント。お弁当・場所取り・服装・撮影機材・熱中症対策まで、保育園幼稚園小学校別の段取りを成功させるコツを整理しました。
+legacyHero: /hero/classroom-01.webp
 ---
 
 ## 結論（時期・必要なもの）

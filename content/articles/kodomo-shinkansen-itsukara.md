@@ -1,12 +1,13 @@
 ---
 slug: kodomo-shinkansen-itsukara
 title: 子供の新幹線はいつから？年齢別目安・座席選び・持ち物完全ガイド
-metaDescription: 子供の新幹線デビューは何歳から？0歳・1歳・2歳・3歳以降の年齢別目安、多目的室の使い方、座席選び（11号車・最後列）、ぐずり対策、必須持ち物、料金ルールまで2026年版で完全解説します。
+metaDescription: >-
+  子供の新幹線デビューは何歳から？0歳・1歳・2歳・3歳以降の年齢別目安、多目的室の使い方、座席選び（11号車・最後列）、ぐずり対策、必須持ち物、料金ルールまで2026年版で完全解説します。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-03.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-shinkansen-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 180
   budget: mid
-lede: 「子供の新幹線デビューはいつから？」を完全ガイド。生後すぐから乗車可能、月齢別の対策、11号車・最後列の選び方、多目的室の使い方、ぐずり対策、必須持ち物、料金ルールまでJR各社の情報をまとめました。
+lede: >-
+  「子供の新幹線デビューはいつから？」を完全ガイド。生後すぐから乗車可能、月齢別の対策、11号車・最後列の選び方、多目的室の使い方、ぐずり対策、必須持ち物、料金ルールまでJR各社の情報をまとめました。
+legacyHero: /hero/parent-child-03.webp
 ---
 
 ## 結論：年齢別 新幹線デビュー目安

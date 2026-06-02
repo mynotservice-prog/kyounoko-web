@@ -1,12 +1,13 @@
 ---
 slug: kodomo-omorashi-gakkou
 title: 子供が学校でおもらし｜原因・心のケア・対処法完全ガイド【4〜10歳】
-metaDescription: 子供が学校・園でおもらしした時の対応を完全解説。原因（緊張・我慢・体調）、家での対処、先生との連携、再発防止、繰り返す時の受診目安まで2026年最新版で網羅した保存版です。
+metaDescription: >-
+  子供が学校・園でおもらしした時の対応を完全解説。原因（緊張・我慢・体調）、家での対処、先生との連携、再発防止、繰り返す時の受診目安まで2026年最新版で網羅した保存版です。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-omorashi-gakkou.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   「学校でおもらしして帰ってきた」——本人も親もショック。でも責めるのは逆効果。本記事ではおもらしの原因、家での対処、先生との連携、再発防止、繰り返す場合の受診目安まで完全ガイド。心のケアを最優先に進める方法を解説します。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

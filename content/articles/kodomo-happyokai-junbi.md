@@ -5,8 +5,8 @@ metaDescription: 子供の発表会準備を完全ガイド。衣装の用意・
 category: gyouji
 categoryName: 季節と行事
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/classroom-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-happyokai-junbi.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +19,7 @@ quickInfo:
   durationMin: 30
   budget: mid
 lede: 発表会は子供の成長を実感する一大イベント。衣装・撮影席・練習・親のサポートまで、本人が自信を持って舞台に立てる準備と当日の段取りを整理しました。
+legacyHero: /hero/classroom-02.webp
 ---
 
 ## 結論（時期・必要なもの）

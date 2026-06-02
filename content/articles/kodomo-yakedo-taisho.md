@@ -1,12 +1,13 @@
 ---
 slug: kodomo-yakedo-taisho
 title: 子供のやけどの対処法｜原因・症状・応急処置・受診目安完全ガイド【0〜6歳】
-metaDescription: 子供のやけどの対処法を0〜6歳向けに完全解説。流水冷却の正しい方法、重症度別の対応、衣類を脱がせるタイミング、すぐ受診すべきサイン、跡を残さないケア、予防まで2026年版で詳しくまとめました。我が家のやけど体験も交えて紹介。
+metaDescription: >-
+  子供のやけどの対処法を0〜6歳向けに完全解説。流水冷却の正しい方法、重症度別の対応、衣類を脱がせるタイミング、すぐ受診すべきサイン、跡を残さないケア、予防まで2026年版で詳しくまとめました。我が家のやけど体験も交えて紹介。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-yakedo-taisho.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   子供のやけどは家庭内事故の上位を占め、特に1〜2歳の熱湯・炊飯器の蒸気事故が多発しています。本記事では0〜6歳向けに、やけどの応急処置・重症度別の対応・受診すべきサイン・跡を残さないケア・予防までを完全解説します。「まず流水20分」を最優先する手順を、我が家の体験を交えて紹介します。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

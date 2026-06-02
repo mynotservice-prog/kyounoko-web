@@ -1,12 +1,13 @@
 ---
 slug: kodomo-otona-mishiri
 title: 子供の大人見知り｜原因・対処法・年齢別対応完全ガイド【0〜3歳】
-metaDescription: 子供が大人見知りで人前で泣く・隠れる…？0〜3歳の人見知りは発達段階上ごく自然。原因・月齢別対応・無理なく慣らすコツ・発達相談の目安を整理。「愛着が育っている証」と捉え直しましょう。
+metaDescription: >-
+  子供が大人見知りで人前で泣く・隠れる…？0〜3歳の人見知りは発達段階上ごく自然。原因・月齢別対応・無理なく慣らすコツ・発達相談の目安を整理。「愛着が育っている証」と捉え直しましょう。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-otona-mishiri.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +23,7 @@ quickInfo:
   budget: free
 lede: >-
   「祖父母にも泣く」「店員さんと目を合わせない」「親戚の集まりが憂鬱」――子供の大人見知りに悩む親は多いもの。実は人見知りは**生後6ヶ月〜2歳ごろがピーク**で、愛着形成の証とされる発達段階上自然な現象。本記事では年齢別の傾向と、無理なく慣らす関わり方を整理しました。
+legacyHero: /hero/baby-02.webp
 ---
 
 ## 結論

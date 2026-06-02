@@ -5,8 +5,8 @@ metaDescription: 子供が歯磨きを嫌がる…毎晩バトルに悩む方へ
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-hamigaki-iyagaru.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「仕上げ磨きで毎晩号泣」「歯ブラシを見ただけで逃げる」――歯磨き嫌いは多くの親の悩み。原因は**口の感覚過敏・上唇小帯の痛み・押さえつけの恐怖**が多いとされます。本記事では年齢別の声かけと、楽しく続ける具体策・むし歯予防のラインを整理します。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 ## 結論

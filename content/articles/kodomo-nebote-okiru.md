@@ -1,12 +1,13 @@
 ---
 slug: kodomo-nebote-okiru
 title: 子供が寝ぼけて起きる｜原因・対処法・年齢別対応完全ガイド【1〜6歳】
-metaDescription: 子供が夜中に寝ぼけて泣き叫ぶ・歩き回る…？1〜6歳の寝ぼけは「睡眠時驚愕症」など発達段階上ごく普通の現象。原因・対処法・夜驚症との見分け・受診の目安を整理しました。
+metaDescription: >-
+  子供が夜中に寝ぼけて泣き叫ぶ・歩き回る…？1〜6歳の寝ぼけは「睡眠時驚愕症」など発達段階上ごく普通の現象。原因・対処法・夜驚症との見分け・受診の目安を整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/sleeping-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-nebote-okiru.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「夜中に突然泣き叫ぶ」「目は開いてるのに話が通じない」「翌朝本人は覚えていない」――こうした寝ぼけ行動は、1〜6歳に多い**夜驚症（睡眠時驚愕症）**や寝ぼけ歩きの可能性があります。多くは**発達段階上自然な現象**で成長とともに消失。本記事では見分け方と落ち着いた対応を整理します。
+legacyHero: /hero/sleeping-01.webp
 ---
 
 ## 結論

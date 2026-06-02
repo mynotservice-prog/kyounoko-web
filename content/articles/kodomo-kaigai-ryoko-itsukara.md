@@ -1,12 +1,13 @@
 ---
 slug: kodomo-kaigai-ryoko-itsukara
 title: 子供の海外旅行はいつから？年齢別目安・パスポート・予防接種完全ガイド
-metaDescription: 子供の海外旅行は何歳から？0歳・1歳・2歳・3歳以降の年齢別目安、パスポート取得方法、予防接種の一般情報、機内対策、行き先選び、持ち物リスト、安全対策まで2026年版で完全解説します。
+metaDescription: >-
+  子供の海外旅行は何歳から？0歳・1歳・2歳・3歳以降の年齢別目安、パスポート取得方法、予防接種の一般情報、機内対策、行き先選び、持ち物リスト、安全対策まで2026年版で完全解説します。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/autumn-02.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-kaigai-ryoko-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 240
   budget: high
-lede: 「子供の海外旅行はいつから？」を完全ガイド。0〜1歳のフライト可否、パスポートの取得手順、予防接種の一般情報、年齢別の行き先選び、機内のぐずり対策、必須持ち物、安全対策まで、家族で楽しむための基本をまとめました。
+lede: >-
+  「子供の海外旅行はいつから？」を完全ガイド。0〜1歳のフライト可否、パスポートの取得手順、予防接種の一般情報、年齢別の行き先選び、機内のぐずり対策、必須持ち物、安全対策まで、家族で楽しむための基本をまとめました。
+legacyHero: /hero/autumn-02.webp
 ---
 
 ## 結論｜年齢別早見表

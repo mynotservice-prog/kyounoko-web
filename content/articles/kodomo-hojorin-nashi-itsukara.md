@@ -1,12 +1,13 @@
 ---
 slug: kodomo-hojorin-nashi-itsukara
 title: 補助輪なし自転車はいつから？年齢別目安・練習法・必須装備完全ガイド
-metaDescription: 子供の補助輪なし自転車デビューは何歳から？3歳・4歳・5歳・6歳の年齢別目安、ストライダーからの移行、練習5ステップ、ヘルメット・プロテクター選び、転倒対策まで2026年版で完全解説します。
+metaDescription: >-
+  子供の補助輪なし自転車デビューは何歳から？3歳・4歳・5歳・6歳の年齢別目安、ストライダーからの移行、練習5ステップ、ヘルメット・プロテクター選び、転倒対策まで2026年版で完全解説します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-03.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-hojorin-nashi-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,7 +19,9 @@ quickInfo:
     - sunny
   durationMin: 60
   budget: mid
-lede: 「補助輪なし自転車はいつから？」を完全ガイド。3歳のストライダー卒業から、4〜5歳の補助輪なしデビュー、6歳の本格走行まで年齢別の進め方を解説。バランス感覚を育てる5ステップ練習法、必須装備、安全対策まで網羅します。
+lede: >-
+  「補助輪なし自転車はいつから？」を完全ガイド。3歳のストライダー卒業から、4〜5歳の補助輪なしデビュー、6歳の本格走行まで年齢別の進め方を解説。バランス感覚を育てる5ステップ練習法、必須装備、安全対策まで網羅します。
+legacyHero: /hero/park-03.webp
 ---
 
 ## 結論：年齢別 補助輪なしデビュー目安

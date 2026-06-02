@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-soba-itsukara.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +19,9 @@ quickInfo:
     - any
   durationMin: 5
   budget: low
-lede: 「そばはいつから？」を完全ガイド。最重篤アレルギー食品の一つ。初回は1歳半〜2歳以降、必ず平日午前・少量・単独で。家族歴ありなら医師相談を。月齢別の目安と症状時の対応まで解説します。
+lede: >-
+  「そばはいつから？」を完全ガイド。最重篤アレルギー食品の一つ。初回は1歳半〜2歳以降、必ず平日午前・少量・単独で。家族歴ありなら医師相談を。月齢別の目安と症状時の対応まで解説します。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

@@ -5,8 +5,8 @@ metaDescription: 「お風呂やだ！」が始まると親も疲弊…1〜6歳�
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/bath-01.webp
+updatedAt: '2026-06-02'
+hero: /hero-ai/kodomo-ofuro-kirai.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: free
 lede: >-
   「お風呂って言うだけで逃げる」「服を脱がせるところから戦い」――子供のお風呂嫌いは、毎日のことだけにつらいもの。原因は**怖さ・寒さ・遊びの中断・感覚過敏**など多岐にわたります。本記事では年齢別の原因と、お風呂を楽しい時間に変える具体策を整理します。
+legacyHero: /hero/bath-01.webp
 ---
 
 ## 結論
