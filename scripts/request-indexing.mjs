@@ -100,7 +100,13 @@ async function main() {
     scopes: ['https://www.googleapis.com/auth/indexing'],
   });
 
-  const headers = await client.getRequestHeaders();
+  // google-auth-library v9+ は Fetch API の Headers オブジェクトを返すため、
+  // ...spread では Authorization が失われる。entries() で plain object に変換する。
+  const rawHeaders = await client.getRequestHeaders();
+  const authHeaders =
+    rawHeaders instanceof Headers
+      ? Object.fromEntries(rawHeaders.entries())
+      : rawHeaders;
   const endpoint = 'https://indexing.googleapis.com/v3/urlNotifications:publish';
 
   let ok = 0;
@@ -111,7 +117,7 @@ async function main() {
     try {
       const res = await fetch(endpoint, {
         method: 'POST',
-        headers: { ...headers, 'Content-Type': 'application/json' },
+        headers: { ...authHeaders, 'Content-Type': 'application/json' },
         body: JSON.stringify({ url, type: TYPE }),
       });
       if (res.ok) {
