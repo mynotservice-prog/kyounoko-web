@@ -1,0 +1,248 @@
+{
+  "/v2/features/free-spots.jpg": {
+    "photographer": "Amanda huang",
+    "photographer_url": "https://www.pexels.com/@amanda-huang-1867765800",
+    "pexels_url": "https://www.pexels.com/photo/family-enjoying-a-picnic-by-the-lakeside-in-summer-28579283/",
+    "query": "family picnic park free outdoor"
+  },
+  "/v2/features/kid-lunch.jpg": {
+    "photographer": "Q. Hưng Phạm",
+    "photographer_url": "https://www.pexels.com/@qhung999",
+    "pexels_url": "https://www.pexels.com/photo/mom-having-lunch-with-daughters-at-home-6164621/",
+    "query": "children lunch family table happy"
+  },
+  "/v2/features/summer-2026.jpg": {
+    "photographer": "Dũng Eric",
+    "photographer_url": "https://www.pexels.com/@dung-eric-2147812980",
+    "pexels_url": "https://www.pexels.com/photo/spectacular-nighttime-fireworks-display-over-water-29847999/",
+    "query": "summer festival fireworks family japan"
+  },
+  "/v2/features/mizu-asobi.jpg": {
+    "photographer": "Helena Jankovičová Kováčová",
+    "photographer_url": "https://www.pexels.com/@helen1",
+    "pexels_url": "https://www.pexels.com/photo/children-playing-in-a-fountain-in-front-of-a-large-sculpture-27907998/",
+    "query": "children water play splash fountain"
+  },
+  "/v2/features/new-indoor.jpg": {
+    "photographer": "DOAN THANH BINH",
+    "photographer_url": "https://www.pexels.com/@doan-thanh-binh-2147604563",
+    "pexels_url": "https://www.pexels.com/photo/colorful-modern-indoor-playground-area-36834054/",
+    "query": "modern indoor kids facility bright"
+  },
+  "/v2/features/age-0-1.jpg": {
+    "photographer": "Luis Becerra  Fotógrafo",
+    "photographer_url": "https://www.pexels.com/@luisbecerrafotografo",
+    "pexels_url": "https://www.pexels.com/photo/a-girl-in-blue-and-white-dress-6344269/",
+    "query": "baby toddler 1 year old playing"
+  },
+  "/v2/features/age-1-3.jpg": {
+    "photographer": "Kerk ikyl Baraquil",
+    "photographer_url": "https://www.pexels.com/@kerk-ikyl-baraquil-64452324",
+    "pexels_url": "https://www.pexels.com/photo/a-girl-celebrating-her-second-birthday-in-the-park-9152845/",
+    "query": "toddler 2 year old playing happy"
+  },
+  "/v2/features/age-4-6.jpg": {
+    "photographer": "Yan Krukau",
+    "photographer_url": "https://www.pexels.com/@yankrukov",
+    "pexels_url": "https://www.pexels.com/photo/boy-in-spiderman-outfit-holding-printed-board-8612888/",
+    "query": "kindergarten child 5 year old smile"
+  },
+  "/v2/features/age-elem.jpg": {
+    "photographer": "shigeko eguchi",
+    "photographer_url": "https://www.pexels.com/@shigeko-eguchi-462526211",
+    "pexels_url": "https://www.pexels.com/photo/portrait-of-pensive-girl-15638022/",
+    "query": "elementary school child japanese"
+  },
+  "/v2/features/weather-rain.jpg": {
+    "photographer": "Jean Marc Bonnel",
+    "photographer_url": "https://www.pexels.com/@jean-marc-bonnel-387362531",
+    "pexels_url": "https://www.pexels.com/photo/two-boys-sitting-in-a-pew-18312599/",
+    "query": "children playing window rain inside"
+  },
+  "/v2/features/weather-hot.jpg": {
+    "photographer": "Pato Mec",
+    "photographer_url": "https://www.pexels.com/@pato-mec-1833681068",
+    "pexels_url": "https://www.pexels.com/photo/children-enjoying-popsicles-in-summer-outdoors-35322324/",
+    "query": "summer day children popsicle sunny"
+  },
+  "/v2/features/weather-cold.jpg": {
+    "photographer": "Yan Krukau",
+    "photographer_url": "https://www.pexels.com/@yankrukov",
+    "pexels_url": "https://www.pexels.com/photo/kids-playing-in-snow-6617704/",
+    "query": "winter children warm coat snow"
+  },
+  "/v2/features/weather-indoor.jpg": {
+    "photographer": "kall",
+    "photographer_url": "https://www.pexels.com/@kall-441803867",
+    "pexels_url": "https://www.pexels.com/photo/colorful-kids-playroom-with-bright-decor-29752372/",
+    "query": "indoor playroom bright children"
+  },
+  "/v2/features/purpose-park.jpg": {
+    "photographer": "Kampus Production",
+    "photographer_url": "https://www.pexels.com/@kampus",
+    "pexels_url": "https://www.pexels.com/photo/kids-walking-on-the-grass-field-8813515/",
+    "query": "children running park green grass"
+  },
+  "/v2/features/purpose-water.jpg": {
+    "photographer": "Atlantic Ambience",
+    "photographer_url": "https://www.pexels.com/@freestockpro",
+    "pexels_url": "https://www.pexels.com/photo/kid-playing-in-a-swimming-pool-12616003/",
+    "query": "kids splash pool water play"
+  },
+  "/v2/features/purpose-event.jpg": {
+    "photographer": "Vidal Balielo Jr.",
+    "photographer_url": "https://www.pexels.com/@vidalbalielojrfotografia",
+    "pexels_url": "https://www.pexels.com/photo/circus-theme-party-2337777/",
+    "query": "children carnival happy event"
+  },
+  "/v2/features/purpose-zoo.jpg": {
+    "photographer": "Los Muertos Crew",
+    "photographer_url": "https://www.pexels.com/@cristian-rojas",
+    "pexels_url": "https://www.pexels.com/photo/girls-looking-through-the-glass-in-a-zoo-8838128/",
+    "query": "family zoo animals children watching"
+  },
+  "/v2/features/budget-free.jpg": {
+    "photographer": "RDNE Stock project",
+    "photographer_url": "https://www.pexels.com/@rdne",
+    "pexels_url": "https://www.pexels.com/photo/children-playing-basketball-8336933/",
+    "query": "family park free outdoor play"
+  },
+  "/v2/features/budget-low.jpg": {
+    "photographer": "RDNE Stock project",
+    "photographer_url": "https://www.pexels.com/@rdne",
+    "pexels_url": "https://www.pexels.com/photo/art-girl-painting-school-7605911/",
+    "query": "children craft cheap fun activity"
+  },
+  "/v2/features/budget-cospa.jpg": {
+    "photographer": "RDNE Stock project",
+    "photographer_url": "https://www.pexels.com/@rdne",
+    "pexels_url": "https://www.pexels.com/photo/parents-and-son-playing-ring-toss-in-a-park-in-summer-8208795/",
+    "query": "happy family activity affordable"
+  },
+  "/v2/features/budget-allday.jpg": {
+    "photographer": "Steward Masweneng",
+    "photographer_url": "https://www.pexels.com/@stewphotography",
+    "pexels_url": "https://www.pexels.com/photo/carousel-in-summer-11071451/",
+    "query": "theme park family day out"
+  },
+  "/v2/areas/tokyo.jpg": {
+    "photographer": "Ruiz .",
+    "photographer_url": "https://www.pexels.com/@ruiz",
+    "pexels_url": "https://www.pexels.com/photo/tokyo-covered-with-fog-15275312/",
+    "query": "tokyo skyline cityscape modern"
+  },
+  "/v2/areas/saitama.jpg": {
+    "photographer": "Chris Chen",
+    "photographer_url": "https://www.pexels.com/@chris-chen-2971430",
+    "pexels_url": "https://www.pexels.com/photo/trees-in-planters-around-the-kadokawa-musashino-museum-tokorozawa-saitama-japan-9461168/",
+    "query": "saitama park nature japan"
+  },
+  "/v2/areas/kanagawa.jpg": {
+    "photographer": "Huu Huynh",
+    "photographer_url": "https://www.pexels.com/@imhh",
+    "pexels_url": "https://www.pexels.com/photo/view-of-yokohama-bay-bridge-23023921/",
+    "query": "yokohama bay bridge sunset"
+  },
+  "/v2/areas/chiba.jpg": {
+    "photographer": "Huu Huynh",
+    "photographer_url": "https://www.pexels.com/@imhh",
+    "pexels_url": "https://www.pexels.com/photo/view-of-people-on-a-beach-23384174/",
+    "query": "chiba beach coast japan"
+  },
+  "/v2/areas/ibaraki.jpg": {
+    "photographer": "Jeffry Surianto",
+    "photographer_url": "https://www.pexels.com/@andromeda99",
+    "pexels_url": "https://www.pexels.com/photo/beautiful-red-kochia-hill-at-hitachi-seaside-park-34885502/",
+    "query": "ibaraki nature flower park"
+  },
+  "/v2/areas/tochigi.jpg": {
+    "photographer": "Marek Piwnicki",
+    "photographer_url": "https://www.pexels.com/@marek-piwnicki-3907296",
+    "pexels_url": "https://www.pexels.com/photo/serene-blue-mountains-in-nikko-japan-29719488/",
+    "query": "tochigi mountain nikko japan"
+  },
+  "/v2/areas/gunma.jpg": {
+    "photographer": "Satoshi Hirayama",
+    "photographer_url": "https://www.pexels.com/@satoshi",
+    "pexels_url": "https://www.pexels.com/photo/body-of-water-near-white-building-1615328/",
+    "query": "gunma mountain hot spring japan"
+  },
+  "/v2/areas/toshima-hero.jpg": {
+    "photographer": "Johnny Song",
+    "photographer_url": "https://www.pexels.com/@johnny-song-2150145527",
+    "pexels_url": "https://www.pexels.com/photo/aerial-view-of-tokyo-skyline-with-iconic-landmarks-31298879/",
+    "query": "ikebukuro tokyo city skyline"
+  },
+  "/v2/areas/shinjuku-hero.jpg": {
+    "photographer": "Francesco Albanese",
+    "photographer_url": "https://www.pexels.com/@francesco-albanese-2150950215",
+    "pexels_url": "https://www.pexels.com/photo/aerial-view-of-tokyo-skyscrapers-in-shinjuku-31486598/",
+    "query": "shinjuku tokyo skyscraper"
+  },
+  "/v2/areas/shibuya-hero.jpg": {
+    "photographer": "Margo Evardson",
+    "photographer_url": "https://www.pexels.com/@margo-evardson-2158292018",
+    "pexels_url": "https://www.pexels.com/photo/vibrant-nightlife-at-shibuya-crossing-tokyo-35827257/",
+    "query": "shibuya crossing tokyo busy"
+  },
+  "/v2/areas/setagaya-hero.jpg": {
+    "photographer": "sugar jet",
+    "photographer_url": "https://www.pexels.com/@sugar-jet-750021845",
+    "pexels_url": "https://www.pexels.com/photo/tranquil-pathway-in-tokyo-s-urban-park-setting-31860881/",
+    "query": "tokyo residential leafy street"
+  },
+  "/v2/areas/yokohama-hero.jpg": {
+    "photographer": "Huu Huynh",
+    "photographer_url": "https://www.pexels.com/@imhh",
+    "pexels_url": "https://www.pexels.com/photo/buildings-in-yokohama-in-evening-23024070/",
+    "query": "yokohama minato mirai waterfront"
+  },
+  "/v2/hero/top-hero.jpg": {
+    "photographer": "Helena Lopes",
+    "photographer_url": "https://www.pexels.com/@helenalopes",
+    "pexels_url": "https://www.pexels.com/photo/smiling-parents-hugging-holding-their-infant-baby-27175654/",
+    "query": "happy family parent child smiling outdoor"
+  },
+  "/v2/hero/top-hero-alt.jpg": {
+    "photographer": "Simon Kan",
+    "photographer_url": "https://www.pexels.com/@simon-kan-56314180",
+    "pexels_url": "https://www.pexels.com/photo/a-woman-holding-a-child-walking-on-sidewalk-7856945/",
+    "query": "mother child japanese walking holding hand"
+  },
+  "/v2/articles/aquarium-tips.jpg": {
+    "photographer": "Los Muertos Crew",
+    "photographer_url": "https://www.pexels.com/@cristian-rojas",
+    "pexels_url": "https://www.pexels.com/photo/close-up-shot-of-blue-fishes-swimming-8837897/",
+    "query": "aquarium dark blue water fish"
+  },
+  "/v2/articles/one-day-plan.jpg": {
+    "photographer": "Boris K.",
+    "photographer_url": "https://www.pexels.com/@borisk",
+    "pexels_url": "https://www.pexels.com/photo/a-map-surrounded-with-devices-and-cup-of-coffee-on-white-surface-5964658/",
+    "query": "family map planning travel notebook"
+  },
+  "/v2/articles/lunch-guide.jpg": {
+    "photographer": "fauxels",
+    "photographer_url": "https://www.pexels.com/@fauxels",
+    "pexels_url": "https://www.pexels.com/photo/woman-pouring-juice-on-glass-3184192/",
+    "query": "family dining restaurant overhead"
+  },
+  "/v2/articles/rainy-bag.jpg": {
+    "photographer": "Andrea Piacquadio",
+    "photographer_url": "https://www.pexels.com/@olly",
+    "pexels_url": "https://www.pexels.com/photo/girl-in-yellow-raincoat-and-yellow-boots-holding-yellow-umbrella-walking-on-gray-concrete-side-walk-3761511/",
+    "query": "umbrella raincoat children rain gear"
+  },
+  "/v2/articles/cafe-tips.jpg": {
+    "photographer": "Aleksandar Andreev",
+    "photographer_url": "https://www.pexels.com/@andreevaleksandar",
+    "pexels_url": "https://www.pexels.com/photo/modern-building-of-cafe-15984057/",
+    "query": "cafe child stroller coffee table"
+  },
+  "/v2/articles/indoor-tips.jpg": {
+    "photographer": "Pavel Danilyuk",
+    "photographer_url": "https://www.pexels.com/@pavel-danilyuk",
+    "pexels_url": "https://www.pexels.com/photo/a-young-boy-and-girl-holding-a-colored-pens-8294762/",
+    "query": "children indoor activity tips"
+  }
+}
