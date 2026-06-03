@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-nani
 categoryName: 今日何する
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 lede: 夏のベランダプールは「水量と段取り」で楽しさが決まる。4歳娘と2歳息子が30分集中できる遊び方、設営と撤収の現実時間、安全管理を共有します。
 quickInfo:
   ageRanges:

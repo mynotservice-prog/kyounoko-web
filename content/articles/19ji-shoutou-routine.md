@@ -7,7 +7,7 @@ hero: /hero-ai/19ji-shoutou-routine.jpg
 metaDescription: >-
   共働きで19時消灯を実現するための帰宅〜就寝までの2時間タイムライン。17時保育園迎え、18時夕食、18時30分お風呂、19時就寝の具体的な段取りと、失敗しない仕組み化のコツを紹介します。
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 area: all
 quickInfo:
   ageRanges:

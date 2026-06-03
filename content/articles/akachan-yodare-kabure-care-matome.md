@@ -1,10 +1,10 @@
 ---
 slug: akachan-yodare-kabure-care-matome
-title: 赤ちゃんのよだれかぶれ ケア情報まとめ【0〜1歳の予防＆スキンケア】
+title: 【2026年最新】赤ちゃんのよだれかぶれ ケア情報まとめ【0〜1歳の予防＆スキンケア】
 metaDescription: >-
   赤ちゃんのよだれかぶれが気になる時のケア情報を整理。スキンケアの基本、スタイ・タオルの選び方、皮膚科受診の目安まで。「治す」ではなく「気にならない肌環境を保つ」ための家庭ケアの基本を保存版でまとめました。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 category: yakudatsu
 categoryName: 役立つもの
 hero: /hero-ai/akachan-yodare-kabure-care-matome.jpg

@@ -5,7 +5,7 @@ metaDescription: "卵・乳アレルギーでも外食したい家庭へ。デ�
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-12'
+updatedAt: '2026-06-03'
 hero: /hero-ai/dennys-arerugen-real.jpg
 lede: "結論、デニーズの低アレルゲンキッズメニューは「初回外食デビュー候補」として支持率が高いラインです。約110件の家庭の声を編集部が傾向分析した結果、選びやすさと店員対応の手堅さが浮かびました。2026年最新版で外食の一歩を後押しします。"
 quickInfo:

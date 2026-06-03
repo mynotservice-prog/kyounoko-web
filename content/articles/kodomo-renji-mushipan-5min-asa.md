@@ -5,7 +5,7 @@ metaDescription: 電子レンジで5分の蒸しパン。ホットケーキミ�
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kodomo-renji-mushipan-5min-asa.jpg
 area: all
 quickInfo:

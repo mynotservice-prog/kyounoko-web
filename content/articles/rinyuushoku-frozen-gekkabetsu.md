@@ -7,7 +7,7 @@ hero: /hero-ai/rinyuushoku-frozen-gekkabetsu.jpg
 metaDescription: >-
   離乳食フリージングの基本を月齢別（5-6/7-8/9-11/12-18ヶ月）に整理。週末2時間で1週間分作り置きする手順・食材リスト・組み合わせテーブルを具体的に紹介します。
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 area: all
 quickInfo:
   ageRanges:

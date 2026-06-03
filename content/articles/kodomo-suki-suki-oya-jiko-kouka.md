@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日まわす
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kodomo-suki-suki-oya-jiko-kouka.jpg
 lede: >-
   「子どもの自己肯定感を育てたい」と願うパパママへ。日本の子どもの自己肯定感は世界最低レベル。実はやっちゃダメな声かけと、ガチで効いた魔法の10フレーズを、SNSで話題の「沼ったママの本音」混みでまとめました。

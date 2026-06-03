@@ -1,12 +1,12 @@
 ---
 slug: chiiku-subsc-hikaku-4sha
-title: 知育玩具サブスク4社比較【0-6歳】月額3000円から
+title: 【2026年最新】知育玩具サブスク4社比較【0-6歳】月額3000円から
 metaDescription: >-
   知育玩具サブスクどれを選ぶか迷っていませんか。トイサブ・ChaChaCha・AndTOYBOX・キッズラボラトリー4社を、月額・対象年齢・1回の数・交換頻度・プランナー・衛生管理で比較表に整理。子のタイプ別おすすめが3分で決まります。
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/chiiku-subsc-hikaku-4sha.jpg
 area: all
 quickInfo:

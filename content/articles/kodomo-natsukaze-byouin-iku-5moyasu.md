@@ -6,7 +6,7 @@ metaDescription: >-
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 lede: >-
   夏風邪は冬と違って熱が高くなりやすく、ぐったり度合いも分かりにくい。「いま受診」「朝まで様子見」「救急電話」の3択を、子の様子から判断する5つの目安をまとめます。
 quickInfo:

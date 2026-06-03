@@ -5,7 +5,7 @@ metaDescription: 4歳と2歳の兄妹で同時に楽しめる自由研究5テー
 category: today-nani
 categoryName: 今日何する
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 lede: 兄妹の年齢差を欠点ではなく素材として使う自由研究。4歳娘が記録係、2歳息子が触る係。役割分担で同時参加させると、夏休みの2時間が静かに流れます。
 quickInfo:
   ageRanges:

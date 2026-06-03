@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日たべる
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/rinyuushoku-dekinai-kao-awanai-baby.jpg
 lede: >-
   「スプーンを口に入れても顔を背ける」「口を開けてくれない」離乳食を始めたばかりの赤ちゃんに戸惑うママ・パパへ。月齢別の原因と、今日から試せる7つの工夫を体験談つきで紹介します。

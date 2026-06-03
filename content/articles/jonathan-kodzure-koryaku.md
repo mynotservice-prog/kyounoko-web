@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/jonathan-kodzure-koryaku.jpg
 lede: >-
   「ジョナサンって離乳食を温めてくれる？」「ベビーカーで席まで入れる？」「ガストと何が違うの？」をまとめて解決。すかいらーくグループの**ジョナサン**は、**席間広めの店舗が多い＋朝モーニング7-10時の落ち着き＋離乳食温め依頼への余裕**の3点でガストより子連れに優しいファミレス。0-6歳の家族が知っておきたい全知識を、現場目線で保存版にまとめました。

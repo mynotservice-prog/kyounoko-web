@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこいく
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/parkku-pikku-nikku-hitsuyou-mono-list.jpg
 lede: 公園ピクニック、毎回何か忘れて後悔していませんか？必須20アイテムと季節別の追加品、荷物を軽くする最小構成まで、忘れ物ゼロで楽しめるリストを作成しました。
 quickInfo:

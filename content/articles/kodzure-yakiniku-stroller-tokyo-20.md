@@ -4,7 +4,7 @@ title: 子連れ焼肉 ベビーカー入れる店 東京20選【個室・座敷
 metaDescription: >-
   子連れで焼肉を楽しめる東京20店をベビーカー入店OK・個室・座敷・キッズメニュー対応で整理。煙の少ない無煙ロースター・離乳食持ち込みOK店なども。焼肉キング・牛角・叙々苑・トラジ系まで幅広く比較しました。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 category: today-doko
 categoryName: 今日どこ行く
 hero: /hero-ai/kodzure-yakiniku-stroller-tokyo-20.jpg

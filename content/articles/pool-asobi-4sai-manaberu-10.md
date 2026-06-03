@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-nani
 categoryName: 今日なにする
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 lede: プールはただ入るだけでなく、遊び方次第で学びの宝庫。4歳娘と2歳息子が一緒に楽しめる10の遊びを、安全配慮と兄妹差込みで紹介します。
 quickInfo:
   ageRanges:

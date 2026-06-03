@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kotoba-okureru-taiou-2sai.jpg
 lede: 「2歳なのにまだ言葉が少ない」と不安な親向けに、家庭でできる関わり方10、相談目安、発達支援センターの使い方、先輩ママの体験も含めて整理しました。
 quickInfo:

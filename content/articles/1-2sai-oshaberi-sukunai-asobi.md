@@ -5,7 +5,7 @@ metaDescription: まだ会話できない1〜2歳と一緒に楽しめる遊び7
 category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/1-2sai-oshaberi-sukunai-asobi.jpg
 area: all
 quickInfo:

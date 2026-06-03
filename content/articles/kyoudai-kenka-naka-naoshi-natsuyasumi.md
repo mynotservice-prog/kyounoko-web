@@ -5,7 +5,7 @@ metaDescription: 夏休みや連休で兄妹喧嘩が爆増する家庭へ。4�
 category: today-mawasu
 categoryName: 今日まわす
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 lede: 夏休み・GW・年末年始。1日中一緒にいると喧嘩は通常の3倍。普段の仲裁術が効かない長期休みだけの「5パターン対応」を、4歳娘と2歳息子の事例で整理しました。
 quickInfo:
   ageRanges:

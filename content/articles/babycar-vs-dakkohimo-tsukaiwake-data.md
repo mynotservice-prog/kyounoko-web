@@ -5,7 +5,7 @@ metaDescription: "ベビーカーと抱っこ紐、毎回どっち？0-3/4-6/7-1
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-08'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/babycar-vs-dakkohimo-tsukaiwake-data.jpg
 area: tokyo
 quickInfo:

@@ -1,12 +1,12 @@
 ---
 slug: tokyo-shimokita-koenji-asagaya-comparison
-title: 下北沢 vs 高円寺 vs 阿佐ヶ谷｜カルチャー系3駅の子連れ事情データ比較
+title: 【2026年最新】下北沢 vs 高円寺 vs 阿佐ヶ谷｜カルチャー系3駅の子連れ事情データ比較
 metaDescription: >-
   下北沢・高円寺・阿佐ヶ谷のカルチャー3駅、実は子連れ向け店も多い。きょうのこ独自集計3,277店データで店舗数・ベビーカー◎率・ジャンル分布を比較。意外な穴場として使えるエリアを独自データ分析。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-08'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/tokyo-shimokita-koenji-asagaya-comparison.jpg
 lede: >-
   「カルチャー系の街は子連れには向かない」――そんなイメージを覆すきょうのこ独自データ。**下北沢・高円寺・阿佐ヶ谷**の3駅を実データで比較し、意外な子連れ穴場として使えるエリア像を浮き彫りにします。

@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/gotsugo-hattaku-muchi-kodomo.jpg
 lede: 「発達が気になるけどどこに相談？」という親向けに、1〜6歳のサイン15項目、相談先と順番、診断までの流れ、家庭でできる関わり方を実用的に整理しました。
 quickInfo:

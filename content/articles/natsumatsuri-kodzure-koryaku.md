@@ -5,7 +5,7 @@ metaDescription: 0〜6歳と行く夏祭り・盆踊りの歩き方、屋台選�
 category: gyouji
 categoryName: 季節と行事
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-21'
+updatedAt: '2026-06-03'
 hero: /hero-ai/natsumatsuri-kodzure-koryaku.jpg
 area: all
 quickInfo:

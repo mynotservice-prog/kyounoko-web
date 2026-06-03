@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこいく
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 lede: >-
   0〜2歳の子連れキャンプは「装備が9割」。SNSの映えキャンプを参考にすると現地で詰みます。ながみー家が息子1歳半デビューで学んだ削れない装備と省ける装備を共有します。
 quickInfo:

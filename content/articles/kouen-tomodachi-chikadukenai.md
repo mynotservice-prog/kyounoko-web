@@ -5,7 +5,7 @@ metaDescription: "公園で他の子のそばに行けない子は人見知り�
 category: today-mawasu
 categoryName: 今日まわす
 publishedAt: 2026-05-02T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kouen-tomodachi-chikadukenai.jpg
 area: all
 quickInfo:

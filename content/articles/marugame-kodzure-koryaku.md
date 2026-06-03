@@ -5,7 +5,7 @@ metaDescription: 丸亀製麺はベビーカーで入れる？キッズうどん
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
-updatedAt: '2026-05-24'
+updatedAt: '2026-06-03'
 hero: /hero-ai/marugame-kodzure-koryaku.jpg
 area: tokyo
 quickInfo:

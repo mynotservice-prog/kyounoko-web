@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日まわす
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kenka-kyoudai-chuusai-houhou.jpg
 lede: 毎日のように起きる兄弟喧嘩にうんざりしているパパママへ。発達心理の観点から、年齢差別の仲裁法と仲良し兄弟に育つ7つのコツを紹介します。
 quickInfo:

@@ -8,7 +8,7 @@ hero: /hero-ai/babycar-itsukara-tsukau.jpg
 metaDescription: >-
   ベビーカーは生後1ヶ月から使える？A型・B型の切り替え目安、抱っこ紐との使い分け、デビュー前にやっておく3つの準備を先輩ママ10家庭のリアル体験で整理。月齢別の判断ポイントが3分で分かります。
 publishedAt: 2026-05-02T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 area: all
 quickInfo:
   ageRanges:

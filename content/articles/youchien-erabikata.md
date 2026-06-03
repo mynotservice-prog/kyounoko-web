@@ -1,11 +1,11 @@
 ---
 slug: youchien-erabikata
-title: 幼稚園 選び方｜公立私立・教育方針・見学チェックリスト完全ガイド
+title: 【2026年最新】幼稚園 選び方｜公立私立・教育方針・見学チェックリスト完全ガイド
 metaDescription: 幼稚園の選び方を完全ガイド。公立・私立・国立の違い、教育方針、預かり時間、費用、見学チェックリスト、説明会の回り方、入園準備までステップで解説します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
+updatedAt: '2026-06-03'
 hero: /hero/classroom-02.webp
 area: all
 quickInfo:

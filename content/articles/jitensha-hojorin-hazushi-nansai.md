@@ -7,7 +7,7 @@ hero: /hero-ai/jitensha-hojorin-hazushi-nansai.jpg
 metaDescription: >-
   自転車の補助輪外しは何歳から？4〜6歳で挑戦する家庭が多い中、3日で乗れるようになる練習手順を10ステップで解説。ストライダーからの移行・転倒対策・ヘルメット選びまで、実体験ベースで整理しました。
 publishedAt: 2026-05-02T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 area: all
 quickInfo:
   ageRanges:

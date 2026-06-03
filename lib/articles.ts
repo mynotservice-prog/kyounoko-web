@@ -539,11 +539,18 @@ function extractItemList(
   return sorted.length >= 3 ? sorted : null;
 }
 
-// 本文中の "## 手順" "## やり方" "## ステップ" セクションから番号付きリストを
+// 本文中の "## 手順" "## やり方" "## ステップ" 等のセクションから番号付きリスト/H3ステップを
 // HowTo JSON-LD 用のステップ配列に変換。見つからない場合は null。
+//
+// 2026-06: 手順を示すヘッダ語彙を拡張し HowTo schema 対象記事を拡大。
+// 追加: タイムライン/スケジュール/当日の流れ/始め方/ルーティン/段取り/順番/(時系列の)流れ
+// 注意: 「準備」「チェックリスト」は単なる物リストになりがちなので含めない。
+// ※ どのみち内部に H3 ステップ or 番号リストが無ければ steps.length===0 で null を返すため、
+//   見出しを多めに拾っても安全（誤検出は HowTo を出さない）。
 function extractHowTo(markdown: string): FileArticleHowToStep[] | null {
   const lines = markdown.split('\n');
-  const headingRegex = /^##\s+(.*(手順|やり方|ステップ|作り方|進め方|回し方|乗り切り方).*)$/;
+  const headingRegex =
+    /^##\s+(.*(手順|やり方|ステップ|作り方|進め方|回し方|乗り切り方|タイムライン|スケジュール|当日の流れ|始め方|ルーティン|段取り|順番|時間の流れ|1日の流れ).*)$/;
 
   let start = -1;
   for (let i = 0; i < lines.length; i++) {

@@ -5,7 +5,7 @@ metaDescription: 35℃超の猛暑日でも0-6歳と楽しめる東京23区の�
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: 2026-04-19T00:00:00.000Z
-updatedAt: '2026-05-17'
+updatedAt: '2026-06-03'
 hero: /hero-ai/moushobi-suzushii-spots.jpg
 area: tokyo
 quickInfo:

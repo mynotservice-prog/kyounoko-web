@@ -5,7 +5,7 @@ metaDescription: 電子レンジで作る5分のキャラ卵焼き。フライ�
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kodomo-chara-tamagoyaki-rinji-5min.jpg
 area: all
 quickInfo:

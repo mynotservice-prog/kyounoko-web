@@ -5,7 +5,7 @@ metaDescription: "「ガストって離乳食、温めてくれる？」に約15
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-12'
+updatedAt: '2026-06-03'
 hero: /hero-ai/gusto-rinyu-warm-real.jpg
 lede: "結論、ガストの離乳食温めは「店員さんに一言で対応可」が大勢。Pepper配膳ロボが普及した2026年も、約150件の声から見えた声かけのコツと現実的な期待値を、編集部が冷静に整理しました。"
 quickInfo:

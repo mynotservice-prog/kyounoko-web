@@ -5,7 +5,7 @@ metaDescription: 外食で子が食べない問題を防ぐ5つのチェック�
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/gaisyoku-ko-ga-taberu.jpg
 area: all
 quickInfo:

@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-05'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/natsuyasumi-yotei-table-2026.jpg
 lede: >-
   2026年の夏休みを「行き当たりばったり」で過ごすと、後半に親子で疲弊します。0〜6歳の子と6週間の予定表を作る具体テンプレと、遊び・帰省・自由研究のバランス設計を紹介します。

@@ -1,10 +1,10 @@
 ---
 slug: kanto-doubutsuen-1sai-kara-ranking
-title: 関東 1歳から行ける動物園 ベビーカー貸出ありランキング10
+title: 【2026年最新】関東 1歳から行ける動物園 ベビーカー貸出ありランキング10
 metaDescription: >-
   関東で1歳から楽しめる動物園を、ベビーカー貸出・授乳室・おむつ替え対応・歩く距離・園内バス有無で整理。上野・多摩・井の頭・千葉・埼玉こども動物自然公園などをファミリー目線で比較した保存版ランキング。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 category: today-doko
 categoryName: 今日どこ行く
 hero: /hero-ai/kanto-doubutsuen-1sai-kara-ranking.jpg

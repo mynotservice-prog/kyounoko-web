@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-12'
+updatedAt: '2026-06-03'
 hero: /hero-ai/youtube-kawari-ie-asobi.jpg
 area: all
 quickInfo:

@@ -7,7 +7,7 @@ hero: /hero-ai/amenohi-indoor-spots-tokyo-15.jpg
 metaDescription: >-
   雨の日でも安心して遊べる東京の屋内キッズスポット15選。ボーネルンド・キドキド・ASOBono・屋内アスレチック・博物館まで、対象年齢・料金・アクセス・混雑度の具体情報付き。
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 area: tokyo
 quickInfo:
   ageRanges:

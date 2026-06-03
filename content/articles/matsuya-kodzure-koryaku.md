@@ -5,7 +5,7 @@ metaDescription: 松屋はベビーカーで入れる？キッズメニュー、
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/matsuya-kodzure-koryaku.jpg
 area: tokyo
 quickInfo:

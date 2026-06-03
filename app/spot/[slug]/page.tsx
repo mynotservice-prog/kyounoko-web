@@ -11,6 +11,13 @@ import {
 } from '@/lib/spots';
 import type { Spot } from '@/lib/spots';
 import { getAllFileArticles } from '@/lib/articles';
+import { buildSpotJsonLd } from '@/lib/spot-schema';
+import {
+  buildEnjoyByAgeBlocks,
+  buildCrowdAvoidanceText,
+  buildAccessTipsText,
+  buildPreVisitNotes,
+} from '@/lib/spot-narratives';
 
 export const revalidate = 3600;
 
@@ -108,19 +115,17 @@ export default async function SpotPage({ params }: Props) {
     })
     .slice(0, 6);
 
-  // 構造化データ：Place / TouristAttraction
-  const jsonLdPlace = {
-    '@context': 'https://schema.org',
-    '@type': spot.category === 'restaurant' ? 'Restaurant' : 'TouristAttraction',
-    name: spot.name,
-    description: spot.note ?? `${spot.name}は${location}${location ? 'の' : ''}${category}`,
-    address: location
-      ? { '@type': 'PostalAddress', addressLocality: location, addressCountry: 'JP' }
-      : undefined,
-    isAccessibleForFree: spot.budget === 'free',
-    publicAccess: true,
-    inLanguage: 'ja',
-  };
+  // 構造化データ：LocalBusiness 系（Restaurant / Zoo / Park / Museum 等）。
+  // 価格・施設・遊具・混雑・予約・年齢などの kyounoko 固有メタを
+  // amenityFeature / makesOffer / additionalProperty にマッピング。
+  // 詳細は lib/spot-schema.ts 参照。
+  const jsonLdPlace = buildSpotJsonLd(spot, slug);
+
+  // 動的に編集部コメント文を生成（Tier 3: スポット詳細の本文拡張）
+  const enjoyByAgeBlocks = buildEnjoyByAgeBlocks(spot);
+  const crowdAvoidance = buildCrowdAvoidanceText(spot);
+  const accessTips = buildAccessTipsText(spot);
+  const preVisitNotes = buildPreVisitNotes(spot);
   const jsonLdBreadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -314,6 +319,141 @@ export default async function SpotPage({ params }: Props) {
                 💡 穴場ポイント
               </h2>
               <p style={{ fontSize: 13, lineHeight: 1.75, margin: 0 }}>{spot.hiddenTip}</p>
+            </section>
+          )}
+
+          {/* 行く前に知っておきたい注意点 */}
+          {preVisitNotes && (
+            <section style={{ marginBottom: 24 }}>
+              <h2
+                style={{
+                  fontSize: 18,
+                  fontFamily: 'var(--font-mincho)',
+                  fontWeight: 600,
+                  margin: '0 0 8px',
+                }}
+              >
+                行く前に知っておきたい注意点
+              </h2>
+              <p style={{ fontSize: 14, lineHeight: 1.85, margin: 0 }}>{preVisitNotes}</p>
+            </section>
+          )}
+
+          {/* 年齢別の楽しみ方 */}
+          {enjoyByAgeBlocks.length > 0 && (
+            <section style={{ marginBottom: 24 }}>
+              <h2
+                style={{
+                  fontSize: 18,
+                  fontFamily: 'var(--font-mincho)',
+                  fontWeight: 600,
+                  margin: '0 0 8px',
+                }}
+              >
+                年齢別の楽しみ方
+              </h2>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 10 }}>
+                {enjoyByAgeBlocks.map((b) => (
+                  <li
+                    key={b.age}
+                    style={{
+                      padding: '10px 14px',
+                      border: '1px solid var(--line)',
+                      borderRadius: 10,
+                      background: 'var(--paper-card)',
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontFamily: 'var(--font-mincho)',
+                        fontSize: 13,
+                        fontWeight: 700,
+                        color: 'var(--clay-deep)',
+                        marginBottom: 4,
+                      }}
+                    >
+                      {b.label}
+                    </div>
+                    <p style={{ fontSize: 13, lineHeight: 1.8, margin: 0 }}>{b.text}</p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
+          {/* 混雑回避のコツ */}
+          {crowdAvoidance && (
+            <section style={{ marginBottom: 24 }}>
+              <h2
+                style={{
+                  fontSize: 18,
+                  fontFamily: 'var(--font-mincho)',
+                  fontWeight: 600,
+                  margin: '0 0 8px',
+                }}
+              >
+                混雑回避のコツ
+              </h2>
+              <p style={{ fontSize: 14, lineHeight: 1.85, margin: 0 }}>{crowdAvoidance}</p>
+            </section>
+          )}
+
+          {/* アクセスのポイント */}
+          {accessTips && (
+            <section style={{ marginBottom: 24 }}>
+              <h2
+                style={{
+                  fontSize: 18,
+                  fontFamily: 'var(--font-mincho)',
+                  fontWeight: 600,
+                  margin: '0 0 8px',
+                }}
+              >
+                アクセスのポイントと滞在の目安
+              </h2>
+              <p style={{ fontSize: 14, lineHeight: 1.85, margin: 0 }}>{accessTips}</p>
+            </section>
+          )}
+
+          {/* 運営者の現地レポート（一次情報） */}
+          {spot.kidReport && (
+            <section
+              style={{
+                marginBottom: 24,
+                padding: '16px 18px',
+                border: '1px solid var(--line-strong)',
+                borderRadius: 12,
+                background: 'var(--clay-soft)',
+              }}
+            >
+              <div
+                style={{
+                  fontSize: 12,
+                  color: 'var(--clay-deep)',
+                  fontWeight: 700,
+                  marginBottom: 6,
+                  letterSpacing: '.02em',
+                }}
+              >
+                ✅ 運営者が訪問して確認 ({spot.kidReport.visitAge})
+              </div>
+              <h2
+                style={{
+                  fontSize: 18,
+                  fontFamily: 'var(--font-mincho)',
+                  fontWeight: 600,
+                  margin: '0 0 10px',
+                }}
+              >
+                編集部の現地レポート
+              </h2>
+              <dl style={{ margin: 0, fontSize: 13.5, lineHeight: 1.85 }}>
+                <Row label="ベビーカー動線" value={spot.kidReport.strollerNote} />
+                <Row label="混雑と狙い目" value={spot.kidReport.crowdNote} />
+                <Row label="おむつ・授乳" value={spot.kidReport.diaperNote} />
+                <Row label="滞在時間目安" value={spot.kidReport.stayNote} />
+                <Row label="注意したい点" value={spot.kidReport.cautionNote} />
+              </dl>
             </section>
           )}
 

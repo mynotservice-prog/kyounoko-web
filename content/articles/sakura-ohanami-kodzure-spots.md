@@ -5,7 +5,7 @@ metaDescription: 東京都内で子連れお花見におすすめの8スポッ�
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/sakura-ohanami-kodzure-spots.jpg
 area: tokyo
 quickInfo:

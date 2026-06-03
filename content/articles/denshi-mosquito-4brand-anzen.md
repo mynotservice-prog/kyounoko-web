@@ -5,7 +5,7 @@ metaDescription: >-
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 area: all
 lede: >-
   夏の屋外と室内で頼れる電子蚊取り。蚊取り+ファン・蚊取り線香・ベープ電子・おすだけアースの4ブランドを、効果範囲・対象年齢・電源・価格の観点で比較しました。あくまで一例として共有します。

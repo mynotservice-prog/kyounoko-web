@@ -1,13 +1,13 @@
 ---
 slug: kumon-vs-gakken-hikaku
 # old: 公文 vs 学研教室【2-6歳】5項目で比較・どっち選ぶ
-title: 公文と学研どっち？【2-6歳】月謝・宿題量5項目で比較
+title: 【2026年最新】公文と学研どっち？【2-6歳】月謝・宿題量5項目で比較
 metaDescription: >-
   公文と学研どちらに通わせるか迷っていませんか。2-6歳視点でカリキュラム・月謝・宿題量・進度・教室数の5項目を比較表に整理。向き不向きの判断軸、併用の可否、切り替えタイミングまで3分で結論が出せます。
 category: narai
 categoryName: 習い事と学び
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kumon-vs-gakken-hikaku.jpg
 area: all
 quickInfo:

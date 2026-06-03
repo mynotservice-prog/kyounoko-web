@@ -3,7 +3,7 @@ title: '9月の予防接種 4歳までに済ませる確認チェックリスト
 metaDescription: '9月は予防接種の見直しに適した時期。4歳までに済ませる定期・任意接種を、母子手帳の確認ポイント・接種漏れ時の相談先まで含めて整理。最終判断は必ず小児科医にという立場でまとめました。'
 category: yakudatsu
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-18'
+updatedAt: '2026-06-03'
 hero: /hero-ai/9gatsu-yobosesshu-4sai-made-checklist.webp
 area: all
 lede: 9月は秋〜冬の感染症シーズン前に予防接種を見直す時期。4歳までに済ませる定期接種・任意接種を、母子手帳の確認ポイントと接種漏れの相談先までチェックリスト形式でまとめました。

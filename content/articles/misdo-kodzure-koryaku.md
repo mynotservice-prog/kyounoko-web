@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-22'
-updatedAt: '2026-05-22'
+updatedAt: '2026-06-03'
 hero: /hero-ai/misdo-kodzure-koryaku.jpg
 heroAlt: ミスタードーナツのイートイン席で、ドーナツとドリンクを子どもと分け合う家族の様子（イラスト）
 area: all

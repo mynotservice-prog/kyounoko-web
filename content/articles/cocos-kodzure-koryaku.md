@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-12'
+updatedAt: '2026-06-03'
 hero: /hero-ai/cocos-kodzure-koryaku.jpg
 lede: >-
   「子連れファミレスで一番キッズメニューが充実しているのは？」と聞かれたら**ココス**が筆頭候補。キッズプレートのバリエーション・誕生日特典・キッズスペースまで、子連れ家族のために設計されたファミレスを保存版で攻略します。

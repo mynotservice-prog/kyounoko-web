@@ -5,7 +5,7 @@ metaDescription: 子が「習い事辞めたい」と言った時の対処を3�
 category: narai
 categoryName: 習い事と学び
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/naraigoto-yametai-taiou.jpg
 area: all
 quickInfo:

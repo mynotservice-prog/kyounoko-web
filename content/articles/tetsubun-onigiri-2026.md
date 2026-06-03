@@ -6,7 +6,7 @@ metaDescription: >-
 category: gyouji
 categoryName: 季節と行事
 publishedAt: 2026-04-30T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/tetsubun-onigiri-2026.jpg
 area: all
 quickInfo:

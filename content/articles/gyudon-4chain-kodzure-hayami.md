@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 area: all
 lede: >-
   「牛丼チェーンって子連れで入っていいの？」を1ページで解決。**ベビーカー入店・キッズチェア・キッズメニュー・取り分け・離乳食持込・おむつ替え・個室・価格帯**の8項目で、吉野家・すき家・松屋・なか卯を◎○△✕評価しました。

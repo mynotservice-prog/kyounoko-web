@@ -5,7 +5,7 @@ metaDescription: "「バーミヤンで子供と本当に取り分けられる�
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-12'
+updatedAt: '2026-06-03'
 hero: /hero-ai/bamiyan-china-toribunke-real.jpg
 lede: "結論、バーミヤンは「取り分けやすさ★4」の中華ファミレス。約150件の家庭の声を編集部が傾向分析した結果、辛さ調整しやすい定番3品・量の目安・安全配慮ポイントが見えました。2026年最新の子連れ判断材料をフラットに整理します。"
 quickInfo:

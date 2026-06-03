@@ -5,7 +5,7 @@ metaDescription: >-
 category: narai
 categoryName: 習い事と学び
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 area: all
 lede: >-
   スイミング大手のコナミ・セントラル・イトマンを3〜6歳家庭目線の6項目で並べました。価格・振替・コーチ体制・水質管理・付き添いの必要性・送迎を比較し、教室選びの判断材料を整理しています。

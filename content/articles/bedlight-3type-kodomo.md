@@ -5,7 +5,7 @@ metaDescription: >-
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 area: all
 lede: >-
   子どもの寝室で活躍するベッドライト。据置タイプ・クリップタイプ・常夜灯タイプの3種類を、明るさ・タイマー・電池・価格の4軸で比較し、ながみー家の使用感を一例で共有します。

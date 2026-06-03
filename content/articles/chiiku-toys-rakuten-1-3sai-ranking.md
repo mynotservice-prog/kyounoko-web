@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日なにする？
 publishedAt: '2026-04-24'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/chiiku-toys-rakuten-1-3sai-ranking.jpg
 area: national
 quickInfo:

@@ -8,7 +8,7 @@ hero: /hero-ai/storo-nomu-itsukara.jpg
 metaDescription: >-
   ストロー飲みは生後何ヶ月から？マグ卒業の3つのサイン、紙パック・スパウト・ストローマグの練習ステップを月齢別に整理。挫折しがちな赤ちゃんでも進められる10ステップを先輩ママの実体験で解説します。
 publishedAt: 2026-05-02T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 area: all
 interactive: AgeMonthCalculator
 quickInfo:

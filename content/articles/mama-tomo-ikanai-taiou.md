@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日まわす
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/mama-tomo-ikanai-taiou.jpg
 lede: 「ママ友ランチが気まずい」「LINEグループが怖い」そんな悩みは多くのママが経験しています。無理せず子育てを楽しむ7つの方法と、距離感のコツを紹介します。
 quickInfo:

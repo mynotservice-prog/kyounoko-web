@@ -5,7 +5,7 @@ metaDescription: キムチを使わず甘めの味付けで再現する子供向
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kodomo-buta-kimchi-kara-nashi-fp1.jpg
 area: all
 quickInfo:

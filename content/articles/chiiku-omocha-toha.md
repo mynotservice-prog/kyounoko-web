@@ -1,12 +1,12 @@
 ---
 slug: chiiku-omocha-toha
-title: 知育玩具とは｜定義・効果・年齢別おもちゃ選びの完全ガイド
+title: 【2026年最新】知育玩具とは｜定義・効果・年齢別おもちゃ選びの完全ガイド
 metaDescription: >-
   知育玩具とは何か、いつから・どんなおもちゃを選べばよいか、定番ブランドとレンタルサービスまで完全解説。モンテッソーリ・STEM・木製おもちゃの違いや年齢別の選び方を2026年5月時点の情報でやさしく整理しました。
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-30'
+updatedAt: '2026-06-03'
 hero: /hero-ai/chiiku-omocha-toha.jpg
 area: all
 quickInfo:

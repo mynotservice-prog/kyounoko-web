@@ -5,7 +5,7 @@ metaDescription: チーズ・ねぎ・しらす・海苔の4種類の卵焼き�
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kodomo-tamagoyaki-4pattern-bento.jpg
 area: all
 quickInfo:

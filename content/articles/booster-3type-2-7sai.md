@@ -5,7 +5,7 @@ metaDescription: >-
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 area: all
 lede: >-
   2-7歳に使うジュニアシートは大きく3タイプ。ブースター・ハイバック・ISOFIXのどれを選ぶか、価格・対応体重・側面サポート・取付・安全性を2026年版データで整理しました。

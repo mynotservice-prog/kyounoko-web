@@ -7,7 +7,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-23'
-updatedAt: '2026-05-23'
+updatedAt: '2026-06-03'
 hero: /hero-ai/onyasai-kodzure-koryaku.jpg
 heroAlt: しゃぶしゃぶ温野菜の半個室席で、二色鍋のまろやかなだし側で薄切り肉と野菜を子ども用にしっかり火を通して取り分けている家族の様子（イラスト）
 area: all

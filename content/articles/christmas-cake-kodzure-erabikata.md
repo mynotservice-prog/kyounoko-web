@@ -1,12 +1,12 @@
 ---
 slug: christmas-cake-kodzure-erabikata
-title: クリスマスケーキ 子連れ家庭の選び方｜年齢別おすすめ・予約・手作り完全比較【0-6歳】
+title: 【2026年最新】クリスマスケーキ 子連れ家庭の選び方｜年齢別おすすめ・予約・手作り完全比較【0-6歳】
 metaDescription: >-
   子連れ家庭のクリスマスケーキ選び。年齢別おすすめサイズ、人気店比較、予約タイミング、手作りvs購入、アレルゲン配慮、当日の段取りまで0-6歳家族目線で完全解説。
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/christmas-cake-kodzure-erabikata.jpg
 quickInfo:
   ageRanges:

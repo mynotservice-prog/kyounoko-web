@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-21'
-updatedAt: '2026-05-21'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kappa-sushi-kodzure-koryaku.jpg
 area: tokyo
 quickInfo:

@@ -48,9 +48,43 @@ export default async function TagPage({ params }: Props) {
     ],
   };
 
+  // CollectionPage + ItemList JSON-LD（Tier 2 SEO強化）。
+  // タグページは「特定軸で絞り込んだ記事リスト」なので CollectionPage が適切。
+  // article + plan を順序付きで列挙して Google にリスト構造を伝える。
+  const taggedItems: Array<{ url: string; name: string }> = [
+    ...articles.slice(0, 15).map((a) => ({
+      url: `https://kyounoko.jp/article/${a.slug}`,
+      name: a.title,
+    })),
+    ...plans.slice(0, 10).map((p) => ({
+      url: `https://kyounoko.jp/plan/${p.id}`,
+      name: p.title,
+    })),
+  ];
+  const jsonLdCollection = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: `${tag.name}｜きょうのこ`,
+    description: tag.description,
+    url: `https://kyounoko.jp/tag/${slug}`,
+    inLanguage: 'ja',
+    isFamilyFriendly: true,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: taggedItems.length,
+      itemListElement: taggedItems.map((it, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: it.url,
+        name: it.name,
+      })),
+    },
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCollection) }} />
 
       <SiteHeader />
 

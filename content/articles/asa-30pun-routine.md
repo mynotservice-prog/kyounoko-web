@@ -6,7 +6,7 @@ metaDescription: '平日朝の起床6:30〜家出発7:30の60分を30分ブロ�
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/asa-30pun-routine.jpg
 area: all
 quickInfo:

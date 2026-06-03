@@ -6,7 +6,7 @@ metaDescription: 0〜2歳・3〜5歳・6歳以上のお正月の過ごし方。�
 category: gyouji
 categoryName: 季節と行事
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/oshougatsu-kodomo-sugoshikata.jpg
 area: all
 quickInfo:

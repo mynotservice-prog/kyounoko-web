@@ -5,7 +5,7 @@ metaDescription: 0〜6歳の発達マイルストーンを運動・言葉・社�
 category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/hatattsu-mileage-0-6sai-checklist.jpg
 lede: >-
   0〜6歳の発達マイルストーンを「運動」「言葉」「社会性」の3軸で30項目に整理。月齢ごとのチェックリスト、気になる時の相談目安、家庭で伸ばす遊びをセットでまとめました。

@@ -7,7 +7,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-22'
-updatedAt: '2026-05-22'
+updatedAt: '2026-06-03'
 hero: /hero-ai/freshness-burger-kodzure-koryaku.jpg
 heroAlt: フレッシュネスバーガーのカフェのように落ち着いたテーブル席で、キッズセットのバーガーとポテトを子どもと食べる家族の様子（イラスト）
 area: all

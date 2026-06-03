@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-04'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 lede: >-
   子連れランチで一番ありがたいのが**「子が遊んでいる間に親が食べられる」店**。キッズスペース併設のレストラン10選を、年齢別の使いやすさで徹底比較。IKEAレストラン・ショッピングモール内のファミレス・モール併設キッズパークを使えば、土日の家族ランチが格段にラクになります。
 quickInfo:

@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-23'
-updatedAt: '2026-05-23'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kodzure-shabushabu-nabe-anzen-kanzen-guide.jpg
 heroAlt: しゃぶしゃぶ鍋を囲むテーブルで、親が薄切り肉を中までしっかり火を通して子ども用に小さく取り分け、鍋と卓上コンロは大人側にまとめ、子どもは鍋から離れた奥側に座っている家族の様子（イラスト）
 area: all

@@ -7,7 +7,7 @@ hero: /hero-ai/swimming-nansai-kara.jpg
 metaDescription: >-
   スイミングいつから始めるべきか迷っていませんか。0歳のベビースイミングから6歳の本格レッスンまで、目的別のベストスタート時期を整理。主要5社の月謝相場、効果、デメリット、選び方の判断軸まで3分で確認でき、迷わず始められます。
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 area: all
 quickInfo:
   ageRanges:

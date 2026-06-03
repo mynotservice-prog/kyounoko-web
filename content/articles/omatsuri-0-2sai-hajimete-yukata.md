@@ -5,7 +5,7 @@ metaDescription: 0〜2歳のはじめての浴衣デビューを、ながみー�
 category: gyouji
 categoryName: 行事
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 lede: 0〜2歳の浴衣デビューは「着る時間より脱ぐ場面の段取り」が9割。甚平との使い分け、おむつ事情、写真タイミングを我が家の失敗付きで共有します。
 quickInfo:
   ageRanges:

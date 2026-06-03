@@ -7,7 +7,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-23'
-updatedAt: '2026-05-23'
+updatedAt: '2026-06-03'
 hero: /hero-ai/yuzuan-kodzure-koryaku.jpg
 heroAlt: ゆず庵のソファー席で、寿司は4歳の娘・しゃぶしゃぶは大人・取り分けは2歳の息子と、家族それぞれが好きなものを食べ放題で楽しむ子連れ外食の様子（イラスト）
 area: all

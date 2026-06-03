@@ -1,12 +1,12 @@
 ---
 slug: kodomo-kumon-itsukara
-title: 子供の公文（くもん）はいつから？年齢別の効果・月謝・教材完全ガイド
+title: 【2026年最新】子供の公文（くもん）はいつから？年齢別の効果・月謝・教材完全ガイド
 metaDescription: >-
   公文式は何歳から？0歳のBabyKumon、3歳以降の通常、国語・算数・英語の選び方、月謝、効果、デメリット、家庭学習との併用まで2026年版で完全解説します。
 category: narai
 categoryName: 習い事と学び
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-05-29'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kodomo-kumon-itsukara.jpg
 area: all
 quickInfo:

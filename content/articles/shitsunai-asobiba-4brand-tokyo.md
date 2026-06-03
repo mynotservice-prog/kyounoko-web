@@ -5,7 +5,7 @@ metaDescription: >-
 category: today-nani
 categoryName: 今日なにする
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 area: all
 lede: >-
   雨の日や猛暑日に頼りになる屋内遊び場4ブランド、キドキド・ファンタジーキッズリゾート・アネビートリムパーク・ボーネルンドあそびのせかいを子連れ目線の6項目で並べました。料金・対象年齢・混雑・食事・オムツ替え・付き添いを比較しています。

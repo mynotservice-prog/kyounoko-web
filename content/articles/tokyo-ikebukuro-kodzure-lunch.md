@@ -7,7 +7,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-04-20'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/tokyo-ikebukuro-kodzure-lunch.jpg
 lede: >-
   池袋駅はサンシャインシティ・西武・東武・ルミネ・エソラと**駅ビルが多く子連れ動線が強い**エリア。サンシャイン水族館・ナンジャタウン帰りにも使える10店をまとめました。

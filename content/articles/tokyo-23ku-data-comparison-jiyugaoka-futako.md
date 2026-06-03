@@ -5,7 +5,7 @@ metaDescription: "子育てするなら世田谷の3駅、どこが正解？自�
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-08'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/tokyo-23ku-data-comparison-jiyugaoka-futako.jpg
 lede: "結論、世田谷の3駅は「店舗数の自由が丘・大型施設の二子玉川・落ち着きの田園調布」で住み分け。店舗数・ベビーカー◎率・個室率・ジャンル分布をきょうのこ独自集計データで徹底比較した2026年版です。引っ越し先選びの判断材料にどうぞ。"
 quickInfo:

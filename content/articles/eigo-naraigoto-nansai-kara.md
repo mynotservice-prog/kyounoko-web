@@ -1,12 +1,12 @@
 ---
 slug: eigo-naraigoto-nansai-kara
-title: 英語の習い事いつから【0-6歳】年齢別選び方ガイド
+title: 【2026年最新】英語の習い事いつから【0-6歳】年齢別選び方ガイド
 metaDescription: >-
   英語をいつから始めるべきか迷っていませんか。0-1歳・2-3歳・4-6歳の年齢別おすすめを、親子教室・フォニックス・本格英会話で整理。オンラインvs通学の比較、費用相場、スクール選びのコツまで3分で確認でき、迷わず選べます。
 category: narai
 categoryName: 習い事と学び
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/eigo-naraigoto-nansai-kara.jpg
 area: all
 quickInfo:

@@ -9,6 +9,7 @@ import { getFileArticlesByCategory, type FileArticleMeta } from '@/lib/articles'
 import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
 import { getPopularItemsForArticleCategory } from '@/lib/items-catalog';
 import { AdSlot } from '@/components/ads/AdSlot';
+import { getCategoryFaqs } from '@/lib/category-faqs';
 
 export const revalidate = 3600;
 
@@ -105,6 +106,9 @@ export default async function CategoryPage({ params }: Props) {
   // カテゴリ下部に「このカテゴリで人気の商品」3商品を表示（yakudatsu 含む全カテゴリ対応）
   const popularItems = getPopularItemsForArticleCategory(slug, 3);
 
+  // カテゴリ毎の FAQ。リッチリザルト用 + 滞在時間・カバレッジ向上の Tier 2 施策
+  const faqs = getCategoryFaqs(slug);
+
   const jsonLdBreadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -114,9 +118,56 @@ export default async function CategoryPage({ params }: Props) {
     ],
   };
 
+  // CollectionPage + ItemList JSON-LD（Tier 2 SEO強化）
+  // カテゴリページは「記事リスト」であるため、Googleに対して
+  // CollectionPage であることと、含まれる記事一覧を明示する。
+  // mainEntity に ItemList を入れる形が公式推奨パターン。
+  const listedSources: Array<{ slug: string; title: string }> =
+    articles.length > 0
+      ? articles.slice(0, 20).map((a) => ({ slug: a.slug, title: a.title }))
+      : fileArticles.slice(0, 20).map((a) => ({ slug: a.slug, title: a.title }));
+
+  const jsonLdCollection = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: `${category.name}｜きょうのこ`,
+    description: category.description ?? `${category.name}に関する記事一覧。`,
+    url: `https://kyounoko.jp/category/${slug}`,
+    inLanguage: 'ja',
+    isFamilyFriendly: true,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: listedSources.length,
+      itemListElement: listedSources.map((a, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `https://kyounoko.jp/article/${a.slug}`,
+        name: a.title,
+      })),
+    },
+  };
+
+  // FAQPage JSON-LD（リッチリザルト対応）
+  const jsonLdFaq =
+    faqs.length > 0
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqs.map((f) => ({
+            '@type': 'Question',
+            name: f.question,
+            acceptedAnswer: { '@type': 'Answer', text: f.answer },
+          })),
+        }
+      : null;
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCollection) }} />
+      {jsonLdFaq && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
+      )}
 
       <SiteHeader currentCategory={slug as never} />
 
@@ -341,6 +392,61 @@ export default async function CategoryPage({ params }: Props) {
                   もっと見る（商品カタログ）→
                 </Link>
               </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* カテゴリFAQ（リッチリザルト用 + 滞在時間向上） */}
+      {faqs.length > 0 && (
+        <section className="section" style={{ paddingTop: 0 }}>
+          <div className="container">
+            <div className="section-head">
+              <div>
+                <span className="eyebrow">FAQ</span>
+                <h2>{category.name} のよくある質問</h2>
+              </div>
+            </div>
+            <div
+              style={{
+                background: 'var(--paper-card)',
+                border: '1px solid var(--line)',
+                borderRadius: 'var(--radius-lg)',
+                padding: '8px 4px',
+              }}
+            >
+              {faqs.map((f, idx) => (
+                <details
+                  key={idx}
+                  style={{
+                    borderBottom: idx === faqs.length - 1 ? 'none' : '1px solid var(--line)',
+                    padding: '14px 20px',
+                  }}
+                >
+                  <summary
+                    style={{
+                      fontFamily: 'var(--font-mincho)',
+                      fontSize: 16,
+                      fontWeight: 600,
+                      cursor: 'pointer',
+                      lineHeight: 1.55,
+                      color: 'var(--clay-deep)',
+                    }}
+                  >
+                    Q. {f.question}
+                  </summary>
+                  <p
+                    style={{
+                      marginTop: 10,
+                      fontSize: 14.5,
+                      lineHeight: 1.85,
+                      color: 'var(--ink)',
+                    }}
+                  >
+                    {f.answer}
+                  </p>
+                </details>
+              ))}
             </div>
           </div>
         </section>

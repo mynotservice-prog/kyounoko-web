@@ -4,7 +4,7 @@ title: 2-3歳おすすめジュニアシート 体重別・価格別比較15選�
 metaDescription: >-
   2〜3歳のジュニアシート選びを体重別・価格別で比較。チャイルドシート卒業のタイミング、ISOFIX対応、シートベルト固定の違いを整理。アップリカ・コンビ・サイベックス・グレコなど主要15モデルを比較表で紹介。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 category: yakudatsu
 categoryName: 役立つもの
 hero: /hero-ai/junior-seat-2-3sai-hikaku-15.jpg

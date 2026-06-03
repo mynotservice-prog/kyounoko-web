@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-04-20'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/tokyo-nerima-free-park-muryou.jpg
 lede: >-
   練馬区は23区の中でも大型公園の宝庫。光が丘公園・石神井公園など、入場無料で半日以上遊べるスポットがそろっています。この記事では2〜6歳ファミリーが週末に通える練馬区の無料大型公園を5つ、動線・駐車場・遊具のタイプに触れながら紹介します。

@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kodomo-yukata-debut-saizu.jpg
 lede: >-
   子供の浴衣デビューは何歳から？答えは「0歳の甚平からOK」。月齢別の80〜120サイズ早見表、着付け5分の3ステップ、子供でも崩れにくい帯結び3パターン、お祭り当日のトイレ・着崩れ・暑さ対策まで、0〜6歳の親目線で迷わない手順をまとめます。

@@ -5,7 +5,7 @@ metaDescription: 夏の北海道で幼児連れでも安心して楽しめるス
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kosodate-spots-hokkaido-natsu.jpg
 lede: 夏の北海道は幼児連れの旅にこそぴったり。本州が猛暑の時期にも25〜28℃の過ごしやすさで、自然体験と街歩きを両立できる10スポットをご紹介します。
 quickInfo:

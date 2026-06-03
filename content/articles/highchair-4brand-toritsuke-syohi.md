@@ -5,7 +5,7 @@ metaDescription: >-
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 area: all
 lede: >-
   離乳食デビューから本格活躍するハイチェア。ストッケ・ベビービョルン・カトージ・IKEAの4ブランドを、取付・食べこぼし・値段・耐荷重の4軸で比較しました。2026年5月時点のながみー家のリアルも一例として共有します。

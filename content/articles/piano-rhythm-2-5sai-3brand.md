@@ -5,7 +5,7 @@ metaDescription: >-
 category: narai
 categoryName: 習い事と学び
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 area: all
 lede: >-
   リトミックと音楽教室の代表格、ヤマハ・カワイ・ベビーパーク系を2〜5歳家庭目線の6項目で並べました。価格・カリキュラム・グループ規模・楽器導入時期・発表会・振替を比較し、教室選びの判断材料を整理しています。

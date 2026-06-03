@@ -5,7 +5,7 @@ metaDescription: 子供と楽しむおせち料理。年齢別おすすめメニ
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/osechi-kodomo-kantan-menu.jpg
 quickInfo:
   ageRanges:

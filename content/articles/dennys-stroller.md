@@ -1,12 +1,12 @@
 ---
 slug: dennys-stroller
-title: デニーズのベビーカー入店｜店舗タイプ別の通路幅と席選びガイド
+title: 【2026年最新】デニーズのベビーカー入店｜店舗タイプ別の通路幅と席選びガイド
 metaDescription: >-
   デニーズはベビーカーで入れる？郊外型・駅前型・商業施設型での通路幅と入店難易度を整理。畳む必要があるケースと、混雑時の対応、ベビーカー入店成功率を上げる時間帯まで解説します。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-30'
+updatedAt: '2026-06-03'
 hero: /hero-ai/dennys-stroller.jpg
 area: all
 quickInfo:

@@ -1,11 +1,11 @@
 ---
 slug: chiku-naraigoto-kumon-shichida-monte
-title: 知育系習い事3社比較｜2〜6歳の公文・七田・モンテを月謝・向き不向きで決める
+title: 【2026年最新】知育系習い事3社比較｜2〜6歳の公文・七田・モンテを月謝・向き不向きで決める
 metaDescription: 知育系3教室（公文式・七田式・モンテッソーリ）の特徴・対象年齢・月謝・教室雰囲気・向いている子・家庭でできる要素を徹底比較。
 category: narai
 categoryName: 習い事と学び
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/chiku-naraigoto-kumon-shichida-monte.jpg
 area: all
 quickInfo:

@@ -5,7 +5,7 @@ metaDescription: プレーン・かぼちゃ・ココアの3種類の蒸しパ�
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kodomo-renji-mushipan-3pattern-oyatsu.jpg
 area: all
 quickInfo:

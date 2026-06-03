@@ -5,7 +5,7 @@ metaDescription: 雨の日にベビーカーで0〜3歳と行ける都内の屋�
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/amenohi-stroller-spots-tokyo.jpg
 area: tokyo
 quickInfo:

@@ -1,12 +1,12 @@
 ---
 slug: yakiniku-king-baby-chair
-title: 焼肉キングのベビーチェア・キッズチェア｜店舗差・年齢別の使い方・腰ベルト確認の完全ガイド
+title: 【2026年最新】焼肉キングのベビーチェア・キッズチェア｜店舗差・年齢別の使い方・腰ベルト確認の完全ガイド
 metaDescription: >-
   焼肉キング（焼肉きんぐ）のベビーチェア・キッズチェアは、ロードサイドの大型店ほど数も種類もそろう傾向。腰ベルト付きハイチェア・ローチェア・補助イスのどれが何歳に向くか、店舗による違い、煙・やけど対策まで、4歳娘＆2歳息子の親目線でまとめました。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
+updatedAt: '2026-06-03'
 hero: /hero/food-japan-01.webp
 area: all
 quickInfo:

@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kodomo-hitori-asobi-anzen-kankyou.jpg
 lede: >-
   一人遊びは集中力と自己発見の宝庫。1〜5歳の年齢別の集中時間、環境作りの具体手順、親が見守るスタンスを整理し、子の成長と親の休息を両立するコツをまとめました。

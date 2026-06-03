@@ -5,7 +5,7 @@ metaDescription: 夏の子ども写真が「逆光で真っ黒・暑さで顔が
 category: today-nani
 categoryName: 今日何する
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 lede: 夏の子ども写真は「逆光で顔が暗い」「暑さで表情がだるい」「水で機材が壊れる」の3大問題を抱える。ながみー家の経験から、スマホでできる対策を5点に絞りました。
 quickInfo:
   ageRanges:

@@ -5,7 +5,7 @@ metaDescription: お盆の子連れ帰省を0〜3歳と乗り切る完全ガイ�
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-06'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/obon-kisei-shintetsu-baby.jpg
 lede: お盆の帰省は0〜3歳との移動が最大の山場。新幹線・飛行機・車のそれぞれで、子の負担を最小化する座席戦略・荷物・休憩タイミングを年齢別にナビゲートします。
 quickInfo:

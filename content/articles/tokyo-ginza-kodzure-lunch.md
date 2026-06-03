@@ -8,7 +8,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-04-20'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/tokyo-ginza-kodzure-lunch.jpg
 lede: >-
   銀座・有楽町は大人の街イメージですが、**デパート（銀座三越・松屋銀座・GINZA

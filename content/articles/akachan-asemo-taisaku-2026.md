@@ -6,7 +6,7 @@ metaDescription: >-
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-05'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/akachan-asemo-taisaku-2026.jpg
 quickInfo:
   ageRanges:

@@ -6,7 +6,7 @@ metaDescription: 休日の起床〜就寝を、子ども主導の日と親主導
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/shumatsu-1nichi-mawashikata.jpg
 area: all
 quickInfo:

@@ -7,7 +7,7 @@ hero: /hero-ai/babycar-ranking-2026.jpg
 metaDescription: >-
   ベビーカー選びで失敗したくないですよね。アップリカ・コンビ・サイベックス・エアバギーを価格・重量・機能・収納で比較表に整理。新生児A型からB型・軽量セカンドまで、シーン別の最適解と購入時期の目安を3分で確認できます。
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 area: all
 quickInfo:
   ageRanges:

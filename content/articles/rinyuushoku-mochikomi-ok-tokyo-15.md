@@ -4,7 +4,7 @@ title: 離乳食持ち込みOKレストラン 東京の優しい店15選【授�
 metaDescription: >-
   離乳食の持ち込みOKな東京のレストラン15選。授乳室・ベビーチェア・おむつ替え対応・電子レンジ加熱可否・ベビーカー入店までを整理。和食・洋食・カフェ・ファミレスまで子連れに優しいシーン別ラインナップです。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 category: today-doko
 categoryName: 今日どこ行く
 hero: /hero-ai/rinyuushoku-mochikomi-ok-tokyo-15.jpg

@@ -1651,3 +1651,12 @@
   2. URL 数が急増したが、IndexNow 1日上限 10,000 に対してまだ余裕あり（現在2割使用）。コンテンツ拡張ペースが続いても max=9000 設定で当面安全。
   3. 来週も同手順（build → submit → log → commit）で問題なし。
   4. git pull --rebase 時に `.git/ORIG_HEAD.lock` の残骸が原因で fatal が発生したが、`git fetch origin main` で確認した結果 ローカル HEAD = origin/main で同期済みだったため pull スキップで実害なし。次回も同じ症状が出る可能性があるため、もし pull が失敗したら `git fetch && git rev-list --left-right --count HEAD...origin/main` で同期状況を確認すれば判断できる。
+- **⚠️ commit/push 未完了**: 本セッションのサンドボックス環境では `.git/index.lock` / `.git/ORIG_HEAD.lock` を `rm` できない（FUSE マウントが unlink を拒否、`Operation not permitted`）。git add までは index 更新成功（`docs/scheduled-log.md` `docs/indexnow-submitted.log` `docs/indexnow-queue.txt` の3ファイルが staged）したが、`git commit` で再度 index.lock 作成失敗。**IndexNow 送信自体は成功**（Bing 200 / Yandex 202 / 2,087 URL 受理済み）なので本タスクの主目的は達成。ながみーさんの手で次回ターミナルから以下を実行すれば反映完了:
+  ```
+  cd ~/Developer/kyounoko-web
+  rm -f .git/*.lock
+  git add docs/scheduled-log.md docs/indexnow-submitted.log docs/indexnow-queue.txt
+  git commit -m "chore(seo): indexnow weekly log 2026-06-01"
+  git push origin main
+  ```
+  もしくは既に staged 状態が残っていれば `rm -f .git/*.lock && git commit -m "..." && git push origin main` だけで OK。

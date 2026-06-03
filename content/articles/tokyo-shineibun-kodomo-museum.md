@@ -5,7 +5,7 @@ metaDescription: 夏休みに使える東京の子連れ博物館・科学館10�
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-08'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/tokyo-shineibun-kodomo-museum.jpg
 lede: >-
   暑すぎる夏休みは室内施設が頼り。東京で0〜6歳と楽しめる博物館・科学館・水族館を10箇所ピックアップし、料金・所要時間・年齢適合・アクセスを子連れ視点で整理しました。

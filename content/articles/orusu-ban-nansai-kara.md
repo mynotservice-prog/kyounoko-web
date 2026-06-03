@@ -8,7 +8,7 @@ hero: /hero-ai/orusu-ban-nansai-kara.jpg
 metaDescription: >-
   お留守番は何歳から始めて大丈夫？小学校入学前の短時間留守の判断軸と、安全ルール・連絡手段・近所の協力体制まで実体験ベースで整理。家庭で決める7つのルールと年齢別の留守番時間目安を解説します。
 publishedAt: 2026-05-02T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 area: all
 quickInfo:
   ageRanges:

@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこいく
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 lede: 子連れBBQは食事の場ではなく「外で過ごす5時間の段取り」。0歳の昼寝、2歳の脱走、4歳の退屈。3つの軸で持ち物を組むと、現地で慌てません。
 quickInfo:
   ageRanges:

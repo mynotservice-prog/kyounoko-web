@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-04-20'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/tokyo-meguro-weekday-hidden.jpg
 lede: >-
   目黒区の平日午前は、0〜3歳連れにとってゴールデンタイム。定番の大型公園は空いているし、児童館・図書館のおはなし会も平日メイン。この記事では目黒区で0〜3歳とゆったり過ごせる穴場的な公園と屋内スポットをまとめました。

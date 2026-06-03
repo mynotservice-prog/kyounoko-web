@@ -5,7 +5,7 @@ metaDescription: >-
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 area: all
 lede: >-
   ベビーカーはA型・B型・バギーで使える時期も重さも全く違います。価格・重量・対象月齢・折りたたみサイズ・タイヤ・フード・ハンドルの7項目で並べ、ながみー家の使用感を一例として整理しました。

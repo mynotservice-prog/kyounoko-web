@@ -4,7 +4,7 @@ title: 2歳のかんしゃく対応 効果のあった声かけTOP10【先輩マ
 metaDescription: >-
   2歳のかんしゃく・激しい泣き叫びにどう対応する？先輩ママ150人の声から、実際に「落ち着いた」「収まりやすかった」と評価された声かけTOP10と、やってしまいがちなNGパターンを整理。場面別フレーズ集つき。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 category: today-mawasu
 categoryName: 今日どう回す？
 hero: /hero-ai/2sai-kanshaku-koekake-top10.jpg

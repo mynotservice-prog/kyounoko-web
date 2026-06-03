@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-08'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/tokyo-line-family-friendly-ranking.jpg
 lede: >-
   「どの沿線に住むと子連れに便利？」きょうのこ独自集計で東京40路線を分析。**駅あたり店舗数×ベビーカー◎率**で算出した「路線家族度TOP10」を発表します。引っ越し・保育園選びの独自データ。

@@ -5,7 +5,7 @@ metaDescription: 1歳半〜3歳の幼児食完了期・共働き家庭向けの�
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-12'
+updatedAt: '2026-06-03'
 hero: /hero-ai/youjishoku-kanryouki-1week-rota.jpg
 area: all
 quickInfo:

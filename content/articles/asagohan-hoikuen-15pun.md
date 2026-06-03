@@ -5,7 +5,7 @@ metaDescription: 朝起きて15分で作って食べて登園準備まで終わ�
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/asagohan-hoikuen-15pun.jpg
 area: all
 quickInfo:

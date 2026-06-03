@@ -7,7 +7,7 @@ category: yakudatsu
 categoryName: 役立つもの
 hero: /hero-ai/dakkohimo-ranking-2026.jpg
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 area: all
 quickInfo:
   ageRanges:

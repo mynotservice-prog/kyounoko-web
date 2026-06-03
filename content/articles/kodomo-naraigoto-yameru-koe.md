@@ -1,11 +1,11 @@
 ---
 slug: kodomo-naraigoto-yameru-koe
-title: 習い事 やめる声かけ｜判断基準・親の伝え方・先生への連絡完全ガイド
+title: 【2026年最新】習い事 やめる声かけ｜判断基準・親の伝え方・先生への連絡完全ガイド
 metaDescription: 子供の習い事を辞める時の声かけと判断基準を完全ガイド。本人への伝え方、先生への連絡、円満退会の流れ、その後のフォローまで実体験ベースで紹介します。
 category: narai
 categoryName: 習い事
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-06-02'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kodomo-naraigoto-yameru-koe.jpg
 area: all
 quickInfo:

@@ -5,7 +5,7 @@ metaDescription: なか卯はベビーカーで入れる？親子丼ハーフ/�
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/nakau-kodzure-koryaku.jpg
 area: tokyo
 quickInfo:

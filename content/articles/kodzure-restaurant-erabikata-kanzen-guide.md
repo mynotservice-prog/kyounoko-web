@@ -3,7 +3,7 @@ slug: kodzure-restaurant-erabikata-kanzen-guide
 title: 子連れレストランの選び方完全ガイド｜段差・座敷・授乳室・アレルゲンまで【2026】
 metaDescription: ベビーカーで入れる？座敷ある？離乳食持ち込みOK？子連れ外食で失敗しない12のチェックポイントを完全網羅。チェーン33ブランドの実データつき。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-22'
+updatedAt: '2026-06-03'
 category: today-taberu
 categoryName: 今日何食べる
 hero: /hero-ai/kodzure-restaurant-erabikata-kanzen-guide.jpg

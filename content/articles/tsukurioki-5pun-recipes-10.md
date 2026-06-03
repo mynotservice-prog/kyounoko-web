@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日たべる
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/tsukurioki-5pun-recipes-10.jpg
 lede: 「平日の夕食を15分以内で出したい」そんなワーママの救世主が5分作り置き。週末1時間で10品仕込めば、月〜金のごはんがメインおかず＋副菜2品で完成します。
 speakableSummary: >-

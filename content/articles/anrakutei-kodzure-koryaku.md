@@ -7,7 +7,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-23'
-updatedAt: '2026-05-23'
+updatedAt: '2026-06-03'
 hero: /hero-ai/anrakutei-kodzure-koryaku.jpg
 heroAlt: 安楽亭の座敷席で、親が網の上の肉を中までしっかり焼いて子ども用に小さく取り分け、子どもは焼き網から離れた壁側・奥の席に座って取り分けを待っている家族の様子（イラスト）
 area: all

@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-08'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/tokyo-station-kodzure-shop-density-top20-2026.jpg
 lede: >-
   子連れで「とりあえずどこか食べに行こう」と思った時、**選択肢の多さ**は最重要の判断基準。きょうのこ独自集計で484駅×3,277店から「子連れOK店が多い駅TOP20」を抽出しました。

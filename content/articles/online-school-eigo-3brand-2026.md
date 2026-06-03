@@ -5,7 +5,7 @@ metaDescription: >-
 category: narai
 categoryName: 習い事と学び
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 area: all
 lede: >-
   子ども向けオンライン英会話の代表格、リップルキッズパーク・QQキッズ・グローバルクラウンを4〜6歳家庭目線の6項目で並べました。価格・講師の質・予約のしやすさ・タブレット対応・振替・教材を比較して整理しています。

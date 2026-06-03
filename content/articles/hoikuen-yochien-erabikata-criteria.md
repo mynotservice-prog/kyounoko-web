@@ -7,7 +7,7 @@ metaDescription: >-
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-08'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/hoikuen-yochien-erabikata-criteria.jpg
 area: all
 quickInfo:

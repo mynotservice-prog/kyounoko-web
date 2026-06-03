@@ -5,7 +5,7 @@ metaDescription: イヤイヤ期2〜3歳が静かに集中する遊び5選。水
 category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/iyaiya-shuuchu-asobi.jpg
 area: all
 quickInfo:

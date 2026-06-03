@@ -5,7 +5,7 @@ metaDescription: >-
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 area: all
 lede: >-
   抱っこ紐の主役エルゴ・ベビービョルン・アップリカを7項目で並べました。価格・対象月齢・抱き方・腰ベルト・通気性・付け外し・洗濯のどこに差が出るのかを、ながみー家の使用感を一例にまとめます。

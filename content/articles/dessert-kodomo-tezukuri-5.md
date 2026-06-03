@@ -5,7 +5,7 @@ metaDescription: 幼児と一緒に作れる簡単お菓子を5種厳選。材�
 category: today-taberu
 categoryName: 今日何食べる
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/dessert-kodomo-tezukuri-5.jpg
 lede: 3歳になると「お手伝いしたい！」が爆発する時期。混ぜる・丸める・飾るなど、子どもに任せる工程を設計した5つのレシピで、週末のおやつ作りを家族の時間に。
 quickInfo:

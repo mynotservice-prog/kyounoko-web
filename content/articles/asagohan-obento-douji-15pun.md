@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日たべる
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/asagohan-obento-douji-15pun.jpg
 lede: 出発まで残り15分、朝ごはんとお弁当を同時進行で完成させるワーママの技術。逆算タイムライン、前夜の仕込み、同時調理の3原則を体験談つきで紹介します。
 quickInfo:

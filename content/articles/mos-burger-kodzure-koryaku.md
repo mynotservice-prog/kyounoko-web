@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-22'
-updatedAt: '2026-05-22'
+updatedAt: '2026-06-03'
 hero: /hero-ai/mos-burger-kodzure-koryaku.jpg
 heroAlt: モスバーガーのテーブル席で、子ども向けのワイワイセットのバーガーとポテトを取り分けている家族の様子（イラスト）
 area: all

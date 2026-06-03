@@ -8,7 +8,7 @@ hero: /hero-ai/hitori-hamigaki-nansai-kara.jpg
 metaDescription: >-
   ひとり歯磨きは何歳から始める？仕上げ磨きはいつまで？3歳の自分磨きデビューから10歳の仕上げ磨き卒業までの5段階を年齢別に整理。むし歯予防のチェックポイントと先輩ママの工夫まで3分で確認できます。
 publishedAt: 2026-05-02T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 area: all
 quickInfo:
   ageRanges:

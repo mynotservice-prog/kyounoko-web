@@ -5,7 +5,7 @@ metaDescription: 2〜4歳の「自分で食べたい」気持ちを応援する�
 category: today-taberu
 categoryName: 今日何食べる
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kodomo-hitori-de-taberareru-5.jpg
 lede: 「自分で食べたい！」の時期が来たら、献立を見直す絶好のチャンス。手づかみ・フォーク初心者の子が一人でパクパク食べられる5パターンを紹介します。
 quickInfo:

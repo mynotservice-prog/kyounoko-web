@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 area: all
 lede: >-
   「結局どのファミレスがうちの子連れに合うのか」を1ページで解決。**ベビーカー入店・キッズチェア・キッズメニュー・取り分け・離乳食持込・おむつ替え・個室・価格帯**の8項目を、4歳娘と2歳息子を連れて実訪問した30代パパ目線で◎○△✕評価しました。

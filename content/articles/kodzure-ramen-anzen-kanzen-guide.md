@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-24'
-updatedAt: '2026-05-24'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kodzure-ramen-anzen-kanzen-guide.jpg
 heroAlt: ラーメン店のボックス席で、親が子ども用にラーメンの麺を短く切り、スープをお湯で薄めて人肌まで冷ましてから取り分け、熱い丼は子どもから離れた大人側に置いている家族の様子（イラスト）
 area: all

@@ -7,7 +7,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-04-20'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/tokyo-shinjuku-kodzure-lunch.jpg
 lede: >-
   新宿駅周辺で子連れランチの店選びは難しい…。ベビーカーごと入れる店、キッズメニューがある店、個室がある店を条件別に10選集めました。駅ビル中心に動線を組むと、0〜6歳連れでも迷いません。

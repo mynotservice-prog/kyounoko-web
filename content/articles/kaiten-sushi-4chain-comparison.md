@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-21'
+updatedAt: '2026-06-03'
 area: all
 lede: >-
   「結局、子連れの回転寿司はどこを選べばいい？」を1ページで決着。**ベビーカー入店・キッズチェア・キッズメニュー・取り分け・離乳食持込・おむつ替え・個室・価格帯**の8項目で、スシロー・くら寿司・はま寿司・かっぱ寿司を◎○△✕評価しました。

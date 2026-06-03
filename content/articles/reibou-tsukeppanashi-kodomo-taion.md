@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日まわす
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 lede: >-
   結論、つけっぱなしの方が安全な夜は確実にあります。2歳と4歳がいるながみー家が試行錯誤の末に落ち着いた、設定温度・服装・タイマー・体温チェックの夏夜ルール5つを公開。2026年版・安心して朝まで寝かせるための実体験ベースの判断基準です。
 quickInfo:

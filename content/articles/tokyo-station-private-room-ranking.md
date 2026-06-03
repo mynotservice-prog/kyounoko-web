@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-08'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/tokyo-station-private-room-ranking.jpg
 lede: >-
   子連れ会食で「個室を取れるか」は失敗確率を大きく左右します。きょうのこ独自集計（3,277店）から**個室・座敷率TOP15駅**を発表。お食い初め・誕生日・帰省時の集合場所選びに使える独自データです。

@@ -5,7 +5,7 @@ metaDescription: 大戸屋はベビーカーで入れる？お子様メニュー
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/ootoya-kodzure-koryaku.jpg
 area: tokyo
 quickInfo:

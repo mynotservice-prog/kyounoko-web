@@ -4,7 +4,7 @@ title: 入園準備 名前付け時短テク10選【保育園・幼稚園グッ�
 metaDescription: >-
   保育園・幼稚園の入園準備で大量発生する名前付け。スタンプ・シール・お名前タグ・タグタグ・タグ印刷の比較、布製品・プラ・洋服・お弁当箱・靴下まで素材別の時短テクを10選で整理しました。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 category: yakudatsu
 categoryName: 役立つもの
 hero: /hero-ai/nyuuen-namaetsuke-jitan-tech-10.jpg

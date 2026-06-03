@@ -5,7 +5,7 @@ metaDescription: 包丁を使わず手でちぎるキャベツしゃぶしゃぶ
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kodomo-cabbage-shabushabu-houchou-fuyou.jpg
 area: all
 quickInfo:

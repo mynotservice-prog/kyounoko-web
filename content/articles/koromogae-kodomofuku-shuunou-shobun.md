@@ -4,7 +4,7 @@ title: 衣替え 子供服の収納テクと処分基準【先輩ママ200人調
 metaDescription: >-
   子供服の衣替えで毎回パンパンになる収納問題。先輩ママ200人の声を集計し、サイズ別たたみ方・処分基準・お下がり保管ルール・買い替えタイミングまでを整理。0〜6歳の家庭で年2回ラクに回せる収納テクをまとめました。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 category: today-mawasu
 categoryName: 今日どう回す？
 hero: /hero-ai/koromogae-kodomofuku-shuunou-shobun.jpg

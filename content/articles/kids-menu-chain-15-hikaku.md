@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kids-menu-chain-15-hikaku.jpg
 lede: >-
   「結局どのチェーンのキッズメニューが一番うちの子に合う？」を1ページで解決。**価格・対象年齢・アレルゲン・取り分け可否・ドリンクバー無料年齢**を15チェーン横並びで比較し、0-6歳の家族目線で最適な選び方を提示します。

@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kodomo-shindansho-arerugi-taisaku.jpg
 lede: >-
   子どもの3大アレルギー（食物・アトピー・喘息）の見分け方、検査の受け方、家庭対応を整理。0〜6歳の時期に合わせた対策と、救急受診の目安まで実用的にまとめました。

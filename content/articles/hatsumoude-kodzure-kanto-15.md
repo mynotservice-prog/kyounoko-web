@@ -5,7 +5,7 @@ metaDescription: 初詣の子連れ完全ガイド。関東の安全な神社15�
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/hatsumoude-kodzure-kanto-15.jpg
 quickInfo:
   ageRanges:

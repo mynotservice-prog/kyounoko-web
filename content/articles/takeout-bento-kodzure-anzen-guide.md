@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-23'
-updatedAt: '2026-05-23'
+updatedAt: '2026-06-03'
 hero: /hero-ai/takeout-bento-kodzure-anzen-guide.jpg
 heroAlt: 公園のレジャーシートで、親が保冷バッグから取り出したテイクアウト弁当を子ども用に薄味・少量で取り分けている様子（イラスト）
 area: all

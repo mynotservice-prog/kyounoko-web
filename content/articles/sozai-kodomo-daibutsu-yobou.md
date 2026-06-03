@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日まわす
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/sozai-kodomo-daibutsu-yobou.jpg
 lede: >-
   子どもの死因1位は不慮の事故。実は家庭内で起きる怪我の8割は、事前対策で防げるとされます。年齢別の危険箇所と25項目チェックリストで、今日から「ガチで安全」な家づくりを始めましょう。

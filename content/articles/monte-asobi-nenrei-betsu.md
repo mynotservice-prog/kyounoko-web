@@ -7,7 +7,7 @@ hero: /hero-ai/monte-asobi-nenrei-betsu.jpg
 metaDescription: >-
   モンテッソーリ教育の敏感期に基づき、0歳・1歳・2歳・3歳・4-6歳の年齢別に家でできる遊び20選を紹介。100均素材と身近な道具で再現できる具体的な手順、観察ポイント、準備物を3層で開示した保存版。
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 area: all
 quickInfo:
   ageRanges:

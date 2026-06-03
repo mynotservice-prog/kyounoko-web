@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-04-20'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/tokyo-suginami-stroller-lunch.jpg
 lede: >-
   杉並区は子連れに優しいカフェ・定食屋が多いエリア。でも0〜2歳連れでベビーカーのまま入れる店は限られます。この記事では高円寺・阿佐ヶ谷・荻窪・西荻窪の4駅エリアから、ベビーカーで入りやすいランチ候補を10件、ママ目線でまとめました。

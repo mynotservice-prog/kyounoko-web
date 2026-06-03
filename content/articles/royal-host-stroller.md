@@ -1,11 +1,11 @@
 ---
 slug: royal-host-stroller
-title: ロイヤルホストのベビーカー入店｜通路幅・席タイプ・店舗別の入りやすさ
+title: 【2026年最新】ロイヤルホストのベビーカー入店｜通路幅・席タイプ・店舗別の入りやすさ
 metaDescription: ロイヤルホストはベビーカーで入れる？通路幅・席タイプ・畳む必要があるかを店舗タイプ別に整理。郊外型・駅前型・商業施設型で異なる対応と、混雑時間の回避法を保存版でまとめます。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
+updatedAt: '2026-06-03'
 hero: /hero/food-japan-01.webp
 area: all
 quickInfo:

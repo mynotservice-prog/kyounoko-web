@@ -7,7 +7,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-04-20'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/tokyo-omotesando-kodzure-lunch.jpg
 lede: >-
   表参道・原宿は大人の街イメージですが、**表参道ヒルズ・東急プラザ表参道原宿**は子連れ動線が整い、カフェ兼用で使える店が揃います。10店を条件別にまとめました。

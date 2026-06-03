@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-nani
 categoryName: 今日なにする
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 lede: 熱中症のサインは年齢で出方が変わります。2歳息子は「機嫌」、4歳娘は「口数」。ながみー家が公園で実際に拾った初期サイン3つと、その場の動き方を共有します。
 quickInfo:
   ageRanges:

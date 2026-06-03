@@ -5,7 +5,7 @@ metaDescription: >-
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 area: all
 lede: >-
   0歳から7歳まで使えるロングユースのチャイルドシートを、コンビ・アップリカ・joie・カトージ・レカロの5ブランドで比較。価格・ISOFIX・回転機構などの7項目を、2026年5月時点でまとめます。

@@ -1,11 +1,11 @@
 ---
 slug: hoikuen-erabikata
-title: 保育園 選び方｜認可・認可外・見学チェックリスト・点数完全ガイド
+title: 【2026年最新】保育園 選び方｜認可・認可外・見学チェックリスト・点数完全ガイド
 metaDescription: 保育園の選び方を完全ガイド。認可・認可外・小規模の違い、見学チェックリスト、点数・指数計算、申込時期、入園準備までを共働き家庭向けに整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-30'
+updatedAt: '2026-06-03'
 hero: /hero-ai/hoikuen-erabikata.jpg
 area: all
 quickInfo:

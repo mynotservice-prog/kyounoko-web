@@ -1,11 +1,11 @@
 ---
 slug: kodomo-naraigoto-tsuduki-kotsu
-title: 習い事 続けるコツ｜やる気・スランプ・送迎を乗り越える親のサポート術
+title: 【2026年最新】習い事 続けるコツ｜やる気・スランプ・送迎を乗り越える親のサポート術
 metaDescription: 子供の習い事を続けるコツを完全ガイド。やる気の波・スランプ期・送迎負担を乗り越える親のサポート、辞めるべきか続けるかの判断軸を実体験で紹介します。
 category: narai
 categoryName: 習い事
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-06-02'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kodomo-naraigoto-tsuduki-kotsu.jpg
 area: all
 quickInfo:

@@ -5,7 +5,7 @@ metaDescription: >-
   離乳食食材セットの宅配サービスを比較。コープデリ・パルシステム・オイシックス・カインデスト・the
   kindestなど主要5社の価格・配達範囲・無添加対応・離乳食メニューを2026年版で整理。月齢別の選び方も紹介。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 category: yakudatsu
 categoryName: 役立つもの
 hero: /hero-ai/rinyuushoku-shokuzai-takuhai-hikaku-2026.jpg

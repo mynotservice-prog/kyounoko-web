@@ -1,12 +1,12 @@
 ---
 slug: yakiniku-king-stroller
-title: 焼肉キング ベビーカーで入店できる？店舗差・席までの動線・煙対策の完全ガイド
+title: 【2026年最新】焼肉キング ベビーカーで入店できる？店舗差・席までの動線・煙対策の完全ガイド
 metaDescription: >-
   焼肉キング（焼肉きんぐ）はベビーカーで入店できる？ロードサイドの大型店なら通路が広く入店しやすく、SC内型は館内動線が便利。席までの動線、テーブル横に置けるか、煙・やけど対策、抱っこ紐との使い分けまで、4歳娘＆2歳息子の親目線でまとめました。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
+updatedAt: '2026-06-03'
 hero: /hero/food-japan-01.webp
 area: all
 quickInfo:

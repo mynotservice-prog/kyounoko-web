@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-12'
+updatedAt: '2026-06-03'
 hero: /hero-ai/yubi-syabu-yameru-timing-houhou.jpg
 lede: 指しゃぶりは3歳頃までは自然な行動。4〜5歳以降も続くと歯並びに影響します。卒業のタイミング、無理なくやめさせる方法、歯科受診の目安を年齢別に整理しました。
 quickInfo:

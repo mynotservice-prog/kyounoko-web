@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-04-20'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/tokyo-minato-roppongi-lunch.jpg
 lede: >-
   港区・六本木エリアは「大人の街」イメージが強いですが、六本木ヒルズ・東京ミッドタウンなど大型商業施設のレストラン街は意外なほど子連れに優しい。この記事では2〜6歳ファミリーが六本木・麻布十番で安心してランチを楽しめる選び方をまとめました。

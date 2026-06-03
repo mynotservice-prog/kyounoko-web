@@ -5,7 +5,7 @@ metaDescription: 幼児が食べやすい固さ・味付けで作る牛肉レシ
 category: today-taberu
 categoryName: 今日何食べる
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/gyuuniku-ryouri-kodomo-okiniiri.jpg
 lede: 牛肉は鉄分・たんぱく質の宝庫ですが、「噛み切れない」「味が濃すぎる」で幼児が食べない失敗も多め。子が進んで食べる7レシピを、分量・手順とともに紹介します。
 quickInfo:

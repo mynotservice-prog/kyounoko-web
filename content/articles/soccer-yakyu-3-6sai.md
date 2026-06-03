@@ -6,7 +6,7 @@ metaDescription: >-
 category: narai
 categoryName: 習い事と学び
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/soccer-yakyu-3-6sai.jpg
 area: all
 quickInfo:

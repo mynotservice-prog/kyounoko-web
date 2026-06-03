@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-05-25T00:00:00.000Z
-updatedAt: '2026-05-26'
+updatedAt: '2026-06-03'
 hero: /hero-ai/jiyukenkyu-kit-osusume-2026.jpg
 area: all
 quickInfo:

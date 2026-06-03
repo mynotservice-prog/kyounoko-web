@@ -8,7 +8,7 @@ hero: /hero-ai/dakkohimo-itsukara-shinseiji.jpg
 metaDescription: >-
   抱っこ紐は新生児から使える？エルゴはいつから？月齢別の使い分け、新生児用インサートの要否、首すわり前後の注意点、3歳前後の卒業タイミングまで先輩ママの実体験で整理。判断ポイントが3分で分かります。
 publishedAt: 2026-05-02T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 area: all
 interactive: BabyCarRouteEstimator
 quickInfo:

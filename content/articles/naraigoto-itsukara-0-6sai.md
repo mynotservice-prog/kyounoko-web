@@ -1,13 +1,13 @@
 ---
 slug: naraigoto-itsukara-0-6sai
-title: 習い事いつから？0-6歳おすすめ開始時期と種類別ガイド
+title: 【2026年最新】習い事いつから？0-6歳おすすめ開始時期と種類別ガイド
 category: narai
 categoryName: 習い事と学び
 hero: /hero-ai/naraigoto-itsukara-0-6sai.jpg
 metaDescription: >-
   習い事は何歳から？0歳のリトミックから6歳の本格レッスンまで、ジャンル別の開始時期と費用相場を整理。スイミング・体操・英語・ピアノ・サッカーの5大習い事を年齢別に比較し、家庭の優先順位の考え方まで解説します。
 publishedAt: 2026-05-02T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 area: all
 quickInfo:
   ageRanges:

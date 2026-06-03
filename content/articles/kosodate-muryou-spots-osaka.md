@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kosodate-muryou-spots-osaka.jpg
 lede: >-
   週末の予算を気にせず、子連れでも一日楽しめる。実はこの15スポット、大阪で「0円〜260円・予約不要・1日中遊べる」を全クリアしたガチで穴場のリスト。年間で7〜10万円の節約効果まで開示します。

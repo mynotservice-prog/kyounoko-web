@@ -7,7 +7,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/ikea-restaurant-kodzure-koryaku.jpg
 lede: >-
   「IKEAって子連れに優しいって本当？」「離乳食って無料でもらえるの？」「スモーランドは何歳から？」——IKEAレストランの**ベビーカー動線・キッズメニュー・離乳食無料サービス・スモーランド預け**まで0-6歳の家族目線で完全解説します。

@@ -5,7 +5,7 @@ metaDescription: "ロイヤルホストで誕生日・記念日を過ごした�
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-12'
+updatedAt: '2026-06-03'
 hero: /hero-ai/royal-host-kinenbi-real.jpg
 lede: "結論、ロイヤルホストは「上質ファミレス」として記念日支持率の高いライン。約120件の家庭の声を編集部が傾向分析し、ボックス席・誕生日対応・サービスの質のリアルを2026年版でフラットに整理しました。"
 quickInfo:

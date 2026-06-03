@@ -5,7 +5,7 @@ metaDescription: ルー不使用、トマトベースの優しい辛さゼロカ
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kodomo-renji-curry-roux-nashi-tomato-base.jpg
 area: all
 quickInfo:

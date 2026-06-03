@@ -14,7 +14,16 @@ const nextConfig: NextConfig = {
   },
 
   async headers() {
+    // CDN（Cloudflare）に edge キャッシュを効かせるための共通 Cache-Control。
+    // - max-age=0, must-revalidate: ブラウザは毎回再検証（ユーザーに常に新鮮なHTMLを返す）
+    // - s-maxage / CDN-Cache-Control: CDN（Cloudflare）には 1h キャッシュさせる
+    // - stale-while-revalidate=86400: 1h過ぎても 24h は古いキャッシュを返しつつ裏で再取得
+    // - Cloudflare は CDN-Cache-Control を最優先、なければ s-maxage を尊重する仕様
+    const edgeCache = 'public, max-age=0, must-revalidate, s-maxage=3600, stale-while-revalidate=86400';
+    const cdnCache = 'public, max-age=3600, stale-while-revalidate=86400';
+
     return [
+      // 全パス共通のセキュリティヘッダ
       {
         source: '/(.*)',
         headers: [
@@ -22,6 +31,73 @@ const nextConfig: NextConfig = {
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+        ],
+      },
+      // 静的HTMLとして扱ってよいページ群を CDN にキャッシュさせる。
+      // Next.js の ISR (revalidate=3600) と整合させ、CF edge HIT 率を上げる。
+      // article/spot/category/tag/station/plan は全部 HTML 配信＆動的データなしなのでキャッシュOK。
+      {
+        source: '/article/:slug*',
+        headers: [
+          { key: 'Cache-Control', value: edgeCache },
+          { key: 'CDN-Cache-Control', value: cdnCache },
+          { key: 'Cloudflare-CDN-Cache-Control', value: cdnCache },
+        ],
+      },
+      {
+        source: '/spot/:slug*',
+        headers: [
+          { key: 'Cache-Control', value: edgeCache },
+          { key: 'CDN-Cache-Control', value: cdnCache },
+          { key: 'Cloudflare-CDN-Cache-Control', value: cdnCache },
+        ],
+      },
+      {
+        source: '/category/:slug*',
+        headers: [
+          { key: 'Cache-Control', value: edgeCache },
+          { key: 'CDN-Cache-Control', value: cdnCache },
+          { key: 'Cloudflare-CDN-Cache-Control', value: cdnCache },
+        ],
+      },
+      {
+        source: '/tag/:slug*',
+        headers: [
+          { key: 'Cache-Control', value: edgeCache },
+          { key: 'CDN-Cache-Control', value: cdnCache },
+          { key: 'Cloudflare-CDN-Cache-Control', value: cdnCache },
+        ],
+      },
+      {
+        source: '/station/:slug*',
+        headers: [
+          { key: 'Cache-Control', value: edgeCache },
+          { key: 'CDN-Cache-Control', value: cdnCache },
+          { key: 'Cloudflare-CDN-Cache-Control', value: cdnCache },
+        ],
+      },
+      {
+        source: '/plan/:slug*',
+        headers: [
+          { key: 'Cache-Control', value: edgeCache },
+          { key: 'CDN-Cache-Control', value: cdnCache },
+          { key: 'Cloudflare-CDN-Cache-Control', value: cdnCache },
+        ],
+      },
+      {
+        source: '/feature/:slug*',
+        headers: [
+          { key: 'Cache-Control', value: edgeCache },
+          { key: 'CDN-Cache-Control', value: cdnCache },
+          { key: 'Cloudflare-CDN-Cache-Control', value: cdnCache },
+        ],
+      },
+      {
+        source: '/kid-reports',
+        headers: [
+          { key: 'Cache-Control', value: edgeCache },
+          { key: 'CDN-Cache-Control', value: cdnCache },
+          { key: 'Cloudflare-CDN-Cache-Control', value: cdnCache },
         ],
       },
     ];

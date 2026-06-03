@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-05-20T00:00:00.000Z
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026.jpg
 area: all
 quickInfo:

@@ -5,7 +5,7 @@ metaDescription: "渋谷・新宿と自由が丘・経堂、子連れランチ�
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-08'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/tokyo-terminal-vs-residence-kodzure.jpg
 lede: "結論、子連れランチの「本当の使いやすさ」はターミナル駅とは限りません。渋谷・新宿・池袋と自由が丘・三軒茶屋・経堂を、きょうのこ独自集計3,277店データで店舗数・ベビーカー◎率・個室率で比較。2026年版・意外な勝者が見える独自分析です。"
 quickInfo:

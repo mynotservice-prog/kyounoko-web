@@ -5,7 +5,7 @@ metaDescription: 1歳から食べられるバナナ・きな粉・ヨーグル�
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kodomo-banana-kinako-yogurt-1sai-asagohan.jpg
 area: all
 quickInfo:

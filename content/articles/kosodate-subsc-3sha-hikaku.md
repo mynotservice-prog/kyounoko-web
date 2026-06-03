@@ -1,14 +1,14 @@
 ---
 slug: kosodate-subsc-3sha-hikaku
 # old: 子育てサブスク比較【0-6歳】絵本・おもちゃ・服どれ
-title: 子育てサブスク3ジャンル比較【0-6歳】続くのはどれ
+title: 【2026年最新】子育てサブスク3ジャンル比較【0-6歳】続くのはどれ
 metaDescription: >-
   サブスクどれが続くか迷っていませんか。0-6歳向け絵本（WORLDLIBRARY）・おもちゃ（トイサブ・チャチャチャ）・服（キッズローブ・Kids
   MaryRose）を月額・対象年齢・満足度・解約しやすさで比較。3ジャンルから3分で1社決まります。
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kosodate-subsc-3sha-hikaku.jpg
 area: all
 quickInfo:

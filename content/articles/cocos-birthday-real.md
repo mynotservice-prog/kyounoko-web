@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-05-12'
+updatedAt: '2026-06-03'
 hero: /hero-ai/cocos-birthday-real.jpg
 lede: >-
   「ココスの誕生日特典って、実際どんな感じ？」という疑問に、SNS・レビューから読み取れる傾向で答えます。約130件の声を編集部が冷静に整理した、家族の記念日演出のリアルまとめです。

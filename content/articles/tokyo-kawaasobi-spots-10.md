@@ -5,7 +5,7 @@ metaDescription: 東京で0〜6歳と楽しめる川遊びスポット10選。�
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-06'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/tokyo-kawaasobi-spots-10.jpg
 lede: >-
   海より「都内から日帰り川遊び」が0〜6歳には扱いやすい選択肢。多摩川・奥多摩・檜原村で浅瀬・トイレあり・駐車場ありの子連れ向けスポットを10箇所、安全ポイントとあわせてまとめました。

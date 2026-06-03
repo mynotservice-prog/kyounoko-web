@@ -5,7 +5,7 @@ metaDescription: お年玉の年齢別相場、お年玉袋の手作りアイデ
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/otoshidama-souba-pochibukuro-tedukuri.jpg
 quickInfo:
   ageRanges:

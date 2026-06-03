@@ -5,7 +5,7 @@ metaDescription: 0-6歳の月齢別罹患傾向を年表化。保育園入園後
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-08'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kodomo-byoki-meneki-real-data-2026.jpg
 area: all
 quickInfo:

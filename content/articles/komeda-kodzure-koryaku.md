@@ -5,7 +5,7 @@ metaDescription: コメダ珈琲店はベビーカーで入れる？モーニン
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
-updatedAt: '2026-05-24'
+updatedAt: '2026-06-03'
 hero: /hero-ai/komeda-kodzure-koryaku.jpg
 area: tokyo
 quickInfo:

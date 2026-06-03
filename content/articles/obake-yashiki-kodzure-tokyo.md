@@ -5,7 +5,7 @@ metaDescription: 夏休みに楽しめる東京の子連れOKおばけ屋敷5選
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-08'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/obake-yashiki-kodzure-tokyo.jpg
 lede: >-
   「おばけ屋敷デビュー」を考える親に向けて、東京の子連れOK系のお化け屋敷を5箇所ピックアップ。怖さレベル・年齢適合・料金・所要時間まで子連れ視点でナビゲートします。

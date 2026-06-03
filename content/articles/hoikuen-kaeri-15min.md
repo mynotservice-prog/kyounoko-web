@@ -5,7 +5,7 @@ metaDescription: 保育園帰りから夕飯まで30分しかない日の救世�
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: 2026-04-17T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/hoikuen-kaeri-15min.jpg
 area: all
 quickInfo:

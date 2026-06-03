@@ -4,7 +4,7 @@ title: 東京の屋内プール 子連れOK10選【ベビーカー入れる順�
 metaDescription: >-
   東京の屋内プールで子連れOKなスポット10選。ベビーカーで館内に入れる順、おむつ取れていない子OKの幼児プール、ロッカーやベビールームの有無、料金、最寄り駅を整理。雨の日や夏の暑い日にも使える便利スポットです。
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 category: today-doko
 categoryName: 今日どこ行く
 hero: /hero-ai/tokyo-okunai-pool-kodzure-10.jpg

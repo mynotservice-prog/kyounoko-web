@@ -5,7 +5,7 @@ metaDescription: 小麦アレルギーの幼児向けに、米粉・米麺・コ
 category: today-taberu
 categoryName: 今日何食べる
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/mugi-aleergi-meal-kodomo.jpg
 lede: 小麦アレルギーと診断されたら、パン・麺・揚げ物の衣など毎日のメニューに工夫が必要。米粉・米麺を使った代替レシピ7つで、家族が同じ食卓を囲めます。
 quickInfo:

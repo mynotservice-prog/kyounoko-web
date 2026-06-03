@@ -5,7 +5,7 @@ metaDescription: '平日夜の帰宅18:30〜就寝20:30の2時間を、30分ブ�
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/heijitsu-yoru-30pun-routine.jpg
 area: all
 interactive: NaptimeFitFinder

@@ -5,7 +5,7 @@ metaDescription: 魚が苦手な2〜6歳の幼児でも食べてくれるレシ�
 category: today-taberu
 categoryName: 今日何食べる
 publishedAt: '2026-04-19'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/sakana-kodomo-tabete-kureru.jpg
 lede: 「魚は食べない」「骨が嫌」という幼児に悩む家庭は多いもの。臭み取り・骨の処理・食べやすい味付けで、子が自分から箸を伸ばす7レシピを紹介します。
 quickInfo:

@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-18'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 area: all
 lede: >-
   「煙が出ない焼肉＝しゃぶしゃぶ」は子連れ最強の選択肢。**ベビーカー入店・キッズチェア・キッズメニュー・取り分け・離乳食持込・おむつ替え・個室・価格帯**の8項目で、しゃぶ葉・しゃぶしゃぶ温野菜・木曽路を◎○△✕評価しました。

@@ -5,7 +5,7 @@ metaDescription: "夏休みの祖父母預けで体調不良・トラブルを�
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-08'
-updatedAt: '2026-05-09'
+updatedAt: '2026-06-03'
 hero: /hero-ai/natsu-yobi-kosodate-grandparent.jpg
 lede: "結論、夏休みの祖父母預けで起こるトラブルの9割は「引き継ぎ漏れ」が原因。アレルギー・薬・生活リズム・緊急連絡・食事ルールをA4 1枚にまとめる方法を、ながみー家が実家に渡しているテンプレ込みで具体的に共有します。"
 quickInfo:

@@ -1,12 +1,12 @@
 ---
 slug: jonathan-baby-chair
-title: ジョナサンのベビーチェア｜種類・対象月齢・確保のコツ完全ガイド
+title: 【2026年最新】ジョナサンのベビーチェア｜種類・対象月齢・確保のコツ完全ガイド
 metaDescription: >-
   ジョナサンのベビーチェアはすかいらーくグループ共通仕様。ハイチェア・ローチェア・テーブル固定型の3タイプから選べ、腰すわり前から使える店舗も。月齢別の選び方と確保のコツを解説します。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-30'
+updatedAt: '2026-06-03'
 hero: /hero-ai/jonathan-baby-chair.jpg
 area: all
 quickInfo:

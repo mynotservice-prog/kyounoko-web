@@ -5,7 +5,7 @@ metaDescription: 冷凍うどんと卵で作る5分の朝うどん。離乳食�
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-03'
 hero: /hero-ai/kodomo-asa-udon-tamagotoji-rinyuushoku-go.jpg
 area: all
 quickInfo:
