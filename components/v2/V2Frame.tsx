@@ -37,7 +37,11 @@ export function V2Frame({
       <div className="v2-root">
         <div className="v2-stage">
           <div className="v2-phone">
-            <V2StatusBar />
+            {/*
+              V2StatusBar（偽の 9:41 + Wi-Fi/シグナル/バッテリー）はデザインプロト用。
+              実機（スマホ）では本物のステータスバーと二重表示になるので非表示にした。
+              .v2-home-indicator（スマホ下部のホームバー）も同様の理由で削除。
+            */}
             <V2DesktopHeader active={active} />
             <div className="v2-viewport">
               <div className="v2-scroll v2-pad-nav">
@@ -55,7 +59,6 @@ export function V2Frame({
               <V2BottomNav active={active} />
               <V2Toast />
             </div>
-            <div className="v2-home-indicator"></div>
           </div>
         </div>
       </div>
