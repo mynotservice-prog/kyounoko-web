@@ -197,7 +197,7 @@ export default async function FeaturePage({ params }: Props) {
               href={`/feature/${f.slug}`}
               className="v2-feat-overlay"
             >
-              <V2Img src={f.hero || '/hero-ai/cat-family-dinner-01.webp'} seed={f.slug + 'rel'} alt={f.title} />
+              <V2Img src={featureToV2(f).img} seed={f.slug + 'rel'} alt={f.title} />
               <div className="v2-feat-overlay-grad"></div>
               <div className="v2-feat-overlay-title">
                 {f.title.length > 18 ? f.title.slice(0, 18) + '…' : f.title}

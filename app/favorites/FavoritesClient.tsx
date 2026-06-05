@@ -1,6 +1,9 @@
 'use client';
 
+import React from 'react';
 import Link from 'next/link';
+import { V2Img, V2SectionHead, useV2Ctx } from '@/components/v2/V2Base';
+import { V2Icon } from '@/components/v2/V2Icon';
 import { useFavorites } from '@/hooks/useFavorites';
 import { FavoriteButton } from '@/components/ui/FavoriteButton';
 
@@ -19,132 +22,269 @@ type ArticleLite = {
   hero?: string;
   categoryName: string;
 };
+type SpotLite = {
+  slug: string;
+  name: string;
+  cat: string;
+  area: string;
+  station: string;
+  img: string;
+  note?: string;
+};
 
 export function FavoritesClient({
   allPlans,
   allArticles,
+  allSpots,
 }: {
   allPlans: PlanLite[];
   allArticles: ArticleLite[];
+  allSpots: SpotLite[];
 }) {
+  // V2 SaveButton と V2FavBtn が保存するのは kk_saved_v2（共通 useV2Ctx 経由）
+  const { saved: savedV2, toggleSave } = useV2Ctx();
+  // 旧 useFavorites は kk_favorites などにプラン/記事を保存している
   const { favPlans, favArticles } = useFavorites();
 
+  // SSR 中は空配列、クライアント側 hydrate 後に localStorage 反映
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => setMounted(true), []);
+
+  const savedSpotIds = Object.keys(savedV2);
+  const spots = allSpots.filter((s) => savedSpotIds.includes(s.slug));
   const plans = allPlans.filter((p) => favPlans.includes(p.id));
   const articles = allArticles.filter((a) => favArticles.includes(a.slug));
 
-  const isEmpty = plans.length === 0 && articles.length === 0;
+  const isEmpty =
+    mounted && spots.length === 0 && plans.length === 0 && articles.length === 0;
+
+  if (!mounted) {
+    // SSR/hydrate 中はスケルトン
+    return (
+      <div className="v2-section" style={{ paddingTop: 24 }}>
+        <p style={{ color: 'var(--v2-ink-mute)', fontSize: 13, textAlign: 'center' }}>
+          読み込み中...
+        </p>
+      </div>
+    );
+  }
 
   if (isEmpty) {
     return (
-      <div style={{ padding: '40px 0', textAlign: 'center', color: 'var(--ink-sub)' }}>
-        <p style={{ marginBottom: 20, fontSize: 15 }}>
-          まだ保存したプラン・記事がありません。<br />
-          気になるものに ♡ を押すとここに溜まります。
+      <div
+        style={{
+          padding: '60px 24px',
+          textAlign: 'center',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 16,
+        }}
+      >
+        <div
+          style={{
+            width: 88,
+            height: 88,
+            borderRadius: '50%',
+            background: 'var(--v2-orange-tint)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <V2Icon name="bookmark" size={40} color="var(--v2-orange)" />
+        </div>
+        <h2 style={{ fontSize: 18, fontWeight: 800, margin: 0, color: 'var(--v2-ink)' }}>
+          保存したものはまだありません
+        </h2>
+        <p style={{ color: 'var(--v2-ink-mute)', fontSize: 13.5, lineHeight: 1.7, margin: 0 }}>
+          気になるスポット・記事・プランで
+          <br />
+          <V2Icon name="heart" size={13} color="var(--v2-orange)" /> や{' '}
+          <V2Icon name="bookmark" size={13} color="var(--v2-orange)" /> を押すとここに溜まります。
         </p>
-        <Link href="/#finder" className="btn-primary-light">
-          今日のプランを探す
-        </Link>
+        <div style={{ display: 'flex', gap: 10, marginTop: 8, flexWrap: 'wrap', justifyContent: 'center' }}>
+          <Link
+            href="/spots"
+            className="v2-btn-primary"
+            style={{ minWidth: 140, padding: '12px 24px' }}
+          >
+            スポットを探す
+          </Link>
+          <Link
+            href="/events"
+            style={{
+              minWidth: 140,
+              padding: '12px 24px',
+              borderRadius: 'var(--v2-r-pill)',
+              border: '1.5px solid var(--v2-orange)',
+              color: 'var(--v2-orange-deep)',
+              fontWeight: 800,
+              fontSize: 14,
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            イベントを見る
+          </Link>
+        </div>
       </div>
     );
   }
 
   return (
     <>
-      {plans.length > 0 && (
-        <section style={{ marginTop: 32 }}>
-          <div className="section-head">
-            <div>
-              <span className="eyebrow">Plans</span>
-              <h2>保存したプラン</h2>
+      {/* スポット */}
+      {spots.length > 0 && (
+        <>
+          <div className="v2-sec-head" style={{ marginTop: 8 }}>
+            <div className="v2-sec-title">
+              <span className="v2-bar-accent"></span>
+              保存したスポット
+              <span
+                style={{
+                  marginLeft: 8,
+                  fontSize: 12,
+                  background: 'var(--v2-orange-soft)',
+                  color: 'var(--v2-orange-deep)',
+                  padding: '2px 9px',
+                  borderRadius: 'var(--v2-r-pill)',
+                  fontWeight: 800,
+                }}
+              >
+                {spots.length}
+              </span>
             </div>
-            <span className="hint">{plans.length} 件</span>
           </div>
-          <div style={{ display: 'grid', gap: 16, gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))' }}>
+          <div className="v2-vlist">
+            {spots.map((s) => (
+              <Link key={s.slug} href={`/spot/${s.slug}`} className="v2-art-row">
+                <div
+                  className="v2-imgwrap r"
+                  style={{ width: 88, minWidth: 88, height: 72 }}
+                >
+                  <V2Img src={s.img} seed={s.slug} alt={s.name} />
+                </div>
+                <div className="v2-art-body">
+                  <div
+                    style={{
+                      fontSize: 10.5,
+                      fontWeight: 800,
+                      color: 'var(--v2-orange-deep)',
+                      letterSpacing: '.02em',
+                    }}
+                  >
+                    {s.cat}
+                  </div>
+                  <div className="v2-art-title" style={{ marginTop: 2 }}>
+                    {s.name}
+                  </div>
+                  <div className="v2-art-sub">
+                    {s.station || s.area}
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  className="v2-fav-btn"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleSave(s.slug);
+                  }}
+                  aria-label="保存を解除"
+                  style={{ marginLeft: 'auto', flex: 'none' }}
+                >
+                  <V2Icon name="heart" size={18} color="var(--v2-orange)" fill />
+                </button>
+              </Link>
+            ))}
+          </div>
+        </>
+      )}
+
+      {/* プラン */}
+      {plans.length > 0 && (
+        <>
+          <V2SectionHead title={`保存したプラン (${plans.length})`} more="" />
+          <div className="v2-vlist">
             {plans.map((p) => (
-              <div key={p.id} style={{
-                position: 'relative',
-                background: 'var(--paper-card)',
-                border: '1px solid var(--line)',
-                borderRadius: 'var(--radius-lg)',
-                overflow: 'hidden',
-              }}>
-                <Link href={`/plan/${p.id}`} style={{ display: 'block', color: 'inherit', textDecoration: 'none' }}>
-                  {p.hero && (
-                    <div style={{
-                      aspectRatio: '16/9',
-                      backgroundColor: 'var(--peach-soft)',
-                      backgroundImage: `url(${p.hero})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                    }} />
-                  )}
-                  <div style={{ padding: '14px 16px 18px' }}>
-                    <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 14.5, fontWeight: 600, margin: 0, lineHeight: 1.55 }}>
-                      {p.title}
-                    </h3>
-                    <p style={{ fontSize: 12, color: 'var(--ink-sub)', margin: '6px 0 0', lineHeight: 1.7 }}>
-                      {p.shortAnswer.slice(0, 70)}...
-                    </p>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 10 }}>
-                      {p.ageRanges[0] && <span className="meta-chip clay">{p.ageRanges[0]}歳</span>}
-                      <span className="meta-chip ochre">{p.durationMin}分</span>
-                    </div>
+              <div key={p.id} className="v2-art-row" style={{ position: 'relative' }}>
+                <Link
+                  href={`/plan/${p.id}`}
+                  style={{ display: 'contents', color: 'inherit', textDecoration: 'none' }}
+                >
+                  <div
+                    className="v2-imgwrap r"
+                    style={{ width: 88, minWidth: 88, height: 72 }}
+                  >
+                    {p.hero ? (
+                      <V2Img src={p.hero} seed={p.id} alt={p.title} />
+                    ) : (
+                      <V2Img seed={p.id} alt={p.title} />
+                    )}
+                  </div>
+                  <div className="v2-art-body">
+                    <div className="v2-art-title">{p.title}</div>
+                    <div className="v2-art-sub">{p.shortAnswer.slice(0, 60)}</div>
                   </div>
                 </Link>
-                <div style={{ position: 'absolute', top: 10, right: 10 }}>
+                <div style={{ marginLeft: 'auto', flex: 'none' }}>
                   <FavoriteButton kind="plan" id={p.id} size="sm" />
                 </div>
               </div>
             ))}
           </div>
-        </section>
+        </>
       )}
 
+      {/* 記事 */}
       {articles.length > 0 && (
-        <section style={{ marginTop: 48 }}>
-          <div className="section-head">
-            <div>
-              <span className="eyebrow">Articles</span>
-              <h2>保存した記事</h2>
-            </div>
-            <span className="hint">{articles.length} 件</span>
-          </div>
-          <div style={{ display: 'grid', gap: 16, gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))' }}>
+        <>
+          <V2SectionHead title={`保存した記事 (${articles.length})`} more="" />
+          <div className="v2-vlist">
             {articles.map((a) => (
-              <div key={a.slug} style={{
-                position: 'relative',
-                background: 'var(--paper-card)',
-                border: '1px solid var(--line)',
-                borderRadius: 'var(--radius-lg)',
-                overflow: 'hidden',
-              }}>
-                <Link href={`/article/${a.slug}`} style={{ display: 'block', color: 'inherit', textDecoration: 'none' }}>
-                  {a.hero && (
-                    <div style={{
-                      aspectRatio: '16/9',
-                      backgroundColor: 'var(--peach-soft)',
-                      backgroundImage: `url(${a.hero})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                    }} />
-                  )}
-                  <div style={{ padding: '14px 16px 18px' }}>
-                    <span style={{ fontSize: 10, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--clay)', fontWeight: 600 }}>
+              <div key={a.slug} className="v2-art-row" style={{ position: 'relative' }}>
+                <Link
+                  href={`/article/${a.slug}`}
+                  style={{ display: 'contents', color: 'inherit', textDecoration: 'none' }}
+                >
+                  <div
+                    className="v2-imgwrap r"
+                    style={{ width: 88, minWidth: 88, height: 72 }}
+                  >
+                    {a.hero ? (
+                      <V2Img src={a.hero} seed={a.slug} alt={a.title} />
+                    ) : (
+                      <V2Img seed={a.slug} alt={a.title} />
+                    )}
+                  </div>
+                  <div className="v2-art-body">
+                    <div
+                      style={{
+                        fontSize: 10.5,
+                        fontWeight: 800,
+                        color: 'var(--v2-orange-deep)',
+                        letterSpacing: '.02em',
+                      }}
+                    >
                       {a.categoryName}
-                    </span>
-                    <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 14.5, fontWeight: 600, margin: '4px 0 0', lineHeight: 1.55 }}>
+                    </div>
+                    <div className="v2-art-title" style={{ marginTop: 2 }}>
                       {a.title}
-                    </h3>
+                    </div>
                   </div>
                 </Link>
-                <div style={{ position: 'absolute', top: 10, right: 10 }}>
+                <div style={{ marginLeft: 'auto', flex: 'none' }}>
                   <FavoriteButton kind="article" id={a.slug} size="sm" />
                 </div>
               </div>
             ))}
           </div>
-        </section>
+        </>
       )}
+
+      <div style={{ height: 24 }}></div>
     </>
   );
 }

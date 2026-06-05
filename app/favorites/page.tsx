@@ -2,19 +2,21 @@ import type { Metadata } from 'next';
 import { V2Frame } from '@/components/v2/V2Frame';
 import { getAllPlanMetas } from '@/lib/plans';
 import { getAllFileArticles } from '@/lib/articles';
+import { getAllSpotsWithSlug } from '@/lib/spots';
+import { spotToV2 } from '@/lib/v2-adapters';
 import { FavoritesClient } from './FavoritesClient';
 
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: 'お気に入り',
-  description: '保存したプラン・記事の一覧。ログイン不要、このブラウザに保存されています。',
+  title: '保存したもの｜きょうのこ',
+  description: '保存したスポット・プラン・記事の一覧。ログイン不要、このブラウザに保存されています。',
   robots: { index: false, follow: true },
   alternates: { canonical: '/favorites' },
 };
 
 export default function FavoritesPage() {
-  // サーバ側で全プラン/記事のメタを取得、クライアント側で localStorage と突合
+  // サーバ側で全プラン/記事/スポットのメタを取得、クライアント側で localStorage と突合
   const allPlans = getAllPlanMetas().map((p) => ({
     id: p.id,
     title: p.title,
@@ -30,34 +32,27 @@ export default function FavoritesPage() {
     hero: a.hero,
     categoryName: a.categoryName ?? a.category,
   }));
+  // スポット（V2SaveButton で kk_saved_v2 に保存される）
+  const allSpots = getAllSpotsWithSlug().map((x) => {
+    const v = spotToV2(x.spot);
+    return {
+      slug: x.slug,
+      name: x.spot.name,
+      cat: v.cat,
+      area: v.area,
+      station: v.station,
+      img: v.img,
+      note: x.spot.note,
+    };
+  });
 
   return (
-    <>
-      <V2Frame header="sub" active="home">
-      <div className="container">
-        <nav className="breadcrumb" aria-label="パンくず">
-          <a href="/">HOME</a>
-          <span className="sep">/</span>
-          <span>お気に入り</span>
-        </nav>
-      </div>
-
-      <section className="section" style={{ paddingTop: 24 }}>
-        <div className="container-narrow">
-          <header className="page-head" style={{ paddingTop: 16 }}>
-            <span className="eyebrow">My favorites</span>
-            <h1>お気に入り</h1>
-            <p className="lead">
-              このブラウザに保存された、あなたのお気に入りプラン・記事です。別のデバイスでは見られません。
-            </p>
-          </header>
-
-          <FavoritesClient allPlans={allPlans} allArticles={allArticles} />
-        </div>
-      </section>
-
-      </V2Frame>
-      
-    </>
+    <V2Frame header="saved" active="saved">
+      <FavoritesClient
+        allPlans={allPlans}
+        allArticles={allArticles}
+        allSpots={allSpots}
+      />
+    </V2Frame>
   );
 }

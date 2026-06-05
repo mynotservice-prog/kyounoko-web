@@ -83,6 +83,17 @@ const KEYWORD_HERO_MAP: Array<[string, string]> = [
 ];
 
 /**
+ * 支給 KK プール（ユーザー提供画像、~/Desktop/kyounokoimegegazo/ を webp化）。
+ * 45枚あり、ハッシュで決定的に選択。記事/スポット/プラン/特集の hero
+ * フォールバックとして優先的に使う。重複OK。
+ */
+const KK_POOL_SIZE = 45;
+function kkHero(seed: string): string {
+  const h = hashName(seed);
+  const n = (h % KK_POOL_SIZE) + 1;
+  return `/v2/articles/kk-${String(n).padStart(2, '0')}.webp`;
+}
+/**
  * カテゴリ → 支給E系（スポットカテゴリ別の代表写真）。
  * KEYWORD_HERO_MAP の固有施設にヒットしない/spot.name が無名な汎用スポットで、
  * かつ idx >= 3（カードの後ろ側）の場合に "繰り返し感" を出さないために使う。
@@ -105,12 +116,16 @@ function pickHero(category: string, name: string): string {
   for (const [kw, img] of KEYWORD_HERO_MAP) {
     if (name.includes(kw)) return img;
   }
-  // 2) ハッシュで偶数なら支給E系のカテゴリ写真（多様性確保のため半々で使用）
+  // 2) ハッシュ % 3 == 0 なら支給 KK プール（高品質ユーザー画像）
   const h = hashName(name);
+  if (h % 3 === 0) {
+    return kkHero(name);
+  }
+  // 3) ハッシュで偶数なら支給 E 系（カテゴリ別代表写真）
   if ((h & 1) === 0 && CATEGORY_HERO_E[category]) {
     return CATEGORY_HERO_E[category];
   }
-  // 3) カテゴリベースのプールからハッシュで決定的に選択（既存 hero-ai プール）
+  // 4) カテゴリベースのプールからハッシュで決定的に選択（既存 hero-ai プール）
   const pools = HERO_POOLS_BY_CAT[category] || ['cat-family', 'cat-outdoor'];
   const prefix = pools[h % pools.length];
   const variant = String(((h >> 4) % 3) + 1).padStart(2, '0'); // 01 / 02 / 03
@@ -229,7 +244,7 @@ export function featureToV2(f: FeaturePage): V2Feature {
     sub: f.lede,
     icon,
     accent,
-    img: seasonImg || f.hero || '/hero-ai/cat-family-dinner-01.webp',
+    img: seasonImg || f.hero || kkHero('feat-' + f.slug),
     desc: f.intro,
     lead: f.lede,
     tags: f.themeTags?.slice(0, 3),
@@ -241,7 +256,7 @@ export function articleToV2(a: FileArticleMeta): V2Article {
   return {
     id: a.slug,
     title: a.title,
-    img: a.hero || '/hero-ai/cat-family-dinner-01.webp',
+    img: a.hero || kkHero('art-' + a.slug),
     sub: a.lede?.slice(0, 60),
     tags: [
       ...(a.quickInfo?.ageRanges?.length
