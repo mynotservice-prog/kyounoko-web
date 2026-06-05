@@ -1558,9 +1558,38 @@ const CATEGORY_HERO: Record<EventCategory, string> = {
   sport:        '/v2/events/market-outdoor.webp',
   other:        '/v2/events/show-museum.webp',
 };
-/** イベントヒーロー画像（hero優先、なければカテゴリ別フォールバック） */
+/** イベントヒーロー画像（hero優先、なければカテゴリ別フォールバック）
+ *
+ * 注意: lib/events.ts の hero フィールドの一部は `/hero-ai/cat-kid-03.webp` 等を
+ * 指しているが、対応するファイルが存在しない場合が多い（100件中45件が不在）。
+ * そのため:
+ *   1. hero が /v2/events/ または /hero-ai/cat-summer-* など信頼できるD系/支給系
+ *      → そのまま使う
+ *   2. それ以外 → KK pool (45枚, /v2/articles/kk-NN.webp) からハッシュで選択
+ *      → 確実に存在する画像で表示崩れを防止
+ *
+ * 管理画面で画像差し替えを実装する場合は、microCMS や Vercel KV に画像URL を
+ * 保存し、このロジックの先頭で「DB値があれば優先」とすればよい。
+ */
+const TRUSTED_HERO_PREFIXES = ['/v2/events/', '/v2/articles/', '/v2/spots/', '/photos/'];
 export function eventHeroImage(e: EventEntry): string {
-  return e.hero || CATEGORY_HERO[e.category] || '/v2/events/show-museum.webp';
+  // hero が信頼できるパス（v2/ 配下や photos/ 等）ならそのまま使用
+  if (e.hero && TRUSTED_HERO_PREFIXES.some((p) => e.hero!.startsWith(p))) {
+    return e.hero;
+  }
+  // それ以外（/hero-ai/cat-* など 存在しないファイル多数）はKKプールに回す
+  // ユーザー支給の高品質画像45枚から slugハッシュで決定的に選択
+  // → 全イベントで安定して画像が表示される
+  const h = hashEventSlug(e.slug);
+  const n = (h % 45) + 1;
+  return `/v2/articles/kk-${String(n).padStart(2, '0')}.webp`;
+}
+
+/** ハッシュ計算（lib/v2-adapters.ts の hashName と同等） */
+function hashEventSlug(s: string): number {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
+  return h;
 }
 
 /** 開催期間を「3/15(土)」「3/20〜4/7」のような表示文字列に */

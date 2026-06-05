@@ -87,8 +87,8 @@ const KEYWORD_HERO_MAP: Array<[string, string]> = [
  * 45枚あり、ハッシュで決定的に選択。記事/スポット/プラン/特集の hero
  * フォールバックとして優先的に使う。重複OK。
  */
-const KK_POOL_SIZE = 45;
-function kkHero(seed: string): string {
+export const KK_POOL_SIZE = 45;
+export function kkHero(seed: string): string {
   const h = hashName(seed);
   const n = (h % KK_POOL_SIZE) + 1;
   return `/v2/articles/kk-${String(n).padStart(2, '0')}.webp`;
