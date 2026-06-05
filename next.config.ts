@@ -170,13 +170,12 @@ const nextConfig: NextConfig = {
       { source: '/plans', destination: '/', permanent: true },
       { source: '/plan', destination: '/', permanent: true },
 
-      // ===== 大文字混じり URL のフォールバック =====
-      // Next.js のデフォルトは大文字小文字を区別する。Google が大文字版を拾った場合に対応
-      { source: '/Article/:slug*', destination: '/article/:slug*', permanent: true },
-      { source: '/Tag/:slug*', destination: '/tag/:slug*', permanent: true },
-      { source: '/Category/:slug*', destination: '/category/:slug*', permanent: true },
-      { source: '/Spot/:slug*', destination: '/spot/:slug*', permanent: true },
-      { source: '/Station/:slug*', destination: '/station/:slug*', permanent: true },
+      // ===== 大文字混じり URL のフォールバック（削除済） =====
+      // 削除理由: Vercel/Next.js の redirects() は path-to-regexp で実装されており、
+      // パスマッチが case-insensitive に動作するため、`/Article/:slug*` が
+      // `/article/foo` 等にもマッチしてしまい、destination = `/article/:slug*` ＝
+      // 自分自身への 308 無限ループを発生させていた。
+      // 大文字URLは実質クロールされておらず、削除しても SEO 影響は無視できる。
     ];
   },
 
