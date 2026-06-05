@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SiteHeader } from '@/components/layout/SiteHeader';
-import { SiteFooter } from '@/components/layout/SiteFooter';
-import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+import { V2Frame } from '@/components/v2/V2Frame';
 import { getAllFileArticles } from '@/lib/articles';
 
 export const revalidate = 3600;
@@ -16,7 +14,7 @@ export const metadata: Metadata = {
     title: '子供レシピ一覧｜きょうのこレシピDB',
     description: '0〜6歳の子ども向けレシピを月齢別・時短・お弁当・おやつで検索',
     url: 'https://kyounoko.jp/recipes',
-    images: [{ url: '/img/ogp-default.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/img/ogp-default-v2.webp', width: 1200, height: 630 }],
   },
 };
 
@@ -94,7 +92,7 @@ export default async function RecipesIndexPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCollection) }} />
-      <SiteHeader />
+      <V2Frame header="sub" active="home">
       <main className="container">
         <nav className="breadcrumb" aria-label="パンくず" style={{ padding: '12px 0 4px' }}>
           <Link href="/">HOME</Link>
@@ -214,8 +212,8 @@ export default async function RecipesIndexPage() {
           </div>
         </section>
       </main>
-      <SiteFooter />
-      <MobileStickyNav />
+      </V2Frame>
+      
     </>
   );
 }

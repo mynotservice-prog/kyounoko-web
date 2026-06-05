@@ -1,0 +1,211 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { V2Frame } from '@/components/v2/V2Frame';
+import { getAllSpotsWithSlug, SPOT_CATEGORY_LABEL } from '@/lib/spots';
+
+export const revalidate = 3600;
+
+export const metadata: Metadata = {
+  title: '【一次情報】運営者が実際に訪問した子連れスポットレポート一覧｜きょうのこ',
+  description:
+    '運営者ながみーが子どもと一緒に訪問して、ベビーカー動線・混雑・授乳/おむつ・滞在時間・注意点を記録した一次情報レポート集。口コミ・伝聞ではなく、すべて実体験ベースです。',
+  alternates: { canonical: '/kid-reports' },
+  openGraph: {
+    title: '運営者が実際に訪問した子連れスポットレポート｜きょうのこ',
+    description:
+      '49件の運営者一次情報。すべて実訪問・写真・記憶ベース。ベビーカー動線・混雑・授乳・注意点を網羅。',
+    url: 'https://kyounoko.jp/kid-reports',
+    type: 'website',
+    images: [{ url: '/img/ogp-default.jpg', width: 1200, height: 630 }],
+  },
+};
+
+export default function KidReportsIndexPage() {
+  // kidReport を持つスポットだけ抽出
+  const all = getAllSpotsWithSlug().filter((x) => x.spot.kidReport);
+
+  // カテゴリ毎にグループ化（park/zoo/aquarium/...）
+  const groups = new Map<
+    string,
+    Array<ReturnType<typeof getAllSpotsWithSlug>[number]>
+  >();
+  for (const item of all) {
+    const cat = SPOT_CATEGORY_LABEL[item.spot.category] ?? item.spot.category;
+    if (!groups.has(cat)) groups.set(cat, []);
+    groups.get(cat)!.push(item);
+  }
+
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'HOME', item: 'https://kyounoko.jp/' },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: '運営者の訪問レポート',
+        item: 'https://kyounoko.jp/kid-reports',
+      },
+    ],
+  };
+
+  // CollectionPage + ItemList JSON-LD
+  const jsonLdCollection = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: '運営者が実際に訪問した子連れスポットレポート一覧',
+    description:
+      '運営者ながみーが実際に訪問・記録した一次情報。すべて実体験ベースで、ベビーカー動線・混雑・授乳/おむつ・滞在時間・注意点を記載。',
+    url: 'https://kyounoko.jp/kid-reports',
+    inLanguage: 'ja',
+    isFamilyFriendly: true,
+    author: { '@id': 'https://kyounoko.jp/about#author' },
+    publisher: { '@id': 'https://kyounoko.jp/#organization' },
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: all.length,
+      itemListElement: all.map((x, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `https://kyounoko.jp/spot/${x.slug}`,
+        name: x.spot.name,
+      })),
+    },
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCollection) }} />
+      <SiteHeader />
+
+      <div className="container">
+        <nav className="breadcrumb" aria-label="パンくず" style={{ padding: '12px 0 4px' }}>
+          <Link href="/">HOME</Link>
+          <span className="sep">/</span>
+          <span>運営者の訪問レポート</span>
+        </nav>
+      </div>
+
+      <main className="container">
+        <section className="section" style={{ paddingTop: 12 }}>
+          <header className="page-head">
+            <span className="eyebrow">First-hand reports</span>
+            <h1>運営者が実際に訪問した子連れスポットレポート</h1>
+            <p className="lead" style={{ marginTop: 6 }}>
+              全 {all.length} 件、すべて運営者ながみーが子どもと一緒に訪問して記録した一次情報です。
+              ベビーカー動線・混雑・授乳/おむつ・滞在時間・注意点を、現地で確認した内容のみ書いています。
+            </p>
+          </header>
+
+          <div
+            style={{
+              marginTop: 18,
+              padding: '14px 18px',
+              border: '1px solid var(--line-strong)',
+              borderRadius: 12,
+              background: 'var(--clay-soft)',
+            }}
+          >
+            <div
+              style={{
+                fontSize: 12,
+                color: 'var(--clay-deep)',
+                fontWeight: 700,
+                letterSpacing: '.02em',
+                marginBottom: 6,
+              }}
+            >
+              ✅ このページの情報源
+            </div>
+            <p style={{ fontSize: 13.5, lineHeight: 1.8, margin: 0 }}>
+              口コミサイトの引用や、AIが生成した一般的な情報は含まれません。
+              運営者ながみーが訪問した日の写真・記憶・記録から、編集部の責任で書き起こしています。
+              訪問日時点の情報のため、最新の営業時間・料金は各施設の公式サイトでご確認ください。
+            </p>
+          </div>
+        </section>
+
+        {[...groups.entries()].map(([cat, items]) => (
+          <section key={cat} className="section" style={{ paddingTop: 0 }}>
+            <div className="section-head">
+              <div>
+                <span className="eyebrow">Category</span>
+                <h2>{cat}</h2>
+              </div>
+              <span className="hint">{items.length} 件</span>
+            </div>
+            <ul
+              style={{
+                listStyle: 'none',
+                padding: 0,
+                margin: 0,
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+                gap: 12,
+              }}
+            >
+              {items.map((x) => (
+                <li key={x.slug}>
+                  <Link
+                    href={`/spot/${x.slug}`}
+                    style={{
+                      display: 'block',
+                      padding: '14px 16px',
+                      borderRadius: 12,
+                      border: '1px solid var(--line)',
+                      background: 'var(--paper-card)',
+                      textDecoration: 'none',
+                      color: 'inherit',
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontSize: 11,
+                        color: 'var(--clay-deep)',
+                        fontWeight: 700,
+                        marginBottom: 4,
+                      }}
+                    >
+                      ✅ {x.spot.kidReport!.visitAge}
+                    </div>
+                    <div
+                      style={{
+                        fontFamily: 'var(--font-mincho)',
+                        fontSize: 15,
+                        fontWeight: 600,
+                        marginBottom: 6,
+                      }}
+                    >
+                      {x.spot.name}
+                    </div>
+                    <div style={{ fontSize: 12, color: 'var(--ink-mute)', marginBottom: 6 }}>
+                      {x.spot.ward ?? x.spot.city ?? ''}
+                    </div>
+                    <p
+                      style={{
+                        fontSize: 13,
+                        lineHeight: 1.65,
+                        margin: 0,
+                        color: 'var(--ink-sub)',
+                        display: '-webkit-box',
+                        WebkitLineClamp: 3,
+                        WebkitBoxOrient: 'vertical',
+                        overflow: 'hidden',
+                      }}
+                    >
+                      {x.spot.kidReport!.strollerNote}
+                    </p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </main>
+
+      <SiteFooter />
+      <MobileStickyNav />
+    </>
+  );
+}

@@ -1,12 +1,15 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { SiteHeader } from '@/components/layout/SiteHeader';
-import { SiteFooter } from '@/components/layout/SiteFooter';
-import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+import { V2Frame } from '@/components/v2/V2Frame';
+import { V2SpotRow, V2ArticleRow } from '@/components/v2/V2Cards';
+import { V2Img, V2SectionHead, V2Tag } from '@/components/v2/V2Base';
+import { V2Icon } from '@/components/v2/V2Icon';
 import { FEATURE_PAGES, getFeaturePageBySlug } from '@/lib/feature-pages';
 import { getAllFileArticles } from '@/lib/articles';
-import { getAllSpotsWithSlug, SPOT_CATEGORY_LABEL } from '@/lib/spots';
+import { getAllSpotsWithSlug } from '@/lib/spots';
+import { spotToV2, articleToV2, featureToV2 } from '@/lib/v2-adapters';
+import { AdSlot } from '@/components/ads/AdSlot';
 
 export const revalidate = 3600;
 
@@ -29,13 +32,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: feature.lede,
       url: `https://kyounoko.jp/feature/${slug}`,
       type: 'website',
-      images: [{ url: '/img/ogp-default.jpg', width: 1200, height: 630 }],
+      images: [{ url: '/img/ogp-default-v2.webp', width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
       title: feature.title,
       description: feature.lede,
-      images: ['/img/ogp-default.jpg'],
+      images: ['/img/ogp-default-v2.webp'],
     },
   };
 }
@@ -45,21 +48,24 @@ export default async function FeaturePage({ params }: Props) {
   const feature = getFeaturePageBySlug(slug);
   if (!feature) notFound();
 
-  // 関連記事を順序通りに引く（存在しない slug は無視）
+  // 関連記事
   const allArticles = getAllFileArticles();
   const bySlug = new Map(allArticles.map((a) => [a.slug, a]));
   const articles = feature.articleSlugs
     .map((s) => bySlug.get(s))
     .filter((a): a is NonNullable<ReturnType<typeof bySlug.get>> => Boolean(a) && !a!.noindex);
 
-  // スポットフィルタ
+  // スポット
   const spots = feature.spotFilter
     ? getAllSpotsWithSlug()
         .filter((x) => feature.spotFilter!(x.spot))
         .slice(0, feature.maxSpots ?? 12)
     : [];
 
-  // JSON-LD: BreadcrumbList
+  // 関連特集（自分以外）
+  const relatedFeatures = FEATURE_PAGES.filter((f) => f.slug !== slug).slice(0, 4);
+
+  // JSON-LD
   const jsonLdBreadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -69,8 +75,6 @@ export default async function FeaturePage({ params }: Props) {
       { '@type': 'ListItem', position: 3, name: feature.title },
     ],
   };
-
-  // JSON-LD: CollectionPage + ItemList（記事+スポット混在）
   const itemListElement = [
     ...articles.map((a, i) => ({
       '@type': 'ListItem',
@@ -99,8 +103,6 @@ export default async function FeaturePage({ params }: Props) {
       itemListElement,
     },
   };
-
-  // JSON-LD: FAQPage
   const jsonLdFaq = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -111,201 +113,132 @@ export default async function FeaturePage({ params }: Props) {
     })),
   };
 
+  const v2Feature = featureToV2(feature);
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCollection) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
 
-      <SiteHeader />
-
-      <div className="container">
-        <nav className="breadcrumb" aria-label="パンくず" style={{ padding: '12px 0 4px' }}>
-          <Link href="/">HOME</Link>
-          <span className="sep">/</span>
-          <span>特集</span>
-          <span className="sep">/</span>
-          <span>{feature.title.replace(/【[^】]+】/, '').slice(0, 24)}</span>
-        </nav>
-      </div>
-
-      <main className="container">
+      <V2Frame header="sub" active="features" backHref="/feature">
         {/* Hero */}
-        <section className="section" style={{ paddingTop: 12 }}>
-          <header className="page-head">
-            <span className="eyebrow">Feature</span>
-            <h1 style={{ fontFamily: 'var(--font-mincho)', fontSize: 26, lineHeight: 1.45 }}>{feature.title}</h1>
-            <p className="lead" style={{ marginTop: 6 }}>{feature.lede}</p>
-          </header>
+        <div className="v2-article-hero" style={{ height: 210 }}>
+          <V2Img src={v2Feature.img} seed={'fa' + feature.slug} alt={feature.title} />
+          <div className="v2-article-hero-grad"></div>
+          <span className="v2-article-hero-cat">特集</span>
+          <div className="v2-fa-hero-title">{feature.lede}</div>
+        </div>
 
-          <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 12 }}>
-            {feature.themeTags.map((t) => (
-              <span
-                key={t}
-                style={{
-                  fontSize: 11,
-                  color: 'var(--clay-deep)',
-                  background: 'var(--peach-soft)',
-                  padding: '4px 10px',
-                  borderRadius: 999,
-                }}
-              >
-                #{t}
-              </span>
+        <div className="v2-page-head" style={{ paddingTop: 16 }}>
+          <h1 className="v2-page-h1" style={{ fontSize: 23, lineHeight: 1.35 }}>
+            {feature.title}
+          </h1>
+          <div className="v2-tag-row" style={{ marginTop: 12 }}>
+            {feature.themeTags.map((t, i) => (
+              <V2Tag key={t} label={t} tone={i === 0 ? 'rain' : i === 1 ? 'feat' : 'age'} />
             ))}
           </div>
-
-          <p style={{ marginTop: 18, fontSize: 14.5, lineHeight: 1.95, color: 'var(--ink)' }}>
+          <p className="v2-page-lead" style={{ marginTop: 13 }}>
             {feature.intro}
           </p>
-        </section>
-
-        {/* 関連記事 */}
-        {articles.length > 0 && (
-          <section className="section" style={{ paddingTop: 0 }}>
-            <div className="section-head">
-              <div>
-                <span className="eyebrow">Related Articles</span>
-                <h2>関連記事</h2>
-              </div>
-              <span className="hint">{articles.length} 件</span>
-            </div>
-            <div
-              style={{
-                display: 'grid',
-                gap: 16,
-                gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-              }}
-            >
-              {articles.map((a) => (
-                <Link
-                  key={a.slug}
-                  href={`/article/${a.slug}`}
-                  style={{
-                    background: 'var(--paper-card)',
-                    border: '1px solid var(--line)',
-                    borderRadius: 'var(--radius-lg)',
-                    overflow: 'hidden',
-                    textDecoration: 'none',
-                    color: 'inherit',
-                    display: 'flex',
-                    flexDirection: 'column',
-                  }}
-                >
-                  <div style={{ aspectRatio: '16/10', backgroundColor: 'var(--peach-soft)', overflow: 'hidden' }}>
-                    {a.hero && (
-                      <img
-                        src={a.hero}
-                        alt={a.title}
-                        loading="lazy"
-                        decoding="async"
-                        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                      />
-                    )}
-                  </div>
-                  <div style={{ padding: '14px 18px', display: 'flex', flexDirection: 'column', gap: 8 }}>
-                    <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 15, fontWeight: 600, margin: 0, lineHeight: 1.55 }}>
-                      {a.title}
-                    </h3>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </section>
-        )}
+        </div>
 
         {/* 関連スポット */}
         {spots.length > 0 && (
-          <section className="section" style={{ paddingTop: 0 }}>
-            <div className="section-head">
-              <div>
-                <span className="eyebrow">Related Spots</span>
-                <h2>関連するスポット</h2>
+          <>
+            <div className="v2-sec-head">
+              <div className="v2-sec-title">
+                <span className="v2-bar-accent"></span>この特集のおすすめスポット
               </div>
-              <span className="hint">{spots.length} 件</span>
             </div>
-            <ul
-              style={{
-                listStyle: 'none',
-                padding: 0,
-                margin: 0,
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
-                gap: 10,
-              }}
-            >
-              {spots.map((x) => (
-                <li key={x.slug}>
-                  <Link
+            <div className="v2-vlist">
+              {spots.map((x, i) => {
+                const v = spotToV2(x.spot, i);
+                return (
+                  <V2SpotRow
+                    key={x.slug}
+                    spot={v}
+                    rank={i + 1}
                     href={`/spot/${x.slug}`}
-                    style={{
-                      display: 'block',
-                      padding: '12px 14px',
-                      borderRadius: 12,
-                      border: '1px solid var(--line)',
-                      background: 'var(--paper-card)',
-                      textDecoration: 'none',
-                      color: 'inherit',
-                    }}
-                  >
-                    <div style={{ fontFamily: 'var(--font-mincho)', fontSize: 14, fontWeight: 600 }}>
-                      {x.spot.name}
-                    </div>
-                    <div style={{ fontSize: 11, color: 'var(--ink-mute)', marginTop: 4 }}>
-                      {SPOT_CATEGORY_LABEL[x.spot.category]} · {x.spot.ward ?? x.spot.city ?? ''}
-                    </div>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
+                  />
+                );
+              })}
+            </div>
+          </>
         )}
 
-        {/* FAQ */}
-        <section className="section" style={{ paddingTop: 0 }}>
-          <div className="section-head">
-            <div>
-              <span className="eyebrow">FAQ</span>
-              <h2>この特集のよくある質問</h2>
-            </div>
-          </div>
-          <div
-            style={{
-              background: 'var(--paper-card)',
-              border: '1px solid var(--line)',
-              borderRadius: 'var(--radius-lg)',
-              padding: '8px 4px',
-            }}
-          >
-            {feature.faq.map((f, idx) => (
-              <details
-                key={idx}
-                style={{
-                  borderBottom: idx === feature.faq.length - 1 ? 'none' : '1px solid var(--line)',
-                  padding: '14px 20px',
-                }}
-              >
-                <summary
-                  style={{
-                    fontFamily: 'var(--font-mincho)',
-                    fontSize: 16,
-                    fontWeight: 600,
-                    cursor: 'pointer',
-                    lineHeight: 1.55,
-                    color: 'var(--clay-deep)',
-                  }}
-                >
-                  Q. {f.question}
-                </summary>
-                <p style={{ marginTop: 10, fontSize: 14.5, lineHeight: 1.85, color: 'var(--ink)' }}>{f.answer}</p>
-              </details>
-            ))}
-          </div>
-        </section>
-      </main>
+        {/* AdSense */}
+        <div className="v2-section" style={{ marginTop: 24 }}>
+          <AdSlot placement="article-mid" />
+        </div>
 
-      <SiteFooter />
-      <MobileStickyNav />
+        {/* 関連記事 */}
+        {articles.length > 0 && (
+          <>
+            <V2SectionHead title="関連記事" more="" />
+            <div className="v2-section">
+              {articles.slice(0, 8).map((a) => {
+                const v = articleToV2(a);
+                return (
+                  <V2ArticleRow key={a.slug} a={v} href={`/article/${a.slug}`} />
+                );
+              })}
+            </div>
+          </>
+        )}
+
+        {/* 関連特集 */}
+        <V2SectionHead title="関連特集" moreHref="/feature" />
+        <div className="v2-hscroll">
+          {relatedFeatures.map((f) => (
+            <Link
+              key={f.slug}
+              href={`/feature/${f.slug}`}
+              className="v2-feat-overlay"
+            >
+              <V2Img src={f.hero || '/hero-ai/cat-family-dinner-01.webp'} seed={f.slug + 'rel'} alt={f.title} />
+              <div className="v2-feat-overlay-grad"></div>
+              <div className="v2-feat-overlay-title">
+                {f.title.length > 18 ? f.title.slice(0, 18) + '…' : f.title}
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* FAQ */}
+        {feature.faq && feature.faq.length > 0 && (
+          <>
+            <div className="v2-sec-head">
+              <div className="v2-sec-title">
+                <span className="v2-bar-accent"></span>よくある質問
+              </div>
+            </div>
+            <div className="v2-section" style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              {feature.faq.map((q, i) => (
+                <details key={i} className="v2-faq" open={i === 0}>
+                  <summary className="v2-faq-q" style={{ listStyle: 'none', cursor: 'pointer' }}>
+                    <span className="v2-faq-mark">Q</span>
+                    {q.question}
+                    <V2Icon
+                      name="chevron-down"
+                      size={18}
+                      color="#bbb"
+                      style={{ marginLeft: 'auto', flex: 'none' }}
+                    />
+                  </summary>
+                  <div className="v2-faq-a">
+                    <span className="v2-faq-mark a">A</span>
+                    <span>{q.answer}</span>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </>
+        )}
+
+        <div style={{ height: 24 }}></div>
+      </V2Frame>
     </>
   );
 }

@@ -1,0 +1,142 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { V2Frame } from '@/components/v2/V2Frame';
+
+export const metadata: Metadata = {
+  title: '監修者紹介 | きょうのこ',
+  description:
+    'きょうのこの監修者ページ。現在、専門家による継続監修体制を構築中です。小児科医・管理栄養士・保育士・子育てアドバイザーなど、監修にご協力いただける専門家の方を募集しています。',
+  alternates: { canonical: '/supervisors' },
+};
+
+export default function SupervisorsPage() {
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'HOME', item: 'https://kyounoko.jp/' },
+      { '@type': 'ListItem', position: 2, name: '監修者紹介', item: 'https://kyounoko.jp/supervisors' },
+    ],
+  };
+  const jsonLdWebPage = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': 'https://kyounoko.jp/supervisors',
+    url: 'https://kyounoko.jp/supervisors',
+    name: '監修者紹介',
+    description:
+      'きょうのこの監修体制の現状と、監修者募集についてのページ。透明性確保のため、空状態でも公開しています。',
+    inLanguage: 'ja',
+    isPartOf: { '@id': 'https://kyounoko.jp/#website' },
+    publisher: { '@id': 'https://kyounoko.jp/#organization' },
+  };
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebPage) }}
+      />
+      <SiteHeader />
+      <div className="container-article">
+        <nav className="breadcrumb" aria-label="パンくず">
+          <Link href="/">HOME</Link>
+          <span className="sep">/</span>
+          <span>監修者紹介</span>
+        </nav>
+      </div>
+      <div className="container-article">
+        <header className="page-head">
+          <span className="eyebrow">Supervisors</span>
+          <h1>監修者紹介</h1>
+          <p className="lead">
+            きょうのこは現在、専門家による継続的な監修体制を構築中です。
+            読者の皆さまへの透明性を確保するため、空の状態でもこのページを公開し、現状と今後の予定を明示しています。
+          </p>
+        </header>
+
+        <article className="prose">
+          <h2>現在の監修体制について</h2>
+          <div
+            style={{
+              background: 'var(--paper-card)',
+              border: '1px solid var(--line)',
+              borderRadius: 'var(--radius-lg)',
+              padding: 24,
+              margin: '24px 0',
+            }}
+          >
+            <p style={{ margin: 0, fontSize: 14, color: 'var(--ink-sub)', lineHeight: 1.9 }}>
+              現時点で、きょうのこには<strong>常駐の監修者はいません</strong>。
+              この事実を隠さずに開示することが、運営者ながみー個人で運営している個人メディアとして最低限の誠実さだと考えています。
+              監修不在の現状を補うため、医療・健康・行政手続き・安全に関わる情報については、
+              本文中で<strong>厚生労働省・各学会・自治体・メーカー公式</strong>などの公式ソースへ直接リンクし、
+              運営者個人の独自判断を述べないよう運用しています。
+            </p>
+          </div>
+
+          <h2>監修者を募集しています</h2>
+          <p>
+            きょうのこは、次のような専門性をお持ちの方に、記事監修・寄稿でご協力いただける方を募集しています。
+          </p>
+          <ul>
+            <li><strong>小児科医</strong>：子どもの体調・予防接種・乳幼児健診・けがの初期対応など</li>
+            <li><strong>管理栄養士 / 栄養士</strong>：離乳食・幼児食・アレルギー対応・栄養バランス</li>
+            <li><strong>保育士</strong>：保育園生活・発達・あそび・生活リズム・しつけ</li>
+            <li><strong>子育てアドバイザー / 保健師 / 助産師</strong>：育児相談・産後の家庭運営・家族関係</li>
+            <li><strong>その他</strong>：理学療法士・歯科衛生士・公認心理師など、子育ての周辺領域の専門家</li>
+          </ul>
+
+          <h2>監修してくださる方へのお願い</h2>
+          <p>
+            ご興味をお持ちいただける場合、下記の情報を添えてメールにてご連絡ください。
+            個別にご相談のうえ、対象記事・監修フロー・条件をご案内します。
+          </p>
+          <ul>
+            <li>お名前（公開可能なものでも、ペンネームでも結構です）</li>
+            <li>ご資格・ご所属（公開可能な範囲で）</li>
+            <li>監修可能な領域・対象記事のイメージ</li>
+            <li>ご連絡先（メール推奨）</li>
+          </ul>
+          <ul>
+            <li>監修お問い合わせ先：<a href="mailto:service@kyounoko.jp">service@kyounoko.jp</a></li>
+            <li><Link href="/contact">お問い合わせフォーム</Link></li>
+          </ul>
+
+          <h2>今後の予定</h2>
+          <p>
+            きょうのこでは、YMYL（Your Money or Your Life）に該当する次のような記事カテゴリーから順に、専門家監修を導入する予定です。
+          </p>
+          <ul>
+            <li><strong>離乳食・幼児食</strong>：管理栄養士による監修バッジの導入を最優先で検討</li>
+            <li><strong>日焼け止め・スキンケア</strong>：小児科医・皮膚科医による監修</li>
+            <li><strong>子どもの体調・健康</strong>：小児科医による監修</li>
+            <li><strong>事故・安全</strong>：消費者庁ガイドライン準拠の上、専門家確認</li>
+          </ul>
+          <p>
+            監修導入後は、該当記事の冒頭に<strong>監修者氏名・所属・資格</strong>を明記した「監修バッジ」を表示し、
+            この監修者紹介ページからもプロフィールに辿れるようにします。
+            <strong>架空の監修者を装ったり、形だけの監修バッジを掲示したりすることは絶対にしません。</strong>
+          </p>
+
+          <h2>関連情報</h2>
+          <ul>
+            <li><Link href="/about">運営者情報</Link>（運営者ながみーについて）</li>
+            <li><Link href="/editorial-policy">編集方針</Link>（情報の集め方・更新ルール・YMYLでの扱い）</li>
+            <li><Link href="/authors/nagamy">著者プロフィール：ながみー</Link></li>
+            <li><Link href="/contact">お問い合わせ</Link></li>
+          </ul>
+
+          <p style={{ marginTop: 48, fontSize: 12, color: 'var(--ink-mute)' }}>
+            最終更新：2026年5月18日
+          </p>
+        </article>
+      </div>
+      <SiteFooter />
+      <MobileStickyNav />
+    </>
+  );
+}

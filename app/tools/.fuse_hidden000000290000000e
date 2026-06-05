@@ -1,0 +1,156 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { V2Frame } from '@/components/v2/V2Frame';
+
+export const metadata: Metadata = {
+  title: '子育て診断ツール｜きょうのこ',
+  description:
+    '子育てにまつわる迷いを「3分の質問」で解消する診断ツール集。ベビーカー診断・習い事マッチング・おでかけタイプ診断など、無料で使えるインタラクティブツール。',
+  alternates: { canonical: '/tools' },
+  openGraph: {
+    title: '子育て診断ツール｜きょうのこ',
+    description: 'ベビーカー診断・習い事マッチング・おでかけタイプ診断。3分の質問で答えが出る無料ツール集。',
+  },
+};
+
+const TOOLS = [
+  {
+    slug: 'babycar-shindan',
+    title: 'ベビーカー診断',
+    eyebrow: 'TOOL 01',
+    desc: '生活シーン・予算・住環境の5問に答えるだけ。あなたに合うベビーカー3モデルを提案します。',
+    questions: 5,
+    durationMin: 2,
+    featured: true,
+  },
+  {
+    slug: 'naraigoto-match',
+    title: '習い事マッチング診断',
+    eyebrow: 'TOOL 02',
+    desc: 'お子さんの年齢・性格・親の希望から、向いている習い事TOP3をご提案。0-6歳が対象。',
+    questions: 6,
+    durationMin: 3,
+  },
+  {
+    slug: 'odekake-type',
+    title: 'おでかけタイプ診断',
+    eyebrow: 'TOOL 03',
+    desc: 'あなたの家族の「お出かけタイプ」を6タイプから判定。タイプ別の最適プランを提示します。',
+    questions: 7,
+    durationMin: 3,
+  },
+];
+
+export default function ToolsPage() {
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'HOME', item: 'https://kyounoko.jp/' },
+      { '@type': 'ListItem', position: 2, name: '診断ツール', item: 'https://kyounoko.jp/tools' },
+    ],
+  };
+  const jsonLdItemList = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: '子育て診断ツール',
+    itemListElement: TOOLS.map((t, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `https://kyounoko.jp/tools/${t.slug}`,
+      name: t.title,
+    })),
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdItemList) }} />
+      <V2Frame header="sub" active="home">
+      <div className="container-article">
+        <nav className="breadcrumb" aria-label="パンくず">
+          <Link href="/">HOME</Link>
+          <span className="sep">/</span>
+          <span>診断ツール</span>
+        </nav>
+      </div>
+
+      <div className="container-article">
+        <header className="page-head">
+          <span className="eyebrow">Tools</span>
+          <h1>子育て診断ツール</h1>
+          <p className="lead">
+            「ベビーカーどれ買えば？」「うちの子に合う習い事は？」——子育ての迷いを<strong>3分の質問</strong>で解消する無料ツール集。すべて編集部の独自データに基づく診断ロジックです。
+          </p>
+        </header>
+
+        <section style={{ marginTop: 32 }}>
+          <div style={{ display: 'grid', gap: 16 }}>
+            {TOOLS.map((t) => (
+              <Link
+                key={t.slug}
+                href={`/tools/${t.slug}`}
+                style={{
+                  display: 'block',
+                  padding: 24,
+                  border: '1px solid var(--line)',
+                  borderRadius: 'var(--radius-lg)',
+                  background: t.featured ? 'linear-gradient(135deg, rgba(20,147,209,0.08), rgba(201,96,62,0.05))' : 'var(--paper-card)',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  transition: 'transform 0.18s ease, box-shadow 0.18s ease',
+                }}
+              >
+                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', color: 'var(--clay-deep)', marginBottom: 6 }}>
+                  {t.eyebrow}
+                </div>
+                <h2 style={{ fontFamily: 'var(--font-mincho), serif', fontSize: 22, fontWeight: 600, margin: '0 0 10px' }}>
+                  {t.title}
+                  {t.featured && (
+                    <span style={{ fontSize: 11, fontWeight: 700, marginLeft: 8, padding: '2px 8px', borderRadius: 999, background: 'var(--clay)', color: '#fff', verticalAlign: 'middle' }}>
+                      人気
+                    </span>
+                  )}
+                </h2>
+                <p style={{ margin: '0 0 14px', color: 'var(--ink-sub)', lineHeight: 1.85, fontSize: 14 }}>
+                  {t.desc}
+                </p>
+                <div style={{ display: 'flex', gap: 14, fontSize: 12, color: 'var(--ink-mute)' }}>
+                  <span>📋 {t.questions}問</span>
+                  <span>⏱ 約{t.durationMin}分</span>
+                  <span style={{ color: 'var(--clay-deep)', fontWeight: 600 }}>診断する →</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section style={{ marginTop: 56, padding: 24, background: 'var(--paper-card)', border: '1px solid var(--line)', borderRadius: 'var(--radius-lg)' }}>
+          <h2 style={{ fontFamily: 'var(--font-mincho), serif', fontSize: 20, margin: '0 0 14px' }}>
+            きょうのこ診断ツールの特徴
+          </h2>
+          <ul style={{ margin: 0, paddingLeft: 20, lineHeight: 1.95, color: 'var(--ink-sub)', fontSize: 14 }}>
+            <li><strong>独自データに基づく</strong>：編集部の3,277店データ・290+記事の知見をもとに設計</li>
+            <li><strong>登録不要・完全無料</strong>：メールアドレス入力なし、結果も即時表示</li>
+            <li><strong>結果は理由付きで提示</strong>：単に「これ」だけでなく、なぜその結果かまで説明</li>
+            <li><strong>診断後のアクション付き</strong>：おすすめ商品・関連記事への動線で即「次の一手」</li>
+          </ul>
+        </section>
+
+        <section style={{ marginTop: 40 }}>
+          <h2 style={{ fontFamily: 'var(--font-mincho), serif', fontSize: 20, margin: '0 0 16px' }}>
+            関連ダウンロード資料
+          </h2>
+          <p style={{ color: 'var(--ink-sub)', fontSize: 14, marginBottom: 16 }}>
+            診断と組み合わせて使える、印刷・保存OKの無料資料も用意しています。
+          </p>
+          <Link href="/downloads" className="btn-ghost">
+            ダウンロード資料を見る →
+          </Link>
+        </section>
+      </div>
+      <SiteFooter />
+      <MobileStickyNav />
+    </>
+  );
+}

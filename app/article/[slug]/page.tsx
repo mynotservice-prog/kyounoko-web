@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { SiteHeader } from '@/components/layout/SiteHeader';
-import { SiteFooter } from '@/components/layout/SiteFooter';
-import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+import { V2Frame } from '@/components/v2/V2Frame';
 import { getArticle, getArticleIds } from '@/lib/microcms';
 import {
   getAllFileArticleSlugs,
@@ -211,7 +209,7 @@ export default async function ArticlePage({ params }: Props) {
       '@id': 'https://kyounoko.jp/#organization',
       name: 'きょうのこ',
       url: 'https://kyounoko.jp',
-      logo: { '@type': 'ImageObject', url: 'https://kyounoko.jp/img/ogp-default.jpg' },
+      logo: { '@type': 'ImageObject', url: 'https://kyounoko.jp/img/ogp-default-v2.webp' },
     },
     image: article.hero?.url,
     mainEntityOfPage: {
@@ -276,7 +274,7 @@ export default async function ArticlePage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       {jsonLdFaq && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />}
 
-      <SiteHeader currentCategory={article.category?.slug as never} />
+      <V2Frame header="sub" active="home" backHref={article.category?.slug ? `/category/${article.category.slug}` : '/'}>
 
       {/* Breadcrumb */}
       <div className="container-article">
@@ -552,8 +550,7 @@ export default async function ArticlePage({ params }: Props) {
         )}
       </article>
 
-      <SiteFooter />
-      <MobileStickyNav active={article.category?.slug === 'today-doko' ? 'today-doko' : article.category?.slug === 'today-nani' ? 'today-nani' : article.category?.slug === 'today-taberu' ? 'today-taberu' : undefined} />
+      </V2Frame>
     </>
   );
 }
@@ -654,7 +651,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
       '@id': 'https://kyounoko.jp/#organization',
       name: 'きょうのこ',
       url: 'https://kyounoko.jp',
-      logo: { '@type': 'ImageObject', url: 'https://kyounoko.jp/img/ogp-default.jpg' },
+      logo: { '@type': 'ImageObject', url: 'https://kyounoko.jp/img/ogp-default-v2.webp' },
     },
     image: heroUrlAbsolute,
     // canonical URL と一致した @id を持つ WebPage を mainEntityOfPage として参照
@@ -818,7 +815,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
         />
       ))}
 
-      <SiteHeader currentCategory={article.category as never} />
+      <V2Frame header="sub" active="home" backHref={article.category ? `/category/${article.category}` : '/'}>
 
       {/* Breadcrumb */}
       <div className="container-article">
@@ -1328,8 +1325,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
         </aside>
       </article>
 
-      <SiteFooter />
-      <MobileStickyNav active={mobileActive} />
+      </V2Frame>
     </>
   );
 }

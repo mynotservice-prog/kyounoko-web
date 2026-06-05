@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SiteHeader } from '@/components/layout/SiteHeader';
-import { SiteFooter } from '@/components/layout/SiteFooter';
-import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+import { V2Frame } from '@/components/v2/V2Frame';
 
 export const metadata: Metadata = {
   title: '利用規約',
@@ -22,7 +20,7 @@ export default function TermsPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
-      <SiteHeader />
+      <V2Frame header="sub" active="home">
       <div className="container-article">
         <nav className="breadcrumb" aria-label="パンくず"><Link href="/">HOME</Link><span className="sep">/</span><span>利用規約</span></nav>
       </div>
@@ -105,8 +103,8 @@ export default function TermsPage() {
           </p>
         </article>
       </div>
-      <SiteFooter />
-      <MobileStickyNav />
+      </V2Frame>
+      
     </>
   );
 }

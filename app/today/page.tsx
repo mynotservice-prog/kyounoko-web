@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SiteHeader } from '@/components/layout/SiteHeader';
-import { SiteFooter } from '@/components/layout/SiteFooter';
-import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+import { V2Frame } from '@/components/v2/V2Frame';
 import {
   getTodayAnswer,
   getRelatedArticlesForQuery,
@@ -403,7 +401,7 @@ export default async function TodayPage({ searchParams }: Props) {
 
   return (
     <>
-      <SiteHeader />
+      <V2Frame header="sub" active="home">
 
       <div className="container">
         <nav className="breadcrumb" aria-label="パンくず">
@@ -733,8 +731,8 @@ export default async function TodayPage({ searchParams }: Props) {
         </div>
       </section>
 
-      <SiteFooter />
-      <MobileStickyNav />
+      </V2Frame>
+      
     </>
   );
 }

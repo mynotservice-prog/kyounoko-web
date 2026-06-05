@@ -1,19 +1,36 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { SiteHeader } from '@/components/layout/SiteHeader';
-import { SiteFooter } from '@/components/layout/SiteFooter';
-import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+import { V2Frame } from '@/components/v2/V2Frame';
+import { V2SectionHead, V2Img, V2Tag } from '@/components/v2/V2Base';
+import { V2Icon } from '@/components/v2/V2Icon';
 import { getCategory, getCategories, getArticlesByCategory } from '@/lib/microcms';
 import { getFileArticlesByCategory, type FileArticleMeta } from '@/lib/articles';
 import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
 import { getPopularItemsForArticleCategory } from '@/lib/items-catalog';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { getCategoryFaqs } from '@/lib/category-faqs';
+import { articleToV2 } from '@/lib/v2-adapters';
 
 export const revalidate = 3600;
 
-// MicroCMS未整備時のフォールバック（有効なカテゴリslugと日本語名のマッピング）
+/** カテゴリslug → 支給B系のヒーロー画像 */
+const CATEGORY_HERO_IMG: Record<string, string> = {
+  'today-doko': '/v2/conditions/today-doko.webp',
+  'today-nani': '/v2/conditions/today-nani.webp',
+  'today-taberu': '/v2/conditions/today-taberu.webp',
+  'today-mawasu': '/v2/conditions/today-mawasu.webp',
+  'shippai-shinai': '/v2/conditions/shippai-shinai.webp',
+  'tenki': '/v2/conditions/tenki.webp',
+  'heijitsu-yoru': '/v2/conditions/heijitsu-yoru.webp',
+  'gyouji': '/v2/conditions/gyouji.webp',
+  'narai': '/v2/conditions/narai.webp',
+  'yakudatsu': '/v2/conditions/yakudatsu.webp',
+};
+function categoryHero(slug: string): string {
+  return CATEGORY_HERO_IMG[slug] || '/v2/conditions/today-doko.webp';
+}
+
 const FALLBACK_CATEGORIES: Record<string, { name: string; description: string; order: number }> = {
   'today-doko': { name: '今日どこ行く？', order: 1, description: '雨の日・猛暑日・ベビーカー前提・ワンオペでも。0〜6歳の子と安心して過ごせる場所を条件で絞り込みます。' },
   'today-nani': { name: '今日何する？', order: 2, description: '家で過ごす日の家遊び・工作・絵本。10分単位で、家にあるもので。' },
@@ -27,20 +44,16 @@ const FALLBACK_CATEGORIES: Record<string, { name: string; description: string; o
   'yakudatsu': { name: '役立つもの', order: 7, description: '宅食・ミールキット・時短家電・ベビー用品。毎日を楽にする道具。' },
 };
 
-type Props = {
-  params: Promise<{ slug: string }>;
-};
+type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
   try {
-    const { contents } = await getCategories();
-    if (contents.length > 0) {
-      return contents.map(c => ({ slug: c.slug }));
-    }
+    const result = await getCategories();
+    if (result?.contents?.length) return result.contents.map((c) => ({ slug: c.slug }));
   } catch {
-    // MicroCMS未整備時はフォールバックslugで生成
+    // ignore
   }
-  return Object.keys(FALLBACK_CATEGORIES).map(slug => ({ slug }));
+  return Object.keys(FALLBACK_CATEGORIES).map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -51,9 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   } catch {
     // ignore
   }
-  if (!category && FALLBACK_CATEGORIES[slug]) {
-    category = FALLBACK_CATEGORIES[slug];
-  }
+  if (!category && FALLBACK_CATEGORIES[slug]) category = FALLBACK_CATEGORIES[slug];
   if (!category) return { title: 'カテゴリが見つかりません' };
 
   const description = category.description ?? `${category.name}に関する記事一覧です。`;
@@ -66,13 +77,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: `https://kyounoko.jp/category/${slug}`,
       type: 'website',
-      images: [{ url: '/img/ogp-default.jpg', width: 1200, height: 630 }],
+      images: [{ url: '/img/ogp-default-v2.webp', width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${category.name}｜きょうのこ`,
       description,
-      images: ['/img/ogp-default.jpg'],
+      images: ['/img/ogp-default-v2.webp'],
     },
   };
 }
@@ -83,7 +94,7 @@ export default async function CategoryPage({ params }: Props) {
   try {
     category = await getCategory(slug);
   } catch {
-    // ignore - fallback
+    // ignore
   }
   if (!category && FALLBACK_CATEGORIES[slug]) {
     const fb = FALLBACK_CATEGORIES[slug];
@@ -99,14 +110,10 @@ export default async function CategoryPage({ params }: Props) {
     // empty
   }
 
-  // MicroCMS に記事がなければファイルベース記事をフォールバック表示
   const fileArticles: FileArticleMeta[] =
     articles.length === 0 ? getFileArticlesByCategory(slug) : [];
 
-  // カテゴリ下部に「このカテゴリで人気の商品」3商品を表示（yakudatsu 含む全カテゴリ対応）
   const popularItems = getPopularItemsForArticleCategory(slug, 3);
-
-  // カテゴリ毎の FAQ。リッチリザルト用 + 滞在時間・カバレッジ向上の Tier 2 施策
   const faqs = getCategoryFaqs(slug);
 
   const jsonLdBreadcrumb = {
@@ -118,10 +125,6 @@ export default async function CategoryPage({ params }: Props) {
     ],
   };
 
-  // CollectionPage + ItemList JSON-LD（Tier 2 SEO強化）
-  // カテゴリページは「記事リスト」であるため、Googleに対して
-  // CollectionPage であることと、含まれる記事一覧を明示する。
-  // mainEntity に ItemList を入れる形が公式推奨パターン。
   const listedSources: Array<{ slug: string; title: string }> =
     articles.length > 0
       ? articles.slice(0, 20).map((a) => ({ slug: a.slug, title: a.title }))
@@ -147,7 +150,6 @@ export default async function CategoryPage({ params }: Props) {
     },
   };
 
-  // FAQPage JSON-LD（リッチリザルト対応）
   const jsonLdFaq =
     faqs.length > 0
       ? {
@@ -161,6 +163,28 @@ export default async function CategoryPage({ params }: Props) {
         }
       : null;
 
+  // 表示用カード
+  type Article = {
+    slug: string;
+    title: string;
+    img: string;
+    sub?: string;
+    tags: string[];
+  };
+  const displayArticles: Article[] =
+    articles.length > 0
+      ? articles.map((a) => ({
+          slug: a.slug,
+          title: a.title,
+          img: a.hero?.url || categoryHero(slug),
+          sub: a.lede,
+          tags: [],
+        }))
+      : fileArticles.map((a) => {
+          const v = articleToV2(a);
+          return { slug: a.slug, title: a.title, img: v.img, sub: a.lede, tags: v.tags || [] };
+        });
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
@@ -169,296 +193,152 @@ export default async function CategoryPage({ params }: Props) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
       )}
 
-      <SiteHeader currentCategory={slug as never} />
+      <V2Frame header="sub" active="home">
+        {/* カテゴリ用ヒーロー — 支給B系 */}
+        <div className="v2-article-hero" style={{ height: 180 }}>
+          <V2Img src={categoryHero(slug)} seed={`cat-${slug}`} alt={category.name} />
+          <div className="v2-article-hero-grad"></div>
+          <span className="v2-article-hero-cat">カテゴリ</span>
+          <div className="v2-fa-hero-title">{category.name}</div>
+        </div>
+        <div className="v2-page-head" style={{ paddingTop: 14 }}>
+          {category.description && (
+            <p className="v2-page-lead" style={{ marginTop: 0 }}>{category.description}</p>
+          )}
+        </div>
 
-      {/* Breadcrumb */}
-      <div className="container">
-        <nav className="breadcrumb" aria-label="パンくず">
-          <Link href="/">HOME</Link>
-          <span className="sep">/</span>
-          <span>{category.name}</span>
-        </nav>
-      </div>
-
-      {/* Category hero */}
-      <section className="section" style={{ paddingTop: 24 }}>
-        <div className="container">
-          <header className="page-head" style={{ paddingTop: 16 }}>
-            <span className="eyebrow">Category · {category.order ? String(category.order).padStart(2, '0') : ''}</span>
-            <h1>{category.name}</h1>
-            {category.description && <p className="lead">{category.description}</p>}
-          </header>
-
-          {slug === 'yakudatsu' && (
-            <div
-              style={{
-                marginTop: 20,
-                padding: '18px 20px',
-                background: 'var(--clay-soft)',
-                border: '1px solid var(--line-strong)',
-                borderRadius: 'var(--radius-lg)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                gap: 16,
-                flexWrap: 'wrap',
-              }}
+        {/* yakudatsu の特別バナー */}
+        {slug === 'yakudatsu' && (
+          <div className="v2-section">
+            <Link
+              href="/items"
+              className="v2-banner"
+              style={{ marginLeft: 0, marginRight: 0 }}
             >
-              <div>
-                <strong
+              <span className="v2-banner-ico">
+                <V2Icon name="cart" size={22} color="var(--v2-orange)" />
+              </span>
+              <span className="v2-banner-txt">
+                <span className="v2-banner-title">商品カタログを見る</span>
+                <span className="v2-banner-sub">
+                  抱っこ紐・ベビーカー・宅食など、カテゴリ別に比較
+                </span>
+              </span>
+              <V2Icon name="chevron-right" size={20} color="#c9b9a8" />
+            </Link>
+          </div>
+        )}
+
+        {/* 記事一覧 */}
+        <V2SectionHead title={`${category.name}の記事 (${displayArticles.length})`} more="" />
+        {displayArticles.length === 0 ? (
+          <div className="v2-section">
+            <p style={{ color: 'var(--v2-ink-mute)' }}>
+              このカテゴリの記事は準備中です。
+            </p>
+          </div>
+        ) : (
+          <div className="v2-vlist">
+            {displayArticles.map((a) => (
+              <Link
+                key={a.slug}
+                href={`/article/${a.slug}`}
+                className="v2-card-row"
+              >
+                <div
+                  className="v2-imgwrap"
                   style={{
-                    fontFamily: 'var(--font-mincho)',
-                    fontSize: 17,
-                    color: 'var(--clay-deep)',
-                    display: 'block',
-                    marginBottom: 4,
+                    width: 118,
+                    minWidth: 118,
+                    aspectRatio: '1/1',
+                    borderRadius: 14,
+                    position: 'relative',
                   }}
                 >
-                  商品カタログを見る
-                </strong>
-                <span style={{ fontSize: 13, color: 'var(--ink-sub)' }}>
-                  抱っこ紐・ベビーカー・宅食など、カテゴリ別に比較商品をまとめています。
-                </span>
-              </div>
-              <Link href="/items" className="btn-primary" style={{ whiteSpace: 'nowrap' }}>
-                商品カタログへ →
+                  <V2Img src={a.img} seed={a.slug} alt={a.title} />
+                </div>
+                <div className="v2-card-row-body">
+                  <div className="v2-card-row-title">{a.title}</div>
+                  {a.sub && (
+                    <div className="v2-art-sub">{a.sub.slice(0, 60)}</div>
+                  )}
+                  {a.tags.length > 0 && (
+                    <div className="v2-tag-row">
+                      {a.tags.slice(0, 3).map((t, i) => (
+                        <V2Tag key={i} label={t} tone={i === 0 ? 'age' : ''} />
+                      ))}
+                    </div>
+                  )}
+                </div>
               </Link>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Age picker - TODO: /age/* ページ未実装のため一時非表示 */}
-
-      {/* Articles grid */}
-      <section className="section cv-auto-section" style={{ paddingTop: 0 }}>
-        <div className="container">
-          <div className="section-head">
-            <div>
-              <span className="eyebrow">Articles</span>
-              <h2>{category.name}の記事</h2>
-            </div>
-            <span className="hint">{(articles.length + fileArticles.length)} 件</span>
+            ))}
           </div>
+        )}
 
-          {articles.length === 0 && fileArticles.length === 0 ? (
-            <p style={{ color: 'var(--ink-sub)' }}>このカテゴリの記事は準備中です。</p>
-          ) : (
-            <div style={{ display: 'grid', gap: 20, gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
-              {articles.map(article => (
-                <Link
-                  key={article.id}
-                  href={`/article/${article.slug}`}
-                  style={{
-                    background: 'var(--paper-card)',
-                    border: '1px solid var(--line)',
-                    borderRadius: 'var(--radius-lg)',
-                    overflow: 'hidden',
-                    textDecoration: 'none',
-                    color: 'inherit',
-                    display: 'flex',
-                    flexDirection: 'column',
-                  }}
-                >
-                  <div
-                    style={{
-                      aspectRatio: '16/10',
-                      backgroundColor: 'var(--peach-soft)',
-                      overflow: 'hidden',
-                    }}
-                  >
-                    {article.hero && (
-                      <img
-                        src={`${article.hero.url}?w=800`}
-                        alt={article.title}
-                        loading="lazy"
-                        decoding="async"
-                        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                      />
-                    )}
-                  </div>
-                  <div style={{ padding: '16px 20px 22px', display: 'flex', flexDirection: 'column', gap: 10, flex: 1 }}>
-                    <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 16, fontWeight: 600, margin: 0, lineHeight: 1.55 }}>
-                      {article.title}
-                    </h3>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 'auto' }}>
-                      {article.quickInfo_ageRanges?.slice(0, 1).map(age => (
-                        <span key={age} className="meta-chip clay">{age}歳</span>
-                      ))}
-                      {article.quickInfo_place?.slice(0, 1).map(p => (
-                        <span key={p} className="meta-chip sage">{p === 'home' ? '家' : p === 'indoor' ? '屋内' : '外'}</span>
-                      ))}
-                      {article.quickInfo_weather?.includes('rain') && (
-                        <span className="meta-chip sky">雨OK</span>
-                      )}
-                    </div>
-                  </div>
-                </Link>
-              ))}
+        {/* AdSense */}
+        <div className="v2-section" style={{ marginTop: 24 }}>
+          <AdSlot placement="article-mid" />
+        </div>
 
-              {fileArticles.map(article => (
-                <Link
-                  key={`file-${article.slug}`}
-                  href={`/article/${article.slug}`}
-                  style={{
-                    background: 'var(--paper-card)',
-                    border: '1px solid var(--line)',
-                    borderRadius: 'var(--radius-lg)',
-                    overflow: 'hidden',
-                    textDecoration: 'none',
-                    color: 'inherit',
-                    display: 'flex',
-                    flexDirection: 'column',
-                  }}
-                >
-                  <div
-                    style={{
-                      aspectRatio: '16/10',
-                      backgroundColor: 'var(--peach-soft)',
-                      overflow: 'hidden',
-                    }}
-                  >
-                    {article.hero && (
-                      <img
-                        src={article.hero}
-                        alt={article.title}
-                        loading="lazy"
-                        decoding="async"
-                        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                      />
-                    )}
-                  </div>
-                  <div style={{ padding: '16px 20px 22px', display: 'flex', flexDirection: 'column', gap: 10, flex: 1 }}>
-                    <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 16, fontWeight: 600, margin: 0, lineHeight: 1.55 }}>
-                      {article.title}
-                    </h3>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 'auto' }}>
-                      {article.quickInfo?.ageRanges?.slice(0, 1).map(age => (
-                        <span key={age} className="meta-chip clay">{age}歳</span>
-                      ))}
-                      {article.quickInfo?.place?.slice(0, 1).map(p => (
-                        <span key={p} className="meta-chip sage">{p === 'home' ? '家' : p === 'indoor' ? '屋内' : '外'}</span>
-                      ))}
-                      {article.quickInfo?.weather?.includes('rain') && (
-                        <span className="meta-chip sky">雨OK</span>
-                      )}
-                    </div>
-                  </div>
-                </Link>
+        {/* 人気商品 */}
+        {popularItems.length > 0 && (
+          <>
+            <V2SectionHead title="このカテゴリで人気の商品" moreHref="/items" />
+            <div className="v2-section" style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+              {popularItems.map((it) => (
+                <AffiliateLink
+                  key={it.id}
+                  href={it.href}
+                  title={it.name}
+                  subtitle={it.subtitle}
+                  price={it.price}
+                  provider={it.provider}
+                  itemId={it.id}
+                />
               ))}
             </div>
-          )}
-        </div>
-      </section>
+          </>
+        )}
 
-      {/* このカテゴリで人気の商品（カテゴリ→関連カタログマッピングで3商品まで） */}
-      {popularItems.length > 0 && (
-        <section className="section" style={{ paddingTop: 0 }}>
-          <div className="container">
-            <div className="category-popular-items">
-              <div className="category-popular-items-head">
-                <span className="eyebrow">Popular items</span>
-                <h2>このカテゴリで人気の商品</h2>
-              </div>
-              <p className="category-popular-items-pr" role="note">
-                <span className="pr-label">PR</span>
-                <span>
-                  ※本エリアは広告を含みます。リンク経由で購入があった場合、運営に収益が発生することがあります。
-                </span>
-              </p>
-              <div className="category-popular-items-grid">
-                {popularItems.map((item) => (
-                  <AffiliateLink
-                    key={item.id}
-                    href={item.href}
-                    title={item.name}
-                    subtitle={item.subtitle}
-                    price={item.price}
-                    provider={item.provider}
-                    pr={false}
-                  />
-                ))}
-              </div>
-              <div style={{ marginTop: 16, textAlign: 'right' }}>
-                <Link
-                  href="/items"
-                  style={{
-                    fontSize: 13,
-                    color: 'var(--clay)',
-                    textDecoration: 'none',
-                    letterSpacing: '.02em',
-                  }}
-                >
-                  もっと見る（商品カタログ）→
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* カテゴリFAQ（リッチリザルト用 + 滞在時間向上） */}
-      {faqs.length > 0 && (
-        <section className="section" style={{ paddingTop: 0 }}>
-          <div className="container">
-            <div className="section-head">
-              <div>
-                <span className="eyebrow">FAQ</span>
-                <h2>{category.name} のよくある質問</h2>
+        {/* FAQ */}
+        {faqs.length > 0 && (
+          <>
+            <div className="v2-sec-head">
+              <div className="v2-sec-title">
+                <span className="v2-bar-accent"></span>よくある質問
               </div>
             </div>
             <div
-              style={{
-                background: 'var(--paper-card)',
-                border: '1px solid var(--line)',
-                borderRadius: 'var(--radius-lg)',
-                padding: '8px 4px',
-              }}
+              className="v2-section"
+              style={{ display: 'flex', flexDirection: 'column', gap: 10 }}
             >
-              {faqs.map((f, idx) => (
-                <details
-                  key={idx}
-                  style={{
-                    borderBottom: idx === faqs.length - 1 ? 'none' : '1px solid var(--line)',
-                    padding: '14px 20px',
-                  }}
-                >
+              {faqs.map((f, i) => (
+                <details key={i} className="v2-faq" open={i === 0}>
                   <summary
-                    style={{
-                      fontFamily: 'var(--font-mincho)',
-                      fontSize: 16,
-                      fontWeight: 600,
-                      cursor: 'pointer',
-                      lineHeight: 1.55,
-                      color: 'var(--clay-deep)',
-                    }}
+                    className="v2-faq-q"
+                    style={{ listStyle: 'none', cursor: 'pointer' }}
                   >
-                    Q. {f.question}
+                    <span className="v2-faq-mark">Q</span>
+                    {f.question}
+                    <V2Icon
+                      name="chevron-down"
+                      size={18}
+                      color="#bbb"
+                      style={{ marginLeft: 'auto', flex: 'none' }}
+                    />
                   </summary>
-                  <p
-                    style={{
-                      marginTop: 10,
-                      fontSize: 14.5,
-                      lineHeight: 1.85,
-                      color: 'var(--ink)',
-                    }}
-                  >
-                    {f.answer}
-                  </p>
+                  <div className="v2-faq-a">
+                    <span className="v2-faq-mark a">A</span>
+                    <span>{f.answer}</span>
+                  </div>
                 </details>
               ))}
             </div>
-          </div>
-        </section>
-      )}
+          </>
+        )}
 
-      {/* AdSense: カテゴリページ末尾の関連コンテンツ風広告 */}
-      <div className="container" style={{ marginTop: 24, marginBottom: 24 }}>
-        <AdSlot placement="article-related" />
-      </div>
-
-      <SiteFooter />
-      <MobileStickyNav active={slug === 'today-doko' || slug === 'today-nani' || slug === 'today-taberu' ? (slug as 'today-doko' | 'today-nani' | 'today-taberu') : undefined} />
+        <div style={{ height: 24 }}></div>
+      </V2Frame>
     </>
   );
 }

@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SiteHeader } from '@/components/layout/SiteHeader';
-import { SiteFooter } from '@/components/layout/SiteFooter';
-import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+import { V2Frame } from '@/components/v2/V2Frame';
+import { V2Icon } from '@/components/v2/V2Icon';
 
 export const metadata: Metadata = {
   title: 'ページが見つかりません',
@@ -12,58 +11,91 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <>
-      <SiteHeader />
-      <div className="container-article">
-        <div style={{ padding: '96px 0 120px', textAlign: 'center' }}>
-          <span
-            style={{
-              fontFamily: 'var(--font-mincho)',
-              fontStyle: 'italic',
-              fontSize: 'clamp(96px, 18vw, 160px)',
-              color: 'var(--clay)',
-              lineHeight: 1,
-              display: 'inline-block',
-            }}
+    <V2Frame header="sub" backHref="/" active="home">
+      <div
+        style={{
+          padding: '60px 24px 80px',
+          textAlign: 'center',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 16,
+        }}
+      >
+        <div
+          style={{
+            width: 96,
+            height: 96,
+            borderRadius: '50%',
+            background: 'var(--v2-orange-tint)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <V2Icon name="search" size={42} color="var(--v2-orange)" />
+        </div>
+        <h1
+          style={{
+            fontSize: 22,
+            fontWeight: 800,
+            color: 'var(--v2-ink)',
+            margin: 0,
+            lineHeight: 1.4,
+          }}
+        >
+          ページが見つかりませんでした
+        </h1>
+        <p
+          style={{
+            color: 'var(--v2-ink-mute)',
+            fontSize: 13.5,
+            lineHeight: 1.7,
+            margin: 0,
+            maxWidth: 360,
+          }}
+        >
+          URLが間違っているか、記事が移動・削除された可能性があります。
+          <br />
+          トップから探すか、条件で再検索してください。
+        </p>
+        <div
+          style={{
+            display: 'flex',
+            gap: 10,
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            marginTop: 8,
+          }}
+        >
+          <Link
+            href="/"
+            className="v2-btn-primary"
+            style={{ minWidth: 140, padding: '12px 24px' }}
           >
-            404
-          </span>
-          <h1
+            トップへ戻る
+          </Link>
+          <Link
+            href="/search"
             style={{
-              fontFamily: 'var(--font-mincho)',
-              fontSize: 'clamp(22px, 3.2vw, 28px)',
-              fontWeight: 600,
-              margin: '24px 0 16px',
-              letterSpacing: '.02em',
-            }}
-          >
-            お探しのページが見つかりませんでした
-          </h1>
-          <p
-            style={{
-              color: 'var(--ink-sub)',
-              margin: '0 auto 36px',
-              lineHeight: 1.9,
-              maxWidth: 440,
-            }}
-          >
-            URLが間違っているか、記事が移動・削除された可能性があります。トップから探すか、カテゴリから該当する記事を見つけてください。
-          </p>
-          <div
-            style={{
-              display: 'flex',
+              minWidth: 140,
+              padding: '12px 24px',
+              borderRadius: 'var(--v2-r-pill)',
+              border: '1.5px solid var(--v2-orange)',
+              color: 'var(--v2-orange-deep)',
+              fontWeight: 800,
+              fontSize: 14,
+              display: 'inline-flex',
+              alignItems: 'center',
               justifyContent: 'center',
-              gap: 12,
-              flexWrap: 'wrap',
+              gap: 6,
             }}
           >
-            <Link href="/" className="btn-primary">トップへ戻る</Link>
-            <Link href="/#finder" className="btn-ghost">条件で探す</Link>
-          </div>
+            <V2Icon name="search" size={15} color="var(--v2-orange-deep)" />
+            検索する
+          </Link>
         </div>
       </div>
-      <SiteFooter />
-      <MobileStickyNav />
-    </>
+    </V2Frame>
   );
 }

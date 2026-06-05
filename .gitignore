@@ -62,3 +62,6 @@ public/hero/*.png
 
 # Service account credentials (絶対に commit しない)
 /credentials/
+
+# V2リニューアル用：参照画像コンタクトシート（重い・開発側のみ使用）
+docs/_image-sheets/

@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SiteHeader } from '@/components/layout/SiteHeader';
-import { SiteFooter } from '@/components/layout/SiteFooter';
-import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+import { V2Frame } from '@/components/v2/V2Frame';
 
 export const metadata: Metadata = {
   title: '無料ダウンロード資料｜きょうのこ',
@@ -83,7 +81,7 @@ export default function DownloadsPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdItemList) }} />
-      <SiteHeader />
+      <V2Frame header="sub" active="home">
       <div className="container-article">
         <nav className="breadcrumb" aria-label="パンくず">
           <Link href="/">HOME</Link>
@@ -166,8 +164,8 @@ export default function DownloadsPage() {
           </Link>
         </section>
       </div>
-      <SiteFooter />
-      <MobileStickyNav />
+      </V2Frame>
+      
     </>
   );
 }

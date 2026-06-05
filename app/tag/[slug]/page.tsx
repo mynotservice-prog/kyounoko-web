@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { SiteHeader } from '@/components/layout/SiteHeader';
-import { SiteFooter } from '@/components/layout/SiteFooter';
-import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+import { V2Frame } from '@/components/v2/V2Frame';
 import { getTag, getAllTags, getContentForTag, getTagsByKind } from '@/lib/tags';
 
 export const revalidate = 3600;
@@ -86,7 +84,7 @@ export default async function TagPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCollection) }} />
 
-      <SiteHeader />
+      <V2Frame header="sub" active="home">
 
       <div className="container">
         <nav className="breadcrumb" aria-label="パンくず">
@@ -242,8 +240,8 @@ export default async function TagPage({ params }: Props) {
         </section>
       )}
 
-      <SiteFooter />
-      <MobileStickyNav />
+      </V2Frame>
+      
     </>
   );
 }

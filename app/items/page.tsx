@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SiteHeader } from '@/components/layout/SiteHeader';
-import { SiteFooter } from '@/components/layout/SiteFooter';
-import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+import { V2Frame } from '@/components/v2/V2Frame';
 import { PRBadge } from '@/components/affiliate/PRBadge';
 import { CategoryTabs } from '@/components/items/CategoryTabs';
 import { CATALOG_ITEMS, CATALOG_CATEGORY_META } from '@/lib/items-catalog';
@@ -37,7 +35,7 @@ export default function ItemsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
       />
 
-      <SiteHeader currentCategory="items" />
+      <V2Frame header="sub" active="home">
 
       <div className="container">
         <nav className="breadcrumb" aria-label="パンくず">
@@ -106,8 +104,8 @@ export default function ItemsPage() {
         <AdSlot placement="article-related" />
       </div>
 
-      <SiteFooter />
-      <MobileStickyNav />
+      </V2Frame>
+      
     </>
   );
 }

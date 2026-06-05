@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SiteHeader } from '@/components/layout/SiteHeader';
-import { SiteFooter } from '@/components/layout/SiteFooter';
-import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+import { V2Frame } from '@/components/v2/V2Frame';
 import { getAllSpotsWithSlug, SPOT_CATEGORY_LABEL } from '@/lib/spots';
 
 export const revalidate = 3600;
@@ -18,7 +16,7 @@ export const metadata: Metadata = {
       '49件の運営者一次情報。すべて実訪問・写真・記憶ベース。ベビーカー動線・混雑・授乳・注意点を網羅。',
     url: 'https://kyounoko.jp/kid-reports',
     type: 'website',
-    images: [{ url: '/img/ogp-default.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/img/ogp-default-v2.webp', width: 1200, height: 630 }],
   },
 };
 
@@ -79,7 +77,7 @@ export default function KidReportsIndexPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCollection) }} />
-      <SiteHeader />
+      <V2Frame header="sub" active="home">
 
       <div className="container">
         <nav className="breadcrumb" aria-label="パンくず" style={{ padding: '12px 0 4px' }}>
@@ -206,8 +204,8 @@ export default function KidReportsIndexPage() {
         ))}
       </main>
 
-      <SiteFooter />
-      <MobileStickyNav />
+      </V2Frame>
+      
     </>
   );
 }

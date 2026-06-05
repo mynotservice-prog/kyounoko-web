@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
-import { SiteHeader } from '@/components/layout/SiteHeader';
-import { SiteFooter } from '@/components/layout/SiteFooter';
-import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+import { V2Frame } from '@/components/v2/V2Frame';
 import { getAllPlanMetas } from '@/lib/plans';
 import { getAllFileArticles } from '@/lib/articles';
 import { FavoritesClient } from './FavoritesClient';
@@ -35,7 +33,7 @@ export default function FavoritesPage() {
 
   return (
     <>
-      <SiteHeader />
+      <V2Frame header="sub" active="home">
       <div className="container">
         <nav className="breadcrumb" aria-label="パンくず">
           <a href="/">HOME</a>
@@ -58,8 +56,8 @@ export default function FavoritesPage() {
         </div>
       </section>
 
-      <SiteFooter />
-      <MobileStickyNav />
+      </V2Frame>
+      
     </>
   );
 }

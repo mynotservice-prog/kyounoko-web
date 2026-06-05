@@ -8,6 +8,7 @@ import { AnalyticsRouteTracker } from '@/components/common/AnalyticsRouteTracker
 import { ScrollDepthTracker } from '@/components/common/ScrollDepthTracker';
 import { Suspense } from 'react';
 import './globals.css';
+import './v2/v2.css';
 
 // Next.js 15 では theme-color / viewport は viewport export で指定する
 export const viewport: Viewport = {
@@ -82,7 +83,7 @@ export const metadata: Metadata = {
     url: 'https://kyounoko.jp',
     images: [
       {
-        url: '/img/ogp-default.jpg',
+        url: '/img/ogp-default-v2.webp',
         width: 1200,
         height: 630,
         alt: 'きょうのこ',
@@ -93,13 +94,13 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'きょうのこ',
     description: '子育て家庭の「今日どうする？」を3分で決める。',
-    images: ['/img/ogp-default.jpg'],
+    images: ['/img/ogp-default-v2.webp'],
   },
   // Pinterest 連携: 子育て層の主要な視覚SNS流入源
   // pinterest:image / pinterest:description で Pin の見栄えを最適化
   other: {
     'pinterest-rich-pin': 'true',
-    'pinterest:image': 'https://kyounoko.jp/img/ogp-default.jpg',
+    'pinterest:image': 'https://kyounoko.jp/img/ogp-default-v2.webp',
     'pinterest:description': '子育て家庭の「今日どうする？」を3分で決めるサイト。0-6歳の天気・年齢・予算別に決定をサポート',
   },
   robots: {
@@ -217,7 +218,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               logo: {
                 '@type': 'ImageObject',
                 '@id': 'https://kyounoko.jp/#logo',
-                url: 'https://kyounoko.jp/img/ogp-default.jpg',
+                url: 'https://kyounoko.jp/img/ogp-default-v2.webp',
                 width: 1200,
                 height: 630,
                 caption: 'きょうのこ',

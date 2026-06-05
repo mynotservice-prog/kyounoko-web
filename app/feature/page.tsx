@@ -1,9 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SiteHeader } from '@/components/layout/SiteHeader';
-import { SiteFooter } from '@/components/layout/SiteFooter';
-import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+import { V2Frame } from '@/components/v2/V2Frame';
+import { V2FeatureRow } from '@/components/v2/V2Cards';
+import { V2SectionHead, V2Img, V2Tag } from '@/components/v2/V2Base';
+import { V2Icon } from '@/components/v2/V2Icon';
 import { FEATURE_PAGES } from '@/lib/feature-pages';
+import { featureToV2 } from '@/lib/v2-adapters';
+import { AdSlot } from '@/components/ads/AdSlot';
 
 export const revalidate = 3600;
 
@@ -15,87 +18,63 @@ export const metadata: Metadata = {
 };
 
 export default function FeatureIndexPage() {
+  const cards = FEATURE_PAGES.map(featureToV2);
   return (
-    <>
-      <SiteHeader />
-      <main className="container">
-        <nav className="breadcrumb" aria-label="パンくず" style={{ padding: '12px 0 4px' }}>
-          <Link href="/">HOME</Link>
-          <span className="sep">/</span>
-          <span>特集</span>
-        </nav>
+    <V2Frame header="sub" active="features">
+      <div className="v2-page-head" style={{ paddingTop: 6 }}>
+        <h1
+          className="v2-page-h1"
+          style={{ display: 'flex', alignItems: 'center', gap: 8 }}
+        >
+          <V2Icon name="book" size={24} color="var(--v2-orange)" />
+          特集まとめ
+        </h1>
+        <p className="v2-page-lead">
+          季節・テーマ別に、子連れで役立つ情報を1ページに集約した特集です。
+        </p>
+      </div>
 
-        <section className="section" style={{ paddingTop: 12 }}>
-          <header className="page-head">
-            <span className="eyebrow">Features</span>
-            <h1>特集まとめ</h1>
-            <p className="lead" style={{ marginTop: 4 }}>
-              季節・テーマ別に、子連れで役立つ情報を1ページに集約した特集ページです。
-            </p>
-          </header>
+      <V2SectionHead title="おすすめの特集" more="" />
+      <div
+        className="v2-section"
+        style={{ display: 'flex', flexDirection: 'column', gap: 13 }}
+      >
+        {cards.slice(0, 3).map((f) => (
+          <V2FeatureRow key={f.id} f={f} href={`/feature/${f.id}`} />
+        ))}
+      </div>
 
-          <ul
-            style={{
-              listStyle: 'none',
-              padding: 0,
-              margin: '24px 0 0',
-              display: 'grid',
-              gap: 14,
-              gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-            }}
-          >
-            {FEATURE_PAGES.map((f) => (
-              <li key={f.slug}>
-                <Link
-                  href={`/feature/${f.slug}`}
-                  style={{
-                    display: 'block',
-                    padding: '18px 20px',
-                    borderRadius: 'var(--radius-lg)',
-                    border: '1px solid var(--line)',
-                    background: 'var(--paper-card)',
-                    textDecoration: 'none',
-                    color: 'inherit',
-                  }}
-                >
-                  <div
-                    style={{
-                      fontFamily: 'var(--font-mincho)',
-                      fontSize: 16,
-                      fontWeight: 700,
-                      lineHeight: 1.5,
-                      marginBottom: 6,
-                    }}
-                  >
-                    {f.title}
-                  </div>
-                  <p style={{ fontSize: 13, color: 'var(--ink-sub)', margin: 0, lineHeight: 1.7 }}>
-                    {f.lede}
-                  </p>
-                  <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 10 }}>
-                    {f.themeTags.map((t) => (
-                      <span
-                        key={t}
-                        style={{
-                          fontSize: 11,
-                          color: 'var(--clay-deep)',
-                          background: 'var(--peach-soft)',
-                          padding: '3px 8px',
-                          borderRadius: 999,
-                        }}
-                      >
-                        #{t}
-                      </span>
-                    ))}
-                  </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-      </main>
-      <SiteFooter />
-      <MobileStickyNav />
-    </>
+      {/* AdSense */}
+      <div className="v2-section" style={{ marginTop: 24 }}>
+        <AdSlot placement="home-below-finder" />
+      </div>
+
+      <V2SectionHead title="すべての特集" more="" />
+      <div className="v2-section" style={{ display: 'flex', flexDirection: 'column', gap: 13 }}>
+        {cards.map((f) => (
+          <Link key={f.id} href={`/feature/${f.id}`} className="v2-recent-feat">
+            <div
+              className="v2-imgwrap r"
+              style={{ width: 88, minWidth: 88, aspectRatio: '16/9' }}
+            >
+              <V2Img src={f.img} seed={f.id} alt={f.title} />
+            </div>
+            <div className="v2-rank-info">
+              <div className="v2-rank-title">{f.title}</div>
+              {f.tags && (
+                <div className="v2-tag-row">
+                  {f.tags.map((t, i) => (
+                    <V2Tag key={i} label={t} tone={i === 0 ? 'feat' : ''} />
+                  ))}
+                </div>
+              )}
+            </div>
+            <V2Icon name="chevron-right" size={18} color="#ccc" />
+          </Link>
+        ))}
+      </div>
+
+      <div style={{ height: 24 }}></div>
+    </V2Frame>
   );
 }

@@ -10,7 +10,7 @@ import {
   V2ContextProvider,
 } from './V2Base';
 
-export type V2NavActive = 'home' | 'search' | 'saved' | 'features';
+export type V2NavActive = 'home' | 'search' | 'events' | 'features' | 'saved';
 
 type FrameProps = {
   children: React.ReactNode;
@@ -164,13 +164,14 @@ function V2Header({
 
 function V2BottomNav({ active }: { active?: V2NavActive }) {
   const items = [
-    { k: 'home', t: 'ホーム', icon: 'home', href: '/v2' },
-    { k: 'search', t: '探す', icon: 'search', href: '/v2/search' },
-    { k: 'saved', t: '保存', icon: 'bookmark', href: '/v2/favorites' },
-    { k: 'features', t: '特集', icon: 'book', href: '/v2/feature' },
+    { k: 'home', t: 'ホーム', icon: 'home', href: '/' },
+    { k: 'search', t: '探す', icon: 'search', href: '/search' },
+    { k: 'events', t: 'イベント', icon: 'calendar', href: '/events' },
+    { k: 'features', t: '特集', icon: 'book', href: '/feature' },
+    { k: 'saved', t: '保存', icon: 'bookmark', href: '/favorites' },
   ] as const;
   return (
-    <nav className="v2-bottom-nav">
+    <nav className="v2-bottom-nav nav5">
       {items.map((it) => {
         const on = active === it.k;
         return (
@@ -197,10 +198,11 @@ function V2BottomNav({ active }: { active?: V2NavActive }) {
 
 function V2DesktopHeader({ active }: { active?: V2NavActive }) {
   const links = [
-    { k: 'home', t: 'ホーム', icon: 'home', href: '/v2' },
-    { k: 'search', t: '探す', icon: 'search', href: '/v2/search' },
-    { k: 'area', t: 'エリア', icon: 'pin', href: '/v2/area' },
-    { k: 'features', t: '特集', icon: 'book', href: '/v2/feature' },
+    { k: 'home', t: 'ホーム', icon: 'home', href: '/' },
+    { k: 'search', t: '探す', icon: 'search', href: '/search' },
+    { k: 'events', t: 'イベント', icon: 'calendar', href: '/events' },
+    { k: 'features', t: '特集', icon: 'book', href: '/feature' },
+    { k: 'saved', t: '保存', icon: 'bookmark', href: '/favorites' },
   ] as const;
   return (
     <header className="v2-dt-header">

@@ -1,0 +1,200 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { V2Frame } from '@/components/v2/V2Frame';
+import { PrintButton } from '@/components/tools/PrintButton';
+
+export const metadata: Metadata = {
+  title: '月齢別タイムスケジュール｜きょうのこ',
+  description:
+    '0-1歳/2-3歳/4-6歳それぞれの理想的な1日のタイムスケジュール表。起床・食事・お昼寝・遊び・就寝の最適配分を月齢別に。印刷・PDF保存OK。',
+  alternates: { canonical: '/downloads/getsurei-schedule' },
+  openGraph: {
+    title: '月齢別タイムスケジュール｜きょうのこ',
+    description: '0-6歳の理想的な1日の流れを月齢別に。睡眠・食事・遊びの最適配分。',
+  },
+};
+
+export default function Page() {
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'HOME', item: 'https://kyounoko.jp/' },
+      { '@type': 'ListItem', position: 2, name: 'ダウンロード資料', item: 'https://kyounoko.jp/downloads' },
+      { '@type': 'ListItem', position: 3, name: '月齢別タイムスケジュール', item: 'https://kyounoko.jp/downloads/getsurei-schedule' },
+    ],
+  };
+  const jsonLdHowTo = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: '月齢別タイムスケジュールの使い方',
+    description: '0-6歳の子の発達段階別に、起床から就寝までの理想的な1日の流れを表で示した生活リズムシート。',
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: '子の月齢に合うセクションを確認',
+        text: '0-1歳・2-3歳・4-6歳の3つから子に近いものを選ぶ。',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: '起床と就寝の時刻を固定',
+        text: 'まず起床と就寝の時刻だけを1週間固定するところから始める。',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: '食事・お昼寝の時刻を整える',
+        text: '次に食事とお昼寝の時刻を整え、最後に遊びの時間帯を配置する。',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: '個人差に合わせて調整',
+        text: '本表はあくまで目安。子の発達や家庭の事情に合わせて柔軟に調整する。',
+      },
+    ],
+  };
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdHowTo) }} />
+      <SiteHeader />
+      <div className="container-article">
+        <nav className="breadcrumb" aria-label="パンくず">
+          <Link href="/">HOME</Link>
+          <span className="sep">/</span>
+          <Link href="/downloads">ダウンロード資料</Link>
+          <span className="sep">/</span>
+          <span>月齢別タイムスケジュール</span>
+        </nav>
+      </div>
+
+      <div className="container-article">
+        <header className="page-head">
+          <span className="eyebrow">DOC 02</span>
+          <h1>月齢別タイムスケジュール</h1>
+          <p className="lead">
+            <strong>0-1歳／2-3歳／4-6歳</strong>それぞれの理想的な1日の流れをタイムテーブルで。起床・食事・お昼寝・遊び・就寝の配分を月齢ごとに整理しました。生活リズムを整える出発点としてお使いください。
+          </p>
+        </header>
+
+        <PrintButton docId="getsurei-schedule" />
+
+        <article className="print-doc">
+          <h2>使い方</h2>
+          <p>
+            理想スケジュールは「絶対こうすべき」というものではなく、<strong>体内リズムが整いやすい目安</strong>です。まず「起床」と「就寝」の2時刻だけを1週間固定してみると、自然に他の時刻も整っていきます。子の発達や家庭の状況に合わせて、無理なく取り入れてください。
+          </p>
+
+          <h2>A. 0-1歳の理想スケジュール</h2>
+          <p>授乳・離乳食・お昼寝が中心。お昼寝は午前と午後の2回が基本。</p>
+          <table>
+            <thead>
+              <tr>
+                <th>時刻</th>
+                <th>内容</th>
+                <th>ポイント</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>6:30</td><td>起床・カーテンを開ける</td><td>朝日を浴びて体内時計をリセット</td></tr>
+              <tr><td>7:00</td><td>授乳 or 朝の離乳食</td><td>毎日同じ時刻にすると消化リズムが整う</td></tr>
+              <tr><td>8:30</td><td>お散歩・外気浴</td><td>15〜30分で十分。刺激が眠りを深める</td></tr>
+              <tr><td>9:30</td><td>午前のお昼寝（30〜90分）</td><td>静かで暗い環境で</td></tr>
+              <tr><td>11:30</td><td>授乳 or 昼の離乳食</td><td>食後は機嫌が良い時間帯</td></tr>
+              <tr><td>13:00</td><td>午後のお昼寝（1〜2時間）</td><td>このお昼寝が夜の眠りを左右する</td></tr>
+              <tr><td>15:00</td><td>おやつ（離乳食後期から）・遊び</td><td>触れ合い遊びで愛着形成</td></tr>
+              <tr><td>17:30</td><td>授乳 or 夕食</td><td>就寝の1.5時間前までに済ませる</td></tr>
+              <tr><td>18:00</td><td>お風呂</td><td>湯温は38〜40度・15分以内</td></tr>
+              <tr><td>18:45</td><td>絵本・スキンシップ</td><td>部屋を少し暗く・静かに</td></tr>
+              <tr><td>19:00</td><td>就寝</td><td>同じ時刻・同じ流れが安心の合図</td></tr>
+            </tbody>
+          </table>
+
+          <h2>B. 2-3歳の理想スケジュール</h2>
+          <p>お昼寝は1回（午後のみ）。自分でできることを増やしたい時期。</p>
+          <table>
+            <thead>
+              <tr>
+                <th>時刻</th>
+                <th>内容</th>
+                <th>ポイント</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>6:30</td><td>起床・トイレ・着替え</td><td>「自分でやる」を尊重し時間に余裕を</td></tr>
+              <tr><td>7:00</td><td>朝食</td><td>炭水化物+タンパク質+果物の3点で</td></tr>
+              <tr><td>8:00</td><td>登園 or 自由遊び</td><td>外遊びがあると午後よく眠る</td></tr>
+              <tr><td>10:00</td><td>おやつ・水分補給</td><td>果物や乳製品など軽めに</td></tr>
+              <tr><td>12:00</td><td>昼食</td><td>家族と一緒に食べると会話が増える</td></tr>
+              <tr><td>13:00</td><td>お昼寝（1〜2時間）</td><td>寝過ぎると夜眠れない。15時までに起こす</td></tr>
+              <tr><td>15:00</td><td>おやつ</td><td>夕食に響かない量・時間で</td></tr>
+              <tr><td>15:30</td><td>外遊び・自由遊び</td><td>毎日30分の外遊びが理想</td></tr>
+              <tr><td>18:00</td><td>夕食</td><td>就寝2時間前までに済ませる</td></tr>
+              <tr><td>19:00</td><td>お風呂</td><td>歯磨きはお風呂後の流れに組み込む</td></tr>
+              <tr><td>19:30</td><td>絵本・お話タイム</td><td>テレビ・スマホはOFF</td></tr>
+              <tr><td>20:00</td><td>就寝</td><td>部屋を暗くして添い寝</td></tr>
+            </tbody>
+          </table>
+
+          <h2>C. 4-6歳の理想スケジュール</h2>
+          <p>お昼寝は不要になる子も多い。学習や習い事が入ってくる時期。</p>
+          <table>
+            <thead>
+              <tr>
+                <th>時刻</th>
+                <th>内容</th>
+                <th>ポイント</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>6:30</td><td>起床・洗面・着替え</td><td>朝の準備は前日夜に揃えておく</td></tr>
+              <tr><td>7:00</td><td>朝食</td><td>会話しながら食べる時間を確保</td></tr>
+              <tr><td>8:00</td><td>登園・登校</td><td>持ち物チェックは本人にやらせる</td></tr>
+              <tr><td>12:00</td><td>昼食（園・学校）</td><td>—</td></tr>
+              <tr><td>15:00</td><td>降園・おやつ</td><td>家でゆっくりする時間を必ず作る</td></tr>
+              <tr><td>15:30</td><td>外遊び or 習い事</td><td>体を動かす時間が夜の睡眠を深くする</td></tr>
+              <tr><td>17:30</td><td>自由遊び・お絵描き等</td><td>主体的な遊びで集中力を育てる</td></tr>
+              <tr><td>18:30</td><td>夕食</td><td>家族で食卓を囲む</td></tr>
+              <tr><td>19:30</td><td>お風呂</td><td>自分で体を洗う練習も</td></tr>
+              <tr><td>20:00</td><td>絵本・親子の会話</td><td>スマホ・テレビは消す</td></tr>
+              <tr><td>20:30</td><td>就寝</td><td>就学前に20:30就寝が定着すると小学校がラク</td></tr>
+            </tbody>
+          </table>
+
+          <h2>整え方の3ステップ</h2>
+          <ul className="checklist">
+            <li>STEP1：まず「起床時刻」だけを1週間固定する</li>
+            <li>STEP2：次に「就寝時刻」を1週間固定する</li>
+            <li>STEP3：食事とお昼寝の時刻を整え、最後に遊びを配置</li>
+          </ul>
+
+          <p style={{ marginTop: 16, padding: 12, background: 'var(--paper-card)', borderLeft: '3px solid var(--clay)', fontSize: 13 }}>
+            <strong>注意：</strong>個人差があります。本表はあくまで目安です。子の発達・体力・家庭の状況に合わせて柔軟に調整してください。睡眠時間が極端に短い・長い場合は小児科にご相談を。
+          </p>
+
+          <p style={{ marginTop: 32, fontSize: 12, color: 'var(--ink-mute)', textAlign: 'center' }}>
+            © きょうのこ (kyounoko.jp) — 個人利用は自由。商用利用は要問合せ。
+          </p>
+        </article>
+
+        <PrintButton docId="getsurei-schedule" />
+
+        <section style={{ marginTop: 40 }}>
+          <h2 style={{ fontFamily: 'var(--font-mincho), serif', fontSize: 20, margin: '0 0 16px' }}>
+            関連記事
+          </h2>
+          <ul style={{ margin: 0, paddingLeft: 20, lineHeight: 1.95 }}>
+            <li><Link href="/article/yonaki-taisaku-0-1sai">夜泣き対策｜0-1歳の睡眠リズムの整え方</Link></li>
+            <li><Link href="/article/19ji-shoutou-routine">19時消灯ルーティン｜早寝の作り方</Link></li>
+            <li><Link href="/article/heijitsu-yoru-30pun-routine">平日夜30分ルーティン｜寝かしつけまでの流れ</Link></li>
+          </ul>
+        </section>
+      </div>
+      <SiteFooter />
+      <MobileStickyNav />
+    </>
+  );
+}

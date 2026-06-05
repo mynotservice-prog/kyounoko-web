@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
-import { SiteHeader } from '@/components/layout/SiteHeader';
-import { SiteFooter } from '@/components/layout/SiteFooter';
-import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+import { V2Frame } from '@/components/v2/V2Frame';
 import { SettingsClient } from './SettingsClient';
 
 export const metadata: Metadata = {
@@ -14,7 +12,7 @@ export const metadata: Metadata = {
 export default function SettingsPage() {
   return (
     <>
-      <SiteHeader />
+      <V2Frame header="sub" active="home">
       <div className="container">
         <nav className="breadcrumb" aria-label="パンくず">
           <a href="/">HOME</a>
@@ -38,8 +36,8 @@ export default function SettingsPage() {
         </div>
       </section>
 
-      <SiteFooter />
-      <MobileStickyNav />
+      </V2Frame>
+      
     </>
   );
 }

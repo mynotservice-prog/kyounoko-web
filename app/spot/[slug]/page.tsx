@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { SiteHeader } from '@/components/layout/SiteHeader';
-import { SiteFooter } from '@/components/layout/SiteFooter';
-import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+import { V2Frame } from '@/components/v2/V2Frame';
+import { V2Img, V2SectionHead, V2Tag } from '@/components/v2/V2Base';
+import { V2Icon, V2_ACCENT, type V2IconName } from '@/components/v2/V2Icon';
 import {
   getAllSpotsWithSlug,
   getSpotBySlug,
@@ -18,23 +18,22 @@ import {
   buildAccessTipsText,
   buildPreVisitNotes,
 } from '@/lib/spot-narratives';
+import { spotToV2, articleToV2 } from '@/lib/v2-adapters';
+import { AdSlot } from '@/components/ads/AdSlot';
+import { V2RememberSpot } from '@/components/v2/V2RememberSpot';
+import { V2SaveButton, V2SdHeroFav } from '@/components/v2/V2SaveButton';
 
 export const revalidate = 3600;
 
-type Props = {
-  params: Promise<{ slug: string }>;
-};
+type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
-  // 静的生成対象は「最低限の情報を持つ」スポットに限定（薄ページ予防）
   return getAllSpotsWithSlug()
     .filter((x) => isIndexable(x.spot))
     .map((x) => ({ slug: x.slug }));
 }
 
-/** 「インデックス対象として価値がある」スポットの判定 */
 function isIndexable(s: Spot): boolean {
-  // 情報リッチネスのしきい値：以下の3つ以上満たすとインデックス
   let score = 0;
   if (s.note && s.note.length >= 25) score++;
   if (s.facilities && Object.keys(s.facilities).length >= 2) score++;
@@ -65,7 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       url: `https://kyounoko.jp/spot/${slug}`,
-      images: [{ url: '/img/ogp-default.jpg', width: 1200, height: 630 }],
+      images: [{ url: '/img/ogp-spot.webp', width: 1200, height: 630 }],
     },
   };
 }
@@ -76,56 +75,43 @@ const AGE_LABEL: Record<string, string> = {
   '4-6': '4〜6歳',
 };
 
-const FACILITY_LABEL: Record<string, string> = {
-  bathroom: '多目的トイレ',
-  diaperChange: 'おむつ替え台',
-  nursingRoom: '授乳室',
-  kidsSpace: 'キッズスペース',
-  strollerRental: 'ベビーカー貸出',
-};
+const FACILITY_DEF: Array<{ key: keyof NonNullable<Spot['facilities']>; label: string; icon: V2IconName; accent: keyof typeof V2_ACCENT }> = [
+  { key: 'nursingRoom', label: '授乳室', icon: 'milk', accent: 'event' },
+  { key: 'diaperChange', label: 'おむつ替え台', icon: 'baby', accent: 'indoor' },
+  { key: 'strollerRental', label: 'ベビーカー貸出', icon: 'stroller', accent: 'rain' },
+  { key: 'bathroom', label: '多目的トイレ', icon: 'house', accent: 'purple' },
+  { key: 'kidsSpace', label: 'キッズスペース', icon: 'star', accent: 'lunch' },
+];
 
 export default async function SpotPage({ params }: Props) {
   const { slug } = await params;
   const entry = getSpotBySlug(slug);
   if (!entry) notFound();
-  const { spot, area } = entry;
+  const { spot } = entry;
   const category = SPOT_CATEGORY_LABEL[spot.category] ?? spot.category;
   const location = spot.ward ?? spot.city ?? '';
-  const indexable = isIndexable(spot);
 
-  // 近隣スポット（同じ駅 or 同じ ward）
+  // 近隣スポット
   const nearbySpots = getAllSpotsWithSlug()
     .filter((x) => {
       if (x.slug === slug) return false;
       if (!isIndexable(x.spot)) return false;
-      // 同じ最寄り駅 or 同じ区
       if (spot.nearestStation && x.spot.nearestStation === spot.nearestStation) return true;
       if (spot.ward && x.spot.ward === spot.ward) return true;
       return false;
     })
     .slice(0, 6);
 
-  // 関連記事（カテゴリ・年齢でゆるく照合）
+  // 関連記事
   const allArticles = getAllFileArticles().filter((a) => !a.noindex);
   const relatedArticles = allArticles
     .filter((a) => {
-      // 同じ年齢層に該当
       const aAges = a.quickInfo?.ageRanges ?? [];
       return spot.ages.some((ageTag) => aAges.includes(ageTag));
     })
     .slice(0, 6);
 
-  // 構造化データ：LocalBusiness 系（Restaurant / Zoo / Park / Museum 等）。
-  // 価格・施設・遊具・混雑・予約・年齢などの kyounoko 固有メタを
-  // amenityFeature / makesOffer / additionalProperty にマッピング。
-  // 詳細は lib/spot-schema.ts 参照。
   const jsonLdPlace = buildSpotJsonLd(spot, slug);
-
-  // 動的に編集部コメント文を生成（Tier 3: スポット詳細の本文拡張）
-  const enjoyByAgeBlocks = buildEnjoyByAgeBlocks(spot);
-  const crowdAvoidance = buildCrowdAvoidanceText(spot);
-  const accessTips = buildAccessTipsText(spot);
-  const preVisitNotes = buildPreVisitNotes(spot);
   const jsonLdBreadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -136,430 +122,335 @@ export default async function SpotPage({ params }: Props) {
     ],
   };
 
+  const enjoyByAgeBlocks = buildEnjoyByAgeBlocks(spot);
+  const crowdAvoidance = buildCrowdAvoidanceText(spot);
+  const accessTips = buildAccessTipsText(spot);
+  const preVisitNotes = buildPreVisitNotes(spot);
+
+  const v2Spot = spotToV2(spot);
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPlace) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
-      <SiteHeader />
-      <main className="container">
-        <nav className="breadcrumb" aria-label="パンくず" style={{ padding: '12px 0 4px' }}>
-          <Link href="/">HOME</Link>
-          <span className="sep">/</span>
-          <Link href="/spots">子連れスポット</Link>
-          <span className="sep">/</span>
-          <span>{spot.name}</span>
-        </nav>
 
-        <section className="section" style={{ paddingTop: 8 }}>
-          {/* ヘッダー：エリア・カテゴリチップ */}
-          <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 8 }}>
-            <span
+      <V2Frame header="sub" active="search" backHref="/spots">
+        <V2RememberSpot
+          slug={slug}
+          name={spot.name}
+          img={v2Spot.img}
+          area={spot.ward || spot.city}
+        />
+
+        {/* オーバーレイヒーロー（2回目デザイン .v2-sd-hero） */}
+        <div className="v2-sd-hero">
+          <div className="v2-sd-hero-img">
+            <V2Img src={v2Spot.img} seed={slug} alt={spot.name} />
+            <div className="v2-sd-hero-grad"></div>
+
+            {/* breadcrumb（写真の上に重ねる） */}
+            <div className="v2-sd-hero-crumb">
+              <Link href="/" style={{ color: 'inherit', textDecoration: 'none' }}>ホーム</Link>
+              <V2Icon name="chevron-right" size={11} />
+              <Link href="/spots" style={{ color: 'inherit', textDecoration: 'none' }}>スポット</Link>
+              <V2Icon name="chevron-right" size={11} />
+              <span className="cur">{spot.name}</span>
+            </div>
+
+            {/* 保存ボタン（右上） */}
+            <V2SdHeroFav id={slug} />
+
+            {/* カテゴリ＋タイトル＋駅（左下） */}
+            <div className="v2-sd-hero-foot">
+              <span className="v2-sd-hero-cat">{category}</span>
+              <h1 className="v2-sd-hero-name">{spot.name}</h1>
+              {spot.nearestStation && (
+                <div className="v2-sd-hero-station">
+                  <V2Icon name="pin" size={14} color="#fff" />
+                  {spot.nearestStation}
+                  {spot.walkMinutes ? ` 徒歩${spot.walkMinutes}分` : ''}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* タグ */}
+        <div className="v2-section" style={{ marginTop: 14 }}>
+          <div className="v2-tag-row">
+            {location && <V2Tag label={location} />}
+            {spot.ages.map((age) => (
+              <V2Tag key={age} label={AGE_LABEL[age]} tone="age" />
+            ))}
+            {spot.place === 'indoor' && <V2Tag label="室内" tone="rain" />}
+            {spot.facilities?.nursingRoom === 'yes' && <V2Tag label="授乳室あり" />}
+            {spot.facilities?.strollerRental === 'yes' && <V2Tag label="ベビーカーOK" />}
+          </div>
+        </div>
+
+        {/* リード */}
+        {spot.note && (
+          <div className="v2-page-head" style={{ paddingTop: 14 }}>
+            <p className="v2-page-lead" style={{ marginTop: 0 }}>{spot.note}</p>
+          </div>
+        )}
+
+        {/* 基本情報 */}
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: 11,
+            padding: '18px 18px 0',
+          }}
+        >
+          {[
+            { lab: '対象年齢', val: spot.ages.map((a) => AGE_LABEL[a]).join('・'), icon: 'baby' as V2IconName, bg: 'var(--v2-c-event-bg)', c: 'var(--v2-c-event)' },
+            { lab: '料金の目安', val: spot.budget === 'free' ? '無料' : spot.budget === 'low' ? '〜1,000円' : spot.budget === 'mid' ? '1,000〜3,000円' : spot.budget === 'high' ? '3,000円〜' : '—', icon: 'yen' as V2IconName, bg: 'var(--v2-c-sun-bg)', c: '#E8A100' },
+            { lab: '屋内/屋外', val: spot.place === 'indoor' ? '屋内' : spot.place === 'outdoor' ? '屋外' : '一部屋外', icon: 'house' as V2IconName, bg: 'var(--v2-c-indoor-bg)', c: 'var(--v2-c-indoor)' },
+            { lab: '雨の日', val: spot.place === 'indoor' || spot.place === 'mixed' ? '◎ おすすめ' : '△', icon: 'umbrella' as V2IconName, bg: 'var(--v2-c-rain-bg)', c: 'var(--v2-c-rain)' },
+          ].map((b, i) => (
+            <div
+              key={i}
               style={{
-                fontSize: 11,
-                fontFamily: 'var(--font-inter), sans-serif',
-                color: 'var(--clay-deep)',
-                background: 'var(--peach-soft)',
-                padding: '4px 10px',
-                borderRadius: 999,
+                display: 'flex',
+                alignItems: 'center',
+                gap: 11,
+                background: '#fff',
+                border: '1px solid var(--v2-line)',
+                borderRadius: 'var(--v2-r-card)',
+                padding: '13px 14px',
               }}
             >
-              {category}
-            </span>
-            {location && (
               <span
                 style={{
-                  fontSize: 11,
-                  fontFamily: 'var(--font-inter), sans-serif',
-                  color: 'var(--ink-sub)',
-                  background: 'var(--paper-card)',
-                  border: '1px solid var(--line)',
-                  padding: '4px 10px',
-                  borderRadius: 999,
+                  width: 38,
+                  height: 38,
+                  borderRadius: '50%',
+                  background: b.bg,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flex: 'none',
                 }}
               >
-                {location}
+                <V2Icon name={b.icon} size={20} color={b.c} />
               </span>
-            )}
-            {spot.ages.map((age) => (
-              <span
-                key={age}
-                style={{
-                  fontSize: 11,
-                  fontFamily: 'var(--font-inter), sans-serif',
-                  color: 'var(--ink-sub)',
-                  background: 'var(--paper-card)',
-                  border: '1px solid var(--line)',
-                  padding: '4px 10px',
-                  borderRadius: 999,
-                }}
-              >
-                {AGE_LABEL[age]}
-              </span>
-            ))}
-          </div>
+              <div>
+                <div style={{ fontSize: 11, color: 'var(--v2-ink-mute)', fontWeight: 700 }}>{b.lab}</div>
+                <div style={{ fontSize: 14, fontWeight: 800, color: 'var(--v2-ink)', lineHeight: 1.25 }}>{b.val}</div>
+              </div>
+            </div>
+          ))}
+        </div>
 
-          <h1
-            style={{
-              fontFamily: 'var(--font-mincho)',
-              fontSize: 26,
-              fontWeight: 700,
-              margin: '4px 0 12px',
-            }}
-          >
-            {spot.name}
-          </h1>
-
-          {spot.note && (
-            <p style={{ fontSize: 15, color: 'var(--ink)', lineHeight: 1.85, margin: '0 0 18px' }}>
-              {spot.note}
-            </p>
-          )}
-
-          {/* 基本情報テーブル */}
-          <div
-            style={{
-              border: '1px solid var(--line)',
-              borderRadius: 12,
-              padding: '16px 18px',
-              background: 'var(--paper-card)',
-              marginBottom: 24,
-            }}
-          >
-            <h2 style={{ fontSize: 14, fontWeight: 700, margin: '0 0 12px', color: 'var(--clay-deep)' }}>
-              基本情報
-            </h2>
-            <dl style={{ margin: 0, fontSize: 13, lineHeight: 1.85 }}>
-              <Row label="カテゴリ" value={category} />
-              <Row label="場所タイプ" value={spot.place === 'indoor' ? '屋内' : spot.place === 'outdoor' ? '屋外' : '屋内＋屋外'} />
-              <Row label="対象年齢" value={spot.ages.map((a) => AGE_LABEL[a]).join(' / ')} />
-              {location && <Row label="エリア" value={location} />}
-              {spot.budget && (
-                <Row
-                  label="予算"
-                  value={
-                    spot.budget === 'free' ? '無料' :
-                    spot.budget === 'low' ? '〜1,000円' :
-                    spot.budget === 'mid' ? '1,000〜3,000円' : '3,000円〜'
-                  }
-                />
-              )}
-              {spot.nearestStation && spot.walkMinutes && (
-                <Row label="アクセス" value={`最寄り駅から徒歩${spot.walkMinutes}分`} />
-              )}
-              {spot.reservation && (
-                <Row
-                  label="予約"
-                  value={
-                    spot.reservation === 'required' ? '要予約' :
-                    spot.reservation === 'recommended' ? '予約推奨' : '不要'
-                  }
-                />
-              )}
-            </dl>
-          </div>
-
-          {/* 料金 */}
-          {spot.pricing && Object.keys(spot.pricing).length > 0 && (
-            <section style={{ marginBottom: 24 }}>
-              <h2 style={{ fontSize: 16, fontFamily: 'var(--font-mincho)', fontWeight: 600, margin: '0 0 8px' }}>
-                料金
-              </h2>
-              <dl style={{ margin: 0, fontSize: 13, lineHeight: 1.85 }}>
-                {spot.pricing.adult && <Row label="大人" value={spot.pricing.adult} />}
-                {spot.pricing.elementary && <Row label="小学生" value={spot.pricing.elementary} />}
-                {spot.pricing.preschool && <Row label="未就学児" value={spot.pricing.preschool} />}
-                {spot.pricing.infant && <Row label="乳児" value={spot.pricing.infant} />}
-              </dl>
-            </section>
-          )}
-
-          {/* 子連れ設備 */}
-          {spot.facilities && Object.keys(spot.facilities).length > 0 && (
-            <section style={{ marginBottom: 24 }}>
-              <h2 style={{ fontSize: 16, fontFamily: 'var(--font-mincho)', fontWeight: 600, margin: '0 0 8px' }}>
-                子連れ向け設備
-              </h2>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 6 }}>
-                {(['bathroom', 'diaperChange', 'nursingRoom', 'kidsSpace', 'strollerRental'] as const).map((key) => {
-                  const v = spot.facilities?.[key];
-                  if (!v) return null;
+        {/* 設備 */}
+        {spot.facilities && (
+          <>
+            <div className="v2-sec-head">
+              <div className="v2-sec-title">
+                <span className="v2-bar-accent"></span>設備・サービス
+              </div>
+            </div>
+            <div className="v2-section">
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
+                {FACILITY_DEF.filter((f) => spot.facilities![f.key] === 'yes').map((f) => {
+                  const a = V2_ACCENT[f.accent];
                   return (
-                    <li
-                      key={key}
+                    <div
+                      key={f.key}
                       style={{
-                        fontSize: 13,
-                        padding: '6px 10px',
-                        borderRadius: 8,
-                        background: v === 'yes' ? 'rgba(80, 160, 80, .08)' : 'rgba(180, 80, 80, .08)',
-                        color: v === 'yes' ? 'rgb(40, 100, 40)' : 'rgb(120, 60, 60)',
+                        background: '#fff',
+                        border: '1px solid var(--v2-line)',
+                        borderRadius: 'var(--v2-r-card)',
+                        padding: '12px 8px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        gap: 7,
+                        boxShadow: 'var(--v2-sh-soft)',
                       }}
                     >
-                      {v === 'yes' ? '✅' : '❌'} {FACILITY_LABEL[key]}
-                    </li>
+                      <div style={{ fontSize: 11.5, fontWeight: 700, color: 'var(--v2-ink-soft)' }}>
+                        {f.label}
+                      </div>
+                      <span style={{ color: a.c }}>
+                        <V2Icon name={f.icon} size={24} />
+                      </span>
+                      <div style={{ fontSize: 13, fontWeight: 800, color: 'var(--v2-ink)' }}>あり</div>
+                    </div>
                   );
                 })}
-              </ul>
-              {spot.facilities.note && (
-                <p style={{ fontSize: 12, color: 'var(--ink-mute)', marginTop: 8 }}>※ {spot.facilities.note}</p>
-              )}
-            </section>
-          )}
-
-          {/* 穴場ポイント */}
-          {spot.hiddenTip && (
-            <section
-              style={{
-                background: 'var(--peach-soft)',
-                padding: '14px 18px',
-                borderRadius: 12,
-                marginBottom: 24,
-              }}
-            >
-              <h2 style={{ fontSize: 14, fontWeight: 700, margin: '0 0 6px', color: 'var(--clay-deep)' }}>
-                💡 穴場ポイント
-              </h2>
-              <p style={{ fontSize: 13, lineHeight: 1.75, margin: 0 }}>{spot.hiddenTip}</p>
-            </section>
-          )}
-
-          {/* 行く前に知っておきたい注意点 */}
-          {preVisitNotes && (
-            <section style={{ marginBottom: 24 }}>
-              <h2
-                style={{
-                  fontSize: 18,
-                  fontFamily: 'var(--font-mincho)',
-                  fontWeight: 600,
-                  margin: '0 0 8px',
-                }}
-              >
-                行く前に知っておきたい注意点
-              </h2>
-              <p style={{ fontSize: 14, lineHeight: 1.85, margin: 0 }}>{preVisitNotes}</p>
-            </section>
-          )}
-
-          {/* 年齢別の楽しみ方 */}
-          {enjoyByAgeBlocks.length > 0 && (
-            <section style={{ marginBottom: 24 }}>
-              <h2
-                style={{
-                  fontSize: 18,
-                  fontFamily: 'var(--font-mincho)',
-                  fontWeight: 600,
-                  margin: '0 0 8px',
-                }}
-              >
-                年齢別の楽しみ方
-              </h2>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 10 }}>
-                {enjoyByAgeBlocks.map((b) => (
-                  <li
-                    key={b.age}
-                    style={{
-                      padding: '10px 14px',
-                      border: '1px solid var(--line)',
-                      borderRadius: 10,
-                      background: 'var(--paper-card)',
-                    }}
-                  >
-                    <div
-                      style={{
-                        fontFamily: 'var(--font-mincho)',
-                        fontSize: 13,
-                        fontWeight: 700,
-                        color: 'var(--clay-deep)',
-                        marginBottom: 4,
-                      }}
-                    >
-                      {b.label}
-                    </div>
-                    <p style={{ fontSize: 13, lineHeight: 1.8, margin: 0 }}>{b.text}</p>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
-
-          {/* 混雑回避のコツ */}
-          {crowdAvoidance && (
-            <section style={{ marginBottom: 24 }}>
-              <h2
-                style={{
-                  fontSize: 18,
-                  fontFamily: 'var(--font-mincho)',
-                  fontWeight: 600,
-                  margin: '0 0 8px',
-                }}
-              >
-                混雑回避のコツ
-              </h2>
-              <p style={{ fontSize: 14, lineHeight: 1.85, margin: 0 }}>{crowdAvoidance}</p>
-            </section>
-          )}
-
-          {/* アクセスのポイント */}
-          {accessTips && (
-            <section style={{ marginBottom: 24 }}>
-              <h2
-                style={{
-                  fontSize: 18,
-                  fontFamily: 'var(--font-mincho)',
-                  fontWeight: 600,
-                  margin: '0 0 8px',
-                }}
-              >
-                アクセスのポイントと滞在の目安
-              </h2>
-              <p style={{ fontSize: 14, lineHeight: 1.85, margin: 0 }}>{accessTips}</p>
-            </section>
-          )}
-
-          {/* 運営者の現地レポート（一次情報） */}
-          {spot.kidReport && (
-            <section
-              style={{
-                marginBottom: 24,
-                padding: '16px 18px',
-                border: '1px solid var(--line-strong)',
-                borderRadius: 12,
-                background: 'var(--clay-soft)',
-              }}
-            >
-              <div
-                style={{
-                  fontSize: 12,
-                  color: 'var(--clay-deep)',
-                  fontWeight: 700,
-                  marginBottom: 6,
-                  letterSpacing: '.02em',
-                }}
-              >
-                ✅ 運営者が訪問して確認 ({spot.kidReport.visitAge})
               </div>
-              <h2
-                style={{
-                  fontSize: 18,
-                  fontFamily: 'var(--font-mincho)',
-                  fontWeight: 600,
-                  margin: '0 0 10px',
-                }}
-              >
-                編集部の現地レポート
-              </h2>
-              <dl style={{ margin: 0, fontSize: 13.5, lineHeight: 1.85 }}>
-                <Row label="ベビーカー動線" value={spot.kidReport.strollerNote} />
-                <Row label="混雑と狙い目" value={spot.kidReport.crowdNote} />
-                <Row label="おむつ・授乳" value={spot.kidReport.diaperNote} />
-                <Row label="滞在時間目安" value={spot.kidReport.stayNote} />
-                <Row label="注意したい点" value={spot.kidReport.cautionNote} />
-              </dl>
-            </section>
-          )}
+            </div>
+          </>
+        )}
 
-          {/* 近隣スポット */}
-          {nearbySpots.length > 0 && (
-            <section style={{ marginBottom: 32 }}>
-              <h2 style={{ fontSize: 18, fontFamily: 'var(--font-mincho)', fontWeight: 600, margin: '0 0 12px' }}>
-                近隣の子連れスポット
-              </h2>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 8 }}>
-                {nearbySpots.map((n) => (
-                  <li key={n.slug}>
-                    <Link
-                      href={`/spot/${n.slug}`}
-                      style={{
-                        display: 'block',
-                        padding: '10px 12px',
-                        borderRadius: 10,
-                        border: '1px solid var(--line)',
-                        background: 'var(--paper-card)',
-                        textDecoration: 'none',
-                        color: 'inherit',
-                      }}
-                    >
-                      <div style={{ fontFamily: 'var(--font-mincho)', fontSize: 13, fontWeight: 600 }}>
-                        {n.spot.name}
-                      </div>
-                      <div style={{ fontSize: 11, color: 'var(--ink-mute)', marginTop: 2 }}>
-                        {SPOT_CATEGORY_LABEL[n.spot.category]} · {n.spot.ward ?? n.spot.city ?? ''}
-                      </div>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
+        {/* hiddenTip / pricing */}
+        {spot.hiddenTip && (
+          <div className="v2-section" style={{ marginTop: 18 }}>
+            <div
+              style={{
+                background: 'var(--v2-cream)',
+                borderRadius: 'var(--v2-r-card)',
+                padding: '14px 16px',
+                display: 'flex',
+                gap: 10,
+                alignItems: 'flex-start',
+              }}
+            >
+              <V2Icon name="sparkle" size={20} color="var(--v2-orange)" />
+              <div style={{ fontSize: 13, color: 'var(--v2-ink-soft)', lineHeight: 1.65 }}>
+                <strong style={{ color: 'var(--v2-ink)' }}>運営者のひとこと</strong>
+                <br />
+                {spot.hiddenTip}
+              </div>
+            </div>
+          </div>
+        )}
 
-          {/* 関連記事 */}
-          {relatedArticles.length > 0 && (
-            <section style={{ marginBottom: 32 }}>
-              <h2 style={{ fontSize: 18, fontFamily: 'var(--font-mincho)', fontWeight: 600, margin: '0 0 12px' }}>
-                関連する記事
-              </h2>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 8 }}>
-                {relatedArticles.map((a) => (
-                  <li key={a.slug}>
-                    <Link
-                      href={`/article/${a.slug}`}
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: 10,
-                        padding: '8px 10px',
-                        borderRadius: 8,
-                        border: '1px solid var(--line)',
-                        background: 'var(--paper-card)',
-                        textDecoration: 'none',
-                        color: 'inherit',
-                      }}
-                    >
-                      {a.hero && (
-                        <span
-                          aria-hidden
-                          style={{
-                            flex: '0 0 auto',
-                            width: 56,
-                            height: 40,
-                            borderRadius: 6,
-                            backgroundColor: 'var(--peach-soft)',
-                            backgroundImage: `url(${a.hero})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                          }}
-                        />
-                      )}
-                      <span style={{ fontFamily: 'var(--font-mincho)', fontSize: 13, fontWeight: 600, lineHeight: 1.5 }}>
-                        {a.title}
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
+        {/* AdSense */}
+        <div className="v2-section" style={{ marginTop: 24 }}>
+          <AdSlot placement="article-mid" />
+        </div>
 
-          {!indexable && (
-            <p style={{ fontSize: 11, color: 'var(--ink-mute)', marginTop: 24 }}>
-              ※ このページは情報が十分でないため検索エンジンへのインデックスを控えています。
-            </p>
-          )}
-          <p style={{ fontSize: 11, color: 'var(--ink-mute)', marginTop: 24 }}>
-            ※ 営業時間・料金などは変更される可能性があります。お出かけ前に公式サイトで最新情報をご確認ください。
-          </p>
-        </section>
-      </main>
-      <SiteFooter />
-      <MobileStickyNav />
+        {/* 年齢別の楽しみ方 */}
+        {enjoyByAgeBlocks.length > 0 && (
+          <>
+            <div className="v2-sec-head">
+              <div className="v2-sec-title">
+                <span className="v2-bar-accent"></span>年齢別の楽しみ方
+              </div>
+            </div>
+            <div className="v2-section" style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+              {enjoyByAgeBlocks.map((b, i) => (
+                <div
+                  key={i}
+                  style={{
+                    background: '#fff',
+                    border: '1px solid var(--v2-line)',
+                    borderRadius: 'var(--v2-r-card)',
+                    padding: '14px 16px',
+                  }}
+                >
+                  <div style={{ fontSize: 13, fontWeight: 800, color: 'var(--v2-orange)', marginBottom: 6 }}>
+                    {b.age}
+                  </div>
+                  <div style={{ fontSize: 13.5, color: 'var(--v2-ink-soft)', lineHeight: 1.7 }}>
+                    {b.text}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
+        {/* 混雑回避・アクセス・事前確認 */}
+        {(crowdAvoidance || accessTips || preVisitNotes) && (
+          <div className="v2-section" style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 18 }}>
+            {crowdAvoidance && (
+              <details className="v2-faq" open>
+                <summary className="v2-faq-q" style={{ listStyle: 'none', cursor: 'pointer' }}>
+                  <span className="v2-faq-mark">
+                    <V2Icon name="crowd" size={14} />
+                  </span>
+                  混雑を避けるコツ
+                  <V2Icon name="chevron-down" size={18} color="#bbb" style={{ marginLeft: 'auto', flex: 'none' }} />
+                </summary>
+                <div className="v2-faq-a">
+                  <span style={{ fontSize: 13.5, lineHeight: 1.7 }}>{crowdAvoidance}</span>
+                </div>
+              </details>
+            )}
+            {accessTips && (
+              <details className="v2-faq">
+                <summary className="v2-faq-q" style={{ listStyle: 'none', cursor: 'pointer' }}>
+                  <span className="v2-faq-mark">
+                    <V2Icon name="train" size={14} />
+                  </span>
+                  アクセスのコツ
+                  <V2Icon name="chevron-down" size={18} color="#bbb" style={{ marginLeft: 'auto', flex: 'none' }} />
+                </summary>
+                <div className="v2-faq-a">
+                  <span style={{ fontSize: 13.5, lineHeight: 1.7 }}>{accessTips}</span>
+                </div>
+              </details>
+            )}
+            {preVisitNotes && (
+              <details className="v2-faq">
+                <summary className="v2-faq-q" style={{ listStyle: 'none', cursor: 'pointer' }}>
+                  <span className="v2-faq-mark">
+                    <V2Icon name="info" size={14} />
+                  </span>
+                  行く前に知っておきたいこと
+                  <V2Icon name="chevron-down" size={18} color="#bbb" style={{ marginLeft: 'auto', flex: 'none' }} />
+                </summary>
+                <div className="v2-faq-a">
+                  <span style={{ fontSize: 13.5, lineHeight: 1.7 }}>{preVisitNotes}</span>
+                </div>
+              </details>
+            )}
+          </div>
+        )}
+
+        {/* 近隣スポット */}
+        {nearbySpots.length > 0 && (
+          <>
+            <V2SectionHead title="近くのスポット" moreHref="/spots" />
+            <div className="v2-hscroll">
+              {nearbySpots.map((x, i) => {
+                const v = spotToV2(x.spot, i);
+                return (
+                  <Link
+                    key={x.slug}
+                    href={`/spot/${x.slug}`}
+                    className="v2-card-mini"
+                    style={{ width: 168 }}
+                  >
+                    <div className="v2-imgwrap r" style={{ aspectRatio: '16/9' }}>
+                      <V2Img src={v.img} seed={x.slug} alt={x.spot.name} />
+                    </div>
+                    <div className="v2-card-mini-title">{x.spot.name}</div>
+                    <div className="v2-card-v-loc" style={{ margin: 0 }}>
+                      <V2Icon name="pin" size={12} color="var(--v2-orange)" />
+                      {x.spot.ward || x.spot.city}
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </>
+        )}
+
+        {/* 関連記事 */}
+        {relatedArticles.length > 0 && (
+          <>
+            <V2SectionHead title="関連記事" moreHref="/category/today-doko" />
+            <div className="v2-section">
+              {relatedArticles.map((a) => {
+                const v = articleToV2(a);
+                return (
+                  <Link key={a.slug} href={`/article/${a.slug}`} className="v2-art-row">
+                    <div className="v2-imgwrap r" style={{ width: 76, minWidth: 76, height: 60 }}>
+                      <V2Img src={v.img} seed={a.slug} alt={a.title} />
+                    </div>
+                    <div className="v2-art-body">
+                      <div className="v2-art-title">{a.title}</div>
+                      {a.lede && <div className="v2-art-sub">{a.lede.slice(0, 60)}</div>}
+                    </div>
+                    <V2Icon name="chevron-right" size={20} color="#cfcfcf" />
+                  </Link>
+                );
+              })}
+            </div>
+          </>
+        )}
+
+        {/* 保存ボタン */}
+        <V2SaveButton id={slug} />
+
+        <div style={{ height: 24 }}></div>
+      </V2Frame>
     </>
-  );
-}
-
-function Row({ label, value }: { label: string; value: string }) {
-  return (
-    <div style={{ display: 'grid', gridTemplateColumns: '110px 1fr', gap: 8, padding: '4px 0' }}>
-      <dt style={{ color: 'var(--ink-mute)', fontSize: 12 }}>{label}</dt>
-      <dd style={{ margin: 0, fontSize: 13 }}>{value}</dd>
-    </div>
   );
 }

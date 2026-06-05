@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SiteHeader } from '@/components/layout/SiteHeader';
-import { SiteFooter } from '@/components/layout/SiteFooter';
-import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+import { V2Frame } from '@/components/v2/V2Frame';
 
 export const metadata: Metadata = {
   title: 'ながみー（kyounoko-editor） | 著者プロフィール | きょうのこ',
@@ -34,7 +32,7 @@ export default function AuthorNagamyPage() {
     alternateName: ['kyounoko-editor', 'nagamy'],
     url: 'https://kyounoko.jp/authors/nagamy',
     mainEntityOfPage: 'https://kyounoko.jp/authors/nagamy',
-    image: 'https://kyounoko.jp/img/ogp-default.jpg',
+    image: 'https://kyounoko.jp/img/ogp-default-v2.webp',
     jobTitle: 'きょうのこ 運営者・編集者',
     description:
       '東京23区在住、30代後半の会社員。4歳の娘と2歳の息子を育てる父親として、平日夜と休日に都内駅前の個人店・公園を子連れで実訪問し、一次情報として記録している。',
@@ -70,7 +68,7 @@ export default function AuthorNagamyPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPerson) }}
       />
-      <SiteHeader />
+      <V2Frame header="sub" active="home">
       <div className="container-article">
         <nav className="breadcrumb" aria-label="パンくず">
           <Link href="/">HOME</Link>
@@ -218,8 +216,8 @@ export default function AuthorNagamyPage() {
           </p>
         </article>
       </div>
-      <SiteFooter />
-      <MobileStickyNav />
+      </V2Frame>
+      
     </>
   );
 }

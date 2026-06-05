@@ -4,9 +4,7 @@ import Link from 'next/link';
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import remarkHtml from 'remark-html';
-import { SiteHeader } from '@/components/layout/SiteHeader';
-import { SiteFooter } from '@/components/layout/SiteFooter';
-import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+import { V2Frame } from '@/components/v2/V2Frame';
 import { getPlan, getAllPlanIds, getAllPlanMetas } from '@/lib/plans';
 import { getFileArticle } from '@/lib/articles';
 import { getAreaName } from '@/lib/area';
@@ -162,7 +160,7 @@ export default async function PlanPage({ params }: Props) {
         />
       )}
 
-      <SiteHeader />
+      <V2Frame header="sub" active="home">
 
       <div className="container-article">
         <nav className="breadcrumb" aria-label="パンくず">
@@ -416,8 +414,8 @@ export default async function PlanPage({ params }: Props) {
         </section>
       </article>
 
-      <SiteFooter />
-      <MobileStickyNav />
+      </V2Frame>
+      
     </>
   );
 }

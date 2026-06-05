@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SiteHeader } from '@/components/layout/SiteHeader';
-import { SiteFooter } from '@/components/layout/SiteFooter';
-import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+import { V2Frame } from '@/components/v2/V2Frame';
 
 export const metadata: Metadata = {
   title: '運営者情報 | きょうのこ',
@@ -28,7 +26,7 @@ export default function AboutPage() {
     alternateName: 'kyounoko-editor',
     url: 'https://kyounoko.jp/authors/nagamy',
     mainEntityOfPage: 'https://kyounoko.jp/about',
-    image: 'https://kyounoko.jp/img/ogp-default.jpg',
+    image: 'https://kyounoko.jp/img/ogp-default-v2.webp',
     jobTitle: 'きょうのこ 編集長 / 運営者',
     description:
       '東京23区に住む30代後半の会社員。4歳の娘と2歳の息子を育てる父親として、平日夜と休日に都内駅前の個人店・公園を実訪問し、子連れ目線の一次情報を蓄積しています。',
@@ -79,7 +77,7 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdAboutPage) }}
       />
-      <SiteHeader />
+      <V2Frame header="sub" active="home">
       <div className="container-article">
         <nav className="breadcrumb" aria-label="パンくず">
           <Link href="/">HOME</Link>
@@ -255,8 +253,8 @@ export default function AboutPage() {
           </p>
         </article>
       </div>
-      <SiteFooter />
-      <MobileStickyNav />
+      </V2Frame>
+      
     </>
   );
 }
