@@ -128,7 +128,7 @@ legacyHero: /hero/baby-01.webp
 
 - **トイサブ！**：月3,674円〜、月齢に合わせて毎月届く
 - **キッズラボラトリー**：毎月のレンタル
-- **And TOYBOX**：プラン豊富
+- **[And TOYBOX](https://px.a8.net/svt/ejp?a8mat=4B5Q81+CU0E7M+56OA+5YRHE)**：LINE完結・発送前に内容確認OK・プラン豊富
 - **ジニーキッズ**：定額レンタル
 
 買うより安く、月齢に合ったおもちゃを試せます。
