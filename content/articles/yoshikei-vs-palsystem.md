@@ -177,3 +177,13 @@ legacyHero: /hero/food-kitchen-01.webp
 - [3〜6歳の育児 完全マップ](/article/3-6sai-ikuji-kanzen-map)
 - [離乳食とは｜開始時期・進め方完全ガイド](/article/babyfood-toha-kanzen-guide)
 - [母乳 vs ミルク 完全比較](/article/bonyu-vs-milk-hikaku)
+
+
+---
+
+## ヨシケイのお試しから始める
+
+迷ったら**ヨシケイの「お試し5days」**から。5日間で最大50%OFFになるキャンペーン中なので、リスクほぼゼロで「自分の家庭に合うか」を試せます。
+
+[【ヨシケイ】栄養士の献立で簡単バランスごはん♪お試し5days](https://px.a8.net/svt/ejp?a8mat=4B5Q81+DYHVCI+1QM6+HZAGY)
+
