@@ -293,7 +293,7 @@ function EventRow({
                       background: '#fff',
                     }}
                   >
-                    <option value="">（元の値: {originalStr}）</option>
+                    <option value="">（元の値: {String(originalStr)}）</option>
                     {CATEGORIES.map((c) => (
                       <option key={c} value={c}>{c}</option>
                     ))}
