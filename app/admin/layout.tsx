@@ -43,7 +43,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           <Link href="/admin/articles" style={{ color: 'var(--ink-sub)', textDecoration: 'none' }}>記事</Link>
           <Link href="/admin/plans" style={{ color: 'var(--ink-sub)', textDecoration: 'none' }}>プラン</Link>
           <Link href="/admin/spots" style={{ color: 'var(--ink-sub)', textDecoration: 'none' }}>スポット</Link>
-          <Link href="/admin/event-images" style={{ color: 'var(--ink-sub)', textDecoration: 'none' }}>イベント画像</Link>
+          <Link href="/admin/events/edit" style={{ color: 'var(--ink-sub)', textDecoration: 'none' }}>イベント編集</Link>
         </nav>
         <div style={{ marginLeft: 'auto', fontSize: 11, color: 'var(--ink-mute)' }}>
           内部管理用 · noindex

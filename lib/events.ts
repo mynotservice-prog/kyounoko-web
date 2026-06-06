@@ -1458,17 +1458,37 @@ function addDays(date: string, days: number): string {
   return d.toISOString().slice(0, 10);
 }
 
+/**
+ * 全イベントに event-overrides.json をマージして返す。
+ * 各 helper はこの関数経由でデータを取るので、admin の編集が全画面で反映される。
+ *
+ * 動的import を使うのは循環依存を避けるため。
+ */
+function getMergedEvents(): EventEntry[] {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const overrides = (require('./event-overrides.json') as Record<string, Partial<EventEntry>>);
+  return EVENTS.map((e) => {
+    const ov = overrides[e.slug];
+    return ov ? { ...e, ...ov } : e;
+  });
+}
+
+/** 全イベント（overrides マージ済） */
+export function getAllEvents(): EventEntry[] {
+  return getMergedEvents();
+}
+
 /** 現在開催中のイベント（startDate <= today <= endDate） */
 export function getOngoingEvents(): EventEntry[] {
   const today = todayString();
-  return EVENTS.filter((e) => e.startDate <= today && today <= e.endDate);
+  return getMergedEvents().filter((e) => e.startDate <= today && today <= e.endDate);
 }
 
 /** 今週開催中 or 開催予定のイベント（今日から 7 日以内に始まる or 開催中） */
 export function getThisWeekEvents(): EventEntry[] {
   const today = todayString();
   const weekLater = addDays(today, 7);
-  return EVENTS
+  return getMergedEvents()
     .filter((e) => e.endDate >= today && e.startDate <= weekLater)
     .sort((a, b) => a.startDate.localeCompare(b.startDate));
 }
@@ -1477,24 +1497,24 @@ export function getThisWeekEvents(): EventEntry[] {
 export function getThisMonthEvents(): EventEntry[] {
   const today = todayString();
   const monthLater = addDays(today, 30);
-  return EVENTS
+  return getMergedEvents()
     .filter((e) => e.endDate >= today && e.startDate <= monthLater)
     .sort((a, b) => a.startDate.localeCompare(b.startDate));
 }
 
 /** エリア別のイベント */
 export function getEventsByArea(area: AreaSlug): EventEntry[] {
-  return EVENTS.filter((e) => e.area === area);
+  return getMergedEvents().filter((e) => e.area === area);
 }
 
 /** slug から1件取得 */
 export function getEventBySlug(slug: string): EventEntry | undefined {
-  return EVENTS.find((e) => e.slug === slug);
+  return getMergedEvents().find((e) => e.slug === slug);
 }
 
 /** カテゴリ別 */
 export function getEventsByCategory(cat: EventCategory): EventEntry[] {
-  return EVENTS.filter((e) => e.category === cat);
+  return getMergedEvents().filter((e) => e.category === cat);
 }
 
 /** イベント開始までの残り日数を返す（既に開始済みなら 0 以下） */

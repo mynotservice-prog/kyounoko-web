@@ -1,24 +1,26 @@
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { EDITABLE_FIELDS, type EditableField, type EventOverride } from '@/lib/event-overrides';
 
 /**
- * /admin/event-images から呼ばれるイベント hero 画像 上書き API。
+ * /admin/events/edit から呼ばれるイベント上書き保存 API。
  *
  * 機能:
- *  - GET  → { overrides: { [slug]: { hero?: string } } }
- *  - POST { slug, hero }  → 該当 slug を更新（hero が空文字なら削除）
+ *  - GET  → { overrides: { [slug]: EventOverride } }
+ *  - POST { slug, patch: Partial<EventOverride> } → 該当slugを更新
+ *      patch のフィールドが空文字なら override 削除（元の値に戻る）
  *
- * 保存先の自動切り替え（edit-content/route.ts と同じパターン）:
- *  - ローカル開発 (NODE_ENV=development): lib/event-overrides.json に直接書き込み
- *  - 本番 Vercel + GitHub設定済み: GitHub Contents API で commit → 自動デプロイ
+ * 保存先:
+ *  - ローカル開発: lib/event-overrides.json に直接書き込み
+ *  - 本番: GitHub Contents API で commit → 自動デプロイ
  *
  * セキュリティ:
  *  - 開発時 (NODE_ENV=development) は無条件で許可
- *  - 本番では ALLOW_ADMIN_EDIT=1 が必要
- *  - referer が /admin/ 由来であることをチェック
+ *  - 本番では ALLOW_ADMIN_EDIT=1 + referer check
  *  - slug は [a-z0-9_-]+ のみ
- *  - hero は /v2/articles/... 等の安全な path のみ受け付ける
+ *  - patch は EDITABLE_FIELDS にあるキーだけ受け付ける
+ *  - hero は安全なパスのみ
  */
 
 const ROOT = process.cwd();
@@ -39,10 +41,9 @@ function isValidSlug(s: unknown): s is string {
   return typeof s === 'string' && /^[a-z0-9_-]+$/.test(s);
 }
 
-function isValidHero(s: unknown): s is string {
+function isValidHero(s: unknown): boolean {
   if (typeof s !== 'string') return false;
-  if (s === '') return true; // 空文字は削除指示として許可
-  // 内部の安全なパス、または信頼できる外部 https のみ
+  if (s === '') return true;
   return (
     s.startsWith('/v2/') ||
     s.startsWith('/photos/') ||
@@ -53,7 +54,41 @@ function isValidHero(s: unknown): s is string {
   );
 }
 
-type Overrides = Record<string, { hero?: string }>;
+/** patch オブジェクトの各フィールドをホワイトリストでフィルタ＆検証して返す */
+function sanitizePatch(input: unknown): EventOverride | { error: string } {
+  if (!input || typeof input !== 'object') return { error: 'patch must be object' };
+  const p = input as Record<string, unknown>;
+  const result: EventOverride = {};
+  for (const k of Object.keys(p)) {
+    if (!EDITABLE_FIELDS.includes(k as EditableField)) {
+      return { error: `unknown field: ${k}` };
+    }
+    const v = p[k];
+    if (k === 'hero') {
+      if (!isValidHero(v)) return { error: 'invalid hero path' };
+      if (v !== '') (result as Record<string, unknown>)[k] = v;
+    } else if (k === 'tags') {
+      // 配列 or 空配列なら OK、空文字/null/undefined は削除指示
+      if (Array.isArray(v) && v.every((x) => typeof x === 'string')) {
+        if (v.length > 0) (result as Record<string, unknown>)[k] = v;
+      } else if (typeof v === 'string') {
+        // カンマ区切り入力対応
+        const arr = v.split(',').map((s) => s.trim()).filter(Boolean);
+        if (arr.length > 0) (result as Record<string, unknown>)[k] = arr;
+      } else if (v == null) {
+        // 削除指示として扱う
+      } else {
+        return { error: 'invalid tags' };
+      }
+    } else {
+      if (typeof v !== 'string') return { error: `field ${k} must be string` };
+      if (v !== '') (result as Record<string, unknown>)[k] = v;
+    }
+  }
+  return result;
+}
+
+type Overrides = Record<string, EventOverride>;
 
 async function readOverrides(): Promise<Overrides> {
   try {
@@ -69,7 +104,6 @@ async function writeOverridesLocal(data: Overrides): Promise<void> {
   await fs.writeFile(FILE_ABS, text, 'utf-8');
 }
 
-/** GitHub Contents API でファイル取得 → text + sha を返す */
 async function ghGetFile(): Promise<{ text: string; sha: string } | null> {
   const token = process.env.GITHUB_TOKEN;
   const repo = process.env.GITHUB_REPO;
@@ -85,11 +119,7 @@ async function ghGetFile(): Promise<{ text: string; sha: string } | null> {
     cache: 'no-store',
   });
   if (!res.ok) return null;
-  const data = (await res.json()) as {
-    content?: string;
-    sha?: string;
-    encoding?: string;
-  };
+  const data = (await res.json()) as { content?: string; sha?: string; encoding?: string };
   if (!data.content || !data.sha) return null;
   const text =
     data.encoding === 'base64'
@@ -136,8 +166,6 @@ export async function GET(req: NextRequest) {
   const auth = isAllowed(req);
   if (!auth.ok) return NextResponse.json({ error: auth.reason }, { status: 403 });
 
-  // 本番の Vercel ランタイムでは fs から最新が読めない場合があるので
-  // GitHub Contents API を優先（あれば）
   if (process.env.NODE_ENV !== 'development' && process.env.GITHUB_TOKEN) {
     const gh = await ghGetFile();
     if (gh) {
@@ -149,7 +177,6 @@ export async function GET(req: NextRequest) {
       }
     }
   }
-
   const overrides = await readOverrides();
   return NextResponse.json({ overrides });
 }
@@ -160,7 +187,7 @@ export async function POST(req: NextRequest) {
   const auth = isAllowed(req);
   if (!auth.ok) return NextResponse.json({ error: auth.reason }, { status: 403 });
 
-  let body: { slug?: unknown; hero?: unknown };
+  let body: { slug?: unknown; patch?: unknown };
   try {
     body = (await req.json()) as typeof body;
   } catch {
@@ -170,14 +197,12 @@ export async function POST(req: NextRequest) {
   if (!isValidSlug(body.slug)) {
     return NextResponse.json({ error: 'invalid slug' }, { status: 400 });
   }
-  if (!isValidHero(body.hero)) {
-    return NextResponse.json(
-      { error: 'invalid hero (must be /v2/.., /photos/.., /hero-ai/.., /img/.., /hero/.., or microcms https)' },
-      { status: 400 },
-    );
-  }
   const slug = body.slug;
-  const heroVal = body.hero as string;
+  const patchResult = sanitizePatch(body.patch);
+  if ('error' in patchResult) {
+    return NextResponse.json({ error: patchResult.error }, { status: 400 });
+  }
+  const patch = patchResult;
 
   // 既存読み込み
   let current: Overrides = {};
@@ -196,16 +221,29 @@ export async function POST(req: NextRequest) {
     current = await readOverrides();
   }
 
-  // 更新
-  if (heroVal === '') {
+  // patch を current[slug] にマージ。空フィールドは削除指示として扱う。
+  const merged: EventOverride = { ...(current[slug] || {}) };
+  for (const k of EDITABLE_FIELDS) {
+    if (k in (body.patch as Record<string, unknown>)) {
+      const v = (patch as Record<string, unknown>)[k];
+      if (v === undefined) {
+        delete (merged as Record<string, unknown>)[k];
+      } else {
+        (merged as Record<string, unknown>)[k] = v;
+      }
+    }
+  }
+
+  // すべて空になったら entry ごと削除
+  if (Object.keys(merged).length === 0) {
     delete current[slug];
   } else {
-    current[slug] = { ...(current[slug] || {}), hero: heroVal };
+    current[slug] = merged;
   }
 
   const newText = JSON.stringify(current, null, 2) + '\n';
 
-  // ローカルファイル書き込み（開発時のみ）
+  // ローカル
   if (process.env.NODE_ENV === 'development') {
     try {
       await writeOverridesLocal(current);
@@ -215,14 +253,14 @@ export async function POST(req: NextRequest) {
         { status: 500 },
       );
     }
-    return NextResponse.json({ ok: true, mode: 'local', slug, hero: heroVal });
+    return NextResponse.json({ ok: true, mode: 'local', slug, patch });
   }
 
-  // 本番: GitHub Contents API へ commit
-  const msg = heroVal === '' ? `chore(event): clear hero override for ${slug}` : `chore(event): set hero for ${slug}`;
+  // 本番: GitHub commit
+  const msg = `chore(event): update overrides for ${slug}`;
   const r = await ghPutFile(newText, sha, msg);
   if (!r.ok) {
     return NextResponse.json({ error: r.error || 'github write failed' }, { status: 500 });
   }
-  return NextResponse.json({ ok: true, mode: 'github', slug, hero: heroVal });
+  return NextResponse.json({ ok: true, mode: 'github', slug, patch });
 }
