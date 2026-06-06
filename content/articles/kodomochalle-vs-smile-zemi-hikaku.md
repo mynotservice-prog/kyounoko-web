@@ -232,3 +232,13 @@ legacyHero: /hero/kid-study-02.webp
 - [子供の習い事ランキング](/article/kodomo-naraigoto-tsuduki-kotsu)
 - [子供オンライン英会話比較](/article/kodomo-online-eikaiwa-osusume-2026)
 - [3〜6歳の育児 完全マップ](/article/3-6sai-ikuji-kanzen-map)
+
+
+---
+
+## 編集部のおすすめ：まずは資料請求から
+
+迷ったら**まず無料の資料請求**で実物を見るのが確実。しまじろうのDVD見本＋ワーク冊子が届くので、子の食いつきも事前に確認できます。
+
+[【こどもちゃれんじ】無料の資料請求はこちら](https://px.a8.net/svt/ejp?a8mat=4B1PLT+A94RUA+3OR6+66H9E)
+

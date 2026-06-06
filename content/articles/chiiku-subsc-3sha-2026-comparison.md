@@ -243,3 +243,13 @@ A. **手元にある分は使える**。バックナンバーは数ヶ月以内�
 - [子育てサブスク3社比較](/article/kosodate-subsc-3sha-hikaku)
 - [知育系習い事3社比較｜公文・七田・モンテ](/article/chiku-naraigoto-kumon-shichida-monte)
 - [幼児の習い事、何歳から始める？](/article/youji-naraigoto-nansai-kara)
+
+
+---
+
+## 編集部のおすすめ：まずは資料請求から
+
+迷ったら**まず無料の資料請求**で実物を見るのが確実。しまじろうのDVD見本＋ワーク冊子が届くので、子の食いつきも事前に確認できます。
+
+[【こどもちゃれんじ】無料の資料請求はこちら](https://px.a8.net/svt/ejp?a8mat=4B1PLT+A94RUA+3OR6+66H9E)
+

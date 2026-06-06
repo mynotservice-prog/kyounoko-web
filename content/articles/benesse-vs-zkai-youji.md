@@ -200,3 +200,13 @@ legacyHero: /hero/kid-study-02.webp
 - [こどもちゃれんじ vs スマイルゼミ 比較](/article/kodomochalle-vs-smile-zemi-hikaku)
 - [知育サブスク 4社比較](/article/chiiku-subsc-hikaku-4sha)
 - [ベネッセ vs DWE 完全比較](/article/benesse-vs-dwe)
+
+
+---
+
+## 編集部のおすすめ：まずは資料請求から
+
+迷ったら**まず無料の資料請求**で実物を見るのが確実。しまじろうのDVD見本＋ワーク冊子が届くので、子の食いつきも事前に確認できます。
+
+[【こどもちゃれんじ】無料の資料請求はこちら](https://px.a8.net/svt/ejp?a8mat=4B1PLT+A94RUA+3OR6+66H9E)
+

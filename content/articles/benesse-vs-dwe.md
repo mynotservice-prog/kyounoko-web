@@ -204,3 +204,13 @@ DWEは**無料体験DVD・サンプル**を取り寄せて、子の反応と家�
 - [オンライン英会話 vs 対面英会話 完全比較](/article/online-eikaiwa-vs-taimen)
 - [ベネッセ vs Z会 幼児 完全比較](/article/benesse-vs-zkai-youji)
 - [こどもちゃれんじ vs スマイルゼミ 比較](/article/kodomochalle-vs-smile-zemi-hikaku)
+
+
+---
+
+## 編集部のおすすめ：英語スタートは資料請求から
+
+幼児英語は「子の反応」が全て。届く絵本・DVD見本で食いつきを確認できる。
+
+[【こどもちゃれんじ English】無料の資料請求はこちら](https://px.a8.net/svt/ejp?a8mat=4B1PLT+A94RUA+3OR6+6ZUCY)
+
