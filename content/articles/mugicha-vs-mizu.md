@@ -5,8 +5,8 @@ metaDescription: 麦茶と水を6項目で比較。カフェイン・ミネラ�
 category: today-taberu
 categoryName: 今日たべる
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-kitchen-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/mugicha-vs-mizu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   「子どもの水分補給は麦茶と水どっち？」を2026年版で完全比較。麦茶はノンカフェインでミネラル補給◎、水は虫歯リスクが少なく素直な選択肢。カフェイン・ミネラル・月齢・夏の熱中症対策・虫歯リスク・コストの6項目で徹底解説し、0歳〜未就学児の家庭タイプ別おすすめまで整理しました。
+legacyHero: /hero/food-kitchen-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

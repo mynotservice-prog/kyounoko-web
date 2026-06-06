@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/kid-craft-02.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shitsunai-asobi-minato-tokyo.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -24,6 +24,7 @@ quickInfo:
   budget: free
 lede: >-
   雨の日や酷暑日、「港区で子供を屋内で遊ばせたい」家庭のための完全ガイド。麻布・赤坂・六本木・お台場・品川エリアの区立児童館の無料スポットから、六本木ヒルズ・お台場のキドキド・アネビーなどの有料屋内パークまで、0〜6歳の年齢別に8カ所を厳選。料金・対象年齢・設備まで2026年版で網羅します。
+legacyHero: /hero/kid-craft-02.webp
 ---
 
 ## 結論｜港区の室内遊び場おすすめTOP3

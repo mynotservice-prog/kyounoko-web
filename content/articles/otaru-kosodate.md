@@ -1,12 +1,13 @@
 ---
 slug: otaru-kosodate
 title: 小樽子連れ観光ガイド｜運河・堺町通り・水族館の回り方【2026年版】
-metaDescription: 小樽で子連れ家族が楽しめるスポットを徹底解説。小樽運河、堺町通り、おたる水族館、北一硝子、駐車場・ベビーカー情報、札幌からのアクセスまで2026年最新情報でまとめました。
+metaDescription: >-
+  小樽で子連れ家族が楽しめるスポットを徹底解説。小樽運河、堺町通り、おたる水族館、北一硝子、駐車場・ベビーカー情報、札幌からのアクセスまで2026年最新情報でまとめました。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/japan-rural-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/otaru-kosodate.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: レトロな運河とガラス工芸の街、小樽。札幌から車・JRで40分の好アクセスで、半日〜1日の子連れ観光に最適です。本記事では子連れで失敗しない回り方、おたる水族館、雨の日の選択肢、駐車場情報まで2026年最新版でまとめました。
+lede: >-
+  レトロな運河とガラス工芸の街、小樽。札幌から車・JRで40分の好アクセスで、半日〜1日の子連れ観光に最適です。本記事では子連れで失敗しない回り方、おたる水族館、雨の日の選択肢、駐車場情報まで2026年最新版でまとめました。
+legacyHero: /hero/japan-rural-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

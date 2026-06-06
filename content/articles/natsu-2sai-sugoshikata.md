@@ -1,12 +1,13 @@
 ---
 slug: natsu-2sai-sugoshikata
 title: 夏の2歳児 過ごし方｜服装・食事・遊び・お出かけ完全ガイド
-metaDescription: 2歳の夏の過ごし方を解説。イヤイヤ期に重なる猛暑対策、汗対策の服装、夏野菜の幼児食、プール・水遊びのルール、自我を尊重した遊び、おでかけ先、虫対策まで網羅した実践ガイド。
+metaDescription: >-
+  2歳の夏の過ごし方を解説。イヤイヤ期に重なる猛暑対策、汗対策の服装、夏野菜の幼児食、プール・水遊びのルール、自我を尊重した遊び、おでかけ先、虫対策まで網羅した実践ガイド。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/summer-water-03.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/natsu-2sai-sugoshikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,7 +19,9 @@ quickInfo:
     - hot
   durationMin: 30
   budget: free
-lede: 2歳の夏はイヤイヤ期と猛暑のダブルパンチ。「帽子イヤ」「日焼け止め塗らない」「水筒は持たない」など、大人の安全配慮と子どもの自我がぶつかる季節です。本記事では服装・食事・遊び・お出かけ・体調管理の5軸で、2歳の夏を安全に楽しく過ごすコツをまとめます。
+lede: >-
+  2歳の夏はイヤイヤ期と猛暑のダブルパンチ。「帽子イヤ」「日焼け止め塗らない」「水筒は持たない」など、大人の安全配慮と子どもの自我がぶつかる季節です。本記事では服装・食事・遊び・お出かけ・体調管理の5軸で、2歳の夏を安全に楽しく過ごすコツをまとめます。
+legacyHero: /hero/summer-water-03.webp
 ---
 
 ## 結論

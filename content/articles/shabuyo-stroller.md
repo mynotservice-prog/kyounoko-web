@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shabuyo-stroller.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   しゃぶ葉はベビーカーで席まで通せる店舗がほとんどで、子連れ家族の定番チェーン。すかいらーくグループ標準の段差なし入口、広い通路、テーブル横置きスペースの確保など、設備が標準化されているため初めての店舗でも安心です。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

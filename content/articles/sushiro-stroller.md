@@ -1,12 +1,13 @@
 ---
 slug: sushiro-stroller
 title: スシローはベビーカー入店OK？席まで入れる店舗と畳む判断【2026】
-metaDescription: スシローはベビーカーで入店できる？席まで持っていける店舗の見分け方、たたむタイミング、ボックス席横付け可否、駐輪・駐車場からのアクセスまで0-2歳家族目線で徹底解説します。
+metaDescription: >-
+  スシローはベビーカーで入店できる？席まで持っていける店舗の見分け方、たたむタイミング、ボックス席横付け可否、駐輪・駐車場からのアクセスまで0-2歳家族目線で徹底解説します。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/sushiro-stroller.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   「スシローってベビーカーごと席まで入れる？畳まなきゃダメ？」を1記事で解決。店舗タイプ別の通路幅、ボックス席へのベビーカー横付け可否、入口段差、混雑時の判断基準まで0-2歳家族の視点で保存版にまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

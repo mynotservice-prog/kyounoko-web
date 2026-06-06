@@ -1,12 +1,13 @@
 ---
 slug: tomobataraki-kaji-bunkatsu
 title: 共働きの家事分担｜不公平の解消・タスク見える化・話し合いのコツ完全ガイド
-metaDescription: 共働き夫婦の家事分担を完全解説。「私ばかり」を解消する見える化テクニック、家事の総量計算、効果的な話し合い方、外注の活用、ルールの作り方まで網羅。「察してほしい」を捨て、戦略的に分担を整える方法を提案します。
+metaDescription: >-
+  共働き夫婦の家事分担を完全解説。「私ばかり」を解消する見える化テクニック、家事の総量計算、効果的な話し合い方、外注の活用、ルールの作り方まで網羅。「察してほしい」を捨て、戦略的に分担を整える方法を提案します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/tomobataraki-kaji-bunkatsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「共働きなのに家事も育児も私ばかり」「『手伝う』スタンスが許せない」――そのモヤモヤ、当然です。本記事は不公平の正体（名もなき家事・心理的負担）、タスク見える化、効果的な話し合い、外注活用までを完全ガイド。「察してほしい」を捨て、戦略的に分担を整える方法を提案します。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 ## 結論

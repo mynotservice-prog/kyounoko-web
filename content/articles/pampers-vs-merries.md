@@ -1,12 +1,13 @@
 ---
 slug: pampers-vs-merries
 title: パンパース vs メリーズ 完全比較【2026年版】｜価格・吸収力・肌へのやさしさで選ぶ
-metaDescription: パンパースとメリーズを6項目で比較。価格・吸収力・通気性・肌へのやさしさ・サイズ展開・夜用までを徹底解説。新生児・夜泣き・敏感肌の家庭タイプ別おすすめを完全解説します。
+metaDescription: >-
+  パンパースとメリーズを6項目で比較。価格・吸収力・通気性・肌へのやさしさ・サイズ展開・夜用までを徹底解説。新生児・夜泣き・敏感肌の家庭タイプ別おすすめを完全解説します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/pampers-vs-merries.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   「パンパースとメリーズ、どっちが赤ちゃんに合う？」を2026年版で完全比較。パンパースはコスパと薄さ、メリーズはふんわり感と通気性が強み。価格・吸収力・通気性・肌へのやさしさ・サイズ展開・夜用の6項目で徹底解説し、新生児・夜泣き・敏感肌の家庭タイプ別おすすめまで整理しました。
+legacyHero: /hero/baby-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

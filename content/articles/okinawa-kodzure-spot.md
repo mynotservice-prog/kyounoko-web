@@ -1,12 +1,13 @@
 ---
 slug: okinawa-kodzure-spot
 title: 沖縄子連れおすすめスポット完全ガイド｜0歳〜6歳の家族旅行【2026年版】
-metaDescription: 沖縄で子連れ家族が楽しめるおすすめスポットを徹底解説。美ら海水族館・古宇利島・ビーチリゾート、赤ちゃん歓迎ホテル、移動のコツ、現地で困らないFAQまで網羅。2026年最新の公式情報ベース。
+metaDescription: >-
+  沖縄で子連れ家族が楽しめるおすすめスポットを徹底解説。美ら海水族館・古宇利島・ビーチリゾート、赤ちゃん歓迎ホテル、移動のコツ、現地で困らないFAQまで網羅。2026年最新の公式情報ベース。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/summer-water-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/okinawa-kodzure-spot.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: 沖縄は子連れ旅行のハードルが低い「日本のリゾート」。短いフライト、温暖な気候、ベビーカー対応スポットの多さで、0歳の赤ちゃん連れでも安心して楽しめます。本記事では家族目線で本当に使えるスポットと宿、移動のコツをまとめました。
+lede: >-
+  沖縄は子連れ旅行のハードルが低い「日本のリゾート」。短いフライト、温暖な気候、ベビーカー対応スポットの多さで、0歳の赤ちゃん連れでも安心して楽しめます。本記事では家族目線で本当に使えるスポットと宿、移動のコツをまとめました。
+legacyHero: /hero/summer-water-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

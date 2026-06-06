@@ -1,12 +1,13 @@
 ---
 slug: rhythmic-toha
 title: リトミックとは｜定義・効果・年齢・始め方完全ガイド
-metaDescription: リトミックとは何か、どんな効果があるのか、何歳から始められるかを完全解説。音楽・リズムを通じた幼児教育の基本と、教室の選び方・家庭でできる方法を2026年5月時点の一般情報でやさしく整理しました。
+metaDescription: >-
+  リトミックとは何か、どんな効果があるのか、何歳から始められるかを完全解説。音楽・リズムを通じた幼児教育の基本と、教室の選び方・家庭でできる方法を2026年5月時点の一般情報でやさしく整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/classroom-03.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/rhythmic-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   「リトミックって何？ダンス？音楽教室？」——耳にする機会は多いけれど、実は奥深い幼児教育法です。本記事は2026年5月時点の一般情報をもとに、リトミックの基本・期待される効果・年齢別の特徴・始め方をやさしく整理しました。
+legacyHero: /hero/classroom-03.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

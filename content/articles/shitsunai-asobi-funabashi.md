@@ -2,12 +2,13 @@
 slug: shitsunai-asobi-funabashi
 title: 船橋市の子供の室内遊び場7選｜雨の日もOK・年齢別完全ガイド【2026年版】
 metaDescription: >-
-  船橋市の子供向け室内遊び場を年齢別に厳選紹介。ふなばしアンデルセン公園 子ども美術館・ららぽーと・IKEA Tokyo-Bayなど7スポットを、料金・対象年齢・混雑回避つきで完全ガイド。雨の日も安心。
+  船橋市の子供向け室内遊び場を年齢別に厳選紹介。ふなばしアンデルセン公園 子ども美術館・ららぽーと・IKEA
+  Tokyo-Bayなど7スポットを、料金・対象年齢・混雑回避つきで完全ガイド。雨の日も安心。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/kid-craft-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shitsunai-asobi-funabashi.jpg
 area: chiba
 quickInfo:
   ageRanges:
@@ -24,6 +25,7 @@ quickInfo:
   budget: free
 lede: >-
   船橋市の「雨の日でも遊べる室内遊び場」を1記事で完全網羅。**0〜6歳のベビーOK・予約不要施設多数・冷暖房完備**の船橋の屋内スポットを、年齢別おすすめ・料金・混雑回避つきでガイド。猛暑日・寒い日・梅雨も使える2026年版です。
+legacyHero: /hero/kid-craft-01.webp
 ---
 
 ## 結論｜船橋市の室内遊び場TOP3

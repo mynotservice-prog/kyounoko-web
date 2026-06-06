@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/kid-craft-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shitsunai-asobi-chuo-tokyo.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -24,6 +24,7 @@ quickInfo:
   budget: free
 lede: >-
   雨の日や猛暑日、「中央区で子供を屋内で遊ばせたいけどどこ？」という駆け込み検索の答えをまとめました。区立児童館や子育てひろばの無料スポットから、銀座・日本橋・豊洲の商業施設に入った有料の屋内パークまで、0〜6歳の年齢別に8カ所を厳選。料金・対象年齢・オムツ替え・授乳室情報まで2026年版で網羅します。
+legacyHero: /hero/kid-craft-01.webp
 ---
 
 ## 結論｜中央区の室内遊び場おすすめTOP3

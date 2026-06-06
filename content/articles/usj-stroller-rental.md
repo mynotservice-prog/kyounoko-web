@@ -1,12 +1,13 @@
 ---
 slug: usj-stroller-rental
 title: USJ ベビーカーレンタル完全ガイド｜料金・場所・予約・コツ【2026年版】
-metaDescription: USJのベビーカーレンタルは1日1,100円から。本記事では場所、料金、対象月齢、雨天時の対応、ふたごベビーカーの有無、自前との比較、駐車場所、混雑回避のコツを2026年最新情報で完全解説します。
+metaDescription: >-
+  USJのベビーカーレンタルは1日1,100円から。本記事では場所、料金、対象月齢、雨天時の対応、ふたごベビーカーの有無、自前との比較、駐車場所、混雑回避のコツを2026年最新情報で完全解説します。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/usj-stroller-rental.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: USJ（ユニバーサル・スタジオ・ジャパン）のベビーカーレンタルはエントランス入ってすぐ右、1日1,100円。本記事ではレンタル料金・対象月齢・自前との比較・雨天対応・ふたご用の有無・混雑回避のコツを完全解説します。
+lede: >-
+  USJ（ユニバーサル・スタジオ・ジャパン）のベビーカーレンタルはエントランス入ってすぐ右、1日1,100円。本記事ではレンタル料金・対象月齢・自前との比較・雨天対応・ふたご用の有無・混雑回避のコツを完全解説します。
+legacyHero: /hero/park-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

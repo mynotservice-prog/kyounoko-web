@@ -1,12 +1,13 @@
 ---
 slug: mutsuu-vs-shizen
 title: 無痛分娩 vs 自然分娩 完全比較【2026年版】｜費用・メリット・リスク
-metaDescription: 無痛分娩と自然分娩を6項目で比較。費用・痛み・リスク・対応病院・産後回復・赤ちゃんへの影響を徹底解説。痛みが怖い・経産婦・第2子以降の家庭タイプ別おすすめを完全紹介します。
+metaDescription: >-
+  無痛分娩と自然分娩を6項目で比較。費用・痛み・リスク・対応病院・産後回復・赤ちゃんへの影響を徹底解説。痛みが怖い・経産婦・第2子以降の家庭タイプ別おすすめを完全紹介します。
 category: yakudatsu
 categoryName: 役立つ
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-02.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/mutsuu-vs-shizen.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +20,7 @@ quickInfo:
   budget: mid
 lede: >-
   「無痛分娩と自然分娩、どっちを選ぶ？」を2026年版で完全比較。無痛分娩は硬膜外麻酔で痛みを軽減、自然分娩は陣痛を経験して産む方法。費用・痛み・リスク・対応病院・産後回復・赤ちゃんへの影響の6項目で徹底解説します。分娩方法は妊娠経過・母体の状況・医療機関の対応で決めるものなので、産科医と相談の上、参考情報としてご活用ください。
+legacyHero: /hero/baby-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

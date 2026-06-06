@@ -1,12 +1,13 @@
 ---
 slug: nenmatsu-nenshi-0-6sai
 title: 年末年始の0〜6歳児 過ごし方｜帰省・お正月・自宅ガイド
-metaDescription: 年末年始の0〜6歳の過ごし方を年齢別に解説。大掃除・帰省・お正月行事・おせち・初詣・お年玉まで。生活リズム維持、感染症対策、寒さ対策、子連れ移動のコツを完全網羅した実践ガイド。
+metaDescription: >-
+  年末年始の0〜6歳の過ごし方を年齢別に解説。大掃除・帰省・お正月行事・おせち・初詣・お年玉まで。生活リズム維持、感染症対策、寒さ対策、子連れ移動のコツを完全網羅した実践ガイド。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/nenmatsu-nenshi-0-6sai.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,7 +21,9 @@ quickInfo:
     - cold
   durationMin: 30
   budget: free
-lede: 年末年始は大掃除、帰省、お正月行事、初詣と家族イベントが集中する1週間。一方で生活リズムの乱れ、感染症シーズン、子連れ移動の大変さなど、悩ましい時期でもあります。本記事では0〜6歳まで年齢別に、年末年始を健やかに楽しむコツをまとめます。
+lede: >-
+  年末年始は大掃除、帰省、お正月行事、初詣と家族イベントが集中する1週間。一方で生活リズムの乱れ、感染症シーズン、子連れ移動の大変さなど、悩ましい時期でもあります。本記事では0〜6歳まで年齢別に、年末年始を健やかに楽しむコツをまとめます。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

@@ -1,12 +1,13 @@
 ---
 slug: rhythmique-toha
 title: リトミックとは｜定義・効果・始める時期・費用の完全ガイド
-metaDescription: リトミックとは何か、いつから始められるのか、費用や教室の選び方、自宅でできる遊び方まで完全解説。スイスのダルクローズが提唱した音楽教育法の魅力を、2026年5月時点の一般情報でやさしく整理しました。
+metaDescription: >-
+  リトミックとは何か、いつから始められるのか、費用や教室の選び方、自宅でできる遊び方まで完全解説。スイスのダルクローズが提唱した音楽教育法の魅力を、2026年5月時点の一般情報でやさしく整理しました。
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/classroom-02.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/rhythmique-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: 1000-5000
 lede: >-
   「リトミックって何をするの？ピアノ教室と違うの？」——リトミックは音楽と身体運動を結びつけた幼児向け音楽教育法。本記事は2026年5月時点の一般情報をもとに、効果・始める時期・教室選びをやさしく整理しました。
+legacyHero: /hero/classroom-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

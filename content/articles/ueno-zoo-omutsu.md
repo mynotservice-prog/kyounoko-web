@@ -1,12 +1,13 @@
 ---
 slug: ueno-zoo-omutsu
 title: 上野動物園 オムツ替え｜ベビールーム3箇所・全マップ完全ガイド【2026年】
-metaDescription: 上野動物園のおむつ替え環境を全エリアごとに解説。東園・西園のベビールーム3箇所・授乳室・調乳設備・販売情報・多目的トイレまで、0〜2歳連れの「困った」を全部解決する保存版マップ。
+metaDescription: >-
+  上野動物園のおむつ替え環境を全エリアごとに解説。東園・西園のベビールーム3箇所・授乳室・調乳設備・販売情報・多目的トイレまで、0〜2歳連れの「困った」を全部解決する保存版マップ。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/ueno-zoo-omutsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   上野動物園のおむつ替えはベビールーム3箇所＋多目的トイレで対応。広大な敷地内で場所の把握が満足度を左右します。位置・設備・授乳室・調乳設備まで、0〜2歳連れに必要な情報を一気に整理しました。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

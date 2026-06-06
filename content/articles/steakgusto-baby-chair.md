@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/steakgusto-baby-chair.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: mid
 lede: >-
   ステーキガストはすかいらーくグループのステーキチェーンで、ベビーチェアはほぼ全店常備。サラダバー付きで子どもにも野菜を食べさせやすい、子連れ家族の頼れる外食先です。熱い鉄板を使うため、座る位置と取り分けには配慮が必要です。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

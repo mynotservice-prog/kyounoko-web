@@ -5,8 +5,8 @@ metaDescription: 1歳誕生日の祝い方を完全ガイド。一升餅・選�
 category: gyouji
 categoryName: 季節と行事
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-02.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/tanjoubi-iwai-1sai.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +19,7 @@ quickInfo:
   durationMin: 30
   budget: mid
 lede: 1歳誕生日は伝統行事（一升餅・選び取り）と現代風お祝い（スマッシュケーキ）の組み合わせが楽しい。家族で無理なく祝える段取りと写真撮影のコツをまとめました。
+legacyHero: /hero/baby-02.webp
 ---
 
 ## 結論（時期・必要なもの）

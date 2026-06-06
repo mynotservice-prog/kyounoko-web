@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shabuyo-baby-chair.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   しゃぶ葉はすかいらーくグループのチェーンで、ベビーチェアはほぼ全店常備。腰すわり後の赤ちゃんから未就学児まで対応でき、子連れ家族の定番ランチ・ディナースポットです。熱い鍋を使うので席選びと座らせ方の工夫を押さえれば、しゃぶしゃぶデビューも安心です。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

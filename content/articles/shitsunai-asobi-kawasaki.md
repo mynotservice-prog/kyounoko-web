@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/kid-craft-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shitsunai-asobi-kawasaki.jpg
 area: kanagawa
 quickInfo:
   ageRanges:
@@ -24,6 +24,7 @@ quickInfo:
   budget: free
 lede: >-
   川崎市の「雨の日でも遊べる室内遊び場」を1記事で完全網羅。**0〜6歳のベビーOK・予約制でも安心・冷暖房完備**の川崎の屋内スポットを、年齢別おすすめ・料金・混雑回避つきでガイド。猛暑日・寒い日・梅雨も使える2026年版です。
+legacyHero: /hero/kid-craft-01.webp
 ---
 
 ## 結論｜川崎市の室内遊び場TOP3

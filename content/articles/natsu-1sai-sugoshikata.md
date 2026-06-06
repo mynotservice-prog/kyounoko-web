@@ -1,12 +1,13 @@
 ---
 slug: natsu-1sai-sugoshikata
 title: 夏の1歳児 過ごし方｜服装・食事・遊び・お出かけ完全ガイド
-metaDescription: 1歳の夏の過ごし方を徹底解説。歩き始めの熱中症・脱水対策、汗かきっ子の服装選び、水遊びデビュー、夏野菜の幼児食、おでかけスポット、エアコン温度、虫刺され対策まで網羅した実践ガイド。
+metaDescription: >-
+  1歳の夏の過ごし方を徹底解説。歩き始めの熱中症・脱水対策、汗かきっ子の服装選び、水遊びデビュー、夏野菜の幼児食、おでかけスポット、エアコン温度、虫刺され対策まで網羅した実践ガイド。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/summer-water-02.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/natsu-1sai-sugoshikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,7 +19,9 @@ quickInfo:
     - hot
   durationMin: 30
   budget: free
-lede: 1歳の夏は、歩き始めて世界が広がる一方で、自分から「暑い」「のどが渇いた」と訴えにくい時期。水遊びや初めての花火など夏ならではの体験が一気に増えます。本記事では服装・食事・遊び・お出かけ・体調管理の5軸で、1歳の夏を安全に楽しく過ごすコツをまとめます。
+lede: >-
+  1歳の夏は、歩き始めて世界が広がる一方で、自分から「暑い」「のどが渇いた」と訴えにくい時期。水遊びや初めての花火など夏ならではの体験が一気に増えます。本記事では服装・食事・遊び・お出かけ・体調管理の5軸で、1歳の夏を安全に楽しく過ごすコツをまとめます。
+legacyHero: /hero/summer-water-02.webp
 ---
 
 ## 結論

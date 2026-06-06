@@ -1,12 +1,13 @@
 ---
 slug: tds-jyunyu-shitsu
 title: ディズニーシー 授乳室完全ガイド｜場所・設備・混雑回避【2026年版】
-metaDescription: 東京ディズニーシーの授乳室はマーメイドラグーンのベビーセンターに集約。本記事では個室授乳室の数、調乳用お湯、電子レンジ、男性入室可否、おすすめ動線、混雑回避時間まで2026年最新情報で完全解説します。
+metaDescription: >-
+  東京ディズニーシーの授乳室はマーメイドラグーンのベビーセンターに集約。本記事では個室授乳室の数、調乳用お湯、電子レンジ、男性入室可否、おすすめ動線、混雑回避時間まで2026年最新情報で完全解説します。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/tds-jyunyu-shitsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -17,7 +18,9 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: 東京ディズニーシーの授乳室はマーメイドラグーン・ベビーセンターに集約され、シー1か所のみ。本記事では設備・混雑時間・男性入室OK範囲・回り方を実体験で完全解説します。
+lede: >-
+  東京ディズニーシーの授乳室はマーメイドラグーン・ベビーセンターに集約され、シー1か所のみ。本記事では設備・混雑時間・男性入室OK範囲・回り方を実体験で完全解説します。
+legacyHero: /hero/park-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

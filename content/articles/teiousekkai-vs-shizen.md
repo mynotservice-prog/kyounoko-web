@@ -1,12 +1,13 @@
 ---
 slug: teiousekkai-vs-shizen
 title: 帝王切開 vs 自然分娩 完全比較【2026年版】｜流れ・費用・回復期間
-metaDescription: 帝王切開と自然分娩を6項目で比較。流れ・費用・回復期間・痛み・赤ちゃんへの影響・次回妊娠への影響を徹底解説。医師との相談前に知っておきたい基礎知識を完全紹介します。
+metaDescription: >-
+  帝王切開と自然分娩を6項目で比較。流れ・費用・回復期間・痛み・赤ちゃんへの影響・次回妊娠への影響を徹底解説。医師との相談前に知っておきたい基礎知識を完全紹介します。
 category: yakudatsu
 categoryName: 役立つ
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/teiousekkai-vs-shizen.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +20,7 @@ quickInfo:
   budget: mid
 lede: >-
   「帝王切開と自然分娩、それぞれの違いは？」を2026年版で完全比較。帝王切開は計画的な手術出産、自然分娩は経膣分娩で母体への外科的負担が少ない。流れ・費用・回復期間・痛み・赤ちゃんへの影響・次回妊娠への影響の6項目で徹底解説します。分娩方法は妊娠経過・母体の状況・赤ちゃんの状態で医師と決めるものなので、参考情報としてご活用ください。
+legacyHero: /hero/baby-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/kid-learn-02.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shitsunai-asobi-taito-tokyo.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -24,6 +24,7 @@ quickInfo:
   budget: free
 lede: >-
   梅雨や酷暑の日、「台東区で子供を屋内で遊ばせたい」家庭のための完全ガイド。上野・浅草・蔵前・入谷・谷中エリアの区立児童館や子育てひろばの無料スポットから、上野公園周辺の博物館、有料屋内パークまで、0〜6歳の年齢別に8カ所を厳選。2026年版で料金・設備まで網羅します。
+legacyHero: /hero/kid-learn-02.webp
 ---
 
 ## 結論｜台東区の室内遊び場おすすめTOP3

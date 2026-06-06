@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/steakgusto-stroller.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: mid
 lede: >-
   ステーキガストはベビーカーで席まで通せる店舗がほとんどで、子連れ家族の定番ステーキチェーン。すかいらーくグループ標準のフラット入口・広い通路で、ベビーカーを押したまま席に着けます。鉄板提供の油はねへの注意は必要ですが、入店動線は良好です。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

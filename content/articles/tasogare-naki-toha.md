@@ -1,12 +1,13 @@
 ---
 slug: tasogare-naki-toha
 title: 黄昏泣きとは｜定義・時期・原因・対処法完全ガイド【0歳ママ必読】
-metaDescription: 黄昏泣きとは何か、いつから始まりいつ終わるのか、原因と対処法を完全解説。夕方に始まる激しい泣きで疲れ果てるママ・パパに向けて、コリックとの関係や心の持ち方も含め2026年5月時点の一般情報でやさしく整理しました。
+metaDescription: >-
+  黄昏泣きとは何か、いつから始まりいつ終わるのか、原因と対処法を完全解説。夕方に始まる激しい泣きで疲れ果てるママ・パパに向けて、コリックとの関係や心の持ち方も含め2026年5月時点の一般情報でやさしく整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/tasogare-naki-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +20,7 @@ quickInfo:
   budget: free
 lede: >-
   「夕方になると赤ちゃんが何をしても泣き止まない」——これが黄昏泣き（たそがれなき）です。原因が一つに特定できないため、ママ・パパは追い詰められがち。本記事は2026年5月時点の一般情報をもとに、黄昏泣きの基本・時期・原因と考えられている説・対処法をやさしく整理しました。
+legacyHero: /hero/baby-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

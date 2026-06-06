@@ -5,8 +5,8 @@ metaDescription: 2歳誕生日の祝い方を完全ガイド。イヤイヤ期�
 category: gyouji
 categoryName: 季節と行事
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-03.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/tanjoubi-iwai-2sai.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -17,7 +17,9 @@ quickInfo:
     - any
   durationMin: 30
   budget: mid
-lede: 2歳誕生日はイヤイヤ期と重なりがちで、思い通りにいかない日。子供のペースに合わせた準備、好きなものに寄せたケーキ、シンプルなプレゼントで「楽しい1日」を作るコツを紹介します。
+lede: >-
+  2歳誕生日はイヤイヤ期と重なりがちで、思い通りにいかない日。子供のペースに合わせた準備、好きなものに寄せたケーキ、シンプルなプレゼントで「楽しい1日」を作るコツを紹介します。
+legacyHero: /hero/baby-03.webp
 ---
 
 ## 結論（時期・必要なもの）

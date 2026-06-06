@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/kid-learn-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shitsunai-asobi-bunkyo-tokyo.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -24,6 +24,7 @@ quickInfo:
   budget: free
 lede: >-
   梅雨や酷暑の日、「文京区で子供を屋内で遊ばせたい」家庭の駆け込み検索に応えるガイド。後楽園・本郷・千石・茗荷谷エリアの区立児童館や子育てひろばの無料スポットから、東京ドームシティ「ASOBono!」など都内最大級の有料屋内パークまで、0〜6歳の年齢別に8カ所を厳選。2026年版で網羅します。
+legacyHero: /hero/kid-learn-01.webp
 ---
 
 ## 結論｜文京区の室内遊び場おすすめTOP3

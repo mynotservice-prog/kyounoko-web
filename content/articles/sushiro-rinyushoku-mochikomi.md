@@ -5,8 +5,8 @@ metaDescription: スシローへの離乳食持ち込みは公式OK？温めは�
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/sushiro-rinyushoku-mochikomi.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   「スシローに離乳食って持って行っていいの？温めも頼めるの？」を1記事で解決。公式アナウンスの位置づけ、店舗での実例、レトルトの温めお願いの仕方、現実的なオペレーションまで0-1歳の家族目線で保存版にまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

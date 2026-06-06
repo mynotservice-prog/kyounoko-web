@@ -1,12 +1,13 @@
 ---
 slug: obon-0-6sai-sugoshikata
 title: お盆休みの0〜6歳児 過ごし方｜帰省・旅行・自宅まで完全ガイド
-metaDescription: お盆休みの0〜6歳の過ごし方を年齢別に解説。帰省の持ち物、新幹線・車・飛行機での移動、祖父母宅での注意点、旅行先、自宅でのお盆遊び、お盆食、お墓参り、生活リズム維持まで網羅。
+metaDescription: >-
+  お盆休みの0〜6歳の過ごし方を年齢別に解説。帰省の持ち物、新幹線・車・飛行機での移動、祖父母宅での注意点、旅行先、自宅でのお盆遊び、お盆食、お墓参り、生活リズム維持まで網羅。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/summer-water-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/obon-0-6sai-sugoshikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,7 +21,9 @@ quickInfo:
     - hot
   durationMin: 30
   budget: free
-lede: お盆休みは帰省・旅行・お墓参りなど、家族イベントが集中する1週間。一方で猛暑・移動疲れ・生活リズムの乱れ・感染症など、子連れならではの注意点も多い時期です。本記事では0〜6歳まで年齢別に、お盆休みを快適に楽しく過ごすコツをまとめます。
+lede: >-
+  お盆休みは帰省・旅行・お墓参りなど、家族イベントが集中する1週間。一方で猛暑・移動疲れ・生活リズムの乱れ・感染症など、子連れならではの注意点も多い時期です。本記事では0〜6歳まで年齢別に、お盆休みを快適に楽しく過ごすコツをまとめます。
+legacyHero: /hero/summer-water-01.webp
 ---
 
 ## 結論

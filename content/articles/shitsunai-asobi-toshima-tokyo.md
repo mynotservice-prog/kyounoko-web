@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/bath-03.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shitsunai-asobi-toshima-tokyo.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -24,6 +24,7 @@ quickInfo:
   budget: free
 lede: >-
   梅雨や酷暑の日、「豊島区で子供を屋内で遊ばせたい」家庭のための完全ガイド。池袋・大塚・巣鴨・目白エリアの区立児童館の無料スポットから、池袋サンシャインシティ「ナンジャタウン」「キドキド」など有料屋内施設まで、0〜6歳の年齢別に8カ所を厳選。2026年版で網羅します。
+legacyHero: /hero/bath-03.webp
 ---
 
 ## 結論｜豊島区の室内遊び場おすすめTOP3

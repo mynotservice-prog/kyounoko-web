@@ -1,12 +1,13 @@
 ---
 slug: tsuyu-0-6sai-sugoshikata
 title: 梅雨の0〜6歳児 過ごし方｜服装・食事・遊び・お出かけ完全ガイド
-metaDescription: 梅雨の0〜6歳の過ごし方を年齢別に解説。湿度・カビ・あせも対策、傘や雨具の選び方、食欲不振対策、室内遊び30選、雨の日のおでかけスポット、運動不足解消法まで完全網羅。
+metaDescription: >-
+  梅雨の0〜6歳の過ごし方を年齢別に解説。湿度・カビ・あせも対策、傘や雨具の選び方、食欲不振対策、室内遊び30選、雨の日のおでかけスポット、運動不足解消法まで完全網羅。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/bath-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/tsuyu-0-6sai-sugoshikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,7 +21,9 @@ quickInfo:
     - rainy
   durationMin: 30
   budget: free
-lede: 梅雨は外遊びが減り、湿度・カビ・あせも・食欲不振など、子どもにも大人にも体調管理が難しい時期。本記事では0〜6歳まで年齢別に、服装・食事・遊び・お出かけ・体調管理の5軸で、梅雨を快適に乗り切るコツをまとめます。
+lede: >-
+  梅雨は外遊びが減り、湿度・カビ・あせも・食欲不振など、子どもにも大人にも体調管理が難しい時期。本記事では0〜6歳まで年齢別に、服装・食事・遊び・お出かけ・体調管理の5軸で、梅雨を快適に乗り切るコツをまとめます。
+legacyHero: /hero/bath-01.webp
 ---
 
 ## 結論

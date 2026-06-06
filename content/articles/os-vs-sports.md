@@ -1,12 +1,13 @@
 ---
 slug: os-vs-sports
 title: 経口補水液 vs スポーツドリンク 完全比較【2026年版】｜使い分け・子どもへの飲ませ方
-metaDescription: 経口補水液（OS-1等）とスポーツドリンクを6項目で比較。電解質・糖分・カロリー・対象月齢・使うシーン・コストまで徹底解説。発熱・脱水・運動後の家庭タイプ別おすすめを完全紹介します。
+metaDescription: >-
+  経口補水液（OS-1等）とスポーツドリンクを6項目で比較。電解質・糖分・カロリー・対象月齢・使うシーン・コストまで徹底解説。発熱・脱水・運動後の家庭タイプ別おすすめを完全紹介します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-kitchen-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/os-vs-sports.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   「経口補水液とスポーツドリンク、どっちを飲ませる？」を2026年版で完全比較。経口補水液（OS-1等）は脱水・発熱時の医療用、スポーツドリンクは運動時の汗・ミネラル補給用。電解質・糖分・カロリー・対象月齢・使うシーン・コストの6項目で徹底解説し、発熱・脱水・運動後の家庭タイプ別おすすめまで整理しました。
+legacyHero: /hero/food-kitchen-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

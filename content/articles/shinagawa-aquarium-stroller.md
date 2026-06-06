@@ -1,12 +1,13 @@
 ---
 slug: shinagawa-aquarium-stroller
 title: しながわ水族館 ベビーカー｜貸出無料・動線・ショー席ガイド【2026年】
-metaDescription: しながわ水族館のベビーカー事情を徹底解説。レンタル無料・自前持ち込みOK・館内バリアフリー動線・イルカショー席取り・トンネル水槽の置き場まで、0〜3歳連れに必要な情報を全網羅。
+metaDescription: >-
+  しながわ水族館のベビーカー事情を徹底解説。レンタル無料・自前持ち込みOK・館内バリアフリー動線・イルカショー席取り・トンネル水槽の置き場まで、0〜3歳連れに必要な情報を全網羅。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shinagawa-aquarium-stroller.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   しながわ水族館は全館バリアフリーで、ベビーカーごと観覧が基本。レンタルは無料、自前持ち込みもOKです。動線・ショー席・トンネル水槽前の置き場まで、0〜3歳連れに必要な情報を一気に整理しました。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

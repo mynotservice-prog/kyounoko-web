@@ -1,12 +1,13 @@
 ---
 slug: ninka-vs-ninkagai-hoikuen
 title: 認可 vs 認可外 保育園 完全比較【2026年版】｜料金・選考・カリキュラム
-metaDescription: 認可保育園と認可外保育園を6項目で比較。保育料・入園基準・カリキュラム・延長保育・施設環境・無償化対象まで徹底解説。共働き・点数低めの家庭タイプ別おすすめを完全紹介します。
+metaDescription: >-
+  認可保育園と認可外保育園を6項目で比較。保育料・入園基準・カリキュラム・延長保育・施設環境・無償化対象まで徹底解説。共働き・点数低めの家庭タイプ別おすすめを完全紹介します。
 category: yakudatsu
 categoryName: 役立つ
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/commerce-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/ninka-vs-ninkagai-hoikuen.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: mid
 lede: >-
   「認可保育園と認可外、どっちを選ぶべき？」を2026年版で完全比較。認可は保育料が安く市区町村が管理、認可外は柔軟だが保育料は高め。保育料・入園基準・カリキュラム・延長保育・施設環境・無償化対象の6項目で徹底解説し、共働き・点数低めの家庭タイプ別おすすめまで整理しました。
+legacyHero: /hero/commerce-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

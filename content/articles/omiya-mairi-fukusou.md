@@ -5,8 +5,8 @@ metaDescription: お宮参りの服装を赤ちゃん・ママ・パパ・祖父
 category: gyouji
 categoryName: 季節と行事
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-02.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/omiya-mairi-fukusou.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -17,7 +17,9 @@ quickInfo:
     - any
   durationMin: 30
   budget: mid
-lede: お宮参りの服装、結局何を着せれば正解？赤ちゃん・ママ・パパ・祖父母それぞれの服装ルールを、季節別・洋装和装別に整理。写真映え・産後体型対応のコツも紹介します。
+lede: >-
+  お宮参りの服装、結局何を着せれば正解？赤ちゃん・ママ・パパ・祖父母それぞれの服装ルールを、季節別・洋装和装別に整理。写真映え・産後体型対応のコツも紹介します。
+legacyHero: /hero/baby-02.webp
 ---
 
 ## 結論（時期・必要なもの）

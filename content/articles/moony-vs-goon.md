@@ -1,12 +1,13 @@
 ---
 slug: moony-vs-goon
 title: ムーニー vs グーン 完全比較【2026年版】｜価格・吸収力・サイズ感で選ぶ
-metaDescription: ムーニーとグーンを6項目で比較。価格・吸収力・通気性・サイズ展開・夜用・コスパまでを徹底解説。新生児・敏感肌・コスパ重視の家庭タイプ別おすすめを完全紹介します。
+metaDescription: >-
+  ムーニーとグーンを6項目で比較。価格・吸収力・通気性・サイズ展開・夜用・コスパまでを徹底解説。新生児・敏感肌・コスパ重視の家庭タイプ別おすすめを完全紹介します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-02.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/moony-vs-goon.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   「ムーニーとグーン、どっちがコスパよくて使いやすい？」を2026年版で完全比較。ムーニーはユニ・チャームの中位ライン、グーンは大王製紙の低価格・大容量が強み。価格・吸収力・通気性・サイズ展開・夜用・コスパの6項目で徹底解説し、新生児・敏感肌・コスパ重視の家庭タイプ別おすすめまで整理しました。
+legacyHero: /hero/baby-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

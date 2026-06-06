@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shabuyo-kids-menu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   しゃぶ葉は3歳以下が基本無料、4-6歳幼児は数百円、小学生は半額前後の家族向け食べ放題チェーン。キッズ単品メニューはないものの、野菜・うどん・茶碗蒸し・豆腐などの取り分けに優秀。離乳食持ち込みOKで0歳から使える、子連れ外食の鉄板です。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

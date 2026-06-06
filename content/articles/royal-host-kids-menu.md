@@ -1,12 +1,13 @@
 ---
 slug: royal-host-kids-menu
 title: ロイヤルホストのキッズメニュー｜値段・対象年齢・アレルゲン対応まとめ
-metaDescription: ロイヤルホストのキッズメニューを徹底解説。お子様プレート・キッズパスタ・キッズハンバーグの値段、対象年齢、アレルゲン表示、ドリンク付きセットの内容まで、子連れランチ前に知りたい情報を網羅。
+metaDescription: >-
+  ロイヤルホストのキッズメニューを徹底解説。お子様プレート・キッズパスタ・キッズハンバーグの値段、対象年齢、アレルゲン表示、ドリンク付きセットの内容まで、子連れランチ前に知りたい情報を網羅。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/royal-host-kids-menu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 60
   budget: low
-lede: ロイヤルホストのキッズメニューは「お子様プレート」「キッズハンバーグ」「キッズパスタ」の3本柱。価格帯は600-900円、対象は未就学児が中心です。アレルゲン情報も公式で開示されており、安心して選べます。
+lede: >-
+  ロイヤルホストのキッズメニューは「お子様プレート」「キッズハンバーグ」「キッズパスタ」の3本柱。価格帯は600-900円、対象は未就学児が中心です。アレルゲン情報も公式で開示されており、安心して選べます。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

@@ -2,12 +2,13 @@
 slug: shitsunai-asobi-yokohama
 title: 横浜市の子供の室内遊び場7選｜雨の日もOK・年齢別完全ガイド【2026年版】
 metaDescription: >-
-  横浜市の子供向け室内遊び場を年齢別に厳選紹介。アンパンマンミュージアム・カップヌードルミュージアム・はまぎん こども宇宙科学館など7スポットを、料金・対象年齢・混雑回避つきで完全ガイド。雨の日も安心。
+  横浜市の子供向け室内遊び場を年齢別に厳選紹介。アンパンマンミュージアム・カップヌードルミュージアム・はまぎん
+  こども宇宙科学館など7スポットを、料金・対象年齢・混雑回避つきで完全ガイド。雨の日も安心。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/kid-craft-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shitsunai-asobi-yokohama.jpg
 area: kanagawa
 quickInfo:
   ageRanges:
@@ -24,6 +25,7 @@ quickInfo:
   budget: free
 lede: >-
   横浜市の「雨の日でも遊べる室内遊び場」を1記事で完全網羅。**0〜6歳のベビーOK・予約不要・冷暖房完備**で安心の横浜の屋内スポットを、年齢別おすすめ・料金・混雑回避つきでガイド。猛暑日・寒い日・梅雨も使える2026年版です。
+legacyHero: /hero/kid-craft-01.webp
 ---
 
 ## 結論｜横浜市の室内遊び場TOP3

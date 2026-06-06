@@ -1,12 +1,13 @@
 ---
 slug: sango-haircare
 title: 産後のヘアケア｜抜け毛・うねり・パサつき対策完全ガイド
-metaDescription: 産後のヘアケアを完全解説。抜け毛・うねり・パサつき・白髪の原因と、シャンプー選び・ドライヤー術・栄養・サロン頻度まで網羅。「鏡を見るのが辛い」あなたへ、無理なく髪を整えるヒントを先輩ママの体験とともに。
+metaDescription: >-
+  産後のヘアケアを完全解説。抜け毛・うねり・パサつき・白髪の原因と、シャンプー選び・ドライヤー術・栄養・サロン頻度まで網羅。「鏡を見るのが辛い」あなたへ、無理なく髪を整えるヒントを先輩ママの体験とともに。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/sango-haircare.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +20,7 @@ quickInfo:
   budget: free
 lede: >-
   「お風呂上がりの排水溝が怖い」「前髪のうねりが収まらない」「白髪が増えた」――産後の髪トラブル、つらいですよね。本記事は抜け毛・うねり・パサつき・白髪の原因と対策を完全解説。シャンプー選び、ドライヤー術、栄養補給、サロン活用まで網羅。「あなただけじゃない」、無理なく整えるヒント集です。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 ## 結論

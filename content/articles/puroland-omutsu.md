@@ -1,12 +1,13 @@
 ---
 slug: puroland-omutsu
 title: サンリオピューロランド オムツ替え｜全フロア設備マップ完全ガイド【2026年】
-metaDescription: サンリオピューロランドのおむつ替え事情を全フロアごとに解説。ベビールーム・多目的トイレ・授乳室・調乳設備・販売の自販機まで、0〜2歳連れの「困った」を一度に解決する保存版マップです。
+metaDescription: >-
+  サンリオピューロランドのおむつ替え事情を全フロアごとに解説。ベビールーム・多目的トイレ・授乳室・調乳設備・販売の自販機まで、0〜2歳連れの「困った」を一度に解決する保存版マップです。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/puroland-omutsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: mid
 lede: >-
   サンリオピューロランドのおむつ替えは、B1Fのベビールームを中心に全フロアで対応。多目的トイレや一般トイレにも台があり、迷うことはまずありません。場所・設備・販売の自販機まで、0〜2歳連れに必要な情報を全網羅します。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

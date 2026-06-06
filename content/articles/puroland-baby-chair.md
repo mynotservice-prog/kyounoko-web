@@ -1,12 +1,13 @@
 ---
 slug: puroland-baby-chair
 title: サンリオピューロランド ベビーチェア｜レストラン別設置状況ガイド【2026年】
-metaDescription: サンリオピューロランドのベビーチェア事情をレストラン別に解説。フードコート・キャラクターレストランの設置数・予約の要否・離乳食持ち込みルール・キッズメニューまで、0〜3歳連れの食事計画に必須情報を網羅。
+metaDescription: >-
+  サンリオピューロランドのベビーチェア事情をレストラン別に解説。フードコート・キャラクターレストランの設置数・予約の要否・離乳食持ち込みルール・キッズメニューまで、0〜3歳連れの食事計画に必須情報を網羅。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/puroland-baby-chair.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: mid
 lede: >-
   サンリオピューロランドの館内レストランは、ほぼ全店舗にベビーチェアあり。ただし数に限りがあるため、混雑時間を外す工夫がカギです。店舗別の設置状況・キッズメニュー・離乳食ルールまで、食事まわりを一気に整理しました。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

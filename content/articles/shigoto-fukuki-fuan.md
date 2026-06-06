@@ -1,12 +1,13 @@
 ---
 slug: shigoto-fukuki-fuan
 title: 仕事復帰が不安｜原因・準備・両立のコツ・先輩ママの体験完全ガイド
-metaDescription: 産育休後の仕事復帰の不安（ブランク・両立・保育園送迎・周囲の目）の解消法を完全解説。不安の正体、復帰前準備、両立のコツ、想定外への備えまで網羅。「不安は当然」のメッセージとともに背中を押します。
+metaDescription: >-
+  産育休後の仕事復帰の不安（ブランク・両立・保育園送迎・周囲の目）の解消法を完全解説。不安の正体、復帰前準備、両立のコツ、想定外への備えまで網羅。「不安は当然」のメッセージとともに背中を押します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shigoto-fukuki-fuan.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: free
 lede: >-
   「ブランクで仕事できるか」「子どもの病気で迷惑かけないか」「両立できるのか」――産育休後の仕事復帰の不安は山積み。本記事は不安の正体を整理し、復帰前の具体的準備、両立のコツ、想定外への備えを完全ガイド。「不安があるのは真剣だから」――そのまま準備に変えていきましょう。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 ## 結論

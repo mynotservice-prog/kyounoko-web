@@ -1,12 +1,13 @@
 ---
 slug: sango-nukege-taisaku
 title: 産後の抜け毛対策｜原因・時期・効果的なケア・受診目安完全ガイド
-metaDescription: 産後の抜け毛の原因（ホルモン・栄養・睡眠）、ピーク時期、効果的な対策（シャンプー・食事・サプリ・育毛剤）、受診目安まで完全解説。「排水溝が怖い」あなたへ、不安を減らす科学的アプローチを先輩ママの体験とともに紹介。
+metaDescription: >-
+  産後の抜け毛の原因（ホルモン・栄養・睡眠）、ピーク時期、効果的な対策（シャンプー・食事・サプリ・育毛剤）、受診目安まで完全解説。「排水溝が怖い」あなたへ、不安を減らす科学的アプローチを先輩ママの体験とともに紹介。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/sango-nukege-taisaku.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +20,7 @@ quickInfo:
   budget: free
 lede: >-
   「シャンプー後の排水溝にぞっとする」「枕に抜け毛が大量」「このまま禿げるんじゃ」――産後の抜け毛、本当に心配ですよね。本記事はメカニズム、ピーク時期、科学的に効果のある対策、受診目安まで完全ガイド。「ほぼ全員が経験」「9割は回復する」――正しく知れば不安は減ります。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 ## 結注

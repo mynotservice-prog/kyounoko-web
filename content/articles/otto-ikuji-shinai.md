@@ -1,12 +1,13 @@
 ---
 slug: otto-ikuji-shinai
 title: 夫が育児しない時の解決法｜原因・対話術・分担の作り方完全ガイド
-metaDescription: 夫が育児しない理由（自覚なし・スキル不足・母性神話）の解説と、対話の作り方、家事育児分担の仕組み化、頼り方のコツまで完全網羅。「察してほしい」を捨て、戦略的に巻き込む方法を解説します。
+metaDescription: >-
+  夫が育児しない理由（自覚なし・スキル不足・母性神話）の解説と、対話の作り方、家事育児分担の仕組み化、頼り方のコツまで完全網羅。「察してほしい」を捨て、戦略的に巻き込む方法を解説します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/otto-ikuji-shinai.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「夫が育児に積極的でない」「言わないとやらない」――多くの家庭で起きるこの問題、実は「察してほしい」を捨てて戦略的にアプローチすることで大きく変わります。本記事は夫が育児しない原因、効果的な対話術、分担の作り方、巻き込みのコツまで完全ガイド。怒りで終わらせず、構造を変える方法を解説します。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 ## 結論

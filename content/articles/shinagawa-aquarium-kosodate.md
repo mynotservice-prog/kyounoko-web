@@ -1,12 +1,13 @@
 ---
 slug: shinagawa-aquarium-kosodate
 title: しながわ水族館 子連れ攻略｜0〜6歳向け動線・イルカショー・予算【2026年】
-metaDescription: しながわ水族館を0〜6歳子連れで攻略する完全ガイド。イルカショー・アシカショー・年齢別動線・トンネル水槽・予算目安・隣接公園との組み合わせまで、初訪問でも失敗しない情報を全網羅。
+metaDescription: >-
+  しながわ水族館を0〜6歳子連れで攻略する完全ガイド。イルカショー・アシカショー・年齢別動線・トンネル水槽・予算目安・隣接公園との組み合わせまで、初訪問でも失敗しない情報を全網羅。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shinagawa-aquarium-kosodate.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   しながわ水族館は品川区立の水族館で、イルカ・アシカショー、トンネル水槽が見どころ。コスパ良好で0〜6歳の子連れに大人気。年齢別動線・ショー時間・隣接のしながわ区民公園との組み合わせまで、初訪問の不安を解消します。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

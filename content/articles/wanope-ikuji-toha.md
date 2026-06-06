@@ -1,12 +1,13 @@
 ---
 slug: wanope-ikuji-toha
 title: ワンオペ育児とは｜定義・原因・乗り切り方・支援制度完全ガイド
-metaDescription: ワンオペ育児とは何か、なぜ起きるのか、心身を守る乗り切り方と頼れる支援制度を完全解説。共働き・パートナー不在・実家遠方など、現代日本のリアルな育児課題に向き合う2026年5月時点のガイドです。
+metaDescription: >-
+  ワンオペ育児とは何か、なぜ起きるのか、心身を守る乗り切り方と頼れる支援制度を完全解説。共働き・パートナー不在・実家遠方など、現代日本のリアルな育児課題に向き合う2026年5月時点のガイドです。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/wanope-ikuji-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「育児・家事をほぼ一人で回している」——それがワンオペ育児です。日本の多くの家庭で起きている現象で、心身ともに消耗しがち。本記事は2026年5月時点の一般情報をもとに、ワンオペ育児の基本・原因・乗り切り方・使える支援制度をやさしく整理しました。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

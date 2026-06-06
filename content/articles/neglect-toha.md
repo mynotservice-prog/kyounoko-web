@@ -1,12 +1,13 @@
 ---
 slug: neglect-toha
 title: ネグレクトとは｜定義・種類・気づき方・相談先の完全ガイド
-metaDescription: ネグレクト（育児放棄）とは何か、どんな種類・サインがあり、どこに相談すればよいかを完全解説。児童虐待防止法上の位置づけや、悩んだときの公的窓口（児童相談所虐待対応ダイヤル189）まで2026年5月時点の情報で整理しました。
+metaDescription: >-
+  ネグレクト（育児放棄）とは何か、どんな種類・サインがあり、どこに相談すればよいかを完全解説。児童虐待防止法上の位置づけや、悩んだときの公的窓口（児童相談所虐待対応ダイヤル189）まで2026年5月時点の情報で整理しました。
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/neglect-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   ネグレクトは「育児放棄」とも呼ばれる児童虐待の一類型で、子の安全・健康・発達を脅かす重大な問題です。本記事は2026年5月時点の児童虐待防止法および厚労省の一般情報をもとに、定義・サイン・相談先をやさしく整理しました。
+legacyHero: /hero/parent-child-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

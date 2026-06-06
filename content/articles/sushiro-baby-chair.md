@@ -1,12 +1,13 @@
 ---
 slug: sushiro-baby-chair
 title: スシローのベビーチェア｜種類・利用のコツ・対応店舗完全ガイド【2026】
-metaDescription: スシローのベビーチェアは何種類？腰すわり前から使える？テーブル取付タイプはある？事前予約や混雑時の確保のコツ、ベルトの有無まで0-2歳家族目線で徹底解説します。
+metaDescription: >-
+  スシローのベビーチェアは何種類？腰すわり前から使える？テーブル取付タイプはある？事前予約や混雑時の確保のコツ、ベルトの有無まで0-2歳家族目線で徹底解説します。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/sushiro-baby-chair.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   「スシローにベビーチェアは置いてある？腰すわり前でも使える？」を1記事で解決。回転寿司の中でも子連れ利用が多いスシローのベビーチェア事情を、種類・確保のコツ・代替案まで0-2歳の家族目線で保存版にまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

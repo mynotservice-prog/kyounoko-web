@@ -1,12 +1,13 @@
 ---
 slug: mokuyoku-yarikata
 title: 沐浴のやり方｜新生児の手順・コツ・必要な道具完全ガイド【生後1ヶ月まで】
-metaDescription: 新生児の沐浴のやり方を、必要な道具・準備・8ステップの手順・失敗あるあるまで保存版で解説。お湯の温度、時間、頭の支え方、上がり湯のコツまで、はじめてのパパママでも今日から安心して進められます。
+metaDescription: >-
+  新生児の沐浴のやり方を、必要な道具・準備・8ステップの手順・失敗あるあるまで保存版で解説。お湯の温度、時間、頭の支え方、上がり湯のコツまで、はじめてのパパママでも今日から安心して進められます。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/bath-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/mokuyoku-yarikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +20,7 @@ quickInfo:
   budget: low
 lede: >-
   沐浴は生後1ヶ月までの新生児に必要な、大人とは別のお風呂のこと。お湯の温度は38〜40℃、時間は5〜10分、首をしっかり支えるのが3大原則です。準備をすべて整えてから始めるのが成功の鍵。本記事では、必要な道具・8ステップの手順・失敗あるある・我が家のリアルまで保存版で解説します。
+legacyHero: /hero/bath-01.webp
 ---
 
 ## 結論

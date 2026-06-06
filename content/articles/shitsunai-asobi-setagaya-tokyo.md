@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-02.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shitsunai-asobi-setagaya-tokyo.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -24,6 +24,7 @@ quickInfo:
   budget: free
 lede: >-
   梅雨や酷暑の日、「世田谷区で子供を屋内で遊ばせたい」家庭のための完全ガイド。二子玉川・三軒茶屋・成城・下北沢・千歳烏山エリアの区立児童館の無料スポットから、二子玉川ライズのキドキド、玉川髙島屋の屋内パークまで、0〜6歳の年齢別に8カ所を厳選。2026年版で網羅します。
+legacyHero: /hero/parent-child-02.webp
 ---
 
 ## 結論｜世田谷区の室内遊び場おすすめTOP3

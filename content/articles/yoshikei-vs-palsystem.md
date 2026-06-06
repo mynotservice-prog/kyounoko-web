@@ -1,12 +1,13 @@
 ---
 slug: yoshikei-vs-palsystem
 title: ヨシケイ vs パルシステム 完全比較【2026年版】｜料金・特徴・選び方
-metaDescription: ヨシケイとパルシステムを6項目で比較。価格・配送頻度・食材の質・離乳食対応・キッズ向けメニュー・解約のしやすさまで。共働き・専業・経済性重視の家庭タイプ別おすすめも完全解説します。
+metaDescription: >-
+  ヨシケイとパルシステムを6項目で比較。価格・配送頻度・食材の質・離乳食対応・キッズ向けメニュー・解約のしやすさまで。共働き・専業・経済性重視の家庭タイプ別おすすめも完全解説します。
 category: today-taberu
 categoryName: 今日たべる
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-kitchen-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/yoshikei-vs-palsystem.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: mid
 lede: >-
   「ヨシケイとパルシステム、どっちが子育て家庭に向いてる？」を2026年版で完全比較。ヨシケイは"今日届く今日のごはん"のミールキット型、パルシステムは"週1まとめ買い"の生協型。価格・配送頻度・離乳食対応・キッズメニュー・解約のしやすさを6項目で徹底解説し、共働き・専業・経済性重視の家庭タイプ別おすすめまで整理しました。
+legacyHero: /hero/food-kitchen-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

@@ -1,12 +1,13 @@
 ---
 slug: montessori-toha
 title: モンテッソーリ教育とは｜定義・特徴・教具・家庭での実践完全ガイド
-metaDescription: モンテッソーリ教育とは何か、5つの教育分野・教具・敏感期・家庭での取り入れ方を完全解説。著名経営者の幼少教育としても話題のメソッドを2026年5月時点の一般情報でやさしく整理しました。
+metaDescription: >-
+  モンテッソーリ教育とは何か、5つの教育分野・教具・敏感期・家庭での取り入れ方を完全解説。著名経営者の幼少教育としても話題のメソッドを2026年5月時点の一般情報でやさしく整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/classroom-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/montessori-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: free
 lede: >-
   「モンテッソーリ教育って何？」「家でできる？」——著名な経営者やアスリートの幼少教育としても注目されるモンテッソーリ。本記事は2026年5月時点の一般情報をもとに、モンテッソーリ教育の基本・5つの分野・敏感期・家庭での実践をやさしく整理しました。
+legacyHero: /hero/classroom-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

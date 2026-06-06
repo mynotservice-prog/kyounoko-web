@@ -5,8 +5,8 @@ metaDescription: 幼稚園の選び方を完全ガイド。公立・私立・国
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-06-03'
-hero: /hero/classroom-02.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/youchien-erabikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -18,7 +18,9 @@ quickInfo:
     - any
   durationMin: 30
   budget: mid
-lede: 幼稚園選びは家庭の価値観と子の個性を擦り合わせる作業。公立私立の違い、教育方針、見学チェックリスト、説明会の回り方、入園準備までを年間スケジュール付きで整理しました。
+lede: >-
+  幼稚園選びは家庭の価値観と子の個性を擦り合わせる作業。公立私立の違い、教育方針、見学チェックリスト、説明会の回り方、入園準備までを年間スケジュール付きで整理しました。
+legacyHero: /hero/classroom-02.webp
 ---
 
 ## 結論（時期・必要なもの）

@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/steakgusto-kids-menu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: mid
 lede: >-
   ステーキガストはキッズメニューに加えてサラダバー（生野菜・カレー・うどん・フルーツ・デザートなど）が利用でき、子連れ家族に強いステーキチェーン。年齢別の選び方とサラダバーの賢い使い方、取り分けのコツをまとめました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

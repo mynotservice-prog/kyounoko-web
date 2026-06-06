@@ -1,12 +1,13 @@
 ---
 slug: royal-host-baby-chair
 title: 【2026年最新】ロイヤルホストのベビーチェア｜種類・対応月齢・予約のコツ完全ガイド
-metaDescription: ロイヤルホストのベビーチェアは何ヶ月から使える？ハイチェア・ローチェア・腰すわり前ベルト付きの3タイプの違いと、混雑時に確保するコツ、店舗による差まで0歳から使えるよう網羅。
+metaDescription: >-
+  ロイヤルホストのベビーチェアは何ヶ月から使える？ハイチェア・ローチェア・腰すわり前ベルト付きの3タイプの違いと、混雑時に確保するコツ、店舗による差まで0歳から使えるよう網羅。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-06-03'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/royal-host-baby-chair.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 60
   budget: low
-lede: ロイヤルホストのベビーチェアは「ハイチェア」「ローチェア」「ベルト付き乳児用」の3タイプ。腰すわり前7ヶ月から座れる店舗が多く、平日昼なら高確率で確保できます。電話予約時に一声かけるのが最短ルートです。
+lede: >-
+  ロイヤルホストのベビーチェアは「ハイチェア」「ローチェア」「ベルト付き乳児用」の3タイプ。腰すわり前7ヶ月から座れる店舗が多く、平日昼なら高確率で確保できます。電話予約時に一声かけるのが最短ルートです。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

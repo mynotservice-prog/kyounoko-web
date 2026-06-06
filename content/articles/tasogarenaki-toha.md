@@ -1,12 +1,13 @@
 ---
 slug: tasogarenaki-toha
 title: 黄昏泣きとは｜定義・原因・対処法・いつまで続くか完全ガイド
-metaDescription: 黄昏泣き（コリック）とは何か、いつから・いつまで続くのか、原因と対処法を完全解説。生後2〜4か月をピークに夕方〜夜に泣く現象について、2026年5月時点の小児科医の一般情報でやさしく整理しました。
+metaDescription: >-
+  黄昏泣き（コリック）とは何か、いつから・いつまで続くのか、原因と対処法を完全解説。生後2〜4か月をピークに夕方〜夜に泣く現象について、2026年5月時点の小児科医の一般情報でやさしく整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-02.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/tasogarenaki-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +20,7 @@ quickInfo:
   budget: free
 lede: >-
   「夕方になると赤ちゃんが理由もなく泣き続ける…」——黄昏泣き（コリック）は生後2〜4か月をピークに見られる一過性の現象です。本記事は2026年5月時点の小児科一般情報をもとに、原因仮説と対処法、いつまで続くかをやさしく整理しました。
+legacyHero: /hero/baby-02.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

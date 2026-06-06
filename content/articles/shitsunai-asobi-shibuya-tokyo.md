@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/parent-child-03.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shitsunai-asobi-shibuya-tokyo.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -24,6 +24,7 @@ quickInfo:
   budget: free
 lede: >-
   梅雨や酷暑の日、「渋谷区で子供を屋内で遊ばせたい」家庭のための完全ガイド。渋谷・恵比寿・代官山・代々木・笹塚エリアの区立児童館の無料スポットから、渋谷ヒカリエ・スクランブルスクエアの屋内パークまで、0〜6歳の年齢別に8カ所を厳選。2026年版で網羅します。
+legacyHero: /hero/parent-child-03.webp
 ---
 
 ## 結論｜渋谷区の室内遊び場おすすめTOP3

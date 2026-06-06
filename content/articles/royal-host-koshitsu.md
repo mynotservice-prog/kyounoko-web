@@ -1,12 +1,13 @@
 ---
 slug: royal-host-koshitsu
 title: ロイヤルホストの個室・半個室｜店舗別・予約方法・子連れ利用のコツ
-metaDescription: ロイヤルホストに個室はある？半個室・ボックス席・パーティションありの店舗を整理。子連れランチで個室を確保する予約方法と、個室がない店舗での代替策まで実用的に解説します。
+metaDescription: >-
+  ロイヤルホストに個室はある？半個室・ボックス席・パーティションありの店舗を整理。子連れランチで個室を確保する予約方法と、個室がない店舗での代替策まで実用的に解説します。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/royal-host-koshitsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 60
   budget: low
-lede: ロイヤルホストには完全個室は少数ですが「半個室・ボックス席・パーティション席」など準個室が充実。予約時に「ボックス席希望」と伝えるだけで子連れに優しい席に案内されます。店舗別の対応を整理します。
+lede: >-
+  ロイヤルホストには完全個室は少数ですが「半個室・ボックス席・パーティション席」など準個室が充実。予約時に「ボックス席希望」と伝えるだけで子連れに優しい席に案内されます。店舗別の対応を整理します。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

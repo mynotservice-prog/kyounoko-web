@@ -1,12 +1,13 @@
 ---
 slug: tsuushin-kyouiku-toha
 title: 【2026年最新】通信教育とは｜定義・幼児向け教材・選び方・料金完全ガイド
-metaDescription: 通信教育とは何か、幼児向け教材の種類・料金相場・選び方を完全解説。こどもちゃれんじ・ポピー・スマイルゼミなど主要教材の特徴比較と、家庭学習の始め方を2026年5月時点の一般情報でやさしく整理しました。
+metaDescription: >-
+  通信教育とは何か、幼児向け教材の種類・料金相場・選び方を完全解説。こどもちゃれんじ・ポピー・スマイルゼミなど主要教材の特徴比較と、家庭学習の始め方を2026年5月時点の一般情報でやさしく整理しました。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-06-03'
-hero: /hero/kid-study-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/tsuushin-kyouiku-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   「幼児教育、まず何から始めたら？」——選択肢の一つが通信教育です。月数千円で家庭学習の習慣をつけられ、共働き家庭にも人気。本記事は2026年5月時点の一般情報をもとに、通信教育の基本・幼児向け教材・選び方・料金相場をやさしく整理しました。
+legacyHero: /hero/kid-study-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

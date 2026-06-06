@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/commerce-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shitsunai-asobi-adachi-tokyo.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -24,6 +24,7 @@ quickInfo:
   budget: free
 lede: >-
   梅雨や酷暑の日、「足立区で子供を屋内で遊ばせたい」家庭のための完全ガイド。北千住・西新井・綾瀬・竹ノ塚・梅島エリアの区立児童館の無料スポットから、ルミネ北千住・西新井アリオの屋内パーク、ギャラクシティまで、0〜6歳の年齢別に8カ所を厳選。2026年版で網羅します。
+legacyHero: /hero/commerce-01.webp
 ---
 
 ## 結論｜足立区の室内遊び場おすすめTOP3

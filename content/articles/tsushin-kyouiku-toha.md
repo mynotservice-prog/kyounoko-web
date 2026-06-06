@@ -1,12 +1,13 @@
 ---
 slug: tsushin-kyouiku-toha
 title: 通信教育とは｜定義・種類・選び方・主要教材比較の完全ガイド
-metaDescription: 通信教育とは何か、いつから始められるのか、紙教材・タブレット教材・幼児/小学生向けの選び方まで完全解説。こどもちゃれんじ・スマイルゼミ・ポピーなど主要教材の特徴を2026年5月時点の情報でやさしく整理しました。
+metaDescription: >-
+  通信教育とは何か、いつから始められるのか、紙教材・タブレット教材・幼児/小学生向けの選び方まで完全解説。こどもちゃれんじ・スマイルゼミ・ポピーなど主要教材の特徴を2026年5月時点の情報でやさしく整理しました。
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/classroom-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/tsushin-kyouiku-toha.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: 1000-5000
 lede: >-
   「通信教育って何歳から？どこを選べばいい？」——通信教育は自宅に教材が届き、家庭で学習を進める学習スタイル。本記事は2026年5月時点の主要教材の一般情報をもとに、選び方の軸と特徴をやさしく整理しました。
+legacyHero: /hero/classroom-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

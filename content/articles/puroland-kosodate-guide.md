@@ -1,12 +1,13 @@
 ---
 slug: puroland-kosodate-guide
 title: サンリオピューロランド 0〜6歳完全攻略｜年齢別動線・予算・持ち物【2026年】
-metaDescription: サンリオピューロランドを0〜6歳子連れで攻略する完全ガイド。年齢別おすすめ動線・チケット種類・予算目安・持ち物リスト・キャラクターグリーティング攻略まで、初訪問でも失敗しないノウハウを全公開。
+metaDescription: >-
+  サンリオピューロランドを0〜6歳子連れで攻略する完全ガイド。年齢別おすすめ動線・チケット種類・予算目安・持ち物リスト・キャラクターグリーティング攻略まで、初訪問でも失敗しないノウハウを全公開。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/puroland-kosodate-guide.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: mid
 lede: >-
   全館屋内のサンリオピューロランドは、雨でも雪でも楽しめる0〜6歳の鉄板スポット。ただし「どの順で回るか」「どのキャラクターに会えるか」で満足度が大きく変わります。年齢別の動線・予算・持ち物を一気に整理した完全攻略版です。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

@@ -1,12 +1,13 @@
 ---
 slug: rinyuushoku-reitou
 title: 離乳食の冷凍保存方法｜小分け・解凍・期限の完全ガイド
-metaDescription: 離乳食の冷凍保存を保存版で解説。製氷皿・フリージングカップ・ラップ包みの使い分け、1週間で食べきる回転術、安全な解凍方法、形状別の冷凍向き食材、再冷凍NGの理由まで、毎日の離乳食づくりがぐっと楽になります。
+metaDescription: >-
+  離乳食の冷凍保存を保存版で解説。製氷皿・フリージングカップ・ラップ包みの使い分け、1週間で食べきる回転術、安全な解凍方法、形状別の冷凍向き食材、再冷凍NGの理由まで、毎日の離乳食づくりがぐっと楽になります。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/rinyuushoku-reitou.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   離乳食は毎食手作りすると親が疲弊します。冷凍ストックを週末にまとめて作っておけば、平日は解凍するだけで完成。基本は「製氷皿で小分け→冷凍庫で凍らせる→保存袋へ移す」の3ステップ。保存期間は1週間、解凍は必ず加熱で。本記事では、月齢別の冷凍向き食材・手順・解凍方法・失敗あるあるまで保存版で解説します。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

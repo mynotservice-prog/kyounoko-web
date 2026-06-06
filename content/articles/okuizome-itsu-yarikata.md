@@ -5,8 +5,8 @@ metaDescription: お食い初め（百日祝い）はいつ・どう祝う？生
 category: gyouji
 categoryName: 季節と行事
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/okuizome-itsu-yarikata.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -17,7 +17,9 @@ quickInfo:
     - any
   durationMin: 30
   budget: mid
-lede: お食い初めは生後100日前後に「一生食べ物に困らないように」と願う伝統行事。祝い膳・歯固め石・服装・写真撮影まで、忙しい育児中でも無理なく準備できる手順を整理しました。
+lede: >-
+  お食い初めは生後100日前後に「一生食べ物に困らないように」と願う伝統行事。祝い膳・歯固め石・服装・写真撮影まで、忙しい育児中でも無理なく準備できる手順を整理しました。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論（時期・必要なもの）

@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/classroom-02.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shitsunai-asobi-itabashi-tokyo.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -24,6 +24,7 @@ quickInfo:
   budget: free
 lede: >-
   梅雨や酷暑の日、「板橋区で子供を屋内で遊ばせたい」家庭のための完全ガイド。板橋・大山・成増・志村三丁目・高島平エリアの区立児童館の無料スポットから、イオン板橋・イトーヨーカドー成増の屋内パーク、区立教育科学館まで、0〜6歳の年齢別に8カ所を厳選。2026年版で網羅します。
+legacyHero: /hero/classroom-02.webp
 ---
 
 ## 結論｜板橋区の室内遊び場おすすめTOP3

@@ -1,12 +1,13 @@
 ---
 slug: shimoda-kosodate
 title: 下田の子連れ完全ガイド｜白浜・弓ヶ浜・水族館・宿【2026年版】
-metaDescription: 下田を子連れで楽しむ完全ガイド。白浜大浜・弓ヶ浜などの遠浅ビーチ、下田海中水族館、街歩き、赤ちゃん歓迎宿の選び方を2026年5月時点の最新情報で整理。0〜6歳の海デビューにも最適です。
+metaDescription: >-
+  下田を子連れで楽しむ完全ガイド。白浜大浜・弓ヶ浜などの遠浅ビーチ、下田海中水族館、街歩き、赤ちゃん歓迎宿の選び方を2026年5月時点の最新情報で整理。0〜6歳の海デビューにも最適です。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/autumn-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shimoda-kosodate.jpg
 area: kanto
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: 下田は伊豆半島南端、東京から特急踊り子で約2時間40分。白浜大浜・弓ヶ浜・多々戸浜など関東屈指の遠浅・透明度ビーチが集まる海水浴の聖地。下田海中水族館、ペリーロード、新鮮魚介——0〜6歳の家族旅行に最適です。
+lede: >-
+  下田は伊豆半島南端、東京から特急踊り子で約2時間40分。白浜大浜・弓ヶ浜・多々戸浜など関東屈指の遠浅・透明度ビーチが集まる海水浴の聖地。下田海中水族館、ペリーロード、新鮮魚介——0〜6歳の家族旅行に最適です。
+legacyHero: /hero/autumn-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

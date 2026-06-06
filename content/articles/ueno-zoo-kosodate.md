@@ -1,12 +1,13 @@
 ---
 slug: ueno-zoo-kosodate
 title: 上野動物園 子連れ攻略｜0〜6歳向け動線・パンダ予約・予算【2026年】
-metaDescription: 上野動物園を0〜6歳子連れで攻略する完全ガイド。年齢別動線・パンダ整理券・東西園の回り方・予算目安・周辺の上野公園との組み合わせまで、初訪問でも失敗しないノウハウを全網羅。
+metaDescription: >-
+  上野動物園を0〜6歳子連れで攻略する完全ガイド。年齢別動線・パンダ整理券・東西園の回り方・予算目安・周辺の上野公園との組み合わせまで、初訪問でも失敗しないノウハウを全網羅。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/ueno-zoo-kosodate.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   上野動物園は都内で最も歴史のある動物園、入園料も中学生以下無料というコスパの良さ。パンダ目当ての行列攻略・年齢別動線・東西園の回り方を整理。初訪問の不安をすべて解消する完全ガイドです。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

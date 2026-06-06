@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/commerce-02.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shitsunai-asobi-edogawa-tokyo.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -24,6 +24,7 @@ quickInfo:
   budget: free
 lede: >-
   梅雨や酷暑の日、「江戸川区で子供を屋内で遊ばせたい」家庭のための完全ガイド。葛西・西葛西・船堀・小岩エリアの区立児童館の無料スポットから、地下鉄博物館、葛西アリオの屋内パーク、葛西臨海水族園まで、0〜6歳の年齢別に8カ所を厳選。2026年版で網羅します。
+legacyHero: /hero/commerce-02.webp
 ---
 
 ## 結論｜江戸川区の室内遊び場おすすめTOP3

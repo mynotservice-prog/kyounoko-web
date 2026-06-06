@@ -1,12 +1,13 @@
 ---
 slug: okinawa-naha-kosodate
 title: 那覇子連れ観光ガイド｜国際通り・首里城・空港周辺のおすすめ【2026年版】
-metaDescription: 那覇エリアで子連れ家族が楽しめるスポットを徹底解説。国際通り、首里城公園、DMMかりゆし水族館、波の上ビーチなど、空港から近いエリア中心に2026年最新の家族向け情報をまとめました。
+metaDescription: >-
+  那覇エリアで子連れ家族が楽しめるスポットを徹底解説。国際通り、首里城公園、DMMかりゆし水族館、波の上ビーチなど、空港から近いエリア中心に2026年最新の家族向け情報をまとめました。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/summer-water-02.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/okinawa-naha-kosodate.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,7 +20,9 @@ quickInfo:
     - any
   durationMin: 480
   budget: high
-lede: 那覇は沖縄旅行の玄関口でありながら、子連れでも楽しめるスポットがコンパクトに集まっています。空港から近く、移動が少なく、雨天時の選択肢も豊富。初めての沖縄や、フライト前後の時間を有効活用したい家族におすすめのエリアです。
+lede: >-
+  那覇は沖縄旅行の玄関口でありながら、子連れでも楽しめるスポットがコンパクトに集まっています。空港から近く、移動が少なく、雨天時の選択肢も豊富。初めての沖縄や、フライト前後の時間を有効活用したい家族におすすめのエリアです。
+legacyHero: /hero/summer-water-02.webp
 ---
 
 ## 結論（先に知りたい人へ）

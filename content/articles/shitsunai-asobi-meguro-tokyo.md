@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/toddler-play-03.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/shitsunai-asobi-meguro-tokyo.jpg
 area: tokyo
 quickInfo:
   ageRanges:
@@ -24,6 +24,7 @@ quickInfo:
   budget: free
 lede: >-
   梅雨や酷暑の日、「目黒区で子供を屋内で遊ばせたい」家庭のための完全ガイド。自由が丘・学芸大学・中目黒・都立大学エリアの区立児童館の無料スポットから、有料屋内パーク、目黒区民キャンパスの体験施設まで、0〜6歳の年齢別に8カ所を厳選。2026年版で網羅します。
+legacyHero: /hero/toddler-play-03.webp
 ---
 
 ## 結論｜目黒区の室内遊び場おすすめTOP3

@@ -1,12 +1,13 @@
 ---
 slug: sanrin-vs-yonrin-baby
 title: 三輪 vs 四輪 ベビーカー 完全比較【2026年版】｜走行性・段差・小回り
-metaDescription: 三輪ベビーカーと四輪ベビーカーを6項目で比較。走行性・段差・小回り・対象月齢・サイズ・収納のしやすさを徹底解説。都心電車派・郊外散歩派の家庭タイプ別おすすめを完全紹介します。
+metaDescription: >-
+  三輪ベビーカーと四輪ベビーカーを6項目で比較。走行性・段差・小回り・対象月齢・サイズ・収納のしやすさを徹底解説。都心電車派・郊外散歩派の家庭タイプ別おすすめを完全紹介します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/sanrin-vs-yonrin-baby.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +21,7 @@ quickInfo:
   budget: mid
 lede: >-
   「三輪と四輪のベビーカー、どっちがいい？」を2026年版で完全比較。三輪は走行安定性と段差対応、四輪は小回りと折りたたみコンパクトさが強み。走行性・段差・小回り・対象月齢・サイズ・収納のしやすさの6項目で徹底解説し、都心電車派・郊外散歩派の家庭タイプ別おすすめまで整理しました。
+legacyHero: /hero/park-01.webp
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月

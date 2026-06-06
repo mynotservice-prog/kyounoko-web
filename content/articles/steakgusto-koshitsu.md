@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/food-japan-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/steakgusto-koshitsu.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: mid
 lede: >-
   ステーキガストに完全個室はほぼありませんが、ガスト同様のボックス席・壁側席で家族でゆったり過ごせます。子連れには壁側のボックス席が定番。座席タイプ別の使い分けと予約のコツで、ステーキランチ・ディナーが快適になります。
+legacyHero: /hero/food-japan-01.webp
 ---
 
 ## 結論

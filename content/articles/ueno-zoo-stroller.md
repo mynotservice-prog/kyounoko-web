@@ -1,12 +1,13 @@
 ---
 slug: ueno-zoo-stroller
 title: 上野動物園 ベビーカー｜貸出・置き場・モノレール跡地動線【2026年】
-metaDescription: 上野動物園のベビーカー事情を徹底解説。レンタル200円・自前持ち込みOK・東園西園の連絡通路・パンダ展示の動線・坂道情報まで、0〜3歳連れに必要な情報を全網羅した保存版ガイド。
+metaDescription: >-
+  上野動物園のベビーカー事情を徹底解説。レンタル200円・自前持ち込みOK・東園西園の連絡通路・パンダ展示の動線・坂道情報まで、0〜3歳連れに必要な情報を全網羅した保存版ガイド。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/park-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/ueno-zoo-stroller.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   上野動物園は東園と西園に分かれた広大な敷地。ベビーカーで一周できますが、起伏や階段もあり動線設計が重要です。レンタル・持ち込み・連絡通路・パンダ展示の動線まで、0〜3歳連れに必須情報を整理しました。
+legacyHero: /hero/park-01.webp
 ---
 
 ## 結論（先に知りたい人へ）

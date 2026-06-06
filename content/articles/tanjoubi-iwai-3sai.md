@@ -1,12 +1,13 @@
 ---
 slug: tanjoubi-iwai-3sai
 title: 3歳誕生日の祝い方｜会話できる年齢ならではのサプライズ・記念演出
-metaDescription: 3歳誕生日は会話・期待・思い出が初めて結びつく特別な年。サプライズ演出、ケーキの選び方、プレゼント、お友達招待の判断、写真撮影のコツを実例ベースで紹介します。
+metaDescription: >-
+  3歳誕生日は会話・期待・思い出が初めて結びつく特別な年。サプライズ演出、ケーキの選び方、プレゼント、お友達招待の判断、写真撮影のコツを実例ベースで紹介します。
 category: gyouji
 categoryName: 季節と行事
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-29'
-hero: /hero/baby-01.webp
+updatedAt: '2026-06-06'
+hero: /hero-ai/tanjoubi-iwai-3sai.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -19,6 +20,7 @@ quickInfo:
   durationMin: 30
   budget: mid
 lede: 3歳は「自分の誕生日」を理解できる初めての年齢。サプライズ演出、好きなキャラのケーキ、お友達招待の判断、写真撮影まで、3歳ならではの祝い方を整理しました。
+legacyHero: /hero/baby-01.webp
 ---
 
 ## 結論（時期・必要なもの）
