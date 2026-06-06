@@ -9,8 +9,11 @@
  * リフレッシュする戦略にしている。
  */
 
-// 画像リフレッシュ（カテゴリ画像AIイラスト化）反映のためバージョンアップ → 旧キャッシュ全削除
-const CACHE_VERSION = 'v3-2026-05-12-cat-ai';
+// V2デザインリニューアル反映のためバージョンアップ → 旧キャッシュ全削除
+// 2026-06-06: V2 全面適用後、過去PWA訪問者のブラウザで旧HTMLキャッシュが残り
+// 「探す」「イベント」等のページが旧デザインに見える問題を解消。
+// バージョンを上げると各クライアントで activate イベントが走り旧キャッシュが消える。
+const CACHE_VERSION = 'v4-2026-06-06-v2-renewal';
 const RUNTIME_CACHE = `kyounoko-runtime-${CACHE_VERSION}`;
 const STATIC_CACHE = `kyounoko-static-${CACHE_VERSION}`;
 
