@@ -1573,13 +1573,20 @@ const CATEGORY_HERO: Record<EventCategory, string> = {
  */
 const TRUSTED_HERO_PREFIXES = ['/v2/events/', '/v2/articles/', '/v2/spots/', '/photos/'];
 export function eventHeroImage(e: EventEntry): string {
-  // hero が信頼できるパス（v2/ 配下や photos/ 等）ならそのまま使用
+  // 1) /admin/event-images 経由の上書き（lib/event-overrides.json）が最優先
+  // 動的import で循環依存を避ける
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const overrides = (require('./event-overrides.json') as Record<string, { hero?: string }>);
+  const ov = overrides[e.slug];
+  if (ov?.hero) return ov.hero;
+
+  // 2) hero が信頼できるパス（v2/ 配下や photos/ 等）ならそのまま使用
   if (e.hero && TRUSTED_HERO_PREFIXES.some((p) => e.hero!.startsWith(p))) {
     return e.hero;
   }
-  // それ以外（/hero-ai/cat-* など 存在しないファイル多数）はKKプールに回す
+
+  // 3) それ以外（/hero-ai/cat-* など 存在しないファイル多数）はKKプールに回す
   // ユーザー支給の高品質画像45枚から slugハッシュで決定的に選択
-  // → 全イベントで安定して画像が表示される
   const h = hashEventSlug(e.slug);
   const n = (h % 45) + 1;
   return `/v2/articles/kk-${String(n).padStart(2, '0')}.webp`;
