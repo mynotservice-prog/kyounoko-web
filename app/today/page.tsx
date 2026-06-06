@@ -206,9 +206,9 @@ function AnswerCard({ answer, featured = false }: { answer: TodayAnswerResult; f
           <span className="answer-eyebrow">
             {isPlan ? 'Today — 今日はこれ。' : 'Today — 今日の候補'}
           </span>
-          <h2 className="answer-title">
+          <h1 className="answer-title" style={{ fontSize: 'inherit', fontWeight: 'inherit', margin: 0 }}>
             <Link href={answer.href}>{answer.title}</Link>
-          </h2>
+          </h1>
           {answer.shortAnswer && (
             <p className="answer-lede" style={{ fontSize: 15, fontWeight: 500, color: 'var(--ink)' }}>
               {answer.shortAnswer}

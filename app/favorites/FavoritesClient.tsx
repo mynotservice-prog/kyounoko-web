@@ -100,8 +100,14 @@ export function FavoritesClient({
         <p style={{ color: 'var(--v2-ink-mute)', fontSize: 13.5, lineHeight: 1.7, margin: 0 }}>
           気になるスポット・記事・プランで
           <br />
-          <V2Icon name="heart" size={13} color="var(--v2-orange)" /> や{' '}
-          <V2Icon name="bookmark" size={13} color="var(--v2-orange)" /> を押すとここに溜まります。
+          <span style={{ display: 'inline-flex', verticalAlign: 'middle', margin: '0 3px' }}>
+            <V2Icon name="heart" size={14} color="var(--v2-orange)" />
+          </span>
+          {' や '}
+          <span style={{ display: 'inline-flex', verticalAlign: 'middle', margin: '0 3px' }}>
+            <V2Icon name="bookmark" size={14} color="var(--v2-orange)" />
+          </span>
+          {' を押すとここに溜まります。'}
         </p>
         <div style={{ display: 'flex', gap: 10, marginTop: 8, flexWrap: 'wrap', justifyContent: 'center' }}>
           <Link

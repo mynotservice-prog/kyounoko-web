@@ -102,7 +102,7 @@ export default async function EventPage({ params }: Props) {
           />
           <div className="v2-article-hero-grad"></div>
           <span className="v2-article-hero-cat">イベント</span>
-          <div className="v2-fa-hero-title">{ev.title}</div>
+          <h1 className="v2-fa-hero-title" style={{ margin: 0, fontSize: 'inherit', fontWeight: 'inherit' }}>{ev.title}</h1>
         </div>
 
         <div className="v2-page-head" style={{ paddingTop: 16 }}>

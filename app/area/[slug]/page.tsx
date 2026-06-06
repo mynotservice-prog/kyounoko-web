@@ -160,7 +160,7 @@ export default async function AreaDetailPage({ params }: Props) {
           />
           <div className="v2-area-hero-grad"></div>
           <div className="v2-area-hero-copy">
-            <div className="v2-area-hero-title">{name}のおでかけ</div>
+            <h1 className="v2-area-hero-title" style={{ margin: 0, fontSize: 'inherit', fontWeight: 'inherit' }}>{name}のおでかけ</h1>
             <div className="v2-area-hero-sub">
               子どもと楽しめるスポットが{areaSpots.length}件
             </div>

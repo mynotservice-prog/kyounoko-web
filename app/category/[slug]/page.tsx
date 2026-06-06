@@ -199,7 +199,7 @@ export default async function CategoryPage({ params }: Props) {
           <V2Img src={categoryHero(slug)} seed={`cat-${slug}`} alt={category.name} />
           <div className="v2-article-hero-grad"></div>
           <span className="v2-article-hero-cat">カテゴリ</span>
-          <div className="v2-fa-hero-title">{category.name}</div>
+          <h1 className="v2-fa-hero-title" style={{ margin: 0, fontSize: 'inherit', fontWeight: 'inherit' }}>{category.name}</h1>
         </div>
         <div className="v2-page-head" style={{ paddingTop: 14 }}>
           {category.description && (
