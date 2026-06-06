@@ -17,10 +17,10 @@ import { V2RecentSpots } from '@/components/v2/V2RecentSpots';
 import { getFileArticlesByCategory } from '@/lib/articles';
 import { eventHeroImage, formatEventPeriod, getThisWeekEvents } from '@/lib/events';
 import { getAllFileArticles } from '@/lib/articles';
-import { SPOTS } from '@/lib/spots';
+import { getAllSpotsWithSlug } from '@/lib/spots';
 import { FEATURE_PAGES } from '@/lib/feature-pages';
 import { POPULAR_ARTICLE_SLUGS } from '@/lib/popular-articles';
-import { spotToV2, featureToV2, articleToV2, spotIdFromName } from '@/lib/v2-adapters';
+import { spotToV2, featureToV2, articleToV2 } from '@/lib/v2-adapters';
 import { AdSlot } from '@/components/ads/AdSlot';
 
 export const revalidate = 3600;
@@ -68,14 +68,19 @@ export default function HomePage() {
   ).filter((a): a is NonNullable<typeof a> => Boolean(a));
   const latestArticles = allArticles.slice(0, 6);
 
-  const allSpots = Object.values(SPOTS)
-    .flat()
-    .filter((s): s is NonNullable<typeof s> => Boolean(s));
-  const popularSpots = allSpots.filter((s) => s.popular).slice(0, 5);
-  const seedSpots = popularSpots.length ? popularSpots : allSpots.slice(0, 5);
-  const spotCards = seedSpots.map((s, i) => ({
-    ...spotToV2(s, i),
-    _slug: spotIdFromName(s.name, i),
+  // 人気スポット: getAllSpotsWithSlug() 経由で正規 slug を使う（/spot/[slug] の
+  // generateStaticParams と必ず一致させる）。
+  // popular=true があれば優先、なければ先頭から5件。
+  const allSpotsWithSlug = getAllSpotsWithSlug();
+  const popularSpotsWS = allSpotsWithSlug
+    .filter((x) => x.spot.popular)
+    .slice(0, 5);
+  const seedSpotsWS = popularSpotsWS.length
+    ? popularSpotsWS
+    : allSpotsWithSlug.slice(0, 5);
+  const spotCards = seedSpotsWS.map((x, i) => ({
+    ...spotToV2(x.spot, i),
+    _slug: x.slug, // 正規 slug（spotToSlug で生成された URL-safe な値）
   }));
 
   const featureCards = FEATURE_PAGES.slice(0, 4).map(featureToV2);
