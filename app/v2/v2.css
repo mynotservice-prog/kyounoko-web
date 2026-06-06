@@ -366,6 +366,10 @@
 .v2-hf-val.ph { color: var(--v2-ink-faint); font-weight: 700; }
 .v2-hf-submit { margin-top: 12px; }
 
+/* ---------- Mobile menu drawer animations ---------- */
+@keyframes v2-fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes v2-slideInRight { from { transform: translateX(100%); } to { transform: translateX(0); } }
+
 /* ---------- Inline popover picker (枠の直下にドロップダウン) ---------- */
 .v2-hero-form { position: relative; }
 .v2-hf-cell { position: relative; min-width: 0; }
