@@ -1660,22 +1660,3 @@
   git push origin main
   ```
   もしくは既に staged 状態が残っていれば `rm -f .git/*.lock && git commit -m "..." && git push origin main` だけで OK。
-
-## 2026-06-08 06:05 JST — IndexNow 週次送信 (kyounoko-indexnow-weekly)
-
-- **submitted_count**: 5,320 URLs（queue 生成は sitemap.xml から 5,321 URL 取得 → 送信時に無効な 1 件をスキップして 5,320 件を1バッチ送信）
-- **queue 生成コマンド**: `node scripts/indexnow-build-queue.mjs --max=9000 --kind=all` → ✅ 正常完了（5,321 URL を docs/indexnow-queue.txt に書き出し）
-- **送信結果**:
-  - `https://api.indexnow.org/IndexNow` (Bing): **status 200** ✅
-  - `https://yandex.com/indexnow` (Yandex): **status 202** ✅
-- **bing_status**: 200 OK / **yandex_status**: 202 Accepted / **失敗**: なし
-- **ログ反映**: `docs/indexnow-submitted.log` に 5,320 URL を追記、`docs/indexnow-queue.txt` を空にクリア。
-- **失敗時対処の判断ログ**:
-  - 403／404／429／ネットワークエラーいずれも発生せず。再試行は不要。
-  - 429 (TooManyRequests) なし（5,320 URL / 上限10,000、max=9000 マージン内）。
-- **前週比較**: submitted_count が前回 2,087 → 今回 5,320（+3,233件、約 2.55倍）。sitemap.xml の URL 総数が 2,088→5,321 に増加。コンテンツ拡張（新規記事・spot・plan ページ）の大量投入が継続している実態を反映。
-- **次サイクルへの引き継ぎ**:
-  1. Bing(200)+Yandex(202) の両受理が4週連続で安定。手動対応は不要。
-  2. URL 数の増加ペースが続くと、来週は 1万超→IndexNow 1日上限 10,000 / max=9000 に到達する可能性あり。9,000 件で打ち切られた場合は残り URL が翌週送信に回るだけで実害なし（sitemap 経由の Google 検知は別系統で継続）。
-  3. git pull は今回正常（Already up to date、ORIG_HEAD.lock の unlink warning のみで実害なし）。
-  4. queue 生成スクリプトの実行時間がサンドボックスの 45 秒タイムアウトに近づいている（子 sitemap を逐次フェッチするため URL 増加に比例して遅くなる）。今回はタイムアウト表示が出たが処理自体は完走しており queue は正常生成された。URL がさらに増えた場合、fetchAllSitemapUrls の子 sitemap フェッチを並列化すると改善できる。

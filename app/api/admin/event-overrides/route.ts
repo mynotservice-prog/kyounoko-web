@@ -29,12 +29,14 @@ const FILE_ABS = path.join(ROOT, FILE_REL);
 
 function isAllowed(req: NextRequest): { ok: boolean; reason?: string } {
   if (process.env.NODE_ENV === 'development') return { ok: true };
-  if (process.env.ALLOW_ADMIN_EDIT === '1') {
-    const ref = req.headers.get('referer') || '';
-    if (!/\/admin\//.test(ref)) return { ok: false, reason: 'invalid referer' };
-    return { ok: true };
+  // 明示的に '0' で disable できるが、未設定はデフォルト許可。
+  // /admin 配下は middleware の Basic Auth で保護されており、ここでは referer のみ確認すれば十分。
+  if (process.env.ALLOW_ADMIN_EDIT === '0') {
+    return { ok: false, reason: 'admin edit disabled (ALLOW_ADMIN_EDIT=0)' };
   }
-  return { ok: false, reason: 'admin edit disabled (set ALLOW_ADMIN_EDIT=1 to enable)' };
+  const ref = req.headers.get('referer') || '';
+  if (!/\/admin\//.test(ref)) return { ok: false, reason: 'invalid referer' };
+  return { ok: true };
 }
 
 function isValidSlug(s: unknown): s is string {
