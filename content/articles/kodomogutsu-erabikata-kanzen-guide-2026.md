@@ -6,8 +6,8 @@ metaDescription: >-
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-06-07'
-updatedAt: '2026-06-07'
-hero: /v2/articles/kk-03.webp
+updatedAt: '2026-06-08'
+hero: /hero-ai/kodomogutsu-erabikata-kanzen-guide-2026.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +22,7 @@ quickInfo:
   budget: medium
 lede: >-
   1人目で5回失敗した編集部が、2人目で迷わず買えるようになった「子供靴の選び方」を、サイズ計測・年齢別・ブランド別・用途別の4軸で全部まとめました。買い替えサイクルとサイズアップの目安まで含めて1ページで完結します。
+legacyHero: /v2/articles/kk-03.webp
 ---
 
 > ※本記事には広告（PR）リンクが含まれます。実購入し履き比べた家庭の知見を中心にまとめています。

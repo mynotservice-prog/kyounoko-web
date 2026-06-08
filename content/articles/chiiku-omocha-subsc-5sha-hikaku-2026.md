@@ -1,5 +1,14 @@
 ---
 slug: chiiku-omocha-subsc-5sha-hikaku-2026
+title: 【2026年】知育玩具サブスク 5社徹底比較｜トイサブ・Cha Cha Cha・And TOYBOX・IKUPLE・キッズラボラトリー
+metaDescription: >-
+  知育玩具サブスク5社（トイサブ・Cha Cha Cha・And
+  TOYBOX・IKUPLE・キッズラボラトリー）を、月額・対象年齢・交換頻度・衛生管理・解約しやすさで徹底比較。実家庭の利用データつき。
+category: narai
+categoryName: 習い事と学び
+publishedAt: '2026-06-07'
+updatedAt: '2026-06-08'
+hero: /hero-ai/chiiku-omocha-subsc-5sha-hikaku-2026.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -12,17 +21,9 @@ quickInfo:
     - any
   durationMin: 20
   budget: medium
-title: 【2026年】知育玩具サブスク 5社徹底比較｜トイサブ・Cha Cha Cha・And TOYBOX・IKUPLE・キッズラボラトリー
-metaDescription: >-
-  知育玩具サブスク5社（トイサブ・Cha Cha Cha・And
-  TOYBOX・IKUPLE・キッズラボラトリー）を、月額・対象年齢・交換頻度・衛生管理・解約しやすさで徹底比較。実家庭の利用データつき。
 lede: >-
   知育玩具サブスク主要5社を、月額・対象年齢・交換頻度・衛生管理・解約しやすさ・兄弟プラン有無の6軸で比較。「うちはどこを使うべき？」を3分で判断できるタイプ別早見表つき。
-hero: /v2/articles/kk-22.webp
-category: narai
-categoryName: 習い事と学び
-publishedAt: '2026-06-06'
-updatedAt: '2026-06-07'
+legacyHero: /v2/articles/kk-22.webp
 ---
 
 > ※本記事には広告（PR）リンクが含まれます。比較は2026年6月時点の公開情報と実家庭からのヒアリングに基づきます。

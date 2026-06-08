@@ -6,8 +6,8 @@ metaDescription: >-
 category: narai
 categoryName: 習い事と学び
 publishedAt: '2026-06-07'
-updatedAt: '2026-06-07'
-hero: /v2/articles/kk-31.webp
+updatedAt: '2026-06-08'
+hero: /hero-ai/kyouzai-3sha-popi-challenge-smile-hikaku-2026.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -21,6 +21,7 @@ quickInfo:
   budget: low
 lede: >-
   幼児通信教材の3定番「こどもちゃれんじ・幼児ポピー・スマイルゼミ幼児」を、実家庭で1年間並行受講した編集部が、家庭タイプ別の最適解を提示します。料金・難易度・親の負担・退会しやすさまで全部公開。
+legacyHero: /v2/articles/kk-31.webp
 ---
 
 > ※本記事には広告（PR）リンクが含まれます。実体験ベースのレビューです。

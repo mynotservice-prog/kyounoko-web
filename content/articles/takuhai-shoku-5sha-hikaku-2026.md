@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-06-07'
-updatedAt: '2026-06-07'
-hero: /v2/articles/kk-12.webp
+updatedAt: '2026-06-08'
+hero: /hero-ai/takuhai-shoku-5sha-hikaku-2026.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -22,6 +22,7 @@ quickInfo:
   budget: medium
 lede: >-
   「保育園迎え→18時帰宅→19時に夕食」を毎日回すために、宅配食5社をそれぞれ3か月以上使ってきた共働き編集部が、料金・調理時間・離乳食/幼児食対応・解約しやすさを並列比較しました。
+legacyHero: /v2/articles/kk-12.webp
 ---
 
 > ※本記事には広告（PR）リンクが含まれます。実購入・実利用したうえで編集部の評価を掲載しています。

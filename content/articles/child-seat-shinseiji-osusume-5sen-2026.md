@@ -6,8 +6,8 @@ metaDescription: >-
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-06-07'
-updatedAt: '2026-06-07'
-hero: /v2/articles/kk-15.webp
+updatedAt: '2026-06-08'
+hero: /hero-ai/child-seat-shinseiji-osusume-5sen-2026.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +20,7 @@ quickInfo:
   budget: high
 lede: >-
   出産予定日の1か月前までに用意したい、新生児チャイルドシート5機種を、ISOFIX規格・回転機能・取付の楽さ・洗えるカバー・価格で並列比較しました。退院日に「乗せ方分からない！」を防ぐ準備リストつき。
+legacyHero: /v2/articles/kk-15.webp
 ---
 
 > ※本記事には広告（PR）リンクが含まれます。情報は2026年6月時点。

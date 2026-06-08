@@ -6,8 +6,8 @@ metaDescription: >-
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-06-07'
-updatedAt: '2026-06-07'
-hero: /v2/articles/kk-09.webp
+updatedAt: '2026-06-08'
+hero: /hero-ai/kodomogutsu-15cm-osusume-8sen-2026.jpg
 area: all
 quickInfo:
   ageRanges:
@@ -20,6 +20,7 @@ quickInfo:
   budget: medium
 lede: >-
   「15cmのジャストサイズって、どのブランドの何cmを選べばいい？」走り始めの2-3歳児に履かせて、実際にサイズ感・耐久性・親の履かせやすさを比較した8足を紹介します。
+legacyHero: /v2/articles/kk-09.webp
 ---
 
 > ※本記事には広告（PR）リンクが含まれます。実購入し履き比べた結果に基づくレビューです。

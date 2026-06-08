@@ -8254,5 +8254,53 @@
     "generatedAt": "2026-06-06T01:34:23.381Z",
     "model": "flux-1-schnell",
     "steps": 4
+  },
+  "chiiku-omocha-subsc-5sha-hikaku-2026": {
+    "slug": "chiiku-omocha-subsc-5sha-hikaku-2026",
+    "ok": true,
+    "file": "/hero-ai/chiiku-omocha-subsc-5sha-hikaku-2026.jpg",
+    "generatedAt": "2026-06-08T01:28:26.997Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "child-seat-shinseiji-osusume-5sen-2026": {
+    "slug": "child-seat-shinseiji-osusume-5sen-2026",
+    "ok": true,
+    "file": "/hero-ai/child-seat-shinseiji-osusume-5sen-2026.jpg",
+    "generatedAt": "2026-06-08T01:28:27.014Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomogutsu-erabikata-kanzen-guide-2026": {
+    "slug": "kodomogutsu-erabikata-kanzen-guide-2026",
+    "ok": true,
+    "file": "/hero-ai/kodomogutsu-erabikata-kanzen-guide-2026.jpg",
+    "generatedAt": "2026-06-08T01:28:37.744Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kodomogutsu-15cm-osusume-8sen-2026": {
+    "slug": "kodomogutsu-15cm-osusume-8sen-2026",
+    "ok": true,
+    "file": "/hero-ai/kodomogutsu-15cm-osusume-8sen-2026.jpg",
+    "generatedAt": "2026-06-08T01:28:39.197Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kyouzai-3sha-popi-challenge-smile-hikaku-2026": {
+    "slug": "kyouzai-3sha-popi-challenge-smile-hikaku-2026",
+    "ok": true,
+    "file": "/hero-ai/kyouzai-3sha-popi-challenge-smile-hikaku-2026.jpg",
+    "generatedAt": "2026-06-08T01:28:41.260Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "takuhai-shoku-5sha-hikaku-2026": {
+    "slug": "takuhai-shoku-5sha-hikaku-2026",
+    "ok": true,
+    "file": "/hero-ai/takuhai-shoku-5sha-hikaku-2026.jpg",
+    "generatedAt": "2026-06-08T01:28:42.274Z",
+    "model": "flux-1-schnell",
+    "steps": 4
   }
 }
