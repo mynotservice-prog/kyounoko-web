@@ -210,6 +210,21 @@ export async function POST(req: NextRequest) {
     }
   }
 
+  // ----- 本番だが GitHub 未設定: 明確なエラーを返す（FS は read-only） -----
+  if (process.env.NODE_ENV !== 'development') {
+    return NextResponse.json(
+      {
+        ok: false,
+        error:
+          '本番環境で記事編集するには、Vercel 環境変数に GITHUB_TOKEN と GITHUB_REPO を設定してください。' +
+          'Vercel Project Settings → Environment Variables から追加できます。' +
+          ' GITHUB_TOKEN: GitHub Fine-grained PAT（Contents: read & write 権限） / ' +
+          ' GITHUB_REPO: "owner/repo" 形式（例: mynotservice-prog/kyounoko-web）',
+      },
+      { status: 500 }
+    );
+  }
+
   // ----- ローカル開発: FS に書き込み（git push は手動） -----
   try {
     // バックアップ（直前の内容を .bak にコピー）— 失敗時の復旧用
