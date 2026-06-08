@@ -194,13 +194,41 @@ export async function POST(req: NextRequest) {
       const prev = await ghGetFile(repoRel);
       const commitMsg = `edit(${kind}): ${body.slug} via admin (mobile)`;
       const result = await ghPutFile(repoRel, out, commitMsg, prev?.sha);
+
+      // ----- on-demand revalidate: 該当ページ + 一覧系のキャッシュをパージ -----
+      // これにより Vercel build を待たず（多くの場合ビルドはスキップされる）即時反映
+      const slugForPath = body.slug!;
+      const pathsToRevalidate =
+        kind === 'article'
+          ? [`/article/${slugForPath}`, '/', '/search']
+          : [`/plan/${slugForPath}`, '/'];
+      let revalidated: string[] = [];
+      try {
+        const origin = new URL(req.url).origin;
+        const secret = process.env.ADMIN_REVALIDATE_SECRET || 'kyounoko-revalidate-default';
+        const r = await fetch(`${origin}/api/admin/revalidate`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ secret, paths: pathsToRevalidate }),
+        });
+        if (r.ok) {
+          const j = (await r.json()) as { revalidated?: string[] };
+          revalidated = j.revalidated || [];
+        }
+      } catch {
+        // revalidate 失敗してもエラーにしない（GitHub commit は成功してる）
+      }
+
       return NextResponse.json({
         ok: true,
         source: 'github',
         path: repoRel,
         commit: result.commit,
         commitUrl: result.html_url,
-        deployed: 'Vercel が自動デプロイします（1〜3分）',
+        revalidated,
+        deployed: revalidated.length
+          ? 'キャッシュをパージしました（即時反映）'
+          : 'GitHub commit 完了（Vercel 自動デプロイで反映）',
       });
     } catch (err) {
       return NextResponse.json(

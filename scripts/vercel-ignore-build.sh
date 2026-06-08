@@ -8,21 +8,27 @@
 # Vercel 公式: https://vercel.com/docs/projects/overview#ignored-build-step
 #
 # 戦略:
-#   ビルド成果物（公開サイト）に影響する可能性のあるパス
-#   (content/, lib/, app/, components/, public/, next.config.*, package*.json, tsconfig.json)
-#   に変更があった場合のみビルドする。
-#   それ以外（docs/, scripts/ の補助スクリプト, README, .gitignore など）のみの
-#   変更ならビルドをスキップして Build CPU Minutes を節約する。
+#   1) content/articles/ や content/plans/ の .md だけの編集 → ビルドスキップ
+#      （on-demand revalidate で即時反映するので build 不要）
+#   2) コード/設定（app, lib, components, public/, next.config 等）に変更があれば必ずビルド
+#   3) docs/, README, .gitignore など補助ファイルのみ → スキップ
 #
-# Build CPU Minutes 削減目的（前サイクル $12.97 / $20 = 65%消化の主因）。
+# Build CPU Minutes 削減目的（過去 $12.97/$20 = 65% 消化の主因）。
 
-set -u  # 未定義変数は禁止（あえて set -e は使わない／exit code 制御のため）
+set -u
 
 echo "[ignore-build] Checking diff between HEAD^ and HEAD..."
 
-# 比較対象のパス（公開サイトに影響するもの）
-PATHS=(
-  "content"
+# 全ての変更ファイル一覧
+ALL_CHANGED=$(git diff --name-only HEAD^ HEAD 2>/dev/null || echo "")
+
+if [ -z "$ALL_CHANGED" ]; then
+  echo "[ignore-build] No changed files detected → SKIP BUILD"
+  exit 0
+fi
+
+# 「コードを伴うパス」（ここに変更があれば必ずビルド）
+CODE_PATHS=(
   "lib"
   "app"
   "components"
@@ -37,19 +43,32 @@ PATHS=(
   "package-lock.json"
   "tsconfig.json"
   "vercel.json"
+  "middleware.ts"
 )
 
-# git diff --quiet:
-#   - 差分なし → exit 0
-#   - 差分あり → exit 1
-# 上記パスに何か変更があれば exit 1 を返してビルドさせる
-if git diff --quiet HEAD^ HEAD -- "${PATHS[@]}" 2>/dev/null; then
-  echo "[ignore-build] No relevant changes detected → SKIP BUILD"
-  echo "[ignore-build] (docs/, README.md, .github/ などのみの変更とみなされました)"
-  exit 0
-else
-  echo "[ignore-build] Relevant changes detected → PROCEED BUILD"
-  # デバッグ用：実際に何が変わったか出力
-  git diff --name-only HEAD^ HEAD -- "${PATHS[@]}" 2>/dev/null | head -10
+# コードに変更があれば必ずビルド
+if ! git diff --quiet HEAD^ HEAD -- "${CODE_PATHS[@]}" 2>/dev/null; then
+  echo "[ignore-build] Code/config changes detected → PROCEED BUILD"
+  git diff --name-only HEAD^ HEAD -- "${CODE_PATHS[@]}" 2>/dev/null | head -10
   exit 1
 fi
+
+# content/ の中で「.md ファイル以外」（例: content/spots/*.json）の変更があればビルド
+NON_MD_CONTENT=$(git diff --name-only HEAD^ HEAD -- content/ 2>/dev/null | grep -v "\.md$" || true)
+if [ -n "$NON_MD_CONTENT" ]; then
+  echo "[ignore-build] Non-markdown content changes detected → PROCEED BUILD"
+  echo "$NON_MD_CONTENT" | head -10
+  exit 1
+fi
+
+# content/articles/*.md, content/plans/*.md などの .md だけなら on-demand revalidate に任せて build スキップ
+MD_CONTENT_CHANGES=$(git diff --name-only HEAD^ HEAD -- 'content/**/*.md' 2>/dev/null | head -5)
+if [ -n "$MD_CONTENT_CHANGES" ]; then
+  echo "[ignore-build] Only markdown content changes detected → SKIP BUILD (handled by on-demand revalidate)"
+  echo "$MD_CONTENT_CHANGES"
+  exit 0
+fi
+
+# それ以外（docs/, README.md 等のみ）もスキップ
+echo "[ignore-build] No build-relevant changes detected → SKIP BUILD"
+exit 0
