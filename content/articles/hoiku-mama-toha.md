@@ -154,3 +154,10 @@ legacyHero: /hero/parent-child-01.webp
 ---
 
 ※ 本記事は2026年5月時点の一般的な制度情報をもとに作成しています。保育ママの実施状況・料金・申し込み方法は自治体によって異なります。最新の詳細は **お住まいの市区町村の保育課などの専門家** にご相談ください。
+
+
+## あわせて読みたい：保育園で履かせる子供靴
+
+- [子供靴の選び方完全ガイド 0-6歳](/article/kodomogutsu-erabikata-kanzen-guide-2026)
+- [子供靴 15cm おすすめ8選（2-3歳）](/article/kodomogutsu-15cm-osusume-8sen-2026)
+

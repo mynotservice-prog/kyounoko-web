@@ -240,3 +240,12 @@ A. **くもんはそろばん教室＋ドリル+進度管理アプリ**でかな
 - [幼児の習い事、何歳から始める？](/article/youji-naraigoto-nansai-kara)
 - [公文 vs 学研教室 5項目で比較](/article/kumon-vs-gakken-hikaku)
 - [知育サブスク3社徹底比較｜こどもちゃれんじ・Z会・ワンダーボックス](/article/chiiku-subsc-3sha-2026-comparison)
+
+
+## あわせて読みたい：教材選びの最新比較
+
+実家庭が並行受講した結論はこちら。
+
+- [【2026年】こどもちゃれんじ・ポピー・スマイルゼミ徹底比較](/article/kyouzai-3sha-popi-challenge-smile-hikaku-2026)
+- [【こどもちゃれんじ】無料の資料請求はこちら](https://px.a8.net/svt/ejp?a8mat=4B1PLT+A94RUA+3OR6+66H9E)
+

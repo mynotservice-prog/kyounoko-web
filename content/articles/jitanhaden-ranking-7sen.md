@@ -325,3 +325,13 @@ lede: >-
 
 [【ヨシケイ】栄養士の献立で簡単バランスごはん♪お試し5days](https://px.a8.net/svt/ejp?a8mat=4B5Q81+DYHVCI+1QM6+HZAGY)
 
+
+
+## あわせて読みたい：宅配食5社の徹底比較
+
+オイシックス・ヨシケイ・コープデリ・パルシステム・らでぃっしゅぼーやの並列比較。
+
+- [【2026年】子育て世帯の宅配食5社徹底比較](/article/takuhai-shoku-5sha-hikaku-2026)
+- [【ヨシケイ】お試し5days 最大50%OFFはこちら](https://px.a8.net/svt/ejp?a8mat=4B5Q81+DYHVCI+1QM6+HZAGY)
+- [Oisixのおためしセット（送料無料・1,980円）を試す](https://px.a8.net/svt/ejp?a8mat=4B41ZB+9H5EEQ+3RK+2TWC6P)
+

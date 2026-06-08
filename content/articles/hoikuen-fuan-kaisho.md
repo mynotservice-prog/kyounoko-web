@@ -132,3 +132,10 @@ legacyHero: /hero/parent-child-01.webp
 - [育休復帰の準備](/article/ikukyu-fukuki-junbi)
 - [0歳児育児 完全マップ](/article/0sai-ikuji-kanzen-map)
 - [1〜2歳児育児 完全マップ](/article/1-2sai-ikuji-kanzen-map)
+
+
+## あわせて読みたい：保育園で履かせる子供靴
+
+- [子供靴の選び方完全ガイド 0-6歳](/article/kodomogutsu-erabikata-kanzen-guide-2026)
+- [子供靴 15cm おすすめ8選（2-3歳）](/article/kodomogutsu-15cm-osusume-8sen-2026)
+

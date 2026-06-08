@@ -235,3 +235,10 @@ legacyHero: /hero/classroom-03.webp
 - スタンプは1個でおむつ100枚以上対応
 - 入園シーズン前のセットがコスパ◎
 
+
+
+## あわせて読みたい：保育園で履かせる子供靴
+
+- [子供靴の選び方完全ガイド 0-6歳](/article/kodomogutsu-erabikata-kanzen-guide-2026)
+- [子供靴 15cm おすすめ8選（2-3歳）](/article/kodomogutsu-15cm-osusume-8sen-2026)
+
