@@ -22,6 +22,7 @@ import { spotToV2, articleToV2 } from '@/lib/v2-adapters';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { V2RememberSpot } from '@/components/v2/V2RememberSpot';
 import { V2SaveButton, V2SdHeroFav } from '@/components/v2/V2SaveButton';
+import { getRecommendedItems } from '@/lib/recommended-items';
 
 export const revalidate = 3600;
 
@@ -421,6 +422,64 @@ export default async function SpotPage({ params }: Props) {
             </div>
           </>
         )}
+
+        {/* 持っていくと便利（シーン×アイテム） */}
+        {(() => {
+          const items = getRecommendedItems(spot.category, spot.place, spot.ages, 6);
+          if (items.length === 0) return null;
+          return (
+            <>
+              <div className="v2-sec-head" style={{ marginTop: 22 }}>
+                <div className="v2-sec-title">
+                  <span className="v2-bar-accent"></span>{spot.name}に持っていくと便利
+                </div>
+              </div>
+              <div className="v2-section">
+                <p style={{ fontSize: 12, color: 'var(--v2-ink-mute)', marginTop: 0, marginBottom: 12 }}>
+                  ※楽天市場のリンクです（広告 / PR）。値段や在庫は楽天で確認できます。
+                </p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                  {items.map((item, i) => (
+                    <a
+                      key={i}
+                      href={item.url}
+                      target="_blank"
+                      rel="sponsored nofollow noopener"
+                      style={{
+                        display: 'block',
+                        background: '#fff',
+                        border: '1px solid var(--v2-line)',
+                        borderRadius: 'var(--v2-r-card)',
+                        padding: '14px 16px',
+                        textDecoration: 'none',
+                      }}
+                    >
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6 }}>
+                        <span style={{
+                          width: 22, height: 22, borderRadius: '50%',
+                          background: 'var(--v2-orange-tint)',
+                          display: 'flex', alignItems: 'center', justifyContent: 'center',
+                          flex: 'none', fontSize: 11, fontWeight: 800,
+                          color: 'var(--v2-orange-deep)',
+                        }}>{i + 1}</span>
+                        <span style={{ fontSize: 14, fontWeight: 800, color: 'var(--v2-ink)' }}>
+                          {item.label}
+                        </span>
+                      </div>
+                      <p style={{ fontSize: 12.5, color: 'var(--v2-ink-soft)', lineHeight: 1.6, margin: 0 }}>
+                        {item.why}
+                      </p>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 4, marginTop: 8, fontSize: 12, color: 'var(--v2-orange-deep)', fontWeight: 700 }}>
+                        楽天で見る
+                        <V2Icon name="chevron-right" size={14} color="var(--v2-orange-deep)" />
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </>
+          );
+        })()}
 
         {/* 関連記事 */}
         {relatedArticles.length > 0 && (
