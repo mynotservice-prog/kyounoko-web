@@ -189,6 +189,78 @@ function PreparedBlock({ answer }: { answer: TodayAnswerResult }) {
   );
 }
 
+/**
+ * 今日のプランに応じた「持っていくと便利」推奨アイテム。
+ * /spot/[slug] の getRecommendedItems と同じマスタを共有し、
+ * 結果カードからもアフィリエイト動線を確立する。
+ */
+function TodayRecommendedItems({ answer }: { answer: TodayAnswerResult }) {
+  if (!answer.plan) return null;
+  const p = answer.plan.plan;
+  // 屋外/お出かけ系のときだけ表示（家での過ごし方には不要）
+  if (!p.place.includes('outdoor') && !p.place.includes('indoor')) return null;
+
+  // プランの場所に応じてダミーカテゴリを決める
+  // outdoor → park、indoor → indoor として recommend を呼ぶ
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { getRecommendedItems } = require('@/lib/recommended-items') as typeof import('@/lib/recommended-items');
+  const category = p.place.includes('outdoor') ? 'park' : 'indoor';
+  const place = p.place.includes('outdoor') ? 'outdoor' : 'indoor';
+  const items = getRecommendedItems(category, place, ['0-1', '2-3', '4-6'], 4);
+  if (items.length === 0) return null;
+
+  return (
+    <aside
+      style={{
+        marginTop: 24,
+        padding: '18px 20px',
+        background: 'rgba(247,122,33,0.04)',
+        border: '1px solid rgba(247,122,33,0.2)',
+        borderRadius: 14,
+      }}
+    >
+      <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', color: 'var(--clay-deep, #c9603e)', textTransform: 'uppercase', marginBottom: 4 }}>
+        🎒 持っていくと便利
+      </div>
+      <p style={{ fontSize: 11, color: 'var(--ink-mute, #8E867A)', marginTop: 0, marginBottom: 10 }}>
+        ※楽天市場のリンクです（広告 / PR）
+      </p>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        {items.map((item, i) => (
+          <a
+            key={i}
+            href={item.url}
+            target="_blank"
+            rel="sponsored nofollow noopener"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 10,
+              padding: '10px 12px',
+              background: '#fff',
+              border: '1px solid rgba(0,0,0,0.08)',
+              borderRadius: 8,
+              textDecoration: 'none',
+              fontSize: 13,
+              color: 'var(--ink, #2A2118)',
+            }}
+          >
+            <span style={{
+              width: 20, height: 20, borderRadius: '50%',
+              background: 'rgba(247,122,33,0.15)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              flex: 'none', fontSize: 10, fontWeight: 800,
+              color: '#c9603e',
+            }}>{i + 1}</span>
+            <span style={{ flex: 1, fontWeight: 700 }}>{item.label}</span>
+            <span style={{ fontSize: 11, color: 'var(--clay-deep, #c9603e)', fontWeight: 700 }}>楽天 ›</span>
+          </a>
+        ))}
+      </div>
+    </aside>
+  );
+}
+
 function AnswerCard({ answer, featured = false }: { answer: TodayAnswerResult; featured?: boolean }) {
   const isPlan = answer.kind === 'plan';
   if (featured) {
@@ -224,6 +296,7 @@ function AnswerCard({ answer, featured = false }: { answer: TodayAnswerResult; f
           )}
           <QuickMetaRow answer={answer} />
           <PreparedBlock answer={answer} />
+          <TodayRecommendedItems answer={answer} />
           <Link href={answer.href} className="answer-cta">
             {isPlan ? 'プランの詳細を見る' : '詳細を見る'}
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
