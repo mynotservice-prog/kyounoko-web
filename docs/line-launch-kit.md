@@ -83,7 +83,9 @@ https://kyounoko.jp/today?weather=rain&place=home&utm_source=line&utm_medium=gre
 | 右 | ☔ 雨の日の家あそび | https://kyounoko.jp/today?weather=rain&place=home&utm_source=line&utm_medium=richmenu |
 
 - メニューバーのテキスト: `タップしてメニューを開く ▼`
-- 画像はCanva等で 2500×843px（3分割テンプレの場合。サイズは管理画面の指定に従う）
+- **画像は作成済み**: `docs/line-rich-menu.png`（2500×843px・PNG・約200KB・3分割の境界はちょうど1/3ずつ）
+  - 管理画面でアップロード後、テンプレート「小・3分割」を選び、左/中/右に上表のリンクを割り当てる
+  - 作り直したい場合はCanva等で 2500×843px（サイズは管理画面の指定に従う）
 
 ## 1-3. 友だち追加URL・QRコードの取得場所
 
