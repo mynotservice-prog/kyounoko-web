@@ -40,6 +40,17 @@ export const AFFILIATE_TARGET_SLUGS = [
   'chiiku-asobi-ie-de-10',
   'xmas-present-nenrei-0-6',
   'christmas-present-kodomo-nenrei-betsu',
+  // 2026-06-11 追加：収益重点記事のうちカード未登録だった10本（監査で発覚）
+  'chiiku-omocha-subsc-5sha-hikaku-2026',
+  'kodomochalle-vs-smile-zemi-hikaku',
+  'kyouzai-3sha-popi-challenge-smile-hikaku-2026',
+  'takuhai-shoku-5sha-hikaku-2026',
+  'babycar-erabikata',
+  'kodomogutsu-erabikata-kanzen-guide-2026',
+  'kodomogutsu-15cm-osusume-8sen-2026',
+  'child-seat-shinseiji-osusume-5sen-2026',
+  'junior-seat-2-3sai-hikaku-15',
+  'hoikuen-nyuuen-junbi-0-2sai-kanzen-list',
 ] as const;
 
 export type AffiliateTargetSlug = (typeof AFFILIATE_TARGET_SLUGS)[number];
@@ -253,7 +264,172 @@ const PRODUCTS: AffiliateProduct[] = [
     subtitle: '管理栄養士+医師監修・塩分／糖質など制限食に強い',
     price: '1食 ¥663〜',
   },
+
+  // =======================================================================
+  // 子供靴（選び方ガイド / 15cmおすすめ）— 2026-06-11 追加
+  // 全URL: HTTP200・在庫あり・タイトル一致を検証済み
+  // =======================================================================
+  {
+    id: 'kg-nb-iz996',
+    slug: 'kodomogutsu-erabikata-kanzen-guide-2026',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/abcmartsports/6942330001/',
+    title: 'ニューバランス IZ996（キッズ）',
+    subtitle: '0.5cm刻みのサイズ展開で合わせやすい、迷ったらこれの定番',
+    price: '¥5,800前後',
+  },
+  {
+    id: 'kg-asics-idaho-mini',
+    slug: 'kodomogutsu-erabikata-kanzen-guide-2026',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/asics/ms2246/',
+    title: 'アシックス スクスク アイダホ MINI',
+    subtitle: '甲高・幅広の子に合う日本人の足型設計。かかと補強入り',
+    price: '¥5,000前後',
+  },
+  {
+    id: 'kg-nike-dynamo-free',
+    slug: 'kodomogutsu-erabikata-kanzen-guide-2026',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/reload/n-343738-029/',
+    title: 'ナイキ ダイナモフリー PS',
+    subtitle: '伸びる履き口で「自分で履きたい」期に最適なスリッポン',
+    price: '¥5,400前後',
+  },
+  {
+    id: 'kg-asics-comfy-first',
+    slug: 'kodomogutsu-erabikata-kanzen-guide-2026',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/asics-trading/astd-2425/',
+    title: 'アシックス スクスク コンフィ FIRST MS 3',
+    subtitle: '歩き始め向けファーストシューズ。甲が深く軽量で足首をホールド',
+    price: '¥6,500前後',
+  },
+  {
+    id: 'kg-nb-iz996',
+    slug: 'kodomogutsu-15cm-osusume-8sen-2026',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/abcmartsports/6942330001/',
+    title: 'ニューバランス IZ996（キッズ）',
+    subtitle: '15cm帯で最も支持される定番。0.5cm刻みでジャストサイズを選べる',
+    price: '¥5,800前後',
+  },
+  {
+    id: 'kg-asics-idaho-baby5',
+    slug: 'kodomogutsu-15cm-osusume-8sen-2026',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/auc-tssshop/tub-1144a389-all/',
+    title: 'アシックス スクスク アイダホ BABY 5',
+    subtitle: '甲高・幅広向けの15cm帯現行モデル。中敷きが外せて洗える',
+    price: '¥5,600前後',
+  },
+  {
+    id: 'kg-nike-dynamo-free-td',
+    slug: 'kodomogutsu-15cm-osusume-8sen-2026',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/superfoot/80009090/',
+    title: 'ナイキ ダイナモフリー TD',
+    subtitle: 'ストレッチ履き口で2〜3歳でも自分で履ける。やや小さめ設計',
+    price: '¥5,400前後',
+  },
+  {
+    id: 'kg-moonstar-carrot',
+    slug: 'kodomogutsu-15cm-osusume-8sen-2026',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/yoikutsu/12187407/',
+    title: 'ムーンスター キャロット CR C2394',
+    subtitle: 'かかとをホールドする日本メーカーの幅広設計。抗菌防臭',
+    price: '¥4,950前後',
+  },
+
+  // =======================================================================
+  // チャイルドシート新生児 / ジュニアシート2-3歳 — 2026-06-11 追加
+  // =======================================================================
+  {
+    id: 'cseat-combi-culmove-r129',
+    slug: 'child-seat-shinseiji-osusume-5sen-2026',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/combi/culmove-compact-r129-js/',
+    title: 'コンビ クルムーヴ コンパクト R129 エッグショック JS',
+    subtitle: 'エッグショック搭載・360°回転ISOFIX。新生児から4歳頃まで',
+    price: '¥69,300前後',
+  },
+  {
+    id: 'cseat-cybex-sirona-gi',
+    slug: 'child-seat-shinseiji-osusume-5sen-2026',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/natural-living/u944773/',
+    title: 'サイベックス シローナ Gi i-Size',
+    subtitle: '欧州最新基準R129適合・360°回転のベース一体型。新生児〜4歳',
+    price: '¥71,500前後',
+  },
+  {
+    id: 'cseat-joie-i-arc360',
+    slug: 'child-seat-shinseiji-osusume-5sen-2026',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/katoji/38010/',
+    title: 'ジョイー i-Arc360°（カトージ）',
+    subtitle: 'R129適合・360°回転ISOFIXのコスパ機。新生児から4歳頃まで',
+    price: '¥52,580前後',
+  },
+  {
+    id: 'js-combi-joytrip-advance',
+    slug: 'junior-seat-2-3sai-hikaku-15',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/combi/joytrip-advance-isofix-sa/',
+    title: 'コンビ ジョイトリップ アドバンス ISOFIX',
+    subtitle: '1歳から12歳まで使えるロングユース。R129適合・丸洗いOK',
+    price: '¥39,800前後',
+  },
+  {
+    id: 'js-aprica-formfit-next',
+    slug: 'junior-seat-2-3sai-hikaku-15',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/netbaby/405734/',
+    title: 'アップリカ フォームフィット ネクスト',
+    subtitle: '成長に合わせてフィットするISOFIX。R129適合・150cmまで',
+    price: '¥38,700前後',
+  },
+  {
+    id: 'js-cybex-solution-g2',
+    slug: 'junior-seat-2-3sai-hikaku-15',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/natural-living/u713898/',
+    title: 'サイベックス ソリューション G2',
+    subtitle: 'R129適合・150cmまで使えるISOFIX。通気メッシュ・3年保証',
+    price: '¥29,700前後',
+  },
+  {
+    id: 'js-graco-junior-plus-next',
+    slug: 'junior-seat-2-3sai-hikaku-15',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/natural-living/u937288/',
+    title: 'グレコ ジュニアプラス ネクスト',
+    subtitle: '軽量・1万円以下のハイバック。R129適合・100〜150cm対応',
+    price: '¥9,570前後',
+  },
 ];
+
+// =======================================================================
+// 2026-06-11 追加：既存商品セットを別slugの記事にも表示するための複製。
+// PRODUCTS リテラル直後に実行すること（後段の expand() 分を巻き込まないため）。
+// =======================================================================
+// ベビーカー選び方ガイドにもランキング2026と同じ5商品を表示
+PRODUCTS.push(
+  ...PRODUCTS.filter((p) => p.slug === 'babycar-ranking-2026').map((p) => ({
+    ...p,
+    slug: 'babycar-erabikata' as AffiliateTargetSlug,
+  })),
+);
+// 知育玩具サブスク5社比較にも4社比較と同じサービスカードを表示
+PRODUCTS.push(
+  ...PRODUCTS.filter(
+    (p) => p.slug === 'chiiku-subsc-hikaku-4sha' && p.id.startsWith('cs-'),
+  ).map((p) => ({
+    ...p,
+    slug: 'chiiku-omocha-subsc-5sha-hikaku-2026' as AffiliateTargetSlug,
+  })),
+);
 
 // =======================================================================
 // 2026-05 追加：A8.net 提携プログラム
@@ -299,6 +475,10 @@ const A8_PROGRAMS_2026_05: AffiliateProduct[] = expand([
       'chiiku-asobi-ie-de-10',
       'xmas-present-nenrei-0-6',
       'christmas-present-kodomo-nenrei-betsu',
+      // 2026-06-11 追加：教材比較・サブスク比較の収益重点記事
+      'kodomochalle-vs-smile-zemi-hikaku',
+      'kyouzai-3sha-popi-challenge-smile-hikaku-2026',
+      'chiiku-omocha-subsc-5sha-hikaku-2026',
     ],
   },
   // ---- ② ワンダーボックス（STEAM通信教材 / EPC 28.58） ----
@@ -316,6 +496,7 @@ const A8_PROGRAMS_2026_05: AffiliateProduct[] = expand([
       'eigo-kyouzai-3brand-2-6sai',
       'chiiku-toys-3brand-2-4sai',
       'naraigoto-hajimedoki-kiketsu',
+      'chiiku-omocha-subsc-5sha-hikaku-2026',
     ],
   },
   // ---- ③ モグモ（幼児向け冷凍宅食 / EPC 97.46） ----
@@ -331,6 +512,7 @@ const A8_PROGRAMS_2026_05: AffiliateProduct[] = expand([
       'yojishoku-reitou-tsukurioki',
       'kodomo-obento-reitou-stock-5sen',
       'youjishoku-kanryouki-1week-rota',
+      'takuhai-shoku-5sha-hikaku-2026',
     ],
   },
   // ---- ④ ファーストスプーン（離乳食宅配 / 報酬 15%） ----
@@ -372,6 +554,26 @@ const A8_PROGRAMS_2026_05: AffiliateProduct[] = expand([
       'shussan-junbi-rakuten-0sai',
       'chiiku-toys-3brand-2-4sai',
     ],
+  },
+  // ---- ⑦ Oisix おためしセット（2026-06-11 追加 / docs/a8-affiliate-urls.md 承認済み） ----
+  {
+    id: 'a8-oisix',
+    provider: 'a8',
+    href: 'https://px.a8.net/svt/ejp?a8mat=4B41ZB+9H5EEQ+3RK+2TWC6P',
+    title: 'Oisix（オイシックス）おためしセット',
+    subtitle: '有機・特別栽培野菜とミールキットの宅配。初回おためしセットが大幅割引',
+    price: 'おためしセット ¥1,980前後',
+    slugs: ['takuhai-shoku-5sha-hikaku-2026'],
+  },
+  // ---- ⑧ シールDEネーム（2026-06-11 追加 / 既存9記事に本文リンク配置済みの承認案件） ----
+  {
+    id: 'a8-seal-de-name',
+    provider: 'a8',
+    href: 'https://px.a8.net/svt/ejp?a8mat=4B5Q81+DLEC1E+5V9K+5YRHE',
+    title: 'シールDEネーム（名前シール・名前スタンプ）',
+    subtitle: '入園準備の名前書きをシール・スタンプで時短。耐水でコップ・お弁当箱もOK',
+    price: '¥1,000前後〜',
+    slugs: ['hoikuen-nyuuen-junbi-0-2sai-kanzen-list'],
   },
 ]);
 
@@ -439,6 +641,8 @@ const MOSHIMO_PROGRAMS_2026_05: AffiliateProduct[] = expand([
       'chiiku-asobi-ie-de-10',
       'xmas-present-nenrei-0-6',
       'christmas-present-kodomo-nenrei-betsu',
+      // 2026-06-11 追加
+      'chiiku-omocha-subsc-5sha-hikaku-2026',
     ],
   },
 ]);
