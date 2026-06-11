@@ -8302,5 +8302,85 @@
     "generatedAt": "2026-06-08T01:28:42.274Z",
     "model": "flux-1-schnell",
     "steps": 4
+  },
+  "hikouki-kozure-mochimono": {
+    "slug": "hikouki-kozure-mochimono",
+    "ok": true,
+    "file": "/hero-ai/hikouki-kozure-mochimono.jpg",
+    "generatedAt": "2026-06-09T01:24:19.067Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "doubutsuen-kozure-mochimono": {
+    "slug": "doubutsuen-kozure-mochimono",
+    "ok": true,
+    "file": "/hero-ai/doubutsuen-kozure-mochimono.jpg",
+    "generatedAt": "2026-06-09T01:24:19.099Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kouen-kozure-mochimono": {
+    "slug": "kouen-kozure-mochimono",
+    "ok": true,
+    "file": "/hero-ai/kouen-kozure-mochimono.jpg",
+    "generatedAt": "2026-06-09T01:24:21.704Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kisei-shinkansen-kozure-mochimono": {
+    "slug": "kisei-shinkansen-kozure-mochimono",
+    "ok": true,
+    "file": "/hero-ai/kisei-shinkansen-kozure-mochimono.jpg",
+    "generatedAt": "2026-06-09T01:24:21.728Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "kyanpu-kozure-mochimono": {
+    "slug": "kyanpu-kozure-mochimono",
+    "ok": true,
+    "file": "/hero-ai/kyanpu-kozure-mochimono.jpg",
+    "generatedAt": "2026-06-09T01:24:24.233Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "natsu-mizuasobi-mochimono": {
+    "slug": "natsu-mizuasobi-mochimono",
+    "ok": true,
+    "file": "/hero-ai/natsu-mizuasobi-mochimono.jpg",
+    "generatedAt": "2026-06-09T01:24:24.381Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "shitsunaiasobiba-kozure-mochimono": {
+    "slug": "shitsunaiasobiba-kozure-mochimono",
+    "ok": true,
+    "file": "/hero-ai/shitsunaiasobiba-kozure-mochimono.jpg",
+    "generatedAt": "2026-06-09T01:24:26.741Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "shokuji-gaishoku-kozure-mochimono": {
+    "slug": "shokuji-gaishoku-kozure-mochimono",
+    "ok": true,
+    "file": "/hero-ai/shokuji-gaishoku-kozure-mochimono.jpg",
+    "generatedAt": "2026-06-09T01:24:26.798Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "suizokukan-kozure-mochimono": {
+    "slug": "suizokukan-kozure-mochimono",
+    "ok": true,
+    "file": "/hero-ai/suizokukan-kozure-mochimono.jpg",
+    "generatedAt": "2026-06-09T01:24:29.269Z",
+    "model": "flux-1-schnell",
+    "steps": 4
+  },
+  "tsuyu-hoikuen-soutei-grocery": {
+    "slug": "tsuyu-hoikuen-soutei-grocery",
+    "ok": true,
+    "file": "/hero-ai/tsuyu-hoikuen-soutei-grocery.jpg",
+    "generatedAt": "2026-06-09T01:24:29.764Z",
+    "model": "flux-1-schnell",
+    "steps": 4
   }
 }
