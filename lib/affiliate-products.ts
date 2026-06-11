@@ -51,6 +51,12 @@ export const AFFILIATE_TARGET_SLUGS = [
   'child-seat-shinseiji-osusume-5sen-2026',
   'junior-seat-2-3sai-hikaku-15',
   'hoikuen-nyuuen-junbi-0-2sai-kanzen-list',
+  // 2026-06-11 追加：戦略doc STEP4 の未作成だった収益記事5本（新規執筆）
+  'onamae-seal-7sha-hikaku-2026',
+  'shussan-iwai-futarime-2026',
+  'nekashitsuke-ehon-10sen-2026',
+  'ehon-subsc-hikaku-2026',
+  'toysub-tettei-kaisetsu-2026',
 ] as const;
 
 export type AffiliateTargetSlug = (typeof AFFILIATE_TARGET_SLUGS)[number];
@@ -571,6 +577,7 @@ const A8_PROGRAMS_2026_05: AffiliateProduct[] = expand([
     slugs: [
       'shussan-junbi-rakuten-0sai',
       'chiiku-toys-3brand-2-4sai',
+      'shussan-iwai-futarime-2026',
     ],
   },
   // ---- ⑦ Oisix おためしセット（2026-06-11 追加 / docs/a8-affiliate-urls.md 承認済み） ----
@@ -591,7 +598,10 @@ const A8_PROGRAMS_2026_05: AffiliateProduct[] = expand([
     title: 'シールDEネーム（名前シール・名前スタンプ）',
     subtitle: '入園準備の名前書きをシール・スタンプで時短。耐水でコップ・お弁当箱もOK',
     price: '¥1,000前後〜',
-    slugs: ['hoikuen-nyuuen-junbi-0-2sai-kanzen-list'],
+    slugs: [
+      'hoikuen-nyuuen-junbi-0-2sai-kanzen-list',
+      'onamae-seal-7sha-hikaku-2026',
+    ],
   },
 ]);
 
@@ -610,7 +620,12 @@ const MOSHIMO_PROGRAMS_2026_05: AffiliateProduct[] = expand([
     title: 'WORLDLIBRARY Personal Gift（世界の絵本 定期便ギフト）',
     subtitle: '0歳〜の英語・多言語絵本を毎月。出産祝い・誕生日プレゼントにも',
     price: '月額¥1,300〜（送料込）',
-    slugs: ['ehon-yomikikase-kotsu', 'chiiku-toys-3brand-2-4sai'],
+    slugs: [
+      'ehon-yomikikase-kotsu',
+      'chiiku-toys-3brand-2-4sai',
+      'ehon-subsc-hikaku-2026',
+      'nekashitsuke-ehon-10sen-2026',
+    ],
   },
   // ---- ② Famm（ファミリー向けモデル無料撮影会）1,200円 ----
   {
@@ -661,11 +676,22 @@ const MOSHIMO_PROGRAMS_2026_05: AffiliateProduct[] = expand([
       'christmas-present-kodomo-nenrei-betsu',
       // 2026-06-11 追加
       'chiiku-omocha-subsc-5sha-hikaku-2026',
+      'toysub-tettei-kaisetsu-2026',
     ],
   },
 ]);
 
 PRODUCTS.push(...MOSHIMO_PROGRAMS_2026_05);
+
+// トイサブ解説記事にも本体サービスのカードを表示
+PRODUCTS.push(
+  ...PRODUCTS.filter((p) => p.id === 'cs-toysub' && p.slug === 'chiiku-subsc-hikaku-4sha').map(
+    (p) => ({
+      ...p,
+      slug: 'toysub-tettei-kaisetsu-2026' as AffiliateTargetSlug,
+    }),
+  ),
+);
 
 /**
  * 指定 slug に紐づくアフィリエイト商品を返す。
