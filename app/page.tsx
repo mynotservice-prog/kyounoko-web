@@ -14,6 +14,7 @@ import {
 import { V2Icon, V2_ACCENT } from '@/components/v2/V2Icon';
 import { V2HeroForm } from '@/components/v2/V2HeroForm';
 import { V2RecentSpots } from '@/components/v2/V2RecentSpots';
+import { V2TodayHero } from '@/components/v2/V2TodayHero';
 import { getFileArticlesByCategory } from '@/lib/articles';
 import { eventHeroImage, formatEventPeriod, getThisWeekEvents } from '@/lib/events';
 import { getAllFileArticles } from '@/lib/articles';
@@ -136,6 +137,9 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+
+      {/* 今日のうちの子（天気×月齢のパーソナライズ。localStorageのみで完結） */}
+      <V2TodayHero />
 
       {/* Quick search */}
       <div className="v2-sec-head" style={{ marginTop: 24 }}>

@@ -31,6 +31,12 @@ export type UserSettings = {
   interests?: ChildInterest[];
   /** 簡易アレルギーメモ（食事プランでの注意用） */
   allergyNote?: string;
+  /**
+   * 子どもの生年月 'YYYY-MM'。
+   * 設定すると年齢帯（age）と違い月齢が自動で進むため、
+   * トップの「今日のうちの子」パーソナライズはこちらを優先する。
+   */
+  childBirthMonth?: string;
 };
 
 const DEFAULT_SETTINGS: UserSettings = {
@@ -55,7 +61,11 @@ function readSettings(): UserSettings {
         )
       : undefined;
     const allergyNote = typeof parsed?.allergyNote === 'string' ? parsed.allergyNote : undefined;
-    return { area, age, onboarded, temperament, interests, allergyNote };
+    const childBirthMonth =
+      typeof parsed?.childBirthMonth === 'string' && /^\d{4}-\d{2}$/.test(parsed.childBirthMonth)
+        ? parsed.childBirthMonth
+        : undefined;
+    return { area, age, onboarded, temperament, interests, allergyNote, childBirthMonth };
   } catch {
     return DEFAULT_SETTINGS;
   }
