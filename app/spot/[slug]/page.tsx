@@ -21,6 +21,8 @@ import {
 import { spotToV2, articleToV2 } from '@/lib/v2-adapters';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { V2RememberSpot } from '@/components/v2/V2RememberSpot';
+import { VisitedReport } from '@/components/spot/VisitedReport';
+import { getPublishedSpotReports } from '@/lib/spot-reports';
 import { V2SaveButton, V2SdHeroFav } from '@/components/v2/V2SaveButton';
 import { getRecommendedItems } from '@/lib/recommended-items';
 
@@ -129,6 +131,9 @@ export default async function SpotPage({ params }: Props) {
   const preVisitNotes = buildPreVisitNotes(spot);
 
   const v2Spot = spotToV2(spot);
+
+  // 公開済みの「行ったよ」レポート（MicroCMS未設定時は常に空配列）
+  const visitorReports = await getPublishedSpotReports(slug);
 
   return (
     <>
@@ -504,6 +509,38 @@ export default async function SpotPage({ params }: Props) {
             </div>
           </>
         )}
+
+        {/* 行ったよレポート（公開分の表示＋報告フォーム） */}
+        {visitorReports.length > 0 && (
+          <>
+            <V2SectionHead title="みんなの「行ったよ」" more="" />
+            <div className="v2-section">
+              {visitorReports.map((r, i) => (
+                <div
+                  key={i}
+                  style={{
+                    padding: '10px 12px',
+                    borderBottom: i < visitorReports.length - 1 ? '1px solid #f3ece2' : 'none',
+                    fontSize: 13.5,
+                  }}
+                >
+                  <span aria-label={`星${r.rating}`}>
+                    {'⭐'.repeat(r.rating)}
+                  </span>
+                  {r.ageRange && (
+                    <span style={{ marginLeft: 8, fontSize: 12, color: '#8a7d6e' }}>
+                      {AGE_LABEL[r.ageRange] ?? r.ageRange}の子と
+                    </span>
+                  )}
+                  {r.comment && (
+                    <p style={{ margin: '4px 0 0', color: '#5d5246' }}>「{r.comment}」</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+        <VisitedReport slug={slug} name={spot.name} />
 
         {/* 保存ボタン */}
         <V2SaveButton id={slug} />

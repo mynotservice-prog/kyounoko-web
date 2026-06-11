@@ -142,7 +142,14 @@ const ctaStyle: React.CSSProperties = {
   textDecoration: 'none',
 };
 
-export function V2TodayHero() {
+export type AgePick = { slug: string; title: string };
+
+export function V2TodayHero({
+  agePicks,
+}: {
+  /** 年齢帯ごとの記事候補。設定済みユーザーに月替わりで3本ローテ表示する。 */
+  agePicks?: Partial<Record<ChildAge, AgePick[]>>;
+}) {
   const [settings, update] = useUserSettings();
   const [mounted, setMounted] = React.useState(false);
   const [editing, setEditing] = React.useState(false);
@@ -315,6 +322,40 @@ export function V2TodayHero() {
           {areaName}のスポット
         </Link>
       </div>
+      {(() => {
+        // 月替わりローテーション: 同じ月は同じ3本（「今月のヒント」として安定表示）
+        const pool = agePicks?.[ageRange] ?? [];
+        if (pool.length === 0) return null;
+        const now = new Date();
+        const monthIdx = now.getFullYear() * 12 + now.getMonth();
+        const start = (monthIdx * 3) % pool.length;
+        const picks = [0, 1, 2]
+          .map((i) => pool[(start + i) % pool.length])
+          .filter((p, i, arr) => arr.findIndex((x) => x.slug === p.slug) === i);
+        return (
+          <div style={{ marginTop: 14, borderTop: '1px dashed #efe5d6', paddingTop: 10 }}>
+            <div style={{ fontSize: 12.5, fontWeight: 700, color: '#8a7d6e', marginBottom: 6 }}>
+              {ageLabel(months)}の今月のヒント
+            </div>
+            {picks.map((p) => (
+              <Link
+                key={p.slug}
+                href={`/article/${p.slug}`}
+                onClick={() => click('age-pick')}
+                style={{
+                  display: 'block',
+                  fontSize: 13.5,
+                  color: '#7a4a12',
+                  padding: '5px 0',
+                  textDecoration: 'none',
+                }}
+              >
+                ・{p.title}
+              </Link>
+            ))}
+          </div>
+        );
+      })()}
       <div style={{ marginTop: 10, textAlign: 'right' }}>
         <button
           type="button"

@@ -37,6 +37,7 @@ import { PersonalizedHint } from '@/components/common/PersonalizedHint';
 import { AgeMonthCalculator } from '@/components/interactive/AgeMonthCalculator';
 import { BabyCarRouteEstimator } from '@/components/interactive/BabyCarRouteEstimator';
 import { NaptimeFitFinder } from '@/components/interactive/NaptimeFitFinder';
+import { LineCta } from '@/components/common/LineCta';
 
 // パーソナライズ枠を出すカテゴリ（今日の◯◯系のみ）
 const PERSONALIZED_HINT_CATEGORIES = new Set(['today-doko', 'today-nani', 'today-taberu']);
@@ -1315,6 +1316,9 @@ function FileArticleView({ article }: { article: FileArticle }) {
               </div>
             </section>
           )}
+
+          {/* LINE友だち追加CTA（env未設定時は非表示） */}
+          <LineCta variant="article" />
         </div>
 
         {/* Desktop TOC sidebar */}

@@ -15,6 +15,7 @@ import { V2Icon, V2_ACCENT } from '@/components/v2/V2Icon';
 import { V2HeroForm } from '@/components/v2/V2HeroForm';
 import { V2RecentSpots } from '@/components/v2/V2RecentSpots';
 import { V2TodayHero } from '@/components/v2/V2TodayHero';
+import { LineCta } from '@/components/common/LineCta';
 import { getFileArticlesByCategory } from '@/lib/articles';
 import { eventHeroImage, formatEventPeriod, getThisWeekEvents } from '@/lib/events';
 import { getAllFileArticles } from '@/lib/articles';
@@ -84,6 +85,18 @@ export default function HomePage() {
     _slug: x.slug, // 正規 slug（spotToSlug で生成された URL-safe な値）
   }));
 
+  // 月齢ヒント用: 年齢帯ごとの記事候補（タイトル＋slugだけクライアントに渡す）。
+  // V2TodayHero が登録済みの生まれ月に応じて月替わりで3本ローテ表示する。
+  const agePicks = Object.fromEntries(
+    (['0-1', '2-3', '4-6'] as const).map((range) => [
+      range,
+      allArticles
+        .filter((a) => !a.noindex && (a.quickInfo?.ageRanges ?? []).includes(range))
+        .slice(0, 24)
+        .map((a) => ({ slug: a.slug, title: a.title })),
+    ]),
+  );
+
   const featureCards = FEATURE_PAGES.slice(0, 4).map(featureToV2);
   const popularArticleCards = popularArticles.slice(0, 3).map(articleToV2);
   const latestArticleCards = latestArticles.slice(0, 6).map(articleToV2);
@@ -139,7 +152,10 @@ export default function HomePage() {
       </div>
 
       {/* 今日のうちの子（天気×月齢のパーソナライズ。localStorageのみで完結） */}
-      <V2TodayHero />
+      <V2TodayHero agePicks={agePicks} />
+
+      {/* LINE友だち追加CTA（env未設定時は非表示） */}
+      <LineCta variant="banner" />
 
       {/* Quick search */}
       <div className="v2-sec-head" style={{ marginTop: 24 }}>
