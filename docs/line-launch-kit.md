@@ -74,18 +74,26 @@ https://kyounoko.jp/today?weather=rain&place=home&utm_source=line&utm_medium=gre
 
 ### リッチメニュー（トーク画面下部の固定メニュー）
 
-設定場所: 管理画面「ホーム > トークルーム管理 > リッチメニュー」。テンプレート「大」の6分割 or 「小」の3分割。まずは3分割で十分。
+設定場所: 管理画面「ホーム > トークルーム管理 > リッチメニュー」。
+
+**推奨: テンプレート「大」の6分割**（保存した記事＋収益ページ /items への導線を確保できる）
 
 | 位置 | ラベル | リンク先 |
 |---|---|---|
-| 左 | ☀️ 今日どうする？ | https://kyounoko.jp/today?utm_source=line&utm_medium=richmenu |
-| 中 | 📍 スポットを探す | https://kyounoko.jp/spots?utm_source=line&utm_medium=richmenu |
-| 右 | ☔ 雨の日の家あそび | https://kyounoko.jp/today?weather=rain&place=home&utm_source=line&utm_medium=richmenu |
+| 上段左 | ☀️ 今日どうする？ | https://kyounoko.jp/today?utm_source=line&utm_medium=richmenu |
+| 上段中 | 📍 スポットを探す | https://kyounoko.jp/spots?utm_source=line&utm_medium=richmenu |
+| 上段右 | ☔ 雨の日の家あそび | https://kyounoko.jp/today?weather=rain&place=home&utm_source=line&utm_medium=richmenu |
+| 下段左 | 🔖 保存した記事 | https://kyounoko.jp/favorites?utm_source=line&utm_medium=richmenu |
+| 下段中 | 🎪 今月のイベント | https://kyounoko.jp/events?utm_source=line&utm_medium=richmenu |
+| 下段右 | 🧸 役立つもの | https://kyounoko.jp/items?utm_source=line&utm_medium=richmenu |
 
 - メニューバーのテキスト: `タップしてメニューを開く ▼`
-- **画像は作成済み**: `docs/line-rich-menu.png`（2500×843px・PNG・約200KB・3分割の境界はちょうど1/3ずつ）
-  - 管理画面でアップロード後、テンプレート「小・3分割」を選び、左/中/右に上表のリンクを割り当てる
-  - 作り直したい場合はCanva等で 2500×843px（サイズは管理画面の指定に従う）
+- **画像は作成済み**:
+  - 6分割（推奨）: `docs/line-rich-menu-large.png`（2500×1686px・PNG・約390KB）
+  - 3分割（控え）: `docs/line-rich-menu.png`（2500×843px・PNG・約200KB）
+- 管理画面でアップロード後、対応するテンプレートを選び、各セルに上表のリンクを割り当てる
+- メモ: 「保存した記事」はLINEアプリ内ブラウザのlocalStorageを使うため、Safari等で保存した分は
+  LINE経由では見えない（逆も同様）。LINEを入口に使う習慣がつくほど溜まって便利になる仕様。
 
 ## 1-3. 友だち追加URL・QRコードの取得場所
 
