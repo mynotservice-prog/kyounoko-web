@@ -13,7 +13,12 @@
 // 2026-06-06: V2 全面適用後、過去PWA訪問者のブラウザで旧HTMLキャッシュが残り
 // 「探す」「イベント」等のページが旧デザインに見える問題を解消。
 // バージョンを上げると各クライアントで activate イベントが走り旧キャッシュが消える。
-const CACHE_VERSION = 'v4-2026-06-06-v2-renewal';
+// 2026-06-12: 重大修正 — /_next/ のJS/CSSまでSWでcache-firstしていたため、
+// デプロイ跨ぎで「新HTML×古チャンク」のズレが発生し、リピーターのブラウザで
+// Reactがハイドレーションせず全クライアント機能（保存・行ったよ・今日のうちの子・
+// 検索フォーム）が無反応になる問題を修正。/_next/ はファイル名ハッシュ＋immutableな
+// HTTPキャッシュを持つためSWは関与しない。
+const CACHE_VERSION = 'v5-2026-06-12-deploy-skew-fix';
 const RUNTIME_CACHE = `kyounoko-runtime-${CACHE_VERSION}`;
 const STATIC_CACHE = `kyounoko-static-${CACHE_VERSION}`;
 
@@ -55,7 +60,12 @@ self.addEventListener('fetch', (event) => {
   // 同一オリジンのみ扱う
   if (url.origin !== self.location.origin) return;
 
-  // 静的アセット (画像・CSS・JS・フォント・icons)
+  // Next.js のビルド成果物（/_next/）はSWで扱わない（ブラウザのHTTPキャッシュに任せる）。
+  // SWでcache-firstするとデプロイ跨ぎで新HTML×古チャンクのズレが起き、
+  // ハイドレーション不全でクライアント機能がすべて沈黙するため。
+  if (url.pathname.startsWith('/_next/')) return;
+
+  // 静的アセット (画像・フォント・icons ※アプリJS/CSSは上で除外済み)
   if (
     /\.(?:png|webp|jpg|jpeg|svg|ico|css|js|woff2?|ttf)$/.test(url.pathname) ||
     url.pathname.startsWith('/icons/') ||
