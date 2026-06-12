@@ -91,7 +91,8 @@ export const KK_POOL_SIZE = 45;
 export function kkHero(seed: string): string {
   const h = hashName(seed);
   const n = (h % KK_POOL_SIZE) + 1;
-  return `/v2/articles/kk-${String(n).padStart(2, '0')}.webp`;
+  // 2026-06-12: CDN(Cloudflare)の7日キャッシュに旧不良画像が残るため /img/kk/ へ移設
+  return `/img/kk/kk-${String(n).padStart(2, '0')}.webp`;
 }
 /**
  * カテゴリ → 支給E系（スポットカテゴリ別の代表写真）。

@@ -11,12 +11,12 @@ const CATEGORIES = [
 
 const KK_PRESETS = Array.from({ length: 45 }, (_, i) => `/v2/articles/kk-${String(i + 1).padStart(2, '0')}.webp`);
 const D_PRESETS = [
-  '/v2/events/show-character.webp',
+  '/v2/events/show-character-v2.webp',
   '/v2/events/show-museum.webp',
   '/v2/events/workshop-craft.webp',
   '/v2/events/market-outdoor.webp',
   '/v2/events/rhythmic-class.webp',
-  '/v2/events/seasonal-summer.webp',
+  '/v2/events/seasonal-summer-v2.webp',
   '/v2/events/seasonal-winter.webp',
 ];
 const HERO_PRESETS = [...D_PRESETS, ...KK_PRESETS];

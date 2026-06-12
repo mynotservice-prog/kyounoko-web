@@ -1566,15 +1566,15 @@ export function kidFriendliness(e: EventEntry): { mark: '◎' | '○' | '△'; l
 
 /** カテゴリ → 支給 D系 ヒーロー画像（hero未指定時のフォールバック用）。 */
 const CATEGORY_HERO: Record<EventCategory, string> = {
-  show:         '/v2/events/show-character.webp',
+  show:         '/v2/events/show-character-v2.webp',
   workshop:     '/v2/events/workshop-craft.webp',
   market:       '/v2/events/market-outdoor.webp',
   rhythm:       '/v2/events/rhythmic-class.webp',
   rinyushoku:   '/v2/events/rhythmic-class.webp',
   reading:      '/v2/events/workshop-craft.webp',
-  matsuri:      '/v2/events/seasonal-summer.webp',
+  matsuri:      '/v2/events/seasonal-summer-v2.webp',
   illumination: '/v2/events/seasonal-winter.webp',
-  seasonal:     '/v2/events/seasonal-summer.webp',
+  seasonal:     '/v2/events/seasonal-summer-v2.webp',
   sport:        '/v2/events/market-outdoor.webp',
   other:        '/v2/events/show-museum.webp',
 };
@@ -1609,7 +1609,7 @@ export function eventHeroImage(e: EventEntry): string {
   // ユーザー支給の高品質画像45枚から slugハッシュで決定的に選択
   const h = hashEventSlug(e.slug);
   const n = (h % 45) + 1;
-  return `/v2/articles/kk-${String(n).padStart(2, '0')}.webp`;
+  return `/img/kk/kk-${String(n).padStart(2, '0')}.webp`;
 }
 
 /** ハッシュ計算（lib/v2-adapters.ts の hashName と同等） */

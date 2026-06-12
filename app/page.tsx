@@ -114,7 +114,7 @@ export default function HomePage() {
       {/* Hero — 2回目デザイン：写真フル背景に左上のコピー＋検索フォーム */}
       <div className="v2-hero-ov">
         {/*
-          PC: /v2/hero/top-main.webp (1920×1080)
+          PC: /v2/hero/top-main-v2.webp (1920×1080)
           SP: /v2/hero/top-mobile-portrait.webp (1080×1920)
           ※ファイル未配置時は picsum にフォールバック（V2Img の onError）
         */}
@@ -125,10 +125,10 @@ export default function HomePage() {
           />
           <source
             media="(min-width: 601px)"
-            srcSet="/v2/hero/top-main.webp"
+            srcSet="/v2/hero/top-main-v2.webp"
           />
           <V2Img
-            src="/v2/hero/top-main.webp"
+            src="/v2/hero/top-main-v2.webp"
             seed="hero-family"
             alt="親子でおでかけ"
             className="v2-hero-ov-bg"
