@@ -80,7 +80,7 @@ https://kyounoko.jp/today?weather=rain&place=home&utm_source=line&utm_medium=gre
 
 | 位置 | ラベル | リンク先 |
 |---|---|---|
-| 上段左 | ☀️ 今日どうする？ | https://kyounoko.jp/today?utm_source=line&utm_medium=richmenu |
+| 上段左 | ☀️ 今日どうする？ | https://kyounoko.jp/?utm_source=line&utm_medium=richmenu |
 | 上段中 | 📍 スポットを探す | https://kyounoko.jp/spots?utm_source=line&utm_medium=richmenu |
 | 上段右 | ☔ 雨の日の家あそび | https://kyounoko.jp/today?weather=rain&place=home&utm_source=line&utm_medium=richmenu |
 | 下段左 | 🔖 保存した記事 | https://kyounoko.jp/favorites?utm_source=line&utm_medium=richmenu |
@@ -94,6 +94,8 @@ https://kyounoko.jp/today?weather=rain&place=home&utm_source=line&utm_medium=gre
 - 管理画面でアップロード後、対応するテンプレートを選び、各セルに上表のリンクを割り当てる
 - メモ: 「保存した記事」はLINEアプリ内ブラウザのlocalStorageを使うため、Safari等で保存した分は
   LINE経由では見えない（逆も同様）。LINEを入口に使う習慣がつくほど溜まって便利になる仕様。
+- メモ: 「今日どうする？」のリンク先は /today 直リンクだと条件未選択の空状態になるため、
+  トップページ（「今日のうちの子」が天気×月齢で即答するブロックが先頭にある）に変更済み（2026-06-12）。
 
 ## 1-3. 友だち追加URL・QRコードの取得場所
 
