@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kodomo-renji-mushipan-3pattern-oyatsu.jpg
+hero: /img/scenes/meal-27.webp
 area: all
 quickInfo:
   ageRanges:

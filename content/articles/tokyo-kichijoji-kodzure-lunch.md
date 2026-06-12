@@ -8,7 +8,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-04-20'
 updatedAt: '2026-06-03'
-hero: /hero-ai/tokyo-kichijoji-kodzure-lunch.jpg
+hero: /img/scenes/meal-26.webp
 lede: 吉祥寺は子連れに人気の街。**アトレ吉祥寺・キラリナ・コピス吉祥寺**の駅ビル中心に、井の頭公園帰りに使えるランチ10店を条件別にまとめました。
 quickInfo:
   ageRanges:

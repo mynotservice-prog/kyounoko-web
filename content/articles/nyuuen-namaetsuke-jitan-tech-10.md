@@ -7,7 +7,7 @@ publishedAt: '2026-05-12'
 updatedAt: '2026-06-03'
 category: yakudatsu
 categoryName: 役立つもの
-hero: /hero-ai/nyuuen-namaetsuke-jitan-tech-10.jpg
+hero: /img/scenes/nursery-02.webp
 quickInfo:
   ageRanges:
     - 0-1

@@ -4,7 +4,7 @@ slug: kouen-debyu-nankagetsu
 title: 公園デビュー何ヶ月から？月齢別の遊具とママ友対策5つ
 category: today-doko
 categoryName: 今日どこ行く
-hero: /hero-ai/kouen-debyu-nankagetsu.jpg
+hero: /img/scenes/park-11.webp
 metaDescription: >-
   公園デビューは生後3ヶ月から？1歳の本格遊具デビューまで、月齢別の遊具と注意点を整理。先輩ママの典型例、ママ友トラブルを避ける5つの立ち回り、持ち物リストまで3分で確認できます。
 publishedAt: 2026-05-02T00:00:00.000Z

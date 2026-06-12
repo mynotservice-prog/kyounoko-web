@@ -6,7 +6,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-07'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kodomo-pool-keiken-debut.jpg
+hero: /img/scenes/pool-water-18.webp
 lede: スイミングは子供の習い事ランキング上位の定番。3〜6歳でデビューする子の時期選び・教室選び・準備物・初回の心得を、月謝相場や送迎事情まで含めて整理します。
 quickInfo:
   ageRanges:

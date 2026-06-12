@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/eiyou-bento-hoikuen-1week.jpg
+hero: /img/scenes/bento-01.webp
 lede: 保育園のお弁当週、朝のバタバタで毎日ワンパターンに…そんな時に役立つ1週間5日分のメニュー案と、買い物・前日準備のテンプレートを公開します。
 quickInfo:
   ageRanges:

@@ -13,7 +13,7 @@ quickInfo:
   ageRanges:
     - 0-1
     - 2-3
-hero: /hero-ai/dakkohimo-3brand-7koumoku-2026.jpg
+hero: /img/scenes/stroller-06.webp
 ---
 
 ## TL;DR(先に知りたい人へ)

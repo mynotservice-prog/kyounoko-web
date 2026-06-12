@@ -20,7 +20,7 @@ quickInfo:
   durationMin: 480
   budget: high
 area: all
-hero: /hero-ai/kodomo-camp-debut-0-2sai-souviru.jpg
+hero: /img/scenes/camp-02.webp
 ---
 
 ## TL;DR（先に知りたい人へ）

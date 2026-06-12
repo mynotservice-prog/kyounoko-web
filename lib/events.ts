@@ -1591,7 +1591,7 @@ const CATEGORY_HERO: Record<EventCategory, string> = {
  * 管理画面で画像差し替えを実装する場合は、microCMS や Vercel KV に画像URL を
  * 保存し、このロジックの先頭で「DB値があれば優先」とすればよい。
  */
-const TRUSTED_HERO_PREFIXES = ['/v2/events/', '/v2/articles/', '/v2/spots/', '/photos/'];
+const TRUSTED_HERO_PREFIXES = ['/v2/events/', '/v2/articles/', '/v2/spots/', '/photos/', '/img/scenes/'];
 export function eventHeroImage(e: EventEntry): string {
   // 1) /admin/event-images 経由の上書き（lib/event-overrides.json）が最優先
   // 動的import で循環依存を避ける

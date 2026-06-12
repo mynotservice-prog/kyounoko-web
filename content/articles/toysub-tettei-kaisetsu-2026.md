@@ -7,7 +7,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-06-11'
 updatedAt: '2026-06-11'
-hero: /hero-ai/chiiku-subsc-hikaku-4sha.jpg
+hero: /img/scenes/toy-03.webp
 area: all
 quickInfo:
   ageRanges:

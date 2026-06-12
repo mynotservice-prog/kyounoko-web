@@ -14,7 +14,7 @@ quickInfo:
     - 0-1
     - 2-3
     - 4-6
-hero: /hero-ai/child-seat-0-7sai-5brand.jpg
+hero: /img/scenes/car-03.webp
 ---
 
 ## TL;DR(先に知りたい人へ)

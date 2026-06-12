@@ -65,3 +65,6 @@ public/hero/*.png
 
 # V2リニューアル用：参照画像コンタクトシート（重い・開発側のみ使用）
 docs/_image-sheets/
+
+# ChatGPT生成画像の元PNG（375MB）。webp変換済みのものだけ public/img/scenes/ にコミットする
+public/new_image/

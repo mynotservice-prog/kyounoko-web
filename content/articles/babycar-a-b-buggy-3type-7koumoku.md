@@ -14,7 +14,7 @@ quickInfo:
     - 0-1
     - 2-3
     - 4-6
-hero: /hero-ai/babycar-a-b-buggy-3type-7koumoku.jpg
+hero: /img/scenes/stroller-04.webp
 ---
 
 ## TL;DR(先に知りたい人へ)

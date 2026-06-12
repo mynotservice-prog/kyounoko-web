@@ -7,7 +7,7 @@ publishedAt: '2026-05-12'
 updatedAt: '2026-06-03'
 category: today-mawasu
 categoryName: 今日どう回す？
-hero: /hero-ai/tsuyu-1-2sai-ie-asobi-30.jpg
+hero: /img/scenes/rain-03.webp
 quickInfo:
   ageRanges:
     - 0-1

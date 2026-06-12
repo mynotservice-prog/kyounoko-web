@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: 2026-04-17T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /hero-ai/hoikuen-kaeri-15min.jpg
+hero: /img/scenes/nursery-04.webp
 area: all
 quickInfo:
   ageRanges:

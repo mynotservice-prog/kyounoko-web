@@ -7,7 +7,7 @@ publishedAt: '2026-05-12'
 updatedAt: '2026-06-03'
 category: today-doko
 categoryName: 今日どこ行く
-hero: /hero-ai/kanto-doubutsuen-1sai-kara-ranking.jpg
+hero: /img/scenes/zoo-04.webp
 quickInfo:
   ageRanges:
     - 0-1

@@ -7,7 +7,7 @@ category: today-nani
 categoryName: 今日なにする
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-05-30'
-hero: /hero-ai/kami-ehon-vs-denshi-ehon.jpg
+hero: /img/scenes/book-03.webp
 area: all
 quickInfo:
   ageRanges:

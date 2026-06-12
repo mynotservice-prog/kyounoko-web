@@ -13,7 +13,7 @@ quickInfo:
   ageRanges:
     - 2-3
     - 4-6
-hero: /hero-ai/chiiku-toys-3brand-2-4sai.jpg
+hero: /img/scenes/toy-03.webp
 ---
 
 ## TL;DR(先に知りたい人へ)

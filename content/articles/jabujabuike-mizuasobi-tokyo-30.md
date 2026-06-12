@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-17'
 updatedAt: '2026-06-03'
-hero: /hero-ai/jabujabuike-mizuasobi-tokyo-30.jpg
+hero: /img/scenes/pool-water-11.webp
 lede: >-
   「無料で水遊びできるじゃぶじゃぶ池ってどこ？」を1記事で解決。**入園料0円・水着不要・水深10〜30cmの浅瀬**で0-6歳がのびのび遊べる東京+近郊30箇所を、開放期間・水深・トイレ・着替えスペースつきで完全マップ化。猛暑日のお出かけ鉄板コースを保存版でまとめました。
 quickInfo:

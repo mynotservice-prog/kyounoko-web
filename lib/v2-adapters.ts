@@ -110,6 +110,31 @@ const CATEGORY_HERO_E: Record<string, string> = {
   restaurant: '/v2/spot-categories/indoor-playground.webp',
 };
 
+/** /img/scenes/<scene>-NN.webp の連番プールを生成（2026-06 新シーン画像） */
+function scenePool(scene: string, count: number): string[] {
+  return Array.from(
+    { length: count },
+    (_, i) => `/img/scenes/${scene}-${String(i + 1).padStart(2, '0')}.webp`,
+  );
+}
+
+/**
+ * スポットカテゴリ → シーン画像プール（2026-06-12 追加）。
+ * 188枚の新シーン画像をカテゴリごとに割り当て、ハッシュで決定的に選ぶ。
+ * 旧来の「カテゴリ代表1枚（CATEGORY_HERO_E）」より繰り返し感が大幅に減る。
+ */
+const SCENE_POOLS_BY_CAT: Record<string, string[]> = {
+  zoo: scenePool('zoo', 5),
+  aquarium: scenePool('aquarium', 4),
+  park: scenePool('park', 16),
+  museum: scenePool('indoor-play', 6),
+  amusement: [...scenePool('indoor-play', 6), ...scenePool('park', 16)],
+  indoor: scenePool('indoor-play', 6),
+  farm: [...scenePool('zoo', 5), ...scenePool('park', 16)],
+  seasonal: [...scenePool('pool-water', 20), ...scenePool('seasonal', 4)],
+  restaurant: scenePool('meal', 40),
+};
+
 /** カテゴリと spot.name から hero 画像パスを決定的に選ぶ */
 function pickHero(category: string, name: string): string {
   // 1) キーワード一致で施設固有画像があればそれを優先
@@ -121,9 +146,10 @@ function pickHero(category: string, name: string): string {
   if (h % 3 === 0) {
     return kkHero(name);
   }
-  // 3) ハッシュで偶数なら支給 E 系（カテゴリ別代表写真）
-  if ((h & 1) === 0 && CATEGORY_HERO_E[category]) {
-    return CATEGORY_HERO_E[category];
+  // 3) 新シーン画像プールからハッシュで決定的に選択（2026-06-12〜）
+  const sp = SCENE_POOLS_BY_CAT[category];
+  if (sp?.length) {
+    return sp[h % sp.length];
   }
   // 4) カテゴリベースのプールからハッシュで決定的に選択（既存 hero-ai プール）
   const pools = HERO_POOLS_BY_CAT[category] || ['cat-family', 'cat-outdoor'];

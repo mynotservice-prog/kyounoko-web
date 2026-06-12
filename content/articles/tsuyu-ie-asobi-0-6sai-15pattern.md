@@ -7,7 +7,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-05-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/tsuyu-ie-asobi-0-6sai-15pattern.jpg
+hero: /img/scenes/rain-03.webp
 quickInfo:
   ageRanges:
     - 0-1

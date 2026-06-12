@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-08'
 updatedAt: '2026-06-03'
-hero: /hero-ai/tokyo-park-ranking-mom50-vote.jpg
+hero: /img/scenes/park-05.webp
 area: tokyo
 quickInfo:
   ageRanges:

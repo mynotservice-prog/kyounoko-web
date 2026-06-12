@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-06-06'
-hero: /hero-ai/mizuasobi-yokohama.jpg
+hero: /img/scenes/pool-water-20.webp
 area: kanagawa
 quickInfo:
   ageRanges:

@@ -20,7 +20,7 @@ quickInfo:
   durationMin: 300
   budget: mid
 area: all
-hero: /hero-ai/kodzure-bbq-mochimono-0-4sai.jpg
+hero: /img/scenes/camp-03.webp
 ---
 
 ## TL;DR（先に知りたい人へ）

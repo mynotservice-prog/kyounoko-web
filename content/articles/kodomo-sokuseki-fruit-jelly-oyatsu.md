@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kodomo-sokuseki-fruit-jelly-oyatsu.jpg
+hero: /img/scenes/meal-03.webp
 area: all
 quickInfo:
   ageRanges:

@@ -7,7 +7,7 @@ category: yakudatsu
 categoryName: 役立つ
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-06-06'
-hero: /hero-ai/ninka-vs-ninkagai-hoikuen.jpg
+hero: /img/scenes/nursery-03.webp
 area: all
 quickInfo:
   ageRanges:

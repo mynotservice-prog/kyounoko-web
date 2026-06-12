@@ -1,1 +1,29 @@
-{}
+{
+  "sumida-river-fireworks-2026": {
+    "hero": "/img/scenes/seasonal-02.webp"
+  },
+  "mitama-matsuri-yasukuni": {
+    "hero": "/img/scenes/seasonal-03.webp"
+  },
+  "kasai-aquarium-mizukake": {
+    "hero": "/img/scenes/aquarium-01.webp"
+  },
+  "sumida-aquarium-jellyfish": {
+    "hero": "/img/scenes/aquarium-03.webp"
+  },
+  "tobu-zoo-summer-pool": {
+    "hero": "/img/scenes/pool-water-03.webp"
+  },
+  "yokohama-zoo-yumi-summer": {
+    "hero": "/img/scenes/zoo-02.webp"
+  },
+  "tokyo-dome-asobono-summer": {
+    "hero": "/img/scenes/indoor-play-02.webp"
+  },
+  "mizumoto-park-aji-festival": {
+    "hero": "/img/scenes/park-03.webp"
+  },
+  "ibaraki-kasumi-aji-festival": {
+    "hero": "/img/scenes/park-09.webp"
+  }
+}

@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: 2026-04-17T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /hero-ai/yojishoku-reitou-tsukurioki.jpg
+hero: /img/scenes/cooking-02.webp
 area: all
 quickInfo:
   ageRanges:

@@ -7,7 +7,7 @@ category: narai
 categoryName: 習いごと
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/chiiku-toys-2-3sai-5sen.jpg
+hero: /img/scenes/toy-02.webp
 lede: 2〜3歳は脳の発達が急速に進む時期。発達段階に合わせた知育玩具5選と、長く使える選び方のコツ、予算別おすすめを体験談付きで紹介します。
 quickInfo:
   ageRanges:

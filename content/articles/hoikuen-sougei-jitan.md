@@ -6,7 +6,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-04-18T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /hero-ai/hoikuen-sougei-jitan.jpg
+hero: /img/scenes/nursery-04.webp
 area: all
 quickInfo:
   ageRanges:

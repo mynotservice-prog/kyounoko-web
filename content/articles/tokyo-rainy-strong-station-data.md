@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-08'
 updatedAt: '2026-06-03'
-hero: /hero-ai/tokyo-rainy-strong-station-data.jpg
+hero: /img/scenes/rain-01.webp
 lede: >-
   雨の日に小さな子を連れて外食――心が折れる経験ありませんか？きょうのこ独自集計から**地下街・モール直結率が高い駅TOP15**を抽出。雨でも濡れずに子連れOK店に到達できる独自データ記事です。
 quickInfo:

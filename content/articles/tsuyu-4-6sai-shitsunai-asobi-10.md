@@ -7,7 +7,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-05-05'
 updatedAt: '2026-06-03'
-hero: /hero-ai/tsuyu-4-6sai-shitsunai-asobi-10.jpg
+hero: /img/scenes/rain-01.webp
 quickInfo:
   ageRanges:
     - 4-6

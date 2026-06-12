@@ -7,7 +7,7 @@ publishedAt: '2026-05-12'
 updatedAt: '2026-06-03'
 category: today-mawasu
 categoryName: 今日どう回す？
-hero: /hero-ai/3sai-hiragana-yomenai-ouchi-gakushuu.jpg
+hero: /img/scenes/home-play-07.webp
 quickInfo:
   ageRanges:
     - 2-3

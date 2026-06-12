@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-05-30'
-hero: /hero-ai/hakone-stroller.jpg
+hero: /img/scenes/stroller-05.webp
 area: kanto
 quickInfo:
   ageRanges:

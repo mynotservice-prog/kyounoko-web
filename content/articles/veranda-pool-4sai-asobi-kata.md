@@ -20,7 +20,7 @@ quickInfo:
   durationMin: 60
   budget: low
 area: all
-hero: /hero-ai/veranda-pool-4sai-asobi-kata.jpg
+hero: /img/scenes/pool-water-10.webp
 ---
 
 ## TL;DR（先に知りたい人へ）

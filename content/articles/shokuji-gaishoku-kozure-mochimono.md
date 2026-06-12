@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-06-08'
 updatedAt: '2026-06-11'
-hero: /hero-ai/shokuji-gaishoku-kozure-mochimono.jpg
+hero: /img/scenes/meal-09.webp
 area: all
 quickInfo:
   ageRanges:

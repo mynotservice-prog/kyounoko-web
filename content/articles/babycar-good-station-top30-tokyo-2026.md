@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-08'
 updatedAt: '2026-06-03'
-hero: /hero-ai/babycar-good-station-top30-tokyo-2026.jpg
+hero: /img/scenes/stroller-06.webp
 lede: >-
   「ベビーカーで入れる店を探すのに毎回疲れる」――そんな悩みを解決する独自データ。きょうのこ集計で**ベビーカー◎率**が高い駅TOP30を発表します。住宅街と商業モール直結駅が上位を占めました。
 quickInfo:

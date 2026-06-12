@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kodomo-asa-udon-tamagotoji-rinyuushoku-go.jpg
+hero: /img/scenes/baby-food-05.webp
 area: all
 quickInfo:
   ageRanges:

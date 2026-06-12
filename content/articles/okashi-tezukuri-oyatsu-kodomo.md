@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日たべる
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/okashi-tezukuri-oyatsu-kodomo.jpg
+hero: /img/scenes/meal-06.webp
 lede: >-
   雨の日や休日の午後、子どもと一緒に作れる簡単おやつ10選。材料3つ・混ぜるだけで、幼児から小学生まで大満足。砂糖控えめでアレルギー対応もできる定番レシピを厳選しました。
 quickInfo:

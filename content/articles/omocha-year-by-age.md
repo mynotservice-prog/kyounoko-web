@@ -8,7 +8,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-04-18T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /hero-ai/omocha-year-by-age.jpg
+hero: /img/scenes/toy-03.webp
 area: all
 quickInfo:
   ageRanges:

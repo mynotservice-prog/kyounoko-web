@@ -6,7 +6,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-08'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kodomo-summer-camp-erabikata.jpg
+hero: /img/scenes/camp-02.webp
 lede: "結論、サマーキャンプは「民間か自治体か」「年齢に合うか」の2軸で9割決まります。2026年夏休みの申し込み前に、対象年齢別の選定基準・料金相場・安全面チェックポイント・初参加の準備物まで、失敗しない判断順序で整理しました。"
 quickInfo:
   ageRanges:

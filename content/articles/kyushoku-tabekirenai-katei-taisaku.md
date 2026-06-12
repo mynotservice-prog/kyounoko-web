@@ -7,7 +7,7 @@ category: yakudatsu
 categoryName: 役立つ
 publishedAt: 2026-05-02T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /hero-ai/kyushoku-tabekirenai-katei-taisaku.jpg
+hero: /img/scenes/nursery-02.webp
 area: all
 quickInfo:
   ageRanges:

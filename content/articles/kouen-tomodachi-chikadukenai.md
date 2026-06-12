@@ -6,7 +6,7 @@ category: today-mawasu
 categoryName: 今日まわす
 publishedAt: 2026-05-02T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /hero-ai/kouen-tomodachi-chikadukenai.jpg
+hero: /img/scenes/park-08.webp
 area: all
 quickInfo:
   ageRanges:

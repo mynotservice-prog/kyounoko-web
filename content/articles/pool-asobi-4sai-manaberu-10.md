@@ -19,7 +19,7 @@ quickInfo:
   durationMin: 60
   budget: low
 area: all
-hero: /hero-ai/pool-asobi-4sai-manaberu-10.jpg
+hero: /img/scenes/pool-water-12.webp
 ---
 
 ## TL;DR（先に知りたい人へ）

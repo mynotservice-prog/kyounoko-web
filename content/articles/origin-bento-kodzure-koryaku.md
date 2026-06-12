@@ -8,7 +8,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-23'
 updatedAt: '2026-06-03'
-hero: /hero-ai/origin-bento-kodzure-koryaku.jpg
+hero: /img/scenes/bento-02.webp
 heroAlt: オリジン弁当の量り売り惣菜コーナーで、親が子ども用に少量のおかずと小盛りの白飯を選んで取り分けプレートを作っている様子（イラスト）
 area: all
 quickInfo:

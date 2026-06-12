@@ -13,7 +13,7 @@ quickInfo:
     - 0-1
     - 2-3
     - 4-6
-hero: /hero-ai/natsuyasumi-ake-hoikuen-guzu-taiou.jpg
+hero: /img/scenes/nursery-01.webp
 ---
 
 ## TL;DR(先に知りたい人へ)

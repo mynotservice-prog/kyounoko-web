@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/gyuuniku-ryouri-kodomo-okiniiri.jpg
+hero: /img/scenes/cooking-02.webp
 lede: 牛肉は鉄分・たんぱく質の宝庫ですが、「噛み切れない」「味が濃すぎる」で幼児が食べない失敗も多め。子が進んで食べる7レシピを、分量・手順とともに紹介します。
 quickInfo:
   ageRanges:

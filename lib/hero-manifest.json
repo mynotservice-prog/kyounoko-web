@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-11T06:39:41.579Z",
-  "_cacheKey": "d49174ba208f646e",
+  "generatedAt": "2026-06-11T10:41:22.272Z",
+  "_cacheKey": "8ba00786edbf4545",
   "articleHero": {
     "0-1sai-ie-asobi-10pun": "/hero-ai/0-1sai-ie-asobi-10pun.webp",
     "0sai-ikuji-kanzen-map": "/hero-ai/0sai-ikuji-kanzen-map.webp",
@@ -1587,7 +1587,7 @@
     "p-weekday-4-6-60m-low-01": "/hero-ai/p-weekday-4-6-60m-low-01.webp"
   },
   "stats": {
-    "articleSlugs": 1051,
+    "articleSlugs": 1056,
     "articleHeroCount": 1051,
     "planIds": 530,
     "planHeroCount": 530

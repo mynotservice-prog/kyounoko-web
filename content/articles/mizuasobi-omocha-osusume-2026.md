@@ -7,7 +7,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-05-25T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /hero-ai/mizuasobi-omocha-osusume-2026.jpg
+hero: /img/scenes/pool-water-11.webp
 area: all
 quickInfo:
   ageRanges:

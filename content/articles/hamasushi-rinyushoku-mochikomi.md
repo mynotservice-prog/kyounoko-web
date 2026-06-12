@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-05-30'
-hero: /hero-ai/hamasushi-rinyushoku-mochikomi.jpg
+hero: /img/scenes/baby-food-03.webp
 area: all
 quickInfo:
   ageRanges:

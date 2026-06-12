@@ -13,7 +13,7 @@ quickInfo:
   ageRanges:
     - 2-3
     - 4-6
-hero: /hero-ai/shitsunai-asobiba-4brand-tokyo.jpg
+hero: /img/scenes/indoor-play-04.webp
 ---
 
 ## TL;DR(先に知りたい人へ)

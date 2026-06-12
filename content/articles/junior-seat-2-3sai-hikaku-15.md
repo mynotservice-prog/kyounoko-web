@@ -7,7 +7,7 @@ publishedAt: '2026-05-12'
 updatedAt: '2026-06-03'
 category: yakudatsu
 categoryName: 役立つもの
-hero: /hero-ai/junior-seat-2-3sai-hikaku-15.jpg
+hero: /img/scenes/car-03.webp
 quickInfo:
   ageRanges:
     - 2-3

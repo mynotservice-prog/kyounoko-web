@@ -3,7 +3,7 @@ slug: amenohi-indoor-spots-tokyo-15
 title: 雨の日に行ける東京の屋内キッズスポット15選｜0〜6歳連れの定番から穴場まで
 category: today-doko
 categoryName: 今日どこ行く？
-hero: /hero-ai/amenohi-indoor-spots-tokyo-15.jpg
+hero: /img/scenes/indoor-play-02.webp
 metaDescription: >-
   雨の日でも安心して遊べる東京の屋内キッズスポット15選。ボーネルンド・キドキド・ASOBono・屋内アスレチック・博物館まで、対象年齢・料金・アクセス・混雑度の具体情報付き。
 publishedAt: 2026-04-18T00:00:00.000Z

@@ -7,7 +7,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-08'
 updatedAt: '2026-06-03'
-hero: /hero-ai/babycar-yarakashi-50-keikenshudan.jpg
+hero: /img/scenes/stroller-05.webp
 area: tokyo
 quickInfo:
   ageRanges:

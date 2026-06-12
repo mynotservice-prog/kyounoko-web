@@ -22,7 +22,7 @@ quickInfo:
     - any
   durationMin: 30
   budget: low
-hero: /hero-ai/bento-takeout-chain-kodzure-4sha.jpg
+hero: /img/scenes/bento-01.webp
 heroAlt: テイクアウト弁当チェーンの店頭で家族がのり弁やお子様向け弁当を受け取っている様子（イラスト）
 ---
 

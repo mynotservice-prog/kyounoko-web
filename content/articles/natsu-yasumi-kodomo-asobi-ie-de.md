@@ -7,7 +7,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-04-30T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /hero-ai/natsu-yasumi-kodomo-asobi-ie-de.jpg
+hero: /img/scenes/home-play-11.webp
 area: all
 quickInfo:
   ageRanges:

@@ -7,7 +7,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-06-07'
 updatedAt: '2026-06-11'
-hero: /hero-ai/child-seat-shinseiji-osusume-5sen-2026.jpg
+hero: /img/scenes/car-01.webp
 area: all
 quickInfo:
   ageRanges:

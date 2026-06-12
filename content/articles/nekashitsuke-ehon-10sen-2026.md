@@ -7,7 +7,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-06-11'
 updatedAt: '2026-06-11'
-hero: /hero-ai/ehon-yomikikase-kotsu.jpg
+hero: /img/scenes/book-04.webp
 area: all
 quickInfo:
   ageRanges:

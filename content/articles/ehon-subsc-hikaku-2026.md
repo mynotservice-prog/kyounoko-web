@@ -7,7 +7,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-06-11'
 updatedAt: '2026-06-11'
-hero: /hero-ai/ehon-yomikikase-kotsu.jpg
+hero: /img/scenes/book-03.webp
 area: all
 quickInfo:
   ageRanges:
