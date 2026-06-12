@@ -132,9 +132,10 @@ export const metadata: Metadata = {
     statusBarStyle: 'default',
     title: 'きょうのこ',
   },
-  alternates: {
-    canonical: '/',
-  },
+  // alternates.canonical は各ページの generateMetadata で個別指定する。
+  // ここで '/' を指定すると上書きしていないページ全てが canonical=TOP になり、
+  // Google が「TOP の重複」と判定してインデックスから外す問題が起きる（2026-06-12 GSC通知の主因）。
+  // TOP ページは app/page.tsx で明示。
   verification: {
     google: 'NwebBqSUBnmbiHv6kY8lgriTPH3arJQeu4N7_oCxbOY',
   },
