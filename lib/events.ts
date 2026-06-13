@@ -1591,7 +1591,92 @@ const CATEGORY_HERO: Record<EventCategory, string> = {
  * 管理画面で画像差し替えを実装する場合は、microCMS や Vercel KV に画像URL を
  * 保存し、このロジックの先頭で「DB値があれば優先」とすればよい。
  */
-const TRUSTED_HERO_PREFIXES = ['/v2/events/', '/v2/articles/', '/v2/spots/', '/photos/', '/img/scenes/'];
+const TRUSTED_HERO_PREFIXES = ['/v2/events/', '/v2/articles/', '/v2/spots/', '/photos/', '/img/scenes/', '/img/facilities/', '/img/kk/'];
+
+/**
+ * 公共施設のキーワードマッチ（v7, 2026-06-13）。Wikimedia CC 実写画像。
+ * クレジット表示: public/img/facilities/_credits.json 参照。
+ */
+const EVENT_FACILITY_MAP: Array<[RegExp, string]> = [
+  [/サンシャイン水族館|sunshine.*aquarium/i, '/img/facilities/sunshine-aquarium.webp'],
+  [/サンシャイン/, '/img/facilities/sunshine-aquarium.webp'],
+  [/葛西.*(水族|aquarium)/i, '/img/facilities/kasai-aquarium.webp'],
+  [/葛西臨海公園/, '/img/facilities/kasai-park.webp'],
+  [/葛西/, '/img/facilities/kasai-aquarium.webp'],
+  [/美ら海|churaumi/i, '/img/facilities/churaumi-aquarium.webp'],
+  [/イケ・?サンパーク|としまみどり/, '/img/facilities/ikebukuro-sunpark.webp'],
+];
+
+/**
+ * v6（2026-06-13）: 信頼パス対象外（/hero-ai/cat-*）でも、カテゴリ＋タイトルから
+ *   実写シーン画像（/img/scenes/）が当たる場合はそれを優先。シーン無マッチのみ KK プールに落とす。
+ *   "イベントだけ管理画面でイラストのまま" だった問題を解消。
+ */
+function pickEventSceneByCategoryAndTitle(e: EventEntry): string | undefined {
+  const t = `${e.title} ${e.venue ?? ''} ${e.lede ?? ''}`;
+  // タイトル・会場文字列ベースで具体スポット推定
+  if (/水族館|アクアリウム|クラゲ/.test(t)) return scenePickFrom('aquarium', e.slug);
+  if (/動物園|サファリ|牧場|ふれあい/.test(t)) return scenePickFrom('zoo', e.slug);
+  if (/花火/.test(t)) return scenePickFrom('seasonal', e.slug, 'park');
+  if (/プール|水遊び|噴水/.test(t)) return scenePickFrom('pool-water', e.slug);
+  if (/絵本|おはなし|読み聞かせ/.test(t)) return scenePickFrom('book', e.slug);
+  if (/離乳食|赤ちゃん教室|ベビーマッサージ/.test(t)) return scenePickFrom('baby-food', e.slug, 'nursery');
+  if (/マルシェ|物販|ショッピング/.test(t)) return scenePickFrom('shopping', e.slug);
+  if (/工作|ワークショップ|ものづくり|お絵かき|折り紙|粘土/.test(t)) return scenePickFrom('craft', e.slug, 'indoor-play');
+  if (/ピアノ|音楽|リトミック|スイミング|体操|英語|習い事/.test(t)) return scenePickFrom('lesson', e.slug);
+  if (/科学|博物館/.test(t)) return scenePickFrom('indoor-play', e.slug);
+  if (/まつり|お祭り|縁日|盆踊り/.test(t)) return scenePickFrom('seasonal', e.slug, 'park');
+  if (/夏休み|夏祭り|プール開き/.test(t)) return scenePickFrom('pool-water', e.slug);
+  if (/桜|花見|お花見|ひな祭り|端午/.test(t)) return scenePickFrom('seasonal', e.slug);
+  if (/紅葉|秋|どんぐり|落ち葉|七五三/.test(t)) return scenePickFrom('seasonal', e.slug, 'park');
+  if (/雪|スキー|そり|クリスマス|節分|ハロウィン|halloween|christmas/i.test(t)) return scenePickFrom('seasonal', e.slug);
+  if (/公園|広場|遊具|滑り台|アスレチック/.test(t)) return scenePickFrom('park', e.slug);
+  if (/料理|キッチン|cooking|食べ放題|レストラン/.test(t)) return scenePickFrom('meal', e.slug);
+  if (/お弁当|キャラ弁|ベントー/.test(t)) return scenePickFrom('bento', e.slug);
+  // カテゴリベース（タイトル文字列でヒットしなかった残り）
+  switch (e.category) {
+    case 'reading': return scenePickFrom('book', e.slug);
+    case 'rinyushoku': return scenePickFrom('baby-food', e.slug, 'nursery');
+    case 'rhythm': return scenePickFrom('indoor-play', e.slug);
+    case 'matsuri': return scenePickFrom('seasonal', e.slug, 'park');
+    case 'market': return scenePickFrom('shopping', e.slug);
+    case 'workshop': return scenePickFrom('indoor-play', e.slug);
+    case 'sport': return scenePickFrom('park', e.slug);
+    case 'illumination':
+    case 'seasonal': return scenePickFrom('seasonal', e.slug, 'park');
+    case 'show': return scenePickFrom('indoor-play', e.slug);
+    default: return undefined;
+  }
+}
+
+/** 指定シーン（+任意のフォールバックシーン）からハッシュで決定的に1枚選ぶ */
+function scenePickFrom(scene: string, slug: string, fallback?: string): string {
+  // 2026-06-13: 追加51枚で seasonal/bento/shopping/sleep/book を増量、
+  //   新シーン 5種（lesson/craft/screen-time/bath/medical）を追加。
+  const counts: Record<string, number> = {
+    'meal': 41, 'home-play': 25, 'pool-water': 20, 'park': 16, 'outing-general': 16,
+    'screen-time': 10, 'seasonal': 10, 'lesson': 10,
+    'book': 7, 'stroller': 7, 'medical': 7,
+    'indoor-play': 6,
+    'bento': 5, 'shopping': 5, 'sleep': 5, 'zoo': 5, 'baby-food': 5,
+    'bath': 4, 'nursery': 4, 'cooking': 4, 'aquarium': 4, 'airplane': 4, 'craft': 4,
+    'train': 3, 'toy': 3, 'rain': 3, 'car': 3, 'camp': 3,
+  };
+  const h = hashEventSlug(slug);
+  const c = counts[scene] ?? 0;
+  if (c > 0) {
+    const n = (h % c) + 1;
+    return `/img/scenes/${scene}-${String(n).padStart(2, '0')}.webp`;
+  }
+  if (fallback && counts[fallback]) {
+    const n = (h % counts[fallback]) + 1;
+    return `/img/scenes/${fallback}-${String(n).padStart(2, '0')}.webp`;
+  }
+  // フォールバック失敗時は outing-general
+  const n = (h % 16) + 1;
+  return `/img/scenes/outing-general-${String(n).padStart(2, '0')}.webp`;
+}
+
 export function eventHeroImage(e: EventEntry): string {
   // 1) /admin/event-images 経由の上書き（lib/event-overrides.json）が最優先
   // 動的import で循環依存を避ける
@@ -1600,13 +1685,24 @@ export function eventHeroImage(e: EventEntry): string {
   const ov = overrides[e.slug];
   if (ov?.hero) return ov.hero;
 
-  // 2) hero が信頼できるパス（v2/ 配下や photos/ 等）ならそのまま使用
+  // 2) hero が信頼できるパス（v2/ 配下や photos/ 等 ＝ /img/scenes/, /img/facilities/ もここ）ならそのまま使用
   if (e.hero && TRUSTED_HERO_PREFIXES.some((p) => e.hero!.startsWith(p))) {
     return e.hero;
   }
 
-  // 3) それ以外（/hero-ai/cat-* など 存在しないファイル多数）はKKプールに回す
-  // ユーザー支給の高品質画像45枚から slugハッシュで決定的に選択
+  // 2.5) 公共施設キーワード（葛西水族館・美ら海・サンシャイン水族館 等）→ /img/facilities/ の実写
+  const searchStr = `${e.title} ${e.venue ?? ''}`;
+  for (const [re, img] of EVENT_FACILITY_MAP) {
+    if (re.test(searchStr)) return img;
+  }
+
+  // 3) /hero-ai/ ... → タイトル・カテゴリから実写シーンへ自動マップ（v6, 2026-06-13）
+  //    一意の施設イラスト（/hero-ai/anpanman-vs-kidzania.webp 等）は KK プールに落とす前に
+  //    まずシーン推定を試みる。
+  const scene = pickEventSceneByCategoryAndTitle(e);
+  if (scene) return scene;
+
+  // 4) シーン無マッチ → KK プール（45枚, /img/kk/kk-NN.webp）から決定的に選択
   const h = hashEventSlug(e.slug);
   const n = (h % 45) + 1;
   return `/img/kk/kk-${String(n).padStart(2, '0')}.webp`;

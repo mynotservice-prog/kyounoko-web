@@ -7,7 +7,7 @@ category: narai
 categoryName: 習いごと
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-06-06'
-hero: /hero-ai/online-eikaiwa-vs-taimen.jpg
+hero: /img/scenes/lesson-03.webp
 area: all
 quickInfo:
   ageRanges:

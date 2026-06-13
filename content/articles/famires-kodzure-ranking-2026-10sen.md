@@ -21,7 +21,7 @@ quickInfo:
     - any
   durationMin: 90
   budget: low
-hero: /hero-ai/famires-kodzure-ranking-2026-10sen.jpg
+hero: /img/scenes/meal-33.webp
 ---
 
 ## 結論（先に知りたい人へ）

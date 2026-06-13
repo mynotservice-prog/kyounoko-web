@@ -21,7 +21,7 @@ quickInfo:
     - sunny
   durationMin: 30
   budget: low
-hero: /hero-ai/natsu-drink-chain-kodzure-ranking-2026-5sha.jpg
+hero: /img/scenes/meal-10.webp
 heroAlt: 夏のカフェで、子ども向けにミルクやジュースを少量ずつ取り分けてもらっている家族の様子（イラスト）
 youtubeSearch: 子連れ カフェ 夏 ドリンク 何歳から
 ---

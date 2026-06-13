@@ -13,7 +13,7 @@ quickInfo:
     - 0-1
     - 2-3
     - 4-6
-hero: /img/scenes/meal-31.webp
+hero: /img/scenes/meal-41.webp
 ---
 
 ## TL;DR(先に知りたい人へ)

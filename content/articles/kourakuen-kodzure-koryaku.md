@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-22'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kourakuen-kodzure-koryaku.jpg
+hero: /img/scenes/meal-38.webp
 heroAlt: 幸楽苑のボックス席で、家族が子ども用に中華そばの麺を短く切って取り分けている様子（イラスト）
 area: all
 quickInfo:

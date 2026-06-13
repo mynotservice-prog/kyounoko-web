@@ -21,7 +21,7 @@ quickInfo:
     - any
   durationMin: 30
   budget: low
-hero: /hero-ai/gyudon-4chain-kodzure-hayami.jpg
+hero: /img/scenes/meal-12.webp
 ---
 
 ## TL;DR（先に知りたい人へ）

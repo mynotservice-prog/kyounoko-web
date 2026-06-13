@@ -6,9 +6,10 @@ import { getAllFileArticles } from '@/lib/articles';
 import { AREAS, getAreaName } from '@/lib/area';
 import { ArticlesClient, type ArticleRow } from './ArticlesClient';
 
-export const revalidate = 3600;
+// admin は常に最新を表示（v7, 2026-06-13: ISR キャッシュで旧イラストが残る問題対策）
+export const dynamic = 'force-dynamic';
 
-function toRow(slug: string): ArticleRow {
+function toRow(slug: string, resolvedHero: string | undefined): ArticleRow {
   const file = path.join(process.cwd(), 'content', 'articles', `${slug}.md`);
   const raw = fs.readFileSync(file, 'utf8');
   const { data, content } = matter(raw);
@@ -27,7 +28,10 @@ function toRow(slug: string): ArticleRow {
     title: String(d.title ?? ''),
     category: String(d.category ?? ''),
     categoryName: String(d.categoryName ?? d.category ?? ''),
-    hero: typeof d.hero === 'string' ? d.hero : '',
+    // v7（2026-06-13）: 旧コードは d.hero 生値（/hero-ai/<slug>.jpg イラスト）を返していた。
+    // サイトの hero は lib/articles.ts で実写シーンに解決されているのに、管理画面だけ
+    // イラストが出ていたため、解決済み hero（resolvedHero）を優先表示するように変更。
+    hero: resolvedHero ?? (typeof d.hero === 'string' ? d.hero : ''),
     area: String(d.area ?? 'all'),
     publishedAt: String(d.publishedAt ?? ''),
     updatedAt: String(d.updatedAt ?? d.publishedAt ?? ''),
@@ -43,7 +47,7 @@ function toRow(slug: string): ArticleRow {
 export default function AdminArticles() {
   const articles = getAllFileArticles();
   const rows = articles
-    .map((a) => toRow(a.slug))
+    .map((a) => toRow(a.slug, a.hero))
     .sort((a, b) => (a.updatedAt < b.updatedAt ? 1 : -1));
 
   const categoryOptions = [...new Set(rows.map((r) => r.categoryName).filter(Boolean))].sort();

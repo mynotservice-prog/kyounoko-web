@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
 updatedAt: '2026-06-03'
-hero: /hero-ai/shabuyou-kodzure-koryaku.jpg
+hero: /img/scenes/meal-41.webp
 lede: >-
   **しゃぶ葉は3歳以下が基本無料、4-6歳幼児は数百円、小学生は半額前後**の年齢別食べ放題料金。離乳食の持ち込みは声がけでOK、ベビーカーで席まで入れる店舗多数、ベビーチェアもほぼ全店常備。0-6歳の家族で「外食どこ行く？」となったら、しゃぶ葉は2,000円台で家族3人が食べ放題できる現実解です。
 quickInfo:

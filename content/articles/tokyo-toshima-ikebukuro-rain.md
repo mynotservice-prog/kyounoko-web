@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-04-20'
 updatedAt: '2026-06-03'
-hero: /hero-ai/tokyo-toshima-ikebukuro-rain.jpg
+hero: /img/scenes/outing-general-12.webp
 lede: >-
   池袋駅周辺は23区でもトップクラスに「雨の日に強い」エリア。駅直結の大型商業施設・サンシャインシティ・水族館・屋内遊園地などが徒歩圏に集中しています。この記事では豊島区・池袋駅周辺を0〜6歳ファミリー目線でまとめました。
 quickInfo:

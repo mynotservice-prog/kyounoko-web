@@ -21,7 +21,7 @@ quickInfo:
     - any
   durationMin: 30
   budget: low
-hero: /hero-ai/udon-soba-3chain-kodzure.jpg
+hero: /img/scenes/meal-09.webp
 ---
 
 ## TL;DR（先に知りたい人へ）

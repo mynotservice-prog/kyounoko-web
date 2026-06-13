@@ -3,7 +3,7 @@ slug: swimming-nansai-kara
 title: スイミング何歳から【0-6歳】主要5社比較・月謝相場
 category: narai
 categoryName: 習い事と学び
-hero: /hero-ai/swimming-nansai-kara.jpg
+hero: /img/scenes/lesson-07.webp
 metaDescription: >-
   スイミングいつから始めるべきか迷っていませんか。0歳のベビースイミングから6歳の本格レッスンまで、目的別のベストスタート時期を整理。主要5社の月謝相場、効果、デメリット、選び方の判断軸まで3分で確認でき、迷わず始められます。
 publishedAt: 2026-04-18T00:00:00.000Z

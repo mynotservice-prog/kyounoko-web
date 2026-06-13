@@ -8,7 +8,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-04-20'
 updatedAt: '2026-06-03'
-hero: /img/scenes/meal-29.webp
+hero: /img/scenes/meal-39.webp
 lede: >-
   新宿駅周辺で子連れランチの店選びは難しい…。ベビーカーごと入れる店、キッズメニューがある店、個室がある店を条件別に10選集めました。駅ビル中心に動線を組むと、0〜6歳連れでも迷いません。
 quickInfo:

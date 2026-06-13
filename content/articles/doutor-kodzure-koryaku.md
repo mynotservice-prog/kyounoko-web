@@ -21,7 +21,7 @@ quickInfo:
     - any
   durationMin: 30
   budget: low
-hero: /hero-ai/doutor-kodzure-koryaku.jpg
+hero: /img/scenes/meal-12.webp
 heroAlt: ドトール風のセルフカフェで、子連れ家族がトレーにミラノサンドとコーヒー・ジュースをのせ、席間の狭い店内で親が子どものドリンクを倒れにくい位置に置いている様子（イラスト）
 ---
 

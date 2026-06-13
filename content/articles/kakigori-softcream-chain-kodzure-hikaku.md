@@ -21,7 +21,7 @@ quickInfo:
     - sunny
   durationMin: 30
   budget: low
-hero: /hero-ai/kakigori-softcream-chain-kodzure-hikaku.jpg
+hero: /img/scenes/meal-36.webp
 heroAlt: 夏のチェーン店で、子どもがソフトクリームやかき氷を少量ずつ取り分けてもらっている家族の様子（イラスト）
 ---
 

@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-08'
 updatedAt: '2026-06-03'
-hero: /img/scenes/meal-16.webp
+hero: /img/scenes/meal-05.webp
 lede: >-
   「子連れ外食したいけど予算が……」――そんな家族のため、きょうのこ独自集計から**ランチ800円以下×子連れOK店**が多い駅TOP15をデータで抽出。節約しながら週末ランチを楽しむ独自戦略を解説します。
 quickInfo:

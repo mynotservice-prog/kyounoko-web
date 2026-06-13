@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
 updatedAt: '2026-06-03'
-hero: /hero-ai/musashinomori-coffee-kodzure-koryaku.jpg
+hero: /img/scenes/meal-13.webp
 lede: >-
   「むさしの森珈琲って子連れで入れる？ベビーカーは？パンケーキは何歳から？」を1記事で解決。**すかいらーくグループの本格カフェ業態**で、コメダよりやや落ち着いた雰囲気と、ふわふわのリコッタパンケーキが看板。ロードサイド型店舗が多くベビーカーの取り回しがしやすい点も、子連れ家族には大きな魅力です。0-6歳のお子様連れでむさしの森珈琲を最大限活用するコツを保存版でまとめました。
 quickInfo:

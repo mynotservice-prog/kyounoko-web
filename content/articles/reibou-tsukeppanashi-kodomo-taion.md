@@ -21,7 +21,7 @@ quickInfo:
   durationMin: 5
   budget: free
 area: all
-hero: /hero-ai/reibou-tsukeppanashi-kodomo-taion.jpg
+hero: /img/scenes/medical-03.webp
 ---
 
 ## TL;DR（先に知りたい人へ）

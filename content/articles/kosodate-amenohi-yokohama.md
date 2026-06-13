@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kosodate-amenohi-yokohama.jpg
+hero: /img/scenes/rain-02.webp
 lede: >-
   雨の日の横浜は、みなとみらい・桜木町・新横浜エリアに屋内型スポットが集中。実はこの10スポット、ガチで「予約不要・ベビーOK・駅直結」を全クリアしたコスパ最強のリスト。0〜6歳の年齢別に料金・動線まで完全開示します。
 quickInfo:

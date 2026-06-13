@@ -7,7 +7,7 @@ publishedAt: '2026-05-12'
 updatedAt: '2026-06-03'
 category: today-doko
 categoryName: 今日どこ行く
-hero: /hero-ai/kanto-ajisai-kodzure-spot-10.jpg
+hero: /img/scenes/meal-07.webp
 quickInfo:
   ageRanges:
     - 0-1

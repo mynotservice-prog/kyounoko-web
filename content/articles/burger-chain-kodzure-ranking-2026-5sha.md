@@ -21,7 +21,7 @@ quickInfo:
     - any
   durationMin: 45
   budget: low
-hero: /hero-ai/burger-chain-kodzure-ranking-2026-5sha.jpg
+hero: /img/scenes/meal-11.webp
 heroAlt: ハンバーガーショップのテーブルで、子ども向けにポテトやミニバーガーを取り分けている家族の様子（イラスト）
 youtubeSearch: ハンバーガー チェーン 子連れ おすすめ
 ---

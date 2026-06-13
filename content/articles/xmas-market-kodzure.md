@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: 2026-04-18T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /hero-ai/xmas-market-kodzure.jpg
+hero: /img/scenes/meal-30.webp
 area: tokyo
 quickInfo:
   ageRanges:

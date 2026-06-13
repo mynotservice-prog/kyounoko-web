@@ -7,7 +7,7 @@ category: narai
 categoryName: 習いごと
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /img/scenes/home-play-23.webp
+hero: /img/scenes/lesson-08.webp
 lede: 英語教室は月1万円超え、でも家でなら0円から始められます。4〜6歳の黄金期に親子で楽しめる英語遊び10選で、無理なく英語に親しむ方法を紹介します。
 quickInfo:
   ageRanges:

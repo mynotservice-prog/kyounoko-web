@@ -7,7 +7,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-08'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kosodate-tsukareta-jikan-no-tsukaikata-50.jpg
+hero: /img/scenes/home-play-23.webp
 area: all
 quickInfo:
   ageRanges:

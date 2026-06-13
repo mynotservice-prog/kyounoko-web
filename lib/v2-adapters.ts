@@ -58,28 +58,47 @@ function hashName(name: string): number {
  * 主要施設の hero 画像マッピング（部分一致キーワード）。
  * spot.name に左側のキーワードが含まれていれば、対応する固有 hero 画像を返す。
  * 順番が早いほど優先（特定度が高い順）。
+ *
+ * v7（2026-06-13）方針:
+ *   - 公共施設（葛西/美ら海/サンシャイン水族館/池袋）は Wikimedia Commons の
+ *     自由ライセンス実写画像（/img/facilities/）に差し替え。
+ *     クレジット: public/img/facilities/_credits.json 参照、サイト側 /credits で表示。
+ *   - 商標リスク強の施設（ディズニー/アンパンマン/キッザニア/レゴランド/富士急/富士サファリ）は
+ *     CC画像でもブランド要素を含むと商用利用にリスクがあるため、施設タイプを表す
+ *     汎用シーン写真へマップ（park / aquarium / zoo / indoor-play 等）。
+ *   - 遊具・地域系（ふわふわ/ロング滑り台/練馬/上野）は park / outing-general へ。
  */
 const KEYWORD_HERO_MAP: Array<[string, string]> = [
-  ['サンシャイン', '/hero-ai/tokyo-toshima-ikebukuro-rain.webp'],
-  ['ディズニーシー', '/hero-ai/disney-kosodate-attractions.webp'],
-  ['ディズニーランド', '/hero-ai/disney-kosodate-attractions.webp'],
-  ['ディズニー', '/hero-ai/disney-kosodate-attractions.webp'],
-  ['キッザニア', '/hero-ai/anpanman-vs-kidzania.webp'],
-  ['アンパンマン', '/hero-ai/anpanman-vs-kidzania.webp'],
-  ['富士急', '/hero-ai/fuji-q-area-kosodate.webp'],
-  ['富士サファリ', '/hero-ai/fuji-safari-park-kosodate.webp'],
-  ['サファリ', '/hero-ai/fuji-safari-park-kosodate.webp'],
-  ['レゴランド', '/hero-ai/legoland-kosodate.webp'],
-  ['美ら海', '/hero-ai/churaumi-aquarium-kosodate.webp'],
-  ['葛西', '/hero-ai/kasai-aquarium-kosodate.webp'],
-  ['ふわふわ', '/hero-ai/tokyo-fuwafuwa-park-20.webp'],
-  ['ロング滑り台', '/hero-ai/tokyo-long-slide-park-20.webp'],
-  ['ロングすべり台', '/hero-ai/tokyo-long-slide-park-20.webp'],
-  ['ジャンボ滑り台', '/hero-ai/tokyo-long-slide-park-20.webp'],
-  ['練馬', '/hero-ai/tokyo-nerima-free-park-muryou.webp'],
-  ['上野', '/hero-ai/tokyo-ueno-kodzure-lunch.webp'],
-  ['池袋', '/hero-ai/tokyo-toshima-ikebukuro-rain.webp'],
-  ['豊島', '/hero-ai/tokyo-toshima-ikebukuro-rain.webp'],
+  // 公共施設（CC実写写真・/img/facilities/）
+  ['美ら海', '/img/facilities/churaumi-aquarium.webp'],
+  ['葛西臨海水族園', '/img/facilities/kasai-aquarium.webp'],
+  ['葛西臨海公園', '/img/facilities/kasai-park.webp'],
+  ['葛西', '/img/facilities/kasai-aquarium.webp'],
+  ['サンシャイン水族館', '/img/facilities/sunshine-aquarium.webp'],
+  ['サンシャイン', '/img/facilities/sunshine-aquarium.webp'],
+  ['イケ・サンパーク', '/img/facilities/ikebukuro-sunpark.webp'],
+  ['イケサンパーク', '/img/facilities/ikebukuro-sunpark.webp'],
+
+  // 商標リスク強 → 施設タイプの汎用シーンへ（KK プールへ振り分けないよう明示マップ）
+  ['ディズニーシー', '/img/scenes/outing-general-01.webp'],
+  ['ディズニーランド', '/img/scenes/outing-general-02.webp'],
+  ['ディズニー', '/img/scenes/outing-general-03.webp'],
+  ['キッザニア', '/img/scenes/indoor-play-01.webp'],
+  ['アンパンマン', '/img/scenes/indoor-play-02.webp'],
+  ['富士急', '/img/scenes/outing-general-04.webp'],
+  ['富士サファリ', '/img/scenes/zoo-01.webp'],
+  ['サファリ', '/img/scenes/zoo-02.webp'],
+  ['レゴランド', '/img/scenes/indoor-play-03.webp'],
+
+  // 遊具・地域系 → 該当タイプの汎用シーン
+  ['ふわふわ', '/img/scenes/park-01.webp'],
+  ['ロング滑り台', '/img/scenes/park-02.webp'],
+  ['ロングすべり台', '/img/scenes/park-02.webp'],
+  ['ジャンボ滑り台', '/img/scenes/park-03.webp'],
+  ['練馬', '/img/scenes/park-04.webp'],
+  ['上野', '/img/scenes/outing-general-05.webp'],
+  ['池袋', '/img/facilities/ikebukuro-sunpark.webp'],
+  ['豊島', '/img/facilities/ikebukuro-sunpark.webp'],
 ];
 
 /**
@@ -136,9 +155,17 @@ const SCENE_POOLS_BY_CAT: Record<string, string[]> = {
   restaurant: scenePool('meal', 40),
 };
 
+/** SCENE_POOLS_BY_CAT 未カバー時の汎用シーンプール（v6: hero-ai落下を廃止） */
+const FALLBACK_SCENE_POOL: string[] = [
+  ...scenePool('outing-general', 16),
+  ...scenePool('park', 16),
+  ...scenePool('indoor-play', 6),
+];
+
 /** カテゴリと spot.name から hero 画像パスを決定的に選ぶ */
 function pickHero(category: string, name: string): string {
-  // 1) キーワード一致で施設固有画像があればそれを優先
+  // 1) キーワード一致で施設固有画像があればそれを優先（ディズニー/葛西水族館 等）
+  //    これらは固有性が高いイラストのため実写統一の例外として残す。
   for (const [kw, img] of KEYWORD_HERO_MAP) {
     if (name.includes(kw)) return img;
   }
@@ -152,11 +179,9 @@ function pickHero(category: string, name: string): string {
   if (sp?.length) {
     return sp[h % sp.length];
   }
-  // 4) カテゴリベースのプールからハッシュで決定的に選択（既存 hero-ai プール）
-  const pools = HERO_POOLS_BY_CAT[category] || ['cat-family', 'cat-outdoor'];
-  const prefix = pools[h % pools.length];
-  const variant = String(((h >> 4) % 3) + 1).padStart(2, '0'); // 01 / 02 / 03
-  return `/hero-ai/${prefix}-${variant}.webp`;
+  // 4) v6（2026-06-13）: 旧 hero-ai イラストフォールバックを廃止し、
+  //    汎用シーンプール（outing-general/park/indoor-play）から決定的に選択。
+  return FALLBACK_SCENE_POOL[h % FALLBACK_SCENE_POOL.length];
 }
 
 /** Spot.facilities/place/ages からタグ配列を組み立てる */

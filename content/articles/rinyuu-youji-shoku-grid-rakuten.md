@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日食べるもの
 publishedAt: '2026-04-24'
 updatedAt: '2026-06-03'
-hero: /hero-ai/rinyuu-youji-shoku-grid-rakuten.jpg
+hero: /img/scenes/baby-food-01.webp
 area: national
 quickInfo:
   ageRanges:

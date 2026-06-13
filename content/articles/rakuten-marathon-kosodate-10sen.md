@@ -7,7 +7,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-04-24'
 updatedAt: '2026-06-03'
-hero: /hero-ai/rakuten-marathon-kosodate-10sen.jpg
+hero: /img/scenes/home-play-10.webp
 area: national
 quickInfo:
   ageRanges:

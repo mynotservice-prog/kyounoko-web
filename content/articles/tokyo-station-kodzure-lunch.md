@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-04-20'
 updatedAt: '2026-06-03'
-hero: /img/scenes/meal-36.webp
+hero: /img/scenes/meal-08.webp
 lede: >-
   東京駅は**グランスタ東京・キッチンストリート・大丸東京**など駅ナカ・駅ビルが充実。新幹線利用や帰省前の子連れランチにも使える10店を条件別にまとめました。
 quickInfo:

@@ -21,7 +21,7 @@ quickInfo:
     - any
   durationMin: 60
   budget: low
-hero: /hero-ai/cafe-3chain-kodzure-hikaku.jpg
+hero: /img/scenes/meal-14.webp
 ---
 
 ## TL;DR（先に知りたい人へ）

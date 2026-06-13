@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
 updatedAt: '2026-06-03'
-hero: /hero-ai/mcdonalds-kodzure-koryaku.jpg
+hero: /img/scenes/meal-08.webp
 area: tokyo
 quickInfo:
   ageRanges:

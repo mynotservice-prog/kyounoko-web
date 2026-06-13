@@ -7,7 +7,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-06-11'
 updatedAt: '2026-06-11'
-hero: /img/scenes/book-03.webp
+hero: /img/scenes/book-07.webp
 area: all
 quickInfo:
   ageRanges:

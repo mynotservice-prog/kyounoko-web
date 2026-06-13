@@ -7,7 +7,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-05-25T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /hero-ai/kodzure-outdoor-leisure-goods-2026.jpg
+hero: /img/scenes/meal-05.webp
 area: all
 quickInfo:
   ageRanges:

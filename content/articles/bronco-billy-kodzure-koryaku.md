@@ -8,7 +8,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
 updatedAt: '2026-06-03'
-hero: /hero-ai/bronco-billy-kodzure-koryaku.jpg
+hero: /img/scenes/meal-25.webp
 lede: >-
   「ブロンコビリーは子連れで行っても大丈夫？サラダバーは小さい子にも使える？」を1記事で解決。中部発・関東進出も進む**炭火焼ステーキ＆がんこハンバーグ**の専門チェーンは、ロードサイドの広々店舗とサラダバーの自由度で、0-6歳家族にとっても通いやすい一軒です。ベビーカー入店から誕生日サービス、取り分け鉄板メニューまで保存版でまとめました。
 quickInfo:

@@ -6,6 +6,7 @@ import remarkGfm from 'remark-gfm';
 import remarkHtml from 'remark-html';
 import { injectInternalLinks } from './auto-internal-links';
 import HERO_MANIFEST from './hero-manifest.json';
+import { pickHeroForSlug } from './hero-photos';
 import type { AgeRange, Budget, PlaceType, Weather } from './types';
 
 // ==========================================================================
@@ -123,16 +124,27 @@ function parseFrontmatter(raw: string, fallbackSlug: string): { meta: FileArticl
     categoryName: typeof d.categoryName === 'string' ? d.categoryName : undefined,
     publishedAt: toIsoDate(d.publishedAt) ?? new Date().toISOString(),
     updatedAt: toIsoDate(d.updatedAt) ?? toIsoDate(d.publishedAt) ?? new Date().toISOString(),
-    // hero の優先順位（v5: build-time manifest 経由で Vercel File Tracing を回避）:
-    //   1. hero-manifest.json に登録された slug の URL（hero-ai webp > hero-ai jpg > photos webp）
-    //   2. frontmatter 指定があれば .png/.jpg → .webp 自動変換
-    //   3. なければ undefined（呼び出し側でフォールバック）
+    // hero の優先順位（v7: 2026-06-13 完全実写化）:
+    //   1. frontmatter が /img/scenes/ /photos/ /v2/ /img/kk/ なら最優先（信頼パス）
+    //   2. frontmatter が /hero-ai/* (イラスト) なら pickHeroForSlug でシーン置換
+    //   3. frontmatter 無指定なら manifest 経由のslug固有イラストもシーン置換
+    //   4. 何もなければ undefined（呼び出し側フォールバック）
     hero: (() => {
       const slug = typeof d.slug === 'string' ? d.slug : fallbackSlug;
+      const fmHero = typeof d.hero === 'string' ? d.hero : undefined;
+      const isTrusted = (u: string) =>
+        u.startsWith('/img/scenes/') || u.startsWith('/photos/') ||
+        u.startsWith('/v2/') || u.startsWith('/img/kk/');
+      if (fmHero) {
+        const norm = fmHero.replace(/\.(png|jpg|jpeg)$/i, '.webp');
+        if (isTrusted(norm)) return norm;
+        // /hero-ai/* (イラスト) はシーン写真に強制置換
+        return pickHeroForSlug(slug);
+      }
       const fromManifest = (HERO_MANIFEST.articleHero as Record<string, string>)[slug];
-      if (fromManifest) return fromManifest;
-      if (typeof d.hero !== 'string') return undefined;
-      return d.hero.replace(/\.(png|jpg|jpeg)$/i, '.webp');
+      if (fromManifest && isTrusted(fromManifest)) return fromManifest;
+      // manifest も /hero-ai/* のためシーンに置換
+      return pickHeroForSlug(slug);
     })(),
     lede: typeof d.lede === 'string' ? d.lede : (typeof d.metaDescription === 'string' ? d.metaDescription : ''),
     quickInfo: parseQuickInfo(d.quickInfo),

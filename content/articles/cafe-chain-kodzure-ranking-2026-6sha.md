@@ -20,7 +20,7 @@ quickInfo:
   weather:
     - any
   budget: '〜1500'
-hero: /hero-ai/cafe-chain-kodzure-ranking-2026-6sha.jpg
+hero: /img/scenes/meal-30.webp
 heroAlt: 都心のカフェで子連れ家族がベビーカーを横付けして寛いでいる様子（イラスト）
 ---
 

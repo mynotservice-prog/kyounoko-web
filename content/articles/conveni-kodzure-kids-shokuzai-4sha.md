@@ -23,7 +23,7 @@ quickInfo:
     - any
   durationMin: 15
   budget: low
-hero: /hero-ai/conveni-kodzure-kids-shokuzai-4sha.jpg
+hero: /img/scenes/meal-10.webp
 heroAlt: コンビニの棚の前で家族がおにぎりやベビーフード、カットフルーツを選んでいる様子（イラスト）
 ---
 

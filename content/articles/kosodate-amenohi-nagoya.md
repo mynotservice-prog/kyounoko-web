@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kosodate-amenohi-nagoya.jpg
+hero: /img/scenes/rain-01.webp
 lede: >-
   雨の日の名古屋でも、幼児が思いきり走れる屋内スポットは意外とたくさんあります。実はこの10スポット、ガチで「予約不要・ベビーOK・冷暖房完備」を全クリアした中部地区の鉄板リスト。授乳室・ベビーカー動線まで完全開示します。
 quickInfo:

@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
 updatedAt: '2026-06-03'
-hero: /hero-ai/aki-matsuri-kodzure-koryaku.jpg
+hero: /img/scenes/park-16.webp
 quickInfo:
   ageRanges:
     - 2-3

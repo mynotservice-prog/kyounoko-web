@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-21'
 updatedAt: '2026-06-03'
-hero: /hero-ai/bikkuri-donkey-kodzure-koryaku.jpg
+hero: /img/scenes/meal-11.webp
 area: tokyo
 quickInfo:
   ageRanges:

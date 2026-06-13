@@ -6,7 +6,7 @@ category: gyouji
 categoryName: 季節と行事
 publishedAt: 2026-04-18T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /hero-ai/natsumatsuri-kodzure-koryaku.jpg
+hero: /img/scenes/meal-36.webp
 area: all
 quickInfo:
   ageRanges:

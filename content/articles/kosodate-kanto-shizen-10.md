@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kosodate-kanto-shizen-10.jpg
+hero: /img/scenes/home-play-07.webp
 lede: >-
   都心から車で2時間圏内。実はこの10スポット、ガチで「片道2時間以内・歩行1km以下・トイレ2箇所以上」を全クリアした関東1都6県の自然体験リスト。マザー牧場・那須どうぶつ王国・ムーミンバレーパークまで料金・予約まで完全開示。
 quickInfo:

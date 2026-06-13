@@ -2,7 +2,8 @@ import { getAllPlanMetas, getPlan } from '@/lib/plans';
 import { AREAS, getAreaName } from '@/lib/area';
 import { PlansClient, type PlanRow } from './PlansClient';
 
-export const revalidate = 3600;
+// admin は常に最新を表示（v7, 2026-06-13: ISR キャッシュで旧イラストが残る問題対策）
+export const dynamic = 'force-dynamic';
 
 export default function AdminPlans() {
   const metas = getAllPlanMetas();

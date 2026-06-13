@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
 updatedAt: '2026-06-03'
-hero: /hero-ai/yayoiken-toribunke-real.jpg
+hero: /img/scenes/meal-21.webp
 lede: "結論、やよい軒は「定食を1人前で大人と子で取り分け可能」と評価する声が多数。約140件の家庭の声を編集部が傾向分析し、食券機・ご飯おかわり・ベビーチェアの実情を2026年版で冷静にまとめました。"
 quickInfo:
   ageRanges:

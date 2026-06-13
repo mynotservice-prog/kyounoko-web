@@ -21,7 +21,7 @@ quickInfo:
     - any
   durationMin: 75
   budget: low
-hero: /hero-ai/kaiten-sushi-4chain-comparison.jpg
+hero: /img/scenes/meal-14.webp
 ---
 
 ## TL;DR（先に知りたい人へ）

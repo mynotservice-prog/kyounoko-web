@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kura-sushi-kodzure-koryaku.jpg
+hero: /img/scenes/meal-40.webp
 area: tokyo
 quickInfo:
   ageRanges:

@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kodomo-peperoncino-udon-kodomo-muke.jpg
+hero: /img/scenes/meal-34.webp
 area: all
 quickInfo:
   ageRanges:

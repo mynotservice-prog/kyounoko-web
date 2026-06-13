@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kosodate-spots-fukuoka-kids.jpg
+hero: /img/scenes/home-play-01.webp
 lede: 福岡は街も海も山もコンパクトにまとまり、幼児連れのおでかけ効率が抜群。博多・天神を起点に車30分圏で楽しめる12カ所を、地元目線で厳選しました。
 quickInfo:
   ageRanges:

@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-23'
 updatedAt: '2026-06-03'
-hero: /hero-ai/hanamaru-udon-kodzure-koryaku.jpg
+hero: /img/scenes/meal-19.webp
 heroAlt: はなまるうどんのテーブル席で、子ども向けに麺を短く切り、温かいかけうどんを冷ましながら取り分けている家族の様子（イラスト）
 area: all
 quickInfo:

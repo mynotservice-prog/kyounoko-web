@@ -6,7 +6,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-04-18T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /img/scenes/sleep-03.webp
+hero: /img/scenes/sleep-04.webp
 area: all
 interactive: NaptimeFitFinder
 quickInfo:

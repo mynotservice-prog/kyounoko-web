@@ -7,7 +7,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-06-11'
 updatedAt: '2026-06-11'
-hero: /img/scenes/book-04.webp
+hero: /img/scenes/book-01.webp
 area: all
 quickInfo:
   ageRanges:

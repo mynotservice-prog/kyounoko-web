@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
 updatedAt: '2026-06-03'
-hero: /hero-ai/hama-sushi-kodzure-koryaku.jpg
+hero: /img/scenes/meal-19.webp
 area: tokyo
 quickInfo:
   ageRanges:

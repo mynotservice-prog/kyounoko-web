@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-07'
 updatedAt: '2026-06-03'
-hero: /img/scenes/bento-01.webp
+hero: /img/scenes/bento-03.webp
 lede: 7〜8月の保育園・幼稚園・遠足弁当は「傷まないこと」が最優先。子供向けの傷まないレシピ7選と、詰め方の順序・保冷術・避けるべき食材を実用的にまとめます。
 quickInfo:
   ageRanges:

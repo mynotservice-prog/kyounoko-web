@@ -6,7 +6,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-08'
 updatedAt: '2026-06-03'
-hero: /hero-ai/natsuyasumi-kakeibo-kodzure-shukatsu.jpg
+hero: /img/scenes/meal-28.webp
 lede: "結論、夏休みの家計崩壊は「予算化していないお出かけ」が9割の原因。0〜6歳の子と過ごす40日の食費・外食・お出かけ・帰省コストを2026年版で予算化し、メリハリをつけて使う具体策をまとめました。「気づいたら3万オーバー」を防ぐ家計術です。"
 quickInfo:
   ageRanges:

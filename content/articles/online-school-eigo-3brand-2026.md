@@ -12,7 +12,7 @@ lede: >-
 quickInfo:
   ageRanges:
     - 4-6
-hero: /hero-ai/online-school-eigo-3brand-2026.jpg
+hero: /img/scenes/lesson-08.webp
 ---
 
 ## TL;DR(先に知りたい人へ)

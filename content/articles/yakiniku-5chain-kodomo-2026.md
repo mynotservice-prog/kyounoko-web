@@ -20,7 +20,7 @@ quickInfo:
     - any
   durationMin: 90
   budget: mid
-hero: /hero-ai/yakiniku-5chain-kodomo-2026.jpg
+hero: /img/scenes/meal-04.webp
 ---
 
 ## TL;DR（先に知りたい人へ）

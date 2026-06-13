@@ -9,7 +9,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-04-20'
 updatedAt: '2026-06-03'
-hero: /img/scenes/meal-27.webp
+hero: /img/scenes/meal-35.webp
 lede: >-
   銀座・有楽町は大人の街イメージですが、**デパート（銀座三越・松屋銀座・GINZA
   SIX）とルミネ有楽町**は子連れ動線が整っています。10店を条件別にまとめました。

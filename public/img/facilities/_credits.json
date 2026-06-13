@@ -1,0 +1,53 @@
+{
+  "_README": "公共施設の hero 画像のクレジット。CC BY/CC BY-SA は表示義務あり。CC0 は不要だが記録のため掲載。サイト側 /credits ページで一覧表示する想定。",
+  "/img/facilities/churaumi-aquarium.webp": {
+    "name": "美ら海水族館（沖縄）",
+    "source": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Big_and_small_fish_at_Okinawa_Churaumi_Aquarium.jpg",
+    "author": "Pauloleong2002",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution_required": true,
+    "modified": "Resized to 1600px width, converted to WebP"
+  },
+  "/img/facilities/kasai-aquarium.webp": {
+    "name": "葛西臨海水族園",
+    "source": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kasai_Rinkai_Aquarium_01.jpg",
+    "author": "ajari (from Japan)",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "attribution_required": true,
+    "modified": "Resized to 1600px width, converted to WebP"
+  },
+  "/img/facilities/kasai-park.webp": {
+    "name": "葛西臨海公園",
+    "source": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kasai_Rinkai_Park.jpg",
+    "author": "CasinoKat",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "attribution_required": true,
+    "modified": "Resized to 1600px width, converted to WebP"
+  },
+  "/img/facilities/sunshine-aquarium.webp": {
+    "name": "サンシャイン水族館（池袋）",
+    "source": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sunshine_Aquarium_200819a.jpg",
+    "author": "江戸村のとくぞう",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution_required": true,
+    "modified": "Resized to 1600px width, converted to WebP"
+  },
+  "/img/facilities/ikebukuro-sunpark.webp": {
+    "name": "イケ・サンパーク（南池袋・としまみどりの防災公園）",
+    "source": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:IKE-SUNPARK_20200929.jpg",
+    "author": "妖精書士",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0",
+    "attribution_required": false,
+    "modified": "Resized to 1600px width, converted to WebP"
+  }
+}

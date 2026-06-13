@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-06-06'
-hero: /hero-ai/shimoda-kosodate.jpg
+hero: /img/scenes/home-play-11.webp
 area: kanto
 quickInfo:
   ageRanges:

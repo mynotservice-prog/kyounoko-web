@@ -7,7 +7,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kodomo-smartphone-ruleset-age-betsu.jpg
+hero: /img/scenes/screen-time-09.webp
 lede: >-
   スマホ・YouTubeの使い方で悩む親に、WHO推奨時間、0〜6歳の年齢別ルール20、依存を防ぐ仕掛け、ペアレンタルコントロールの設定まで実用的にまとめました。
 quickInfo:

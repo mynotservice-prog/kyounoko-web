@@ -8,7 +8,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
 updatedAt: '2026-06-03'
-hero: /hero-ai/torikizoku-kodzure-koryaku.jpg
+hero: /img/scenes/meal-33.webp
 lede: >-
   「鳥貴族って子連れで入れる？焼き鳥は何歳から？煙とか大丈夫？」を1記事で解決。**全品税込350円均一**の焼き鳥チェーンとして知られる鳥貴族は、**17時開店すぐの早めディナー**を狙えば子連れでもリーズナブルに楽しめる選択肢です。串焼きはタンパク質源として子の取り分けに優秀で、家族3-4人でも安価に満足度の高い夕食が組めます。0-6歳のお子様連れで鳥貴族を最大限活用するコツを保存版でまとめました。
 quickInfo:

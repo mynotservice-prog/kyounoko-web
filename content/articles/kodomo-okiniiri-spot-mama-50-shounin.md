@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-08'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kodomo-okiniiri-spot-mama-50-shounin.jpg
+hero: /img/scenes/home-play-08.webp
 area: tokyo
 quickInfo:
   ageRanges:

@@ -7,7 +7,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
 updatedAt: '2026-05-29'
-hero: /hero-ai/natsu-kosodate-kanzen-map.jpg
+hero: /img/scenes/home-play-06.webp
 area: all
 quickInfo:
   ageRanges:

@@ -6,7 +6,7 @@ category: narai
 categoryName: 習い事
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kodomo-naraigoto-yameru-koe.jpg
+hero: /img/scenes/lesson-01.webp
 area: all
 quickInfo:
   ageRanges:

@@ -49,36 +49,55 @@ function scenes(scene: string, count: number): string[] {
   );
 }
 
+/**
+ * v6（2026-06-13）: 完全実写化。/hero-ai/cat-* イラストを全カテゴリから除去し、
+ * 利用可能シーン写真のみで構成。シーン直接マッチが薄い bath/medical/piano/screen-time 等は
+ * 近接シーン（home-play 等）で代用。重複は許容方針。
+ *
+ * 追加生成すべき不足シーン（撮影/生成依頼用）:
+ *   - bath: 0枚 → home-play 流用中
+ *   - medical: 0枚 → home-play 流用中（病院/発熱の親子）
+ *   - piano/classroom: 0枚 → home-play 流用中（音楽教室・習い事）
+ *   - screen-time: 0枚 → home-play 流用中（タブレット視聴）
+ *   - seasonal: 4枚のみ → クリスマス/節分/ハロウィン/七五三 追加希望
+ *   - shopping: 2枚のみ → スーパー/モール 追加希望
+ *   - sleep: 3枚のみ → 寝かしつけ 追加希望
+ */
+/**
+ * 2026-06-13: 追加51枚で新シーン 5種（lesson / craft / screen-time / bath / medical）が増え、
+ * 既存シーンも増量（seasonal 4→10, bento 2→5, shopping 2→5, sleep 3→5, book 6→7, meal 40→41）。
+ * これに合わせて POOL を最適化、流用元を本物に置き換え。
+ */
 const POOL: Record<PhotoCat, string[]> = {
-  baby: ['/hero-ai/cat-baby-01.webp', '/hero-ai/cat-baby-02.webp', '/hero-ai/cat-baby-03.webp', ...scenes('baby-food', 5), ...scenes('nursery', 4)],
-  'toddler-play': ['/hero-ai/cat-toddler-play-01.webp', '/hero-ai/cat-toddler-play-02.webp', '/hero-ai/cat-toddler-play-03.webp', ...scenes('toy', 3), ...scenes('home-play', 25)],
-  'kid-study': ['/hero-ai/cat-kid-study-01.webp', '/hero-ai/cat-kid-study-02.webp', '/hero-ai/cat-kid-study-03.webp'],
-  'kid-craft': ['/hero-ai/cat-kid-craft-01.webp', '/hero-ai/cat-kid-craft-02.webp', '/hero-ai/cat-kid-craft-03.webp'],
-  'family-dinner': ['/hero-ai/cat-family-dinner-01.webp', '/hero-ai/cat-family-dinner-02.webp', '/hero-ai/cat-family-dinner-03.webp', ...scenes('meal', 40)],
-  'home-cozy': ['/hero-ai/cat-home-cozy-01.webp', '/hero-ai/cat-home-cozy-02.webp', '/hero-ai/cat-home-cozy-03.webp'],
-  'food-japan': ['/hero-ai/cat-food-japan-01.webp', '/hero-ai/cat-food-japan-02.webp', '/hero-ai/cat-food-japan-03.webp', ...scenes('bento', 2)],
-  'food-kitchen': ['/hero-ai/cat-food-kitchen-01.webp', '/hero-ai/cat-food-kitchen-02.webp', '/hero-ai/cat-food-kitchen-03.webp', ...scenes('cooking', 4)],
-  'food-fruit': ['/hero-ai/cat-food-fruit-01.webp', '/hero-ai/cat-food-fruit-02.webp', '/hero-ai/cat-food-fruit-03.webp'],
-  'food-sweet': ['/hero-ai/cat-food-sweet-01.webp', '/hero-ai/cat-food-sweet-02.webp', '/hero-ai/cat-food-sweet-03.webp'],
-  park: ['/hero-ai/cat-park-01.webp', '/hero-ai/cat-park-02.webp', '/hero-ai/cat-park-03.webp', ...scenes('park', 16)],
-  nature: ['/hero-ai/cat-nature-01.webp', '/hero-ai/cat-nature-02.webp', '/hero-ai/cat-nature-03.webp'],
-  autumn: ['/hero-ai/cat-autumn-01.webp', '/hero-ai/cat-autumn-02.webp', '/hero-ai/cat-autumn-03.webp'],
-  'winter-snow': ['/hero-ai/cat-winter-snow-01.webp', '/hero-ai/cat-winter-snow-02.webp', '/hero-ai/cat-winter-snow-03.webp'],
-  'summer-water': ['/hero-ai/cat-summer-water-01.webp', '/hero-ai/cat-summer-water-02.webp', '/hero-ai/cat-summer-water-03.webp', ...scenes('pool-water', 20)],
-  sakura: ['/hero-ai/cat-sakura-01.webp', '/hero-ai/cat-sakura-02.webp', '/hero-ai/cat-sakura-03.webp'],
-  tokyo: ['/hero-ai/cat-tokyo-01.webp', '/hero-ai/cat-tokyo-02.webp', '/hero-ai/cat-tokyo-03.webp'],
-  'japan-rural': ['/hero-ai/cat-japan-rural-01.webp', '/hero-ai/cat-japan-rural-02.webp', '/hero-ai/cat-japan-rural-03.webp'],
-  sleeping: ['/hero-ai/cat-sleeping-01.webp', '/hero-ai/cat-sleeping-02.webp', '/hero-ai/cat-sleeping-03.webp', ...scenes('sleep', 3)],
-  bath: ['/hero-ai/cat-bath-01.webp', '/hero-ai/cat-bath-02.webp', '/hero-ai/cat-bath-03.webp'],
-  'kid-learn': ['/hero-ai/cat-kid-learn-01.webp', '/hero-ai/cat-kid-learn-02.webp', '/hero-ai/cat-kid-learn-03.webp', ...scenes('book', 6)],
-  classroom: ['/hero-ai/cat-classroom-01.webp', '/hero-ai/cat-classroom-02.webp', '/hero-ai/cat-classroom-03.webp'],
-  piano: ['/hero-ai/cat-piano-01.webp', '/hero-ai/cat-piano-02.webp', '/hero-ai/cat-piano-03.webp'],
-  stroller: ['/hero-ai/cat-stroller-01.webp', '/hero-ai/cat-stroller-02.webp', '/hero-ai/cat-stroller-03.webp', ...scenes('stroller', 7)],
-  medical: ['/hero-ai/cat-medical-01.webp', '/hero-ai/cat-medical-02.webp', '/hero-ai/cat-medical-03.webp'],
-  'parent-child': ['/hero-ai/cat-parent-child-01.webp', '/hero-ai/cat-parent-child-02.webp', '/hero-ai/cat-parent-child-03.webp'],
-  'screen-time': ['/hero-ai/cat-screen-time-01.webp', '/hero-ai/cat-screen-time-02.webp', '/hero-ai/cat-screen-time-03.webp'],
-  commerce: ['/hero-ai/cat-commerce-01.webp', '/hero-ai/cat-commerce-02.webp', '/hero-ai/cat-commerce-03.webp', ...scenes('shopping', 2)],
-  'outdoor-generic': ['/hero-ai/cat-outdoor-generic-01.webp', '/hero-ai/cat-outdoor-generic-02.webp', '/hero-ai/cat-outdoor-generic-03.webp', ...scenes('outing-general', 16)],
+  baby: [...scenes('baby-food', 5), ...scenes('nursery', 4), ...scenes('home-play', 5), ...scenes('bath', 4)],
+  'toddler-play': [...scenes('toy', 3), ...scenes('home-play', 25), ...scenes('craft', 4)],
+  'kid-study': [...scenes('book', 7), ...scenes('home-play', 8), ...scenes('lesson', 5)],
+  'kid-craft': [...scenes('craft', 4), ...scenes('home-play', 12), ...scenes('toy', 3)],
+  'family-dinner': [...scenes('meal', 41)],
+  'home-cozy': [...scenes('home-play', 25), ...scenes('indoor-play', 6), ...scenes('meal', 12), ...scenes('sleep', 5)],
+  'food-japan': [...scenes('bento', 5), ...scenes('meal', 30), ...scenes('cooking', 4)],
+  'food-kitchen': [...scenes('cooking', 4), ...scenes('meal', 20)],
+  'food-fruit': [...scenes('meal', 25), ...scenes('baby-food', 5)],
+  'food-sweet': [...scenes('meal', 15), ...scenes('cooking', 4)],
+  park: [...scenes('park', 16), ...scenes('outing-general', 8)],
+  nature: [...scenes('park', 14), ...scenes('outing-general', 14), ...scenes('camp', 3)],
+  autumn: [...scenes('seasonal', 10), ...scenes('park', 12), ...scenes('outing-general', 10)],
+  'winter-snow': [...scenes('seasonal', 10), ...scenes('outing-general', 8), ...scenes('home-play', 6)],
+  'summer-water': [...scenes('pool-water', 20)],
+  sakura: [...scenes('seasonal', 10), ...scenes('park', 14)],
+  tokyo: [...scenes('outing-general', 12), ...scenes('shopping', 5), ...scenes('park', 6)],
+  'japan-rural': [...scenes('outing-general', 14), ...scenes('park', 10), ...scenes('camp', 3)],
+  sleeping: [...scenes('sleep', 5), ...scenes('home-play', 6)],
+  bath: [...scenes('bath', 4), ...scenes('home-play', 6)],
+  'kid-learn': [...scenes('book', 7), ...scenes('home-play', 8), ...scenes('lesson', 4)],
+  classroom: [...scenes('lesson', 10), ...scenes('nursery', 4), ...scenes('indoor-play', 6)],
+  piano: [...scenes('lesson', 10), ...scenes('home-play', 6)],
+  stroller: [...scenes('stroller', 7), ...scenes('outing-general', 8)],
+  medical: [...scenes('medical', 7), ...scenes('home-play', 8)],
+  'parent-child': [...scenes('home-play', 18), ...scenes('meal', 8), ...scenes('craft', 4)],
+  'screen-time': [...scenes('screen-time', 10), ...scenes('home-play', 4)],
+  commerce: [...scenes('shopping', 5), ...scenes('stroller', 4), ...scenes('home-play', 6)],
+  'outdoor-generic': [...scenes('outing-general', 16), ...scenes('park', 12)],
 };
 
 /**

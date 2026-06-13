@@ -28,7 +28,39 @@ const D_PRESETS = [
   '/v2/events/seasonal-winter.webp',
 ];
 
-const PRESETS = [...D_PRESETS, ...KK_PRESETS];
+/** 公共施設の実写プリセット（v7, 2026-06-13） */
+const FACILITY_PRESETS = [
+  '/img/facilities/churaumi-aquarium.webp',
+  '/img/facilities/kasai-aquarium.webp',
+  '/img/facilities/kasai-park.webp',
+  '/img/facilities/sunshine-aquarium.webp',
+  '/img/facilities/ikebukuro-sunpark.webp',
+];
+
+/** 実写シーンプリセット（イベントカテゴリ別の代表枚） */
+const SCENE_PRESETS = [
+  '/img/scenes/aquarium-01.webp',
+  '/img/scenes/zoo-01.webp',
+  '/img/scenes/park-01.webp',
+  '/img/scenes/seasonal-01.webp',
+  '/img/scenes/seasonal-05.webp',
+  '/img/scenes/seasonal-06.webp',
+  '/img/scenes/seasonal-07.webp',
+  '/img/scenes/seasonal-09.webp',
+  '/img/scenes/seasonal-10.webp',
+  '/img/scenes/pool-water-01.webp',
+  '/img/scenes/lesson-01.webp',
+  '/img/scenes/lesson-02.webp',
+  '/img/scenes/lesson-04.webp',
+  '/img/scenes/craft-01.webp',
+  '/img/scenes/craft-02.webp',
+  '/img/scenes/indoor-play-01.webp',
+  '/img/scenes/book-01.webp',
+  '/img/scenes/shopping-04.webp',
+  '/img/scenes/outing-general-01.webp',
+];
+
+const PRESETS = [...FACILITY_PRESETS, ...SCENE_PRESETS, ...D_PRESETS, ...KK_PRESETS];
 
 export function EventImagesClient({ rows }: { rows: EventRow[] }) {
   const [q, setQ] = React.useState('');

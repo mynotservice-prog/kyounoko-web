@@ -21,7 +21,7 @@ quickInfo:
     - any
   durationMin: 90
   budget: mid
-hero: /hero-ai/shabushabu-chain-kodzure-ranking-2026-5sha.jpg
+hero: /img/scenes/meal-22.webp
 heroAlt: 家族4人がしゃぶしゃぶ鍋を囲み、子どもの皿に取り分けている様子（イラスト）
 ---
 

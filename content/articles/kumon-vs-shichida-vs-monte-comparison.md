@@ -7,7 +7,7 @@ category: narai
 categoryName: 習い事と学び
 publishedAt: '2026-05-08'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kumon-vs-shichida-vs-monte-comparison.jpg
+hero: /img/scenes/lesson-09.webp
 area: all
 quickInfo:
   ageRanges:

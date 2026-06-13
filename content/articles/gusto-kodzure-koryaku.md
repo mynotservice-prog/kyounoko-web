@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
 updatedAt: '2026-06-03'
-hero: /hero-ai/gusto-kodzure-koryaku.jpg
+hero: /img/scenes/meal-19.webp
 lede: >-
   「ガストは離乳食を温めてくれる？持込はOK？」を1記事で即解決。すかいらーくグループ最大手の**ガスト**は、**離乳食パウチの電子レンジ温め対応が運用上OKな店舗多数**＋**ベビーカー横付け◎**＋**猫型配膳ロボBellaBotで2-6歳の食事退屈を撃退**という三拍子で、0-6歳の家族にとって最も再現性の高いファミレスのひとつ。離乳食ルール・キッズメニュー・配膳ロボ詳細レビュー・安全な取り分けまで、保存版でまとめました。
 quickInfo:

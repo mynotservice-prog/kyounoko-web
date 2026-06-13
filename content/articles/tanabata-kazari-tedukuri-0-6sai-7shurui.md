@@ -22,7 +22,7 @@ quickInfo:
     - any
   durationMin: 30
   budget: low
-hero: /hero-ai/tanabata-kazari-tedukuri-0-6sai-7shurui.jpg
+hero: /img/scenes/park-05.webp
 ---
 
 ## 結論（先に知りたい人へ）

@@ -7,7 +7,7 @@ category: gyouji
 categoryName: 季節と行事
 publishedAt: 2026-04-30T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /hero-ai/tanabata-kazari-tedukuri-kodomo.jpg
+hero: /img/scenes/park-04.webp
 area: all
 quickInfo:
   ageRanges:

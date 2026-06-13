@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-24'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kodzure-udon-anzen-kanzen-guide.jpg
+hero: /img/scenes/meal-41.webp
 heroAlt: セルフうどん店のテーブルで、親が子ども用にうどんの麺をはさみで1〜2cmに短く切り、つゆをお湯で薄めて人肌まで冷ましてから取り分け、熱い丼と天ぷらは子どもから離れた大人側に置いている家族の様子（イラスト）
 area: all
 quickInfo:

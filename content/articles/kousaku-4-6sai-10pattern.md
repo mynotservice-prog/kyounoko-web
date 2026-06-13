@@ -7,7 +7,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-04-18T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /hero-ai/kousaku-4-6sai-10pattern.jpg
+hero: /img/scenes/craft-03.webp
 area: all
 quickInfo:
   ageRanges:

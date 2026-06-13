@@ -7,7 +7,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kodomo-hatsunetsu-byouin-iku-me.jpg
+hero: /img/scenes/medical-05.webp
 lede: >-
   子どもの発熱は「何度で病院？」ではなく、年齢・経過時間・全身状態で判断します。0〜6歳の受診タイミング10サイン、夜間の#8000活用、家で様子を見る条件を整理しました。
 quickInfo:

@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-07'
 updatedAt: '2026-06-03'
-hero: /hero-ai/tokyo-hanabi-taikai-kodzure-2026.jpg
+hero: /img/scenes/park-05.webp
 lede: >-
   大規模花火は混雑で子連れには厳しいですが、選び方次第でベビーカーOKの穴場もあります。2026年に開催見込みの東京の花火大会から、子連れに優しい10会場をピックアップしました。
 quickInfo:

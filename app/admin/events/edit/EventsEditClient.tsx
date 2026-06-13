@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import type { EventEntry } from '@/lib/events';
+import { eventHeroImage, type EventEntry } from '@/lib/events';
 import type { EventOverride, EventOverridesMap } from '@/lib/event-overrides';
 
 const CATEGORIES = [
@@ -164,7 +164,11 @@ function EventRow({
     }
   };
 
-  const previewHero = form.hero || ev.hero || '/v2/events/show-museum.webp';
+  // form.hero（編集中）> eventHeroImage(ev)（override/シーン/KK プールで解決） > 既定 の順。
+  // 単に ev.hero を出すと旧 /hero-ai/cat-*.webp（イラスト・存在しないファイル多数）が
+  // 出てしまうため、サイト側と同じ解決ロジックを必ず通す。
+  const resolvedHero = eventHeroImage(ev);
+  const previewHero = form.hero || resolvedHero || '/v2/events/show-museum.webp';
 
   return (
     <div

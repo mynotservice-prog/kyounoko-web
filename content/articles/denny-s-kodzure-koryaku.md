@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
 updatedAt: '2026-06-03'
-hero: /hero-ai/denny-s-kodzure-koryaku.jpg
+hero: /img/scenes/meal-21.webp
 lede: >-
   「デニーズって子連れOK？低アレルゲンのキッズメニューってあるの？」を1記事で解決。**セブン＆アイ系のデニーズ**は、低アレルゲンキッズメニューを取り入れたファミリーフレンドリーなファミレス。0-6歳の家族で活用するコツを保存版でまとめました。
 quickInfo:

@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/yayoiken-vs-saize-kodzure-douchi.jpg
+hero: /img/scenes/meal-02.webp
 lede: >-
   「今日のランチ、やよい軒とサイゼリヤどっちにする？」を1記事で決着。**和定食＝やよい軒** vs **イタリアンファミレス＝サイゼリヤ**、価格・取り分け・滞在時間まで6項目で比較し、0-6歳の年齢別/平日週末/予算別の使い分けを4歳娘＆2歳息子の親目線で整理しました。
 quickInfo:

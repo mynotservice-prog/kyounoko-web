@@ -22,7 +22,7 @@ quickInfo:
     - any
   durationMin: 30
   budget: low
-hero: /img/scenes/bento-01.webp
+hero: /img/scenes/bento-02.webp
 heroAlt: テイクアウト弁当チェーンの店頭で家族がのり弁やお子様向け弁当を受け取っている様子（イラスト）
 ---
 

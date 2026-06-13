@@ -31,7 +31,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 import type { AgeRange, Budget, PlaceType, Weather } from './types';
-import { pickHeroForText } from './hero-photos';
+import { pickHeroForText, pickHeroForCategory, AVAILABLE_CATEGORIES } from './hero-photos';
 import HERO_MANIFEST from './hero-manifest.json';
 
 const PLANS_DIR = path.join(process.cwd(), 'content', 'plans');
@@ -116,7 +116,14 @@ function parsePlan(raw: string, fallbackId: string): { meta: PlanMeta; body: str
   const planId = typeof d.id === 'string' ? d.id : fallbackId;
 
   let matchedHero: string;
-  const fromManifest = (HERO_MANIFEST.planHero as Record<string, string>)[planId];
+  // v6（2026-06-13）: planHero マニフェスト（プラン固有AIイラスト 530件）は
+  //   "汚いイラストが残る" 原因のため参照停止。代わりに POOL（シーン写真混入）から
+  //   タイトル+カテゴリでマッチ。多少の重複は許容（ユーザー指示）。
+  //   旧マニフェスト経由イラストに戻したい場合は USE_MANIFEST を true に。
+  const USE_MANIFEST = false;
+  const fromManifest = USE_MANIFEST
+    ? (HERO_MANIFEST.planHero as Record<string, string>)[planId]
+    : undefined;
   if (fromManifest) {
     // build-time に生成したプラン固有AIイラスト
     matchedHero = fromManifest;
@@ -128,10 +135,18 @@ function parsePlan(raw: string, fallbackId: string): { meta: PlanMeta; body: str
       // 未指定 or 汎用 home-cozy → タイトル+短答からAIカテゴリ画像を自動マッチ
       matchedHero = pickHeroForText(`${d.title} ${d.shortAnswer}`, planId);
     } else {
-      // 明示指定の /hero/<cat>-NN.<ext> → 新AI画像 /hero-ai/cat-<cat>-NN.webp にマップ
+      // 明示指定の /hero/<cat>-NN.<ext>:
+      //   v5(2026-06) 旧来は /hero-ai/cat-<cat>-NN.webp（イラスト固定）にマップしていたが、
+      //   "汚いイラストが残っている" 問題のため、POOL（実写シーン混入）を引くように変更。
+      //   カテゴリ名がPOOLに存在しなければ従来の illustration fallback に落とす。
       const aiMatch = explicitHero!.match(/^\/hero\/([a-z-]+)-(\d{2})\.(png|webp|jpg|jpeg)$/i);
       if (aiMatch) {
-        matchedHero = `/hero-ai/cat-${aiMatch[1]}-${aiMatch[2]}.webp`;
+        const cat = aiMatch[1];
+        if ((AVAILABLE_CATEGORIES as readonly string[]).includes(cat)) {
+          matchedHero = pickHeroForCategory(cat as (typeof AVAILABLE_CATEGORIES)[number], planId);
+        } else {
+          matchedHero = `/hero-ai/cat-${aiMatch[1]}-${aiMatch[2]}.webp`;
+        }
       } else if (explicitHero!.startsWith('/photos/')) {
         // 旧Pexels実写指定は無視してAIカテゴリにフォールバック
         matchedHero = pickHeroForText(`${d.title} ${d.shortAnswer}`, planId);

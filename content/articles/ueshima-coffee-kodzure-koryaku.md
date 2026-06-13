@@ -22,7 +22,7 @@ quickInfo:
     - any
   durationMin: 45
   budget: mid
-hero: /hero-ai/ueshima-coffee-kodzure-koryaku.jpg
+hero: /img/scenes/meal-18.webp
 heroAlt: 上島珈琲店風の落ち着いたカフェで、子連れ家族が席間の広いソファ席にベビーカーを横付けし、子どもにホットミルクを取り分けている様子（イラスト）
 ---
 

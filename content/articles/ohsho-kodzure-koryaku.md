@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
 updatedAt: '2026-06-03'
-hero: /hero-ai/ohsho-kodzure-koryaku.jpg
+hero: /img/scenes/meal-13.webp
 area: tokyo
 quickInfo:
   ageRanges:

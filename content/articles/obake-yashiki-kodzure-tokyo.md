@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-08'
 updatedAt: '2026-06-03'
-hero: /hero-ai/obake-yashiki-kodzure-tokyo.jpg
+hero: /img/scenes/meal-10.webp
 lede: >-
   「おばけ屋敷デビュー」を考える親に向けて、東京の子連れOK系のお化け屋敷を5箇所ピックアップ。怖さレベル・年齢適合・料金・所要時間まで子連れ視点でナビゲートします。
 quickInfo:

@@ -8,7 +8,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-23'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kagonoya-kodzure-koryaku.jpg
+hero: /img/scenes/meal-04.webp
 heroAlt: かごの屋の座敷・掘りごたつ席で、靴を脱いだ0-1歳を畳に下ろし、親がしゃぶしゃぶの肉を中までしっかり火を通して子ども用に取り分けている家族の様子（イラスト）
 area: all
 quickInfo:

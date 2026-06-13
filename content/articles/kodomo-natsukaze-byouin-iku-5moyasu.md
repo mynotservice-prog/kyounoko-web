@@ -21,7 +21,7 @@ quickInfo:
   durationMin: 30
   budget: low
 area: all
-hero: /hero-ai/kodomo-natsukaze-byouin-iku-5moyasu.jpg
+hero: /img/scenes/medical-07.webp
 ---
 
 ## TL;DR（先に知りたい人へ）

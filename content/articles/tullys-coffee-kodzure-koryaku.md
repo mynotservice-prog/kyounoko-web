@@ -21,7 +21,7 @@ quickInfo:
     - any
   durationMin: 45
   budget: low
-hero: /hero-ai/tullys-coffee-kodzure-koryaku.jpg
+hero: /img/scenes/meal-41.webp
 heroAlt: タリーズ風のカフェで子連れ家族がベビーカーを横付けし、子どもにミルクを取り分けている様子（イラスト）
 ---
 

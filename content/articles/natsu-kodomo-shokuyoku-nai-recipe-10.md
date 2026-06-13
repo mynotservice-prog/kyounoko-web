@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-18'
 updatedAt: '2026-06-03'
-hero: /img/scenes/meal-13.webp
+hero: /img/scenes/meal-05.webp
 lede: >-
   夏は子供の食欲が落ちやすい季節。原因は「暑さによる体力低下」「水分でお腹が満たされる」「冷たいものの食べ過ぎ」など複合的です。本記事は0-6歳向けに、冷たくて栄養バランスのとれる10レシピと、水分補給・見た目の工夫・受診の目安まで網羅しました。
 quickInfo:

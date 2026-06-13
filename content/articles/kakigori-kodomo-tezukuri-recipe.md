@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-07'
 updatedAt: '2026-06-03'
-hero: /img/scenes/meal-37.webp
+hero: /img/scenes/meal-15.webp
 lede: >-
   市販シロップは色素が強く、量も多すぎ。手作りシロップなら無添加で子供向けの味に調整できます。0歳から食べられる果物ベース5種類のレシピと、かき氷器選びの基本をまとめました。
 quickInfo:

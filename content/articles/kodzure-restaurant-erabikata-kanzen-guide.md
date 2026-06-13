@@ -6,7 +6,7 @@ publishedAt: '2026-05-12'
 updatedAt: '2026-06-03'
 category: today-taberu
 categoryName: 今日何食べる
-hero: /hero-ai/kodzure-restaurant-erabikata-kanzen-guide.jpg
+hero: /img/scenes/meal-18.webp
 area: all
 lede: >-
   外食前の3分チェックで、子連れランチが10倍ラクになります。本記事は、ベビーカー入店・段差・座敷・キッズチェア・離乳食持ち込み・授乳室・アレルゲン表示など12項目の判断基準と、各項目で強いチェーン店を整理した完全ガイドです。

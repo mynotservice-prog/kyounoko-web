@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこいく
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kouyou-spots-kanto-koduzure.jpg
+hero: /img/scenes/outing-general-09.webp
 lede: 11月下旬〜12月初旬、関東の紅葉が最盛期。子連れでも安心して楽しめるベビーカーOK・アクセス良好な10スポットを、家族目線で厳選しました。
 quickInfo:
   ageRanges:

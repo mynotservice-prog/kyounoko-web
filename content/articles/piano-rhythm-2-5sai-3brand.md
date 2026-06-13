@@ -13,7 +13,7 @@ quickInfo:
   ageRanges:
     - 2-3
     - 4-6
-hero: /hero-ai/piano-rhythm-2-5sai-3brand.jpg
+hero: /img/scenes/lesson-06.webp
 ---
 
 ## TL;DR(先に知りたい人へ)

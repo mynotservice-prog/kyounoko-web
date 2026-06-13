@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: ev.lede,
       url: `https://kyounoko.jp/event/${slug}`,
       type: 'article',
-      images: [{ url: ev.hero || '/img/ogp-event.webp', width: 1200, height: 630 }],
+      images: [{ url: eventHeroImage(ev), width: 1200, height: 630 }],
     },
   };
 }
@@ -73,7 +73,7 @@ export default async function EventPage({ params }: Props) {
           url: ev.officialUrl,
         }
       : undefined,
-    image: ev.hero ? [`https://kyounoko.jp${ev.hero}`] : undefined,
+    image: [`https://kyounoko.jp${eventHeroImage(ev)}`],
     url: `https://kyounoko.jp/event/${slug}`,
     isFamilyFriendly: true,
   };

@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/gusto-vs-jonathan-kodzure-douchi.jpg
+hero: /img/scenes/meal-11.webp
 lede: >-
   「ガストとジョナサン、結局どっちが子連れ向き？」を1記事で決着。**同じすかいらーくグループ**だからこそ違いが分かりにくい2社を、価格帯・席間・モーニング・配膳ロボット・離乳食温めなど7項目で◎○△比較。0-6歳の年齢別／時間帯別／予算別に、4歳娘＆2歳息子の親目線で使い分けを整理しました。
 quickInfo:

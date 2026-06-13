@@ -7,7 +7,7 @@ category: gyouji
 categoryName: 季節と行事
 publishedAt: 2026-04-30T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /img/scenes/bento-02.webp
+hero: /img/scenes/bento-01.webp
 area: all
 quickInfo:
   ageRanges:

@@ -21,7 +21,7 @@ quickInfo:
     - any
   durationMin: 30
   budget: '〜1500'
-hero: /hero-ai/gyudon-chain-kodzure-ranking-2026-4sha.jpg
+hero: /img/scenes/meal-29.webp
 heroAlt: ロードサイドの牛丼チェーン店で家族3〜4人がボックス席で食事している様子（イラスト）
 ---
 

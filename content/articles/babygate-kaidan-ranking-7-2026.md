@@ -7,7 +7,7 @@ publishedAt: '2026-05-12'
 updatedAt: '2026-06-03'
 category: yakudatsu
 categoryName: 役立つもの
-hero: /hero-ai/babygate-kaidan-ranking-7-2026.jpg
+hero: /img/scenes/home-play-20.webp
 quickInfo:
   ageRanges:
     - 0-1

@@ -22,7 +22,7 @@ quickInfo:
     - heat
   durationMin: 90
   budget: low
-hero: /hero-ai/natsumatsuri-yatai-gourmet-kodzure-guide.jpg
+hero: /img/scenes/meal-41.webp
 heroAlt: 夏祭りの屋台の前で、親がたこ焼きやかき氷を小さく取り分けて子どもに食べさせている家族の様子（イラスト）
 ---
 

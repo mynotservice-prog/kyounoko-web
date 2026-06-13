@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-22'
 updatedAt: '2026-06-03'
-hero: /hero-ai/gaishoku-chain-kodomo-anzen-guide.jpg
+hero: /img/scenes/meal-09.webp
 heroAlt: 外食チェーンのテーブルで、親が子ども用に熱いスープを冷まし、麺を短く切って取り分けている様子（イラスト）
 area: all
 quickInfo:

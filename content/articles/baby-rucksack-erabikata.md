@@ -7,7 +7,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-06-03'
-hero: /hero-ai/baby-rucksack-erabikata.jpg
+hero: /img/scenes/stroller-04.webp
 area: all
 quickInfo:
   ageRanges:

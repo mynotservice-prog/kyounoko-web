@@ -21,7 +21,7 @@ quickInfo:
     - any
   durationMin: 120
   budget: mid
-hero: /hero-ai/shabushabu-yakiniku-buffet-3chain.jpg
+hero: /img/scenes/meal-26.webp
 ---
 
 ## TL;DR（先に知りたい人へ）
