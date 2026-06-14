@@ -10,6 +10,7 @@ import {
   formatEventPeriod,
   getEventBySlug,
   getEventsByArea,
+  isEventEnded,
 } from '@/lib/events';
 import { AdSlot } from '@/components/ads/AdSlot';
 
@@ -25,10 +26,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const ev = getEventBySlug(slug);
   if (!ev) return { title: 'イベントが見つかりません' };
+  const ended = isEventEnded(ev);
   return {
-    title: `${ev.title}｜${formatEventPeriod(ev)} ${ev.venue}`,
+    title: `${ended ? '【終了】' : ''}${ev.title}｜${formatEventPeriod(ev)} ${ev.venue}`,
     description: ev.lede,
     alternates: { canonical: `/event/${slug}` },
+    // 会期終了後は検索対象から外す（古い情報の流入を防ぐ）。リンク切れ回避のためページ自体は残す。
+    robots: ended ? { index: false, follow: true } : undefined,
     openGraph: {
       title: ev.title,
       description: ev.lede,
@@ -44,9 +48,11 @@ export default async function EventPage({ params }: Props) {
   const ev = getEventBySlug(slug);
   if (!ev) notFound();
 
-  // 同エリアの他イベント
+  const ended = isEventEnded(ev);
+
+  // 同エリアの他イベント（終了済みは除外し、開催中・これからのものを優先）
   const sameArea = getEventsByArea(ev.area)
-    .filter((e) => e.slug !== slug)
+    .filter((e) => e.slug !== slug && !isEventEnded(e))
     .slice(0, 4);
 
   // JSON-LD: Event
@@ -106,19 +112,45 @@ export default async function EventPage({ params }: Props) {
         </div>
 
         <div className="v2-page-head" style={{ paddingTop: 16 }}>
+          {ended && (
+            <div
+              style={{
+                background: 'var(--v2-ink-mute, #f3f3f3)',
+                border: '1px solid var(--v2-line)',
+                borderRadius: 'var(--v2-r-card)',
+                padding: '12px 14px',
+                marginBottom: 12,
+                fontSize: 13,
+                color: 'var(--v2-ink-sub)',
+                lineHeight: 1.6,
+              }}
+            >
+              <strong style={{ color: 'var(--v2-ink)' }}>このイベントは終了しました。</strong>
+              <br />
+              来年も開催される場合があります。最新情報は
+              {ev.officialUrl ? (
+                <a href={ev.officialUrl} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--v2-orange-deep)', fontWeight: 700 }}>公式サイト</a>
+              ) : (
+                '公式サイト'
+              )}
+              でご確認ください。今ひらいている近くのイベントは{' '}
+              <Link href="/events" style={{ color: 'var(--v2-orange-deep)', fontWeight: 700 }}>イベント一覧</Link>
+              から探せます。
+            </div>
+          )}
           <div
             style={{
               display: 'inline-block',
               fontSize: 13,
               fontWeight: 800,
-              color: 'var(--v2-orange-deep)',
-              background: 'var(--v2-orange-soft)',
+              color: ended ? 'var(--v2-ink-mute)' : 'var(--v2-orange-deep)',
+              background: ended ? 'transparent' : 'var(--v2-orange-soft)',
               padding: '6px 12px',
               borderRadius: 999,
               marginBottom: 10,
             }}
           >
-            📅 {formatEventPeriod(ev)}
+            📅 {formatEventPeriod(ev)}{ended ? '（終了）' : ''}
           </div>
           <p className="v2-page-lead" style={{ marginTop: 8 }}>
             {ev.lede}
