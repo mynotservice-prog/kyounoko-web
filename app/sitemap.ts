@@ -22,6 +22,7 @@ import { getIndieRestaurantsByStation } from '@/lib/indie-restaurants';
 import { STATION_CONDITIONS, hasMatchingItems, getConditionKind, filterChainsByCondition, filterIndiesByCondition } from '@/lib/station-conditions';
 import { getSpotsForStation, hasMatchingSpots, filterSpotsByCondition } from '@/lib/station-spots';
 import { FEATURE_PAGES } from '@/lib/feature-pages';
+import { AFFILIATE_TARGET_SLUGS } from '@/lib/affiliate-products';
 
 const BASE = 'https://kyounoko.jp';
 
@@ -130,10 +131,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'famires-kodzure-ranking-2026-10sen',
     'kids-menu-chain-15-hikaku',
   ]);
+  // 収益重点記事（アフィリ対象 = 月100万のエンジン）はクロール最優先
+  const MONEY_SLUGS = new Set<string>(AFFILIATE_TARGET_SLUGS as readonly string[]);
   function getArticlePriority(slug: string): number {
+    if (MONEY_SLUGS.has(slug)) return 0.9;
     if (PILLAR_SLUGS.has(slug)) return 0.9;
     if (KILLER_SLUGS.has(slug)) return 0.8;
     return 0.6;
+  }
+  // 収益重点記事は更新頻度シグナルも上げてクロール頻度を稼ぐ
+  function getArticleChangeFreq(slug: string): 'weekly' | 'monthly' {
+    return MONEY_SLUGS.has(slug) ? 'weekly' : 'monthly';
   }
 
   const articleUrlMap = new Map<string, MetadataRoute.Sitemap[number]>();
@@ -143,7 +151,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       articleUrlMap.set(article.slug, {
         url: `${BASE}/article/${article.slug}`,
         lastModified: new Date(article.updatedAt ?? Date.now()),
-        changeFrequency: 'monthly' as const,
+        changeFrequency: getArticleChangeFreq(article.slug),
         priority: getArticlePriority(article.slug),
       });
     }
@@ -161,7 +169,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     articleUrlMap.set(article.slug, {
       url: `${BASE}/article/${article.slug}`,
       lastModified: new Date(article.updatedAt ?? Date.now()),
-      changeFrequency: 'monthly' as const,
+      changeFrequency: getArticleChangeFreq(article.slug),
       priority: getArticlePriority(article.slug),
     });
   }

@@ -156,6 +156,19 @@ const LINK_RULES: LinkRule[] = [
   { keyword: '発熱', targetSlug: 'kodomo-no-kaze-hatsunetsu-taiou', priority: 8 },
   { keyword: '予防接種', targetSlug: 'yobou-sesshu-schedule-0-6sai', priority: 9 },
   { keyword: 'アレルギー', targetSlug: 'mugi-aleergi-meal-kodomo', priority: 8 },
+
+  // ▼ 収益重点記事への導線強化（2026-06-14: 内部リンク孤立だった高単価記事へ権威を集約）
+  //    長語優先のソートにより、汎用語（絵本/英語/クリスマス等）より具体語が勝つよう設計
+  { keyword: '絵本サブスク', targetSlug: 'ehon-subsc-hikaku-2026', priority: 10 },
+  { keyword: '絵本の定期便', targetSlug: 'ehon-subsc-hikaku-2026', priority: 10 },
+  { keyword: '寝かしつけ絵本', targetSlug: 'nekashitsuke-ehon-10sen-2026', priority: 10 },
+  { keyword: 'お名前シール', targetSlug: 'onamae-seal-7sha-hikaku-2026', priority: 10 },
+  { keyword: '名前シール', targetSlug: 'onamae-seal-7sha-hikaku-2026', priority: 9 },
+  { keyword: 'トイサブ', targetSlug: 'toysub-tettei-kaisetsu-2026', priority: 10 },
+  { keyword: '英語教材', targetSlug: 'eigo-kyouzai-3brand-2-6sai', priority: 9 },
+  { keyword: 'クリスマスプレゼント', targetSlug: 'christmas-present-kodomo-nenrei-betsu', priority: 10 },
+  { keyword: '敬老の日', targetSlug: 'keirou-no-hi-4sai-photo-message-card', priority: 9 },
+  { keyword: '出産祝い', targetSlug: 'shussan-iwai-futarime-2026', priority: 7 },
 ];
 
 // 長いキーワード優先（「知育玩具」>「知育」）、priority 高い順

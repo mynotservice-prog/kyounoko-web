@@ -178,9 +178,12 @@ export function getRelatedItemsForArticle(
 ): AffiliateLinkProps[] {
   const { allowCategoryFallback = true } = opts;
 
-  // 1) 既存の明示的マッピング対象ならそのまま返す（画像付きの手作りデータ）
+  // 1) 既存の明示的マッピング対象なら手作りデータ（画像付き）を返す。
+  //    ただし対象スラッグでも商品カードが0件の記事（本文リンク型の収益記事）は、
+  //    空配列で打ち切らずキーワード推定（2以降）へフォールスルーさせる。
+  //    → これらの記事も上部/末尾の関連商品CTAを得てCVRの取りこぼしを防ぐ。
   if ((AFFILIATE_TARGET_SLUGS as readonly string[]).includes(slug)) {
-    return getAffiliateProducts(slug).map((p) => ({
+    const explicit = getAffiliateProducts(slug).map((p) => ({
       href: p.href,
       title: p.title,
       subtitle: p.subtitle,
@@ -189,6 +192,7 @@ export function getRelatedItemsForArticle(
       provider: p.provider,
       pr: p.pr,
     }));
+    if (explicit.length > 0) return explicit;
   }
 
   // 2) slug / category / title からキーワード推定

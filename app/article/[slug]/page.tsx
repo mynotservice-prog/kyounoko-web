@@ -591,15 +591,18 @@ function FileArticleView({ article }: { article: FileArticle }) {
   const hasAffiliate = affiliateProducts.length > 0 || bodyHasAffiliateUrl;
 
   // 記事内インライン CTA 用：
-  //   - アフィ対象記事なら先頭商品を、そうでなければキーワード推定の先頭商品を1点だけ使う。
+  //   - 手作り商品カードがあれば先頭商品を使う。
+  //   - 無ければ（本文リンク型の収益記事・通常記事とも）キーワード推定の先頭商品を1点だけ使う。
   //   - インラインは本文を遮る位置なので、カテゴリ単位の広いフォールバックは使わず
   //     キーワードが的確にマッチした記事のみに絞る（allowCategoryFallback: false）。
   //   - どちらも該当しない記事では出さない（null）。
-  const inlineCtaItem = hasAffiliate
-    ? affiliateProducts[0]
-    : getRelatedItemsForArticle(article.slug, article.category, article.title, {
-        allowCategoryFallback: false,
-      })[0];
+  const keywordRelatedItems = getRelatedItemsForArticle(
+    article.slug,
+    article.category,
+    article.title,
+    { allowCategoryFallback: false },
+  );
+  const inlineCtaItem = affiliateProducts[0] ?? keywordRelatedItems[0];
 
   // 概算 wordCount（HTMLタグ除去後の文字数）。Google Article リッチリザルトの
   // 推奨フィールド。日本語は文字数 = ほぼ語数として扱う。
@@ -1034,17 +1037,18 @@ function FileArticleView({ article }: { article: FileArticle }) {
           {/* 旧: body 直下の ShareBar はここに置いていたが、末尾(著者ブロック直下)と
               重複していたため削除。離脱ポイントを増やさない方針。 */}
 
-          {/* アフィリエイト商品リスト（対象記事のみ） */}
-          {hasAffiliate && (
+          {/* 末尾CTAは常にどちらか1ブロックを表示：
+              - 手作り商品カードがある記事 → AffiliateLinkGroup（画像付き）
+              - カードが無い記事（本文リンク型の収益記事・通常記事とも）
+                → キーワード/カテゴリ推定の関連商品CTA。
+              これにより本文リンク型の収益記事も末尾CTAを取りこぼさない。 */}
+          {affiliateProducts.length > 0 ? (
             <AffiliateLinkGroup
               heading="PICK UP"
               title="この記事で紹介したアイテム"
               items={affiliateProducts}
             />
-          )}
-
-          {/* 明示マッピング対象外の記事は、キーワード推定で関連商品を自動差し込み */}
-          {!hasAffiliate && (
+          ) : (
             <RelatedItemsCTA
               items={getRelatedItemsForArticle(article.slug, article.category, article.title)}
             />
