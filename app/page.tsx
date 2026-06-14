@@ -111,6 +111,12 @@ export default function HomePage() {
 
   return (
     <V2Frame header="home" active="home">
+      {/* 再訪（登録済）ユーザー向け：自分の子の「今日」をヒーロー上部に最優先表示。
+          未登録ユーザー/クローラには何も出ない（null）ので、下のヒーローH1が先頭のまま。 */}
+      <div className="container-article" style={{ paddingTop: 8 }}>
+        <V2TodayHero agePicks={agePicks} variant="panel-only" />
+      </div>
+
       {/* Hero — 2回目デザイン：写真フル背景に左上のコピー＋検索フォーム */}
       <div className="v2-hero-ov">
         {/*
@@ -151,8 +157,8 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* 今日のうちの子（天気×月齢のパーソナライズ。localStorageのみで完結） */}
-      <V2TodayHero agePicks={agePicks} />
+      {/* 未登録ユーザー向け：設定カード（登録済ユーザーには出ない＝上部パネルが担う） */}
+      <V2TodayHero agePicks={agePicks} variant="setup-only" />
 
       {/* LINE友だち追加CTA（env未設定時は非表示） */}
       <LineCta variant="banner" />

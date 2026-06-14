@@ -146,9 +146,18 @@ export type AgePick = { slug: string; title: string };
 
 export function V2TodayHero({
   agePicks,
+  variant = 'full',
 }: {
   /** 年齢帯ごとの記事候補。設定済みユーザーに月替わりで3本ローテ表示する。 */
   agePicks?: Partial<Record<ChildAge, AgePick[]>>;
+  /**
+   * 表示の出し分け:
+   * - 'full'      : 従来。未設定→設定カード／設定済→即答パネル
+   * - 'panel-only': 設定済ユーザーの即答パネルのみ（未設定では null）。ヒーロー上部に置き、
+   *                 再訪ユーザーが最初に自分の子の「今日」を見られるようにする。
+   * - 'setup-only': 未設定ユーザーの設定カードのみ（設定済では null）。ヒーロー下に置く。
+   */
+  variant?: 'full' | 'panel-only' | 'setup-only';
 }) {
   const [settings, update] = useUserSettings();
   const [mounted, setMounted] = React.useState(false);
@@ -184,6 +193,12 @@ export function V2TodayHero({
   }, [mounted, configured, settings.area]);
 
   if (!mounted) return null;
+
+  // variant による出し分け:
+  // - panel-only は未設定ユーザーには何も出さない（ヒーロー上部を新規/クローラには空に保つ＝SEOのH1先頭を維持）
+  // - setup-only は設定済ユーザーには何も出さない（上部の panel-only が即答を担うため重複させない）
+  if (variant === 'panel-only' && !configured) return null;
+  if (variant === 'setup-only' && configured) return null;
 
   // ---------- 初回 / 編集モード: 設定カード ----------
   if (!configured || editing) {
@@ -289,8 +304,14 @@ export function V2TodayHero({
   const click = (target: string) =>
     trackEvent('today_hero_click', { target, weather: wxKind, age: ageRange });
 
+  const today = new Date();
+  const dateLabel = `${today.getMonth() + 1}/${today.getDate()}(${['日', '月', '火', '水', '木', '金', '土'][today.getDay()]})`;
+
   return (
     <section style={cardStyle} aria-label="今日のうちの子">
+      <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--v2-orange-deep)', letterSpacing: '.04em', marginBottom: 2 }}>
+        {dateLabel}・うちの子の今日
+      </div>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, flexWrap: 'wrap' }}>
         <strong style={{ fontSize: 16.5 }}>
           今日の{areaName}は {meta.emoji} {meta.label}
