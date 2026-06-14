@@ -1,0 +1,312 @@
+/**
+ * スポットの子連れ向け設備データ（公式ソース確認済み）。
+ *
+ * ※ここは「運営者の実訪問」ではなく、各施設の公式サイト・公式バリアフリー情報で
+ *   確認できた事実のみを入れる（Track B）。実訪問の一次情報は KID_REPORTS に入れる。
+ * ※キー（スポット名）は lib/spots.ts の name と完全一致させること。
+ *   spots.ts 側で name 一致により facilities が自動マージされる。
+ * ※確認できなかった項目は値を入れない（undefined のまま）。UI は未確認を △「公式で確認」
+ *   と正直に表示するため、嘘の 'yes'/'no' は絶対に入れないこと。
+ *
+ * 値: 'yes' = 公式に明記あり / 'no' = 公式に「なし」と明記 / 省略 = 未確認
+ * note: 公式情報に基づく補足。実訪問を装う表現は使わない。
+ *
+ * 初回バッチ（2026-06）: 関東の目的地施設48件を5体の調査で公式裏取り。
+ * 主な一次ソース = 各施設公式サイト/FAQ、東京都公式バリアフリーDB「だれでも東京」、
+ * 各自治体公式ページ。公式で確認できなかった施設は意図的に未登録のまま。
+ */
+import type { Spot } from './spots';
+
+type Facilities = NonNullable<Spot['facilities']>;
+
+export const SPOT_FACILITIES: Record<string, Facilities> = {
+  // ===== 東京都 =====
+  '砧公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', note: '東京都公式「だれでも東京」に車椅子対応トイレ9・おむつ交換台7・授乳室の記載。ベビーカー貸出はなし（車いす貸出8台）。' },
+  'ASOBono!（東京ドームシティ アソボーノ）': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '東京ドームシティ公式にベビーケアルーム・バリアフリートイレ・おむつ替えの記載。ベビーカー貸出は後楽園ホールビル1F無料／ラクーアはコイン式。アソボーノ自体が屋内キッズ施設。' },
+  '浅草寺・仲見世': { bathroom: 'yes', diaperChange: 'yes', note: '浅草寺公式に宝蔵門右側・本堂裏の2か所の多目的トイレ（手すり・おむつ替えシート・ベビーチェア）の記載。授乳室は公式記載なし。' },
+  '多摩動物公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '東京ズーネット公式にバリアフリートイレ15・授乳室4・おむつ替えベッド・ベビーカー貸出（1日500円・B型）の記載。' },
+  'サンシャイン水族館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'no', note: '公式に本館2Fのベビールーム（授乳用個室・おむつ替え・ミルク用お湯）の記載。水族館ではベビーカー貸出なし（サンシャインシティ内で別途貸出）。' },
+  'マクセル アクアパーク品川': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'no', note: '公式FAQにザ スタジアム2Fの授乳室、各所のおむつ替え台・ユニバーサルシート付多目的トイレの記載。ベビーカー貸出なし（1F入口に置場あり）。' },
+  'カワスイ 川崎水族館': { diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', note: '運営公式リリースに完全個室ベビーケアルーム「mamaro」（授乳・おむつ替え・離乳食）、各トイレのおむつ台、無料キッズルームの記載。' },
+  'しながわ水族館': { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'no', note: '公式「赤ちゃん連れ」案内に授乳室・調乳用温水器、男女トイレ各1のベビーシートの記載。公式に「ベビーカー貸出なし（館内使用は可）」と明記。' },
+  '板橋区立こども動物園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', note: '板橋区公式に個室授乳室2部屋・調乳器・おむつ交換スペース・だれでもトイレ（多機能トイレ）の記載。' },
+  '高尾山': { nursingRoom: 'yes', strollerRental: 'yes', note: '高尾登山電鉄公式FAQに山上「高尾山スミカ」店内の授乳スペース、清滝駅でのベビーカー預かり（1台500円）の記載。' },
+  'ぐりんぱから一足のばして・羽村市動物公園': { nursingRoom: 'yes', strollerRental: 'yes', note: 'ヒノトントンZOO公式FAQに管理事務所・スタディホールの授乳室、ベビーカー貸出200円（7か月頃〜2歳・予約不可・数量限定）の記載。' },
+  '井の頭自然文化園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'no', note: '東京ズーネット公式に正門横・管理事務所内の授乳室、資料館を除く全トイレのおむつ交換台、多目的トイレ8か所の記載。公式に「ベビーカー貸出なし」と明記。' },
+  '駒沢オリンピック公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'no', note: '東京都公式「だれでも東京」に車椅子対応トイレ6・おむつ交換台6・授乳室（サービスセンター）の記載。ベビーカー貸出なし。' },
+  '小金井公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'no', note: '「だれでも東京」に車椅子対応トイレ13・オストメイト7・おむつ交換台11・授乳室の記載。ベビーカー貸出なし。' },
+  '木場公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'no', note: '「だれでも東京」に車椅子対応トイレ7・おむつ交換台5・授乳室の記載。屋内キッズスペース「木場キッズリアム」あり。ベビーカー貸出なし。' },
+  '石神井公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'no', note: '「だれでも東京」に車椅子対応トイレ8・おむつ交換台8。公式施設ページにサービスセンターの赤ちゃん・ふらっと（授乳スペース）の記載。ベビーカー貸出なし。' },
+  '野川公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'no', note: '「だれでも東京」に車椅子対応トイレ6・おむつ交換台7・授乳室の記載。サービスセンターは赤ちゃん・ふらっと登録。ベビーカー貸出なし。' },
+  '武蔵野公園': { bathroom: 'yes', nursingRoom: 'yes', note: 'むさしのの都立公園公式バリアフリー一覧に車椅子使用者用便房・授乳室・赤ちゃん・ふらっとの記載。' },
+  '府中の森公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'no', note: '「だれでも東京」に車椅子対応トイレ4・おむつ交換台4・授乳室の記載。赤ちゃん・ふらっと登録施設。ベビーカー貸出なし。' },
+  '武蔵国分寺公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', note: '「だれでも東京」に車椅子対応トイレ3・おむつ交換台3・授乳室の記載。赤ちゃん・ふらっと登録施設。' },
+  '神代植物公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '「だれでも東京」に車椅子対応トイレ14・おむつ交換台13・授乳室・ベビーカー貸出8台の記載。' },
+  '林試の森公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'no', note: '「だれでも東京」に車椅子対応トイレ4・ユニバーサルシート付1・おむつ交換台4・授乳室の記載。ベビーカー貸出なし。' },
+  '葛西臨海公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '「だれでも東京」に車椅子対応トイレ19・おむつ交換台17・授乳室・ベビーカー貸出3台の記載。サービスセンターは赤ちゃん・ふらっと登録。' },
+  '浮間公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'no', note: '「だれでも東京」に車椅子対応トイレ4・おむつ交換台6・授乳室の記載。サービスセンターは赤ちゃん・ふらっと登録。ベビーカー貸出なし。' },
+
+  // ===== 神奈川県 =====
+  '辻堂海浜公園 ジャンボプール': { bathroom: 'yes', diaperChange: 'yes', note: '公式バリアフリー案内に身障者用トイレ（スライドドア・広いスペース・おむつ交換台・手すり）を数か所設置の記載。' },
+  'よこはま動物園ズーラシア': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式バリアフリー情報に多目的トイレ（ベビーシート・ベビーチェア）、授乳室5か所、B型ベビーカー貸出600円（正門・北門）の記載。' },
+  '新江ノ島水族館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式FAQに館内2か所の授乳室、各多目的トイレのおむつ替えシート、個室授乳室mamaro（1F出口横）、B型ベビーカー貸出300円の記載。' },
+
+  // ===== 千葉県 =====
+  '東京ディズニーランド': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '園内2か所のベビーセンターに授乳室・おむつ交換ベッドを完備。ベビーカーは1日1,000円でレンタル可（フード付B型）。' },
+  '千葉市動物公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '動物科学館2Fに育児ルーム（授乳室・キッズスペース）、館内トイレ等にベビーシート、多目的トイレあり。ベビーカーはレンタル可。' },
+  'ふなばしアンデルセン公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '授乳室・おむつ交換台を複数施設に設置。花の城レストハウスに屋内プレイルーム。車イス対応トイレ15か所。ベビーカー貸出1回100円（B型）。' },
+  '県立青葉の森公園 水の広場': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', note: '園内「つくしんぼの家」に授乳室・おむつ替えベッド・多目的トイレ・屋内遊びスペースあり（千葉市「赤ちゃんの駅」登録）。' },
+  '袖ケ浦公園 じゃぶじゃぶ池': { bathroom: 'yes', diaperChange: 'yes', note: 'おむつ替え用ベビーベッドとチャイルドチェアを備えた多目的トイレを2か所設置（8:00〜17:00）。' },
+  '柏の葉公園 噴水広場': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', note: '公園センターに授乳室、多目的トイレ内および公園センター・体育館・レストハウスの女子トイレにおむつ替えシートの記載。' },
+
+  // ===== 栃木県 =====
+  'あしかがフラワーパーク': { nursingRoom: 'yes', strollerRental: 'no', note: '公式FAQに授乳室あり（給湯設備なし）、ベビーカー貸出「なし」（車イスは無料貸出）の記載。' },
+  '那須ハイランドパーク': { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式の子連れ案内に授乳室・おむつ替え台、有料ベビーカーレンタル（当日申込可）の記載。' },
+  'ツインリンクもてぎ（モビリティリゾートもてぎ）': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式に授乳・おむつ交換ができる無料個室ベビールーム5か所、ベビーシート設置化粧室・親子個室トイレ、ベビーカー貸出1日500円の記載。' },
+  'なかがわ水遊園': { diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', note: '公式におもしろ魚館2Fキッズルーム奥の授乳室、前室のおむつ交換ベッド・水道、屋内キッズルームの記載。' },
+  '那須サファリパーク': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'no', strollerRental: 'yes', note: '公式FAQにサファリショップ横の多目的トイレ（ベビーシート設置）、入場ゲートでのベビーカー無料貸出（バギー型）の記載。授乳室は「なし」と明記。' },
+
+  // ===== 埼玉県 =====
+  'ムーミンバレーパーク': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式FAQに授乳室（インフォメーション・コケムス1F等）、オストメイト対応の広い多目的トイレ5か所、おむつ替え台8か所、コケムス内キッズスペース、有料ベビーカー貸出の記載。' },
+  'むさしの村': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式案内に授乳室2か所、園内各トイレのおむつ替え、中央ゲートでのベビーカー有料貸出300円の記載。多目的トイレは公式観光情報で確認。' },
+  '東武動物公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式「お子様のための設備・サービス」に多目的トイレ、全女性用トイレのベビーシート、授乳室、ベビーカー有料貸出（1日500円）の記載。' },
+  '埼玉県こども動物自然公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式お役立ち情報に授乳室3か所、各女子トイレ・一部多目的トイレのおむつ交換台、園内3か所でのベビーカー有料貸出の記載。' },
+  'トーベ・ヤンソンあけぼの子どもの森公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', note: '飯能市公式情報にホール下の広いトイレ・おむつ替えスペース・授乳室の記載。' },
+  '武蔵丘陵森林公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式バリアフリー情報に多目的トイレ複数、授乳室（おむつ台併設）、各ゲートでのベビーカー無料貸出の記載。' },
+  'NACK5スタジアム大宮・大宮公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '埼玉県大宮公園公式・さいたま市情報に多目的トイレ、おむつ交換台、事務所内授乳室、ベビーカー無料貸出の記載（スタジアム内は持込不可・ゲート前預かり）。' },
+
+  // ===== 群馬県 =====
+  '群馬サファリパーク': { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式FAQ（乳幼児をお連れの方へ）に授乳室3か所（総合案内所・売店マルシェ・無料休憩所）、おむつ交換、ベビーカー有料貸出（1回100円）の記載。' },
+
+  // ===== 茨城県 =====
+  '国営ひたち海浜公園 大観覧車': { bathroom: 'yes', diaperChange: 'yes', strollerRental: 'yes', note: '公式バリアフリー案内に身障者用トイレ併設、ベビーベッド設置トイレ、各ゲートでのベビーカー無料貸出の記載。' },
+  '日立市かみね動物園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '日立市公式に授乳室2か所（ふれあいプラザ1F・エレファントカフェ内）、全トイレのおむつ交換台・ベビーチェア、ベビーカー貸出200円、多目的トイレ2か所の記載。' },
+
+  // ===== 第2バッチ（2026-06）: 関西＋関東次点 81件 =====
+  // 三重県
+  '志摩スペイン村': { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式「お子様連れの方へ」にベビールーム（授乳室）3か所、おむつ替えコーナー、A型ベビーカー貸出（1台700円・約90台）の記載。' },
+  '名古屋アンパンマンこどもミュージアム＆パーク': { diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'no', note: '公式Q&Aに施設内2か所の授乳・おむつ替え室、館内の遊具・巨大ジオラマ等の屋内展示の記載。公式に「ベビーカー貸出なし」と明記。' },
+  'ナガシマスパーランド': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式FAQに園内7か所のユニバーサルデザイントイレ、各女子トイレのおむつ替えシート、ベビールーム3か所の個室授乳、メインゲート案内所でのベビーカー貸出500円の記載。' },
+  '鈴鹿サーキット': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式の子連れ案内に「だれでもトイレ」、おむつ交換台3台・着替え台、授乳室3部屋＋ベビーセンター、ベビーカー貸出1台600円の記載。' },
+  'おやつタウン': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'no', note: '公式FAQに園内2か所の多機能レストルーム、各所のおむつ交換台、ベビーラウンジ（授乳室）の記載。公式に「車いす・ベビーカー貸出なし（持込可）」と明記。' },
+  '伊勢シーパラダイス': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式施設サービスに1階の車椅子対応多目的トイレ、おむつ替え台2台付き授乳室、デポジット制（1,000円）ベビーカー貸出の記載。' },
+  'ミキモト真珠島': { bathroom: 'yes', note: '公式島内図にパールプラザ・記念館等の車椅子対応トイレの表示。おむつ替え・授乳室・ベビーカー貸出は公式で確認できず。' },
+  '三重県総合博物館 MieMu': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式利用案内に館内3か所の車椅子対応トイレ、3階こども体験展示室横の子ども用便器・おむつ交換ベッド・授乳室、2階カウンターでのベビーカー貸出の記載。' },
+  'そらんぽ四日市（四日市市立博物館・プラネタリウム）': { bathroom: 'yes', diaperChange: 'yes', strollerRental: 'yes', note: '四日市市公式バリアフリー情報に1〜5階のバリアフリートイレ、各階のおむつ替えベビーシート＋1階個室ベビーベッド、ベビーカー貸出3台の記載。' },
+  'ラウンドワンスタジアム みえ・川越IC店': { kidsSpace: 'yes', note: '公式施設紹介に小学3年生まで利用可のキッズ専用エリア「きゅーびーず」の記載。' },
+
+  // 大阪府
+  'ひらかたパーク': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式「ファミリーサービス」にベビールーム（オムツ交換台・調乳用温水器・授乳室）、多目的トイレ、B型ベビーカー貸出の記載。' },
+  'ニフレル': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'no', note: '公式FAQに1F・2F各1の多目的トイレ、おむつ替え計4か所、女性専用授乳室1F/2F各1の記載。公式に「ベビーカー貸出なし（ EXPOCITYで貸出）」と明記。' },
+  '天王寺動物園': { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式サービス案内に授乳室4か所、各授乳室・園内トイレ各所のベビーベッド、有料ベビーカー貸出（新世界ゲート側・てんしばゲート）の記載。' },
+  '万博記念公園': { nursingRoom: 'yes', strollerRental: 'yes', note: '公式「乳幼児連れの方へ」に授乳室5か所、ベビーカー無料貸出（先着順・対象1か月〜24か月未満）の記載。' },
+  'キッズプラザ大阪': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式FAQに各階の多目的トイレのベビーシート、4F授乳室、1Fでのベビーカー無料貸出20台（館内のみ）の記載。施設自体が屋内のこども博物館。' },
+  'ATCあそびマーレ': { bathroom: 'no', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', note: '公式FAQにベビールーム・おむつ交換台の記載。公式に「園内に多目的トイレなし」と明記。施設自体が屋内遊園地。' },
+  'ピュアハートキッズランド フレスポしんかな': { diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', note: '公式店舗ページにおむつ替え専用スペース、個室授乳スペース（調乳・女性限定）、屋内遊具エリアの記載。' },
+  'キッズランドUS 大阪ベイタワー店': { nursingRoom: 'yes', kidsSpace: 'yes', note: '公式店舗ページに授乳室、ベビーコーナーの記載。屋内遊園地。' },
+
+  // 兵庫県
+  'ニジゲンノモリ（淡路島）': { strollerRental: 'yes', note: '公式FAQにベビーカー貸出（大芝生ショップ・数量限定）の記載。' },
+  '東条湖おもちゃ王国': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式「小さなお子さま向けサービス」に授乳スペース、各トイレのおむつ替え、ベビーカー貸出（1日1,200円＋保証金）、冷暖房完備の屋内「おもちゃのお部屋」（雨天OK）の記載。' },
+  '神戸どうぶつ王国': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式施設案内に授乳カーテンスペース2か所、おむつ替えシート3か所、多機能トイレ「だれでもトイレ」、ベビーカー有料貸出500円（返却時100円返金）の記載。' },
+  '姫路セントラルパーク': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式FAQに授乳室2か所（ベビーベッド・水道・空調完備）、各所のおむつ替えベッド、ベビーカー貸出（A型6台/B型15台・500円）、多目的トイレ7か所の記載。' },
+  '須磨シーワールド': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式館内サービス・FAQに各棟1階の授乳室、おむつ替え台、各棟の車イス対応トイレ、ベビーカー有料貸出1日300円の記載（2024年開業）。' },
+  '神戸市立須磨離宮公園': { bathroom: 'yes', diaperChange: 'yes', strollerRental: 'yes', note: '公式に本園4か所・植物園1か所の車椅子用トイレ、本園トイレのおむつ替えシート、各入口でのベビーカー無料貸出（リクライニング付・生後2か月〜）の記載。' },
+  '西猪名公園': { bathroom: 'yes', note: '公式施設案内に多目的トイレの記載。' },
+  '神戸アンパンマンこどもミュージアム&モール': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'no', note: '公式ファミリー案内・Q&Aに2Fミュージアム/1Fモールの授乳室・おむつ替えベッド、多目的トイレ3か所の記載。公式に「ベビーカー貸出なし」（2F持込不可・置き場あり／1Fモール使用可）と明記。' },
+  'ピュアハートキッズランド尼崎つかしん': { diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', note: '公式店舗ページに個室授乳スペース（女性限定）・調乳スペース、おむつ替え専用スペース、つかしん南館6Fの完全屋内キッズパークの記載。' },
+  '神崎農村公園ヨーデルの森': { strollerRental: 'yes', note: '公式ご利用案内にベビーカー貸出（200円・数量限定）の記載。' },
+
+  // 奈良県
+  '生駒山上遊園地': { diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'no', note: '公式に屋内施設「PLAY PEAK ITADAKI」のおむつ交換室・授乳/調乳室・屋内休憩スペース、FAQに授乳室2か所の記載。公式に「ベビーカー貸出なし」と明記。' },
+  '橿原市昆虫館': { bathroom: 'yes', nursingRoom: 'yes', note: '橿原市公式に新館2階の多目的トイレ（オストメイト対応）、本館1階の救護室・授乳室の記載。' },
+  '奈良県立民俗博物館・大和民俗公園': { bathroom: 'yes', strollerRental: 'yes', note: '奈良県公式に多目的トイレ、ベビーカー1台の貸出の記載。※博物館は2024年7月から休館中（2027年度再開予定）。' },
+  '橿原市立こども科学館': { bathroom: 'yes', note: '橿原市公式の館内案内に車椅子用トイレの記載。' },
+  '平城宮跡歴史公園 朱雀門ひろば': { bathroom: 'yes', strollerRental: 'yes', note: '国営公園公式FAQに主なトイレへの多目的トイレ併設、平城宮いざない館でのベビーカー無料貸出の記載。' },
+  '生駒山麓公園 ふれあいセンター': { nursingRoom: 'yes', note: '生駒山麓公園公式（ふれあいセンター施設案内）の「その他の施設」に授乳室の記載。' },
+  'キッズランドUS 奈良香芝店': { nursingRoom: 'yes', kidsSpace: 'yes', note: '公式店舗ページに「室内遊園地」、設備一覧に授乳室・ベビーコーナーの記載。' },
+  'うだ・アニマルパーク': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '奈良県公式「こどもとおでかけ情報」に多目的トイレ3か所（オムツ替えシート併設）、動物学習館内の授乳室2部屋、ベビーカー無料貸出3台の記載。' },
+
+  // 和歌山県
+  'ポルトヨーロッパ': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式FAQ・設備一覧に授乳室、男女トイレ内のおむつ替えベッド、東西インフォメーションでのベビーカー有料貸出、車椅子用トイレの記載。' },
+  'アドベンチャーワールド': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式サービス施設案内に授乳室（ベビーケアルーム）、女子トイレのおむつ交換台、ベビーカー貸出（900〜1,200円）、主なトイレの車イス用ブースの記載。' },
+  '串本海中公園': { bathroom: 'yes', note: '公式営業案内に水族館入口側とレストラン店内の車椅子用トイレ（多目的トイレ）の記載。' },
+  '和歌山県立自然博物館': { bathroom: 'yes', note: '公式ご利用案内（バリアフリー）に多目的トイレ／車椅子トイレの記載。' },
+  '太地町立くじらの博物館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式バリアフリー情報に本館1階の授乳室、本館・マリナリュウムのおむつ交換台、受付でのベビーカー無料貸出、多目的トイレの記載。' },
+  'さぎのせ公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', note: '岩出市公式に管理事務所内の授乳室、多目的トイレ（オストメイト・ベビーチェア・ベビーシート完備）の記載。' },
+
+  // 京都府
+  '京都水族館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'no', note: '公式FAQに多目的ルーム併設トイレ4か所、おむつ替え台6台、給湯付き授乳室3か所の記載。公式に「貸し出し用ベビーカーなし」と明記。' },
+  '京都市動物園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式に多目的トイレ5か所、授乳室3か所、ベビーシート、正面・東エントランスでの無料貸出ベビーカーの記載。' },
+  '京都鉄道博物館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式お子様連れ案内にベビーベッド備付トイレ、おむつ交換台付き授乳室、屋内キッズパーク、エントランスでの無料ベビーカー貸出の記載。' },
+  '宝が池公園 子どもの楽園': { nursingRoom: 'yes', note: '公式（京都市都市緑化協会）ご利用案内に園内の授乳室の記載。' },
+  '京都府立植物園': { nursingRoom: 'yes', strollerRental: 'yes', note: '公式（京都府）総合案内に授乳室3か所（北山門・植物園会館・大芝生地南側）、各門でのベビーカー配置の記載。' },
+  'けいはんな記念公園': { nursingRoom: 'yes', diaperChange: 'yes', note: '公式に完全個室のベビーケアルーム「mamaro」（授乳・おむつ替え対応、横にベビーベッド）の記載。' },
+  'LOGOS LAND（ロゴスランド）': { nursingRoom: 'yes', kidsSpace: 'yes', note: '公式に簡易的な授乳室、プラムイン城陽2Fの屋内フリースペース（小さなお子様の遊び場）の記載。' },
+  '京都府立 丹波自然運動公園': { nursingRoom: 'yes', note: '公式（指定管理者）にこども広場近くの駐車場付近の授乳室の記載。' },
+  'アクトパル宇治': { nursingRoom: 'yes', note: '公式施設紹介に医務室（赤ちゃんの授乳も可）の記載。' },
+  'ピュアハートキッズランド伏見桃山': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', note: '公式店舗ページに多目的トイレ、おむつ替え専用スペース、個室の授乳・調乳スペース（女性限定）、室内遊び場の記載。' },
+
+  // 滋賀県（「琵琶湖博物館」「ブルーメの丘」は表記ゆれ同一施設のため両キーに同データ）
+  '琵琶湖博物館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式バリアフリー情報に車椅子対応トイレ6か所、各トイレのベビーベッド、1Fの授乳室（給湯設備あり）、車いす・ベビーカー無料貸出の記載。' },
+  '滋賀県立琵琶湖博物館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式バリアフリー情報に車椅子対応トイレ6か所、各トイレのベビーベッド、1Fの授乳室（給湯設備あり）、車いす・ベビーカー無料貸出の記載。' },
+  'ヤンマーミュージアム': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', note: '滋賀県公式観光サイトの施設情報に車椅子対応トイレ・授乳スペース・オムツ交換スペースの記載。' },
+  '滋賀県立びわ湖こどもの国': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', note: '滋賀県公式観光サイトに車椅子対応トイレ・授乳・オムツ交換スペース、運営法人公式に屋内施設「虹の家」（プレイルーム等）の記載。' },
+  '草津市立水生植物公園みずの森': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式FAQにロータス館の授乳室、園内3か所のトイレの簡易ベビーベッド、ベビーカー貸出5台の記載。滋賀県公式に車椅子対応トイレの記載。' },
+  'ロクハ公園': { diaperChange: 'yes', nursingRoom: 'yes', note: '指定管理者公式FAQに更衣室前トイレを「赤ちゃんの駅」とし授乳・オムツ交換スペースを設置との記載。' },
+  '滋賀県立陶芸の森': { bathroom: 'yes', diaperChange: 'yes', note: '滋賀県公式観光サイトの施設情報に車椅子対応トイレ・オムツ交換スペースの記載。' },
+  'ブルーメの丘': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式施設サービスに身障者用トイレ、入園ゲート等の授乳スペース、ベビーカー有料貸出20台の記載。滋賀県公式にオムツ交換スペースの記載。' },
+  '滋賀農業公園ブルーメの丘': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式施設サービスに身障者用トイレ、入園ゲート等の授乳スペース、ベビーカー有料貸出20台の記載。滋賀県公式にオムツ交換スペースの記載。' },
+
+  // 東京都（博物館・科学館・見学施設）
+  '江戸川区自然動物園（行船公園）': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: 'GO TOKYO（東京都公式観光サイト）の施設情報にバリアフリートイレ・おむつ交換台・授乳室・ベビーカー貸出の記載。' },
+  '足立区生物園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式サイトに2階のおむつ替え室・授乳室、GO TOKYOにバリアフリートイレ・おむつ交換台・授乳室・ベビーカー貸出の記載。' },
+  '国立科学博物館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式バリアフリー情報および「だれでも東京」に車椅子対応トイレ・おむつ交換台・授乳室・ベビーカー貸出（2台）の記載。' },
+  '東京おもちゃ美術館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', note: '公式FAQにエントランス横「だれでもトイレ」・館内おむつ替えコーナー・赤ちゃん木育ひろば内の授乳スペースの記載。ベビーカーは館内持込不可。' },
+  '科学技術館（北の丸公園）': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', note: '公式ご利用案内に多機能トイレ・ベビーシート（1/3/4階）・5階授乳スペースの記載。ベビーカーは1階で預かり。' },
+  '日本科学未来館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式バリアフリー/FAQに多目的トイレ・各階おむつ替え台・5階授乳室・1階ベビーカー貸出・キッズスペース「“おや？”っこひろば」の記載。' },
+  'がすてなーに ガスの科学館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式FAQに1F・2Fバリアフリートイレ・おむつ交換・1F授乳室・ベビーカー貸出3台の記載。※2026年9月23日閉館予定。' },
+  '東京都現代美術館 こどもアトリエ': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式バリアフリーページにバリアフリートイレ・おむつ交換台・授乳室（B1F/1F）・こどもとしょしつ・ベビーカー貸出6台の記載。' },
+  'トリックアートミュージアム高尾山': { nursingRoom: 'no', note: '公式FAQで授乳室は「ご用意ありません」と明記。ベビーカーは館内持込不可。' },
+  '東京消防庁 消防博物館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', note: 'GO TOKYO（東京都公式観光サイト）の施設情報にバリアフリートイレ・おむつ交換台・授乳室の記載。' },
+  '地下鉄博物館（葛西）': { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式FAQにトイレのベビーベッド（おむつ交換）・授乳室・ベビーカー無料レンタルの記載。' },
+  'JAL工場見学 SKY MUSEUM（羽田）': { strollerRental: 'no', note: '公式サイトに「階段移動を伴うコースのためベビーカーでは参加不可」と明記。' },
+  'ANA機体工場見学（羽田）': { bathroom: 'yes', note: '公式FAQに車椅子用お手洗い1か所の記載。見学は小学1年生以上（未就学児不可）。' },
+  '多摩六都科学館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: 'GO TOKYO（東京都公式観光サイト）の施設情報にバリアフリートイレ・おむつ交換台・授乳室・ベビーカー貸出の記載。' },
+
+  // 関東（その他）
+  '鉄道博物館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式FAQに多目的トイレ、キッズプラザ・車両ステーション等のおむつ替え台、授乳室、屋内キッズプラザ、ベビーカー貸出「ベビカル」の記載。' },
+  '所沢航空発祥記念館': { bathroom: 'yes', diaperChange: 'yes', strollerRental: 'yes', note: '公式バリアフリー情報に1階ロビーの多目的トイレ（オストメイト対応）、全トイレ・展示館女子トイレのオムツ交換台、貸出用ベビーカーの記載。※2025年9月〜2027年3月末予定で大規模改修のため長期休館中。' },
+  '航空科学博物館': { nursingRoom: 'yes', note: '公式「展示物・館内のご案内」に明るい雰囲気の授乳室を設置との記載。' },
+  'アクアワールド茨城県大洗水族館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式バリアフリー/キッズサービスに多目的トイレ6か所、おむつ交換台、3階の授乳室＋個室ベビーケアルームmamaro、5階キッズランド、ベビーカー無料貸出13台の記載。' },
+  'とちのきファミリーランド': { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式FAQに正面入口トイレ内のおむつ換え台、案内所裏の赤ちゃんルーム（授乳可）、案内所でのベビーカー無料貸出（B型10台）の記載。' },
+  '前橋市中央児童遊園 るなぱあく': { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式（指定管理者）園内マップに売店（管理棟）の授乳室・ベビーバギー貸出、おむつ交換スペースの記載。' },
+
+  // ===== 第3バッチ（2026-06）: 中国・四国・九州・沖縄 103件 =====
+  // 鳥取県
+  'かにっこ館': { bathroom: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式アクセスページに多目的トイレ（オストメイト）・授乳室・ベビーカー貸出の記載。' },
+  'わらべ館': { bathroom: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式利用案内に授乳室（1F）・オストメイト対応バリアフリートイレ（2F）・ベビーカー8台無料貸出の記載。' },
+  'とっとり花回廊': { nursingRoom: 'yes', strollerRental: 'yes', note: '公式案内に授乳室・ベビーカー9台無料貸出（生後半年〜2歳ごろ）の記載。' },
+  '倉吉パークスクエア': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '倉吉未来中心公式アクセシビリティ案内に多目的トイレ・おむつ交換シート・授乳室（よりん彩内）・ベビーカー貸出（正面玄関2台）の記載。' },
+  // 島根県
+  '島根県立しまね海洋館アクアス': { nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式の小さなお子様向け案内に授乳室3か所・キッズルーム・ベビーカー無料貸出の記載。' },
+  '松江フォーゲルパーク': { bathroom: 'yes', diaperChange: 'yes', strollerRental: 'yes', note: '公式に障がい者用個室トイレ・おむつ交換台（園内6か所）、ベビーカー無料貸出（正面入口）の記載。' },
+  '島根県立宍道湖自然館 ゴビウス': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式利用案内に多目的トイレ・おむつ替え台（計4か所）・授乳室（女性トイレ内）・ベビーカー貸出の記載。' },
+  '島根県立三瓶自然館サヒメル': { diaperChange: 'yes', strollerRental: 'yes', note: '公式の幼児のご利用案内におむつ交換台付トイレ・ベビーカー無料貸出の記載。' },
+  '島根県立古代出雲歴史博物館': { bathroom: 'yes', strollerRental: 'yes', note: '公式の身体の不自由な方へ案内に多目的トイレ・車イス/ベビーカー無料貸出の記載。※2025/4〜2026/9リニューアル休館中。' },
+  '出雲科学館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式バリアフリー情報に車いす対応トイレ・おむつ替えベッド・授乳室1か所・ベビーカー無料レンタル2台の記載。' },
+  '浜山公園': { nursingRoom: 'yes', kidsSpace: 'yes', note: '島根県公式の施設概要にカミアリーナ（県立浜山体育館）の授乳室・幼児室の記載。' },
+  '島根県立しまね花の郷': { strollerRental: 'yes', note: '公式ご利用案内にベビーカー8台貸出（受付申込・予約不可）の記載。' },
+
+  // 岡山県
+  'ヒルゼン高原センター ジョイフルパーク': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式FAQに園内トイレ3か所・おむつ替え3か所・母乳室2か所、ベビーカー有料貸出300円（B型・生後7〜24か月）の記載。' },
+  '池田動物園': { nursingRoom: 'yes', strollerRental: 'yes', note: '公式施設紹介に園内2か所のベビールーム（授乳スペース・ベビーベッド）、ベビーカー貸出200円の記載。岡山市公式子育てページにも記載。' },
+  '渋川マリン水族館': { bathroom: 'yes', diaperChange: 'yes', strollerRental: 'yes', note: '玉野市公式FAQにおみやげ売り場横の多目的トイレ（ベビーシート付）、ベビーカー無料貸出2台の記載。' },
+  '岡山シティミュージアム': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '岡山市公式バリアフリー情報に5階の授乳室、4・5階の多目的トイレ内おむつ交換設備、貸出用ベビーカー（無料）の記載。' },
+  // 広島県
+  'みろくの里': { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式Q&Aに授乳室、女性用トイレ等のおむつ替え台、ベビーカー貸出300円（保証金1,000円）の記載。' },
+  '安佐動物公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式園内マップにベビールーム、ベビーシート付トイレ、動物科学館横の多目的トイレ、ベビーカー貸出350円の記載。' },
+  'みやじマリン 宮島水族館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式FAQに1階インフォメーション横の授乳室、各トイレのおむつ交換台、1・2階の多目的トイレ、ベビーカー無料貸出の記載。' },
+  'マリホ水族館': { diaperChange: 'yes', nursingRoom: 'no', strollerRental: 'no', note: '公式FAQ（シン・マリホ水族館）に館内トイレのおむつ交換台の記載。授乳室・ベビーカー貸出は館内になく隣接アルパークで提供と明記。' },
+  '福山市立動物園': { bathroom: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式Q&Aに入口ゲート下・管理棟内の授乳室2室、管理棟・改札口・ペンギン舎横の多目的トイレ、ベビーカー貸出100円の記載。' },
+  'ヌマジ交通ミュージアム': { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式FAQに1階の授乳室（受付に声かけ）、各階トイレ内のおむつ替えスペース、エントランスホールの貸出用ベビーカーの記載。' },
+  '湯本豪一記念日本妖怪博物館 三次もののけミュージアム': { strollerRental: 'yes', note: '公式利用案内に無料貸出ベビーカー1台（受付申出）の記載。多機能トイレは隣接の交流館にある旨の記載。' },
+  '備北丘陵公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式FAQに授乳室・おむつ替え場所（ビジターセンター・湖畔レストハウス等）、園内各所の多目的トイレ、ベビーカー無料貸出（約50台・3歳まで）の記載。' },
+
+  // 山口県（「海響館」「秋吉台サファリランド」は表記ゆれ同一施設のため両キーに同データ）
+  '秋吉台サファリランド': { kidsSpace: 'yes', strollerRental: 'yes', note: '公式園内案内「キッズサファリ」、公式営業案内にベビーカー貸出100円の記載。' },
+  '秋吉台自然動物公園サファリランド': { kidsSpace: 'yes', strollerRental: 'yes', note: '公式園内案内「キッズサファリ」、公式営業案内にベビーカー貸出100円の記載。' },
+  '下関市立しものせき水族館 海響館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式フロアマップにバリアフリートイレ（各階）、1・3階多目的トイレのおむつ替え台、女性専用授乳室、1・2階キッズコーナー、A型ベビーカー貸出10台の記載。' },
+  '海響館（下関市立しものせき水族館）': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式フロアマップにバリアフリートイレ（各階）、1・3階多目的トイレのおむつ替え台、女性専用授乳室、1・2階キッズコーナー、A型ベビーカー貸出10台の記載。' },
+  'ときわ動物園': { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: 'ときわ公園公式ご来園ガイドに動物園入口ほかのオムツ替えコーナー・授乳室・ベビーカー無料貸出の記載。' },
+  '防府市青少年科学館ソラール': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '防府市公式「赤ちゃんの駅」・公式施設案内にバリアフリートイレ・おむつ交換台・授乳室・貸出用ベビーカーの記載。' },
+  '山口県立山口博物館': { strollerRental: 'yes', note: '公式バリアフリー案内にベビーカー（3台）貸出の記載。' },
+  '愛宕山ふくろう公園': { bathroom: 'yes', kidsSpace: 'yes', note: '岩国市公式にバリアフリートイレ、大型複合遊具・インクルーシブ遊具広場の記載。' },
+  '長門おもちゃ美術館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'no', note: '公式ご利用案内に多目的トイレ（隣接センザキッチン）、おむつ替え、さじき広場の授乳コーナー、赤ちゃん広場の記載。公式に「館内はベビーカー入館不可」と明記。' },
+  // 徳島県
+  'とくしまファミリーランド': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', note: '公式施設案内にお手洗い・おむつ交換台・キッズステーション（休憩所・授乳室）の記載。' },
+  'とくしま動物園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '徳島県UDマップ・公式設備ページに多機能トイレ（車いす対応・ベビーシート）、授乳室、貸出用ベビーカーの記載。' },
+  '鳴門市ドイツ館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', note: '公式館内施設ページに1階の車イス用トイレ、インフォメーションのベビーベッド・授乳室の記載。' },
+  '徳島県立あすたむらんど': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式利用案内・徳島県UDマップに多機能トイレ（オストメイト対応）・ベビーシート・授乳室・キッズタウン・ベビーカー貸出の記載。' },
+  '月見ヶ丘海浜公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', note: '公式ビジターセンターページにトイレ・手洗い完備、赤ちゃんのお世話スペース（おむつ替えシート・授乳室）の記載。' },
+  '鳴門ウチノ海総合公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', note: '徳島県UDマップに車いす使用者用トイレ（オストメイト対応）・ベビーシート・授乳室、公式サイトに海底の船をテーマにした遊具の記載。' },
+
+  // 香川県
+  'NEWレオマワールド': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式に園内7か所の車イス対応化粧室、チケット売り場南側等の授乳室、複数箇所のおむつ替えシート、総合案内所のベビーカー貸出の記載。' },
+  '四国水族館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', note: '公式バリアフリー情報に多目的トイレ4か所（オストメイト対応）、給湯シンク付き授乳室、おむつ替え室のベビーシート3台の記載。' },
+  'しろとり動物園': { bathroom: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式FAQに授乳室、ベビーカー・車椅子の貸出、駐車場トイレの多目的室の記載。' },
+  '香川県立ミュージアム': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式利用案内にB1・1・2階の多目的トイレ・おむつ替えシート、1階の授乳室、各階のベビーカー（計3台）の記載。' },
+  '高松市こども未来館': { nursingRoom: 'yes', kidsSpace: 'yes', note: '公式に3階子育て支援ゾーンの授乳室、プレイルーム・みんなのひろば等の遊びスペースの記載。' },
+  '国営讃岐まんのう公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式バリアフリー情報に多目的トイレ7か所内のベビーシート、案内所・北案内所の授乳室、ベビーカー無料貸出の記載。' },
+  'さぬきこどもの国': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式「乳幼児連れの方へ」に各トイレ・授乳コーナーのおむつ交換台、1階等の授乳コーナー、貸出用ベビーカー4台の記載。' },
+  '讃岐おもちゃ美術館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', note: '公式館内案内に多目的トイレ、赤ちゃん木育ひろば内の授乳室・おむつ替え室、木育ひろば等の遊びスペースの記載。' },
+  // 愛媛県（「とべ動物園」は表記ゆれ同一施設のため両キーに同データ）
+  'とべ動物園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式サービスガイドに各トイレの障がい者用個室・おむつ交換台、正面ゲート等3か所の授乳室、ベビーカー貸出60台（100円）の記載。' },
+  '愛媛県立とべ動物園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式サービスガイドに各トイレの障がい者用個室・おむつ交換台、正面ゲート等3か所の授乳室、ベビーカー貸出60台（100円）の記載。' },
+  'タオル美術館': { bathroom: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式施設詳細に障がい者用トイレ・授乳室、貸出用車いす・ベビーカーの記載。' },
+  '愛媛県総合科学博物館': { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式利用案内に1階ミュージアムショップ奥の授乳室、展示棟1階女性用トイレのベビーベッド、総合案内でのベビーカー・車椅子無料貸出の記載。' },
+  'えひめこどもの城': { strollerRental: 'yes', note: '公式利用案内にベビーカー（1台100円）・車椅子の貸出（あいあい児童館 総合案内所）の記載。' },
+
+  // 高知県
+  'のいち動物公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式ご利用案内に多目的トイレ8か所（ベビーベッド・ユニバーサルシート）、どうぶつ科学館内の授乳室、ベビーカー貸出200円（2歳まで）の記載。' },
+  '桂浜水族館': { diaperChange: 'yes', nursingRoom: 'yes', note: '高知県公式観光バリアフリーサイトに授乳室、車いす対応トイレのベビーシート（おむつ替え）の記載。' },
+  '高知みらい科学館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式施設案内に多機能トイレ、おむつ交換台・授乳室・調乳用給湯器を備えたベビールーム、3歳未満向けの遊び場、ベビーカート貸出の記載。' },
+  '高知県立牧野植物園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式ご利用案内に本館・展示館等の多目的トイレ、おむつ換えベッド、授乳室、車いす・ベビーカー無料貸出の記載。' },
+  '香美市立やなせたかし記念館 アンパンマンミュージアム': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'no', note: '公式FAQに地下1階の多機能トイレ（オストメイト対応）、1階授乳室、おむつ交換台の記載。通路が狭く階段が多いためベビーカー利用不可・入口で預かり。' },
+  '創造広場アクトランド': { nursingRoom: 'yes', note: '公式FAQに授乳室（ベビーベッド・ポット・除菌シート）の記載。' },
+  '佐川おもちゃ美術館': { bathroom: 'no', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', note: '公式FAQ・館内ガイドに「館内にトイレなし（隣接の道の駅を利用）」、受付前の授乳室・おむつ替室、0〜2歳専用の赤ちゃん木育ひろばの記載。' },
+  // 福岡県
+  '福岡市動物園': { diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '福岡市公式「赤ちゃんの駅」登録（授乳・おむつ替え可）。公式に小さな子ども向け遊具施設、総合案内のベビーカー貸出330円（2歳未満）の記載。' },
+  '到津の森公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式「小さなお子様をお連れの方へ」に授乳室（おむつ替えベッド・お湯）、簡易ベッド設置トイレ、B型ベビーカー貸出1日100円の記載。' },
+  '大牟田市動物園': { diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式「小さなお子さまをお連れの方へ」にレクチャールームの授乳室（おむつ替えベッド付）、ちびっこ遊園地、正面入口のベビーカー貸出の記載。' },
+  '北九州市立いのちのたび博物館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式「お子様連れの方へ」に2階授乳室（給湯・ベビーベッド）、多目的トイレのおむつ交換台、1階インフォメーションのベビーカー貸出の記載。' },
+  '海の中道海浜公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式バリアフリー案内にバリアフリートイレ、園内6か所の「赤ちゃんの駅」（女性専用授乳室含む）、各入口の無料ベビーカー貸出50台の記載。' },
+  '響灘緑地（グリーンパーク）': { strollerRental: 'yes', note: '公式ご利用案内に北・南ゲートでのベビーカー貸出（100円・台数限定）の記載。' },
+
+  // 佐賀県（「佐賀県立宇宙科学館」は表記ゆれ同一施設のため両キーに同データ）
+  '神野公園こども遊園地': { nursingRoom: 'yes', note: '佐賀県公式観光サイト「あそぼーさが」の施設紹介に授乳スペース（ベッド付き）の掲載。' },
+  '森とリスの遊園地 メルヘン村': { nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式・FAQに入場口付近の完全個室授乳室2室（ミルク用ホットウォーターサーバー・冷暖房）、ベビーカー貸出300円、屋内「ちびっ子ハウス」の記載。' },
+  '佐賀県立宇宙科学館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式UD案内に多目的トイレ2か所（おむつ交換台付・3Fオストメイト対応）、車イス・ベビーカー無料貸出（各8台）、屋内「こどもの広場」奥の授乳・おむつ交換スペースの記載。' },
+  '佐賀県立宇宙科学館「ゆめぎんが」': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式UD案内に多目的トイレ2か所（おむつ交換台付・3Fオストメイト対応）、車イス・ベビーカー無料貸出（各8台）、屋内「こどもの広場」奥の授乳・おむつ交換スペースの記載。' },
+  '吉野ヶ里歴史公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式FAQ・入口ゾーン案内に各入園口3か所＋古代の森ゾーン2か所の授乳室、バリアフリートイレ（ベビーシート・オストメイト対応）、各入口のベビーカー無料貸出の記載。' },
+  // 長崎県
+  'ハウステンボス': { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式FAQに完全個室ベビーケアルーム「mamaro2」4か所、各インフォメーションの授乳室、ベビーカー貸出1回1,000円の記載。' },
+  '長崎バイオパーク': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式バリアフリー情報に園内2か所の授乳室（おむつ替えベッド・冷暖房）、多目的トイレ3か所（おむつ替えシート付）、入園口のベビーカー貸出300円の記載。' },
+  '長崎ペンギン水族館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式ガイドマップに1F売店横の授乳室、多目的トイレのベビーシート、総合受付のベビーカー無料貸出、2階キッズルームの記載。' },
+  '九十九島水族館海きらら': { bathroom: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式FAQに授乳室3か所、多目的トイレ3か所、館内専用ベビーカーの無料貸出の記載。' },
+  '九十九島動植物園森きらら': { bathroom: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式施設案内に授乳室（ベビーフィーディングルーム）、多目的トイレ2か所、ベビーカー無料貸出15台の記載。' },
+  '長崎市科学館': { bathroom: 'yes', diaperChange: 'yes', strollerRental: 'yes', note: '長崎市公式観光サイトのバリアフリー情報にバリアフリートイレ・オストメイトトイレ、おむつ交換台、ベビーカー貸出の記載。' },
+  'あぐりの丘': { diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '長崎市公式子育て応援サイトに授乳室、オムツ替えスペース、ベビーカー無料貸出、キッズスペースの記載。' },
+  '長崎県立総合運動公園': { bathroom: 'yes', note: '公式バリアフリーページに身障者用トイレを公園内便所のほとんどに設置との記載。' },
+
+  // 熊本県
+  '阿蘇ファームランド': { strollerRental: 'yes', note: '公式「施設案内」にベビーカーレンタル（300円＋保証金700円、総合インフォメーション・宿泊フロント）の記載。' },
+  '熊本市動植物園': { nursingRoom: 'yes', strollerRental: 'yes', note: '公式「営業案内」に園内3か所の授乳室、無料ベビーカー貸出（7〜24か月・台数限定）の記載。' },
+  '岡岳公園': { bathroom: 'yes', kidsSpace: 'yes', note: '宇城市公式の公園一覧にトイレ有、複合遊具・アスレチック施設・ローラースライダーの記載。' },
+  'ユウベルキッズランド熊本店': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', note: '公式「ご利用案内」FAQに男女別トイレ・専用授乳室・オムツ替えコーナー、屋内キッズ施設（ふわふわ・ボールプール・赤ちゃん専用コーナー）の記載。' },
+  // 大分県（「うみたまご」は表記ゆれ同一施設のため両キーに同データ）
+  'ハーモニーランド': { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式サイトに授乳室（ホワイトバーズスクエア）・ベビールーム（ハーモニービレッジ）・ベビーカーレンタルの専用案内ページの記載。' },
+  '城島高原パーク': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式「休憩室・授乳室のご案内」に授乳室3か所・園内トイレのおむつ交換ベビーベッド、ベビーカー貸出（500円/日・生後1か月〜4才）の記載。' },
+  'うみたまご': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式「みんなにやさしい水族館」に授乳室3か所・多機能トイレ7か所（おむつ交換シート）・1Fキッズコーナー・館内専用ベビーカー貸出（1回300円）の記載。' },
+  '大分マリーンパレス水族館「うみたまご」': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式「みんなにやさしい水族館」に授乳室3か所・多機能トイレ7か所（おむつ交換シート）・1Fキッズコーナー・館内専用ベビーカー貸出（1回300円）の記載。' },
+  '高崎山自然動物園': { bathroom: 'yes', note: '公式「便利なサービス」に多目的トイレ2か所（入園窓口裏・サル寄せ場近く）の記載。' },
+  '九州自然動物公園アフリカンサファリ': { nursingRoom: 'yes', strollerRental: 'yes', note: '公式FAQに授乳室2か所（総合案内所・アローザ売店内）、ベビーカー貸出300円（総合案内所）の記載。' },
+  'るるパーク（大分農業文化公園）': { nursingRoom: 'yes', kidsSpace: 'yes', note: '公式サイトに豊の国物産館入口の授乳室（個室3室）、館内「木のこどもエリア」（小さな子向け遊具・無料）の記載。' },
+
+  // 宮崎県
+  '宮崎市フェニックス自然動物園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式「お子さま連れの方」案内に多目的トイレ5か所、トイレの乳児用おむつ替えシート、レストラン内の授乳室、ベビーカー有料貸出の記載。' },
+  '宮崎科学技術館': { bathroom: 'yes', nursingRoom: 'yes', note: '宮崎県公式アクセシビリティ情報マップに多目的トイレ3か所・授乳室3か所の記載。' },
+  'ヘルストピア延岡': { diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', note: '公式に1階キッズランド授乳室・更衣室のおむつ交換台、授乳室、屋内キッズランド（0歳〜小学生）の記載。' },
+  // 鹿児島県
+  'いおワールドかごしま水族館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式に本館1〜4階の多目的トイレ、各階トイレのベビーシート、本館1階の個室授乳室2室、ベビーカー無料貸出13台（2歳以下）の記載。' },
+  '平川動物公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式「乳幼児向け情報」にバリアフリートイレ、園内複数か所のベビーシート、給湯器・ベビーベッド付き授乳スペース、入口ゲートのベビーカー貸出の記載。' },
+  '鹿児島県立吉野公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '鹿児島県公式すいすいナビに障害者優先トイレ6か所・ベビーベッド、申し出による授乳室利用、ベビーカー2台貸出の記載。' },
+  'リトルプラネット イオンモールKAGOSHIMA BAY': { kidsSpace: 'yes', note: '公式店舗ページに体験型アトラクションが集まる屋内型テーマパークの記載。' },
+  '霧島市こども館 すかいぴあ': { nursingRoom: 'yes', kidsSpace: 'yes', note: '公式「屋内の紹介」に授乳室、あそびの草原（ハイハイ・よちよちルーム）・あそびの森（運動・絵本ルーム）の記載。' },
+
+  // 沖縄県
+  'ナゴパイナップルパーク': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'no', strollerRental: 'yes', note: '沖縄県バリアフリーマップに車いす利用可能トイレ・ベビーベッド・授乳室・ベビーカー無料貸出の記載（キッズスペースは「無」と明記）。' },
+  'おきなわワールド': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式料金ページ・沖縄県バリアフリーマップに多目的トイレ・ベビーベッド・授乳室・ベビーカー有料貸出の記載。' },
+  '沖縄こどもの国': { bathroom: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式アクセス/ご利用案内に車椅子用トイレ・授乳室・ベビーカー貸出の記載。' },
+  'DMMかりゆし水族館': { diaperChange: 'yes', nursingRoom: 'yes', note: '公式FAQに水族館1Fの授乳室・おむつ替えスペースの記載。' },
+};

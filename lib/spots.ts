@@ -12,6 +12,7 @@
 
 import type { AreaSlug } from './area';
 import { KID_REPORTS } from './kid-reports';
+import { SPOT_FACILITIES } from './spot-facilities';
 import { SPOTS_EXTRA } from './spots-extra';
 
 export type SpotCategory =
@@ -1034,13 +1035,6 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: '川崎ルフロン10階、駅直結で雨天最強。アマゾン川エリアが見応えあり',
       summerCool: true,
       waterPlay: true,
-    },
-    {
-      name: 'NHKスタジオパーク（渋谷）', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '渋谷区', ward: '渋谷区', note: 'おかあさんといっしょ等の体験展示※2024年休館中', budget: 'low',
-      reservation: 'none',
-      crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '※建て替えで2024年から休館中、再開時期は公式サイトで要確認',
-      summerCool: true,
     },
     {
       name: 'トリックアートミュージアム高尾山', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '八王子市', note: '高尾山口駅前、屋内で写真映え', budget: 'low',
@@ -4571,6 +4565,22 @@ for (const areaList of Object.values(SPOTS)) {
   for (const spot of areaList) {
     if (!spot.kidReport && KID_REPORTS[spot.name]) {
       spot.kidReport = KID_REPORTS[spot.name];
+    }
+  }
+}
+
+// ============================================================================
+// 設備データ（SPOT_FACILITIES）のマージ
+//
+// lib/spot-facilities.ts の公式確認済み設備情報を、スポット name の完全一致で
+// SPOTS 内の各スポットに添付する。すでにインラインで facilities を持つスポットは
+// 尊重し、上書きしない（インライン値が優先）。
+// ============================================================================
+for (const areaList of Object.values(SPOTS)) {
+  if (!areaList) continue;
+  for (const spot of areaList) {
+    if (!spot.facilities && SPOT_FACILITIES[spot.name]) {
+      spot.facilities = SPOT_FACILITIES[spot.name];
     }
   }
 }

@@ -45,8 +45,6 @@ export const SPOTS_EXTRA_4: Partial<Record<AreaSlug, Spot[]>> = {
     { name: '神崎農村公園ヨーデルの森', category: 'farm', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '神河町', note: '約60種の動物とのふれあいや体験教室が豊富な農村公園。芝すべりやじゃぶじゃぶ池もある。', budget: 'mid',
       waterPlay: true, },
     { name: '東条湖おもちゃ王国', category: 'amusement', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '加東市', note: 'おもちゃがテーマの遊園地。入場料だけで遊べる屋内の「おもちゃのお部屋」が小さな子に人気。', budget: 'mid' },
-    { name: 'アネビートリムパーク神戸', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '神戸市東灘区', note: '世界各国のおもちゃや遊具で遊べる室内施設。指先を使う遊びから体を動かす遊びまでそろう。', budget: 'low',
-      summerCool: true, },
     { name: '神戸アンパンマンこどもミュージアム&モール', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '神戸市中央区', note: 'アンパンマンのテーマパーク。入場無料のモールもあり小さな子と気軽に立ち寄れる。', budget: 'high',
       summerCool: true, },
     { name: '西猪名公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '伊丹市', note: '広い水遊び広場のある公園。夏は水遊び、ほかの季節も遊具で遊べてファミリーに使いやすい。', budget: 'free',
