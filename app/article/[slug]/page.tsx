@@ -17,7 +17,11 @@ import { AffiliateLinkGroup } from '@/components/affiliate/AffiliateLinkGroup';
 import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
 import { InlineItemCTA } from '@/components/article/InlineItemCTA';
 import { getAffiliateProducts } from '@/lib/affiliate-products';
-import { getRelatedItemsForArticle } from '@/lib/article-product-hints';
+import {
+  getRelatedItemsForArticle,
+  getRestaurantBridgeOffer,
+  getRestaurantFoodHubLinks,
+} from '@/lib/article-product-hints';
 import { getSupervisor } from '@/lib/supervisors';
 import { SupervisorLabel } from '@/components/article/SupervisorLabel';
 import { AdSlot } from '@/components/ads/AdSlot';
@@ -604,6 +608,14 @@ function FileArticleView({ article }: { article: FileArticle }) {
   );
   const inlineCtaItem = affiliateProducts[0] ?? keywordRelatedItems[0];
 
+  // 外食文脈の記事には高単価ブリッジ（幼児食宅配）を末尾に1点だけ添える。
+  // 低単価グッズCTAとは別枠で、外食トラフィックを¥1,000〜/件のアフィへ橋渡しする。
+  const restaurantBridge = getRestaurantBridgeOffer(
+    article.slug,
+    article.category,
+    article.title,
+  );
+
   // 概算 wordCount（HTMLタグ除去後の文字数）。Google Article リッチリザルトの
   // 推奨フィールド。日本語は文字数 = ほぼ語数として扱う。
   const articleWordCount = (() => {
@@ -1054,6 +1066,25 @@ function FileArticleView({ article }: { article: FileArticle }) {
             />
           )}
 
+          {/* 外食記事向け高単価ブリッジ（幼児食宅配）。低単価グッズCTAの下に1点だけ。 */}
+          {restaurantBridge && (
+            <div style={{ marginTop: 20 }}>
+              <p style={{ fontSize: 13, color: 'var(--ink-mute)', margin: '0 0 10px' }}>
+                外食が続く週は、家の食事を宅配でラクにするご家庭も増えています。
+              </p>
+              <InlineItemCTA
+                item={{
+                  href: restaurantBridge.href,
+                  title: restaurantBridge.title,
+                  subtitle: restaurantBridge.subtitle,
+                  price: restaurantBridge.price,
+                  provider: restaurantBridge.provider,
+                  pr: true,
+                }}
+              />
+            </div>
+          )}
+
           {/* AdSense: 記事末尾（FAQ前） */}
           <AdSlot placement="article-end" />
 
@@ -1234,6 +1265,22 @@ function FileArticleView({ article }: { article: FileArticle }) {
               }))}
             />
           )}
+
+          {/* 外食記事 → 食事系の高単価ハブ記事への回遊（集客の弱い money ページへ内部リンク） */}
+          {(() => {
+            const hubLinks = getRestaurantFoodHubLinks(
+              article.slug,
+              article.category,
+              article.title,
+            );
+            return hubLinks.length > 0 ? (
+              <CrossLinkCards
+                eyebrow="あわせて読みたい"
+                heading="子どもの食事の準備に役立つ記事"
+                items={hubLinks}
+              />
+            ) : null;
+          })()}
 
           {/* Related articles */}
           {relatedArticles.length > 0 && (

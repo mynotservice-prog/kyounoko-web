@@ -37,7 +37,9 @@ import {
 import { findStationBySlug } from '@/lib/all-stations';
 import { StationSpotConditionView } from '@/components/station/StationSpotConditionView';
 import { AffiliateLinkGroup } from '@/components/affiliate/AffiliateLinkGroup';
+import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
 import { getCatalogItems } from '@/lib/items-catalog';
+import { getRestaurantBridgeOffer } from '@/lib/article-product-hints';
 import { buildStationIntro, buildRestaurantInsight, insightToSentence } from '@/lib/station-insight';
 
 export const dynamic = 'force-static';
@@ -634,6 +636,17 @@ export default async function StationConditionPage({ params }: Props) {
                 pr: false,
               }))}
             />
+            {(() => {
+              const bridge = getRestaurantBridgeOffer(conditionSlug, 'gaishoku', cond.label);
+              return bridge ? (
+                <div style={{ marginTop: 16 }}>
+                  <p style={{ fontSize: 13, color: 'var(--ink-mute)', margin: '0 0 10px' }}>
+                    外食が増える時期は、家の食事を宅配でラクにするご家庭も。
+                  </p>
+                  <AffiliateLink {...bridge} />
+                </div>
+              ) : null;
+            })()}
           </section>
 
           {/* 同じ駅で別の条件を試す（チップ形式・3件） */}
