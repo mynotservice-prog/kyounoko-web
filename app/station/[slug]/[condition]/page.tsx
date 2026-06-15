@@ -36,6 +36,8 @@ import {
 } from '@/lib/station-spots';
 import { findStationBySlug } from '@/lib/all-stations';
 import { StationSpotConditionView } from '@/components/station/StationSpotConditionView';
+import { AffiliateLinkGroup } from '@/components/affiliate/AffiliateLinkGroup';
+import { getCatalogItems } from '@/lib/items-catalog';
 import { buildStationIntro, buildRestaurantInsight, insightToSentence } from '@/lib/station-insight';
 
 export const dynamic = 'force-static';
@@ -609,6 +611,30 @@ export default async function StationConditionPage({ params }: Props) {
               </div>
             </section>
           )}
+
+          {/* 子連れ外食お助けグッズ（restaurant 系条件は全て外食文脈なので常時表示） */}
+          <section style={{
+            marginTop: 36,
+            paddingTop: 32,
+            borderTop: '1px solid rgba(201,96,62,0.14)',
+          }}>
+            <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 6 }}>
+              子連れ外食を乗り切るお助けグッズ
+            </h2>
+            <p style={{ fontSize: 13, color: 'var(--ink-mute)', marginTop: 0, marginBottom: 14 }}>
+              ベビーチェアが無い店でも安心。持っていくと外食がぐっとラクになる定番。
+            </p>
+            <AffiliateLinkGroup
+              items={getCatalogItems('gaishoku').slice(0, 3).map((it) => ({
+                href: it.href,
+                title: it.name,
+                subtitle: it.subtitle,
+                price: it.price,
+                provider: it.provider,
+                pr: false,
+              }))}
+            />
+          </section>
 
           {/* 同じ駅で別の条件を試す（チップ形式・3件） */}
           {otherConditions.length > 0 && (
