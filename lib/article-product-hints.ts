@@ -70,25 +70,31 @@ function containsAny(haystacks: string[], needles: string[]): boolean {
  * 上から順に評価し、最初にマッチしたルールのカテゴリ群を使う。
  * 具体的・限定的なルールを上に、汎用的なものを下に置く。
  */
+/**
+ * 外食・子連れ攻略・キッズメニュー文脈を判定するキーワード群。
+ * 店名・「子連れ攻略」「キッズメニュー」等の restaurant 固有トークンに限定し、
+ * 純粋なベビーチェア記事（home用ハイチェア）は誤検出しない。
+ * gaishoku 商品ルートと高単価ブリッジ（幼児食宅配）の両方で共有する。
+ */
+const RESTAURANT_NEEDLES = [
+  'kodzure', 'koryaku', 'kids-menu', 'kidsmenu', 'famires',
+  'family-restaurant', 'gaishoku', 'gaisyoku', 'shokudo',
+  'rinyushoku-mochikomi', 'tabekoboshi', 'bebycar-ok-cafe',
+  'morning-cafe', 'kids-cafe', 'kodzure-cafe',
+  'ohsho', 'saize', 'bamiyan', 'gusto', 'yayoiken', 'cocos',
+  'tenya', 'sushiro', 'hamasushi', 'hama-sushi', 'kappazushi',
+  'kurazushi', 'jonathan', 'shabuyou', 'yakiniku', 'gyukaku',
+  'gyu-kaku', 'sukiya', 'matsuya', 'yoshinoya', 'maido',
+  'royalhost', 'joyfull', 'dennys',
+  '外食', 'ファミレス', 'キッズメニュー', '回転寿司', '食べこぼし',
+];
+
 const HINT_RULES: { cats: CatalogCategory[]; needles: string[] }[] = [
   // 外食・子連れ攻略・キッズメニュー（最大トラフィック群 → 外食お助けグッズ）
-  // 店名・「子連れ攻略」「キッズメニュー」等を最優先で拾い、抱っこ紐/ベビーカーへの
-  // 的外れな代替を防ぐ。restaurant固有トークンに限定し、純粋なベビーチェア記事
-  // （home用ハイチェア）は下の baby-chair ルールに残す。
+  // 抱っこ紐/ベビーカーへの的外れな代替を防ぐため最優先で拾う。
   {
     cats: ['gaishoku'],
-    needles: [
-      'kodzure', 'koryaku', 'kids-menu', 'kidsmenu', 'famires',
-      'family-restaurant', 'gaishoku', 'gaisyoku', 'shokudo',
-      'rinyushoku-mochikomi', 'tabekoboshi', 'bebycar-ok-cafe',
-      'morning-cafe', 'kids-cafe', 'kodzure-cafe',
-      'ohsho', 'saize', 'bamiyan', 'gusto', 'yayoiken', 'cocos',
-      'tenya', 'sushiro', 'hamasushi', 'hama-sushi', 'kappazushi',
-      'kurazushi', 'jonathan', 'shabuyou', 'yakiniku', 'gyukaku',
-      'gyu-kaku', 'sukiya', 'matsuya', 'yoshinoya', 'maido',
-      'royalhost', 'joyfull', 'dennys',
-      '外食', 'ファミレス', 'キッズメニュー', '回転寿司', '食べこぼし',
-    ],
+    needles: RESTAURANT_NEEDLES,
   },
   // ベビーシッター・一時保育
   {
@@ -232,4 +238,43 @@ export function getRelatedItemsForArticle(
 
   // どれにも該当しない -> 空配列（CTA セクションそのものを出さない）
   return [];
+}
+
+/**
+ * 外食文脈か判定する。記事 slug / category / title に restaurant トークンが
+ * 含まれれば true。外食トラフィック → 高単価ブリッジの出し分けに使う。
+ */
+export function isRestaurantContext(
+  slug: string,
+  category?: string,
+  title?: string,
+): boolean {
+  return containsAny([slug, category ?? '', title ?? ''], RESTAURANT_NEEDLES);
+}
+
+/**
+ * 外食文脈向けの「高単価ブリッジ」オファーを1点返す（非外食文脈なら null）。
+ *
+ * 外食トラフィック（全体の約7割）は楽天低単価グッズしか刺さらず収益天井が低い。
+ * 「外食が続く週は家では幼児食宅配でラクに」という文脈的に正直な導線で、
+ * 1件¥1,000〜の高単価アフィ（幼児食冷凍宅配 mogumo / A8）へ橋渡しする。
+ * 低単価グッズCTAとは別枠で、控えめな1点に絞って表示する。
+ */
+export function getRestaurantBridgeOffer(
+  slug: string,
+  category?: string,
+  title?: string,
+): AffiliateLinkProps | null {
+  if (!isRestaurantContext(slug, category, title)) return null;
+  const mogumo = CATALOG_ITEMS.find((it) => it.id === 'ts-mogumo');
+  if (!mogumo) return null;
+  return {
+    href: mogumo.href,
+    title: '幼児食の冷凍宅配「mogumo」',
+    subtitle:
+      '外食が続く週も、家ではチンするだけで栄養バランス。1-3歳向け・栄養士監修の幼児食宅配',
+    price: mogumo.price,
+    provider: mogumo.provider,
+    pr: true,
+  };
 }
