@@ -11,6 +11,7 @@ import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
 import { SPOT_CATEGORY_LABEL, type Spot } from '@/lib/spots';
 import type { StationCondition } from '@/lib/station-conditions';
 import type { AnyStation } from '@/lib/all-stations';
+import { buildStationIntro, buildSpotInsight, insightToSentence } from '@/lib/station-insight';
 
 type Props = {
   station: AnyStation;
@@ -28,6 +29,18 @@ export function StationSpotConditionView({
   isThin,
 }: Props) {
   const wardName = station.regionLabel;
+
+  // 駅・エリア導入文＋該当スポットの設備内訳（駅×条件ごとに固有のデータ由来サマリー）。
+  const stationIntro = buildStationIntro({
+    stationName: station.name,
+    wardName,
+    lines: station.lines,
+    scale: station.scale,
+    familyFriendly: station.familyFriendly,
+  });
+  const insight = buildSpotInsight(spotsMatched);
+  const insightText = insightToSentence(insight, cond.label, '件');
+
   // JSON-LD ItemList
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -102,6 +115,59 @@ export function StationSpotConditionView({
             <p style={{ fontSize: 13, color: 'var(--ink-sub)', lineHeight: 1.85, margin: 0 }}>
               {cond.description}
             </p>
+
+            {/* 駅・エリア導入文（駅の実データ由来） */}
+            <p
+              style={{
+                fontSize: 14,
+                color: 'var(--ink-sub)',
+                lineHeight: 1.85,
+                marginTop: 14,
+                paddingLeft: 12,
+                borderLeft: '3px solid rgba(201,96,62,0.30)',
+              }}
+            >
+              {stationIntro}
+            </p>
+
+            {/* 集計インサイト（駅×条件ごとに固有のデータ由来サマリー） */}
+            {insightText && (
+              <div
+                style={{
+                  marginTop: 16,
+                  padding: '14px 16px',
+                  background: 'var(--paper-card)',
+                  border: '1px solid rgba(201,96,62,0.16)',
+                  borderRadius: 10,
+                }}
+              >
+                <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--clay-deep)', marginBottom: 6 }}>
+                  この条件のデータ
+                </div>
+                <p style={{ fontSize: 13.5, color: 'var(--ink-sub)', lineHeight: 1.8, margin: 0 }}>
+                  {insightText}
+                </p>
+                {insight.stats.length > 0 && (
+                  <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 10 }}>
+                    {insight.stats.map((s) => (
+                      <span
+                        key={s.label}
+                        style={{
+                          fontSize: 11.5,
+                          background: 'rgba(201,96,62,0.08)',
+                          color: 'var(--clay-deep)',
+                          padding: '3px 9px',
+                          borderRadius: 999,
+                        }}
+                      >
+                        {s.label} {s.count}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+
             <p style={{ fontSize: 12, color: 'var(--ink-mute)', marginTop: 12 }}>
               {cond.tagline} | 該当 {spotsMatched.length} 件
             </p>

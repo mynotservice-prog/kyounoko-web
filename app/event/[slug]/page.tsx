@@ -12,6 +12,8 @@ import {
   getEventsByArea,
   isEventEnded,
 } from '@/lib/events';
+import { getAllSpotsWithSlug, isSpotIndexable } from '@/lib/spots';
+import { spotToV2 } from '@/lib/v2-adapters';
 import { AdSlot } from '@/components/ads/AdSlot';
 
 export const revalidate = 3600;
@@ -54,6 +56,20 @@ export default async function EventPage({ params }: Props) {
   const sameArea = getEventsByArea(ev.area)
     .filter((e) => e.slug !== slug && !isEventEnded(e))
     .slice(0, 4);
+
+  // 会場周辺の子連れスポット（一次データ）。
+  // 同一エリア内のスポットのうち、会場の市区町村と一致するものを優先して提示する。
+  // 「イベントのついでに寄れる実在スポット」を編集部の確認済みデータから案内する。
+  const nearbySpots = (() => {
+    const inArea = getAllSpotsWithSlug().filter(
+      (x) => x.area === ev.area && isSpotIndexable(x.spot),
+    );
+    const cityMatch = ev.city
+      ? inArea.filter((x) => (x.spot.ward ?? x.spot.city ?? '').includes(ev.city as string))
+      : [];
+    const rest = inArea.filter((x) => !cityMatch.includes(x));
+    return [...cityMatch, ...rest].slice(0, 6);
+  })();
 
   // JSON-LD: Event
   const jsonLdEvent = {
@@ -263,6 +279,50 @@ export default async function EventPage({ params }: Props) {
               ))}
             </div>
           </div>
+        )}
+
+        {/* 会場周辺の子連れスポット（一次データ） */}
+        {nearbySpots.length > 0 && (
+          <>
+            <V2SectionHead
+              title={`${ev.city ?? '会場周辺'}でついでに寄れる子連れスポット`}
+              moreHref="/spots"
+            />
+            <p
+              style={{
+                fontSize: 12.5,
+                color: 'var(--v2-ink-sub)',
+                lineHeight: 1.7,
+                margin: '0 0 12px',
+                padding: '0 2px',
+              }}
+            >
+              イベントの前後に立ち寄りやすい、編集部が設備・料金を確認した
+              {ev.city ?? 'この'}エリアの子連れスポットです。授乳室やおむつ替え台の有無もスポットページで確認できます。
+            </p>
+            <div className="v2-hscroll">
+              {nearbySpots.map((x, i) => {
+                const v = spotToV2(x.spot, i);
+                return (
+                  <Link
+                    key={x.slug}
+                    href={`/spot/${x.slug}`}
+                    className="v2-card-mini"
+                    style={{ width: 168 }}
+                  >
+                    <div className="v2-imgwrap r" style={{ aspectRatio: '16/9' }}>
+                      <V2Img src={v.img} seed={x.slug} alt={x.spot.name} />
+                    </div>
+                    <div className="v2-card-mini-title">{x.spot.name}</div>
+                    <div className="v2-card-v-loc" style={{ margin: 0 }}>
+                      <V2Icon name="pin" size={12} color="var(--v2-orange)" />
+                      {x.spot.ward || x.spot.city}
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </>
         )}
 
         {/* AdSense */}

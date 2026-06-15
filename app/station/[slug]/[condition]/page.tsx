@@ -35,6 +35,7 @@ import {
 } from '@/lib/station-spots';
 import { findStationBySlug } from '@/lib/all-stations';
 import { StationSpotConditionView } from '@/components/station/StationSpotConditionView';
+import { buildStationIntro, buildRestaurantInsight, insightToSentence } from '@/lib/station-insight';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400; // 24h
@@ -197,6 +198,18 @@ export default async function StationConditionPage({ params }: Props) {
 
   const wardName = WARD_NAMES[station.ward] ?? '';
 
+  // 駅・エリア導入文（駅の実データから生成）と、該当店セットの集計インサイト。
+  // 後者は駅×条件ごとに必ず異なるデータ由来サマリーで、filtered view の重複感を解消する。
+  const stationIntro = buildStationIntro({
+    stationName: station.name,
+    wardName,
+    lines: station.lines,
+    scale: station.scale,
+    familyFriendly: station.familyFriendly,
+  });
+  const insight = buildRestaurantInsight(chains, indies);
+  const insightText = insightToSentence(insight, cond.label, '店');
+
   // チェーンをカテゴリ別にグルーピング
   const byCategory = new Map<ChainCategory, Chain[]>();
   for (const c of chains) {
@@ -331,6 +344,60 @@ export default async function StationConditionPage({ params }: Props) {
               {cond.description}
               {wardName}で{cond.label}のお店選びに迷ったらまずここから。
             </p>
+
+            {/* 駅・エリア導入文（駅の実データ由来） */}
+            <p
+              className="station-intro"
+              style={{
+                fontSize: 14,
+                color: 'var(--ink-sub)',
+                lineHeight: 1.85,
+                marginTop: 14,
+                paddingLeft: 12,
+                borderLeft: '3px solid rgba(201,96,62,0.30)',
+              }}
+            >
+              {stationIntro}
+            </p>
+
+            {/* 集計インサイト（駅×条件ごとに固有のデータ由来サマリー） */}
+            {insightText && (
+              <div
+                className="station-insight"
+                style={{
+                  marginTop: 16,
+                  padding: '14px 16px',
+                  background: 'var(--paper-card)',
+                  border: '1px solid rgba(201,96,62,0.16)',
+                  borderRadius: 10,
+                }}
+              >
+                <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--clay-deep)', marginBottom: 6 }}>
+                  この条件のデータ
+                </div>
+                <p style={{ fontSize: 13.5, color: 'var(--ink-sub)', lineHeight: 1.8, margin: 0 }}>
+                  {insightText}
+                </p>
+                {insight.stats.length > 0 && (
+                  <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 10 }}>
+                    {insight.stats.map((s) => (
+                      <span
+                        key={s.label}
+                        style={{
+                          fontSize: 11.5,
+                          background: 'rgba(201,96,62,0.08)',
+                          color: 'var(--clay-deep)',
+                          padding: '3px 9px',
+                          borderRadius: 999,
+                        }}
+                      >
+                        {s.label} {s.count}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
 
             {isThinResult && (
               <div
