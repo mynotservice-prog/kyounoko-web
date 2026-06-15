@@ -258,8 +258,10 @@ function wrapAffiliateLinksInHtml(html: string): string {
     /(<a\s[^>]*?href=)(["'])([^"']+)(["'])([^>]*>)/gi,
     (match, prefix, q1, href, q2, suffix) => {
       const trimmed = href.trim();
-      // 既にもしも経由なら触らない
-      if (/^https?:\/\/af\.moshimo\.com\//i.test(trimmed)) return match;
+      // もしも経由URLはURLは触らず、rel/target のみ付与（アフィ表示・SEO対応）
+      if (/^https?:\/\/af\.moshimo\.com\//i.test(trimmed)) {
+        return ensureRelAndTarget(prefix + q1 + href + q2 + suffix);
+      }
       // 楽天
       if (/^https?:\/\/([^/]*\.)?rakuten\.co\.jp\//i.test(trimmed)) {
         const wrapped = wrapMoshimoRakutenInline(trimmed);
@@ -276,6 +278,10 @@ function wrapAffiliateLinksInHtml(html: string): string {
           return ensureRelAndTarget(prefix + q1 + wrapped + q2 + suffix);
         }
         return match;
+      }
+      // A8.net（px.a8.net 等のアフィリンク）はURLは変えず rel/target のみ付与
+      if (/^https?:\/\/([^/]*\.)?a8\.net\//i.test(trimmed)) {
+        return ensureRelAndTarget(prefix + q1 + href + q2 + suffix);
       }
       return match;
     }
