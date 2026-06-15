@@ -15,7 +15,22 @@ export default function AdminSpots() {
         <h1 style={{ fontFamily: 'var(--font-mincho)', fontSize: 22, margin: 0 }}>
           スポット一覧 ({total})
         </h1>
-        <div style={{ marginLeft: 'auto', fontSize: 12, color: 'var(--ink-mute)' }}>
+        <a
+          href="/admin/spots/edit"
+          style={{
+            marginLeft: 'auto',
+            fontSize: 13,
+            fontWeight: 600,
+            padding: '7px 16px',
+            background: 'var(--ink)',
+            color: '#fff',
+            borderRadius: 6,
+            textDecoration: 'none',
+          }}
+        >
+          ✏️ 編集する
+        </a>
+        <div style={{ marginLeft: 16, fontSize: 12, color: 'var(--ink-mute)' }}>
           {covered}都道府県カバー / 47
         </div>
       </div>

@@ -14,6 +14,7 @@ import type { AreaSlug } from './area';
 import { KID_REPORTS } from './kid-reports';
 import { SPOT_FACILITIES } from './spot-facilities';
 import { SPOTS_EXTRA } from './spots-extra';
+import { mergeSpot } from './spot-overrides';
 
 export type SpotCategory =
   | 'zoo'          // 動物園
@@ -3057,14 +3058,14 @@ export function getAllSpotsWithSlug(): Array<{ slug: string; area: AreaSlug | st
       const slug = spotToSlug(s, area);
       if (seen.has(slug)) continue;
       seen.add(slug);
-      all.push({ slug, area, spot: s });
+      all.push({ slug, area, spot: mergeSpot(s, slug) });
     }
   }
   for (const s of TOKYO_RESTAURANTS) {
     const slug = spotToSlug(s, 'tokyo');
     if (seen.has(slug)) continue;
     seen.add(slug);
-    all.push({ slug, area: 'tokyo', spot: s });
+    all.push({ slug, area: 'tokyo', spot: mergeSpot(s, slug) });
   }
   return all;
 }
