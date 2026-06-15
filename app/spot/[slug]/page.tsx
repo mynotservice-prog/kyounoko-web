@@ -12,6 +12,7 @@ import {
 } from '@/lib/spots';
 import type { Spot } from '@/lib/spots';
 import { findStationBySlug } from '@/lib/all-stations';
+import { SPOT_CLOSED } from '@/lib/spot-closed';
 import { getAllFileArticles } from '@/lib/articles';
 import { buildSpotJsonLd } from '@/lib/spot-schema';
 import {
@@ -53,7 +54,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: { canonical: `/spot/${slug}` },
-    robots: isSpotIndexable(spot) ? undefined : { index: false },
+    // 閉館スポットと中身の薄いスポットは noindex（不正確・低品質な情報を検索結果に残さない）。
+    robots: SPOT_CLOSED[spot.name] || !isSpotIndexable(spot) ? { index: false } : undefined,
     openGraph: {
       title,
       description,
@@ -84,6 +86,9 @@ export default async function SpotPage({ params }: Props) {
   const { spot } = entry;
   const category = SPOT_CATEGORY_LABEL[spot.category] ?? spot.category;
   const location = spot.ward ?? spot.city ?? '';
+
+  // 閉館スポットの案内文（あれば閉館バナーを表示し noindex）。
+  const closedNotice = SPOT_CLOSED[spot.name];
 
   // 最寄り駅 slug を日本語駅名へ解決（レジストリに無い場合は元の値をそのまま表示）。
   const nearestStationName = spot.nearestStation
@@ -178,6 +183,28 @@ export default async function SpotPage({ params }: Props) {
             </div>
           </div>
         </div>
+
+        {/* 閉館バナー */}
+        {closedNotice && (
+          <div className="v2-section" style={{ marginTop: 14 }}>
+            <div
+              role="status"
+              style={{
+                background: 'var(--v2-ink-mute, #f3f3f3)',
+                border: '1px solid var(--v2-line)',
+                borderRadius: 'var(--v2-r-card)',
+                padding: '12px 14px',
+                fontSize: 13,
+                color: 'var(--v2-ink-sub)',
+                lineHeight: 1.65,
+              }}
+            >
+              <strong style={{ color: 'var(--v2-ink)' }}>このスポットは閉館・閉店しています。</strong>
+              <br />
+              {closedNotice}
+            </div>
+          </div>
+        )}
 
         {/* タグ */}
         <div className="v2-section" style={{ marginTop: 14 }}>
