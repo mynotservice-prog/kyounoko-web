@@ -5,6 +5,7 @@ import {
   SPOT_TEXT_FIELDS,
   SPOT_PRICING_FIELDS,
   SPOT_FACILITY_ENUM_FIELDS,
+  SPOT_AGE_GUIDE_FIELDS,
   type SpotOverride,
 } from '@/lib/spot-overrides';
 
@@ -96,6 +97,19 @@ function sanitizePatch(input: unknown): { patch: SpotOverride; clear: Set<string
         } else {
           return { error: `unknown facilities field: ${fk}` };
         }
+      }
+      if (Object.keys(out).length > 0) result[k] = out;
+      else clear.add(k);
+    } else if (k === 'ageGuide') {
+      if (!v || typeof v !== 'object') return { error: 'ageGuide must be object' };
+      const ag = v as Record<string, unknown>;
+      const out: Record<string, string> = {};
+      for (const ak of Object.keys(ag)) {
+        if (!(SPOT_AGE_GUIDE_FIELDS as readonly string[]).includes(ak)) return { error: `unknown ageGuide field: ${ak}` };
+        const av = ag[ak];
+        if (av == null || av === '') continue;
+        if (typeof av !== 'string' || av.length > 400) return { error: `invalid ageGuide.${ak}` };
+        out[ak] = av;
       }
       if (Object.keys(out).length > 0) result[k] = out;
       else clear.add(k);

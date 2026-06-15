@@ -1,8 +1,15 @@
 'use client';
 
 import React from 'react';
-import { SPOT_CATEGORY_LABEL, type Spot } from '@/lib/spots';
+import { SPOT_CATEGORY_LABEL, type Spot, type AgeTag } from '@/lib/spots';
+import { buildEnjoyByAgeBlocks } from '@/lib/spot-narratives';
 import type { SpotOverride, SpotOverridesMap } from '@/lib/spot-overrides';
+
+const AGE_LABEL: Record<AgeTag, string> = {
+  '0-1': '0〜1歳',
+  '2-3': '2〜3歳',
+  '4-6': '4〜6歳',
+};
 
 type Entry = { slug: string; area: string; spot: Spot };
 
@@ -43,6 +50,27 @@ export function SpotsEditClient({
   const [q, setQ] = React.useState('');
   const [openSlug, setOpenSlug] = React.useState<string | null>(null);
 
+  // サーバーから渡る overrides はビルド時のスナップショットで、保存直後（再デプロイ前）
+  // はまだ反映されていない。マウント時に API（本番は GitHub を直読み）から最新を取得し、
+  // 「保存したのに編集欄が空に戻る」誤解を防ぐ。
+  const [liveOverrides, setLiveOverrides] = React.useState<SpotOverridesMap>(overrides);
+  const [loaded, setLoaded] = React.useState(false);
+  React.useEffect(() => {
+    let alive = true;
+    fetch('/api/admin/spot-overrides')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d: { overrides?: SpotOverridesMap } | null) => {
+        if (alive && d?.overrides) {
+          setLiveOverrides(d.overrides);
+          setLoaded(true);
+        }
+      })
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, []);
+
   const filtered = entries.filter((e) => {
     if (!q) return true;
     const nq = q.toLowerCase();
@@ -76,16 +104,18 @@ export function SpotsEditClient({
           }}
         />
         <div style={{ fontSize: 11, color: 'var(--ink-mute)', marginTop: 6 }}>
-          {filtered.length} / {entries.length} 件 · 編集済 {Object.keys(overrides).length} 件
+          {filtered.length} / {entries.length} 件 · 編集済 {Object.keys(liveOverrides).length} 件
+          {loaded ? ' · 最新の保存内容を反映済み' : ' · 最新の保存内容を読込中…'}
         </div>
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
         {filtered.slice(0, 300).map((e) => (
           <SpotRow
-            key={e.slug}
+            // loaded が変わったら remount して、最新 override でフォームを再初期化する
+            key={`${e.slug}-${loaded ? 'live' : 'init'}`}
             entry={e}
-            override={overrides[e.slug] ?? {}}
+            override={liveOverrides[e.slug] ?? {}}
             isOpen={openSlug === e.slug}
             onToggle={() => setOpenSlug(openSlug === e.slug ? null : e.slug)}
           />
@@ -122,7 +152,9 @@ function SpotRow({
     reservation: override.reservation ?? '',
     hiddenTip: override.hiddenTip ?? '',
     nearby: override.nearby ?? '',
-    waterDepth: override.waterDepth ?? '',
+    age_0_1: override.ageGuide?.['0-1'] ?? '',
+    age_2_3: override.ageGuide?.['2-3'] ?? '',
+    age_4_6: override.ageGuide?.['4-6'] ?? '',
     p_adult: override.pricing?.adult ?? '',
     p_elementary: override.pricing?.elementary ?? '',
     p_preschool: override.pricing?.preschool ?? '',
@@ -152,7 +184,11 @@ function SpotRow({
       reservation: form.reservation,
       hiddenTip: form.hiddenTip,
       nearby: form.nearby,
-      waterDepth: form.waterDepth,
+      ageGuide: {
+        '0-1': form.age_0_1,
+        '2-3': form.age_2_3,
+        '4-6': form.age_4_6,
+      },
       pricing: {
         adult: form.p_adult,
         elementary: form.p_elementary,
@@ -211,6 +247,25 @@ function SpotRow({
         onChange={(e) => set(key, e.target.value)}
         placeholder={original != null && original !== '' ? `現在: ${String(original)}` : '（未設定）'}
         style={inputStyle}
+      />
+    </label>
+  );
+
+  // 年齢別の楽しみ方の「現在ページに表示中の文」を年齢ごとに取得（プレースホルダ用）。
+  // 未入力ならカテゴリ共通の自動文がそのまま placeholder に出る。
+  const ageDefaults: Partial<Record<AgeTag, string>> = Object.fromEntries(
+    buildEnjoyByAgeBlocks(spot).map((b) => [b.age, b.text]),
+  );
+
+  const ageField = (key: keyof typeof form, age: AgeTag) => (
+    <label style={{ ...labelStyle, gridColumn: '1 / -1' }}>
+      <span style={captionStyle}>{AGE_LABEL[age]}</span>
+      <textarea
+        value={form[key]}
+        onChange={(e) => set(key, e.target.value)}
+        placeholder={ageDefaults[age] ? `現在: ${ageDefaults[age]}` : '（カテゴリ共通の自動文を表示中）'}
+        rows={2}
+        style={{ ...inputStyle, resize: 'vertical', lineHeight: 1.6 }}
       />
     </label>
   );
@@ -278,10 +333,21 @@ function SpotRow({
             {field('ward', '区（東京23区等）', spot.ward)}
             {selectField('budget', '料金目安', BUDGET_OPTIONS)}
             {selectField('reservation', '予約', RESERVATION_OPTIONS)}
-            {field('waterDepth', '水深目安', spot.waterDepth)}
             {field('note', '一言メモ', spot.note, true)}
             {field('hiddenTip', '穴場ポイント', spot.hiddenTip, true)}
             {field('nearby', '近隣セット提案', spot.nearby, true)}
+          </div>
+
+          <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', margin: '16px 0 8px' }}>
+            年齢別の楽しみ方
+            <span style={{ fontSize: 10, fontWeight: 400, color: 'var(--ink-mute)', marginLeft: 8 }}>
+              空欄ならカテゴリ共通の自動文を表示。施設に合わせて上書きできます。
+            </span>
+          </div>
+          <div style={{ display: 'grid', gap: 10 }}>
+            {spot.ages.includes('0-1') && ageField('age_0_1', '0-1')}
+            {spot.ages.includes('2-3') && ageField('age_2_3', '2-3')}
+            {spot.ages.includes('4-6') && ageField('age_4_6', '4-6')}
           </div>
 
           <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', margin: '16px 0 8px' }}>

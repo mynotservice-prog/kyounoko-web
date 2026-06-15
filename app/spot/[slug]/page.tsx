@@ -340,6 +340,75 @@ export default async function SpotPage({ params }: Props) {
           </div>
         )}
 
+        {/* 料金詳細（pricing が1つでも入っていれば表示） */}
+        {spot.pricing && Object.values(spot.pricing).some((v) => v) && (
+          <>
+            <div className="v2-sec-head">
+              <div className="v2-sec-title">
+                <span className="v2-bar-accent"></span>料金詳細
+              </div>
+            </div>
+            <div className="v2-section">
+              <div
+                style={{
+                  background: '#fff',
+                  border: '1px solid var(--v2-line)',
+                  borderRadius: 'var(--v2-r-card)',
+                  overflow: 'hidden',
+                }}
+              >
+                {([
+                  ['大人', spot.pricing.adult],
+                  ['小学生', spot.pricing.elementary],
+                  ['幼児', spot.pricing.preschool],
+                  ['乳児', spot.pricing.infant],
+                ] as const)
+                  .filter(([, v]) => v)
+                  .map(([label, v], i) => (
+                    <div
+                      key={label}
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        padding: '11px 14px',
+                        borderTop: i === 0 ? 'none' : '1px solid var(--v2-line)',
+                        fontSize: 13.5,
+                      }}
+                    >
+                      <span style={{ color: 'var(--v2-ink-mute)', fontWeight: 700 }}>{label}</span>
+                      <span style={{ color: 'var(--v2-ink)', fontWeight: 800 }}>{v}</span>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          </>
+        )}
+
+        {/* 近隣セット提案 */}
+        {spot.nearby && (
+          <div className="v2-section" style={{ marginTop: 18 }}>
+            <div
+              style={{
+                background: '#fff',
+                border: '1px solid var(--v2-line)',
+                borderRadius: 'var(--v2-r-card)',
+                padding: '14px 16px',
+                display: 'flex',
+                gap: 10,
+                alignItems: 'flex-start',
+              }}
+            >
+              <V2Icon name="pin" size={20} color="var(--v2-orange)" />
+              <div style={{ fontSize: 13, color: 'var(--v2-ink-soft)', lineHeight: 1.65 }}>
+                <strong style={{ color: 'var(--v2-ink)' }}>近くと組み合わせるなら</strong>
+                <br />
+                {spot.nearby}
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* AdSense */}
         <div className="v2-section" style={{ marginTop: 24 }}>
           <AdSlot placement="article-mid" />

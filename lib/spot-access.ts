@@ -156,7 +156,6 @@ export const SPOT_ACCESS: Record<string, SpotAccess> = {
   "ヒルゼン高原センター ジョイフルパーク": { nearestStation: "中国勝山駅", accessNote: "JR中国勝山駅から蒜山高原行きバス約80分、「蒜山高原センター前」下車すぐ" },
   "ファンタジーキッズリゾート新さっぽろ": { nearestStation: "新さっぽろ駅", walkMinutes: 3, accessNote: "地下鉄東西線新さっぽろ駅・JR新札幌駅から専用通路で徒歩約3分" },
   "ふくふくこども館": { nearestStation: "下関駅", walkMinutes: 3, accessNote: "JR山陽本線下関駅東口から徒歩約1〜3分（リピエ下関3F）" },
-  "ふくろうの杜（流山）": { nearestStation: "西別所駅", walkMinutes: 1, accessNote: "施設は流山市ではなく三重県桑名市の「ふくろうの杜café」。三岐鉄道北勢線西別所駅から徒歩約1分。入力locが誤り" },
   "ふじさんのぬく森キポキポ": { nearestStation: "富士山駅", accessNote: "富士急行線富士山駅から車で約10分。明確な徒歩時間の記載なく徒歩圏外。" },
   "ふなばしアンデルセン公園": { nearestStation: "三咲駅", accessNote: "新京成線三咲駅等からバス「アンデルセン公園」下車。鉄道駅から徒歩圏外でバス利用が基本" },
   "ふなばしアンデルセン公園 にじの池": { nearestStation: "三咲駅", accessNote: "新京成線三咲駅から京成バス（セコメディック病院行き等）でアンデルセン公園下車徒歩1分。徒歩圏外でバス利用。" },
