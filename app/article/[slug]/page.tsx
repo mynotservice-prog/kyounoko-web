@@ -17,7 +17,11 @@ import { AffiliateLinkGroup } from '@/components/affiliate/AffiliateLinkGroup';
 import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
 import { InlineItemCTA } from '@/components/article/InlineItemCTA';
 import { getAffiliateProducts } from '@/lib/affiliate-products';
-import { getRelatedItemsForArticle, getRestaurantBridgeOffer } from '@/lib/article-product-hints';
+import {
+  getRelatedItemsForArticle,
+  getRestaurantBridgeOffer,
+  getRestaurantFoodHubLinks,
+} from '@/lib/article-product-hints';
 import { getSupervisor } from '@/lib/supervisors';
 import { SupervisorLabel } from '@/components/article/SupervisorLabel';
 import { AdSlot } from '@/components/ads/AdSlot';
@@ -1261,6 +1265,22 @@ function FileArticleView({ article }: { article: FileArticle }) {
               }))}
             />
           )}
+
+          {/* 外食記事 → 食事系の高単価ハブ記事への回遊（集客の弱い money ページへ内部リンク） */}
+          {(() => {
+            const hubLinks = getRestaurantFoodHubLinks(
+              article.slug,
+              article.category,
+              article.title,
+            );
+            return hubLinks.length > 0 ? (
+              <CrossLinkCards
+                eyebrow="あわせて読みたい"
+                heading="子どもの食事の準備に役立つ記事"
+                items={hubLinks}
+              />
+            ) : null;
+          })()}
 
           {/* Related articles */}
           {relatedArticles.length > 0 && (

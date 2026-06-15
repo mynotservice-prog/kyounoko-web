@@ -278,3 +278,50 @@ export function getRestaurantBridgeOffer(
     pr: true,
   };
 }
+
+/** 外食記事 → 食事系の高単価ハブ記事への回遊リンク1件分。 */
+export type HubLink = {
+  href: string;
+  title: string;
+  description: string;
+  eyebrow: string;
+};
+
+/**
+ * 食事文脈の高単価ハブ記事（宅食/幼児食/離乳食の比較・宅配）。アンカーは
+ * 商用クエリに寄せた説明的文言にする。集客の弱い money ページへ、外食という
+ * 勝っているトラフィックから内部リンク（権益＋回遊）を流すための導線。
+ */
+const RESTAURANT_FOOD_HUBS: HubLink[] = [
+  {
+    href: '/article/yojishoku-reitou-tsukurioki',
+    title: '幼児食の冷凍作り置き・宅配で平日をラクに',
+    description: '外食続きで栄養が気になる週に。1〜5歳の幼児食を冷凍でまわす方法と宅配サービス。',
+    eyebrow: '食事の準備',
+  },
+  {
+    href: '/article/takushoku-service-hikaku-3sha',
+    title: '宅食サービス比較3社｜共働きの夜ごはん',
+    description: '温めるだけで一食完結。料金・品数・対応エリアで主要3社を比較。',
+    eyebrow: '食事の準備',
+  },
+  {
+    href: '/article/rinyuushoku-frozen-gekkabetsu',
+    title: '離乳食の冷凍宅配を月齢別に比較',
+    description: '5〜6か月のゴックン期から完了期まで。月齢に合う冷凍離乳食の選び方。',
+    eyebrow: '食事の準備',
+  },
+];
+
+/**
+ * 外食文脈の記事に出す「食事の準備に役立つ記事」回遊リンク（高単価ハブ）。
+ * 非外食文脈、または自身が対象ハブの場合は空配列。
+ */
+export function getRestaurantFoodHubLinks(
+  slug: string,
+  category?: string,
+  title?: string,
+): HubLink[] {
+  if (!isRestaurantContext(slug, category, title)) return [];
+  return RESTAURANT_FOOD_HUBS.filter((h) => !h.href.endsWith(`/${slug}`));
+}
