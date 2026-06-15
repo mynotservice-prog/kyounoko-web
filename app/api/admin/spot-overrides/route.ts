@@ -65,6 +65,9 @@ function sanitizePatch(input: unknown): { patch: SpotOverride; clear: Set<string
       if (typeof v !== 'string') return { error: `field ${k} must be string` };
       if (k === 'budget' && !BUDGETS.includes(v)) return { error: `invalid budget: ${v}` };
       if (k === 'reservation' && !RESERVATIONS.includes(v)) return { error: `invalid reservation: ${v}` };
+      if (k === 'image' && !/^(https?:\/\/|\/)/.test(v)) {
+        return { error: 'image は https:// で始まるURLか / で始まるパスを指定してください' };
+      }
       if (v.length > 500) return { error: `field ${k} too long` };
       result[k] = v;
     } else if (k === 'pricing') {
