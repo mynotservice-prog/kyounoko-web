@@ -76,6 +76,11 @@ export type Spot = {
   ages: AgeTag[];        // 特に楽しめる年齢層
   city?: string;         // 市区町村（ざっくり）
   note?: string;         // 一言メモ（30-50文字）
+  /**
+   * 差し替え用の hero 画像（URL または /img/... のサイト内パス）。
+   * admin（/admin/spots/edit）でアップロード/URL指定。未指定はカテゴリ自動画像。
+   */
+  image?: string;
   budget?: 'free' | 'low' | 'mid' | 'high';  // 入園料目安
   // ---- Instagram人気アカウントから学んだ情報密度UP項目 ----
   pricing?: {

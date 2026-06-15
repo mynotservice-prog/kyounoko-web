@@ -38,6 +38,7 @@ export const SPOT_TEXT_FIELDS = [
   'hiddenTip',
   'nearby',
   'waterDepth',
+  'image',
 ] as const;
 export type SpotTextField = (typeof SPOT_TEXT_FIELDS)[number];
 
@@ -61,7 +62,7 @@ export type SpotAgeGuideField = (typeof SPOT_AGE_GUIDE_FIELDS)[number];
 
 /** 上書きとして保存できる Spot の部分形。 */
 export type SpotOverride = Partial<
-  Pick<Spot, 'name' | 'city' | 'ward' | 'note' | 'budget' | 'reservation' | 'hiddenTip' | 'nearby' | 'waterDepth' | 'pricing' | 'facilities' | 'ageGuide'>
+  Pick<Spot, 'name' | 'city' | 'ward' | 'note' | 'budget' | 'reservation' | 'hiddenTip' | 'nearby' | 'waterDepth' | 'image' | 'pricing' | 'facilities' | 'ageGuide'>
 >;
 
 export type SpotOverridesMap = Record<string, SpotOverride>;

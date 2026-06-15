@@ -3,6 +3,7 @@
 import React from 'react';
 import { SPOT_CATEGORY_LABEL, type Spot, type AgeTag } from '@/lib/spots';
 import { buildEnjoyByAgeBlocks } from '@/lib/spot-narratives';
+import { spotToV2 } from '@/lib/v2-adapters';
 import type { SpotOverride, SpotOverridesMap } from '@/lib/spot-overrides';
 
 const AGE_LABEL: Record<AgeTag, string> = {
@@ -152,6 +153,7 @@ function SpotRow({
     reservation: override.reservation ?? '',
     hiddenTip: override.hiddenTip ?? '',
     nearby: override.nearby ?? '',
+    image: override.image ?? '',
     age_0_1: override.ageGuide?.['0-1'] ?? '',
     age_2_3: override.ageGuide?.['2-3'] ?? '',
     age_4_6: override.ageGuide?.['4-6'] ?? '',
@@ -168,9 +170,34 @@ function SpotRow({
   }));
   const [saving, setSaving] = React.useState(false);
   const [msg, setMsg] = React.useState('');
+  const [uploading, setUploading] = React.useState(false);
 
   const hasOverride = Object.keys(override).length > 0;
   const set = (k: string, v: string) => setForm((s) => ({ ...s, [k]: v }));
+
+  // 画像アップロード: ファイルを /api/admin/spot-image へ送り、返ってきたパスを image 欄にセット。
+  // この後 [保存] を押すと override に書き込まれて本番反映される。
+  const uploadImage = async (file: File) => {
+    setUploading(true);
+    setMsg('');
+    try {
+      const fd = new FormData();
+      fd.append('slug', slug);
+      fd.append('file', file);
+      const res = await fetch('/api/admin/spot-image', { method: 'POST', body: fd });
+      const data = (await res.json()) as { ok?: boolean; path?: string; error?: string };
+      if (!res.ok || !data.ok || !data.path) {
+        setMsg(`❌ アップロード失敗: ${data.error || 'failed'}`);
+      } else {
+        set('image', data.path);
+        setMsg('✅ 画像アップロード完了。[保存] を押すと反映されます');
+      }
+    } catch (e) {
+      setMsg('❌ ' + (e instanceof Error ? e.message : 'error'));
+    } finally {
+      setUploading(false);
+    }
+  };
 
   const save = async () => {
     setSaving(true);
@@ -184,6 +211,7 @@ function SpotRow({
       reservation: form.reservation,
       hiddenTip: form.hiddenTip,
       nearby: form.nearby,
+      image: form.image,
       ageGuide: {
         '0-1': form.age_0_1,
         '2-3': form.age_2_3,
@@ -250,6 +278,10 @@ function SpotRow({
       />
     </label>
   );
+
+  // 画像プレビュー: 編集中の image があればそれ、無ければ現在ページに出ている画像（自動 or 既存上書き）。
+  const previewSrc = form.image || spotToV2(spot).img;
+  const usingCustomImage = !!form.image;
 
   // 年齢別の楽しみ方の「現在ページに表示中の文」を年齢ごとに取得（プレースホルダ用）。
   // 未入力ならカテゴリ共通の自動文がそのまま placeholder に出る。
@@ -325,6 +357,73 @@ function SpotRow({
 
       {isOpen && (
         <div style={{ padding: '14px 16px 18px', borderTop: '1px solid var(--line)' }}>
+          {/* 画像（hero）— アップロード or URL/パス指定。空欄で自動画像に戻る。 */}
+          <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', margin: '0 0 8px' }}>
+            画像（メイン写真）
+            <span style={{ fontSize: 10, fontWeight: 400, color: 'var(--ink-mute)', marginLeft: 8 }}>
+              {usingCustomImage ? '差し替え画像を表示中' : '自動画像（カテゴリ別）を表示中'}
+            </span>
+          </div>
+          <div style={{ display: 'flex', gap: 14, alignItems: 'flex-start', flexWrap: 'wrap', marginBottom: 16 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={previewSrc}
+              alt="プレビュー"
+              style={{
+                width: 200, aspectRatio: '16 / 9', objectFit: 'cover',
+                borderRadius: 8, border: '1px solid var(--line)', background: '#f3f3f3', flex: 'none',
+              }}
+            />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8, minWidth: 240, flex: 1 }}>
+              <label
+                style={{
+                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 6,
+                  padding: '8px 14px', background: '#fff', border: '1px solid var(--line)',
+                  borderRadius: 6, fontSize: 12, fontWeight: 700, cursor: uploading ? 'wait' : 'pointer',
+                  color: 'var(--ink)', width: 'fit-content', opacity: uploading ? 0.6 : 1,
+                }}
+              >
+                {uploading ? 'アップロード中…' : '📷 画像をアップロード'}
+                <input
+                  type="file"
+                  accept="image/webp,image/jpeg,image/png,image/gif"
+                  disabled={uploading}
+                  onChange={(e) => {
+                    const f = e.target.files?.[0];
+                    if (f) uploadImage(f);
+                    e.target.value = '';
+                  }}
+                  style={{ display: 'none' }}
+                />
+              </label>
+              <label style={labelStyle}>
+                <span style={captionStyle}>画像URL / パス（直接指定も可）</span>
+                <input
+                  type="text"
+                  value={form.image}
+                  onChange={(e) => set('image', e.target.value)}
+                  placeholder="例: /img/spots/xxx.webp または https://…"
+                  style={inputStyle}
+                />
+              </label>
+              {usingCustomImage && (
+                <button
+                  type="button"
+                  onClick={() => set('image', '')}
+                  style={{
+                    alignSelf: 'flex-start', background: 'transparent', border: 'none',
+                    color: 'var(--clay-deep)', fontSize: 11, cursor: 'pointer', padding: 0,
+                  }}
+                >
+                  自動画像に戻す（クリア）
+                </button>
+              )}
+              <span style={{ fontSize: 10, color: 'var(--ink-mute)', lineHeight: 1.6 }}>
+                アップロード後に「保存」を押すと反映されます（本番は数分）。webp/jpg/png/gif・5MBまで。
+              </span>
+            </div>
+          </div>
+
           <div style={{
             display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 10,
           }}>
