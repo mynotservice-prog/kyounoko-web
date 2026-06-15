@@ -32,6 +32,7 @@ import {
   getSpotsForStation,
   filterSpotsByCondition,
   hasMatchingSpots,
+  getSpotConditionCanonicalSlug,
 } from '@/lib/station-spots';
 import { findStationBySlug } from '@/lib/all-stations';
 import { StationSpotConditionView } from '@/components/station/StationSpotConditionView';
@@ -128,10 +129,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
   const shouldNoindex = matchedCount < 3;
 
+  // スポット系条件は区市町村単位のデータで同区の駅が重複しがちなため、
+  // 同区×同条件の重複グループは代表駅へ canonical を集約する（重複コンテンツ対策）。
+  const canonicalSlug =
+    kind === 'spot'
+      ? getSpotConditionCanonicalSlug(slug, condition as StationConditionSlug)
+      : slug;
+
   return {
     title,
     description,
-    alternates: { canonical: `/station/${slug}/${condition}` },
+    alternates: { canonical: `/station/${canonicalSlug}/${condition}` },
     robots: shouldNoindex ? { index: false, follow: true } : undefined,
     openGraph: {
       title,
