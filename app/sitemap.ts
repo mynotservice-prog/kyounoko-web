@@ -20,7 +20,7 @@ import { TOKYO_LINES } from '@/lib/tokyo-lines';
 import { getStationWithChains } from '@/lib/station-restaurants';
 import { getIndieRestaurantsByStation } from '@/lib/indie-restaurants';
 import { STATION_CONDITIONS, hasMatchingItems, getConditionKind, filterChainsByCondition, filterIndiesByCondition } from '@/lib/station-conditions';
-import { getSpotsForStation, hasMatchingSpots, filterSpotsByCondition } from '@/lib/station-spots';
+import { getSpotsForStation, hasMatchingSpots, filterSpotsByCondition, getSpotConditionCanonicalSlug } from '@/lib/station-spots';
 import { FEATURE_PAGES } from '@/lib/feature-pages';
 import { AFFILIATE_TARGET_SLUGS } from '@/lib/affiliate-products';
 
@@ -259,6 +259,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       } else {
         if (!hasMatchingSpots(spotsAll, cond.slug)) continue;
         matchedCount = filterSpotsByCondition(spotsAll, cond.slug).length;
+        // 同区重複は代表へ canonical 集約しているので、非代表(重複)はsitemapに載せない。
+        if (getSpotConditionCanonicalSlug(s.slug, cond.slug) !== s.slug) continue;
       }
       if (matchedCount < STATION_CONDITION_MIN_MATCHES) continue;
       stationConditionPages.push({
@@ -282,6 +284,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       if (!hasMatchingSpots(spotsAll, cond.slug)) continue;
       const matchedCount = filterSpotsByCondition(spotsAll, cond.slug).length;
       if (matchedCount < STATION_CONDITION_MIN_MATCHES) continue;
+      // 同区重複は代表へ canonical 集約しているので、非代表(重複)はsitemapに載せない。
+      if (getSpotConditionCanonicalSlug(slug, cond.slug) !== slug) continue;
       stationConditionPages.push({
         url: `${BASE}/station/${slug}/${cond.slug}`,
         lastModified: new Date(),
