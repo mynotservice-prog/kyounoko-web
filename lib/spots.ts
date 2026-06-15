@@ -13,6 +13,7 @@
 import type { AreaSlug } from './area';
 import { KID_REPORTS } from './kid-reports';
 import { SPOT_FACILITIES } from './spot-facilities';
+import { SPOT_ACCESS } from './spot-access';
 import { SPOTS_EXTRA } from './spots-extra';
 import { mergeSpot } from './spot-overrides';
 
@@ -3071,6 +3072,23 @@ export function getAllSpotsWithSlug(): Array<{ slug: string; area: AreaSlug | st
 }
 
 /**
+ * スポットが個別ページとして「中身が十分」かを判定する品質ゲート。
+ * 6つの実データ項目（メモ・設備・料金・穴場メモ・最寄り駅・市区町村）のうち
+ * 3つ以上を満たすものだけを indexable とする。
+ * spot/[slug] の noindex 判定・周辺スポット表示・他テンプレからの参照で共用する。
+ */
+export function isSpotIndexable(s: Spot): boolean {
+  let score = 0;
+  if (s.note && s.note.length >= 25) score++;
+  if (s.facilities && Object.keys(s.facilities).length >= 2) score++;
+  if (s.pricing && Object.keys(s.pricing).length >= 1) score++;
+  if (s.hiddenTip && s.hiddenTip.length >= 15) score++;
+  if (s.nearestStation) score++;
+  if (s.ward || s.city) score++;
+  return score >= 3;
+}
+
+/**
  * slug からスポットを取得（個別ページ用）。
  */
 export function getSpotBySlug(
@@ -4582,6 +4600,14 @@ for (const areaList of Object.values(SPOTS)) {
   for (const spot of areaList) {
     if (!spot.facilities && SPOT_FACILITIES[spot.name]) {
       spot.facilities = SPOT_FACILITIES[spot.name];
+    }
+    // アクセスデータ（SPOT_ACCESS）のマージ。インライン値が優先。
+    const access = SPOT_ACCESS[spot.name];
+    if (access) {
+      if (!spot.nearestStation) spot.nearestStation = access.nearestStation;
+      if (spot.walkMinutes == null && access.walkMinutes != null) {
+        spot.walkMinutes = access.walkMinutes;
+      }
     }
   }
 }

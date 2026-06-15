@@ -7,9 +7,11 @@ import { V2Icon, V2_ACCENT, type V2IconName } from '@/components/v2/V2Icon';
 import {
   getAllSpotsWithSlug,
   getSpotBySlug,
+  isSpotIndexable,
   SPOT_CATEGORY_LABEL,
 } from '@/lib/spots';
 import type { Spot } from '@/lib/spots';
+import { findStationBySlug } from '@/lib/all-stations';
 import { getAllFileArticles } from '@/lib/articles';
 import { buildSpotJsonLd } from '@/lib/spot-schema';
 import {
@@ -32,19 +34,8 @@ type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
   return getAllSpotsWithSlug()
-    .filter((x) => isIndexable(x.spot))
+    .filter((x) => isSpotIndexable(x.spot))
     .map((x) => ({ slug: x.slug }));
-}
-
-function isIndexable(s: Spot): boolean {
-  let score = 0;
-  if (s.note && s.note.length >= 25) score++;
-  if (s.facilities && Object.keys(s.facilities).length >= 2) score++;
-  if (s.pricing && Object.keys(s.pricing).length >= 1) score++;
-  if (s.hiddenTip && s.hiddenTip.length >= 15) score++;
-  if (s.nearestStation) score++;
-  if (s.ward || s.city) score++;
-  return score >= 3;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -62,7 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: { canonical: `/spot/${slug}` },
-    robots: isIndexable(spot) ? undefined : { index: false },
+    robots: isSpotIndexable(spot) ? undefined : { index: false },
     openGraph: {
       title,
       description,
@@ -94,11 +85,18 @@ export default async function SpotPage({ params }: Props) {
   const category = SPOT_CATEGORY_LABEL[spot.category] ?? spot.category;
   const location = spot.ward ?? spot.city ?? '';
 
+  // 最寄り駅 slug を日本語駅名へ解決（レジストリに無い場合は元の値をそのまま表示）。
+  const nearestStationName = spot.nearestStation
+    ? (findStationBySlug(spot.nearestStation)?.name
+        ? `${findStationBySlug(spot.nearestStation)!.name}駅`
+        : spot.nearestStation)
+    : null;
+
   // 近隣スポット
   const nearbySpots = getAllSpotsWithSlug()
     .filter((x) => {
       if (x.slug === slug) return false;
-      if (!isIndexable(x.spot)) return false;
+      if (!isSpotIndexable(x.spot)) return false;
       if (spot.nearestStation && x.spot.nearestStation === spot.nearestStation) return true;
       if (spot.ward && x.spot.ward === spot.ward) return true;
       return false;
@@ -170,10 +168,10 @@ export default async function SpotPage({ params }: Props) {
             <div className="v2-sd-hero-foot">
               <span className="v2-sd-hero-cat">{category}</span>
               <h1 className="v2-sd-hero-name">{spot.name}</h1>
-              {spot.nearestStation && (
+              {nearestStationName && (
                 <div className="v2-sd-hero-station">
                   <V2Icon name="pin" size={14} color="#fff" />
-                  {spot.nearestStation}
+                  {nearestStationName}
                   {spot.walkMinutes ? ` 徒歩${spot.walkMinutes}分` : ''}
                 </div>
               )}
