@@ -61,7 +61,16 @@ if [ -n "$NON_MD_CONTENT" ]; then
   exit 1
 fi
 
-# content/articles/*.md, content/plans/*.md などの .md だけなら on-demand revalidate に任せて build スキップ
+# 新規追加された .md（= 新しい記事/プラン slug）は generateStaticParams の再実行が必要。
+# on-demand revalidate は既存ページの再生成しかできず、新規 slug は生成されないため必ずビルドする。
+ADDED_MD=$(git diff --name-only --diff-filter=A HEAD^ HEAD -- content/ 2>/dev/null | grep "\.md$" || true)
+if [ -n "$ADDED_MD" ]; then
+  echo "[ignore-build] New markdown article(s) added → PROCEED BUILD (generateStaticParams needs rebuild)"
+  echo "$ADDED_MD" | head -10
+  exit 1
+fi
+
+# 既存 content/articles/*.md, content/plans/*.md の「編集」だけなら on-demand revalidate に任せて build スキップ
 MD_CONTENT_CHANGES=$(git diff --name-only HEAD^ HEAD -- 'content/**/*.md' 2>/dev/null | head -5)
 if [ -n "$MD_CONTENT_CHANGES" ]; then
   echo "[ignore-build] Only markdown content changes detected → SKIP BUILD (handled by on-demand revalidate)"
