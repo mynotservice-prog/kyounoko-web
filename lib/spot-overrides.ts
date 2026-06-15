@@ -55,9 +55,13 @@ export const SPOT_FACILITY_ENUM_FIELDS = [
 ] as const;
 export type SpotFacilityEnumField = (typeof SPOT_FACILITY_ENUM_FIELDS)[number];
 
+/** ageGuide サブオブジェクトの編集可能キー（AgeTag）。 */
+export const SPOT_AGE_GUIDE_FIELDS = ['0-1', '2-3', '4-6'] as const;
+export type SpotAgeGuideField = (typeof SPOT_AGE_GUIDE_FIELDS)[number];
+
 /** 上書きとして保存できる Spot の部分形。 */
 export type SpotOverride = Partial<
-  Pick<Spot, 'name' | 'city' | 'ward' | 'note' | 'budget' | 'reservation' | 'hiddenTip' | 'nearby' | 'waterDepth' | 'pricing' | 'facilities'>
+  Pick<Spot, 'name' | 'city' | 'ward' | 'note' | 'budget' | 'reservation' | 'hiddenTip' | 'nearby' | 'waterDepth' | 'pricing' | 'facilities' | 'ageGuide'>
 >;
 
 export type SpotOverridesMap = Record<string, SpotOverride>;
@@ -85,5 +89,6 @@ export function mergeSpot(spot: Spot, slug: string): Spot {
   const merged: Spot = { ...spot, ...ov };
   if (ov.pricing) merged.pricing = { ...spot.pricing, ...ov.pricing };
   if (ov.facilities) merged.facilities = { ...spot.facilities, ...ov.facilities };
+  if (ov.ageGuide) merged.ageGuide = { ...spot.ageGuide, ...ov.ageGuide };
   return merged;
 }

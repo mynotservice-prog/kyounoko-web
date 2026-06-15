@@ -91,6 +91,15 @@ export type Spot = {
   };
   hiddenTip?: string;    // 穴場ポイント「予約制で混雑回避」「平日午前が狙い目」等
   nearby?: string;       // 近隣セット提案「徒歩10分の海の中道海浜公園と1日セット」等
+  /**
+   * 年齢別の楽しみ方の個別上書き。未指定の年齢はカテゴリ共通の自動文を使う。
+   * admin（/admin/spots/edit）から施設ごとに編集できる。
+   */
+  ageGuide?: {
+    '0-1'?: string;
+    '2-3'?: string;
+    '4-6'?: string;
+  };
   popular?: boolean;     // エディターが「ママに人気」として推すスポット（トップページ表示用）
   ward?: string;         // 東京23区の区名（例: '中野区'）、その他市区町村
   // レストラン向けフラグ
@@ -556,13 +565,6 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '無料キッズプレイランド「アシナガランド」併設、芝生でピクニック可',
-      summerCool: true,
-    },
-    {
-      name: 'ふくろうの杜（流山）', category: 'indoor', place: 'indoor', ages: ['4-6'], city: '流山市', note: 'ふくろうカフェ的体験施設', budget: 'mid',
-      reservation: 'recommended',
-      crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: 'ふくろうとふれあえる小規模施設、4歳以上推奨',
       summerCool: true,
     },
   ],

@@ -87,10 +87,10 @@ export function buildEnjoyByAgeBlocks(
   spot: Spot,
 ): Array<{ age: AgeTag; label: string; text: string }> {
   const template = ENJOY_BY_AGE[spot.category];
-  if (!template) return [];
   const out: Array<{ age: AgeTag; label: string; text: string }> = [];
   for (const age of spot.ages) {
-    const text = template[age];
+    // 施設ごとの上書き（admin編集）を最優先。無ければカテゴリ共通の自動文。
+    const text = spot.ageGuide?.[age] ?? template?.[age];
     if (!text) continue;
     out.push({ age, label: AGE_LABEL[age] ?? age, text });
   }
