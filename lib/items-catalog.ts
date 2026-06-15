@@ -13,6 +13,7 @@ export const CATALOG_CATEGORIES = [
   'babycar',
   'chiiku-subsc',
   'baby-chair',
+  'gaishoku',
   'takushoku',
   'senzai',
   'jitan-kaden',
@@ -81,6 +82,14 @@ export const CATALOG_CATEGORY_META: Record<CatalogCategory, CatalogCategoryMeta>
     tagline: '離乳食から幼児期まで。姿勢が整う食事椅子。',
     relatedArticles: [
       { slug: 'baby-chair-ranking', label: 'ベビーチェアランキングを見る' },
+    ],
+  },
+  gaishoku: {
+    id: 'gaishoku',
+    name: '外食お助けグッズ',
+    tagline: 'ベビーチェアが無い店でも安心。子連れ外食を乗り切る携帯グッズ。',
+    relatedArticles: [
+      { slug: 'kodzure-famires-15sen', label: '子連れで行けるファミレス15選を見る' },
     ],
   },
   takushoku: {
@@ -347,6 +356,72 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     subtitle: '高さ10段階調整・リクライニング対応',
     price: '¥16,500前後',
     articleSlug: 'baby-chair-ranking',
+  },
+
+  // ========================================================================
+  // 外食お助けグッズ gaishoku（6）— 子連れ外食トラフィック向け（全て検証済・在庫あり）
+  // 流入の主力である「外食×子連れ」記事の購入意図に直結する低単価・高CVR商材。
+  // 配列順 = 全外食記事カードの表示優先順（先頭3件が3枠カードに出る）。
+  // ========================================================================
+  {
+    id: 'gs-carifree-chairbelt',
+    category: 'gaishoku',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/justrich/carryfree-chairbelt/',
+    name: 'キャリフリー チェアベルト（携帯用）',
+    subtitle: '大人用の椅子に巻くだけ。ベビーチェアが無い店でも子どもを座らせられる外食の必需品',
+    price: '¥2,970前後',
+    articleSlug: 'kodzure-famires-15sen',
+  },
+  {
+    id: 'gs-disposable-apron',
+    category: 'gaishoku',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/plusiine/apron07/',
+    name: '使い捨てお食事エプロン（個包装）',
+    subtitle: '洗う手間なく外食・旅行でそのまま捨てられる。個包装でバッグに常備できる',
+    price: '¥1,120前後',
+    articleSlug: 'kodzure-famires-15sen',
+  },
+  {
+    id: 'gs-food-cutter',
+    category: 'gaishoku',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/tcconlineshop/atyc_075/',
+    name: '携帯フードカッター（ケース付き）',
+    subtitle: '麺・肉をその場で一口サイズに。保育士監修・楽天ランキング1位の持ち歩きはさみ',
+    price: '¥1,280前後',
+    articleSlug: 'kodzure-famires-15sen',
+  },
+  {
+    id: 'gs-babybjorn-softbib',
+    category: 'gaishoku',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/natural-living/babybjorn_softbib_pink/',
+    name: 'ベビービョルン ソフトスタイ',
+    subtitle: '食べこぼしをポケットで受け止める定番。洗ってすぐ乾くシリコン製で外食にも',
+    price: '¥1,650前後',
+    articleSlug: 'kodzure-famires-15sen',
+  },
+  {
+    id: 'gs-silicone-placemat',
+    category: 'gaishoku',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/plusiine/luncheon01/',
+    name: 'シリコン食べこぼしマット（吸着式）',
+    subtitle: 'テーブルに吸着して直置きの不安を解消。食べこぼしも丸ごと拭けて持ち帰れる',
+    price: '¥1,120前後',
+    articleSlug: 'kodzure-famires-15sen',
+  },
+  {
+    id: 'gs-inglesina-fast',
+    category: 'gaishoku',
+    provider: 'rakuten',
+    href: 'https://item.rakuten.co.jp/justrich/inglesina-fast/',
+    name: 'イングリッシーナ ファスト（携帯テーブルチェア）',
+    subtitle: 'テーブルに挟むだけの携帯チェア。大人用椅子しかない店でも子どもの定位置を作れる',
+    price: '¥13,200前後',
+    articleSlug: 'kodzure-famires-15sen',
   },
 
   // ========================================================================

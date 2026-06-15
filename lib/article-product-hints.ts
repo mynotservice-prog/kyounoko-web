@@ -71,6 +71,25 @@ function containsAny(haystacks: string[], needles: string[]): boolean {
  * 具体的・限定的なルールを上に、汎用的なものを下に置く。
  */
 const HINT_RULES: { cats: CatalogCategory[]; needles: string[] }[] = [
+  // 外食・子連れ攻略・キッズメニュー（最大トラフィック群 → 外食お助けグッズ）
+  // 店名・「子連れ攻略」「キッズメニュー」等を最優先で拾い、抱っこ紐/ベビーカーへの
+  // 的外れな代替を防ぐ。restaurant固有トークンに限定し、純粋なベビーチェア記事
+  // （home用ハイチェア）は下の baby-chair ルールに残す。
+  {
+    cats: ['gaishoku'],
+    needles: [
+      'kodzure', 'koryaku', 'kids-menu', 'kidsmenu', 'famires',
+      'family-restaurant', 'gaishoku', 'gaisyoku', 'shokudo',
+      'rinyushoku-mochikomi', 'tabekoboshi', 'bebycar-ok-cafe',
+      'morning-cafe', 'kids-cafe', 'kodzure-cafe',
+      'ohsho', 'saize', 'bamiyan', 'gusto', 'yayoiken', 'cocos',
+      'tenya', 'sushiro', 'hamasushi', 'hama-sushi', 'kappazushi',
+      'kurazushi', 'jonathan', 'shabuyou', 'yakiniku', 'gyukaku',
+      'gyu-kaku', 'sukiya', 'matsuya', 'yoshinoya', 'maido',
+      'royalhost', 'joyfull', 'dennys',
+      '外食', 'ファミレス', 'キッズメニュー', '回転寿司', '食べこぼし',
+    ],
+  },
   // ベビーシッター・一時保育
   {
     cats: ['babysitter'],
