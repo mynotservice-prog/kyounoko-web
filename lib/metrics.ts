@@ -10,7 +10,9 @@
  * 手入力が必要なものを中心に蓄積する。lineFollowers / pv は自動値の月末スナップショット
  * を残したいとき（60日より前は API で取れないため）に使う。
  */
+import { unstable_cache } from 'next/cache';
 import monthlyJson from '../data/metrics-monthly.json';
+import { isKvConfigured, kvGet, kvSet } from './kv-store';
 
 /** アフィリエイト確定収益（円）の収入源別内訳。手入力。 */
 export type AffiliateBySource = {
@@ -48,9 +50,40 @@ export const AFFILIATE_SOURCES: { key: keyof AffiliateBySource; label: string }[
 
 const STORE = monthlyJson as MetricsMap;
 
-/** 全月次メトリクスを月降順（新しい順）で返す */
+export const METRICS_KV_KEY = 'metrics:monthly';
+export const METRICS_TAG = 'metrics-monthly';
+
+/** 全月次メトリクスを月降順（新しい順）で返す（同期・バンドル版）。 */
 export function getAllMonthlyMetrics(): MetricsMap {
   return [...STORE].sort((a, b) => b.month.localeCompare(a.month));
+}
+
+/** 実行時の月次メトリクス（KV設定時はKV、無ければバンドル）。月降順。 */
+export const getRuntimeMonthlyMetrics = unstable_cache(
+  async (): Promise<MetricsMap> => {
+    let data = STORE;
+    if (isKvConfigured()) {
+      const fromKv = await kvGet<MetricsMap>(METRICS_KV_KEY);
+      if (fromKv) data = fromKv;
+    }
+    return [...data].sort((a, b) => b.month.localeCompare(a.month));
+  },
+  ['runtime-monthly-metrics'],
+  { tags: [METRICS_TAG] },
+);
+
+/** 保存用に現在の全メトリクスを直読み（KV空ならバンドルをシード）。 */
+export async function readMetricsForWrite(): Promise<MetricsMap> {
+  if (isKvConfigured()) {
+    const fromKv = await kvGet<MetricsMap>(METRICS_KV_KEY);
+    return fromKv ?? [...STORE];
+  }
+  return [...STORE];
+}
+
+/** メトリクスを KV に保存。 */
+export async function writeMetricsToKv(data: MetricsMap): Promise<boolean> {
+  return kvSet(METRICS_KV_KEY, data);
 }
 
 /** アフィリエイト収益の合計（円） */

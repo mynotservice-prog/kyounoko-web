@@ -1,7 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath, revalidateTag } from 'next/cache';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { AFFILIATE_SOURCES, type MonthlyMetric, type MetricsMap } from '@/lib/metrics';
+import {
+  AFFILIATE_SOURCES,
+  METRICS_TAG,
+  readMetricsForWrite,
+  writeMetricsToKv,
+  type MonthlyMetric,
+  type MetricsMap,
+} from '@/lib/metrics';
+import { isKvConfigured } from '@/lib/kv-store';
 
 /**
  * /admin/kpi の月次メトリクス保存 API。
@@ -127,6 +136,9 @@ async function readLocal(): Promise<MetricsMap> {
 export async function GET(req: NextRequest) {
   const auth = isAllowed(req);
   if (!auth.ok) return NextResponse.json({ error: auth.reason }, { status: 403 });
+  if (isKvConfigured()) {
+    return NextResponse.json({ metrics: await readMetricsForWrite() });
+  }
   if (process.env.NODE_ENV !== 'development' && process.env.GITHUB_TOKEN) {
     const gh = await ghGetFile();
     if (gh) {
@@ -160,10 +172,13 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: sanitized.error }, { status: 400 });
   }
 
-  // 既存読み込み
+  // 既存読み込み（KV優先 → GitHub → ローカル）
+  const useKv = isKvConfigured();
   let current: MetricsMap = [];
   let sha: string | undefined;
-  if (process.env.NODE_ENV !== 'development' && process.env.GITHUB_TOKEN) {
+  if (useKv) {
+    current = await readMetricsForWrite();
+  } else if (process.env.NODE_ENV !== 'development' && process.env.GITHUB_TOKEN) {
     const gh = await ghGetFile();
     if (gh) {
       try {
@@ -187,6 +202,15 @@ export async function POST(req: NextRequest) {
     else current.push(merged);
   }
   current.sort((a, b) => a.month.localeCompare(b.month));
+
+  // KV: デプロイ不要で保存して /admin/kpi を更新
+  if (useKv) {
+    const ok = await writeMetricsToKv(current);
+    if (!ok) return NextResponse.json({ error: 'kv write failed' }, { status: 500 });
+    revalidateTag(METRICS_TAG);
+    revalidatePath('/admin/kpi');
+    return NextResponse.json({ ok: true, mode: 'kv', month });
+  }
 
   const newText = JSON.stringify(current, null, 2) + '\n';
 

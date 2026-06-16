@@ -1,7 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath, revalidateTag } from 'next/cache';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { EDITABLE_FIELDS, type EditableField, type EventOverride } from '@/lib/event-overrides';
+import {
+  EDITABLE_FIELDS,
+  EVENT_OVERRIDES_TAG,
+  readEventOverridesForWrite,
+  writeEventOverridesToKv,
+  type EditableField,
+  type EventOverride,
+} from '@/lib/event-overrides';
+import { isKvConfigured } from '@/lib/kv-store';
 
 /**
  * /admin/events/edit から呼ばれるイベント上書き保存 API。
@@ -168,6 +177,9 @@ export async function GET(req: NextRequest) {
   const auth = isAllowed(req);
   if (!auth.ok) return NextResponse.json({ error: auth.reason }, { status: 403 });
 
+  if (isKvConfigured()) {
+    return NextResponse.json({ overrides: await readEventOverridesForWrite() });
+  }
   if (process.env.NODE_ENV !== 'development' && process.env.GITHUB_TOKEN) {
     const gh = await ghGetFile();
     if (gh) {
@@ -206,10 +218,13 @@ export async function POST(req: NextRequest) {
   }
   const patch = patchResult;
 
-  // 既存読み込み
+  // 既存読み込み（KV優先 → GitHub → ローカル）
+  const useKv = isKvConfigured();
   let current: Overrides = {};
   let sha: string | undefined;
-  if (process.env.NODE_ENV !== 'development' && process.env.GITHUB_TOKEN) {
+  if (useKv) {
+    current = (await readEventOverridesForWrite()) as Overrides;
+  } else if (process.env.NODE_ENV !== 'development' && process.env.GITHUB_TOKEN) {
     const gh = await ghGetFile();
     if (gh) {
       try {
@@ -241,6 +256,15 @@ export async function POST(req: NextRequest) {
     delete current[slug];
   } else {
     current[slug] = merged;
+  }
+
+  // KV: デプロイ不要で保存し、該当イベントページだけ revalidate
+  if (useKv) {
+    const ok = await writeEventOverridesToKv(current);
+    if (!ok) return NextResponse.json({ error: 'kv write failed' }, { status: 500 });
+    revalidateTag(EVENT_OVERRIDES_TAG);
+    revalidatePath(`/event/${slug}`);
+    return NextResponse.json({ ok: true, mode: 'kv', slug, patch });
   }
 
   const newText = JSON.stringify(current, null, 2) + '\n';

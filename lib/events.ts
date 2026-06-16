@@ -14,6 +14,7 @@
  */
 
 import type { AreaSlug } from './area';
+import { BUNDLED_EVENT_OVERRIDES, type EventOverridesMap } from './event-overrides';
 
 export type EventCategory =
   | 'matsuri'       // 祭り・縁日
@@ -2036,9 +2037,8 @@ function addDays(date: string, days: number): string {
  *
  * 動的import を使うのは循環依存を避けるため。
  */
-function getMergedEvents(): EventEntry[] {
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const overrides = (require('./event-overrides.json') as Record<string, Partial<EventEntry>>);
+function getMergedEvents(ovMap?: EventOverridesMap): EventEntry[] {
+  const overrides = ovMap ?? BUNDLED_EVENT_OVERRIDES;
   return EVENTS.map((e) => {
     const ov = overrides[e.slug];
     return ov ? { ...e, ...ov } : e;
@@ -2051,8 +2051,8 @@ export function isEventEnded(e: EventEntry): boolean {
 }
 
 /** 全イベント（overrides マージ済） */
-export function getAllEvents(): EventEntry[] {
-  return getMergedEvents();
+export function getAllEvents(ovMap?: EventOverridesMap): EventEntry[] {
+  return getMergedEvents(ovMap);
 }
 
 /** 現在開催中のイベント（startDate <= today <= endDate） */
@@ -2085,8 +2085,8 @@ export function getEventsByArea(area: AreaSlug): EventEntry[] {
 }
 
 /** slug から1件取得 */
-export function getEventBySlug(slug: string): EventEntry | undefined {
-  return getMergedEvents().find((e) => e.slug === slug);
+export function getEventBySlug(slug: string, ovMap?: EventOverridesMap): EventEntry | undefined {
+  return getMergedEvents(ovMap).find((e) => e.slug === slug);
 }
 
 /** カテゴリ別 */

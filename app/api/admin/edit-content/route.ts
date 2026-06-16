@@ -1,7 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath, revalidateTag } from 'next/cache';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import matter from 'gray-matter';
+import { isKvConfigured } from '@/lib/kv-store';
+import {
+  ARTICLE_OVERRIDES_TAG,
+  readArticleOverridesMap,
+  writeArticleOverride,
+} from '@/lib/articles';
 
 /**
  * /admin/articles/[slug]/edit と /admin/plans/[id]/edit から呼ばれる
@@ -137,6 +144,16 @@ export async function GET(req: NextRequest) {
   const slug = searchParams.get('slug') || '';
   if (!kind) return NextResponse.json({ ok: false, error: 'invalid kind' }, { status: 400 });
 
+  // 記事 + KV設定時: KV の編集済みを正とする（無ければ下の FS/GitHub にフォールバック）
+  if (kind === 'article' && isKvConfigured()) {
+    const map = await readArticleOverridesMap();
+    const ov = map[slug];
+    if (ov) {
+      const { data, content } = matter(ov);
+      return NextResponse.json({ ok: true, frontmatter: data, body: content, source: 'kv' });
+    }
+  }
+
   // 本番 + GitHub設定済み → GitHub から取得（FS は古い可能性があるため）
   if (useGitHub()) {
     try {
@@ -186,6 +203,19 @@ export async function POST(req: NextRequest) {
 
   // gray-matter.stringify で YAML フロントマター + 本文を再構成
   const out = matter.stringify(body.body, body.frontmatter as Record<string, unknown>);
+
+  // ----- 記事 + KV設定時: デプロイ不要で KV に保存し、該当ページだけ revalidate -----
+  if (kind === 'article' && isKvConfigured()) {
+    const ok = await writeArticleOverride(body.slug!, out);
+    if (!ok) return NextResponse.json({ ok: false, error: 'kv write failed' }, { status: 500 });
+    revalidateTag(ARTICLE_OVERRIDES_TAG);
+    revalidatePath(`/article/${body.slug}`);
+    return NextResponse.json({
+      ok: true,
+      source: 'kv',
+      deployed: 'KVに保存しました（デプロイ不要・数秒で反映）',
+    });
+  }
 
   // ----- 本番 + GitHub設定済み: Contents API 経由で commit -----
   if (useGitHub()) {

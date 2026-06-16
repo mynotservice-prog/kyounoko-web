@@ -12,6 +12,7 @@ import {
   getEventsByArea,
   isEventEnded,
 } from '@/lib/events';
+import { getRuntimeEventOverrides } from '@/lib/event-overrides';
 import { getAllSpotsWithSlug, isSpotIndexable } from '@/lib/spots';
 import { spotToV2 } from '@/lib/v2-adapters';
 import { AdSlot } from '@/components/ads/AdSlot';
@@ -26,7 +27,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const ev = getEventBySlug(slug);
+  const ev = getEventBySlug(slug, await getRuntimeEventOverrides());
   if (!ev) return { title: 'イベントが見つかりません' };
   const ended = isEventEnded(ev);
   return {
@@ -47,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function EventPage({ params }: Props) {
   const { slug } = await params;
-  const ev = getEventBySlug(slug);
+  const ev = getEventBySlug(slug, await getRuntimeEventOverrides());
   if (!ev) notFound();
 
   const ended = isEventEnded(ev);

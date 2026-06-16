@@ -4,7 +4,9 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import remarkHtml from 'remark-html';
+import { unstable_cache } from 'next/cache';
 import { injectInternalLinks } from './auto-internal-links';
+import { isKvConfigured, kvGet, kvSet } from './kv-store';
 import HERO_MANIFEST from './hero-manifest.json';
 import { pickHeroForSlug } from './hero-photos';
 import type { AgeRange, Budget, PlaceType, Weather } from './types';
@@ -755,18 +757,57 @@ export function getAllFileArticles(): FileArticleMeta[] {
   return metas.sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1));
 }
 
+/** 記事本文の上書き（KV）。slug → 編集後の生Markdown（frontmatter込み）。 */
+export const ARTICLE_OVERRIDES_KV_KEY = 'article:overrides';
+export const ARTICLE_OVERRIDES_TAG = 'article-overrides';
+
+/** 実行時の記事上書きマップ（KV設定時のみ。未設定なら空）。 */
+export const getRuntimeArticleOverrides = unstable_cache(
+  async (): Promise<Record<string, string>> => {
+    if (isKvConfigured()) {
+      const fromKv = await kvGet<Record<string, string>>(ARTICLE_OVERRIDES_KV_KEY);
+      if (fromKv) return fromKv;
+    }
+    return {};
+  },
+  ['runtime-article-overrides'],
+  { tags: [ARTICLE_OVERRIDES_TAG] },
+);
+
+/** 記事上書きマップを直読み（キャッシュ非経由・保存用）。 */
+export async function readArticleOverridesMap(): Promise<Record<string, string>> {
+  if (isKvConfigured()) {
+    return (await kvGet<Record<string, string>>(ARTICLE_OVERRIDES_KV_KEY)) ?? {};
+  }
+  return {};
+}
+
+/** 1記事の編集後生Markdown（frontmatter込み）を KV に保存。 */
+export async function writeArticleOverride(slug: string, rawMd: string): Promise<boolean> {
+  const map = await readArticleOverridesMap();
+  map[slug] = rawMd;
+  return kvSet(ARTICLE_OVERRIDES_KV_KEY, map);
+}
+
 /**
  * 指定 slug の記事を返す（本文HTML + FAQを含む）。
  * 存在しない場合は null。
+ * KV に編集済みの生Markdownがあれば、ファイルではなくそれを描画する（デプロイ不要編集）。
  */
 export async function getFileArticle(slug: string): Promise<FileArticle | null> {
+  const overrides = await getRuntimeArticleOverrides();
+  const overrideRaw = overrides[slug];
   const files = readArticlesDir();
   for (const filename of files) {
     const filePath = path.join(ARTICLES_DIR, filename);
-    const raw = fs.readFileSync(filePath, 'utf8');
+    const fileRaw = fs.readFileSync(filePath, 'utf8');
     const fallbackSlug = filename.replace(/\.md$/, '');
+    // ファイル側の slug を先に判定（上書きがあっても slug は不変前提）
+    const { meta: fileMeta } = parseFrontmatter(fileRaw, fallbackSlug);
+    if (fileMeta.slug !== slug) continue;
+    // KV 上書きがあればそれを正に描画
+    const raw = overrideRaw ?? fileRaw;
     const { meta, content } = parseFrontmatter(raw, fallbackSlug);
-    if (meta.slug !== slug) continue;
 
     const { body: bodyMd, faq } = extractFaq(content);
     const tldr = extractTldr(bodyMd);
