@@ -14,12 +14,13 @@ import type { Spot } from '@/lib/spots';
 import { findStationBySlug } from '@/lib/all-stations';
 import { SPOT_CLOSED } from '@/lib/spot-closed';
 import { getAllFileArticles } from '@/lib/articles';
-import { buildSpotJsonLd } from '@/lib/spot-schema';
+import { buildSpotJsonLd, buildFaqJsonLd } from '@/lib/spot-schema';
 import {
   buildEnjoyByAgeBlocks,
   buildCrowdAvoidanceText,
   buildAccessTipsText,
   buildPreVisitNotes,
+  buildSpotFaqs,
 } from '@/lib/spot-narratives';
 import { spotToV2, articleToV2 } from '@/lib/v2-adapters';
 import { AdSlot } from '@/components/ads/AdSlot';
@@ -133,7 +134,17 @@ export default async function SpotPage({ params }: Props) {
   const accessTips = buildAccessTipsText(spot);
   const preVisitNotes = buildPreVisitNotes(spot);
 
+  // FAQ: 施設固有の上書き（spot.faq）を先頭に、自動生成分を続ける。
+  // 同じ質問文は手動側を優先して自動分を抑制する。
+  const autoFaqs = buildSpotFaqs(spot);
+  const manualQuestions = new Set((spot.faq ?? []).map((f) => f.q));
+  const faqs = [...(spot.faq ?? []), ...autoFaqs.filter((f) => !manualQuestions.has(f.q))];
+  const jsonLdFaq = buildFaqJsonLd(faqs);
+
   const v2Spot = spotToV2(spot);
+
+  // 差し替え画像（最大3枚）。[0]=hero、[1]=中段、[2]=下段に分散表示。
+  const galleryImages = (spot.images ?? (spot.image ? [spot.image] : [])).slice(0, 3);
 
   // 公開済みの「行ったよ」レポート（MicroCMS未設定時は常に空配列）
   const visitorReports = await getPublishedSpotReports(slug);
@@ -142,6 +153,9 @@ export default async function SpotPage({ params }: Props) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPlace) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
+      {jsonLdFaq && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
+      )}
 
       <V2Frame header="sub" active="search" backHref="/spots">
         <V2RememberSpot
@@ -409,6 +423,15 @@ export default async function SpotPage({ params }: Props) {
           </div>
         )}
 
+        {/* 追加画像（中段） */}
+        {galleryImages[1] && (
+          <div className="v2-section" style={{ marginTop: 18 }}>
+            <div style={{ borderRadius: 'var(--v2-r-card)', overflow: 'hidden', aspectRatio: '16 / 9', border: '1px solid var(--v2-line)' }}>
+              <V2Img src={galleryImages[1]} seed={`${slug}-1`} alt={`${spot.name}の様子`} />
+            </div>
+          </div>
+        )}
+
         {/* AdSense */}
         <div className="v2-section" style={{ marginTop: 24 }}>
           <AdSlot placement="article-mid" />
@@ -455,7 +478,9 @@ export default async function SpotPage({ params }: Props) {
                     <V2Icon name="crowd" size={14} />
                   </span>
                   混雑を避けるコツ
-                  <V2Icon name="chevron-down" size={18} color="#bbb" style={{ marginLeft: 'auto', flex: 'none' }} />
+                  <span className="v2-faq-chev">
+                    <V2Icon name="chevron-down" size={18} color="#bbb" />
+                  </span>
                 </summary>
                 <div className="v2-faq-a">
                   <span style={{ fontSize: 13.5, lineHeight: 1.7 }}>{crowdAvoidance}</span>
@@ -469,7 +494,9 @@ export default async function SpotPage({ params }: Props) {
                     <V2Icon name="train" size={14} />
                   </span>
                   アクセスのコツ
-                  <V2Icon name="chevron-down" size={18} color="#bbb" style={{ marginLeft: 'auto', flex: 'none' }} />
+                  <span className="v2-faq-chev">
+                    <V2Icon name="chevron-down" size={18} color="#bbb" />
+                  </span>
                 </summary>
                 <div className="v2-faq-a">
                   <span style={{ fontSize: 13.5, lineHeight: 1.7 }}>{accessTips}</span>
@@ -483,7 +510,9 @@ export default async function SpotPage({ params }: Props) {
                     <V2Icon name="info" size={14} />
                   </span>
                   行く前に知っておきたいこと
-                  <V2Icon name="chevron-down" size={18} color="#bbb" style={{ marginLeft: 'auto', flex: 'none' }} />
+                  <span className="v2-faq-chev">
+                    <V2Icon name="chevron-down" size={18} color="#bbb" />
+                  </span>
                 </summary>
                 <div className="v2-faq-a">
                   <span style={{ fontSize: 13.5, lineHeight: 1.7 }}>{preVisitNotes}</span>
@@ -491,6 +520,33 @@ export default async function SpotPage({ params }: Props) {
               </details>
             )}
           </div>
+        )}
+
+        {/* よくある質問（FAQ） */}
+        {faqs.length > 0 && (
+          <>
+            <div className="v2-sec-head">
+              <div className="v2-sec-title">
+                <span className="v2-bar-accent"></span>よくある質問
+              </div>
+            </div>
+            <div className="v2-section" style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              {faqs.map((f, i) => (
+                <details key={i} className="v2-faq">
+                  <summary className="v2-faq-q" style={{ listStyle: 'none', cursor: 'pointer' }}>
+                    <span className="v2-faq-mark">Q</span>
+                    {f.q}
+                    <span className="v2-faq-chev">
+                      <V2Icon name="chevron-down" size={18} color="#bbb" />
+                    </span>
+                  </summary>
+                  <div className="v2-faq-a">
+                    <span style={{ fontSize: 13.5, lineHeight: 1.7 }}>{f.a}</span>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </>
         )}
 
         {/* 近隣スポット */}
@@ -579,6 +635,15 @@ export default async function SpotPage({ params }: Props) {
             </>
           );
         })()}
+
+        {/* 追加画像（下段） */}
+        {galleryImages[2] && (
+          <div className="v2-section" style={{ marginTop: 18 }}>
+            <div style={{ borderRadius: 'var(--v2-r-card)', overflow: 'hidden', aspectRatio: '16 / 9', border: '1px solid var(--v2-line)' }}>
+              <V2Img src={galleryImages[2]} seed={`${slug}-2`} alt={`${spot.name}の様子`} />
+            </div>
+          </div>
+        )}
 
         {/* 関連記事 */}
         {relatedArticles.length > 0 && (

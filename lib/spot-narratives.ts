@@ -10,6 +10,7 @@
  * ページ側では null を spread して section をスキップする。
  */
 import type { Spot, SpotCategory, AgeTag } from './spots';
+import { SPOT_CATEGORY_LABEL } from './spots';
 
 const AGE_LABEL: Record<string, string> = {
   '0-1': '0〜1歳',
@@ -214,4 +215,164 @@ export function buildPreVisitNotes(spot: Spot): string | null {
   }
   if (parts.length === 0) return null;
   return parts.join(' ');
+}
+
+export type SpotFaq = { q: string; a: string };
+
+/** 料金の目安（budget）を自然文に。 */
+const BUDGET_TEXT: Record<NonNullable<Spot['budget']>, string> = {
+  free: '無料',
+  low: '1人あたり〜1,000円程度',
+  mid: '1人あたり1,000〜3,000円程度',
+  high: '1人あたり3,000円程度〜',
+};
+
+/**
+ * よくある質問（FAQ）を Spot の構造化データから自動生成する。
+ *
+ * 既存のナレーション3種（混雑回避 / アクセス / 事前確認）が「読み物寄りの
+ * まとまった解説」なのに対し、こちらは保護者が出発前に判断したい論点
+ * （年齢・天気・料金・予約・ベビーカー・授乳設備・滞在時間）を一問一答で返す。
+ * FAQPage 構造化データ（lib/spot-schema.ts の buildFaqJsonLd）と対になり、
+ * AIO（AI Overview / ChatGPT 等）に引用されやすい形を狙う。
+ *
+ * 重複を避けるため、混雑・駅からの距離そのものは既存アコーディオンに任せ、
+ * ここでは扱わない（ベビーカー可否のように切り口が異なるものだけ拾う）。
+ *
+ * 回答は確実に言えることだけを述べ、料金など鮮度が要るものは
+ * 「公式サイトで確認」と必ず添える（住所/料金を断定しない運営方針に合わせる）。
+ */
+export function buildSpotFaqs(spot: Spot): SpotFaq[] {
+  const faqs: SpotFaq[] = [];
+  const cat = SPOT_CATEGORY_LABEL[spot.category] ?? 'スポット';
+  const ages = spot.ages.map((a) => AGE_LABEL[a] ?? a).join('・');
+
+  // 1. 対象年齢（ages は必ずある）
+  if (spot.ages.length) {
+    faqs.push({
+      q: `${spot.name}は何歳ごろから楽しめますか？`,
+      a:
+        `${ages}のお子さんが特に楽しめる${cat}です。` +
+        (spot.ages.includes('0-1')
+          ? 'ねんね・ハイハイの赤ちゃん連れでも、ベビーカー動線や設備を確認しておけば一緒に過ごせます。'
+          : '低年齢のうちは抱っこ紐があると移動が安心です。'),
+    });
+  }
+
+  // 2. 雨の日（place は必ずある）
+  faqs.push({
+    q: '雨の日でも楽しめますか？',
+    a:
+      spot.place === 'indoor'
+        ? '屋内施設なので、雨の日はもちろん猛暑や真冬でも天候を気にせず楽しめます。急な天気の変化で予定が崩れにくいのが魅力です。'
+        : spot.place === 'mixed'
+          ? '屋内と屋外の両方があり、雨の日は屋内エリアを中心に楽しめます。天気が不安な日でも訪れやすいスポットです。'
+          : '屋外が中心のため、雨の日は楽しみにくくなります。お出かけ前に天気予報を確認し、無理のない範囲で計画しましょう。',
+  });
+
+  // 3. 料金
+  if (spot.budget === 'free') {
+    faqs.push({
+      q: '入場料はかかりますか？',
+      a: '基本的に無料で利用できます（一部の有料体験・駐車場などをのぞく）。最新の料金は公式サイトでご確認ください。',
+    });
+  } else {
+    const pricingSummary = spot.pricing
+      ? ([
+          ['大人', spot.pricing.adult],
+          ['小学生', spot.pricing.elementary],
+          ['幼児', spot.pricing.preschool],
+          ['乳児', spot.pricing.infant],
+        ] as const)
+          .filter(([, v]) => v)
+          .map(([label, v]) => `${label}${v}`)
+          .join('・')
+      : '';
+    const base = pricingSummary
+      ? `料金の目安は${pricingSummary}です。`
+      : spot.budget
+        ? `料金の目安は${BUDGET_TEXT[spot.budget]}です。`
+        : '';
+    if (base) {
+      faqs.push({
+        q: '料金はどのくらいかかりますか？',
+        a: `${base}正確な料金・割引・最新の改定は公式サイトでご確認ください。`,
+      });
+    }
+  }
+
+  // 4. 予約（指定がある時だけ）
+  if (spot.reservation === 'required') {
+    faqs.push({
+      q: '予約は必要ですか？',
+      a: '事前予約が必須です。訪問日が決まったら、早めに公式サイトで予約枠を確保しておきましょう。',
+    });
+  } else if (spot.reservation === 'recommended') {
+    faqs.push({
+      q: '予約は必要ですか？',
+      a: '予約は必須ではありませんが、混雑する時期は事前に予約しておくと入場待ちを避けられます。',
+    });
+  } else if (spot.reservation === 'none') {
+    faqs.push({
+      q: '予約は必要ですか？',
+      a: '予約なしで利用できます。ただし繁忙期は念のため、公式サイトの最新情報を確認してから出発すると安心です。',
+    });
+  }
+
+  // 5. ベビーカー（手がかりがある時だけ）
+  if (
+    spot.facilities?.strollerRental === 'yes' ||
+    spot.strollerAccess ||
+    spot.walkMinutes !== undefined
+  ) {
+    const parts: string[] = [];
+    if (spot.strollerAccess) parts.push('ベビーカーのまま入場・館内移動ができます。');
+    if (spot.facilities?.strollerRental === 'yes') parts.push('ベビーカーの貸出もあります。');
+    if (spot.walkMinutes !== undefined && spot.nearestStation) {
+      parts.push(
+        spot.walkMinutes <= 10
+          ? `最寄り駅から徒歩${spot.walkMinutes}分とアクセスしやすい立地です。`
+          : `最寄り駅から徒歩${spot.walkMinutes}分のため、抱っこ紐の併用やバス・車も検討すると移動が楽です。`,
+      );
+    }
+    if (spot.place !== 'indoor') {
+      parts.push('屋外には段差や砂利の場所もあるので、現地の動線は公式情報もあわせて確認してください。');
+    }
+    if (parts.length) {
+      faqs.push({ q: 'ベビーカーで行っても大丈夫ですか？', a: parts.join(' ') });
+    }
+  }
+
+  // 6. 授乳室・おむつ替え（どちらかが確認済みの時だけ）
+  const nursing = spot.facilities?.nursingRoom;
+  const diaper = spot.facilities?.diaperChange;
+  if (nursing || diaper) {
+    const bits: string[] = [];
+    if (nursing === 'yes') bits.push('授乳室');
+    if (diaper === 'yes') bits.push('おむつ替え台');
+    let a: string;
+    if (bits.length === 2) {
+      a = '授乳室・おむつ替え台ともに用意されています。';
+    } else if (bits.length === 1) {
+      a = `${bits[0]}が用意されています。`;
+      if (nursing === 'no') a += ' 授乳スペースはないため、授乳ケープや近隣施設の利用を想定しておくと安心です。';
+      if (diaper === 'no') a += ' おむつ替え台はないため、代替の場所を事前に把握しておきましょう。';
+    } else {
+      // 両方 'no'
+      a = '館内に授乳室・おむつ替え台は確認できていません。授乳ケープの持参や、近隣施設・車内での対応を想定しておくと安心です。';
+    }
+    if (spot.facilities?.note) a += ` （${spot.facilities.note}）`;
+    faqs.push({ q: '授乳室やおむつ替えスペースはありますか？', a });
+  }
+
+  // 7. 滞在時間（カテゴリで必ず引ける）
+  const duration = TYPICAL_DURATION[spot.category];
+  if (duration) {
+    faqs.push({
+      q: '滞在時間はどのくらいみておけばいいですか？',
+      a: `${spot.name}の滞在時間の目安は${duration}です。前後の移動や食事・お昼寝の時間も含めて、1日の予定を立てると無理なく楽しめます。`,
+    });
+  }
+
+  return faqs;
 }

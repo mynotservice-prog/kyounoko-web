@@ -153,7 +153,9 @@ function SpotRow({
     reservation: override.reservation ?? '',
     hiddenTip: override.hiddenTip ?? '',
     nearby: override.nearby ?? '',
-    image: override.image ?? '',
+    img0: override.images?.[0] ?? override.image ?? '',
+    img1: override.images?.[1] ?? '',
+    img2: override.images?.[2] ?? '',
     age_0_1: override.ageGuide?.['0-1'] ?? '',
     age_2_3: override.ageGuide?.['2-3'] ?? '',
     age_4_6: override.ageGuide?.['4-6'] ?? '',
@@ -175,9 +177,9 @@ function SpotRow({
   const hasOverride = Object.keys(override).length > 0;
   const set = (k: string, v: string) => setForm((s) => ({ ...s, [k]: v }));
 
-  // 画像アップロード: ファイルを /api/admin/spot-image へ送り、返ってきたパスを image 欄にセット。
+  // 画像アップロード: ファイルを /api/admin/spot-image へ送り、返ってきたパスを指定スロットにセット。
   // この後 [保存] を押すと override に書き込まれて本番反映される。
-  const uploadImage = async (file: File) => {
+  const uploadImage = async (file: File, slot: 'img0' | 'img1' | 'img2') => {
     setUploading(true);
     setMsg('');
     try {
@@ -189,7 +191,7 @@ function SpotRow({
       if (!res.ok || !data.ok || !data.path) {
         setMsg(`❌ アップロード失敗: ${data.error || 'failed'}`);
       } else {
-        set('image', data.path);
+        set(slot, data.path);
         setMsg('✅ 画像アップロード完了。[保存] を押すと反映されます');
       }
     } catch (e) {
@@ -211,7 +213,8 @@ function SpotRow({
       reservation: form.reservation,
       hiddenTip: form.hiddenTip,
       nearby: form.nearby,
-      image: form.image,
+      image: '', // 旧フィールドは images に統合（クリア指示）
+      images: [form.img0, form.img1, form.img2].filter(Boolean),
       ageGuide: {
         '0-1': form.age_0_1,
         '2-3': form.age_2_3,
@@ -279,9 +282,15 @@ function SpotRow({
     </label>
   );
 
-  // 画像プレビュー: 編集中の image があればそれ、無ければ現在ページに出ている画像（自動 or 既存上書き）。
-  const previewSrc = form.image || spotToV2(spot).img;
-  const usingCustomImage = !!form.image;
+  // 画像プレビュー: hero は img0、無ければ現在ページの自動画像。中段/下段は img1/img2。
+  const autoImg = spotToV2(spot).img;
+  const heroSrc = form.img0 || autoImg;
+  const usingCustomImage = !!(form.img0 || form.img1 || form.img2);
+  const imageSlots: Array<{ key: 'img0' | 'img1' | 'img2'; label: string }> = [
+    { key: 'img0', label: 'メイン（hero）' },
+    { key: 'img1', label: '中段' },
+    { key: 'img2', label: '下段' },
+  ];
 
   // 年齢別の楽しみ方の「現在ページに表示中の文」を年齢ごとに取得（プレースホルダ用）。
   // 未入力ならカテゴリ共通の自動文がそのまま placeholder に出る。
@@ -357,71 +366,108 @@ function SpotRow({
 
       {isOpen && (
         <div style={{ padding: '14px 16px 18px', borderTop: '1px solid var(--line)' }}>
-          {/* 画像（hero）— アップロード or URL/パス指定。空欄で自動画像に戻る。 */}
+          {/* ライブプレビュー — 本番ページの見た目で確認しながら編集できる */}
           <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', margin: '0 0 8px' }}>
-            画像（メイン写真）
+            ライブプレビュー（本番ページの見え方）
+          </div>
+          <div style={{ background: '#faf7f2', border: '1px solid var(--line)', borderRadius: 10, overflow: 'hidden', marginBottom: 18 }}>
+            {/* hero */}
+            <div style={{ position: 'relative', aspectRatio: '16 / 9', background: '#e9e4dc' }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={heroSrc} alt="hero" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0) 55%)' }} />
+              <div style={{ position: 'absolute', left: 14, bottom: 12, right: 14, color: '#fff' }}>
+                <div style={{ fontSize: 11, fontWeight: 700, opacity: 0.9 }}>{SPOT_CATEGORY_LABEL[spot.category]}</div>
+                <div style={{ fontSize: 19, fontWeight: 800, lineHeight: 1.25, textShadow: '0 1px 4px rgba(0,0,0,.4)' }}>
+                  {form.name || spot.name}
+                </div>
+              </div>
+            </div>
+            {/* リード文 */}
+            <div style={{ padding: '12px 16px 4px' }}>
+              <p style={{ margin: 0, fontSize: 13.5, color: 'var(--ink-soft, #5d5246)', lineHeight: 1.7 }}>
+                {form.note || spot.note || '（一言メモ未設定）'}
+              </p>
+            </div>
+            {/* 分散表示される追加画像 */}
+            {(form.img1 || form.img2) && (
+              <div style={{ display: 'flex', gap: 8, padding: '10px 16px 14px' }}>
+                {[form.img1, form.img2].filter(Boolean).map((src, i) => (
+                  <div key={i} style={{ flex: 1, aspectRatio: '16 / 9', borderRadius: 8, overflow: 'hidden', border: '1px solid var(--line)' }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={src} alt={`追加画像${i + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* 画像（最大3枚）— アップロード or URL/パス指定。空欄で自動画像に戻る。 */}
+          <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', margin: '0 0 8px' }}>
+            画像（最大3枚 / hero・中段・下段に分散）
             <span style={{ fontSize: 10, fontWeight: 400, color: 'var(--ink-mute)', marginLeft: 8 }}>
               {usingCustomImage ? '差し替え画像を表示中' : '自動画像（カテゴリ別）を表示中'}
             </span>
           </div>
-          <div style={{ display: 'flex', gap: 14, alignItems: 'flex-start', flexWrap: 'wrap', marginBottom: 16 }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={previewSrc}
-              alt="プレビュー"
-              style={{
-                width: 200, aspectRatio: '16 / 9', objectFit: 'cover',
-                borderRadius: 8, border: '1px solid var(--line)', background: '#f3f3f3', flex: 'none',
-              }}
-            />
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 8, minWidth: 240, flex: 1 }}>
-              <label
-                style={{
-                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 6,
-                  padding: '8px 14px', background: '#fff', border: '1px solid var(--line)',
-                  borderRadius: 6, fontSize: 12, fontWeight: 700, cursor: uploading ? 'wait' : 'pointer',
-                  color: 'var(--ink)', width: 'fit-content', opacity: uploading ? 0.6 : 1,
-                }}
-              >
-                {uploading ? 'アップロード中…' : '📷 画像をアップロード'}
-                <input
-                  type="file"
-                  accept="image/webp,image/jpeg,image/png,image/gif"
-                  disabled={uploading}
-                  onChange={(e) => {
-                    const f = e.target.files?.[0];
-                    if (f) uploadImage(f);
-                    e.target.value = '';
-                  }}
-                  style={{ display: 'none' }}
-                />
-              </label>
-              <label style={labelStyle}>
-                <span style={captionStyle}>画像URL / パス（直接指定も可）</span>
-                <input
-                  type="text"
-                  value={form.image}
-                  onChange={(e) => set('image', e.target.value)}
-                  placeholder="例: /img/spots/xxx.webp または https://…"
-                  style={inputStyle}
-                />
-              </label>
-              {usingCustomImage && (
-                <button
-                  type="button"
-                  onClick={() => set('image', '')}
-                  style={{
-                    alignSelf: 'flex-start', background: 'transparent', border: 'none',
-                    color: 'var(--clay-deep)', fontSize: 11, cursor: 'pointer', padding: 0,
-                  }}
-                >
-                  自動画像に戻す（クリア）
-                </button>
-              )}
-              <span style={{ fontSize: 10, color: 'var(--ink-mute)', lineHeight: 1.6 }}>
-                アップロード後に「保存」を押すと反映されます（本番は数分）。webp/jpg/png/gif・5MBまで。
-              </span>
-            </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))', gap: 12, marginBottom: 16 }}>
+            {imageSlots.map(({ key, label }) => {
+              const val = form[key];
+              const slotPreview = val || (key === 'img0' ? autoImg : '');
+              return (
+                <div key={key} style={{ border: '1px solid var(--line)', borderRadius: 8, padding: 10, background: '#fff' }}>
+                  <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--ink-sub)', marginBottom: 6 }}>
+                    {label}{key === 'img0' ? '' : '（任意）'}
+                  </div>
+                  <div style={{ aspectRatio: '16 / 9', borderRadius: 6, overflow: 'hidden', border: '1px dashed var(--line)', background: '#f3f3f3', marginBottom: 8, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    {slotPreview ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={slotPreview} alt={label} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    ) : (
+                      <span style={{ fontSize: 10, color: 'var(--ink-mute)' }}>未設定</span>
+                    )}
+                  </div>
+                  <label
+                    style={{
+                      display: 'block', textAlign: 'center', padding: '6px 8px', background: '#fff',
+                      border: '1px solid var(--line)', borderRadius: 6, fontSize: 11, fontWeight: 700,
+                      cursor: uploading ? 'wait' : 'pointer', marginBottom: 6, opacity: uploading ? 0.6 : 1,
+                    }}
+                  >
+                    📷 アップロード
+                    <input
+                      type="file"
+                      accept="image/webp,image/jpeg,image/png,image/gif"
+                      disabled={uploading}
+                      onChange={(e) => {
+                        const f = e.target.files?.[0];
+                        if (f) uploadImage(f, key);
+                        e.target.value = '';
+                      }}
+                      style={{ display: 'none' }}
+                    />
+                  </label>
+                  <input
+                    type="text"
+                    value={val}
+                    onChange={(e) => set(key, e.target.value)}
+                    placeholder="/img/... または https://…"
+                    style={{ ...inputStyle, fontSize: 11 }}
+                  />
+                  {val && (
+                    <button
+                      type="button"
+                      onClick={() => set(key, '')}
+                      style={{ marginTop: 6, background: 'transparent', border: 'none', color: 'var(--clay-deep)', fontSize: 10, cursor: 'pointer', padding: 0 }}
+                    >
+                      クリア
+                    </button>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+          <div style={{ fontSize: 10, color: 'var(--ink-mute)', lineHeight: 1.6, marginBottom: 16 }}>
+            アップロード後に「保存」を押すと反映されます（本番は数分）。webp/jpg/png/gif・5MBまで。2枚目以降は本番ページの中段・下段に分散表示されます。
           </div>
 
           <div style={{

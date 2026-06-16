@@ -62,7 +62,7 @@ export type SpotAgeGuideField = (typeof SPOT_AGE_GUIDE_FIELDS)[number];
 
 /** 上書きとして保存できる Spot の部分形。 */
 export type SpotOverride = Partial<
-  Pick<Spot, 'name' | 'city' | 'ward' | 'note' | 'budget' | 'reservation' | 'hiddenTip' | 'nearby' | 'waterDepth' | 'image' | 'pricing' | 'facilities' | 'ageGuide'>
+  Pick<Spot, 'name' | 'city' | 'ward' | 'note' | 'budget' | 'reservation' | 'hiddenTip' | 'nearby' | 'waterDepth' | 'image' | 'images' | 'pricing' | 'facilities' | 'ageGuide'>
 >;
 
 export type SpotOverridesMap = Record<string, SpotOverride>;
