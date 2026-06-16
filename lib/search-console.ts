@@ -36,13 +36,19 @@ let cachedClient: JWT | null = null;
 async function getClient(): Promise<JWT | null> {
   if (!CREDS) return null;
   if (cachedClient) return cachedClient;
-  const credentials = JSON.parse(CREDS);
-  cachedClient = new JWT({
-    email: credentials.client_email,
-    key: credentials.private_key,
-    scopes: ['https://www.googleapis.com/auth/webmasters.readonly'],
-  });
-  return cachedClient;
+  // env が壊れた JSON でも build/prerender を落とさない（grace degrade で空表示）。
+  try {
+    const credentials = JSON.parse(CREDS);
+    cachedClient = new JWT({
+      email: credentials.client_email,
+      key: credentials.private_key,
+      scopes: ['https://www.googleapis.com/auth/webmasters.readonly'],
+    });
+    return cachedClient;
+  } catch (e) {
+    console.error('[search-console] invalid GOOGLE_APPLICATION_CREDENTIALS_JSON', e instanceof Error ? e.message : e);
+    return null;
+  }
 }
 
 async function getAccessToken(): Promise<string | null> {
