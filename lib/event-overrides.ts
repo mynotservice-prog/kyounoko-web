@@ -22,8 +22,10 @@
  *  - 編集は /api/admin/event-overrides の POST 経由でのみ可能。
  */
 
+import { unstable_cache } from 'next/cache';
 import overridesJson from './event-overrides.json';
 import type { EventEntry } from './events';
+import { isKvConfigured, kvGet, kvSet } from './kv-store';
 
 /** 上書き可能なフィールドのサブセット（id 系は不変） */
 export type EventOverride = Partial<
@@ -48,23 +50,52 @@ export type EventOverride = Partial<
 
 export type EventOverridesMap = Record<string, EventOverride>;
 
-const OVERRIDES = overridesJson as EventOverridesMap;
+export const BUNDLED_EVENT_OVERRIDES = overridesJson as EventOverridesMap;
+export const EVENT_OVERRIDES_KV_KEY = 'event:overrides';
+export const EVENT_OVERRIDES_TAG = 'event-overrides';
 
-/** slug の上書き内容を取得（無ければ null） */
+/** slug の上書き内容を取得（無ければ null）。同期・バンドル版。 */
 export function getEventOverride(slug: string): EventOverride | null {
-  return OVERRIDES[slug] ?? null;
+  return BUNDLED_EVENT_OVERRIDES[slug] ?? null;
 }
 
-/** 全 overrides を取得（admin 一覧用） */
+/** 全 overrides を取得（同期・バンドル版）。 */
 export function getAllEventOverrides(): EventOverridesMap {
-  return OVERRIDES;
+  return BUNDLED_EVENT_OVERRIDES;
 }
 
-/** 元イベント + override をマージして 1 件返す */
-export function mergeEvent(e: EventEntry): EventEntry {
-  const ov = OVERRIDES[e.slug];
+/** 元イベント + override をマージ（ovMap 省略時はバンドル）。 */
+export function mergeEvent(e: EventEntry, ovMap: EventOverridesMap = BUNDLED_EVENT_OVERRIDES): EventEntry {
+  const ov = ovMap[e.slug];
   if (!ov) return e;
   return { ...e, ...ov };
+}
+
+/** 実行時の override マップ（KV設定時はKV、無ければバンドル）。 */
+export const getRuntimeEventOverrides = unstable_cache(
+  async (): Promise<EventOverridesMap> => {
+    if (isKvConfigured()) {
+      const fromKv = await kvGet<EventOverridesMap>(EVENT_OVERRIDES_KV_KEY);
+      if (fromKv) return fromKv;
+    }
+    return BUNDLED_EVENT_OVERRIDES;
+  },
+  ['runtime-event-overrides'],
+  { tags: [EVENT_OVERRIDES_TAG] },
+);
+
+/** 保存用に現在の全 override を直読み（KV空ならバンドルをシード）。 */
+export async function readEventOverridesForWrite(): Promise<EventOverridesMap> {
+  if (isKvConfigured()) {
+    const fromKv = await kvGet<EventOverridesMap>(EVENT_OVERRIDES_KV_KEY);
+    return fromKv ?? { ...BUNDLED_EVENT_OVERRIDES };
+  }
+  return { ...BUNDLED_EVENT_OVERRIDES };
+}
+
+/** override マップを KV に保存。 */
+export async function writeEventOverridesToKv(map: EventOverridesMap): Promise<boolean> {
+  return kvSet(EVENT_OVERRIDES_KV_KEY, map);
 }
 
 /** 編集可能なフィールド名（API・UI で参照する） */

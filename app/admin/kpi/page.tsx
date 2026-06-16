@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import {
-  getAllMonthlyMetrics,
+  getRuntimeMonthlyMetrics,
   currentMonth,
   monthLabel,
   type MonthlyMetric,
@@ -35,7 +35,7 @@ export default async function KpiPage() {
   const thisMonth = currentMonth(now);
   const monthStart = new Date(now.getFullYear(), now.getMonth(), 1);
 
-  const store = getAllMonthlyMetrics();
+  const store = await getRuntimeMonthlyMetrics();
   const articles = getAllFileArticles();
 
   // ライブ取得（各 lib が未設定/失敗時は null を返すので Promise.all で安全）
