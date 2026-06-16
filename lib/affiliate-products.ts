@@ -57,6 +57,9 @@ export const AFFILIATE_TARGET_SLUGS = [
   'nekashitsuke-ehon-10sen-2026',
   'ehon-subsc-hikaku-2026',
   'toysub-tettei-kaisetsu-2026',
+  // 2026-06-16 追加：Z会 通信教育の本命配置先（Z会を直接比較する未登録記事）
+  'benesse-vs-zkai-youji',
+  'tsuushin-kyouzai-hikaku',
 ] as const;
 
 export type AffiliateTargetSlug = (typeof AFFILIATE_TARGET_SLUGS)[number];
@@ -601,6 +604,23 @@ const A8_PROGRAMS_2026_05: AffiliateProduct[] = expand([
     slugs: [
       'hoikuen-nyuuen-junbi-0-2sai-kanzen-list',
       'onamae-seal-7sha-hikaku-2026',
+    ],
+  },
+  // ---- ⑨ Z会の通信教育（2026-06-16 承認 / 素材ID155 幼児向け・EPC50以上・クリック率5%以上） ----
+  {
+    id: 'a8-zkai',
+    provider: 'a8',
+    href: 'https://px.a8.net/svt/ejp?a8mat=4B5WGF+1F7ASY+E0Q+CTW36',
+    title: 'Z会の通信教育＜幼児向け＞',
+    subtitle: '「あと伸び力」を育てる思考力・体験重視の通信教育。資料請求は無料、おためし教材あり',
+    price: '資料請求 無料 / 入会 月額¥2,310〜',
+    slugs: [
+      'benesse-vs-zkai-youji',
+      'tsuushin-kyouzai-hikaku',
+      'chiiku-subsc-3sha-2026-comparison',
+      'kodomochalle-vs-smile-zemi-hikaku',
+      'kyouzai-3sha-popi-challenge-smile-hikaku-2026',
+      'chiiku-subsc-hikaku-4sha',
     ],
   },
 ]);
