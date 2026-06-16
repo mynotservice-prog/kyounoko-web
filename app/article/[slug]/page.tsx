@@ -6,6 +6,7 @@ import { getArticle, getArticleIds } from '@/lib/microcms';
 import {
   getAllFileArticleSlugs,
   getFileArticle,
+  getKvOnlyArticleMetas,
   getRelatedFileArticles,
   type FileArticle,
   type FileArticleMeta,
@@ -47,6 +48,8 @@ import { LineCta } from '@/components/common/LineCta';
 const PERSONALIZED_HINT_CATEGORIES = new Set(['today-doko', 'today-nani', 'today-taberu']);
 
 export const revalidate = 3600; // 1時間ごとに再生成
+// 未知 slug（KVのみ存在する新規記事など）は初回アクセス時にオンデマンド生成する
+export const dynamicParams = true;
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -78,6 +81,13 @@ export async function generateStaticParams() {
   }
 
   for (const s of getAllFileArticleSlugs()) slugs.add(s);
+
+  // KVにのみ存在する新規記事も静的生成対象に含める（次ビルド以降で静的化）
+  try {
+    for (const a of await getKvOnlyArticleMetas()) slugs.add(a.slug);
+  } catch {
+    // ignore
+  }
 
   return Array.from(slugs).map((slug) => ({ slug }));
 }

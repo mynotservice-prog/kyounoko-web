@@ -210,6 +210,7 @@ export async function POST(req: NextRequest) {
     if (!ok) return NextResponse.json({ ok: false, error: 'kv write failed' }, { status: 500 });
     revalidateTag(ARTICLE_OVERRIDES_TAG);
     revalidatePath(`/article/${body.slug}`);
+    revalidatePath('/sitemap.xml'); // 新規記事をサイトマップに即反映（SEO発見性）
     return NextResponse.json({
       ok: true,
       source: 'kv',

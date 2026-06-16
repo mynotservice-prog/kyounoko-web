@@ -9,7 +9,7 @@ import type { MetadataRoute } from 'next';
  */
 
 import { getArticleIds, getCategories } from '@/lib/microcms';
-import { getAllFileArticles } from '@/lib/articles';
+import { getAllFileArticles, getKvOnlyArticleMetas } from '@/lib/articles';
 import { getAllSpotsWithSlug } from '@/lib/spots';
 import { getAllTags } from '@/lib/tags';
 import { TOKYO_STATIONS } from '@/lib/tokyo-stations';
@@ -176,6 +176,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
   // microCMS側で先に入っていた noindex slug も除去
   for (const slug of noindexSlugs) articleUrlMap.delete(slug);
+
+  // KVにのみ存在する新規記事（デプロイ不要で作成された記事）もサイトマップに載せる
+  try {
+    for (const article of await getKvOnlyArticleMetas()) {
+      if (article.noindex || articleUrlMap.has(article.slug)) continue;
+      articleUrlMap.set(article.slug, {
+        url: `${BASE}/article/${article.slug}`,
+        lastModified: new Date(article.updatedAt ?? Date.now()),
+        changeFrequency: getArticleChangeFreq(article.slug),
+        priority: getArticlePriority(article.slug),
+      });
+    }
+  } catch {}
 
   const articlePages: MetadataRoute.Sitemap = Array.from(articleUrlMap.values());
 

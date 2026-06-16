@@ -36,6 +36,8 @@ export function NewArticleClient() {
   const [place, setPlace] = useState('home');
   const [durationMin, setDurationMin] = useState(30);
   const [copied, setCopied] = useState(false);
+  const [creating, setCreating] = useState(false);
+  const [createMsg, setCreateMsg] = useState('');
 
   const today = new Date().toISOString().slice(0, 10);
   const categoryName = CATEGORY_OPTIONS.find((c) => c.value === category)?.name ?? '';
@@ -109,6 +111,41 @@ A. 回答3。
     setTimeout(() => setCopied(false), 2000);
   };
 
+  // KVに作成（デプロイ不要）。KV未設定なら edit-content 側で従来の commit にフォールバック。
+  const createInKv = async () => {
+    if (!slug) { setCreateMsg('slug を入力してください'); return; }
+    setCreating(true);
+    setCreateMsg('');
+    const frontmatter = {
+      slug, title, metaDescription, category, categoryName,
+      publishedAt: today, updatedAt: today, hero: '', lede,
+      quickInfo: { ageRanges: [age], place: [place], weather: ['any'], durationMin, budget: 'low' },
+      area,
+    };
+    const close = markdown.indexOf('---', 3);
+    const body = close >= 0 ? markdown.slice(close + 3).replace(/^\s+/, '') : '';
+    try {
+      const res = await fetch('/api/admin/edit-content', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ kind: 'article', slug, frontmatter, body }),
+      });
+      const data = (await res.json()) as { ok?: boolean; error?: string; source?: string; deployed?: string };
+      if (!res.ok || !data.ok) {
+        setCreateMsg('❌ ' + (data.error || 'failed'));
+      } else if (data.source === 'kv') {
+        setCreateMsg('✅ KVに作成（デプロイ不要）。編集画面へ移動します…');
+        setTimeout(() => { window.location.href = `/admin/articles/${slug}/edit`; }, 1000);
+      } else {
+        setCreateMsg('✅ 作成しました（' + (data.deployed || data.source) + '）');
+      }
+    } catch (e) {
+      setCreateMsg('❌ ' + (e instanceof Error ? e.message : 'error'));
+    } finally {
+      setCreating(false);
+    }
+  };
+
   return (
     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
       {/* 左: フォーム */}
@@ -156,9 +193,22 @@ A. 回答3。
             <input type="number" value={durationMin} onChange={(e) => setDurationMin(Number(e.target.value))} style={inputStyle} />
           </Field>
         </div>
-        <div style={{ marginTop: 10, fontSize: 11, color: 'var(--ink-mute)', lineHeight: 1.6 }}>
-          保存先: <code>/Users/nagaminehideki/Developer/kyounoko-web/content/articles/{slug || 'your-article-slug'}.md</code>
-          <br />ファイル作成後: <code>git add . && git commit -m &quot;content: [title]&quot; && git push</code>
+        <button
+          type="button"
+          onClick={createInKv}
+          disabled={creating || !slug}
+          style={{
+            marginTop: 12, padding: '11px 18px', background: 'var(--ink)', color: '#fff',
+            border: 'none', borderRadius: 8, fontSize: 14, fontWeight: 700,
+            cursor: creating || !slug ? 'not-allowed' : 'pointer', opacity: creating || !slug ? 0.5 : 1,
+          }}
+        >
+          {creating ? '作成中…' : '✅ KVに作成して公開（デプロイ不要）'}
+        </button>
+        {createMsg && <div style={{ fontSize: 12, color: 'var(--ink-sub)', marginTop: 2 }}>{createMsg}</div>}
+        <div style={{ marginTop: 8, fontSize: 11, color: 'var(--ink-mute)', lineHeight: 1.6 }}>
+          このボタンは枠（frontmatter＋ひな形本文）をKVに作成し、編集画面へ移動します。本文はそこで書いて保存（同じくデプロイ不要）。<br />
+          ※KV未設定の環境では従来どおり下のMarkdownをコピーして <code>content/articles/{slug || 'your-article-slug'}.md</code> を作成→commitしてください。
         </div>
       </div>
 

@@ -789,10 +789,24 @@ export async function writeArticleOverride(slug: string, rawMd: string): Promise
   return kvSet(ARTICLE_OVERRIDES_KV_KEY, map);
 }
 
+/** 生Markdown（frontmatter込み）→ FileArticle（本文HTML + FAQ等）を構築。 */
+async function buildArticleFromRaw(raw: string, fallbackSlug: string): Promise<FileArticle> {
+  const { meta, content } = parseFrontmatter(raw, fallbackSlug);
+  const { body: bodyMd, faq } = extractFaq(content);
+  const tldr = extractTldr(bodyMd);
+  const howto = extractHowTo(bodyMd);
+  const itemList = extractItemList(meta.title, bodyMd);
+  const rawHtml = await renderMarkdownToHtml(bodyMd);
+  const htmlWithLinks = injectInternalLinks(rawHtml, meta.slug);
+  const { html: bodyHtml, toc } = injectHeadingIdsAndExtractToc(htmlWithLinks);
+  const readingTimeMin = estimateReadingTime(bodyMd);
+  return { ...meta, body: bodyHtml, faqItems: faq, toc, readingTimeMin, tldr, howto, itemList };
+}
+
 /**
- * 指定 slug の記事を返す（本文HTML + FAQを含む）。
- * 存在しない場合は null。
- * KV に編集済みの生Markdownがあれば、ファイルではなくそれを描画する（デプロイ不要編集）。
+ * 指定 slug の記事を返す（本文HTML + FAQを含む）。存在しない場合は null。
+ * - ファイルがあり KV 上書きもある: KV を優先描画（デプロイ不要編集）
+ * - ファイルが無く KV にのみ存在: KV を正に描画（デプロイ不要で新規作成された記事）
  */
 export async function getFileArticle(slug: string): Promise<FileArticle | null> {
   const overrides = await getRuntimeArticleOverrides();
@@ -802,33 +816,34 @@ export async function getFileArticle(slug: string): Promise<FileArticle | null> 
     const filePath = path.join(ARTICLES_DIR, filename);
     const fileRaw = fs.readFileSync(filePath, 'utf8');
     const fallbackSlug = filename.replace(/\.md$/, '');
-    // ファイル側の slug を先に判定（上書きがあっても slug は不変前提）
     const { meta: fileMeta } = parseFrontmatter(fileRaw, fallbackSlug);
     if (fileMeta.slug !== slug) continue;
-    // KV 上書きがあればそれを正に描画
-    const raw = overrideRaw ?? fileRaw;
-    const { meta, content } = parseFrontmatter(raw, fallbackSlug);
-
-    const { body: bodyMd, faq } = extractFaq(content);
-    const tldr = extractTldr(bodyMd);
-    const howto = extractHowTo(bodyMd);
-    const itemList = extractItemList(meta.title, bodyMd);
-    const rawHtml = await renderMarkdownToHtml(bodyMd);
-    const htmlWithLinks = injectInternalLinks(rawHtml, meta.slug);
-    const { html: bodyHtml, toc } = injectHeadingIdsAndExtractToc(htmlWithLinks);
-    const readingTimeMin = estimateReadingTime(bodyMd);
-    return {
-      ...meta,
-      body: bodyHtml,
-      faqItems: faq,
-      toc,
-      readingTimeMin,
-      tldr,
-      howto,
-      itemList,
-    };
+    return buildArticleFromRaw(overrideRaw ?? fileRaw, fallbackSlug);
   }
+  // ファイル無し: KV にのみ存在する新規記事
+  if (overrideRaw) return buildArticleFromRaw(overrideRaw, slug);
   return null;
+}
+
+/**
+ * KV にのみ存在する（＝ファイルが無い）新規記事のメタ一覧。
+ * 一覧・サイトマップ・generateStaticParams に新記事を載せるために使う。
+ */
+export async function getKvOnlyArticleMetas(): Promise<FileArticleMeta[]> {
+  if (!isKvConfigured()) return [];
+  const overrides = await getRuntimeArticleOverrides();
+  const fileSlugs = new Set(getAllFileArticleSlugs());
+  const out: FileArticleMeta[] = [];
+  for (const [slug, raw] of Object.entries(overrides)) {
+    if (fileSlugs.has(slug)) continue; // 既存ファイルの編集はここでは対象外
+    try {
+      const { meta } = parseFrontmatter(raw, slug);
+      out.push(meta);
+    } catch {
+      /* 壊れたエントリはスキップ */
+    }
+  }
+  return out;
 }
 
 /**
