@@ -11,6 +11,7 @@ import {
   SPOT_CATEGORY_LABEL,
 } from '@/lib/spots';
 import type { Spot } from '@/lib/spots';
+import { getRuntimeSpotOverrides } from '@/lib/spot-overrides';
 import { findStationBySlug } from '@/lib/all-stations';
 import { SPOT_CLOSED } from '@/lib/spot-closed';
 import { getAllFileArticles } from '@/lib/articles';
@@ -42,7 +43,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const entry = getSpotBySlug(slug);
+  const entry = getSpotBySlug(slug, await getRuntimeSpotOverrides());
   if (!entry) return { title: 'スポットが見つかりません' };
   const { spot } = entry;
   const category = SPOT_CATEGORY_LABEL[spot.category] ?? spot.category;
@@ -82,7 +83,8 @@ const FACILITY_DEF: Array<{ key: keyof NonNullable<Spot['facilities']>; label: s
 
 export default async function SpotPage({ params }: Props) {
   const { slug } = await params;
-  const entry = getSpotBySlug(slug);
+  const ovMap = await getRuntimeSpotOverrides();
+  const entry = getSpotBySlug(slug, ovMap);
   if (!entry) notFound();
   const { spot } = entry;
   const category = SPOT_CATEGORY_LABEL[spot.category] ?? spot.category;
@@ -99,7 +101,7 @@ export default async function SpotPage({ params }: Props) {
     : null;
 
   // 近隣スポット
-  const nearbySpots = getAllSpotsWithSlug()
+  const nearbySpots = getAllSpotsWithSlug(ovMap)
     .filter((x) => {
       if (x.slug === slug) return false;
       if (!isSpotIndexable(x.spot)) return false;
