@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { isBlobConfigured, uploadToBlob } from '@/lib/blob-store';
 
 /**
  * /admin/spots/edit の画像アップロード API。
@@ -111,6 +112,13 @@ export async function POST(req: NextRequest) {
   const filename = `${slug}-${ts}.${ext}`;
   const fileRel = `${PUBLIC_DIR_REL}/${filename}`;
   const publicPath = `/img/spots/${filename}`;
+
+  // Blob 設定時: Blob にアップロードして公開URLを返す（git commit不要・デプロイ不要）。
+  if (isBlobConfigured()) {
+    const url = await uploadToBlob(`spots/${filename}`, buf, file.type);
+    if (!url) return NextResponse.json({ error: 'blob upload failed' }, { status: 500 });
+    return NextResponse.json({ ok: true, mode: 'blob', path: url });
+  }
 
   // ローカル開発: public へ直接書き込み
   if (process.env.NODE_ENV === 'development') {
