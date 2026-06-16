@@ -236,7 +236,7 @@ export function spotToV2(s: Spot, idx?: number): V2Spot {
         : s.ages?.includes('2-3')
         ? '2〜6歳'
         : '4〜6歳',
-    img: s.image || pickHero(s.category, s.name),
+    img: s.images?.[0] || s.image || pickHero(s.category, s.name),
     price:
       s.budget === 'free'
         ? '無料'

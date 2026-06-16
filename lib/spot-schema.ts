@@ -281,3 +281,28 @@ export function buildSpotJsonLd(spot: Spot, slug: string) {
 
   return jsonLd;
 }
+
+/**
+ * FAQ を schema.org の FAQPage 構造化データに変換する。
+ *
+ * Google の FAQ リッチリザルト要件:
+ *   https://developers.google.com/search/docs/appearance/structured-data/faqpage
+ * AIO（AI Overview / ChatGPT 等）に「質問→回答」のペアを明示し、引用率を高める。
+ *
+ * FAQ が空なら null を返す（ページ側で出力をスキップ）。
+ */
+export function buildFaqJsonLd(faqs: Array<{ q: string; a: string }>) {
+  if (!faqs.length) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: f.a,
+      },
+    })),
+  };
+}

@@ -79,8 +79,14 @@ export type Spot = {
   /**
    * 差し替え用の hero 画像（URL または /img/... のサイト内パス）。
    * admin（/admin/spots/edit）でアップロード/URL指定。未指定はカテゴリ自動画像。
+   * @deprecated images[0] に統合。後方互換のため残す（images が無ければ image を使う）。
    */
   image?: string;
+  /**
+   * 差し替え画像（最大3枚）。images[0]=hero、images[1]=中段、images[2]=下段に分散表示。
+   * admin（/admin/spots/edit）でアップロード/URL指定。未指定はカテゴリ自動画像。
+   */
+  images?: string[];
   budget?: 'free' | 'low' | 'mid' | 'high';  // 入園料目安
   // ---- Instagram人気アカウントから学んだ情報密度UP項目 ----
   pricing?: {
@@ -105,6 +111,12 @@ export type Spot = {
     '2-3'?: string;
     '4-6'?: string;
   };
+  /**
+   * よくある質問（FAQ）の個別追加・上書き。
+   * 指定したものは自動生成のFAQより前に表示する（同じ質問は自動生成側を抑制）。
+   * admin から施設固有のQ&A（例:「ペットは入れる？」）を足せる。
+   */
+  faq?: Array<{ q: string; a: string }>;
   popular?: boolean;     // エディターが「ママに人気」として推すスポット（トップページ表示用）
   ward?: string;         // 東京23区の区名（例: '中野区'）、その他市区町村
   // レストラン向けフラグ
