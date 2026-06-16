@@ -35,6 +35,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           管理画面
         </Link>
         <nav style={{ display: 'flex', gap: 16, fontSize: 13 }}>
+          <Link href="/admin/kpi" style={{ color: 'var(--clay-deep)', textDecoration: 'none', fontWeight: 600 }}>📈 経営KPI</Link>
           <Link href="/admin/insights" style={{ color: 'var(--clay-deep)', textDecoration: 'none', fontWeight: 600 }}>📊 Insights</Link>
           <Link href="/admin/events" style={{ color: 'var(--clay-deep)', textDecoration: 'none', fontWeight: 600 }}>📡 Events</Link>
           <Link href="/admin/ab" style={{ color: 'var(--clay-deep)', textDecoration: 'none', fontWeight: 600 }}>🧪 A/B</Link>
