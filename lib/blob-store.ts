@@ -10,7 +10,8 @@
 import { put } from '@vercel/blob';
 
 export function isBlobConfigured(): boolean {
-  return !!process.env.BLOB_READ_WRITE_TOKEN;
+  // 新Blob（BLOB_STORE_ID + 実行時OIDC）/ 旧Blob（BLOB_READ_WRITE_TOKEN）の両対応。
+  return !!(process.env.BLOB_READ_WRITE_TOKEN || process.env.BLOB_STORE_ID);
 }
 
 /**
@@ -24,11 +25,14 @@ export async function uploadToBlob(
 ): Promise<string | null> {
   if (!isBlobConfigured()) return null;
   try {
+    const token = process.env.BLOB_READ_WRITE_TOKEN;
     const res = await put(pathname, data, {
       access: 'public',
       contentType,
       addRandomSuffix: false,
       allowOverwrite: true,
+      // 旧Blobはトークン必須。新Blob（BLOB_STORE_ID）は実行時OIDCで認証されるので未指定。
+      ...(token ? { token } : {}),
     });
     return res.url;
   } catch (e) {
