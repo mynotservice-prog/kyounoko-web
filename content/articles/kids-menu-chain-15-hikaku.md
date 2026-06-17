@@ -297,6 +297,7 @@ A. 多くが**未就学児無料／小学生は大人の半額前後／中学生
 - [子連れデリ・テイクアウト10選](/article/kodzure-deli-takeout-10)
 - [外食で子が食べる工夫](/article/gaisyoku-ko-ga-taberu)
 - [子供メニュー何歳から早見表](/article/kids-menu-nansai-kara-hayami)
+- [子連れOKチェーンのベビーチェア完全まとめ](/article/gaishoku-baby-chair-matome)
 
 ---
 

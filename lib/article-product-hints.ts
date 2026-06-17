@@ -421,6 +421,12 @@ export function getChainCrossLinks(slug: string): HubLink[] {
     }
   } else {
     links.push({
+      href: '/article/gaishoku-baby-chair-matome',
+      title: '子連れOKチェーンのベビーチェア完全まとめ',
+      description: '外食チェーン33店のベビーチェア事情を横断比較。何ヶ月から・タイプ・確保のコツ。',
+      eyebrow: 'チェーン横断',
+    });
+    links.push({
       href: '/article/baby-chair-ranking',
       title: '自宅用ベビーチェア 買ってよかった10選',
       description: '外出先でベビーチェアを探すなら、自宅にも1台。0-6歳で長く使える定番を比較。',
