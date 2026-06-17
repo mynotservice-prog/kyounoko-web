@@ -21,7 +21,10 @@ import {
   getRelatedItemsForArticle,
   getRestaurantBridgeOffer,
   getRestaurantFoodHubLinks,
+  getChainCrossLinks,
 } from '@/lib/article-product-hints';
+import { getRestaurantReservationOffer } from '@/lib/reservation-cta';
+import { ReservationCTA } from '@/components/article/ReservationCTA';
 import { getSupervisor } from '@/lib/supervisors';
 import { SupervisorLabel } from '@/components/article/SupervisorLabel';
 import { AdSlot } from '@/components/ads/AdSlot';
@@ -616,6 +619,13 @@ function FileArticleView({ article }: { article: FileArticle }) {
     article.title,
   );
 
+  // 外食記事向けネット予約CTA（ホットペッパー/VC）。env 未設定なら null（描画されない）。
+  const reservationOffer = getRestaurantReservationOffer(
+    article.slug,
+    article.category,
+    article.title,
+  );
+
   // 概算 wordCount（HTMLタグ除去後の文字数）。Google Article リッチリザルトの
   // 推奨フィールド。日本語は文字数 = ほぼ語数として扱う。
   const articleWordCount = (() => {
@@ -976,6 +986,9 @@ function FileArticleView({ article }: { article: FileArticle }) {
             />
           )}
 
+          {/* 外食記事向けネット予約CTA（高インテント位置：結論直後）。env未設定なら非表示。 */}
+          {reservationOffer && <ReservationCTA offer={reservationOffer} />}
+
           {/* インタラクティブ図解（frontmatter `interactive:` で指定された記事のみ） */}
           {article.interactive === 'AgeMonthCalculator' && <AgeMonthCalculator />}
           {article.interactive === 'BabyCarRouteEstimator' && <BabyCarRouteEstimator />}
@@ -1065,6 +1078,9 @@ function FileArticleView({ article }: { article: FileArticle }) {
               items={getRelatedItemsForArticle(article.slug, article.category, article.title)}
             />
           )}
+
+          {/* 外食記事向けネット予約CTA（読了後の再掲。env未設定なら非表示）。 */}
+          {reservationOffer && <ReservationCTA offer={reservationOffer} />}
 
           {/* 外食記事向け高単価ブリッジ（幼児食宅配）。低単価グッズCTAの下に1点だけ。 */}
           {restaurantBridge && (
@@ -1278,6 +1294,18 @@ function FileArticleView({ article }: { article: FileArticle }) {
                 eyebrow="あわせて読みたい"
                 heading="子どもの食事の準備に役立つ記事"
                 items={hubLinks}
+              />
+            ) : null;
+          })()}
+
+          {/* チェーン×子連れ記事 → 同チェーン姉妹記事・比較ハブへのクロスリンク（勝ちクラスタの内部リンク強化） */}
+          {(() => {
+            const chainLinks = getChainCrossLinks(article.slug);
+            return chainLinks.length > 0 ? (
+              <CrossLinkCards
+                eyebrow="このお店をもっと知る"
+                heading="同じお店・チェーン比較で迷わない"
+                items={chainLinks}
               />
             ) : null;
           })()}

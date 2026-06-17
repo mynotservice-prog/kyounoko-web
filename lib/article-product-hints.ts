@@ -325,3 +325,109 @@ export function getRestaurantFoodHubLinks(
   if (!isRestaurantContext(slug, category, title)) return [];
   return RESTAURANT_FOOD_HUBS.filter((h) => !h.href.endsWith(`/${slug}`));
 }
+
+/**
+ * チェーン店 slug → 日本語表示名。
+ * `{chain}-kids-menu` と `{chain}-baby-chair` の両方が実在するチェーンのみ列挙する
+ * （= 姉妹記事クロスリンクを張れるペア）。ここに無いチェーンには姉妹リンクを出さない。
+ */
+const CHAIN_DISPLAY_NAMES: Record<string, string> = {
+  anrakutei: '安楽亭',
+  bamiyan: 'バーミヤン',
+  bigboy: 'ビッグボーイ',
+  cocoichi: 'CoCo壱番屋',
+  cocos: 'ココス',
+  dennys: 'デニーズ',
+  disney: '東京ディズニーランド',
+  gusto: 'ガスト',
+  gyukaku: '牛角',
+  hanamarudon: 'はなまるうどん',
+  jonathan: 'ジョナサン',
+  legoland: 'レゴランド・ジャパン',
+  matsuya: '松屋',
+  nakau: 'なか卯',
+  ohsho: '餃子の王将',
+  ringerhut: 'リンガーハット',
+  'royal-host': 'ロイヤルホスト',
+  saizeriya: 'サイゼリヤ',
+  shabuyo: 'しゃぶ葉',
+  steakgusto: 'ステーキガスト',
+  sukiya: 'すき家',
+  tenya: 'てんや',
+  'yakiniku-king': '焼肉キング',
+  yayoiken: 'やよい軒',
+  yoshinoya: '吉野家',
+};
+
+/** テーマパーク（ファミレス系チェーン比較ハブの対象外にする）。姉妹リンクは出す。 */
+const THEME_PARK_CHAINS = new Set(['disney', 'legoland']);
+
+/**
+ * チェーン×子連れ記事（`{chain}-kids-menu` / `{chain}-baby-chair`）から、
+ * 勝ちクラスタ内部を相互リンクする回遊リンクを返す。
+ *
+ * 流入の主力である「○○に子連れで行ける？」系の個別チェーン記事は、これまで
+ * 同じチェーンの姉妹記事（キッズメニュー↔ベビーチェア）や比較ハブへの内部リンクが
+ * 欠落しており、クラスタとしてのSEO評価が分散していた。レンダリング層でクロスリンクを
+ * 補うことで、本文（markdown）を一切編集せず58記事に一貫した導線を張る。
+ *
+ * - 姉妹リンク: CHAIN_DISPLAY_NAMES に登録（=両記事が実在）したチェーンのみ。
+ * - 比較ハブ: キッズメニュー記事→キッズメニュー比較/早見表、ベビーチェア記事→自宅用ランキング。
+ * - 自分自身・テーマパークの不適合ハブは除外する。
+ */
+export function getChainCrossLinks(slug: string): HubLink[] {
+  const isKidsMenu = slug.endsWith('-kids-menu');
+  const isBabyChair = slug.endsWith('-baby-chair');
+  if (!isKidsMenu && !isBabyChair) return [];
+
+  const chain = slug.replace(/-(kids-menu|baby-chair)$/, '');
+  const name = CHAIN_DISPLAY_NAMES[chain];
+  const links: HubLink[] = [];
+
+  // 1) 同じチェーンの姉妹記事（両記事が実在するペアのみ）
+  if (name) {
+    if (isKidsMenu) {
+      links.push({
+        href: `/article/${chain}-baby-chair`,
+        title: `${name}のベビーチェア・子ども椅子はある？`,
+        description: `${name}にベビーチェアやお座敷席はある？月齢別の入店のしやすさをチェック。`,
+        eyebrow: '同じお店の設備',
+      });
+    } else {
+      links.push({
+        href: `/article/${chain}-kids-menu`,
+        title: `${name}のキッズメニュー・取り分けガイド`,
+        description: `${name}にキッズメニューはある？子どもに人気の取り分けと年齢別の食べさせ方。`,
+        eyebrow: '同じお店のメニュー',
+      });
+    }
+  }
+
+  // 2) 比較ハブ
+  if (isKidsMenu) {
+    if (!THEME_PARK_CHAINS.has(chain)) {
+      links.push({
+        href: '/article/kids-menu-chain-15-hikaku',
+        title: '子連れOKチェーン店のキッズメニュー比較15選',
+        description: '主要ファミレス・チェーンのキッズメニューを価格/対象年齢/アレルゲンで一覧比較。',
+        eyebrow: 'チェーン比較',
+      });
+      links.push({
+        href: '/article/kids-menu-nansai-kara-hayami',
+        title: '子供メニューは何歳から？早見表',
+        description: 'ファミレス各社の年齢制限・無料/有料を0-6歳の早見表でまとめてチェック。',
+        eyebrow: '早見表',
+      });
+    }
+  } else {
+    links.push({
+      href: '/article/baby-chair-ranking',
+      title: '自宅用ベビーチェア 買ってよかった10選',
+      description: '外出先でベビーチェアを探すなら、自宅にも1台。0-6歳で長く使える定番を比較。',
+      eyebrow: '自宅用に',
+    });
+  }
+
+  // 自分自身へのリンクは除外
+  return links.filter((l) => !l.href.endsWith(`/${slug}`));
+}

@@ -13,9 +13,49 @@
  */
 
 const TOKEN = process.env.LINE_CHANNEL_ACCESS_TOKEN;
+/** 運営者本人の LINE userId（push通知の宛先）。KPIアラート等の内部通知に使う。 */
+const OWNER_USER_ID = process.env.LINE_OWNER_USER_ID;
 
 export function isLineConfigured(): boolean {
   return !!TOKEN;
+}
+
+/** 運営者へ push 通知できる状態か（トークン＋宛先 userId が揃っている）。 */
+export function isLinePushConfigured(): boolean {
+  return !!TOKEN && !!OWNER_USER_ID;
+}
+
+/**
+ * 運営者本人（LINE_OWNER_USER_ID）へテキストを push する。
+ * KPI急落アラートなどの内部通知用。友だち全員への broadcast ではない。
+ *
+ * - 未設定（TOKEN or OWNER_USER_ID 無し）なら何もせず false を返す。
+ * - LINE のテキストは1通5,000字まで。長文は丸める。
+ */
+export async function sendLinePush(text: string): Promise<boolean> {
+  if (!TOKEN || !OWNER_USER_ID) return false;
+  try {
+    const res = await fetch('https://api.line.me/v2/bot/message/push', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${TOKEN}`,
+      },
+      body: JSON.stringify({
+        to: OWNER_USER_ID,
+        messages: [{ type: 'text', text: text.slice(0, 5000) }],
+      }),
+      cache: 'no-store',
+    });
+    if (!res.ok) {
+      console.error('[line] push error', res.status, (await res.text()).slice(0, 200));
+      return false;
+    }
+    return true;
+  } catch (e) {
+    console.error('[line] push exception', e instanceof Error ? e.message : e);
+    return false;
+  }
 }
 
 export type LineFollowers = {
