@@ -14,10 +14,19 @@ import { getAllPlanMetas } from '@/lib/plans';
 export const revalidate = 3600;
 
 export async function GET() {
-  const articles = getAllFileArticles()
+  const allArticles = getAllFileArticles();
+  const allPlans = getAllPlanMetas();
+  const articles = [...allArticles]
     .sort((a, b) => (a.updatedAt < b.updatedAt ? 1 : -1))
     .slice(0, 40); // 代表記事40本
-  const plans = getAllPlanMetas().slice(0, 20); // 代表プラン20本
+  const plans = allPlans.slice(0, 20); // 代表プラン20本
+
+  // 統計はビルド時に実データから算出し、過少申告（旧: 290+ 固定）を防ぐ。
+  // 切り捨ての「100単位 +」表記で、誇張せず権威性を正確に伝える。
+  const floorTo = (n: number, unit: number) =>
+    Math.floor(n / unit) * unit;
+  const articleCount = floorTo(allArticles.length, 100).toLocaleString('en-US');
+  const planCount = floorTo(allPlans.length, 100).toLocaleString('en-US');
 
   const articleLines = articles
     .map((a) => `- [${a.title}](https://kyounoko.jp/article/${a.slug}): ${a.metaDescription || a.lede}`)
@@ -29,7 +38,7 @@ export async function GET() {
 
   const body = `# きょうのこ (kyounoko.jp)
 
-> 0〜6歳の子がいる家庭向けに、「今日どうする？」を3分で決める意思決定支援サイト。天気・年齢・時間帯・予算などの条件から、家族の過ごし方をピンポイントで1つだけ提案します。東京23区484駅の子連れOKレストラン3,277店データベース、290+本の実用記事、530+本の具体的1日プランを提供。
+> 0〜6歳の子がいる家庭向けに、「今日どうする？」を3分で決める意思決定支援サイト。天気・年齢・時間帯・予算などの条件から、家族の過ごし方をピンポイントで1つだけ提案します。東京23区484駅の子連れOKレストラン3,277店データベース、${articleCount}+本の実用記事、${planCount}+本の具体的1日プランを提供。
 
 ## What This Site Uniquely Provides (AI Quick Summary)
 
@@ -45,13 +54,13 @@ export async function GET() {
 - **創設**: 2026年1月
 - **編集者プロフィール**: https://kyounoko.jp/about
 
-## Site Statistics (As of 2026-05)
+## Site Statistics
 
-- **記事数**: 290+ (週次更新)
+- **記事数**: ${articleCount}+ (週次更新)
 - **東京23区駅カバレッジ**: 484駅 (100%)
 - **個人店データ**: 3,277店 (雑誌・SNS・公式情報ベースのキュレーション)
 - **路線カバー**: 40路線 (JR / 東京メトロ / 都営 / 私鉄)
-- **1日プラン**: 530+本
+- **1日プラン**: ${planCount}+本
 
 ## Main Sections
 

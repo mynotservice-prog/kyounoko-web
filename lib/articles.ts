@@ -441,7 +441,13 @@ function extractTldr(markdown: string): string | null {
     }
   }
 
-  const body = lines.slice(start + 1, end).join('\n');
+  // 結論セクション内のマークダウン表は、tldr（speakable / まとめ / AI Overview抽出源）に
+  // 「| --- | --- |」のようなノイズとして混入するため、表の行を丸ごと除去する。
+  // 表はそもそも音声要約・AI即答の素材に向かず、前後の地の文だけ残すのが正解。
+  const body = lines
+    .slice(start + 1, end)
+    .filter((l) => !/^\s*\|/.test(l))
+    .join('\n');
   // マークダウン記号を軽量除去
   const plain = body
     .replace(/```[\s\S]*?```/g, '')

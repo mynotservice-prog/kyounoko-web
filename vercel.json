@@ -5,5 +5,11 @@
       "main": true
     }
   },
-  "ignoreCommand": "bash scripts/vercel-ignore-build.sh"
+  "ignoreCommand": "bash scripts/vercel-ignore-build.sh",
+  "crons": [
+    {
+      "path": "/api/cron/kpi-alert",
+      "schedule": "0 0 * * *"
+    }
+  ]
 }
