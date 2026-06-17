@@ -66,3 +66,50 @@ export function getRestaurantReservationOffer(
     itemId: 'hotpepper-reservation',
   };
 }
+
+/**
+ * スポット詳細ページ向けのネット予約/チケットCTA（カテゴリ別）。
+ *
+ * メモリ「最大の未開拓面」= /spot/[slug] はアフィゼロ。流入文脈に合わせて出し分ける:
+ *   - restaurant → ホットペッパーグルメ予約（NEXT_PUBLIC_VC_HOTPEPPER_URL）
+ *   - aquarium / amusement / zoo / museum / farm / seasonal / indoor
+ *       → アソビュー！のレジャーチケット（NEXT_PUBLIC_VC_ASOVIEW_URL）
+ *   - park → 予約導線なし（基本無料施設）
+ *
+ * env 未設定 or 該当カテゴリ外なら null（=描画しない）。VC承認後に env を入れるだけで点灯。
+ */
+const ASOVIEW_CATEGORIES = new Set([
+  'aquarium',
+  'amusement',
+  'zoo',
+  'museum',
+  'farm',
+  'seasonal',
+  'indoor',
+]);
+
+export function getSpotReservationOffer(category: string): ReservationOffer | null {
+  if (category === 'restaurant') {
+    const href = process.env.NEXT_PUBLIC_VC_HOTPEPPER_URL?.trim();
+    if (!isValidUrl(href)) return null;
+    return {
+      href,
+      heading: 'このお店をネット予約',
+      note: '子連れ向けの席・コースを確認して、当日の席を確保。',
+      cta: 'ホットペッパーで予約 →',
+      itemId: 'hotpepper-reservation-spot',
+    };
+  }
+  if (ASOVIEW_CATEGORIES.has(category)) {
+    const href = process.env.NEXT_PUBLIC_VC_ASOVIEW_URL?.trim();
+    if (!isValidUrl(href)) return null;
+    return {
+      href,
+      heading: 'チケット・前売りをチェック',
+      note: '当日券の行列を避けて、事前にレジャーチケットを購入できる場合があります。',
+      cta: 'アソビュー！で前売り券を見る →',
+      itemId: 'asoview-ticket-spot',
+    };
+  }
+  return null;
+}
