@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-06-03'
+updatedAt: '2026-06-17'
 hero: /img/scenes/meal-33.webp
 lede: >-
   「結局どのチェーンのキッズメニューが一番うちの子に合う？」を1ページで解決。**価格・対象年齢・アレルゲン・取り分け可否・ドリンクバー無料年齢**を15チェーン横並びで比較し、0-6歳の家族目線で最適な選び方を提示します。
@@ -72,6 +72,27 @@ legacyHero: /hero-ai/kodzure-famires-15sen.webp
 | すき家 | お子さまセット | 400円前後 | 〜小学生 | 卵・乳・小麦 | — | ○ |
 
 > ※ アレルゲンは「主な特定原材料」を抜粋。実際の有無は各チェーンのアレルゲン情報を必ずご確認ください。
+
+## その他の主要チェーン早見表（牛丼・うどん・カレー・焼肉系ほか）
+
+ファミレス以外でも、牛丼・うどん・天丼・カレー・焼肉系のチェーンは「取り分け」「お子様セット」「小学生以下無料」など子連れに使える仕組みが充実しています。下表は各個別記事で整理した内容の要約です（最新は各公式でご確認を）。
+
+| チェーン | キッズメニュー名 | 価格帯（目安） | 対象年齢 | 主なアレルゲン | ドリンクバー/特典 | 取り分けやすさ |
+|---|---|---|---|---|---|---|
+| 吉野家 | キッズ牛丼セット | 400円前後 | 2歳〜小学生 | 公式確認 | — | ◎ |
+| 松屋 | 小皿で組立（牛皿等） | 単品〜 | 取り分け前提 | 公式確認 | 味噌汁無料 | ◎ |
+| すき家 | お子さまセット | 400円前後 | 〜小学生 | 卵・乳・小麦 | — | ○ |
+| なか卯 | お子様うどん/親子丼ミニ | 250〜350円帯 | 1歳〜小学生 | 小麦ほか公式確認 | — | ◎ |
+| はなまるうどん | キッズうどん/お子様セット | 250〜350円帯 | 1歳〜小学生 | 小麦ほか公式確認 | — | ◎ |
+| てんや | お子様天丼 | 500〜700円帯 | 〜小学生 | えび・小麦ほか公式確認 | — | ◎ |
+| CoCo壱番屋 | ハッピーカレー（甘口） | 400〜500円帯 | 2歳半〜小学生 | 公式確認 | おまけシール | ○ |
+| リンガーハット | お子様ちゃんぽん/セット | — | 〜小学生 | 小麦・乳ほか公式確認 | — | ◎ |
+| 安楽亭 | 食べ放題（年齢別）/プレート | 年齢別 | 〜小学生 | 公式確認 | 未就学児無料あり | ○ |
+| 焼肉キング | キッズ品/小学生以下無料 | 食べ放題は年齢別 | 〜小学生 | 公式確認 | 小学生以下無料 | ○ |
+| ビッグボーイ | お子さま/サラダバー | サラダバー別 | 〜小学生 | 公式確認 | サラダバー | ○ |
+| ステーキガスト | お子さま/サラダバー | サラダバー別 | 〜小学生 | 公式確認 | 未就学児サラダバー無料あり | ○ |
+
+> ※ 「公式確認」はアレルゲン詳細を各チェーン公式のアレルゲン情報で確認すべき項目。価格・特典は店舗/時期で変動します。
 
 ## 「何歳から」「何歳まで」早見表
 
@@ -179,6 +200,43 @@ legacyHero: /hero-ai/kodzure-famires-15sen.webp
 - 牛角 → [牛角 子連れ攻略](/article/gyukaku-kodzure-koryaku)
 - しゃぶ葉 → [しゃぶ葉 子連れ攻略](/article/shabuyou-kodzure-koryaku)
 - 餃子の王将 → [餃子の王将 子連れ攻略](/article/ohsho-kodzure-koryaku)
+
+## チェーン別「キッズメニュー」個別解説（全チェーン）
+
+各チェーンの**キッズメニューの中身・対象年齢・取り分けのコツ**は1チェーン1記事で詳しく解説しています。ベビーチェアの有無は各チェーンの設備記事を参照してください。
+
+**ファミレス系**
+- サイゼリヤ：[キッズメニュー](/article/saizeriya-kids-menu)・[ベビーチェア](/article/saizeriya-baby-chair)
+- ガスト：[キッズメニュー](/article/gusto-kids-menu)・[ベビーチェア](/article/gusto-baby-chair)
+- ジョナサン：[キッズメニュー](/article/jonathan-kids-menu)・[ベビーチェア](/article/jonathan-baby-chair)
+- バーミヤン：[キッズメニュー](/article/bamiyan-kids-menu)・[ベビーチェア](/article/bamiyan-baby-chair)
+- ココス：[キッズメニュー](/article/cocos-kids-menu)・[ベビーチェア](/article/cocos-baby-chair)
+- デニーズ：[キッズメニュー](/article/dennys-kids-menu)・[ベビーチェア](/article/dennys-baby-chair)
+- ロイヤルホスト：[キッズメニュー](/article/royal-host-kids-menu)・[ベビーチェア](/article/royal-host-baby-chair)
+- ビッグボーイ：[キッズメニュー](/article/bigboy-kids-menu)・[ベビーチェア](/article/bigboy-baby-chair)
+- ステーキガスト：[キッズメニュー](/article/steakgusto-kids-menu)・[ベビーチェア](/article/steakgusto-baby-chair)
+
+**牛丼・うどん・天丼・カレー系**
+- すき家：[キッズメニュー](/article/sukiya-kids-menu)・[ベビーチェア](/article/sukiya-baby-chair)
+- 吉野家：[キッズメニュー](/article/yoshinoya-kids-menu)・[ベビーチェア](/article/yoshinoya-baby-chair)
+- 松屋：[キッズメニュー](/article/matsuya-kids-menu)・[ベビーチェア](/article/matsuya-baby-chair)
+- なか卯：[キッズメニュー](/article/nakau-kids-menu)・[ベビーチェア](/article/nakau-baby-chair)
+- はなまるうどん：[キッズメニュー](/article/hanamarudon-kids-menu)・[ベビーチェア](/article/hanamarudon-baby-chair)
+- てんや：[キッズメニュー](/article/tenya-kids-menu)・[ベビーチェア](/article/tenya-baby-chair)
+- CoCo壱番屋：[キッズメニュー](/article/cocoichi-kids-menu)・[ベビーチェア](/article/cocoichi-baby-chair)
+- リンガーハット：[キッズメニュー](/article/ringerhut-kids-menu)・[ベビーチェア](/article/ringerhut-baby-chair)
+- 餃子の王将：[キッズメニュー](/article/ohsho-kids-menu)・[ベビーチェア](/article/ohsho-baby-chair)
+
+**焼肉・しゃぶしゃぶ系**
+- 牛角：[キッズメニュー](/article/gyukaku-kids-menu)・[ベビーチェア](/article/gyukaku-baby-chair)
+- 焼肉キング：[キッズメニュー](/article/yakiniku-king-kids-menu)・[ベビーチェア](/article/yakiniku-king-baby-chair)
+- 安楽亭：[キッズメニュー](/article/anrakutei-kids-menu)・[ベビーチェア](/article/anrakutei-baby-chair)
+- しゃぶ葉：[キッズメニュー](/article/shabuyo-kids-menu)・[ベビーチェア](/article/shabuyo-baby-chair)
+
+**和定食系**
+- やよい軒：[キッズメニュー](/article/yayoiken-kids-menu)・[ベビーチェア](/article/yayoiken-baby-chair)
+
+> テーマパークの食事は [ディズニーのキッズメニュー](/article/disney-kids-menu)・[レゴランドのキッズメニュー](/article/legoland-kids-menu) で個別に解説しています。
 
 ## ドリンクバー無料は何歳まで？早見
 
