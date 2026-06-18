@@ -1,24 +1,29 @@
 import { createClient, type MicroCMSListContent, type MicroCMSQueries } from 'microcms-js-sdk';
 import type { Article, Category, Tag, Author, Spot, SiteConfig } from './types';
 
-if (!process.env.MICROCMS_SERVICE_DOMAIN) {
-  throw new Error('MICROCMS_SERVICE_DOMAIN is required');
-}
-if (!process.env.MICROCMS_API_KEY) {
-  throw new Error('MICROCMS_API_KEY is required');
-}
+// クライアントは遅延初期化する。
+// モジュール読み込み時に throw すると、デプロイ直後の env 反映タイミング次第で
+// microCMS を import する全ページが一斉に 5xx になりうる（開設週 2026-04 に発生し、
+// GSC の「サーバーエラー(5xx)」として残存した）。実際に API を呼ぶ瞬間にだけ env を
+// 検証することで、env 欠落時も呼び出し側の try/catch で 404 に縮退できる。
+let _client: ReturnType<typeof createClient> | null = null;
 
-export const client = createClient({
-  serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
-  apiKey: process.env.MICROCMS_API_KEY,
-});
+function getClient() {
+  if (_client) return _client;
+  const serviceDomain = process.env.MICROCMS_SERVICE_DOMAIN;
+  const apiKey = process.env.MICROCMS_API_KEY;
+  if (!serviceDomain) throw new Error('MICROCMS_SERVICE_DOMAIN is required');
+  if (!apiKey) throw new Error('MICROCMS_API_KEY is required');
+  _client = createClient({ serviceDomain, apiKey });
+  return _client;
+}
 
 // ==========================================================================
 // Articles
 // ==========================================================================
 
 export async function getArticles(queries?: MicroCMSQueries) {
-  return await client.getList<Article>({
+  return await getClient().getList<Article>({
     endpoint: 'articles',
     queries: {
       orders: '-publishedAt',
@@ -29,7 +34,7 @@ export async function getArticles(queries?: MicroCMSQueries) {
 }
 
 export async function getArticle(slug: string): Promise<Article | null> {
-  const data = await client.getList<Article>({
+  const data = await getClient().getList<Article>({
     endpoint: 'articles',
     queries: { filters: `slug[equals]${slug}`, limit: 1 },
   });
@@ -37,7 +42,7 @@ export async function getArticle(slug: string): Promise<Article | null> {
 }
 
 export async function getArticleIds() {
-  const data = await client.getList<Article>({
+  const data = await getClient().getList<Article>({
     endpoint: 'articles',
     queries: { fields: 'id,slug,updatedAt', limit: 1000 },
   });
@@ -45,7 +50,7 @@ export async function getArticleIds() {
 }
 
 export async function getArticlesByCategory(categorySlug: string, limit = 20) {
-  return await client.getList<Article>({
+  return await getClient().getList<Article>({
     endpoint: 'articles',
     queries: {
       filters: `category[equals]${categorySlug}`,
@@ -56,7 +61,7 @@ export async function getArticlesByCategory(categorySlug: string, limit = 20) {
 }
 
 export async function getArticlesByTag(tagSlug: string, limit = 20) {
-  return await client.getList<Article>({
+  return await getClient().getList<Article>({
     endpoint: 'articles',
     queries: {
       filters: `tags[contains]${tagSlug}`,
@@ -71,14 +76,14 @@ export async function getArticlesByTag(tagSlug: string, limit = 20) {
 // ==========================================================================
 
 export async function getCategories() {
-  return await client.getList<Category>({
+  return await getClient().getList<Category>({
     endpoint: 'categories',
     queries: { orders: 'order', limit: 20 },
   });
 }
 
 export async function getCategory(slug: string): Promise<Category | null> {
-  const data = await client.getList<Category>({
+  const data = await getClient().getList<Category>({
     endpoint: 'categories',
     queries: { filters: `slug[equals]${slug}`, limit: 1 },
   });
@@ -90,7 +95,7 @@ export async function getCategory(slug: string): Promise<Category | null> {
 // ==========================================================================
 
 export async function getTags() {
-  return await client.getList<Tag>({
+  return await getClient().getList<Tag>({
     endpoint: 'tags',
     queries: { limit: 100 },
   });
@@ -101,7 +106,7 @@ export async function getTags() {
 // ==========================================================================
 
 export async function getAuthor(slug: string): Promise<Author | null> {
-  const data = await client.getList<Author>({
+  const data = await getClient().getList<Author>({
     endpoint: 'authors',
     queries: { filters: `slug[equals]${slug}`, limit: 1 },
   });
@@ -113,7 +118,7 @@ export async function getAuthor(slug: string): Promise<Author | null> {
 // ==========================================================================
 
 export async function getSpots(queries?: MicroCMSQueries) {
-  return await client.getList<Spot>({
+  return await getClient().getList<Spot>({
     endpoint: 'spots',
     queries: { orders: '-updatedAt', limit: 20, ...queries },
   });
@@ -125,7 +130,7 @@ export async function getSpots(queries?: MicroCMSQueries) {
 
 export async function getSiteConfig(): Promise<SiteConfig | null> {
   try {
-    return await client.getObject<SiteConfig>({
+    return await getClient().getObject<SiteConfig>({
       endpoint: 'site',
     });
   } catch {
@@ -155,7 +160,7 @@ export async function findTodayCandidates(filter: TodayFilter, limit = 10) {
   if (filter.maxDuration) filters.push(`quickInfo_durationMin[less_than]${filter.maxDuration + 1}`);
   if (filter.budget) filters.push(`quickInfo_budget[equals]${filter.budget}`);
 
-  return await client.getList<Article>({
+  return await getClient().getList<Article>({
     endpoint: 'articles',
     queries: {
       filters: filters.length > 0 ? filters.join('[and]') : undefined,

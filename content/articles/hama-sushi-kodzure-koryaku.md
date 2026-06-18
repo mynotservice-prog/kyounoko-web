@@ -106,6 +106,7 @@ legacyHero: /hero-ai/cat-food-japan-01.webp
 
 ## 関連記事
 
+- [はま寿司のおむつ替え台ガイド｜店舗別の有無・授乳室](/article/hamasushi-omutsu)
 - [スシローはベビーカーOK？子連れ完全攻略](/article/sushiro-kodzure-koryaku)
 - [くら寿司はベビーカーOK？子連れ完全攻略](/article/kura-sushi-kodzure-koryaku)
 - [サイゼリヤはベビーカーOK？子連れ完全攻略](/article/kodzure-saize-koryaku)

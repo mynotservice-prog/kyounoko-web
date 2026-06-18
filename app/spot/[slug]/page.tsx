@@ -30,6 +30,8 @@ import { VisitedReport } from '@/components/spot/VisitedReport';
 import { getPublishedSpotReports } from '@/lib/spot-reports';
 import { V2SaveButton, V2SdHeroFav } from '@/components/v2/V2SaveButton';
 import { getRecommendedItems } from '@/lib/recommended-items';
+import { getSpotReservationOffer } from '@/lib/reservation-cta';
+import { ReservationCTA } from '@/components/article/ReservationCTA';
 
 export const revalidate = 3600;
 
@@ -89,6 +91,9 @@ export default async function SpotPage({ params }: Props) {
   const { spot } = entry;
   const category = SPOT_CATEGORY_LABEL[spot.category] ?? spot.category;
   const location = spot.ward ?? spot.city ?? '';
+
+  // スポット種別に応じたネット予約/チケットCTA（VC）。env 未設定なら null（非表示）。
+  const reservationOffer = getSpotReservationOffer(spot.category);
 
   // 閉館スポットの案内文（あれば閉館バナーを表示し noindex）。
   const closedNotice = SPOT_CLOSED[spot.name];
@@ -431,6 +436,13 @@ export default async function SpotPage({ params }: Props) {
             <div style={{ borderRadius: 'var(--v2-r-card)', overflow: 'hidden', aspectRatio: '16 / 9', border: '1px solid var(--v2-line)' }}>
               <V2Img src={galleryImages[1]} seed={`${slug}-1`} alt={`${spot.name}の様子`} />
             </div>
+          </div>
+        )}
+
+        {/* ネット予約/チケットCTA（restaurant→ホットペッパー / レジャー→アソビュー）。env未設定なら非表示 */}
+        {reservationOffer && (
+          <div className="v2-section" style={{ marginTop: 18 }}>
+            <ReservationCTA offer={reservationOffer} />
           </div>
         )}
 

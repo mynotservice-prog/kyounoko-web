@@ -404,6 +404,24 @@ GW・お盆・年末年始は1ヶ月前から動く。**しゃぶ葉・焼肉キ
 - [ ] キャンセルポリシー（前日18時等）を確認したか
 - [ ] アレルギー対応・取り分け皿の依頼をしたか
 
+## チェーン別 個室・座敷レビュー
+
+上で紹介した各チェーンの個室・座敷・ボックス席事情を、店舗タイプ別に詳しくまとめています。
+
+- [ガストの個室・座敷ガイド](/article/gusto-koshitsu)
+- [ジョナサンの個室・座敷ガイド](/article/jonathan-koshitsu)
+- [ロイヤルホストの個室・座敷ガイド](/article/royal-host-koshitsu)
+- [ココスの個室・座敷ガイド](/article/cocos-koshitsu)
+- [デニーズの個室・座敷ガイド](/article/dennys-koshitsu)
+- [しゃぶ葉の個室・座敷ガイド](/article/shabuyo-koshitsu)
+- [焼肉キングの個室・座敷ガイド](/article/yakiniku-king-koshitsu)
+- [牛角の個室・座敷ガイド](/article/gyukaku-koshitsu)
+- [安楽亭の個室・座敷ガイド](/article/anrakutei-koshitsu)
+- [ビッグボーイの個室・座敷ガイド](/article/bigboy-koshitsu)
+- [餃子の王将の個室・座敷ガイド](/article/ohsho-koshitsu)
+- [リンガーハットの個室・座敷ガイド](/article/ringerhut-koshitsu)
+- [ステーキガストの個室・座敷ガイド](/article/steakgusto-koshitsu)
+
 ## 関連データ・記事
 
 - [【0-6歳】キッズスペース付きランチ10選](/article/kids-space-lunch-10)

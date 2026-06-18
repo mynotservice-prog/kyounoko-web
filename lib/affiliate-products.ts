@@ -60,6 +60,13 @@ export const AFFILIATE_TARGET_SLUGS = [
   // 2026-06-16 追加：Z会 通信教育の本命配置先（Z会を直接比較する未登録記事）
   'benesse-vs-zkai-youji',
   'tsuushin-kyouzai-hikaku',
+  // 2026-06-18 追加：きらりライフサポート（家事代行・キッズシッター）の配置先
+  'tomobataraki-kaji-bunkatsu',
+  'babysitter-toha',
+  'wanope-tsurai-taisho',
+  'wanope-yoru-kirinukekata',
+  'ikuji-noiroze-sign',
+  'sango-mental-care',
 ] as const;
 
 export type AffiliateTargetSlug = (typeof AFFILIATE_TARGET_SLUGS)[number];
@@ -621,6 +628,23 @@ const A8_PROGRAMS_2026_05: AffiliateProduct[] = expand([
       'kodomochalle-vs-smile-zemi-hikaku',
       'kyouzai-3sha-popi-challenge-smile-hikaku-2026',
       'chiiku-subsc-hikaku-4sha',
+    ],
+  },
+  // ---- ⑩ きらりライフサポート（家事代行・キッズシッター / 2026-06-18 承認 / 新規無料相談¥10,000・EPC227） ----
+  {
+    id: 'a8-kirari-life-support',
+    provider: 'a8',
+    href: 'https://px.a8.net/svt/ejp?a8mat=4B5WGE+FPLTGY+5NVQ+5YJRM',
+    title: 'きらりライフサポート（家事代行・キッズシッター）',
+    subtitle: '料理・掃除・片付け・シッターを専任サポーターに丸ごと依頼。まずは無料相談から',
+    price: '無料相談あり / 入会金¥5,500・訪問¥880〜',
+    slugs: [
+      'tomobataraki-kaji-bunkatsu',
+      'babysitter-toha',
+      'wanope-tsurai-taisho',
+      'wanope-yoru-kirinukekata',
+      'ikuji-noiroze-sign',
+      'sango-mental-care',
     ],
   },
 ]);

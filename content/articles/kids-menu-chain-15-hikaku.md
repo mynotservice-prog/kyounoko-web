@@ -222,6 +222,7 @@ legacyHero: /hero-ai/kodzure-famires-15sen.webp
 - 松屋：[キッズメニュー](/article/matsuya-kids-menu)・[ベビーチェア](/article/matsuya-baby-chair)
 - なか卯：[キッズメニュー](/article/nakau-kids-menu)・[ベビーチェア](/article/nakau-baby-chair)
 - はなまるうどん：[キッズメニュー](/article/hanamarudon-kids-menu)・[ベビーチェア](/article/hanamarudon-baby-chair)
+- 丸亀製麺：[キッズうどん](/article/marukame-kids-menu)・[ベビーチェア](/article/marukame-baby-chair)
 - てんや：[キッズメニュー](/article/tenya-kids-menu)・[ベビーチェア](/article/tenya-baby-chair)
 - CoCo壱番屋：[キッズメニュー](/article/cocoichi-kids-menu)・[ベビーチェア](/article/cocoichi-baby-chair)
 - リンガーハット：[キッズメニュー](/article/ringerhut-kids-menu)・[ベビーチェア](/article/ringerhut-baby-chair)
@@ -235,6 +236,11 @@ legacyHero: /hero-ai/kodzure-famires-15sen.webp
 
 **和定食系**
 - やよい軒：[キッズメニュー](/article/yayoiken-kids-menu)・[ベビーチェア](/article/yayoiken-baby-chair)
+
+**回転寿司系**
+- スシロー：[キッズメニュー](/article/sushiro-kids-menu)・[ベビーチェア](/article/sushiro-baby-chair)
+- くら寿司：[キッズメニュー](/article/kurasushi-kids-menu)・[ベビーチェア](/article/kurasushi-baby-chair)
+- はま寿司：[キッズメニュー](/article/hamasushi-kids-menu)・[ベビーチェア](/article/hamasushi-baby-chair)
 
 > テーマパークの食事は [ディズニーのキッズメニュー](/article/disney-kids-menu)・[レゴランドのキッズメニュー](/article/legoland-kids-menu) で個別に解説しています。
 

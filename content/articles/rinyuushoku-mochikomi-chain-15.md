@@ -357,6 +357,32 @@ A. **取り皿・スプーンの洗浄状況**は事前に確認を。アレル�
 
 A. **離乳食を温め同時依頼**できるよう、容器を分けて温め依頼。ファミレス系の業務用レンジなら同時温めが可能な店舗も多いので、入店時に「同時に温めお願いできますか」と伝えるとスムーズです。
 
+## チェーン別 離乳食持ち込みガイド
+
+チェーンごとの可否・温め対応・取り皿事情を個別にまとめています。気になるチェーンから確認してください。
+
+**ファミレス系**
+- [サイゼリヤの離乳食持ち込みガイド](/article/saizeriya-rinyushoku-mochikomi)
+- [ガストの離乳食温め リアル体験](/article/gusto-rinyu-warm-real)
+- [ジョナサンの離乳食持ち込みガイド](/article/jonathan-rinyushoku-mochikomi)
+- [バーミヤンの離乳食持ち込みガイド](/article/bamiyan-rinyushoku-mochikomi)
+- [ココスの離乳食持ち込みガイド](/article/cocos-rinyushoku-mochikomi)
+- [デニーズの離乳食持ち込みガイド](/article/dennys-rinyushoku-mochikomi)
+- [ロイヤルホストの離乳食持ち込みガイド](/article/royal-host-rinyushoku-mochikomi)
+
+**牛丼・カレー系**
+- [吉野家の離乳食持ち込みガイド](/article/yoshinoya-rinyushoku-mochikomi)
+- [すき家の離乳食持ち込みガイド](/article/sukiya-rinyushoku-mochikomi)
+- [松屋の離乳食持ち込みガイド](/article/matsuya-rinyushoku-mochikomi)
+- [なか卯の離乳食持ち込みガイド](/article/nakau-rinyushoku-mochikomi)
+- [CoCo壱番屋の離乳食持ち込みガイド](/article/cocoichi-rinyushoku-mochikomi)
+
+**回転寿司・うどん系**（持ち込みに寛容な店舗が多い）
+- [スシローの離乳食持ち込みガイド](/article/sushiro-rinyushoku-mochikomi)
+- [くら寿司の離乳食持ち込みガイド](/article/kurasushi-rinyushoku-mochikomi)
+- [はま寿司の離乳食持ち込みガイド](/article/hamasushi-rinyushoku-mochikomi)
+- [丸亀製麺の離乳食持ち込みガイド](/article/marukame-rinyushoku-mochikomi)
+
 ## 関連記事
 
 - [ガスト子連れ攻略法](/article/gusto-kodzure-koryaku)

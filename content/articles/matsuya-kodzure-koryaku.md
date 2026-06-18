@@ -200,6 +200,7 @@ legacyHero: /hero-ai/sukiya-kodzure-koryaku.webp
 
 **牛丼・定食チェーン攻略**
 
+- [松屋のおむつ替え台ガイド｜店舗別の有無・授乳室](/article/matsuya-omutsu)
 - [すき家の子連れ攻略｜ボックス席・牛丼ミニ・離乳食](/article/sukiya-kodzure-koryaku)
 - [吉野家の子連れ攻略｜キッズメニュー・牛皿・離乳食](/article/yoshinoya-kodzure-koryaku)
 - [なか卯の子連れ攻略｜親子丼・きつねうどん](/article/nakau-kodzure-koryaku)

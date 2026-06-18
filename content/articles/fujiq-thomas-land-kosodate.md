@@ -168,6 +168,8 @@ OK。指定の休憩スペースで食べる運用。
 
 ## 関連記事
 
+- [富士急ハイランドのオムツ替え・ベビールーム完全マップ](/article/fujiq-omutsu)
+- [富士急ハイランドのベビーカー攻略](/article/fujiq-stroller)
 - [子連れで動物園いつから？年齢別ガイド](/article/kodomo-doubutsuen-itsukara)
 - [子連れで水族館いつから？年齢別ガイド](/article/kodomo-suizokukan-itsukara)
 - [子連れで遊園地いつから？年齢別ガイド](/article/kodomo-yuuenchi-itsukara)
