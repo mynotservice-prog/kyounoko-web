@@ -260,7 +260,7 @@ export const KID_REPORTS: Record<string, KidReport> = {
     stayNote: '2〜4時間。',
     cautionNote: '昆虫エリアが苦手な子もいる。',
   },
-  'ぐりんぱから一足のばして・羽村市動物公園': {
+  '羽村市動物公園': {
     source: 'visited',
     visitAge: '1〜5歳',
     strollerNote: '小規模で回りやすい。',
