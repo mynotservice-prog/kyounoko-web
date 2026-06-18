@@ -78,9 +78,11 @@ function sanitizePatch(input: unknown): { patch: SpotOverride; clear: Set<string
     } else if (k === 'images') {
       if (v == null) { clear.add(k); continue; }
       if (!Array.isArray(v)) return { error: 'images must be array' };
+      // スロット位置（[0]=hero / [1]=中段 / [2]=下段）を保持する。
+      // 中間の空欄は '' のまま残し、末尾の空欄だけ落とす。詰めると中段画像が hero に化ける。
       const out: string[] = [];
       for (const item of v) {
-        if (item == null || item === '') continue;
+        if (item == null || item === '') { out.push(''); continue; }
         if (typeof item !== 'string') return { error: 'images items must be string' };
         if (!/^(https?:\/\/|\/)/.test(item)) {
           return { error: 'images は https:// で始まるURLか / で始まるパスを指定してください' };
@@ -88,6 +90,7 @@ function sanitizePatch(input: unknown): { patch: SpotOverride; clear: Set<string
         if (item.length > 500) return { error: 'image path too long' };
         out.push(item);
       }
+      while (out.length > 0 && out[out.length - 1] === '') out.pop();
       if (out.length > 0) result[k] = out.slice(0, 3);
       else clear.add(k);
     } else if (k === 'pricing') {
