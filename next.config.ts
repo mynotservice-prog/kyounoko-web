@@ -22,6 +22,12 @@ const nextConfig: NextConfig = {
     const edgeCache = 'public, max-age=0, must-revalidate, s-maxage=3600, stale-while-revalidate=86400';
     const cdnCache = 'public, max-age=3600, stale-while-revalidate=86400';
 
+    // スポット詳細は /admin/spots/edit から画像・本文を編集するため、CDNキャッシュを
+    // 短くして編集が概ね1分以内に本番反映されるようにする（保存時の revalidateTag/Path で
+    // Vercelオリジンは即時更新されるが、Cloudflare が長時間キャッシュすると公開ページに出ない）。
+    const spotEdgeCache = 'public, max-age=0, must-revalidate, s-maxage=60, stale-while-revalidate=60';
+    const spotCdnCache = 'public, max-age=60, stale-while-revalidate=60';
+
     return [
       // 全パス共通のセキュリティヘッダ
       {
@@ -47,9 +53,9 @@ const nextConfig: NextConfig = {
       {
         source: '/spot/:slug*',
         headers: [
-          { key: 'Cache-Control', value: edgeCache },
-          { key: 'CDN-Cache-Control', value: cdnCache },
-          { key: 'Cloudflare-CDN-Cache-Control', value: cdnCache },
+          { key: 'Cache-Control', value: spotEdgeCache },
+          { key: 'CDN-Cache-Control', value: spotCdnCache },
+          { key: 'Cloudflare-CDN-Cache-Control', value: spotCdnCache },
         ],
       },
       {
