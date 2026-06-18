@@ -150,7 +150,7 @@ export const SPOTS_EXTRA_8: Partial<Record<AreaSlug, Spot[]>> = {
   tottori: [
     { name: '鳥取県立 むきばんだ史跡公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '米子市', budget: 'free', note: '弥生の竪穴住居が並ぶ国内最大級の遺跡。火おこしや勾玉づくり体験ができ広い芝生で駆け回れる。' },
     { name: '倉吉パークスクエア', category: 'indoor', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '倉吉市', budget: 'low', note: '図書館や子育てひろば、芝生広場が集まる複合施設。雨の日も赤ちゃん連れで一日のんびり。' },
-    { name: '日南町オシドリ観察小屋', category: 'park', place: 'outdoor', ages: ['4-6'], city: '日南町', budget: 'free', note: '冬から春に数百羽のオシドリが集う水辺。望遠鏡で野鳥を探す静かな自然体験ができる穴場。' },
+    { name: 'オシドリ観察小屋', category: 'park', place: 'outdoor', ages: ['4-6'], city: '日野町', budget: 'free', note: '冬から春に数百羽のオシドリが集う水辺。望遠鏡で野鳥を探す静かな自然体験ができる穴場。' },
     { name: '道の駅 大栄 すいかの里', category: 'park', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '北栄町', budget: 'free', note: 'コナン作者の故郷にある道の駅。芝生広場とすいかソフトが名物で休憩がてら子連れに便利。' },
   ],
   shimane: [

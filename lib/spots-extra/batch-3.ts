@@ -71,10 +71,7 @@ export const SPOTS_EXTRA_3: Partial<Record<AreaSlug, Spot[]>> = {
   shiga: [
     { name: '滋賀県立びわ湖こどもの国', category: 'park', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '高島市', note: '琵琶湖畔の大型児童館。全長40mの大型遊具や冒険水路、屋内のプレイルームもある', budget: 'free',
       playgroundFeatures: ['athletic'], },
-    { name: '滋賀県立琵琶湖博物館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '草津市', note: '湖と人間をテーマにした総合博物館。国内最大級の淡水生物の水族展示室が見もの', budget: 'low',
-      summerCool: true, },
     { name: '草津市立水生植物公園みずの森', category: 'park', place: 'mixed', ages: ['2-3', '4-6'], city: '草津市', note: 'ハスやスイレンなど水生植物がメインの植物公園。中学生以下は入園無料', budget: 'low', hiddenTip: '隣接の琵琶湖博物館とセットで回ると一日たっぷり楽しめる' },
-    { name: '滋賀農業公園ブルーメの丘', category: 'farm', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '日野町', note: '花と動物にふれあえる体験型の農業公園。水あそびやアスレチックも楽しめる', budget: 'mid' },
   ],
   nara: [
     { name: '奈良公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '奈良市', note: '東大寺や春日大社が隣接する広大な都市公園。約1300頭の鹿とふれあえる', budget: 'free' },

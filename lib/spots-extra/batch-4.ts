@@ -69,8 +69,6 @@ export const SPOTS_EXTRA_4: Partial<Record<AreaSlug, Spot[]>> = {
   ],
   tottori: [
     { name: '鳥取砂丘', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '鳥取市', note: '日本最大級の砂丘。柔らかい砂の上を思いきり走り回れて、転んでも安心の自然の遊び場。', budget: 'free' },
-    { name: 'アイエム電子 鳥取砂丘こどもの国', category: 'park', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '鳥取市', note: '広い園内に大型アスレチックや水の遊び場、乗り物、工作工房がそろう自然のなかの遊び場。', budget: 'low',
-      playgroundFeatures: ['athletic'], },
     { name: 'わらべ館', category: 'museum', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '鳥取市', note: '童謡とおもちゃのテーマパーク。高校生以下は入場無料で、雨の日でも一日楽しめる。', budget: 'low',
       summerCool: true, },
     { name: 'かにっこ館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '鳥取市', note: 'カニが主役の入場無料のミニ水族館。鳥取の海の魚や珍しい生きものに気軽に出会える。', budget: 'free',
@@ -102,7 +100,6 @@ export const SPOTS_EXTRA_4: Partial<Record<AreaSlug, Spot[]>> = {
     { name: '渋川マリン水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '玉野市', note: '瀬戸内海の生きものを中心に展示。貝やヒトデにさわれる「ふれあいタイドプール」が人気。', budget: 'low',
       summerCool: true,
       waterPlay: true, },
-    { name: 'おもちゃ王国', category: 'amusement', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '玉野市', note: '0歳から遊べるおもちゃパビリオンが並ぶ遊園地。屋内施設が多く天候を気にせず楽しめる。', budget: 'mid' },
     { name: '倉敷科学センター', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '倉敷市', note: '中国地方最大級のプラネタリウムをもつ科学館。約100点の体験展示で遊びながら科学を学べる。', budget: 'low',
       summerCool: true, },
     { name: '浦安総合公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '岡山市南区', note: '自然あふれる広大な公園。遊具と芝生広場がそろい、ピクニックがてらのびのび過ごせる。', budget: 'free' },

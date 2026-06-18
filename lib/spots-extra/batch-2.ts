@@ -24,7 +24,6 @@ export const SPOTS_EXTRA_2: Partial<Record<AreaSlug, Spot[]>> = {
     { name: 'なかがわ水遊園', category: 'aquarium', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '大田原市', note: '栃木県唯一の水族館。無料で遊べる大型アスレチックコーナーも併設', budget: 'low',
       summerCool: true,
       waterPlay: true, },
-    { name: '那須高原りんどう湖ファミリー牧場', category: 'farm', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '那須町', note: '動物とのふれあいや展示が充実し、大型室内遊具ゾーンもある牧場', budget: 'mid' },
     { name: '那須サファリパーク', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '那須町', note: 'ホワイトライオンなど約50種の動物を車内から間近に見られるサファリ', budget: 'mid' },
   ],
   gunma: [

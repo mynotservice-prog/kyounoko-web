@@ -4,7 +4,6 @@ import type { AreaSlug } from '../area';
 /** スポット拡充バッチ1（北海道・東北）。SPOTS に name 単位でマージされる。 */
 export const SPOTS_EXTRA_1: Partial<Record<AreaSlug, Spot[]>> = {
   hokkaido: [
-    { name: '旭川市旭山動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '旭川市', note: '動物の自然な姿を見せる行動展示で有名。ホッキョクグマやペンギンが人気。', budget: 'low' },
     { name: '札幌市円山動物園', category: 'zoo', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '札幌市', note: '多彩な動物に加え、体を動かして遊べる遊具広場「まるっぱ」も併設。', budget: 'low' },
     { name: 'おたる水族館', category: 'aquarium', place: 'mixed', ages: ['2-3', '4-6'], city: '小樽市', note: 'イルカショーや、海を仕切った自然プールでの海獣展示が見どころ。', budget: 'mid',
       summerCool: true,
@@ -63,9 +62,6 @@ export const SPOTS_EXTRA_1: Partial<Record<AreaSlug, Spot[]>> = {
     { name: 'ポンポコ山公園', category: 'park', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '八峰町', note: '迫力のローラースライダーが目印。乳幼児向け屋内遊具のパークセンターも。', budget: 'free' },
   ],
   yamagata: [
-    { name: '鶴岡市立加茂水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '鶴岡市', note: 'クラゲ展示種数で知られる水族館。大水槽「クラゲドリームシアター」が必見。', budget: 'mid',
-      summerCool: true,
-      waterPlay: true, },
     { name: 'べにっこひろば', category: 'indoor', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '山形市', note: '年齢別に分かれた施設。屋内のべにっこホールに大型遊具がそろう。', budget: 'free',
       summerCool: true, },
     { name: 'ザ・キッズ 山形イオンモール三川店', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '三川町', note: '0歳から遊べる全天候型の室内遊び場。幼児から小学生まで楽しめる。', budget: 'mid',
@@ -84,9 +80,6 @@ export const SPOTS_EXTRA_1: Partial<Record<AreaSlug, Spot[]>> = {
     { name: '三春の里 田園生活館', category: 'park', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '三春町', note: '滝桜近くの農業公園。芝生の広場やグラウンドゴルフ、体験施設がそろう。', budget: 'free' },
   ],
   niigata: [
-    { name: '新潟市水族館 マリンピア日本海', category: 'aquarium', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '新潟市', note: '約500種を展示する日本海側有数の水族館。里山を再現した屋外展示も。', budget: 'mid',
-      summerCool: true,
-      waterPlay: true, },
     { name: '上越市立水族博物館 うみがたり', category: 'aquarium', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '上越市', note: '日本海をテーマにした大水槽と海中トンネル。マゼランペンギンの数は日本一。', budget: 'mid',
       summerCool: true,
       waterPlay: true, },

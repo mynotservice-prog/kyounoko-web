@@ -4,8 +4,6 @@ import type { AreaSlug } from '../area';
 /** スポット拡充バッチ6（九州・沖縄）。SPOTS に name 単位でマージされる。 */
 export const SPOTS_EXTRA_6: Partial<Record<AreaSlug, Spot[]>> = {
   saga: [
-    { name: '佐賀県立宇宙科学館「ゆめぎんが」', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '武雄市', note: '科学を体験しながら学べる科学館。天体や地球の展示が充実し雨の日も安心。', budget: 'low',
-      summerCool: true, },
     { name: 'あそびパーク モラージュ佐賀店', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '佐賀市', note: 'ショッピングモール内の屋内遊び場。エア遊具や砂遊びコーナーがあり雨天向き。', budget: 'low',
       summerCool: true, },
     { name: 'キッズユーエスランド 佐賀大和店', category: 'indoor', place: 'indoor', ages: ['2-3', '4-6'], city: '佐賀市', note: '体を動かして遊べる屋内遊園地。ジャングルジムやトランポリンが揃う。', budget: 'low',
@@ -41,9 +39,6 @@ export const SPOTS_EXTRA_6: Partial<Record<AreaSlug, Spot[]>> = {
       summerCool: true, },
   ],
   oita: [
-    { name: '大分マリーンパレス水族館「うみたまご」', category: 'aquarium', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '大分市', note: 'セイウチやアザラシのショーやタッチプールが楽しい水族館。屋外遊び場も。', budget: 'mid',
-      summerCool: true,
-      waterPlay: true, },
     { name: '高崎山自然動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '大分市', note: '野生のニホンザルを間近で観察できる自然動物園。うみたまごとセットで人気。', budget: 'low' },
     { name: '九州自然動物公園アフリカンサファリ', category: 'zoo', place: 'mixed', ages: ['2-3', '4-6'], city: '宇佐市', note: '車やジャングルバスで野生動物を観察できる日本最大級のサファリパーク。', budget: 'mid' },
     { name: 'るるパーク（大分農業文化公園）', category: 'park', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '杵築市', note: 'ダム湖を囲む広大な公園。大型遊具やボート、フラワーガーデンが楽しめる。', budget: 'free',

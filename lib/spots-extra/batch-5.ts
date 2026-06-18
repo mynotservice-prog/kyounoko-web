@@ -4,7 +4,6 @@ import type { AreaSlug } from '../area';
 /** スポット拡充バッチ5（中国・四国・福岡）。SPOTS に name 単位でマージされる。 */
 export const SPOTS_EXTRA_5: Partial<Record<AreaSlug, Spot[]>> = {
   hiroshima: [
-    { name: '広島市安佐動物公園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '広島市', note: '167種以上の動物に会える。ぴーちくパークでポニー乗馬や小動物とのふれあいも', budget: 'low' },
     { name: 'みやじマリン 宮島水族館', category: 'aquarium', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '廿日市市', note: '宮島にある体験型水族館。380種以上を展示する中国地方有数の規模', budget: 'low',
       summerCool: true,
       waterPlay: true, },
@@ -19,9 +18,6 @@ export const SPOTS_EXTRA_5: Partial<Record<AreaSlug, Spot[]>> = {
       summerCool: true, },
   ],
   yamaguchi: [
-    { name: '海響館（下関市立しものせき水族館）', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '下関市', note: '関門海峡の潮流を再現した大水槽や日本最大級のペンギン村が見どころ', budget: 'mid',
-      summerCool: true,
-      waterPlay: true, },
     { name: '秋吉台自然動物公園サファリランド', category: 'zoo', place: 'mixed', ages: ['2-3', '4-6'], city: '美祢市', note: 'マイカーやエサやりバスで野生動物を間近に。ふれあい広場も人気', budget: 'mid' },
     { name: 'ときわ動物園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '宇部市', note: '霊長類の展示が充実。ときわ公園内にあり遊園地や植物館も併設', budget: 'low' },
     { name: '愛宕山ふくろう公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '岩国市', note: '巨大なふくろうの遊具がシンボル。アスレチックで冒険気分が味わえる', budget: 'free',
@@ -63,7 +59,6 @@ export const SPOTS_EXTRA_5: Partial<Record<AreaSlug, Spot[]>> = {
     { name: 'NEWレオマワールド', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '丸亀市', note: '四国最大級の遊園地。小さな子向けのアトラクションも揃う', budget: 'mid' },
   ],
   ehime: [
-    { name: '愛媛県立とべ動物園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '伊予郡砥部町', note: '147種を飼育する中四国有数の動物園。段差が少なくベビーカーでも安心', budget: 'low' },
     { name: 'えひめこどもの城', category: 'park', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '松山市', note: '広大な敷地に大型遊具やアスレチック、体験施設が揃う子ども向け公園', budget: 'free',
       playgroundFeatures: ['athletic'], },
     { name: 'おさかな館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '松野町', note: '淡水魚を中心とした珍しい水族館。世界最大級のピラルクが見られる', budget: 'low',

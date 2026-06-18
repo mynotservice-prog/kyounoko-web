@@ -1,4 +1,5 @@
 import type { NextConfig } from 'next';
+import { SPOT_REDIRECTS } from './lib/spot-redirects';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -111,6 +112,14 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
+      // ===== スポット監査(2026-06-18)に伴う旧slug→新slugの301 =====
+      // 市区町村修正・改称・都道府県修正・重複統合で slug が変わった分の救済。
+      ...SPOT_REDIRECTS.map((r) => ({
+        source: `/spot/${r.from}`,
+        destination: `/spot/${r.to}`,
+        permanent: true,
+      })),
+
       // ===== Search Console 404 → 301 恒久リダイレクト =====
       // 旧 /issue/* ルート（未実装ながら旧sitemapに入っていた）
       { source: '/issue/rainy-day', destination: '/tag/amenohi', permanent: true },

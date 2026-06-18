@@ -306,7 +306,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       summerCool: true,
     },
     {
-      name: 'スリーエム仙台市科学館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '仙台市', note: '体験型展示で4歳以上が楽しめる', budget: 'low',
+      name: '仙台市科学館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '仙台市', note: '体験型展示で4歳以上が楽しめる', budget: 'low',
       pricing: { adult: '550円', elementary: '200円', preschool: '無料（未就学児）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -419,7 +419,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       summerCool: true,
     },
     {
-      name: '川越鉄道公園 西武園ゆうえんち', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '所沢市', note: '昭和レトロな世界観、未就学児向け乗り物多数', budget: 'mid',
+      name: '西武園ゆうえんち', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '所沢市', note: '昭和レトロな世界観、未就学児向け乗り物多数', budget: 'mid',
       pricing: { adult: '4,400円（1日券）', elementary: '3,300円', preschool: '2,200円（3歳以上）', infant: '無料（2歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -470,6 +470,18 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
   ],
   chiba: [
+      {
+      name: '東京ドイツ村', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '袖ケ浦市', note: '冬のイルミネーションが関東有数', budget: 'mid',
+      pricing: { adult: '1,000円（入園・車1台）', elementary: '500円', preschool: '無料（4歳未満）', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: '冬のイルミネーション（11-3月）は関東三大イルミネーション、車利用前提',
+      popular: true,
+      facilities: {
+        bathroom: 'yes',
+        diaperChange: 'yes',
+      },
+    },
     {
       name: '鴨川シーワールド', category: 'aquarium', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '鴨川市', note: 'シャチのショーが圧巻、海岸併設', budget: 'high',
       pricing: { adult: '3,300円', elementary: '2,000円', preschool: '1,300円（4歳以上）', infant: '無料（3歳以下）' },
@@ -571,7 +583,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: 'モノレール「動物公園駅」直結、レッサーパンダ「風太」が今もいる',
     },
     {
-      name: '南房総国民休暇村', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '館山市', note: '海水浴・磯遊び・自然観察', budget: 'low',
+      name: '休暇村館山', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '館山市', note: '海水浴・磯遊び・自然観察', budget: 'low',
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '宿泊型施設、夏の磯遊びとマザー牧場・鴨川シーワールドへのハブ',
@@ -1541,7 +1553,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       summerCool: true,
     },
     {
-      name: 'ぐりんぱから一足のばして・羽村市動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '羽村市', note: 'コンパクトな動物園、入園料安い', budget: 'low',
+      name: '羽村市動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '羽村市', note: 'コンパクトな動物園、入園料安い', budget: 'low',
       pricing: { adult: '400円', elementary: '50円', preschool: '無料（未就学児）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'low' },
@@ -1568,15 +1580,6 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
         nursingRoom: 'yes',
         strollerRental: 'yes',
       },
-    },
-    {
-      name: '日本民家園', category: 'museum', place: 'outdoor', ages: ['4-6'], city: '川崎市', note: '生田緑地内、古民家野外博物館', budget: 'low',
-      pricing: { adult: '500円', elementary: '無料（高校生以下）', preschool: '無料', infant: '無料' },
-      reservation: 'none',
-      crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '高校生以下無料、囲炉裏体験など昔遊び。雨でも軒下で過ごせる',
-      nearby: '生田緑地',
-      summerCool: true,
     },
     {
       name: '池袋防災館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '豊島区', ward: '豊島区', note: '池袋駅徒歩5分、無料の防災体験', budget: 'free',
@@ -1670,18 +1673,6 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: '夏の水遊び広場（無料）、夜のライトアップが美しい',
     },
     {
-      name: '東京ドイツ村', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '袖ケ浦市', note: '冬のイルミネーションが関東有数', budget: 'mid',
-      pricing: { adult: '1,000円（入園・車1台）', elementary: '500円', preschool: '無料（4歳未満）', infant: '無料' },
-      reservation: 'none',
-      crowdLevel: { weekday: 'low', holiday: 'high' },
-      hiddenTip: '冬のイルミネーション（11-3月）は関東三大イルミネーション、車利用前提',
-      popular: true,
-      facilities: {
-        bathroom: 'yes',
-        diaperChange: 'yes',
-      },
-    },
-    {
       name: 'こどもの国（横浜・冬のスケート）', category: 'seasonal', place: 'mixed', ages: ['4-6'], city: '横浜市', note: '冬季限定の屋外スケート場', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -1689,6 +1680,15 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
   ],
   kanagawa: [
+      {
+      name: '日本民家園', category: 'museum', place: 'outdoor', ages: ['4-6'], city: '川崎市', note: '生田緑地内、古民家野外博物館', budget: 'low',
+      pricing: { adult: '500円', elementary: '無料（高校生以下）', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '高校生以下無料、囲炉裏体験など昔遊び。雨でも軒下で過ごせる',
+      nearby: '生田緑地',
+      summerCool: true,
+    },
     {
       name: '横浜・八景島シーパラダイス', category: 'aquarium', place: 'mixed', ages: ['2-3', '4-6'], city: '横浜市', note: '水族館＋遊園地＋海、1日コース', budget: 'high',
       pricing: { adult: '3,300円（水族館のみ）〜5,600円（全施設）', elementary: '2,000〜4,000円', preschool: '1,150〜2,300円（4歳以上）', infant: '無料（3歳以下）' },
@@ -2042,13 +2042,6 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'レッサーパンダの飼育頭数日本有数、春秋が動物が活発',
     },
-    {
-      name: '軽井沢おもちゃ王国', category: 'amusement', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '嬬恋村※群馬側', note: '室内プレイスペースとミニ遊園地', budget: 'mid',
-      pricing: { adult: '1,300円（入園）', elementary: '900円', preschool: '900円（3歳以上）', infant: '無料（2歳以下）' },
-      reservation: 'none',
-      crowdLevel: { weekday: 'low', holiday: 'high' },
-      hiddenTip: '11エリアの室内おもちゃ部屋、雨天OK、乗り放題パス（3,300円）が断然お得',
-    },
   ],
   gifu: [
     {
@@ -2176,7 +2169,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: '森のアスレチック「ITADAKI」「DOKIDOKI」が大人気、ホンダの歴代車展示も',
     },
     {
-      name: '日光東照宮・日光江戸村', category: 'seasonal', place: 'mixed', ages: ['2-3', '4-6'], city: '日光市', note: '世界遺産＋江戸時代テーマパーク', budget: 'mid',
+      name: '日光江戸村', category: 'seasonal', place: 'mixed', ages: ['2-3', '4-6'], city: '日光市', note: '世界遺産＋江戸時代テーマパーク', budget: 'mid',
       pricing: { adult: '1,300〜5,800円（施設別）', elementary: '650〜3,000円', preschool: '無料（未就学児）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
@@ -2262,6 +2255,13 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
   ],
   gunma: [
+      {
+      name: '軽井沢おもちゃ王国', category: 'amusement', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '嬬恋村', note: '室内プレイスペースとミニ遊園地', budget: 'mid',
+      pricing: { adult: '1,300円（入園）', elementary: '900円', preschool: '900円（3歳以上）', infant: '無料（2歳以下）' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: '11エリアの室内おもちゃ部屋、雨天OK、乗り放題パス（3,300円）が断然お得',
+    },
     {
       name: '群馬サファリパーク', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '富岡市', note: '車から動物に餌やりできる', budget: 'mid',
       pricing: { adult: '2,700円', elementary: '1,400円', preschool: '無料（未就学児）', infant: '無料' },
