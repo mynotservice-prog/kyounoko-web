@@ -105,6 +105,7 @@ legacyHero: /hero-ai/cat-food-kitchen-03.jpg
 
 ## 関連記事
 
+- [スシローのおむつ替え台ガイド｜店舗別の有無・授乳室](/article/sushiro-omutsu)
 - [サイゼリヤはベビーカーOK？子連れ完全攻略](/article/kodzure-saize-koryaku)
 - [くら寿司はベビーカーOK？子連れ完全攻略](/article/kura-sushi-kodzure-koryaku)
 - [子連れOKファミレス王道15選](/article/kodzure-famires-15sen)
