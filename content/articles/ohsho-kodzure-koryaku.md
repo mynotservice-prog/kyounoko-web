@@ -105,6 +105,7 @@ legacyHero: /hero-ai/cat-food-fruit-03.jpg
 
 ## 関連記事
 
+- [餃子の王将のおむつ替え台ガイド｜ベビールーム・多目的トイレの有無](/article/ohsho-omutsu)
 - [子連れラーメンを安全に楽しむ完全ガイド｜やけど・高塩分・長い麺の誤嚥・トッピング・アレルギー](/article/kodzure-ramen-anzen-kanzen-guide)
 - [ラーメン・中華麺チェーン子連れランキング5社](/article/ramen-chain-kodzure-ranking-2026-5sha)
 - [サイゼリヤはベビーカーOK？子連れ完全攻略](/article/kodzure-saize-koryaku)
