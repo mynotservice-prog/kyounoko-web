@@ -2169,7 +2169,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       popular: true,
     },
     {
-      name: 'ツインリンクもてぎ（モビリティリゾートもてぎ）', category: 'amusement', place: 'mixed', ages: ['2-3', '4-6'], city: 'もてぎ町', note: '森と自然のアスレチック、ホンダコレクションホール', budget: 'mid',
+      name: 'ツインリンクもてぎ（モビリティリゾートもてぎ）', category: 'amusement', place: 'mixed', ages: ['2-3', '4-6'], city: '茂木町', note: '森と自然のアスレチック、ホンダコレクションホール', budget: 'mid',
       pricing: { adult: '2,000円（入場）', elementary: '1,200円', preschool: '600円（3歳以上）', infant: '無料（2歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },

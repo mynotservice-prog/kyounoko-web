@@ -35,7 +35,7 @@ export const SPOTS_EXTRA_6: Partial<Record<AreaSlug, Spot[]>> = {
     { name: '阿蘇ファームランド', category: 'amusement', place: 'mixed', ages: ['2-3', '4-6'], city: '阿蘇郡南阿蘇村', note: '広大な敷地に運動施設やふれあい動物、体験施設が揃う一日遊べるスポット。', budget: 'mid' },
     { name: '坪井川公園（ひごっこジャングル）', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '熊本市', note: '熊本城をイメージした超大型複合遊具「ひごっこジャングル」が人気の公園。', budget: 'free',
       playgroundFeatures: ['athletic'], },
-    { name: '岡岳公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '熊本市', note: '3世代で楽しめる4ゾーン構成の公園。長いスライダーや芝スキーが楽しい。', budget: 'free' },
+    { name: '岡岳公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '宇城市', note: '3世代で楽しめる4ゾーン構成の公園。長いスライダーや芝スキーが楽しい。', budget: 'free' },
     { name: 'あそ☆ビバ', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '阿蘇市', note: '阿蘇内牧温泉街の大型公園。阿蘇の名所をモチーフにした遊具がそろう。', budget: 'free' },
     { name: 'The Kids 熊本店', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '熊本市', note: '0歳から遊べる全天候型の室内遊び場。幼児から小学生まで楽しめる遊具が充実。', budget: 'low',
       summerCool: true, },

@@ -166,7 +166,7 @@ export const SPOTS_EXTRA_8: Partial<Record<AreaSlug, Spot[]>> = {
     { name: 'ヒルゼン高原センター ジョイフルパーク', category: 'amusement', place: 'mixed', ages: ['2-3', '4-6'], city: '真庭市', budget: 'high', note: '蒜山高原の大自然を望む遊園地。天空の観覧車や幼児向け乗り物がそろい高原の風の中で遊べる。' },
     { name: '岡山シティミュージアム', category: 'museum', place: 'indoor', ages: ['4-6'], city: '岡山市', budget: 'low', note: '岡山駅西口直結の歴史博物館。子ども心をくすぐる企画展が多く雨でもアクセス抜群。' },
     { name: 'つやま自然のふしぎ館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '津山市', budget: 'low', note: '世界の動物のはく製がずらりと並ぶレトロな博物館。本物の迫力に子どもの好奇心が一気に高まる。' },
-    { name: '岡山県自然保護センター', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '備前市', budget: 'free', note: '里山にタンチョウが暮らす広大な保護区。湿地や雑木林を歩きながら身近な生きものを観察できる。' },
+    { name: '岡山県自然保護センター', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '和気町', budget: 'free', note: '里山にタンチョウが暮らす広大な保護区。湿地や雑木林を歩きながら身近な生きものを観察できる。' },
   ],
   hiroshima: [
     { name: '湯本豪一記念日本妖怪博物館 三次もののけミュージアム', category: 'museum', place: 'indoor', ages: ['4-6'], city: '三次市', budget: 'low', note: '日本初の妖怪博物館。デジタル妖怪遊園地もあり、絵を描くと妖怪が動き出し大興奮。' },
@@ -201,7 +201,7 @@ export const SPOTS_EXTRA_8: Partial<Record<AreaSlug, Spot[]>> = {
     { name: '高知みらい科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '高知市', budget: 'free', note: '図書館オーテピア内の入館無料の科学館。触れて学ぶ展示とプラネタリウムで雨の日も知的に楽しめる。' },
     { name: '高知県立牧野植物園', category: 'park', place: 'mixed', ages: ['2-3', '4-6'], city: '高知市', budget: 'low', note: '五台山に広がる植物学者ゆかりの庭園。三千種の植物に囲まれ高校生以下無料で散策できる癒しの空間。' },
     { name: '香美市立やなせたかし記念館 アンパンマンミュージアム', category: 'museum', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '香美市', budget: 'mid', note: 'アンパンマン誕生の地にある記念館。原画やアンパンマンワールドに小さな子が目を輝かせる人気スポット。' },
-    { name: '月見山こどもの森', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '芸西村', budget: 'free', note: '太平洋を望む丘に広がる森の公園。ローラーすべり台や木の遊具があり海風の中でのびのび遊べる。' },
+    { name: '月見山こどもの森', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '香南市', budget: 'free', note: '太平洋を望む丘に広がる森の公園。ローラーすべり台や木の遊具があり海風の中でのびのび遊べる。' },
   ],
 
   // ===== 九州・沖縄 =====
