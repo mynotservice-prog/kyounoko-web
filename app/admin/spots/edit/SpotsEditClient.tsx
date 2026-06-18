@@ -214,7 +214,14 @@ function SpotRow({
       hiddenTip: form.hiddenTip,
       nearby: form.nearby,
       image: '', // 旧フィールドは images に統合（クリア指示）
-      images: [form.img0, form.img1, form.img2].filter(Boolean),
+      // スロット位置を保持する（[0]=hero / [1]=中段 / [2]=下段）。
+      // filter(Boolean) で詰めると「中段だけ入れた画像が hero に化ける」ため、
+      // 中間の空欄は '' のまま残し、末尾の空欄だけ落とす。
+      images: (() => {
+        const arr = [form.img0, form.img1, form.img2];
+        while (arr.length > 0 && !arr[arr.length - 1]) arr.pop();
+        return arr;
+      })(),
       ageGuide: {
         '0-1': form.age_0_1,
         '2-3': form.age_2_3,

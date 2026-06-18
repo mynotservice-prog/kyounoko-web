@@ -15,7 +15,7 @@ import { KID_REPORTS } from './kid-reports';
 import { SPOT_FACILITIES } from './spot-facilities';
 import { SPOT_ACCESS } from './spot-access';
 import { SPOTS_EXTRA } from './spots-extra';
-import { mergeSpot } from './spot-overrides';
+import { mergeSpot, type SpotOverridesMap } from './spot-overrides';
 
 export type SpotCategory =
   | 'zoo'          // 動物園
@@ -3069,7 +3069,9 @@ export function spotToSlug(spot: Spot, area: AreaSlug | string): string {
  * 全エリアの全スポットをフラットに列挙（一意slug付き）。
  * sitemap, app/spot/[slug] の静的生成で使う。
  */
-export function getAllSpotsWithSlug(): Array<{ slug: string; area: AreaSlug | string; spot: Spot }> {
+export function getAllSpotsWithSlug(
+  ovMap?: SpotOverridesMap,
+): Array<{ slug: string; area: AreaSlug | string; spot: Spot }> {
   const all: Array<{ slug: string; area: AreaSlug | string; spot: Spot }> = [];
   const seen = new Set<string>();
   for (const [area, list] of Object.entries(SPOTS)) {
@@ -3078,14 +3080,14 @@ export function getAllSpotsWithSlug(): Array<{ slug: string; area: AreaSlug | st
       const slug = spotToSlug(s, area);
       if (seen.has(slug)) continue;
       seen.add(slug);
-      all.push({ slug, area, spot: mergeSpot(s, slug) });
+      all.push({ slug, area, spot: mergeSpot(s, slug, ovMap) });
     }
   }
   for (const s of TOKYO_RESTAURANTS) {
     const slug = spotToSlug(s, 'tokyo');
     if (seen.has(slug)) continue;
     seen.add(slug);
-    all.push({ slug, area: 'tokyo', spot: mergeSpot(s, slug) });
+    all.push({ slug, area: 'tokyo', spot: mergeSpot(s, slug, ovMap) });
   }
   return all;
 }
@@ -3112,8 +3114,9 @@ export function isSpotIndexable(s: Spot): boolean {
  */
 export function getSpotBySlug(
   slug: string,
+  ovMap?: SpotOverridesMap,
 ): { slug: string; area: AreaSlug | string; spot: Spot } | undefined {
-  return getAllSpotsWithSlug().find((x) => x.slug === slug);
+  return getAllSpotsWithSlug(ovMap).find((x) => x.slug === slug);
 }
 
 /** スポットカテゴリを日本語ラベルに変換 */

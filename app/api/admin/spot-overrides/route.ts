@@ -1,13 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { revalidatePath, revalidateTag } from 'next/cache';
 import {
   SPOT_TEXT_FIELDS,
   SPOT_PRICING_FIELDS,
   SPOT_FACILITY_ENUM_FIELDS,
   SPOT_AGE_GUIDE_FIELDS,
+  SPOT_OVERRIDES_TAG,
+  readSpotOverridesForWrite,
+  writeSpotOverridesToKv,
   type SpotOverride,
 } from '@/lib/spot-overrides';
+import { isKvConfigured } from '@/lib/kv-store';
 
 /**
  * /admin/spots/edit から呼ばれるスポット上書き保存 API。
@@ -73,9 +78,11 @@ function sanitizePatch(input: unknown): { patch: SpotOverride; clear: Set<string
     } else if (k === 'images') {
       if (v == null) { clear.add(k); continue; }
       if (!Array.isArray(v)) return { error: 'images must be array' };
+      // スロット位置（[0]=hero / [1]=中段 / [2]=下段）を保持する。
+      // 中間の空欄は '' のまま残し、末尾の空欄だけ落とす。詰めると中段画像が hero に化ける。
       const out: string[] = [];
       for (const item of v) {
-        if (item == null || item === '') continue;
+        if (item == null || item === '') { out.push(''); continue; }
         if (typeof item !== 'string') return { error: 'images items must be string' };
         if (!/^(https?:\/\/|\/)/.test(item)) {
           return { error: 'images は https:// で始まるURLか / で始まるパスを指定してください' };
@@ -83,6 +90,7 @@ function sanitizePatch(input: unknown): { patch: SpotOverride; clear: Set<string
         if (item.length > 500) return { error: 'image path too long' };
         out.push(item);
       }
+      while (out.length > 0 && out[out.length - 1] === '') out.pop();
       if (out.length > 0) result[k] = out.slice(0, 3);
       else clear.add(k);
     } else if (k === 'pricing') {
@@ -216,6 +224,11 @@ export async function GET(req: NextRequest) {
   const auth = isAllowed(req);
   if (!auth.ok) return NextResponse.json({ error: auth.reason }, { status: 403 });
 
+  // KV 設定時は KV を正とする（無ければバンドルにフォールバック）。
+  if (isKvConfigured()) {
+    return NextResponse.json({ overrides: await readSpotOverridesForWrite() });
+  }
+
   if (process.env.NODE_ENV !== 'development' && process.env.GITHUB_TOKEN) {
     const gh = await ghGetFile();
     if (gh) {
@@ -254,10 +267,13 @@ export async function POST(req: NextRequest) {
   }
   const { patch, clear } = sanitized;
 
-  // 既存読み込み
+  // 既存読み込み（KV優先 → GitHub → ローカル）
+  const useKv = isKvConfigured();
   let current: Overrides = {};
   let sha: string | undefined;
-  if (process.env.NODE_ENV !== 'development' && process.env.GITHUB_TOKEN) {
+  if (useKv) {
+    current = (await readSpotOverridesForWrite()) as Overrides;
+  } else if (process.env.NODE_ENV !== 'development' && process.env.GITHUB_TOKEN) {
     const gh = await ghGetFile();
     if (gh) {
       try {
@@ -284,6 +300,15 @@ export async function POST(req: NextRequest) {
     delete current[slug];
   } else {
     current[slug] = merged as SpotOverride;
+  }
+
+  // KV: デプロイ不要で保存し、該当ページだけ revalidate
+  if (useKv) {
+    const ok = await writeSpotOverridesToKv(current);
+    if (!ok) return NextResponse.json({ error: 'kv write failed' }, { status: 500 });
+    revalidateTag(SPOT_OVERRIDES_TAG);
+    revalidatePath(`/spot/${slug}`);
+    return NextResponse.json({ ok: true, mode: 'kv', slug });
   }
 
   const newText = JSON.stringify(current, null, 2) + '\n';
