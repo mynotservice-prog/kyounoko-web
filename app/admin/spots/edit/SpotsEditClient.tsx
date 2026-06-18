@@ -547,6 +547,12 @@ function SpotRow({
               href={`/spot/${slug}`}
               target="_blank"
               rel="noopener noreferrer"
+              // CDN(Cloudflare)キャッシュをバイパスして編集直後の最新ページを確認できるよう、
+              // クリック時にキャッシュバスター付きURLで開く。
+              onClick={(e) => {
+                e.preventDefault();
+                window.open(`/spot/${slug}?cb=${Date.now()}`, '_blank', 'noopener,noreferrer');
+              }}
               style={{ fontSize: 12, color: 'var(--clay-deep)' }}
             >
               本番ページを確認 ↗
