@@ -41,6 +41,33 @@ const FACILITY_LABELS: Record<string, string> = {
   strollerRental: 'ベビーカー貸出',
 };
 
+// カテゴリ（lib/spots.ts の SpotCategory と一致）。現在値をプリセットし、変えたら上書き保存。
+const CATEGORY_OPTIONS = [
+  { v: 'zoo', label: '動物園' },
+  { v: 'aquarium', label: '水族館' },
+  { v: 'park', label: '公園' },
+  { v: 'museum', label: '博物館・科学館' },
+  { v: 'amusement', label: '遊園地' },
+  { v: 'indoor', label: '屋内施設' },
+  { v: 'farm', label: '牧場' },
+  { v: 'seasonal', label: '季節体験' },
+  { v: 'restaurant', label: '子連れOKレストラン' },
+];
+const PLACE_OPTIONS = [
+  { v: 'indoor', label: '屋内' },
+  { v: 'outdoor', label: '屋外' },
+  { v: 'mixed', label: '一部屋外' },
+];
+const AGE_TAGS: AgeTag[] = ['0-1', '2-3', '4-6'];
+
+/** 近隣スポット選択用の軽量インデックス。 */
+type SpotIndexItem = { slug: string; name: string; area: string };
+
+/** ages 配列を比較用に正規化（順序非依存）。 */
+function agesKey(a: readonly string[] | undefined): string {
+  return [...(a ?? [])].sort().join(',');
+}
+
 export function SpotsEditClient({
   entries,
   overrides,
@@ -71,6 +98,12 @@ export function SpotsEditClient({
       alive = false;
     };
   }, []);
+
+  // 近隣スポット選択用の全スポット軽量インデックス（slug→名前/エリア）。
+  const spotIndex = React.useMemo<SpotIndexItem[]>(
+    () => entries.map((e) => ({ slug: e.slug, name: e.spot.name, area: e.spot.ward || e.spot.city || e.area })),
+    [entries],
+  );
 
   const filtered = entries.filter((e) => {
     if (!q) return true;
@@ -117,6 +150,7 @@ export function SpotsEditClient({
             key={`${e.slug}-${loaded ? 'live' : 'init'}`}
             entry={e}
             override={liveOverrides[e.slug] ?? {}}
+            spotIndex={spotIndex}
             isOpen={openSlug === e.slug}
             onToggle={() => setOpenSlug(openSlug === e.slug ? null : e.slug)}
           />
@@ -134,11 +168,13 @@ export function SpotsEditClient({
 function SpotRow({
   entry,
   override,
+  spotIndex,
   isOpen,
   onToggle,
 }: {
   entry: Entry;
   override: SpotOverride;
+  spotIndex: SpotIndexItem[];
   isOpen: boolean;
   onToggle: () => void;
 }) {
@@ -169,13 +205,41 @@ function SpotRow({
     f_kidsSpace: override.facilities?.kidsSpace ?? '',
     f_strollerRental: override.facilities?.strollerRental ?? '',
     f_note: override.facilities?.note ?? '',
+    // カテゴリ/屋内外は「現在の実効値」をプリセット（select に現状が出る）。
+    category: override.category ?? spot.category,
+    place: override.place ?? spot.place,
   }));
+  // 対象年齢（複数選択）/ FAQ / 近隣スポットは配列なので別state。現在値をプリセット。
+  const [ages, setAges] = React.useState<AgeTag[]>(() => override.ages ?? spot.ages ?? []);
+  const [faq, setFaq] = React.useState<Array<{ q: string; a: string }>>(
+    () => (override.faq ?? spot.faq ?? []).map((f) => ({ q: f.q, a: f.a })),
+  );
+  const [nearbySlugs, setNearbySlugs] = React.useState<string[]>(
+    () => override.nearbySlugs ?? spot.nearbySlugs ?? [],
+  );
+  const [nearbyQuery, setNearbyQuery] = React.useState('');
   const [saving, setSaving] = React.useState(false);
   const [msg, setMsg] = React.useState('');
   const [uploading, setUploading] = React.useState(false);
 
   const hasOverride = Object.keys(override).length > 0;
   const set = (k: string, v: string) => setForm((s) => ({ ...s, [k]: v }));
+
+  const toggleAge = (tag: AgeTag) =>
+    setAges((cur) => (cur.includes(tag) ? cur.filter((t) => t !== tag) : [...cur, tag]));
+  const nameForSlug = (s: string) => spotIndex.find((x) => x.slug === s)?.name ?? s;
+  const nearbyMatches = nearbyQuery.trim()
+    ? spotIndex
+        .filter(
+          (x) =>
+            x.slug !== slug &&
+            !nearbySlugs.includes(x.slug) &&
+            (x.name.toLowerCase().includes(nearbyQuery.toLowerCase()) ||
+              x.area.toLowerCase().includes(nearbyQuery.toLowerCase()) ||
+              x.slug.toLowerCase().includes(nearbyQuery.toLowerCase())),
+        )
+        .slice(0, 8)
+    : [];
 
   // 画像アップロード: ファイルを /api/admin/spot-image へ送り、返ってきたパスを指定スロットにセット。
   // この後 [保存] を押すと override に書き込まれて本番反映される。
@@ -241,6 +305,14 @@ function SpotRow({
         strollerRental: form.f_strollerRental,
         note: form.f_note,
       },
+      // カテゴリ/屋内外/対象年齢は、元の値と同じなら '' / [] を送って上書きを作らない（最小化）。
+      category: form.category === spot.category ? '' : form.category,
+      place: form.place === spot.place ? '' : form.place,
+      ages: agesKey(ages) === agesKey(spot.ages) ? [] : ages,
+      // FAQ: 空行を除いて送る。空配列なら override 削除。
+      faq: faq.filter((f) => f.q.trim() && f.a.trim()).map((f) => ({ q: f.q.trim(), a: f.a.trim() })),
+      // 近隣スポット手動指定。空配列なら削除（自動算出に戻る）。
+      nearbySlugs,
     };
     try {
       const res = await fetch('/api/admin/spot-overrides', {
@@ -307,12 +379,23 @@ function SpotRow({
 
   const ageField = (key: keyof typeof form, age: AgeTag) => (
     <label style={{ ...labelStyle, gridColumn: '1 / -1' }}>
-      <span style={captionStyle}>{AGE_LABEL[age]}</span>
+      <span style={{ ...captionStyle, display: 'flex', alignItems: 'center', gap: 8 }}>
+        {AGE_LABEL[age]}
+        {ageDefaults[age] && !form[key] && (
+          <button
+            type="button"
+            onClick={() => set(key, ageDefaults[age] || '')}
+            style={{ background: 'transparent', border: '1px solid var(--line)', borderRadius: 5, fontSize: 10, padding: '1px 7px', color: 'var(--clay-deep)', cursor: 'pointer' }}
+          >
+            現在の文を読み込んで編集
+          </button>
+        )}
+      </span>
       <textarea
         value={form[key]}
         onChange={(e) => set(key, e.target.value)}
         placeholder={ageDefaults[age] ? `現在: ${ageDefaults[age]}` : '（カテゴリ共通の自動文を表示中）'}
-        rows={2}
+        rows={3}
         style={{ ...inputStyle, resize: 'vertical', lineHeight: 1.6 }}
       />
     </label>
@@ -477,29 +560,61 @@ function SpotRow({
             アップロード後に「保存」を押すと反映されます（本番は数分）。webp/jpg/png/gif・5MBまで。2枚目以降は本番ページの中段・下段に分散表示されます。
           </div>
 
+          <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', margin: '0 0 8px' }}>
+            基本情報・カード
+            <span style={{ fontSize: 10, fontWeight: 400, color: 'var(--ink-mute)', marginLeft: 8 }}>
+              カテゴリ・対象年齢・屋内外は本番ページ上部のカードに反映されます。
+            </span>
+          </div>
           <div style={{
             display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 10,
           }}>
             {field('name', '施設名', spot.name)}
             {field('city', '市区町村', spot.city)}
             {field('ward', '区（東京23区等）', spot.ward)}
+            {selectField('category', 'カテゴリ（牧場/遊園地…）', CATEGORY_OPTIONS)}
+            {selectField('place', '屋内 / 屋外', PLACE_OPTIONS)}
             {selectField('budget', '料金目安', BUDGET_OPTIONS)}
             {selectField('reservation', '予約', RESERVATION_OPTIONS)}
+            {/* 対象年齢（複数選択） */}
+            <label style={{ ...labelStyle, gridColumn: '1 / -1' }}>
+              <span style={captionStyle}>対象年齢（複数選択可）</span>
+              <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 2 }}>
+                {AGE_TAGS.map((tag) => {
+                  const on = ages.includes(tag);
+                  return (
+                    <button
+                      key={tag}
+                      type="button"
+                      onClick={() => toggleAge(tag)}
+                      style={{
+                        padding: '6px 14px', borderRadius: 999, fontSize: 12, fontWeight: 700, cursor: 'pointer',
+                        border: on ? '1px solid var(--clay-deep)' : '1px solid var(--line)',
+                        background: on ? 'var(--clay-soft)' : '#fff',
+                        color: on ? 'var(--clay-deep)' : 'var(--ink-mute)',
+                      }}
+                    >
+                      {on ? '✓ ' : ''}{AGE_LABEL[tag]}
+                    </button>
+                  );
+                })}
+              </div>
+            </label>
             {field('note', '一言メモ', spot.note, true)}
             {field('hiddenTip', '穴場ポイント', spot.hiddenTip, true)}
-            {field('nearby', '近隣セット提案', spot.nearby, true)}
+            {field('nearby', '近隣セット提案（テキスト）', spot.nearby, true)}
           </div>
 
           <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', margin: '16px 0 8px' }}>
             年齢別の楽しみ方
             <span style={{ fontSize: 10, fontWeight: 400, color: 'var(--ink-mute)', marginLeft: 8 }}>
-              空欄ならカテゴリ共通の自動文を表示。施設に合わせて上書きできます。
+              空欄ならカテゴリ共通の自動文を表示。「現在の文を読み込んで編集」で本文を入れて手直しできます。
             </span>
           </div>
           <div style={{ display: 'grid', gap: 10 }}>
-            {spot.ages.includes('0-1') && ageField('age_0_1', '0-1')}
-            {spot.ages.includes('2-3') && ageField('age_2_3', '2-3')}
-            {spot.ages.includes('4-6') && ageField('age_4_6', '4-6')}
+            {ages.includes('0-1') && ageField('age_0_1', '0-1')}
+            {ages.includes('2-3') && ageField('age_2_3', '2-3')}
+            {ages.includes('4-6') && ageField('age_4_6', '4-6')}
           </div>
 
           <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', margin: '16px 0 8px' }}>
@@ -526,6 +641,106 @@ function SpotRow({
             {selectField('f_kidsSpace', FACILITY_LABELS.kidsSpace, YESNO_OPTIONS)}
             {selectField('f_strollerRental', FACILITY_LABELS.strollerRental, YESNO_OPTIONS)}
             {field('f_note', '設備メモ', spot.facilities?.note, true)}
+          </div>
+
+          {/* よくある質問（FAQ）編集 */}
+          <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', margin: '16px 0 8px' }}>
+            よくある質問（FAQ）
+            <span style={{ fontSize: 10, fontWeight: 400, color: 'var(--ink-mute)', marginLeft: 8 }}>
+              ここで追加したQ&Aは本番ページのFAQ先頭に表示されます（自動生成FAQより優先）。
+            </span>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {faq.map((item, i) => (
+              <div key={i} style={{ border: '1px solid var(--line)', borderRadius: 8, padding: 10, background: '#fff', display: 'flex', flexDirection: 'column', gap: 6 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <span style={{ fontSize: 11, fontWeight: 800, color: 'var(--clay-deep)' }}>Q{i + 1}</span>
+                  <input
+                    type="text"
+                    value={item.q}
+                    onChange={(e) => setFaq((cur) => cur.map((f, j) => (j === i ? { ...f, q: e.target.value } : f)))}
+                    placeholder="質問（例: ペットは連れて入れますか？）"
+                    style={{ ...inputStyle, flex: 1 }}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setFaq((cur) => cur.filter((_, j) => j !== i))}
+                    style={{ background: 'transparent', border: '1px solid var(--line)', borderRadius: 5, fontSize: 11, padding: '4px 8px', color: 'var(--clay-deep)', cursor: 'pointer', flex: 'none' }}
+                  >
+                    削除
+                  </button>
+                </div>
+                <textarea
+                  value={item.a}
+                  onChange={(e) => setFaq((cur) => cur.map((f, j) => (j === i ? { ...f, a: e.target.value } : f)))}
+                  placeholder="回答"
+                  rows={2}
+                  style={{ ...inputStyle, resize: 'vertical', lineHeight: 1.6 }}
+                />
+              </div>
+            ))}
+            <button
+              type="button"
+              onClick={() => setFaq((cur) => [...cur, { q: '', a: '' }])}
+              style={{ alignSelf: 'flex-start', background: '#fff', border: '1px dashed var(--line)', borderRadius: 6, fontSize: 12, fontWeight: 700, padding: '6px 14px', color: 'var(--ink-sub)', cursor: 'pointer' }}
+            >
+              ＋ 質問を追加
+            </button>
+          </div>
+
+          {/* 近くのスポット（手動選択） */}
+          <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', margin: '16px 0 8px' }}>
+            近くのスポット（手動選択）
+            <span style={{ fontSize: 10, fontWeight: 400, color: 'var(--ink-mute)', marginLeft: 8 }}>
+              指定すると本番ページ「近くのスポット」に、この順番で優先表示します。未指定なら自動（同駅/同区）。
+            </span>
+          </div>
+          <div style={{ border: '1px solid var(--line)', borderRadius: 8, padding: 10, background: '#fff' }}>
+            {nearbySlugs.length > 0 ? (
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 8 }}>
+                {nearbySlugs.map((ns, i) => (
+                  <span key={ns} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: 'var(--clay-soft)', color: 'var(--clay-deep)', borderRadius: 999, padding: '4px 6px 4px 10px', fontSize: 12, fontWeight: 700 }}>
+                    <span style={{ opacity: 0.7, fontSize: 10 }}>{i + 1}.</span>
+                    {nameForSlug(ns)}
+                    <button
+                      type="button"
+                      onClick={() => setNearbySlugs((cur) => cur.filter((s) => s !== ns))}
+                      style={{ background: 'transparent', border: 'none', color: 'var(--clay-deep)', cursor: 'pointer', fontSize: 14, lineHeight: 1, padding: '0 2px' }}
+                      aria-label="削除"
+                    >
+                      ×
+                    </button>
+                  </span>
+                ))}
+              </div>
+            ) : (
+              <div style={{ fontSize: 11, color: 'var(--ink-mute)', marginBottom: 8 }}>
+                未選択（自動で同駅・同区のスポットを表示中）
+              </div>
+            )}
+            <input
+              type="search"
+              value={nearbyQuery}
+              onChange={(e) => setNearbyQuery(e.target.value)}
+              placeholder="🔍 追加するスポットを施設名/エリアで検索"
+              style={{ ...inputStyle, width: '100%' }}
+              disabled={nearbySlugs.length >= 12}
+            />
+            {nearbyMatches.length > 0 && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 4, marginTop: 6, maxHeight: 200, overflowY: 'auto' }}>
+                {nearbyMatches.map((m) => (
+                  <button
+                    key={m.slug}
+                    type="button"
+                    onClick={() => { setNearbySlugs((cur) => [...cur, m.slug]); setNearbyQuery(''); }}
+                    style={{ textAlign: 'left', background: '#faf7f2', border: '1px solid var(--line)', borderRadius: 6, padding: '6px 10px', fontSize: 12, cursor: 'pointer' }}
+                  >
+                    <span style={{ fontWeight: 700 }}>{m.name}</span>
+                    <span style={{ color: 'var(--ink-mute)', marginLeft: 6, fontSize: 11 }}>{m.area}</span>
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           <div style={{

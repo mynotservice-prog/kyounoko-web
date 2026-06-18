@@ -7,6 +7,9 @@ import {
   SPOT_PRICING_FIELDS,
   SPOT_FACILITY_ENUM_FIELDS,
   SPOT_AGE_GUIDE_FIELDS,
+  SPOT_CATEGORY_VALUES,
+  SPOT_PLACE_VALUES,
+  SPOT_AGE_VALUES,
   SPOT_OVERRIDES_TAG,
   readSpotOverridesForWrite,
   writeSpotOverridesToKv,
@@ -138,6 +141,63 @@ function sanitizePatch(input: unknown): { patch: SpotOverride; clear: Set<string
         out[ak] = av;
       }
       if (Object.keys(out).length > 0) result[k] = out;
+      else clear.add(k);
+    } else if (k === 'category') {
+      if (v == null || v === '') { clear.add(k); continue; }
+      if (typeof v !== 'string' || !(SPOT_CATEGORY_VALUES as readonly string[]).includes(v)) {
+        return { error: `invalid category: ${String(v)}` };
+      }
+      result[k] = v;
+    } else if (k === 'place') {
+      if (v == null || v === '') { clear.add(k); continue; }
+      if (typeof v !== 'string' || !(SPOT_PLACE_VALUES as readonly string[]).includes(v)) {
+        return { error: `invalid place: ${String(v)}` };
+      }
+      result[k] = v;
+    } else if (k === 'ages') {
+      if (v == null) { clear.add(k); continue; }
+      if (!Array.isArray(v)) return { error: 'ages must be array' };
+      // 重複を除き、定義順（0-1 → 2-3 → 4-6）に正規化。
+      const out = (SPOT_AGE_VALUES as readonly string[]).filter((tag) => v.includes(tag));
+      for (const item of v) {
+        if (!(SPOT_AGE_VALUES as readonly string[]).includes(item)) {
+          return { error: `invalid age: ${String(item)}` };
+        }
+      }
+      if (out.length > 0) result[k] = out;
+      else clear.add(k);
+    } else if (k === 'faq') {
+      if (v == null) { clear.add(k); continue; }
+      if (!Array.isArray(v)) return { error: 'faq must be array' };
+      const out: Array<{ q: string; a: string }> = [];
+      for (const item of v) {
+        if (!item || typeof item !== 'object') return { error: 'faq items must be {q,a}' };
+        const q = (item as Record<string, unknown>).q;
+        const a = (item as Record<string, unknown>).a;
+        // 質問・回答どちらかが空の行はスキップ（部分入力中の削除扱い）。
+        if (q == null || q === '' || a == null || a === '') continue;
+        if (typeof q !== 'string' || typeof a !== 'string') return { error: 'faq q/a must be string' };
+        if (q.length > 200) return { error: 'faq.q too long' };
+        if (a.length > 1000) return { error: 'faq.a too long' };
+        out.push({ q, a });
+      }
+      if (out.length > 0) result[k] = out.slice(0, 20);
+      else clear.add(k);
+    } else if (k === 'nearbySlugs') {
+      if (v == null) { clear.add(k); continue; }
+      if (!Array.isArray(v)) return { error: 'nearbySlugs must be array' };
+      const out: string[] = [];
+      const seen = new Set<string>();
+      for (const item of v) {
+        if (item == null || item === '') continue;
+        if (typeof item !== 'string' || !/^[A-Za-z0-9_-]+$/.test(item)) {
+          return { error: `invalid nearby slug: ${String(item)}` };
+        }
+        if (item.length > 80 || seen.has(item)) continue;
+        seen.add(item);
+        out.push(item);
+      }
+      if (out.length > 0) result[k] = out.slice(0, 12);
       else clear.add(k);
     } else {
       return { error: `unknown field: ${k}` };
