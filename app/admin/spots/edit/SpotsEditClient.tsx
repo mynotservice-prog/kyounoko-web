@@ -268,6 +268,9 @@ function SpotRow({
   const save = async () => {
     setSaving(true);
     setMsg('');
+    const faqClean = faq
+      .filter((f) => f.q.trim() && f.a.trim())
+      .map((f) => ({ q: f.q.trim(), a: f.a.trim() }));
     const patch: Record<string, unknown> = {
       name: form.name,
       city: form.city,
@@ -310,7 +313,10 @@ function SpotRow({
       place: form.place === spot.place ? '' : form.place,
       ages: agesKey(ages) === agesKey(spot.ages) ? [] : ages,
       // FAQ: 空行を除いて送る。空配列なら override 削除。
-      faq: faq.filter((f) => f.q.trim() && f.a.trim()).map((f) => ({ q: f.q.trim(), a: f.a.trim() })),
+      faq: faqClean,
+      // FAQに1件でも入っていれば「完成版」として扱い、本番では自動FAQを足さない
+      // （= 編集欄で消したFAQが自動生成で復活しない）。空なら自動FAQに戻す。
+      faqComplete: faqClean.length > 0,
       // 近隣スポット手動指定。空配列なら削除（自動算出に戻る）。
       nearbySlugs,
     };

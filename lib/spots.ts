@@ -123,6 +123,11 @@ export type Spot = {
    * admin から施設固有のQ&A（例:「ペットは入れる？」）を足せる。
    */
   faq?: Array<{ q: string; a: string }>;
+  /**
+   * true のとき faq を「完成版」として扱い、自動生成FAQを一切追加しない。
+   * admin で FAQ を読み込んで編集・削除したスポットに付与し、削除が確実に効くようにする。
+   */
+  faqComplete?: boolean;
   popular?: boolean;     // エディターが「ママに人気」として推すスポット（トップページ表示用）
   ward?: string;         // 東京23区の区名（例: '中野区'）、その他市区町村
   // レストラン向けフラグ

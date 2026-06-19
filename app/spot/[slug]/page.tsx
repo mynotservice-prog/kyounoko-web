@@ -151,9 +151,13 @@ export default async function SpotPage({ params }: Props) {
 
   // FAQ: 施設固有の上書き（spot.faq）を先頭に、自動生成分を続ける。
   // 同じ質問文は手動側を優先して自動分を抑制する。
+  // faqComplete のときは admin で編集した faq を完成版として扱い、自動生成FAQは足さない
+  // （これにより admin での「FAQ削除」が確実に効く）。それ以外は従来どおり自動FAQを追記。
   const autoFaqs = buildSpotFaqs(spot);
   const manualQuestions = new Set((spot.faq ?? []).map((f) => f.q));
-  const faqs = [...(spot.faq ?? []), ...autoFaqs.filter((f) => !manualQuestions.has(f.q))];
+  const faqs = spot.faqComplete
+    ? (spot.faq ?? [])
+    : [...(spot.faq ?? []), ...autoFaqs.filter((f) => !manualQuestions.has(f.q))];
   const jsonLdFaq = buildFaqJsonLd(faqs);
 
   const v2Spot = spotToV2(spot);
