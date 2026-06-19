@@ -75,7 +75,7 @@ export const SPOT_AGE_VALUES = ['0-1', '2-3', '4-6'] as const;
 
 /** 上書きとして保存できる Spot の部分形。 */
 export type SpotOverride = Partial<
-  Pick<Spot, 'name' | 'city' | 'ward' | 'note' | 'budget' | 'reservation' | 'hiddenTip' | 'nearby' | 'waterDepth' | 'image' | 'images' | 'pricing' | 'facilities' | 'ageGuide' | 'category' | 'place' | 'ages' | 'faq' | 'nearbySlugs'>
+  Pick<Spot, 'name' | 'city' | 'ward' | 'note' | 'budget' | 'reservation' | 'hiddenTip' | 'nearby' | 'waterDepth' | 'image' | 'images' | 'pricing' | 'facilities' | 'ageGuide' | 'category' | 'place' | 'ages' | 'faq' | 'faqComplete' | 'nearbySlugs'>
 >;
 
 export type SpotOverridesMap = Record<string, SpotOverride>;

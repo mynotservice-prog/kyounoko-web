@@ -44,7 +44,8 @@ function isAllowed(req: NextRequest): { ok: boolean; reason?: string } {
 }
 
 function isValidSlug(s: unknown): s is string {
-  return typeof s === 'string' && /^[a-z0-9_-]+$/.test(s);
+  // slug は name の ASCII をそのまま残すため大文字を含みうる（Cocos / IKEA 等）。大文字も許可。
+  return typeof s === 'string' && /^[A-Za-z0-9_-]+$/.test(s);
 }
 
 async function ghPutBinary(

@@ -55,7 +55,9 @@ function isAllowed(req: NextRequest): { ok: boolean; reason?: string } {
 }
 
 function isValidSlug(s: unknown): s is string {
-  return typeof s === 'string' && /^[a-z0-9_-]+$/.test(s);
+  // slug は spotToSlug() が name の ASCII をそのまま残すため大文字を含みうる
+  // （例: Cocos-xxxx, IKEA-xxxx, The-Kids-xxxx）。大文字も許可する。
+  return typeof s === 'string' && /^[A-Za-z0-9_-]+$/.test(s);
 }
 
 /** patch をホワイトリストで検証＆クリーニングして返す。空文字フィールドは「削除指示」。 */
@@ -182,6 +184,10 @@ function sanitizePatch(input: unknown): { patch: SpotOverride; clear: Set<string
         out.push({ q, a });
       }
       if (out.length > 0) result[k] = out.slice(0, 20);
+      else clear.add(k);
+    } else if (k === 'faqComplete') {
+      // true のときだけ保存（faq を完成版として扱い自動FAQを抑制）。それ以外は削除。
+      if (v === true) result[k] = true;
       else clear.add(k);
     } else if (k === 'nearbySlugs') {
       if (v == null) { clear.add(k); continue; }
