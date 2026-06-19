@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { SPOT_CATEGORY_LABEL, type Spot, type AgeTag } from '@/lib/spots';
-import { buildEnjoyByAgeBlocks } from '@/lib/spot-narratives';
+import { buildEnjoyByAgeBlocks, buildSpotFaqs } from '@/lib/spot-narratives';
 import { spotToV2 } from '@/lib/v2-adapters';
 import type { SpotOverride, SpotOverridesMap } from '@/lib/spot-overrides';
 
@@ -348,18 +348,45 @@ function SpotRow({
     fontSize: 12, fontFamily: 'inherit', background: '#fff',
   };
 
-  const field = (key: keyof typeof form, label: string, original: unknown, full = false) => (
-    <label style={{ ...labelStyle, gridColumn: full ? '1 / -1' : 'auto' }}>
-      <span style={captionStyle}>{label}</span>
-      <input
-        type="text"
-        value={form[key]}
-        onChange={(e) => set(key, e.target.value)}
-        placeholder={original != null && original !== '' ? `現在: ${String(original)}` : '（未設定）'}
-        style={inputStyle}
-      />
-    </label>
-  );
+  const field = (key: keyof typeof form, label: string, original: unknown, full = false) => {
+    const hasOriginal = original != null && original !== '';
+    const placeholder = hasOriginal ? `現在: ${String(original)}` : '（未設定）';
+    // 現在の値を入力欄に読み込んで編集できるようにする（空欄＆現在値ありのときだけ表示）。
+    const loadBtn = hasOriginal && !form[key] && (
+      <button
+        type="button"
+        onClick={() => set(key, String(original))}
+        style={{ background: 'transparent', border: '1px solid var(--line)', borderRadius: 5, fontSize: 10, padding: '1px 7px', color: 'var(--clay-deep)', cursor: 'pointer' }}
+      >
+        現在の文を読み込んで編集
+      </button>
+    );
+    return (
+      <label style={{ ...labelStyle, gridColumn: full ? '1 / -1' : 'auto' }}>
+        <span style={{ ...captionStyle, display: 'flex', alignItems: 'center', gap: 8 }}>
+          {label}
+          {loadBtn}
+        </span>
+        {full ? (
+          <textarea
+            value={form[key]}
+            onChange={(e) => set(key, e.target.value)}
+            placeholder={placeholder}
+            rows={2}
+            style={{ ...inputStyle, resize: 'vertical', lineHeight: 1.6 }}
+          />
+        ) : (
+          <input
+            type="text"
+            value={form[key]}
+            onChange={(e) => set(key, e.target.value)}
+            placeholder={placeholder}
+            style={inputStyle}
+          />
+        )}
+      </label>
+    );
+  };
 
   // 画像プレビュー: hero は img0、無ければ現在ページの自動画像。中段/下段は img1/img2。
   const autoImg = spotToV2(spot).img;
@@ -376,6 +403,15 @@ function SpotRow({
   const ageDefaults: Partial<Record<AgeTag, string>> = Object.fromEntries(
     buildEnjoyByAgeBlocks(spot).map((b) => [b.age, b.text]),
   );
+
+  // 本番ページに現在表示されているFAQ（手動faq + 自動生成、同じ質問は手動優先）。
+  // 「現在のFAQを読み込んで編集」で、この内容を編集欄に展開できる。
+  const currentFaqs = (() => {
+    const manual = spot.faq ?? [];
+    const manualQ = new Set(manual.map((f) => f.q));
+    const auto = buildSpotFaqs(spot).filter((f) => !manualQ.has(f.q));
+    return [...manual, ...auto].map((f) => ({ q: f.q, a: f.a }));
+  })();
 
   const ageField = (key: keyof typeof form, age: AgeTag) => (
     <label style={{ ...labelStyle, gridColumn: '1 / -1' }}>
@@ -651,6 +687,28 @@ function SpotRow({
             </span>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {/* 編集欄が空のとき、本番に出ている現在のFAQ（自動生成含む）を読み込んで編集できる */}
+            {faq.length === 0 && currentFaqs.length > 0 && (
+              <div style={{ border: '1px dashed var(--line)', borderRadius: 8, padding: 12, background: '#faf7f2' }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, marginBottom: 8, flexWrap: 'wrap' }}>
+                  <span style={{ fontSize: 11, color: 'var(--ink-sub)', fontWeight: 700 }}>
+                    現在このスポットに表示中のFAQ（{currentFaqs.length}件・自動生成含む）
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => setFaq(currentFaqs.map((f) => ({ q: f.q, a: f.a })))}
+                    style={{ background: 'var(--ink)', color: '#fff', border: 'none', borderRadius: 6, fontSize: 11, fontWeight: 700, padding: '6px 12px', cursor: 'pointer' }}
+                  >
+                    現在のFAQを読み込んで編集
+                  </button>
+                </div>
+                <ol style={{ margin: 0, paddingLeft: 18, fontSize: 11.5, color: 'var(--ink-mute)', lineHeight: 1.7 }}>
+                  {currentFaqs.map((f, i) => (
+                    <li key={i}><strong style={{ color: 'var(--ink-sub)' }}>{f.q}</strong></li>
+                  ))}
+                </ol>
+              </div>
+            )}
             {faq.map((item, i) => (
               <div key={i} style={{ border: '1px solid var(--line)', borderRadius: 8, padding: 10, background: '#fff', display: 'flex', flexDirection: 'column', gap: 6 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
