@@ -694,7 +694,7 @@ export default async function SpotPage({ params }: Props) {
         {/* 行ったよレポート（公開分の表示＋報告フォーム） */}
         {visitorReports.length > 0 && (
           <>
-            <V2SectionHead title="みんなの「行ったよ」" more="" />
+            <V2SectionHead title="みんなの「行ったよ」" moreHref="/reports" />
             <div className="v2-section">
               {visitorReports.map((r, i) => (
                 <div

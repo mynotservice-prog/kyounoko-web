@@ -6,14 +6,21 @@ import { V2Icon } from '@/components/v2/V2Icon';
 import { V2EventCalendar } from '@/components/v2/V2EventCalendar';
 import {
   EVENTS,
+  EVENT_CATEGORY_LABELS,
   deadlineBadge,
   eventHeroImage,
+  filterEvents,
   formatEventPeriod,
+  getActiveEventAreas,
+  getActiveEventCategories,
   getOngoingEvents,
   getThisMonthEvents,
   getThisWeekEvents,
   kidFriendliness,
+  type EventCategory,
+  type EventFilter,
 } from '@/lib/events';
+import { getAreaName, isValidArea, type AreaSlug } from '@/lib/area';
 import { AdSlot } from '@/components/ads/AdSlot';
 
 export const revalidate = 3600;
@@ -25,11 +32,56 @@ export const metadata: Metadata = {
   alternates: { canonical: '/events' },
 };
 
-type Props = { searchParams: Promise<{ view?: string }> };
+type Props = {
+  searchParams: Promise<{
+    view?: string;
+    area?: string;
+    cat?: string;
+    free?: string;
+    soon?: string;
+    baby?: string;
+  }>;
+};
 
 export default async function EventsPage({ searchParams }: Props) {
-  const { view } = await searchParams;
-  const isCalendar = view === 'calendar';
+  const sp = await searchParams;
+  const isCalendar = sp.view === 'calendar';
+
+  // フィルタ条件を searchParams から組み立てる
+  const filter: EventFilter = {
+    area: isValidArea(sp.area) && sp.area !== 'all' ? (sp.area as AreaSlug) : undefined,
+    category: isEventCategory(sp.cat) ? sp.cat : undefined,
+    free: sp.free === '1',
+    soon: sp.soon === '1',
+    baby: sp.baby === '1',
+  };
+  const hasFilter = Boolean(
+    filter.area || filter.category || filter.free || filter.soon || filter.baby,
+  );
+  const filtered = hasFilter ? filterEvents(filter) : [];
+
+  // フィルタUI用の選択肢（実在するエリア・カテゴリのみ）
+  const areaOpts = getActiveEventAreas();
+  const catOpts = getActiveEventCategories();
+
+  // 現在の検索条件を保ったままチップのリンク先を組み立てる（同じ値なら解除＝トグル）
+  const buildHref = (patch: Record<string, string | undefined>): string => {
+    const params = new URLSearchParams();
+    const merged: Record<string, string | undefined> = {
+      area: filter.area,
+      cat: filter.category,
+      free: filter.free ? '1' : undefined,
+      soon: filter.soon ? '1' : undefined,
+      baby: filter.baby ? '1' : undefined,
+      ...patch,
+    };
+    for (const [k, v] of Object.entries(merged)) {
+      if (v) params.set(k, v);
+    }
+    const qs = params.toString();
+    return qs ? `/events?${qs}` : '/events';
+  };
+
   const ongoing = getOngoingEvents();
   const week = getThisWeekEvents();
   const month = getThisMonthEvents();
@@ -100,6 +152,119 @@ export default async function EventsPage({ searchParams }: Props) {
 
       {!isCalendar && (<>
 
+      {/* 絞り込みフィルタ */}
+      <div className="v2-ev-filters">
+        <div className="v2-filter-group">
+          <div className="v2-filter-label">エリア</div>
+          <div className="v2-filter-opts">
+            <Link
+              href={buildHref({ area: undefined })}
+              className={'v2-filter-opt' + (!filter.area ? ' on' : '')}
+              scroll={false}
+            >
+              すべて
+            </Link>
+            {areaOpts.map((a) => (
+              <Link
+                key={a}
+                href={buildHref({ area: filter.area === a ? undefined : a })}
+                className={'v2-filter-opt' + (filter.area === a ? ' on' : '')}
+                scroll={false}
+              >
+                {getAreaName(a)}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className="v2-filter-group">
+          <div className="v2-filter-label">ジャンル</div>
+          <div className="v2-filter-opts">
+            <Link
+              href={buildHref({ cat: undefined })}
+              className={'v2-filter-opt' + (!filter.category ? ' on' : '')}
+              scroll={false}
+            >
+              すべて
+            </Link>
+            {catOpts.map((c) => (
+              <Link
+                key={c}
+                href={buildHref({ cat: filter.category === c ? undefined : c })}
+                className={'v2-filter-opt' + (filter.category === c ? ' on' : '')}
+                scroll={false}
+              >
+                {EVENT_CATEGORY_LABELS[c]}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className="v2-filter-group">
+          <div className="v2-filter-label">こだわり</div>
+          <div className="v2-filter-opts">
+            <Link
+              href={buildHref({ free: filter.free ? undefined : '1' })}
+              className={'v2-filter-opt' + (filter.free ? ' on' : '')}
+              scroll={false}
+            >
+              無料
+            </Link>
+            <Link
+              href={buildHref({ soon: filter.soon ? undefined : '1' })}
+              className={'v2-filter-opt' + (filter.soon ? ' on' : '')}
+              scroll={false}
+            >
+              今週末・まもなく
+            </Link>
+            <Link
+              href={buildHref({ baby: filter.baby ? undefined : '1' })}
+              className={'v2-filter-opt' + (filter.baby ? ' on' : '')}
+              scroll={false}
+            >
+              0歳OK
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* 絞り込み結果 */}
+      {hasFilter && (
+        <>
+          <div className="v2-sec-head">
+            <div className="v2-sec-title">
+              絞り込み結果<span className="v2-ev-count">{filtered.length}</span>
+            </div>
+            <Link href="/events" className="v2-sec-more" scroll={false}>
+              条件をクリア
+            </Link>
+          </div>
+          {filtered.length > 0 ? (
+            <div className="v2-vlist">
+              {filtered.map((e) => (
+                <EventRow key={e.slug} e={e} />
+              ))}
+            </div>
+          ) : (
+            <div className="v2-empty-state">
+              <div className="v2-empty-ill">
+                <V2Icon name="calendar" size={40} color="#e9c9ac" />
+              </div>
+              <div className="v2-empty-title">
+                条件に合うイベントが
+                <br />
+                見つかりませんでした
+              </div>
+              <div className="v2-empty-sub">
+                条件をへらすと見つかりやすくなります。
+              </div>
+            </div>
+          )}
+          <div style={{ height: 24 }}></div>
+        </>
+      )}
+
+      {!hasFilter && (<>
 
       {/* 開催中 */}
       {ongoing.length > 0 && (
@@ -171,9 +336,15 @@ export default async function EventsPage({ searchParams }: Props) {
       )}
       </>)}
 
+      </>)}
+
       <div style={{ height: 24 }}></div>
     </V2Frame>
   );
+}
+
+function isEventCategory(v: unknown): v is EventCategory {
+  return typeof v === 'string' && v in EVENT_CATEGORY_LABELS;
 }
 
 function EventRow({ e }: { e: import('@/lib/events').EventEntry }) {
@@ -199,7 +370,7 @@ function EventRow({ e }: { e: import('@/lib/events').EventEntry }) {
         )}
       </div>
       <div className="v2-ev2-body">
-        <div className="v2-ev2-cat">{e.category}</div>
+        <div className="v2-ev2-cat">{EVENT_CATEGORY_LABELS[e.category]}</div>
         <div className="v2-ev2-name">{e.title}</div>
         <div className="v2-ev2-meta">
           <V2Icon name="calendar" size={13} color="var(--v2-orange)" />

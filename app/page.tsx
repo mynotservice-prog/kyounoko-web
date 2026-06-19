@@ -185,7 +185,7 @@ export default function HomePage() {
       </div>
 
       {/* 人気スポット */}
-      <V2SectionHead title="人気スポット" moreHref="/spots" />
+      <V2SectionHead title="人気スポットランキング" moreHref="/ranking" />
       <div className="v2-hscroll">
         {spotCards.map((s, i) => (
           <V2SpotCardV

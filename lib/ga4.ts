@@ -112,3 +112,34 @@ export async function getGa4EventByPage(
     count: num(r.metricValues?.[0]?.value),
   }));
 }
+
+export type Ga4PageViewRow = { pagePath: string; pageViews: number };
+
+/**
+ * 指定パスで始まるページの PV ランキングを返す（例: '/spot/' でスポット別 PV）。
+ * 人気ランキングページ（/ranking）のデータ源。未連携時は null。
+ */
+export async function getGa4TopPagesByPrefix(
+  prefix: string,
+  days = 7,
+  limit = 100,
+): Promise<Ga4PageViewRow[] | null> {
+  const end = new Date();
+  const start = new Date(end.getTime() - days * 86400000);
+  const fmt = (d: Date) => d.toISOString().slice(0, 10);
+  const rows = await runReport({
+    dateRanges: [{ startDate: fmt(start), endDate: fmt(end) }],
+    dimensions: [{ name: 'pagePath' }],
+    metrics: [{ name: 'screenPageViews' }],
+    dimensionFilter: {
+      filter: { fieldName: 'pagePath', stringFilter: { matchType: 'BEGINS_WITH', value: prefix } },
+    },
+    orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }],
+    limit,
+  });
+  if (!rows) return null;
+  return rows.map((r) => ({
+    pagePath: r.dimensionValues?.[0]?.value ?? '',
+    pageViews: num(r.metricValues?.[0]?.value),
+  }));
+}

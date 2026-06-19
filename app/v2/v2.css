@@ -640,6 +640,10 @@
 .v2-filter-opt { background: var(--v2-page); border: 1.5px solid var(--v2-line); border-radius: var(--v2-r-pill); padding: 9px 15px; font-size: 13px; font-weight: 700; color: var(--v2-ink-soft); }
 .v2-filter-opt.on { background: var(--v2-orange-soft); border-color: var(--v2-orange); color: var(--v2-orange-deep); }
 
+/* Events filter bar */
+.v2-ev-filters { padding: 16px 18px 4px; }
+.v2-ev-filters .v2-filter-group:last-child { margin-bottom: 6px; }
+
 /* Article hero */
 .v2-article-hero { position: relative; height: 200px; overflow: hidden; }
 .v2-article-hero img { width: 100%; height: 100%; object-fit: cover; }

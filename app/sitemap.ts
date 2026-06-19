@@ -56,6 +56,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/for-facilities`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
     { url: `${BASE}/feature`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },
     { url: `${BASE}/events`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.85 },
+    { url: `${BASE}/ranking`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.85 },
+    { url: `${BASE}/reports`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.6 },
     { url: `${BASE}/area`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },
     { url: `${BASE}/area/tokyo`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },
     // 23区エリアページ（/area/[slug]）

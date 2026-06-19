@@ -13,7 +13,7 @@
  *   microCMS 化する場合は将来このファイルを置き換えれば呼び出し側は変更不要。
  */
 
-import type { AreaSlug } from './area';
+import { AREAS, type AreaSlug } from './area';
 import { BUNDLED_EVENT_OVERRIDES, type EventOverridesMap } from './event-overrides';
 
 export type EventCategory =
@@ -2092,6 +2092,85 @@ export function getEventBySlug(slug: string, ovMap?: EventOverridesMap): EventEn
 /** カテゴリ別 */
 export function getEventsByCategory(cat: EventCategory): EventEntry[] {
   return getMergedEvents().filter((e) => e.category === cat);
+}
+
+/** カテゴリの日本語表示ラベル（一覧カード・フィルタUIで使用） */
+export const EVENT_CATEGORY_LABELS: Record<EventCategory, string> = {
+  matsuri: '祭り・縁日',
+  illumination: 'イルミネーション',
+  workshop: 'ワークショップ',
+  rinyushoku: '離乳食教室',
+  rhythm: 'リトミック',
+  reading: '読み聞かせ',
+  sport: 'スポーツ',
+  seasonal: '季節の催し',
+  market: 'マルシェ',
+  show: '展示・ショー',
+  other: 'その他',
+};
+
+/** 無料で参加できるイベントか（タグ「無料」か、料金欄が「（入場）無料」のみ） */
+export function isFreeEvent(e: EventEntry): boolean {
+  if (e.tags?.includes('無料')) return true;
+  const p = (e.price || '').replace(/\s/g, '');
+  return /^(入場|入園|観覧|参加|見学)?無料$/.test(p);
+}
+
+/** 0歳の赤ちゃん連れでも対象になるイベントか（ageLabel ベースの簡易判定） */
+export function isBabyFriendlyEvent(e: EventEntry): boolean {
+  const a = e.ageLabel || '';
+  return /0[歳〜]/.test(a) || /0〜/.test(a) || a.includes('全年齢') || a.includes('未就学');
+}
+
+export type EventFilter = {
+  /** エリア（都道府県 slug）。未指定なら全エリア */
+  area?: AreaSlug;
+  /** カテゴリ。未指定なら全カテゴリ */
+  category?: EventCategory;
+  /** 無料イベントのみ */
+  free?: boolean;
+  /** 今週末・まもなく（今日から7日以内に始まる or 開催中）のみ */
+  soon?: boolean;
+  /** 0歳の赤ちゃん連れOKのみ */
+  baby?: boolean;
+};
+
+/**
+ * 複合条件でイベントを絞り込む。終了済みは常に除外し、開始日昇順で返す。
+ * /events のフィルタUIから呼び出す。
+ */
+export function filterEvents(f: EventFilter): EventEntry[] {
+  const today = todayString();
+  const weekLater = addDays(today, 7);
+  return getMergedEvents()
+    .filter((e) => e.endDate >= today) // 終了済みを除外
+    .filter((e) => (f.area ? e.area === f.area : true))
+    .filter((e) => (f.category ? e.category === f.category : true))
+    .filter((e) => (f.free ? isFreeEvent(e) : true))
+    .filter((e) => (f.soon ? e.startDate <= weekLater : true))
+    .filter((e) => (f.baby ? isBabyFriendlyEvent(e) : true))
+    .sort((a, b) => a.startDate.localeCompare(b.startDate));
+}
+
+/** 現在掲載中（終了前）のイベントに実在するエリア slug 一覧（フィルタUI用） */
+export function getActiveEventAreas(): AreaSlug[] {
+  const today = todayString();
+  const set = new Set<AreaSlug>();
+  for (const e of getMergedEvents()) {
+    if (e.endDate >= today) set.add(e.area);
+  }
+  // AREAS の定義順（北→南の地理順）に並べる
+  return AREAS.map((a) => a.slug).filter((slug): slug is AreaSlug => set.has(slug as AreaSlug));
+}
+
+/** 現在掲載中（終了前）のイベントに実在するカテゴリ一覧（フィルタUI用） */
+export function getActiveEventCategories(): EventCategory[] {
+  const today = todayString();
+  const set = new Set<EventCategory>();
+  for (const e of getMergedEvents()) {
+    if (e.endDate >= today) set.add(e.category);
+  }
+  return [...set];
 }
 
 /** イベント開始までの残り日数を返す（既に開始済みなら 0 以下） */
