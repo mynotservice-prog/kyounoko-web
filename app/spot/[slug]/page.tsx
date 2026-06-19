@@ -105,16 +105,24 @@ export default async function SpotPage({ params }: Props) {
         : spot.nearestStation)
     : null;
 
-  // 近隣スポット
-  const nearbySpots = getAllSpotsWithSlug(ovMap)
-    .filter((x) => {
-      if (x.slug === slug) return false;
-      if (!isSpotIndexable(x.spot)) return false;
-      if (spot.nearestStation && x.spot.nearestStation === spot.nearestStation) return true;
-      if (spot.ward && x.spot.ward === spot.ward) return true;
-      return false;
-    })
+  // 近隣スポット: 運営者が手動指定（nearbySlugs）していればそれを優先し、指定順で表示。
+  // 未指定なら従来どおり同駅/同区から自動算出。
+  const allWithSlug = getAllSpotsWithSlug(ovMap);
+  const manualNearby = (spot.nearbySlugs ?? [])
+    .map((ns) => allWithSlug.find((x) => x.slug === ns))
+    .filter((x): x is (typeof allWithSlug)[number] => !!x && x.slug !== slug)
     .slice(0, 6);
+  const nearbySpots = manualNearby.length > 0
+    ? manualNearby
+    : allWithSlug
+        .filter((x) => {
+          if (x.slug === slug) return false;
+          if (!isSpotIndexable(x.spot)) return false;
+          if (spot.nearestStation && x.spot.nearestStation === spot.nearestStation) return true;
+          if (spot.ward && x.spot.ward === spot.ward) return true;
+          return false;
+        })
+        .slice(0, 6);
 
   // 関連記事
   const allArticles = getAllFileArticles().filter((a) => !a.noindex);

@@ -62,9 +62,20 @@ export type SpotFacilityEnumField = (typeof SPOT_FACILITY_ENUM_FIELDS)[number];
 export const SPOT_AGE_GUIDE_FIELDS = ['0-1', '2-3', '4-6'] as const;
 export type SpotAgeGuideField = (typeof SPOT_AGE_GUIDE_FIELDS)[number];
 
+/** 上書き可能なカテゴリ（lib/spots.ts の SpotCategory と一致させる）。 */
+export const SPOT_CATEGORY_VALUES = [
+  'zoo', 'aquarium', 'park', 'museum', 'amusement', 'indoor', 'farm', 'seasonal', 'restaurant',
+] as const;
+
+/** 上書き可能な屋内/屋外区分（SpotPlace と一致）。 */
+export const SPOT_PLACE_VALUES = ['indoor', 'outdoor', 'mixed'] as const;
+
+/** 上書き可能な対象年齢タグ（AgeTag と一致）。 */
+export const SPOT_AGE_VALUES = ['0-1', '2-3', '4-6'] as const;
+
 /** 上書きとして保存できる Spot の部分形。 */
 export type SpotOverride = Partial<
-  Pick<Spot, 'name' | 'city' | 'ward' | 'note' | 'budget' | 'reservation' | 'hiddenTip' | 'nearby' | 'waterDepth' | 'image' | 'images' | 'pricing' | 'facilities' | 'ageGuide'>
+  Pick<Spot, 'name' | 'city' | 'ward' | 'note' | 'budget' | 'reservation' | 'hiddenTip' | 'nearby' | 'waterDepth' | 'image' | 'images' | 'pricing' | 'facilities' | 'ageGuide' | 'category' | 'place' | 'ages' | 'faq' | 'nearbySlugs'>
 >;
 
 export type SpotOverridesMap = Record<string, SpotOverride>;
