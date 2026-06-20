@@ -41,6 +41,7 @@ import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
 import { getCatalogItems } from '@/lib/items-catalog';
 import { getRestaurantBridgeOffer } from '@/lib/article-product-hints';
 import { buildStationIntro, buildRestaurantInsight, insightToSentence } from '@/lib/station-insight';
+import { buildRestaurantFaq, faqToJsonLd } from '@/lib/station-faq';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400; // 24h
@@ -222,6 +223,11 @@ export default async function StationConditionPage({ params }: Props) {
   const insight = buildRestaurantInsight(chains, indies);
   const insightText = insightToSentence(insight, cond.label, '店');
 
+  // 該当店の実データのみから組むページ固有FAQ（捏造ゼロ・該当0件の設問は出さない）。
+  // 境界ページ（該当3件前後）に固有の実質コンテンツと AEO 用の明示的 Q&A を与える。
+  const faqItems = buildRestaurantFaq(station.name, cond.label, chains, indies);
+  const faqLd = faqToJsonLd(faqItems);
+
   // チェーンをカテゴリ別にグルーピング
   const byCategory = new Map<ChainCategory, Chain[]>();
   for (const c of chains) {
@@ -328,6 +334,7 @@ export default async function StationConditionPage({ params }: Props) {
       <V2Frame header="sub" active="home">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
 
       <div className="container">
         <nav className="breadcrumb" aria-label="パンくず">
@@ -648,6 +655,53 @@ export default async function StationConditionPage({ params }: Props) {
               ) : null;
             })()}
           </section>
+
+          {/* ページ固有FAQ（該当店の実データ由来。AEO＋FAQPage構造化用の可視コンテンツ） */}
+          {faqItems.length > 0 && (
+            <section className="station-faq" style={{
+              marginTop: 36,
+              paddingTop: 32,
+              borderTop: '1px solid rgba(201,96,62,0.14)',
+            }}>
+              <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 6 }}>
+                {station.name}駅 {cond.label}のよくある質問
+              </h2>
+              <p style={{ fontSize: 13, color: 'var(--ink-mute)', marginTop: 0, marginBottom: 14 }}>
+                このページに掲載中の店舗データから回答しています。設備・メニューは変更される場合があるため、来店前に各店の最新情報もご確認ください。
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {faqItems.map((q, i) => (
+                  <details
+                    key={i}
+                    className="faq-item"
+                    style={{
+                      background: 'var(--paper-card)',
+                      border: '1px solid rgba(201,96,62,0.16)',
+                      borderRadius: 10,
+                      overflow: 'hidden',
+                    }}
+                  >
+                    <summary style={{
+                      padding: '14px 16px',
+                      fontWeight: 600,
+                      fontSize: 14,
+                      cursor: 'pointer',
+                    }}>
+                      {q.question}
+                    </summary>
+                    <div style={{
+                      padding: '0 16px 16px',
+                      fontSize: 13.5,
+                      color: 'var(--ink-sub)',
+                      lineHeight: 1.85,
+                    }}>
+                      {q.answer}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* 同じ駅で別の条件を試す（チップ形式・3件） */}
           {otherConditions.length > 0 && (

@@ -12,6 +12,7 @@ import { SPOT_CATEGORY_LABEL, type Spot } from '@/lib/spots';
 import type { StationCondition } from '@/lib/station-conditions';
 import type { AnyStation } from '@/lib/all-stations';
 import { buildStationIntro, buildSpotInsight, insightToSentence } from '@/lib/station-insight';
+import { buildSpotFaq, faqToJsonLd } from '@/lib/station-faq';
 
 type Props = {
   station: AnyStation;
@@ -40,6 +41,11 @@ export function StationSpotConditionView({
   });
   const insight = buildSpotInsight(spotsMatched);
   const insightText = insightToSentence(insight, cond.label, '件');
+
+  // 該当スポットの実データのみから組むページ固有FAQ（捏造ゼロ）。
+  // 旧: 全ページ共通の固定FAQ（重複コンテンツ）を、データ由来の固有FAQへ置換。
+  const faqItems = buildSpotFaq(station.name, cond.label, spotsMatched);
+  const faqLd = faqToJsonLd(faqItems);
 
   // JSON-LD ItemList
   const jsonLd = {
@@ -87,6 +93,12 @@ export function StationSpotConditionView({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
+      {faqLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+      )}
       <SiteHeader />
       <div className="container-article">
         <nav className="breadcrumb" aria-label="パンくず" style={{ marginBottom: 12 }}>
@@ -253,38 +265,27 @@ export function StationSpotConditionView({
             </section>
           ))}
 
-          {/* FAQ */}
-          <section style={{ marginTop: 40 }}>
-            <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 22, fontWeight: 600, margin: '0 0 16px' }}>
-              よくある質問
-            </h2>
-            <dl style={{ display: 'grid', gap: 14 }}>
-              <div>
-                <dt style={{ fontWeight: 600, fontSize: 14 }}>
-                  Q. {station.name}駅周辺の{cond.label}でベビーカーOKの場所は？
-                </dt>
-                <dd style={{ margin: '6px 0 0', fontSize: 13, color: 'var(--ink-sub)', lineHeight: 1.85 }}>
-                  室内遊び場・大型商業施設併設の施設はほぼ全てベビーカー入店OKです。各施設のカードに「子連れ向け設備」欄を用意していますので、トイレ・授乳室・キッズスペースの有無も確認の上ご利用ください。
-                </dd>
-              </div>
-              <div>
-                <dt style={{ fontWeight: 600, fontSize: 14 }}>
-                  Q. 雨の日でも遊べる場所はありますか？
-                </dt>
-                <dd style={{ margin: '6px 0 0', fontSize: 13, color: 'var(--ink-sub)', lineHeight: 1.85 }}>
-                  本ページに掲載している屋内施設（カテゴリ: 室内遊び場 / 水族館 / 科学館 / 博物館）は雨天でも快適に遊べます。「雨の日の遊び場」条件ページもあわせてご確認ください。
-                </dd>
-              </div>
-              <div>
-                <dt style={{ fontWeight: 600, fontSize: 14 }}>
-                  Q. 入園料・予約は必要ですか？
-                </dt>
-                <dd style={{ margin: '6px 0 0', fontSize: 13, color: 'var(--ink-sub)', lineHeight: 1.85 }}>
-                  施設により異なります。各カードに「要予約 / 予約推奨 / 予約不要」のバッジを付けています。最新情報は必ず各公式サイトでご確認ください。
-                </dd>
-              </div>
-            </dl>
-          </section>
+          {/* ページ固有FAQ（該当スポットの実データ由来。旧・全ページ共通の固定FAQを置換） */}
+          {faqItems.length > 0 && (
+            <section style={{ marginTop: 40 }}>
+              <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 22, fontWeight: 600, margin: '0 0 8px' }}>
+                {station.name}駅 {cond.label}のよくある質問
+              </h2>
+              <p style={{ fontSize: 12.5, color: 'var(--ink-mute)', margin: '0 0 16px', lineHeight: 1.7 }}>
+                このページに掲載中のスポットデータから回答しています。設備・料金は変更される場合があるため、来館前に各公式サイトもご確認ください。
+              </p>
+              <dl style={{ display: 'grid', gap: 14 }}>
+                {faqItems.map((q, i) => (
+                  <div key={i}>
+                    <dt style={{ fontWeight: 600, fontSize: 14 }}>Q. {q.question}</dt>
+                    <dd style={{ margin: '6px 0 0', fontSize: 13, color: 'var(--ink-sub)', lineHeight: 1.85 }}>
+                      {q.answer}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+          )}
 
           <section style={{ marginTop: 40 }}>
             <Link
