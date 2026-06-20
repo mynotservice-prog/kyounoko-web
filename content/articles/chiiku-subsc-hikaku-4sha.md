@@ -77,7 +77,7 @@ speakableSummary: >-
 
 ### [And TOYBOX](https://px.a8.net/svt/ejp?a8mat=4B5Q81+CU0E7M+56OA+5YRHE)
 
-[![【And TOYBOX】公式サイトを見る](https://www.kyounoko.jp/v2/articles/kk-22.webp)](https://px.a8.net/svt/ejp?a8mat=4B5Q81+CU0E7M+56OA+5YRHE)
+[![【And TOYBOX】公式サイトを見る](https://kyounoko.jp/v2/articles/kk-22.webp)](https://px.a8.net/svt/ejp?a8mat=4B5Q81+CU0E7M+56OA+5YRHE)
 
 - **対象**：生後3ヶ月〜4歳
 - **料金**：スタンダード月額3,278円／プレミアム月額3,608円（税込）

@@ -131,6 +131,19 @@ legacyHero: /hero/food-japan-01.webp
 
 ジョナサンのキッズメニューは**450-700円の手頃な価格帯+落ち着いた構成**で、未就学児の満足度が高い定番ライン。すかいらーくグループのアレルゲン情報透明性も安心材料。**雰囲気重視のファミレス利用**ならジョナサンが向いています。
 
+## 他チェーンのキッズメニューと比べる
+
+子連れ外食はチェーンごとに強み（価格・取り分けやすさ・アレルギー対応・おもちゃ特典）が異なります。あわせて比較してみてください。
+
+- [餃子の王将のキッズメニュー](/article/ohsho-kids-menu)
+- [ガストのキッズメニュー](/article/gusto-kids-menu)
+- [サイゼリヤのキッズメニュー](/article/saizeriya-kids-menu)
+- [ココスのキッズメニュー](/article/cocos-kids-menu)
+- [バーミヤンのキッズメニュー](/article/bamiyan-kids-menu)
+- [やよい軒のキッズメニュー](/article/yayoiken-kids-menu)
+- [デニーズのキッズメニュー](/article/dennys-kids-menu)
+- [キッズメニュー15チェーン徹底比較](/article/kids-menu-chain-15-hikaku)
+
 ## 関連記事
 
 - [ジョナサン子連れ完全攻略](/article/jonathan-kodzure-koryaku)

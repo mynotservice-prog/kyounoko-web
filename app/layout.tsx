@@ -212,8 +212,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               url: 'https://kyounoko.jp',
               slogan: '子育て家庭の「今日どうする？」を3分で決める',
               description: '0〜6歳の子を育てる家庭向けに、毎日の「今日どうする？」を3分で決められる意思決定支援サイト。条件に合う1つの答えを返すTodayFinder、東京23区484駅の子連れOK店データベース、290+本の実用記事を提供。',
-              // 公式SNS等 — Google のエンティティ認識（指名検索）を強化する sameAs
+              // 公式SNS等 — Google のエンティティ認識（指名検索）を強化する sameAs。
+              // note は高ドメイン権威 + プロフィール名「きょうのこ」+ 各記事から本サイトへ
+              // バックリンクしており、新規ブランドのエンティティ確立に最も効く信号源。
               sameAs: [
+                'https://note.com/kyounoko',
                 'https://www.instagram.com/kyounoko_family_plan/',
               ],
               logo: {

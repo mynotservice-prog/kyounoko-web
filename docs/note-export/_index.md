@@ -23,8 +23,8 @@
 | 8 | sango-utsu-toha-kanzen-guide | 産後うつとは｜症状・原因・対処法・パートナーのサポート完全ガイド | 3585 | ☑ 2026-06-16 https://note.com/kyounoko/n/neabe47cb5b4a |
 | 9 | yonaki-toha-kanzen-guide | 夜泣きとは｜原因・対処法・いつまで続くか完全ガイド【0〜2歳】 | 3606 | ☑ 2026-06-17 https://note.com/kyounoko/n/n123dca7ddb5d |
 | 10 | sotsunyu-toha-kanzen-guide | 卒乳とは｜断乳との違い・時期・進め方・おっぱいトラブル対処完全ガイド【0〜2歳】 | 3579 | ☑ 2026-06-18 https://note.com/kyounoko/n/n269f435f5415 |
-| 11 | iyaiya-ki-toha-kanzen-guide | イヤイヤ期とは｜時期・原因・乗り越え方・親の心構え完全ガイド【1〜3歳】 | 3897 | ☐ |
-| 12 | akachan-nekashitsuke-kanzen-guide-0-1sai | 赤ちゃん寝かしつけ完全ガイド｜0〜1歳のセルフねんね習得法とトントン・抱っこ・添い乳の使い分け | 5430 | ☐ |
+| 11 | iyaiya-ki-toha-kanzen-guide | イヤイヤ期とは｜時期・原因・乗り越え方・親の心構え完全ガイド【1〜3歳】 | 3897 | ☑ 2026-06-19 https://note.com/kyounoko/n/nc99f4dca3a09 |
+| 12 | akachan-nekashitsuke-kanzen-guide-0-1sai | 赤ちゃん寝かしつけ完全ガイド｜0〜1歳のセルフねんね習得法とトントン・抱っこ・添い乳の使い分け | 5430 | ☑ 2026-06-20 https://note.com/kyounoko/n/nde08d5845494 |
 | 13 | kodomo-netsuchusho-3sain-real-2026 | 子ども熱中症｜親が見るべき初期サイン3つ（2歳と4歳の違い） | 4721 | ☐ |
 | 14 | natsuyasumi-kazoku-ryokou-kodzure-2026 | 【2026年】夏休み子連れ国内旅行おすすめプラン完全ガイド｜0-6歳の年齢別目的地・予算・持ち物・予約のコツ | 6546 | ☐ |
 | 15 | shichigosan-nenrei-junbi | 七五三 準備ガイド【3歳・5歳・7歳】予算3-20万円 | 5942 | ☐ |

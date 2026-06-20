@@ -123,6 +123,19 @@ legacyHero: /hero/food-japan-01.webp
 
 デニーズのキッズメニューは**安定の定番構成+アレルゲン情報の透明性**が魅力。価格帯はファミレスのなかでも**手頃な500-800円**で、3-5歳の未就学児が満足できる内容。アレルギーがある家庭でも事前確認しやすく、ファミレスデビューにも向いています。
 
+## 他チェーンのキッズメニューと比べる
+
+子連れ外食はチェーンごとに強み（価格・取り分けやすさ・アレルギー対応・おもちゃ特典）が異なります。あわせて比較してみてください。
+
+- [餃子の王将のキッズメニュー](/article/ohsho-kids-menu)
+- [ガストのキッズメニュー](/article/gusto-kids-menu)
+- [サイゼリヤのキッズメニュー](/article/saizeriya-kids-menu)
+- [ココスのキッズメニュー](/article/cocos-kids-menu)
+- [ジョナサンのキッズメニュー](/article/jonathan-kids-menu)
+- [バーミヤンのキッズメニュー](/article/bamiyan-kids-menu)
+- [やよい軒のキッズメニュー](/article/yayoiken-kids-menu)
+- [キッズメニュー15チェーン徹底比較](/article/kids-menu-chain-15-hikaku)
+
 ## 関連記事
 
 - [デニーズ子連れ完全攻略](/article/denny-s-kodzure-koryaku)
