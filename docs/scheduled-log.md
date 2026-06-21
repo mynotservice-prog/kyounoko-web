@@ -1698,3 +1698,22 @@
   1. Bing(200)+Yandex(202) の両受理が5週連続で安定。手動対応は不要。
   2. URL 数は 5,337 で 1日上限 10,000 / max=9000 に対し十分マージンあり。当面は1バッチ全網羅で問題なし。
   3. git pull は正常（Already up to date）。
+
+## 2026-06-22 06:03 JST — IndexNow 週次送信 (kyounoko-indexnow-weekly)
+
+- **submitted_count**: 5,296 URLs（queue 生成は sitemap.xml から 5,297 URL 取得 → 送信時に無効な 1 件をスキップして 5,296 件を1バッチ送信）
+- **queue 生成コマンド**: `node scripts/indexnow-build-queue.mjs --max=9000 --kind=all` → ✅ 正常完了（5,297 URL を docs/indexnow-queue.txt に書き出し）
+- **送信結果**:
+  - `https://api.indexnow.org/IndexNow` (Bing): **status 200** ✅
+  - `https://yandex.com/indexnow` (Yandex): **status 202** ✅
+- **bing_status**: 200 OK / **yandex_status**: 202 Accepted / **失敗**: なし
+- **ログ反映**: `docs/indexnow-submitted.log` に 5,296 URL を追記、`docs/indexnow-queue.txt` を空にクリア。
+- **認証キー確認**: `https://kyounoko.jp/c68e60e8f4b025a51c97f20076ce5c09.txt` → **200 OK**（Bing キー検証は問題なし）。
+- **失敗時対処の判断ログ**:
+  - 403／404／429／ネットワークエラーいずれも発生せず。再試行は不要。
+  - 429 (TooManyRequests) なし（5,296 URL / 上限10,000、max=9000 マージン内）。
+- **前週比較**: submitted_count が前回 5,336 → 今回 5,296（-40件）。sitemap.xml の URL 総数が 5,337→5,297 に微減（古い/重複 URL の整理によるものと推測）。
+- **次サイクルへの引き継ぎ**:
+  1. Bing(200)+Yandex(202) の両受理が安定継続。手動対応は不要。
+  2. URL 数は 5,297 で 1日上限 10,000 / max=9000 に対し十分マージンあり。当面は1バッチ全網羅で問題なし。
+  3. git pull は正常（Already up to date）。
