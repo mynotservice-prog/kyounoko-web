@@ -2,10 +2,12 @@ import Link from 'next/link';
 import { getAllFileArticles } from '@/lib/articles';
 import { getAllPlanMetas } from '@/lib/plans';
 import { SPOTS } from '@/lib/spots';
+import { getDataHealth, type DataSourceHealth } from '@/lib/data-health';
 
 export const revalidate = 3600;
 
-export default function AdminDashboard() {
+export default async function AdminDashboard() {
+  const dataHealth = await getDataHealth();
   const articles = getAllFileArticles();
   const plans = getAllPlanMetas();
   const spotsCount = Object.values(SPOTS).reduce((sum, arr) => sum + (arr?.length ?? 0), 0);
@@ -47,6 +49,20 @@ export default function AdminDashboard() {
         <KpiCard title="エリア特化プラン" value={plansWithArea} sub={`全体の${Math.round((plansWithArea / plans.length) * 100)}%`} />
       </div>
 
+      {/* データ源の健全性: 分析がライブで取れているか一目で確認 */}
+      <section style={{ marginBottom: 32 }}>
+        <h2 style={{ fontSize: 16, fontWeight: 600, margin: '0 0 4px' }}>データ源の健全性</h2>
+        <p style={{ fontSize: 12, color: 'var(--ink-sub)', margin: '0 0 12px' }}>
+          データ・ドリブンな判断の前提。各源がライブで取れているかを実フェッチで確認しています。
+          未設定の源は Vercel の環境変数を設定するとライブ化します。
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 12 }}>
+          {dataHealth.map((d) => (
+            <DataHealthCard key={d.key} d={d} />
+          ))}
+        </div>
+      </section>
+
       {/* 改善候補 */}
       <section style={{ marginBottom: 32 }}>
         <h2 style={{ fontSize: 16, fontWeight: 600, margin: '0 0 12px' }}>改善候補</h2>
@@ -82,6 +98,33 @@ export default function AdminDashboard() {
         </div>
       </section>
     </>
+  );
+}
+
+function DataHealthCard({ d }: { d: DataSourceHealth }) {
+  // 状態: ライブ(緑) / 設定済みだが応答なし or 失敗(橙) / 未設定(灰)
+  const status = d.live === true ? 'live' : d.configured ? 'warn' : 'off';
+  const color = status === 'live' ? '#2E7D32' : status === 'warn' ? '#E65100' : '#9E9E9E';
+  const bg = status === 'live' ? '#E8F5E9' : status === 'warn' ? '#FFF3E0' : '#F5F5F5';
+  const badge = status === 'live' ? 'LIVE' : status === 'warn' ? '要確認' : '未設定';
+  return (
+    <div style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)', padding: '14px 16px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, marginBottom: 6 }}>
+        <span style={{ fontWeight: 600, fontSize: 14 }}>{d.label}</span>
+        <span style={{ fontSize: 11, fontWeight: 700, color, background: bg, padding: '2px 8px', borderRadius: 999 }}>
+          {badge}
+        </span>
+      </div>
+      <p style={{ fontSize: 12, color: 'var(--ink-sub)', margin: '0 0 6px', lineHeight: 1.6 }}>{d.purpose}</p>
+      <p style={{ fontSize: 12, color: status === 'live' ? 'var(--ink)' : 'var(--ink-mute)', margin: 0, lineHeight: 1.6 }}>
+        {d.detail}
+      </p>
+      {status !== 'live' && d.envKeys.length > 0 && (
+        <p style={{ fontSize: 10.5, color: 'var(--ink-mute)', margin: '6px 0 0', fontFamily: 'var(--font-inter)', wordBreak: 'break-all' }}>
+          env: {d.envKeys.join(', ')}
+        </p>
+      )}
+    </div>
   );
 }
 
