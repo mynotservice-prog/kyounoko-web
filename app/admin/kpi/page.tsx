@@ -5,7 +5,7 @@ import {
   monthLabel,
   type MonthlyMetric,
 } from '@/lib/metrics';
-import { getGa4Totals, getGa4MonthlyTrend, getGa4EventByPage, isGa4Configured } from '@/lib/ga4';
+import { getGa4Totals, getGa4MonthlyTrend, getGa4EventByPage, getGa4EventByProvider, isGa4Configured } from '@/lib/ga4';
 import { getAdsenseEarnings, getAdsenseMonthly, isAdsenseReportConfigured } from '@/lib/adsense-report';
 import { getLineFollowers, isLineConfigured } from '@/lib/line';
 import { getTopPages, isSearchConsoleConfigured } from '@/lib/search-console';
@@ -39,7 +39,7 @@ export default async function KpiPage() {
   const articles = getAllFileArticles();
 
   // ライブ取得（各 lib が未設定/失敗時は null を返すので Promise.all で安全）
-  const [ga4Totals, ga4Monthly, adsenseThisMonth, adsenseMonthly, line, clicksByPage, gscPages] =
+  const [ga4Totals, ga4Monthly, adsenseThisMonth, adsenseMonthly, line, clicksByPage, clicksByProvider, gscPages] =
     await Promise.all([
       getGa4Totals(fmtDate(monthStart), fmtDate(now)),
       getGa4MonthlyTrend(12),
@@ -47,6 +47,7 @@ export default async function KpiPage() {
       getAdsenseMonthly(12),
       getLineFollowers(),
       getGa4EventByPage('affiliate_click', 28, 50),
+      getGa4EventByProvider('affiliate_click', 28, 20),
       isSearchConsoleConfigured() ? getTopPages(28, 100) : Promise.resolve([]),
     ]);
 
@@ -196,6 +197,48 @@ export default async function KpiPage() {
                 <span style={{ fontWeight: 700, fontVariantNumeric: 'tabular-nums' }}>{r.count.toLocaleString()}<span style={{ fontSize: 11, color: 'var(--ink-mute)', marginLeft: 2 }}>クリック</span></span>
               </div>
             ))}
+          </div>
+        )}
+      </section>
+
+      {/* ASP別クリック内訳（GA4 affiliate_click / provider） */}
+      <section style={{ marginBottom: 28 }}>
+        <h2 style={SectionH2}>💳 ASP別クリック内訳 — 予約・成果報酬の当たり（直近28日 / GA4）</h2>
+        <p style={{ fontSize: 12, color: 'var(--ink-mute)', margin: '4px 0 12px' }}>
+          どのASP（ホットペッパー予約 / アソビュー / 楽天…）がクリックを集めているか。換金構造が機能しているかの一次指標。
+        </p>
+        {clicksByProvider === null ? (
+          <div style={{ padding: 16, background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)', fontSize: 13, color: 'var(--ink-sub)', lineHeight: 1.7 }}>
+            {isGa4Configured()
+              ? 'provider別に集計できません。GA4管理画面「カスタム定義 → カスタムディメンションを作成」で、イベントスコープ・パラメータ名 '
+              : 'GA4 未連携です。下の「連携状況」を参照してください。'}
+            {isGa4Configured() && (
+              <>
+                <code style={{ fontFamily: 'monospace', background: 'var(--paper-2,#f3efe7)', padding: '1px 6px', borderRadius: 4 }}>provider</code>
+                {' を登録してください。※GA4の仕様で遡及はせず、登録日以降のクリックのみ集計対象（登録前は (未設定) 扱い）。'}
+              </>
+            )}
+          </div>
+        ) : clicksByProvider.length === 0 ? (
+          <div style={{ padding: 16, background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)', fontSize: 13, color: 'var(--ink-sub)' }}>
+            クリックデータがまだありません（計測の蓄積待ち）。
+          </div>
+        ) : (
+          <div style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)', overflow: 'hidden' }}>
+            {(() => {
+              const labels: Record<string, string> = {
+                valuecommerce: 'バリューコマース（ホットペッパー/アソビュー）',
+                rakuten: '楽天', amazon: 'Amazon', yahoo: 'Yahoo!', a8: 'A8.net', moshimo: 'もしも', other: 'その他',
+              };
+              const total = clicksByProvider.reduce((s, r) => s + r.count, 0) || 1;
+              return clicksByProvider.map((r, i) => (
+                <div key={r.provider} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 14px', borderTop: i === 0 ? 'none' : '1px solid var(--line)', fontSize: 13 }}>
+                  <span style={{ flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{labels[r.provider] ?? r.provider}</span>
+                  <span style={{ fontSize: 11, color: 'var(--ink-mute)', fontVariantNumeric: 'tabular-nums' }}>{Math.round((r.count / total) * 100)}%</span>
+                  <span style={{ fontWeight: 700, fontVariantNumeric: 'tabular-nums' }}>{r.count.toLocaleString()}<span style={{ fontSize: 11, color: 'var(--ink-mute)', marginLeft: 2 }}>クリック</span></span>
+                </div>
+              ));
+            })()}
           </div>
         )}
       </section>

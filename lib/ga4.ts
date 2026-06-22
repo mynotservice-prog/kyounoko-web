@@ -113,6 +113,42 @@ export async function getGa4EventByPage(
   }));
 }
 
+export type Ga4EventByProviderRow = { provider: string; count: number };
+
+/**
+ * 指定イベント（既定: affiliate_click）を provider 別に集計。
+ * 「どのASP（valuecommerce / rakuten / amazon ...）がクリックを稼いでいるか」の内訳に使う。
+ *
+ * ⚠️ 前提: GA4管理画面でイベントパラメータ `provider` を
+ *   「カスタム定義 > カスタムディメンション（イベント スコープ / パラメータ名 provider）」
+ *   として登録しておく必要がある。未登録だと Data API が 400 を返し、本関数は null になる。
+ *   （計測自体は trackEvent で送れているので、登録すれば過去分も遡って集計される。）
+ */
+export async function getGa4EventByProvider(
+  eventName = 'affiliate_click',
+  days = 28,
+  limit = 20,
+): Promise<Ga4EventByProviderRow[] | null> {
+  const end = new Date();
+  const start = new Date(end.getTime() - days * 86400000);
+  const fmt = (d: Date) => d.toISOString().slice(0, 10);
+  const rows = await runReport({
+    dateRanges: [{ startDate: fmt(start), endDate: fmt(end) }],
+    dimensions: [{ name: 'customEvent:provider' }],
+    metrics: [{ name: 'eventCount' }],
+    dimensionFilter: {
+      filter: { fieldName: 'eventName', stringFilter: { matchType: 'EXACT', value: eventName } },
+    },
+    orderBys: [{ metric: { metricName: 'eventCount' }, desc: true }],
+    limit,
+  });
+  if (!rows) return null;
+  return rows.map((r) => ({
+    provider: r.dimensionValues?.[0]?.value || '(未設定)',
+    count: num(r.metricValues?.[0]?.value),
+  }));
+}
+
 export type Ga4PageViewRow = { pagePath: string; pageViews: number };
 
 /**
