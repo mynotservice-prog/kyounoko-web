@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getAllEvents } from '@/lib/events';
 import { getAllEventOverrides } from '@/lib/event-overrides';
 import { EventsEditClient } from './EventsEditClient';
+import { PageHeader } from '@/components/admin/ui';
 
 export const dynamic = 'force-dynamic';
 
@@ -32,30 +33,28 @@ export default function EventsEditPage() {
 
   return (
     <>
-      <div style={{ marginBottom: 24 }}>
-        <h1 style={{ fontFamily: 'var(--font-mincho)', fontSize: 26, margin: '0 0 6px' }}>
-          イベント編集
-        </h1>
-        <p style={{ fontSize: 13, color: 'var(--ink-mute)', margin: 0, lineHeight: 1.7 }}>
-          全 {merged.length} 件のイベントを編集可能。タイトル・日付・会場・画像など全フィールドを修正できます。<br />
-          保存すると GitHub に commit → Vercel が自動デプロイで本番反映（数分）。
-        </p>
-      </div>
+      <PageHeader title="イベント編集" subtitle={`全 ${merged.length} 件のイベントを編集可能`} />
+
+      <p style={{ fontSize: 13, color: 'var(--ink-600)', margin: '0 0 16px', lineHeight: 1.7 }}>
+        タイトル・日付・会場・画像など全フィールドを修正できます。<br />
+        保存すると GitHub に commit → Vercel が自動デプロイで本番反映（数分）。
+      </p>
 
       <div
         style={{
           marginBottom: 20,
           padding: '12px 16px',
-          background: 'var(--paper-card)',
-          border: '1px solid var(--line)',
-          borderRadius: 'var(--radius-md)',
+          background: 'var(--bg-subtle)',
+          border: '1px solid var(--border)',
+          borderRadius: 'var(--r-lg)',
           fontSize: 12,
-          color: 'var(--ink-sub)',
+          color: 'var(--ink-600)',
           lineHeight: 1.7,
         }}
       >
-        💡 画像URLは <code>/v2/articles/kk-01.webp</code> 〜 <code>kk-45.webp</code>（KKプール45枚）または
-        <code>/v2/events/show-museum.webp</code> 等の D系画像が使えます。<br />
+        画像URLは <code style={{ fontFamily: 'var(--font-mono)' }}>/v2/articles/kk-01.webp</code> 〜{' '}
+        <code style={{ fontFamily: 'var(--font-mono)' }}>kk-45.webp</code>（KKプール45枚）または
+        <code style={{ fontFamily: 'var(--font-mono)' }}>/v2/events/show-museum.webp</code> 等の D系画像が使えます。<br />
         各フィールドを空にして保存すると、元の値（lib/events.ts の定義）に戻ります。
       </div>
 
@@ -64,14 +63,14 @@ export default function EventsEditPage() {
       <div
         style={{
           marginTop: 40,
-          padding: 20,
-          background: 'var(--paper-card)',
-          border: '1px solid var(--line)',
-          borderRadius: 'var(--radius-md)',
+          padding: 18,
+          background: 'var(--bg-surface)',
+          border: '1px solid var(--border)',
+          borderRadius: 'var(--r-lg)',
         }}
       >
-        <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 16, margin: '0 0 8px' }}>関連</h3>
-        <ul style={{ margin: 0, paddingLeft: 20, fontSize: 13, lineHeight: 1.95 }}>
+        <h3 style={{ fontSize: 14, fontWeight: 700, color: 'var(--ink-900)', margin: '0 0 8px' }}>関連</h3>
+        <ul style={{ margin: 0, paddingLeft: 20, fontSize: 13, lineHeight: 1.95, color: 'var(--ink-700)' }}>
           <li><Link href="/admin/events">イベント計測ダッシュボード（GA4）</Link></li>
           <li><Link href="/admin">管理ダッシュボード</Link></li>
         </ul>

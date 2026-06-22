@@ -79,7 +79,7 @@ export function ImportClient() {
     };
     localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
     setSavedAt(payload.savedAt);
-    alert(`✓ ${parsed.length}件のクエリを保存しました。\n/admin/seo で分析を表示できます。`);
+    alert(`${parsed.length}件のクエリを保存しました。\n/admin/seo で分析を表示できます。`);
   }
 
   function handleClear() {
@@ -94,16 +94,16 @@ export function ImportClient() {
       {savedAt && (
         <div
           style={{
-            padding: 12,
-            background: 'var(--sage-soft)',
-            border: '1px solid var(--sage)',
-            borderRadius: 'var(--radius-md)',
+            padding: '11px 14px',
+            background: 'var(--ok-bg)',
+            border: '1px solid var(--ok-dot)',
+            borderRadius: 'var(--r-md)',
             marginBottom: 16,
             fontSize: 13,
-            color: 'var(--sage-deep)',
+            color: 'var(--ok-fg)',
           }}
         >
-          ✓ 保存済み: {new Date(savedAt).toLocaleString('ja-JP')}
+          保存済み: {new Date(savedAt).toLocaleString('ja-JP')}
           {' '}
           <button
             onClick={handleClear}
@@ -111,9 +111,9 @@ export function ImportClient() {
               marginLeft: 12,
               padding: '2px 10px',
               background: 'transparent',
-              border: '1px solid var(--sage-deep)',
-              color: 'var(--sage-deep)',
-              borderRadius: 4,
+              border: '1px solid var(--ok-fg)',
+              color: 'var(--ok-fg)',
+              borderRadius: 'var(--r-sm)',
               fontSize: 11,
               cursor: 'pointer',
             }}
@@ -123,8 +123,23 @@ export function ImportClient() {
         </div>
       )}
 
-      <div style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)', padding: 20 }}>
-        <label style={{ display: 'block', fontSize: 13, fontWeight: 600, marginBottom: 8 }}>
+      <div
+        style={{
+          background: 'var(--bg-surface)',
+          border: '1px solid var(--border)',
+          borderRadius: 'var(--r-lg)',
+          padding: 20,
+        }}
+      >
+        <label
+          style={{
+            display: 'block',
+            fontSize: 12,
+            fontWeight: 600,
+            color: 'var(--ink-500)',
+            marginBottom: 7,
+          }}
+        >
           Search Consoleからコピーしたデータ（タブ区切り or CSV）
         </label>
         <textarea
@@ -138,11 +153,14 @@ export function ImportClient() {
           style={{
             width: '100%',
             minHeight: 200,
-            padding: 12,
-            border: '1px solid var(--line)',
-            borderRadius: 6,
-            fontFamily: 'monospace',
-            fontSize: 12,
+            padding: '11px 12px',
+            border: '1px solid var(--border-strong)',
+            borderRadius: 'var(--r-md)',
+            fontFamily: 'var(--font-mono)',
+            fontSize: 13.5,
+            lineHeight: 1.6,
+            color: 'var(--ink-700)',
+            background: 'var(--bg-surface)',
             resize: 'vertical',
           }}
         />
@@ -151,11 +169,11 @@ export function ImportClient() {
           <button
             onClick={handleParse}
             style={{
-              padding: '8px 18px',
-              background: 'var(--clay)',
-              color: '#fff',
               border: 'none',
-              borderRadius: 6,
+              background: 'var(--accent)',
+              color: '#fff',
+              borderRadius: 'var(--r-md)',
+              padding: '9px 16px',
               fontSize: 13,
               fontWeight: 600,
               cursor: 'pointer',
@@ -167,11 +185,11 @@ export function ImportClient() {
             <button
               onClick={handleSave}
               style={{
-                padding: '8px 18px',
-                background: 'var(--sage-deep)',
-                color: '#fff',
                 border: 'none',
-                borderRadius: 6,
+                background: 'var(--accent)',
+                color: '#fff',
+                borderRadius: 'var(--r-md)',
+                padding: '9px 16px',
                 fontSize: 13,
                 fontWeight: 600,
                 cursor: 'pointer',
@@ -186,12 +204,12 @@ export function ImportClient() {
           <div
             style={{
               marginTop: 12,
-              padding: 12,
-              background: '#f5e0d4',
-              border: '1px solid #c4704f',
-              borderRadius: 6,
+              padding: '11px 12px',
+              background: 'var(--warn-bg)',
+              border: '1px solid var(--warn-dot)',
+              borderRadius: 'var(--r-md)',
               fontSize: 12,
-              color: '#8E3F22',
+              color: 'var(--warn-fg)',
             }}
           >
             {error}
@@ -200,37 +218,42 @@ export function ImportClient() {
 
         {parsed.length > 0 && (
           <div style={{ marginTop: 16 }}>
-            <p style={{ fontSize: 13, color: 'var(--ink-sub)', marginBottom: 8 }}>
-              ✓ {parsed.length} 件のクエリを認識
+            <p style={{ fontSize: 13, color: 'var(--ink-600)', marginBottom: 8 }}>
+              {parsed.length} 件のクエリを認識
             </p>
-            <div style={{ maxHeight: 300, overflow: 'auto', border: '1px solid var(--line)', borderRadius: 6 }}>
+            <div
+              style={{
+                maxHeight: 300,
+                overflow: 'auto',
+                border: '1px solid var(--border)',
+                borderRadius: 'var(--r-md)',
+              }}
+            >
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 11 }}>
                 <thead>
-                  <tr style={{ background: 'var(--paper-deep)', position: 'sticky', top: 0 }}>
-                    <th style={{ padding: '6px 10px', textAlign: 'left' }}>クエリ</th>
-                    <th style={{ padding: '6px 10px', textAlign: 'right' }}>クリック</th>
-                    <th style={{ padding: '6px 10px', textAlign: 'right' }}>表示</th>
-                    <th style={{ padding: '6px 10px', textAlign: 'right' }}>CTR</th>
-                    <th style={{ padding: '6px 10px', textAlign: 'right' }}>順位</th>
+                  <tr style={{ position: 'sticky', top: 0 }}>
+                    <th style={previewTh}>クエリ</th>
+                    <th style={previewThR}>クリック</th>
+                    <th style={previewThR}>表示</th>
+                    <th style={previewThR}>CTR</th>
+                    <th style={previewThR}>順位</th>
                   </tr>
                 </thead>
                 <tbody>
                   {parsed.slice(0, 30).map((r, i) => (
-                    <tr key={i} style={{ borderTop: '1px solid var(--line)' }}>
-                      <td style={{ padding: '6px 10px' }}>{r.query}</td>
-                      <td style={{ padding: '6px 10px', textAlign: 'right' }}>{r.clicks}</td>
-                      <td style={{ padding: '6px 10px', textAlign: 'right' }}>{r.impressions}</td>
-                      <td style={{ padding: '6px 10px', textAlign: 'right' }}>
-                        {(r.ctr * 100).toFixed(2)}%
-                      </td>
-                      <td style={{ padding: '6px 10px', textAlign: 'right' }}>{r.position.toFixed(1)}</td>
+                    <tr key={i} style={{ borderTop: '1px solid var(--border-faint)' }}>
+                      <td style={previewTd}>{r.query}</td>
+                      <td style={previewTdR}>{r.clicks}</td>
+                      <td style={previewTdR}>{r.impressions}</td>
+                      <td style={previewTdR}>{(r.ctr * 100).toFixed(2)}%</td>
+                      <td style={previewTdR}>{r.position.toFixed(1)}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
             {parsed.length > 30 && (
-              <p style={{ fontSize: 11, color: 'var(--ink-mute)', textAlign: 'center', marginTop: 6 }}>
+              <p style={{ fontSize: 11, color: 'var(--ink-400)', textAlign: 'center', marginTop: 6 }}>
                 ※ プレビューは先頭30件。保存すると全{parsed.length}件が反映されます。
               </p>
             )}
@@ -240,3 +263,27 @@ export function ImportClient() {
     </div>
   );
 }
+
+const previewTh: React.CSSProperties = {
+  padding: '9px 14px',
+  textAlign: 'left',
+  fontSize: 11,
+  fontWeight: 600,
+  color: 'var(--ink-400)',
+  borderBottom: '1px solid var(--border-divider)',
+  background: 'var(--bg-app)',
+};
+const previewThR: React.CSSProperties = { ...previewTh, textAlign: 'right' };
+const previewTd: React.CSSProperties = {
+  padding: '11px 14px',
+  textAlign: 'left',
+  fontSize: 13,
+  color: 'var(--ink-900)',
+  borderBottom: '1px solid var(--border-faint)',
+};
+const previewTdR: React.CSSProperties = {
+  ...previewTd,
+  textAlign: 'right',
+  fontFamily: 'var(--font-mono)',
+  fontVariantNumeric: 'tabular-nums',
+};

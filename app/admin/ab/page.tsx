@@ -6,6 +6,7 @@ import {
   type ExperimentStat,
   type VariantStat,
 } from '@/lib/ga4-ab';
+import { PageHeader, StatCard, StatGrid } from '@/components/admin/ui';
 
 export const dynamic = 'force-dynamic';
 
@@ -59,74 +60,34 @@ export default async function AdminABPage() {
 
   return (
     <>
-      <div style={{ marginBottom: 24 }}>
-        <h1 style={{ fontFamily: 'var(--font-mincho)', fontSize: 26, margin: '0 0 6px' }}>
-          A/Bテスト結果
-        </h1>
-        <p style={{ fontSize: 13, color: 'var(--ink-mute)', margin: 0 }}>
-          過去{days}日間 · 実験 {EXPERIMENTS.length}件
-          {configured && (
-            <>
-              {' '}· 計測中 <strong style={{ color: 'var(--ink)' }}>{experiments.filter((e) => e.totalAssignments > 0).length}</strong>件
-            </>
-          )}
-        </p>
-      </div>
+      <PageHeader title="A/B テスト" subtitle={`実施中・終了したテストの結果（直近${days}日間 · 実験 ${EXPERIMENTS.length}件）`} />
+
+      {configured && (
+        <StatGrid>
+          <StatCard label="実験数" value={EXPERIMENTS.length} sub="登録中" />
+          <StatCard
+            label="計測中"
+            value={experiments.filter((e) => e.totalAssignments > 0).length}
+            sub={`/ ${EXPERIMENTS.length} 件`}
+          />
+        </StatGrid>
+      )}
 
       {!configured && (
-        <div
-          style={{
-            marginBottom: 24,
-            padding: '14px 18px',
-            background: 'var(--paper-card)',
-            border: '1px solid var(--line)',
-            borderRadius: 'var(--radius-md)',
-            fontSize: 13,
-            color: 'var(--ink-sub)',
-            lineHeight: 1.7,
-          }}
-        >
-          <strong style={{ color: 'var(--clay-deep)' }}>GA4 未連携</strong> —
-          GA4 Data API の認証情報が未設定のため、件数は表示できません。
-          <code style={{ background: 'var(--paper-deep)', padding: '1px 6px', borderRadius: 3, margin: '0 4px', fontSize: 12 }}>
-            GA4_PROPERTY_ID
-          </code>
-          と
-          <code style={{ background: 'var(--paper-deep)', padding: '1px 6px', borderRadius: 3, margin: '0 4px', fontSize: 12 }}>
-            GOOGLE_APPLICATION_CREDENTIALS_JSON
-          </code>
-          を環境変数に設定してください。
+        <div style={noticeStyle}>
+          <strong style={{ color: 'var(--warn-fg)' }}>GA4 未連携</strong> — GA4 Data API の認証情報が未設定のため、件数は表示できません。
+          <code style={codeStyle}>GA4_PROPERTY_ID</code>と
+          <code style={codeStyle}>GOOGLE_APPLICATION_CREDENTIALS_JSON</code>を環境変数に設定してください。
           {'reason' in result && result.reason && (
-            <div style={{ marginTop: 6, fontSize: 11, color: 'var(--ink-mute)' }}>
-              理由: {result.reason}
-            </div>
+            <div style={{ marginTop: 6, fontSize: 11, color: 'var(--ink-500)' }}>理由: {result.reason}</div>
           )}
         </div>
       )}
 
       {configured && !anyData && (
-        <div
-          style={{
-            marginBottom: 24,
-            padding: '14px 18px',
-            background: 'var(--paper-card)',
-            border: '1px solid var(--line)',
-            borderRadius: 'var(--radius-md)',
-            fontSize: 13,
-            color: 'var(--ink-sub)',
-            lineHeight: 1.7,
-          }}
-        >
-          現在計測中のテストはまだ十分なデータがありません。
-          GA4 のカスタムディメンション
-          <code style={{ background: 'var(--paper-deep)', padding: '1px 6px', borderRadius: 3, margin: '0 4px', fontSize: 12 }}>
-            experiment_id
-          </code>
-          ・
-          <code style={{ background: 'var(--paper-deep)', padding: '1px 6px', borderRadius: 3, margin: '0 4px', fontSize: 12 }}>
-            variant
-          </code>
-          が未登録の場合もここに表示されます。
+        <div style={noticeStyle}>
+          現在計測中のテストはまだ十分なデータがありません。GA4 のカスタムディメンション
+          <code style={codeStyle}>experiment_id</code>・<code style={codeStyle}>variant</code>が未登録の場合もここに表示されます。
         </div>
       )}
 
@@ -139,20 +100,20 @@ export default async function AdminABPage() {
 
       <div
         style={{
-          marginTop: 40,
-          padding: 20,
-          background: 'var(--paper-card)',
-          border: '1px solid var(--line)',
-          borderRadius: 'var(--radius-md)',
+          marginTop: 28,
+          padding: '16px 18px',
+          background: 'var(--bg-surface)',
+          border: '1px solid var(--border)',
+          borderRadius: 'var(--r-lg)',
         }}
       >
-        <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 16, margin: '0 0 8px' }}>関連</h3>
-        <ul style={{ margin: 0, paddingLeft: 20, fontSize: 13, lineHeight: 1.95 }}>
-          <li><Link href="/admin/events">イベント計測ダッシュボード</Link></li>
-          <li><Link href="/admin/insights">記事品質ダッシュボード</Link></li>
-          <li><Link href="/admin">管理ダッシュボード</Link></li>
-        </ul>
-        <p style={{ marginTop: 12, fontSize: 11, color: 'var(--ink-mute)', lineHeight: 1.7 }}>
+        <h3 style={{ fontSize: 13, fontWeight: 600, margin: '0 0 8px', color: 'var(--ink-900)' }}>関連</h3>
+        <div style={{ display: 'flex', gap: 14, fontSize: 13 }}>
+          <Link href="/admin/events" style={{ color: 'var(--accent)' }}>Events</Link>
+          <Link href="/admin/insights" style={{ color: 'var(--accent)' }}>Insights</Link>
+          <Link href="/admin" style={{ color: 'var(--accent)' }}>ダッシュボード</Link>
+        </div>
+        <p style={{ marginTop: 12, marginBottom: 0, fontSize: 11.5, color: 'var(--ink-400)', lineHeight: 1.7 }}>
           A/B テスト基盤は <code>lib/ab.ts</code> の <code>useABVariant</code> を使用。
           GA4 へは <code>ab_assignment</code> イベント (params: <code>experiment_id</code>, <code>variant</code>) として
           記録される。新規実験を追加する場合は本ページの <code>EXPERIMENTS</code> 配列にも追記すること。
@@ -165,6 +126,24 @@ export default async function AdminABPage() {
 }
 
 // ====================== UI ======================
+
+const noticeStyle: React.CSSProperties = {
+  marginBottom: 22,
+  padding: '14px 18px',
+  background: 'var(--warn-bg)',
+  border: '1px solid #e7d3a8',
+  borderRadius: 'var(--r-lg)',
+  fontSize: 13,
+  color: 'var(--warn-fg)',
+  lineHeight: 1.7,
+};
+const codeStyle: React.CSSProperties = {
+  background: '#fff',
+  padding: '1px 6px',
+  borderRadius: 3,
+  margin: '0 4px',
+  fontSize: 12,
+};
 
 function ExperimentCard({
   def,
@@ -200,9 +179,9 @@ function ExperimentCard({
   return (
     <article
       style={{
-        background: 'var(--paper-card)',
-        border: '1px solid var(--line)',
-        borderRadius: 'var(--radius-md)',
+        background: 'var(--bg-surface)',
+        border: '1px solid var(--border)',
+        borderRadius: 'var(--r-lg)',
         padding: '18px 20px',
         display: 'flex',
         flexDirection: 'column',
@@ -211,15 +190,13 @@ function ExperimentCard({
     >
       <header style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
-          <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, margin: 0, color: 'var(--ink)' }}>
-            {def.label}
-          </h2>
+          <h2 style={{ fontSize: 16, fontWeight: 700, margin: 0, color: 'var(--ink-900)' }}>{def.label}</h2>
           <span
             style={{
-              fontFamily: 'var(--font-inter), monospace',
+              fontFamily: 'var(--font-mono)',
               fontSize: 11,
-              color: 'var(--ink-mute)',
-              background: 'var(--paper-deep)',
+              color: 'var(--ink-500)',
+              background: 'var(--bg-subtle)',
               padding: '2px 8px',
               borderRadius: 4,
             }}
@@ -227,15 +204,11 @@ function ExperimentCard({
             {def.experimentId}
           </span>
         </div>
-        <div style={{ fontSize: 12, color: 'var(--ink-sub)' }}>
-          コンバージョン: <code style={{ fontSize: 11 }}>{def.conversionEventName}</code>
-          {' '}· 割当総数 <strong style={{ color: 'var(--ink)' }}>{totalAssignments.toLocaleString()}</strong>
+        <div style={{ fontSize: 12, color: 'var(--ink-600)' }}>
+          コンバージョン: <code style={{ fontSize: 11 }}>{def.conversionEventName}</code> · 割当総数{' '}
+          <strong style={{ color: 'var(--ink-900)' }}>{totalAssignments.toLocaleString()}</strong>
         </div>
-        {def.note && (
-          <div style={{ fontSize: 11, color: 'var(--ink-mute)', lineHeight: 1.6 }}>
-            {def.note}
-          </div>
-        )}
+        {def.note && <div style={{ fontSize: 11, color: 'var(--ink-400)', lineHeight: 1.6 }}>{def.note}</div>}
       </header>
 
       <div
@@ -256,16 +229,7 @@ function ExperimentCard({
       </div>
 
       {hasData && inconclusive && (
-        <div
-          style={{
-            padding: '10px 12px',
-            background: 'var(--paper-deep)',
-            borderRadius: 6,
-            fontSize: 12,
-            color: 'var(--ink-sub)',
-            lineHeight: 1.6,
-          }}
-        >
+        <div style={{ padding: '10px 12px', background: 'var(--bg-subtle)', borderRadius: 6, fontSize: 12, color: 'var(--ink-600)', lineHeight: 1.6 }}>
           {!enoughSample
             ? `データ不足 — 各 variant の割当が ${MIN_SAMPLE_PER_VARIANT} 件未満。判定にはもう少しデータが必要。`
             : `差なし — CTR の差分が ${(MIN_DIFF_RATIO * 100).toFixed(0)}% 未満 (実測 ${(ctrDiffRatio * 100).toFixed(1)}%)。優位な variant とは言えない。`}
@@ -273,16 +237,7 @@ function ExperimentCard({
       )}
 
       {!hasData && (
-        <div
-          style={{
-            padding: '10px 12px',
-            background: 'var(--paper-deep)',
-            borderRadius: 6,
-            fontSize: 12,
-            color: 'var(--ink-mute)',
-            lineHeight: 1.6,
-          }}
-        >
+        <div style={{ padding: '10px 12px', background: 'var(--bg-subtle)', borderRadius: 6, fontSize: 12, color: 'var(--ink-400)', lineHeight: 1.6 }}>
           {configured
             ? 'まだ ab_assignment が記録されていません。GA4 のカスタムディメンション (experiment_id / variant) 登録もご確認ください。'
             : 'GA4 連携待ち。連携後にここに割当・CTR が表示されます。'}
@@ -304,9 +259,9 @@ function VariantCell({
   return (
     <div
       style={{
-        background: '#fff',
-        border: isWinner ? '2px solid var(--sage)' : '1px solid var(--line)',
-        borderRadius: 8,
+        background: isWinner ? 'var(--ok-bg)' : 'var(--bg-app)',
+        border: isWinner ? '1.5px solid var(--ok-dot)' : '1px solid var(--border)',
+        borderRadius: 'var(--r-md)',
         padding: '12px 14px',
         position: 'relative',
         display: 'flex',
@@ -320,7 +275,7 @@ function VariantCell({
             position: 'absolute',
             top: -10,
             right: 10,
-            background: 'var(--sage)',
+            background: 'var(--ok-dot)',
             color: '#fff',
             fontSize: 10,
             fontWeight: 700,
@@ -332,44 +287,29 @@ function VariantCell({
           勝者
         </span>
       )}
-      <div
-        style={{
-          fontFamily: 'var(--font-mincho), serif',
-          fontSize: 14,
-          fontWeight: 700,
-          color: 'var(--ink)',
-        }}
-      >
-        variant {v.variant}
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'baseline',
-          gap: 6,
-          fontVariantNumeric: 'tabular-nums',
-        }}
-      >
+      <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--ink-900)' }}>variant {v.variant}</div>
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, fontVariantNumeric: 'tabular-nums' }}>
         <span
           style={{
-            fontFamily: 'var(--font-mincho), serif',
+            fontFamily: 'var(--font-mono)',
             fontSize: 26,
-            fontWeight: 700,
-            color: configured ? 'var(--ink)' : 'var(--ink-mute)',
+            fontWeight: 600,
+            color: configured ? 'var(--ink-900)' : 'var(--ink-400)',
           }}
         >
           {configured ? `${(v.ctr * 100).toFixed(1)}%` : '—'}
         </span>
-        <span style={{ fontSize: 11, color: 'var(--ink-sub)' }}>CTR</span>
+        <span style={{ fontSize: 11, color: 'var(--ink-500)' }}>CTR</span>
       </div>
       <div
         style={{
-          borderTop: '1px solid var(--line)',
+          borderTop: '1px solid var(--border-divider)',
           paddingTop: 6,
           display: 'flex',
           justifyContent: 'space-between',
           fontSize: 12,
-          color: 'var(--ink-sub)',
+          color: 'var(--ink-600)',
+          fontFamily: 'var(--font-mono)',
           fontVariantNumeric: 'tabular-nums',
         }}
       >
@@ -381,7 +321,8 @@ function VariantCell({
           display: 'flex',
           justifyContent: 'space-between',
           fontSize: 12,
-          color: 'var(--ink-sub)',
+          color: 'var(--ink-600)',
+          fontFamily: 'var(--font-mono)',
           fontVariantNumeric: 'tabular-nums',
         }}
       >

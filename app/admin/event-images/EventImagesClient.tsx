@@ -113,20 +113,30 @@ export function EventImagesClient({ rows }: { rows: EventRow[] }) {
       <div style={{ marginBottom: 16 }}>
         <input
           type="search"
-          placeholder="🔍 タイトル / slug / 会場 / カテゴリ で絞り込み"
+          placeholder="タイトル / slug / 会場 / カテゴリ で絞り込み"
           value={q}
           onChange={(e) => setQ(e.target.value)}
           style={{
             width: '100%',
-            padding: '10px 14px',
-            border: '1px solid var(--line)',
-            borderRadius: 'var(--radius-md)',
-            fontSize: 14,
+            height: 38,
+            padding: '0 12px',
+            border: '1px solid var(--border-strong)',
+            borderRadius: 'var(--r-md)',
+            fontSize: 13,
+            color: 'var(--ink-700)',
             fontFamily: 'inherit',
-            background: '#fff',
+            background: 'var(--bg-surface)',
           }}
         />
-        <div style={{ fontSize: 11, color: 'var(--ink-mute)', marginTop: 6 }}>
+        <div
+          style={{
+            fontSize: 11,
+            color: 'var(--ink-400)',
+            marginTop: 7,
+            fontFamily: 'var(--font-mono)',
+            fontVariantNumeric: 'tabular-nums',
+          }}
+        >
           {filtered.length} / {rows.length} 件
         </div>
       </div>
@@ -139,10 +149,10 @@ export function EventImagesClient({ rows }: { rows: EventRow[] }) {
             <div
               key={r.slug}
               style={{
-                background: 'var(--paper-card)',
-                border: '1px solid var(--line)',
-                borderRadius: 'var(--radius-md)',
-                padding: 14,
+                background: 'var(--bg-surface)',
+                border: '1px solid var(--border)',
+                borderRadius: 'var(--r-lg)',
+                padding: 18,
                 display: 'grid',
                 gridTemplateColumns: '120px 1fr',
                 gap: 14,
@@ -153,9 +163,9 @@ export function EventImagesClient({ rows }: { rows: EventRow[] }) {
                 style={{
                   width: 120,
                   height: 80,
-                  borderRadius: 8,
+                  borderRadius: 'var(--r-md)',
                   overflow: 'hidden',
-                  background: '#f0eae0',
+                  background: 'var(--bg-subtle)',
                   position: 'relative',
                 }}
               >
@@ -175,9 +185,9 @@ export function EventImagesClient({ rows }: { rows: EventRow[] }) {
                 <div
                   style={{
                     fontSize: 14,
-                    fontWeight: 600,
-                    color: 'var(--ink)',
-                    marginBottom: 2,
+                    fontWeight: 700,
+                    color: 'var(--ink-900)',
+                    marginBottom: 3,
                     overflow: 'hidden',
                     textOverflow: 'ellipsis',
                     whiteSpace: 'nowrap',
@@ -189,9 +199,10 @@ export function EventImagesClient({ rows }: { rows: EventRow[] }) {
                 <div
                   style={{
                     fontSize: 11,
-                    color: 'var(--ink-mute)',
+                    color: 'var(--ink-400)',
                     marginBottom: 8,
-                    fontFamily: 'var(--font-inter), monospace',
+                    fontFamily: 'var(--font-mono)',
+                    fontVariantNumeric: 'tabular-nums',
                   }}
                 >
                   {r.slug} · {r.category} · {r.venue}
@@ -208,12 +219,15 @@ export function EventImagesClient({ rows }: { rows: EventRow[] }) {
                     list={`presets-${r.slug}`}
                     style={{
                       flex: 1,
-                      padding: '6px 10px',
-                      border: '1px solid var(--line)',
-                      borderRadius: 6,
-                      fontSize: 12,
-                      fontFamily: 'var(--font-inter), monospace',
-                      background: '#fff',
+                      height: 38,
+                      padding: '0 12px',
+                      border: '1px solid var(--border-strong)',
+                      borderRadius: 'var(--r-md)',
+                      fontSize: 13,
+                      color: 'var(--ink-700)',
+                      fontFamily: 'var(--font-mono)',
+                      fontVariantNumeric: 'tabular-nums',
+                      background: 'var(--bg-surface)',
                     }}
                   />
                   <datalist id={`presets-${r.slug}`}>
@@ -226,13 +240,13 @@ export function EventImagesClient({ rows }: { rows: EventRow[] }) {
                     onClick={() => save(r.slug)}
                     disabled={!!saving[r.slug]}
                     style={{
-                      padding: '6px 14px',
-                      fontSize: 12,
+                      padding: '9px 16px',
+                      fontSize: 13,
                       fontWeight: 600,
-                      background: 'var(--ink)',
+                      background: 'var(--accent)',
                       color: '#fff',
                       border: 'none',
-                      borderRadius: 6,
+                      borderRadius: 'var(--r-md)',
                       cursor: saving[r.slug] ? 'wait' : 'pointer',
                       opacity: saving[r.slug] ? 0.6 : 1,
                     }}
@@ -241,7 +255,7 @@ export function EventImagesClient({ rows }: { rows: EventRow[] }) {
                   </button>
                 </div>
                 {savedMsg[r.slug] && (
-                  <div style={{ fontSize: 11, color: 'var(--ink-sub)', marginTop: 2 }}>
+                  <div style={{ fontSize: 11, color: 'var(--ink-600)', marginTop: 4 }}>
                     {savedMsg[r.slug]}
                   </div>
                 )}

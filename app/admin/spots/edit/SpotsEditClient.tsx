@@ -124,20 +124,21 @@ export function SpotsEditClient({
       <div style={{ marginBottom: 16 }}>
         <input
           type="search"
-          placeholder="🔍 施設名 / slug / 市区町村 / エリア / カテゴリ で絞り込み"
+          placeholder="施設名 / slug / 市区町村 / エリア / カテゴリ で絞り込み"
           value={q}
           onChange={(e) => setQ(e.target.value)}
           style={{
             width: '100%',
-            padding: '10px 14px',
-            border: '1px solid var(--line)',
-            borderRadius: 'var(--radius-md)',
-            fontSize: 14,
-            fontFamily: 'inherit',
-            background: '#fff',
+            height: 38,
+            padding: '0 12px',
+            border: '1px solid var(--border-strong)',
+            borderRadius: 'var(--r-md)',
+            fontSize: 13,
+            color: 'var(--ink-700)',
+            background: 'var(--bg-surface)',
           }}
         />
-        <div style={{ fontSize: 11, color: 'var(--ink-mute)', marginTop: 6 }}>
+        <div style={{ fontSize: 11, color: 'var(--ink-400)', marginTop: 6 }}>
           {filtered.length} / {entries.length} 件 · 編集済 {Object.keys(liveOverrides).length} 件
           {loaded ? ' · 最新の保存内容を反映済み' : ' · 最新の保存内容を読込中…'}
         </div>
@@ -157,7 +158,7 @@ export function SpotsEditClient({
         ))}
       </div>
       {filtered.length > 300 && (
-        <div style={{ fontSize: 12, color: 'var(--ink-mute)', marginTop: 12 }}>
+        <div style={{ fontSize: 12, color: 'var(--ink-400)', marginTop: 12 }}>
           最初の300件を表示中。検索で絞り込んでください。
         </div>
       )}
@@ -344,14 +345,18 @@ function SpotRow({
   };
 
   const labelStyle: React.CSSProperties = {
-    display: 'flex', flexDirection: 'column', gap: 4,
+    display: 'flex', flexDirection: 'column', gap: 7,
   };
   const captionStyle: React.CSSProperties = {
-    fontSize: 11, fontWeight: 700, color: 'var(--ink-sub)',
+    fontSize: 12, fontWeight: 600, color: 'var(--ink-500)',
   };
   const inputStyle: React.CSSProperties = {
-    padding: '6px 10px', border: '1px solid var(--line)', borderRadius: 6,
-    fontSize: 12, fontFamily: 'inherit', background: '#fff',
+    height: 38, padding: '0 12px', border: '1px solid var(--border-strong)', borderRadius: 'var(--r-md)',
+    fontSize: 13, color: 'var(--ink-700)', background: 'var(--bg-surface)',
+  };
+  const textareaStyle: React.CSSProperties = {
+    padding: '11px 12px', border: '1px solid var(--border-strong)', borderRadius: 'var(--r-md)',
+    fontSize: 13.5, lineHeight: 1.6, color: 'var(--ink-700)', background: 'var(--bg-surface)', resize: 'vertical',
   };
 
   const field = (key: keyof typeof form, label: string, original: unknown, full = false) => {
@@ -362,7 +367,7 @@ function SpotRow({
       <button
         type="button"
         onClick={() => set(key, String(original))}
-        style={{ background: 'transparent', border: '1px solid var(--line)', borderRadius: 5, fontSize: 10, padding: '1px 7px', color: 'var(--clay-deep)', cursor: 'pointer' }}
+        style={{ background: 'transparent', border: '1px solid var(--border-strong)', borderRadius: 'var(--r-sm)', fontSize: 10, padding: '1px 7px', color: 'var(--accent)', cursor: 'pointer' }}
       >
         現在の文を読み込んで編集
       </button>
@@ -379,7 +384,7 @@ function SpotRow({
             onChange={(e) => set(key, e.target.value)}
             placeholder={placeholder}
             rows={2}
-            style={{ ...inputStyle, resize: 'vertical', lineHeight: 1.6 }}
+            style={textareaStyle}
           />
         ) : (
           <input
@@ -427,7 +432,7 @@ function SpotRow({
           <button
             type="button"
             onClick={() => set(key, ageDefaults[age] || '')}
-            style={{ background: 'transparent', border: '1px solid var(--line)', borderRadius: 5, fontSize: 10, padding: '1px 7px', color: 'var(--clay-deep)', cursor: 'pointer' }}
+            style={{ background: 'transparent', border: '1px solid var(--border-strong)', borderRadius: 'var(--r-sm)', fontSize: 10, padding: '1px 7px', color: 'var(--accent)', cursor: 'pointer' }}
           >
             現在の文を読み込んで編集
           </button>
@@ -438,7 +443,7 @@ function SpotRow({
         onChange={(e) => set(key, e.target.value)}
         placeholder={ageDefaults[age] ? `現在: ${ageDefaults[age]}` : '（カテゴリ共通の自動文を表示中）'}
         rows={3}
-        style={{ ...inputStyle, resize: 'vertical', lineHeight: 1.6 }}
+        style={textareaStyle}
       />
     </label>
   );
@@ -461,10 +466,10 @@ function SpotRow({
   return (
     <div
       style={{
-        background: 'var(--paper-card)',
-        border: '1px solid var(--line)',
-        borderLeft: hasOverride ? '3px solid var(--clay-deep)' : '1px solid var(--line)',
-        borderRadius: 'var(--radius-md)',
+        background: 'var(--bg-surface)',
+        border: '1px solid var(--border)',
+        borderLeft: hasOverride ? '3px solid var(--accent)' : '1px solid var(--border)',
+        borderRadius: 'var(--r-lg)',
         overflow: 'hidden',
       }}
     >
@@ -477,34 +482,34 @@ function SpotRow({
         }}
       >
         <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)', marginBottom: 2 }}>
+          <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink-900)', marginBottom: 2 }}>
             {spot.name}
             {hasOverride && (
               <span style={{
                 marginLeft: 8, fontSize: 10, padding: '2px 8px', borderRadius: 999,
-                background: 'var(--clay-soft)', color: 'var(--clay-deep)', fontWeight: 700,
+                background: 'var(--accent-tint)', color: 'var(--accent)', fontWeight: 700,
               }}>編集済</span>
             )}
           </div>
-          <div style={{ fontSize: 11, color: 'var(--ink-mute)', fontFamily: 'monospace' }}>
+          <div style={{ fontSize: 11, color: 'var(--ink-400)', fontFamily: 'var(--font-mono)', fontVariantNumeric: 'tabular-nums' }}>
             {slug} · {area} · {SPOT_CATEGORY_LABEL[spot.category]}
             {spot.city ? ` · ${spot.city}` : ''}
           </div>
         </div>
-        <div style={{ fontSize: 18, color: 'var(--ink-mute)', flex: 'none' }}>
+        <div style={{ fontSize: 13, color: 'var(--ink-400)', flex: 'none' }}>
           {isOpen ? '▲' : '▼'}
         </div>
       </button>
 
       {isOpen && (
-        <div style={{ padding: '14px 16px 18px', borderTop: '1px solid var(--line)' }}>
+        <div style={{ padding: '14px 16px 18px', borderTop: '1px solid var(--border-divider)' }}>
           {/* ライブプレビュー — 本番ページの見た目で確認しながら編集できる */}
-          <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', margin: '0 0 8px' }}>
+          <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--ink-500)', margin: '0 0 8px' }}>
             ライブプレビュー（本番ページの見え方）
           </div>
-          <div style={{ background: '#faf7f2', border: '1px solid var(--line)', borderRadius: 10, overflow: 'hidden', marginBottom: 18 }}>
+          <div style={{ background: 'var(--bg-subtle)', border: '1px solid var(--border)', borderRadius: 'var(--r-lg)', overflow: 'hidden', marginBottom: 18 }}>
             {/* hero */}
-            <div style={{ position: 'relative', aspectRatio: '16 / 9', background: '#e9e4dc' }}>
+            <div style={{ position: 'relative', aspectRatio: '16 / 9', background: 'var(--bg-subtle)' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={heroSrc} alt="hero" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0) 55%)' }} />
@@ -517,7 +522,7 @@ function SpotRow({
             </div>
             {/* リード文 */}
             <div style={{ padding: '12px 16px 4px' }}>
-              <p style={{ margin: 0, fontSize: 13.5, color: 'var(--ink-soft, #5d5246)', lineHeight: 1.7 }}>
+              <p style={{ margin: 0, fontSize: 13.5, color: 'var(--ink-700)', lineHeight: 1.7 }}>
                 {form.note || spot.note || '（一言メモ未設定）'}
               </p>
             </div>
@@ -525,7 +530,7 @@ function SpotRow({
             {(form.img1 || form.img2) && (
               <div style={{ display: 'flex', gap: 8, padding: '10px 16px 14px' }}>
                 {[form.img1, form.img2].filter(Boolean).map((src, i) => (
-                  <div key={i} style={{ flex: 1, aspectRatio: '16 / 9', borderRadius: 8, overflow: 'hidden', border: '1px solid var(--line)' }}>
+                  <div key={i} style={{ flex: 1, aspectRatio: '16 / 9', borderRadius: 'var(--r-md)', overflow: 'hidden', border: '1px solid var(--border)' }}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={src} alt={`追加画像${i + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
@@ -535,9 +540,9 @@ function SpotRow({
           </div>
 
           {/* 画像（最大3枚）— アップロード or URL/パス指定。空欄で自動画像に戻る。 */}
-          <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', margin: '0 0 8px' }}>
+          <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--ink-500)', margin: '0 0 8px' }}>
             画像（最大3枚 / hero・中段・下段に分散）
-            <span style={{ fontSize: 10, fontWeight: 400, color: 'var(--ink-mute)', marginLeft: 8 }}>
+            <span style={{ fontSize: 10, fontWeight: 400, color: 'var(--ink-400)', marginLeft: 8 }}>
               {usingCustomImage ? '差し替え画像を表示中' : '自動画像（カテゴリ別）を表示中'}
             </span>
           </div>
@@ -546,26 +551,26 @@ function SpotRow({
               const val = form[key];
               const slotPreview = val || (key === 'img0' ? autoImg : '');
               return (
-                <div key={key} style={{ border: '1px solid var(--line)', borderRadius: 8, padding: 10, background: '#fff' }}>
-                  <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--ink-sub)', marginBottom: 6 }}>
+                <div key={key} style={{ border: '1px solid var(--border)', borderRadius: 'var(--r-md)', padding: 10, background: 'var(--bg-surface)' }}>
+                  <div style={{ fontSize: 11, fontWeight: 600, color: 'var(--ink-500)', marginBottom: 6 }}>
                     {label}{key === 'img0' ? '' : '（任意）'}
                   </div>
-                  <div style={{ aspectRatio: '16 / 9', borderRadius: 6, overflow: 'hidden', border: '1px dashed var(--line)', background: '#f3f3f3', marginBottom: 8, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <div style={{ aspectRatio: '16 / 9', borderRadius: 'var(--r-sm)', overflow: 'hidden', border: '1px dashed var(--border-strong)', background: 'var(--bg-subtle)', marginBottom: 8, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     {slotPreview ? (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img src={slotPreview} alt={label} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     ) : (
-                      <span style={{ fontSize: 10, color: 'var(--ink-mute)' }}>未設定</span>
+                      <span style={{ fontSize: 10, color: 'var(--ink-400)' }}>未設定</span>
                     )}
                   </div>
                   <label
                     style={{
-                      display: 'block', textAlign: 'center', padding: '6px 8px', background: '#fff',
-                      border: '1px solid var(--line)', borderRadius: 6, fontSize: 11, fontWeight: 700,
+                      display: 'block', textAlign: 'center', padding: '7px 8px', background: 'var(--bg-surface)',
+                      border: '1px solid var(--border-strong)', borderRadius: 'var(--r-md)', fontSize: 11, fontWeight: 600, color: 'var(--ink-600)',
                       cursor: uploading ? 'wait' : 'pointer', marginBottom: 6, opacity: uploading ? 0.6 : 1,
                     }}
                   >
-                    📷 アップロード
+                    アップロード
                     <input
                       type="file"
                       accept="image/webp,image/jpeg,image/png,image/gif"
@@ -583,13 +588,13 @@ function SpotRow({
                     value={val}
                     onChange={(e) => set(key, e.target.value)}
                     placeholder="/img/... または https://…"
-                    style={{ ...inputStyle, fontSize: 11 }}
+                    style={{ ...inputStyle, fontSize: 11, fontFamily: 'var(--font-mono)' }}
                   />
                   {val && (
                     <button
                       type="button"
                       onClick={() => set(key, '')}
-                      style={{ marginTop: 6, background: 'transparent', border: 'none', color: 'var(--clay-deep)', fontSize: 10, cursor: 'pointer', padding: 0 }}
+                      style={{ marginTop: 6, background: 'transparent', border: 'none', color: 'var(--accent)', fontSize: 10, cursor: 'pointer', padding: 0 }}
                     >
                       クリア
                     </button>
@@ -598,13 +603,13 @@ function SpotRow({
               );
             })}
           </div>
-          <div style={{ fontSize: 10, color: 'var(--ink-mute)', lineHeight: 1.6, marginBottom: 16 }}>
+          <div style={{ fontSize: 10, color: 'var(--ink-400)', lineHeight: 1.6, marginBottom: 16 }}>
             アップロード後に「保存」を押すと反映されます（本番は数分）。webp/jpg/png/gif・5MBまで。2枚目以降は本番ページの中段・下段に分散表示されます。
           </div>
 
-          <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', margin: '0 0 8px' }}>
+          <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--ink-500)', margin: '0 0 8px' }}>
             基本情報・カード
-            <span style={{ fontSize: 10, fontWeight: 400, color: 'var(--ink-mute)', marginLeft: 8 }}>
+            <span style={{ fontSize: 10, fontWeight: 400, color: 'var(--ink-400)', marginLeft: 8 }}>
               カテゴリ・対象年齢・屋内外は本番ページ上部のカードに反映されます。
             </span>
           </div>
@@ -630,10 +635,10 @@ function SpotRow({
                       type="button"
                       onClick={() => toggleAge(tag)}
                       style={{
-                        padding: '6px 14px', borderRadius: 999, fontSize: 12, fontWeight: 700, cursor: 'pointer',
-                        border: on ? '1px solid var(--clay-deep)' : '1px solid var(--line)',
-                        background: on ? 'var(--clay-soft)' : '#fff',
-                        color: on ? 'var(--clay-deep)' : 'var(--ink-mute)',
+                        padding: '6px 14px', borderRadius: 999, fontSize: 12, fontWeight: 600, cursor: 'pointer',
+                        border: on ? '1px solid var(--accent-border)' : '1px solid var(--border-strong)',
+                        background: on ? 'var(--accent-tint)' : 'var(--bg-surface)',
+                        color: on ? 'var(--accent)' : 'var(--ink-500)',
                       }}
                     >
                       {on ? '✓ ' : ''}{AGE_LABEL[tag]}
@@ -647,9 +652,9 @@ function SpotRow({
             {field('nearby', '近隣セット提案（テキスト）', spot.nearby, true)}
           </div>
 
-          <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', margin: '16px 0 8px' }}>
+          <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--ink-500)', margin: '16px 0 8px' }}>
             年齢別の楽しみ方
-            <span style={{ fontSize: 10, fontWeight: 400, color: 'var(--ink-mute)', marginLeft: 8 }}>
+            <span style={{ fontSize: 10, fontWeight: 400, color: 'var(--ink-400)', marginLeft: 8 }}>
               空欄ならカテゴリ共通の自動文を表示。「現在の文を読み込んで編集」で本文を入れて手直しできます。
             </span>
           </div>
@@ -659,7 +664,7 @@ function SpotRow({
             {ages.includes('4-6') && ageField('age_4_6', '4-6')}
           </div>
 
-          <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', margin: '16px 0 8px' }}>
+          <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--ink-500)', margin: '16px 0 8px' }}>
             料金詳細
           </div>
           <div style={{
@@ -671,7 +676,7 @@ function SpotRow({
             {field('p_infant', '乳児', spot.pricing?.infant)}
           </div>
 
-          <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', margin: '16px 0 8px' }}>
+          <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--ink-500)', margin: '16px 0 8px' }}>
             子連れ設備
           </div>
           <div style={{
@@ -686,39 +691,39 @@ function SpotRow({
           </div>
 
           {/* よくある質問（FAQ）編集 */}
-          <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', margin: '16px 0 8px' }}>
+          <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--ink-500)', margin: '16px 0 8px' }}>
             よくある質問（FAQ）
-            <span style={{ fontSize: 10, fontWeight: 400, color: 'var(--ink-mute)', marginLeft: 8 }}>
+            <span style={{ fontSize: 10, fontWeight: 400, color: 'var(--ink-400)', marginLeft: 8 }}>
               ここで追加したQ&Aは本番ページのFAQ先頭に表示されます（自動生成FAQより優先）。
             </span>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
             {/* 編集欄が空のとき、本番に出ている現在のFAQ（自動生成含む）を読み込んで編集できる */}
             {faq.length === 0 && currentFaqs.length > 0 && (
-              <div style={{ border: '1px dashed var(--line)', borderRadius: 8, padding: 12, background: '#faf7f2' }}>
+              <div style={{ border: '1px dashed var(--border-strong)', borderRadius: 'var(--r-md)', padding: 12, background: 'var(--bg-subtle)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, marginBottom: 8, flexWrap: 'wrap' }}>
-                  <span style={{ fontSize: 11, color: 'var(--ink-sub)', fontWeight: 700 }}>
+                  <span style={{ fontSize: 11, color: 'var(--ink-500)', fontWeight: 600 }}>
                     現在このスポットに表示中のFAQ（{currentFaqs.length}件・自動生成含む）
                   </span>
                   <button
                     type="button"
                     onClick={() => setFaq(currentFaqs.map((f) => ({ q: f.q, a: f.a })))}
-                    style={{ background: 'var(--ink)', color: '#fff', border: 'none', borderRadius: 6, fontSize: 11, fontWeight: 700, padding: '6px 12px', cursor: 'pointer' }}
+                    style={{ background: 'var(--accent)', color: '#fff', border: 'none', borderRadius: 'var(--r-md)', fontSize: 11, fontWeight: 600, padding: '7px 12px', cursor: 'pointer' }}
                   >
                     現在のFAQを読み込んで編集
                   </button>
                 </div>
-                <ol style={{ margin: 0, paddingLeft: 18, fontSize: 11.5, color: 'var(--ink-mute)', lineHeight: 1.7 }}>
+                <ol style={{ margin: 0, paddingLeft: 18, fontSize: 11.5, color: 'var(--ink-400)', lineHeight: 1.7 }}>
                   {currentFaqs.map((f, i) => (
-                    <li key={i}><strong style={{ color: 'var(--ink-sub)' }}>{f.q}</strong></li>
+                    <li key={i}><strong style={{ color: 'var(--ink-600)' }}>{f.q}</strong></li>
                   ))}
                 </ol>
               </div>
             )}
             {faq.map((item, i) => (
-              <div key={i} style={{ border: '1px solid var(--line)', borderRadius: 8, padding: 10, background: '#fff', display: 'flex', flexDirection: 'column', gap: 6 }}>
+              <div key={i} style={{ border: '1px solid var(--border)', borderRadius: 'var(--r-md)', padding: 10, background: 'var(--bg-surface)', display: 'flex', flexDirection: 'column', gap: 6 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <span style={{ fontSize: 11, fontWeight: 800, color: 'var(--clay-deep)' }}>Q{i + 1}</span>
+                  <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--accent)', fontFamily: 'var(--font-mono)' }}>Q{i + 1}</span>
                   <input
                     type="text"
                     value={item.q}
@@ -729,7 +734,7 @@ function SpotRow({
                   <button
                     type="button"
                     onClick={() => setFaq((cur) => cur.filter((_, j) => j !== i))}
-                    style={{ background: 'transparent', border: '1px solid var(--line)', borderRadius: 5, fontSize: 11, padding: '4px 8px', color: 'var(--clay-deep)', cursor: 'pointer', flex: 'none' }}
+                    style={{ border: '1px solid var(--border-strong)', background: 'var(--bg-surface)', color: 'var(--neg)', borderRadius: 'var(--r-sm)', padding: '5px 11px', fontSize: 12.5, fontWeight: 500, cursor: 'pointer', flex: 'none' }}
                   >
                     削除
                   </button>
@@ -739,37 +744,37 @@ function SpotRow({
                   onChange={(e) => setFaq((cur) => cur.map((f, j) => (j === i ? { ...f, a: e.target.value } : f)))}
                   placeholder="回答"
                   rows={2}
-                  style={{ ...inputStyle, resize: 'vertical', lineHeight: 1.6 }}
+                  style={textareaStyle}
                 />
               </div>
             ))}
             <button
               type="button"
               onClick={() => setFaq((cur) => [...cur, { q: '', a: '' }])}
-              style={{ alignSelf: 'flex-start', background: '#fff', border: '1px dashed var(--line)', borderRadius: 6, fontSize: 12, fontWeight: 700, padding: '6px 14px', color: 'var(--ink-sub)', cursor: 'pointer' }}
+              style={{ alignSelf: 'flex-start', background: 'var(--bg-surface)', border: '1px dashed var(--border-strong)', borderRadius: 'var(--r-md)', fontSize: 12, fontWeight: 600, padding: '8px 14px', color: 'var(--ink-600)', cursor: 'pointer' }}
             >
               ＋ 質問を追加
             </button>
           </div>
 
           {/* 近くのスポット（手動選択） */}
-          <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', margin: '16px 0 8px' }}>
+          <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--ink-500)', margin: '16px 0 8px' }}>
             近くのスポット（手動選択）
-            <span style={{ fontSize: 10, fontWeight: 400, color: 'var(--ink-mute)', marginLeft: 8 }}>
+            <span style={{ fontSize: 10, fontWeight: 400, color: 'var(--ink-400)', marginLeft: 8 }}>
               指定すると本番ページ「近くのスポット」に、この順番で優先表示します。未指定なら自動（同駅/同区）。
             </span>
           </div>
-          <div style={{ border: '1px solid var(--line)', borderRadius: 8, padding: 10, background: '#fff' }}>
+          <div style={{ border: '1px solid var(--border)', borderRadius: 'var(--r-md)', padding: 10, background: 'var(--bg-surface)' }}>
             {nearbySlugs.length > 0 ? (
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 8 }}>
                 {nearbySlugs.map((ns, i) => (
-                  <span key={ns} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: 'var(--clay-soft)', color: 'var(--clay-deep)', borderRadius: 999, padding: '4px 6px 4px 10px', fontSize: 12, fontWeight: 700 }}>
+                  <span key={ns} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: 'var(--accent-tint)', color: 'var(--accent)', borderRadius: 999, padding: '4px 6px 4px 10px', fontSize: 12, fontWeight: 600 }}>
                     <span style={{ opacity: 0.7, fontSize: 10 }}>{i + 1}.</span>
                     {nameForSlug(ns)}
                     <button
                       type="button"
                       onClick={() => setNearbySlugs((cur) => cur.filter((s) => s !== ns))}
-                      style={{ background: 'transparent', border: 'none', color: 'var(--clay-deep)', cursor: 'pointer', fontSize: 14, lineHeight: 1, padding: '0 2px' }}
+                      style={{ background: 'transparent', border: 'none', color: 'var(--accent)', cursor: 'pointer', fontSize: 14, lineHeight: 1, padding: '0 2px' }}
                       aria-label="削除"
                     >
                       ×
@@ -778,7 +783,7 @@ function SpotRow({
                 ))}
               </div>
             ) : (
-              <div style={{ fontSize: 11, color: 'var(--ink-mute)', marginBottom: 8 }}>
+              <div style={{ fontSize: 11, color: 'var(--ink-400)', marginBottom: 8 }}>
                 未選択（自動で同駅・同区のスポットを表示中）
               </div>
             )}
@@ -786,7 +791,7 @@ function SpotRow({
               type="search"
               value={nearbyQuery}
               onChange={(e) => setNearbyQuery(e.target.value)}
-              placeholder="🔍 追加するスポットを施設名/エリアで検索"
+              placeholder="追加するスポットを施設名/エリアで検索"
               style={{ ...inputStyle, width: '100%' }}
               disabled={nearbySlugs.length >= 12}
             />
@@ -797,10 +802,10 @@ function SpotRow({
                     key={m.slug}
                     type="button"
                     onClick={() => { setNearbySlugs((cur) => [...cur, m.slug]); setNearbyQuery(''); }}
-                    style={{ textAlign: 'left', background: '#faf7f2', border: '1px solid var(--line)', borderRadius: 6, padding: '6px 10px', fontSize: 12, cursor: 'pointer' }}
+                    style={{ textAlign: 'left', background: 'var(--bg-subtle)', border: '1px solid var(--border)', borderRadius: 'var(--r-md)', padding: '7px 10px', fontSize: 12, color: 'var(--ink-700)', cursor: 'pointer' }}
                   >
-                    <span style={{ fontWeight: 700 }}>{m.name}</span>
-                    <span style={{ color: 'var(--ink-mute)', marginLeft: 6, fontSize: 11 }}>{m.area}</span>
+                    <span style={{ fontWeight: 600 }}>{m.name}</span>
+                    <span style={{ color: 'var(--ink-400)', marginLeft: 6, fontSize: 11 }}>{m.area}</span>
                   </button>
                 ))}
               </div>
@@ -815,8 +820,8 @@ function SpotRow({
               onClick={save}
               disabled={saving}
               style={{
-                padding: '8px 18px', background: 'var(--ink)', color: '#fff', border: 'none',
-                borderRadius: 6, fontSize: 13, fontWeight: 600,
+                border: 'none', background: 'var(--accent)', color: '#fff',
+                borderRadius: 'var(--r-md)', padding: '9px 16px', fontSize: 13, fontWeight: 600,
                 cursor: saving ? 'wait' : 'pointer', opacity: saving ? 0.6 : 1,
               }}
             >
@@ -832,13 +837,13 @@ function SpotRow({
                 e.preventDefault();
                 window.open(`/spot/${slug}?cb=${Date.now()}`, '_blank', 'noopener,noreferrer');
               }}
-              style={{ fontSize: 12, color: 'var(--clay-deep)' }}
+              style={{ fontSize: 12, color: 'var(--accent)' }}
             >
               本番ページを確認 ↗
             </a>
-            {msg && <span style={{ fontSize: 11, color: 'var(--ink-sub)' }}>{msg}</span>}
+            {msg && <span style={{ fontSize: 11, color: 'var(--ink-600)' }}>{msg}</span>}
           </div>
-          <div style={{ fontSize: 11, color: 'var(--ink-mute)', marginTop: 8, lineHeight: 1.6 }}>
+          <div style={{ fontSize: 11, color: 'var(--ink-400)', marginTop: 8, lineHeight: 1.6 }}>
             空欄にして保存すると、その項目は元の値（lib/spots.ts の定義）に戻ります。
           </div>
         </div>

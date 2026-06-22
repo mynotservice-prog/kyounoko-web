@@ -147,102 +147,105 @@ A. 回答3。
   };
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, alignItems: 'start' }}>
       {/* 左: フォーム */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-        <Field label="slug (URLに使う英数ハイフン, 例: kids-park-tokyo)">
-          <input value={slug} onChange={(e) => setSlug(e.target.value)} placeholder="kids-park-tokyo" style={inputStyle} />
-        </Field>
-        <Field label="タイトル (30-40字推奨)">
-          <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="東京で子連れにおすすめの公園5選" style={inputStyle} />
-        </Field>
-        <Field label="meta description (120-140字、SEO用)">
-          <textarea value={metaDescription} onChange={(e) => setMetaDescription(e.target.value)} rows={2} style={{ ...inputStyle, resize: 'vertical' }} />
-        </Field>
-        <Field label="lede (140-200字の導入文)">
-          <textarea value={lede} onChange={(e) => setLede(e.target.value)} rows={3} style={{ ...inputStyle, resize: 'vertical' }} />
-        </Field>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
-          <Field label="カテゴリ">
-            <select value={category} onChange={(e) => setCategory(e.target.value)} style={inputStyle}>
-              {CATEGORY_OPTIONS.map((c) => <option key={c.value} value={c.value}>{c.name}</option>)}
-            </select>
+      <div style={cardStyle}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+          <Field label="slug (URLに使う英数ハイフン, 例: kids-park-tokyo)">
+            <input value={slug} onChange={(e) => setSlug(e.target.value)} placeholder="kids-park-tokyo" style={{ ...inputStyle, fontFamily: 'var(--font-mono)' }} />
           </Field>
-          <Field label="エリア">
-            <select value={area} onChange={(e) => setArea(e.target.value)} style={inputStyle}>
-              {AREA_OPTIONS.map((a) => <option key={a.value} value={a.value}>{a.name}</option>)}
-            </select>
+          <Field label="タイトル (30-40字推奨)">
+            <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="東京で子連れにおすすめの公園5選" style={titleInputStyle} />
           </Field>
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10 }}>
-          <Field label="対象年齢">
-            <select value={age} onChange={(e) => setAge(e.target.value)} style={inputStyle}>
-              <option value="0-1">0-1歳</option>
-              <option value="2-3">2-3歳</option>
-              <option value="4-6">4-6歳</option>
-            </select>
+          <Field label="meta description (120-140字、SEO用)">
+            <textarea value={metaDescription} onChange={(e) => setMetaDescription(e.target.value)} rows={2} style={textareaStyle} />
           </Field>
-          <Field label="場所">
-            <select value={place} onChange={(e) => setPlace(e.target.value)} style={inputStyle}>
-              <option value="home">家</option>
-              <option value="indoor">屋内</option>
-              <option value="outdoor">外</option>
-            </select>
+          <Field label="lede (140-200字の導入文)">
+            <textarea value={lede} onChange={(e) => setLede(e.target.value)} rows={3} style={textareaStyle} />
           </Field>
-          <Field label="所要時間(分)">
-            <input type="number" value={durationMin} onChange={(e) => setDurationMin(Number(e.target.value))} style={inputStyle} />
-          </Field>
-        </div>
-        <button
-          type="button"
-          onClick={createInKv}
-          disabled={creating || !slug}
-          style={{
-            marginTop: 12, padding: '11px 18px', background: 'var(--ink)', color: '#fff',
-            border: 'none', borderRadius: 8, fontSize: 14, fontWeight: 700,
-            cursor: creating || !slug ? 'not-allowed' : 'pointer', opacity: creating || !slug ? 0.5 : 1,
-          }}
-        >
-          {creating ? '作成中…' : '✅ KVに作成して公開（デプロイ不要）'}
-        </button>
-        {createMsg && <div style={{ fontSize: 12, color: 'var(--ink-sub)', marginTop: 2 }}>{createMsg}</div>}
-        <div style={{ marginTop: 8, fontSize: 11, color: 'var(--ink-mute)', lineHeight: 1.6 }}>
-          このボタンは枠（frontmatter＋ひな形本文）をKVに作成し、編集画面へ移動します。本文はそこで書いて保存（同じくデプロイ不要）。<br />
-          ※KV未設定の環境では従来どおり下のMarkdownをコピーして <code>content/articles/{slug || 'your-article-slug'}.md</code> を作成→commitしてください。
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+            <Field label="カテゴリ">
+              <select value={category} onChange={(e) => setCategory(e.target.value)} style={inputStyle}>
+                {CATEGORY_OPTIONS.map((c) => <option key={c.value} value={c.value}>{c.name}</option>)}
+              </select>
+            </Field>
+            <Field label="エリア">
+              <select value={area} onChange={(e) => setArea(e.target.value)} style={inputStyle}>
+                {AREA_OPTIONS.map((a) => <option key={a.value} value={a.value}>{a.name}</option>)}
+              </select>
+            </Field>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10 }}>
+            <Field label="対象年齢">
+              <select value={age} onChange={(e) => setAge(e.target.value)} style={inputStyle}>
+                <option value="0-1">0-1歳</option>
+                <option value="2-3">2-3歳</option>
+                <option value="4-6">4-6歳</option>
+              </select>
+            </Field>
+            <Field label="場所">
+              <select value={place} onChange={(e) => setPlace(e.target.value)} style={inputStyle}>
+                <option value="home">家</option>
+                <option value="indoor">屋内</option>
+                <option value="outdoor">外</option>
+              </select>
+            </Field>
+            <Field label="所要時間(分)">
+              <input type="number" value={durationMin} onChange={(e) => setDurationMin(Number(e.target.value))} style={inputStyle} />
+            </Field>
+          </div>
+          <button
+            type="button"
+            onClick={createInKv}
+            disabled={creating || !slug}
+            style={{
+              marginTop: 6, padding: '9px 16px', background: 'var(--accent)', color: '#fff',
+              border: 'none', borderRadius: 'var(--r-md)', fontSize: 13, fontWeight: 600,
+              cursor: creating || !slug ? 'not-allowed' : 'pointer', opacity: creating || !slug ? 0.5 : 1,
+            }}
+          >
+            {creating ? '作成中…' : 'KVに作成して公開（デプロイ不要）'}
+          </button>
+          {createMsg && <div style={{ fontSize: 12.5, color: 'var(--ink-600)', marginTop: 2 }}>{createMsg}</div>}
+          <div style={{ marginTop: 4, fontSize: 11.5, color: 'var(--ink-400)', lineHeight: 1.6 }}>
+            このボタンは枠（frontmatter＋ひな形本文）をKVに作成し、編集画面へ移動します。本文はそこで書いて保存（同じくデプロイ不要）。<br />
+            ※KV未設定の環境では従来どおり右のMarkdownをコピーして <code style={{ fontFamily: 'var(--font-mono)' }}>content/articles/{slug || 'your-article-slug'}.md</code> を作成→commitしてください。
+          </div>
         </div>
       </div>
 
       {/* 右: プレビュー */}
-      <div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
-          <span style={{ fontSize: 13, fontWeight: 600 }}>Markdown プレビュー</span>
+      <div style={cardStyle}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
+          <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--ink-900)' }}>Markdown プレビュー</span>
           <button
             type="button"
             onClick={copy}
             style={{
               marginLeft: 'auto',
-              padding: '6px 14px',
-              border: '1px solid var(--sage-deep)',
-              background: copied ? 'var(--sage-pale)' : '#fff',
-              color: 'var(--sage-deep)',
-              borderRadius: 6,
-              fontSize: 12,
-              fontWeight: 600,
+              padding: '9px 15px',
+              border: '1px solid var(--border-strong)',
+              background: copied ? 'var(--ok-bg)' : 'var(--bg-surface)',
+              color: copied ? 'var(--ok-fg)' : 'var(--ink-600)',
+              borderRadius: 'var(--r-md)',
+              fontSize: 13,
+              fontWeight: 500,
               cursor: 'pointer',
             }}
           >
-            {copied ? '✓ コピーしました' : '📋 コピー'}
+            {copied ? 'コピーしました' : 'コピー'}
           </button>
         </div>
         <pre
           style={{
-            background: '#fafaf7',
-            border: '1px solid var(--line)',
-            borderRadius: 8,
+            background: 'var(--bg-subtle)',
+            border: '1px solid var(--border)',
+            borderRadius: 'var(--r-md)',
             padding: 14,
             fontSize: 11,
             lineHeight: 1.55,
-            fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace',
+            color: 'var(--ink-700)',
+            fontFamily: 'var(--font-mono)',
             overflow: 'auto',
             maxHeight: '70vh',
             whiteSpace: 'pre-wrap',
@@ -257,18 +260,57 @@ A. 回答3。
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <label style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-      <span style={{ fontSize: 11, color: 'var(--ink-sub)', fontWeight: 600 }}>{label}</span>
+    <label style={{ display: 'block' }}>
+      <span style={{ display: 'block', fontSize: 12, color: 'var(--ink-500)', fontWeight: 600, marginBottom: 7 }}>{label}</span>
       {children}
     </label>
   );
 }
 
+const cardStyle: React.CSSProperties = {
+  background: 'var(--bg-surface)',
+  border: '1px solid var(--border)',
+  borderRadius: 'var(--r-lg)',
+  padding: 18,
+};
+
 const inputStyle: React.CSSProperties = {
-  padding: '8px 10px',
-  border: '1px solid var(--line)',
-  borderRadius: 6,
+  width: '100%',
+  boxSizing: 'border-box',
+  height: 38,
+  padding: '0 12px',
+  border: '1px solid var(--border-strong)',
+  borderRadius: 'var(--r-md)',
   fontSize: 13,
+  color: 'var(--ink-700)',
   fontFamily: 'inherit',
-  background: '#fff',
+  background: 'var(--bg-surface)',
+};
+
+const titleInputStyle: React.CSSProperties = {
+  width: '100%',
+  boxSizing: 'border-box',
+  height: 42,
+  padding: '0 13px',
+  border: '1px solid var(--border-strong)',
+  borderRadius: 'var(--r-md)',
+  fontSize: 15,
+  fontWeight: 600,
+  color: 'var(--ink-900)',
+  fontFamily: 'inherit',
+  background: 'var(--bg-surface)',
+};
+
+const textareaStyle: React.CSSProperties = {
+  width: '100%',
+  boxSizing: 'border-box',
+  padding: '11px 12px',
+  border: '1px solid var(--border-strong)',
+  borderRadius: 'var(--r-md)',
+  fontSize: 13.5,
+  lineHeight: 1.6,
+  color: 'var(--ink-700)',
+  fontFamily: 'inherit',
+  background: 'var(--bg-surface)',
+  resize: 'vertical',
 };

@@ -3,6 +3,7 @@ import path from 'node:path';
 import Link from 'next/link';
 import { getAllArticleInsights } from '@/lib/article-insights';
 import { RegenerateHeroButton } from '@/components/admin/RegenerateHeroButton';
+import { PageHeader, StatCard, StatGrid, Card, Badge, Mono } from '@/components/admin/ui';
 
 export const revalidate = 60;
 export const metadata = {
@@ -35,59 +36,41 @@ export default function ImageGenPage() {
 
   const generated = articles.filter((a) => manifest[a.slug]?.ok);
   const pending = articles.filter((a) => !manifest[a.slug]?.ok);
+  const rate = articles.length > 0 ? Math.round((generated.length / articles.length) * 100) : 0;
 
   return (
     <>
-      <div style={{ marginBottom: 24 }}>
-        <h1 style={{ fontFamily: 'var(--font-mincho)', fontSize: 26, margin: '0 0 6px' }}>
-          🎨 Image Gen — ヒーロー画像 AI生成管理
-        </h1>
-        <p style={{ fontSize: 13, color: 'var(--ink-mute)', margin: 0 }}>
-          DALL-E 3 で生成した画像と現行画像の比較ビュー
-        </p>
-      </div>
+      <PageHeader
+        title="Image Gen"
+        subtitle="ヒーロー画像のAI生成管理 — 生成画像と現行画像の比較ビュー"
+      />
 
       {/* KPI */}
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-          gap: 12,
-          marginBottom: 28,
-        }}
-      >
-        <KpiCard label="記事総数" value={articles.length} />
-        <KpiCard label="生成済み" value={generated.length} accent="ok" />
-        <KpiCard label="未生成" value={pending.length} accent={pending.length > 0 ? 'warn' : 'ok'} />
-        <KpiCard
-          label="生成済率"
-          value={articles.length > 0 ? Math.round((generated.length / articles.length) * 100) : 0}
-          unit="%"
+      <StatGrid columns={4}>
+        <StatCard label="記事総数" value={articles.length.toLocaleString('en-US')} sub="対象記事" />
+        <StatCard label="生成済み" value={generated.length.toLocaleString('en-US')} sub="AI画像あり" />
+        <StatCard
+          label="未生成"
+          value={pending.length.toLocaleString('en-US')}
+          sub={pending.length > 0 ? '要対応' : '完了'}
         />
-      </div>
+        <StatCard label="生成済率" value={`${rate}%`} sub={`${generated.length} / ${articles.length} 本`} />
+      </StatGrid>
 
       {/* 手順説明 */}
-      <section
-        style={{
-          background: 'var(--paper-card)',
-          border: '1px solid var(--line)',
-          borderRadius: 'var(--radius-md)',
-          padding: 20,
-          marginBottom: 28,
-        }}
-      >
-        <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 17, margin: '0 0 10px' }}>
-          実行手順（ローカルマシンから）
-        </h2>
+      <Card title="実行手順（ローカルマシンから）" bodyPadding={18} style={{ marginBottom: 22 }}>
         <pre
           style={{
-            background: '#1f1a14',
-            color: '#f4ddcf',
+            background: 'var(--bg-subtle)',
+            color: 'var(--ink-700)',
+            border: '1px solid var(--border)',
             padding: 16,
-            borderRadius: 8,
+            borderRadius: 'var(--r-md)',
             fontSize: 12,
+            fontFamily: 'var(--font-mono)',
             overflow: 'auto',
             lineHeight: 1.7,
+            margin: 0,
           }}
         >
 {`# === 推奨: Cloudflare Workers AI / flux-1-schnell（完全無料・クレカ不要） ===
@@ -121,19 +104,23 @@ git push origin main
 # export OPENAI_API_KEY=sk-...
 # node scripts/generate-hero-images.mjs`}
         </pre>
-        <p style={{ fontSize: 11, color: 'var(--ink-mute)', marginTop: 10, marginBottom: 0 }}>
-          詳細: <code>scripts/HERO_IMAGES_README.md</code>
+        <p style={{ fontSize: 11.5, color: 'var(--ink-400)', marginTop: 10, marginBottom: 0 }}>
+          詳細: <Mono>scripts/HERO_IMAGES_README.md</Mono>
         </p>
-      </section>
+      </Card>
 
       {/* 生成済み記事一覧 */}
       {generated.length > 0 && (
-        <section style={{ marginBottom: 32 }}>
-          <h2 style={SectionH2}>✓ 生成済み（{generated.length}本）— before/after比較</h2>
+        <Card
+          title="生成履歴 — before / after 比較"
+          right={<Badge tone="ok">{generated.length} 本</Badge>}
+          bodyPadding={18}
+          style={{ marginBottom: 22 }}
+        >
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
               gap: 16,
             }}
           >
@@ -142,29 +129,20 @@ git push origin main
             ))}
           </div>
           {generated.length > 30 && (
-            <p style={{ fontSize: 12, color: 'var(--ink-mute)', textAlign: 'center', marginTop: 12 }}>
-              ※ 先頭30件表示。残り {generated.length - 30}本は manifest.json で確認。
+            <p style={{ fontSize: 12, color: 'var(--ink-400)', textAlign: 'center', marginTop: 14 }}>
+              ※ 先頭30件表示。残り {generated.length - 30}本は <Mono>manifest.json</Mono> で確認。
             </p>
           )}
-        </section>
+        </Card>
       )}
 
       {/* 未生成記事一覧 */}
       {pending.length > 0 && (
-        <section style={{ marginBottom: 32 }}>
-          <h2 style={SectionH2}>⏳ 未生成（{pending.length}本）</h2>
-          <div
-            style={{
-              background: '#fff',
-              border: '1px solid var(--line)',
-              borderRadius: 'var(--radius-md)',
-              overflow: 'auto',
-              maxHeight: 400,
-            }}
-          >
+        <Card title="未生成" right={<Badge tone="warn">{pending.length} 本</Badge>}>
+          <div style={{ overflow: 'auto', maxHeight: 400 }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 12 }}>
               <thead>
-                <tr style={{ background: 'var(--paper-deep)', position: 'sticky', top: 0 }}>
+                <tr style={{ position: 'sticky', top: 0, zIndex: 1 }}>
                   <Th>現画像</Th>
                   <Th>タイトル</Th>
                   <Th>カテゴリ</Th>
@@ -173,14 +151,15 @@ git push origin main
               </thead>
               <tbody>
                 {pending.map((a) => (
-                  <tr key={a.slug} style={{ borderTop: '1px solid var(--line)' }}>
+                  <tr key={a.slug} className="admin-row">
                     <Td>
                       <div
                         style={{
                           width: 56,
                           height: 32,
-                          background: a.hero ? `url(${a.hero}) center/cover` : 'var(--peach-soft)',
-                          borderRadius: 4,
+                          background: a.hero ? `url(${a.hero}) center/cover` : 'var(--bg-app)',
+                          border: '1px solid var(--border)',
+                          borderRadius: 'var(--r-sm)',
                         }}
                       />
                     </Td>
@@ -188,11 +167,20 @@ git push origin main
                       <Link
                         href={`/article/${a.slug}`}
                         target="_blank"
-                        style={{ color: 'var(--ink)', textDecoration: 'none' }}
+                        style={{ color: 'var(--ink-900)', textDecoration: 'none', fontWeight: 500 }}
                       >
                         {a.title}
                       </Link>
-                      <div style={{ fontSize: 10, color: 'var(--ink-mute)', marginTop: 2 }}>{a.slug}</div>
+                      <div
+                        style={{
+                          fontSize: 10.5,
+                          color: 'var(--ink-400)',
+                          marginTop: 2,
+                          fontFamily: 'var(--font-mono)',
+                        }}
+                      >
+                        {a.slug}
+                      </div>
                     </Td>
                     <Td>{a.categoryName}</Td>
                     <Td>
@@ -203,56 +191,9 @@ git push origin main
               </tbody>
             </table>
           </div>
-        </section>
+        </Card>
       )}
     </>
-  );
-}
-
-const SectionH2: React.CSSProperties = {
-  fontFamily: 'var(--font-mincho)',
-  fontSize: 18,
-  margin: '0 0 12px',
-  fontWeight: 600,
-};
-
-function KpiCard({
-  label,
-  value,
-  unit,
-  accent,
-}: {
-  label: string;
-  value: number;
-  unit?: string;
-  accent?: 'ok' | 'warn';
-}) {
-  const color =
-    accent === 'ok' ? 'var(--sage-deep)' : accent === 'warn' ? 'var(--clay-deep)' : 'var(--ink)';
-  return (
-    <div
-      style={{
-        background: '#fff',
-        border: '1px solid var(--line)',
-        borderRadius: 'var(--radius-md)',
-        padding: '14px 16px',
-      }}
-    >
-      <div
-        style={{
-          fontSize: 11,
-          color: 'var(--ink-mute)',
-          textTransform: 'uppercase',
-          letterSpacing: '.04em',
-        }}
-      >
-        {label}
-      </div>
-      <div style={{ display: 'flex', alignItems: 'baseline', gap: 4, marginTop: 4 }}>
-        <span style={{ fontSize: 28, fontWeight: 700, color }}>{value.toLocaleString()}</span>
-        {unit && <span style={{ fontSize: 12, color: 'var(--ink-sub)' }}>{unit}</span>}
-      </div>
-    </div>
   );
 }
 
@@ -260,26 +201,44 @@ function CompareCard({ article, entry }: { article: { slug: string; title: strin
   return (
     <article
       style={{
-        background: '#fff',
-        border: '1px solid var(--line)',
-        borderRadius: 'var(--radius-md)',
+        background: 'var(--bg-surface)',
+        border: '1px solid var(--border)',
+        borderRadius: 'var(--r-lg)',
         overflow: 'hidden',
       }}
     >
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1, background: 'var(--line)' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1, background: 'var(--border)' }}>
         <div>
-          <div style={{ fontSize: 10, padding: '4px 8px', background: '#f3efe8', color: 'var(--ink-sub)', textAlign: 'center' }}>
+          <div
+            style={{
+              fontSize: 10,
+              fontWeight: 600,
+              padding: '4px 8px',
+              background: 'var(--bg-subtle)',
+              color: 'var(--ink-500)',
+              textAlign: 'center',
+            }}
+          >
             BEFORE（現行）
           </div>
           <div
             style={{
               aspectRatio: '16/9',
-              background: article.hero ? `url(${article.hero}) center/cover` : 'var(--peach-soft)',
+              background: article.hero ? `url(${article.hero}) center/cover` : 'var(--bg-app)',
             }}
           />
         </div>
         <div>
-          <div style={{ fontSize: 10, padding: '4px 8px', background: 'var(--sage-soft)', color: 'var(--sage-deep)', textAlign: 'center', fontWeight: 600 }}>
+          <div
+            style={{
+              fontSize: 10,
+              padding: '4px 8px',
+              background: 'var(--ok-bg)',
+              color: 'var(--ok-fg)',
+              textAlign: 'center',
+              fontWeight: 600,
+            }}
+          >
             AFTER（AI生成）
           </div>
           <div
@@ -290,15 +249,15 @@ function CompareCard({ article, entry }: { article: { slug: string; title: strin
           />
         </div>
       </div>
-      <div style={{ padding: '10px 12px' }}>
+      <div style={{ padding: '11px 13px' }}>
         <Link
           href={`/article/${article.slug}`}
           target="_blank"
-          style={{ color: 'var(--ink)', textDecoration: 'none' }}
+          style={{ color: 'var(--ink-900)', textDecoration: 'none' }}
         >
-          <div style={{ fontSize: 13, fontWeight: 500, lineHeight: 1.4 }}>{article.title}</div>
-          <div style={{ fontSize: 10, color: 'var(--ink-mute)', marginTop: 2 }}>
-            {article.categoryName} · {entry.quality} · {entry.generatedAt?.slice(0, 10)}
+          <div style={{ fontSize: 13, fontWeight: 500, lineHeight: 1.4, color: 'var(--ink-900)' }}>{article.title}</div>
+          <div style={{ fontSize: 10.5, color: 'var(--ink-400)', marginTop: 3 }}>
+            {article.categoryName} · {entry.quality} · <Mono>{entry.generatedAt?.slice(0, 10)}</Mono>
           </div>
         </Link>
         {/* 画像が微妙なときの再生成ボタン */}
@@ -315,10 +274,13 @@ function Th({ children }: { children: React.ReactNode }) {
     <th
       style={{
         textAlign: 'left',
-        padding: '10px 14px',
-        fontSize: 12,
+        padding: '9px 16px',
+        fontSize: 11,
         fontWeight: 600,
-        color: 'var(--ink-sub)',
+        color: 'var(--ink-400)',
+        letterSpacing: '.02em',
+        background: 'var(--bg-app)',
+        borderBottom: '1px solid var(--border-divider)',
       }}
     >
       {children}
@@ -328,7 +290,15 @@ function Th({ children }: { children: React.ReactNode }) {
 
 function Td({ children }: { children: React.ReactNode }) {
   return (
-    <td style={{ padding: '8px 14px', fontSize: 12, color: 'var(--ink)', verticalAlign: 'middle' }}>
+    <td
+      style={{
+        padding: '8px 16px',
+        fontSize: 12.5,
+        color: 'var(--ink-700)',
+        verticalAlign: 'middle',
+        borderBottom: '1px solid var(--border-faint)',
+      }}
+    >
       {children}
     </td>
   );

@@ -139,24 +139,24 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
     }
   };
 
-  if (state.phase === 'loading') return <div style={{ padding: 20, fontSize: 16 }}>読み込み中…</div>;
+  if (state.phase === 'loading') return <div style={{ padding: 20, fontSize: 14, color: 'var(--ink-600)' }}>読み込み中…</div>;
   if (state.phase === 'error')
-    return <div style={{ padding: 20, color: 'crimson', fontSize: 16 }}>❌ {state.message}</div>;
+    return <div style={{ padding: 20, color: 'var(--neg)', fontSize: 14 }}>{state.message}</div>;
 
   return (
-    <div style={{ display: 'grid', gap: 14, paddingBottom: 100 }}>
+    <div style={{ display: 'grid', gap: 14, paddingBottom: 110 }}>
       <div>
-        <div style={{ fontSize: 11, color: 'var(--ink-mute)', letterSpacing: '.05em' }}>
+        <div style={{ fontSize: 11, color: 'var(--ink-400)', letterSpacing: '.05em', fontWeight: 600 }}>
           {kind === 'article' ? '記事' : 'プラン'}を編集
-          {source === 'github' && <span style={{ marginLeft: 8, color: 'var(--sage-deep)' }}>GitHub直接編集モード</span>}
-          {source === 'fs' && <span style={{ marginLeft: 8, color: 'var(--ink-mute)' }}>ローカル編集モード</span>}
+          {source === 'github' && <span style={{ marginLeft: 8, color: 'var(--ok-fg)' }}>GitHub直接編集モード</span>}
+          {source === 'fs' && <span style={{ marginLeft: 8, color: 'var(--ink-400)' }}>ローカル編集モード</span>}
         </div>
-        <h1 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, margin: '4px 0 6px', fontWeight: 600 }}>
-          ✏️ <span style={{ fontFamily: 'monospace', fontSize: 13 }}>{slug}</span>
+        <h1 style={{ fontSize: 18, margin: '5px 0 8px', fontWeight: 700, color: 'var(--ink-900)' }}>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 14, fontVariantNumeric: 'tabular-nums' }}>{slug}</span>
         </h1>
         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', fontSize: 12 }}>
           {publicHref && (
-            <Link href={publicHref} target="_blank" style={tagLink}>🔗 公開ページ</Link>
+            <Link href={publicHref} target="_blank" style={tagLink}>公開ページ ↗</Link>
           )}
           {backHref && (
             <Link href={backHref} style={tagLink}>← 一覧</Link>
@@ -242,15 +242,15 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
 
       {/* 詳細フロントマター（折りたたみ） */}
       <details style={cardStyle}>
-        <summary style={{ cursor: 'pointer', fontWeight: 600, fontSize: 14, padding: 4 }}>
-          ⚙️ その他のフロントマター（quickInfo / tags / faq など）
+        <summary style={{ cursor: 'pointer', fontWeight: 600, fontSize: 13, padding: 4, color: 'var(--ink-900)' }}>
+          その他のフロントマター（quickInfo / tags / faq など）
         </summary>
         <textarea
           value={otherFmText}
           onChange={(e) => { setOtherFmText(e.target.value); setDirty(true); }}
           spellCheck={false}
           rows={10}
-          style={{ ...inputStyle, fontFamily: 'monospace', fontSize: 13, height: 240, resize: 'vertical' }}
+          style={{ ...inputStyle, fontFamily: 'var(--font-mono)', fontSize: 13, height: 240, resize: 'vertical', marginTop: 10 }}
           aria-label="その他フロントマターJSON"
         />
         <p style={hintStyle}>JSON形式。形式が崩れていると保存失敗。</p>
@@ -258,13 +258,13 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
 
       {/* 本文 */}
       <div style={cardStyle}>
-        <div style={{ fontWeight: 600, fontSize: 14, marginBottom: 6 }}>📝 本文（Markdown）</div>
+        <div style={{ fontWeight: 600, fontSize: 12, color: 'var(--ink-500)', marginBottom: 7 }}>本文（Markdown）</div>
         <textarea
           value={body}
           onChange={(e) => { setBody(e.target.value); setDirty(true); }}
           spellCheck={false}
           rows={20}
-          style={{ ...inputStyle, fontFamily: 'monospace', fontSize: 15, height: 500, resize: 'vertical', lineHeight: 1.7 }}
+          style={{ ...inputStyle, fontFamily: 'var(--font-mono)', fontSize: 13.5, height: 500, resize: 'vertical', lineHeight: 1.7 }}
           aria-label="本文Markdown"
         />
         <p style={hintStyle}>{body.length}文字 / 目安は2,500字</p>
@@ -278,10 +278,8 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
           right: 0,
           bottom: 0,
           padding: '12px 16px max(12px, env(safe-area-inset-bottom))',
-          background: 'rgba(255,255,255,0.96)',
-          borderTop: '1px solid var(--line, #e8e2d4)',
-          backdropFilter: 'blur(8px)',
-          WebkitBackdropFilter: 'blur(8px)',
+          background: 'var(--bg-surface)',
+          borderTop: '1px solid var(--border)',
           zIndex: 50,
         }}
       >
@@ -290,19 +288,20 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
             style={{
               marginBottom: 10,
               padding: 10,
-              background: message.type === 'ok' ? '#E6F5E1' : '#FCE4E4',
-              border: '1px solid ' + (message.type === 'ok' ? '#7AB562' : '#D77B7B'),
-              borderRadius: 8,
+              background: message.type === 'ok' ? 'var(--ok-bg)' : 'var(--warn-bg)',
+              border: '1px solid ' + (message.type === 'ok' ? 'var(--ok-dot)' : 'var(--warn-dot)'),
+              color: message.type === 'ok' ? 'var(--ok-fg)' : 'var(--warn-fg)',
+              borderRadius: 'var(--r-md)',
               fontSize: 13,
               lineHeight: 1.5,
             }}
           >
-            {message.type === 'ok' ? '✅ ' : '❌ '}{message.text}
+            {message.text}
             {message.url && (
               <>
                 {' '}
                 <a href={message.url} target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>
-                  commitを見る↗
+                  commitを見る ↗
                 </a>
               </>
             )}
@@ -314,18 +313,18 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
           disabled={saving}
           style={{
             width: '100%',
-            padding: '14px 16px',
-            fontSize: 17,
-            fontWeight: 700,
-            background: saving ? '#a8a397' : 'var(--ink, #221a10)',
+            padding: '13px 16px',
+            fontSize: 15,
+            fontWeight: 600,
+            background: saving ? 'var(--ink-400)' : 'var(--accent)',
             color: '#fff',
             border: 'none',
-            borderRadius: 12,
+            borderRadius: 'var(--r-md)',
             cursor: saving ? 'wait' : 'pointer',
             touchAction: 'manipulation',
           }}
         >
-          {saving ? '保存中…' : dirty ? '💾 保存して反映' : '✓ 変更なし'}
+          {saving ? '保存中…' : dirty ? '保存して反映' : '変更なし'}
         </button>
       </div>
     </div>
@@ -334,8 +333,8 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <label style={{ display: 'block', marginBottom: 10 }}>
-      <span style={{ display: 'block', fontSize: 12, color: 'var(--ink-sub)', marginBottom: 4, fontWeight: 600 }}>
+    <label style={{ display: 'block', marginBottom: 12 }}>
+      <span style={{ display: 'block', fontSize: 12, color: 'var(--ink-500)', marginBottom: 7, fontWeight: 600 }}>
         {label}
       </span>
       {children}
@@ -344,19 +343,20 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 }
 
 const cardStyle: React.CSSProperties = {
-  background: '#fff',
-  border: '1px solid var(--line, #e8e2d4)',
-  borderRadius: 10,
-  padding: 14,
+  background: 'var(--bg-surface)',
+  border: '1px solid var(--border)',
+  borderRadius: 'var(--r-lg)',
+  padding: 18,
 };
 
 const inputStyle: React.CSSProperties = {
   width: '100%',
-  padding: '12px 12px',
+  padding: '11px 12px',
   fontSize: 16, // ← iOSの自動ズーム回避（16px以上）
-  border: '1px solid var(--line, #e8e2d4)',
-  borderRadius: 8,
-  background: '#fafaf6',
+  color: 'var(--ink-700)',
+  border: '1px solid var(--border-strong)',
+  borderRadius: 'var(--r-md)',
+  background: 'var(--bg-surface)',
   lineHeight: 1.5,
   fontFamily: 'inherit',
   boxSizing: 'border-box',
@@ -364,23 +364,24 @@ const inputStyle: React.CSSProperties = {
 
 const countStyle: React.CSSProperties = {
   fontSize: 11,
-  color: 'var(--ink-mute)',
+  color: 'var(--ink-400)',
   display: 'block',
-  marginTop: 4,
+  marginTop: 5,
 };
 
 const hintStyle: React.CSSProperties = {
   fontSize: 11,
-  color: 'var(--ink-mute)',
-  margin: '6px 0 0',
+  color: 'var(--ink-400)',
+  margin: '7px 0 0',
 };
 
 const tagLink: React.CSSProperties = {
   fontSize: 12,
-  padding: '6px 10px',
-  background: '#fff',
-  border: '1px solid var(--line, #e8e2d4)',
-  borderRadius: 6,
+  fontWeight: 500,
+  padding: '7px 11px',
+  background: 'var(--bg-surface)',
+  border: '1px solid var(--border-strong)',
+  borderRadius: 'var(--r-md)',
   textDecoration: 'none',
-  color: 'var(--ink, #221a10)',
+  color: 'var(--ink-600)',
 };

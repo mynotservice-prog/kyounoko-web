@@ -5,6 +5,8 @@ import {
   getRestaurantFieldCoverage,
   type RestaurantFieldCoverageRow,
 } from '@/lib/article-insights';
+import { PageHeader, StatCard, StatGrid, Card, Badge, Bar, Mono } from '@/components/admin/ui';
+import type { ArticleInsights } from '@/lib/article-insights';
 
 export const revalidate = 3600;
 
@@ -22,180 +24,212 @@ export default function InsightsPage() {
   // ベスト記事
   const topQualityTop10 = [...insights].sort((a, b) => b.qualityScore - a.qualityScore).slice(0, 10);
 
+  const heroRate = summary.totalArticles > 0 ? Math.round((summary.withHero / summary.totalArticles) * 100) : 0;
+
   return (
     <>
-      <div style={{ marginBottom: 24 }}>
-        <h1 style={{ fontFamily: 'var(--font-mincho)', fontSize: 26, margin: '0 0 6px' }}>
-          📊 Insights — 記事品質ダッシュボード
-        </h1>
-        <p style={{ fontSize: 13, color: 'var(--ink-mute)', margin: 0 }}>
-          画像・文字量・情報量・品質スコアを横断的に可視化（{insights.length}記事）
-        </p>
-      </div>
+      <PageHeader
+        title="記事品質ダッシュボード"
+        subtitle={`画像・文字量・情報量・品質スコアを横断的に可視化（${insights.length}記事）`}
+      />
 
       {/* KPI カード */}
-      <section style={{ marginBottom: 32 }}>
-        <KpiGrid>
-          <Kpi label="総記事数" value={summary.totalArticles} unit="本" />
-          <Kpi
-            label="画像有率"
-            value={summary.totalArticles > 0 ? Math.round((summary.withHero / summary.totalArticles) * 100) : 0}
-            unit="%"
-            sub={`${summary.withHero}/${summary.totalArticles}本`}
-          />
-          <Kpi label="平均文字数" value={summary.avgBodyLength} unit="字" sub={`中央値 ${summary.medianBodyLength}字`} />
-          <Kpi label="平均品質スコア" value={summary.avgQualityScore} unit="/100" />
-          <Kpi label="リスト項目総数" value={summary.totalListItems} unit="個" />
-          <Kpi label="表組行数" value={summary.totalTableRows} unit="行" />
-          <Kpi label="内部リンク総数" value={summary.totalInternalLinks} unit="本" />
-          <Kpi label="画像なし記事" value={summary.withoutHero} unit="本" warn={summary.withoutHero > 0} />
-        </KpiGrid>
-      </section>
+      <StatGrid>
+        <StatCard label="総記事数" value={`${summary.totalArticles.toLocaleString('en-US')} 本`} />
+        <StatCard
+          label="画像有率"
+          value={`${heroRate}%`}
+          sub={`${summary.withHero}/${summary.totalArticles}本`}
+        />
+        <StatCard label="平均文字数" value={`${summary.avgBodyLength.toLocaleString('en-US')} 字`} sub={`中央値 ${summary.medianBodyLength}字`} />
+        <StatCard label="平均品質スコア" value={`${summary.avgQualityScore} /100`} />
+        <StatCard label="リスト項目総数" value={`${summary.totalListItems.toLocaleString('en-US')} 個`} />
+        <StatCard label="表組行数" value={`${summary.totalTableRows.toLocaleString('en-US')} 行`} />
+        <StatCard label="内部リンク総数" value={`${summary.totalInternalLinks.toLocaleString('en-US')} 本`} />
+        <StatCard
+          label="画像なし記事"
+          value={`${summary.withoutHero.toLocaleString('en-US')} 本`}
+          deltaNegative={summary.withoutHero > 0}
+          delta={summary.withoutHero > 0 ? '要対応' : undefined}
+        />
+      </StatGrid>
 
       {/* 文字量分布ヒストグラム */}
-      <section style={{ marginBottom: 32 }}>
-        <h2 style={SectionH2}>文字量の分布</h2>
-        <div style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)', padding: 20 }}>
+      <div style={{ marginBottom: 14 }}>
+        <Card title="文字量の分布" bodyPadding={20}>
           <Histogram
             data={summary.bodyLengthBuckets.map((b) => ({ label: b.label + '字', count: b.count }))}
-            color="var(--clay)"
+            color="var(--accent)"
           />
-        </div>
-      </section>
+        </Card>
+      </div>
 
       {/* 品質スコア分布 */}
-      <section style={{ marginBottom: 32 }}>
-        <h2 style={SectionH2}>品質スコアの分布</h2>
-        <div style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)', padding: 20 }}>
-          <Histogram
-            data={summary.scoreBuckets}
-            color="var(--sage)"
-          />
-          <p style={{ fontSize: 11, color: 'var(--ink-mute)', marginTop: 12 }}>
-            スコアは「文字数25 + 構造25 + 画像10 + 内部リンク10 + FAQ/HowTo10 + 表/独自セクション20」で算出
-          </p>
-        </div>
-      </section>
+      <div style={{ marginBottom: 14 }}>
+        <Card
+          title="品質スコアの分布"
+          description="スコアは「文字数25 + 構造25 + 画像10 + 内部リンク10 + FAQ/HowTo10 + 表/独自セクション20」で算出"
+          bodyPadding={20}
+        >
+          <Histogram data={summary.scoreBuckets} color="var(--ok-dot)" />
+        </Card>
+      </div>
 
       {/* カテゴリ別統計 */}
-      <section style={{ marginBottom: 32 }}>
-        <h2 style={SectionH2}>カテゴリ別 品質サマリー</h2>
-        <div style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)', overflow: 'hidden' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+      <div style={{ marginBottom: 14 }}>
+        <Card title="カテゴリ別 品質サマリー" bodyPadding={0}>
+          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
             <thead>
-              <tr style={{ background: 'var(--paper-deep)' }}>
-                <Th>カテゴリ</Th>
-                <Th align="right">記事数</Th>
-                <Th align="right">平均文字数</Th>
-                <Th align="right">平均スコア</Th>
+              <tr>
+                <th style={thStyle('left')}>カテゴリ</th>
+                <th style={thStyle('right')}>記事数</th>
+                <th style={thStyle('right')}>平均文字数</th>
+                <th style={thStyle('right')}>平均スコア</th>
               </tr>
             </thead>
             <tbody>
               {summary.categoryStats.map((c) => (
-                <tr key={c.category} style={{ borderTop: '1px solid var(--line)' }}>
-                  <Td>{c.category}</Td>
-                  <Td align="right">{c.count}</Td>
-                  <Td align="right">{c.avgLength.toLocaleString()}</Td>
-                  <Td align="right">
-                    <ScoreBadge score={c.avgScore} />
-                  </Td>
+                <tr key={c.category} className="admin-row">
+                  <td style={tdStyle()}>{c.category}</td>
+                  <td style={tdNum()}>{c.count}</td>
+                  <td style={tdNum()}>{c.avgLength.toLocaleString()}</td>
+                  <td style={{ ...tdStyle(), textAlign: 'right' }}>
+                    <ScoreCell score={c.avgScore} />
+                  </td>
                 </tr>
               ))}
             </tbody>
           </table>
-        </div>
-      </section>
+        </Card>
+      </div>
 
       {/* 画像使用ランキング（重複検出） */}
-      <section style={{ marginBottom: 32 }}>
-        <h2 style={SectionH2}>画像の使用回数ランキング（重複検出）</h2>
-        <p style={{ fontSize: 12, color: 'var(--ink-mute)', margin: '4px 0 12px' }}>
-          同じ画像が3記事以上で使われている = 候補画像が枯れている可能性。差し替え検討の参考に。
-        </p>
-        {duplicateHeros.length === 0 ? (
-          <div style={{ padding: 20, background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)', fontSize: 13, color: 'var(--ink-sub)' }}>
-            3回以上使用されている画像はありません ✨
-          </div>
-        ) : (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 12 }}>
-            {duplicateHeros.map((h) => (
-              <div
-                key={h.hero}
-                style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)', overflow: 'hidden' }}
-              >
+      <div style={{ marginBottom: 14 }}>
+        <Card
+          title="画像の使用回数ランキング（重複検出）"
+          description="同じ画像が3記事以上で使われている = 候補画像が枯れている可能性。差し替え検討の参考に。"
+          bodyPadding={duplicateHeros.length === 0 ? 18 : 16}
+        >
+          {duplicateHeros.length === 0 ? (
+            <div style={{ fontSize: 13, color: 'var(--ink-600)' }}>3回以上使用されている画像はありません</div>
+          ) : (
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 12 }}>
+              {duplicateHeros.map((h) => (
                 <div
-                  style={{
-                    aspectRatio: '16/9',
-                    backgroundImage: `url(${h.hero})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundColor: 'var(--peach-soft)',
-                    position: 'relative',
-                  }}
+                  key={h.hero}
+                  style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: 'var(--r-lg)', overflow: 'hidden' }}
                 >
-                  <span style={{ position: 'absolute', top: 8, right: 8, background: 'var(--clay)', color: '#fff', padding: '3px 9px', borderRadius: 999, fontSize: 11, fontWeight: 700 }}>
-                    {h.count}記事で使用
-                  </span>
-                </div>
-                <div style={{ padding: 12, fontSize: 11 }}>
-                  <div style={{ color: 'var(--ink-mute)', marginBottom: 4, fontFamily: 'monospace' }}>{h.hero}</div>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
-                    {h.slugs.slice(0, 5).map((s) => (
-                      <Link key={s} href={`/article/${s}`} target="_blank" style={{ background: 'var(--paper-deep)', padding: '2px 6px', borderRadius: 4, color: 'var(--ink-sub)', textDecoration: 'none', fontSize: 10 }}>
-                        {s}
-                      </Link>
-                    ))}
-                    {h.slugs.length > 5 && <span style={{ color: 'var(--ink-mute)' }}>+{h.slugs.length - 5}</span>}
+                  <div
+                    style={{
+                      aspectRatio: '16/9',
+                      backgroundImage: `url(${h.hero})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      backgroundColor: 'var(--bg-subtle)',
+                      position: 'relative',
+                    }}
+                  >
+                    <span
+                      style={{
+                        position: 'absolute',
+                        top: 8,
+                        right: 8,
+                        background: 'var(--accent)',
+                        color: 'var(--bg-surface)',
+                        padding: '3px 9px',
+                        borderRadius: 999,
+                        fontSize: 11,
+                        fontWeight: 700,
+                      }}
+                    >
+                      {h.count}記事で使用
+                    </span>
+                  </div>
+                  <div style={{ padding: 12, fontSize: 11 }}>
+                    <div style={{ color: 'var(--ink-400)', marginBottom: 4, fontFamily: 'var(--font-mono)' }}>{h.hero}</div>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+                      {h.slugs.slice(0, 5).map((s) => (
+                        <Link
+                          key={s}
+                          href={`/article/${s}`}
+                          target="_blank"
+                          style={{ background: 'var(--bg-subtle)', padding: '2px 6px', borderRadius: 4, color: 'var(--ink-600)', textDecoration: 'none', fontSize: 10, fontFamily: 'var(--font-mono)' }}
+                        >
+                          {s}
+                        </Link>
+                      ))}
+                      {h.slugs.length > 5 && <span style={{ color: 'var(--ink-400)' }}>+{h.slugs.length - 5}</span>}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </section>
+              ))}
+            </div>
+          )}
+        </Card>
+      </div>
 
       {/* 改善アラート: スコア低い記事 */}
-      <section style={{ marginBottom: 32 }}>
-        <h2 style={SectionH2}>⚠️ 要改善 — スコア低い記事 TOP10</h2>
-        <ArticleTable rows={lowestScoreTop10} highlight="qualityScore" />
-      </section>
+      <div style={{ marginBottom: 14 }}>
+        <Card title="要改善 — スコア低い記事 TOP10" bodyPadding={0}>
+          <ArticleTable rows={lowestScoreTop10} />
+        </Card>
+      </div>
 
       {/* 改善アラート: 文字数少ない記事 */}
-      <section style={{ marginBottom: 32 }}>
-        <h2 style={SectionH2}>⚠️ 要改善 — 文字数少ない記事 TOP10</h2>
-        <ArticleTable rows={shortestTop10} highlight="bodyLength" />
-      </section>
+      <div style={{ marginBottom: 14 }}>
+        <Card title="要改善 — 文字数少ない記事 TOP10" bodyPadding={0}>
+          <ArticleTable rows={shortestTop10} />
+        </Card>
+      </div>
 
       {/* 画像なし記事 */}
       {noHeroArticles.length > 0 && (
-        <section style={{ marginBottom: 32 }}>
-          <h2 style={SectionH2}>⚠️ ヒーロー画像なしの記事 ({noHeroArticles.length}本)</h2>
-          <ArticleTable rows={noHeroArticles} highlight="hero" />
-        </section>
+        <div style={{ marginBottom: 14 }}>
+          <Card title={`ヒーロー画像なしの記事（${noHeroArticles.length}本）`} bodyPadding={0}>
+            <ArticleTable rows={noHeroArticles} />
+          </Card>
+        </div>
       )}
 
       {/* 良い記事ベスト */}
-      <section style={{ marginBottom: 32 }}>
-        <h2 style={SectionH2}>🏆 品質スコア高い記事 TOP10</h2>
-        <ArticleTable rows={topQualityTop10} highlight="qualityScore" />
-      </section>
+      <div style={{ marginBottom: 14 }}>
+        <Card title="品質スコア高い記事 TOP10" bodyPadding={0}>
+          <ArticleTable rows={topQualityTop10} />
+        </Card>
+      </div>
 
       {/* レストラン情報充実度 */}
-      <section style={{ marginBottom: 32 }}>
-        <h2 style={SectionH2}>🍽 レストラン情報充実度（チェーン+個人店）</h2>
-        <p style={{ fontSize: 12, color: 'var(--ink-mute)', margin: '4px 0 12px' }}>
-          子連れ目線フィールドの記入率。チェーン側で埋まっていてもまだ手付かずの項目を優先的に強化する。
-        </p>
-        <RestaurantCoverageTable rows={restaurantCoverage} />
-      </section>
+      <div style={{ marginBottom: 14 }}>
+        <Card
+          title="レストラン情報充実度（チェーン+個人店）"
+          description="子連れ目線フィールドの記入率。チェーン側で埋まっていてもまだ手付かずの項目を優先的に強化する。"
+          bodyPadding={0}
+        >
+          <RestaurantCoverageTable rows={restaurantCoverage} />
+        </Card>
+      </div>
 
-      <div style={{ marginTop: 40, padding: 20, background: 'var(--paper-card)', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)' }}>
-        <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 16, margin: '0 0 8px' }}>関連</h3>
-        <ul style={{ margin: 0, paddingLeft: 20, fontSize: 13, lineHeight: 1.95 }}>
-          <li><Link href="/admin/articles">記事一覧（カード表示）</Link></li>
-          <li><Link href="/admin">管理ダッシュボード</Link></li>
-          <li><Link href="/admin/articles/new">新規記事作成</Link></li>
-        </ul>
+      <div
+        style={{
+          marginTop: 28,
+          padding: '16px 18px',
+          background: 'var(--bg-surface)',
+          border: '1px solid var(--border)',
+          borderRadius: 'var(--r-lg)',
+        }}
+      >
+        <h3 style={{ fontSize: 13, fontWeight: 600, margin: '0 0 10px', color: 'var(--ink-900)' }}>関連</h3>
+        <div style={{ display: 'flex', gap: 14, fontSize: 13, flexWrap: 'wrap' }}>
+          <Link href="/admin/articles" style={{ color: 'var(--accent)' }}>
+            記事一覧（カード表示）
+          </Link>
+          <Link href="/admin" style={{ color: 'var(--accent)' }}>
+            管理ダッシュボード
+          </Link>
+          <Link href="/admin/articles/new" style={{ color: 'var(--accent)' }}>
+            新規記事作成
+          </Link>
+        </div>
       </div>
     </>
   );
@@ -203,47 +237,48 @@ export default function InsightsPage() {
 
 // ================== UI Helper Components ==================
 
-const SectionH2: React.CSSProperties = {
-  fontFamily: 'var(--font-mincho)',
-  fontSize: 18,
-  margin: '0 0 12px',
-  fontWeight: 600,
-};
-
-function KpiGrid({ children }: { children: React.ReactNode }) {
-  return (
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-        gap: 12,
-      }}
-    >
-      {children}
-    </div>
-  );
+function thStyle(align: 'left' | 'right'): React.CSSProperties {
+  return {
+    textAlign: align,
+    padding: '9px 18px',
+    fontSize: 11,
+    fontWeight: 600,
+    color: 'var(--ink-400)',
+    letterSpacing: '.02em',
+    borderBottom: '1px solid var(--border-divider)',
+    background: 'var(--bg-app)',
+  };
 }
 
-function Kpi({ label, value, unit, sub, warn }: { label: string; value: number; unit?: string; sub?: string; warn?: boolean }) {
+function tdStyle(): React.CSSProperties {
+  return {
+    padding: '11px 18px',
+    fontSize: 13,
+    color: 'var(--ink-900)',
+    borderBottom: '1px solid var(--border-faint)',
+  };
+}
+
+function tdNum(): React.CSSProperties {
+  return {
+    ...tdStyle(),
+    textAlign: 'right',
+    fontFamily: 'var(--font-mono)',
+    fontVariantNumeric: 'tabular-nums',
+  };
+}
+
+function barColorForScore(v: number): string {
+  return v >= 80 ? 'var(--ok-dot)' : v >= 60 ? '#c9c3bb' : 'var(--warn-dot)';
+}
+
+function ScoreCell({ score }: { score: number }) {
   return (
-    <div
-      style={{
-        background: '#fff',
-        border: `1px solid ${warn ? '#e2b39a' : 'var(--line)'}`,
-        borderRadius: 'var(--radius-md)',
-        padding: '14px 16px',
-      }}
-    >
-      <div style={{ fontSize: 11, color: 'var(--ink-mute)', textTransform: 'uppercase', letterSpacing: '.04em', marginBottom: 4 }}>
-        {label}
+    <div style={{ display: 'flex', alignItems: 'center', gap: 9, justifyContent: 'flex-end' }}>
+      <div style={{ width: 70, display: 'flex' }}>
+        <Bar pct={score} color={barColorForScore(score)} />
       </div>
-      <div style={{ display: 'flex', alignItems: 'baseline', gap: 4 }}>
-        <span style={{ fontFamily: 'var(--font-mincho), serif', fontSize: 28, fontWeight: 700, color: warn ? 'var(--clay-deep)' : 'var(--ink)' }}>
-          {value.toLocaleString()}
-        </span>
-        {unit && <span style={{ fontSize: 12, color: 'var(--ink-sub)' }}>{unit}</span>}
-      </div>
-      {sub && <div style={{ fontSize: 11, color: 'var(--ink-mute)', marginTop: 2 }}>{sub}</div>}
+      <Mono color="var(--ink-700)">{score}</Mono>
     </div>
   );
 }
@@ -254,18 +289,19 @@ function Histogram({ data, color }: { data: { label: string; count: number }[]; 
     <div style={{ display: 'grid', gap: 10 }}>
       {data.map((d) => (
         <div key={d.label} style={{ display: 'grid', gridTemplateColumns: '100px 1fr 50px', alignItems: 'center', gap: 10 }}>
-          <div style={{ fontSize: 12, color: 'var(--ink-sub)' }}>{d.label}</div>
-          <div style={{ background: 'var(--paper-deep)', height: 22, borderRadius: 4, overflow: 'hidden' }}>
-            <div
-              style={{
-                width: `${(d.count / max) * 100}%`,
-                background: color,
-                height: '100%',
-                transition: 'width 0.3s ease',
-              }}
-            />
+          <div style={{ fontSize: 12, color: 'var(--ink-600)' }}>{d.label}</div>
+          <div style={{ display: 'flex' }}>
+            <Bar pct={(d.count / max) * 100} color={color} />
           </div>
-          <div style={{ fontSize: 12, color: 'var(--ink-sub)', textAlign: 'right', fontVariantNumeric: 'tabular-nums' }}>
+          <div
+            style={{
+              fontSize: 12,
+              color: 'var(--ink-600)',
+              textAlign: 'right',
+              fontFamily: 'var(--font-mono)',
+              fontVariantNumeric: 'tabular-nums',
+            }}
+          >
             {d.count}本
           </div>
         </div>
@@ -274,125 +310,82 @@ function Histogram({ data, color }: { data: { label: string; count: number }[]; 
   );
 }
 
-function Th({ children, align = 'left' }: { children: React.ReactNode; align?: 'left' | 'right' | 'center' }) {
+function ArticleTable({ rows }: { rows: ArticleInsights[] }) {
   return (
-    <th
-      style={{
-        textAlign: align,
-        padding: '10px 14px',
-        fontSize: 12,
-        fontWeight: 600,
-        color: 'var(--ink-sub)',
-        letterSpacing: '.03em',
-      }}
-    >
-      {children}
-    </th>
-  );
-}
-
-function Td({ children, align = 'left' }: { children: React.ReactNode; align?: 'left' | 'right' | 'center' }) {
-  return (
-    <td
-      style={{
-        textAlign: align,
-        padding: '10px 14px',
-        fontSize: 13,
-        color: 'var(--ink)',
-        fontVariantNumeric: 'tabular-nums',
-      }}
-    >
-      {children}
-    </td>
-  );
-}
-
-function ScoreBadge({ score }: { score: number }) {
-  const color = score >= 80 ? 'var(--sage-deep)' : score >= 60 ? 'var(--ochre)' : score >= 40 ? '#c4704f' : '#a73b1f';
-  const bg = score >= 80 ? 'var(--sage-soft)' : score >= 60 ? 'var(--ochre-soft)' : score >= 40 ? '#f5e0d4' : '#f3d2c5';
-  return (
-    <span style={{ background: bg, color, padding: '3px 10px', borderRadius: 999, fontSize: 11, fontWeight: 700, fontVariantNumeric: 'tabular-nums' }}>
-      {score}
-    </span>
-  );
-}
-
-import type { ArticleInsights } from '@/lib/article-insights';
-
-function ArticleTable({ rows, highlight }: { rows: ArticleInsights[]; highlight?: 'qualityScore' | 'bodyLength' | 'hero' }) {
-  return (
-    <div style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)', overflow: 'auto' }}>
-      <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 12, minWidth: 800 }}>
+    <div style={{ overflow: 'auto' }}>
+      <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 800 }}>
         <thead>
-          <tr style={{ background: 'var(--paper-deep)' }}>
-            <Th>画像</Th>
-            <Th>タイトル</Th>
-            <Th align="right">文字数</Th>
-            <Th align="right">H2/H3</Th>
-            <Th align="right">リスト</Th>
-            <Th align="right">表</Th>
-            <Th align="right">FAQ/HowTo</Th>
-            <Th align="right">内部リンク</Th>
-            <Th align="right">スコア</Th>
-            <Th>課題</Th>
+          <tr>
+            <th style={thStyle('left')}>画像</th>
+            <th style={thStyle('left')}>タイトル</th>
+            <th style={thStyle('right')}>文字数</th>
+            <th style={thStyle('right')}>H2/H3</th>
+            <th style={thStyle('right')}>リスト</th>
+            <th style={thStyle('right')}>表</th>
+            <th style={thStyle('right')}>FAQ/HowTo</th>
+            <th style={thStyle('right')}>内部リンク</th>
+            <th style={thStyle('right')}>スコア</th>
+            <th style={thStyle('left')}>課題</th>
           </tr>
         </thead>
         <tbody>
           {rows.map((r) => (
-            <tr key={r.slug} style={{ borderTop: '1px solid var(--line)' }}>
-              <Td>
+            <tr key={r.slug} className="admin-row">
+              <td style={tdStyle()}>
                 <div
                   style={{
                     width: 56,
                     height: 32,
-                    background: r.hero ? `url(${r.hero}) center/cover` : 'var(--peach-soft)',
+                    background: r.hero ? `url(${r.hero}) center/cover` : 'var(--bg-subtle)',
                     borderRadius: 4,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     fontSize: 9,
-                    color: '#c4704f',
+                    color: 'var(--warn-fg)',
                     fontWeight: 600,
                   }}
                 >
                   {!r.hero && '画像なし'}
                 </div>
-              </Td>
-              <Td>
-                <Link href={`/article/${r.slug}`} target="_blank" style={{ color: 'var(--ink)', textDecoration: 'none' }}>
+              </td>
+              <td style={tdStyle()}>
+                <Link href={`/article/${r.slug}`} target="_blank" style={{ color: 'var(--ink-900)', textDecoration: 'none' }}>
                   <div style={{ fontWeight: 500, lineHeight: 1.4, marginBottom: 2 }}>{r.title}</div>
-                  <div style={{ fontSize: 10, color: 'var(--ink-mute)' }}>{r.categoryName} · {r.slug}</div>
+                  <div style={{ fontSize: 10, color: 'var(--ink-400)', fontFamily: 'var(--font-mono)' }}>
+                    {r.categoryName} · {r.slug}
+                  </div>
                 </Link>
-              </Td>
-              <Td align="right">
-                <span style={{ color: r.bodyLength < 800 ? '#c4704f' : 'var(--ink)' }}>
+              </td>
+              <td style={tdNum()}>
+                <span style={{ color: r.bodyLength < 800 ? 'var(--warn-fg)' : 'var(--ink-900)' }}>
                   {r.bodyLength.toLocaleString()}
                 </span>
-              </Td>
-              <Td align="right">{r.h2Count}/{r.h3Count}</Td>
-              <Td align="right">{r.listItemCount}</Td>
-              <Td align="right">{r.tableRowCount}</Td>
-              <Td align="right">{r.faqCount}/{r.howToStepCount}</Td>
-              <Td align="right">{r.internalLinkCount}</Td>
-              <Td align="right">
-                <ScoreBadge score={r.qualityScore} />
-              </Td>
-              <Td>
+              </td>
+              <td style={tdNum()}>{r.h2Count}/{r.h3Count}</td>
+              <td style={tdNum()}>{r.listItemCount}</td>
+              <td style={tdNum()}>{r.tableRowCount}</td>
+              <td style={tdNum()}>{r.faqCount}/{r.howToStepCount}</td>
+              <td style={tdNum()}>{r.internalLinkCount}</td>
+              <td style={{ ...tdStyle(), textAlign: 'right' }}>
+                <ScoreCell score={r.qualityScore} />
+              </td>
+              <td style={tdStyle()}>
                 {r.issues.length === 0 ? (
-                  <span style={{ color: 'var(--sage-deep)', fontSize: 11 }}>✓ 問題なし</span>
+                  <Badge tone="ok">問題なし</Badge>
                 ) : (
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
                     {r.issues.slice(0, 3).map((iss) => (
-                      <span key={iss} style={{ background: '#f5e0d4', color: '#c4704f', padding: '1px 6px', borderRadius: 4, fontSize: 10 }}>
+                      <Badge key={iss} tone="warn" dot={false}>
                         {iss}
-                      </span>
+                      </Badge>
                     ))}
                     {r.issues.length > 3 && (
-                      <span style={{ color: 'var(--ink-mute)', fontSize: 10 }}>+{r.issues.length - 3}</span>
+                      <span style={{ color: 'var(--ink-400)', fontSize: 10 }}>+{r.issues.length - 3}</span>
                     )}
                   </div>
                 )}
-              </Td>
+              </td>
             </tr>
           ))}
         </tbody>
@@ -405,22 +398,15 @@ function RestaurantCoverageTable({ rows }: { rows: RestaurantFieldCoverageRow[] 
   // 記入率の降順で表示（充実してる順）
   const sorted = [...rows].sort((a, b) => b.ratio - a.ratio);
   return (
-    <div
-      style={{
-        background: '#fff',
-        border: '1px solid var(--line)',
-        borderRadius: 'var(--radius-md)',
-        overflow: 'auto',
-      }}
-    >
-      <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, minWidth: 640 }}>
+    <div style={{ overflow: 'auto' }}>
+      <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 640 }}>
         <thead>
-          <tr style={{ background: 'var(--paper-deep)' }}>
-            <Th>指標</Th>
-            <Th>全体（バー）</Th>
-            <Th align="right">全体</Th>
-            <Th align="right">チェーン</Th>
-            <Th align="right">個人店</Th>
+          <tr>
+            <th style={thStyle('left')}>指標</th>
+            <th style={thStyle('left')}>全体（バー）</th>
+            <th style={thStyle('right')}>全体</th>
+            <th style={thStyle('right')}>チェーン</th>
+            <th style={thStyle('right')}>個人店</th>
           </tr>
         </thead>
         <tbody>
@@ -428,14 +414,13 @@ function RestaurantCoverageTable({ rows }: { rows: RestaurantFieldCoverageRow[] 
             const totalPct = r.totalTotal === 0 ? 0 : Math.round((r.totalHave / r.totalTotal) * 100);
             const chainPct = r.chainTotal === 0 ? 0 : Math.round((r.chainHave / r.chainTotal) * 100);
             const indiePct = r.indieTotal === 0 ? 0 : Math.round((r.indieHave / r.indieTotal) * 100);
-            const barColor =
-              totalPct >= 70 ? 'var(--sage)' : totalPct >= 30 ? 'var(--ochre)' : 'var(--clay)';
+            const barColor = totalPct >= 70 ? 'var(--ok-dot)' : totalPct >= 30 ? '#c9c3bb' : 'var(--warn-dot)';
             return (
-              <tr key={r.field} style={{ borderTop: '1px solid var(--line)' }}>
-                <Td>
+              <tr key={r.field} className="admin-row">
+                <td style={tdStyle()}>
                   <span style={{ fontWeight: 500 }}>{r.label}</span>
-                </Td>
-                <Td>
+                </td>
+                <td style={tdStyle()}>
                   <div
                     style={{
                       display: 'grid',
@@ -445,49 +430,41 @@ function RestaurantCoverageTable({ rows }: { rows: RestaurantFieldCoverageRow[] 
                       minWidth: 160,
                     }}
                   >
-                    <div
+                    <div style={{ display: 'flex' }}>
+                      <Bar pct={totalPct} color={barColor} />
+                    </div>
+                    <span
                       style={{
-                        background: 'var(--paper-deep)',
-                        height: 14,
-                        borderRadius: 3,
-                        overflow: 'hidden',
+                        fontSize: 12,
+                        color: 'var(--ink-600)',
+                        textAlign: 'right',
+                        fontFamily: 'var(--font-mono)',
+                        fontVariantNumeric: 'tabular-nums',
                       }}
                     >
-                      <div
-                        style={{
-                          width: `${totalPct}%`,
-                          background: barColor,
-                          height: '100%',
-                          transition: 'width 0.3s ease',
-                        }}
-                      />
-                    </div>
-                    <span style={{ fontSize: 12, color: 'var(--ink-sub)', textAlign: 'right', fontVariantNumeric: 'tabular-nums' }}>
                       {totalPct}%
                     </span>
                   </div>
-                </Td>
-                <Td align="right">
-                  <span style={{ fontVariantNumeric: 'tabular-nums' }}>
-                    {r.totalHave.toLocaleString()}/{r.totalTotal.toLocaleString()}
-                  </span>
-                </Td>
-                <Td align="right">
-                  <span style={{ fontVariantNumeric: 'tabular-nums', color: 'var(--ink-sub)' }}>
+                </td>
+                <td style={tdNum()}>
+                  {r.totalHave.toLocaleString()}/{r.totalTotal.toLocaleString()}
+                </td>
+                <td style={tdNum()}>
+                  <span style={{ color: 'var(--ink-600)' }}>
                     {chainPct}%
-                    <span style={{ fontSize: 10, color: 'var(--ink-mute)', marginLeft: 4 }}>
+                    <span style={{ fontSize: 10, color: 'var(--ink-400)', marginLeft: 4 }}>
                       ({r.chainHave}/{r.chainTotal})
                     </span>
                   </span>
-                </Td>
-                <Td align="right">
-                  <span style={{ fontVariantNumeric: 'tabular-nums', color: 'var(--ink-sub)' }}>
+                </td>
+                <td style={tdNum()}>
+                  <span style={{ color: 'var(--ink-600)' }}>
                     {indiePct}%
-                    <span style={{ fontSize: 10, color: 'var(--ink-mute)', marginLeft: 4 }}>
+                    <span style={{ fontSize: 10, color: 'var(--ink-400)', marginLeft: 4 }}>
                       ({r.indieHave}/{r.indieTotal})
                     </span>
                   </span>
-                </Td>
+                </td>
               </tr>
             );
           })}

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { EVENTS, eventHeroImage } from '@/lib/events';
 import { getAllEventOverrides } from '@/lib/event-overrides';
+import { PageHeader, Card, Mono } from '@/components/admin/ui';
 import { EventImagesClient } from './EventImagesClient';
 
 export const dynamic = 'force-dynamic';
@@ -40,52 +41,62 @@ export default function EventImagesAdminPage() {
 
   return (
     <>
-      <div style={{ marginBottom: 24 }}>
-        <h1 style={{ fontFamily: 'var(--font-mincho)', fontSize: 26, margin: '0 0 6px' }}>
-          イベント画像編集
-        </h1>
-        <p style={{ fontSize: 13, color: 'var(--ink-mute)', margin: 0, lineHeight: 1.7 }}>
-          全 {EVENTS.length} 件のイベント hero 画像を差し替え可能。<br />
-          画像 URL は <code>/v2/articles/kk-XX.webp</code> 等の内部パスを指定してください。
-          空欄で保存すると override が削除され、自動選択（KKプール）に戻ります。
-        </p>
-      </div>
+      <PageHeader
+        title="イベント画像編集"
+        subtitle={`全 ${EVENTS.length} 件のイベント hero 画像を差し替え可能`}
+      />
+
+      <p style={{ fontSize: 13, color: 'var(--ink-600)', margin: '0 0 18px', lineHeight: 1.7 }}>
+        画像 URL は{' '}
+        <Mono color="var(--ink-700)">/v2/articles/kk-XX.webp</Mono> 等の内部パスを指定してください。
+        空欄で保存すると override が削除され、自動選択（KKプール）に戻ります。
+      </p>
 
       <div
         style={{
           marginBottom: 20,
           padding: '12px 16px',
-          background: 'var(--paper-card)',
-          border: '1px solid var(--line)',
-          borderRadius: 'var(--radius-md)',
+          background: 'var(--bg-subtle)',
+          border: '1px solid var(--border-faint)',
+          borderRadius: 'var(--r-lg)',
           fontSize: 12,
-          color: 'var(--ink-sub)',
+          color: 'var(--ink-600)',
           lineHeight: 1.7,
         }}
       >
-        💡 ヒント: 使える KKプール画像は <code>/v2/articles/kk-01.webp</code> 〜{' '}
-        <code>/v2/articles/kk-45.webp</code>（45枚）です。
-        他に <code>/v2/events/show-museum.webp</code> や{' '}
-        <code>/v2/events/seasonal-summer.webp</code> 等の D系画像、
-        <code>/photos/...</code> 配下のアップロード画像も指定可能。
+        ヒント: 使える KKプール画像は{' '}
+        <Mono color="var(--ink-700)">/v2/articles/kk-01.webp</Mono> 〜{' '}
+        <Mono color="var(--ink-700)">/v2/articles/kk-45.webp</Mono>（45枚）です。
+        他に <Mono color="var(--ink-700)">/v2/events/show-museum.webp</Mono> や{' '}
+        <Mono color="var(--ink-700)">/v2/events/seasonal-summer.webp</Mono> 等の D系画像、
+        <Mono color="var(--ink-700)">/photos/...</Mono> 配下のアップロード画像も指定可能。
       </div>
 
       <EventImagesClient rows={rows} />
 
-      <div
-        style={{
-          marginTop: 40,
-          padding: 20,
-          background: 'var(--paper-card)',
-          border: '1px solid var(--line)',
-          borderRadius: 'var(--radius-md)',
-        }}
-      >
-        <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 16, margin: '0 0 8px' }}>関連</h3>
-        <ul style={{ margin: 0, paddingLeft: 20, fontSize: 13, lineHeight: 1.95 }}>
-          <li><Link href="/admin/events">イベント計測ダッシュボード（GA4）</Link></li>
-          <li><Link href="/admin">管理ダッシュボード</Link></li>
-        </ul>
+      <div style={{ marginTop: 40 }}>
+        <Card title="関連">
+          <ul
+            style={{
+              margin: 0,
+              padding: '4px 18px 4px 38px',
+              fontSize: 13,
+              lineHeight: 2,
+              color: 'var(--ink-700)',
+            }}
+          >
+            <li>
+              <Link href="/admin/events" style={{ color: 'var(--accent)' }}>
+                イベント計測ダッシュボード（GA4）
+              </Link>
+            </li>
+            <li>
+              <Link href="/admin" style={{ color: 'var(--accent)' }}>
+                管理ダッシュボード
+              </Link>
+            </li>
+          </ul>
+        </Card>
       </div>
     </>
   );

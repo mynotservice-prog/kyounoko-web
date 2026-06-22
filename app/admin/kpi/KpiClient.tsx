@@ -137,10 +137,10 @@ export function KpiClient({
   };
 
   const inputStyle: React.CSSProperties = {
-    padding: '7px 10px', border: '1px solid var(--line)', borderRadius: 6, fontSize: 13,
-    fontFamily: 'inherit', background: '#fff', width: '100%',
+    height: 38, padding: '0 12px', border: '1px solid var(--border-strong)', borderRadius: 'var(--r-md)', fontSize: 13,
+    color: 'var(--ink-700)', background: 'var(--bg-surface)', width: '100%',
   };
-  const capStyle: React.CSSProperties = { fontSize: 11, fontWeight: 700, color: 'var(--ink-sub)', marginBottom: 4, display: 'block' };
+  const capStyle: React.CSSProperties = { fontSize: 12, fontWeight: 600, color: 'var(--ink-500)', marginBottom: 7, display: 'block' };
 
   const liveTotal = affiliateTotal({
     moshimo: num(form.moshimo), a8: num(form.a8), rakuten: num(form.rakuten),
@@ -148,7 +148,7 @@ export function KpiClient({
   });
 
   return (
-    <div style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)', padding: 16 }}>
+    <div style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: 'var(--r-lg)', padding: 18 }}>
       {/* 月選択 */}
       <div style={{ display: 'flex', gap: 10, alignItems: 'flex-end', flexWrap: 'wrap', marginBottom: 14 }}>
         <div style={{ width: 140 }}>
@@ -162,17 +162,17 @@ export function KpiClient({
         </div>
         {store.length > 0 && (
           <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', alignItems: 'center' }}>
-            <span style={{ fontSize: 11, color: 'var(--ink-mute)' }}>保存済:</span>
+            <span style={{ fontSize: 11, color: 'var(--ink-400)' }}>保存済:</span>
             {store.slice().reverse().slice(0, 12).map((m) => (
               <button
                 key={m.month}
                 type="button"
                 onClick={() => loadMonth(m.month)}
                 style={{
-                  fontSize: 11, padding: '3px 8px', borderRadius: 999, cursor: 'pointer',
-                  border: '1px solid var(--line)',
-                  background: m.month === form.month ? 'var(--clay-soft, #f7ede6)' : '#fff',
-                  color: m.month === form.month ? 'var(--clay-deep)' : 'var(--ink-sub)',
+                  fontSize: 11, padding: '4px 10px', borderRadius: 999, cursor: 'pointer',
+                  border: `1px solid ${m.month === form.month ? 'var(--accent-border)' : 'var(--border)'}`,
+                  background: m.month === form.month ? 'var(--accent-tint)' : 'var(--bg-subtle)',
+                  color: m.month === form.month ? 'var(--accent)' : 'var(--ink-600)',
                 }}
               >
                 {monthLabel(m.month)}
@@ -187,7 +187,7 @@ export function KpiClient({
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: 10, marginBottom: 6 }}>
         {AFFILIATE_SOURCES.map((s) => (
           <div key={s.key}>
-            <label style={{ fontSize: 11, color: 'var(--ink-mute)', display: 'block', marginBottom: 3 }}>{s.label}</label>
+            <label style={{ fontSize: 11, color: 'var(--ink-500)', display: 'block', marginBottom: 5 }}>{s.label}</label>
             <input
               type="text"
               inputMode="numeric"
@@ -199,9 +199,9 @@ export function KpiClient({
           </div>
         ))}
       </div>
-      <div style={{ fontSize: 12, color: 'var(--ink-sub)', marginBottom: 14 }}>
-        合計: <strong>¥{liveTotal.toLocaleString()}</strong>
-        <span style={{ fontSize: 11, color: 'var(--ink-mute)', marginLeft: 8 }}>
+      <div style={{ fontSize: 12, color: 'var(--ink-600)', marginBottom: 14 }}>
+        合計: <strong style={{ fontFamily: 'var(--font-mono)', fontVariantNumeric: 'tabular-nums', color: 'var(--ink-900)' }}>¥{liveTotal.toLocaleString()}</strong>
+        <span style={{ fontSize: 11, color: 'var(--ink-400)', marginLeft: 8 }}>
           ※ AdSenseを自動連携している場合、AdSense欄は空でOK（自動値を使用）
         </span>
       </div>
@@ -213,7 +213,7 @@ export function KpiClient({
           <div style={{ display: 'flex', gap: 6 }}>
             <input type="text" inputMode="numeric" value={form.lineFollowers} onChange={(e) => set('lineFollowers', e.target.value)} placeholder={liveLineFollowers != null ? `自動: ${liveLineFollowers}` : '手入力'} style={inputStyle} />
             {liveLineFollowers != null && (
-              <button type="button" onClick={() => set('lineFollowers', String(liveLineFollowers))} style={{ fontSize: 11, padding: '0 8px', border: '1px solid var(--line)', borderRadius: 6, background: '#fff', cursor: 'pointer', whiteSpace: 'nowrap' }}>自動値</button>
+              <button type="button" onClick={() => set('lineFollowers', String(liveLineFollowers))} style={{ fontSize: 11, padding: '0 10px', border: '1px solid var(--border-strong)', borderRadius: 'var(--r-md)', background: 'var(--bg-surface)', color: 'var(--ink-600)', cursor: 'pointer', whiteSpace: 'nowrap' }}>自動値</button>
             )}
           </div>
         </div>
@@ -232,13 +232,13 @@ export function KpiClient({
           type="button"
           onClick={save}
           disabled={saving}
-          style={{ padding: '9px 22px', background: 'var(--ink)', color: '#fff', border: 'none', borderRadius: 6, fontSize: 13, fontWeight: 600, cursor: saving ? 'wait' : 'pointer', opacity: saving ? 0.6 : 1 }}
+          style={{ padding: '9px 16px', background: 'var(--accent)', color: '#fff', border: 'none', borderRadius: 'var(--r-md)', fontSize: 13, fontWeight: 600, cursor: saving ? 'wait' : 'pointer', opacity: saving ? 0.6 : 1 }}
         >
           {saving ? '保存中…' : `${monthLabel(form.month)}を保存`}
         </button>
-        {msg && <span style={{ fontSize: 12, color: 'var(--ink-sub)' }}>{msg}</span>}
+        {msg && <span style={{ fontSize: 12, color: 'var(--ink-600)' }}>{msg}</span>}
       </div>
-      <p style={{ fontSize: 11, color: 'var(--ink-mute)', marginTop: 10, lineHeight: 1.6 }}>
+      <p style={{ fontSize: 11, color: 'var(--ink-400)', marginTop: 10, lineHeight: 1.6 }}>
         保存すると data/metrics-monthly.json に commit され、月次トレンドに蓄積されます。全項目空で保存するとその月は削除されます。
       </p>
     </div>

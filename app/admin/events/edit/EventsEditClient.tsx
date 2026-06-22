@@ -67,20 +67,21 @@ export function EventsEditClient({
       <div style={{ marginBottom: 16 }}>
         <input
           type="search"
-          placeholder="🔍 タイトル / slug / 会場 / カテゴリ / 市区町村 で絞り込み"
+          placeholder="タイトル / slug / 会場 / カテゴリ / 市区町村 で絞り込み"
           value={q}
           onChange={(e) => setQ(e.target.value)}
           style={{
             width: '100%',
-            padding: '10px 14px',
-            border: '1px solid var(--line)',
-            borderRadius: 'var(--radius-md)',
-            fontSize: 14,
-            fontFamily: 'inherit',
-            background: '#fff',
+            height: 38,
+            padding: '0 12px',
+            border: '1px solid var(--border-strong)',
+            borderRadius: 'var(--r-md)',
+            fontSize: 13,
+            color: 'var(--ink-700)',
+            background: 'var(--bg-surface)',
           }}
         />
-        <div style={{ fontSize: 11, color: 'var(--ink-mute)', marginTop: 6 }}>
+        <div style={{ fontSize: 11, color: 'var(--ink-400)', marginTop: 6 }}>
           {filtered.length} / {events.length} 件 · 編集済 {Object.keys(overrides).length} 件
         </div>
       </div>
@@ -173,10 +174,10 @@ function EventRow({
   return (
     <div
       style={{
-        background: 'var(--paper-card)',
-        border: '1px solid var(--line)',
-        borderLeft: hasOverride ? '3px solid var(--clay-deep)' : '1px solid var(--line)',
-        borderRadius: 'var(--radius-md)',
+        background: 'var(--bg-surface)',
+        border: '1px solid var(--border)',
+        borderLeft: hasOverride ? '3px solid var(--accent)' : '1px solid var(--border)',
+        borderRadius: 'var(--r-lg)',
         overflow: 'hidden',
       }}
     >
@@ -200,9 +201,9 @@ function EventRow({
           style={{
             width: 90,
             height: 60,
-            borderRadius: 6,
+            borderRadius: 'var(--r-sm)',
             overflow: 'hidden',
-            background: '#f0eae0',
+            background: 'var(--bg-subtle)',
             flex: 'none',
           }}
         >
@@ -217,20 +218,20 @@ function EventRow({
           />
         </div>
         <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)', marginBottom: 2 }}>
+          <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink-900)', marginBottom: 2 }}>
             {ev.title}
             {hasOverride && (
               <span style={{
                 marginLeft: 8, fontSize: 10, padding: '2px 8px', borderRadius: 999,
-                background: 'var(--clay-soft)', color: 'var(--clay-deep)', fontWeight: 700,
+                background: 'var(--accent-tint)', color: 'var(--accent)', fontWeight: 700,
               }}>編集済</span>
             )}
           </div>
-          <div style={{ fontSize: 11, color: 'var(--ink-mute)', fontFamily: 'monospace' }}>
+          <div style={{ fontSize: 11, color: 'var(--ink-400)', fontFamily: 'var(--font-mono)', fontVariantNumeric: 'tabular-nums' }}>
             {ev.slug} · {ev.category} · {ev.startDate}〜{ev.endDate}
           </div>
         </div>
-        <div style={{ fontSize: 18, color: 'var(--ink-mute)', flex: 'none' }}>
+        <div style={{ fontSize: 13, color: 'var(--ink-400)', flex: 'none' }}>
           {isOpen ? '▲' : '▼'}
         </div>
       </button>
@@ -240,7 +241,7 @@ function EventRow({
         <div
           style={{
             padding: '0 16px 18px',
-            borderTop: '1px solid var(--line)',
+            borderTop: '1px solid var(--border-divider)',
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
             gap: 10,
@@ -266,7 +267,7 @@ function EventRow({
                   gridColumn: isTextarea ? '1 / -1' : 'auto',
                 }}
               >
-                <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--ink-sub)' }}>
+                <span style={{ display: 'block', fontSize: 12, fontWeight: 600, color: 'var(--ink-500)', marginBottom: 7 }}>
                   {FIELD_LABELS[k]}
                 </span>
                 {isTextarea ? (
@@ -276,12 +277,13 @@ function EventRow({
                     placeholder={String(originalStr)}
                     rows={2}
                     style={{
-                      padding: '6px 10px',
-                      border: '1px solid var(--line)',
-                      borderRadius: 6,
-                      fontSize: 12,
-                      fontFamily: 'inherit',
-                      background: '#fff',
+                      padding: '11px 12px',
+                      border: '1px solid var(--border-strong)',
+                      borderRadius: 'var(--r-md)',
+                      fontSize: 13.5,
+                      lineHeight: 1.6,
+                      color: 'var(--ink-700)',
+                      background: 'var(--bg-surface)',
                       resize: 'vertical',
                     }}
                   />
@@ -290,11 +292,13 @@ function EventRow({
                     value={form[k]}
                     onChange={(ev2) => setForm((s) => ({ ...s, [k]: ev2.target.value }))}
                     style={{
-                      padding: '6px 10px',
-                      border: '1px solid var(--line)',
-                      borderRadius: 6,
-                      fontSize: 12,
-                      background: '#fff',
+                      height: 38,
+                      padding: '0 12px',
+                      border: '1px solid var(--border-strong)',
+                      borderRadius: 'var(--r-md)',
+                      fontSize: 13,
+                      color: 'var(--ink-700)',
+                      background: 'var(--bg-surface)',
                     }}
                   >
                     <option value="">（元の値: {String(originalStr)}）</option>
@@ -311,12 +315,14 @@ function EventRow({
                       placeholder={String(originalStr)}
                       list={isHero ? `hero-presets-${ev.slug}` : undefined}
                       style={{
-                        padding: '6px 10px',
-                        border: '1px solid var(--line)',
-                        borderRadius: 6,
-                        fontSize: 12,
-                        fontFamily: isHero ? 'monospace' : 'inherit',
-                        background: '#fff',
+                        height: 38,
+                        padding: '0 12px',
+                        border: '1px solid var(--border-strong)',
+                        borderRadius: 'var(--r-md)',
+                        fontSize: 13,
+                        fontFamily: isHero ? 'var(--font-mono)' : undefined,
+                        color: 'var(--ink-700)',
+                        background: 'var(--bg-surface)',
                       }}
                     />
                     {isHero && (
@@ -347,11 +353,11 @@ function EventRow({
               onClick={save}
               disabled={saving}
               style={{
-                padding: '8px 18px',
-                background: 'var(--ink)',
-                color: '#fff',
                 border: 'none',
-                borderRadius: 6,
+                background: 'var(--accent)',
+                color: '#fff',
+                borderRadius: 'var(--r-md)',
+                padding: '9px 16px',
                 fontSize: 13,
                 fontWeight: 600,
                 cursor: saving ? 'wait' : 'pointer',
@@ -364,12 +370,12 @@ function EventRow({
               href={`/event/${ev.slug}`}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ fontSize: 12, color: 'var(--clay-deep)' }}
+              style={{ fontSize: 12, color: 'var(--accent)' }}
             >
               本番ページを確認 ↗
             </a>
             {msg && (
-              <span style={{ fontSize: 11, color: 'var(--ink-sub)' }}>{msg}</span>
+              <span style={{ fontSize: 11, color: 'var(--ink-600)' }}>{msg}</span>
             )}
           </div>
         </div>

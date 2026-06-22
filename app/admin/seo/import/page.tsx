@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { PageHeader, Card } from '@/components/admin/ui';
 import { ImportClient } from './ImportClient';
 
 export const metadata = {
@@ -9,34 +10,19 @@ export const metadata = {
 export default function SeoImportPage() {
   return (
     <>
-      <div style={{ marginBottom: 24 }}>
-        <h1 style={{ fontFamily: 'var(--font-mincho)', fontSize: 26, margin: '0 0 6px' }}>
-          📥 Search Console データインポート
-        </h1>
-        <p style={{ fontSize: 13, color: 'var(--ink-mute)', margin: 0 }}>
-          Search Consoleの画面からCSVエクスポート → このページに貼り付け → /admin/seo で分析を表示
-        </p>
-      </div>
+      <PageHeader
+        title="Search Console データインポート"
+        subtitle="Search Consoleの画面からCSVエクスポート → このページに貼り付け → /admin/seo で分析を表示"
+      />
 
-      <section
-        style={{
-          background: '#fff',
-          border: '1px solid var(--line)',
-          borderRadius: 'var(--radius-md)',
-          padding: 24,
-          marginBottom: 24,
-        }}
-      >
-        <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, margin: '0 0 12px' }}>
-          手順
-        </h2>
-        <ol style={{ fontSize: 13, lineHeight: 1.95, color: 'var(--ink-sub)', paddingLeft: 20 }}>
+      <Card title="手順" style={{ marginBottom: 24 }} bodyPadding="18px 20px">
+        <ol style={{ fontSize: 13, lineHeight: 1.95, color: 'var(--ink-700)', paddingLeft: 20, margin: 0 }}>
           <li>
             <a
               href="https://search.google.com/search-console/performance/search-analytics"
               target="_blank"
               rel="noopener"
-              style={{ color: 'var(--clay-deep)' }}
+              style={{ color: 'var(--accent)' }}
             >
               Search Console → 検索パフォーマンス
             </a>{' '}
@@ -57,15 +43,15 @@ export default function SeoImportPage() {
           <li>下のテキストエリアに <strong>貼り付け</strong></li>
           <li>「インポート」ボタンを押すと /admin/seo で分析が見られます</li>
         </ol>
-        <p style={{ fontSize: 12, color: 'var(--ink-mute)', marginTop: 12, marginBottom: 0 }}>
+        <p style={{ fontSize: 12, color: 'var(--ink-400)', marginTop: 12, marginBottom: 0 }}>
           ※ データはブラウザのローカルストレージに保存されます。サーバーには送信されません。
         </p>
-      </section>
+      </Card>
 
       <ImportClient />
 
       <div style={{ marginTop: 24 }}>
-        <Link href="/admin/seo" style={{ color: 'var(--clay-deep)', fontSize: 13 }}>
+        <Link href="/admin/seo" style={{ color: 'var(--accent)', fontSize: 13 }}>
           ← /admin/seo に戻る
         </Link>
       </div>

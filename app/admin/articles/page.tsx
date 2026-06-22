@@ -1,7 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
-import Link from 'next/link';
 import { getAllFileArticles } from '@/lib/articles';
 import { AREAS, getAreaName } from '@/lib/area';
 import { ArticlesClient, type ArticleRow } from './ArticlesClient';
@@ -53,33 +52,5 @@ export default function AdminArticles() {
   const categoryOptions = [...new Set(rows.map((r) => r.categoryName).filter(Boolean))].sort();
   const areaOptions = AREAS.filter((a) => a.slug !== 'all').map((a) => ({ slug: a.slug, name: getAreaName(a.slug) }));
 
-  return (
-    <>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
-        <h1 style={{ fontFamily: 'var(--font-mincho)', fontSize: 22, margin: 0 }}>
-          記事一覧
-        </h1>
-        <Link
-          href="/admin/articles/new"
-          style={{
-            marginLeft: 'auto',
-            padding: '8px 18px',
-            background: 'var(--clay)',
-            color: '#fff',
-            borderRadius: 6,
-            fontSize: 12,
-            fontWeight: 600,
-            textDecoration: 'none',
-          }}
-        >
-          ＋ 記事雛形を作成
-        </Link>
-        <div style={{ fontSize: 12, color: 'var(--ink-mute)' }}>
-          更新日降順
-        </div>
-      </div>
-
-      <ArticlesClient rows={rows} categoryOptions={categoryOptions} areaOptions={areaOptions} />
-    </>
-  );
+  return <ArticlesClient rows={rows} categoryOptions={categoryOptions} areaOptions={areaOptions} />;
 }

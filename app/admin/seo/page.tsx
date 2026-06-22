@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import {
   getTopQueries,
   getTopPages,
@@ -8,6 +7,7 @@ import {
   isSearchConsoleConfigured,
   type ScRow,
 } from '@/lib/search-console';
+import { PageHeader, StatCard, StatGrid, Card } from '@/components/admin/ui';
 import { ImportedDataView } from './ImportedDataView';
 
 export const revalidate = 1800; // 30分
@@ -80,37 +80,31 @@ export default async function SeoPage() {
 
   return (
     <>
-      <div style={{ marginBottom: 24 }}>
-        <h1 style={{ fontFamily: 'var(--font-mincho)', fontSize: 26, margin: '0 0 6px' }}>
-          📈 SEO — Search Console
-        </h1>
-        <p style={{ fontSize: 13, color: 'var(--ink-mute)', margin: 0 }}>
-          過去{DAYS}日間のパフォーマンス（クエリ {allQueries.length}件 / ページ {allPages.length}件）
-        </p>
-      </div>
+      <PageHeader
+        title="SEO — Search Console"
+        subtitle={`過去${DAYS}日間のパフォーマンス（クエリ ${allQueries.length}件 / ページ ${allPages.length}件）`}
+      />
 
       <ImportedDataView />
 
       {/* KPI */}
-      <section style={{ marginBottom: 32 }}>
-        <KpiGrid>
-          <Kpi label="総クリック数" value={totalClicks} />
-          <Kpi label="総表示回数" value={totalImpressions} />
-          <Kpi label="平均CTR" value={(avgCtr * 100).toFixed(2)} unit="%" />
-          <Kpi label="平均順位" value={avgPosition.toFixed(1)} unit="位" />
-          <Kpi label="TOP10クエリ" value={top10Queries.length} sub="impr加重" />
-          <Kpi label="改善候補" value={ctrOpportunities.length + pushUpCandidates.length} unit="件" />
-        </KpiGrid>
-      </section>
+      <StatGrid>
+        <StatCard label="総クリック数" value={totalClicks.toLocaleString()} />
+        <StatCard label="総表示回数" value={totalImpressions.toLocaleString()} />
+        <StatCard label="平均CTR" value={`${(avgCtr * 100).toFixed(2)}%`} />
+        <StatCard label="平均順位" value={`${avgPosition.toFixed(1)}位`} />
+        <StatCard label="TOP10クエリ" value={top10Queries.length} sub="impr加重" />
+        <StatCard label="改善候補" value={ctrOpportunities.length + pushUpCandidates.length} sub="件" />
+      </StatGrid>
 
       {/* キッズメニュー特化分析 */}
       <section style={{ marginBottom: 32 }}>
-        <h2 style={SectionH2}>🍽 「キッズメニュー」関連クエリの現状</h2>
+        <h2 style={SectionH2}>「キッズメニュー」関連クエリの現状</h2>
         <div
           style={{
-            background: 'linear-gradient(135deg, rgba(20,147,209,0.05), rgba(201,96,62,0.04))',
-            border: '1px solid var(--line)',
-            borderRadius: 'var(--radius-md)',
+            background: 'var(--bg-surface)',
+            border: '1px solid var(--border)',
+            borderRadius: 'var(--r-lg)',
             padding: 20,
           }}
         >
@@ -121,7 +115,7 @@ export default async function SeoPage() {
             <Mini label="平均順位" value={kidsAvgPosition.toFixed(1)} />
           </div>
           {kidsMenuQueries.length === 0 ? (
-            <p style={{ fontSize: 13, color: 'var(--ink-sub)', margin: 0 }}>
+            <p style={{ fontSize: 13, color: 'var(--ink-700)', margin: 0 }}>
               データなし。「キッズメニュー」関連の流入はまだ発生していない可能性あり。
               → 専用記事＋データセットで攻める価値あり。
             </p>
@@ -134,15 +128,22 @@ export default async function SeoPage() {
       {/* 順位分布 */}
       <section style={{ marginBottom: 32 }}>
         <h2 style={SectionH2}>順位帯の分布</h2>
-        <div style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)', padding: 20 }}>
+        <div
+          style={{
+            background: 'var(--bg-surface)',
+            border: '1px solid var(--border)',
+            borderRadius: 'var(--r-lg)',
+            padding: 20,
+          }}
+        >
           <Histogram
             data={positionDistribution.map((d) => ({
               label: `${d.label}（${d.count}クエリ）`,
               count: d.impressions,
             }))}
-            color="var(--clay)"
+            color="var(--accent)"
           />
-          <p style={{ fontSize: 11, color: 'var(--ink-mute)', marginTop: 12 }}>
+          <p style={{ fontSize: 11, color: 'var(--ink-400)', marginTop: 12 }}>
             棒は表示回数。11-20位帯が大きいほど「あと一押しでTOP10」の余地大。
           </p>
         </div>
@@ -150,14 +151,14 @@ export default async function SeoPage() {
 
       {/* TOP10獲得クエリ */}
       <section style={{ marginBottom: 32 }}>
-        <h2 style={SectionH2}>🏆 TOP10 獲得クエリ（クリック上位30）</h2>
+        <h2 style={SectionH2}>TOP10 獲得クエリ（クリック上位30）</h2>
         <QueryTable rows={top10Queries} />
       </section>
 
       {/* CTR改善候補 */}
       <section style={{ marginBottom: 32 }}>
-        <h2 style={SectionH2}>⚠️ CTR改善ターゲット（順位TOP20×表示100+×CTR3%以下）</h2>
-        <p style={{ fontSize: 13, color: 'var(--ink-mute)', marginBottom: 12 }}>
+        <h2 style={SectionH2}>CTR改善ターゲット（順位TOP20×表示100+×CTR3%以下）</h2>
+        <p style={{ fontSize: 13, color: 'var(--ink-400)', marginBottom: 12 }}>
           順位はそれなりに取れているのにクリックされていないクエリ。タイトル/メタディスクリプション最適化で大幅にPV増の余地。
         </p>
         <QueryTable rows={ctrOpportunities} highlightCtr />
@@ -165,8 +166,8 @@ export default async function SeoPage() {
 
       {/* 順位押上げ候補 */}
       <section style={{ marginBottom: 32 }}>
-        <h2 style={SectionH2}>🚀 順位押上げ候補（8-20位×表示50+）</h2>
-        <p style={{ fontSize: 13, color: 'var(--ink-mute)', marginBottom: 12 }}>
+        <h2 style={SectionH2}>順位押上げ候補（8-20位×表示50+）</h2>
+        <p style={{ fontSize: 13, color: 'var(--ink-400)', marginBottom: 12 }}>
           記事の充実・内部リンク強化でTOP10入りを狙えるクエリ。
         </p>
         <QueryTable rows={pushUpCandidates} highlightPosition />
@@ -174,7 +175,7 @@ export default async function SeoPage() {
 
       {/* TOPページ */}
       <section style={{ marginBottom: 32 }}>
-        <h2 style={SectionH2}>📄 ページ別 流入TOP30</h2>
+        <h2 style={SectionH2}>ページ別 流入TOP30</h2>
         <PageTable rows={allPages.slice(0, 30)} />
       </section>
     </>
@@ -183,22 +184,30 @@ export default async function SeoPage() {
 
 function Setup() {
   return (
-    <div style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)', padding: 24 }}>
-      <h1 style={{ fontFamily: 'var(--font-mincho)', fontSize: 22, margin: '0 0 12px' }}>
-        📈 SEO Dashboard — セットアップが必要
+    <div
+      style={{
+        background: 'var(--bg-surface)',
+        border: '1px solid var(--border)',
+        borderRadius: 'var(--r-lg)',
+        padding: 24,
+      }}
+    >
+      <h1 style={{ fontSize: 21, fontWeight: 700, color: 'var(--ink-900)', margin: '0 0 12px' }}>
+        SEO Dashboard — セットアップが必要
       </h1>
-      <p style={{ fontSize: 13, color: 'var(--ink-sub)', lineHeight: 1.85 }}>
+      <p style={{ fontSize: 13, color: 'var(--ink-700)', lineHeight: 1.85 }}>
         Search Console APIと連携するには以下の環境変数が必要です。
       </p>
       <pre
         style={{
-          background: '#1f1a14',
-          color: '#f4ddcf',
+          background: 'var(--bg-subtle)',
+          color: 'var(--ink-700)',
           padding: 16,
-          borderRadius: 8,
+          borderRadius: 'var(--r-md)',
           fontSize: 12,
           overflow: 'auto',
           lineHeight: 1.7,
+          fontFamily: 'var(--font-mono)',
         }}
       >
 {`# Vercel ダッシュボード → Settings → Environment Variables
@@ -211,10 +220,8 @@ SEARCH_CONSOLE_SITE_URL=sc-domain:kyounoko.jp
 # またはURL prefix形式の場合:
 # SEARCH_CONSOLE_SITE_URL=https://kyounoko.jp/`}
       </pre>
-      <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 16, marginTop: 20 }}>
-        手順
-      </h2>
-      <ol style={{ fontSize: 13, lineHeight: 1.85, color: 'var(--ink-sub)' }}>
+      <h2 style={{ fontSize: 16, fontWeight: 700, color: 'var(--ink-900)', marginTop: 20 }}>手順</h2>
+      <ol style={{ fontSize: 13, lineHeight: 1.85, color: 'var(--ink-700)' }}>
         <li>
           GA4で使ってるService Accountの<strong>メールアドレス</strong>をコピー
           （JSON内の <code>client_email</code>）
@@ -224,7 +231,7 @@ SEARCH_CONSOLE_SITE_URL=sc-domain:kyounoko.jp
             href="https://search.google.com/search-console/users"
             target="_blank"
             rel="noopener"
-            style={{ color: 'var(--clay-deep)' }}
+            style={{ color: 'var(--accent)' }}
           >
             Search Console → 設定 → ユーザーと権限
           </a>{' '}
@@ -236,7 +243,7 @@ SEARCH_CONSOLE_SITE_URL=sc-domain:kyounoko.jp
         <li>再デプロイ（または30分待ってrevalidate）</li>
         <li>このページをリロード</li>
       </ol>
-      <p style={{ fontSize: 12, color: 'var(--ink-mute)', marginTop: 16 }}>
+      <p style={{ fontSize: 12, color: 'var(--ink-400)', marginTop: 16 }}>
         ※ 既存 <code>GOOGLE_APPLICATION_CREDENTIALS_JSON</code> はそのまま流用可能（権限スコープが Read-only として追加されるだけ）。
       </p>
     </div>
@@ -244,57 +251,26 @@ SEARCH_CONSOLE_SITE_URL=sc-domain:kyounoko.jp
 }
 
 const SectionH2: React.CSSProperties = {
-  fontFamily: 'var(--font-mincho)',
-  fontSize: 18,
+  fontSize: 14,
+  fontWeight: 700,
+  color: 'var(--ink-900)',
   margin: '0 0 12px',
-  fontWeight: 600,
 };
-
-function KpiGrid({ children }: { children: React.ReactNode }) {
-  return (
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-        gap: 12,
-      }}
-    >
-      {children}
-    </div>
-  );
-}
-
-function Kpi({ label, value, unit, sub }: { label: string; value: number | string; unit?: string; sub?: string }) {
-  return (
-    <div
-      style={{
-        background: '#fff',
-        border: '1px solid var(--line)',
-        borderRadius: 'var(--radius-md)',
-        padding: '14px 16px',
-      }}
-    >
-      <div style={{ fontSize: 11, color: 'var(--ink-mute)', textTransform: 'uppercase', letterSpacing: '.04em', marginBottom: 4 }}>
-        {label}
-      </div>
-      <div style={{ display: 'flex', alignItems: 'baseline', gap: 4 }}>
-        <span style={{ fontSize: 26, fontWeight: 700, color: 'var(--ink)' }}>
-          {typeof value === 'number' ? value.toLocaleString() : value}
-        </span>
-        {unit && <span style={{ fontSize: 12, color: 'var(--ink-sub)' }}>{unit}</span>}
-      </div>
-      {sub && <div style={{ fontSize: 11, color: 'var(--ink-mute)', marginTop: 2 }}>{sub}</div>}
-    </div>
-  );
-}
 
 function Mini({ label, value }: { label: string; value: number | string }) {
   return (
     <div>
-      <div style={{ fontSize: 10, color: 'var(--ink-mute)', textTransform: 'uppercase', letterSpacing: '.04em' }}>
-        {label}
-      </div>
-      <div style={{ fontSize: 20, fontWeight: 700, color: 'var(--ink)' }}>
+      <div style={{ fontSize: 12, color: 'var(--ink-500)', fontWeight: 500 }}>{label}</div>
+      <div
+        style={{
+          fontFamily: 'var(--font-mono)',
+          fontSize: 20,
+          fontWeight: 600,
+          color: 'var(--ink-900)',
+          fontVariantNumeric: 'tabular-nums',
+          marginTop: 4,
+        }}
+      >
         {typeof value === 'number' ? value.toLocaleString() : value}
       </div>
     </div>
@@ -307,8 +283,8 @@ function Histogram({ data, color }: { data: { label: string; count: number }[]; 
     <div style={{ display: 'grid', gap: 10 }}>
       {data.map((d) => (
         <div key={d.label} style={{ display: 'grid', gridTemplateColumns: '180px 1fr 80px', alignItems: 'center', gap: 10 }}>
-          <div style={{ fontSize: 12, color: 'var(--ink-sub)' }}>{d.label}</div>
-          <div style={{ background: 'var(--paper-deep)', height: 22, borderRadius: 4, overflow: 'hidden' }}>
+          <div style={{ fontSize: 12, color: 'var(--ink-700)' }}>{d.label}</div>
+          <div style={{ background: 'var(--bg-subtle)', height: 22, borderRadius: 'var(--r-sm)', overflow: 'hidden' }}>
             <div
               style={{
                 width: `${(d.count / max) * 100}%`,
@@ -317,7 +293,15 @@ function Histogram({ data, color }: { data: { label: string; count: number }[]; 
               }}
             />
           </div>
-          <div style={{ fontSize: 12, color: 'var(--ink-sub)', textAlign: 'right' }}>
+          <div
+            style={{
+              fontSize: 12,
+              color: 'var(--ink-700)',
+              textAlign: 'right',
+              fontFamily: 'var(--font-mono)',
+              fontVariantNumeric: 'tabular-nums',
+            }}
+          >
             {d.count.toLocaleString()}
           </div>
         </div>
@@ -337,16 +321,32 @@ function QueryTable({
 }) {
   if (rows.length === 0) {
     return (
-      <div style={{ padding: 20, background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)', color: 'var(--ink-mute)', fontSize: 13 }}>
+      <div
+        style={{
+          padding: 20,
+          background: 'var(--bg-surface)',
+          border: '1px solid var(--border)',
+          borderRadius: 'var(--r-lg)',
+          color: 'var(--ink-400)',
+          fontSize: 13,
+        }}
+      >
         データなし
       </div>
     );
   }
   return (
-    <div style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)', overflow: 'auto' }}>
-      <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 12, minWidth: 700 }}>
+    <div
+      style={{
+        background: 'var(--bg-surface)',
+        border: '1px solid var(--border)',
+        borderRadius: 'var(--r-lg)',
+        overflow: 'auto',
+      }}
+    >
+      <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, minWidth: 700 }}>
         <thead>
-          <tr style={{ background: 'var(--paper-deep)' }}>
+          <tr>
             <Th>クエリ</Th>
             <Th align="right">クリック</Th>
             <Th align="right">表示</Th>
@@ -356,14 +356,14 @@ function QueryTable({
         </thead>
         <tbody>
           {rows.map((r, i) => (
-            <tr key={i} style={{ borderTop: '1px solid var(--line)' }}>
+            <tr key={i}>
               <Td>{r.keys.join(' / ')}</Td>
-              <Td align="right">{r.clicks.toLocaleString()}</Td>
-              <Td align="right">{r.impressions.toLocaleString()}</Td>
-              <Td align="right" tone={highlightCtr && r.ctr <= 0.03 ? 'warn' : undefined}>
+              <Td align="right" numeric>{r.clicks.toLocaleString()}</Td>
+              <Td align="right" numeric>{r.impressions.toLocaleString()}</Td>
+              <Td align="right" numeric tone={highlightCtr && r.ctr <= 0.03 ? 'warn' : undefined}>
                 {(r.ctr * 100).toFixed(2)}%
               </Td>
-              <Td align="right" tone={highlightPosition && r.position >= 8 && r.position <= 20 ? 'warn' : undefined}>
+              <Td align="right" numeric tone={highlightPosition && r.position >= 8 && r.position <= 20 ? 'warn' : undefined}>
                 {r.position.toFixed(1)}
               </Td>
             </tr>
@@ -377,16 +377,32 @@ function QueryTable({
 function PageTable({ rows }: { rows: ScRow[] }) {
   if (rows.length === 0) {
     return (
-      <div style={{ padding: 20, background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)', color: 'var(--ink-mute)', fontSize: 13 }}>
+      <div
+        style={{
+          padding: 20,
+          background: 'var(--bg-surface)',
+          border: '1px solid var(--border)',
+          borderRadius: 'var(--r-lg)',
+          color: 'var(--ink-400)',
+          fontSize: 13,
+        }}
+      >
         データなし
       </div>
     );
   }
   return (
-    <div style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)', overflow: 'auto' }}>
-      <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 12, minWidth: 700 }}>
+    <div
+      style={{
+        background: 'var(--bg-surface)',
+        border: '1px solid var(--border)',
+        borderRadius: 'var(--r-lg)',
+        overflow: 'auto',
+      }}
+    >
+      <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, minWidth: 700 }}>
         <thead>
-          <tr style={{ background: 'var(--paper-deep)' }}>
+          <tr>
             <Th>ページ</Th>
             <Th align="right">クリック</Th>
             <Th align="right">表示</Th>
@@ -399,21 +415,21 @@ function PageTable({ rows }: { rows: ScRow[] }) {
             const url = r.keys[0] ?? '';
             const path = url.replace(/^https?:\/\/[^/]+/, '') || '/';
             return (
-              <tr key={i} style={{ borderTop: '1px solid var(--line)' }}>
+              <tr key={i}>
                 <Td>
                   <a
                     href={url}
                     target="_blank"
                     rel="noopener"
-                    style={{ color: 'var(--ink)', textDecoration: 'none', fontSize: 12 }}
+                    style={{ color: 'var(--ink-900)', textDecoration: 'none', fontSize: 13 }}
                   >
                     {path.length > 60 ? path.slice(0, 60) + '…' : path}
                   </a>
                 </Td>
-                <Td align="right">{r.clicks.toLocaleString()}</Td>
-                <Td align="right">{r.impressions.toLocaleString()}</Td>
-                <Td align="right">{(r.ctr * 100).toFixed(2)}%</Td>
-                <Td align="right">{r.position.toFixed(1)}</Td>
+                <Td align="right" numeric>{r.clicks.toLocaleString()}</Td>
+                <Td align="right" numeric>{r.impressions.toLocaleString()}</Td>
+                <Td align="right" numeric>{(r.ctr * 100).toFixed(2)}%</Td>
+                <Td align="right" numeric>{r.position.toFixed(1)}</Td>
               </tr>
             );
           })}
@@ -428,10 +444,12 @@ function Th({ children, align = 'left' }: { children: React.ReactNode; align?: '
     <th
       style={{
         textAlign: align,
-        padding: '10px 14px',
-        fontSize: 12,
+        padding: '9px 14px',
+        fontSize: 11,
         fontWeight: 600,
-        color: 'var(--ink-sub)',
+        color: 'var(--ink-400)',
+        borderBottom: '1px solid var(--border-divider)',
+        background: 'var(--bg-app)',
       }}
     >
       {children}
@@ -439,17 +457,29 @@ function Th({ children, align = 'left' }: { children: React.ReactNode; align?: '
   );
 }
 
-function Td({ children, align = 'left', tone }: { children: React.ReactNode; align?: 'left' | 'right'; tone?: 'warn' }) {
-  const color = tone === 'warn' ? 'var(--clay-deep)' : 'var(--ink)';
+function Td({
+  children,
+  align = 'left',
+  tone,
+  numeric,
+}: {
+  children: React.ReactNode;
+  align?: 'left' | 'right';
+  tone?: 'warn';
+  numeric?: boolean;
+}) {
+  const color = tone === 'warn' ? 'var(--warn-fg)' : 'var(--ink-900)';
   return (
     <td
       style={{
         textAlign: align,
-        padding: '10px 14px',
-        fontSize: 12,
+        padding: '11px 14px',
+        fontSize: 13,
         color,
         fontWeight: tone === 'warn' ? 600 : 400,
-        fontVariantNumeric: 'tabular-nums',
+        borderBottom: '1px solid var(--border-faint)',
+        fontFamily: numeric ? 'var(--font-mono)' : undefined,
+        fontVariantNumeric: numeric ? 'tabular-nums' : undefined,
       }}
     >
       {children}

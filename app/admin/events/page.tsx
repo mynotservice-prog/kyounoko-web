@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { getEventStats, isGA4Configured, type EventStat } from '@/lib/ga4-events';
+import { getEventStats, type EventStat } from '@/lib/ga4-events';
+import { PageHeader, StatCard, StatGrid, Mono } from '@/components/admin/ui';
 
 export const dynamic = 'force-dynamic';
 
@@ -54,102 +55,88 @@ export default async function AdminEventsPage() {
 
   const configured = result.configured;
   const days = configured ? result.days : 7;
-  const totalCount = configured
-    ? Object.values(result.stats).reduce((s, v) => s + v.count, 0)
-    : 0;
-  const activeEventCount = configured
-    ? Object.values(result.stats).filter((s) => s.count > 0).length
-    : 0;
+  const totalCount = configured ? Object.values(result.stats).reduce((s, v) => s + v.count, 0) : 0;
+  const activeEventCount = configured ? Object.values(result.stats).filter((s) => s.count > 0).length : 0;
 
   return (
     <>
-      <div style={{ marginBottom: 24 }}>
-        <h1 style={{ fontFamily: 'var(--font-mincho)', fontSize: 26, margin: '0 0 6px' }}>
-          イベント計測ダッシュボード
-        </h1>
-        <p style={{ fontSize: 13, color: 'var(--ink-mute)', margin: 0 }}>
-          過去{days}日間 · サイト内カスタムイベント {EVENT_DEFS.length}種
-          {configured && (
-            <>
-              {' '}· 合計 <strong style={{ color: 'var(--ink)' }}>{totalCount.toLocaleString()}</strong> 件 ·
-              発火イベント <strong style={{ color: 'var(--ink)' }}>{activeEventCount}</strong>/{EVENT_DEFS.length}
-            </>
-          )}
-        </p>
-      </div>
+      <PageHeader
+        title="Events"
+        subtitle={`GA4 カスタムイベントの発火数（直近${days}日間 · ${EVENT_DEFS.length}種）`}
+      />
 
-      {!configured && (
-        <div
-          style={{
-            marginBottom: 24,
-            padding: '14px 18px',
-            background: 'var(--paper-card)',
-            border: '1px solid var(--line)',
-            borderRadius: 'var(--radius-md)',
-            fontSize: 13,
-            color: 'var(--ink-sub)',
-            lineHeight: 1.7,
-          }}
-        >
-          <strong style={{ color: 'var(--clay-deep)' }}>データ取得未連携</strong> —
-          GA4 Data API の認証情報が未設定のため、件数は表示できません。
-          <code style={{ background: 'var(--paper-deep)', padding: '1px 6px', borderRadius: 3, margin: '0 4px', fontSize: 12 }}>
-            GA4_PROPERTY_ID
-          </code>
-          と
-          <code style={{ background: 'var(--paper-deep)', padding: '1px 6px', borderRadius: 3, margin: '0 4px', fontSize: 12 }}>
-            GOOGLE_APPLICATION_CREDENTIALS_JSON
-          </code>
-          を環境変数に設定してください。
-          {'reason' in result && result.reason && (
-            <div style={{ marginTop: 6, fontSize: 11, color: 'var(--ink-mute)' }}>
-              理由: {result.reason}
-            </div>
-          )}
-        </div>
+      {configured ? (
+        <StatGrid>
+          <StatCard label="総発火数" value={totalCount.toLocaleString('en-US')} sub={`直近${days}日間`} />
+          <StatCard label="発火イベント" value={`${activeEventCount} / ${EVENT_DEFS.length}`} sub="計測中" />
+          <StatCard label="計測種類" value={EVENT_DEFS.length} sub="カスタムイベント" />
+        </StatGrid>
+      ) : (
+        <NotConfiguredNotice reason={'reason' in result ? result.reason : undefined} />
       )}
 
-      <section>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-            gap: 14,
-          }}
-        >
-          {EVENT_DEFS.map((def) => {
-            const stat: EventStat | undefined = configured ? result.stats[def.name] : undefined;
-            return <EventCard key={def.name} def={def} stat={stat} days={days} configured={configured} />;
-          })}
-        </div>
-      </section>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 12 }}>
+        {EVENT_DEFS.map((def) => {
+          const stat: EventStat | undefined = configured ? result.stats[def.name] : undefined;
+          return <EventCard key={def.name} def={def} stat={stat} days={days} configured={configured} />;
+        })}
+      </div>
 
       <div
         style={{
-          marginTop: 40,
-          padding: 20,
-          background: 'var(--paper-card)',
-          border: '1px solid var(--line)',
-          borderRadius: 'var(--radius-md)',
+          marginTop: 28,
+          padding: '16px 18px',
+          background: 'var(--bg-surface)',
+          border: '1px solid var(--border)',
+          borderRadius: 'var(--r-lg)',
         }}
       >
-        <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 16, margin: '0 0 8px' }}>関連</h3>
-        <ul style={{ margin: 0, paddingLeft: 20, fontSize: 13, lineHeight: 1.95 }}>
-          <li><Link href="/admin/insights">記事品質ダッシュボード</Link></li>
-          <li><Link href="/admin">管理ダッシュボード</Link></li>
-        </ul>
-        <p style={{ marginTop: 12, fontSize: 11, color: 'var(--ink-mute)', lineHeight: 1.7 }}>
-          GA4 のカスタムイベント params (例: <code>type</code>, <code>slug</code>) を
-          dimension として参照するには、GA4 管理画面の「カスタム定義」で対応する
-          カスタムディメンションを作成しておく必要があります。未作成の param は
-          上位値が空欄になります。
+        <h3 style={{ fontSize: 13, fontWeight: 600, margin: '0 0 8px', color: 'var(--ink-900)' }}>関連</h3>
+        <div style={{ display: 'flex', gap: 14, fontSize: 13 }}>
+          <Link href="/admin/insights" style={{ color: 'var(--accent)' }}>
+            Insights（記事品質）
+          </Link>
+          <Link href="/admin" style={{ color: 'var(--accent)' }}>
+            ダッシュボード
+          </Link>
+        </div>
+        <p style={{ marginTop: 12, marginBottom: 0, fontSize: 11.5, color: 'var(--ink-400)', lineHeight: 1.7 }}>
+          GA4 のカスタムイベント params（例: <code>type</code>, <code>slug</code>）を dimension
+          として参照するには、GA4 管理画面の「カスタム定義」で対応するカスタムディメンションを作成しておく必要があります。
+          未作成の param は上位値が空欄になります。
         </p>
       </div>
     </>
   );
 }
 
-// ====================== UI ======================
+function NotConfiguredNotice({ reason }: { reason?: string }) {
+  return (
+    <div
+      style={{
+        marginBottom: 22,
+        padding: '14px 18px',
+        background: 'var(--warn-bg)',
+        border: '1px solid #e7d3a8',
+        borderRadius: 'var(--r-lg)',
+        fontSize: 13,
+        color: 'var(--warn-fg)',
+        lineHeight: 1.7,
+      }}
+    >
+      <strong>データ取得未連携</strong> — GA4 Data API の認証情報が未設定のため、件数は表示できません。
+      <code style={{ background: '#fff', padding: '1px 6px', borderRadius: 3, margin: '0 4px', fontSize: 12 }}>
+        GA4_PROPERTY_ID
+      </code>
+      と
+      <code style={{ background: '#fff', padding: '1px 6px', borderRadius: 3, margin: '0 4px', fontSize: 12 }}>
+        GOOGLE_APPLICATION_CREDENTIALS_JSON
+      </code>
+      を環境変数に設定してください。
+      {reason && <div style={{ marginTop: 6, fontSize: 11, color: 'var(--ink-500)' }}>理由: {reason}</div>}
+    </div>
+  );
+}
 
 function EventCard({
   def,
@@ -167,28 +154,19 @@ function EventCard({
   return (
     <div
       style={{
-        background: 'var(--paper-card)',
-        border: '1px solid var(--line)',
-        borderRadius: 'var(--radius-md)',
+        background: 'var(--bg-surface)',
+        border: '1px solid var(--border)',
+        borderRadius: 'var(--r-lg)',
         padding: '14px 16px',
         display: 'flex',
         flexDirection: 'column',
         gap: 8,
-        opacity: dim ? 0.7 : 1,
+        opacity: dim ? 0.65 : 1,
       }}
     >
       <div>
-        <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)', lineHeight: 1.4 }}>
-          {def.jaName}
-        </div>
-        <div
-          style={{
-            fontFamily: 'var(--font-inter), monospace',
-            fontSize: 11,
-            color: 'var(--ink-mute)',
-            marginTop: 2,
-          }}
-        >
+        <div style={{ fontSize: 13.5, fontWeight: 600, color: 'var(--ink-900)', lineHeight: 1.4 }}>{def.jaName}</div>
+        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--ink-400)', marginTop: 2 }}>
           {def.name}
         </div>
       </div>
@@ -196,69 +174,48 @@ function EventCard({
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
         <span
           style={{
-            fontFamily: 'var(--font-mincho), serif',
-            fontSize: 28,
-            fontWeight: 700,
-            color: configured ? 'var(--ink)' : 'var(--ink-mute)',
+            fontFamily: 'var(--font-mono)',
+            fontSize: 26,
+            fontWeight: 600,
+            color: configured ? 'var(--ink-900)' : 'var(--ink-400)',
             fontVariantNumeric: 'tabular-nums',
+            letterSpacing: '-.01em',
           }}
         >
-          {configured ? count.toLocaleString() : '—'}
+          {configured ? count.toLocaleString('en-US') : '—'}
         </span>
-        <span style={{ fontSize: 12, color: 'var(--ink-sub)' }}>件 / {days}日</span>
+        <span style={{ fontSize: 11.5, color: 'var(--ink-400)' }}>件 / {days}日</span>
       </div>
 
-      <div style={{ borderTop: '1px solid var(--line)', paddingTop: 8 }}>
+      <div style={{ borderTop: '1px solid var(--border-divider)', paddingTop: 8 }}>
         {def.primaryParam ? (
           stat && stat.topParams.length > 0 ? (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
               {stat.topParams.map((p) => (
                 <div
                   key={p.label}
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    fontSize: 12,
-                    color: 'var(--ink-sub)',
-                    fontVariantNumeric: 'tabular-nums',
-                  }}
+                  style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, color: 'var(--ink-600)' }}
                 >
-                  <span
-                    style={{
-                      overflow: 'hidden',
-                      textOverflow: 'ellipsis',
-                      whiteSpace: 'nowrap',
-                      maxWidth: '70%',
-                    }}
-                    title={p.label}
-                  >
+                  <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '70%' }} title={p.label}>
                     {p.label}
                   </span>
-                  <span>{p.count.toLocaleString()}</span>
+                  <Mono color="var(--ink-700)">{p.count.toLocaleString('en-US')}</Mono>
                 </div>
               ))}
             </div>
           ) : (
-            <div style={{ fontSize: 11, color: 'var(--ink-mute)' }}>
-              {configured
-                ? count > 0
-                  ? `param=${def.primaryParam} のデータなし (カスタム定義未作成?)`
-                  : `param=${def.primaryParam}`
+            <div style={{ fontSize: 11, color: 'var(--ink-400)' }}>
+              {configured && count > 0
+                ? `param=${def.primaryParam} のデータなし (カスタム定義未作成?)`
                 : `param=${def.primaryParam}`}
             </div>
           )
         ) : (
-          <div style={{ fontSize: 11, color: 'var(--ink-mute)' }}>
-            (param 集計なし)
-          </div>
+          <div style={{ fontSize: 11, color: 'var(--ink-400)' }}>(param 集計なし)</div>
         )}
       </div>
 
-      {def.note && (
-        <div style={{ fontSize: 10, color: 'var(--ink-mute)', lineHeight: 1.5 }}>
-          {def.note}
-        </div>
-      )}
+      {def.note && <div style={{ fontSize: 10.5, color: 'var(--ink-400)', lineHeight: 1.5 }}>{def.note}</div>}
     </div>
   );
 }

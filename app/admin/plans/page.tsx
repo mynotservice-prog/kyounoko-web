@@ -33,14 +33,5 @@ export default function AdminPlans() {
 
   const areaOptions = AREAS.filter((a) => a.slug !== 'all').map((a) => ({ slug: a.slug, name: getAreaName(a.slug) }));
 
-  return (
-    <>
-      <div style={{ display: 'flex', alignItems: 'center', marginBottom: 20 }}>
-        <h1 style={{ fontFamily: 'var(--font-mincho)', fontSize: 22, margin: 0 }}>
-          プラン一覧
-        </h1>
-      </div>
-      <PlansClient rows={rows} areaOptions={areaOptions} />
-    </>
-  );
+  return <PlansClient rows={rows} areaOptions={areaOptions} />;
 }
