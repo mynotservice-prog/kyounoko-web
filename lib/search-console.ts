@@ -144,6 +144,26 @@ export async function getKeywordReport(keyword: string, days = 28, limit = 100):
 }
 
 /**
+ * 特定ページURLのクエリ別内訳（そのページがどのクエリで表示されているか）。
+ * 勝ちページ深掘り（取りこぼしクエリの特定）に使う。
+ */
+export async function getQueriesForPage(page: string, days = 28, limit = 50): Promise<ScRow[]> {
+  const end = new Date();
+  const start = new Date(end.getTime() - days * 86400000);
+  const fmt = (d: Date) => d.toISOString().slice(0, 10);
+  const rows = await querySearchConsole({
+    startDate: fmt(start),
+    endDate: fmt(end),
+    dimensions: ['query'],
+    rowLimit: limit,
+    dimensionFilterGroups: [
+      { filters: [{ dimension: 'page', operator: 'equals', expression: page }] },
+    ],
+  });
+  return rows.sort((a, b) => b.impressions - a.impressions);
+}
+
+/**
  * CTR改善ターゲット候補抽出: 表示が多くてCTRが低いクエリ
  */
 export function findCtrOpportunities(

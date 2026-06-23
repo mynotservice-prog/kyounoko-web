@@ -2,6 +2,7 @@ import {
   getTopQueries,
   getTopPages,
   getKeywordReport,
+  getQueriesForPage,
   findCtrOpportunities,
   findPushUpCandidates,
   isSearchConsoleConfigured,
@@ -69,6 +70,25 @@ export default async function SeoPage() {
       .filter((q) => q.position > r.min && q.position <= r.max)
       .reduce((s, q) => s + q.impressions, 0),
   }));
+
+  // 勝ちページ深掘り: 流入上位ページごとに「取りこぼしクエリ」を抽出。
+  // ページごとに1API呼ぶため上位12ページに制限（revalidate=1800でキャッシュ）。
+  const expandPages = allPages.filter((p) => p.clicks >= 1).slice(0, 12);
+  const perPage = await Promise.all(
+    expandPages.map(async (p) => {
+      const queries = await getQueriesForPage(p.keys[0], DAYS, 50);
+      const push = findPushUpCandidates(queries);
+      const ctrOpp = findCtrOpportunities(queries, {
+        minImpressions: 30,
+        maxCtr: 0.05,
+        maxPosition: 20,
+      });
+      return { page: p, push, ctrOpp };
+    }),
+  );
+  const expandTargets = perPage
+    .filter((x) => x.push.length + x.ctrOpp.length > 0)
+    .sort((a, b) => b.push.length + b.ctrOpp.length - (a.push.length + a.ctrOpp.length));
 
   const kidsTotalClicks = kidsMenuQueries.reduce((s, r) => s + r.clicks, 0);
   const kidsTotalImpressions = kidsMenuQueries.reduce((s, r) => s + r.impressions, 0);
@@ -173,12 +193,143 @@ export default async function SeoPage() {
         <QueryTable rows={pushUpCandidates} highlightPosition />
       </section>
 
+      {/* 勝ちページ深掘り */}
+      <section style={{ marginBottom: 32 }}>
+        <h2 style={SectionH2}>勝ちページ深掘り — ページ別 取りこぼしクエリ（上位{expandPages.length}ページ）</h2>
+        <p style={{ fontSize: 13, color: 'var(--ink-400)', marginBottom: 12 }}>
+          流入上位ページが「8-20位で取りこぼし」または「表示多・CTR低」のクエリ。
+          <strong>量産せず、既存記事をこのクエリに合わせて拡充</strong>するのが最優先の打ち手。
+          <span style={{ marginLeft: 6 }}>種別: 押上=本文拡充で1ページ目／CTR=見出し・タイトル改善。</span>
+        </p>
+        {expandTargets.length === 0 ? (
+          <div
+            style={{
+              padding: 20,
+              background: 'var(--bg-surface)',
+              border: '1px solid var(--border)',
+              borderRadius: 'var(--r-lg)',
+              color: 'var(--ink-400)',
+              fontSize: 13,
+            }}
+          >
+            候補なし（上位ページに取りこぼしクエリが検出されませんでした）
+          </div>
+        ) : (
+          <div style={{ display: 'grid', gap: 16 }}>
+            {expandTargets.map((t, i) => (
+              <PageExpandCard key={i} page={t.page} push={t.push} ctrOpp={t.ctrOpp} />
+            ))}
+          </div>
+        )}
+      </section>
+
       {/* TOPページ */}
       <section style={{ marginBottom: 32 }}>
         <h2 style={SectionH2}>ページ別 流入TOP30</h2>
         <PageTable rows={allPages.slice(0, 30)} />
       </section>
     </>
+  );
+}
+
+function PageExpandCard({
+  page,
+  push,
+  ctrOpp,
+}: {
+  page: ScRow;
+  push: ScRow[];
+  ctrOpp: ScRow[];
+}) {
+  const url = page.keys[0] ?? '';
+  const path = url.replace(/^https?:\/\/[^/]+/, '') || '/';
+
+  // 押上候補とCTR機会を同一クエリでマージし、種別タグを付ける。
+  const map = new Map<string, { row: ScRow; tags: string[] }>();
+  for (const r of push) map.set(r.keys[0], { row: r, tags: ['押上'] });
+  for (const r of ctrOpp) {
+    const e = map.get(r.keys[0]);
+    if (e) e.tags.push('CTR');
+    else map.set(r.keys[0], { row: r, tags: ['CTR'] });
+  }
+  const rows = [...map.values()].sort((a, b) => b.row.impressions - a.row.impressions);
+
+  return (
+    <div
+      style={{
+        background: 'var(--bg-surface)',
+        border: '1px solid var(--border)',
+        borderRadius: 'var(--r-lg)',
+        overflow: 'hidden',
+      }}
+    >
+      <div
+        style={{
+          padding: '12px 16px',
+          borderBottom: '1px solid var(--border-divider)',
+          background: 'var(--bg-app)',
+        }}
+      >
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener"
+          style={{ color: 'var(--ink-900)', fontWeight: 600, fontSize: 13, textDecoration: 'none' }}
+        >
+          {path.length > 70 ? path.slice(0, 70) + '…' : path}
+        </a>
+        <div
+          style={{
+            fontSize: 11,
+            color: 'var(--ink-400)',
+            marginTop: 4,
+            fontFamily: 'var(--font-mono)',
+            fontVariantNumeric: 'tabular-nums',
+          }}
+        >
+          clicks {page.clicks} / impr {page.impressions} / CTR {(page.ctr * 100).toFixed(1)}% / 順位{' '}
+          {page.position.toFixed(1)} ・ 拾うべきクエリ {rows.length}件
+        </div>
+      </div>
+      <div style={{ overflow: 'auto' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, minWidth: 640 }}>
+          <thead>
+            <tr>
+              <Th>クエリ</Th>
+              <Th>種別</Th>
+              <Th align="right">表示</Th>
+              <Th align="right">CTR</Th>
+              <Th align="right">順位</Th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map(({ row, tags }, i) => (
+              <tr key={i}>
+                <Td>{row.keys[0]}</Td>
+                <Td>
+                  <span
+                    style={{
+                      fontSize: 11,
+                      fontWeight: 600,
+                      color: tags.includes('押上') ? 'var(--accent)' : 'var(--warn-fg)',
+                    }}
+                  >
+                    {tags.join('+')}
+                  </span>
+                </Td>
+                <Td align="right" numeric>{row.impressions.toLocaleString()}</Td>
+                <Td align="right" numeric tone={row.ctr <= 0.03 ? 'warn' : undefined}>
+                  {(row.ctr * 100).toFixed(2)}%
+                </Td>
+                <Td align="right" numeric tone={row.position >= 8 && row.position <= 20 ? 'warn' : undefined}>
+                  {row.position.toFixed(1)}
+                </Td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
   );
 }
 
