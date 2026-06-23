@@ -145,8 +145,9 @@ export default async function SpotPage({ params }: Props) {
   };
 
   const enjoyByAgeBlocks = buildEnjoyByAgeBlocks(spot);
-  const crowdAvoidance = buildCrowdAvoidanceText(spot);
-  const accessTips = buildAccessTipsText(spot);
+  // admin で本文を上書きしていればそれを優先、無ければ構造化データから自動生成。
+  const crowdAvoidance = spot.crowdTips ?? buildCrowdAvoidanceText(spot);
+  const accessTips = spot.accessTips ?? buildAccessTipsText(spot);
   const preVisitNotes = buildPreVisitNotes(spot);
 
   // FAQ: 施設固有の上書き（spot.faq）を先頭に、自動生成分を続ける。

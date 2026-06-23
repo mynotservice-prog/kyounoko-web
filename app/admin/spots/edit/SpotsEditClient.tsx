@@ -2,7 +2,12 @@
 
 import React from 'react';
 import { SPOT_CATEGORY_LABEL, type Spot, type AgeTag } from '@/lib/spots';
-import { buildEnjoyByAgeBlocks, buildSpotFaqs } from '@/lib/spot-narratives';
+import {
+  buildEnjoyByAgeBlocks,
+  buildSpotFaqs,
+  buildCrowdAvoidanceText,
+  buildAccessTipsText,
+} from '@/lib/spot-narratives';
 import { spotToV2 } from '@/lib/v2-adapters';
 import type { SpotOverride, SpotOverridesMap } from '@/lib/spot-overrides';
 
@@ -189,6 +194,8 @@ function SpotRow({
     budget: override.budget ?? '',
     reservation: override.reservation ?? '',
     hiddenTip: override.hiddenTip ?? '',
+    crowdTips: override.crowdTips ?? '',
+    accessTips: override.accessTips ?? '',
     nearby: override.nearby ?? '',
     img0: override.images?.[0] ?? override.image ?? '',
     img1: override.images?.[1] ?? '',
@@ -280,6 +287,8 @@ function SpotRow({
       budget: form.budget,
       reservation: form.reservation,
       hiddenTip: form.hiddenTip,
+      crowdTips: form.crowdTips,
+      accessTips: form.accessTips,
       nearby: form.nearby,
       image: '', // 旧フィールドは images に統合（クリア指示）
       // スロット位置を保持する（[0]=hero / [1]=中段 / [2]=下段）。
@@ -414,6 +423,11 @@ function SpotRow({
   const ageDefaults: Partial<Record<AgeTag, string>> = Object.fromEntries(
     buildEnjoyByAgeBlocks(spot).map((b) => [b.age, b.text]),
   );
+
+  // 「混雑を避けるコツ」「アクセスのコツ」の現在表示中の自動文（構造化データから生成）。
+  // placeholder と「現在の文を読み込んで編集」に使う。
+  const crowdTipsDefault = buildCrowdAvoidanceText(spot) ?? '';
+  const accessTipsDefault = buildAccessTipsText(spot) ?? '';
 
   // 本番ページに現在表示されているFAQ（手動faq + 自動生成、同じ質問は手動優先）。
   // 「現在のFAQを読み込んで編集」で、この内容を編集欄に展開できる。
@@ -650,6 +664,17 @@ function SpotRow({
             {field('note', '一言メモ', spot.note, true)}
             {field('hiddenTip', '穴場ポイント', spot.hiddenTip, true)}
             {field('nearby', '近隣セット提案（テキスト）', spot.nearby, true)}
+          </div>
+
+          <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--ink-500)', margin: '16px 0 8px' }}>
+            混雑を避けるコツ・アクセスのコツ
+            <span style={{ fontSize: 10, fontWeight: 400, color: 'var(--ink-400)', marginLeft: 8 }}>
+              空欄なら混雑度・予約・最寄り駅などから自動生成した文を表示。「現在の文を読み込んで編集」で本文を入れて手直しできます。
+            </span>
+          </div>
+          <div style={{ display: 'grid', gap: 10 }}>
+            {field('crowdTips', '混雑を避けるコツ', crowdTipsDefault, true)}
+            {field('accessTips', 'アクセスのコツ', accessTipsDefault, true)}
           </div>
 
           <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--ink-500)', margin: '16px 0 8px' }}>

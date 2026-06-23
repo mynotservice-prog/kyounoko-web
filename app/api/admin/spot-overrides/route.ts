@@ -78,7 +78,9 @@ function sanitizePatch(input: unknown): { patch: SpotOverride; clear: Set<string
       if (k === 'image' && !/^(https?:\/\/|\/)/.test(v)) {
         return { error: 'image は https:// で始まるURLか / で始まるパスを指定してください' };
       }
-      if (v.length > 500) return { error: `field ${k} too long` };
+      // 混雑/アクセスのコツは編集部の解説文（複数文）のため長めに許容。
+      const maxLen = k === 'crowdTips' || k === 'accessTips' ? 1000 : 500;
+      if (v.length > maxLen) return { error: `field ${k} too long` };
       result[k] = v;
     } else if (k === 'images') {
       if (v == null) { clear.add(k); continue; }

@@ -118,6 +118,18 @@ export type Spot = {
     '4-6'?: string;
   };
   /**
+   * 「混雑を避けるコツ」の本文上書き。未指定なら crowdLevel / reservation /
+   * hiddenTip から自動生成（lib/spot-narratives.ts buildCrowdAvoidanceText）。
+   * admin（/admin/spots/edit）から施設ごとに編集できる。
+   */
+  crowdTips?: string;
+  /**
+   * 「アクセスのコツ」の本文上書き。未指定なら nearestStation / walkMinutes /
+   * place / category から自動生成（buildAccessTipsText）。
+   * admin（/admin/spots/edit）から施設ごとに編集できる。
+   */
+  accessTips?: string;
+  /**
    * よくある質問（FAQ）の個別追加・上書き。
    * 指定したものは自動生成のFAQより前に表示する（同じ質問は自動生成側を抑制）。
    * admin から施設固有のQ&A（例:「ペットは入れる？」）を足せる。
