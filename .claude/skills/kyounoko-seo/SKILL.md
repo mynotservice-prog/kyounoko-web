@@ -84,6 +84,16 @@ node scripts/seo-article-audit.mjs --days=90 --csv=/tmp/audit.csv   # 全記事�
 - **検証はCloudflareを経由しないVercelデプロイURL**（`https://kyounoko-xxxx-….vercel.app/article/<slug>`）を curl して `<title>` を確認。本番ドメインはCFキャッシュで旧版が残ることがある。
 - コミット/プッシュは**明示依頼時のみ**（グローバル規約）。
 
+## 7b. 死蔵記事の処理（棚卸し監査の後工程）
+
+`seo-article-audit.mjs` で死蔵（⑦ほぼ無表示）を出したら、**公開60日超**のものだけを真の死蔵として扱う（30日以内は育成待ち）。処理は3パターンに仕分け：
+
+- **noindex化**：負けカテゴリ（today-mawasu/today-nani/narai/yakudatsu/gyouji）×統合先なしの汎用育児ノウハウ。frontmatter `noindex: true` を先頭挿入（`robots:{index:false}` に反映）。AdSense薄コンテンツ対策＋クロール予算を勝ち記事へ。
+- **301統合**：内容が勝ちページに包含される死蔵。チェーン周辺条件フラグメント（`[chain]-omutsu/stroller/baby-chair/rinyushoku-mochikomi/morning-kosodate`）→ `[chain]-kodzure-koryaku`。完全重複ペア（例 `gyu`↔`gyuniku`）も統合。仕組み：`lib/article-redirects.ts` に `{from,to}` 追加→`next.config.ts` の `redirects()` が `/article/` 前置で 301 化。**断片md削除＋削除slugへの内部リンクを統合先へ張替**（301の多段ホップ回避）。
+- **ハブ化（統合≠削除）**：ユニーク内容で実インプレッションがある群（例「いつから」食材16本）は **301削除せず**、早見ハブ記事を新設して内部リンクで束ねる。ヘッド語を取りつつ各記事の長尾を温存。サブテーマ混在時は1ハブに詰め込まない（食材／おでかけ／習い事は別ハブ）。
+
+判断軸：**勝ちページに内容が含まれる→301／汎用で勝てない→noindex／ユニーク長尾あり→ハブ**。
+
 ## 7. 効果測定（次サイクル）
 
 デプロイ2〜4週後に再度 §0 を回し、対象ページのCTR/順位の変化を実数で確認。改善が出た型を §2/§3 に追記して**プレイブックを育てる**。
