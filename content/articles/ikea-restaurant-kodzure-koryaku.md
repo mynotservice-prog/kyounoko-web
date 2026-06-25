@@ -276,6 +276,7 @@ A. 基本OKですが、**スモーランドがない店舗もある**ため、�
 
 ## 関連記事
 
+- [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 - [雨の日の屋内スポット15選（東京）](/article/amenohi-indoor-spots-tokyo-15)
 - [子連れで使える和食チェーン10選](/article/kodzure-washoku-chain-10)
 - [キッズメニュー比較15選（ハブ）](/article/kids-menu-chain-15-hikaku)

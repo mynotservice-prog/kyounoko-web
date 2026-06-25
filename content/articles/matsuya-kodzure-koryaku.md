@@ -196,6 +196,7 @@ legacyHero: /hero-ai/sukiya-kodzure-koryaku.webp
 
 ## 関連記事
 
+- [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 松屋と同じ「牛丼・定食・和食チェーン」で取り分け運用ができるお店をまとめてどうぞ。
 
 **牛丼・定食チェーン攻略**

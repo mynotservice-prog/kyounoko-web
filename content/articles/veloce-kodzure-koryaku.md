@@ -304,6 +304,7 @@ A. **店舗により異なりますが、フリーWi-Fi提供の店舗が増加�
 
 ## 関連記事
 
+- [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 - [コメダ珈琲店子連れ攻略法](/article/komeda-kodzure-koryaku)
 - [ガスト子連れ攻略法](/article/gusto-kodzure-koryaku)
 - [ジョナサン子連れ攻略法](/article/jonathan-kodzure-koryaku)

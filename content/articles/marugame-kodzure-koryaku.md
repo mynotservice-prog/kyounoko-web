@@ -102,6 +102,7 @@ legacyHero: /hero-ai/cat-food-sweet-03.webp
 
 ## 関連記事
 
+- [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 - [はなまるうどんは子連れにラク？にこはなセット・かけ小・セルフ式の段取り](/article/hanamaru-udon-kodzure-koryaku)
 - [うどんチェーン4社 子連れ徹底比較](/article/udon-chain-kodzure-4sha-hikaku)
 - [子連れうどんを安全に楽しむ完全ガイド（長い麺の誤嚥・釜揚げのやけど・つゆの塩分・天ぷら・釜玉の生卵）](/article/kodzure-udon-anzen-kanzen-guide)

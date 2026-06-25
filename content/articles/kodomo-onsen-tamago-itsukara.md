@@ -157,6 +157,7 @@ legacyHero: /hero/food-kitchen-03.webp
 
 ## 関連記事
 
+- [赤ちゃん・子供の食材いつから早見表【月齢別一覧】](/article/kodomo-shokuzai-itsukara-hayami)
 - [離乳食とは｜開始時期・進め方完全ガイド](/article/rinyuushoku-toha-kanzen-guide)
 - [食物アレルギーとは](/article/shokumotsu-allergy-toha-kanzen-guide)
 - [1〜2歳の育児 完全マップ](/article/1-2sai-ikuji-kanzen-map)

@@ -187,6 +187,7 @@ A. どちらもセルフ讃岐うどんで、取り分けやコスパに優れ�
 
 ## 関連記事
 
+- [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 - 同じセルフ讃岐うどんの単独攻略は[丸亀製麺は子連れOK？ベビーカー・キッズうどん・離乳食・取り分けのコツ](/article/marugame-kodzure-koryaku)。
 - うどんチェーンを横断で比べるなら[【2026年版】うどんチェーン4社 子連れ徹底比較](/article/udon-chain-kodzure-4sha-hikaku)、そば含む3チェーン比較は[うどん・そば3チェーン子連れ比較](/article/udon-soba-3chain-kodzure)。
 - 長い麺の誤嚥・釜揚げと熱いつゆのやけど・つゆの塩分・天ぷら・釜玉の生卵を年齢別にまとめた[子連れうどんを安全に楽しむ完全ガイド](/article/kodzure-udon-anzen-kanzen-guide)もどうぞ。

@@ -218,6 +218,7 @@ A. ベルト付きのベビーチェアをソファー席に設置できる店�
 
 ## 関連記事
 
+- [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 ### しゃぶしゃぶ・鍋で読みたい記事（最重要）
 
 - [しゃぶしゃぶチェーン子連れランキング5社](/article/shabushabu-chain-kodzure-ranking-2026-5sha)（温野菜は半個室と料金の明朗さで総合2位）

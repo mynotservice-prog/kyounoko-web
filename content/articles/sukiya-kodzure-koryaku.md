@@ -101,6 +101,7 @@ legacyHero: /hero-ai/cat-food-fruit-02.jpg
 
 ## 関連記事
 
+- [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 - [すき家のおむつ替え台ガイド｜店舗別の有無・授乳室](/article/sukiya-kodzure-koryaku)
 - [サイゼリヤはベビーカーOK？子連れ完全攻略](/article/kodzure-saize-koryaku)
 - [やよい軒の子連れ攻略｜キッズメニュー・離乳食・取り分け](/article/yayoiken-kodzure-koryaku)

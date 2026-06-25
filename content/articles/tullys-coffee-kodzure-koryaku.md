@@ -169,6 +169,7 @@ A. 静かに座って一杯ならタリーズ、キッズドリンクとモバ�
 
 ## 関連記事
 
+- [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 - [カフェチェーン子連れランキング6社｜スタバ・タリーズ・コメダ等を5軸採点](/article/cafe-chain-kodzure-ranking-2026-6sha)
 - [夏のドリンク子連れチェーンランキング5社｜タピオカ・フラペチーノは何歳から](/article/natsu-drink-chain-kodzure-ranking-2026-5sha)
 - [コメダ珈琲店 子連れ完全攻略｜モーニング・取り分け・離乳食](/article/komeda-kodzure-koryaku)

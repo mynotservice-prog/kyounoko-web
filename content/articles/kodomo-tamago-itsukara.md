@@ -221,6 +221,7 @@ A. 3歳以降。新鮮な卵で、ただし免疫が弱い時期は避ける。
 
 ## 関連記事
 
+- [赤ちゃん・子供の食材いつから早見表【月齢別一覧】](/article/kodomo-shokuzai-itsukara-hayami)
 - [食物アレルギーとは](/article/shokumotsu-allergy-toha-kanzen-guide)
 - [離乳食とは｜開始時期・進め方完全ガイド](/article/rinyuushoku-toha-kanzen-guide)
 - [赤ちゃん・子供に牛乳はいつから？](/article/kodomo-gyunyu-itsukara)

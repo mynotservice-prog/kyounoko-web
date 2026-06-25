@@ -105,6 +105,7 @@ legacyHero: /hero-ai/cat-food-kitchen-03.jpg
 
 ## 関連記事
 
+- [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 - [スシローのおむつ替え台ガイド｜店舗別の有無・授乳室](/article/sushiro-kodzure-koryaku)
 - [サイゼリヤはベビーカーOK？子連れ完全攻略](/article/kodzure-saize-koryaku)
 - [くら寿司はベビーカーOK？子連れ完全攻略](/article/kura-sushi-kodzure-koryaku)

@@ -143,6 +143,7 @@ A. 段階的に薄める→麦茶比率を増やす→量を減らす、を1〜2
 
 ## 関連記事
 
+- [赤ちゃん・子供の食材いつから早見表【月齢別一覧】](/article/kodomo-shokuzai-itsukara-hayami)
 - [離乳食とは｜開始時期・進め方完全ガイド](/article/rinyuushoku-toha-kanzen-guide)
 - [子供水筒・麦茶ピッチャー2026](/article/kodomo-suitou-mugicha-pitcher-2026)
 - [赤ちゃん・子供にアイスはいつから？](/article/kodomo-aisu-itsukara)

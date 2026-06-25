@@ -230,6 +230,7 @@ A. 食べ放題は**時間制（100分制が基本）**なので、0-1歳連れ�
 
 ## 関連記事
 
+- [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 ### しゃぶしゃぶ・寿司で読みたい記事（最重要）
 
 - [しゃぶしゃぶチェーン子連れランキング5社](/article/shabushabu-chain-kodzure-ranking-2026-5sha)（ゆず庵はメニュー網羅性で総合3位）

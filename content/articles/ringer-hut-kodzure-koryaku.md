@@ -203,6 +203,7 @@ A. リンガーハットは**ショッピングセンター内やロードサイ
 
 ## 関連記事
 
+- [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 ### 麺類・中華で読みたい記事（最重要）
 
 - [子連れラーメンを安全に楽しむ完全ガイド｜やけど・高塩分・長い麺の誤嚥・トッピング・アレルギー](/article/kodzure-ramen-anzen-kanzen-guide)

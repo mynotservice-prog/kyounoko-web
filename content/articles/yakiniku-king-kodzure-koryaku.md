@@ -222,6 +222,7 @@ A. 焼肉きんぐは公式でアレルゲン情報を提供しており、申�
 
 ## 関連記事
 
+- [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 - [焼肉キングのおむつ替え台ガイド｜ベビールーム・多目的トイレの有無](/article/yakiniku-king-kodzure-koryaku)
 
 ### 焼肉・しゃぶしゃぶで読みたい記事（最重要）

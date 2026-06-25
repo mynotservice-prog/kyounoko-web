@@ -210,6 +210,7 @@ lede: 0〜6歳と行く夏祭りの攻略法を年齢別に。抱っこ紐vs歩�
 
 ## 関連記事
 
+- [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 - [こどもの日のキャラ弁＆飾り5選](/article/kodomo-no-hi-kyaraben)
 - [子連れお花見の完全準備](/article/ohanami-keikaku-junbi)
 - [【2026年版】夏祭り・縁日の屋台グルメ子連れ完全ガイド｜定番15品は何歳から？](/article/natsumatsuri-yatai-gourmet-kodzure-guide)

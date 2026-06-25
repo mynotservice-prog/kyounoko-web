@@ -151,6 +151,7 @@ A. 平日の14時前後がもっとも落ち着きやすい時間帯です。土
 
 ## 関連記事
 
+- [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 - [回転寿司4チェーン子連れ比較｜スシロー・くら・はま・かっぱ8項目](/article/kaiten-sushi-4chain-comparison)
 - [スシローはベビーカーOK？子連れ完全攻略](/article/sushiro-kodzure-koryaku)
 - [くら寿司はベビーカーOK？子連れ完全攻略](/article/kura-sushi-kodzure-koryaku)

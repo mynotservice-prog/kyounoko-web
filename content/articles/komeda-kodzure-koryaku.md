@@ -103,6 +103,7 @@ legacyHero: /hero-ai/cat-home-cozy-01.webp
 
 ## 関連記事
 
+- [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 - [サイゼリヤはベビーカーOK？子連れ完全攻略](/article/kodzure-saize-koryaku)
 - [ガストの子連れ攻略｜キッズメニュー・離乳食・ベビーチェア](/article/gusto-kodzure-koryaku)
 - [スタバの子連れ攻略｜キッズドリンク・モバイルオーダー](/article/starbucks-kodzure-koryaku)

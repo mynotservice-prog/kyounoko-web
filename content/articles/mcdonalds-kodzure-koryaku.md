@@ -103,6 +103,7 @@ legacyHero: /hero-ai/cat-food-japan-02.jpg
 
 ## 関連記事
 
+- [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 - [ケンタッキー（KFC）は子連れOK？キッズメニュー・低アレルゲンチキンセット・骨なしチキンの選び方](/article/kfc-kodzure-koryaku)
 - [モスバーガーは子連れOK？モスワイワイセット・低アレルゲンメニュー・待ち対策](/article/mos-burger-kodzure-koryaku)
 - [サイゼリヤはベビーカーOK？子連れ完全攻略](/article/kodzure-saize-koryaku)

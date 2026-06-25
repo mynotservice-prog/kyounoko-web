@@ -381,6 +381,7 @@ A. **9月までは浴衣もアリ**、10月以降は着物 or 普段着が無難
 
 ## 関連記事
 
+- [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 - [夏祭り 子連れ攻略ガイド](/article/natsumatsuri-kodzure-koryaku)
 - [紅葉スポット関東子連れ10選](/article/kouyou-spots-kanto-koduzure)
 - [ハロウィン仮装・飾り15アイデア](/article/halloween-kasou-junbi)

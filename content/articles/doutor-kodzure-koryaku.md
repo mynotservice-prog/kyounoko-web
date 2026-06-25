@@ -193,6 +193,7 @@ A. 安さ・テイクアウト・短時間ならドトール、席間広め＋�
 
 ## 関連記事
 
+- [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 - [カフェチェーン子連れランキング6社｜スタバ・タリーズ・ドトール・コメダ等を5軸採点](/article/cafe-chain-kodzure-ranking-2026-6sha)
 - [カフェ3チェーン子連れ比較｜コメダ・上島珈琲・星乃8項目早見表](/article/cafe-3chain-kodzure-hikaku)
 - [コメダ珈琲店 子連れ完全攻略｜モーニング・取り分け・離乳食](/article/komeda-kodzure-koryaku)
