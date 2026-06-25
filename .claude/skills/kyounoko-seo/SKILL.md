@@ -12,6 +12,7 @@ description: kyounoko-web のデータ駆動SEO作業。GSC実データ分析→
 ```bash
 node scripts/gsc-report.mjs                       # 直近28日 vs 前28日の一括レポート
 node scripts/gsc-report.mjs --days=90 --json=/tmp/gsc.json   # 期間変更＋生データ保存
+node scripts/seo-article-audit.mjs --days=90 --csv=/tmp/audit.csv   # 全記事×GSCの棚卸し監査
 ```
 - 認証は `credentials/google-indexing.json`（IndexNow用の読み取り専用SA `kyounoko-readonly@` がGSC **owner** 権限を持つ）を流用。本番envは不要。詳細は memory [[kyounoko-gsc-local-access]]。
 - **GA4はローカル不可**（property IDが本番env専用）。PV/アフィ成果は本番 `/admin/kpi` で確認。
@@ -28,6 +29,13 @@ node scripts/gsc-report.mjs --days=90 --json=/tmp/gsc.json   # 期間変更＋�
 | pos12以下 × imp高 が**無い** | 記事のある領域は上位＝質は十分 | **量産は不要**。CTRとカニバリに集中 |
 
 > kyounoko の流入主力は「**チェーン店 × 子連れ条件**（キッズメニュー/離乳食/ベビーカー/ベビーチェア/授乳/取り分け）」。勝ち筋の正体は memory [[kyounoko-seo-winning-pattern]] / [[kyounoko-seo-breakout-2026-06]]。
+
+### 良い記事 vs 悪い記事の差（2026-06 棚卸し監査の結論）
+1,090本中 **69本(6%)が90%のクリック、820本(75%)は表示ゼロの死蔵**。差の主因は順に：
+1. **トピック（検索意図の選定）＝最大**。勝つ＝「今すぐ行動（外食/おでかけ）×固有名詞（チェーン名）×子連れ条件」（today-doko 勝率14%・kodzure/kids-menu）。負ける＝汎用育児ノウハウ/発達/「いつから」系（today-mawasu 勝率1%・itsukara 勝率1%）＝大手/公的に権威で負け＆収益導線なし。
+2. **タイトルの型**（疑問形フック 勝ち36%/死蔵17%、年号 88%/42%）。
+3. **本文長はほぼ無関係**（勝ち4,551字/死蔵4,013字）。トピックを外すと何字書いても死蔵＝量産が無効である数値的証拠。
+→ 新規・改善は「勝てるトピックか」を最初に問う。死蔵の月齢別マイクロ記事群（`1sai-X`/`2sai-X`/`3-6sai-X`等）はピラー統合 or noindex で品質評価を勝ち記事に集中。
 
 ## 2. 勝ちタイトルのパターン（上位・人気記事から学んだ型）
 
