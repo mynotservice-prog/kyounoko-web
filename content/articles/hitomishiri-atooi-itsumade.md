@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: hitomishiri-atooi-itsumade
 title: 人見知り・後追いはいつまで？原因と対応・ピークの乗り越え方【0〜3歳】
 metaDescription: >-

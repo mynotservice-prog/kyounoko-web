@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomochalle-vs-smile-zemi-hikaku
 title: こどもちゃれんじ vs スマイルゼミ 完全比較【2026年版】｜料金・教材・続けやすさで選ぶ
 metaDescription: >-

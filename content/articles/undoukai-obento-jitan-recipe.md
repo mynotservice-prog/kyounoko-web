@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: undoukai-obento-jitan-recipe
 title: 運動会お弁当8レシピ【2-6歳】時短と見映え両立
 metaDescription: >-

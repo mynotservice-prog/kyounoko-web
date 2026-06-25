@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: 1-2sai-ikuji-kanzen-map
 title: 1〜2歳の育児 完全マップ｜発達・イヤイヤ期・言葉・トイトレ・保育園準備まとめ【保存版】
 metaDescription: >-

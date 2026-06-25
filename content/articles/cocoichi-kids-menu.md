@@ -115,8 +115,8 @@ CoCo壱のお子様カレー（ハッピーカレー）は、**甘口・適量�
 ## 関連記事
 
 - [CoCo壱 子連れ攻略完全ガイド](/article/cocoichi-kodzure-koryaku)
-- [CoCo壱 ベビーチェア](/article/cocoichi-baby-chair)
-- [CoCo壱 ベビーカー入店](/article/cocoichi-stroller)
+- [CoCo壱 ベビーチェア](/article/cocoichi-kodzure-koryaku)
+- [CoCo壱 ベビーカー入店](/article/cocoichi-kodzure-koryaku)
 - [キッズメニュー比較15チェーン](/article/kids-menu-chain-15-hikaku)
 - [子連れ和食チェーン10選](/article/kodzure-washoku-chain-10)
 

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: tsuushin-kyouzai-hikaku
 # old: 幼児通信教材3社比較【2-6歳】続かない悩みを解決
 title: 【2026年最新】幼児通信教材3社比較【2-6歳】続く・続かない判定表

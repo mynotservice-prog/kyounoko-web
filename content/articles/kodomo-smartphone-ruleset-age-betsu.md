@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-smartphone-ruleset-age-betsu
 title: スマホ・YouTubeルール年齢別｜0〜6歳の視聴時間と内容の約束20
 metaDescription: >-

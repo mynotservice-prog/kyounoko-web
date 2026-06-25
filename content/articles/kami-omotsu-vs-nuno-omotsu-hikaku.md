@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kami-omotsu-vs-nuno-omotsu-hikaku
 title: 紙オムツ vs 布オムツ 完全比較【2026年版】｜コスト・手間・赤ちゃんへの影響
 metaDescription: >-

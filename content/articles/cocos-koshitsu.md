@@ -103,7 +103,7 @@ A. 半個室＝パーテーション仕切りで天井オープン、個室＝�
 ## 関連記事
 
 - [ココス 子連れ攻略完全ガイド](/article/cocos-kodzure-koryaku)
-- [ココス ベビーチェア](/article/cocos-baby-chair)
+- [ココス ベビーチェア](/article/cocos-kodzure-koryaku)
 - [ココス キッズメニュー](/article/cocos-kids-menu)
 - [ファミレス子連れランキング2026](/article/famires-kodzure-ranking-2026-10sen)
 - [0歳育児の完全マップ](/article/0sai-ikuji-kanzen-map)

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: shougakkou-nyugaku-junbi-kanzen-list
 title: 【2026年】小学校入学準備完全リスト｜ランドセル・学用品・生活習慣・3月までのスケジュール
 metaDescription: >-

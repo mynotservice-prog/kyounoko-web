@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: hoikuen-vs-youchien-hikaku
 title: 保育園 vs 幼稚園 完全比較【2026年版】｜共働き家庭・専業家庭の選び方
 metaDescription: >-

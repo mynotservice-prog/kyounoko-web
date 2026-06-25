@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: hitori-hamigaki-nansai-kara
 # old: ひとりで歯磨き何歳から？仕上げ磨き卒業の目安と進め方
 title: ひとり歯磨き何歳から？仕上げ磨き卒業10歳までの5段階

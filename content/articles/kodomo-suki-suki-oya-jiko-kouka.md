@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-suki-suki-oya-jiko-kouka
 title: 子どもの自己肯定感が上がる声かけ10選｜今日から使える魔法の言葉
 metaDescription: >-

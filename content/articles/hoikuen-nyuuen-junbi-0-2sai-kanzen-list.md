@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: hoikuen-nyuuen-junbi-0-2sai-kanzen-list
 title: 【2026年】保育園入園準備 0〜2歳 完全リスト｜必需品・お名前付け・慣らし保育の乗り越え方
 metaDescription: >-

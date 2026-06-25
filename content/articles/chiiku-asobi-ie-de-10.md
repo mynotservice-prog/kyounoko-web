@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: chiiku-asobi-ie-de-10
 title: 家でできる知育遊び10選｜1〜3歳の指先・記憶力・考える力を育てる【保存版】
 metaDescription: >-

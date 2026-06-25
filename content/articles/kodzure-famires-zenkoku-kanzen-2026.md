@@ -768,7 +768,7 @@ A. **専用ベビーカー置き場を持つファミレスはほぼありませ
 - [【2026年版】子連れで使えるファミレスTOP10ランキング](/article/famires-kodzure-ranking-2026-10sen)
 - [子連れOKファミレス王道15選](/article/kodzure-famires-15sen)
 - [子連れOKチェーン店のキッズメニュー比較15選](/article/kids-menu-chain-15-hikaku)
-- [ガストのベビーチェア完全ガイド](/article/gusto-baby-chair)
+- [ガストのベビーチェア完全ガイド](/article/gusto-kodzure-koryaku)
 - [サイゼリヤ 0-1歳ママのリアルレビュー](/article/saizeriya-baby-real-voices)
 - [ジョナサン 子連れ攻略](/article/jonathan-kodzure-koryaku)
 - [デニーズ 子連れ攻略](/article/dennys-kodzure-koryaku)

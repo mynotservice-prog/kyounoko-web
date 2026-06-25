@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: bonyu-vs-milk-hikaku
 title: 母乳 vs ミルク 完全比較【2026年版】｜メリット・デメリット・混合栄養の進め方
 metaDescription: >-

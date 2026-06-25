@@ -106,8 +106,8 @@ A. 1〜3歳は**キッズメニュー中心＋取り分け少しずつ**、4〜6
 ## 関連記事
 
 - [焼肉キング 子連れ攻略（メイン記事）](/article/yakiniku-king-kodzure-koryaku)
-- [焼肉キング ベビーチェア・キッズチェア](/article/yakiniku-king-baby-chair)
-- [焼肉キング ベビーカー入店](/article/yakiniku-king-stroller)
+- [焼肉キング ベビーチェア・キッズチェア](/article/yakiniku-king-kodzure-koryaku)
+- [焼肉キング ベビーカー入店](/article/yakiniku-king-kodzure-koryaku)
 - [焼肉キング 個室・半個室・テーブル席](/article/yakiniku-king-koshitsu)
 - [焼肉キング 食べ放題100分制・子連れ時間配分](/article/yakiniku-king-time-system)
 - [子連れ焼肉 安全完全ガイド](/article/kodzure-yakiniku-anzen-kanzen-guide)

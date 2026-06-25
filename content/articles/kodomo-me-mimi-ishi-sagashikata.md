@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-me-mimi-ishi-sagashikata
 title: 小児科・耳鼻科・眼科の使い分け｜0〜6歳の症状別受診先ガイド15パターン
 metaDescription: >-

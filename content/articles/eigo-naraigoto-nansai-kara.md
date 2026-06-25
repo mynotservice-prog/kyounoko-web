@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: eigo-naraigoto-nansai-kara
 title: 【2026年最新】英語の習い事いつから【0-6歳】年齢別選び方ガイド
 metaDescription: >-

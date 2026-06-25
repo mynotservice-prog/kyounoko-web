@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: chichinohi-purezento-kodomo-tedukuri
 title: 父の日 プレゼント 子ども手作り15選【2-6歳】6月の準備リスト
 metaDescription: >-

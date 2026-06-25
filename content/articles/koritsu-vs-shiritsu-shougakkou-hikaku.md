@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: koritsu-vs-shiritsu-shougakkou-hikaku
 title: 公立小学校 vs 私立小学校 完全比較【2026年版】｜進学先選びの判断軸
 metaDescription: >-

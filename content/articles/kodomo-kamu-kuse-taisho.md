@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-kamu-kuse-taisho
 title: 子供の噛む癖｜1〜3歳の原因と対処法・友達を噛む時の声かけ完全ガイド
 metaDescription: >-

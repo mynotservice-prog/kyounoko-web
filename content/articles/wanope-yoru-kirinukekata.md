@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: wanope-yoru-kirinukekata
 title: 'ワンオペ夜の切り抜け方｜2〜6歳の18:30〜20:30を1人で回す10の工夫'
 subtitle: '配偶者不在でも18:30〜20:30を回すサバイバル戦略'

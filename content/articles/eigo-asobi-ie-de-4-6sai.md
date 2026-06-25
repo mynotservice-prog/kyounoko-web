@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: eigo-asobi-ie-de-4-6sai
 title: 家でできる英語遊び4〜6歳向け10選｜英語教室なしでも身につく方法
 metaDescription: >-

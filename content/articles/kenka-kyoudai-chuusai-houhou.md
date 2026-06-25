@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kenka-kyoudai-chuusai-houhou
 title: 兄弟喧嘩の仲裁方法｜ケガなくきょうだいが仲良くなる7つのコツ
 metaDescription: >-

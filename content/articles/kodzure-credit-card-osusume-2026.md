@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodzure-credit-card-osusume-2026
 title: 【2026年】子育て世帯向けクレジットカード比較10選｜年会費無料・高還元・家族カードまで完全ガイド
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: youji-naraigoto-nansai-kara
 title: 幼児の習い事【2-6歳】目的別6パターンで選び方ガイド
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kosodate-subsc-3sha-hikaku
 # old: 子育てサブスク比較【0-6歳】絵本・おもちゃ・服どれ
 title: 【2026年最新】子育てサブスク3ジャンル比較【0-6歳】続くのはどれ

@@ -106,7 +106,7 @@ A. 通常ボックス席なら**追加料金なし**。個室相当の宴会用�
 ## 関連記事
 
 - [ガスト 子連れ攻略完全ガイド](/article/gusto-kodzure-koryaku)
-- [ガスト ベビーチェア](/article/gusto-baby-chair)
+- [ガスト ベビーチェア](/article/gusto-kodzure-koryaku)
 - [ガスト キッズメニュー](/article/gusto-kids-menu)
 - [ファミレス子連れランキング2026](/article/famires-kodzure-ranking-2026-10sen)
 - [0歳育児の完全マップ](/article/0sai-ikuji-kanzen-map)

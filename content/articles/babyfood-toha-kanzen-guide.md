@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: babyfood-toha-kanzen-guide
 title: ベビーフードとは｜種類・選び方・使い分け・安全性完全ガイド【0〜2歳】
 metaDescription: >-

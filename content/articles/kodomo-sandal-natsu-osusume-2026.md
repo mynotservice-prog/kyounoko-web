@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-sandal-natsu-osusume-2026
 title: 【2026年】子供サンダル夏用おすすめ比較ランキング15選｜年齢別・男女別・水陸両用の選び方
 metaDescription: >-

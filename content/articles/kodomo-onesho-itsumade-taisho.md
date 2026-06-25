@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-onesho-itsumade-taisho
 title: 子供のおねしょ｜いつまで？原因・対処法・夜尿症の目安完全ガイド【3〜10歳】
 metaDescription: >-

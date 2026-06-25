@@ -207,10 +207,10 @@ legacyHero: /hero-ai/kodzure-famires-15sen.webp
 
 **ファミレス系**
 - サイゼリヤ：[キッズメニュー](/article/saizeriya-kids-menu)・[ベビーチェア](/article/saizeriya-baby-chair)
-- ガスト：[キッズメニュー](/article/gusto-kids-menu)・[ベビーチェア](/article/gusto-baby-chair)
+- ガスト：[キッズメニュー](/article/gusto-kids-menu)・[ベビーチェア](/article/gusto-kodzure-koryaku)
 - ジョナサン：[キッズメニュー](/article/jonathan-kids-menu)・[ベビーチェア](/article/jonathan-baby-chair)
-- バーミヤン：[キッズメニュー](/article/bamiyan-kids-menu)・[ベビーチェア](/article/bamiyan-baby-chair)
-- ココス：[キッズメニュー](/article/cocos-kids-menu)・[ベビーチェア](/article/cocos-baby-chair)
+- バーミヤン：[キッズメニュー](/article/bamiyan-kids-menu)・[ベビーチェア](/article/bamiyan-kodzure-koryaku)
+- ココス：[キッズメニュー](/article/cocos-kids-menu)・[ベビーチェア](/article/cocos-kodzure-koryaku)
 - デニーズ：[キッズメニュー](/article/dennys-kids-menu)・[ベビーチェア](/article/dennys-baby-chair)
 - ロイヤルホスト：[キッズメニュー](/article/royal-host-kids-menu)・[ベビーチェア](/article/royal-host-baby-chair)
 - ビッグボーイ：[キッズメニュー](/article/bigboy-kids-menu)・[ベビーチェア](/article/bigboy-baby-chair)
@@ -224,18 +224,18 @@ legacyHero: /hero-ai/kodzure-famires-15sen.webp
 - はなまるうどん：[キッズメニュー](/article/hanamarudon-kids-menu)・[ベビーチェア](/article/hanamarudon-baby-chair)
 - 丸亀製麺：[キッズうどん](/article/marukame-kids-menu)・[ベビーチェア](/article/marukame-baby-chair)
 - てんや：[キッズメニュー](/article/tenya-kids-menu)・[ベビーチェア](/article/tenya-baby-chair)
-- CoCo壱番屋：[キッズメニュー](/article/cocoichi-kids-menu)・[ベビーチェア](/article/cocoichi-baby-chair)
+- CoCo壱番屋：[キッズメニュー](/article/cocoichi-kids-menu)・[ベビーチェア](/article/cocoichi-kodzure-koryaku)
 - リンガーハット：[キッズメニュー](/article/ringerhut-kids-menu)・[ベビーチェア](/article/ringerhut-baby-chair)
 - 餃子の王将：[キッズメニュー](/article/ohsho-kids-menu)・[ベビーチェア](/article/ohsho-baby-chair)
 
 **焼肉・しゃぶしゃぶ系**
-- 牛角：[キッズメニュー](/article/gyukaku-kids-menu)・[ベビーチェア](/article/gyukaku-baby-chair)
-- 焼肉キング：[キッズメニュー](/article/yakiniku-king-kids-menu)・[ベビーチェア](/article/yakiniku-king-baby-chair)
+- 牛角：[キッズメニュー](/article/gyukaku-kids-menu)・[ベビーチェア](/article/gyukaku-kodzure-koryaku)
+- 焼肉キング：[キッズメニュー](/article/yakiniku-king-kids-menu)・[ベビーチェア](/article/yakiniku-king-kodzure-koryaku)
 - 安楽亭：[キッズメニュー](/article/anrakutei-kids-menu)・[ベビーチェア](/article/anrakutei-baby-chair)
 - しゃぶ葉：[キッズメニュー](/article/shabuyo-kids-menu)・[ベビーチェア](/article/shabuyo-baby-chair)
 
 **和定食系**
-- やよい軒：[キッズメニュー](/article/yayoiken-kids-menu)・[ベビーチェア](/article/yayoiken-baby-chair)
+- やよい軒：[キッズメニュー](/article/yayoiken-kids-menu)・[ベビーチェア](/article/yayoiken-kodzure-koryaku)
 
 **回転寿司系**
 - スシロー：[キッズメニュー](/article/sushiro-kids-menu)・[ベビーチェア](/article/sushiro-baby-chair)

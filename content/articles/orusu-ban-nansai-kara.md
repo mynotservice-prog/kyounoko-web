@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: orusu-ban-nansai-kara
 # old: お留守番何歳から？短時間留守の判断軸と安全ルール
 title: お留守番何歳から？家庭で決める7ルールと年齢別の目安

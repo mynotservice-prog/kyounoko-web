@@ -101,7 +101,7 @@ legacyHero: /hero-ai/cat-food-fruit-02.jpg
 
 ## 関連記事
 
-- [すき家のおむつ替え台ガイド｜店舗別の有無・授乳室](/article/sukiya-omutsu)
+- [すき家のおむつ替え台ガイド｜店舗別の有無・授乳室](/article/sukiya-kodzure-koryaku)
 - [サイゼリヤはベビーカーOK？子連れ完全攻略](/article/kodzure-saize-koryaku)
 - [やよい軒の子連れ攻略｜キッズメニュー・離乳食・取り分け](/article/yayoiken-kodzure-koryaku)
 - [子連れOKファミレス王道15選](/article/kodzure-famires-15sen)

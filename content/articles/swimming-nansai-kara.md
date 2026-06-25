@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: swimming-nansai-kara
 title: スイミング何歳から【0-6歳】主要5社比較・月謝相場
 category: narai

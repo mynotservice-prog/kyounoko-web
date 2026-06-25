@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: ehon-yomikikase-kotsu
 title: 絵本の読み聞かせコツ｜0〜6歳年齢別に子が聞かない・飽きる時の5つの工夫【保存版】
 metaDescription: >-

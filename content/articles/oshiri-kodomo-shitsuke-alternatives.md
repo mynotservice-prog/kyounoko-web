@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: oshiri-kodomo-shitsuke-alternatives
 title: 叱らない子育て【0-6歳】声かけ10パターン・代替行動
 metaDescription: >-

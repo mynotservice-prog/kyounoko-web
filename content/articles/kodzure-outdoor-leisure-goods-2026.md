@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodzure-outdoor-leisure-goods-2026
 title: 【2026年】子連れ公園・アウトドアレジャー用品おすすめ12選｜ワンタッチテント・タープ・レジャーシート
 metaDescription: >-

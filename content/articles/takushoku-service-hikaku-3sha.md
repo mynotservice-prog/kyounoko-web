@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: takushoku-service-hikaku-3sha
 title: 【2026年最新】子育て家庭の宅食サービス3社比較｜2〜6歳が食べる・nosh・三ツ星・ヨシケイの違い
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: dakkohimo-ranking-2026
 title: 抱っこ紐ランキング2026【新生児-3歳】定番5本比較
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: iyaiya-osaete-tsukeru-shitsuke
 title: イヤイヤ期しつけ線引き【2-3歳】譲る5つ・譲らない5つ
 metaDescription: >-

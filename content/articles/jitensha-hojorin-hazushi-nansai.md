@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: jitensha-hojorin-hazushi-nansai
 title: 自転車補助輪外し何歳？4歳3日で乗れた現実的な手順
 category: yakudatsu

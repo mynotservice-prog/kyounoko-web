@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: monte-asobi-nenrei-betsu
 title: モンテッソーリの家庭遊び年齢別ガイド｜0歳〜6歳まで敏感期に合わせた20の活動【保存版】
 category: today-nani

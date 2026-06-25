@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-hitori-asobi-anzen-kankyou
 title: 一人遊びできる環境作り｜1〜5歳の集中時間を伸ばす部屋と玩具5工夫
 metaDescription: >-

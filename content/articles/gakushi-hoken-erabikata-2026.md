@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: gakushi-hoken-erabikata-2026
 title: 【2026年】学資保険の選び方完全ガイド｜いつから・いくら・返戻率の見方とおすすめタイプ比較
 metaDescription: >-

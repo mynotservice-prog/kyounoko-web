@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: natsu-kosodate-kanzen-map
 title: 夏の子育て完全マップ｜熱中症・プール・自由研究・夏祭り・お盆まで【0〜6歳】
 metaDescription: >-

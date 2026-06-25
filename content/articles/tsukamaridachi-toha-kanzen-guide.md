@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: tsukamaridachi-toha-kanzen-guide
 title: つかまり立ちとは｜時期・関わり方・安全対策・遅い場合の対応完全ガイド
 metaDescription: >-

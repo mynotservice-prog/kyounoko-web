@@ -1,5 +1,6 @@
 import type { NextConfig } from 'next';
 import { SPOT_REDIRECTS } from './lib/spot-redirects';
+import { ARTICLE_REDIRECTS } from './lib/article-redirects';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -117,6 +118,14 @@ const nextConfig: NextConfig = {
       ...SPOT_REDIRECTS.map((r) => ({
         source: `/spot/${r.from}`,
         destination: `/spot/${r.to}`,
+        permanent: true,
+      })),
+
+      // ===== 記事棚卸し監査(2026-06-25)：チェーン周辺条件の死蔵フラグメントを =====
+      // 内容を包含する [chain]-kodzure-koryaku へ 301 統合（被リンク資産を勝ちページに集約）。
+      ...ARTICLE_REDIRECTS.map((r) => ({
+        source: `/article/${r.from}`,
+        destination: `/article/${r.to}`,
         permanent: true,
       })),
 

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: xmas-present-nenrei-0-6
 title: クリスマスプレゼント30選【0-6歳】年齢別・予算別
 metaDescription: >-

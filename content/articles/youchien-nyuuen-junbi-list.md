@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: youchien-nyuuen-junbi-list
 title: 幼稚園入園準備リスト完全版｜3〜4歳が3月までにやること・買うもの20項目
 metaDescription: 4月幼稚園入園に向けて3月までにやることを網羅。持ち物リスト、生活リズムの整え方、予防接種と書類、心構えの4領域を時期別チェックリスト付きで解説。

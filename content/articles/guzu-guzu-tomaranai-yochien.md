@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: guzu-guzu-tomaranai-yochien
 # old: ぐずぐず止まらない子どもに即効対処5つと原因チェック
 title: ぐずぐず止まらない子｜即効対処5つと原因チェックリスト

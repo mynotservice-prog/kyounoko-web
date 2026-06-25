@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-online-eikaiwa-osusume-2026
 title: 【2026年】子供オンライン英会話おすすめ8選比較｜3歳から始められる選び方完全ガイド
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: chiiku-subsc-hikaku-4sha
 title: 【2026年最新】知育玩具サブスク4社比較【0-6歳】月額3000円から
 metaDescription: >-

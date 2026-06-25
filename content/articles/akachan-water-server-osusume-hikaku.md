@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: akachan-water-server-osusume-hikaku
 title: 【2026年】赤ちゃん向けウォーターサーバー比較とミルク調乳の選び方
 metaDescription: >-

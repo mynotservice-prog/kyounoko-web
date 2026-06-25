@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: enpitsu-nigirenai-3sai-tesaki
 # old: 鉛筆握れない3歳、手先の発達サポート7工夫
 title: 3歳で鉛筆が握れない｜手先の発達7工夫と相談の目安

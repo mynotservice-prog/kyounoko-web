@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: amenohi-ie-asobi-4-6sai
 title: 雨の日の家遊び10選（4〜6歳向け）集中力が育つ静かな遊び｜準備5分・遊び30分の保存版
 metaDescription: >-

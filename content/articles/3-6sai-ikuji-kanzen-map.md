@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: 3-6sai-ikuji-kanzen-map
 title: 3〜6歳の育児 完全マップ｜発達・幼稚園/保育園・習い事・小学校準備・友達関係まとめ【保存版】
 metaDescription: >-

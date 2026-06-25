@@ -364,21 +364,21 @@ A. **離乳食を温め同時依頼**できるよう、容器を分けて温め�
 **ファミレス系**
 - [サイゼリヤの離乳食持ち込みガイド](/article/saizeriya-rinyushoku-mochikomi)
 - [ガストの離乳食温め リアル体験](/article/gusto-rinyu-warm-real)
-- [ジョナサンの離乳食持ち込みガイド](/article/jonathan-rinyushoku-mochikomi)
-- [バーミヤンの離乳食持ち込みガイド](/article/bamiyan-rinyushoku-mochikomi)
-- [ココスの離乳食持ち込みガイド](/article/cocos-rinyushoku-mochikomi)
+- [ジョナサンの離乳食持ち込みガイド](/article/jonathan-kodzure-koryaku)
+- [バーミヤンの離乳食持ち込みガイド](/article/bamiyan-kodzure-koryaku)
+- [ココスの離乳食持ち込みガイド](/article/cocos-kodzure-koryaku)
 - [デニーズの離乳食持ち込みガイド](/article/dennys-rinyushoku-mochikomi)
-- [ロイヤルホストの離乳食持ち込みガイド](/article/royal-host-rinyushoku-mochikomi)
+- [ロイヤルホストの離乳食持ち込みガイド](/article/royal-host-kodzure-koryaku)
 
 **牛丼・カレー系**
-- [吉野家の離乳食持ち込みガイド](/article/yoshinoya-rinyushoku-mochikomi)
-- [すき家の離乳食持ち込みガイド](/article/sukiya-rinyushoku-mochikomi)
-- [松屋の離乳食持ち込みガイド](/article/matsuya-rinyushoku-mochikomi)
-- [なか卯の離乳食持ち込みガイド](/article/nakau-rinyushoku-mochikomi)
-- [CoCo壱番屋の離乳食持ち込みガイド](/article/cocoichi-rinyushoku-mochikomi)
+- [吉野家の離乳食持ち込みガイド](/article/yoshinoya-kodzure-koryaku)
+- [すき家の離乳食持ち込みガイド](/article/sukiya-kodzure-koryaku)
+- [松屋の離乳食持ち込みガイド](/article/matsuya-kodzure-koryaku)
+- [なか卯の離乳食持ち込みガイド](/article/nakau-kodzure-koryaku)
+- [CoCo壱番屋の離乳食持ち込みガイド](/article/cocoichi-kodzure-koryaku)
 
 **回転寿司・うどん系**（持ち込みに寛容な店舗が多い）
-- [スシローの離乳食持ち込みガイド](/article/sushiro-rinyushoku-mochikomi)
+- [スシローの離乳食持ち込みガイド](/article/sushiro-kodzure-koryaku)
 - [くら寿司の離乳食持ち込みガイド](/article/kurasushi-rinyushoku-mochikomi)
 - [はま寿司の離乳食持ち込みガイド](/article/hamasushi-rinyushoku-mochikomi)
 - [丸亀製麺の離乳食持ち込みガイド](/article/marukame-rinyushoku-mochikomi)

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-hiyakedome-osusume-2026
 title: 【2026年】子供用日焼け止めおすすめ比較ランキング12選｜年齢別・敏感肌・ウォータープルーフ
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: oshougatsu-kodomo-sugoshikata
 title: お正月を子どもと楽しむ過ごし方10選｜0〜6歳の年齢別アイデアで退屈させない
 subtitle: 伝統遊び・初詣・おせち・お年玉を年齢に合わせて

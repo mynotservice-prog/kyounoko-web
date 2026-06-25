@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: akachan-yoku-haku-genin-taisho
 title: 赤ちゃんがよく吐く｜原因・受診の目安・対処法完全ガイド【0〜1歳】
 metaDescription: >-

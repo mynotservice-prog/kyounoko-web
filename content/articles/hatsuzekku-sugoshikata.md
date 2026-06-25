@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: hatsuzekku-sugoshikata
 title: 初節句（こどもの日・ひな祭り）の過ごし方｜0〜1歳男女別の飾り・食事・段取り決まらない悩み解決
 subtitle: 飾り・食事・招待客の段取りを性別別に整理

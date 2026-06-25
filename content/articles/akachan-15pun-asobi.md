@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: akachan-15pun-asobi
 title: 0歳の赤ちゃんと遊ぶ15分パターン10選（月齢別・発達促進）｜ワンオペ育児の保存版
 metaDescription: >-

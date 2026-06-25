@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kotoba-okureru-taiou-2sai
 title: 2歳で言葉が遅い時の対応｜発語ゼロ・単語のみの家庭ケア10と相談目安
 metaDescription: >-

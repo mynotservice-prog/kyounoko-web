@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: natsumatsuri-kodzure-koryaku
 title: 夏祭りの子連れ攻略｜0〜6歳別の歩き方・持ち物・食事
 metaDescription: 0〜6歳と行く夏祭り・盆踊りの歩き方、屋台選び、花火の音対策、浴衣の着せ方、迷子対策、帰宅時間まで年齢別にまとめた実用ガイド。

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-suiminji-mokuyasu
 title: 子供の睡眠時間の目安｜0〜6歳の月齢・年齢別必要睡眠時間完全ガイド
 metaDescription: >-

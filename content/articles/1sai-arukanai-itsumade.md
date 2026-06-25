@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: 1sai-arukanai-itsumade
 title: 1歳児が歩かない｜いつまで様子見？心配な月齢・発達相談の目安完全ガイド
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-shindansho-arerugi-taisaku
 title: 子どものアレルギー診断と家庭対応｜0〜6歳の食物・皮膚・喘息3つの見分け方
 metaDescription: >-

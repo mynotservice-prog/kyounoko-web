@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: 1-2sai-oshaberi-sukunai-asobi
 title: おしゃべりが少ない1〜2歳の子と遊ぶ鉄板パターン7つ
 metaDescription: まだ会話できない1〜2歳と一緒に楽しめる遊び7選。親がイライラしない関わり方、言葉かけ例、発達的な意味までセットで解説。毎日のネタ切れを救います。

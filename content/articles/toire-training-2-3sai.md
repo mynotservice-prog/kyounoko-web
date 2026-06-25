@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: toire-training-2-3sai
 title: トイトレ進め方【2-3歳】1ヶ月で外れる5ステップ
 metaDescription: >-

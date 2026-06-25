@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kousaku-4-6sai-10pattern
 title: 4〜6歳と一緒にできる工作10パターン（家にあるもので）｜飾れる・遊べる保存版
 metaDescription: >-

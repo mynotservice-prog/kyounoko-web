@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: randoseru-erabikata-osusume-2026
 title: 【2026年】ランドセル選び完全ガイド｜人気カラー・素材・価格比較・購入タイミングまとめ
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: omocha-year-by-age
 title: 買ってよかった幼児向けおもちゃ10選（年齢別：0〜6歳）
 metaDescription: >-

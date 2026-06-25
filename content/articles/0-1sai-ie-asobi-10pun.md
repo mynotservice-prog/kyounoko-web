@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: 0-1sai-ie-asobi-10pun
 title: 0〜1歳と家でできる10分遊び8パターン（道具なし・準備なし）｜ワンオペ救済の保存版
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: yobou-sesshu-schedule-0-6sai
 title: 予防接種スケジュール0〜6歳｜定期接種15種と任意接種3種の年齢別一覧
 metaDescription: >-

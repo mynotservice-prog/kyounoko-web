@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: yubi-syabu-yameru-timing-houhou
 title: 指しゃぶり卒業の方法とタイミング｜2〜5歳の歯並び影響と7ステップ
 metaDescription: >-

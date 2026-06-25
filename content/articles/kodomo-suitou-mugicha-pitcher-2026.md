@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-suitou-mugicha-pitcher-2026
 title: 【2026年】子供水筒・麦茶ピッチャーおすすめ完全比較｜年齢別容量・保冷・洗いやすさで選ぶ熱中症対策の必須アイテム
 metaDescription: >-

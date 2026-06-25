@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: baby-senzai-ranking
 # old: ベビー洗剤ランキング6選【新生児-6歳】肌荒れ対策
 title: ベビー洗剤ランキング6選【2026年版】新生児-6歳・肌対策

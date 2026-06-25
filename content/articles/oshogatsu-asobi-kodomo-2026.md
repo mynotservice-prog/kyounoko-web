@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: oshogatsu-asobi-kodomo-2026
 title: お正月 家での過ごし方10選【2-6歳】凧揚げ・かるた・福笑い
 metaDescription: >-

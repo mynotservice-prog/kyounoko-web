@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-hanamizu-tsuduku-byouin
 title: 子供の鼻水が続く｜原因・受診の目安・対処法完全ガイド【0〜6歳】
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: oboniito-asobi-kodomo-3sai
 title: お盆 帰省 子どもと過ごす実家での遊び10選【2-6歳】
 metaDescription: >-

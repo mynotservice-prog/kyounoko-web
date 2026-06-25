@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-hayaneh-hayaoki-shukan-ka
 title: 子供の早寝早起きの習慣化｜2〜6歳の生活リズム作り完全ガイド
 metaDescription: >-

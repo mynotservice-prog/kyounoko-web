@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: baby-chair-ranking
 # old: ベビーチェア買ってよかった10選【0-6歳】後悔しない比較
 title: ベビーチェア買ってよかった10選【2026年版・0-6歳】

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-shashin-nensho-mokuyasu
 title: 子供の写真年間枚数の目安｜0〜6歳の撮影量・保存・整理完全ガイド
 metaDescription: >-

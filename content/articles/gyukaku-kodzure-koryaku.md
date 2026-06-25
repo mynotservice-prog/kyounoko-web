@@ -104,7 +104,7 @@ legacyHero: /hero-ai/cat-food-kitchen-01.webp
 
 ## 関連記事
 
-- [牛角のおむつ替え台ガイド｜ベビールーム・多目的トイレの有無](/article/gyukaku-omutsu)
+- [牛角のおむつ替え台ガイド｜ベビールーム・多目的トイレの有無](/article/gyukaku-kodzure-koryaku)
 - [サイゼリヤはベビーカーOK？子連れ完全攻略](/article/kodzure-saize-koryaku)
 - [しゃぶ葉の子連れ攻略｜キッズ食べ放題・年齢別料金](/article/shabuyou-kodzure-koryaku)
 - [子連れで行く焼肉・しゃぶしゃぶ7選](/article/kodzure-yakiniku-shabu-7)

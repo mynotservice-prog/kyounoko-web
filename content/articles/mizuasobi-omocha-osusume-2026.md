@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: mizuasobi-omocha-osusume-2026
 title: 【2026年】水遊びおもちゃ・水鉄砲おすすめ15選｜年齢別・お風呂でも使える安全な選び方
 metaDescription: >-

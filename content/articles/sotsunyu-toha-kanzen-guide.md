@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: sotsunyu-toha-kanzen-guide
 title: 卒乳とは｜断乳との違い・時期・進め方・おっぱいトラブル対処完全ガイド【0〜2歳】
 metaDescription: >-

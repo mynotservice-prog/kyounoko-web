@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: undoukai-jitan-bento-3sai
 title: 運動会お弁当 時短10選【3-6歳】前日仕込み・崩れない・冷めても美味しい
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: yonaki-toha-kanzen-guide
 title: 夜泣きとは｜原因・対処法・いつまで続くか完全ガイド【0〜2歳】
 metaDescription: >-

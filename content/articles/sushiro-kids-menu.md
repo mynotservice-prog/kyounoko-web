@@ -85,7 +85,7 @@ A. うどんは出汁を薄めれば1歳半ごろから取り分けやすい主�
 A. 公式アプリやタッチパネルのアレルゲン検索で、メニューごとに事前確認できます。アレルギーが気になる場合は来店前にチェックを。
 
 **Q. 離乳食の持ち込みはOK？**
-A. 詳しくは[スシローの離乳食持ち込みガイド](/article/sushiro-rinyushoku-mochikomi)をご覧ください。
+A. 詳しくは[スシローの離乳食持ち込みガイド](/article/sushiro-kodzure-koryaku)をご覧ください。
 
 **Q. ベビーチェアはありますか？**
 A. 用意があります。詳しくは[スシローのベビーチェアガイド](/article/sushiro-baby-chair)へ。
@@ -98,7 +98,7 @@ A. 用意があります。詳しくは[スシローのベビーチェアガイ�
 
 - [スシローは子連れOK？ベビーカー・離乳食・取り分け完全攻略](/article/sushiro-kodzure-koryaku)
 - [スシローのベビーチェアガイド](/article/sushiro-baby-chair)
-- [スシローの離乳食持ち込みガイド](/article/sushiro-rinyushoku-mochikomi)
+- [スシローの離乳食持ち込みガイド](/article/sushiro-kodzure-koryaku)
 - [回転寿司4チェーン子連れ徹底比較](/article/kaiten-sushi-4chain-comparison)
 - [キッズメニュー比較15チェーン](/article/kids-menu-chain-15-hikaku)
 

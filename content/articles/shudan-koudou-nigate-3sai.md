@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: shudan-koudou-nigate-3sai
 # old: 集団行動が苦手な3歳、リアルな対応とプロが見るポイント
 title: 3歳が集団行動苦手｜家庭でできる10工夫と園との連携

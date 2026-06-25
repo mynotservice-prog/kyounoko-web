@@ -147,8 +147,8 @@ A. **キッズメニューは少なめ**。子はドリンクメニューから�
 **他チェーンのモーニング攻略**
 
 - [コメダ珈琲のモーニング攻略](/article/komeda-morning-kosodate)
-- [スタバのモーニング攻略](/article/starbucks-morning-kosodate)
-- [ドトールのモーニング攻略](/article/doutor-morning-kosodate)
+- [スタバのモーニング攻略](/article/starbucks-kodzure-koryaku)
+- [ドトールのモーニング攻略](/article/doutor-kodzure-koryaku)
 
 **コメダ珈琲（別系列、混同注意）**
 

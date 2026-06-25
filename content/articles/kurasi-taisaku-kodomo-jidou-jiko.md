@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kurasi-taisaku-kodomo-jidou-jiko
 title: 家の中の子ども事故予防チェック｜0〜6歳の部屋別対策20項目
 metaDescription: 家庭内事故は子どもの事故の約7割。0〜6歳の部屋別（リビング・キッチン・浴室・寝室）に具体的な対策20項目、月齢別の危険ポイント、応急処置まで整理しました。

@@ -111,7 +111,7 @@ A. ファミレス系のような**おもちゃ・ぬりえ特典は基本なし
 
 - [なか卯 子連れ攻略完全ガイド](/article/nakau-kodzure-koryaku)
 - [なか卯 ベビーチェア](/article/nakau-baby-chair)
-- [なか卯 ベビーカー入店](/article/nakau-stroller)
+- [なか卯 ベビーカー入店](/article/nakau-kodzure-koryaku)
 - [子連れ和食チェーン10選](/article/kodzure-washoku-chain-10)
 - [キッズメニュー比較15チェーン](/article/kids-menu-chain-15-hikaku)
 

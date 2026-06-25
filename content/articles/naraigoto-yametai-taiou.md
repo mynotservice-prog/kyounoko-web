@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: naraigoto-yametai-taiou
 title: 習い事を辞めたいと言われたら｜3〜6歳の親の対処3パターンと失敗しない判断基準
 metaDescription: 子が「習い事辞めたい」と言った時の対処を3パターンで解説。判断基準、親が陥る罠、先生への相談、辞めた後のフォローまで実用的にまとめ。

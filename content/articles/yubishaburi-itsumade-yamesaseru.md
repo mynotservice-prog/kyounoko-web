@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: yubishaburi-itsumade-yamesaseru
 title: 指しゃぶりはいつまで大丈夫？やめさせ方と年齢別の対応【0〜6歳】
 metaDescription: >-

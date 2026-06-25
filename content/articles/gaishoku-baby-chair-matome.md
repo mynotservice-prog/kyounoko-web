@@ -74,10 +74,10 @@ lede: >-
 
 **ファミレス系**
 - サイゼリヤ：[ベビーチェア](/article/saizeriya-baby-chair)・[キッズメニュー](/article/saizeriya-kids-menu)
-- ガスト：[ベビーチェア](/article/gusto-baby-chair)・[キッズメニュー](/article/gusto-kids-menu)
+- ガスト：[ベビーチェア](/article/gusto-kodzure-koryaku)・[キッズメニュー](/article/gusto-kids-menu)
 - ジョナサン：[ベビーチェア](/article/jonathan-baby-chair)・[キッズメニュー](/article/jonathan-kids-menu)
-- バーミヤン：[ベビーチェア](/article/bamiyan-baby-chair)・[キッズメニュー](/article/bamiyan-kids-menu)
-- ココス：[ベビーチェア](/article/cocos-baby-chair)・[キッズメニュー](/article/cocos-kids-menu)
+- バーミヤン：[ベビーチェア](/article/bamiyan-kodzure-koryaku)・[キッズメニュー](/article/bamiyan-kids-menu)
+- ココス：[ベビーチェア](/article/cocos-kodzure-koryaku)・[キッズメニュー](/article/cocos-kids-menu)
 - デニーズ：[ベビーチェア](/article/dennys-baby-chair)・[キッズメニュー](/article/dennys-kids-menu)
 - ロイヤルホスト：[ベビーチェア](/article/royal-host-baby-chair)・[キッズメニュー](/article/royal-host-kids-menu)
 - ビッグボーイ：[ベビーチェア](/article/bigboy-baby-chair)・[キッズメニュー](/article/bigboy-kids-menu)
@@ -91,7 +91,7 @@ lede: >-
 - はなまるうどん：[ベビーチェア](/article/hanamarudon-baby-chair)・[キッズメニュー](/article/hanamarudon-kids-menu)
 - 丸亀製麺：[ベビーチェア](/article/marukame-baby-chair)
 - てんや：[ベビーチェア](/article/tenya-baby-chair)・[キッズメニュー](/article/tenya-kids-menu)
-- CoCo壱番屋：[ベビーチェア](/article/cocoichi-baby-chair)・[キッズメニュー](/article/cocoichi-kids-menu)
+- CoCo壱番屋：[ベビーチェア](/article/cocoichi-kodzure-koryaku)・[キッズメニュー](/article/cocoichi-kids-menu)
 - リンガーハット：[ベビーチェア](/article/ringerhut-baby-chair)・[キッズメニュー](/article/ringerhut-kids-menu)
 
 **回転寿司系**
@@ -100,17 +100,17 @@ lede: >-
 - くら寿司：[ベビーチェア](/article/kurasushi-baby-chair)
 
 **焼肉・しゃぶしゃぶ系**
-- 牛角：[ベビーチェア](/article/gyukaku-baby-chair)・[キッズメニュー](/article/gyukaku-kids-menu)
-- 焼肉キング：[ベビーチェア](/article/yakiniku-king-baby-chair)・[キッズメニュー](/article/yakiniku-king-kids-menu)
+- 牛角：[ベビーチェア](/article/gyukaku-kodzure-koryaku)・[キッズメニュー](/article/gyukaku-kids-menu)
+- 焼肉キング：[ベビーチェア](/article/yakiniku-king-kodzure-koryaku)・[キッズメニュー](/article/yakiniku-king-kids-menu)
 - 安楽亭：[ベビーチェア](/article/anrakutei-baby-chair)・[キッズメニュー](/article/anrakutei-kids-menu)
 - しゃぶ葉：[ベビーチェア](/article/shabuyo-baby-chair)・[キッズメニュー](/article/shabuyo-kids-menu)
 
 **和定食・中華系**
-- やよい軒：[ベビーチェア](/article/yayoiken-baby-chair)・[キッズメニュー](/article/yayoiken-kids-menu)
+- やよい軒：[ベビーチェア](/article/yayoiken-kodzure-koryaku)・[キッズメニュー](/article/yayoiken-kids-menu)
 - 餃子の王将：[ベビーチェア](/article/ohsho-baby-chair)・[キッズメニュー](/article/ohsho-kids-menu)
 
 **大型店・テーマパーク**
-- コストコ：[ベビーチェア](/article/costco-baby-chair)
+- コストコ：[ベビーチェア](/article/costco-kodzure-koryaku)
 - IKEA：[ベビーチェア](/article/ikea-baby-chair)
 - 東京ディズニーランド：[ベビーチェア](/article/disney-baby-chair)・[キッズメニュー](/article/disney-kids-menu)
 - 東京ディズニーシー：[ベビーチェア](/article/tds-baby-chair)

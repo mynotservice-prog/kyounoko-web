@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: shichigosan-nenrei-junbi
 title: 七五三 準備ガイド【3歳・5歳・7歳】予算3-20万円
 subtitle: 服装・神社・撮影・食事会まで、歳ごとの段取りを整理

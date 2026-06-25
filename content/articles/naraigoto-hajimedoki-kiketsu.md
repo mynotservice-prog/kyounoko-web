@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: naraigoto-hajimedoki-kiketsu
 title: 【2026年最新】習い事を始めるタイミング完全ガイド｜見極めの7チェックリスト
 metaDescription: >-

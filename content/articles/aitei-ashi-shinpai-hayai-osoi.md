@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: aitei-ashi-shinpai-hayai-osoi
 title: 歩き出しが早い遅いの目安｜0〜1歳の月齢別チェックと相談タイミング
 metaDescription: >-

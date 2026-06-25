@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: ko-ga-nenai-5kufuu
 title: 子が寝ない【1-6歳】寝かしつけ30分短縮 5つの工夫
 subtitle: 環境・運動量・儀式の3軸で寝付きを変える

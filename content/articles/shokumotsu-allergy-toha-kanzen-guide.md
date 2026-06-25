@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: shokumotsu-allergy-toha-kanzen-guide
 title: 食物アレルギーとは｜原因・症状・対処法・離乳食での予防完全ガイド【0〜6歳】
 metaDescription: >-

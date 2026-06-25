@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: katei-pool-osusume-ranking-2026
 title: 【2026年】家庭用プールおすすめ比較ランキング12選｜ビニール・大型・滑り台付きを年齢別に
 metaDescription: >-

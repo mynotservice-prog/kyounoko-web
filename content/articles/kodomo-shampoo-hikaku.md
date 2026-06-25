@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-shampoo-hikaku
 # old: 子どもシャンプー比較5社【0-6歳】敏感肌向け定番
 title: 【2026年最新】子供シャンプー比較5社【0-6歳】敏感肌でもしみない定番

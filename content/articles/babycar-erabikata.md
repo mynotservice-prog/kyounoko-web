@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: babycar-erabikata
 # old: ベビーカー選び方【0-3歳】A型・B型・バギー4用途別
 title: 【2026年最新】失敗しないベビーカー選び方【0-3歳】4用途別チェック表

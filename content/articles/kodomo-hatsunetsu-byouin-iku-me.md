@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-hatsunetsu-byouin-iku-me
 title: 子どもの発熱で病院行く目安｜0〜6歳の受診タイミング10サイン・夜間判断
 metaDescription: >-

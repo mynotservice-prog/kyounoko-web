@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: youtube-kawari-ie-asobi
 title: YouTubeの代わりになる家遊び10選｜子が飽きずに集中する保存版
 metaDescription: >-

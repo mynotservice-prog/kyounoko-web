@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: tanabata-kazari-sakusei
 title: 七夕の飾り・短冊作り｜3歳から作れる折り紙アイデア10
 metaDescription: >-

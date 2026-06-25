@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: iyaiya-ki-taisho-2sai-7kufuu
 # old: 2歳イヤイヤ期 対処法7選【声かけフレーズ集】親もラク
 title: 2歳イヤイヤ期の対処法7選｜効いた声かけフレーズ集

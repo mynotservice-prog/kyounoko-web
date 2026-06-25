@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: shumatsu-1nichi-mawashikata
 title: 休日の1日の回し方｜2〜6歳が退屈しない土日タイムスケジュール3パターン
 subtitle: 休日は「主導権」を日ごとに切り替えて、親も子も満たす

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kyoudai-asobi-nenrei-sa
 title: 兄弟で一緒に楽しめる家遊び7選（年齢差別・1歳差/3歳差/5歳差）｜ケンカ防止の保存版
 metaDescription: >-

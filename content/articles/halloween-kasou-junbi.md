@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: halloween-kasou-junbi
 title: ハロウィン仮装・飾り15アイデア【3-6歳】100均で作れる
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: 1sai-hattatsu-kanzen-guide
 title: 1歳児の発達完全ガイド｜運動・言葉・心の成長と関わり方の目安【月齢別】
 metaDescription: >-

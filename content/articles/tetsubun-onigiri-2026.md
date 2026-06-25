@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: tetsubun-onigiri-2026
 title: 節分の恵方巻き＆鬼パンチおにぎり7選【2026】子どもが喜ぶレシピ
 metaDescription: >-

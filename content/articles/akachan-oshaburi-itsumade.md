@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: akachan-oshaburi-itsumade
 title: 赤ちゃんのおしゃぶりはいつまで？卒業のタイミングと方法完全ガイド
 metaDescription: 赤ちゃんのおしゃぶりはいつまで？卒業のベストタイミング、歯並びへの影響、やめさせ方、月齢別の対処、夜のおしゃぶり卒業のコツまで2026年版で完全解説します。

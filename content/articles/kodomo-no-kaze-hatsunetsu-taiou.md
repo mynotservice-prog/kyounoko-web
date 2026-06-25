@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-no-kaze-hatsunetsu-taiou
 title: 子どもの風邪・発熱対応｜0〜6歳の家庭ケアと受診の見極め5つ・夜間休日の動き
 metaDescription: >-

@@ -253,7 +253,7 @@ CoCo壱番屋と同じく子連れで使いやすい外食チェーンや、近�
 
 **牛丼・定食・ファミレス系チェーン攻略**
 
-- [ココイチのおむつ替え台ガイド｜店舗別の有無・授乳室](/article/cocoichi-omutsu)
+- [ココイチのおむつ替え台ガイド｜店舗別の有無・授乳室](/article/cocoichi-kodzure-koryaku)
 - [すき家の子連れ攻略｜キッズメニュー・ベビーカー](/article/sukiya-kodzure-koryaku)
 - [松屋の子連れ攻略｜券売機・取り分け](/article/matsuya-kodzure-koryaku)
 - [吉野家の子連れ攻略｜牛丼の取り分け・離乳食](/article/yoshinoya-kodzure-koryaku)

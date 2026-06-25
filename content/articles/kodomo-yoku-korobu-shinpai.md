@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-yoku-korobu-shinpai
 title: 子供がよく転ぶ｜原因・対処法・発達相談の目安完全ガイド【1〜6歳】
 metaDescription: >-

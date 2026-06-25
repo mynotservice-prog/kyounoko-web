@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: sango-utsu-toha-kanzen-guide
 title: 産後うつとは｜症状・原因・対処法・パートナーのサポート完全ガイド
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: 1sai-oshaberi-shinai-itsumade
 title: 1歳おしゃべりしない、いつまで様子見？言葉が出るサインと家庭でできること
 metaDescription: >-

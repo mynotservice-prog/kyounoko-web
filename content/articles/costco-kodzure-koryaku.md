@@ -184,6 +184,6 @@ A. **ファミリーカート（2人用シート）が必須**。これを確保
 - [0歳育児完全マップ｜月齢別必須情報](/article/0sai-ikuji-kanzen-map)
 - [夏の子連れ完全マップ｜室内冷房スポット](/article/natsu-kosodate-kanzen-map)
 - [梅雨の室内遊び完全ガイド 0-6歳](/article/tsuyu-shitsunai-asobi-kanzen-guide-0-6sai)
-- [コストコ フードコートのベビーチェア完全ガイド](/article/costco-baby-chair)
-- [コストコ ベビーカー入店・カート完全ガイド](/article/costco-stroller)
+- [コストコ フードコートのベビーチェア完全ガイド](/article/costco-kodzure-koryaku)
+- [コストコ ベビーカー入店・カート完全ガイド](/article/costco-kodzure-koryaku)
 - [コストコ オムツ替えスポット完全ガイド](/article/costco-omutsu)

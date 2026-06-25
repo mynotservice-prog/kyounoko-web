@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: yonaki-taisaku-0-1sai
 # old: 夜泣き対策【0-1歳】軽減する5つの方法・親もラク
 title: 夜泣き対策【0-1歳】今夜から試せる5つの方法・先輩ママ実例

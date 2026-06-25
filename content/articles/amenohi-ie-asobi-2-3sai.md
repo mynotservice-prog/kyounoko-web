@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: amenohi-ie-asobi-2-3sai
 title: 雨の日の家遊び10選（2〜3歳向け）準備10分で集中30分｜100均で完結する保存版
 metaDescription: >-

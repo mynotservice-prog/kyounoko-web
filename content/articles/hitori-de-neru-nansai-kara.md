@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: hitori-de-neru-nansai-kara
 title: ひとりで寝るのは何歳から？寝かしつけ卒業の3ステップ
 category: yakudatsu

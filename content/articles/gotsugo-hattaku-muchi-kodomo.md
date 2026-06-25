@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: gotsugo-hattaku-muchi-kodomo
 title: 発達で気になる兆候・専門家相談の目安｜1〜6歳サイン15と相談フロー
 metaDescription: >-

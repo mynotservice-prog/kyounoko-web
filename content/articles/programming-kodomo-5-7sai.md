@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: programming-kodomo-5-7sai
 title: 5〜7歳のプログラミング入門｜無料で始められる教材10選
 metaDescription: >-

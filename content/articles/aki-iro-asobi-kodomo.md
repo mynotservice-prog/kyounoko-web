@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: aki-iro-asobi-kodomo
 title: 秋の自然遊び10選【2-6歳】どんぐり・落ち葉・松ぼっくり活用法
 metaDescription: >-

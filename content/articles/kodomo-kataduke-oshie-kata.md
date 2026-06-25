@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-kataduke-oshie-kata
 title: 子供にお片付けを教える｜2〜6歳の習慣化と声かけ完全ガイド
 metaDescription: >-

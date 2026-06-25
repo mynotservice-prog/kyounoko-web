@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: iyaiya-ki-toha-kanzen-guide
 title: イヤイヤ期とは｜時期・原因・乗り越え方・親の心構え完全ガイド【1〜3歳】
 metaDescription: >-

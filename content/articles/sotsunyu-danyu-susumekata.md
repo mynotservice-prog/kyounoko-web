@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: sotsunyu-danyu-susumekata
 title: 卒乳・断乳の進め方完全ガイド｜いつから・方法・おっぱいトラブル対策【0〜2歳】
 metaDescription: >-

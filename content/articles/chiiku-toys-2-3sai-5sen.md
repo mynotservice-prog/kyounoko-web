@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: chiiku-toys-2-3sai-5sen
 title: 知育玩具2〜3歳おすすめ5選｜発達を伸ばす定番おもちゃの選び方
 metaDescription: >-

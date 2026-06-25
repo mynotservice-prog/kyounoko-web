@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: gakushi-vs-nisa-hikaku
 title: 学資保険 vs つみたてNISA 完全比較【2026年版】｜教育資金準備で選ぶならどっち？
 metaDescription: >-

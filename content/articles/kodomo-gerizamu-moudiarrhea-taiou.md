@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-gerizamu-moudiarrhea-taiou
 title: 子どもの下痢・嘔吐対処｜0〜6歳の家庭ケア7ステップと脱水サイン5つ
 metaDescription: >-

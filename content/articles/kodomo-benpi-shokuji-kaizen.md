@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-benpi-shokuji-kaizen
 title: 子供の便秘｜食事改善・運動・受診の目安完全ガイド【0〜6歳】
 metaDescription: >-

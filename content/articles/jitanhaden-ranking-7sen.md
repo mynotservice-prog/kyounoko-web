@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: jitanhaden-ranking-7sen
 # old: 時短家電ランキング7選【共働き必須】親がラクになる
 title: 買ってよかった時短家電7選【2026・共働き】1日90分捻出

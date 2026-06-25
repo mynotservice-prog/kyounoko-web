@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: sozai-kodomo-daibutsu-yobou
 title: 子どもの怪我予防チェックリスト｜家庭内事故を防ぐ25項目
 metaDescription: >-

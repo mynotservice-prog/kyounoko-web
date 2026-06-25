@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-uso-tsuku-3sai-taisho
 title: 3〜6歳の子供が嘘をつく｜原因と対処法・叱り方完全ガイド
 metaDescription: >-

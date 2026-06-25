@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: soccer-yakyu-3-6sai
 title: 幼児向けサッカー・野球教室の選び方｜3〜6歳が続く・辞めない5つのコツ
 metaDescription: >-

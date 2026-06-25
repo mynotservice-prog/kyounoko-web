@@ -64,11 +64,11 @@ legacyHero: /hero/food-japan-01.webp
 
 ### ベビーカー
 
-ココスは**ロードサイド型店舗が多く、ベビーカー入店ベスト**。朝の時間帯なら通路もガラガラで、ボックス席横に余裕を持って横付けできます。詳しくは[ココスのベビーカー入店ガイド](/article/cocos-stroller)を参照。
+ココスは**ロードサイド型店舗が多く、ベビーカー入店ベスト**。朝の時間帯なら通路もガラガラで、ボックス席横に余裕を持って横付けできます。詳しくは[ココスのベビーカー入店ガイド](/article/cocos-kodzure-koryaku)を参照。
 
 ### ベビーチェア
 
-腰すわり後（6ヶ月〜）対応のハイチェアが各店2-4台常備。**朝の時間帯は100%即確保可能**。詳しくは[ココスのベビーチェア完全ガイド](/article/cocos-baby-chair)を参照。
+腰すわり後（6ヶ月〜）対応のハイチェアが各店2-4台常備。**朝の時間帯は100%即確保可能**。詳しくは[ココスのベビーチェア完全ガイド](/article/cocos-kodzure-koryaku)を参照。
 
 ### 離乳食持ち込み
 
@@ -148,8 +148,8 @@ A. **誕生日サービスはモーニング時間外の店舗が多い**。誕�
 **ココス関連記事（クラスター内必読）**
 
 - [ココスの子連れ完全攻略｜誕生日サービス・ぬりえ](/article/cocos-kodzure-koryaku)
-- [ココスのベビーチェア完全ガイド](/article/cocos-baby-chair)
-- [ココスのベビーカー入店ガイド](/article/cocos-stroller)
+- [ココスのベビーチェア完全ガイド](/article/cocos-kodzure-koryaku)
+- [ココスのベビーカー入店ガイド](/article/cocos-kodzure-koryaku)
 - [ココスの個室・半個室席の使い方](/article/cocos-koshitsu)
 - [ココスのキッズメニュー全種類](/article/cocos-kids-menu)
 - [ココス誕生日サービス体験記](/article/cocos-birthday-real)

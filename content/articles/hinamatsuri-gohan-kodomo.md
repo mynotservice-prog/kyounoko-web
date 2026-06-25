@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: hinamatsuri-gohan-kodomo
 title: ひな祭りごはん 子ども喜ぶ10選【2026】ちらし寿司＋手作りお菓子
 metaDescription: >-

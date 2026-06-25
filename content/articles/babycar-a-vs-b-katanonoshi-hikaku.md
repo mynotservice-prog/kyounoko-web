@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: babycar-a-vs-b-katanonoshi-hikaku
 title: ベビーカー A型 vs B型 完全比較【2026年版】｜新生児・1歳から・両方持つコツ
 metaDescription: >-

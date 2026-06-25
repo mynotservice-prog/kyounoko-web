@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: babycar-fan-cooler-sheet-2026
 title: 【2026年】ベビーカー扇風機・保冷シート徹底比較10選｜熱中症対策に必須の暑さ対策アイテム
 metaDescription: >-

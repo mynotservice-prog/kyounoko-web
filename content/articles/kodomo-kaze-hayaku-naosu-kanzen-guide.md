@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-kaze-hayaku-naosu-kanzen-guide
 title: 子供の風邪を早く治す完全ガイド｜熱・鼻水・咳の対処法と病院受診の目安【0〜6歳】
 metaDescription: >-
