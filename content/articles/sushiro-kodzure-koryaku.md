@@ -1,6 +1,6 @@
 ---
 slug: sushiro-kodzure-koryaku
-title: スシローは子連れOK？ベビーカー・キッズメニュー・離乳食・うに/まぐろ取り分け【2026】
+title: スシローは子連れOK？ベビーカー・ベビーチェア・離乳食・うに/まぐろ取り分け【2026】
 metaDescription: スシローはベビーカーで入れる？キッズメニュー全種類、離乳食持込、ベビーチェア、子供の取り分けに最適なネタ、混雑回避時間まで0-6歳の家族目線で解説。
 category: today-taberu
 categoryName: 今日何食べる？

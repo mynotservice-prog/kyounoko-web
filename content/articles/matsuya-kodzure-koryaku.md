@@ -1,6 +1,6 @@
 ---
 slug: matsuya-kodzure-koryaku
-title: 松屋は子連れOK？ベビーカー・キッズメニュー・牛丼ミニ・小皿取り分け【2026】
+title: 松屋は子連れOK？ベビーカー・離乳食・牛丼ミニ・小皿取り分け【2026】
 metaDescription: 松屋はベビーカーで入れる？キッズメニュー、牛丼ミニ/小皿取り分け、ベビーチェア、券売機操作、混雑回避まで0-6歳の家族目線で解説。
 category: today-doko
 categoryName: 今日どこ行く

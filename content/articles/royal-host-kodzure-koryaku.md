@@ -1,6 +1,6 @@
 ---
 slug: royal-host-kodzure-koryaku
-title: ロイヤルホストは子連れOK？ベビーカー・キッズメニュー・離乳食・個室席【2026】
+title: ロイヤルホストは子連れOK？ベビーカー・ベビーチェア・離乳食・個室席【2026】
 metaDescription: >-
   ロイヤルホストはベビーカーで入れる？キッズメニュー、離乳食、ベビーチェア、個室席、記念日プランまで0-6歳の家族目線で解説。
 category: today-doko

@@ -1,6 +1,6 @@
 ---
 slug: yoshinoya-kodzure-koryaku
-title: 吉野家は子連れOK？ベビーカー・キッズメニュー・牛皿/ミニ盛り・離乳食【2026】
+title: 吉野家は子連れOK？ベビーカー・取り分け・牛皿/ミニ盛り・離乳食【2026】
 metaDescription: 吉野家はベビーカーで入れる？キッズ牛丼セット、牛皿(取り分け用)、ベビーチェア、ロードサイド店vs駅前店の使い分け、離乳食持込まで0-6歳家族目線で解説。
 category: today-doko
 categoryName: 今日どこ行く
