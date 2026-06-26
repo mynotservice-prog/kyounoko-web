@@ -54,6 +54,13 @@ export default function AreaPage() {
         <p className="v2-page-lead">
           お住まいの地域・おでかけ先からスポットを探せます。
         </p>
+        <Link
+          href="/today"
+          className="btn-primary"
+          style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginTop: 12, textDecoration: 'none' }}
+        >
+          ✨ 駅をえらんで「今日の流れ」を作る（午前あそぶ→お昼→午後）→
+        </Link>
       </div>
 
       <div className="v2-section" style={{ marginTop: 6 }}>

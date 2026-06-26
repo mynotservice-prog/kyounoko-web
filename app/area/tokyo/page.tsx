@@ -34,6 +34,13 @@ export default function TokyoPage() {
           東京都
         </h1>
         <p className="v2-page-lead">区市町村から、おでかけ先を探せます。</p>
+        <Link
+          href="/today"
+          className="btn-primary"
+          style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginTop: 12, textDecoration: 'none' }}
+        >
+          ✨ 東京で「今日の流れ」を作る（午前あそぶ→お昼→午後）→
+        </Link>
       </div>
 
       <div className="v2-section" style={{ marginTop: 6 }}>
