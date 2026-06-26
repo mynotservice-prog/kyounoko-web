@@ -68,3 +68,6 @@ docs/_image-sheets/
 
 # ChatGPT生成画像の元PNG（375MB）。webp変換済みのものだけ public/img/scenes/ にコミットする
 public/new_image/
+
+# くら寿司の原本画像(大容量・Drive保管)。最適化済webpのみ配信
+/assets/kura-src/

@@ -247,6 +247,7 @@ export default function DataRestaurantsPage() {
           <section style={{ marginTop: 36 }}>
             <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 12 }}>関連データ・ページ</h2>
             <ul style={{ paddingLeft: 20, lineHeight: 2, fontSize: 14 }}>
+              <li><Link href="/kura-sushi">くら寿司 子連れガイド（全国47都道府県）</Link></li>
               <li><Link href="/station">駅別子連れランチガイド（484駅）</Link></li>
               <li><Link href="/station/line">路線別子連れランチガイド（40路線）</Link></li>
               <li><Link href="/data">データセット一覧（/data）</Link></li>

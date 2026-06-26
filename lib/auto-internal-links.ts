@@ -169,6 +169,11 @@ const LINK_RULES: LinkRule[] = [
   { keyword: 'クリスマスプレゼント', targetSlug: 'christmas-present-kodomo-nenrei-betsu', priority: 10 },
   { keyword: '敬老の日', targetSlug: 'keirou-no-hi-4sai-photo-message-card', priority: 9 },
   { keyword: '出産祝い', targetSlug: 'shussan-iwai-futarime-2026', priority: 7 },
+
+  // ▼ くら寿司クラスタ（2026-06-26: 回転レーン/衛生の差別化記事へ権威を集約）
+  { keyword: '鮮度くん', targetSlug: 'kura-sushi-mawaru-eisei-kodomo', priority: 10 },
+  { keyword: '抗菌寿司カバー', targetSlug: 'kura-sushi-mawaru-eisei-kodomo', priority: 10 },
+  { keyword: '回転レーン', targetSlug: 'kura-sushi-mawaru-eisei-kodomo', priority: 7 },
 ];
 
 // 長いキーワード優先（「知育玩具」>「知育」）、priority 高い順

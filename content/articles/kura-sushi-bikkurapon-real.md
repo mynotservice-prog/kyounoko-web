@@ -111,6 +111,8 @@ X（旧Twitter）、Googleマップ・食べログのレビュー、子育てブ
 
 ## 関連記事
 
+- [大手で“まだ皿が回ってる”のはくら寿司だけ｜鮮度くんカバーの理由](/article/kura-sushi-mawaru-eisei-kodomo)
+- [くら寿司は子連れOK？ベビーカー・キッズメニュー完全ガイド](/article/kura-sushi-kodzure-koryaku)
 - [子連れOKファミレス王道15選](/article/kodzure-famires-15sen)
 - [サイゼリヤ子連れ完全攻略](/article/kodzure-saize-koryaku)
 - [子連れ和食チェーン10選](/article/kodzure-washoku-chain-10)

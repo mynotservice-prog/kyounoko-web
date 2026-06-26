@@ -3194,12 +3194,12 @@ export const TOKYO_RESTAURANTS: Spot[] = [
       summerCool: true,
   },
   {
-    name: 'くら寿司', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
+    name: 'くら寿司', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
     ward: '複数', city: '回転寿司チェーン',
-    note: 'ビッくらポンでおもちゃ当選、個室風ボックス席あり',
+    note: '大手で唯一“皿が回る”回転レーン、鮮度くん抗菌カバーで衛生的、ビッくらポンで子供大喜び',
     pricing: { adult: '1,000-1,500円', elementary: '500円〜', preschool: '無料（取り皿のみ）', infant: '無料' },
-    strollerAccess: true, babyChair: true, kidsMenu: true,
-    hiddenTip: '5皿で1回「ビッくらポン」抽選、おもちゃカプセルが楽しみ',
+    strollerAccess: true, babyChair: true, kidsMenu: true, babyFood: true,
+    hiddenTip: '回るお皿は抗菌寿司カバー「鮮度くん」で衛生的。5皿で1回「ビッくらポン」抽選、全国47都道府県にあり旅行先でも安心',
       summerCool: true,
   },
   {

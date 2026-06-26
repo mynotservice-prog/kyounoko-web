@@ -106,6 +106,8 @@ legacyHero: /hero-ai/cat-food-kitchen-01.jpg
 
 ## 関連記事
 
+- [大手で“まだ皿が回ってる”のはくら寿司だけ｜鮮度くんカバーで衛生的＆子供が喜ぶ理由](/article/kura-sushi-mawaru-eisei-kodomo)
+- [くら寿司は全国47都道府県にある｜お住まいエリアの店舗の探し方](/article/kura-sushi-zenkoku-47)
 - [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 - [くら寿司のおむつ替え台ガイド｜店舗別の有無・授乳室](/article/kurasushi-omutsu)
 - [サイゼリヤはベビーカーOK？子連れ完全攻略](/article/kodzure-saize-koryaku)
