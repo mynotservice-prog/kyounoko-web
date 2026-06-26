@@ -100,6 +100,8 @@ export const metadata: Metadata = {
   // pinterest:image / pinterest:description で Pin の見栄えを最適化
   other: {
     'pinterest-rich-pin': 'true',
+    // サイト所有権の確認（ドメインクレーム）2026-06-26
+    'p:domain_verify': '11e0bf79e24673de1681a0a441015e6a',
     'pinterest:image': 'https://kyounoko.jp/img/ogp-default-v2.webp',
     'pinterest:description': '子育て家庭の「今日どうする？」を3分で決めるサイト。0-6歳の天気・年齢・予算別に決定をサポート',
   },
