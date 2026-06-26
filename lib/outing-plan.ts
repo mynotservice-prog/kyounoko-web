@@ -17,20 +17,18 @@
  *   - 午後   : 別spot→おうちミニプラン(531本) で必ず1件
  */
 
-import {
-  getStationBySlug,
-  WARD_NAMES,
-  type TokyoWard,
-} from './tokyo-stations';
+import { WARD_NAMES, type TokyoWard } from './tokyo-stations';
+import { findStationBySlug, type AnyStation } from './all-stations';
 import {
   SPOTS,
   TOKYO_RESTAURANTS,
   getSpotsByNearestStation,
-  getSpotsForWard,
+  getSpotsForRegion,
   spotToSlug,
   type Spot,
   type AgeTag,
 } from './spots';
+import type { AreaSlug } from './area';
 import { pickTopPlan, type PlanMeta } from './plans';
 import type { Weather } from './types';
 
@@ -84,14 +82,22 @@ export type OutingPlan = {
   anchor: {
     stationSlug?: string;
     stationName?: string;
-    ward: TokyoWard;
-    wardName: string;
+    /** SPOTSのエリアキー（tokyo/kanagawa/osaka…） */
+    areaKey: string;
+    /** 地域ラベル（区名/市名/府県名） */
+    regionLabel: string;
     scale?: string;
   };
   slots: OutingSlot[];
-  /** 全体の質: ideal=午前が同駅 / ward=同区 / mixed=広域フォールバック含む */
+  /** 全体の質: ideal=午前が同駅 / ward=同地域 / mixed=広域フォールバック含む */
   coverage: 'ideal' | 'ward' | 'mixed';
 };
+
+/** AnyStation → SPOTSのエリアキー（都道府県/地域）。 */
+function areaKeyOf(st: AnyStation): string {
+  if (st.region === 'kansai' || st.region === 'saichi') return st.prefecture;
+  return st.region; // 'tokyo' | 'kanagawa'
+}
 
 const NON_RESTAURANT = (s: Spot) => s.category !== 'restaurant';
 
@@ -123,7 +129,8 @@ function pickByPopular(list: Spot[]): Spot | undefined {
  */
 function pickSpotCascade(
   stationSlug: string | undefined,
-  wardName: string,
+  areaKey: string,
+  regionLabel: string,
   q: OutingQuery,
   exclude: Set<string>,
   variant = 0,
@@ -153,17 +160,17 @@ function pickSpotCascade(
     }
   }
 
-  // 2) 同じ区（区内移動）
-  const wardSpots = getSpotsForWard(wardName);
+  // 2) 同じ地域（区/市内移動）
+  const regionSpots = getSpotsForRegion(areaKey, regionLabel);
   for (const strict of [true, false]) {
-    const cand = filt(wardSpots, strict).sort(popularFirst);
+    const cand = filt(regionSpots, strict).sort(popularFirst);
     if (cand.length) return { spot: at(cand), tier: 'ward' };
   }
 
-  // 3) 東京広域（最終フォールバック）
-  const tokyo = SPOTS.tokyo ?? [];
+  // 3) エリア広域（最終フォールバック）
+  const areaWide = SPOTS[areaKey as AreaSlug] ?? [];
   for (const strict of [true, false]) {
-    const cand = filt(tokyo, strict).sort(popularFirst);
+    const cand = filt(areaWide, strict).sort(popularFirst);
     if (cand.length) return { spot: at(cand), tier: 'wide' };
   }
 
@@ -185,7 +192,8 @@ function facetsOf(s: Spot): string[] {
  */
 /** お昼候補をスコア順（ファセット数優先）で並べて返す。?slot=lunch のリスト表示にも使う。 */
 export function lunchCandidates(
-  wardName: string,
+  areaKey: string,
+  regionLabel: string,
   q: { age?: AgeTag; budget?: 'free' | 'low' | 'mid' | 'high' },
 ): { ward: Spot[]; chain: Spot[] } {
   const budgetOk = (s: Spot) => {
@@ -195,17 +203,20 @@ export function lunchCandidates(
   };
   const isRest = (s: Spot) => s.category === 'restaurant' && ageOk(s, q.age) && budgetOk(s);
   const byFacets = (a: Spot, b: Spot) => facetsOf(b).length - facetsOf(a).length;
-  const ward = getSpotsForWard(wardName).filter(isRest).sort(byFacets);
+  // 地域内のレストラン（東京は TOKYO_RESTAURANTS も getSpotsForRegion が合流）
+  const ward = getSpotsForRegion(areaKey, regionLabel).filter(isRest).sort(byFacets);
+  // 全国チェーン（ward:'複数' 等。どの地域でも入れる）— TOKYO_RESTAURANTS を流用
   const chain = TOKYO_RESTAURANTS.filter(isRest).sort(byFacets);
   return { ward, chain };
 }
 
 function pickLunch(
-  wardName: string,
+  areaKey: string,
+  regionLabel: string,
   q: OutingQuery,
   variant = 0,
 ): { spot: Spot; tier: CoherenceTier } | null {
-  const { ward, chain } = lunchCandidates(wardName, q);
+  const { ward, chain } = lunchCandidates(areaKey, regionLabel, q);
   const at = (list: Spot[]) => list[((variant % list.length) + list.length) % list.length];
   if (ward.length) return { spot: at(ward), tier: 'ward' };
   if (chain.length) return { spot: at(chain), tier: 'chain' };
@@ -227,7 +238,7 @@ function pickHomePlan(q: OutingQuery): PlanMeta | null {
 function moveTextForSpot(
   tier: CoherenceTier,
   stationName: string | undefined,
-  wardName: string,
+  regionLabel: string,
   spot: Spot,
   walkMinutes?: number,
 ): OutingMove {
@@ -239,40 +250,66 @@ function moveTextForSpot(
       tier,
     };
   }
-  if (tier === 'ward') return { text: `${wardName}内`, tier };
+  if (tier === 'ward') return { text: `${regionLabel}内`, tier };
   // wide
-  return { text: `${spot.ward || spot.city || '都内'}へ移動`, tier };
+  return { text: `${spot.ward || spot.city || regionLabel}へ移動`, tier };
 }
 
 /**
  * 今日のおでかけプランを生成。東京23区の駅slug（または区）をアンカーに、
  * 移動の少ない3スロットを返す。
  */
-export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
-  // アンカー解決
+/**
+ * 駅slug（または東京の区）から、SPOTSエリアキー・地域ラベル・駅名を解決する。
+ * buildOutingPlan と ?slot=lunch ビューで共通利用。東京/横浜/関西/埼玉千葉を横断。
+ */
+export function resolveOutingAnchor(q: { stationSlug?: string; ward?: TokyoWard }): {
+  stationSlug?: string;
+  stationName?: string;
+  areaKey: string;
+  regionLabel: string;
+  scale?: string;
+} | null {
   let stationSlug = q.stationSlug;
   let stationName: string | undefined;
-  let ward: TokyoWard | undefined = q.ward;
+  let regionLabel: string | undefined;
+  let areaKey: string | undefined;
   let scale: string | undefined;
 
   if (stationSlug) {
-    const st = getStationBySlug(stationSlug);
+    const st = findStationBySlug(stationSlug);
     if (st) {
       stationName = st.name;
-      ward = st.ward;
+      regionLabel = st.regionLabel;
+      areaKey = areaKeyOf(st);
       scale = st.scale;
     } else {
       stationSlug = undefined; // 不明な駅slugは無視して区で続行
     }
   }
-  if (!ward) return null; // 東京の駅も区も無ければ生成不可（呼び出し側でフォールバック）
-  const wardName = WARD_NAMES[ward];
+  // 駅が無いとき、東京の区だけでもアンカーにできる（後方互換）
+  if (!regionLabel && q.ward) {
+    regionLabel = WARD_NAMES[q.ward];
+    areaKey = 'tokyo';
+  }
+  if (!regionLabel || !areaKey) return null;
+  return { stationSlug, stationName, areaKey, regionLabel, scale };
+}
+
+export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
+  const anchor = resolveOutingAnchor(q);
+  if (!anchor) return null; // 地域が解決できなければ生成不可
+  const { stationSlug, stationName, areaKey, regionLabel, scale } = anchor;
+
+  // spot個別ページのslugは、その spot が属する SPOTS エリアキーで生成する。
+  // チェーン店(TOKYO_RESTAURANTS)は 'tokyo' で登録されているため別扱い。
+  const slugArea = areaKey;
 
   const used = new Set<string>();
   const slots: OutingSlot[] = [];
 
   // ---- 午前: あそぶ ----
-  const morning = pickSpotCascade(stationSlug, wardName, q, used, q.morningVariant ?? 0);
+  const morning = pickSpotCascade(stationSlug, areaKey, regionLabel, q, used, q.morningVariant ?? 0);
   if (morning) {
     used.add(morning.spot.name);
     slots.push({
@@ -282,14 +319,14 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
       icon: '🌤',
       kind: 'spot',
       spot: morning.spot,
-      spotSlug: spotToSlug(morning.spot, 'tokyo'),
-      move: moveTextForSpot(morning.tier, stationName, wardName, morning.spot, morning.walkMinutes),
+      spotSlug: spotToSlug(morning.spot, slugArea),
+      move: moveTextForSpot(morning.tier, stationName, regionLabel, morning.spot, morning.walkMinutes),
       tier: morning.tier,
     });
   }
 
   // ---- お昼: たべる ----
-  const lunch = pickLunch(wardName, q, q.lunchVariant ?? 0);
+  const lunch = pickLunch(areaKey, regionLabel, q, q.lunchVariant ?? 0);
   if (lunch) {
     used.add(lunch.spot.name);
     slots.push({
@@ -299,10 +336,11 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
       icon: '🍽',
       kind: 'restaurant',
       spot: lunch.spot,
-      spotSlug: spotToSlug(lunch.spot, 'tokyo'),
+      // チェーンは TOKYO_RESTAURANTS（area='tokyo'）、地域店は areaKey で登録
+      spotSlug: spotToSlug(lunch.spot, lunch.tier === 'chain' ? 'tokyo' : slugArea),
       facets: facetsOf(lunch.spot),
       move: {
-        text: lunch.tier === 'ward' ? `${wardName}内・徒歩圏` : '周辺のファミリー向けチェーン',
+        text: lunch.tier === 'ward' ? `${regionLabel}内・徒歩圏` : '周辺のファミリー向けチェーン',
         tier: lunch.tier,
       },
       tier: lunch.tier,
@@ -313,7 +351,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
   const preferHome = q.age === '0-1';
   let afternoon: { spot: Spot; tier: CoherenceTier; walkMinutes?: number } | null = null;
   if (!preferHome) {
-    afternoon = pickSpotCascade(stationSlug, wardName, q, used, q.afternoonVariant ?? 0);
+    afternoon = pickSpotCascade(stationSlug, areaKey, regionLabel, q, used, q.afternoonVariant ?? 0);
   }
   if (afternoon) {
     used.add(afternoon.spot.name);
@@ -324,8 +362,8 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
       icon: '🧸',
       kind: 'spot',
       spot: afternoon.spot,
-      spotSlug: spotToSlug(afternoon.spot, 'tokyo'),
-      move: moveTextForSpot(afternoon.tier, stationName, wardName, afternoon.spot, afternoon.walkMinutes),
+      spotSlug: spotToSlug(afternoon.spot, slugArea),
+      move: moveTextForSpot(afternoon.tier, stationName, regionLabel, afternoon.spot, afternoon.walkMinutes),
       tier: afternoon.tier,
     });
   } else {
@@ -347,7 +385,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
     morningTier === 'station' ? 'ideal' : morningTier === 'ward' ? 'ward' : 'mixed';
 
   return {
-    anchor: { stationSlug, stationName, ward, wardName, scale },
+    anchor: { stationSlug, stationName, areaKey, regionLabel, scale },
     slots,
     coverage,
   };

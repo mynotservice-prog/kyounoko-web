@@ -10,13 +10,11 @@ import {
 } from '@/lib/articles';
 import { buildDayPlan, type DayPlanSlot } from '@/lib/plans';
 import { getKidFriendlyRestaurants, type Spot, type AgeTag } from '@/lib/spots';
-import { buildOutingPlan, lunchCandidates } from '@/lib/outing-plan';
+import { buildOutingPlan, lunchCandidates, resolveOutingAnchor } from '@/lib/outing-plan';
 import { OutingPlanView, LunchListView } from '@/components/today/OutingPlanView';
 import {
   getTerminalStations,
   getFamilyFriendlyStations,
-  getStationBySlug,
-  WARD_NAMES,
   type TokyoWard,
 } from '@/lib/tokyo-stations';
 import type { Weather } from '@/lib/types';
@@ -510,11 +508,9 @@ export default async function TodayPage({ searchParams }: Props) {
 
   // ?slot=lunch: お昼スロット単体ビュー（子連れで入れる店一覧。最多需要）
   if (isTokyoAnchor && slotParam === 'lunch') {
-    const st = stationParam ? getStationBySlug(stationParam) : undefined;
-    const ward = st?.ward ?? wardParam;
-    if (ward) {
-      const wardName = WARD_NAMES[ward];
-      const { ward: wardRest, chain } = lunchCandidates(wardName, {
+    const anchor = resolveOutingAnchor({ stationSlug: stationParam, ward: wardParam });
+    if (anchor) {
+      const { ward: wardRest, chain } = lunchCandidates(anchor.areaKey, anchor.regionLabel, {
         age: query.age as AgeTag | undefined,
         budget: query.budget as 'free' | 'low' | 'mid' | 'high' | undefined,
       });
@@ -530,8 +526,8 @@ export default async function TodayPage({ searchParams }: Props) {
             </nav>
           </div>
           <LunchListView
-            anchorLabel={st ? `${st.name}駅` : wardName}
-            wardName={wardName}
+            anchorLabel={anchor.stationName ? `${anchor.stationName}駅` : anchor.regionLabel}
+            wardName={anchor.regionLabel}
             wardRest={wardRest}
             chain={chain}
             ageLabel={ageLabel}

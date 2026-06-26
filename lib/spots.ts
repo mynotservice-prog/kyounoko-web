@@ -3063,6 +3063,24 @@ export function getSpotsForWard(ward: string): Spot[] {
 }
 
 /**
+ * 任意エリア（都道府県SPOTSキー）× 地域ラベル（区名/市名等）で絞り込む汎用版。
+ * getSpotsForWard の東京限定を一般化し、横浜(kanagawa)・大阪(osaka)等にも対応。
+ * 東京のときだけ TOKYO_RESTAURANTS も合流（外食データの所在に合わせる）。
+ */
+export function getSpotsForRegion(areaKey: string, regionLabel: string): Spot[] {
+  const lists: Spot[][] = [SPOTS[areaKey as AreaSlug] ?? []];
+  if (areaKey === 'tokyo') lists.push(TOKYO_RESTAURANTS);
+  const result: Spot[] = [];
+  for (const list of lists) {
+    for (const s of list) {
+      const target = s.ward ?? s.city ?? '';
+      if (regionLabel && target.includes(regionLabel)) result.push(s);
+    }
+  }
+  return result;
+}
+
+/**
  * スポット名から URL slug を生成する。
  * 日本語スポット名 → 英数字 slug。
  * - 全角→半角、記号削除

@@ -279,7 +279,7 @@ export function OutingPlanView({
   weatherLabel?: string;
 }) {
   const { anchor, slots, coverage } = plan;
-  const anchorLabel = anchor.stationName ? `${anchor.stationName}駅` : anchor.wardName;
+  const anchorLabel = anchor.stationName ? `${anchor.stationName}駅` : anchor.regionLabel;
   const lunch = slots.find((s) => s.key === 'lunch');
   const reservationOffer = lunch ? getSpotReservationOffer('restaurant') : null;
   const saveLabel = `${anchorLabel}の1日プラン${ageLabel ? `（${ageLabel}）` : ''}`;
@@ -296,8 +296,8 @@ export function OutingPlanView({
     coverage === 'ideal'
       ? `${anchorLabel}まわりで、移動少なめに回れる1日にしました。`
       : coverage === 'ward'
-        ? `${anchor.wardName}内で回れる1日にしました。`
-        : `${anchor.wardName}まわりの1日プランです（一部は少し移動あり）。`;
+        ? `${anchor.regionLabel}内で回れる1日にしました。`
+        : `${anchor.regionLabel}まわりの1日プランです（一部は少し移動あり）。`;
 
   return (
     <section className="container" style={{ marginTop: 16 }}>
