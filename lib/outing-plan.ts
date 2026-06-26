@@ -35,7 +35,7 @@ import type { Weather } from './types';
 export type OutingSlotKey = 'morning' | 'lunch' | 'afternoon';
 
 /** 近さ／フォールバックの段階。UIで正直に出す。 */
-export type CoherenceTier = 'station' | 'ward' | 'wide' | 'chain' | 'home';
+export type CoherenceTier = 'station' | 'nearby' | 'ward' | 'wide' | 'chain' | 'home';
 
 export type OutingMove = {
   /** 「池袋駅から徒歩8分」「豊島区内」「おうちへ（休憩）」等 */
@@ -134,7 +134,8 @@ function pickSpotCascade(
   q: OutingQuery,
   exclude: Set<string>,
   variant = 0,
-): { spot: Spot; tier: CoherenceTier; walkMinutes?: number } | null {
+  anchorStation?: AnyStation | null,
+): { spot: Spot; tier: CoherenceTier; walkMinutes?: number; viaStationName?: string } | null {
   const filt = (list: Spot[], strictWeather: boolean) =>
     list.filter(
       (s) =>
@@ -144,7 +145,7 @@ function pickSpotCascade(
         !exclude.has(s.name),
     );
   // 同じ近さ階層の候補リストから variant 番目を選ぶ（「別の候補」用）。
-  const at = (list: Spot[]) => list[((variant % list.length) + list.length) % list.length];
+  const at = <T>(list: T[]) => list[((variant % list.length) + list.length) % list.length];
 
   // 1) 同じ駅（徒歩圏）
   if (stationSlug) {
@@ -156,6 +157,29 @@ function pickSpotCascade(
       if (cand.length) {
         const top = at(cand);
         return { spot: top, tier: 'station', walkMinutes: top.walkMinutes };
+      }
+    }
+  }
+
+  // 1.5) 近隣駅（アンカー駅と路線を共有する駅のspot）— 区フォールバックより先に。
+  //      巨大区(千代田区27駅)で遠い丸の内が出る問題を、路線でつながる近場に置き換える。
+  if (anchorStation && anchorStation.lines.length) {
+    const anchorLines = new Set(anchorStation.lines);
+    const pool = SPOTS[areaKey as AreaSlug] ?? [];
+    for (const strict of [true, false]) {
+      const cand = filt(pool, strict)
+        .filter((s) => s.nearestStation && s.nearestStation !== stationSlug)
+        .map((s) => ({ s, st: findStationBySlug(s.nearestStation!) }))
+        .filter((x) => x.st && x.st.lines.some((l) => anchorLines.has(l)))
+        .sort((a, b) => popularFirst(a.s, b.s));
+      if (cand.length) {
+        const pick = at(cand);
+        return {
+          spot: pick.s,
+          tier: 'nearby',
+          walkMinutes: pick.s.walkMinutes,
+          viaStationName: pick.st!.name,
+        };
       }
     }
   }
@@ -243,6 +267,7 @@ function moveTextForSpot(
   regionLabel: string,
   spot: Spot,
   walkMinutes?: number,
+  viaStationName?: string,
 ): OutingMove {
   if (tier === 'station') {
     const m = walkMinutes ?? undefined;
@@ -251,6 +276,10 @@ function moveTextForSpot(
       minutes: m,
       tier,
     };
+  }
+  if (tier === 'nearby') {
+    // 同じ路線でつながる近隣駅へ電車で移動
+    return { text: viaStationName ? `${viaStationName}駅へ（電車ですぐ）` : '電車ですぐ', tier };
   }
   if (tier === 'ward') return { text: `${regionLabel}内`, tier };
   // wide
@@ -304,6 +333,8 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
   const anchor = resolveOutingAnchor(q);
   if (!anchor) return null; // 地域が解決できなければ生成不可
   const { stationSlug, stationName, areaKey, regionLabel, scale } = anchor;
+  // 近隣駅(同路線)tier 用にアンカー駅の路線情報を取得
+  const anchorStation = stationSlug ? findStationBySlug(stationSlug) : null;
 
   // spot個別ページのslugは、その spot が属する SPOTS エリアキーで生成する。
   // チェーン店(TOKYO_RESTAURANTS)は 'tokyo' で登録されているため別扱い。
@@ -313,7 +344,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
   const slots: OutingSlot[] = [];
 
   // ---- 午前: あそぶ ----
-  const morning = pickSpotCascade(stationSlug, areaKey, regionLabel, q, used, q.morningVariant ?? 0);
+  const morning = pickSpotCascade(stationSlug, areaKey, regionLabel, q, used, q.morningVariant ?? 0, anchorStation);
   if (morning) {
     used.add(morning.spot.name);
     slots.push({
@@ -324,7 +355,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
       kind: 'spot',
       spot: morning.spot,
       spotSlug: spotToSlug(morning.spot, slugArea),
-      move: moveTextForSpot(morning.tier, stationName, regionLabel, morning.spot, morning.walkMinutes),
+      move: moveTextForSpot(morning.tier, stationName, regionLabel, morning.spot, morning.walkMinutes, morning.viaStationName),
       tier: morning.tier,
     });
   }
@@ -354,9 +385,11 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
 
   // ---- 午後: 軽め（0-1歳は休憩優先でおうちへ） ----
   const preferHome = q.age === '0-1';
-  let afternoon: { spot: Spot; tier: CoherenceTier; walkMinutes?: number } | null = null;
+  let afternoon:
+    | { spot: Spot; tier: CoherenceTier; walkMinutes?: number; viaStationName?: string }
+    | null = null;
   if (!preferHome) {
-    afternoon = pickSpotCascade(stationSlug, areaKey, regionLabel, q, used, q.afternoonVariant ?? 0);
+    afternoon = pickSpotCascade(stationSlug, areaKey, regionLabel, q, used, q.afternoonVariant ?? 0, anchorStation);
   }
   if (afternoon) {
     used.add(afternoon.spot.name);
@@ -368,7 +401,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
       kind: 'spot',
       spot: afternoon.spot,
       spotSlug: spotToSlug(afternoon.spot, slugArea),
-      move: moveTextForSpot(afternoon.tier, stationName, regionLabel, afternoon.spot, afternoon.walkMinutes),
+      move: moveTextForSpot(afternoon.tier, stationName, regionLabel, afternoon.spot, afternoon.walkMinutes, afternoon.viaStationName),
       tier: afternoon.tier,
     });
   } else {
