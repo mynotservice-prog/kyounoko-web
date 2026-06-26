@@ -11,7 +11,13 @@
  */
 
 import { getOutingSpotsWithSlug, type Spot, type AgeTag } from './spots';
+import { getRuntimeSpotOverrides } from './spot-overrides';
 import { getGa4TopPagesByPrefix } from './ga4';
+
+/** 施設から提供された公式写真を持つか（override の image/images が入っている）。 */
+function hasOfficialPhoto(s: Spot): boolean {
+  return Boolean((s.images && s.images.length > 0) || s.image);
+}
 import { AREAS, type AreaSlug } from './area';
 
 export type SpotRankItem = {
@@ -42,11 +48,29 @@ function matchesFilter(spot: Spot, opts: SpotRankOptions, area: string): boolean
  */
 export async function getSpotRanking(opts: SpotRankOptions = {}): Promise<SpotRankItem[]> {
   const limit = opts.limit ?? 30;
-  const all = getOutingSpotsWithSlug();
+  // 公式写真は override(KV/バンドル)に入るため、override をマージした spot で判定する。
+  const ovMap = await getRuntimeSpotOverrides();
+  const all = getOutingSpotsWithSlug(ovMap);
   const bySlug = new Map(all.map((x) => [x.slug, x]));
 
   const items: Array<{ slug: string; area: string; spot: Spot; views?: number }> = [];
   const used = new Set<string>();
+
+  // 0) 施設から提供された公式写真があるスポットを最優先（画像が綺麗なので先頭に並べる）。
+  //    写真が無い環境(KV未設定/未提供)では0件→従来のランキングにそのままフォールバック。
+  const photoSpots = all
+    .filter((x) => hasOfficialPhoto(x.spot) && !used.has(x.slug))
+    .filter((x) => matchesFilter(x.spot, opts, x.area))
+    .sort((a, b) => {
+      if (a.spot.popular && !b.spot.popular) return -1;
+      if (!a.spot.popular && b.spot.popular) return 1;
+      return a.spot.name.localeCompare(b.spot.name, 'ja');
+    });
+  for (const p of photoSpots) {
+    items.push({ slug: p.slug, area: p.area, spot: p.spot });
+    used.add(p.slug);
+    if (items.length >= limit) break;
+  }
 
   // 1) GA4 実データ（/spot/ 配下のPVランキング）
   const ga4 = await getGa4TopPagesByPrefix('/spot/', 7, 200).catch(() => null);

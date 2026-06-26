@@ -128,7 +128,7 @@ export default async function AreaDetailPage({ params }: Props) {
   const isWard = m.kind === 'ward';
   // 「今日の流れ(1日プラン)」が成立する対応エリアだけ送客CTAを出す（東京＋横浜/埼玉/千葉）。
   // 既存SEOページ→1日プラン(noindex)への接続で回遊・再訪を増やす（順位は触らない）。
-  const TODAY_AREAS = new Set(['tokyo', 'kanagawa', 'saitama', 'chiba']);
+  const TODAY_AREAS = new Set(['tokyo', 'kanagawa', 'saitama', 'chiba', 'osaka']);
   const todayArea = isWard
     ? 'tokyo'
     : TODAY_AREAS.has(slug)

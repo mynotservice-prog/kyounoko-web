@@ -312,8 +312,9 @@ export function resolveOutingAnchor(q: { stationSlug?: string; ward?: TokyoWard 
     if (st) {
       stationName = st.name;
       // 地域ラベルは「徒歩圏」が成立する最小粒度を使う。
-      // 埼玉/千葉(saichi)は regionLabel が県単位で粗いので、駅の area(市区)を使う。
-      regionLabel = st.region === 'saichi' ? st.area : st.regionLabel;
+      // saichi(埼玉/千葉)・kansai(大阪/京都/兵庫)は regionLabel が県/府単位で粗いので、
+      // 駅の area(市区・地区=梅田/難波等)を使う。
+      regionLabel = st.region === 'saichi' || st.region === 'kansai' ? st.area : st.regionLabel;
       areaKey = areaKeyOf(st);
       scale = st.scale;
     } else {
