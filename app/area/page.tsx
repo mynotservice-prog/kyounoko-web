@@ -42,7 +42,7 @@ const POPULAR_AREAS = [
 
 export default function AreaPage() {
   return (
-    <V2Frame header="sub" active="search" backHref="/">
+    <V2Frame header="sub" active="area" backHref="/">
       <div className="v2-page-head" style={{ paddingTop: 6 }}>
         <h1
           className="v2-page-h1"

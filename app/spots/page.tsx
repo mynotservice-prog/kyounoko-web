@@ -56,7 +56,7 @@ export default function SpotsPage() {
   const totalCount = allSpots.length;
 
   return (
-    <V2Frame header="sub" active="search">
+    <V2Frame header="sub" active="area">
       <div className="v2-page-head" style={{ paddingTop: 6 }}>
         <h1
           className="v2-page-h1"

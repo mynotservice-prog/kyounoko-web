@@ -10,7 +10,7 @@
  * エリア（都道府県）・年齢（0-1 / 2-3 / 4-6）でも絞り込める。
  */
 
-import { getAllSpotsWithSlug, type Spot, type AgeTag } from './spots';
+import { getOutingSpotsWithSlug, type Spot, type AgeTag } from './spots';
 import { getGa4TopPagesByPrefix } from './ga4';
 import { AREAS, type AreaSlug } from './area';
 
@@ -42,7 +42,7 @@ function matchesFilter(spot: Spot, opts: SpotRankOptions, area: string): boolean
  */
 export async function getSpotRanking(opts: SpotRankOptions = {}): Promise<SpotRankItem[]> {
   const limit = opts.limit ?? 30;
-  const all = getAllSpotsWithSlug();
+  const all = getOutingSpotsWithSlug();
   const bySlug = new Map(all.map((x) => [x.slug, x]));
 
   const items: Array<{ slug: string; area: string; spot: Spot; views?: number }> = [];
@@ -88,7 +88,7 @@ export async function getSpotRanking(opts: SpotRankOptions = {}): Promise<SpotRa
  */
 export function getRankingAreas(): AreaSlug[] {
   const set = new Set<string>();
-  for (const x of getAllSpotsWithSlug()) {
+  for (const x of getOutingSpotsWithSlug()) {
     if (x.spot.popular) set.add(x.area);
   }
   return AREAS.map((a) => a.slug).filter(

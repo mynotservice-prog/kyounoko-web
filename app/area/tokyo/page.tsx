@@ -24,7 +24,7 @@ const WARD_ENTRIES = Object.entries(WARD_NAMES) as [string, string][];
 
 export default function TokyoPage() {
   return (
-    <V2Frame header="sub" active="search" backHref="/area">
+    <V2Frame header="sub" active="area" backHref="/area">
       <div className="v2-page-head" style={{ paddingTop: 6 }}>
         <h1
           className="v2-page-h1"

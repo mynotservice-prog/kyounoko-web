@@ -19,7 +19,7 @@ import { LineCta } from '@/components/common/LineCta';
 import { getFileArticlesByCategory } from '@/lib/articles';
 import { eventHeroImage, formatEventPeriod, getThisWeekEvents } from '@/lib/events';
 import { getAllFileArticles } from '@/lib/articles';
-import { getAllSpotsWithSlug } from '@/lib/spots';
+import { getOutingSpotsWithSlug } from '@/lib/spots';
 import { FEATURE_PAGES } from '@/lib/feature-pages';
 import { POPULAR_ARTICLE_SLUGS } from '@/lib/popular-articles';
 import { spotToV2, featureToV2, articleToV2 } from '@/lib/v2-adapters';
@@ -31,13 +31,16 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
 };
 
+// 各チップは「今日の流れ(/today)」が実際に解釈するパラメータへ直接リンクする。
+// 旧実装は全て /search?... に向いていたが /search は {q,p} しか読まず、
+// weather/place/budget/category を無視 → 絞り込みゼロの全記事一覧に着地していた（壊れリンク）。
 const QUICK_SEARCH = [
-  { t: '雨の日', icon: 'umbrella' as const, accent: 'rain' as const, q: 'weather=rain' },
-  { t: '晴れの日', icon: 'sun' as const, accent: 'sun' as const, q: 'weather=sunny' },
-  { t: '室内施設', icon: 'house' as const, accent: 'indoor' as const, q: 'place=indoor' },
-  { t: '子連れランチ', icon: 'fork' as const, accent: 'lunch' as const, q: 'category=today-taberu' },
-  { t: 'イベント', icon: 'party' as const, accent: 'event' as const, q: 'category=gyouji' },
-  { t: '無料スポット', icon: 'free' as const, accent: 'free' as const, q: 'budget=free' },
+  { t: '雨の日', icon: 'umbrella' as const, accent: 'rain' as const, href: '/today?weather=rain' },
+  { t: '晴れの日', icon: 'sun' as const, accent: 'sun' as const, href: '/today?weather=sunny' },
+  { t: '室内施設', icon: 'house' as const, accent: 'indoor' as const, href: '/today?place=indoor' },
+  { t: '子連れランチ', icon: 'fork' as const, accent: 'lunch' as const, href: '/today?mode=eat&mealTime=lunch' },
+  { t: 'イベント', icon: 'party' as const, accent: 'event' as const, href: '/events' },
+  { t: '無料スポット', icon: 'free' as const, accent: 'free' as const, href: '/today?budget=free' },
 ];
 
 const POPULAR_AREAS = [
@@ -73,7 +76,7 @@ export default function HomePage() {
   // 人気スポット: getAllSpotsWithSlug() 経由で正規 slug を使う（/spot/[slug] の
   // generateStaticParams と必ず一致させる）。
   // popular=true があれば優先、なければ先頭から5件。
-  const allSpotsWithSlug = getAllSpotsWithSlug();
+  const allSpotsWithSlug = getOutingSpotsWithSlug();
   const popularSpotsWS = allSpotsWithSlug
     .filter((x) => x.spot.popular)
     .slice(0, 5);
@@ -174,7 +177,7 @@ export default function HomePage() {
         {QUICK_SEARCH.map((q) => {
           const a = V2_ACCENT[q.accent];
           return (
-            <Link key={q.t} href={`/search?${q.q}`} className="v2-quick-item">
+            <Link key={q.t} href={q.href} className="v2-quick-item">
               <span className="v2-quick-ico" style={{ background: a.bg }}>
                 <V2Icon name={q.icon} size={26} color={a.c} />
               </span>

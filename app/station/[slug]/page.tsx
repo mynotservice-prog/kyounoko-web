@@ -221,6 +221,15 @@ export default async function StationPage({ params }: Props) {
             <div style={{ marginTop: 18, fontSize: 13, color: 'var(--ink-sub)' }}>
               <strong>路線:</strong> {station.lines.join(' / ')}
             </div>
+
+            {/* 地域ブラウズ → メイン機能「今日の流れ」への接続（おでかけ1日プラン） */}
+            <Link
+              href={`/today?station=${station.slug}`}
+              className="btn-primary"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginTop: 18, textDecoration: 'none' }}
+            >
+              ✨ この駅で「今日の流れ」を作る（午前あそぶ→お昼→午後）→
+            </Link>
           </header>
 
           {/* TL;DR — 各項目クリックで該当セクションへスムーズスクロール */}

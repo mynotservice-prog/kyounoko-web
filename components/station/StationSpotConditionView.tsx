@@ -5,9 +5,7 @@
  * SpotList を再利用してカード描画する。
  */
 import Link from 'next/link';
-import { SiteHeader } from '@/components/layout/SiteHeader';
-import { SiteFooter } from '@/components/layout/SiteFooter';
-import { MobileStickyNav } from '@/components/layout/MobileStickyNav';
+import { V2Frame } from '@/components/v2/V2Frame';
 import { SPOT_CATEGORY_LABEL, type Spot } from '@/lib/spots';
 import type { StationCondition } from '@/lib/station-conditions';
 import type { AnyStation } from '@/lib/all-stations';
@@ -99,7 +97,7 @@ export function StationSpotConditionView({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
         />
       )}
-      <SiteHeader />
+      <V2Frame header="sub" active="area">
       <div className="container-article">
         <nav className="breadcrumb" aria-label="パンくず" style={{ marginBottom: 12 }}>
           <Link href="/">HOME</Link>
@@ -298,8 +296,7 @@ export function StationSpotConditionView({
           </section>
         </article>
       </div>
-      <SiteFooter />
-      <MobileStickyNav />
+      </V2Frame>
     </>
   );
 }

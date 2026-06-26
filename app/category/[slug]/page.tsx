@@ -198,7 +198,14 @@ export default async function CategoryPage({ params }: Props) {
         <div className="v2-article-hero" style={{ height: 180 }}>
           <V2Img src={categoryHero(slug)} seed={`cat-${slug}`} alt={category.name} />
           <div className="v2-article-hero-grad"></div>
-          <span className="v2-article-hero-cat">カテゴリ</span>
+          {/* breadcrumb（写真の上に重ねる。spot詳細と同じ .v2-sd-hero-crumb パターン） */}
+          <div className="v2-sd-hero-crumb">
+            <Link href="/" style={{ color: 'inherit', textDecoration: 'none' }}>ホーム</Link>
+            <V2Icon name="chevron-right" size={11} />
+            <span className="cur">{category.name}</span>
+          </div>
+          {/* パンくずを左上に重ねたので、カテゴリバッジはその下へずらして重なりを回避 */}
+          <span className="v2-article-hero-cat" style={{ top: 40 }}>カテゴリ</span>
           <h1 className="v2-fa-hero-title" style={{ margin: 0, fontSize: 'inherit', fontWeight: 'inherit' }}>{category.name}</h1>
         </div>
         <div className="v2-page-head" style={{ paddingTop: 14 }}>

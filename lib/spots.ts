@@ -491,6 +491,34 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '未就学児向けに特化、絶叫マシンなし。フリーパス2,800円が断然お得',
     },
+    // ===== さいたま市大宮区 子連れOKレストラン（大宮駅の大型商業施設・デパート。実在施設のみ） =====
+    {
+      name: 'ルミネ大宮', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
+      ward: 'さいたま市大宮区', city: 'さいたま市', budget: 'mid',
+      note: '大宮駅直結。ベビーカーで回れ、子連れOK・キッズメニューのある飲食店やカフェが入る。館内にベビー休憩室・おむつ替えあり',
+      nearestStation: 'omiya', walkMinutes: 1,
+      pricing: { adult: 'ランチ1,200円〜', preschool: 'キッズメニューのある店あり' },
+      strollerAccess: true, babyChair: true, kidsMenu: true,
+      facilities: { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes' },
+    },
+    {
+      name: '大宮タカシマヤ', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
+      ward: 'さいたま市大宮区', city: 'さいたま市', budget: 'mid',
+      note: '大宮駅徒歩のデパート。子連れOK・キッズメニューのある飲食店が入り、館内にベビー休憩室・授乳室・おむつ替えあり',
+      nearestStation: 'omiya', walkMinutes: 5,
+      pricing: { adult: 'ランチ1,500円〜', preschool: 'キッズメニューのある店あり' },
+      strollerAccess: true, babyChair: true, kidsMenu: true,
+      facilities: { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes' },
+    },
+    {
+      name: 'そごう大宮', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
+      ward: 'さいたま市大宮区', city: 'さいたま市', budget: 'mid',
+      note: '大宮駅東口直結のデパート。レストラン街は子連れOKの店が入り、館内にベビー休憩室・おむつ替えあり',
+      nearestStation: 'omiya', walkMinutes: 3,
+      pricing: { adult: 'ランチ1,500円〜', preschool: 'キッズメニューのある店あり' },
+      strollerAccess: true, babyChair: true, kidsMenu: true,
+      facilities: { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes' },
+    },
   ],
   chiba: [
       {
@@ -618,6 +646,34 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '無料キッズプレイランド「アシナガランド」併設、芝生でピクニック可',
       summerCool: true,
+    },
+    // ===== 千葉市中央区／船橋市 子連れOKレストラン（実在の大型商業施設・デパートのみ） =====
+    {
+      name: 'そごう千葉（千葉そごう）', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
+      ward: '千葉市中央区', city: '千葉市', budget: 'mid',
+      note: '千葉駅徒歩のデパート。レストラン街は子連れOK・キッズメニューのある店が入り、館内にベビー休憩室・授乳室・おむつ替えあり',
+      nearestStation: 'chiba', walkMinutes: 7,
+      pricing: { adult: 'ランチ1,500円〜', preschool: 'キッズメニューのある店あり' },
+      strollerAccess: true, babyChair: true, kidsMenu: true,
+      facilities: { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes' },
+    },
+    {
+      name: 'ペリエ千葉', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
+      ward: '千葉市中央区', city: '千葉市', budget: 'mid',
+      note: '千葉駅直結の駅ビル。ベビーカーで回れ、子連れOK・キッズメニューのある飲食店やカフェが入る。館内におむつ替え・授乳室あり',
+      nearestStation: 'chiba', walkMinutes: 1,
+      pricing: { adult: 'ランチ1,200円〜', preschool: 'キッズメニューのある店あり' },
+      strollerAccess: true, babyChair: true, kidsMenu: true,
+      facilities: { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes' },
+    },
+    {
+      name: '三井ショッピングパーク ららぽーとTOKYO-BAY', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
+      ward: '船橋市', city: '船橋市', budget: 'low',
+      note: '南船橋駅徒歩の大型商業施設。子連れ向けの飲食店が非常に多く、ベビーカー貸出・ベビー休憩室・授乳室・おむつ替えが充実',
+      nearestStation: 'minami-funabashi', walkMinutes: 5,
+      pricing: { adult: 'ランチ1,000円〜', preschool: 'キッズメニュー多数' },
+      strollerAccess: true, babyChair: true, kidsMenu: true,
+      facilities: { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', kidsSpace: 'yes' },
     },
   ],
   tokyo: [
@@ -1942,6 +1998,52 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: '広大な丘陵公園と複数施設の複合、藤子・F・不二雄ミュージアムも隣接',
       nearby: '川崎市 藤子・F・不二雄ミュージアム',
     },
+    // ===== 横浜市 子連れOKレストラン（大型商業施設・デパートのレストラン街。実在施設のみ） =====
+    {
+      name: '横浜タカシマヤ レストラン（横浜駅西口）', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
+      ward: '横浜市西区', city: '横浜市', budget: 'mid',
+      note: '横浜駅直結のデパート。ベビーカーで回れ、子連れOK・キッズメニューのある飲食店が入る。館内にベビー休憩室・授乳室・おむつ替えあり',
+      nearestStation: 'yokohama', walkMinutes: 1,
+      pricing: { adult: 'ランチ1,500円〜', preschool: 'キッズメニューのある店あり' },
+      strollerAccess: true, babyChair: true, kidsMenu: true,
+      facilities: { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes' },
+    },
+    {
+      name: 'そごう横浜 レストラン街（横浜駅東口）', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
+      ward: '横浜市西区', city: '横浜市', budget: 'mid',
+      note: '横浜駅東口直結のデパート。10Fダイニングパーク等。ベビーカー入店OK・子連れ向けの店が入り、館内にベビー休憩室・おむつ替えあり',
+      nearestStation: 'yokohama', walkMinutes: 3,
+      pricing: { adult: 'ランチ1,500円〜', preschool: 'キッズメニューのある店あり' },
+      strollerAccess: true, babyChair: true, kidsMenu: true,
+      facilities: { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes' },
+    },
+    {
+      name: 'ランドマークプラザ（みなとみらい）', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
+      ward: '横浜市西区', city: '横浜市', budget: 'mid',
+      note: '横浜ランドマークタワー低層の商業施設。ベビーカーで回れる広い通路、子連れOK・キッズメニューのある飲食店が複数。おむつ替え・授乳室あり',
+      nearestStation: 'minato-mirai', walkMinutes: 3,
+      pricing: { adult: 'ランチ1,200円〜', preschool: 'キッズメニューのある店あり' },
+      strollerAccess: true, babyChair: true, kidsMenu: true,
+      facilities: { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes' },
+    },
+    {
+      name: 'クイーンズスクエア横浜（みなとみらい）', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
+      ward: '横浜市西区', city: '横浜市', budget: 'mid',
+      note: 'みなとみらい駅直結の複合施設。ベビーカーで回れ、子連れOK・キッズメニューのある飲食店が入る。館内にベビー休憩室・おむつ替えあり',
+      nearestStation: 'minato-mirai', walkMinutes: 1,
+      pricing: { adult: 'ランチ1,200円〜', preschool: 'キッズメニューのある店あり' },
+      strollerAccess: true, babyChair: true, kidsMenu: true,
+      facilities: { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes' },
+    },
+    {
+      name: 'ジョイナス（横浜駅西口）', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
+      ward: '横浜市西区', city: '横浜市', budget: 'low',
+      note: '横浜駅西口直結のショッピングセンター。ベビーカー入店OK・ファミリー向けやカフェが入り、館内におむつ替え・授乳室あり',
+      nearestStation: 'yokohama', walkMinutes: 1,
+      pricing: { adult: 'ランチ1,000円〜', preschool: 'キッズメニューのある店あり' },
+      strollerAccess: true, babyChair: true, kidsMenu: true,
+      facilities: { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes' },
+    },
   ],
 
   // ===== 中部 =====
@@ -3063,6 +3165,24 @@ export function getSpotsForWard(ward: string): Spot[] {
 }
 
 /**
+ * 任意エリア（都道府県SPOTSキー）× 地域ラベル（区名/市名等）で絞り込む汎用版。
+ * getSpotsForWard の東京限定を一般化し、横浜(kanagawa)・大阪(osaka)等にも対応。
+ * 東京のときだけ TOKYO_RESTAURANTS も合流（外食データの所在に合わせる）。
+ */
+export function getSpotsForRegion(areaKey: string, regionLabel: string): Spot[] {
+  const lists: Spot[][] = [SPOTS[areaKey as AreaSlug] ?? []];
+  if (areaKey === 'tokyo') lists.push(TOKYO_RESTAURANTS);
+  const result: Spot[] = [];
+  for (const list of lists) {
+    for (const s of list) {
+      const target = s.ward ?? s.city ?? '';
+      if (regionLabel && target.includes(regionLabel)) result.push(s);
+    }
+  }
+  return result;
+}
+
+/**
  * スポット名から URL slug を生成する。
  * 日本語スポット名 → 英数字 slug。
  * - 全角→半角、記号削除
@@ -3113,6 +3233,21 @@ export function getAllSpotsWithSlug(
     all.push({ slug, area: 'tokyo', spot: mergeSpot(s, slug, ovMap) });
   }
   return all;
+}
+
+/**
+ * 「おでかけ先」スポットのみ（外食=restaurant を除外）。
+ *
+ * レストランは TOKYO_RESTAURANTS としてデータは分かれているが、URL/sitemap互換のため
+ * getAllSpotsWithSlug() には含めている（/spot/[slug] は外食でも引ける）。
+ * 一方で「おでかけスポット一覧/エリア/ランキング/人気」のような“遊びに行く先”の文脈では
+ * 外食を混ぜない。種別を分離する唯一の入口がこの関数。外食は「今日の流れ お昼 / slot=lunch /
+ * 外食記事」側に集約する。
+ */
+export function getOutingSpotsWithSlug(
+  ovMap?: SpotOverridesMap,
+): Array<{ slug: string; area: AreaSlug | string; spot: Spot }> {
+  return getAllSpotsWithSlug(ovMap).filter((x) => x.spot.category !== 'restaurant');
 }
 
 /**

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
+import { V2Breadcrumb } from '@/components/v2/V2Breadcrumb';
 import { V2Icon } from '@/components/v2/V2Icon';
 import { getRecentSpotReports } from '@/lib/spot-reports';
 import { getSpotBySlug } from '@/lib/spots';
@@ -37,7 +38,8 @@ export default async function ReportsPage() {
   });
 
   return (
-    <V2Frame header="sub" active="search">
+    <V2Frame header="sub" active="area">
+      <V2Breadcrumb items={[{ label: 'ホーム', href: '/' }, { label: 'みんなの口コミ' }]} />
       <div className="v2-page-head" style={{ paddingTop: 6 }}>
         <h1 className="v2-page-h1" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <V2Icon name="star" size={24} color="var(--v2-orange)" />

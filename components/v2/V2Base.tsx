@@ -70,8 +70,21 @@ export function useV2Ctx() {
 
 /* ===========================================================
    Image — uses native <img> for any remote/local path.
-   Falls back to picsum if the source fails (mirror prototype).
+   画像未配置/読み込み失敗時は、ランダムなストック写真(picsum)ではなく
+   ブランドの自前プレースホルダ（クリーム地＋ロゴ調のリング＆ハート）を出す。
+   子育てメディアで無関係な他人の写真が出る「架空感」を防ぐ。
+   2026-06: 新ロゴ刷新に合わせ、旧くまマーク → リング＋ハートの控えめ意匠へ統一。
    =========================================================== */
+const KK_PLACEHOLDER =
+  'data:image/svg+xml,' +
+  encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="820" height="462" viewBox="0 0 820 462">` +
+      `<rect width="820" height="462" fill="#FBF5E8"/>` +
+      `<circle cx="410" cy="200" r="58" fill="none" stroke="#E3CDA8" stroke-width="5"/>` +
+      `<path d="M410 232 C392 214 376 207 376 193 C376 183 384 177 392 177 C400 177 406 183 410 189 C414 183 420 177 428 177 C436 177 444 183 444 193 C444 207 428 214 410 232 Z" fill="#E7D2B0"/>` +
+      `<text x="410" y="330" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#C2B49A">きょうのこ</text>` +
+      `</svg>`,
+  );
 type ImgProps = {
   src?: string;
   seed?: string;
@@ -80,7 +93,7 @@ type ImgProps = {
   style?: React.CSSProperties;
 };
 export function V2Img({ src, seed, alt = '', className, style }: ImgProps) {
-  const fallback = `https://picsum.photos/seed/${encodeURIComponent(seed || alt || 'kk')}/820/462`;
+  const fallback = KK_PLACEHOLDER;
   const [actual, setActual] = React.useState(src || fallback);
   React.useEffect(() => {
     setActual(src || fallback);

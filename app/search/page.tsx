@@ -136,7 +136,7 @@ export default async function SearchPage({ searchParams }: Props) {
   );
 
   return (
-    <V2Frame header="sub" active="search">
+    <V2Frame header="sub">
       <div className="v2-page-head" style={{ paddingTop: 6 }}>
         <h1
           className="v2-page-h1"
