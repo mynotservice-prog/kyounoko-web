@@ -132,7 +132,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const spotsMatched = filterSpotsByCondition(spotsAll, condition as StationConditionSlug);
     matchedCount = spotsMatched.length;
   }
-  const shouldNoindex = matchedCount < 3;
+  // 剪定(2026-06): スポット系条件(asobiba/kouen/ame-asobiba)は90日間ほぼ表示ゼロ・
+  // 外食でもないため、matched数によらず noindex。外食(restaurant)系のみindex対象に残す。
+  const shouldNoindex = matchedCount < 3 || kind === 'spot';
 
   // スポット系条件は区市町村単位のデータで同区の駅が重複しがちなため、
   // 同区×同条件の重複グループは代表駅へ canonical を集約する（重複コンテンツ対策）。

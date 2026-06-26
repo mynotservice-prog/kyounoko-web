@@ -11,7 +11,6 @@ import type { MetadataRoute } from 'next';
 import { getArticleIds, getCategories } from '@/lib/microcms';
 import { getAllFileArticles, getKvOnlyArticleMetas } from '@/lib/articles';
 import { getAllSpotsWithSlug } from '@/lib/spots';
-import { getAllTags } from '@/lib/tags';
 import { TOKYO_STATIONS } from '@/lib/tokyo-stations';
 import { KANSAI_STATIONS } from '@/lib/kansai-stations';
 import { KANAGAWA_STATIONS } from '@/lib/kanagawa-stations';
@@ -197,12 +196,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Plans は noindex なのでsitemapから除外（Search Consoleの「noindex除外」を回避）
 
-  const tagPages: MetadataRoute.Sitemap = getAllTags().map((t) => ({
-    url: `${BASE}/tag/${t.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.5,
-  }));
+  // 剪定(2026-06): タグページは noindex 化したため sitemap から除外（旧 tagPages）。
 
   // 駅別子連れランチページ（23区484駅）
   const stationIndex: MetadataRoute.Sitemap = [{
@@ -266,6 +260,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const { all: spotsAll } = getSpotsForStation(s.slug);
     for (const cond of STATION_CONDITIONS) {
       const k = getConditionKind(cond.slug);
+      // 剪定(2026-06): スポット系条件は90日ほぼ表示0のため index/sitemapから除外。
+      if (k === 'spot') continue;
       let matchedCount = 0;
       if (k === 'restaurant') {
         if (!hasMatchingItems(chains, indies, cond.slug)) continue;
@@ -283,33 +279,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         url: `${BASE}/station/${s.slug}/${cond.slug}`,
         lastModified: new Date(),
         changeFrequency: 'monthly' as const,
-        priority: k === 'spot' ? 0.55 : 0.5,
+        priority: 0.5, // restaurant系のみ（spot系は上で除外済み）
       });
     }
   }
-  // 非Tokyo: spot 系のみ
-  const nonTokyoStations = [
-    ...KANSAI_STATIONS.map((s) => s.slug),
-    ...KANAGAWA_STATIONS.map((s) => s.slug),
-    ...SAICHI_STATIONS.map((s) => s.slug),
-  ];
-  for (const slug of nonTokyoStations) {
-    const { all: spotsAll } = getSpotsForStation(slug);
-    for (const cond of STATION_CONDITIONS) {
-      if (getConditionKind(cond.slug) !== 'spot') continue;
-      if (!hasMatchingSpots(spotsAll, cond.slug)) continue;
-      const matchedCount = filterSpotsByCondition(spotsAll, cond.slug).length;
-      if (matchedCount < STATION_CONDITION_MIN_MATCHES) continue;
-      // 同区重複は代表へ canonical 集約しているので、非代表(重複)はsitemapに載せない。
-      if (getSpotConditionCanonicalSlug(slug, cond.slug) !== slug) continue;
-      stationConditionPages.push({
-        url: `${BASE}/station/${slug}/${cond.slug}`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly' as const,
-        priority: 0.55,
-      });
-    }
-  }
+  // 非Tokyo(関西/神奈川/埼玉千葉)の駅×条件は spot 系のみ。剪定(2026-06)で
+  // spot系を index/sitemapから除外したため、ここは収録しない（おでかけ先は
+  // 「今日の流れ(/today)」とエリア/spotページが担う）。
 
   // /data/* AIO参照用データセットページ
   const dataPages: MetadataRoute.Sitemap = [
@@ -350,5 +326,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }));
 
-  return [...staticPages, ...categoryPages, ...articlePages, ...tagPages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...kanagawaStationPages, ...saichiStationPages, ...lineIndex, ...linePages, ...stationConditionPages, ...dataPages, ...spotPages, ...featurePages];
+  return [...staticPages, ...categoryPages, ...articlePages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...kanagawaStationPages, ...saichiStationPages, ...lineIndex, ...linePages, ...stationConditionPages, ...dataPages, ...spotPages, ...featurePages];
 }

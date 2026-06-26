@@ -67,9 +67,10 @@ function evalCondition(
 
   const selfCanonical =
     kind === 'spot' ? getSpotConditionCanonicalSlug(slug, condSlug as any) === slug : true;
-  const indexed = matched >= 3;
-  // sitemap: matched>=3 かつ spotは自canonicalのみ
-  const inSitemap = matched >= 3 && (kind === 'restaurant' || selfCanonical);
+  // 剪定(2026-06): spot系条件は matched によらず noindex + sitemap除外。
+  // index/sitemap対象は restaurant系で matched>=3 のもののみ。
+  const indexed = matched >= 3 && kind === 'restaurant';
+  const inSitemap = indexed;
 
   rows.push({
     slug,

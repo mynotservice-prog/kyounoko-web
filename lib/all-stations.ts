@@ -123,6 +123,26 @@ export function findStationBySlug(slug: string): AnyStation | undefined {
   return undefined;
 }
 
+// 駅名(日本語)→slug 逆引き。SPOT_ACCESS の「○○駅」を spot.nearestStation の slug に
+// 変換するために使う（同名は最初に登録された方を採用＝メトロ優先で東京を先頭に）。
+const STATION_NAME_TO_SLUG: Map<string, string> = (() => {
+  const m = new Map<string, string>();
+  for (const s of [...TOKYO_STATIONS, ...KANSAI_STATIONS, ...KANAGAWA_STATIONS, ...SAICHI_STATIONS]) {
+    if (!m.has(s.name)) m.set(s.name, s.slug);
+  }
+  return m;
+})();
+
+/**
+ * 日本語の駅名（「駅」付き/なし両対応）から駅slugを解決する。
+ * マスタに無い地方駅は undefined（その場合は呼び出し側で元の名前を保持してよい）。
+ */
+export function resolveStationSlugByName(name: string): string | undefined {
+  if (!name) return undefined;
+  const base = name.replace(/駅$/, '').trim();
+  return STATION_NAME_TO_SLUG.get(base);
+}
+
 /**
  * 同じエリアの他駅を返す。
  * - 東京: 同じ ward

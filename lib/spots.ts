@@ -14,6 +14,7 @@ import type { AreaSlug } from './area';
 import { KID_REPORTS } from './kid-reports';
 import { SPOT_FACILITIES } from './spot-facilities';
 import { SPOT_ACCESS } from './spot-access';
+import { resolveStationSlugByName } from './all-stations';
 import { SPOTS_EXTRA } from './spots-extra';
 import { mergeSpot, type SpotOverridesMap } from './spot-overrides';
 
@@ -4833,7 +4834,12 @@ for (const areaList of Object.values(SPOTS)) {
     // アクセスデータ（SPOT_ACCESS）のマージ。インライン値が優先。
     const access = SPOT_ACCESS[spot.name];
     if (access) {
-      if (!spot.nearestStation) spot.nearestStation = access.nearestStation;
+      if (!spot.nearestStation) {
+        // SPOT_ACCESS は駅名（"天王寺駅"）。エンジンは slug を見るので、
+        // マスタにある駅名は slug に変換する（変換不可の地方駅は名前のまま＝表示用）。
+        spot.nearestStation =
+          resolveStationSlugByName(access.nearestStation) ?? access.nearestStation;
+      }
       if (spot.walkMinutes == null && access.walkMinutes != null) {
         spot.walkMinutes = access.walkMinutes;
       }
