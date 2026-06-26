@@ -593,6 +593,12 @@ export default async function TodayPage({ searchParams }: Props) {
       { slug: 'tsudanuma', name: '津田沼' },
       { slug: 'kashiwa', name: '柏' },
     ],
+    osaka: [
+      { slug: 'osaka-umeda', name: '梅田' },
+      { slug: 'osaka-namba', name: '難波' },
+      { slug: 'osaka-tennoji', name: '天王寺' },
+      { slug: 'osaka-shinsaibashi', name: '心斎橋' },
+    ],
   };
   const pickerArea = !query.area || query.area === 'all' ? 'tokyo' : query.area;
   const isTokyoPicker = pickerArea === 'tokyo';
