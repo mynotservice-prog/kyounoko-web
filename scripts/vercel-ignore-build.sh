@@ -23,8 +23,11 @@ echo "[ignore-build] Checking diff between HEAD^ and HEAD..."
 ALL_CHANGED=$(git diff --name-only HEAD^ HEAD 2>/dev/null || echo "")
 
 if [ -z "$ALL_CHANGED" ]; then
-  echo "[ignore-build] No changed files detected → SKIP BUILD"
-  exit 0
+  # 差分が取れない（Vercelのshallow clone で HEAD^ が無い／マージコミット等）と
+  # ここに来る。これを SKIP すると本番デプロイが取りこぼされる（実際に多発した）。
+  # 「変更不明」は安全側に倒してビルド実行する（誤ビルドのCPU増 < デプロイ取りこぼし）。
+  echo "[ignore-build] Diff unavailable or empty → PROCEED BUILD (fail-safe to deploy)"
+  exit 1
 fi
 
 # 「コードを伴うパス」（ここに変更があれば必ずビルド）
@@ -44,6 +47,7 @@ CODE_PATHS=(
   "tsconfig.json"
   "vercel.json"
   "middleware.ts"
+  "scripts/vercel-ignore-build.sh"
 )
 
 # コードに変更があれば必ずビルド
