@@ -205,8 +205,10 @@ export function lunchCandidates(
   const byFacets = (a: Spot, b: Spot) => facetsOf(b).length - facetsOf(a).length;
   // 地域内のレストラン（東京は TOKYO_RESTAURANTS も getSpotsForRegion が合流）
   const ward = getSpotsForRegion(areaKey, regionLabel).filter(isRest).sort(byFacets);
-  // 全国チェーン（ward:'複数' 等。どの地域でも入れる）— TOKYO_RESTAURANTS を流用
-  const chain = TOKYO_RESTAURANTS.filter(isRest).sort(byFacets);
+  // 全国チェーンのみフォールバック採用（ward:'複数' = どの地域にもある店）。
+  // TOKYO_RESTAURANTS には神戸/大阪等の地域限定店も混在しているため、それらは除外する
+  // （混入すると東京の駅で「神戸ハーバーランド」等が出てしまう）。
+  const chain = TOKYO_RESTAURANTS.filter((s) => isRest(s) && s.ward === '複数').sort(byFacets);
   return { ward, chain };
 }
 
@@ -342,7 +344,8 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
       spotSlug: spotToSlug(lunch.spot, lunch.tier === 'chain' ? 'tokyo' : slugArea),
       facets: facetsOf(lunch.spot),
       move: {
-        text: lunch.tier === 'ward' ? `${regionLabel}内・徒歩圏` : '周辺のファミリー向けチェーン',
+        // 「徒歩圏」は同駅のときだけ。区/市は広い場合があるので断定しない。
+        text: lunch.tier === 'ward' ? `${regionLabel}内` : '周辺のファミリー向けチェーン',
         tier: lunch.tier,
       },
       tier: lunch.tier,
