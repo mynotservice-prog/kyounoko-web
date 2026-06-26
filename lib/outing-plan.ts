@@ -280,7 +280,9 @@ export function resolveOutingAnchor(q: { stationSlug?: string; ward?: TokyoWard 
     const st = findStationBySlug(stationSlug);
     if (st) {
       stationName = st.name;
-      regionLabel = st.regionLabel;
+      // 地域ラベルは「徒歩圏」が成立する最小粒度を使う。
+      // 埼玉/千葉(saichi)は regionLabel が県単位で粗いので、駅の area(市区)を使う。
+      regionLabel = st.region === 'saichi' ? st.area : st.regionLabel;
       areaKey = areaKeyOf(st);
       scale = st.scale;
     } else {
