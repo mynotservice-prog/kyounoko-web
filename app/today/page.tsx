@@ -10,9 +10,15 @@ import {
 } from '@/lib/articles';
 import { buildDayPlan, type DayPlanSlot } from '@/lib/plans';
 import { getKidFriendlyRestaurants, type Spot, type AgeTag } from '@/lib/spots';
-import { buildOutingPlan } from '@/lib/outing-plan';
-import { OutingPlanView } from '@/components/today/OutingPlanView';
-import { getTerminalStations, type TokyoWard } from '@/lib/tokyo-stations';
+import { buildOutingPlan, lunchCandidates } from '@/lib/outing-plan';
+import { OutingPlanView, LunchListView } from '@/components/today/OutingPlanView';
+import {
+  getTerminalStations,
+  getFamilyFriendlyStations,
+  getStationBySlug,
+  WARD_NAMES,
+  type TokyoWard,
+} from '@/lib/tokyo-stations';
 import type { Weather } from '@/lib/types';
 import type { AreaSlug } from '@/lib/area';
 import { getAreaName } from '@/lib/area';
@@ -480,16 +486,73 @@ export default async function TodayPage({ searchParams }: Props) {
   // 午前あそぶ→お昼たべる→午後 の3スロットをヒーロー表示（通常Answerは出さない）。
   const stationParam = firstString(sp.station);
   const wardParam = firstString(sp.ward) as TokyoWard | undefined;
-  const outingPlan =
-    stationParam || wardParam
-      ? buildOutingPlan({
-          stationSlug: stationParam,
-          ward: wardParam,
-          age: query.age as AgeTag | undefined,
-          weather: query.weather as Weather | undefined,
-          budget: query.budget as 'free' | 'low' | 'mid' | 'high' | undefined,
-        })
-      : null;
+  const slotParam = firstString(sp.slot);
+  const num = (v: string | string[] | undefined) => {
+    const n = parseInt(firstString(v) ?? '0', 10);
+    return Number.isFinite(n) ? n : 0;
+  };
+
+  // OutingPlanView/LunchListView へ渡す現在クエリ（スワップ/別案リンク生成用）
+  const outingParams: Record<string, string> = {};
+  if (stationParam) outingParams.station = stationParam;
+  if (wardParam) outingParams.ward = wardParam;
+  if (query.age) outingParams.age = query.age;
+  if (query.weather && query.weather !== 'any') outingParams.weather = query.weather;
+  for (const k of ['vm', 'vl', 'va'] as const) {
+    const val = firstString(sp[k]);
+    if (val) outingParams[k] = val;
+  }
+
+  const isTokyoAnchor = Boolean(stationParam || wardParam);
+  const ageLabel = query.age ? labelForValue('age', query.age) : undefined;
+  const weatherLabel =
+    query.weather && query.weather !== 'any' ? labelForValue('weather', query.weather) : undefined;
+
+  // ?slot=lunch: お昼スロット単体ビュー（子連れで入れる店一覧。最多需要）
+  if (isTokyoAnchor && slotParam === 'lunch') {
+    const st = stationParam ? getStationBySlug(stationParam) : undefined;
+    const ward = st?.ward ?? wardParam;
+    if (ward) {
+      const wardName = WARD_NAMES[ward];
+      const { ward: wardRest, chain } = lunchCandidates(wardName, {
+        age: query.age as AgeTag | undefined,
+        budget: query.budget as 'free' | 'low' | 'mid' | 'high' | undefined,
+      });
+      return (
+        <V2Frame header="sub" active="today">
+          <div className="container">
+            <nav className="breadcrumb" aria-label="パンくず">
+              <Link href="/">HOME</Link>
+              <span className="sep">/</span>
+              <Link href={`/today?${new URLSearchParams(outingParams).toString()}`}>今日の流れ</Link>
+              <span className="sep">/</span>
+              <span>子連れで入れるお店</span>
+            </nav>
+          </div>
+          <LunchListView
+            anchorLabel={st ? `${st.name}駅` : wardName}
+            wardName={wardName}
+            wardRest={wardRest}
+            chain={chain}
+            ageLabel={ageLabel}
+          />
+        </V2Frame>
+      );
+    }
+  }
+
+  const outingPlan = isTokyoAnchor
+    ? buildOutingPlan({
+        stationSlug: stationParam,
+        ward: wardParam,
+        age: query.age as AgeTag | undefined,
+        weather: query.weather as Weather | undefined,
+        budget: query.budget as 'free' | 'low' | 'mid' | 'high' | undefined,
+        morningVariant: num(sp.vm),
+        lunchVariant: num(sp.vl),
+        afternoonVariant: num(sp.va),
+      })
+    : null;
 
   if (outingPlan) {
     return (
@@ -503,19 +566,26 @@ export default async function TodayPage({ searchParams }: Props) {
         </div>
         <OutingPlanView
           plan={outingPlan}
-          ageLabel={query.age ? labelForValue('age', query.age) : undefined}
-          weatherLabel={
-            query.weather && query.weather !== 'any'
-              ? labelForValue('weather', query.weather)
-              : undefined
-          }
+          params={outingParams}
+          ageLabel={ageLabel}
+          weatherLabel={weatherLabel}
         />
       </V2Frame>
     );
   }
 
-  // おでかけプラン未指定時：ナビ「今日の流れ」からの着地で、主要駅を選べる入口を出す。
-  const terminalChips = getTerminalStations().slice(0, 8);
+  // おでかけプラン未指定時：ナビ「今日の流れ」からの着地で、駅を選べる入口を出す。
+  const terminalChips = getTerminalStations().slice(0, 10);
+  const familyChips = getFamilyFriendlyStations()
+    .filter((s) => s.scale !== 'terminal')
+    .slice(0, 12);
+  const stationQs = (slug: string) => {
+    const qs = new URLSearchParams();
+    qs.set('station', slug);
+    if (query.age) qs.set('age', query.age);
+    if (query.weather && query.weather !== 'any') qs.set('weather', query.weather);
+    return qs.toString();
+  };
 
   return (
     <>
@@ -531,26 +601,41 @@ export default async function TodayPage({ searchParams }: Props) {
 
       {/* 駅から「今日の流れ（おでかけ1日プラン）」を作る入口 */}
       <div className="container" style={{ marginTop: 16 }}>
-        <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>
+        <div style={{ fontSize: 15, fontWeight: 800, color: 'var(--ink)', marginBottom: 4 }}>
           駅をえらんで「今日の流れ」を作る
         </div>
+        <p style={{ fontSize: 12.5, color: 'var(--ink-sub)', margin: '0 0 10px', lineHeight: 1.5 }}>
+          選んだ駅まわりで、午前あそぶ → お昼たべる → 午後 の移動少なめ1日プランを作ります。
+        </p>
+        <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--ink-mute)', letterSpacing: '.05em', marginBottom: 6 }}>
+          主要ターミナル
+        </div>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 14 }}>
+          {terminalChips.map((st) => (
+            <Link
+              key={st.slug}
+              href={`/today?${stationQs(st.slug)}`}
+              className="meta-chip clay"
+              style={{ fontSize: 13, textDecoration: 'none' }}
+            >
+              📍 {st.name}
+            </Link>
+          ))}
+        </div>
+        <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--ink-mute)', letterSpacing: '.05em', marginBottom: 6 }}>
+          子育て世帯に人気の駅
+        </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-          {terminalChips.map((st) => {
-            const qs = new URLSearchParams();
-            qs.set('station', st.slug);
-            if (query.age) qs.set('age', query.age);
-            if (query.weather && query.weather !== 'any') qs.set('weather', query.weather);
-            return (
-              <Link
-                key={st.slug}
-                href={`/today?${qs.toString()}`}
-                className="meta-chip clay"
-                style={{ fontSize: 13, textDecoration: 'none' }}
-              >
-                📍 {st.name}
-              </Link>
-            );
-          })}
+          {familyChips.map((st) => (
+            <Link
+              key={st.slug}
+              href={`/today?${stationQs(st.slug)}`}
+              className="meta-chip sage"
+              style={{ fontSize: 13, textDecoration: 'none' }}
+            >
+              📍 {st.name}
+            </Link>
+          ))}
         </div>
       </div>
 

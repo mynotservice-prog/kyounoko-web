@@ -74,6 +74,10 @@ export type OutingQuery = {
   age?: AgeTag;
   weather?: Weather;
   budget?: 'free' | 'low' | 'mid' | 'high';
+  /** 「別の候補に変える」用。各スロットで採用候補をずらす（同じ近さの中で別の店/施設に）。 */
+  morningVariant?: number;
+  lunchVariant?: number;
+  afternoonVariant?: number;
 };
 
 export type OutingPlan = {
@@ -103,13 +107,14 @@ function weatherOk(s: Spot, weather?: Weather): boolean {
   return s.place !== 'outdoor';
 }
 
+function popularFirst(a: Spot, b: Spot): number {
+  if (a.popular && !b.popular) return -1;
+  if (!a.popular && b.popular) return 1;
+  return a.name.localeCompare(b.name, 'ja');
+}
+
 function pickByPopular(list: Spot[]): Spot | undefined {
-  const sorted = [...list].sort((a, b) => {
-    if (a.popular && !b.popular) return -1;
-    if (!a.popular && b.popular) return 1;
-    return a.name.localeCompare(b.name, 'ja');
-  });
-  return sorted[0];
+  return [...list].sort(popularFirst)[0];
 }
 
 /**
@@ -121,6 +126,7 @@ function pickSpotCascade(
   wardName: string,
   q: OutingQuery,
   exclude: Set<string>,
+  variant = 0,
 ): { spot: Spot; tier: CoherenceTier; walkMinutes?: number } | null {
   const filt = (list: Spot[], strictWeather: boolean) =>
     list.filter(
@@ -130,14 +136,18 @@ function pickSpotCascade(
         (!strictWeather || weatherOk(s, q.weather)) &&
         !exclude.has(s.name),
     );
+  // 同じ近さ階層の候補リストから variant 番目を選ぶ（「別の候補」用）。
+  const at = (list: Spot[]) => list[((variant % list.length) + list.length) % list.length];
 
   // 1) 同じ駅（徒歩圏）
   if (stationSlug) {
     const atStation = getSpotsByNearestStation(stationSlug, { limit: 24 });
     for (const strict of [true, false]) {
-      const cand = filt(atStation, strict);
+      const cand = filt(atStation, strict).sort(
+        (a, b) => (a.walkMinutes ?? 99) - (b.walkMinutes ?? 99),
+      );
       if (cand.length) {
-        const top = cand.sort((a, b) => (a.walkMinutes ?? 99) - (b.walkMinutes ?? 99))[0];
+        const top = at(cand);
         return { spot: top, tier: 'station', walkMinutes: top.walkMinutes };
       }
     }
@@ -146,17 +156,15 @@ function pickSpotCascade(
   // 2) 同じ区（区内移動）
   const wardSpots = getSpotsForWard(wardName);
   for (const strict of [true, false]) {
-    const cand = filt(wardSpots, strict);
-    const top = pickByPopular(cand);
-    if (top) return { spot: top, tier: 'ward' };
+    const cand = filt(wardSpots, strict).sort(popularFirst);
+    if (cand.length) return { spot: at(cand), tier: 'ward' };
   }
 
   // 3) 東京広域（最終フォールバック）
   const tokyo = SPOTS.tokyo ?? [];
   for (const strict of [true, false]) {
-    const cand = filt(tokyo, strict);
-    const top = pickByPopular(cand);
-    if (top) return { spot: top, tier: 'wide' };
+    const cand = filt(tokyo, strict).sort(popularFirst);
+    if (cand.length) return { spot: at(cand), tier: 'wide' };
   }
 
   return null;
@@ -175,31 +183,32 @@ function facetsOf(s: Spot): string[] {
  * お昼の子連れOKレストランを1件。区内→全国チェーン の順。
  * レストランは駅紐付けが無いので「区内」が最良の近さ。チェーンはどの駅でも可。
  */
-function pickLunch(
+/** お昼候補をスコア順（ファセット数優先）で並べて返す。?slot=lunch のリスト表示にも使う。 */
+export function lunchCandidates(
   wardName: string,
-  q: OutingQuery,
-): { spot: Spot; tier: CoherenceTier } | null {
+  q: { age?: AgeTag; budget?: 'free' | 'low' | 'mid' | 'high' },
+): { ward: Spot[]; chain: Spot[] } {
   const budgetOk = (s: Spot) => {
     if (!q.budget || !s.budget) return true;
     const order = { free: 0, low: 1, mid: 2, high: 3 } as const;
     return order[s.budget] <= order[q.budget];
   };
   const isRest = (s: Spot) => s.category === 'restaurant' && ageOk(s, q.age) && budgetOk(s);
+  const byFacets = (a: Spot, b: Spot) => facetsOf(b).length - facetsOf(a).length;
+  const ward = getSpotsForWard(wardName).filter(isRest).sort(byFacets);
+  const chain = TOKYO_RESTAURANTS.filter(isRest).sort(byFacets);
+  return { ward, chain };
+}
 
-  // 1) 区内のレストラン
-  const wardRest = getSpotsForWard(wardName).filter(isRest);
-  const wardTop =
-    [...wardRest].sort((a, b) => facetsOf(b).length - facetsOf(a).length)[0] ??
-    pickByPopular(wardRest);
-  if (wardTop) return { spot: wardTop, tier: 'ward' };
-
-  // 2) 全国チェーン（ward:'複数' 等。どの駅でも入れる）
-  const chains = TOKYO_RESTAURANTS.filter(isRest);
-  const chainTop =
-    [...chains].sort((a, b) => facetsOf(b).length - facetsOf(a).length)[0] ??
-    pickByPopular(chains);
-  if (chainTop) return { spot: chainTop, tier: 'chain' };
-
+function pickLunch(
+  wardName: string,
+  q: OutingQuery,
+  variant = 0,
+): { spot: Spot; tier: CoherenceTier } | null {
+  const { ward, chain } = lunchCandidates(wardName, q);
+  const at = (list: Spot[]) => list[((variant % list.length) + list.length) % list.length];
+  if (ward.length) return { spot: at(ward), tier: 'ward' };
+  if (chain.length) return { spot: at(chain), tier: 'chain' };
   return null;
 }
 
@@ -263,7 +272,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
   const slots: OutingSlot[] = [];
 
   // ---- 午前: あそぶ ----
-  const morning = pickSpotCascade(stationSlug, wardName, q, used);
+  const morning = pickSpotCascade(stationSlug, wardName, q, used, q.morningVariant ?? 0);
   if (morning) {
     used.add(morning.spot.name);
     slots.push({
@@ -280,7 +289,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
   }
 
   // ---- お昼: たべる ----
-  const lunch = pickLunch(wardName, q);
+  const lunch = pickLunch(wardName, q, q.lunchVariant ?? 0);
   if (lunch) {
     used.add(lunch.spot.name);
     slots.push({
@@ -304,7 +313,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
   const preferHome = q.age === '0-1';
   let afternoon: { spot: Spot; tier: CoherenceTier; walkMinutes?: number } | null = null;
   if (!preferHome) {
-    afternoon = pickSpotCascade(stationSlug, wardName, q, used);
+    afternoon = pickSpotCascade(stationSlug, wardName, q, used, q.afternoonVariant ?? 0);
   }
   if (afternoon) {
     used.add(afternoon.spot.name);
