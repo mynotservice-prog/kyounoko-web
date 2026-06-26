@@ -515,7 +515,7 @@ export default async function TodayPage({ searchParams }: Props) {
         budget: query.budget as 'free' | 'low' | 'mid' | 'high' | undefined,
       });
       return (
-        <V2Frame header="sub" active="today">
+        <V2Frame header="sub" active="today" backHref={`/today?${new URLSearchParams(outingParams).toString()}`}>
           <div className="container">
             <nav className="breadcrumb" aria-label="パンくず">
               <Link href="/">HOME</Link>
@@ -552,7 +552,7 @@ export default async function TodayPage({ searchParams }: Props) {
 
   if (outingPlan) {
     return (
-      <V2Frame header="sub" active="today">
+      <V2Frame header="sub" active="today" backHref="/today">
         <div className="container">
           <nav className="breadcrumb" aria-label="パンくず">
             <Link href="/">HOME</Link>
