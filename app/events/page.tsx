@@ -108,6 +108,12 @@ export default async function EventsPage({ searchParams }: Props) {
           alt="今週のイベント"
         />
         <div className="v2-ev-hero-grad"></div>
+        {/* breadcrumb（写真の上に重ねる。spot詳細と同じ .v2-sd-hero-crumb パターン） */}
+        <div className="v2-sd-hero-crumb">
+          <Link href="/" style={{ color: 'inherit', textDecoration: 'none' }}>ホーム</Link>
+          <V2Icon name="chevron-right" size={11} />
+          <span className="cur">イベント</span>
+        </div>
         <div className="v2-ev-hero-copy">
           <span className="v2-ev-hero-badge">
             <V2Icon name="calendar" size={14} color="#fff" />
