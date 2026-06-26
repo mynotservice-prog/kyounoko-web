@@ -179,7 +179,7 @@ type FrameProps = {
 export function V2Frame({
   children,
   header = 'home',
-  backHref = '/v2',
+  backHref = '/', // 既定はホーム。旧既定 '/v2' は404でサブページの「戻る」が壊れていた
   rightAction = 'menu',
   active,
 }: FrameProps) {

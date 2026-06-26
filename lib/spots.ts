@@ -3176,7 +3176,10 @@ export function getSpotsForRegion(areaKey: string, regionLabel: string): Spot[] 
   for (const list of lists) {
     for (const s of list) {
       const target = s.ward ?? s.city ?? '';
-      if (regionLabel && target.includes(regionLabel)) result.push(s);
+      // 前方一致で判定する。includes だと「神戸市中央区」が東京の「中央区」に
+      // 部分一致して関西の店が混入する（接尾辞衝突）。前方一致なら
+      // 「神戸市中央区」.startsWith('中央区')=false で排除できる。
+      if (regionLabel && target.startsWith(regionLabel)) result.push(s);
     }
   }
   return result;

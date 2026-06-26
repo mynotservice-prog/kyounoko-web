@@ -515,7 +515,7 @@ export default async function TodayPage({ searchParams }: Props) {
         budget: query.budget as 'free' | 'low' | 'mid' | 'high' | undefined,
       });
       return (
-        <V2Frame header="sub" active="today">
+        <V2Frame header="sub" active="today" backHref={`/today?${new URLSearchParams(outingParams).toString()}`}>
           <div className="container">
             <nav className="breadcrumb" aria-label="パンくず">
               <Link href="/">HOME</Link>
@@ -552,7 +552,7 @@ export default async function TodayPage({ searchParams }: Props) {
 
   if (outingPlan) {
     return (
-      <V2Frame header="sub" active="today">
+      <V2Frame header="sub" active="today" backHref="/today">
         <div className="container">
           <nav className="breadcrumb" aria-label="パンくず">
             <Link href="/">HOME</Link>
@@ -571,6 +571,32 @@ export default async function TodayPage({ searchParams }: Props) {
   }
 
   // おでかけプラン未指定時：ナビ「今日の流れ」からの着地で、駅を選べる入口を出す。
+  // 駅ピッカーは「東京＋データのある都市（横浜/大宮/千葉/船橋）」だけ。
+  // 他県は駅を出さず、エリア（都道府県）ブラウズへ誘導する。
+  const METRO_STATIONS: Record<string, { slug: string; name: string }[]> = {
+    kanagawa: [
+      { slug: 'yokohama', name: '横浜' },
+      { slug: 'minato-mirai', name: 'みなとみらい' },
+      { slug: 'sakuragicho', name: '桜木町' },
+      { slug: 'kannai', name: '関内' },
+      { slug: 'musashi-kosugi', name: '武蔵小杉' },
+    ],
+    saitama: [
+      { slug: 'omiya', name: '大宮' },
+      { slug: 'urawa', name: '浦和' },
+      { slug: 'kawagoe', name: '川越' },
+    ],
+    chiba: [
+      { slug: 'chiba', name: '千葉' },
+      { slug: 'funabashi', name: '船橋' },
+      { slug: 'minami-funabashi', name: '南船橋' },
+      { slug: 'tsudanuma', name: '津田沼' },
+      { slug: 'kashiwa', name: '柏' },
+    ],
+  };
+  const pickerArea = !query.area || query.area === 'all' ? 'tokyo' : query.area;
+  const isTokyoPicker = pickerArea === 'tokyo';
+  const metroChips = METRO_STATIONS[pickerArea] ?? null;
   const terminalChips = getTerminalStations().slice(0, 10);
   const familyChips = getFamilyFriendlyStations()
     .filter((s) => s.scale !== 'terminal')
@@ -603,36 +629,45 @@ export default async function TodayPage({ searchParams }: Props) {
         <p style={{ fontSize: 12.5, color: 'var(--ink-sub)', margin: '0 0 10px', lineHeight: 1.5 }}>
           選んだ駅まわりで、午前あそぶ → お昼たべる → 午後 の移動少なめ1日プランを作ります。
         </p>
-        <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--ink-mute)', letterSpacing: '.05em', marginBottom: 6 }}>
-          主要ターミナル
-        </div>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 14 }}>
-          {terminalChips.map((st) => (
-            <Link
-              key={st.slug}
-              href={`/today?${stationQs(st.slug)}`}
-              className="meta-chip clay"
-              style={{ fontSize: 13, textDecoration: 'none' }}
-            >
-              📍 {st.name}
-            </Link>
-          ))}
-        </div>
-        <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--ink-mute)', letterSpacing: '.05em', marginBottom: 6 }}>
-          子育て世帯に人気の駅
-        </div>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-          {familyChips.map((st) => (
-            <Link
-              key={st.slug}
-              href={`/today?${stationQs(st.slug)}`}
-              className="meta-chip sage"
-              style={{ fontSize: 13, textDecoration: 'none' }}
-            >
-              📍 {st.name}
-            </Link>
-          ))}
-        </div>
+        {isTokyoPicker ? (
+          <>
+            <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--ink-mute)', letterSpacing: '.05em', marginBottom: 6 }}>
+              主要ターミナル
+            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 14 }}>
+              {terminalChips.map((st) => (
+                <Link key={st.slug} href={`/today?${stationQs(st.slug)}`} className="meta-chip clay" style={{ fontSize: 13, textDecoration: 'none' }}>
+                  📍 {st.name}
+                </Link>
+              ))}
+            </div>
+            <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--ink-mute)', letterSpacing: '.05em', marginBottom: 6 }}>
+              子育て世帯に人気の駅
+            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+              {familyChips.map((st) => (
+                <Link key={st.slug} href={`/today?${stationQs(st.slug)}`} className="meta-chip sage" style={{ fontSize: 13, textDecoration: 'none' }}>
+                  📍 {st.name}
+                </Link>
+              ))}
+            </div>
+          </>
+        ) : metroChips ? (
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+            {metroChips.map((st) => (
+              <Link key={st.slug} href={`/today?${stationQs(st.slug)}`} className="meta-chip clay" style={{ fontSize: 13, textDecoration: 'none' }}>
+                📍 {st.name}
+              </Link>
+            ))}
+          </div>
+        ) : (
+          // 駅プラン非対応エリア：駅を出さず、エリア（おでかけ先）ブラウズへ誘導
+          <p style={{ fontSize: 13, color: 'var(--ink-sub)', lineHeight: 1.7, margin: 0 }}>
+            このエリアの「駅から1日プラン」は今後対応予定です。今は{' '}
+            <Link href="/area" style={{ color: 'var(--clay-deep)', fontWeight: 700 }}>エリアからおでかけ先を探す</Link>
+            {' '}でスポットを見られます。
+          </p>
+        )}
       </div>
 
       {activeChips.length > 0 && (
