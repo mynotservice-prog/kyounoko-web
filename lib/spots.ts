@@ -3116,6 +3116,21 @@ export function getAllSpotsWithSlug(
 }
 
 /**
+ * 「おでかけ先」スポットのみ（外食=restaurant を除外）。
+ *
+ * レストランは TOKYO_RESTAURANTS としてデータは分かれているが、URL/sitemap互換のため
+ * getAllSpotsWithSlug() には含めている（/spot/[slug] は外食でも引ける）。
+ * 一方で「おでかけスポット一覧/エリア/ランキング/人気」のような“遊びに行く先”の文脈では
+ * 外食を混ぜない。種別を分離する唯一の入口がこの関数。外食は「今日の流れ お昼 / slot=lunch /
+ * 外食記事」側に集約する。
+ */
+export function getOutingSpotsWithSlug(
+  ovMap?: SpotOverridesMap,
+): Array<{ slug: string; area: AreaSlug | string; spot: Spot }> {
+  return getAllSpotsWithSlug(ovMap).filter((x) => x.spot.category !== 'restaurant');
+}
+
+/**
  * スポットが個別ページとして「中身が十分」かを判定する品質ゲート。
  * 6つの実データ項目（メモ・設備・料金・穴場メモ・最寄り駅・市区町村）のうち
  * 3つ以上を満たすものだけを indexable とする。

@@ -19,7 +19,7 @@ import { LineCta } from '@/components/common/LineCta';
 import { getFileArticlesByCategory } from '@/lib/articles';
 import { eventHeroImage, formatEventPeriod, getThisWeekEvents } from '@/lib/events';
 import { getAllFileArticles } from '@/lib/articles';
-import { getAllSpotsWithSlug } from '@/lib/spots';
+import { getOutingSpotsWithSlug } from '@/lib/spots';
 import { FEATURE_PAGES } from '@/lib/feature-pages';
 import { POPULAR_ARTICLE_SLUGS } from '@/lib/popular-articles';
 import { spotToV2, featureToV2, articleToV2 } from '@/lib/v2-adapters';
@@ -76,7 +76,7 @@ export default function HomePage() {
   // 人気スポット: getAllSpotsWithSlug() 経由で正規 slug を使う（/spot/[slug] の
   // generateStaticParams と必ず一致させる）。
   // popular=true があれば優先、なければ先頭から5件。
-  const allSpotsWithSlug = getAllSpotsWithSlug();
+  const allSpotsWithSlug = getOutingSpotsWithSlug();
   const popularSpotsWS = allSpotsWithSlug
     .filter((x) => x.spot.popular)
     .slice(0, 5);
