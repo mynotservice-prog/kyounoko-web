@@ -121,7 +121,7 @@ export default async function FeaturePage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCollection) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
 
-      <V2Frame header="sub" active="features" backHref="/feature">
+      <V2Frame header="sub" backHref="/feature">
         {/* Hero */}
         <div className="v2-article-hero" style={{ height: 210 }}>
           <V2Img src={v2Feature.img} seed={'fa' + feature.slug} alt={feature.title} />

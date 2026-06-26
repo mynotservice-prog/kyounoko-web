@@ -148,7 +148,7 @@ export default async function AreaDetailPage({ params }: Props) {
 
       <V2Frame
         header="sub"
-        active="search"
+        active="area"
         backHref={isWard ? '/area/tokyo' : '/area'}
       >
         {/* Hero — 支給C系画像（都道府県別）が最優先 */}

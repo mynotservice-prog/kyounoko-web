@@ -474,7 +474,7 @@ export default async function TodayPage({ searchParams }: Props) {
 
   return (
     <>
-      <V2Frame header="sub" active="home">
+      <V2Frame header="sub" active="today">
 
       <div className="container">
         <nav className="breadcrumb" aria-label="パンくず">

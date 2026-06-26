@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function FeatureIndexPage() {
   const cards = FEATURE_PAGES.map(featureToV2);
   return (
-    <V2Frame header="sub" active="features">
+    <V2Frame header="sub">
       <div className="v2-page-head" style={{ paddingTop: 6 }}>
         <h1
           className="v2-page-h1"

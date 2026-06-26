@@ -80,7 +80,7 @@ export default async function RankingPage({ searchParams }: Props) {
   };
 
   return (
-    <V2Frame header="sub" active="search">
+    <V2Frame header="sub" active="area">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="v2-page-head" style={{ paddingTop: 6 }}>

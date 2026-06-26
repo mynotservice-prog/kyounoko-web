@@ -177,7 +177,7 @@ export default async function SpotPage({ params }: Props) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
       )}
 
-      <V2Frame header="sub" active="search" backHref="/spots">
+      <V2Frame header="sub" active="area" backHref="/spots">
         <V2RememberSpot
           slug={slug}
           name={spot.name}

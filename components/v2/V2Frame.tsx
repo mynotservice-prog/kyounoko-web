@@ -35,12 +35,11 @@ function V2MobileMenu({
 
   const primary = [
     { label: 'ホーム', href: '/', icon: 'home' as const },
-    { label: '探す', href: '/search', icon: 'search' as const },
+    { label: '今日の流れ', href: '/today', icon: 'sparkle' as const },
+    { label: 'エリア・駅', href: '/area', icon: 'pin' as const },
     { label: 'イベント', href: '/events', icon: 'calendar' as const },
-    { label: '特集', href: '/feature', icon: 'book' as const },
     { label: '保存したもの', href: '/favorites', icon: 'bookmark' as const },
-    { label: 'スポット一覧', href: '/spots', icon: 'pin' as const },
-    { label: 'エリアから探す', href: '/area', icon: 'flag' as const },
+    { label: 'スポット一覧', href: '/spots', icon: 'flag' as const },
   ];
   const footer = [
     { label: '運営者情報', href: '/about' },
@@ -161,7 +160,8 @@ function V2MobileMenu({
   );
 }
 
-export type V2NavActive = 'home' | 'search' | 'events' | 'features' | 'saved';
+// IA再編(2026-06): 「探す」を機能名「今日の流れ(today)」へ、特集を外し「エリア・駅(area)」を昇格。
+export type V2NavActive = 'home' | 'today' | 'area' | 'events' | 'saved';
 
 type FrameProps = {
   children: React.ReactNode;
@@ -330,9 +330,9 @@ function V2Header({
 function V2BottomNav({ active }: { active?: V2NavActive }) {
   const items = [
     { k: 'home', t: 'ホーム', icon: 'home', href: '/' },
-    { k: 'search', t: '探す', icon: 'search', href: '/search' },
+    { k: 'today', t: '今日の流れ', icon: 'sparkle', href: '/today' },
+    { k: 'area', t: 'エリア・駅', icon: 'pin', href: '/area' },
     { k: 'events', t: 'イベント', icon: 'calendar', href: '/events' },
-    { k: 'features', t: '特集', icon: 'book', href: '/feature' },
     { k: 'saved', t: '保存', icon: 'bookmark', href: '/favorites' },
   ] as const;
   return (
@@ -364,9 +364,9 @@ function V2BottomNav({ active }: { active?: V2NavActive }) {
 function V2DesktopHeader({ active }: { active?: V2NavActive }) {
   const links = [
     { k: 'home', t: 'ホーム', icon: 'home', href: '/' },
-    { k: 'search', t: '探す', icon: 'search', href: '/search' },
+    { k: 'today', t: '今日の流れ', icon: 'sparkle', href: '/today' },
+    { k: 'area', t: 'エリア・駅', icon: 'pin', href: '/area' },
     { k: 'events', t: 'イベント', icon: 'calendar', href: '/events' },
-    { k: 'features', t: '特集', icon: 'book', href: '/feature' },
     { k: 'saved', t: '保存', icon: 'bookmark', href: '/favorites' },
   ] as const;
   return (
