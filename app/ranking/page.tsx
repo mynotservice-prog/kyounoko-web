@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Fragment } from 'react';
 import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
+import { V2Breadcrumb } from '@/components/v2/V2Breadcrumb';
 import { V2SpotRow } from '@/components/v2/V2Cards';
 import { V2Icon } from '@/components/v2/V2Icon';
 import { spotToV2 } from '@/lib/v2-adapters';
@@ -83,6 +84,7 @@ export default async function RankingPage({ searchParams }: Props) {
     <V2Frame header="sub" active="area">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
+      <V2Breadcrumb items={[{ label: 'ホーム', href: '/' }, { label: '人気ランキング' }]} />
       <div className="v2-page-head" style={{ paddingTop: 6 }}>
         <h1 className="v2-page-h1" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <V2Icon name="crown" size={24} color="var(--v2-orange)" />

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
+import { V2Breadcrumb } from '@/components/v2/V2Breadcrumb';
 import { V2FeatureRow } from '@/components/v2/V2Cards';
 import { V2SectionHead, V2Img, V2Tag } from '@/components/v2/V2Base';
 import { V2Icon } from '@/components/v2/V2Icon';
@@ -21,6 +22,7 @@ export default function FeatureIndexPage() {
   const cards = FEATURE_PAGES.map(featureToV2);
   return (
     <V2Frame header="sub">
+      <V2Breadcrumb items={[{ label: 'ホーム', href: '/' }, { label: '特集' }]} />
       <div className="v2-page-head" style={{ paddingTop: 6 }}>
         <h1
           className="v2-page-h1"
