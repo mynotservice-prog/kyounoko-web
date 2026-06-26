@@ -114,17 +114,16 @@ export function V2Tag({
    Logo
    =========================================================== */
 export function V2LogoMark({ size = 38 }: { size?: number }) {
+  // 2026-06 刷新: 旧くまマーク(インラインSVG) → 走る子ども＋ハートの円形ロゴ画像。
+  // 原画 public/new_logo/ より円部分を切出した public/img/kyounoko-logo-mark.webp を使用。
   return (
-    <svg width={size} height={size} viewBox="0 0 48 48" aria-label="きょうのこ">
-      <circle cx="13" cy="13" r="6.5" fill="var(--v2-orange)" />
-      <circle cx="35" cy="13" r="6.5" fill="var(--v2-orange)" />
-      <circle cx="24" cy="26" r="17" fill="var(--v2-orange)" />
-      <circle cx="17.5" cy="24" r="2.5" fill="#fff" />
-      <circle cx="30.5" cy="24" r="2.5" fill="#fff" />
-      <path d="M19 31c1.6 2 8.4 2 10 0" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" fill="none" />
-      <circle cx="14.5" cy="29.5" r="2" fill="#fff" opacity=".55" />
-      <circle cx="33.5" cy="29.5" r="2" fill="#fff" opacity=".55" />
-    </svg>
+    <img
+      src="/img/kyounoko-logo-mark.webp"
+      width={size}
+      height={size}
+      alt="きょうのこ"
+      style={{ borderRadius: '50%', display: 'block', objectFit: 'cover' }}
+    />
   );
 }
 
