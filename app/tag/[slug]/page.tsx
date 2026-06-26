@@ -25,6 +25,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${tag.name}の記事とプラン（${count}件）`,
     description: tag.description,
     alternates: { canonical: `/tag/${slug}` },
+    // 剪定(2026-06): タグページは90日0クリック・自動生成の重複導線のため noindex。
+    // 回遊用にリンクは残すが検索対象から外す（follow は維持）。
+    robots: { index: false, follow: true },
   };
 }
 
