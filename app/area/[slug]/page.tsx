@@ -126,6 +126,17 @@ export default async function AreaDetailPage({ params }: Props) {
   const showSpots = areaSpots.length > 0;
 
   const isWard = m.kind === 'ward';
+  // 「今日の流れ(1日プラン)」が成立する対応エリアだけ送客CTAを出す（東京＋横浜/埼玉/千葉）。
+  // 既存SEOページ→1日プラン(noindex)への接続で回遊・再訪を増やす（順位は触らない）。
+  const TODAY_AREAS = new Set(['tokyo', 'kanagawa', 'saitama', 'chiba']);
+  const todayArea = isWard
+    ? 'tokyo'
+    : TODAY_AREAS.has(slug)
+      ? slug
+      : m.prefSlug && TODAY_AREAS.has(m.prefSlug)
+        ? m.prefSlug
+        : null;
+  const todayHref = todayArea ? (todayArea === 'tokyo' ? '/today' : `/today?area=${todayArea}`) : null;
   const jsonLdBreadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -170,6 +181,15 @@ export default async function AreaDetailPage({ params }: Props) {
           <p className="v2-page-lead" style={{ marginTop: 0 }}>
             {name}で子どもと楽しめるスポット・ランチ・イベントをまとめました。雨の日も晴れの日も、近くのおでかけ先がきっと見つかります。
           </p>
+          {todayHref && (
+            <Link
+              href={todayHref}
+              className="btn-primary"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginTop: 12, textDecoration: 'none' }}
+            >
+              ✨ {name}で「今日の流れ」を作る（午前あそぶ→お昼→午後）→
+            </Link>
+          )}
         </div>
 
         {/* よく検索される条件 chips（横スクロール） */}
