@@ -447,6 +447,7 @@ A. 2歳から取り分けOK、3歳以上で本格的に楽しめる。火傷リ�
 
 ## 関連記事
 
+- [子どもは焼肉を何歳から食べられる？](/article/kodomo-yakiniku-itsukara)
 - [個室で子連れランチ完全ガイド](/article/koshitsu-kodzure-lunch)
 - [子連れ焼肉 ベビーカー入れる店 東京20選](/article/kodzure-yakiniku-stroller-tokyo-20)
 - [子連れ歓迎の和食チェーン10選](/article/kodzure-washoku-chain-10)
