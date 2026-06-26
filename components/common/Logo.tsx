@@ -7,9 +7,9 @@ type Props = {
 
 /**
  * きょうのこ サイトロゴ
- * 2026-05 更新: テキスト「こ」のSVGロゴ → 親子3人の親しみやすい円形アイコンに変更
- * アイコン: public/img/kyounoko-logo-mark.webp (96x96)
- * note/Instagram のアバターと統一されたブランド体験を提供
+ * 2026-06 更新: 親子3人の線画 → 元気に走る子ども＋ハートの円形キャラクターに刷新
+ * アイコン: public/img/kyounoko-logo-mark.webp (192x192, public/new_logo/ 原画より円部分を切出し)
+ * 全アイコン(favicon/apple-touch/PWA)・note/Instagram のアバターと統一
  */
 export function Logo({ variant = 'light' }: Props) {
   const isDark = variant === 'dark';

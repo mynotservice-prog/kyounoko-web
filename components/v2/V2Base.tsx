@@ -71,16 +71,17 @@ export function useV2Ctx() {
 /* ===========================================================
    Image — uses native <img> for any remote/local path.
    画像未配置/読み込み失敗時は、ランダムなストック写真(picsum)ではなく
-   ブランドの自前プレースホルダ（クリーム地＋くまマーク）を出す。
+   ブランドの自前プレースホルダ（クリーム地＋ロゴ調のリング＆ハート）を出す。
    子育てメディアで無関係な他人の写真が出る「架空感」を防ぐ。
+   2026-06: 新ロゴ刷新に合わせ、旧くまマーク → リング＋ハートの控えめ意匠へ統一。
    =========================================================== */
 const KK_PLACEHOLDER =
   'data:image/svg+xml,' +
   encodeURIComponent(
     `<svg xmlns="http://www.w3.org/2000/svg" width="820" height="462" viewBox="0 0 820 462">` +
       `<rect width="820" height="462" fill="#FBF5E8"/>` +
-      `<g fill="#ECD9BE"><circle cx="384" cy="196" r="30"/><circle cx="436" cy="196" r="30"/><circle cx="410" cy="240" r="52"/></g>` +
-      `<circle cx="396" cy="232" r="6" fill="#FBF5E8"/><circle cx="424" cy="232" r="6" fill="#FBF5E8"/>` +
+      `<circle cx="410" cy="200" r="58" fill="none" stroke="#E3CDA8" stroke-width="5"/>` +
+      `<path d="M410 232 C392 214 376 207 376 193 C376 183 384 177 392 177 C400 177 406 183 410 189 C414 183 420 177 428 177 C436 177 444 183 444 193 C444 207 428 214 410 232 Z" fill="#E7D2B0"/>` +
       `<text x="410" y="330" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#C2B49A">きょうのこ</text>` +
       `</svg>`,
   );
@@ -126,17 +127,16 @@ export function V2Tag({
    Logo
    =========================================================== */
 export function V2LogoMark({ size = 38 }: { size?: number }) {
+  // 2026-06 刷新: 旧くまマーク(インラインSVG) → 走る子ども＋ハートの円形ロゴ画像。
+  // 原画 public/new_logo/ より円部分を切出した public/img/kyounoko-logo-mark.webp を使用。
   return (
-    <svg width={size} height={size} viewBox="0 0 48 48" aria-label="きょうのこ">
-      <circle cx="13" cy="13" r="6.5" fill="var(--v2-orange)" />
-      <circle cx="35" cy="13" r="6.5" fill="var(--v2-orange)" />
-      <circle cx="24" cy="26" r="17" fill="var(--v2-orange)" />
-      <circle cx="17.5" cy="24" r="2.5" fill="#fff" />
-      <circle cx="30.5" cy="24" r="2.5" fill="#fff" />
-      <path d="M19 31c1.6 2 8.4 2 10 0" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" fill="none" />
-      <circle cx="14.5" cy="29.5" r="2" fill="#fff" opacity=".55" />
-      <circle cx="33.5" cy="29.5" r="2" fill="#fff" opacity=".55" />
-    </svg>
+    <img
+      src="/img/kyounoko-logo-mark.webp"
+      width={size}
+      height={size}
+      alt="きょうのこ"
+      style={{ borderRadius: '50%', display: 'block', objectFit: 'cover' }}
+    />
   );
 }
 
