@@ -87,15 +87,20 @@ export default async function EventPage({ params }: Props) {
       name: ev.venue,
       address: ev.city ? { '@type': 'PostalAddress', addressLocality: ev.city, addressCountry: 'JP' } : undefined,
     },
-    offers: ev.price
-      ? {
-          '@type': 'Offer',
-          price: ev.price.includes('無料') ? '0' : undefined,
-          priceCurrency: 'JPY',
-          availability: 'https://schema.org/InStock',
-          url: ev.officialUrl,
-        }
-      : undefined,
+    // 価格を確実に数値化できる時だけ Offer を出す（壊れた Offer を出さない）。
+    // ・「無料」かつ他に金額表記が無い → '0'
+    // ・「大人 2,000円…」等の自由文（複数料金・要確認）→ offers 自体を省略
+    offers:
+      ev.price && ev.price.includes('無料') && !/\d/.test(ev.price)
+        ? {
+            '@type': 'Offer',
+            price: '0',
+            priceCurrency: 'JPY',
+            availability: 'https://schema.org/InStock',
+            validFrom: ev.startDate,
+            url: ev.officialUrl,
+          }
+        : undefined,
     image: [`https://kyounoko.jp${eventHeroImage(ev)}`],
     url: `https://kyounoko.jp/event/${slug}`,
     isFamilyFriendly: true,
