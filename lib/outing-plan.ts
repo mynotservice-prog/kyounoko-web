@@ -335,19 +335,30 @@ export function lunchCandidates(
   const isRest = (s: Spot) => s.category === 'restaurant' && ageOk(s, q.age) && budgetOk(s);
   const byFacets = (a: Spot, b: Spot) => facetsOf(b).length - facetsOf(a).length;
   // 地域内のレストラン（東京は TOKYO_RESTAURANTS も getSpotsForRegion が合流）
-  let ward = getSpotsForRegion(areaKey, regionLabel).filter(isRest);
+  const wardScoped = getSpotsForRegion(areaKey, regionLabel).filter(isRest);
 
-  // アンカー座標があれば、実距離で「遠すぎる区内レストラン」を除外し近い順に並べ替える。
+  // アンカー座標があれば「同じward + エリア内3km圏の他ward店」を実距離で統合。
+  // 区/エリア境界をまたぐ近接店（心斎橋→なんばパークス1.3km、川崎→ラゾーナ0.3km等）も拾う。
   const anchorCoords = getStationCoords(anchorSlug);
+  let ward: Spot[];
   if (anchorCoords) {
-    const withKm = ward.map((s) => {
+    // 候補プール: 同wardの店（距離不明でも後方互換で残す）＋ エリア全レストラン（3km圏のみ）。
+    const areaPool = [...(SPOTS[areaKey as AreaSlug] ?? []), ...TOKYO_RESTAURANTS].filter(isRest);
+    const seen = new Set<string>();
+    const cand: { s: Spot; km: number | null }[] = [];
+    const add = (s: Spot, requireNear: boolean) => {
+      if (seen.has(s.name)) return;
       const c = getStationCoords(resolveLunchStationSlug(s));
-      return { s, km: c ? haversineKm(anchorCoords, c) : null };
-    });
-    // 距離が判明していて 3km 超のものだけ落とす（判明しないものは保持＝後方互換）。
-    ward = withKm
-      .filter((x) => x.km === null || x.km <= LUNCH_MAX_KM)
-      // 近い順 → 距離不明 → ファセット数。近接かつ設備充実を優先。
+      const km = c ? haversineKm(anchorCoords, c) : null;
+      if (km !== null && km > LUNCH_MAX_KM) return; // 距離判明で3km超は除外
+      if (requireNear && km === null) return; // 他ward店は近接が確認できるものだけ
+      seen.add(s.name);
+      cand.push({ s, km });
+    };
+    for (const s of wardScoped) add(s, false); // 同ward: 距離不明でも可（後方互換）
+    for (const s of areaPool) add(s, true); // 他ward: 3km圏のみ追加
+    // 近い順 → 距離不明(同ward) → ファセット数。近接かつ設備充実を優先。
+    ward = cand
       .sort((a, b) => {
         if (a.km !== null && b.km !== null) return a.km - b.km || byFacets(a.s, b.s);
         if (a.km !== null) return -1;
@@ -356,7 +367,7 @@ export function lunchCandidates(
       })
       .map((x) => x.s);
   } else {
-    ward = ward.sort(byFacets);
+    ward = wardScoped.sort(byFacets);
   }
 
   // 全国チェーンのみフォールバック採用（ward:'複数' = どの地域にもある店）。
