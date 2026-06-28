@@ -211,15 +211,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: 'monthly' as const,
     priority: s.scale === 'terminal' ? 0.7 : s.scale === 'major' ? 0.6 : 0.5,
   }));
+  // 駅ページが index される（飲食データがある）駅だけ sitemap に載せる。
+  // プラン生成の距離アンカー専用に追加した飲食データの無い駅は、ページ側で noindex に
+  // なるため sitemap からも除外し「noindex URL を sitemap 送信」の不整合を防ぐ。
+  const stationHasContent = (slug: string) =>
+    (getStationWithChains(slug)?.chains?.length ?? 0) > 0 ||
+    getIndieRestaurantsByStation(slug).length > 0;
   // 関西駅ページ（大阪・京都・神戸）
-  const kansaiStationPages: MetadataRoute.Sitemap = KANSAI_STATIONS.map((s) => ({
+  const kansaiStationPages: MetadataRoute.Sitemap = KANSAI_STATIONS.filter((s) =>
+    stationHasContent(s.slug),
+  ).map((s) => ({
     url: `${BASE}/station/${s.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: s.scale === 'terminal' ? 0.7 : s.scale === 'major' ? 0.6 : 0.5,
   }));
   // 神奈川駅ページ（横浜・川崎・湘南・県央）
-  const kanagawaStationPages: MetadataRoute.Sitemap = KANAGAWA_STATIONS.map((s) => ({
+  const kanagawaStationPages: MetadataRoute.Sitemap = KANAGAWA_STATIONS.filter((s) =>
+    stationHasContent(s.slug),
+  ).map((s) => ({
     url: `${BASE}/station/${s.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,

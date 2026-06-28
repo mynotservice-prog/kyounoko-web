@@ -1150,6 +1150,13 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       waterPlay: true,
     },
     {
+      name: 'ラ チッタデッラ', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '川崎市', note: 'イタリアの街並みを模した川崎駅東口の複合施設。映画館・噴水・季節イベント', budget: 'low',
+      nearestStation: 'kawasaki',
+      walkMinutes: 5,
+      reservation: 'none',
+      hiddenTip: '中央の噴水広場は休憩に最適。チネチッタで子ども向け上映も。飲食店が多くランチ難民になりにくい',
+    },
+    {
       name: 'トリックアートミュージアム高尾山', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '八王子市', note: '高尾山口駅前、屋内で写真映え', budget: 'low',
       pricing: { adult: '1,400円', elementary: '800円', preschool: '500円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'none',
@@ -2550,6 +2557,28 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
   ],
   osaka: [
+    {
+      name: '大阪市立科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '大阪市', note: '中之島の体験型科学館。プラネタリウムと「おやこで科学」展示', budget: 'low',
+      nearestStation: 'higobashi', walkMinutes: 7,
+      reservation: 'none',
+      popular: true,
+      summerCool: true,
+      facilities: { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes' },
+    },
+    {
+      name: '大阪城天守閣', category: 'museum', place: 'outdoor', ages: ['2-3', '4-6'], city: '大阪市', note: '大阪のシンボル。広大な公園で遊具・芝生・お弁当もOK', budget: 'low',
+      nearestStation: 'osakajo-koen', walkMinutes: 15,
+      reservation: 'none',
+      popular: true,
+      facilities: { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes' },
+    },
+    {
+      name: '通天閣', category: 'amusement', place: 'indoor', ages: ['2-3', '4-6'], city: '大阪市', note: '新世界のシンボルタワー。展望台と滑り台「タワースライダー」', budget: 'mid',
+      nearestStation: 'ebisucho', walkMinutes: 3,
+      reservation: 'none',
+      popular: true,
+      facilities: { bathroom: 'yes', diaperChange: 'yes' },
+    },
     {
       name: '海遊館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '大阪市', note: 'ジンベエザメの大水槽、世界最大級', budget: 'mid',
       pricing: { adult: '2,700円', elementary: '1,400円', preschool: '700円（3歳以上）', infant: '無料（3歳未満）' },

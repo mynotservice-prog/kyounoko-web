@@ -18,7 +18,13 @@
  */
 
 import { WARD_NAMES, type TokyoWard } from './tokyo-stations';
-import { findStationBySlug, type AnyStation } from './all-stations';
+import {
+  findStationBySlug,
+  getStationCoords,
+  haversineKm,
+  resolveStationSlugByName,
+  type AnyStation,
+} from './all-stations';
 import {
   SPOTS,
   TOKYO_RESTAURANTS,
@@ -135,7 +141,13 @@ function pickSpotCascade(
   exclude: Set<string>,
   variant = 0,
   anchorStation?: AnyStation | null,
-): { spot: Spot; tier: CoherenceTier; walkMinutes?: number; viaStationName?: string } | null {
+): {
+  spot: Spot;
+  tier: CoherenceTier;
+  walkMinutes?: number;
+  viaStationName?: string;
+  distanceKm?: number;
+} | null {
   const filt = (list: Spot[], strictWeather: boolean) =>
     list.filter(
       (s) =>
@@ -161,8 +173,45 @@ function pickSpotCascade(
     }
   }
 
-  // 1.5) 近隣駅（アンカー駅と路線を共有する駅のspot）— 区フォールバックより先に。
-  //      巨大区(千代田区27駅)で遠い丸の内が出る問題を、路線でつながる近場に置き換える。
+  // 1.5) 近隣を「実距離」で選ぶ（アンカー駅に座標があるとき）。
+  //      ハブ駅(新橋=浅草線→押上8km/ゆりかもめ→お台場)で遠方を拾う問題を、
+  //      半径 MAX_KM 以内・近い順 に限定して解消する。子連れで回遊できる範囲だけ提案。
+  const anchorCoords = getStationCoords(stationSlug);
+  if (anchorCoords) {
+    const MAX_KM = 3.0; // これを超える提案はしない（電車1本・回遊できる現実的な範囲）
+    const pool = SPOTS[areaKey as AreaSlug] ?? [];
+    for (const strict of [true, false]) {
+      const cand = filt(pool, strict)
+        .filter((s) => s.nearestStation && s.nearestStation !== stationSlug)
+        .map((s) => {
+          const c = getStationCoords(s.nearestStation!);
+          return {
+            s,
+            st: findStationBySlug(s.nearestStation!),
+            km: c ? haversineKm(anchorCoords, c) : null,
+          };
+        })
+        .filter((x) => x.km !== null && x.km <= MAX_KM)
+        // 近い順を最優先（morning=最近接, afternoon=次点）。同距離は人気順。
+        .sort((a, b) => a.km! - b.km! || popularFirst(a.s, b.s));
+      if (cand.length) {
+        const pick = at(cand);
+        return {
+          spot: pick.s,
+          tier: 'nearby',
+          walkMinutes: pick.s.walkMinutes,
+          viaStationName: pick.st?.name,
+          distanceKm: pick.km!,
+        };
+      }
+    }
+    // 座標アンカーで3km内に該当なし → far fallback はしない（回遊性を優先）。
+    // null を返すと上位で「おうちプラン」等に切り替わる。
+    return null;
+  }
+
+  // --- 以下は座標が無い駅・区アンカーのみの後方互換フォールバック ---
+  // 1.5b) 近隣駅（アンカー駅と路線を共有する駅のspot）。
   if (anchorStation && anchorStation.lines.length) {
     const anchorLines = new Set(anchorStation.lines);
     const pool = SPOTS[areaKey as AreaSlug] ?? [];
@@ -210,15 +259,73 @@ function facetsOf(s: Spot): string[] {
   return f;
 }
 
+// 建物レストラン街 → 最寄駅（部分一致ヒント）。多くの区内レストランは駅紐付けが無いため、
+// アンカー駅からの実距離フィルタ（半径3km）を効かせる目的で建物名から駅を補完する。
+// 値は日本語駅名（resolveStationSlugByName で slug 化）。23区外(吉祥寺/立川等)は master 非対象→チェーンに落ちる。
+const RESTAURANT_STATION_HINTS: Array<[string, string]> = [
+  // 東京23区
+  ['東京ドームシティ', '水道橋'],
+  ['東京ステーションホテル', '東京'],
+  ['丸ビル', '東京'],
+  ['グランスタ東京', '東京'],
+  ['渋谷ヒカリエ', '渋谷'],
+  ['二子玉川ライズ', '二子玉川'],
+  ['アクアシティお台場', 'お台場海浜公園'],
+  ['六本木ヒルズ', '六本木'],
+  ['池袋サンシャインシティ', '池袋'],
+  ['スカイツリータウン', '押上'],
+  ['ソラマチ', '押上'],
+  ['新宿高島屋', '新宿'],
+  ['ルミネ新宿', '新宿'],
+  ['ららぽーと豊洲', '豊洲'],
+  ['上野松坂屋', '上野'],
+  ['北千住マルイ', '北千住'],
+  ['錦糸町オリナス', '錦糸町'],
+  ['蒲田グランデュオ', '蒲田'],
+  ['アトレ大森', '大森'],
+  ['中野サンモール', '中野'],
+  ['中野ブロードウェイ', '中野'],
+  ['としまえん', '豊島園'],
+  // 神奈川
+  ['横浜ランドマークタワー', 'みなとみらい'],
+  ['横浜赤レンガ倉庫', '桜木町'],
+  ['ラゾーナ川崎', '川崎'],
+  ['川崎アゼリア', '川崎'],
+  ['鎌倉小町通り', '鎌倉'],
+  // 関西
+  ['グランフロント大阪', '梅田'],
+  ['ルクア大阪', '梅田'],
+  ['なんばパークス', '難波'],
+  ['なんばCITY', '難波'],
+  ['あべのハルカス', '天王寺'],
+  ['あべのキューズモール', '天王寺'],
+  ['京都四条河原町', '河原町'],
+  ['京都駅ビル', '京都'],
+  ['神戸ハーバーランド', 'ハーバーランド'],
+  ['神戸三宮センタープラザ', '三宮'],
+];
+
+/** レストランの最寄駅slugを解決（spot.nearestStation 優先、無ければ建物名ヒント）。 */
+function resolveLunchStationSlug(s: Spot): string | undefined {
+  if (s.nearestStation) return s.nearestStation;
+  for (const [key, station] of RESTAURANT_STATION_HINTS) {
+    if (s.name.includes(key)) return resolveStationSlugByName(station);
+  }
+  return undefined;
+}
+
+const LUNCH_MAX_KM = 3.0; // 区内でもこの距離を超えるレストランは出さない（回遊できる範囲）。
+
 /**
  * お昼の子連れOKレストランを1件。区内→全国チェーン の順。
- * レストランは駅紐付けが無いので「区内」が最良の近さ。チェーンはどの駅でも可。
+ * アンカー駅に座標があるときは、区内候補を実距離(半径3km)で絞り・近い順に並べる。
  */
-/** お昼候補をスコア順（ファセット数優先）で並べて返す。?slot=lunch のリスト表示にも使う。 */
+/** お昼候補をスコア順で並べて返す。?slot=lunch のリスト表示にも使う。anchorSlug 指定時は距離フィルタ。 */
 export function lunchCandidates(
   areaKey: string,
   regionLabel: string,
   q: { age?: AgeTag; budget?: 'free' | 'low' | 'mid' | 'high' },
+  anchorSlug?: string,
 ): { ward: Spot[]; chain: Spot[] } {
   const budgetOk = (s: Spot) => {
     if (!q.budget || !s.budget) return true;
@@ -228,10 +335,31 @@ export function lunchCandidates(
   const isRest = (s: Spot) => s.category === 'restaurant' && ageOk(s, q.age) && budgetOk(s);
   const byFacets = (a: Spot, b: Spot) => facetsOf(b).length - facetsOf(a).length;
   // 地域内のレストラン（東京は TOKYO_RESTAURANTS も getSpotsForRegion が合流）
-  const ward = getSpotsForRegion(areaKey, regionLabel).filter(isRest).sort(byFacets);
+  let ward = getSpotsForRegion(areaKey, regionLabel).filter(isRest);
+
+  // アンカー座標があれば、実距離で「遠すぎる区内レストラン」を除外し近い順に並べ替える。
+  const anchorCoords = getStationCoords(anchorSlug);
+  if (anchorCoords) {
+    const withKm = ward.map((s) => {
+      const c = getStationCoords(resolveLunchStationSlug(s));
+      return { s, km: c ? haversineKm(anchorCoords, c) : null };
+    });
+    // 距離が判明していて 3km 超のものだけ落とす（判明しないものは保持＝後方互換）。
+    ward = withKm
+      .filter((x) => x.km === null || x.km <= LUNCH_MAX_KM)
+      // 近い順 → 距離不明 → ファセット数。近接かつ設備充実を優先。
+      .sort((a, b) => {
+        if (a.km !== null && b.km !== null) return a.km - b.km || byFacets(a.s, b.s);
+        if (a.km !== null) return -1;
+        if (b.km !== null) return 1;
+        return byFacets(a.s, b.s);
+      })
+      .map((x) => x.s);
+  } else {
+    ward = ward.sort(byFacets);
+  }
+
   // 全国チェーンのみフォールバック採用（ward:'複数' = どの地域にもある店）。
-  // TOKYO_RESTAURANTS には神戸/大阪等の地域限定店も混在しているため、それらは除外する
-  // （混入すると東京の駅で「神戸ハーバーランド」等が出てしまう）。
   const chain = TOKYO_RESTAURANTS.filter((s) => isRest(s) && s.ward === '複数').sort(byFacets);
   return { ward, chain };
 }
@@ -241,8 +369,9 @@ function pickLunch(
   regionLabel: string,
   q: OutingQuery,
   variant = 0,
+  anchorSlug?: string,
 ): { spot: Spot; tier: CoherenceTier } | null {
-  const { ward, chain } = lunchCandidates(areaKey, regionLabel, q);
+  const { ward, chain } = lunchCandidates(areaKey, regionLabel, q, anchorSlug);
   const at = (list: Spot[]) => list[((variant % list.length) + list.length) % list.length];
   if (ward.length) return { spot: at(ward), tier: 'ward' };
   if (chain.length) return { spot: at(chain), tier: 'chain' };
@@ -268,6 +397,7 @@ function moveTextForSpot(
   spot: Spot,
   walkMinutes?: number,
   viaStationName?: string,
+  distanceKm?: number,
 ): OutingMove {
   if (tier === 'station') {
     const m = walkMinutes ?? undefined;
@@ -278,7 +408,15 @@ function moveTextForSpot(
     };
   }
   if (tier === 'nearby') {
-    // 同じ路線でつながる近隣駅へ電車で移動
+    // 実距離で「近さ」を表現。〜1.6km=歩いても行ける近さ / それ以上=電車で数分。
+    const km = distanceKm;
+    const via = viaStationName ? `${viaStationName}駅` : '近く';
+    if (km != null && km <= 1.6) {
+      return { text: `${via}まで歩いてすぐ（約${km.toFixed(1)}km）`, tier };
+    }
+    if (km != null) {
+      return { text: `${via}へ電車で数分（約${km.toFixed(1)}km）`, tier };
+    }
     return { text: viaStationName ? `${viaStationName}駅へ（電車ですぐ）` : '電車ですぐ', tier };
   }
   if (tier === 'ward') return { text: `${regionLabel}内`, tier };
@@ -356,13 +494,13 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
       kind: 'spot',
       spot: morning.spot,
       spotSlug: spotToSlug(morning.spot, slugArea),
-      move: moveTextForSpot(morning.tier, stationName, regionLabel, morning.spot, morning.walkMinutes, morning.viaStationName),
+      move: moveTextForSpot(morning.tier, stationName, regionLabel, morning.spot, morning.walkMinutes, morning.viaStationName, morning.distanceKm),
       tier: morning.tier,
     });
   }
 
   // ---- お昼: たべる ----
-  const lunch = pickLunch(areaKey, regionLabel, q, q.lunchVariant ?? 0);
+  const lunch = pickLunch(areaKey, regionLabel, q, q.lunchVariant ?? 0, stationSlug);
   if (lunch) {
     used.add(lunch.spot.name);
     slots.push({
@@ -387,7 +525,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
   // ---- 午後: 軽め（0-1歳は休憩優先でおうちへ） ----
   const preferHome = q.age === '0-1';
   let afternoon:
-    | { spot: Spot; tier: CoherenceTier; walkMinutes?: number; viaStationName?: string }
+    | { spot: Spot; tier: CoherenceTier; walkMinutes?: number; viaStationName?: string; distanceKm?: number }
     | null = null;
   if (!preferHome) {
     afternoon = pickSpotCascade(stationSlug, areaKey, regionLabel, q, used, q.afternoonVariant ?? 0, anchorStation);
@@ -402,7 +540,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
       kind: 'spot',
       spot: afternoon.spot,
       spotSlug: spotToSlug(afternoon.spot, slugArea),
-      move: moveTextForSpot(afternoon.tier, stationName, regionLabel, afternoon.spot, afternoon.walkMinutes, afternoon.viaStationName),
+      move: moveTextForSpot(afternoon.tier, stationName, regionLabel, afternoon.spot, afternoon.walkMinutes, afternoon.viaStationName, afternoon.distanceKm),
       tier: afternoon.tier,
     });
   } else {
