@@ -371,8 +371,41 @@ export function lunchCandidates(
   }
 
   // 全国チェーンのみフォールバック採用（ward:'複数' = どの地域にもある店）。
-  const chain = TOKYO_RESTAURANTS.filter((s) => isRest(s) && s.ward === '複数').sort(byFacets);
+  // 近接の登録店が無い駅向け。「家族で入れるファミレス」を先頭に出す（IKEA等の特殊店は降格）。
+  // 駅ごとに先頭を回転させ、どの空白駅でも同じ店ばかりにならないようにする。
+  const chainRank = chainRankFor(anchorSlug);
+  const chain = TOKYO_RESTAURANTS.filter((s) => isRest(s) && s.ward === '複数').sort(
+    (a, b) => chainRank(a) - chainRank(b) || byFacets(a, b),
+  );
   return { ward, chain };
+}
+
+// チェーンフォールバックの優先順（家族で入れる定番ファミレス・回転寿司・麺類）。
+// 先頭4つはユーザー指定の定番。ココスは名前にHTMLエンティティ(&#39;)が混入しており
+// 表示が崩れるため優先リストから除外（別途データ修正の対象）。
+const FAMILY_CHAINS = [
+  'サイゼリヤ',
+  'ガスト',
+  'くら寿司',
+  '丸亀製麺',
+  'ジョナサン',
+  'デニーズ',
+  'スシロー',
+  'はま寿司',
+  'バーミヤン',
+  'ロイヤルホスト',
+];
+
+/** anchorSlug ごとに優先リストを回転させた、チェーンの並び順ランク関数を返す。 */
+function chainRankFor(anchorSlug?: string): (s: Spot) => number {
+  const rot = anchorSlug
+    ? [...anchorSlug].reduce((a, c) => a + c.charCodeAt(0), 0) % FAMILY_CHAINS.length
+    : 0;
+  const priority = [...FAMILY_CHAINS.slice(rot), ...FAMILY_CHAINS.slice(0, rot)];
+  return (s: Spot) => {
+    const i = priority.findIndex((k) => s.name.includes(k));
+    return i === -1 ? priority.length : i;
+  };
 }
 
 function pickLunch(
