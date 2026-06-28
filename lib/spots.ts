@@ -3381,7 +3381,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
       summerCool: true,
   },
   {
-    name: 'COCO&#39;S（ココス）', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
+    name: 'ココス', category: 'restaurant', place: 'indoor', ages: ['0-1', '2-3', '4-6'],
     ward: '複数', city: 'ファミレスチェーン',
     note: 'キッズメニュー豊富、バルーン配布、塗り絵サービス',
     pricing: { adult: '900-1,500円', elementary: '499円〜', preschool: '499円〜', infant: '離乳食200円' },

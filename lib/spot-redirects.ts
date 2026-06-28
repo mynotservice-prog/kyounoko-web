@@ -44,4 +44,7 @@ export const SPOT_REDIRECTS: Array<{ from: string; to: string }> = [
   { from: '-o7q3', to: '-1cks' }, // 日本民家園（東京→神奈川・川崎市）
   { from: '-j7ru', to: '-l5nt' }, // 東京ドイツ村（東京→千葉・袖ケ浦市）
   { from: '-73dd', to: '-9sik' }, // 軽井沢おもちゃ王国（長野→群馬・嬬恋村）
+
+  // ===== レストラン名の表記修正（HTMLエンティティ除去） =====
+  { from: 'COCO-39-S-8lek', to: '-alsu' }, // ココス（旧名 "COCO&#39;S（ココス）" の崩れた slug を救済）
 ];
