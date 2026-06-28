@@ -510,10 +510,15 @@ export default async function TodayPage({ searchParams }: Props) {
   if (isTokyoAnchor && slotParam === 'lunch') {
     const anchor = resolveOutingAnchor({ stationSlug: stationParam, ward: wardParam });
     if (anchor) {
-      const { ward: wardRest, chain } = lunchCandidates(anchor.areaKey, anchor.regionLabel, {
-        age: query.age as AgeTag | undefined,
-        budget: query.budget as 'free' | 'low' | 'mid' | 'high' | undefined,
-      });
+      const { ward: wardRest, chain } = lunchCandidates(
+        anchor.areaKey,
+        anchor.regionLabel,
+        {
+          age: query.age as AgeTag | undefined,
+          budget: query.budget as 'free' | 'low' | 'mid' | 'high' | undefined,
+        },
+        anchor.stationSlug,
+      );
       return (
         <V2Frame header="sub" active="today" backHref={`/today?${new URLSearchParams(outingParams).toString()}`}>
           <div className="container">
@@ -579,7 +584,10 @@ export default async function TodayPage({ searchParams }: Props) {
       { slug: 'minato-mirai', name: 'みなとみらい' },
       { slug: 'sakuragicho', name: '桜木町' },
       { slug: 'kannai', name: '関内' },
+      { slug: 'kawasaki', name: '川崎' },
       { slug: 'musashi-kosugi', name: '武蔵小杉' },
+      { slug: 'katase-enoshima', name: '片瀬江ノ島' },
+      { slug: 'hakkeijima', name: '八景島' },
     ],
     saitama: [
       { slug: 'omiya', name: '大宮' },
@@ -598,6 +606,8 @@ export default async function TodayPage({ searchParams }: Props) {
       { slug: 'osaka-namba', name: '難波' },
       { slug: 'osaka-tennoji', name: '天王寺' },
       { slug: 'osaka-shinsaibashi', name: '心斎橋' },
+      { slug: 'osaka-ko', name: '大阪港（海遊館）' },
+      { slug: 'banpaku-kinen-koen', name: '万博記念公園' },
     ],
   };
   const pickerArea = !query.area || query.area === 'all' ? 'tokyo' : query.area;

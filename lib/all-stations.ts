@@ -143,6 +143,42 @@ export function resolveStationSlugByName(name: string): string | undefined {
   return STATION_NAME_TO_SLUG.get(base);
 }
 
+// 駅slug → 緯度経度。lib/station-coords.json（公開データ ekidata 由来を名寄せ・実測値）。
+// 「今日の流れ」の回遊距離（半径〜3km/電車1本）を実距離で判定するために使う。
+import STATION_COORDS from './station-coords.json';
+const COORDS = STATION_COORDS as Record<string, { lat: number; lng: number }>;
+
+export function getStationCoords(slug: string | undefined): { lat: number; lng: number } | null {
+  if (!slug) return null;
+  return COORDS[slug] ?? null;
+}
+
+/** 2点間の概算距離(km)。ハバーサイン。 */
+export function haversineKm(
+  a: { lat: number; lng: number },
+  b: { lat: number; lng: number },
+): number {
+  const R = 6371;
+  const dLat = ((b.lat - a.lat) * Math.PI) / 180;
+  const dLng = ((b.lng - a.lng) * Math.PI) / 180;
+  const la1 = (a.lat * Math.PI) / 180;
+  const la2 = (b.lat * Math.PI) / 180;
+  const h =
+    Math.sin(dLat / 2) ** 2 + Math.cos(la1) * Math.cos(la2) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.min(1, Math.sqrt(h)));
+}
+
+/** アンカー駅とspotの最寄駅との距離(km)。どちらかの座標が無ければ null。 */
+export function stationToStationKm(
+  anchorSlug: string | undefined,
+  spotStationSlug: string | undefined,
+): number | null {
+  const a = getStationCoords(anchorSlug);
+  const b = getStationCoords(spotStationSlug);
+  if (!a || !b) return null;
+  return haversineKm(a, b);
+}
+
 /**
  * 同じエリアの他駅を返す。
  * - 東京: 同じ ward
