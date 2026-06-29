@@ -108,6 +108,21 @@ const nextConfig: NextConfig = {
           { key: 'Cloudflare-CDN-Cache-Control', value: cdnCache },
         ],
       },
+      // /today は searchParams を読むため Next.js 上は常に動的レンダリング扱いになり、
+      // CDNヘッダが無いと毎リクエストが Vercel Function を起動する（Functions監視で
+      // /today が突出して Active CPU を消費していたのはこれが原因）。
+      // ページ本体はクエリ→静的データの純粋計算で fetch/cookies/時刻依存なし＝同一URLは
+      // 常に同一結果なので、他の静的HTMLページと同様に CDN キャッシュ可。クエリ文字列違いは
+      // Cloudflare 側で別キャッシュキーになるため条件別ページも正しく分離される。
+      // 1h edge / 24h SWR はページの revalidate=3600 と整合。
+      {
+        source: '/today',
+        headers: [
+          { key: 'Cache-Control', value: edgeCache },
+          { key: 'CDN-Cache-Control', value: cdnCache },
+          { key: 'Cloudflare-CDN-Cache-Control', value: cdnCache },
+        ],
+      },
     ];
   },
 
