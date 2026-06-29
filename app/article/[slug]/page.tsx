@@ -18,6 +18,7 @@ import { AffiliateLinkGroup } from '@/components/affiliate/AffiliateLinkGroup';
 import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
 import { InlineItemCTA } from '@/components/article/InlineItemCTA';
 import { getAffiliateProducts } from '@/lib/affiliate-products';
+import { pinImageUrl } from '@/lib/pin-images';
 import {
   getRelatedItemsForArticle,
   getRestaurantBridgeOffer,
@@ -163,6 +164,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const ogImages = article.hero
     ? [{ url: article.hero, width: 1600, height: 900 }]
     : [{ url: dynamicOg, width: 1200, height: 630 }];
+  // Pinterest 用の縦長(2:3)Pin画像。横長の「後」に og:image として追加で露出する。
+  // 他SNSは1枚目(横長)を使うので共有カードは不変。Pinterestのピッカーで縦長が選べる。
+  const pinImg = pinImageUrl(slug);
+  const ogImagesWithPin = pinImg
+    ? [...ogImages, { url: pinImg, width: 1000, height: 1500 }]
+    : ogImages;
   return {
     title: article.title,
     description,
@@ -173,7 +180,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'article',
       publishedTime: article.publishedAt,
       modifiedTime: article.updatedAt,
-      images: ogImages,
+      images: ogImagesWithPin,
     },
     twitter: {
       card: 'summary_large_image',
@@ -181,10 +188,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       images: ogImages.map((i) => i.url),
     },
-    // Pinterest Rich Pins 対応：記事毎の hero 画像をピン素材として明示
+    // Pinterest Rich Pins 対応：縦長Pin画像があればそれ、無ければ hero をピン素材に
     other: {
       'pinterest-rich-pin': 'true',
-      'pinterest:image': heroAbsolute,
+      'pinterest:image': pinImg ?? heroAbsolute,
       'pinterest:description': description ?? '',
       'pinterest:title': article.title,
     },
