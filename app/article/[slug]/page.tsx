@@ -18,7 +18,7 @@ import { AffiliateLinkGroup } from '@/components/affiliate/AffiliateLinkGroup';
 import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
 import { InlineItemCTA } from '@/components/article/InlineItemCTA';
 import { getAffiliateProducts } from '@/lib/affiliate-products';
-import { pinImageUrl } from '@/lib/pin-images';
+import { pinImageUrl, pinImagePath } from '@/lib/pin-images';
 import {
   getRelatedItemsForArticle,
   getRestaurantBridgeOffer,
@@ -1056,6 +1056,22 @@ function FileArticleView({ article }: { article: FileArticle }) {
 
           {/* Body */}
           <div className="prose" dangerouslySetInnerHTML={{ __html: article.body }} />
+
+          {/* Pinterest 用の縦長Pin画像。本文内の実 <img> として描画し、
+              「URLから保存」ピッカーで縦長を選べるようにする（og:imageは拾われないため）。 */}
+          {pinImagePath(article.slug) && (
+            <div style={{ margin: '28px 0', textAlign: 'center' }}>
+              <p style={{ fontSize: 13, color: '#999', margin: '0 0 8px' }}>📌 Pinterest で保存</p>
+              <img
+                src={pinImagePath(article.slug) as string}
+                width={1000}
+                height={1500}
+                alt={article.title}
+                loading="lazy"
+                style={{ width: 280, maxWidth: '100%', height: 'auto', borderRadius: 12, display: 'inline-block' }}
+              />
+            </div>
+          )}
 
           {/* YouTube 埋め込み（frontmatter `youtube:` が指定された記事のみ） */}
           {article.youtube && (
