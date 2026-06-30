@@ -49,4 +49,14 @@ export const ARTICLE_REDIRECTS: { from: string; to: string }[] = [
   // 「いつから」完全重複ペアの統合（牛肉・国内旅行）
   { from: 'kodomo-gyu-itsukara', to: 'kodomo-gyuniku-itsukara' },
   { from: 'kodomo-kokunai-ryokou-itsukara', to: 'kodomo-kokunai-ryoko-itsukara' },
+  // 2026-06-30: 統合先(kodzure-koryaku)が在るチェーン周辺フラグメントを noindex から 301 統合へ格上げ。
+  { from: 'kurasushi-baby-chair', to: 'kura-sushi-kodzure-koryaku' },
+  { from: 'hamasushi-stroller', to: 'hama-sushi-kodzure-koryaku' },
+  { from: 'hamasushi-omutsu', to: 'hama-sushi-kodzure-koryaku' },
+  { from: 'marukame-stroller', to: 'marugame-kodzure-koryaku' },
+  { from: 'marukame-omutsu', to: 'marugame-kodzure-koryaku' },
+  { from: 'marukame-baby-chair', to: 'marugame-kodzure-koryaku' },
+  { from: 'dennys-baby-chair', to: 'denny-s-kodzure-koryaku' },
+  { from: 'ikea-rinyushoku', to: 'ikea-restaurant-kodzure-koryaku' },
+  { from: 'steakgusto-stroller', to: 'steak-gusto-kodzure-koryaku' },
 ];
