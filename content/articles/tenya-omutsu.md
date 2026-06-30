@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: tenya-omutsu
 title: てんやでオムツ替えできる？店舗タイプ別の設備事情完全ガイド【2026】
 metaDescription: >-

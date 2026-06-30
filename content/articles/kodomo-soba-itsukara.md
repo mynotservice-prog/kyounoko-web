@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-soba-itsukara
 title: 赤ちゃん・子供にそばはいつから？月齢別の目安・量・重篤アレルギー対策完全ガイド
 metaDescription: >-

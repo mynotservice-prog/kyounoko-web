@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: marukame-omutsu
 title: 丸亀製麺でオムツ替えできる？店舗タイプ別の設備事情完全ガイド【2026】
 metaDescription: >-

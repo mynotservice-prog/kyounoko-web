@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-kokunai-ryoko-itsukara
 title: 子供の国内旅行はいつから？年齢別デビュー目安・準備・注意点完全ガイド
 metaDescription: >-

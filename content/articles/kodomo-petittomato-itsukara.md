@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-petittomato-itsukara
 title: 赤ちゃん・子供にプチトマト（ミニトマト）はいつから？月齢別・誤嚥対策・切り方完全ガイド
 metaDescription: >-

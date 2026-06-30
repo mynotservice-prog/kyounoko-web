@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-suizokukan-itsukara
 title: 子供と水族館はいつから？年齢別の楽しみ方・回り方・持ち物完全ガイド
 metaDescription: >-

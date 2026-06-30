@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kamogawa-sea-world-stroller
 title: 鴨川シーワールド ベビーカー｜貸出・置き場・シャチショー動線【2026年】
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-budou-itsukara
 title: 赤ちゃん・子供にぶどう（巨峰・シャインマスカット）はいつから？月齢別・誤嚥対策完全ガイド
 metaDescription: >-

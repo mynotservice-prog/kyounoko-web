@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-sushi-itsukara
 title: 赤ちゃん・子供にお寿司はいつから？月齢別の目安・ネタ別の判断・回転寿司デビュー完全ガイド
 metaDescription: >-

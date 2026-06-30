@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-game-itsukara
 title: 子供のゲームはいつから？年齢別の時間・選び方・依存対策完全ガイド
 metaDescription: >-

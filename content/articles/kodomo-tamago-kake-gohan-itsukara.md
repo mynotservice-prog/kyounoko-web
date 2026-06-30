@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-tamago-kake-gohan-itsukara
 title: 赤ちゃん・子供に卵かけご飯（TKG）はいつから？月齢別の目安・サルモネラ対策完全ガイド
 metaDescription: >-

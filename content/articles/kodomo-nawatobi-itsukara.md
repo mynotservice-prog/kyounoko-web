@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-nawatobi-itsukara
 title: 子供の縄跳びはいつから？年齢別目安・縄選び・練習法完全ガイド
 metaDescription: >-

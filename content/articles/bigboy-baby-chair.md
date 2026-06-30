@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: bigboy-baby-chair
 title: ビッグボーイのベビーチェアは？全店対応・タイプ・予約時のコツ完全ガイド【2026】
 metaDescription: >-

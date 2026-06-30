@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-jitensha-itsukara
 title: 子供の自転車はいつから？三輪車→補助輪→補助輪なしの目安年齢と練習のコツ
 metaDescription: >-

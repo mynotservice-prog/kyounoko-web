@@ -20,6 +20,7 @@ import { getStationWithChains } from '@/lib/station-restaurants';
 import { getIndieRestaurantsByStation } from '@/lib/indie-restaurants';
 import { STATION_CONDITIONS, hasMatchingItems, getConditionKind, filterChainsByCondition, filterIndiesByCondition } from '@/lib/station-conditions';
 import { getSpotsForStation, hasMatchingSpots, filterSpotsByCondition, getSpotConditionCanonicalSlug } from '@/lib/station-spots';
+import { isStationConditionIndexable } from '@/lib/station-cond-index';
 import { FEATURE_PAGES } from '@/lib/feature-pages';
 import { AFFILIATE_TARGET_SLUGS } from '@/lib/affiliate-products';
 
@@ -256,11 +257,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.55,
   }));
 
-  // 駅×条件ロングテールページ（restaurant 系 + spot 系）
-  // 2026-05 再開: matchedCount >= 3 件の充実ページのみsitemapに含める。
-  // ページ側 generateMetadata でも同じ閾値で noindex 判定しているため整合性が取れる。
-  // これでプログラマティックSEO 数千ページが検索エンジンに公開される。
-  const STATION_CONDITION_MIN_MATCHES = 3;
+  // 駅×条件ロングテールページ（restaurant 系のみ。spot 系は下で除外）
+  // index/noindex 判定は page.tsx と共通の二段ゲート（lib/station-cond-index.ts）を使う。
+  // 需要実績(GSC90日) or matched>=閾値 のページのみ sitemap に載せ、ページ側 noindex と整合させる。
   const stationConditionPages: MetadataRoute.Sitemap = [];
   // Tokyo: restaurant + spot
   for (const s of TOKYO_STATIONS) {
@@ -284,7 +283,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         // 同区重複は代表へ canonical 集約しているので、非代表(重複)はsitemapに載せない。
         if (getSpotConditionCanonicalSlug(s.slug, cond.slug) !== s.slug) continue;
       }
-      if (matchedCount < STATION_CONDITION_MIN_MATCHES) continue;
+      if (!isStationConditionIndexable(s.slug, cond.slug, matchedCount, k, s.scale)) continue;
       stationConditionPages.push({
         url: `${BASE}/station/${s.slug}/${cond.slug}`,
         lastModified: new Date(),

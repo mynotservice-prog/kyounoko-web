@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-otetsudai-itsukara
 title: 子供のお手伝いはいつから？年齢別のできること・教え方完全ガイド【2〜6歳】
 metaDescription: >-
