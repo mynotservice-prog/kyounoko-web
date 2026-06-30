@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: akachan-omosharya-itsukara
 title: 赤ちゃんにおもちゃはいつから？月齢別のおすすめ・選び方完全ガイド【0歳〜1歳】
 metaDescription: >-

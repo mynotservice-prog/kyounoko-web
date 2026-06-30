@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-yama-itsukara
 title: 子供の山登りはいつから？年齢別ハイキング目安・装備・安全対策完全ガイド
 metaDescription: >-

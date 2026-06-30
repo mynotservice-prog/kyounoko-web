@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-pasta-itsukara
 title: 赤ちゃん・子供にパスタはいつから？月齢別の目安・量・ソース別の選び方完全ガイド
 metaDescription: >-

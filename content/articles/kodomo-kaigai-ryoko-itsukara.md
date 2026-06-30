@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-kaigai-ryoko-itsukara
 title: 子供の海外旅行はいつから？年齢別目安・パスポート・予防接種完全ガイド
 metaDescription: >-

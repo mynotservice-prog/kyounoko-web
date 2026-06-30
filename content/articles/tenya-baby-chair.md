@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: tenya-baby-chair
 title: てんやのベビーチェア事情｜全店ある？利用のコツ完全ガイド【2026】
 metaDescription: >-

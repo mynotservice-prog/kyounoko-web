@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: shinagawa-aquarium-stroller
 title: しながわ水族館 ベビーカー｜貸出無料・動線・ショー席ガイド【2026年】
 metaDescription: >-

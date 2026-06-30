@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: legoland-stroller
 title: レゴランド・ジャパン ベビーカー｜貸出・置き場・動線完全ガイド【2026年】
 metaDescription: >-

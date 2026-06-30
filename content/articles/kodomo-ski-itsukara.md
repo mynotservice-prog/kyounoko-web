@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-ski-itsukara
 title: 子供のスキーはいつから？年齢別デビュー目安・レッスン・必須装備完全ガイド
 metaDescription: >-

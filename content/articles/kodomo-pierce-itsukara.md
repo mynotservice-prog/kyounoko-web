@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-pierce-itsukara
 title: 子供のピアスはいつから？年齢別目安・病院選び・ケア完全ガイド
 metaDescription: >-

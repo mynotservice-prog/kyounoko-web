@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-biyouin-itsukara
 title: 子供の美容院デビューはいつから？年齢別目安・選び方・乗り切り方完全ガイド
 metaDescription: >-

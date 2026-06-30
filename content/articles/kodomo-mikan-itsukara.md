@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-mikan-itsukara
 title: 赤ちゃん・子供にみかんはいつから？月齢別の目安・薄皮・量・カロテン血症完全ガイド
 metaDescription: >-

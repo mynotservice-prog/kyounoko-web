@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-juice-itsukara
 title: 赤ちゃん・子供にジュースはいつから？月齢別の目安・量・選び方完全ガイド
 metaDescription: >-

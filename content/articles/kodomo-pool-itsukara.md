@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-pool-itsukara
 title: 赤ちゃん・子供のプールはいつから？月齢別の目安・安全対策完全ガイド
 metaDescription: >-

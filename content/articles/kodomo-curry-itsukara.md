@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-curry-itsukara
 title: 赤ちゃん・子供にカレーはいつから？月齢別の目安・甘口の選び方・市販ルー完全ガイド
 metaDescription: >-

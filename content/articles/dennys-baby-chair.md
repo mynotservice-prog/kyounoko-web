@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: dennys-baby-chair
 title: 【2026年最新】デニーズのベビーチェア｜種類・対象月齢・確保しやすさを店舗別に解説
 metaDescription: >-

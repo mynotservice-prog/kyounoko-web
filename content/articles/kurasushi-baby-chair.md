@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kurasushi-baby-chair
 title: くら寿司のベビーチェア｜種類・確保のコツ・対応店舗完全ガイド【2026】
 metaDescription: >-

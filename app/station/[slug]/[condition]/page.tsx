@@ -35,6 +35,7 @@ import {
   getSpotConditionCanonicalSlug,
 } from '@/lib/station-spots';
 import { findStationBySlug } from '@/lib/all-stations';
+import { isStationConditionIndexable } from '@/lib/station-cond-index';
 import { StationSpotConditionView } from '@/components/station/StationSpotConditionView';
 import { AffiliateLinkGroup } from '@/components/affiliate/AffiliateLinkGroup';
 import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
@@ -113,9 +114,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? `${stationName}駅周辺で${cond.metaPart}を厳選。${cond.description}${wardName}の${cond.label}を探すならまずここから。`
       : `${stationName}駅周辺で${cond.metaPart}の子連れランチ・カフェを厳選。${cond.description}${wardName}で${cond.label}の選び方に迷ったらまずここから。`;
 
-  // 2026-05 再開: AdSense承認済みのため、駅×条件ページを段階的にindex化。
-  // 「matchedCount >= 3 件」の充実ページのみ index、薄ページは noindex を維持。
-  // これでプログラマティックSEOの全面再開（〜1万ページ目標）を実現する。
+  // index/noindex は二段ゲート（lib/station-cond-index.ts）で判定。sitemap.ts と共通。
+  // 需要実績(GSC90日) or matched件数>=閾値 のみ index。薄い死蔵 long-tail は noindex。
   let matchedCount = 0;
   if (kind === 'restaurant' && station) {
     const stationData = getStationWithChains(station.slug);
@@ -132,9 +132,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const spotsMatched = filterSpotsByCondition(spotsAll, condition as StationConditionSlug);
     matchedCount = spotsMatched.length;
   }
-  // 剪定(2026-06): スポット系条件(asobiba/kouen/ame-asobiba)は90日間ほぼ表示ゼロ・
-  // 外食でもないため、matched数によらず noindex。外食(restaurant)系のみindex対象に残す。
-  const shouldNoindex = matchedCount < 3 || kind === 'spot';
+  // 剪定(2026-06): スポット系は常にnoindex / 外食系は需要実績 or (主要駅×matched>=閾値)のみindex。
+  const shouldNoindex = !isStationConditionIndexable(
+    slug,
+    condition,
+    matchedCount,
+    kind,
+    station?.scale,
+  );
 
   // スポット系条件は区市町村単位のデータで同区の駅が重複しがちなため、
   // 同区×同条件の重複グループは代表駅へ canonical を集約する（重複コンテンツ対策）。

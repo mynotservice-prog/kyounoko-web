@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-umi-itsukara
 title: 子供の海はいつから？年齢別デビュー目安・持ち物・安全対策完全ガイド
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: disney-baby-chair
 title: ディズニーランドのベビーチェア｜全レストラン設置状況・予約・コツ完全ガイド【2026年版】
 metaDescription: >-

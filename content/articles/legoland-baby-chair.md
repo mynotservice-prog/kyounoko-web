@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: legoland-baby-chair
 title: レゴランド・ジャパン ベビーチェア｜レストラン別設置状況完全ガイド【2026年】
 metaDescription: >-

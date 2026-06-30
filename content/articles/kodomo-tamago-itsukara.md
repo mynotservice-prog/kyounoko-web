@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-tamago-itsukara
 title: 赤ちゃん・子供に卵はいつから？卵黄・卵白・全卵の進め方完全ガイド
 metaDescription: >-

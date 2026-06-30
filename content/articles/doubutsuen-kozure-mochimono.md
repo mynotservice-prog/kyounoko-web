@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: doubutsuen-kozure-mochimono
 title: 【2026年】動物園 子連れの持ち物完全ガイド｜0-6歳ベテランママの実際リスト
 metaDescription: >-

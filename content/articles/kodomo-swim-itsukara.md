@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-swim-itsukara
 title: 子供のスイミングはいつから？ベビースイミング・幼児クラスの始め方完全ガイド
 metaDescription: >-

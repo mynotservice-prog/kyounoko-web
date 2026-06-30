@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-kendama-itsukara
 title: 子供のけん玉はいつから？年齢別目安・選び方・技の段階完全ガイド
 metaDescription: >-

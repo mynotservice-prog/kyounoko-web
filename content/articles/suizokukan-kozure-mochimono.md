@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: suizokukan-kozure-mochimono
 title: 【2026年】水族館 子連れの持ち物完全ガイド｜0-6歳ベテランママの実用リスト
 metaDescription: 水族館に子連れで行くとき/対応するときの必須持ち物を年齢別に整理。実際に役立った持ち物と楽天/Amazonリンクつき。

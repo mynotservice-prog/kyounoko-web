@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-karaimono-itsukara
 title: 赤ちゃん・子供に辛い物はいつから？月齢別の目安・カプサイシン・胃腸への影響完全ガイド
 metaDescription: >-

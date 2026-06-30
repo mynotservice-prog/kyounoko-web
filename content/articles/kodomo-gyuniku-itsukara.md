@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-gyuniku-itsukara
 title: 赤ちゃん・子供に牛肉はいつから？月齢別の目安・部位・量・鉄分活用完全ガイド
 metaDescription: >-

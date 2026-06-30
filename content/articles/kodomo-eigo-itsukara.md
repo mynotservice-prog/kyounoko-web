@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-eigo-itsukara
 title: 子供の英語学習はいつから？0歳・3歳・小学校からの始め方とおすすめ方法
 metaDescription: >-

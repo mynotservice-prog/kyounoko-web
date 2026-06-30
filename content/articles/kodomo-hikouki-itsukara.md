@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-hikouki-itsukara
 title: 子供の飛行機はいつから？年齢別目安・機内対策・座席選び完全ガイド
 metaDescription: >-

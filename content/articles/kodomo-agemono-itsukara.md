@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-agemono-itsukara
 title: 赤ちゃん・子供に揚げ物はいつから？月齢別の目安・脂質対策・種類別の判断完全ガイド
 metaDescription: >-

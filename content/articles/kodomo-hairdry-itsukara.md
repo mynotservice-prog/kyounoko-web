@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-hairdry-itsukara
 title: 子供がドライヤーを使えるのはいつから？年齢別の安全な使い方と火傷対策
 metaDescription: >-

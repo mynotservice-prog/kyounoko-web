@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: steakgusto-stroller
 title: ステーキガストはベビーカーで入れる？席まで通せる店舗・段差・予約のコツ【2026】
 metaDescription: >-
