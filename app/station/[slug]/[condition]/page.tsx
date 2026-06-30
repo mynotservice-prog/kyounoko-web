@@ -24,14 +24,12 @@ import {
   getConditionBySlug,
   filterChainsByCondition,
   filterIndiesByCondition,
-  hasMatchingItems,
   getConditionKind,
   type StationConditionSlug,
 } from '@/lib/station-conditions';
 import {
   getSpotsForStation,
   filterSpotsByCondition,
-  hasMatchingSpots,
   getSpotConditionCanonicalSlug,
 } from '@/lib/station-spots';
 import { findStationBySlug } from '@/lib/all-stations';
@@ -46,43 +44,42 @@ import { buildRestaurantFaq, faqToJsonLd } from '@/lib/station-faq';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400; // 24h
+// 事前生成しなかった combo（noindex の long-tail）は初回アクセス時にオンデマンド生成し、
+// ISR(revalidate=86400) + CDN(Cloudflare) でキャッシュする。実行時コストはほぼゼロ。
+export const dynamicParams = true;
 
 type Props = {
   params: Promise<{ slug: string; condition: string }>;
 };
 
 /**
- * 全駅 × N条件 のうち、該当アイテム（店舗 or スポット）が1件以上ある組み合わせを事前生成。
- * - restaurant 系: チェーン店・個人店をフィルタ（東京駅のみ）
- * - spot 系: SPOTS（駅周辺 + 地域フォールバック）をフィルタ（全駅対象）
+ * ビルドCPU削減（2026-06-30）: 事前生成は「index 対象の組み合わせ」だけに限定する。
+ *
+ * 旧実装は全駅 × N条件のうちアイテムが1件以上ある combo を全て SSG していたが、
+ * その大半は二段ゲート（lib/station-cond-index.ts）で noindex になる死蔵 long-tail で、
+ * それを毎ビルド焼くことがビルドCPU（請求の主因）を押し上げていた。
+ *
+ * 判定は generateMetadata / sitemap.ts と同じ isStationConditionIndexable に委譲して
+ * ドリフトを防ぐ。spot 系は同関数が常に noindex を返すため事前生成対象は restaurant 系のみ。
+ * 事前生成から外れた combo は dynamicParams=true により初回アクセス時にオンデマンド生成され、
+ * ISR + CDN にキャッシュされる（noindex なのでクロール頻度も低く実行時コストはほぼゼロ）。
  */
 export async function generateStaticParams() {
   const params: Array<{ slug: string; condition: string }> = [];
-  // 1) Tokyo: restaurant + spot
+  // restaurant 系のデータ（チェーン店・個人店）は Tokyo 駅のみ存在する。
+  // spot 系は isStationConditionIndexable が常に false のため、ここでは生成しない。
   for (const station of TOKYO_STATIONS) {
     const data = getStationWithChains(station.slug);
     const chains = data?.chains ?? [];
     const indies = getIndieRestaurantsByStation(station.slug);
-    const { all: spotsAll } = getSpotsForStation(station.slug);
     for (const cond of STATION_CONDITIONS) {
       const kind = getConditionKind(cond.slug);
-      const ok =
-        kind === 'restaurant'
-          ? hasMatchingItems(chains, indies, cond.slug)
-          : hasMatchingSpots(spotsAll, cond.slug);
-      if (ok) {
-        params.push({ slug: station.slug, condition: cond.slug });
-      }
-    }
-  }
-  // 2) 非Tokyo（Kanagawa/Kansai/Saichi）: spot 系のみ
-  const { getAllStations } = await import('@/lib/all-stations');
-  for (const station of getAllStations()) {
-    if (station.region === 'tokyo') continue;
-    const { all: spotsAll } = getSpotsForStation(station.slug);
-    for (const cond of STATION_CONDITIONS) {
-      if (getConditionKind(cond.slug) !== 'spot') continue;
-      if (hasMatchingSpots(spotsAll, cond.slug)) {
+      if (kind !== 'restaurant') continue;
+      // generateMetadata の noindex 判定と同一の matched 件数（条件フィルタ後）。
+      const matchedCount =
+        filterChainsByCondition(chains, cond.slug).length +
+        filterIndiesByCondition(indies, cond.slug).length;
+      if (isStationConditionIndexable(station.slug, cond.slug, matchedCount, kind, station.scale)) {
         params.push({ slug: station.slug, condition: cond.slug });
       }
     }
