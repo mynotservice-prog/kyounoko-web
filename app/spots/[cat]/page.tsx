@@ -7,18 +7,19 @@ import { V2Icon, type V2IconName, V2_ACCENT } from '@/components/v2/V2Icon';
 import { spotToV2 } from '@/lib/v2-adapters';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { SpotListReveal } from '@/components/spots/SpotListReveal';
-import {
-  BROWSE_CATEGORIES,
-  getBrowseCategory,
-  spotsByCategory,
-} from '@/lib/spot-browse';
+import { SpotFilterBar } from '@/components/spots/SpotFilterBar';
+import { BROWSE_CATEGORIES, getBrowseCategory, spotsByCategory } from '@/lib/spot-browse';
+import { parseFilters, hasActiveFilters, matchesFilters, sortSpots, toFilterable } from '@/lib/spot-filter';
 
 export const revalidate = 3600;
 
 /** 初期表示件数（残りは「もっと見る」で開く。全件は HTML に含まれる）。 */
 const INITIAL = 24;
 
-type Props = { params: Promise<{ cat: string }> };
+type Props = {
+  params: Promise<{ cat: string }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+};
 
 // 生成対象は BROWSE_CATEGORIES のみ。restaurant 等はここでは 404（P1-1cで別扱い）。
 export function generateStaticParams() {
@@ -26,16 +27,20 @@ export function generateStaticParams() {
 }
 export const dynamicParams = false;
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
   const { cat } = await params;
   const c = getBrowseCategory(cat);
   if (!c) return {};
+  const filters = parseFilters(await searchParams);
+  const filtered = hasActiveFilters(filters);
   const count = spotsByCategory(c.id).length;
   const title = `${c.label}の子連れスポット一覧（全${count}件）｜きょうのこ`;
   const description = `0〜6歳の子連れで楽しめる${c.label}のスポットを全${count}件掲載。最寄り駅・設備・年齢の目安つきで、今日のおでかけ先を探せます。`;
   return {
     title,
     description,
+    // SEO §2-2: フィルタ/並び替えのクエリ変種は noindex,follow ＋ canonical→クリーンURL。
+    robots: filtered ? { index: false, follow: true } : undefined,
     alternates: { canonical: `/spots/${c.id}` },
     openGraph: {
       title,
@@ -46,13 +51,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function SpotCategoryPage({ params }: Props) {
+export default async function SpotCategoryPage({ params, searchParams }: Props) {
   const { cat } = await params;
   const c = getBrowseCategory(cat);
   if (!c) notFound();
 
-  const list = spotsByCategory(c.id);
+  const filters = parseFilters(await searchParams);
   const accent = V2_ACCENT[c.accent as keyof typeof V2_ACCENT] ?? V2_ACCENT.purple;
+
+  // カテゴリ全件（人気順）→ 絞り込み＆並び替え。件数ライブ更新用に filterable も作る。
+  const catSpots = spotsByCategory(c.id);
+  const fmap = new Map(catSpots.map((x) => [x.slug, x]));
+  const filterable = catSpots.map(toFilterable);
+  const matchedF = sortSpots(filterable.filter((s) => matchesFilters(s, filters)), filters.sort);
+  const list = matchedF.map((s) => fmap.get(s.slug)!);
+
   const head = list.slice(0, INITIAL);
   const rest = list.slice(INITIAL);
 
@@ -65,35 +78,53 @@ export default async function SpotCategoryPage({ params }: Props) {
           </Link>
           <span style={{ color: 'var(--v2-ink-mute)' }}> ／ {c.label}</span>
         </nav>
-        <h1
-          className="v2-page-h1"
-          style={{ display: 'flex', alignItems: 'center', gap: 8 }}
-        >
-          <span
-            className="v2-quick-ico"
-            style={{ background: accent.bg, width: 32, height: 32 }}
-          >
+        <h1 className="v2-page-h1" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <span className="v2-quick-ico" style={{ background: accent.bg, width: 32, height: 32 }}>
             <V2Icon name={c.icon as V2IconName} size={20} color={accent.c} />
           </span>
           {c.label}のスポット
         </h1>
         <p className="v2-page-lead">
-          子連れで楽しめる{c.label}を全{list.length}件掲載中。タップで詳細・最寄り駅・設備が見られます。
+          {catSpots.length}件中 <strong>{list.length}件</strong> を表示中。タップで詳細・最寄り駅・設備が見られます。
         </p>
       </div>
 
+      {/* 絞り込み・並び替え（P0-3b/c） */}
+      <div className="v2-section" style={{ marginTop: 4 }}>
+        <SpotFilterBar spots={filterable} initial={filters} basePath={`/spots/${c.id}`} />
+      </div>
+
       {list.length === 0 ? (
-        <div className="v2-section" style={{ marginTop: 24, textAlign: 'center' }}>
-          <p style={{ fontSize: 13, color: 'var(--v2-ink-mute)' }}>
-            このカテゴリのスポットは準備中です。
+        // 0件回避：空リストを出さず、条件緩和導線を出す（画面仕様 §3-6）
+        <div className="v2-section" style={{ marginTop: 20, textAlign: 'center' }}>
+          <p style={{ fontSize: 14, fontWeight: 700, marginBottom: 6 }}>
+            条件に合うスポットが見つかりませんでした
           </p>
-          <Link href="/spots" className="v2-sec-more" style={{ marginTop: 8, display: 'inline-block' }}>
-            ほかのカテゴリを見る <V2Icon name="arrow-right" size={14} />
+          <p style={{ fontSize: 13, color: 'var(--v2-ink-mute)', marginBottom: 12, lineHeight: 1.7 }}>
+            設備や料金の条件を1つ外すと見つかりやすくなります。
+          </p>
+          <Link
+            href={`/spots/${c.id}`}
+            className="v2-more-btn"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 6,
+              padding: '10px 20px',
+              borderRadius: 999,
+              border: '1px solid var(--v2-line)',
+              background: 'var(--v2-card, #fff)',
+              color: 'var(--v2-ink)',
+              fontSize: 14,
+              fontWeight: 700,
+            }}
+          >
+            条件をリセットして全{catSpots.length}件を見る
           </Link>
         </div>
       ) : (
         <>
-          <div className="v2-vlist">
+          <div className="v2-vlist" style={{ marginTop: 8 }}>
             {head.map((x, i) => (
               <V2SpotRow key={x.slug} spot={spotToV2(x.spot, i)} href={`/spot/${x.slug}`} />
             ))}
@@ -102,11 +133,7 @@ export default async function SpotCategoryPage({ params }: Props) {
           {/* 残りは常に HTML に含めつつ、UIは「もっと見る」で開く（クロール到達を担保） */}
           <SpotListReveal remaining={rest.length}>
             {rest.map((x, i) => (
-              <V2SpotRow
-                key={x.slug}
-                spot={spotToV2(x.spot, i + INITIAL)}
-                href={`/spot/${x.slug}`}
-              />
+              <V2SpotRow key={x.slug} spot={spotToV2(x.spot, i + INITIAL)} href={`/spot/${x.slug}`} />
             ))}
           </SpotListReveal>
 
@@ -125,12 +152,7 @@ export default async function SpotCategoryPage({ params }: Props) {
                   key={o.id}
                   href={`/spots/${o.id}`}
                   className="v2-sec-more"
-                  style={{
-                    padding: '6px 12px',
-                    borderRadius: 999,
-                    border: '1px solid var(--v2-line)',
-                    fontSize: 13,
-                  }}
+                  style={{ padding: '6px 12px', borderRadius: 999, border: '1px solid var(--v2-line)', fontSize: 13 }}
                 >
                   {o.label}
                 </Link>
