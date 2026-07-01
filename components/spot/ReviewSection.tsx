@@ -36,7 +36,8 @@ export async function ReviewSection({ spotId, spotName }: { spotId: string; spot
           </p>
         )}
 
-        <ReviewForm spotId={spotId} spotName={spotName} />
+        {/* siteKeyはサーバー(実行時)で解決してpropで渡す＝ビルド埋め込み不要（env変更が即反映） */}
+        <ReviewForm spotId={spotId} spotName={spotName} siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY} />
 
         {reviews.length > 0 && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 14 }}>
