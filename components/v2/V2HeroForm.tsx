@@ -98,8 +98,16 @@ export function V2HeroForm({
   const filtered = React.useMemo(() => {
     const t = q.trim().toLowerCase();
     if (!t) return [];
+    // 駅名だけでなく、区・市・府県などの地名（regionLabel/area）でもヒットさせる。
     return stations
-      .filter((s) => s.name.includes(t) || s.kana.includes(t) || s.slug.includes(t))
+      .filter(
+        (s) =>
+          s.name.includes(t) ||
+          s.kana.includes(t) ||
+          s.slug.includes(t) ||
+          s.regionLabel.includes(t) ||
+          (s.area?.includes(t) ?? false),
+      )
       .slice(0, 12);
   }, [q, stations]);
 
@@ -202,7 +210,7 @@ export function V2HeroForm({
               inputMode="search"
               value={q}
               onChange={(e) => setQ(e.target.value)}
-              placeholder="🔍 駅名で検索（例：池袋）"
+              placeholder="🔍 駅名・地名で検索（例：池袋、横浜、梅田）"
               autoFocus
               style={{
                 width: '100%',
@@ -229,6 +237,9 @@ export function V2HeroForm({
                       style={stationOptStyle}
                     >
                       {s.name}駅
+                      <span style={{ marginLeft: 6, fontSize: 12, fontWeight: 500, color: 'var(--v2-ink-mute, #8E867A)' }}>
+                        {s.area ? `${s.regionLabel}・${s.area}` : s.regionLabel}
+                      </span>
                     </button>
                   ))
                 )}
