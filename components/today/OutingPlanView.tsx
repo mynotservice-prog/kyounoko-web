@@ -361,6 +361,50 @@ export function OutingPlanView({
         })}
       </div>
 
+      {/* 1日の動線マップ（P1-6）。3地点＋起点駅を結ぶGoogleマップ経路（APIキー不要）。 */}
+      {(() => {
+        const points = [
+          anchor.stationName ? `${anchor.stationName}駅` : anchor.regionLabel,
+          ...slots.map((s) => s.spot?.name).filter((n): n is string => !!n),
+        ];
+        if (points.length < 2) return null;
+        const origin = encodeURIComponent(points[0]);
+        const destination = encodeURIComponent(points[points.length - 1]);
+        const waypoints = points.slice(1, -1).map(encodeURIComponent).join('|');
+        const url =
+          `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}` +
+          (waypoints ? `&waypoints=${waypoints}` : '') +
+          `&travelmode=walking`;
+        return (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 10,
+              marginTop: 16,
+              padding: '14px 16px',
+              borderRadius: 14,
+              border: '1px solid var(--v2-line, #ead9c2)',
+              background: 'var(--v2-c-rain-bg, #eef4fb)',
+              textDecoration: 'none',
+              color: 'var(--ink, #2a2018)',
+            }}
+          >
+            <span style={{ fontSize: 20 }}>🗺</span>
+            <span style={{ flex: 1 }}>
+              <span style={{ display: 'block', fontSize: 14, fontWeight: 800 }}>1日の動線を地図で見る</span>
+              <span style={{ display: 'block', fontSize: 11.5, color: 'var(--ink-sub)' }}>
+                {points.join(' → ')}
+              </span>
+            </span>
+            <span style={{ fontSize: 18, color: 'var(--clay-deep)' }}>→</span>
+          </a>
+        );
+      })()}
+
       {/* お昼の予約CTA（env未設定なら非表示） */}
       {reservationOffer && (
         <div style={{ marginTop: 14 }}>
