@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { listPendingReviews, moderateReview } from '@/lib/reviews';
+import { listPendingReviews, moderateReview, promoteReviewPhoto } from '@/lib/reviews';
 
 /**
  * 口コミモデレーション API（P1-8・画面F）。
@@ -53,8 +53,18 @@ export async function POST(req: NextRequest) {
   }
   const spotId = typeof body.spotId === 'string' ? body.spotId : '';
   const id = typeof body.id === 'string' ? body.id : '';
+  if (!spotId || !id) return NextResponse.json({ ok: false, error: 'invalid params' }, { status: 400 });
+
+  // 代表画像への昇格（P1-8b）
+  if (body.action === 'promote') {
+    const url = typeof body.url === 'string' ? body.url : '';
+    if (!url) return NextResponse.json({ ok: false, error: 'url required' }, { status: 400 });
+    const ok = await promoteReviewPhoto(spotId, id, url);
+    return NextResponse.json({ ok });
+  }
+
   const action = body.action === 'approve' || body.action === 'reject' ? body.action : null;
-  if (!spotId || !id || !action) return NextResponse.json({ ok: false, error: 'invalid params' }, { status: 400 });
+  if (!action) return NextResponse.json({ ok: false, error: 'invalid action' }, { status: 400 });
   const ok = await moderateReview(spotId, id, action);
   return NextResponse.json({ ok });
 }

@@ -29,7 +29,7 @@ import { V2RememberSpot } from '@/components/v2/V2RememberSpot';
 import { VisitedReport } from '@/components/spot/VisitedReport';
 import { SpotMap } from '@/components/spot/SpotMap';
 import { ReviewSection } from '@/components/spot/ReviewSection';
-import { getRating } from '@/lib/reviews';
+import { getRating, getUgcImage } from '@/lib/reviews';
 import { getPublishedSpotReports } from '@/lib/spot-reports';
 import { V2SaveButton, V2SdHeroFav } from '@/components/v2/V2SaveButton';
 import { getRecommendedItems } from '@/lib/recommended-items';
@@ -201,6 +201,11 @@ export default async function SpotPage({ params }: Props) {
     };
   }
 
+  // P1-8b: 承認済みUGC写真が代表画像に昇格されていれば、ヒーローに使う（imageKind=UGC）。
+  const ugc = await getUgcImage(slug);
+  const heroImg = ugc?.url ?? v2Spot.img;
+  const heroNote = ugc ? { image: false, credit: ugc.credit } : heroImageNote;
+
   // P1-4: おすすめアイテムを楽天商品API（RAKUTEN_APP_ID）で実商品に解決。
   // env未設定なら product=null で従来の検索リンクにフォールバック（もしも変換は共通適用）。
   const recommendedItems = getRecommendedItems(spot.category, spot.place, spot.ages, 6);
@@ -225,18 +230,18 @@ export default async function SpotPage({ params }: Props) {
         <V2RememberSpot
           slug={slug}
           name={spot.name}
-          img={v2Spot.img}
+          img={heroImg}
           area={spot.ward || spot.city}
         />
 
         {/* オーバーレイヒーロー（2回目デザイン .v2-sd-hero） */}
         <div className="v2-sd-hero">
           <div className="v2-sd-hero-img">
-            <V2Img src={v2Spot.img} seed={slug} alt={spot.name} />
+            <V2Img src={heroImg} seed={slug} alt={spot.name} />
             <div className="v2-sd-hero-grad"></div>
 
-            {/* §5-1: 画像の種別/出典（実在施設のAI偽写真の誤認を防ぐ） */}
-            {(heroImageNote.image || heroImageNote.credit) && (
+            {/* §5-1: 画像の種別/出典（実在施設のAI偽写真の誤認を防ぐ / UGC昇格時はクレジット） */}
+            {(heroNote.image || heroNote.credit) && (
               <span
                 style={{
                   position: 'absolute',
@@ -252,7 +257,7 @@ export default async function SpotPage({ params }: Props) {
                   zIndex: 2,
                 }}
               >
-                {heroImageNote.image ? '※イメージ' : heroImageNote.credit}
+                {heroNote.image ? '※イメージ' : heroNote.credit}
               </span>
             )}
 

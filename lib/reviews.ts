@@ -16,6 +16,12 @@ import { kvGet, kvSet, isKvConfigured } from './kv-store';
 export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 export type ChildAgeBand = '0-1' | '2-3' | '4-6';
 
+/** 投稿写真（P1-8b）。EXIF位置情報はアップ時にsharpで除去済み。 */
+export type ReviewPhoto = {
+  url: string;
+  promotedToSpotImage?: boolean;
+};
+
 export type Review = {
   id: string;
   spotId: string;
@@ -24,6 +30,8 @@ export type Review = {
   isAnonymous: boolean;
   childAgeBand?: ChildAgeBand;
   body: string;
+  photos?: ReviewPhoto[];
+  licenseAgreed?: boolean;
   status: ReviewStatus;
   createdAt: number;
   reviewedAt?: number;
@@ -31,6 +39,8 @@ export type Review = {
 
 export type PendingRef = { spotId: string; id: string; createdAt: number };
 export type Rating = { avg: number; count: number };
+/** 代表画像に昇格したUGC写真（スポット詳細のヒーローに使う）。 */
+export type UgcImage = { url: string; credit: string };
 
 export type ReviewInput = {
   spotId: string;
@@ -39,6 +49,8 @@ export type ReviewInput = {
   isAnonymous: boolean;
   childAgeBand?: ChildAgeBand;
   body: string;
+  photos?: string[];
+  licenseAgreed?: boolean;
 };
 
 const NG_WORDS = [
@@ -83,7 +95,19 @@ export function validateReview(input: Partial<ReviewInput>): { ok: true; value: 
   const spotId = (input.spotId ?? '').trim();
   if (!spotId) return { ok: false, error: 'スポットが不正です' };
 
-  return { ok: true, value: { spotId, rating, nickname, isAnonymous, childAgeBand, body } };
+  // 写真（P1-8b）: 最大3枚、Blob配下のURLのみ許可。添付時はライセンス同意必須。
+  const rawPhotos = Array.isArray(input.photos) ? input.photos : [];
+  const photos = rawPhotos
+    .filter((u): u is string => typeof u === 'string' && /^https:\/\/[^ ]+\.(jpe?g|png|webp)(\?|$)/i.test(u))
+    .slice(0, 3);
+  if (photos.length > 0 && !input.licenseAgreed) {
+    return { ok: false, error: '写真を添付する場合は利用規約への同意が必要です' };
+  }
+
+  return {
+    ok: true,
+    value: { spotId, rating, nickname, isAnonymous, childAgeBand, body, photos, licenseAgreed: !!input.licenseAgreed },
+  };
 }
 
 // ---------- レート制限（同IP: 1分1件 / 1日5件） ----------
@@ -124,7 +148,14 @@ export async function verifyTurnstile(token: string | undefined, ip?: string): P
 export async function submitReview(input: ReviewInput): Promise<Review> {
   const review: Review = {
     id: newId(),
-    ...input,
+    spotId: input.spotId,
+    rating: input.rating,
+    nickname: input.nickname,
+    isAnonymous: input.isAnonymous,
+    childAgeBand: input.childAgeBand,
+    body: input.body,
+    photos: (input.photos ?? []).map((url) => ({ url })),
+    licenseAgreed: !!input.licenseAgreed,
     status: 'pending',
     createdAt: Date.now(),
   };
@@ -193,6 +224,57 @@ export async function moderateReview(spotId: string, id: string, action: 'approv
   await kvSet('reviews:pending', pending.filter((p) => !(p.spotId === spotId && p.id === id)));
 
   // ★平均を再計算
+  await computeRating(spotId);
+  return true;
+}
+
+// ---------- UGC写真 → スポット代表画像への昇格（P1-8b・§5-1） ----------
+/**
+ * 承認済みレビューの写真を、そのスポットの代表画像に昇格する。
+ * 「公式」表記は禁止。クレジットは「みんなの写真 / by ニックネーム」。
+ * スポット詳細は getUgcImage を読んでヒーローに使う（imageKind=UGC）。
+ */
+export async function promoteReviewPhoto(spotId: string, reviewId: string, url: string): Promise<boolean> {
+  const listKey = `reviews:${spotId}`;
+  const list = (await kvGet<Review[]>(listKey)) ?? [];
+  const r = list.find((x) => x.id === reviewId);
+  if (!r) return false;
+  const photo = r.photos?.find((p) => p.url === url);
+  if (!photo) return false;
+  // 昇格は承認を兼ねる（未承認なら承認扱いにして pending から外す）。
+  if (r.status !== 'approved') {
+    r.status = 'approved';
+    r.reviewedAt = Date.now();
+    const pending = (await kvGet<PendingRef[]>('reviews:pending')) ?? [];
+    await kvSet('reviews:pending', pending.filter((p) => !(p.spotId === spotId && p.id === reviewId)));
+    await computeRating(spotId);
+  }
+  photo.promotedToSpotImage = true;
+  await kvSet(listKey, list);
+
+  const credit = `みんなの写真 / by ${r.nickname}`;
+  await kvSet(`ugcImage:${spotId}`, { url, credit } satisfies UgcImage);
+  return true;
+}
+
+export async function getUgcImage(spotId: string): Promise<UgcImage | null> {
+  if (!isKvConfigured()) return null;
+  return (await kvGet<UgcImage>(`ugcImage:${spotId}`)) ?? null;
+}
+
+/** 通報（P1-8）。承認済みでも通報が付いたら再モデレーションのため pending に戻す。 */
+export async function reportReview(spotId: string, id: string): Promise<boolean> {
+  const listKey = `reviews:${spotId}`;
+  const list = (await kvGet<Review[]>(listKey)) ?? [];
+  const r = list.find((x) => x.id === id);
+  if (!r) return false;
+  r.status = 'pending';
+  await kvSet(listKey, list);
+  const pending = (await kvGet<PendingRef[]>('reviews:pending')) ?? [];
+  if (!pending.some((p) => p.spotId === spotId && p.id === id)) {
+    pending.push({ spotId, id, createdAt: r.createdAt });
+    await kvSet('reviews:pending', pending);
+  }
   await computeRating(spotId);
   return true;
 }

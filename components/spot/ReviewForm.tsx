@@ -21,17 +21,42 @@ export function ReviewForm({ spotId, spotName }: { spotId: string; spotName: str
   const [token, setToken] = React.useState('');
   const [error, setError] = React.useState('');
   const [submitting, setSubmitting] = React.useState(false);
+  const [files, setFiles] = React.useState<File[]>([]);
+  const [license, setLicense] = React.useState(false);
 
   const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+
+  const onPickFiles = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const picked = Array.from(e.target.files ?? []);
+    const next = [...files, ...picked].slice(0, 3);
+    setFiles(next);
+    e.target.value = '';
+  };
 
   const submit = async () => {
     setError('');
     if (rating < 1) return setError('評価を選んでください');
     if (!anon && (nickname.trim().length < 1 || nickname.trim().length > 20)) return setError('ニックネームは1〜20字で入力してください');
     if (body.trim().length < 10) return setError('本文は10字以上で入力してください');
+    if (files.length > 0 && !license) return setError('写真を添付する場合は利用規約への同意が必要です');
     if (siteKey && !token) return setError('「私は人間です」の認証を完了してください');
     setSubmitting(true);
     try {
+      // 写真を先にアップロード（サーバでEXIF除去→Blob）
+      const photoUrls: string[] = [];
+      for (const f of files) {
+        const fd = new FormData();
+        fd.append('file', f);
+        const up = await fetch('/api/reviews/upload', { method: 'POST', body: fd });
+        const uj = await up.json();
+        if (!up.ok || !uj.ok) {
+          setError(uj.error || '写真のアップロードに失敗しました');
+          setSubmitting(false);
+          return;
+        }
+        photoUrls.push(uj.url);
+      }
+
       const res = await fetch('/api/reviews', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -42,6 +67,8 @@ export function ReviewForm({ spotId, spotName }: { spotId: string; spotName: str
           isAnonymous: anon,
           childAgeBand: ageBand || undefined,
           body: body.trim(),
+          photos: photoUrls,
+          licenseAgreed: license,
           turnstileToken: token,
         }),
       });
@@ -119,6 +146,34 @@ export function ReviewForm({ spotId, spotName }: { spotId: string; spotName: str
       <Field label="本文（必須・10〜500字）">
         <textarea value={body} onChange={(e) => setBody(e.target.value)} maxLength={500} rows={4} placeholder="ベビーカーで回りやすかった、授乳室がきれいだった など" style={{ ...input, resize: 'vertical' }} />
         <div style={{ fontSize: 11, color: 'var(--v2-ink-mute)', textAlign: 'right' }}>{body.length}/500</div>
+      </Field>
+
+      <Field label="写真（任意・最大3枚 / 1枚5MBまで）">
+        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
+          {files.map((f, i) => (
+            <div key={i} style={{ position: 'relative' }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={URL.createObjectURL(f)} alt="" style={{ width: 64, height: 64, objectFit: 'cover', borderRadius: 8, border: '1px solid var(--v2-line)' }} />
+              <button type="button" aria-label="削除" onClick={() => setFiles(files.filter((_, j) => j !== i))}
+                style={{ position: 'absolute', top: -6, right: -6, width: 20, height: 20, borderRadius: '50%', border: 'none', background: '#333', color: '#fff', fontSize: 12, cursor: 'pointer', lineHeight: '20px' }}>✕</button>
+            </div>
+          ))}
+          {files.length < 3 && (
+            <label style={{ ...chip(false), cursor: 'pointer' }}>
+              ＋ 写真を追加
+              <input type="file" accept="image/jpeg,image/png,image/webp" multiple onChange={onPickFiles} style={{ display: 'none' }} />
+            </label>
+          )}
+        </div>
+        <p style={{ fontSize: 11.5, color: 'var(--v2-ink-mute)', margin: '6px 0 0', lineHeight: 1.6 }}>
+          ⚠ お子さんや他の方の顔が写らない構図でのご投稿にご協力ください（位置情報は自動で削除されます）。
+        </p>
+        {files.length > 0 && (
+          <label style={{ display: 'flex', gap: 8, alignItems: 'flex-start', fontSize: 12.5, marginTop: 8, color: 'var(--v2-ink-soft)', lineHeight: 1.6 }}>
+            <input type="checkbox" checked={license} onChange={(e) => setLicense(e.target.checked)} style={{ marginTop: 2 }} />
+            <span>投稿写真を、本サイトがこのスポットの紹介画像等に利用することに同意します（<a href="/terms" target="_blank" rel="noopener" style={{ color: 'var(--v2-orange-deep)' }}>規約</a>）。</span>
+          </label>
+        )}
       </Field>
 
       {siteKey && (

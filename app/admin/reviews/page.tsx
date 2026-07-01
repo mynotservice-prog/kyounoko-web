@@ -13,6 +13,7 @@ type PendingReview = {
   nickname: string;
   childAgeBand?: string;
   body: string;
+  photos?: { url: string; promotedToSpotImage?: boolean }[];
   createdAt: number;
 };
 
@@ -54,6 +55,21 @@ export default function AdminReviewsPage() {
     setBusy(null);
   };
 
+  const promote = async (r: PendingReview, url: string) => {
+    setBusy(r.id);
+    try {
+      await fetch('/api/admin/reviews', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ spotId: r.spotId, id: r.id, action: 'promote', url }),
+      });
+      setItems((prev) => prev.filter((x) => x.id !== r.id)); // 昇格=承認も兼ねるので queue から外れる
+    } catch {
+      /* noop */
+    }
+    setBusy(null);
+  };
+
   return (
     <div style={{ maxWidth: 720, margin: '0 auto', padding: 24 }}>
       <h1 style={{ fontSize: 20, fontWeight: 800, marginBottom: 4 }}>
@@ -78,6 +94,24 @@ export default function AdminReviewsPage() {
                 <span style={{ fontSize: 11, color: '#aaa', marginLeft: 'auto' }}>spot: {r.spotId}</span>
               </div>
               <p style={{ fontSize: 14, lineHeight: 1.7, margin: '0 0 12px', whiteSpace: 'pre-wrap' }}>{r.body}</p>
+              {r.photos && r.photos.length > 0 && (
+                <div style={{ marginBottom: 12 }}>
+                  <div style={{ fontSize: 12, color: '#b42318', fontWeight: 700, marginBottom: 6 }}>
+                    ⚠ 写真: 他人が識別できる顔が写る場合は「却下」してください（顔検出は未導入・目視確認）
+                  </div>
+                  <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                    {r.photos.map((p, i) => (
+                      <div key={i} style={{ textAlign: 'center' }}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={p.url} alt="" style={{ width: 120, height: 120, objectFit: 'cover', borderRadius: 8, border: '1px solid #e5e5e5', display: 'block' }} />
+                        <button type="button" disabled={busy === r.id} onClick={() => promote(r, p.url)} style={{ ...btn('#7a4fd0'), padding: '5px 10px', fontSize: 11, marginTop: 4 }}>
+                          代表画像に昇格
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
               <div style={{ display: 'flex', gap: 8 }}>
                 <button type="button" disabled={busy === r.id} onClick={() => moderate(r, 'approve')} style={btn('#1a7f37')}>承認</button>
                 <button type="button" disabled={busy === r.id} onClick={() => moderate(r, 'reject')} style={btn('#b42318')}>却下</button>
