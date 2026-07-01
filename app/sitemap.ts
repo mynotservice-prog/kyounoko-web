@@ -11,6 +11,7 @@ import type { MetadataRoute } from 'next';
 import { getArticleIds, getCategories } from '@/lib/microcms';
 import { getAllFileArticles, getKvOnlyArticleMetas } from '@/lib/articles';
 import { getAllSpotsWithSlug } from '@/lib/spots';
+import { BROWSE_CATEGORIES, spotsByCategory } from '@/lib/spot-browse';
 import { TOKYO_STATIONS } from '@/lib/tokyo-stations';
 import { KANSAI_STATIONS } from '@/lib/kansai-stations';
 import { KANAGAWA_STATIONS } from '@/lib/kanagawa-stations';
@@ -327,6 +328,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
     }));
 
+  // スポットのカテゴリ全件ページ（/spots/[cat]）。看板コンテンツの入口。
+  const spotCategoryPages: MetadataRoute.Sitemap = BROWSE_CATEGORIES
+    .filter((c) => spotsByCategory(c.id).length > 0)
+    .map((c) => ({
+      url: `${BASE}/spots/${c.id}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
+    }));
+
   // 特集ページ（Tier 3）。データドリブンでArticle+Spotを横断キュレーション。
   const featurePages: MetadataRoute.Sitemap = FEATURE_PAGES.map((f) => ({
     url: `${BASE}/feature/${f.slug}`,
@@ -335,5 +346,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }));
 
-  return [...staticPages, ...categoryPages, ...articlePages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...kanagawaStationPages, ...saichiStationPages, ...lineIndex, ...linePages, ...stationConditionPages, ...dataPages, ...spotPages, ...featurePages];
+  return [...staticPages, ...categoryPages, ...articlePages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...kanagawaStationPages, ...saichiStationPages, ...lineIndex, ...linePages, ...stationConditionPages, ...dataPages, ...spotCategoryPages, ...spotPages, ...featurePages];
 }
