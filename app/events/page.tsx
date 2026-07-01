@@ -98,8 +98,18 @@ export default async function EventsPage({ searchParams }: Props) {
     ageLabel: e.ageLabel,
   }));
 
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'HOME', item: 'https://kyounoko.jp/' },
+      { '@type': 'ListItem', position: 2, name: 'イベント', item: 'https://kyounoko.jp/events' },
+    ],
+  };
+
   return (
     <V2Frame header="sub" active="events" backHref="/">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       {/* イベント用ヒーロー — 支給D系 */}
       <div className="v2-ev-hero">
         <V2Img

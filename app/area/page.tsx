@@ -40,9 +40,19 @@ const POPULAR_AREAS = [
   { t: '横浜市', icon: 'ship' as V2IconName, accent: 'rain' as const, href: '/station' },
 ];
 
+const JSONLD_BREADCRUMB = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'HOME', item: 'https://kyounoko.jp/' },
+    { '@type': 'ListItem', position: 2, name: 'エリアから探す', item: 'https://kyounoko.jp/area' },
+  ],
+};
+
 export default function AreaPage() {
   return (
     <V2Frame header="sub" active="area" backHref="/">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSONLD_BREADCRUMB) }} />
       <div className="v2-page-head" style={{ paddingTop: 6 }}>
         <h1
           className="v2-page-h1"

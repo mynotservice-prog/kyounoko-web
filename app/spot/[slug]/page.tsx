@@ -29,7 +29,7 @@ import { V2RememberSpot } from '@/components/v2/V2RememberSpot';
 import { VisitedReport } from '@/components/spot/VisitedReport';
 import { SpotMap } from '@/components/spot/SpotMap';
 import { ReviewSection } from '@/components/spot/ReviewSection';
-import { getRating, getUgcImage } from '@/lib/reviews';
+import { getRating, getUgcImage, getApprovedReviews } from '@/lib/reviews';
 import { getPublishedSpotReports } from '@/lib/spot-reports';
 import { V2SaveButton, V2SdHeroFav } from '@/components/v2/V2SaveButton';
 import { getRecommendedItems } from '@/lib/recommended-items';
@@ -37,6 +37,7 @@ import { getRakutenProduct, keywordFromRakutenSearchUrl, priceBandLabel } from '
 import { wrapMoshimoRakuten } from '@/lib/moshimo';
 import { getSpotReservationOffer } from '@/lib/reservation-cta';
 import { ReservationCTA } from '@/components/article/ReservationCTA';
+import { ShareBar } from '@/components/article/ShareBar';
 
 export const revalidate = 3600;
 
@@ -59,6 +60,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const description =
     spot.note ??
     `${spot.name}は${location ? location + 'の' : ''}${category}。子連れで使いやすい設備・料金・アクセス情報をきょうのこ編集部が整理しました。`;
+  // スポット名+カテゴリで動的OGP画像を生成（/api/og はタイトル文字列とカテゴリスラッグを受ける）。
+  const dynamicOg = `/api/og?title=${encodeURIComponent(`${spot.name}｜${category}`)}`;
+  const ogImages = [{ url: dynamicOg, width: 1200, height: 630 }];
   return {
     title,
     description,
@@ -69,7 +73,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       url: `https://kyounoko.jp/spot/${slug}`,
-      images: [{ url: '/img/ogp-spot.webp', width: 1200, height: 630 }],
+      images: ogImages,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ogImages.map((i) => i.url),
     },
   };
 }
@@ -199,6 +209,24 @@ export default async function SpotPage({ params }: Props) {
       bestRating: 5,
       worstRating: 1,
     };
+  }
+
+  // P2-4: 承認済み口コミ個別をReviewスキーマとしても付与（AggregateRatingと併記でリッチリザルト強化）。
+  // 直近10件までに絞ってJSON-LDの肥大化を避ける。
+  const approvedReviews = await getApprovedReviews(slug);
+  if (approvedReviews.length > 0) {
+    (jsonLdPlace as Record<string, unknown>).review = approvedReviews.slice(0, 10).map((r) => ({
+      '@type': 'Review',
+      author: { '@type': 'Person', name: r.nickname },
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: r.rating,
+        bestRating: 5,
+        worstRating: 1,
+      },
+      reviewBody: r.body,
+      datePublished: new Date(r.createdAt).toISOString(),
+    }));
   }
 
   // P1-8b: 承認済みUGC写真が代表画像に昇格されていれば、ヒーローに使う（imageKind=UGC）。
@@ -869,6 +897,12 @@ export default async function SpotPage({ params }: Props) {
         <ReviewSection spotId={slug} spotName={spot.name} />
 
         <VisitedReport slug={slug} name={spot.name} />
+
+        <ShareBar
+          url={`https://kyounoko.jp/spot/${slug}`}
+          title={`${spot.name}｜${location}${location ? 'の' : ''}${category}子連れガイド`}
+          label="このスポットをシェアする"
+        />
 
         {/* 保存ボタン */}
         <V2SaveButton id={slug} />

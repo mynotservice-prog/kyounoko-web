@@ -43,8 +43,18 @@ export default function StationIndexPage() {
   }
   const prefectureOrder: KansaiPrefecture[] = ['osaka', 'kyoto', 'hyogo'];
 
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'HOME', item: 'https://kyounoko.jp/' },
+      { '@type': 'ListItem', position: 2, name: '駅別ランチ', item: 'https://kyounoko.jp/station' },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       <V2Frame header="sub" active="home">
 
       <div className="container">

@@ -574,6 +574,8 @@ export default async function ArticlePage({ params }: Props) {
             </div>
           </section>
         )}
+
+        <ShareBar url={articleUrl} title={article.title} label="記事をシェアする" />
       </article>
 
       </V2Frame>
