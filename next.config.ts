@@ -1,5 +1,6 @@
 import type { NextConfig } from 'next';
 import { SPOT_REDIRECTS } from './lib/spot-redirects';
+import { CHAIN_SPOT_REDIRECTS } from './lib/chain-spot-redirects';
 import { ARTICLE_REDIRECTS } from './lib/article-redirects';
 
 const nextConfig: NextConfig = {
@@ -133,6 +134,15 @@ const nextConfig: NextConfig = {
       ...SPOT_REDIRECTS.map((r) => ({
         source: `/spot/${r.from}`,
         destination: `/spot/${r.to}`,
+        permanent: true,
+      })),
+
+      // ===== P1-1c: 全国チェーン外食スポット /spot/[slug] → まとめ記事へ 301 =====
+      // チェーンは一覧/ランキング/今日の流れ(destination)からは除外済だが、URLが200で
+      // 生き続けると低品質・重複・カニバリの温床になるためURLレベルで統合する。
+      ...CHAIN_SPOT_REDIRECTS.map((r) => ({
+        source: `/spot/${r.from}`,
+        destination: r.to,
         permanent: true,
       })),
 
