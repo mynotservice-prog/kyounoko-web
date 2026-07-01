@@ -121,7 +121,9 @@ function sanitizePatch(input: unknown): { patch: SpotOverride; clear: Set<string
         const fv = fa[fk];
         if (fk === 'note') {
           if (fv == null || fv === '') continue;
-          if (typeof fv !== 'string' || fv.length > 300) return { error: 'invalid facilities.note' };
+          // 設備の補足（授乳室◯か所・給湯器/電子レンジ/母乳ブース…等）は300字を超えることが
+          // 多いため上限を緩和。悪用防止に十分な範囲(1000字)に。
+          if (typeof fv !== 'string' || fv.length > 1000) return { error: 'invalid facilities.note（1000字以内）' };
           out[fk] = fv;
         } else if ((SPOT_FACILITY_ENUM_FIELDS as readonly string[]).includes(fk)) {
           if (fv == null || fv === '') continue;
