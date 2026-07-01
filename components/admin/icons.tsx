@@ -26,6 +26,7 @@ const PATHS: Record<string, string[]> = {
   plus: ['M12 5v14', 'M5 12h14'],
   back: ['M14 7l-5 5 5 5'],
   image: ['M4 5h16v14H4z', 'M4 16l5-5 4 4 3-3 4 4', 'M9 10a1.5 1.5 0 100-3 1.5 1.5 0 000 3'],
+  reviews: ['M4 5h16v11H8l-4 4z', 'M12 7.5l1 2 2.2.3-1.6 1.5.4 2.2-2-1-2 1 .4-2.2L8.8 9.8 11 9.5z'],
 };
 
 export type AdminIconName = keyof typeof PATHS;
