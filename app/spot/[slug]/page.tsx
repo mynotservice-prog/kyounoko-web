@@ -28,6 +28,8 @@ import { AdSlot } from '@/components/ads/AdSlot';
 import { V2RememberSpot } from '@/components/v2/V2RememberSpot';
 import { VisitedReport } from '@/components/spot/VisitedReport';
 import { SpotMap } from '@/components/spot/SpotMap';
+import { ReviewSection } from '@/components/spot/ReviewSection';
+import { getRating } from '@/lib/reviews';
 import { getPublishedSpotReports } from '@/lib/spot-reports';
 import { V2SaveButton, V2SdHeroFav } from '@/components/v2/V2SaveButton';
 import { getRecommendedItems } from '@/lib/recommended-items';
@@ -186,6 +188,18 @@ export default async function SpotPage({ params }: Props) {
 
   // 公開済みの「行ったよ」レポート（MicroCMS未設定時は常に空配列）
   const visitorReports = await getPublishedSpotReports(slug);
+
+  // P1-8: 口コミ★平均（承認済みから集計）。件数>0なら構造化データにも反映。
+  const reviewRating = await getRating(slug);
+  if (reviewRating.count > 0) {
+    (jsonLdPlace as Record<string, unknown>).aggregateRating = {
+      '@type': 'AggregateRating',
+      ratingValue: reviewRating.avg,
+      reviewCount: reviewRating.count,
+      bestRating: 5,
+      worstRating: 1,
+    };
+  }
 
   // P1-4: おすすめアイテムを楽天商品API（RAKUTEN_APP_ID）で実商品に解決。
   // env未設定なら product=null で従来の検索リンクにフォールバック（もしも変換は共通適用）。
@@ -846,6 +860,9 @@ export default async function SpotPage({ params }: Props) {
             </div>
           </>
         )}
+        {/* P1-8: ログイン不要の口コミ（承認済みのみ表示・★平均） */}
+        <ReviewSection spotId={slug} spotName={spot.name} />
+
         <VisitedReport slug={slug} name={spot.name} />
 
         {/* 保存ボタン */}
