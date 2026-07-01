@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { trackEvent } from '@/lib/analytics';
 
 /**
@@ -23,10 +23,16 @@ type BeforeInstallPromptEvent = Event & {
 
 const STORAGE_VISIT = 'kyounoko_visit_count';
 const STORAGE_DISMISS = 'kyounoko_pwa_dismiss_until';
+const SESSION_SHOWN = 'kyounoko_pwa_shown_session';
+/** 表示したら、たとえ操作されなくても次回はこの期間出さない（=期間で1回限り）。 */
+const SOFT_COOLDOWN_MS = 3 * 24 * 60 * 60 * 1000; // 3日
 
 export function PWAInstallPrompt() {
   const [show, setShow] = useState(false);
   const [deferred, setDeferred] = useState<BeforeInstallPromptEvent | null>(null);
+  // onScroll（安定リスナ）から最新の deferred を参照するための ref
+  const deferredRef = useRef<BeforeInstallPromptEvent | null>(null);
+  deferredRef.current = deferred;
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -40,7 +46,14 @@ export function PWAInstallPrompt() {
       return; // localStorage 不可なら表示しない
     }
 
-    // 30日抑止
+    // このセッションで既に出したら二度と出さない（1回限り）
+    try {
+      if (sessionStorage.getItem(SESSION_SHOWN)) return;
+    } catch {
+      /* noop */
+    }
+
+    // 抑止期間中（あとで=ソフト3日 / 30日間表示しない=30日）は出さない
     try {
       const until = parseInt(localStorage.getItem(STORAGE_DISMISS) || '0', 10) || 0;
       if (until && until > Date.now()) return;
@@ -53,25 +66,59 @@ export function PWAInstallPrompt() {
     // iOS 用 navigator.standalone
     if ((navigator as unknown as { standalone?: boolean }).standalone) return;
 
-    // 2回目以降のみ
+    // 2回目以降の訪問のみ（初回訪問では出さない）
     if (visits < 1) return;
 
-    // beforeinstallprompt
+    const ua = navigator.userAgent.toLowerCase();
+    const isiOS = /iphone|ipad|ipod/.test(ua) && !/crios|fxios/.test(ua);
+
+    // beforeinstallprompt は「表示」ではなく捕捉だけ。表示はスクロール50%到達で行う。
+    // ただし既に50%到達済みで後から発火した場合はその場で表示する。
     const onBeforeInstall = (e: Event) => {
       e.preventDefault();
       setDeferred(e as BeforeInstallPromptEvent);
-      setShow(true);
+      if (scrolled50()) reveal();
     };
     window.addEventListener('beforeinstallprompt', onBeforeInstall);
 
-    // iOS（beforeinstallprompt 非対応）でも 3回目以降は文言で案内
-    const ua = navigator.userAgent.toLowerCase();
-    const isiOS = /iphone|ipad|ipod/.test(ua) && !/crios|fxios/.test(ua);
-    if (isiOS && visits >= 2) {
+    // スクロール50%到達を発火条件にする（初回離脱・即時被りを防ぐ）
+    let done = false;
+    const reveal = () => {
+      if (done) return;
+      done = true;
+      // 表示した記録（セッション1回限り＋期間ソフト抑止）
+      try {
+        sessionStorage.setItem(SESSION_SHOWN, '1');
+      } catch {
+        /* noop */
+      }
+      try {
+        const cur = parseInt(localStorage.getItem(STORAGE_DISMISS) || '0', 10) || 0;
+        const soft = Date.now() + SOFT_COOLDOWN_MS;
+        if (soft > cur) localStorage.setItem(STORAGE_DISMISS, String(soft));
+      } catch {
+        /* noop */
+      }
       setShow(true);
-    }
+      window.removeEventListener('scroll', onScroll);
+    };
+    const scrolled50 = () => {
+      const doc = document.documentElement;
+      const scrollable = doc.scrollHeight - window.innerHeight;
+      if (scrollable <= 0) return true; // 短いページは即・可
+      return window.scrollY / scrollable >= 0.5;
+    };
+    const onScroll = () => {
+      // iOS も Chrome(deferred捕捉後) も、50%到達で初めて出す
+      if (scrolled50() && (isiOS || deferredRef.current)) reveal();
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
 
-    return () => window.removeEventListener('beforeinstallprompt', onBeforeInstall);
+    return () => {
+      window.removeEventListener('beforeinstallprompt', onBeforeInstall);
+      window.removeEventListener('scroll', onScroll);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (!show) return null;
