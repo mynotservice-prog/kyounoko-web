@@ -106,6 +106,12 @@ export type Spot = {
     infant?: string;     // '無料（3歳未満）'
   };
   reservation?: 'required' | 'recommended' | 'none';  // 予約制の有無
+  /**
+   * 公式サイトURL（§P1-4）。詳細ページに「公式サイトで最新情報・料金を確認」の
+   * 二次リンクを出す（予約アフィCTAの下＝アフィを取りこぼさない位置）。発リンクなので
+   * rel="noopener"（sponsored は付けない=通常の引用リンク）。
+   */
+  officialUrl?: string;
   crowdLevel?: {
     weekday?: 'low' | 'mid' | 'high';
     holiday?: 'low' | 'mid' | 'high';
