@@ -16,6 +16,7 @@ import { TableOfContents } from '@/components/article/TableOfContents';
 import { PRBadge } from '@/components/affiliate/PRBadge';
 import { AffiliateLinkGroup } from '@/components/affiliate/AffiliateLinkGroup';
 import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
+import { NextPlanCTA } from '@/components/article/NextPlanCTA';
 import { InlineItemCTA } from '@/components/article/InlineItemCTA';
 import { getAffiliateProducts } from '@/lib/affiliate-products';
 import { pinImageUrl, pinImagePath } from '@/lib/pin-images';
@@ -1091,6 +1092,13 @@ function FileArticleView({ article }: { article: FileArticle }) {
               limit={6}
             />
           )}
+
+          {/* P1-7: 本体ツール（1日プランナー /today）への明示送客。エリア引き継ぎ。
+              全記事末尾に必須（横断ルール §5-3）。 */}
+          <NextPlanCTA
+            area={article.area}
+            age={article.quickInfo?.ageRanges?.[0] as '0-1' | '2-3' | '4-6' | undefined}
+          />
 
           {/* 旧: body 直下の ShareBar はここに置いていたが、末尾(著者ブロック直下)と
               重複していたため削除。離脱ポイントを増やさない方針。 */}
