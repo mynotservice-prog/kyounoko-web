@@ -13,6 +13,7 @@ import {
 } from '@/components/v2/V2Base';
 import { V2Icon, V2_ACCENT } from '@/components/v2/V2Icon';
 import { V2HeroForm } from '@/components/v2/V2HeroForm';
+import { V2PurposeRanking } from '@/components/v2/V2PurposeRanking';
 import { FINDER_STATIONS, POPULAR_TERMINALS, POPULAR_FAMILY } from '@/lib/finder-stations';
 import { V2RecentSpots } from '@/components/v2/V2RecentSpots';
 import { V2TodayHero } from '@/components/v2/V2TodayHero';
@@ -191,6 +192,9 @@ export default function HomePage() {
           );
         })}
       </div>
+
+      {/* 目的別 実用ランキング（首都圏 × 目的）。全国ごちゃ混ぜでなく実需に沿う（P1-2） */}
+      <V2PurposeRanking />
 
       {/* 人気スポット */}
       <V2SectionHead title="人気スポットランキング" moreHref="/ranking" />
