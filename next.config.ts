@@ -136,6 +136,14 @@ const nextConfig: NextConfig = {
         permanent: true,
       })),
 
+      // ===== 実在するが子連れおでかけ先として不適/データ除外した施設(2026-07-01) =====
+      // データから除去したスポットURLを一覧へ301（被リンク・indexの行き止まり回避）。
+      { source: '/spot/-8bbk', destination: '/spots', permanent: true }, // 国立新美術館
+      { source: '/spot/ANA-qpn5', destination: '/spots', permanent: true }, // ANA機体工場見学（羽田）
+      { source: '/spot/JAL-SKY-MUSEUM-ovgj', destination: '/spots', permanent: true }, // JAL工場見学 SKY MUSEUM（羽田）
+      { source: '/spot/AkeruE-6dkq', destination: '/spots', permanent: true }, // パナソニックセンター東京 AkeruE
+      { source: '/spot/-2f47', destination: '/spots', permanent: true }, // 東京臨海広域防災公園 そなエリア東京
+
       // ===== 記事棚卸し監査(2026-06-25)：チェーン周辺条件の死蔵フラグメントを =====
       // 内容を包含する [chain]-kodzure-koryaku へ 301 統合（被リンク資産を勝ちページに集約）。
       ...ARTICLE_REDIRECTS.map((r) => ({
