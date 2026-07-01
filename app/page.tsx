@@ -21,7 +21,7 @@ import { LineCta } from '@/components/common/LineCta';
 import { getFileArticlesByCategory } from '@/lib/articles';
 import { eventHeroImage, formatEventPeriod, getThisWeekEvents } from '@/lib/events';
 import { getAllFileArticles } from '@/lib/articles';
-import { getOutingSpotsWithSlug } from '@/lib/spots';
+import { getSpotRanking } from '@/lib/spot-ranking';
 import { FEATURE_PAGES } from '@/lib/feature-pages';
 import { POPULAR_ARTICLE_SLUGS } from '@/lib/popular-articles';
 import { spotToV2, featureToV2, articleToV2 } from '@/lib/v2-adapters';
@@ -68,24 +68,18 @@ const CATEGORIES = [
   { slug: 'tenki', name: '天気で決める', icon: 'sun' as const, accent: 'sun' as const },
 ];
 
-export default function HomePage() {
+export default async function HomePage() {
   const allArticles = getAllFileArticles();
   const popularArticles = POPULAR_ARTICLE_SLUGS.map((slug) =>
     allArticles.find((a) => a.slug === slug),
   ).filter((a): a is NonNullable<typeof a> => Boolean(a));
   const latestArticles = allArticles.slice(0, 6);
 
-  // 人気スポット: getAllSpotsWithSlug() 経由で正規 slug を使う（/spot/[slug] の
-  // generateStaticParams と必ず一致させる）。
-  // popular=true があれば優先、なければ先頭から5件。
-  const allSpotsWithSlug = getOutingSpotsWithSlug();
-  const popularSpotsWS = allSpotsWithSlug
-    .filter((x) => x.spot.popular)
-    .slice(0, 5);
-  const seedSpotsWS = popularSpotsWS.length
-    ? popularSpotsWS
-    : allSpotsWithSlug.slice(0, 5);
-  const spotCards = seedSpotsWS.map((x, i) => ({
+  // 人気スポット: /ranking と同じ getSpotRanking() を使い、トップの上位5件と
+  // /ranking の順位がズレないようにする（以前は独自にpopularフラグの先頭5件を
+  // 取っていたため、GA4実数/画像優先ロジックを使う/rankingと表示が食い違っていた）。
+  const spotRanking = await getSpotRanking({ limit: 5 });
+  const spotCards = spotRanking.map((x, i) => ({
     ...spotToV2(x.spot, i),
     _slug: x.slug, // 正規 slug（spotToSlug で生成された URL-safe な値）
   }));
