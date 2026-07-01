@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { AdminIcon } from '@/components/admin/icons';
@@ -26,6 +26,7 @@ const NAV: NavGroup[] = [
       { id: 'articles', label: '記事', icon: 'articles', path: '/admin/articles' },
       { id: 'plans', label: 'プラン', icon: 'plans', path: '/admin/plans' },
       { id: 'spots', label: 'スポット', icon: 'spots', path: '/admin/spots' },
+      { id: 'reviews', label: '口コミ承認', icon: 'reviews', path: '/admin/reviews' },
     ],
   },
   {
@@ -58,6 +59,17 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname() || '/admin';
   const [collapsed, setCollapsed] = useState(false);
   const active = matchActive(pathname);
+
+  // 口コミの未承認件数をメニューにバッジ表示（確認しやすく）。失敗時はバッジ無し。
+  const [pendingReviews, setPendingReviews] = useState(0);
+  useEffect(() => {
+    let alive = true;
+    fetch('/api/admin/reviews', { cache: 'no-store' })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => { if (alive && j?.pending) setPendingReviews(j.pending.length); })
+      .catch(() => {});
+    return () => { alive = false; };
+  }, [pathname]);
 
   return (
     <div style={{ display: 'flex', height: '100vh', width: '100%', overflow: 'hidden' }}>
@@ -196,6 +208,30 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
                           }}
                         >
                           {item.label}
+                        </span>
+                      )}
+                      {item.id === 'reviews' && pendingReviews > 0 && (
+                        <span
+                          title={`未承認 ${pendingReviews} 件`}
+                          style={{
+                            flex: '0 0 auto',
+                            minWidth: 18,
+                            height: 18,
+                            padding: '0 5px',
+                            borderRadius: 999,
+                            background: '#e0574c',
+                            color: '#fff',
+                            fontSize: 11,
+                            fontWeight: 700,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            ...(collapsed
+                              ? { position: 'absolute', top: 3, right: 6 }
+                              : { marginLeft: 'auto' }),
+                          }}
+                        >
+                          {pendingReviews}
                         </span>
                       )}
                     </Link>
