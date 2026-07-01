@@ -18,6 +18,7 @@ import { CrossLinkCards } from '@/components/article/CrossLinkCards';
 import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
 import { getItemsForPlan } from '@/lib/items-catalog';
 import { PlanTimeline } from '@/components/plan/PlanTimeline';
+import { ShareBar } from '@/components/article/ShareBar';
 
 // hero 画像の自動マッチング更新を即時反映するため revalidate を短縮（5分）
 export const revalidate = 300;
@@ -34,11 +35,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const plan = getPlan(id);
   if (!plan) return { title: 'プランが見つかりません' };
+  const ogImages = [{ url: `/api/og?title=${encodeURIComponent(plan.title)}`, width: 1200, height: 630 }];
   return {
     title: plan.title,
     description: plan.shortAnswer,
     robots: { index: false, follow: true }, // Plan は条件組合せ無限のため noindex
     alternates: { canonical: `/plan/${id}` },
+    openGraph: {
+      title: plan.title,
+      description: plan.shortAnswer,
+      url: `https://kyounoko.jp/plan/${id}`,
+      images: ogImages,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: plan.title,
+      description: plan.shortAnswer,
+      images: ogImages.map((i) => i.url),
+    },
   };
 }
 
@@ -404,6 +418,8 @@ export default async function PlanPage({ params }: Props) {
 
         {/* AdSense Multiplex（ページ後半の回遊喚起） */}
         <AdSlot placement="article-related" style={{ marginTop: 48 }} />
+
+        <ShareBar url={`https://kyounoko.jp/plan/${id}`} title={plan.title} label="このプランをシェアする" />
 
         {/* フィードバック誘導 */}
         <section style={{ marginTop: 56, padding: '20px 22px', background: 'var(--paper-card)', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)' }}>

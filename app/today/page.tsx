@@ -70,11 +70,26 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   if (sp.duration) parts.push(labelForValue('duration', firstString(sp.duration)!));
 
   const suffix = parts.length ? `（${parts.join('・')}）` : '';
+  const title = `今日はこれ${suffix}`;
+  const description = '条件から、今日の答えを1つだけ返します。';
+  const ogImages = [{ url: `/api/og?title=${encodeURIComponent(title)}`, width: 1200, height: 630 }];
   return {
-    title: `今日はこれ${suffix}`,
-    description: '条件から、今日の答えを1つだけ返します。',
+    title,
+    description,
     robots: { index: false, follow: true },
     alternates: { canonical: '/today' },
+    openGraph: {
+      title,
+      description,
+      url: '/today',
+      images: ogImages,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ogImages.map((i) => i.url),
+    },
   };
 }
 

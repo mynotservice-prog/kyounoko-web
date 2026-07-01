@@ -37,8 +37,18 @@ export default async function ReportsPage() {
     return { ...r, displayName: name };
   });
 
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'HOME', item: 'https://kyounoko.jp/' },
+      { '@type': 'ListItem', position: 2, name: 'みんなの口コミ', item: 'https://kyounoko.jp/reports' },
+    ],
+  };
+
   return (
     <V2Frame header="sub" active="area">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
       <V2Breadcrumb items={[{ label: 'ホーム', href: '/' }, { label: 'みんなの口コミ' }]} />
       <div className="v2-page-head" style={{ paddingTop: 6 }}>
         <h1 className="v2-page-h1" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>

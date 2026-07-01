@@ -69,8 +69,20 @@ export default async function SpotCategoryPage({ params, searchParams }: Props) 
   const head = list.slice(0, INITIAL);
   const rest = list.slice(INITIAL);
 
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'HOME', item: 'https://kyounoko.jp/' },
+      { '@type': 'ListItem', position: 2, name: 'スポットを探す', item: 'https://kyounoko.jp/spots' },
+      { '@type': 'ListItem', position: 3, name: c.label, item: `https://kyounoko.jp/spots/${c.id}` },
+    ],
+  };
+
   return (
-    <V2Frame header="sub" backHref="/spots" active="area">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
+    <V2Frame header="sub" backHref="/spots" active="spots">
       <div className="v2-page-head" style={{ paddingTop: 6 }}>
         <nav aria-label="パンくず" style={{ fontSize: 12, marginBottom: 4 }}>
           <Link href="/spots" className="v2-sec-more" style={{ color: 'var(--v2-ink-mute)' }}>
@@ -164,5 +176,6 @@ export default async function SpotCategoryPage({ params, searchParams }: Props) 
 
       <div style={{ height: 24 }}></div>
     </V2Frame>
+    </>
   );
 }

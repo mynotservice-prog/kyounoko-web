@@ -161,7 +161,7 @@ function V2MobileMenu({
 }
 
 // IA再編(2026-06): 「探す」を機能名「今日の流れ(today)」へ、特集を外し「エリア・駅(area)」を昇格。
-export type V2NavActive = 'home' | 'today' | 'area' | 'events' | 'saved';
+export type V2NavActive = 'home' | 'today' | 'spots' | 'area' | 'events' | 'saved';
 
 type FrameProps = {
   children: React.ReactNode;
@@ -365,6 +365,7 @@ function V2DesktopHeader({ active }: { active?: V2NavActive }) {
   const links = [
     { k: 'home', t: 'ホーム', icon: 'home', href: '/' },
     { k: 'today', t: '今日の流れ', icon: 'sparkle', href: '/today' },
+    { k: 'spots', t: 'スポット一覧', icon: 'flag', href: '/spots' },
     { k: 'area', t: 'エリア・駅', icon: 'pin', href: '/area' },
     { k: 'events', t: 'イベント', icon: 'calendar', href: '/events' },
     { k: 'saved', t: '保存', icon: 'bookmark', href: '/favorites' },

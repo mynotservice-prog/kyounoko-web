@@ -835,3 +835,13 @@
   .v2-sheet-backdrop { align-items: center; justify-content: center; }
   .v2-sheet { max-width: 460px; border-radius: 24px; }
 }
+
+/* ---------- Wide desktop (≥1400px): 一覧系グリッドをさらに多列化 ----------
+   P2-2: 920px時点の2列(.v2-vlist)は1160pxコンテナ幅に対して間延びしやすいため、
+   画面が広い場合はコンテナ幅と列数を上げて余白を実利用に回す。 */
+@media (min-width: 1400px) {
+  .v2-scroll > div { max-width: 1360px; }
+  .v2-vlist { grid-template-columns: repeat(3, 1fr); }
+  .v2-cat-grid { grid-template-columns: repeat(6, 1fr); }
+  .v2-pref-grid { grid-template-columns: repeat(4, 1fr); }
+}

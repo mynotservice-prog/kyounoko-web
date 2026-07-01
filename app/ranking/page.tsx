@@ -80,9 +80,19 @@ export default async function RankingPage({ searchParams }: Props) {
     })),
   };
 
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'HOME', item: 'https://kyounoko.jp/' },
+      { '@type': 'ListItem', position: 2, name: '人気ランキング', item: 'https://kyounoko.jp/ranking' },
+    ],
+  };
+
   return (
     <V2Frame header="sub" active="area">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
 
       <V2Breadcrumb items={[{ label: 'ホーム', href: '/' }, { label: '人気ランキング' }]} />
       <div className="v2-page-head" style={{ paddingTop: 6 }}>
