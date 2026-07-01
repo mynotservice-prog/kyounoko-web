@@ -1,5 +1,6 @@
 import { getApprovedReviews, getRating } from '@/lib/reviews';
 import { ReviewForm } from './ReviewForm';
+import { ReviewReportButton } from './ReviewReportButton';
 
 /**
  * スポット詳細の口コミセクション（P1-8・画面C）。承認済みのみ表示。
@@ -47,8 +48,21 @@ export async function ReviewSection({ spotId, spotName }: { spotId: string; spot
                   {r.childAgeBand && (
                     <span style={{ fontSize: 11.5, color: 'var(--v2-ink-mute)' }}>・{AGE_LABEL[r.childAgeBand]}</span>
                   )}
+                  <span style={{ marginLeft: 'auto' }}>
+                    <ReviewReportButton spotId={spotId} id={r.id} />
+                  </span>
                 </div>
                 <p style={{ fontSize: 13.5, lineHeight: 1.7, margin: 0, color: 'var(--v2-ink-soft)', whiteSpace: 'pre-wrap' }}>{r.body}</p>
+                {r.photos && r.photos.length > 0 && (
+                  <div style={{ display: 'flex', gap: 8, marginTop: 8, flexWrap: 'wrap', alignItems: 'flex-end' }}>
+                    {r.photos.map((p, i) => (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img key={i} src={p.url} alt={`${r.nickname}さんの投稿写真`} loading="lazy"
+                        style={{ width: 92, height: 92, objectFit: 'cover', borderRadius: 8, border: '1px solid var(--v2-line)' }} />
+                    ))}
+                    <span style={{ fontSize: 10.5, color: 'var(--v2-ink-mute)' }}>みんなの写真 / by {r.nickname}</span>
+                  </div>
+                )}
               </div>
             ))}
           </div>

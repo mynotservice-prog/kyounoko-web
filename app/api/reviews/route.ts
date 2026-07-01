@@ -48,6 +48,8 @@ export async function POST(req: NextRequest) {
     isAnonymous: !!payload.isAnonymous,
     childAgeBand: payload.childAgeBand as never,
     body: typeof payload.body === 'string' ? payload.body : '',
+    photos: Array.isArray(payload.photos) ? (payload.photos as string[]) : [],
+    licenseAgreed: !!payload.licenseAgreed,
   });
   if (!v.ok) return NextResponse.json({ ok: false, error: v.error }, { status: 400 });
 
