@@ -334,16 +334,6 @@ export const KID_REPORTS: Record<string, KidReport> = {
     stayNote: '3〜5時間。',
     cautionNote: '自然が多いので虫対策があると安心。',
   },
-  '東京臨海広域防災公園 そなエリア東京': {
-    source: 'visited',
-    visitAge: '3歳以降向き',
-    strollerNote: 'かなり快適。',
-    crowdNote: '比較的空いている。',
-    diaperNote: '安心感がある。',
-    stayNote: '1〜3時間。',
-    cautionNote: '防災展示なので、少し怖がる子もいる。',
-  },
-
   // ===== テーマパーク・キャラクター系 =====
   サンリオピューロランド: {
     source: 'visited',

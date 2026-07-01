@@ -3,93 +3,150 @@ import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
 import { V2SpotRow } from '@/components/v2/V2Cards';
 import { V2SectionHead } from '@/components/v2/V2Base';
-import { V2Icon, V2_ACCENT } from '@/components/v2/V2Icon';
-import { getAllSpotsWithSlug, SPOT_CATEGORY_LABEL } from '@/lib/spots';
-import type { Spot, SpotCategory } from '@/lib/spots';
+import { V2Icon, V2_ACCENT, type V2IconName } from '@/components/v2/V2Icon';
+import { SPOT_CATEGORY_LABEL } from '@/lib/spots';
 import { spotToV2 } from '@/lib/v2-adapters';
 import { AdSlot } from '@/components/ads/AdSlot';
+import { SpotListReveal } from '@/components/spots/SpotListReveal';
+import { SpotFilterBar } from '@/components/spots/SpotFilterBar';
+import { BROWSE_CATEGORIES, spotsByCategory } from '@/lib/spot-browse';
+import { parseFilters, hasActiveFilters, matchesFilters, sortSpots, toFilterable } from '@/lib/spot-filter';
 
 export const revalidate = 3600;
 
-export const metadata: Metadata = {
-  title: '子連れスポット一覧｜公園・水族館・動物園・室内遊び場まで【きょうのこスポットDB】',
-  description:
-    '0〜6歳の子ども連れで楽しめるスポット400件以上を、カテゴリ別（公園・水族館・動物園・室内遊び場・遊園地）に検索できる子連れスポットDB。',
-  alternates: { canonical: '/spots' },
-  openGraph: {
-    title: '子連れスポット一覧｜きょうのこスポットDB',
-    description: '0〜6歳子連れで使える公園・水族館・動物園・室内遊び場 400件以上',
-    url: 'https://kyounoko.jp/spots',
-    images: [{ url: '/img/ogp-spot.webp', width: 1200, height: 630 }],
-  },
+/** 各カテゴリセクションで見せる代表件数（残りは「すべて見る」でカテゴリ全件ページへ）。 */
+const PREVIEW = 12;
+/** 絞り込みモードの初期表示件数。 */
+const INITIAL = 24;
+
+type Props = {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 };
 
-/**
- * 一覧表示対象の判定。最低限の情報（名前 + 説明 or 場所）があれば表示する。
- * 以前は score >= 3 と厳しすぎて多くのスポットが落ちていたため緩和。
- */
-function isIndexable(s: Spot): boolean {
-  if (!s.name) return false;
-  // ノートか、市区町村のいずれかがあれば一覧表示に値する
-  return !!(s.note || s.ward || s.city || s.nearestStation);
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+  const filtered = hasActiveFilters(parseFilters(await searchParams));
+  return {
+    title: '子連れスポット一覧｜公園・水族館・動物園・室内遊び場まで【きょうのこスポットDB】',
+    description:
+      '0〜6歳の子ども連れで楽しめるスポット400件以上を、カテゴリ別（公園・水族館・動物園・室内遊び場・遊園地・牧場）に検索できる子連れスポットDB。',
+    // SEO §2-2: 絞り込み/並び替えのクエリ変種は noindex,follow ＋ canonical→/spots。
+    robots: filtered ? { index: false, follow: true } : undefined,
+    alternates: { canonical: '/spots' },
+    openGraph: {
+      title: '子連れスポット一覧｜きょうのこスポットDB',
+      description: '0〜6歳子連れで使える公園・水族館・動物園・室内遊び場 400件以上',
+      url: 'https://kyounoko.jp/spots',
+      images: [{ url: '/img/ogp-spot.webp', width: 1200, height: 630 }],
+    },
+  };
 }
 
-const FEATURED_CATEGORIES: { id: SpotCategory; accent: keyof typeof V2_ACCENT; label: string }[] = [
-  { id: 'park', accent: 'indoor', label: '公園・自然' },
-  { id: 'zoo', accent: 'purple', label: '動物園' },
-  { id: 'aquarium', accent: 'rain', label: '水族館' },
-  { id: 'museum', accent: 'purple', label: '博物館・科学館' },
-  { id: 'indoor', accent: 'lunch', label: '室内遊び場' },
-  { id: 'amusement', accent: 'event', label: '遊園地' },
-];
+export default async function SpotsPage({ searchParams }: Props) {
+  const filters = parseFilters(await searchParams);
+  const filterMode = hasActiveFilters(filters);
 
-export default function SpotsPage() {
-  const allSpots = getAllSpotsWithSlug().filter((x) => isIndexable(x.spot));
-  // 人気スポット優先で並び替え
-  const sorted = [...allSpots].sort((a, b) => {
-    if (a.spot.popular && !b.spot.popular) return -1;
-    if (!a.spot.popular && b.spot.popular) return 1;
-    return 0;
-  });
-  // カテゴリ別表示なので全件を渡して各カテゴリで12件ずつ表示する
-  const displayed = sorted;
-  const totalCount = allSpots.length;
+  // 全おでかけ先（restaurant除外・掲載可能）。カテゴリ別取得を合成して再利用。
+  const allDest = BROWSE_CATEGORIES.flatMap((c) => spotsByCategory(c.id));
+  const filterable = allDest.map(toFilterable);
+  const totalCount = allDest.length;
 
   return (
     <V2Frame header="sub" active="area">
       <div className="v2-page-head" style={{ paddingTop: 6 }}>
-        <h1
-          className="v2-page-h1"
-          style={{ display: 'flex', alignItems: 'center', gap: 8 }}
-        >
+        <h1 className="v2-page-h1" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <V2Icon name="pin" size={24} color="var(--v2-orange)" />
-          子連れスポット一覧
+          子連れスポットを探す
         </h1>
         <p className="v2-page-lead">
-          0〜6歳の子どもと楽しめるスポットを{totalCount}件以上、カテゴリ別にまとめました。
+          0〜6歳の子どもと楽しめるスポットを{totalCount}件以上、カテゴリ別・条件別に探せます。
         </p>
       </div>
 
+      {/* 絞り込み・並び替え（P0-3b/c）。どちらのモードでも上部に常設。 */}
+      <div className="v2-section" style={{ marginTop: 4 }}>
+        <SpotFilterBar spots={filterable} initial={filters} basePath="/spots" />
+      </div>
+
+      {filterMode ? (
+        <FilteredResults filters={filters} allDest={allDest} />
+      ) : (
+        <BrowseMode />
+      )}
+
+      <div style={{ height: 24 }}></div>
+    </V2Frame>
+  );
+}
+
+/* ============ 絞り込みモード：カテゴリ枠を外したフラット結果 ============ */
+function FilteredResults({
+  filters,
+  allDest,
+}: {
+  filters: ReturnType<typeof parseFilters>;
+  allDest: ReturnType<typeof spotsByCategory>;
+}) {
+  const fmap = new Map(allDest.map((x) => [x.slug, x]));
+  const matched = sortSpots(
+    allDest.map(toFilterable).filter((s) => matchesFilters(s, filters)),
+    filters.sort,
+  ).map((s) => fmap.get(s.slug)!);
+
+  const head = matched.slice(0, INITIAL);
+  const rest = matched.slice(INITIAL);
+
+  if (matched.length === 0) {
+    return (
+      <div className="v2-section" style={{ marginTop: 20, textAlign: 'center' }}>
+        <p style={{ fontSize: 14, fontWeight: 700, marginBottom: 6 }}>
+          条件に合うスポットが見つかりませんでした
+        </p>
+        <p style={{ fontSize: 13, color: 'var(--v2-ink-mute)', marginBottom: 12, lineHeight: 1.7 }}>
+          設備や料金の条件を1つ外すか、エリアを「首都圏」に広げると見つかりやすくなります。
+        </p>
+        <Link href="/spots" className="v2-more-btn" style={resetBtnStyle}>
+          条件をリセットして全件を見る
+        </Link>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <p className="v2-section" style={{ fontSize: 13, fontWeight: 700, marginTop: 12 }}>
+        {matched.length}件
+      </p>
+      <div className="v2-vlist" style={{ marginTop: 4 }}>
+        {head.map((x, i) => (
+          <V2SpotRow key={x.slug} spot={spotToV2(x.spot, i)} href={`/spot/${x.slug}`} />
+        ))}
+      </div>
+      <SpotListReveal remaining={rest.length}>
+        {rest.map((x, i) => (
+          <V2SpotRow key={x.slug} spot={spotToV2(x.spot, i + INITIAL)} href={`/spot/${x.slug}`} />
+        ))}
+      </SpotListReveal>
+      <div className="v2-section" style={{ marginTop: 24 }}>
+        <AdSlot placement="home-below-finder" />
+      </div>
+    </>
+  );
+}
+
+/* ============ ブラウズモード：カテゴリ別（代表12件＋すべて見る） ============ */
+function BrowseMode() {
+  const byCat = BROWSE_CATEGORIES.map((c) => ({ c, list: spotsByCategory(c.id) }));
+  return (
+    <>
       {/* カテゴリショートカット */}
       <V2SectionHead title="カテゴリから探す" more="" />
       <div className="v2-quick-grid">
-        {FEATURED_CATEGORIES.map((c) => {
-          const a = V2_ACCENT[c.accent];
+        {BROWSE_CATEGORIES.map((c) => {
+          const a = V2_ACCENT[c.accent as keyof typeof V2_ACCENT] ?? V2_ACCENT.purple;
           return (
-            <Link key={c.id} href={`#cat-${c.id}`} className="v2-quick-item">
+            <Link key={c.id} href={`/spots/${c.id}`} className="v2-quick-item">
               <span className="v2-quick-ico" style={{ background: a.bg }}>
-                <V2Icon
-                  name={
-                    c.id === 'park' ? 'tree'
-                    : c.id === 'zoo' ? 'leaf'
-                    : c.id === 'aquarium' ? 'umbrella'
-                    : c.id === 'museum' ? 'book'
-                    : c.id === 'indoor' ? 'house'
-                    : 'party'
-                  }
-                  size={26}
-                  color={a.c}
-                />
+                <V2Icon name={c.icon as V2IconName} size={26} color={a.c} />
               </span>
               <span className="v2-quick-label">{c.label}</span>
             </Link>
@@ -97,48 +154,60 @@ export default function SpotsPage() {
         })}
       </div>
 
-      {/* AdSense */}
       <div className="v2-section" style={{ marginTop: 24 }}>
         <AdSlot placement="home-below-finder" />
       </div>
 
-      {/* カテゴリ別セクション */}
-      {FEATURED_CATEGORIES.map((c) => {
-        const list = displayed.filter((x) => x.spot.category === c.id);
+      {byCat.map(({ c, list }) => {
         if (!list.length) return null;
         return (
           <section key={c.id} id={`cat-${c.id}`}>
-            <V2SectionHead title={`${SPOT_CATEGORY_LABEL[c.id]}（${c.label}）`} more="" />
+            <V2SectionHead
+              title={`${SPOT_CATEGORY_LABEL[c.id]}（${c.label}）`}
+              more={list.length > PREVIEW ? 'すべて見る' : ''}
+              moreHref={list.length > PREVIEW ? `/spots/${c.id}` : undefined}
+            />
             <div className="v2-vlist">
-              {list.slice(0, 12).map((x, i) => {
-                const v = spotToV2(x.spot, i);
-                return (
-                  <V2SpotRow
-                    key={x.slug}
-                    spot={v}
-                    href={`/spot/${x.slug}`}
-                  />
-                );
-              })}
+              {list.slice(0, PREVIEW).map((x, i) => (
+                <V2SpotRow key={x.slug} spot={spotToV2(x.spot, i)} href={`/spot/${x.slug}`} />
+              ))}
             </div>
-            {list.length > 12 && (
+            {list.length > PREVIEW && (
               <div className="v2-section" style={{ marginTop: 12, textAlign: 'center' }}>
-                <p style={{ fontSize: 12, color: 'var(--v2-ink-mute)' }}>
-                  {SPOT_CATEGORY_LABEL[c.id]} は他に {list.length - 12} 件あります
-                </p>
+                <Link href={`/spots/${c.id}`} className="v2-more-btn" style={moreBtnStyle}>
+                  {c.label}をすべて見る（全{list.length}件）
+                  <V2Icon name="arrow-right" size={14} />
+                </Link>
               </div>
             )}
           </section>
         );
       })}
-
-      <div className="v2-section" style={{ marginTop: 24, textAlign: 'center' }}>
-        <p style={{ fontSize: 12, color: 'var(--v2-ink-mute)' }}>
-          全{totalCount}件のスポットを掲載中
-        </p>
-      </div>
-
-      <div style={{ height: 24 }}></div>
-    </V2Frame>
+    </>
   );
 }
+
+const moreBtnStyle: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 6,
+  padding: '10px 20px',
+  borderRadius: 999,
+  border: '1px solid var(--v2-line)',
+  background: 'var(--v2-card)',
+  color: 'var(--v2-ink)',
+  fontSize: 14,
+  fontWeight: 600,
+};
+const resetBtnStyle: React.CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 6,
+  padding: '10px 20px',
+  borderRadius: 999,
+  border: '1px solid var(--v2-line)',
+  background: 'var(--v2-card, #fff)',
+  color: 'var(--v2-ink)',
+  fontSize: 14,
+  fontWeight: 700,
+};

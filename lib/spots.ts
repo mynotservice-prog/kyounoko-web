@@ -88,6 +88,15 @@ export type Spot = {
    * admin（/admin/spots/edit）でアップロード/URL指定。未指定はカテゴリ自動画像。
    */
   images?: string[];
+  /**
+   * 画像の種別（§5-1 画像ポリシー）。実在施設のAI偽写真リスク管理のため、
+   * 全画像に種別・出典を持たせる。未指定＝カテゴリ自動画像（＝イメージ扱い）。
+   * - 実写: 運営/取材の実写   - 提供: 施設/自治体提供   - streetview: SV埋め込み
+   * - UGC: 投稿写真（P1-8b, 「みんなの写真 / by ニックネーム」）  - イメージ: AI/素材
+   */
+  imageKind?: '実写' | '提供' | 'streetview' | 'UGC' | 'イメージ';
+  /** 画像の出典/クレジット（例: '◯◯市提供' / 'by ゆうママ'）。 */
+  imageCredit?: string;
   budget?: 'free' | 'low' | 'mid' | 'high';  // 入園料目安
   // ---- Instagram人気アカウントから学んだ情報密度UP項目 ----
   pricing?: {
@@ -97,6 +106,12 @@ export type Spot = {
     infant?: string;     // '無料（3歳未満）'
   };
   reservation?: 'required' | 'recommended' | 'none';  // 予約制の有無
+  /**
+   * 公式サイトURL（§P1-4）。詳細ページに「公式サイトで最新情報・料金を確認」の
+   * 二次リンクを出す（予約アフィCTAの下＝アフィを取りこぼさない位置）。発リンクなので
+   * rel="noopener"（sponsored は付けない=通常の引用リンク）。
+   */
+  officialUrl?: string;
   crowdLevel?: {
     weekday?: 'low' | 'mid' | 'high';
     holiday?: 'low' | 'mid' | 'high';
@@ -1082,16 +1097,6 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       summerCool: true,
     },
     {
-      name: 'パナソニックセンター東京 AkeruE', category: 'museum', place: 'indoor', ages: ['4-6'], city: '江東区', ward: '江東区', note: '有明、創造体験型ミュージアム', budget: 'low',
-      nearestStation: 'ariake',
-      walkMinutes: 2,
-      pricing: { adult: '500円', elementary: '無料（18歳以下）', preschool: '無料', infant: '無料' },
-      reservation: 'recommended',
-      crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '18歳以下無料、ものづくり体験ワークショップが豊富',
-      summerCool: true,
-    },
-    {
       name: 'ベビーパーク KIDS PARK（複数）', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3'], city: '複数', note: '0-3歳特化の屋内遊び場', budget: 'mid',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -1192,26 +1197,6 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '電車好きキッズの聖地、運転シミュレータ無料、220円で1日遊べる',
-      summerCool: true,
-    },
-    {
-      name: 'JAL工場見学 SKY MUSEUM（羽田）', category: 'museum', place: 'indoor', ages: ['4-6'], city: '大田区', ward: '大田区', note: '飛行機の整備工場が見学できる', budget: 'free',
-      nearestStation: 'shin-seibijo',
-      walkMinutes: 2,
-      pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
-      reservation: 'required',
-      crowdLevel: { weekday: 'mid', holiday: 'high' },
-      hiddenTip: '完全予約制で6ヶ月前から受付、人気で土日は瞬殺。平日午後が比較的取りやすい',
-      summerCool: true,
-    },
-    {
-      name: 'ANA機体工場見学（羽田）', category: 'museum', place: 'indoor', ages: ['4-6'], city: '大田区', ward: '大田区', note: 'ANAの整備工場見学、無料', budget: 'free',
-      nearestStation: 'shin-seibijo',
-      walkMinutes: 15,
-      pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
-      reservation: 'required',
-      crowdLevel: { weekday: 'mid', holiday: 'high' },
-      hiddenTip: '4歳以上対象、完全予約制。JALと同じく半年前受付',
       summerCool: true,
     },
 
@@ -1546,15 +1531,6 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       summerCool: true,
     },
     {
-      name: '国立新美術館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '港区', ward: '港区', note: '六本木、企画展中心の現代美術館', budget: 'low',
-      nearestStation: 'nogizaka',
-      walkMinutes: 1,
-      reservation: 'recommended',
-      crowdLevel: { weekday: 'mid', holiday: 'high' },
-      hiddenTip: 'ベビーカーOK、館内のミュージアムカフェは子連れでも入りやすい',
-      summerCool: true,
-    },
-    {
       name: '東京タワー', category: 'amusement', place: 'mixed', ages: ['2-3', '4-6'], city: '港区', ward: '港区', note: '展望台と隣接の芝公園', budget: 'mid',
       nearestStation: 'akabanebashi',
       walkMinutes: 5,
@@ -1600,16 +1576,6 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '飛行機の離発着が真上、ファミリーキャンプ場（要予約）も併設',
-    },
-    {
-      name: '東京臨海広域防災公園 そなエリア東京', category: 'museum', place: 'indoor', ages: ['4-6'], city: '江東区', ward: '江東区', note: '防災体験ツアー、入場無料', budget: 'free',
-      nearestStation: 'kokusai-tenjijo',
-      walkMinutes: 4,
-      pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
-      reservation: 'none',
-      crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '完全無料、地震体験ツアー（タブレット式）が貴重。4歳以上に教育的価値',
-      summerCool: true,
     },
     {
       name: '東京駅前 行幸通り・丸の内仲通り', category: 'seasonal', place: 'outdoor', ages: ['2-3', '4-6'], city: '千代田区', ward: '千代田区', note: '冬のイルミネーション散策', budget: 'free',

@@ -1,5 +1,6 @@
 import type { NextConfig } from 'next';
 import { SPOT_REDIRECTS } from './lib/spot-redirects';
+import { CHAIN_SPOT_REDIRECTS } from './lib/chain-spot-redirects';
 import { ARTICLE_REDIRECTS } from './lib/article-redirects';
 
 const nextConfig: NextConfig = {
@@ -108,6 +109,21 @@ const nextConfig: NextConfig = {
           { key: 'Cloudflare-CDN-Cache-Control', value: cdnCache },
         ],
       },
+      // /today は searchParams を読むため Next.js 上は常に動的レンダリング扱いになり、
+      // CDNヘッダが無いと毎リクエストが Vercel Function を起動する（Functions監視で
+      // /today が突出して Active CPU を消費していたのはこれが原因）。
+      // ページ本体はクエリ→静的データの純粋計算で fetch/cookies/時刻依存なし＝同一URLは
+      // 常に同一結果なので、他の静的HTMLページと同様に CDN キャッシュ可。クエリ文字列違いは
+      // Cloudflare 側で別キャッシュキーになるため条件別ページも正しく分離される。
+      // 1h edge / 24h SWR はページの revalidate=3600 と整合。
+      {
+        source: '/today',
+        headers: [
+          { key: 'Cache-Control', value: edgeCache },
+          { key: 'CDN-Cache-Control', value: cdnCache },
+          { key: 'Cloudflare-CDN-Cache-Control', value: cdnCache },
+        ],
+      },
     ];
   },
 
@@ -120,6 +136,23 @@ const nextConfig: NextConfig = {
         destination: `/spot/${r.to}`,
         permanent: true,
       })),
+
+      // ===== P1-1c: 全国チェーン外食スポット /spot/[slug] → まとめ記事へ 301 =====
+      // チェーンは一覧/ランキング/今日の流れ(destination)からは除外済だが、URLが200で
+      // 生き続けると低品質・重複・カニバリの温床になるためURLレベルで統合する。
+      ...CHAIN_SPOT_REDIRECTS.map((r) => ({
+        source: `/spot/${r.from}`,
+        destination: r.to,
+        permanent: true,
+      })),
+
+      // ===== 実在するが子連れおでかけ先として不適/データ除外した施設(2026-07-01) =====
+      // データから除去したスポットURLを一覧へ301（被リンク・indexの行き止まり回避）。
+      { source: '/spot/-8bbk', destination: '/spots', permanent: true }, // 国立新美術館
+      { source: '/spot/ANA-qpn5', destination: '/spots', permanent: true }, // ANA機体工場見学（羽田）
+      { source: '/spot/JAL-SKY-MUSEUM-ovgj', destination: '/spots', permanent: true }, // JAL工場見学 SKY MUSEUM（羽田）
+      { source: '/spot/AkeruE-6dkq', destination: '/spots', permanent: true }, // パナソニックセンター東京 AkeruE
+      { source: '/spot/-2f47', destination: '/spots', permanent: true }, // 東京臨海広域防災公園 そなエリア東京
 
       // ===== 記事棚卸し監査(2026-06-25)：チェーン周辺条件の死蔵フラグメントを =====
       // 内容を包含する [chain]-kodzure-koryaku へ 301 統合（被リンク資産を勝ちページに集約）。

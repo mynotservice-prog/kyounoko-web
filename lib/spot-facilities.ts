@@ -170,8 +170,6 @@ export const SPOT_FACILITIES: Record<string, Facilities> = {
   'トリックアートミュージアム高尾山': { nursingRoom: 'no', note: '公式FAQで授乳室は「ご用意ありません」と明記。ベビーカーは館内持込不可。' },
   '東京消防庁 消防博物館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', note: 'GO TOKYO（東京都公式観光サイト）の施設情報にバリアフリートイレ・おむつ交換台・授乳室の記載。' },
   '地下鉄博物館（葛西）': { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式FAQにトイレのベビーベッド（おむつ交換）・授乳室・ベビーカー無料レンタルの記載。' },
-  'JAL工場見学 SKY MUSEUM（羽田）': { strollerRental: 'no', note: '公式サイトに「階段移動を伴うコースのためベビーカーでは参加不可」と明記。' },
-  'ANA機体工場見学（羽田）': { bathroom: 'yes', note: '公式FAQに車椅子用お手洗い1か所の記載。見学は小学1年生以上（未就学児不可）。' },
   '多摩六都科学館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: 'GO TOKYO（東京都公式観光サイト）の施設情報にバリアフリートイレ・おむつ交換台・授乳室・ベビーカー貸出の記載。' },
 
   // 関東（その他）

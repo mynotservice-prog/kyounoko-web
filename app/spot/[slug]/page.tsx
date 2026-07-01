@@ -27,9 +27,14 @@ import { spotToV2, articleToV2 } from '@/lib/v2-adapters';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { V2RememberSpot } from '@/components/v2/V2RememberSpot';
 import { VisitedReport } from '@/components/spot/VisitedReport';
+import { SpotMap } from '@/components/spot/SpotMap';
+import { ReviewSection } from '@/components/spot/ReviewSection';
+import { getRating, getUgcImage } from '@/lib/reviews';
 import { getPublishedSpotReports } from '@/lib/spot-reports';
 import { V2SaveButton, V2SdHeroFav } from '@/components/v2/V2SaveButton';
 import { getRecommendedItems } from '@/lib/recommended-items';
+import { getRakutenProduct, keywordFromRakutenSearchUrl, priceBandLabel } from '@/lib/rakuten-products';
+import { wrapMoshimoRakuten } from '@/lib/moshimo';
 import { getSpotReservationOffer } from '@/lib/reservation-cta';
 import { ReservationCTA } from '@/components/article/ReservationCTA';
 
@@ -166,8 +171,52 @@ export default async function SpotPage({ params }: Props) {
   // 差し替え画像（最大3枚）。[0]=hero、[1]=中段、[2]=下段に分散表示。
   const galleryImages = (spot.images ?? (spot.image ? [spot.image] : [])).slice(0, 3);
 
+  // §5-1 画像ポリシー：ヒーロー画像の種別を判定して「※イメージ」or 出典を表示。
+  // - 種別が実写/提供/SV/UGC → 出典クレジット
+  // - 種別=イメージ、または キュレーション画像が無い（＝カテゴリ自動画像）→ 「※イメージ」
+  // - キュレーション画像はあるが種別未指定 → 断定を避け何も出さない
+  const hasCuratedImage = !!(spot.images?.length || spot.image);
+  const KIND_CREDIT: Record<string, string> = {
+    実写: '実写', 提供: '提供画像', streetview: 'Googleストリートビュー', UGC: 'みんなの写真',
+  };
+  const heroImageNote: { image?: boolean; credit?: string } =
+    spot.imageKind && spot.imageKind !== 'イメージ'
+      ? { credit: spot.imageCredit ?? KIND_CREDIT[spot.imageKind] }
+      : spot.imageKind === 'イメージ' || !hasCuratedImage
+        ? { image: true }
+        : {};
+
   // 公開済みの「行ったよ」レポート（MicroCMS未設定時は常に空配列）
   const visitorReports = await getPublishedSpotReports(slug);
+
+  // P1-8: 口コミ★平均（承認済みから集計）。件数>0なら構造化データにも反映。
+  const reviewRating = await getRating(slug);
+  if (reviewRating.count > 0) {
+    (jsonLdPlace as Record<string, unknown>).aggregateRating = {
+      '@type': 'AggregateRating',
+      ratingValue: reviewRating.avg,
+      reviewCount: reviewRating.count,
+      bestRating: 5,
+      worstRating: 1,
+    };
+  }
+
+  // P1-8b: 承認済みUGC写真が代表画像に昇格されていれば、ヒーローに使う（imageKind=UGC）。
+  const ugc = await getUgcImage(slug);
+  const heroImg = ugc?.url ?? v2Spot.img;
+  const heroNote = ugc ? { image: false, credit: ugc.credit } : heroImageNote;
+
+  // P1-4: おすすめアイテムを楽天商品API（RAKUTEN_APP_ID）で実商品に解決。
+  // env未設定なら product=null で従来の検索リンクにフォールバック（もしも変換は共通適用）。
+  const recommendedItems = getRecommendedItems(spot.category, spot.place, spot.ages, 6);
+  const enrichedItems = await Promise.all(
+    recommendedItems.map(async (item) => {
+      const kw = keywordFromRakutenSearchUrl(item.url);
+      const product = kw ? await getRakutenProduct(kw) : null;
+      const href = wrapMoshimoRakuten(product?.url ?? item.url);
+      return { item, product, href };
+    }),
+  );
 
   return (
     <>
@@ -181,15 +230,36 @@ export default async function SpotPage({ params }: Props) {
         <V2RememberSpot
           slug={slug}
           name={spot.name}
-          img={v2Spot.img}
+          img={heroImg}
           area={spot.ward || spot.city}
         />
 
         {/* オーバーレイヒーロー（2回目デザイン .v2-sd-hero） */}
         <div className="v2-sd-hero">
           <div className="v2-sd-hero-img">
-            <V2Img src={v2Spot.img} seed={slug} alt={spot.name} />
+            <V2Img src={heroImg} seed={slug} alt={spot.name} />
             <div className="v2-sd-hero-grad"></div>
+
+            {/* §5-1: 画像の種別/出典（実在施設のAI偽写真の誤認を防ぐ / UGC昇格時はクレジット） */}
+            {(heroNote.image || heroNote.credit) && (
+              <span
+                style={{
+                  position: 'absolute',
+                  right: 8,
+                  bottom: 8,
+                  padding: '3px 8px',
+                  borderRadius: 6,
+                  background: 'rgba(0,0,0,0.55)',
+                  color: '#fff',
+                  fontSize: 10.5,
+                  fontWeight: 600,
+                  letterSpacing: '0.02em',
+                  zIndex: 2,
+                }}
+              >
+                {heroNote.image ? '※イメージ' : heroNote.credit}
+              </span>
+            )}
 
             {/* breadcrumb（写真の上に重ねる） */}
             <div className="v2-sd-hero-crumb">
@@ -459,6 +529,34 @@ export default async function SpotPage({ params }: Props) {
           </div>
         )}
 
+        {/* 公式サイト（§P1-4）。予約アフィCTAの“下”に二次リンクとして置く（発リンク=noopener） */}
+        {spot.officialUrl && (
+          <div className="v2-section" style={{ marginTop: 10 }}>
+            <a
+              href={spot.officialUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 8,
+                padding: '11px 14px',
+                borderRadius: 'var(--v2-r-card)',
+                border: '1px solid var(--v2-line)',
+                background: '#fff',
+                textDecoration: 'none',
+                color: 'var(--v2-ink)',
+                fontSize: 13.5,
+                fontWeight: 700,
+              }}
+            >
+              <V2Icon name="link" size={16} color="var(--v2-orange)" />
+              公式サイトで最新情報・料金を確認
+              <V2Icon name="chevron-right" size={15} color="#bbb" style={{ marginLeft: 'auto' }} />
+            </a>
+          </div>
+        )}
+
         {/* AdSense */}
         <div className="v2-section" style={{ marginTop: 24 }}>
           <AdSlot placement="article-mid" />
@@ -549,6 +647,17 @@ export default async function SpotPage({ params }: Props) {
           </div>
         )}
 
+        {/* 地図・アクセス（P1-6） */}
+        <SpotMap
+          name={spot.name}
+          area={spot.ward ?? spot.city}
+          stationLabel={
+            nearestStationName
+              ? `${nearestStationName}${spot.walkMinutes ? ` 徒歩${spot.walkMinutes}分` : ''}`
+              : undefined
+          }
+        />
+
         {/* よくある質問（FAQ） */}
         {faqs.length > 0 && (
           <>
@@ -605,63 +714,93 @@ export default async function SpotPage({ params }: Props) {
           </>
         )}
 
-        {/* 持っていくと便利（シーン×アイテム） */}
-        {(() => {
-          const items = getRecommendedItems(spot.category, spot.place, spot.ages, 6);
-          if (items.length === 0) return null;
-          return (
-            <>
-              <div className="v2-sec-head" style={{ marginTop: 22 }}>
-                <div className="v2-sec-title">
-                  <span className="v2-bar-accent"></span>{spot.name}に持っていくと便利
-                </div>
+        {/* 持っていくと便利（シーン×アイテム）。P1-4: 商品画像＋価格帯つきカード */}
+        {enrichedItems.length > 0 && (
+          <>
+            <div className="v2-sec-head" style={{ marginTop: 22 }}>
+              <div className="v2-sec-title">
+                <span className="v2-bar-accent"></span>{spot.name}に持っていくと便利
               </div>
-              <div className="v2-section">
-                <p style={{ fontSize: 12, color: 'var(--v2-ink-mute)', marginTop: 0, marginBottom: 12 }}>
-                  ※楽天市場のリンクです（広告 / PR）。値段や在庫は楽天で確認できます。
-                </p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                  {items.map((item, i) => (
+            </div>
+            <div className="v2-section">
+              <p style={{ fontSize: 12, color: 'var(--v2-ink-mute)', marginTop: 0, marginBottom: 12 }}>
+                広告 / PR ・ 楽天市場の商品です。価格・在庫は変動するため各リンク先でご確認ください。
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {enrichedItems.map(({ item, product, href }, i) => {
+                  const band = product ? priceBandLabel(product.price) : '';
+                  return (
                     <a
                       key={i}
-                      href={item.url}
+                      href={href}
                       target="_blank"
                       rel="sponsored nofollow noopener"
                       style={{
-                        display: 'block',
+                        display: 'flex',
+                        gap: 12,
                         background: '#fff',
                         border: '1px solid var(--v2-line)',
                         borderRadius: 'var(--v2-r-card)',
-                        padding: '14px 16px',
+                        padding: 12,
                         textDecoration: 'none',
+                        alignItems: 'flex-start',
                       }}
                     >
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6 }}>
-                        <span style={{
-                          width: 22, height: 22, borderRadius: '50%',
-                          background: 'var(--v2-orange-tint)',
-                          display: 'flex', alignItems: 'center', justifyContent: 'center',
-                          flex: 'none', fontSize: 11, fontWeight: 800,
-                          color: 'var(--v2-orange-deep)',
-                        }}>{i + 1}</span>
-                        <span style={{ fontSize: 14, fontWeight: 800, color: 'var(--v2-ink)' }}>
-                          {item.label}
-                        </span>
-                      </div>
-                      <p style={{ fontSize: 12.5, color: 'var(--v2-ink-soft)', lineHeight: 1.6, margin: 0 }}>
-                        {item.why}
-                      </p>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 4, marginTop: 8, fontSize: 12, color: 'var(--v2-orange-deep)', fontWeight: 700 }}>
-                        楽天で見る
-                        <V2Icon name="chevron-right" size={14} color="var(--v2-orange-deep)" />
+                      {/* 商品画像（取得できたときのみ） */}
+                      {product?.image && (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={product.image}
+                          alt={item.label}
+                          loading="lazy"
+                          width={84}
+                          height={84}
+                          style={{
+                            width: 84,
+                            height: 84,
+                            objectFit: 'contain',
+                            borderRadius: 10,
+                            border: '1px solid var(--v2-line)',
+                            background: '#fff',
+                            flex: 'none',
+                          }}
+                        />
+                      )}
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
+                          <span style={{
+                            width: 20, height: 20, borderRadius: '50%',
+                            background: 'var(--v2-orange-tint)',
+                            display: 'flex', alignItems: 'center', justifyContent: 'center',
+                            flex: 'none', fontSize: 11, fontWeight: 800,
+                            color: 'var(--v2-orange-deep)',
+                          }}>{i + 1}</span>
+                          <span style={{ fontSize: 14, fontWeight: 800, color: 'var(--v2-ink)' }}>
+                            {item.label}
+                          </span>
+                        </div>
+                        <p style={{ fontSize: 12.5, color: 'var(--v2-ink-soft)', lineHeight: 1.6, margin: 0 }}>
+                          {item.why}
+                        </p>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 8, flexWrap: 'wrap' }}>
+                          {band && (
+                            <span style={{ fontSize: 12, fontWeight: 800, color: 'var(--v2-ink)', background: 'var(--v2-cream, #fbf3e6)', padding: '2px 8px', borderRadius: 6 }}>
+                              {band}
+                            </span>
+                          )}
+                          <span style={{ display: 'inline-flex', alignItems: 'center', gap: 3, fontSize: 12, color: 'var(--v2-orange-deep)', fontWeight: 700 }}>
+                            楽天で見る
+                            <V2Icon name="chevron-right" size={14} color="var(--v2-orange-deep)" />
+                          </span>
+                        </div>
                       </div>
                     </a>
-                  ))}
-                </div>
+                  );
+                })}
               </div>
-            </>
-          );
-        })()}
+            </div>
+          </>
+        )}
 
         {/* 追加画像（下段） */}
         {galleryImages[2] && (
@@ -726,6 +865,9 @@ export default async function SpotPage({ params }: Props) {
             </div>
           </>
         )}
+        {/* P1-8: ログイン不要の口コミ（承認済みのみ表示・★平均） */}
+        <ReviewSection spotId={slug} spotName={spot.name} />
+
         <VisitedReport slug={slug} name={spot.name} />
 
         {/* 保存ボタン */}

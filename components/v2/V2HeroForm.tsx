@@ -2,219 +2,349 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import { V2Icon, type V2IconName } from './V2Icon';
-import { AREAS } from '@/lib/area';
+import { V2Icon } from './V2Icon';
+import type { FinderStation } from '@/lib/finder-stations';
 
 /**
- * TOP ヒーロー検索フォーム（インラインドロップダウン版）。
- * - 4セレクト（年齢/天気/ロケーション/エリア）
- * - 枠タップ → その場所（直下）にオプションリストがドロップダウン表示
- * - 外側タップ / ESC で閉じる
- * - 「家で」を選ぶとエリアは disabled
+ * TOP ヒーロー「1日プラン検索」フォーム（P0-1 / P0-2）。
+ *
+ * 指示書 P0-1: 入力→/today の断線を解消。1画面で 日付/年齢/駅/天気 を選び、
+ * すべてクエリに乗せて `/today?date=&age=&station=&weather=` へ直結する
+ * （駅アンカーの1日プランに一発到達。以前は area=都道府県 しか渡せず駅を選び直す断線があった）。
+ *
+ * P0-2: 日付タブの既定を曜日で出し分け（平日=今週末 / 土日=今日）。天気は手動選択。
  */
 
-type FieldDef = {
-  key: 'age' | 'weather' | 'place' | 'area';
-  label: string;
-  icon: V2IconName;
-  iconBg: string;
-  iconColor: string;
-  options: { v: string; t: string }[];
-};
+type DateKey = 'today' | 'tomorrow' | 'weekend';
+type AgeKey = '0-1' | '2-3' | '4-6';
+type WeatherKey = 'sunny' | 'cloudy' | 'rain';
 
-export function V2HeroForm() {
+const AGES: { v: AgeKey; t: string }[] = [
+  { v: '0-1', t: '0〜1歳' },
+  { v: '2-3', t: '2〜3歳' },
+  { v: '4-6', t: '4〜6歳' },
+];
+const WEATHERS: { v: WeatherKey; t: string; emoji: string }[] = [
+  { v: 'sunny', t: '晴れ', emoji: '☀' },
+  { v: 'cloudy', t: 'くもり', emoji: '☁' },
+  { v: 'rain', t: '雨', emoji: '☔' },
+];
+
+/** 曜日から日付タブの既定を決める（月〜金=weekend / 土日=today）。 */
+function defaultDateForToday(d: Date): DateKey {
+  const day = d.getDay(); // 0=日, 6=土
+  if (day === 0 || day === 6) return 'today';
+  return 'weekend';
+}
+function dateLabel(k: DateKey): string {
+  return k === 'today' ? '今日' : k === 'tomorrow' ? '明日' : '今週末';
+}
+
+export function V2HeroForm({
+  stations,
+  terminals,
+  family,
+}: {
+  stations: FinderStation[];
+  terminals: FinderStation[];
+  family: FinderStation[];
+}) {
   const router = useRouter();
-  const [age, setAge] = React.useState('2-3');
-  const [weather, setWeather] = React.useState('sunny');
-  const [place, setPlace] = React.useState<'outside' | 'home'>('outside');
-  const [area, setArea] = React.useState('all');
-  const [open, setOpen] = React.useState<FieldDef['key'] | null>(null);
+
+  // date: hydration mismatch を避けるため初期は 'weekend' 固定 → mount 後に曜日で補正。
+  const [date, setDate] = React.useState<DateKey>('weekend');
+  const [age, setAge] = React.useState<AgeKey>('2-3');
+  const [weather, setWeather] = React.useState<WeatherKey>('sunny');
+  const [station, setStation] = React.useState<FinderStation | null>(null);
+  const [stationOpen, setStationOpen] = React.useState(false);
+  const [q, setQ] = React.useState('');
+  const [err, setErr] = React.useState(false);
 
   React.useEffect(() => {
+    setDate(defaultDateForToday(new Date()));
     try {
-      const saved = localStorage.getItem('kk_v2_area');
-      if (saved) setArea(saved);
+      const saved = localStorage.getItem('kk_finder_station');
+      if (saved) {
+        const hit = stations.find((s) => s.slug === saved);
+        if (hit) setStation(hit);
+      }
     } catch {
       /* ignore */
     }
-  }, []);
-
-  const isHome = place === 'home';
+  }, [stations]);
 
   const onSubmit = () => {
+    if (!station) {
+      setErr(true);
+      setStationOpen(true);
+      return;
+    }
     try {
-      if (!isHome) localStorage.setItem('kk_v2_area', area);
+      localStorage.setItem('kk_finder_station', station.slug);
     } catch {
       /* ignore */
     }
-    const params = new URLSearchParams({ age, weather, place });
-    if (!isHome && area && area !== 'all') params.set('area', area);
+    const params = new URLSearchParams({ date, age, station: station.slug, weather });
     router.push(`/today?${params.toString()}`);
   };
 
-  const fields: FieldDef[] = [
-    {
-      key: 'age', label: '年齢', icon: 'baby',
-      iconBg: 'var(--v2-c-event-bg)', iconColor: 'var(--v2-c-event)',
-      options: [
-        { v: '0-1', t: '0〜1歳' },
-        { v: '2-3', t: '2〜3歳' },
-        { v: '4-6', t: '4〜6歳' },
-      ],
-    },
-    {
-      key: 'weather', label: '天気', icon: 'sun',
-      iconBg: 'var(--v2-c-sun-bg)', iconColor: 'var(--v2-c-sun)',
-      options: [
-        { v: 'sunny', t: '晴れ' },
-        { v: 'rain', t: '雨' },
-        { v: 'heat', t: '猛暑' },
-        { v: 'cold', t: '寒い' },
-      ],
-    },
-    {
-      key: 'place', label: 'ロケーション', icon: isHome ? 'house' : 'tree',
-      iconBg: 'var(--v2-c-indoor-bg)', iconColor: 'var(--v2-c-indoor)',
-      options: [
-        { v: 'outside', t: '外で' },
-        { v: 'home', t: '家で' },
-      ],
-    },
-    {
-      key: 'area', label: 'エリア', icon: 'pin',
-      iconBg: 'var(--v2-c-lunch-bg)', iconColor: 'var(--v2-c-lunch)',
-      options: AREAS.map((p) => ({
-        v: p.slug, t: p.slug === 'all' ? '全国' : p.name,
-      })),
-    },
-  ];
-
-  const valueFor = (k: FieldDef['key']) => {
-    if (k === 'age') return age;
-    if (k === 'weather') return weather;
-    if (k === 'place') return place;
-    return isHome ? 'all' : area;
-  };
-  const setValueFor = (k: FieldDef['key'], v: string) => {
-    if (k === 'age') setAge(v);
-    else if (k === 'weather') setWeather(v);
-    else if (k === 'place') setPlace(v as 'outside' | 'home');
-    else setArea(v);
-  };
-  const labelFor = (f: FieldDef) => {
-    const cur = valueFor(f.key);
-    return f.options.find((o) => o.v === cur)?.t ?? cur;
+  const pick = (s: FinderStation) => {
+    setStation(s);
+    setErr(false);
+    setStationOpen(false);
+    setQ('');
   };
 
-  // 外側クリック / ESC で閉じる
-  const formRef = React.useRef<HTMLDivElement>(null);
-  React.useEffect(() => {
-    if (!open) return;
-    const onDoc = (e: MouseEvent | TouchEvent) => {
-      if (formRef.current && !formRef.current.contains(e.target as Node)) {
-        setOpen(null);
-      }
-    };
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setOpen(null);
-    };
-    document.addEventListener('mousedown', onDoc);
-    document.addEventListener('touchstart', onDoc);
-    document.addEventListener('keydown', onKey);
-    return () => {
-      document.removeEventListener('mousedown', onDoc);
-      document.removeEventListener('touchstart', onDoc);
-      document.removeEventListener('keydown', onKey);
-    };
-  }, [open]);
+  const filtered = React.useMemo(() => {
+    const t = q.trim().toLowerCase();
+    if (!t) return [];
+    return stations
+      .filter((s) => s.name.includes(t) || s.kana.includes(t) || s.slug.includes(t))
+      .slice(0, 12);
+  }, [q, stations]);
 
   return (
-    <div className="v2-hero-form" ref={formRef}>
-      <div className="v2-hf-fields">
-        {fields.map((f) => {
-          const disabled = f.key === 'area' && isHome;
-          const isSet = !disabled;
-          const isOpen = open === f.key;
-          // area は項目数多いので multi-column / wide
-          const wide = f.key === 'area';
-          return (
-            <div key={f.key} className="v2-hf-cell">
-              <button
-                type="button"
-                className={
-                  'v2-hf-field' +
-                  (isSet ? ' set' : '') +
-                  (isOpen ? ' open' : '')
-                }
-                onClick={() => {
-                  if (disabled) return;
-                  setOpen(isOpen ? null : f.key);
-                }}
-                style={{ opacity: disabled ? 0.45 : 1 }}
-                aria-expanded={isOpen}
-                aria-haspopup="listbox"
-              >
-                <span className="v2-hf-ico" style={{ background: f.iconBg, color: f.iconColor }}>
-                  <V2Icon name={f.icon} size={17} />
-                </span>
-                <span className="v2-hf-txt">
-                  <span className="v2-hf-lab">{f.label}</span>
-                  <span className="v2-hf-val">{labelFor(f)}</span>
-                </span>
-                <span
-                  style={{
-                    display: 'flex',
-                    transition: 'transform .15s',
-                    transform: isOpen ? 'rotate(180deg)' : 'none',
-                  }}
-                >
-                  <V2Icon name="chevron-down" size={15} color="#c4bbb0" />
-                </span>
-              </button>
-              {isOpen && (
-                <div
-                  className={'v2-hf-popover' + (wide ? ' wide' : '')}
-                  role="listbox"
-                >
-                  {f.options.map((o) => {
-                    const on = o.v === valueFor(f.key);
-                    return (
-                      <button
-                        key={o.v}
-                        type="button"
-                        role="option"
-                        aria-selected={on}
-                        className={'v2-hf-opt' + (on ? ' on' : '')}
-                        onClick={() => {
-                          setValueFor(f.key, o.v);
-                          setOpen(null);
-                        }}
-                      >
-                        {o.t}
-                        {on && (
-                          <V2Icon
-                            name="arrow-right"
-                            size={14}
-                            color="var(--v2-orange)"
-                            style={{ marginLeft: 'auto' }}
-                          />
-                        )}
-                      </button>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-          );
-        })}
+    <div className="v2-hero-form">
+      {/* ① 日付タブ */}
+      <div className="v2-hf-datetabs" role="tablist" aria-label="いつ行く"
+        style={{ display: 'flex', gap: 6 }}>
+        {(['today', 'tomorrow', 'weekend'] as DateKey[]).map((k) => (
+          <button
+            key={k}
+            type="button"
+            role="tab"
+            aria-selected={date === k}
+            className={'v2-hf-datetab' + (date === k ? ' on' : '')}
+            onClick={() => setDate(k)}
+            style={{
+              flex: 1,
+              padding: '8px 4px',
+              borderRadius: 10,
+              border: '1px solid ' + (date === k ? 'var(--v2-orange)' : 'var(--v2-line)'),
+              background: date === k ? 'var(--v2-orange)' : 'var(--v2-card, #fff)',
+              color: date === k ? '#fff' : 'var(--v2-ink)',
+              fontSize: 13,
+              fontWeight: 700,
+              cursor: 'pointer',
+            }}
+          >
+            {dateLabel(k)}
+          </button>
+        ))}
       </div>
+
+      {/* ② 年齢 */}
+      <div className="v2-hf-chiprow" style={{ marginTop: 10 }}>
+        <span className="v2-hf-chiplabel" style={chipLabelStyle}>お子さんの年齢</span>
+        <div className="v2-hf-chips" style={chipsRowStyle}>
+          {AGES.map((a) => (
+            <button
+              key={a.v}
+              type="button"
+              className={'v2-hf-chip' + (age === a.v ? ' on' : '')}
+              aria-pressed={age === a.v}
+              onClick={() => setAge(a.v)}
+              style={chipStyle(age === a.v)}
+            >
+              {a.t}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* ③ 駅・エリア（必須） */}
+      <div className="v2-hf-chiprow" style={{ marginTop: 10 }}>
+        <span className="v2-hf-chiplabel" style={chipLabelStyle}>どこから？（駅）</span>
+        <button
+          type="button"
+          className={'v2-hf-stationbtn' + (err ? ' err' : '')}
+          onClick={() => setStationOpen((o) => !o)}
+          aria-expanded={stationOpen}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 8,
+            width: '100%',
+            padding: '11px 12px',
+            borderRadius: 11,
+            border: '1px solid ' + (err ? '#e0574c' : 'var(--v2-line)'),
+            background: 'var(--v2-card, #fff)',
+            color: station ? 'var(--v2-ink)' : 'var(--v2-ink-mute)',
+            fontSize: 14,
+            fontWeight: station ? 700 : 500,
+            cursor: 'pointer',
+          }}
+        >
+          <V2Icon name="pin" size={16} color="var(--v2-orange)" />
+          {station ? `${station.name}駅` : '駅・エリアを選ぶ'}
+          <V2Icon name="chevron-down" size={15} color="#c4bbb0" style={{ marginLeft: 'auto' }} />
+        </button>
+        {err && (
+          <p style={{ fontSize: 12, color: '#e0574c', margin: '4px 2px 0' }}>
+            出発する駅を選んでください
+          </p>
+        )}
+
+        {stationOpen && (
+          <div
+            className="v2-hf-stationpop"
+            style={{
+              marginTop: 8,
+              padding: 12,
+              borderRadius: 12,
+              border: '1px solid var(--v2-line)',
+              background: 'var(--v2-card, #fff)',
+              boxShadow: '0 8px 24px rgba(0,0,0,.10)',
+            }}
+          >
+            <input
+              type="text"
+              inputMode="search"
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              placeholder="🔍 駅名で検索（例：池袋）"
+              autoFocus
+              style={{
+                width: '100%',
+                padding: '9px 11px',
+                borderRadius: 9,
+                border: '1px solid var(--v2-line)',
+                fontSize: 14,
+                marginBottom: 10,
+              }}
+            />
+            {q.trim() ? (
+              <div className="v2-hf-stationlist">
+                {filtered.length === 0 ? (
+                  <p style={{ fontSize: 13, color: 'var(--v2-ink-mute)', padding: '6px 2px' }}>
+                    該当する駅が見つかりません
+                  </p>
+                ) : (
+                  filtered.map((s) => (
+                    <button
+                      key={s.slug}
+                      type="button"
+                      className="v2-hf-stationopt"
+                      onClick={() => pick(s)}
+                      style={stationOptStyle}
+                    >
+                      {s.name}駅
+                    </button>
+                  ))
+                )}
+              </div>
+            ) : (
+              <>
+                <StationChips label="主要ターミナル" list={terminals} onPick={pick} />
+                <StationChips label="子育て世帯に人気の駅" list={family} onPick={pick} />
+              </>
+            )}
+          </div>
+        )}
+      </div>
+
+      {/* ④ 天気 */}
+      <div className="v2-hf-chiprow" style={{ marginTop: 10 }}>
+        <span className="v2-hf-chiplabel" style={chipLabelStyle}>お天気</span>
+        <div className="v2-hf-chips" style={chipsRowStyle}>
+          {WEATHERS.map((w) => (
+            <button
+              key={w.v}
+              type="button"
+              className={'v2-hf-chip' + (weather === w.v ? ' on' : '')}
+              aria-pressed={weather === w.v}
+              onClick={() => setWeather(w.v)}
+              style={chipStyle(weather === w.v)}
+            >
+              {w.emoji} {w.t}
+            </button>
+          ))}
+        </div>
+      </div>
+
       <button
         type="button"
         className="v2-btn-primary v2-hf-submit"
         onClick={onSubmit}
+        style={{ marginTop: 14 }}
       >
-        <V2Icon name="search" size={19} color="#fff" /> この条件で探す
+        <V2Icon name="search" size={19} color="#fff" /> この条件で1日プランを作る
       </button>
+    </div>
+  );
+}
+
+const chipLabelStyle: React.CSSProperties = {
+  display: 'block',
+  fontSize: 12,
+  fontWeight: 700,
+  color: 'var(--v2-ink-mute)',
+  marginBottom: 6,
+};
+const chipsRowStyle: React.CSSProperties = { display: 'flex', gap: 7, flexWrap: 'wrap' };
+function chipStyle(on: boolean): React.CSSProperties {
+  return {
+    flex: '1 1 0',
+    minWidth: 72,
+    padding: '9px 10px',
+    borderRadius: 10,
+    border: '1px solid ' + (on ? 'var(--v2-orange)' : 'var(--v2-line)'),
+    background: on ? 'var(--v2-orange-tint, #fff2e8)' : 'var(--v2-card, #fff)',
+    color: on ? 'var(--v2-orange-deep, #c05a1e)' : 'var(--v2-ink)',
+    fontSize: 13.5,
+    fontWeight: 700,
+    cursor: 'pointer',
+  };
+}
+
+const stationOptStyle: React.CSSProperties = {
+  display: 'block',
+  width: '100%',
+  textAlign: 'left',
+  padding: '9px 10px',
+  borderRadius: 8,
+  border: 'none',
+  background: 'transparent',
+  color: 'var(--v2-ink)',
+  fontSize: 14,
+  fontWeight: 600,
+  cursor: 'pointer',
+};
+
+function StationChips({
+  label,
+  list,
+  onPick,
+}: {
+  label: string;
+  list: FinderStation[];
+  onPick: (s: FinderStation) => void;
+}) {
+  if (!list.length) return null;
+  return (
+    <div style={{ marginBottom: 10 }}>
+      <p style={{ fontSize: 12, color: 'var(--v2-ink-mute)', margin: '0 0 6px' }}>{label}</p>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 7 }}>
+        {list.map((s) => (
+          <button
+            key={s.slug}
+            type="button"
+            onClick={() => onPick(s)}
+            style={{
+              padding: '6px 12px',
+              borderRadius: 999,
+              border: '1px solid var(--v2-line)',
+              background: 'var(--v2-bg, #faf6ef)',
+              color: 'var(--v2-ink)',
+              fontSize: 13,
+              fontWeight: 600,
+              cursor: 'pointer',
+            }}
+          >
+            {s.name}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

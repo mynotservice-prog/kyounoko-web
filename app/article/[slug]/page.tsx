@@ -16,8 +16,10 @@ import { TableOfContents } from '@/components/article/TableOfContents';
 import { PRBadge } from '@/components/affiliate/PRBadge';
 import { AffiliateLinkGroup } from '@/components/affiliate/AffiliateLinkGroup';
 import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
+import { NextPlanCTA } from '@/components/article/NextPlanCTA';
 import { InlineItemCTA } from '@/components/article/InlineItemCTA';
 import { getAffiliateProducts } from '@/lib/affiliate-products';
+import { pinImageUrl, pinImagePath } from '@/lib/pin-images';
 import {
   getRelatedItemsForArticle,
   getRestaurantBridgeOffer,
@@ -163,6 +165,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const ogImages = article.hero
     ? [{ url: article.hero, width: 1600, height: 900 }]
     : [{ url: dynamicOg, width: 1200, height: 630 }];
+  // Pinterest 用の縦長(2:3)Pin画像。横長の「後」に og:image として追加で露出する。
+  // 他SNSは1枚目(横長)を使うので共有カードは不変。Pinterestのピッカーで縦長が選べる。
+  const pinImg = pinImageUrl(slug);
+  const ogImagesWithPin = pinImg
+    ? [...ogImages, { url: pinImg, width: 1000, height: 1500 }]
+    : ogImages;
   return {
     title: article.title,
     description,
@@ -173,7 +181,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'article',
       publishedTime: article.publishedAt,
       modifiedTime: article.updatedAt,
-      images: ogImages,
+      images: ogImagesWithPin,
     },
     twitter: {
       card: 'summary_large_image',
@@ -181,10 +189,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       images: ogImages.map((i) => i.url),
     },
-    // Pinterest Rich Pins 対応：記事毎の hero 画像をピン素材として明示
+    // Pinterest Rich Pins 対応：縦長Pin画像があればそれ、無ければ hero をピン素材に
     other: {
       'pinterest-rich-pin': 'true',
-      'pinterest:image': heroAbsolute,
+      'pinterest:image': pinImg ?? heroAbsolute,
       'pinterest:description': description ?? '',
       'pinterest:title': article.title,
     },
@@ -1050,6 +1058,22 @@ function FileArticleView({ article }: { article: FileArticle }) {
           {/* Body */}
           <div className="prose" dangerouslySetInnerHTML={{ __html: article.body }} />
 
+          {/* Pinterest 用の縦長Pin画像。本文内の実 <img> として描画し、
+              「URLから保存」ピッカーで縦長を選べるようにする（og:imageは拾われないため）。 */}
+          {pinImagePath(article.slug) && (
+            <div style={{ margin: '28px 0', textAlign: 'center' }}>
+              <p style={{ fontSize: 13, color: '#999', margin: '0 0 8px' }}>📌 Pinterest で保存</p>
+              <img
+                src={pinImagePath(article.slug) as string}
+                width={1000}
+                height={1500}
+                alt={article.title}
+                loading="lazy"
+                style={{ width: 280, maxWidth: '100%', height: 'auto', borderRadius: 12, display: 'inline-block' }}
+              />
+            </div>
+          )}
+
           {/* YouTube 埋め込み（frontmatter `youtube:` が指定された記事のみ） */}
           {article.youtube && (
             <YouTubeEmbed videoId={article.youtube} title={article.title} />
@@ -1068,6 +1092,13 @@ function FileArticleView({ article }: { article: FileArticle }) {
               limit={6}
             />
           )}
+
+          {/* P1-7: 本体ツール（1日プランナー /today）への明示送客。エリア引き継ぎ。
+              全記事末尾に必須（横断ルール §5-3）。 */}
+          <NextPlanCTA
+            area={article.area}
+            age={article.quickInfo?.ageRanges?.[0] as '0-1' | '2-3' | '4-6' | undefined}
+          />
 
           {/* 旧: body 直下の ShareBar はここに置いていたが、末尾(著者ブロック直下)と
               重複していたため削除。離脱ポイントを増やさない方針。 */}

@@ -271,12 +271,15 @@ export function OutingPlanView({
   params,
   ageLabel,
   weatherLabel,
+  rainPlan,
 }: {
   plan: OutingPlan;
   /** 現在の /today クエリ（station/age/weather/vm/vl/va 等）。スワップ/別案リンク生成に使う */
   params: Record<string, string>;
   ageLabel?: string;
   weatherLabel?: string;
+  /** P0-2: 雨プランB（同条件を weather=rain で再生成した屋内中心の代替）。null なら非表示。 */
+  rainPlan?: OutingPlan | null;
 }) {
   const { anchor, slots, coverage } = plan;
   const anchorLabel = anchor.stationName ? `${anchor.stationName}駅` : anchor.regionLabel;
@@ -358,6 +361,50 @@ export function OutingPlanView({
         })}
       </div>
 
+      {/* 1日の動線マップ（P1-6）。3地点＋起点駅を結ぶGoogleマップ経路（APIキー不要）。 */}
+      {(() => {
+        const points = [
+          anchor.stationName ? `${anchor.stationName}駅` : anchor.regionLabel,
+          ...slots.map((s) => s.spot?.name).filter((n): n is string => !!n),
+        ];
+        if (points.length < 2) return null;
+        const origin = encodeURIComponent(points[0]);
+        const destination = encodeURIComponent(points[points.length - 1]);
+        const waypoints = points.slice(1, -1).map(encodeURIComponent).join('|');
+        const url =
+          `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}` +
+          (waypoints ? `&waypoints=${waypoints}` : '') +
+          `&travelmode=walking`;
+        return (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 10,
+              marginTop: 16,
+              padding: '14px 16px',
+              borderRadius: 14,
+              border: '1px solid var(--v2-line, #ead9c2)',
+              background: 'var(--v2-c-rain-bg, #eef4fb)',
+              textDecoration: 'none',
+              color: 'var(--ink, #2a2018)',
+            }}
+          >
+            <span style={{ fontSize: 20 }}>🗺</span>
+            <span style={{ flex: 1 }}>
+              <span style={{ display: 'block', fontSize: 14, fontWeight: 800 }}>1日の動線を地図で見る</span>
+              <span style={{ display: 'block', fontSize: 11.5, color: 'var(--ink-sub)' }}>
+                {points.join(' → ')}
+              </span>
+            </span>
+            <span style={{ fontSize: 18, color: 'var(--clay-deep)' }}>→</span>
+          </a>
+        );
+      })()}
+
       {/* お昼の予約CTA（env未設定なら非表示） */}
       {reservationOffer && (
         <div style={{ marginTop: 14 }}>
@@ -390,6 +437,67 @@ export function OutingPlanView({
       <p style={{ fontSize: 11.5, color: 'var(--ink-mute)', marginTop: 14, lineHeight: 1.6 }}>
         ※ 各スポットをタップすると詳細（設備・アクセス）が見られます。移動が長い組み合わせは出しません。
       </p>
+
+      {/* P0-2: 雨プランB（折りたたみ。native details なので JS 不要・CLSなし） */}
+      {rainPlan && rainPlan.slots.length > 0 && (
+        <details className="rain-plan-b" style={{ marginTop: 18 }}>
+          <summary
+            style={{
+              cursor: 'pointer',
+              listStyle: 'none',
+              padding: '12px 14px',
+              borderRadius: 12,
+              border: '1px solid var(--v2-line, #ead9c2)',
+              background: 'var(--v2-c-rain-bg, #eef4fb)',
+              fontSize: 14,
+              fontWeight: 800,
+              color: 'var(--ink, #2a2018)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 8,
+            }}
+          >
+            ☔ 雨ならこっち
+            <span style={{ fontSize: 11.5, fontWeight: 600, color: 'var(--ink-sub)' }}>
+              （屋内中心の代替プラン）
+            </span>
+          </summary>
+          <div style={{ padding: '12px 4px 0' }}>
+            {rainPlan.slots.map((slot, i) => {
+              const label =
+                slot.spot?.name ?? slot.plan?.title ?? 'おうちでゆっくり過ごす';
+              return (
+                <div
+                  key={`rain-${slot.key}`}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 10,
+                    padding: '9px 0',
+                    borderTop: i > 0 ? '1px solid var(--v2-line, #ead9c2)' : 'none',
+                  }}
+                >
+                  <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', minWidth: 78 }}>
+                    {slot.time} {slot.label}
+                  </span>
+                  {slot.spotSlug && slot.kind !== 'homeplan' ? (
+                    <Link
+                      href={`/spot/${slot.spotSlug}`}
+                      style={{ fontSize: 14, fontWeight: 700, color: 'var(--ink)', textDecoration: 'none' }}
+                    >
+                      {slot.icon} {label}
+                    </Link>
+                  ) : (
+                    <span style={{ fontSize: 14, fontWeight: 700 }}>
+                      {slot.icon} {label}
+                    </span>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </details>
+      )}
 
       {/* 別の駅で組み直す導線 */}
       <div style={{ marginTop: 10 }}>

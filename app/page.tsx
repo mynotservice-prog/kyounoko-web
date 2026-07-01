@@ -13,6 +13,8 @@ import {
 } from '@/components/v2/V2Base';
 import { V2Icon, V2_ACCENT } from '@/components/v2/V2Icon';
 import { V2HeroForm } from '@/components/v2/V2HeroForm';
+import { V2PurposeRanking } from '@/components/v2/V2PurposeRanking';
+import { FINDER_STATIONS, POPULAR_TERMINALS, POPULAR_FAMILY } from '@/lib/finder-stations';
 import { V2RecentSpots } from '@/components/v2/V2RecentSpots';
 import { V2TodayHero } from '@/components/v2/V2TodayHero';
 import { LineCta } from '@/components/common/LineCta';
@@ -151,11 +153,15 @@ export default function HomePage() {
           </span>
           <h1 className="v2-hero2-h1">今日、どこ行く？</h1>
           <p className="v2-hero2-sub">
-            年齢・天気・エリアから、<br className="v2-br-pc" />
-            親子にぴったりのおでかけ先が見つかる。
+            年齢・駅・天気を選ぶだけで、<br className="v2-br-pc" />
+            子連れの「1日プラン」が3分で決まる。
           </p>
           <div className="v2-hero-ov-form">
-            <V2HeroForm />
+            <V2HeroForm
+              stations={FINDER_STATIONS}
+              terminals={POPULAR_TERMINALS}
+              family={POPULAR_FAMILY}
+            />
           </div>
         </div>
       </div>
@@ -186,6 +192,9 @@ export default function HomePage() {
           );
         })}
       </div>
+
+      {/* 目的別 実用ランキング（首都圏 × 目的）。全国ごちゃ混ぜでなく実需に沿う（P1-2） */}
+      <V2PurposeRanking />
 
       {/* 人気スポット */}
       <V2SectionHead title="人気スポットランキング" moreHref="/ranking" />
