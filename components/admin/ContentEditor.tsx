@@ -48,6 +48,7 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
   const [message, setMessage] = useState<{ type: 'ok' | 'err' | 'info'; text: string; url?: string } | null>(null);
   const [dirty, setDirty] = useState(false);
   const [source, setSource] = useState<'fs' | 'github' | null>(null);
+  const [heroUploading, setHeroUploading] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -91,6 +92,27 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
   const updatePrimary = (k: PrimaryKey, v: string) => {
     setPrimary((prev) => ({ ...prev, [k]: v }));
     setDirty(true);
+  };
+
+  // hero画像アップロード: /api/admin/spot-image（Blob）へ送り、返ったURLをheroにセット。
+  const uploadHero = async (file: File) => {
+    setHeroUploading(true);
+    setMessage(null);
+    try {
+      const fd = new FormData();
+      fd.append('file', file);
+      const res = await fetch('/api/admin/spot-image', { method: 'POST', body: fd });
+      const json = await res.json();
+      if (!res.ok || !json.path) {
+        setMessage({ type: 'err', text: json.error || '画像アップロードに失敗しました' });
+      } else {
+        updatePrimary('hero', json.path);
+        setMessage({ type: 'ok', text: '画像をアップロードしました（保存で確定）' });
+      }
+    } catch {
+      setMessage({ type: 'err', text: '通信エラーが発生しました' });
+    }
+    setHeroUploading(false);
   };
 
   const onSave = async () => {
@@ -191,14 +213,50 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
             style={{ ...inputStyle, resize: 'vertical', height: 90 }}
           />
         </Field>
-        <Field label="hero画像パス">
-          <input
-            type="text"
-            value={primary.hero}
-            onChange={(e) => updatePrimary('hero', e.target.value)}
-            placeholder="/hero-ai/<slug>.jpg"
-            style={inputStyle}
-          />
+        <Field label="hero画像">
+          {primary.hero && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={primary.hero}
+              alt="hero プレビュー"
+              style={{ display: 'block', width: '100%', maxHeight: 180, objectFit: 'cover', borderRadius: 8, border: '1px solid var(--border, #e5e5e5)', marginBottom: 8 }}
+            />
+          )}
+          <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+            <input
+              type="text"
+              value={primary.hero}
+              onChange={(e) => updatePrimary('hero', e.target.value)}
+              placeholder="画像をアップロード、または /photos/<slug>.webp を入力"
+              style={{ ...inputStyle, flex: 1 }}
+            />
+            <label
+              style={{
+                flex: '0 0 auto',
+                padding: '9px 14px',
+                borderRadius: 8,
+                border: '1px solid var(--border, #e5e5e5)',
+                background: heroUploading ? '#eee' : '#fff',
+                fontSize: 13,
+                fontWeight: 700,
+                cursor: heroUploading ? 'default' : 'pointer',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {heroUploading ? 'アップロード中…' : '📤 画像を選ぶ'}
+              <input
+                type="file"
+                accept="image/jpeg,image/png,image/webp"
+                disabled={heroUploading}
+                onChange={(e) => {
+                  const f = e.target.files?.[0];
+                  if (f) uploadHero(f);
+                  e.target.value = '';
+                }}
+                style={{ display: 'none' }}
+              />
+            </label>
+          </div>
         </Field>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
           <Field label="カテゴリ slug">
