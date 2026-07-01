@@ -127,8 +127,11 @@ export async function checkRateLimit(ipHash: string): Promise<{ ok: boolean; err
 // ---------- Turnstile ----------
 export async function verifyTurnstile(token: string | undefined, ip?: string): Promise<boolean> {
   const secret = process.env.TURNSTILE_SECRET_KEY;
-  // 未設定なら検証をスキップ（開発/未導入時。本番はenv必須）
-  if (!secret) return true;
+  const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+  // 有効化は「サイトキー＆シークレット両方が揃っている」時のみ。
+  // 片方だけの設定漏れ・ビルド反映漏れでは検証をスキップし、承認制を防波堤にする
+  // （＝ウィジェットが出ないのにサーバーがトークン必須→全投稿失敗、を防ぐ）。
+  if (!secret || !siteKey) return true;
   if (!token) return false;
   try {
     const body = new URLSearchParams({ secret, response: token });

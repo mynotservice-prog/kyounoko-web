@@ -10,7 +10,7 @@ import { trackEvent } from '@/lib/analytics';
  */
 type AgeBand = '0-1' | '2-3' | '4-6';
 
-export function ReviewForm({ spotId, spotName }: { spotId: string; spotName: string }) {
+export function ReviewForm({ spotId, spotName, siteKey }: { spotId: string; spotName: string; siteKey?: string }) {
   const [open, setOpen] = React.useState(false);
   const [done, setDone] = React.useState(false);
   const [rating, setRating] = React.useState(0);
@@ -24,7 +24,6 @@ export function ReviewForm({ spotId, spotName }: { spotId: string; spotName: str
   const [files, setFiles] = React.useState<File[]>([]);
   const [license, setLicense] = React.useState(false);
 
-  const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
   const onPickFiles = (e: React.ChangeEvent<HTMLInputElement>) => {
     const picked = Array.from(e.target.files ?? []);
