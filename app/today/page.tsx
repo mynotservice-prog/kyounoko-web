@@ -556,6 +556,22 @@ export default async function TodayPage({ searchParams }: Props) {
     : null;
 
   if (outingPlan) {
+    // P0-2: 雨プランB。晴れ/くもり時に、同条件を weather=rain で再生成した
+    // 屋内中心の代替プランを「☔ 雨ならこっち」に折りたたみ併記する。
+    const rainPlan =
+      query.weather === 'rain'
+        ? null
+        : buildOutingPlan({
+            stationSlug: stationParam,
+            ward: wardParam,
+            age: query.age as AgeTag | undefined,
+            weather: 'rain',
+            budget: query.budget as 'free' | 'low' | 'mid' | 'high' | undefined,
+            morningVariant: num(sp.vm),
+            lunchVariant: num(sp.vl),
+            afternoonVariant: num(sp.va),
+          });
+
     return (
       <V2Frame header="sub" active="today" backHref="/today">
         <div className="container">
@@ -570,6 +586,7 @@ export default async function TodayPage({ searchParams }: Props) {
           params={outingParams}
           ageLabel={ageLabel}
           weatherLabel={weatherLabel}
+          rainPlan={rainPlan}
         />
       </V2Frame>
     );
@@ -715,16 +732,20 @@ export default async function TodayPage({ searchParams }: Props) {
       <section className="section" style={{ paddingTop: 28 }}>
         <div className="container-narrow">
           {!hasQuery ? (
-            <div style={{ padding: '40px 0', textAlign: 'center', color: 'var(--ink-sub)' }}>
-              <p style={{ marginBottom: 16, fontSize: 15 }}>まだ条件が選ばれていません。</p>
-              <Link href="/#finder" className="btn-primary-light">条件を選ぶ</Link>
+            // P0-1: トップへの強制送還（戻りループ）を廃止。上の駅ピッカーがそのまま入口。
+            <div style={{ padding: '24px 0 8px', textAlign: 'center', color: 'var(--ink-sub)' }}>
+              <p style={{ fontSize: 14, lineHeight: 1.7, margin: 0 }}>
+                ↑ 上の<strong style={{ color: 'var(--ink)' }}>駅</strong>をえらぶと、その場で「今日の流れ」を作ります。
+              </p>
             </div>
           ) : !top && !isEatOutside ? (
-            <div style={{ padding: '40px 0', textAlign: 'center', color: 'var(--ink-sub)' }}>
-              <p style={{ marginBottom: 16, fontSize: 15 }}>
+            <div style={{ padding: '32px 0 8px', textAlign: 'center', color: 'var(--ink-sub)' }}>
+              <p style={{ marginBottom: 8, fontSize: 15 }}>
                 今日の条件に合う答えは、まだ準備中です。
               </p>
-              <Link href="/#finder" className="btn-primary-light">条件を変える</Link>
+              <p style={{ fontSize: 13, lineHeight: 1.7, margin: 0 }}>
+                ↑ 上の<strong style={{ color: 'var(--ink)' }}>駅</strong>をえらび直すか、天気・年齢を変えてみてください。
+              </p>
             </div>
           ) : (
             <>
