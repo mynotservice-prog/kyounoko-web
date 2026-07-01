@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { trackEvent } from '@/lib/analytics';
+import { BABYCAR_MODELS, type ResolvedBabycar } from '@/lib/babycar-models';
+import { priceBandLabel } from '@/lib/rakuten-products';
 
 /**
  * ベビーカー診断 — 5問→3モデル提案。
@@ -169,7 +171,7 @@ const RECOMMENDATIONS: Recommendation[] = [
 
 const TOOL_ID = 'babycar-shindan';
 
-export function BabycarShindanClient() {
+export function BabycarShindanClient({ products }: { products: Record<string, ResolvedBabycar> }) {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Record<string, Tag[]>>({});
 
@@ -379,6 +381,87 @@ export function BabycarShindanClient() {
                     </ul>
                   </div>
                 </div>
+                {/* P1-9: 具体的な型番（画像・価格・購入リンク）＋スペック比較表 */}
+                {(BABYCAR_MODELS[rec.id] ?? []).length > 0 && (
+                  <div style={{ marginBottom: 16 }}>
+                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>
+                      このタイプのおすすめモデル
+                    </div>
+                    <div style={{ display: 'grid', gap: 10 }}>
+                      {(BABYCAR_MODELS[rec.id] ?? []).map((m) => {
+                        const p = products[m.keyword];
+                        const band = p ? priceBandLabel(p.price) : '';
+                        return (
+                          <a
+                            key={m.keyword}
+                            href={p?.href ?? `https://search.rakuten.co.jp/search/mall/${encodeURIComponent(m.keyword)}/`}
+                            target="_blank"
+                            rel="sponsored nofollow noopener"
+                            style={{
+                              display: 'flex',
+                              gap: 12,
+                              alignItems: 'flex-start',
+                              padding: 10,
+                              background: 'var(--paper)',
+                              border: '1px solid var(--line)',
+                              borderRadius: 'var(--radius-md)',
+                              textDecoration: 'none',
+                              color: 'var(--ink)',
+                            }}
+                          >
+                            {p?.image && (
+                              // eslint-disable-next-line @next/next/no-img-element
+                              <img
+                                src={p.image}
+                                alt={m.name}
+                                loading="lazy"
+                                width={72}
+                                height={72}
+                                style={{ width: 72, height: 72, objectFit: 'contain', borderRadius: 8, border: '1px solid var(--line)', background: '#fff', flex: 'none' }}
+                              />
+                            )}
+                            <div style={{ flex: 1, minWidth: 0 }}>
+                              <div style={{ fontSize: 13.5, fontWeight: 700 }}>{m.name}</div>
+                              <div style={{ fontSize: 12, color: 'var(--ink-sub)', lineHeight: 1.6, marginTop: 2 }}>{m.note}</div>
+                              <div style={{ display: 'flex', gap: 6, marginTop: 6, flexWrap: 'wrap', alignItems: 'center' }}>
+                                {band && (
+                                  <span style={{ fontSize: 11.5, fontWeight: 800, background: 'var(--paper-card)', border: '1px solid var(--line)', padding: '2px 7px', borderRadius: 6 }}>{band}</span>
+                                )}
+                                <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--clay-deep)' }}>楽天で見る →</span>
+                              </div>
+                            </div>
+                          </a>
+                        );
+                      })}
+                    </div>
+
+                    {/* スペック比較表 */}
+                    <div style={{ overflowX: 'auto', marginTop: 10 }}>
+                      <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 12 }}>
+                        <thead>
+                          <tr style={{ color: 'var(--ink-mute)', textAlign: 'left' }}>
+                            <th style={{ padding: '6px 8px', fontWeight: 700 }}>モデル</th>
+                            <th style={{ padding: '6px 8px', fontWeight: 700, whiteSpace: 'nowrap' }}>重さ</th>
+                            <th style={{ padding: '6px 8px', fontWeight: 700, whiteSpace: 'nowrap' }}>対象月齢</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {(BABYCAR_MODELS[rec.id] ?? []).map((m) => (
+                            <tr key={m.keyword} style={{ borderTop: '1px solid var(--line)' }}>
+                              <td style={{ padding: '6px 8px', fontWeight: 700 }}>{m.name}</td>
+                              <td style={{ padding: '6px 8px', whiteSpace: 'nowrap' }}>{m.weight}</td>
+                              <td style={{ padding: '6px 8px', whiteSpace: 'nowrap' }}>{m.ageFrom}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                    <p style={{ fontSize: 10.5, color: 'var(--ink-mute)', marginTop: 6 }}>
+                      広告 / PR ・ 楽天市場の商品です。重さ・対象月齢はモデル仕様の目安、価格・在庫はリンク先でご確認ください。
+                    </p>
+                  </div>
+                )}
+
                 {rec.href && (
                   <Link
                     href={rec.href}
