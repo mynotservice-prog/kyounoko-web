@@ -27,6 +27,7 @@ import { spotToV2, articleToV2 } from '@/lib/v2-adapters';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { V2RememberSpot } from '@/components/v2/V2RememberSpot';
 import { VisitedReport } from '@/components/spot/VisitedReport';
+import { SpotMap } from '@/components/spot/SpotMap';
 import { getPublishedSpotReports } from '@/lib/spot-reports';
 import { V2SaveButton, V2SdHeroFav } from '@/components/v2/V2SaveButton';
 import { getRecommendedItems } from '@/lib/recommended-items';
@@ -548,6 +549,17 @@ export default async function SpotPage({ params }: Props) {
             )}
           </div>
         )}
+
+        {/* 地図・アクセス（P1-6） */}
+        <SpotMap
+          name={spot.name}
+          area={spot.ward ?? spot.city}
+          stationLabel={
+            nearestStationName
+              ? `${nearestStationName}${spot.walkMinutes ? ` 徒歩${spot.walkMinutes}分` : ''}`
+              : undefined
+          }
+        />
 
         {/* よくある質問（FAQ） */}
         {faqs.length > 0 && (
