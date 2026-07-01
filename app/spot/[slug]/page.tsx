@@ -166,6 +166,21 @@ export default async function SpotPage({ params }: Props) {
   // 差し替え画像（最大3枚）。[0]=hero、[1]=中段、[2]=下段に分散表示。
   const galleryImages = (spot.images ?? (spot.image ? [spot.image] : [])).slice(0, 3);
 
+  // §5-1 画像ポリシー：ヒーロー画像の種別を判定して「※イメージ」or 出典を表示。
+  // - 種別が実写/提供/SV/UGC → 出典クレジット
+  // - 種別=イメージ、または キュレーション画像が無い（＝カテゴリ自動画像）→ 「※イメージ」
+  // - キュレーション画像はあるが種別未指定 → 断定を避け何も出さない
+  const hasCuratedImage = !!(spot.images?.length || spot.image);
+  const KIND_CREDIT: Record<string, string> = {
+    実写: '実写', 提供: '提供画像', streetview: 'Googleストリートビュー', UGC: 'みんなの写真',
+  };
+  const heroImageNote: { image?: boolean; credit?: string } =
+    spot.imageKind && spot.imageKind !== 'イメージ'
+      ? { credit: spot.imageCredit ?? KIND_CREDIT[spot.imageKind] }
+      : spot.imageKind === 'イメージ' || !hasCuratedImage
+        ? { image: true }
+        : {};
+
   // 公開済みの「行ったよ」レポート（MicroCMS未設定時は常に空配列）
   const visitorReports = await getPublishedSpotReports(slug);
 
@@ -190,6 +205,27 @@ export default async function SpotPage({ params }: Props) {
           <div className="v2-sd-hero-img">
             <V2Img src={v2Spot.img} seed={slug} alt={spot.name} />
             <div className="v2-sd-hero-grad"></div>
+
+            {/* §5-1: 画像の種別/出典（実在施設のAI偽写真の誤認を防ぐ） */}
+            {(heroImageNote.image || heroImageNote.credit) && (
+              <span
+                style={{
+                  position: 'absolute',
+                  right: 8,
+                  bottom: 8,
+                  padding: '3px 8px',
+                  borderRadius: 6,
+                  background: 'rgba(0,0,0,0.55)',
+                  color: '#fff',
+                  fontSize: 10.5,
+                  fontWeight: 600,
+                  letterSpacing: '0.02em',
+                  zIndex: 2,
+                }}
+              >
+                {heroImageNote.image ? '※イメージ' : heroImageNote.credit}
+              </span>
+            )}
 
             {/* breadcrumb（写真の上に重ねる） */}
             <div className="v2-sd-hero-crumb">

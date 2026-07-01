@@ -88,6 +88,15 @@ export type Spot = {
    * admin（/admin/spots/edit）でアップロード/URL指定。未指定はカテゴリ自動画像。
    */
   images?: string[];
+  /**
+   * 画像の種別（§5-1 画像ポリシー）。実在施設のAI偽写真リスク管理のため、
+   * 全画像に種別・出典を持たせる。未指定＝カテゴリ自動画像（＝イメージ扱い）。
+   * - 実写: 運営/取材の実写   - 提供: 施設/自治体提供   - streetview: SV埋め込み
+   * - UGC: 投稿写真（P1-8b, 「みんなの写真 / by ニックネーム」）  - イメージ: AI/素材
+   */
+  imageKind?: '実写' | '提供' | 'streetview' | 'UGC' | 'イメージ';
+  /** 画像の出典/クレジット（例: '◯◯市提供' / 'by ゆうママ'）。 */
+  imageCredit?: string;
   budget?: 'free' | 'low' | 'mid' | 'high';  // 入園料目安
   // ---- Instagram人気アカウントから学んだ情報密度UP項目 ----
   pricing?: {
