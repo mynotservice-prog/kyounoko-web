@@ -31,6 +31,8 @@ import { SpotMap } from '@/components/spot/SpotMap';
 import { getPublishedSpotReports } from '@/lib/spot-reports';
 import { V2SaveButton, V2SdHeroFav } from '@/components/v2/V2SaveButton';
 import { getRecommendedItems } from '@/lib/recommended-items';
+import { getRakutenProduct, keywordFromRakutenSearchUrl, priceBandLabel } from '@/lib/rakuten-products';
+import { wrapMoshimoRakuten } from '@/lib/moshimo';
 import { getSpotReservationOffer } from '@/lib/reservation-cta';
 import { ReservationCTA } from '@/components/article/ReservationCTA';
 
@@ -184,6 +186,18 @@ export default async function SpotPage({ params }: Props) {
 
   // 公開済みの「行ったよ」レポート（MicroCMS未設定時は常に空配列）
   const visitorReports = await getPublishedSpotReports(slug);
+
+  // P1-4: おすすめアイテムを楽天商品API（RAKUTEN_APP_ID）で実商品に解決。
+  // env未設定なら product=null で従来の検索リンクにフォールバック（もしも変換は共通適用）。
+  const recommendedItems = getRecommendedItems(spot.category, spot.place, spot.ages, 6);
+  const enrichedItems = await Promise.all(
+    recommendedItems.map(async (item) => {
+      const kw = keywordFromRakutenSearchUrl(item.url);
+      const product = kw ? await getRakutenProduct(kw) : null;
+      const href = wrapMoshimoRakuten(product?.url ?? item.url);
+      return { item, product, href };
+    }),
+  );
 
   return (
     <>
@@ -496,6 +510,34 @@ export default async function SpotPage({ params }: Props) {
           </div>
         )}
 
+        {/* 公式サイト（§P1-4）。予約アフィCTAの“下”に二次リンクとして置く（発リンク=noopener） */}
+        {spot.officialUrl && (
+          <div className="v2-section" style={{ marginTop: 10 }}>
+            <a
+              href={spot.officialUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 8,
+                padding: '11px 14px',
+                borderRadius: 'var(--v2-r-card)',
+                border: '1px solid var(--v2-line)',
+                background: '#fff',
+                textDecoration: 'none',
+                color: 'var(--v2-ink)',
+                fontSize: 13.5,
+                fontWeight: 700,
+              }}
+            >
+              <V2Icon name="link" size={16} color="var(--v2-orange)" />
+              公式サイトで最新情報・料金を確認
+              <V2Icon name="chevron-right" size={15} color="#bbb" style={{ marginLeft: 'auto' }} />
+            </a>
+          </div>
+        )}
+
         {/* AdSense */}
         <div className="v2-section" style={{ marginTop: 24 }}>
           <AdSlot placement="article-mid" />
@@ -653,63 +695,93 @@ export default async function SpotPage({ params }: Props) {
           </>
         )}
 
-        {/* 持っていくと便利（シーン×アイテム） */}
-        {(() => {
-          const items = getRecommendedItems(spot.category, spot.place, spot.ages, 6);
-          if (items.length === 0) return null;
-          return (
-            <>
-              <div className="v2-sec-head" style={{ marginTop: 22 }}>
-                <div className="v2-sec-title">
-                  <span className="v2-bar-accent"></span>{spot.name}に持っていくと便利
-                </div>
+        {/* 持っていくと便利（シーン×アイテム）。P1-4: 商品画像＋価格帯つきカード */}
+        {enrichedItems.length > 0 && (
+          <>
+            <div className="v2-sec-head" style={{ marginTop: 22 }}>
+              <div className="v2-sec-title">
+                <span className="v2-bar-accent"></span>{spot.name}に持っていくと便利
               </div>
-              <div className="v2-section">
-                <p style={{ fontSize: 12, color: 'var(--v2-ink-mute)', marginTop: 0, marginBottom: 12 }}>
-                  ※楽天市場のリンクです（広告 / PR）。値段や在庫は楽天で確認できます。
-                </p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                  {items.map((item, i) => (
+            </div>
+            <div className="v2-section">
+              <p style={{ fontSize: 12, color: 'var(--v2-ink-mute)', marginTop: 0, marginBottom: 12 }}>
+                広告 / PR ・ 楽天市場の商品です。価格・在庫は変動するため各リンク先でご確認ください。
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {enrichedItems.map(({ item, product, href }, i) => {
+                  const band = product ? priceBandLabel(product.price) : '';
+                  return (
                     <a
                       key={i}
-                      href={item.url}
+                      href={href}
                       target="_blank"
                       rel="sponsored nofollow noopener"
                       style={{
-                        display: 'block',
+                        display: 'flex',
+                        gap: 12,
                         background: '#fff',
                         border: '1px solid var(--v2-line)',
                         borderRadius: 'var(--v2-r-card)',
-                        padding: '14px 16px',
+                        padding: 12,
                         textDecoration: 'none',
+                        alignItems: 'flex-start',
                       }}
                     >
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6 }}>
-                        <span style={{
-                          width: 22, height: 22, borderRadius: '50%',
-                          background: 'var(--v2-orange-tint)',
-                          display: 'flex', alignItems: 'center', justifyContent: 'center',
-                          flex: 'none', fontSize: 11, fontWeight: 800,
-                          color: 'var(--v2-orange-deep)',
-                        }}>{i + 1}</span>
-                        <span style={{ fontSize: 14, fontWeight: 800, color: 'var(--v2-ink)' }}>
-                          {item.label}
-                        </span>
-                      </div>
-                      <p style={{ fontSize: 12.5, color: 'var(--v2-ink-soft)', lineHeight: 1.6, margin: 0 }}>
-                        {item.why}
-                      </p>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 4, marginTop: 8, fontSize: 12, color: 'var(--v2-orange-deep)', fontWeight: 700 }}>
-                        楽天で見る
-                        <V2Icon name="chevron-right" size={14} color="var(--v2-orange-deep)" />
+                      {/* 商品画像（取得できたときのみ） */}
+                      {product?.image && (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={product.image}
+                          alt={item.label}
+                          loading="lazy"
+                          width={84}
+                          height={84}
+                          style={{
+                            width: 84,
+                            height: 84,
+                            objectFit: 'contain',
+                            borderRadius: 10,
+                            border: '1px solid var(--v2-line)',
+                            background: '#fff',
+                            flex: 'none',
+                          }}
+                        />
+                      )}
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
+                          <span style={{
+                            width: 20, height: 20, borderRadius: '50%',
+                            background: 'var(--v2-orange-tint)',
+                            display: 'flex', alignItems: 'center', justifyContent: 'center',
+                            flex: 'none', fontSize: 11, fontWeight: 800,
+                            color: 'var(--v2-orange-deep)',
+                          }}>{i + 1}</span>
+                          <span style={{ fontSize: 14, fontWeight: 800, color: 'var(--v2-ink)' }}>
+                            {item.label}
+                          </span>
+                        </div>
+                        <p style={{ fontSize: 12.5, color: 'var(--v2-ink-soft)', lineHeight: 1.6, margin: 0 }}>
+                          {item.why}
+                        </p>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 8, flexWrap: 'wrap' }}>
+                          {band && (
+                            <span style={{ fontSize: 12, fontWeight: 800, color: 'var(--v2-ink)', background: 'var(--v2-cream, #fbf3e6)', padding: '2px 8px', borderRadius: 6 }}>
+                              {band}
+                            </span>
+                          )}
+                          <span style={{ display: 'inline-flex', alignItems: 'center', gap: 3, fontSize: 12, color: 'var(--v2-orange-deep)', fontWeight: 700 }}>
+                            楽天で見る
+                            <V2Icon name="chevron-right" size={14} color="var(--v2-orange-deep)" />
+                          </span>
+                        </div>
                       </div>
                     </a>
-                  ))}
-                </div>
+                  );
+                })}
               </div>
-            </>
-          );
-        })()}
+            </div>
+          </>
+        )}
 
         {/* 追加画像（下段） */}
         {galleryImages[2] && (

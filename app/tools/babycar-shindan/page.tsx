@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
 import { BabycarShindanClient } from './Client';
+import { allBabycarKeywords, type ResolvedBabycar } from '@/lib/babycar-models';
+import { getRakutenProduct } from '@/lib/rakuten-products';
+import { wrapMoshimoRakuten } from '@/lib/moshimo';
 
 export const metadata: Metadata = {
   title: 'ベビーカー診断｜あなたに合う1台を3分で',
@@ -14,7 +17,22 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BabycarShindanPage() {
+export default async function BabycarShindanPage() {
+  // P1-9: 各モデルの具体商品（画像/価格/購入リンク）を楽天APIで一括解決し Client へ。
+  // env未設定なら image=null・楽天検索リンクにフォールバック（fetchもしない）。
+  const products: Record<string, ResolvedBabycar> = {};
+  await Promise.all(
+    allBabycarKeywords().map(async (kw) => {
+      const p = await getRakutenProduct(kw);
+      const searchUrl = `https://search.rakuten.co.jp/search/mall/${encodeURIComponent(kw)}/`;
+      products[kw] = {
+        image: p?.image ?? null,
+        price: p?.price ?? 0,
+        href: wrapMoshimoRakuten(p?.url ?? searchUrl),
+      };
+    }),
+  );
+
   const jsonLdBreadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -61,7 +79,7 @@ export default function BabycarShindanPage() {
           </p>
         </header>
 
-        <BabycarShindanClient />
+        <BabycarShindanClient products={products} />
 
         <section style={{ marginTop: 56 }}>
           <h2 style={{ fontFamily: 'var(--font-mincho), serif', fontSize: 20, margin: '0 0 14px' }}>
