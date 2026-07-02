@@ -74,6 +74,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/contact`, lastModified: legalLastMod, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${BASE}/privacy`, lastModified: legalLastMod, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${BASE}/terms`, lastModified: legalLastMod, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${BASE}/external-transmission`, lastModified: legalLastMod, changeFrequency: 'yearly', priority: 0.3 },
   ];
 
   let categorySlugs: string[] = FALLBACK_CATEGORY_SLUGS;
