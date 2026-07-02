@@ -187,7 +187,11 @@ export default async function SpotPage({ params }: Props) {
   // - キュレーション画像はあるが種別未指定 → 断定を避け何も出さない
   const hasCuratedImage = !!(spot.images?.length || spot.image);
   const KIND_CREDIT: Record<string, string> = {
-    実写: '実写', 提供: '提供画像', streetview: 'Googleストリートビュー', UGC: 'みんなの写真',
+    実写: '実写',
+    // 施設提供の公式写真は提供元名まで明記する（編集方針5-5）。個別指定があれば imageCredit が優先。
+    提供: `写真提供：${spot.name}`,
+    streetview: 'Googleストリートビュー',
+    UGC: 'みんなの写真',
   };
   const heroImageNote: { image?: boolean; credit?: string } =
     spot.imageKind && spot.imageKind !== 'イメージ'
