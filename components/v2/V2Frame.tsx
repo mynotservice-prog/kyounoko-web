@@ -47,6 +47,7 @@ function V2MobileMenu({
     { label: '編集方針', href: '/editorial-policy' },
     { label: 'プライバシーポリシー', href: '/privacy' },
     { label: '利用規約', href: '/terms' },
+    { label: '外部送信ポリシー', href: '/external-transmission' },
   ];
 
   return (

@@ -57,6 +57,7 @@ export function SiteFooter() {
               <li><Link href="/contact">お問い合わせ</Link></li>
               <li><Link href="/privacy">プライバシー</Link></li>
               <li><Link href="/terms">利用規約</Link></li>
+              <li><Link href="/external-transmission">外部送信ポリシー</Link></li>
               <li><Link href="/credits">画像クレジット</Link></li>
             </ul>
             <h4 style={{ marginTop: 18 }}>Follow</h4>
