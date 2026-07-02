@@ -5,8 +5,11 @@ metaDescription: 夏休みは図鑑で見た「本物」に会いに行くチャ
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-07-02'
-updatedAt: '2026-07-02'
+updatedAt: '2026-07-03'
 hero: /photos/article-hakubutsukan-jiyukenkyu-2026natsu.webp
+photoProviders:
+  - 東京国立博物館
+heroCredit: 写真提供：東京国立博物館
 lede: >-
   図鑑を毎日ながめている子には、この夏「本物」を見せてあげませんか。恐竜の全身骨格、本物の飛行機、頭上いっぱいの星空。博物館・科学館は冷房が効いていて、猛暑日でも快適に過ごせます。子どもの「好き」のジャンル別に、全国18か所をまとめました（2026年7月時点の情報です）。
 quickInfo:
@@ -33,7 +36,9 @@ area: all
 
 館内は冷房完備。猛暑の日も雨の日も予定を変えずに済むのが、夏の博物館の強みです。
 
-![東京国立博物館で親子が仏像を鑑賞する様子（写真提供：東京国立博物館）](/photos/article-hakubutsukan-jiyukenkyu-2026natsu.webp)
+![東京国立博物館で親子が仏像を鑑賞する様子](/photos/article-hakubutsukan-jiyukenkyu-2026natsu.webp)
+
+*写真提供：東京国立博物館*
 
 ## 恐竜・化石が好きな子に
 
