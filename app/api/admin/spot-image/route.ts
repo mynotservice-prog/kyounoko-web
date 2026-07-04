@@ -4,11 +4,12 @@ import path from 'node:path';
 import { isBlobConfigured, uploadToBlob } from '@/lib/blob-store';
 
 /**
- * /admin/spots/edit の画像アップロード API。
+ * 管理画面の画像アップロード API（スポット編集・記事/プランのhero共用）。
  *
  * 機能:
- *  - POST (multipart/form-data) { slug, file } → 画像を保存しパスを返す
- *      レスポンス: { ok: true, path: '/img/spots/<slug>-<ts>.<ext>' }
+ *  - POST (multipart/form-data) { slug, file, dir? } → 画像を保存しパスを返す
+ *      dir: 'spots'（既定） | 'articles'
+ *      レスポンス: { ok: true, path: '/img/<dir>/<slug>-<ts>.<ext>' }（Blob設定時は公開URL）
  *
  * 保存先:
  *  - ローカル開発: public/img/spots/ に直接書き込み
@@ -23,7 +24,9 @@ import { isBlobConfigured, uploadToBlob } from '@/lib/blob-store';
  */
 
 const ROOT = process.cwd();
-const PUBLIC_DIR_REL = 'public/img/spots';
+// 保存先ディレクトリ。呼び出し元が dir で指定（spot編集=spots / 記事・プランのhero=articles）。
+const ALLOWED_DIRS = ['spots', 'articles'] as const;
+type UploadDir = (typeof ALLOWED_DIRS)[number];
 const MAX_BYTES = 5 * 1024 * 1024;
 
 const EXT_BY_TYPE: Record<string, string> = {
@@ -92,6 +95,8 @@ export async function POST(req: NextRequest) {
 
   const slug = form.get('slug');
   const file = form.get('file');
+  const dirRaw = form.get('dir');
+  const dir: UploadDir = ALLOWED_DIRS.includes(dirRaw as UploadDir) ? (dirRaw as UploadDir) : 'spots';
   if (!isValidSlug(slug)) return NextResponse.json({ error: 'invalid slug' }, { status: 400 });
   if (!(file instanceof File)) return NextResponse.json({ error: 'file required' }, { status: 400 });
 
@@ -111,12 +116,13 @@ export async function POST(req: NextRequest) {
   // 衝突しないファイル名（slug + 短いタイムスタンプ）
   const ts = Date.now().toString(36);
   const filename = `${slug}-${ts}.${ext}`;
-  const fileRel = `${PUBLIC_DIR_REL}/${filename}`;
-  const publicPath = `/img/spots/${filename}`;
+  const publicDirRel = `public/img/${dir}`;
+  const fileRel = `${publicDirRel}/${filename}`;
+  const publicPath = `/img/${dir}/${filename}`;
 
   // Blob 設定時: Blob にアップロードして公開URLを返す（git commit不要・デプロイ不要）。
   if (isBlobConfigured()) {
-    const url = await uploadToBlob(`spots/${filename}`, buf, file.type);
+    const url = await uploadToBlob(`${dir}/${filename}`, buf, file.type);
     if (!url) return NextResponse.json({ error: 'blob upload failed' }, { status: 500 });
     return NextResponse.json({ ok: true, mode: 'blob', path: url });
   }
@@ -124,7 +130,7 @@ export async function POST(req: NextRequest) {
   // ローカル開発: public へ直接書き込み
   if (process.env.NODE_ENV === 'development') {
     try {
-      const dirAbs = path.join(ROOT, PUBLIC_DIR_REL);
+      const dirAbs = path.join(ROOT, publicDirRel);
       await fs.mkdir(dirAbs, { recursive: true });
       await fs.writeFile(path.join(ROOT, fileRel), buf);
     } catch (e) {
@@ -137,7 +143,7 @@ export async function POST(req: NextRequest) {
   }
 
   // 本番: GitHub に commit
-  const r = await ghPutBinary(fileRel, buf.toString('base64'), `chore(spot): upload image ${filename}`);
+  const r = await ghPutBinary(fileRel, buf.toString('base64'), `chore(admin): upload image ${fileRel}`);
   if (!r.ok) {
     return NextResponse.json({ error: r.error || 'github upload failed' }, { status: 500 });
   }
