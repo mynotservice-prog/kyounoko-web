@@ -149,7 +149,7 @@ A. **コメダは広いソファ席＋無料モーニングサービスの圧倒
 
 **他チェーンのモーニング攻略**
 
-- [星乃珈琲のモーニング攻略](/article/hoshino-morning-kosodate)
+- [星乃珈琲のモーニング攻略｜時間・メニュー・値段](/article/hoshino-morning-kosodate)
 - [スタバのモーニング攻略](/article/starbucks-kodzure-koryaku)
 - [ドトールのモーニング攻略](/article/doutor-kodzure-koryaku)
 
