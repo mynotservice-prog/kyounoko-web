@@ -10,6 +10,10 @@
  */
 
 import { TOKYO_STATIONS, type TokyoStation } from './tokyo-stations';
+import { getStationWithChains } from './station-restaurants';
+import { getIndieRestaurantsByStation } from './indie-restaurants';
+import { filterChainsByCondition, filterIndiesByCondition } from './station-conditions';
+import { isStationConditionIndexable } from './station-cond-index';
 
 /** 駅検出結果。 */
 export type DetectedStationLink = {
@@ -83,7 +87,19 @@ export function buildStationLinkForArticle(args: {
   const station = detectStationFromText(text);
   if (!station) return undefined;
 
-  const condition = detectConditionFromQuickInfo(args.quickInfo);
+  let condition = detectConditionFromQuickInfo(args.quickInfo);
+  // 薄ページ剪定(2026-07)で noindex combo は 404 になったため、
+  // 配信対象（indexable）でない条件ページへは飛ばさず駅トップへフォールバック。
+  if (condition) {
+    const chains = getStationWithChains(station.slug)?.chains ?? [];
+    const indies = getIndieRestaurantsByStation(station.slug);
+    const matched =
+      filterChainsByCondition(chains, condition).length +
+      filterIndiesByCondition(indies, condition).length;
+    if (!isStationConditionIndexable(station.slug, condition, matched, 'restaurant', station.scale)) {
+      condition = undefined;
+    }
+  }
   const href = condition
     ? `/station/${station.slug}/${condition}`
     : `/station/${station.slug}`;
