@@ -150,7 +150,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         images: ogImages.map((i) => i.url),
       },
       alternates: { canonical: `/article/${slug}` },
-      robots: article.noindex ? { index: false } : undefined,
+      robots: article.noindex
+        ? { index: false }
+        : // generateMetadata が robots を返すと layout の設定を継承しないため、
+          // Discover 前提の max-image-preview:large をここで明示する。
+          {
+            index: true,
+            follow: true,
+            googleBot: {
+              index: true,
+              follow: true,
+              'max-image-preview': 'large' as const,
+              'max-snippet': -1,
+              'max-video-preview': -1,
+            },
+          },
     };
   }
 
@@ -197,7 +211,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'pinterest:title': article.title,
     },
     alternates: { canonical: `/article/${slug}` },
-    robots: article.noindex ? { index: false } : undefined,
+    robots: article.noindex
+      ? { index: false }
+      : // generateMetadata が robots を返すと layout の設定を継承しないため、
+        // Discover 前提の max-image-preview:large をここで明示する。
+        {
+          index: true,
+          follow: true,
+          googleBot: {
+            index: true,
+            follow: true,
+            'max-image-preview': 'large' as const,
+            'max-snippet': -1,
+            'max-video-preview': -1,
+          },
+        },
   };
 }
 
