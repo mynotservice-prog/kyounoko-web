@@ -32,6 +32,7 @@ const NAV: NavGroup[] = [
   {
     title: '運用・編集',
     items: [
+      { id: 'article-edit', label: '記事編集', icon: 'article-edit', path: '/admin/articles/edit' },
       { id: 'spot-edit', label: 'スポット編集', icon: 'spot-edit', path: '/admin/spots/edit' },
       { id: 'event-edit', label: 'イベント編集', icon: 'event-edit', path: '/admin/events/edit' },
       { id: 'event-images', label: 'イベント画像', icon: 'image', path: '/admin/event-images' },
