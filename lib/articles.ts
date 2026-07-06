@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import remarkHtml from 'remark-html';
+import remarkCjkFriendly from 'remark-cjk-friendly';
 import { unstable_cache } from 'next/cache';
 import { injectInternalLinks } from './auto-internal-links';
 import { isKvConfigured, kvGet, kvSet } from './kv-store';
@@ -35,6 +36,18 @@ export type FileArticleMeta = {
   lede: string;
   quickInfo?: FileArticleQuickInfo;
   noindex?: boolean;
+  /**
+   * 情報の最終確認日(YYYY-MM-DD)。公式サイト照合・実訪問等で内容を確認した日。
+   * 更新日(updatedAt)とは別概念: 文面を変えなくても「確認した」事実を記録する。
+   * 設定されていれば記事メタ欄に「情報確認 YYYY年M月」を表示する(E-E-A-T)。
+   */
+  verifiedAt?: string;
+  /**
+   * チェーン設備DB(lib/chain-facilities.ts)駆動の比較表を差し込むキー
+   * (例: babyFoodBringIn / kidsChair / kidsMenu)。比較ハブ記事用。
+   * 冒頭(チェックリスト位置)に「チェーン別早見表」が自動描画される。
+   */
+  chainComparison?: string;
   /** エリア絞り込み用。"all" = エリア非依存、"tokyo" 等 = 地域依存。未指定はallと同等扱い。 */
   area?: string;
   /**
@@ -126,6 +139,8 @@ function parseFrontmatter(raw: string, fallbackSlug: string): { meta: FileArticl
     categoryName: typeof d.categoryName === 'string' ? d.categoryName : undefined,
     publishedAt: toIsoDate(d.publishedAt) ?? new Date().toISOString(),
     updatedAt: toIsoDate(d.updatedAt) ?? toIsoDate(d.publishedAt) ?? new Date().toISOString(),
+    verifiedAt: toIsoDate(d.verifiedAt) ?? undefined,
+    chainComparison: typeof d.chainComparison === 'string' ? d.chainComparison : undefined,
     // hero の優先順位（v7: 2026-06-13 完全実写化）:
     //   1. frontmatter が /img/scenes/ /photos/ /v2/ /img/kk/ なら最優先（信頼パス）
     //   2. frontmatter が /hero-ai/* (イラスト) なら pickHeroForSlug でシーン置換
@@ -134,17 +149,24 @@ function parseFrontmatter(raw: string, fallbackSlug: string): { meta: FileArticl
     hero: (() => {
       const slug = typeof d.slug === 'string' ? d.slug : fallbackSlug;
       const fmHero = typeof d.hero === 'string' ? d.hero : undefined;
-      const isTrusted = (u: string) =>
+      // .webp 正規化は「同名 .webp が確実に存在する」既知の静的パスにのみ適用する。
+      // Blob URL や admin アップロード(/img/articles/ 等)は実ファイルの拡張子を尊重する。
+      const isLocalStatic = (u: string) =>
         u.startsWith('/img/scenes/') || u.startsWith('/photos/') ||
         u.startsWith('/v2/') || u.startsWith('/img/kk/');
       if (fmHero) {
-        const norm = fmHero.replace(/\.(png|jpg|jpeg)$/i, '.webp');
-        if (isTrusted(norm)) return norm;
-        // /hero-ai/* (イラスト) はシーン写真に強制置換
-        return pickHeroForSlug(slug);
+        // AI生成イラスト(/hero-ai/*)のみ実写シーン写真へ強制置換（旧世界観の排除）。
+        if (fmHero.startsWith('/hero-ai/')) return pickHeroForSlug(slug);
+        // それ以外は frontmatter / admin の指定を尊重する:
+        //   - admin アップロード(Blob URL: https://... / dev: /img/articles/)
+        //   - 既存の信頼パス(/img/scenes/ 等)
+        // 既知の静的パスのみ .webp 正規化、外部URL・アップロードはそのまま返す。
+        return isLocalStatic(fmHero)
+          ? fmHero.replace(/\.(png|jpg|jpeg)$/i, '.webp')
+          : fmHero;
       }
       const fromManifest = (HERO_MANIFEST.articleHero as Record<string, string>)[slug];
-      if (fromManifest && isTrusted(fromManifest)) return fromManifest;
+      if (fromManifest && isLocalStatic(fromManifest)) return fromManifest;
       // manifest も /hero-ai/* のためシーンに置換
       return pickHeroForSlug(slug);
     })(),
@@ -230,6 +252,9 @@ function parseQuickInfo(v: unknown): FileArticleQuickInfo | undefined {
 async function renderMarkdownToHtml(md: string): Promise<string> {
   const file = await remark()
     .use(remarkGfm)
+    // 日本語の約物（「」（）＃等）に隣接した **強調** を CommonMark の flanking 規則が
+    // 認識せず、`**` が地の文のまま残る問題を解消する（1,400箇所超で発生していた）。
+    .use(remarkCjkFriendly)
     .use(remarkHtml, { sanitize: false })
     .process(md);
   let html = String(file);
