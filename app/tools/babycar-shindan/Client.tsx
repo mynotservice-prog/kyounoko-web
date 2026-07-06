@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { trackEvent } from '@/lib/analytics';
 import { BABYCAR_MODELS, type ResolvedBabycar } from '@/lib/babycar-models';
 import { priceBandLabel } from '@/lib/rakuten-products';
+import { wrapMoshimoRakuten } from '@/lib/moshimo';
 
 /**
  * ベビーカー診断 — 5問→3モデル提案。
@@ -394,7 +395,7 @@ export function BabycarShindanClient({ products }: { products: Record<string, Re
                         return (
                           <a
                             key={m.keyword}
-                            href={p?.href ?? `https://search.rakuten.co.jp/search/mall/${encodeURIComponent(m.keyword)}/`}
+                            href={p?.href ?? wrapMoshimoRakuten(`https://search.rakuten.co.jp/search/mall/${encodeURIComponent(m.keyword)}/`)}
                             target="_blank"
                             rel="sponsored nofollow noopener"
                             style={{
