@@ -158,7 +158,11 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
           text: `保存しました（commit: ${(data.commit || '').slice(0, 7)}）。${data.deployed || 'Vercel が自動デプロイします'}`,
           url: data.commitUrl,
         });
+      } else if (data.source === 'kv') {
+        // KV保存はデプロイ不要でそのまま本番反映（git push 不要）。
+        setMessage({ type: 'ok', text: data.deployed || 'KVに保存しました（デプロイ不要・数秒で本番反映）' });
       } else {
+        // source === 'fs'（ローカル開発のみ）: git push で本番反映が必要。
         setMessage({ type: 'ok', text: `ローカル保存（${data.path}）。git push で本番反映` });
       }
       setDirty(false);
