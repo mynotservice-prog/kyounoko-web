@@ -25,12 +25,8 @@ import {
   getRestaurantBridgeOffer,
   getRestaurantFoodHubLinks,
   getChainCrossLinks,
-  extractChecklistSection,
 } from '@/lib/article-product-hints';
-import { getChainFacilitiesForArticle, FACILITY_LABELS, type FacilityKey } from '@/lib/chain-facilities';
-import { ChainFacilitiesBox } from '@/components/article/ChainFacilitiesBox';
-import { ChainComparisonTable } from '@/components/article/ChainComparisonTable';
-import { getRestaurantReservationOffer, getCoopOffer, getTravelOffer } from '@/lib/reservation-cta';
+import { getRestaurantReservationOffer } from '@/lib/reservation-cta';
 import { ReservationCTA } from '@/components/article/ReservationCTA';
 import { getSupervisor } from '@/lib/supervisors';
 import { SupervisorLabel } from '@/components/article/SupervisorLabel';
@@ -678,33 +674,6 @@ function FileArticleView({ article }: { article: FileArticle }) {
     article.title,
   );
 
-  // 食文脈（外食/離乳食/宅食）向け生協資料請求CTA（A8・高単価）。env 未設定なら null。
-  const coopOffer = getCoopOffer(article.slug, article.category, article.title);
-
-  // 旅行・おでかけ文脈向け子連れ宿予約CTA（じゃらん/A8）。env 未設定なら null。
-  const travelOffer = getTravelOffer(article.slug, article.category, article.title);
-
-  // 読了後の高単価CTAは1枚だけ（UX/AdSense対策: PRブロック過密の解消）。
-  // 優先度: 生協(資料請求・最高単価) > 宿予約 > 幼児食宅配ブリッジ。
-  const endOffer = coopOffer ?? travelOffer ?? null;
-  const showBridge = !endOffer && !!restaurantBridge;
-
-  // 判定ボックス前出し(戦略§7): 本文中の「子連れチェックリスト」H2セクションを
-  // 抽出してヒーロー直下(クイック情報の隣)へ移動。無い記事は従来どおり。
-  const checklistSplit = extractChecklistSection(article.body);
-
-  // チェーンDB(lib/chain-facilities.ts)に載っている攻略記事は、md手書き表の
-  // 代わりにDB駆動の判定ボックスを描画する(単一データソース化)。
-  const chainFacilities = getChainFacilitiesForArticle(article.slug);
-
-  // 比較ハブ記事: frontmatter chainComparison が有効なキーならDB駆動の早見表を冒頭に描画。
-  const comparisonKey =
-    article.chainComparison && article.chainComparison in FACILITY_LABELS
-      ? (article.chainComparison as FacilityKey)
-      : null;
-  // 置き換え時も目次アンカーを生かすため、元のmd見出しのidを引き継ぐ。
-  const checklistAnchorId = checklistSplit?.checklist.match(/<h2[^>]*\bid="([^"]+)"/)?.[1];
-
   // 概算 wordCount（HTMLタグ除去後の文字数）。Google Article リッチリザルトの
   // 推奨フィールド。日本語は文字数 = ほぼ語数として扱う。
   const articleWordCount = (() => {
@@ -1014,22 +983,6 @@ function FileArticleView({ article }: { article: FileArticle }) {
                   </span>
                 </>
               )}
-              {article.verifiedAt && (
-                <>
-                  <span className="article-meta-sep" aria-hidden="true">·</span>
-                  <span className="article-meta-item">
-                    <time dateTime={article.verifiedAt}>
-                      情報確認 {formatJaDate(article.verifiedAt)}
-                    </time>
-                  </span>
-                </>
-              )}
-              <span className="article-meta-sep" aria-hidden="true">·</span>
-              <span className="article-meta-item">
-                <Link href="/contact" style={{ color: 'inherit', textDecoration: 'underline' }}>
-                  情報の修正依頼
-                </Link>
-              </span>
             </div>
 
             {/* lede は markdown（太字等）をインライン描画。生テキストだと **太字** が
@@ -1077,8 +1030,20 @@ function FileArticleView({ article }: { article: FileArticle }) {
             </aside>
           )}
 
-          {/* 旧: TL;DR直後のインライン商品CTAはPRブロック過密(1記事9枚)の一因だった
-              ため削除。物販は末尾のAffiliateLinkGroup/RelatedItemsCTAの1枠に集約。 */}
+          {/* 記事内インライン CTA（TL;DR 直後に 1 商品だけ） */}
+          {inlineCtaItem && (
+            <InlineItemCTA
+              item={{
+                href: inlineCtaItem.href,
+                title: inlineCtaItem.title,
+                subtitle: inlineCtaItem.subtitle,
+                price: inlineCtaItem.price,
+                imageUrl: inlineCtaItem.imageUrl,
+                provider: inlineCtaItem.provider,
+                pr: false,
+              }}
+            />
+          )}
 
           {/* 外食記事向けネット予約CTA（高インテント位置：結論直後）。env未設定なら非表示。 */}
           {reservationOffer && <ReservationCTA offer={reservationOffer} />}
@@ -1123,22 +1088,6 @@ function FileArticleView({ article }: { article: FileArticle }) {
             </section>
           )}
 
-          {/* 判定ボックス(子連れチェックリスト)の前出し。外出前の GO/NO-GO 判定を
-              1画面目で完結させる(戦略§7)。チェーンDB掲載記事はDB駆動ボックス、
-              それ以外はmdから抽出した表。該当が無い記事は何も出ない。 */}
-          {chainFacilities ? (
-            <ChainFacilitiesBox chain={chainFacilities} anchorId={checklistAnchorId} />
-          ) : checklistSplit ? (
-            <div
-              className="prose"
-              style={{ marginBottom: 32 }}
-              dangerouslySetInnerHTML={{ __html: checklistSplit.checklist }}
-            />
-          ) : null}
-
-          {/* 比較ハブ記事: チェーン別早見表(DB駆動)。frontmatter chainComparison 指定時のみ */}
-          {comparisonKey && <ChainComparisonTable focus={comparisonKey} />}
-
           {/* Mobile TOC */}
           <TableOfContents items={article.toc} variant="mobile" />
 
@@ -1147,11 +1096,8 @@ function FileArticleView({ article }: { article: FileArticle }) {
             <EditorialDisclosure variant="ranking" />
           )}
 
-          {/* Body（チェックリスト前出し時は抽出後の残り本文を描画） */}
-          <div
-            className="prose"
-            dangerouslySetInnerHTML={{ __html: checklistSplit ? checklistSplit.rest : article.body }}
-          />
+          {/* Body */}
+          <div className="prose" dangerouslySetInnerHTML={{ __html: article.body }} />
 
           {/* Pinterest 用の縦長Pin画像。本文内の実 <img> として描画し、
               「URLから保存」ピッカーで縦長を選べるようにする（og:imageは拾われないため）。 */}
@@ -1215,12 +1161,11 @@ function FileArticleView({ article }: { article: FileArticle }) {
             />
           )}
 
-          {/* 読了後の高単価CTAは1枚だけ（生協 > 宿予約）。ネット予約の再掲は
-              結論直後と重複していたため廃止（PRブロック過密の解消）。 */}
-          {endOffer && <ReservationCTA offer={endOffer} />}
+          {/* 外食記事向けネット予約CTA（読了後の再掲。env未設定なら非表示）。 */}
+          {reservationOffer && <ReservationCTA offer={reservationOffer} />}
 
-          {/* 外食記事向け高単価ブリッジ（幼児食宅配）。endOfferが無い記事のみ1点。 */}
-          {showBridge && restaurantBridge && (
+          {/* 外食記事向け高単価ブリッジ（幼児食宅配）。低単価グッズCTAの下に1点だけ。 */}
+          {restaurantBridge && (
             <div style={{ marginTop: 20 }}>
               <p style={{ fontSize: 13, color: 'var(--ink-mute)', margin: '0 0 10px' }}>
                 外食が続く週は、家の食事を宅配でラクにするご家庭も増えています。
@@ -1295,10 +1240,6 @@ function FileArticleView({ article }: { article: FileArticle }) {
               </div>
             </section>
           )}
-
-          {/* LINE友だち追加CTA（読了直後の一等地=FAQ直下。唯一の再訪装置なので
-              末尾のリンク群より前に置く。env未設定時は非表示） */}
-          <LineCta variant="article" />
 
           {/* 駅ページへのCTA（東京23区記事のみ。駅検出できた場合のみ表示） */}
           {stationLink && (
@@ -1412,7 +1353,6 @@ function FileArticleView({ article }: { article: FileArticle }) {
           {/* この記事の悩みに使えるプラン（記事 → プランの双方向リンク） */}
           {relatedPlans.length > 0 && (
             <CrossLinkCards
-              variant="compact"
               eyebrow="Today's plan · この記事の悩みに使えるプラン"
               heading="今日そのまま試せる行動プラン"
               defaultEyebrow="Plan"
@@ -1435,7 +1375,6 @@ function FileArticleView({ article }: { article: FileArticle }) {
             );
             return hubLinks.length > 0 ? (
               <CrossLinkCards
-                variant="compact"
                 eyebrow="あわせて読みたい"
                 heading="子どもの食事の準備に役立つ記事"
                 items={hubLinks}
@@ -1448,7 +1387,6 @@ function FileArticleView({ article }: { article: FileArticle }) {
             const chainLinks = getChainCrossLinks(article.slug);
             return chainLinks.length > 0 ? (
               <CrossLinkCards
-                variant="compact"
                 eyebrow="このお店をもっと知る"
                 heading="同じお店・チェーン比較で迷わない"
                 items={chainLinks}
@@ -1542,6 +1480,8 @@ function FileArticleView({ article }: { article: FileArticle }) {
             </section>
           )}
 
+          {/* LINE友だち追加CTA（env未設定時は非表示） */}
+          <LineCta variant="article" />
         </div>
 
         {/* Desktop TOC sidebar */}
