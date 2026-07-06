@@ -7,8 +7,8 @@ import { getPurposeRankings } from '@/lib/purpose-rankings';
  * 首都圏 × 目的別の実用ランキング（P1-2）。
  * 各目的の TOP10 を横スクロールのランク付きカードで見せる。
  */
-export function V2PurposeRanking() {
-  const rankings = getPurposeRankings(10);
+export async function V2PurposeRanking() {
+  const rankings = await getPurposeRankings(10);
   if (!rankings.length) return null;
 
   return (

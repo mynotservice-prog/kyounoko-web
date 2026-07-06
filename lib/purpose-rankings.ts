@@ -8,6 +8,7 @@
 import { getAllSpotsWithSlug, type Spot } from './spots';
 import { isListableSpot } from './spot-browse';
 import { SHUTOKEN } from './spot-filter';
+import { getRuntimeSpotOverrides, type SpotOverridesMap } from './spot-overrides';
 
 export type RankedSpot = { slug: string; spot: Spot };
 
@@ -31,8 +32,12 @@ function quality(s: Spot): number {
   return n;
 }
 
-function rank(pred: (s: Spot) => boolean, limit: number): RankedSpot[] {
-  return getAllSpotsWithSlug()
+function rank(
+  pred: (s: Spot) => boolean,
+  limit: number,
+  ovMap?: SpotOverridesMap,
+): RankedSpot[] {
+  return getAllSpotsWithSlug(ovMap)
     .filter(
       (x) =>
         SHUTOKEN.includes(x.area as string) &&
@@ -49,28 +54,32 @@ function rank(pred: (s: Spot) => boolean, limit: number): RankedSpot[] {
     .map((x) => ({ slug: x.slug, spot: x.spot }));
 }
 
-export function getPurposeRankings(limit = 10): PurposeRanking[] {
+export async function getPurposeRankings(limit = 10): Promise<PurposeRanking[]> {
+  // admin アップロード画像(spot-overrides の images[0])を反映するため override を読み込む。
+  // これを渡さないと、人気ランキング(getSpotRanking)では差し替わっている画像が
+  // この目的別ランキングでは pickHero のシーン写真にフォールバックしてしまう。
+  const ovMap = await getRuntimeSpotOverrides();
   return [
     {
       key: 'rainy-indoor',
       title: '雨の日に強い屋内スポット',
       emoji: '☔',
       moreHref: '/spots?area=shutoken&place=indoor',
-      items: rank((s) => s.place === 'indoor', limit),
+      items: rank((s) => s.place === 'indoor', limit, ovMap),
     },
     {
       key: 'free',
       title: '無料で1日あそべる',
       emoji: '🎟',
       moreHref: '/spots?area=shutoken&price=free',
-      items: rank((s) => s.budget === 'free', limit),
+      items: rank((s) => s.budget === 'free', limit, ovMap),
     },
     {
       key: 'baby-ok',
       title: '0歳から楽しめる',
       emoji: '👶',
       moreHref: '/spots?area=shutoken&age=0-1',
-      items: rank((s) => s.ages.includes('0-1'), limit),
+      items: rank((s) => s.ages.includes('0-1'), limit, ovMap),
     },
   ].filter((r) => r.items.length > 0);
 }
