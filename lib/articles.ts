@@ -81,7 +81,10 @@ export type FileArticleMeta = {
 
 export type FileArticleFaq = {
   question: string;
+  /** 生Markdownの回答（FAQ schema用に markdown 記号を除去する元テキスト）。 */
   answer: string;
+  /** 表示用に markdown→HTML 変換済みの回答。太字/リンク等を描画する。 */
+  answerHtml: string;
 };
 
 export type FileArticleHowToStep = {
@@ -97,6 +100,8 @@ export type FileArticleItemListItem = {
 
 export type FileArticle = FileArticleMeta & {
   body: string; // HTML (with id-added h2/h3)
+  /** 表示用に markdown（太字等）をインライン描画した lede。生 lede は meta 用に温存。 */
+  ledeHtml: string;
   faqItems: FileArticleFaq[];
   toc: TocItem[];
   readingTimeMin: number;
@@ -263,6 +268,19 @@ async function renderMarkdownToHtml(md: string): Promise<string> {
   // 使わずに記事に直接埋め込まれた商品リンクも収益化される（楽天31本など）。
   html = wrapAffiliateLinksInHtml(html);
   return html;
+}
+
+/**
+ * 1行テキスト（lede 等）を markdown インライン描画する。
+ * renderMarkdownToHtml は段落を <p> で包むため、外側の <p> だけ剥がして
+ * <strong>/<a> 等のインライン要素を残す。<p className="lead"> 内に差し込む用途。
+ */
+async function renderInlineMarkdownToHtml(md: string): Promise<string> {
+  if (!md) return '';
+  const html = (await renderMarkdownToHtml(md)).trim();
+  // 単一段落なら外側 <p>…</p> を除去。複数ブロックはそのまま返す（想定外だが安全側）。
+  const m = html.match(/^<p>([\s\S]*)<\/p>$/);
+  return m ? m[1] : html;
 }
 
 /**
@@ -680,7 +698,9 @@ function extractHowTo(markdown: string): FileArticleHowToStep[] | null {
 
 // FAQ セクション（"## よくある質問" または "## FAQ"）を本文から抜き出して
 // { question, answer } の配列に変換。FAQ セクションは本文側からは取り除く。
-function extractFaq(markdown: string): { body: string; faq: FileArticleFaq[] } {
+function extractFaq(
+  markdown: string,
+): { body: string; faq: Array<{ question: string; answer: string }> } {
   const lines = markdown.split('\n');
 
   // FAQ セクションの開始行を検出
@@ -709,7 +729,7 @@ function extractFaq(markdown: string): { body: string; faq: FileArticleFaq[] } {
   }
 
   const faqLines = lines.slice(faqStart + 1, faqEnd);
-  const faq: FileArticleFaq[] = [];
+  const faq: Array<{ question: string; answer: string }> = [];
 
   // 2つの形式に対応:
   // 形式A: ### Q: question / ### Q. question / ### Q1. question / ### Q：question
@@ -831,7 +851,16 @@ async function buildArticleFromRaw(raw: string, fallbackSlug: string): Promise<F
   const htmlWithLinks = injectInternalLinks(rawHtml, meta.slug);
   const { html: bodyHtml, toc } = injectHeadingIdsAndExtractToc(htmlWithLinks);
   const readingTimeMin = estimateReadingTime(bodyMd);
-  return { ...meta, body: bodyHtml, faqItems: faq, toc, readingTimeMin, tldr, howto, itemList };
+  // FAQ回答はプレーンテキストではなく markdown として描画する（太字/リンク等）。
+  // schema用の生 answer は残しつつ、表示用 answerHtml を付与する。
+  const faqItems = await Promise.all(
+    faq.map(async (q) => ({
+      ...q,
+      answerHtml: await renderMarkdownToHtml(q.answer),
+    })),
+  );
+  const ledeHtml = await renderInlineMarkdownToHtml(meta.lede);
+  return { ...meta, body: bodyHtml, ledeHtml, faqItems, toc, readingTimeMin, tldr, howto, itemList };
 }
 
 /**
