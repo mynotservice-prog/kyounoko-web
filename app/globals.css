@@ -1159,6 +1159,8 @@ input, select { font: inherit; color: inherit; }
   font-size: 15px; color: var(--ink-sub); line-height: 1.9;
   margin: 0; max-width: 620px;
 }
+/* lede 内の markdown 太字（ledeHtml）を本文と同系色で強調 */
+.page-head .lead strong { color: var(--clay-deep); font-weight: 700; }
 
 .prose {
   font-size: 15px;
