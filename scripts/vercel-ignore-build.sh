@@ -8,9 +8,9 @@
 # Vercel 公式: https://vercel.com/docs/projects/overview#ignored-build-step
 #
 # 戦略:
-#   1) content/articles/ や content/plans/ の .md だけの編集 → ビルドスキップ
-#      （on-demand revalidate で即時反映するので build 不要）
-#   2) コード/設定（app, lib, components, public/, next.config 等）に変更があれば必ずビルド
+#   1) コード/設定（app, lib, components, public/, next.config 等）に変更があれば必ずビルド
+#   2) content/ の変更（.md 含む）も必ずビルド
+#      （記事はビルド時に fs から同梱されるため、スキップすると git 経由の編集が本番に出ない）
 #   3) docs/, README, .gitignore など補助ファイルのみ → スキップ
 #
 # Build CPU Minutes 削減目的（過去 $12.97/$20 = 65% 消化の主因）。
@@ -74,12 +74,15 @@ if [ -n "$ADDED_MD" ]; then
   exit 1
 fi
 
-# 既存 content/articles/*.md, content/plans/*.md の「編集」だけなら on-demand revalidate に任せて build スキップ
+# 既存 content/**/*.md の編集もビルド必須。
+# 記事はビルド時に fs から同梱される（lib/articles.ts）ため、git 経由の .md 編集は
+# 再ビルドしない限り本番に反映されない。KV 上書きは admin 編集専用で git 編集は拾えず、
+# revalidate エンドポイントも存在しない（2026-07-06 に PR#71 の取りこぼしで実証）。
 MD_CONTENT_CHANGES=$(git diff --name-only HEAD^ HEAD -- 'content/**/*.md' 2>/dev/null | head -5)
 if [ -n "$MD_CONTENT_CHANGES" ]; then
-  echo "[ignore-build] Only markdown content changes detected → SKIP BUILD (handled by on-demand revalidate)"
+  echo "[ignore-build] Markdown content changes detected → PROCEED BUILD (md is bundled at build time)"
   echo "$MD_CONTENT_CHANGES"
-  exit 0
+  exit 1
 fi
 
 # それ以外（docs/, README.md 等のみ）もスキップ
