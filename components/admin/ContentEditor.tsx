@@ -64,6 +64,11 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
           const v = fm[k];
           p[k] = v == null ? '' : typeof v === 'string' ? v : String(v);
         }
+        // 日付は input[type=date] が受けられる YYYY-MM-DD に正規化（YAML日付はISO日時で届くことがある）
+        for (const k of ['publishedAt', 'updatedAt'] as const) {
+          const m = p[k].match(/^(\d{4}-\d{2}-\d{2})/);
+          if (m) p[k] = m[1];
+        }
         const others: Record<string, unknown> = {};
         for (const [k, v] of Object.entries(fm)) {
           if (!PRIMARY_FIELDS.includes(k as PrimaryKey)) others[k] = v;
@@ -95,11 +100,14 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
   };
 
   // hero画像アップロード: /api/admin/spot-image（Blob）へ送り、返ったURLをheroにセット。
+  // API は slug 必須（ファイル名の元になる）。忘れると 400 invalid slug で失敗する。
   const uploadHero = async (file: File) => {
     setHeroUploading(true);
     setMessage(null);
     try {
       const fd = new FormData();
+      fd.append('slug', slug);
+      fd.append('dir', 'articles');
       fd.append('file', file);
       const res = await fetch('/api/admin/spot-image', { method: 'POST', body: fd });
       const json = await res.json();
@@ -150,7 +158,11 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
           text: `保存しました（commit: ${(data.commit || '').slice(0, 7)}）。${data.deployed || 'Vercel が自動デプロイします'}`,
           url: data.commitUrl,
         });
+      } else if (data.source === 'kv') {
+        // KV保存はデプロイ不要でそのまま本番反映（git push 不要）。
+        setMessage({ type: 'ok', text: data.deployed || 'KVに保存しました（デプロイ不要・数秒で本番反映）' });
       } else {
+        // source === 'fs'（ローカル開発のみ）: git push で本番反映が必要。
         setMessage({ type: 'ok', text: `ローカル保存（${data.path}）。git push で本番反映` });
       }
       setDirty(false);
@@ -279,19 +291,17 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
           <Field label="公開日">
             <input
-              type="text"
+              type="date"
               value={primary.publishedAt}
               onChange={(e) => updatePrimary('publishedAt', e.target.value)}
-              placeholder="2026-05-19"
               style={inputStyle}
             />
           </Field>
           <Field label="最終更新日（空欄なら今日）">
             <input
-              type="text"
+              type="date"
               value={primary.updatedAt}
               onChange={(e) => updatePrimary('updatedAt', e.target.value)}
-              placeholder="2026-05-19"
               style={inputStyle}
             />
           </Field>

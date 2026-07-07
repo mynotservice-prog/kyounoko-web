@@ -30,6 +30,9 @@ export function NewArticleClient() {
   const [title, setTitle] = useState('');
   const [metaDescription, setMetaDescription] = useState('');
   const [lede, setLede] = useState('');
+  const [hero, setHero] = useState('');
+  const [heroUploading, setHeroUploading] = useState(false);
+  const [heroMsg, setHeroMsg] = useState('');
   const [category, setCategory] = useState('today-doko');
   const [area, setArea] = useState('all');
   const [age, setAge] = useState('2-3');
@@ -51,7 +54,7 @@ category: ${category}
 categoryName: ${categoryName}
 publishedAt: "${today}"
 updatedAt: "${today}"
-hero:
+hero: ${hero ? `"${hero}"` : ''}
 lede: ${lede || '（140-200字の導入文）'}
 quickInfo:
   ageRanges: ["${age}"]
@@ -103,12 +106,37 @@ A. 回答2。
 
 A. 回答3。
 `;
-  }, [slug, title, metaDescription, lede, category, categoryName, today, age, place, durationMin, area]);
+  }, [slug, title, metaDescription, lede, hero, category, categoryName, today, age, place, durationMin, area]);
 
   const copy = async () => {
     await navigator.clipboard.writeText(markdown);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  // hero画像アップロード（編集画面と同じAPI）。ファイル名の元になる slug が先に必要。
+  const uploadHero = async (file: File) => {
+    if (!slug) { setHeroMsg('先に slug を入力してください'); return; }
+    setHeroUploading(true);
+    setHeroMsg('');
+    try {
+      const fd = new FormData();
+      fd.append('slug', slug);
+      fd.append('dir', 'articles');
+      fd.append('file', file);
+      const res = await fetch('/api/admin/spot-image', { method: 'POST', body: fd });
+      const json = (await res.json()) as { ok?: boolean; path?: string; error?: string };
+      if (!res.ok || !json.path) {
+        setHeroMsg('❌ ' + (json.error || '画像アップロードに失敗しました'));
+      } else {
+        setHero(json.path);
+        setHeroMsg('✅ アップロードしました');
+      }
+    } catch {
+      setHeroMsg('❌ 通信エラーが発生しました');
+    } finally {
+      setHeroUploading(false);
+    }
   };
 
   // KVに作成（デプロイ不要）。KV未設定なら edit-content 側で従来の commit にフォールバック。
@@ -118,7 +146,7 @@ A. 回答3。
     setCreateMsg('');
     const frontmatter = {
       slug, title, metaDescription, category, categoryName,
-      publishedAt: today, updatedAt: today, hero: '', lede,
+      publishedAt: today, updatedAt: today, hero, lede,
       quickInfo: { ageRanges: [age], place: [place], weather: ['any'], durationMin, budget: 'low' },
       area,
     };
@@ -162,6 +190,56 @@ A. 回答3。
           </Field>
           <Field label="lede (140-200字の導入文)">
             <textarea value={lede} onChange={(e) => setLede(e.target.value)} rows={3} style={textareaStyle} />
+          </Field>
+          <Field label="hero画像（任意。後から編集画面でも設定可）">
+            {hero && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={hero}
+                alt="hero プレビュー"
+                style={{ display: 'block', width: '100%', maxHeight: 160, objectFit: 'cover', borderRadius: 8, border: '1px solid var(--border)', marginBottom: 8 }}
+              />
+            )}
+            <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+              <input
+                value={hero}
+                onChange={(e) => setHero(e.target.value)}
+                placeholder="画像をアップロード、またはパスを入力"
+                style={{ ...inputStyle, flex: 1 }}
+              />
+              <label
+                style={{
+                  flex: '0 0 auto',
+                  height: 38,
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  padding: '0 14px',
+                  borderRadius: 'var(--r-md)',
+                  border: '1px solid var(--border-strong)',
+                  background: heroUploading || !slug ? 'var(--bg-subtle)' : 'var(--bg-surface)',
+                  fontSize: 13,
+                  fontWeight: 600,
+                  color: 'var(--ink-600)',
+                  cursor: heroUploading || !slug ? 'not-allowed' : 'pointer',
+                  whiteSpace: 'nowrap',
+                }}
+                title={!slug ? '先に slug を入力してください' : undefined}
+              >
+                {heroUploading ? 'アップロード中…' : '📤 画像を選ぶ'}
+                <input
+                  type="file"
+                  accept="image/jpeg,image/png,image/webp"
+                  disabled={heroUploading || !slug}
+                  onChange={(e) => {
+                    const f = e.target.files?.[0];
+                    if (f) uploadHero(f);
+                    e.target.value = '';
+                  }}
+                  style={{ display: 'none' }}
+                />
+              </label>
+            </div>
+            {heroMsg && <span style={{ display: 'block', fontSize: 12, color: 'var(--ink-500)', marginTop: 5 }}>{heroMsg}</span>}
           </Field>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
             <Field label="カテゴリ">
