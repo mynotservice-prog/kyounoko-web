@@ -129,6 +129,8 @@ A. 公式サイトでアレルゲン情報を公開しています。注文時�
 - [餃子の王将 ベビーチェア](/article/ohsho-baby-chair)
 - [餃子の王将 個室・座敷](/article/ohsho-koshitsu)
 - [子連れ和食チェーン10選](/article/kodzure-washoku-chain-10)
+- [子連れOKチェーン店のキッズメニュー比較15選](/article/kids-menu-chain-15-hikaku)
+- [離乳食持ち込みOK・温めてくれるチェーン店15選](/article/rinyuushoku-mochikomi-chain-15)
 - [0歳育児の完全マップ](/article/0sai-ikuji-kanzen-map)
 
 ---

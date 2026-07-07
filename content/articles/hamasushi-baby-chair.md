@@ -85,5 +85,6 @@ A. はま寿司では基本配備していません。0歳児は抱っこ紐＋�
 ## 関連記事
 
 - [はま寿司は子連れOK？ベビーカー・キッズメニュー・離乳食・取り分け](/article/hama-sushi-kodzure-koryaku)
+- [子連れOKチェーン店のベビーチェア完全まとめ｜何ヶ月から・確保のコツ](/article/gaishoku-baby-chair-matome)
 - [回転寿司4チェーン子連れ徹底比較](/article/kaiten-sushi-4chain-comparison)
 - [0歳育児完全マップ](/article/0sai-ikuji-kanzen-map)

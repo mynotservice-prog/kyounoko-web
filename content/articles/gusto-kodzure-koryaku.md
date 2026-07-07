@@ -432,7 +432,8 @@ BellaBotは**センサーで停止する仕様**ですが、**子の急な飛び
 - [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 ガストと同じすかいらーく系のファミレスや、近い使い勝手のチェーンもあわせて見ておくと、その日の予算・気分で選び分けやすくなります。
 
-- [ガストのおむつ替え台ガイド｜ベビールーム・多目的トイレの有無](/article/gusto-kodzure-koryaku)
+- [ガストのキッズメニュー完全ガイド](/article/gusto-kids-menu)
+- [離乳食持ち込みOK・温めてくれるチェーン店15選](/article/rinyuushoku-mochikomi-chain-15)
 
 **ガストと比較で読みたい記事（最重要）**
 

@@ -87,5 +87,7 @@ A. 2020年以降オープンの新店、ロードサイド大型店、駐車場�
 ## 関連記事
 
 - [くら寿司は子連れOK？ベビーカー・ビッくらポン・離乳食・取り分け](/article/kura-sushi-kodzure-koryaku)
+- [くら寿司のキッズメニュー徹底解説｜ビッくらポンと食べられるサイド](/article/kurasushi-kids-menu)
+- [くら寿司は全国47都道府県にある｜子連れ店舗の探し方](/article/kura-sushi-zenkoku-47)
 - [回転寿司4チェーン子連れ徹底比較](/article/kaiten-sushi-4chain-comparison)
 - [0歳育児完全マップ](/article/0sai-ikuji-kanzen-map)

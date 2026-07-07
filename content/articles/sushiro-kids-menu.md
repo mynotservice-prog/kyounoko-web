@@ -98,7 +98,8 @@ A. 用意があります。詳しくは[スシローのベビーチェアガイ�
 
 - [スシローは子連れOK？ベビーカー・離乳食・取り分け完全攻略](/article/sushiro-kodzure-koryaku)
 - [スシローのベビーチェアガイド](/article/sushiro-baby-chair)
-- [スシローの離乳食持ち込みガイド](/article/sushiro-kodzure-koryaku)
+- [くら寿司のキッズメニュー徹底解説｜ビッくらポンと食べられるサイド](/article/kurasushi-kids-menu)
+- [離乳食持ち込みOK・温めてくれるチェーン店15選](/article/rinyuushoku-mochikomi-chain-15)
 - [回転寿司4チェーン子連れ徹底比較](/article/kaiten-sushi-4chain-comparison)
 - [キッズメニュー比較15チェーン](/article/kids-menu-chain-15-hikaku)
 
