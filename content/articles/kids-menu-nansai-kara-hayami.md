@@ -217,7 +217,7 @@ A. **概ね小学生まで**の想定です。中学生以上は通常メニュ�
 
 ### Q. バーミヤンのキッズメニューは何歳から？1歳でも？
 
-A. **下限の明示はない**ので1歳でも注文可能。ただし量・味付けの観点で1歳の場合は**親メニューからの取り分け＋キッズメニューの一部シェア**が現実的です。詳細：[バーミヤン 子連れ攻略](/article/bamiyan-kodzure-koryaku)
+A. **下限の明示はない**ので1歳でも注文可能。ただし量・味付けの観点で1歳の場合は**親メニューからの取り分け＋キッズメニューの一部シェア**が現実的です。詳細：[バーミヤンのキッズメニュー（何歳から・全一覧）](/article/bamiyan-kids-menu)
 
 ### Q. しゃぶ葉は何歳から有料？
 
@@ -242,11 +242,11 @@ A. **多くのチェーンで小学生から有料**（または半額）です�
 - [ガスト 子連れ攻略](/article/gusto-kodzure-koryaku)
 - [ジョナサン 子連れ攻略](/article/jonathan-kodzure-koryaku)
 - [サイゼリヤ 子連れ攻略](/article/kodzure-saize-koryaku)
-- [バーミヤン 子連れ攻略](/article/bamiyan-kodzure-koryaku)
-- [ココス 子連れ攻略](/article/cocos-kodzure-koryaku)
+- [バーミヤンのキッズメニュー｜お子様メニュー全一覧・何歳から](/article/bamiyan-kids-menu)
+- [ココスのキッズメニュー｜年齢別おすすめ・何歳から](/article/cocos-kids-menu)
 - [デニーズ 子連れ攻略](/article/denny-s-kodzure-koryaku)
 - [ロイヤルホスト 子連れ攻略](/article/royal-host-kodzure-koryaku)
-- [やよい軒 子連れ攻略](/article/yayoiken-kodzure-koryaku)
+- [やよい軒のお子様メニュー｜お子様ランチ・値段・何歳から](/article/yayoiken-kids-menu)
 - [丸亀製麺 子連れ攻略](/article/marugame-kodzure-koryaku)
 - [しゃぶ葉 子連れ攻略](/article/shabuyou-kodzure-koryaku)
 - [牛角 子連れ攻略](/article/gyukaku-kodzure-koryaku)

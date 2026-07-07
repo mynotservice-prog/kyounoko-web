@@ -50,7 +50,7 @@ legacyHero: /hero/food-japan-01.webp
 
 - [ガストの子連れ攻略｜離乳食温め・ベビーカー・ベビーチェア](/article/gusto-kodzure-koryaku)
 - [ジョナサンの子連れ攻略｜席間広め・朝モーニング](/article/jonathan-kodzure-koryaku)
-- [ココスの子連れ攻略｜キッズメニュー・誕生日特典](/article/cocos-kodzure-koryaku)
+- [ココスの子連れ攻略｜ベビーチェア・誕生日特典](/article/cocos-kodzure-koryaku)
 - [バーミヤンの子連れ攻略｜取り分けやすい中華ファミレス](/article/bamiyan-kodzure-koryaku)
 - [サイゼリヤ子連れ完全攻略](/article/kodzure-saize-koryaku)
 

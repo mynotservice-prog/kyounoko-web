@@ -110,7 +110,7 @@ legacyHero: /hero-ai/cat-food-fruit-03.jpg
 - [子連れラーメンを安全に楽しむ完全ガイド｜やけど・高塩分・長い麺の誤嚥・トッピング・アレルギー](/article/kodzure-ramen-anzen-kanzen-guide)
 - [ラーメン・中華麺チェーン子連れランキング5社](/article/ramen-chain-kodzure-ranking-2026-5sha)
 - [サイゼリヤはベビーカーOK？子連れ完全攻略](/article/kodzure-saize-koryaku)
-- [バーミヤンの子連れ攻略｜キッズメニュー・離乳食・取り分け](/article/bamiyan-kodzure-koryaku)
+- [バーミヤンの子連れ攻略｜ベビーチェア・離乳食・取り分け](/article/bamiyan-kodzure-koryaku)
 - [子連れOKファミレス王道15選](/article/kodzure-famires-15sen)
 - [子連れ歓迎の和食チェーン10選](/article/kodzure-washoku-chain-10)
 - [子連れ向けレストランデータ](/data/restaurants)
