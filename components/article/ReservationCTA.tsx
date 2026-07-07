@@ -21,9 +21,12 @@ export type ReservationCTAProps = {
 export function ReservationCTA({ offer }: ReservationCTAProps) {
   if (!/^https?:\/\//i.test(offer.href.trim())) return null;
 
+  // 計測用プロバイダ判定: A8リンク(px.a8.net)は 'a8'、それ以外は従来通り 'valuecommerce'。
+  const provider = /px\.a8\.net/.test(offer.href) ? 'a8' : 'valuecommerce';
+
   return (
     <aside
-      aria-label="ネット予約"
+      aria-label={offer.heading}
       style={{
         margin: '24px 0',
         border: '1px solid rgba(201,96,62,0.28)',
@@ -71,10 +74,10 @@ export function ReservationCTA({ offer }: ReservationCTAProps) {
         href={offer.href}
         target="_blank"
         rel="sponsored nofollow noopener"
-        data-provider="valuecommerce"
+        data-provider={provider}
         onClick={() => {
           trackEvent('affiliate_click', {
-            provider: 'valuecommerce',
+            provider,
             item_id: offer.itemId,
           });
         }}

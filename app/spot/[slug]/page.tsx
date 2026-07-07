@@ -35,7 +35,7 @@ import { V2SaveButton, V2SdHeroFav } from '@/components/v2/V2SaveButton';
 import { getRecommendedItems } from '@/lib/recommended-items';
 import { getRakutenProduct, keywordFromRakutenSearchUrl, priceBandLabel } from '@/lib/rakuten-products';
 import { wrapMoshimoRakuten } from '@/lib/moshimo';
-import { getSpotReservationOffer } from '@/lib/reservation-cta';
+import { getSpotReservationOffer, getSpotTravelOffer } from '@/lib/reservation-cta';
 import { ReservationCTA } from '@/components/article/ReservationCTA';
 import { ShareBar } from '@/components/article/ShareBar';
 
@@ -109,6 +109,9 @@ export default async function SpotPage({ params }: Props) {
 
   // スポット種別に応じたネット予約/チケットCTA（VC）。env 未設定なら null（非表示）。
   const reservationOffer = getSpotReservationOffer(spot.category);
+
+  // レジャースポット向け子連れ宿予約CTA（じゃらん/A8・park/restaurant除く）。env 未設定なら null。
+  const travelOffer = getSpotTravelOffer(spot.category);
 
   // 閉館スポットの案内文（あれば閉館バナーを表示し noindex）。
   const closedNotice = SPOT_CLOSED[spot.name];
@@ -554,6 +557,13 @@ export default async function SpotPage({ params }: Props) {
         {reservationOffer && (
           <div className="v2-section" style={{ marginTop: 18 }}>
             <ReservationCTA offer={reservationOffer} />
+          </div>
+        )}
+
+        {/* 子連れ宿予約CTA（レジャースポットのみ）。env未設定なら非表示 */}
+        {travelOffer && (
+          <div className="v2-section" style={{ marginTop: 10 }}>
+            <ReservationCTA offer={travelOffer} />
           </div>
         )}
 
