@@ -165,6 +165,83 @@ git push -u origin main
 
 ---
 
+## 記事 md を本番反映する正しい手順（force ビルド → Cloudflare パージ）
+
+`content/articles/*.md` は**ビルド時にバンドル**される。だから「md だけの編集」は
+通常デプロイでは本番に出ない。理由は2つ:
+
+1. **ビルドがスキップされる** — `vercel.json` の `ignoreCommand`
+   (`scripts/vercel-ignore-build.sh`) が「既存 md の編集だけ＝ビルド不要」と判定して
+   スキップする。on-demand revalidate は外部CMS前提で、**バンドル済みファイル md には効かない**。
+2. **Cloudflare のエッジキャッシュ** — `kyounoko.jp` は Cloudflare 経由で、記事HTMLが
+   `cf-cache-status: HIT` / TTL 3600s でキャッシュされる。デプロイ後も最大1時間ほど
+   古いHTMLが配信される。
+
+> ※ **新規記事 md の追加**（slug 新設）は `ignoreCommand` が自動でフルビルドする
+> （`generateStaticParams` 再実行が必要なため）。下の手順が必須なのは主に**既存 md の編集**時。
+> いずれの場合も Cloudflare のパージは必要。
+
+### 手順A: ワンコマンド（推奨）
+
+```bash
+# 直近コミット(HEAD^..HEAD)で変わった content/articles/*.md を自動パージ
+npm run deploy:md
+# = vercel --prod --force → node scripts/cf-purge.mjs --auto
+```
+
+パージ対象を明示したいとき / レンジ指定:
+
+```bash
+./scripts/deploy-md.sh /article/foo bar               # slug・パス・URL 混在OK
+./scripts/deploy-md.sh origin/main..HEAD              # git レンジで変更md を算出
+```
+
+### 手順B: 手動2ステップ
+
+```bash
+# 1) ファイルベース md をフルビルド強制（ignore-build を回避）
+vercel --prod --force
+
+# 2) デプロイ完了後に該当URLのエッジキャッシュをパージ
+#    引数なし = git 差分(HEAD^..HEAD)の変更md を自動算出
+node scripts/cf-purge.mjs
+#    明示指定:
+node scripts/cf-purge.mjs /article/foo https://kyounoko.jp/article/bar
+#    まず対象だけ確認（API を叩かない）:
+node scripts/cf-purge.mjs --dry-run
+```
+
+> パージは**デプロイが本番に反映された後**に実行する。`vercel --prod --force` は
+> 反映完了まで待って返るので、その後にパージすれば安全（先にパージすると古い本番から
+> 再キャッシュされてしまう）。
+
+### 必要な環境変数（トークンは直書きせず env 経由のみ）
+
+```
+CLOUDFLARE_API_TOKEN=...   # 権限「Zone > Cache Purge」のみ
+CLOUDFLARE_ZONE_ID=...     # kyounoko.jp のゾーンID
+```
+
+トークンの作り方:
+
+1. Cloudflare ダッシュボード → 右上アカウント → **My Profile** → **API Tokens** → **Create Token**
+2. **Create Custom Token** を選択
+3. **Permissions**: `Zone` / `Cache Purge` / `Purge`（これ1つだけ）
+4. **Zone Resources**: `Include` / `Specific zone` / `kyounoko.jp`
+5. 発行されたトークンを `CLOUDFLARE_API_TOKEN` に設定（ローカルは `.env.local`、本番は Vercel 環境変数）
+
+`CLOUDFLARE_ZONE_ID` は、ダッシュボードで `kyounoko.jp` を開いた **Overview** ページ右側の
+「**Zone ID**」をコピーする。
+
+### 確認
+
+```bash
+curl -sI https://kyounoko.jp/article/<slug> | grep -i cf-cache-status
+# → MISS または EXPIRED になり、本文に新しい内容が出れば成功
+```
+
+---
+
 ## 初期データ（MicroCMSで登録）
 
 ### categories
