@@ -16,6 +16,7 @@ import {
   type SpotOverride,
 } from '@/lib/spot-overrides';
 import { isKvConfigured } from '@/lib/kv-store';
+import { purgeCfUrls } from '@/lib/cf-purge';
 
 /**
  * /admin/spots/edit から呼ばれるスポット上書き保存 API。
@@ -378,7 +379,15 @@ export async function POST(req: NextRequest) {
     if (!ok) return NextResponse.json({ error: 'kv write failed' }, { status: 500 });
     revalidateTag(SPOT_OVERRIDES_TAG);
     revalidatePath(`/spot/${slug}`);
-    return NextResponse.json({ ok: true, mode: 'kv', slug });
+    // CFエッジキャッシュも該当URL群をパージ（画像差替はトップ/一覧/ランキングにも出るため）。
+    // ビルド不要・数秒で反映。env未設定なら no-op。
+    const purge = await purgeCfUrls([`/spot/${slug}`, '/', '/spots', '/ranking']);
+    return NextResponse.json({
+      ok: true,
+      mode: 'kv',
+      slug,
+      cfPurged: purge.purged,
+    });
   }
 
   const newText = JSON.stringify(current, null, 2) + '\n';

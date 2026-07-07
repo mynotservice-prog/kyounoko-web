@@ -9,6 +9,7 @@ import {
   readArticleOverridesMap,
   writeArticleOverride,
 } from '@/lib/articles';
+import { purgeCfUrls } from '@/lib/cf-purge';
 
 /**
  * /admin/articles/[slug]/edit と /admin/plans/[id]/edit から呼ばれる
@@ -211,10 +212,15 @@ export async function POST(req: NextRequest) {
     revalidateTag(ARTICLE_OVERRIDES_TAG);
     revalidatePath(`/article/${body.slug}`);
     revalidatePath('/sitemap.xml'); // 新規記事をサイトマップに即反映（SEO発見性）
+    // CFエッジキャッシュも該当URLをパージ（ビルド不要・数秒で本番反映）。
+    // env未設定なら no-op（TTL 3600s で自然反映）。
+    const purge = await purgeCfUrls([`/article/${body.slug}`, '/']);
     return NextResponse.json({
       ok: true,
       source: 'kv',
-      deployed: 'KVに保存しました（デプロイ不要・数秒で反映）',
+      deployed: purge.purged
+        ? 'KV保存＋CFキャッシュをパージしました（数秒で本番反映）'
+        : 'KVに保存しました（デプロイ不要）',
     });
   }
 
