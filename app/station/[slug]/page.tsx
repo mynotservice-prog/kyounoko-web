@@ -28,6 +28,7 @@ import {
   getConditionKind,
 } from '@/lib/station-conditions';
 import { getSpotsForStation, filterSpotsByCondition } from '@/lib/station-spots';
+import { isStationConditionIndexable } from '@/lib/station-cond-index';
 import { StickySectionNav } from '@/components/station/StickySectionNav';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
@@ -656,7 +657,8 @@ export default async function StationPage({ params }: Props) {
                     filterIndiesByCondition(indies, c.slug).length
                   : filterSpotsByCondition(spotsAll, c.slug).length;
               return { cond: c, count, kind: k };
-            }).filter((x) => x.count > 0);
+              // 404化した noindex combo（spot系全部＋需要なしminor駅）へリンクしない
+            }).filter((x) => isStationConditionIndexable(slug, x.cond.slug, x.count, x.kind, station.scale));
             if (conditionLinks.length === 0) return null;
             return (
               <section className="station-conditions-cta" style={{

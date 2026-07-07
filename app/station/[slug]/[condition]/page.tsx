@@ -34,7 +34,6 @@ import {
 } from '@/lib/station-spots';
 import { findStationBySlug } from '@/lib/all-stations';
 import { isStationConditionIndexable } from '@/lib/station-cond-index';
-import { StationSpotConditionView } from '@/components/station/StationSpotConditionView';
 import { AffiliateLinkGroup } from '@/components/affiliate/AffiliateLinkGroup';
 import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
 import { getCatalogItems } from '@/lib/items-catalog';
@@ -44,9 +43,10 @@ import { buildRestaurantFaq, faqToJsonLd } from '@/lib/station-faq';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400; // 24h
-// 事前生成しなかった combo（noindex の long-tail）は初回アクセス時にオンデマンド生成し、
-// ISR(revalidate=86400) + CDN(Cloudflare) でキャッシュする。実行時コストはほぼゼロ。
-export const dynamicParams = true;
+// 薄ページ剪定 step3（2026-07 AdSense対策）: 事前生成する combo = index 対象のみ。
+// それ以外（spot系全部・需要なしminor駅の外食系）はルーティング層で真の 404 を返す。
+// noindex で隠すだけでは AdSense 審査クローラーには見えてしまうため、配信自体を止める。
+export const dynamicParams = false;
 
 type Props = {
   params: Promise<{ slug: string; condition: string }>;
@@ -180,23 +180,12 @@ export default async function StationConditionPage({ params }: Props) {
   const conditionSlug: StationConditionSlug = cond.slug;
   const kind = getConditionKind(conditionSlug);
 
-  // ---- spot 系条件は別ビューで描画して早期 return ----
+  // ---- 薄ページ剪定 step3（2026-07 AdSense対策）: noindex 対象は配信自体を止める ----
+  // AdSense の審査クローラーは noindex を考慮せずページ実体を見るため、
+  // 死蔵 long-tail は 404 で面から消す。spot 系は常に noindex（GSC90日でクリック約1）
+  // なので全て 404。SEO への影響はゼロ。
   if (kind === 'spot') {
-    const anyStation = findStationBySlug(slug);
-    if (!anyStation) notFound();
-    const { all: spotsAll } = getSpotsForStation(slug);
-    const spotsMatched = filterSpotsByCondition(spotsAll, conditionSlug);
-    if (spotsMatched.length === 0) notFound();
-    const isThin = spotsMatched.length < 3;
-    return (
-      <StationSpotConditionView
-        station={anyStation}
-        cond={cond}
-        spotsAll={spotsAll}
-        spotsMatched={spotsMatched}
-        isThin={isThin}
-      />
-    );
+    notFound();
   }
 
   const data = getStationWithChains(slug);
@@ -212,6 +201,12 @@ export default async function StationConditionPage({ params }: Props) {
   // 該当店舗数（noindex 判定と同じロジック）。3件未満なら薄いコンテンツの旨を案内バナーで表示。
   const matchedCount = chains.length + indies.length;
   const isThinResult = matchedCount < 3;
+
+  // 外食系も二段ゲート（需要実績 or 主要駅×3件以上）を通らない noindex 対象は 404。
+  // index 対象 1,482 ページ＋需要 allowlist は従来どおり配信され、SEO には影響しない。
+  if (!isStationConditionIndexable(slug, conditionSlug, matchedCount, kind, station.scale)) {
+    notFound();
+  }
 
   const wardName = WARD_NAMES[station.ward] ?? '';
 
@@ -246,14 +241,19 @@ export default async function StationConditionPage({ params }: Props) {
     indiesByGenre.get(r.genre)!.push(r);
   }
 
-  // 同じ駅の他条件 — 該当3件以上のものに絞り、回遊価値の高い順（件数降順）で上位3件
+  // 同じ駅の他条件 — 配信対象（indexable）のみに絞り、回遊価値の高い順（件数降順）で上位3件。
+  // 404化した noindex combo へリンクしないよう、二段ゲートと同じ判定でフィルタする。
   const otherConditions = STATION_CONDITIONS.filter((c) => c.slug !== conditionSlug)
     .map((c) => {
       const cn = filterChainsByCondition(data.chains, c.slug).length;
       const inn = filterIndiesByCondition(allIndies, c.slug).length;
       return { cond: c, count: cn + inn };
     })
-    .filter((x) => x.count >= 3)
+    .filter(
+      (x) =>
+        x.count >= 3 &&
+        isStationConditionIndexable(slug, x.cond.slug, x.count, getConditionKind(x.cond.slug), station.scale),
+    )
     .sort((a, b) => b.count - a.count)
     .slice(0, 3);
 
@@ -273,7 +273,8 @@ export default async function StationConditionPage({ params }: Props) {
       const cn = filterChainsByCondition(sc, conditionSlug).length;
       const inn = filterIndiesByCondition(si, conditionSlug).length;
       const cnt = cn + inn;
-      if (cnt >= 3) {
+      // 404化した noindex combo へ送らない（近隣駅も indexable のみ）
+      if (cnt >= 3 && isStationConditionIndexable(s.slug, conditionSlug, cnt, 'restaurant', s.scale)) {
         neighborSameCondition.push({ station: s, count: cnt });
         seenSlugs.add(s.slug);
       }

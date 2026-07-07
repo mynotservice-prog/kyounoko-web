@@ -16,6 +16,7 @@ import {
   filterIndiesByCondition,
   type StationConditionSlug,
 } from '@/lib/station-conditions';
+import { isStationConditionIndexable } from '@/lib/station-cond-index';
 import { AdSlot } from '@/components/ads/AdSlot';
 
 // 路線ページの「条件で探す」セクションで露出する主要条件（4種）。
@@ -92,6 +93,10 @@ export default async function LinePage({ params }: Props) {
       const inn = filterIndiesByCondition(indiesBase, slug).length;
       const count = cn + inn;
       if (count === 0) return null;
+      // 404化した noindex combo（需要なしminor駅）へリンクしない
+      if (!isStationConditionIndexable(x.station.slug, slug, count, 'restaurant', x.station.scale)) {
+        return null;
+      }
       return { slug, label: cond.label, count };
     }).filter((c): c is { slug: StationConditionSlug; label: string; count: number } => c !== null);
     return { station: x.station, total: x.total, conds };

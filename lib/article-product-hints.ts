@@ -253,19 +253,57 @@ export function isRestaurantContext(
 }
 
 /**
+ * 離乳食（0-1歳期）シグナルの判定トークン。
+ * GSC実数で「ガスト 離乳食」「サイゼ 離乳食 持ち込み」等の離乳食意図が
+ * 外食kodzureページに月2,885imp集中している（=0-1歳の親）。
+ * この層には1-3歳向け幼児食（mogumo）より、月齢別の離乳食宅配が年齢一致で刺さる。
+ */
+const RINYUSHOKU_NEEDLES = ['離乳食', 'rinyushoku', 'rinyuushoku'];
+
+/**
  * 外食文脈向けの「高単価ブリッジ」オファーを1点返す（非外食文脈なら null）。
  *
  * 外食トラフィック（全体の約7割）は楽天低単価グッズしか刺さらず収益天井が低い。
- * 「外食が続く週は家では幼児食宅配でラクに」という文脈的に正直な導線で、
- * 1件¥1,000〜の高単価アフィ（幼児食冷凍宅配 mogumo / A8）へ橋渡しする。
+ * 「外食が続く週は家では宅配でラクに」という文脈的に正直な導線で、
+ * 1件¥1,000〜の高単価アフィ（冷凍宅配 / A8）へ橋渡しする。
  * 低単価グッズCTAとは別枠で、控えめな1点に絞って表示する。
+ *
+ * 意図ズレ対策（2026-06）: ページが離乳食(0-1歳)シグナルを持つなら
+ * 離乳食宅配「ファーストスプーン」、それ以外は幼児食(1-3歳)「mogumo」に出し分け。
+ * 0-1歳の親に1-3歳幼児食を出しても年齢が合わず成約しないため。
  */
 export function getRestaurantBridgeOffer(
   slug: string,
   category?: string,
   title?: string,
+  body?: string,
 ): AffiliateLinkProps | null {
   if (!isRestaurantContext(slug, category, title)) return null;
+
+  // 離乳食が「記事の主題」のときだけ離乳食宅配に出し分ける。判定は
+  //  - タイトル/slug に離乳食トークンを含む、または
+  //  - 本文に離乳食 H2 セクションを持つ（= 中盤挿入が起きるページと一致）
+  // 本文テキストの通りすがり言及（キッズメニュー記事内の一言等）では反応させない。
+  const hasRinyushokuSection = body
+    ? splitBodyAtRinyushokuSection(body) !== null
+    : false;
+  const isRinyushoku =
+    containsAny([slug, title ?? ''], RINYUSHOKU_NEEDLES) || hasRinyushokuSection;
+  if (isRinyushoku) {
+    const firstspoon = CATALOG_ITEMS.find((it) => it.id === 'sk-firstspoon');
+    if (firstspoon) {
+      return {
+        href: firstspoon.href,
+        title: '離乳食の冷凍宅配「ファーストスプーン」',
+        subtitle:
+          '外出先は持ち込み、家では解凍するだけ。月齢に合わせて届く0-1歳の冷凍離乳食（国産食材・アレルゲン明記）',
+        price: firstspoon.price,
+        provider: firstspoon.provider,
+        pr: true,
+      };
+    }
+  }
+
   const mogumo = CATALOG_ITEMS.find((it) => it.id === 'ts-mogumo');
   if (!mogumo) return null;
   return {
@@ -276,6 +314,69 @@ export function getRestaurantBridgeOffer(
     price: mogumo.price,
     provider: mogumo.provider,
     pr: true,
+  };
+}
+
+/**
+ * 本文HTMLを「離乳食」H2セクションの末尾で2分割する（中盤に高単価ブリッジを挿す用）。
+ *
+ * 離乳食意図の読者は離乳食セクションで意図がピークに立つが、ブリッジは従来FAQより下の
+ * 最下部にしか無く見られていなかった。離乳食H2の直後にある次のH2の手前（=離乳食セクション
+ * 末尾）で分割し、そこへ離乳食宅配ブリッジを差し込むことで、意図ピーク位置で訴求する。
+ *
+ * 離乳食H2が見つからなければ null（=分割せず、従来どおり末尾ブリッジにフォールバック）。
+ */
+export function splitBodyAtRinyushokuSection(
+  bodyHtml: string,
+): [string, string] | null {
+  if (!bodyHtml) return null;
+  const h2Re = /<h2\b[^>]*>([\s\S]*?)<\/h2>/gi;
+  let m: RegExpExecArray | null;
+  let rinyuHeadingEnd = -1;
+  while ((m = h2Re.exec(bodyHtml)) !== null) {
+    const headingText = m[1].replace(/<[^>]+>/g, '');
+    if (headingText.includes('離乳食')) {
+      rinyuHeadingEnd = m.index + m[0].length;
+      break;
+    }
+  }
+  if (rinyuHeadingEnd === -1) return null;
+  const nextH2Rel = bodyHtml.slice(rinyuHeadingEnd).search(/<h2\b/i);
+  const splitAt = nextH2Rel === -1 ? bodyHtml.length : rinyuHeadingEnd + nextH2Rel;
+  return [bodyHtml.slice(0, splitAt), bodyHtml.slice(splitAt)];
+}
+
+/**
+ * 本文HTMLから「子連れチェックリスト」H2セクションを抜き出し、残り本文と分離する。
+ *
+ * 戦略(docs/strategy-2026-07.md §7): 親は説明文でなくGO/NO-GO判定をしたい。
+ * 判定ボックス(チェックリスト表)を1画面目=ヒーロー直下に前出しするため、
+ * 本文中の該当H2セクション(次のH2手前まで)を抽出する。
+ * 対象見出しは「子連れチェックリスト」を含むもののみ(「30秒チェックリスト」等は対象外)。
+ * 見つからなければ null(=従来どおり本文をそのまま描画)。
+ */
+export function extractChecklistSection(
+  bodyHtml: string,
+): { checklist: string; rest: string } | null {
+  if (!bodyHtml) return null;
+  const h2Re = /<h2\b[^>]*>([\s\S]*?)<\/h2>/gi;
+  let m: RegExpExecArray | null;
+  let start = -1;
+  let headingEnd = -1;
+  while ((m = h2Re.exec(bodyHtml)) !== null) {
+    const headingText = m[1].replace(/<[^>]+>/g, '');
+    if (headingText.includes('子連れチェックリスト')) {
+      start = m.index;
+      headingEnd = m.index + m[0].length;
+      break;
+    }
+  }
+  if (start === -1) return null;
+  const nextH2Rel = bodyHtml.slice(headingEnd).search(/<h2\b/i);
+  const end = nextH2Rel === -1 ? bodyHtml.length : headingEnd + nextH2Rel;
+  return {
+    checklist: bodyHtml.slice(start, end),
+    rest: bodyHtml.slice(0, start) + bodyHtml.slice(end),
   };
 }
 
@@ -353,6 +454,7 @@ const CHAIN_DISPLAY_NAMES: Record<string, string> = {
   shabuyo: 'しゃぶ葉',
   steakgusto: 'ステーキガスト',
   sukiya: 'すき家',
+  sushiro: 'スシロー',
   tenya: 'てんや',
   'yakiniku-king': '焼肉キング',
   yayoiken: 'やよい軒',
@@ -361,6 +463,19 @@ const CHAIN_DISPLAY_NAMES: Record<string, string> = {
 
 /** テーマパーク（ファミレス系チェーン比較ハブの対象外にする）。姉妹リンクは出す。 */
 const THEME_PARK_CHAINS = new Set(['disney', 'legoland']);
+
+/**
+ * `{chain}-kodzure-koryaku`（来店ロジ記事）と `{chain}-kids-menu`（メニュー記事）が
+ * **同一stemで両方実在する**チェーン。来店ロジ記事は流入主力で pos4-6 と強く、
+ * メニュー記事は pos7-8 で停滞しがち。強→弱へ「キッズメニュー」アンカーの内部リンクを
+ * 降らせて menu クラスタの順位を押し上げる（getChainCrossLinks の kodzure 分岐で使用）。
+ * スラッグ命名が一致する16チェーンのみ列挙（denny-s/dennys 等の不一致stemは対象外）。
+ */
+const CHAINS_WITH_KIDS_MENU = new Set([
+  'anrakutei', 'bamiyan', 'cocoichi', 'cocos', 'gusto', 'gyukaku', 'jonathan',
+  'matsuya', 'nakau', 'ohsho', 'royal-host', 'sukiya', 'sushiro',
+  'yakiniku-king', 'yayoiken', 'yoshinoya',
+]);
 
 /**
  * チェーン×子連れ記事（`{chain}-kids-menu` / `{chain}-baby-chair`）から、
@@ -378,6 +493,31 @@ const THEME_PARK_CHAINS = new Set(['disney', 'legoland']);
 export function getChainCrossLinks(slug: string): HubLink[] {
   const isKidsMenu = slug.endsWith('-kids-menu');
   const isBabyChair = slug.endsWith('-baby-chair');
+
+  // 来店ロジ記事（{chain}-kodzure-koryaku, pos4-6で稼ぐ強ページ）から、同チェーンの
+  // メニュー記事（{chain}-kids-menu, pos7-8で停滞）へ「キッズメニュー」アンカーで
+  // 内部リンクを降らせ、menuクラスタの順位を押し上げる。markdownを編集せずレンダリング層で
+  // 勝ちクラスタの票を集約する（SEOプレイブック §A 内部リンク集中の実装）。
+  if (slug.endsWith('-kodzure-koryaku')) {
+    const chain = slug.replace(/-kodzure-koryaku$/, '');
+    const name = CHAIN_DISPLAY_NAMES[chain];
+    if (!name || !CHAINS_WITH_KIDS_MENU.has(chain)) return [];
+    return [
+      {
+        href: `/article/${chain}-kids-menu`,
+        title: `${name}のキッズメニューは何歳から？値段・年齢別ガイド`,
+        description: `${name}のキッズメニューの値段・対象年齢・アレルゲン対応と、子どもに人気の取り分けメニューを解説。`,
+        eyebrow: '同じお店のメニュー',
+      },
+      {
+        href: '/article/kids-menu-chain-15-hikaku',
+        title: '子連れOKチェーン店のキッズメニュー比較15選',
+        description: '主要ファミレス・チェーンのキッズメニューを価格/対象年齢/アレルゲンで一覧比較。',
+        eyebrow: 'チェーン比較',
+      },
+    ];
+  }
+
   if (!isKidsMenu && !isBabyChair) return [];
 
   const chain = slug.replace(/-(kids-menu|baby-chair)$/, '');
