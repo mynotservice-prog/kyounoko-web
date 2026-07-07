@@ -30,6 +30,11 @@ export type CrossLinkCardsProps = {
   items: CrossLinkItem[];
   /** カード上部の Eyebrow 既定値（item.eyebrow 未指定時に使う） */
   defaultEyebrow?: string;
+  /**
+   * 表示バリアント。'compact' は画像なしのテキスト行リスト。
+   * 記事末尾に複数セクション積む場合のスクロール量削減用（内部リンクは全件維持）。
+   */
+  variant?: 'card' | 'compact';
 };
 
 export function CrossLinkCards({
@@ -37,8 +42,56 @@ export function CrossLinkCards({
   eyebrow,
   items,
   defaultEyebrow,
+  variant = 'card',
 }: CrossLinkCardsProps) {
   if (!items || items.length === 0) return null;
+
+  if (variant === 'compact') {
+    return (
+      <section style={{ marginTop: 32 }} aria-label={heading}>
+        <h2
+          style={{
+            fontFamily: 'var(--font-mincho), "Shippori Mincho", serif',
+            fontWeight: 600,
+            fontSize: 16.5,
+            margin: '0 0 10px',
+          }}
+        >
+          {heading}
+        </h2>
+        <div
+          style={{
+            border: '1px solid var(--line)',
+            borderRadius: 'var(--radius-md)',
+            background: 'var(--paper-card)',
+            overflow: 'hidden',
+          }}
+        >
+          {items.map((it, i) => (
+            <Link
+              key={it.href}
+              href={it.href}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: 10,
+                padding: '12px 14px',
+                textDecoration: 'none',
+                color: 'inherit',
+                borderTop: i === 0 ? 'none' : '1px solid var(--line)',
+                fontSize: 13.5,
+                lineHeight: 1.6,
+              }}
+            >
+              <span style={{ minWidth: 0 }}>{it.title}</span>
+              <span aria-hidden="true" style={{ color: 'var(--clay-deep)', flexShrink: 0 }}>→</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section style={{ marginTop: 56 }} aria-label={heading}>

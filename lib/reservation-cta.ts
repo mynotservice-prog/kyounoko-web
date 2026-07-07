@@ -42,6 +42,96 @@ function isValidUrl(url: string | undefined): url is string {
   return typeof url === 'string' && /^https?:\/\//i.test(url.trim());
 }
 
+/** slug/category/title のいずれかに needle が含まれるか（全角・大小無視の簡易判定）。 */
+function ctxIncludes(
+  haystacks: (string | undefined)[],
+  needles: string[],
+): boolean {
+  const hay = haystacks.map((s) => (s ?? '').toLowerCase()).join(' ');
+  return needles.some((n) => hay.includes(n.toLowerCase()));
+}
+
+/**
+ * 生協（コープデリ／おうちコープ／パルシステム等）の資料請求オファー（A8・高単価）。
+ *
+ * GSC実数で離乳食意図が月2,885imp、外食kodzureページに集中（=0-1歳の親）。この層は
+ * 「家用の離乳食・時短食材を宅配でストックしたい」ニーズが強く、生協の資料請求は
+ * A8で1件¥1,000〜3,000の高単価。外食・離乳食・宅食文脈に「家のストック」導線として正直に橋渡しする。
+ *
+ * env `NEXT_PUBLIC_A8_COOP_URL` 未設定なら null（=描画されない＝無害）。
+ * A8で生協プログラムの提携承認後、発行アフィリンクを env に1行入れるだけで全食文脈に点灯。
+ */
+export function getCoopOffer(
+  slug: string,
+  category?: string,
+  title?: string,
+): ReservationOffer | null {
+  const isFoodContext =
+    isRestaurantContext(slug, category, title) ||
+    ctxIncludes(
+      [slug, category, title],
+      ['rinyushoku', 'rinyuushoku', '離乳食', 'takushoku', '宅食', '時短', 'jitan', 'youjishoku', 'yojishoku', '幼児食'],
+    );
+  if (!isFoodContext) return null;
+  const href = process.env.NEXT_PUBLIC_A8_COOP_URL?.trim();
+  if (!isValidUrl(href)) return null;
+  return {
+    href,
+    heading: '生協の宅配で離乳食・時短食材を家にストック',
+    note: '裏ごし野菜・国産食材・温めるだけのミールキットを玄関先まで。資料請求・お試しが無料の生協が多数。',
+    cta: '生協の無料資料請求・お試しを見る →',
+    itemId: 'coop-shiryou-seikyu',
+  };
+}
+
+/** 旅行・おでかけ・レジャー文脈の判定トークン（子連れ宿予約ブリッジの出し分け用）。 */
+const LEISURE_NEEDLES = [
+  'spot', 'kodzure-spot', 'odekake', 'ryokou', 'ryoko', 'ryokan',
+  'onsen', 'hotel', 'yado', 'leisure', 'pool', 'aquarium', 'camp',
+  'natsuyasumi', 'kazoku-ryokou', '旅行', '宿', '温泉', 'おでかけ', '家族旅行',
+];
+
+/**
+ * じゃらん等の「子連れ歓迎の宿」予約オファー（A8/VC・高単価）。
+ *
+ * スポット詳細(/spot)はコード内でも「アフィ最大未開拓面」と明記。旅行・おでかけ記事と
+ * スポットは宿予約と相性が良く、宿予約は単価が高い。
+ *
+ * env `NEXT_PUBLIC_TRAVEL_URL` 未設定なら null（=描画されない）。
+ * 2026-06: A8 のじゃらんnet宿泊予約が提携済みのため、A8 アフィリンク（px.a8.net/...）を設定。
+ * 着地はじゃらんトップのため文言は「探せます」とし、絞り込み済みを過度に約束しない。
+ */
+export function getTravelOffer(
+  slug: string,
+  category?: string,
+  title?: string,
+): ReservationOffer | null {
+  if (!ctxIncludes([slug, category, title], LEISURE_NEEDLES)) return null;
+  const href = process.env.NEXT_PUBLIC_TRAVEL_URL?.trim();
+  if (!isValidUrl(href)) return null;
+  return {
+    href,
+    heading: '子連れ歓迎の宿をチェック',
+    note: 'おむつ替え・離乳食対応・添い寝無料など、子連れ歓迎の宿を探せます。早めの予約が安心です。',
+    cta: 'じゃらんで宿を探す →',
+    itemId: 'jalan-kodzure-yado',
+  };
+}
+
+/** スポット詳細ページ向けの宿予約オファー（park/restaurant 以外のレジャー全般）。 */
+export function getSpotTravelOffer(category: string): ReservationOffer | null {
+  if (category === 'park' || category === 'restaurant') return null;
+  const href = process.env.NEXT_PUBLIC_TRAVEL_URL?.trim();
+  if (!isValidUrl(href)) return null;
+  return {
+    href,
+    heading: '近くの子連れ歓迎の宿を探す',
+    note: '泊まりで遊ぶなら、おむつ替え・離乳食対応・添い寝無料など子連れ歓迎の宿が安心です。',
+    cta: 'じゃらんで宿を探す →',
+    itemId: 'jalan-kodzure-yado-spot',
+  };
+}
+
 /**
  * ホットペッパーグルメの「子連れOK」絞り込み済み着地URL。
  * 汎用トップ（hotpepper.jp/）に飛ばすより、子連れ条件で絞り込んだ一覧に着地させる方が

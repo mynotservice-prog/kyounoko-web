@@ -1717,3 +1717,42 @@
   1. Bing(200)+Yandex(202) の両受理が安定継続。手動対応は不要。
   2. URL 数は 5,297 で 1日上限 10,000 / max=9000 に対し十分マージンあり。当面は1バッチ全網羅で問題なし。
   3. git pull は正常（Already up to date）。
+  4. **push 状態**: commit `f080f01` はローカルに作成済みだが、今回の実行環境（サンドボックス）に GitHub 認証情報（credential helper / token / SSH 鍵）が無いため `git push origin main` が失敗（`could not read Username for 'https://github.com'`）。`origin/main` より 1 commit ahead の状態。**要対応**: Mac 側のターミナルから `cd ~/Developer/kyounoko-web && git push origin main` を手動実行するか、次回実行時に push 可能な環境であれば自動反映される。なお IndexNow 送信（本タスクの主目的）は完了済みで、この push 失敗は記録ログの反映のみに影響する。
+
+## 2026-06-29 06:04 JST — IndexNow 週次送信 (kyounoko-indexnow-weekly)
+
+- **キュー生成**: `node scripts/indexnow-build-queue.mjs --max=9000 --kind=all` → sitemap.xml から **5,016 URL** 取得・書き出し（kind=all 全網羅、サイト稼働中・Vercel Ready）。
+- **送信**: `node scripts/indexnow-submit.mjs` → 有効 **5,015 URL** を送信（1件は無効URLでスキップ）。
+- **submitted_count**: 5,015
+- **送信結果**:
+  - `https://api.indexnow.org/IndexNow` (Bing): **status 200** ✅
+  - `https://yandex.com/indexnow` (Yandex): **status 202** ✅
+- **bing_status**: 200 OK / **yandex_status**: 202 Accepted / **失敗**: なし
+- **ログ反映**: `docs/indexnow-submitted.log` に 5,015 URL を追記、`docs/indexnow-queue.txt` を空にクリア。
+- **失敗時対処の判断ログ**: 403／404／429／ネットワークエラーいずれも発生せず。再試行不要。429 なし（5,015 URL / 上限10,000、max=9000 マージン内）。
+- **前週比較**: submitted_count 前回 5,296 → 今回 5,015（-281件）。sitemap.xml の URL 総数 5,297→5,016。
+- **⚠ 実行環境メモ（要対応）**:
+  1. 今回はサンドボックス実行。作業フォルダのマウントが **ファイル削除（unlink）を許可しない** ため、`git pull --rebase --autostash` / `git commit` / `git push` がいずれも実行不可（`index.lock` の削除不可、autostash 失敗）。IndexNow 送信（本タスクの主目的）は完了済み。
+  2. **チェックアウト中のブランチが `feat/ia-phase0-1-nav-today`**（main ではない）。未コミットの変更が多数あり。スクリプトは本番 sitemap.xml をフェッチするため送信内容には影響なし。
+  3. `.git/index.lock`（0byte, 6/28 21:02）が残存。サンドボックスからは削除できないため **Mac 側ターミナルで `rm -f ~/Developer/kyounoko-web/.git/index.lock` を実行**してください。
+  4. 本ログ追記は append で反映済みだが、**commit/push は未実施**。Mac 側で `cd ~/Developer/kyounoko-web && git checkout main && git add docs/scheduled-log.md docs/indexnow-submitted.log && git commit -m "chore(seo): indexnow weekly log 2026-06-29" && git push origin main` を手動実行してください。
+  5. 動作確認用に作成した 0byte ファイル `_testfile_2` と `.git/_test_2` がサンドボックスから削除できず残存。Mac 側で `rm -f ~/Developer/kyounoko-web/_testfile_2 ~/Developer/kyounoko-web/.git/_test_2` で削除してください。
+
+## 2026-07-06 06:03 JST — IndexNow 週次送信 (kyounoko-indexnow-weekly)
+
+- **キュー生成**: `node scripts/indexnow-build-queue.mjs --max=9000 --kind=all` → sitemap.xml から **3,797 URL** 取得・書き出し（kind=all 全網羅、サイト稼働中・Vercel Ready）。
+- **送信**: `node scripts/indexnow-submit.mjs` → 有効 **3,796 URL** を送信（1件は無効URLでスキップ）。
+- **submitted_count**: 3,796
+- **送信結果**:
+  - `https://api.indexnow.org/IndexNow` (Bing): **status 200** ✅
+  - `https://yandex.com/indexnow` (Yandex): **status 202** ✅
+- **bing_status**: 200 OK / **yandex_status**: 202 Accepted / **失敗**: なし
+- **認証キー確認**: `https://kyounoko.jp/c68e60e8f4b025a51c97f20076ce5c09.txt` → **200 OK**（内容一致）。403/404 なし。
+- **ログ反映**: `docs/indexnow-submitted.log` に 3,796 URL を追記、`docs/indexnow-queue.txt` を空にクリア。
+- **失敗時対処の判断ログ**: 403／404／429／ネットワークエラーいずれも発生せず。再試行不要。429 なし（3,796 URL / 上限10,000、max=9000 マージン内）。
+- **⚠ 前週比較（要注目）**: submitted_count 前回 5,015 → 今回 3,796（**-1,219件**）。sitemap.xml の URL 総数 5,016→3,797（-1,219）。1週間で約24%減少。記事・スポット・プランのいずれかが sitemap から外れた可能性があるため、意図した変更かどうか確認推奨。
+- **⚠ 実行環境メモ（前週から継続・要対応）**:
+  1. サンドボックス実行。作業フォルダのマウントが **ファイル削除（unlink）を許可しない** ため、`git pull --rebase --autostash` / `git commit` / `git push` がいずれも実行不可。IndexNow 送信（本タスクの主目的）は完了済み。
+  2. **チェックアウト中のブランチが `feat/ia-phase0-1-nav-today`**（main ではない）。未コミットの変更が多数あり。ユーザーが作業中と思われるため git 操作は行わず。スクリプトは本番 sitemap.xml をフェッチするため送信内容には影響なし。
+  3. `.git/index.lock`（0byte, 7/6 06:02）が残存。サンドボックスからは削除できないため **Mac 側ターミナルで `rm -f ~/Developer/kyounoko-web/.git/index.lock` を実行**してください。
+  4. 本ログ追記は append で反映済みだが、**commit/push は未実施**。Mac 側で `cd ~/Developer/kyounoko-web && git checkout main && git add docs/scheduled-log.md docs/indexnow-submitted.log && git commit -m "chore(seo): indexnow weekly log 2026-07-06" && git push origin main` を手動実行してください。

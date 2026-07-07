@@ -237,9 +237,8 @@ function V2Header({
         <div className="v2-app-header">
           <V2Logo tagline size={36} />
           <div className="v2-header-actions">
-            <Link href="/favorites" className="v2-header-act">
+            <Link href="/favorites" className="v2-header-act" aria-label="保存したもの">
               <V2Icon name="bookmark" size={22} color="var(--v2-ink)" />
-              保存
             </Link>
             <button
               type="button"
@@ -248,7 +247,6 @@ function V2Header({
               aria-label="メニューを開く"
             >
               <V2Icon name="menu" size={22} color="var(--v2-ink)" />
-              メニュー
             </button>
           </div>
         </div>
@@ -273,7 +271,6 @@ function V2Header({
             aria-label="メニューを開く"
           >
             <V2Icon name="menu" size={22} color="var(--v2-ink)" />
-            メニュー
           </button>
         </div>
         <V2MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
@@ -283,14 +280,12 @@ function V2Header({
   // sub
   const right =
     rightAction === 'share' ? (
-      <button type="button" className="v2-header-act">
+      <button type="button" className="v2-header-act" aria-label="シェア">
         <V2Icon name="share" size={20} color="var(--v2-ink)" />
-        シェア
       </button>
     ) : (
-      <Link href="/favorites" className="v2-header-act">
+      <Link href="/favorites" className="v2-header-act" aria-label="保存したもの">
         <V2Icon name="bookmark" size={20} color="var(--v2-ink)" />
-        保存
       </Link>
     );
   return (
@@ -319,7 +314,6 @@ function V2Header({
             style={{ marginLeft: 4 }}
           >
             <V2Icon name="menu" size={20} color="var(--v2-ink)" />
-            メニュー
           </button>
         </div>
       </div>

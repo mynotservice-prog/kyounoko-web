@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { trackEvent } from '@/lib/analytics';
 
 /**
  * 記事末尾の「1日プラン検索ツール（/today）」への送客CTA（P1-7）。
@@ -29,6 +32,7 @@ export function NextPlanCTA({
     <section style={{ margin: '40px 0 0' }}>
       <Link
         href={href}
+        onClick={() => trackEvent('today_cta_click', { area: area ?? 'all', age: age ?? 'none' })}
         style={{
           display: 'block',
           background: 'linear-gradient(135deg, rgba(201,96,62,0.10), rgba(201,96,62,0.04))',

@@ -1,5 +1,6 @@
 ---
 slug: rinyuushoku-mochikomi-chain-15
+chainComparison: babyFoodBringIn
 title: 離乳食持ち込みOK・温めてくれるチェーン店15選｜ファミレス・うどん・カフェ別【0-1歳】
 metaDescription: >-
   ガスト/ジョナサン/サイゼリヤ/バーミヤン/しゃぶ葉/ココス/やよい軒/丸亀製麺/コメダ/ベローチェなど15チェーンの離乳食対応を比較。持ち込みOK/温めサービス/取り皿提供/月齢別おすすめ品目まで完全まとめ。

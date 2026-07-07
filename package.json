@@ -9,6 +9,8 @@
     "build": "next build",
     "postbuild": "node -e \"fetch('https://api.indexnow.org/indexnow',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({host:'kyounoko.jp',key:process.env.INDEXNOW_KEY||'229166d73b10f1630ed52857e67c427b',keyLocation:'https://kyounoko.jp/'+(process.env.INDEXNOW_KEY||'229166d73b10f1630ed52857e67c427b')+'.txt',urlList:['https://kyounoko.jp/','https://kyounoko.jp/sitemap.xml']})}).then(r=>console.log('IndexNow ping:',r.status)).catch(e=>console.log('IndexNow skip:',e.message))\"",
     "start": "next start",
+    "cf:purge": "node scripts/cf-purge.mjs",
+    "deploy:md": "bash scripts/deploy-md.sh",
     "lint": "next lint",
     "format": "prettier --write ."
   },
