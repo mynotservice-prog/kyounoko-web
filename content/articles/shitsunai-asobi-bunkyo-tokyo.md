@@ -156,7 +156,7 @@ A. 児童館は基本駐車場なし。**東京ドームシティ・ラクーア
 
 ## 関連記事
 
-- [梅雨の室内遊び完全ガイド（0〜6歳）](/article/tsuyu-shitsunai-asobi-kanzen-guide-0-6sai)
+- [梅雨の室内遊び完全ガイド（0〜6歳）](/article/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026)
 - [0歳育児完全マップ](/article/0sai-ikuji-kanzen-map)
 - [1〜2歳育児完全マップ](/article/1-2sai-ikuji-kanzen-map)
 - [3〜6歳育児完全マップ](/article/3-6sai-ikuji-kanzen-map)

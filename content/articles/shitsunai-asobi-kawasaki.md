@@ -114,7 +114,7 @@ A. **2026年の正確な料金・営業時間は各施設公式で要確認**。
 ## 関連記事
 
 - [夏の子育て完全マップ](/article/natsu-kosodate-kanzen-map)
-- [梅雨の室内遊び完全ガイド 0-6歳](/article/tsuyu-shitsunai-asobi-kanzen-guide-0-6sai)
+- [梅雨の室内遊び完全ガイド 0-6歳](/article/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026)
 - [子どもの熱中症 3歳児のリアル 2026](/article/kodomo-netsuchusho-3sain-real-2026)
 - [子どものプールはいつから](/article/kodomo-pool-itsukara)
 - [0歳育児完全マップ](/article/0sai-ikuji-kanzen-map)
