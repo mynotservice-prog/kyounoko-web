@@ -364,7 +364,6 @@ A. **離乳食を温め同時依頼**できるよう、容器を分けて温め�
 
 **ファミレス系**
 - [サイゼリヤの離乳食持ち込みガイド](/article/saizeriya-rinyushoku-mochikomi)
-- [ガストの離乳食温め リアル体験](/article/gusto-rinyu-warm-real)
 - [ジョナサンの離乳食持ち込みガイド](/article/jonathan-kodzure-koryaku)
 - [バーミヤンの離乳食持ち込みガイド](/article/bamiyan-kodzure-koryaku)
 - [ココスの離乳食持ち込みガイド](/article/cocos-kodzure-koryaku)

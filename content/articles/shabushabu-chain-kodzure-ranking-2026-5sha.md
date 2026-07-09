@@ -69,7 +69,7 @@ heroAlt: 家族4人がしゃぶしゃぶ鍋を囲み、子どもの皿に取り�
 
 出汁は **昆布だし／寄せ鍋だし／白湯／キムチ** など複数選択でき、子用には昆布だしの単独鍋を1鍋確保するのが鉄則。塩分も自分で薄められ、〆のうどん・雑炊は2歳息子のメインにできます。離乳食持込は **「アレルギー対応・自家製のお弁当でしたら一声いただければ大丈夫です」** という運用が首都圏標準。ベビーチェアもほぼ全店常備。
 
-**懸念点**: 土日11:30-12:30の待ち時間が30〜60分になりがち。**開店直後（11:00または17:00）入店が鉄則**。スマホ予約（しゃぶ葉アプリ）に対応した店舗が増えているので、繁忙時間帯はアプリ事前受付が現実解。詳しくは[しゃぶ葉 子連れ攻略](/article/shabuyou-kodzure-koryaku)と[しゃぶ葉「3歳以下無料」のリアル](/article/shabuyou-3sai-free-real)で深掘りしています。
+**懸念点**: 土日11:30-12:30の待ち時間が30〜60分になりがち。**開店直後（11:00または17:00）入店が鉄則**。スマホ予約（しゃぶ葉アプリ）に対応した店舗が増えているので、繁忙時間帯はアプリ事前受付が現実解。詳しくは[しゃぶ葉 子連れ攻略](/article/shabuyou-kodzure-koryaku)で深掘りしています。
 
 ## 2位｜しゃぶしゃぶ温野菜（38点）｜半個室と年齢別料金の明朗さ
 
@@ -285,7 +285,7 @@ A. 本記事は **子連れ目線の評価に絞っており、肉質・タレ�
 
 ## 関連記事｜しゃぶしゃぶ・外食チェーンランキングシリーズ
 
-- 単独攻略：[しゃぶ葉 子連れ攻略](/article/shabuyou-kodzure-koryaku)／[しゃぶ葉「3歳以下無料」のリアル](/article/shabuyou-3sai-free-real)／[しゃぶしゃぶ温野菜 子連れ攻略（二色鍋・未就学児無料・生焼け対策）](/article/onyasai-kodzure-koryaku)／[ゆず庵 子連れ攻略（寿司＋しゃぶしゃぶ・生ものは何歳から）](/article/yuzuan-kodzure-koryaku)／[かごの屋 子連れ攻略（座敷・掘りごたつ・御膳・段差の安全）](/article/kagonoya-kodzure-koryaku)
+- 単独攻略：[しゃぶ葉 子連れ攻略](/article/shabuyou-kodzure-koryaku)／[しゃぶしゃぶ温野菜 子連れ攻略（二色鍋・未就学児無料・生焼け対策）](/article/onyasai-kodzure-koryaku)／[ゆず庵 子連れ攻略（寿司＋しゃぶしゃぶ・生ものは何歳から）](/article/yuzuan-kodzure-koryaku)／[かごの屋 子連れ攻略（座敷・掘りごたつ・御膳・段差の安全）](/article/kagonoya-kodzure-koryaku)
 - 安全ガイド：[子連れしゃぶしゃぶ・鍋を安全に楽しむ完全ガイド（生焼け・やけど・誤嚥・座敷の段差）](/article/kodzure-shabushabu-nabe-anzen-kanzen-guide)
 - カテゴリ比較：[しゃぶしゃぶ食べ放題3チェーン子連れ比較（しゃぶ葉・温野菜・木曽路）](/article/shabushabu-yakiniku-buffet-3chain)
 - 焼肉カテゴリ：[焼肉5チェーン子連れ比較](/article/yakiniku-5chain-kodomo-2026)／[子連れOK焼肉・しゃぶしゃぶ7選](/article/kodzure-yakiniku-shabu-7)

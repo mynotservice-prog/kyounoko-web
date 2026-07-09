@@ -129,7 +129,6 @@ A. 当日でも対応してくれることが多いですが、**事前予約で
 
 - [ココス 子連れ攻略完全ガイド](/article/cocos-kodzure-koryaku)
 - [ココス ベビーチェア](/article/cocos-kodzure-koryaku)
-- [ココス 誕生日プレート リアル体験](/article/cocos-birthday-real)
 - [ファミレス子連れランキング2026](/article/famires-kodzure-ranking-2026-10sen)
 - [キッズメニュー比較15チェーン](/article/kids-menu-chain-15-hikaku)
 

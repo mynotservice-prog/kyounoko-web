@@ -59,4 +59,12 @@ export const ARTICLE_REDIRECTS: { from: string; to: string }[] = [
   { from: 'dennys-baby-chair', to: 'denny-s-kodzure-koryaku' },
   { from: 'ikea-rinyushoku', to: 'ikea-restaurant-kodzure-koryaku' },
   { from: 'steakgusto-stroller', to: 'steak-gusto-kodzure-koryaku' },
+  // 2026-07-09: チェーン「-real」記事のカニバリ解消。声データを統合先へ移植した上で301統合。
+  { from: 'gusto-rinyu-warm-real', to: 'gusto-kodzure-koryaku' },
+  { from: 'shabuyou-3sai-free-real', to: 'shabuyou-kodzure-koryaku' },
+  { from: 'yayoiken-toribunke-real', to: 'yayoiken-kodzure-koryaku' },
+  { from: 'bamiyan-china-toribunke-real', to: 'bamiyan-kodzure-koryaku' },
+  { from: 'cocos-birthday-real', to: 'cocos-kodzure-koryaku' },
+  { from: 'royal-host-kinenbi-real', to: 'royal-host-kodzure-koryaku' },
+  { from: 'dennys-arerugen-real', to: 'denny-s-kodzure-koryaku' },
 ];
