@@ -61,7 +61,7 @@ const PRIORITY_SLUGS = new Set([
   'sotsunyu-toha-kanzen-guide',
   'iyaiya-ki-toha-kanzen-guide',
   'akachan-nekashitsuke-kanzen-guide-0-1sai',
-  'tsuyu-shitsunai-asobi-kanzen-guide-0-6sai',
+  'tsuyu-shitsunai-asobi-0-6sai-hozonban-2026',
   'kodomo-netsuchusho-3sain-real-2026',
   'natsuyasumi-kazoku-ryokou-kodzure-2026',
   'shichigosan-nenrei-junbi',

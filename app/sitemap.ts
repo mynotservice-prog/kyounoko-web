@@ -123,7 +123,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'babycar-a-vs-b',
     'akachan-nekashitsuke-kanzen-guide-0-1sai',
     'natsuyasumi-kazoku-ryokou-kodzure-2026',
-    'tsuyu-shitsunai-asobi-kanzen-guide-0-6sai',
+    'tsuyu-shitsunai-asobi-0-6sai-hozonban-2026',
     'kodomo-kaze-hayaku-naosu-kanzen-guide',
     'kodomo-netsuchusho-3sain-real-2026',
     'shichigosan-nenrei-junbi',

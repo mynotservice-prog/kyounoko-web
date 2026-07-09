@@ -145,7 +145,7 @@ A. **朝の時間帯は店員さんの手が空いていて、温め対応が圧
 
 **デニーズ関連記事（クラスター内必読）**
 
-- [デニーズの子連れ完全攻略｜パンケーキ・ボックス席](/article/dennys-kodzure-koryaku)
+- [デニーズの子連れ完全攻略｜パンケーキ・ボックス席](/article/denny-s-kodzure-koryaku)
 - [デニーズのベビーチェア完全ガイド](/article/dennys-baby-chair)
 - [デニーズのベビーカー入店ガイド](/article/dennys-stroller)
 - [デニーズの個室・半個室席の使い方](/article/dennys-koshitsu)

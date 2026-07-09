@@ -154,5 +154,5 @@ legacyHero: /hero/parent-child-02.webp
 
 - [仕事復帰が不安](/article/shigoto-fukuki-fuan)
 - [保育園が不安](/article/hoikuen-fuan-kaisho)
-- [共働き 家事分担](/article/tomobataraki-kaji-bunkatsu-bunkatsu)
+- [共働き 家事分担](/article/tomobataraki-kaji-bunkatsu)
 - [0歳児育児 完全マップ](/article/0sai-ikuji-kanzen-map)

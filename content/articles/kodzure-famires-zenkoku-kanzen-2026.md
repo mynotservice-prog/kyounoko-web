@@ -771,6 +771,6 @@ A. **専用ベビーカー置き場を持つファミレスはほぼありませ
 - [ガストのベビーチェア完全ガイド](/article/gusto-kodzure-koryaku)
 - [サイゼリヤ 0-1歳ママのリアルレビュー](/article/saizeriya-baby-real-voices)
 - [ジョナサン 子連れ攻略](/article/jonathan-kodzure-koryaku)
-- [デニーズ 子連れ攻略](/article/dennys-kodzure-koryaku)
+- [デニーズ 子連れ攻略](/article/denny-s-kodzure-koryaku)
 - [ココス 子連れ攻略](/article/cocos-kodzure-koryaku)
 - [0歳育児 完全マップ](/article/0sai-ikuji-kanzen-map)
