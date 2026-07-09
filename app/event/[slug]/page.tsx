@@ -72,6 +72,37 @@ export default async function EventPage({ params }: Props) {
     return [...cityMatch, ...rest].slice(0, 6);
   })();
 
+  // offers は Google Event の推奨項目。欠落すると Search Console が「offers がありません」を警告する。
+  // 価格が自由文（「大人 2,000円 子供 1,000円」等）でも offers 自体は必ず提示する。
+  const eventOffer = (() => {
+    const url = ev.officialUrl || `https://kyounoko.jp/event/${slug}`;
+    const priceText = ev.price ?? '';
+    const isFree = /無料|入場無料/.test(priceText) && !/\d/.test(priceText);
+    const nums = (priceText.match(/\d[\d,]*/g) ?? [])
+      .map((n) => Number(n.replace(/,/g, '')))
+      .filter((n) => Number.isFinite(n) && n > 0);
+    // 複数金額（大人/子供など）→ AggregateOffer で範囲を提示
+    if (nums.length >= 2) {
+      return {
+        '@type': 'AggregateOffer',
+        priceCurrency: 'JPY',
+        lowPrice: String(Math.min(...nums)),
+        highPrice: String(Math.max(...nums)),
+        availability: 'https://schema.org/InStock',
+        validFrom: ev.startDate,
+        url,
+      };
+    }
+    const price = isFree ? '0' : nums.length === 1 ? String(nums[0]) : undefined;
+    return {
+      '@type': 'Offer',
+      ...(price !== undefined ? { price, priceCurrency: 'JPY' } : {}),
+      availability: 'https://schema.org/InStock',
+      validFrom: ev.startDate,
+      url,
+    };
+  })();
+
   // JSON-LD: Event
   const jsonLdEvent = {
     '@context': 'https://schema.org',
@@ -87,20 +118,7 @@ export default async function EventPage({ params }: Props) {
       name: ev.venue,
       address: ev.city ? { '@type': 'PostalAddress', addressLocality: ev.city, addressCountry: 'JP' } : undefined,
     },
-    // 価格を確実に数値化できる時だけ Offer を出す（壊れた Offer を出さない）。
-    // ・「無料」かつ他に金額表記が無い → '0'
-    // ・「大人 2,000円…」等の自由文（複数料金・要確認）→ offers 自体を省略
-    offers:
-      ev.price && ev.price.includes('無料') && !/\d/.test(ev.price)
-        ? {
-            '@type': 'Offer',
-            price: '0',
-            priceCurrency: 'JPY',
-            availability: 'https://schema.org/InStock',
-            validFrom: ev.startDate,
-            url: ev.officialUrl,
-          }
-        : undefined,
+    offers: eventOffer,
     image: [`https://kyounoko.jp${eventHeroImage(ev)}`],
     url: `https://kyounoko.jp/event/${slug}`,
     isFamilyFriendly: true,
