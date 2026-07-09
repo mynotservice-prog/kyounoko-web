@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: naraigoto-itsukara-0-6sai
 title: 【2026年最新】習い事いつから？0-6歳おすすめ開始時期と種類別ガイド
 category: narai

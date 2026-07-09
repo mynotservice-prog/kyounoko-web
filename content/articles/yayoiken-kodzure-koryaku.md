@@ -1,5 +1,6 @@
 ---
 slug: yayoiken-kodzure-koryaku
+seoRelated: marukame-rinyushoku-mochikomi
 title: やよい軒は子連れOK？ベビーチェア・取り分け・離乳食持ち込み完全ガイド【2026】
 metaDescription: >-
   やよい軒は子連れで行ける？ベビーチェアはある？定食チェーン「やよい軒」の子連れ対応を完全解説。取り分けやすい和定食、ご飯おかわり自由の活用、ベビーカー入店、混雑回避時間まで保存版でまとめました。
@@ -204,6 +205,7 @@ A. **やよい軒公式サイトで全メニューのアレルゲン表示**あ�
 - [大戸屋の子連れ攻略｜定食の取り分け・栄養バランス](/article/ootoya-kodzure-koryaku)
 - [すき家の子連れ攻略｜ボックス席・牛丼ミニ](/article/sukiya-kodzure-koryaku)
 - [丸亀製麺の子連れ攻略｜うどん取り分けのコツ](/article/marugame-kodzure-koryaku)
+- [丸亀製麺の離乳食持ち込み｜公式方針・うどん取り分け実例](/article/marukame-rinyushoku-mochikomi)
 
 **ファミレスも候補に**
 

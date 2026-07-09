@@ -1,5 +1,6 @@
 ---
 slug: sushiro-kids-menu
+seoRelated: hamasushi-baby-chair
 title: スシローのキッズメニュー徹底解説｜子どもが食べられるサイド・取り分け完全ガイド【2026】
 metaDescription: >-
   スシローのキッズメニュー・サイドを子連れ目線で徹底解説。うどん・茶碗蒸し・ポテト・デザートなど寿司が苦手な子でも食べられる選択肢、取り分けの定番ネタ、アレルゲン検索の使い方まで0-6歳ママパパ向けに完全ガイド。
@@ -99,6 +100,8 @@ A. 用意があります。詳しくは[スシローのベビーチェアガイ�
 - [スシローは子連れOK？ベビーカー・離乳食・取り分け完全攻略](/article/sushiro-kodzure-koryaku)
 - [スシローのベビーチェアガイド](/article/sushiro-baby-chair)
 - [くら寿司のキッズメニュー徹底解説｜ビッくらポンと食べられるサイド](/article/kurasushi-kids-menu)
+- [はま寿司のベビーチェアガイド｜種類・確保のコツ・対応店舗](/article/hamasushi-baby-chair)
+- [はま寿司の離乳食持ち込み｜公式方針・温め対応・実例](/article/hamasushi-rinyushoku-mochikomi)
 - [離乳食持ち込みOK・温めてくれるチェーン店15選](/article/rinyuushoku-mochikomi-chain-15)
 - [回転寿司4チェーン子連れ徹底比較](/article/kaiten-sushi-4chain-comparison)
 - [キッズメニュー比較15チェーン](/article/kids-menu-chain-15-hikaku)

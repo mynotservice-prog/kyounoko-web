@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: otetsudai-itsukara-2sai
 # old: お手伝いいつから？2歳から始めた家事ごっこ実践リスト
 title: お手伝いいつから？2-6歳で続いた家事30選と声かけ集

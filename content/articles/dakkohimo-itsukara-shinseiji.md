@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: dakkohimo-itsukara-shinseiji
 # old: 抱っこ紐いつから？新生児用とエルゴ卒業のリアルな目安
 title: 抱っこ紐いつから？新生児OKの種類とエルゴ卒業3歳の目安

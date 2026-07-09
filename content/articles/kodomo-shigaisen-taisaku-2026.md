@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-shigaisen-taisaku-2026
 title: 【2026年版】子供の紫外線対策完全ガイド｜0〜6歳の日焼け止めの選び方
 metaDescription: >-
