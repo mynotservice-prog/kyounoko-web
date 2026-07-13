@@ -412,6 +412,7 @@ function buildRelatedCategoryChips(
   if (query.weather === 'rain') {
     push('雨でもいける屋内', '/article/amenohi-indoor-spots-tokyo-15');
   } else if (query.weather === 'heat') {
+    push('無料で水遊び（じゃぶじゃぶ池30選）', '/article/jabujabuike-mizuasobi-tokyo-30');
     push('猛暑日OKな涼しい屋内', '/article/moushobi-suzushii-spots');
   }
 

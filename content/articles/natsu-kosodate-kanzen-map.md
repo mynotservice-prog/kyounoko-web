@@ -290,6 +290,7 @@ legacyHero: /hero/summer-water-01.webp
 ### 主要都市
 - [横浜市](/article/mizuasobi-yokohama) / [川崎市](/article/mizuasobi-kawasaki) / [さいたま市](/article/mizuasobi-saitama) / [千葉市](/article/mizuasobi-chiba) / [船橋市](/article/mizuasobi-funabashi)
 - [大阪市](/article/mizuasobi-osaka) / [京都市](/article/mizuasobi-kyoto) / [神戸市](/article/mizuasobi-kobe) / [名古屋市](/article/mizuasobi-nagoya) / [福岡市](/article/mizuasobi-fukuoka)
+- [全国のじゃぶじゃぶ池・水遊びスポット18選【2026年夏】](/article/jabujabu-ike-mizuasobi-zenkoku-2026natsu)
 
 ## エリア別「子供の室内遊び場」検索
 

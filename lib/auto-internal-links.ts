@@ -87,6 +87,8 @@ const LINK_RULES: LinkRule[] = [
   // ===== おでかけ =====
   { keyword: '雨の日', targetSlug: 'amenohi-ie-asobi-2-3sai', priority: 7 },
   { keyword: '水遊び', targetSlug: 'puuru-mizuasobi-debut', priority: 8 },
+  { keyword: 'じゃぶじゃぶ池', targetSlug: 'jabujabuike-mizuasobi-tokyo-30', priority: 10 },
+  { keyword: '舎人公園', targetSlug: 'toneri-koen-jabujabuike', priority: 10 },
   { keyword: 'お花見スポット', targetSlug: 'sakura-ohanami-kodzure-spots', priority: 10 },
 
   // ===== 追加分（V2 拡張 / 主要トピック逆引き） =====================================

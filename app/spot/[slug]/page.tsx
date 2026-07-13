@@ -142,14 +142,17 @@ export default async function SpotPage({ params }: Props) {
         })
         .slice(0, 6);
 
-  // 関連記事
+  // 関連記事: 手動指定（relatedArticleSlugs）を先頭に置き、残りを年齢帯マッチで補完
   const allArticles = getAllFileArticles().filter((a) => !a.noindex);
-  const relatedArticles = allArticles
-    .filter((a) => {
-      const aAges = a.quickInfo?.ageRanges ?? [];
-      return spot.ages.some((ageTag) => aAges.includes(ageTag));
-    })
-    .slice(0, 6);
+  const manualRelated = (spot.relatedArticleSlugs ?? [])
+    .map((rs) => allArticles.find((a) => a.slug === rs))
+    .filter((a): a is (typeof allArticles)[number] => !!a);
+  const autoRelated = allArticles.filter((a) => {
+    if (manualRelated.some((m) => m.slug === a.slug)) return false;
+    const aAges = a.quickInfo?.ageRanges ?? [];
+    return spot.ages.some((ageTag) => aAges.includes(ageTag));
+  });
+  const relatedArticles = [...manualRelated, ...autoRelated].slice(0, 6);
 
   const jsonLdPlace = buildSpotJsonLd(spot, slug);
   const jsonLdBreadcrumb = {

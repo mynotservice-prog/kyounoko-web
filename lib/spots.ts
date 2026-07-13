@@ -125,6 +125,11 @@ export type Spot = {
    */
   nearbySlugs?: string[];
   /**
+   * 「関連記事」の先頭に固定表示する記事 slug の手動指定。
+   * 未指定分は従来の年齢帯マッチで自動補完する（合計6件）。
+   */
+  relatedArticleSlugs?: string[];
+  /**
    * 年齢別の楽しみ方の個別上書き。未指定の年齢はカテゴリ共通の自動文を使う。
    * admin（/admin/spots/edit）から施設ごとに編集できる。
    */

@@ -7,6 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-06-06'
+seoRelated: jabujabuike-mizuasobi-tokyo-30
 hero: /img/scenes/pool-water-01.webp
 area: tokyo
 quickInfo:

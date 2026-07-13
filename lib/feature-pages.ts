@@ -49,6 +49,8 @@ export const FEATURE_PAGES: FeaturePage[] = [
     intro:
       '夏休みは長丁場の40日間。0〜6歳の子どもと毎日「今日どこ行く？」を考え続けるのは想像以上に消耗します。きょうのこ編集部では、暑さ対策・水遊び・室内のクールスポット・無料で遊べる場所・家でできる工作や遊びまで、夏休みに役立つ情報を1ページにまとめました。朝の涼しいうちに公園、日中は屋内施設、夕方は水遊びという「3部構成の1日」が最も無理なく続きます。体調管理を最優先に、できる限り「親が楽できる選択肢」を組み合わせるのがコツです。',
     articleSlugs: [
+      'jabujabuike-mizuasobi-tokyo-30',
+      'jabujabu-ike-mizuasobi-zenkoku-2026natsu',
       'natsuyasumi-keikaku-2026-kodzure',
       'amenohi-indoor-spots-tokyo-15',
       'kodomo-hiyakedome-osusume-2026',

@@ -114,3 +114,4 @@ A. **2026年の正確な日程は各施設公式で要確認**。例年通りな
 - [子どもの熱中症 3歳児のリアル 2026](/article/kodomo-netsuchusho-3sain-real-2026)
 - [子どものプールはいつから](/article/kodomo-pool-itsukara)
 - [0歳育児完全マップ](/article/0sai-ikuji-kanzen-map)
+- [全国のじゃぶじゃぶ池・水遊びスポット18選【2026年夏】](/article/jabujabu-ike-mizuasobi-zenkoku-2026natsu)
