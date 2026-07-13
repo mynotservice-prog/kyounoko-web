@@ -89,8 +89,9 @@ function extractRecipeIngredients(html: string): string[] {
 
 /**
  * Recipe schema（レシピ記事用）
- * Google Search Console の Recipe リッチリザルト重大エラーを回避するため、
- * recipeInstructions（howto） と 所要時間（durationMin）が両方揃っている場合のみ付与。
+ * Google Search Console の Recipe リッチリザルト警告/誤付与を回避するため、
+ * recipeInstructions（howto）・所要時間（durationMin）・材料（recipeIngredient）が
+ * すべて揃っている料理記事にのみ付与する。いずれかを欠く記事は Article スキーマに留める。
  */
 function buildRecipe(article: FileArticle, url: string, imageUrl: string): Schema | null {
   const hasSteps = !!article.howto && article.howto.length >= 3;
@@ -103,8 +104,17 @@ function buildRecipe(article: FileArticle, url: string, imageUrl: string): Schem
 
   const durationMin = article.quickInfo!.durationMin!;
 
-  // 本文から材料を抽出（Recipeリッチリザルトの推奨フィールド recipeIngredient）
+  // 本文から材料を抽出（Recipeリッチリザルトの推奨フィールド recipeIngredient）。
+  // 材料リストが無い記事に Recipe を付けると、
+  //   ① Search Console の「recipeIngredient がありません」警告が出る
+  //   ② そもそも「作り方/手順/スケジュール」見出しを持つだけの非・料理記事
+  //      （育児ノウハウ・子連れランチ等）に Recipe が誤付与される
+  // の両方が起きる。recipeIngredient は Recipe リッチリザルトの実質必須項目でもあるため、
+  // 材料を抽出できない記事には Recipe を付与せず、通常の Article スキーマに留める。
   const ingredients = extractRecipeIngredients(article.body);
+  if (ingredients.length === 0) {
+    return null;
+  }
 
   // 「作り方」h2 のアンカー。記事側の slugifyHeading は「作り方」をそのまま id 化するため、
   // URLフラグメントとして正しい形にエンコードする（非ASCII対策）。
@@ -135,13 +145,10 @@ function buildRecipe(article: FileArticle, url: string, imageUrl: string): Schem
       url: stepAnchor,
     })),
     recipeYield: '1-2人分（親子）',
+    // 材料（この時点で必ず1件以上ある）。Recipe リッチリザルトの必須級フィールド。
+    recipeIngredient: ingredients,
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
   };
-
-  // 材料が抽出できた場合のみ recipeIngredient を付与（空配列は付けない）
-  if (ingredients.length > 0) {
-    recipe.recipeIngredient = ingredients;
-  }
 
   return recipe;
 }
