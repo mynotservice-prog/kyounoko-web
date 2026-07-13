@@ -26,6 +26,7 @@ import {
   getRestaurantFoodHubLinks,
   getChainCrossLinks,
   extractChecklistSection,
+  allowsFoodBridgeAlongsideCoop,
 } from '@/lib/article-product-hints';
 import { getChainFacilitiesForArticle, FACILITY_LABELS, type FacilityKey } from '@/lib/chain-facilities';
 import { ChainFacilitiesBox } from '@/components/article/ChainFacilitiesBox';
@@ -687,7 +688,12 @@ function FileArticleView({ article }: { article: FileArticle }) {
   // 読了後の高単価CTAは1枚だけ（UX/AdSense対策: PRブロック過密の解消）。
   // 優先度: 生協(資料請求・最高単価) > 宿予約 > 幼児食宅配ブリッジ。
   const endOffer = coopOffer ?? travelOffer ?? null;
-  const showBridge = !endOffer && !!restaurantBridge;
+  // 通常は末尾の高単価CTAは1枚に絞る(endOffer優先)。ただし離乳食/幼児食の濃い意図面
+  // (GSC実流入あり・明示allowlist)では、生協(資料請求)と冷凍宅配ブリッジ(高EPC・年齢一致で
+  // ファーストスプーン/mogumo)は補完関係のため両方を1枠ずつ併載する。allowlist外は従来どおり。
+  const showBridge =
+    !!restaurantBridge &&
+    (!endOffer || (!!coopOffer && allowsFoodBridgeAlongsideCoop(article.slug)));
 
   // 判定ボックス前出し(戦略§7): 本文中の「子連れチェックリスト」H2セクションを
   // 抽出してヒーロー直下(クイック情報の隣)へ移動。無い記事は従来どおり。

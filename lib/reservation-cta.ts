@@ -89,6 +89,10 @@ const LEISURE_NEEDLES = [
   'spot', 'kodzure-spot', 'odekake', 'ryokou', 'ryoko', 'ryokan',
   'onsen', 'hotel', 'yado', 'leisure', 'pool', 'aquarium', 'camp',
   'natsuyasumi', 'kazoku-ryokou', '旅行', '宿', '温泉', 'おでかけ', '家族旅行',
+  // 夏の水遊び（季節ピーク・GSC実流入あり: mizuasobi-* / 舎人公園じゃぶじゃぶ池）。
+  // カテゴリ 'today-doko' は外食チェーン攻略ページも含むため needle にはしない。
+  // slug/title に現れる具体トークンのみを追加し、水遊び記事だけを拾う。
+  'mizuasobi', '水遊び', 'じゃぶじゃぶ', 'プール',
 ];
 
 /**

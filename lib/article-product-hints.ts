@@ -318,6 +318,33 @@ export function getRestaurantBridgeOffer(
 }
 
 /**
+ * 生協(資料請求)の末尾CTAが出ている食文脈ページのうち、冷凍離乳食/幼児食宅配ブリッジ
+ * (getRestaurantBridgeOffer・A8高EPC)を「併載」してよい濃い意図面(GSC実流入あり)の明示allowlist。
+ *
+ * 背景: これらの離乳食持ち込み/子連れ攻略ページは isFoodContext のため getCoopOffer が
+ * 末尾スロットを取り、getRestaurantBridgeOffer が page.tsx の showBridge=false で抑制されていた
+ * (本番curl実測: 生協◯ / 宅配ブリッジ0)。生協=資料請求、宅配ブリッジ=実食材の宅配で補完関係のため、
+ * この濃い意図面に限り両方を1枠ずつ点灯させる。王将等の高AdSense面には広げない(明示列挙のみ)。
+ * 併載されるブリッジのオファーは getRestaurantBridgeOffer の年齢一致ロジックに従う
+ * (タイトル/slug が離乳食=0-1歳意図を含む → ファーストスプーン / それ以外 → mogumo)。
+ */
+export const FOOD_BRIDGE_COEXIST_SLUGS: readonly string[] = [
+  'hamasushi-rinyushoku-mochikomi',
+  'gusto-kodzure-koryaku',
+  'cocos-kodzure-koryaku',
+  'royal-host-kodzure-koryaku',
+  'marukame-rinyushoku-mochikomi',
+  'kurasushi-rinyushoku-mochikomi',
+  'saizeriya-rinyushoku-mochikomi',
+  'dennys-rinyushoku-mochikomi',
+];
+
+/** 上記 allowlist に含まれ、生協CTAと冷凍宅配ブリッジを併載してよいページか。 */
+export function allowsFoodBridgeAlongsideCoop(slug: string): boolean {
+  return FOOD_BRIDGE_COEXIST_SLUGS.includes(slug);
+}
+
+/**
  * 本文HTMLを「離乳食」H2セクションの末尾で2分割する（中盤に高単価ブリッジを挿す用）。
  *
  * 離乳食意図の読者は離乳食セクションで意図がピークに立つが、ブリッジは従来FAQより下の
