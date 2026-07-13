@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-tsuresari-taisaku
 title: 子供の連れ去り対策｜手口・予防・家庭での教育完全ガイド【3〜10歳】
 metaDescription: >-

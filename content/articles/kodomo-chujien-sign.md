@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-chujien-sign
 title: 子供の中耳炎のサイン｜原因・症状・対処法・受診目安完全ガイド【0〜6歳】
 metaDescription: >-

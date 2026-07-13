@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-omorashi-gakkou
 title: 子供が学校でおもらし｜原因・心のケア・対処法完全ガイド【4〜10歳】
 metaDescription: >-

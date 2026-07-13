@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-rs-shoujou
 title: 子供のRSウイルス症状｜原因・対処法・受診目安完全ガイド【0〜6歳】
 metaDescription: >-

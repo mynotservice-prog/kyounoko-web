@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-toppatsu-taisho
 title: 子供の突発性発疹の対処法｜原因・症状・受診目安・登園目安完全ガイド【0〜2歳】
 metaDescription: >-

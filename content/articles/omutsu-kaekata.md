@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: omutsu-kaekata
 title: オムツの上手な替え方｜新生児から幼児までの手順・コツ完全ガイド
 metaDescription: >-

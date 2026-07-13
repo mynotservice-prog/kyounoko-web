@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-bento-tsumekata
 title: 子供のお弁当の詰め方｜彩り・隙間埋め・衛生のコツ完全ガイド
 metaDescription: >-

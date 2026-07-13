@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-hitoride-nerenai
 title: 子供が一人で寝れない｜原因・年齢別対処・寝かしつけ卒業完全ガイド【1〜10歳】
 metaDescription: >-

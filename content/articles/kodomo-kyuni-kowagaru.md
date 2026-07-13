@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-kyuni-kowagaru
 title: 子供が急に怖がる｜原因・心のケア・受診目安完全ガイド【1〜6歳】
 metaDescription: >-

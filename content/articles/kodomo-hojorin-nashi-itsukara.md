@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-hojorin-nashi-itsukara
 title: 補助輪なし自転車はいつから？年齢別目安・練習法・必須装備完全ガイド
 metaDescription: >-

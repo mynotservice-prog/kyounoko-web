@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: obon-0-6sai-sugoshikata
 title: お盆休みの0〜6歳児 過ごし方｜帰省・旅行・自宅まで完全ガイド
 metaDescription: >-

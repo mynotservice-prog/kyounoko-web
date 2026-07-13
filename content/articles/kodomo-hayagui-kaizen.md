@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-hayagui-kaizen
 title: 子供の早食いを改善｜原因・対処法・年齢別対応完全ガイド【2〜6歳】
 metaDescription: >-

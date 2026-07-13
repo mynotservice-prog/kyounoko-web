@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-atopy-taisho
 title: 子供のアトピーの対処法｜原因・症状・スキンケア・受診目安完全ガイド【0〜6歳】
 metaDescription: >-

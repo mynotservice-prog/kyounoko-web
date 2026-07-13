@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-allergy-hannou
 title: 子供のアレルギー反応 緊急対処｜アナフィラキシー・エピペン・119完全ガイド【0〜12歳】
 metaDescription: >-

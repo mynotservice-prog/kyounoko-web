@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-akumu-tsuduku
 title: 子供の悪夢が続く｜原因・夜驚症との違い・対処法完全ガイド【2〜10歳】
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: baby-rucksack-erabikata
 title: 【2026年最新】ベビーリュックの選び方｜サイズ・素材・年齢別の選び方完全ガイド
 metaDescription: >-

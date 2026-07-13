@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-geri-tsuduku
 title: 子供の下痢が続く｜原因・症状・対処法・受診目安完全ガイド【0〜6歳】
 metaDescription: >-

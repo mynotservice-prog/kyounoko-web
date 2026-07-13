@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-kafunsho-taisho
 title: 子供の花粉症の対処法｜原因・症状・受診目安・予防完全ガイド【0〜6歳】
 metaDescription: >-

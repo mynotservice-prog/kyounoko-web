@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-tsume-kamu
 title: 子供が爪を噛む癖｜原因・対処法・年齢別対応完全ガイド【2〜6歳】
 metaDescription: >-

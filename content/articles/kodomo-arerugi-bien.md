@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-arerugi-bien
 title: 子供のアレルギー性鼻炎の対処法｜原因・症状・受診目安完全ガイド【0〜6歳】
 metaDescription: >-

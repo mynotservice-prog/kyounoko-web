@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: baby-oil-tsukaikata
 title: ベビーオイルの使い方｜マッサージ・保湿・耳鼻ケアの手順完全ガイド
 metaDescription: >-

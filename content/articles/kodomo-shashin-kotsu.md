@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-shashin-kotsu
 title: 子供の写真撮り方コツ｜自然な表情・構図・スマホ設定完全ガイド
 metaDescription: >-
