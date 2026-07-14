@@ -11,6 +11,10 @@
     {
       "path": "/api/cron/kpi-alert",
       "schedule": "0 0 * * *"
+    },
+    {
+      "path": "/api/cron/line-weekend",
+      "schedule": "0 11 * * 5"
     }
   ]
 }

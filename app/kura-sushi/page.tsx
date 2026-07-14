@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
 import { AdSlot } from '@/components/ads/AdSlot';
+import { ProvidedBadge } from '@/components/affiliate/PRBadge';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -182,6 +183,10 @@ export default function KuraSushiPage() {
           {/* ヒーロー */}
           <header className="page-head" style={{ marginBottom: 20 }}>
             <span className="eyebrow">子連れ外食ガイド｜回転寿司</span>
+            {/* 提供開示: 公式写真の無償提供を受けたページ（編集方針5-3〜5-5・ステマ規制対応） */}
+            <div style={{ margin: '12px 0 4px' }}>
+              <ProvidedBadge providers={['くら寿司株式会社']} />
+            </div>
             <h1>
               くら寿司 子連れガイド
               <small style={{ display: 'block', fontSize: '0.46em', fontWeight: 400, color: 'var(--ink-sub)', marginTop: 8 }}>

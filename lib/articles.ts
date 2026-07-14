@@ -77,6 +77,17 @@ export type FileArticleMeta = {
    * lib/supervisors.ts の id を指定する。
    */
   supervisor?: string;
+  /**
+   * 写真の無償提供元（施設名・企業名）。編集方針 5-3〜5-5 の「無償提供」区分。
+   * 設定すると記事冒頭に「提供」バッジ（提供元名＋金銭授受なしの明示）が表示される。
+   * 金銭・対価を受けた記事はこのフィールドではなくタイアップ（PRバッジ）として扱うこと。
+   */
+  photoProviders?: string[];
+  /**
+   * ヒーロー画像のクレジット表記（例: "写真提供：神津牧場"）。
+   * ヒーロー画像が提供写真の場合に設定し、画像直下にキャプションとして表示される。
+   */
+  heroCredit?: string;
 };
 
 export type FileArticleFaq = {
@@ -191,6 +202,13 @@ function parseFrontmatter(raw: string, fallbackSlug: string): { meta: FileArticl
         ? d.interactive
         : undefined,
     supervisor: typeof d.supervisor === 'string' ? d.supervisor : undefined,
+    photoProviders: Array.isArray(d.photoProviders)
+      ? d.photoProviders.filter((p): p is string => typeof p === 'string' && p.trim() !== '')
+      : typeof d.photoProviders === 'string' && d.photoProviders.trim()
+        ? [d.photoProviders.trim()]
+        : undefined,
+    heroCredit:
+      typeof d.heroCredit === 'string' && d.heroCredit.trim() ? d.heroCredit.trim() : undefined,
   };
 
   return { meta, content };

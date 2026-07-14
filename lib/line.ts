@@ -58,6 +58,38 @@ export async function sendLinePush(text: string): Promise<boolean> {
   }
 }
 
+/**
+ * 友だち全員へテキストを broadcast する（週次「週末どこ行く？」配信など）。
+ * sendLinePush（運営者本人のみ）と違い、ブロック以外の全友だちに届く。
+ *
+ * - 未設定（TOKEN 無し）なら何もせず false。
+ * - 無料プランは月あたり配信数の上限あり。友だち増時は要見直し。
+ */
+export async function sendLineBroadcast(text: string): Promise<boolean> {
+  if (!TOKEN) return false;
+  try {
+    const res = await fetch('https://api.line.me/v2/bot/message/broadcast', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${TOKEN}`,
+      },
+      body: JSON.stringify({
+        messages: [{ type: 'text', text: text.slice(0, 5000) }],
+      }),
+      cache: 'no-store',
+    });
+    if (!res.ok) {
+      console.error('[line] broadcast error', res.status, (await res.text()).slice(0, 200));
+      return false;
+    }
+    return true;
+  } catch (e) {
+    console.error('[line] broadcast exception', e instanceof Error ? e.message : e);
+    return false;
+  }
+}
+
 export type LineFollowers = {
   /** ターゲットにできる友だち総数（ブロック中を除いた到達可能数の母数） */
   followers: number;

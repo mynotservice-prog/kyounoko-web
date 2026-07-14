@@ -5,8 +5,11 @@ metaDescription: 夏休みは動物とのふれあいが子どもの心に残る
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-06-27'
-updatedAt: '2026-06-27'
+updatedAt: '2026-07-03'
 hero: /photos/article-bokujou-fureai-kodzure-2026natsu.webp
+photoProviders:
+  - 神津牧場
+heroCredit: 写真提供：神津牧場
 lede: >-
   夏休み、子どもに「本物の動物にさわる」体験をさせてあげたい——。牛の乳搾り、ヤギやひつじへの餌やり、ポニー乗馬。牧場やふれあい動物園は、0〜6歳の五感をまるごと刺激してくれる夏のおでかけ先です。涼しい高原牧場から入園無料のスポット、水遊び併設の施設まで、全国18か所をエリア別・料金つきで厳選しました。
 quickInfo:
@@ -82,9 +85,13 @@ area: all
 
 ![神津牧場でジャージー牛に餌やりをする子どもたち](/photos/article-bokujou-fureai-kodzure-2026natsu.webp)
 
+*写真提供：神津牧場*
+
 日本最古の西洋式牧場のひとつ。標高の高い高原にあり、市街地より涼しいのが夏にうれしいポイントです。人なつっこい**ジャージー牛への餌やり**や、放牧された牛がのんびり草をはむ風景を間近で楽しめます。搾りたてミルクで作るソフトクリームも格別。
 
 ![放牧されたジャージー牛と家族](/photos/spot-kouzu-bokujou-houboku.webp)
+
+*写真提供：神津牧場*
 
 - 対象：0〜6歳／予算：低め
 - 👉 [神津牧場の詳細を見る](/spot/-pjwg)
