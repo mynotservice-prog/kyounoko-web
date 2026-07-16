@@ -6,6 +6,10 @@ export const ARTICLE_REDIRECTS: { from: string; to: string }[] = [
   { from: 'tanjoubi-iwai-2sai', to: 'tanjoubi-iwai-1sai' },
   { from: 'tanjoubi-iwai-3sai', to: 'tanjoubi-iwai-1sai' },
   { from: 'kurasushi-rinyushoku-mochikomi', to: 'rinyuushoku-mochikomi-chain-15' },
+  // 2026-07-15 死蔵チェーンkids-menu 2本: ファイルnoindexがKV上書きにshadowされ実効しないため、
+  // next.config redirects(=描画より上流)で比較ハブへ301統合し確実にindexから除去。
+  { from: 'sukiya-kids-menu', to: 'kids-menu-chain-15-hikaku' },
+  { from: 'hamasushi-kids-menu', to: 'kids-menu-chain-15-hikaku' },
   { from: 'cocoichi-stroller', to: 'cocoichi-kodzure-koryaku' },
   { from: 'nakau-stroller', to: 'nakau-kodzure-koryaku' },
   { from: 'anrakutei-stroller', to: 'anrakutei-kodzure-koryaku' },
