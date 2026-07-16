@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-mini-hamburger-tofu-5min-bento
 title: 5分で完成ミニハンバーグ｜豆腐入りお弁当レシピ
 metaDescription: >-

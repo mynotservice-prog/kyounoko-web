@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-otona-mishiri
 title: 子供の大人見知り｜原因・対処法・年齢別対応完全ガイド【0〜3歳】
 metaDescription: >-

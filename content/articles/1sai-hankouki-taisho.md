@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: 1sai-hankouki-taisho
 title: 1歳の反抗期｜原因・対処法・年齢別対応完全ガイド【0〜2歳】
 metaDescription: >-

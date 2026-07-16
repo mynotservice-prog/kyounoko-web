@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kamakura-kodzure-spot
 title: 鎌倉の子連れスポット｜大仏・江ノ電・海・ランチ完全ガイド【2026年版】
 metaDescription: >-

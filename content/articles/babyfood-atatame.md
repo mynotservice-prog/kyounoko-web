@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-30'
+updatedAt: '2026-07-15'
 hero: /img/scenes/baby-food-02.webp
 area: all
 quickInfo:
@@ -93,6 +93,22 @@ legacyHero: /hero/food-japan-01.webp
 
 ## まとめ
 ベビーフードの温めは「**人肌・全体均一・1食ずつ**」が三原則。瓶は湯せん、パウチ・レトルトはレンジが基本で、どちらの方法でも**加熱後の混ぜ＆温度確認**は省略しないこと。おでかけ先ではポットのお湯が最強の味方です。
+
+## 出典・参考（公的資料）
+
+- 厚生労働省「授乳・離乳の支援ガイド（2019年改定版）」— 離乳食の衛生的な取り扱いと進め方の基本
+- 食べ残しの瓶詰め・パウチは雑菌が繁殖しやすいため、**食べる分だけ器に取り分けてから温める**のが基本（消費者庁・自治体の食品衛生案内より）
+
+適温や温め方には製品差があります。容器の表示を確認し、心配な点はかかりつけの小児科医・管理栄養士にご相談ください（本記事は2026年7月時点の情報です）。
+
+## あわせて読みたい
+
+年齢別の育児のポイントは、以下の完全マップで一覧できます。季節・行事の過ごし方とあわせてご活用ください。
+
+- [0歳の育児 完全マップ](/article/0sai-ikuji-kanzen-map)
+- [1〜2歳の育児 完全マップ](/article/1-2sai-ikuji-kanzen-map)
+- [3〜6歳の育児 完全マップ](/article/3-6sai-ikuji-kanzen-map)
+- [夏の子育て 完全マップ｜暑さ・水遊び・夏バテ対策](/article/natsu-kosodate-kanzen-map)
 
 ## 関連記事
 - [離乳食とは？完全ガイド](/article/rinyuushoku-toha-kanzen-guide)

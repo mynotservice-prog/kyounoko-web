@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: sukiya-kids-menu
 title: すき家のキッズメニュー｜お子様セットの中身・対象年齢・牛丼ミニとの使い分け【2026】
 metaDescription: >-

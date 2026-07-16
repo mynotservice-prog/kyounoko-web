@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-06-02'
+updatedAt: '2026-07-15'
 hero: /hero-ai/mamatomo-trouble-taisho.jpg
 area: all
 quickInfo:
@@ -116,6 +116,15 @@ legacyHero: /hero/parent-child-02.webp
 ## まとめ
 
 ママ友は**子育て期だけの偶然の関係**。深い友情を期待せず、情報交換できる知人として軽く付き合うのが正解です。トラブルが起きたら**距離を取る・反応しない**が基本。ママ友ゼロでも子どもは立派に育ちます。自分の心を守ることを最優先に。
+
+## あわせて読みたい
+
+年齢別の育児のポイントは、以下の完全マップで一覧できます。季節・行事の過ごし方とあわせてご活用ください。
+
+- [0歳の育児 完全マップ](/article/0sai-ikuji-kanzen-map)
+- [1〜2歳の育児 完全マップ](/article/1-2sai-ikuji-kanzen-map)
+- [3〜6歳の育児 完全マップ](/article/3-6sai-ikuji-kanzen-map)
+- [夏の子育て 完全マップ｜暑さ・水遊び・夏バテ対策](/article/natsu-kosodate-kanzen-map)
 
 ## 関連記事
 

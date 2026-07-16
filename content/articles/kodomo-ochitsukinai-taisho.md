@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-ochitsukinai-taisho
 title: 子供が落ち着きない｜原因・対処法・年齢別対応完全ガイド【1〜6歳】
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: izu-kodzure-spot
 title: 伊豆の子連れスポット｜海・水族館・宿・回り方完全ガイド【2026年版】
 metaDescription: >-

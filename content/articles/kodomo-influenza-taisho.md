@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-influenza-taisho
 title: 子供のインフルエンザの対処法｜原因・症状・受診目安・登園目安完全ガイド【0〜6歳】
 metaDescription: >-

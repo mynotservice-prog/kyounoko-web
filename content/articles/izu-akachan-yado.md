@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: izu-akachan-yado
 title: 伊豆の赤ちゃん歓迎宿｜0歳OK・客室露天・海ビュー完全ガイド【2026年版】
 metaDescription: >-

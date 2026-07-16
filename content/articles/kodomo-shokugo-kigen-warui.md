@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-shokugo-kigen-warui
 title: 子供が食後に機嫌悪い｜原因・対処法・年齢別対応完全ガイド【1〜6歳】
 metaDescription: >-
