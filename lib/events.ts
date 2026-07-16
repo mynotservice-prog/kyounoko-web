@@ -15,6 +15,8 @@
 
 import { AREAS, type AreaSlug } from './area';
 import { BUNDLED_EVENT_OVERRIDES, type EventOverridesMap } from './event-overrides';
+// 管理画面「新規イベント」で作成したイベント（/api/admin/event-create が GitHub commit で追記）。
+import EVENTS_EXTRA from './events-extra.json';
 
 export type EventCategory =
   | 'matsuri'       // 祭り・縁日
@@ -83,7 +85,7 @@ export type EventEntry = {
  * 説明文（lede / note）は編集部オリジナル。情報源は officialUrl 参照。
  * 期限切れになったら手動で削除する想定。
  */
-export const EVENTS: EventEntry[] = [
+const BASE_EVENTS: EventEntry[] = [
   // ===== 関東圏の長期開催イベント（子連れOK） =====
   {
     slug: 'doraemon-friends-tokyo-2026',
@@ -2012,6 +2014,19 @@ export const EVENTS: EventEntry[] = [
     tags: ['花', '牧場', '屋外'],
   },
 ];
+
+/**
+ * 公開イベント配列 = 手動キュレーション（BASE_EVENTS）＋
+ * 管理画面「新規イベント」で作成したイベント（events-extra.json）。
+ * slug が重複する場合は BASE_EVENTS（手動キュレーション）を優先する。
+ */
+export const EVENTS: EventEntry[] = (() => {
+  const baseSlugs = new Set(BASE_EVENTS.map((e) => e.slug));
+  const extra = (EVENTS_EXTRA as EventEntry[]).filter(
+    (e) => e && e.slug && !baseSlugs.has(e.slug),
+  );
+  return [...BASE_EVENTS, ...extra];
+})();
 
 /* ==========================================================================
    ヘルパー関数

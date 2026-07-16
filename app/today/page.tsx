@@ -12,6 +12,7 @@ import { buildDayPlan, type DayPlanSlot } from '@/lib/plans';
 import { getKidFriendlyRestaurants, type Spot, type AgeTag } from '@/lib/spots';
 import { buildOutingPlan, lunchCandidates, resolveOutingAnchor } from '@/lib/outing-plan';
 import { OutingPlanView, LunchListView } from '@/components/today/OutingPlanView';
+import { OmakasePlanButton } from '@/components/today/OmakasePlanButton';
 import {
   getTerminalStations,
   getFamilyFriendlyStations,
@@ -657,6 +658,10 @@ export default async function TodayPage({ searchParams }: Props) {
     if (query.weather && query.weather !== 'any') qs.set('weather', query.weather);
     return qs.toString();
   };
+  // 「おまかせ」ボタン用の候補駅（今この画面に出ている駅チップと同じ集合）。
+  const omakaseCandidates: { slug: string; name: string }[] = isTokyoPicker
+    ? [...terminalChips, ...familyChips].map((s) => ({ slug: s.slug, name: s.name }))
+    : (metroChips ?? []).map((s) => ({ slug: s.slug, name: s.name }));
 
   return (
     <>
@@ -678,6 +683,8 @@ export default async function TodayPage({ searchParams }: Props) {
         <p style={{ fontSize: 12.5, color: 'var(--ink-sub)', margin: '0 0 10px', lineHeight: 1.5 }}>
           選んだ駅まわりで、午前あそぶ → お昼たべる → 午後 の移動少なめ1日プランを作ります。
         </p>
+        {/* おまかせ: 何も決めていない人向け。候補駅からランダムに1つ選んで即プラン化。 */}
+        <OmakasePlanButton candidates={omakaseCandidates} age={query.age} weather={query.weather} />
         {isTokyoPicker ? (
           <>
             <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--ink-mute)', letterSpacing: '.05em', marginBottom: 6 }}>

@@ -825,6 +825,38 @@ export const getRuntimeArticleOverrides = unstable_cache(
   { tags: [ARTICLE_OVERRIDES_TAG] },
 );
 
+/**
+ * getAllFileArticles() に KV 上書き（article:overrides）をマージしたメタ一覧。
+ *
+ * getAllFileArticles() はファイルの frontmatter だけを読むため、admin で差し替えた
+ * hero（KV に保存される）が反映されない。記事ページ本体は getFileArticle() が KV を
+ * 優先マージするので新 hero が出るが、トップページの「人気の記事」「新着記事」カードは
+ * getAllFileArticles() 由来のため旧 hero（例: /img/scenes/meal-*.webp）のまま出てしまう。
+ * この関数を使うと、カード側も編集後の hero / title / lede を反映する。
+ * KV 未設定・上書き無し・パース失敗時は getAllFileArticles() と同じ結果に安全にフォールバック。
+ */
+export async function getAllFileArticlesWithOverrides(): Promise<FileArticleMeta[]> {
+  const fileMetas = getAllFileArticles();
+  if (!isKvConfigured()) return fileMetas;
+  let overrides: Record<string, string>;
+  try {
+    overrides = await getRuntimeArticleOverrides();
+  } catch {
+    return fileMetas;
+  }
+  if (!overrides || Object.keys(overrides).length === 0) return fileMetas;
+  return fileMetas.map((m) => {
+    const raw = overrides[m.slug];
+    if (!raw) return m;
+    try {
+      const { meta } = parseFrontmatter(raw, m.slug);
+      return meta;
+    } catch {
+      return m;
+    }
+  });
+}
+
 /** 記事上書きマップを直読み（キャッシュ非経由・保存用）。 */
 export async function readArticleOverridesMap(): Promise<Record<string, string>> {
   if (isKvConfigured()) {

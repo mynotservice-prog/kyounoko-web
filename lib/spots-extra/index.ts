@@ -18,6 +18,9 @@ import { SPOTS_EXTRA_5 } from './batch-5';
 import { SPOTS_EXTRA_6 } from './batch-6';
 import { SPOTS_EXTRA_7 } from './batch-7';
 import { SPOTS_EXTRA_8 } from './batch-8';
+// 管理画面「新規スポット」で作成したスポット（/api/admin/spot-create が GitHub commit で追記）。
+// エリア(都道府県slug) → Spot[] の形。デプロイで本番反映される。
+import ADMIN_CREATED from './admin-created.json';
 
 const BATCHES: Partial<Record<AreaSlug, Spot[]>>[] = [
   SPOTS_EXTRA_1,
@@ -28,6 +31,7 @@ const BATCHES: Partial<Record<AreaSlug, Spot[]>>[] = [
   SPOTS_EXTRA_6,
   SPOTS_EXTRA_7,
   SPOTS_EXTRA_8,
+  ADMIN_CREATED as Partial<Record<AreaSlug, Spot[]>>,
 ];
 
 /** 都道府県 slug → 追加スポット配列。全バッチを結合したもの。 */
