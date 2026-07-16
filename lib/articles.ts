@@ -878,7 +878,16 @@ export async function getFileArticle(slug: string): Promise<FileArticle | null> 
     const fallbackSlug = filename.replace(/\.md$/, '');
     const { meta: fileMeta } = parseFrontmatter(fileRaw, fallbackSlug);
     if (fileMeta.slug !== slug) continue;
-    return buildArticleFromRaw(overrideRaw ?? fileRaw, fallbackSlug);
+    const article = await buildArticleFromRaw(overrideRaw ?? fileRaw, fallbackSlug);
+    // ファイルの noindex:true は KV 上書きより優先する（OR 判定）。
+    // 管理画面編集で KV `article:overrides` に上書きが残っていると、その上書き frontmatter に
+    // noindex が無い場合にファイル側の noindex:true が握り潰され、検索から外したい記事が
+    // index され続ける不具合が起きる（例: sukiya-kids-menu / hamasushi-kids-menu）。
+    // noindex は「検索に出さない」安全側フラグなので、ファイルで立っていたら必ず尊重する。
+    if (fileMeta.noindex === true && !article.noindex) {
+      return { ...article, noindex: true };
+    }
+    return article;
   }
   // ファイル無し: KV にのみ存在する新規記事
   if (overrideRaw) return buildArticleFromRaw(overrideRaw, slug);
