@@ -47,8 +47,12 @@ function isAllowed(req: NextRequest): { ok: boolean; reason?: string } {
 }
 
 function isValidSlug(s: unknown): s is string {
-  // slug は name の ASCII をそのまま残すため大文字を含みうる（Cocos / IKEA 等）。大文字も許可。
-  return typeof s === 'string' && /^[A-Za-z0-9_-]+$/.test(s);
+  // slug は spotToSlug() が name の ASCII を encodeURIComponent 経由でそのまま残すため、
+  // 大文字に加えて encodeURIComponent が非エスケープにする記号（! . ~ * ' ( )）も含みうる。
+  // 例: ASOBono!（東京ドームシティ アソボーノ）→ slug "ASOBono!-a463"。
+  // これらを弾くと当該スポットだけ画像アップロード/保存が 400 になるため許可する。
+  // '/' は含まれないためパストラバーサルは起きない。
+  return typeof s === 'string' && /^[A-Za-z0-9_.!~*'()-]+$/.test(s);
 }
 
 async function ghPutBinary(

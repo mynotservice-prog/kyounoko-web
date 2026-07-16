@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: fuji-q-area-kosodate
 title: 富士五湖エリアの子連れ完全ガイド｜トーマスランド・遊び場・宿【2026年版】
 metaDescription: >-

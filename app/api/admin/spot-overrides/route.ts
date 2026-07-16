@@ -56,9 +56,11 @@ function isAllowed(req: NextRequest): { ok: boolean; reason?: string } {
 }
 
 function isValidSlug(s: unknown): s is string {
-  // slug は spotToSlug() が name の ASCII をそのまま残すため大文字を含みうる
-  // （例: Cocos-xxxx, IKEA-xxxx, The-Kids-xxxx）。大文字も許可する。
-  return typeof s === 'string' && /^[A-Za-z0-9_-]+$/.test(s);
+  // slug は spotToSlug() が name の ASCII を encodeURIComponent 経由でそのまま残すため、
+  // 大文字（Cocos / IKEA / The-Kids 等）に加えて encodeURIComponent が非エスケープにする
+  // 記号（! . ~ * ' ( )）も含みうる。例: "ASOBono!-a463"。これらを弾くと当該スポットだけ
+  // 上書き保存が 400 になるため許可する。'/' は含まれずパストラバーサルは起きない。
+  return typeof s === 'string' && /^[A-Za-z0-9_.!~*'()-]+$/.test(s);
 }
 
 /** patch をホワイトリストで検証＆クリーニングして返す。空文字フィールドは「削除指示」。 */
@@ -201,7 +203,7 @@ function sanitizePatch(input: unknown): { patch: SpotOverride; clear: Set<string
       const seen = new Set<string>();
       for (const item of v) {
         if (item == null || item === '') continue;
-        if (typeof item !== 'string' || !/^[A-Za-z0-9_-]+$/.test(item)) {
+        if (typeof item !== 'string' || !/^[A-Za-z0-9_.!~*'()-]+$/.test(item)) {
           return { error: `invalid nearby slug: ${String(item)}` };
         }
         if (item.length > 80 || seen.has(item)) continue;

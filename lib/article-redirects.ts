@@ -2,6 +2,10 @@
 // 内容を包含する [chain]-kodzure-koryaku へ 301 統合。死蔵ページの被リンク資産を勝ちページに集約する目的。
 // 2026-06-25 記事棚卸し監査に基づき生成（scripts/seo-article-audit.mjs）。
 export const ARTICLE_REDIRECTS: { from: string; to: string }[] = [
+  // 2026-07-15 AdSense薄ページ統合: 誕生日は1saiへprimary昇格統合、くら寿司離乳食はchain-15ハブへ集約
+  { from: 'tanjoubi-iwai-2sai', to: 'tanjoubi-iwai-1sai' },
+  { from: 'tanjoubi-iwai-3sai', to: 'tanjoubi-iwai-1sai' },
+  { from: 'kurasushi-rinyushoku-mochikomi', to: 'rinyuushoku-mochikomi-chain-15' },
   { from: 'cocoichi-stroller', to: 'cocoichi-kodzure-koryaku' },
   { from: 'nakau-stroller', to: 'nakau-kodzure-koryaku' },
   { from: 'anrakutei-stroller', to: 'anrakutei-kodzure-koryaku' },

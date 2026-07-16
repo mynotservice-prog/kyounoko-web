@@ -31,7 +31,12 @@ import {
 import { getChainFacilitiesForArticle, FACILITY_LABELS, type FacilityKey } from '@/lib/chain-facilities';
 import { ChainFacilitiesBox } from '@/components/article/ChainFacilitiesBox';
 import { ChainComparisonTable } from '@/components/article/ChainComparisonTable';
-import { getRestaurantReservationOffer, getCoopOffer, getTravelOffer } from '@/lib/reservation-cta';
+import {
+  getRestaurantReservationOffer,
+  getCoopOffer,
+  getTravelOffer,
+  getKidsMenuLeisureOffer,
+} from '@/lib/reservation-cta';
 import { ReservationCTA } from '@/components/article/ReservationCTA';
 import { getSupervisor } from '@/lib/supervisors';
 import { SupervisorLabel } from '@/components/article/SupervisorLabel';
@@ -685,6 +690,12 @@ function FileArticleView({ article }: { article: FileArticle }) {
   // 旅行・おでかけ文脈向け子連れ宿予約CTA（じゃらん/A8）。env 未設定なら null。
   const travelOffer = getTravelOffer(article.slug, article.category, article.title);
 
+  // kids-menu勝ち型面（王将/スシロー等・明示allowlist）向けの「外食ついでにおでかけ」
+  // レジャー予約CTA。日帰り意図に合わせアソビュー優先・未提携時はじゃらん宿泊に暫定
+  // フォールバック（lib側で出し分け）。endOffer/ブリッジとは独立した専用枠のため、
+  // 冷凍宅配ブリッジを奪わずに1枠だけ純加算する。両env未設定なら null（=非表示）。
+  const kidsMenuLeisureOffer = getKidsMenuLeisureOffer(article.slug);
+
   // 読了後の高単価CTAは1枚だけ（UX/AdSense対策: PRブロック過密の解消）。
   // 優先度: 生協(資料請求・最高単価) > 宿予約 > 幼児食宅配ブリッジ。
   const endOffer = coopOffer ?? travelOffer ?? null;
@@ -1234,6 +1245,12 @@ function FileArticleView({ article }: { article: FileArticle }) {
               />
             </div>
           )}
+
+          {/* kids-menu勝ち型面（王将/スシロー等・明示allowlist）向けの「外食ついでにおでかけ」
+              レジャー予約CTA（アソビュー優先・じゃらん宿泊に暫定フォールバック）。endOffer/
+              ブリッジとは独立した専用枠で、冷凍宅配ブリッジを奪わずに1枠だけ併載する。
+              両env未設定なら非表示。 */}
+          {kidsMenuLeisureOffer && <ReservationCTA offer={kidsMenuLeisureOffer} />}
 
           {/* AdSense: 記事末尾（FAQ前） */}
           <AdSlot placement="article-end" />

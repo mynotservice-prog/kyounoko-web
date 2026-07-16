@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-yubi-shaburi-yamenai
 title: 子供の指しゃぶりやめさせ方｜原因・対処法・年齢別対応完全ガイド【1〜6歳】
 metaDescription: >-

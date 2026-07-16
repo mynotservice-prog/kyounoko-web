@@ -122,6 +122,104 @@ export function getTravelOffer(
   };
 }
 
+/**
+ * kids-menu 勝ち型面（GSC実クリックのある外食チェーンの `{chain}-kids-menu` 記事）に、
+ * じゃらんのレジャー/おでかけ予約CTAを1枠だけ併載するための明示 allowlist。
+ *
+ * 背景（2026-07 中間PDCA・GSC page-dim 28d 実測）: 王将/スシロー等のキッズメニュー面が
+ * 爆伸び（ohsho-kids-menu 2,565clk・sushiro-kids-menu 622clk ほか）だが、この勝ち
+ * トラフィックに「外食ついでに近場でおでかけ」意図に合う予約系アフィリCTAが乗っておらず
+ * 素通りだった。じゃらん（NEXT_PUBLIC_TRAVEL_URL）の予約枠を1つ足して回収する。
+ *
+ * 設計（2500ecb の FOOD_BRIDGE_COEXIST_SLUGS と同じ「明示allowlist＋併載」を踏襲）:
+ *  - 明示列挙のみ。クリック0の死蔵 kids-menu ページ（全37本中の未流入分）には出さない。
+ *    列挙は GSC page-dim 28d でクリック実績のある外食チェーン記事に限定（テーマパーク
+ *    disney/legoland は宿泊意図が薄く低流入のため除外）。
+ *  - page.tsx で endOffer / showBridge とは独立した専用スロットに描画するため、
+ *    既存の冷凍宅配ブリッジ枠（getRestaurantBridgeOffer）を一切奪わない（純加算）。
+ *
+ * 着地オファーの選定（2026-07 A8実データ・面ごとの意図適合）:
+ *  kids-menu 読者＝「外食ついでに近場でおでかけ」＝日帰りレジャー意図。提携済みの
+ *  じゃらんnet宿泊予約（NEXT_PUBLIC_TRAVEL_URL・A8で正常トラッキング）は「泊まり」商材で、
+ *  日帰り意図とはCVRが構造的に合わない（A8実測: 旅行系 click有り・成果0）。日帰りの本命は
+ *  レジャーチケットの「アソビュー！」（NEXT_PUBLIC_VC_ASOVIEW_URL / VC）。
+ *  そこで本枠は getKidsMenuLeisureOffer で「アソビューが使えればアソビュー、未提携の間は
+ *  暫定でじゃらん宿泊」に出し分ける（Task A の目的＝アフィリンク到達クリックの母数増を
+ *  即効で満たすため、暫定でも点灯させる）。両env未設定なら null（=無害）。
+ */
+export const KIDS_MENU_LEISURE_SLUGS: readonly string[] = [
+  'ohsho-kids-menu',
+  'sushiro-kids-menu',
+  'tenya-kids-menu',
+  'ringerhut-kids-menu',
+  'bamiyan-kids-menu',
+  'saizeriya-kids-menu',
+  'cocoichi-kids-menu',
+  'cocos-kids-menu',
+  'kappa-sushi-kids-menu',
+  'bikkuri-donkey-kids-menu',
+  'bigboy-kids-menu',
+  'dennys-kids-menu',
+  'kfc-kids-menu',
+  'kurasushi-kids-menu',
+  'mos-burger-kids-menu',
+  'yayoiken-kids-menu',
+  'gusto-kids-menu',
+  'hamasushi-kids-menu',
+  'marukame-kids-menu',
+  'nakau-kids-menu',
+  'steakgusto-kids-menu',
+];
+
+/** kids-menu 勝ち型面か（じゃらんレジャー枠の併載対象・明示allowlist）。 */
+export function allowsKidsMenuLeisureOffer(slug: string): boolean {
+  return KIDS_MENU_LEISURE_SLUGS.includes(slug);
+}
+
+/**
+ * kids-menu 勝ち型面向けの「外食ついでに近場でおでかけ」予約CTA。
+ *
+ * allowlist（KIDS_MENU_LEISURE_SLUGS）外、または両env未設定なら null。
+ * page.tsx では末尾の endOffer（生協/宿予約）・冷凍宅配ブリッジとは独立した専用スロットに
+ * 描画するため、既存枠を奪わずに1枠だけ純加算する。
+ *
+ * 着地の出し分け（日帰り意図に最適化・暫定フォールバック付き）:
+ *  1. NEXT_PUBLIC_VC_ASOVIEW_URL（アソビュー！/VC）があれば最優先＝日帰りレジャーの本命。
+ *     文言も「おでかけ先・前売りチケット」の日帰り訴求にする。
+ *  2. 無ければ暫定で NEXT_PUBLIC_TRAVEL_URL（じゃらん宿泊/A8・現在稼働中）にフォールバック。
+ *     着地が宿のため文言も「子連れ歓迎の宿・週末プチ旅行」に正直に合わせる（日帰り体験を
+ *     約束しない）。アソビュー提携が下り次第 env を入れれば自動で1へ格上げ。
+ *  3. どちらも無ければ null（=非表示・無害）。
+ */
+export function getKidsMenuLeisureOffer(slug: string): ReservationOffer | null {
+  if (!allowsKidsMenuLeisureOffer(slug)) return null;
+
+  const asoview = process.env.NEXT_PUBLIC_VC_ASOVIEW_URL?.trim();
+  if (isValidUrl(asoview)) {
+    return {
+      href: asoview,
+      heading: '外食のあとは近くでおでかけ',
+      note: '水族館・動物園・室内あそび場など、近くのレジャーを前売りでサクッと。当日券の行列を避けて予約できます。',
+      cta: 'アソビュー！でおでかけ先を探す →',
+      itemId: 'asoview-kids-menu-leisure',
+    };
+  }
+
+  // 暫定フォールバック: アソビュー未提携の間はじゃらん宿泊で母数を確保（泊まり寄り・正直な文言）。
+  const jalan = process.env.NEXT_PUBLIC_TRAVEL_URL?.trim();
+  if (isValidUrl(jalan)) {
+    return {
+      href: jalan,
+      heading: '週末は近くでおでかけ・お泊まりも',
+      note: '外食ついでに、子連れ歓迎の宿もチェック。おむつ替え・離乳食対応・添い寝無料の宿を近場で探せます。',
+      cta: 'じゃらんで子連れ歓迎の宿を探す →',
+      itemId: 'jalan-kids-menu-leisure',
+    };
+  }
+
+  return null;
+}
+
 /** スポット詳細ページ向けの宿予約オファー（park/restaurant 以外のレジャー全般）。 */
 export function getSpotTravelOffer(category: string): ReservationOffer | null {
   if (category === 'park' || category === 'restaurant') return null;

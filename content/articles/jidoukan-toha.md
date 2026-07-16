@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: jidoukan-toha
 title: 児童館とは｜定義・利用方法・年齢・無料の特徴完全ガイド
 metaDescription: >-

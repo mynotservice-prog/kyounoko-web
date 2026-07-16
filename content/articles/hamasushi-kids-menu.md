@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: hamasushi-kids-menu
 title: はま寿司のキッズメニュー徹底解説｜食べられるサイドと取り分け完全ガイド【2026】
 metaDescription: >-

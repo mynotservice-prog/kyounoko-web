@@ -219,7 +219,7 @@ legacyHero: /hero-ai/kodzure-famires-15sen.webp
 - びっくりドンキー：[キッズメニュー](/article/bikkuri-donkey-kids-menu)・[子連れ攻略](/article/bikkuri-donkey-kodzure-koryaku)
 
 **牛丼・うどん・天丼・カレー系**
-- すき家：[キッズメニュー](/article/sukiya-kids-menu)・[ベビーチェア](/article/sukiya-baby-chair)
+- すき家：キッズメニュー（本記事で解説）・[ベビーチェア](/article/sukiya-baby-chair)
 - 吉野家：[キッズメニュー](/article/yoshinoya-kids-menu)・[ベビーチェア](/article/yoshinoya-baby-chair)
 - 松屋：[キッズメニュー](/article/matsuya-kids-menu)・[ベビーチェア](/article/matsuya-baby-chair)
 - なか卯：[キッズメニュー](/article/nakau-kids-menu)・[ベビーチェア](/article/nakau-baby-chair)
@@ -242,7 +242,7 @@ legacyHero: /hero-ai/kodzure-famires-15sen.webp
 **回転寿司系**
 - スシロー：[キッズメニュー](/article/sushiro-kids-menu)・[ベビーチェア](/article/sushiro-baby-chair)
 - くら寿司：[キッズメニュー](/article/kurasushi-kids-menu)・[ベビーチェア](/article/kurasushi-baby-chair)
-- はま寿司：[キッズメニュー](/article/hamasushi-kids-menu)・[ベビーチェア](/article/hamasushi-baby-chair)
+- はま寿司：キッズメニュー（本記事で解説）・[ベビーチェア](/article/hamasushi-baby-chair)
 - かっぱ寿司：[キッズメニュー](/article/kappa-sushi-kids-menu)・[子連れ攻略](/article/kappa-sushi-kodzure-koryaku)
 
 **ハンバーガー・ファストフード系**

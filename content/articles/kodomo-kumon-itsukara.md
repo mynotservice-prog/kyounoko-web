@@ -6,7 +6,7 @@ metaDescription: >-
 category: narai
 categoryName: 習い事と学び
 publishedAt: 2026-05-28T00:00:00.000Z
-updatedAt: '2026-06-03'
+updatedAt: '2026-07-15'
 hero: /img/scenes/lesson-06.webp
 area: all
 quickInfo:
@@ -153,6 +153,10 @@ A. なし。ただし同じ教室なら送迎が楽。
 - 自学自習の習慣がつく
 - 家庭での宿題サポートが鍵
 - 続けることが最大の効果
+
+## 料金・情報の確認について
+
+月謝・教材・コース内容は変わることがあります。最新の料金と対象年齢は[公文式公式サイト](https://www.kumon.ne.jp/)でご確認ください（本記事の料金は2026年7月時点の目安です）。
 
 ## 関連記事
 

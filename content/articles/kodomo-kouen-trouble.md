@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-kouen-trouble
 title: 子供の公園トラブル｜よくある事例・対処法・親同士の付き合い方完全ガイド【1〜6歳】
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kawaguchiko-akachan-yado
 title: 河口湖の赤ちゃん歓迎宿｜0歳OK・富士山ビュー・離乳食完全ガイド【2026年版】
 metaDescription: >-

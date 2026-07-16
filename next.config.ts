@@ -154,6 +154,67 @@ const nextConfig: NextConfig = {
       { source: '/spot/AkeruE-6dkq', destination: '/spots', permanent: true }, // パナソニックセンター東京 AkeruE
       { source: '/spot/-2f47', destination: '/spots', permanent: true }, // 東京臨海広域防災公園 そなエリア東京
 
+      // ===== データ除外(2026-07-17)：レストラン街＝スポットでない/遊びスポットでない施設 =====
+      // 「レストラン街」は単独スポットとして不適、神社/ビーチ/工場見学等も子連れ遊びスポットではないため
+      // データから除去。旧URLは一覧へ301（被リンク・indexの行き止まり回避）。
+      { source: '/spot/5-6F-fbjc', destination: '/spots', permanent: true }, // 丸ビル 5・6Fレストラン街
+      { source: '/spot/S.C.-xguc', destination: '/spots', permanent: true }, // 二子玉川ライズ S.C. レストラン街
+      { source: '/spot/-h60m', destination: '/spots', permanent: true }, // 池袋サンシャインシティ レストラン街
+      { source: '/spot/-ln74', destination: '/spots', permanent: true }, // 東京スカイツリータウン ソラマチ レストラン街
+      { source: '/spot/-dnpt', destination: '/spots', permanent: true }, // ルミネ新宿 レストラン街
+      { source: '/spot/-ejlx', destination: '/spots', permanent: true }, // グランベリーパーク レストラン街
+      { source: '/spot/-dov1', destination: '/spots', permanent: true }, // ららぽーと豊洲 レストラン街
+      { source: '/spot/-dec1', destination: '/spots', permanent: true }, // マークイズみなとみらい・吉祥寺パルコ系列 レストラン街
+      { source: '/spot/-7hg2', destination: '/spots', permanent: true }, // 北千住マルイ レストラン街
+      { source: '/spot/-s76h', destination: '/spots', permanent: true }, // 錦糸町オリナス レストラン街
+      { source: '/spot/-cwhx', destination: '/spots', permanent: true }, // ららぽーと横浜 レストラン街
+      { source: '/spot/-msdt', destination: '/spots', permanent: true }, // ラゾーナ川崎プラザ レストラン街
+      { source: '/spot/-avjl', destination: '/spots', permanent: true }, // グランフロント大阪 レストラン街
+      { source: '/spot/-95lh', destination: '/spots', permanent: true }, // なんばパークス レストラン街
+      { source: '/spot/CITY-iqht', destination: '/spots', permanent: true }, // なんばCITY レストラン街
+      { source: '/spot/-l5dp', destination: '/spots', permanent: true }, // あべのキューズモール レストラン街
+      { source: '/spot/EXPOCITY-gwj1', destination: '/spots', permanent: true }, // ららぽーとEXPOCITY レストラン街
+      { source: '/spot/JR-JR-n68j', destination: '/spots', permanent: true }, // JRゲートタワー・JRセントラルタワーズ レストラン街
+      { source: '/spot/-yfre', destination: '/spots', permanent: true }, // ミッドランドスクエア レストラン街
+      { source: '/spot/21-b9ak', destination: '/spots', permanent: true }, // オアシス21 レストラン街
+      { source: '/spot/-bgpm', destination: '/spots', permanent: true }, // ららぽーと名古屋みなとアクルス レストラン街
+      { source: '/spot/JR-zara', destination: '/spots', permanent: true }, // JR博多シティ レストラン街（くうてん）
+      { source: '/spot/-iphh', destination: '/spots', permanent: true }, // キャナルシティ博多 レストラン街
+      { source: '/spot/-mcc9', destination: '/spots', permanent: true }, // ららぽーと福岡 レストラン街
+      { source: '/spot/-6e4v', destination: '/spots', permanent: true }, // マリノアシティ福岡 レストラン街
+      { source: '/spot/-05m7', destination: '/spots', permanent: true }, // 札幌ステラプレイス レストラン街
+      { source: '/spot/-th24', destination: '/spots', permanent: true }, // イオンモール京都桂川 レストラン街
+      { source: '/spot/-3tbc', destination: '/spots', permanent: true }, // ヨドバシ梅田＆ヨドバシ京都 レストラン街
+      { source: '/spot/umie-trpj', destination: '/spots', permanent: true }, // 神戸ハーバーランド umie レストラン街
+      { source: '/spot/-zm7c', destination: '/spots', permanent: true }, // ららぽーと甲子園 レストラン街
+      { source: '/spot/-9jec', destination: '/spots', permanent: true }, // 盛岡駅 フェザン レストラン街
+      { source: '/spot/-dxsp', destination: '/spots', permanent: true }, // イーアスつくば レストラン街
+      { source: '/spot/FKD-y7id', destination: '/spots', permanent: true }, // FKD宇都宮 インターパーク レストラン街
+      { source: '/spot/-323y', destination: '/spots', permanent: true }, // イオンモール高崎 レストラン街
+      { source: '/spot/-qeuf', destination: '/spots', permanent: true }, // ららぽーと富士見 レストラン街
+      { source: '/spot/-l0wf', destination: '/spots', permanent: true }, // イクスピアリ レストラン街
+      { source: '/spot/CoCoLo-npow', destination: '/spots', permanent: true }, // CoCoLo新潟 レストラン街
+      { source: '/spot/MIDORI-6u2y', destination: '/spots', permanent: true }, // MIDORI長野 レストラン街
+      { source: '/spot/-rgib', destination: '/spots', permanent: true }, // イオンモール津南 レストラン街
+      { source: '/spot/-n36t', destination: '/spots', permanent: true }, // フォレオ大津一里山 レストラン街
+      { source: '/spot/-01iq', destination: '/spots', permanent: true }, // イオンモール和歌山 レストラン街
+      { source: '/spot/-ovj5', destination: '/spots', permanent: true }, // イオンモール岡山 レストラン街
+      { source: '/spot/ekie-cw9v', destination: '/spots', permanent: true }, // ekie広島 レストラン街
+      { source: '/spot/-hnxg', destination: '/spots', permanent: true }, // イオンモール高知 レストラン街
+      { source: '/spot/-e30j', destination: '/spots', permanent: true }, // ゆめタウン佐賀 レストラン街
+      { source: '/spot/-pw60', destination: '/spots', permanent: true }, // アミュプラザ長崎 レストラン街
+      { source: '/spot/-mo9i', destination: '/spots', permanent: true }, // アミュプラザくまもと レストラン街
+      { source: '/spot/-bvkk', destination: '/spots', permanent: true }, // アミュプラザおおいた レストラン街
+      { source: '/spot/-w24e', destination: '/spots', permanent: true }, // イオンモール宮崎 レストラン街
+      { source: '/spot/-dp3a', destination: '/spots', permanent: true }, // アミュプラザ鹿児島 レストラン街
+      { source: '/spot/-npaw', destination: '/spots', permanent: true }, // イオンモール沖縄ライカム レストラン街
+      { source: '/spot/-at0y', destination: '/spots', permanent: true }, // 神田明神
+      { source: '/spot/-6s3p', destination: '/spots', permanent: true }, // 明治神宮
+      { source: '/spot/-tzd6', destination: '/spots', permanent: true }, // 台場海浜公園 ビーチ
+      { source: '/spot/-4lrp', destination: '/spots', permanent: true }, // アネビートリムパーク（ららぽーと各所等）
+      { source: '/spot/S-C-mchr', destination: '/spots', permanent: true }, // 玉川高島屋S・C
+      { source: '/spot/-et68', destination: '/spots', permanent: true }, // ふくろうの杜（流山おおたかの森）
+
       // ===== 記事棚卸し監査(2026-06-25)：チェーン周辺条件の死蔵フラグメントを =====
       // 内容を包含する [chain]-kodzure-koryaku へ 301 統合（被リンク資産を勝ちページに集約）。
       ...ARTICLE_REDIRECTS.map((r) => ({
