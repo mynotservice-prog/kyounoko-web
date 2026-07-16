@@ -437,7 +437,6 @@ export const SPOT_ACCESS: Record<string, SpotAccess> = {
   "多摩動物公園": { nearestStation: "多摩動物公園駅", walkMinutes: 1, accessNote: "京王動物園線・多摩都市モノレール多摩動物公園駅から徒歩約1分（駅正面）" },
   "多摩六都科学館": { nearestStation: "花小金井駅", walkMinutes: 18, accessNote: "西武新宿線花小金井駅から徒歩約18〜20分。はなバス約6分も利用可" },
   "太地町立くじらの博物館": { nearestStation: "太地駅", accessNote: "JRきのくに線 太地駅から太地町営じゅんかんバス約5〜10分、くじら館前下車すぐ（バス利用）" },
-  "台場海浜公園 ビーチ": { nearestStation: "お台場海浜公園駅", walkMinutes: 5, accessNote: "ゆりかもめ お台場海浜公園駅から徒歩約5分" },
   "大宮花の丘農林公苑 親水広場": { nearestStation: "上尾駅", accessNote: "JR上尾駅西口から上尾市内循環バス約25分「花の丘公苑」下車すぐ" },
   "大山まきばみるくの里": { nearestStation: "米子駅", accessNote: "JR米子駅からバス約50分「桝水」下車徒歩約10分、徒歩圏外（車推奨）" },
   "大洗わくわく科学館": { nearestStation: "大洗駅", walkMinutes: 20, accessNote: "鹿島臨海鉄道大洗鹿島線「大洗駅」から徒歩約20分" },
