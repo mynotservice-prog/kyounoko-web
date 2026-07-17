@@ -1,4 +1,4 @@
-import { getAllPlanMetas, getPlan } from '@/lib/plans';
+import { getAllPlans } from '@/lib/plans';
 import { AREAS, getAreaName } from '@/lib/area';
 import { PlansClient, type PlanRow } from './PlansClient';
 
@@ -6,26 +6,26 @@ import { PlansClient, type PlanRow } from './PlansClient';
 export const dynamic = 'force-dynamic';
 
 export default function AdminPlans() {
-  const metas = getAllPlanMetas();
-  const rows: PlanRow[] = metas.map((m) => {
-    const p = getPlan(m.id);
-    const body = p?.body ?? '';
-    const plain = body
+  // 1パスで全プラン(meta+body)を取得。以前は getAllPlanMetas() + getPlan(id) を件数分
+  // ループしていて O(N^2)（毎回ディレクトリ全走査）だったため表示が遅かった。
+  const plans = getAllPlans();
+  const rows: PlanRow[] = plans.map((p) => {
+    const plain = (p.body ?? '')
       .replace(/^#+\s.*$/gm, '')
       .replace(/[*_`>-]/g, '')
       .trim()
       .replace(/\s+/g, ' ');
     return {
-      id: m.id,
-      title: m.title,
-      shortAnswer: m.shortAnswer,
-      ageRanges: m.ageRanges,
-      place: m.place,
-      durationMin: m.durationMin,
-      budget: m.budget,
-      area: m.area,
-      areaName: getAreaName(m.area),
-      hero: m.hero,
+      id: p.id,
+      title: p.title,
+      shortAnswer: p.shortAnswer,
+      ageRanges: p.ageRanges,
+      place: p.place,
+      durationMin: p.durationMin,
+      budget: p.budget,
+      area: p.area,
+      areaName: getAreaName(p.area),
+      hero: p.hero,
       bodyPreview: plain.slice(0, 160),
       bodyLength: plain.length,
     };
