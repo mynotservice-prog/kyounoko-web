@@ -11,6 +11,10 @@
     {
       "path": "/api/cron/kpi-alert",
       "schedule": "0 0 * * *"
+    },
+    {
+      "path": "/api/cron/pinterest-pin",
+      "schedule": "0 0,6,12 * * *"
     }
   ]
 }
