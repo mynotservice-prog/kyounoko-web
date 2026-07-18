@@ -872,6 +872,18 @@ export async function writeArticleOverride(slug: string, rawMd: string): Promise
   return kvSet(ARTICLE_OVERRIDES_KV_KEY, map);
 }
 
+/**
+ * 1記事の KV 上書きを削除する（md を正に戻す）。
+ * ※ 画像などの編集内容も消えるため、呼び出し側は事前に KV 版を md へ書き戻すこと。
+ * override が元々無ければ true（冪等）。
+ */
+export async function deleteArticleOverride(slug: string): Promise<boolean> {
+  const map = await readArticleOverridesMap();
+  if (!(slug in map)) return true;
+  delete map[slug];
+  return kvSet(ARTICLE_OVERRIDES_KV_KEY, map);
+}
+
 /** 生Markdown（frontmatter込み）→ FileArticle（本文HTML + FAQ等）を構築。 */
 async function buildArticleFromRaw(raw: string, fallbackSlug: string): Promise<FileArticle> {
   const { meta, content } = parseFrontmatter(raw, fallbackSlug);
