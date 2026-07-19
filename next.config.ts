@@ -19,17 +19,24 @@ const nextConfig: NextConfig = {
   async headers() {
     // CDN（Cloudflare）に edge キャッシュを効かせるための共通 Cache-Control。
     // - max-age=0, must-revalidate: ブラウザは毎回再検証（ユーザーに常に新鮮なHTMLを返す）
-    // - s-maxage / CDN-Cache-Control: CDN（Cloudflare）には 1h キャッシュさせる
-    // - stale-while-revalidate=86400: 1h過ぎても 24h は古いキャッシュを返しつつ裏で再取得
+    // - s-maxage / CDN-Cache-Control: CDN（Cloudflare）には 24h キャッシュさせる
+    // - stale-while-revalidate=604800: 24h過ぎても 7日 は古いキャッシュを返しつつ裏で再取得
     // - Cloudflare は CDN-Cache-Control を最優先、なければ s-maxage を尊重する仕様
-    const edgeCache = 'public, max-age=0, must-revalidate, s-maxage=3600, stale-while-revalidate=86400';
-    const cdnCache = 'public, max-age=3600, stale-while-revalidate=86400';
+    //
+    // 【コスト最適化 2026-07-19】記事/カテゴリ/タグ等は編集時に on-demand revalidation
+    //   （revalidatePath/revalidateTag + CF purge）で即時反映するため、時間ベースの
+    //   再検証は 1h → 24h に延長。CF→Vercel の origin 再取得（Fast Origin Transfer）と
+    //   ISR バックグラウンド再生成（Function Invocations / Fluid CPU / Observability）を
+    //   ~24倍削減する。編集反映は on-demand 側が担保するので鮮度は落ちない。
+    const edgeCache = 'public, max-age=0, must-revalidate, s-maxage=86400, stale-while-revalidate=604800';
+    const cdnCache = 'public, max-age=86400, stale-while-revalidate=604800';
 
-    // スポット詳細は /admin/spots/edit から画像・本文を編集するため、CDNキャッシュを
-    // 短くして編集が概ね1分以内に本番反映されるようにする（保存時の revalidateTag/Path で
-    // Vercelオリジンは即時更新されるが、Cloudflare が長時間キャッシュすると公開ページに出ない）。
-    const spotEdgeCache = 'public, max-age=0, must-revalidate, s-maxage=60, stale-while-revalidate=60';
-    const spotCdnCache = 'public, max-age=60, stale-while-revalidate=60';
+    // スポット詳細は /admin/spots/edit から画像・本文を編集する。保存時に
+    // revalidateTag/revalidatePath でVercelオリジンを即時更新し、さらに purgeCfUrls で
+    // Cloudflare も即パージする（app/api/admin/spot-overrides/route.ts）ため、CDNキャッシュは
+    // 短命である必要がなくなった。旧 60s は CF 再取得が過剰でコスト源だったため 1h に延長。
+    const spotEdgeCache = 'public, max-age=0, must-revalidate, s-maxage=3600, stale-while-revalidate=86400';
+    const spotCdnCache = 'public, max-age=3600, stale-while-revalidate=86400';
 
     return [
       // 全パス共通のセキュリティヘッダ
@@ -115,7 +122,7 @@ const nextConfig: NextConfig = {
       // ページ本体はクエリ→静的データの純粋計算で fetch/cookies/時刻依存なし＝同一URLは
       // 常に同一結果なので、他の静的HTMLページと同様に CDN キャッシュ可。クエリ文字列違いは
       // Cloudflare 側で別キャッシュキーになるため条件別ページも正しく分離される。
-      // 1h edge / 24h SWR はページの revalidate=3600 と整合。
+      // 24h edge / 7日 SWR。/today のクエリ変種クロールは robots.txt で遮断済み。
       {
         source: '/today',
         headers: [

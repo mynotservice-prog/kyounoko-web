@@ -15,8 +15,17 @@ import type { MetadataRoute } from 'next';
  * Disallow するのは /api/ と /admin/ のみ。
  */
 export default function robots(): MetadataRoute.Robots {
-  // /api/ と /admin/ はサイトの内部・管理画面なので非公開
-  const baseDisallow = ['/api/', '/admin/'];
+  // /api/ と /admin/ はサイトの内部・管理画面なので非公開。
+  //
+  // 【コスト最適化 2026-07-19】クエリ文字列付きURLと /search を全クローラーで遮断する。
+  //   /today?... ・/spots?... ・/spots/[cat]?... ・/events?... ・/search?q=... は searchParams を
+  //   読むため Next.js 15 で「動的レンダリング」扱いとなり、CDN でキャッシュされず1リクエスト＝
+  //   1 Function 起動になる（Fast Origin Transfer / Fluid CPU / Observability の主要因）。
+  //   これらの絞り込み変種は元々 noindex + canonical で検索価値ゼロ（インデックス対象は
+  //   すべてクエリ無しのクリーンURL）。noindex はクロール自体は止められないため、robots で
+  //   クロールを遮断してクローラー由来の動的 Function 起動を根絶する。クエリ依存の
+  //   ページネーション等は存在しないため indexable コンテンツへの影響はない。
+  const baseDisallow = ['/api/', '/admin/', '/search', '/*?'];
   // Next.js の静的アセット（CSS/JS/フォント/画像）を明示的に許可
   const baseAllow = ['/', '/_next/'];
 
@@ -34,8 +43,8 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'Mediapartners-Google', allow: baseAllow },     // AdSense
       { userAgent: 'AdsBot-Google', allow: baseAllow },
       { userAgent: 'AdsBot-Google-Mobile', allow: baseAllow },
-      { userAgent: 'Googlebot-Image', allow: baseAllow },          // Google画像検索
-      { userAgent: 'Google-Extended', allow: baseAllow },          // Gemini/Bard学習
+      { userAgent: 'Googlebot-Image', allow: baseAllow, disallow: baseDisallow },  // Google画像検索
+      { userAgent: 'Google-Extended', allow: baseAllow, disallow: baseDisallow },  // Gemini/Bard学習
 
       // ===== AI検索クローラー（AIO対策の中核）=====
       // ChatGPT / ChatGPT Search からの引用を受け入れる
@@ -57,15 +66,15 @@ export default function robots(): MetadataRoute.Robots {
 
       // Meta AI（Llama）
       { userAgent: 'Meta-ExternalAgent', allow: baseAllow, disallow: baseDisallow },
-      { userAgent: 'FacebookBot', allow: baseAllow },
+      { userAgent: 'FacebookBot', allow: baseAllow, disallow: baseDisallow },
 
       // Bing / Copilot
-      { userAgent: 'bingbot', allow: baseAllow },
-      { userAgent: 'BingPreview', allow: baseAllow },
+      { userAgent: 'bingbot', allow: baseAllow, disallow: baseDisallow },
+      { userAgent: 'BingPreview', allow: baseAllow, disallow: baseDisallow },
 
       // Applebot（Siri・Spotlight・Apple Intelligence）
-      { userAgent: 'Applebot', allow: baseAllow },
-      { userAgent: 'Applebot-Extended', allow: baseAllow },
+      { userAgent: 'Applebot', allow: baseAllow, disallow: baseDisallow },
+      { userAgent: 'Applebot-Extended', allow: baseAllow, disallow: baseDisallow },
     ],
     sitemap: [
       'https://kyounoko.jp/sitemap.xml',

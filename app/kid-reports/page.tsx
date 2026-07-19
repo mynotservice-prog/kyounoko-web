@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
 import { getAllSpotsWithSlug, SPOT_CATEGORY_LABEL } from '@/lib/spots';
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: '【一次情報】運営者が実際に訪問した子連れスポットレポート一覧｜きょうのこ',
