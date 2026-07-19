@@ -25,13 +25,6 @@ import { AdSlot } from '@/components/ads/AdSlot';
 
 export const revalidate = 3600;
 
-export const metadata: Metadata = {
-  title: '子連れで行ける今週のイベント一覧｜きょうのこ',
-  description:
-    '0〜6歳の子どもと一緒に楽しめる、今週・今月開催の子育てイベント情報。マルシェ・リトミック・ワークショップ・イルミネーションなど編集部が確認したイベントを掲載。',
-  alternates: { canonical: '/events' },
-};
-
 type Props = {
   searchParams: Promise<{
     view?: string;
@@ -42,6 +35,23 @@ type Props = {
     baby?: string;
   }>;
 };
+
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+  const sp = await searchParams;
+  // SEO §2-2: 絞り込み/表示切替のクエリ変種（area/cat/free/soon/baby/view）は
+  // /events の重複。canonical→/events に加えて noindex,follow を付け、Google が
+  // 各パラメータ変種を個別インデックスしないようにする（/spots と同一方針）。
+  const hasVariant = Boolean(
+    (sp.area && sp.area !== 'all') || sp.cat || sp.free === '1' || sp.soon === '1' || sp.baby === '1' || sp.view,
+  );
+  return {
+    title: '子連れで行ける今週のイベント一覧｜きょうのこ',
+    description:
+      '0〜6歳の子どもと一緒に楽しめる、今週・今月開催の子育てイベント情報。マルシェ・リトミック・ワークショップ・イルミネーションなど編集部が確認したイベントを掲載。',
+    robots: hasVariant ? { index: false, follow: true } : undefined,
+    alternates: { canonical: '/events' },
+  };
+}
 
 export default async function EventsPage({ searchParams }: Props) {
   const sp = await searchParams;
