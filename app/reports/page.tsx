@@ -7,7 +7,7 @@ import { getRecentSpotReports } from '@/lib/spot-reports';
 import { getSpotBySlug } from '@/lib/spots';
 import { AdSlot } from '@/components/ads/AdSlot';
 
-export const revalidate = 1800;
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: 'みんなの「行ったよ」レポート｜子連れでおでかけした人の口コミ【きょうのこ】',

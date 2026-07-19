@@ -62,7 +62,7 @@ import { LineCta } from '@/components/common/LineCta';
 // パーソナライズ枠を出すカテゴリ（今日の◯◯系のみ）
 const PERSONALIZED_HINT_CATEGORIES = new Set(['today-doko', 'today-nani', 'today-taberu']);
 
-export const revalidate = 3600; // 1時間ごとに再生成
+export const revalidate = 86400; // 24hごとに再生成（編集は on-demand revalidation で即時反映）
 // 未知 slug（KVのみ存在する新規記事など）は初回アクセス時にオンデマンド生成する
 export const dynamicParams = true;
 

@@ -21,7 +21,7 @@ import { PlanTimeline } from '@/components/plan/PlanTimeline';
 import { ShareBar } from '@/components/article/ShareBar';
 
 // hero 画像の自動マッチング更新を即時反映するため revalidate を短縮（5分）
-export const revalidate = 300;
+export const revalidate = 86400;
 
 type Props = {
   params: Promise<{ id: string }>;

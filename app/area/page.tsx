@@ -4,7 +4,7 @@ import { V2Frame } from '@/components/v2/V2Frame';
 import { V2SectionHead } from '@/components/v2/V2Base';
 import { V2Icon, V2_ACCENT, type V2IconName } from '@/components/v2/V2Icon';
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: 'エリアから探す｜きょうのこ',

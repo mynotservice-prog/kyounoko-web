@@ -11,7 +11,7 @@ import { getAllSpotsWithSlug } from '@/lib/spots';
 import { spotToV2, articleToV2, featureToV2 } from '@/lib/v2-adapters';
 import { AdSlot } from '@/components/ads/AdSlot';
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 type Props = { params: Promise<{ slug: string }> };
 

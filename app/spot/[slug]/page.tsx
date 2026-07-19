@@ -39,7 +39,7 @@ import { getSpotReservationOffer, getSpotTravelOffer } from '@/lib/reservation-c
 import { ReservationCTA } from '@/components/article/ReservationCTA';
 import { ShareBar } from '@/components/article/ShareBar';
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 type Props = { params: Promise<{ slug: string }> };
 
