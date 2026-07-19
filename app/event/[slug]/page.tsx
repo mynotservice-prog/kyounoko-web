@@ -94,9 +94,12 @@ export default async function EventPage({ params }: Props) {
       };
     }
     const price = isFree ? '0' : nums.length === 1 ? String(nums[0]) : undefined;
+    // priceCurrency は当サイトのイベントは常に円建てなので価格が数値化できなくても必ず付与する。
+    // （「有料」「公式サイトで確認」等の非数値価格でも Google の priceCurrency 欠落警告を出さない）
     return {
       '@type': 'Offer',
-      ...(price !== undefined ? { price, priceCurrency: 'JPY' } : {}),
+      priceCurrency: 'JPY',
+      ...(price !== undefined ? { price } : {}),
       availability: 'https://schema.org/InStock',
       validFrom: ev.startDate,
       url,
