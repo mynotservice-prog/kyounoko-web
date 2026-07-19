@@ -614,7 +614,7 @@ A. **(1) 商業施設内のサイゼリヤを選ぶ**（駐車場から濡れず
 - [【2026年版】ファミレス10社 子連れランキング](/article/famires-kodzure-ranking-2026-10sen)
 - [ジョナサンの子連れ攻略｜サイゼリヤとの違い](/article/jonathan-kodzure-koryaku)
 - [ガストの子連れ攻略｜配膳ロボとキッズメニュー](/article/gusto-kodzure-koryaku)
-- [バーミヤンの子連れ攻略｜1-2歳向けメニュー](/article/bamiyan-kodzure-koryaku)
+- [バーミヤンの子連れ攻略｜1-2歳の取り分け・ベビーチェア](/article/bamiyan-kodzure-koryaku)
 - [しゃぶ葉の子連れ攻略｜3歳以下無料で離乳食持込OK](/article/shabuyou-kodzure-koryaku)
 - [ココスの子連れ攻略｜おもちゃ付きキッズ・誕生日プレート](/article/cocos-kodzure-koryaku)
 - [ロイヤルホストの子連れ攻略｜個室席・お祝いプレート](/article/royal-host-kodzure-koryaku)

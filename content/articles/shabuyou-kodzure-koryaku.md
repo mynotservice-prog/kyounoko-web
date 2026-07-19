@@ -349,7 +349,7 @@ A. **すかいらーくグループのファミリー設計で通路幅広めの
 - [サイゼリヤ子連れ完全攻略](/article/kodzure-saize-koryaku)
 - [ガストの子連れ攻略｜キッズメニュー・離乳食・ベビーチェア](/article/gusto-kodzure-koryaku)
 - [ジョナサンの子連れ攻略｜離乳食温め・モーニング](/article/jonathan-kodzure-koryaku)
-- [バーミヤンの子連れ攻略｜餃子アレルゲン・幼児メニュー](/article/bamiyan-kodzure-koryaku)
+- [バーミヤンの子連れ攻略｜餃子アレルゲン・取り分け](/article/bamiyan-kodzure-koryaku)
 
 **まとめ・データ**
 
