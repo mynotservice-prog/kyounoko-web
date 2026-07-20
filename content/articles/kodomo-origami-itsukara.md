@@ -1,12 +1,12 @@
 ---
 slug: kodomo-origami-itsukara
-title: 子供の折り紙はいつから？年齢別目安・楽しみ方・作品の段階完全ガイド
+title: 子供の折り紙はいつから？1〜2歳のちぎりから・つるは5〜6歳【年齢別デビュー目安・2026】
 metaDescription: >-
   子供の折り紙は何歳から？1歳・2歳・3歳・4歳以降の年齢別目安、半分折り・三角折りからのスタート、つる・はこ・キャラクター折りまで段階解説。発達への効果、自宅練習法まで2026年版で完全解説します。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-06-02'
+updatedAt: '2026-07-20'
 hero: /img/scenes/craft-04.webp
 area: all
 quickInfo:
