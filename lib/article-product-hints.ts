@@ -75,6 +75,11 @@ function containsAny(haystacks: string[], needles: string[]): boolean {
  * 店名・「子連れ攻略」「キッズメニュー」等の restaurant 固有トークンに限定し、
  * 純粋なベビーチェア記事（home用ハイチェア）は誤検出しない。
  * gaishoku 商品ルートと高単価ブリッジ（幼児食宅配）の両方で共有する。
+ *
+ * `{chain}-morning-kosodate`（チェーンのモーニング記事）も店名トークンで拾う。
+ * 新しいチェーンのモーニング/カフェ記事を追加したら、ここに店名を1語足すこと
+ * （例: hoshino=星乃珈琲店 / komeda=コメダ珈琲店）。抜けると外食判定されず、
+ * 予約・生協CTAが一切出ず素通りになる（GSC実測で hoshino-morning は最大imp面）。
  */
 const RESTAURANT_NEEDLES = [
   'kodzure', 'koryaku', 'kids-menu', 'kidsmenu', 'famires',
@@ -85,7 +90,7 @@ const RESTAURANT_NEEDLES = [
   'tenya', 'sushiro', 'hamasushi', 'hama-sushi', 'kappazushi',
   'kurazushi', 'jonathan', 'shabuyou', 'yakiniku', 'gyukaku',
   'gyu-kaku', 'sukiya', 'matsuya', 'yoshinoya', 'maido',
-  'royalhost', 'joyfull', 'dennys',
+  'royalhost', 'joyfull', 'dennys', 'hoshino', 'komeda',
   '外食', 'ファミレス', 'キッズメニュー', '回転寿司', '食べこぼし',
 ];
 

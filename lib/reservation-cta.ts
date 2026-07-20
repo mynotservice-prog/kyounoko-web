@@ -96,12 +96,26 @@ const LEISURE_NEEDLES = [
 ];
 
 /**
+ * 日帰りレジャー意図の判定トークン（水遊び・プール・水族館）。
+ * この意図は「泊まり」商材のじゃらんより、前売りチケットの「アソビュー！」が構造的に一致する
+ * （じゃぶじゃぶ池等の無料面でも「近くの水遊び施設の前売り」への誘導として泊まりより意図が近い）。
+ * 夏の水遊びは季節ピーク・GSC実流入あり（mizuasobi-* 各200-265clk）。
+ */
+const DAYTRIP_NEEDLES = [
+  'mizuasobi', '水遊び', 'じゃぶじゃぶ', 'プール', 'pool', 'aquarium', '水族館',
+];
+
+/**
  * じゃらん等の「子連れ歓迎の宿」予約オファー（A8/VC・高単価）。
  *
  * スポット詳細(/spot)はコード内でも「アフィ最大未開拓面」と明記。旅行・おでかけ記事と
  * スポットは宿予約と相性が良く、宿予約は単価が高い。
  *
- * env `NEXT_PUBLIC_TRAVEL_URL` 未設定なら null（=描画されない）。
+ * 意図別の出し分け（2026-07・GSC実測でmizuasobi群が夏ピーク流入）:
+ *  - 日帰りトークン（水遊び/プール/水族館）を含む面は「泊まり」のじゃらんより
+ *    アソビュー！（前売りチケット/VC）が意図一致。NEXT_PUBLIC_VC_ASOVIEW_URL があれば最優先。
+ *  - それ以外の旅行・宿・温泉トークンは従来どおりじゃらん（NEXT_PUBLIC_TRAVEL_URL）。
+ * どちらも env 未設定なら null（=描画されない・無害）。
  * 2026-06: A8 のじゃらんnet宿泊予約が提携済みのため、A8 アフィリンク（px.a8.net/...）を設定。
  * 着地はじゃらんトップのため文言は「探せます」とし、絞り込み済みを過度に約束しない。
  */
@@ -111,6 +125,21 @@ export function getTravelOffer(
   title?: string,
 ): ReservationOffer | null {
   if (!ctxIncludes([slug, category, title], LEISURE_NEEDLES)) return null;
+
+  // 日帰り（水遊び/プール/水族館）意図はアソビュー前売りが最適。あれば最優先で返す。
+  if (ctxIncludes([slug, category, title], DAYTRIP_NEEDLES)) {
+    const asoview = process.env.NEXT_PUBLIC_VC_ASOVIEW_URL?.trim();
+    if (isValidUrl(asoview)) {
+      return {
+        href: asoview,
+        heading: '近くの水遊び・プールを前売りでチェック',
+        note: 'プール・じゃぶじゃぶ池・水族館など、近くの水遊びスポットを前売りチケットで。当日券の行列を避けて予約できる施設もあります。',
+        cta: 'アソビュー！で水遊びスポットを探す →',
+        itemId: 'asoview-mizuasobi-daytrip',
+      };
+    }
+  }
+
   const href = process.env.NEXT_PUBLIC_TRAVEL_URL?.trim();
   if (!isValidUrl(href)) return null;
   return {
