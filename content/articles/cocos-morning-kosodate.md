@@ -1,12 +1,12 @@
 ---
 slug: cocos-morning-kosodate
-title: ココスのモーニング｜時間帯・メニュー・子連れ攻略の完全ガイド【2026年版】
+title: ココスのモーニングは朝6時〜10時30分｜朝食ブッフェ・子連れ穴場時間を編集長が実食【2026年最新】
 metaDescription: >-
   ココスのモーニングは朝6時-10時30分。朝食ブッフェ・パンケーキ・和定食、ベビーチェア完備、離乳食温め対応、平日朝の子連れ穴場時間、混雑回避のコツまで0-6歳の家族目線で完全ガイドします。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-06-06'
+updatedAt: '2026-07-20'
 hero: /img/scenes/home-play-14.webp
 area: all
 quickInfo:
