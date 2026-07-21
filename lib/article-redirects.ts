@@ -53,6 +53,11 @@ export const ARTICLE_REDIRECTS: { from: string; to: string }[] = [
   // 「いつから」完全重複ペアの統合（牛肉・国内旅行）
   { from: 'kodomo-gyu-itsukara', to: 'kodomo-gyuniku-itsukara' },
   { from: 'kodomo-kokunai-ryokou-itsukara', to: 'kodomo-kokunai-ryoko-itsukara' },
+  // 2026-07-21 いつからカニバリ回収: 同義の厚い重複を勝ち記事(正典)へ301統合し検索シグナルの共食いを解消。
+  //   ぶどう: grape(8,791字/1,826imp pos8.9)を正典に、budou(6,574字)を吸収。
+  //   卵かけご飯: tkg(生卵5〜6歳=最新の答え)を正典に、既にnoindex済のtamago-kake-gohan(生卵3〜5歳=旧値)を301へ格上げ。
+  { from: 'kodomo-budou-itsukara', to: 'kodomo-grape-itsukara' },
+  { from: 'kodomo-tamago-kake-gohan-itsukara', to: 'kodomo-tkg-itsukara' },
   // 2026-06-30: 統合先(kodzure-koryaku)が在るチェーン周辺フラグメントを noindex から 301 統合へ格上げ。
   { from: 'hamasushi-stroller', to: 'hama-sushi-kodzure-koryaku' },
   { from: 'hamasushi-omutsu', to: 'hama-sushi-kodzure-koryaku' },
