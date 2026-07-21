@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-06-25T00:00:00.000Z'
-updatedAt: '2026-06-25'
+updatedAt: '2026-07-21'
 hero: /img/scenes/meal-10.webp
 area: all
 quickInfo:
@@ -42,7 +42,7 @@ legacyHero: /hero/food-japan-01.webp
 | 食材 | 目安 | 詳しく |
 |---|---|---|
 | 卵（卵黄→全卵） | 卵黄は離乳食初期後半、全卵は後期〜 | [卵はいつから](/article/kodomo-tamago-itsukara) |
-| 卵かけご飯（生卵） | 加熱卵は1歳半〜／生卵は3歳以降が安心 | [TKGはいつから](/article/kodomo-tamago-kake-gohan-itsukara) |
+| 卵かけご飯（生卵） | 加熱卵は1〜2歳〜／生卵は5〜6歳以降が安心 | [TKGはいつから](/article/kodomo-tkg-itsukara) |
 | 温泉卵・半熟卵 | 半熟は3歳以降を目安に | [温泉卵はいつから](/article/kodomo-onsen-tamago-itsukara) |
 | パスタ | 中期〜（細かくカット） | [パスタはいつから](/article/kodomo-pasta-itsukara) |
 | そば（アレルギー注意） | 1歳以降に少量から慎重に | [そばはいつから](/article/kodomo-soba-itsukara) |
@@ -59,7 +59,7 @@ legacyHero: /hero/food-japan-01.webp
 
 | 食材 | 目安 | 詳しく |
 |---|---|---|
-| ぶどう（巨峰・シャインマスカット） | 皮むき・小さく切れば中期〜／丸ごとは4-5歳まで切る | [ぶどうはいつから](/article/kodomo-budou-itsukara) |
+| ぶどう（巨峰・シャインマスカット） | 皮むき・4等分すれば中期〜／丸ごとは5歳までNG | [ぶどうはいつから](/article/kodomo-grape-itsukara) |
 | みかん | 薄皮を取れば中期〜 | [みかんはいつから](/article/kodomo-mikan-itsukara) |
 | レモン | 風味づけ程度なら離乳食期から少量 | [レモンはいつから](/article/kodomo-lemon-itsukara) |
 | プチトマト | 皮をむき小さく切れば中期〜／丸ごとは誤嚥注意 | [プチトマトはいつから](/article/kodomo-petittomato-itsukara) |
