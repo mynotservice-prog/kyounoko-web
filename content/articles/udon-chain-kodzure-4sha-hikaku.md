@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-20'
-updatedAt: '2026-06-03'
+updatedAt: '2026-07-22'
 area: all
 lede: >-
   「うどんは子連れ向きと聞くけど、チェーンによって何が違うの？」を**セルフ動線・離乳食1本うどん運用・キッズメニュー・価格・持ち運び安全性の5軸×50点満点**でスコア化。丸亀製麺／はなまるうどん／東京麺通団／つるとんたんを総合ランキング1位から4位まで並べ、**0-1歳期／2-3歳期／4-6歳期の各シーン別1位**も発表します。4歳娘＆2歳息子を連れて実際に通った編集長ながみー（2児の親）の現場メモ付きで、迷う時間をほぼゼロにできる保存版です。
@@ -149,6 +149,7 @@ A. **丸亀製麺は郊外ロードサイド型のテーブル席多い店舗**�
 - 単独攻略は[丸亀製麺は子連れOK？ベビーカー・キッズうどん・離乳食・取り分けのコツ](/article/marugame-kodzure-koryaku)が詳しいです。
 - はなまるうどんの単独攻略は[はなまるうどんは子連れにラク？にこはなセット・かけ小・セルフ式の段取り](/article/hanamaru-udon-kodzure-koryaku)。にこはなセットや天ぷら・長い麺の安全までまとめています。
 - 3チェーン比較版（富士そば含む）は[うどん・そば3チェーン子連れ比較｜丸亀・はなまる・富士そば8項目](/article/udon-soba-3chain-kodzure)。
+- 単独攻略は[資さんうどん 子連れ攻略｜ぼた餅・座敷の有無・北九州発チェーンの取り分け](/article/sukesan-udon-kodzure-koryaku)と[山田うどん 子連れ攻略｜かかしパンチ・座敷とボックス席・お子様メニューの選び方](/article/yamada-udon-kodzure-koryaku)もどうぞ。
 - ファミレス全体は[【2026年版】子連れで使えるファミレス TOP10ランキング](/article/famires-kodzure-ranking-2026-10sen)、和食チェーンは[子連れ歓迎の和食チェーン10選](/article/kodzure-washoku-chain-10)。
 - 同じスキーマの姉妹編は[【2026年版】焼肉チェーン5社 子連れ徹底比較](/article/kodzure-yakiniku-shabu-7)と[【2026年版】回転寿司5社 子連れ徹底比較](/article/kaiten-sushi-4chain-comparison)。
 - 朝うどんの取り分けは[朝うどん卵とじ｜離乳食後の取り分けレシピ](/article/kodomo-asa-udon-tamagotoji-rinyuushoku-go)、牛丼チェーンの早見表は[牛丼4チェーン子連れ早見表](/article/gyudon-4chain-kodzure-hayami)も合わせてどうぞ。

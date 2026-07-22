@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-19'
-updatedAt: '2026-06-03'
+updatedAt: '2026-07-22'
 area: all
 lede: >-
   「子連れランチで使えるファミレス、結局どこが一番強い？」を**離乳食・ベビーカー・キッズ評価の3軸×30点満点**でスコア化。10チェーンを総合ランキング1位から10位まで並べ、**0-1歳期／2-3歳期／4-6歳期の各シーン別1位**も発表します。4歳娘＆2歳息子を連れて実際に訪問した編集長ながみー（2児の親）の現場メモ付きで、選び方を1記事で完結。
@@ -197,6 +197,10 @@ A. 各社のキッズメニュー改定・配膳ロボ導入・離乳食併売�
 - [バーミヤン 子連れ攻略](/article/bamiyan-kodzure-koryaku)
 - [ステーキガスト 子連れ攻略](/article/steak-gusto-kodzure-koryaku)
 - [ブロンコビリー 子連れ攻略](/article/bronco-billy-kodzure-koryaku)
+- [さわやか 子連れ攻略｜げんこつハンバーグは何歳から・静岡限定の待ち時間対策・取り分け](/article/sawayaka-kodzure-koryaku)
+- [フライングガーデン 子連れ攻略｜爆弾ハンバーグの取り分け・座敷の有無・北関東の家族御用達](/article/flying-garden-kodzure-koryaku)
+- [華屋与兵衛 子連れ攻略｜お子様寿司・座敷でゆったり・和食ファミレスの使い方](/article/hanaya-yohei-kodzure-koryaku)
+- [ステーキ宮 子連れ攻略｜宮ランチ・お子様メニュー・座敷の有無とベビーカー動線](/article/steak-miya-kodzure-koryaku)
 
 ---
 

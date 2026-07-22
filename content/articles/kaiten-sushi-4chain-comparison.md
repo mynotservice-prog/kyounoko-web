@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-18'
-updatedAt: '2026-06-03'
+updatedAt: '2026-07-22'
 area: all
 lede: >-
   「結局、子連れの回転寿司はどこを選べばいい？」を1ページで決着。**ベビーカー入店・キッズチェア・キッズメニュー・取り分け・離乳食持込・おむつ替え・個室・価格帯**の8項目で、スシロー・くら寿司・はま寿司・かっぱ寿司を◎○△✕評価しました。
@@ -93,6 +93,7 @@ hero: /img/scenes/meal-14.webp
 ## 内部リンク
 
 - 各チェーン単独の攻略は[スシロー 子連れ攻略](/article/sushiro-kodzure-koryaku)・[くら寿司 子連れ攻略](/article/kura-sushi-kodzure-koryaku)・[はま寿司 子連れ攻略](/article/hama-sushi-kodzure-koryaku)・[かっぱ寿司 子連れ攻略](/article/kappa-sushi-kodzure-koryaku)に詳細あり。
+- 大手4社以外の攻略は[がってん寿司 子連れ攻略｜握りたて提供・座敷の有無・タッチパネル注文の段取り](/article/gatten-sushi-kodzure-koryaku)・[魚べい・元気寿司 子連れ攻略｜高速レーン注文が子連れにラク・回らない寿司の使い方](/article/uobei-kodzure-koryaku)・[すし銚子丸 子連れ攻略｜活気ある店内・お子様メニュー・座敷とベビーカー動線](/article/choushimaru-kodzure-koryaku)もどうぞ。
 - くら寿司のビッくらポン体験記は[くら寿司 ビッくらポン リアル](/article/kura-sushi-bikkurapon-real)。
 - “皿が回る”衛生面の理由は[大手で回ってるのはくら寿司だけ｜鮮度くんカバー](/article/kura-sushi-mawaru-eisei-kodomo)、全国の店舗探しは[くら寿司は全国47都道府県にある](/article/kura-sushi-zenkoku-47)。
 - 和食全体の比較は[子連れ和食チェーン10選](/article/kodzure-washoku-chain-10)。
