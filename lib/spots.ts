@@ -3736,15 +3736,8 @@ export const TOKYO_RESTAURANTS: Spot[] = [
       summerCool: true,
   },
   // ===== 福岡エリア =====
-  {
-    name: '一蘭', category: 'restaurant', place: 'indoor', ages: ['4-6'],
-    ward: '複数', city: '博多ラーメンチェーン',
-    note: '博多とんこつラーメン、仕切り席あり',
-    pricing: { adult: '1,000-1,500円', elementary: '取り分け可', preschool: '取り分け可' },
-    strollerAccess: true,
-    hiddenTip: '味集中カウンターは仕切りで子連れに不向き、テーブル席がある店舗を選ぶ',
-      summerCool: true,
-  },
+  // 一蘭は削除（2026-07-23 社長指示: レストランチェーンはスポットではない。
+  // /spot/一蘭-pfvi は chain-spot-redirects.ts で301済み → 一蘭記事公開後は記事へ差し替え）
   {
     name: 'ひょうたん寿司', category: 'restaurant', place: 'indoor', ages: ['2-3', '4-6'],
     city: '福岡市天神',
