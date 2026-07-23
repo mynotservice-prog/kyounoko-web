@@ -4,6 +4,7 @@ import { V2Frame } from '@/components/v2/V2Frame';
 import { V2SectionHead, V2Img } from '@/components/v2/V2Base';
 import { V2Icon } from '@/components/v2/V2Icon';
 import { getOutingSpotsWithSlug } from '@/lib/spots';
+import { getRuntimeSpotOverrides } from '@/lib/spot-overrides';
 import type { Spot } from '@/lib/spots';
 import { getAllFileArticles } from '@/lib/articles';
 import { WARD_NAMES } from '@/lib/tokyo-stations';
@@ -105,7 +106,7 @@ export default async function AreaDetailPage({ params }: Props) {
   const name = m.name;
 
   // 該当エリアのスポットを抽出
-  const allSpotsEntries = getOutingSpotsWithSlug();
+  const allSpotsEntries = getOutingSpotsWithSlug(await getRuntimeSpotOverrides());
   const areaSpots = allSpotsEntries.filter(m.spotFilter);
 
   // 関連記事（エリア絞り込み）
