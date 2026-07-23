@@ -9,6 +9,7 @@ import { AdSlot } from '@/components/ads/AdSlot';
 import { SpotListReveal } from '@/components/spots/SpotListReveal';
 import { SpotFilterBar } from '@/components/spots/SpotFilterBar';
 import { BROWSE_CATEGORIES, getBrowseCategory, spotsByCategory } from '@/lib/spot-browse';
+import { getRuntimeSpotOverrides } from '@/lib/spot-overrides';
 import { parseFilters, hasActiveFilters, matchesFilters, sortSpots, toFilterable } from '@/lib/spot-filter';
 
 export const revalidate = 3600;
@@ -60,7 +61,8 @@ export default async function SpotCategoryPage({ params, searchParams }: Props) 
   const accent = V2_ACCENT[c.accent as keyof typeof V2_ACCENT] ?? V2_ACCENT.purple;
 
   // カテゴリ全件（人気順）→ 絞り込み＆並び替え。件数ライブ更新用に filterable も作る。
-  const catSpots = spotsByCategory(c.id);
+  // Admin(KV)上書きを適用（名称変更等を一覧にも即時反映）。
+  const catSpots = spotsByCategory(c.id, await getRuntimeSpotOverrides());
   const fmap = new Map(catSpots.map((x) => [x.slug, x]));
   const filterable = catSpots.map(toFilterable);
   const matchedF = sortSpots(filterable.filter((s) => matchesFilters(s, filters)), filters.sort);
