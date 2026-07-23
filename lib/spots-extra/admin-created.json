@@ -1,1 +1,21 @@
-{}
+{
+  "tokyo": [
+    {
+      "name": "高輪ゲートウェイ Gateway Park｜子連れで水遊びできる？噴水・開催時間・授乳室まで解説",
+      "category": "park",
+      "place": "outdoor",
+      "ages": [
+        "0-1",
+        "2-3",
+        "4-6"
+      ],
+      "city": "港区",
+      "ward": "港区",
+      "note": "高輪ゲートウェイ駅の改札を出てすぐ、無料の噴水で水遊びを楽しめる駅直結スポット。夏季は音楽に合わせて水が噴き出す「POP JET」が開催され、ニュウマン高輪の授乳室や飲食店も利用しやすい場所です。",
+      "nearestStation": "高輪ゲートウェイ",
+      "budget": "free",
+      "reservation": "none",
+      "walkMinutes": 1
+    }
+  ]
+}
