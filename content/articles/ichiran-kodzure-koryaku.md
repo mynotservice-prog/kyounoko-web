@@ -7,8 +7,8 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-07-23'
 updatedAt: '2026-07-23'
-hero: /photos/ichiran-okosama-ramen-main.jpg
-heroAlt: 一蘭のお子様ラーメン。半分量の細麺に青ねぎとチャーシューがのり、辛い赤い秘伝のたれは入っていない（写真提供：株式会社一蘭）
+hero: /photos/ichiran-okosama-ramen-hikaku.webp
+heroAlt: 一蘭のお子様ラーメンと大人の天然とんこつラーメンの比較。お子様ラーメンは半分量で赤い秘伝のたれ不使用（写真提供：株式会社一蘭）
 area: all
 quickInfo:
   ageRanges:
