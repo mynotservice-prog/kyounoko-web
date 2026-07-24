@@ -319,7 +319,7 @@ A. 各エリアに小児科がある主要病院をメモしておくと安心�
 - [関東の自然あそびスポット10選](/article/kosodate-kanto-shizen-10)
 - [山梨の子連れ自然スポット](/article/kosodate-yamanashi-shizen)
 - [猛暑日に涼しい子連れスポット](/article/moushobi-suzushii-spots)
-- [関東の紅葉子連れスポット](/article/kouyou-spots-kanto-koduzure)
+- [関東の子連れ紅葉スポット20選](/article/koyou-kanto-kodzure-20)
 - [福岡の子連れスポット](/article/kosodate-spots-fukuoka-kids)
 - [東京駅周辺 子連れランチ10選](/article/tokyo-station-kodzure-lunch)
 - [渋谷 子連れランチ10選](/article/tokyo-shibuya-kodzure-lunch)

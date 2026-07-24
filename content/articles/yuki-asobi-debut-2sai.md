@@ -201,7 +201,7 @@ area: all
 
 - [/items で雪遊びウェア・グッズを見る](/items)
 - [山梨の子連れ自然・農業体験おでかけ10選](/article/kosodate-yamanashi-shizen)
-- [紅葉スポット関東子連れ10選](/article/kouyou-spots-kanto-koduzure)
+- [関東の子連れ紅葉スポット20選](/article/koyou-kanto-kodzure-20)
 
 ## よくある質問
 

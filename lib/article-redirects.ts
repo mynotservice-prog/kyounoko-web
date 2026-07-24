@@ -73,4 +73,7 @@ export const ARTICLE_REDIRECTS: { from: string; to: string }[] = [
   { from: 'cocos-birthday-real', to: 'cocos-kodzure-koryaku' },
   { from: 'royal-host-kinenbi-real', to: 'royal-host-kodzure-koryaku' },
   { from: 'dennys-arerugen-real', to: 'denny-s-kodzure-koryaku' },
+  // 2026-07-24 紅葉カニバリ正典統合: 10選(3,430字)を20選(6,250字+独自セクション)へ301。
+  // 独自価値(大山・本土寺・持ち物リスト)は勝者へ移植済み。
+  { from: 'kouyou-spots-kanto-koduzure', to: 'koyou-kanto-kodzure-20' },
 ];

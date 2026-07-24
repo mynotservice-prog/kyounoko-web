@@ -116,7 +116,7 @@ area: yamanashi
 
 - [/items で関連商品（チャイルドシート・車酔い対策グッズ）を見る](/items)
 - [冬の雪遊びデビュー2歳ガイド](/article/yuki-asobi-debut-2sai)
-- [紅葉スポット関東子連れ10選（山梨も近い）](/article/kouyou-spots-kanto-koduzure)
+- [関東の子連れ紅葉スポット20選（山梨も近い）](/article/koyou-kanto-kodzure-20)
 
 ## よくある質問
 

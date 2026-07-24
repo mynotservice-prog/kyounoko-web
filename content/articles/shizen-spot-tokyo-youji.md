@@ -498,5 +498,5 @@ A4紙1枚に「今日見つけた3つ」を絵で描かせる。観察力が劇�
 
 - [子連れで行ける東京の無料スポット15選（公園・図書館・児童館）](/article/kosodate-muryou-spots-tokyo)
 - [桜のお花見子連れスポット｜東京近郊10選](/article/sakura-ohanami-kodzure-spots)
-- [紅葉スポット関東の子連れ向け10選](/article/kouyou-spots-kanto-koduzure)
+- [関東の子連れ紅葉スポット20選](/article/koyou-kanto-kodzure-20)
 - [4〜6歳の工作10パターン（家でできる）](/article/kousaku-4-6sai-10pattern)
