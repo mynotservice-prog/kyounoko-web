@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-06-03'
+updatedAt: '2026-07-24'
 hero: /img/scenes/meal-29.webp
 quickInfo:
   ageRanges:
@@ -365,8 +365,9 @@ A. **昭和記念公園内のカフェ・新宿御苑近隣・上野公園周辺
 
 ## 関連記事
 
-- [夏祭り 子連れ攻略ガイド](/article/natsumatsuri-kodzure-koryaku)
 - [紅葉スポット関東子連れ10選](/article/kouyou-spots-kanto-koduzure)
 - [秋の色遊び・自然遊び](/article/aki-iro-asobi-kodomo)
+- [いも掘りの持ち物・服装ガイド](/article/imohori-kodzure-mochimono-fukusou)
+- [秋の1歳児の過ごし方](/article/aki-1sai-sugoshikata)
 - [子育て関東自然スポット10選](/article/kosodate-kanto-shizen-10)
 - [ベビーカーで使いやすい駅TOP30](/article/babycar-good-station-top30-tokyo-2026)

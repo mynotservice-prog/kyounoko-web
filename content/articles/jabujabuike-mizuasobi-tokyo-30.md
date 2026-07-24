@@ -348,6 +348,15 @@ A. 都立公園・区立公園のほとんどに公衆トイレあり。**授乳
 - 関東近郊：[横浜市](/article/mizuasobi-yokohama)／[川崎市](/article/mizuasobi-kawasaki)／[さいたま市](/article/mizuasobi-saitama)／[千葉市](/article/mizuasobi-chiba)／[船橋市](/article/mizuasobi-funabashi)
 - 全国：[名古屋市](/article/mizuasobi-nagoya)／[大阪市](/article/mizuasobi-osaka)／[京都市](/article/mizuasobi-kyoto)／[神戸市](/article/mizuasobi-kobe)／[福岡市](/article/mizuasobi-fukuoka)
 
+## 水遊びシーズンが終わったら｜秋のおでかけはこちら
+
+じゃぶじゃぶ池の多くは8月末〜9月で稼働終了します。秋（9〜11月）の子連れおでかけは、こちらのガイドへどうぞ。
+
+- [関東の子連れ紅葉スポット20選](/article/koyou-kanto-kodzure-20)
+- [いも掘りの持ち物・服装ガイド](/article/imohori-kodzure-mochimono-fukusou)
+- [子連れハロウィンイベント完全ガイド2026](/article/halloween-kodzure-events-2026)
+- [秋の1歳児の過ごし方](/article/aki-1sai-sugoshikata)／[2歳児](/article/aki-2sai-sugoshikata)／[3〜6歳児](/article/aki-3-6sai-sugoshikata)
+
 ## 関連記事
 
 - [全国のじゃぶじゃぶ池・水遊びスポット18選【2026年夏】](/article/jabujabu-ike-mizuasobi-zenkoku-2026natsu)

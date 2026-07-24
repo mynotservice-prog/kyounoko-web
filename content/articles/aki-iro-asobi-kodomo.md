@@ -1,5 +1,4 @@
 ---
-noindex: true
 slug: aki-iro-asobi-kodomo
 title: 秋の自然遊び10選【2-6歳】どんぐり・落ち葉・松ぼっくり活用法
 metaDescription: >-
@@ -7,7 +6,7 @@ metaDescription: >-
 category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-04-30T00:00:00.000Z
-updatedAt: '2026-06-03'
+updatedAt: '2026-07-24'
 hero: /hero-ai/aki-iro-asobi-kodomo.jpg
 area: all
 quickInfo:
@@ -697,3 +696,12 @@ speakableSummary: >-
 ## まとめ｜秋の自然は「拾う・観察する・作る」の3点で十分
 
 秋の自然遊びは、**どんぐり・落ち葉・松ぼっくり**の三大素材で十分楽しめます。本記事の10アイデアから1-2個を選び、9-11月の3か月でじっくり取り組むのが現実解。どんぐり虫対策（冷凍1週間 or 煮沸10分）と公園マナー（採取禁止の場所確認）の2点だけ守れば、家族で安全に秋を満喫できます。子の発見力・集中力には個人差があるので、無理なく子のペースで自然と触れ合ってください。
+
+## 関連記事
+
+- [秋の1歳児の過ごし方](/article/aki-1sai-sugoshikata)
+- [秋の2歳児の過ごし方](/article/aki-2sai-sugoshikata)
+- [秋の3〜6歳児の過ごし方](/article/aki-3-6sai-sugoshikata)
+- [いも掘りの持ち物・服装ガイド](/article/imohori-kodzure-mochimono-fukusou)
+- [関東の子連れ紅葉スポット20選](/article/koyou-kanto-kodzure-20)
+- [ハロウィン仮装・飾りの準備ガイド](/article/halloween-kasou-junbi)

@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-06-03'
+updatedAt: '2026-07-24'
 hero: /hero-ai/undokai-bentou-mochimono-kamigata.jpg
 quickInfo:
   ageRanges:
@@ -330,7 +330,8 @@ A. **自分の子どもだけが写る写真はOK**だが、**他の子どもが
 
 ## 関連記事
 
-- [夏祭り 子連れ攻略ガイド](/article/natsumatsuri-kodzure-koryaku)
+- [秋の3〜6歳児の過ごし方｜行事ラッシュの段取り](/article/aki-3-6sai-sugoshikata)
+- [秋の2歳児の過ごし方](/article/aki-2sai-sugoshikata)
 - [夏弁当 傷まないレシピ7選](/article/natsu-bento-itamanai-recipe-7)
 - [子どもの浴衣・着付けの時短テクニック](/article/kodomo-yukata-kitsuke-jitan)
 - [子どもの熱中症・あせも対策](/article/akachan-asemo-taisaku-2026)
