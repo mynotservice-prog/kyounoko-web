@@ -156,6 +156,7 @@ A. **誕生日サービスはモーニング時間外の店舗が多い**。誕�
 **モーニング・朝食関連**
 
 - [【2026年版】子連れモーニング10選｜コメダ・ガスト・スタバ比較](/article/kodzure-morning-cafe-10)
+- [星乃珈琲店のモーニング｜時間・値段・平日/土日祝メニュー](/article/hoshino-morning-kosodate)
 - [子連れカフェ3チェーン比較](/article/cafe-3chain-kodzure-hikaku)
 - [子連れで使えるファミレスTOP10｜2026年版ランキング](/article/famires-kodzure-ranking-2026-10sen)
 
