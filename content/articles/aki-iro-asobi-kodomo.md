@@ -326,7 +326,7 @@ speakableSummary: >-
 
 ## 関連記事｜秋・自然遊びの参考に
 
-- [紅葉スポット 子連れ｜関東で楽しむ秋](/article/kouyou-spots-kanto-koduzure)
+- [紅葉スポット 子連れ｜関東20選で楽しむ秋](/article/koyou-kanto-kodzure-20)
 - [自然スポット 東京 幼児｜近所で楽しむ](/article/shizen-spot-tokyo-youji)
 - [工作 4-6歳 10パターン｜雨の日にも使える室内工作](/article/kousaku-4-6sai-10pattern)
 - [七夕飾り 手作り10選【0-6歳】](/article/tanabata-kazari-tedukuri-kodomo)

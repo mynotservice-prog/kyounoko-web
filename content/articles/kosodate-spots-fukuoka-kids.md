@@ -123,7 +123,7 @@ JR「海ノ中道駅」直結。560ヘクタールの国営公園で、ワンダ
 
 - [/items で旅行・おでかけ関連商品を見る](/items)
 - [雨の日に行ける東京の屋内キッズスポット15選](/article/amenohi-indoor-spots-tokyo-15)
-- [紅葉スポット関東子連れ10選](/article/kouyou-spots-kanto-koduzure)
+- [関東の子連れ紅葉スポット20選](/article/koyou-kanto-kodzure-20)
 
 ## よくある質問
 

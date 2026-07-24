@@ -100,7 +100,7 @@ const LINK_RULES: LinkRule[] = [
   { keyword: '無料スポット', targetSlug: 'kosodate-muryou-spots-tokyo', priority: 7 },
   { keyword: '公園', targetSlug: 'tokyo-nerima-free-park-muryou', priority: 5 },
   { keyword: 'ピクニック', targetSlug: 'parkku-pikku-nikku-hitsuyou-mono-list', priority: 9 },
-  { keyword: '紅葉', targetSlug: 'kouyou-spots-kanto-koduzure', priority: 8 },
+  { keyword: '紅葉', targetSlug: 'koyou-kanto-kodzure-20', priority: 8 },
 
   // ▼ 食事系（朝・夕・お弁当・幼児食）
   { keyword: '朝ごはん', targetSlug: 'asagohan-5pun-pattern-10', priority: 8 },
