@@ -150,6 +150,7 @@ A. **朝の時間帯は店員さんの手が空いていて、温め対応が圧
 **モーニング・朝食関連**
 
 - [【2026年版】子連れモーニング10選｜コメダ・ガスト・スタバ比較](/article/kodzure-morning-cafe-10)
+- [星乃珈琲店のモーニング｜時間・値段・平日/土日祝メニュー](/article/hoshino-morning-kosodate)
 - [子連れカフェ3チェーン比較](/article/cafe-3chain-kodzure-hikaku)
 - [子連れで使えるファミレスTOP10｜2026年版ランキング](/article/famires-kodzure-ranking-2026-10sen)
 - [ガストvsジョナサン｜すかいらーく系どっちが子連れ向き？](/article/gusto-vs-jonathan-kodzure-douchi)

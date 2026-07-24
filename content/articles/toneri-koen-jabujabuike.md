@@ -138,6 +138,7 @@ A. おむつが取れていれば2〜3歳から遊べます。浅めの池なの
 
 ## 関連記事
 
+- [舎人公園じゃぶじゃぶ池（浮球の池）のスポット詳細・設備・アクセス](/spot/-irhu)
 - [足立区の水遊び場5選｜噴水・じゃぶじゃぶ池完全ガイド](/article/mizuasobi-adachi-tokyo)
 - [東京のじゃぶじゃぶ池・無料水遊び場30選](/article/jabujabuike-mizuasobi-tokyo-30)
 - [全国のじゃぶじゃぶ池・水遊びスポット18選【2026年夏】](/article/jabujabu-ike-mizuasobi-zenkoku-2026natsu)
