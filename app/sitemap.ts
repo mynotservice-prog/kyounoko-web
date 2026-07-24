@@ -24,6 +24,7 @@ import { getSpotsForStation, hasMatchingSpots, filterSpotsByCondition, getSpotCo
 import { isStationConditionIndexable } from '@/lib/station-cond-index';
 import { FEATURE_PAGES } from '@/lib/feature-pages';
 import { AFFILIATE_TARGET_SLUGS } from '@/lib/affiliate-products';
+import { EVENTS, isEventEnded } from '@/lib/events';
 
 const BASE = 'https://kyounoko.jp';
 
@@ -347,5 +348,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }));
 
-  return [...staticPages, ...categoryPages, ...articlePages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...kanagawaStationPages, ...saichiStationPages, ...lineIndex, ...linePages, ...stationConditionPages, ...dataPages, ...spotCategoryPages, ...spotPages, ...featurePages];
+  // イベント個別ページ（2026-07-24 追加）。
+  // 会期終了イベントは generateMetadata 側で noindex になるため、未終了のみ掲載する。
+  const eventPages: MetadataRoute.Sitemap = EVENTS.filter((e) => !isEventEnded(e)).map((e) => ({
+    url: `${BASE}/event/${e.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...categoryPages, ...articlePages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...kanagawaStationPages, ...saichiStationPages, ...lineIndex, ...linePages, ...stationConditionPages, ...dataPages, ...spotCategoryPages, ...spotPages, ...featurePages, ...eventPages];
 }

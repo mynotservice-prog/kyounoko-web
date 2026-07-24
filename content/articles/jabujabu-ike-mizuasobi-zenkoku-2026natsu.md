@@ -202,6 +202,15 @@ A. マリンシューズがおすすめです。真夏は池のまわりの地�
 **Q. 水遊びの時期はいつからいつまで？**
 A. 多くのじゃぶじゃぶ池は7月上旬〜8月末の稼働です。清掃日や水の入れ替えで休止する日もあるため、出かける直前に公式情報の確認が確実です（本記事は2026年7月時点の情報です）。
 
+## 水遊びシーズンが終わったら｜秋のおでかけはこちら
+
+じゃぶじゃぶ池の多くは8月末〜9月で稼働終了します。秋（9〜11月）の子連れおでかけは、こちらのガイドへどうぞ。
+
+- [関東の子連れ紅葉スポット20選](/article/koyou-kanto-kodzure-20)
+- [いも掘りの持ち物・服装ガイド](/article/imohori-kodzure-mochimono-fukusou)
+- [子連れハロウィンイベント完全ガイド2026](/article/halloween-kodzure-events-2026)
+- [秋の1歳児の過ごし方](/article/aki-1sai-sugoshikata)／[2歳児](/article/aki-2sai-sugoshikata)／[3〜6歳児](/article/aki-3-6sai-sugoshikata)
+
 ## 関連記事
 
 - [東京のじゃぶじゃぶ池・無料水遊び場30選](/article/jabujabuike-mizuasobi-tokyo-30)

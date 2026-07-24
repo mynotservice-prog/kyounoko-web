@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-06-03'
+updatedAt: '2026-07-24'
 hero: /hero-ai/shichigosan-fukusou-shashin-kanzen.jpg
 quickInfo:
   ageRanges:
@@ -385,8 +385,9 @@ A. 地域・家庭の方針次第。省略する家庭も多いです。**祖父
 
 ## 関連記事
 
-- [夏祭り 子連れ攻略ガイド](/article/natsumatsuri-kodzure-koryaku)
-- [紅葉スポット関東子連れ10選](/article/kouyou-spots-kanto-koduzure)
+- [七五三はいつ・何歳で？年齢別準備ガイド](/article/shichigosan-nenrei-junbi)
+- [七五三の食事会はどこで？子連れ店選びの現実解](/article/shichigosan-shokujikai-dokode)
+- [秋の3〜6歳児の過ごし方](/article/aki-3-6sai-sugoshikata)
 - [子どもの浴衣・着付けの時短テクニック](/article/kodomo-yukata-kitsuke-jitan)
 - [子連れ和食チェーン店10選](/article/kodzure-washoku-chain-10)
 - [個室で楽しめる子連れランチ](/article/koshitsu-kodzure-lunch)
