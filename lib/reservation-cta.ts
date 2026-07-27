@@ -42,6 +42,23 @@ export type ReservationOffer = {
   itemId: string;
 };
 
+/**
+ * タイアップ（広告主の協力・内容確認を受けて制作した）記事の slug。
+ *
+ * この面には「他店をネット予約」系の競合導線を出さない。タイアップ先の記事内で
+ * 読者を競合他店の予約に送るのは広告主に対する背信であり、契約上の独占条項が
+ * あった場合の違反リスクにもなる。掲載可否は面ごとに人が判断するため、
+ * 判定は明示 allowlist のみ（自動推定はしない）。
+ */
+const TIEUP_ARTICLE_SLUGS = new Set<string>([
+  'ichiran-kodzure-koryaku', // 株式会社一蘭（2026-07 公式写真提供・掲載内容確認）
+]);
+
+/** 明示 allowlist に載ったタイアップ記事か。 */
+export function isTieupArticle(slug: string): boolean {
+  return TIEUP_ARTICLE_SLUGS.has(slug);
+}
+
 /** http(s) の正規URLか（壊れた env 値で空カードを出さないための防御）。 */
 function isValidUrl(url: string | undefined): url is string {
   return typeof url === 'string' && /^https?:\/\//i.test(url.trim());
@@ -406,6 +423,8 @@ export function getRestaurantReservationOffer(
   title?: string,
 ): ReservationOffer | null {
   if (!isRestaurantContext(slug, category, title)) return null;
+  // タイアップ記事には競合他店への予約導線を出さない（下記 TIEUP_ARTICLE_SLUGS を参照）。
+  if (isTieupArticle(slug)) return null;
 
   const base = process.env.NEXT_PUBLIC_VC_HOTPEPPER_URL?.trim();
   if (!isValidUrl(base)) return null;
