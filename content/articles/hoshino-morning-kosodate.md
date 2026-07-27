@@ -194,7 +194,7 @@ A. **キッズメニューは少なめ**。子はドリンクメニューから�
 
 **他チェーンのモーニング攻略**
 
-- [コメダ珈琲のモーニング攻略](/article/komeda-morning-kosodate)
+- [コメダのモーニングは何時まで？開店〜11時・土日祝も同じ](/article/komeda-morning-kosodate)
 - [スタバのモーニング攻略](/article/starbucks-kodzure-koryaku)
 - [ドトールのモーニング攻略](/article/doutor-kodzure-koryaku)
 

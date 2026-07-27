@@ -1,12 +1,12 @@
 ---
 slug: cocos-morning-kosodate
-title: ココスのモーニングは朝6時〜10時30分｜朝食ブッフェ・子連れ穴場時間を編集長が実食【2026年最新】
+title: ココスのモーニングは何時まで？朝6時〜10時30分｜朝食ブッフェと子連れ穴場時間【2026年最新】
 metaDescription: >-
-  ココスのモーニングは朝6時-10時30分。朝食ブッフェ・パンケーキ・和定食、ベビーチェア完備、離乳食温め対応、平日朝の子連れ穴場時間、混雑回避のコツまで0-6歳の家族目線で完全ガイドします。
+  ココスのモーニングは朝6:00〜10:30まで（開店時刻は店舗により差あり）。店舗により朝食ブッフェ（朝バイキング）があります。さらに家族で取り分けやすいブッフェの回し方、混雑を避けられる平日7-8時の子連れ穴場時間、ベビーチェア・離乳食の温め可否まで、編集長の実食をもとに0-6歳の家族目線でまとめました。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-07-20'
+updatedAt: '2026-07-27'
 hero: /img/scenes/home-play-14.webp
 area: all
 quickInfo:
@@ -157,6 +157,7 @@ A. **誕生日サービスはモーニング時間外の店舗が多い**。誕�
 
 - [【2026年版】子連れモーニング10選｜コメダ・ガスト・スタバ比較](/article/kodzure-morning-cafe-10)
 - [星乃珈琲店のモーニング｜時間・値段・平日/土日祝メニュー](/article/hoshino-morning-kosodate)
+- [コメダのモーニングは何時まで？開店〜11時・土日祝も同じ](/article/komeda-morning-kosodate)
 - [子連れカフェ3チェーン比較](/article/cafe-3chain-kodzure-hikaku)
 - [子連れで使えるファミレスTOP10｜2026年版ランキング](/article/famires-kodzure-ranking-2026-10sen)
 

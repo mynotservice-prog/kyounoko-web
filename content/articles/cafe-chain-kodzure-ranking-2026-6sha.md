@@ -200,6 +200,7 @@ A. **0-2歳の離乳食ありなら[ファミレス（ガスト・サイゼ・�
 - [ドトールコーヒー 子連れ完全攻略｜価格最強だが席間タイト・ミラノサンドの取り分け・紅茶のカフェイン注意](/article/doutor-kodzure-koryaku)
 - [カフェ3チェーン子連れ比較｜コメダ・上島珈琲・星乃8項目早見表](/article/cafe-3chain-kodzure-hikaku)
 - [星乃珈琲のモーニング｜時間・メニュー・値段と子連れ攻略](/article/hoshino-morning-kosodate)
+- [コメダのモーニングは何時まで？開店〜11時・土日祝も同じ](/article/komeda-morning-kosodate)
 - [ミスタードーナツは子連れOK？グッズ付きキッズセット・もちもち系の窒息対策・低アレルゲンドーナツ](/article/misdo-kodzure-koryaku)
 
 ### 子連れカフェのテーマ別深掘り
