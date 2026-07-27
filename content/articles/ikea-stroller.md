@@ -201,6 +201,6 @@ IKEAはベビーカー入店完全OKで、全店エレベーター完備。**フ
 - [夏の子連れ完全マップ｜室内冷房スポット](/article/natsu-kosodate-kanzen-map)
 - [梅雨の室内遊び完全ガイド 0-6歳](/article/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026)
 - [IKEAレストランのベビーチェア完全ガイド](/article/ikea-baby-chair)
-- [IKEA離乳食販売・持ち込みガイド](/article/ikea-rinyushoku)
+- [IKEAレストランは子連れ最強？離乳食無料・キッズメニュー](/article/ikea-restaurant-kodzure-koryaku)
 - [IKEAオムツ替えスポット完全ガイド](/article/ikea-omutsu)
 - [IKEAスモーランド完全ガイド](/article/ikea-smaland)

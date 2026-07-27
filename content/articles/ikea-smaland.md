@@ -206,5 +206,5 @@ IKEAスモーランドは、**満4歳以上・満11歳未満の子を1日1回・
 - [梅雨の室内遊び完全ガイド 0-6歳](/article/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026)
 - [IKEAレストランのベビーチェア完全ガイド](/article/ikea-baby-chair)
 - [IKEAベビーカー入店・カート完全ガイド](/article/ikea-stroller)
-- [IKEA離乳食販売・持ち込みガイド](/article/ikea-rinyushoku)
+- [IKEAレストランは子連れ最強？離乳食無料・キッズメニュー](/article/ikea-restaurant-kodzure-koryaku)
 - [IKEAオムツ替えスポット完全ガイド](/article/ikea-omutsu)
