@@ -449,12 +449,24 @@ async function pollDeployment(deployUrl) {
       const m = out.match(/status\s+[●•]?\s*([A-Za-z]+)/);
       status = m ? m[1] : null;
     } else {
-      // デプロイURLが取れなかった場合（git push 経由など）は最新 Production を見る
+      // デプロイURLが取れなかった場合（git push / PRマージ経由）は最新 Production を見る。
+      //
+      // ⚠ `vercel ls` は **非TTYだと stdout にURLだけを出し、ステータス列を含む表は
+      //   stderr に出す**。stdout+stderr を混ぜて「最初の vercel.app を含む行」を拾うと
+      //   ステータスの無いURL行を掴んでしまい、status が永久に null＝Ready を検出できない
+      //   （2026-07-28 に実測。Ready済みのデプロイを40分待ち続けた）。
+      //   よって **stdout から最新デプロイのURLだけを取り、状態は `vercel inspect` で見る**。
       const r = spawnSync('vercel', ['ls', 'kyounoko-web', '--prod'], { cwd: ROOT, encoding: 'utf8' });
-      const out = `${r.stdout || ''}\n${r.stderr || ''}`;
-      const line = out.split('\n').find((l) => l.includes('vercel.app'));
-      const m = line?.match(/(Ready|Building|Queued|Error|Canceled|Initializing)/i);
-      status = m ? m[1] : null;
+      const latest = (r.stdout || '')
+        .split('\n')
+        .map((l) => l.trim())
+        .find((l) => /^https:\/\/\S+\.vercel\.app$/.test(l));
+      if (latest) {
+        const ins = spawnSync('vercel', ['inspect', latest], { cwd: ROOT, encoding: 'utf8' });
+        const o = `${ins.stdout || ''}\n${ins.stderr || ''}`;
+        const m = o.match(/status\s+[●•]?\s*([A-Za-z]+)/);
+        status = m ? m[1] : null;
+      }
     }
     if (status && status !== last) {
       console.log(`   … Production status: ${status}`);
