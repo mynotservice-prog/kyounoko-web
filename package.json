@@ -12,7 +12,8 @@
     "cf:purge": "node scripts/cf-purge.mjs",
     "deploy:md": "bash scripts/deploy-md.sh",
     "lint": "next lint",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "publish": "node scripts/publish.mjs"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.1",

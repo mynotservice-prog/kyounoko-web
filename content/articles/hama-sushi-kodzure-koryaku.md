@@ -107,7 +107,7 @@ legacyHero: /hero-ai/cat-food-japan-01.webp
 ## 関連記事
 
 - [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
-- [はま寿司のおむつ替え台ガイド｜店舗別の有無・授乳室](/article/hamasushi-omutsu)
+- [はま寿司のベビーチェア｜種類・確保のコツ・対応店舗完全ガイド](/article/hamasushi-baby-chair)
 - [スシローはベビーカーOK？子連れ完全攻略](/article/sushiro-kodzure-koryaku)
 - [くら寿司はベビーカーOK？子連れ完全攻略](/article/kura-sushi-kodzure-koryaku)
 - [サイゼリヤはベビーカーOK？子連れ完全攻略](/article/kodzure-saize-koryaku)
