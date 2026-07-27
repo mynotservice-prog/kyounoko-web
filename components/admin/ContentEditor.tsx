@@ -47,8 +47,11 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState<{ type: 'ok' | 'err' | 'info'; text: string; url?: string } | null>(null);
   const [dirty, setDirty] = useState(false);
-  const [source, setSource] = useState<'fs' | 'github' | null>(null);
+  // 'kv' = KV上書き（article:overrides）が存在し、本番はそれを配信している状態。
+  // このときファイル（content/articles/*.md）を編集しても本番には出ない。
+  const [source, setSource] = useState<'fs' | 'github' | 'kv' | null>(null);
   const [heroUploading, setHeroUploading] = useState(false);
+  const [releasing, setReleasing] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -123,6 +126,43 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
     setHeroUploading(false);
   };
 
+  // KV上書きを解除して md を正に戻す（DELETE /api/admin/edit-content）。
+  // サーバ側は「KV版mdをファイルへ書き戻す → KV削除 → revalidate + CFパージ」を行う。
+  // 破壊的（本番の配信ソースが切り替わる）なので確認ダイアログを挟む。
+  const onReleaseOverride = async () => {
+    const ok = window.confirm(
+      `【KV上書きを解除します】\n\n${slug}\n\n` +
+        '・現在KVにある内容を content/articles/*.md に書き戻します\n' +
+        '・その後KV上書きを削除し、以後この記事は md 編集が本番に反映されます\n' +
+        '・未保存の編集内容は反映されません（先に保存してください）\n\n実行しますか？',
+    );
+    if (!ok) return;
+    setReleasing(true);
+    setMessage(null);
+    try {
+      const res = await fetch(
+        `/api/admin/edit-content?kind=${kind}&slug=${encodeURIComponent(slug)}`,
+        { method: 'DELETE' },
+      );
+      const data = await res.json();
+      if (!res.ok || !data.ok) throw new Error(data.error || 'flush failed');
+      if (data.flushed === false) {
+        setMessage({ type: 'info', text: data.note || 'KV上書きはありません（既に md 正）' });
+      } else {
+        setMessage({
+          type: 'ok',
+          text: data.message || 'KV上書きを解除しました（以後 md 編集が反映されます）',
+        });
+      }
+      // 解除後は md（本番=GitHub / ローカル=FS）が正。表示も切り替える。
+      setSource(data.wrote === 'fs' ? 'fs' : 'github');
+    } catch (err) {
+      setMessage({ type: 'err', text: `解除に失敗: ${err instanceof Error ? err.message : String(err)}` });
+    } finally {
+      setReleasing(false);
+    }
+  };
+
   const onSave = async () => {
     setSaving(true);
     setMessage(null);
@@ -160,6 +200,8 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
         });
       } else if (data.source === 'kv') {
         // KV保存はデプロイ不要でそのまま本番反映（git push 不要）。
+        // 同時にこの記事は「KV上書き状態」になる＝以後 md 編集が効かなくなるので表示も切り替える。
+        setSource('kv');
         setMessage({ type: 'ok', text: data.deployed || 'KVに保存しました（デプロイ不要・数秒で本番反映）' });
       } else {
         // source === 'fs'（ローカル開発のみ）: git push で本番反映が必要。
@@ -184,6 +226,7 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
           {kind === 'article' ? '記事' : 'プラン'}を編集
           {source === 'github' && <span style={{ marginLeft: 8, color: 'var(--ok-fg)' }}>GitHub直接編集モード</span>}
           {source === 'fs' && <span style={{ marginLeft: 8, color: 'var(--ink-400)' }}>ローカル編集モード</span>}
+          {source === 'kv' && <span style={{ marginLeft: 8, color: 'var(--warn-fg)' }}>KV上書きモード</span>}
         </div>
         <h1 style={{ fontSize: 18, margin: '5px 0 8px', fontWeight: 700, color: 'var(--ink-900)' }}>
           <span style={{ fontFamily: 'var(--font-mono)', fontSize: 14, fontVariantNumeric: 'tabular-nums' }}>{slug}</span>
@@ -197,6 +240,50 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
           )}
         </div>
       </div>
+
+      {/* KV上書き警告バナー — ファイル編集が本番に出ない状態であることを編集者に必ず気づかせる */}
+      {source === 'kv' && (
+        <div
+          style={{
+            background: 'var(--warn-bg)',
+            border: '2px solid var(--warn-dot)',
+            color: 'var(--warn-fg)',
+            borderRadius: 'var(--r-lg)',
+            padding: 16,
+          }}
+        >
+          <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 6 }}>
+            ⚠ この記事は KV上書き中です
+          </div>
+          <p style={{ fontSize: 13, lineHeight: 1.7, margin: '0 0 12px' }}>
+            本番はKVに保存された内容を配信しています。
+            <strong>content/articles/{slug}.md を編集してデプロイしても本番には反映されません。</strong>
+            <br />
+            md側で施策（タイトル変更・リライト等）を打つ場合は、先に下のボタンで上書きを解除してください。
+          </p>
+          <button
+            type="button"
+            onClick={onReleaseOverride}
+            disabled={releasing}
+            style={{
+              padding: '10px 14px',
+              fontSize: 13,
+              fontWeight: 700,
+              background: releasing ? 'var(--ink-400)' : 'var(--bg-surface)',
+              color: releasing ? '#fff' : 'var(--warn-fg)',
+              border: '1px solid var(--warn-dot)',
+              borderRadius: 'var(--r-md)',
+              cursor: releasing ? 'wait' : 'pointer',
+              touchAction: 'manipulation',
+            }}
+          >
+            {releasing ? '解除中…' : '上書きを解除して md に戻す'}
+          </button>
+          <p style={{ fontSize: 11, margin: '8px 0 0', opacity: 0.85 }}>
+            解除すると、現在のKVの内容がそのまま md に書き戻されます（内容は失われません）。
+          </p>
+        </div>
+      )}
 
       {/* 主要フィールド（スマホで入力しやすいフォーム） */}
       <div style={cardStyle}>
