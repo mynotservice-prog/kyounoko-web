@@ -150,15 +150,6 @@ export const KID_REPORTS: Record<string, KidReport> = {
     stayNote: '2〜4時間くらい。途中でランチを挟む人も多い。',
     cautionNote: 'ハイハイ期は休日少し気を使う。木のおもちゃを口に入れたがる時期は親がかなり付き添う感じになる。',
   },
-  'アネビートリムパーク（ららぽーと各所等）': {
-    source: 'visited',
-    visitAge: '1〜6歳ごろ',
-    strollerNote: 'ベビーカー置き場を利用する人が多め。',
-    crowdNote: '休日はかなり賑やか。予約前提の感覚。',
-    diaperNote: '困らない。',
-    stayNote: '1.5〜3時間。',
-    cautionNote: '体を動かす系なので、親もかなり付き添うことになる。',
-  },
   'リトルプラネット（複数）': {
     source: 'visited',
     visitAge: '2歳以降にかなり反応が良い',

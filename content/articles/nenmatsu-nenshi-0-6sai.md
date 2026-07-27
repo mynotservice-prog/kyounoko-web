@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: nenmatsu-nenshi-0-6sai
 title: 年末年始の0〜6歳児 過ごし方｜帰省・お正月・自宅ガイド
 metaDescription: >-

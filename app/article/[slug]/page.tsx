@@ -26,11 +26,17 @@ import {
   getRestaurantFoodHubLinks,
   getChainCrossLinks,
   extractChecklistSection,
+  allowsFoodBridgeAlongsideCoop,
 } from '@/lib/article-product-hints';
 import { getChainFacilitiesForArticle, FACILITY_LABELS, type FacilityKey } from '@/lib/chain-facilities';
 import { ChainFacilitiesBox } from '@/components/article/ChainFacilitiesBox';
 import { ChainComparisonTable } from '@/components/article/ChainComparisonTable';
-import { getRestaurantReservationOffer, getCoopOffer, getTravelOffer } from '@/lib/reservation-cta';
+import {
+  getRestaurantReservationOffer,
+  getCoopOffer,
+  getTravelOffer,
+  getLeisureBridgeOffer,
+} from '@/lib/reservation-cta';
 import { ReservationCTA } from '@/components/article/ReservationCTA';
 import { getSupervisor } from '@/lib/supervisors';
 import { SupervisorLabel } from '@/components/article/SupervisorLabel';
@@ -56,7 +62,7 @@ import { LineCta } from '@/components/common/LineCta';
 // パーソナライズ枠を出すカテゴリ（今日の◯◯系のみ）
 const PERSONALIZED_HINT_CATEGORIES = new Set(['today-doko', 'today-nani', 'today-taberu']);
 
-export const revalidate = 3600; // 1時間ごとに再生成
+export const revalidate = 86400; // 24hごとに再生成（編集は on-demand revalidation で即時反映）
 // 未知 slug（KVのみ存在する新規記事など）は初回アクセス時にオンデマンド生成する
 export const dynamicParams = true;
 
@@ -682,12 +688,44 @@ function FileArticleView({ article }: { article: FileArticle }) {
   const coopOffer = getCoopOffer(article.slug, article.category, article.title);
 
   // 旅行・おでかけ文脈向け子連れ宿予約CTA（じゃらん/A8）。env 未設定なら null。
-  const travelOffer = getTravelOffer(article.slug, article.category, article.title);
+  // area を渡すのは、水遊び面のアソビュー着地を都道府県一覧に深リンクするため。
+  const travelOffer = getTravelOffer(
+    article.slug,
+    article.category,
+    article.title,
+    article.area,
+  );
+
+  // 外食・室内あそび場などの面向け「近くでおでかけ」レジャー予約CTA。
+  // 日帰り意図に合わせアソビュー優先・未提携時はじゃらん宿泊に暫定フォールバック（lib側で出し分け）。
+  // endOffer/ブリッジとは独立した専用枠のため、冷凍宅配ブリッジを奪わずに1枠だけ純加算する。
+  // 両env未設定なら null（=非表示）。
+  const leisureBridgeOfferRaw = getLeisureBridgeOffer(
+    article.slug,
+    article.category,
+    article.title,
+    article.area,
+  );
 
   // 読了後の高単価CTAは1枚だけ（UX/AdSense対策: PRブロック過密の解消）。
   // 優先度: 生協(資料請求・最高単価) > 宿予約 > 幼児食宅配ブリッジ。
   const endOffer = coopOffer ?? travelOffer ?? null;
-  const showBridge = !endOffer && !!restaurantBridge;
+  // 通常は末尾の高単価CTAは1枚に絞る(endOffer優先)。ただし離乳食/幼児食の濃い意図面
+  // (GSC実流入あり・明示allowlist)では、生協(資料請求)と冷凍宅配ブリッジ(高EPC・年齢一致で
+  // ファーストスプーン/mogumo)は補完関係のため両方を1枠ずつ併載する。allowlist外は従来どおり。
+  const showBridge =
+    !!restaurantBridge &&
+    (!endOffer || (!!coopOffer && allowsFoodBridgeAlongsideCoop(article.slug)));
+
+  // レジャー枠は「末尾スロットが空いているページ」にだけ出す（枠数を増やさないための条件）。
+  // 理由は2つ:
+  //  1. 水遊び面は travelOffer 側で既にアソビューが出るため、重ねるとアソビュー枠が2つになる。
+  //  2. AdSense: 記事末尾は AdSlot(article-end) の直上。ここにPRブロックを積み増すと
+  //     広告の視認可能率（実測 92.5%→65.7% に低下済）をさらに押し下げ、
+  //     「価値の低い広告枠／広告過多」のポリシーリスクにも近づく。
+  //     本変更は生協枠を外食面から外した分の“置き換え”に留め、ページあたりのPR枠数は
+  //     どの面でも増やさない（純増ゼロ）。
+  const leisureBridgeOffer = endOffer ? null : leisureBridgeOfferRaw;
 
   // 判定ボックス前出し(戦略§7): 本文中の「子連れチェックリスト」H2セクションを
   // 抽出してヒーロー直下(クイック情報の隣)へ移動。無い記事は従来どおり。
@@ -1237,6 +1275,12 @@ function FileArticleView({ article }: { article: FileArticle }) {
               />
             </div>
           )}
+
+          {/* kids-menu勝ち型面（王将/スシロー等・明示allowlist）向けの「外食ついでにおでかけ」
+              レジャー予約CTA（アソビュー優先・じゃらん宿泊に暫定フォールバック）。endOffer/
+              ブリッジとは独立した専用枠で、冷凍宅配ブリッジを奪わずに1枠だけ併載する。
+              両env未設定なら非表示。 */}
+          {leisureBridgeOffer && <ReservationCTA offer={leisureBridgeOffer} />}
 
           {/* AdSense: 記事末尾（FAQ前） */}
           <AdSlot placement="article-end" />

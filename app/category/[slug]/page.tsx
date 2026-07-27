@@ -12,7 +12,7 @@ import { AdSlot } from '@/components/ads/AdSlot';
 import { getCategoryFaqs } from '@/lib/category-faqs';
 import { articleToV2 } from '@/lib/v2-adapters';
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 /** カテゴリslug → 支給B系のヒーロー画像 */
 const CATEGORY_HERO_IMG: Record<string, string> = {

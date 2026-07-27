@@ -8,6 +8,7 @@ import {
   ARTICLE_OVERRIDES_TAG,
   readArticleOverridesMap,
   writeArticleOverride,
+  deleteArticleOverride,
 } from '@/lib/articles';
 import { purgeCfUrls } from '@/lib/cf-purge';
 
@@ -307,4 +308,94 @@ export async function POST(req: NextRequest) {
       { status: 500 }
     );
   }
+}
+
+/**
+ * DELETE ?kind=article&slug=xxx
+ *   記事の KV 上書き（article:overrides）を解除して md を正に統一（flatten）する。
+ *   単純削除だと admin で差し替えた hero 画像などが古い md 版に戻ってしまうため、
+ *   まず KV 版の生Markdown（画像込みの最新）を md に書き戻してから KV を削除する。
+ *   → 以後この記事は md 編集（deploy-md.sh のフルビルド）がそのまま反映されるようになる。
+ *
+ * DELETE ?kind=article&slug=xxx&writeback=0
+ *   書き戻しを行わず、KV 上書きの削除だけを行う。
+ *   **呼び出し側が「md 側が既に正しい」ことを確認済みのときだけ使う。**
+ *   必要な理由: 書き戻しは GitHub Contents API に依存しており、GITHUB_TOKEN が
+ *   失効すると 404 で失敗して削除まで到達しない（2026-07-27 に本番で発生。
+ *   ghGetFile も全 slug で 404 = リポジトリ単位で権限が無い状態だった）。
+ *   md をリポジトリ側で先に正しくしてからデプロイした場合、書き戻しは不要どころか
+ *   「古い KV 版で md を上書きする」有害な操作になるため、明示的に飛ばせるようにする。
+ */
+export async function DELETE(req: NextRequest) {
+  const guard = isAllowed(req);
+  if (!guard.ok) return NextResponse.json({ ok: false, error: guard.reason }, { status: 403 });
+
+  const { searchParams } = new URL(req.url);
+  const kind = parseKind(searchParams.get('kind'));
+  const slug = searchParams.get('slug') || '';
+  if (kind !== 'article') {
+    return NextResponse.json({ ok: false, error: 'flush は記事のみ対応' }, { status: 400 });
+  }
+  if (!/^[a-z0-9_-]+$/.test(slug)) {
+    return NextResponse.json({ ok: false, error: 'invalid slug' }, { status: 400 });
+  }
+  if (!isKvConfigured()) {
+    return NextResponse.json({ ok: false, error: 'KV 未設定' }, { status: 400 });
+  }
+
+  // KV に override が無ければ既に md 正（冪等に成功を返す）
+  const map = await readArticleOverridesMap();
+  const raw = map[slug];
+  if (!raw) {
+    return NextResponse.json({ ok: true, flushed: false, note: 'KV override なし（既に md 正）' });
+  }
+
+  // 1) KV 版（画像込みの最新）を md に書き戻す
+  //    writeback=0 のときは呼び出し側が md を正にした前提でスキップする。
+  const skipWriteback = searchParams.get('writeback') === '0';
+  let wrote: 'github' | 'fs' | 'none' | 'skipped' = 'none';
+  try {
+    if (skipWriteback) {
+      wrote = 'skipped';
+    } else if (useGitHub()) {
+      const repoRel = repoPath('article', slug);
+      const prev = await ghGetFile(repoRel);
+      await ghPutFile(repoRel, raw, `flatten(article): ${slug} KV override→md（md正に統一）`, prev?.sha);
+      wrote = 'github';
+    } else if (process.env.NODE_ENV === 'development') {
+      const fp = pathFor('article', slug);
+      if (!fp) return NextResponse.json({ ok: false, error: 'invalid slug' }, { status: 400 });
+      await fs.writeFile(fp, raw, 'utf8');
+      wrote = 'fs';
+    } else {
+      return NextResponse.json(
+        { ok: false, error: '本番で GITHUB_TOKEN/GITHUB_REPO 未設定のため flush 不可' },
+        { status: 500 }
+      );
+    }
+  } catch (err) {
+    return NextResponse.json(
+      { ok: false, error: `md 書き戻し失敗: ${err instanceof Error ? err.message : String(err)}` },
+      { status: 500 }
+    );
+  }
+
+  // 2) KV override を削除
+  const ok = await deleteArticleOverride(slug);
+  if (!ok) {
+    return NextResponse.json({ ok: false, error: 'KV 削除失敗', wrote }, { status: 500 });
+  }
+
+  // 3) キャッシュ再検証 + CF パージ
+  revalidateTag(ARTICLE_OVERRIDES_TAG);
+  revalidatePath(`/article/${slug}`);
+  const purge = await purgeCfUrls([`/article/${slug}`, '/']);
+
+  return NextResponse.json({
+    ok: true,
+    flushed: true,
+    wrote,
+    purged: purge.purged,
+    message: `KV override を md に統合しました（${wrote}）。以後この記事は md 編集が反映されます。`,
+  });
 }

@@ -1,5 +1,4 @@
 ---
-noindex: true
 slug: 0sai-ikuji-kanzen-map
 title: 0歳の育児 完全マップ｜月齢別の発達・授乳・離乳食・睡眠・遊び・健診まとめ【保存版】
 metaDescription: >-
@@ -115,6 +114,8 @@ legacyHero: /hero/baby-01.webp
 
 - [赤ちゃんお出かけ 3ヶ月〜1歳](/article/akachan-odekake-3months-1year)
 - [新幹線でお盆帰省 赤ちゃん対応](/article/obon-kisei-shintetsu-baby)
+- [秋の0歳児の過ごし方【2026年版】](/article/aki-0sai-sugoshikata)
+- [お宮参り後のお祝いランチはどこで？](/article/omiyamairi-ato-lunch-0saidzure)
 
 ### 体調・トラブル
 

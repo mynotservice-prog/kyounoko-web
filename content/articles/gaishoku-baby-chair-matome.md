@@ -85,7 +85,7 @@ lede: >-
 - ステーキガスト：[ベビーチェア](/article/steakgusto-baby-chair)・[キッズメニュー](/article/steakgusto-kids-menu)
 
 **牛丼・うどん・天丼・カレー系**
-- すき家：[ベビーチェア](/article/sukiya-baby-chair)・[キッズメニュー](/article/sukiya-kids-menu)
+- すき家：[ベビーチェア](/article/sukiya-baby-chair)・[キッズメニュー比較](/article/kids-menu-chain-15-hikaku)
 - 吉野家：[ベビーチェア](/article/yoshinoya-baby-chair)・[キッズメニュー](/article/yoshinoya-kids-menu)
 - 松屋：[ベビーチェア](/article/matsuya-baby-chair)・[キッズメニュー](/article/matsuya-kids-menu)
 - なか卯：[ベビーチェア](/article/nakau-baby-chair)・[キッズメニュー](/article/nakau-kids-menu)

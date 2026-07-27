@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-30'
+updatedAt: '2026-07-15'
 hero: /hero-ai/fuyu-1sai-sugoshikata.jpg
 area: all
 quickInfo:
@@ -111,6 +111,15 @@ legacyHero: /hero/baby-02.webp
 ## まとめ
 
 冬の1歳児は「室内環境を加湿・保湿・暖房で整える」「室内運動で体を動かす」「感染症対策を徹底」の3本柱。寒さに負けず、家族みんなで健やかに乗り切りましょう。
+
+## あわせて読みたい
+
+年齢別の育児のポイントは、以下の完全マップで一覧できます。季節・行事の過ごし方とあわせてご活用ください。
+
+- [0歳の育児 完全マップ](/article/0sai-ikuji-kanzen-map)
+- [1〜2歳の育児 完全マップ](/article/1-2sai-ikuji-kanzen-map)
+- [3〜6歳の育児 完全マップ](/article/3-6sai-ikuji-kanzen-map)
+- [夏の子育て 完全マップ｜暑さ・水遊び・夏バテ対策](/article/natsu-kosodate-kanzen-map)
 
 ## 関連記事
 

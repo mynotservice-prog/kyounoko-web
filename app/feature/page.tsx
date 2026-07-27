@@ -9,7 +9,7 @@ import { FEATURE_PAGES } from '@/lib/feature-pages';
 import { featureToV2 } from '@/lib/v2-adapters';
 import { AdSlot } from '@/components/ads/AdSlot';
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: '特集まとめ｜きょうのこ',

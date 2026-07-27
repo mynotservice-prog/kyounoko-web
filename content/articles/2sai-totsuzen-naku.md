@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: 2sai-totsuzen-naku
 title: 2歳が突然泣く｜原因・対処法・年齢別対応完全ガイド【1〜3歳】
 metaDescription: >-

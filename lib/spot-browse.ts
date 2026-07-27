@@ -50,9 +50,16 @@ export function isListableSpot(s: Spot): boolean {
 
 export type SpotWithSlug = ReturnType<typeof getAllSpotsWithSlug>[number];
 
-/** 指定カテゴリの掲載可能スポットを人気優先で全件返す（重複slugは getAllSpotsWithSlug が排除済）。 */
-export function spotsByCategory(cat: SpotCategory): SpotWithSlug[] {
-  return getAllSpotsWithSlug()
+/**
+ * 指定カテゴリの掲載可能スポットを人気優先で全件返す（重複slugは getAllSpotsWithSlug が排除済）。
+ * ovMap に getRuntimeSpotOverrides() を渡すと Admin(KV) の上書きが名称等に反映される
+ * （詳細ページと同じ即時反映。省略時は静的データのみ＝sitemap等のビルド時用途）。
+ */
+export function spotsByCategory(
+  cat: SpotCategory,
+  ovMap?: Parameters<typeof getAllSpotsWithSlug>[0],
+): SpotWithSlug[] {
+  return getAllSpotsWithSlug(ovMap)
     .filter((x) => x.spot.category === cat && isListableSpot(x.spot))
     .sort((a, b) => (a.spot.popular === b.spot.popular ? 0 : a.spot.popular ? -1 : 1));
 }

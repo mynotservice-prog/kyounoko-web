@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: hana-suiki-tsukaikata
 title: 鼻吸い器の使い方｜手動・電動の手順・コツ・お手入れ完全ガイド
 metaDescription: >-

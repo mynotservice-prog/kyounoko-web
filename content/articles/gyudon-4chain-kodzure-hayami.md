@@ -21,7 +21,7 @@ quickInfo:
     - any
   durationMin: 30
   budget: low
-hero: /img/scenes/meal-12.webp
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/gyudon-4chain-kodzure-hayami-mraawzlc.jpg"
 ---
 
 ## TL;DR（先に知りたい人へ）

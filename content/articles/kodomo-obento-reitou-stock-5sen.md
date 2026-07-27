@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-obento-reitou-stock-5sen
 title: お弁当冷凍ストック5選｜朝レンジ1分のレシピ
 metaDescription: >-

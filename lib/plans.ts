@@ -208,6 +208,23 @@ export function getAllPlanIds(): string[] {
   return getAllPlanMetas().map((m) => m.id);
 }
 
+/**
+ * 全プラン（本文含む）を1パスで読み込む。
+ * admin 一覧のように「全件の meta + body」が必要な用途で使う。
+ * getAllPlanMetas() + getPlan(id) を件数分ループすると、getPlan が毎回ディレクトリを
+ * 全走査するため O(N^2)（531件で約14万回のファイル読込）になり非常に遅い。これを O(N) にする。
+ */
+export function getAllPlans(): Plan[] {
+  const files = readPlansDir();
+  const plans: Plan[] = [];
+  for (const f of files) {
+    const raw = fs.readFileSync(path.join(PLANS_DIR, f), 'utf8');
+    const parsed = parsePlan(raw, f.replace(/\.md$/, ''));
+    if (parsed) plans.push({ ...parsed.meta, body: parsed.body });
+  }
+  return plans;
+}
+
 // ------------------------------------------------------------
 // スコアリング — 「答えを1つに決める」の決定ロジック
 // ------------------------------------------------------------

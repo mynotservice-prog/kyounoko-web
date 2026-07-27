@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-ijime-sign
 title: 子供のいじめのサイン｜気づくポイント・親の対応・相談先完全ガイド【3〜12歳】
 metaDescription: >-

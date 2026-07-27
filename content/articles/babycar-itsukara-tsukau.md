@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: babycar-itsukara-tsukau
 # old: ベビーカーいつから使う？1ヶ月から始めるリアルと判断ポイント
 title: ベビーカーいつから？生後1ヶ月から使えた先輩ママ10例

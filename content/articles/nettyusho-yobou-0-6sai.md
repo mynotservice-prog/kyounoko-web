@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: nettyusho-yobou-0-6sai
 title: 【0〜6歳】熱中症予防完全ガイド｜症状・水分・服装・受診目安
 metaDescription: >-

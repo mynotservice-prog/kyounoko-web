@@ -1,5 +1,4 @@
 ---
-noindex: true
 slug: 3-6sai-ikuji-kanzen-map
 title: 3〜6歳の育児 完全マップ｜発達・幼稚園/保育園・習い事・小学校準備・友達関係まとめ【保存版】
 metaDescription: >-
@@ -130,6 +129,10 @@ legacyHero: /hero/classroom-01.webp
 - [運動会お弁当 持ち物 髪型](/article/undokai-bentou-mochimono-kamigata)
 - [七五三 年齢別準備ガイド](/article/shichigosan-nenrei-junbi)
 - [七五三 服装・写真完全ガイド](/article/shichigosan-fukusou-shashin-kanzen)
+- [七五三の食事会はどこで？](/article/shichigosan-shokujikai-dokode)
+- [秋の3〜6歳児の過ごし方【2026年版】](/article/aki-3-6sai-sugoshikata)
+- [ハロウィン子連れイベント2026](/article/halloween-kodzure-events-2026)
+- [いも掘りの持ち物・服装ガイド](/article/imohori-kodzure-mochimono-fukusou)
 - [自由研究 1日30アイデア](/article/jiyukenkyu-1nichi-kodomo-30)
 - [自由研究キット 2026比較](/article/jiyukenkyu-kit-osusume-2026)
 - [兄妹で自由研究 4歳・2歳協力](/article/kyoudai-jiyukenkyu-4sai-2sai-coop)

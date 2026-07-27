@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: sukiya-kids-menu
 title: すき家のキッズメニュー｜お子様セットの中身・対象年齢・牛丼ミニとの使い分け【2026】
 metaDescription: >-
@@ -7,7 +8,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-06-06'
-hero: /img/scenes/meal-39.webp
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/sukiya-kids-menu-mraa9vhw.jpg"
 area: all
 quickInfo:
   ageRanges:

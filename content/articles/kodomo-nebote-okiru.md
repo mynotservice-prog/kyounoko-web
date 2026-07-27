@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-nebote-okiru
 title: 子供が寝ぼけて起きる｜原因・対処法・年齢別対応完全ガイド【1〜6歳】
 metaDescription: >-

@@ -1,5 +1,4 @@
 ---
-noindex: true
 slug: 1-2sai-ikuji-kanzen-map
 title: 1〜2歳の育児 完全マップ｜発達・イヤイヤ期・言葉・トイトレ・保育園準備まとめ【保存版】
 metaDescription: >-
@@ -130,6 +129,9 @@ legacyHero: /hero/baby-02.webp
 - [夏休み子連れ国内旅行ガイド](/article/natsuyasumi-kazoku-ryokou-kodzure-2026)
 - [子連れアウトドアレジャー用品12選](/article/kodzure-outdoor-leisure-goods-2026)
 - [家庭用プールおすすめ12選](/article/katei-pool-osusume-ranking-2026)
+- [秋の1歳児の過ごし方【2026年版】](/article/aki-1sai-sugoshikata)
+- [秋の2歳児の過ごし方【2026年版】](/article/aki-2sai-sugoshikata)
+- [いも掘りの持ち物・服装ガイド](/article/imohori-kodzure-mochimono-fukusou)
 
 ### 用品選び
 

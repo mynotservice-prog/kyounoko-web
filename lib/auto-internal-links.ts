@@ -87,6 +87,8 @@ const LINK_RULES: LinkRule[] = [
   // ===== おでかけ =====
   { keyword: '雨の日', targetSlug: 'amenohi-ie-asobi-2-3sai', priority: 7 },
   { keyword: '水遊び', targetSlug: 'puuru-mizuasobi-debut', priority: 8 },
+  { keyword: 'じゃぶじゃぶ池', targetSlug: 'jabujabuike-mizuasobi-tokyo-30', priority: 10 },
+  { keyword: '舎人公園', targetSlug: 'toneri-koen-jabujabuike', priority: 10 },
   { keyword: 'お花見スポット', targetSlug: 'sakura-ohanami-kodzure-spots', priority: 10 },
 
   // ===== 追加分（V2 拡張 / 主要トピック逆引き） =====================================
@@ -98,7 +100,7 @@ const LINK_RULES: LinkRule[] = [
   { keyword: '無料スポット', targetSlug: 'kosodate-muryou-spots-tokyo', priority: 7 },
   { keyword: '公園', targetSlug: 'tokyo-nerima-free-park-muryou', priority: 5 },
   { keyword: 'ピクニック', targetSlug: 'parkku-pikku-nikku-hitsuyou-mono-list', priority: 9 },
-  { keyword: '紅葉', targetSlug: 'kouyou-spots-kanto-koduzure', priority: 8 },
+  { keyword: '紅葉', targetSlug: 'koyou-kanto-kodzure-20', priority: 8 },
 
   // ▼ 食事系（朝・夕・お弁当・幼児食）
   { keyword: '朝ごはん', targetSlug: 'asagohan-5pun-pattern-10', priority: 8 },

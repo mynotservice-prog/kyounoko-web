@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: atami-day-trip
 title: 熱海 日帰り子連れ完全ガイド｜半日コース・温泉・食事【2026年版】
 metaDescription: >-

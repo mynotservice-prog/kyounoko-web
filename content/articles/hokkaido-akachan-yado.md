@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: hokkaido-akachan-yado
 title: 北海道赤ちゃん歓迎の宿10選｜ベビープラン完備のホテル【2026年版】
 metaDescription: >-

@@ -1,13 +1,13 @@
 ---
 slug: kodomo-onsen-tamago-itsukara
-title: 赤ちゃん・子供に温泉卵はいつから？月齢別の目安・サルモネラ対策・与え方完全ガイド
+title: 赤ちゃん・子供に温泉卵はいつから？半熟は2歳以降・完全加熱が安心【サルモネラ対策・2026】
 metaDescription: >-
   赤ちゃん・子供に温泉卵はいつから？半熟は基本2歳以降、サルモネラ食中毒対策で完全加熱が安心。月齢別の進め方、量の目安、安全な選び方、家での作り方の注意点まで2026年版で完全ガイド。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-06-02'
-hero: /img/scenes/outing-general-11.webp
+updatedAt: '2026-07-15'
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/kodomo-onsen-tamago-itsukara-mrn2uakq.png"
 area: all
 quickInfo:
   ageRanges:
@@ -154,6 +154,13 @@ legacyHero: /hero/food-kitchen-03.webp
 - サルモネラ食中毒リスクに注意
 - 新鮮な卵・適切な温度管理
 - 飲食店の半熟は鮮度確認
+
+## 出典・参考（公的資料）
+
+- 厚生労働省「授乳・離乳の支援ガイド（2019年改定版）」— 卵は固ゆでの卵黄から始め、しっかり加熱して進める
+- 厚生労働省・食品安全委員会「サルモネラ食中毒」— 乳幼児は加熱した卵が安心
+
+生卵・半熟卵を始める月齢には個人差があり、体調によってもリスクが変わります。最終的な判断はかかりつけの小児科医・管理栄養士にご相談ください（本記事は2026年7月時点の情報です）。
 
 ## 関連記事
 

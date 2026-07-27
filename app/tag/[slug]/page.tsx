@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
 import { getTag, getAllTags, getContentForTag, getTagsByKind } from '@/lib/tags';
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 type Props = {
   params: Promise<{ slug: string }>;

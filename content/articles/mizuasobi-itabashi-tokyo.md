@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-06-02'
+updatedAt: '2026-07-15'
 hero: /img/scenes/pool-water-09.webp
 area: tokyo
 quickInfo:
@@ -169,6 +169,12 @@ A. **0〜3歳は1〜2時間**、**4〜6歳は2〜3時間**が目安。乳幼児�
 
 2026年の最新の開設期間・ルールは、必ず出発前に各公園公式サイトでご確認の上、安全な水遊びをお楽しみください。
 
+## おでかけ前の確認と、遊んだあとのごはん
+
+**2026年の開設期間・利用時間・料金は年によって変わることがあります。** おでかけ前に、各区・市や公園の公式サイトで最新の開設状況を必ずご確認ください（本記事は2026年7月時点の情報です）。
+
+水遊びで体力を使ったあとは、涼しい室内でゆっくりごはんを。[子連れOKファミレス10選（サイゼ・ガスト・ジョナサン比較）](/article/kodzure-famires-15sen)や、公園で食べられる[子連れ向けテイクアウト・デリ10選](/article/kodzure-deli-takeout-10)もあわせてどうぞ。
+
 ## 関連記事
 
 - [夏の子育て完全マップ｜2026年版](/article/natsu-kosodate-kanzen-map)
@@ -176,3 +182,4 @@ A. **0〜3歳は1〜2時間**、**4〜6歳は2〜3時間**が目安。乳幼児�
 - [子供の熱中症対策｜3歳児のリアル【2026年版】](/article/kodomo-netsuchusho-3sain-real-2026)
 - [子供のアイス、いつから食べさせていい？](/article/kodomo-aisu-itsukara)
 - [東京のじゃぶじゃぶ池・無料水遊び場30選](/article/jabujabuike-mizuasobi-tokyo-30)
+- [豊島区（池袋周辺）の水遊び場5選](/article/mizuasobi-toshima-tokyo)

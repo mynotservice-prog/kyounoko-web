@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-tomodachi-tataita
 title: 子供が友達を叩いた｜原因・声かけ・相手親への謝罪完全ガイド【2〜6歳】
 metaDescription: >-

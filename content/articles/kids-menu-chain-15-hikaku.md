@@ -216,9 +216,10 @@ legacyHero: /hero-ai/kodzure-famires-15sen.webp
 - ロイヤルホスト：[キッズメニュー](/article/royal-host-kids-menu)・[ベビーチェア](/article/royal-host-baby-chair)
 - ビッグボーイ：[キッズメニュー](/article/bigboy-kids-menu)・[ベビーチェア](/article/bigboy-baby-chair)
 - ステーキガスト：[キッズメニュー](/article/steakgusto-kids-menu)・[ベビーチェア](/article/steakgusto-baby-chair)
+- びっくりドンキー：[キッズメニュー](/article/bikkuri-donkey-kids-menu)・[子連れ攻略](/article/bikkuri-donkey-kodzure-koryaku)
 
 **牛丼・うどん・天丼・カレー系**
-- すき家：[キッズメニュー](/article/sukiya-kids-menu)・[ベビーチェア](/article/sukiya-baby-chair)
+- すき家：キッズメニュー（本記事で解説）・[ベビーチェア](/article/sukiya-baby-chair)
 - 吉野家：[キッズメニュー](/article/yoshinoya-kids-menu)・[ベビーチェア](/article/yoshinoya-baby-chair)
 - 松屋：[キッズメニュー](/article/matsuya-kids-menu)・[ベビーチェア](/article/matsuya-baby-chair)
 - なか卯：[キッズメニュー](/article/nakau-kids-menu)・[ベビーチェア](/article/nakau-baby-chair)
@@ -241,7 +242,14 @@ legacyHero: /hero-ai/kodzure-famires-15sen.webp
 **回転寿司系**
 - スシロー：[キッズメニュー](/article/sushiro-kids-menu)・[ベビーチェア](/article/sushiro-baby-chair)
 - くら寿司：[キッズメニュー](/article/kurasushi-kids-menu)・[ベビーチェア](/article/kurasushi-baby-chair)
-- はま寿司：[キッズメニュー](/article/hamasushi-kids-menu)・[ベビーチェア](/article/hamasushi-baby-chair)
+- はま寿司：キッズメニュー（本記事で解説）・[ベビーチェア](/article/hamasushi-baby-chair)
+- かっぱ寿司：[キッズメニュー](/article/kappa-sushi-kids-menu)・[子連れ攻略](/article/kappa-sushi-kodzure-koryaku)
+
+**ハンバーガー・ファストフード系**
+- マクドナルド：[キッズメニュー（ハッピーセット）](/article/mcdonalds-kids-menu)・[子連れ攻略](/article/mcdonalds-kodzure-koryaku)
+- モスバーガー：[キッズメニュー](/article/mos-burger-kids-menu)・[子連れ攻略](/article/mos-burger-kodzure-koryaku)
+- ケンタッキー：[キッズメニュー](/article/kfc-kids-menu)・[子連れ攻略](/article/kfc-kodzure-koryaku)
+- バーガーキング：[キッズメニュー](/article/burger-king-kids-menu)・[子連れ攻略](/article/burger-king-kodzure-koryaku)
 
 > テーマパークの食事は [ディズニーのキッズメニュー](/article/disney-kids-menu)・[レゴランドのキッズメニュー](/article/legoland-kids-menu) で個別に解説しています。
 

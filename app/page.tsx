@@ -20,7 +20,7 @@ import { V2TodayHero } from '@/components/v2/V2TodayHero';
 import { LineCta } from '@/components/common/LineCta';
 import { getFileArticlesByCategory } from '@/lib/articles';
 import { eventHeroImage, formatEventPeriod, getThisWeekEvents } from '@/lib/events';
-import { getAllFileArticles } from '@/lib/articles';
+import { getAllFileArticlesWithOverrides } from '@/lib/articles';
 import { getSpotRanking } from '@/lib/spot-ranking';
 import { FEATURE_PAGES } from '@/lib/feature-pages';
 import { POPULAR_ARTICLE_SLUGS } from '@/lib/popular-articles';
@@ -69,7 +69,9 @@ const CATEGORIES = [
 ];
 
 export default async function HomePage() {
-  const allArticles = getAllFileArticles();
+  // KV 上書き（admin で差し替えた hero 等）をマージしたメタを使う。
+  // これでトップの「人気の記事」「新着記事」カードも編集後の画像を反映する。
+  const allArticles = await getAllFileArticlesWithOverrides();
   const popularArticles = POPULAR_ARTICLE_SLUGS.map((slug) =>
     allArticles.find((a) => a.slug === slug),
   ).filter((a): a is NonNullable<typeof a> => Boolean(a));

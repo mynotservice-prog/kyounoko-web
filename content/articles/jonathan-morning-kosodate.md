@@ -1,13 +1,13 @@
 ---
 slug: jonathan-morning-kosodate
-title: ジョナサンのモーニングは何時から？時間帯・メニュー・子連れ攻略ガイド【2026】
+title: ジョナサンのモーニングは何時まで？朝6時〜10時30分｜子連れ穴場は平日7-8時【2026年最新】
 metaDescription: >-
-  ジョナサンのモーニングは朝6時-10時30分。和定食・洋定食の朝食メニュー、ベビーチェア確保、離乳食温め対応、平日7-8時の子連れ穴場時間、混雑回避のコツまで0-6歳の家族目線で完全ガイドします。
+  ジョナサンのモーニングは朝6:00〜10:30まで（開店時刻は店舗により差あり）。和定食600円台〜＋ドリンクバー付きです。さらに、すかいらーく系の中でも席間が広く客層が落ち着いていて0-1歳の乳児連れに向く理由、混雑を避けられる平日7-8時の子連れ穴場時間、ベビーチェア・離乳食の温め可否まで0-6歳の家族目線でまとめました。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-06-06'
-hero: /img/scenes/home-play-17.webp
+updatedAt: '2026-07-27'
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/jonathan-morning-kosodate-mra3jv3g.jpg"
 area: all
 quickInfo:
   ageRanges:
@@ -150,6 +150,8 @@ A. **朝の時間帯は店員さんの手が空いていて、温め対応が圧
 **モーニング・朝食関連**
 
 - [【2026年版】子連れモーニング10選｜コメダ・ガスト・スタバ比較](/article/kodzure-morning-cafe-10)
+- [星乃珈琲店のモーニング｜時間・値段・平日/土日祝メニュー](/article/hoshino-morning-kosodate)
+- [コメダのモーニングは何時まで？開店〜11時・土日祝も同じ](/article/komeda-morning-kosodate)
 - [子連れカフェ3チェーン比較](/article/cafe-3chain-kodzure-hikaku)
 - [子連れで使えるファミレスTOP10｜2026年版ランキング](/article/famires-kodzure-ranking-2026-10sen)
 - [ガストvsジョナサン｜すかいらーく系どっちが子連れ向き？](/article/gusto-vs-jonathan-kodzure-douchi)

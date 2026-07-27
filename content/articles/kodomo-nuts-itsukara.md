@@ -1,12 +1,12 @@
 ---
 slug: kodomo-nuts-itsukara
-title: 赤ちゃん・子供にナッツ類はいつから？月齢別の目安・量・誤嚥リスク完全ガイド
+title: 赤ちゃん・子供にナッツはいつから？粒は5歳までNG・粉末は9〜11ヶ月から【消費者庁の注意喚起/2026】
 metaDescription: >-
   赤ちゃん・子供にナッツ類はいつから？アーモンド・くるみ・カシューナッツなど粒は5歳まで誤嚥NG、ペーストなら離乳食後期から少量可。月齢別の進め方、種類別の注意、アレルギー対策まで2026年版で完全ガイド。
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-06-02'
+updatedAt: '2026-07-20'
 hero: /hero-ai/kodomo-nuts-itsukara.jpg
 area: all
 quickInfo:

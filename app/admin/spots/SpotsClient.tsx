@@ -77,8 +77,8 @@ export function SpotsClient({ rows, areaOptions, categoryOptions, notCovered }: 
       )}
       <DataTable<SpotRow>
         title="スポット"
-        subtitle="登録スポットの管理（編集は「スポット編集」から）"
-        primaryAction={{ label: '一括編集', href: '/admin/spots/edit' }}
+        subtitle="登録スポットの管理（一括編集は「スポット編集」から）"
+        primaryAction={{ label: '＋ 新規スポット', href: '/admin/spots/new' }}
         searchable
         searchPlaceholder="スポット名 / 市区町村で検索"
         searchKeys={(r) => `${r.name} ${r.city} ${r.note}`}

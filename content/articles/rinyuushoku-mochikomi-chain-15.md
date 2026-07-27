@@ -354,7 +354,6 @@ A. **離乳食を温め同時依頼**できるよう、容器を分けて温め�
 
 **ファミレス系**
 - [サイゼリヤの離乳食持ち込みガイド](/article/saizeriya-rinyushoku-mochikomi)
-- [ガストの離乳食温め リアル体験](/article/gusto-rinyu-warm-real)
 - [ジョナサンの離乳食持ち込みガイド](/article/jonathan-kodzure-koryaku)
 - [バーミヤンの離乳食持ち込みガイド](/article/bamiyan-kodzure-koryaku)
 - [ココスの離乳食持ち込みガイド](/article/cocos-kodzure-koryaku)
@@ -370,7 +369,7 @@ A. **離乳食を温め同時依頼**できるよう、容器を分けて温め�
 
 **回転寿司・うどん系**（持ち込みに寛容な店舗が多い）
 - [スシローの離乳食持ち込みガイド](/article/sushiro-kodzure-koryaku)
-- [くら寿司の離乳食持ち込みガイド](/article/kurasushi-rinyushoku-mochikomi)
+- くら寿司の離乳食持ち込み（本記事の一覧で解説）
 - [はま寿司の離乳食持ち込みガイド](/article/hamasushi-rinyushoku-mochikomi)
 - [丸亀製麺の離乳食持ち込みガイド](/article/marukame-rinyushoku-mochikomi)
 

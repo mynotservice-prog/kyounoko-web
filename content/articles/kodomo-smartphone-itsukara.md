@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-smartphone-itsukara
 title: 子供のスマホはいつから持たせる？年齢別メリット・デメリット・ルール完全ガイド
 metaDescription: >-

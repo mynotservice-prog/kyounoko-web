@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-strider-itsukara
 title: 子供のストライダーはいつから？年齢別目安・選び方・練習法完全ガイド
 metaDescription: >-

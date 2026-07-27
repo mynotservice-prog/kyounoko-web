@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
 import { getAllFileArticles } from '@/lib/articles';
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: '子供レシピ一覧｜離乳食・幼児食・お弁当・おやつまで【きょうのこレシピDB】',

@@ -55,7 +55,7 @@ export function V2Icon({
     case 'home': return <svg {...p} fill={fill ? color : 'none'} stroke={fill ? 'none' : color}><path d="M4 11l8-6 8 6v9a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1Z"/></svg>;
     case 'bookmark': return <svg {...p} fill={fill ? color : 'none'} stroke={color}><path d="M6 4h12v16l-6-4-6 4Z"/></svg>;
     case 'book': return <svg {...p} fill={fill ? color : 'none'}><path d="M4 5a2 2 0 0 1 2-2h5v17H6a2 2 0 0 0-2 2Z" stroke={color}/><path d="M20 5a2 2 0 0 0-2-2h-5v17h5a2 2 0 0 1 2 2Z" stroke={color}/></svg>;
-    case 'heart': return <svg {...p} fill={fill ? color : 'none'} stroke={color}><path d="M12 20s-7-4.5-9.5-9C1 8 2.5 4.5 6 4.5c2 0 3.2 1.3 4 2.5.8-1.2 2-2.5 4-2.5 3.5 0 5 3.5 3.5 6.5C19 15.5 12 20 12 20Z"/></svg>;
+    case 'heart': return <svg {...p} fill={fill ? color : 'none'} stroke={color}><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>;
     case 'menu': return <svg {...p}><path d="M4 7h16M4 12h16M4 17h16"/></svg>;
     case 'chevron-right': return <svg {...p}><path d="m9 6 6 6-6 6"/></svg>;
     case 'chevron-down': return <svg {...p}><path d="m6 9 6 6 6-6"/></svg>;

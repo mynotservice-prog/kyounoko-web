@@ -1,5 +1,4 @@
 ---
-noindex: true
 slug: shichigosan-nenrei-junbi
 title: 七五三 準備ガイド【3歳・5歳・7歳】予算3-20万円
 subtitle: 服装・神社・撮影・食事会まで、歳ごとの段取りを整理
@@ -8,7 +7,7 @@ metaDescription: >-
 category: gyouji
 categoryName: 季節と行事
 publishedAt: 2026-04-18T00:00:00.000Z
-updatedAt: '2026-06-03'
+updatedAt: '2026-07-24'
 hero: /hero-ai/shichigosan-nenrei-junbi.jpg
 area: all
 quickInfo:
@@ -323,5 +322,8 @@ lede: 七五三の年齢別準備を完全網羅。3歳・5歳・7歳それぞ�
 
 ## 関連記事
 
+- [七五三の服装と写真の完全ガイド](/article/shichigosan-fukusou-shashin-kanzen)
+- [七五三の食事会はどこで？子連れ店選びの現実解](/article/shichigosan-shokujikai-dokode)
+- [秋の3〜6歳児の過ごし方](/article/aki-3-6sai-sugoshikata)
 - [初節句（こどもの日・ひな祭り）の過ごし方｜男の子・女の子](/article/hatsuzekku-sugoshikata)
 - [お正月を子どもと楽しむ：年齢別の過ごし方アイデア](/article/oshougatsu-kodomo-sugoshikata)

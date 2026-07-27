@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-outo-tomaranai
 title: 子供の嘔吐が止まらない｜原因・症状・対処法・受診目安完全ガイド【0〜6歳】
 metaDescription: >-

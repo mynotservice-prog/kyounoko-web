@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-06-02'
+updatedAt: '2026-07-15'
 hero: /img/scenes/meal-33.webp
 area: all
 quickInfo:
@@ -177,6 +177,22 @@ legacyHero: /hero/food-japan-03.webp
 - 小麦アレルギーに注意
 - お店は1歳半以降が安心
 - セルフうどん店が取り分けに便利
+
+## 出典・参考（公的資料）
+
+- 厚生労働省「授乳・離乳の支援ガイド（2019年改定版）」— 離乳の進め方・食材ごとの開始時期の基本
+- 消費者庁・日本小児科学会「食品による子どもの窒息・誤嚥事故への注意喚起」
+
+月齢の目安は上記の公的資料をもとにしていますが、開始時期や量、アレルギーの有無には個人差があります。最終的な判断はかかりつけの小児科医・管理栄養士にご相談ください（本記事は2026年7月時点の情報です）。
+
+## あわせて読みたい
+
+年齢別の育児のポイントは、以下の完全マップで一覧できます。季節・行事の過ごし方とあわせてご活用ください。
+
+- [0歳の育児 完全マップ](/article/0sai-ikuji-kanzen-map)
+- [1〜2歳の育児 完全マップ](/article/1-2sai-ikuji-kanzen-map)
+- [3〜6歳の育児 完全マップ](/article/3-6sai-ikuji-kanzen-map)
+- [夏の子育て 完全マップ｜暑さ・水遊び・夏バテ対策](/article/natsu-kosodate-kanzen-map)
 
 ## 関連記事
 

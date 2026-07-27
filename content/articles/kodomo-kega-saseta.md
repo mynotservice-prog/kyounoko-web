@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-kega-saseta
 title: 子供が友達にケガをさせた時｜謝罪・連絡・治療費完全ガイド【1〜6歳】
 metaDescription: >-

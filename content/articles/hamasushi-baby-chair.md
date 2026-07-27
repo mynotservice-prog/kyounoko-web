@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-05-30'
-hero: /hero-ai/hamasushi-baby-chair.jpg
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/hamasushi-baby-chair-mra3dclo.jpg"
 area: all
 quickInfo:
   ageRanges:

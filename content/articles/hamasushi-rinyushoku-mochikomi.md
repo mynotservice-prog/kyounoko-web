@@ -1,12 +1,13 @@
 ---
 slug: hamasushi-rinyushoku-mochikomi
-title: はま寿司に離乳食持ち込みOK？公式方針・温め対応・実例【2026】
-metaDescription: はま寿司に離乳食は持ち込み可能？温めお願いはできる？レトルト・ベビーフードの扱い、店員さんへの声かけ方、店舗差まで0-1歳家族目線で徹底解説します。
+title: "はま寿司は離乳食の持ち込みOK（公式が案内）｜ベビーフードの温めも多くの店舗で対応・声かけの仕方と店舗差【2026】"
+metaDescription: >-
+  はま寿司は公式に「お子様用の離乳食はお持ち込みいただけます」と案内しており、レトルトやベビーフードの温めにも多くの店舗で対応してくれます。お湯の提供も紙コップで対応してもらえることが多め（温め・お湯は店舗判断）。スシロー・くら寿司と同様にファミリー層を強く意識した方針です。店員さんへの声かけの仕方、実際の対応例、店舗差の見極めまで0-1歳家族目線で徹底解説します。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-30'
-hero: /img/scenes/baby-food-03.webp
+updatedAt: "2026-07-27"
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/hamasushi-rinyushoku-mochikomi-mrn3hzkt.jpg"
 area: all
 quickInfo:
   ageRanges:
@@ -86,7 +87,7 @@ A. 多くの店舗で対応してくれます。「ミルク用お湯くださ�
 ## 関連記事
 
 - [はま寿司は子連れOK？ベビーカー・キッズメニュー・離乳食・取り分け](/article/hama-sushi-kodzure-koryaku)
-- [くら寿司に離乳食持ち込みOK？公式方針・温め対応・実例](/article/kurasushi-rinyushoku-mochikomi)
+- [くら寿司に離乳食持ち込みOK？公式方針・温め対応・実例](/article/rinyuushoku-mochikomi-chain-15)
 - [離乳食持ち込みOK・温めてくれるチェーン店15選](/article/rinyuushoku-mochikomi-chain-15)
 - [回転寿司4チェーン子連れ徹底比較](/article/kaiten-sushi-4chain-comparison)
 - [0歳育児完全マップ](/article/0sai-ikuji-kanzen-map)

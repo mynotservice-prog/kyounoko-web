@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: hakone-akachan-yado
 title: 箱根の赤ちゃん歓迎の宿｜0歳OK・離乳食・ベビー備品まで完全ガイド【2026年版】
 metaDescription: >-

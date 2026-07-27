@@ -6,6 +6,7 @@ import { V2Icon } from '@/components/v2/V2Icon';
 import { getAllFileArticles, type FileArticleMeta } from '@/lib/articles';
 import { getAllPlanMetas, type PlanMeta } from '@/lib/plans';
 import { getAllSpotsWithSlug } from '@/lib/spots';
+import { getRuntimeSpotOverrides } from '@/lib/spot-overrides';
 import { EVENTS } from '@/lib/events';
 import { articleToV2, spotToV2 } from '@/lib/v2-adapters';
 
@@ -107,9 +108,9 @@ export default async function SearchPage({ searchParams }: Props) {
         return f.includes(nq);
       });
 
-  // スポット（クエリありの時のみ、20件まで）
+  // スポット（クエリありの時のみ、20件まで）。Admin(KV)上書きを適用して検索名に即時反映。
   const filteredSpots = q
-    ? getAllSpotsWithSlug()
+    ? getAllSpotsWithSlug(await getRuntimeSpotOverrides())
         .filter((x) => {
           const f = normalize(
             `${x.spot.name} ${x.spot.ward ?? ''} ${x.spot.city ?? ''} ${x.spot.note ?? ''} ${x.spot.nearestStation ?? ''}`,

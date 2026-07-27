@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: akachan-asemo-taisaku-2026
 title: 【2026年版】赤ちゃんのあせも対策完全ガイド｜予防・ケア・受診目安
 metaDescription: >-

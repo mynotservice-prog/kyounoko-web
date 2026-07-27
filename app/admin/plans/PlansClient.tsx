@@ -86,6 +86,7 @@ export function PlansClient({ rows, areaOptions }: Props) {
     <DataTable<AugRow>
       title="プラン"
       subtitle="おでかけプランの管理"
+      primaryAction={{ label: '新規プラン', href: '/admin/plans/new' }}
       searchable
       searchPlaceholder="タイトル / ID / 概要で検索"
       searchKeys={(r) => `${r.title} ${r.id} ${r.shortAnswer}`}

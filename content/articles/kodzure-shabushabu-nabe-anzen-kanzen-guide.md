@@ -165,7 +165,7 @@ youtubeSearch: 子連れ しゃぶしゃぶ 鍋 何歳から 安全 やけど �
 
 「結局どこに行けばいい？」をシーン別に整理します。各チェーンの単独攻略記事に、料金・座席・離乳食・取り分けの具体策をまとめています。
 
-- **はじめての子連れ鍋・入門に**：3歳以下無料・野菜バー・ボックス席で入りやすい[しゃぶ葉の子連れ攻略](/article/shabuyou-kodzure-koryaku)。「3歳以下無料」のリアルは[しゃぶ葉「3歳以下無料」の実際](/article/shabuyou-3sai-free-real)もどうぞ。
+- **はじめての子連れ鍋・入門に**：3歳以下無料・野菜バー・ボックス席で入りやすい[しゃぶ葉の子連れ攻略](/article/shabuyou-kodzure-koryaku)。
 - **二色鍋でまろやかだし側を子ども用にしたい**：半個室・年齢別料金が明朗な[しゃぶしゃぶ温野菜の子連れ攻略](/article/onyasai-kodzure-koryaku)。
 - **子の好みがバラバラ・寿司も食べたい**：寿司＋しゃぶしゃぶ食べ放題の[ゆず庵の子連れ攻略](/article/yuzuan-kodzure-koryaku)。生もの（生魚・寿司ネタ）は何歳からも解説。
 - **0-1歳を座敷で下ろしてゆっくり・祖父母同伴**：和食ファミレスの座敷文化が強い[かごの屋の子連れ攻略](/article/kagonoya-kodzure-koryaku)。
@@ -249,7 +249,7 @@ A. 多くのチェーンが公式サイトのメニュー・アレルギー物�
 **しゃぶしゃぶ・鍋クラスタ**
 
 - [しゃぶしゃぶチェーン子連れ比較ランキング5社](/article/shabushabu-chain-kodzure-ranking-2026-5sha)
-- [しゃぶ葉の子連れ攻略](/article/shabuyou-kodzure-koryaku)／[しゃぶ葉「3歳以下無料」の実際](/article/shabuyou-3sai-free-real)
+- [しゃぶ葉の子連れ攻略](/article/shabuyou-kodzure-koryaku)
 - [しゃぶしゃぶ温野菜の子連れ攻略（二色鍋・未就学児無料・生焼け対策）](/article/onyasai-kodzure-koryaku)
 - [ゆず庵の子連れ攻略（寿司＋しゃぶしゃぶ・生ものは何歳から）](/article/yuzuan-kodzure-koryaku)
 - [かごの屋の子連れ攻略（座敷・掘りごたつ・御膳・段差の安全）](/article/kagonoya-kodzure-koryaku)

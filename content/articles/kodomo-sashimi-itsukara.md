@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-sashimi-itsukara
 title: 赤ちゃん・子供に刺身はいつから？月齢別の目安・魚種別の判断・食中毒対策完全ガイド
 metaDescription: >-

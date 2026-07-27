@@ -1,13 +1,5 @@
 ---
 slug: ohsho-kodzure-koryaku
-title: 餃子の王将は子連れOK？ベビーカー・ベビーチェア・離乳食・取り分け中華【2026】
-metaDescription: >-
-  餃子の王将はベビーカーで入れる？キッズメニュー、離乳食持込、ベビーチェア、取り分けOK中華メニュー、ジャストサイズメニューの活用まで0-6歳の家族目線で解説。
-category: today-taberu
-categoryName: 今日何食べる？
-publishedAt: '2026-05-14'
-updatedAt: '2026-06-03'
-hero: /img/scenes/meal-13.webp
 area: tokyo
 quickInfo:
   ageRanges:
@@ -20,10 +12,19 @@ quickInfo:
     - any
   durationMin: 60
   budget: low
-lede: >-
-  「餃子の王将は子連れで行ける？中華って取り分けしやすい？」を1記事で解決。チャーハンや餃子など家族でシェアしやすいメニューが多く、小皿対応もしてもらいやすい中華チェーン。0-6歳の家族が王将を使いこなすコツを、混雑時間帯の回避まで保存版でまとめました。
 youtubeSearch: 餃子の王将 子連れ ベビーカー
 legacyHero: /hero-ai/cat-food-fruit-03.jpg
+title: 餃子の王将は子連れOK？ベビーカー・ベビーチェア・離乳食・取り分け中華【2026】
+metaDescription: >-
+  餃子の王将はベビーカーで入れる？キッズメニュー、離乳食持込、ベビーチェア、取り分けOK中華メニュー、ジャストサイズメニューの活用まで0-6歳の家族目線で解説。
+lede: >-
+  「餃子の王将は子連れで行ける？中華って取り分けしやすい？」を1記事で解決。チャーハンや餃子など家族でシェアしやすいメニューが多く、小皿対応もしてもらいやすい中華チェーン。0-6歳の家族が王将を使いこなすコツを、混雑時間帯の回避まで保存版でまとめました。
+hero: >-
+  https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/ohsho-kodzure-koryaku-mrn2mgoy.jpg
+category: today-taberu
+categoryName: 今日何食べる？
+publishedAt: '2026-05-14'
+updatedAt: '2026-06-03'
 ---
 
 **結論：餃子の王将は取り分けしやすい中華メニューがそろい、小皿対応もしてもらいやすく子連れで使えるチェーンです。入口に段差のある店舗もあるので、ベビーカー利用時は事前確認をおすすめします。**
@@ -110,7 +111,7 @@ legacyHero: /hero-ai/cat-food-fruit-03.jpg
 - [子連れラーメンを安全に楽しむ完全ガイド｜やけど・高塩分・長い麺の誤嚥・トッピング・アレルギー](/article/kodzure-ramen-anzen-kanzen-guide)
 - [ラーメン・中華麺チェーン子連れランキング5社](/article/ramen-chain-kodzure-ranking-2026-5sha)
 - [サイゼリヤはベビーカーOK？子連れ完全攻略](/article/kodzure-saize-koryaku)
-- [バーミヤンの子連れ攻略｜ベビーチェア・離乳食・取り分け](/article/bamiyan-kodzure-koryaku)
+- [バーミヤンの子連れ攻略｜離乳食・取り分け・ベビーチェア](/article/bamiyan-kodzure-koryaku)
 - [子連れOKファミレス王道15選](/article/kodzure-famires-15sen)
 - [子連れ歓迎の和食チェーン10選](/article/kodzure-washoku-chain-10)
 - [子連れ向けレストランデータ](/data/restaurants)

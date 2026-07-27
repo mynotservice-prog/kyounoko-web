@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-kigae-iyagaru
 title: 子供が着替えを嫌がる｜原因・対処法・年齢別対応完全ガイド【1〜6歳】
 metaDescription: >-

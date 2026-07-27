@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: gw-0-6sai-sugoshikata
 title: GW（ゴールデンウィーク）の0〜6歳児 過ごし方｜お出かけ・自宅・帰省ガイド
 metaDescription: >-

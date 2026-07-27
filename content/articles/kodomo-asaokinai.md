@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-asaokinai
 title: 子供が朝起きない｜原因・対処法・年齢別対応完全ガイド【2〜6歳】
 metaDescription: >-

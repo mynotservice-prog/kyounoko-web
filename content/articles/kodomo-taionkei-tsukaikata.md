@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-taionkei-tsukaikata
 title: 体温計の使い方｜脇・耳・おでこ式の手順・正確に測るコツ完全ガイド
 metaDescription: >-

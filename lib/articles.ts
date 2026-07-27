@@ -843,6 +843,38 @@ export const getRuntimeArticleOverrides = unstable_cache(
   { tags: [ARTICLE_OVERRIDES_TAG] },
 );
 
+/**
+ * getAllFileArticles() に KV 上書き（article:overrides）をマージしたメタ一覧。
+ *
+ * getAllFileArticles() はファイルの frontmatter だけを読むため、admin で差し替えた
+ * hero（KV に保存される）が反映されない。記事ページ本体は getFileArticle() が KV を
+ * 優先マージするので新 hero が出るが、トップページの「人気の記事」「新着記事」カードは
+ * getAllFileArticles() 由来のため旧 hero（例: /img/scenes/meal-*.webp）のまま出てしまう。
+ * この関数を使うと、カード側も編集後の hero / title / lede を反映する。
+ * KV 未設定・上書き無し・パース失敗時は getAllFileArticles() と同じ結果に安全にフォールバック。
+ */
+export async function getAllFileArticlesWithOverrides(): Promise<FileArticleMeta[]> {
+  const fileMetas = getAllFileArticles();
+  if (!isKvConfigured()) return fileMetas;
+  let overrides: Record<string, string>;
+  try {
+    overrides = await getRuntimeArticleOverrides();
+  } catch {
+    return fileMetas;
+  }
+  if (!overrides || Object.keys(overrides).length === 0) return fileMetas;
+  return fileMetas.map((m) => {
+    const raw = overrides[m.slug];
+    if (!raw) return m;
+    try {
+      const { meta } = parseFrontmatter(raw, m.slug);
+      return meta;
+    } catch {
+      return m;
+    }
+  });
+}
+
 /** 記事上書きマップを直読み（キャッシュ非経由・保存用）。 */
 export async function readArticleOverridesMap(): Promise<Record<string, string>> {
   if (isKvConfigured()) {
@@ -855,6 +887,18 @@ export async function readArticleOverridesMap(): Promise<Record<string, string>>
 export async function writeArticleOverride(slug: string, rawMd: string): Promise<boolean> {
   const map = await readArticleOverridesMap();
   map[slug] = rawMd;
+  return kvSet(ARTICLE_OVERRIDES_KV_KEY, map);
+}
+
+/**
+ * 1記事の KV 上書きを削除する（md を正に戻す）。
+ * ※ 画像などの編集内容も消えるため、呼び出し側は事前に KV 版を md へ書き戻すこと。
+ * override が元々無ければ true（冪等）。
+ */
+export async function deleteArticleOverride(slug: string): Promise<boolean> {
+  const map = await readArticleOverridesMap();
+  if (!(slug in map)) return true;
+  delete map[slug];
   return kvSet(ARTICLE_OVERRIDES_KV_KEY, map);
 }
 
@@ -896,7 +940,16 @@ export async function getFileArticle(slug: string): Promise<FileArticle | null> 
     const fallbackSlug = filename.replace(/\.md$/, '');
     const { meta: fileMeta } = parseFrontmatter(fileRaw, fallbackSlug);
     if (fileMeta.slug !== slug) continue;
-    return buildArticleFromRaw(overrideRaw ?? fileRaw, fallbackSlug);
+    const article = await buildArticleFromRaw(overrideRaw ?? fileRaw, fallbackSlug);
+    // ファイルの noindex:true は KV 上書きより優先する（OR 判定）。
+    // 管理画面編集で KV `article:overrides` に上書きが残っていると、その上書き frontmatter に
+    // noindex が無い場合にファイル側の noindex:true が握り潰され、検索から外したい記事が
+    // index され続ける不具合が起きる（例: sukiya-kids-menu / hamasushi-kids-menu）。
+    // noindex は「検索に出さない」安全側フラグなので、ファイルで立っていたら必ず尊重する。
+    if (fileMeta.noindex === true && !article.noindex) {
+      return { ...article, noindex: true };
+    }
+    return article;
   }
   // ファイル無し: KV にのみ存在する新規記事
   if (overrideRaw) return buildArticleFromRaw(overrideRaw, slug);

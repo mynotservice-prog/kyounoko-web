@@ -21,7 +21,7 @@ quickInfo:
     - any
   durationMin: 20
   budget: '〜1500'
-hero: /img/scenes/meal-10.webp
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/mochikaeri-sushi-chain-kodzure-4sha-mrn3ahmu.png"
 heroAlt: 持ち帰り寿司のパックを家のテーブルに広げ、家族で子ども向けに取り分けて食べている様子（イラスト）
 ---
 

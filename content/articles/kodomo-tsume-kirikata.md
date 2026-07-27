@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-tsume-kirikata
 title: 子供の爪切りの方法｜新生児から幼児までの手順・頻度・コツ完全ガイド
 metaDescription: >-

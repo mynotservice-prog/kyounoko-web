@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-mono-kowashita
 title: 子供が物を壊した時｜謝罪・弁償・保険・しつけ完全ガイド【1〜6歳】
 metaDescription: >-

@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: hamasushi-kids-menu
 title: はま寿司のキッズメニュー徹底解説｜食べられるサイドと取り分け完全ガイド【2026】
 metaDescription: >-
@@ -7,7 +8,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-06-18T00:00:00.000Z'
 updatedAt: '2026-06-18'
-hero: /img/scenes/meal-32.webp
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/hamasushi-kids-menu-mra3cg4f.jpg"
 area: all
 quickInfo:
   ageRanges:

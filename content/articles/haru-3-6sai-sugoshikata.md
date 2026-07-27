@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-30'
+updatedAt: '2026-07-15'
 hero: /hero-ai/haru-3-6sai-sugoshikata.jpg
 area: all
 quickInfo:
@@ -109,6 +109,15 @@ legacyHero: /hero/park-02.webp
 - 旬の春野菜・果物で食卓に季節感を
 - 外あそびは午前中、週末は自然体験
 - 花粉症は早めの耳鼻科受診で集中力低下を防ぐ
+
+## あわせて読みたい
+
+年齢別の育児のポイントは、以下の完全マップで一覧できます。季節・行事の過ごし方とあわせてご活用ください。
+
+- [0歳の育児 完全マップ](/article/0sai-ikuji-kanzen-map)
+- [1〜2歳の育児 完全マップ](/article/1-2sai-ikuji-kanzen-map)
+- [3〜6歳の育児 完全マップ](/article/3-6sai-ikuji-kanzen-map)
+- [夏の子育て 完全マップ｜暑さ・水遊び・夏バテ対策](/article/natsu-kosodate-kanzen-map)
 
 ## 関連記事
 

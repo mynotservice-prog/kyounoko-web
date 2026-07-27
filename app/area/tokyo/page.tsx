@@ -5,7 +5,7 @@ import { V2SectionHead } from '@/components/v2/V2Base';
 import { V2Icon } from '@/components/v2/V2Icon';
 import { WARD_NAMES } from '@/lib/tokyo-stations';
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: '東京都のおでかけ｜区市町村から探す',

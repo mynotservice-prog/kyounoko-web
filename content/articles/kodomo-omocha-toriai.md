@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-omocha-toriai
 title: 子供のおもちゃ取り合い｜原因・年齢別声かけ・親の介入タイミング完全ガイド【1〜6歳】
 metaDescription: >-

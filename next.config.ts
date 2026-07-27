@@ -19,17 +19,24 @@ const nextConfig: NextConfig = {
   async headers() {
     // CDN（Cloudflare）に edge キャッシュを効かせるための共通 Cache-Control。
     // - max-age=0, must-revalidate: ブラウザは毎回再検証（ユーザーに常に新鮮なHTMLを返す）
-    // - s-maxage / CDN-Cache-Control: CDN（Cloudflare）には 1h キャッシュさせる
-    // - stale-while-revalidate=86400: 1h過ぎても 24h は古いキャッシュを返しつつ裏で再取得
+    // - s-maxage / CDN-Cache-Control: CDN（Cloudflare）には 24h キャッシュさせる
+    // - stale-while-revalidate=604800: 24h過ぎても 7日 は古いキャッシュを返しつつ裏で再取得
     // - Cloudflare は CDN-Cache-Control を最優先、なければ s-maxage を尊重する仕様
-    const edgeCache = 'public, max-age=0, must-revalidate, s-maxage=3600, stale-while-revalidate=86400';
-    const cdnCache = 'public, max-age=3600, stale-while-revalidate=86400';
+    //
+    // 【コスト最適化 2026-07-19】記事/カテゴリ/タグ等は編集時に on-demand revalidation
+    //   （revalidatePath/revalidateTag + CF purge）で即時反映するため、時間ベースの
+    //   再検証は 1h → 24h に延長。CF→Vercel の origin 再取得（Fast Origin Transfer）と
+    //   ISR バックグラウンド再生成（Function Invocations / Fluid CPU / Observability）を
+    //   ~24倍削減する。編集反映は on-demand 側が担保するので鮮度は落ちない。
+    const edgeCache = 'public, max-age=0, must-revalidate, s-maxage=86400, stale-while-revalidate=604800';
+    const cdnCache = 'public, max-age=86400, stale-while-revalidate=604800';
 
-    // スポット詳細は /admin/spots/edit から画像・本文を編集するため、CDNキャッシュを
-    // 短くして編集が概ね1分以内に本番反映されるようにする（保存時の revalidateTag/Path で
-    // Vercelオリジンは即時更新されるが、Cloudflare が長時間キャッシュすると公開ページに出ない）。
-    const spotEdgeCache = 'public, max-age=0, must-revalidate, s-maxage=60, stale-while-revalidate=60';
-    const spotCdnCache = 'public, max-age=60, stale-while-revalidate=60';
+    // スポット詳細は /admin/spots/edit から画像・本文を編集する。保存時に
+    // revalidateTag/revalidatePath でVercelオリジンを即時更新し、さらに purgeCfUrls で
+    // Cloudflare も即パージする（app/api/admin/spot-overrides/route.ts）ため、CDNキャッシュは
+    // 短命である必要がなくなった。旧 60s は CF 再取得が過剰でコスト源だったため 1h に延長。
+    const spotEdgeCache = 'public, max-age=0, must-revalidate, s-maxage=3600, stale-while-revalidate=86400';
+    const spotCdnCache = 'public, max-age=3600, stale-while-revalidate=86400';
 
     return [
       // 全パス共通のセキュリティヘッダ
@@ -115,7 +122,7 @@ const nextConfig: NextConfig = {
       // ページ本体はクエリ→静的データの純粋計算で fetch/cookies/時刻依存なし＝同一URLは
       // 常に同一結果なので、他の静的HTMLページと同様に CDN キャッシュ可。クエリ文字列違いは
       // Cloudflare 側で別キャッシュキーになるため条件別ページも正しく分離される。
-      // 1h edge / 24h SWR はページの revalidate=3600 と整合。
+      // 24h edge / 7日 SWR。/today のクエリ変種クロールは robots.txt で遮断済み。
       {
         source: '/today',
         headers: [
@@ -153,6 +160,67 @@ const nextConfig: NextConfig = {
       { source: '/spot/JAL-SKY-MUSEUM-ovgj', destination: '/spots', permanent: true }, // JAL工場見学 SKY MUSEUM（羽田）
       { source: '/spot/AkeruE-6dkq', destination: '/spots', permanent: true }, // パナソニックセンター東京 AkeruE
       { source: '/spot/-2f47', destination: '/spots', permanent: true }, // 東京臨海広域防災公園 そなエリア東京
+
+      // ===== データ除外(2026-07-17)：レストラン街＝スポットでない/遊びスポットでない施設 =====
+      // 「レストラン街」は単独スポットとして不適、神社/ビーチ/工場見学等も子連れ遊びスポットではないため
+      // データから除去。旧URLは一覧へ301（被リンク・indexの行き止まり回避）。
+      { source: '/spot/5-6F-fbjc', destination: '/spots', permanent: true }, // 丸ビル 5・6Fレストラン街
+      { source: '/spot/S.C.-xguc', destination: '/spots', permanent: true }, // 二子玉川ライズ S.C. レストラン街
+      { source: '/spot/-h60m', destination: '/spots', permanent: true }, // 池袋サンシャインシティ レストラン街
+      { source: '/spot/-ln74', destination: '/spots', permanent: true }, // 東京スカイツリータウン ソラマチ レストラン街
+      { source: '/spot/-dnpt', destination: '/spots', permanent: true }, // ルミネ新宿 レストラン街
+      { source: '/spot/-ejlx', destination: '/spots', permanent: true }, // グランベリーパーク レストラン街
+      { source: '/spot/-dov1', destination: '/spots', permanent: true }, // ららぽーと豊洲 レストラン街
+      { source: '/spot/-dec1', destination: '/spots', permanent: true }, // マークイズみなとみらい・吉祥寺パルコ系列 レストラン街
+      { source: '/spot/-7hg2', destination: '/spots', permanent: true }, // 北千住マルイ レストラン街
+      { source: '/spot/-s76h', destination: '/spots', permanent: true }, // 錦糸町オリナス レストラン街
+      { source: '/spot/-cwhx', destination: '/spots', permanent: true }, // ららぽーと横浜 レストラン街
+      { source: '/spot/-msdt', destination: '/spots', permanent: true }, // ラゾーナ川崎プラザ レストラン街
+      { source: '/spot/-avjl', destination: '/spots', permanent: true }, // グランフロント大阪 レストラン街
+      { source: '/spot/-95lh', destination: '/spots', permanent: true }, // なんばパークス レストラン街
+      { source: '/spot/CITY-iqht', destination: '/spots', permanent: true }, // なんばCITY レストラン街
+      { source: '/spot/-l5dp', destination: '/spots', permanent: true }, // あべのキューズモール レストラン街
+      { source: '/spot/EXPOCITY-gwj1', destination: '/spots', permanent: true }, // ららぽーとEXPOCITY レストラン街
+      { source: '/spot/JR-JR-n68j', destination: '/spots', permanent: true }, // JRゲートタワー・JRセントラルタワーズ レストラン街
+      { source: '/spot/-yfre', destination: '/spots', permanent: true }, // ミッドランドスクエア レストラン街
+      { source: '/spot/21-b9ak', destination: '/spots', permanent: true }, // オアシス21 レストラン街
+      { source: '/spot/-bgpm', destination: '/spots', permanent: true }, // ららぽーと名古屋みなとアクルス レストラン街
+      { source: '/spot/JR-zara', destination: '/spots', permanent: true }, // JR博多シティ レストラン街（くうてん）
+      { source: '/spot/-iphh', destination: '/spots', permanent: true }, // キャナルシティ博多 レストラン街
+      { source: '/spot/-mcc9', destination: '/spots', permanent: true }, // ららぽーと福岡 レストラン街
+      { source: '/spot/-6e4v', destination: '/spots', permanent: true }, // マリノアシティ福岡 レストラン街
+      { source: '/spot/-05m7', destination: '/spots', permanent: true }, // 札幌ステラプレイス レストラン街
+      { source: '/spot/-th24', destination: '/spots', permanent: true }, // イオンモール京都桂川 レストラン街
+      { source: '/spot/-3tbc', destination: '/spots', permanent: true }, // ヨドバシ梅田＆ヨドバシ京都 レストラン街
+      { source: '/spot/umie-trpj', destination: '/spots', permanent: true }, // 神戸ハーバーランド umie レストラン街
+      { source: '/spot/-zm7c', destination: '/spots', permanent: true }, // ららぽーと甲子園 レストラン街
+      { source: '/spot/-9jec', destination: '/spots', permanent: true }, // 盛岡駅 フェザン レストラン街
+      { source: '/spot/-dxsp', destination: '/spots', permanent: true }, // イーアスつくば レストラン街
+      { source: '/spot/FKD-y7id', destination: '/spots', permanent: true }, // FKD宇都宮 インターパーク レストラン街
+      { source: '/spot/-323y', destination: '/spots', permanent: true }, // イオンモール高崎 レストラン街
+      { source: '/spot/-qeuf', destination: '/spots', permanent: true }, // ららぽーと富士見 レストラン街
+      { source: '/spot/-l0wf', destination: '/spots', permanent: true }, // イクスピアリ レストラン街
+      { source: '/spot/CoCoLo-npow', destination: '/spots', permanent: true }, // CoCoLo新潟 レストラン街
+      { source: '/spot/MIDORI-6u2y', destination: '/spots', permanent: true }, // MIDORI長野 レストラン街
+      { source: '/spot/-rgib', destination: '/spots', permanent: true }, // イオンモール津南 レストラン街
+      { source: '/spot/-n36t', destination: '/spots', permanent: true }, // フォレオ大津一里山 レストラン街
+      { source: '/spot/-01iq', destination: '/spots', permanent: true }, // イオンモール和歌山 レストラン街
+      { source: '/spot/-ovj5', destination: '/spots', permanent: true }, // イオンモール岡山 レストラン街
+      { source: '/spot/ekie-cw9v', destination: '/spots', permanent: true }, // ekie広島 レストラン街
+      { source: '/spot/-hnxg', destination: '/spots', permanent: true }, // イオンモール高知 レストラン街
+      { source: '/spot/-e30j', destination: '/spots', permanent: true }, // ゆめタウン佐賀 レストラン街
+      { source: '/spot/-pw60', destination: '/spots', permanent: true }, // アミュプラザ長崎 レストラン街
+      { source: '/spot/-mo9i', destination: '/spots', permanent: true }, // アミュプラザくまもと レストラン街
+      { source: '/spot/-bvkk', destination: '/spots', permanent: true }, // アミュプラザおおいた レストラン街
+      { source: '/spot/-w24e', destination: '/spots', permanent: true }, // イオンモール宮崎 レストラン街
+      { source: '/spot/-dp3a', destination: '/spots', permanent: true }, // アミュプラザ鹿児島 レストラン街
+      { source: '/spot/-npaw', destination: '/spots', permanent: true }, // イオンモール沖縄ライカム レストラン街
+      { source: '/spot/-at0y', destination: '/spots', permanent: true }, // 神田明神
+      { source: '/spot/-6s3p', destination: '/spots', permanent: true }, // 明治神宮
+      { source: '/spot/-tzd6', destination: '/spots', permanent: true }, // 台場海浜公園 ビーチ
+      { source: '/spot/-4lrp', destination: '/spots', permanent: true }, // アネビートリムパーク（ららぽーと各所等）
+      { source: '/spot/S-C-mchr', destination: '/spots', permanent: true }, // 玉川高島屋S・C
+      { source: '/spot/-et68', destination: '/spots', permanent: true }, // ふくろうの杜（流山おおたかの森）
 
       // ===== 記事棚卸し監査(2026-06-25)：チェーン周辺条件の死蔵フラグメントを =====
       // 内容を包含する [chain]-kodzure-koryaku へ 301 統合（被リンク資産を勝ちページに集約）。

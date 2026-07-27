@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodomo-kami-kirikata
 title: 子供の髪の毛の切り方｜セルフカット手順・前髪・後ろ髪のコツ完全ガイド
 metaDescription: >-
