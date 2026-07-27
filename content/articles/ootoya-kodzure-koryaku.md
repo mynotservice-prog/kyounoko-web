@@ -106,7 +106,7 @@ legacyHero: /hero-ai/cat-food-japan-03.jpg
 
 - [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 - [サイゼリヤはベビーカーOK？子連れ完全攻略](/article/kodzure-saize-koryaku)
-- [やよい軒の子連れ攻略｜キッズメニュー・離乳食・取り分け](/article/yayoiken-kodzure-koryaku)
+- [やよい軒の子連れ攻略｜ベビーチェア・離乳食・取り分け](/article/yayoiken-kodzure-koryaku)
 - [子連れ歓迎の和食チェーン10選](/article/kodzure-washoku-chain-10)
 - [子連れOKファミレス王道15選](/article/kodzure-famires-15sen)
 - [子連れ向けレストランデータ](/data/restaurants)

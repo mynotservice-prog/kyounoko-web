@@ -6,9 +6,13 @@
  * 構造化データをここから自動生成し、記事ごとの手書き表の不整合と鮮度切れを
  * 構造的に無くす。
  *
- * データの出自: 各チェーン攻略記事(編集部の実訪問・公式サイト・店舗確認の調査)の
- * 子連れチェックリスト表を 2026-07-02 に集約・相互照合したもの。
+ * データの出自: 各チェーン攻略記事の子連れチェックリスト表を 2026-07-02 に
+ * 集約・相互照合したもの。値の根拠は公式サイト・店舗公開情報。
  * 値を更新したら該当チェーンの verifiedAt も必ず更新すること。
+ *
+ * 注意(2026-07-27): verifiedMethod は以前「編集部調査(実訪問・公式サイト照合)の集約」と
+ * 表示していたが、裏付けのない実訪問の主張だったため「公式サイト・店舗公開情報の照合」に修正した。
+ * 実訪問にもとづく一次情報は lib/kid-reports.ts のみが正。ここに実地調査の主張を書き戻さないこと。
  */
 
 export type FacilityKey =
@@ -75,7 +79,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.ohsho.co.jp/',
     koryakuSlug: 'ohsho-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(false, '店舗差が大きい'),
       zashiki: V(false),
@@ -97,7 +101,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.saizeriya.co.jp/',
     koryakuSlug: 'kodzure-saize-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true),
       zashiki: V(false),
@@ -119,7 +123,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.skylark.co.jp/gusto/',
     koryakuSlug: 'gusto-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true),
       zashiki: V(false),
@@ -141,7 +145,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.skylark.co.jp/bamiyan/',
     koryakuSlug: 'bamiyan-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true),
       zashiki: V(false),
@@ -163,7 +167,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.yayoiken.com/',
     koryakuSlug: 'yayoiken-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(false, '店舗による'),
       zashiki: V(false),
@@ -185,7 +189,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.cocos-jpn.co.jp/',
     koryakuSlug: 'cocos-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true),
       zashiki: V(false),
@@ -207,7 +211,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.hama-sushi.co.jp/',
     koryakuSlug: 'hama-sushi-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true),
       zashiki: V(false),
@@ -229,7 +233,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.akindo-sushiro.co.jp/',
     koryakuSlug: 'sushiro-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true),
       zashiki: V(false),
@@ -251,7 +255,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.kurasushi.co.jp/',
     koryakuSlug: 'kura-sushi-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true),
       zashiki: V(false),
@@ -273,7 +277,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.skylark.co.jp/jonathan/',
     koryakuSlug: 'jonathan-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true),
       zashiki: V(false),
@@ -295,7 +299,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.marugame-seimen.com/',
     koryakuSlug: 'marugame-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true),
       zashiki: V(false),
@@ -317,7 +321,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.yoshinoya.com/',
     koryakuSlug: 'yoshinoya-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V('partial'),
       zashiki: V(false),
@@ -338,7 +342,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     name: 'ベローチェ',
     koryakuSlug: 'veloce-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V('partial'),
       zashiki: V(false),
@@ -359,7 +363,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     name: 'ステーキガスト',
     koryakuSlug: 'steak-gusto-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true),
       zashiki: V(false),
@@ -386,7 +390,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.zetteria.jp/',
     koryakuSlug: 'zetteria-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V('partial', '店舗による'),
       zashiki: V(false, '椅子席メイン'),
@@ -410,7 +414,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     name: '魚民',
     koryakuSlug: 'uotami-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true, '店舗による'),
       zashiki: V(true),
@@ -435,7 +439,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.ootoya.com/',
     koryakuSlug: 'ootoya-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true),
       zashiki: V(false),
@@ -457,7 +461,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.misterdonut.jp/',
     koryakuSlug: 'misdo-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V('partial', '店舗による'),
       zashiki: V(false, '椅子席メイン'),
@@ -482,7 +486,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.kourakuen.co.jp/',
     koryakuSlug: 'kourakuen-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true, 'ロードサイド店は段差が少なめ（店舗による'),
       boxSeat: V(true, '郊外型はボックス席が多い'),
@@ -507,7 +511,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.kfc.co.jp/',
     koryakuSlug: 'kfc-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V('partial', '店舗による'),
       zashiki: V(false, '椅子席メイン'),
@@ -532,7 +536,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.mos.jp/',
     koryakuSlug: 'mos-burger-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V('partial', '店舗による'),
       zashiki: V(false, '椅子席メイン'),
@@ -555,7 +559,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     name: '夢庵',
     koryakuSlug: 'yumean-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true),
       zashiki: V(true),
@@ -581,7 +585,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.royalhost.jp/',
     koryakuSlug: 'royal-host-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true),
       zashiki: V(false),
@@ -603,7 +607,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.matsuyafoods.co.jp/',
     koryakuSlug: 'matsuya-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V('partial'),
       zashiki: V(false),
@@ -625,7 +629,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.burgerking.co.jp/',
     koryakuSlug: 'burger-king-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V('partial', '店舗による'),
       zashiki: V(false, '椅子席メイン'),
@@ -649,7 +653,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.komeda.co.jp/',
     koryakuSlug: 'komeda-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true),
       zashiki: V(false),
@@ -671,7 +675,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.freshnessburger.co.jp/',
     koryakuSlug: 'freshness-burger-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V('partial', '店舗による'),
       zashiki: V(false, '椅子席メイン'),
@@ -695,7 +699,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.ichibanya.co.jp/',
     koryakuSlug: 'cocoichi-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V('partial', '店舗による'),
       zashiki: V(false, '椅子席メイン'),
@@ -719,7 +723,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.torikizoku.co.jp/',
     koryakuSlug: 'torikizoku-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true, '店舗による'),
       zashiki: V('partial', '店舗による'),
@@ -743,7 +747,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.shokudo.jp/',
     koryakuSlug: 'maido-ookini-shokudo-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V('partial', '店舗による'),
       zashiki: V('partial', '店舗による'),
@@ -767,7 +771,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.gyukaku.ne.jp/',
     koryakuSlug: 'gyukaku-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true),
       zashiki: V(true),
@@ -789,7 +793,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.dennys.jp/',
     koryakuSlug: 'denny-s-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true),
       zashiki: V(false),
@@ -811,7 +815,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.skylark.co.jp/shabu-you/',
     koryakuSlug: 'shabuyou-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true),
       zashiki: V(false),
@@ -832,7 +836,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     name: 'むさしの森珈琲',
     koryakuSlug: 'musashinomori-coffee-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true, 'ロードサイド店中心'),
       zashiki: V(false),
@@ -854,7 +858,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.31ice.co.jp/',
     koryakuSlug: 'baskin-robbins-31-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V('partial', '店舗による（商業施設内は段差なしが多い'),
       kidsChair: V('partial', '店舗による'),
@@ -879,7 +883,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.mcdonalds.co.jp/',
     koryakuSlug: 'mcdonalds-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true),
       zashiki: V(false),
@@ -901,7 +905,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.kappasushi.jp/',
     koryakuSlug: 'kappa-sushi-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true, '店舗による'),
       zashiki: V(false),
@@ -923,7 +927,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.bronco.co.jp/',
     koryakuSlug: 'bronco-billy-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true),
       zashiki: V(false),
@@ -949,7 +953,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.sukiya.jp/',
     koryakuSlug: 'sukiya-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V(true),
       zashiki: V(false),
@@ -971,7 +975,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.hanamaruudon.com/',
     koryakuSlug: 'hanamaru-udon-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       toriwake: V(true, 'うどんが主役。つゆを薄めて短く切ればOK'),
     },
@@ -992,7 +996,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.bikkuri-donkey.com/',
     koryakuSlug: 'bikkuri-donkey-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V('partial', '店舗による'),
       zashiki: V(false, '椅子席メイン'),
@@ -1014,7 +1018,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     officialUrl: 'https://www.nakau.co.jp/',
     koryakuSlug: 'nakau-kodzure-koryaku',
     verifiedAt: '2026-07-02',
-    verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {
       stepFree: V('partial'),
       zashiki: V(false),

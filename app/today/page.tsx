@@ -22,6 +22,7 @@ import type { Weather } from '@/lib/types';
 import type { AreaSlug } from '@/lib/area';
 import { getAreaName } from '@/lib/area';
 import { getItemsForTodayQuery } from '@/lib/items-catalog';
+import { wrapMoshimoRakuten } from '@/lib/moshimo';
 import { ShareBar } from '@/components/article/ShareBar';
 import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
 import { AdSlot } from '@/components/ads/AdSlot';
@@ -253,7 +254,7 @@ function TodayRecommendedItems({ answer }: { answer: TodayAnswerResult }) {
         {items.map((item, i) => (
           <a
             key={i}
-            href={item.url}
+            href={wrapMoshimoRakuten(item.url)}
             target="_blank"
             rel="sponsored nofollow noopener"
             style={{

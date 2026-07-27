@@ -13,7 +13,7 @@ import {
 } from '@/lib/articles';
 import { ShareBar } from '@/components/article/ShareBar';
 import { TableOfContents } from '@/components/article/TableOfContents';
-import { PRBadge } from '@/components/affiliate/PRBadge';
+import { PRBadge, ProvidedBadge } from '@/components/affiliate/PRBadge';
 import { AffiliateLinkGroup } from '@/components/affiliate/AffiliateLinkGroup';
 import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
 import { NextPlanCTA } from '@/components/article/NextPlanCTA';
@@ -987,6 +987,12 @@ function FileArticleView({ article }: { article: FileArticle }) {
             role="img"
             aria-label={article.title}
           />
+          {/* 提供写真のクレジット（編集方針 5-5: 提供を受けた写真には提供元名を明記） */}
+          {article.heroCredit && (
+            <p style={{ margin: '6px 2px 0', fontSize: 11.5, color: 'var(--ink-mute)', textAlign: 'right' }}>
+              {article.heroCredit}
+            </p>
+          )}
         </div>
       )}
 
@@ -1001,10 +1007,13 @@ function FileArticleView({ article }: { article: FileArticle }) {
               Category · {categoryName}
             </Link>
 
-            {/* PR 開示: ヘッダ最上部に配置してファーストビューで表示（ステマ規制対応） */}
-            {hasAffiliate && (
+            {/* PR/提供 開示: ヘッダ最上部に配置してファーストビューで表示（ステマ規制対応・編集方針5-4） */}
+            {(hasAffiliate || (article.photoProviders && article.photoProviders.length > 0)) && (
               <div style={{ margin: '12px 0 16px' }}>
-                <PRBadge />
+                {hasAffiliate && <PRBadge />}
+                {article.photoProviders && article.photoProviders.length > 0 && (
+                  <ProvidedBadge providers={article.photoProviders} />
+                )}
               </div>
             )}
 
