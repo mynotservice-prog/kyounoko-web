@@ -96,6 +96,23 @@ const LEISURE_NEEDLES = [
 ];
 
 /**
+ * `'宿'`（＝泊まり意図）の部分一致で誤爆する語の除去パターン。
+ *
+ * 実測（2026-07-27・全1,071記事に対する before/after 検証）で、`'宿'` の素の部分一致が
+ * 以下5本を旅行文脈と誤判定し、じゃらん宿予約CTA（A8・実績26clk/成果0＝死に導線）を
+ * 点灯させていた:
+ *   - 新宿: shinjuku-station-babyroom / shitsunai-asobi-shinjuku-tokyo / tokyo-shinjuku-kodzure-lunch
+ *   - 原宿: tokyo-omotesando-kodzure-lunch
+ *   - 宿題: kumon-vs-gakken-hikaku
+ *
+ * `'宿'` そのものを消すのではなく地名・別語だけを除去するのは、`'宿'` の一致に依存している
+ * 正当な旅行記事（fuji-q-area-kosodate / fuji-safari-park-kosodate / kawaguchiko-kodzure /
+ * shimoda-kosodate ＝ タイトル末尾が「…・宿【2026年版】」型）を落とさないため。
+ * この除去を入れた場合の一致本数は 110 → 105 本で、減るのは上記5本のみ（検証済み）。
+ */
+const LEISURE_FALSE_POSITIVES = /新宿|原宿|宿題|下宿/g;
+
+/**
  * 日帰りレジャー意図の判定トークン（水遊び・プール・水族館）。
  * この意図は「泊まり」商材のじゃらんより、前売りチケットの「アソビュー！」が構造的に一致する
  * （じゃぶじゃぶ池等の無料面でも「近くの水遊び施設の前売り」への誘導として泊まりより意図が近い）。
@@ -124,7 +141,11 @@ export function getTravelOffer(
   category?: string,
   title?: string,
 ): ReservationOffer | null {
-  if (!ctxIncludes([slug, category, title], LEISURE_NEEDLES)) return null;
+  // 「新宿 / 原宿 / 宿題」等の誤爆語を先に除去してから泊まり意図を判定する。
+  const leisureCtx = [slug, category, title].map((s) =>
+    (s ?? '').replace(LEISURE_FALSE_POSITIVES, ''),
+  );
+  if (!ctxIncludes(leisureCtx, LEISURE_NEEDLES)) return null;
 
   // 日帰り（水遊び/プール/水族館）意図はアソビュー前売りが最適。あれば最優先で返す。
   if (ctxIncludes([slug, category, title], DAYTRIP_NEEDLES)) {
