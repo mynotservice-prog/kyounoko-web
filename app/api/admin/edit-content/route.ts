@@ -316,6 +316,15 @@ export async function POST(req: NextRequest) {
  *   単純削除だと admin で差し替えた hero 画像などが古い md 版に戻ってしまうため、
  *   まず KV 版の生Markdown（画像込みの最新）を md に書き戻してから KV を削除する。
  *   → 以後この記事は md 編集（deploy-md.sh のフルビルド）がそのまま反映されるようになる。
+ *
+ * DELETE ?kind=article&slug=xxx&writeback=0
+ *   書き戻しを行わず、KV 上書きの削除だけを行う。
+ *   **呼び出し側が「md 側が既に正しい」ことを確認済みのときだけ使う。**
+ *   必要な理由: 書き戻しは GitHub Contents API に依存しており、GITHUB_TOKEN が
+ *   失効すると 404 で失敗して削除まで到達しない（2026-07-27 に本番で発生。
+ *   ghGetFile も全 slug で 404 = リポジトリ単位で権限が無い状態だった）。
+ *   md をリポジトリ側で先に正しくしてからデプロイした場合、書き戻しは不要どころか
+ *   「古い KV 版で md を上書きする」有害な操作になるため、明示的に飛ばせるようにする。
  */
 export async function DELETE(req: NextRequest) {
   const guard = isAllowed(req);
@@ -342,9 +351,13 @@ export async function DELETE(req: NextRequest) {
   }
 
   // 1) KV 版（画像込みの最新）を md に書き戻す
-  let wrote: 'github' | 'fs' | 'none' = 'none';
+  //    writeback=0 のときは呼び出し側が md を正にした前提でスキップする。
+  const skipWriteback = searchParams.get('writeback') === '0';
+  let wrote: 'github' | 'fs' | 'none' | 'skipped' = 'none';
   try {
-    if (useGitHub()) {
+    if (skipWriteback) {
+      wrote = 'skipped';
+    } else if (useGitHub()) {
       const repoRel = repoPath('article', slug);
       const prev = await ghGetFile(repoRel);
       await ghPutFile(repoRel, raw, `flatten(article): ${slug} KV override→md（md正に統一）`, prev?.sha);

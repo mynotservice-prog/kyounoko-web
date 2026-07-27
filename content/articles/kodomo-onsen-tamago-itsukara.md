@@ -7,7 +7,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-07-15'
-hero: /img/scenes/outing-general-11.webp
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/kodomo-onsen-tamago-itsukara-mrn2uakq.png"
 area: all
 quickInfo:
   ageRanges:

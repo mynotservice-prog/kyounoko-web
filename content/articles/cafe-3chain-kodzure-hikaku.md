@@ -21,7 +21,7 @@ quickInfo:
     - any
   durationMin: 60
   budget: low
-hero: /img/scenes/meal-14.webp
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/cafe-3chain-kodzure-hikaku-mra1fh5u.jpg"
 ---
 
 ## TL;DR（先に知りたい人へ）

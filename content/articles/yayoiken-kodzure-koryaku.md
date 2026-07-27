@@ -8,7 +8,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
 updatedAt: '2026-06-03'
-hero: /img/scenes/meal-22.webp
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/yayoiken-kodzure-koryaku-mra11t66.jpg"
 lede: >-
   「やよい軒って子連れで入れる？ベビーチェアある？」を1記事で解決。**ご飯おかわり自由＋取り分けやすい和定食**で、実は子連れと相性が良い定食チェーン。0-6歳のお子様連れでやよい軒を最大限活用するコツを保存版でまとめました。
 quickInfo:

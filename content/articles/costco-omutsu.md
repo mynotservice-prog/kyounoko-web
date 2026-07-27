@@ -1,12 +1,14 @@
 ---
 slug: costco-omutsu
-title: コストコのオムツ替えスポット完全ガイド｜場所・台数・授乳室【2026年】
-metaDescription: コストコでオムツ替えはどこでできる？多目的トイレの台数、授乳室、ベビールームの位置、ミルク調乳の可否まで、子連れ買い物を快適にする情報を整理しました。
+title: >-
+  コストコの授乳室は一部の旗艦店のみ・オムツ替え台は全店の多目的トイレに｜場所・台数・ベビールーム・調乳のお湯【2026年】
+metaDescription: >-
+  コストコの授乳室は一部の旗艦店のみ完備で、多くの店舗はベビールーム未設置。一方でオムツ替え台（折りたたみ式ベビーシート）は全店の多目的トイレに設置されており、場所はフードコート横か入口・出口付近が多いパターンです。ミルク調乳用のお湯はフードコートでもらえることが多く、売場が広いぶんオムツ替えのタイミングは計画的に。台数・位置の目安と、子連れ買い物を快適にする動線を整理しました。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-30'
-hero: /img/scenes/shopping-04.webp
+updatedAt: "2026-07-27"
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/costco-omutsu-mrbd5j1d.jpg"
 area: all
 quickInfo:
   ageRanges:

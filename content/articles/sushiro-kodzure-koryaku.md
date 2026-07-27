@@ -1,12 +1,14 @@
 ---
 slug: sushiro-kodzure-koryaku
-title: スシローは子連れOK？ベビーカー・ベビーチェア・離乳食・うに/まぐろ取り分け【2026】
-metaDescription: スシローはベビーカーで入れる？キッズメニュー全種類、離乳食持込、ベビーチェア、子供の取り分けに最適なネタ、混雑回避時間まで0-6歳の家族目線で解説。
+title: >-
+  スシローは離乳食の持ち込みOK・ベビーカーで席まで入れる｜ベビーチェア・おむつ替え台あり・子連れの取り分けネタ【2026】
+metaDescription: >-
+  スシローは離乳食を持ち込みできる店舗が多く、スタッフに一声かけると取り皿を出してもらえることもあります。入口の段差が少なくベビーカーで席まで入れる店舗が一般的で、ボックス席は広め。ベビーチェア・おむつ替え台のある店舗が多い一方、授乳室は基本ありません。うどん・ラーメン・サイド・デザートが充実し寿司が苦手な子でも食べられます。取り分けに向くネタ、混雑回避時間、アレルゲン検索の使い方まで0-6歳の家族目線で解説（設備は店舗差があるので事前確認を）。
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
-updatedAt: '2026-06-03'
-hero: /img/scenes/meal-04.webp
+updatedAt: "2026-07-27"
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/sushiro-kodzure-koryaku-mra3a2oy.jpg"
 area: tokyo
 quickInfo:
   ageRanges:

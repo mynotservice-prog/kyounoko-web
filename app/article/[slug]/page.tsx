@@ -35,7 +35,7 @@ import {
   getRestaurantReservationOffer,
   getCoopOffer,
   getTravelOffer,
-  getKidsMenuLeisureOffer,
+  getLeisureBridgeOffer,
 } from '@/lib/reservation-cta';
 import { ReservationCTA } from '@/components/article/ReservationCTA';
 import { getSupervisor } from '@/lib/supervisors';
@@ -688,13 +688,24 @@ function FileArticleView({ article }: { article: FileArticle }) {
   const coopOffer = getCoopOffer(article.slug, article.category, article.title);
 
   // 旅行・おでかけ文脈向け子連れ宿予約CTA（じゃらん/A8）。env 未設定なら null。
-  const travelOffer = getTravelOffer(article.slug, article.category, article.title);
+  // area を渡すのは、水遊び面のアソビュー着地を都道府県一覧に深リンクするため。
+  const travelOffer = getTravelOffer(
+    article.slug,
+    article.category,
+    article.title,
+    article.area,
+  );
 
-  // kids-menu勝ち型面（王将/スシロー等・明示allowlist）向けの「外食ついでにおでかけ」
-  // レジャー予約CTA。日帰り意図に合わせアソビュー優先・未提携時はじゃらん宿泊に暫定
-  // フォールバック（lib側で出し分け）。endOffer/ブリッジとは独立した専用枠のため、
-  // 冷凍宅配ブリッジを奪わずに1枠だけ純加算する。両env未設定なら null（=非表示）。
-  const kidsMenuLeisureOffer = getKidsMenuLeisureOffer(article.slug);
+  // 外食・室内あそび場などの面向け「近くでおでかけ」レジャー予約CTA。
+  // 日帰り意図に合わせアソビュー優先・未提携時はじゃらん宿泊に暫定フォールバック（lib側で出し分け）。
+  // endOffer/ブリッジとは独立した専用枠のため、冷凍宅配ブリッジを奪わずに1枠だけ純加算する。
+  // 両env未設定なら null（=非表示）。
+  const leisureBridgeOfferRaw = getLeisureBridgeOffer(
+    article.slug,
+    article.category,
+    article.title,
+    article.area,
+  );
 
   // 読了後の高単価CTAは1枚だけ（UX/AdSense対策: PRブロック過密の解消）。
   // 優先度: 生協(資料請求・最高単価) > 宿予約 > 幼児食宅配ブリッジ。
@@ -705,6 +716,16 @@ function FileArticleView({ article }: { article: FileArticle }) {
   const showBridge =
     !!restaurantBridge &&
     (!endOffer || (!!coopOffer && allowsFoodBridgeAlongsideCoop(article.slug)));
+
+  // レジャー枠は「末尾スロットが空いているページ」にだけ出す（枠数を増やさないための条件）。
+  // 理由は2つ:
+  //  1. 水遊び面は travelOffer 側で既にアソビューが出るため、重ねるとアソビュー枠が2つになる。
+  //  2. AdSense: 記事末尾は AdSlot(article-end) の直上。ここにPRブロックを積み増すと
+  //     広告の視認可能率（実測 92.5%→65.7% に低下済）をさらに押し下げ、
+  //     「価値の低い広告枠／広告過多」のポリシーリスクにも近づく。
+  //     本変更は生協枠を外食面から外した分の“置き換え”に留め、ページあたりのPR枠数は
+  //     どの面でも増やさない（純増ゼロ）。
+  const leisureBridgeOffer = endOffer ? null : leisureBridgeOfferRaw;
 
   // 判定ボックス前出し(戦略§7): 本文中の「子連れチェックリスト」H2セクションを
   // 抽出してヒーロー直下(クイック情報の隣)へ移動。無い記事は従来どおり。
@@ -1250,7 +1271,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
               レジャー予約CTA（アソビュー優先・じゃらん宿泊に暫定フォールバック）。endOffer/
               ブリッジとは独立した専用枠で、冷凍宅配ブリッジを奪わずに1枠だけ併載する。
               両env未設定なら非表示。 */}
-          {kidsMenuLeisureOffer && <ReservationCTA offer={kidsMenuLeisureOffer} />}
+          {leisureBridgeOffer && <ReservationCTA offer={leisureBridgeOffer} />}
 
           {/* AdSense: 記事末尾（FAQ前） */}
           <AdSlot placement="article-end" />

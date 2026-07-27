@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-23'
 updatedAt: '2026-06-03'
-hero: /img/scenes/meal-04.webp
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/ringer-hut-kodzure-koryaku-mracbasg.jpg"
 heroAlt: リンガーハットのテーブル席で、家族が野菜たっぷりちゃんぽんの麺と野菜を子ども用に短く切って取り分けている様子（イラスト）
 area: all
 quickInfo:

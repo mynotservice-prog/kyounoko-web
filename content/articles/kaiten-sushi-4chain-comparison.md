@@ -21,7 +21,7 @@ quickInfo:
     - any
   durationMin: 75
   budget: low
-hero: /img/scenes/meal-14.webp
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/kaiten-sushi-4chain-comparison-mrn3a0ra.jpg"
 ---
 
 ## TL;DR（先に知りたい人へ）

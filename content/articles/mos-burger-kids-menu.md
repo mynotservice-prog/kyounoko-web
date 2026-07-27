@@ -8,7 +8,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-07-09T00:00:00.000Z'
 updatedAt: '2026-07-21'
-hero: /img/scenes/meal-17.webp
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/mos-burger-kids-menu-mrn25r1p.jpg"
 heroAlt: モスバーガーのテーブル席で、子ども向けのワイワイセットのバーガーとポテトを取り分けている家族の様子（イラスト）
 area: all
 quickInfo:
