@@ -9,6 +9,7 @@ import {
   type CatalogCategory,
   type CatalogItem,
 } from '@/lib/items-catalog';
+import { getSurfaceOffers } from '@/lib/surface-offers';
 
 /**
  * 記事 -> 関連商品 自動マッピング
@@ -207,6 +208,14 @@ export function getRelatedItemsForArticle(
   opts: { allowCategoryFallback?: boolean } = {},
 ): AffiliateLinkProps[] {
   const { allowCategoryFallback = true } = opts;
+
+  // 0) 面（surface）単位のオファーが定義されていれば最優先で返す。
+  //    slug個別指定より先に評価するのは、クリックが集まるのは個別記事ではなく
+  //    「面」だから（GSC実測: mizuasobi-* 45本3,672clk に対し、slug指定51本は合計13clk）。
+  //    ここで拾わないと下の HINT_RULES の needle 'asobi' が mizu-asobi を誤爆して
+  //    水遊び記事に木製積み木を出してしまう（2026-07-27 本番HTMLで実測した不具合）。
+  const surface = getSurfaceOffers(slug, category, title);
+  if (surface && surface.length > 0) return surface;
 
   // 1) 既存の明示的マッピング対象なら手作りデータ（画像付き）を返す。
   //    ただし対象スラッグでも商品カードが0件の記事（本文リンク型の収益記事）は、

@@ -23,6 +23,11 @@
  */
 
 import { isRestaurantContext } from '@/lib/article-product-hints';
+import {
+  asoviewGenreForSpotCategory,
+  buildAsoviewLanding,
+  resolveAsoviewLanding,
+} from '@/lib/asoview-deeplink';
 
 export type ReservationOffer = {
   /** 遷移先（VCアフィリエイトURL。env から取得） */
@@ -66,12 +71,20 @@ export function getCoopOffer(
   category?: string,
   title?: string,
 ): ReservationOffer | null {
-  const isFoodContext =
-    isRestaurantContext(slug, category, title) ||
-    ctxIncludes(
-      [slug, category, title],
-      ['rinyushoku', 'rinyuushoku', '離乳食', 'takushoku', '宅食', '時短', 'jitan', 'youjishoku', 'yojishoku', '幼児食'],
-    );
+  // 2026-07-27 実測にもとづく絞り込み（旧実装は isRestaurantContext を OR で含めていた）。
+  //
+  // 本番HTMLを上位198記事ぶん取得して数えたところ、この生協CTA（A8 a8mat=4B65SE+PLNSI+…）は
+  // **94本・14,195clk/28日** の外食チェーン面の「記事末尾スロット」を独占していた。
+  // 一方 ASP実測では **A8は全体で26クリック・成果0件**（もしも楽天 EPC¥12.6／
+  // アソビュー VC 2件¥588 と対照的）。＝最大の露出枠を、換金実績のない導線が押さえていた。
+  // 外食チェーン記事の読者意図は「今から子連れでこの店に行けるか」であって
+  // 「家に生協を引く」ではないため、外食“文脈”という広い条件を外し、
+  // **離乳食・宅食・幼児食が記事の主題である面に限定**する。
+  // （その面では生協の資料請求は文脈的に正直な導線なので残す。）
+  const isFoodContext = ctxIncludes(
+    [slug, category, title],
+    ['rinyushoku', 'rinyuushoku', '離乳食', 'takushoku', '宅食', '時短', 'jitan', 'youjishoku', 'yojishoku', '幼児食'],
+  );
   if (!isFoodContext) return null;
   const href = process.env.NEXT_PUBLIC_A8_COOP_URL?.trim();
   if (!isValidUrl(href)) return null;
@@ -84,9 +97,21 @@ export function getCoopOffer(
   };
 }
 
-/** 旅行・おでかけ・レジャー文脈の判定トークン（子連れ宿予約ブリッジの出し分け用）。 */
+/**
+ * 旅行・おでかけ・レジャー文脈の判定トークン（子連れ宿予約ブリッジの出し分け用）。
+ *
+ * 2026-07-27 修正: needle から **'spot' を削除** した。
+ * 本番HTML実測で `tokyo-kodomo-mushiyoke-spot`（624clk/28日・都内の虫よけスポット記事）に
+ * 「じゃらんで宿を探す」CTAが点灯していた。slug末尾の `-spot` を 'spot' needle が拾って
+ * いたためで、虫よけ対策を調べている読者に宿泊予約は意図がまったく合わない
+ * （A8のじゃらん枠は9本721clkのうち624clkがこの1本＝露出の86%が誤爆だった）。
+ * 意図した「子連れスポットまとめ」面は 'kodzure-spot' で引き続き拾える。
+ *
+ * ※以前このコメントにあった「カテゴリ today-doko は needle にしない」は現行コードでも
+ *   維持されている（today-doko は元から needle に無い）。実際に誤爆していたのは 'spot'。
+ */
 const LEISURE_NEEDLES = [
-  'spot', 'kodzure-spot', 'odekake', 'ryokou', 'ryoko', 'ryokan',
+  'kodzure-spot', 'odekake', 'ryokou', 'ryoko', 'ryokan',
   'onsen', 'hotel', 'yado', 'leisure', 'pool', 'aquarium', 'camp',
   'natsuyasumi', 'kazoku-ryokou', '旅行', '宿', '温泉', 'おでかけ', '家族旅行',
   // 夏の水遊び（季節ピーク・GSC実流入あり: mizuasobi-* / 舎人公園じゃぶじゃぶ池）。
@@ -123,15 +148,25 @@ export function getTravelOffer(
   slug: string,
   category?: string,
   title?: string,
+  area?: string,
 ): ReservationOffer | null {
   if (!ctxIncludes([slug, category, title], LEISURE_NEEDLES)) return null;
+  // 外食チェーン面はレジャー面ではない（末尾のレジャー枠は getLeisureBridgeOffer が担当）。
+  // ここで拾うと1ページに同じアソビュー枠が2つ出るため明示的に除外する。
+  if (isRestaurantContext(slug, category, title)) return null;
 
   // 日帰り（水遊び/プール/水族館）意図はアソビュー前売りが最適。あれば最優先で返す。
   if (ctxIncludes([slug, category, title], DAYTRIP_NEEDLES)) {
     const asoview = process.env.NEXT_PUBLIC_VC_ASOVIEW_URL?.trim();
     if (isValidUrl(asoview)) {
+      // 着地を「アソビュートップ」から面の意図に合う一覧へ深リンクする（実測の改善点）。
+      // 例: mizuasobi-kawasaki → 神奈川県のプール・ウォーターパーク一覧。
+      const href = buildVcDeepLink(
+        asoview,
+        resolveAsoviewLanding(slug, category, title, area),
+      );
       return {
-        href: asoview,
+        href,
         heading: '近くの水遊び・プールを前売りでチェック',
         note: 'プール・じゃぶじゃぶ池・水族館など、近くの水遊びスポットを前売りチケットで。当日券の行列を避けて予約できる施設もあります。',
         cta: 'アソビュー！で水遊びスポットを探す →',
@@ -200,9 +235,44 @@ export const KIDS_MENU_LEISURE_SLUGS: readonly string[] = [
   'steakgusto-kids-menu',
 ];
 
+/**
+ * 2026-07-27 追加: レジャー枠を kids-menu の21本から「面」へ拡張する。
+ *
+ * 本番HTML実測（上位198記事・20,595clk/28日）で、アソビュー枠が出ていたのは
+ * 53本・9,196clk のみ。同じ「外食ついでに近場でおでかけ」意図を持つ面が丸ごと抜けていた:
+ *   - 子連れ攻略面 `*-kodzure-koryaku`（saize 901 / cocos 624 / yayoiken 525 /
+ *     royal-host 392 / bamiyan 356 / gyukaku 332 / gusto 302 …）
+ *   - モーニング面 `*-morning-kosodate`（hoshino 882 …）・`kodzure-morning-cafe-*`（374）
+ *   - 室内あそび場面 `shitsunai-asobi-*`（suginami 114 / meguro 105 …）
+ *     ※室内あそび場はアソビューの「キッズパーク」ジャンルと意図が完全一致する面なのに
+ *       枠自体が無かった。
+ * これらは slug のパターンで安定して判別できるため、以後の新記事にも自動で枠が付く
+ * （slug列挙だと新記事に永久に付かない、という旧設計の欠陥を解消する）。
+ *
+ * 除外: 離乳食持ち込み等の「食の主題」面は生協/宅配ブリッジが末尾を使うので重ねない。
+ */
+const LEISURE_SURFACE_PATTERNS: RegExp[] = [
+  /-kids-menu$/,
+  /-kodzure-koryaku$/,
+  /^kodzure-.*-koryaku$/,
+  /-morning-kosodate$/,
+  /^kodzure-morning-cafe/,
+  /^shitsunai-asobi-/,
+  /^kodzure-famires-/,
+];
+
 /** kids-menu 勝ち型面か（じゃらんレジャー枠の併載対象・明示allowlist）。 */
 export function allowsKidsMenuLeisureOffer(slug: string): boolean {
   return KIDS_MENU_LEISURE_SLUGS.includes(slug);
+}
+
+/** レジャー枠を出す面か（明示allowlist または 面パターン）。 */
+export function allowsLeisureBridgeOffer(slug: string): boolean {
+  if (KIDS_MENU_LEISURE_SLUGS.includes(slug)) return true;
+  const s = slug.toLowerCase();
+  // 離乳食主題の面は末尾スロットを生協/宅配ブリッジが使うため重ねない。
+  if (/rinyushoku|rinyuushoku/.test(s)) return false;
+  return LEISURE_SURFACE_PATTERNS.some((re) => re.test(s));
 }
 
 /**
@@ -220,17 +290,32 @@ export function allowsKidsMenuLeisureOffer(slug: string): boolean {
  *     約束しない）。アソビュー提携が下り次第 env を入れれば自動で1へ格上げ。
  *  3. どちらも無ければ null（=非表示・無害）。
  */
-export function getKidsMenuLeisureOffer(slug: string): ReservationOffer | null {
-  if (!allowsKidsMenuLeisureOffer(slug)) return null;
+export function getLeisureBridgeOffer(
+  slug: string,
+  category?: string,
+  title?: string,
+  area?: string,
+): ReservationOffer | null {
+  if (!allowsLeisureBridgeOffer(slug)) return null;
 
   const asoview = process.env.NEXT_PUBLIC_VC_ASOVIEW_URL?.trim();
   if (isValidUrl(asoview)) {
+    // 着地をアソビュートップから面の意図＋都道府県の一覧へ深リンクする。
+    // 外食チェーン面は全国一覧、`shitsunai-asobi-{区}-tokyo` のような面は
+    // 「東京都のキッズパーク」へ落ちる。
+    const href = buildVcDeepLink(
+      asoview,
+      resolveAsoviewLanding(slug, category, title, area),
+    );
+    const isIndoorPlay = /^shitsunai-asobi-/.test(slug.toLowerCase());
     return {
-      href: asoview,
-      heading: '外食のあとは近くでおでかけ',
-      note: '水族館・動物園・室内あそび場など、近くのレジャーを前売りでサクッと。当日券の行列を避けて予約できます。',
+      href,
+      heading: isIndoorPlay ? '室内あそび場は前売りが早い' : '外食のあとは近くでおでかけ',
+      note: isIndoorPlay
+        ? '雨の日・猛暑日は室内あそび場が混みます。前売りチケットなら窓口の行列を避けて入れる施設があります。'
+        : '水族館・動物園・室内あそび場など、近くのレジャーを前売りでサクッと。当日券の行列を避けて予約できます。',
       cta: 'アソビュー！でおでかけ先を探す →',
-      itemId: 'asoview-kids-menu-leisure',
+      itemId: isIndoorPlay ? 'asoview-indoor-play' : 'asoview-kids-menu-leisure',
     };
   }
 
@@ -247,6 +332,11 @@ export function getKidsMenuLeisureOffer(slug: string): ReservationOffer | null {
   }
 
   return null;
+}
+
+/** @deprecated 面ベースの getLeisureBridgeOffer を使う。既存呼び出し互換のため残置。 */
+export function getKidsMenuLeisureOffer(slug: string): ReservationOffer | null {
+  return allowsKidsMenuLeisureOffer(slug) ? getLeisureBridgeOffer(slug) : null;
 }
 
 /** スポット詳細ページ向けの宿予約オファー（park/restaurant 以外のレジャー全般）。 */
@@ -365,8 +455,13 @@ export function getSpotReservationOffer(category: string): ReservationOffer | nu
     };
   }
   if (ASOVIEW_CATEGORIES.has(category)) {
-    const href = process.env.NEXT_PUBLIC_VC_ASOVIEW_URL?.trim();
-    if (!isValidUrl(href)) return null;
+    const base = process.env.NEXT_PUBLIC_VC_ASOVIEW_URL?.trim();
+    if (!isValidUrl(base)) return null;
+    // スポットのカテゴリに一致するアソビューのジャンル一覧へ深リンク（トップ着地をやめる）。
+    const href = buildVcDeepLink(
+      base,
+      buildAsoviewLanding(asoviewGenreForSpotCategory(category)),
+    );
     return {
       href,
       heading: 'チケット・前売りをチェック',
