@@ -378,7 +378,7 @@ A. ガスト・ジョナサンは朝食メニュー内にキッズプレート�
 
 **チェーン別 モーニング詳細ガイド**（時間帯・メニュー・子連れ攻略）
 
-- [コメダ珈琲のモーニング 完全ガイド](/article/komeda-morning-kosodate)
+- [コメダのモーニングは何時まで？開店〜11時・土日祝も同じ](/article/komeda-morning-kosodate)
 - [星乃珈琲のモーニング｜時間・メニュー・値段と子連れ攻略](/article/hoshino-morning-kosodate)
 - [ガストのモーニング 完全ガイド](/article/gusto-morning-kosodate)
 - [ジョナサンのモーニング 完全ガイド](/article/jonathan-morning-kosodate)
