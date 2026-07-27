@@ -169,7 +169,6 @@ A. **3歳以下は無料**の店舗が多いです。来店時に確認すると
 
 - [バーミヤン 子連れ攻略ガイド](/article/bamiyan-kodzure-koryaku)
 - [サイゼリヤ vs やよい軒 子連れどっち？](/article/yayoiken-vs-saize-kodzure-douchi)
-- [バーミヤン 中華 鳥文部の本音レビュー](/article/bamiyan-china-toribunke-real)
 - [子連れファミレス15選](/article/kodzure-famires-15sen)
 - [0歳育児の完全マップ](/article/0sai-ikuji-kanzen-map)
 

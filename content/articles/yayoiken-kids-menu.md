@@ -169,7 +169,6 @@ A. **お子様ランチはテイクアウト対応**（おもちゃ付き）。�
 
 - [やよい軒 子連れ攻略ガイド](/article/yayoiken-kodzure-koryaku)
 - [やよい軒 vs サイゼリヤ 子連れどっち？](/article/yayoiken-vs-saize-kodzure-douchi)
-- [やよい軒 とりわけの本音レビュー](/article/yayoiken-toribunke-real)
 - [子連れ和食・定食チェーンまとめ](/article/kodzure-famires-15sen)
 - [離乳食の取り分け完全ガイド](/article/0sai-ikuji-kanzen-map)
 
