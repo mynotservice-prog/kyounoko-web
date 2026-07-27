@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-06-26'
 updatedAt: '2026-06-26'
-hero: /img/scenes/meal-16.webp
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/kura-sushi-mawaru-eisei-kodomo-mrn33cih.jpg"
 area: all
 quickInfo:
   ageRanges:

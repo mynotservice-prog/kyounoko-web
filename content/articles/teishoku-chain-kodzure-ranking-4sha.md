@@ -21,7 +21,7 @@ quickInfo:
     - any
   durationMin: 45
   budget: low
-hero: /img/scenes/meal-24.webp
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/teishoku-chain-kodzure-ranking-4sha-mraa3fe5.jpg"
 heroAlt: 定食チェーンのテーブルで、一汁三菜のトレーから子どもに白ごはんや焼き魚を取り分けている家族の様子（イラスト）
 ---
 

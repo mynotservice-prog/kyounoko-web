@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-05-30'
-hero: /img/scenes/baby-food-03.webp
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/hamasushi-rinyushoku-mochikomi-mrn3hzkt.jpg"
 area: all
 quickInfo:
   ageRanges:
@@ -86,7 +86,7 @@ A. 多くの店舗で対応してくれます。「ミルク用お湯くださ�
 ## 関連記事
 
 - [はま寿司は子連れOK？ベビーカー・キッズメニュー・離乳食・取り分け](/article/hama-sushi-kodzure-koryaku)
-- [くら寿司に離乳食持ち込みOK？公式方針・温め対応・実例](/article/rinyuushoku-mochikomi-chain-15)
+- [くら寿司に離乳食持ち込みOK？公式方針・温め対応・実例](/article/kurasushi-rinyushoku-mochikomi)
 - [離乳食持ち込みOK・温めてくれるチェーン店15選](/article/rinyuushoku-mochikomi-chain-15)
 - [回転寿司4チェーン子連れ徹底比較](/article/kaiten-sushi-4chain-comparison)
 - [0歳育児完全マップ](/article/0sai-ikuji-kanzen-map)

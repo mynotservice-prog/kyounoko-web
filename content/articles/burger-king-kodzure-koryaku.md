@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-22'
 updatedAt: '2026-07-21'
-hero: /img/scenes/meal-02.webp
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/burger-king-kodzure-koryaku-mra16mh5.jpg"
 heroAlt: バーガーキングの広めのテーブル席で、直火焼きの本格バーガーとキッズセットを子どもと取り分けながら食べる家族の様子（イラスト）
 area: all
 quickInfo:

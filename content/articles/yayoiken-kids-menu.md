@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-06-16T00:00:00.000Z'
 updatedAt: '2026-07-24'
-hero: /img/scenes/meal-13.webp
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/yayoiken-kids-menu-mra9wehu.jpg"
 area: all
 quickInfo:
   ageRanges:
@@ -169,6 +169,7 @@ A. **お子様ランチはテイクアウト対応**（おもちゃ付き）。�
 
 - [やよい軒 子連れ攻略ガイド](/article/yayoiken-kodzure-koryaku)
 - [やよい軒 vs サイゼリヤ 子連れどっち？](/article/yayoiken-vs-saize-kodzure-douchi)
+- [やよい軒 とりわけの本音レビュー](/article/yayoiken-toribunke-real)
 - [子連れ和食・定食チェーンまとめ](/article/kodzure-famires-15sen)
 - [離乳食の取り分け完全ガイド](/article/0sai-ikuji-kanzen-map)
 

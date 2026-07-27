@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-05-30'
-hero: /img/scenes/stroller-05.webp
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/gusto-stroller-mra3lemv.jpg"
 area: all
 quickInfo:
   ageRanges:
@@ -107,6 +107,7 @@ A. 公式に「ベビーカー入店OK」と明記してはいませんが、**�
 
 - [ガスト 子連れ攻略完全ガイド](/article/gusto-kodzure-koryaku)
 - [ガスト ベビーチェア](/article/gusto-kodzure-koryaku)
+- [ガスト 離乳食温め リアル体験](/article/gusto-rinyu-warm-real)
 - [ファミレス子連れランキング2026](/article/famires-kodzure-ranking-2026-10sen)
 - [0歳育児の完全マップ](/article/0sai-ikuji-kanzen-map)
 

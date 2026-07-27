@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-07-10'
 updatedAt: '2026-07-10'
-hero: /img/scenes/pool-water-14.webp
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/toneri-koen-jabujabuike-mrmyxzr9.jpg"
 area: tokyo
 seoRelated: mizuasobi-adachi-tokyo
 quickInfo:

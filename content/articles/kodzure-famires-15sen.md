@@ -24,7 +24,7 @@ quickInfo:
 area: all
 speakableSummary: >-
   子連れに使える全国ファミレス10店をベビーカー入店・キッズメニュー・ベビーチェア・離乳食持込の4軸で比較した保存版です。サイゼリヤ・ガスト・ジョナサン・ロイヤルホスト・ココスといった王道チェーンを年齢別に整理し、0歳の離乳食電子レンジ対応、2-3歳の取り分け鉄板メニュー、4-6歳のキッズプレート活用法までカバー。混雑回避は11時30分入店、予約はキッズメニューがある店優先、離乳食持ち込みは事前確認の3点が成功の鉄則です。スコア順のTOP10ランキング詳細版は別記事に集約しています。
-hero: /img/scenes/meal-21.webp
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/kodzure-famires-15sen-mrn3b7d7.jpg"
 ---
 
 ## 結論（先に知りたい人へ）

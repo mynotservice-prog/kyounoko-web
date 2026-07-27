@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-06-02'
-hero: /hero-ai/kurasushi-omutsu.jpg
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/kurasushi-omutsu-mrn3aso8.png"
 area: all
 quickInfo:
   ageRanges:
@@ -87,6 +87,6 @@ A. モール共用トイレ、近隣の赤ちゃん本舗・西松屋、コン�
 
 - [くら寿司は子連れOK？ベビーカー・ビッくらポン・離乳食・取り分け](/article/kura-sushi-kodzure-koryaku)
 - [くら寿司のキッズメニュー徹底解説｜ビッくらポンと食べられるサイド](/article/kurasushi-kids-menu)
-- [くら寿司に離乳食持ち込みOK？公式方針・温め対応・実例](/article/rinyuushoku-mochikomi-chain-15)
+- [くら寿司に離乳食持ち込みOK？公式方針・温め対応・実例](/article/kurasushi-rinyushoku-mochikomi)
 - [回転寿司4チェーン子連れ徹底比較](/article/kaiten-sushi-4chain-comparison)
 - [0歳育児完全マップ](/article/0sai-ikuji-kanzen-map)

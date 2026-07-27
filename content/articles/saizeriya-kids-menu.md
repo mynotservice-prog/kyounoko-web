@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-06-16T00:00:00.000Z'
 updatedAt: '2026-07-24'
-hero: /img/scenes/meal-09.webp
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/saizeriya-kids-menu-mra0fiae.jpg"
 area: all
 quickInfo:
   ageRanges:

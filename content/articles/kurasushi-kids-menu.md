@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-06-18T00:00:00.000Z'
 updatedAt: '2026-06-18'
-hero: /img/scenes/meal-31.webp
+hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/kurasushi-kids-menu-mrn38ou8.jpg"
 area: all
 quickInfo:
   ageRanges:
@@ -85,7 +85,7 @@ A. 会計皿数で遊ぶゲームなので年齢制限はありませんが、�
 A. タッチパネルや公式サイトでメニューごとのアレルゲン情報を確認できます。
 
 **Q. 離乳食の持ち込みはOK？**
-A. 詳しくは[くら寿司の離乳食持ち込みガイド](/article/rinyuushoku-mochikomi-chain-15)をご覧ください。
+A. 詳しくは[くら寿司の離乳食持ち込みガイド](/article/kurasushi-rinyushoku-mochikomi)をご覧ください。
 
 **Q. ベビーチェアはありますか？**
 A. 用意があります。詳しくは[くら寿司のベビーチェアガイド](/article/kurasushi-baby-chair)へ。
@@ -98,7 +98,7 @@ A. 用意があります。詳しくは[くら寿司のベビーチェアガイ�
 
 - [くら寿司は子連れOK？ベビーカー・離乳食・ビッくらポン完全攻略](/article/kura-sushi-kodzure-koryaku)
 - [くら寿司のベビーチェアガイド](/article/kurasushi-baby-chair)
-- [くら寿司の離乳食持ち込みガイド](/article/rinyuushoku-mochikomi-chain-15)
+- [くら寿司の離乳食持ち込みガイド](/article/kurasushi-rinyushoku-mochikomi)
 - [回転寿司4チェーン子連れ徹底比較](/article/kaiten-sushi-4chain-comparison)
 - [キッズメニュー比較15チェーン](/article/kids-menu-chain-15-hikaku)
 
