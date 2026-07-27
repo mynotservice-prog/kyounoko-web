@@ -69,6 +69,7 @@ const DRY_RUN = flags.has('--dry-run') || flags.has('-n');
 const FLATTEN = flags.has('--flatten');
 const VERIFY_ONLY = flags.has('--verify-only');
 const SKIP_CF = flags.has('--no-cf');
+const NO_BUILD = flags.has('--no-build');
 const HELP = flags.has('--help') || flags.has('-h');
 const EXPECT_OVERRIDE = opts.expect ?? null;
 const RANGE_OPT = opts.range ?? null;
@@ -87,6 +88,8 @@ if (HELP) {
   --slug=a,b            対象slugを明示（git diff を使わない）
   --expect="文字列"     期待文字列を上書き（既定は各slugの md frontmatter title）
   --verify-only         ビルド/パージをせず、素のURLの検証だけ実行
+  --no-build            ビルドはせず、Ready待ち→ISR再生成→CFパージ→検証だけ行う
+                        （git push / PRマージで既にビルドが走っている場合。重複ビルドを避ける）
   --no-cf               CFパージをスキップ
   --build-timeout=秒    Ready 待ちのタイムアウト（既定 2400）
 `);
@@ -713,20 +716,32 @@ async function main() {
 
   // 4) ビルド
   if (!VERIFY_ONLY) {
-    const build = runVercelBuild();
-    if (build.exit !== 0) {
-      console.error(`${NG} vercel --prod --force が非ゼロ終了しました（exit=${build.exit}）。中断します。`);
-      process.exit(1);
+    let buildUrl = null;
+    if (NO_BUILD) {
+      // git push / PRマージで Vercel 側のビルドが既に走っている場合。
+      // ここで vercel --prod --force を重ねると **同じ内容で2回ビルドする**（Vercelの
+      // ビルド課金は2026-06に$82の前科があるので重複ビルドは避ける）。
+      // ビルドは省くが「Ready になったか」の確認は省かない。
+      console.log('');
+      console.log(`${WARN} --no-build: ビルドはしません（git push 側のビルドを使う前提）。`);
+      console.log('▶ 最新 Production が Ready になるまで待機');
+    } else {
+      const build = runVercelBuild();
+      if (build.exit !== 0) {
+        console.error(`${NG} vercel --prod --force が非ゼロ終了しました（exit=${build.exit}）。中断します。`);
+        process.exit(1);
+      }
+      buildUrl = build.url;
+      console.log('');
+      console.log('▶ Production が Ready になるまで待機');
     }
-    console.log('');
-    console.log('▶ Production が Ready になるまで待機');
-    const poll = await pollDeployment(build.url);
+    const poll = await pollDeployment(buildUrl);
     if (!poll.ok) {
       console.error(`${NG} デプロイが Ready になりませんでした（status=${poll.status}）。`);
       console.error('   Canceled の場合、ignoreCommand にスキップされています。--force が効いているか確認してください。');
       process.exit(1);
     }
-    console.log(`${OK} Production Ready${build.url ? `: ${build.url}` : ''}`);
+    console.log(`${OK} Production Ready${buildUrl ? `: ${buildUrl}` : ''}`);
 
     // 5) ISR再生成 → CFパージ（この順序を絶対に逆にしない）
     console.log('');
