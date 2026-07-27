@@ -33,7 +33,7 @@ hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/kodzure-
 
 ## 著者と更新メモ｜ながみー（編集長／2児の親）の体験ベース
 
-この記事は、**4歳娘＋2歳息子の父であり、きょうのこ編集長のながみー**が、首都圏の主要ファミレスチェーン10ブランド・延べ60店舗以上を5年以上にわたり月3〜5回ペースで子連れ実訪問してきた一次データをもとに整理した保存版です。価格・キッズメニュー価格帯・ベビーチェア台数・電子レンジ対応店舗の傾向は、各社公式サイト（[ガスト公式メニュー](https://www.skylark.co.jp/gusto/menu/)／[サイゼリヤ公式メニュー](https://www.saizeriya.co.jp/menu/)／[ジョナサン公式](https://www.skylark.co.jp/jonathan/)／[ロイヤルホスト公式](https://www.royalhost.jp/)／[ココス公式](https://www.cocos-jpn.co.jp/)）の2026年5月時点の最新情報と、編集部の実訪問データを突き合わせています。離乳食の取り分け量と安全配慮は、厚生労働省「[授乳・離乳の支援ガイド](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000134208.html)」と消費者庁「[食物アレルギー表示について](https://www.caa.go.jp/policies/policy/food_labeling/food_sanitation/allergy/)」「[食品による子供の窒息事故](https://www.caa.go.jp/policies/policy/consumer_safety/release/pdf/consumer_safety_cms204_210128_01.pdf)」の公式情報をベースにしました。最終更新日は2026年5月20日、店舗判断で運用が変わる項目（電子レンジ加熱・離乳食持込・誕生日サービス）は**店舗で要確認**の姿勢でご利用ください。
+この記事は、**4歳娘＋2歳息子の父であり、きょうのこ編集長のながみー**が、首都圏の主要ファミレスチェーン10ブランド・複数店舗を子連れで利用してきた記録をもとに整理した保存版です。価格・キッズメニュー価格帯・ベビーチェア台数・電子レンジ対応店舗の傾向は、各社公式サイト（[ガスト公式メニュー](https://www.skylark.co.jp/gusto/menu/)／[サイゼリヤ公式メニュー](https://www.saizeriya.co.jp/menu/)／[ジョナサン公式](https://www.skylark.co.jp/jonathan/)／[ロイヤルホスト公式](https://www.royalhost.jp/)／[ココス公式](https://www.cocos-jpn.co.jp/)）の2026年5月時点の最新情報と、編集部の実訪問データを突き合わせています。離乳食の取り分け量と安全配慮は、厚生労働省「[授乳・離乳の支援ガイド](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000134208.html)」と消費者庁「[食物アレルギー表示について](https://www.caa.go.jp/policies/policy/food_labeling/food_sanitation/allergy/)」「[食品による子供の窒息事故](https://www.caa.go.jp/policies/policy/consumer_safety/release/pdf/consumer_safety_cms204_210128_01.pdf)」の公式情報をベースにしました。最終更新日は2026年5月20日、店舗判断で運用が変わる項目（電子レンジ加熱・離乳食持込・誕生日サービス）は**店舗で要確認**の姿勢でご利用ください。
 
 ## 30秒でわかる答え｜子連れファミレス選び
 
@@ -231,7 +231,7 @@ A. 平日ランチは予約なしOK、休日11時30分以降は混雑するた�
 
 ## ながみー家のリアル｜典型例（4歳娘＋2歳息子）
 
-ながみー家は4歳娘＋2歳息子＋大人2人の4人家族で、ファミレスは月3〜5回ペースで利用しています。チェーンごとの使い分けはおおむね以下の通り。
+ながみー家は4歳娘＋2歳息子＋大人2人の4人家族で、ファミレスを日常的に利用しています。チェーンごとの使い分けはおおむね以下の通り。
 
 - **平日ランチ（在宅勤務の合間）｜サイゼリヤ**：家族3人で2,000円台、ミラノ風ドリアを2歳息子と分け合い、4歳娘はキッズスパゲッティ。所要55-65分の高速回転。
 - **休日ランチ（11:30入店）｜ガスト**：家族4人2,500-3,000円、4歳娘はキッズプレート、2歳息子は離乳食パウチ＋コーンスープ取り分け、大人はランチセット。**BellaBot**が来ると2歳息子が画面に張り付くので、食事が中断されにくい。

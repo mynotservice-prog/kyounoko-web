@@ -330,10 +330,6 @@ area: all
 - **西松屋・赤ちゃん本舗**：価格帯バランス良く、店員が親切
 - **ボーネルンド**：高品質玩具、体験スペース「キドキド」併設
 
-## 編集部の独自視点
-
-編集部が2〜3歳児を持つ100家庭に「買って良かった知育玩具」を調査した結果、TOP3は『マグフォーマー』(34%)・『くもんジグソーパズル』(28%)・『LaQ』(19%)。継続使用期間は平均2年4ヶ月と買い切りおもちゃの中で最長クラス。価格3,000〜5,000円帯が満足度のスイートスポットでした。
-
 ## 30秒チェックリスト
 
 - [ ] 対象年齢を必ず確認（2歳と3歳でも差大）
@@ -348,7 +344,6 @@ area: all
 - [知育玩具サブスク4社比較](/article/chiiku-subsc-hikaku-4sha)
 - [知育系習い事3社比較](/article/chiku-naraigoto-kumon-shichida-monte)
 - [/items 知育おもちゃカタログ](/items)
-
 
 ## よくある質問
 
@@ -486,11 +481,9 @@ A. 既存の玩具で遊ばなくなった、子の興味の領域が広がっ�
 - [くもん vs 学研 比較](/article/kumon-vs-gakken-hikaku)
 - [YouTube代わりの家遊び](/article/youtube-kawari-ie-asobi)
 
-
 ## あわせて読みたい：最新の知育玩具サブスク
 
 5社（トイサブ・Cha Cha Cha・And TOYBOX・IKUPLE・キッズラボラトリー）の最新比較はこちら。
 
 - [【2026年】知育玩具サブスク 5社徹底比較](/article/chiiku-omocha-subsc-5sha-hikaku-2026)
 - [【And TOYBOX】公式サイトを見る（おもちゃのレンタル）](https://px.a8.net/svt/ejp?a8mat=4B5Q81+CU0E7M+56OA+5YRHE)
-
