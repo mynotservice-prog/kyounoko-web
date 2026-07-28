@@ -278,7 +278,6 @@ A. ドーム本体は3歳以上ですが、**周辺の芝生・小型遊具**で
 - [大型遊具のある公園30選（東京）](/article/tokyo-ogata-yugu-koen-30) — 跳ねるだけでなく登る・滑る遊具と組み合わせたい人へ
 - [ロングすべり台のある公園20選（東京）](/article/tokyo-long-slide-park-20) — 100m級のローラースライダー特集
 - [じゃぶじゃぶ池・水遊び30選](/article/jabujabuike-mizuasobi-tokyo-30) — 夏の組み合わせ候補
-- [ママ100人投票・東京の公園ランキング](/article/tokyo-park-ranking-mom50-vote) — リアルな保護者投票結果
 
 ---
 

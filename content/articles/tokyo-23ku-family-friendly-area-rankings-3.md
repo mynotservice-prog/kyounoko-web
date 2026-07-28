@@ -234,8 +234,6 @@ lede: >-
 - [/data/wards で23区比較表](/data/wards)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
-- [【2026年版】23区子連れ家族度ランキング](/article/tokyo-23ku-family-score-ranking-2026)
-
 ## よくある質問
 
 ### Q. 中央区・港区はランキング外？
