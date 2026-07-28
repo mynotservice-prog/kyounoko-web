@@ -13,7 +13,8 @@
     "deploy:md": "bash scripts/deploy-md.sh",
     "lint": "next lint",
     "format": "prettier --write .",
-    "publish": "node scripts/publish.mjs"
+    "publish": "node scripts/publish.mjs",
+    "popular:build": "node scripts/build-popular-articles.mjs"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.1",
