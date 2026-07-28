@@ -21,8 +21,12 @@
  *  3. **Production が Ready になった**（Canceled / Error はその場で失敗）。
  *  4. **origin(Vercel) が新しい内容を返す状態にしてから** CF をパージした
  *     （逆順にすると CF が STALE を焼き付ける ＝ 事故②の再現）。
- *  5. **キャッシュバスター無しの素のURL**に期待文字列（md の title）が出ている。
- *     1件でも不一致なら非ゼロ終了する。
+ *  5. **キャッシュバスター無しの素のURL**に期待文字列が出ている。
+ *     期待文字列は既定で md の title。**title が変わっていない記事では diff から作る**
+ *     （追加された一文が出ているか／削除された一文が消えているか）。
+ *     title を無条件に使うと本文だけ直した記事で検証が常に成功してしまい、
+ *     2026-07-28 に捏造統計を消したPRで189本中108本がエッジに旧HTMLを配信し続けていた
+ *     のを見逃した。1件でも不一致なら非ゼロ終了する。
  *
  * ── 保証しないこと ──────────────────────────────────────────────────────────
  *  - commit / push はしない（このスクリプトは git を書き換えない）。
@@ -203,6 +207,61 @@ function matches(html, expect) {
   if (!html) return false;
   const decoded = decodeEntities(html);
   return decoded.includes(expect);
+}
+
+/** 出ているべきものが出ていて、消えているべきものが消えているか。 */
+function verifyOk(html, t) {
+  if (t.expect && !matches(html, t.expect)) return false;
+  if (t.absent && matches(html, t.absent)) return false;
+  return true;
+}
+
+/**
+ * md 本文の1行から、HTMLでも途切れずに現れる素のテキスト片を取り出す。
+ * `**強調**` や `[リンク](url)` はHTML化でタグに割れるので、
+ * **マークダウン記号で分割したあとの最長チャンク**だけを使う。
+ */
+function plainSnippet(line, min = 20) {
+  const best = line
+    .split(/[*_`[\]()<>#|~]+/)
+    .map((s) => s.trim())
+    .reduce((a, b) => (b.length > a.length ? b : a), '');
+  return best.length >= min ? best.slice(0, 60) : null;
+}
+
+/** frontmatter を落とした本文 */
+function bodyOf(raw) {
+  return raw.replace(/^---\n[\s\S]*?\n---\n?/, '');
+}
+
+/**
+ * base→現在の diff から、検証に使える一文を選ぶ。
+ * 追加行があればそれ（本番に出ているべき）、無ければ削除行（本番から消えているべき）。
+ */
+function pickDiffSnippet(baseRaw, curRaw) {
+  const baseLines = bodyOf(baseRaw).split('\n');
+  const curLines = bodyOf(curRaw).split('\n');
+  const baseSet = new Set(baseLines.map((l) => l.trim()));
+  const curSet = new Set(curLines.map((l) => l.trim()));
+  const longest = (lines, otherSet, min) =>
+    lines
+      .map((l) => l.trim())
+      .filter((l) => l && !otherSet.has(l))
+      .map((l) => plainSnippet(l, min))
+      .filter(Boolean)
+      .reduce((a, b) => (b.length > a.length ? b : a), '');
+  // まず十分に長い（＝誤一致しにくい）一文を探す。
+  const added = longest(curLines, baseSet, 20);
+  if (added) return { added };
+  const removed = longest(baseLines, curSet, 20);
+  if (removed) return { removed };
+  // 短い変更しかない場合（写真クレジット1行の追加など）は短い断片で妥協する。
+  // 誤一致の可能性があるので weak を立てて呼び出し側に警告させる。
+  const addedShort = longest(curLines, baseSet, 8);
+  if (addedShort) return { added: addedShort, weak: true };
+  const removedShort = longest(baseLines, curSet, 8);
+  if (removedShort) return { removed: removedShort, weak: true };
+  return null;
 }
 
 // ───────────────────── 1. Vercel リンク先ガード ─────────────────────
@@ -494,7 +553,7 @@ async function warmIsr(targets) {
     let hit = false;
     for (let i = 0; i < WARM_TRIES; i++) {
       r = await getPage(`${urlFor(t.slug)}?_pub=${Date.now()}`);
-      const fresh = r.ok && r.status === 200 && matches(r.html, t.expect);
+      const fresh = r.ok && r.status === 200 && verifyOk(r.html, t);
       const cacheOk = /^(HIT|PRERENDER|REVALIDATED)$/i.test(r.vercel);
       if (fresh && cacheOk) {
         hit = true;
@@ -503,7 +562,7 @@ async function warmIsr(targets) {
       if (i < WARM_TRIES - 1) await sleep(5000);
     }
     rows.push({ slug: t.slug, ok: hit, status: r?.status ?? 0, vercel: r?.vercel ?? '-' });
-    console.log(`   ${hit ? OK : NG} ISR ${t.slug}: HTTP ${r?.status} x-vercel-cache=${r?.vercel} 内容一致=${r && matches(r.html, t.expect)}`);
+    console.log(`   ${hit ? OK : NG} ISR ${t.slug}: HTTP ${r?.status} x-vercel-cache=${r?.vercel} 内容一致=${r && verifyOk(r.html, t)}`);
   }
   return rows;
 }
@@ -571,7 +630,7 @@ async function finalVerify(targets) {
     let ok = false;
     for (let i = 0; i < VERIFY_TRIES; i++) {
       r = await getPage(urlFor(t.slug)); // ← キャッシュバスター無しの素のURL
-      ok = r.ok && r.status === 200 && matches(r.html, t.expect);
+      ok = r.ok && r.status === 200 && verifyOk(r.html, t);
       if (ok) break;
       if (i < VERIFY_TRIES - 1) await sleep(6000);
     }
@@ -582,6 +641,7 @@ async function finalVerify(targets) {
       vercel: r?.vercel ?? '-',
       age: r?.age ?? '-',
       expect: t.expect,
+      absent: t.absent,
       actualTitle: r ? titleTagOf(r.html) : null,
       ok,
     });
@@ -611,7 +671,8 @@ function printTable(rows) {
     for (const r of bad) {
       console.log(`  ● ${r.slug}  → ${urlFor(r.slug)}`);
       console.log(`     HTTP=${r.status} / cf-cache-status=${r.cf} / x-vercel-cache=${r.vercel} / age=${r.age}`);
-      console.log(`     期待: ${r.expect}`);
+      if (r.expect) console.log(`     期待: ${r.expect}`);
+      if (r.absent) console.log(`     消えているべき: ${r.absent}`);
       console.log(`     実際の<title>: ${r.actualTitle ?? '(取得できず)'}`);
     }
     console.log('');
@@ -657,19 +718,54 @@ async function main() {
     const raw = readFileSync(fp, 'utf8');
     const title = fmField(raw, 'title');
     let baseTitle = null;
+    let baseRaw = null;
     if (found.base) {
       const rel = fp.replace(`${ROOT}/`, '');
-      const baseRaw = git(['show', `${found.base}:${rel}`], { allowFail: true });
+      baseRaw = git(['show', `${found.base}:${rel}`], { allowFail: true });
       if (baseRaw) baseTitle = fmField(baseRaw, 'title');
     }
-    const expect = EXPECT_OVERRIDE ?? title;
-    if (!expect) {
+
+    // ── 本文だけ変えた記事で検証が空振りするのを防ぐ ───────────────────────────
+    // title を期待値にすると、**title が変わっていない記事では検証が常に成功する**。
+    // 2026-07-28、捏造統計を消したPR(#93)がまさにこれで、189本中108本がCFエッジに
+    // 旧HTML（消したはずの「編集部の独自視点」入り）を配信し続けていたのに、
+    // title照合では検出できなかった。→ title が不変なら、diff から検証文字列を作る。
+    let expect = EXPECT_OVERRIDE ?? title;
+    let absent = null;
+    const titleUnchanged = baseRaw != null && baseTitle != null && baseTitle === title;
+    if (!EXPECT_OVERRIDE && titleUnchanged) {
+      const picked = pickDiffSnippet(baseRaw, raw);
+      if (picked?.added) {
+        expect = picked.added; // 追加された一文が本番に出ているか
+      } else if (picked?.removed) {
+        expect = null;
+        absent = picked.removed; // 削除された一文が本番から消えているか
+      }
+      if (picked?.weak) {
+        console.log(`     ${WARN} ${slug}: 変更が短いため断片で照合します（誤一致の可能性あり）`);
+      }
+      if (!picked) {
+        console.error(`${NG} ${slug}: title が変わっておらず、diff からも検証できる文字列を作れません。`);
+        console.error('   このまま進めると「titleが一致した」だけで反映済みと誤判定します。--expect= で指定してください。');
+        process.exit(2);
+      }
+    }
+    if (!expect && !absent) {
       console.error(`${NG} ${slug}: md に title が無く期待値を決められません。--expect= で指定してください。`);
       process.exit(2);
     }
-    targets.push({ slug, file: fp.replace(`${ROOT}/`, ''), title, baseTitle, expect, noindex: fmField(raw, 'noindex') === 'true' });
+    targets.push({
+      slug,
+      file: fp.replace(`${ROOT}/`, ''),
+      title,
+      baseTitle,
+      expect,
+      absent,
+      noindex: fmField(raw, 'noindex') === 'true',
+    });
     console.log(`   - ${slug}`);
-    console.log(`     期待値: ${expect}`);
+    if (expect) console.log(`     期待値: ${expect}`);
+    if (absent) console.log(`     消えているべき文字列: ${absent}`);
     if (fmField(raw, 'noindex') === 'true') console.log(`     ${WARN} この記事は noindex: true です（公開面ではありません）`);
   }
   if (missing.length) {
@@ -800,8 +896,9 @@ async function finalVerifyOnce(targets) {
       vercel: r.vercel,
       age: r.age,
       expect: t.expect,
+      absent: t.absent,
       actualTitle: titleTagOf(r.html),
-      ok: r.ok && r.status === 200 && matches(r.html, t.expect),
+      ok: r.ok && r.status === 200 && verifyOk(r.html, t),
     });
   }
   return rows;
