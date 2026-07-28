@@ -124,8 +124,6 @@ area: tokyo
 - [/data/wards で23区比較表](/data/wards)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
-- [ベビーカー◎率TOP30駅](/article/babycar-good-station-top30-tokyo-2026)
-
 ## よくある質問（FAQ）
 
 ### Q. 800円以下でちゃんとした和食はある？
@@ -155,7 +153,3 @@ area: tokyo
 - [駅別ガイド全484駅](/station)
 
 ## 関連記事
-
-- [個室・座敷で子連れランチできる駅TOP15](/article/tokyo-station-private-room-ranking)
-- [【独自集計】東京の子連れOK店が多い駅TOP20](/article/tokyo-station-kodzure-shop-density-top20-2026)
-- [ターミナル駅 vs 住宅街駅｜子連れ目線で実は使いやすいのはどっち？](/article/tokyo-terminal-vs-residence-kodzure)

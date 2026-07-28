@@ -140,8 +140,6 @@ TOP15を細かく見ると、ジャンル比率に明確な傾向があります
 - [/data/wards で23区比較表](/data/wards)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
-- [【独自集計】子連れOK店多い駅TOP20](/article/tokyo-station-kodzure-shop-density-top20-2026)
-
 ## よくある質問（FAQ）
 
 ### Q. 半個室と完全個室の違いは？
@@ -171,7 +169,3 @@ TOP15を細かく見ると、ジャンル比率に明確な傾向があります
 - [駅別ガイド全484駅](/station)
 
 ## 関連記事
-
-- [【2026年版】東京23区 子連れ家族度ランキング](/article/tokyo-23ku-family-score-ranking-2026)
-- [【独自集計】東京の子連れOK店が多い駅TOP20](/article/tokyo-station-kodzure-shop-density-top20-2026)
-- [800円以内で子連れランチできる駅TOP15](/article/tokyo-cheap-lunch-800-station-top)

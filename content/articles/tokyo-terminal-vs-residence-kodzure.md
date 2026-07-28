@@ -127,8 +127,6 @@ area: tokyo
 - [/data/wards で23区比較表](/data/wards)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
-- [【独自集計】子連れOK店多い駅TOP20](/article/tokyo-station-kodzure-shop-density-top20-2026)
-
 ## よくある質問（FAQ）
 
 ### Q. 住宅街駅の中でも自由が丘が特に強い理由は？
@@ -158,7 +156,3 @@ area: tokyo
 - [駅別ガイド全484駅](/station)
 
 ## 関連記事
-
-- [【2026年版】東京23区 子連れ家族度ランキング](/article/tokyo-23ku-family-score-ranking-2026)
-- [東京23区 ベビーカー◎率TOP30駅](/article/babycar-good-station-top30-tokyo-2026)
-- [自由が丘 vs 二子玉川 vs 田園調布｜世田谷ファミリーエリア徹底比較](/article/tokyo-23ku-data-comparison-jiyugaoka-futako)

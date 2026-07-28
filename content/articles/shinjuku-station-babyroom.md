@@ -225,4 +225,3 @@ lede: >-
 ## 関連記事
 
 - [新宿の子連れランチ10選](/article/tokyo-shinjuku-kodzure-lunch)
-- [ベビーカーで動きやすい東京の駅TOP30](/article/babycar-good-station-top30-tokyo-2026)

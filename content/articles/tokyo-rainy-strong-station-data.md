@@ -134,8 +134,6 @@ area: tokyo
 - [/data/wards で23区比較表](/data/wards)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
-- [ベビーカー◎率TOP30駅](/article/babycar-good-station-top30-tokyo-2026)
-
 ## よくある質問（FAQ）
 
 ### Q. 雨の日に駅から店まで何分なら濡れない？
@@ -165,7 +163,3 @@ area: tokyo
 - [駅別ガイド全484駅](/station)
 
 ## 関連記事
-
-- [東京23区 ベビーカー◎率TOP30駅](/article/babycar-good-station-top30-tokyo-2026)
-- [【独自集計】東京の子連れOK店が多い駅TOP20](/article/tokyo-station-kodzure-shop-density-top20-2026)
-- [子連れ移動に強い東京の路線TOP10](/article/tokyo-line-family-friendly-ranking)
