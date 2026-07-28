@@ -139,8 +139,6 @@ legacyHero: /v2/articles/kk-23.webp
 ## あわせて読みたい
 
 - [子供靴の選び方完全ガイド](/article/kodomogutsu-erabikata-kanzen-guide-2026)
-- [ベビーカー A型 B型 違い・選び方](/article/babycar-a-b-buggy-3type-7koumoku)
-- [東京の屋内遊び場 4ブランド比較](/article/shitsunai-asobiba-4brand-tokyo)
 - [雨の日に行ける東京の屋内スポット15選](/article/amenohi-indoor-spots-tokyo-15)
 - [梅雨の室内遊び 0-6歳保存版](/article/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026)
 - [子連れスポット一覧](/spots)

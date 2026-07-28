@@ -128,10 +128,8 @@ legacyHero: /hero/baby-01.webp
 ### 用品選び
 
 - [ベビーカー 2026比較ランキング15モデル](/article/babycar-osusume-2026-15model-hikaku)
-- [ベビーカー A型・B型・バギーの違い](/article/babycar-a-b-buggy-3type-7koumoku)
 - [ベビーカーいつから使う？](/article/babycar-itsukara-tsukau)
 - [抱っこ紐は新生児からいつから](/article/dakkohimo-itsukara-shinseiji)
-- [抱っこ紐3ブランド 7項目で比較](/article/dakkohimo-3brand-7koumoku-2026)
 - [ベビーゲート 階段用ランキング7 2026](/article/babygate-kaidan-ranking-7-2026)
 - [赤ちゃん洗剤 ランキング](/article/baby-senzai-ranking)
 

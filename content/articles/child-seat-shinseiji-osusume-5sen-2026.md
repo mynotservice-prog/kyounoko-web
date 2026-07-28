@@ -181,9 +181,7 @@ ISOFIXは**車のシートと直接金属で固定する**方式。
 
 ## 関連記事
 
-- [チャイルドシート 0-7歳 5ブランド比較](/article/child-seat-0-7sai-5brand)
 - [ジュニアシート 2-3歳 比較15機種](/article/junior-seat-2-3sai-hikaku-15)
-- [ベビーカー A型 B型 違い・選び方](/article/babycar-a-b-buggy-3type-7koumoku)
 - [子供靴の選び方完全ガイド](/article/kodomogutsu-erabikata-kanzen-guide-2026)
 
 ## よくある質問

@@ -135,7 +135,6 @@ legacyHero: /v2/articles/kk-23.webp
 ## あわせて読みたい
 
 - [子供靴の選び方完全ガイド](/article/kodomogutsu-erabikata-kanzen-guide-2026)
-- [ベビーカー A型 B型 違い・選び方](/article/babycar-a-b-buggy-3type-7koumoku)
 - [梅雨の0-6歳の過ごし方まとめ](/article/tsuyu-0-6sai-sugoshikata)
 - [梅雨のおうち遊び15パターン](/article/tsuyu-ie-asobi-0-6sai-15pattern)
 - [今日どこ行く？を3秒で診断](/today)

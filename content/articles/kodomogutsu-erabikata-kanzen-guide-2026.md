@@ -218,7 +218,6 @@ A4プリント可能なフットスケール（無料）でOK。月1回測ると
 
 - [ファーストシューズ いつから？](/article/firstshoes-toha)
 - [ファーストシューズとは（基本知識）](/article/first-shoes-toha)
-- [ベビーカー A型 B型 違い・選び方](/article/babycar-a-b-buggy-3type-7koumoku)
 - [保育園 入園準備リスト 1歳](/article/hoikuen-erabikata)
 - [ベビーカー診断ツール](/tools/babycar-shindan)
 

@@ -112,7 +112,6 @@ legacyHero: /hero/baby-02.webp
 - [プールデビュー 6ヶ月〜2歳](/article/puuru-mizuasobi-debut)
 - [1歳プールデビュー 持ち物](/article/1sai-pool-debut-motimono)
 - [知育おもちゃ 2〜3歳 5選](/article/chiiku-toys-2-3sai-5sen)
-- [知育おもちゃ 3ブランド 2〜4歳](/article/chiiku-toys-3brand-2-4sai)
 - [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
 
 ### 体調・トラブル
@@ -136,7 +135,6 @@ legacyHero: /hero/baby-02.webp
 ### 用品選び
 
 - [ベビーカー 2026比較ランキング15モデル](/article/babycar-osusume-2026-15model-hikaku)
-- [チャイルドシート 0〜7歳 5ブランド](/article/child-seat-0-7sai-5brand)
 - [ジュニアシート 2〜3歳 15モデル比較](/article/junior-seat-2-3sai-hikaku-15)
 - [子供サンダル夏用おすすめ2026](/article/kodomo-sandal-natsu-osusume-2026)
 - [ベビーカー扇風機・保冷シート2026](/article/babycar-fan-cooler-sheet-2026)
