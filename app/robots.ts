@@ -26,8 +26,17 @@ export default function robots(): MetadataRoute.Robots {
   //   クロールを遮断してクローラー由来の動的 Function 起動を根絶する。クエリ依存の
   //   ページネーション等は存在しないため indexable コンテンツへの影響はない。
   const baseDisallow = ['/api/', '/admin/', '/search', '/*?'];
-  // Next.js の静的アセット（CSS/JS/フォント/画像）を明示的に許可
-  const baseAllow = ['/', '/_next/'];
+  // Next.js の静的アセット（CSS/JS/フォント/画像）を明示的に許可。
+  //
+  // 【2026-07-28 追加】/api/og を明示的に許可する。
+  //   /api/og は 1200x630 の OGP 画像（image/png）を返すエンドポイントで、
+  //   /today・/plan/[id] の全ページと hero の無い記事の og:image に使っている。
+  //   ところが上の Disallow: /api/ が Googlebot-Image まで止めてしまい、
+  //   **画像を取得できない＝Discover や検索のリッチ表示でカード画像が出ない**状態だった。
+  //   robots.txt は「より具体的なパスの Allow」が優先されるので、Disallow: /api/ を
+  //   残したまま /api/og だけ通せる。静的な画像生成なのでクロール負荷は軽く、
+  //   2026-07-19 のコスト最適化（クエリ付きURLの遮断）には影響しない。
+  const baseAllow = ['/', '/_next/', '/api/og'];
 
   return {
     rules: [
