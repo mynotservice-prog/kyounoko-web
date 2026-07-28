@@ -96,9 +96,9 @@ hero: /hero-ai/highchair-4brand-toritsuke-syohi.jpg
 
 ## 関連記事もチェック
 
-- [ベビーチェア買ってよかった10選【2026年版・0-6歳】](/articles/baby-chair-ranking)
-- [失敗しないベビーカー選び方【0-3歳】](/articles/babycar-erabikata)
-- [子育てサブスク3ジャンル比較](/articles/kosodate-subsc-3sha-hikaku)
+- [ベビーチェア買ってよかった10選【2026年版・0-6歳】](/article/baby-chair-ranking)
+- [失敗しないベビーカー選び方【0-3歳】](/article/babycar-erabikata)
+- [子育てサブスク3ジャンル比較](/article/kosodate-subsc-3sha-hikaku)
 
 ## よくある質問
 

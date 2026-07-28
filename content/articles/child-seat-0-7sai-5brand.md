@@ -103,9 +103,9 @@ R129基準モデルは身長で対応範囲が示され、**40〜150cm対応**�
 
 ## 関連記事もチェック
 
-- [2-3歳おすすめジュニアシート 比較15選](/articles/junior-seat-2-3sai-hikaku-15)
-- [失敗しないベビーカー選び方【0-3歳】4用途別チェック表](/articles/babycar-erabikata)
-- [抱っこ紐ランキング2026【新生児-3歳】定番5本比較](/articles/dakkohimo-ranking-2026)
+- [2-3歳おすすめジュニアシート 比較15選](/article/junior-seat-2-3sai-hikaku-15)
+- [失敗しないベビーカー選び方【0-3歳】4用途別チェック表](/article/babycar-erabikata)
+- [抱っこ紐ランキング2026【新生児-3歳】定番5本比較](/article/dakkohimo-ranking-2026)
 
 ## よくある質問
 

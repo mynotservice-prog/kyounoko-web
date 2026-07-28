@@ -108,9 +108,9 @@ ISOFIX対応ジュニアを選ぶ場合は、車のISOFIXバーが後部座席�
 
 ## 関連記事もチェック
 
-- [2-3歳おすすめジュニアシート 比較15選](/articles/junior-seat-2-3sai-hikaku-15)
-- [ベビーカーvs抱っこ紐 使い分け早見表](/articles/babycar-vs-dakkohimo-tsukaiwake-data)
-- [失敗しないベビーカー選び方【0-3歳】](/articles/babycar-erabikata)
+- [2-3歳おすすめジュニアシート 比較15選](/article/junior-seat-2-3sai-hikaku-15)
+- [ベビーカーvs抱っこ紐 使い分け早見表](/article/babycar-vs-dakkohimo-tsukaiwake-data)
+- [失敗しないベビーカー選び方【0-3歳】](/article/babycar-erabikata)
 
 ## よくある質問
 

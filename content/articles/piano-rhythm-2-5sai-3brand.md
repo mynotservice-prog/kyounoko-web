@@ -90,9 +90,9 @@ hero: /img/scenes/lesson-06.webp
 
 ## 関連記事もチェック
 
-- [ピアノを習わせる前に知っておきたい5つのこと](/articles/piano-narai-before-5things)
-- [幼児の習い事 何歳から?](/articles/youji-naraigoto-nansai-kara)
-- [習い事はじめどき完結ガイド](/articles/naraigoto-hajimedoki-kiketsu)
+- [ピアノを習わせる前に知っておきたい5つのこと](/article/piano-narai-before-5things)
+- [幼児の習い事 何歳から?](/article/youji-naraigoto-nansai-kara)
+- [習い事はじめどき完結ガイド](/article/naraigoto-hajimedoki-kiketsu)
 
 ## よくある質問
 
