@@ -55,7 +55,78 @@ export type ChainReport = {
  *   ここに無い確認結果は記事に書けない。
  */
 export const CHAIN_REPORTS: ChainReport[] = [
-  // 未入力。docs/store-check-list-2026-07-28.md の優先順位で埋めていく。
+  {
+    chain: 'ガスト',
+    store: '下赤塚店',
+    checkedAt: '2025-01',
+    checks: [
+      { item: 'rinyushoku-mochikomi', result: 'ok' },
+      { item: 'atatame', result: 'ok', note: 'ドリンクバーのお湯で湯煎する形で対応してもらえた' },
+      { item: 'oyu', result: 'ok', note: 'ドリンクバーのお湯を案内された' },
+    ],
+  },
+  {
+    chain: 'ココス',
+    store: '草加店',
+    checkedAt: '2026-03',
+    checks: [
+      { item: 'atatame', result: 'ok', note: '店内で販売している離乳食は温めて提供された' },
+      { item: 'oyu', result: 'ok' },
+    ],
+    note: '店舗で離乳食を販売していたため持ち込みは確認していない。ただしココスの公式おこさまメニューにベビーフードの掲載は無く（2026-07-28確認）、取り扱いは店舗による可能性がある。',
+  },
+  {
+    chain: 'サイゼリヤ',
+    store: 'イオン相模原店',
+    checkedAt: '2025-10',
+    checks: [
+      { item: 'rinyushoku-mochikomi', result: 'ok' },
+      { item: 'atatame', result: 'refused' },
+      { item: 'oyu', result: 'ok', note: 'ドリンクバーから利用' },
+    ],
+  },
+  {
+    chain: 'スシロー',
+    store: '港北ニュータウン店',
+    checkedAt: '2025-09',
+    checks: [
+      { item: 'rinyushoku-mochikomi', result: 'ok' },
+      { item: 'atatame', result: 'refused' },
+      { item: 'oyu', result: 'ok' },
+    ],
+  },
+  {
+    chain: 'はま寿司',
+    store: '板橋徳丸店',
+    checkedAt: '2025-10',
+    checks: [{ item: 'rinyushoku-mochikomi', result: 'ok' }],
+  },
+  {
+    chain: 'ロイヤルホスト',
+    store: '浦安店',
+    checkedAt: '2025-04',
+    checks: [
+      { item: 'atatame', result: 'ok', note: '店内で販売している離乳食を温めて提供してもらえた' },
+      { item: 'oyu', result: 'ok', note: 'ミルク用のお湯を用意してもらえた' },
+    ],
+    note: '店舗で離乳食を販売していたため持ち込みは確認していない。ロイヤルホストは公式のおこさまメニューに「ベビーフード かぼちゃのグラタン」「ベビーフード ひらめのリゾット」を掲載している（2026-07-28確認）。',
+  },
+  {
+    chain: 'バーミヤン',
+    store: '東中野店',
+    checkedAt: '2025-01',
+    checks: [{ item: 'rinyushoku-mochikomi', result: 'ok' }],
+  },
+  {
+    chain: 'デニーズ',
+    store: '梅島店',
+    checkedAt: '2025-08',
+    checks: [
+      { item: 'atatame', result: 'ok', note: '店内で販売している離乳食を温めて提供してもらえた' },
+      { item: 'oyu', result: 'ok', note: 'ミルク用のお湯を用意してもらえた' },
+    ],
+    note: '店舗で離乳食を販売していたため持ち込みは確認していない。デニーズは公式のおこさまメニューに「乳児向けベビーフード しらすの雑炊（生後7〜8ヶ月頃）300円（税込330円）」を掲載している（2026-07-28確認）。',
+  },
 ];
 
 /** チェーン名で確認記録を引く（記事側の表示用）。 */
