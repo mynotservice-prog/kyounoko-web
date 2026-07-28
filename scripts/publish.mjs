@@ -202,11 +202,20 @@ async function getPage(url) {
   }
 }
 
-/** 期待文字列が本文中に「実際に」出ているか。title タグと全文の両方を見る。 */
+/**
+ * 期待文字列が本文中に「実際に」出ているか。title タグと全文の両方を見る。
+ *
+ * ⚠ **タグを除いたテキストでも照合すること。**
+ * この記事本文には、サイト側が描画時に自動挿入する内部リンク（`auto-internal-link`）が
+ * 入る。md には存在しないので、素朴に生HTMLへ部分一致させると
+ * 「…4歳の好<a href=…>き嫌い</a>…」のようにテキストが分断されて落ちる。
+ * 2026-07-28 の一括反映で、実際には出ているのに6本が「未反映」と判定された。
+ */
 function matches(html, expect) {
   if (!html) return false;
-  const decoded = decodeEntities(html);
-  return decoded.includes(expect);
+  if (decodeEntities(html).includes(expect)) return true;
+  const text = decodeEntities(html.replace(/<[^>]+>/g, ''));
+  return text.includes(expect);
 }
 
 /** 出ているべきものが出ていて、消えているべきものが消えているか。 */
