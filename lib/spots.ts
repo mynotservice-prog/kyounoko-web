@@ -26,7 +26,7 @@ export type SpotCategory =
   | 'amusement'    // 遊園地・テーマパーク
   | 'indoor'       // 屋内遊戯施設（雨の日）
   | 'farm'         // 牧場
-  | 'seasonal'     // 季節体験（いちご狩り等）
+  | 'seasonal'     // 観光スポット（旧: 季節体験。いちご狩り等も含む）
   | 'restaurant';  // 子連れOKレストラン
 
 export type SpotPlace = 'indoor' | 'outdoor' | 'mixed';
@@ -3293,7 +3293,7 @@ export const SPOT_CATEGORY_LABEL: Record<SpotCategory, string> = {
   amusement: '遊園地',
   indoor: '屋内施設',
   farm: '牧場',
-  seasonal: '季節体験',
+  seasonal: '観光スポット',
   restaurant: '子連れOKレストラン',
 };
 

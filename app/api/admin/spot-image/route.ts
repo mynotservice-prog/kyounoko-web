@@ -24,8 +24,8 @@ import { isBlobConfigured, uploadToBlob } from '@/lib/blob-store';
  */
 
 const ROOT = process.cwd();
-// 保存先ディレクトリ。呼び出し元が dir で指定（spot編集=spots / 記事・プランのhero=articles）。
-const ALLOWED_DIRS = ['spots', 'articles'] as const;
+// 保存先ディレクトリ。呼び出し元が dir で指定（spot編集=spots / 記事・プランのhero=articles / イベント=events）。
+const ALLOWED_DIRS = ['spots', 'articles', 'events'] as const;
 type UploadDir = (typeof ALLOWED_DIRS)[number];
 const MAX_BYTES = 5 * 1024 * 1024;
 
