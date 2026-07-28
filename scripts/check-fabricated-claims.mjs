@@ -47,7 +47,32 @@ const BODY_RULES = [
   ['子連れ歴の年数主張', /(外食歴|利用|通い)\s*\d+年以上/],
   ['訪問頻度の主張', /月\d+〜\d+回ペース|週\d+〜\d+回ペース|延べ\d+店舗以上/],
   ['公表年齢を超える一次記述', /(5歳の娘|6歳の娘|長女5歳|長女6歳|長女は5歳|長女は6歳)/],
+  // ── 外部の一次情報を「公式が言っている」と誤って引用する型 ────────────────────
+  // 2026-07-28 に発覚。自称の一次調査（上の各ルール）とは別クラスで、当時この検査を
+  // 通過していた。実害の出方はむしろこちらの方が重い（チェーン本部から指摘され得る）。
+  //
+  // 実測した反例:
+  //   - `hamasushi-rinyushoku-mochikomi` は「はま寿司は公式に『離乳食やアレルギー対応食の
+  //     持ち込みOK』と案内」と書いていたが、hamazushi.com / hama-sushi.co.jp の
+  //     公式FAQに該当記載は無い（あるのは「お子様用の補助いすは全店舗にご用意」だけ）。
+  //   - すかいらーく系記事が引用していた https://www.skylark.co.jp/menu/baby/ は 404。
+  //     すかいらーく公式に「離乳食」の文字列は 0 件。
+  //
+  // 「公式に記載がない」「確認できていない」と**否定形**で書いているものは正しい書き方
+  // なので弾かない。断定（案内/明記/OK/可能/認め）だけを拾う。
+  [
+    '公式が言っているという未検証の断定',
+    /公式[^。\n]{0,30}(?!.{0,20}(記載がな|確認できて|明記はな|判断できな|見当たら))[^。\n]{0,20}(案内し|明記し|案内あり|明記あり|と案内|と明記)/,
+  ],
 ];
+
+/**
+ * 否定形（公式に記載がない旨）は正しい書き方なので除外する。
+ * 「明記されているわけではありません」「明記してはいません」のように、
+ * 否定が肯定語の**後ろ**に来る日本語の形を取りこぼさないこと。
+ */
+const OFFICIAL_NEGATION =
+  /(記載がな|記載はな|確認できて|明記はな|明記されていな|判断できな|見当たら|載っていな|わけではあり|ものではあり|してはいませ|されてはいませ|とは限らな|ではありませ)/;
 
 /**
  * 「仮想ケース」「想定例」と明示された見出し配下は、架空であることが
@@ -70,7 +95,7 @@ const stripDisclosedFiction = (raw) => {
   return keep.join('\n');
 };
 
-const hits = [];
+let hits = [];
 for (const f of fs.readdirSync(DIR)) {
   if (!f.endsWith('.md')) continue;
   const raw = fs.readFileSync(path.join(DIR, f), 'utf8');
@@ -80,11 +105,37 @@ for (const f of fs.readdirSync(DIR)) {
   for (const [label, re] of [...HEADING_RULES, ...BODY_RULES]) {
     if (re.test(scoped)) {
       const m = scoped.match(re);
-      hits.push({ file: f, label, noindex, excerpt: (m?.[0] ?? '').replace(/\n/g, ' ').slice(0, 70) });
+      const excerpt = (m?.[0] ?? '').replace(/\n/g, ' ');
+      // 「公式に記載がない／明記されているわけではない」と否定形で書いているのは
+      // 正しい書き方なので違反にしない。**否定語は一致部分の直後に来る**ので、
+      // マッチした断片だけを見ると取りこぼす。前後に窓を取って判定する。
+      if (label === '公式が言っているという未検証の断定') {
+        const at = m?.index ?? -1;
+        const window = at >= 0 ? scoped.slice(at, at + 160).replace(/\n/g, ' ') : excerpt;
+        if (OFFICIAL_NEGATION.test(window)) continue;
+      }
+      hits.push({ file: f, label, noindex, excerpt: excerpt.slice(0, 70) });
     }
   }
 }
 
+if (!hits.length) {
+  console.log(`✓ 捏造主張なし（${publicOnly ? '公開記事のみ' : '全記事'}）`);
+  process.exit(0);
+}
+
+const WARN_LABEL = '公式が言っているという未検証の断定';
+// 新ルールは「捏造が確定した」ではなく「一次情報の裏取りが必要」を意味する。
+// 公式サイトに実在する記述を正しく引用しているケースも同じ形になるため、
+// 機械では真偽を判定できない。よってこれは**警告**として出し、exit 1 にはしない。
+const warns = hits.filter((h) => h.label === WARN_LABEL);
+hits = hits.filter((h) => h.label !== WARN_LABEL);
+if (warns.length) {
+  console.error(`⚠ 一次情報の裏取りが必要な「公式が〜」の断定 ${warns.length} 件（exit 1 にはしない）`);
+  for (const h of warns) console.error(`  ${h.noindex ? '[noindex] ' : '[公開]    '}${h.file}  ${h.excerpt}`);
+  console.error('対処: 公式ページを curl して該当記述を確認し、出典URLと確認日を本文に書く。');
+  console.error('      確認できなければ「公式に記載はなく店舗判断」と書き直す。\n');
+}
 if (!hits.length) {
   console.log(`✓ 捏造主張なし（${publicOnly ? '公開記事のみ' : '全記事'}）`);
   process.exit(0);
