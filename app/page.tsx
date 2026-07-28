@@ -99,7 +99,9 @@ export default async function HomePage() {
   );
 
   const featureCards = FEATURE_PAGES.slice(0, 4).map(featureToV2);
-  const popularArticleCards = popularArticles.slice(0, 3).map(articleToV2);
+  // 実績上位を6件出す（3件だった）。トップから記事へ進む遷移が全体の12%しかなく、
+  // 記事の露出そのものが足りていないため（2026-07-28 GA4 pageReferrer 実測）。
+  const popularArticleCards = popularArticles.slice(0, 6).map(articleToV2);
   const latestArticleCards = latestArticles.slice(0, 6).map(articleToV2);
 
   // 今週のイベント（編集部キュレーション）。0件なら表示しない
