@@ -10,7 +10,10 @@ import type { MetadataRoute } from 'next';
 
 import { getArticleIds, getCategories } from '@/lib/microcms';
 import { getAllFileArticles, getKvOnlyArticleMetas } from '@/lib/articles';
-import { getAllSpotsWithSlug } from '@/lib/spots';
+import { getAllSpotsWithSlug, isSpotIndexable } from '@/lib/spots';
+import { SPOT_CLOSED } from '@/lib/spot-closed';
+import { CHAIN_SPOT_REDIRECTS } from '@/lib/chain-spot-redirects';
+import { SPOT_REDIRECTS } from '@/lib/spot-redirects';
 import { BROWSE_CATEGORIES, spotsByCategory } from '@/lib/spot-browse';
 import { TOKYO_STATIONS } from '@/lib/tokyo-stations';
 import { KANSAI_STATIONS } from '@/lib/kansai-stations';
@@ -311,18 +314,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // スポット個別ページ（プログラマティックSEO第3弾、2026-05追加）
   // isIndexable() の条件を満たすスポットのみsitemapに含める（薄ページ判定回避）。
+  // ⚠ 収録条件は **/spot/[slug] の noindex 判定と同じ関数**を使うこと。
+  // 2026-07-28 の sitemap 全数監査で、ここに同じスコア式をコピペしていたせいで
+  // 判定がドリフトし、**noindex のスポット5件が sitemap に載っていた**。
+  // あわせて **308 リダイレクトされる36件も載っていた**（Googleに無駄なクロールをさせ、
+  // GSCの「リダイレクトあり」に計上される）。両方ここで除外する。
+  const redirectedSlugs = new Set([
+    ...CHAIN_SPOT_REDIRECTS.map((r) => r.from),
+    ...SPOT_REDIRECTS.map((r) => r.from),
+  ]);
   const spotPages = getAllSpotsWithSlug()
-    .filter((x) => {
-      const s = x.spot;
-      let score = 0;
-      if (s.note && s.note.length >= 25) score++;
-      if (s.facilities && Object.keys(s.facilities).length >= 2) score++;
-      if (s.pricing && Object.keys(s.pricing).length >= 1) score++;
-      if (s.hiddenTip && s.hiddenTip.length >= 15) score++;
-      if (s.nearestStation) score++;
-      if (s.ward || s.city) score++;
-      return score >= 3;
-    })
+    .filter((x) => !redirectedSlugs.has(x.slug))
+    .filter((x) => !SPOT_CLOSED[x.spot.name])
+    .filter((x) => isSpotIndexable(x.spot))
     .map((x) => ({
       url: `${BASE}/spot/${x.slug}`,
       lastModified: new Date(),
