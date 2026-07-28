@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-04'
-updatedAt: '2026-06-03'
+updatedAt: '2026-07-22'
 lede: >-
   「ファミレスばかりで飽きた」「子に和の味を覚えさせたい」家族におすすめの和食・中華チェーン10店を徹底比較。**大戸屋・やよい軒の定食、餃子の王将・リンガーハットの中華、丸亀製麺の麺類、回転寿司3社**まで網羅。0-6歳の子も食べやすい取り分け＆和食メニューの選び方をまとめました。
 quickInfo:
@@ -432,6 +432,10 @@ A. 餃子の王将・リンガーハットは取り分け前提。子向けは�
 - [個室で子連れランチ完全ガイド](/article/koshitsu-kodzure-lunch)
 - [サイゼリヤ子連れ攻略法](/article/kodzure-saize-koryaku)
 - [子連れ向けテイクアウト・デリ10選](/article/kodzure-deli-takeout-10)
+- [和食さと 子連れ攻略｜さとキッズメニュー・座敷・食べ放題「さとしゃぶ」の段取り](/article/washoku-sato-kodzure-koryaku)
+- [味の民芸 子連れ攻略｜手延べうどんの取り分け・座敷の有無・和のお子様メニュー](/article/ajino-mingei-kodzure-koryaku)
+- [華屋与兵衛 子連れ攻略｜お子様寿司・座敷でゆったり・和食ファミレスの使い方](/article/hanaya-yohei-kodzure-koryaku)
+- [ばんどう太郎 子連れ攻略｜味噌煮込みうどん・座敷中心の店内・北関東ファミリー御用達](/article/bandotaro-kodzure-koryaku)
 
 ## FAQ｜よくある質問
 

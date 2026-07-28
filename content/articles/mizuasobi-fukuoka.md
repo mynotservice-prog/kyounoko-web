@@ -9,6 +9,7 @@ publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-07-15'
 hero: /img/scenes/pool-water-05.webp
 area: fukuoka
+seoRelated: jabujabu-ike-mizuasobi-zenkoku-2026natsu
 quickInfo:
   ageRanges:
     - 0-1
