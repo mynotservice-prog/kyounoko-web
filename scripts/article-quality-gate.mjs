@@ -24,6 +24,7 @@
 import { readFileSync, existsSync, readdirSync } from 'fs';
 import { execSync } from 'child_process';
 import path from 'path';
+import { createRequire } from 'node:module';
 
 const ROOT = process.cwd();
 const ARTICLE_DIR = path.join(ROOT, 'content', 'articles');
@@ -97,6 +98,37 @@ const allSlugs = new Set(
 );
 
 const targets = listTargets();
+/**
+ * frontmatter が本当に YAML として妥当か検査する。
+ *
+ * ⚠ **`---` で切り出せることと、YAML として妥当なことは別。**
+ * 2026-07-28、metaDescription の直後に本文のブロック引用（`> …`）を挿し込んでしまい、
+ * frontmatter が壊れたまま**このゲートを通過して本番ビルドを落とした**
+ * （YAMLException: end of the stream or a document separator is expected）。
+ * 当時この関数は無く、正規表現で `---` を切るだけだったので検出できなかった。
+ *
+ * js-yaml があれば実パースする。worktree など依存が無い環境では、
+ * 「インデント0の行はキーでなければならない」という構造チェックで代替する
+ * （ブロックスカラーの中身は必ずインデントされるので、これで今回の事故は捕まる）。
+ */
+function validateFrontmatterYaml(fm) {
+  try {
+    const require_ = createRequire(import.meta.url);
+    const yaml = require_('js-yaml');
+    yaml.load(fm);
+    return null;
+  } catch (e) {
+    if (e && (e.code === 'MODULE_NOT_FOUND' || e.code === 'ERR_MODULE_NOT_FOUND')) {
+      const bad = fm
+        .split(/\r?\n/)
+        .filter((l) => l.trim() && !/^\s/.test(l))
+        .find((l) => !/^[A-Za-z_][\w-]*\s*:/.test(l) && !/^-\s/.test(l));
+      return bad ? `frontmatter に YAML のキーでない行がある: ${bad.slice(0, 40)}` : null;
+    }
+    return `frontmatter が YAML として不正: ${String(e.message).split('\n')[0]}`;
+  }
+}
+
 const results = [];
 
 for (const slug of targets) {
@@ -115,6 +147,9 @@ for (const slug of targets) {
     continue;
   }
   const [, fm, body] = m;
+
+  const fmErr = validateFrontmatterYaml(fm);
+  if (fmErr) r.errors.push(fmErr);
 
   const chars = body.replace(/\s/g, '').length;
   const h2 = (body.match(/^## /gm) || []).length;
