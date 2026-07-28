@@ -147,7 +147,7 @@ area: tokyo
 
 ## 関連データ・記事
 
-- [/data/wards/meguro 目黒区エリア情報](/data/wards/meguro)
+- [/data/wards/meguro 目黒区エリア情報](/data/wards)
 - [駅別ガイド全484駅](/station)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 ## よくある質問（FAQ）

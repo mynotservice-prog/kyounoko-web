@@ -285,4 +285,3 @@ A. はい。多くのカードはオンライン or 電話で簡単に解約可�
 - [学資保険の選び方完全ガイド](/article/gakushi-hoken-erabikata-2026)
 - [家計簿 子連れ就活の見直し](/article/natsuyasumi-kakeibo-kodzure-shukatsu)
 - [子供のお金教育](/article/kodomo-okozukai-itsukara)
-- [子育て世帯のふるさと納税活用法](/article/yakudatsu/fuyou-saving-list)

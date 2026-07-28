@@ -5,7 +5,7 @@
   "description": "きょうのこ — 子育て家庭の「今日どうする？」を3分で決めるサイト",
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/build-hero-manifest.mjs && node scripts/check-affiliate-links.mjs && node scripts/check-kid-reports.mjs",
+    "prebuild": "node scripts/build-hero-manifest.mjs && node scripts/check-affiliate-links.mjs && node scripts/check-kid-reports.mjs && node scripts/check-internal-links.mjs --offline",
     "build": "next build",
     "postbuild": "node -e \"fetch('https://api.indexnow.org/indexnow',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({host:'kyounoko.jp',key:process.env.INDEXNOW_KEY||'229166d73b10f1630ed52857e67c427b',keyLocation:'https://kyounoko.jp/'+(process.env.INDEXNOW_KEY||'229166d73b10f1630ed52857e67c427b')+'.txt',urlList:['https://kyounoko.jp/','https://kyounoko.jp/sitemap.xml']})}).then(r=>console.log('IndexNow ping:',r.status)).catch(e=>console.log('IndexNow skip:',e.message))\"",
     "start": "next start",
@@ -14,6 +14,7 @@
     "lint": "next lint",
     "format": "prettier --write .",
     "publish": "node scripts/publish.mjs",
+    "links": "node scripts/check-internal-links.mjs",
     "popular:build": "node scripts/build-popular-articles.mjs"
   },
   "dependencies": {

@@ -197,7 +197,7 @@ legacyHero: /hero/food-japan-01.webp
 
 - [離乳食とは｜開始時期・進め方完全ガイド](/article/rinyuushoku-toha-kanzen-guide)
 - [食物アレルギーとは](/article/shokumotsu-allergy-toha-kanzen-guide)
-- [赤ちゃん・子供に牛肉はいつから？](/article/kodomo-gyu-itsukara)
+- [赤ちゃん・子供に牛肉はいつから？](/article/kodomo-gyuniku-itsukara)
 - [3〜6歳の育児 完全マップ](/article/3-6sai-ikuji-kanzen-map)
 
 *本記事は医療的アドバイスではありません。アレルギーや体調が心配な場合は小児科にご相談ください。*

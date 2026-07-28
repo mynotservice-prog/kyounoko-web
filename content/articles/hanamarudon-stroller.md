@@ -110,7 +110,7 @@ A. 店舗・状況によっては対応してくれる場合あり。**「ベビ
 - [はなまるうどん ベビーチェア](/article/hanamarudon-baby-chair)
 - [はなまるうどん キッズメニュー](/article/hanamarudon-kids-menu)
 - [はなまるうどん オムツ替え](/article/hanamarudon-omutsu)
-- [丸亀製麺 ベビーカー入店](/article/marukame-stroller)
+- [丸亀製麺 ベビーカー入店](/article/marugame-kodzure-koryaku)
 - [0歳育児の完全マップ](/article/0sai-ikuji-kanzen-map)
 
 ---

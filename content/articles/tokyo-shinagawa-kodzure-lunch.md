@@ -289,7 +289,7 @@ JR改札内の駅ナカ商業施設で、イートイン可能な店も多く、
 
 ## 関連データ・記事
 
-- [/data/wards/minato 港区エリア情報](/data/wards/minato)
+- [/data/wards/minato 港区エリア情報](/data/wards)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
 - [品川区週末スポット8選](/article/tokyo-shinagawa-ooimachi-weekend)

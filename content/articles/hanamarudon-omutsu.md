@@ -113,7 +113,7 @@ A. 車内・コンビニ多目的トイレ・公園トイレなど。**Googleマ
 - [はなまるうどん ベビーチェア](/article/hanamarudon-baby-chair)
 - [はなまるうどん ベビーカー入店](/article/hanamarudon-stroller)
 - [はなまるうどん キッズメニュー](/article/hanamarudon-kids-menu)
-- [丸亀製麺 オムツ替え](/article/marukame-omutsu)
+- [丸亀製麺 オムツ替え](/article/marugame-kodzure-koryaku)
 - [0歳育児の完全マップ](/article/0sai-ikuji-kanzen-map)
 
 ---

@@ -146,7 +146,7 @@ area: tokyo
 
 ## 関連データ・記事
 
-- [/data/wards/bunkyo 文京区エリア情報](/data/wards/bunkyo)
+- [/data/wards/bunkyo 文京区エリア情報](/data/wards)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
 - [ベビーカーOKカフェ15選](/article/bebycar-ok-cafe-15)
