@@ -506,6 +506,8 @@ A. 平日ランチは予約なしOK、休日11時30分以降は混雑するた�
 
 ## 関連記事
 
+
+- [串カツ田中は子連れに強い｜たこ焼き・ソフトクリームが小学生以下無料](/article/kushikatsu-tanaka-kodzure-koryaku)
 ### 比較で読みたい記事（最重要）
 
 - [【2026年版】子連れで使えるファミレスTOP10ランキング](/article/famires-kodzure-ranking-2026-10sen)（スコア順の総合ハブ）
