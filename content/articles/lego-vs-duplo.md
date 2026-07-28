@@ -188,6 +188,5 @@ legacyHero: /hero/kid-study-01.webp
 
 - [1〜2歳の育児 完全マップ](/article/1-2sai-ikuji-kanzen-map)
 - [3〜6歳の育児 完全マップ](/article/3-6sai-ikuji-kanzen-map)
-- [知育玩具3ブランド比較 2〜4歳](/article/chiiku-toys-3brand-2-4sai)
 - [絵本の読み聞かせコツ](/article/ehon-yomikikase-kotsu)
 - [紙絵本 vs 電子絵本 完全比較](/article/kami-ehon-vs-denshi-ehon)

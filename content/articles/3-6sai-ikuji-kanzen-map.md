@@ -106,10 +106,7 @@ legacyHero: /hero/classroom-01.webp
 - [子供の習い事ランキング](/article/kodomo-naraigoto-tsuduki-kotsu)
 - [幼児の習い事 何歳から](/article/youji-naraigoto-nansai-kara)
 - [子供オンライン英会話比較](/article/kodomo-online-eikaiwa-osusume-2026)
-- [オンライン英会話3社比較](/article/online-school-eigo-3brand-2026)
 - [知育サブスク3社徹底比較](/article/chiiku-subsc-3sha-2026-comparison)
-- [ピアノ・リトミック 2〜5歳 3ブランド](/article/piano-rhythm-2-5sai-3brand)
-- [スイミング3ブランド 3〜6歳](/article/swim-school-3brand-3-6sai)
 - [プログラミング 子供 5〜7歳](/article/programming-kodomo-5-7sai)
 
 ### 食事
