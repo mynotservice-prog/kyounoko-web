@@ -171,7 +171,7 @@ JR南口直結のNEWoManは**エレベーター動線・ベビールーム**が�
 
 ## 関連データ・記事
 
-- [/data/wards/shinjuku 新宿区エリア情報](/data/wards/shinjuku)
+- [/data/wards/shinjuku 新宿区エリア情報](/data/wards)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
 ## よくある質問

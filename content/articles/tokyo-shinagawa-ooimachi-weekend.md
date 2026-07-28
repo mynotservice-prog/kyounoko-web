@@ -148,7 +148,7 @@ area: tokyo
 
 ## 関連データ・記事
 
-- [/data/wards/shinagawa 品川区エリア情報](/data/wards/shinagawa)
+- [/data/wards/shinagawa 品川区エリア情報](/data/wards)
 - [駅別ガイド全484駅](/station)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [品川駅子連れランチ10選](/article/tokyo-shinagawa-kodzure-lunch)

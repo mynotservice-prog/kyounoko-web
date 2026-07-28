@@ -68,7 +68,7 @@ lede: >-
 
 ### 詳細を見る
 
-- [世田谷区エリア情報](/data/wards/setagaya)
+- [世田谷区エリア情報](/data/wards)
 - [世田谷区 週末ファミリー記事](/article/tokyo-setagaya-weekend-family)
 
 ## 2位：江戸川区
@@ -90,7 +90,7 @@ lede: >-
 
 ### 詳細を見る
 
-- [江戸川区エリア情報](/data/wards/edogawa)
+- [江戸川区エリア情報](/data/wards)
 
 ## 3位：杉並区
 
@@ -112,7 +112,7 @@ lede: >-
 
 ### 詳細を見る
 
-- [杉並区エリア情報](/data/wards/suginami)
+- [杉並区エリア情報](/data/wards)
 - [杉並区 ベビーカーランチ記事](/article/tokyo-suginami-stroller-lunch)
 
 ## 子連れランチ環境（軸1の詳細）

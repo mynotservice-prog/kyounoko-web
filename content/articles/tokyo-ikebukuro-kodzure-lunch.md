@@ -287,7 +287,7 @@ JR改札直結で、ベビーカー動線・ベビールームも完備。雨の
 
 ## 関連データ・記事
 
-- [/data/wards/toshima 豊島区エリア情報](/data/wards/toshima)
+- [/data/wards/toshima 豊島区エリア情報](/data/wards)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
 - [池袋 雨の日屋内遊び場10選](/article/tokyo-toshima-ikebukuro-rain)

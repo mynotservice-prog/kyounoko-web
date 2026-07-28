@@ -286,7 +286,7 @@ area: tokyo
 
 ## 関連データ・記事
 
-- [/data/wards/shibuya 渋谷区エリア情報](/data/wards/shibuya)
+- [/data/wards/shibuya 渋谷区エリア情報](/data/wards)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
 ## よくある親の悩みQ&A 10項目

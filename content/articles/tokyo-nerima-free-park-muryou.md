@@ -132,7 +132,7 @@ area: tokyo
 
 ## 関連データ・記事
 
-- [/data/wards/nerima 練馬区エリア情報](/data/wards/nerima)
+- [/data/wards/nerima 練馬区エリア情報](/data/wards)
 - [駅別ガイド全484駅](/station)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 ## よくある質問（FAQ）

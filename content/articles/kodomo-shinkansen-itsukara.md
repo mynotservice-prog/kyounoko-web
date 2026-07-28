@@ -138,5 +138,5 @@ legacyHero: /hero/parent-child-03.webp
 - [0歳の育児 完全マップ](/article/0sai-ikuji-kanzen-map)
 - [1〜2歳の育児 完全マップ](/article/1-2sai-ikuji-kanzen-map)
 - [3〜6歳の育児 完全マップ](/article/3-6sai-ikuji-kanzen-map)
-- [子供と国内旅行はいつから](/article/kodomo-kokunai-ryokou-itsukara)
+- [子供と国内旅行はいつから](/article/kodomo-kokunai-ryoko-itsukara)
 - [子供の飛行機はいつから](/article/kodomo-hikouki-itsukara)

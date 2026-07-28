@@ -153,7 +153,7 @@ area: tokyo
 
 ## 関連データ・記事
 
-- [/data/wards/toshima 豊島区エリア情報](/data/wards/toshima)
+- [/data/wards/toshima 豊島区エリア情報](/data/wards)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
 ## よくある質問（FAQ）
