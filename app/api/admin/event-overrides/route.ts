@@ -61,7 +61,9 @@ function isValidHero(s: unknown): boolean {
     s.startsWith('/hero-ai/') ||
     s.startsWith('/img/') ||
     s.startsWith('/hero/') ||
-    /^https:\/\/(images\.microcms-assets\.io)\//.test(s)
+    /^https:\/\/(images\.microcms-assets\.io)\//.test(s) ||
+    // /api/admin/spot-image のアップロード先（Vercel Blob）
+    /^https:\/\/[a-z0-9-]+\.public\.blob\.vercel-storage\.com\//.test(s)
   );
 }
 

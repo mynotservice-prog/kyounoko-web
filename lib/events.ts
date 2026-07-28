@@ -2357,7 +2357,12 @@ export function eventHeroImage(e: EventEntry): string {
   if (ov?.hero) return ov.hero;
 
   // 2) hero が信頼できるパス（v2/ 配下や photos/ 等 ＝ /img/scenes/, /img/facilities/ もここ）ならそのまま使用
-  if (e.hero && TRUSTED_HERO_PREFIXES.some((p) => e.hero!.startsWith(p))) {
+  //    管理画面からアップロードした Vercel Blob のURL（KV override 経由で e.hero に載る）もここで通す
+  if (
+    e.hero &&
+    (TRUSTED_HERO_PREFIXES.some((p) => e.hero!.startsWith(p)) ||
+      /^https:\/\/[a-z0-9-]+\.public\.blob\.vercel-storage\.com\//.test(e.hero))
+  ) {
     return e.hero;
   }
 

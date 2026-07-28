@@ -157,17 +157,18 @@ export async function GET(req: NextRequest) {
   }
 
   // 本番 + GitHub設定済み → GitHub から取得（FS は古い可能性があるため）
+  // 取得できない場合（トークン失効の 401/404 など）はエラーにせず、
+  // デプロイに同梱された FS の md へフォールバックする。保存は KV 経由なので
+  // GitHub が死んでいても編集フロー自体は成立する。
   if (useGitHub()) {
     try {
       const got = await ghGetFile(repoPath(kind, slug));
-      if (!got) return NextResponse.json({ ok: false, error: 'github fetch failed' }, { status: 404 });
-      const { data, content } = matter(got.text);
-      return NextResponse.json({ ok: true, frontmatter: data, body: content, source: 'github', sha: got.sha });
-    } catch (err) {
-      return NextResponse.json(
-        { ok: false, error: err instanceof Error ? err.message : String(err) },
-        { status: 500 }
-      );
+      if (got) {
+        const { data, content } = matter(got.text);
+        return NextResponse.json({ ok: true, frontmatter: data, body: content, source: 'github', sha: got.sha });
+      }
+    } catch {
+      // fall through to FS
     }
   }
 

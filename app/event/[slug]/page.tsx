@@ -119,7 +119,11 @@ export default async function EventPage({ params }: Props) {
       address: ev.city ? { '@type': 'PostalAddress', addressLocality: ev.city, addressCountry: 'JP' } : undefined,
     },
     offers: eventOffer,
-    image: [`https://kyounoko.jp${eventHeroImage(ev)}`],
+    image: [
+      eventHeroImage(ev).startsWith('http')
+        ? eventHeroImage(ev)
+        : `https://kyounoko.jp${eventHeroImage(ev)}`,
+    ],
     url: `https://kyounoko.jp/event/${slug}`,
     isFamilyFriendly: true,
   };

@@ -130,9 +130,34 @@ function EventRow({
     note: override.note ?? '',
   }));
   const [saving, setSaving] = React.useState(false);
+  const [uploading, setUploading] = React.useState(false);
   const [msg, setMsg] = React.useState('');
 
   const hasOverride = Object.keys(override).length > 0;
+
+  // 画像ファイルを /api/admin/spot-image（Vercel Blob）へ送り、返ったURLを hero にセット。
+  // セット後に「保存」を押すと override として反映される。
+  const uploadHero = async (file: File) => {
+    setUploading(true);
+    setMsg('');
+    try {
+      const fd = new FormData();
+      fd.append('slug', ev.slug);
+      fd.append('dir', 'events');
+      fd.append('file', file);
+      const res = await fetch('/api/admin/spot-image', { method: 'POST', body: fd });
+      const d = (await res.json()) as { ok?: boolean; path?: string; error?: string };
+      if (!res.ok || !d.path) setMsg('❌ 画像アップロード失敗: ' + (d.error || 'failed'));
+      else {
+        setForm((s) => ({ ...s, hero: d.path! }));
+        setMsg('✅ 画像をアップロードしました（「保存」で反映）');
+      }
+    } catch (e) {
+      setMsg('❌ ' + (e instanceof Error ? e.message : 'error'));
+    } finally {
+      setUploading(false);
+    }
+  };
 
   const save = async () => {
     setSaving(true);
@@ -326,11 +351,43 @@ function EventRow({
                       }}
                     />
                     {isHero && (
-                      <datalist id={`hero-presets-${ev.slug}`}>
-                        {HERO_PRESETS.map((p) => (
-                          <option key={p} value={p} />
-                        ))}
-                      </datalist>
+                      <>
+                        <datalist id={`hero-presets-${ev.slug}`}>
+                          {HERO_PRESETS.map((p) => (
+                            <option key={p} value={p} />
+                          ))}
+                        </datalist>
+                        <label
+                          style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: 6,
+                            marginTop: 6,
+                            padding: '7px 12px',
+                            border: '1px solid var(--border-strong)',
+                            borderRadius: 'var(--r-md)',
+                            fontSize: 12,
+                            fontWeight: 600,
+                            color: 'var(--ink-600)',
+                            background: uploading ? 'var(--bg-subtle)' : 'var(--bg-surface)',
+                            cursor: uploading ? 'wait' : 'pointer',
+                            width: 'fit-content',
+                          }}
+                        >
+                          {uploading ? 'アップロード中…' : '📤 画像ファイルをアップロード'}
+                          <input
+                            type="file"
+                            accept="image/webp,image/jpeg,image/png,image/gif"
+                            disabled={uploading}
+                            style={{ display: 'none' }}
+                            onChange={(ev2) => {
+                              const f = ev2.target.files?.[0];
+                              ev2.target.value = '';
+                              if (f) uploadHero(f);
+                            }}
+                          />
+                        </label>
+                      </>
                     )}
                   </>
                 )}

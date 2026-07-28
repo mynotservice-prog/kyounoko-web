@@ -69,6 +69,7 @@ export function EventImagesClient({ rows }: { rows: EventRow[] }) {
     Object.fromEntries(rows.map((r) => [r.slug, r.override])),
   );
   const [saving, setSaving] = React.useState<Record<string, boolean>>({});
+  const [uploading, setUploading] = React.useState<Record<string, boolean>>({});
   const [savedMsg, setSavedMsg] = React.useState<Record<string, string>>({});
 
   const filtered = rows.filter((r) => {
@@ -89,7 +90,8 @@ export function EventImagesClient({ rows }: { rows: EventRow[] }) {
       const res = await fetch('/api/admin/event-overrides', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ slug, hero: editing[slug] ?? '' }),
+        // API は { slug, patch } 形式のみ受け付ける（hero 直付けは 400 になる）
+        body: JSON.stringify({ slug, patch: { hero: editing[slug] ?? '' } }),
       });
       const data = (await res.json()) as { ok?: boolean; error?: string; mode?: string };
       if (!res.ok || !data.ok) {
@@ -97,13 +99,42 @@ export function EventImagesClient({ rows }: { rows: EventRow[] }) {
       } else {
         setSavedMsg((m) => ({
           ...m,
-          [slug]: data.mode === 'github' ? '✅ commit → デプロイ反映待ち（数分）' : '✅ ローカル保存',
+          [slug]:
+            data.mode === 'github'
+              ? '✅ commit → デプロイ反映待ち（数分）'
+              : data.mode === 'kv'
+                ? '✅ 保存しました（数秒で本番反映）'
+                : '✅ ローカル保存',
         }));
       }
     } catch (e) {
       setSavedMsg((m) => ({ ...m, [slug]: '❌ ' + (e instanceof Error ? e.message : 'error') }));
     } finally {
       setSaving((s) => ({ ...s, [slug]: false }));
+    }
+  };
+
+  // 画像ファイルを /api/admin/spot-image（Vercel Blob）へ送り、返ったURLを入力欄にセット。
+  const upload = async (slug: string, file: File) => {
+    setUploading((s) => ({ ...s, [slug]: true }));
+    setSavedMsg((m) => ({ ...m, [slug]: '' }));
+    try {
+      const fd = new FormData();
+      fd.append('slug', slug);
+      fd.append('dir', 'events');
+      fd.append('file', file);
+      const res = await fetch('/api/admin/spot-image', { method: 'POST', body: fd });
+      const d = (await res.json()) as { ok?: boolean; path?: string; error?: string };
+      if (!res.ok || !d.path) {
+        setSavedMsg((m) => ({ ...m, [slug]: '❌ アップロード失敗: ' + (d.error || 'failed') }));
+      } else {
+        setEditing((s) => ({ ...s, [slug]: d.path! }));
+        setSavedMsg((m) => ({ ...m, [slug]: '✅ アップロードしました（「保存」で反映）' }));
+      }
+    } catch (e) {
+      setSavedMsg((m) => ({ ...m, [slug]: '❌ ' + (e instanceof Error ? e.message : 'error') }));
+    } finally {
+      setUploading((s) => ({ ...s, [slug]: false }));
     }
   };
 
@@ -235,6 +266,32 @@ export function EventImagesClient({ rows }: { rows: EventRow[] }) {
                       <option key={p} value={p} />
                     ))}
                   </datalist>
+                  <label
+                    style={{
+                      padding: '9px 12px',
+                      fontSize: 13,
+                      fontWeight: 600,
+                      color: 'var(--ink-600)',
+                      border: '1px solid var(--border-strong)',
+                      borderRadius: 'var(--r-md)',
+                      background: uploading[r.slug] ? 'var(--bg-subtle)' : 'var(--bg-surface)',
+                      cursor: uploading[r.slug] ? 'wait' : 'pointer',
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    {uploading[r.slug] ? '📤 …' : '📤'}
+                    <input
+                      type="file"
+                      accept="image/webp,image/jpeg,image/png,image/gif"
+                      disabled={!!uploading[r.slug]}
+                      style={{ display: 'none' }}
+                      onChange={(e) => {
+                        const f = e.target.files?.[0];
+                        e.target.value = '';
+                        if (f) upload(r.slug, f);
+                      }}
+                    />
+                  </label>
                   <button
                     type="button"
                     onClick={() => save(r.slug)}

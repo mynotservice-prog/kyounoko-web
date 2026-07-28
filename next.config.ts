@@ -6,6 +6,12 @@ import { ARTICLE_REDIRECTS } from './lib/article-redirects';
 const nextConfig: NextConfig = {
   reactStrictMode: true,
 
+  // /api/admin/edit-content は GitHub 取得失敗時（トークン失効等）に
+  // 同梱 md へフォールバックして読むため、関数バンドルに content/ を確実に含める。
+  outputFileTracingIncludes: {
+    '/api/admin/edit-content': ['./content/articles/**/*', './content/plans/**/*'],
+  },
+
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
