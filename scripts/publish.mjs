@@ -235,6 +235,34 @@ function bodyOf(raw) {
 }
 
 /**
+ * 本文に差分が無い（＝frontmatterだけ変えた）場合の検証条件を作る。
+ *
+ * noindex を外して公開する、metaDescription を差し替える、といった変更は本文に
+ * 一文も現れないので `pickDiffSnippet` では検証できない。だが**本番HTMLには必ず出る**
+ * ので、frontmatter の変更内容そのものを条件に変換すればよい。
+ * （2026-07-28、秋面4本の noindex 解除でここに落ちて publish が停止した。）
+ */
+function pickFrontmatterCheck(baseRaw, curRaw) {
+  const noindexBefore = /^noindex:\s*true\s*$/m.test(baseRaw.match(/^---\n[\s\S]*?\n---/)?.[0] ?? '');
+  const noindexAfter = /^noindex:\s*true\s*$/m.test(curRaw.match(/^---\n[\s\S]*?\n---/)?.[0] ?? '');
+  if (noindexBefore && !noindexAfter) {
+    // 解除したのに robots メタが残っていたら「出ていない」と判定したい
+    return { absent: 'content="noindex', note: 'noindex 解除の検証: 本番HTMLに noindex メタが無いこと' };
+  }
+  if (!noindexBefore && noindexAfter) {
+    return { expect: 'content="noindex', note: 'noindex 付与の検証: 本番HTMLに noindex メタがあること' };
+  }
+  const meta = (raw) => fmField(raw, 'metaDescription');
+  const before = meta(baseRaw);
+  const after = meta(curRaw);
+  if (after && after !== before) {
+    const snip = plainSnippet(after, 20) ?? plainSnippet(after, 8);
+    if (snip) return { expect: snip, note: 'metaDescription の変更で検証します' };
+  }
+  return null;
+}
+
+/**
  * base→現在の diff から、検証に使える一文を選ぶ。
  * 追加行があればそれ（本番に出ているべき）、無ければ削除行（本番から消えているべき）。
  */
@@ -745,9 +773,22 @@ async function main() {
         console.log(`     ${WARN} ${slug}: 変更が短いため断片で照合します（誤一致の可能性あり）`);
       }
       if (!picked) {
-        console.error(`${NG} ${slug}: title が変わっておらず、diff からも検証できる文字列を作れません。`);
-        console.error('   このまま進めると「titleが一致した」だけで反映済みと誤判定します。--expect= で指定してください。');
-        process.exit(2);
+        // 本文に差分が無い＝frontmatterだけの変更。noindex解除・meta差し替えがこれに当たる。
+        // 2026-07-28、秋面の noindex 解除でここに落ちて publish が止まった。
+        // frontmatter の変更内容そのものを検証条件に変換する。
+        const fmPicked = pickFrontmatterCheck(baseRaw, raw);
+        if (fmPicked?.absent) {
+          expect = null;
+          absent = fmPicked.absent;
+          console.log(`     ${fmPicked.note}`);
+        } else if (fmPicked?.expect) {
+          expect = fmPicked.expect;
+          console.log(`     ${fmPicked.note}`);
+        } else {
+          console.error(`${NG} ${slug}: title も本文も frontmatter も、検証できる差分を作れません。`);
+          console.error('   このまま進めると「titleが一致した」だけで反映済みと誤判定します。--expect= で指定してください。');
+          process.exit(2);
+        }
       }
     }
     if (!expect && !absent) {
