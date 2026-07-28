@@ -120,9 +120,9 @@ USB充電式・電池式・コンセント式・噴霧式と幅広い構成。**
 
 ## 関連記事もチェック
 
-- [子供の虫よけ3種類を1夏ガチ比較](/articles/kodomo-mushiyoke-3shurui-hikaku-real)
-- [【2026年版】子供の虫よけの選び方](/articles/kodomo-mushiyoke-erabikata-2026)
-- [赤ちゃんあせも対策2026](/articles/akachan-asemo-taisaku-2026)
+- [子供の虫よけ3種類を1夏ガチ比較](/article/kodomo-mushiyoke-3shurui-hikaku-real)
+- [【2026年版】子供の虫よけの選び方](/article/kodomo-mushiyoke-erabikata-2026)
+- [赤ちゃんあせも対策2026](/article/akachan-asemo-taisaku-2026)
 
 ## よくある質問
 

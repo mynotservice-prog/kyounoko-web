@@ -88,9 +88,9 @@ hero: /hero-ai/swim-school-3brand-3-6sai.jpg
 
 ## 関連記事もチェック
 
-- [スイミング何歳から【0-6歳】主要5社比較](/articles/swimming-nansai-kara)
-- [習い事いつから【0-6歳】年齢別ガイド](/articles/naraigoto-itsukara-0-6sai)
-- [幼児の習い事 何歳から?](/articles/youji-naraigoto-nansai-kara)
+- [スイミング何歳から【0-6歳】主要5社比較](/article/swimming-nansai-kara)
+- [習い事いつから【0-6歳】年齢別ガイド](/article/naraigoto-itsukara-0-6sai)
+- [幼児の習い事 何歳から?](/article/youji-naraigoto-nansai-kara)
 
 ## よくある質問
 

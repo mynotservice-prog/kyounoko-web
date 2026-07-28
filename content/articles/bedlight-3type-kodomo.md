@@ -112,9 +112,9 @@ USB充電式は5〜20時間持つモデルが主流。**毎日寝室で使う場
 
 ## 関連記事もチェック
 
-- [19時消灯ルーティン](/articles/19ji-shoutou-routine)
-- [子育てサブスク3ジャンル比較](/articles/kosodate-subsc-3sha-hikaku)
-- [平日夜30分ルーティン](/articles/heijitsu-yoru-30pun-routine)
+- [19時消灯ルーティン](/article/19ji-shoutou-routine)
+- [子育てサブスク3ジャンル比較](/article/kosodate-subsc-3sha-hikaku)
+- [平日夜30分ルーティン](/article/heijitsu-yoru-30pun-routine)
 
 ## よくある質問
 

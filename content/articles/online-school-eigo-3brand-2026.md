@@ -89,9 +89,9 @@ QQキッズは在籍講師数が多く、当日予約も比較的取りやすい
 
 ## 関連記事もチェック
 
-- [英語の習い事いつから【0-6歳】年齢別ガイド](/articles/eigo-naraigoto-nansai-kara)
-- [家でできる英語遊び【4-6歳】](/articles/eigo-asobi-ie-de-4-6sai)
-- [幼児の習い事 何歳から?](/articles/youji-naraigoto-nansai-kara)
+- [英語の習い事いつから【0-6歳】年齢別ガイド](/article/eigo-naraigoto-nansai-kara)
+- [家でできる英語遊び【4-6歳】](/article/eigo-asobi-ie-de-4-6sai)
+- [幼児の習い事 何歳から?](/article/youji-naraigoto-nansai-kara)
 
 ## よくある質問
 

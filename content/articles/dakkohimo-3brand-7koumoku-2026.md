@@ -101,9 +101,9 @@ hero: /img/scenes/stroller-06.webp
 
 ## 関連記事もチェック
 
-- [抱っこ紐ランキング2026【新生児-3歳】定番5本比較](/articles/dakkohimo-ranking-2026)
-- [抱っこ紐 新生児からいつまで使う?](/articles/dakkohimo-itsukara-shinseiji)
-- [ベビーカーvs抱っこ紐 使い分け早見表](/articles/babycar-vs-dakkohimo-tsukaiwake-data)
+- [抱っこ紐ランキング2026【新生児-3歳】定番5本比較](/article/dakkohimo-ranking-2026)
+- [抱っこ紐 新生児からいつまで使う?](/article/dakkohimo-itsukara-shinseiji)
+- [ベビーカーvs抱っこ紐 使い分け早見表](/article/babycar-vs-dakkohimo-tsukaiwake-data)
 
 ## よくある質問
 

@@ -201,6 +201,8 @@ lede: >-
 
 **出典：国営昭和記念公園 公式ホームページ（showakinen-koen.jp）｜確認日 2026年7月27日**
 
+> 出典：国営昭和記念公園公式サイト「各種料金」（https://www.showakinen-koen.jp/park-information/price/）・「アクセス」（https://www.showakinen-koen.jp/access/）・「お子様をお連れの方へ」（https://www.showakinen-koen.jp/park-information/child/）。2026年7月28日に確認。駐車料金は公式に「1日（公園の開園時間内）の料金です。開園時間外の留め置きはできません。」と記載されています。
+
 ## 関連記事
 
 - [国営昭和記念公園のベビーカー貸出は3ゲート計35台・無料](/article/showa-kinen-koen-stroller)

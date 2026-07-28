@@ -86,9 +86,9 @@ DWEは週末イベント(キャンプ・電話レッスン)など親の参加が
 
 ## 関連記事もチェック
 
-- [英語の習い事いつから【0-6歳】年齢別選び方ガイド](/articles/eigo-naraigoto-nansai-kara)
-- [家でできる英語遊び【4-6歳】](/articles/eigo-asobi-ie-de-4-6sai)
-- [通信教材比較【幼児向け】](/articles/tsuushin-kyouzai-hikaku)
+- [英語の習い事いつから【0-6歳】年齢別選び方ガイド](/article/eigo-naraigoto-nansai-kara)
+- [家でできる英語遊び【4-6歳】](/article/eigo-asobi-ie-de-4-6sai)
+- [通信教材比較【幼児向け】](/article/tsuushin-kyouzai-hikaku)
 
 ## よくある質問
 

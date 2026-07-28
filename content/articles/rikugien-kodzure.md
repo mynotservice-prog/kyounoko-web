@@ -110,7 +110,7 @@ lede: >-
 
 **「手すりやスロープ等はありません」と公式が明言している庭園**である点は、子連れの計画で最も重く効きます。段差で通れない箇所があること自体は書かれていますが、それがどこで何段なのかまでは公示されていません。ベビーカーで行くなら、公式が案内するとおり**園内パンフレット記載の車椅子通行可能ルートを入口で受け取るか、正門窓口で聞く**のが唯一の確実な方法です。
 
-なお、同じ東京都公園協会が運営する小石川後楽園には、このバリアフリー設備の一覧そのものが公式FAQに置かれていません。比較は[小石川後楽園は子連れで入れる？](/articles/koishikawa-korakuen-kodzure)にまとめています。
+なお、同じ東京都公園協会が運営する小石川後楽園には、このバリアフリー設備の一覧そのものが公式FAQに置かれていません。比較は[小石川後楽園は子連れで入れる？](/article/koishikawa-korakuen-kodzure)にまとめています。
 
 ## 一周30分・全体1時間｜滞在時間と持ち物の目安
 
@@ -185,10 +185,12 @@ lede: >-
 
 **出典：東京都公園協会「公園へ行こう！」（tokyo-park.or.jp）｜確認日 2026年7月27日**
 
+> 出典：東京都公園協会「庭紅葉の六義園 夜間特別観賞」（https://www.tokyo-park.or.jp/special/rikugien_lighting/index.html）。2026年7月28日に確認。公式には「小学生以下は無料で入園できますが、夜間特別観賞券をお持ちの保護者の付添が必要です」と記載されています。開催期間・料金は年度ごとに変わるため、行く前に公式で確認してください。
+
 ## 関連記事
 
-- [小石川後楽園は子連れで入れる？小学生以下は入園無料・門は2か所・シート敷きは不可](/articles/koishikawa-korakuen-kodzure)
-- [紅葉狩り 関東の子連れスポット20選](/articles/koyou-kanto-kodzure-20)
-- [ベビーカーで行きやすい東京の駅トップ30](/articles/babycar-good-station-top30-tokyo-2026)
-- [雨の日にベビーカーで行ける東京のスポット](/articles/amenohi-stroller-spots-tokyo)
-- [上野動物園はベビーカーで回れる？](/articles/ueno-zoo-stroller)
+- [小石川後楽園は子連れで入れる？小学生以下は入園無料・門は2か所・シート敷きは不可](/article/koishikawa-korakuen-kodzure)
+- [紅葉狩り 関東の子連れスポット20選](/article/koyou-kanto-kodzure-20)
+- [ベビーカーで行きやすい東京の駅トップ30](/article/babycar-good-station-top30-tokyo-2026)
+- [雨の日にベビーカーで行ける東京のスポット](/article/amenohi-stroller-spots-tokyo)
+- [上野動物園はベビーカーで回れる？](/article/ueno-zoo-stroller)

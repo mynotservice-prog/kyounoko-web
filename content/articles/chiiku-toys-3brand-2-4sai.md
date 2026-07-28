@@ -90,9 +90,9 @@ hero: /img/scenes/toy-03.webp
 
 ## 関連記事もチェック
 
-- [知育玩具サブスク4社比較【0-6歳】月額3000円から](/articles/chiiku-subsc-hikaku-4sha)
-- [知育玩具2〜3歳おすすめ5選](/articles/chiiku-toys-2-3sai-5sen)
-- [幼児の習い事いつから?年齢別ガイド](/articles/youji-naraigoto-nansai-kara)
+- [知育玩具サブスク4社比較【0-6歳】月額3000円から](/article/chiiku-subsc-hikaku-4sha)
+- [知育玩具2〜3歳おすすめ5選](/article/chiiku-toys-2-3sai-5sen)
+- [幼児の習い事いつから?年齢別ガイド](/article/youji-naraigoto-nansai-kara)
 
 ## よくある質問
 

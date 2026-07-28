@@ -98,9 +98,9 @@ A型は対面・背面切替できる両対面式が主流で、新生児期は�
 
 ## 関連記事もチェック
 
-- [失敗しないベビーカー選び方【0-3歳】4用途別チェック表](/articles/babycar-erabikata)
-- [ベビーカーvs抱っこ紐 月齢4フェーズで迷わない使い分け早見表](/articles/babycar-vs-dakkohimo-tsukaiwake-data)
-- [ベビーカーランキング2026](/articles/babycar-ranking-2026)
+- [失敗しないベビーカー選び方【0-3歳】4用途別チェック表](/article/babycar-erabikata)
+- [ベビーカーvs抱っこ紐 月齢4フェーズで迷わない使い分け早見表](/article/babycar-vs-dakkohimo-tsukaiwake-data)
+- [ベビーカーランキング2026](/article/babycar-ranking-2026)
 
 ## よくある質問
 
