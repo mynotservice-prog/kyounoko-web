@@ -156,6 +156,6 @@ IKEAは「子連れで気軽に行ける数少ない大型商業施設」。ベ�
 - [夏の子連れ完全マップ｜室内冷房スポット](/article/natsu-kosodate-kanzen-map)
 - [梅雨の室内遊び完全ガイド 0-6歳](/article/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026)
 - [IKEAベビーカー入店・カート完全ガイド](/article/ikea-stroller)
-- [IKEA離乳食販売・持ち込みガイド](/article/ikea-rinyushoku)
+- [IKEA離乳食販売・持ち込みガイド](/article/ikea-restaurant-kodzure-koryaku)
 - [IKEAオムツ替えスポット完全ガイド](/article/ikea-omutsu)
 - [IKEAスモーランド完全ガイド](/article/ikea-smaland)

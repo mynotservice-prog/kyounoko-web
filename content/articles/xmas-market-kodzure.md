@@ -179,8 +179,6 @@ lede: >-
 - [クリスマスプレゼント0-6歳](/article/xmas-present-nenrei-0-6)
 - [/data/wards で23区比較表](/data/wards)
 - [駅別ガイド全484駅](/station)
-- [雨の日強い駅TOP15](/article/tokyo-rainy-strong-station-data)
-
 ## よくある質問
 
 ### Q. 0〜1歳を連れて行っても楽しめる？

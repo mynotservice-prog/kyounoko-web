@@ -307,8 +307,6 @@ area: tokyo
 - [/data/wards/chiyoda 千代田区エリア情報](/data/wards/chiyoda)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
-- [ベビーカー◎率TOP30駅](/article/babycar-good-station-top30-tokyo-2026)
-
 ## よくある親の悩みQ&A 10項目
 
 ### Q1. ベビーカー入店NG店の見分け方は？

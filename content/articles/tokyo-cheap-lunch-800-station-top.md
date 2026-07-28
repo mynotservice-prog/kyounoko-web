@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: tokyo-cheap-lunch-800-station-top
 title: 800円以内で子連れランチできる駅TOP15｜財布に優しい家族外食
 metaDescription: >-

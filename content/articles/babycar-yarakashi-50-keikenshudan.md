@@ -282,7 +282,6 @@ ICじゃない時に切符購入で詰まる。**対策**：交通系ICを必ず
 ## 関連データ・記事
 
 - [/data/wards で23区比較表](/data/wards)
-- [東京23区ベビーカー◎率TOP30駅](/article/babycar-good-station-top30-tokyo-2026)
 - [駅別子連れランチガイド](/station)
 - [ベビーカーOKカフェ15選](/article/bebycar-ok-cafe-15)
 

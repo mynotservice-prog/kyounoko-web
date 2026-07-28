@@ -209,4 +209,3 @@ lede: >-
 ## 関連記事
 
 - [東京駅周辺の子連れランチ10選](/article/tokyo-station-kodzure-lunch)
-- [ベビーカーで動きやすい東京の駅TOP30](/article/babycar-good-station-top30-tokyo-2026)

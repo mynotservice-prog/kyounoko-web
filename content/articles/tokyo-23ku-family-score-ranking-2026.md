@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: tokyo-23ku-family-score-ranking-2026
 title: 【2026年版】東京23区 子連れ家族度ランキング｜独自データで見える23区の住みやすさ
 metaDescription: >-

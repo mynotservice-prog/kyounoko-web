@@ -173,5 +173,5 @@ IKEAは**全店オムツ替え可能**で、旗艦店にはベビールーム完
 - [梅雨の室内遊び完全ガイド 0-6歳](/article/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026)
 - [IKEAレストランのベビーチェア完全ガイド](/article/ikea-baby-chair)
 - [IKEAベビーカー入店・カート完全ガイド](/article/ikea-stroller)
-- [IKEA離乳食販売・持ち込みガイド](/article/ikea-rinyushoku)
+- [IKEA離乳食販売・持ち込みガイド](/article/ikea-restaurant-kodzure-koryaku)
 - [IKEAスモーランド完全ガイド](/article/ikea-smaland)

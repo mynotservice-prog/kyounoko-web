@@ -156,8 +156,6 @@ area: tokyo
 - [/data/wards/suginami 杉並区エリア情報](/data/wards/suginami)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
-- [下北沢vs高円寺vs阿佐ヶ谷比較](/article/tokyo-shimokita-koenji-asagaya-comparison)
-
 ## よくある質問（FAQ）
 
 ### Q. ベビーカーOKか事前にどう確認すればいい？

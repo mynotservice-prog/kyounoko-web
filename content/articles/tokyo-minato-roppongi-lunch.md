@@ -147,8 +147,6 @@ area: tokyo
 - [/data/wards/minato 港区エリア情報](/data/wards/minato)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
-- [個室・座敷で子連れランチTOP15](/article/tokyo-station-private-room-ranking)
-
 ## よくある質問（FAQ）
 
 ### Q. 港区の子連れランチ、予算感はどれくらい？

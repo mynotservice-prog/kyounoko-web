@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: tokyo-line-family-friendly-ranking
 title: 子連れ移動に強い東京の路線TOP10｜駅密度×ベビーカー◎率で算出
 metaDescription: >-

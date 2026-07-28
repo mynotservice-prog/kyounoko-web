@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: tokyo-park-ranking-mom50-vote
 title: ママ100人投票｜東京の子連れ公園ランキングTOP30
 metaDescription: >-

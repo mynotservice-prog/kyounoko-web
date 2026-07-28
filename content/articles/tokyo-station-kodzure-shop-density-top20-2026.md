@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: tokyo-station-kodzure-shop-density-top20-2026
 title: 【独自集計】東京の子連れOK店が多い駅TOP20｜上野・銀座・自由が丘ほか
 metaDescription: >-
