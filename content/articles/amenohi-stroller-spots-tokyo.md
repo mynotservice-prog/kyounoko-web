@@ -403,7 +403,6 @@ lede: >-
 ## 関連データ・記事
 
 - [/data/wards で23区比較表](/data/wards)
-- [東京23区ベビーカー◎率TOP30駅](/article/babycar-good-station-top30-tokyo-2026)
 - [駅別子連れランチガイド](/station)
 - [ベビーカーOKカフェ15選](/article/bebycar-ok-cafe-15)
 

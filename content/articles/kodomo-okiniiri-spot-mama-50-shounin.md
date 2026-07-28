@@ -327,7 +327,5 @@ A. **大型公園・商業施設・室内施設はほぼ全てOK**。動物園�
 A. 春（桜）：砧・善福寺川緑地、夏（水遊び）：駒沢・葛西、秋（紅葉）：昭和記念公園、冬：室内系シフト、と季節ローテで使い分け。
 
 ## 関連記事
-
-- [東京の子連れ公園ランキングTOP30](/article/tokyo-park-ranking-mom50-vote)
 - [世田谷区の週末ファミリー記事](/article/tokyo-setagaya-weekend-family)
 - [中野区の雨の日子連れスポット](/article/tokyo-nakano-amenohi-kodzure)

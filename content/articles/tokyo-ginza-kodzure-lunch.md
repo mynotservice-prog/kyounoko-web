@@ -287,8 +287,6 @@ JR有楽町駅直結。ベビーカー動線・ベビールーム完備で、銀
 - [/data/wards/chuo 中央区エリア情報](/data/wards/chuo)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
-- [個室・座敷で子連れランチTOP15](/article/tokyo-station-private-room-ranking)
-
 ## よくある質問（FAQ）
 
 ### Q1. ベビーカーで入店できる店の見分け方は？

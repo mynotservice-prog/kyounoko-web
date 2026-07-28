@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: babycar-good-station-top30-tokyo-2026
 title: 東京23区 ベビーカー◎率TOP30駅｜本当に動きやすい駅はどこ？
 metaDescription: >-

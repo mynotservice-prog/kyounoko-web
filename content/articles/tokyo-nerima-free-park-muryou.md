@@ -135,8 +135,6 @@ area: tokyo
 - [/data/wards/nerima 練馬区エリア情報](/data/wards/nerima)
 - [駅別ガイド全484駅](/station)
 - [/data/restaurants で全店舗データ](/data/restaurants)
-- [ママ100人投票 公園TOP30](/article/tokyo-park-ranking-mom50-vote)
-
 ## よくある質問（FAQ）
 
 ### Q. 駐車場はどの公園にもありますか？

@@ -289,8 +289,6 @@ area: tokyo
 - [/data/wards/shibuya 渋谷区エリア情報](/data/wards/shibuya)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
-- [個室・座敷で子連れランチTOP15](/article/tokyo-station-private-room-ranking)
-
 ## よくある親の悩みQ&A 10項目
 
 ### Q1. ベビーカー入店NG店の見分け方は？

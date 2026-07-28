@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: tokyo-station-private-room-ranking
 title: 個室・座敷で子連れランチできる駅TOP15｜誕生日・お祝い・帰省時に
 metaDescription: >-

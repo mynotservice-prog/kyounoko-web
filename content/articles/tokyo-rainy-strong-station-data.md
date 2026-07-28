@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: tokyo-rainy-strong-station-data
 title: 東京で雨の日に強い駅TOP15｜地下街・モール直結データから算出
 metaDescription: >-

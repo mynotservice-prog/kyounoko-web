@@ -185,7 +185,6 @@ lede: "ベビーカーと抱っこ紐、毎回ギリギリで悩んでいませ�
 ## 関連データ・記事
 
 - [/data/wards で23区比較表](/data/wards)
-- [東京23区ベビーカー◎率TOP30駅](/article/babycar-good-station-top30-tokyo-2026)
 - [ベビーカーいつから使う？](/article/babycar-itsukara-tsukau)
 - [抱っこ紐いつから？](/article/dakkohimo-itsukara-shinseiji)
 

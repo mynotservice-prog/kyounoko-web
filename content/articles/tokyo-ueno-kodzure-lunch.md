@@ -273,8 +273,6 @@ JR上野駅直結。ベビーカー動線・ベビールーム完備。和食・
 - [/data/wards/taito 台東区エリア情報](/data/wards/taito)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
-- [【独自集計】子連れOK店多い駅TOP20](/article/tokyo-station-kodzure-shop-density-top20-2026)
-
 ## よくある質問（FAQ）
 
 ### Q1. ベビーカーで入店できる店の見分け方は？

@@ -136,8 +136,6 @@ area: tokyo
 - [/data/wards/setagaya 世田谷区エリア情報](/data/wards/setagaya)
 - [駅別ガイド全484駅](/station)
 - [/data/restaurants で全店舗データ](/data/restaurants)
-- [ママ100人投票 公園TOP30](/article/tokyo-park-ranking-mom50-vote)
-
 ## よくある質問（FAQ）
 
 ### Q. 世田谷区の大型公園、駐車場は混みますか？

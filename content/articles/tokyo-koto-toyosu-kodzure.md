@@ -149,8 +149,6 @@ area: tokyo
 - [/data/wards/koto 江東区エリア情報](/data/wards/koto)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
-- [雨の日強い駅TOP15](/article/tokyo-rainy-strong-station-data)
-
 ## よくある質問（FAQ）
 
 ### Q. 豊洲・有明、どっちから攻めるのがおすすめ？

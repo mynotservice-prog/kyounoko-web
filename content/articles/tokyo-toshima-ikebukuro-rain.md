@@ -156,8 +156,6 @@ area: tokyo
 - [/data/wards/toshima 豊島区エリア情報](/data/wards/toshima)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
-- [雨の日強い駅TOP15](/article/tokyo-rainy-strong-station-data)
-
 ## よくある質問（FAQ）
 
 ### Q. サンシャイン水族館は予約必須ですか？

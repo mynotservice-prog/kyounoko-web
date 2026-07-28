@@ -142,8 +142,6 @@ area: tokyo
 - [/data/wards/nakano 中野区エリア情報](/data/wards/nakano)
 - [駅別ガイド全484駅](/station)
 - [/data/restaurants で全店舗データ](/data/restaurants)
-- [雨の日強い駅TOP15](/article/tokyo-rainy-strong-station-data)
-
 ## よくある質問（FAQ）
 
 ### Q. 中野区外（杉並・練馬）からでも児童館は使えますか？

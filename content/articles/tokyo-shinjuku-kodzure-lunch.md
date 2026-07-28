@@ -174,8 +174,6 @@ JR南口直結のNEWoManは**エレベーター動線・ベビールーム**が�
 - [/data/wards/shinjuku 新宿区エリア情報](/data/wards/shinjuku)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
-- [ベビーカー◎率TOP30駅](/article/babycar-good-station-top30-tokyo-2026)
-
 ## よくある質問
 
 ### Q. ベビーカー入店NG店の見分け方は？
