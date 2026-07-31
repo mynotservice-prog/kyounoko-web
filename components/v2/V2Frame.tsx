@@ -162,7 +162,14 @@ function V2MobileMenu({
 }
 
 // IA再編(2026-06): 「探す」を機能名「今日の流れ(today)」へ、特集を外し「エリア・駅(area)」を昇格。
-export type V2NavActive = 'home' | 'today' | 'spots' | 'area' | 'events' | 'saved';
+export type V2NavActive =
+  | 'home'
+  | 'today'
+  | 'spots'
+  | 'articles'
+  | 'area'
+  | 'events'
+  | 'saved';
 
 type FrameProps = {
   children: React.ReactNode;
@@ -326,7 +333,10 @@ function V2BottomNav({ active }: { active?: V2NavActive }) {
   const items = [
     { k: 'home', t: 'ホーム', icon: 'home', href: '/' },
     { k: 'today', t: '今日の流れ', icon: 'sparkle', href: '/today' },
-    { k: 'area', t: 'エリア・駅', icon: 'pin', href: '/area' },
+    // 2026-07-31: 記事はサイト全クリックの81.5%・1ページあたり39クリックを生む最大の面だが
+    // ナビに導線が1つも無かった。一方 /area は90日で計9クリック（20ページ中16ページが0）で
+    // noindex 化したため、この枠を記事に置き換える。
+    { k: 'articles', t: '記事', icon: 'book', href: '/articles' },
     { k: 'events', t: 'イベント', icon: 'calendar', href: '/events' },
     { k: 'saved', t: '保存', icon: 'bookmark', href: '/favorites' },
   ] as const;
@@ -361,7 +371,10 @@ function V2DesktopHeader({ active }: { active?: V2NavActive }) {
     { k: 'home', t: 'ホーム', icon: 'home', href: '/' },
     { k: 'today', t: '今日の流れ', icon: 'sparkle', href: '/today' },
     { k: 'spots', t: 'スポット一覧', icon: 'flag', href: '/spots' },
-    { k: 'area', t: 'エリア・駅', icon: 'pin', href: '/area' },
+    // 2026-07-31: 記事はサイト全クリックの81.5%・1ページあたり39クリックを生む最大の面だが
+    // ナビに導線が1つも無かった。一方 /area は90日で計9クリック（20ページ中16ページが0）で
+    // noindex 化したため、この枠を記事に置き換える。
+    { k: 'articles', t: '記事', icon: 'book', href: '/articles' },
     { k: 'events', t: 'イベント', icon: 'calendar', href: '/events' },
     { k: 'saved', t: '保存', icon: 'bookmark', href: '/favorites' },
   ] as const;
