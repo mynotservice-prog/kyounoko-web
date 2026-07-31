@@ -102,15 +102,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
   const wardName = station ? (WARD_NAMES[station.ward] ?? '') : (anyStation?.regionLabel ?? '');
   const stationName = (station ?? anyStation)!.name;
-  const title =
-    kind === 'spot'
-      ? `${stationName}駅 ${cond.titlePart}｜${wardName}の子連れスポットガイド`
-      : `${stationName}駅 ${cond.titlePart}子連れOKランチ・カフェ｜ベビーカーOK店ガイド`;
-  const description =
-    kind === 'spot'
-      ? `${stationName}駅周辺で${cond.metaPart}を厳選。${cond.description}${wardName}の${cond.label}を探すならまずここから。`
-      : `${stationName}駅周辺で${cond.metaPart}の子連れランチ・カフェを厳選。${cond.description}${wardName}で${cond.label}の選び方に迷ったらまずここから。`;
-
   // index/noindex は二段ゲート（lib/station-cond-index.ts）で判定。sitemap.ts と共通。
   // 需要実績(GSC90日) or matched件数>=閾値 のみ index。薄い死蔵 long-tail は noindex。
   let matchedCount = 0;
@@ -129,6 +120,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const spotsMatched = filterSpotsByCondition(spotsAll, condition as StationConditionSlug);
     matchedCount = spotsMatched.length;
   }
+  // タイトル/ディスクリプションは matchedCount 確定後に組む。
+  //
+  // 2026-07-31 改善: 旧タイトルは条件によらず末尾が
+  // 「子連れOKランチ・カフェ｜ベビーカーOK店ガイド」で固定だったため、
+  //   - 焼肉/回転寿司のページにも「ランチ・カフェ」が付いて意図とズレる
+  //   - 「OK」が1タイトルに3回出る
+  //   - 全条件ページでタイトル末尾30文字が同一（条件間 near-duplicate）
+  //   - GSCで実際に受けている「離乳食」がタイトルに無い
+  // という問題があった。条件名＋該当件数（ページごとに必ず異なる）＋
+  // 実際に検索される語（離乳食・ベビーチェア）で組み直す。
+  const countPart = matchedCount > 0 ? `${matchedCount}軒` : '';
+  const title =
+    kind === 'spot'
+      ? `${stationName}駅 ${cond.titlePart}｜${wardName}の子連れスポットガイド`
+      : `${stationName}駅の${cond.titleNoun}${countPart}｜離乳食持込・ベビーチェア`;
+  const description =
+    kind === 'spot'
+      ? `${stationName}駅周辺で${cond.metaPart}を厳選。${cond.description}${wardName}の${cond.label}を探すならまずここから。`
+      : `${stationName}駅周辺の${cond.label}を${countPart ? `${countPart}` : ''}掲載。${cond.description}キッズチェア・離乳食持込・ベビーカー入店の可否を店ごとに整理しました。${wardName}で${cond.label}を探すならここから。`;
+
   // 剪定(2026-06): スポット系は常にnoindex / 外食系は需要実績 or (主要駅×matched>=閾値)のみindex。
   const shouldNoindex = !isStationConditionIndexable(
     slug,
