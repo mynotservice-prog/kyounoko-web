@@ -193,7 +193,7 @@ A. 内容を理解できるのは4歳頃からです。さいたま市宇宙劇�
 ## 関連記事
 
 - [川崎市の子連れ室内遊び場](/article/shitsunai-asobi-kawasaki)
-- [横浜市の子連れ室内遊び場](/article/shitsunai-asobi-yokohama)
+- [板橋区の子連れ室内遊び場](/article/shitsunai-asobi-itabashi-tokyo)
 - [梅雨の室内遊び完全ガイド 0-6歳](/article/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026)
 - [子連れファミレス10選｜キッズメニュー・お子様ランチ比較](/article/kodzure-famires-15sen)
 
