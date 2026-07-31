@@ -7,6 +7,26 @@ import { V2Img, V2FavBtn, V2Tag } from './V2Base';
 
 type Tag = { t: string; k?: '' | 'age' | 'rain' | 'feat' };
 
+/**
+ * 保存ボタンに渡すIDを、スポット詳細ページと同じ「URL slug」に揃える（2026-07-31）。
+ *
+ * バグの内容: 一覧カードは spotToV2() の id（= spotIdFromName、日本語名がそのまま入る
+ * 例:「東京ドイツ村」）で保存していたが、詳細ページは id={slug}（例:「-l5nt」）で保存し、
+ * /favorites は slug でしか照合していなかった。
+ * → 一覧から保存したものは kk_saved_v2 に入っても保存一覧に絶対に出ない。
+ *
+ * 一覧カードは全呼び出し元から href={`/spot/${slug}`} を受け取っているため、
+ * そこから slug を取り出せば呼び出し側を変更せずに詳細ページと一致させられる。
+ */
+function spotSaveId(href: string | undefined, fallbackId: string): string {
+  const PREFIX = '/spot/';
+  if (href && href.startsWith(PREFIX)) {
+    const slug = href.slice(PREFIX.length);
+    if (slug) return slug;
+  }
+  return fallbackId;
+}
+
 export type V2Spot = {
   id: string;
   name: string;
@@ -91,7 +111,7 @@ export function V2SpotCardV({
     <Link href={link} className="v2-card-v" style={{ width: w }}>
       <div className="v2-imgwrap" style={{ aspectRatio: '16/9', borderRadius: '14px 14px 0 0' }}>
         {rank ? <span className={`v2-rank ${rankClass(rank)}`}>{rank}</span> : null}
-        <V2FavBtn id={spot.id} />
+        <V2FavBtn id={spotSaveId(href, spot.id)} />
         <V2Img src={spot.img} seed={spot.id} alt={spot.name} />
       </div>
       <div className="v2-card-v-body">
@@ -141,7 +161,7 @@ export function V2SpotMini({
       <div className="v2-card-mini-title">{spot.name}</div>
       <div className="v2-row" style={{ justifyContent: 'space-between' }}>
         <span className="v2-tag rain">{areaTag || spot.area}</span>
-        <V2FavBtn id={spot.id} variant="static" />
+        <V2FavBtn id={spotSaveId(href, spot.id)} variant="static" />
       </div>
     </Link>
   );
@@ -180,7 +200,7 @@ export function V2SpotRow({
             {cat && <div className="v2-card-row-cat">{spot.cat}</div>}
             <div className="v2-card-row-title">{spot.name}</div>
           </div>
-          <V2FavBtn id={spot.id} variant="static" />
+          <V2FavBtn id={spotSaveId(href, spot.id)} variant="static" />
         </div>
         <div className="v2-tag-row">
           {spot.tags.map((t, i) => (

@@ -38,6 +38,9 @@ export default async function FavoritesPage() {
     const v = spotToV2(x.spot);
     return {
       slug: x.slug,
+      // 2026-07-31 以前は一覧カードがこの id（spotIdFromName＝日本語名そのまま）で
+      // 保存していたため、既に保存済みのユーザーを救済するために一緒に渡す。
+      legacyId: v.id,
       name: x.spot.name,
       cat: v.cat,
       area: v.area,

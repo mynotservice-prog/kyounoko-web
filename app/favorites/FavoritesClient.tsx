@@ -24,6 +24,8 @@ type ArticleLite = {
 };
 type SpotLite = {
   slug: string;
+  /** 2026-07-31 以前に一覧カードが保存に使っていた旧ID（spotIdFromName）。移行救済用。 */
+  legacyId?: string;
   name: string;
   cat: string;
   area: string;
@@ -51,7 +53,13 @@ export function FavoritesClient({
   React.useEffect(() => setMounted(true), []);
 
   const savedSpotIds = Object.keys(savedV2);
-  const spots = allSpots.filter((s) => savedSpotIds.includes(s.slug));
+  // slug が正。ただし2026-07-31以前は一覧カードが旧ID（日本語名）で保存していたため、
+  // 既に保存済みのユーザーが取りこぼされないよう旧IDでも照合する。
+  const spots = allSpots.filter(
+    (s) =>
+      savedSpotIds.includes(s.slug) ||
+      (!!s.legacyId && savedSpotIds.includes(s.legacyId)),
+  );
   const plans = allPlans.filter((p) => favPlans.includes(p.id));
   const articles = allArticles.filter((a) => favArticles.includes(a.slug));
 
