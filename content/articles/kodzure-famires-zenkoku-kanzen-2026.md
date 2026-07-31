@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kodzure-famires-zenkoku-kanzen-2026
 title: 子連れファミレス完全ガイド｜全10チェーン徹底比較・年齢別おすすめ・利用のコツ【2026年最新版】
 metaDescription: >-

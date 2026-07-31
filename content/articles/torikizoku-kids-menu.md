@@ -1,6 +1,6 @@
 ---
 slug: torikizoku-kids-menu
-seoRelated: kids-menu-chain-15-hikaku
+seoRelated: kodzure-famires-15sen
 title: 鳥貴族のキッズメニュー「お子様プレート」390円を徹底解説【2026年8月1日〜】
 metaDescription: >-
   鳥貴族に2026年8月1日からキッズメニュー「トリキのお子様プレート」（税込390円）が登場。A唐揚とB焼鳥ムネたれの中身、何歳から食べられるか、公式が明記する「味付け・大きさは大人と同じ」の注意点を0-6歳の子連れ目線で解説します。
