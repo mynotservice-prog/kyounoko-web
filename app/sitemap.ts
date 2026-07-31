@@ -10,10 +10,7 @@ import type { MetadataRoute } from 'next';
 
 import { getArticleIds, getCategories } from '@/lib/microcms';
 import { getAllFileArticles, getKvOnlyArticleMetas } from '@/lib/articles';
-import { getAllSpotsWithSlug, isSpotIndexable } from '@/lib/spots';
-import { SPOT_CLOSED } from '@/lib/spot-closed';
-import { CHAIN_SPOT_REDIRECTS } from '@/lib/chain-spot-redirects';
-import { SPOT_REDIRECTS } from '@/lib/spot-redirects';
+import { getAllSpotsWithSlug } from '@/lib/spots';
 import { BROWSE_CATEGORIES, spotsByCategory } from '@/lib/spot-browse';
 import { TOKYO_STATIONS } from '@/lib/tokyo-stations';
 import { KANSAI_STATIONS } from '@/lib/kansai-stations';
@@ -27,7 +24,6 @@ import { getSpotsForStation, hasMatchingSpots, filterSpotsByCondition, getSpotCo
 import { isStationConditionIndexable } from '@/lib/station-cond-index';
 import { FEATURE_PAGES } from '@/lib/feature-pages';
 import { AFFILIATE_TARGET_SLUGS } from '@/lib/affiliate-products';
-import { EVENTS, isEventEnded } from '@/lib/events';
 
 const BASE = 'https://kyounoko.jp';
 
@@ -65,14 +61,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/ranking`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.85 },
     { url: `${BASE}/reports`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.6 },
     { url: `${BASE}/area`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },
-    { url: `${BASE}/area/tokyo`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },
-    // 23区エリアページ（/area/[slug]）
-    ...(['chiyoda','chuo','minato','shinjuku','bunkyo','taito','sumida','koto','shinagawa','meguro','ota','setagaya','shibuya','nakano','suginami','toshima','kita','arakawa','itabashi','nerima','adachi','katsushika','edogawa'] as const).map((s) => ({
-      url: `${BASE}/area/${s}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    })),
+    // 2026-07-31 剪定: /area/[slug]（23区＋都県）は30ページ生成して90日で計9クリック、
+    // GSCに出た20ページ中16ページが0クリック（/area/shibuya は115imp・pos31.6・0クリック）。
+    // 同じ区を扱う記事とテーマが重なるため noindex 化し、sitemap からも外す。
+    // サイト内回遊の導線としてはページ自体を残す（robots は index:false / follow:true）。
     { url: `${BASE}/kid-reports`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE}/about`, lastModified: legalLastMod, changeFrequency: 'yearly', priority: 0.5 },
     { url: `${BASE}/contact`, lastModified: legalLastMod, changeFrequency: 'yearly', priority: 0.3 },
@@ -314,19 +306,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // スポット個別ページ（プログラマティックSEO第3弾、2026-05追加）
   // isIndexable() の条件を満たすスポットのみsitemapに含める（薄ページ判定回避）。
-  // ⚠ 収録条件は **/spot/[slug] の noindex 判定と同じ関数**を使うこと。
-  // 2026-07-28 の sitemap 全数監査で、ここに同じスコア式をコピペしていたせいで
-  // 判定がドリフトし、**noindex のスポット5件が sitemap に載っていた**。
-  // あわせて **308 リダイレクトされる36件も載っていた**（Googleに無駄なクロールをさせ、
-  // GSCの「リダイレクトあり」に計上される）。両方ここで除外する。
-  const redirectedSlugs = new Set([
-    ...CHAIN_SPOT_REDIRECTS.map((r) => r.from),
-    ...SPOT_REDIRECTS.map((r) => r.from),
-  ]);
   const spotPages = getAllSpotsWithSlug()
-    .filter((x) => !redirectedSlugs.has(x.slug))
-    .filter((x) => !SPOT_CLOSED[x.spot.name])
-    .filter((x) => isSpotIndexable(x.spot))
+    .filter((x) => {
+      const s = x.spot;
+      let score = 0;
+      if (s.note && s.note.length >= 25) score++;
+      if (s.facilities && Object.keys(s.facilities).length >= 2) score++;
+      if (s.pricing && Object.keys(s.pricing).length >= 1) score++;
+      if (s.hiddenTip && s.hiddenTip.length >= 15) score++;
+      if (s.nearestStation) score++;
+      if (s.ward || s.city) score++;
+      return score >= 3;
+    })
     .map((x) => ({
       url: `${BASE}/spot/${x.slug}`,
       lastModified: new Date(),
@@ -352,14 +343,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }));
 
-  // イベント個別ページ（2026-07-24 追加）。
-  // 会期終了イベントは generateMetadata 側で noindex になるため、未終了のみ掲載する。
-  const eventPages: MetadataRoute.Sitemap = EVENTS.filter((e) => !isEventEnded(e)).map((e) => ({
-    url: `${BASE}/event/${e.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.6,
-  }));
-
-  return [...staticPages, ...categoryPages, ...articlePages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...kanagawaStationPages, ...saichiStationPages, ...lineIndex, ...linePages, ...stationConditionPages, ...dataPages, ...spotCategoryPages, ...spotPages, ...featurePages, ...eventPages];
+  return [...staticPages, ...categoryPages, ...articlePages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...kanagawaStationPages, ...saichiStationPages, ...lineIndex, ...linePages, ...stationConditionPages, ...dataPages, ...spotCategoryPages, ...spotPages, ...featurePages];
 }
