@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: famires-7chain-8koumoku-2026
 title: 【2026年版】ファミレス7チェーン子連れ比較｜8項目早見表でわかる正解
 metaDescription: >-

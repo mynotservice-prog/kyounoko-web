@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kids-menu-nansai-kara-hayami
 title: 子供メニュー何歳から？ファミレス12チェーン年齢制限・無料/有料早見表【0-6歳】
 metaDescription: >-

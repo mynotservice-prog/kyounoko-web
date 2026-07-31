@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: famires-kodzure-ranking-2026-10sen
 title: 【2026年版】子連れで使えるファミレス TOP10ランキング｜離乳食・ベビーカー・キッズ評価
 metaDescription: >-

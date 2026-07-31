@@ -1,4 +1,5 @@
 ---
+noindex: true
 slug: kids-menu-chain-15-hikaku
 chainComparison: kidsMenu
 title: 子連れOKチェーン店のキッズメニュー比較15選｜価格/対象年齢/アレルゲン早見表【0-6歳】
