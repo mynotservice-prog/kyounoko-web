@@ -141,6 +141,8 @@ A. **農園によって正反対です。**東京きのこランドは**事前�
 
 ## 関連記事
 
+- [東京の芋掘り子連れガイド](/article/imohori-kanto-kodzure)
+- [東京から行くフルーツ狩り子連れガイド](/article/fruitgari-kanto-kodzure)
 - [練馬区の子連れ室内遊び場](/article/shitsunai-asobi-nerima-tokyo)
 - [千葉市の子連れ室内遊び場](/article/shitsunai-asobi-chiba)
 - [ハロウィンの子連れイベント2026](/article/halloween-kodzure-events-2026)
