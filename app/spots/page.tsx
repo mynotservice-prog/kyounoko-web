@@ -12,6 +12,7 @@ import { SpotFilterBar } from '@/components/spots/SpotFilterBar';
 import { BROWSE_CATEGORIES, spotsByCategory } from '@/lib/spot-browse';
 import { getRuntimeSpotOverrides, type SpotOverridesMap } from '@/lib/spot-overrides';
 import { parseFilters, hasActiveFilters, matchesFilters, sortSpots, toFilterable } from '@/lib/spot-filter';
+import { INDEXABLE_ROBOTS } from '@/lib/robots-meta';
 
 export const revalidate = 3600;
 
@@ -31,7 +32,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
     description:
       '0〜6歳の子ども連れで楽しめるスポット400件以上を、カテゴリ別（公園・水族館・動物園・室内遊び場・遊園地・牧場）に検索できる子連れスポットDB。',
     // SEO §2-2: 絞り込み/並び替えのクエリ変種は noindex,follow ＋ canonical→/spots。
-    robots: filtered ? { index: false, follow: true } : undefined,
+    robots: filtered ? { index: false, follow: true } : INDEXABLE_ROBOTS,
     alternates: { canonical: '/spots' },
     openGraph: {
       title: '子連れスポット一覧｜きょうのこスポットDB',

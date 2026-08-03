@@ -16,6 +16,7 @@ import { getRuntimeEventOverrides } from '@/lib/event-overrides';
 import { getAllSpotsWithSlug, isSpotIndexable } from '@/lib/spots';
 import { spotToV2 } from '@/lib/v2-adapters';
 import { AdSlot } from '@/components/ads/AdSlot';
+import { INDEXABLE_ROBOTS } from '@/lib/robots-meta';
 
 export const revalidate = 86400;
 
@@ -35,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: ev.lede,
     alternates: { canonical: `/event/${slug}` },
     // 会期終了後は検索対象から外す（古い情報の流入を防ぐ）。リンク切れ回避のためページ自体は残す。
-    robots: ended ? { index: false, follow: true } : undefined,
+    robots: ended ? { index: false, follow: true } : INDEXABLE_ROBOTS,
     openGraph: {
       title: ev.title,
       description: ev.lede,
