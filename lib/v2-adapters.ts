@@ -27,7 +27,7 @@ const CAT_LABEL: Record<string, string> = {
   amusement: 'テーマパーク',
   indoor: '室内あそび場',
   farm: '牧場',
-  seasonal: '季節体験',
+  seasonal: '観光スポット',
   restaurant: 'レストラン',
 };
 

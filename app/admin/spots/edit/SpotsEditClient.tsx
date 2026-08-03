@@ -55,7 +55,7 @@ const CATEGORY_OPTIONS = [
   { v: 'amusement', label: '遊園地' },
   { v: 'indoor', label: '屋内施設' },
   { v: 'farm', label: '牧場' },
-  { v: 'seasonal', label: '季節体験' },
+  { v: 'seasonal', label: '観光スポット' },
   { v: 'restaurant', label: '子連れOKレストラン' },
 ];
 const PLACE_OPTIONS = [
