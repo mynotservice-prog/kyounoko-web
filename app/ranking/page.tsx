@@ -10,6 +10,7 @@ import { getAreaName, isValidArea, type AreaSlug } from '@/lib/area';
 import type { AgeTag } from '@/lib/spots';
 import { getRankingAreas, getSpotRanking } from '@/lib/spot-ranking';
 import { AdSlot } from '@/components/ads/AdSlot';
+import { INDEXABLE_ROBOTS } from '@/lib/robots-meta';
 
 // GA4 の直近7日PVをもとに日次で更新する
 export const revalidate = 86400;
@@ -23,7 +24,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
     title: '子連れ人気スポットランキング｜今みんなが見ている遊び場【きょうのこ】',
     description:
       '0〜6歳の子連れでいま人気のおでかけスポットを、実際の閲覧数をもとにランキング。年齢別・エリア別でも絞り込めます。公園・水族館・動物園・室内遊び場まで。',
-    robots: hasVariant ? { index: false, follow: true } : undefined,
+    robots: hasVariant ? { index: false, follow: true } : INDEXABLE_ROBOTS,
     alternates: { canonical: '/ranking' },
     openGraph: {
       title: '子連れ人気スポットランキング｜きょうのこ',

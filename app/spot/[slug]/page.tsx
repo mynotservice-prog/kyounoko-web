@@ -38,6 +38,7 @@ import { wrapMoshimoRakuten } from '@/lib/moshimo';
 import { getSpotReservationOffer, getSpotTravelOffer } from '@/lib/reservation-cta';
 import { ReservationCTA } from '@/components/article/ReservationCTA';
 import { ShareBar } from '@/components/article/ShareBar';
+import { INDEXABLE_ROBOTS } from '@/lib/robots-meta';
 
 export const revalidate = 86400;
 
@@ -80,7 +81,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     alternates: { canonical: `/spot/${slug}` },
     // 閉館スポットと中身の薄いスポットは noindex（不正確・低品質な情報を検索結果に残さない）。
-    robots: SPOT_CLOSED[spot.name] || !isSpotIndexable(spot) ? { index: false } : undefined,
+    robots: SPOT_CLOSED[spot.name] || !isSpotIndexable(spot) ? { index: false } : INDEXABLE_ROBOTS,
     openGraph: {
       title,
       description,

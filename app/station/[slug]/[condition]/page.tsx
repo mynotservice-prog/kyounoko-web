@@ -40,6 +40,7 @@ import { getCatalogItems } from '@/lib/items-catalog';
 import { getRestaurantBridgeOffer } from '@/lib/article-product-hints';
 import { buildStationIntro, buildRestaurantInsight, insightToSentence } from '@/lib/station-insight';
 import { buildRestaurantFaq, faqToJsonLd } from '@/lib/station-faq';
+import { INDEXABLE_ROBOTS } from '@/lib/robots-meta';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400; // 24h
@@ -160,7 +161,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: { canonical: `/station/${canonicalSlug}/${condition}` },
-    robots: shouldNoindex ? { index: false, follow: true } : undefined,
+    robots: shouldNoindex ? { index: false, follow: true } : INDEXABLE_ROBOTS,
     openGraph: {
       title,
       description,

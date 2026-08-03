@@ -22,6 +22,7 @@ import {
 } from '@/lib/events';
 import { getAreaName, isValidArea, type AreaSlug } from '@/lib/area';
 import { AdSlot } from '@/components/ads/AdSlot';
+import { INDEXABLE_ROBOTS } from '@/lib/robots-meta';
 
 export const revalidate = 3600;
 
@@ -48,7 +49,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
     title: '子連れで行ける今週のイベント一覧｜きょうのこ',
     description:
       '0〜6歳の子どもと一緒に楽しめる、今週・今月開催の子育てイベント情報。マルシェ・リトミック・ワークショップ・イルミネーションなど編集部が確認したイベントを掲載。',
-    robots: hasVariant ? { index: false, follow: true } : undefined,
+    robots: hasVariant ? { index: false, follow: true } : INDEXABLE_ROBOTS,
     alternates: { canonical: '/events' },
   };
 }

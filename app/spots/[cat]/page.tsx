@@ -11,6 +11,7 @@ import { SpotFilterBar } from '@/components/spots/SpotFilterBar';
 import { BROWSE_CATEGORIES, getBrowseCategory, spotsByCategory } from '@/lib/spot-browse';
 import { getRuntimeSpotOverrides } from '@/lib/spot-overrides';
 import { parseFilters, hasActiveFilters, matchesFilters, sortSpots, toFilterable } from '@/lib/spot-filter';
+import { INDEXABLE_ROBOTS } from '@/lib/robots-meta';
 
 export const revalidate = 3600;
 
@@ -41,7 +42,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
     title,
     description,
     // SEO §2-2: フィルタ/並び替えのクエリ変種は noindex,follow ＋ canonical→クリーンURL。
-    robots: filtered ? { index: false, follow: true } : undefined,
+    robots: filtered ? { index: false, follow: true } : INDEXABLE_ROBOTS,
     alternates: { canonical: `/spots/${c.id}` },
     openGraph: {
       title,
