@@ -27,7 +27,9 @@ import {
   getChainCrossLinks,
   extractChecklistSection,
   allowsFoodBridgeAlongsideCoop,
+  splitBodyAtSection,
 } from '@/lib/article-product-hints';
+import { getBodySurfaceOffer } from '@/lib/surface-offers';
 import { getChainFacilitiesForArticle, FACILITY_LABELS, type FacilityKey } from '@/lib/chain-facilities';
 import { ChainFacilitiesBox } from '@/components/article/ChainFacilitiesBox';
 import { ChainComparisonTable } from '@/components/article/ChainComparisonTable';
@@ -731,6 +733,31 @@ function FileArticleView({ article }: { article: FileArticle }) {
   // 抽出してヒーロー直下(クイック情報の隣)へ移動。無い記事は従来どおり。
   const checklistSplit = extractChecklistSection(article.body);
 
+  // レバー1 移植物3（2026-08-04・設計 §3）: 治療群（venue-chair / venue-rinyushoku 面）
+  // のみ、意図ピークH2セクションの末尾で本文を分割し InlineItemCTA を1枚差し込む。
+  // 同時に末尾 RelatedItemsCTA を items[1..2] の2点へ減らし、ページあたりの
+  // もしもリンク総数（3本）とPR枠数を純増させない（L720-728 の「純増ゼロ」原則を踏襲）。
+  // 一致H2が無い記事は bodySurfaceSplit=null → 従来どおり末尾3点のまま。
+  const bodySurfaceOffer = getBodySurfaceOffer(
+    article.slug,
+    article.category,
+    article.title,
+  );
+  const renderBodyHtml = checklistSplit ? checklistSplit.rest : article.body;
+  const bodySurfaceSplit = bodySurfaceOffer
+    ? splitBodyAtSection(renderBodyHtml, bodySurfaceOffer.headingPattern)
+    : null;
+
+  // 末尾CTA用の関連商品。本文中へ1枚移動した治療群は残り2点に減らす（純増ゼロ）。
+  const endRelatedItemsAll = getRelatedItemsForArticle(
+    article.slug,
+    article.category,
+    article.title,
+  );
+  const endRelatedItems = bodySurfaceSplit
+    ? endRelatedItemsAll.slice(1)
+    : endRelatedItemsAll;
+
   // チェーンDB(lib/chain-facilities.ts)に載っている攻略記事は、md手書き表の
   // 代わりにDB駆動の判定ボックスを描画する(単一データソース化)。
   const chainFacilities = getChainFacilitiesForArticle(article.slug);
@@ -1185,11 +1212,30 @@ function FileArticleView({ article }: { article: FileArticle }) {
             <EditorialDisclosure variant="ranking" />
           )}
 
-          {/* Body（チェックリスト前出し時は抽出後の残り本文を描画） */}
-          <div
-            className="prose"
-            dangerouslySetInnerHTML={{ __html: checklistSplit ? checklistSplit.rest : article.body }}
-          />
+          {/* Body（チェックリスト前出し時は抽出後の残り本文を描画）。
+              レバー1治療群は意図ピークH2セクション末尾で分割し、間に InlineItemCTA を
+              1枚だけ差し込む（末尾CTA側を2点に減らして枠の純増ゼロ）。 */}
+          {bodySurfaceSplit && bodySurfaceOffer ? (
+            <>
+              <div
+                className="prose"
+                dangerouslySetInnerHTML={{ __html: bodySurfaceSplit[0] }}
+              />
+              <InlineItemCTA
+                item={bodySurfaceOffer.item}
+                note={bodySurfaceOffer.note}
+              />
+              <div
+                className="prose"
+                dangerouslySetInnerHTML={{ __html: bodySurfaceSplit[1] }}
+              />
+            </>
+          ) : (
+            <div
+              className="prose"
+              dangerouslySetInnerHTML={{ __html: renderBodyHtml }}
+            />
+          )}
 
           {/* Pinterest 用の縦長Pin画像。本文内の実 <img> として描画し、
               「URLから保存」ピッカーで縦長を選べるようにする（og:imageは拾われないため）。 */}
@@ -1248,9 +1294,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
               items={affiliateProducts}
             />
           ) : (
-            <RelatedItemsCTA
-              items={getRelatedItemsForArticle(article.slug, article.category, article.title)}
-            />
+            <RelatedItemsCTA items={endRelatedItems} />
           )}
 
           {/* 読了後の高単価CTAは1枚だけ（生協 > 宿予約）。ネット予約の再掲は

@@ -67,7 +67,109 @@ type Surface = {
   items: (AffiliateLinkProps & { id: string })[];
 };
 
+/**
+ * レバー1（アフィリ配線の移植・2026-08-04 デプロイ）の治療群スラッグ。
+ * 設計正本: ~/.claude/company/reports/2026-08-03/kyounoko-affiliate-transplant.md §3-§4。
+ *
+ * 面のmatchを意味論（`-baby-chair` で終わる / title に離乳食 等）ではなく
+ * **明示スラッグに限定**しているのは実験統制のため:
+ *  - §4 で治療群8本・対照群2本（ohsho-kids-menu / sushiro-kids-menu）のA/Bを組んでおり、
+ *    意味論matchにすると治療群外の兄弟記事（ohsho-baby-chair 等15面・
+ *    marukame-rinyushoku-mochikomi 等）へ波及して対照が壊れる。
+ *  - D+28判定（治療群PV比1.2%以上 かつ 対照群横ばい）が合格したら、
+ *    このセットを意味論match（slug末尾 `-baby-chair` / `rinyushoku-mochikomi` 含む）へ
+ *    広げて全面展開する（§5 の天井 1,472clk/月 の検証はその後）。
+ *
+ * A面/B面の振り分けは設計 §3 のmatch規則そのまま:
+ *  A面（外食先の椅子）= slugが `-baby-chair` で終わる、または title に
+ *    ベビーチェア|子供椅子 を含む外食記事（kodzure-koryaku 3本は全て title に
+ *    「ベビーチェア」を含むためA面）。
+ *  B面（外食先の離乳食）= slug に `rinyushoku-mochikomi`。
+ */
+const VENUE_CHAIR_TREATMENT_SLUGS = new Set([
+  'hamasushi-baby-chair',
+  'sukiya-baby-chair',
+  'kurasushi-baby-chair',
+  'sushiro-baby-chair',
+  'cocos-kodzure-koryaku',
+  'royal-host-kodzure-koryaku',
+  'gyukaku-kodzure-koryaku',
+]);
+
+const VENUE_RINYUSHOKU_TREATMENT_SLUGS = new Set([
+  'hamasushi-rinyushoku-mochikomi',
+]);
+
 const SURFACES: Surface[] = [
+  // =====================================================================
+  // A面「外食先の椅子」（レバー1治療群・2026-08-04）
+  // GSC実クエリ（28日・例はま寿司）: ベビーチェア132clk / 子供椅子67 / 赤ちゃん椅子42 /
+  // キッズチェア29。読者は「その店に椅子があるか」を調べている＝持っていく携帯品が意図一致。
+  // 楽天検索の実在は 2026-08-03（設計時）と 2026-08-04（実装時）の両日 HTTP 200 で確認済み。
+  // =====================================================================
+  {
+    id: 'venue-chair',
+    note: 'レバー1治療群A面: {chain}-baby-chair 4本 + kodzure-koryaku 3本（明示スラッグ限定）',
+    match: ({ slug }) => VENUE_CHAIR_TREATMENT_SLUGS.has(slug),
+    items: [
+      // 楽天検索 327件（2026-08-03 実測・2026-08-04 HTTP 200 再確認）
+      rakutenItem(
+        'sf-venue-chairbelt',
+        'チェアベルト 携帯',
+        '携帯チェアベルト',
+        '店にベビーチェアが無い・ベルト無しタイプだった時に、大人用の椅子へ巻いて座らせられる。カバンに入る軽さ',
+      ),
+      // 楽天検索 8,795件（2026-08-03 実測・2026-08-04 HTTP 200 再確認）
+      rakutenItem(
+        'sf-venue-tablechair',
+        'テーブルチェア 折りたたみ',
+        'テーブルチェア（折りたたみ）',
+        'テーブルに挟んで固定する携帯チェア。ベビーチェアの用意が無い店や座敷席でも使える',
+      ),
+      // 楽天検索 611件（2026-08-03 実測・2026-08-04 HTTP 200 再確認）
+      rakutenItem(
+        'sf-venue-chair-fabric',
+        'ベビーチェア 携帯 布',
+        '布製の携帯ベビーチェア',
+        '軽量でカバンに入る布製の補助チェア。外食が続く時期の持ち歩き用に',
+      ),
+    ],
+  },
+
+  // =====================================================================
+  // B面「外食先の離乳食」（レバー1治療群・2026-08-04）
+  // GSC実クエリ（28日・はま寿司）: 離乳食147clk / 離乳食 持ち込み86 / 赤ちゃん56 /
+  // ベビーフード12 / ミルク お湯5。「持ち込めるか」を調べている読者に持ち込み用品を出す。
+  // =====================================================================
+  {
+    id: 'venue-rinyushoku',
+    note: 'レバー1治療群B面: hamasushi-rinyushoku-mochikomi（明示スラッグ限定）',
+    match: ({ slug }) => VENUE_RINYUSHOKU_TREATMENT_SLUGS.has(slug),
+    items: [
+      // 楽天検索 3,648件（2026-08-03 実測・2026-08-04 HTTP 200 再確認）
+      rakutenItem(
+        'sf-rinyu-freezer-tray',
+        '離乳食 保存容器 小分け 冷凍',
+        '離乳食の小分け冷凍保存容器',
+        '家で小分けして冷凍しておけば、外出時にそのまま持って出られる。持ち込みOKの店での定番スタイル',
+      ),
+      // 楽天検索 811件（2026-08-03 実測・2026-08-04 HTTP 200 再確認）
+      rakutenItem(
+        'sf-rinyu-pouch',
+        'ベビーフード パウチ 持ち運び',
+        'ベビーフード（パウチタイプ）',
+        '持ち込みOKの店なら常温のまま食べさせられる。外出用に数個ストックしておくと急な外食でも安心',
+      ),
+      // 楽天検索 267件（2026-08-03 実測・2026-08-04 HTTP 200 再確認）
+      rakutenItem(
+        'sf-rinyu-epron',
+        'お食事エプロン 使い捨て 個包装',
+        '使い捨てお食事エプロン（個包装）',
+        '外食先の食べこぼし対策。使い捨てなら汚れたエプロンを持ち帰らずに済む',
+      ),
+    ],
+  },
+
   // =====================================================================
   // 水遊び面（mizuasobi-* / じゃぶじゃぶ池 / 川遊び / プール）
   // GSC 28日: 45本 3,672clk。夏季ピークの最大級の面。
@@ -210,6 +312,55 @@ export function getSurfaceOffers(
     }
   }
   return null;
+}
+
+/**
+ * レバー1（移植物3）: 本文中に「1枚だけ」差し込むオファーを返す。
+ *
+ * 対象は治療群の venue-chair / venue-rinyushoku 面のみ。面の items[0] を
+ * 本文の意図ピークH2セクション末尾（splitBodyAtSection で分割した位置）に出し、
+ * 末尾の RelatedItemsCTA 側は items[1..2] の2点に減らす（＝ページあたりの
+ * もしもリンク総数3本・PR枠数を1つも純増させない。設計 §3 移植物3）。
+ *
+ * 分割見出しパターンは設計どおり /ベビーチェア|子供椅子|離乳食/。
+ * 治療群8本のH2構成は実ファイルで確認済み（全8本に一致H2が存在する）:
+ *   - {chain}-baby-chair 4本: 「◯◯のベビーチェア 詳細」
+ *   - kodzure-koryaku 3本: 「離乳食・ベビーチェア・取り分け…」等
+ *   - hamasushi-rinyushoku-mochikomi: 「はま寿司 離乳食持ち込み 詳細」
+ * 一致H2が無い場合は呼び出し側で分割せず従来どおり末尾3点にフォールバックする。
+ */
+export type BodySurfaceOffer = {
+  item: AffiliateLinkProps;
+  headingPattern: RegExp;
+  note: string;
+};
+
+const BODY_OFFER_SURFACE_IDS = new Set(['venue-chair', 'venue-rinyushoku']);
+const BODY_OFFER_HEADING = /ベビーチェア|子供椅子|離乳食/;
+
+export function getBodySurfaceOffer(
+  slug: string,
+  category?: string,
+  title?: string,
+): BodySurfaceOffer | null {
+  const ctx = {
+    slug: (slug ?? '').toLowerCase(),
+    category: (category ?? '').toLowerCase(),
+    title: title ?? '',
+  };
+  const surface = SURFACES.find((s) => s.match(ctx));
+  if (!surface || !BODY_OFFER_SURFACE_IDS.has(surface.id)) return null;
+  const first = surface.items[0];
+  if (!first) return null;
+  const { id, ...rest } = first;
+  return {
+    item: { ...rest, itemId: id },
+    headingPattern: BODY_OFFER_HEADING,
+    note:
+      surface.id === 'venue-chair'
+        ? '外食先の椅子まわりで使うアイテム'
+        : '離乳食の持ち込みで使うアイテム',
+  };
 }
 
 /** デバッグ/監査用: 面IDを返す（オファーが付く面かの判定に使う）。 */

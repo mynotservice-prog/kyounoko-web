@@ -32,7 +32,11 @@ function catalogToProps(item: CatalogItem): AffiliateLinkProps {
     subtitle: item.subtitle,
     price: item.price,
     provider: item.provider,
-    pr: false,
+    // レバー1 移植物4（2026-08-04）: PR表記をカード単位に統一。
+    // 従来 hint 経路は pr: false でグループ見出しのPR注記だけだったが、
+    // surface 経路（pr: true）と表記が割れており、本文中への配置（移植物3）は
+    // カード単位のPR表記が必須（景表法ステマ規制）。false に戻さないこと。
+    pr: true,
   };
 }
 
@@ -400,20 +404,35 @@ export function allowsFoodBridgeAlongsideCoop(slug: string): boolean {
 export function splitBodyAtRinyushokuSection(
   bodyHtml: string,
 ): [string, string] | null {
+  return splitBodyAtSection(bodyHtml, /離乳食/);
+}
+
+/**
+ * splitBodyAtRinyushokuSection の一般化（レバー1 移植物3・2026-08-04）。
+ * 見出しテキストが headingPattern に一致する最初のH2セクションの末尾
+ * （＝次のH2の直前）で本文HTMLを2分割する。一致H2が無ければ null。
+ *
+ * 用途: 治療群（venue-chair / venue-rinyushoku 面）の本文中に、意図ピーク
+ * セクションの直後で InlineItemCTA を1枚だけ差し込む（getBodySurfaceOffer と併用）。
+ */
+export function splitBodyAtSection(
+  bodyHtml: string,
+  headingPattern: RegExp,
+): [string, string] | null {
   if (!bodyHtml) return null;
   const h2Re = /<h2\b[^>]*>([\s\S]*?)<\/h2>/gi;
   let m: RegExpExecArray | null;
-  let rinyuHeadingEnd = -1;
+  let headingEnd = -1;
   while ((m = h2Re.exec(bodyHtml)) !== null) {
     const headingText = m[1].replace(/<[^>]+>/g, '');
-    if (headingText.includes('離乳食')) {
-      rinyuHeadingEnd = m.index + m[0].length;
+    if (headingPattern.test(headingText)) {
+      headingEnd = m.index + m[0].length;
       break;
     }
   }
-  if (rinyuHeadingEnd === -1) return null;
-  const nextH2Rel = bodyHtml.slice(rinyuHeadingEnd).search(/<h2\b/i);
-  const splitAt = nextH2Rel === -1 ? bodyHtml.length : rinyuHeadingEnd + nextH2Rel;
+  if (headingEnd === -1) return null;
+  const nextH2Rel = bodyHtml.slice(headingEnd).search(/<h2\b/i);
+  const splitAt = nextH2Rel === -1 ? bodyHtml.length : headingEnd + nextH2Rel;
   return [bodyHtml.slice(0, splitAt), bodyHtml.slice(splitAt)];
 }
 
