@@ -114,6 +114,7 @@ legacyHero: /hero-ai/cat-home-cozy-01.webp
 - [カフェチェーン子連れランキング6社](/article/cafe-chain-kodzure-ranking-2026-6sha)
 - [子連れカフェを安全に楽しむ完全ガイド｜カフェイン・はちみつ・砂糖・氷やタピオカの誤嚥・やけど](/article/kodzure-cafe-anzen-kanzen-guide)
 - [コメダのモーニングは何時まで？開店〜11時・土日祝も同じ・平日7-8時が子連れの穴場](/article/komeda-morning-kosodate)
+- [星乃珈琲店のモーニング｜値段一覧と時間・土日やってない10店舗【2026年8月】](/article/hoshino-morning-kosodate)
 - [子連れモーニング10選](/article/kodzure-morning-cafe-10)
 - [子連れOKファミレス王道15選](/article/kodzure-famires-15sen)
 - [【2026年版】夏のひんやりスイーツ・かき氷チェーン子連れランキング5社](/article/kakigori-softcream-chain-kodzure-hikaku)
