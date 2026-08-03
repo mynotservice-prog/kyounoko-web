@@ -234,6 +234,36 @@ export function getRelatedItemsForArticle(
     if (explicit.length > 0) return explicit;
   }
 
+  // 1.5) `{店名/施設名}-baby-chair` は「その店・施設にベビーチェアがあるか」を調べている面。
+  //      自宅用ハイチェアを買いたい面ではない。
+  //
+  //      【2026-08-03 実測・不具合の修正】RESTAURANT_NEEDLES に店名トークンが無い／綴りが
+  //      実slugと違うチェーン（needle `kurazushi` ≠ 実slug `kurasushi`、`shabuyou` ≠ `shabuyo`、
+  //      `royalhost` ≠ `royal-host`、marukame/nakau/anrakutei/ringerhut/hanamarudon は欠落）と、
+  //      そもそも外食ではないテーマパーク（puroland/tds）が下の `baby-chair` ルールへ落ち、
+  //      **自宅用ハイチェア（ストッケ トリップトラップ / リッチェル / 大和屋・¥13,000〜30,000級）**
+  //      を出していた。本番HTMLで実測（HTTP 200）:
+  //        kurasushi-baby-chair → ストッケ トリップトラップ / リッチェル / 大和屋
+  //      GSC 28日（2026-07-04〜07-31・アンカー行除外）で 10面 501clk が該当。
+  //      読者の実クエリは「くら寿司 子供椅子 49clk」「くら寿司 赤ちゃん 椅子 22clk」で、
+  //      店の椅子の有無を知りたい人に自宅用の高額チェアは意図が合わない。
+  //
+  //      直し方は「兄弟記事と同じ着地に揃える」だけに留める（hamasushi-baby-chair /
+  //      sukiya-baby-chair 等は既に gaishoku＝携帯チェアベルト等が出ている）。
+  //
+  //      ⚠️ RESTAURANT_NEEDLES 側は意図的に変更していない。あれを触ると
+  //      `isRestaurantContext` 経由で `getRestaurantReservationOffer`（ホットペッパー予約）と
+  //      `getRestaurantBridgeOffer`（幼児食宅配）まで点灯し、PR枠が純増して
+  //      AdSense の視認可能率（実測 64.03%→54.47% と悪化中）に別の影響が出る。
+  //      本修正は「出す商品を直す」だけで、ページあたりのPR枠数を1枠も増やさない。
+  //
+  //      `baby-chair-ranking` / `gaishoku-baby-chair-matome` 等は末尾が `-baby-chair` では
+  //      ないためここに入らない（自宅用ハイチェアの面として正しく従来どおり）。
+  if (/^[a-z0-9]+(?:-[a-z0-9]+)*-baby-chair$/.test(slug)) {
+    const venueChairItems = pickFromCategories(['gaishoku'], 3);
+    if (venueChairItems.length > 0) return venueChairItems;
+  }
+
   // 2) slug / category / title からキーワード推定
   const hay = [slug, category ?? '', title ?? ''];
   for (const rule of HINT_RULES) {
