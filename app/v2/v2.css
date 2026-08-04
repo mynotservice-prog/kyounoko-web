@@ -92,24 +92,30 @@
 .v2-root a.btn-primary-light { color: #FFFBF3; }
 
 /* ---------- Phone frame ---------- */
+/*
+  2026-08-04: 「スマホ枠」の入れ子スクロールを廃止し、document をそのままスクロールさせる。
+  旧構成は .v2-phone に height:880px を与え .v2-scroll(overflow-y:auto) を実スクローラにしていたが、
+  その結果 document.documentElement.scrollHeight が常に約1画面(実測1,068px)にしかならず、
+  実際には 9,622px ある記事を「短いページ」として扱わせていた。実害は3つ:
+    1. AdSense 自動広告が11.8画面の記事に2枠しか挿入せず、下70%が完全に未収益化
+    2. window の scroll イベントが発火しないため、読了率計測(ScrollDepthTracker)・
+       目次の現在地ハイライト(TableOfContents)・駅ページのセクションナビ(StickySectionNav)が
+       いずれも無反応だった
+    3. スクロール位置の復元・アドレスバーの自動格納・ページ内検索・End/PageDownキーが効かない
+  枠は ≤440px と ≥920px では width:100vw / height:100vh / 角丸なし / 影なし ＝ 既に見た目上は
+  存在しないため、外しても表示は変わらない。441〜919px の帯だけ 420px 幅の中央寄せカラムのまま
+  （margin-inline:auto で維持）、高さの固定だけが外れる。
+*/
 .v2-stage {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px 0;
 }
 .v2-phone {
   position: relative;
   width: var(--v2-phone-w);
-  height: 880px;
-  max-height: calc(100vh - 48px);
+  margin-inline: auto;  /* 旧: .v2-stage の flex 中央寄せ。高さ固定をやめたので margin で中央に */
   background: var(--v2-page);
   border-radius: 0;
   box-shadow: none;  /* スマホ風ベゼル(黒・茶系の枠線)を非表示 */
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 .v2-statusbar {
   position: relative; z-index: 40;
@@ -122,15 +128,18 @@
 .v2-sb-icons { display: flex; align-items: center; gap: 7px; }
 
 .v2-viewport {
-  position: relative; flex: 1;
-  overflow: hidden; display: flex; flex-direction: column;
+  position: relative;
 }
+/*
+  .v2-scroll はもうスクローラではない（document がスクロールする）。
+  overflow-x:hidden も置かないこと: 片軸だけ hidden にすると、もう一方の overflow-y の
+  使用値が visible → auto に格上げされ、この要素が再びスクロールコンテナに戻ってしまう。
+  横溢れ対策は globals.css の `html, body { overflow-x: clip }` が既に担っている。
+  scroll-behavior:smooth も globals.css の html 側に既にある。
+*/
 .v2-scroll {
-  flex: 1; overflow-y: auto; overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
+  position: relative;
 }
-.v2-scroll::-webkit-scrollbar { width: 0; height: 0; }
 /* 2026-08-04: 固定ボトムナビ廃止。ナビ分の余白予約をやめ、下端の余白のみ残す。 */
 .v2-pad-nav { padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
 .v2-home-indicator {
@@ -770,13 +779,17 @@
 .v2-cat-tab.on { background: var(--v2-orange); border-color: var(--v2-orange); color: #fff; box-shadow: 0 3px 9px rgba(247,122,33,.3); }
 
 /* Toast */
-.v2-toast { position: absolute; left: 50%; bottom: calc(var(--v2-nav-h) + 18px); transform: translateX(-50%); z-index: 70; background: rgba(43,43,43,.94); color: #fff; font-size: 13px; font-weight: 700; padding: 11px 20px; border-radius: var(--v2-r-pill); box-shadow: var(--v2-sh-pop); animation: v2-fadeUp .2s ease; white-space: nowrap; }
+/* 2026-08-04: 入れ子スクロール廃止に伴い absolute→fixed。旧 bottom は撤去済みボトムナビ分の
+   逃げ(--v2-nav-h)を含んでいたが、ナビが無くなったので画面下からの余白のみにする。 */
+.v2-toast { position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 70; background: rgba(43,43,43,.94); color: #fff; font-size: 13px; font-weight: 700; padding: 11px 20px; border-radius: var(--v2-r-pill); box-shadow: var(--v2-sh-pop); animation: v2-fadeUp .2s ease; white-space: nowrap; }
 
 /* ---------- Responsive: small screens fill ---------- */
 @media (max-width: 440px) {
   .v2-stage { padding: 0; }
+  /* 2026-08-04: height/max-height:100vh を撤去（入れ子スクロール廃止）。
+     見た目は width:100% の全幅カラムのままで変わらない。 */
   .v2-phone {
-    width: 100vw; height: 100vh; max-height: 100vh;
+    width: 100%;
     border-radius: 0; box-shadow: none;
   }
   .v2-home-indicator { display: none; }
@@ -786,18 +799,21 @@
 .v2-dt-header { display: none; }
 @media (min-width: 920px) {
   .v2-root { background: #EFE7DC; }
-  .v2-stage { padding: 0; align-items: stretch; }
+  .v2-stage { padding: 0; }
+  /* 2026-08-04: height/max-height:100vh を撤去（入れ子スクロール廃止）。全幅なのは従来どおり。 */
   .v2-phone {
-    width: 100%; max-width: none; height: 100vh; max-height: 100vh;
+    width: 100%; max-width: none;
     border-radius: 0; box-shadow: none; background: var(--v2-page);
   }
   .v2-statusbar, .v2-home-indicator, .v2-bottom-nav, .v2-app-header { display: none !important; }
+  /* 2026-08-04: relative → sticky。旧構成では .v2-phone(高さ固定) の flex 子として
+     常に画面上端にいたが、document スクロールになったので sticky で同じ挙動を保つ。 */
   .v2-dt-header {
     display: flex; flex: none; align-items: center; gap: 26px;
     height: 70px; padding: 0 40px;
     background: rgba(255,255,255,.94); backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--v2-line);
-    position: relative; z-index: 50;
+    position: sticky; top: 0; z-index: 50;
   }
   .v2-dt-logo { display: flex; align-items: center; gap: 10px; cursor: pointer; flex: none; }
   .v2-dt-nav { display: flex; align-items: center; gap: 4px; }
