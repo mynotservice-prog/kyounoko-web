@@ -7,7 +7,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-06-17'
+updatedAt: '2026-07-31'
 hero: /img/scenes/meal-33.webp
 lede: >-
   「結局どのチェーンのキッズメニューが一番うちの子に合う？」を1ページで解決。**価格・対象年齢・アレルゲン・取り分け可否・ドリンクバー無料年齢**を15チェーン横並びで比較し、0-6歳の家族目線で最適な選び方を提示します。
@@ -235,6 +235,9 @@ legacyHero: /hero-ai/kodzure-famires-15sen.webp
 - 焼肉キング：[キッズメニュー](/article/yakiniku-king-kids-menu)・[ベビーチェア](/article/yakiniku-king-kodzure-koryaku)
 - 安楽亭：[キッズメニュー](/article/anrakutei-kids-menu)・[ベビーチェア](/article/anrakutei-baby-chair)
 - しゃぶ葉：[キッズメニュー](/article/shabuyo-kids-menu)・[ベビーチェア](/article/shabuyo-baby-chair)
+
+**焼き鳥・居酒屋系**
+- 鳥貴族：[キッズメニュー（2026年8月1日〜お子様プレート390円）](/article/torikizoku-kids-menu)
 
 **和定食系**
 - やよい軒：[キッズメニュー](/article/yayoiken-kids-menu)・[ベビーチェア](/article/yayoiken-kodzure-koryaku)
