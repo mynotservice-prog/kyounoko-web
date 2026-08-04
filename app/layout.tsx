@@ -337,13 +337,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             head ではなく afterInteractive(=メイン JS の後) で読み込み、LCP/TBT を改善。
             審査クローラは body 内の adsbygoogle.js でも検出するため「準備中」状態には
             影響しない（meta google-adsense-account も head に残している）。
-            <ins>(AdSlot) は ADSENSE_ENABLED で別制御。 */}
+            <ins>(AdSlot) は ADSENSE_ENABLED で別制御。
+
+            data-overlays="bottom" (2026-08-04):
+            自動広告のアンカー広告を「下部のみ」に固定する。実測(2026-08-04・本番/375px)では
+            position:fixed top:0 の上部アンカーが 248px ＝ モバイル画面(812px)の 30.5% を常時占有し、
+            ヘッダー68pxと合わせて第一画面の39%が広告とクロームで埋まっていた。
+            アンカーは28日で収益の44.2%(¥4,767)・可視率93.5%を稼ぐ最優秀枠なので枠自体は残し、
+            位置だけ下部へ移す。下部でも常時画面内にいるため可視率はほぼ維持される見込み。
+            Google は「上部を無効にすると収益が下がる可能性がある」と注意しているため、
+            ここは 8月中旬に AdSense のフォーマット別実測で必ず振り返ること(想定リスク 月-¥0〜1,000)。
+            なおこの属性は管理画面の「オーバーレイ形式 → アンカー広告の位置」設定を上書きする。
+            戻すときはこの属性を消すだけでよい。 */}
         {ADSENSE_PUB_ID_CONFIGURED && (
           <Script
             id="adsense-loader"
             src={ADSENSE_SCRIPT_SRC}
             strategy="afterInteractive"
             crossOrigin="anonymous"
+            data-overlays="bottom"
           />
         )}
 

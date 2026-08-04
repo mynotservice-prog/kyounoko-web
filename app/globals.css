@@ -3227,8 +3227,14 @@ button:focus:not(:focus-visible), a:focus:not(:focus-visible) {
    - 重要 4 つ：余白圧縮 / 行間調整 / iframe縦長防止 / 横はみ出し防止
    ========================================================================== */
 
-/* (A) 共通：横スクロール撲滅。長い文字列・URL・タグも折り返す */
-html, body { overflow-x: hidden; }
+/* (A) 共通：横スクロール撲滅。長い文字列・URL・タグも折り返す
+   2026-08-04: hidden → clip。片軸を hidden にすると、もう一方の overflow-y の使用値が
+   visible → auto に格上げされ body がスクロールコンテナになる。その結果、中の
+   position:sticky（.v2-app-header 等）が body のスクロールポート基準になり、document を
+   スクロールしても一切吸着しなくなる（実測: 最下部までスクロールでヘッダーが -7,557px へ流出）。
+   overflow-x:clip は同じく横溢れを切りつつスクロールコンテナを作らないので sticky が生きる。
+   入れ子スクロール廃止までは実スクローラが .v2-scroll だったため、この副作用は表面化していなかった。 */
+html, body { overflow-x: clip; }
 .prose a, .prose code, .prose li, .prose p, .prose h1, .prose h2, .prose h3, .prose h4 {
   word-break: break-word;
   overflow-wrap: anywhere;
