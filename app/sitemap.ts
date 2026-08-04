@@ -61,16 +61,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/ranking`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.85 },
     { url: `${BASE}/reports`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.6 },
     { url: `${BASE}/area`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },
-    { url: `${BASE}/area/tokyo`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },
-    // 23区エリアページ（/area/[slug]）
-    ...(['chiyoda','chuo','minato','shinjuku','bunkyo','taito','sumida','koto','shinagawa','meguro','ota','setagaya','shibuya','nakano','suginami','toshima','kita','arakawa','itabashi','nerima','adachi','katsushika','edogawa'] as const).map((s) => ({
-      url: `${BASE}/area/${s}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    })),
+    // 2026-07-31 剪定: /area/[slug]（23区＋都県）は30ページ生成して90日で計9クリック、
+    // GSCに出た20ページ中16ページが0クリック（/area/shibuya は115imp・pos31.6・0クリック）。
+    // 同じ区を扱う記事とテーマが重なるため noindex 化し、sitemap からも外す。
+    // サイト内回遊の導線としてはページ自体を残す（robots は index:false / follow:true）。
     { url: `${BASE}/kid-reports`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${BASE}/about`, lastModified: legalLastMod, changeFrequency: 'yearly', priority: 0.5 },
+    // 運営者情報・編集方針・監修・商談窓口は E-E-A-T の土台なので sitemap に含める。
+    // lastModified は実際に本文を直した日を入れる（legalLastMod は法務系ページ用）。
+    { url: `${BASE}/about`, lastModified: new Date('2026-08-05'), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE}/business`, lastModified: new Date('2026-08-05'), changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${BASE}/editorial-policy`, lastModified: legalLastMod, changeFrequency: 'yearly', priority: 0.4 },
+    { url: `${BASE}/supervisors`, lastModified: legalLastMod, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${BASE}/contact`, lastModified: legalLastMod, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${BASE}/privacy`, lastModified: legalLastMod, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${BASE}/terms`, lastModified: legalLastMod, changeFrequency: 'yearly', priority: 0.3 },

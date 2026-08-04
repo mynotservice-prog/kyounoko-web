@@ -36,7 +36,7 @@ export default function PrivacyPage() {
             <li>サイト名：きょうのこ</li>
             <li>URL：<a href="https://kyounoko.jp">https://kyounoko.jp</a></li>
             <li>運営者：ながみー（個人事業主）</li>
-            <li>連絡先：<a href="mailto:service@kyounoko.jp">service@kyounoko.jp</a></li>
+            <li>連絡先：<a href="mailto:service@remegift.jp">service@remegift.jp</a></li>
           </ul>
 
           <h2>2. 取得する情報</h2>
@@ -145,7 +145,7 @@ export default function PrivacyPage() {
 
           <h2>17. お問い合わせ窓口</h2>
           <ul>
-            <li>メール：<a href="mailto:service@kyounoko.jp">service@kyounoko.jp</a></li>
+            <li>メール：<a href="mailto:service@remegift.jp">service@remegift.jp</a></li>
             <li><Link href="/contact">お問い合わせフォーム</Link></li>
           </ul>
 

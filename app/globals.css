@@ -3308,6 +3308,16 @@ iframe:not([class*="adsbygoogle"]):not([id*="aswift"]) {
     white-space: normal;
     min-width: 100px;
   }
+  /* 数値の一覧ではなく「説明文」が入るテーブル（媒体概要・料金メニュー等）は
+     nowrap だと1行が数千pxになり横スクロールが破綻する。opt-in で折り返す。 */
+  .prose table.table-wrap th,
+  .prose table.table-wrap td {
+    white-space: normal;
+    min-width: 92px;
+  }
+  .prose table.table-wrap td {
+    min-width: 150px;
+  }
 }
 
 /* (F) Hero on mobile：余白さらに圧縮（極狭幅対策）*/
