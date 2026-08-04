@@ -43,6 +43,13 @@ export type StationCondition = {
   label: string;
   /** タイトル中央部に挿入する文言 */
   titlePart: string;
+  /**
+   * タイトル用の名詞句（2026-07-31 追加）。
+   * 「{駅}駅の{titleNoun}{N}軒｜…」の形で使う。label をそのまま流用すると
+   * 「個人店・話題店の店」「キッズメニューありの店」のように日本語が崩れるため、
+   * 条件ごとに自然な名詞句を持たせる。
+   */
+  titleNoun: string;
   /** メタ description 用の見出し */
   metaPart: string;
   /** ページ lead 用の説明（〜120字） */
@@ -55,6 +62,7 @@ export const STATION_CONDITIONS: readonly StationCondition[] = [
   {
     slug: 'rainy',
     label: '雨の日',
+    titleNoun: '雨の日でも入れる店',
     titlePart: '雨の日でも安心',
     metaPart: '雨の日・梅雨・台風でも子連れで使える屋内系',
     description:
@@ -64,6 +72,7 @@ export const STATION_CONDITIONS: readonly StationCondition[] = [
   {
     slug: 'private-room',
     label: '個室・座敷',
+    titleNoun: '個室・座敷のある店',
     titlePart: '個室・座敷でゆったり',
     metaPart: '個室・座敷・仕切り席ありで子連れ歓迎',
     description:
@@ -73,6 +82,7 @@ export const STATION_CONDITIONS: readonly StationCondition[] = [
   {
     slug: 'baby',
     label: '0-1歳・赤ちゃん連れ',
+    titleNoun: '赤ちゃん連れOKの店',
     titlePart: '0-1歳の赤ちゃん連れOK',
     metaPart: '0-1歳・赤ちゃん連れOK・離乳食持込可',
     description:
@@ -82,6 +92,7 @@ export const STATION_CONDITIONS: readonly StationCondition[] = [
   {
     slug: 'indie',
     label: '個人店・話題店',
+    titleNoun: '子連れOKの個人店',
     titlePart: '個人店・話題店だけ',
     metaPart: 'チェーン以外の個人店・話題店',
     description:
@@ -91,6 +102,7 @@ export const STATION_CONDITIONS: readonly StationCondition[] = [
   {
     slug: 'famiresu',
     label: 'ファミレス',
+    titleNoun: '子連れOKのファミレス',
     titlePart: 'ファミレスで気軽に',
     metaPart: 'ファミレス（サイゼ・ガスト・ジョナサン等）で子連れランチ',
     description:
@@ -100,6 +112,7 @@ export const STATION_CONDITIONS: readonly StationCondition[] = [
   {
     slug: 'kaitenzushi',
     label: '回転寿司・お寿司',
+    titleNoun: '子連れOKの回転寿司',
     titlePart: '回転寿司・お寿司',
     metaPart: '回転寿司（スシロー・くら寿司・はま寿司等）で子連れOK',
     description:
@@ -109,6 +122,7 @@ export const STATION_CONDITIONS: readonly StationCondition[] = [
   {
     slug: 'yakiniku',
     label: '焼肉・しゃぶしゃぶ',
+    titleNoun: '子連れOKの焼肉',
     titlePart: '焼肉・しゃぶしゃぶ',
     metaPart: '焼肉・しゃぶしゃぶ（牛角・しゃぶ葉等）で子連れOK',
     description:
@@ -118,6 +132,7 @@ export const STATION_CONDITIONS: readonly StationCondition[] = [
   {
     slug: 'kids-menu',
     label: 'キッズメニューあり',
+    titleNoun: 'キッズメニューのある店',
     titlePart: 'キッズメニューあり',
     metaPart: 'キッズメニュー・お子様セットがある子連れ歓迎店',
     description:
@@ -128,6 +143,7 @@ export const STATION_CONDITIONS: readonly StationCondition[] = [
   {
     slug: 'asobiba',
     label: '子連れ遊び場',
+    titleNoun: '子連れで行ける遊び場',
     titlePart: '子連れで行ける遊び場',
     metaPart: '室内遊び場・キッズスペース・遊園地・水族館・動物園',
     description:
@@ -137,6 +153,7 @@ export const STATION_CONDITIONS: readonly StationCondition[] = [
   {
     slug: 'kouen',
     label: '公園・大型遊具',
+    titleNoun: '公園・大型遊具',
     titlePart: '公園・大型遊具',
     metaPart: '大型遊具・じゃぶじゃぶ池・ふわふわドームのある公園',
     description:
@@ -146,6 +163,7 @@ export const STATION_CONDITIONS: readonly StationCondition[] = [
   {
     slug: 'ame-asobiba',
     label: '雨の日の遊び場',
+    titleNoun: '雨の日に遊べる屋内施設',
     titlePart: '雨の日でも遊べる屋内施設',
     metaPart: '雨の日・梅雨・台風でも子連れで遊べる屋内施設',
     description:

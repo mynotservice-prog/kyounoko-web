@@ -10,6 +10,7 @@ import { AdSlot } from '@/components/ads/AdSlot';
 import { SpotListReveal } from '@/components/spots/SpotListReveal';
 import { SpotFilterBar } from '@/components/spots/SpotFilterBar';
 import { BROWSE_CATEGORIES, spotsByCategory } from '@/lib/spot-browse';
+import { getRuntimeSpotOverrides, type SpotOverridesMap } from '@/lib/spot-overrides';
 import { parseFilters, hasActiveFilters, matchesFilters, sortSpots, toFilterable } from '@/lib/spot-filter';
 
 export const revalidate = 3600;
@@ -46,7 +47,9 @@ export default async function SpotsPage({ searchParams }: Props) {
   const filterMode = hasActiveFilters(filters);
 
   // 全おでかけ先（restaurant除外・掲載可能）。カテゴリ別取得を合成して再利用。
-  const allDest = BROWSE_CATEGORIES.flatMap((c) => spotsByCategory(c.id));
+  // Admin(KV)上書きを渡し、名称変更等が検索/一覧にも即時反映されるようにする（詳細ページと同経路）。
+  const ov = await getRuntimeSpotOverrides();
+  const allDest = BROWSE_CATEGORIES.flatMap((c) => spotsByCategory(c.id, ov));
   const filterable = allDest.map(toFilterable);
   const totalCount = allDest.length;
 
@@ -81,7 +84,7 @@ export default async function SpotsPage({ searchParams }: Props) {
       {filterMode ? (
         <FilteredResults filters={filters} allDest={allDest} />
       ) : (
-        <BrowseMode />
+        <BrowseMode ov={ov} />
       )}
 
       <div style={{ height: 24 }}></div>
@@ -146,8 +149,8 @@ function FilteredResults({
 }
 
 /* ============ ブラウズモード：カテゴリ別（代表12件＋すべて見る） ============ */
-function BrowseMode() {
-  const byCat = BROWSE_CATEGORIES.map((c) => ({ c, list: spotsByCategory(c.id) }));
+function BrowseMode({ ov }: { ov?: SpotOverridesMap }) {
+  const byCat = BROWSE_CATEGORIES.map((c) => ({ c, list: spotsByCategory(c.id, ov) }));
   return (
     <>
       {/* カテゴリショートカット */}

@@ -14,17 +14,24 @@ import { AdSlot } from '@/components/ads/AdSlot';
 // GA4 の直近7日PVをもとに日次で更新する
 export const revalidate = 86400;
 
-export const metadata: Metadata = {
-  title: '子連れ人気スポットランキング｜今みんなが見ている遊び場【きょうのこ】',
-  description:
-    '0〜6歳の子連れでいま人気のおでかけスポットを、実際の閲覧数をもとにランキング。年齢別・エリア別でも絞り込めます。公園・水族館・動物園・室内遊び場まで。',
-  alternates: { canonical: '/ranking' },
-  openGraph: {
-    title: '子連れ人気スポットランキング｜きょうのこ',
-    description: '0〜6歳の子連れでいま人気のおでかけスポットを実データでランキング',
-    url: 'https://kyounoko.jp/ranking',
-  },
-};
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+  const sp = await searchParams;
+  // SEO §2-2: エリア/年齢の絞り込みクエリ変種は /ranking の重複。
+  // canonical→/ranking に加えて noindex,follow を付ける（/events・/spots と同一方針）。
+  const hasVariant = Boolean((sp.area && sp.area !== 'all') || sp.age);
+  return {
+    title: '子連れ人気スポットランキング｜今みんなが見ている遊び場【きょうのこ】',
+    description:
+      '0〜6歳の子連れでいま人気のおでかけスポットを、実際の閲覧数をもとにランキング。年齢別・エリア別でも絞り込めます。公園・水族館・動物園・室内遊び場まで。',
+    robots: hasVariant ? { index: false, follow: true } : undefined,
+    alternates: { canonical: '/ranking' },
+    openGraph: {
+      title: '子連れ人気スポットランキング｜きょうのこ',
+      description: '0〜6歳の子連れでいま人気のおでかけスポットを実データでランキング',
+      url: 'https://kyounoko.jp/ranking',
+    },
+  };
+}
 
 const AGE_TABS: { value?: AgeTag; label: string }[] = [
   { value: undefined, label: '総合' },

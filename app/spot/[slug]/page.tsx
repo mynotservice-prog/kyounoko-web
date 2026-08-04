@@ -56,7 +56,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { spot } = entry;
   const category = SPOT_CATEGORY_LABEL[spot.category] ?? spot.category;
   const location = spot.ward ?? spot.city ?? '';
-  const title = `${spot.name}｜${location}${location ? 'の' : ''}${category}子連れガイド【設備・料金・口コミ】`;
+  // タイトル長の適応（2026-07-31）:
+  // spot.name 自体にキャッチコピーが入っている登録が多く、そこへ固定の接尾辞
+  // 「｜{区}の{カテゴリ}子連れガイド【設備・料金・口コミ】」を足すと 70字を超え、
+  // 日本語SERPの表示幅（約30字）でほぼ全てが切り捨てられていた。
+  // 例: 「舎人公園じゃぶじゃぶ池「浮球の池」｜子連れで行きやすい？水遊び・対象年齢・
+  //      注意点まで解説｜足立区の公園子連れガイド【設備・料金・口コミ】」(約75字)
+  // name が十分に説明的な場合は接尾辞を付けず、短い name のときだけ文脈を補う。
+  const SPOT_TITLE_NAME_MAX = 24;
+  const titleSuffix =
+    spot.name.length >= SPOT_TITLE_NAME_MAX
+      ? ''
+      : `｜${location}${location ? 'の' : ''}${category}子連れガイド`;
+  const title = `${spot.name}${titleSuffix}`;
   const description =
     spot.note ??
     `${spot.name}は${location ? location + 'の' : ''}${category}。子連れで使いやすい設備・料金・アクセス情報をきょうのこ編集部が整理しました。`;

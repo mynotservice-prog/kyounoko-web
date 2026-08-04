@@ -718,7 +718,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     name: '鳥貴族',
     officialUrl: 'https://www.torikizoku.co.jp/',
     koryakuSlug: 'torikizoku-kodzure-koryaku',
-    verifiedAt: '2026-07-02',
+    verifiedAt: '2026-07-31',
     verifiedMethod: '編集部調査(実訪問・公式サイト照合)の集約',
     items: {
       stepFree: V(true, '店舗による'),
@@ -734,7 +734,9 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
       allergenInfo: V(true, '公式サイト'),
     },
     extras: [
-      { label: 'キッズメニュー', value: '× 基本なし' },
+      // 2026-08-01 に「トリキのお子様プレート」(A唐揚/B焼鳥ムネたれ・各税込390円)が
+      // グランドメニュー入り。公式は「通常メニューと同じ味付け、大きさ」と明記。
+      { label: 'キッズメニュー', value: '✓ お子様プレート390円（2026/8/1〜・味付けと大きさは大人と同じ）' },
     ],
   },
   {

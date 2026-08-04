@@ -23,21 +23,40 @@ export function V2ContextProvider({ children }: { children: React.ReactNode }) {
   const [toast, setToast] = React.useState('');
   const toastT = React.useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // 保存が消えるバグの修正（2026-07-31）
+  //
+  // 旧実装は「読み込み effect」と「保存 effect([saved])」を並べていたが、
+  // この2つはマウント時の同じコミットで走る。保存 effect が実行される時点の
+  // saved はまだ初期値 {} なので、**ページを開くたびに localStorage が一度 {} で
+  // 上書きされていた**（直後の再レンダリングで復元されるため普段は気づかない）。
+  //
+  // V2ContextProvider は V2Frame の中＝ページ単位でマウントされるため、
+  // 遷移のたびにこの上書きが発生する。保存直後の遷移・タブ切替・
+  // 読み込み失敗がこの隙間に挟まると保存が飛ぶ。
+  //
+  // 対策: hydrated フラグが立つまで書き込まない。setSaved と setHydrated は
+  // 同一バッチで反映されるので、次のコミットでは saved=復元値・hydrated=true となり
+  // 正しい値だけが永続化される。
+  const [hydrated, setHydrated] = React.useState(false);
+
   React.useEffect(() => {
     try {
       const s = JSON.parse(localStorage.getItem(LS_SAVED) || '{}');
-      setSaved(s);
+      if (s && typeof s === 'object') setSaved(s as Record<string, number>);
     } catch {
-      /* ignore */
+      /* 壊れた値は無視。ここで {} を書き戻さないこと（消失の原因になる） */
     }
+    setHydrated(true);
   }, []);
+
   React.useEffect(() => {
+    if (!hydrated) return; // 初回コミットでの {} 上書きを防ぐ
     try {
       localStorage.setItem(LS_SAVED, JSON.stringify(saved));
     } catch {
-      /* ignore */
+      /* quota 等は無視 */
     }
-  }, [saved]);
+  }, [saved, hydrated]);
 
   const toggleSave = React.useCallback((id: string) => {
     setSaved((prev) => {

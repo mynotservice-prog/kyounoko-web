@@ -4,6 +4,7 @@ import { V2Frame } from '@/components/v2/V2Frame';
 import { V2SectionHead, V2Img } from '@/components/v2/V2Base';
 import { V2Icon } from '@/components/v2/V2Icon';
 import { getOutingSpotsWithSlug } from '@/lib/spots';
+import { getRuntimeSpotOverrides } from '@/lib/spot-overrides';
 import type { Spot } from '@/lib/spots';
 import { getAllFileArticles } from '@/lib/articles';
 import { WARD_NAMES } from '@/lib/tokyo-stations';
@@ -95,6 +96,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${m.name}のおでかけ｜子連れスポット一覧`,
     description: `${m.name}で子連れで楽しめるスポット・ランチ・イベントを集めました。`,
     alternates: { canonical: `/area/${slug}` },
+    // 2026-07-31 剪定: /area/ は30ページ生成して90日で計9クリック、
+    // GSCに出た20ページ中16ページが0クリック、順位も pos9〜33 で戦えていない
+    // （例: /area/shibuya は115imp・pos31.6・0クリック）。
+    // 同じ区を扱う記事（shitsunai-asobi-*, mizuasobi-* 等）とテーマが重なるため、
+    // 検索面からは外して記事側に集約する。サイト内回遊の導線としては残すので
+    // follow は維持し、リンク評価は流したままにする。
+    robots: { index: false, follow: true },
   };
 }
 
@@ -105,7 +113,7 @@ export default async function AreaDetailPage({ params }: Props) {
   const name = m.name;
 
   // 該当エリアのスポットを抽出
-  const allSpotsEntries = getOutingSpotsWithSlug();
+  const allSpotsEntries = getOutingSpotsWithSlug(await getRuntimeSpotOverrides());
   const areaSpots = allSpotsEntries.filter(m.spotFilter);
 
   // 関連記事（エリア絞り込み）

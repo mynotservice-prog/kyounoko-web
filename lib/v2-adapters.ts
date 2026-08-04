@@ -14,6 +14,7 @@ import type {
   V2Spot,
 } from '@/components/v2/V2Cards';
 import type { Spot } from './spots';
+import { findStationBySlug } from './all-stations';
 import type { FeaturePage } from './feature-pages';
 import type { FileArticleMeta } from './articles';
 
@@ -214,7 +215,10 @@ function buildSpotTags(s: Spot): { t: string; k?: '' | 'age' | 'rain' | 'feat' }
 /** 駅情報を station 表示文字列に整形 */
 function spotStation(s: Spot): string {
   if (s.walkMinutes && s.nearestStation) {
-    return `${s.nearestStation} 徒歩${s.walkMinutes}分`;
+    // nearestStation は駅マスタの slug（例: 'hibiya'）の場合がある。日本語駅名に解決して表示を統一する
+    // （詳細ページの nearestStationName と同じ流儀。マスタ未収載ならそのまま表示）。
+    const st = findStationBySlug(s.nearestStation)?.name;
+    return `${st ? `${st}駅` : s.nearestStation} 徒歩${s.walkMinutes}分`;
   }
   return s.city || s.ward || '';
 }

@@ -3,6 +3,7 @@ import { V2Frame } from '@/components/v2/V2Frame';
 import { getAllPlanMetas } from '@/lib/plans';
 import { getAllFileArticles } from '@/lib/articles';
 import { getAllSpotsWithSlug } from '@/lib/spots';
+import { getRuntimeSpotOverrides } from '@/lib/spot-overrides';
 import { spotToV2 } from '@/lib/v2-adapters';
 import { FavoritesClient } from './FavoritesClient';
 
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/favorites' },
 };
 
-export default function FavoritesPage() {
+export default async function FavoritesPage() {
   // サーバ側で全プラン/記事/スポットのメタを取得、クライアント側で localStorage と突合
   const allPlans = getAllPlanMetas().map((p) => ({
     id: p.id,
@@ -33,10 +34,13 @@ export default function FavoritesPage() {
     categoryName: a.categoryName ?? a.category,
   }));
   // スポット（V2SaveButton で kk_saved_v2 に保存される）
-  const allSpots = getAllSpotsWithSlug().map((x) => {
+  const allSpots = getAllSpotsWithSlug(await getRuntimeSpotOverrides()).map((x) => {
     const v = spotToV2(x.spot);
     return {
       slug: x.slug,
+      // 2026-07-31 以前は一覧カードがこの id（spotIdFromName＝日本語名そのまま）で
+      // 保存していたため、既に保存済みのユーザーを救済するために一緒に渡す。
+      legacyId: v.id,
       name: x.spot.name,
       cat: v.cat,
       area: v.area,

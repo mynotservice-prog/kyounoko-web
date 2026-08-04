@@ -77,7 +77,13 @@ function interleaveByCategory(articles: FileArticleMeta[]): FileArticleMeta[] {
 }
 
 export async function GET(request: NextRequest) {
-  if (!isAuthorized(request)) {
+  // 認証: 通常は Vercel Cron（isAuthorized / CRON_SECRET）。加えて、オーナーが
+  // 手動で動作確認するための専用トークン ?trigger=<PINTEREST_MANUAL_TRIGGER> を
+  // 許可する（既存 cron 認証は変更しない・専用の秘密値でのみ発火）。
+  const manualToken = request.nextUrl.searchParams.get('trigger');
+  const expected = (process.env.PINTEREST_MANUAL_TRIGGER || '').trim();
+  const manualOk = expected.length > 0 && manualToken === expected;
+  if (!isAuthorized(request) && !manualOk) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
   if (!pinterestConfigured()) {
