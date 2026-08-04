@@ -1756,3 +1756,41 @@
   2. **チェックアウト中のブランチが `feat/ia-phase0-1-nav-today`**（main ではない）。未コミットの変更が多数あり。ユーザーが作業中と思われるため git 操作は行わず。スクリプトは本番 sitemap.xml をフェッチするため送信内容には影響なし。
   3. `.git/index.lock`（0byte, 7/6 06:02）が残存。サンドボックスからは削除できないため **Mac 側ターミナルで `rm -f ~/Developer/kyounoko-web/.git/index.lock` を実行**してください。
   4. 本ログ追記は append で反映済みだが、**commit/push は未実施**。Mac 側で `cd ~/Developer/kyounoko-web && git checkout main && git add docs/scheduled-log.md docs/indexnow-submitted.log && git commit -m "chore(seo): indexnow weekly log 2026-07-06" && git push origin main` を手動実行してください。
+
+## 2026-07-13 (月) — IndexNow 週次送信
+
+- **キュー生成**: `node scripts/indexnow-build-queue.mjs --max=9000 --kind=all` → sitemap.xml 総数 **3,798 URL**（フィルタなし=all、全網羅）。
+- **送信**: `node scripts/indexnow-submit.mjs` → 有効 **3,797 URL** を送信（1件は無効URLでスキップ）。
+- **submitted_count**: 3,797
+- **送信結果**:
+  - `https://api.indexnow.org/IndexNow` (Bing): **status 200** ✅
+  - `https://yandex.com/indexnow` (Yandex): **status 202** ✅
+- **bing_status**: 200 OK / **yandex_status**: 202 Accepted / **失敗**: なし
+- **認証キー確認**: `https://kyounoko.jp/c68e60e8f4b025a51c97f20076ce5c09.txt` → **200 OK**。sitemap.xml → **200 OK**。Vercel デプロイ Ready 前提を満たす。403/404 なし。
+- **ログ反映**: `docs/indexnow-submitted.log` に 3,797 URL を追記、`docs/indexnow-queue.txt` を空にクリア。
+- **失敗時対処の判断ログ**: 403／404／429／ネットワークエラーいずれも発生せず。再試行不要。429 なし（3,797 URL / 上限10,000、max=9000 マージン内）。
+- **前週比較**: submitted_count 前回 3,796 → 今回 3,797（**+1件、ほぼ横ばい**）。sitemap.xml 総数 3,797→3,798（+1）。前々週に見られた -1,219件（約24%減）は今週も回復しておらず、あの水準（3,8xx）で安定。前々週の減少は一時的な変更ではなく恒常化した模様。特段の異常なし。
+- **⚠ 実行環境メモ（前週から継続・要対応）**:
+  1. サンドボックス実行。作業フォルダのマウントが **ファイル削除（unlink）を許可しない** ため、`git pull --rebase --autostash` / `git commit` / `git push` がいずれも実行不可。IndexNow 送信（本タスクの主目的）は完了済み。
+  2. **チェックアウト中のブランチが `feat/ia-phase0-1-nav-today`**（main ではない）。未コミットの変更が多数あり。ユーザーが作業中と思われるため git 操作は一切行わず。スクリプトは本番 sitemap.xml をフェッチするため送信内容には影響なし。
+  3. `.git/index.lock` が残存。サンドボックスからは削除できないため **Mac 側ターミナルで `rm -f ~/Developer/kyounoko-web/.git/index.lock` を実行**してください。
+  4. 本ログ追記は append で反映済みだが、**commit/push は未実施**。Mac 側で `cd ~/Developer/kyounoko-web && git add docs/scheduled-log.md docs/indexnow-submitted.log && git commit -m "chore(seo): indexnow weekly log 2026-07-13" && git push origin main` を手動実行してください（現ブランチのまま or main へ切替のうえ）。
+
+## 2026-07-20 (月) — IndexNow 週次送信
+
+- **キュー生成**: `node scripts/indexnow-build-queue.mjs --max=9000 --kind=all` → sitemap.xml 総数 **3,660 URL**（フィルタなし=all、全網羅）。
+- **送信**: `node scripts/indexnow-submit.mjs` → 有効 **3,659 URL** を送信（1件は無効URLでスキップ）。
+- **submitted_count**: 3,659
+- **送信結果**:
+  - `https://api.indexnow.org/IndexNow` (Bing): **status 200** ✅
+  - `https://yandex.com/indexnow` (Yandex): **status 202** ✅
+- **bing_status**: 200 OK / **yandex_status**: 202 Accepted / **失敗**: なし
+- **認証キー確認**: `https://kyounoko.jp/c68e60e8f4b025a51c97f20076ce5c09.txt` → **200 OK**。sitemap.xml → **200 OK**。Vercel デプロイ Ready 前提を満たす。403/404 なし。
+- **ログ反映**: `docs/indexnow-submitted.log` に 3,659 URL を追記、`docs/indexnow-queue.txt` を空にクリア。
+- **失敗時対処の判断ログ**: 403／404／429／ネットワークエラーいずれも発生せず。再試行不要。429 なし（3,659 URL / 上限10,000、max=9000 マージン内）。
+- **前週比較**: submitted_count 前回 3,797 → 今回 3,659（**-138件、約-3.6%**）。sitemap.xml 総数 3,798→3,660（-138）。3,6xx〜3,8xx のレンジ内で微減。特段の異常なし（記事の一時的な noindex 化 or 統合の可能性はあるが、範囲内の変動）。
+- **⚠ 実行環境メモ（前週から継続・要対応）**:
+  1. サンドボックス実行。作業フォルダのマウントが **ファイル削除（unlink）を許可しない** ため、`git pull --rebase --autostash` / `git commit` / `git push` がいずれも実行不可（autostash が `.git/index.lock` を作成できず fatal）。IndexNow 送信（本タスクの主目的）は完了済み。
+  2. **チェックアウト中のブランチが `feat/pinterest-auto-pin`**（main ではない）。未コミットの変更が多数あり。ユーザー作業中と思われるため git 操作は一切行わず。スクリプトは本番 sitemap.xml をフェッチするため送信内容には影響なし。
+  3. `.git/index.lock`（0byte, 7/20 06:02）が残存。サンドボックスからは削除できない（Operation not permitted）ため **Mac 側ターミナルで `rm -f ~/Developer/kyounoko-web/.git/index.lock` を実行**してください。
+  4. 本ログ追記は append で反映済みだが、**commit/push は未実施**。Mac 側で `cd ~/Developer/kyounoko-web && git add docs/scheduled-log.md docs/indexnow-submitted.log && git commit -m "chore(seo): indexnow weekly log 2026-07-20" && git push origin main` を手動実行してください（現ブランチのまま or main へ切替のうえ）。
