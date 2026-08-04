@@ -36,6 +36,9 @@ function V2MobileMenu({
   const primary = [
     { label: 'ホーム', href: '/', icon: 'home' as const },
     { label: '今日の流れ', href: '/today', icon: 'sparkle' as const },
+    // 2026-08-04: ボトムナビ廃止に伴い、そこにしか無かった /articles の導線をここへ移設。
+    // 記事はサイト全クリックの81.5%を生む最大の面なので、導線を失わせない。
+    { label: '記事', href: '/articles', icon: 'book' as const },
     { label: 'エリア・駅', href: '/area', icon: 'pin' as const },
     { label: 'イベント', href: '/events', icon: 'calendar' as const },
     { label: '保存したもの', href: '/favorites', icon: 'bookmark' as const },
@@ -215,7 +218,6 @@ export function V2Frame({
                   {children}
                 </div>
               </div>
-              <V2BottomNav active={active} />
               <V2Toast />
             </div>
           </div>
@@ -329,42 +331,8 @@ function V2Header({
   );
 }
 
-function V2BottomNav({ active }: { active?: V2NavActive }) {
-  const items = [
-    { k: 'home', t: 'ホーム', icon: 'home', href: '/' },
-    { k: 'today', t: '今日の流れ', icon: 'sparkle', href: '/today' },
-    // 2026-07-31: 記事はサイト全クリックの81.5%・1ページあたり39クリックを生む最大の面だが
-    // ナビに導線が1つも無かった。一方 /area は90日で計9クリック（20ページ中16ページが0）で
-    // noindex 化したため、この枠を記事に置き換える。
-    { k: 'articles', t: '記事', icon: 'book', href: '/articles' },
-    { k: 'events', t: 'イベント', icon: 'calendar', href: '/events' },
-    { k: 'saved', t: '保存', icon: 'bookmark', href: '/favorites' },
-  ] as const;
-  return (
-    <nav className="v2-bottom-nav nav5">
-      {items.map((it) => {
-        const on = active === it.k;
-        return (
-          <Link
-            key={it.k}
-            href={it.href}
-            className={'v2-nav-item' + (on ? ' on' : '')}
-          >
-            <span>
-              <V2Icon
-                name={it.icon}
-                size={23}
-                color={on ? 'var(--v2-orange)' : '#b3b3b3'}
-                fill={on}
-              />
-            </span>
-            {it.t}
-          </Link>
-        );
-      })}
-    </nav>
-  );
-}
+// 2026-08-04: スマホでコンテンツを圧迫していたため固定ボトムナビを廃止。
+// 各項目は右上のハンバーガーメニュー（V2MobileMenu）に集約済み。
 
 function V2DesktopHeader({ active }: { active?: V2NavActive }) {
   const links = [

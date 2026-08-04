@@ -131,7 +131,8 @@
   scroll-behavior: smooth;
 }
 .v2-scroll::-webkit-scrollbar { width: 0; height: 0; }
-.v2-pad-nav { padding-bottom: calc(var(--v2-nav-h) + 18px); }
+/* 2026-08-04: 固定ボトムナビ廃止。ナビ分の余白予約をやめ、下端の余白のみ残す。 */
+.v2-pad-nav { padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
 .v2-home-indicator {
   position: absolute; bottom: 7px; left: 50%; transform: translateX(-50%);
   width: 134px; height: 5px; border-radius: 3px;
