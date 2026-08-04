@@ -6,6 +6,7 @@ import { PWARegister } from '@/components/common/PWARegister';
 import { PWAInstallPrompt } from '@/components/common/PWAInstallPrompt';
 import { AnalyticsRouteTracker } from '@/components/common/AnalyticsRouteTracker';
 import { ScrollDepthTracker } from '@/components/common/ScrollDepthTracker';
+import { ScrollResetOnNavigate } from '@/components/common/ScrollResetOnNavigate';
 import { Suspense } from 'react';
 import './globals.css';
 import './v2/v2.css';
@@ -268,6 +269,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <AnalyticsRouteTracker />
         </Suspense>
         <ScrollDepthTracker />
+        {/* 遷移時に先頭へ戻す。入れ子スクロール廃止(PR #150)で App Router 内蔵の
+            スクロールリセットが効かなくなったため明示的に行う。詳細はコンポーネント内のコメント。 */}
+        <ScrollResetOnNavigate />
         {children}
 
         {/* Google Analytics 4
