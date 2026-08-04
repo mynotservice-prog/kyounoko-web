@@ -66,7 +66,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // 同じ区を扱う記事とテーマが重なるため noindex 化し、sitemap からも外す。
     // サイト内回遊の導線としてはページ自体を残す（robots は index:false / follow:true）。
     { url: `${BASE}/kid-reports`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${BASE}/about`, lastModified: legalLastMod, changeFrequency: 'yearly', priority: 0.5 },
+    // 運営者情報・編集方針・監修・商談窓口は E-E-A-T の土台なので sitemap に含める。
+    // lastModified は実際に本文を直した日を入れる（legalLastMod は法務系ページ用）。
+    { url: `${BASE}/about`, lastModified: new Date('2026-08-05'), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE}/business`, lastModified: new Date('2026-08-05'), changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${BASE}/editorial-policy`, lastModified: legalLastMod, changeFrequency: 'yearly', priority: 0.4 },
+    { url: `${BASE}/supervisors`, lastModified: legalLastMod, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${BASE}/contact`, lastModified: legalLastMod, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${BASE}/privacy`, lastModified: legalLastMod, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${BASE}/terms`, lastModified: legalLastMod, changeFrequency: 'yearly', priority: 0.3 },

@@ -20,9 +20,12 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-echo "▶ force ビルド: vercel --prod --force"
+echo "▶ force ビルド: vercel --prod --force --archive=tgz"
 echo "  （ignore-build を回避してファイルベース md をフルビルドします）"
-vercel --prod --force
+# --archive=tgz は必須。リポジトリのファイル数が Vercel CLI のアップロード上限
+# （15,000件）を超えており（2026-08 時点で 28,327 件）、付けないと
+# "Invalid request: `files` should NOT have more than 15000 items" で即死する。
+vercel --prod --force --archive=tgz
 
 echo ""
 echo "▶ Cloudflare エッジキャッシュをパージ"

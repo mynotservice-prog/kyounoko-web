@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: '運営者が実際に訪問した子連れスポットレポート｜きょうのこ',
     description:
-      '49件の運営者一次情報。すべて実訪問・写真・記憶ベース。ベビーカー動線・混雑・授乳・注意点を網羅。',
+      '54件の運営者一次情報。すべて実訪問・写真・記憶ベース。ベビーカー動線・混雑・授乳・注意点を網羅。',
     url: 'https://kyounoko.jp/kid-reports',
     type: 'website',
     images: [{ url: '/img/ogp-default-v2.webp', width: 1200, height: 630 }],
