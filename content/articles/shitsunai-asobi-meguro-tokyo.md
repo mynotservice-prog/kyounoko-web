@@ -156,6 +156,8 @@ A. 自由が丘・中目黒は**コインパーキング中心**、商業施設�
 
 ## 関連記事
 
+- [世田谷区の子供の室内遊び場8選](/article/shitsunai-asobi-setagaya-tokyo)
+- [品川区の子供の室内遊び場8選](/article/shitsunai-asobi-shinagawa-tokyo)
 - [梅雨の室内遊び完全ガイド（0〜6歳）](/article/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026)
 - [0歳育児完全マップ](/article/0sai-ikuji-kanzen-map)
 - [1〜2歳育児完全マップ](/article/1-2sai-ikuji-kanzen-map)
