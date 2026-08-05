@@ -13,6 +13,7 @@ import {
   isEventEnded,
 } from '@/lib/events';
 import { getRuntimeEventOverrides } from '@/lib/event-overrides';
+import { getAreaName } from '@/lib/area';
 import { getAllSpotsWithSlug, isSpotIndexable } from '@/lib/spots';
 import { spotToV2 } from '@/lib/v2-adapters';
 import { AdSlot } from '@/components/ads/AdSlot';
@@ -106,6 +107,10 @@ export default async function EventPage({ params }: Props) {
     };
   })();
 
+  // area は都道府県スラッグ。'all'（＝全国・オンライン等）は地域名にならないので落とす。
+  const areaRegionName =
+    ev.area && ev.area !== 'all' ? getAreaName(ev.area) : undefined;
+
   // JSON-LD: Event
   const jsonLdEvent = {
     '@context': 'https://schema.org',
@@ -119,7 +124,17 @@ export default async function EventPage({ params }: Props) {
     location: {
       '@type': 'Place',
       name: ev.venue,
-      address: ev.city ? { '@type': 'PostalAddress', addressLocality: ev.city, addressCountry: 'JP' } : undefined,
+      // Google の Event 構造化データは location.address を実質必須として扱う
+      // （欠けると「項目 address がありません」の警告になり、リッチリザルトの
+      //   会場情報が出なくなる）。city は任意フィールドで、複数会場・巡回開催の
+      // イベント（例: rinyushoku-class-monthly「各区民センター」）では空になる。
+      // そのため city の有無にかかわらず、都道府県（area）と国は必ず出す。
+      address: {
+        '@type': 'PostalAddress',
+        ...(ev.city ? { addressLocality: ev.city } : {}),
+        ...(areaRegionName ? { addressRegion: areaRegionName } : {}),
+        addressCountry: 'JP',
+      },
     },
     offers: eventOffer,
     image: [
