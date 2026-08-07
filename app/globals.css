@@ -1473,6 +1473,21 @@ input, select { font: inherit; color: inherit; }
 @media (min-width: 768px) {
   .tldr-box .tldr-text { font-size: 15.5px; line-height: 2; }
 }
+/* 結論セクションを書式つき（箇条書き/太字/表）で描画するようになったため、
+   ボックス内の .prose を要約向けに詰める。本文より小さく、余白も浅く。 */
+.tldr-box .tldr-text.prose > :first-child { margin-top: 0; }
+.tldr-box .tldr-text.prose > :last-child { margin-bottom: 0; }
+.tldr-box .tldr-text.prose p { margin: .6em 0; color: inherit; }
+.tldr-box .tldr-text.prose ul,
+.tldr-box .tldr-text.prose ol { margin: .6em 0; padding-left: 1.25em; color: inherit; }
+.tldr-box .tldr-text.prose li { margin-bottom: .3em; }
+.tldr-box .tldr-text.prose table {
+  margin: .8em 0;
+  font-size: 13px;
+  background: rgba(255, 255, 255, .55);
+}
+.tldr-box .tldr-text.prose h3 { font-size: 15px; margin: .9em 0 .4em; }
+.tldr-box .tldr-text.prose h3::before { content: none; }
 
 /* ==========================================================================
    Today's Answer — 1つだけ返す結果画面
@@ -1882,7 +1897,10 @@ a[href^="/plan/"]:hover > div:first-child {
 .article-main { min-width: 0; }
 .article-sidebar { display: none; }
 @media (min-width: 1100px) {
-  .article-sidebar { display: block; }
+  /* align-items:start のままだと sidebar が目次の高さ(≒760px)に縮み、
+     中の sticky がその範囲しか追従できずに画面外へ流れていた。
+     行いっぱいに伸ばして、記事を読み進める間ずっと目次が追従するようにする。 */
+  .article-sidebar { display: block; align-self: stretch; }
 }
 .article-sidebar-inner {
   position: sticky;
@@ -1904,6 +1922,15 @@ a[href^="/plan/"]:hover > div:first-child {
 }
 @media (min-width: 1100px) {
   .toc-mobile { display: none; }
+}
+/* 見出しの多い記事は目次を開いた状態で出す（TableOfContents 側で H2 8個以上）。
+   ただし H3 まで含めると2.6画面ぶんになり、本文に着くまでが遠くなるので、
+   目次自体をスクロールさせて占有量を半画面強に抑える。 */
+.toc-mobile[open] .toc-list {
+  max-height: 55vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 .toc-mobile > summary {
   list-style: none;
@@ -1967,6 +1994,7 @@ a[href^="/plan/"]:hover > div:first-child {
 
 .toc-desktop {
   font-size: 13px;
+  overscroll-behavior: contain;
 }
 .toc-desktop .toc-head {
   margin-bottom: 16px;
@@ -3221,6 +3249,79 @@ button:focus:not(:focus-visible), a:focus:not(:focus-visible) {
 }
 
 /* ==========================================================================
+   本文アコーディオン（.body-acc）
+   - H3 が5個以上ぶら下がる「引くための」セクションだけを H3 単位で開閉にする。
+   - 中身は HTML に出したまま CSS で隠す（クロール・インデックスには影響しない）。
+   - <summary> の中に <h3 id> をそのまま入れているので、目次リンクも見出し階層も生きる。
+   ========================================================================== */
+.prose .body-acc {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--paper-card);
+  margin: 10px 0;
+  overflow: hidden;
+}
+.prose .body-acc + .body-acc { margin-top: 8px; }
+.prose .body-acc > summary {
+  list-style: none;
+  cursor: pointer;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 44px 10px 16px;
+  position: relative;
+  border-left: 3px solid transparent;
+  transition: background-color .15s ease, border-left-color .2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.prose .body-acc > summary::-webkit-details-marker { display: none; }
+/* summary 内の見出しは「行」として振る舞わせる（余白と装飾を消す） */
+.prose .body-acc > summary > h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 15.5px;
+  line-height: 1.55;
+}
+.prose .body-acc > summary > h3::before { content: none; }
+/* 開閉キャレット */
+.prose .body-acc > summary::after {
+  content: '';
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--clay);
+  border-bottom: 2px solid var(--clay);
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform .2s ease;
+}
+.prose .body-acc[open] > summary::after {
+  transform: translateY(-30%) rotate(-135deg);
+}
+.prose .body-acc > summary:active { background-color: var(--peach-soft); }
+.prose .body-acc[open] > summary {
+  border-left: 3px solid var(--clay);
+  background-color: rgba(251, 232, 216, 0.35);
+}
+.prose .body-acc[open] > summary > h3 { color: var(--clay-deep); }
+.prose .body-acc-body {
+  padding: 2px 16px 14px;
+  border-top: 1px solid var(--line);
+}
+.prose .body-acc-body > :first-child { margin-top: .8em; }
+.prose .body-acc-body > :last-child { margin-bottom: 0; }
+/* 折りたたみ内の見出しへ飛んだ直後、ヘッダーに潜らないように */
+.prose .body-acc { scroll-margin-top: 72px; }
+
+@media (max-width: 480px) {
+  .prose .body-acc > summary { padding: 10px 40px 10px 13px; }
+  .prose .body-acc > summary > h3 { font-size: 15px; }
+  .prose .body-acc-body { padding: 2px 13px 12px; }
+}
+
+/* ==========================================================================
    モバイル最適化（2026-05 追加）
    - 目的：iPhone（375-414px）/ Android（360-412px）で「見やすい」を担保
    - 致命的問題 3 つ：(1) TOCジャンプ位置 (2) ヘッダタップ領域 (3) テーブル横スクロール
@@ -3308,11 +3409,36 @@ iframe:not([class*="adsbygoogle"]):not([id*="aswift"]) {
     font-size: 13px;
     white-space: nowrap; /* セル内は折り返さず、全体で横スクロール */
   }
-  /* 最初の列は折り返してOK（見出し列が長い時の対策） */
+  /* 最初の列は折り返してOK（見出し列が長い時の対策）。
+     さらに横スクロール中も左に貼り付けて、行が何の行か見失わないようにする
+     （チェーン比較・キッズメニュー比較など、この表がサイトの主力コンテンツ）。 */
   .prose table th:first-child,
   .prose table td:first-child {
     white-space: normal;
     min-width: 100px;
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    /* 行の背景（ゼブラ）をそのまま引き継ぐ。透けると下の列が重なって見える */
+    background-color: inherit;
+    box-shadow: 1px 0 0 var(--line);
+  }
+  /* 行に不透明な背景を敷く。ゼブラの rgba(...,.35) のままだと、左に固定した
+     セルの下を他の列の文字が通り抜けて重なって見える（rgb(251,244,232) は
+     rgba(243,232,211,.35) を paper-card 上に重ねた見た目と同じ）。 */
+  .prose table tbody tr { background-color: var(--paper-card); }
+  .prose table tbody tr:nth-child(even) { background-color: rgb(251, 244, 232); }
+  .prose table thead { background-color: var(--paper-deep); }
+  .prose table thead th:first-child { background-color: var(--paper-deep); }
+  /* 数値の一覧ではなく「説明文」が入るテーブル（媒体概要・料金メニュー等）は
+     nowrap だと1行が数千pxになり横スクロールが破綻する。opt-in で折り返す。 */
+  .prose table.table-wrap th,
+  .prose table.table-wrap td {
+    white-space: normal;
+    min-width: 92px;
+  }
+  .prose table.table-wrap td {
+    min-width: 150px;
   }
 }
 
@@ -3367,7 +3493,8 @@ iframe:not([class*="adsbygoogle"]):not([id*="aswift"]) {
 
 /* (K) 記事本文 .prose のモバイル余白・行間最適化 */
 @media (max-width: 480px) {
-  .prose { font-size: 15px; line-height: 1.88; }
+  /* 本文はPCが16px/2.0なのにモバイルだけ15pxだった。長文が続く記事で効いていないので揃える。 */
+  .prose { font-size: 16px; line-height: 1.9; }
   .prose h2 { margin: 40px 0 14px; font-size: 19px; padding-left: 12px; border-left-width: 3px; }
   .prose h3 { margin: 28px 0 10px; font-size: 16px; }
   .prose h4 { margin: 22px 0 8px; font-size: 14.5px; }

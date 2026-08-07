@@ -19,9 +19,9 @@ export async function ReviewSection({ spotId, spotName }: { spotId: string; spot
   return (
     <>
       <div className="v2-sec-head" style={{ marginTop: 22 }}>
-        <div className="v2-sec-title">
+        <h2 className="v2-sec-title">
           <span className="v2-bar-accent"></span>みんなの口コミ
-        </div>
+        </h2>
       </div>
       <div className="v2-section">
         {rating.count > 0 ? (

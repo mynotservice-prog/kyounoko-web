@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { trackEvent } from '@/lib/analytics';
 
 /**
@@ -14,8 +15,12 @@ import { trackEvent } from '@/lib/analytics';
  * - イベント名: `scroll_depth` / params: `{ percent: 25|50|75|100 }`
  * - throttle: requestAnimationFrame で1フレームに1回しか計算しない。
  * - 短すぎるページ（viewport より短い）は到達率を強制的に 100% とみなして1回だけ送る。
+ * - 送信済みフラグは pathname ごとにリセットする。これが無いと、クライアント遷移で
+ *   2ページ目以降の到達率が一切送られない（sent がマウント時のまま持ち越されるため）。
  */
 export function ScrollDepthTracker() {
+  const pathname = usePathname();
+
   useEffect(() => {
     if (typeof window === 'undefined') return;
     // /admin/* では計測しない（GA計測停止に合わせる）
@@ -65,7 +70,7 @@ export function ScrollDepthTracker() {
       window.removeEventListener('resize', onScroll);
       if (frame) cancelAnimationFrame(frame);
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }
