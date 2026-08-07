@@ -15,7 +15,7 @@ import { getRuntimeSpotOverrides } from '@/lib/spot-overrides';
 import { findStationBySlug } from '@/lib/all-stations';
 import { SPOT_CLOSED } from '@/lib/spot-closed';
 import { getAllFileArticles } from '@/lib/articles';
-import { buildSpotJsonLd, buildFaqJsonLd } from '@/lib/spot-schema';
+import { buildSpotJsonLd, buildFaqJsonLd, isReviewEligibleType } from '@/lib/spot-schema';
 import {
   buildEnjoyByAgeBlocks,
   buildCrowdAvoidanceText,
@@ -218,9 +218,18 @@ export default async function SpotPage({ params }: Props) {
   // 公開済みの「行ったよ」レポート（MicroCMS未設定時は常に空配列）
   const visitorReports = await getPublishedSpotReports(slug);
 
-  // P1-8: 口コミ★平均（承認済みから集計）。件数>0なら構造化データにも反映。
+  // Google のレビュー スニペットは Place / TouristAttraction を対象外にしているため、
+  // 対応タイプ（LocalBusiness 系）のときだけ構造化データに載せる。付けてしまうと
+  // 「項目『<parent_node>』のオブジェクト タイプが無効です」でページごとリッチリザルト対象外になる。
+  // 口コミの表示自体は下の ReviewSection で従来どおり行うので、ユーザーに見える情報は減らない。
+  const placeTypes = (jsonLdPlace as { '@type'?: string | string[] })['@type'];
+  const reviewEligible = isReviewEligibleType(
+    Array.isArray(placeTypes) ? placeTypes : placeTypes ? [placeTypes] : [],
+  );
+
+  // P1-8: 口コミ★平均（承認済みから集計）。件数>0かつ対応タイプなら構造化データにも反映。
   const reviewRating = await getRating(slug);
-  if (reviewRating.count > 0) {
+  if (reviewEligible && reviewRating.count > 0) {
     (jsonLdPlace as Record<string, unknown>).aggregateRating = {
       '@type': 'AggregateRating',
       ratingValue: reviewRating.avg,
@@ -233,7 +242,7 @@ export default async function SpotPage({ params }: Props) {
   // P2-4: 承認済み口コミ個別をReviewスキーマとしても付与（AggregateRatingと併記でリッチリザルト強化）。
   // 直近10件までに絞ってJSON-LDの肥大化を避ける。
   const approvedReviews = await getApprovedReviews(slug);
-  if (approvedReviews.length > 0) {
+  if (reviewEligible && approvedReviews.length > 0) {
     (jsonLdPlace as Record<string, unknown>).review = approvedReviews.slice(0, 10).map((r) => ({
       '@type': 'Review',
       author: { '@type': 'Person', name: r.nickname },
