@@ -93,6 +93,25 @@ type Offer = {
 };
 
 /**
+ * その型に review / aggregateRating を付けてよいか。
+ *
+ * Google のレビュー スニペットは、レビュー対象が対応タイプのときしか受け付けない
+ * （Book / Course / Event / Game / HowTo / LocalBusiness / Movie / Organization /
+ *  Product / Recipe / SoftwareApplication ほか）。
+ * `Place` と、その配下の `TouristAttraction` / `Park` / `Zoo` / `Aquarium` / `Museum` は
+ * **対応していない**。ここに review を付けると Search Console が
+ * 「項目『<parent_node>』のオブジェクト タイプが無効です」を出し、そのページは
+ * リッチリザルトの対象外になる（2026-08-03 クロールの GINZA SIX で実際に発生）。
+ *
+ * そのため LocalBusiness 系を明示している型のときだけ許可する。
+ * 口コミ自体はページ上には従来どおり表示するので、ユーザーに見える情報は減らない。
+ */
+export function isReviewEligibleType(types: string[]): boolean {
+  const ELIGIBLE = new Set(['LocalBusiness', 'Restaurant', 'Organization', 'Product', 'Event']);
+  return types.some((t) => ELIGIBLE.has(t));
+}
+
+/**
  * 構造化スキーマ用に Spot を変換する。
  * 単一の LocalBusiness 系オブジェクトを返す。
  */
@@ -276,7 +295,9 @@ export function buildSpotJsonLd(spot: Spot, slug: string) {
   if (offers.length) jsonLd.makesOffer = offers;
   if (additionalProperty.length) jsonLd.additionalProperty = additionalProperty;
   if (spot.hiddenTip) {
-    jsonLd.knowsAbout = spot.hiddenTip;
+    // knowsAbout は schema.org 上 Person / Organization にしか定義がなく、Place に付けるのは
+    // ドメイン違反だった。Thing に定義がある disambiguatingDescription へ移す。
+    jsonLd.disambiguatingDescription = spot.hiddenTip;
   }
 
   return jsonLd;
