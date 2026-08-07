@@ -47,7 +47,6 @@ import { AdSlot } from '@/components/ads/AdSlot';
 import { getTagsForArticle } from '@/lib/tags';
 import { FavoriteButton } from '@/components/ui/FavoriteButton';
 import { TriedButton } from '@/components/ui/TriedButton';
-import { SpotList } from '@/components/common/SpotList';
 import { EditorialDisclosure } from '@/components/article/EditorialDisclosure';
 import { getExtraSchemasForArticle } from '@/lib/article-schema-enhancers';
 import { buildStationLinkForArticle } from '@/lib/article-station-link';
@@ -1277,14 +1276,10 @@ function FileArticleView({ article }: { article: FileArticle }) {
             <YouTubeSearchLink query={article.youtubeSearch} />
           )}
 
-          {/* エリア紐付き記事なら具体スポット一覧を提示 */}
-          {article.area && article.area !== 'all' && (
-            <SpotList
-              area={article.area}
-              age={article.quickInfo?.ageRanges?.[0] as '0-1' | '2-3' | '4-6' | undefined}
-              limit={6}
-            />
-          )}
+          {/* 旧: エリア紐付き記事の末尾に「◯◯県のおすすめスポット」(SpotList) を出していたが、
+              記事の話題と無関係な施設が並ぶだけだった（離乳食持ち込みチェーン店の記事に
+              上野動物園・葛西臨海水族園が出る等）。読む妨げになるので記事からは撤去。
+              エリアで探す導線は /spots・/area 側が担う。SpotList 自体は /plan/[id] で継続使用。 */}
 
           {/* P1-7: 本体ツール（1日プランナー /today）への明示送客。エリア引き継ぎ。
               全記事末尾に必須（横断ルール §5-3）。 */}
