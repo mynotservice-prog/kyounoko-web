@@ -118,6 +118,14 @@ export type FileArticle = FileArticleMeta & {
   readingTimeMin: number;
   /** 結論セクション（"## 結論（先に知りたい人へ）" 等）のプレーンテキスト。AIO向けTL;DR抽出。 */
   tldr: string | null;
+  /**
+   * 同じ結論セクションを、箇条書き・太字・表を保ったまま描画した HTML。
+   * 本文からはこのセクションを取り除き、ページ上部の要約ボックスで1回だけ見せる
+   * （従来は上部の要約と本文の結論見出しが同じ内容で二重に出ていた）。
+   */
+  tldrHtml: string | null;
+  /** 結論セクションの見出しテキスト（"TL;DR｜30秒でわかる答え" 等）。要約ボックスの見出しに使う。 */
+  tldrHeading: string | null;
   /** HowTo 抽出結果。手順形式の記事のみ非null。 */
   howto: FileArticleHowToStep[] | null;
   /** ランキング / N選 / 比較記事の項目リスト。ItemList JSON-LD 用。 */
@@ -466,6 +474,79 @@ function injectHeadingIdsAndExtractToc(html: string): { html: string; toc: TocIt
 }
 
 /**
+ * H3 がずらりと並ぶ「引くための」セクションを、H3 単位の開閉ブロックにする。
+ *
+ * 対象は「同じ H2 の下に H3 が minH3 個以上ぶら下がっているセクション」だけ。
+ * 読む順が決まっている地の文（H3 が数個しかないセクション）は畳まない。
+ * FAQ 見出し配下は 3 個から畳む（Q&A はもともと引く用途のため）。
+ *
+ * SEO: 中身は HTML にそのまま出したうえで CSS で隠す（クリック後に取りに行かない）。
+ * `<summary>` の中に `<h3 id="...">` を素で残すので、見出し階層も目次リンクも壊れない。
+ * 折りたたまれた H3 へアンカー遷移したときは ArticleAccordionAnchors が開く。
+ */
+function wrapDenseH3Sections(html: string, minH3 = 5, minH3Faq = 3): string {
+  const headingRe = /<h([23])(\s[^>]*)?>([\s\S]*?)<\/h\1>/g;
+  type Mark = { level: 2 | 3; start: number; end: number; full: string; inner: string };
+  const marks: Mark[] = [];
+  for (const m of html.matchAll(headingRe)) {
+    marks.push({
+      level: Number(m[1]) as 2 | 3,
+      start: m.index,
+      end: m.index + m[0].length,
+      full: m[0],
+      inner: m[3],
+    });
+  }
+  if (marks.length === 0) return html;
+
+  const isFaqHeading = (inner: string) =>
+    /(よくある質問|FAQ|Q&amp;A|Q&A|質問)/i.test(inner.replace(/<[^>]+>/g, ''));
+
+  // 各 H3 が「畳む対象か」を先に決める（H2 グループ単位で判定）
+  const wrap = new Set<number>();
+  const firstOfGroup = new Set<number>();
+  let groupIsFaq = false;
+  let group: number[] = [];
+  const flush = () => {
+    const threshold = groupIsFaq ? minH3Faq : minH3;
+    if (group.length >= threshold) {
+      group.forEach((i) => wrap.add(i));
+      firstOfGroup.add(group[0]);
+    }
+    group = [];
+  };
+  for (let i = 0; i < marks.length; i++) {
+    if (marks[i].level === 2) {
+      flush();
+      groupIsFaq = isFaqHeading(marks[i].inner);
+    } else {
+      group.push(i);
+    }
+  }
+  flush();
+  if (wrap.size === 0) return html;
+
+  // 出力を組み立てる。H3 の本文は「次の見出しの直前まで」。
+  let out = '';
+  let cursor = 0;
+  for (let i = 0; i < marks.length; i++) {
+    const mk = marks[i];
+    if (!wrap.has(i)) continue;
+    const contentEnd = i + 1 < marks.length ? marks[i + 1].start : html.length;
+    out += html.slice(cursor, mk.start);
+    const openAttr = firstOfGroup.has(i) ? ' open' : '';
+    out +=
+      `<details class="body-acc"${openAttr}>` +
+      `<summary class="body-acc-head">${mk.full}</summary>` +
+      `<div class="body-acc-body">${html.slice(mk.end, contentEnd)}</div>` +
+      `</details>`;
+    cursor = contentEnd;
+  }
+  out += html.slice(cursor);
+  return out;
+}
+
+/**
  * 日本語テキストの概算読了時間（分）。
  * ベース 600 文字/分。最低 1 分。
  */
@@ -481,26 +562,64 @@ export function estimateReadingTime(text: string): number {
 // 結論セクション（## 結論...）のプレーンテキストを抽出する。
 // AIO（AI Overview）向けの短い要約として schema.org の `description` や
 // ページトップの "要約" ブロックで利用する。
-function extractTldr(markdown: string): string | null {
+type TldrExtract = {
+  /** AIO / schema.org 用のプレーンテキスト */
+  plain: string | null;
+  /** 要約ボックスに描画するための markdown（書式そのまま） */
+  sectionMd: string | null;
+  /** 見出しテキスト */
+  heading: string | null;
+  /** 結論セクションを取り除いた本文 markdown */
+  body: string;
+};
+
+function extractTldr(markdown: string): TldrExtract {
   const lines = markdown.split('\n');
   const headingRegex = /^##\s+(結論|要約|この記事の結論|先に結論|TL;DR)/i;
 
-  let start = -1;
+  // 結論見出しは1記事に複数あることがある（46本が「## TL;DR…」と「## 結論（先に知りたい人へ）」を
+  // 両方持っている）。全部拾って要約ボックスにまとめ、本文からは全部取り除く。
+  const ranges: Array<{ start: number; end: number }> = [];
   for (let i = 0; i < lines.length; i++) {
-    if (headingRegex.test(lines[i])) {
-      start = i;
-      break;
+    if (!headingRegex.test(lines[i])) continue;
+    let end = lines.length;
+    for (let j = i + 1; j < lines.length; j++) {
+      if (/^##\s+/.test(lines[j])) {
+        end = j;
+        break;
+      }
     }
+    ranges.push({ start: i, end });
+    i = end - 1;
   }
-  if (start === -1) return null;
+  if (ranges.length === 0) return { plain: null, sectionMd: null, heading: null, body: markdown };
 
-  let end = lines.length;
-  for (let i = start + 1; i < lines.length; i++) {
-    if (/^##\s+/.test(lines[i])) {
-      end = i;
-      break;
-    }
+  const heading = lines[ranges[0].start].replace(/^##\s+/, '').trim();
+  // 2つ目以降は見出しごと残す（別の切り口の結論なので、どれがどれか分かるようにする）。
+  const sectionMd = ranges
+    .map((r, idx) => {
+      const inner = lines.slice(r.start + 1, r.end).join('\n').trim();
+      if (idx === 0) return inner;
+      const h = lines[r.start].replace(/^##\s+/, '').trim();
+      return `### ${h}\n\n${inner}`;
+    })
+    .filter(Boolean)
+    .join('\n\n')
+    .trim();
+
+  // 本文からは結論セクションを丸ごと削る。要約ボックス側で書式つきで1回だけ見せる。
+  const kept: string[] = [];
+  let cursor = 0;
+  for (const r of ranges) {
+    kept.push(lines.slice(cursor, r.start).join('\n'));
+    cursor = r.end;
   }
+  kept.push(lines.slice(cursor).join('\n'));
+  const bodyWithoutTldr = kept.join('\n\n').trim() + '\n';
+
+  // プレーンテキスト（AIO/schema用）は先頭セクションだけを素材にする
+  const start = ranges[0].start;
+  const end = ranges[0].end;
 
   // 結論セクション内のマークダウン表は、tldr（speakable / まとめ / AI Overview抽出源）に
   // 「| --- | --- |」のようなノイズとして混入するため、表の行を丸ごと除去する。
@@ -523,9 +642,13 @@ function extractTldr(markdown: string): string | null {
     .replace(/\s+/g, ' ')
     .trim();
 
-  if (!plain) return null;
-  // 長すぎる場合は 240 文字で切る（AIO抽出向け：100〜200字が理想、余裕込みで240）
-  return plain.length > 240 ? plain.slice(0, 240) + '…' : plain;
+  return {
+    // 長すぎる場合は 240 文字で切る（AIO抽出向け：100〜200字が理想、余裕込みで240）
+    plain: !plain ? null : plain.length > 240 ? plain.slice(0, 240) + '…' : plain,
+    sectionMd: sectionMd || null,
+    heading: heading || null,
+    body: bodyWithoutTldr,
+  };
 }
 
 // ランキング・N選・比較記事の項目リストを抽出する。ItemList JSON-LD 用。
@@ -907,11 +1030,14 @@ async function buildArticleFromRaw(raw: string, fallbackSlug: string): Promise<F
   const { meta, content } = parseFrontmatter(raw, fallbackSlug);
   const { body: bodyMd, faq } = extractFaq(content);
   const tldr = extractTldr(bodyMd);
+  // howto / itemList は結論セクションを抜く前の本文から拾う（抽出元を減らさない）。
   const howto = extractHowTo(bodyMd);
   const itemList = extractItemList(meta.title, bodyMd);
-  const rawHtml = await renderMarkdownToHtml(bodyMd);
+  const rawHtml = await renderMarkdownToHtml(tldr.body);
   const htmlWithLinks = injectInternalLinks(rawHtml, meta.slug);
-  const { html: bodyHtml, toc } = injectHeadingIdsAndExtractToc(htmlWithLinks);
+  const { html: bodyWithIds, toc } = injectHeadingIdsAndExtractToc(htmlWithLinks);
+  const bodyHtml = wrapDenseH3Sections(bodyWithIds);
+  const tldrHtml = tldr.sectionMd ? await renderMarkdownToHtml(tldr.sectionMd) : null;
   const readingTimeMin = estimateReadingTime(bodyMd);
   // FAQ回答はプレーンテキストではなく markdown として描画する（太字/リンク等）。
   // schema用の生 answer は残しつつ、表示用 answerHtml を付与する。
@@ -922,7 +1048,19 @@ async function buildArticleFromRaw(raw: string, fallbackSlug: string): Promise<F
     })),
   );
   const ledeHtml = await renderInlineMarkdownToHtml(meta.lede);
-  return { ...meta, body: bodyHtml, ledeHtml, faqItems, toc, readingTimeMin, tldr, howto, itemList };
+  return {
+    ...meta,
+    body: bodyHtml,
+    ledeHtml,
+    faqItems,
+    toc,
+    readingTimeMin,
+    tldr: tldr.plain,
+    tldrHtml,
+    tldrHeading: tldr.heading,
+    howto,
+    itemList,
+  };
 }
 
 /**

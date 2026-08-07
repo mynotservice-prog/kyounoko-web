@@ -110,8 +110,13 @@ type ImgProps = {
   alt?: string;
   className?: string;
   style?: React.CSSProperties;
+  /**
+   * ファーストビューの主役画像（LCP要素）に付ける。lazy を外して優先取得させる。
+   * 既定は lazy のまま（カード一覧などページ内に大量に並ぶ用途がほとんどのため）。
+   */
+  priority?: boolean;
 };
-export function V2Img({ src, seed, alt = '', className, style }: ImgProps) {
+export function V2Img({ src, seed, alt = '', className, style, priority }: ImgProps) {
   const fallback = KK_PLACEHOLDER;
   const [actual, setActual] = React.useState(src || fallback);
   React.useEffect(() => {
@@ -121,7 +126,9 @@ export function V2Img({ src, seed, alt = '', className, style }: ImgProps) {
     <img
       src={actual}
       alt={alt}
-      loading="lazy"
+      loading={priority ? 'eager' : 'lazy'}
+      fetchPriority={priority ? 'high' : undefined}
+      decoding={priority ? 'sync' : 'async'}
       className={className}
       style={style}
       onError={() => setActual(fallback)}

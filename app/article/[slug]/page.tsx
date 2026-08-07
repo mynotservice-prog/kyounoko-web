@@ -13,6 +13,7 @@ import {
 } from '@/lib/articles';
 import { ShareBar } from '@/components/article/ShareBar';
 import { TableOfContents } from '@/components/article/TableOfContents';
+import { ArticleAccordionAnchors } from '@/components/article/ArticleAccordionAnchors';
 import { PRBadge, ProvidedBadge } from '@/components/affiliate/PRBadge';
 import { AffiliateLinkGroup } from '@/components/affiliate/AffiliateLinkGroup';
 import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
@@ -46,7 +47,6 @@ import { AdSlot } from '@/components/ads/AdSlot';
 import { getTagsForArticle } from '@/lib/tags';
 import { FavoriteButton } from '@/components/ui/FavoriteButton';
 import { TriedButton } from '@/components/ui/TriedButton';
-import { SpotList } from '@/components/common/SpotList';
 import { EditorialDisclosure } from '@/components/article/EditorialDisclosure';
 import { getExtraSchemasForArticle } from '@/lib/article-schema-enhancers';
 import { buildStationLinkForArticle } from '@/lib/article-station-link';
@@ -1134,11 +1134,20 @@ function FileArticleView({ article }: { article: FileArticle }) {
             return sup ? <SupervisorLabel supervisor={sup} /> : null;
           })()}
 
-          {/* 記事の要約（AI Overview 抽出を意識） */}
-          {article.tldr && (
+          {/* 記事の要約（AI Overview 抽出を意識）。
+              本文からは同じ結論セクションを取り除いてあるので、ここが唯一の掲載箇所。
+              箇条書き・太字・表を保つため tldrHtml（無ければプレーンテキスト）を描画する。 */}
+          {(article.tldrHtml || article.tldr) && (
             <aside className="tldr-box" aria-label="この記事のまとめ">
-              <span className="tldr-eyebrow">まとめ</span>
-              <p className="tldr-text">{article.tldr}</p>
+              <span className="tldr-eyebrow">{article.tldrHeading || 'まとめ'}</span>
+              {article.tldrHtml ? (
+                <div
+                  className="tldr-text prose"
+                  dangerouslySetInnerHTML={{ __html: article.tldrHtml }}
+                />
+              ) : (
+                <p className="tldr-text">{article.tldr}</p>
+              )}
             </aside>
           )}
 
@@ -1188,6 +1197,13 @@ function FileArticleView({ article }: { article: FileArticle }) {
             </section>
           )}
 
+          {/* 折りたたみブロック内の見出しへアンカー遷移したら開く */}
+          <ArticleAccordionAnchors />
+
+          {/* Mobile TOC。判定ボックスや早見表より前に置く。目次はナビゲーションなので、
+              長い表の下に埋もれていると「どこに何があるか」が分からないまま読み始めることになる。 */}
+          <TableOfContents items={article.toc} variant="mobile" />
+
           {/* 判定ボックス(子連れチェックリスト)の前出し。外出前の GO/NO-GO 判定を
               1画面目で完結させる(戦略§7)。チェーンDB掲載記事はDB駆動ボックス、
               それ以外はmdから抽出した表。該当が無い記事は何も出ない。 */}
@@ -1203,9 +1219,6 @@ function FileArticleView({ article }: { article: FileArticle }) {
 
           {/* 比較ハブ記事: チェーン別早見表(DB駆動)。frontmatter chainComparison 指定時のみ */}
           {comparisonKey && <ChainComparisonTable focus={comparisonKey} />}
-
-          {/* Mobile TOC */}
-          <TableOfContents items={article.toc} variant="mobile" />
 
           {/* ランキング・比較記事には景表法対応の評価基準開示 */}
           {(article.slug.includes('ranking') || article.slug.includes('hikaku') || article.title.includes('ランキング') || article.title.includes('比較')) && (
@@ -1263,14 +1276,10 @@ function FileArticleView({ article }: { article: FileArticle }) {
             <YouTubeSearchLink query={article.youtubeSearch} />
           )}
 
-          {/* エリア紐付き記事なら具体スポット一覧を提示 */}
-          {article.area && article.area !== 'all' && (
-            <SpotList
-              area={article.area}
-              age={article.quickInfo?.ageRanges?.[0] as '0-1' | '2-3' | '4-6' | undefined}
-              limit={6}
-            />
-          )}
+          {/* 旧: エリア紐付き記事の末尾に「◯◯県のおすすめスポット」(SpotList) を出していたが、
+              記事の話題と無関係な施設が並ぶだけだった（離乳食持ち込みチェーン店の記事に
+              上野動物園・葛西臨海水族園が出る等）。読む妨げになるので記事からは撤去。
+              エリアで探す導線は /spots・/area 側が担う。SpotList 自体は /plan/[id] で継続使用。 */}
 
           {/* P1-7: 本体ツール（1日プランナー /today）への明示送客。エリア引き継ぎ。
               全記事末尾に必須（横断ルール §5-3）。 */}

@@ -36,9 +36,13 @@ export function TableOfContents({ items, variant }: Props) {
   }
 
   if (variant === 'mobile') {
+    // 見出しが8個以上ある長い記事は開いた状態で出す。24見出し・30画面ぶんある記事で
+    // 目次が閉じていると、全体像が分からないまま読み始めることになるため。
+    // 開いたときの占有量は CSS 側（.toc-mobile[open] .toc-list）で半画面強に抑えている。
+    const defaultOpen = h2Items.length >= 8;
     return (
       <>
-        <details className="toc toc-mobile" id="toc-mobile-anchor">
+        <details className="toc toc-mobile" id="toc-mobile-anchor" open={defaultOpen}>
           <summary>
             <span className="toc-label">目次</span>
             <span className="toc-count">{h2Items.length}項目</span>

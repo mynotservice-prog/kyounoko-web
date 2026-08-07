@@ -25,9 +25,9 @@ export function SpotMap({
   return (
     <>
       <div className="v2-sec-head">
-        <div className="v2-sec-title">
+        <h2 className="v2-sec-title">
           <span className="v2-bar-accent"></span>地図・アクセス
-        </div>
+        </h2>
       </div>
       <div className="v2-section">
         <div

@@ -284,7 +284,7 @@ export default async function SpotPage({ params }: Props) {
         {/* オーバーレイヒーロー（2回目デザイン .v2-sd-hero） */}
         <div className="v2-sd-hero">
           <div className="v2-sd-hero-img">
-            <V2Img src={heroImg} seed={slug} alt={spot.name} />
+            <V2Img src={heroImg} seed={slug} alt={spot.name} priority />
             <div className="v2-sd-hero-grad"></div>
 
             {/* §5-1: 画像の種別/出典（実在施設のAI偽写真の誤認を防ぐ / UGC昇格時はクレジット） */}
@@ -430,9 +430,9 @@ export default async function SpotPage({ params }: Props) {
         {spot.facilities && (
           <>
             <div className="v2-sec-head">
-              <div className="v2-sec-title">
+              <h2 className="v2-sec-title">
                 <span className="v2-bar-accent"></span>設備・サービス
-              </div>
+              </h2>
             </div>
             <div className="v2-section">
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
@@ -495,9 +495,9 @@ export default async function SpotPage({ params }: Props) {
         {spot.pricing && Object.values(spot.pricing).some((v) => v) && (
           <>
             <div className="v2-sec-head">
-              <div className="v2-sec-title">
+              <h2 className="v2-sec-title">
                 <span className="v2-bar-accent"></span>料金詳細
-              </div>
+              </h2>
             </div>
             <div className="v2-section">
               <div
@@ -620,9 +620,9 @@ export default async function SpotPage({ params }: Props) {
         {enjoyByAgeBlocks.length > 0 && (
           <>
             <div className="v2-sec-head">
-              <div className="v2-sec-title">
+              <h2 className="v2-sec-title">
                 <span className="v2-bar-accent"></span>年齢別の楽しみ方
-              </div>
+              </h2>
             </div>
             <div className="v2-section" style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {enjoyByAgeBlocks.map((b, i) => (
@@ -716,9 +716,9 @@ export default async function SpotPage({ params }: Props) {
         {faqs.length > 0 && (
           <>
             <div className="v2-sec-head">
-              <div className="v2-sec-title">
+              <h2 className="v2-sec-title">
                 <span className="v2-bar-accent"></span>よくある質問
-              </div>
+              </h2>
             </div>
             <div className="v2-section" style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               {faqs.map((f, i) => (
@@ -772,9 +772,9 @@ export default async function SpotPage({ params }: Props) {
         {enrichedItems.length > 0 && (
           <>
             <div className="v2-sec-head" style={{ marginTop: 22 }}>
-              <div className="v2-sec-title">
+              <h2 className="v2-sec-title">
                 <span className="v2-bar-accent"></span>{spot.name}に持っていくと便利
-              </div>
+              </h2>
             </div>
             <div className="v2-section">
               <p style={{ fontSize: 12, color: 'var(--v2-ink-mute)', marginTop: 0, marginBottom: 12 }}>
