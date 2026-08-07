@@ -56,7 +56,7 @@ export default function AuthorNagamyPage() {
       '季節・行事の家庭での過ごし方',
     ],
     knowsLanguage: 'ja',
-    email: 'mailto:service@kyounoko.jp',
+    email: 'mailto:service@remegift.jp',
   };
   return (
     <>
@@ -132,7 +132,7 @@ export default function AuthorNagamyPage() {
                 <tr>
                   <td style={{ padding: '10px 0', fontWeight: 600 }}>連絡先</td>
                   <td>
-                    <a href="mailto:service@kyounoko.jp">service@kyounoko.jp</a>
+                    <a href="mailto:service@remegift.jp">service@remegift.jp</a>
                   </td>
                 </tr>
               </tbody>
@@ -207,7 +207,7 @@ export default function AuthorNagamyPage() {
             取材・寄稿・監修のご相談、内容の誤りのご指摘などは、下記までご連絡ください。
           </p>
           <ul>
-            <li>メール：<a href="mailto:service@kyounoko.jp">service@kyounoko.jp</a></li>
+            <li>メール：<a href="mailto:service@remegift.jp">service@remegift.jp</a></li>
             <li><Link href="/contact">お問い合わせフォーム</Link></li>
           </ul>
 

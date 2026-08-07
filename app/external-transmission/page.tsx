@@ -177,7 +177,7 @@ export default function ExternalTransmissionPage() {
 
           <h2>お問い合わせ窓口</h2>
           <ul>
-            <li>メール：<a href="mailto:service@kyounoko.jp">service@kyounoko.jp</a></li>
+            <li>メール：<a href="mailto:service@remegift.jp">service@remegift.jp</a></li>
             <li><Link href="/contact">お問い合わせ</Link></li>
           </ul>
 

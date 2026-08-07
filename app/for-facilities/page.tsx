@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/for-facilities' },
 };
 
-const MAIL = 'service@kyounoko.jp';
+const MAIL = 'service@remegift.jp';
 const MAIL_SUBJECT = encodeURIComponent('【写真提供】施設名：');
 const MAIL_BODY = encodeURIComponent(
   [
@@ -148,7 +148,15 @@ export default function ForFacilitiesPage() {
               0〜6歳のお子さまを育てるご家庭向けに「今日どこへ行こう？何をしよう？」の意思決定を助ける
               おでかけ・育児メディアです。運営方針は
               <Link href="/editorial-policy">編集ポリシー</Link>、運営者情報は
-              <Link href="/about">運営について</Link>をご覧ください。
+              <Link href="/about">運営者情報</Link>をご覧ください。
+            </p>
+
+            <h3>取材つきのタイアップ記事もお願いできますか？</h3>
+            <p>
+              はい。運営者が実際にお子さま連れで訪問し、写真つきで記事化するタイアップも承っています。
+              媒体データ・ご対応できるメニュー・PR表記の方針は
+              <Link href="/business">タイアップ・広告掲載のご案内</Link> に公開しています。
+              なお、このページでご案内している<strong>写真のご提供・情報更新は引き続き無料</strong>です。
             </p>
           </article>
         </div>
