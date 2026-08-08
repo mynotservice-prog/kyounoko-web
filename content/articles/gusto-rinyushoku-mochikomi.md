@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-07-31T00:00:00.000Z'
-updatedAt: '2026-07-31'
+updatedAt: '2026-08-08'
 hero: /img/scenes/baby-food-03.webp
 area: all
 quickInfo:
@@ -108,7 +108,7 @@ A. **公式に記載がありません。**公式ページに書かれている�
 
 ### Q. バーミヤンやジョナサンも同じ？
 
-A. **同じとは言えません。**ガストには公式の「お子さま連れ」ページがあり離乳食の持ち込みOKが明記されていますが、**バーミヤン・ジョナサンについては同種の公式ページを確認できませんでした**（2026年7月時点）。グループのFAQにも離乳食の項目はありません。両チェーンについては[バーミヤン](/article/bamiyan-rinyushoku-mochikomi)・[ジョナサン](/article/jonathan-rinyushoku-mochikomi)の記事を参照してください。
+A. **同じとは言えません。**ガストには公式の「お子さま連れ」ページがあり離乳食の持ち込みOKが明記されていますが、**バーミヤン・ジョナサンについては同種の公式ページを確認できませんでした**（2026年7月時点）。グループのFAQにも離乳食の項目はありません。両チェーンについては[バーミヤンの子連れ攻略](/article/bamiyan-kodzure-koryaku)・[ジョナサンの子連れ攻略](/article/jonathan-kodzure-koryaku)を参照してください。
 
 ### Q. キッズチェアとおむつ交換台はある？
 
@@ -134,5 +134,5 @@ A. **平日のモーニング時間帯**です。店員の手が空いていて�
 
 - [ガストの離乳食温め・持込はOK？子連れベビーカー入店・キッズメニュー・配膳ロボ実体験](/article/gusto-kodzure-koryaku)
 - [バーミヤンに離乳食は持ち込める？中華の取り分けが難しい理由](/article/bamiyan-rinyushoku-mochikomi)
-- [ジョナサンに離乳食は持ち込める？公式FAQを確認した結果](/article/jonathan-rinyushoku-mochikomi)
+- [ジョナサンの子連れ攻略（離乳食・ベビーチェア）](/article/jonathan-kodzure-koryaku)
 - [0歳育児完全マップ](/article/0sai-ikuji-kanzen-map)

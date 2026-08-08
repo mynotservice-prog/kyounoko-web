@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-07-31'
+updatedAt: '2026-08-08'
 hero: /img/scenes/indoor-play-01.webp
 area: tokyo
 quickInfo:
@@ -202,6 +202,7 @@ A. **東京スカイツリータウン地下に大型駐車場**あり。錦糸�
 
 ## 関連記事
 
+- [葛飾区の子連れ室内遊び場3選](/article/shitsunai-asobi-katsushika-tokyo)
 - [梅雨の室内遊び完全ガイド（0〜6歳）](/article/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026)
 - [0歳育児完全マップ](/article/0sai-ikuji-kanzen-map)
 - [1〜2歳育児完全マップ](/article/1-2sai-ikuji-kanzen-map)
