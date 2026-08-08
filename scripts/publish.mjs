@@ -471,6 +471,12 @@ async function kvPreflight(targets) {
       console.log(`   ${WARN} ${t.slug}: 変更前の md title を取得できず判定不能（本番: ${prodTitle}）`);
       continue;
     }
+    if (prodTitle && t.title && prodTitle.includes(t.title)) {
+      // 本番が「現在の md title」を既に配信している＝CLI公開→コミットの順で運用した直後の状態。
+      // KV上書きなら古いtitleが出続けるはずなので、これはKVではなく反映済みのサイン（2026-08-08実例:
+      // 先にpublishした記事をPRマージした後の再publishで、base(旧title)との不一致を誤検知して中断した）。
+      continue;
+    }
     if (prodTitle && !prodTitle.includes(t.baseTitle) && t.baseTitle !== t.title) {
       overridden.push(t.slug);
       console.log(`   ${NG} ${t.slug}: 本番title が変更前mdと不一致 → KV上書きの疑い`);

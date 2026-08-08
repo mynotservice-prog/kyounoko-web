@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-06-06'
+updatedAt: '2026-08-08'
 hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/sushiro-baby-chair-mra39mwz.jpg"
 area: all
 quickInfo:
@@ -27,7 +27,7 @@ legacyHero: /hero/food-japan-01.webp
 
 ## 結論
 
-**スシローはほぼ全店舗でベビーチェアを用意しており、1歳前後の腰すわり後から使いやすい木製ハイチェア（ベルトなし型）が中心です。**台数に限りがあるため、混雑時間帯は入店時にスタッフへ声かけしておくと確保しやすくなります。テーブル取り付け型は基本ありません。
+**スシローはほぼ全店舗でベビーチェアを用意しています。何ヶ月から使える？の答えは「腰すわり後の7〜8ヶ月ごろから」——ベルトなしの木製ハイチェアが中心で、座面低めのローチェアは1.5歳ごろからが目安です。**台数に限りがあるため、混雑時間帯は入店時にスタッフへ声かけしておくと確保しやすくなります。テーブル取り付け型は基本ありません。
 
 ## スシローのベビーチェア 詳細
 

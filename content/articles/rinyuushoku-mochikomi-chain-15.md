@@ -7,7 +7,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
-updatedAt: '2026-06-03'
+updatedAt: '2026-08-08'
 hero: /img/scenes/baby-food-01.webp
 quickInfo:
   ageRanges:
@@ -29,6 +29,8 @@ legacyHero: /hero-ai/kodzure-morning-cafe-10.webp
 ---
 
 **結論：すかいらーく系（ガスト・ジョナサン・サイゼリヤ・バーミヤン・しゃぶ葉・ココス）と和食系（やよい軒・丸亀製麺・大戸屋）、カフェ系（コメダ・ベローチェ・スタバ）の合計15チェーンで離乳食持ち込みは現実的にOKです。温めサービスは店舗差が大きいので、入店時に「離乳食の温めをお願いしたい」と先に伝えるのが最短ルート。**
+
+チェーン別の個別ガイド（公式確認・店舗運用の詳細）: [ガスト](/article/gusto-rinyushoku-mochikomi)／[サイゼリヤ](/article/saizeriya-rinyushoku-mochikomi)／[デニーズ](/article/dennys-rinyushoku-mochikomi)／[びっくりドンキー](/article/bikkuri-donkey-rinyushoku-mochikomi)／[はま寿司](/article/hamasushi-rinyushoku-mochikomi)／[丸亀製麺](/article/marukame-rinyushoku-mochikomi)
 
 ## TL;DR｜30秒でわかる答え
 

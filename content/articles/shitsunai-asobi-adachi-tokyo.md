@@ -7,7 +7,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-08-01'
+updatedAt: '2026-08-08'
 hero: /img/scenes/indoor-play-02.webp
 area: tokyo
 quickInfo:
@@ -119,6 +119,8 @@ A. ギャラクシティのこども未来創造館は入場無料なので、�
 
 ## 関連記事
 
+- [葛飾区の子連れ室内遊び場3選](/article/shitsunai-asobi-katsushika-tokyo)
+- [荒川区の子連れ室内遊び場3選](/article/shitsunai-asobi-arakawa-tokyo)
 - [北区の子連れ室内遊び場](/article/shitsunai-asobi-kita-tokyo)
 - [板橋区の子連れ室内遊び場](/article/shitsunai-asobi-itabashi-tokyo)
 - [梅雨の室内遊び完全ガイド 0-6歳](/article/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026)

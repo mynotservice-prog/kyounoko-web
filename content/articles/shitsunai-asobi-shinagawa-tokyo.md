@@ -1,12 +1,12 @@
 ---
 slug: shitsunai-asobi-shinagawa-tokyo
-title: 品川区の子供の室内遊び場8選｜児童館・キッズスペース・有料施設【2026年版】
+title: 品川区の子連れ室内遊び場8選｜児童センター25館としながわ水族館の使い分け【2026】
 metaDescription: >-
   品川区で子供（0〜6歳）と室内で遊べるスポット8選。区内に児童センターが25館あり0歳〜18歳と保護者が無料（9:00〜18:00・日曜祝日は原則休館で8館のみ開館事業）。しながわ水族館は3歳以下無料・毎週火曜休館・調乳用温水器なし。大井町・武蔵小山・八潮の実データで2026年版に整理しました。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-07-31'
+updatedAt: '2026-08-08'
 hero: /img/scenes/indoor-play-05.webp
 area: tokyo
 quickInfo:

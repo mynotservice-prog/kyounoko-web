@@ -1,12 +1,12 @@
 ---
 slug: shitsunai-asobi-setagaya-tokyo
-title: 世田谷区の子供の室内遊び場8選｜児童館・キッズスペース・有料施設【2026年版】
+title: 世田谷区の子連れ室内遊び場8選｜二子玉川中心・ほぼ無料で回せる【2026年版】
 metaDescription: >-
   世田谷区で子供（0〜6歳）と室内で遊べるスポット8選。二子玉川の無料ベビールーム8か所（ライズ5＋玉川髙島屋3）を階数と設備つきで一覧化。主役はライズ タウンフロント4階——おむつ替えシート6台・調乳機・キッズスペース、窓から電車が見えます。ボーネルンド二子玉川は2025年に閉店済みです。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-07-31'
+updatedAt: '2026-08-08'
 hero: /img/scenes/indoor-play-05.webp
 area: tokyo
 quickInfo:

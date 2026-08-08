@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-07-31'
+updatedAt: '2026-08-08'
 hero: /img/scenes/indoor-play-01.webp
 area: tokyo
 quickInfo:
@@ -195,6 +195,7 @@ A. 児童館は基本駐車場なし。**上野公園内には有料駐車場あ
 
 ## 関連記事
 
+- [荒川区の子連れ室内遊び場3選](/article/shitsunai-asobi-arakawa-tokyo)
 - [千代田区の室内遊び場と東京駅・日比谷のベビールーム](/article/shitsunai-asobi-chiyoda-tokyo)
 - [梅雨の室内遊び完全ガイド（0〜6歳）](/article/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026)
 - [0歳育児完全マップ](/article/0sai-ikuji-kanzen-map)
