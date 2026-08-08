@@ -517,10 +517,11 @@ async function flattenOverrides(slugs) {
 // ───────────────────── 4. ビルド ─────────────────────
 function runVercelBuild() {
   console.log('');
-  console.log('▶ ビルド強制: vercel --prod --force --yes');
+  console.log('▶ ビルド強制: vercel --prod --force --yes --archive=tgz');
   console.log('  （--force で ignoreCommand=scripts/vercel-ignore-build.sh を回避する。');
-  console.log('    これをしないと md 単独変更は SKIP BUILD され「マージ成功＝反映」と誤認する）');
-  const r = spawnSync('vercel', ['--prod', '--force', '--yes'], {
+  console.log('    これをしないと md 単独変更は SKIP BUILD され「マージ成功＝反映」と誤認する。');
+  console.log('    --archive=tgz はファイル数28,000超がCLI上限15,000を超えるため必須）');
+  const r = spawnSync('vercel', ['--prod', '--force', '--yes', '--archive=tgz'], {
     cwd: ROOT,
     encoding: 'utf8',
     stdio: ['ignore', 'pipe', 'pipe'],

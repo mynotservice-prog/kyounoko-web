@@ -7,7 +7,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-06-18T00:00:00.000Z'
-updatedAt: '2026-07-24'
+updatedAt: '2026-08-08'
 hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/sushiro-kids-menu-mra0qvra.jpg"
 area: all
 quickInfo:
@@ -34,6 +34,8 @@ legacyHero: /hero/food-japan-01.webp
 - うどん・ラーメン・茶碗蒸し・コーン・フライドポテト・ジュース・**デザート**が選べる
 - 取り分けは**たまご・かっぱ巻き・納豆巻き・シャリ少なめにぎり**（わさび抜き）が定番
 - うどんは**出汁を薄めれば1歳半ごろから**取り分けやすい主食に
+- **1歳ごろ**は、たまご・コーン・茶碗蒸し（冷まして）の取り分けから。うどんは出汁を薄めて**1歳半ごろから**が目安
+- **赤ちゃん（離乳食期）向けメニューはなし**。離乳食の持ち込み可否・ベビーチェア事情は[スシローの子連れ攻略](/article/sushiro-kodzure-koryaku)で解説
 - アレルゲンは**公式アプリ・タッチパネルの検索**で事前確認できる
 - ベビーチェア・広いボックス席・タッチパネル注文で子連れ利用が多い
 
