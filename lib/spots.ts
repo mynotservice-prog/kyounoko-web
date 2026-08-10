@@ -913,6 +913,88 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       summerCool: true,
     },
     {
+      name: '有明ガーデン', category: 'indoor', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '江東区', ward: '江東区', note: '4Fの無料キッズスペースと5Fの噴水で、買物ついでに半日遊べる', budget: 'free',
+      images: ['/photos/spot-ariake-garden-kids-ariake-2026-08.webp', '/photos/spot-ariake-garden-mizu-no-terrace-2026-08.webp', '/photos/spot-ariake-garden-bornelund-2026-08.webp'],
+      imageKind: '実写',
+      imageCredit: '実写（2026年8月・運営者撮影／一部の写真は人物を除去）',
+      nearestStation: 'ariake',
+      walkMinutes: 4,
+      officialUrl: 'https://www.shopping-sumitomo-rd.com/ariake/',
+      pricing: { adult: '無料（入館）', elementary: '無料', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'mid', holiday: 'high' },
+      hiddenTip: '4Fの「キッズ有明ガーデン」（0〜6歳・無料）は平日フリー入場、土日祝は30分毎の完全入替制。平日午前が一番ラク',
+      nearby: '有料でしっかり遊ぶなら同じ4Fの「ボーネルンド あそびのせかい 有明ガーデン店」。5Fフードコートに子連れ優先エリアあり',
+      waterPlay: true,
+      freeWaterPlay: true,
+      summerCool: true,
+      relatedArticleSlugs: ['shitsunai-asobi-koto-tokyo', 'mizuasobi-koto-tokyo'],
+      accessTips: '最短はゆりかもめ「有明テニスの森」駅から徒歩3分（約210m）。ゆりかもめ「有明」駅から徒歩4分、りんかい線「国際展示場」駅から徒歩6分で、2路線3駅から歩ける（公式アクセス）。',
+      crowdTips: '平日はキッズ有明ガーデンがフリー入場なので一番ラク。土日祝は30分毎の完全入替制で、当日10:00から受付で整理券を配る（1枠あたりおとな・こども合わせて最大75名、整理券は1組1枚）。夏休みなどの繁忙期は平日も時間帯によって整理券制に切り替わることがあるので、公式のお知らせを見てから出るのが安全。',
+      faq: [
+        {
+          q: 'キッズ有明ガーデンは予約が必要？料金は？',
+          a: '事前予約は不要で、利用は無料です。平日は10:00〜20:30のフリー入場、土日祝は10:30〜20:30（最終受付20:00）の30分毎の完全入替制で、当日10:00から受付で整理券を発行します。対象は0〜6歳で、7歳以上の利用はできません。18歳以上の保護者の同伴が必須です。（公式のお知らせより）',
+        },
+        {
+          q: '5Fの噴水はいつ出ている？着替えはどこでする？',
+          a: 'モール5F「水のテラス」のぴょんぴょん噴水は毎日10:00〜23:00に放出され、10:00〜18:00は30分おきに噴水ショーがあります。ただし公式に「館内に着替えスペースのご用意はございません」と明記されているので、濡れる前提なら着替えとタオルは持参してください。冬季など床面が凍結する時期は運転を停止することがあります。',
+        },
+        {
+          q: '授乳室・おむつ替えはある？',
+          a: '4Fと5FのFエレベーター横に赤ちゃん休憩室があります。おむつ交換台4台、着替え台1台、授乳コーナー5室、お食事スペース、シンク、電子レンジ、ミルク用給湯器を備えています。対応時間は4Fが10:00〜21:00、5Fが10:00〜23:00。こども用トイレも同じく4F・5FのFエレベーター横です。（公式の施設案内より）',
+        },
+        {
+          q: 'ベビーカーは借りられる？',
+          a: '2Fインフォメーション横でベビーカーシェアリング「Share Buggy」を5台貸し出しています（専用アプリでの申込・決済が必要、1時間220円／3時間550円／6時間880円、生後1ヶ月〜48ヶ月）。このほか1F・2F・5Fにセルフ式のベビーカー置き場があり、100円硬貨のコインキーロック式（返却時に100円は戻ります／生後4ヶ月〜48ヶ月・館内のみ）です。',
+        },
+        {
+          q: '営業時間は？',
+          a: 'ショッピング・サービスが全日10:00〜21:00、レストラン・カフェが全日11:00〜23:00です（一部店舗で異なります）。同じ4Fの「ボーネルンド あそびのせかい 有明ガーデン店」のあそび場は10:00〜19:00（最終入場18:30）で、こちらは有料かつ事前のアカウント登録が必要です。',
+        },
+      ],
+    },
+    {
+      name: '大井町トラックス（OIMACHI TRACKS）', category: 'indoor', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '品川区', ward: '品川区', note: '大井町駅直結。山手線の車両基地を見下ろせる広場と、4,600㎡の芝生が子連れ向き', budget: 'free',
+      images: ['/photos/spot-oimachi-tracks-train-view-2026-05.webp', '/photos/spot-oimachi-tracks-gaikan-2026-05.webp', '/photos/spot-oimachi-tracks-shiogamako-sushi-2026-05.webp'],
+      imageKind: '実写',
+      imageCredit: '実写（2026年5月・運営者撮影／一部の写真は人物を除去）',
+      nearestStation: 'oimachi',
+      walkMinutes: 1,
+      officialUrl: 'https://www.oimachi-tracks.com/',
+      pricing: { adult: '無料（入館）', elementary: '無料', preschool: '無料', infant: '無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'mid', holiday: 'high' },
+      hiddenTip: '「STATION PLAZA」から山手線の車両基地が一望できる。電車好きの子はここだけで長く持つうえ、広場なので無料',
+      nearby: '「TRACKS PARK」は4,600㎡で大きな芝生あり。テイクアウトを買って芝生で休むのが一番ラク',
+      summerCool: true,
+      relatedArticleSlugs: ['tokyo-shinagawa-ooimachi-weekend', 'shitsunai-asobi-shinagawa-tokyo'],
+      accessTips: 'JR大井町駅から直結で、京浜東北線は「トラックス口」または西口、東急大井町線は東急線改札口、りんかい線はりんかい線改札が最寄り。雨でもほとんど濡れずに入れる一方、施設が立体的なのでエレベーターの位置は先に把握しておくと動きやすい。',
+      crowdTips: '2026年3月28日開業で、開業直後は施設全体がかなり混んでいた（平日11:30のシズラーで6組待ち・約30分待ちの実績）。開業から時間が経った今は落ち着いてきている。屋外の「TRACKS PARK」は5:30〜24:30と開放時間が長いので、館内が混む昼どきは芝生に逃げるのが有効。',
+      faq: [
+        {
+          q: '子連れで一番のおすすめは？お金はかかる？',
+          a: '入館は無料です。大井町駅直結の「STATION PLAZA」から北側に広がる山手線の車両基地とスカイラインが見渡せて、電車好きの子はここだけでかなり持ちます。もうひとつが4,600㎡の「TRACKS PARK」で、大きな芝生と桜などの植栽、カフェ・レストランがあります。どちらも屋外の広場で無料です。（公式「広場・屋外を楽しむ」より）',
+        },
+        {
+          q: 'ベビー休憩室・授乳室はどこ？',
+          a: '1F（TRACKS PARK 建物内／5:30〜24:30）、2F（TRACKS STREET-WEST 通路脇／7:00〜23:00）、3F（フードコート「WELLSIDE TABLE」内／平日8:00〜21:00・土日祝10:00〜21:00）の3か所です。おむつ替え台・調乳専用給湯器・授乳室を備えています。お子さま連れならどなたでも入室でき、授乳室は女性とお子さまに限られ施錠できます。多目的トイレ（1F・2F・3F×2・4F）にもおむつ替え台とベビーチェアがあります。（公式インフォメーションより）',
+        },
+        {
+          q: 'キッズメニューのあるお店は？',
+          a: '公式が8店を案内しています。1F「ピチピチミートで山本のハンバーグ」、2F「Soup Stock Tokyo」「どうとんぼり神座」、3F「そば道」「シズラー」「玉」「鰹水・肉汁つけうどん凜」、4F「銭場精肉店」です。3Fにはフードコート「WELLSIDE TABLE」もあります。',
+        },
+        {
+          q: '芝生でボール遊びはできる？',
+          a: 'できません。敷地内はボール遊び・スケートボード・ラジコン、自転車やバイクの乗り入れ、植栽内への立ち入りが禁止されています。芝生は走り回るというより、レジャーシートを敷いて座って過ごす使い方が向いています。（公式「まちをご利用のみなさまへ」より）',
+        },
+        {
+          q: '車で行ける？駐車場は？',
+          a: 'P1（287台）・P2（93台）の駐車場が24時間営業で、通常30分300円です。ショップ＆レストランで税込2,000円以上の買物で1時間、4,000円以上で2時間、10,000円以上で3時間のサービスがあります（複数店舗の合算可・TOHOシネマズ大井町ほか一部対象外）。バリアフリー駐車場はP1地下2階に2車室、P1・1階に1車室、P2地下1階に1車室です。',
+        },
+      ],
+    },
+    {
       name: 'グランベリーパーク（南町田）', category: 'indoor', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '町田市', note: 'スヌーピーミュージアム併設、屋外型モール', budget: 'low',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
@@ -1029,7 +1111,13 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       },
     },
     {
-      name: 'ファンタジーキッズリゾート お台場', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '江東区', ward: '江東区', note: 'ふわふわ遊具・砂遊び・乗り物が揃う', budget: 'mid',
+      // お台場店は閉店済み（lib/spot-closed.ts）。この枠は spot-overrides.json の
+      // `-n26s` で「ファンタジーキッズリゾート 武蔵村山（武蔵村山市）」に差し替えている。
+      // ward は override 層では消せない（空文字＝override自体の削除／マージは spread）ため、
+      // ここで持たないのが正。これで merge 後は ward=undefined → city='武蔵村山市' に落ちる。
+      // ※ city は slug のハッシュ入力（spotToSlug の `ward ?? city`）。ここを '武蔵村山市' に
+      //   直すと slug が -n26s から変わり、override が外れて URL も切れる。触らないこと。
+      name: 'ファンタジーキッズリゾート お台場', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '江東区', note: 'ふわふわ遊具・砂遊び・乗り物が揃う', budget: 'mid',
       pricing: { adult: '1,200〜1,800円', preschool: '1,200〜1,800円（6ヶ月〜）', infant: '無料（6ヶ月未満）' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'high' },

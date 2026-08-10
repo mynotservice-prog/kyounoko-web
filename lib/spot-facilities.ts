@@ -36,6 +36,8 @@ export const SPOT_FACILITIES: Record<string, Facilities> = {
   '駒沢オリンピック公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'no', note: '東京都公式「だれでも東京」に車椅子対応トイレ6・おむつ交換台6・授乳室（サービスセンター）の記載。ベビーカー貸出なし。' },
   '小金井公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'no', note: '「だれでも東京」に車椅子対応トイレ13・オストメイト7・おむつ交換台11・授乳室の記載。ベビーカー貸出なし。' },
   '木場公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'no', note: '「だれでも東京」に車椅子対応トイレ7・おむつ交換台5・授乳室の記載。屋内キッズスペース「木場キッズリアム」あり。ベビーカー貸出なし。' },
+  '大井町トラックス（OIMACHI TRACKS）': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', note: '公式インフォメーション／「小さなお子さまと楽しむ」にベビー休憩室3か所（1F TRACKS PARK建物内・2F TRACKS STREET-WEST通路脇・3Fフードコート「WELLSIDE TABLE」内／おむつ替え台・調乳専用給湯器・授乳室）、多目的トイレ5か所（1F・2F・3F×2・4F／車いす可・オストメイト・おむつ替え台・ベビーチェア）の記載。授乳室は女性とお子さまのみ入室可で施錠できる。ベビーカー貸出とキッズスペースは公式に記載がないため未確認。' },
+  '有明ガーデン': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式「お子様をお連れのお客様へ」に4F・5FのFエレベーター横の赤ちゃん休憩室（おむつ交換台4台・着替え台1台・授乳コーナー5室・ミルク用給湯器・電子レンジ・シンク）、同じ場所のこども用トイレ、車イス対応トイレの記載。ベビーカーは2Fインフォメーション横のシェアリング「Share Buggy」5台（有料）と、1F・2F・5Fのセルフ式（100円コインキーロック式・返却時返金）。4Fに無料の屋内キッズスペース「キッズ有明ガーデン」（0〜6歳）。' },
   '石神井公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'no', note: '「だれでも東京」に車椅子対応トイレ8・おむつ交換台8。公式施設ページにサービスセンターの赤ちゃん・ふらっと（授乳スペース）の記載。ベビーカー貸出なし。' },
   '野川公園': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'no', note: '「だれでも東京」に車椅子対応トイレ6・おむつ交換台7・授乳室の記載。サービスセンターは赤ちゃん・ふらっと登録。ベビーカー貸出なし。' },
   '武蔵野公園': { bathroom: 'yes', nursingRoom: 'yes', note: 'むさしのの都立公園公式バリアフリー一覧に車椅子使用者用便房・授乳室・赤ちゃん・ふらっとの記載。' },
