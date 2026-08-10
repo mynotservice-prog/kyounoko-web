@@ -20,6 +20,7 @@ import {
   type IndieRestaurant,
   type IndieGenre,
 } from '@/lib/indie-restaurants';
+import { getStationOverride } from '@/lib/station-overrides';
 import { getSpotsByNearestStation, SPOT_CATEGORY_LABEL } from '@/lib/spots';
 import {
   STATION_CONDITIONS,
@@ -59,8 +60,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
   const wardName = station.regionLabel;
-  const title = `${station.name}駅 子連れランチおすすめ｜ベビーカーOK・キッズメニュー店ガイド【${wardName}】`;
-  const description = `${station.name}駅周辺で子連れOK・ベビーカー入店OKのファミレス・カフェ・チェーン店に加え、雑誌やSNSで話題の個人店・人気店も厳選。キッズメニュー・キッズチェア・個室・離乳食持込可など子連れ目線で全項目チェック。${wardName}で子どもとランチ・カフェに困らない実用ガイド。`;
+  // 検索語と面名のズレをGSCで個別に立証できた駅だけ、title/description を上書きする。
+  // 詳細と運用ルールは lib/station-overrides.ts のコメントを参照。
+  const seoOverride = getStationOverride(slug)?.seo;
+  const title =
+    seoOverride?.title ??
+    `${station.name}駅 子連れランチおすすめ｜ベビーカーOK・キッズメニュー店ガイド【${wardName}】`;
+  const description =
+    seoOverride?.description ??
+    `${station.name}駅周辺で子連れOK・ベビーカー入店OKのファミレス・カフェ・チェーン店に加え、雑誌やSNSで話題の個人店・人気店も厳選。キッズメニュー・キッズチェア・個室・離乳食持込可など子連れ目線で全項目チェック。${wardName}で子どもとランチ・カフェに困らない実用ガイド。`;
   return {
     title,
     description,
@@ -97,6 +105,8 @@ export default async function StationPage({ params }: Props) {
 
   // 個人店（チェーン以外の話題店・人気店）
   const indies = getIndieRestaurantsByStation(slug);
+  // 駅ごとの例外的な上書き（見出し文言・一次情報メモ）。未登録の駅は undefined。
+  const override = getStationOverride(slug);
   // 駅から徒歩15分以内のおでかけスポット（公園・水族館・屋内遊び場等）
   const nearbySpots = getSpotsByNearestStation(slug, { maxWalkMinutes: 15, limit: 8 });
 
@@ -198,16 +208,20 @@ export default async function StationPage({ params }: Props) {
           <header className="page-head">
             <span className="eyebrow">{wardName} · {station.lines[0]}沿線</span>
             <h1>
-              {station.name}駅 子連れランチおすすめ
+              {override?.hero?.h1 ?? `${station.name}駅 子連れランチおすすめ`}
               <small style={{ display: 'block', fontSize: '0.5em', fontWeight: 400, color: 'var(--ink-sub)', marginTop: 8 }}>
-                ベビーカーOK・キッズメニュー・個室あり店ガイド
+                {override?.hero?.sub ?? 'ベビーカーOK・キッズメニュー・個室あり店ガイド'}
               </small>
             </h1>
             <p className="lead">
-              {station.name}駅から徒歩5〜10分圏内にある、子連れOKのファミレス・カフェ・チェーン店に加え、
-              雑誌やSNSで話題の<strong>個人店・人気店</strong>も厳選してご紹介。
-              ベビーカー入店可否、キッズメニュー、キッズチェア、個室、離乳食持込OKまで全項目チェックしました。
-              {wardName}で子連れランチ場所に迷ったらまずココから。
+              {override?.hero?.lead ?? (
+                <>
+                  {station.name}駅から徒歩5〜10分圏内にある、子連れOKのファミレス・カフェ・チェーン店に加え、
+                  雑誌やSNSで話題の<strong>個人店・人気店</strong>も厳選してご紹介。
+                  ベビーカー入店可否、キッズメニュー、キッズチェア、個室、離乳食持込OKまで全項目チェックしました。
+                  {wardName}で子連れランチ場所に迷ったらまずココから。
+                </>
+              )}
             </p>
 
             <div className="station-summary" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 20 }}>
@@ -364,7 +378,7 @@ export default async function StationPage({ params }: Props) {
             const firstBaby = chains.filter(c => c.stroller === 'good' && c.babyChair && c.babyFoodOk).slice(0, 4);
             const treat = [
               ...chains.filter(c => c.privateRoom && (c.lunchPrice === '〜2,500' || c.lunchPrice === '〜4,000' || c.lunchPrice === '4,000〜')),
-              ...indies.filter(r => r.privateRoom && (r.priceLunch === '〜3,500円' || r.priceLunch === '〜5,000円' || r.priceLunch === '5,000円〜')).map(r => ({ name: r.name, lunchPrice: r.priceLunch.replace(/円$/, '').replace(/〜/, '〜'), _indie: true } as { name: string; lunchPrice: string; _indie?: boolean })),
+              ...indies.filter(r => r.privateRoom && (r.priceLunch === '〜3,500円' || r.priceLunch === '〜5,000円' || r.priceLunch === '5,000円〜')).map(r => ({ name: r.name, lunchPrice: (r.priceLunch ?? '').replace(/円$/, '').replace(/〜/, '〜'), _indie: true } as { name: string; lunchPrice: string; _indie?: boolean })),
             ].slice(0, 4);
             const rainy = chains.filter(c => c.category === 'mall-food' || c.category === 'family-restaurant' || c.category === 'cafe').filter(c => c.stroller !== 'limited').slice(0, 4);
             const cheap = chains.filter(c => c.lunchPrice === '〜800').slice(0, 4);
@@ -413,6 +427,31 @@ export default async function StationPage({ params }: Props) {
             );
           })()}
 
+          {/* ===== 駅ごとの一次情報メモ =====
+              公式サイトの生HTMLで確認できた事実だけを載せる。登録のある駅のみ表示。 */}
+          {override?.facilityNote && (
+            <section id="section-facility-note" style={{
+              margin: '40px 0',
+              padding: '20px 24px',
+              background: 'rgba(201,96,62,0.05)',
+              border: '1px solid rgba(201,96,62,0.20)',
+              borderRadius: 12,
+              scrollMarginTop: 80,
+            }}>
+              <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 12 }}>
+                {override.facilityNote.heading}
+              </h2>
+              <ul style={{ paddingLeft: 20, margin: 0, lineHeight: 1.85, fontSize: 14, color: 'var(--ink-sub)' }}>
+                {override.facilityNote.items.map((item) => (
+                  <li key={item} style={{ marginBottom: 6 }}>{item}</li>
+                ))}
+              </ul>
+              <p style={{ margin: '12px 0 0', fontSize: 11.5, color: 'var(--ink-mute)', lineHeight: 1.7 }}>
+                出典: {override.facilityNote.source}
+              </p>
+            </section>
+          )}
+
           {/* ===== サイトならでは: 駅の使い方Tips ===== */}
           <section id="section-tips" style={{
             margin: '40px 0',
@@ -449,7 +488,7 @@ export default async function StationPage({ params }: Props) {
                 desc: 'ベビーカーのまま余裕を持って入れる店。狭い通路で気を遣うストレスなし',
                 items: [
                   ...chains.filter(c => c.stroller === 'good').map(c => ({ name: c.name, price: `${c.lunchPrice}円`, type: 'チェーン' })),
-                  ...indies.filter(r => r.strollerOk).map(r => ({ name: r.name, price: r.priceLunch, type: '個人店' })),
+                  ...indies.filter(r => r.strollerOk).map(r => ({ name: r.name, price: r.priceLunch ?? '', type: '個人店' })),
                 ],
               },
               {
@@ -459,7 +498,7 @@ export default async function StationPage({ params }: Props) {
                 desc: 'お子様メニューがある店。取り分け不要で偏食気味の子も安心',
                 items: [
                   ...chains.filter(c => c.kidsMenu).map(c => ({ name: c.name, price: `${c.lunchPrice}円`, type: 'チェーン' })),
-                  ...indies.filter(r => r.kidsMenu).map(r => ({ name: r.name, price: r.priceLunch, type: '個人店' })),
+                  ...indies.filter(r => r.kidsMenu).map(r => ({ name: r.name, price: r.priceLunch ?? '', type: '個人店' })),
                 ],
               },
               {
@@ -469,7 +508,7 @@ export default async function StationPage({ params }: Props) {
                 desc: '個室・座敷・半個室で気兼ねなく食事できる店',
                 items: [
                   ...chains.filter(c => c.privateRoom).map(c => ({ name: c.name, price: `${c.lunchPrice}円`, type: 'チェーン' })),
-                  ...indies.filter(r => r.privateRoom).map(r => ({ name: r.name, price: r.priceLunch, type: '個人店' })),
+                  ...indies.filter(r => r.privateRoom).map(r => ({ name: r.name, price: r.priceLunch ?? '', type: '個人店' })),
                 ],
               },
               {
@@ -587,13 +626,19 @@ export default async function StationPage({ params }: Props) {
               scrollMarginTop: 80,
             }}>
               <header style={{ marginBottom: 24 }}>
-                <span className="eyebrow" style={{ color: 'var(--clay-deep)' }}>チェーンじゃない、ローカルの実力店</span>
+                <span className="eyebrow" style={{ color: 'var(--clay-deep)' }}>
+                  {override?.indieLabels?.eyebrow ?? 'チェーンじゃない、ローカルの実力店'}
+                </span>
                 <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 24, marginTop: 6, marginBottom: 8 }}>
-                  {station.name}駅の個人店・話題店 <span style={{ fontSize: 14, color: 'var(--ink-mute)', fontWeight: 400 }}>{indies.length}店</span>
+                  {override?.indieLabels?.heading ?? `${station.name}駅の個人店・話題店`} <span style={{ fontSize: 14, color: 'var(--ink-mute)', fontWeight: 400 }}>{indies.length}店</span>
                 </h2>
                 <p style={{ fontSize: 14, color: 'var(--ink-sub)', lineHeight: 1.7, margin: 0 }}>
-                  雑誌・TV・SNSで取り上げられた{station.name}エリアの実力店から、子連れで利用しやすい店舗を厳選。
-                  チェーン店だけでなく、ご当地ならではの一軒で家族の食事をワンランク豊かに。
+                  {override?.indieLabels?.lead ?? (
+                    <>
+                      雑誌・TV・SNSで取り上げられた{station.name}エリアの実力店から、子連れで利用しやすい店舗を厳選。
+                      チェーン店だけでなく、ご当地ならではの一軒で家族の食事をワンランク豊かに。
+                    </>
+                  )}
                   <small style={{ display: 'block', marginTop: 6, fontSize: 12, color: 'var(--ink-mute)' }}>
                     ※ 設備情報は公式・取材情報ベース。お子様連れ利用は店舗への事前確認をおすすめします。
                   </small>
@@ -621,7 +666,7 @@ export default async function StationPage({ params }: Props) {
                               background: '#FFEBEE', color: '#C62828', fontWeight: 500,
                             }}>話題店</span>}
                           </h4>
-                          <span style={{ fontSize: 12, color: 'var(--ink-mute)' }}>ランチ {r.priceLunch}</span>
+                          {r.priceLunch && <span style={{ fontSize: 12, color: 'var(--ink-mute)' }}>ランチ {r.priceLunch}</span>}
                         </header>
                         <div style={{ fontSize: 12, color: 'var(--ink-mute)', marginBottom: 8 }}>{r.area}</div>
                         <p style={{ fontSize: 13.5, color: 'var(--ink-sub)', lineHeight: 1.75, margin: '0 0 10px' }}>
