@@ -381,44 +381,261 @@ export const CHUNK_40A: StationIndieMap = {
 
   // ===========================================================
   // 越谷レイクタウン駅（越谷市・イオンレイクタウン最寄り）
+  //
+  // 【一次情報の取得日と出典 — 2026-08-10】
+  //  - イオンレイクタウンkaze 公式ショップリスト（全214件）および各店舗詳細ページ
+  //      https://laketownkaze-aeonmall.com/shop/lists/ （page:1〜5）
+  //      https://laketownkaze-aeonmall.com/shop/detail/<id>
+  //    → 「キッズメニューあり」「ベビーシートあり」「席数」「営業時間」は
+  //      この公式ページに明記されている表記をそのまま採用している。
+  //  - イオンレイクタウンmori 公式ショップリスト（全305件）／各店舗詳細ページ／子育て応援ぺーじ
+  //      https://www.aeon-laketown.jp/mori/shop/
+  //      https://www.aeon-laketown.jp/mori/shop/store/food-foo_<id>.html
+  //      https://www.aeon-laketown.jp/mori/special/child-care-support/
+  //  - カフェバナーノ（運営＝ポラス）公式 https://www.polus.co.jp/caffe-banano/
+  //
+  // 【方針】
+  //  - 掲載は上記公式テナント一覧に**現に載っている店のみ**。
+  //    2026-08-10 の確認で kaze 公式一覧に存在しなかった「さんるーむ レイクタウン店」は削除した
+  //    （3F DINING TERRACE は [350]〜[367] まで全区画を確認し、該当なし）。
+  //  - kidsMenu / kidsChair は公式表記がある店だけ true。推測で埋めない。
+  //  - ベビーカー入店可否・授乳室・おむつ替え・離乳食持込は、mori・kaze 両公式の
+  //    店舗ページに記載がないため **どの店にも設定しない**（館の設備を店の設備として
+  //    書かない）。館単位の確認済み事実は lib/station-overrides.ts に分離した。
+  //  - priceLunch は公式に金額の記載がある店だけ設定する。
+  //  - 筆者は現地を訪問していない。体験としての記述は一切書かない。
   // ===========================================================
   'koshigaya-laketown': [
+    // ---- イオンレイクタウン kaze / 3F DINING TERRACE ----
     {
-      name: 'Caffe Banano 越谷レイクタウン駅前店',
-      genre: 'cafe',
-      area: '越谷レイクタウン駅ロータリー内',
+      name: 'クア・アイナ イオンレイクタウンkaze店',
+      genre: 'yoshoku',
+      area: '越谷レイクタウン駅直結（kaze 3F [351] DINING TERRACE）',
       description:
-        '駅前ロータリー内のカフェ。くま型デザインのパンケーキが看板で、見た目が可愛く子どもにも人気。駅近でベビーカーアクセスもしやすく、家族の休憩スポットに便利。',
-      strollerOk: true,
+        'ハワイ発のグルメハンバーガー店。kaze公式の店舗情報に「キッズメニューあり」「ベビーシートあり」と明記。席数103席。平日11:00〜22:00、土日祝は10:30開店。',
+      kidsMenu: true,
+      kidsChair: true,
       seatingType: ['table'],
-      stepFree: true,
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
     },
     {
-      name: '花粥（ホアジョウ）イオンレイクタウンmori店',
-      genre: 'chinese',
-      area: '越谷レイクタウン駅直結（イオンレイクタウンmori 1F）',
+      name: '洋麺屋五右衛門 イオンレイクタウンkaze店',
+      genre: 'italian',
+      area: '越谷レイクタウン駅直結（kaze 3F [362] DINING TERRACE）',
       description:
-        '点心と台湾粥の専門店。お粥は毎日生米から炊き上げ、お子様ワンタン麺セットなど子ども向けメニューも用意。優しい味で離乳食後期から取り分けしやすい。',
+        '箸で食べるスパゲッティーの専門店。kaze公式の店舗情報に「キッズメニューあり」「ベビーシートあり」と明記。席数45席、11:00〜22:00（L.O.21:00）。',
+      kidsMenu: true,
+      kidsChair: true,
+      seatingType: ['table'],
+    },
+    {
+      name: 'エッグエッグキッチン イオンレイクタウンkaze店',
+      genre: 'yoshoku',
+      area: '越谷レイクタウン駅直結（kaze 3F [356] DINING TERRACE）',
+      description:
+        'オムライスとパスタの洋食店。kaze公式の店舗情報に「キッズメニューあり」「ベビーシートあり」と明記。88席と広く、土日祝は10:30から開いている。',
+      kidsMenu: true,
+      kidsChair: true,
+      seatingType: ['table'],
+    },
+    {
+      name: '和食飛賀屋 イオンレイクタウンkaze店',
+      genre: 'washoku',
+      area: '越谷レイクタウン駅直結（kaze 3F [367] DINING TERRACE）',
+      description:
+        '定食・御膳が中心の和食店。kaze公式の店舗情報に「キッズメニューあり」「ベビーシートあり」、全席禁煙と明記。席数86席。',
+      kidsMenu: true,
+      kidsChair: true,
+      seatingType: ['table'],
+    },
+    {
+      name: 'ビューティーチャイニーズ 中国料理 謝朋殿 イオンレイクタウンkaze店',
+      genre: 'chinese',
+      area: '越谷レイクタウン駅直結（kaze 3F [363] DINING TERRACE）',
+      description:
+        '点心と一品料理をそろえる中国料理店。kaze公式の店舗情報に「キッズメニューあり」「ベビーシートあり」、全席禁煙と明記。席数70席。',
+      kidsMenu: true,
+      kidsChair: true,
+      seatingType: ['table'],
+    },
+    {
+      name: '炭焼ステーキくに イオンレイクタウンkaze店',
+      genre: 'yoshoku',
+      area: '越谷レイクタウン駅直結（kaze 3F [350] DINING TERRACE）',
+      description:
+        '炭焼きステーキの専門店。kaze公式の店舗情報に「キッズメニューあり」「ベビーシートあり」「ランチメニューあり」と明記。席数115席とフロア最大級。',
+      kidsMenu: true,
+      kidsChair: true,
+      seatingType: ['table'],
+    },
+    {
+      name: 'ザ・ブッフェ ニューマーケット イオンレイクタウンkaze店',
+      genre: 'others',
+      area: '越谷レイクタウン駅直結（kaze 3F [353] DINING TERRACE）',
+      description:
+        '好きな料理を取り分けて食べられるブッフェレストラン。kaze公式の店舗情報に「キッズメニューあり」「予約可能」と明記。席数130席。',
       kidsMenu: true,
       shareDish: true,
       seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜2,000円',
     },
     {
-      name: 'さんるーむ レイクタウン店',
+      name: '利久食堂 イオンレイクタウンkaze店',
       genre: 'washoku',
-      area: '越谷レイクタウン駅直結（レイクタウンKAZE 3F）',
+      area: '越谷レイクタウン駅直結（kaze 3F [352] DINING TERRACE）',
       description:
-        '旬の食材を使った身体に優しい自然食レストラン。和定食中心で、薄味の家庭的な味付けは子どもにも安心。館内に授乳室・おむつ替え台完備で乳児連れも快適。',
-      strollerOk: true,
-      nursingRoom: true,
-      diaperChangingTable: true,
+        '牛たんを中心にした定食の店。kaze公式の店舗情報に「キッズメニューあり」「テイクアウト可能」、全席禁煙と明記。席数90席。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: '鶏五味 イオンレイクタウンkaze店',
+      genre: 'washoku',
+      area: '越谷レイクタウン駅直結（kaze 3F [357] DINING TERRACE）',
+      description:
+        '鶏料理の専門店。kaze公式の店舗情報に「キッズメニューあり」、全席禁煙と明記。席数36席とフロア内では小ぶりなので、混む時間帯を外すと入りやすい。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: '日暮里食肉問屋 焼肉おもに亭 イオンレイクタウンkaze店',
+      genre: 'yakiniku',
+      area: '越谷レイクタウン駅直結（kaze 3F [366] DINING TERRACE）',
+      description:
+        '問屋直営の焼肉店。kaze公式の店舗情報に「キッズメニューあり」、全席禁煙と明記。席数98席。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: 'しゃぶしゃぶ宮崎霧峰 イオンレイクタウンkaze店',
+      genre: 'shabu',
+      area: '越谷レイクタウン駅直結（kaze 3F [365] DINING TERRACE）',
+      description:
+        'しゃぶしゃぶ・すき焼き・鍋の店。kaze公式の店舗情報に「ベビーシートあり」「予約可能」「ランチメニューあり」と明記。席数64席。',
+      kidsChair: true,
       shareDish: true,
       seatingType: ['table'],
-      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'パントリエ イオンレイクタウンkaze店',
+      genre: 'yoshoku',
+      area: '越谷レイクタウン駅直結（kaze 3F [354] DINING TERRACE）',
+      description:
+        '焼き立てパン食べ放題が付く洋食レストラン。席数94席。埼玉県パパ・ママ応援ショップ優待カードの提示で、料理を注文するとお土産パン1袋のサービスがある。',
+      seatingType: ['table'],
+    },
+    // ---- イオンレイクタウン kaze / 2F CAFE PLAZA ほか ----
+    {
+      name: 'アフタヌーンティー・ティールーム イオンレイクタウンkaze店',
+      genre: 'cafe',
+      area: '越谷レイクタウン駅直結（kaze 2F [277] CAFE PLAZA）',
+      description:
+        '紅茶と軽食のティールーム。kaze公式の店舗情報に「キッズメニューあり」、全席禁煙と明記。席数66席、10:00〜21:00と開店が早い。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: 'ハンドベイクス イオンレイクタウンkaze店',
+      genre: 'cafe',
+      area: '越谷レイクタウン駅直結（kaze 2F [201]）',
+      description:
+        '焼き菓子とドリンクのカフェ。kaze公式の店舗情報に「キッズメニューあり」、全席禁煙と明記。席数72席。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: 'メゾン・イチ プリュス イオンレイクタウンkaze店',
+      genre: 'bakery',
+      area: '越谷レイクタウン駅直結（kaze 2F [290]）',
+      description:
+        'ベーカリー併設のカフェ。kaze公式の店舗情報に「キッズメニューあり」、全席禁煙と明記。席数65席。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    // ---- イオンレイクタウン kaze / 1F GOURMET SQUARE（フードコート） ----
+    {
+      name: 'つじ田 イオンレイクタウンkaze店',
+      genre: 'noodles',
+      area: '越谷レイクタウン駅直結（kaze 1F [157] GOURMET SQUARE）',
+      description:
+        'つけ麺・ラーメンの店。kaze公式の店舗情報に「キッズメニューあり」と明記。フードコート内なので席の移動がしやすい。',
+      kidsMenu: true,
+    },
+    {
+      name: '羽釜ごはん 穂のか イオンレイクタウンkaze店',
+      genre: 'washoku',
+      area: '越谷レイクタウン駅直結（kaze 1F [164] GOURMET SQUARE）',
+      description:
+        '羽釜で炊いたごはんが売りの和食店。kaze公式の店舗情報に「キッズメニューあり」、禁煙と明記。10:00〜21:00（L.O.20:30）。',
+      kidsMenu: true,
+    },
+    {
+      name: 'どうとんぼり神座 イオンレイクタウンkaze店',
+      genre: 'noodles',
+      area: '越谷レイクタウン駅直結（kaze 1F [163] GOURMET SQUARE）',
+      description:
+        '2026年7月30日オープン。kaze公式は看板の「おいしいラーメン」を、子どもから年配の人まで食べられるやさしいスープと説明している。10:00〜21:00（L.O.20:30）。',
+    },
+    // ---- イオンレイクタウン mori ----
+    {
+      name: '横濱元町ドリア イオンレイクタウンmori店',
+      genre: 'yoshoku',
+      area: '越谷レイクタウン駅直結（mori 1F [1061]）',
+      description:
+        '30種類以上のドリア・グラタンの専門店。2026年5月18日オープン。mori公式の子育て応援ぺーじに「お子さまメニューやドリンクバーもある」と記載されている。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: 'ピアサピド イオンレイクタウンmori店',
+      genre: 'italian',
+      area: '越谷レイクタウン駅直結（mori 1F [1102]）',
+      description:
+        '30種類以上のパンが食べ放題のベーカリーレストラン。mori公式の店舗ページに「お子さまメニューもございますので、お子さま連れでもどうぞご利用下さい」と記載。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: 'ロテルドビュッフェ イオンレイクタウンmori店',
+      genre: 'others',
+      area: '越谷レイクタウン駅直結（mori 1F [1069]）',
+      description:
+        '洋食・和食・中華・デザートを取り分けて食べるビュッフェレストラン。mori公式の店舗ページに「お子さまに喜んでいただけるメニューも随時ご用意」と記載。',
+      kidsMenu: true,
+      shareDish: true,
+      seatingType: ['table'],
+    },
+    {
+      name: '花粥 HANAKAYU イオンレイクタウンmori店',
+      genre: 'chinese',
+      area: '越谷レイクタウン駅直結（mori 1F [1076]）',
+      description:
+        '台湾粥と点心の店。mori公式の店舗ページによると営業時間は平日10:00〜22:00、土日祝11:00〜22:00（いずれもL.O.21:00）。小鉢や主菜も単品でそろう。',
+      shareDish: true,
+      seatingType: ['table'],
+    },
+    {
+      name: 'びっくりドンキーポケットキッチン イオンレイクタウンmori店',
+      genre: 'yoshoku',
+      area: '越谷レイクタウン駅直結（mori 3F [3079] フードコート）',
+      description:
+        'びっくりドンキーのフードコート業態。mori公式の店舗ページに平均予算ランチ850円と記載。フードコート内なので席を選びやすい。',
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: 'いしがまやハンバーグ イオンレイクタウンmori店',
+      genre: 'yoshoku',
+      area: '越谷レイクタウン駅直結（mori 1F [1079]）',
+      description:
+        '専用の石窯で焼くハンバーグステーキの専門店。mori公式の子育て応援ぺーじに掲載されている店舗のひとつ。',
+      seatingType: ['table'],
+    },
+    // ---- 駅前（モール外） ----
+    {
+      name: 'カフェバナーノ 越谷レイクタウン駅前店',
+      genre: 'cafe',
+      area: '越谷レイクタウン駅ロータリー内',
+      description:
+        '運営元のポラス公式サイトが「ママがゆっくり過ごせるカフェ」として案内する駅前のカフェ。モールに入る前後に立ち寄れる位置にある。',
+      seatingType: ['table'],
     },
   ],
 

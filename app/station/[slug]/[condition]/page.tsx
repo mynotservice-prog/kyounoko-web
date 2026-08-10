@@ -553,7 +553,7 @@ export default async function StationConditionPage({ params }: Props) {
                               background: '#FFEBEE', color: '#C62828', fontWeight: 500,
                             }}>話題店</span>}
                           </h4>
-                          <span style={{ fontSize: 12, color: 'var(--ink-mute)' }}>ランチ {r.priceLunch}</span>
+                          {r.priceLunch && <span style={{ fontSize: 12, color: 'var(--ink-mute)' }}>ランチ {r.priceLunch}</span>}
                         </header>
                         <div style={{ fontSize: 12, color: 'var(--ink-mute)', marginBottom: 8 }}>{r.area}</div>
                         <p style={{ fontSize: 13.5, color: 'var(--ink-sub)', lineHeight: 1.75, margin: '0 0 10px' }}>

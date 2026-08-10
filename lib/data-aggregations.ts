@@ -158,7 +158,7 @@ export function buildAllDataRows(): DataRow[] {
       kidsChair: indieFlat.kidsChair === true,
       kidsCutlery: indieFlat.kidsCutlery === true,
       kidsSpace: indieFlat.kidsSpace === true,
-      priceRange: indieFlat.priceLunch,
+      priceRange: indieFlat.priceLunch ?? '',
       // v6: 個人店も推論済み8項目を反映
       stepFree: indieFlat.stepFree,
       seatingType: indieFlat.seatingType as SeatingType[] | undefined,
