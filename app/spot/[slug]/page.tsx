@@ -656,6 +656,74 @@ export default async function SpotPage({ params }: Props) {
           </>
         )}
 
+        {/* 運営者の一次情報レポート（実際に子連れで訪問して記録した実体験）。
+            詳細ページでは cautionNote だけが「行く前に知っておきたいこと」に混ざる形だったため、
+            全項目をここで独立表示する（E-E-A-T の Experience を一番見える位置に出す）。 */}
+        {spot.kidReport && (
+          <>
+            <div className="v2-sec-head">
+              <h2 className="v2-sec-title">
+                <span className="v2-bar-accent"></span>運営者が子連れで行ってきました
+              </h2>
+            </div>
+            <div className="v2-section">
+              <div
+                style={{
+                  background: '#fbf6ee',
+                  border: '1px solid #e7d9c4',
+                  borderRadius: 'var(--v2-r-card)',
+                  padding: '16px 18px',
+                }}
+              >
+                <div
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 5,
+                    fontSize: 11.5,
+                    fontWeight: 700,
+                    letterSpacing: '.03em',
+                    color: '#9a6b3f',
+                    background: '#f1e2cb',
+                    padding: '4px 10px',
+                    borderRadius: 999,
+                    marginBottom: 12,
+                  }}
+                >
+                  ✔ 運営者が実際に子連れで訪問して確認
+                </div>
+                <dl style={{ margin: 0, display: 'grid', gap: 12 }}>
+                  {[
+                    { label: '行った年齢', value: spot.kidReport.visitAge },
+                    { label: 'ベビーカー動線', value: spot.kidReport.strollerNote },
+                    { label: '土日の混雑・狙い目', value: spot.kidReport.crowdNote },
+                    { label: 'おむつ替え・授乳', value: spot.kidReport.diaperNote },
+                    { label: '滞在時間の目安', value: spot.kidReport.stayNote },
+                    { label: 'ヒヤッとした点・注意', value: spot.kidReport.cautionNote },
+                  ].map((r) => (
+                    <div key={r.label}>
+                      <dt
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 800,
+                          color: '#c4704f',
+                          letterSpacing: '.03em',
+                          marginBottom: 3,
+                        }}
+                      >
+                        {r.label}
+                      </dt>
+                      <dd style={{ margin: 0, fontSize: 13.5, color: 'var(--v2-ink-soft)', lineHeight: 1.75 }}>
+                        {r.value}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            </div>
+          </>
+        )}
+
         {/* 混雑回避・アクセス・事前確認 */}
         {(crowdAvoidance || accessTips || preVisitNotes) && (
           <div className="v2-section" style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 18 }}>
