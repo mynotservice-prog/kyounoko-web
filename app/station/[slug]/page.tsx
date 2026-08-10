@@ -180,6 +180,7 @@ export default async function StationPage({ params }: Props) {
     { href: '#section-tldr', label: '30秒攻略' },
     { href: '#section-by-age', label: '年齢別' },
     { href: '#section-by-scene', label: 'シーン別' },
+    ...(override?.hallFacilities ? [{ href: '#section-hall-facilities', label: '館の設備' }] : []),
     { href: '#section-tips', label: '使い方' },
     { href: '#section-chains', label: 'チェーン', count: chains.length },
     ...(indies.length > 0 ? [{ href: '#section-indies', label: '個人店', count: indies.length }] : []),
@@ -296,8 +297,78 @@ export default async function StationPage({ params }: Props) {
                   <strong>ランチ800円以内</strong>: {chains.filter(c => c.lunchPrice === '〜800').length}店
                 </a>
               </li>
+              {override?.tldrExtraItems?.map((extra) => (
+                <li key={extra.href}>
+                  <a href={extra.href} style={{ color: 'var(--ink)', textDecoration: 'none', borderBottom: '1px dotted var(--clay-deep)' }}>
+                    <strong>{extra.label}</strong>: {extra.value}
+                  </a>
+                </li>
+              ))}
             </ul>
           </section>
+
+          {/* ===== 館別の設備（登録のある駅のみ）=====
+              駅＝ひとつの商業施設ではない駅がある。ベビーカーの貸出や授乳室は
+              「店」ではなく「館」の設備なので、館の名前で、館ごとに分けて出す。
+              店の設備（IndieRestaurant の nursingRoom 等）と混ぜてはいけない。 */}
+          {override?.hallFacilities && (
+            <section id="section-hall-facilities" style={{ margin: '40px 0', scrollMarginTop: 80 }}>
+              <header style={{ marginBottom: 14 }}>
+                <span className="eyebrow" style={{ color: 'var(--clay-deep)' }}>館の設備（店の設備ではありません）</span>
+                <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 22, marginTop: 4, marginBottom: 6 }}>
+                  {override.hallFacilities.heading}
+                </h2>
+                <p style={{ fontSize: 13, color: 'var(--ink-sub)', margin: 0, lineHeight: 1.8 }}>
+                  {override.hallFacilities.lead}
+                </p>
+              </header>
+
+              <div style={{ display: 'grid', gap: 14 }}>
+                {override.hallFacilities.halls.map((hall) => (
+                  <div key={hall.hall} style={{
+                    border: '1px solid rgba(201,96,62,0.20)',
+                    borderRadius: 12,
+                    padding: '16px 18px',
+                    background: 'rgba(201,96,62,0.04)',
+                  }}>
+                    <h3 style={{ fontSize: 16, margin: '0 0 4px', fontFamily: 'var(--font-mincho)' }}>{hall.hall}</h3>
+                    {hall.note && (
+                      <p style={{ fontSize: 12, color: 'var(--ink-mute)', margin: '0 0 10px', lineHeight: 1.7 }}>{hall.note}</p>
+                    )}
+                    <dl style={{ margin: 0, fontSize: 14, lineHeight: 1.85 }}>
+                      {hall.rows.map((row) => (
+                        <div key={row.label} style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 6 }}>
+                          <dt style={{ minWidth: 132, fontWeight: 700, color: 'var(--ink)' }}>{row.label}</dt>
+                          <dd style={{ margin: 0, flex: '1 1 240px', color: 'var(--ink-sub)' }}>{row.value}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                  </div>
+                ))}
+              </div>
+
+              {override.hallFacilities.crossHallRules.length > 0 && (
+                <div style={{
+                  marginTop: 14,
+                  padding: '14px 18px',
+                  border: '1px solid rgba(20,147,209,0.22)',
+                  borderRadius: 12,
+                  background: 'rgba(20,147,209,0.05)',
+                }}>
+                  <h3 style={{ fontSize: 15, margin: '0 0 8px', fontFamily: 'var(--font-mincho)' }}>館をまたぐときの注意</h3>
+                  <ul style={{ paddingLeft: 20, margin: 0, fontSize: 14, lineHeight: 1.85, color: 'var(--ink-sub)' }}>
+                    {override.hallFacilities.crossHallRules.map((rule) => (
+                      <li key={rule} style={{ marginBottom: 6 }}>{rule}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              <p style={{ margin: '12px 0 0', fontSize: 11.5, color: 'var(--ink-mute)', lineHeight: 1.7 }}>
+                出典: {override.hallFacilities.source}
+              </p>
+            </section>
+          )}
 
           {/* ===== パーソナライズ: 設定済みの子の年齢に応じたチェックポイント =====
               SSR 非依存（クライアントのみ）。未設定なら設定への軽い CTA のみ。 */}
