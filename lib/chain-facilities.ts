@@ -12,7 +12,13 @@
  *
  * 注意(2026-07-27): verifiedMethod は以前「編集部調査(実訪問・公式サイト照合)の集約」と
  * 表示していたが、裏付けのない実訪問の主張だったため「公式サイト・店舗公開情報の照合」に修正した。
- * 実訪問にもとづく一次情報は lib/kid-reports.ts のみが正。ここに実地調査の主張を書き戻さないこと。
+ * **実際に運営者が訪問して確認した内容に限り** verifiedMethod に実訪問を明記してよい
+ * (2026-08-11 追記)。行っていないチェーンに実地調査の主張を書き戻さないこと。
+ * スポット(施設)側の実訪問レポートは従来どおり lib/kid-reports.ts が正。
+ *
+ * チェーンの /spot/[slug] は lib/chain-spot-redirects.ts で記事へ 301 するため、
+ * チェーンの一次情報が読者に届く場所は**記事本文**。ここのデータは記事の判定ボックスを
+ * 駆動するだけなので、体験談そのものは該当記事の「我が家のリアル」節に書くこと。
  */
 
 export type FacilityKey =
@@ -210,22 +216,31 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     name: 'はま寿司',
     officialUrl: 'https://www.hama-sushi.co.jp/',
     koryakuSlug: 'hama-sushi-kodzure-koryaku',
-    verifiedAt: '2026-07-02',
-    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    verifiedAt: '2026-08-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合＋運営者の実訪問',
     items: {
       stepFree: V(true),
       zashiki: V(false),
       boxSeat: V(true),
-      kidsChair: V(true),
+      kidsChair: V(true, '運営者が訪問した店舗では股下ベルト付きのハイチェアを使用。別店舗ではテーブル固定タイプもあった。型・ベルトの有無はチェーンとして公式に規定されておらず店舗差あり。腰すわり後が目安'),
       kidsMenu: V(true),
       kidsCutlery: V(false, '店舗による'),
-      diaperTable: V(true),
+      diaperTable: V('partial', '店舗差が大きい。商業施設内の店舗は施設のトイレ、ロードサイド店は店内トイレと条件が変わる'),
       nursingRoom: V(false),
-      babyFoodBringIn: V(true, '温め対応の実例あり'),
+      babyFoodBringIn: V(true, '持ち込み可の利用報告あり。店内でのベビーフード販売はなく、温めの全店対応も確認できていないため、持参しておくのが安全'),
       toriwake: V(true),
-      strollerToSeat: V(true),
+      strollerToSeat: V('partial', '店舗・席次第'),
       allergenInfo: V(true),
     },
+    extras: [
+      { label: 'はまっこ3点セット', value: '460円（税込506円）／うどん・ポテト（ミニ）・専用コイン付き' },
+      { label: 'はまっこラーメンセット', value: '400円（税込440円）／専用コイン付き' },
+      { label: 'はまっこうどんセット', value: '360円（税込396円）／専用コイン付き' },
+      { label: 'はまっこポテトセット', value: '290円（税込319円）／ミニサイズ・専用コイン付き' },
+      { label: 'はまっこセットの対象年齢', value: '公式に「対象年齢：3歳以上」と明記。持ち帰り不可' },
+      { label: '専用コイン', value: 'コイン1枚で店内のカプセルトイを1回。持ち帰り不可・当日使用。景品は店舗により異なる' },
+      { label: '価格の注意', value: '店舗により価格が異なる場合あり' },
+    ],
   },
   {
     key: 'sushiro',
@@ -254,22 +269,27 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     name: 'くら寿司',
     officialUrl: 'https://www.kurasushi.co.jp/',
     koryakuSlug: 'kura-sushi-kodzure-koryaku',
-    verifiedAt: '2026-07-02',
-    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    verifiedAt: '2026-08-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合＋運営者の実訪問',
     items: {
       stepFree: V(true),
       zashiki: V(false),
       boxSeat: V(true),
-      kidsChair: V(true),
-      kidsMenu: V(true),
+      kidsChair: V(true, '運営者が訪問した店舗ではソファ席に置くローチェア型で、腰と股を固定するベルト付き。テーブル固定タイプもあった。型・ベルトの有無・台数は店舗差。腰すわり後が目安（月齢はくら寿司公式の規定ではない）'),
+      kidsMenu: V(true, '「◯歳以下限定のキッズプレート」ではなく、子どもが食べやすい単品とビッくらポン系が中心'),
       kidsCutlery: V(false, '店舗による'),
-      diaperTable: V(true),
+      diaperTable: V('partial', '公式の店舗検索で「多機能トイレ対応」を条件指定できる。ただし多機能トイレ＝おむつ交換台ありとは限らない。運営者の訪問では、新型店は多目的トイレ内に広めの折りたたみ交換台があり、旧型店は女性トイレに簡易台のみだった'),
       nursingRoom: V(false),
-      babyFoodBringIn: V(true),
+      babyFoodBringIn: V(true, '持ち込み可の利用報告あり。専用のベビーフードは販売しておらず、温めの全店対応も確認できていない'),
       toriwake: V(true),
-      strollerToSeat: V(true),
+      strollerToSeat: V('partial', '店舗・席次第'),
       allergenInfo: V(true),
     },
+    extras: [
+      { label: '天然だしうどん', value: '250円' },
+      { label: 'ミニころチキン', value: '170円' },
+      { label: 'ビッくらポン！厳選6貫セット', value: '790円（まぐろ・ビントロ・サーモン・はまち・いか・えび／景品1個つき）' },
+    ],
   },
   {
     key: 'jonathan',
@@ -584,22 +604,31 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     name: 'ロイヤルホスト',
     officialUrl: 'https://www.royalhost.jp/',
     koryakuSlug: 'royal-host-kodzure-koryaku',
-    verifiedAt: '2026-07-02',
-    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    verifiedAt: '2026-08-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合＋運営者の実訪問',
     items: {
       stepFree: V(true),
       zashiki: V(false),
       boxSeat: V(true),
-      kidsChair: V(true),
+      kidsChair: V(true, 'テーブル取付型を使った利用事例あり。全店が同じ型ではないため腰すわり後が基本'),
       kidsMenu: V(true),
       kidsCutlery: V(true),
-      diaperTable: V(true),
+      diaperTable: V('partial', '店舗差が大きい'),
       nursingRoom: V(false),
-      babyFoodBringIn: V(true),
+      babyFoodBringIn: V(true, '持ち込みに加えて店内でベビーフードを注文できる。運営者の訪問では食器に移して温かい状態で提供され、哺乳瓶用のお湯と子ども用エプロンも用意されていた'),
       toriwake: V(true),
-      strollerToSeat: V(true),
+      strollerToSeat: V(true, 'ボックス席・ソファ席の店舗が多く合わせやすい'),
       allergenInfo: V(true),
     },
+    extras: [
+      { label: 'ベビーフード かぼちゃのグラタン', value: '7か月頃から・税込253円' },
+      { label: 'ベビーフード ひらめのリゾット', value: '9か月頃から・税込253円' },
+      { label: 'ベビーフードの提供方法', value: '食器に移して温めて提供。運営者の訪問でも温かい状態で出てきた。哺乳瓶用のお湯と子ども用エプロンも用意されていた' },
+      { label: 'おこさま煮込みハンバーグプレート', value: '968円' },
+      { label: 'おこさまオムライス＆エビフライ', value: '1,078円' },
+      { label: 'おこさまドリンクバー', value: '4歳〜小学生以下が対象。3歳以下は無料' },
+      { label: 'そのほかのおこさまメニュー', value: '低アレルゲンカレー／パンケーキ／ラーメン' },
+    ],
   },
   {
     key: 'matsuya',
@@ -990,6 +1019,36 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
       { label: 'アレルギー情報', value: '公式サイトにカロリー・アレルギー・原産地情報を掲載' },
       { label: 'おむつ替え・授乳', value: '店内設備は基本なし。モール内なら館内設備を併用' },
       { label: '予算感', value: '低（かけ小なら数百円から取り分け可）' },
+    ],
+  },
+  {
+    key: 'bigboy',
+    name: 'ビッグボーイ',
+    officialUrl: 'https://www.bigboyjapan.co.jp/',
+    koryakuSlug: 'bigboy-kids-menu',
+    verifiedAt: '2026-08-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合＋運営者の実訪問',
+    items: {
+      stepFree: V('partial', '店舗差あり'),
+      zashiki: V(false),
+      boxSeat: V(true, 'テーブル・ソファ席が中心'),
+      kidsChair: V(true, 'ベルト付きか、ハイチェアかソファ用かは店舗差あり。腰すわり後が目安'),
+      kidsMenu: V(true, '小学生以下向け。業態（ビッグボーイ／ビッグボーイダイニング）で価格・内容が違う'),
+      kidsCutlery: V('partial', '店舗による'),
+      diaperTable: V('partial', '店舗差が大きい'),
+      nursingRoom: V(false),
+      babyFoodBringIn: V(true, '運営者の訪問では持参した離乳食を店内で食べられた。店内でベビーフード（165円）も購入でき、そのときは未開封のまま提供された。持ち込み離乳食の温め対応は全店共通の公式ルールを確認できていないため、必要なら店舗確認を'),
+      toriwake: V(true),
+      strollerToSeat: V('partial', '店舗・席次第'),
+      allergenInfo: V(true, '低アレルゲンおこさまハンバーグあり'),
+    },
+    extras: [
+      { label: 'ベビーフード', value: '165円（税抜150円）。離乳食を忘れても店で買える。運営者の訪問では未開封のまま提供された（ロイヤルホストのように器へ移して温めた状態では出てこない）' },
+      { label: 'キッズ手ごねハンバーグ', value: '539円（ビッグボーイダイニングの価格）' },
+      { label: 'キッズチーズ手ごねハンバーグ', value: '649円（同上）' },
+      { label: 'キッズパンケーキ／うどん／スパゲティ', value: '各429円（同上）' },
+      { label: '低アレルゲンおこさまハンバーグ', value: '539円（同上）' },
+      { label: '価格の注意', value: '「ビッグボーイ」と「ビッグボーイダイニング」は公式メニューページが別。価格・内容を混ぜないこと' },
     ],
   },
   {

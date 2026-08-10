@@ -14,6 +14,7 @@ import type { Spot } from '@/lib/spots';
 import { getRuntimeSpotOverrides } from '@/lib/spot-overrides';
 import { findStationBySlug } from '@/lib/all-stations';
 import { SPOT_CLOSED } from '@/lib/spot-closed';
+import { getSpotFreshness, freshnessLabel } from '@/lib/spot-verification';
 import { getAllFileArticles } from '@/lib/articles';
 import { buildSpotJsonLd, buildFaqJsonLd, isReviewEligibleType } from '@/lib/spot-schema';
 import {
@@ -128,6 +129,10 @@ export default async function SpotPage({ params }: Props) {
 
   // 閉館スポットの案内文（あれば閉館バナーを表示し noindex）。
   const closedNotice = SPOT_CLOSED[spot.name];
+
+  // 情報の鮮度（最終確認日）。未確認なら「未確認」と正直に出す（推測日を出さない）。
+  const freshness = getSpotFreshness(spot);
+  const freshnessNote = freshnessLabel(freshness);
 
   // 最寄り駅 slug を日本語駅名へ解決（レジストリに無い場合は元の値をそのまま表示）。
   const nearestStationName = spot.nearestStation
@@ -435,8 +440,8 @@ export default async function SpotPage({ params }: Props) {
           ))}
         </div>
 
-        {/* 設備 */}
-        {spot.facilities && (
+        {/* 設備。'yes' が1つも無い（note だけ記録している）ときは空のグリッドになるので出さない。 */}
+        {spot.facilities && FACILITY_DEF.some((f) => spot.facilities![f.key] === 'yes') && (
           <>
             <div className="v2-sec-head">
               <h2 className="v2-sec-title">
@@ -475,6 +480,34 @@ export default async function SpotPage({ params }: Props) {
               </div>
             </div>
           </>
+        )}
+
+        {/* 情報の鮮度（最終確認日）。閉館バナーを出しているときは重複するので出さない。
+            未確認は「未確認」と正直に出す＝確認していないものを確認済みに見せない。 */}
+        {freshness.state !== 'closed' && (
+          <div className="v2-section" style={{ marginTop: 12 }}>
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'flex-start',
+                gap: 8,
+                padding: '10px 12px',
+                borderRadius: 'var(--v2-r-card)',
+                border: '1px solid var(--v2-line)',
+                background: freshnessNote.tone === 'ok' ? 'var(--v2-cream)' : '#fafafa',
+              }}
+            >
+              <V2Icon
+                name={freshnessNote.tone === 'ok' ? 'info' : 'clock'}
+                size={15}
+                color={freshnessNote.tone === 'ok' ? 'var(--v2-orange)' : '#999'}
+                style={{ flexShrink: 0, marginTop: 1 }}
+              />
+              <div style={{ fontSize: 11.5, color: 'var(--v2-ink-soft)', lineHeight: 1.6 }}>
+                {freshnessNote.text}
+              </div>
+            </div>
+          </div>
         )}
 
         {/* hiddenTip / pricing */}

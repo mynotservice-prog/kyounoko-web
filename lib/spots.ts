@@ -13,6 +13,8 @@
 import type { AreaSlug } from './area';
 import { KID_REPORTS } from './kid-reports';
 import { SPOT_FACILITIES } from './spot-facilities';
+import { SPOT_VERIFICATION } from './spot-verification-data';
+import { SPOT_OFFICIAL_URLS } from './spot-official-urls';
 import { SPOT_ACCESS } from './spot-access';
 import { resolveStationSlugByName } from './all-stations';
 import { SPOTS_EXTRA } from './spots-extra';
@@ -68,6 +70,21 @@ export type KidReport = {
   stayNote: string;
   /** ヒヤッとした点・年齢的に注意したい場所 */
   cautionNote: string;
+};
+
+/**
+ * このスポットの情報を最後に確認した記録。
+ * lib/spot-verification-data.ts から name 一致で自動マージされる（生成元は
+ * spot-facilities.ts の公式裏取りと kid-reports.ts の実訪問記録）。
+ * 記録が無い＝未確認。UI では未確認と正直に出す（推測日を入れない）。
+ */
+export type SpotVerification = {
+  /** 確認した日（YYYY-MM-DD） */
+  verifiedAt: string;
+  /** official = 公式サイト/自治体公式で裏取り / visited = 運営者が実際に訪問 */
+  method: 'official' | 'visited';
+  /** 補足（任意） */
+  note?: string;
 };
 
 export type Spot = {
@@ -226,6 +243,12 @@ export type Spot = {
   playgroundFeatures?: PlaygroundFeature[];
   // ---- 運営者の一次情報（実際に子連れで訪問して記録）----
   kidReport?: KidReport;
+  /**
+   * 情報の最終確認記録。SPOT_VERIFICATION から name 一致でマージされる。
+   * ※ここに入れておくことで、spot-overrides で表示名を変えても鮮度判定が外れない
+   *   （name をキーに描画時に引くと、名前を変えた瞬間に「未確認」に化ける）。
+   */
+  verification?: SpotVerification;
 };
 
 /** 47都道府県分のスポットマップ。不足県は一般的な推奨のみ。 */
@@ -4357,19 +4380,33 @@ for (const [area, extraList] of Object.entries(SPOTS_EXTRA) as [
   SPOTS[area] = [...existing, ...toAdd];
 }
 
+/**
+ * 名前一致でデータを添付する対象のスポット全部。
+ *
+ * ※ SPOTS だけを回すと **TOKYO_RESTAURANTS（外食スポット）が丸ごと漏れる**。
+ *   getAllSpotsWithSlug() は SPOTS と TOKYO_RESTAURANTS の両方を返すので、
+ *   ここを片方だけにすると「サイトには出ているのに設備も確認日も付かない」状態になる
+ *   （実際に外食114件が全件そうなっていた）。新しい配列を足したらここにも足すこと。
+ */
+function allSpotsForMerge(): Spot[] {
+  const out: Spot[] = [];
+  for (const areaList of Object.values(SPOTS)) {
+    if (areaList) out.push(...areaList);
+  }
+  out.push(...TOKYO_RESTAURANTS);
+  return out;
+}
+
 // ============================================================================
 // 一次情報レポート（KID_REPORTS）のマージ
 //
-// lib/kid-reports.ts の KID_REPORTS を、スポット name の完全一致で SPOTS 内の
+// lib/kid-reports.ts の KID_REPORTS を、スポット name の完全一致で
 // 各スポットに添付する。モジュール読み込み時に一度だけ実行。
 // すでにインラインで kidReport を持つスポット（先行7件）は尊重し、上書きしない。
 // ============================================================================
-for (const areaList of Object.values(SPOTS)) {
-  if (!areaList) continue;
-  for (const spot of areaList) {
-    if (!spot.kidReport && KID_REPORTS[spot.name]) {
-      spot.kidReport = KID_REPORTS[spot.name];
-    }
+for (const spot of allSpotsForMerge()) {
+  if (!spot.kidReport && KID_REPORTS[spot.name]) {
+    spot.kidReport = KID_REPORTS[spot.name];
   }
 }
 
@@ -4377,14 +4414,23 @@ for (const areaList of Object.values(SPOTS)) {
 // 設備データ（SPOT_FACILITIES）のマージ
 //
 // lib/spot-facilities.ts の公式確認済み設備情報を、スポット name の完全一致で
-// SPOTS 内の各スポットに添付する。すでにインラインで facilities を持つスポットは
+// 各スポットに添付する。すでにインラインで facilities を持つスポットは
 // 尊重し、上書きしない（インライン値が優先）。
 // ============================================================================
-for (const areaList of Object.values(SPOTS)) {
-  if (!areaList) continue;
-  for (const spot of areaList) {
+{
+  for (const spot of allSpotsForMerge()) {
     if (!spot.facilities && SPOT_FACILITIES[spot.name]) {
       spot.facilities = SPOT_FACILITIES[spot.name];
+    }
+    // 最終確認記録（SPOT_VERIFICATION）のマージ。overrides で表示名を変えても
+    // 鮮度判定が外れないよう、上書き前の name で引いてスポットに焼き付ける。
+    if (!spot.verification && SPOT_VERIFICATION[spot.name]) {
+      spot.verification = SPOT_VERIFICATION[spot.name];
+    }
+    // 公式サイトURL（SPOT_OFFICIAL_URLS）のマージ。インライン値が優先。
+    // 収録は取得検証済みのものだけ（lib/spot-official-urls.ts のヘッダ参照）。
+    if (!spot.officialUrl && SPOT_OFFICIAL_URLS[spot.name]) {
+      spot.officialUrl = SPOT_OFFICIAL_URLS[spot.name];
     }
     // アクセスデータ（SPOT_ACCESS）のマージ。インライン値が優先。
     const access = SPOT_ACCESS[spot.name];
