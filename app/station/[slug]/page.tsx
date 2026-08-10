@@ -267,7 +267,7 @@ export default async function StationPage({ params }: Props) {
               {indies.length > 0 && (
                 <li>
                   <a href="#section-indies" style={{ color: 'var(--ink)', textDecoration: 'none', borderBottom: '1px dotted var(--clay-deep)' }}>
-                    <strong>個人店・話題店</strong>: {indies.length}店（雑誌・SNS掲載・人気店）
+                    <strong>{override?.indieLabels?.tldrLabel ?? '個人店・話題店'}</strong>: {indies.length}店（{override?.indieLabels?.tldrNote ?? '雑誌・SNS掲載・人気店'}）
                   </a>
                 </li>
               )}

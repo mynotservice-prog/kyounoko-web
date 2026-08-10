@@ -575,12 +575,17 @@ export const CHUNK_40A: StationIndieMap = {
         '2026年7月30日オープン。kaze公式は看板の「おいしいラーメン」を、子どもから年配の人まで食べられるやさしいスープと説明している。10:00〜21:00（L.O.20:30）。',
     },
     // ---- イオンレイクタウン mori ----
+    // mori は公式に「キッズメニュー取り扱いショップ」の一覧ページを持っており、
+    // 店名・フロア・商品名・税込価格まで載っている（57店61品／税込250円〜1,200円）。
+    //   https://www.aeon-laketown.jp/mori/special/child-care-support/kids-menu.html
+    // 以下の「税込◯円」はすべてこの公式一覧の表記そのまま（2026-08-10取得）。
+    // 公式ページ自身が「メニュー内容・金額等が変更になる場合がございます」と注記している。
     {
       name: '横濱元町ドリア イオンレイクタウンmori店',
       genre: 'yoshoku',
       area: '越谷レイクタウン駅直結（mori 1F [1061]）',
       description:
-        '30種類以上のドリア・グラタンの専門店。2026年5月18日オープン。mori公式の子育て応援ぺーじに「お子さまメニューやドリンクバーもある」と記載されている。',
+        '30種類以上のドリア・グラタンの専門店。2026年5月18日オープン。mori公式の子育て応援ぺーじに「お子さまメニューやドリンクバーもある」と記載（開店が新しく、公式のキッズメニュー価格一覧にはまだ載っていない）。',
       kidsMenu: true,
       seatingType: ['table'],
     },
@@ -589,7 +594,7 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'italian',
       area: '越谷レイクタウン駅直結（mori 1F [1102]）',
       description:
-        '30種類以上のパンが食べ放題のベーカリーレストラン。mori公式の店舗ページに「お子さまメニューもございますので、お子さま連れでもどうぞご利用下さい」と記載。',
+        '30種類以上のパンが食べ放題のベーカリーレストラン。公式のキッズメニュー一覧に「Kidsグラタン 税込858円」。店舗ページにも「お子さまメニューもございますので、お子さま連れでもどうぞご利用下さい」とある。',
       kidsMenu: true,
       seatingType: ['table'],
     },
@@ -598,7 +603,7 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'others',
       area: '越谷レイクタウン駅直結（mori 1F [1069]）',
       description:
-        '洋食・和食・中華・デザートを取り分けて食べるビュッフェレストラン。mori公式の店舗ページに「お子さまに喜んでいただけるメニューも随時ご用意」と記載。',
+        '洋食・和食・中華・デザートを取り分けて食べるビュッフェレストラン。公式のキッズメニュー一覧では、お子さま料金がドリンクバー付き税込548円と最安の部類。',
       kidsMenu: true,
       shareDish: true,
       seatingType: ['table'],
@@ -608,7 +613,8 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'chinese',
       area: '越谷レイクタウン駅直結（mori 1F [1076]）',
       description:
-        '台湾粥と点心の店。mori公式の店舗ページによると営業時間は平日10:00〜22:00、土日祝11:00〜22:00（いずれもL.O.21:00）。小鉢や主菜も単品でそろう。',
+        '台湾粥と点心の店。公式のキッズメニュー一覧に「おこさまワンタン麺セット 税込858円」。営業時間は平日10:00〜22:00、土日祝11:00〜22:00（L.O.21:00）。',
+      kidsMenu: true,
       shareDish: true,
       seatingType: ['table'],
     },
@@ -617,7 +623,8 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'yoshoku',
       area: '越谷レイクタウン駅直結（mori 3F [3079] フードコート）',
       description:
-        'びっくりドンキーのフードコート業態。mori公式の店舗ページに平均予算ランチ850円と記載。フードコート内なので席を選びやすい。',
+        'びっくりドンキーのフードコート業態。公式のキッズメニュー一覧に「ミニマムレギュラーバーグディッシュ 税込670円」。店舗ページの平均予算はランチ850円。',
+      kidsMenu: true,
       priceLunch: '〜1,000円',
     },
     {
@@ -625,7 +632,158 @@ export const CHUNK_40A: StationIndieMap = {
       genre: 'yoshoku',
       area: '越谷レイクタウン駅直結（mori 1F [1079]）',
       description:
-        '専用の石窯で焼くハンバーグステーキの専門店。mori公式の子育て応援ぺーじに掲載されている店舗のひとつ。',
+        '専用の石窯で焼くハンバーグステーキの専門店。公式のキッズメニュー一覧に「キッズセット 税込869円」（ミニハンバーグ・ごはん・サラダ・ジュース・ゼリー・おもちゃ付）。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: '一汁五穀 イオンレイクタウンmori店',
+      genre: 'washoku',
+      area: '越谷レイクタウン駅直結（mori 1F [1074]）',
+      description:
+        'かまど炊きの五穀米と味噌汁の定食店。公式のキッズメニュー一覧に「お子さま和風ランチ 税込869円」。魚と肉が両方入る構成と説明されている。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: 'オムライスの店 卵と私 イオンレイクタウンmori店',
+      genre: 'yoshoku',
+      area: '越谷レイクタウン駅直結（mori 1F [1073]）',
+      description:
+        'オムライス専門の洋食店。公式のキッズメニュー一覧では「お子さまオムライス 税込300円」で、mori のレストラン街では最安クラス。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: 'とんかつまい泉 イオンレイクタウンmori店',
+      genre: 'tonkatsu',
+      area: '越谷レイクタウン駅直結（mori 1F [1066]）',
+      description:
+        '東京・青山発のとんかつ専門店。公式のキッズメニュー一覧に「お子さまランチ 税込1,000円」。お膳と丼の両方から選べる。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: '牛たん炭焼 利久 イオンレイクタウンmori店',
+      genre: 'washoku',
+      area: '越谷レイクタウン駅直結（mori 1F [1068]）',
+      description:
+        '牛たん炭焼きの専門店。公式のキッズメニュー一覧には「お子さまカレーセット」「お子さまらーめんセット」の2種が載り、いずれも税込1,012円。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: '北海道キッチン ヨシミ イオンレイクタウンmori店',
+      genre: 'yoshoku',
+      area: '越谷レイクタウン駅直結（mori 1F [1070]）',
+      description:
+        '北海道の食材を使う洋食レストラン。公式のキッズメニュー一覧に「お子さまオムライスプレート」「お子さまカレープレート」がいずれも税込980円で載っている。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: '鎌倉パスタ イオンレイクタウンmori店',
+      genre: 'italian',
+      area: '越谷レイクタウン駅直結（mori 1F [1101]）',
+      description:
+        '生パスタの専門店。公式のキッズメニュー一覧に「ベーコンのカルボナーラ 税込429円」。焼きたてのバジルロールも名物。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: 'パステル イオンレイクタウンmori店',
+      genre: 'italian',
+      area: '越谷レイクタウン駅直結（mori 1F [1082]）',
+      description:
+        'パスタと手作りプリンの店。公式のキッズメニュー一覧に「お子さまスパゲティとフライドチキン 税込583円」。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: '蕎麦 いまゐ イオンレイクタウンmori店',
+      genre: 'noodles',
+      area: '越谷レイクタウン駅直結（mori 1F [1063]）',
+      description:
+        'うどんとそばの店。公式のキッズメニュー一覧では「キッズセット 税込350円」と、mori のレストラン街でもっとも安い部類。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: '山下本気うどん イオンレイクタウンmori店',
+      genre: 'noodles',
+      area: '越谷レイクタウン駅直結（mori 1F [1104]）',
+      description:
+        '店内製麺の讃岐うどん店。公式のキッズメニュー一覧に「お子さまセット 税込590円」。土日祝は10:30から開いている。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: '焼肉平城苑 イオンレイクタウンmori店',
+      genre: 'yakiniku',
+      area: '越谷レイクタウン駅直結（mori 1F [1100]）',
+      description:
+        '焼肉店。公式のキッズメニュー一覧に「お子さまクッパ」「お子さまうどん」がいずれも税込385円で載っており、焼肉が食べられない年齢の子でも一品頼める。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: '一蘭 イオンレイクタウンmori店',
+      genre: 'noodles',
+      area: '越谷レイクタウン駅直結（mori 1F [1106]）',
+      description:
+        'とんこつラーメン専門店。公式のキッズメニュー一覧では「お子さまラーメン 税込0円」で、一蘭アプリの会員なら大人1名につき小学生以下5名まで対応と明記（引換券画面の提示が必要）。',
+      kidsMenu: true,
+      seatingType: ['counter'],
+    },
+    {
+      name: '一風堂 イオンレイクタウンmori店',
+      genre: 'noodles',
+      area: '越谷レイクタウン駅直結（mori 3F [3069]）',
+      description:
+        'とんこつラーメン店。公式のキッズメニュー一覧に「お子さまラーメンセット 税込690円」（お子さまラーメン＋ドリンクS＋お菓子セット）。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: '小木曽製粉所 イオンレイクタウンmori店',
+      genre: 'noodles',
+      area: '越谷レイクタウン駅直結（mori 3F [3067]）',
+      description:
+        '自社製粉のそば店。公式のキッズメニュー一覧に「お子さまカレー 税込490円」。目の前でそばを茹でて出す形式。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: '丸亀製麺 イオンレイクタウンmori店',
+      genre: 'noodles',
+      area: '越谷レイクタウン駅直結（mori 3F [3080]）',
+      description:
+        'セルフ形式の讃岐うどん店。公式のキッズメニュー一覧では「お子さまもちもちセット 税込290円」で、61品の中でも最安クラス。',
+      kidsMenu: true,
+    },
+    {
+      name: 'リンガーハット イオンレイクタウンmori店',
+      genre: 'noodles',
+      area: '越谷レイクタウン駅直結（mori 3F [3063C]）',
+      description:
+        '長崎ちゃんぽんの専門店。公式のキッズメニュー一覧に「ちびっこちゃんぽん」「ちびっこ皿うどん」「ちびっこチャーハン」の3セットが載り、いずれも税込590円。',
+      kidsMenu: true,
+    },
+    {
+      name: 'モスバーガー イオンレイクタウンmori店',
+      genre: 'yoshoku',
+      area: '越谷レイクタウン駅直結（mori 3F [3073]）',
+      description:
+        'ハンバーガー店。公式のキッズメニュー一覧に「ワイワイバーガーセット 税込540円」。',
+      kidsMenu: true,
+    },
+    {
+      name: 'サンマルクカフェ イオンレイクタウンmori店',
+      genre: 'cafe',
+      area: '越谷レイクタウン駅直結（mori 2F [2047B]）',
+      description:
+        '焼きたてパンと1杯だてコーヒーのカフェ。公式のキッズメニュー一覧に「キッズセット 税込470円」。買い物の途中で休憩を挟みたいときに使える。',
+      kidsMenu: true,
       seatingType: ['table'],
     },
     // ---- 駅前（モール外） ----
