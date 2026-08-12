@@ -690,6 +690,36 @@ export const CHUNK_40A: StationIndieMap = {
   // 越谷駅（越谷市）
   // ===========================================================
   'koshigaya': [
+    // ▼ 2026-08-12追加: エキア越谷の公式サイト（tobu-equia.com/koshigaya/）から、
+    //   フロア／販売品目を転記した。越谷駅直結。
+    //   マクドナルド・スターバックス・吉野家・はなまるうどんはチェーン側で出るため除外。
+    //   公式に席数・予算の掲載が無いため priceLunch は入れていない。
+    {
+      name: 'しんぱち食堂 エキア越谷店',
+      genre: 'washoku',
+      area: '越谷駅直結（エキア越谷 1F）',
+      description:
+        '焼き魚の定食店。ご飯と汁物が付く形式で、白飯と焼き魚を子どもに分けやすい。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: '元祖油堂 エキア越谷店',
+      genre: 'noodles',
+      area: '越谷駅直結（エキア越谷 1F）',
+      description:
+        '油そばの店。スープが無いぶん熱さの心配が少なく、麺は短く切って分けやすい。',
+      seatingType: ['counter', 'table'],
+      shareDish: true,
+    },
+    {
+      name: '梅林堂 エキア越谷店',
+      genre: 'sweets',
+      area: '越谷駅直結（エキア越谷 1F）',
+      description:
+        '和菓子の店。大福・団子・プリンなど、食事が進まない子でも食べられるものを買って移動できる。',
+      shareDish: true,
+    },
     {
       name: 'Cafe & Dining ARISTAR（アリスター）',
       genre: 'cafe',
@@ -1254,6 +1284,54 @@ export const CHUNK_40A: StationIndieMap = {
   // 朝霞駅（朝霞市）
   // ===========================================================
   'asaka': [
+    // ▼ 2026-08-12追加: エキア朝霞の公式サイト（tobu-equia.com/asaka/）から、
+    //   フロア／販売品目／席数を転記した。朝霞駅直結。
+    //   中華食堂日高屋・星乃珈琲店はチェーン側で出るため除外。
+    //   公式に予算の掲載が無いため priceLunch は入れていない。
+    {
+      name: 'バーガーキング エキア朝霞店',
+      genre: 'yoshoku',
+      area: '朝霞駅直結（エキア朝霞 1F）',
+      description:
+        'ハンバーガーの店。64席とエキア朝霞で最も広く、手で食べられるので子どもと分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'らあめん花月嵐 エキア朝霞店',
+      genre: 'noodles',
+      area: '朝霞駅直結（エキア朝霞 1F）',
+      description:
+        'ラーメンの店。30席。麺は短く切って子どもに分けやすい。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: 'TWO HEART エキア朝霞店',
+      genre: 'bakery',
+      area: '朝霞駅直結（エキア朝霞 2F）',
+      description:
+        'ベーカリー。23席のイートインがあり、パンを買って移動する使い方もできる。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '麺処 ガリレオ八兵衛 エキア朝霞店',
+      genre: 'noodles',
+      area: '朝霞駅直結（エキア朝霞 1F）',
+      description:
+        'そば・うどんの店。10席と非常に小さいので、ベビーカーでの入店可否は事前確認が安心。',
+      seatingType: ['counter'],
+    },
+    {
+      name: 'サーティワンアイスクリーム エキア朝霞店',
+      genre: 'sweets',
+      area: '朝霞駅直結（エキア朝霞 1F）',
+      description:
+        'アイスクリーム店。14席。食事が進まない子との休憩や、外食のあとのごほうびに使える。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
     {
       name: 'イタリアン＆カフェ すわん',
       genre: 'italian',
@@ -1300,6 +1378,97 @@ export const CHUNK_40A: StationIndieMap = {
   // 和光市駅（和光市）
   // ===========================================================
   'wako-shi': [
+    // ▼ 2026-08-12追加: エキア プレミエ 和光の公式サイト（tobu-equia.com/wako/）から、
+    //   フロア・区画／販売品目／席数／予算を転記した。和光市駅直結。
+    //   飲食は3F「PREMIE DINING」に集まり、全店 11:00〜23:00 営業。
+    //   スターバックスはチェーン側で出るため除外。
+    //   ※以前この駅は2020年の開業プレスリリースしか見つからず保留にしていたが、
+    //     公式サイトのドメインが tobu-equia.com だと判明して現行のテナントを取得できた。
+    {
+      name: '築地食堂源ちゃん エキア プレミエ 和光店',
+      genre: 'washoku',
+      area: '和光市駅直結（エキア プレミエ 和光 3F PREMIE DINING）',
+      description:
+        '海鮮と和食の定食店。ご飯と汁物が付く定食形式で子どもへの取り分けがしやすい。76席と3Fでは広い部類。公式のランチ予算は900〜1,200円とフロア最安。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'すし松 エキア プレミエ 和光店',
+      genre: 'sushi',
+      area: '和光市駅直結（エキア プレミエ 和光 3F PREMIE DINING）',
+      description:
+        '寿司の店。玉子やかっぱ巻きなど子どもが食べられるネタを単品で頼める。49席。公式のランチ予算は600〜1,200円。',
+      seatingType: ['table', 'counter'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '北海道イタリアン MiaBocca エキア プレミエ 和光店',
+      genre: 'italian',
+      area: '和光市駅直結（エキア プレミエ 和光 3F PREMIE DINING）',
+      description:
+        'パスタ・ピッツァのイタリアン。84席と3Fで最も広く、ピッツァは家族でシェアしやすい。公式のランチ予算は1,000〜1,500円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '紅虎餃子房 エキア プレミエ 和光店',
+      genre: 'chinese',
+      area: '和光市駅直結（エキア プレミエ 和光 3F PREMIE DINING）',
+      description:
+        '点心・麺・飯ものの中国料理店。餃子やチャーハンは取り分けやすい。46席。公式のランチ予算は1,000〜1,500円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'さち福やCAFÉ エキア プレミエ 和光店',
+      genre: 'washoku',
+      area: '和光市駅直結（エキア プレミエ 和光 3F PREMIE DINING）',
+      description:
+        '和定食の店。ご飯と汁物が付く形式で白飯を子どもに分けやすい。70席。公式に予算の掲載が無いため要確認。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '駅ビル バルーチョ エキア プレミエ 和光店',
+      genre: 'italian',
+      area: '和光市駅直結（エキア プレミエ 和光 3F PREMIE DINING）',
+      description:
+        '創作料理とパスタの店。34席と3Fでは小ぶりなので混雑時間は避けたい。公式のランチ予算は1,000〜1,500円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '焼肉・韓国料理KollaBo エキア プレミエ 和光店',
+      genre: 'korean',
+      area: '和光市駅直結（エキア プレミエ 和光 3F PREMIE DINING）',
+      description:
+        '焼肉と韓国料理の店。石焼ビビンバなど辛さを抜いた取り分けがしやすいメニューもある。60席。焼く席は低年齢の子の位置に注意。公式のランチ予算は1,000〜1,500円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'R Baker エキア プレミエ 和光店',
+      genre: 'bakery',
+      area: '和光市駅直結（エキア プレミエ 和光 1F）',
+      description:
+        'ベーカリーカフェ。1Fにあり、パンを買って移動する使い方もできる。子どもが食べられる分だけ選べる。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'とんかつ新宿さぼてん エキア プレミエ 和光店',
+      genre: 'tonkatsu',
+      area: '和光市駅直結（エキア プレミエ 和光 B1F）',
+      description:
+        'とんかつの惣菜・弁当店。かつサンドなど子どもが手で食べられるものがあり、持ち帰って公園で食べる使い方もできる。10:00〜22:00。',
+      shareDish: true,
+    },
     {
       name: 'Wine食堂 honu cafe（ホヌ カフェ）',
       genre: 'cafe',
@@ -1356,6 +1525,81 @@ export const CHUNK_40A: StationIndieMap = {
   // 志木駅（新座市）
   // ===========================================================
   'shiki': [
+    // ▼ 2026-08-12追加: エキア志木の公式サイト（tobu-equia.com/shiki/）から、
+    //   フロア／販売品目／席数を転記した。志木駅直結。
+    //   吉野家・ケンタッキー・スターバックス・洋麺屋五右衛門はチェーン側で出るため除外。
+    //   公式に「喫煙席あり」と表記のある店はその旨を本文に明記した。
+    {
+      name: '回転寿司 みさき エキア志木店',
+      genre: 'sushi',
+      area: '志木駅直結（エキア志木 1F）',
+      description:
+        '回転寿司。レーンから子どもが自分で選べるうえ、玉子やかっぱ巻きが必ずある。26席と小ぶりなので混雑時間は避けたい。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: 'おぼんdeごはん エキア志木店',
+      genre: 'washoku',
+      area: '志木駅直結（エキア志木 2F）',
+      description:
+        'おぼんにのせる定食スタイルの店。おかずを選べるので子どもが食べられる組み合わせを作りやすい。46席。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'サロン 卵と私 エキア志木店',
+      genre: 'yoshoku',
+      area: '志木駅直結（エキア志木 2F）',
+      description:
+        'オムライスの専門店。卵料理中心で小さい子でも食べやすい。40席。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'ESPRESSO D WORKS エキア志木店',
+      genre: 'cafe',
+      area: '志木駅直結（エキア志木 2F）',
+      description:
+        'パンケーキとピザのカフェ。どちらも家族でシェアしやすい。52席と2Fでは広い部類。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '天ぷらとそば ツクシ エキア志木店',
+      genre: 'noodles',
+      area: '志木駅直結（エキア志木 2F）',
+      description:
+        'そばと天ぷらの店。そばは短く切って子どもに分けやすい。29席。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'しあわせのビーフカレー もう〜とりこ エキア志木店',
+      genre: 'curry',
+      area: '志木駅直結（エキア志木 2F）',
+      description:
+        'ビーフカレーの店。辛さの調整可否は来店時に確認を。18席と小ぶり。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '中華そば青葉 エキア志木店',
+      genre: 'noodles',
+      area: '志木駅直結（エキア志木 2F）',
+      description:
+        '中華そばの店。15席とエキア志木で最も小さいので、ベビーカーでの入店可否は事前確認が安心。',
+      seatingType: ['counter', 'table'],
+    },
+    {
+      name: 'サンジェルマン エキア志木店',
+      genre: 'bakery',
+      area: '志木駅直結（エキア志木 1F）',
+      description:
+        'ベーカリー。32席のイートインがあるが、公式に「喫煙席あり」と表記されているため、子連れなら席の位置を確認したい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
     {
       name: '森の中のおひるねくまさん',
       genre: 'cafe',
