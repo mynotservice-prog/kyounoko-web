@@ -310,17 +310,6 @@ export const CHUNK_3: StationIndieMap = {
       priceLunch: '〜3,500円',
       popular: true,
     },
-    {
-      name: '緑が丘文化会館 周辺カフェ',
-      genre: 'cafe',
-      area: '緑が丘駅から徒歩2分',
-      description: '住宅街の小さなカフェ。テーブル席で子連れも入りやすく、駅前の落ち着いた立地。ランチプレートやケーキセットでママ友利用も多い。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'ookayama': [
@@ -348,17 +337,6 @@ export const CHUNK_3: StationIndieMap = {
   ],
 
   'senzoku': [
-    {
-      name: '洗足池公園周辺カフェ',
-      genre: 'cafe',
-      area: '洗足駅から徒歩7分',
-      description: '洗足池の散策コース上にあるカフェ。広めの店内でベビーカーも入りやすく、池をのぞむテラスは子ども連れに好評。サンドイッチやパスタ中心の軽食。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table', 'terrace'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
     {
       name: 'ベーカリー カトレア 洗足',
       genre: 'bakery',
@@ -583,18 +561,6 @@ export const CHUNK_3: StationIndieMap = {
   ],
 
   'heiwajima': [
-    {
-      name: '平和島 平和の森公園周辺カフェ',
-      genre: 'cafe',
-      area: '平和島駅から徒歩7分',
-      description: '平和の森公園に近いカフェ。公園遊び後にベビーカーで入りやすく、サンドイッチやキッズメニュー系の軽食を扱う。家族客が中心。',
-      strollerOk: true,
-      kidsMenu: false,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'rokugo-dote': [
@@ -1018,17 +984,6 @@ export const CHUNK_3: StationIndieMap = {
   ],
 
   'seibijo': [
-    {
-      name: '整備場 機内食工場周辺カフェ',
-      genre: 'cafe',
-      area: '整備場駅から徒歩7分',
-      description: '空港エリアのローカルカフェ。広めの店内でベビーカーも入りやすく、軽食メニューが揃う。飛行機好きの子どもとの利用に。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜1,000円',
-    },
   ],
 
   'showajima': [
@@ -2330,17 +2285,6 @@ export const CHUNK_3: StationIndieMap = {
   ],
 
   'roka-koen': [
-    {
-      name: '芦花公園 蘆花恒春園周辺カフェ',
-      genre: 'cafe',
-      area: '芦花公園駅から徒歩7分（蘆花恒春園）',
-      description: '蘆花恒春園散策の合間に立ち寄れるローカルカフェ。広い座席でベビーカーOK、家族でのんびり過ごせる。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'chitose-karasuyama': [
@@ -2791,17 +2735,6 @@ export const CHUNK_3: StationIndieMap = {
   ],
 
   'higashi-koenji': [
-    {
-      name: '東高円寺 蚕糸の森公園周辺カフェ',
-      genre: 'cafe',
-      area: '東高円寺駅から徒歩4分（蚕糸の森公園近く）',
-      description: '蚕糸の森公園の散策とセットで使える落ち着いたカフェ。広い座席でベビーカーOK、ランチや自家製スイーツが家族連れに好評。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
     {
       name: '東高円寺 商店街の手打ち蕎麦',
       genre: 'noodles',

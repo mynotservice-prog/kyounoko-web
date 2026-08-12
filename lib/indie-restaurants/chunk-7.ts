@@ -636,14 +636,6 @@ export const CHUNK_7: StationIndieMap = {
 
   'asagaya': [
     {
-      name: '阿佐ケ谷 PEANUTS Cafe Diner相当の街洋食',
-      genre: 'yoshoku',
-      area: '阿佐ケ谷駅から徒歩3分',
-      description: '阿佐ケ谷駅前の昭和洋食店。オムライスやハンバーグ定食、カニクリームコロッケが家族向けに好評。テーブル席中心。',
-      seatingType: ['table'],
-      priceLunch: '〜2,000円',
-    },
-    {
       name: '阿佐ケ谷 一徳',
       genre: 'noodles',
       area: '阿佐ケ谷駅から徒歩2分',
@@ -928,14 +920,6 @@ export const CHUNK_7: StationIndieMap = {
       seatingType: ['table', 'terrace'],
       strollerToSeat: true,
       priceLunch: '〜2,000円',
-    },
-    {
-      name: '三軒茶屋 喫茶 マサコ相当の純喫茶',
-      genre: 'cafe',
-      area: '三軒茶屋駅から徒歩2分',
-      description: '三軒茶屋の路地裏にある昭和純喫茶。ナポリタンやプリン、クリームソーダの王道メニュー。家族連れにも気兼ねなく入れる雰囲気。',
-      seatingType: ['table'],
-      priceLunch: '〜1,000円',
     },
   ],
 

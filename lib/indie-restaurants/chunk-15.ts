@@ -40,17 +40,6 @@ export const CHUNK_15: StationIndieMap = {
 
   'ichigaya': [
     {
-      name: '市ヶ谷 アンジェリーナ 市ヶ谷支店相当の老舗洋菓子',
-      genre: 'sweets',
-      area: '市ヶ谷駅から徒歩5分（外濠通り）',
-      description: '市ヶ谷外濠通り沿いに点在する老舗洋菓子・喫茶。桜のシーズンは外濠堤の散策客で賑わい、家族でケーキとお茶の休憩に向く。テーブル席中心でベビーカーも入りやすい。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
-    {
       name: '市ヶ谷 釣り堀 市ヶ谷フィッシュセンター近く 食堂',
       genre: 'washoku',
       area: '市ヶ谷駅から徒歩2分',
@@ -84,17 +73,6 @@ export const CHUNK_15: StationIndieMap = {
   ],
 
   'hanzomon': [
-    {
-      name: '半蔵門 TOKYO FM ホール周辺カフェ',
-      genre: 'cafe',
-      area: '半蔵門駅から徒歩2分',
-      description: '半蔵門TOKYO FM周辺の落ち着いたカフェ。皇居半蔵濠の桜散策と組み合わせて、家族でモーニング〜ランチにも使いやすい。テーブル席でベビーカーを横付けできる席があることが多い。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'takebashi': [

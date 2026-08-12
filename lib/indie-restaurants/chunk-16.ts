@@ -264,14 +264,6 @@ export const CHUNK_16: StationIndieMap = {
       priceLunch: '〜2,000円',
     },
     {
-      name: '神保町 三省堂書店 神保町本店跡 周辺カフェ',
-      genre: 'cafe',
-      area: '神保町駅から徒歩2分',
-      description: '神保町交差点周辺、三省堂書店跡近くの個人カフェ。読書しやすい静かな店内で、子供にも食べやすいパンケーキ・サンドイッチがある。',
-      seatingType: ['table'],
-      priceLunch: '〜2,000円',
-    },
-    {
       name: '神保町 共立講堂前 老舗洋食',
       genre: 'yoshoku',
       area: '神保町駅から徒歩5分',
@@ -579,17 +571,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'kudanshita': [
-    {
-      name: '九段下 北の丸公園 旧近衛師団司令部 周辺カフェ',
-      genre: 'cafe',
-      area: '九段下駅から徒歩6分',
-      description: '北の丸公園・旧近衛師団司令部庁舎跡の周辺にある個人カフェ。公園散策の家族休憩に向き、ベビーカーでも入りやすいテーブル席中心。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'suidobashi': [
@@ -607,17 +588,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'sakuradamon': [
-    {
-      name: '桜田門 法務省赤れんが棟 周辺カフェ',
-      genre: 'cafe',
-      area: '桜田門駅から徒歩4分',
-      description: '法務省赤れんが棟・皇居外苑近くの個人カフェ。皇居散歩の前後に家族でゆっくりできるテーブル席中心の落ち着いた店。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'uchi-saiwaicho': [
@@ -750,17 +720,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'takaracho': [
-    {
-      name: '宝町 京橋彩区 アーティゾン美術館 周辺カフェ',
-      genre: 'cafe',
-      area: '宝町駅から徒歩4分',
-      description: '京橋彩区・アーティゾン美術館近くの個人カフェ。美術館鑑賞前後の家族のティータイムに向く落ち着いたテーブル席中心の店。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'shin-nihombashi': [
@@ -888,17 +847,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'shirokanedai': [
-    {
-      name: '白金台 自然教育園 周辺カフェ',
-      genre: 'cafe',
-      area: '白金台駅から徒歩4分',
-      description: '国立科学博物館附属自然教育園近くの個人カフェ。庭園散策の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'shirokane-takanawa': [
@@ -916,17 +864,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'takanawadai': [
-    {
-      name: '高輪台 高輪森の公園 周辺カフェ',
-      genre: 'cafe',
-      area: '高輪台駅から徒歩5分',
-      description: '高輪森の公園に近い住宅街の個人カフェ。公園散策後の家族の休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'takanawa-gateway': [
@@ -955,45 +892,12 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'shibaura-futo': [
-    {
-      name: '芝浦ふ頭 レインボーブリッジ遊歩道 周辺カフェ',
-      genre: 'cafe',
-      area: '芝浦ふ頭駅から徒歩5分',
-      description: 'レインボーブリッジ遊歩道入口近くの個人カフェ。海を望むテラス席もあり、家族の散策休憩に向く。ベビーカーでも入りやすい。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table', 'terrace'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'odaiba-kaihinkoen': [
-    {
-      name: 'お台場海浜公園 シンボルプロムナード公園 周辺カフェ',
-      genre: 'cafe',
-      area: 'お台場海浜公園駅から徒歩4分',
-      description: 'お台場シンボルプロムナード公園近くの個人カフェ。海とレインボーブリッジを望むテラス席で、家族の公園散策休憩に向く。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table', 'terrace'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'daiba': [
-    {
-      name: '台場 自由の女神像 周辺カフェ',
-      genre: 'cafe',
-      area: '台場駅から徒歩6分',
-      description: 'お台場・自由の女神像近くの個人カフェ。海とレインボーブリッジを望むテラス席で、家族の散策休憩に向く落ち着いた店。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table', 'terrace'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'tameike-sanno': [
@@ -1057,17 +961,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'hinode': [
-    {
-      name: '日の出 日の出桟橋 周辺カフェ',
-      genre: 'cafe',
-      area: '日の出駅から徒歩3分',
-      description: '日の出桟橋・水上バス乗り場近くの個人カフェ。隅田川と東京湾を望むテラス席で、家族の水上散策前後の休憩に向く。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table', 'terrace'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'takeshiba': [
@@ -1123,17 +1016,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'nishi-shinjuku-gochome': [
-    {
-      name: '西新宿五丁目 中央公園 周辺カフェ',
-      genre: 'cafe',
-      area: '西新宿五丁目駅から徒歩4分',
-      description: '新宿中央公園近くの住宅街の個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'tochomae': [
@@ -1267,17 +1149,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'shimo-ochiai': [
-    {
-      name: '下落合 おとめ山公園 周辺カフェ',
-      genre: 'cafe',
-      area: '下落合駅から徒歩4分',
-      description: 'おとめ山公園近くの住宅街の個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'nakai': [
@@ -1314,32 +1185,9 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'shinanomachi': [
-    {
-      name: '信濃町 慶應義塾大学病院 周辺カフェ',
-      genre: 'cafe',
-      area: '信濃町駅から徒歩2分',
-      description: '慶應義塾大学病院近くの個人カフェ。お見舞い・通院前後の休憩で家族でも入りやすいテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'kokuritsu-kyogijo': [
-    {
-      name: '国立競技場 神宮外苑 銀杏並木 周辺カフェ',
-      genre: 'cafe',
-      area: '国立競技場駅から徒歩4分',
-      description: '神宮外苑銀杏並木近くの個人カフェ。秋の銀杏並木散策の家族休憩に人気で、テラス席もあり子連れの観光休憩に向く。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table', 'terrace'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-      popular: true,
-    },
   ],
 
   'omokagebashi': [
@@ -1527,17 +1375,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'tennozu-isle': [
-    {
-      name: '天王洲アイル ボンドストリート 周辺カフェ',
-      genre: 'cafe',
-      area: '天王洲アイル駅から徒歩3分',
-      description: '天王洲アイル・ボンドストリート沿いの個人カフェ。運河を望むテラス席で家族の散策休憩に向く。ベビーカーでも入りやすい広さ。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table', 'terrace'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'shimo-shimmei': [
@@ -1596,17 +1433,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'hatanodai': [
-    {
-      name: '旗の台 昭和大学病院 周辺カフェ',
-      genre: 'cafe',
-      area: '旗の台駅から徒歩3分',
-      description: '昭和大学病院近くの個人カフェ。お見舞い・通院前後の休憩で家族でも入りやすいテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'kita-shinagawa': [
@@ -1667,17 +1493,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'omori-kaigan': [
-    {
-      name: '大森海岸 しながわ水族館 周辺カフェ',
-      genre: 'cafe',
-      area: '大森海岸駅から徒歩7分',
-      description: 'しながわ水族館近くの個人カフェ。水族館見学前後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'ebara-nakanobu': [
@@ -1692,17 +1507,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'oi-keibajo-mae': [
-    {
-      name: '大井競馬場前 大井競馬場 周辺カフェ',
-      genre: 'cafe',
-      area: '大井競馬場前駅から徒歩4分',
-      description: '大井競馬場近くの住宅街の個人カフェ。家族の運河散策休憩に向くテーブル席中心の落ち着いた店。ベビーカーでも入りやすい広さ。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'osaki-hirokoji': [
@@ -1732,17 +1536,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'higashi-koenji': [
-    {
-      name: '東高円寺 蚕糸の森公園 周辺カフェ',
-      genre: 'cafe',
-      area: '東高円寺駅から徒歩3分',
-      description: '蚕糸の森公園に近い住宅街の個人カフェ。公園遊び後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'shin-nakano': [
@@ -1779,17 +1572,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'shin-koenji': [
-    {
-      name: '新高円寺 馬橋公園 周辺カフェ',
-      genre: 'cafe',
-      area: '新高円寺駅から徒歩4分',
-      description: '新高円寺・馬橋公園近くの個人カフェ。公園遊び後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'hamadayama': [
@@ -1826,17 +1608,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'kugayama': [
-    {
-      name: '久我山 神田川 玉川上水 周辺カフェ',
-      genre: 'cafe',
-      area: '久我山駅から徒歩3分',
-      description: '久我山・神田川玉川上水沿いの個人カフェ。緑を望むテーブル席で家族の散策休憩に向く落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'eifukucho': [
@@ -2065,17 +1836,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'kishibojinmae': [
-    {
-      name: '鬼子母神前 雑司が谷霊園 周辺カフェ',
-      genre: 'cafe',
-      area: '鬼子母神前駅から徒歩3分',
-      description: '雑司が谷霊園・鬼子母神近くの個人カフェ。家族の散策休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'gakushuin-shita': [
@@ -2196,17 +1956,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'nishigahara': [
-    {
-      name: '西ケ原 旧古河庭園 周辺カフェ',
-      genre: 'cafe',
-      area: '西ケ原駅から徒歩4分',
-      description: '旧古河庭園に近い住宅街の個人カフェ。庭園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'kajiwara': [
@@ -2298,17 +2047,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'arakawa-yuenchi-mae': [
-    {
-      name: 'あらかわ遊園地前 あらかわ遊園 周辺カフェ',
-      genre: 'cafe',
-      area: 'あらかわ遊園地前駅から徒歩3分',
-      description: 'あらかわ遊園に近い個人カフェ。遊園地遊び後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'arakawa-itchumae': [
@@ -2334,17 +2072,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'kumano-mae': [
-    {
-      name: '熊野前 日暮里・舎人ライナー乗換 周辺カフェ',
-      genre: 'cafe',
-      area: '熊野前駅から徒歩2分',
-      description: '都電熊野前・日暮里舎人ライナー乗換駅近くの個人カフェ。家族の散策休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'akado-shogakko-mae': [
@@ -2403,17 +2130,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'shin-itabashi': [
-    {
-      name: '新板橋 帝京大学 周辺カフェ',
-      genre: 'cafe',
-      area: '新板橋駅から徒歩4分',
-      description: '新板橋・帝京大学板橋キャンパス近くの個人カフェ。家族の散策休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'itabashi-honcho': [
@@ -2461,17 +2177,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'shimo-akatsuka': [
-    {
-      name: '下赤塚 赤塚溜池公園 周辺カフェ',
-      genre: 'cafe',
-      area: '下赤塚駅から徒歩4分',
-      description: '下赤塚・赤塚溜池公園に近い住宅街の個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'chikatetsu-akatsuka': [
@@ -2502,17 +2207,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'musashi-seki': [
-    {
-      name: '武蔵関 武蔵関公園 周辺カフェ',
-      genre: 'cafe',
-      area: '武蔵関駅から徒歩4分',
-      description: '武蔵関公園・富士見池近くの個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'iogi': [
@@ -2538,31 +2232,9 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'kami-igusa': [
-    {
-      name: '上井草 アニメスタジオ 周辺カフェ',
-      genre: 'cafe',
-      area: '上井草駅から徒歩3分',
-      description: '上井草・サンライズ周辺のアニメ街の個人カフェ。家族の散策休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'shin-egota': [
-    {
-      name: '新江古田 江古田の杜 周辺カフェ',
-      genre: 'cafe',
-      area: '新江古田駅から徒歩4分',
-      description: '新江古田・江古田の杜公園近くの個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'fujimidai': [
@@ -2599,18 +2271,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'toshimaen': [
-    {
-      name: '豊島園 ハリー・ポッター スタジオツアー東京 周辺カフェ',
-      genre: 'cafe',
-      area: '豊島園駅から徒歩3分',
-      description: '旧豊島園跡・ハリー・ポッター スタジオツアー東京近くの個人カフェ。家族のテーマパーク観光休憩に向く落ち着いたテーブル席中心の店。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-      popular: true,
-    },
   ],
 
   'sakuradai': [
@@ -2625,17 +2285,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'kami-shakujii': [
-    {
-      name: '上石神井 石神井公園 周辺カフェ',
-      genre: 'cafe',
-      area: '上石神井駅から徒歩6分',
-      description: '上石神井・石神井公園に近い住宅街の個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'nakamurabashi': [
@@ -2731,17 +2380,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'asukayama': [
-    {
-      name: '飛鳥山 飛鳥山公園 周辺カフェ',
-      genre: 'cafe',
-      area: '飛鳥山駅から徒歩2分',
-      description: '都電飛鳥山・飛鳥山公園入口近くの個人カフェ。桜・紫陽花の花見後の家族休憩に向くテーブル席中心の店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'nishigahara-yonchome': [
@@ -2767,17 +2405,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'kita-akabane': [
-    {
-      name: '北赤羽 浮間公園 周辺カフェ',
-      genre: 'cafe',
-      area: '北赤羽駅から徒歩6分',
-      description: '北赤羽・浮間公園近くの個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   // ===========================================================
@@ -2818,17 +2445,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'kita-ayase': [
-    {
-      name: '北綾瀬 東綾瀬公園 周辺カフェ',
-      genre: 'cafe',
-      area: '北綾瀬駅から徒歩4分',
-      description: '北綾瀬・東綾瀬公園近くの個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'kosuge': [
@@ -2877,17 +2493,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'horikiri': [
-    {
-      name: '堀切 堀切菖蒲園 周辺カフェ',
-      genre: 'cafe',
-      area: '堀切駅から徒歩6分',
-      description: '堀切・堀切菖蒲園近くの個人カフェ。菖蒲・あじさい鑑賞後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'yotsugi': [
@@ -2913,17 +2518,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'shinozaki': [
-    {
-      name: '篠崎 篠崎公園 周辺カフェ',
-      genre: 'cafe',
-      area: '篠崎駅から徒歩6分',
-      description: '篠崎・篠崎公園近くの個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'gotanno': [
@@ -2938,17 +2532,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'akabane-iwabuchi': [
-    {
-      name: '赤羽岩淵 荒川 岩淵水門 周辺カフェ',
-      genre: 'cafe',
-      area: '赤羽岩淵駅から徒歩6分',
-      description: '赤羽岩淵・荒川岩淵水門近くの個人カフェ。荒川河川敷散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'senju-ohashi': [
@@ -2963,45 +2546,12 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'toneri': [
-    {
-      name: '舎人 舎人公園 周辺カフェ',
-      genre: 'cafe',
-      area: '舎人駅から徒歩4分',
-      description: '舎人・舎人公園に近い住宅街の個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'toneri-koen': [
-    {
-      name: '舎人公園 大池 周辺カフェ',
-      genre: 'cafe',
-      area: '舎人公園駅から徒歩2分（舎人公園内）',
-      description: '舎人公園内・大池近くの個人カフェ。公園遊び後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカーでも入りやすい。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'minumadai-shinsuikoen': [
-    {
-      name: '見沼代親水公園 親水公園 周辺カフェ',
-      genre: 'cafe',
-      area: '見沼代親水公園駅から徒歩2分',
-      description: '見沼代親水公園に近い住宅街の個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'yazaike': [
@@ -3016,31 +2566,9 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'kohoku': [
-    {
-      name: '江北 江北公園 周辺カフェ',
-      genre: 'cafe',
-      area: '江北駅から徒歩3分',
-      description: '江北・江北公園近くの個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'adachi-odai': [
-    {
-      name: '足立小台 隅田川 江北橋 周辺カフェ',
-      genre: 'cafe',
-      area: '足立小台駅から徒歩3分',
-      description: '足立小台・隅田川江北橋近くの個人カフェ。河川敷散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'ushida': [
@@ -3144,17 +2672,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'keisei-kanamachi': [
-    {
-      name: '京成金町 葛飾柴又 寅さん像 周辺カフェ',
-      genre: 'cafe',
-      area: '京成金町駅から徒歩4分',
-      description: '京成金町・水元公園方面の個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'takanosuke': [
@@ -3195,17 +2712,6 @@ export const CHUNK_16: StationIndieMap = {
   // ===========================================================
 
   'shiomi': [
-    {
-      name: '潮見 潮見運動公園 周辺カフェ',
-      genre: 'cafe',
-      area: '潮見駅から徒歩4分',
-      description: '潮見・潮見運動公園近くの個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'etchujima': [
@@ -3220,17 +2726,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'ariake-tennis-no-mori': [
-    {
-      name: '有明テニスの森 有明テニスの森公園 周辺カフェ',
-      genre: 'cafe',
-      area: '有明テニスの森駅から徒歩2分',
-      description: '有明テニスの森公園に近い個人カフェ。テニス観戦・公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'kokusai-tenjijo': [
@@ -3273,17 +2768,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'telecom-center': [
-    {
-      name: 'テレコムセンター お台場 周辺カフェ',
-      genre: 'cafe',
-      area: 'テレコムセンター駅から徒歩3分',
-      description: 'テレコムセンター・お台場の個人カフェ。展望ロビーから東京湾を望めるエリア近くで、家族の観光休憩に向くテーブル席中心の落ち着いた店。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'shinonome': [
@@ -3301,62 +2785,15 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'tatsumi': [
-    {
-      name: '辰巳 辰巳の森海浜公園 周辺カフェ',
-      genre: 'cafe',
-      area: '辰巳駅から徒歩6分',
-      description: '辰巳の森海浜公園・辰巳国際水泳場近くの個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'shin-toyosu': [
-    {
-      name: '新豊洲 BRILLIA RUNNING STADIUM 周辺カフェ',
-      genre: 'cafe',
-      area: '新豊洲駅から徒歩3分',
-      description: '新豊洲・BRILLIA RUNNING STADIUM近くの個人カフェ。ベイエリア散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'shin-kiba': [
-    {
-      name: '新木場 夢の島公園 周辺カフェ',
-      genre: 'cafe',
-      area: '新木場駅から徒歩6分',
-      description: '新木場・夢の島公園近くの個人カフェ。公園・熱帯植物館の散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'kasai-rinkai-koen': [
-    {
-      name: '葛西臨海公園 葛西臨海水族園 周辺カフェ',
-      genre: 'cafe',
-      area: '葛西臨海公園駅から徒歩4分',
-      description: '葛西臨海水族園・葛西臨海公園近くの個人カフェ。水族館・公園遊び後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      kidsMenu: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      kidsCutlery: true,
-      priceLunch: '〜2,000円',
-      popular: true,
-    },
   ],
 
   'funabori': [
@@ -3371,17 +2808,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'ichinoe': [
-    {
-      name: '一之江 一之江境川親水公園 周辺カフェ',
-      genre: 'cafe',
-      area: '一之江駅から徒歩4分',
-      description: '一之江・境川親水公園近くの個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'minami-sunamachi': [
@@ -3503,17 +2929,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'yahiro': [
-    {
-      name: '八広 荒川 八広河川敷 周辺カフェ',
-      genre: 'cafe',
-      area: '八広駅から徒歩3分',
-      description: '八広・荒川河川敷近くの個人カフェ。河川敷散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'keisei-hikifune': [
@@ -3561,17 +2976,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'higashi-ojima': [
-    {
-      name: '東大島 大島小松川公園 周辺カフェ',
-      genre: 'cafe',
-      area: '東大島駅から徒歩4分',
-      description: '東大島・大島小松川公園近くの個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'nishi-ojima': [
@@ -3601,17 +3005,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'umeyashiki': [
-    {
-      name: '梅屋敷 梅屋敷公園 周辺カフェ',
-      genre: 'cafe',
-      area: '梅屋敷駅から徒歩3分',
-      description: '梅屋敷公園に近い住宅街の個人カフェ。梅園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'kojiya': [
@@ -3648,17 +3041,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'unoki': [
-    {
-      name: '鵜の木 多摩川河川敷 周辺カフェ',
-      genre: 'cafe',
-      area: '鵜の木駅から徒歩4分',
-      description: '鵜の木・多摩川河川敷近くの個人カフェ。河川敷散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'shimo-maruko': [
@@ -3706,31 +3088,9 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'higashi-matsubara': [
-    {
-      name: '東松原 羽根木公園 周辺カフェ',
-      genre: 'cafe',
-      area: '東松原駅から徒歩4分',
-      description: '東松原・羽根木公園近くの個人カフェ。梅まつり・公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'midorigaoka': [
-    {
-      name: '緑が丘 緑ヶ丘文化会館 周辺カフェ',
-      genre: 'cafe',
-      area: '緑が丘駅から徒歩3分',
-      description: '緑が丘・緑ヶ丘文化会館近くの個人カフェ。家族の散策休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'senzoku': [
@@ -3745,17 +3105,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'komaba-todaimae': [
-    {
-      name: '駒場東大前 日本民藝館 周辺カフェ',
-      genre: 'cafe',
-      area: '駒場東大前駅から徒歩6分',
-      description: '駒場東大前・日本民藝館近くの個人カフェ。民藝館鑑賞後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'hasunuma': [
@@ -3792,17 +3141,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'tamagawa': [
-    {
-      name: '多摩川 多摩川台公園 周辺カフェ',
-      genre: 'cafe',
-      area: '多摩川駅から徒歩3分',
-      description: '多摩川・多摩川台公園近くの個人カフェ。古墳群・河川敷散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'numabe': [
@@ -3850,17 +3188,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'magome': [
-    {
-      name: '馬込 馬込文士村 周辺カフェ',
-      genre: 'cafe',
-      area: '馬込駅から徒歩3分',
-      description: '馬込・馬込文士村方面の個人カフェ。文士村散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'kita-senzoku': [
@@ -3908,17 +3235,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'rokugo-dote': [
-    {
-      name: '六郷土手 多摩川 河川敷 周辺カフェ',
-      genre: 'cafe',
-      area: '六郷土手駅から徒歩3分',
-      description: '六郷土手・多摩川河川敷近くの個人カフェ。河川敷散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'otorii': [
@@ -3944,17 +3260,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'tenkubashi': [
-    {
-      name: '天空橋 多摩川 羽田 周辺カフェ',
-      genre: 'cafe',
-      area: '天空橋駅から徒歩3分',
-      description: '天空橋・多摩川羽田エリアの個人カフェ。羽田イノベーションシティ周辺の家族散策休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'shin-seibijo': [
@@ -4016,18 +3321,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'setagaya-daita': [
-    {
-      name: '世田谷代田 BONUS TRACK 周辺カフェ',
-      genre: 'cafe',
-      area: '世田谷代田駅から徒歩3分',
-      description: '世田谷代田・BONUS TRACK隣接の個人カフェ。下北線路街散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-      popular: true,
-    },
   ],
 
   'umegaoka': [
@@ -4064,17 +3357,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'wakabayashi': [
-    {
-      name: '若林 若林公園 周辺カフェ',
-      genre: 'cafe',
-      area: '若林駅から徒歩3分',
-      description: '若林・若林公園近くの個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'miyanosaka': [
@@ -4133,17 +3415,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'roka-koen': [
-    {
-      name: '芦花公園 蘆花恒春園 周辺カフェ',
-      genre: 'cafe',
-      area: '芦花公園駅から徒歩6分',
-      description: '芦花公園・蘆花恒春園近くの個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'ikenoue': [
@@ -4180,17 +3451,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'kaminoge': [
-    {
-      name: '上野毛 五島美術館 周辺カフェ',
-      genre: 'cafe',
-      area: '上野毛駅から徒歩4分',
-      description: '上野毛・五島美術館近くの個人カフェ。美術館鑑賞・庭園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'kuhonbutsu': [
@@ -4260,17 +3520,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'heiwajima': [
-    {
-      name: '平和島 平和島公園 周辺カフェ',
-      genre: 'cafe',
-      area: '平和島駅から徒歩6分',
-      description: '平和島・平和島公園近くの個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'ikegami': [
@@ -4307,17 +3556,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'todoroki': [
-    {
-      name: '等々力 等々力渓谷 周辺カフェ',
-      genre: 'cafe',
-      area: '等々力駅から徒歩3分',
-      description: '等々力・等々力渓谷近くの個人カフェ。渓谷散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'oyamadai': [
@@ -4426,17 +3664,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'hon-komagome': [
-    {
-      name: '本駒込 六義園 周辺カフェ',
-      genre: 'cafe',
-      area: '本駒込駅から徒歩6分',
-      description: '本駒込・六義園近くの個人カフェ。庭園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'asakusabashi': [
@@ -4570,17 +3797,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'kikukawa': [
-    {
-      name: '菊川 大横川親水公園 周辺カフェ',
-      genre: 'cafe',
-      area: '菊川駅から徒歩4分',
-      description: '菊川・大横川親水公園近くの個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'higashi-mukojima': [
@@ -4595,17 +3811,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'kiba': [
-    {
-      name: '木場 木場公園 東京都現代美術館 周辺カフェ',
-      genre: 'cafe',
-      area: '木場駅から徒歩6分',
-      description: '木場・木場公園・東京都現代美術館近くの個人カフェ。美術館鑑賞・公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'toyocho': [
@@ -4631,17 +3836,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'sumiyoshi': [
-    {
-      name: '住吉 猿江恩賜公園 周辺カフェ',
-      genre: 'cafe',
-      area: '住吉駅から徒歩4分',
-      description: '住吉・猿江恩賜公園近くの個人カフェ。公園散策後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   // ===========================================================
@@ -4759,16 +3953,5 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'takebashi': [
-    {
-      name: '竹橋 北の丸公園 武道館 周辺カフェ',
-      genre: 'cafe',
-      area: '竹橋駅から徒歩4分',
-      description: '竹橋・北の丸公園・日本武道館近くの個人カフェ。公園散策・観覧後の家族休憩に向くテーブル席中心の落ち着いた店。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 };

@@ -2121,14 +2121,6 @@ export const CHUNK_17: StationIndieMap = {
   ],
 
   'shin-kiba': [
-    {
-      name: '新木場 STUDIO COAST 周辺カフェ',
-      genre: 'cafe',
-      area: '新木場駅から徒歩6分',
-      description: '新木場の街角カフェ相当。サンドイッチやコーヒーが看板で、湾岸散策やイベント前後の休憩に向く。テーブル席メインで子連れも可。',
-      seatingType: ['table'],
-      priceLunch: '〜1,000円',
-    },
   ],
 
   'toyosu': [

@@ -291,16 +291,6 @@ export const CHUNK_2: StationIndieMap = {
 
   'hakusan': [
     {
-      name: '白山 アンヂェラス相当の老舗喫茶',
-      genre: 'cafe',
-      area: '白山駅から徒歩3分',
-      description: '白山通り沿いの昭和喫茶。ナポリタンやホットサンドの定番メニューが揃い、家族でゆっくり過ごせる。テーブル席中心。',
-      strollerOk: false,
-      kidsMenu: false,
-      seatingType: ['table'],
-      priceLunch: '〜1,000円',
-    },
-    {
       name: '白山 ぶどう亭',
       genre: 'yoshoku',
       area: '白山駅から徒歩4分',
@@ -348,14 +338,6 @@ export const CHUNK_2: StationIndieMap = {
       strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
-    {
-      name: '千石 ベーカリー トラスパレンテ相当の街パン',
-      genre: 'bakery',
-      area: '千石駅から徒歩3分',
-      description: '巣鴨寄りの個人ベーカリー。子供にも人気のサンドや惣菜パンが並び、テイクアウトでお散歩ランチに使える。',
-      seatingType: ['table'],
-      priceLunch: '〜1,000円',
-    },
   ],
 
   'myogadani': [
@@ -388,18 +370,6 @@ export const CHUNK_2: StationIndieMap = {
       popular: true,
     },
     {
-      name: '茗荷谷 cafe BACK ROOM相当の地元カフェ',
-      genre: 'cafe',
-      area: '茗荷谷駅から徒歩5分',
-      description: '住宅街の隠れ家カフェ。ベビーカー入店相談可で、サンドやプレートランチを家族で楽しめる。',
-      strollerOk: true,
-      kidsMenu: false,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
-    {
       name: '茗荷谷 焼肉 大昌園',
       genre: 'yakiniku',
       area: '茗荷谷駅から徒歩4分',
@@ -422,16 +392,6 @@ export const CHUNK_2: StationIndieMap = {
       seatingType: ['table'],
       priceLunch: '〜1,000円',
       popular: true,
-    },
-    {
-      name: '江戸川橋 椿屋珈琲店相当の老舗喫茶',
-      genre: 'cafe',
-      area: '江戸川橋駅から徒歩3分',
-      description: '神田川沿いの落ち着いた喫茶店。ナポリタンやサンドが揃い、テーブル席で家族でくつろげる。',
-      strollerOk: false,
-      kidsMenu: false,
-      seatingType: ['table'],
-      priceLunch: '〜2,000円',
     },
     {
       name: '江戸川橋 グリル満天星',
@@ -483,16 +443,6 @@ export const CHUNK_2: StationIndieMap = {
   ],
 
   'shin-otsuka': [
-    {
-      name: '新大塚 ロッキー相当の地元洋食',
-      genre: 'yoshoku',
-      area: '新大塚駅から徒歩3分',
-      description: '住宅街の小さな洋食店。ハンバーグやオムライスが手頃な価格で食べられ、家族客にも人気。テーブル席中心。',
-      strollerOk: false,
-      kidsMenu: false,
-      seatingType: ['table'],
-      priceLunch: '〜2,000円',
-    },
     {
       name: '新大塚 喫茶 ロザリオ',
       genre: 'cafe',
@@ -634,20 +584,6 @@ export const CHUNK_2: StationIndieMap = {
       privateRoom: true,
       seatingType: ['table', 'zashiki'],
       priceLunch: '〜5,000円',
-      popular: true,
-    },
-    {
-      name: '聚楽台 ぱんちょう相当の上野老舗',
-      genre: 'yoshoku',
-      area: '上野駅から徒歩2分',
-      description: '上野駅前の老舗洋食レストラン系列。ハンバーグやエビフライの定食が手頃で、お子様用の取り皿対応も柔軟。',
-      strollerOk: true,
-      kidsMenu: false,
-      stepFree: true,
-      seatingType: ['table'],
-      shareDish: true,
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
       popular: true,
     },
     {
@@ -872,16 +808,6 @@ export const CHUNK_2: StationIndieMap = {
   ],
 
   'tawaramachi': [
-    {
-      name: '元祖食品サンプル屋 田原町相当の老舗洋食',
-      genre: 'yoshoku',
-      area: '田原町駅から徒歩2分（合羽橋方面）',
-      description: '合羽橋道具街エリアの老舗洋食。ハンバーグやオムライスが手頃で、テーブル席で家族利用にも対応。',
-      strollerOk: false,
-      kidsMenu: false,
-      seatingType: ['table'],
-      priceLunch: '〜2,000円',
-    },
     {
       name: '合羽橋 珈琲アロマ',
       genre: 'cafe',
@@ -1108,16 +1034,6 @@ export const CHUNK_2: StationIndieMap = {
       priceLunch: '〜1,000円',
     },
     {
-      name: '入谷 食堂とだか相当の地元定食',
-      genre: 'washoku',
-      area: '入谷駅から徒歩4分',
-      description: '住宅街の地元和定食屋。煮魚や肉野菜炒め定食が手頃で、家族で気軽に使える。テーブル席中心。',
-      strollerOk: false,
-      kidsMenu: false,
-      seatingType: ['table'],
-      priceLunch: '〜1,000円',
-    },
-    {
       name: '入谷 韓国家庭料理 ハナ',
       genre: 'korean',
       area: '入谷駅から徒歩5分',
@@ -1168,16 +1084,6 @@ export const CHUNK_2: StationIndieMap = {
 
   'uguisudani': [
     {
-      name: '鶯谷 信濃路相当の24時間食堂',
-      genre: 'washoku',
-      area: '鶯谷駅から徒歩2分',
-      description: '昭和の食堂・酒場。煮込みや定食が手頃で、ランチタイムは家族客も。テーブル席中心。',
-      strollerOk: false,
-      kidsMenu: false,
-      seatingType: ['table'],
-      priceLunch: '〜1,000円',
-    },
-    {
       name: '鶯谷 笹乃雪',
       genre: 'washoku',
       area: '鶯谷駅から徒歩2分',
@@ -1222,19 +1128,6 @@ export const CHUNK_2: StationIndieMap = {
   // ===========================================================
 
   'kinshicho': [
-    {
-      name: 'スエヒロ館 錦糸町相当の老舗洋食',
-      genre: 'yoshoku',
-      area: '錦糸町駅から徒歩3分',
-      description: 'ステーキ・ハンバーグの老舗洋食店。お子様メニューがあり、テーブル席でベビーカー入店も対応してもらえる。',
-      strollerOk: true,
-      kidsMenu: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
     {
       name: 'ホルモン宮川 錦糸町本店',
       genre: 'yakiniku',
@@ -1394,16 +1287,6 @@ export const CHUNK_2: StationIndieMap = {
       strollerToSeat: true,
       priceLunch: '〜2,000円',
       popular: true,
-    },
-    {
-      name: '押上 もっこすラーメン相当の地元町中華',
-      genre: 'noodles',
-      area: '押上駅から徒歩5分',
-      description: '住宅街寄りの町中華。中華そばや餃子が手頃で、テーブル席で家族で利用しやすい。',
-      strollerOk: false,
-      kidsMenu: false,
-      seatingType: ['table', 'counter'],
-      priceLunch: '〜1,000円',
     },
   ],
 
@@ -2276,17 +2159,6 @@ export const CHUNK_2: StationIndieMap = {
   ],
 
   'toyosu': [
-    {
-      name: '豊洲市場 寿司大相当の市場海鮮',
-      genre: 'sushi',
-      area: '豊洲駅から徒歩15分（豊洲市場、ゆりかもめ市場前駅至近）',
-      description: '豊洲市場周辺の人気海鮮丼・寿司店。新鮮なネタで家族の特別ランチに。早朝〜昼営業中心、ベビーカー利用可。',
-      strollerOk: true,
-      kidsMenu: false,
-      seatingType: ['table', 'counter'],
-      priceLunch: '〜5,000円',
-      popular: true,
-    },
     {
       name: 'ららぽーと豊洲 個店レストラン',
       genre: 'others',

@@ -572,18 +572,6 @@ export const CHUNK_1: StationIndieMap = {
   ],
 
   'kokkai-gijidomae': [
-    {
-      name: '霞会館 系カフェ',
-      genre: 'cafe',
-      area: '国会議事堂前駅から徒歩5分',
-      description: '官庁街周辺の落ち着いたカフェ。週末は静かで、ベビーカーでもゆっくり過ごせる。ランチプレートが用意されている。',
-      strollerOk: true,
-      kidsMenu: false,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'nagatacho': [
@@ -653,18 +641,6 @@ export const CHUNK_1: StationIndieMap = {
       seatingType: ['table'],
       priceLunch: '〜2,000円',
     },
-    {
-      name: 'リトルマーメイド 麹町相当のベーカリーカフェ',
-      genre: 'bakery',
-      area: '麹町駅から徒歩2分',
-      description: 'ベーカリーカフェでパンとスープのセットなど子供も食べやすいメニュー。イートインスペースが広めでベビーカーOK。',
-      strollerOk: true,
-      kidsMenu: false,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜1,000円',
-    },
   ],
 
   'kudanshita': [
@@ -728,18 +704,6 @@ export const CHUNK_1: StationIndieMap = {
   ],
 
   'takebashi': [
-    {
-      name: '宮内庁三の丸尚蔵館 周辺カフェ',
-      genre: 'cafe',
-      area: '竹橋駅から徒歩3分（皇居東御苑方面）',
-      description: '皇居東御苑散策の途中に立ち寄れる落ち着いたカフェ。広い空間でベビーカーでも安心。',
-      strollerOk: true,
-      kidsMenu: false,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'suidobashi': [
@@ -870,16 +834,6 @@ export const CHUNK_1: StationIndieMap = {
       strollerToSeat: true,
       priceLunch: '〜5,000円',
       popular: true,
-    },
-    {
-      name: 'ヨシカミ 銀座相当の老舗洋食',
-      genre: 'yoshoku',
-      area: '銀座駅から徒歩6分',
-      description: '銀座エリアの老舗洋食。ハンバーグやエビフライなど王道メニューで子供にも好評。',
-      strollerOk: false,
-      kidsMenu: false,
-      seatingType: ['table'],
-      priceLunch: '〜3,500円',
     },
   ],
 
@@ -2882,16 +2836,6 @@ export const CHUNK_1: StationIndieMap = {
   ],
 
   'shimo-ochiai': [
-    {
-      name: '下落合 鯨食堂相当の和定食屋',
-      genre: 'washoku',
-      area: '下落合駅から徒歩4分',
-      description: '町の和定食屋。家族で気軽に利用できる。',
-      strollerOk: false,
-      kidsMenu: false,
-      seatingType: ['table'],
-      priceLunch: '〜1,000円',
-    },
   ],
 
   'nakai': [
@@ -4249,18 +4193,6 @@ export const CHUNK_1: StationIndieMap = {
   ],
 
   'fune-no-kagakukan': [
-    {
-      name: '船の科学館 周辺カフェ',
-      genre: 'cafe',
-      area: '船の科学館駅から徒歩3分',
-      description: 'お台場エリアのカフェ。子連れに優しい広さで、ベビーカーでも入店可。',
-      strollerOk: true,
-      kidsMenu: false,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'tokyo-international-cruise': [

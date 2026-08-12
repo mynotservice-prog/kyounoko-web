@@ -2009,19 +2009,6 @@ export const CHUNK_4: StationIndieMap = {
       priceLunch: '〜1,000円',
       popular: true,
     },
-    {
-      name: 'あらかわ遊園周辺カフェ',
-      genre: 'cafe',
-      area: '荒川遊園地前停留場から徒歩2分',
-      description: 'あらかわ遊園近くのカフェ。サンドやドリンクで子供のおやつ休憩にぴったり。遊園地帰りの家族でも入りやすい。',
-      strollerOk: true,
-      kidsMenu: false,
-      privateRoom: false,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜1,000円',
-    },
   ],
 
   'arakawa-itchumae': [

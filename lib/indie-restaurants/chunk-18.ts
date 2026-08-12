@@ -1239,17 +1239,6 @@ export const CHUNK_18: StationIndieMap = {
 
   'shiodome': [
     {
-      name: '汐留 シティーセンタービル ハーゲンダッツ系カフェ',
-      genre: 'sweets',
-      area: '汐留駅直結',
-      description: '汐留シティセンターのカフェ系列店。アイスクリームと軽食が家族のおやつに使いやすく、ベビーカー入店歓迎。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
-    {
       name: '汐留 タワーズ レストラン 汐留',
       genre: 'others',
       area: '汐留駅直結（パークホテル東京内）',
