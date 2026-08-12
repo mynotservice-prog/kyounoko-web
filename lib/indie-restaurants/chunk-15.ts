@@ -2113,48 +2113,8 @@ export const CHUNK_15: StationIndieMap = {
     },
   ],
 
-  'haneda-airport-t1': [
-    {
-      name: '羽田空港第1ターミナル 個人レストランフロア',
-      genre: 'others',
-      area: '羽田空港第1ターミナル駅直結',
-      description: '羽田空港第1ターミナルのレストランフロア。和食・洋食・カフェの個店が並び、ベビーカー入店可・キッズメニューがある店も多い。家族の旅行前後の食事に向く。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
-  ],
 
-  'haneda-airport-t2': [
-    {
-      name: '羽田空港第2ターミナル 個人レストランフロア',
-      genre: 'others',
-      area: '羽田空港第2ターミナル駅直結',
-      description: '羽田空港第2ターミナルのレストランフロア。和食・洋食・カフェの個店が並び、ベビーカー入店可・キッズメニューがある店も多い。展望デッキも近く家族の旅行前後に向く。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
-  ],
 
-  'haneda-airport-t3': [
-    {
-      name: '羽田空港第3ターミナル 個人レストランフロア',
-      genre: 'others',
-      area: '羽田空港第3ターミナル駅直結',
-      description: '羽田空港第3ターミナル（旧国際線）のレストランフロア。江戸小路の街並みを再現した個店が並び、家族の海外旅行前後の食事に向く。ベビーカー入店可。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-      popular: true,
-    },
-  ],
 
   // ===========================================================
   // 豊島区・文京区

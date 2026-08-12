@@ -2232,44 +2232,8 @@ export const CHUNK_17: StationIndieMap = {
   // 京急・羽田
   // ===========================================================
 
-  'haneda-airport-t1': [
-    {
-      name: '羽田空港第1ターミナル 個人 ボストン アンド メイン',
-      genre: 'others',
-      area: '羽田空港第1ターミナル駅直結（T1 5F）',
-      description: '羽田空港第1ターミナル5Fのアメリカンレストラン「ボストン アンド メイン」相当。シーフードチャウダーやハンバーガーが家族向きで、ベビーカー入店歓迎。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
-  ],
 
-  'haneda-airport-t2': [
-    {
-      name: '羽田空港第2ターミナル 個人 SPACE BREAD',
-      genre: 'cafe',
-      area: '羽田空港第2ターミナル駅直結（T2 4F）',
-      description: '羽田空港第2ターミナル4Fのベーカリーカフェ相当。サンドイッチやデニッシュが看板で、家族の搭乗前後の軽食に。テーブル席広めでベビーカー入店も可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
-  ],
 
-  'haneda-airport-t3': [
-    {
-      name: '羽田空港第3ターミナル 個人 すし処 江戸',
-      genre: 'sushi',
-      area: '羽田空港第3ターミナル駅直結（T3 江戸小路）',
-      description: '羽田空港第3ターミナル「江戸小路」エリアの寿司店相当。にぎりランチセットが家族向きで、テーブル席もあり子連れ対応も柔軟。',
-      seatingType: ['table', 'counter'],
-      priceLunch: '〜5,000円',
-    },
-  ],
 
   // ===========================================================
   // ベイエリア・有明

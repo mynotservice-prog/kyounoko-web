@@ -744,19 +744,6 @@ export const CHUNK_14: StationIndieMap = {
     },
   ],
 
-  'haneda-airport-t3': [
-    {
-      name: '羽田空港第3ターミナル 江戸小路 老舗個店',
-      genre: 'washoku',
-      area: '羽田空港第3ターミナル駅直結',
-      description: '羽田空港国際線ターミナルの江戸小路にある老舗和食・寿司店。出発前の家族の食事に向き、ベビーカー入店可・キッズメニューありの店も多い。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
-  ],
 
   'yukigaya-otsuka': [
     {

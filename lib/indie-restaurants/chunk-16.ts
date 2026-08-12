@@ -4001,47 +4001,8 @@ export const CHUNK_16: StationIndieMap = {
     },
   ],
 
-  'haneda-airport-t3': [
-    {
-      name: '羽田空港第3ターミナル 出国前個人カフェ',
-      genre: 'cafe',
-      area: '羽田空港第3ターミナル駅直結',
-      description: '羽田空港第3ターミナルの出発フロアの個人カフェ。サンドイッチ・パンケーキ・コーヒーがあり、フライト前の家族休憩に便利。ベビーカー入店可。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
-  ],
 
-  'haneda-airport-t1': [
-    {
-      name: '羽田空港第1ターミナル 6F マーケットプレイス 個店',
-      genre: 'others',
-      area: '羽田空港第1ターミナル駅直結',
-      description: '羽田空港第1ターミナル（JAL側）のレストランフロア。和食・洋食・カフェの個店があり、フライト前の家族昼食に便利。ベビーカー入店可。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
-  ],
 
-  'haneda-airport-t2': [
-    {
-      name: '羽田空港第2ターミナル 5F マーケットプレイス 個店',
-      genre: 'others',
-      area: '羽田空港第2ターミナル駅直結',
-      description: '羽田空港第2ターミナル（ANA側）のレストランフロア。和食・洋食・カフェの個店があり、フライト前の家族昼食に便利。ベビーカー入店可。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
-  ],
 
   'higashi-kitazawa': [
     {

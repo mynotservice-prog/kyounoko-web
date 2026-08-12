@@ -676,71 +676,329 @@ export const CHUNK_3: StationIndieMap = {
   ],
 
   'haneda-airport-t1': [
+    // 2026-08-12 全面差し替え。従来は「羽田 第1ターミナル 江戸小路 老舗」「てんやとは別の
+    // 天ぷら老舗 第1」のような実在しない仮置きの店名が入っていた（GSCで122クリック/28日の
+    // ページに架空の店を載せていた）。羽田空港公式サイト（tokyo-haneda.com）のレストラン検索
+    // から、実際の店名・フロア・予算・席数と、公式の「お子さまメニュー」タグを転記して置き換える。
+    // ロイヤルホスト・吉野家・天丼てんや・リンガーハット・スタバ・タリーズ・サブウェイ・
+    // PRONTO・むさしの森珈琲は station-restaurants.ts のチェーン側で出るため除外。
     {
-      name: '羽田 第1ターミナル 江戸小路 老舗',
-      genre: 'washoku',
-      area: '羽田空港第1ターミナル内',
-      description: '空港内の和食処。天丼・うな重・寿司ランチなど、出発前にしっかり食べたい家族向け。座敷ありの店もあり、乳児連れでも対応しやすい。',
-      strollerOk: true,
-      privateRoom: true,
-      seatingType: ['table', 'zashiki'],
-      strollerToSeat: true,
-      priceLunch: '〜3,500円',
-      popular: true,
+      name: '銀座ライオン 羽田マーケットプレイス店',
+      genre: 'yoshoku',
+      area: '羽田空港第1ターミナル 5F マーケットプレイス（セキュリティチェック前）',
+      description:
+        '洋食中心のビヤホール。公式にお子さまメニューの表示あり。160席とターミナル内で最も広い部類で、搭乗前に家族でゆっくり食べられる。ランチ1,500〜2,500円。',
+      kidsMenu: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
     },
     {
-      name: 'てんやとは別の天ぷら老舗 第1',
-      genre: 'tempura',
-      area: '羽田空港第1ターミナル レストランフロア',
-      description: '空港内の老舗天ぷら専門店。サクサクの天丼・天ぷら定食で子どもにも食べやすい。出発前の落ち着いた食事に向く。',
-      privateRoom: false,
+      name: '銀座ライオン 羽田空港店',
+      genre: 'yoshoku',
+      area: '羽田空港第1ターミナル 1F 到着ロビー（セキュリティチェック前）',
+      description:
+        '到着ロビーにある洋食＆ビヤホール。公式にお子さまメニューの表示あり。てこねハンバーグなど子どもと分けやすい洋食が中心。112席。1,000〜1,500円。',
+      kidsMenu: true,
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'カフェ＆ビヤレストラン 宮',
+      genre: 'yoshoku',
+      area: '羽田空港第1ターミナル 2F 出発ロビー（セキュリティチェック前）',
+      description:
+        'ステーキ宮の空港店。公式にお子さまメニューの表示あり。ハンバーグは取り分けやすく、出発ロビー直結で搭乗前に寄りやすい。86席。予算2,000円。',
+      kidsMenu: true,
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '黄金色の豚',
+      genre: 'tonkatsu',
+      area: '羽田空港第1ターミナル 4F マーケットプレイス（セキュリティチェック前）',
+      description:
+        'とんかつ専門の和食店。公式にお子さまメニューの表示あり。ご飯と汁物が付く定食で取り分けもしやすい。69席。予算2,000〜3,000円。',
+      kidsMenu: true,
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: '中華料理 彩鳳',
+      genre: 'chinese',
+      area: '羽田空港第1ターミナル 3F マーケットプレイス（セキュリティチェック前）',
+      description:
+        '中華料理店。公式にお子さまメニューの表示あり。点心やアラカルトを数品頼んでシェアする使い方ができる。予算1,800円。',
+      kidsMenu: true,
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '寿司田 羽田空港店',
+      genre: 'sushi',
+      area: '羽田空港第1ターミナル 5F マーケットプレイス（セキュリティチェック前）',
+      description:
+        '江戸前寿司の店。公式にお子さまメニューの表示あり。64席でテーブル席もあり、価格帯は1,200円台から選べる。',
+      kidsMenu: true,
       seatingType: ['table', 'counter'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'LDH kitchen THE TOKYO HANEDA',
+      genre: 'yoshoku',
+      area: '羽田空港第1ターミナル 5F THE HANEDA HOUSE（セキュリティチェック前）',
+      description:
+        '和洋・カフェを兼ねたエンターテインメントレストラン。公式にお子さまメニューの表示あり。予算1,500〜2,000円。',
+      kidsMenu: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'らぁめん 本田麺業 羽田空港第1ターミナル店',
+      genre: 'noodles',
+      area: '羽田空港第1ターミナル B1F Sora chika フードコート（セキュリティチェック前）',
+      description:
+        'フードコート内のラーメン店。公式にお子さまメニューの表示あり。フードコートなのでベビーカーのまま席を取りやすく、他店と別々に頼める。1,100〜2,000円。',
+      kidsMenu: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '洋食屋 銀座グリルカーディナル エクスプレス',
+      genre: 'yoshoku',
+      area: '羽田空港第1ターミナル B1F Sora chika フードコート（セキュリティチェック前）',
+      description:
+        'オムライスのフードコート店。公式にお子さまメニューの表示あり。卵料理なので小さい子でも食べやすく、フードコートで席を確保しやすい。予算1,500円。',
+      kidsMenu: true,
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'カレースマイル',
+      genre: 'curry',
+      area: '羽田空港第1ターミナル 1F 到着ロビー（セキュリティチェック前）',
+      description:
+        'カレー専門店。公式にお子さまメニューの表示あり。到着ロビーにあり、迎えの前後に寄りやすい。予算1,400円。',
+      kidsMenu: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '町田商店 元祖油堂 長岡食堂',
+      genre: 'noodles',
+      area: '羽田空港第1ターミナル 3F テラスレストラン南（セキュリティチェック前）',
+      description:
+        '家系ラーメン・中華そば・油そばの複合店。公式にお子さまメニューの表示あり。930円からと空港内では入りやすい価格帯。',
+      kidsMenu: true,
+      seatingType: ['table', 'counter'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'Sora chika（フードコート）',
+      genre: 'others',
+      area: '羽田空港第1ターミナル B1F マーケットプレイス（セキュリティチェック前）',
+      description:
+        '洋食・とんかつ・ラーメン・そば・海鮮丼・サラダ・ジェラートが並ぶフードコート。席は共用なので、子どもと大人で別々の店から頼んで同じ席で食べられる。1,000〜3,000円。',
+      seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜3,500円',
     },
   ],
 
   'haneda-airport-t2': [
+    // 2026-08-12 全面差し替え（T1と同じ理由）。羽田空港公式のレストラン検索から、
+    // 公式に「お子さまメニュー」タグが立っている店を実名で転記した。
+    // とんかつ和幸・スターバックスはチェーン側で出るため除外。
     {
-      name: '羽田 第2ターミナル 江戸前寿司',
-      genre: 'sushi',
-      area: '羽田空港第2ターミナル内',
-      description: '空港内の本格寿司カウンター。テーブル席もあり、お子様用の握りやちらしを相談可。出発前のしっかりランチに使える。',
-      privateRoom: false,
-      seatingType: ['table', 'counter'],
-      priceLunch: '〜5,000円',
+      name: 'エアポートグリル＆バール',
+      genre: 'yoshoku',
+      area: '羽田空港第2ターミナル 4F マーケットプレイス（セキュリティチェック前）',
+      description:
+        'ハンバーグ中心の洋食店。公式にお子さまメニューの表示あり。滑走路側のマーケットプレイスにあり、飛行機を見ながら食べられる。予算2,000円。',
+      kidsMenu: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
     },
     {
-      name: '羽田 第2 ご当地ラーメン店',
+      name: '銀座木屋 羽田空港第2ターミナル店',
       genre: 'noodles',
-      area: '羽田空港第2ターミナル レストランエリア',
-      description: '日本各地のご当地ラーメンを集めたエリア内の人気店。子ども用の取り分け麺や薄味対応の店もあり、家族連れに人気。',
-      strollerOk: true,
-      seatingType: ['table', 'counter'],
+      area: '羽田空港第2ターミナル 3F テラスレストラン（セキュリティチェック前）',
+      description:
+        'うどん・そば・丼の和食店。公式にお子さまメニューの表示あり。うどんは取り分けやすく、900〜1,500円と空港内では入りやすい。52席。',
+      kidsMenu: true,
+      seatingType: ['table'],
       shareDish: true,
       priceLunch: '〜2,000円',
-      popular: true,
+    },
+    {
+      name: '沼津魚がし鮨 羽田空港第2ターミナル店',
+      genre: 'sushi',
+      area: '羽田空港第2ターミナル 4F マーケットプレイス（セキュリティチェック前）',
+      description:
+        '沼津直送の寿司店。公式にお子さまメニューの表示あり。42席。予算2,000〜3,000円。',
+      kidsMenu: true,
+      seatingType: ['table', 'counter'],
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: '南国酒家 羽田空港店',
+      genre: 'chinese',
+      area: '羽田空港第2ターミナル 4F マーケットプレイス（セキュリティチェック前）',
+      description:
+        '中国料理店。公式にお子さまメニューの表示あり。88席と広く、取り分け前提の中華なので家族で使いやすい。1,500〜2,000円前後。',
+      kidsMenu: true,
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'てんぷら・そば 門左衛門',
+      genre: 'tempura',
+      area: '羽田空港第2ターミナル 3F テラスレストラン（セキュリティチェック前）',
+      description:
+        '天ぷらとそばの和食店。公式にお子さまメニューの表示あり。36席と小ぶり。予算1,200円。',
+      kidsMenu: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'ドンサバティーニ 羽田空港店',
+      genre: 'italian',
+      area: '羽田空港第2ターミナル 4F マーケットプレイス（セキュリティチェック前）',
+      description:
+        'イタリア料理店。公式にお子さまメニューの表示あり。パスタやピッツァは家族でシェアしやすい。53席。1,000〜3,000円。',
+      kidsMenu: true,
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: '餃子とタンメン 天',
+      genre: 'chinese',
+      area: '羽田空港第2ターミナル 1F マーケットプレイス（セキュリティチェック前）',
+      description:
+        'タンメンと餃子の店。公式にお子さまメニューの表示あり。餃子は取り分けやすい。予算1,300円。',
+      kidsMenu: true,
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'アミーチデルテ 羽田空港店',
+      genre: 'cafe',
+      area: '羽田空港第2ターミナル 5F マーケットプレイス（セキュリティチェック前）',
+      description:
+        'パンケーキ・パスタ・パフェのカフェ。公式にお子さまメニューの表示あり。予算は公式に記載が無いため要確認。',
+      kidsMenu: true,
+      seatingType: ['table'],
+    },
+    {
+      name: 'カステルモーラ 羽田空港店',
+      genre: 'italian',
+      area: '羽田空港第2ターミナル 5F マーケットプレイス（セキュリティチェック前）',
+      description:
+        'イタリアンレストラン。公式にお子さまメニューの表示あり。1,500〜5,000円と幅があるので、昼は軽めの構成にしたい。',
+      kidsMenu: true,
+      seatingType: ['table'],
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: '羽田エクセルホテル東急 カフェ＆ダイニング フライヤーズテーブル',
+      genre: 'yoshoku',
+      area: '羽田空港第2ターミナル 2F 国内線出発ロビー（セキュリティチェック前）',
+      description:
+        'ホテル併設のカフェ＆ダイニング。公式にお子さまメニューの表示あり。ランチはアラカルトとコースがあり1,500円〜。ホテル側の設備も使える。',
+      kidsMenu: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'クリスピー・クリーム・ドーナツ 羽田空港第2ターミナル店',
+      genre: 'sweets',
+      area: '羽田空港第2ターミナル B1F マーケットプレイス（セキュリティチェック前）',
+      description:
+        'ドーナツ店。公式にお子さまメニューの表示があり、取扱い商品にキッズドリンクの記載もある。300〜600円と軽く寄れる。',
+      kidsMenu: true,
+      seatingType: ['table'],
+      priceLunch: '〜1,000円',
     },
   ],
 
   'haneda-airport-t3': [
+    // 2026-08-12 全面差し替え（T1・T2と同じ理由）。羽田空港公式のレストラン検索から
+    // セキュリティチェック前（見送り・食事だけの利用でも入れる）の店を実名で転記した。
+    // モスバーガー・吉野家・タリーズ・プロントはチェーン側で出るため除外。
     {
-      name: '羽田 第3ターミナル EDO MARKET PLACE 内 個人店',
-      genre: 'washoku',
-      area: '羽田空港第3ターミナル EDO MARKET PLACE',
-      description: '江戸の街並みを再現した飲食街にある和食店。寿司・うどん・天ぷらなどジャンル別に子ども向けメニューも対応。出発前の記念食事に好適。',
-      strollerOk: true,
-      kidsMenu: false,
+      name: '帆のる ぷれみあ Air HANEDA',
+      genre: 'others',
+      area: '羽田空港第3ターミナル 4F 江戸小路（セキュリティチェック前）',
+      description:
+        'ラーメン・カレー・ハンバーグ・オムライス・海鮮丼などを1店で出す複合店。公式にお子さまメニューの表示あり。家族で食べたいものが割れても1店で収まる。990円〜。',
+      kidsMenu: true,
       seatingType: ['table'],
-      priceLunch: '〜3,500円',
-      popular: true,
+      shareDish: true,
+      priceLunch: '〜2,000円',
     },
     {
-      name: '羽田 第3 江戸食堂街 ラーメン店',
-      genre: 'noodles',
-      area: '羽田空港第3ターミナル EDO MARKET PLACE',
-      description: 'EDO MARKET PLACEのラーメン店。あっさり醤油・濃厚味噌など選べ、子どもにも対応。テーブル席でベビーカー対応相談可。',
-      strollerOk: true,
-      seatingType: ['table', 'counter'],
+      name: '広島焼き お好み焼き 町や。',
+      genre: 'teppan',
+      area: '羽田空港第3ターミナル 4F 江戸小路（セキュリティチェック前）',
+      description:
+        'お好み焼き・鉄板料理の店。1枚を家族で分けやすい。鉄板があるので低年齢の子は席の位置に注意。予算1,200円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'AGRO＠フルーツパーラー',
+      genre: 'sweets',
+      area: '羽田空港第3ターミナル 4F 江戸小路（セキュリティチェック前）',
+      description:
+        'フレッシュフルーツのパーラー。パフェやパンケーキのほかブリトーなど軽食もあり、出発待ちの休憩に使える。予算880円。',
+      seatingType: ['table'],
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: 'おにぎり こんが 羽田空港第3ターミナル店',
+      genre: 'washoku',
+      area: '羽田空港第3ターミナル 4F 江戸小路（セキュリティチェック前）',
+      description:
+        'おにぎりと味噌汁の店。子どもが食べきれる量に調整しやすく、機内や移動中に持ち込みやすい。500〜1,000円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: 'SPAGHETTERIA VAVnova',
+      genre: 'italian',
+      area: '羽田空港第3ターミナル 4F 江戸小路（セキュリティチェック前）',
+      description:
+        'スパゲッティ専門店。取り分けやすい一皿もの中心。予算2,000〜2,500円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: 'PLANETARIUM Starry Cafe',
+      genre: 'cafe',
+      area: '羽田空港第3ターミナル 5F TOKYO POPTOWN（セキュリティチェック前）',
+      description:
+        'プラネタリウム併設のカフェ。フライトまで時間があるときの時間つぶしに向く。予算1,500〜2,000円。',
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'テイルウィンド',
+      genre: 'yoshoku',
+      area: '羽田空港第3ターミナル 3F 出発ロビー（セキュリティチェック前）',
+      description:
+        'モーニングブッフェと日替わりランチの和洋レストラン。ブッフェは子どもの分を取り分けやすい。予算2,000円。',
+      seatingType: ['table'],
+      shareDish: true,
       priceLunch: '〜2,000円',
     },
   ],
