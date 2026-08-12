@@ -207,6 +207,96 @@ export const CHUNK_35B: StationIndieMap = {
   // 新百合ヶ丘駅（川崎市麻生区）
   // ===========================================================
   'shin-yurigaoka': [
+    // ▼ 2026-08-12追加: 新百合丘オーパの公式ショップ一覧（opa-club.com/shinyurigaoka/shop/）
+    //   から、フロア／カテゴリを転記した。新百合ヶ丘駅直結。飲食はB1Fに集まる。
+    //   公式に予算・席数の掲載が無いため priceLunch は入れていない。
+    //   丸亀製麺・コメダ珈琲店はチェーン側で出るため除外。
+    {
+      name: '梅丘寿司の美登利 新百合丘オーパ店',
+      genre: 'sushi',
+      area: '新百合ヶ丘駅直結（新百合丘オーパ B1F）',
+      description:
+        '寿司店。玉子やかっぱ巻きなど子どもが食べられるネタを単品で頼める。B1Fの飲食フロアにある。',
+      seatingType: ['table', 'counter'],
+    },
+    {
+      name: 'イタリアンダイニング ドナ 新百合丘オーパ店',
+      genre: 'italian',
+      area: '新百合ヶ丘駅直結（新百合丘オーパ B1F）',
+      description:
+        'パスタ・ピッツァのイタリアン。ピッツァは家族でシェアしやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'どうとんぼり神座 新百合丘オーパ店',
+      genre: 'noodles',
+      area: '新百合ヶ丘駅直結（新百合丘オーパ B1F）',
+      description:
+        '白菜の甘みが出たスープのラーメン店。辛くないので子どもにも取り分けやすい。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: 'Soup Stock Tokyo 新百合丘オーパ店',
+      genre: 'cafe',
+      area: '新百合ヶ丘駅直結（新百合丘オーパ B1F）',
+      description:
+        'スープ専門店。具を選べてスプーンで食べられるので、離乳食が終わったばかりの子にも合わせやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'Café&Meal MUJI 新百合丘オーパ店',
+      genre: 'cafe',
+      area: '新百合ヶ丘駅直結（新百合丘オーパ 3F）',
+      description:
+        'デリとカフェ。並んだ惣菜から選ぶ形式なので、子どもが食べられるものだけ取れる。無印良品と同じ3Fにある。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'ディーン&デルーカ カフェ 新百合丘オーパ店',
+      genre: 'cafe',
+      area: '新百合ヶ丘駅直結（新百合丘オーパ 1F）',
+      description:
+        'カフェ・ベーカリー。パンやデリを買って公園へ移動する使い方もできる。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'グランディール 新百合丘オーパ店',
+      genre: 'bakery',
+      area: '新百合ヶ丘駅直結（新百合丘オーパ B1F）',
+      description:
+        'ベーカリー。子どもが食べられる分だけ選べて、移動中にも持ち込みやすい。',
+      shareDish: true,
+    },
+    {
+      name: '海苔弁いちのや 新百合丘オーパ店',
+      genre: 'washoku',
+      area: '新百合ヶ丘駅直結（新百合丘オーパ B1F）',
+      description:
+        '海苔弁のテイクアウト店。白飯中心なので子どもに分けやすく、公園などへ持ち出せる。',
+      shareDish: true,
+    },
+    {
+      name: 'クリスピー・クリーム・ドーナツ 新百合丘オーパ店',
+      genre: 'sweets',
+      area: '新百合ヶ丘駅直結（新百合丘オーパ B1F）',
+      description:
+        'ドーナツ店。1個から買えて、食事が進まない子との休憩に使える。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '銀座コージーコーナー 新百合丘オーパ店',
+      genre: 'sweets',
+      area: '新百合ヶ丘駅直結（新百合丘オーパ B1F）',
+      description:
+        'ケーキ・洋菓子の店。買って持ち帰れるので、外食が難しい日の代替になる。',
+      shareDish: true,
+    },
     {
       name: '京町家 新百合ヶ丘店',
       genre: 'washoku',

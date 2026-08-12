@@ -41,6 +41,122 @@ export const CHUNK_15: StationIndieMap = {
   ],
 
   'otemachi': [
+    // ▼ 2026-08-12追加: 大手町プレイス ショップ&レストランの公式店舗案内
+    //   （otemachi-place.jp/shop/）から、フロア・区画番号／カテゴリを転記した。大手町駅直結。
+    //   従来この駅には「大手町プレイス レストランフロア」「OOTEMORI 地下飲食フロア」という
+    //   店名でない仮置きが2件入っていた。実店舗で置き換える。
+    //   公式に「101／Bulls Tokyo（休業中）」と表示がある店は掲載しない。
+    //   タリーズ・スターバックスはチェーン側で出るため除外。
+    //   ※大手町はオフィス街で、各店に子連れ向け設備の公式表示は無い。ここでは
+    //     「ランチ営業があり取り分けやすいか」だけを判断材料として書いている。
+    {
+      name: '出汁しゃぶ おばんざい おかか東京',
+      genre: 'washoku',
+      area: '大手町駅直結（大手町プレイス 2F 201）',
+      description:
+        '出汁しゃぶとおばんざいの和食店。おばんざいは少量ずつ選べるので、子どもが食べられるものを取りやすい。鍋は熱いので低年齢の子は席の位置に注意。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '大手町 浅田',
+      genre: 'washoku',
+      area: '大手町駅直結（大手町プレイス 2F 205）',
+      description:
+        '日本料理の店。定食・御膳形式なら白飯と汁物を子どもに分けやすい。落ち着いた店なので混雑時間は避けたい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '福園 大手町プレイス店',
+      genre: 'chinese',
+      area: '大手町駅直結（大手町プレイス 1F 112）',
+      description:
+        '中華料理店。麺・飯ものがあり取り分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '豚屋鳥山 大手町プレイス店',
+      genre: 'washoku',
+      area: '大手町駅直結（大手町プレイス 1F 109）',
+      description:
+        '豚肉定食の店。ご飯と汁物が付く定食形式で、白飯を子どもに分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'たけろくらーめん 大手町プレイス店',
+      genre: 'noodles',
+      area: '大手町駅直結（大手町プレイス 1F 104）',
+      description:
+        'ラーメンの店。麺は短く切って子どもに分けやすい。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: '干物食堂 越後屋金四郎 大手町プレイス店',
+      genre: 'washoku',
+      area: '大手町駅直結（大手町プレイス 1F 111）',
+      description:
+        '干物の定食店。焼き魚とご飯・汁物の組み合わせで、子どもへの取り分けがしやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'CRISP SALAD WORKS 大手町プレイス店',
+      genre: 'cafe',
+      area: '大手町駅直結（大手町プレイス 1F 107）',
+      description:
+        '好みの具材を選ぶカスタムサラダの店。子どもが食べられるものだけ選べる。テイクアウトもできる。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'ロイヤルココナッツガーデン 大手町プレイス店',
+      genre: 'asian',
+      area: '大手町駅直結（大手町プレイス 1F 105）',
+      description:
+        'アジアン料理の店。辛くない一皿ものも選べるので、辛さの可否は頼むときに伝えたい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'タイ料理 チャンロイ kaaw 大手町プレイス店',
+      genre: 'asian',
+      area: '大手町駅直結（大手町プレイス 1F 110）',
+      description:
+        'タイ料理の店。ガパオやカオマンガイなど一皿もの中心。辛さの調整可否は来店時に確認を。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'OSTERIA DELLA CARNE L’ENOCANTO',
+      genre: 'italian',
+      area: '大手町駅直結（大手町プレイス B1 B101）',
+      description:
+        '肉料理のイタリアン。パスタは取り分けやすい。地下1Fのレストランエリアにある。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'カラオラ 大手町プレイス店',
+      genre: 'french',
+      area: '大手町駅直結（大手町プレイス B1 B102）',
+      description:
+        'スペイン料理の店。パエリアなど取り分け前提の料理がある。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'アール・ド・ヴィーヴル 大手町プレイス店',
+      genre: 'french',
+      area: '大手町駅直結（大手町プレイス B1 B103）',
+      description:
+        'ネオビストロ。フレンチだがカジュアルな業態で、ランチは取り分けやすい構成。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
   ],
 
   'hanzomon': [
