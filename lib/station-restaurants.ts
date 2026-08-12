@@ -15,6 +15,9 @@
  */
 
 import { TOKYO_STATIONS, type TokyoStation } from './tokyo-stations';
+import { KANSAI_STATIONS } from './kansai-stations';
+import { KANAGAWA_STATIONS } from './kanagawa-stations';
+import { SAICHI_STATIONS } from './saitama-chiba-stations';
 
 export type ChainCategory =
   | 'family-restaurant'  // ファミレス
@@ -1477,20 +1480,118 @@ export const STATION_CHAIN_MAPPING: Record<string, string[]> = {
 };
 
 /**
+ * チェーン付与ロジックが必要とする駅情報の最小形。
+ * 東京・関西・神奈川・埼玉千葉の駅型はいずれもこの形を満たす。
+ */
+export type StationForChains = {
+  slug: string;
+  name: string;
+  scale: 'terminal' | 'major' | 'minor';
+};
+
+/** 駅slug → 駅。23区外（関西・神奈川・埼玉千葉）も含めた全駅を引ける。 */
+const STATION_BY_SLUG: ReadonlyMap<string, StationForChains> = new Map(
+  [
+    ...TOKYO_STATIONS,
+    ...KANSAI_STATIONS,
+    ...KANAGAWA_STATIONS,
+    ...SAICHI_STATIONS,
+  ].map((s) => [s.slug, s] as const),
+);
+
+/** 駅slug → 関西の駅かどうか。関東限定チェーンの除外に使う。 */
+const KANSAI_STATION_SLUGS: ReadonlySet<string> = new Set(
+  KANSAI_STATIONS.map((s) => s.slug),
+);
+
+/**
+ * 関西には（ほぼ）出店していないチェーン。ubiquity 自動付与から除外する。
+ *
+ * 2026-08-12 に公式店舗一覧・店舗数集計で確認した実態：
+ * - jonathan（ジョナサン）… 関東圏のみ。関西は0店。
+ * - denny-s（デニーズ）… 大阪府7店のみ、京都・兵庫は0店（兵庫は撤退済み）。
+ * - hidakaya（日高屋）… 首都圏＋茨城のみ。関西は0店。
+ * - tenya（天丼てんや）… 大阪府4店のみ、京都・兵庫はほぼ無し。
+ * - ichiban（魚べい）… 大阪府2店（寝屋川・東大阪）のみ。
+ * - fujiya-restaurant（不二家レストラン）… 大阪府3店（豊中・茨木・東大阪）のみ。
+ * - musashino-mori-coffee（むさしの森珈琲）… 関西は大阪1店・兵庫1店のみ。
+ * - excelsior（エクセルシオールカフェ）… 大阪府4店のみで駅前の蓋然性が低い。
+ *
+ * 「府県内に数店ある」程度では「駅から徒歩5-10分圏内にある蓋然性が高い」とは言えないため、
+ * 一律付与の対象からは外す。
+ */
+const KANTO_ONLY_CHAIN_SLUGS: ReadonlySet<string> = new Set([
+  'jonathan',
+  'denny-s',
+  'hidakaya',
+  'tenya',
+  'ichiban',
+  'fujiya-restaurant',
+  'musashino-mori-coffee',
+  'excelsior',
+]);
+
+/**
+ * 明示マッピングを持たないが ubiquity 自動付与の対象にする駅slug。
+ *
+ * STATION_CHAIN_MAPPING は23区の駅だけを列挙しているため、大宮・新横浜・梅田のような
+ * 23区外の駅は「チェーン店0店」のまま公開されていた（見出しでは「ファミレス・カフェ・
+ * チェーン店…全項目チェックしました」と約束しているのに中身が空、という状態）。
+ *
+ * 対象は terminal / major の駅と、下記 URBAN_MINOR_STATION_SLUGS に挙げた市街地の minor 駅。
+ * それ以外の minor（こどもの国・八景島・蹴上・万博記念公園・片瀬江ノ島など観光地/公園の駅）は
+ * 定番チェーンが徒歩圏にある前提が成り立たないので対象外にする。
+ */
+const URBAN_MINOR_STATION_SLUGS: readonly string[] = [
+  // 埼玉・千葉
+  'kita-urawa', // 北浦和
+  'nishi-kawaguchi', // 西川口
+  // 神奈川（住宅地・市街地の駅。観光地の 片瀬江ノ島/八景島/こどもの国 は含めない）
+  'mukogaoka-yuen', // 向ヶ丘遊園
+  'yokodai', // 洋光台
+  'yokohama-nakayama', // 中山
+  'futako-shinchi', // 二子新地
+  // 関西（オフィス街・商店街の駅。観光地/公園の 蹴上・万博記念公園・大阪城公園・
+  // 枚方公園・トレードセンター前・計算科学センター・園部・宝ケ池・梅小路京都西・
+  // 大阪港・須磨海浜公園 は含めない）
+  'osaka-fukushima', // 福島
+  'osaka-nakazakicho', // 中崎町
+  'osaka-ogimachi', // 扇町
+  'bentencho', // 弁天町
+  'higobashi', // 肥後橋
+  'ebisucho', // 恵美須町
+  'shin-kanaoka', // 新金岡
+  'kyoto-kitaoji', // 北大路
+  'kyoto-kitayama', // 北山
+  'rokujizo', // 六地蔵
+  'kobe-rokko', // 六甲
+  'kobe-okamoto', // 岡本
+  'suma', // 須磨
+];
+
+const UBIQUITY_FALLBACK_STATION_SLUGS: ReadonlySet<string> = new Set([
+  ...[...KANSAI_STATIONS, ...KANAGAWA_STATIONS, ...SAICHI_STATIONS]
+    .filter((s) => s.scale === 'terminal' || s.scale === 'major')
+    .map((s) => s.slug),
+  ...URBAN_MINOR_STATION_SLUGS,
+]);
+
+/**
  * 指定駅slugの周辺チェーン店をChainオブジェクト配列で取得。
  *
  * @param stationSlug - 駅のslug（例: 'shibuya'）
- * @returns 該当駅周辺のチェーン店配列。マッピングが無い駅は空配列。
+ * @returns 該当駅周辺のチェーン店配列。マッピングも自動付与対象も無い駅は空配列。
  */
 export function getChainsForStation(stationSlug: string): Chain[] {
   const explicit = STATION_CHAIN_MAPPING[stationSlug];
-  if (!explicit) return [];
+  if (!explicit && !UBIQUITY_FALLBACK_STATION_SLUGS.has(stationSlug)) return [];
   // 明示マッピングに加え、ubiquity で全駅／主要駅に自動付与してランチ選択肢を底上げする。
   //  - 'common'     … ほぼどの駅周辺にもある定番チェーン → マッピング済み全駅に付与
   //  - 'major-only' … ターミナル・主要駅中心のチェーン → terminal/major 駅に付与
   // ※駅周辺の店舗有無は変動するため、サイト上は「事前確認推奨」の前提で表示する。
-  const scale = TOKYO_STATIONS.find((s) => s.slug === stationSlug)?.scale;
-  const slugs = new Set(explicit);
+  const scale = STATION_BY_SLUG.get(stationSlug)?.scale;
+  const isKansai = KANSAI_STATION_SLUGS.has(stationSlug);
+  const slugs = new Set(explicit ?? []);
   for (const c of CHAINS) {
     if (c.ubiquity === 'common') {
       slugs.add(c.slug);
@@ -1502,6 +1603,7 @@ export function getChainsForStation(stationSlug: string): Chain[] {
     }
   }
   return [...slugs]
+    .filter((s) => !(isKansai && KANTO_ONLY_CHAIN_SLUGS.has(s)))
     .map((s) => CHAIN_BY_SLUG.get(s))
     .filter((c): c is Chain => c !== undefined);
 }
@@ -1561,11 +1663,14 @@ export function getStrollerFriendlyChains(stationSlug: string): Chain[] {
 
 /**
  * 駅情報を含めて取得するヘルパー。SEO/UIで駅情報と一緒に表示する用。
+ *
+ * 23区外（関西・神奈川・埼玉千葉）の駅も引ける。以前は TOKYO_STATIONS しか見ておらず、
+ * 大宮・新横浜・梅田のような駅は null になって「チェーン店0店」で公開されていた。
  */
 export function getStationWithChains(
   stationSlug: string,
-): { station: TokyoStation; chains: Chain[] } | null {
-  const station = TOKYO_STATIONS.find((s) => s.slug === stationSlug);
+): { station: StationForChains; chains: Chain[] } | null {
+  const station = STATION_BY_SLUG.get(stationSlug);
   if (!station) return null;
   return {
     station,
