@@ -154,6 +154,115 @@ export const CHUNK_35C: StationIndieMap = {
   // 茅ヶ崎駅（茅ヶ崎市）
   // ===========================================================
   'chigasaki': [
+    // ▼ 2026-08-12追加: ラスカ茅ヶ崎の公式フロアガイド
+    //   （jryscc.co.jp/lusca/chigasaki/floorguide/category.php?category=4）から
+    //   フロア／ジャンルを転記した。茅ヶ崎駅直結。飲食は6Fに集まる。
+    //   公式に予算・席数の掲載が無いため priceLunch は入れていない。
+    //   天丼てんや・丸亀製麺・スターバックス・ケンタッキー・タリーズはチェーン側で出るため除外。
+    {
+      name: '和ごはんとカフェ chawan ラスカ茅ヶ崎店',
+      genre: 'washoku',
+      area: '茅ヶ崎駅直結（ラスカ茅ヶ崎 6F）',
+      description:
+        '定食とカフェを兼ねた和食店。ご飯と汁物が付く定食形式で取り分けやすく、食後にそのままカフェ利用もできる。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'いしがまやハンバーグ ラスカ茅ヶ崎店',
+      genre: 'yoshoku',
+      area: '茅ヶ崎駅直結（ラスカ茅ヶ崎 6F）',
+      description:
+        '石窯で仕上げるハンバーグの店。ハンバーグは子どもと分けやすい定番。熱い鉄板で出る形式なので低年齢の子は席の位置に注意。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '鎌倉かつ亭 あら珠 ラスカ茅ヶ崎店',
+      genre: 'tonkatsu',
+      area: '茅ヶ崎駅直結（ラスカ茅ヶ崎 6F）',
+      description:
+        'とんかつの店。ご飯・キャベツ・味噌汁が付く定食形式で子どもへの取り分けがしやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'すしみさき ラスカ茅ヶ崎店',
+      genre: 'sushi',
+      area: '茅ヶ崎駅直結（ラスカ茅ヶ崎 6F）',
+      description:
+        '寿司店。玉子やかっぱ巻きなど子どもが食べられるネタを単品で頼める。',
+      seatingType: ['table', 'counter'],
+    },
+    {
+      name: '餃子の王様 龍吟 ラスカ茅ヶ崎店',
+      genre: 'chinese',
+      area: '茅ヶ崎駅直結（ラスカ茅ヶ崎 6F）',
+      description:
+        '中華料理店。餃子やチャーハンは取り分けやすい。6Fの飲食フロアにある。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '快飛 ラスカ茅ヶ崎店',
+      genre: 'washoku',
+      area: '茅ヶ崎駅直結（ラスカ茅ヶ崎 6F）',
+      description:
+        '地魚・しらす料理の和食店。茅ヶ崎らしいしらす丼は白飯を子どもに分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '信州そば処 そじ坊 ラスカ茅ヶ崎店',
+      genre: 'noodles',
+      area: '茅ヶ崎駅直結（ラスカ茅ヶ崎 6F）',
+      description:
+        '信州そばの店。そばは短く切って子どもに分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '果実園リーベル ラスカ茅ヶ崎店',
+      genre: 'sweets',
+      area: '茅ヶ崎駅直結（ラスカ茅ヶ崎 3F）',
+      description:
+        'フルーツパーラー。パフェやフルーツサンドがあり、食事が進まない子との休憩に使える。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '和カフェ Tsumugi ラスカ茅ヶ崎店',
+      genre: 'cafe',
+      area: '茅ヶ崎駅直結（ラスカ茅ヶ崎 4F）',
+      description:
+        '和カフェ。甘味のほか食事メニューもあり、休憩にも昼食にも使える。',
+      seatingType: ['table'],
+    },
+    {
+      name: '博多一風堂 ラスカ茅ヶ崎店',
+      genre: 'noodles',
+      area: '茅ヶ崎駅直結（ラスカ茅ヶ崎 2F）',
+      description:
+        '福岡発のとんこつラーメン店。サイドメニューがあり取り分けもしやすい。',
+      seatingType: ['table', 'counter'],
+    },
+    {
+      name: 'ブール アンジュ ラスカ茅ヶ崎店',
+      genre: 'bakery',
+      area: '茅ヶ崎駅直結（ラスカ茅ヶ崎 3F）',
+      description:
+        'ベーカリー・カフェ。パンを買って海辺へ移動する使い方もでき、子どもが食べられる分だけ選べる。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'ほんのり屋 ラスカ茅ヶ崎店',
+      genre: 'washoku',
+      area: '茅ヶ崎駅直結（ラスカ茅ヶ崎 3F）',
+      description:
+        'おむすびと惣菜の店。子どもが食べきれる量に調整しやすく、移動中に持ち込みやすい。',
+      shareDish: true,
+    },
     {
       name: 'MOKICHI TRATTORIA（モキチ トラットリア）',
       genre: 'italian',

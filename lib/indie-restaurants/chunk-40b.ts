@@ -70,6 +70,89 @@ export const CHUNK_40B: StationIndieMap = {
   // 船橋駅（船橋市）
   // ===========================================================
   'funabashi': [
+    // ▼ 2026-08-12追加: シャポー船橋の公式ショップガイド（shapo.jrtk.jp/funabashi/restaurant）
+    //   から、館・フロア／ジャンル／営業時間を転記した。船橋駅直結。
+    //   公式に予算・席数の掲載が無いため priceLunch は入れていない。
+    //   鎌倉パスタ・コメダ珈琲店・サンマルクカフェ・スターバックスはチェーン側で出るため除外。
+    {
+      name: '鼎泰豊 シャポー船橋店',
+      genre: 'chinese',
+      area: '船橋駅直結（シャポー船橋 3F 南館）',
+      description:
+        '台湾の小籠包専門店。小籠包やチャーハンは少量ずつ頼めて取り分けやすい。席予約が可能なので、子連れで待ち時間を避けたいときに使える。11:00〜22:00。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '牛たん とろろ 麦めし ねぎし シャポー船橋店',
+      genre: 'washoku',
+      area: '船橋駅直結（シャポー船橋 3F 南館）',
+      description:
+        '牛たん・とろろ・麦めしの定食店。ご飯とスープが付くので子どもへの取り分けがしやすい。11:00〜22:00（L.O.21:30）。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '博多天ぷら やまや シャポー船橋店',
+      genre: 'tempura',
+      area: '船橋駅直結（シャポー船橋 3F 南館）',
+      description:
+        '揚げたてを順に出す天ぷら定食の店。明太子・高菜が付く形式が多く、白飯を子どもに分けやすい。11:00〜22:00（L.O.21:30）。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: '福満園 シャポー船橋店',
+      genre: 'chinese',
+      area: '船橋駅直結（シャポー船橋 1F 本館フードマーケットゾーン）',
+      description:
+        '中華料理店。麺・飯ものがあり取り分けやすい。改札に近い1Fにあり移動が短くて済む。11:00〜22:00（L.O.21:30）。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '鯛塩そば 灯花 シャポー船橋店',
+      genre: 'noodles',
+      area: '船橋駅直結（シャポー船橋 3F 南館）',
+      description:
+        '鯛出汁の塩ラーメン。あっさりした味で子どもにも取り分けやすい。11:00〜22:00（L.O.21:30）。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: '札幌みその 一期一会 シャポー船橋店',
+      genre: 'noodles',
+      area: '船橋駅直結（シャポー船橋 4F 南館）',
+      description:
+        '札幌ラーメンの店。味噌ラーメンは辛くないので子どもにも分けやすい。11:00〜22:00（L.O.21:30）。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: 'そばいち シャポー船橋店',
+      genre: 'noodles',
+      area: '船橋駅直結（シャポー船橋 1F 改札内ショップ）',
+      description:
+        'そば・うどんの店。改札内にあり、平日は7:00〜23:00と朝から夜まで開いている。短時間で食べられるので子どもの機嫌が持たないときの選択肢になる。',
+      shareDish: true,
+    },
+    {
+      name: 'チーズガーデン シャポー船橋店',
+      genre: 'sweets',
+      area: '船橋駅直結（シャポー船橋 1F 南館）',
+      description:
+        'チーズケーキのカフェ。食事のあとの休憩に使える。平日・土曜10:00〜21:00。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'フィロコフィア シャポー船橋店',
+      genre: 'cafe',
+      area: '船橋駅直結（シャポー船橋 1F 南館）',
+      description:
+        'スペシャルティコーヒーのカフェ。10:00〜21:00。改札から近く、待ち合わせや休憩に使いやすい。',
+      seatingType: ['table'],
+    },
     {
       name: '名前のないCAFE',
       genre: 'cafe',
