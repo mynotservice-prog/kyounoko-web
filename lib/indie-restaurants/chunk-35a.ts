@@ -415,6 +415,146 @@ export const CHUNK_35A: StationIndieMap = {
   // 元町・中華街（横浜市中区）
   // ===========================================================
   'motomachi-chukagai': [
+    // ▼ 2026-08-12追加: 横浜中華街公式サイト（chinatown.or.jp）の「平均単価 昼」タグから、
+    //   ランチ価格帯が公式に分類されている店を転記した。元町・中華街駅直結。
+    //   priceLunch は公式タグ（lunch1000 / lunch2000）に対応させている。
+    {
+      name: '謝甜記 本店（しゃてんき）',
+      genre: 'chinese',
+      area: '元町・中華街駅から徒歩圏（横浜中華街）',
+      description:
+        '中華粥の名店。粥は柔らかく味も濃くないので、離乳食が終わったばかりの子でも食べやすい。中華街で子連れに最も勧めやすい一軒。公式の平均単価は昼2,000円迄。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '江戸清 大通り店（えどせい）',
+      genre: 'chinese',
+      area: '元町・中華街駅から徒歩圏（横浜中華街 大通り）',
+      description:
+        '中華街名物のブタまんの店。1個を家族で分けやすく、歩きながら食べられるので子どもの機嫌が持たないときに使える。公式の平均単価は昼1,000円迄。',
+      shareDish: true,
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: '海南飯店（かいなんはんてん）',
+      genre: 'chinese',
+      area: '元町・中華街駅から徒歩圏（横浜中華街）',
+      description:
+        '中華料理店。麺・飯ものがあり取り分けやすい。公式の平均単価は昼1,000円迄と中華街では入りやすい部類。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: '福満園 新館（ふくまんえん）',
+      genre: 'chinese',
+      area: '元町・中華街駅から徒歩圏（横浜中華街）',
+      description:
+        '四川・湖南料理の店。辛くない料理も選べるので、辛さの可否を頼むときに伝えたい。公式の平均単価は昼1,000円迄。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: '龍門（りゅうもん）',
+      genre: 'chinese',
+      area: '元町・中華街駅から徒歩圏（横浜中華街）',
+      description:
+        '中華料理店。公式の平均単価は昼1,000円迄。取り分け前提の料理が多く家族でシェアしやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: '東園（とうえん）',
+      genre: 'chinese',
+      area: '元町・中華街駅から徒歩圏（横浜中華街）',
+      description:
+        '中華料理店。公式の平均単価は昼1,000円迄。ご飯ものは白飯を子どもに分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: '清香園（せいこうえん）',
+      genre: 'chinese',
+      area: '元町・中華街駅から徒歩圏（横浜中華街）',
+      description:
+        '中華料理店。公式の平均単価は昼1,000円迄。麺類は取り分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: '富泰楼麺房（ふうたいろうめんぼう）',
+      genre: 'noodles',
+      area: '元町・中華街駅から徒歩圏（横浜中華街）',
+      description:
+        '中華麺と点心の店。麺は短く切って子どもに分けやすく、点心は少量ずつ頼める。公式の平均単価は昼1,000円迄。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: '上海豫園小龍包館（しゃんはいよえんしょうろんぽうかん）',
+      genre: 'chinese',
+      area: '元町・中華街駅から徒歩圏（横浜中華街）',
+      description:
+        '小籠包・点心の店。点心は少量ずつ頼めるので子どもの食べる量に合わせやすい。中身が熱いので冷ましてから渡したい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '皇朝茶樓（こうちょうさろう）',
+      genre: 'chinese',
+      area: '元町・中華街駅から徒歩圏（横浜中華街）',
+      description:
+        '点心・飲茶の店。少量ずつ何品も頼める形式で、子どもが食べられるものを選びやすい。公式の平均単価は昼2,000円迄。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '蓮香園 新館（れんこうえん）',
+      genre: 'chinese',
+      area: '元町・中華街駅から徒歩圏（横浜中華街）',
+      description:
+        '中華料理店。公式の平均単価は昼2,000円迄。取り分け前提の料理が多い。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '海員閣（かいいんかく）',
+      genre: 'chinese',
+      area: '元町・中華街駅から徒歩圏（横浜中華街）',
+      description:
+        '広東料理の老舗。牛バラ煮込みご飯などご飯ものが看板で、白飯を子どもに分けやすい。公式の平均単価は昼2,000円迄。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '秀味園（しゅうみえん）',
+      genre: 'chinese',
+      area: '元町・中華街駅から徒歩圏（横浜中華街）',
+      description:
+        '台湾料理の店。魯肉飯など子どもが食べやすいご飯ものがある。公式の平均単価は昼2,000円迄。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'カフェ 香蘭（こーらん）',
+      genre: 'cafe',
+      area: '元町・中華街駅から徒歩圏（横浜中華街）',
+      description:
+        '中華街のカフェ。食べ歩きの合間の休憩に使える。公式の平均単価は昼1,000円迄。',
+      seatingType: ['table'],
+      priceLunch: '〜1,000円',
+    },
     {
       name: '重慶飯店 新館',
       genre: 'chinese',
