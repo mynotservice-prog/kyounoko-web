@@ -391,6 +391,118 @@ export const CHUNK_15: StationIndieMap = {
   ],
 
   'daiba': [
+    // ▼ 2026-08-12追加: デックス東京ビーチの公式ショップ検索（odaiba-decks.com/shop/gourmet）
+    //   から、フロア／業種を転記した。台場駅直結。
+    //   公式に予算・席数の掲載が無いため priceLunch は入れていない。
+    //   ジョナサン・吉野家・マクドナルドはチェーン側で出るため除外。
+    //   ※4Fの「台場一丁目商店街」は昭和の商店街を再現したフロアで、たこ焼き店や駄菓子屋が
+    //     並ぶ。食事というより子どもと歩いて楽しむ場所として扱っている。
+    {
+      name: 'OCEAN CLUB BUFFET デックス東京ビーチ店',
+      genre: 'yoshoku',
+      area: '台場駅直結（デックス東京ビーチ 5F）',
+      description:
+        'ビュッフェスタイルのレストラン。子どもが食べられるものだけ取れて量も合わせやすく、取り分けの手間が少ない。デックスでは子連れに最も使いやすい形式。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'カフェグリル ビッグシェフ デックス東京ビーチ店',
+      genre: 'yoshoku',
+      area: '台場駅直結（デックス東京ビーチ 5F）',
+      description:
+        'ハンバーグとオムライスの洋食店。どちらも子どもと分けやすい定番メニュー。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '山下本気うどん デックス東京ビーチ店',
+      genre: 'noodles',
+      area: '台場駅直結（デックス東京ビーチ 3F）',
+      description:
+        'うどんの店。うどんは短く切って子どもに分けやすい定番。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'Trattoria Pizzeria LOGIC デックス東京ビーチ店',
+      genre: 'italian',
+      area: '台場駅直結（デックス東京ビーチ 3F）',
+      description:
+        '窯焼きピッツァのイタリアン。1枚を家族でシェアしやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'bills お台場',
+      genre: 'cafe',
+      area: '台場駅直結（デックス東京ビーチ 3F）',
+      description:
+        'リコッタパンケーキで知られるオールデイダイニング。甘いものなら食べるという子との食事に向く。海側の眺望がある。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '1129 by Ogawa デックス東京ビーチ店',
+      genre: 'yoshoku',
+      area: '台場駅直結（デックス東京ビーチ 6F）',
+      description:
+        'ハンバーグとステーキグリルの店。肉は切り分けて子どもと分けられる。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'らーめん春樹 デックス東京ビーチ店',
+      genre: 'noodles',
+      area: '台場駅直結（デックス東京ビーチ 6F）',
+      description:
+        'つけ麺とラーメンの店。麺は短く切って子どもに分けやすい。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: '龍記 デックス東京ビーチ店',
+      genre: 'chinese',
+      area: '台場駅直結（デックス東京ビーチ 5F）',
+      description:
+        '中華料理店。麺・飯ものがあり取り分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'カザーナ デックス東京ビーチ店',
+      genre: 'curry',
+      area: '台場駅直結（デックス東京ビーチ 5F）',
+      description:
+        'インド料理の店。ナンやカレーは取り分けやすい。辛さの調整可否は来店時に確認を。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '寛 ベビーカステラ専門店 デックス東京ビーチ店',
+      genre: 'sweets',
+      area: '台場駅直結（デックス東京ビーチ 1F）',
+      description:
+        'ベビーカステラの専門店。小さく持ちやすいので、食事が進まない子や移動中のつなぎに使える。',
+      shareDish: true,
+    },
+    {
+      name: 'ハイカラ横丁（台場一丁目商店街）',
+      genre: 'others',
+      area: '台場駅直結（デックス東京ビーチ 4F 台場一丁目商店街）',
+      description:
+        '駄菓子と駄玩具の店。昭和の商店街を再現した4Fフロアにあり、食事の前後に子どもと歩いて回れる。同じフロアに大阪のたこ焼き店（会津屋・道頓堀くくる・芋蛸など）が並ぶ。',
+      shareDish: true,
+    },
+    {
+      name: 'アイランドヴィンテージコーヒー デックス東京ビーチ店',
+      genre: 'cafe',
+      area: '台場駅直結（デックス東京ビーチ 3F）',
+      description:
+        'ハワイ発のコーヒーショップ。アサイーボウルなど子どもと分けやすいメニューもある。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
   ],
 
   'shiodome': [

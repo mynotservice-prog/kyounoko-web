@@ -1079,6 +1079,60 @@ export const CHUNK_KANSAI: StationIndieMap = {
   // 神戸・ハーバーランドエリア（kobe-harborland）
   // ===========================================================
   'kobe-harborland': [
+    // ▼ 2026-08-12追加: 神戸ハーバーランドumieの公式ショップ検索（umie.jp/shops）から、
+    //   館・フロア／カテゴリを転記した。ハーバーランド駅から徒歩圏。
+    //   公式に予算・席数の掲載が無いため priceLunch は入れていない。
+    //   SUBWAY・ミスタードーナツはチェーン側で出るため除外。
+    //   ※umieは215店・9ページの構成で、ここではSOUTH MALLのB1F・1Fに入る飲食を拾っている。
+    {
+      name: 'Mother Moon Cafe* umie店',
+      genre: 'cafe',
+      area: 'ハーバーランド駅から徒歩圏（umie SOUTH MALL B1F）',
+      description:
+        '神戸のカフェ。パスタやスイーツがあり、食事にも休憩にも使える。テイクアウトにも対応。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'nana’s green tea umie店',
+      genre: 'cafe',
+      area: 'ハーバーランド駅から徒歩圏（umie SOUTH MALL 1F）',
+      description:
+        '和カフェ。抹茶スイーツのほか食事メニューもあり、休憩にも昼食にも使える。',
+      seatingType: ['table'],
+    },
+    {
+      name: 'にしむら珈琲 umie店',
+      genre: 'cafe',
+      area: 'ハーバーランド駅から徒歩圏（umie SOUTH MALL 1F）',
+      description:
+        '神戸の老舗珈琲店。モーニングがあり、朝から開いているので出発前の食事にも使える。',
+      seatingType: ['table'],
+    },
+    {
+      name: '果汁工房 果琳 umie店',
+      genre: 'sweets',
+      area: 'ハーバーランド駅から徒歩圏（umie SOUTH MALL B1F）',
+      description:
+        'フレッシュジュースの店。食事が進まない子でも果物なら飲める、というときに使える。',
+      shareDish: true,
+    },
+    {
+      name: 'ビアードパパの作りたて工房 umie店',
+      genre: 'sweets',
+      area: 'ハーバーランド駅から徒歩圏（umie SOUTH MALL B1F）',
+      description:
+        'シュークリームの店。1個から買えて、歩きながらでも食べられる。',
+      shareDish: true,
+    },
+    {
+      name: 'コスコクレープ umie店',
+      genre: 'sweets',
+      area: 'ハーバーランド駅から徒歩圏（umie SOUTH MALL B1F）',
+      description:
+        'クレープとソフトクリームの店。1枚を分けやすく、食後のごほうびに使える。',
+      shareDish: true,
+    },
     {
       name: '神戸 ハーバーランド フィッシュダンス',
       genre: 'italian',
