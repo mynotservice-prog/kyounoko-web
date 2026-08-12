@@ -2555,6 +2555,138 @@ export const CHUNK_2: StationIndieMap = {
   ],
 
   'tokyo-teleport': [
+    // ▼ 2026-08-12追加: ダイバーシティ東京 プラザの公式ショップガイド
+    //   （mitsui-shopping-park.com/divercity-tokyo/shopguide/?category=g00）から、
+    //   フロア／カテゴリを転記した。東京テレポート駅から徒歩圏。
+    //   2Fがフードコート、6Fがレストランフロアという構成。
+    //   公式に予算・席数の掲載が無いため priceLunch は入れていない。
+    //   はなまるうどん・エクセルシオール・スターバックス・タリーズ・マクドナルド・
+    //   ミスタードーナツはチェーン側で出るため除外。
+    {
+      name: 'ダイバーシティ東京 プラザ 2F フードコート',
+      genre: 'others',
+      area: '東京テレポート駅から徒歩圏（ダイバーシティ東京 プラザ 2F）',
+      description:
+        'ステーキ・カレー・そば・天丼・親子丼・もんじゃ・クレープなどが並ぶフードコート。席が共用なので子どもと大人が別々の店から頼め、ベビーカーのまま席を取りやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '北陸富山回転寿司 PREMIUM 海王 ダイバーシティ東京 プラザ店',
+      genre: 'sushi',
+      area: '東京テレポート駅から徒歩圏（ダイバーシティ東京 プラザ 6F）',
+      description:
+        '富山の回転寿司。レーンから子どもが自分で選べるうえ、玉子やかっぱ巻きが必ずある。6Fのレストランフロアにある。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: '串家物語 ダイバーシティ東京 プラザ店',
+      genre: 'others',
+      area: '東京テレポート駅から徒歩圏（ダイバーシティ東京 プラザ 6F）',
+      description:
+        '串揚げのビュッフェ。自分で串を選んで揚げる形式で、子どもが食べられるものだけ選べる。ただし油を扱うので低年齢の子は目を離せない。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'おぼんdeごはん ダイバーシティ東京 プラザ店',
+      genre: 'washoku',
+      area: '東京テレポート駅から徒歩圏（ダイバーシティ東京 プラザ 6F）',
+      description:
+        'おぼんにのせる定食スタイルの店。おかずを選べるので、子どもが食べられる組み合わせを作りやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'ハンバーグ＆ステーキ HIRO ダイバーシティ東京 プラザ店',
+      genre: 'yoshoku',
+      area: '東京テレポート駅から徒歩圏（ダイバーシティ東京 プラザ 6F）',
+      description:
+        'ハンバーグとステーキの洋食店。ハンバーグは子どもと分けやすい定番。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'ピッツェリア ドォーロ ローマ ダイバーシティ東京 プラザ店',
+      genre: 'italian',
+      area: '東京テレポート駅から徒歩圏（ダイバーシティ東京 プラザ 6F）',
+      description:
+        'ピッツァのイタリアン。1枚を家族でシェアしやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '信州そば処 そじ坊 ダイバーシティ東京 プラザ店',
+      genre: 'noodles',
+      area: '東京テレポート駅から徒歩圏（ダイバーシティ東京 プラザ 6F）',
+      description:
+        '信州そばの店。そばは短く切って子どもに分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '三代目 文治 ダイバーシティ東京 プラザ店',
+      genre: 'washoku',
+      area: '東京テレポート駅から徒歩圏（ダイバーシティ東京 プラザ 6F）',
+      description:
+        '牛たんとおでんの和食店。麦めしとスープが付く定食形式で取り分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '餃子の王様 龍吟 ダイバーシティ東京 プラザ店',
+      genre: 'chinese',
+      area: '東京テレポート駅から徒歩圏（ダイバーシティ東京 プラザ 6F）',
+      description:
+        '中華料理店。餃子やチャーハンは取り分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '牛カツ京都勝牛 ダイバーシティ東京 プラザ店',
+      genre: 'washoku',
+      area: '東京テレポート駅から徒歩圏（ダイバーシティ東京 プラザ 6F）',
+      description:
+        '牛カツの定食店。ご飯と汁物が付き、白飯を子どもに分けやすい。牛カツはレアなので子どもには追加で火を通せるか確認したい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '月島もんじゃ くうや ダイバーシティ東京 プラザ店',
+      genre: 'teppan',
+      area: '東京テレポート駅から徒歩圏（ダイバーシティ東京 プラザ 6F）',
+      description:
+        'もんじゃ焼きの店。1枚を家族で分けやすいが、鉄板があるので低年齢の子は席の位置に注意。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '東京焼肉 平城苑 ダイバーシティ東京 プラザ店',
+      genre: 'yakiniku',
+      area: '東京テレポート駅から徒歩圏（ダイバーシティ東京 プラザ 6F）',
+      description:
+        '焼肉店。焼く席なので低年齢の子は席の位置に注意。ランチの定食なら取り分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'HELLO KITTYのこんがり焼 ダイバーシティ東京 プラザ店',
+      genre: 'sweets',
+      area: '東京テレポート駅から徒歩圏（ダイバーシティ東京 プラザ 2F）',
+      description:
+        'ハローキティ形の今川焼き。キャラクターの見た目で子どもの興味を引きやすく、歩きながら食べられる。',
+      shareDish: true,
+    },
+    {
+      name: '鶏味座 ダイバーシティ東京 プラザ店',
+      genre: 'washoku',
+      area: '東京テレポート駅から徒歩圏（ダイバーシティ東京 プラザ 6F）',
+      description:
+        '鶏料理の店。親子丼など子どもが食べやすいご飯ものがある。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
     {
       name: 'お台場 個人カフェ ビーチサイド',
       genre: 'cafe',

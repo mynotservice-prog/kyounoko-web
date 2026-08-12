@@ -1014,6 +1014,144 @@ export const CHUNK_40B: StationIndieMap = {
   // 流山おおたかの森駅（流山市・TX／東武野田線）
   // ===========================================================
   'nagareyama-otakanomori': [
+    // ▼ 2026-08-12追加: 流山おおたかの森S.C.の公式ショップ検索
+    //   （otakanomori-sc.com/shop/）から、館・フロア／ジャンルを転記した。駅直結。
+    //   公式に予算・席数の掲載が無いため priceLunch は入れていない。
+    //   鎌倉パスタ・スターバックス・とんかつ和幸・はなまるうどんはチェーン側で出るため除外。
+    {
+      name: 'FOOD’S DEPARTMENT おおたかの森',
+      genre: 'others',
+      area: '流山おおたかの森駅直結（流山おおたかの森S.C. FLAPS 4F）',
+      description:
+        'フードコート。席が共用なので子どもと大人が別々の店から頼め、ベビーカーのまま席を取りやすい。子連れにはS.C.内で最も使いやすい形式。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '流れ鮨 沼津魚がし 流山おおたかの森S.C.店',
+      genre: 'sushi',
+      area: '流山おおたかの森駅直結（流山おおたかの森S.C. 本館3F）',
+      description:
+        '流れ鮨。レーンから子どもが自分で選べるうえ、玉子やかっぱ巻きが必ずある。3Fのレストランフロアにある。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: 'おひつごはん四六時中 流山おおたかの森S.C.店',
+      genre: 'washoku',
+      area: '流山おおたかの森駅直結（流山おおたかの森S.C. 本館3F）',
+      description:
+        'おひつごはんの和食店。ご飯を取り分けてから出汁をかける形式なので、子どもには白飯のまま分けられる。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'ごはんすすむ 流山おおたかの森S.C.店',
+      genre: 'washoku',
+      area: '流山おおたかの森駅直結（流山おおたかの森S.C. 本館3F）',
+      description:
+        '定食の店。ご飯と汁物が付く形式で子どもへの取り分けがしやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '鉄板ハンブルグ 流山おおたかの森S.C.店',
+      genre: 'yoshoku',
+      area: '流山おおたかの森駅直結（流山おおたかの森S.C. 本館3F）',
+      description:
+        'ハンバーグ＆ステーキの店。ハンバーグは子どもと分けやすい定番。鉄板で出るので低年齢の子は席の位置に注意。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'トラットリア サレルノ 流山おおたかの森S.C.店',
+      genre: 'italian',
+      area: '流山おおたかの森駅直結（流山おおたかの森S.C. 本館3F）',
+      description:
+        'イタリアン。パスタやピッツァは家族でシェアしやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'うどんのう 流山おおたかの森S.C.店',
+      genre: 'noodles',
+      area: '流山おおたかの森駅直結（流山おおたかの森S.C. 本館3F）',
+      description:
+        'うどんの店。うどんは短く切って子どもに分けやすい定番。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '笹陣 流山おおたかの森S.C.店',
+      genre: 'noodles',
+      area: '流山おおたかの森駅直結（流山おおたかの森S.C. 本館3F）',
+      description:
+        'そばと丼の店。丼は白飯を子どもに分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'しゃぶ菜 流山おおたかの森S.C.店',
+      genre: 'shabu',
+      area: '流山おおたかの森駅直結（流山おおたかの森S.C. 本館3F）',
+      description:
+        'しゃぶしゃぶの店。鍋は取り分けやすいが、熱いものを扱うので低年齢の子は席の位置に注意。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '揚州商人 流山おおたかの森S.C.店',
+      genre: 'chinese',
+      area: '流山おおたかの森駅直結（流山おおたかの森S.C. FLAPS 4F）',
+      description:
+        '中華の麺料理店。麺の種類を選べるので子どもの好みに合わせやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '博多めんたいやまや食堂 流山おおたかの森S.C.店',
+      genre: 'washoku',
+      area: '流山おおたかの森駅直結（流山おおたかの森S.C. FLAPS 4F）',
+      description:
+        '明太子の定食店。ご飯が進む構成で、白飯を子どもに分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'マンゴツリーカフェ 流山おおたかの森S.C.店',
+      genre: 'asian',
+      area: '流山おおたかの森駅直結（流山おおたかの森S.C. 本館3F）',
+      description:
+        'タイ料理のカフェ業態。ガパオやカオマンガイなど一皿もの中心で、辛くない料理も選べる。',
+      seatingType: ['table'],
+    },
+    {
+      name: 'アイビーテラス ハワイアンダイニング 流山おおたかの森S.C.店',
+      genre: 'cafe',
+      area: '流山おおたかの森駅直結（流山おおたかの森S.C. FLAPS 4F）',
+      description:
+        'ハワイアンダイニング。ロコモコやパンケーキなど子どもが食べやすいメニューが中心。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'CAFE BURDIGALA 流山おおたかの森S.C.店',
+      genre: 'bakery',
+      area: '流山おおたかの森駅直結（流山おおたかの森S.C. 本館2F）',
+      description:
+        'ベーカリーカフェ。パンを買って公園へ移動する使い方もでき、子どもが食べられる分だけ選べる。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '甘味処鎌倉 流山おおたかの森S.C.店',
+      genre: 'sweets',
+      area: '流山おおたかの森駅直結（流山おおたかの森S.C. FLAPS 1F）',
+      description:
+        '甘味処。あんみつや白玉など、食事が進まない子との休憩に使える。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
     {
       name: 'エスプレッソ ディーワークス 流山おおたかの森',
       genre: 'cafe',
