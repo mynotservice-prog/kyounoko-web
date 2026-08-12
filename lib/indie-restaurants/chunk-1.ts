@@ -368,18 +368,6 @@ export const CHUNK_1: StationIndieMap = {
       popular: true,
     },
     {
-      name: 'うさぎや 御茶ノ水',
-      genre: 'sweets',
-      area: '御茶ノ水駅から徒歩5分',
-      description: 'どら焼き老舗系のカフェ。和スイーツを家族でゆっくり楽しめる。テーブル席で乳幼児連れも入りやすい。',
-      strollerOk: true,
-      kidsMenu: false,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
-    {
       name: 'エチオピア',
       genre: 'curry',
       area: '御茶ノ水駅から徒歩5分（神保町方面）',
@@ -1602,18 +1590,6 @@ export const CHUNK_1: StationIndieMap = {
       seatingType: ['table', 'counter'],
       priceLunch: '〜1,000円',
     },
-    {
-      name: '三田 喫茶 ミカドコーヒー',
-      genre: 'cafe',
-      area: '三田駅から徒歩4分',
-      description: 'モカソフトで知られる老舗喫茶系のカフェ。家族でアイスコーヒーとケーキを楽しめる。',
-      strollerOk: true,
-      kidsMenu: false,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'hamamatsucho': [
@@ -1727,19 +1703,6 @@ export const CHUNK_1: StationIndieMap = {
       shareDish: true,
       priceLunch: '〜2,000円',
       popular: true,
-    },
-    {
-      name: 'パパス カフェ 六本木',
-      genre: 'cafe',
-      area: '六本木駅から徒歩5分',
-      description: 'パパスカンパニー系のカフェ。プレートランチが家族でシェア可。ベビーカー対応の席もあり。',
-      strollerOk: true,
-      kidsMenu: false,
-      stepFree: true,
-      seatingType: ['table'],
-      shareDish: true,
-      strollerToSeat: true,
-      priceLunch: '〜3,500円',
     },
     {
       name: 'L\'AS（ラス）',
@@ -3858,19 +3821,6 @@ export const CHUNK_1: StationIndieMap = {
       priceLunch: '〜2,000円',
       popular: true,
     },
-    {
-      name: '千駄ケ谷 サニー',
-      genre: 'cafe',
-      area: '千駄ケ谷駅から徒歩4分',
-      description: '隠れ家系のカフェ。プレートランチが家族でシェア可、ベビーカー対応相談可。',
-      strollerOk: true,
-      kidsMenu: false,
-      stepFree: true,
-      seatingType: ['table'],
-      shareDish: true,
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   // ===========================================================
@@ -4315,17 +4265,5 @@ export const CHUNK_1: StationIndieMap = {
   ],
 
   'tokyo-international-cruise': [
-    {
-      name: '東京国際クルーズターミナル カフェ',
-      genre: 'cafe',
-      area: '東京国際クルーズターミナル駅から徒歩3分',
-      description: 'クルーズターミナル周辺のカフェ。海を眺めながら家族でランチ。',
-      strollerOk: true,
-      kidsMenu: false,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 };

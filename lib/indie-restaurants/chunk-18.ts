@@ -209,14 +209,6 @@ export const CHUNK_18: StationIndieMap = {
       priceLunch: '〜2,000円',
     },
     {
-      name: '池袋 神田まつや 池袋東武店',
-      genre: 'noodles',
-      area: '池袋駅西口直結（東武百貨店レストラン街）',
-      description: '神田の老舗そば「神田まつや」相当の池袋・東武食堂街の店。せいろ・かけそばが家族のランチに人気で、駅直結で雨天でもアクセスしやすい。',
-      seatingType: ['table', 'counter'],
-      priceLunch: '〜2,000円',
-    },
-    {
       name: '池袋 ガトーフェスタ ハラダ 西武池袋店',
       genre: 'sweets',
       area: '池袋駅東口直結（西武池袋本店地下）',
@@ -543,16 +535,6 @@ export const CHUNK_18: StationIndieMap = {
       popular: true,
     },
     {
-      name: '鶯谷 笹乃雪 別店',
-      genre: 'washoku',
-      area: '鶯谷駅から徒歩3分（根岸）',
-      description: '元禄四年創業の豆腐料理「笹乃雪」相当の鶯谷の別店。あんかけ豆腐が家族の特別なランチに人気、座敷席で乳児連れも相談できる。',
-      privateRoom: true,
-      seatingType: ['table', 'zashiki'],
-      priceLunch: '〜3,500円',
-      popular: true,
-    },
-    {
       name: '鶯谷 ささのや',
       genre: 'noodles',
       area: '鶯谷駅から徒歩4分',
@@ -579,15 +561,6 @@ export const CHUNK_18: StationIndieMap = {
       seatingType: ['table'],
       shareDish: true,
       priceLunch: '〜2,000円',
-      popular: true,
-    },
-    {
-      name: '日暮里 谷中銀座 メンチカツ 肉のサトー',
-      genre: 'others',
-      area: '日暮里駅から徒歩5分（谷中銀座）',
-      description: '谷中銀座の精肉店「肉のサトー」相当のメンチカツ。揚げたての衣が家族のおやつ・食べ歩きに人気で、谷中銀座散策の定番。',
-      seatingType: ['table'],
-      priceLunch: '〜1,000円',
       popular: true,
     },
     {
@@ -830,16 +803,6 @@ export const CHUNK_18: StationIndieMap = {
 
   'higashi-ginza': [
     {
-      name: '東銀座 銀座 久兵衛 別店',
-      genre: 'sushi',
-      area: '東銀座駅から徒歩3分',
-      description: '銀座の老舗寿司「久兵衛」相当の系統店。一貫ずつ提供される握りが家族の特別な日に人気、カウンターと個室を相談できる。',
-      privateRoom: true,
-      seatingType: ['table', 'counter', 'zashiki'],
-      priceLunch: '5,000円〜',
-      popular: true,
-    },
-    {
       name: '東銀座 歌舞伎座 木挽町広場',
       genre: 'others',
       area: '東銀座駅直結（歌舞伎座地下）',
@@ -928,14 +891,6 @@ export const CHUNK_18: StationIndieMap = {
 
   'mitsukoshimae': [
     {
-      name: '三越前 日本橋 玉英堂彦九郎',
-      genre: 'sweets',
-      area: '三越前駅から徒歩2分（日本橋本石町）',
-      description: '京都発祥の老舗和菓子「玉英堂」相当の日本橋の店。看板の玉饅が手土産・おやつに定番、子供にも食べやすいまんじゅう。',
-      seatingType: ['table'],
-      priceLunch: '〜1,000円',
-    },
-    {
       name: '三越前 山本山 日本橋本店',
       genre: 'cafe',
       area: '三越前駅から徒歩2分',
@@ -955,14 +910,6 @@ export const CHUNK_18: StationIndieMap = {
       privateRoom: true,
       seatingType: ['table', 'zashiki'],
       priceLunch: '〜5,000円',
-    },
-    {
-      name: '三越前 山田屋まんじゅう 日本橋',
-      genre: 'sweets',
-      area: '三越前駅から徒歩2分',
-      description: '愛媛発の和菓子「山田屋まんじゅう」相当の日本橋の店。皮の薄い小ぶりまんじゅうが手土産・おやつに人気、子供にも食べやすい。',
-      seatingType: ['table'],
-      priceLunch: '〜1,000円',
     },
   ],
 
@@ -1105,15 +1052,6 @@ export const CHUNK_18: StationIndieMap = {
       stepFree: true,
       seatingType: ['table'],
       strollerToSeat: true,
-      priceLunch: '〜2,000円',
-      popular: true,
-    },
-    {
-      name: '青山一丁目 ロブション ル パン',
-      genre: 'bakery',
-      area: '青山一丁目駅から徒歩5分（南青山）',
-      description: 'ジョエル・ロブションのベーカリー業態「ル パン」相当の青山の店。クロワッサン・パン・オ・ショコラが手土産・朝食に定番。',
-      seatingType: ['table'],
       priceLunch: '〜2,000円',
       popular: true,
     },
@@ -1532,15 +1470,6 @@ export const CHUNK_18: StationIndieMap = {
       popular: true,
     },
     {
-      name: '本郷三丁目 近江屋洋菓子店 本郷店',
-      genre: 'sweets',
-      area: '本郷三丁目駅から徒歩4分',
-      description: '神田小川町の老舗洋菓子「近江屋洋菓子店」相当の本郷の店。フルーツケーキ・ショートケーキが家族のおやつに人気、テイクアウト中心。',
-      seatingType: ['table'],
-      priceLunch: '〜2,000円',
-      popular: true,
-    },
-    {
       name: '本郷三丁目 こころ',
       genre: 'washoku',
       area: '本郷三丁目駅から徒歩4分',
@@ -1558,15 +1487,6 @@ export const CHUNK_18: StationIndieMap = {
       description: '根津の天然たい焼き「根津のたいやき本店」相当。一丁焼きで皮が薄くあんがたっぷりで、家族のおやつに人気の名物。',
       seatingType: ['table'],
       priceLunch: '〜1,000円',
-      popular: true,
-    },
-    {
-      name: '根津 オーボンヴュータン 根津',
-      genre: 'sweets',
-      area: '根津駅から徒歩5分',
-      description: '尾山台の名店「オーボンヴュータン」相当の根津方面の店。本格フランス菓子が手土産・家族のおやつに人気、テイクアウト中心。',
-      seatingType: ['table'],
-      priceLunch: '〜2,000円',
       popular: true,
     },
     {
@@ -1619,15 +1539,6 @@ export const CHUNK_18: StationIndieMap = {
       privateRoom: true,
       seatingType: ['table', 'counter', 'zashiki'],
       priceLunch: '〜3,500円',
-    },
-    {
-      name: '田原町 浅草 やげん堀 田原町別店',
-      genre: 'others',
-      area: '田原町駅から徒歩4分',
-      description: '浅草の七味唐辛子「やげん堀」相当の田原町の別店。家族の手土産・調味料の買い物に便利で、店内で実演を見せてくれることも。',
-      seatingType: ['table'],
-      priceLunch: '〜1,000円',
-      popular: true,
     },
     {
       name: '田原町 合羽橋 食器カフェ',
@@ -1897,14 +1808,6 @@ export const CHUNK_18: StationIndieMap = {
 
   'gotanda': [
     {
-      name: '五反田 とんかつ とんき 別店',
-      genre: 'tonkatsu',
-      area: '五反田駅から徒歩4分',
-      description: '目黒「とんき」系のとんかつ店相当の五反田の別店。やわらかいロースかつ・ヒレかつが家族のランチに人気、テーブル席で子連れも利用しやすい。',
-      seatingType: ['table'],
-      priceLunch: '〜2,000円',
-    },
-    {
       name: '五反田 寿司田 五反田',
       genre: 'sushi',
       area: '五反田駅から徒歩3分',
@@ -2075,15 +1978,6 @@ export const CHUNK_18: StationIndieMap = {
       area: '小岩駅から徒歩3分',
       description: '小岩の老舗鶏料理「鳥房」相当。鶏唐揚げ・親子丼が家族のランチ・夕食に人気、テーブル席で子連れも利用しやすい。',
       seatingType: ['table'],
-      priceLunch: '〜2,000円',
-      popular: true,
-    },
-    {
-      name: '小岩 麺屋 一燈 別館',
-      genre: 'noodles',
-      area: '小岩駅から徒歩4分',
-      description: '新小岩の名店「麺屋 一燈」相当の小岩の別館。鶏白湯ラーメンが家族のランチに人気、テーブル席で子連れも相談できる。',
-      seatingType: ['table', 'counter'],
       priceLunch: '〜2,000円',
       popular: true,
     },
@@ -2595,16 +2489,6 @@ export const CHUNK_18: StationIndieMap = {
 
   'ichigaya': [
     {
-      name: '市ケ谷 アグネスホテル ラ・コリーナ別室',
-      genre: 'french',
-      area: '市ケ谷駅から徒歩7分（アグネスホテル）',
-      description: 'アグネスホテルのフレンチ「ラ・コリーナ」相当の系統別室。家族の特別な日のランチに人気、ベビーカー入店も相談可。',
-      strollerOk: true,
-      seatingType: ['table'],
-      shareDish: true,
-      priceLunch: '〜5,000円',
-    },
-    {
       name: '市ケ谷 千代田区役所近辺 老舗そば',
       genre: 'noodles',
       area: '市ケ谷駅から徒歩5分',
@@ -2623,14 +2507,6 @@ export const CHUNK_18: StationIndieMap = {
       seatingType: ['table', 'counter'],
       priceLunch: '〜2,000円',
       popular: true,
-    },
-    {
-      name: '四ツ谷 オーボンヴュータン 四ツ谷',
-      genre: 'sweets',
-      area: '四ツ谷駅から徒歩5分',
-      description: '尾山台の名店「オーボンヴュータン」相当の四ツ谷の店。本格フランス菓子が手土産・家族のおやつに人気、テイクアウト中心。',
-      seatingType: ['table'],
-      priceLunch: '〜2,000円',
     },
   ],
 
@@ -2680,15 +2556,6 @@ export const CHUNK_18: StationIndieMap = {
 
   'shintomicho': [
     {
-      name: '新富町 銀座 寿司栄 別店',
-      genre: 'sushi',
-      area: '新富町駅から徒歩3分',
-      description: '銀座の老舗寿司「寿司栄」相当の新富町の別店。ランチの握り寿司・ちらしが家族のランチに使いやすく、座敷席で子連れも相談できる。',
-      privateRoom: true,
-      seatingType: ['table', 'counter', 'zashiki'],
-      priceLunch: '〜3,500円',
-    },
-    {
       name: '新富町 とんかつ あかぎ',
       genre: 'tonkatsu',
       area: '新富町駅から徒歩3分',
@@ -2699,14 +2566,6 @@ export const CHUNK_18: StationIndieMap = {
   ],
 
   'kachidoki': [
-    {
-      name: '勝どき 月島まんじゅう 勝どき店',
-      genre: 'sweets',
-      area: '勝どき駅から徒歩5分',
-      description: '月島まんじゅう相当の勝どきの店。蒸したてまんじゅうが家族のおやつ・手土産に人気、子供にも食べやすい一口サイズ。',
-      seatingType: ['table'],
-      priceLunch: '〜1,000円',
-    },
   ],
 
   'kayabacho': [
@@ -2754,14 +2613,6 @@ export const CHUNK_18: StationIndieMap = {
   ],
 
   'mita': [
-    {
-      name: '三田 グリル満天星 三田店',
-      genre: 'yoshoku',
-      area: '三田駅から徒歩4分',
-      description: '銀座の老舗洋食「グリル満天星」相当の三田の店。デミグラスのオムレツライスが家族のランチに人気、テーブル席で子連れも利用しやすい。',
-      seatingType: ['table'],
-      priceLunch: '〜2,000円',
-    },
     {
       name: '三田 ラーメン 二郎 三田本店',
       genre: 'noodles',

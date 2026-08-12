@@ -728,17 +728,6 @@ export const CHUNK_13: StationIndieMap = {
       strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
-    {
-      name: '国立競技場 神宮外苑 いちょう並木カフェ',
-      genre: 'cafe',
-      area: '国立競技場駅から徒歩6分（神宮外苑）',
-      description: '神宮外苑いちょう並木周辺のカフェ。テラス席で並木の眺めを楽しみながらケーキとコーヒーが看板。家族のおやつタイムや散歩のお供に向く。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table', 'terrace'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'shinanomachi': [

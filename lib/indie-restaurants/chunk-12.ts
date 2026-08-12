@@ -977,14 +977,6 @@ export const CHUNK_12: StationIndieMap = {
       priceLunch: '〜2,000円',
       popular: true,
     },
-    {
-      name: '広尾 リトルナップコーヒー広尾',
-      genre: 'cafe',
-      area: '広尾駅から徒歩5分',
-      description: '代々木公園の人気カフェ「リトルナップ」の広尾店相当の小さな個人カフェ。エスプレッソと焼き菓子が看板で、家族の散歩のお供に。',
-      seatingType: ['table'],
-      priceLunch: '〜1,000円',
-    },
   ],
 
   'shirokanedai': [

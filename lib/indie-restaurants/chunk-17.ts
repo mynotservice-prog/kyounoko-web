@@ -27,15 +27,6 @@ export const CHUNK_17: StationIndieMap = {
       priceLunch: '〜2,000円',
       popular: true,
     },
-    {
-      name: '有楽町 はん亭 国際フォーラム店',
-      genre: 'washoku',
-      area: '有楽町駅から徒歩2分（国際フォーラム近く）',
-      description: '根津本店で知られる串揚げの「はん亭」相当の有楽町・銀座系列。揚げたての串揚げを順に提供し、子供にも食べやすい一口サイズが嬉しい。テーブル席で家族利用にも対応。',
-      privateRoom: true,
-      seatingType: ['table', 'zashiki'],
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'hibiya': [
@@ -82,14 +73,6 @@ export const CHUNK_17: StationIndieMap = {
   ],
 
   'nagatacho': [
-    {
-      name: '永田町 赤坂見附 とんかつ井泉 赤坂見附',
-      genre: 'tonkatsu',
-      area: '永田町駅から徒歩4分（赤坂見附）',
-      description: '上野「井泉」系のとんかつ店相当の赤坂見附の老舗。ヒレかつサンドが看板で、子供にも食べやすい柔らかいヒレ肉。テーブル席メインで家族利用にも対応。',
-      seatingType: ['table'],
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'kojimachi': [
@@ -868,17 +851,6 @@ export const CHUNK_17: StationIndieMap = {
   ],
 
   'yutenji': [
-    {
-      name: '祐天寺 アムダラム',
-      genre: 'curry',
-      area: '祐天寺駅から徒歩2分',
-      description: '祐天寺の老舗インドカレー店「ナイヤガラ」相当の家族向けカレー店。子供にも食べやすい甘口対応可、テーブル席で家族利用にも対応。',
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜2,000円',
-      popular: true,
-    },
   ],
 
   'naka-meguro': [
