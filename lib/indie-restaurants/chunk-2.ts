@@ -2291,6 +2291,107 @@ export const CHUNK_2: StationIndieMap = {
   ],
 
   'tokyo-big-sight': [
+    // ▼ 2026-08-12追加: 東京ビッグサイト公式のショップ＆レストラン一覧
+    //   （bigsight.jp/visitor/shop/）から、棟・階／カテゴリを転記した。
+    //   従来この駅には「東京ビッグサイト レストラン棟 個店」など店名でない仮置きが3件入っていた。
+    //   公式に予算・席数の掲載が無いため priceLunch は入れていない。
+    //   スターバックス・タリーズ・プロントとコンビニはチェーン側で出るため除外。
+    {
+      name: 'フードコート&ビアー Eat iT！',
+      genre: 'others',
+      area: '東京ビッグサイト 会議棟1F',
+      description:
+        '約400席のフードコート。席が共用なので子どもと大人が別々の店から頼めて、ベビーカーのまま席を取りやすい。イベント来場時に家族で使いやすいのはここ。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '築地食堂 源ちゃん 東京ビッグサイト店',
+      genre: 'washoku',
+      area: '東京ビッグサイト 東展示棟2F',
+      description:
+        '和食の定食店。ご飯と味噌汁が付く定食形式で、子どもへの取り分けがしやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'ロイヤルキャフェテリア 東京ビッグサイト店',
+      genre: 'yoshoku',
+      area: '東京ビッグサイト 東展示棟2F',
+      description:
+        'カフェテリア形式の洋食店。並んだ料理から選べるので、子どもが食べられるものだけ取れる。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '東京ベイキッチン 東京ビッグサイト',
+      genre: 'washoku',
+      area: '東京ビッグサイト 東展示棟2F',
+      description:
+        '和食のレストラン。東展示棟でイベントを見た流れで寄れる。',
+      seatingType: ['table'],
+    },
+    {
+      name: 'カレーショップC&Cダイニング 東京ビッグサイト店',
+      genre: 'curry',
+      area: '東京ビッグサイト 東展示棟2F',
+      description:
+        'カレーの店。辛さやサイズを選べる形式が一般的で、子どもの分を分けやすい。辛さの調整可否は来店時に確認を。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'カフェテリアマーメイド 東京ビッグサイト店',
+      genre: 'yoshoku',
+      area: '東京ビッグサイト レストラン街1F',
+      description:
+        '洋食のカフェテリア。1Fのレストラン街にあり、展示棟へ入る前後に寄りやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'うどんとおむすび大吉 東京ビッグサイト店',
+      genre: 'noodles',
+      area: '東京ビッグサイト レストラン街1F',
+      description:
+        'うどんとおむすびの店。うどんもおむすびも子どもに分けやすく、短時間で食べられる。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '日比谷マツモトロー 東京ビッグサイト店',
+      genre: 'yoshoku',
+      area: '東京ビッグサイト レストラン街1F',
+      description:
+        '洋食店。1Fのレストラン街にあり、イベント前後の食事に使える。',
+      seatingType: ['table'],
+    },
+    {
+      name: '香港飲茶楼 ル・パルク 東京ビッグサイト店',
+      genre: 'chinese',
+      area: '東京ビッグサイト 東展示棟3F',
+      description:
+        '飲茶の中華店。点心は少量ずつ頼めるので、子どもの食べる量に合わせやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'アルポルト 東京ビッグサイト店',
+      genre: 'italian',
+      area: '東京ビッグサイト 会議棟8F',
+      description:
+        '西麻布の名店・片岡護シェフ監修のイタリアン。会議棟8Fにあり、展示会の合間の落ち着いた食事に向く。子連れなら混雑時間を外したい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'カフェテラス ロイヤル 東京ビッグサイト店',
+      genre: 'cafe',
+      area: '東京ビッグサイト 西展示棟2F',
+      description:
+        'カフェ・軽食。西展示棟でイベントを見た流れで休憩に使える。',
+      seatingType: ['table'],
+    },
   ],
 
   'aomi': [

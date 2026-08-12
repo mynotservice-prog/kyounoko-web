@@ -470,6 +470,53 @@ export const CHUNK_35A: StationIndieMap = {
   // 日吉（横浜市港北区）
   // ===========================================================
   'hiyoshi': [
+    // ▼ 2026-08-12追加: 日吉東急avenue（東急百貨店 日吉店）の公式ショップ情報
+    //   （tokyu-dept.co.jp/hiyoshi/shop）から、館・階／カテゴリを転記した。日吉駅直結。
+    //   公式に予算・席数の掲載が無いため priceLunch は入れていない。
+    //   大戸屋はチェーン側で出るため除外。
+    {
+      name: 'TERME〈ラバロック グリル テルメ〉日吉東急avenue店',
+      genre: 'yoshoku',
+      area: '日吉駅直結（日吉東急avenue 南館3F）',
+      description:
+        'グリル料理のレストラン。肉料理は取り分けやすく、駅直結なのでベビーカーでの移動が短くて済む。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '杵屋 日吉東急avenue店',
+      genre: 'noodles',
+      area: '日吉駅直結（日吉東急avenue 南館2F）',
+      description:
+        'うどんの店。うどんは短く切って子どもに分けやすい定番。駅直結で雨の日も濡れずに行ける。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'メゾン・ド・ヴェール 日吉東急avenue店',
+      genre: 'cafe',
+      area: '日吉駅直結（日吉東急avenue 南館3F）',
+      description:
+        '喫茶。買い物や散歩の合間の休憩に使いやすい。南館3Fでレストランフロアと同じ階。',
+      seatingType: ['table'],
+    },
+    {
+      name: 'ブーランジェリー ブルディガラ 日吉東急avenue店',
+      genre: 'bakery',
+      area: '日吉駅直結（日吉東急avenue 本館1F）',
+      description:
+        'ベーカリーと軽食の店。パンを買って公園へ移動する使い方もでき、子どもが食べられる分だけ選べる。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'エスプレッソ・アメリカーノ 日吉東急avenue店',
+      genre: 'cafe',
+      area: '日吉駅直結（日吉東急avenue 本館3F）',
+      description:
+        '喫茶。駅直結の館内にあるので、雨の日や暑い日の休憩場所として使える。',
+      seatingType: ['table'],
+    },
     {
       name: 'ベトナムの食卓 HOAHOA 日吉本店',
       genre: 'asian',

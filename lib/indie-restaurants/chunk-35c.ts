@@ -444,6 +444,104 @@ export const CHUNK_35C: StationIndieMap = {
   // 本厚木駅（厚木市）
   // ===========================================================
   'hon-atsugi': [
+    // ▼ 2026-08-12追加: 本厚木ミロードの公式ショップ検索
+    //   （odakyu-sc.com/honatsugi-mylord/shopsearch/category/104）から、館・階／カテゴリを転記。
+    //   本厚木駅直結。公式に予算・席数の掲載が無いため priceLunch は入れていない。
+    //   洋麺屋五右衛門・とんかつ和幸・サイゼリヤ・スターバックス・タリーズ・ミスタードーナツ・
+    //   ケンタッキー・ドトール・E'PRONTO はチェーン側で出るため除外。
+    {
+      name: 'FLDK 本厚木ミロード',
+      genre: 'others',
+      area: '本厚木駅直結（本厚木ミロード MYLORD EAST 1F）',
+      description:
+        '和食・洋食・中華・カフェ・麺類が集まるフードホール。席が共用なので、子どもと大人が別々の店から頼んで同じ席で食べられる。子連れには施設内で最も使いやすい形式。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '東京洋食屋 神田グリル 本厚木ミロード店',
+      genre: 'yoshoku',
+      area: '本厚木駅直結（本厚木ミロード MYLORD1 6F）',
+      description:
+        'ハンバーグやオムライスの洋食店。子どもと分けやすい定番メニューが中心。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '自家製麺 杵屋 本厚木ミロード店',
+      genre: 'noodles',
+      area: '本厚木駅直結（本厚木ミロード MYLORD1 6F）',
+      description:
+        'うどんの店。うどんは短く切って取り分けやすい。6Fのレストランフロアにある。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '牛たん焼き 仙台 辺見 本厚木ミロード店',
+      genre: 'washoku',
+      area: '本厚木駅直結（本厚木ミロード MYLORD1 6F）',
+      description:
+        '牛たん定食の店。麦めしとテールスープが付き、ご飯を子どもに分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '茶薫小籠包 本厚木ミロード店',
+      genre: 'chinese',
+      area: '本厚木駅直結（本厚木ミロード MYLORD1 7F）',
+      description:
+        '小籠包の中華店。点心は少量ずつ頼めるので、子どもの食べる量に合わせやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'nana’s green tea 本厚木ミロード店',
+      genre: 'cafe',
+      area: '本厚木駅直結（本厚木ミロード MYLORD2 4F）',
+      description:
+        '和カフェ。抹茶スイーツのほか食事メニューもあり、休憩にも昼食にも使える。',
+      seatingType: ['table'],
+    },
+    {
+      name: 'アフタヌーンティー・ティールーム 本厚木ミロード店',
+      genre: 'cafe',
+      area: '本厚木駅直結（本厚木ミロード MYLORD1 2F）',
+      description:
+        '紅茶とフードセットのティールーム。軽めの食事から取れるので、子どもの食事量に合わせやすい。',
+      seatingType: ['table'],
+    },
+    {
+      name: 'cafe fazenda 本厚木ミロード店',
+      genre: 'cafe',
+      area: '本厚木駅直結（本厚木ミロード MYLORD1 B1F）',
+      description:
+        'カフェ・スイーツの店。改札からいちばん近い階にあり、電車の待ち時間に寄りやすい。',
+      seatingType: ['table'],
+    },
+    {
+      name: '名代箱根そば 本厚木ミロード店',
+      genre: 'noodles',
+      area: '本厚木駅直結（本厚木ミロード MYLORD EAST 1F）',
+      description:
+        '小田急系の立ちそば店。短時間で食べられるので、子どもの機嫌が持たないときの選択肢になる。席の形式は来店時に確認を。',
+      shareDish: true,
+    },
+    {
+      name: '築地銀だこ 本厚木ミロード店',
+      genre: 'teppan',
+      area: '本厚木駅直結（本厚木ミロード MYLORD1 B1F）',
+      description:
+        'たこ焼きの店。1舟を家族で分けやすい。中身が熱いので冷ましてから渡したい。',
+      shareDish: true,
+    },
+    {
+      name: '麺堂 油印 本厚木ミロード店',
+      genre: 'noodles',
+      area: '本厚木駅直結（本厚木ミロード MYLORD EAST 1F）',
+      description:
+        '麺類の店。改札直結のEAST 1Fにあり、移動を最小限にしたいときに使える。',
+      seatingType: ['table', 'counter'],
+    },
     {
       name: 'イタリアン&ワイン アドマーニ',
       genre: 'italian',
