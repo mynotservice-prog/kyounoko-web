@@ -840,6 +840,134 @@ export const CHUNK_40B: StationIndieMap = {
   // 南船橋駅（船橋市・京葉線／ららぽーとTOKYO-BAY）
   // ===========================================================
   'minami-funabashi': [
+    // ▼ 2026-08-12追加: ららぽーとTOKYO-BAY の公式ショップガイド
+    //   （mitsui-shopping-park.com/lalaport/tokyo-bay/shopguide/?category=g00）から、
+    //   館・フロア／カテゴリを転記した。南船橋駅から徒歩圏。
+    //   公式に予算・席数の掲載が無いため priceLunch は入れていない。
+    //   サイゼリヤ・はなまるうどん・ケンタッキー・スターバックスはチェーン側で出るため除外。
+    {
+      name: 'ららぽーとTOKYO-BAY 北館3F フードコート',
+      genre: 'others',
+      area: '南船橋駅から徒歩圏（ららぽーとTOKYO-BAY 北館3F）',
+      description:
+        'ラーメン・バーガー・お茶漬け・中華・カレー・クレープなどが並ぶフードコート。席が共用なので子どもと大人が別々の店から頼め、ベビーカーのまま席を取りやすい。らぁ麺すぎ本、J.S. BURGERS Jr.、こめらく、さわだ飯店などが入る。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'Buffet the Forest（ブッフェ ザ フォレスト）ららぽーとTOKYO-BAY店',
+      genre: 'yoshoku',
+      area: '南船橋駅から徒歩圏（ららぽーとTOKYO-BAY 南館3F ダイニングテラス）',
+      description:
+        'ビュッフェレストラン。子どもが食べられるものだけ取れて量も合わせやすい。取り分けの手間が少ないので子連れには使いやすい形式。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'シェーキーズ ららぽーとTOKYO-BAY店',
+      genre: 'italian',
+      area: '南船橋駅から徒歩圏（ららぽーとTOKYO-BAY 南館3F ダイニングテラス）',
+      description:
+        'ピザのビュッフェ。好きなだけ取れて子どもの食べる量に合わせやすく、ピザは手で食べられるのも利点。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'いしがまやハンバーグ ららぽーとTOKYO-BAY店',
+      genre: 'yoshoku',
+      area: '南船橋駅から徒歩圏（ららぽーとTOKYO-BAY 北館3F）',
+      description:
+        '石窯で仕上げるハンバーグの店。ハンバーグは子どもと分けやすい定番。熱い鉄板で出るので低年齢の子は席の位置に注意。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'しゃぶ菜 ららぽーとTOKYO-BAY店',
+      genre: 'shabu',
+      area: '南船橋駅から徒歩圏（ららぽーとTOKYO-BAY 北館3F）',
+      description:
+        'しゃぶしゃぶの店。鍋は取り分けやすいが、熱いものを扱うので低年齢の子は席の位置に注意。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'ITALIAN KITCHEN BUONO ららぽーとTOKYO-BAY店',
+      genre: 'italian',
+      area: '南船橋駅から徒歩圏（ららぽーとTOKYO-BAY 南館1F）',
+      description:
+        'パスタ・ピッツァのイタリアン。ピッツァは家族でシェアしやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'Eggs ’n Things ららぽーとTOKYO-BAY店',
+      genre: 'cafe',
+      area: '南船橋駅から徒歩圏（ららぽーとTOKYO-BAY 南館1F）',
+      description:
+        'ハワイ発のパンケーキ店。パンケーキは家族でシェアしやすく、甘いものなら食べるという子との食事に向く。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'クアアイナ ららぽーとTOKYO-BAY店',
+      genre: 'yoshoku',
+      area: '南船橋駅から徒歩圏（ららぽーとTOKYO-BAY 南館3F）',
+      description:
+        'ハワイアンハンバーガーの店。ボリュームがあるので家族で分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'ぼてぢゅう屋台 ららぽーとTOKYO-BAY店',
+      genre: 'teppan',
+      area: '南船橋駅から徒歩圏（ららぽーとTOKYO-BAY North Gate 2F）',
+      description:
+        'お好み焼きの店。1枚を家族で分けやすい。鉄板があるので低年齢の子は席の位置に注意。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'ごちとん ららぽーとTOKYO-BAY店',
+      genre: 'washoku',
+      area: '南船橋駅から徒歩圏（ららぽーとTOKYO-BAY 北館3F）',
+      description:
+        '豚汁と定食の和食店。汁物とご飯が付くので子どもへの取り分けがしやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'nana’s green tea ららぽーとTOKYO-BAY店',
+      genre: 'cafe',
+      area: '南船橋駅から徒歩圏（ららぽーとTOKYO-BAY 南館1F）',
+      description:
+        '和カフェ。抹茶スイーツのほか食事メニューもあり、休憩にも昼食にも使える。',
+      seatingType: ['table'],
+    },
+    {
+      name: 'Afternoon Tea TEAROOM ららぽーとTOKYO-BAY店',
+      genre: 'cafe',
+      area: '南船橋駅から徒歩圏（ららぽーとTOKYO-BAY 南館1F）',
+      description:
+        '紅茶とフードセットのティールーム。軽めの食事から取れるので子どもの食事量に合わせやすい。',
+      seatingType: ['table'],
+    },
+    {
+      name: 'cafe KONNICHIWA ららぽーとTOKYO-BAY店',
+      genre: 'cafe',
+      area: '南船橋駅から徒歩圏（ららぽーとTOKYO-BAY 南館1F）',
+      description:
+        'カフェ。買い物の合間の休憩に使いやすい南館1Fにある。',
+      seatingType: ['table'],
+    },
+    {
+      name: 'からあげ、定食、丼、がブリチキン。ららぽーとTOKYO-BAY店',
+      genre: 'washoku',
+      area: '南船橋駅から徒歩圏（ららぽーとTOKYO-BAY 西館1F ハーバーダイニング）',
+      description:
+        'からあげと定食・丼の店。からあげは子どもが手で食べやすく、丼は白飯を分けられる。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
     {
       name: 'コナズ珈琲 ららぽーとTOKYO-BAY',
       genre: 'cafe',
@@ -1214,6 +1342,120 @@ export const CHUNK_40B: StationIndieMap = {
   // 柏の葉キャンパス駅（柏市・TX／ららぽ柏の葉）
   // ===========================================================
   'kashiwa-no-ha-campus': [
+    // ▼ 2026-08-12追加: ららぽーと柏の葉の公式ショップガイド
+    //   （mitsui-shopping-park.com/lalaport/kashiwa/shopguide/?category=g00）から、
+    //   館・フロア／カテゴリを転記した。柏の葉キャンパス駅から徒歩圏。
+    //   ※公式のURLスラッグは kashiwanoha ではなく kashiwa。
+    //   公式のショップニュースに「クローズ【日本一】8/31営業終了」「クローズ【天丼てんや】
+    //   8/31営業終了」の告知があるため、この2店は掲載しない。
+    //   サイゼリヤ・サンマルクカフェ・タリーズ・モスバーガー・丸亀製麺・大戸屋・鎌倉パスタ・
+    //   SUBWAYはチェーン側で出るため除外。
+    {
+      name: 'ららぽーと柏の葉 本館3F フードコート',
+      genre: 'others',
+      area: '柏の葉キャンパス駅から徒歩圏（ららぽーと柏の葉 本館3F）',
+      description:
+        'カレー・ラーメン・つけ麺・あじフライ・焼肉などが並ぶフードコート。席が共用なので子どもと大人が別々の店から頼め、ベビーカーのまま席を取りやすい。100時間カレーEXPRESS、RAMEN EXPRESS 博多一風堂、どうとんぼり神座、牛角焼肉食堂などが入る。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'THE BUFFET New Market ららぽーと柏の葉店',
+      genre: 'yoshoku',
+      area: '柏の葉キャンパス駅から徒歩圏（ららぽーと柏の葉 本館3F）',
+      description:
+        'ビュッフェレストラン。子どもが食べられるものだけ取れて量も合わせやすい。取り分けの手間が少ないので子連れには使いやすい形式。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '回転寿司みさき ららぽーと柏の葉店',
+      genre: 'sushi',
+      area: '柏の葉キャンパス駅から徒歩圏（ららぽーと柏の葉 本館3F）',
+      description:
+        '回転寿司。レーンから子どもが自分で選べるうえ、玉子やかっぱ巻きが必ずある。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: 'ビストロ309 ららぽーと柏の葉店',
+      genre: 'yoshoku',
+      area: '柏の葉キャンパス駅から徒歩圏（ららぽーと柏の葉 本館3F）',
+      description:
+        '洋食のビストロ。ハンバーグやパスタなど子どもと分けやすいメニューが中心。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '天ぷら ハゲ天 ららぽーと柏の葉店',
+      genre: 'tempura',
+      area: '柏の葉キャンパス駅から徒歩圏（ららぽーと柏の葉 本館3F）',
+      description:
+        '天ぷらの和食店。定食形式ならご飯と汁物を子どもに分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '富金豚 ららぽーと柏の葉店',
+      genre: 'tonkatsu',
+      area: '柏の葉キャンパス駅から徒歩圏（ららぽーと柏の葉 本館3F）',
+      description:
+        '豚肉料理の店。定食形式ならご飯と汁物を子どもに分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '紅虎餃子房 ららぽーと柏の葉店',
+      genre: 'chinese',
+      area: '柏の葉キャンパス駅から徒歩圏（ららぽーと柏の葉 本館3F）',
+      description:
+        '中華料理店。餃子やチャーハンは取り分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '焼肉・韓国料理 KollaBo ららぽーと柏の葉店',
+      genre: 'korean',
+      area: '柏の葉キャンパス駅から徒歩圏（ららぽーと柏の葉 本館3F）',
+      description:
+        '焼肉と韓国料理の店。石焼ビビンバなど辛さを抜いた取り分けがしやすいメニューもある。焼く席は低年齢の子の位置に注意。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'SALVATORE CUOMO & BAR 柏の葉',
+      genre: 'italian',
+      area: '柏の葉キャンパス駅から徒歩圏（ららぽーと柏の葉 北館1F）',
+      description:
+        '窯焼きピッツァのイタリアン。ピッツァは家族でシェアしやすい。北館1Fにある。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '祇園茶寮×タニタカフェ ららぽーと柏の葉店',
+      genre: 'cafe',
+      area: '柏の葉キャンパス駅から徒歩圏（ららぽーと柏の葉 本館3F）',
+      description:
+        '和スイーツとヘルシーメニューのカフェ。食事にも休憩にも使える。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '果汁工房果琳 ららぽーと柏の葉店',
+      genre: 'sweets',
+      area: '柏の葉キャンパス駅から徒歩圏（ららぽーと柏の葉 本館1F）',
+      description:
+        'フレッシュジュースの店。食事が進まない子でも果物なら飲める、というときに使える。',
+      shareDish: true,
+    },
+    {
+      name: 'おめで鯛焼き本舗 ららぽーと柏の葉店',
+      genre: 'sweets',
+      area: '柏の葉キャンパス駅から徒歩圏（ららぽーと柏の葉 本館1F）',
+      description:
+        'たい焼きの店。歩きながら食べられて、子どもが少しだけ食べたいときにも使える。中身が熱いので冷ましてから渡したい。',
+      shareDish: true,
+    },
     {
       name: 'BISTRO309 ららぽーと柏の葉店',
       genre: 'french',
