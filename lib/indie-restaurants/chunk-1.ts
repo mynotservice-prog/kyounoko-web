@@ -1995,6 +1995,118 @@ export const CHUNK_1: StationIndieMap = {
   ],
 
   'takanawa-gateway': [
+    // ▼ 2026-08-12追加: ニュウマン高輪（高輪ゲートウェイシティ）の公式レストランページ
+    //   （newoman.jp/takanawa/floorguide）から、館・フロア／ランチ予算／席数を転記した。
+    //   従来この駅には「高輪ゲートウェイ NEWoMan レストラン街」「駅直結 個人レストランフロア」
+    //   という店名ではない仮置きが入っていた（68クリック/28日のページ）。実店舗で置き換える。
+    {
+      name: 'ZEROCORNER',
+      genre: 'yoshoku',
+      area: '高輪ゲートウェイ駅直結（ニュウマン高輪 South 1F）',
+      description:
+        '日本各地の食材を集めたマーケットとビストロを併設するオールデイダイニング。8:00から開いているので朝食にも使える。カウンター5席・テーブル14席と小さめ。ランチ1,500円〜。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'SUPER RAW',
+      genre: 'noodles',
+      area: '高輪ゲートウェイ駅直結（ニュウマン高輪 North 5F）',
+      description:
+        'らーめん・スパイスカリー・クラフトビールの複合店。公式の店舗紹介が「お子様連れのファミリー」を利用シーンに挙げている。ランチ1,000円〜と施設内では入りやすい価格帯。',
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'GARDEN HOUSE 高輪',
+      genre: 'yoshoku',
+      area: '高輪ゲートウェイ駅直結（ニュウマン高輪 LUFTBAUM 28F）',
+      description:
+        '鎌倉発祥のレストラン。旬の食材を使うノーザンカリフォルニアスタイルの洋食で取り分けやすい。カウンター7席・テーブル64席。28階からの眺めも楽しめる。ランチ1,800円〜。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'The Public Place',
+      genre: 'yoshoku',
+      area: '高輪ゲートウェイ駅直結（ニュウマン高輪 LUFTBAUM 28F）',
+      description:
+        '約150席のオールデイダイニング。ビッグテーブルやテラス、プライベートルームがあり、人数や状況に合わせて席を選べる。ランチ2,000円〜。',
+      privateRoom: true,
+      seatingType: ['table', 'terrace'],
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: '鎌倉 松原庵 高輪',
+      genre: 'noodles',
+      area: '高輪ゲートウェイ駅直結（ニュウマン高輪 MIMURE 3F）',
+      description:
+        '鎌倉発祥の手打ち蕎麦店。カウンター18席・テーブル48席に加えて半個室（1室11席）があり、子ども連れでも周りを気にせず使える。蕎麦は取り分けやすい。ランチ1,700円〜。',
+      privateRoom: true,
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'Rigo SPANISH ITALIAN',
+      genre: 'italian',
+      area: '高輪ゲートウェイ駅直結（ニュウマン高輪 South 4F）',
+      description:
+        'ハワイの人気店が日本初出店。タパスや自家製ピザ・パスタが中心で、複数頼んで家族でシェアしやすい。ランチ1,700円〜。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'TOOTH TOOTH BISTRO&CAFE',
+      genre: 'cafe',
+      area: '高輪ゲートウェイ駅直結（ニュウマン高輪 South 5F）',
+      description:
+        '神戸発のビストロ＆カフェ。生パスタやガレット、焼き立てパンがあり、スイーツも揃うので食事にも休憩にも使える。108席と広い。ランチ2,000円〜。',
+      seatingType: ['table'],
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: 'VERMICULAR RESTAURANT THE FOUNDRY 高輪',
+      genre: 'yoshoku',
+      area: '高輪ゲートウェイ駅直結（ニュウマン高輪 North 2F）',
+      description:
+        '鋳物ホーロー鍋バーミキュラと薪窯の料理を出すビストロ。公式が「家族や友人と料理をシェアしながら」を利用シーンに挙げている。カウンター5席・テーブル48席。ランチ2,000〜2,999円。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: 'PARIYA DELICATESSEN 高輪',
+      genre: 'yoshoku',
+      area: '高輪ゲートウェイ駅直結（ニュウマン高輪 South 4F）',
+      description:
+        '大皿から惣菜を選んで詰めるデリカテッセン。子どもが食べられるものだけ選べるのが利点。カウンター16席・テーブル26席のイートインあり。価格は公式に予算表記が無く要確認。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: '800°DEGREES TAKANAWA',
+      genre: 'italian',
+      area: '高輪ゲートウェイ駅直結（ニュウマン高輪 South 1F）',
+      description:
+        '華氏800度の窯で焼くピッツァのトラットリア。ピッツァは家族でシェアしやすい。テーブル席70席。ランチ3,000円〜と価格帯は高め。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: '蕎麦 豊田 高輪',
+      genre: 'noodles',
+      area: '高輪ゲートウェイ駅直結（ニュウマン高輪 South 4F）',
+      description:
+        '店内で打つ手打ち蕎麦の店。ざる蕎麦やぶっかけ蕎麦は子どもにも取り分けやすい。ランチは11:00〜15:00。予算2,500〜5,500円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜3,500円',
+    },
     {
       name: '高輪ゲートウェイ 駅ナカ FOOD&TIME ISETAN',
       genre: 'others',
