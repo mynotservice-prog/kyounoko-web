@@ -213,6 +213,144 @@ export const CHUNK_40A: StationIndieMap = {
   // 浦和駅（さいたま市浦和区）
   // ===========================================================
   'urawa': [
+    // ▼ 2026-08-12追加: 浦和PARCOの公式フロアガイド（urawa.parco.jp/floor/detail/?f=5f）から、
+    //   フロア／ジャンルを転記した。レストランは5Fに18店が集まっている。浦和駅東口直結。
+    //   公式に予算・席数の掲載が無いため priceLunch は入れていない。
+    //   生麺専門 鎌倉パスタはチェーン側で出るため除外。
+    {
+      name: '佐渡廻転寿司 弁慶 浦和PARCO店',
+      genre: 'sushi',
+      area: '浦和駅直結（浦和PARCO 5F）',
+      description:
+        '廻転寿司。レーンから子どもが自分で選べるうえ、玉子や納豆巻きなど食べられるネタが必ずある。子連れには5Fで最も使いやすい形式。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: '五穀 浦和PARCO店',
+      genre: 'washoku',
+      area: '浦和駅直結（浦和PARCO 5F）',
+      description:
+        '和定食の店。ご飯と味噌汁が付く定食形式なので、白飯とおかずを子どもに分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '新宿中村屋オリーブハウス 浦和PARCO店',
+      genre: 'yoshoku',
+      area: '浦和駅直結（浦和PARCO 5F）',
+      description:
+        '洋食のレストラン。カレーやハヤシなど子どもと分けやすいメニューが中心。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '山下本気うどん 浦和PARCO店',
+      genre: 'noodles',
+      area: '浦和駅直結（浦和PARCO 5F）',
+      description:
+        'うどんと天ぷらの店。うどんは短く切って子どもに分けやすい定番。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'いなば和幸 浦和PARCO店',
+      genre: 'tonkatsu',
+      area: '浦和駅直結（浦和PARCO 5F）',
+      description:
+        'とんかつの店。ご飯・キャベツ・味噌汁が付く定食形式で取り分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '北国とミルク 浦和PARCO店',
+      genre: 'italian',
+      area: '浦和駅直結（浦和PARCO 5F）',
+      description:
+        '北海道イタリアン＆カフェ。パスタやピッツァのほかスイーツもあり、食事にも休憩にも使える。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'こてがえし 浦和PARCO店',
+      genre: 'teppan',
+      area: '浦和駅直結（浦和PARCO 5F）',
+      description:
+        '築地もんじゃ・お好み焼きの店。1枚を家族で分けやすい。鉄板があるので低年齢の子は席の位置に注意。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '京都二条茶寮 浦和PARCO店',
+      genre: 'washoku',
+      area: '浦和駅直結（浦和PARCO 5F）',
+      description:
+        '和食と和スイーツの店。食事のあとにそのまま甘味へ移れるので、子どもの機嫌が持ちやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '仙台牛たん 青葉 浦和PARCO店',
+      genre: 'washoku',
+      area: '浦和駅直結（浦和PARCO 5F）',
+      description:
+        '牛たん定食の店。麦めしとテールスープが付き、ご飯を子どもに分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'ロプノール 浦和PARCO店',
+      genre: 'chinese',
+      area: '浦和駅直結（浦和PARCO 5F）',
+      description:
+        '中国料理の店。取り分け前提の料理が多く、家族でシェアしやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '鯛塩そば 灯花 浦和PARCO店',
+      genre: 'noodles',
+      area: '浦和駅直結（浦和PARCO 5F）',
+      description:
+        '鯛出汁の塩ラーメン。あっさりした味で子どもにも取り分けやすい。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: 'しゃぶしゃぶ但馬屋 浦和PARCO店',
+      genre: 'shabu',
+      area: '浦和駅直結（浦和PARCO 5F）',
+      description:
+        'しゃぶしゃぶ・すき焼きの店。鍋なので取り分けやすい一方、熱いものを扱うので低年齢の子は席の位置に注意。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '江戸前うなぎ かわ祥 浦和PARCO店',
+      genre: 'washoku',
+      area: '浦和駅直結（浦和PARCO 5F）',
+      description:
+        'うなぎの店。うな重の白飯は子どもに分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '韓美膳 浦和PARCO店',
+      genre: 'korean',
+      area: '浦和駅直結（浦和PARCO 5F）',
+      description:
+        '韓国料理の店。石焼ビビンバなど辛さを抜いた取り分けがしやすい定番メニューがそろう。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'ワイアードキッチン 浦和PARCO店',
+      genre: 'cafe',
+      area: '浦和駅直結（浦和PARCO 6F）',
+      description:
+        'カフェ・レストラン。ユナイテッド・シネマ浦和と同じ6Fにあり、映画の前後の食事に使える。',
+      seatingType: ['table'],
+    },
     {
       name: 'SOMETHING サムシング 浦和本店',
       genre: 'italian',

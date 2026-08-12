@@ -644,6 +644,88 @@ export const CHUNK_35A: StationIndieMap = {
   // 大船（鎌倉市・横浜市栄区）
   // ===========================================================
   'ofuna': [
+    // ▼ 2026-08-12追加: 大船ルミネウィングの公式フロアガイド
+    //   （lumine.ne.jp/luminewing/floorguide）から、フロア／ジャンル／ランチ予算／席数を転記。
+    //   レストランは全店7Fに集まっており、営業は11:00〜21:30。大船駅直結。
+    //   洋麺屋五右衛門はチェーン側で出るため除外。
+    {
+      name: 'おぼんdeごはん 大船ルミネウィング店',
+      genre: 'washoku',
+      area: '大船駅直結（大船ルミネウィング 7F）',
+      description:
+        'おぼんにのせる定食スタイルの店。メインのおかずが常時20種類以上あり、ごはんも2種から選べるので、子どもが食べられる組み合わせを作りやすい。94席とフロアで最も広い。ランチ1,150円〜。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'つばめグリル 大船ルミネウィング店',
+      genre: 'yoshoku',
+      area: '大船駅直結（大船ルミネウィング 7F）',
+      description:
+        'ハンブルグステーキが看板の欧風料理店。化学調味料・保存料をなるべく使わない方針で、ハンバーグは子どもと分けやすい。82席。ランチ1,300円〜。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '築地玉寿司 大船ルミネウィング店',
+      genre: 'sushi',
+      area: '大船駅直結（大船ルミネウィング 7F）',
+      description:
+        '豊洲市場から仕入れる江戸前寿司。玉子やかっぱ巻きなど子どもが食べられるネタを単品で頼める。32席。ランチ1,188円〜。',
+      seatingType: ['table', 'counter'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '野菜中華 千里 大船ルミネウィング店',
+      genre: 'chinese',
+      area: '大船駅直結（大船ルミネウィング 7F）',
+      description:
+        '点心師が皮から手作りする餃子・小籠包の中華店。点心は少量ずつ頼めて取り分けやすい。35席。ランチ950円〜と7Fでは入りやすい価格帯。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: '麺屋 空海 大船ルミネウィング店',
+      genre: 'noodles',
+      area: '大船駅直結（大船ルミネウィング 7F）',
+      description:
+        '醤油らぁ麺の店。セットメニューが豊富で、テイクアウトは420円〜。25席と小ぶりなので混雑時間は避けたい。ランチ900円〜。',
+      seatingType: ['table', 'counter'],
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: 'AGIO natura 大船ルミネウィング店',
+      genre: 'italian',
+      area: '大船駅直結（大船ルミネウィング 7F）',
+      description:
+        '三笠会館のシェフが監修するヘルシーイタリアン。石窯焼きピッツァは家族でシェアしやすい。ランチ1,530円〜。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'とんかつ新宿さぼてん 大船ルミネウィング店',
+      genre: 'tonkatsu',
+      area: '大船駅直結（大船ルミネウィング 7F）',
+      description:
+        'とんかつ専門店。ご飯とキャベツが付く定食形式で取り分けやすい。38席。ランチ1,408円〜。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '檑亭北院 大船ルミネウィング店',
+      genre: 'noodles',
+      area: '大船駅直結（大船ルミネウィング 7F）',
+      description:
+        '鎌倉山の「檑亭」の系列。北海道産そば粉のそばと会席料理。そばは取り分けやすいが、41席で落ち着いた雰囲気のためランチ1,850円〜と価格帯は高め。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
     {
       name: 'AGIO natura 大船店',
       genre: 'italian',
