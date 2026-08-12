@@ -17,6 +17,158 @@ export const CHUNK_40A: StationIndieMap = {
   'omiya': [
     // 'IRIS（アイリス）' は削除（2026-08-12）。公式サイト iris-omiya.com に
     // 「2024年6月22日をもって移転のため閉店」と記載があり、現存しない店舗だった。
+    //
+    // ▼ ここから2026-08-12追加: ルミネ大宮の公式フロアガイド（lumine.ne.jp/omiya/floorguide）
+    //   から、フロア・ジャンル・席数・ランチ予算を一次情報として転記した15店。
+    //   - priceLunch は公式の「ランチ：◯円〜」の開始価格が入るバンド。ただし開始価格が
+    //     1,000円前後でも実際の一食は超えるため 〜1,000円 バンドは使わない。
+    //   - seatingType は公式の席数表記（「テーブル30席 カウンター5席」等）から起こす。
+    //     内訳が無く総席数だけの店は table のみとする。
+    //   - kidsMenu / strollerOk 等は公式に記載が無いので立てない（推測で埋めない）。
+    //     例: 卵と私は公式メニューを確認したがキッズ区分が無かった。
+    //   - くら寿司・洋麺屋五右衛門は lib/station-restaurants.ts のチェーン側で出るため除外。
+    {
+      name: 'Aloha Table ルミネ大宮店',
+      genre: 'cafe',
+      area: '大宮駅直結（ルミネ大宮2 4F）',
+      description:
+        'ハワイ・ワイキキに本店を持つハワイアンカフェ＆ダイニング。164席と広く、開放感のあるテラス席もあるオールデイダイニングで、時間帯を選ばず使える。公式のランチ予算は1,500円〜。',
+      seatingType: ['table', 'terrace'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '一汁一菜ごはん 御御御 ルミネ大宮店',
+      genre: 'washoku',
+      area: '大宮駅直結（ルミネ大宮2 4F）',
+      description:
+        '具だくさんの豚汁とおかずを組み合わせる一汁一菜の定食店。おかずを好みで選べるので、子どもに取り分けやすい構成にできる。テーブル席43席。公式の予算は1,200〜2,500円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '一風堂 ルミネ大宮店',
+      genre: 'noodles',
+      area: '大宮駅直結（ルミネ大宮2 4F）',
+      description:
+        '福岡発のとんこつラーメン店。カウンター4席・テーブル20席と小ぶりなので、ベビーカーでの入店可否は事前確認が安心。サイドメニューがあり取り分けもしやすい。公式のランチ予算は1,000円〜。',
+      seatingType: ['table', 'counter'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'う匠 山家 膳兵衛',
+      genre: 'washoku',
+      area: '大宮駅直結（ルミネ大宮2 4F）',
+      description:
+        '創業明治5年の地元大宮のうなぎ老舗「山家」の姉妹店。たれ焼きに加え、たれを使わない塩焼きも選べるので子どもと分けやすい。46席。テイクアウトあり。公式のランチ予算は1,700円〜。',
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '大かまど飯 寅福 ルミネ大宮店',
+      genre: 'washoku',
+      area: '大宮駅直結（ルミネ大宮2 4F）',
+      description:
+        '店頭の大かまどで炊くご飯が看板の和定食店。昼は3種類のごはんがお替り自由の定食・どんぶりが中心で、白飯を子どもに分けやすい。66席。公式のランチ予算は1,300円〜。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'オムライスの店 卵と私 ルミネ大宮店',
+      genre: 'yoshoku',
+      area: '大宮駅直結（ルミネ大宮2 4F）',
+      description:
+        '王道オムライスとふわとろのスフレオムライスを出す専門店。卵料理中心で子どもが食べやすい献立だが、公式メニューにお子様メニューの区分は無く取り分け前提。テーブル40席。ランチ950円〜。',
+      seatingType: ['table'],
+      kidsMenu: false,
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '黒ぶたや ルミネ大宮店',
+      genre: 'shabu',
+      area: '大宮駅直結（ルミネ大宮2 4F）',
+      description:
+        '六白黒豚のしゃぶしゃぶと各種定食の店。昼は定食中心で、鍋よりも取り分けやすい。テーブル30席・カウンター5席。公式のランチ予算は1,250円〜。',
+      seatingType: ['table', 'counter'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '上海小籠包 石庫門 ルミネ大宮店',
+      genre: 'chinese',
+      area: '大宮駅直結（ルミネ大宮2 4F）',
+      description:
+        '店内仕込みの小籠包が看板の本格中華。点心や一品を数種頼んでシェアする使い方ができる。テーブル21席・カウンター2席と小ぶり。公式のランチ予算は1,180円〜。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '築地玉寿司 ルミネ大宮店',
+      genre: 'sushi',
+      area: '大宮駅直結（ルミネ大宮2 4F）',
+      description:
+        '創業100年超の寿司店。カウンター11席・テーブル38席でテーブル席が多く、家族でも座りやすい。ランチは1,012円〜と入りやすい価格帯（ディナーは5,000円前後）。',
+      seatingType: ['table', 'counter'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '牛たん とろろ 麦めし ねぎし ルミネ大宮店',
+      genre: 'washoku',
+      area: '大宮駅直結（ルミネ大宮2 4F）',
+      description:
+        '牛たん・とろろ・麦めしをそろえた定食店。ご飯とスープが定食に付くので子どもへの取り分けがしやすい。64席。公式の予算は1,300〜3,550円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '函館 五島軒 ルミネ大宮店',
+      genre: 'yoshoku',
+      area: '大宮駅直結（ルミネ大宮2 4F）',
+      description:
+        '創業明治12年、北海道で最も歴史のある西洋料理店。カレーやハヤシなど子どもと分けやすい洋食が中心。21席と小規模なので混雑時間は避けたい。公式のランチ予算は1,300円〜。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '韓美膳 ルミネ大宮店',
+      genre: 'korean',
+      area: '大宮駅直結（ルミネ大宮2 4F）',
+      description:
+        'カジュアルな韓国料理店。石焼ビビンバやスンドゥブなど、辛さを抜いた取り分けがしやすい定番メニューがそろう。公式のランチ予算は1,000円〜。',
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'mangotree cafe ルミネ大宮店',
+      genre: 'asian',
+      area: '大宮駅直結（ルミネ大宮2 4F）',
+      description:
+        'タイ料理「マンゴツリー」のカフェ業態。ガパオやカオマンガイなど一皿もの中心で、辛くない料理も選べる。76席と広め。公式のランチ予算は1,200円〜。',
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'ラ・ヴォーリアマッタ ルミネ大宮店',
+      genre: 'italian',
+      area: '大宮駅直結（ルミネ大宮2 4F）',
+      description:
+        '石窯で焼く直径40センチのミラノピッツァが看板のイタリアン。114席とフロアで最も広く、大きなピッツァを家族でシェアしやすい。公式のランチ予算は1,320円〜。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'SLB THE DINING',
+      genre: 'yoshoku',
+      area: '大宮駅直結（ムスブルミネ 2F）',
+      description:
+        '大宮市場の魚や埼玉県産食材を使い、一汁三菜を和洋折衷のコースに再構成したレストラン。ランチは11:00〜15:30（L.O.15:00）。予算は公式に記載が無いため要確認。',
+      shareDish: true,
+    },
     {
       name: 'ビストロ ボナペティ',
       genre: 'yoshoku',

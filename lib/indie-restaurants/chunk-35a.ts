@@ -294,6 +294,127 @@ export const CHUNK_35A: StationIndieMap = {
   // 新横浜（横浜市港北区）
   // ===========================================================
   'shin-yokohama': [
+    // ▼ 2026-08-12追加: キュービックプラザ新横浜の公式ショップガイド
+    //   （cubicplaza.com/shopguide）から、フロア・ジャンル・座席・ご予算に加えて
+    //   公式の「キッズメニューあり」「個室・半個室あり」フラグを一次情報として転記。
+    //   フラグが立っていない店には kidsMenu / privateRoom を付けない。
+    //   ロイヤルホストは lib/station-restaurants.ts のチェーン側で出るため除外。
+    {
+      name: 'Amalfi NOVELLO（アマルフィイ ノベッロ）',
+      genre: 'italian',
+      area: '新横浜駅直結（キュービックプラザ新横浜 10F）',
+      description:
+        '三崎漁港直送の魚介と横濱野菜を使う湘南イタリアン。公式にキッズメニューありの表示があり、個室・半個室も用意。1F54席（テラス席含む）・2F55席と広い。ランチ1,500円〜。',
+      kidsMenu: true,
+      privateRoom: true,
+      seatingType: ['table', 'terrace'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '鎌倉かつ亭 あら珠 新横浜店',
+      genre: 'tonkatsu',
+      area: '新横浜駅直結（キュービックプラザ新横浜 10F）',
+      description:
+        '銘柄豚のとんかつと季節の海鮮・野菜のフライを出す和食店。公式にキッズメニューありの表示。35席と小ぶりなので、混雑する時間帯は避けたい。テイクアウト可。ランチ1,500円〜。',
+      kidsMenu: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '手作り料理とお酒 えん 新横浜店',
+      genre: 'washoku',
+      area: '新横浜駅直結（キュービックプラザ新横浜 10F）',
+      description:
+        'おばんざいや刺身、焼き物をそろえる和食店。掘りごたつ式のお座敷個室があり、赤ちゃん連れでも足を伸ばして座れる。153席と大箱。日替わりランチ1,100円（税込）から。',
+      privateRoom: true,
+      seatingType: ['table', 'counter', 'zashiki'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '沼津魚がし鮨 新横浜店',
+      genre: 'sushi',
+      area: '新横浜駅直結（キュービックプラザ新横浜 10F）',
+      description:
+        '沼津市場直送の地魚を出す寿司店。公式にキッズメニューありの表示があり、カウンターのほかテーブル席・お座敷も用意。60席。ランチ2,000円〜。',
+      kidsMenu: true,
+      seatingType: ['table', 'counter', 'zashiki'],
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: '梅蘭 新横浜店',
+      genre: 'chinese',
+      area: '新横浜駅直結（キュービックプラザ新横浜 10F）',
+      description:
+        '1987年横浜中華街創業。名物の梅蘭焼きそばは取り分けやすく、家族でシェアしやすい。個室・半個室あり、110席。ランチ1,500円〜。',
+      privateRoom: true,
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '博多もつ鍋 やまや 新横浜店',
+      genre: 'washoku',
+      area: '新横浜駅直結（キュービックプラザ新横浜 10F）',
+      description:
+        '明太子メーカー直営のもつ鍋店。ランチは明太子・からし高菜・ご飯が食べ放題で、白飯を子どもに取り分けやすい。個室・半個室あり、108席。ランチ1,600円〜。',
+      privateRoom: true,
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '永坂更科 布屋太兵衛 新横浜店',
+      genre: 'noodles',
+      area: '新横浜駅直結（キュービックプラザ新横浜 9F）',
+      description:
+        '創業220年余のそば店。公式の店舗紹介に「お子様メニュー830円をご提供」と明記されている。御前そば1,020円など単品も頼みやすい。58席。ランチ1,500円〜。',
+      kidsMenu: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '横濱元町ドリア 新横浜店',
+      genre: 'yoshoku',
+      area: '新横浜駅直結（キュービックプラザ新横浜 9F）',
+      description:
+        '30種類以上のドリア・グラタンをそろえる専門店。公式にキッズメニューありの表示。熱々の状態で提供されるため、子どもの分は取り分けて冷ましてから渡したい。ランチ1,200円〜。',
+      kidsMenu: true,
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '洋食キムラ 新横浜店',
+      genre: 'yoshoku',
+      area: '新横浜駅直結（キュービックプラザ新横浜 9F）',
+      description:
+        '昭和13年創業の横浜の老舗洋食店。看板は鉄鍋で供されるハンバーグで、デミグラスと半熟卵が定番。個室・半個室あり、64席。予算1,820円〜。',
+      privateRoom: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '熟成牛ステーキバル Gottie’s BEEF 新横浜店',
+      genre: 'yoshoku',
+      area: '新横浜駅直結（キュービックプラザ新横浜 9F）',
+      description:
+        '約40日熟成させた牛ステーキをカジュアルなバル空間で出す店。ハンバーグやステーキは取り分けやすい。65席。ランチ1,200円〜。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '焼肉トラジ 新横浜店',
+      genre: 'yakiniku',
+      area: '新横浜駅直結（キュービックプラザ新横浜 9F）',
+      description:
+        'お座敷個室・半個室テーブル席をそろえる焼肉店。8名から最大40名まで個室対応で、子連れでも周りを気にせず使える。74席。ランチ1,500円〜。',
+      privateRoom: true,
+      seatingType: ['table', 'counter', 'zashiki'],
+      priceLunch: '〜2,000円',
+    },
     {
       name: 'Aloha Food Factory（アロハフードファクトリー）',
       genre: 'asian',
@@ -330,9 +451,10 @@ export const CHUNK_35A: StationIndieMap = {
       priceLunch: '〜3,500円',
     },
     {
-      name: 'あぎゅう 新横浜',
+      // 正式名は「横濱焼肉 あぎゅう」（旧店名: 千山閣 新横浜）。2026-08-12 に営業を確認。
+      name: '横濱焼肉 あぎゅう',
       genre: 'yakiniku',
-      area: '新横浜駅から徒歩5分',
+      area: '新横浜駅から徒歩5分（新横ルポビル2F）',
       description:
         'A5銘柄牛を扱う焼肉店。ランチから利用できる個室があり、子ども向けのメニューも豊富。落ち着いた個室空間でゆっくり食事できるため、家族の特別ランチに向く。',
       privateRoom: true,

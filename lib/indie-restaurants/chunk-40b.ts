@@ -116,6 +116,237 @@ export const CHUNK_40B: StationIndieMap = {
   // 柏駅（柏市）
   // ===========================================================
   'kashiwa': [
+    // ▼ 2026-08-12追加: 柏高島屋ステーションモールの公式ショップページ
+    //   （takashimaya.co.jp/kashiwa/stemo/shop）から、館・フロア／ランチ平均予算／座席数と、
+    //   公式の「お子様チェアあり」「お子様メニューあり」「個室がある」フラグを転記した。
+    //   ※フラグは全店に一覧表示され、非該当は class="none" で落とされている。
+    //     テキストだけ拾うと全店に全フラグが立っているように見えるので、必ず none を除外する。
+    //   とんかつ和幸・洋麺屋五右衛門・マクドナルド・スターバックス・ドトールは
+    //   lib/station-restaurants.ts のチェーン側で出るため除外。
+    {
+      name: 'アジオ 柏高島屋ステーションモール店',
+      genre: 'yoshoku',
+      area: '柏駅直結（柏高島屋ステーションモール S館7F）',
+      description:
+        '洋食のマーケットレストラン。公式にお子様メニュー・お子様チェアの表示があり、個室も用意。80席と広く、家族連れでも入りやすい。ランチ平均1,580円〜。',
+      kidsMenu: true,
+      kidsChair: true,
+      privateRoom: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'アフタヌーンティー・ティールーム 柏高島屋ステーションモール店',
+      genre: 'cafe',
+      area: '柏駅直結（柏高島屋ステーションモール S館4F）',
+      description:
+        '紅茶とフードセットのティールーム。公式にお子様メニュー・お子様チェアの表示あり。60席。フードセットは平日1,520円〜・土日祝1,820円〜。',
+      kidsMenu: true,
+      kidsChair: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'エッグスンシングス コーヒー 柏高島屋ステーションモール店',
+      genre: 'cafe',
+      area: '柏駅直結（柏高島屋ステーションモール 新館8F）',
+      description:
+        'ハワイ発のパンケーキ＆コーヒー店。公式にお子様メニューの表示あり。パンケーキは家族でシェアしやすい。ランチ平均1,000円。',
+      kidsMenu: true,
+      shareDish: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '柏 一茶庵',
+      genre: 'noodles',
+      area: '柏駅直結（柏高島屋ステーションモール S館7F）',
+      description:
+        'そば・うどんの和食店。公式にお子様チェアありの表示と個室あり。うどんは子どもに取り分けやすい。40席。ランチ平均1,000円。',
+      kidsChair: true,
+      privateRoom: true,
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'こてがえし 柏高島屋ステーションモール店',
+      genre: 'teppan',
+      area: '柏駅直結（柏高島屋ステーションモール S館7F）',
+      description:
+        '鉄板焼き・お好み焼きの店。公式にお子様メニュー・お子様チェアの表示あり。お好み焼きは取り分けやすいが、鉄板があるので低年齢の子は席の位置に注意。ランチ平均1,500円。',
+      kidsMenu: true,
+      kidsChair: true,
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'さんるーむ 柏高島屋ステーションモール店',
+      genre: 'washoku',
+      area: '柏駅直結（柏高島屋ステーションモール S館7F）',
+      description:
+        '野菜中心の自然食レストラン。公式にお子様メニュー・お子様チェアの表示あり。薄味の惣菜が多く取り分けしやすい。60席。ランチ平均1,000円。',
+      kidsMenu: true,
+      kidsChair: true,
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '新宿 つな八 柏高島屋ステーションモール店',
+      genre: 'tempura',
+      area: '柏駅直結（柏高島屋ステーションモール S館7F）',
+      description:
+        '天ぷらの老舗。公式にお子様メニュー・お子様チェアの表示あり。28席と小ぶりなので、混雑時間帯を外して行きたい。ランチ平均2,000円。',
+      kidsMenu: true,
+      kidsChair: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '仙台 牛たん 青葉 柏高島屋ステーションモール店',
+      genre: 'washoku',
+      area: '柏駅直結（柏高島屋ステーションモール S館7F）',
+      description:
+        '牛たん定食の専門店。公式にお子様メニュー・お子様チェアの表示あり。カウンター5席・テーブル34席。麦めしとテールスープは取り分けやすい。ランチ平均1,700円。',
+      kidsMenu: true,
+      kidsChair: true,
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '中国名菜 銀座アスター ベルシーヌ柏',
+      genre: 'chinese',
+      area: '柏駅直結（柏高島屋ステーションモール S館7F）',
+      description:
+        '銀座アスターの中国料理店。公式にお子様チェアありの表示と個室あり。78席。取り分け前提の中華で家族利用しやすいが、ランチ平均3,500円と価格帯は高め。',
+      kidsChair: true,
+      privateRoom: true,
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: '築地玉寿司 柏高島屋ステーションモール店',
+      genre: 'sushi',
+      area: '柏駅直結（柏高島屋ステーションモール S館7F）',
+      description:
+        '創業100年超の寿司店。公式にお子様チェアありの表示。ランチ平均1,000円と寿司としては入りやすい価格帯（通常平均は3,000円）。',
+      kidsChair: true,
+      seatingType: ['table', 'counter'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '椿屋カフェ 柏高島屋ステーションモール店',
+      genre: 'cafe',
+      area: '柏駅直結（柏高島屋ステーションモール S館6F）',
+      description:
+        '大正ロマン調の喫茶。公式にお子様チェアありの表示。85席と広くソファ席もある。ランチ平均1,350円。',
+      kidsChair: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '鼎泰豐（ディンタイフォン）柏高島屋ステーションモール店',
+      genre: 'chinese',
+      area: '柏駅直結（柏高島屋ステーションモール S館7F）',
+      description:
+        '台湾の小籠包専門店。公式にお子様メニュー・お子様チェアの表示あり。小籠包やチャーハンは取り分けやすい。予算は公式に記載が無いため要確認。',
+      kidsMenu: true,
+      kidsChair: true,
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '鶏味座 柏高島屋ステーションモール店',
+      genre: 'washoku',
+      area: '柏駅直結（柏高島屋ステーションモール S館7F）',
+      description:
+        '焼鳥・鶏料理の店。公式にお子様チェアありの表示。28席と小ぶり。ランチ平均1,080円と昼は入りやすい（夜は3,240円）。',
+      kidsChair: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'ナナズグリーンティー 柏高島屋ステーションモール店',
+      genre: 'cafe',
+      area: '柏駅直結（柏高島屋ステーションモール S館5F）',
+      description:
+        '和カフェ。公式にお子様メニュー・お子様チェアの表示あり。54席。抹茶スイーツのほか食事メニューもあり、休憩にも昼食にも使える。1,000円〜。',
+      kidsMenu: true,
+      kidsChair: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'パスタ＆ケーキ ダッキーダック 柏高島屋ステーションモール店',
+      genre: 'italian',
+      area: '柏駅直結（柏高島屋ステーションモール S館7F）',
+      description:
+        'パスタとケーキの店。公式にお子様メニュー・お子様チェアの表示あり。92席とフロアでも広い部類で、家族連れが入りやすい。ランチ平均1,000円。',
+      kidsMenu: true,
+      kidsChair: true,
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'ピッツェリア マリノ 柏高島屋ステーションモール店',
+      genre: 'italian',
+      area: '柏駅直結（柏高島屋ステーションモール 新館9F）',
+      description:
+        '窯焼きピッツァのイタリアン。公式にお子様メニュー・お子様チェアの表示あり。98席と広く、ピッツァは家族でシェアしやすい。ランチ平均1,300円。',
+      kidsMenu: true,
+      kidsChair: true,
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '焼肉トラジ 柏高島屋ステーションモール店',
+      genre: 'yakiniku',
+      area: '柏駅直結（柏高島屋ステーションモール S館7F）',
+      description:
+        '個室のある焼肉店。公式にお子様チェアありの表示と個室あり。56席。ランチ平均2,000円（夜は6,000円）。',
+      kidsChair: true,
+      privateRoom: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'ラケル 柏高島屋ステーションモール店',
+      genre: 'yoshoku',
+      area: '柏駅直結（柏高島屋ステーションモール S館7F）',
+      description:
+        'オムライスのレストラン。公式にお子様メニュー・お子様チェアの表示あり。50席。ランチ平均1,100円で、卵料理中心なので小さい子でも食べやすい。',
+      kidsMenu: true,
+      kidsChair: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '赤坂 ふきぬき 柏高島屋ステーションモール店',
+      genre: 'washoku',
+      area: '柏駅直結（柏高島屋ステーションモール S館7F）',
+      description:
+        '大正十二年から継ぎ足すたれを使ううなぎ店。公式にお子様チェアありの表示と半個室（2〜8名）あり。ただしお子様メニューの表示は無い。60席。ランチ平均2,100円。',
+      kidsChair: true,
+      privateRoom: true,
+      seatingType: ['table', 'counter'],
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: 'こめらく お茶漬けといろどり唐揚げ。柏高島屋ステーションモール店',
+      genre: 'washoku',
+      area: '柏駅直結（柏高島屋ステーションモール S館7F）',
+      description:
+        'お茶漬けと唐揚げの店。ご飯と出汁が別なので、子どもには出汁をかけずに白飯として分けられる。公式にお子様向け設備の表示は無い。ランチ平均1,400円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
     {
       name: 'とんかつ 瓢（ひさご）',
       genre: 'tonkatsu',
