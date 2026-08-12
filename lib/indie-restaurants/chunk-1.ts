@@ -695,6 +695,149 @@ export const CHUNK_1: StationIndieMap = {
   ],
 
   'suidobashi': [
+    // ▼ 2026-08-12追加: ラクーア（東京ドームシティ）の公式レストラン一覧
+    //   （laqua.jp/restaurants/list/）から、ジャンルと公式のランチ予算を転記した。
+    //   従来この駅には「ラクーア レストラン街」「東京ドームシティ ラクーア 個人レストラン」
+    //   という店名でない仮置きが2件入っていた。実店舗で置き換える。
+    //   スターバックス・タリーズはチェーン側で出るため除外。
+    //   なお同じ東京ドームシティ内に屋内型キッズ施設 ASOBono!（アソボーノ）があり、
+    //   遊びと食事をまとめて済ませられるのがこの駅の強み。
+    {
+      name: 'BAKERY RESTAURANT C ラクーア店',
+      genre: 'bakery',
+      area: '水道橋駅から徒歩圏（東京ドームシティ ラクーア）',
+      description:
+        'ベーカリーレストラン。焼き立てパンが付く形式で、子どもがパンだけでも食べられるのが利点。公式のランチ予算は1,000〜2,000円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'チーズ&ドリア.スイーツ ラクーア店',
+      genre: 'yoshoku',
+      area: '水道橋駅から徒歩圏（東京ドームシティ ラクーア）',
+      description:
+        'ドリアとスイーツの洋食店。ドリアは取り分けやすいが熱いので冷ましてから渡したい。公式のランチ予算は1,000〜2,000円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'ソバキチ ラクーア店',
+      genre: 'noodles',
+      area: '水道橋駅から徒歩圏（東京ドームシティ ラクーア）',
+      description:
+        'そばの店。そばは短く切って子どもに分けやすい。公式のランチ予算は〜1,000円とラクーアで最も入りやすい部類。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: '天丼・箱めし 日本橋 玉ゐ ラクーア店',
+      genre: 'washoku',
+      area: '水道橋駅から徒歩圏（東京ドームシティ ラクーア 1F DELI＆DISH内）',
+      description:
+        'あなご料理の和食店。天丼・箱めしは白飯を子どもに分けやすい。公式のランチ予算は1,000〜2,000円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'nana’s green tea ラクーア店',
+      genre: 'cafe',
+      area: '水道橋駅から徒歩圏（東京ドームシティ ラクーア）',
+      description:
+        '和カフェ。抹茶スイーツのほか食事メニューもあり、遊んだ後の休憩にも昼食にも使える。公式のランチ予算は1,000〜2,000円。',
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'マンゴツリーカフェ ラクーア店',
+      genre: 'asian',
+      area: '水道橋駅から徒歩圏（東京ドームシティ ラクーア）',
+      description:
+        'タイ料理のカフェ業態。ガパオやカオマンガイなど一皿もの中心で、辛くない料理も選べる。公式のランチ予算は1,000〜2,000円。',
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '築地すし好 ラクーア店',
+      genre: 'sushi',
+      area: '水道橋駅から徒歩圏（東京ドームシティ ラクーア）',
+      description:
+        '寿司店。玉子やかっぱ巻きなど子どもが食べられるネタを単品で頼める。ランチは1,000〜2,000円だが夜は5,000〜7,000円と差が大きい。',
+      seatingType: ['table', 'counter'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'ババ・ガンプ・シュリンプ 東京',
+      genre: 'yoshoku',
+      area: '水道橋駅から徒歩圏（東京ドームシティ ラクーア）',
+      description:
+        'アメリカンシーフードレストラン。映画をモチーフにした賑やかな内装で、子どもが騒いでも気になりにくい。公式のランチ予算は1,000〜2,000円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '春水堂 ラクーア店',
+      genre: 'cafe',
+      area: '水道橋駅から徒歩圏（東京ドームシティ ラクーア）',
+      description:
+        'タピオカミルクティー発祥の台湾カフェ。魯肉飯など食事メニューもあり、休憩にも昼食にも使える。公式のランチ予算は1,000〜2,000円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '韓美膳 ラクーア店',
+      genre: 'korean',
+      area: '水道橋駅から徒歩圏（東京ドームシティ ラクーア）',
+      description:
+        '韓国家庭料理の店。石焼ビビンバなど辛さを抜いた取り分けがしやすい定番がそろう。公式のランチ予算は1,000〜2,000円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'ピエトロ ラクーア店',
+      genre: 'italian',
+      area: '水道橋駅から徒歩圏（東京ドームシティ ラクーア）',
+      description:
+        'イタリアンレストラン。パスタは取り分けやすい。公式のランチ予算は2,000〜3,000円とラクーアでは高めの部類。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: '添好運 ラクーア店',
+      genre: 'chinese',
+      area: '水道橋駅から徒歩圏（東京ドームシティ ラクーア）',
+      description:
+        '香港点心の専門店。点心は少量ずつ頼めるので子どもの食べる量に合わせやすい。公式のランチ予算は2,000〜3,000円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: 'キル フェ ボン ラクーア店',
+      genre: 'sweets',
+      area: '水道橋駅から徒歩圏（東京ドームシティ ラクーア）',
+      description:
+        'タルト専門店。食事が進まない子との休憩に使える。公式のランチ予算は1,000〜2,000円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'creperie kenny’s ラクーア店',
+      genre: 'sweets',
+      area: '水道橋駅から徒歩圏（東京ドームシティ ラクーア）',
+      description:
+        'クレープ専門店。1枚を分けやすく、公式のランチ予算は〜1,000円。遊びの合間の軽食に向く。',
+      shareDish: true,
+      priceLunch: '〜1,000円',
+    },
     {
       name: 'シェ・イノ',
       genre: 'french',
