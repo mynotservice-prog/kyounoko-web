@@ -530,19 +530,6 @@ export const CHUNK_8: StationIndieMap = {
       priceLunch: '〜2,000円',
       popular: true,
     },
-    {
-      name: '駒沢大学 シズラー 駒沢公園店風 個人店',
-      genre: 'yoshoku',
-      area: '駒沢大学駅から徒歩7分',
-      description: '駒沢公園近くの家族向け洋食店相当。ハンバーグやステーキとサラダバーがあり、子供連れの休日ランチに重宝。',
-      strollerOk: true,
-      kidsMenu: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'sakura-shimmachi': [

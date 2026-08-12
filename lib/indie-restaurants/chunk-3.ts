@@ -512,16 +512,6 @@ export const CHUNK_3: StationIndieMap = {
 
   'keikyu-kamata': [
     {
-      name: '京急蒲田 飲茶系個人店',
-      genre: 'chinese',
-      area: '京急蒲田駅から徒歩2分',
-      description: '駅前の点心専門店。小籠包・焼売・ちまきなど一品ずつ頼めて子どもとシェアしやすい。テーブル席中心、回転が良く家族でも使いやすい。',
-      privateRoom: false,
-      seatingType: ['table'],
-      shareDish: true,
-      priceLunch: '〜2,000円',
-    },
-    {
       name: '蒲田 羽根つき餃子の店',
       genre: 'chinese',
       area: '京急蒲田駅から徒歩3分',
@@ -1429,33 +1419,9 @@ export const CHUNK_3: StationIndieMap = {
       priceLunch: '〜2,000円',
       popular: true,
     },
-    {
-      name: 'BONUS TRACK BAKERY系 個人店',
-      genre: 'bakery',
-      area: '下北沢駅から徒歩4分（BONUS TRACK内）',
-      description: '下北沢の新スポットBONUS TRACK内のベーカリー・個人店群。広場でベビーカーのまま家族でゆっくり過ごせ、テイクアウトもしやすい。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-      popular: true,
-    },
   ],
 
   'higashi-kitazawa': [
-    {
-      name: '東北沢 reload 内 個人店',
-      genre: 'cafe',
-      area: '東北沢駅から徒歩2分（reload内）',
-      description: '小田急線地上化跡地に誕生した複合施設reloadの個人カフェ群。屋外スペースもあり子連れに使いやすい。コーヒー・軽食中心。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-      popular: true,
-    },
     {
       name: '東北沢 隠れ家ベーカリー',
       genre: 'bakery',
@@ -1873,17 +1839,6 @@ export const CHUNK_3: StationIndieMap = {
 
   'yoga': [
     {
-      name: '用賀 世田谷ビジネススクエア内 個人店',
-      genre: 'cafe',
-      area: '用賀駅直結（世田谷ビジネススクエア内）',
-      description: '世田谷ビジネススクエアの個人カフェ。広めの座席でベビーカーOK、サンドイッチやパスタの軽食メニュー。家族の休憩に好適。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
-    {
       name: '用賀 砧公園周辺 個人ベーカリー',
       genre: 'bakery',
       area: '用賀駅から徒歩10分（砧公園方面）',
@@ -2037,15 +1992,6 @@ export const CHUNK_3: StationIndieMap = {
   ],
 
   'oyamadai': [
-    {
-      name: '尾山台 ハッピーロード商店街 個人店',
-      genre: 'sweets',
-      area: '尾山台駅から徒歩3分',
-      description: 'ハッピーロード尾山台の老舗洋菓子店。シュークリームやプリンが看板で、家族連れの常連が多い。テイクアウト中心。',
-      privateRoom: false,
-      seatingType: ['table'],
-      priceLunch: '〜1,000円',
-    },
     {
       name: '尾山台 オーボンヴュータン',
       genre: 'sweets',
@@ -2924,15 +2870,5 @@ export const CHUNK_3: StationIndieMap = {
   ],
 
   'daitabashi': [
-    {
-      name: '代田橋 沖縄タウン 個人店',
-      genre: 'others',
-      area: '代田橋駅から徒歩3分',
-      description: '京王線代田橋の沖縄タウン内の個人店。沖縄料理（タコライス・ジューシーなど）で子どもにも食べやすい味。テーブル席で家族連れ歓迎。',
-      privateRoom: false,
-      seatingType: ['table'],
-      priceLunch: '〜2,000円',
-      popular: true,
-    },
   ],
 };

@@ -305,20 +305,6 @@ export const CHUNK_13: StationIndieMap = {
 
   'kamiyacho': [
     {
-      name: '神谷町 麻布台ヒルズ ガーデンプラザ レストラン街',
-      genre: 'others',
-      area: '神谷町駅から徒歩4分（麻布台ヒルズ）',
-      description: '2023年開業の麻布台ヒルズ内レストラン街。和洋中・スイーツの個店が並び、ベビーカーOKの広い空間で家族でゆっくり選べる。新スポットの家族ランチ拠点。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      nursingRoom: true,
-      diaperChangingTable: true,
-      priceLunch: '〜3,500円',
-      popular: true,
-    },
-    {
       name: '神谷町 西麻布 権八',
       genre: 'washoku',
       area: '神谷町駅から徒歩9分（西麻布方面）',
@@ -412,19 +398,6 @@ export const CHUNK_13: StationIndieMap = {
 
   'takanawa-gateway': [
     {
-      name: '高輪ゲートウェイ NEWoMan レストラン街',
-      genre: 'others',
-      area: '高輪ゲートウェイ駅直結',
-      description: '2024年開業の高輪ゲートウェイシティのNEWoMan系商業施設のレストラン街。和洋中・カフェの個店が並び、ベビーカーOKの広い通路で家族客も多い新スポット。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      nursingRoom: true,
-      diaperChangingTable: true,
-      priceLunch: '〜3,500円',
-    },
-    {
       name: '高輪ゲートウェイ 駅構内カフェ',
       genre: 'cafe',
       area: '高輪ゲートウェイ駅構内',
@@ -497,17 +470,6 @@ export const CHUNK_13: StationIndieMap = {
       popular: true,
     },
     {
-      name: '新宿西口 新宿エルタワー レストラン街',
-      genre: 'others',
-      area: '新宿西口駅直結（新宿エルタワー）',
-      description: '新宿西口の高層ビル「エルタワー」上層階のレストラン街。和洋中・カフェの個店が並び、ベビーカーOKの広い通路で家族客も多い。眺望の良い席で家族のお祝いに向く。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜3,500円',
-    },
-    {
       name: '新宿西口 ヒルトン東京 マーブルラウンジ',
       genre: 'sweets',
       area: '新宿西口駅から徒歩8分（ヒルトン東京）',
@@ -535,15 +497,6 @@ export const CHUNK_13: StationIndieMap = {
       diaperChangingTable: true,
       priceLunch: '5,000円〜',
       popular: true,
-    },
-    {
-      name: '都庁前 新宿センタービル レストラン街',
-      genre: 'others',
-      area: '都庁前駅直結（新宿センタービル）',
-      description: '新宿センタービル地下のレストラン街。和食・洋食・中華・カフェの個店が並び、平日昼はビジネス客で賑わう。テーブル席で家族客でも入りやすい安定した昼食拠点。',
-      stepFree: false,
-      seatingType: ['table'],
-      priceLunch: '〜2,000円',
     },
     {
       name: '都庁前 京王プラザホテル ティーラウンジ',
@@ -611,17 +564,6 @@ export const CHUNK_13: StationIndieMap = {
       description: '新大久保コリアンタウン近接の韓国家庭料理店「ハレルヤ」。チヂミ・スンドゥブが看板で、子供にも食べやすい辛さ調整可能。テーブル席で家族でも入りやすい。',
       seatingType: ['table'],
       shareDish: true,
-      priceLunch: '〜2,000円',
-    },
-    {
-      name: '東新宿 新宿イーストサイドスクエア レストラン街',
-      genre: 'others',
-      area: '東新宿駅直結（新宿イーストサイドスクエア）',
-      description: '東新宿のオフィス複合「新宿イーストサイドスクエア」のレストラン街。和洋中・カフェの個店が並び、ベビーカーOKの広い通路で家族客も多い昼食拠点。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
       priceLunch: '〜2,000円',
     },
   ],
@@ -826,17 +768,6 @@ export const CHUNK_13: StationIndieMap = {
   // ===========================================================
 
   'osaki': [
-    {
-      name: '大崎 ニューシティ レストランフロア',
-      genre: 'others',
-      area: '大崎駅直結（大崎ニューシティ）',
-      description: '大崎駅前の複合施設「大崎ニューシティ」のレストランフロア。和洋中・カフェの個店が並び、ベビーカーOKの広い通路で家族客も多い。週末も家族でゆっくり過ごせる昼食拠点。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
     {
       name: '大崎 シンクパークタワー 飲食店街',
       genre: 'others',

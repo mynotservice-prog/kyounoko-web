@@ -265,18 +265,6 @@ export const CHUNK_7: StationIndieMap = {
 
   'korakuen': [
     {
-      name: '後楽園 ラクーア レストラン街 個店',
-      genre: 'others',
-      area: '後楽園駅直結（東京ドームシティ ラクーア）',
-      description: '東京ドームシティ ラクーア内のレストラン街。和食・洋食・パンケーキ等多彩。スパ帰り・遊戯施設帰りにベビーカーのまま入店できる店舗が多い。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜2,000円',
-      popular: true,
-    },
-    {
       name: '後楽園 鳴門鯛焼本舗 春日店',
       genre: 'sweets',
       area: '後楽園駅から徒歩4分',
@@ -431,17 +419,6 @@ export const CHUNK_7: StationIndieMap = {
   ],
 
   'kameido': [
-    {
-      name: '亀戸 サンストリート跡 個店',
-      genre: 'others',
-      area: '亀戸駅から徒歩8分',
-      description: '旧サンストリート亀戸跡地の再開発エリアにある飲食個店群。広場とベンチがありベビーカー利用に向く。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜2,000円',
-    },
     {
       name: '亀戸天神 くず餅 池田屋',
       genre: 'sweets',
@@ -1230,15 +1207,6 @@ export const CHUNK_7: StationIndieMap = {
   ],
 
   'nippori': [
-    {
-      name: '日暮里 駄菓子問屋街 個店',
-      genre: 'sweets',
-      area: '日暮里駅から徒歩5分',
-      description: '駄菓子問屋街の小売対応店舗。子どもとの食べ歩き買い物が楽しめる。買い物袋持参の家族連れが多い。',
-      seatingType: ['table'],
-      priceLunch: '〜1,000円',
-      popular: true,
-    },
     {
       name: '日暮里 中華 ほうしゅうえん',
       genre: 'chinese',

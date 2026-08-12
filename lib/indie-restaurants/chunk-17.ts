@@ -810,15 +810,6 @@ export const CHUNK_17: StationIndieMap = {
   ],
 
   'higashi-kitazawa': [
-    {
-      name: '東北沢 ミカン下北 個人レストラン 朱華園',
-      genre: 'chinese',
-      area: '東北沢駅から徒歩4分（ミカン下北）',
-      description: 'ミカン下北の中華個店相当。麻婆豆腐や坦々麺が看板で、テーブル席で家族でも入りやすい。子供向けの甘めの中華も対応可。',
-      seatingType: ['table'],
-      shareDish: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'setagaya-daita': [
@@ -2124,19 +2115,6 @@ export const CHUNK_17: StationIndieMap = {
   ],
 
   'toyosu': [
-    {
-      name: '豊洲 ららぽーと 個人レストラン 神戸屋ベーカリー',
-      genre: 'bakery',
-      area: '豊洲駅から徒歩6分（ららぽーと豊洲）',
-      description: 'ららぽーと豊洲内の老舗ベーカリー「神戸屋ベーカリー」相当。デニッシュやサンドイッチが看板で、テラス席もあり家族のブランチに向く。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table', 'terrace'],
-      strollerToSeat: true,
-      nursingRoom: true,
-      diaperChangingTable: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'kasai-rinkai-koen': [

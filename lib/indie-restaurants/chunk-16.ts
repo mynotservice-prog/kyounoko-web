@@ -30,26 +30,6 @@ export const CHUNK_16: StationIndieMap = {
       priceLunch: '〜2,000円',
       popular: true,
     },
-    {
-      name: '銀座 マロニエゲート銀座 個人レストランフロア',
-      genre: 'others',
-      area: '銀座駅から徒歩4分（マロニエゲート2・3）',
-      description: 'マロニエゲート銀座の上層階レストランフロア。和食・洋食・パスタの個店が並び、座席間隔のあるテーブル席で家族の昼食に向く。ベビーカー入店可の店が多い。',
-      strollerOk: true,
-      seatingType: ['table'],
-      priceLunch: '〜3,500円',
-    },
-    {
-      name: '銀座 東急プラザ銀座 個人レストラン',
-      genre: 'others',
-      area: '銀座駅から徒歩2分（東急プラザ銀座10-11F）',
-      description: '東急プラザ銀座のレストランフロア。和食・イタリアン・カフェの個店があり、数寄屋橋・有楽町を見下ろす眺めの席もある。子連れの休日昼食に向く。',
-      strollerOk: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'asakusa': [
@@ -60,15 +40,6 @@ export const CHUNK_16: StationIndieMap = {
       description: '浅草の「まるごとにっぽん」内の食堂エリア。日本各地の郷土料理を扱う個店が並び、子供にも食べやすい甘い味付けの郷土料理を選びやすい。テーブル席中心。',
       seatingType: ['table'],
       priceLunch: '〜2,000円',
-    },
-    {
-      name: '浅草 EKIMISE 飲食フロア',
-      genre: 'others',
-      area: '浅草駅直結（東武浅草駅EKIMISE）',
-      description: '浅草・東武浅草駅併設EKIMISEのレストランフロア。和食・洋食の個店が並び、屋上はスカイツリーを望める展望広場。家族の観光昼食に向く。',
-      strollerOk: true,
-      seatingType: ['table'],
-      priceLunch: '〜3,500円',
     },
     {
       name: '浅草 仲見世 木村家本店 人形焼',
@@ -82,30 +53,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'ueno': [
-    {
-      name: '上野 アトレ上野 レストランフロア',
-      genre: 'others',
-      area: '上野駅直結（アトレ上野）',
-      description: '上野駅直結アトレ上野のレストランフロア。和食・洋食・カフェの個店が並び、新幹線利用前後の家族の食事に便利。ベビーカー入店可の店が多い。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
-    {
-      name: '上野 エキュート上野 駅ナカ個店',
-      genre: 'others',
-      area: '上野駅構内（エキュート上野）',
-      description: 'エキュート上野の駅ナカ個店フロア。和惣菜・パン・スイーツの専門店が並び、新幹線・常磐線利用時の家族のテイクアウトにも便利。',
-      strollerOk: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      priceLunch: '〜2,000円',
-    },
     {
       name: '上野 アメ横 大統領',
       genre: 'others',
@@ -164,42 +111,9 @@ export const CHUNK_16: StationIndieMap = {
       kidsCutlery: true,
       priceLunch: '〜3,500円',
     },
-    {
-      name: '池袋 ルミネ池袋 レストラン街',
-      genre: 'others',
-      area: '池袋駅直結（ルミネ池袋）',
-      description: 'ルミネ池袋上層階のレストラン街。和食・洋食・カフェの個店が並び、座席間隔のあるテーブル席で家族の昼食に向く。ベビーカー入店可の店が多い。',
-      strollerOk: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      priceLunch: '〜3,500円',
-    },
-    {
-      name: '池袋 東武池袋本店 レストラン街',
-      genre: 'others',
-      area: '池袋駅直結（東武百貨店）',
-      description: '東武池袋本店上層階のレストラン街「スパイス」。和食・洋食・寿司の個店が並び、買い物の合間に家族でゆっくり食事できる。ベビーカー入店可。',
-      strollerOk: true,
-      seatingType: ['table'],
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'omotesando': [
-    {
-      name: '表参道 表参道ヒルズ 飲食フロア',
-      genre: 'others',
-      area: '表参道駅から徒歩2分（表参道ヒルズ）',
-      description: '表参道ヒルズの飲食フロア。和食・イタリアン・スイーツの個店が並び、座席間隔のあるテーブル席で家族の食事に向く。ベビーカーでも回りやすい広い通路。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      nursingRoom: true,
-      diaperChangingTable: true,
-      priceLunch: '〜3,500円',
-    },
     {
       name: '表参道 エシレ・パティスリー オ ブール',
       genre: 'sweets',
@@ -240,17 +154,6 @@ export const CHUNK_16: StationIndieMap = {
       seatingType: ['table'],
       shareDish: true,
       priceLunch: '〜2,000円',
-    },
-    {
-      name: '神田 万世橋 マーチエキュート 飲食フロア',
-      genre: 'others',
-      area: '神田駅から徒歩5分（旧万世橋駅跡）',
-      description: '旧万世橋駅跡を活用したマーチエキュート神田万世橋の飲食フロア。和食・カフェの個店が並び、テラス席から神田川を望める。家族の散策昼食に向く。',
-      strollerOk: true,
-      seatingType: ['table', 'terrace'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      priceLunch: '〜3,500円',
     },
   ],
 
@@ -335,15 +238,6 @@ export const CHUNK_16: StationIndieMap = {
 
   'akabane': [
     {
-      name: '赤羽 アピレ 飲食フロア',
-      genre: 'others',
-      area: '赤羽駅東口直結（アピレ）',
-      description: '赤羽駅東口直結アピレの飲食フロア。和食・洋食・カフェの個店が並び、ベビーカー入店可の店が多く、家族の駅ナカ昼食に便利。',
-      strollerOk: true,
-      seatingType: ['table'],
-      priceLunch: '〜3,500円',
-    },
-    {
       name: '赤羽 LaLaガーデン商店街 個人洋食',
       genre: 'yoshoku',
       area: '赤羽駅東口から徒歩3分（LaLaガーデン）',
@@ -374,19 +268,6 @@ export const CHUNK_16: StationIndieMap = {
       nursingRoom: true,
       diaperChangingTable: true,
       priceLunch: '〜2,000円',
-    },
-    {
-      name: '北千住 マルイ北千住 レストラン街',
-      genre: 'others',
-      area: '北千住駅直結（マルイ北千住）',
-      description: '北千住マルイ上層階のレストラン街。和食・洋食・パンケーキの個店が並び、ベビーカー入店可の店が多く、家族の買い物昼食に便利。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
     },
     {
       name: '北千住 宿場町通り 老舗うなぎ',
@@ -444,26 +325,6 @@ export const CHUNK_16: StationIndieMap = {
 
   'ogikubo': [
     {
-      name: '荻窪 ルミネ荻窪 レストランフロア',
-      genre: 'others',
-      area: '荻窪駅直結（ルミネ荻窪）',
-      description: 'ルミネ荻窪のレストランフロア。和食・洋食・カフェの個店が並び、ベビーカー入店可の店が多く、家族の駅ナカ昼食に便利。',
-      strollerOk: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      priceLunch: '〜3,500円',
-    },
-    {
-      name: '荻窪 タウンセブン 飲食フロア',
-      genre: 'others',
-      area: '荻窪駅北口直結（タウンセブン）',
-      description: '荻窪駅北口直結タウンセブンの飲食フロア。和食・甘味・喫茶の個店が並び、地元利用が中心で家族でも落ち着いて過ごしやすい。',
-      strollerOk: true,
-      seatingType: ['table'],
-      priceLunch: '〜2,000円',
-    },
-    {
       name: '荻窪 教会通り 老舗洋食',
       genre: 'yoshoku',
       area: '荻窪駅から徒歩4分（教会通り）',
@@ -512,27 +373,9 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'nijubashimae': [
-    {
-      name: '二重橋前 丸の内ブリックスクエア 個人レストランフロア',
-      genre: 'others',
-      area: '二重橋前駅直結（丸の内ブリックスクエア）',
-      description: '丸の内ブリックスクエアの中庭を望むレストランフロア。和食・フレンチ・カフェの個店が並び、ベビーカー入店可の店が多く家族昼食に向く。',
-      strollerOk: true,
-      seatingType: ['table'],
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'kasumigaseki': [
-    {
-      name: '霞ケ関 霞が関ビル 35F レストランフロア',
-      genre: 'others',
-      area: '霞ケ関駅直結（霞が関ビル）',
-      description: '霞が関ビル35階の眺望レストランフロア。和食・洋食の個店があり、皇居・東京湾を望む大窓席で家族の特別な昼食に向く。',
-      strollerOk: true,
-      seatingType: ['table'],
-      priceLunch: '〜5,000円',
-    },
   ],
 
   'nagatacho': [
@@ -574,17 +417,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'suidobashi': [
-    {
-      name: '水道橋 東京ドームシティ ラクーア 個人レストラン',
-      genre: 'others',
-      area: '水道橋駅直結（ラクーア）',
-      description: '東京ドームシティ・ラクーアのレストランフロア。和食・洋食・カフェの個店が並び、観戦・遊園地の前後に家族でゆっくりできる。ベビーカー入店可。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'sakuradamon': [
@@ -635,15 +467,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'kachidoki': [
-    {
-      name: '勝どき 晴海トリトンスクエア レストランフロア',
-      genre: 'others',
-      area: '勝どき駅から徒歩7分（晴海トリトン）',
-      description: '晴海トリトンスクエアの飲食フロア。和食・洋食・カフェの個店が並び、テラス席もあって家族の運河散歩昼食に向く。ベビーカー入店可。',
-      strollerOk: true,
-      seatingType: ['table', 'terrace'],
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'hatchobori': [
@@ -738,15 +561,6 @@ export const CHUNK_16: StationIndieMap = {
   // ===========================================================
 
   'tamachi': [
-    {
-      name: '田町 ムスブ田町 個人レストランフロア',
-      genre: 'others',
-      area: '田町駅直結（ムスブ田町）',
-      description: 'ムスブ田町の飲食フロア。和食・イタリアン・カフェの個店が並び、ベビーカー入店可の店が多く家族の駅ナカ昼食に便利。',
-      strollerOk: true,
-      seatingType: ['table'],
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'mita': [
@@ -820,15 +634,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'aoyama-itchome': [
-    {
-      name: '青山一丁目 青山ツインタワー 個人レストランフロア',
-      genre: 'others',
-      area: '青山一丁目駅直結（青山ツインタワー）',
-      description: '青山ツインタワー低層階のレストランフロア。和食・洋食・カフェの個店が並び、ベビーカー入店可の店が多く家族昼食に向く。',
-      strollerOk: true,
-      seatingType: ['table'],
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'nogizaka': [
@@ -917,17 +722,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'toranomon': [
-    {
-      name: '虎ノ門 虎ノ門ヒルズ森タワー 個人レストランフロア',
-      genre: 'others',
-      area: '虎ノ門駅直結（虎ノ門ヒルズ森タワー）',
-      description: '虎ノ門ヒルズ森タワー低層階のレストランフロア。和食・イタリアン・カフェの個店が並び、ベビーカー入店可の店が多く家族昼食に向く。',
-      strollerOk: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'toranomon-hills': [
@@ -947,44 +741,15 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'kamiyacho': [
-    {
-      name: '神谷町 麻布台ヒルズ 個人レストランフロア',
-      genre: 'others',
-      area: '神谷町駅直結（麻布台ヒルズ）',
-      description: '麻布台ヒルズの飲食フロア。和食・フレンチ・カフェの個店が並び、新しい設備でベビーカー入店可の店が多く家族の特別な日の昼食に向く。',
-      strollerOk: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      priceLunch: '〜5,000円',
-    },
   ],
 
   'hinode': [
   ],
 
   'takeshiba': [
-    {
-      name: '竹芝 ウォーターズ竹芝 個人レストランフロア',
-      genre: 'others',
-      area: '竹芝駅直結（ウォーターズ竹芝）',
-      description: 'ウォーターズ竹芝の飲食フロア。和食・洋食・カフェの個店が並び、テラス席から旧芝離宮を望める。家族の散策昼食に向く。ベビーカー入店可。',
-      strollerOk: true,
-      seatingType: ['table', 'terrace'],
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'shiodome': [
-    {
-      name: '汐留 カレッタ汐留 46-47F 個人レストランフロア',
-      genre: 'others',
-      area: '汐留駅直結（カレッタ汐留）',
-      description: 'カレッタ汐留46-47階のレストランフロア。和食・イタリアン・フレンチの個店が並び、東京湾とレインボーブリッジを望む大窓席で家族の特別昼食に向く。',
-      strollerOk: true,
-      seatingType: ['table'],
-      priceLunch: '〜5,000円',
-    },
   ],
 
   // ===========================================================
@@ -1004,15 +769,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'nishi-shinjuku': [
-    {
-      name: '西新宿 新宿三井ビル 53番街地下飲食フロア',
-      genre: 'others',
-      area: '西新宿駅から徒歩4分（新宿三井ビル）',
-      description: '新宿三井ビル地下「53番街」の老舗飲食街。和食・洋食・中華の個店が並び、休日昼は空いており家族でゆっくり過ごせる。テーブル席中心。',
-      stepFree: false,
-      seatingType: ['table'],
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'nishi-shinjuku-gochome': [
@@ -1234,17 +990,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'meiji-jingumae': [
-    {
-      name: '明治神宮前 東急プラザ表参道原宿 飲食フロア',
-      genre: 'others',
-      area: '明治神宮前駅直結（東急プラザ表参道原宿）',
-      description: '東急プラザ表参道原宿の飲食フロア。和食・洋食・カフェの個店が並び、屋上テラスからは表参道交差点を一望。家族の観光昼食に向く。ベビーカー入店可。',
-      strollerOk: true,
-      seatingType: ['table', 'terrace'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'yoyogi': [
@@ -1335,43 +1080,12 @@ export const CHUNK_16: StationIndieMap = {
   // ===========================================================
 
   'osaki': [
-    {
-      name: '大崎 ゲートシティ大崎 個人レストランフロア',
-      genre: 'others',
-      area: '大崎駅直結（ゲートシティ大崎）',
-      description: 'ゲートシティ大崎低層階のレストランフロア。和食・洋食・カフェの個店が並び、ベビーカー入店可の店が多く家族の駅ナカ昼食に便利。',
-      strollerOk: true,
-      seatingType: ['table'],
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'gotanda': [
-    {
-      name: '五反田 アトレヴィ五反田 個人レストランフロア',
-      genre: 'others',
-      area: '五反田駅直結（アトレヴィ五反田）',
-      description: 'アトレヴィ五反田の飲食フロア。和食・洋食・カフェの個店が並び、ベビーカー入店可の店が多く家族の駅ナカ昼食に便利。',
-      strollerOk: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'shinagawa-seaside': [
-    {
-      name: '品川シーサイド イオン品川シーサイド 個人レストラン',
-      genre: 'others',
-      area: '品川シーサイド駅直結（イオン品川シーサイド）',
-      description: 'イオン品川シーサイドの飲食フロア。和食・洋食・パンケーキの個店が並び、ベビーカー入店可・子供席ありの店が多く家族昼食に向く。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'tennozu-isle': [
@@ -1894,17 +1608,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'otsuka-ekimae': [
-    {
-      name: '大塚駅前 アトレヴィ大塚 個人レストランフロア',
-      genre: 'others',
-      area: '大塚駅前駅直結（アトレヴィ大塚）',
-      description: 'アトレヴィ大塚の飲食フロア。和食・洋食・カフェの個店が並び、ベビーカー入店可の店が多く家族の駅ナカ昼食に便利。',
-      strollerOk: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'nishi-sugamo': [
@@ -2299,17 +2002,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'tobu-nerima': [
-    {
-      name: '東武練馬 イオン東武練馬 個人レストランフロア',
-      genre: 'others',
-      area: '東武練馬駅から徒歩4分（イオン東武練馬）',
-      description: 'イオン東武練馬の飲食フロア。和食・洋食・パンケーキの個店が並び、ベビーカー入店可・子供席ありの店が多く家族昼食に向く。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'chikatetsu-narimasu': [
@@ -2771,17 +2463,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'shinonome': [
-    {
-      name: '東雲 イオン東雲 個人レストランフロア',
-      genre: 'others',
-      area: '東雲駅から徒歩3分（イオン東雲）',
-      description: 'イオン東雲の飲食フロア。和食・洋食・パンケーキの個店が並び、ベビーカー入店可・子供席ありの店が多く家族昼食に向く。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'tatsumi': [
@@ -2811,17 +2492,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'minami-sunamachi': [
-    {
-      name: '南砂町 SUNAMO 個人レストランフロア',
-      genre: 'others',
-      area: '南砂町駅直結（SUNAMO）',
-      description: 'SUNAMO（イオン南砂）の飲食フロア。和食・洋食・パンケーキの個店が並び、ベビーカー入店可・子供席ありの店が多く家族昼食に向く。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'ariake': [
@@ -2840,20 +2510,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'tokyo-teleport': [
-    {
-      name: '東京テレポート ダイバーシティ東京 6F フードコート個店',
-      genre: 'others',
-      area: '東京テレポート駅直結（ダイバーシティ東京プラザ）',
-      description: 'ダイバーシティ東京プラザの飲食フロア。和食・洋食・カフェの個店が並び、ベビーカー入店可の店が多く、ガンダム実物大像見学後の家族昼食に向く。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-      popular: true,
-    },
   ],
 
   'fune-no-kagakukan': [
@@ -3771,18 +3427,6 @@ export const CHUNK_16: StationIndieMap = {
   ],
 
   'tokyo-skytree': [
-    {
-      name: 'とうきょうスカイツリー 東京ソラマチ 個人レストランフロア',
-      genre: 'others',
-      area: 'とうきょうスカイツリー駅直結（東京ソラマチ）',
-      description: '東京ソラマチの飲食フロア。和食・洋食・カフェの個店が並び、ベビーカー入店可・子供席ありの店が多く家族のスカイツリー観光昼食に向く。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-      popular: true,
-    },
   ],
 
   'honjo-azumabashi': [

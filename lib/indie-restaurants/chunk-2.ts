@@ -79,18 +79,6 @@ export const CHUNK_2: StationIndieMap = {
       priceLunch: '〜3,500円',
     },
     {
-      name: 'ラクーア フードコート個店群',
-      genre: 'others',
-      area: '後楽園駅直結（東京ドームシティ ラクーア）',
-      description: 'ラクーア内の独立系飲食フロア。子連れでもベビーカー入店しやすく、和食・洋食・スイーツが選べる。後楽園ホール・遊園地利用と組み合わせやすい。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜2,000円',
-      popular: true,
-    },
-    {
       name: '播磨坂 トラットリア',
       genre: 'italian',
       area: '後楽園駅から徒歩12分（播磨坂方面）',
@@ -1220,17 +1208,6 @@ export const CHUNK_2: StationIndieMap = {
       popular: true,
     },
     {
-      name: '両国 江戸NOREN 個店',
-      genre: 'washoku',
-      area: '両国駅から徒歩1分（江戸NOREN）',
-      description: 'JR両国駅併設の和食横丁「江戸NOREN」内の和食個店。寿司・蕎麦・天ぷらなどから選べ、ベビーカーで施設内を移動しやすい。',
-      strollerOk: true,
-      kidsMenu: false,
-      seatingType: ['table'],
-      priceLunch: '〜3,500円',
-      popular: true,
-    },
-    {
       name: '両国 桔梗家',
       genre: 'sweets',
       area: '両国駅から徒歩2分',
@@ -1254,18 +1231,6 @@ export const CHUNK_2: StationIndieMap = {
   ],
 
   'oshiage': [
-    {
-      name: '東京ソラマチ 個店レストラン',
-      genre: 'others',
-      area: '押上駅直結（東京スカイツリータウン ソラマチ）',
-      description: 'スカイツリー直下のソラマチには和食・洋食・カフェ・スイーツの個店多数。ベビーカーでフロア移動が容易で、子連れ家族の定番ランチエリア。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-      popular: true,
-    },
     {
       name: '長命寺 桜もち 山本や',
       genre: 'sweets',
@@ -1305,18 +1270,6 @@ export const CHUNK_2: StationIndieMap = {
       strollerToSeat: true,
       kidsCutlery: true,
       priceLunch: '〜5,000円',
-      popular: true,
-    },
-    {
-      name: 'スカイツリー ソラマチ ダイニング個店',
-      genre: 'others',
-      area: 'とうきょうスカイツリー駅直結',
-      description: 'ソラマチダイニングの個店群。和洋中・スイーツが揃い、ベビーカーでの移動も容易。観光と組み合わせやすい子連れ向け定番。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
       popular: true,
     },
     {
@@ -1729,18 +1682,6 @@ export const CHUNK_2: StationIndieMap = {
 
   'minami-sunamachi': [
     {
-      name: '南砂町 SUNAMO 内 個人レストラン',
-      genre: 'others',
-      area: '南砂町駅から徒歩3分（SUNAMO）',
-      description: '南砂町SUNAMOの個店レストラン群。和食・洋食・カフェが揃い、ベビーカーで施設内移動が容易。子連れ家族のショッピングランチに定番。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜2,000円',
-      popular: true,
-    },
-    {
       name: '南砂町 食堂 さわだ',
       genre: 'washoku',
       area: '南砂町駅から徒歩4分',
@@ -1956,18 +1897,6 @@ export const CHUNK_2: StationIndieMap = {
 
   'shinonome': [
     {
-      name: '東雲イオン内 個人レストラン',
-      genre: 'others',
-      area: '東雲駅から徒歩10分（イオン東雲）',
-      description: 'イオン東雲内の個店フードコート併設レストラン。和食・洋食・スイーツがあり、ベビーカーでフロア移動が容易で子連れに優しい。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜2,000円',
-      popular: true,
-    },
-    {
       name: '東雲 カフェ パンとエスプレッソと',
       genre: 'cafe',
       area: '東雲駅から徒歩8分',
@@ -2160,20 +2089,6 @@ export const CHUNK_2: StationIndieMap = {
 
   'toyosu': [
     {
-      name: 'ららぽーと豊洲 個店レストラン',
-      genre: 'others',
-      area: '豊洲駅から徒歩6分（ららぽーと豊洲）',
-      description: 'ららぽーと豊洲内の和食・洋食・スイーツの個店群。ベビーカーで館内移動が容易で、子連れショッピングランチに定番。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-      popular: true,
-    },
-    {
       name: '豊洲 江戸前 大江戸 ららぽーと豊洲店',
       genre: 'sushi',
       area: '豊洲駅から徒歩6分（ららぽーと豊洲）',
@@ -2289,18 +2204,6 @@ export const CHUNK_2: StationIndieMap = {
 
   'shin-toyosu': [
     {
-      name: '新豊洲 千客万来エリア 個店',
-      genre: 'others',
-      area: '新豊洲駅から徒歩7分（豊洲千客万来）',
-      description: '豊洲市場前の食楽棟・温浴棟「豊洲千客万来」内の和食・寿司・スイーツ個店。ベビーカーで施設内移動可、家族で観光ランチに。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-      popular: true,
-    },
-    {
       name: '新豊洲 カフェ&グリル ベイ',
       genre: 'cafe',
       area: '新豊洲駅から徒歩4分',
@@ -2316,18 +2219,6 @@ export const CHUNK_2: StationIndieMap = {
   ],
 
   'ariake': [
-    {
-      name: '有明ガーデン 個店レストラン',
-      genre: 'others',
-      area: '有明駅から徒歩3分（有明ガーデン）',
-      description: '有明ガーデン内の和食・洋食・カフェ・スイーツの個店群。ベビーカーで施設内移動が容易で、子連れに優しい巨大商業施設のランチエリア。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-      popular: true,
-    },
     {
       name: '有明 イタリアン ピアッティ',
       genre: 'italian',
@@ -2400,16 +2291,6 @@ export const CHUNK_2: StationIndieMap = {
   ],
 
   'tokyo-big-sight': [
-    {
-      name: '東京ビッグサイト レストラン棟 個店',
-      genre: 'others',
-      area: '東京ビッグサイト駅直結',
-      description: 'ビッグサイト内の和食・洋食・カフェ個店群。展示会・イベント来場者向けでベビーカー利用も容易。',
-      strollerOk: true,
-      kidsMenu: false,
-      seatingType: ['table'],
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'aomi': [
@@ -2424,20 +2305,6 @@ export const CHUNK_2: StationIndieMap = {
       seatingType: ['table'],
       strollerToSeat: true,
       priceLunch: '〜2,000円',
-    },
-    {
-      name: 'ダイバーシティ東京 個店レストラン',
-      genre: 'others',
-      area: '青海駅直結（ダイバーシティ東京プラザ）',
-      description: 'ダイバーシティ東京内の和食・洋食・カフェ個店群。ベビーカーで施設内移動が容易で、子連れショッピングランチに定番。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-      popular: true,
     },
   ],
 
@@ -2457,32 +2324,6 @@ export const CHUNK_2: StationIndieMap = {
   ],
 
   'tokyo-teleport': [
-    {
-      name: 'アクアシティお台場 個店レストラン',
-      genre: 'others',
-      area: '東京テレポート駅から徒歩6分（アクアシティお台場）',
-      description: 'アクアシティお台場内の和食・洋食・スイーツ・カフェ個店。ベビーカーで施設内移動が容易で、子連れ家族のお台場観光ランチに最適。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-      popular: true,
-    },
-    {
-      name: 'デックス東京ビーチ 個店',
-      genre: 'others',
-      area: '東京テレポート駅から徒歩5分（デックス東京ビーチ）',
-      description: 'デックス東京ビーチの個店レストラン群。海を望む席もあり、子連れ家族のランチにファミリー向けメニュー充実。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-      popular: true,
-    },
     {
       name: 'お台場 個人カフェ ビーチサイド',
       genre: 'cafe',

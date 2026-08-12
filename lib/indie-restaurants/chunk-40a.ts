@@ -431,20 +431,6 @@ export const CHUNK_40A: StationIndieMap = {
       priceLunch: '〜3,500円',
     },
     {
-      name: 'グランエミオ所沢 カフェ＆レストラン街',
-      genre: 'cafe',
-      area: '所沢駅東口直結（グランエミオ所沢）',
-      description:
-        '駅直結のショッピング施設内にあるカフェ・レストランフロア。各店ベビーカー入店OKが多く、館内に授乳室・おむつ替え台を完備。雨の日でも安心の子連れランチ拠点。',
-      strollerOk: true,
-      nursingRoom: true,
-      diaperChangingTable: true,
-      seatingType: ['table'],
-      stepFree: true,
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
-    {
       name: 'エミテラス所沢 ファミリーダイニング',
       genre: 'others',
       area: '所沢駅東口直結（エミテラス所沢）',

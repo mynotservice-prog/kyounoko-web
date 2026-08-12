@@ -115,19 +115,6 @@ export const CHUNK_6: StationIndieMap = {
   // ===========================================================
 
   'ebisu': [
-    {
-      name: '恵比寿 アトレ レストラン街 個店群',
-      genre: 'others',
-      area: '恵比寿駅直結（アトレ恵比寿）',
-      description: 'アトレ恵比寿のレストラン街。和洋中・スイーツの個店が揃い、ベビーカーで館内移動も容易。子連れ家族のショッピングランチに使いやすい。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'daikanyama': [
@@ -614,17 +601,6 @@ export const CHUNK_6: StationIndieMap = {
   ],
 
   'ikebukuro': [
-    {
-      name: '池袋 サンシャインシティ 噴水広場前 個人レストラン',
-      genre: 'others',
-      area: '池袋駅から徒歩8分（サンシャインシティ）',
-      description: 'サンシャインシティ内のレストランエリアにある個店群。和洋中・スイーツが揃い、ベビーカーで館内移動が容易。子連れ家族の遊びの後の食事に定番。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'sugamo': [
@@ -647,18 +623,6 @@ export const CHUNK_6: StationIndieMap = {
   // ===========================================================
 
   'kinshicho': [
-    {
-      name: '錦糸町 オリナス内 個店レストラン群',
-      genre: 'others',
-      area: '錦糸町駅から徒歩6分（オリナス錦糸町）',
-      description: 'オリナス錦糸町の個店レストラン群。和洋中・スイーツが揃い、ベビーカーで館内移動が容易で子連れ家族のショッピングランチに定番。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜2,000円',
-      popular: true,
-    },
   ],
 
   // ===========================================================

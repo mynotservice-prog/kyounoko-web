@@ -29,14 +29,6 @@ export const CHUNK_12: StationIndieMap = {
       popular: true,
     },
     {
-      name: '新宿 紀伊國屋ビル レストラン街',
-      genre: 'others',
-      area: '新宿駅東口から徒歩3分',
-      description: '紀伊國屋書店本店ビル内のレストランフロア。カレーや洋食、和食の老舗個店が揃い、書店帰りに家族で利用しやすい雰囲気。テーブル席中心で子供連れも多い。',
-      seatingType: ['table'],
-      priceLunch: '〜2,000円',
-    },
-    {
       name: '新宿 つな八 つるとんたん別館 すずや 本店',
       genre: 'tonkatsu',
       area: '新宿三丁目駅から徒歩2分',

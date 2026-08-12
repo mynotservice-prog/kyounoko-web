@@ -38,27 +38,6 @@ export const CHUNK_14: StationIndieMap = {
   ],
 
   'nijubashimae': [
-    {
-      name: '二重橋前 丸ビル レストラン街',
-      genre: 'others',
-      area: '二重橋前駅直結（丸の内）',
-      description: '丸の内のランドマーク・丸ビルの飲食フロア。和食・洋食・カフェの個店が並び、皇居散策の前後に家族連れで利用しやすい。テーブル席中心で子連れでも入りやすい店が多い。',
-      seatingType: ['table'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      priceLunch: '〜3,500円',
-    },
-    {
-      name: '二重橋前 新丸ビル レストラン街',
-      genre: 'others',
-      area: '二重橋前駅から徒歩2分（新丸ビル）',
-      description: '丸の内の新丸ビル5〜7階のレストランフロア。眺望のよい個店イタリアン・和食が揃い、皇居を望む席が家族の特別な日にも向く。ベビーカー入店可の店も多い。',
-      strollerOk: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      priceLunch: '〜5,000円',
-    },
   ],
 
   'kasumigaseki': [
@@ -86,15 +65,6 @@ export const CHUNK_14: StationIndieMap = {
   ],
 
   'nagatacho': [
-    {
-      name: '永田町 赤坂見附 紀尾井町ザ・プリンス内 個人レストラン',
-      genre: 'others',
-      area: '永田町駅から徒歩3分',
-      description: '紀尾井町の落ち着いたエリアにあるホテル併設・近隣の個人レストラン群。和食・フレンチが揃い、ベビーカー入店可で家族の食事会・記念日にも対応しやすい。',
-      strollerOk: true,
-      seatingType: ['table'],
-      priceLunch: '〜5,000円',
-    },
   ],
 
   'hanzomon': [
@@ -249,31 +219,9 @@ export const CHUNK_14: StationIndieMap = {
   ],
 
   'takeshiba': [
-    {
-      name: '竹芝 アトレ竹芝 個店レストラン',
-      genre: 'others',
-      area: '竹芝駅直結',
-      description: 'アトレ竹芝の飲食フロア。和食・洋食・カフェの個店が並び、ベビーカー入店可・テーブル席広めで子連れの観光休憩に向く。海を望むテラス席もある。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table', 'terrace'],
-      strollerToSeat: true,
-      nursingRoom: true,
-      diaperChangingTable: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'shiodome': [
-    {
-      name: '汐留 カレッタ汐留 SKY RESTAURANT 個店',
-      genre: 'others',
-      area: '汐留駅直結（カレッタ汐留46〜47階）',
-      description: 'カレッタ汐留の高層階ダイニング。眺望のよい和食・洋食の個人店が並び、家族の記念日に向く。ベビーカー入店可の店もあり、ランチタイムは比較的入りやすい。',
-      strollerOk: true,
-      seatingType: ['table'],
-      priceLunch: '〜5,000円',
-    },
   ],
 
   // ===========================================================
@@ -432,17 +380,6 @@ export const CHUNK_14: StationIndieMap = {
   // ===========================================================
 
   'shinagawa-seaside': [
-    {
-      name: '品川シーサイド アワーズ品川シーサイド 個店',
-      genre: 'others',
-      area: '品川シーサイド駅直結',
-      description: '品川シーサイドのオフィス・商業ビル群にある飲食フロア。和洋中の個人店が並び、ベビーカー入店可・テーブル席広めで家族の昼食・夕食にも対応しやすい。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'tennozu-isle': [
@@ -681,42 +618,12 @@ export const CHUNK_14: StationIndieMap = {
   ],
 
   'tenkubashi': [
-    {
-      name: '天空橋 羽田イノベーションシティ 個店レストラン',
-      genre: 'others',
-      area: '天空橋駅直結',
-      description: '羽田イノベーションシティの飲食フロア。和洋中の個人店が並び、ベビーカー入店可・キッズメニューありの店も多い。家族の空港利用前後の食事に向く。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'shin-seibijo': [
-    {
-      name: '新整備場 羽田空港旅客ターミナル 個人レストラン',
-      genre: 'others',
-      area: '新整備場駅から徒歩・モノレールで羽田T1/T2へ',
-      description: '羽田空港の各ターミナルレストラン街にある個人和食・洋食店。出発前後の家族の食事に向き、ベビーカー入店可・キッズメニューありの店も多い。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'seibijo': [
-    {
-      name: '整備場 羽田空港 整備場地区社員食堂跡 個店',
-      genre: 'others',
-      area: '整備場駅から徒歩5分（羽田空港整備場地区）',
-      description: '羽田空港整備場地区の業務関係者向け飲食店。和食定食・カレーが定番で、見学コース利用の家族の昼食にも対応。',
-      seatingType: ['table'],
-      priceLunch: '〜1,000円',
-    },
   ],
 
   'showajima': [
@@ -1890,48 +1797,12 @@ export const CHUNK_14: StationIndieMap = {
   ],
 
   'kokusai-tenjijo': [
-    {
-      name: '国際展示場 東京ビッグサイト 個店レストラン',
-      genre: 'others',
-      area: '国際展示場駅から徒歩4分（東京ビッグサイト方面）',
-      description: '東京ビッグサイト周辺の個人レストラン。和食・洋食・カレーなど、展示会・イベント参加の家族にも対応する幅広いメニュー。テーブル席広め。',
-      strollerOk: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'tokyo-big-sight': [
-    {
-      name: '東京ビッグサイト 会議棟・展示棟内 個店レストラン',
-      genre: 'others',
-      area: '東京ビッグサイト駅直結',
-      description: '東京ビッグサイト内のレストラン・カフェ。和食・洋食・軽食の個店が揃い、展示会・イベント利用の家族にも対応。ベビーカー入店可。',
-      strollerOk: true,
-      seatingType: ['table'],
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'aomi': [
-    {
-      name: '青海 ダイバーシティ東京プラザ 個店レストラン',
-      genre: 'others',
-      area: '青海駅から徒歩3分',
-      description: 'ダイバーシティ東京プラザのフードコート・レストラン街にある個人店。和洋中の幅広いメニューで、子連れの観光休憩にうってつけ。',
-      strollerOk: true,
-      kidsMenu: true,
-      stepFree: true,
-      seatingType: ['table'],
-      strollerToSeat: true,
-      nursingRoom: true,
-      diaperChangingTable: true,
-      kidsCutlery: true,
-      priceLunch: '〜2,000円',
-      popular: true,
-    },
   ],
 
   'telecom-center': [
@@ -1976,16 +1847,6 @@ export const CHUNK_14: StationIndieMap = {
   ],
 
   'oi-keibajo-mae': [
-    {
-      name: '大井競馬場前 大井競馬場 場内個人レストラン',
-      genre: 'others',
-      area: '大井競馬場前駅から徒歩2分',
-      description: '大井競馬場内の個人レストラン・売店。焼きそばやカツカレーが定番で、家族のレース観戦・トゥインクルレース観覧の食事に向く。',
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   // ===========================================================

@@ -2707,15 +2707,6 @@ export const CHUNK_18: StationIndieMap = {
       seatingType: ['table'],
       priceLunch: '〜1,000円',
     },
-    {
-      name: '勝どき トリトン スクエア レストラン街',
-      genre: 'others',
-      area: '勝どき駅直結（晴海トリトンスクエア）',
-      description: '晴海トリトンスクエアの老舗系レストラン群相当。和洋中の専門店が揃い、ベビーカーで館内移動でき、家族のランチに使いやすい。',
-      strollerOk: true,
-      seatingType: ['table'],
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'kayabacho': [

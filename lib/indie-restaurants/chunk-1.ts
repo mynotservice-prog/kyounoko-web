@@ -492,18 +492,6 @@ export const CHUNK_1: StationIndieMap = {
   ],
 
   'nijubashimae': [
-    {
-      name: '丸の内 オアゾ レストラン街',
-      genre: 'others',
-      area: '二重橋前駅から徒歩3分',
-      description: 'オアゾ内のレストラン街には家族で利用できる和食・洋食店が複数。授乳室・ベビーカー対応エレベーター完備。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'hibiya': [
@@ -708,18 +696,6 @@ export const CHUNK_1: StationIndieMap = {
 
   'suidobashi': [
     {
-      name: 'ラクーア レストラン街',
-      genre: 'others',
-      area: '水道橋駅から徒歩5分（東京ドームシティ）',
-      description: '東京ドームシティのラクーア内に家族向けレストラン多数。子連れフレンドリーで設備も整い、遊びの後の食事に最適。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-      popular: true,
-    },
-    {
       name: 'シェ・イノ',
       genre: 'french',
       area: '水道橋駅から徒歩7分',
@@ -751,16 +727,6 @@ export const CHUNK_1: StationIndieMap = {
   ],
 
   'uchi-saiwaicho': [
-    {
-      name: '日比谷シャンテ レストラン街',
-      genre: 'others',
-      area: '内幸町駅から徒歩4分',
-      description: '日比谷シャンテ内のレストラン街には家族で利用できる和洋中の店舗が揃う。映画前後のランチに便利。',
-      strollerOk: true,
-      kidsMenu: false,
-      seatingType: ['table'],
-      priceLunch: '〜3,500円',
-    },
   ],
 
   // ===========================================================
@@ -1393,18 +1359,6 @@ export const CHUNK_1: StationIndieMap = {
       diaperChangingTable: true,
       priceLunch: '〜3,500円',
     },
-    {
-      name: '品川インターシティ レストラン街',
-      genre: 'others',
-      area: '品川駅から徒歩4分',
-      description: '品川インターシティのレストラン街には和洋中の家族向けレストラン多数。授乳室・ベビーカー対応エレベーター完備。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'shimbashi': [
@@ -1670,34 +1624,9 @@ export const CHUNK_1: StationIndieMap = {
       priceLunch: '〜3,500円',
       popular: true,
     },
-    {
-      name: '六本木ヒルズ ハリウッドプラザ レストラン街',
-      genre: 'others',
-      area: '六本木駅直結',
-      description: '六本木ヒルズ内に多数の家族向けレストラン。授乳室・ベビーカー対応エレベーター完備で子連れに優しい。',
-      strollerOk: true,
-      kidsMenu: true,
-      stepFree: true,
-      seatingType: ['table'],
-      diaperChangingTable: true,
-      nursingRoom: true,
-      strollerToSeat: true,
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'roppongi-itchome': [
-    {
-      name: '泉ガーデン レストラン街',
-      genre: 'others',
-      area: '六本木一丁目駅直結',
-      description: '泉ガーデンのレストラン街には和洋中ラインナップ。広く清潔で家族連れに優しい。',
-      strollerOk: true,
-      kidsMenu: false,
-      seatingType: ['table'],
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'azabu-juban': [
@@ -2122,36 +2051,9 @@ export const CHUNK_1: StationIndieMap = {
       priceLunch: '〜3,500円',
       popular: true,
     },
-    {
-      name: 'お台場 デックス東京ビーチ レストラン街',
-      genre: 'others',
-      area: 'お台場海浜公園駅から徒歩3分',
-      description: 'デックス東京ビーチのレストラン街。台場一丁目商店街にも家族で楽しめる店多数。授乳室完備。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-      popular: true,
-    },
   ],
 
   'daiba': [
-    {
-      name: 'お台場 アクアシティ レストラン街',
-      genre: 'others',
-      area: '台場駅直結',
-      description: 'アクアシティお台場のレストラン街。和洋中ラインナップが揃い、子連れ向き設備が充実。授乳室・ベビーカー貸出あり。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-      popular: true,
-    },
     {
       name: 'お台場 ヒルトン東京お台場 グレイスオリエンタル',
       genre: 'chinese',
@@ -2170,16 +2072,6 @@ export const CHUNK_1: StationIndieMap = {
   ],
 
   'tameike-sanno': [
-    {
-      name: '溜池山王 山王パークタワー レストラン街',
-      genre: 'others',
-      area: '溜池山王駅直結',
-      description: '山王パークタワーの飲食フロア。和洋中ラインナップが揃い、ランチタイムは家族で利用可。',
-      strollerOk: true,
-      kidsMenu: false,
-      seatingType: ['table'],
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'toranomon': [
@@ -2207,22 +2099,6 @@ export const CHUNK_1: StationIndieMap = {
   ],
 
   'toranomon-hills': [
-    {
-      name: '虎ノ門ヒルズ レストラン街',
-      genre: 'others',
-      area: '虎ノ門ヒルズ駅直結',
-      description: '虎ノ門ヒルズの飲食フロア。家族向けレストラン多数で授乳室・ベビーカー対応エレベーター完備。',
-      strollerOk: true,
-      kidsMenu: true,
-      stepFree: true,
-      seatingType: ['table'],
-      diaperChangingTable: true,
-      nursingRoom: true,
-      strollerToSeat: true,
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-      popular: true,
-    },
     {
       name: '虎ノ門ヒルズ ANDAZ 東京 ザ・タヴァン',
       genre: 'others',
@@ -2289,21 +2165,6 @@ export const CHUNK_1: StationIndieMap = {
   ],
 
   'shiodome': [
-    {
-      name: '汐留 カレッタ汐留 レストラン街',
-      genre: 'others',
-      area: '汐留駅直結',
-      description: 'カレッタ汐留の飲食フロア。和洋中ラインナップが揃い、46階の眺望レストランも。授乳室・ベビーカー対応。',
-      strollerOk: true,
-      kidsMenu: false,
-      stepFree: true,
-      seatingType: ['table'],
-      diaperChangingTable: true,
-      nursingRoom: true,
-      strollerToSeat: true,
-      priceLunch: '〜5,000円',
-      popular: true,
-    },
     {
       name: '汐留 コンラッド東京 セリーズ',
       genre: 'others',
@@ -3000,16 +2861,6 @@ export const CHUNK_1: StationIndieMap = {
   ],
 
   'shinsen-shinjuku': [
-    {
-      name: '新線新宿 京王モール レストラン街',
-      genre: 'others',
-      area: '新線新宿駅直結',
-      description: '京王モール内の飲食店街。家族で気軽にランチ。',
-      strollerOk: true,
-      kidsMenu: false,
-      seatingType: ['table'],
-      priceLunch: '〜2,000円',
-    },
   ],
 
   // ===========================================================
@@ -3064,22 +2915,6 @@ export const CHUNK_1: StationIndieMap = {
       kidsMenu: false,
       seatingType: ['table'],
       priceLunch: '〜2,000円',
-      popular: true,
-    },
-    {
-      name: '渋谷 渋谷スクランブルスクエア レストラン街',
-      genre: 'others',
-      area: '渋谷駅直結',
-      description: 'スクランブルスクエア最上階の眺望レストランや、低層階の家族向けレストラン多数。授乳室・ベビーカー貸出あり。',
-      strollerOk: true,
-      kidsMenu: true,
-      stepFree: true,
-      seatingType: ['table'],
-      diaperChangingTable: true,
-      nursingRoom: true,
-      strollerToSeat: true,
-      kidsCutlery: true,
-      priceLunch: '〜5,000円',
       popular: true,
     },
     {
@@ -3411,16 +3246,6 @@ export const CHUNK_1: StationIndieMap = {
 
   'hatsudai': [
     {
-      name: '初台 オペラシティ レストラン街',
-      genre: 'others',
-      area: '初台駅直結',
-      description: '東京オペラシティの飲食フロア。和洋中ラインナップで家族でランチ。',
-      strollerOk: true,
-      kidsMenu: false,
-      seatingType: ['table'],
-      priceLunch: '〜3,500円',
-    },
-    {
       name: '初台 喫茶 ピアノ',
       genre: 'cafe',
       area: '初台駅から徒歩4分',
@@ -3524,22 +3349,6 @@ export const CHUNK_1: StationIndieMap = {
       shareDish: true,
       strollerToSeat: true,
       priceLunch: '〜3,500円',
-    },
-    {
-      name: '恵比寿 ガーデンプレイス レストラン街',
-      genre: 'others',
-      area: '恵比寿駅から徒歩7分',
-      description: '恵比寿ガーデンプレイスの飲食街。和洋中ラインナップで家族でランチ。広い屋外スペースもあり。',
-      strollerOk: true,
-      kidsMenu: true,
-      stepFree: true,
-      seatingType: ['table'],
-      diaperChangingTable: true,
-      nursingRoom: true,
-      strollerToSeat: true,
-      kidsCutlery: true,
-      priceLunch: '〜5,000円',
-      popular: true,
     },
     {
       name: '恵比寿 アフタヌーンティー ティールーム',
@@ -3702,17 +3511,6 @@ export const CHUNK_1: StationIndieMap = {
 
   'osaki': [
     {
-      name: '大崎 ゲートシティ大崎 レストラン街',
-      genre: 'others',
-      area: '大崎駅直結',
-      description: 'ゲートシティ大崎の飲食街。和洋中ラインナップで家族でランチ。授乳室・ベビーカー対応エレベーター完備。',
-      strollerOk: true,
-      kidsMenu: false,
-      seatingType: ['table'],
-      nursingRoom: true,
-      priceLunch: '〜3,500円',
-    },
-    {
       name: '大崎 シンクパーク レストラン',
       genre: 'others',
       area: '大崎駅直結',
@@ -3792,19 +3590,6 @@ export const CHUNK_1: StationIndieMap = {
       popular: true,
     },
     {
-      name: '目黒 アトレ目黒 レストラン街',
-      genre: 'others',
-      area: '目黒駅直結',
-      description: 'アトレ目黒の飲食街。家族向けレストラン多数。授乳室・ベビーカー対応エレベーター完備。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      diaperChangingTable: true,
-      kidsCutlery: true,
-      priceLunch: '〜3,500円',
-    },
-    {
       name: '目黒 雅叙園 旬遊紀',
       genre: 'washoku',
       area: '目黒駅から徒歩5分（ホテル雅叙園東京）',
@@ -3833,18 +3618,6 @@ export const CHUNK_1: StationIndieMap = {
   ],
 
   'shinagawa-seaside': [
-    {
-      name: '品川シーサイド イオン レストラン街',
-      genre: 'others',
-      area: '品川シーサイド駅直結',
-      description: 'イオンシーサイドの飲食フロア。家族向けの店舗が揃い、ベビーカー・授乳室完備で子連れに優しい。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      kidsCutlery: true,
-      priceLunch: '〜2,000円',
-    },
   ],
 
   'tennozu-isle': [
@@ -3876,18 +3649,6 @@ export const CHUNK_1: StationIndieMap = {
   ],
 
   'oimachi': [
-    {
-      name: '大井町 阪急 レストラン街',
-      genre: 'others',
-      area: '大井町駅直結',
-      description: '阪急大井町の飲食フロア。家族向けの店舗が揃い、ベビーカー・授乳室完備。',
-      strollerOk: true,
-      kidsMenu: true,
-      seatingType: ['table'],
-      nursingRoom: true,
-      kidsCutlery: true,
-      priceLunch: '〜2,000円',
-    },
     {
       name: '大井町 ニュー新橋亭',
       genre: 'chinese',
@@ -4180,16 +3941,6 @@ export const CHUNK_1: StationIndieMap = {
   ],
 
   'osaki-hirokoji': [
-    {
-      name: '大崎広小路 ゲートシティ レストラン街',
-      genre: 'others',
-      area: '大崎広小路駅から徒歩3分',
-      description: 'ゲートシティ大崎の飲食街。和洋中ラインナップで家族でランチ。',
-      strollerOk: true,
-      kidsMenu: false,
-      seatingType: ['table'],
-      priceLunch: '〜3,500円',
-    },
   ],
 
   'fune-no-kagakukan': [
