@@ -1940,6 +1940,21 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       facilities: { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', kidsSpace: 'yes' },
       summerCool: true,
     },
+    {
+      // 2026-08-13追加。フロア構成は ヨドバシ.com 公式のマルチメディア池袋フロア情報
+      //   （yodobashi.com/ec/store/floor/0016/）から。旧・西武池袋本店の建物に2026年6月30日開業。
+      // ※授乳室・おむつ替えの公式表記は確認できていないため facilities は立てていない
+      //   （未指定＝未確認として「公式サイトでご確認ください」と表示される）。
+      name: 'ヨドバシカメラ マルチメディア池袋', category: 'indoor', place: 'indoor', ages: ['2-3', '4-6'], ward: '豊島区',
+      note: '池袋駅東口直結。5階がまるごとおもちゃフロアで、8階はレストランフロア。雨の日に子どもと時間をつぶせる',
+      nearestStation: 'ikebukuro', walkMinutes: 2,
+      officialUrl: 'https://www.yodobashi.com/ec/store/floor/0016/',
+      reservation: 'none',
+      crowdLevel: { weekday: 'mid', holiday: 'high' },
+      hiddenTip: '5階はトミカ・プラレール・アンパンマン・シルバニアファミリー・リカちゃん・メルちゃんに加えて幼児玩具/知育玩具/乗用玩具まで揃い、カプセルトイコーナーもある。食事は8階の飲食店フロア「LINKS DINING」。9:30〜22:00で年中無休なので、雨や猛暑の日の時間調整に使いやすい',
+      nearby: '地下1階〜5階の各階に西武池袋本店への連絡口があり、行き来できる',
+      summerCool: true,
+    },
   ],
   kanagawa: [
       {
