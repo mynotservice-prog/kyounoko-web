@@ -14,6 +14,175 @@ export const CHUNK_35A: StationIndieMap = {
   // 横浜（横浜市西区）
   // ===========================================================
   'yokohama': [
+    // ▼ 2026-08-12追加: ルミネ横浜の公式フロアガイド（lumine.ne.jp/yokohama/floorguide）から、
+    //   フロア／ジャンル／ランチ予算／席数を転記した。レストランは6F・7Fに集まる。横浜駅直結。
+    {
+      name: 'つばめグリル ルミネ横浜店',
+      genre: 'yoshoku',
+      area: '横浜駅直結（ルミネ横浜 7F）',
+      description:
+        'ハンバーグが看板の欧風料理店。100席とフロア最大で、家族連れでも席を取りやすい。ハンバーグは子どもと分けやすい定番。ランチ1,500〜2,500円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'ソバキチ ルミネ横浜店',
+      genre: 'noodles',
+      area: '横浜駅直結（ルミネ横浜 6F）',
+      description:
+        'そば・うどんの店。うどんは短く切って子どもに分けやすい。55席。ランチ1,000円〜と6Fでは入りやすい価格帯。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'マンゴツリーカフェ ルミネ横浜店',
+      genre: 'asian',
+      area: '横浜駅直結（ルミネ横浜 6F）',
+      description:
+        'タイ料理のカフェ業態。ガパオやカオマンガイなど一皿もの中心で、辛くない料理も選べる。48席。ランチ900円〜とルミネ横浜で最も安い部類。',
+      seatingType: ['table'],
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: '神戸元町ドリア ルミネ横浜店',
+      genre: 'yoshoku',
+      area: '横浜駅直結（ルミネ横浜 6F）',
+      description:
+        'ドリア・グラタンの専門店。取り分けやすいが熱々で提供されるので、子どもの分は冷ましてから渡したい。42席。ランチ1,200円〜。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'マルモキッチン ルミネ横浜店',
+      genre: 'yoshoku',
+      area: '横浜駅直結（ルミネ横浜 6F）',
+      description:
+        'どんぶりカフェ。丼ものは白飯を子どもに分けやすい。40席。ランチ1,200円〜。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '京都 石塀小路豆ちゃ ルミネ横浜店',
+      genre: 'washoku',
+      area: '横浜駅直結（ルミネ横浜 7F）',
+      description:
+        '京都のおばんざいの店。75席のうち掘り炬燵の半個室が3席あり、赤ちゃん連れでも足を伸ばして座れる。ランチ1,500円〜。',
+      privateRoom: true,
+      seatingType: ['table', 'counter', 'zashiki'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'ご馳走汁と炊き込みご飯 七五三 ルミネ横浜店',
+      genre: 'washoku',
+      area: '横浜駅直結（ルミネ横浜 7F）',
+      description:
+        '一汁三菜の膳を自分で組み立てる和食店。子どもが食べられるものだけ選べるのが利点。カウンター9席・テーブル42席。終日1,200〜2,000円程度。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'ラ・メゾン アンソレイユターブル ルミネ横浜店',
+      genre: 'cafe',
+      area: '横浜駅直結（ルミネ横浜 7F）',
+      description:
+        'タルトが看板のカフェレストラン。食事のあとそのままデザートへ移れるので、子どもの機嫌が持ちやすい。72席。ランチ1,300円〜。',
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '黒ぶたや ルミネ横浜店',
+      genre: 'tonkatsu',
+      area: '横浜駅直結（ルミネ横浜 7F）',
+      description:
+        '黒豚料理の店。昼は定食中心で、ご飯と汁物を子どもに分けやすい。60席。ランチ1,380円〜。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '牛たん炭焼 利久 ルミネ横浜店',
+      genre: 'washoku',
+      area: '横浜駅直結（ルミネ横浜 7F）',
+      description:
+        '牛たん定食の店。麦めしとテールスープが付き、ご飯を子どもに分けやすい。63席。ランチ1,650円〜、テイクアウトもあり。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '土古里 ルミネ横浜店',
+      genre: 'yakiniku',
+      area: '横浜駅直結（ルミネ横浜 7F）',
+      description:
+        '焼肉と旬野菜の店。84席と広い。ランチ1,200円〜で昼は入りやすいが、夜は4,000円〜と価格帯が上がる。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'やさい家めい ルミネ横浜店',
+      genre: 'shabu',
+      area: '横浜駅直結（ルミネ横浜 7F）',
+      description:
+        '野菜しゃぶしゃぶの和食店。鍋は取り分けやすいが、熱いものを扱うので低年齢の子は席の位置に注意。82席。ランチ1,500〜3,500円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: 'ブリル飯店 ルミネ横浜店',
+      genre: 'chinese',
+      area: '横浜駅直結（ルミネ横浜 7F）',
+      description:
+        '中華料理店。取り分け前提の料理が多く家族でシェアしやすい。66席。ランチ2,000円〜。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: 'オッティモシーフードガーデン ルミネ横浜店',
+      genre: 'italian',
+      area: '横浜駅直結（ルミネ横浜 6F）',
+      description:
+        'シーフードのイタリアン。パスタやピッツァは家族でシェアしやすい。72席。ランチ1,800円〜。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'AGIO ルミネ横浜店',
+      genre: 'italian',
+      area: '横浜駅直結（ルミネ横浜 7F）',
+      description:
+        'ピッツァ・パスタ・炭火焼のイタリアン。86席と広く、ピッツァは分けやすい。ランチ2,000円〜。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜3,500円',
+    },
+    {
+      name: 'The French Toast Factory ルミネ横浜店',
+      genre: 'cafe',
+      area: '横浜駅直結（ルミネ横浜 6F）',
+      description:
+        'フレンチトースト専門のカフェ。カウンター8席・テーブル34席。甘いものなら食べる、という子との休憩に使える。予算は公式に記載が無いため要確認。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: '洋食と喫茶 咖喱屋ボングー ルミネ横浜店',
+      genre: 'curry',
+      area: '横浜駅直結（ルミネ横浜 6F）',
+      description:
+        'カレーと洋食の喫茶。辛さの調整可否は来店時に確認を。予算は公式に記載が無いため要確認。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
     {
       name: '鎌倉海街テーブル そごう横浜店',
       genre: 'italian',

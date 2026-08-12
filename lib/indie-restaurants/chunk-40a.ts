@@ -588,6 +588,75 @@ export const CHUNK_40A: StationIndieMap = {
   // 春日部駅（春日部市）
   // ===========================================================
   'kasukabe': [
+    // ▼ 2026-08-12追加: ララガーデン春日部の公式ショップガイド
+    //   （mitsui-shopping-park.com/lalag-kasukabe/shopguide/?category=g00）から、
+    //   フロア／カテゴリを転記した。春日部駅から徒歩4分、飲食は3Fに集まる。
+    //   公式に予算・席数の掲載が無いため priceLunch は入れていない。
+    //   スターバックス・マクドナルド・ミスタードーナツはチェーン側で出るため除外。
+    //   物販（おかしのまちおか・カルディ・ヤオコー等）はイートインではないので除外。
+    {
+      name: 'Italian Kitchen VANSAN ララガーデン春日部店',
+      genre: 'italian',
+      area: '春日部駅から徒歩4分（ララガーデン春日部 3F）',
+      description:
+        'パスタ・ピッツァのイタリアン。ピッツァは家族でシェアしやすい。飲食フロアの3Fにあり、館内の営業は11:00〜22:00。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '万豚記（ワンツーチィ）ララガーデン春日部店',
+      genre: 'chinese',
+      area: '春日部駅から徒歩4分（ララガーデン春日部 3F）',
+      description:
+        '中華料理店。麺・飯ものがあり取り分けやすい。担担麺は辛さの調整可否を来店時に確認したい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '本格インド料理 マンディル ララガーデン春日部店',
+      genre: 'curry',
+      area: '春日部駅から徒歩4分（ララガーデン春日部 3F）',
+      description:
+        'インド料理の店。ナンやカレーは取り分けやすい。辛さの調整可否は来店時に確認を。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '韓美膳 ララガーデン春日部店',
+      genre: 'korean',
+      area: '春日部駅から徒歩4分（ララガーデン春日部 3F）',
+      description:
+        '韓国料理の店。石焼ビビンバなど辛さを抜いた取り分けがしやすい定番メニューがそろう。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '富金豚（とみきんとん）ララガーデン春日部店',
+      genre: 'tonkatsu',
+      area: '春日部駅から徒歩4分（ララガーデン春日部 3F）',
+      description:
+        '豚肉料理の店。定食形式ならご飯と汁物を子どもに分けやすい。3Fの飲食フロアにある。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '焼肉 おもに亭 ララガーデン春日部店',
+      genre: 'yakiniku',
+      area: '春日部駅から徒歩4分（ララガーデン春日部 3F）',
+      description:
+        '焼肉店。焼く席なので低年齢の子は席の位置に注意。ランチの定食なら取り分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'ポムズファーム ララガーデン春日部店',
+      genre: 'yoshoku',
+      area: '春日部駅から徒歩4分（ララガーデン春日部 3F）',
+      description:
+        'オムライスの洋食店。卵料理中心で小さい子でも食べやすい。3Fの飲食フロアにある。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
     {
       name: 'イル・カンパネッロ',
       genre: 'italian',
