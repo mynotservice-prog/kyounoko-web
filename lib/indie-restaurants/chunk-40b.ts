@@ -496,6 +496,89 @@ export const CHUNK_40B: StationIndieMap = {
   // 市川駅（市川市）
   // ===========================================================
   'ichikawa': [
+    // ▼ 2026-08-12追加: シャポー市川の公式ショップガイド（shapo.jrtk.jp/ichikawa/restaurant）
+    //   から、フロア／ジャンル／営業時間を転記した。市川駅直結。
+    //   公式に予算・席数の掲載が無いため priceLunch は入れていない。
+    //   コメダ珈琲店・スターバックス・タリーズ・ドトール・マクドナルドはチェーン側で出るため除外。
+    {
+      name: 'とんかついなば和幸 シャポー市川店',
+      genre: 'tonkatsu',
+      area: '市川駅直結（シャポー市川 1F）',
+      description:
+        'とんかつの和食店。ご飯・キャベツ・味噌汁が付く定食形式で、子どもへの取り分けがしやすい。11:00〜22:00（L.O.21:00）。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '自家製麺 杵屋 シャポー市川店',
+      genre: 'noodles',
+      area: '市川駅直結（シャポー市川 1F）',
+      description:
+        'うどんの店。うどんは短く切って子どもに分けやすい定番。11:00〜22:00（L.O.21:00）。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'パスティノーバ シャポー市川店',
+      genre: 'italian',
+      area: '市川駅直結（シャポー市川 1F）',
+      description:
+        'イタリア料理の店。パスタは取り分けやすい。11:00〜22:00（L.O.21:00）。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'たんや十兵衛 シャポー市川店',
+      genre: 'washoku',
+      area: '市川駅直結（シャポー市川 1F）',
+      description:
+        '牛たん定食の店。麦めしとテールスープが付き、ご飯を子どもに分けやすい。平日・土日祝11:00〜22:00（L.O.21:00）。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'すしみさき シャポー市川店',
+      genre: 'sushi',
+      area: '市川駅直結（シャポー市川 1F）',
+      description:
+        '寿司店。玉子やかっぱ巻きなど子どもが食べられるネタを単品で頼める。11:00〜22:00（L.O.21:30）。',
+      seatingType: ['table', 'counter'],
+    },
+    {
+      name: 'ナナズグリーンティー シャポー市川店',
+      genre: 'cafe',
+      area: '市川駅直結（シャポー市川 1F）',
+      description:
+        '和カフェ。抹茶スイーツのほか食事メニューもあり、休憩にも昼食にも使える。平日・土日祝10:00〜22:00（L.O.21:30）。',
+      seatingType: ['table'],
+    },
+    {
+      name: '喜多方ラーメン坂内 シャポー市川店',
+      genre: 'noodles',
+      area: '市川駅直結（シャポー市川 1F）',
+      description:
+        '喜多方ラーメンの店。あっさりした醤油スープで子どもにも取り分けやすい。11:00〜22:00（L.O.21:30）。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: 'デリフランス シャポー市川店',
+      genre: 'bakery',
+      area: '市川駅直結（シャポー市川 1F）',
+      description:
+        'ベーカリー＆カフェ。7:00から開いており、朝食やパンを買って移動する使い方もできる。イートインL.O.21:00。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'ちよだ鮨 シャポー市川店',
+      genre: 'sushi',
+      area: '市川駅直結（シャポー市川 1F）',
+      description:
+        '寿司の店。持ち帰りにも対応しており、子どもが食べられる分だけ買って移動するのにも向く。平日・土日祝11:00〜22:00（L.O.21:30）。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
     {
       name: '中華食堂 ばく',
       genre: 'chinese',

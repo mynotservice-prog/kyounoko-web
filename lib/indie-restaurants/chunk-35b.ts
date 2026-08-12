@@ -436,6 +436,71 @@ export const CHUNK_35B: StationIndieMap = {
   // センター南駅（横浜市都筑区）
   // ===========================================================
   'center-minami': [
+    // ▼ 2026-08-12追加: サウスウッド（センター南駅前）の公式テナント一覧
+    //   （two-south.jp/tenant_type/sw-all）から、フロア／ジャンル／営業時間を転記した。
+    //   公式に予算・席数の掲載が無いため priceLunch は入れていない。
+    //   フレッシュネスバーガー・KFC・サーティワンはチェーン側で出るため除外。
+    {
+      name: 'つきじ宮川本廛 横浜センター南サウスウッド店',
+      genre: 'washoku',
+      area: 'センター南駅前（サウスウッド 2F）',
+      description:
+        'うなぎ専門の和食店。うな重の白飯は子どもに分けやすい。土日祝は11:00〜21:00の通し営業で、平日より時間を選びやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '金沢まいもん寿司 センター南',
+      genre: 'sushi',
+      area: 'センター南駅前（サウスウッド 2F）',
+      description:
+        '金沢発の寿司店。玉子やかっぱ巻きなど子どもが食べられるネタを単品で頼める。11:00〜21:00（L.O.20:30）。',
+      seatingType: ['table', 'counter'],
+    },
+    {
+      name: 'Italian Kitchen VANSAN センター南店',
+      genre: 'italian',
+      area: 'センター南駅前（サウスウッド 2F）',
+      description:
+        'パスタ・ピッツァのイタリアン。ピッツァは家族でシェアしやすい。11:00〜22:00（L.O.21:00）と通しで開いている。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '博多天ぷらたかお センター南サウスウッド店',
+      genre: 'tempura',
+      area: 'センター南駅前（サウスウッド 2F）',
+      description:
+        '揚げたてを順に出す天ぷら定食の店。ご飯と味噌汁が付き取り分けやすい。11:00〜21:30（L.O.21:00）。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: 'MAYA RESTAURANT センター南サウスウッド店',
+      genre: 'curry',
+      area: 'センター南駅前（サウスウッド 2F）',
+      description:
+        'インド料理の店。ナンやカレーは取り分けやすい。辛さの調整可否は来店時に確認を。ランチL.O.16:00と昼の時間帯が長い。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'フラマンドール センター南サウスウッド店',
+      genre: 'bakery',
+      area: 'センター南駅前（サウスウッド 1F）',
+      description:
+        'ベーカリー・カフェ。平日8:00・土日祝9:00から開いており、朝食やパンを買って公園へ移動する使い方もできる。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '猿田彦珈琲 センター南サウスウッド店',
+      genre: 'cafe',
+      area: 'センター南駅前（サウスウッド 1F）',
+      description:
+        'スペシャルティコーヒーのカフェ。7:00〜22:00と朝から夜まで開いているので、外食の前後の休憩に使いやすい。',
+      seatingType: ['table'],
+    },
     {
       name: 'Italian Kitchen VANSAN センター南店',
       genre: 'italian',

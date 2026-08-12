@@ -2277,6 +2277,119 @@ export const CHUNK_1: StationIndieMap = {
   ],
 
   'shiodome': [
+    // ▼ 2026-08-12追加: カレッタ汐留の公式フロアガイド（caretta.jp/shop/floor）から、
+    //   フロア／平均予算／席数／個室の有無を一次情報として転記した。
+    //   従来この駅には「汐留 カレッタ汐留 レストラン街」など店名でない仮置きが4件入っていた。
+    //   丸亀製麺・鎌倉パスタ・スターバックスはチェーン側で出るため除外。
+    {
+      name: '鍛冶屋 文蔵 カレッタ汐留店',
+      genre: 'washoku',
+      area: '汐留駅直結（カレッタ汐留 B2F）',
+      description:
+        '和食の大箱店。公式に「11室2名様からお座敷」の個室があり、赤ちゃんを寝かせられる座敷を子連れでも取りやすい。170席。ランチ平均900円と汐留では入りやすい価格帯。',
+      privateRoom: true,
+      seatingType: ['table', 'zashiki'],
+      shareDish: true,
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: '和心苑 カレッタ汐留店',
+      genre: 'washoku',
+      area: '汐留駅直結（カレッタ汐留 B2F）',
+      description:
+        '和食レストラン。公式に個室ありの記載。92席と広く、ランチ平均1,200円。日曜定休なので土日に行くなら土曜に。',
+      privateRoom: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'オリエンタルレストラン＆ワインバー アジアンタワン168',
+      genre: 'asian',
+      area: '汐留駅直結（カレッタ汐留 B2F）',
+      description:
+        'アジア料理のレストラン。公式に個室（1室10名）ありの記載。取り分け前提の料理が多い。52席。ランチ平均1,100円。',
+      privateRoom: true,
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '香灯庵 カレッタ汐留店',
+      genre: 'washoku',
+      area: '汐留駅直結（カレッタ汐留 B2F）',
+      description:
+        '和食の店。公式に個室ありの記載。ランチ平均800円（税込）とカレッタ内で最も入りやすい。37席と小ぶりなので混雑時間は避けたい。',
+      privateRoom: true,
+      seatingType: ['table'],
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: 'CURRY CURRY カレッタ汐留店',
+      genre: 'curry',
+      area: '汐留駅直結（カレッタ汐留 B2F）',
+      description:
+        'カレー専門店。辛さを調整できる店が多いジャンルで、子どもの分は取り分けやすい。55席。ランチ平均1,000円。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: 'ビアホールだん家 カレッタ汐留店',
+      genre: 'yoshoku',
+      area: '汐留駅直結（カレッタ汐留 B2F）',
+      description:
+        'ビアホール。昼は洋食メニュー中心でランチ平均850円〜。68席。夜は酒中心になるので子連れは昼向き。',
+      seatingType: ['table'],
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: '海鮮のYODARE カレッタ汐留店',
+      genre: 'sushi',
+      area: '汐留駅直結（カレッタ汐留 B2F）',
+      description:
+        '海鮮料理の店。ランチ1,000円〜、50席。個室は無いので、静かに食べたい場合は時間をずらしたい。',
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '虎子担々 汐留店',
+      genre: 'noodles',
+      area: '汐留駅直結（カレッタ汐留 B2F）',
+      description:
+        '担々麺の専門店。980円〜、76席。辛さの調整は店に確認を。日曜定休。',
+      seatingType: ['table'],
+      priceLunch: '〜1,000円',
+    },
+    {
+      name: 'CHOPPED SALAD DAYS カレッタ汐留店',
+      genre: 'cafe',
+      area: '汐留駅直結（カレッタ汐留 B2F）',
+      description:
+        '好みの具材を選ぶチョップドサラダの店。子どもが食べられるものだけ選べる。イートインは16席と小さいのでテイクアウト向き。1,000円〜。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '鰻の成瀬 カレッタ汐留店',
+      genre: 'washoku',
+      area: '汐留駅直結（カレッタ汐留 B1F）',
+      description:
+        'うなぎの専門店。うな重は白飯を子どもに分けやすい。36席。1,600円〜。',
+      seatingType: ['table'],
+      shareDish: true,
+      priceLunch: '〜2,000円',
+    },
+    {
+      name: '響 カレッタ汐留店',
+      genre: 'washoku',
+      area: '汐留駅直結（カレッタ汐留 46F）',
+      description:
+        '46階のスカイレストラン。公式に4名・6名・10名の個室ありの記載。150席と広く、ランチ平均1,200円〜。眺望があるので子どもも飽きにくい。',
+      privateRoom: true,
+      seatingType: ['table'],
+      priceLunch: '〜2,000円',
+    },
     {
       name: '汐留 コンラッド東京 セリーズ',
       genre: 'others',

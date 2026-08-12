@@ -289,6 +289,54 @@ export const CHUNK_35C: StationIndieMap = {
   // 小田原駅（小田原市）
   // ===========================================================
   'odawara': [
+    // ▼ 2026-08-12追加: ラスカ小田原の公式フロアガイド
+    //   （jryscc.co.jp/lusca/odawara/floorguide/category.php?category=4）から
+    //   フロア／ジャンルを転記した。小田原駅直結。
+    //   公式に予算・席数の掲載が無いため priceLunch は入れていない。
+    //   丸亀製麺・ドトールはチェーン側で出るため除外。
+    {
+      name: '魚力食堂 ラスカ小田原店',
+      genre: 'sushi',
+      area: '小田原駅直結（ラスカ小田原 1F）',
+      description:
+        '寿司・海鮮丼の食堂。丼ものなので子どもに取り分けやすく、駅直結で新幹線や小田急の乗り換え前後に寄れる。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '海鮮茶屋 魚國 ラスカ小田原店',
+      genre: 'washoku',
+      area: '小田原駅直結（ラスカ小田原 2F）',
+      description:
+        '和食の海鮮料理店。定食形式で白飯を子どもに分けやすい。小田原の地魚を出す駅直結の店。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'ワイン食堂ヴィンセント ラスカ小田原店',
+      genre: 'yoshoku',
+      area: '小田原駅直結（ラスカ小田原 2F）',
+      description:
+        '洋食のレストラン。パスタや肉料理など子どもと分けやすい構成。駅直結なので雨の日でも移動が楽。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'カフェラミル ラスカ小田原店',
+      genre: 'cafe',
+      area: '小田原駅直結（ラスカ小田原 4F）',
+      description:
+        'ケーキと軽食のカフェ。観光の前後の休憩に使いやすく、駅直結で移動距離が短い。',
+      seatingType: ['table'],
+    },
+    {
+      name: '築地銀だこ ラスカ小田原店',
+      genre: 'teppan',
+      area: '小田原駅直結（ラスカ小田原 2F）',
+      description:
+        'たこ焼きの店。1舟を家族で分けやすく、子どもが少しだけ食べたいときにも使える。中身が熱いので冷ましてから渡したい。',
+      shareDish: true,
+    },
     {
       name: 'だるま料理店',
       genre: 'washoku',
@@ -458,6 +506,107 @@ export const CHUNK_35C: StationIndieMap = {
   // 相模大野駅（相模原市南区）
   // ===========================================================
   'sagami-ono': [
+    // ▼ 2026-08-12追加: ボーノ相模大野の公式レストラン＆カフェページ
+    //   （bono-sagamiono.jp/restaurant）から、館・フロア／ジャンル／営業時間を転記した。
+    //   公式に予算・席数の掲載が無いため priceLunch は入れていない（推測で埋めない）。
+    //   天丼てんや・松屋・はなまるうどん・松のや・リンガーハット・サンマルクカフェ・
+    //   すき家・タリーズ・KFC はチェーン側で出るため除外。居酒屋・スナックは昼営業が
+    //   無いか子連れ向きでないため除外。
+    {
+      name: 'チャイニーズガーデンレストラン 新福記 ボーノ相模大野店',
+      genre: 'chinese',
+      area: '相模大野駅から徒歩3分（ボーノ相模大野 ショッピングセンター6F）',
+      description:
+        '食べ放題・定食・コースをそろえる中華レストラン。取り分け前提の料理が多く、定食なら子どもの分を分けやすい。11:00〜22:00（L.O.21:00）。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'つきじ宮川本廛 ボーノ相模大野店',
+      genre: 'washoku',
+      area: '相模大野駅から徒歩3分（ボーノ相模大野 サウスモール1F）',
+      description:
+        'うなぎの専門店。うな重の白飯は子どもに分けやすい。昼の部は11:30〜15:00。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'GRILL FUKUYOSHI ボーノ相模大野店',
+      genre: 'yoshoku',
+      area: '相模大野駅から徒歩3分（ボーノ相模大野 サウスモール2F）',
+      description:
+        'ハンバーグ・ステーキの洋食店。ハンバーグは子どもと分けやすい定番。ランチ11:00〜15:00（L.O.14:30）。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'クアットロ クオーリ ボーノ相模大野店',
+      genre: 'italian',
+      area: '相模大野駅から徒歩3分（ボーノ相模大野 サウスモール2F）',
+      description:
+        'パスタ・ピッツァのファストイタリアン。11:00〜17:00まで通しでランチメニューが頼めるので、子どもの昼寝の前後に時間をずらしやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '元記 ボーノ相模大野店',
+      genre: 'chinese',
+      area: '相模大野駅から徒歩3分（ボーノ相模大野 サウスモール2F）',
+      description:
+        '香港料理の店。麺・飯ものがあり取り分けやすい。ランチ11:00〜15:00（L.O.14:30）。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'ダルバール ボーノ相模大野店',
+      genre: 'curry',
+      area: '相模大野駅から徒歩3分（ボーノ相模大野 サウスモール2F）',
+      description:
+        'インド料理・各種カレーの店。辛さの調整可否は来店時に確認を。ナンは家族で分けやすい。ランチ11:00〜15:00。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '東京ぶたくらぶ ボーノ相模大野店',
+      genre: 'noodles',
+      area: '相模大野駅から徒歩3分（ボーノ相模大野 サウスモール1F）',
+      description:
+        'ぶたらーめん・ぶた肉しょうゆらーめんの店。昼は11:00〜15:00の営業。',
+      seatingType: ['table', 'counter'],
+    },
+    {
+      name: '魚さだ ボーノ相模大野店',
+      genre: 'sushi',
+      area: '相模大野駅から徒歩3分（ボーノ相模大野 サウスモール2F）',
+      description:
+        '海鮮居酒屋だが昼はランチ営業あり。ひる11:30〜14:30（L.O.14:00）。夜は酒中心になるので子連れは昼向き。',
+      seatingType: ['table'],
+    },
+    {
+      name: 'ぎんざ若松 ボーノ相模大野店',
+      genre: 'sweets',
+      area: '相模大野駅から徒歩3分（ボーノ相模大野 サウスモール1F）',
+      description:
+        'あんみつなどの甘味処。11:00〜19:00で、買い物の合間の休憩に使える。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '清勝丸 ボーノ相模大野店',
+      genre: 'noodles',
+      area: '相模大野駅から徒歩3分（ボーノ相模大野 サウスモール2F）',
+      description:
+        '濃厚つけ麺・濃厚中華そばの店。11:30〜24:00と通し営業なので時間をずらしやすい。',
+      seatingType: ['table', 'counter'],
+    },
+    {
+      name: '舎鈴 ボーノ相模大野店',
+      genre: 'noodles',
+      area: '相模大野駅から徒歩3分（ボーノ相模大野 ノースモール1F）',
+      description:
+        'つけめん・らーめんの店。10:00〜23:00（L.O.22:30）と朝から通しで開いている。',
+      seatingType: ['table', 'counter'],
+    },
     {
       name: '和洋厨房 おたべ菜',
       genre: 'washoku',
