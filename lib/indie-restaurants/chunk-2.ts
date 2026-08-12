@@ -1256,6 +1256,136 @@ export const CHUNK_2: StationIndieMap = {
   ],
 
   'tokyo-skytree': [
+    // ▼ 2026-08-12追加: 東京ソラマチの公式ショップ検索（tokyo-solamachi.jp/restaurant/）から、
+    //   フロア・番地／カテゴリ／公式の紹介文を転記した。とうきょうスカイツリー駅直結。
+    //   公式に予算・席数の掲載が無いため priceLunch は入れていない。
+    //   エクセルシオール カフェはチェーン側で出るため除外。
+    {
+      name: 'Curious George Kitchen（キュリアス ジョージ キッチン）',
+      genre: 'cafe',
+      area: 'とうきょうスカイツリー駅直結（東京ソラマチ 1F イーストヤード 8番地）',
+      description:
+        '「おさるのジョージ」のダイニングカフェ。作品の世界観そのものの店内で、絵本を知っている子なら食事より先に店に興味が向く。ソラマチで子連れに最も分かりやすい一軒。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'カービィカフェ TOKYO',
+      genre: 'cafe',
+      area: 'とうきょうスカイツリー駅直結（東京ソラマチ 4F イーストヤード 9番地）',
+      description:
+        'ゲーム「星のカービィ」をテーマにしたカフェ。遊び心のある内装と盛り付けで、待ち時間も子どもが飽きにくい。人気店なので予約可否を事前に確認したい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '回転寿し トリトン 東京ソラマチ店',
+      genre: 'sushi',
+      area: 'とうきょうスカイツリー駅直結（東京ソラマチ 6F イーストヤード 12番地 ソラマチダイニング）',
+      description:
+        '北海道の回転寿司。レーンから子どもが自分で選べるうえ、玉子やかっぱ巻きが必ずある。ソラマチダイニングでは子連れに使いやすい形式。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: 'ソラマチ タベテラス（フードコート）',
+      genre: 'others',
+      area: 'とうきょうスカイツリー駅直結（東京ソラマチ 3F ウエストヤード 4番地）',
+      description:
+        'そば・焼肉丼・ミルクスイーツなどが並ぶフードコート。席が共用なので子どもと大人が別々の店から頼め、ベビーカーのまま席を取りやすい。麻布十番そば松玄、恵比寿 焼肉チャンピオン、オホーツク おこっぺミルクスタンドなどが入る。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'おぼんdeごはん 東京ソラマチ店',
+      genre: 'washoku',
+      area: 'とうきょうスカイツリー駅直結（東京ソラマチ 6F イーストヤード 10番地 ソラマチダイニング）',
+      description:
+        'バランスのよい手作り定食をカフェスタイルで出す店。おかずを選べる形式なので、子どもが食べられる組み合わせを作りやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'THE PLATINUM 東京ソラマチ店',
+      genre: 'yoshoku',
+      area: 'とうきょうスカイツリー駅直結（東京ソラマチ 6F イーストヤード 10番地 ソラマチダイニング）',
+      description:
+        '食事とデザートが揃うビュッフェレストラン。子どもが食べられるものだけ取れて、食べる量にも合わせやすい。子連れには取り分けの手間が少ない形式。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'ココノハ 東京ソラマチ店',
+      genre: 'cafe',
+      area: 'とうきょうスカイツリー駅直結（東京ソラマチ 4F ウエストヤード 4番地）',
+      description:
+        '身体にやさしいメニューをそろえるカフェ。オムライスなど子どもが食べやすい洋食が中心で、休憩にも食事にも使える。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'クア・アイナ 東京ソラマチ店',
+      genre: 'yoshoku',
+      area: 'とうきょうスカイツリー駅直結（東京ソラマチ 1F イーストヤード 9番地 ソラマチ商店街）',
+      description:
+        'ハワイアンハンバーガーの店。ボリュームがあるので家族で分けやすい。1Fの商店街エリアにあり、展望台へ上る前後に寄りやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'お好み焼みっちゃん総本店 東京ソラマチ店',
+      genre: 'teppan',
+      area: 'とうきょうスカイツリー駅直結（東京ソラマチ 6F イーストヤード 11番地 ソラマチダイニング）',
+      description:
+        '昭和25年創業の広島お好み焼。1枚を家族で分けやすい。鉄板があるので低年齢の子は席の位置に注意。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '牛たん炭焼 利久 東京ソラマチ店',
+      genre: 'washoku',
+      area: 'とうきょうスカイツリー駅直結（東京ソラマチ 6F イーストヤード 11番地 ソラマチダイニング）',
+      description:
+        '仙台発祥の牛たん専門店。麦めしとテールスープが付き、ご飯を子どもに分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '洋食屋 銀座グリルカーディナル 東京ソラマチ店',
+      genre: 'yoshoku',
+      area: 'とうきょうスカイツリー駅直結（東京ソラマチ 7F イーストヤード 11番地 ソラマチダイニング）',
+      description:
+        '1966年創業の銀座パブカーディナル由来の洋食店。ハンバーグやオムライスは子どもと分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '銀座天龍 東京ソラマチ店',
+      genre: 'chinese',
+      area: 'とうきょうスカイツリー駅直結（東京ソラマチ 6F イーストヤード 10番地 ソラマチダイニング）',
+      description:
+        '餃子が看板の銀座の老舗中華。餃子やチャーハンは取り分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'キル フェ ボン 東京スカイツリータウン・ソラマチ店',
+      genre: 'sweets',
+      area: 'とうきょうスカイツリー駅直結（東京ソラマチ 2F イーストヤード 8番地）',
+      description:
+        'タルト専門店。常時20種類以上のタルトが並び、食事が進まない子との休憩に使える。ソラマチ限定商品もある。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '祇園辻利 東京ソラマチ店',
+      genre: 'sweets',
+      area: 'とうきょうスカイツリー駅直結（東京ソラマチ 6F イーストヤード 12番地 ソラマチダイニング）',
+      description:
+        '宇治茶と抹茶スイーツの店。ソフトクリームやパフェがあり、食後の休憩に寄りやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
     {
       name: '天空ラウンジ TOP of TREE',
       genre: 'french',
