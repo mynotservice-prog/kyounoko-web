@@ -563,6 +563,17 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       strollerAccess: true, babyChair: true, kidsMenu: true,
       facilities: { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes' },
     },
+    {
+      // 2026-08-13追加。設備はららぽーと新三郷公式の施設・サービス案内から。
+      name: 'ららぽーと新三郷', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '三郷市',
+      note: '新三郷駅直結。ベビールーム（授乳室）は館内5か所、コイン式ベビーカーは8か所に設置',
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: 'ベビールームは1F中央トイレ・1F南モール ららほっとみさと・2Fスカイガーデン・2Fみさとキッチン（フードコート）横・2F南モールのアカチャンホンポ内',
+      strollerAccess: true, kidsMenu: true,
+      facilities: { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes' },
+      summerCool: true,
+    },
   ],
   chiba: [
       {
@@ -718,6 +729,18 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       pricing: { adult: 'ランチ1,000円〜', preschool: 'キッズメニュー多数' },
       strollerAccess: true, babyChair: true, kidsMenu: true,
       facilities: { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', kidsSpace: 'yes' },
+    },
+    {
+      // 2026-08-13追加。設備はららぽーと柏の葉公式の施設・サービス案内から。
+      name: 'ららぽーと柏の葉', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '柏市',
+      note: '柏の葉キャンパス駅から徒歩圏。ベビールームは本館3か所（うち1つはアカチャンホンポ内）と北館1か所',
+      nearestStation: 'kashiwa-no-ha-campus', walkMinutes: 2,
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: 'ベビールームにオムツ替えシート・紙パック飲料の自販機・給湯設備あり。ベビーカーはB型（生後2ヶ月〜3歳）で100円リターン式、北館2階のキッズプレイエリア前などで借りられる',
+      strollerAccess: true, kidsMenu: true,
+      facilities: { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', kidsSpace: 'yes' },
+      summerCool: true,
     },
   ],
   tokyo: [
@@ -1804,6 +1827,119 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '11月〜3月限定、4歳以上のスケートデビューに最適。貸靴あり',
     },
+    {
+      // 2026-08-13追加。設備は虎ノ門ヒルズ公式のインフォメーション（toranomonhills.com/information/）から。
+      name: '虎ノ門ヒルズ', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], ward: '港区',
+      note: '虎ノ門ヒルズ駅直結。森タワー・ビジネスタワー・ステーションタワーの各棟にベビールーム（授乳・オムツ交換）あり',
+      nearestStation: 'toranomon-hills', walkMinutes: 1,
+      reservation: 'none',
+      crowdLevel: { weekday: 'mid', holiday: 'mid' },
+      hiddenTip: '公式にベビールームは「授乳やオムツ交換などの際にご利用ください」と案内。各棟にオムツ交換台・オムツ用ごみ箱・椅子あり',
+      facilities: { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes' },
+      summerCool: true,
+    },
+    {
+      // 2026-08-13追加。設備はららぽーと豊洲公式の施設・サービス案内から。
+      name: 'アーバンドック ららぽーと豊洲', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], ward: '江東区',
+      note: '豊洲駅直結。授乳室・おむつ交換室が館内5か所、おむつ交換室のみも5か所。セルフ式ベビーカーの貸出あり',
+      nearestStation: 'toyosu', walkMinutes: 5,
+      reservation: 'none',
+      crowdLevel: { weekday: 'mid', holiday: 'high' },
+      hiddenTip: 'ベビーカーはコインリターン式で4ヶ月〜48ヶ月未満・身長100cmまで対応。ららぽーと豊洲1の1F〜3Fに複数設置',
+      strollerAccess: true, kidsMenu: true,
+      facilities: { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes' },
+      summerCool: true,
+    },
+    {
+      // 2026-08-13追加。設備はオリナス錦糸町公式のサービス案内（olinas.jp/service/）から。
+      name: 'オリナス錦糸町', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], ward: '墨田区',
+      note: '錦糸町駅から徒歩圏。ベビーカーの貸出が無料で、授乳室はモール3Fとコア地下1Fの2か所',
+      nearestStation: 'kinshicho', walkMinutes: 5,
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'ベビーカー貸出は10:00〜18:30・料金無料だが、貸出時に本人確認書類の提示が必要。台数に限りあり',
+      facilities: { bathroom: 'yes', nursingRoom: 'yes', strollerRental: 'yes' },
+      summerCool: true,
+    },
+    {
+      // 2026-08-13追加。設備はアルカキット錦糸町公式の施設/サービス案内から。
+      name: 'アルカキット錦糸町', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], ward: '墨田区',
+      note: '錦糸町駅北口直結。授乳室は5Fのアカチャンホンポ内にあり、オムツ替用ベッドと多目的トイレも館内に用意',
+      nearestStation: 'kinshicho', walkMinutes: 2,
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '授乳室はオムツ替えシート・紙パック飲料の自販機・給湯設備つき。10Fがレストラン街で11:00〜22:30',
+      facilities: { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes' },
+      summerCool: true,
+    },
+    {
+      // 2026-08-13追加。設備はららテラス北綾瀬公式の施設・サービス案内から。
+      name: 'ららテラス北綾瀬', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], ward: '足立区',
+      note: '北綾瀬駅直結。2Fフードコート内に0〜3歳向けキッズコーナー、4Fにベビー休憩室（授乳室・調乳機・哺乳瓶洗浄シンク）',
+      nearestStation: 'kita-ayase', walkMinutes: 1,
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'キッズコーナーは2Fフードコート内で対象0〜3歳。ベビーカーは地下駐車場の南側エレベーターホール外に100円リターン式（4ヶ月〜48ヶ月未満）',
+      facilities: { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes' },
+      summerCool: true,
+    },
+    {
+      // 2026-08-13追加。設備はららテラス HARUMI FLAG 公式の施設・サービス案内から。
+      // 公式の「お子さま連れのお客さま」に記載があるのはオムツ交換室のみで、授乳室・ベビーカー貸出の
+      // 記載は無い。無いものを書かないため facilities も diaperChange だけにしている。
+      name: 'ららテラス HARUMI FLAG', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], ward: '中央区',
+      note: '晴海の HARUMI FLAG 内。全館10:00〜21:00。公式に案内があるのはオムツ交換室で、授乳室・ベビーカー貸出の記載は無い',
+      nearestStation: 'kachidoki', walkMinutes: 20,
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '2024年3月開業。授乳が必要な月齢なら、公式に授乳室の案内が無い点を見込んで行きたい',
+      facilities: { bathroom: 'yes', diaperChange: 'yes' },
+      summerCool: true,
+    },
+    {
+      // 2026-08-13追加。設備は三井ショッピングパークアーバン公式「小さなお子さまをお連れのお客さまへ」から。
+      name: 'コレド室町', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], ward: '中央区',
+      note: '三越前駅直結。コレド室町1〜3・室町テラスに授乳室とおむつ交換台。ベビーカーレンタルあり',
+      nearestStation: 'mitsukoshimae', walkMinutes: 1,
+      reservation: 'none',
+      crowdLevel: { weekday: 'mid', holiday: 'mid' },
+      hiddenTip: 'ベビーカー貸出はコレド室町1地下1階の日本橋案内所で3台のみ。平日11:30〜19:30、土日祝11:30〜18:30。近くの福徳の森とコレド室町テラス大屋根広場が休憩に使える',
+      facilities: { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes' },
+      summerCool: true,
+    },
+    {
+      // 2026-08-13追加。設備は東武百貨店池袋店公式「お子様連れのお客様へのサービス」から。
+      name: '東武百貨店 池袋店', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], ward: '豊島区',
+      note: '池袋駅西口直結。ベビー休憩室が7Fと11Fの2か所にあり、7Fは授乳室3室・おむつ交換台5台・ベビーチェア6台と規模が大きい',
+      nearestStation: 'ikebukuro', walkMinutes: 1,
+      reservation: 'none',
+      crowdLevel: { weekday: 'mid', holiday: 'high' },
+      hiddenTip: '7F2番地のベビー休憩室は給湯器・電子レンジ・おむつ/飲料の自販機つきで着替台も2台。11F1番地は個室3室＋ソファ席。ベビーカーは1F3番地入口でコインロック式（生後4ヶ月〜4歳・身長100cmまで）',
+      facilities: { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes' },
+      summerCool: true,
+    },
+    {
+      // 2026-08-13追加。設備は錦糸町マルイ公式のサービス・施設情報（0101.co.jp/054/facility/）から。
+      name: '錦糸町マルイ', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], ward: '墨田区',
+      note: '錦糸町駅北口直結。4Fにベビールーム（授乳室）。ベビーキープ付きオムツ交換台はB1F・2F〜7Fに設置',
+      nearestStation: 'kinshicho', walkMinutes: 1,
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'ベビーカーは1Fエレベーターホールで貸出、生後1ヵ月〜4才（48ヵ月）まで対応と対象月齢が広い。ベビーチェア付きトイレは3F〜7Fの女子トイレ内',
+      facilities: { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes' },
+      summerCool: true,
+    },
+    {
+      // 2026-08-13追加。設備は南砂町ショッピングセンターSUNAMO公式の施設営業案内から。
+      name: '南砂町ショッピングセンター SUNAMO', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], ward: '江東区',
+      note: '南砂町駅から徒歩圏。授乳室が2F・3F・4Fの3か所にあり、個室授乳ブース・調乳用温水器・ベビー体重計まで揃う',
+      nearestStation: 'minami-sunamachi', walkMinutes: 5,
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '授乳室は2Fインセンス奥・3F＃C-pla奥・4F回転寿司みさき奥。3階には足が伸ばせる授乳ソファ、3・4階にベビー体重計と身長計がある。ベビーカーは1Fインフォメーションカウンターで無料貸出、4Fに屋内遊び場「らくがキッズ」',
+      facilities: { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', kidsSpace: 'yes' },
+      summerCool: true,
+    },
   ],
   kanagawa: [
       {
@@ -2090,6 +2226,30 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       pricing: { adult: 'ランチ1,000円〜', preschool: 'キッズメニューのある店あり' },
       strollerAccess: true, babyChair: true, kidsMenu: true,
       facilities: { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes' },
+    },
+    {
+      // 2026-08-13追加。設備はららぽーと海老名公式の施設・サービス案内から。
+      name: 'ららぽーと海老名', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '海老名市',
+      note: '海老名駅直結。完全個室のベビーケアルーム「mamaro」が3Fに3か所。おむつ替え室は1F〜4Fに計10か所',
+      nearestStation: 'ebina', walkMinutes: 2,
+      reservation: 'none',
+      crowdLevel: { weekday: 'mid', holiday: 'high' },
+      hiddenTip: 'ベビー休憩室は3Fの coasis もぐもぐの森（ベビーチェア・調乳機）とゲンキ・キッズ裏（電子レンジ・ベビーチェア）。3Fフードコート内のおむつ替え室にも電子レンジと調乳機がある',
+      strollerAccess: true, kidsMenu: true,
+      facilities: { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes' },
+      summerCool: true,
+    },
+    {
+      // 2026-08-13追加。設備はららぽーと湘南平塚公式の施設・サービス案内から。
+      name: 'ららぽーと湘南平塚', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '平塚市',
+      note: '平塚駅から徒歩圏。ベビー休憩室は1F西側・3F東側で授乳室・オムツ交換台・給湯器つき。キッズトイレも3か所',
+      nearestStation: 'hiratsuka', walkMinutes: 10,
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: '完全個室のベビーケアルーム「mamaro」が湘南Food Hall（フードコート）内キッズエリア付近にある。ベビーカーは2ヶ月〜36ヶ月・15kg以下対応で100円リターン式、屋上を含む館内10か所以上',
+      strollerAccess: true, kidsMenu: true,
+      facilities: { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', kidsSpace: 'yes' },
+      summerCool: true,
     },
   ],
 
