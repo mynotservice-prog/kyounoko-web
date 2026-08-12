@@ -342,6 +342,99 @@ export const CHUNK_KANSAI: StationIndieMap = {
   // 大阪・本町エリア（osaka-honmachi）
   // ===========================================================
   'osaka-honmachi': [
+    // ▼ 2026-08-12追加: 船場センタービルの公式店舗検索（semba-center.com/shop_category/gourmet/）
+    //   から、店名・紹介文・号館を転記した。地下鉄3路線と直結。
+    //   ※船場センタービルは繊維問屋街の飲食フロアで、公式に席数・予算・子連れ設備の
+    //     掲載は無い。ここでは「昼に営業していて取り分けやすいか」だけを判断材料にした。
+    //     居酒屋・立ち呑み・酒場の業態は昼の子連れ利用に向かないため掲載しない。
+    {
+      name: '本町製麺所 中華そば工房 船場センタービル店',
+      genre: 'noodles',
+      area: '本町駅直結（船場センタービル 2号館）',
+      description:
+        '黒門市場の山長商店のだしを使う中華そばの店。あっさりしただしなので子どもにも取り分けやすい。地下鉄直結で雨の日も濡れずに行ける。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: '一芳亭 船場センタービル店',
+      genre: 'chinese',
+      area: '本町駅直結（船場センタービル 2号館）',
+      description:
+        '大阪名物の焼売の店。焼売は少量ずつ取り分けやすく、子どもが食べる量に合わせやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '洋食 FUKUMOTO 船場センタービル店',
+      genre: 'yoshoku',
+      area: '本町駅直結（船場センタービル 2号館）',
+      description:
+        '洋食店。ハンバーグやフライものなど子どもと分けやすいメニューが中心。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'ステーキハウス キューブ 船場センタービル店',
+      genre: 'yoshoku',
+      area: '本町駅直結（船場センタービル 2号館）',
+      description:
+        '公式に「船場名物ビーフステーキ999円」と紹介されている店。肉は切り分けて子どもと分けられる。鉄板で出る場合は席の位置に注意。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '味千拉麺 船場店',
+      genre: 'noodles',
+      area: '本町駅直結（船場センタービル 2号館）',
+      description:
+        '熊本発のとんこつラーメン店。麺は短く切って子どもに分けやすい。',
+      seatingType: ['table', 'counter'],
+      shareDish: true,
+    },
+    {
+      name: '六明閣 船場センタービル店',
+      genre: 'chinese',
+      area: '本町駅直結（船場センタービル 2号館）',
+      description:
+        '長崎出身の料理長がつくる中華の店。ちゃんぽんや皿うどんは取り分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '魚屋亜門 船場センタービル店',
+      genre: 'washoku',
+      area: '本町駅直結（船場センタービル 2号館）',
+      description:
+        '魚料理の店。焼き魚とご飯の定食なら白飯を子どもに分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: '尼崎やきそば本舗 船場センタービル店',
+      genre: 'teppan',
+      area: '本町駅直結（船場センタービル 3号館）',
+      description:
+        '自家製生麺を茹でたてで使う焼そば専門店。1皿を家族で分けやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'カフェ シュール 船場センタービル店',
+      genre: 'cafe',
+      area: '本町駅直結（船場センタービル 2号館）',
+      description:
+        '直火自家焙煎の珈琲店。食事の前後の休憩に使える。',
+      seatingType: ['table'],
+    },
+    {
+      name: '喫茶オーシャン 船場センタービル店',
+      genre: 'cafe',
+      area: '本町駅直結（船場センタービル 3号館）',
+      description:
+        '昔ながらの喫茶店。3号館にあり、買い物や移動の合間の休憩に使える。',
+      seatingType: ['table'],
+    },
     {
       name: '本町 旬菜 おばんざい 美菜屋',
       genre: 'washoku',
