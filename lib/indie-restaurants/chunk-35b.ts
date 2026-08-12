@@ -638,6 +638,43 @@ export const CHUNK_35B: StationIndieMap = {
   // あざみ野駅（横浜市青葉区）
   // ===========================================================
   'azamino': [
+    // ▼ 2026-08-12追加: あざみ野ガーデンズの公式ショップガイド
+    //   （azamino-gardens.jp/sp/shopguide/）と、各店の公式サイトから転記した。
+    //   あざみ野駅から徒歩圏。マクドナルド・スシロー・とんかつ和幸はチェーン側で出るため除外。
+    //   ※あざみ野ガーデンズの公式サイトはBBQ施設の欄に2018年の休業告知が残っているなど
+    //     更新が滞っている箇所がある。各店は店舗公式サイト側でも確認した。
+    {
+      name: '100本のスプーン AZAMINO GARDENS',
+      genre: 'yoshoku',
+      area: 'あざみ野駅から徒歩圏（あざみ野ガーデンズ）',
+      description:
+        '公式サイトに「旬の離乳食を無料で提供」と明記されたファミリーレストラン。シェフが毎朝だしをとり、初期・中期・後期の3種類を月齢に合わせて用意する。大人メニューのハーフサイズ「大人のお子様ランチ」もあり、子ども用に別メニューを頼まなくて済む。11:00〜21:00（L.O.20:00）。',
+      kidsMenu: true,
+      strollerOk: true,
+      kidsChair: true,
+      seatingType: ['table'],
+      stepFree: true,
+      strollerToSeat: true,
+      shareDish: true,
+      popular: true,
+    },
+    {
+      name: 'おかげ庵 あざみ野ガーデンズ店',
+      genre: 'cafe',
+      area: 'あざみ野駅から徒歩圏（あざみ野ガーデンズ）',
+      description:
+        'コメダ珈琲店の和喫茶業態。フルサービスの喫茶空間で甘味を出す。8:00〜22:00（L.O.21:30）と朝から夜まで開いており、食事の前後の休憩に使いやすい。',
+      seatingType: ['table'],
+      shareDish: true,
+    },
+    {
+      name: 'ブール アンジュ あざみ野ガーデンズ店',
+      genre: 'bakery',
+      area: 'あざみ野駅から徒歩圏（あざみ野ガーデンズ）',
+      description:
+        'ブーランジェリー。クロワッサンや食パン、バゲットなど種類が多く、子どもが食べられる分だけ選べる。9:00〜19:00。',
+      shareDish: true,
+    },
     {
       name: '100本のスプーン AZAMINO GARDENS',
       genre: 'yoshoku',
