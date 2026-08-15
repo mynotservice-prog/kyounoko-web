@@ -247,6 +247,13 @@
 .v2-header-actions { display: flex; align-items: center; gap: 16px; }
 .v2-header-act { display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 10px; font-weight: 700; color: var(--v2-ink-soft); }
 .v2-back-btn { display: flex; align-items: center; gap: 3px; font-size: 14px; font-weight: 700; color: var(--v2-orange); }
+/* 視覚非表示だがアクセシビリティツリーには残す（フォームのlabel用） */
+.v2-sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
 
 /* Bottom nav */
 .v2-bottom-nav {
@@ -267,7 +274,9 @@
 /* Logo */
 .v2-logo-wrap { display: flex; align-items: center; gap: 9px; }
 .v2-logo-text { font-weight: 800; color: var(--v2-orange); letter-spacing: .5px; line-height: 1; }
-.v2-logo-tag { font-size: 11; color: var(--v2-ink-soft); margin-top: 4px; font-weight: 500; }
+/* 2026-08-16: font-size が単位なし(`11`)で無効→宣言ごと破棄され16pxで描画されていた。
+   スマホでタグラインが2行に折り返してヘッダーが99pxまで肥大し、検索を置く余地が無かった。 */
+.v2-logo-tag { font-size: 11px; color: var(--v2-ink-soft); margin-top: 4px; font-weight: 500; }
 
 /* ---------- Vertical card ---------- */
 .v2-card-v {

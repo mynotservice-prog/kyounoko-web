@@ -5,8 +5,14 @@ import { sendLineBroadcast, sendLinePush, isLineConfigured, isLinePushConfigured
 /**
  * 週次LINE配信「今週末どこ行く？」の定期実行エンドポイント（Vercel Cron）。
  *
- * 毎週金曜20:00 JST（= 金曜11:00 UTC, cron "0 11 * * 5"）に、東京の週末天気に
- * 合わせたおでかけ3択を生成し、友だち全員へ broadcast する。同じ内容を運営者にも push する。
+ * 東京の週末天気に合わせたおでかけ3択を生成し、友だち全員へ broadcast する。
+ * 同じ内容を運営者にも push する。
+ *
+ * ⚠️ 2026-08-16: **cron登録を外した**（vercel.json から "0 11 * * 5" を削除）。したがって現在は自動実行されない。
+ * 理由: docs/line-friday-*.md の手書き原稿を金曜に予約配信する運用と重なり、同じ金曜に2通届いて
+ * 無料プランの200通/月を倍速で消費していたため。手書き原稿の予約配信に一本化した。
+ * このエンドポイント自体は残してあり、`?preview=1` で運営者本人にだけ送ってテストできる。
+ * 再びcron化するなら、手動の予約配信をやめてからにすること（詳細は docs/line-launch-kit.md §2-1）。
  *
  * ## 認可
  * CRON_SECRET がセットされている場合、`Authorization: Bearer <secret>` または

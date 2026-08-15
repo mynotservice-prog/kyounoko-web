@@ -181,7 +181,7 @@ export function LineCta({ variant }: { variant: 'banner' | 'article' }) {
       >
         友だち追加すると、その場でマップのリンクが届きます。
         <br />
-        毎週金曜17時に「週末どこ行く？」も配信中。ブロックはいつでもOK。
+        毎週金曜20時に「週末どこ行く？」も配信中。ブロックはいつでもOK。
       </p>
     </section>
   );

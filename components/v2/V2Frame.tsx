@@ -105,6 +105,38 @@ function V2MobileMenu({
             <V2Icon name="plus" size={22} color="var(--v2-ink)" style={{ transform: 'rotate(45deg)' }} />
           </button>
         </div>
+        {/* 2026-08-16: スマホは検索導線がヘッダーにもドロワーにも無く「探せない」状態だった。
+            /search は force-dynamic のサーバー検索なので、JSを足さず素のGETフォームで飛ばす。 */}
+        <form
+          method="get"
+          action="/search"
+          role="search"
+          style={{ padding: '14px 16px 4px', display: 'flex', gap: 8 }}
+        >
+          <label htmlFor="v2-menu-q" className="v2-sr-only">
+            キーワードで検索
+          </label>
+          <div className="v2-searchbar" style={{ flex: 1, padding: '10px 13px' }}>
+            <V2Icon name="search" size={18} color="var(--v2-ink-mute)" />
+            <input
+              id="v2-menu-q"
+              type="search"
+              name="q"
+              placeholder="記事・スポットを検索"
+              style={{
+                flex: 1,
+                minWidth: 0,
+                border: 'none',
+                outline: 'none',
+                // 16px未満だと iOS Safari がフォーカス時に自動ズームする
+                fontSize: 16,
+                fontFamily: 'inherit',
+                background: 'transparent',
+                padding: 0,
+              }}
+            />
+          </div>
+        </form>
         <nav style={{ padding: '12px 8px' }}>
           {primary.map((p) => (
             <Link
@@ -246,8 +278,13 @@ function V2Header({
         <div className="v2-app-header">
           <V2Logo tagline size={36} />
           <div className="v2-header-actions">
+            <Link href="/search" className="v2-header-act" aria-label="検索">
+              <V2Icon name="search" size={22} color="var(--v2-ink)" />
+              <span>検索</span>
+            </Link>
             <Link href="/favorites" className="v2-header-act" aria-label="保存したもの">
               <V2Icon name="bookmark" size={22} color="var(--v2-ink)" />
+              <span>保存</span>
             </Link>
             <button
               type="button"
@@ -256,6 +293,7 @@ function V2Header({
               aria-label="メニューを開く"
             >
               <V2Icon name="menu" size={22} color="var(--v2-ink)" />
+              <span>メニュー</span>
             </button>
           </div>
         </div>
@@ -273,14 +311,21 @@ function V2Header({
             </span>
             <h1 style={{ fontSize: 21, fontWeight: 800, margin: 0 }}>保存したもの</h1>
           </div>
-          <button
-            type="button"
-            className="v2-header-act"
-            onClick={() => setMenuOpen(true)}
-            aria-label="メニューを開く"
-          >
-            <V2Icon name="menu" size={22} color="var(--v2-ink)" />
-          </button>
+          <div className="v2-header-actions">
+            <Link href="/search" className="v2-header-act" aria-label="検索">
+              <V2Icon name="search" size={22} color="var(--v2-ink)" />
+              <span>検索</span>
+            </Link>
+            <button
+              type="button"
+              className="v2-header-act"
+              onClick={() => setMenuOpen(true)}
+              aria-label="メニューを開く"
+            >
+              <V2Icon name="menu" size={22} color="var(--v2-ink)" />
+              <span>メニュー</span>
+            </button>
+          </div>
         </div>
         <V2MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
       </>
@@ -291,10 +336,12 @@ function V2Header({
     rightAction === 'share' ? (
       <button type="button" className="v2-header-act" aria-label="シェア">
         <V2Icon name="share" size={20} color="var(--v2-ink)" />
+        <span>シェア</span>
       </button>
     ) : (
       <Link href="/favorites" className="v2-header-act" aria-label="保存したもの">
         <V2Icon name="bookmark" size={20} color="var(--v2-ink)" />
+        <span>保存</span>
       </Link>
     );
   return (
@@ -313,16 +360,20 @@ function V2Header({
             きょうのこ
           </span>
         </Link>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          <Link href="/search" className="v2-header-act" aria-label="検索">
+            <V2Icon name="search" size={20} color="var(--v2-ink)" />
+            <span>検索</span>
+          </Link>
           {right}
           <button
             type="button"
             className="v2-header-act"
             onClick={() => setMenuOpen(true)}
             aria-label="メニューを開く"
-            style={{ marginLeft: 4 }}
           >
             <V2Icon name="menu" size={20} color="var(--v2-ink)" />
+            <span>メニュー</span>
           </button>
         </div>
       </div>
