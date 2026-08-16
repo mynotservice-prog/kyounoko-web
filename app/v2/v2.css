@@ -244,8 +244,10 @@
   backdrop-filter: blur(8px);
 }
 .v2-app-header.plain { background: rgba(255,255,255,.94); }
-.v2-header-actions { display: flex; align-items: center; gap: 16px; }
-.v2-header-act { display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 10px; font-weight: 700; color: var(--v2-ink-soft); }
+/* flex: none — ここが縮むとアイコン幅(22px)より狭くなり、下のラベルが1文字ずつ折り返す。
+   本番フォントは Noto Sans JP（v2の丸ゴシックではない）で字幅が広く、375pxで実際に発生した。 */
+.v2-header-actions { display: flex; align-items: center; gap: 16px; flex: none; }
+.v2-header-act { display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 10px; font-weight: 700; color: var(--v2-ink-soft); white-space: nowrap; }
 .v2-back-btn { display: flex; align-items: center; gap: 3px; font-size: 14px; font-weight: 700; color: var(--v2-orange); }
 /* 視覚非表示だがアクセシビリティツリーには残す（フォームのlabel用） */
 .v2-sr-only {
@@ -272,7 +274,7 @@
 .v2-nav-item.on { color: var(--v2-orange); }
 
 /* Logo */
-.v2-logo-wrap { display: flex; align-items: center; gap: 9px; }
+.v2-logo-wrap { display: flex; align-items: center; gap: 9px; min-width: 0; }
 .v2-logo-text { font-weight: 800; color: var(--v2-orange); letter-spacing: .5px; line-height: 1; }
 /* 2026-08-16: font-size が単位なし(`11`)で無効→宣言ごと破棄され16pxで描画されていた。
    スマホでタグラインが2行に折り返してヘッダーが99pxまで肥大し、検索を置く余地が無かった。 */
@@ -802,6 +804,11 @@
     border-radius: 0; box-shadow: none;
   }
   .v2-home-indicator { display: none; }
+  /* 2026-08-16: ヘッダーに検索/保存/メニューの3アクション（各ラベル付き）が並ぶと、
+     375px ではタグラインの入る幅（約209px必要）が残らず2行に折り返してヘッダーが肥大する。
+     価値提案は直下のヒーロー（「0〜6歳の子育ておでかけメディア」「今日、どこ行く？」）が
+     担っているので、狭い端末ではタグラインを畳んでヘッダーを1行に保つ。 */
+  .v2-logo-tag { display: none; }
 }
 
 /* ---------- Desktop (≥920px) ---------- */
