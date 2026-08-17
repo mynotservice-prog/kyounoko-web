@@ -335,6 +335,13 @@ export async function GET(req: Request): Promise<Response> {
       headers: {
         // CDN にも 1 日キャッシュさせる。タイトル変更時は URL が変わるので問題なし。
         'Cache-Control': 'public, max-age=86400, s-maxage=86400, immutable',
+        // OGP画像は「ページ」ではないのでインデックス対象外にする。
+        // robots.txt で遮断すると og:image 自体を取得できず Discover のカード画像が
+        // 出なくなるため、取得は許可（robots.ts の Allow: /api/og）した上で
+        // noindex はこのヘッダで宣言する。
+        // 2026-08-17: GSC「robots.txtでブロックされましたがインデックスに登録しました」
+        // 3,845件のうち約18%が /api/og?title=… だったため追加。
+        'X-Robots-Tag': 'noindex',
       },
     },
   );

@@ -128,9 +128,44 @@ const nextConfig: NextConfig = {
       // ページ本体はクエリ→静的データの純粋計算で fetch/cookies/時刻依存なし＝同一URLは
       // 常に同一結果なので、他の静的HTMLページと同様に CDN キャッシュ可。クエリ文字列違いは
       // Cloudflare 側で別キャッシュキーになるため条件別ページも正しく分離される。
-      // 24h edge / 7日 SWR。/today のクエリ変種クロールは robots.txt で遮断済み。
+      // 24h edge / 7日 SWR。
       {
         source: '/today',
+        headers: [
+          { key: 'Cache-Control', value: edgeCache },
+          { key: 'CDN-Cache-Control', value: cdnCache },
+          { key: 'Cloudflare-CDN-Cache-Control', value: cdnCache },
+        ],
+      },
+      // 【2026-08-17】/events・/ranking・/spots にも /today と同じ CDN キャッシュを付ける。
+      //
+      // これらも searchParams を読むため常に動的レンダリング扱いで、ヘッダが無いと
+      // 同一URLの2回目以降も Vercel edge に載らず毎回 Function を起動していた
+      // （実測: /today は2回目 x-vercel-cache HIT、/events・/ranking は2回とも MISS）。
+      //
+      // robots.ts から `Disallow: /*?` を外してクエリ変種をクロールさせる（noindex を
+      // Google に読ませて 3,845件のインデックス残骸を剥がすため）にあたり、
+      // クロール由来の Function 起動を「URLごとに初回1回だけ」に抑える必要がある。
+      // ページ本体はクエリ→静的データの純粋計算で fetch/cookies/時刻依存が無く、
+      // 同一URLは常に同一結果なのでキャッシュして安全。
+      {
+        source: '/events',
+        headers: [
+          { key: 'Cache-Control', value: edgeCache },
+          { key: 'CDN-Cache-Control', value: cdnCache },
+          { key: 'Cloudflare-CDN-Cache-Control', value: cdnCache },
+        ],
+      },
+      {
+        source: '/ranking',
+        headers: [
+          { key: 'Cache-Control', value: edgeCache },
+          { key: 'CDN-Cache-Control', value: cdnCache },
+          { key: 'Cloudflare-CDN-Cache-Control', value: cdnCache },
+        ],
+      },
+      {
+        source: '/spots',
         headers: [
           { key: 'Cache-Control', value: edgeCache },
           { key: 'CDN-Cache-Control', value: cdnCache },

@@ -17,15 +17,28 @@ import type { MetadataRoute } from 'next';
 export default function robots(): MetadataRoute.Robots {
   // /api/ と /admin/ はサイトの内部・管理画面なので非公開。
   //
-  // 【コスト最適化 2026-07-19】クエリ文字列付きURLと /search を全クローラーで遮断する。
-  //   /today?... ・/spots?... ・/spots/[cat]?... ・/events?... ・/search?q=... は searchParams を
-  //   読むため Next.js 15 で「動的レンダリング」扱いとなり、CDN でキャッシュされず1リクエスト＝
-  //   1 Function 起動になる（Fast Origin Transfer / Fluid CPU / Observability の主要因）。
-  //   これらの絞り込み変種は元々 noindex + canonical で検索価値ゼロ（インデックス対象は
-  //   すべてクエリ無しのクリーンURL）。noindex はクロール自体は止められないため、robots で
-  //   クロールを遮断してクローラー由来の動的 Function 起動を根絶する。クエリ依存の
-  //   ページネーション等は存在しないため indexable コンテンツへの影響はない。
-  const baseDisallow = ['/api/', '/admin/', '/search', '/*?'];
+  // 【2026-08-17 撤回】`Disallow: /*?`（クエリ付きURLの全面遮断）を外した。
+  //
+  //   2026-07-19 にコスト最適化として入れたが、GSC の URL 検査 API で実測したところ
+  //   狙いと逆の結果を生んでいた：
+  //     - /events?... → robotsTxtState: DISALLOWED / 「robots.txt でブロックされましたが
+  //       インデックスに登録しました」3,845件 ＋「重複・正規未選択」522件
+  //     - /api/og?title=... → robotsTxtState: **DISALLOWED**
+  //
+  //   絞り込み変種には元から `noindex, follow` + canonical→クリーンURL が付いているが、
+  //   **robots.txt でクロールを止めると Google はその noindex を読めない**。結果として
+  //   URLだけがインデックスに残り続け、剥がす手段が無くなる（Google の仕様どおり）。
+  //   noindex を効かせるにはクロールさせる必要がある。
+  //
+  //   下の 2026-07-28 のコメントが前提にしていた「より具体的なパスの Allow が優先される」も
+  //   実測で否定された。`Allow: /api/og` は `Disallow: /*?` に負けており、OGP画像が
+  //   Googlebot から取得できない＝Discover のカード画像が出ない状態が続いていた。
+  //
+  //   コスト面の手当てはクロール遮断ではなく next.config.ts の CDN-Cache-Control で行う。
+  //   /today・/events・/ranking・/spots はクエリ変種も Vercel edge にキャッシュされるため、
+  //   同一URLの2回目以降は Function を起動しない（初回のみ 1 起動）。
+  //   /search だけは検索語で無限にURLが増えるので引き続き遮断する。
+  const baseDisallow = ['/api/', '/admin/', '/search'];
   // Next.js の静的アセット（CSS/JS/フォント/画像）を明示的に許可。
   //
   // 【2026-07-28 追加】/api/og を明示的に許可する。
@@ -34,8 +47,13 @@ export default function robots(): MetadataRoute.Robots {
   //   ところが上の Disallow: /api/ が Googlebot-Image まで止めてしまい、
   //   **画像を取得できない＝Discover や検索のリッチ表示でカード画像が出ない**状態だった。
   //   robots.txt は「より具体的なパスの Allow」が優先されるので、Disallow: /api/ を
-  //   残したまま /api/og だけ通せる。静的な画像生成なのでクロール負荷は軽く、
-  //   2026-07-19 のコスト最適化（クエリ付きURLの遮断）には影響しない。
+  //   残したまま /api/og だけ通せる。静的な画像生成なのでクロール負荷は軽い。
+  //
+  //   【2026-08-17 追記】この Allow は当時 `Disallow: /*?` に負けており機能していなかった
+  //   （GSC の URL 検査 API で /api/og?title=… が DISALLOWED と確認）。/*? を外したことで
+  //   ようやく意図どおり通る。あわせて route 側に `X-Robots-Tag: noindex` を付け、
+  //   画像は取得させつつページとしてインデックスされないようにした
+  //   （3,845件中 約18% が /api/og?title=… のインデックス残骸だった）。
   const baseAllow = ['/', '/_next/', '/api/og'];
 
   return {
