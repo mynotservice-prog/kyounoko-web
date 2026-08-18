@@ -42,6 +42,7 @@ import { ShareBar } from '@/components/article/ShareBar';
 import { getUpcomingEventsNear } from '@/lib/events';
 import { UpcomingEventsNearby } from '@/components/event/UpcomingEventsNearby';
 import { getAreaName } from '@/lib/area';
+import { getTempClosure } from '@/lib/spot-temp-closed';
 import { INDEXABLE_ROBOTS } from '@/lib/robots-meta';
 
 export const revalidate = 86400;
@@ -133,6 +134,9 @@ export default async function SpotPage({ params }: Props) {
   // 閉館スポットの案内文（あれば閉館バナーを表示し noindex）。
   const closedNotice = SPOT_CLOSED[spot.name];
 
+  // 改修等による一時休館（期間が明ければ自動で通常表示に戻る）。恒久閉館とは分けて出す。
+  const tempClosure = getTempClosure(spot.name);
+
   // 情報の鮮度（最終確認日）。未確認なら「未確認」と正直に出す（推測日を出さない）。
   const freshness = getSpotFreshness(spot);
   const freshnessNote = freshnessLabel(freshness);
@@ -157,6 +161,7 @@ export default async function SpotPage({ params }: Props) {
         .filter((x) => {
           if (x.slug === slug) return false;
           if (!isSpotIndexable(x.spot)) return false;
+          if (getTempClosure(x.spot.name)) return false; // 休館中は勧めない
           if (spot.nearestStation && x.spot.nearestStation === spot.nearestStation) return true;
           if (spot.ward && x.spot.ward === spot.ward) return true;
           return false;
@@ -380,6 +385,37 @@ export default async function SpotPage({ params }: Props) {
               <strong style={{ color: 'var(--v2-ink)' }}>このスポットは閉館・閉店しています。</strong>
               <br />
               {closedNotice}
+            </div>
+          </div>
+        )}
+
+        {/* 一時休館バナー（期間つき。恒久閉館とは別扱いで、期間が明ければ自動で消える） */}
+        {!closedNotice && tempClosure && (
+          <div className="v2-section" style={{ marginTop: 14 }}>
+            <div
+              role="status"
+              style={{
+                background: 'var(--v2-orange-soft)',
+                border: '1px solid var(--v2-orange)',
+                borderRadius: 'var(--v2-r-card)',
+                padding: '12px 14px',
+                fontSize: 13,
+                color: 'var(--v2-ink-soft)',
+                lineHeight: 1.65,
+              }}
+            >
+              <strong style={{ color: 'var(--v2-ink)' }}>現在このスポットは休館中です。</strong>
+              <br />
+              {tempClosure.note}
+              <br />
+              <a
+                href={tempClosure.source}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: 'var(--v2-orange-deep)', fontWeight: 700 }}
+              >
+                公式サイトで最新情報を見る
+              </a>
             </div>
           </div>
         )}

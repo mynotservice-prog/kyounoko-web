@@ -16,9 +16,10 @@ import { getRuntimeEventOverrides } from '@/lib/event-overrides';
 import { getAllSpotsWithSlug, isSpotIndexable } from '@/lib/spots';
 import { spotToV2 } from '@/lib/v2-adapters';
 import { AdSlot } from '@/components/ads/AdSlot';
-import { buildEventDayPlan } from '@/lib/event-day-plan';
+import { buildEventDayPlan, isVenueSelf } from '@/lib/event-day-plan';
 import { EventDayPlanSection } from '@/components/event/EventDayPlanSection';
 import { getAreaName } from '@/lib/area';
+import { isSpotAvailableNow } from '@/lib/spot-temp-closed';
 import { INDEXABLE_ROBOTS } from '@/lib/robots-meta';
 
 export const revalidate = 86400;
@@ -69,16 +70,27 @@ export default async function EventPage({ params }: Props) {
   const dayPlan = ended ? null : buildEventDayPlan(ev);
   const planUsed = new Set(dayPlan?.usedSlugs ?? []);
 
-  const nearbySpots = (() => {
+  const { spots: nearbySpots, cityMatched: nearbyCityMatched } = (() => {
     const inArea = getAllSpotsWithSlug().filter(
-      (x) => x.area === ev.area && isSpotIndexable(x.spot) && !planUsed.has(x.slug),
+      (x) =>
+        x.area === ev.area &&
+        isSpotIndexable(x.spot) &&
+        !planUsed.has(x.slug) &&
+        isSpotAvailableNow(x.spot.name) &&
+        // 会場そのものを「ついでに寄れるスポット」として出さない
+        !isVenueSelf(ev, x.spot),
     );
     const cityMatch = ev.city
       ? inArea.filter((x) => (x.spot.ward ?? x.spot.city ?? '').includes(ev.city as string))
       : [];
     const rest = inArea.filter((x) => !cityMatch.includes(x));
-    return [...cityMatch, ...rest].slice(0, 6);
+    return {
+      spots: [...cityMatch, ...rest].slice(0, 6),
+      // 市区町村一致が無いのに「○○区で」と見出しに書かない（実際はエリア内の別の市区町村）
+      cityMatched: cityMatch.length > 0,
+    };
   })();
+  const nearbyAreaLabel = nearbyCityMatched && ev.city ? ev.city : getAreaName(ev.area);
 
   // offers は Google Event の推奨項目。欠落すると Search Console が「offers がありません」を警告する。
   // 価格が自由文（「大人 2,000円 子供 1,000円」等）でも offers 自体は必ず提示する。
@@ -329,7 +341,7 @@ export default async function EventPage({ params }: Props) {
         {nearbySpots.length > 0 && (
           <>
             <V2SectionHead
-              title={`${ev.city ?? '会場周辺'}でついでに寄れる子連れスポット`}
+              title={`${nearbyAreaLabel}でついでに寄れる子連れスポット`}
               moreHref="/spots"
             />
             <p
@@ -342,7 +354,7 @@ export default async function EventPage({ params }: Props) {
               }}
             >
               イベントの前後に立ち寄りやすい、編集部が設備・料金を確認した
-              {ev.city ?? 'この'}エリアの子連れスポットです。授乳室やおむつ替え台の有無もスポットページで確認できます。
+              {nearbyAreaLabel}エリアの子連れスポットです。授乳室やおむつ替え台の有無もスポットページで確認できます。
             </p>
             <div className="v2-hscroll">
               {nearbySpots.map((x, i) => {

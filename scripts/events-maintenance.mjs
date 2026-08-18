@@ -40,6 +40,34 @@ const endedOneOff = ended.filter((e) => !isAnnual(e));
 
 let md = `# イベント メンテナンス・レビュー\n\n> 基準日: ${today} ／ 全${EVENTS.length}件（開催予定${upcoming.length} / 終了${ended.length}）\n\n`;
 
+// ---- 0. 存命カーブ（崖を事前に見えるようにする） ----
+// イベントは会期が切れると /event/ の1日モデルコースも /spot/ の周辺イベント枠も消える。
+// 「いつ在庫が尽きるか」を毎回この表で見て、補填のタイミングを外さないための指標。
+const HORIZON_DAYS = [0, 14, 30, 45, 60, 90, 120];
+const addDaysTo = (d, n) => {
+  const t = new Date(d);
+  t.setDate(t.getDate() + n);
+  return t.toISOString().slice(0, 10);
+};
+const aliveOn = (d) => EVENTS.filter((e) => e.startDate <= d && e.endDate >= d);
+
+md += `## 0. 存命カーブ（在庫が尽きる日）\n\n`;
+md += `> 開催中の件数がゼロに近づくと、イベントページの1日モデルコースとスポットページの周辺イベント枠が同時に消える。\n`;
+md += `> **開催中が20件を切る前に補填する**。冬イベントは9〜10月に公式発表が出そろうので、そこで一気に入れる。\n\n`;
+md += `| 基準日 | 開催中 | 東京 | うち11月以降まで持つもの |\n|---|---|---|---|\n`;
+for (const n of HORIZON_DAYS) {
+  const d = addDaysTo(today, n);
+  const alive = aliveOn(d);
+  const tokyo = alive.filter((e) => e.area === 'tokyo').length;
+  const durable = alive.filter((e) => e.endDate >= '2026-11-01').length;
+  md += `| ${d}${n === 0 ? '（今日）' : `（+${n}日）`} | **${alive.length}件** | ${tokyo}件 | ${durable}件 |\n`;
+}
+const emptyDay = HORIZON_DAYS.find((n) => aliveOn(addDaysTo(today, n)).length < 20);
+md += `\n`;
+md += emptyDay === undefined
+  ? `→ 今後${HORIZON_DAYS[HORIZON_DAYS.length - 1]}日は20件を下回らない。\n\n`
+  : `→ **${addDaysTo(today, emptyDay)}（+${emptyDay}日）に開催中が20件を切る。それまでに補填が必要。**\n\n`;
+
 md += `## 1. 終了した年次イベント — 翌年へ繰り上げ候補（${endedAnnual.length}件）\n\n`;
 md += `> 下記の新日付は「同月同日+1年」の機械計算。**必ず公式サイトで翌年の実際の日程を確認**してから反映してください。\n\n`;
 if (endedAnnual.length) {

@@ -18,6 +18,7 @@ import {
   type Spot,
 } from './spots';
 import { getAreaName } from './area';
+import { isSpotAvailableNow } from './spot-temp-closed';
 
 export type EventDayPlanStep = {
   /** 時間帯ラベル（時刻は断定しない） */
@@ -65,7 +66,7 @@ function popularFirst(a: Spot, b: Spot): number {
 }
 
 /** イベント会場そのものと同一施設のスポットを候補から外す（自己参照の防止）。 */
-function isVenueSelf(ev: EventEntry, s: Spot): boolean {
+export function isVenueSelf(ev: EventEntry, s: Spot): boolean {
   const name = s.name.replace(/\s/g, '');
   const venue = ev.venue.replace(/\s/g, '');
   if (name.length >= 3 && venue.includes(name)) return true;
@@ -80,7 +81,11 @@ function isVenueSelf(ev: EventEntry, s: Spot): boolean {
 export function buildEventDayPlan(ev: EventEntry): EventDayPlan | null {
   const areaName = getAreaName(ev.area);
   const pool = getAllSpotsWithSlug().filter(
-    (x) => x.area === ev.area && !isVenueSelf(ev, x.spot),
+    (x) =>
+      x.area === ev.area &&
+      !isVenueSelf(ev, x.spot) &&
+      // 改修等で休館中の施設は「午後はここへ」と案内しない（期間が明ければ自動で戻る）
+      isSpotAvailableNow(x.spot.name),
   );
   const matchCity = (s: Spot): boolean =>
     !!ev.city && (s.ward ?? s.city ?? '').includes(ev.city);
