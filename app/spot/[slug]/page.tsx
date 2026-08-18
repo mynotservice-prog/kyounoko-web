@@ -39,6 +39,9 @@ import { wrapMoshimoRakuten } from '@/lib/moshimo';
 import { getSpotReservationOffer, getSpotTravelOffer } from '@/lib/reservation-cta';
 import { ReservationCTA } from '@/components/article/ReservationCTA';
 import { ShareBar } from '@/components/article/ShareBar';
+import { getUpcomingEventsNear } from '@/lib/events';
+import { UpcomingEventsNearby } from '@/components/event/UpcomingEventsNearby';
+import { getAreaName } from '@/lib/area';
 import { INDEXABLE_ROBOTS } from '@/lib/robots-meta';
 
 export const revalidate = 86400;
@@ -159,6 +162,16 @@ export default async function SpotPage({ params }: Props) {
           return false;
         })
         .slice(0, 6);
+
+  // 近くで開催中・これからのイベント（会期切れは自動で消える鮮度部品）
+  const { events: nearEvents, cityMatched: nearEventsCityMatched } = getUpcomingEventsNear(
+    entry.area,
+    spot.ward ?? spot.city,
+    3,
+  );
+  const nearEventsTitle = nearEventsCityMatched
+    ? `${spot.ward ?? spot.city}周辺で開催中・これからのイベント`
+    : `${getAreaName(entry.area)}で開催中・これからのイベント`;
 
   // 関連記事: 手動指定（relatedArticleSlugs）を先頭に置き、残りを年齢帯マッチで補完
   const allArticles = getAllFileArticles().filter((a) => !a.noindex);
@@ -877,6 +890,9 @@ export default async function SpotPage({ params }: Props) {
             </div>
           </>
         )}
+
+        {/* 近くで開催中・これからのイベント（会期切れは自動非表示） */}
+        <UpcomingEventsNearby events={nearEvents} title={nearEventsTitle} />
 
         {/* 持っていくと便利（シーン×アイテム）。P1-4: 商品画像＋価格帯つきカード */}
         {enrichedItems.length > 0 && (

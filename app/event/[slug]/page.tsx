@@ -16,6 +16,9 @@ import { getRuntimeEventOverrides } from '@/lib/event-overrides';
 import { getAllSpotsWithSlug, isSpotIndexable } from '@/lib/spots';
 import { spotToV2 } from '@/lib/v2-adapters';
 import { AdSlot } from '@/components/ads/AdSlot';
+import { buildEventDayPlan } from '@/lib/event-day-plan';
+import { EventDayPlanSection } from '@/components/event/EventDayPlanSection';
+import { getAreaName } from '@/lib/area';
 import { INDEXABLE_ROBOTS } from '@/lib/robots-meta';
 
 export const revalidate = 86400;
@@ -62,9 +65,13 @@ export default async function EventPage({ params }: Props) {
   // 会場周辺の子連れスポット（一次データ）。
   // 同一エリア内のスポットのうち、会場の市区町村と一致するものを優先して提示する。
   // 「イベントのついでに寄れる実在スポット」を編集部の確認済みデータから案内する。
+  // イベント起点の1日モデルコース（一次データのみ・終了イベントでは出さない）
+  const dayPlan = ended ? null : buildEventDayPlan(ev);
+  const planUsed = new Set(dayPlan?.usedSlugs ?? []);
+
   const nearbySpots = (() => {
     const inArea = getAllSpotsWithSlug().filter(
-      (x) => x.area === ev.area && isSpotIndexable(x.spot),
+      (x) => x.area === ev.area && isSpotIndexable(x.spot) && !planUsed.has(x.slug),
     );
     const cityMatch = ev.city
       ? inArea.filter((x) => (x.spot.ward ?? x.spot.city ?? '').includes(ev.city as string))
@@ -311,6 +318,11 @@ export default async function EventPage({ params }: Props) {
               ))}
             </div>
           </div>
+        )}
+
+        {/* イベント起点の1日モデルコース（一次データのみ） */}
+        {dayPlan && (
+          <EventDayPlanSection plan={dayPlan} cityLabel={ev.city ?? getAreaName(ev.area)} />
         )}
 
         {/* 会場周辺の子連れスポット（一次データ） */}
