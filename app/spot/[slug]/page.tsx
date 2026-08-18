@@ -41,6 +41,8 @@ import { ReservationCTA } from '@/components/article/ReservationCTA';
 import { ShareBar } from '@/components/article/ShareBar';
 import { getUpcomingEventsNear } from '@/lib/events';
 import { UpcomingEventsNearby } from '@/components/event/UpcomingEventsNearby';
+import { getVenueAnnualEvents } from '@/lib/annual-events';
+import { VenueAnnualEvents } from '@/components/event/VenueAnnualEvents';
 import { getAreaName } from '@/lib/area';
 import { getTempClosure } from '@/lib/spot-temp-closed';
 import { INDEXABLE_ROBOTS } from '@/lib/robots-meta';
@@ -168,12 +170,19 @@ export default async function SpotPage({ params }: Props) {
         })
         .slice(0, 6);
 
+  // この会場で毎年ひらかれるイベント。終了イベントを「毎年◯月ごろ」という未来向きの
+  // 情報に変換して、永続資産であるこのページに畳み込む（過去アーカイブpage は作らない）。
+  const venueAnnualEvents = getVenueAnnualEvents(spot.name, 4);
+  const venueEventSlugs = new Set(venueAnnualEvents.map((e) => e.slug));
+
   // 近くで開催中・これからのイベント（会期切れは自動で消える鮮度部品）
-  const { events: nearEvents, cityMatched: nearEventsCityMatched } = getUpcomingEventsNear(
+  // 上の「この会場で毎年」に出したものは重複させない。
+  const { events: nearEventsRaw, cityMatched: nearEventsCityMatched } = getUpcomingEventsNear(
     entry.area,
     spot.ward ?? spot.city,
-    3,
+    4,
   );
+  const nearEvents = nearEventsRaw.filter((e) => !venueEventSlugs.has(e.slug)).slice(0, 3);
   const nearEventsTitle = nearEventsCityMatched
     ? `${spot.ward ?? spot.city}周辺で開催中・これからのイベント`
     : `${getAreaName(entry.area)}で開催中・これからのイベント`;
@@ -926,6 +935,9 @@ export default async function SpotPage({ params }: Props) {
             </div>
           </>
         )}
+
+        {/* この会場で毎年ひらかれるイベント（終了しても「毎年◯月ごろ」として残る） */}
+        <VenueAnnualEvents events={venueAnnualEvents} spotName={spot.name} />
 
         {/* 近くで開催中・これからのイベント（会期切れは自動非表示） */}
         <UpcomingEventsNearby events={nearEvents} title={nearEventsTitle} />
