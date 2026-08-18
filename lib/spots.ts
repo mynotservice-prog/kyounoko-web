@@ -441,6 +441,16 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   // ===== 関東（ibaraki/tochigi/gunma は下部に詳細版あり）=====
   saitama: [
     {
+      // 工場見学。通年・屋内・予約制で、季節に左右されない資産。
+      name: 'グリコピア・イースト', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '北本市',
+      note: 'ポッキー＆プリッツの製造工程を見学できるグリコの企業ミュージアム。見学は無料で、所要70分の完全予約制。', budget: 'free',
+      pricing: { adult: '見学無料（有料体験コーナーあり）', elementary: '見学無料', preschool: '見学無料', infant: '見学無料' },
+      reservation: 'required',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: '対象は全年齢で0歳から見学人数に数える。子どもだけの見学は不可で大人の同伴が必要。土日祝はジャイアントポッキーのデコレーション体験（有料）がある',
+      accessTips: '埼玉県北本市中丸9-55。完全予約制（2〜8名はWEB、9名以上は電話048-593-8811）。1日4回の入替制で、9:30／11:00／12:30／14:00の回に分かれています。',
+    },
+    {
       // 秋の味覚狩り面。イベント（会期もの）ではなく永続スポットとして持つ。
       // 芋掘りは毎年の季節営業なので、年ごとの日付ではなく「毎年◯月〜◯月」で表現する。
       name: '荒幡農園（川越いもほり）', category: 'seasonal', place: 'outdoor', ages: ['2-3', '4-6'], city: '川越市',
@@ -779,6 +789,15 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
   ],
   tokyo: [
+    {
+      // 工場見学。未就学児を含むコースがあり、授乳室・おむつ替えも完備の数少ない例。
+      name: 'キユーピー マヨテラス', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '調布市',
+      note: 'マヨネーズができるまでを体験しながら学べるキユーピーの見学施設。未就学児を含むコースが用意されている。', budget: 'free',
+      reservation: 'required',
+      crowdLevel: { weekday: 'mid', holiday: 'low' },
+      hiddenTip: '見学コースが「小学生以上対象」と「未就学を含む」に分かれているので、予約時に未就学児向けを選ぶ。館内はバリアフリーでベビーカーのまま回れ、授乳室・おむつ替えスペースもある',
+      accessTips: '京王線 仙川駅から徒歩7分（新宿駅から仙川駅まで京王線快速で17分）。完全予約制で、翌月分の予約が毎月月初の営業日10時から始まります。平日のみで土日祝は休館。料金は公式サイトでご確認ください。',
+    },
     {
       // 通年・ハウス内の味覚狩り面。芋掘り（9〜11月の数週間）と違い雨でも季節外でも成立する。
       name: '東京きのこランド', category: 'seasonal', place: 'indoor', ages: ['2-3', '4-6'], city: '練馬区', ward: '練馬区',
@@ -2721,6 +2740,16 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
   ],
   yamanashi: [
+    {
+      // 6月初旬〜12月初旬の半年、9種類の果物狩りがリレーする長期営業の農園。
+      // 単発イベントではないので失効しない、季節をまたぐ資産。
+      name: '中込農園', category: 'seasonal', place: 'outdoor', ages: ['2-3', '4-6'], city: '南アルプス市',
+      note: '約11ヘクタールの観光果樹園。6月初旬〜12月初旬の半年間、9種類の果物狩りが入れ替わりで楽しめる。', budget: 'low',
+      reservation: 'required',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: 'さくらんぼ6月・桃6〜8月・プラム6〜8月・ネクタリン7〜8月・梨8〜10月・ぶどう8〜10月・プルーン9月・りんご11月・甘柿11月。行きたい果物の時期を先に決めてから予約する',
+      accessTips: '山梨県南アルプス市飯野2281-1。予約制（TEL 055-283-0505）。営業は6〜9月が9:00〜17:00、10〜11月が10:00〜16:00と時期で変わります。料金は果物・コースで異なるため公式サイトでご確認ください。',
+    },
     {
       name: '富士急ハイランド', category: 'amusement', place: 'outdoor', ages: ['4-6'], city: '富士吉田市', note: 'トーマスランドは0-6歳向け', budget: 'high',
       pricing: { adult: '6,000〜8,000円', elementary: '4,400〜6,000円', preschool: '2,100〜3,000円（3歳以上）', infant: '無料（2歳以下）' },
