@@ -2119,6 +2119,29 @@ export function getEventsByArea(area: AreaSlug): EventEntry[] {
   return getMergedEvents().filter((e) => e.area === area);
 }
 
+/**
+ * 指定エリアで「開催中・これから」のイベント（終了済みは自動で消える）。
+ * cityLike（市区町村名）があれば一致するものを先頭に寄せる。
+ * /spot/[slug] の「近くで開催中のイベント」用 — イベントを既存ページの鮮度部品として使う。
+ */
+export function getUpcomingEventsNear(
+  area: AreaSlug | string,
+  cityLike?: string,
+  limit = 3,
+): { events: EventEntry[]; cityMatched: boolean } {
+  const today = todayString();
+  const alive = getMergedEvents()
+    .filter((e) => e.area === area && e.endDate >= today)
+    .sort((a, b) => a.startDate.localeCompare(b.startDate));
+  if (!cityLike) return { events: alive.slice(0, limit), cityMatched: false };
+  const cityMatch = alive.filter(
+    (e) => !!e.city && ((e.city as string).includes(cityLike) || cityLike.includes(e.city as string)),
+  );
+  // 市区町村一致があるときは一致分だけを返す（「○○周辺」の見出しにエリア補完を混ぜない）。
+  if (cityMatch.length > 0) return { events: cityMatch.slice(0, limit), cityMatched: true };
+  return { events: alive.slice(0, limit), cityMatched: false };
+}
+
 /** slug から1件取得 */
 export function getEventBySlug(slug: string, ovMap?: EventOverridesMap): EventEntry | undefined {
   return getMergedEvents(ovMap).find((e) => e.slug === slug);
