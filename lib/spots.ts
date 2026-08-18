@@ -441,6 +441,15 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   // ===== 関東（ibaraki/tochigi/gunma は下部に詳細版あり）=====
   saitama: [
     {
+      name: '明治なるほどファクトリー坂戸', category: 'museum', place: 'indoor', ages: ['4-6'], city: '坂戸市',
+      note: 'チョコレートの製造工程を学べる明治の工場見学。入館無料だが4歳未満は入場できないため、年齢の確認が要る。', budget: 'free',
+      pricing: { adult: '入館無料', elementary: '入館無料', preschool: '入館無料（4歳以上）', infant: '4歳未満は入場不可' },
+      reservation: 'required',
+      crowdLevel: { weekday: 'mid', holiday: 'low' },
+      hiddenTip: '対象は4歳以上で、4歳未満はきょうだいでも入場できない。平日のみ1日3回（9:40／11:30／14:00）・所要約80分。WEB予約は2名以上で、30日前の午前0時から受付が始まる',
+      accessTips: '埼玉県坂戸市。土日祝は見学がなく平日のみです。下の子が4歳未満の場合は預け先を考えてから予約してください。',
+    },
+    {
       // 工場見学。通年・屋内・予約制で、季節に左右されない資産。
       name: 'グリコピア・イースト', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '北本市',
       note: 'ポッキー＆プリッツの製造工程を見学できるグリコの企業ミュージアム。見学は無料で、所要70分の完全予約制。', budget: 'free',
@@ -2022,6 +2031,15 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   ],
   kanagawa: [
       {
+      name: '崎陽軒 横浜工場', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '横浜市',
+      note: 'シウマイとシウマイ弁当の製造ラインを見学できる工場。無料で、最後にできたてのシウマイの試食がある。', budget: 'free',
+      pricing: { adult: '見学無料', elementary: '見学無料', preschool: '見学無料（3歳以上）', infant: '3歳未満は入場不可' },
+      reservation: 'required',
+      crowdLevel: { weekday: 'mid', holiday: 'high' },
+      hiddenTip: '3歳未満は入場できない。開催は火・水・金・土の1日4回、定員45名・所要約90分と枠が小さく、予約は見学日の3か月前の同日0時から始まるので争奪戦になりやすい',
+      accessTips: '神奈川県横浜市。完全予約制で、土曜の枠は特に埋まりやすいです。3歳未満のきょうだいは同伴できないため、事前に預け先を決めてから予約してください。',
+    },
+    {
       // 通年で味覚狩りが切り替わる永続スポット（いちご→さつまいも→みかん）。
       // 会期ものではないのでイベントのように失効しない。
       name: '津久井浜観光農園', category: 'seasonal', place: 'outdoor', ages: ['2-3', '4-6'], city: '横須賀市',
@@ -2677,6 +2695,16 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
   ],
   gunma: [
+      {
+      // GSCで「ガトーフェスタハラダ 工場見学」が4位を取れている固有名詞。無料・予約不要・屋内・通年。
+      name: 'ガトーフェスタハラダ 本社工場', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '高崎市',
+      note: 'ガトーラスクの製造工程をギャラリーから見学できる工場。入館無料で個人なら予約不要、思い立った日に寄れる。', budget: 'free',
+      pricing: { adult: '入館無料', elementary: '入館無料', preschool: '入館無料', infant: '入館無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '19名以下の個人は予約不要（20名以上・バス利用は要予約）。工場見学としては珍しく当日思い立って行ける。休館は日曜と1月1日なので、土曜は開いていて日曜は閉まっている点に注意',
+      accessTips: '群馬県高崎市新町1207。10:00〜17:00（入場は16:40まで）。日曜・1月1日は休館。公式サイトに年齢制限の記載はありませんが、製造ラインはガラス越しの見学です。',
+      },
       {
       name: '軽井沢おもちゃ王国', category: 'amusement', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '嬬恋村', note: '室内プレイスペースとミニ遊園地', budget: 'mid',
       pricing: { adult: '1,300円（入園）', elementary: '900円', preschool: '900円（3歳以上）', infant: '無料（2歳以下）' },
