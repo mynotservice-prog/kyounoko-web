@@ -441,6 +441,32 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   // ===== 関東（ibaraki/tochigi/gunma は下部に詳細版あり）=====
   saitama: [
     {
+      // 秋の味覚狩り面。イベント（会期もの）ではなく永続スポットとして持つ。
+      // 芋掘りは毎年の季節営業なので、年ごとの日付ではなく「毎年◯月〜◯月」で表現する。
+      name: '荒幡農園（川越いもほり）', category: 'seasonal', place: 'outdoor', ages: ['2-3', '4-6'], city: '川越市',
+      note: '毎年9月中旬〜11月上旬に営業する川越のいも掘り農園。10:00〜16:00で、予約制なので当日行って掘れないということがない。', budget: 'low',
+      reservation: 'required',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '予約制なので土日でも待ち時間が読める。駐車場あり、関越道 川越ICから5分。西武新宿線 南大塚駅から徒歩15〜20分',
+      accessTips: '西武新宿線 南大塚駅 南口から徒歩15〜20分。車は関越自動車道 川越ICから5分で駐車場あり。畑は足元が土なので、ベビーカーより抱っこ紐が動きやすいです。',
+    },
+    {
+      name: '小松沢レジャー農園', category: 'seasonal', place: 'mixed', ages: ['2-3', '4-6'], city: '横瀬町',
+      note: '秩父・横瀬町の観光農園。椎茸狩りが通年の体験メニューとして用意されていて、他の収穫体験と組み合わせられる。', budget: 'low',
+      reservation: 'recommended',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '公式に「日によっては営業していない場合がございます」と明記されているので、営業カレンダーの確認か電話（0494-24-0412）をしてから向かうこと',
+      accessTips: '埼玉県秩父郡横瀬町大字横瀬1408。料金・営業時間は年により変わるため公式サイトで確認してください。',
+    },
+    {
+      name: '@FARM（アット・ファーム）', category: 'seasonal', place: 'mixed', ages: ['2-3', '4-6'], city: '川越市',
+      note: '川越でいちご狩り・さつまいも掘りができる農園。直売所とカフェが併設されていて、収穫のあとそのまま食事にできる。', budget: 'low',
+      reservation: 'recommended',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '併設の @FARM Café（10:00〜17:00・L.O.16:15）で収穫後そのまま昼食にできる。直売所は9:00〜17:00、どちらも月曜定休（祝日なら翌火曜）',
+      accessTips: '埼玉県川越市大字今福1043-3。駐車場あり。月曜定休（月曜が祝日の場合は翌日の火曜）なので、月曜の予定には入れないこと。',
+    },
+    {
       name: '東武動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '宮代町', note: '動物園＋遊園地のハイブリッド', budget: 'mid',
       pricing: { adult: '1,900円（入園のみ）', elementary: '1,000円', preschool: '無料（未就学児）', infant: '無料' },
       reservation: 'none',
@@ -576,6 +602,15 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
   ],
   chiba: [
+      {
+      name: '佐倉きのこ園', category: 'seasonal', place: 'indoor', ages: ['2-3', '4-6'], city: '佐倉市',
+      note: '入園無料・通年でしいたけ狩りができる農園。採った分だけの量り売りなので、子どもが10分で飽きても損しない。', budget: 'free',
+      pricing: { adult: '入園無料＋しいたけ100gあたり324円（持ち帰り）／330円（BBQ）', elementary: '入園無料', preschool: '入園無料', infant: '入園無料' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '公式に「ハサミが使えるお子様でしたら大丈夫」とあり、年齢でなく道具が使えるかが基準（3歳前後が目安）。大きいきのこが無くなり次第終了なので午前が確実。定休は月曜・火曜',
+      accessTips: '千葉県佐倉市太田2395。8:30〜（最終入場14:00）。予約はできず先着順なので、当日の状況を公式で見てから向かうこと。BBQは別途予約可。',
+    },
       {
       name: '東京ドイツ村', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '袖ケ浦市', note: '冬のイルミネーションが関東有数', budget: 'mid',
       pricing: { adult: '1,000円（入園・車1台）', elementary: '500円', preschool: '無料（4歳未満）', infant: '無料' },
@@ -744,6 +779,16 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
   ],
   tokyo: [
+    {
+      // 通年・ハウス内の味覚狩り面。芋掘り（9〜11月の数週間）と違い雨でも季節外でも成立する。
+      name: '東京きのこランド', category: 'seasonal', place: 'indoor', ages: ['2-3', '4-6'], city: '練馬区', ward: '練馬区',
+      note: '東京23区内でしいたけ狩りができる珍しい農園。ハウス内なので雨でも行けて、収穫体験は1グループ単位の料金設定。', budget: 'low',
+      pricing: { adult: '1グループ 2,000円（体験料＋400g分込み・人数制限なし）', elementary: '同上（グループ料金）', preschool: '同上（グループ料金）', infant: '同上（グループ料金）' },
+      reservation: 'required',
+      crowdLevel: { weekday: 'low', holiday: 'mid' },
+      hiddenTip: '料金が人数でなく1グループ2,000円なので家族が多いほど得。しいたけは9月〜翌6月、きくらげは5月〜12月。営業は10:00〜12:00の2時間だけで不定休なので、公式カレンダーを見てから予約する',
+      accessTips: '東京都練馬区大泉町1-58-48。収穫体験は予約制（直売は予約不要）。午後は営業していないので午前の予定に組むこと。',
+    },
     {
       name: '上野動物園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '台東区', note: 'ジャイアントパンダに会える、駅近', budget: 'low',
       nearestStation: 'ueno',
@@ -1957,6 +2002,17 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
   ],
   kanagawa: [
+      {
+      // 通年で味覚狩りが切り替わる永続スポット（いちご→さつまいも→みかん）。
+      // 会期ものではないのでイベントのように失効しない。
+      name: '津久井浜観光農園', category: 'seasonal', place: 'outdoor', ages: ['2-3', '4-6'], city: '横須賀市',
+      note: '季節で「いちご狩り・さつまいも掘り・みかん狩り」が切り替わる横須賀の観光農園。同じ場所で年に3回ちがう収穫体験ができる。', budget: 'low',
+      pricing: { adult: 'いちご狩り 2,000〜2,500円／みかん狩り 1,200円', elementary: 'みかん狩り 600円（3歳以上）', preschool: 'みかん狩り 600円（3歳以上）', infant: 'さつまいも掘りは1人5株 1,500円' },
+      reservation: 'none',
+      crowdLevel: { weekday: 'low', holiday: 'high' },
+      hiddenTip: 'いちご狩りは1/1〜5/5で4/6以降は2,000円に値下がり。さつまいも掘り・みかん狩りは秋。行く前に事務局 046-849-4506（平日9〜15時）で今どれをやっているか確認するのが確実',
+      accessTips: '横須賀市津久井5-15-20。京急線 津久井浜駅から徒歩20分。畑は足元が土なので、ベビーカーより抱っこ紐が動きやすいです。',
+    },
       {
       name: '日本民家園', category: 'museum', place: 'outdoor', ages: ['4-6'], city: '川崎市', note: '生田緑地内、古民家野外博物館', budget: 'low',
       pricing: { adult: '500円', elementary: '無料（高校生以下）', preschool: '無料', infant: '無料' },
