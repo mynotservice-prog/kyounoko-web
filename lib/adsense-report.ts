@@ -14,6 +14,13 @@
  *      - ADSENSE_OAUTH_CLIENT_SECRET
  *      - ADSENSE_OAUTH_REFRESH_TOKEN
  *      - ADSENSE_ACCOUNT_ID   例: "pub-4445473825791494"（未設定なら lib/adsense.ts の pub-id を流用）
+ *      - ADSENSE_SITE_DOMAIN  集計対象サイト（既定 "kyounoko.jp"）。空文字にすると全サイト合算になる。
+ *
+ * 【重要】このAdSenseアカウント pub-4445473825791494 は kyounoko.jp と remegift.jp の
+ * **両方**を含む。フィルタ無しで叩くと2サイト合算が返り、きょうのこの経営KPIに
+ * リメギフの収益が混ざる（2026-08-19実測: 合算¥16,157 = きょうのこ¥15,046 + リメギフ¥1,111）。
+ * そのため既定で OWNED_SITE_DOMAIN_NAME で絞る。DOMAIN_NAME ではなく OWNED_SITE_… を使うのは、
+ * 前者だと apex と www が別行になり www 分を取りこぼすため。
  */
 import { ADSENSE_PUB_ID } from './adsense';
 
@@ -21,6 +28,8 @@ const CLIENT_ID = process.env.ADSENSE_OAUTH_CLIENT_ID;
 const CLIENT_SECRET = process.env.ADSENSE_OAUTH_CLIENT_SECRET;
 const REFRESH_TOKEN = process.env.ADSENSE_OAUTH_REFRESH_TOKEN;
 const ACCOUNT_RAW = process.env.ADSENSE_ACCOUNT_ID || ADSENSE_PUB_ID;
+/** 集計対象サイト。空文字を明示すると全サイト合算（このアカウントはリメギフも含む） */
+const SITE_DOMAIN = process.env.ADSENSE_SITE_DOMAIN ?? 'kyounoko.jp';
 
 export function isAdsenseReportConfigured(): boolean {
   return !!(CLIENT_ID && CLIENT_SECRET && REFRESH_TOKEN && ACCOUNT_RAW);
@@ -74,6 +83,11 @@ async function generateReport(params: URLSearchParams): Promise<AdsenseReport | 
   return (await res.json()) as AdsenseReport;
 }
 
+/** 集計対象サイトの絞り込みを付ける（このアカウントは複数サイトを含むため） */
+function appendSiteFilter(params: URLSearchParams): void {
+  if (SITE_DOMAIN) params.append('filters', `OWNED_SITE_DOMAIN_NAME==${SITE_DOMAIN}`);
+}
+
 function dateParams(prefix: 'startDate' | 'endDate', d: Date): [string, string][] {
   return [
     [`${prefix}.year`, String(d.getFullYear())],
@@ -88,6 +102,7 @@ export async function getAdsenseEarnings(start: Date, end: Date): Promise<number
   for (const [k, v] of [...dateParams('startDate', start), ...dateParams('endDate', end)]) params.append(k, v);
   params.append('metrics', 'ESTIMATED_EARNINGS');
   params.append('currencyCode', 'JPY');
+  appendSiteFilter(params);
   const report = await generateReport(params);
   if (!report) return null;
   const val = report.totals?.cells?.[0]?.value;
@@ -105,6 +120,7 @@ export async function getAdsenseMonthly(months = 12): Promise<AdsenseMonthlyRow[
   params.append('metrics', 'ESTIMATED_EARNINGS');
   params.append('dimensions', 'MONTH');
   params.append('currencyCode', 'JPY');
+  appendSiteFilter(params);
   const report = await generateReport(params);
   if (!report) return null;
   return (report.rows ?? []).map((row) => {
