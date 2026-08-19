@@ -402,7 +402,7 @@ export const SPOT_VERIFICATION: Record<string, SpotVerification> = {
   "加茂水族館": { verifiedAt: '2026-08-19', method: 'official' },
   "華蔵寺公園": { verifiedAt: '2026-08-19', method: 'official' },
   "岩山パークランド": { verifiedAt: '2026-08-19', method: 'official' },
-  "岩手県立児童館いわて子どもの森": { verifiedAt: '2026-08-19', method: 'official' },
+  "岩手県立児童館 いわて子どもの森": { verifiedAt: '2026-08-19', method: 'official' },
   "京都駅ビル ザ・キューブ・ジェイアール京都伊勢丹 レストラン": { verifiedAt: '2026-08-19', method: 'official' },
   "錦糸公園 噴水": { verifiedAt: '2026-08-19', method: 'official' },
   "駒沢オリンピック公園 ジャブジャブ池": { verifiedAt: '2026-08-19', method: 'visited' },

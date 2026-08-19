@@ -1926,12 +1926,6 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: '夏の水遊び広場（無料）、夜のライトアップが美しい',
     },
     {
-      name: 'こどもの国（横浜・冬のスケート）', category: 'seasonal', place: 'mixed', ages: ['4-6'], city: '横浜市', note: '冬季限定の屋外スケート場', budget: 'low',
-      reservation: 'none',
-      crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '11月〜3月限定、4歳以上のスケートデビューに最適。貸靴あり',
-    },
-    {
       // 2026-08-13追加。設備は虎ノ門ヒルズ公式のインフォメーション（toranomonhills.com/information/）から。
       name: '虎ノ門ヒルズ', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], ward: '港区',
       note: '虎ノ門ヒルズ駅直結。森タワー・ビジネスタワー・ステーションタワーの各棟にベビールーム（授乳・オムツ交換）あり',

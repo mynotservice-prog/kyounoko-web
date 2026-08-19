@@ -194,6 +194,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       })),
 
+      // ===== 重複スポットの統合(2026-08-19) =====
+      // lib/spots-extra/batch-1.ts が、lib/spots.ts に既にあった施設を「名前の空白だけ違う」
+      // 別スポットとして再登録していたため、同じ施設が2つのURLで公開されていた。
+      // 情報量の多い元エントリを残し、重複側のURLは301で統合する（301なので流入も引き継がれる）。
+      { source: '/spot/ZOOMO-up3y', destination: '/spot/ZOOMO-8ry2', permanent: true }, // 盛岡市動物公園ZOOMO
+      { source: '/spot/-xw6m', destination: '/spot/-k352', permanent: true }, // 岩手県立児童館いわて子どもの森
+      { source: '/spot/-jr8w', destination: '/spot/-6abk', permanent: true }, // 八木山動物公園フジサキの杜
+      { source: '/spot/GAO-wc8y', destination: '/spot/GAO-owbc', permanent: true }, // 男鹿水族館GAO
+      { source: '/spot/-2tzt', destination: '/spot/-seao', permanent: true }, // こどもの国（横浜・冬のスケート）→ 本体へ
+
       // ===== 実在するが子連れおでかけ先として不適/データ除外した施設(2026-07-01) =====
       // データから除去したスポットURLを一覧へ301（被リンク・indexの行き止まり回避）。
       { source: '/spot/-8bbk', destination: '/spots', permanent: true }, // 国立新美術館
