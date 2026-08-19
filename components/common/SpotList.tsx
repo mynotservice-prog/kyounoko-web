@@ -329,14 +329,17 @@ function FacilitiesBlock({ facilities }: { facilities?: Spot['facilities'] }) {
  * 「運営者が訪問して確認」バッジで、公開情報の寄せ集めではない実体験であることを明示する。
  */
 function KidReportBlock({ report }: { report: KidReport }) {
-  const rows: { label: string; value: string }[] = [
-    { label: '行った年齢', value: report.visitAge },
-    { label: 'ベビーカー動線', value: report.strollerNote },
-    { label: '土日の混雑・狙い目', value: report.crowdNote },
-    { label: 'おむつ替え・授乳', value: report.diaperNote },
-    { label: '滞在時間の目安', value: report.stayNote },
-    { label: 'ヒヤッとした点・注意', value: report.cautionNote },
-  ];
+  // 覚えていない項目は見出しごと出さない（KidReport の各項目は任意）
+  const rows: { label: string; value: string }[] = (
+    [
+      { label: '行った年齢', value: report.visitAge },
+      { label: 'ベビーカー動線', value: report.strollerNote },
+      { label: '土日の混雑・狙い目', value: report.crowdNote },
+      { label: 'おむつ替え・授乳', value: report.diaperNote },
+      { label: '滞在時間の目安', value: report.stayNote },
+      { label: 'ヒヤッとした点・注意', value: report.cautionNote },
+    ] as { label: string; value?: string }[]
+  ).filter((r): r is { label: string; value: string } => Boolean(r.value));
   return (
     <div
       style={{
