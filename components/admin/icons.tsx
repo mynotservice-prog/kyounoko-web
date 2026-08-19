@@ -5,6 +5,7 @@ import type { CSSProperties } from 'react';
 const PATHS: Record<string, string[]> = {
   dashboard: ['M4 4h6v6H4z', 'M14 4h6v6h-6z', 'M14 14h6v6h-6z', 'M4 14h6v6H4z'],
   kpi: ['M4 16l5-5 4 4 7-7', 'M16 8h5v5'],
+  priority: ['M4 6h10', 'M4 12h7', 'M4 18h4', 'M17 14l3 3 3-3', 'M20 17V7'],
   insights: ['M22 12h-4l-3 8-5-16-3 8H2'],
   events: ['M13 3L4 14h7l-1 7 9-11h-7z'],
   ab: ['M4 8h9a4 4 0 010 8H4', 'M16 5l3 3-3 3', 'M16 13l3 3-3 3'],

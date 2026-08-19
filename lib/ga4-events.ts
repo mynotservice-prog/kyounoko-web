@@ -12,8 +12,10 @@
  * 未設定 or API エラー時は configured=false を返してプレースホルダ表示にフォールバック。
  */
 
-const GA4_PROPERTY_ID = process.env.GA4_PROPERTY_ID;
-const GA4_CREDS = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON;
+import { getGa4PropertyId, getGoogleCredentialsJson } from './google-auth';
+
+const GA4_PROPERTY_ID = getGa4PropertyId();
+const GA4_CREDS = getGoogleCredentialsJson();
 
 export type EventParamTop = {
   /** 例: "type=article", "platform=line" */

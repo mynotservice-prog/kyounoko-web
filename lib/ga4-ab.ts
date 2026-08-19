@@ -18,8 +18,10 @@
  *   (not set) になり、集計に出てこない。
  */
 
-const GA4_PROPERTY_ID = process.env.GA4_PROPERTY_ID;
-const GA4_CREDS = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON;
+import { getGa4PropertyId, getGoogleCredentialsJson } from './google-auth';
+
+const GA4_PROPERTY_ID = getGa4PropertyId();
+const GA4_CREDS = getGoogleCredentialsJson();
 
 /** variant 別の集計エントリ */
 export type VariantStat = {
