@@ -2,9 +2,20 @@
  * スポット情報の上書き層。
  *
  * lib/spots.ts はハードコードされた大量のスポット配列だが、その上に
- * 「lib/spot-overrides.json で個別 slug 単位で任意フィールドを上書き」できる
- * 仕組み。/admin/spots/edit から編集すると JSON が GitHub commit され、
- * Vercel が自動デプロイで本番に反映される。
+ * 「個別 slug 単位で任意フィールドを上書き」できる仕組み。
+ *
+ * ⚠️ **本番の正は KV であって lib/spot-overrides.json ではない。**
+ * getRuntimeSpotOverrides() が「KVがあれば JSON を無視する」ため、
+ * **JSON を直してコミットしても本番の表示は変わらない**。
+ * 2026-08-19 に実際に2件（舎人公園の会期・コレットマーレの授乳室の階）が空振りした。
+ * KV が未設定の環境（ローカル開発）だけ JSON が使われる。
+ *
+ * そのため運用は2手順に分かれる:
+ *   1. JSON を本番KVの写しに保つ … node scripts/sync-spot-overrides-from-kv.mjs
+ *   2. JSON の編集を本番へ送る   … node scripts/push-spot-overrides-to-kv.mjs <slug>
+ *      （images は既定で送らない。管理画面からアップした写真を消さないため）
+ *
+ * /admin/spots/edit からの編集は KV に直接書かれる（即時反映）。
  *
  * slug は元スポット（spots.ts の定義）から spotToSlug() で決定的に算出される。
  * override は slug をキーに「算出後」にマージされるため、施設名・市区町村を
