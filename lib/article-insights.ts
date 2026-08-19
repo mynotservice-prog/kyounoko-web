@@ -19,6 +19,7 @@ import path from 'node:path';
 import matter from 'gray-matter';
 import { getAllFileArticles } from './articles';
 import { buildAllDataRows, type DataRow } from './data-aggregations';
+import { articleCategoryLabel } from './article-categories';
 
 export type ArticleInsights = {
   slug: string;
@@ -173,7 +174,7 @@ export function getArticleInsights(slug: string): ArticleInsights | null {
     slug,
     title: String(d.title ?? ''),
     category: String(d.category ?? ''),
-    categoryName: String(d.categoryName ?? d.category ?? ''),
+    categoryName: articleCategoryLabel(String(d.category ?? ''), String(d.categoryName ?? '')),
     hero: typeof d.hero === 'string' ? d.hero : '',
     area: String(d.area ?? 'all'),
     publishedAt: String(d.publishedAt ?? ''),

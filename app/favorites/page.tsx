@@ -6,6 +6,7 @@ import { getAllSpotsWithSlug } from '@/lib/spots';
 import { getRuntimeSpotOverrides } from '@/lib/spot-overrides';
 import { spotToV2 } from '@/lib/v2-adapters';
 import { FavoritesClient } from './FavoritesClient';
+import { articleCategoryLabel } from '@/lib/article-categories';
 
 export const revalidate = 3600;
 
@@ -31,7 +32,7 @@ export default async function FavoritesPage() {
     title: a.title,
     lede: a.lede,
     hero: a.hero,
-    categoryName: a.categoryName ?? a.category,
+    categoryName: articleCategoryLabel(a.category, a.categoryName),
   }));
   // スポット（V2SaveButton で kk_saved_v2 に保存される）
   const allSpots = getAllSpotsWithSlug(await getRuntimeSpotOverrides()).map((x) => {

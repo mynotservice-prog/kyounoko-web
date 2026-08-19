@@ -26,6 +26,7 @@ import { wrapMoshimoRakuten } from '@/lib/moshimo';
 import { ShareBar } from '@/components/article/ShareBar';
 import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
 import { AdSlot } from '@/components/ads/AdSlot';
+import { articleCategoryLabel } from '@/lib/article-categories';
 
 export const revalidate = 3600;
 
@@ -33,18 +34,6 @@ type Props = {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 };
 
-const CATEGORY_LABEL: Record<string, string> = {
-  'today-doko': '今日どこ行く',
-  'today-nani': '今日何する',
-  'today-taberu': '今日何食べる',
-  'today-mawasu': '今日どう回す',
-  'shippai-shinai': '失敗しない外出',
-  tenki: '天気で決める',
-  'heijitsu-yoru': '平日夜を回す',
-  gyouji: '季節と行事',
-  narai: '習い事と学び',
-  yakudatsu: '役立つもの',
-};
 
 function firstString(v: string | string[] | undefined): string | undefined {
   if (!v) return undefined;
@@ -366,7 +355,7 @@ function RelatedArticleCard({ article }: { article: FileArticleMeta }) {
       />
       <div className="today-related-body">
         <span className="today-related-cat">
-          {article.categoryName ?? CATEGORY_LABEL[article.category] ?? article.category}
+          {articleCategoryLabel(article.category, article.categoryName)}
         </span>
         <h4 className="today-related-title">{article.title}</h4>
       </div>
@@ -395,7 +384,7 @@ function buildRelatedCategoryChips(
   // top answer の category
   if (top?.article?.article.category) {
     const cat = top.article.article.category;
-    push(`${CATEGORY_LABEL[cat] ?? cat}を全部見る`, `/category/${cat}`);
+    push(`${articleCategoryLabel(cat)}を全部見る`, `/category/${cat}`);
   }
 
   // query から派生

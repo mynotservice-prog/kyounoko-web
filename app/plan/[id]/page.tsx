@@ -19,6 +19,7 @@ import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
 import { getItemsForPlan } from '@/lib/items-catalog';
 import { PlanTimeline } from '@/components/plan/PlanTimeline';
 import { ShareBar } from '@/components/article/ShareBar';
+import { articleCategoryLabel } from '@/lib/article-categories';
 
 // hero 画像の自動マッチング更新を即時反映するため revalidate を短縮（5分）
 export const revalidate = 86400;
@@ -366,7 +367,7 @@ export default async function PlanPage({ params }: Props) {
               title: a.title,
               description: a.lede || a.metaDescription,
               hero: a.hero,
-              eyebrow: a.categoryName ?? 'Article',
+              eyebrow: articleCategoryLabel(a.category, a.categoryName) || 'Article',
             }))}
           />
         )}

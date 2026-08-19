@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og';
+import { ARTICLE_CATEGORY_NAME } from '@/lib/article-categories';
 
 /**
  * 動的 OGP 画像生成 API
@@ -85,18 +86,6 @@ function paletteFor(cat: string): Palette {
   }
 }
 
-const CATEGORY_LABEL: Record<string, string> = {
-  'today-doko': '今日どこ行く？',
-  'today-nani': '今日何する？',
-  'today-taberu': '今日何食べる？',
-  'today-mawasu': '今日どう回す？',
-  'shippai-shinai': '失敗しない外出',
-  tenki: '天気で決める',
-  'heijitsu-yoru': '平日夜を回す',
-  gyouji: '季節と行事',
-  narai: '習い事と学び',
-  yakudatsu: '役立つもの',
-};
 
 /** タイトル長に応じてフォントサイズを決める（48〜56px） */
 function pickTitleSize(title: string): number {
@@ -120,7 +109,7 @@ export async function GET(req: Request): Promise<Response> {
 
   const title = truncate(rawTitle);
   const palette = paletteFor(cat);
-  const categoryLabel = CATEGORY_LABEL[cat] ?? 'きょうのこ';
+  const categoryLabel = ARTICLE_CATEGORY_NAME[cat] ?? 'きょうのこ';
   const titleSize = pickTitleSize(title);
 
   return new ImageResponse(
