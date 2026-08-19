@@ -371,6 +371,7 @@ export const SPOT_VERIFICATION: Record<string, SpotVerification> = {
   "姫路駅前 ピオレ姫路 レストランフロア": { verifiedAt: '2026-08-10', method: 'official' },
   "有明ガーデン": { verifiedAt: '2026-08-10', method: 'visited' },
   "駒沢オリンピック公園 ジャブジャブ池": { verifiedAt: '2026-08-19', method: 'visited' },
+  "高輪ゲートウェイ Gateway Park｜子連れで水遊びできる？噴水・開催時間・授乳室まで解説": { verifiedAt: '2026-08-19', method: 'visited' },
   "舎人公園 じゃぶじゃぶ池（浮球の池）": { verifiedAt: '2026-08-19', method: 'visited' },
   "水元公園 水遊び場": { verifiedAt: '2026-08-19', method: 'visited' },
   "東京ソラマチ": { verifiedAt: '2026-08-19', method: 'visited' },

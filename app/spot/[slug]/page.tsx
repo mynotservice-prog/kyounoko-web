@@ -442,6 +442,32 @@ export default async function SpotPage({ params }: Props) {
           </div>
         </div>
 
+        {/* 期間限定の告知（until を過ぎたら出さない） */}
+        {spot.notice && spot.notice.until >= new Date().toISOString().slice(0, 10) && (
+          <div style={{ padding: '14px 18px 0' }}>
+            <div
+              style={{
+                background: '#fdf2ee',
+                border: '1px solid #e8b7a3',
+                borderRadius: 12,
+                padding: '12px 14px',
+              }}
+            >
+              <div style={{ fontSize: 12, fontWeight: 800, color: '#b4553a', marginBottom: 4 }}>
+                いま行く前に確認
+              </div>
+              <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.7, color: 'var(--ink-sub)' }}>
+                {spot.notice.text}
+              </p>
+              {spot.notice.source && (
+                <p style={{ margin: '6px 0 0', fontSize: 11.5, color: 'var(--ink-mute)' }}>
+                  {spot.notice.source}
+                </p>
+              )}
+            </div>
+          </div>
+        )}
+
         {/* リード */}
         {spot.note && (
           <div className="v2-page-head" style={{ paddingTop: 14 }}>
