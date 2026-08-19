@@ -13,6 +13,7 @@ const NAV: NavGroup[] = [
     title: '分析・計測',
     items: [
       { id: 'dashboard', label: 'ダッシュボード', icon: 'dashboard', path: '/admin' },
+      { id: 'priority', label: '需要 × 優先度', icon: 'priority', path: '/admin/priority' },
       { id: 'kpi', label: '経営KPI', icon: 'kpi', path: '/admin/kpi' },
       { id: 'insights', label: 'Insights', icon: 'insights', path: '/admin/insights' },
       { id: 'events', label: 'Events', icon: 'events', path: '/admin/events' },

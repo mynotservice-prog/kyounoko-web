@@ -11,9 +11,10 @@
  */
 
 import { JWT } from 'google-auth-library';
+import { getGoogleCredentialsJson, getSearchConsoleSiteUrl } from './google-auth';
 
-const SITE_URL = process.env.SEARCH_CONSOLE_SITE_URL;
-const CREDS = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON;
+const SITE_URL = getSearchConsoleSiteUrl();
+const CREDS = getGoogleCredentialsJson();
 
 export type ScRow = {
   keys: string[];

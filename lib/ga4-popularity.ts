@@ -18,8 +18,10 @@ import type { AreaSlug } from './area';
 
 type PopularItem = { area: AreaSlug; spot: Spot };
 
-const GA4_PROPERTY_ID = process.env.GA4_PROPERTY_ID;
-const GA4_CREDS = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON;
+import { getGa4PropertyId, getGoogleCredentialsJson } from './google-auth';
+
+const GA4_PROPERTY_ID = getGa4PropertyId();
+const GA4_CREDS = getGoogleCredentialsJson();
 
 /**
  * GA4から人気スポット（エリア別PVトップ）を取得。

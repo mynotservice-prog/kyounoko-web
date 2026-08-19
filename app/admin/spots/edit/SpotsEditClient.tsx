@@ -83,6 +83,13 @@ export function SpotsEditClient({
   const [q, setQ] = React.useState('');
   const [openSlug, setOpenSlug] = React.useState<string | null>(null);
 
+  // /admin/priority の「編集する」から施設名付きで飛んで来られるようにする（?q=施設名）。
+  // 初期値ではなくマウント後に入れるのは、SSR の HTML と食い違わせないため。
+  React.useEffect(() => {
+    const initial = new URLSearchParams(window.location.search).get('q');
+    if (initial) setQ(initial);
+  }, []);
+
   // サーバーから渡る overrides はビルド時のスナップショットで、保存直後（再デプロイ前）
   // はまだ反映されていない。マウント時に API（本番は GitHub を直読み）から最新を取得し、
   // 「保存したのに編集欄が空に戻る」誤解を防ぐ。

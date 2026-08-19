@@ -7,9 +7,9 @@
  *
  * 未設定/未連携時は null / [] を返す（呼び出し側でグレースフルに空表示）。
  */
-import { getGoogleAccessToken, isGoogleConfigured } from './google-auth';
+import { getGoogleAccessToken, getGa4PropertyId, isGoogleConfigured } from './google-auth';
 
-const PROPERTY_ID = process.env.GA4_PROPERTY_ID;
+const PROPERTY_ID = getGa4PropertyId();
 const SCOPE = 'https://www.googleapis.com/auth/analytics.readonly';
 
 export function isGa4Configured(): boolean {
