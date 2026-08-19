@@ -10,10 +10,19 @@
  * 事前準備（ブラウザ・5分）:
  *   1. https://console.cloud.google.com/apis/library/adsense.googleapis.com
  *      → プロジェクト kyounoko-website を選んで「有効にする」
- *   2. https://console.cloud.google.com/apis/credentials
+ *   2. 同意画面（Google Auth Platform）を作る。対象は「外部」。
+ *   3. **同意画面の公開ステータスを「本番環境」にする**（Google Auth Platform → 対象 → アプリを公開）。
+ *      ここが「テスト中」のままだと、外部アプリに発行されるリフレッシュトークンは
+ *      **7日で失効する**。設定した1週間後に /admin/kpi の AdSense が黙って ¥0 に戻るので、
+ *      認可の前に必ず本番環境へ切り替えること。
+ *      https://developers.google.com/identity/protocols/oauth2#expiration
+ *   4. https://console.cloud.google.com/apis/credentials
  *      → 「認証情報を作成」→「OAuth クライアント ID」→ 種類は **デスクトップ アプリ**
  *      → 作成後に出る クライアントID と クライアントシークレット を控える
- *      （同意画面が未設定なら先に作る。User type=外部、テストユーザーに自分のGmailを追加でよい）
+ *
+ * 承認時に「このアプリは Google で確認されていません」と出るのは想定どおり
+ * （adsense.readonly は機微スコープで、個人利用では審査を通さないため）。
+ * 「詳細」→「（安全ではないページ）に移動」で進む。
  *
  * 使い方:
  *   node scripts/adsense-oauth-setup.mjs
@@ -108,3 +117,7 @@ console.log(`ADSENSE_OAUTH_CLIENT_SECRET=${clientSecret}`);
 console.log(`ADSENSE_OAUTH_REFRESH_TOKEN=${json.refresh_token}`);
 if (accountName) console.log(`ADSENSE_ACCOUNT_ID=${accountName.replace(/^accounts\//, '')}`);
 console.log('\n設定後、/admin/kpi の「AdSense」が LIVE になり収益が自動で入ります。');
+console.log(
+  '\n【確認】同意画面の公開ステータスが「テスト中」のままだと、このリフレッシュトークンは7日で失効します。' +
+    '\n        Google Auth Platform →「対象」→「アプリを公開」で本番環境になっているか見てください。',
+);
