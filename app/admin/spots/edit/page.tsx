@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { getAllSpotsWithSlug } from '@/lib/spots';
+import { getAllSpotsWithSlug, SPOT_CATEGORY_LABEL, type Spot } from '@/lib/spots';
 import { getAllSpotOverrides } from '@/lib/spot-overrides';
 import { SpotsEditClient } from './SpotsEditClient';
 import { PageHeader } from '@/components/admin/ui';
@@ -27,13 +27,51 @@ export const metadata: Metadata = {
  *   - getAllSpotsWithSlug() が spot-overrides.json を slug 算出後に自動マージ。
  *     施設名・市区町村を変えても slug（URL）は不変なのでリンク切れしない。
  */
-export default function SpotsEditPage() {
-  const entries = getAllSpotsWithSlug();
+/** 一度に返す件数。全件ぶんの本文（穴場メモ等）を送るとHTMLが2.2MBになるため窓を切る。 */
+const WINDOW = 40;
+
+function matches(e: { slug: string; area: string; spot: Spot }, nq: string): boolean {
+  const s = e.spot;
+  return (
+    e.slug.toLowerCase().includes(nq) ||
+    s.name.toLowerCase().includes(nq) ||
+    (s.city ?? '').toLowerCase().includes(nq) ||
+    (s.ward ?? '').toLowerCase().includes(nq) ||
+    e.area.toLowerCase().includes(nq) ||
+    SPOT_CATEGORY_LABEL[s.category].includes(nq)
+  );
+}
+
+export default async function SpotsEditPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string }>;
+}) {
+  const q = ((await searchParams).q ?? '').trim();
+  const all = getAllSpotsWithSlug();
   const overrides = getAllSpotOverrides();
+
+  // 絞り込みをサーバ側でやり、クライアントには表示ぶんの実データだけ渡す。
+  // 全723件の spot をそのまま渡していた頃はHTMLが2.2MBあり、その大半が
+  // 画面に出ない穴場メモ・FAQ本文だった。
+  const filtered = q ? all.filter((e) => matches(e, q.toLowerCase())) : all;
+  const entries = filtered.slice(0, WINDOW);
+
+  // 近隣スポット選択のプルダウンだけは全件必要なので、軽い索引を別に渡す。
+  const spotIndex = all.map((e) => ({
+    slug: e.slug,
+    name: e.spot.name,
+    area: e.spot.ward || e.spot.city || String(e.area),
+  }));
+
+  // 表示ぶんの override だけ渡す（全件だと override 側も重い）
+  const shownOverrides = Object.fromEntries(
+    entries.map((e) => [e.slug, overrides[e.slug]]).filter(([, v]) => v),
+  ) as typeof overrides;
 
   return (
     <>
-      <PageHeader title="スポット編集" subtitle={`全 ${entries.length} 件のスポットを編集可能`} />
+      <PageHeader title="スポット編集" subtitle={`全 ${all.length} 件のスポットを編集可能`} />
 
       <p style={{ fontSize: 13, color: 'var(--ink-600)', margin: '0 0 20px', lineHeight: 1.7 }}>
         施設名・料金・予約・穴場・子連れ設備などを修正できます。<br />
@@ -41,7 +79,16 @@ export default function SpotsEditPage() {
         施設名や市区町村を変えても URL（slug）は変わらないため、リンク切れは起きません。
       </p>
 
-      <SpotsEditClient entries={entries} overrides={overrides} />
+      <SpotsEditClient
+        entries={entries}
+        overrides={shownOverrides}
+        spotIndex={spotIndex}
+        query={q}
+        matchedCount={filtered.length}
+        totalCount={all.length}
+        windowSize={WINDOW}
+        editedCount={Object.keys(overrides).length}
+      />
 
       <div
         style={{

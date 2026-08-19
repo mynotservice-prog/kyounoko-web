@@ -14,6 +14,8 @@ export type ArticlePickRow = {
 /** 記事を検索して編集画面へ飛ぶだけの軽量ピッカー（更新日降順）。 */
 export function ArticleEditPickerClient({ rows }: { rows: ArticlePickRow[] }) {
   const [q, setQ] = useState('');
+  // 1,106本を全部DOMに出すとHTMLが1.4MBになる。検索で絞る前提なので既定は60件。
+  const [limit, setLimit] = useState(60);
 
   const filtered = useMemo(() => {
     const needle = q.trim().toLowerCase();
@@ -42,7 +44,7 @@ export function ArticleEditPickerClient({ rows }: { rows: ArticlePickRow[] }) {
         <input
           type="search"
           value={q}
-          onChange={(e) => setQ(e.target.value)}
+          onChange={(e) => { setQ(e.target.value); setLimit(60); }}
           placeholder="タイトル・slug・カテゴリで検索"
           autoFocus
           style={{
@@ -55,14 +57,16 @@ export function ArticleEditPickerClient({ rows }: { rows: ArticlePickRow[] }) {
             fontFamily: 'inherit',
           }}
         />
-        <span style={{ fontSize: 12, color: 'var(--ink-400)', whiteSpace: 'nowrap' }}>{filtered.length} 件</span>
+        <span style={{ fontSize: 12, color: 'var(--ink-400)', whiteSpace: 'nowrap' }}>
+          {filtered.length <= limit ? `${filtered.length} 件` : `${limit} / ${filtered.length} 件`}
+        </span>
       </div>
 
       <div style={{ maxHeight: '65vh', overflowY: 'auto' }}>
         {filtered.length === 0 && (
           <div style={{ padding: 24, fontSize: 13, color: 'var(--ink-400)' }}>該当する記事がありません</div>
         )}
-        {filtered.map((r) => (
+        {filtered.slice(0, limit).map((r) => (
           <Link
             key={r.slug}
             href={`/admin/articles/${r.slug}/edit`}
@@ -112,6 +116,25 @@ export function ArticleEditPickerClient({ rows }: { rows: ArticlePickRow[] }) {
             </span>
           </Link>
         ))}
+        {filtered.length > limit && (
+          <div style={{ padding: '12px 14px' }}>
+            <button
+              type="button"
+              onClick={() => setLimit((v) => v + 100)}
+              style={{
+                fontSize: 12.5,
+                padding: '6px 12px',
+                border: '1px solid var(--border)',
+                borderRadius: 'var(--r-sm)',
+                background: 'var(--bg-card)',
+                color: 'var(--ink-600)',
+                cursor: 'pointer',
+              }}
+            >
+              さらに100件（残り {filtered.length - limit} 件）
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
