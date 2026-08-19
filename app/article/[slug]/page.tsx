@@ -60,6 +60,7 @@ import { AgeMonthCalculator } from '@/components/interactive/AgeMonthCalculator'
 import { BabyCarRouteEstimator } from '@/components/interactive/BabyCarRouteEstimator';
 import { NaptimeFitFinder } from '@/components/interactive/NaptimeFitFinder';
 import { LineCta } from '@/components/common/LineCta';
+import { articleCategoryLabel } from '@/lib/article-categories';
 
 // パーソナライズ枠を出すカテゴリ（今日の◯◯系のみ）
 const PERSONALIZED_HINT_CATEGORIES = new Set(['today-doko', 'today-nani', 'today-taberu']);
@@ -73,18 +74,6 @@ type Props = {
 };
 
 // MicroCMS のカテゴリslug→日本語名フォールバック（ファイルベース記事用）
-const CATEGORY_NAME_FALLBACK: Record<string, string> = {
-  'today-doko': '今日どこ行く？',
-  'today-nani': '今日何する？',
-  'today-taberu': '今日何食べる？',
-  'today-mawasu': '今日どう回す？',
-  'shippai-shinai': '失敗しない外出',
-  tenki: '天気で決める',
-  'heijitsu-yoru': '平日夜を回す',
-  gyouji: '季節と行事',
-  narai: '習い事と学び',
-  yakudatsu: '役立つもの',
-};
 
 // 静的生成：MicroCMSとファイルベース、両方のパスを事前生成
 export async function generateStaticParams() {
@@ -628,7 +617,8 @@ export default async function ArticlePage({ params }: Props) {
 // ==========================================================================
 
 function FileArticleView({ article }: { article: FileArticle }) {
-  const categoryName = article.categoryName ?? CATEGORY_NAME_FALLBACK[article.category] ?? article.category;
+  // 表示名は frontmatter ではなく正本の表から引く（表記揺れが構造化データに漏れるのを防ぐ）
+  const categoryName = articleCategoryLabel(article.category, article.categoryName);
   const heroUrlAbsolute = article.hero
     ? article.hero.startsWith('http')
       ? article.hero
@@ -1620,7 +1610,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
                         {a.title}
                       </h4>
                       {/* カテゴリ名を出して「同ジャンルの深掘り/別軸の発見」を区別させる */}
-                      {a.categoryName ? (
+                      {a.category || a.categoryName ? (
                         <p
                           style={{
                             fontSize: 12,
@@ -1629,7 +1619,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
                             letterSpacing: '.02em',
                           }}
                         >
-                          {a.categoryName}
+                          {articleCategoryLabel(a.category, a.categoryName)}
                         </p>
                       ) : null}
                     </div>

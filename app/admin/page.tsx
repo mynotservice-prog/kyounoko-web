@@ -4,6 +4,7 @@ import { getAllPlanMetas } from '@/lib/plans';
 import { SPOTS } from '@/lib/spots';
 import { getDataHealth, type DataSourceHealth } from '@/lib/data-health';
 import { PageHeader, StatCard, StatGrid, Card, Badge, Bar, Mono } from '@/components/admin/ui';
+import { articleCategoryLabel } from '@/lib/article-categories';
 
 export const revalidate = 3600;
 
@@ -25,7 +26,7 @@ export default async function AdminDashboard() {
   // カテゴリ別件数
   const catCount: Record<string, number> = {};
   for (const a of articles) {
-    const key = a.categoryName ?? a.category ?? 'その他';
+    const key = articleCategoryLabel(a.category, a.categoryName);
     catCount[key] = (catCount[key] ?? 0) + 1;
   }
   const topCats = Object.entries(catCount).sort((a, b) => b[1] - a[1]);

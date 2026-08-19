@@ -7,6 +7,7 @@ import { getAllFileArticles } from '@/lib/articles';
 import { articleToV2 } from '@/lib/v2-adapters';
 import { articlePopularityRank } from '@/lib/article-popularity';
 import { AdSlot } from '@/components/ads/AdSlot';
+import { articleCategoryLabel } from '@/lib/article-categories';
 
 export const revalidate = 3600;
 
@@ -49,10 +50,12 @@ export default function ArticlesIndexPage() {
 
   const popular = sorted.slice(0, 30);
 
-  // カテゴリ別（人気順を保ったままグルーピング）
+  // カテゴリ別（人気順を保ったままグルーピング）。
+  // キーは表示名ではなく category スラッグ。表示名で束ねると frontmatter の表記揺れの数だけ
+  // セクションが割れ、見出しに `yakudatsu` のような生スラッグが出る（実際に出ていた）。
   const byCategory = new Map<string, typeof sorted>();
   for (const a of sorted) {
-    const key = a.categoryName ?? a.category ?? 'その他';
+    const key = a.category || 'その他';
     const list = byCategory.get(key);
     if (list) list.push(a);
     else byCategory.set(key, [a]);
@@ -80,8 +83,10 @@ export default function ArticlesIndexPage() {
 
       <AdSlot placement="home-below-finder" />
 
-      {categories.map(([name, list]) => (
-        <div className="v2-section" key={name}>
+      {categories.map(([slug, list]) => {
+        const name = articleCategoryLabel(slug, list[0].categoryName);
+        return (
+        <div className="v2-section" key={slug}>
           <V2SectionHead title={name} />
           {list.slice(0, PER_CATEGORY_PREVIEW).map((a) => (
             <V2ArticleRow key={a.slug} a={articleToV2(a)} href={`/article/${a.slug}`} />
@@ -97,7 +102,8 @@ export default function ArticlesIndexPage() {
             </div>
           )}
         </div>
-      ))}
+        );
+      })}
     </V2Frame>
   );
 }

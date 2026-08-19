@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og';
+import { ARTICLE_CATEGORY_NAME } from '@/lib/article-categories';
 
 /**
  * Pinterest 用の縦長（2:3 = 1000x1500）ピン画像。
@@ -70,15 +71,6 @@ function paletteFor(cat: string): Palette {
   }
 }
 
-const CATEGORY_LABEL: Record<string, string> = {
-  'today-doko': '今日どこ行く？',
-  'today-nani': '今日何する？',
-  'today-taberu': '今日何食べる？',
-  'today-mawasu': '今日どう回す？',
-  gyouji: '季節と行事',
-  narai: '習い事と学び',
-  yakudatsu: '役立つもの',
-};
 
 /**
  * Noto Sans JP を Google Fonts から「使用文字サブセット」で取得する。
@@ -115,14 +107,14 @@ export async function GET(req: Request): Promise<Response> {
     .trim();
 
   const palette = paletteFor(cat);
-  const categoryLabel = CATEGORY_LABEL[cat] ?? 'きょうのこ';
+  const categoryLabel = ARTICLE_CATEGORY_NAME[cat] ?? 'きょうのこ';
 
   const chars = [...title].length;
   const titleSize = chars > 42 ? 58 : chars > 30 ? 68 : 78;
 
   // 画像に出る全日本語文字（動的＋固定）＋全かなをサブセット取得対象にする。
   const staticJp =
-    Object.values(CATEGORY_LABEL).join('') +
+    Object.values(ARTICLE_CATEGORY_NAME).join('') +
     'きょうのこ続きを読む子育てを、もっと身軽に。';
   const fontText = Array.from(
     new Set((title + staticJp + kanaRange()).split('')),
