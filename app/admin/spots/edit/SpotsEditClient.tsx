@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { SPOT_CATEGORY_LABEL, type Spot, type AgeTag } from '@/lib/spots';
 import {
   buildEnjoyByAgeBlocks,
@@ -76,19 +77,40 @@ function agesKey(a: readonly string[] | undefined): string {
 export function SpotsEditClient({
   entries,
   overrides,
+  spotIndex,
+  query,
+  matchedCount,
+  totalCount,
+  windowSize,
+  editedCount,
 }: {
   entries: Entry[];
   overrides: SpotOverridesMap;
+  spotIndex: SpotIndexItem[];
+  query: string;
+  matchedCount: number;
+  totalCount: number;
+  windowSize: number;
+  editedCount: number;
 }) {
-  const [q, setQ] = React.useState('');
+  const router = useRouter();
+  const [q, setQ] = React.useState(query);
   const [openSlug, setOpenSlug] = React.useState<string | null>(null);
+  const [pending, startTransition] = React.useTransition();
 
-  // /admin/priority の「編集する」から施設名付きで飛んで来られるようにする（?q=施設名）。
-  // 初期値ではなくマウント後に入れるのは、SSR の HTML と食い違わせないため。
+  // 絞り込みはサーバ側。全件の spot を配ると穴場メモ・FAQ本文だけでHTMLが2.2MBになり、
+  // その大半は画面に出ない。入力はデバウンスして ?q= を差し替える
+  // （/admin/priority の「編集する」からの ?q=施設名 もそのまま効く）。
+  const typed = React.useRef(false);
   React.useEffect(() => {
-    const initial = new URLSearchParams(window.location.search).get('q');
-    if (initial) setQ(initial);
-  }, []);
+    if (!typed.current) return;
+    const t = setTimeout(() => {
+      startTransition(() => {
+        router.replace(q ? `/admin/spots/edit?q=${encodeURIComponent(q)}` : '/admin/spots/edit');
+      });
+    }, 300);
+    return () => clearTimeout(t);
+  }, [q, router]);
 
   // サーバーから渡る overrides はビルド時のスナップショットで、保存直後（再デプロイ前）
   // はまだ反映されていない。マウント時に API（本番は GitHub を直読み）から最新を取得し、
@@ -111,25 +133,6 @@ export function SpotsEditClient({
     };
   }, []);
 
-  // 近隣スポット選択用の全スポット軽量インデックス（slug→名前/エリア）。
-  const spotIndex = React.useMemo<SpotIndexItem[]>(
-    () => entries.map((e) => ({ slug: e.slug, name: e.spot.name, area: e.spot.ward || e.spot.city || e.area })),
-    [entries],
-  );
-
-  const filtered = entries.filter((e) => {
-    if (!q) return true;
-    const nq = q.toLowerCase();
-    const s = e.spot;
-    return (
-      e.slug.toLowerCase().includes(nq) ||
-      s.name.toLowerCase().includes(nq) ||
-      (s.city ?? '').toLowerCase().includes(nq) ||
-      (s.ward ?? '').toLowerCase().includes(nq) ||
-      e.area.toLowerCase().includes(nq) ||
-      SPOT_CATEGORY_LABEL[s.category].includes(nq)
-    );
-  });
 
   return (
     <>
@@ -138,7 +141,7 @@ export function SpotsEditClient({
           type="search"
           placeholder="施設名 / slug / 市区町村 / エリア / カテゴリ で絞り込み"
           value={q}
-          onChange={(e) => setQ(e.target.value)}
+          onChange={(e) => { typed.current = true; setQ(e.target.value); }}
           style={{
             width: '100%',
             height: 38,
@@ -151,13 +154,15 @@ export function SpotsEditClient({
           }}
         />
         <div style={{ fontSize: 11, color: 'var(--ink-400)', marginTop: 6 }}>
-          {filtered.length} / {entries.length} 件 · 編集済 {Object.keys(liveOverrides).length} 件
+          {matchedCount} / {totalCount} 件
+          {matchedCount > windowSize ? `（先頭${windowSize}件を表示）` : ''} · 編集済 {editedCount} 件
           {loaded ? ' · 最新の保存内容を反映済み' : ' · 最新の保存内容を読込中…'}
+          {pending ? ' · 絞り込み中…' : ''}
         </div>
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-        {filtered.slice(0, 300).map((e) => (
+        {entries.map((e) => (
           <SpotRow
             // loaded が変わったら remount して、最新 override でフォームを再初期化する
             key={`${e.slug}-${loaded ? 'live' : 'init'}`}
@@ -169,9 +174,14 @@ export function SpotsEditClient({
           />
         ))}
       </div>
-      {filtered.length > 300 && (
+      {matchedCount > windowSize && (
         <div style={{ fontSize: 12, color: 'var(--ink-400)', marginTop: 12 }}>
-          最初の300件を表示中。検索で絞り込んでください。
+          {matchedCount}件のうち先頭{windowSize}件を表示中。検索で絞り込んでください。
+        </div>
+      )}
+      {entries.length === 0 && (
+        <div style={{ fontSize: 13, color: 'var(--ink-400)', padding: '18px 0' }}>
+          該当するスポットがありません。
         </div>
       )}
     </>

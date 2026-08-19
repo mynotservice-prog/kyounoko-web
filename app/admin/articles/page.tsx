@@ -3,6 +3,7 @@ import path from 'node:path';
 import matter from 'gray-matter';
 import { getAllFileArticles } from '@/lib/articles';
 import { AREAS, getAreaName } from '@/lib/area';
+import { articleCategoryLabel } from '@/lib/article-categories';
 import { ArticlesClient, type ArticleRow } from './ArticlesClient';
 
 // admin は常に最新を表示（v7, 2026-06-13: ISR キャッシュで旧イラストが残る問題対策）
@@ -22,24 +23,20 @@ function toRow(slug: string, resolvedHero: string | undefined): ArticleRow {
     .trim()
     .replace(/\s+/g, ' ');
 
+  // 一覧が実際に使うフィールドだけを返す。本文プレビューや publishedAt まで積むと
+  // 1,106本ぶんでHTMLが1.6MBになり、描画されない文字列が payload の大半を占めていた。
+  // hero も URL は使わず「あるか」しか見ていないので真偽値に落とす。
   return {
     slug,
     title: String(d.title ?? ''),
-    category: String(d.category ?? ''),
-    categoryName: String(d.categoryName ?? d.category ?? ''),
-    // v7（2026-06-13）: 旧コードは d.hero 生値（/hero-ai/<slug>.jpg イラスト）を返していた。
-    // サイトの hero は lib/articles.ts で実写シーンに解決されているのに、管理画面だけ
-    // イラストが出ていたため、解決済み hero（resolvedHero）を優先表示するように変更。
-    hero: resolvedHero ?? (typeof d.hero === 'string' ? d.hero : ''),
+    categoryName: articleCategoryLabel(String(d.category ?? ''), String(d.categoryName ?? '')),
+    // v7（2026-06-13）: 旧コードは d.hero 生値（/hero-ai/<slug>.jpg イラスト）を見ていた。
+    // サイトの hero は lib/articles.ts で実写シーンに解決されるため resolvedHero を優先する。
+    hasHero: Boolean(resolvedHero ?? (typeof d.hero === 'string' && d.hero ? d.hero : '')),
     area: String(d.area ?? 'all'),
-    publishedAt: String(d.publishedAt ?? ''),
     updatedAt: String(d.updatedAt ?? d.publishedAt ?? ''),
     lede: String(d.lede ?? d.metaDescription ?? ''),
     bodyLength: plain.length,
-    bodyPreview: plain.slice(0, 160),
-    ageRanges: Array.isArray((d.quickInfo as { ageRanges?: unknown[] })?.ageRanges)
-      ? ((d.quickInfo as { ageRanges: string[] }).ageRanges as string[])
-      : [],
   };
 }
 

@@ -6,16 +6,13 @@ import { DataTable, type Column, type Filter } from '@/components/admin/DataTabl
 export type ArticleRow = {
   slug: string;
   title: string;
-  category: string;
   categoryName: string;
-  hero: string;
+  /** hero画像があるか。URL自体は一覧で使わないので真偽値だけ受け取る */
+  hasHero: boolean;
   area: string;
-  publishedAt: string;
   updatedAt: string;
   lede: string;
   bodyLength: number;
-  bodyPreview: string;
-  ageRanges: string[];
 };
 
 type AugRow = ArticleRow & { qa: string; updatedDate: string };
@@ -30,7 +27,7 @@ export function ArticlesClient({ rows, categoryOptions, areaOptions }: Props) {
   const augmented: AugRow[] = useMemo(
     () =>
       rows.map((r) => {
-        const hasIssue = !r.hero || r.bodyLength < 800 || !r.lede;
+        const hasIssue = !r.hasHero || r.bodyLength < 800 || !r.lede;
         return { ...r, qa: hasIssue ? '要改善' : '良好', updatedDate: (r.updatedAt || '').slice(0, 10) };
       }),
     [rows],

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getAllFileArticles } from '@/lib/articles';
 import { PageHeader } from '@/components/admin/ui';
 import { ArticleEditPickerClient } from './ArticleEditPickerClient';
+import { articleCategoryLabel } from '@/lib/article-categories';
 
 export const dynamic = 'force-dynamic';
 
@@ -22,7 +23,7 @@ export default function ArticleEditIndexPage() {
     .map((a) => ({
       slug: a.slug,
       title: a.title,
-      categoryName: a.categoryName ?? a.category,
+      categoryName: articleCategoryLabel(a.category, a.categoryName),
       updatedAt: a.updatedAt || a.publishedAt || '',
     }))
     .sort((a, b) => (a.updatedAt < b.updatedAt ? 1 : -1));
