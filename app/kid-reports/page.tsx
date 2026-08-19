@@ -22,7 +22,11 @@ export const metadata: Metadata = {
 
 export default function KidReportsIndexPage() {
   // kidReport を持つスポットだけ抽出
-  const all = getAllSpotsWithSlug().filter((x) => x.spot.kidReport);
+  // 一覧は行った年齢とベビーカー動線を出すので、その2つが揃っている記録だけ載せる
+  // （部分的な記録はスポット個別ページ側に出る）
+  const all = getAllSpotsWithSlug().filter(
+    (x) => x.spot.kidReport?.visitAge && x.spot.kidReport?.strollerNote,
+  );
 
   // カテゴリ毎にグループ化（park/zoo/aquarium/...）
   const groups = new Map<

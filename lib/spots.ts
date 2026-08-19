@@ -58,18 +58,24 @@ export type PlaygroundFeature =
 export type KidReport = {
   /** 情報の出どころ。'visited' = 運営者が実際に子連れで訪問して確認 */
   source: 'visited';
+  /**
+   * 以下は任意。**覚えていない項目は埋めない**のが原則。
+   * 全項目必須にしていたため「行ったが一部しか覚えていない」施設を記録できず、
+   * 埋めようとすると推測を書くことになる（架空の施設情報を載せた過去の事故と同じ道）。
+   * 描画側は値のある項目だけを出す。
+   */
   /** 訪問した時期の子の年齢感（例: '1歳ごろ', '0歳の散歩〜4歳'） */
-  visitAge: string;
+  visitAge?: string;
   /** ベビーカー動線（押しやすさ・押しにくい場所・置き場・館内可否など） */
-  strollerNote: string;
+  strollerNote?: string;
   /** 土日の混雑と、空いている狙い目の時間帯 */
-  crowdNote: string;
+  crowdNote?: string;
   /** おむつ替え・授乳ができる場所 */
-  diaperNote: string;
+  diaperNote?: string;
   /** 実際に過ごせた滞在時間の目安 */
-  stayNote: string;
+  stayNote?: string;
   /** ヒヤッとした点・年齢的に注意したい場所 */
-  cautionNote: string;
+  cautionNote?: string;
 };
 
 /**

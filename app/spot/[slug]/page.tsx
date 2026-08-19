@@ -791,7 +791,9 @@ export default async function SpotPage({ params }: Props) {
                     { label: 'おむつ替え・授乳', value: spot.kidReport.diaperNote },
                     { label: '滞在時間の目安', value: spot.kidReport.stayNote },
                     { label: 'ヒヤッとした点・注意', value: spot.kidReport.cautionNote },
-                  ].map((r) => (
+                  ]
+                    .filter((r) => r.value) // 覚えていない項目は見出しごと出さない
+                    .map((r) => (
                     <div key={r.label}>
                       <dt
                         style={{
