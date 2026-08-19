@@ -75,3 +75,6 @@ public/new_image/
 
 # KV上書きダンプ（scripts/kv-article-overrides.mjs --dump）
 /.kv-dump
+
+# FUSE(Google Drive等)が残す削除済みファイルの残骸。2026-06-05に99個が誤ってコミットされた
+.fuse_hidden*
