@@ -7,7 +7,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-08-01'
-updatedAt: '2026-08-01'
+updatedAt: '2026-08-19'
 hero: /img/scenes/park-07.webp
 area: tokyo
 quickInfo:
@@ -150,8 +150,25 @@ A. **フルーツ狩りは基本的に雨天中止**か、実施しても足元�
 
 A. **必要です。**中込農園は予約フォームから、小松沢レジャー農園は営業日の確認を含めて電話が確実です。芋掘りの[白石農園](/article/imohori-kanto-kodzure)のような予約不要の農園は、フルーツ狩りでは少数派です。
 
+## 東京都内でもフルーツ狩りはできます
+
+この記事は都外の観光農園が中心ですが、**東京都内にも果樹のもぎ取りができる農園があります**。観光農園ではなく農家の畑なので食べ放題の時間制ではなく、**摘んだ分の量り売り**が中心です。そのぶん短時間・低コストで、移動も近くて済みます。
+
+| エリア | 品目 | 時期 | 特徴 |
+|---|---|---|---|
+| **武蔵村山市** | **みかん8園**・梨2園 | みかん11月上旬〜／梨8月中旬〜9月下旬 | **入園料が市内共通**（小学生以上700円・幼児400円）で**園内食べ放題**。持ち帰りは1kg500円 |
+| **練馬区** | ミカン3園・カキ1園 | ミカン10〜12月／カキ11月 | 23区内。**開園曜日が園ごとに違う**。カキの荘埜園だけ毎日・午後開園 |
+| **世田谷区** | ブドウ10園・リンゴ/ナシ・みかん狩り | 8月中旬〜12月上旬 | 区の**ふれあい農園**制度。多くが**現地先着順**で予約不要 |
+
+詳細はそれぞれ[武蔵村山のみかん狩り8園を子連れで比較](/article/mikangari-musashimurayama-kodzure)、[練馬区で秋にもぎ取りできる果樹園](/article/mogitori-nerima-aki-kodzure)、[世田谷区ふれあい農園の秋](/article/fureai-nouen-setagaya-aki-kodzure)にまとめました。
+
+**都内の農園は駐車場がない園が多く、トイレも「ありません」と明記されている園があります。** 半日がかりで食べ放題を楽しむなら都外の観光農園、1時間で済ませて近所の公園と組むなら都内、という使い分けになります。
+
 ## 関連記事
 
+- [武蔵村山のみかん狩り8園を子連れで比較](/article/mikangari-musashimurayama-kodzure)
+- [練馬区で秋にもぎ取りできる果樹園](/article/mogitori-nerima-aki-kodzure)
+- [世田谷区ふれあい農園の秋](/article/fureai-nouen-setagaya-aki-kodzure)
 - [東京の芋掘り子連れガイド](/article/imohori-kanto-kodzure)
 - [関東のきのこ狩り｜通年・雨でも行ける](/article/kinokogari-kanto-kodzure)
 - [ハロウィンの子連れイベント2026](/article/halloween-kodzure-events-2026)
