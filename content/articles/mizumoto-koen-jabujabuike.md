@@ -6,8 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-07-27T00:00:00.000Z'
-updatedAt: '2026-07-27'
-noindex: true
+updatedAt: '2026-08-19'
 hero: /img/scenes/pool-water-09.webp
 area: tokyo
 quickInfo:

@@ -14,6 +14,7 @@ import type { AreaSlug } from './area';
 import { KID_REPORTS } from './kid-reports';
 import { SPOT_FACILITIES } from './spot-facilities';
 import { SPOT_VERIFICATION } from './spot-verification-data';
+import { SPOT_SEASON, type SpotSeasonWindow } from './spot-season';
 import { SPOT_OFFICIAL_URLS } from './spot-official-urls';
 import { SPOT_ACCESS } from './spot-access';
 import { resolveStationSlugByName } from './all-stations';
@@ -255,6 +256,15 @@ export type Spot = {
    *   （name をキーに描画時に引くと、名前を変えた瞬間に「未確認」に化ける）。
    */
   verification?: SpotVerification;
+  /**
+   * 季節営業の会期。SPOT_SEASON から name 一致でマージされる（lib/spot-season.ts）。
+   *
+   * ※じゃぶじゃぶ池・区民プール・ふれあい農園のように「毎年ある」かつ「会期がある」施設は、
+   *   spots（永続・会期なし）と events（単発・会期あり）のどちらにも収まらず、
+   *   従来は会期が note の自然文に散っていた（2026-08-19 に舎人公園で2025年の会期が
+   *   残ったままになる事故が発生）。会期はここ一箇所に年つきで持ち、本文・FAQ には直書きしない。
+   */
+  season?: SpotSeasonWindow[];
   /**
    * 期間限定の告知（例: イベント開催で噴水が終日停止）。
    *
@@ -4754,6 +4764,11 @@ for (const spot of allSpotsForMerge()) {
     // 鮮度判定が外れないよう、上書き前の name で引いてスポットに焼き付ける。
     if (!spot.verification && SPOT_VERIFICATION[spot.name]) {
       spot.verification = SPOT_VERIFICATION[spot.name];
+    }
+    // 季節営業の会期（SPOT_SEASON）のマージ。verification と同じく、overrides で
+    // 表示名を変えても外れないよう上書き前の name で引いて焼き付ける。
+    if (!spot.season && SPOT_SEASON[spot.name]) {
+      spot.season = SPOT_SEASON[spot.name];
     }
     // 公式サイトURL（SPOT_OFFICIAL_URLS）のマージ。インライン値が優先。
     // 収録は取得検証済みのものだけ（lib/spot-official-urls.ts のヘッダ参照）。
