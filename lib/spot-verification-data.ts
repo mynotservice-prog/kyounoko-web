@@ -370,4 +370,7 @@ export const SPOT_VERIFICATION: Record<string, SpotVerification> = {
   "東京ドームシティ ラクーア内 キッズOK店舗群": { verifiedAt: '2026-08-10', method: 'official' },
   "姫路駅前 ピオレ姫路 レストランフロア": { verifiedAt: '2026-08-10', method: 'official' },
   "有明ガーデン": { verifiedAt: '2026-08-10', method: 'visited' },
+  "駒沢オリンピック公園 ジャブジャブ池": { verifiedAt: '2026-08-19', method: 'official' },
+  "舎人公園 じゃぶじゃぶ池（浮球の池）": { verifiedAt: '2026-08-19', method: 'official' },
+  "水元公園 水遊び場": { verifiedAt: '2026-08-19', method: 'official' },
 };
