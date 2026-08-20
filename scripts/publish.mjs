@@ -32,12 +32,42 @@
  *  - commit / push はしない（このスクリプトは git を書き換えない）。
  *  - KV認証情報が無い環境では、KV検査は「劣化モード」になる（後述）。黙って素通りはしない。
  *
+ * ── 2026-08-19の障害と、その対策（vercel CLI の終了を待たない）────────────────
+ *  同日2回連続で「exit=null（＝シグナル死）」で中断した。実測:
+ *    1回目 07:37:43Z 開始 → 08:17:52Z 中断（2409秒）
+ *    2回目 13:43:36Z 開始 → 14:23:48Z 中断（2412秒）
+ *  どちらも `--build-timeout` の既定 2400秒ぴったり。**spawnSync の timeout が
+ *  vercel CLI を SIGTERM で殺していた**（status=null / signal=SIGTERM）。
+ *  一方 Vercel 側のビルドは完走して Ready になっていた（所要24分）。
+ *  ＝「デプロイは成功しているのに publish がそれを見届けられない」状態で、
+ *  CFパージと素URL検証という**このコマンドの存在意義そのもの**が実行されなかった。
+ *
+ *  真因は2つ:
+ *   (a) 2400秒の予算に **アップロード時間が含まれていた**。tgz 5.6GB のアップロードで
+ *       約16分を食い、ビルド24分と合わせて40分を超えた。
+ *   (b) CLI の**終了**を待つ設計だった。デプロイURLさえ分かれば以降の進行は
+ *       `vercel inspect` のポーリングで判定できるので、CLI の生死に依存する必要はない。
+ *
+ *  対策:
+ *   ① spawnSync → spawn（ストリーミング）にし、**デプロイURLを拾った時点で
+ *      CLI を打ち切ってポーリングへ移る**。CLI を SIGTERM で止めてもサーバ側の
+ *      ビルドは止まらない（上記の障害が、まさにそれを実証している）。
+ *   ② `--build-timeout` は「Ready待ち」専用の予算に戻し、アップロードには
+ *      別枠の `--upload-timeout`（既定3600秒）を割り当てる。
+ *   ③ 異常終了時は status だけでなく **signal と error.code も必ず出す**。
+ *      旧実装は r.signal / r.error を捨てていたため "exit=null" しか手掛かりが無かった。
+ *
+ *  なお 5.6GB のアップロードは `.vercelignore` を置いて解消した。
+ *  vercel CLI 54 は **.gitignore を読まない**（既定の除外リスト＋.vercelignore のみ）。
+ *  そのため .git/info/exclude で除外していた `.claude/worktrees/`(8.3GB・76,733ファイル)や
+ *  gitignore 済みの素材フォルダが毎回まるごと送られていた。追跡ファイルは 1.24GB / 7,028件。
+ *
  * 必要な env（すべて .env.local から自動読込。トークンは絶対に直書きしない）:
  *   KV_REST_API_URL / KV_REST_API_TOKEN     … KV上書きの厳密検査（無い場合は劣化モード）
  *   CLOUDFLARE_API_TOKEN / CLOUDFLARE_ZONE_ID … CFパージ（無い場合は警告して継続）
  */
 
-import { spawnSync } from 'node:child_process';
+import { spawn, spawnSync } from 'node:child_process';
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -78,7 +108,11 @@ const HELP = flags.has('--help') || flags.has('-h');
 const EXPECT_OVERRIDE = opts.expect ?? null;
 const RANGE_OPT = opts.range ?? null;
 const SLUG_OPT = (opts.slug ?? '').split(',').map((s) => s.trim()).filter(Boolean);
-const BUILD_TIMEOUT_SEC = Number(opts['build-timeout'] ?? 2400); // 実測ビルド14分。既定40分。
+// Ready待ち（アップロード完了後）の予算。実測ビルド14〜24分なので既定40分。
+// ⚠ ここにアップロード時間を含めてはいけない（2026-08-19の障害の真因(a)）。
+const BUILD_TIMEOUT_SEC = Number(opts['build-timeout'] ?? 2400);
+// アップロード（tgz作成＋転送）してデプロイURLが出るまでの予算。別枠にする。
+const UPLOAD_TIMEOUT_SEC = Number(opts['upload-timeout'] ?? 3600);
 const WARM_TRIES = Number(opts['warm-tries'] ?? 12);
 const VERIFY_TRIES = Number(opts['verify-tries'] ?? 8);
 
@@ -95,7 +129,8 @@ if (HELP) {
   --no-build            ビルドはせず、Ready待ち→ISR再生成→CFパージ→検証だけ行う
                         （git push / PRマージで既にビルドが走っている場合。重複ビルドを避ける）
   --no-cf               CFパージをスキップ
-  --build-timeout=秒    Ready 待ちのタイムアウト（既定 2400）
+  --build-timeout=秒    Ready 待ちのタイムアウト（既定 2400）※アップロードは含まない
+  --upload-timeout=秒   デプロイURLが出るまで（tgz作成＋転送）のタイムアウト（既定 3600）
 `);
   process.exit(0);
 }
@@ -521,23 +556,110 @@ async function flattenOverrides(slugs) {
 }
 
 // ───────────────────── 4. ビルド ─────────────────────
+/**
+ * 出力からデプロイURLを取り出す。
+ * `▲ Production  https://kyounoko-xxxx-....vercel.app` の行を最優先で拾う。
+ *
+ * ストリーミングで読むので**行が途中で切れている可能性がある**。
+ * 既定では行末（改行）まで揃っているものだけを採用し、CLI が終了したときだけ
+ * loose=true で最後の1個を拾う。
+ */
+function extractDeployUrl(out, { loose = false } = {}) {
+  const prod = out.match(/^.*Production[^\n]*?(https:\/\/[a-z0-9.-]+\.vercel\.app)\s*$/im);
+  if (prod) return prod[1];
+  const re = loose ? /https:\/\/[a-z0-9-]+\.vercel\.app/gi : /https:\/\/[a-z0-9-]+\.vercel\.app(?=\s)/gi;
+  const all = out.match(re);
+  return all ? all[all.length - 1] : null;
+}
+
+/**
+ * vercel CLI を起動し、**デプロイURLが出た時点で解決する**（CLIの終了は待たない）。
+ *
+ * ⚠ ここで CLI の終了を待つと、アップロードとビルドの合計が予算を超えたときに
+ *   親が SIGTERM を撃って exit=null になり、**サーバ側では成功しているデプロイを
+ *   見失う**（2026-08-19に2回発生）。デプロイURLさえ取れれば以降は
+ *   `vercel inspect` のポーリングで確実に追跡できるので、CLI はもう要らない。
+ *   CLI を止めてもサーバ側のビルドは止まらない（同障害で実証済み: SIGTERM 後も Ready になった）。
+ */
 function runVercelBuild() {
   console.log('');
   console.log('▶ ビルド強制: vercel --prod --force --yes --archive=tgz');
   console.log('  （--force で ignoreCommand=scripts/vercel-ignore-build.sh を回避する。');
   console.log('    これをしないと md 単独変更は SKIP BUILD され「マージ成功＝反映」と誤認する。');
-  console.log('    --archive=tgz はファイル数28,000超がCLI上限15,000を超えるため必須）');
-  const r = spawnSync('vercel', ['--prod', '--force', '--yes', '--archive=tgz'], {
-    cwd: ROOT,
-    encoding: 'utf8',
-    stdio: ['ignore', 'pipe', 'pipe'],
-    timeout: BUILD_TIMEOUT_SEC * 1000,
+  console.log('    --archive=tgz はファイル数がCLI上限15,000を超えるため必須）');
+  console.log(`  （デプロイURLが出るまでの上限 ${UPLOAD_TIMEOUT_SEC}秒。URLが出たらCLIの終了は待たずポーリングへ移る）`);
+
+  return new Promise((resolve) => {
+    let child;
+    try {
+      child = spawn('vercel', ['--prod', '--force', '--yes', '--archive=tgz'], {
+        cwd: ROOT,
+        stdio: ['ignore', 'pipe', 'pipe'],
+      });
+    } catch (e) {
+      resolve({ ok: false, url: null, out: '', reason: `vercel の起動に失敗: ${e.message}` });
+      return;
+    }
+
+    let out = '';
+    let settled = false;
+    const done = (res) => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(watchdog);
+      resolve(res);
+    };
+
+    const watchdog = setTimeout(() => {
+      killChild(child);
+      done({
+        ok: false,
+        url: null,
+        out,
+        reason: `${UPLOAD_TIMEOUT_SEC}秒たってもデプロイURLが出ませんでした（--upload-timeout= で延長可）`,
+      });
+    }, UPLOAD_TIMEOUT_SEC * 1000);
+
+    const onChunk = (buf) => {
+      const s = buf.toString('utf8');
+      out += s;
+      process.stdout.write(s); // 進捗をその場で流す（旧実装は終了後にまとめて出していた）
+      if (settled) return;
+      const url = extractDeployUrl(out);
+      if (url) done({ ok: true, url, out, child });
+    };
+    child.stdout.on('data', onChunk);
+    child.stderr.on('data', onChunk);
+
+    child.on('error', (e) => done({ ok: false, url: null, out, reason: `vercel の起動に失敗: ${e.message}` }));
+    child.on('close', (code, signal) => {
+      // URL が出る前に終わった＝本物の失敗。status だけでなく signal も必ず出す
+      // （旧実装は signal を捨てていたため "exit=null" しか分からなかった）。
+      const url = extractDeployUrl(out, { loose: true });
+      if (url && code === 0) {
+        done({ ok: true, url, out });
+        return;
+      }
+      done({
+        ok: false,
+        url,
+        out,
+        reason: `vercel がデプロイURLを出す前に終了しました（exit=${code} signal=${signal ?? 'なし'}）`,
+      });
+    });
   });
-  const out = `${r.stdout || ''}\n${r.stderr || ''}`;
-  process.stdout.write(out);
-  const m = out.match(/https:\/\/[a-z0-9-]+\.vercel\.app/gi);
-  const url = m ? m[m.length - 1] : null;
-  return { exit: r.status, url, out };
+}
+
+/** CLI を止める。デプロイはサーバ側で走り続けるので安全。 */
+function killChild(child) {
+  if (!child || child.killed || child.exitCode !== null) return;
+  try {
+    child.stdout?.removeAllListeners('data');
+    child.stderr?.removeAllListeners('data');
+    child.kill('SIGTERM');
+  } catch {
+    /* noop */
+  }
 }
 
 /** Production が Ready になるまでポーリング。Canceled / Error はその場で失敗にする。 */
@@ -547,7 +669,7 @@ async function pollDeployment(deployUrl) {
   while (Date.now() < deadline) {
     let status = null;
     if (deployUrl) {
-      const r = spawnSync('vercel', ['inspect', deployUrl], { cwd: ROOT, encoding: 'utf8' });
+      const r = spawnSync('vercel', ['inspect', deployUrl], { cwd: ROOT, encoding: 'utf8', timeout: 120000 });
       const out = `${r.stdout || ''}\n${r.stderr || ''}`;
       const m = out.match(/status\s+[●•]?\s*([A-Za-z]+)/);
       status = m ? m[1] : null;
@@ -559,13 +681,13 @@ async function pollDeployment(deployUrl) {
       //   ステータスの無いURL行を掴んでしまい、status が永久に null＝Ready を検出できない
       //   （2026-07-28 に実測。Ready済みのデプロイを40分待ち続けた）。
       //   よって **stdout から最新デプロイのURLだけを取り、状態は `vercel inspect` で見る**。
-      const r = spawnSync('vercel', ['ls', 'kyounoko-web', '--prod'], { cwd: ROOT, encoding: 'utf8' });
+      const r = spawnSync('vercel', ['ls', 'kyounoko-web', '--prod'], { cwd: ROOT, encoding: 'utf8', timeout: 120000 });
       const latest = (r.stdout || '')
         .split('\n')
         .map((l) => l.trim())
         .find((l) => /^https:\/\/\S+\.vercel\.app$/.test(l));
       if (latest) {
-        const ins = spawnSync('vercel', ['inspect', latest], { cwd: ROOT, encoding: 'utf8' });
+        const ins = spawnSync('vercel', ['inspect', latest], { cwd: ROOT, encoding: 'utf8', timeout: 120000 });
         const o = `${ins.stdout || ''}\n${ins.stderr || ''}`;
         const m = o.match(/status\s+[●•]?\s*([A-Za-z]+)/);
         status = m ? m[1] : null;
@@ -866,7 +988,7 @@ async function main() {
   if (DRY_RUN) {
     console.log('');
     console.log('▶ dry-run: 実行時にはこの後こうなります');
-    console.log(`   1. vercel --prod --force --yes （ignoreBuild を回避してフルビルド）`);
+    console.log(`   1. vercel --prod --force --yes （ignoreBuild を回避してフルビルド。最大${UPLOAD_TIMEOUT_SEC}秒でデプロイURLを取得）`);
     console.log(`   2. Production が Ready になるまでポーリング（Canceled/Error は即失敗・最大${BUILD_TIMEOUT_SEC}秒）`);
     console.log(`   3. 各slugを ?_pub=<ts> で叩き x-vercel-cache が HIT かつ内容一致になるまで再試行`);
     console.log(`   4. その **後** に CF パージ（node scripts/cf-purge.mjs <URL...>）`);
@@ -891,19 +1013,28 @@ async function main() {
       console.log(`${WARN} --no-build: ビルドはしません（git push 側のビルドを使う前提）。`);
       console.log('▶ 最新 Production が Ready になるまで待機');
     } else {
-      const build = runVercelBuild();
-      if (build.exit !== 0) {
-        console.error(`${NG} vercel --prod --force が非ゼロ終了しました（exit=${build.exit}）。中断します。`);
+      const build = await runVercelBuild();
+      if (!build.ok) {
+        console.error('');
+        console.error(`${NG} ビルドを開始できませんでした: ${build.reason}`);
+        if (build.url) console.error(`   （デプロイURLらしきもの: ${build.url} — vercel inspect で状態を確認してください）`);
         process.exit(1);
       }
       buildUrl = build.url;
+      // ここから先は CLI に用が無い。生かしておくと親プロセスが終われなくなるので止める。
+      // サーバ側のビルドは止まらない。
+      if (build.child) killChild(build.child);
       console.log('');
-      console.log('▶ Production が Ready になるまで待機');
+      console.log(`${OK} デプロイを受け付けました: ${buildUrl}`);
+      console.log('▶ Production が Ready になるまで待機（vercel CLI の終了は待たず inspect でポーリングする）');
     }
     const poll = await pollDeployment(buildUrl);
     if (!poll.ok) {
       console.error(`${NG} デプロイが Ready になりませんでした（status=${poll.status}）。`);
+      if (buildUrl) console.error(`   対象デプロイ: ${buildUrl}`);
       console.error('   Canceled の場合、ignoreCommand にスキップされています。--force が効いているか確認してください。');
+      console.error('   timeout の場合、ビルドがまだ走っている可能性があります。Ready を確認してから');
+      console.error('   `npm run publish -- --no-build` で ISR再生成→CFパージ→検証だけをやり直せます。');
       process.exit(1);
     }
     console.log(`${OK} Production Ready${buildUrl ? `: ${buildUrl}` : ''}`);
