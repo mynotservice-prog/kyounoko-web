@@ -1,94 +1,88 @@
 # ─────────────────────────────────────────────────────────────────────────────
-# vercel CLI のアップロード除外リスト（2026-08-19 新設）
+# vercel CLI のアップロード除外リスト
 #
-# ⚠ vercel CLI 54 は **.gitignore を一切読まない**。
-#   除外は「CLI内蔵の既定リスト（.git / .next / .vercel / node_modules / .env.local など）」
-#   ＋ この .vercelignore だけで決まる。
-#   そのため本ファイルが無い間、gitで無視していた素材フォルダや、
-#   .git/info/exclude で除外していた `.claude/worktrees/`（8.3GB・76,733ファイル）が
-#   **毎回まるごとアップロードされていた**（tgz 5.6GB・転送だけで約16分）。
-#   それがビルド待ちの予算を食い潰し、publish が SIGTERM で落ちる原因の一つになった。
+# ⚠⚠ 末尾スラッシュを絶対に付けないこと（2026-08-20に本番で踏んだ）⚠⚠
 #
-# 方針: **git が追跡していないものは送らない**（追跡分は 1.24GB / 7,028ファイル）。
+#   `.claude/` と書くと、除外されるどころか **除外したいものが丸ごと増える**。
+#   実測: 5.76GiB → 10.04GiB（84,138ファイル）に膨らみ、アップロードが
+#   6.3GB になって `write EPIPE` でデプロイが落ちた。
+#
+#   仕組み（CLI 54.1.0 のコードを追った結果）:
+#     1. `ignore` パッケージでは `.claude/` は **パス `.claude` 自身にマッチしない**
+#        （ディレクトリだと分からないため）。マッチするのは `.claude/中身` だけ。
+#     2. client/dist/utils/readdir-recursive.js はディレクトリを枝刈りできず中へ降りる。
+#        中身は全部マッチして除外されるので、走査結果が空になる。
+#     3. そこに `if (res.length === 0) list.push(filePath)` がある。
+#        **空に見えたディレクトリが、ディレクトリのまま fileList に入る。**
+#     4. client/dist/archive.js の createTgzFiles は
+#        `tar_fs.pack(workPath, { entries: fileList })` を呼ぶ。
+#        tar-fs の entries にディレクトリが入ると **中身をフィルタ無しで再帰的に全部**
+#        固める。node_modules も .next も CLI既定の除外すら効かない。
+#     → 「除外指定」が「無条件同梱指定」に化ける。
+#
+#   したがって **ディレクトリは末尾スラッシュ無しで書く**（例: `.claude`）。
+#   そうすればディレクトリ自身がマッチして枝刈りされ、この経路に入らない。
+#   CLI 内蔵の既定リストが `.next` / `node_modules` / `.git` と
+#   スラッシュ無しで書かれているのも同じ理由。
+#
+#   ついでに: あるディレクトリの中身が「全部」除外されるような書き方
+#   （例: `foo/*.png` で foo の中身が png しか無い）も同じ罠に落ちる。
+#   その場合はディレクトリごと除外すること。
+#   検算は scripts/publish.mjs の `--check-upload` で行う（実デプロイ不要）。
+#
+# ⚠ vercel CLI 54 は **.gitignore を一切読まない**（読むのは既定リスト＋このファイルだけ）。
+#   そのため .git/info/exclude で除外していた `.claude/worktrees/` や
+#   gitignore 済みの素材フォルダが、このファイルが無いと毎回まるごと送られる。
+#
+# 方針: **git が追跡していないものは送らない**。
 #   main への git push 経由のデプロイは元々「追跡ファイルだけ」で成功しているので、
 #   追跡ファイルの集合でビルドが成立することは実証済み。
-#   → 中身は .gitignore のミラー＋`.claude/`。.gitignore を編集したらここも合わせる。
 # ─────────────────────────────────────────────────────────────────────────────
 
-# Claude Code のサブエージェント用 git worktree（8.3GB）。
-# .git/info/exclude にしか書かれておらず、vercel からは見えない。最大の削減対象。
-.claude/
+# Claude Code のサブエージェント用 git worktree（8.3GB / 76,736ファイル）。
+# .git/info/exclude にしか書かれておらず vercel からは見えない。最大の削減対象。
+.claude
 
-# dependencies（node_modules はCLI既定でも除外されるが明示しておく）
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
+# 大型素材（いずれも git 未追跡＝本番には元々存在しない）
+public/new_image
+public/new_hero
+docs/_image-sheets
+# assets は追跡ファイルが0件（中身は kura-src の原本画像のみ）。
+# `assets/kura-src` とだけ書くと assets が「空ディレクトリ」扱いになって
+# 上記の罠に落ちるので、ディレクトリごと除外する。
+/assets
+# public/hero は png と webp が同数入っている。png だけ落としても空にはならない
+public/hero/*.png
 
-# testing
+# サービスアカウント鍵。本番へ送る必要が無く、CLI の既定リストでは除外されない
+credentials
+
+# 作業用の一時物
+/tmp
+.pin-tmp
+/.kv-dump
 /coverage
-
-# next.js（CLI既定でも除外されるが明示しておく）
-/.next/
-/out/
-
-# production
+/out
 /build
 
-# misc
-.DS_Store
-*.pem
+# ビルド出力（CLI既定でも除外されるが明示しておく）
+/.next
+/node_modules
 
-# debug
+# 生成物・バックアップ・エディタ設定
+*.tsbuildinfo
+*.bak
+*.bak.*
+*.pem
+.DS_Store
+.vscode
+.idea
+.fuse_hidden*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files
+# env（.env.local / .env.*.local は CLI既定でも除外される）
 .env*
 !.env.example
-
-# scripts intermediate（image-prompts dry-run output）
-/tmp/
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-
-# IDE
-.vscode/
-.idea/
-
-# local test/maintenance scripts (archived)
-scripts/_archived-*
-
-# backup files
-*.bak
-*.bak.*
-
-# 大型unsplash素材（参照ゼロ・2026-05退役）
-public/new_hero/
-# public/hero/ の重いPNGのみ除外。プランが参照する軽量webpは送る
-public/hero/*.png
-
-# Service account credentials（本番へ送る必要が無い。CLIは既定で除外しない）
-/credentials/
-
-# V2リニューアル用：参照画像コンタクトシート（重い・開発側のみ使用）
-docs/_image-sheets/
-
-# ChatGPT生成画像の元PNG（512MB）。webp変換済みのものだけ public/img/scenes/ に置く
-public/new_image/
-
-# くら寿司の原本画像（大容量・Drive保管）。最適化済webpのみ配信
-/assets/kura-src/
-.pin-tmp/
-
-# KV上書きダンプ
-/.kv-dump
-
-# FUSE(Google Drive等)が残す削除済みファイルの残骸
-.fuse_hidden*
