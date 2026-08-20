@@ -15,6 +15,7 @@ import { KID_REPORTS } from './kid-reports';
 import { SPOT_FACILITIES } from './spot-facilities';
 import { SPOT_VERIFICATION } from './spot-verification-data';
 import { SPOT_SEASON, type SpotSeasonWindow } from './spot-season';
+import { getSpotParking, type SpotParking } from './spot-parking';
 import { SPOT_OFFICIAL_URLS } from './spot-official-urls';
 import { SPOT_ACCESS } from './spot-access';
 import { resolveStationSlugByName } from './all-stations';
@@ -265,6 +266,16 @@ export type Spot = {
    *   残ったままになる事故が発生）。会期はここ一箇所に年つきで持ち、本文・FAQ には直書きしない。
    */
   season?: SpotSeasonWindow[];
+  /**
+   * 駐車場。SPOT_PARKING から name 一致でマージされる（lib/spot-parking.ts）。
+   *
+   * ※駐車場の台数・時間・料金は従来 記事本文に直書きされ、同じ施設の同じ事実が
+   *   最大19本に複製されていた（2026-08-20 の監査）。直すたびに全複製を grep する
+   *   必要があり必ず取りこぼすため、事実はデータ層に一本化して表示はここから生成する。
+   *   exists は boolean だけでなく 'unknown' を取る（「確認できていない」を
+   *   「ある」に倒さないため）。
+   */
+  parking?: SpotParking;
   /**
    * 期間限定の告知（例: イベント開催で噴水が終日停止）。
    *
@@ -4757,6 +4768,13 @@ for (const spot of allSpotsForMerge()) {
     // 表示名を変えても外れないよう上書き前の name で引いて焼き付ける。
     if (!spot.season && SPOT_SEASON[spot.name]) {
       spot.season = SPOT_SEASON[spot.name];
+    }
+    // 駐車場（SPOT_PARKING）のマージ。season と同じく、overrides で表示名を変えても
+    // 外れないよう上書き前の name で引いて焼き付ける。
+    // じゃぶじゃぶ池のような園内エリアは getSpotParking() が親公園に寄せる。
+    if (!spot.parking) {
+      const parking = getSpotParking(spot.name);
+      if (parking) spot.parking = parking;
     }
     // 公式サイトURL（SPOT_OFFICIAL_URLS）のマージ。インライン値が優先。
     // 収録は取得検証済みのものだけ（lib/spot-official-urls.ts のヘッダ参照）。
