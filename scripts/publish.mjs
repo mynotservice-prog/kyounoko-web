@@ -68,8 +68,8 @@
  */
 
 import { spawn, spawnSync } from 'node:child_process';
-import { readFileSync, existsSync, readdirSync } from 'node:fs';
-import { join } from 'node:path';
+import { readFileSync, existsSync, readdirSync, lstatSync, statSync } from 'node:fs';
+import { join, relative } from 'node:path';
 
 // ───────────────────────────── 定数 ─────────────────────────────
 const SITE = 'https://kyounoko.jp';
@@ -104,6 +104,8 @@ const FLATTEN = flags.has('--flatten');
 const VERIFY_ONLY = flags.has('--verify-only');
 const SKIP_CF = flags.has('--no-cf');
 const NO_BUILD = flags.has('--no-build');
+const CHECK_UPLOAD_ONLY = flags.has('--check-upload');
+const SKIP_UPLOAD_CHECK = flags.has('--skip-upload-check');
 const HELP = flags.has('--help') || flags.has('-h');
 const EXPECT_OVERRIDE = opts.expect ?? null;
 const RANGE_OPT = opts.range ?? null;
@@ -131,6 +133,8 @@ if (HELP) {
   --no-cf               CFパージをスキップ
   --build-timeout=秒    Ready 待ちのタイムアウト（既定 2400）※アップロードは含まない
   --upload-timeout=秒   デプロイURLが出るまで（tgz作成＋転送）のタイムアウト（既定 3600）
+  --check-upload        アップロードされる集合だけを計算して表示（デプロイしない）
+  --skip-upload-check   .vercelignore の罠チェックで中断しない
 `);
   process.exit(0);
 }
@@ -555,6 +559,153 @@ async function flattenOverrides(slugs) {
   return results;
 }
 
+// ───────────────────── 3.5 アップロード量の事前チェック ─────────────────────
+/**
+ * vercel CLI が実際にアップロードする集合をローカルで再現し、
+ * **「ディレクトリのまま tar に入る罠」** を検出する。実デプロイ不要。
+ *
+ * ── なぜ要るか（2026-08-20に本番で踏んだ）────────────────────────────────
+ *  `.vercelignore` に `.claude/`（末尾スラッシュ）と書いたら、除外されるどころか
+ *  アップロードが 5.76GiB → 10.04GiB に**増えて** `write EPIPE` で落ちた。
+ *    1. `ignore` は `.claude/` をパス `.claude` 自身にマッチさせない。
+ *    2. readdir-recursive.js はディレクトリを枝刈りできず中へ降り、中身は全部除外され、
+ *       走査結果が空になる → `if (res.length === 0) list.push(filePath)` で
+ *       **ディレクトリのまま fileList に入る**。
+ *    3. archive.js の `tar_fs.pack(workPath, { entries })` は、entries にディレクトリが
+ *       あると**中身をフィルタ無しで再帰的に全部**固める（node_modules も .next も入る）。
+ *  ＝ 除外指定が無条件同梱指定に化ける。しかも症状は「アップロードが少し増える」だけで、
+ *  30分アップロードして初めて失敗するので、目視では気づけない。ここで機械的に止める。
+ *
+ *  再現は CLI 54.1.0 の下記を写したもの:
+ *    client/dist/utils/get-vercel-ignore.js（既定リスト＋.vercelignore。**.gitignore は読まない**）
+ *    client/dist/utils/readdir-recursive.js（空ディレクトリの push）
+ *    client/dist/archive.js（tar-fs の entries 展開）
+ */
+const VERCEL_DEFAULT_IGNORES = [
+  '.hg', '.git', '.gitmodules', '.svn', '.cache', '.next', '.now', '.vercel', '.npmignore',
+  '.dockerignore', '.gitignore', '.*.swp', '.DS_Store', '.wafpicke-*', '.lock-wscript',
+  '.env.local', '.env.*.local', '.venv', '.yarn/cache', '.pnp*', 'npm-debug.log',
+  'config.gypi', 'node_modules', '__pycache__', 'venv', 'CVS',
+];
+
+async function checkUploadSet() {
+  let ignoreFactory;
+  try {
+    ({ default: ignoreFactory } = await import('ignore'));
+  } catch {
+    return { skipped: 'ignore パッケージが見つかりません（node_modules 未インストール）' };
+  }
+  const ig = ignoreFactory();
+  const vi = join(ROOT, '.vercelignore');
+  const viText = existsSync(vi) ? readFileSync(vi, 'utf8').replace(/(\n|^)\.\//g, '$1') : '';
+  ig.add(`${VERCEL_DEFAULT_IGNORES.join('\n')}\n${viText}`);
+
+  const walk = (dir) => {
+    const list = [];
+    let names;
+    try {
+      names = readdirSync(dir);
+    } catch {
+      return list;
+    }
+    for (const name of names) {
+      const abs = join(dir, name);
+      let st;
+      try {
+        st = lstatSync(abs);
+      } catch {
+        continue;
+      }
+      if (ig.ignores(relative(ROOT, abs))) continue;
+      if (st.isDirectory()) {
+        const res = walk(abs);
+        if (res.length === 0) list.push(abs); // ← ディレクトリのまま entries に入る
+        list.push(...res);
+      } else if (st.isFile()) list.push(abs);
+    }
+    return list;
+  };
+
+  const duAll = (p) => {
+    let bytes = 0;
+    let files = 0;
+    const rec = (d) => {
+      let es;
+      try {
+        es = readdirSync(d, { withFileTypes: true });
+      } catch {
+        return;
+      }
+      for (const e of es) {
+        const abs = join(d, e.name);
+        if (e.isDirectory()) rec(abs);
+        else if (e.isFile()) {
+          try {
+            bytes += statSync(abs).size;
+            files++;
+          } catch {
+            /* noop */
+          }
+        }
+      }
+    };
+    rec(p);
+    return { bytes, files };
+  };
+
+  let bytes = 0;
+  let files = 0;
+  const traps = [];
+  for (const p of walk(ROOT)) {
+    let st;
+    try {
+      st = statSync(p);
+    } catch {
+      continue;
+    }
+    if (st.isDirectory()) {
+      const d = duAll(p);
+      if (d.files > 0) traps.push({ path: relative(ROOT, p), mb: d.bytes / 1024 / 1024, files: d.files });
+      bytes += d.bytes;
+      files += d.files;
+    } else {
+      bytes += st.size;
+      files++;
+    }
+  }
+  return { hasVercelIgnore: existsSync(vi), gib: bytes / 1024 ** 3, files, traps };
+}
+
+/** 事前チェックを実行して表示する。罠があれば false（＝中断すべき）。 */
+async function reportUploadSet() {
+  const r = await checkUploadSet();
+  if (r.skipped) {
+    console.log(`${WARN} アップロード量の事前チェックをスキップ: ${r.skipped}`);
+    return true;
+  }
+  console.log(
+    `▶ アップロード見込み: ${r.gib.toFixed(2)} GiB / ${r.files.toLocaleString()} ファイル` +
+      `（.vercelignore ${r.hasVercelIgnore ? 'あり' : 'なし'}）`,
+  );
+  if (r.gib > 3) {
+    console.log(`   ${WARN} 3GiB を超えています。アップロードだけで10分以上かかり、EPIPE で落ちることがあります。`);
+  }
+  if (!r.traps.length) return true;
+  console.error('');
+  console.error(`${NG} .vercelignore の書き方が原因で、除外したはずのディレクトリが**丸ごと同梱**されます:`);
+  for (const t of r.traps.sort((a, b) => b.mb - a.mb)) {
+    console.error(`   ● ${t.path}  ${t.mb.toFixed(0)} MB / ${t.files.toLocaleString()} ファイル`);
+  }
+  console.error('');
+  console.error('   原因: そのディレクトリ「自身」が除外パターンにマッチしていません。');
+  console.error('        中身だけが全部マッチすると、CLI は空ディレクトリと見なして entries に入れ、');
+  console.error('        tar-fs がフィルタ無しで中身を再帰的に全部固めます（node_modules や .next も）。');
+  console.error('   対処: 末尾スラッシュを外してディレクトリ自身にマッチさせる（`.claude/` → `.claude`）。');
+  console.error('        中身が全部除外されるディレクトリは、ディレクトリごと除外する。');
+  console.error('   ※ 判断の上で無視するなら --skip-upload-check を付けてください。');
+  return false;
+}
+
 // ───────────────────── 4. ビルド ─────────────────────
 /**
  * 出力からデプロイURLを取り出す。
@@ -859,6 +1010,12 @@ async function main() {
   if (DRY_RUN) console.log(`  ${WARN} DRY-RUN: 読み取りのみ。ビルド・KV解除・CFパージは実行しません。`);
   console.log('');
 
+  // --check-upload: アップロード集合の計算だけして終わる（デプロイしない）
+  if (CHECK_UPLOAD_ONLY) {
+    const ok = await reportUploadSet();
+    process.exit(ok ? 0 : 2);
+  }
+
   // 1) Vercel リンク先
   const link = vercelLinkGuard();
   if (!link.ok && !DRY_RUN) process.exit(2);
@@ -987,6 +1144,8 @@ async function main() {
 
   if (DRY_RUN) {
     console.log('');
+    await reportUploadSet();
+    console.log('');
     console.log('▶ dry-run: 実行時にはこの後こうなります');
     console.log(`   1. vercel --prod --force --yes （ignoreBuild を回避してフルビルド。最大${UPLOAD_TIMEOUT_SEC}秒でデプロイURLを取得）`);
     console.log(`   2. Production が Ready になるまでポーリング（Canceled/Error は即失敗・最大${BUILD_TIMEOUT_SEC}秒）`);
@@ -1013,6 +1172,11 @@ async function main() {
       console.log(`${WARN} --no-build: ビルドはしません（git push 側のビルドを使う前提）。`);
       console.log('▶ 最新 Production が Ready になるまで待機');
     } else {
+      // アップロードする集合を先に確かめる。ここで止めれば数GBの無駄な転送をせずに済む。
+      console.log('');
+      const uploadOk = await reportUploadSet();
+      if (!uploadOk && !SKIP_UPLOAD_CHECK) process.exit(2);
+
       const build = await runVercelBuild();
       if (!build.ok) {
         console.error('');
