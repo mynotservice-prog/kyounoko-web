@@ -52,6 +52,14 @@
  *   ① spawnSync → spawn（ストリーミング）にし、**デプロイURLを拾った時点で
  *      CLI を打ち切ってポーリングへ移る**。CLI を SIGTERM で止めてもサーバ側の
  *      ビルドは止まらない（上記の障害が、まさにそれを実証している）。
+ *
+ * ── 2026-08-22 追記: Ready待ちの既定を 2400 → 4200 秒に引き上げた ──────────────
+ *  8/21〜8/22 に3回連続で「timeout(Building)」で中断した。実測すると publish の実行時間は
+ *  **41.0分**（05:02:01 開始 → 05:42:58 終了）で、2400秒＝40分の予算をわずかに超えていた。
+ *  そのあと手でポーリングすると11分後に Ready になっており、**ビルドは毎回正常に完走している**。
+ *  つまり失敗ではなく予算不足で、そのたびに人が `--no-build` を打ち直していた。
+ *  ビルドが速い日に長い予算を持っていても損はしない（Ready を見た時点で抜ける）ので、
+ *  70分に広げて「待てば終わるものを待てずに落ちる」のをやめる。
  *   ② `--build-timeout` は「Ready待ち」専用の予算に戻し、アップロードには
  *      別枠の `--upload-timeout`（既定3600秒）を割り当てる。
  *   ③ 異常終了時は status だけでなく **signal と error.code も必ず出す**。
@@ -112,7 +120,7 @@ const RANGE_OPT = opts.range ?? null;
 const SLUG_OPT = (opts.slug ?? '').split(',').map((s) => s.trim()).filter(Boolean);
 // Ready待ち（アップロード完了後）の予算。実測ビルド14〜24分なので既定40分。
 // ⚠ ここにアップロード時間を含めてはいけない（2026-08-19の障害の真因(a)）。
-const BUILD_TIMEOUT_SEC = Number(opts['build-timeout'] ?? 2400);
+const BUILD_TIMEOUT_SEC = Number(opts['build-timeout'] ?? 4200);
 // アップロード（tgz作成＋転送）してデプロイURLが出るまでの予算。別枠にする。
 const UPLOAD_TIMEOUT_SEC = Number(opts['upload-timeout'] ?? 3600);
 const WARM_TRIES = Number(opts['warm-tries'] ?? 12);
@@ -131,7 +139,7 @@ if (HELP) {
   --no-build            ビルドはせず、Ready待ち→ISR再生成→CFパージ→検証だけ行う
                         （git push / PRマージで既にビルドが走っている場合。重複ビルドを避ける）
   --no-cf               CFパージをスキップ
-  --build-timeout=秒    Ready 待ちのタイムアウト（既定 2400）※アップロードは含まない
+  --build-timeout=秒    Ready 待ちのタイムアウト（既定 4200＝70分）※アップロードは含まない
   --upload-timeout=秒   デプロイURLが出るまで（tgz作成＋転送）のタイムアウト（既定 3600）
   --check-upload        アップロードされる集合だけを計算して表示（デプロイしない）
   --skip-upload-check   .vercelignore の罠チェックで中断しない
