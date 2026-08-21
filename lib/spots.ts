@@ -20,7 +20,7 @@ import { SPOT_OFFICIAL_URLS } from './spot-official-urls';
 import { SPOT_ACCESS, SPOT_ACCESS_BY_SLUG } from './spot-access';
 import { resolveStationSlugByName } from './all-stations';
 import { SPOTS_EXTRA } from './spots-extra';
-import { mergeSpot, type SpotOverridesMap } from './spot-overrides';
+import { BUNDLED_SPOT_OVERRIDES, mergeSpot, type SpotOverridesMap } from './spot-overrides';
 
 export type SpotCategory =
   | 'zoo'          // 動物園
@@ -4755,9 +4755,83 @@ function allSpotsForMerge(): Array<{ spot: Spot; slug: string }> {
  * 差し替え後の施設に付ける正しいアクセスは SPOT_ACCESS_BY_SLUG に slug 単位で置く。
  *
  * ⚠️ 新しく別施設への差し替えを作らないこと。新規スポットは /admin/spots/new
- * （lib/spots-extra/*.json）で作る。ここは既に出来てしまったものの後始末専用。
+ * （lib/spots-extra/admin-created.json に追記 → commit → デプロイ）で作れる。
+ * ここは既に出来てしまったものの後始末専用。
+ *
+ * ---------------------------------------------------------------------------
+ * 2026-08-22: **手で1件ずつ足す運用をやめ、自動判定に変えた。**
+ *
+ * 223件の上書きを全数照合したところ、name を元スポットと違う値に差し替えている
+ * 上書きは17件あり、そのうち **市区町村（ward ?? city）まで変えているのは3件だけ**で、
+ * その3件が「別施設への差し替え」の全部だった（-n26s / KIDS-PARK-dsq8 /
+ * 0123-0123-t3q8）。残る14件は表記ゆれ・ネーミングライツ・SEOタイトルの整形で、
+ * 施設は同一なので素データを継承して正しい（例:「鹿児島ふれあいスポーツランド」
+ * →「フレッシュ青果スポーツランド」、「カワスイ 川崎水族館」→全角スペース違い）。
+ *
+ * つまり **「name が違う」だけでは足りず、「name も市区町村も違う」なら別施設**、
+ * という判定が現データで誤検知ゼロ・取りこぼしゼロで成立する。手動リストは
+ * 「気づいた人がいるときだけ効く」ので、あらかわ遊園の訪問バッジのように
+ * 何か月も放置されうる。誤検知の代償（確認日や設備が落ちて「未確認」表示になる）
+ * より、取りこぼしの代償（行っていない施設に訪問バッジ・屋外公園に冷房完備）の
+ * ほうが桁違いに重いので、自動側に倒す。
+ *
+ * ⚠️ 判定に使うのは **バンドルされた lib/spot-overrides.json**（KVではない）。
+ * モジュール読み込み時は同期処理なのでKVを読めないため。KVにしか無い差し替えは
+ * 検出できないので、`node scripts/sync-spot-overrides-from-kv.mjs` でJSONをKVの
+ * 写しに保つこと（2026-08-22時点では判定結果はKV版と完全一致＝3件で同じ）。
+ * 自動判定が効かないケース（同一市区町村内での別施設差し替え等）は
+ * MANUAL_REBRANDED_SPOT_SLUGS に手で足す。
  */
-const REBRANDED_SPOT_SLUGS = new Set<string>(['0123-0123-t3q8']);
+const MANUAL_REBRANDED_SPOT_SLUGS: readonly string[] = [];
+
+/**
+ * 上書きが「別施設への差し替え」かを判定する。
+ * name が元スポットと違い、**かつ** 市区町村（ward ?? city）も違うことを条件にする。
+ */
+function isRebrandedOverride(spot: Spot, ov: SpotOverridesMap[string]): boolean {
+  if (!ov?.name || ov.name === spot.name) return false;
+  const ovLocation = ov.ward ?? ov.city;
+  if (!ovLocation) return false;
+  return ovLocation !== (spot.ward ?? spot.city ?? '');
+}
+
+const REBRANDED_SPOT_SLUGS: Set<string> = (() => {
+  const set = new Set<string>(MANUAL_REBRANDED_SPOT_SLUGS);
+  for (const { spot, slug } of allSpotsForMerge()) {
+    const ov = BUNDLED_SPOT_OVERRIDES[slug];
+    if (ov && isRebrandedOverride(spot, ov)) set.add(slug);
+  }
+  return set;
+})();
+
+/**
+ * 差し替えられた slug から取り除く、**上書き層では表現できない**素スポットのフィールド。
+ *
+ * 上書き（/admin/spots/edit）で設定できるフィールド（name/city/ward/note/budget/
+ * reservation/hiddenTip/crowdTips/accessTips/nearby/waterDepth/image/images/pricing/
+ * facilities/ageGuide/category/place/ages/faq/faqComplete/nearbySlugs）は
+ * 「編集者が責任を持って入れた値」なのでそのまま使う。
+ * 一方ここに挙げたフィールドは管理画面から直せないので、放置すると
+ * **元施設の属性が新施設の顔で出続ける**。実例:
+ *   - `summerCool`（ベビーパーク KIDS PARK → 新河岸東公園）… 屋外公園なのに
+ *     構造化データに `冷房完備: true` が出ていた（本番HTMLで確認）。
+ *   - `verification` / `kidReport`（0123吉祥寺 → あらかわ遊園）… 行っていない施設に
+ *     「運営者が訪問して確認」バッジ。
+ * アクセス（nearestStation / walkMinutes）だけは落としたあと
+ * SPOT_ACCESS_BY_SLUG から slug 単位の正データを入れ直す。
+ */
+const REBRANDED_STRIP_FIELDS = [
+  'crowdLevel', 'popular', 'strollerAccess', 'babyChair', 'kidsMenu', 'privateRoom',
+  'babyFood', 'waterPlay', 'freeWaterPlay', 'summerCool', 'playgroundFeatures',
+  'kidReport', 'verification', 'season', 'parking', 'officialUrl',
+  'nearestStation', 'walkMinutes', 'notice', 'relatedArticleSlugs',
+  'imageKind', 'imageCredit',
+] as const satisfies readonly (keyof Spot)[];
+
+for (const { spot, slug } of allSpotsForMerge()) {
+  if (!REBRANDED_SPOT_SLUGS.has(slug)) continue;
+  for (const field of REBRANDED_STRIP_FIELDS) delete spot[field];
+}
 
 // ============================================================================
 // 一次情報レポート（KID_REPORTS）のマージ
