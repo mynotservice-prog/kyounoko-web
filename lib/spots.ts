@@ -17,7 +17,7 @@ import { SPOT_VERIFICATION } from './spot-verification-data';
 import { SPOT_SEASON, type SpotSeasonWindow } from './spot-season';
 import { getSpotParking, type SpotParking } from './spot-parking';
 import { SPOT_OFFICIAL_URLS } from './spot-official-urls';
-import { SPOT_ACCESS } from './spot-access';
+import { SPOT_ACCESS, SPOT_ACCESS_BY_SLUG } from './spot-access';
 import { resolveStationSlugByName } from './all-stations';
 import { SPOTS_EXTRA } from './spots-extra';
 import { mergeSpot, type SpotOverridesMap } from './spot-overrides';
@@ -4725,14 +4725,39 @@ for (const [area, extraList] of Object.entries(SPOTS_EXTRA) as [
  *   ここを片方だけにすると「サイトには出ているのに設備も確認日も付かない」状態になる
  *   （実際に外食114件が全件そうなっていた）。新しい配列を足したらここにも足すこと。
  */
-function allSpotsForMerge(): Spot[] {
-  const out: Spot[] = [];
-  for (const areaList of Object.values(SPOTS)) {
-    if (areaList) out.push(...areaList);
+function allSpotsForMerge(): Array<{ spot: Spot; slug: string }> {
+  const out: Array<{ spot: Spot; slug: string }> = [];
+  for (const [area, areaList] of Object.entries(SPOTS)) {
+    if (!areaList) continue;
+    for (const spot of areaList) out.push({ spot, slug: spotToSlug(spot, area) });
   }
-  out.push(...TOKYO_RESTAURANTS);
+  for (const spot of TOKYO_RESTAURANTS) out.push({ spot, slug: spotToSlug(spot, 'tokyo') });
   return out;
 }
+
+/**
+ * **上書き（lib/spot-overrides / KV）で「別施設」に差し替えられている slug。**
+ *
+ * この層は本来「同じ施設の表記ゆれを直す」ためのものだが、実際には
+ * 既存スポットのエントリを丸ごと別施設の器として使っている slug が存在する。
+ * 下の name 一致マージは **上書き前の name** で引くため、そのままだと
+ * 表示中の施設に **別施設の駅・訪問レポート・確認日** が付いてしまう。
+ *
+ * 実害の実例（2026-08-22 に社長報告で発覚・本番で確認）:
+ *   slug `0123-0123-t3q8` … 元スポット「0123吉祥寺・0123はらっぱ」(武蔵野市)
+ *   を override が name=あらかわ遊園 / ward=荒川区 に差し替えている。結果、
+ *   あらかわ遊園のページに「吉祥寺駅 徒歩12分」、武蔵野市の施設の訪問レポート、
+ *   「運営者が訪問して確認（2026年5月15日時点）」が出ていた。
+ *
+ * ここに載せた slug は **元スポット名を鍵にした素データを一切継承しない**。
+ * 元スポット名側のデータ（SPOT_ACCESS / KID_REPORTS / SPOT_VERIFICATION …）は
+ * 消さずにそのまま残す（将来この上書きを外したとき元施設が正しく復元できるように）。
+ * 差し替え後の施設に付ける正しいアクセスは SPOT_ACCESS_BY_SLUG に slug 単位で置く。
+ *
+ * ⚠️ 新しく別施設への差し替えを作らないこと。新規スポットは /admin/spots/new
+ * （lib/spots-extra/*.json）で作る。ここは既に出来てしまったものの後始末専用。
+ */
+const REBRANDED_SPOT_SLUGS = new Set<string>(['0123-0123-t3q8']);
 
 // ============================================================================
 // 一次情報レポート（KID_REPORTS）のマージ
@@ -4741,7 +4766,8 @@ function allSpotsForMerge(): Spot[] {
 // 各スポットに添付する。モジュール読み込み時に一度だけ実行。
 // すでにインラインで kidReport を持つスポット（先行7件）は尊重し、上書きしない。
 // ============================================================================
-for (const spot of allSpotsForMerge()) {
+for (const { spot, slug } of allSpotsForMerge()) {
+  if (REBRANDED_SPOT_SLUGS.has(slug)) continue;
   if (!spot.kidReport && KID_REPORTS[spot.name]) {
     spot.kidReport = KID_REPORTS[spot.name];
   }
@@ -4755,7 +4781,22 @@ for (const spot of allSpotsForMerge()) {
 // 尊重し、上書きしない（インライン値が優先）。
 // ============================================================================
 {
-  for (const spot of allSpotsForMerge()) {
+  for (const { spot, slug } of allSpotsForMerge()) {
+    // 別施設に差し替えられた slug は、元スポット名を鍵にした素データを継承しない。
+    // アクセスだけは slug 単位の正データがあれば付ける（下）。
+    if (REBRANDED_SPOT_SLUGS.has(slug)) {
+      const bySlug = SPOT_ACCESS_BY_SLUG[slug];
+      if (bySlug) {
+        if (!spot.nearestStation) {
+          spot.nearestStation =
+            resolveStationSlugByName(bySlug.nearestStation) ?? bySlug.nearestStation;
+        }
+        if (spot.walkMinutes == null && bySlug.walkMinutes != null) {
+          spot.walkMinutes = bySlug.walkMinutes;
+        }
+      }
+      continue;
+    }
     if (!spot.facilities && SPOT_FACILITIES[spot.name]) {
       spot.facilities = SPOT_FACILITIES[spot.name];
     }

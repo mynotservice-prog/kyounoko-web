@@ -23,6 +23,35 @@ export type SpotAccess = {
   accessNote?: string;
 };
 
+/**
+ * **slug をキーにしたアクセスデータ（name 一致マージの例外）。**
+ *
+ * 通常のアクセスは SPOT_ACCESS（スポット name がキー）でマージされるが、
+ * lib/spot-overrides（KV）で `name` を **別施設** に差し替えている slug が存在する。
+ * その場合、spots.ts の name 一致マージは **上書き前の name**（＝元の別施設）で引くため、
+ * 表示中の施設に **まったく無関係な駅** が付く。
+ *
+ * 例（2026-08-22 に社長報告で発覚）:
+ *   slug `0123-0123-t3q8` は元スポットが「0123吉祥寺・0123はらっぱ」(武蔵野市) だが、
+ *   override で name=あらかわ遊園 / ward=荒川区 に差し替えられている。
+ *   結果、あらかわ遊園のページに「吉祥寺駅 徒歩12分」が出ていた。
+ *
+ * ここに slug 単位で正しいアクセスを置き、spots.ts 側の REBRANDED_SPOT_SLUGS と
+ * 対で使う（元スポット名の SPOT_ACCESS はそのまま残すので、将来 override を
+ * 外したときに元施設のデータが失われない）。
+ */
+export const SPOT_ACCESS_BY_SLUG: Record<string, SpotAccess> = {
+  // あらかわ遊園（荒川区西尾久六丁目35番11号）
+  // 一次情報: 荒川区公式「あらかわ遊園 アクセス」
+  // https://www.city.arakawa.tokyo.jp/a038/yuuen/guide/access.html （2026-08-22 取得）
+  //   「都電荒川線『荒川遊園地前』下車、徒歩3分」「JR高崎線・東北本線『尾久駅』下車、徒歩12分」
+  "0123-0123-t3q8": {
+    nearestStation: "荒川遊園地前",
+    walkMinutes: 3,
+    accessNote: "都電荒川線「荒川遊園地前」下車 徒歩3分。JR尾久駅からは徒歩12分（荒川区公式）",
+  },
+};
+
 export const SPOT_ACCESS: Record<string, SpotAccess> = {
   "0123吉祥寺・0123はらっぱ": { nearestStation: "吉祥寺駅", walkMinutes: 12, accessNote: "JR・京王吉祥寺駅北口から徒歩約12分" },
   "AOAO SAPPORO": { nearestStation: "大通駅", walkMinutes: 3, accessNote: "札幌市営地下鉄大通駅から徒歩約3分（moyuk SAPPORO内）" },
