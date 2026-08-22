@@ -190,7 +190,7 @@ lede: >-
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
 - [/items でお弁当箱・食事グッズを見る](/items)
-- [表参道・原宿 子連れランチ10選](/article/tokyo-omotesando-kodzure-lunch)
+- [表参道・原宿 子連れランチ5選](/article/tokyo-omotesando-kodzure-lunch)
 - [六本木・麻布 子連れランチ10選](/article/tokyo-roppongi-kodzure-lunch)
 
 ## よくある質問

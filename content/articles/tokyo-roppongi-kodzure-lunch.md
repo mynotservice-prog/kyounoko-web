@@ -165,7 +165,7 @@ area: tokyo
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
 - [/items で関連商品を見る](/items)
-- [表参道・原宿 子連れランチ10選](/article/tokyo-omotesando-kodzure-lunch)
+- [表参道・原宿 子連れランチ5選](/article/tokyo-omotesando-kodzure-lunch)
 
 ## よくある質問
 
