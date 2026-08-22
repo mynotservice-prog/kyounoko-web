@@ -154,8 +154,22 @@ const NAME_STOPWORDS = new Set(
     'メインストリート', '駅前ビル', '駅直結ビル', '駅直結モール', '駅直結ホテル',
     '歓迎ホテル', '沖縄リゾート', 'チェックイン後温泉', '高規格キャンプ場', '恋人パーク',
     'ピンクタワー', '紙コップタワー', '頭恩賜公園', 'レゴシティ',
+    // 2026-08-22 追記: 設備の「種類名」は施設名ではない。これを語彙に入れると、
+    // 松屋銀座6F・ルミネ大宮5F・ルミネ2の4F のように **別々の建物の階を突き合わせて**
+    // 全部が食い違いに見える（実測でERROR 5件が丸ごとこれだった）。
+    'ベビー休憩室', 'ベビールーム', '授乳室', '授乳スペース', '休憩室', 'ベビーコーナー',
+    'おむつ替えコーナー', 'キッズトイレ', '多目的トイレ', 'だれでもトイレ', 'ベビーチェア',
+    'フードコート', 'レストラン街', 'レストランフロア', '飲食フロア', '屋上庭園',
+
   ].map(facilityKey),
 );
+
+/**
+ * 修正記録・削除ログの行。旧い（誤った）値を説明のために引用しているだけなので、
+ * 主張として読んではいけない。2026-08-22に実際の誤検知として観測した。
+ */
+const META_LINE =
+  /(直しました|修正しました|訂正しました|削除しました|外しました|置き換えました|書き換えました|に変更しました|でしたが現在|は誤り|は存在しません|確認できませんでした)/;
 
 /** この語尾で終わるものは施設名ではない（「人気ブランド」「東京ターミナル」の類） */
 const DENY_SUFFIX = /(ブランド|ターミナル|ヤード|コーナー|エリア|ゾーン|フロア|スペース|ルーム|シリーズ|タイプ|プラン|コース)$/;
@@ -425,6 +439,9 @@ for (const a of articles) {
       headingFk = hf.size === 1 ? [...hf.keys()][0] : null;
     }
     if (/^\s*>/.test(rawLine)) return; // 出典の引用行は主張ではない
+    // 2026-08-22 追記: 修正記録の行は「直す前の誤った値」を引用しているので主張ではない。
+    // これを読むと、直した本人の記録が原因で同じ記事が自分と食い違うことになる（実測で発生）。
+    if (META_LINE.test(line)) return;
     const lineFacilities = facilitiesIn(line);
     const specFk = SPEC_BULLET.test(line) ? headingFk : null;
     if (!lineFacilities.size && !specFk) return;
@@ -440,12 +457,18 @@ for (const a of articles) {
       if (!fk) continue;
       // 料金・営業時間は1行に複数施設を並べる書き方（比較表・まとめ行）が多く、
       // 行フォールバックで拾うと別施設の数値が混ざる。同じ文にある施設だけを見る。
-      const strictFk = segFacilities.size === 1 ? fk : specFk;
+      //
+      // 2026-08-22 追記: **階も同じだった**。「A＝13階、B＝4階、C＝5階」と施設ごとに階を
+      // 並べる書き方や、見出しがAの節でB・Cの階に触れる書き方で、B・Cの階がAの主張として
+      // 記録されていた（実測でERROR 3件が全部これ）。階も strictFk を使う。
+      // さらに、1行に2施設以上あるときは見出しフォールバック（specFk）も使わない。
+      const multiFacilityLine = lineFacilities.size >= 2;
+      const strictFk = segFacilities.size === 1 ? fk : multiFacilityLine ? null : specFk;
 
       let m;
       // floor
       const fAspect = aspectOf(FLOOR_ASPECTS, seg);
-      if (fAspect) {
+      if (fAspect && strictFk) {
         FLOOR_RE.lastIndex = 0;
         const sets = [];
         while ((m = FLOOR_RE.exec(seg))) {
@@ -454,7 +477,7 @@ for (const a of articles) {
         }
         // 1つの文に複数の階が並ぶのは列挙（「1Fレストラン街、3Fフードコート」）。
         // どれがどの観点の階かは決められないので、まるごと見ない。
-        if (sets.length === 1) pushClaim(a, lineNo, fk, 'floor', fAspect, sets[0], fmtFloor(sets[0]), seg);
+        if (sets.length === 1) pushClaim(a, lineNo, strictFk, 'floor', fAspect, sets[0], fmtFloor(sets[0]), seg);
       }
       // fee
       const feeAspect = aspectOf(FEE_ASPECTS, seg);

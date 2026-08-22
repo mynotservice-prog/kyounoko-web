@@ -318,5 +318,5 @@ A. 各エリアに小児科がある主要病院をメモしておくと安心�
 - [関東の子連れ紅葉スポット20選](/article/koyou-kanto-kodzure-20)
 - [福岡の子連れスポット](/article/kosodate-spots-fukuoka-kids)
 - [東京駅周辺 子連れランチ10選](/article/tokyo-station-kodzure-lunch)
-- [渋谷 子連れランチ10選](/article/tokyo-shibuya-kodzure-lunch)
+- [渋谷 子連れランチ8選](/article/tokyo-shibuya-kodzure-lunch)
 - [週末の過ごし方](/article/shumatsu-1nichi-mawashikata)

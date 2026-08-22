@@ -438,7 +438,7 @@ A. 主要なクレジットカード・電子マネー（Suica・PASMO・iD・QU
 
 ## 関連記事
 
-- [渋谷 子連れランチ10選](/article/tokyo-shibuya-kodzure-lunch)
+- [渋谷 子連れランチ8選](/article/tokyo-shibuya-kodzure-lunch)
 - [新宿 子連れランチ10選](/article/tokyo-shinjuku-kodzure-lunch)
 - [六本木 子連れランチ](/article/tokyo-roppongi-kodzure-lunch)
 - [表参道 子連れランチ](/article/tokyo-omotesando-kodzure-lunch)
