@@ -1216,15 +1216,41 @@ async function main() {
     console.log('▶ ISR再生成（キャッシュバスターで origin を温める）');
     const warm = await warmIsr(targets);
     const cold = warm.filter((w) => !w.ok);
+    const coldSlugs = new Set(cold.map((c) => c.slug));
+
+    // ── 2026-08-23: 「全件パージか、全件中断か」をやめた ──────────────────────
+    // 旧実装は1件でも ISR再生成に失敗すると process.exit(1) で止まり、**成功した分も
+    // パージされなかった**。8/22と8/23に2回続けて、74件中72件は origin が新しいのに
+    // CFが18時間前のHTMLを配信し続ける状態になり、人が手で purge-cf を叩いて復旧した。
+    //
+    // 「origin が古いままパージすると STALE を焼き付ける」（2026-07-27の事故②）という
+    // ルールは正しいが、それは **slug 単位の話**。origin が新しくなった slug をパージ
+    // しない理由はない。よって成功分だけパージし、失敗分は触らずにやり直し方を出す。
+    const purgeTargets = targets.filter((t) => !coldSlugs.has(t.slug));
+
+    if (purgeTargets.length) {
+      console.log('');
+      console.log('▶ Cloudflare エッジキャッシュをパージ（ISR再生成の "後" に実行）');
+      if (cold.length) {
+        console.log(`   （origin が新しくなった ${purgeTargets.length}件のみ。失敗した ${cold.length}件はパージしません）`);
+      }
+      await cfPurge(purgeTargets);
+    }
+
     if (cold.length) {
+      const list = cold.map((c) => c.slug).join(',');
       console.error('');
-      console.error(`${NG} origin(Vercel) がまだ新しい内容を返しません: ${cold.map((c) => c.slug).join(', ')}`);
-      console.error('   ここで CF をパージすると STALE を焼き付けます（2026-07-27の事故②）。パージせず中断します。');
+      console.error(`${NG} origin(Vercel) がまだ新しい内容を返しません: ${list}`);
+      console.error('   この分だけCFをパージしていません（STALEを焼き付けないため）。');
+      console.error('   Ready を確認してから、次でやり直せます:');
+      console.error('');
+      console.error(`     npm run publish -- --no-build --slug=${list}`);
+      console.error('');
+      if (purgeTargets.length) {
+        console.error(`   なお成功した ${purgeTargets.length}件はパージ済みなので、やり直しは上の ${cold.length}件だけで足ります。`);
+      }
       process.exit(1);
     }
-    console.log('');
-    console.log('▶ Cloudflare エッジキャッシュをパージ（ISR再生成の "後" に実行）');
-    await cfPurge(targets);
   } else {
     console.log(`${WARN} --verify-only: ビルド・パージをスキップして検証だけ行います。`);
   }
