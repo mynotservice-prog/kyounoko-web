@@ -28,6 +28,7 @@ import {
   getRestaurantFoodHubLinks,
   getChainCrossLinks,
   getGenreRivalLinks,
+  getDayPlanCta,
   extractChecklistSection,
   allowsFoodBridgeAlongsideCoop,
   splitBodyAtSection,
@@ -1541,6 +1542,19 @@ function FileArticleView({ article }: { article: FileArticle }) {
                 eyebrow="このお店をもっと知る"
                 heading="同じお店・チェーン比較で迷わない"
                 items={chainLinks}
+              />
+            ) : null;
+          })()}
+
+          {/* 外食記事 → 「今日の流れ」ツールへの導線（お店を軸にした1日プラン） */}
+          {(() => {
+            const dayPlanCta = getDayPlanCta(article.slug, article.category, article.title);
+            return dayPlanCta ? (
+              <CrossLinkCards
+                variant="compact"
+                eyebrow="1日プラン"
+                heading="お店を決めたら、前後の過ごし方も"
+                items={[dayPlanCta]}
               />
             ) : null;
           })()}

@@ -505,6 +505,27 @@ const RESTAURANT_FOOD_HUBS: HubLink[] = [
 ];
 
 /**
+ * 外食文脈の記事に出す「1日プランに組み込む」導線（/today への送客）。
+ * チェーン記事はエリア不定のため店舗の実在は断定せず、駅選択から始まる
+ * 「今日の流れ」ツールへ汎用CTAで送る（店舗実在の推定は執筆規約で禁止）。
+ * 非外食文脈では null。
+ */
+export function getDayPlanCta(
+  slug: string,
+  category?: string,
+  title?: string,
+): HubLink | null {
+  if (!isRestaurantContext(slug, category, title)) return null;
+  return {
+    href: '/today',
+    title: 'お店を決めたら、1日の流れも組む｜今日どこ行く？',
+    description:
+      '駅を選ぶと「午前あそぶ→お昼→午後」を、設備を確認した実在スポットだけで提案します。お昼の候補にこのお店も組み込めます。',
+    eyebrow: '1日プラン',
+  };
+}
+
+/**
  * 外食文脈の記事に出す「食事の準備に役立つ記事」回遊リンク（高単価ハブ）。
  * 非外食文脈、または自身が対象ハブの場合は空配列。
  */

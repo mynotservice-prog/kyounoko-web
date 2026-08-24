@@ -43,6 +43,9 @@ import { getUpcomingEventsNear } from '@/lib/events';
 import { UpcomingEventsNearby } from '@/components/event/UpcomingEventsNearby';
 import { getVenueAnnualEvents } from '@/lib/annual-events';
 import { VenueAnnualEvents } from '@/components/event/VenueAnnualEvents';
+import { buildSpotDayPlan } from '@/lib/spot-day-plan';
+import { EventDayPlanSection } from '@/components/event/EventDayPlanSection';
+import { resolveStationSlugByName } from '@/lib/all-stations';
 import { getAreaName } from '@/lib/area';
 import { getTempClosure } from '@/lib/spot-temp-closed';
 import { INDEXABLE_ROBOTS } from '@/lib/robots-meta';
@@ -963,6 +966,36 @@ export default async function SpotPage({ params }: Props) {
             </div>
           </>
         )}
+
+        {/* このスポットを軸にした1日の流れ（一次データのみ・埋まらないスロットは省く） */}
+        {(() => {
+          const dayPlan = buildSpotDayPlan(entry);
+          if (!dayPlan) return null;
+          const stationSlug =
+            entry.area === 'tokyo' && spot.nearestStation
+              ? resolveStationSlugByName(spot.nearestStation)
+              : undefined;
+          return (
+            <EventDayPlanSection
+              plan={dayPlan}
+              cityLabel={spot.ward ?? spot.city ?? getAreaName(entry.area)}
+              heading={`${spot.name}を軸にした1日の流れ`}
+              intro={`編集部が設備・料金を確認した実在スポットだけで組んでいます。時間は目安です。混雑や子どものお昼寝にあわせて前後を入れ替えてください。`}
+              footer={
+                stationSlug ? (
+                  <p style={{ fontSize: 12.5, margin: '10px 2px 0' }}>
+                    <Link
+                      href={`/today?station=${stationSlug}`}
+                      style={{ color: 'var(--v2-orange-deep)', fontWeight: 700 }}
+                    >
+                      → {spot.nearestStation}を起点に、年齢・天気の条件を変えて1日プランを組み直す
+                    </Link>
+                  </p>
+                ) : undefined
+              }
+            />
+          );
+        })()}
 
         {/* この会場で毎年ひらかれるイベント（終了しても「毎年◯月ごろ」として残る） */}
         <VenueAnnualEvents events={venueAnnualEvents} spotName={spot.name} />
