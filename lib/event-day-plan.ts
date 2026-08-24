@@ -19,6 +19,16 @@ import {
 } from './spots';
 import { getAreaName } from './area';
 import { isSpotAvailableNow } from './spot-temp-closed';
+import {
+  findStationBySlug,
+  getAllStations,
+  resolveStationSlugByName,
+} from './all-stations';
+import {
+  getIndieRestaurantsByStation,
+  INDIE_GENRE_LABEL,
+  type IndieRestaurant,
+} from './indie-restaurants';
 
 export type EventDayPlanStep = {
   /** 時間帯ラベル（時刻は断定しない） */
@@ -65,6 +75,88 @@ function popularFirst(a: Spot, b: Spot): number {
   return a.name.localeCompare(b.name, 'ja');
 }
 
+/** nearestStation（slug/日本語名が混在）から駅slugを解決。spot-day-plan と同じ両対応。 */
+function stationSlugOfSpot(s: Spot): string | undefined {
+  const ns = s.nearestStation;
+  if (!ns) return undefined;
+  if (findStationBySlug(ns)) return ns;
+  return resolveStationSlugByName(ns);
+}
+
+/** 個人店の子連れ向きスコア（true のフィールドだけ数える）。 */
+function indieScore(r: IndieRestaurant): number {
+  let score = 0;
+  if (r.popular) score += 2;
+  for (const k of [
+    'kidsChair', 'kidsMenu', 'strollerOk', 'strollerToSeat', 'privateRoom',
+    'bringBabyFood', 'kidsCutlery', 'shareDish', 'stepFree',
+  ] as const) {
+    if (r[k]) score += 1;
+  }
+  if (r.seatingType?.includes('zashiki')) score += 1;
+  return score;
+}
+
+function indieFacets(r: IndieRestaurant): string[] {
+  const f: string[] = [];
+  if (r.kidsChair) f.push('キッズチェア');
+  if (r.kidsMenu) f.push('キッズメニュー');
+  if (r.strollerOk || r.strollerToSeat) f.push('ベビーカーOK');
+  if (r.seatingType?.includes('zashiki')) f.push('座敷あり');
+  else if (r.privateRoom) f.push('個室あり');
+  return f;
+}
+
+type IndieLunchHit = { r: IndieRestaurant; stationSlug: string; move: string };
+
+/**
+ * イベントに紐づく駅の個人店を探す。
+ * ①会場と同一施設のスポットが見つかればその最寄り駅（会場と同じ駅＝moveは店の駅徒歩表記そのまま）
+ * ②東京のイベントは、開催区と同じ区の駅の個人店（駅名を明示して「◯◯駅周辺・△△区内」と正直に表示）
+ */
+function findIndieLunchForEvent(
+  ev: EventEntry,
+  venueSpots: Spot[],
+): IndieLunchHit | undefined {
+  // ① 会場スポットの最寄り駅
+  for (const vs of venueSpots) {
+    const slug = stationSlugOfSpot(vs);
+    if (!slug) continue;
+    const list = [...getIndieRestaurantsByStation(slug)].sort(
+      (a, b) => indieScore(b) - indieScore(a) || a.name.localeCompare(b.name, 'ja'),
+    );
+    if (list.length) {
+      const top = list.slice(0, 3);
+      const r = top[slugHash(ev.slug) % top.length];
+      return { r, stationSlug: slug, move: r.area };
+    }
+  }
+  // ② 東京: 開催区と同じ区の駅（駅名を明示。会場からの距離は断定しない）
+  if (ev.area === 'tokyo' && ev.city) {
+    const wardStations = getAllStations().filter(
+      (s) => s.region === 'tokyo' && s.regionLabel === ev.city,
+    );
+    const hits: IndieLunchHit[] = [];
+    for (const st of wardStations) {
+      for (const r of getIndieRestaurantsByStation(st.slug)) {
+        hits.push({
+          r,
+          stationSlug: st.slug,
+          move: `${st.name}駅周辺・${ev.city}内`,
+        });
+      }
+    }
+    if (hits.length) {
+      const sorted = hits.sort(
+        (a, b) => indieScore(b.r) - indieScore(a.r) || a.r.name.localeCompare(b.r.name, 'ja'),
+      );
+      const top = sorted.slice(0, 3);
+      return top[slugHash(ev.slug) % top.length];
+    }
+  }
+  return undefined;
+}
+
 /** イベント会場そのものと同一施設のスポットを候補から外す（自己参照の防止）。 */
 export function isVenueSelf(ev: EventEntry, s: Spot): boolean {
   const name = s.name.replace(/\s/g, '');
@@ -80,9 +172,11 @@ export function isVenueSelf(ev: EventEntry, s: Spot): boolean {
  */
 export function buildEventDayPlan(ev: EventEntry): EventDayPlan | null {
   const areaName = getAreaName(ev.area);
-  const pool = getAllSpotsWithSlug().filter(
+  const allInArea = getAllSpotsWithSlug().filter((x) => x.area === ev.area);
+  // 会場と同一施設のスポット（最寄り駅の解決に使う。プラン候補からは外す）
+  const venueSpots = allInArea.filter((x) => isVenueSelf(ev, x.spot)).map((x) => x.spot);
+  const pool = allInArea.filter(
     (x) =>
-      x.area === ev.area &&
       !isVenueSelf(ev, x.spot) &&
       // 改修等で休館中の施設は「午後はここへ」と案内しない（期間が明ければ自動で戻る）
       isSpotAvailableNow(x.spot.name),
@@ -103,8 +197,22 @@ export function buildEventDayPlan(ev: EventEntry): EventDayPlan | null {
   });
 
   // ---- お昼: 子連れOKレストラン ----
-  // 市区町村一致の実店舗 → （東京のみ）全国ファミリー向けチェーン の順。
-  // どちらも無ければスロットごと省く（レストランを創作しない）。
+  // 優先順: ①駅×個人店データ（会場スポットの最寄り駅→東京は同区の駅）
+  //         → ②市区町村一致の実店舗 → ③（東京のみ）全国ファミリー向けチェーン。
+  // どれも無ければスロットごと省く（レストランを創作しない）。
+  const indieHit = findIndieLunchForEvent(ev, venueSpots);
+  if (indieHit) {
+    steps.push({
+      slot: 'お昼',
+      icon: '🍽',
+      kind: 'restaurant',
+      title: `${indieHit.r.name}（${INDIE_GENRE_LABEL[indieHit.r.genre]}）`,
+      note: `${indieHit.r.description} 設備・営業時間は店舗にご確認を。`,
+      href: `/station/${indieHit.stationSlug}#section-indies`,
+      facets: indieFacets(indieHit.r).slice(0, 3),
+      move: indieHit.move,
+    });
+  }
   const restaurants = pool.filter((x) => x.spot.category === 'restaurant');
   const localLunch = restaurants
     .filter((x) => x.spot.ward !== '複数' && matchCity(x.spot))
@@ -119,7 +227,7 @@ export function buildEventDayPlan(ev: EventEntry): EventDayPlan | null {
           .sort((a, b) => popularFirst(a.spot, b.spot))
       : [];
   const chainLunch = chainPool.length > 0 ? chainPool[slugHash(ev.slug) % chainPool.length] : undefined;
-  const lunch = localLunch ?? chainLunch;
+  const lunch = indieHit ? undefined : (localLunch ?? chainLunch);
   if (lunch) {
     usedSlugs.push(lunch.slug);
     steps.push({
@@ -162,7 +270,7 @@ export function buildEventDayPlan(ev: EventEntry): EventDayPlan | null {
     });
   }
 
-  // リンクできる実在スポットが1件も無いなら、プランとして成立しない
-  if (usedSlugs.length === 0) return null;
+  // リンクできる実在の行き先（個人店・スポット）が1件も無いなら、プランとして成立しない
+  if (!steps.some((s) => s.href)) return null;
   return { steps, usedSlugs };
 }

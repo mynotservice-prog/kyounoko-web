@@ -37,6 +37,11 @@ import {
 import type { AreaSlug } from './area';
 import { pickTopPlan, type PlanMeta } from './plans';
 import type { Weather } from './types';
+import {
+  getIndieRestaurantsByStation,
+  INDIE_GENRE_LABEL,
+  type IndieRestaurant,
+} from './indie-restaurants';
 
 export type OutingSlotKey = 'morning' | 'lunch' | 'afternoon';
 
@@ -62,6 +67,8 @@ export type OutingSlot = {
   spot?: Spot;
   /** /spot/[slug] へのリンク用 */
   spotSlug?: string;
+  /** 個人店など /spot 以外の行き先。指定時は spotSlug より優先してリンクする */
+  href?: string;
   plan?: PlanMeta;
   /** お昼スロットの子連れ設備（ベビーチェア等） */
   facets?: string[];
@@ -408,15 +415,72 @@ function chainRankFor(anchorSlug?: string): (s: Spot) => number {
   };
 }
 
+/** 個人店の子連れ向きスコア（true のフィールドだけ数える。要店舗確認前提のデータ規律に従う）。 */
+export function indieLunchScore(r: IndieRestaurant): number {
+  let score = 0;
+  if (r.popular) score += 2;
+  for (const k of [
+    'kidsChair',
+    'kidsMenu',
+    'strollerOk',
+    'strollerToSeat',
+    'privateRoom',
+    'bringBabyFood',
+    'kidsCutlery',
+    'shareDish',
+    'stepFree',
+  ] as const) {
+    if (r[k]) score += 1;
+  }
+  if (r.seatingType?.includes('zashiki')) score += 1;
+  return score;
+}
+
+/** アンカー駅の個人店を子連れ向きスコア順で返す。 */
+export function indieLunchCandidates(anchorSlug: string | undefined): IndieRestaurant[] {
+  if (!anchorSlug) return [];
+  return [...getIndieRestaurantsByStation(anchorSlug)].sort(
+    (a, b) => indieLunchScore(b) - indieLunchScore(a) || a.name.localeCompare(b.name, 'ja'),
+  );
+}
+
+/** 個人店を表示用の擬似 Spot に変換する（/spot ページは無いので slug は作らない）。 */
+export function indieToLunchSpot(r: IndieRestaurant): Spot {
+  return {
+    name: `${r.name}（${INDIE_GENRE_LABEL[r.genre]}）`,
+    category: 'restaurant',
+    place: 'indoor',
+    ages: ['0-1', '2-3', '4-6'],
+    city: r.area,
+    note: `${r.description} 設備・営業時間は店舗にご確認を。`,
+    babyChair: r.kidsChair,
+    kidsMenu: r.kidsMenu,
+    strollerAccess: r.strollerOk || r.strollerToSeat,
+    babyFood: r.bringBabyFood,
+  };
+}
+
 function pickLunch(
   areaKey: string,
   regionLabel: string,
   q: OutingQuery,
   variant = 0,
   anchorSlug?: string,
-): { spot: Spot; tier: CoherenceTier } | null {
+): { spot: Spot; tier: CoherenceTier; href?: string; moveText?: string } | null {
+  const at = <T,>(list: T[]) => list[((variant % list.length) + list.length) % list.length];
+  // ① 駅近の個人店（駅×個人店データ・子連れ設備スコア順）。チェーンより先に出す。
+  const indies = indieLunchCandidates(anchorSlug);
+  if (indies.length) {
+    const r = at(indies);
+    return {
+      spot: indieToLunchSpot(r),
+      tier: 'station',
+      href: `/station/${anchorSlug}#section-indies`,
+      moveText: r.area,
+    };
+  }
+  // ② 区/市内の実店舗スポット → ③ 全国ファミリー向けチェーン
   const { ward, chain } = lunchCandidates(areaKey, regionLabel, q, anchorSlug);
-  const at = (list: Spot[]) => list[((variant % list.length) + list.length) % list.length];
   if (ward.length) return { spot: at(ward), tier: 'ward' };
   if (chain.length) return { spot: at(chain), tier: 'chain' };
   return null;
@@ -554,12 +618,18 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
       icon: '🍽',
       kind: 'restaurant',
       spot: lunch.spot,
+      // 個人店は /station の個人店セクションへ（/spot ページを持たない）
+      href: lunch.href,
       // チェーンは TOKYO_RESTAURANTS（area='tokyo'）、地域店は areaKey で登録
-      spotSlug: spotToSlug(lunch.spot, lunch.tier === 'chain' ? 'tokyo' : slugArea),
+      spotSlug: lunch.href
+        ? undefined
+        : spotToSlug(lunch.spot, lunch.tier === 'chain' ? 'tokyo' : slugArea),
       facets: facetsOf(lunch.spot),
       move: {
         // 「徒歩圏」は同駅のときだけ。区/市は広い場合があるので断定しない。
-        text: lunch.tier === 'ward' ? `${regionLabel}内` : '周辺のファミリー向けチェーン',
+        text:
+          lunch.moveText ??
+          (lunch.tier === 'ward' ? `${regionLabel}内` : '周辺のファミリー向けチェーン'),
         tier: lunch.tier,
       },
       tier: lunch.tier,
