@@ -1,18 +1,35 @@
 /**
- * /event/[slug] の「イベント起点の1日モデルコース」セクション。
- * lib/event-day-plan.ts の buildEventDayPlan() の結果を縦タイムラインで描画する。
- * V2 デザイン（イベントページ準拠のインラインスタイル）。
+ * 「1日モデルコース」タイムラインセクション（イベント起点・スポット起点で共用）。
+ * lib/event-day-plan.ts / lib/spot-day-plan.ts の結果を縦タイムラインで描画する。
+ * V2 デザイン（イベント/スポットページ準拠のインラインスタイル）。
  */
 import Link from 'next/link';
+import type { ReactNode } from 'react';
 import { V2Icon } from '@/components/v2/V2Icon';
 import type { EventDayPlan } from '@/lib/event-day-plan';
 
-export function EventDayPlanSection({ plan, cityLabel }: { plan: EventDayPlan; cityLabel: string }) {
+export function EventDayPlanSection({
+  plan,
+  cityLabel,
+  heading,
+  intro,
+  footer,
+}: {
+  plan: EventDayPlan;
+  cityLabel: string;
+  /** 省略時はイベント起点の既定見出し */
+  heading?: string;
+  /** 省略時はイベント起点の既定リード文 */
+  intro?: string;
+  /** タイムライン直下に置く任意の要素（/today へのCTA等） */
+  footer?: ReactNode;
+}) {
   return (
     <div className="v2-section" style={{ marginTop: 20 }}>
       <div className="v2-sec-head">
         <h2 className="v2-sec-title">
-          <span className="v2-bar-accent"></span>このイベントを軸にした1日モデルコース
+          <span className="v2-bar-accent"></span>
+          {heading ?? 'このイベントを軸にした1日モデルコース'}
         </h2>
       </div>
       <p
@@ -24,8 +41,8 @@ export function EventDayPlanSection({ plan, cityLabel }: { plan: EventDayPlan; c
           padding: '0 2px',
         }}
       >
-        編集部が設備・料金を確認した{cityLabel}の実在スポットだけで組んでいます。
-        時間はあくまで目安です。イベントの開催時間にあわせて前後を入れ替えてください。
+        {intro ??
+          `編集部が設備・料金を確認した${cityLabel}の実在スポットだけで組んでいます。時間はあくまで目安です。イベントの開催時間にあわせて前後を入れ替えてください。`}
       </p>
       <div
         style={{
@@ -146,6 +163,7 @@ export function EventDayPlanSection({ plan, cityLabel }: { plan: EventDayPlan; c
           })}
         </ol>
       </div>
+      {footer}
     </div>
   );
 }

@@ -43,7 +43,7 @@ export type EventDayPlan = {
   usedSlugs: string[];
 };
 
-function facetsOf(s: Spot): string[] {
+export function facetsOf(s: Spot): string[] {
   const f: string[] = [];
   if (s.babyChair) f.push('ベビーチェア');
   if (s.kidsMenu) f.push('キッズメニュー');
@@ -52,8 +52,8 @@ function facetsOf(s: Spot): string[] {
   return f;
 }
 
-/** 決定的な軽量ハッシュ（イベントごとにチェーン候補を回転させるためだけに使う）。 */
-function slugHash(s: string): number {
+/** 決定的な軽量ハッシュ（ページごとにチェーン候補を回転させるためだけに使う）。 */
+export function slugHash(s: string): number {
   let h = 0;
   for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
   return h;
