@@ -10,7 +10,13 @@ import {
 } from '@/lib/articles';
 import { buildDayPlan, type DayPlanSlot } from '@/lib/plans';
 import { getKidFriendlyRestaurants, type Spot, type AgeTag } from '@/lib/spots';
-import { buildOutingPlan, lunchCandidates, resolveOutingAnchor } from '@/lib/outing-plan';
+import {
+  buildOutingPlan,
+  lunchCandidates,
+  indieLunchCandidates,
+  indieToLunchSpot,
+  resolveOutingAnchor,
+} from '@/lib/outing-plan';
 import { OutingPlanView, LunchListView } from '@/components/today/OutingPlanView';
 import { OmakasePlanButton } from '@/components/today/OmakasePlanButton';
 import {
@@ -526,6 +532,11 @@ export default async function TodayPage({ searchParams }: Props) {
         },
         anchor.stationSlug,
       );
+      // 駅近の個人店（チェーンより先に出す）。/spot ページは無いので駅ページの個人店一覧へ
+      const indieRests = indieLunchCandidates(anchor.stationSlug).map(indieToLunchSpot);
+      const indieHref = anchor.stationSlug
+        ? `/station/${anchor.stationSlug}#section-indies`
+        : undefined;
       return (
         <V2Frame header="sub" active="today" backHref={`/today?${new URLSearchParams(outingParams).toString()}`}>
           <div className="container">
@@ -543,6 +554,8 @@ export default async function TodayPage({ searchParams }: Props) {
             wardRest={wardRest}
             chain={chain}
             ageLabel={ageLabel}
+            indies={indieRests}
+            indieHref={indieHref}
           />
         </V2Frame>
       );

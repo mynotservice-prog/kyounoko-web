@@ -156,10 +156,13 @@ function SlotCard({ slot }: { slot: OutingSlot }) {
     </div>
   );
 
-  // spot/restaurant はスポット詳細へリンク（おうちプランはリンクなし）
-  if (slot.spotSlug && slot.kind !== 'homeplan') {
+  // spot/restaurant はスポット詳細へリンク（個人店は href=駅ページの個人店セクション優先。おうちプランはリンクなし）
+  if ((slot.href || slot.spotSlug) && slot.kind !== 'homeplan') {
     return (
-      <Link href={`/spot/${slot.spotSlug}`} style={{ textDecoration: 'none', display: 'block' }}>
+      <Link
+        href={slot.href ?? `/spot/${slot.spotSlug}`}
+        style={{ textDecoration: 'none', display: 'block' }}
+      >
         {inner}
       </Link>
     );
@@ -172,6 +175,48 @@ function SlotCard({ slot }: { slot: OutingSlot }) {
     );
   }
   return inner;
+}
+
+/** 個人店の1行（/spot ページが無いので駅ページの個人店セクションへ）。 */
+function IndieRow({ s, href }: { s: Spot; href?: string }) {
+  const facets = spotFacets(s);
+  const inner = (
+    <div
+      style={{
+        background: 'var(--paper-card, #fffaf6)',
+        border: '1px solid var(--line)',
+        borderRadius: 12,
+        padding: '11px 13px',
+      }}
+    >
+      <div style={{ fontSize: 14.5, fontWeight: 800, color: 'var(--ink)' }}>{s.name}</div>
+      {s.city && (
+        <div style={{ fontSize: 11.5, fontWeight: 700, color: 'var(--ink-mute)', marginTop: 2 }}>
+          🚶 {s.city}
+        </div>
+      )}
+      {s.note && (
+        <div style={{ fontSize: 12, color: 'var(--ink-sub)', marginTop: 3, lineHeight: 1.5 }}>
+          {s.note}
+        </div>
+      )}
+      {facets.length > 0 && (
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5, marginTop: 7 }}>
+          {facets.map((f) => (
+            <span key={f} className="meta-chip clay" style={{ fontSize: 10.5, fontWeight: 700 }}>
+              {f}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+  if (!href) return <div style={{ marginBottom: 8 }}>{inner}</div>;
+  return (
+    <Link href={href} style={{ textDecoration: 'none', display: 'block', marginBottom: 8 }}>
+      {inner}
+    </Link>
+  );
 }
 
 /** お昼スロット単体ビュー（?slot=lunch）: 子連れで入れる店一覧。 */
@@ -216,12 +261,18 @@ export function LunchListView({
   wardRest,
   chain,
   ageLabel,
+  indies = [],
+  indieHref,
 }: {
   anchorLabel: string;
   wardName: string;
   wardRest: Spot[];
   chain: Spot[];
   ageLabel?: string;
+  /** 駅近の個人店（擬似Spot化済み・チェーンより先に出す） */
+  indies?: Spot[];
+  /** 個人店の詳細一覧（/station/[slug]#section-indies）へのリンク */
+  indieHref?: string;
 }) {
   const offer = getSpotReservationOffer('restaurant');
   return (
@@ -234,6 +285,24 @@ export function LunchListView({
       <p style={{ fontSize: 13, color: 'var(--ink-sub)', margin: '8px 0 14px', lineHeight: 1.6 }}>
         ベビーチェア・キッズメニュー・座敷など、子連れで入りやすいお店です。
       </p>
+
+      {indies.length > 0 && (
+        <>
+          <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-mute)', margin: '4px 0 8px' }}>
+            駅近の個人店・人気店
+          </div>
+          {indies.slice(0, 8).map((s) => (
+            <IndieRow key={s.name} s={s} href={indieHref} />
+          ))}
+          {indieHref && (
+            <p style={{ fontSize: 12.5, margin: '2px 0 10px' }}>
+              <Link href={indieHref} style={{ color: 'var(--clay, #c9603e)', fontWeight: 700 }}>
+                → この駅の個人店をぜんぶ見る
+              </Link>
+            </p>
+          )}
+        </>
+      )}
 
       {wardRest.length > 0 && (
         <>
@@ -480,9 +549,9 @@ export function OutingPlanView({
                   <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', minWidth: 78 }}>
                     {slot.time} {slot.label}
                   </span>
-                  {slot.spotSlug && slot.kind !== 'homeplan' ? (
+                  {(slot.href || slot.spotSlug) && slot.kind !== 'homeplan' ? (
                     <Link
-                      href={`/spot/${slot.spotSlug}`}
+                      href={slot.href ?? `/spot/${slot.spotSlug}`}
                       style={{ fontSize: 14, fontWeight: 700, color: 'var(--ink)', textDecoration: 'none' }}
                     >
                       {slot.icon} {label}
