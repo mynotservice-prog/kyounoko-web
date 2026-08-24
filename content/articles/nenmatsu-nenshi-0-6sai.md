@@ -125,6 +125,7 @@ legacyHero: /hero/food-japan-01.webp
 
 ## 関連記事
 
+- [ファミレス・チェーン店の年末年始営業はどこで確認する？公式リンク集](/article/nenmatsu-nenshi-chain-eigyou)
 - [0歳の育児完全マップ](/article/0sai-ikuji-kanzen-map)
 - [1〜2歳の育児完全マップ](/article/1-2sai-ikuji-kanzen-map)
 - [3〜6歳の育児完全マップ](/article/3-6sai-ikuji-kanzen-map)

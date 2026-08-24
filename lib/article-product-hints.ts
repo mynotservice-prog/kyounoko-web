@@ -667,3 +667,194 @@ export function getChainCrossLinks(slug: string): HubLink[] {
   // 自分自身へのリンクは除外
   return links.filter((l) => !l.href.endsWith(`/${slug}`));
 }
+
+// ----------------------------------------------------------------------
+// 同ジャンル他チェーン比較（回遊モジュール）
+// ----------------------------------------------------------------------
+
+/**
+ * チェーン定義。slugの表記ゆれ（kurasushi / kura-sushi 等）は aliases で吸収する。
+ * genres は複数所属可（例: バーミヤンはファミレスと中華の両方で比較される）。
+ */
+type RivalChain = {
+  name: string;
+  genres: string[];
+  /** 記事slugの stem 候補。先に見つかったものを使う。 */
+  aliases: string[];
+};
+
+const RIVAL_CHAINS: RivalChain[] = [
+  // 回転寿司
+  { name: 'くら寿司', genres: ['kaitenzushi'], aliases: ['kurasushi', 'kura-sushi'] },
+  { name: 'スシロー', genres: ['kaitenzushi'], aliases: ['sushiro'] },
+  { name: 'はま寿司', genres: ['kaitenzushi'], aliases: ['hamasushi', 'hama-sushi'] },
+  { name: 'かっぱ寿司', genres: ['kaitenzushi'], aliases: ['kappa-sushi'] },
+  { name: '魚べい', genres: ['kaitenzushi'], aliases: ['uobei'] },
+  { name: 'がってん寿司', genres: ['kaitenzushi'], aliases: ['gatten-sushi'] },
+  { name: 'すし銚子丸', genres: ['kaitenzushi'], aliases: ['choushimaru'] },
+  // ファミレス
+  { name: 'ガスト', genres: ['famires'], aliases: ['gusto'] },
+  { name: 'サイゼリヤ', genres: ['famires'], aliases: ['saizeriya', 'saize'] },
+  { name: 'バーミヤン', genres: ['famires', 'chuka'], aliases: ['bamiyan'] },
+  { name: 'ジョナサン', genres: ['famires'], aliases: ['jonathan'] },
+  { name: 'デニーズ', genres: ['famires'], aliases: ['dennys', 'denny-s'] },
+  { name: 'ココス', genres: ['famires'], aliases: ['cocos'] },
+  { name: 'ロイヤルホスト', genres: ['famires'], aliases: ['royal-host'] },
+  { name: 'びっくりドンキー', genres: ['famires'], aliases: ['bikkuri-donkey'] },
+  { name: 'ビッグボーイ', genres: ['famires'], aliases: ['bigboy'] },
+  { name: 'ブロンコビリー', genres: ['famires'], aliases: ['bronco-billy'] },
+  { name: 'フライングガーデン', genres: ['famires'], aliases: ['flying-garden'] },
+  { name: 'さわやか', genres: ['famires'], aliases: ['sawayaka'] },
+  { name: 'ステーキガスト', genres: ['famires'], aliases: ['steakgusto', 'steak-gusto'] },
+  { name: 'ステーキ宮', genres: ['famires'], aliases: ['steak-miya'] },
+  // カフェ・喫茶
+  { name: 'コメダ珈琲店', genres: ['cafe'], aliases: ['komeda'] },
+  { name: '星乃珈琲店', genres: ['cafe'], aliases: ['hoshino'] },
+  { name: 'スターバックス', genres: ['cafe'], aliases: ['starbucks'] },
+  { name: 'ドトール', genres: ['cafe'], aliases: ['doutor'] },
+  { name: 'タリーズコーヒー', genres: ['cafe'], aliases: ['tullys-coffee'] },
+  { name: '上島珈琲店', genres: ['cafe'], aliases: ['ueshima-coffee'] },
+  { name: 'サンマルクカフェ', genres: ['cafe'], aliases: ['sanmarc-cafe'] },
+  { name: 'ベローチェ', genres: ['cafe'], aliases: ['veloce'] },
+  { name: 'むさしの森珈琲', genres: ['cafe'], aliases: ['musashinomori-coffee'] },
+  // バーガー・ファストフード
+  { name: 'マクドナルド', genres: ['burger'], aliases: ['mcdonalds'] },
+  { name: 'モスバーガー', genres: ['burger'], aliases: ['mos-burger'] },
+  { name: 'バーガーキング', genres: ['burger'], aliases: ['burger-king'] },
+  { name: 'ケンタッキー', genres: ['burger'], aliases: ['kfc'] },
+  { name: 'フレッシュネスバーガー', genres: ['burger'], aliases: ['freshness-burger'] },
+  { name: 'ゼッテリア', genres: ['burger'], aliases: ['zetteria'] },
+  // うどん・そば
+  { name: '丸亀製麺', genres: ['udon'], aliases: ['marukame', 'marugame'] },
+  { name: 'はなまるうどん', genres: ['udon'], aliases: ['hanamarudon', 'hanamaru-udon'] },
+  { name: '資さんうどん', genres: ['udon'], aliases: ['sukesan-udon'] },
+  { name: '山田うどん食堂', genres: ['udon'], aliases: ['yamada-udon'] },
+  // 牛丼・定食
+  { name: 'すき家', genres: ['gyudon'], aliases: ['sukiya'] },
+  { name: '松屋', genres: ['gyudon'], aliases: ['matsuya'] },
+  { name: '吉野家', genres: ['gyudon'], aliases: ['yoshinoya'] },
+  { name: 'なか卯', genres: ['gyudon'], aliases: ['nakau'] },
+  { name: 'やよい軒', genres: ['gyudon'], aliases: ['yayoiken'] },
+  { name: '大戸屋', genres: ['gyudon'], aliases: ['ootoya'] },
+  { name: 'まいどおおきに食堂', genres: ['gyudon'], aliases: ['maido-ookini-shokudo'] },
+  // 中華・ラーメン
+  { name: '餃子の王将', genres: ['chuka'], aliases: ['ohsho'] },
+  { name: '日高屋', genres: ['chuka', 'ramen'], aliases: ['hidakaya'] },
+  { name: '幸楽苑', genres: ['chuka', 'ramen'], aliases: ['kourakuen'] },
+  { name: '一蘭', genres: ['ramen'], aliases: ['ichiran'] },
+  { name: '天下一品', genres: ['ramen'], aliases: ['tenkaippin'] },
+  { name: '丸源ラーメン', genres: ['ramen'], aliases: ['marugen-ramen'] },
+  // 焼肉・しゃぶしゃぶ
+  { name: '焼肉きんぐ', genres: ['yakiniku'], aliases: ['yakiniku-king'] },
+  { name: '牛角', genres: ['yakiniku'], aliases: ['gyukaku'] },
+  { name: '安楽亭', genres: ['yakiniku'], aliases: ['anrakutei'] },
+  { name: 'しゃぶ葉', genres: ['yakiniku'], aliases: ['shabuyo', 'shabuyou'] },
+  { name: 'しゃぶしゃぶ温野菜', genres: ['yakiniku'], aliases: ['onyasai'] },
+  // 和食
+  { name: '華屋与兵衛', genres: ['washoku'], aliases: ['hanaya-yohei'] },
+  { name: '和食さと', genres: ['washoku'], aliases: ['washoku-sato'] },
+  { name: '夢庵', genres: ['washoku'], aliases: ['yumean'] },
+  { name: 'ゆず庵', genres: ['washoku'], aliases: ['yuzuan'] },
+  { name: 'かごの屋', genres: ['washoku'], aliases: ['kagonoya'] },
+  { name: '味の民芸', genres: ['washoku'], aliases: ['ajino-mingei'] },
+  { name: 'ばんどう太郎', genres: ['washoku'], aliases: ['bandotaro'] },
+];
+
+const GENRE_LABELS: Record<string, string> = {
+  kaitenzushi: '回転寿司',
+  famires: 'ファミレス',
+  cafe: 'カフェ・喫茶',
+  burger: 'ハンバーガー・ファストフード',
+  udon: 'うどん',
+  gyudon: '牛丼・定食',
+  chuka: '中華',
+  ramen: 'ラーメン',
+  yakiniku: '焼肉・しゃぶしゃぶ',
+  washoku: '和食',
+};
+
+/** 条件サフィックス → 表示ラベル。 */
+const RIVAL_SUFFIXES: Record<string, string> = {
+  'kids-menu': 'キッズメニュー',
+  'kodzure-koryaku': '子連れ攻略',
+  'baby-chair': 'ベビーチェア',
+  'morning-kosodate': 'モーニング',
+  'rinyushoku-mochikomi': '離乳食持ち込み',
+  'koshitsu': '個室',
+  'stroller': 'ベビーカー',
+};
+
+/** 「同ジャンル他チェーン比較」の見出し情報つき戻り値。 */
+export type GenreRivalBlock = {
+  heading: string;
+  links: HubLink[];
+};
+
+/**
+ * チェーン×条件記事から、同ジャンルの他チェーン×同条件記事への回遊リンクを返す。
+ *
+ * 読者は「くら寿司かスシローか」をまさに比較検討しているので、同条件の
+ * 競合チェーン記事への直行導線は回遊（=AdSenseのPV）とサイト内クラスタ評価の両方に効く。
+ * 同条件の記事が無いチェーンは、その子連れ攻略記事（-kodzure-koryaku）で代替する。
+ *
+ * @param slug 現在の記事slug
+ * @param existingSlugs 実在するインデックス可能な記事slug集合（noindexは除外済みで渡す）
+ */
+export function getGenreRivalLinks(
+  slug: string,
+  existingSlugs: Set<string>,
+): GenreRivalBlock | null {
+  const m = slug.match(
+    /^(.+)-(kids-menu|kodzure-koryaku|baby-chair|morning-kosodate|rinyushoku-mochikomi|koshitsu|stroller)$/,
+  );
+  if (!m) return null;
+  const [, stem, suffix] = m;
+
+  const self = RIVAL_CHAINS.find((c) => c.aliases.includes(stem));
+  if (!self) return null;
+
+  // モーニングだけはジャンルをまたいで「モーニングをやっている店」同士で比較する
+  // （その場合も同ジャンルの競合を先頭に出す：コメダ→星乃が最優先）
+  const isMorning = suffix === 'morning-kosodate';
+  const sameGenre = (c: RivalChain) => c.genres.some((g) => self.genres.includes(g));
+  const rivals = RIVAL_CHAINS.filter((c) => {
+    if (c === self) return false;
+    if (isMorning) return true;
+    return sameGenre(c);
+  }).sort((a, b) => Number(sameGenre(b)) - Number(sameGenre(a)));
+
+  const links: HubLink[] = [];
+  for (const rival of rivals) {
+    // 同条件の記事を最優先、無ければ子連れ攻略記事で代替
+    // （モーニングは「モーニング記事があるチェーン」同士でのみ比較し、代替はしない）
+    const candidates = [
+      ...rival.aliases.map((a) => `${a}-${suffix}`),
+      ...(suffix !== 'kodzure-koryaku' && !isMorning
+        ? rival.aliases.map((a) => `${a}-kodzure-koryaku`)
+        : []),
+    ];
+    const found = candidates.find((s) => existingSlugs.has(s));
+    if (!found) continue;
+    const foundSuffix = found.endsWith(`-${suffix}`) ? suffix : 'kodzure-koryaku';
+    const label = RIVAL_SUFFIXES[foundSuffix];
+    links.push({
+      href: `/article/${found}`,
+      title: `${rival.name}の${label}`,
+      description:
+        foundSuffix === suffix
+          ? `${rival.name}の${label}事情を同じ目線でチェック。`
+          : `${rival.name}の子連れ事情（設備・メニュー・取り分け）をまとめてチェック。`,
+      eyebrow: GENRE_LABELS[rival.genres[0]] ?? 'チェーン比較',
+    });
+    if (links.length >= 4) break;
+  }
+
+  if (links.length < 2) return null;
+
+  return {
+    heading: isMorning
+      ? 'モーニングを他チェーンと比べる'
+      : `${GENRE_LABELS[self.genres[0]] ?? ''}チェーンの${RIVAL_SUFFIXES[suffix]}を比べる`,
+    links,
+  };
+}

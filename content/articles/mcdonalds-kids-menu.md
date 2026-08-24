@@ -82,6 +82,7 @@ lede: >-
 ## 関連記事
 
 - [マクドナルドは子連れOK？ベビーカー・離乳食・座席の完全攻略](/article/mcdonalds-kodzure-koryaku)
+- [ハッピーセットの今のおもちゃは？次はいつから？毎弾更新の定点ページ](/article/happy-set-omocha-genzai)
 - [キッズメニューは何歳から？チェーン別早見表](/article/kids-menu-nansai-kara-hayami)
 - [キッズメニュー充実チェーン15社比較](/article/kids-menu-chain-15-hikaku)
 - [モスバーガーの子連れ攻略｜モスワイワイセット・低アレルゲン](/article/mos-burger-kodzure-koryaku)
