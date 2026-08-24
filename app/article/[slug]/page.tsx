@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
 import { getArticle, getArticleIds } from '@/lib/microcms';
 import {
+  getAllFileArticles,
   getAllFileArticleSlugs,
   getFileArticle,
   getKvOnlyArticleMetas,
@@ -26,6 +27,7 @@ import {
   getRestaurantBridgeOffer,
   getRestaurantFoodHubLinks,
   getChainCrossLinks,
+  getGenreRivalLinks,
   extractChecklistSection,
   allowsFoodBridgeAlongsideCoop,
   splitBodyAtSection,
@@ -1539,6 +1541,24 @@ function FileArticleView({ article }: { article: FileArticle }) {
                 eyebrow="このお店をもっと知る"
                 heading="同じお店・チェーン比較で迷わない"
                 items={chainLinks}
+              />
+            ) : null;
+          })()}
+
+          {/* 同ジャンル他チェーン×同条件への回遊（比較検討中の読者向け・PV/クラスタ評価の両取り） */}
+          {(() => {
+            const indexableSlugs = new Set(
+              getAllFileArticles()
+                .filter((a) => !a.noindex)
+                .map((a) => a.slug),
+            );
+            const rivalBlock = getGenreRivalLinks(article.slug, indexableSlugs);
+            return rivalBlock ? (
+              <CrossLinkCards
+                variant="compact"
+                eyebrow="チェーン比較"
+                heading={rivalBlock.heading}
+                items={rivalBlock.links}
               />
             ) : null;
           })()}

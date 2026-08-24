@@ -362,6 +362,7 @@ speakableSummary: >-
 
 ## 関連記事｜季節行事・冬の遊びの参考に
 
+- [ファミレス・チェーン店の年末年始営業はどこで確認する？公式リンク集](/article/nenmatsu-nenshi-chain-eigyou)
 - [お正月を子どもと楽しむ過ごし方10選｜0〜6歳の年齢別アイデア](/article/oshougatsu-kodomo-sugoshikata)
 - [雪遊びデビュー 2歳から始める準備](/article/yuki-asobi-debut-2sai)
 - [節分の恵方巻き＆鬼パンチおにぎり7選【2026】](/article/tetsubun-onigiri-2026)

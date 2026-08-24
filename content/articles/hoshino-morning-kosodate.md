@@ -494,7 +494,9 @@ A. **基本は禁煙**です。公式店舗情報291店の備考欄は**禁煙22
 
 **他チェーンのモーニング攻略**
 
-- [コメダ珈琲のモーニング攻略](/article/komeda-morning-kosodate)
+- [コメダのモーニングは何時まで？開店〜11時・土日も同じ](/article/komeda-morning-kosodate)
+- [ガストのモーニングは何時まで？開店〜10時30分・朝もキッズプレートあり](/article/gusto-morning-kosodate)
+- [デニーズのモーニングは何時まで？開店〜11時・和朝食の値段](/article/dennys-morning-kosodate)
 - [スタバのモーニング攻略](/article/starbucks-kodzure-koryaku)
 - [ドトールのモーニング攻略](/article/doutor-kodzure-koryaku)
 
