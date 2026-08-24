@@ -971,10 +971,17 @@ export default async function SpotPage({ params }: Props) {
         {(() => {
           const dayPlan = buildSpotDayPlan(entry);
           if (!dayPlan) return null;
+          // nearestStation は slug（'toneri-koen'）と日本語名（'舎人公園駅'）が混在するので両対応
+          const ns = spot.nearestStation;
           const stationSlug =
-            entry.area === 'tokyo' && spot.nearestStation
-              ? resolveStationSlugByName(spot.nearestStation)
+            entry.area === 'tokyo' && ns
+              ? findStationBySlug(ns)
+                ? ns
+                : resolveStationSlugByName(ns)
               : undefined;
+          const stationLabel = stationSlug
+            ? (findStationBySlug(stationSlug)?.name ?? ns)
+            : undefined;
           return (
             <EventDayPlanSection
               plan={dayPlan}
@@ -988,7 +995,7 @@ export default async function SpotPage({ params }: Props) {
                       href={`/today?station=${stationSlug}`}
                       style={{ color: 'var(--v2-orange-deep)', fontWeight: 700 }}
                     >
-                      → {spot.nearestStation}を起点に、年齢・天気の条件を変えて1日プランを組み直す
+                      → {stationLabel}駅を起点に、年齢・天気の条件を変えて1日プランを組み直す
                     </Link>
                   </p>
                 ) : undefined
