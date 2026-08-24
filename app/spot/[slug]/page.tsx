@@ -43,9 +43,8 @@ import { getUpcomingEventsNear } from '@/lib/events';
 import { UpcomingEventsNearby } from '@/components/event/UpcomingEventsNearby';
 import { getVenueAnnualEvents } from '@/lib/annual-events';
 import { VenueAnnualEvents } from '@/components/event/VenueAnnualEvents';
-import { buildSpotDayPlan } from '@/lib/spot-day-plan';
+import { buildSpotDayPlan, resolveSpotStationSlug } from '@/lib/spot-day-plan';
 import { EventDayPlanSection } from '@/components/event/EventDayPlanSection';
-import { resolveStationSlugByName } from '@/lib/all-stations';
 import { getAreaName } from '@/lib/area';
 import { getTempClosure } from '@/lib/spot-temp-closed';
 import { INDEXABLE_ROBOTS } from '@/lib/robots-meta';
@@ -971,16 +970,10 @@ export default async function SpotPage({ params }: Props) {
         {(() => {
           const dayPlan = buildSpotDayPlan(entry);
           if (!dayPlan) return null;
-          // nearestStation は slug（'toneri-koen'）と日本語名（'舎人公園駅'）が混在するので両対応
-          const ns = spot.nearestStation;
           const stationSlug =
-            entry.area === 'tokyo' && ns
-              ? findStationBySlug(ns)
-                ? ns
-                : resolveStationSlugByName(ns)
-              : undefined;
+            entry.area === 'tokyo' ? resolveSpotStationSlug(spot) : undefined;
           const stationLabel = stationSlug
-            ? (findStationBySlug(stationSlug)?.name ?? ns)
+            ? (findStationBySlug(stationSlug)?.name ?? spot.nearestStation)
             : undefined;
           return (
             <EventDayPlanSection

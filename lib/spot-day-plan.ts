@@ -20,8 +20,57 @@ import {
 import { getAreaName, type AreaSlug } from './area';
 import { isSpotAvailableNow } from './spot-temp-closed';
 import { facetsOf, slugHash, type EventDayPlan, type EventDayPlanStep } from './event-day-plan';
+import { findStationBySlug, resolveStationSlugByName } from './all-stations';
+import {
+  getIndieRestaurantsByStation,
+  INDIE_GENRE_LABEL,
+  type IndieRestaurant,
+} from './indie-restaurants';
 
 export type SpotDayPlan = EventDayPlan;
+
+/**
+ * spot.nearestStation から駅slugを解決する。
+ * データは slug（'toneri-koen'）と日本語名（'舎人公園駅'）が混在しているため両対応。
+ */
+export function resolveSpotStationSlug(spot: Spot): string | undefined {
+  const ns = spot.nearestStation;
+  if (!ns) return undefined;
+  if (findStationBySlug(ns)) return ns;
+  return resolveStationSlugByName(ns);
+}
+
+/** 個人店の子連れ向きスコア（true のフィールドだけ数える。要店舗確認前提のデータ規律に従う）。 */
+function indieScore(r: IndieRestaurant): number {
+  let score = 0;
+  if (r.popular) score += 2;
+  for (const k of [
+    'kidsChair',
+    'kidsMenu',
+    'strollerOk',
+    'strollerToSeat',
+    'privateRoom',
+    'bringBabyFood',
+    'kidsCutlery',
+    'shareDish',
+    'stepFree',
+  ] as const) {
+    if (r[k]) score += 1;
+  }
+  if (r.seatingType?.includes('zashiki')) score += 1;
+  return score;
+}
+
+function indieFacets(r: IndieRestaurant): string[] {
+  const f: string[] = [];
+  if (r.kidsChair) f.push('キッズチェア');
+  if (r.kidsMenu) f.push('キッズメニュー');
+  if (r.strollerOk || r.strollerToSeat) f.push('ベビーカーOK');
+  if (r.seatingType?.includes('zashiki')) f.push('座敷あり');
+  else if (r.privateRoom) f.push('個室あり');
+  if (r.bringBabyFood) f.push('離乳食持ち込みOK');
+  return f;
+}
 
 /** 同一施設の別スポット（「◯◯公園」と「◯◯公園じゃぶじゃぶ池」等）を候補から外す。 */
 function isSameFacility(a: Spot, b: Spot): boolean {
@@ -54,6 +103,11 @@ export function buildSpotDayPlan(entry: {
 
   const areaName = getAreaName(entry.area as AreaSlug);
   const cityKey = axis.ward ?? axis.city ?? '';
+  // nearestStation は slug が混在するため、表示には必ず駅マスタの日本語名を使う
+  const axisStationSlug = resolveSpotStationSlug(axis);
+  const axisStationName = axisStationSlug
+    ? findStationBySlug(axisStationSlug)?.name
+    : undefined;
 
   const pool = getAllSpotsWithSlug().filter(
     (x) =>
@@ -69,8 +123,8 @@ export function buildSpotDayPlan(entry: {
   /** 近い順に 0=同駅 / 1=同市区 / 2=それ以外 */
   const proximity = (s: Spot): number => (sameStation(s) ? 0 : sameCity(s) ? 1 : 2);
   const moveLabel = (s: Spot): string =>
-    sameStation(s)
-      ? `${axis.nearestStation}周辺`
+    sameStation(s) && axisStationName
+      ? `${axisStationName}駅周辺`
       : sameCity(s)
         ? `${cityKey}内`
         : `${areaName}内・移動あり`;
@@ -89,8 +143,17 @@ export function buildSpotDayPlan(entry: {
   });
 
   // ---- お昼: 子連れOKレストラン ----
-  // 同駅→同市区の実店舗 → （東京のみ）全国ファミリー向けチェーン の順。
-  // どちらも無ければスロットごと省く（レストランを創作しない）。
+  // 優先順: ①最寄り駅の個人店（駅×個人店データ4,400店・子連れ設備スコア順）
+  //         → ②同駅/同市区の実店舗スポット → ③（東京のみ）全国ファミリー向けチェーン。
+  // どれも無ければスロットごと省く（レストランを創作しない）。
+  const indies = axisStationSlug ? getIndieRestaurantsByStation(axisStationSlug) : [];
+  // 子連れ向きスコア上位3件から、スポットごとに回転させる（同じ駅の全スポットで同じ店にしない）
+  const indieTop = [...indies]
+    .sort((a, b) => indieScore(b) - indieScore(a) || a.name.localeCompare(b.name, 'ja'))
+    .slice(0, 3);
+  const indieLunch =
+    indieTop.length > 0 ? indieTop[slugHash(entry.slug) % indieTop.length] : undefined;
+
   const restaurants = pool.filter((x) => x.spot.category === 'restaurant');
   const localLunch = restaurants
     .filter((x) => x.spot.ward !== '複数' && proximity(x.spot) <= 1)
@@ -105,21 +168,35 @@ export function buildSpotDayPlan(entry: {
       : [];
   const chainLunch =
     chainPool.length > 0 ? chainPool[slugHash(entry.slug) % chainPool.length] : undefined;
-  const lunch = localLunch ?? chainLunch;
-  if (lunch) {
-    usedSlugs.push(lunch.slug);
+
+  if (indieLunch && axisStationSlug) {
     steps.push({
       slot: 'お昼',
       icon: '🍽',
       kind: 'restaurant',
-      title: lunch.spot.name,
-      note: lunch.spot.note,
-      href: `/spot/${lunch.slug}`,
-      facets: facetsOf(lunch.spot).slice(0, 3),
-      move: localLunch
-        ? moveLabel(lunch.spot)
-        : '周辺のファミリー向けチェーン（店舗は公式で検索）',
+      title: `${indieLunch.name}（${INDIE_GENRE_LABEL[indieLunch.genre]}）`,
+      note: `${indieLunch.description} 設備・営業時間は店舗にご確認を。`,
+      href: `/station/${axisStationSlug}#section-indies`,
+      facets: indieFacets(indieLunch).slice(0, 3),
+      move: indieLunch.area,
     });
+  } else {
+    const lunch = localLunch ?? chainLunch;
+    if (lunch) {
+      usedSlugs.push(lunch.slug);
+      steps.push({
+        slot: 'お昼',
+        icon: '🍽',
+        kind: 'restaurant',
+        title: lunch.spot.name,
+        note: lunch.spot.note,
+        href: `/spot/${lunch.slug}`,
+        facets: facetsOf(lunch.spot).slice(0, 3),
+        move: localLunch
+          ? moveLabel(lunch.spot)
+          : '周辺のファミリー向けチェーン（店舗は公式で検索）',
+      });
+    }
   }
 
   // ---- 午後: あそぶ・休憩できるスポット ----
@@ -150,7 +227,7 @@ export function buildSpotDayPlan(entry: {
     });
   }
 
-  // リンクできる実在スポットが1件も無いなら、プランとして成立しない
-  if (usedSlugs.length === 0) return null;
+  // リンクできる実在の行き先（個人店・スポット）が1件も無いなら、プランとして成立しない
+  if (!steps.some((s) => s.href)) return null;
   return { steps, usedSlugs };
 }
