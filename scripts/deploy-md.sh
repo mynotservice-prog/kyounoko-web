@@ -5,7 +5,10 @@
 #   - content/articles/*.md はビルド時バンドル。ignoreCommand(scripts/vercel-ignore-build.sh)
 #     が「md 編集だけ＝ビルドスキップ」にしているため、通常の git push では本番に出ない。
 #   - on-demand revalidate は外部CMS前提で、バンドル済みファイル md には効かない。
-#   - さらに Cloudflare が記事HTMLを TTL 3600s でエッジキャッシュしている。
+#   - さらに Cloudflare が記事HTMLをエッジキャッシュしている。
+#     **2026-08-27 実測: s-maxage=86400（24時間）+ stale-while-revalidate=604800（7日）。**
+#     以前ここに「TTL 3600s」と書いてあったが誤り（2026-06のキャッシュ延長 c9e5622 で
+#     1h→24h に変わっていた）。パージを打たないと最大24時間、旧HTMLが配信され続ける。
 #   → フルビルドを強制（--force）し、デプロイ後に該当URLを CF パージする。
 #
 # 使い方:

@@ -24,6 +24,7 @@ import { getSpotsForStation, hasMatchingSpots, filterSpotsByCondition, getSpotCo
 import { isStationConditionIndexable } from '@/lib/station-cond-index';
 import { FEATURE_PAGES } from '@/lib/feature-pages';
 import { AFFILIATE_TARGET_SLUGS } from '@/lib/affiliate-products';
+import { getAllEvents, isEventEnded } from '@/lib/events';
 
 const BASE = 'https://kyounoko.jp';
 
@@ -340,6 +341,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.75,
     }));
 
+  // 個別イベントページ（/event/[slug]）。
+  // 2026-08-27: sitemap にイベントが1本も入っていなかった（記事810・スポット787・駅2,092に対し
+  // event は0）。内部リンク経由でしか発見されておらず、それでも90日で25,954impある面なので入れる。
+  // **会期が終了したものは page.tsx 側で noindex にしているので除外する**
+  // （終了イベントを送ると「送信済みだがnoindex」がGSCに積み上がる）。
+  const eventPages: MetadataRoute.Sitemap = getAllEvents()
+    .filter((e) => !isEventEnded(e))
+    .map((e) => ({
+      url: `${BASE}/event/${e.slug}`,
+      lastModified: new Date(),
+      // 会期があるので開催中は更新頻度を高めに、これからのものは週次で足りる。
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    }));
+
   // 特集ページ（Tier 3）。データドリブンでArticle+Spotを横断キュレーション。
   const featurePages: MetadataRoute.Sitemap = FEATURE_PAGES.map((f) => ({
     url: `${BASE}/feature/${f.slug}`,
@@ -348,5 +364,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }));
 
-  return [...staticPages, ...categoryPages, ...articlePages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...kanagawaStationPages, ...saichiStationPages, ...lineIndex, ...linePages, ...stationConditionPages, ...dataPages, ...spotCategoryPages, ...spotPages, ...featurePages];
+  return [...staticPages, ...categoryPages, ...articlePages, ...stationIndex, ...stationPages, ...kansaiStationPages, ...kanagawaStationPages, ...saichiStationPages, ...lineIndex, ...linePages, ...stationConditionPages, ...dataPages, ...spotCategoryPages, ...spotPages, ...eventPages, ...featurePages];
 }

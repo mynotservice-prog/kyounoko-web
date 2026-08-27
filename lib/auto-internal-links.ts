@@ -21,7 +21,41 @@ type LinkRule = {
   keyword: string;       // 本文内で検出する語
   targetSlug: string;    // リンク先の記事 slug
   priority: number;      // 複数マッチ時の優先度（高いほど優先）
+  /**
+   * 進行中のSEO実験より後に追加したルール。
+   * 凍結中の記事（docs/experiments-active.md）では発火させない——
+   * 処置群だけに新しいリンクが増えると群間比較が歪むため。
+   * 実験の判定が終わったらフラグを外す。
+   */
+  addedAfterFreeze?: true;
 };
+
+/**
+ * docs/experiments-active.md の凍結記事。ここに載っている記事では
+ * addedAfterFreeze のルールを注入しない（既存ルールは実験開始前から
+ * 効いているのでそのまま）。判定完了後にこの集合を空にする。
+ */
+const EXPERIMENT_FROZEN_SLUGS = new Set([
+  // 実験1: 年齢修飾クエリの直答昇格（判定 2026-09上旬）
+  'kodzure-saize-koryaku',
+  'mizuasobi-itabashi-tokyo',
+  'sushiro-kids-menu',
+  // 実験2: キッズメニュー面の修飾クエリ寄せ（判定 2026-09-16 / 2026-10-21）
+  'bamiyan-kids-menu',
+  'bamiyan-kodzure-koryaku',
+  'bikkuri-donkey-kodzure-koryaku',
+  'cocos-kids-menu',
+  'saizeriya-kids-menu',
+  'bikkuri-donkey-kids-menu', // 対照群
+  'yayoiken-kodzure-koryaku', // 対照群
+  // 実験3: 施設単位ページの閾値未満検証（判定 2026-10-05 / 2027-08-31）
+  'komazawa-koen-jabujabuike',
+  'mizumoto-koen-jabujabuike',
+  // 実験4: 秋の収穫体験面（判定 2026-10-05 / 2026-12-01）
+  'mikangari-musashimurayama-kodzure',
+  'mogitori-nerima-aki-kodzure',
+  'fureai-nouen-setagaya-aki-kodzure',
+]);
 
 const LINK_RULES: LinkRule[] = [
   // ===== 商品・アイテム系 =====
@@ -176,6 +210,20 @@ const LINK_RULES: LinkRule[] = [
   { keyword: '鮮度くん', targetSlug: 'kura-sushi-mawaru-eisei-kodomo', priority: 10 },
   { keyword: '抗菌寿司カバー', targetSlug: 'kura-sushi-mawaru-eisei-kodomo', priority: 10 },
   { keyword: '回転レーン', targetSlug: 'kura-sushi-mawaru-eisei-kodomo', priority: 7 },
+
+  // ▼ 順位押上げスプリント（2026-08-27）
+  //    GSC 90日で「高需要 × pos6.5以下 × 被リンク僅少」だった面に権威を回す。
+  //    対象の実測は reports/rank-pushup-2026-08-27.md を参照。
+  //    ※凍結記事では発火しない（addedAfterFreeze）
+  { keyword: 'モーニング', targetSlug: 'kodzure-morning-cafe-10', priority: 6, addedAfterFreeze: true },
+  { keyword: 'コメダ珈琲', targetSlug: 'komeda-kodzure-koryaku', priority: 8, addedAfterFreeze: true },
+  { keyword: 'モスバーガー', targetSlug: 'mos-burger-kodzure-koryaku', priority: 8, addedAfterFreeze: true },
+  { keyword: '一蘭', targetSlug: 'ichiran-kodzure-koryaku', priority: 9, addedAfterFreeze: true },
+  { keyword: '鳥貴族', targetSlug: 'torikizoku-kids-menu', priority: 9, addedAfterFreeze: true },
+  { keyword: '温泉卵', targetSlug: 'kodomo-onsen-tamago-itsukara', priority: 9, addedAfterFreeze: true },
+  { keyword: '半熟卵', targetSlug: 'kodomo-onsen-tamago-itsukara', priority: 9, addedAfterFreeze: true },
+  { keyword: 'しゃぶ葉', targetSlug: 'shabuyou-kodzure-koryaku', priority: 8, addedAfterFreeze: true },
+  { keyword: '焼肉きんぐ', targetSlug: 'yakiniku-king-kodzure-koryaku', priority: 8, addedAfterFreeze: true },
 ];
 
 // 長いキーワード優先（「知育玩具」>「知育」）、priority 高い順
@@ -195,9 +243,13 @@ export function injectInternalLinks(html: string, currentSlug: string): string {
   let result = html;
   const usedKeywords = new Set<string>();
 
+  const isFrozen = EXPERIMENT_FROZEN_SLUGS.has(currentSlug);
+
   for (const rule of SORTED_RULES) {
     if (rule.targetSlug === currentSlug) continue;
     if (usedKeywords.has(rule.keyword)) continue;
+    // 実験の判定が終わるまで、凍結記事には新しいルールを足さない
+    if (isFrozen && rule.addedAfterFreeze) continue;
 
     const escapedKeyword = escapeRegExp(rule.keyword);
     // マッチ: そのキーワードが既に<a>タグ内でない、見出し内でない、コードブロック内でない場所
