@@ -148,6 +148,16 @@ export const SPOT_PARKING: Record<string, SpotParking> = {
     sourceUrl: 'https://www.city.setagaya.lg.jp/02075/9082.html',
     confirmedAt: '2026-08-20',
   },
+
+  // ───────── 茨城 ─────────
+  // 土日祝は路線バスが全便運休（公式明記）で、実質この無料駐車場が主要動線になる。
+  地図と測量の科学館: {
+    exists: true,
+    fee: '無料',
+    note: '国土地理院公式の利用案内に「無料駐車場あり、大型バス４台可」と記載。台数（普通車）の記載はない。',
+    sourceUrl: 'https://www.gsi.go.jp/MUSEUM/p02.html',
+    confirmedAt: '2026-08-28',
+  },
 };
 
 /**
