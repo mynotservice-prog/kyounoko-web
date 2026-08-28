@@ -99,6 +99,88 @@ export type StationOverride = {
 
 export const STATION_OVERRIDES: Record<string, StationOverride> = {
   // =========================================================================
+  // エリア子連れランチ記事への導線（2026-08-28）
+  //
+  // 【なぜ足したか】GSC 2026-08-19〜25 で「<駅名> 子連れ ランチ」系クエリを
+  // 駅TOPと専用記事が食い合い、両方 pos7〜8 に滞留していた（高輪ゲートウェイ:
+  // 駅TOP 191imp pos8.0 / 記事 23imp pos8.5）。過去の勝ちパターン
+  // 「1クエリ1ページ独占」(2026-06 ココス一本化) に従い、まず駅TOP→記事の
+  // 内部リンクで記事側へ寄せる。タイトルの上書きはしない（駅TOPの既存流入を
+  // 壊さないため。記事が上位に定着したら次の手を判断する）。
+  // =========================================================================
+  'takanawa-gateway': {
+    tldrExtraItems: [
+      {
+        href: '/article/takanawa-gateway-kodzure-lunch',
+        label: '高輪ゲートウェイ 子連れランチ完全ガイド',
+        value: 'ニュウマン高輪の授乳室4か所・ベビーカー動線から選ぶ（実訪問レポ）',
+      },
+    ],
+  },
+  'oimachi': {
+    tldrExtraItems: [
+      {
+        href: '/article/oimachi-kodzure-lunch',
+        label: '大井町 子連れランチ完全ガイド',
+        value: 'アトレ・阪急ガーデン・ヨーカドーの3拠点と授乳室（アトレ本館3F）',
+      },
+    ],
+  },
+  'center-minami': {
+    tldrExtraItems: [
+      {
+        href: '/article/center-minami-kodzure-lunch',
+        label: 'センター南 子連れランチ完全ガイド',
+        value: '港北東急A館5Fが本命・ベビー休憩室は6F（キッズスペースつき）',
+      },
+    ],
+  },
+  'shin-yokohama': {
+    tldrExtraItems: [
+      {
+        href: '/article/shin-yokohama-kodzure-lunch',
+        label: '新横浜 子連れランチ完全ガイド',
+        value: '新幹線前後は駅直結キュービックプラザで完結（授乳室3F・6F）',
+      },
+    ],
+  },
+  'yotsuya-sanchome': {
+    tldrExtraItems: [
+      {
+        href: '/article/yotsuya-sanchome-kodzure-lunch',
+        label: '四谷三丁目 子連れランチ完全ガイド',
+        value: '消防博物館・おもちゃ美術館とセットで使える店と動線',
+      },
+    ],
+  },
+  'yurakucho': {
+    tldrExtraItems: [
+      {
+        href: '/article/yurakucho-kodzure-lunch',
+        label: '有楽町 子連れランチ完全ガイド',
+        value: 'シャンテB2Fが本命（授乳室とレストランが同一フロア）・ベビーカー貸出3施設',
+      },
+    ],
+  },
+  'harajuku': {
+    tldrExtraItems: [
+      {
+        href: '/article/harajuku-kodzure-lunch',
+        label: '原宿 子連れランチ完全ガイド',
+        value: 'ファミレスなし。ハラカド6Fキッズスペースとくら寿司旗艦店が受け皿',
+      },
+    ],
+  },
+  'jiyugaoka': {
+    tldrExtraItems: [
+      {
+        href: '/article/jiyugaoka-muse-square-kodzure',
+        label: '自由が丘ミューズスクエア 子連れガイド',
+        value: '9/17開業・5階まるごと子育てフロア（開業前版）',
+      },
+    ],
+  },
+  // =========================================================================
   // 越谷レイクタウン
   //
   // GSC 2026-07-11〜08-07: 1,465imp / 61clk / CTR4.2% / pos7.9。
