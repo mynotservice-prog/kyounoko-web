@@ -1069,8 +1069,9 @@ export const STATION_CHAIN_MAPPING: Record<string, string[]> = {
   'kamiyacho': ['starbucks', 'mcdonalds', 'yoshinoya', 'jonathan', 'mos-burger'],
   'hinode': ['doutor', 'mcdonalds', 'matsuya', 'bamiyan'],
   'takeshiba': ['starbucks', 'mcdonalds', 'matsuya', 'saizeriya', 'mos-burger', 'komeda', 'marugame'],
-  'shinjuku': ['saizeriya', 'gusto', 'starbucks', 'tully-coffee', 'doutor', 'mcdonalds', 'mos-burger', 'kfc', 'sukiya', 'matsuya', 'yoshinoya', 'sushiro', 'kura-sushi', 'cocoichi', 'marugame', 'gyukaku', 'ootoya', 'komeda', 'jonathan', 'denny-s', 'royal-host', 'excelsior', 'subway', 'ohsho', 'ikea-restaurant'],
-  'shinjuku-sanchome': ['saizeriya', 'starbucks', 'doutor', 'mcdonalds', 'mos-burger', 'yoshinoya', 'sukiya', 'excelsior', 'bamiyan', 'kura-sushi', 'yayoiken', 'ikea-restaurant'],
+  // IKEA新宿は2026年に営業終了（イケア・ジャパン公式、原宿と同時発表・渋谷に統合）
+  'shinjuku': ['saizeriya', 'gusto', 'starbucks', 'tully-coffee', 'doutor', 'mcdonalds', 'mos-burger', 'kfc', 'sukiya', 'matsuya', 'yoshinoya', 'sushiro', 'kura-sushi', 'cocoichi', 'marugame', 'gyukaku', 'ootoya', 'komeda', 'jonathan', 'denny-s', 'royal-host', 'excelsior', 'subway', 'ohsho'],
+  'shinjuku-sanchome': ['saizeriya', 'starbucks', 'doutor', 'mcdonalds', 'mos-burger', 'yoshinoya', 'sukiya', 'excelsior', 'bamiyan', 'kura-sushi', 'yayoiken'],
   'shinjuku-nishiguchi': ['saizeriya', 'starbucks', 'doutor', 'mcdonalds', 'mos-burger', 'matsuya', 'komeda', 'jonathan', 'marugame', 'ohsho'],
   'nishi-shinjuku': ['saizeriya', 'starbucks', 'doutor', 'mcdonalds', 'mos-burger', 'matsuya', 'komeda', 'jonathan', 'marugame', 'cocoichi'],
   'nishi-shinjuku-gochome': ['starbucks', 'mcdonalds', 'matsuya', 'saizeriya', 'mos-burger', 'komeda', 'marugame'],
@@ -1275,8 +1276,9 @@ export const STATION_CHAIN_MAPPING: Record<string, string[]> = {
   'meidaimae': ['saizeriya', 'starbucks', 'doutor', 'mcdonalds', 'mos-burger', 'sukiya', 'matsuya', 'tully-coffee', 'gusto', 'sushiro', 'gyukaku', 'hama-sushi'],
   'ikenoue': ['starbucks', 'mcdonalds', 'yoshinoya', 'saizeriya', 'mos-burger', 'komeda', 'sushiro'],
   'shibuya': ['saizeriya', 'gusto', 'starbucks', 'tully-coffee', 'doutor', 'mcdonalds', 'mos-burger', 'kfc', 'sukiya', 'matsuya', 'yoshinoya', 'sushiro', 'kura-sushi', 'cocoichi', 'marugame', 'gyukaku', 'ootoya', 'komeda', 'jonathan', 'denny-s', 'royal-host', 'excelsior', 'subway', 'ohsho', 'ikea-restaurant'],
-  'harajuku': ['saizeriya', 'starbucks', 'doutor', 'mcdonalds', 'mos-burger', 'matsuya', 'komeda', 'jonathan', 'marugame', 'subway', 'ikea-restaurant'],
-  'meiji-jingumae': ['saizeriya', 'starbucks', 'doutor', 'mcdonalds', 'mos-burger', 'sukiya', 'tully-coffee', 'gusto', 'sushiro', 'subway', 'ikea-restaurant'],
+  // IKEA原宿は2026-02-08営業終了（イケア・ジャパン公式、渋谷に統合）。ジョナサン原宿店は公式店舗ページ404（2026-08-28確認）
+  'harajuku': ['saizeriya', 'starbucks', 'doutor', 'mcdonalds', 'mos-burger', 'matsuya', 'komeda', 'marugame', 'subway'],
+  'meiji-jingumae': ['saizeriya', 'starbucks', 'doutor', 'mcdonalds', 'mos-burger', 'sukiya', 'tully-coffee', 'gusto', 'sushiro', 'subway'],
   'yoyogi': ['saizeriya', 'starbucks', 'doutor', 'mcdonalds', 'mos-burger', 'sukiya', 'matsuya', 'tully-coffee', 'gusto', 'sushiro', 'yayoiken'],
   'yoyogi-koen': ['saizeriya', 'starbucks', 'doutor', 'mcdonalds', 'mos-burger', 'sukiya', 'matsuya', 'tully-coffee', 'gusto', 'sushiro', 'ootoya'],
   'yoyogi-uehara': ['saizeriya', 'starbucks', 'doutor', 'mcdonalds', 'mos-burger', 'sukiya', 'tully-coffee', 'gusto', 'sushiro', 'yayoiken'],
