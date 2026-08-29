@@ -899,7 +899,11 @@ async function warmIsr(targets) {
  * 本番エンドポイントなら手元にトークンを置かずに済むので、これを既定の経路にする。
  */
 async function cfPurgeViaApi(paths) {
-  const secret = process.env.ADMIN_REVALIDATE_SECRET || 'kyounoko-revalidate-default';
+  const secret = process.env.ADMIN_REVALIDATE_SECRET;
+  if (!secret) {
+    console.log(`   ${NG} ADMIN_REVALIDATE_SECRET が未設定です（.env.local に本番と同じ値を設定してください）`);
+    return { ok: false, purged: 0 };
+  }
   const purged = [];
   for (let i = 0; i < paths.length; i += 150) {
     const chunk = paths.slice(i, i + 150);

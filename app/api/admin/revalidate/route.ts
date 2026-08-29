@@ -16,7 +16,9 @@ import { revalidatePath } from 'next/cache';
  *   body: { secret: string, paths: string[] }
  */
 
-const SECRET = process.env.ADMIN_REVALIDATE_SECRET || 'kyounoko-revalidate-default';
+// フォールバック既定値は置かない: env 未設定のままデプロイすると
+// 既知の固定シークレットで誰でも叩ける状態になるため（purge-cf と同じ扱い）
+const SECRET = process.env.ADMIN_REVALIDATE_SECRET;
 
 export async function POST(req: NextRequest) {
   let body: { secret?: string; paths?: unknown };
@@ -25,7 +27,7 @@ export async function POST(req: NextRequest) {
   } catch {
     return NextResponse.json({ ok: false, error: 'invalid json' }, { status: 400 });
   }
-  if (body.secret !== SECRET) {
+  if (!SECRET || body.secret !== SECRET) {
     return NextResponse.json({ ok: false, error: 'invalid secret' }, { status: 403 });
   }
   if (!Array.isArray(body.paths) || body.paths.length === 0) {

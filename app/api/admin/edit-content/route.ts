@@ -244,7 +244,9 @@ export async function POST(req: NextRequest) {
       let revalidated: string[] = [];
       try {
         const origin = new URL(req.url).origin;
-        const secret = process.env.ADMIN_REVALIDATE_SECRET || 'kyounoko-revalidate-default';
+        // env 未設定なら revalidate はスキップ（Vercel 自動デプロイで反映される）
+        const secret = process.env.ADMIN_REVALIDATE_SECRET;
+        if (!secret) throw new Error('ADMIN_REVALIDATE_SECRET 未設定');
         const r = await fetch(`${origin}/api/admin/revalidate`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
