@@ -106,6 +106,7 @@ legacyHero: /hero/food-japan-01.webp
 
 ## 関連記事
 
+- [月見バーガー2026はいつから？各チェーンの発売日と去年との違いまとめ](/article/tsukimi-2026-chain-matome)
 - [マクドナルドのハッピーセットは何歳から？値段・メニューの選び方](/article/mcdonalds-kids-menu)
 - [マクドナルドは子連れOK？ベビーカー・離乳食・座席の完全攻略](/article/mcdonalds-kodzure-koryaku)
 - [キッズメニューは何歳から？チェーン別早見表](/article/kids-menu-nansai-kara-hayami)

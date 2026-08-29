@@ -90,6 +90,7 @@ legacyHero: /hero-ai/cat-food-japan-02.jpg
 
 ## 関連記事
 
+- [マックの月見2026はいつからいつまで？全8商品と子連れの頼み方](/article/mcdonalds-tsukimi)
 - [マクドナルドのハッピーセットは何歳から？おもちゃ・値段・メニューの選び方](/article/mcdonalds-kids-menu)
 - [ハッピーセットの今のおもちゃは？次はいつから？毎弾更新の定点ページ](/article/happy-set-omocha-genzai)
 - [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
