@@ -1,12 +1,12 @@
 ---
 slug: yakiniku-king-kids-menu
-title: 焼肉キングのキッズメニュー・小学生以下無料｜年齢別の中身と注文のコツ完全ガイド
+title: 焼肉キングのキッズメニュー・未就学児無料｜年齢別の中身と注文のコツ完全ガイド
 metaDescription: >-
   焼肉キング（焼肉きんぐ）のキッズメニューはカレー・うどん・そうめん・ソフトクリームなどが定番。未就学児（小学生未満）は通常無料・小学生半額が基本パターン。年齢別の中身、取り分けとの組み合わせ、アレルギーや塩分の注意まで、4歳娘＆2歳息子の親目線でまとめました。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-06-06'
+updatedAt: '2026-08-31'
 hero: /img/scenes/meal-36.webp
 area: all
 quickInfo:

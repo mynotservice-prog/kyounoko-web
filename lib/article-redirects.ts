@@ -76,4 +76,7 @@ export const ARTICLE_REDIRECTS: { from: string; to: string }[] = [
   // 2026-07-24 紅葉カニバリ正典統合: 10選(3,430字)を20選(6,250字+独自セクション)へ301。
   // 独自価値(大山・本土寺・持ち物リスト)は勝者へ移植済み。
   { from: 'kouyou-spots-kanto-koduzure', to: 'koyou-kanto-kodzure-20' },
+  // 2026-08-31 GEO監査で発見: 旧料金(3歳以下無料/4-6歳数百円/小学生半額)の誤情報が残存し
+  // Bing top10で露出、新記事と矛盾。Google側は8月表示ゼロの死蔵。正しい料金を持つ勝者へ301。
+  { from: 'shabuyo-kids-menu', to: 'shabuyou-kodzure-koryaku' },
 ];

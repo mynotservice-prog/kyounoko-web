@@ -227,3 +227,4 @@ A. **0〜3歳は1〜2時間**、**4〜6歳は2〜3時間**が目安。乳幼児�
 - [子供のアイス、いつから食べさせていい？](/article/kodomo-aisu-itsukara)
 - [東京のじゃぶじゃぶ池・無料水遊び場30選](/article/jabujabuike-mizuasobi-tokyo-30)
 - [豊島区のじゃぶじゃぶ池13か所｜区公式の全リスト](/article/mizuasobi-toshima-tokyo)
+- [水遊びシーズンが終わったら｜寒い日・雨の日の室内おでかけ先の選び方【秋冬保存版】](/article/samuihi-amenohi-shitsunai-kodzure)

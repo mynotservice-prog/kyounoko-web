@@ -264,3 +264,4 @@ A. 区立は9:00〜16:30と枠が長いので、**0〜3歳は1〜2時間**、**4
 - [子供の熱中症対策｜3歳児のリアル【2026年版】](/article/kodomo-netsuchusho-3sain-real-2026)
 - [子供のアイス、いつから食べさせていい？](/article/kodomo-aisu-itsukara)
 - [東京のじゃぶじゃぶ池・無料水遊び場30選](/article/jabujabuike-mizuasobi-tokyo-30)
+- [水遊びシーズンが終わったら｜寒い日・雨の日の室内おでかけ先の選び方【秋冬保存版】](/article/samuihi-amenohi-shitsunai-kodzure)

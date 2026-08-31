@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-06-06'
+updatedAt: '2026-09-01'
 hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/tenya-kids-menu-mrn3n87o.png"
 area: all
 quickInfo:
@@ -115,7 +115,7 @@ A. 公式サイトでアレルゲン情報を確認した上で、注文時に�
 A. **「タレ少なめでお願いします」**で対応OK。タレなし・別添も可能な店舗多数。
 
 **Q. ベビーフードの持ち込みは？**
-A. 多くの店舗で**持ち込み・温め依頼OK**。レトルトタイプを持参して、お湯で温めてもらう運用が定番。
+A. 公式サイトに持ち込み・温めに関する記載は確認できませんでした（2026年9月1日時点）。**可否は店舗判断**のため、入店時にひと声かけて確認を。温めを断られた場合に備えて常温OKのパウチを持参すると安心です。
 
 **Q. キッズドリンクはある？**
 A. お子様セットに**ジュース・お茶**が付く店舗多数。単品オーダーも可能。

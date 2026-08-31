@@ -162,3 +162,4 @@ A. 砂や泥が入ると故障しやすいので、砂場近くでの使用は�
 - [ベランダプール 4歳まで楽しめる遊び方](/article/veranda-pool-4sai-asobi-kata)
 - [じゃぶじゃぶ池・水遊びスポット東京30選](/article/jabujabuike-mizuasobi-tokyo-30)
 - [子供の紫外線対策完全ガイド](/article/kodomo-shigaisen-taisaku-2026)
+- [水遊びシーズンが終わったら｜寒い日・雨の日の室内おでかけ先の選び方【秋冬保存版】](/article/samuihi-amenohi-shitsunai-kodzure)

@@ -104,7 +104,7 @@ lede: >-
 - 牛角：[ベビーチェア](/article/gyukaku-kodzure-koryaku)・[キッズメニュー](/article/gyukaku-kids-menu)
 - 焼肉キング：[ベビーチェア](/article/yakiniku-king-kodzure-koryaku)・[キッズメニュー](/article/yakiniku-king-kids-menu)
 - 安楽亭：[ベビーチェア](/article/anrakutei-baby-chair)・[キッズメニュー](/article/anrakutei-kids-menu)
-- しゃぶ葉：[ベビーチェア](/article/shabuyo-baby-chair)・[キッズメニュー](/article/shabuyo-kids-menu)
+- しゃぶ葉：[ベビーチェア](/article/shabuyo-baby-chair)・[子供料金・キッズメニュー](/article/shabuyou-kodzure-koryaku)
 
 **和定食・中華系**
 - やよい軒：[ベビーチェア](/article/yayoiken-kodzure-koryaku)・[キッズメニュー](/article/yayoiken-kids-menu)

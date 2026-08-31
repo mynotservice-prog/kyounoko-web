@@ -214,3 +214,4 @@ A. 多くのじゃぶじゃぶ池は7月上旬〜8月末の稼働です。清掃
 ## 関連記事
 
 - [東京のじゃぶじゃぶ池・無料水遊び場30選](/article/jabujabuike-mizuasobi-tokyo-30)
+- [水遊びシーズンが終わったら｜寒い日・雨の日の室内おでかけ先の選び方【秋冬保存版】](/article/samuihi-amenohi-shitsunai-kodzure)
