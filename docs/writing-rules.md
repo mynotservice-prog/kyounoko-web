@@ -71,13 +71,17 @@
 
   モスバーガー  https://www.mos.jp/data/shop/shop.json （全国・市区町村コードで絞る）
   コメダ        https://eu.komeda.co.jp/v1/hp/shop?prefecture=東京都&brand_type=1
-  丸亀製麺      https://stores.marugame.com/sitemap1.xml → 個別店舗ページ
+  丸亀製麺      https://stores.marugame.com/sitemap1.xml → 個別店舗ページ（全店の店名・所在地を全数照合できる）
   サイゼリヤ    https://shop.saizeriya.co.jp/sz_restaurant/spot/list?address=… （「検索結果：N件」で完全列挙）
   丸井          https://www.0101.co.jp/contents2/facilityinfo/<店番>/facility.json
+  すかいらーく系 https://store-info.skylark.co.jp/api/point/{5桁geohash}/ （セル単位で全ブランド全店が返る。
+                大井町は xn76e。ガスト/ジョナサン/バーミヤン/しゃぶ葉の在否を1リクエストで確認できる）
+  ゼンショー系   maps.sukiya.jp / maps.hama-sushi.co.jp / maps.cocos-jpn.co.jp （住所検索API。都県で引いて全数照合）
+  b-map系      吉野家/ドトール/松屋/ロイヤルグループは api/proxy2/shop/list?address=13109 型（区コード指定）
 
-  ⚠️ **ガスト・すかいらーく系は機械的に引けない**（店舗検索が地図UIでしか結果を返さず、
-     APIにブランド絞り込みを渡すと500）。「無い」と確認できたわけではないので、
-     削除するならその旨を明記する
+  ⚠️ 旧記載「ガスト・すかいらーく系は機械的に引けない」は**2026-08-31に反転**。旧 store.skylark.co.jp の
+     話で、新ロケータ store-info.skylark.co.jp の point API で引ける（大井町の全数確認で実証済み）。
+  ⚠️ 「無い」判定には**陽性対照**を必ず取る（同じAPIで別エリアの実在店が引けることを確認してから0件と書く）
 
 ---
 

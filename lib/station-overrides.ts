@@ -122,7 +122,7 @@ export const STATION_OVERRIDES: Record<string, StationOverride> = {
       {
         href: '/article/oimachi-kodzure-lunch',
         label: '大井町 子連れランチ完全ガイド',
-        value: 'アトレ・阪急ガーデン・ヨーカドーの3拠点と授乳室（アトレ本館3F）',
+        value: '大井町トラックス・アトレ・阪急ガーデン・ヨーカドーの4拠点と授乳室（トラックス3か所＋アトレ3F）',
       },
     ],
   },

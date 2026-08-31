@@ -11,6 +11,7 @@ import {
 import {
   getStationWithChains,
   CHAIN_CATEGORY_LABEL,
+  STATION_CHAIN_DATA_UPDATED,
   type Chain,
   type ChainCategory,
 } from '@/lib/station-restaurants';
@@ -984,6 +985,26 @@ export default async function StationPage({ params }: Props) {
               </div>
             </section>
           )}
+
+          {/* この情報について（GEO: AI検索の引用資格に必要な鮮度・確認方法の明示。
+              ⚠️ 正直表記が原則 — チェーンの設備は公式ベースの編集部DBだが、
+              駅周辺の店舗の有無は編集部キュレーションで個店の実在保証はしていない。
+              「全店舗を確認済み」と読める表現にしないこと。 */}
+          <section style={{
+            marginTop: 28,
+            padding: '16px 18px',
+            background: 'var(--paper-card)',
+            border: '1px solid rgba(201,96,62,0.14)',
+            borderRadius: 10,
+            fontSize: 12.5,
+            color: 'var(--ink-sub)',
+            lineHeight: 1.8,
+          }}>
+            <p style={{ margin: 0, fontWeight: 600, fontSize: 13 }}>この情報について</p>
+            <p style={{ margin: '6px 0 0' }}>
+              掲載しているチェーン店の子連れ設備（ベビーカー・キッズメニュー・離乳食持ち込みなど）は、各チェーンの公式サイト・公式発表をもとに編集部がまとめたデータベースに基づいています（データ最終更新: {STATION_CHAIN_DATA_UPDATED}）。設備・メニューは店舗により異なる場合があります。駅周辺の店舗の有無・営業時間は変わることがあるため、来店前に各チェーンの公式店舗検索でご確認ください。
+            </p>
+          </section>
 
           {/* 駅ページ＝「この駅で子連れで入れる店」を探している文脈。
               ⚠️ 2026-08-31 修正: ここは以前 getItemsForTodayQuery({ place: 'outside' }) を使い、

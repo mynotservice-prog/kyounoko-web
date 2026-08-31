@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
-updatedAt: '2026-06-03'
+updatedAt: '2026-09-01'
 hero: "https://nwzch5rk8bhdnraw.public.blob.vercel-storage.com/articles/kura-sushi-bikkurapon-real-mrn396vo.jpg"
 lede: >-
   「くら寿司のビッくらポン、子供にはどれくらい刺さる？」という疑問に、SNS・レビューから読み取れる傾向で答えます。約170件規模の声を編集部が冷静に整理した、回転寿司の子連れリアルまとめです。
@@ -45,7 +45,7 @@ area: tokyo
 | 子供用カトラリー | ✓ |
 | おむつ替え台 | ✓ |
 | 授乳室 | — |
-| 離乳食持ち込み | ✓ |
+| 離乳食持ち込み | △（公式サイトに記載なく**店舗判断**・入店時に要確認／2026年8月24日確認） |
 | 取り分けOK | ✓ |
 | ベビーカーで席まで | ✓ |
 | アレルゲン表示 | ✓ |

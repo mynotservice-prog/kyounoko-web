@@ -89,6 +89,14 @@ export type Chain = {
   description: string;
 };
 
+/**
+ * このファイルのチェーン設備・駅マッピングデータを実質的に更新した日。
+ * 駅ページの「この情報について」ブロックに表示される（GEO: AI検索が引用資格として
+ * 鮮度・確認方法の明示を要求するため）。CHAINS / STATION_CHAIN_MAPPING を
+ * 更新したら必ずこの日付も更新すること。
+ */
+export const STATION_CHAIN_DATA_UPDATED = '2026-08-31';
+
 export const CHAINS: Chain[] = [
   // ===== ファミレス系 =====
   {
@@ -1174,7 +1182,9 @@ export const STATION_CHAIN_MAPPING: Record<string, string[]> = {
   'meguro': ['saizeriya', 'starbucks', 'doutor', 'mcdonalds', 'mos-burger', 'matsuya', 'komeda', 'jonathan', 'marugame', 'cocoichi'],
   'shinagawa-seaside': ['starbucks', 'mcdonalds', 'matsuya', 'jonathan', 'mos-burger'],
   'tennozu-isle': ['doutor', 'mcdonalds', 'matsuya', 'gusto'],
-  'oimachi': ['saizeriya', 'starbucks', 'doutor', 'mcdonalds', 'mos-burger', 'matsuya', 'yoshinoya', 'komeda', 'jonathan', 'marugame', 'cocoichi'],
+  // 2026-08-31 各チェーン公式店舗検索で全数確認済み（かつての doutor/komeda/marugame/cocoichi は
+  // 徒歩10分圏に実在せず削除。jonathan は鮫洲店・徒歩10分強の境界）。
+  'oimachi': ['saizeriya', 'starbucks', 'mcdonalds', 'mos-burger', 'matsuya', 'yoshinoya', 'sukiya', 'jonathan', 'denny-s', 'bamiyan', 'kura-sushi', 'kfc', 'onyasai', 'ootoya', 'hidakaya', 'ringer-hut', 'kamakura-pasta', 'goemon', 'saint-marc-cafe', 'tully-coffee', 'mister-donut'],
   'shimo-shimmei': ['doutor', 'mcdonalds', 'yoshinoya', 'gusto'],
   'togoshi-koen': ['doutor', 'mcdonalds', 'sukiya', 'bamiyan', 'tully-coffee', 'cocoichi'],
   'togoshi': ['doutor', 'mcdonalds', 'sukiya', 'gusto', 'tully-coffee', 'cocoichi'],
@@ -1584,6 +1594,16 @@ const UBIQUITY_FALLBACK_STATION_SLUGS: ReadonlySet<string> = new Set([
  * @param stationSlug - 駅のslug（例: 'shibuya'）
  * @returns 該当駅周辺のチェーン店配列。マッピングも自動付与対象も無い駅は空配列。
  */
+/**
+ * 公式店舗検索で「徒歩10分圏に実在しない」ことを確認済みのチェーンを駅単位で除外する。
+ * ubiquity の自動付与はキュレーション（実在保証なし）なので、実在を全数確認した駅では
+ * 確認結果を優先する。確認日をコメントに残すこと。
+ */
+const STATION_CHAIN_EXCLUDE: Record<string, readonly string[]> = {
+  // 2026-08-31 全24チェーンを公式店舗検索・公式APIで全数照合（大井町駅 徒歩10分圏）
+  'oimachi': ['gusto', 'cocos', 'shabu-yo', 'royal-host', 'komeda', 'doutor', 'marugame', 'cocoichi', 'sushiro', 'hama-sushi', 'gyukaku', 'tenya'],
+};
+
 export function getChainsForStation(stationSlug: string): Chain[] {
   const explicit = STATION_CHAIN_MAPPING[stationSlug];
   if (!explicit && !UBIQUITY_FALLBACK_STATION_SLUGS.has(stationSlug)) return [];
@@ -1604,7 +1624,9 @@ export function getChainsForStation(stationSlug: string): Chain[] {
       slugs.add(c.slug);
     }
   }
+  const excluded = new Set(STATION_CHAIN_EXCLUDE[stationSlug] ?? []);
   return [...slugs]
+    .filter((s) => !excluded.has(s))
     .filter((s) => !(isKansai && KANTO_ONLY_CHAIN_SLUGS.has(s)))
     .map((s) => CHAIN_BY_SLUG.get(s))
     .filter((c): c is Chain => c !== undefined);
