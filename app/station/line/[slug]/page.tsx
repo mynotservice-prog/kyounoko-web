@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const line = getLineBySlug(slug);
   if (!line) return { title: '路線が見つかりません', robots: { index: false } };
   const stations = getStationsOnLine(line);
-  const title = `${line.name} 全${stations.length}駅 子連れランチ・ベビーカーOK店ガイド｜きょうのこ`;
+  const title = `${line.name} 全${stations.length}駅 子連れランチ・ベビーカーOK店ガイド`;
   const description = `${line.name}沿線の${stations.length}駅で子連れOK・ベビーカー入店OKのファミレス・カフェを駅別にチェック。キッズメニュー・キッズチェア・個室・離乳食持込まで全項目。`;
   return {
     title,
@@ -132,9 +132,40 @@ export default async function LinePage({ params }: Props) {
     line.operator === 'tokyo-metro' ? '東京メトロ' :
     line.operator === 'toei' ? '都営地下鉄' : '私鉄';
 
+  // JSON-LD（2026-08-31 追加）
+  // このテンプレだけ構造化データが1つも無かった。全テンプレ中ここだけ BreadcrumbList すら
+  // 欠けており、layout 由来の WebSite / Organization しか出ていなかった（41ページ）。
+  // ページの中身は「路線の全駅一覧」なので ItemList がそのまま載る。
+  // 生成のしかたは兄弟の app/station/[slug]/page.tsx に合わせてある。
+  const lineJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `${line.name} 全${stations.length}駅 子連れランチ・ベビーカーOK店`,
+    description: `${line.name}の各駅で、子連れで入れる飲食店を駅ごとに整理した一覧`,
+    numberOfItems: stations.length,
+    itemListElement: stations.map((st, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: `${st.name}駅`,
+      url: `https://kyounoko.jp/station/${st.slug}`,
+    })),
+  };
+  const lineBreadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'HOME', item: 'https://kyounoko.jp/' },
+      { '@type': 'ListItem', position: 2, name: '駅別子連れランチ', item: 'https://kyounoko.jp/station' },
+      { '@type': 'ListItem', position: 3, name: '路線から探す', item: 'https://kyounoko.jp/station/line' },
+      { '@type': 'ListItem', position: 4, name: line.name, item: `https://kyounoko.jp/station/line/${slug}` },
+    ],
+  };
+
   return (
     <>
       <V2Frame header="sub" active="home">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(lineJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(lineBreadcrumbLd) }} />
 
       <div className="container">
         <nav className="breadcrumb" aria-label="パンくず">

@@ -26,7 +26,7 @@ export const revalidate = 3600;
 const PER_CATEGORY_PREVIEW = 8;
 
 export const metadata: Metadata = {
-  title: '記事一覧｜子連れ外食・おでかけの人気記事【きょうのこ】',
+  title: '記事一覧｜子連れ外食・おでかけの人気記事',
   description:
     'きょうのこの記事を人気順に一覧化。ファミレスのキッズメニュー・離乳食の持ち込み・ベビーチェアの有無から、区ごとの室内遊び場・水遊びスポットまで、0〜6歳の子連れで使える情報をまとめています。',
   alternates: { canonical: '/articles' },

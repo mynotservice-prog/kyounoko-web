@@ -21,7 +21,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   // canonical→/ranking に加えて noindex,follow を付ける（/events・/spots と同一方針）。
   const hasVariant = Boolean((sp.area && sp.area !== 'all') || sp.age);
   return {
-    title: '子連れ人気スポットランキング｜今みんなが見ている遊び場【きょうのこ】',
+    title: '子連れ人気スポットランキング｜今みんなが見ている遊び場',
     description:
       '0〜6歳の子連れでいま人気のおでかけスポットを、実際の閲覧数をもとにランキング。年齢別・エリア別でも絞り込めます。公園・水族館・動物園・室内遊び場まで。',
     robots: hasVariant ? { index: false, follow: true } : INDEXABLE_ROBOTS,

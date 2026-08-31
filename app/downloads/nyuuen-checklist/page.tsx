@@ -4,7 +4,7 @@ import { V2Frame } from '@/components/v2/V2Frame';
 import { PrintButton } from '@/components/tools/PrintButton';
 
 export const metadata: Metadata = {
-  title: '入園準備チェックリスト｜きょうのこ',
+  title: '入園準備チェックリスト',
   description:
     '保育園・幼稚園の入園準備が一覧で分かる完全チェックリスト。買い物編・名前付け編・子の練習編の3章構成で、1月〜3月の月別タスクも明記。印刷・PDF保存OK。',
   alternates: { canonical: '/downloads/nyuuen-checklist' },

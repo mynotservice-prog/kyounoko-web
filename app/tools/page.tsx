@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
 
 export const metadata: Metadata = {
-  title: '子育て診断ツール｜きょうのこ',
+  title: '子育て診断ツール',
   description:
     '子育てにまつわる迷いを「3分の質問」で解消する診断ツール集。ベビーカー診断・習い事マッチング・おでかけタイプ診断など、無料で使えるインタラクティブツール。',
   alternates: { canonical: '/tools' },

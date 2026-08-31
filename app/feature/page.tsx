@@ -12,7 +12,7 @@ import { AdSlot } from '@/components/ads/AdSlot';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: '特集まとめ｜きょうのこ',
+  title: '特集まとめ',
   description:
     '夏休み・雨の日・無料スポット・赤ちゃん連れOKなど、子連れのテーマ別おでかけ＆暮らし特集を一覧で紹介。',
   alternates: { canonical: '/feature' },

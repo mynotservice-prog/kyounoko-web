@@ -4,7 +4,7 @@ import { V2Frame } from '@/components/v2/V2Frame';
 import { PrintButton } from '@/components/tools/PrintButton';
 
 export const metadata: Metadata = {
-  title: '習い事比較シート｜きょうのこ',
+  title: '習い事比較シート',
   description:
     '主要9種の習い事（スイミング・ピアノ・体操・英語・くもん・しちだ・モンテ・サッカー・学研）を月謝・対象年齢・効果・親の負担で一覧比較。印刷・PDF保存OK。',
   alternates: { canonical: '/downloads/naraigoto-hikaku' },

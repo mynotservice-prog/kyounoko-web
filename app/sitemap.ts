@@ -10,7 +10,10 @@ import type { MetadataRoute } from 'next';
 
 import { getArticleIds, getCategories } from '@/lib/microcms';
 import { getAllFileArticles, getKvOnlyArticleMetas } from '@/lib/articles';
-import { getAllSpotsWithSlug } from '@/lib/spots';
+import { getAllSpotsWithSlug, isSpotIndexable } from '@/lib/spots';
+import { isChainRedirected } from '@/lib/spot-verification';
+import { SPOT_REDIRECTS } from '@/lib/spot-redirects';
+import { SPOT_CLOSED } from '@/lib/spot-closed';
 import { BROWSE_CATEGORIES, spotsByCategory } from '@/lib/spot-browse';
 import { TOKYO_STATIONS } from '@/lib/tokyo-stations';
 import { KANSAI_STATIONS } from '@/lib/kansai-stations';
@@ -27,6 +30,9 @@ import { AFFILIATE_TARGET_SLUGS } from '@/lib/affiliate-products';
 import { getAllEvents, isEventEnded } from '@/lib/events';
 
 const BASE = 'https://kyounoko.jp';
+
+// 2026-08-31: sitemapから308リダイレクト元を除外するための集合（lib/spot-redirects.ts 由来）。
+const SPOT_REDIRECT_FROM = new Set(SPOT_REDIRECTS.map((r) => r.from));
 
 const FALLBACK_CATEGORY_SLUGS = [
   'today-doko',
@@ -312,9 +318,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // スポット個別ページ（プログラマティックSEO第3弾、2026-05追加）
   // isIndexable() の条件を満たすスポットのみsitemapに含める（薄ページ判定回避）。
+  //
+  // 2026-08-31: 全ページクロール監査で、sitemap掲載3,827件のうち
+  //   ・36件が308リダイレクト（/spot/xxx → /article/yyy）
+  //   ・5件が noindex
+  // という矛盾が見つかったため、下の2条件を追加した。
+  // sitemapは「クロールして索引してほしいURL」の宣言なので、リダイレクトとnoindexが
+  // 混ざっているとクロール予算を捨てることになる（秋面4本が解放後21日クロールされなかった件と同根）。
   const spotPages = getAllSpotsWithSlug()
     .filter((x) => {
       const s = x.spot;
+      // ① 308でチェーン記事へ寄せたスポットは載せない（リダイレクト先だけを載せる）
+      if (isChainRedirected(x.slug) || SPOT_REDIRECT_FROM.has(x.slug)) return false;
+      // ② ページ側が noindex を出すスポットは載せない（閉館・情報が薄いもの）
+      //    条件は app/spot/[slug]/page.tsx の generateMetadata と同一にする
+      if (SPOT_CLOSED[s.name] || !isSpotIndexable(s)) return false;
       let score = 0;
       if (s.note && s.note.length >= 25) score++;
       if (s.facilities && Object.keys(s.facilities).length >= 2) score++;

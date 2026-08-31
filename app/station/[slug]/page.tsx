@@ -30,10 +30,11 @@ import {
 } from '@/lib/station-conditions';
 import { getSpotsForStation, filterSpotsByCondition } from '@/lib/station-spots';
 import { isStationConditionIndexable } from '@/lib/station-cond-index';
+import { buildRestaurantFaq, faqToJsonLd } from '@/lib/station-faq';
 import { StickySectionNav } from '@/components/station/StickySectionNav';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
-import { getItemsForTodayQuery } from '@/lib/items-catalog';
+import { getCatalogItems } from '@/lib/items-catalog';
 import { PersonalizedHint } from '@/components/common/PersonalizedHint';
 
 export const dynamic = 'force-static';
@@ -69,6 +70,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const description =
     seoOverride?.description ??
     `${station.name}駅周辺で子連れOK・ベビーカー入店OKのファミレス・カフェ・チェーン店に加え、雑誌やSNSで話題の個人店・人気店も厳選。キッズメニュー・キッズチェア・個室・離乳食持込可など子連れ目線で全項目チェック。${wardName}で子どもとランチ・カフェに困らない実用ガイド。`;
+  // 2026-08-31: 全ページ監査で og:image 欠落 2,061本のうち 2,049本が /station/ だと判明した。
+  // /station/ は3週で唯一プラス成長している面（+6.8%／週1,945クリック）なのに、
+  // SNS・LINE共有とDiscoverで画像が出ない状態だった。spot/[slug] と同じ /api/og を配線する。
+  const ogImage = `/api/og?title=${encodeURIComponent(`${station.name}駅 子連れランチ｜${wardName}`)}`;
+  const ogImages = [{ url: ogImage, width: 1200, height: 630 }];
+
   return {
     title,
     description,
@@ -78,6 +85,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'article',
       url: `https://kyounoko.jp/station/${slug}`,
+      images: ogImages,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ogImages.map((i) => i.url),
     },
   };
 }
@@ -175,6 +189,14 @@ export default async function StationPage({ params }: Props) {
     ],
   };
 
+  // ページ固有FAQ（2026-08-31 追加）
+  // 子ページ /station/[駅]/[条件] は100%がFAQPageと可視FAQを持っているのに、
+  // 親の駅ページ587本だけが両方ゼロだった（28日で3,121クリック / 44,762表示の面）。
+  // 既存の lib/station-faq.ts をそのまま使う。実データ由来で捏造ゼロという
+  // 同ファイルの設計思想を引き継ぐため、生成ロジックは子と共通のまま変えていない。
+  const faqItems = buildRestaurantFaq(station.name, '子連れランチ', chains, indies);
+  const faqLd = faqToJsonLd(faqItems);
+
   // スティッキーセクションナビ用の項目
   const stickyNavItems = [
     { href: '#section-tldr', label: '30秒攻略' },
@@ -193,6 +215,7 @@ export default async function StationPage({ params }: Props) {
       <StickySectionNav items={stickyNavItems} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
 
       <div className="container">
         <nav className="breadcrumb" aria-label="パンくず">
@@ -915,12 +938,67 @@ export default async function StationPage({ params }: Props) {
             </section>
           )}
 
-          {/* 駅＝子連れでお出かけの文脈。外出時にあると便利なものを控えめに提示。 */}
+          {/* ページ固有FAQ（該当店の実データ由来。AEO＋FAQPage構造化用の可視コンテンツ） */}
+          {faqItems.length > 0 && (
+            <section className="station-faq" style={{
+              marginTop: 36,
+              paddingTop: 32,
+              borderTop: '1px solid rgba(201,96,62,0.14)',
+            }}>
+              <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 6 }}>
+                {station.name}駅の子連れランチ よくある質問
+              </h2>
+              <p style={{ fontSize: 13, color: 'var(--ink-mute)', marginTop: 0, marginBottom: 14 }}>
+                このページに掲載中の店舗データから回答しています。設備・メニューは変更される場合があるため、来店前に各店の最新情報もご確認ください。
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {faqItems.map((q, i) => (
+                  <details
+                    key={i}
+                    className="faq-item"
+                    style={{
+                      background: 'var(--paper-card)',
+                      border: '1px solid rgba(201,96,62,0.16)',
+                      borderRadius: 10,
+                      overflow: 'hidden',
+                    }}
+                  >
+                    <summary style={{
+                      padding: '14px 16px',
+                      fontWeight: 600,
+                      fontSize: 14,
+                      cursor: 'pointer',
+                    }}>
+                      {q.question}
+                    </summary>
+                    <div style={{
+                      padding: '0 16px 16px',
+                      fontSize: 13.5,
+                      color: 'var(--ink-sub)',
+                      lineHeight: 1.85,
+                    }}>
+                      {q.answer}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* 駅ページ＝「この駅で子連れで入れる店」を探している文脈。
+              ⚠️ 2026-08-31 修正: ここは以前 getItemsForTodayQuery({ place: 'outside' }) を使い、
+              全駅で同じベビーカー3機種（ラクーナ／スゴカル／リベル）の楽天検索に着地していた。
+              駅ページの検索意図は店探しであってベビーカーの機種比較ではないため、
+              親256ページ・28日で44,763表示・3,121クリックに対して**成果0クリック**だった。
+              一方、子ページ /station/[駅]/[条件] は getCatalogItems('gaishoku') の食事グッズに
+              着地しており、8月に成果が出たのは /station/nakano/baby（こちら側）。
+              よって子ページと同じ商材に揃える。AdSense枠には一切触れていない
+              （枠の増減・移動をすると Anchor の視認可能率が落ちて収益の40%が痛む）。 */}
           {(() => {
-            const outingItems = getItemsForTodayQuery({ place: 'outside' }, 3);
+            const outingItems = getCatalogItems('gaishoku').slice(0, 3);
             return outingItems.length > 0 ? (
               <RelatedItemsCTA
-                label="子連れでのお出かけに、あると便利なもの"
+                label="外食のときに持っていくとラクなもの"
                 items={outingItems.map((it) => ({
                   href: it.href,
                   title: it.name,

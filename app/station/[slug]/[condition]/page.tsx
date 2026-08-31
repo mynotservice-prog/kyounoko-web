@@ -157,6 +157,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? getSpotConditionCanonicalSlug(slug, condition as StationConditionSlug)
       : slug;
 
+  // 2026-08-31: 全ページ監査で og:image 欠落 2,061本のうち 1,462本がこの条件ページだった。
+  // /station/ は3週で唯一プラス成長している面なのに、SNS・LINE共有とDiscoverで画像が出ていない。
+  // spot/[slug] と同じ /api/og を配線する（noindex ページにも付ける — 共有はされるため）。
+  const ogImage = `/api/og?title=${encodeURIComponent(`${stationName}駅 ${cond.label}｜${wardName}`)}`;
+  const ogImages = [{ url: ogImage, width: 1200, height: 630 }];
+
   return {
     title,
     description,
@@ -167,6 +173,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'article',
       url: `https://kyounoko.jp/station/${slug}/${condition}`,
+      images: ogImages,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ogImages.map((i) => i.url),
     },
   };
 }

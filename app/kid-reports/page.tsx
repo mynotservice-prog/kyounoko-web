@@ -6,7 +6,7 @@ import { getAllSpotsWithSlug, SPOT_CATEGORY_LABEL } from '@/lib/spots';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: '【一次情報】運営者が実際に訪問した子連れスポットレポート一覧｜きょうのこ',
+  title: '【一次情報】運営者が実際に訪問した子連れスポットレポート一覧',
   description:
     '運営者ながみーが子どもと一緒に訪問して、ベビーカー動線・混雑・授乳/おむつ・滞在時間・注意点を記録した一次情報レポート集。口コミ・伝聞ではなく、すべて実体験ベースです。',
   alternates: { canonical: '/kid-reports' },

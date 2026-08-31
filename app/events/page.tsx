@@ -46,7 +46,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
     (sp.area && sp.area !== 'all') || sp.cat || sp.free === '1' || sp.soon === '1' || sp.baby === '1' || sp.view,
   );
   return {
-    title: '子連れで行ける今週のイベント一覧｜きょうのこ',
+    title: '子連れで行ける今週のイベント一覧',
     description:
       '0〜6歳の子どもと一緒に楽しめる、今週・今月開催の子育てイベント情報。マルシェ・リトミック・ワークショップ・イルミネーションなど編集部が確認したイベントを掲載。',
     robots: hasVariant ? { index: false, follow: true } : INDEXABLE_ROBOTS,

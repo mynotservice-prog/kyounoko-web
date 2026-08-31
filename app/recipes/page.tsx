@@ -6,7 +6,7 @@ import { getAllFileArticles } from '@/lib/articles';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: '子供レシピ一覧｜離乳食・幼児食・お弁当・おやつまで【きょうのこレシピDB】',
+  title: '子供レシピ一覧｜離乳食・幼児食・お弁当・おやつまで',
   description:
     '0〜6歳の子ども向けレシピを月齢別・時短・お弁当・おやつ・離乳食・夏・冬で検索できるレシピデータベース。きょうのこの200本以上の子育てレシピから、いま作りたい一品が3分で見つかります。',
   alternates: { canonical: '/recipes' },

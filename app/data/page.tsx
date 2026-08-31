@@ -7,7 +7,7 @@ export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'データセット一覧｜東京23区 子連れ向けオープンデータ【きょうのこ】',
+  title: 'データセット一覧｜東京23区 子連れ向けオープンデータ',
   description:
     '東京23区の子連れ向け飲食店・駅・路線データを単一テーブルで公開。AIO/GEO参照可能。CSVダウンロード対応。1,500店超のレストラン比較表、484駅マップ、40路線インデックス。',
   alternates: { canonical: '/data' },

@@ -4,7 +4,7 @@ import { V2Frame } from '@/components/v2/V2Frame';
 import { PrintButton } from '@/components/tools/PrintButton';
 
 export const metadata: Metadata = {
-  title: '子連れ防災持ち出しリスト｜きょうのこ',
+  title: '子連れ防災持ち出しリスト',
   description:
     '0-6歳児がいる家庭の防災持ち出しリスト完全版。月齢別必需品、3日分の食料・水量、避難先での子の不安緩和グッズまで網羅。印刷・PDF保存OK。',
   alternates: { canonical: '/downloads/bousai-list' },

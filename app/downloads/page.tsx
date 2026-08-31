@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
 
 export const metadata: Metadata = {
-  title: '無料ダウンロード資料｜きょうのこ',
+  title: '無料ダウンロード資料',
   description:
     '入園準備チェックリスト・月齢別タイムスケジュール・お弁当ローテ表・防災持ち出しリスト・習い事比較シート。子育てに使える実用資料を無料でダウンロード（印刷・PDF保存OK）。',
   alternates: { canonical: '/downloads' },

@@ -4,7 +4,7 @@ import { V2Frame } from '@/components/v2/V2Frame';
 import { PrintButton } from '@/components/tools/PrintButton';
 
 export const metadata: Metadata = {
-  title: '月齢別タイムスケジュール｜きょうのこ',
+  title: '月齢別タイムスケジュール',
   description:
     '0-1歳/2-3歳/4-6歳それぞれの理想的な1日のタイムスケジュール表。起床・食事・お昼寝・遊び・就寝の最適配分を月齢別に。印刷・PDF保存OK。',
   alternates: { canonical: '/downloads/getsurei-schedule' },

@@ -179,11 +179,21 @@ const nextConfig: NextConfig = {
     return [
       // ===== スポット監査(2026-06-18)に伴う旧slug→新slugの301 =====
       // 市区町村修正・改称・都道府県修正・重複統合で slug が変わった分の救済。
-      ...SPOT_REDIRECTS.map((r) => ({
-        source: `/spot/${r.from}`,
-        destination: `/spot/${r.to}`,
-        permanent: true,
-      })),
+      // ⚠️ 2段リダイレクト（308→308）を潰す（2026-08-31）。
+      // SPOT_REDIRECTS の to が CHAIN_SPOT_REDIRECTS の from と一致していると、
+      //   /spot/A →(308) /spot/B →(308) /article/C
+      // という2ホップになる。実際 /spot/COCO-39-S-8lek がこれに該当していた。
+      // Google はホップごとに評価を薄めるので、最終到達先へ1ホップで送る。
+      // 個別に書き換えるのではなく解決関数にしてあるので、今後どちらの配列に
+      // 追記しても自動で1ホップに畳まれる。
+      ...SPOT_REDIRECTS.map((r) => {
+        const chained = CHAIN_SPOT_REDIRECTS.find((c) => c.from === r.to);
+        return {
+          source: `/spot/${r.from}`,
+          destination: chained ? chained.to : `/spot/${r.to}`,
+          permanent: true,
+        };
+      }),
 
       // ===== P1-1c: 全国チェーン外食スポット /spot/[slug] → まとめ記事へ 301 =====
       // チェーンは一覧/ランキング/今日の流れ(destination)からは除外済だが、URLが200で

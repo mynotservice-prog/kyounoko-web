@@ -9,12 +9,18 @@ import {
   type KansaiPrefecture,
   type KansaiStation,
 } from '@/lib/kansai-stations';
+// 2026-08-31: 内部リンク監査で「孤立ページ66本」のうち大半が /station/ 配下だと判明した。
+// 原因は、この一覧が TOKYO と KANSAI しか列挙しておらず、神奈川37駅・埼玉千葉30駅の
+// 計67駅がどこからもリンクされていなかったこと（被リンク0）。
+// /station/ は3週で唯一プラス成長している面なので、一覧に載せて導線を通す。
+import { KANAGAWA_STATIONS } from '@/lib/kanagawa-stations';
+import { SAICHI_STATIONS } from '@/lib/saitama-chiba-stations';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: '駅別 子連れランチ・ベビーカーOK店ガイド｜東京23区・関西｜きょうのこ',
+  title: '駅別 子連れランチ・ベビーカーOK店ガイド｜東京23区・神奈川・埼玉・千葉・関西',
   description: '東京23区全484駅と大阪・京都・神戸の主要駅で、子連れOK・ベビーカー入店OKのファミレス・カフェ・チェーン店および個人店を駅別にチェック。キッズメニュー、キッズチェア、個室、離乳食持込までの可否を全部表示。',
   alternates: { canonical: '/station' },
 };
@@ -295,6 +301,46 @@ export default function StationIndexPage() {
               );
             })}
           </section>
+        </div>
+      </section>
+
+      {/* 2026-08-31 追加: 神奈川・埼玉・千葉。ここが無いために67駅が被リンク0だった。 */}
+      <section style={{ marginTop: 8 }}>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px 48px' }}>
+          <h2 style={{
+            fontFamily: 'var(--font-mincho)',
+            fontSize: 24,
+            marginBottom: 8,
+            paddingBottom: 8,
+            borderBottom: '2px solid rgba(201,96,62,0.18)',
+          }}>
+            首都圏（東京23区以外） <span style={{ fontSize: 13, color: 'var(--ink-mute)', fontWeight: 400 }}>{KANAGAWA_STATIONS.length + SAICHI_STATIONS.length}駅</span>
+          </h2>
+          <p style={{ fontSize: 13, color: 'var(--ink-sub)', marginTop: 0, marginBottom: 24 }}>
+            神奈川・埼玉・千葉の主要駅。ベビーカー入店・キッズメニュー・離乳食持込の可否を駅ごとに整理しています。
+          </p>
+
+          {([
+            { key: 'kanagawa', label: '神奈川', stations: KANAGAWA_STATIONS },
+            { key: 'saichi', label: '埼玉・千葉', stations: SAICHI_STATIONS },
+          ] as const).map((group) => {
+            if (group.stations.length === 0) return null;
+            const sorted = [...group.stations].sort((a, b) => a.name.localeCompare(b.name, 'ja'));
+            return (
+              <section key={group.key} id={`pref-${group.key}`} style={{ marginBottom: 36, scrollMarginTop: 124 }}>
+                <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 20, marginBottom: 14 }}>
+                  {group.label} <span style={{ fontSize: 13, color: 'var(--ink-mute)', fontWeight: 400 }}>{group.stations.length}駅</span>
+                </h3>
+                <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                  {sorted.map((st) => (
+                    <Link key={st.slug} href={`/station/${st.slug}`} className="chip">
+                      {st.name}
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            );
+          })}
         </div>
       </section>
 

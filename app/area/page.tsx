@@ -7,7 +7,7 @@ import { V2Icon, V2_ACCENT, type V2IconName } from '@/components/v2/V2Icon';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'エリアから探す｜きょうのこ',
+  title: 'エリアから探す',
   description:
     '東京都・関東エリアの子連れおでかけ先を地域別に探せます。23区・多摩・神奈川・埼玉・千葉まで網羅。',
   alternates: { canonical: '/area' },

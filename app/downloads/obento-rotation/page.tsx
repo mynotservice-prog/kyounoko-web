@@ -4,7 +4,7 @@ import { V2Frame } from '@/components/v2/V2Frame';
 import { PrintButton } from '@/components/tools/PrintButton';
 
 export const metadata: Metadata = {
-  title: 'お弁当ローテーション表（30日分）｜きょうのこ',
+  title: 'お弁当ローテーション表（30日分）',
   description:
     '幼稚園・保育園のお弁当を30日分ローテーションできる献立表。主菜+副菜2品+彩り1品の組み合わせ例を一覧化。冷凍保存OK食材リスト・朝5分のコツ付き。印刷OK。',
   alternates: { canonical: '/downloads/obento-rotation' },

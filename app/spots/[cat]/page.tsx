@@ -36,7 +36,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   const filters = parseFilters(await searchParams);
   const filtered = hasActiveFilters(filters);
   const count = spotsByCategory(c.id).length;
-  const title = `${c.label}の子連れスポット一覧（全${count}件）｜きょうのこ`;
+  const title = `${c.label}の子連れスポット一覧（全${count}件）`;
   const description = `0〜6歳の子連れで楽しめる${c.label}のスポットを全${count}件掲載。最寄り駅・設備・年齢の目安つきで、今日のおでかけ先を探せます。`;
   return {
     title,
