@@ -16,7 +16,9 @@ import { purgeCfUrls } from '@/lib/cf-purge';
  *   body: { secret: string, paths: string[] }   // paths は "/article/foo" 形式
  */
 
-const SECRET = process.env.ADMIN_REVALIDATE_SECRET || 'kyounoko-revalidate-default';
+// フォールバック既定値は置かない: env 未設定のままデプロイすると
+// 既知の固定シークレットで誰でも叩ける状態になるため（2026-08-29 実測で発覚）
+const SECRET = process.env.ADMIN_REVALIDATE_SECRET;
 const MAX_PATHS = 200;
 
 export async function POST(req: NextRequest) {
@@ -26,7 +28,7 @@ export async function POST(req: NextRequest) {
   } catch {
     return NextResponse.json({ ok: false, error: 'invalid json' }, { status: 400 });
   }
-  if (body.secret !== SECRET) {
+  if (!SECRET || body.secret !== SECRET) {
     return NextResponse.json({ ok: false, error: 'invalid secret' }, { status: 403 });
   }
   if (!Array.isArray(body.paths) || body.paths.length === 0) {
