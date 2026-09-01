@@ -289,6 +289,7 @@ A. 公式に「お子様向けサービスあり」と表示されているの�
 
 ## 関連記事
 
+- [新宿の子連れは高島屋か伊勢丹か｜授乳室とベビーカー貸出を5館比較](/article/shinjuku-kodzure-facilities)
 - [ミヤシタパークは子連れで行ける？屋上公園と授乳室・フードホール](/article/miyashita-park-kodzure)
 - [渋谷区の子連れ室内遊び場8選｜ヒカリエ11階の無料スペース](/article/shitsunai-asobi-shibuya-tokyo)
 - [渋谷 子連れランチ8選｜授乳室の階つき](/article/tokyo-shibuya-kodzure-lunch)

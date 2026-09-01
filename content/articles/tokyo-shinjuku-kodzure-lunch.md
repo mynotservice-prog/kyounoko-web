@@ -190,4 +190,5 @@ A. 本記事では**ルミネ新宿和食店**と**百貨店レストラン街**
 
 ## 関連記事
 
+- [新宿の子連れは高島屋か伊勢丹か｜授乳室とベビーカー貸出を5館比較](/article/shinjuku-kodzure-facilities)
 - [杉並区 ベビーカーOKランチ10選（0〜2歳ママ向け）](/article/tokyo-suginami-stroller-lunch)
