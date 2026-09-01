@@ -79,4 +79,9 @@ export const ARTICLE_REDIRECTS: { from: string; to: string }[] = [
   // 2026-08-31 GEO監査で発見: 旧料金(3歳以下無料/4-6歳数百円/小学生半額)の誤情報が残存し
   // Bing top10で露出、新記事と矛盾。Google側は8月表示ゼロの死蔵。正しい料金を持つ勝者へ301。
   { from: 'shabuyo-kids-menu', to: 'shabuyou-kodzure-koryaku' },
+  // 2026-09-02 死蔵処理: 「池袋 雨の日の屋内遊び場10選」は公開から4か月で90日0imp。
+  // 内容の大半（サンシャイン/水族館/東武/西武）が shitsunai-asobi-toshima-tokyo と重複し、
+  // 池袋に弱い面が2つある状態だった。ユニークだった3件（プラネタリウム満天・
+  // 豊島区立中央図書館・東京芸術劇場）は統合先へ移植済み。
+  { from: 'tokyo-toshima-ikebukuro-rain', to: 'shitsunai-asobi-toshima-tokyo' },
 ];

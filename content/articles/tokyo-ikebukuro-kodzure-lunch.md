@@ -285,7 +285,7 @@ area: tokyo
 - [/data/wards/toshima 豊島区エリア情報](/data/wards)
 - [/data/restaurants で全店舗データ](/data/restaurants)
 - [駅別ガイド全484駅](/station)
-- [池袋 雨の日屋内遊び場10選](/article/tokyo-toshima-ikebukuro-rain)
+- [豊島区の子連れ室内遊び場8選（雨の日も）](/article/shitsunai-asobi-toshima-tokyo)
 
 ## よくある質問（FAQ）
 
@@ -325,7 +325,7 @@ A. ファミレスは基本常備ですが、駅ビル系は店によって数�
 
 - [サンシャインシティは子連れで行ける？授乳室5か所と無料の遊び場](/article/sunshine-city-kodzure)
 - [杉並区 ベビーカーOKランチ10選（0〜2歳ママ向け）](/article/tokyo-suginami-stroller-lunch)
-- [豊島区池袋 雨の日に行けるスポット](/article/tokyo-toshima-ikebukuro-rain)
+- [サンシャインシティは子連れで行ける？授乳室5か所と無料の遊び場](/article/sunshine-city-kodzure)
 - [吉祥寺 子連れランチ6選](/article/tokyo-kichijoji-kodzure-lunch)
 - [ベビーカーおすすめランキング2026](/article/babycar-ranking-2026)
 - [雨の日の子連れお出かけ（横浜版）](/article/kosodate-amenohi-yokohama)
