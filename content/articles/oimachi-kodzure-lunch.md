@@ -288,6 +288,7 @@ A. トラックスのベビー休憩室3か所とアトレ大井町3Fのベビ�
 ## 関連記事
 
 - [品川 子連れランチ8か所｜授乳室はアトレ品川3F・4F](/article/tokyo-shinagawa-kodzure-lunch)
+- [北千住の子連れランチ｜ベビーカーはどの改札？](/article/kita-senju-kodzure-lunch)
 - [高輪ゲートウェイの子連れランチ｜ニュウマン高輪の授乳室から選ぶ](/article/takanawa-gateway-kodzure-lunch)
 - [品川区・大井町エリアの週末スポット](/article/tokyo-shinagawa-ooimachi-weekend)
 - [デニーズのキッズメニュー](/article/dennys-kids-menu)
