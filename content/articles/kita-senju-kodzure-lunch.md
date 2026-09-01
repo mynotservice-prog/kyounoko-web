@@ -304,6 +304,7 @@ A. **北千住マルイ5F**に調乳専用浄水と給湯器があります（**
 
 - [北千住駅の子連れランチ店一覧（条件で絞り込む）](/station/kita-senju)
 - [大井町の子連れランチ｜駅直結4拠点の授乳室と選び方](/article/oimachi-kodzure-lunch)
+- [錦糸町の子連れランチ｜授乳室・遊び場と同じ階で選ぶ](/article/kinshicho-kodzure-lunch)
 - [子連れOKファミレス15選（サイゼ・ガスト・ジョナサン比較）](/article/kodzure-famires-15sen)
 - [ガストのキッズメニュー](/article/gusto-kids-menu)
 - [しゃぶ葉の子供料金は何歳まで無料？](/article/shabuyou-kodzure-koryaku)
