@@ -74,10 +74,44 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   //      注意点まで解説｜足立区の公園子連れガイド【設備・料金・口コミ】」(約75字)
   // name が十分に説明的な場合は接尾辞を付けず、短い name のときだけ文脈を補う。
   const SPOT_TITLE_NAME_MAX = 24;
+  // 2026-09-01 CTR取りこぼしの修正:
+  //   スポット面は設備クエリ（「◯◯ 授乳室」「◯◯ ベビーカー」「◯◯ キッズスペース」）で
+  //   pos5〜9に入っているのに、タイトルが「{区}の{カテゴリ}子連れガイド」という汎用テンプレで
+  //   検索語を1語も含まず、クリックされていなかった。GSC 90日で
+  //   **上位10位以内・imp25以上・CTR2%未満が63件／計3,180imp**（二子玉川ライズ335imp/0clk、
+  //   GINZA SIX 241imp/0clk、アクアシティお台場173imp/0clk…）。
+  //   そこで、その面が実際に持っている設備語をタイトルへ出す。
+  //   出典は **spot.note（＝公開済みの meta description 本文）と facilities フラグ** に限る。
+  //   note に書いていない設備をタイトルで主張しないこと（新しい事実主張を作らないため）。
+  const facilityHints: [boolean, string][] = [
+    [
+      /授乳室|ベビールーム|ベビー休憩|赤ちゃん休憩/.test(spot.note ?? '') ||
+        spot.facilities?.nursingRoom === 'yes',
+      '授乳室',
+    ],
+    [
+      /ベビーカー貸出|ベビーカーレンタル|ベビーカー貸し出し/.test(spot.note ?? '') ||
+        spot.facilities?.strollerRental === 'yes',
+      'ベビーカー貸出',
+    ],
+    [
+      /キッズスペース|キッズコーナー|キッズエリア/.test(spot.note ?? '') ||
+        spot.facilities?.kidsSpace === 'yes',
+      'キッズスペース',
+    ],
+    [
+      /おむつ替え|おむつ交換/.test(spot.note ?? '') || spot.facilities?.diaperChange === 'yes',
+      'おむつ替え',
+    ],
+  ];
+  // 検索需要の大きい順に最大3語。SERPの表示幅（約30字）に収めるため name が長い面では出さない。
+  const facilityWords = facilityHints.filter(([hit]) => hit).map(([, w]) => w).slice(0, 3);
   const titleSuffix =
     spot.name.length >= SPOT_TITLE_NAME_MAX
       ? ''
-      : `｜${location}${location ? 'の' : ''}${category}子連れガイド`;
+      : facilityWords.length > 0
+        ? `｜${facilityWords.join('・')}`
+        : `｜${location}${location ? 'の' : ''}${category}子連れガイド`;
   const title = `${spot.name}${titleSuffix}`;
   const description =
     spot.note ??
