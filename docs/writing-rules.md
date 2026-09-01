@@ -76,12 +76,28 @@
   丸井          https://www.0101.co.jp/contents2/facilityinfo/<店番>/facility.json
   すかいらーく系 https://store-info.skylark.co.jp/api/point/{5桁geohash}/ （セル単位で全ブランド全店が返る。
                 大井町は xn76e。ガスト/ジョナサン/バーミヤン/しゃぶ葉の在否を1リクエストで確認できる）
-  ゼンショー系   maps.sukiya.jp / maps.hama-sushi.co.jp / maps.cocos-jpn.co.jp （住所検索API。都県で引いて全数照合）
-  b-map系      吉野家/ドトール/松屋/ロイヤルグループは api/proxy2/shop/list?address=13109 型（区コード指定）
+  ゼンショー系   maps.sukiya.jp / maps.hama-sushi.co.jp / maps.cocos-jpn.co.jp / maps.nakau.co.jp
+                `…/jp/address.html?q=東京都◯◯区` で区ごとに全数照合できる
+  b-map系      吉野家/ドトール/松屋/ロイヤルグループ/やよい軒は api/proxy2/shop/list?address=13109 型（区コード指定）。
+                `?coord=緯度,経度&radius=1200&limit=100` の半径検索も使える
+  マクドナルド  https://map.mcdonalds.co.jp/sitemap.xml で店舗コードを列挙 → /map/{code} を取得
+                （個別ページはJS描画なのでsitemap経由が確実。設備アイコンはJSで一律出力＝各店の判定には使えない）
+  スターバックス 検索APIは403だが `https://store.starbucks.co.jp/pref/tokyo/?city=◯◯区` と
+                店舗詳細 `/detail-{id}/` は素のcurlで取れる
+  CoCo壱番屋    https://tenpo.ichibanya.co.jp/api/point/ が**全国1,231店を無認証で一括返却**（座標・営業時間・座席数つき）
+  KFC          https://search.kfc.co.jp/points/{id}
+  レインズ系    https://map.reins.co.jp/{gyukaku|onyasai}/tokyo のHTMLに data-lat / data-lon / data-store(JSON) が全店分。
+                くら寿司 shop.kurasushi.co.jp/tokyo も同じCanly系で同構造
+  Canly新版     大戸屋 store.ootoya.com は一覧に件数しか無いが、詳細 `/detail/{storeId}/` に全データが入る
 
   ⚠️ 旧記載「ガスト・すかいらーく系は機械的に引けない」は**2026-08-31に反転**。旧 store.skylark.co.jp の
      話で、新ロケータ store-info.skylark.co.jp の point API で引ける（大井町の全数確認で実証済み）。
   ⚠️ 「無い」判定には**陽性対照**を必ず取る（同じAPIで別エリアの実在店が引けることを確認してから0件と書く）
+  ⚠️ **b-map/NAVITIME系が返す緯度経度は数百m狂うことがある**（2026-09-01に神田エリアで実測。松屋 神田南口店は
+     住所が千代田区鍛冶町2-1-2なのに座標は本石町付近＝三越前から136mを指した）。
+     **距離の判定は座標を鵜呑みにせず、必ず住所の丁目で裏取りする。**
+  ⚠️ **同じチェーンでも店舗ごとに条件が違う**。ベビーカー貸出の対象月齢は北千住マルイ＝生後10ヶ月〜2歳、
+     錦糸町マルイ＝生後1ヵ月〜4才。「マルイなら借りられる」と一般化しない。
 
 ---
 
