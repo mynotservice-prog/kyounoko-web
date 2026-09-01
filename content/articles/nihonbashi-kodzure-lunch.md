@@ -298,5 +298,6 @@ A. **三越の特別食堂 日本橋は予約制ではなく、当日午前10時
 - [日本橋駅の子連れランチ店一覧（条件で絞り込む）](/station/nihombashi)
 - [錦糸町の子連れランチ｜授乳室・遊び場と同じ階で選ぶ](/article/kinshicho-kodzure-lunch)
 - [北千住の子連れランチ｜ベビーカーはどの改札？](/article/kita-senju-kodzure-lunch)
+- [赤羽の子連れランチ｜食事と屋内の遊び場が同じ階は？](/article/akabane-kodzure-lunch)
 - [銀座・有楽町の子連れランチ10選｜個室・デパート内](/article/tokyo-ginza-kodzure-lunch)
 - [ガストのキッズメニュー](/article/gusto-kids-menu)
