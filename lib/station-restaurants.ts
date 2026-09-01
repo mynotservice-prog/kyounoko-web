@@ -1029,7 +1029,10 @@ export const STATION_CHAIN_MAPPING: Record<string, string[]> = {
   'ginza': ['saizeriya', 'gusto', 'starbucks', 'tully-coffee', 'doutor', 'mcdonalds', 'mos-burger', 'kfc', 'sukiya', 'matsuya', 'yoshinoya', 'sushiro', 'kura-sushi', 'cocoichi', 'marugame', 'gyukaku', 'ootoya', 'komeda', 'excelsior', 'royal-host'],
   'ginza-itchome': ['doutor', 'mcdonalds', 'matsuya', 'bamiyan'],
   'higashi-ginza': ['saizeriya', 'starbucks', 'doutor', 'mcdonalds', 'mos-burger', 'matsuya', 'komeda', 'jonathan', 'marugame', 'cocoichi'],
-  'nihombashi': ['saizeriya', 'starbucks', 'doutor', 'mcdonalds', 'mos-burger', 'yoshinoya', 'sukiya', 'excelsior', 'bamiyan', 'kura-sushi', 'ohsho'],
+  // 2026-09-01 公式店舗検索で三越前駅から徒歩10分(800m)圏を照合。
+  // 不在確定(陽性対照つき): saizeriya(中央区4店だが日本橋室町になし)/mos-burger/sukiya/bamiyan → 除外リストへ。
+  // 実在確認: gust/nakau/doutor/yoshinoya。mcdonalds/starbucks等は公式検索に到達できず未確認のため現状維持。
+  'nihombashi': ['starbucks', 'doutor', 'mcdonalds', 'yoshinoya', 'excelsior', 'kura-sushi', 'ohsho', 'gusto', 'nakau'],
   'mitsukoshimae': ['saizeriya', 'starbucks', 'doutor', 'mcdonalds', 'mos-burger', 'matsuya', 'komeda', 'jonathan', 'marugame', 'ootoya'],
   'shintomicho': ['doutor', 'mcdonalds', 'matsuya', 'gusto'],
   'tsukiji': ['saizeriya', 'starbucks', 'doutor', 'mcdonalds', 'mos-burger', 'sukiya', 'tully-coffee', 'gusto', 'sushiro', 'ootoya'],
@@ -1619,6 +1622,8 @@ const STATION_CHAIN_EXCLUDE: Record<string, readonly string[]> = {
   'kinshicho': ['sushiro', 'kura-sushi', 'hama-sushi', 'cocos', 'jonathan'],
   // 2026-09-01 公式店舗検索で全数照合（武蔵小山駅 徒歩10分圏）。すべて陽性対照つきで0件を確認。
   'musashi-koyama': ['gusto', 'sushiro', 'subway', 'hama-sushi', 'denny-s', 'cocoichi', 'nakau', 'marugame', 'ootoya', 'yayoiken', 'gyukaku'],
+  // 2026-09-01 公式店舗検索で三越前駅から徒歩10分圏を照合（日本橋）。すべて陽性対照つきで0件。
+  'nihombashi': ['saizeriya', 'mos-burger', 'sukiya', 'bamiyan', 'jonathan', 'cocos', 'marugame', 'tenya', 'matsuya'],
 };
 
 export function getChainsForStation(stationSlug: string): Chain[] {
