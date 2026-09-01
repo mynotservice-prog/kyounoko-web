@@ -163,7 +163,7 @@ const NAME_STOPWORDS = new Set(
     // 2026-09-01 追記: 施設の「種類名」として素の「レストラン」「カフェ」も拾ってしまい、
     // 別々の建物のレストラン階（ラケタウン1F・アルカキット10F・オリナス4F…）が
     // 全部ひとつの施設の食い違いに見えていた。フードコートと同じ扱いにする。
-    'レストラン', 'カフェ',
+    'レストラン', 'カフェ', 'フードホール', 'フードコート内',
 
   ].map(facilityKey),
 );
@@ -560,6 +560,26 @@ for (const c of claims) {
  * （体験談ブロックなど）が正に化ける。実際 tokyo-station-kodzure-lunch の
  * 「10階のベビールーム」がそれで、多数決を入れないと 9階 が誤りに見える。
  */
+/**
+ * 「階」の食い違いを見ない施設×観点。
+ *
+ * 2026-09-01 追加。百貨店・専門店街は**同じ観点の設備が複数階に正当に散らばる**。
+ * 例: サンシャインシティの専門店街アルパは飲食がB1・1F・2F・3Fの4フロアにあり、
+ * 「アルパ3階が中心（30店）」と「アルパ1F のタリーズ」を書くと食い違いに見えてしまう。
+ * 三越・高島屋は本館/新館という館名が鍵に入るので衝突しないが、館名を持たない
+ * 専門店街ではこれが起きる。
+ *
+ * ⚠️ ここに足してよいのは「1つの建物の中で、その観点が複数階にあるのが事実」の場合だけ。
+ * 別々の建物が同じ鍵に名寄せされているなら、**記事側で施設名を区別するのが正しい対処**
+ * （アトレ本館・イトーヨーカドー・マルイで実際にそうした）。安易に足さないこと。
+ */
+const MULTI_FLOOR_OK = new Set(
+  [
+    ['アルパ', 'レストラン・飲食'],
+    ['サンシャインシティ', 'レストラン・飲食'],
+  ].map(([f, a]) => `${facilityKey(f)}\t${a}`),
+);
+
 const findings = [];
 for (const [, list] of groups) {
   const buckets = [];
@@ -572,6 +592,13 @@ for (const [, list] of groups) {
     b.claims.push(c);
   }
   if (buckets.length < 2) continue;
+  // 複数階に正当に散らばる施設×観点は「階」の食い違いを見ない（MULTI_FLOOR_OK 参照）
+  if (
+    list[0].type === 'floor' &&
+    MULTI_FLOOR_OK.has(`${facilityKey(list[0].facility)}\t${list[0].aspect}`)
+  ) {
+    continue;
+  }
 
   for (const b of buckets) {
     b.auditedCount = b.claims.filter((c) => c.audited).length;
