@@ -217,7 +217,7 @@ A4プリント可能なフットスケール（無料）でOK。月1回測ると
 ## 関連記事
 
 - [ファーストシューズ いつから？](/article/firstshoes-toha)
-- [ファーストシューズとは（基本知識）](/article/first-shoes-toha)
+- [ファーストシューズとは（基本知識）](/article/firstshoes-toha)
 - [保育園 入園準備リスト 1歳](/article/hoikuen-erabikata)
 - [ベビーカー診断ツール](/tools/babycar-shindan)
 

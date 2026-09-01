@@ -198,7 +198,7 @@ IZ996より**10g軽い**95g、それでも安定感は変わらない。
 
 - [子供靴の選び方完全ガイド（ピラー）](/article/kodomogutsu-erabikata-kanzen-guide-2026)
 - [ファーストシューズ いつから？](/article/firstshoes-toha)
-- [ファーストシューズとは](/article/first-shoes-toha)
+- [ファーストシューズとは](/article/firstshoes-toha)
 - [保育園 入園準備リスト](/article/hoikuen-erabikata)
 
 ## よくある質問

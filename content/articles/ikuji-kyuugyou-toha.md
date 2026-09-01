@@ -141,7 +141,7 @@ legacyHero: /hero/parent-child-01.webp
 
 - [育休給付金とは](/article/ikukyu-kyuufukin-toha)
 - [児童手当とは](/article/jidou-teate-toha)
-- [母子手帳とは](/article/boshitechou-toha)
+- [母子手帳とは](/article/boshi-techou-toha)
 - [0歳の育児 完全マップ](/article/0sai-ikuji-kanzen-map)
 
 ---

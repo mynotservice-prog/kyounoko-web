@@ -137,7 +137,7 @@ legacyHero: /hero/commerce-01.webp
 
 ## 関連記事
 
-- [母子手帳とは](/article/boshitechou-toha)
+- [母子手帳とは](/article/boshi-techou-toha)
 - [育児休業とは](/article/ikuji-kyuugyou-toha)
 - [育休給付金とは](/article/ikukyu-kyuufukin-toha)
 - [0歳の育児 完全マップ](/article/0sai-ikuji-kanzen-map)
