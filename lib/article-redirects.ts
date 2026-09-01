@@ -84,4 +84,13 @@ export const ARTICLE_REDIRECTS: { from: string; to: string }[] = [
   // 池袋に弱い面が2つある状態だった。ユニークだった3件（プラネタリウム満天・
   // 豊島区立中央図書館・東京芸術劇場）は統合先へ移植済み。
   { from: 'tokyo-toshima-ikebukuro-rain', to: 'shitsunai-asobi-toshima-tokyo' },
+  // 2026-09-02 二重生成の重複統合: 2026-05-29の量産時に同一トピックが「ハイフン有/無」の
+  // 2 slug で生成され、どちらも2ページ目で共倒れしていた（自己カニバリ）。
+  // 表示数・順位の良い側を正典として残し、負け側の独自セクションは移植済み。
+  //   first-shoes-toha(779imp/pos13.2) → firstshoes-toha(771imp/pos11.1) ※ナイキ行と試し履き注記を移植
+  { from: 'first-shoes-toha', to: 'firstshoes-toha' },
+  //   boshitechou-toha(4imp/pos57.8) → boshi-techou-toha(337imp/pos22.0) ※対象者・条件／似た用語との違いを移植
+  { from: 'boshitechou-toha', to: 'boshi-techou-toha' },
+  //   tasogarenaki-toha(228imp/pos17.8) → tasogare-naki-toha(459imp/pos18.4) ※SBS注意は統合先に既出のため移植不要
+  { from: 'tasogarenaki-toha', to: 'tasogare-naki-toha' },
 ];

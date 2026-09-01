@@ -6,7 +6,7 @@ metaDescription: >-
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-05-30'
+updatedAt: '2026-09-02'
 hero: /hero-ai/firstshoes-toha.jpg
 area: all
 quickInfo:
@@ -24,7 +24,7 @@ lede: >-
 legacyHero: /hero/baby-01.webp
 ---
 
-[著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年5月
+[著者: ながみー（4歳娘・2歳息子の父／編集長）](/authors/nagamy)・最終更新 2026年9月
 
 ## 結論｜ファーストシューズの基本
 
@@ -106,6 +106,9 @@ legacyHero: /hero/baby-01.webp
 | イフミー | 軽量・コスパ◎ |
 | ニューバランス | おしゃれ・幅広対応 |
 | アティパス | 室内外兼用・くつ下感覚 |
+| ナイキ | スポーティで人気。サイズ感は要試着 |
+
+> ブランドより **「実際に試し履きして合うかどうか」** が最優先です。
 
 ## メリット・デメリット
 
