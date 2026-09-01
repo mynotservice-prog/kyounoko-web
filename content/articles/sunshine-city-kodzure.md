@@ -330,6 +330,7 @@ A. **東池袋駅（有楽町線）の6・7番出口から地下通路で約3分
 
 ## 関連記事
 
+- [新宿の子連れは高島屋か伊勢丹か｜授乳室とベビーカー貸出を5館比較](/article/shinjuku-kodzure-facilities)
 - [ミヤシタパークは子連れで行ける？屋上公園と授乳室・フードホール](/article/miyashita-park-kodzure)
 - [池袋 子連れランチ｜授乳室の階つき](/article/tokyo-ikebukuro-kodzure-lunch)
 - [豊島区の子連れ室内遊び場](/article/shitsunai-asobi-toshima-tokyo)
