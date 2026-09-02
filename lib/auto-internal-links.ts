@@ -36,10 +36,7 @@ type LinkRule = {
  * 効いているのでそのまま）。判定完了後にこの集合を空にする。
  */
 const EXPERIMENT_FROZEN_SLUGS = new Set([
-  // 実験1: 年齢修飾クエリの直答昇格（判定 2026-09上旬）
-  'kodzure-saize-koryaku',
-  'mizuasobi-itabashi-tokyo',
-  'sushiro-kids-menu',
+  // 実験1（年齢修飾クエリの直答昇格）は 2026-09-02 に判定完了（不発）→凍結解除済み
   // 実験2: キッズメニュー面の修飾クエリ寄せ（判定 2026-09-16 / 2026-10-21）
   'bamiyan-kids-menu',
   'bamiyan-kodzure-koryaku',

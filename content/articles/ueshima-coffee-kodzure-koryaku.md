@@ -7,7 +7,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-24'
-updatedAt: '2026-06-03'
+updatedAt: '2026-09-02'
 area: all
 lede: >-
   「上島珈琲店って子連れで入っていい？」「黒糖ミルク珈琲は子どもに分けて大丈夫？」を1記事で解決。UCCグループならではの落ち着いた店内と席間広めの座席、ホットミルク・ジュースでの代替、看板の黒糖入りミルク珈琲が実はコーヒー入り＝カフェインに注意な点（カフェインレス版という選択肢）、黒糖の甘さ・氷・やけどの安全管理まで、**4歳娘＆2歳息子と通うながみー**が年齢別・店舗タイプ別に整理しました。
@@ -34,7 +34,7 @@ heroAlt: 上島珈琲店風の落ち着いたカフェで、子連れ家族が�
 
 - **著者**: ながみー（きょうのこ編集長・4歳娘＆2歳息子の父／30代パパ）
 - **取材ベース**: 首都圏の上島珈琲店を家族で繰り返し利用した一次データ（駅前ビル店・モール内店・ロードサイド店をそれぞれ訪問）
-- **公式参照**: 上島珈琲店公式 [www.ueshima-coffee-ten.jp](https://www.ueshima-coffee-ten.jp/) ／ミルク珈琲（黒糖） [www.ueshima-coffee-ten.jp/menu/coffee/milk-coffee-kokutou/](https://www.ueshima-coffee-ten.jp/menu/coffee/milk-coffee-kokutou/) ／カフェインレスのミルク珈琲（黒糖） [www.ueshima-coffee-ten.jp/menu/coffee/decaf-kokutou-milk-coffee/](https://www.ueshima-coffee-ten.jp/menu/coffee/decaf-kokutou-milk-coffee/) ／運営の企業情報 [www.ucc.co.jp](https://www.ucc.co.jp/company/) （いずれも2026年5月時点で参照）
+- **公式参照**: 上島珈琲店公式 [www.ueshima-coffee-ten.jp](https://www.ueshima-coffee-ten.jp/) ／ミルク珈琲（黒糖） [www.ueshima-coffee-ten.jp/menu/coffee/milk-coffee-kokutou/](https://www.ueshima-coffee-ten.jp/menu/coffee/milk-coffee-kokutou/) ／カフェインレスのミルク珈琲（黒糖） [www.ueshima-coffee-ten.jp/menu/coffee/decaf-kokutou-milk-coffee/](https://www.ueshima-coffee-ten.jp/menu/coffee/decaf-kokutou-milk-coffee/) ／運営の企業情報 [www.ucc.co.jp](https://www.ucc.co.jp/company/) （2026年5月時点で参照、**リンク先の存在とメニューの掲載は2026年9月2日に再確認**）
 - **運営**: UCC上島珈琲株式会社（本社：兵庫県神戸市）。コーヒーで知られる**UCCグループ**が手がける珈琲店で、**ネルドリップ抽出**の濃厚なコーヒーと、沖縄県産黒糖を使った**黒糖入りミルク珈琲**が看板です。
 - **注**: 席・サービス・メニュー・価格・キッズ向けの取り扱いは**店舗や時期で大きく変わります**。最終確認は必ず公式サイトと店頭で行ってください。本記事は公開情報の要約と家族利用の体験であり、医療行為の助言ではありません。
 
@@ -80,6 +80,8 @@ heroAlt: 上島珈琲店風の落ち着いたカフェで、子連れ家族が�
 ### 【最重要】看板の「黒糖入りミルク珈琲」はコーヒー入り＝カフェイン
 
 上島珈琲店の看板といえば**黒糖入りミルク珈琲（ミルク珈琲〈黒糖〉）**。沖縄県産黒糖のすっきりした甘みとミルクのまろやかさで、つい「ミルクだから子どもにも一口…」と思いがちですが、**これはコーヒーが入っており、カフェインを含みます**。「ミルク珈琲」という名前で油断せず、**子どもには分けないのが基本**です。
+
+ミルク珈琲（黒糖）とカフェインレス版が公式メニューに掲載されていることは、[公式メニューページ](https://www.ueshima-coffee-ten.jp/menu/coffee/milk-coffee-kokutou/)で2026年9月2日に確認しています。
 
 うれしいのは、上島珈琲店には**カフェインレス（デカフェ）のミルク珈琲（黒糖）**もあること。授乳中・妊娠中の保護者が安心して楽しめる選択肢で、4-6歳に「コーヒー風味の体験」をほんの少しだけ…という場合もカフェインレス版が無難です。ただしカフェインレスでも**黒糖＝糖分は多め**なので、与えるとしても少量・ときどきに。心配な場合はかかりつけ小児科医に相談してください。
 
