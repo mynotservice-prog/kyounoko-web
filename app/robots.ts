@@ -56,6 +56,22 @@ export default function robots(): MetadataRoute.Robots {
   //   （3,845件中 約18% が /api/og?title=… のインデックス残骸だった）。
   const baseAllow = ['/', '/_next/', '/api/og'];
 
+  // 【2026-09-02 追加】AIクローラー専用の追加Disallow。
+  //
+  //   8/27〜9/2 の6日間で Vercel インフラ費が $39（月換算$200ペース）に急増。
+  //   Vercel Observability の実測で、直近12hのエッジリクエスト42.1万件のうち
+  //   ClaudeBot 31.6万 + GPTBot 8.9万 = 96% が /today のクエリ変種
+  //   （?station=…&age=…&weather=… の組合せ空間）を毎秒〜7reqで総当たりしていた。
+  //   /today はクエリごとに別キャッシュキー＝ほぼ毎回 Function 起動
+  //   （キャッシュ率1.6%）で、Fluid CPU / Origin転送 / Observabilityイベントを直撃。
+  //
+  //   8/17 の「/*? 全面遮断の撤回」は Google のインデックス衛生（noindexを読ませる）
+  //   のための判断であり、その教訓は Google が従う `*` グループには引き続き適用する。
+  //   一方 AIクローラーは Google のインデックスと無関係なので、無限クエリ空間だけを
+  //   ピンポイントで遮断してもGEO（記事・スポットの引用獲得）への影響はない。
+  //   クリーンURL（/today, /events 等）は引き続きクロール可。
+  const aiDisallow = [...baseDisallow, '/today?', '/events?', '/ranking?', '/spots?'];
+
   return {
     rules: [
       // ===== 一般クローラー（Google等）=====
@@ -71,37 +87,40 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'AdsBot-Google', allow: baseAllow },
       { userAgent: 'AdsBot-Google-Mobile', allow: baseAllow },
       { userAgent: 'Googlebot-Image', allow: baseAllow, disallow: baseDisallow },  // Google画像検索
-      { userAgent: 'Google-Extended', allow: baseAllow, disallow: baseDisallow },  // Gemini/Bard学習
+      { userAgent: 'Google-Extended', allow: baseAllow, disallow: aiDisallow },  // Gemini/Bard学習
 
       // ===== AI検索クローラー（AIO対策の中核）=====
       // ChatGPT / ChatGPT Search からの引用を受け入れる
-      { userAgent: 'GPTBot', allow: baseAllow, disallow: baseDisallow },
-      { userAgent: 'OAI-SearchBot', allow: baseAllow, disallow: baseDisallow },
-      { userAgent: 'ChatGPT-User', allow: baseAllow, disallow: baseDisallow },
+      { userAgent: 'GPTBot', allow: baseAllow, disallow: aiDisallow },
+      { userAgent: 'OAI-SearchBot', allow: baseAllow, disallow: aiDisallow },
+      { userAgent: 'ChatGPT-User', allow: baseAllow, disallow: aiDisallow },
 
       // Anthropic Claude（ClaudeBot / claude-web）
-      { userAgent: 'ClaudeBot', allow: baseAllow, disallow: baseDisallow },
-      { userAgent: 'anthropic-ai', allow: baseAllow, disallow: baseDisallow },
-      { userAgent: 'claude-web', allow: baseAllow, disallow: baseDisallow },
+      { userAgent: 'ClaudeBot', allow: baseAllow, disallow: aiDisallow },
+      { userAgent: 'anthropic-ai', allow: baseAllow, disallow: aiDisallow },
+      { userAgent: 'claude-web', allow: baseAllow, disallow: aiDisallow },
 
       // Perplexity（AI検索で成長中）
-      { userAgent: 'PerplexityBot', allow: baseAllow, disallow: baseDisallow },
-      { userAgent: 'Perplexity-User', allow: baseAllow, disallow: baseDisallow },
+      { userAgent: 'PerplexityBot', allow: baseAllow, disallow: aiDisallow },
+      { userAgent: 'Perplexity-User', allow: baseAllow, disallow: aiDisallow },
 
       // CommonCrawl（多くのLLM学習データソース）
-      { userAgent: 'CCBot', allow: baseAllow, disallow: baseDisallow },
+      { userAgent: 'CCBot', allow: baseAllow, disallow: aiDisallow },
 
       // Meta AI（Llama）
-      { userAgent: 'Meta-ExternalAgent', allow: baseAllow, disallow: baseDisallow },
-      { userAgent: 'FacebookBot', allow: baseAllow, disallow: baseDisallow },
+      { userAgent: 'Meta-ExternalAgent', allow: baseAllow, disallow: aiDisallow },
+      { userAgent: 'FacebookBot', allow: baseAllow, disallow: aiDisallow },
 
       // Bing / Copilot
-      { userAgent: 'bingbot', allow: baseAllow, disallow: baseDisallow },
-      { userAgent: 'BingPreview', allow: baseAllow, disallow: baseDisallow },
+      { userAgent: 'bingbot', allow: baseAllow, disallow: aiDisallow },
+      { userAgent: 'BingPreview', allow: baseAllow, disallow: aiDisallow },
+
+      // Amazonbot（Alexa。実測11K/12hで/todayクエリを叩いていたため専用グループ化）
+      { userAgent: 'Amazonbot', allow: baseAllow, disallow: aiDisallow },
 
       // Applebot（Siri・Spotlight・Apple Intelligence）
-      { userAgent: 'Applebot', allow: baseAllow, disallow: baseDisallow },
-      { userAgent: 'Applebot-Extended', allow: baseAllow, disallow: baseDisallow },
+      { userAgent: 'Applebot', allow: baseAllow, disallow: aiDisallow },
+      { userAgent: 'Applebot-Extended', allow: baseAllow, disallow: aiDisallow },
     ],
     sitemap: [
       'https://kyounoko.jp/sitemap.xml',
