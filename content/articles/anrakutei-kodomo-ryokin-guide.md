@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-09-02T00:00:00.000Z'
-hero: /img/scenes/meal-27.webp
+hero: /img/scenes/yakiniku-01.webp
 heroAlt: 安楽亭の座敷席で、家族が焼肉食べ放題を楽しみ、子どもがおこさまクッパを食べている様子（イラスト）
 area: all
 quickInfo:

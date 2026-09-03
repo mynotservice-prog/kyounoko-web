@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-09-02T00:00:00.000Z'
-hero: /img/scenes/meal-30.webp
+hero: /img/scenes/famires-03.webp
 heroAlt: 和食さとの座敷席で、家族がしゃぶしゃぶ食べ放題の鍋を囲み、子どもが取り分けを待っている様子（イラスト）
 area: all
 quickInfo:

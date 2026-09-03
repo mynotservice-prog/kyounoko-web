@@ -8,7 +8,7 @@ categoryName: 今日何食べる？
 publishedAt: '2026-07-27T00:00:00.000Z'
 updatedAt: '2026-07-27'
 noindex: true
-hero: /img/scenes/meal-19.webp
+hero: /img/scenes/gaishoku-baby-01.webp
 area: saitama
 quickInfo:
   ageRanges:

@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-09-02T00:00:00.000Z'
-hero: /img/scenes/meal-39.webp
+hero: /img/scenes/zashiki-01.webp
 heroAlt: しゃぶしゃぶ温野菜の席で二色鍋を囲み、幼児は無料・小学生は半額の食べ放題を家族で楽しむ様子（イラスト）
 area: all
 quickInfo:

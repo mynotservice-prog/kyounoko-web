@@ -8,7 +8,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-06-02'
-hero: /hero-ai/legoland-baby-chair.jpg
+hero: /img/scenes/babychair-02.webp
 area: all
 quickInfo:
   ageRanges:

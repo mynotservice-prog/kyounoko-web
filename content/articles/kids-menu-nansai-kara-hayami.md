@@ -8,7 +8,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
 updatedAt: '2026-08-31'
-hero: /img/scenes/meal-26.webp
+hero: /img/scenes/famires-02.webp
 lede: >-
   「ガストのお子様メニューって何歳から？」「サイゼに年齢制限ってあるの？」「しゃぶ葉は何歳から有料？」——子連れ外食で必ず迷うこれらの疑問を、**ファミレス・食べ放題・カフェ12チェーンを横断する早見表**で一気に解決します。
 quickInfo:

@@ -8,7 +8,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-09-02'
-hero: /img/scenes/indoor-play-03.webp
+hero: /img/scenes/mallkids-02.webp
 area: saitama
 quickInfo:
   ageRanges:

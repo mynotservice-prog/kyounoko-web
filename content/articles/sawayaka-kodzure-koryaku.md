@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-07-22'
 updatedAt: '2026-07-22'
-hero: /img/scenes/meal-19.webp
+hero: /img/scenes/gaishoku-baby-01.webp
 area: shizuoka
 quickInfo:
   ageRanges:

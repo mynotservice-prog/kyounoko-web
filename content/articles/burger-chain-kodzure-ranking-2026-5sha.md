@@ -21,7 +21,7 @@ quickInfo:
     - any
   durationMin: 45
   budget: low
-hero: /img/scenes/meal-11.webp
+hero: /img/scenes/fastfood-03.webp
 heroAlt: ハンバーガーショップのテーブルで、子ども向けにポテトやミニバーガーを取り分けている家族の様子（イラスト）
 youtubeSearch: ハンバーガー チェーン 子連れ おすすめ
 ---

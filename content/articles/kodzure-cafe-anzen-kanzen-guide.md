@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-24'
 updatedAt: '2026-06-03'
-hero: /img/scenes/meal-19.webp
+hero: /img/scenes/cafemorning-02.webp
 heroAlt: カフェのソファ席で、親が子ども用にノンカフェインのホットミルクを人肌まで冷ましてから渡し、熱いコーヒーやはちみつ入りのドリンクは子どもの手の届かない大人側に置いている家族の様子（イラスト）
 area: all
 quickInfo:

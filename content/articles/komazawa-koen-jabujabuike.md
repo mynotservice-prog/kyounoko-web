@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-07-27T00:00:00.000Z'
 updatedAt: '2026-08-19'
-hero: /img/scenes/pool-water-05.webp
+hero: /img/scenes/mist-01.webp
 area: tokyo
 quickInfo:
   ageRanges:

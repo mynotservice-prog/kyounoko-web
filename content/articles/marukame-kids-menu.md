@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-06-18T00:00:00.000Z'
 updatedAt: '2026-08-31'
-hero: /img/scenes/meal-33.webp
+hero: /img/scenes/selfudon-03.webp
 area: all
 quickInfo:
   ageRanges:

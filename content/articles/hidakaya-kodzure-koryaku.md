@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-07-22'
 updatedAt: '2026-07-22'
-hero: /img/scenes/meal-30.webp
+hero: /img/scenes/chuka-01.webp
 heroAlt: 駅前のラーメン店のテーブル席で、子ども用にラーメンの麺を短く取り分けている家族の様子（イラスト）
 area: kanto
 quickInfo:

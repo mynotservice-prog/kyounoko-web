@@ -20,7 +20,7 @@ quickInfo:
   weather:
     - any
   budget: '〜1500'
-hero: /img/scenes/meal-30.webp
+hero: /img/scenes/cafemorning-03.webp
 heroAlt: 都心のカフェで子連れ家族がベビーカーを横付けして寛いでいる様子（イラスト）
 ---
 

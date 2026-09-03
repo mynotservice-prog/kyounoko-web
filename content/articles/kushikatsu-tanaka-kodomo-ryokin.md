@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-09-02T00:00:00.000Z'
 updatedAt: '2026-09-03'
-hero: /img/scenes/meal-08.webp
+hero: /img/scenes/gaishoku-baby-01.webp
 area: all
 quickInfo:
   ageRanges:

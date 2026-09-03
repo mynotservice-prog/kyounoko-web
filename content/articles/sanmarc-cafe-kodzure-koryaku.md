@@ -21,7 +21,7 @@ quickInfo:
     - any
   durationMin: 45
   budget: mid
-hero: /img/scenes/meal-23.webp
+hero: /img/scenes/cafemorning-01.webp
 heroAlt: サンマルクカフェ風のベーカリーカフェで、子連れ家族がトレーに焼きたてチョコクロとソフトクリームをのせ、親が子どもに渡す前にチョコの熱さを確認している様子（イラスト）
 ---
 

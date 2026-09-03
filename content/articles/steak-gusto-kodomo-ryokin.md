@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-09-02T00:00:00.000Z'
 updatedAt: '2026-09-03'
-hero: /img/scenes/meal-33.webp
+hero: /img/scenes/kidsware-01.webp
 heroAlt: ステーキガストのサラダバーで、親が幼児のために野菜やスープを取り分けている家族の様子（イラスト）
 area: all
 quickInfo:

@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-07-22'
 updatedAt: '2026-09-02'
-hero: /img/scenes/meal-25.webp
+hero: /img/scenes/famires-03.webp
 heroAlt: 和食レストランの座敷席で、子どもがおこさまメニューを食べている家族連れの様子（イラスト）
 area: all
 quickInfo:

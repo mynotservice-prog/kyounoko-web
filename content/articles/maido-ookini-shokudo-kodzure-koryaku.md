@@ -8,7 +8,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-23'
 updatedAt: '2026-06-03'
-hero: /img/scenes/meal-29.webp
+hero: /img/scenes/curry-01.webp
 heroAlt: まいどおおきに食堂のカフェテリアで、親がトレーを持ちながら子ども用に釜焚きごはん（小）と煮物を取り分けている様子（イラスト）
 area: all
 quickInfo:

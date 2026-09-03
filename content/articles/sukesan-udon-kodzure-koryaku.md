@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-07-22'
 updatedAt: '2026-08-18'
-hero: /img/scenes/meal-28.webp
+hero: /img/scenes/selfudon-01.webp
 heroAlt: うどん店のテーブルで、子ども用の椅子に座った子どもにやわらかいうどんを短く切って取り分けている家族の様子（イラスト）
 area: all
 quickInfo:

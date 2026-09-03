@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-09-02T00:00:00.000Z'
-hero: /img/scenes/meal-25.webp
+hero: /img/scenes/zashiki-01.webp
 heroAlt: 焼肉きんぐのテーブル席で、家族が食べ放題のタッチパネルを操作しながら、子どもがお子様カレーを食べている様子（イラスト）
 area: all
 quickInfo:

@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-21'
 updatedAt: '2026-08-19'
-hero: /img/scenes/meal-11.webp
+hero: /img/scenes/famires-03.webp
 area: tokyo
 quickInfo:
   ageRanges:

@@ -22,7 +22,7 @@ quickInfo:
     - any
   durationMin: 90
   budget: low
-hero: /hero-ai/famires-7chain-8koumoku-2026.jpg
+hero: /img/scenes/famires-02.webp
 ---
 
 ## TL;DR（先に知りたい人へ）

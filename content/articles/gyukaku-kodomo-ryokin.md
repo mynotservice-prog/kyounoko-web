@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-09-02T00:00:00.000Z'
 updatedAt: '2026-09-03'
-hero: /img/scenes/meal-26.webp
+hero: /img/scenes/zashiki-02.webp
 heroAlt: 牛角のボックス席で、家族が食べ放題を注文し、子どもがキッズプレートを食べている様子（イラスト）
 area: all
 quickInfo:

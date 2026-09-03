@@ -8,7 +8,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-05-25T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /img/scenes/pool-water-11.webp
+hero: /img/scenes/mizuasobi-goods-01.webp
 area: all
 quickInfo:
   ageRanges:

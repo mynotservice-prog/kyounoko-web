@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-23'
 updatedAt: '2026-09-02'
-hero: /img/scenes/meal-24.webp
+hero: /img/scenes/yakiniku-01.webp
 heroAlt: 焼肉きんぐのテーブル席で、タッチパネルで注文しながら、親が網の上の肉を中までしっかり焼いて子ども用に小さく取り分け、子どもは焼き場から離れた奥の席に座っている家族の様子（イラスト）
 area: all
 quickInfo:

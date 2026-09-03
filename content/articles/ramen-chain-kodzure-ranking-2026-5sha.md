@@ -21,7 +21,7 @@ quickInfo:
     - any
   durationMin: 30
   budget: '〜1500'
-hero: /img/scenes/meal-20.webp
+hero: /img/scenes/chuka-01.webp
 heroAlt: ラーメンチェーンのボックス席で家族が子ども用に麺を短く取り分けて食べている様子（イラスト）
 ---
 

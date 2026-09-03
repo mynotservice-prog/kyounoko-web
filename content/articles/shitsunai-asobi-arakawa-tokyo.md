@@ -8,7 +8,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-08-01'
 updatedAt: '2026-08-01'
-hero: /img/scenes/indoor-play-02.webp
+hero: /img/scenes/rainymall-01.webp
 area: tokyo
 quickInfo:
   ageRanges:

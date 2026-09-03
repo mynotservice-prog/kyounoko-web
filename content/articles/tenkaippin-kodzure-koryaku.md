@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-07-22'
 updatedAt: '2026-07-22'
-hero: /img/scenes/meal-30.webp
+hero: /img/scenes/chuka-02.webp
 heroAlt: ラーメン店で子ども用の少量ラーメンを前にした子どもと、こってりラーメンから麺を取り分ける親の様子（イラスト）
 area: all
 quickInfo:

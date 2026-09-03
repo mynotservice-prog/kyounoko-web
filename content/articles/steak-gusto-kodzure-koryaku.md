@@ -8,7 +8,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
 updatedAt: '2026-06-03'
-hero: /img/scenes/meal-05.webp
+hero: /img/scenes/famires-01.webp
 lede: >-
   「ステーキガストは普通のガストと何が違う？子連れでも気軽に使える？」を1記事で解決。すかいらーくグループの**ステーキ＋サラダバー＋カレーバー**業態は、ガストと同じ子連れインフラ（ベビーチェア・配膳ロボット・公式アプリクーポン）を受け継ぎながら、サラダバーで子用の食事まで完結できる強さがあります。0-6歳家族目線で保存版でまとめました。
 quickInfo:

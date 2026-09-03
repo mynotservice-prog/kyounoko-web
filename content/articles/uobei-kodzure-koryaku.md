@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-07-22'
 updatedAt: '2026-07-22'
-hero: /img/scenes/meal-33.webp
+hero: /img/scenes/kaiten-02.webp
 heroAlt: 高速レーンで届いた寿司を、タッチパネルのある席で家族が受け取っている様子（イラスト）
 area: all
 quickInfo:

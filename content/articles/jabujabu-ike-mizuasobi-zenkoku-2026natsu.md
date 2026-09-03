@@ -6,7 +6,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-07-02'
 updatedAt: '2026-08-31'
-hero: /img/scenes/pool-water-08.webp
+hero: /img/scenes/jabujabu-01.webp
 lede: >-
   35℃超えの日、子どもの体力を発散させるなら水遊びがいちばん。じゃぶじゃぶ池や親水公園なら、ほとんどが無料で、足首ほどの浅さから遊べます。全国18か所を「水深・木陰・乳児デビュー向きか」の目線で選びました。おむつ期の注意点も正直にまとめています（2026年7月時点の情報です）。
 quickInfo:

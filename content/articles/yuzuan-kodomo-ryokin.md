@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-09-02T00:00:00.000Z'
-hero: /img/scenes/meal-34.webp
+hero: /img/scenes/selfudon-02.webp
 heroAlt: ゆず庵のソファー席で寿司としゃぶしゃぶの食べ放題を囲み、幼児は無料・小学生は半額で楽しむ家族の様子（イラスト）
 area: all
 quickInfo:

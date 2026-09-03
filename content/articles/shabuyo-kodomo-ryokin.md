@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-09-02T00:00:00.000Z'
-hero: /img/scenes/meal-17.webp
+hero: /img/scenes/shabushabu-01.webp
 heroAlt: しゃぶ葉のテーブル席で家族が食べ放題を囲み、幼児の分は無料で取り分けている様子（イラスト）
 area: all
 quickInfo:

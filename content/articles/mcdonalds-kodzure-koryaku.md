@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
 updatedAt: '2026-06-03'
-hero: /img/scenes/meal-08.webp
+hero: /img/scenes/fastfood-01.webp
 area: tokyo
 quickInfo:
   ageRanges:

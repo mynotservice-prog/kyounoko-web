@@ -8,7 +8,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-06-17'
 updatedAt: '2026-06-17'
-hero: /img/scenes/baby-food-01.webp
+hero: /img/scenes/famires-02.webp
 area: all
 quickInfo:
   ageRanges:

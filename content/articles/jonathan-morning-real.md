@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
 updatedAt: '2026-06-03'
-hero: /hero-ai/jonathan-morning-real.jpg
+hero: /img/scenes/cafemorning-01.webp
 lede: >-
   「ジョナサンのモーニング、赤ちゃん連れで行っても大丈夫？」という不安に、SNS・レビューから読み取れる傾向で答えます。約120件の声を編集部が冷静に整理した、0-2歳の朝食タイム実情まとめです。
 quickInfo:

@@ -8,7 +8,7 @@ categoryName: 今日どこ行く？
 publishedAt: '2026-07-27T00:00:00.000Z'
 updatedAt: '2026-07-27'
 noindex: true
-hero: /img/scenes/airplane-01.webp
+hero: /img/scenes/nursingroom-01.webp
 area: tokyo
 quickInfo:
   ageRanges:

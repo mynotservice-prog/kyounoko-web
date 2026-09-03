@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-06-08'
 updatedAt: '2026-06-11'
-hero: /img/scenes/pool-water-04.webp
+hero: /img/scenes/mizuasobi-goods-01.webp
 area: all
 quickInfo:
   ageRanges:

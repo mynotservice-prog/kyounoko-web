@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-07-31T00:00:00.000Z'
 updatedAt: '2026-07-31'
-hero: /img/scenes/baby-food-01.webp
+hero: /img/scenes/gaishoku-baby-03.webp
 area: all
 quickInfo:
   ageRanges:

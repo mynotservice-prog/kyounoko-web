@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-19'
 updatedAt: '2026-09-01'
-hero: /img/scenes/meal-27.webp
+hero: /img/scenes/cafemorning-02.webp
 lede: >-
   「スタバって子連れで入っていいの？」「離乳食、持ち込んでも怒られない？」を1記事で解決。ロードサイド店・モール内店・駅前小型店ごとの動きやすさ、0-6歳に頼めるドリンク／フード、モバイルオーダーでの時短術まで、**4歳娘＆2歳息子と毎週スタバに通うながみー**が実体験ベースで整理しました。
 quickInfo:

@@ -21,7 +21,7 @@ quickInfo:
     - any
   durationMin: 30
   budget: low
-hero: /img/scenes/meal-09.webp
+hero: /img/scenes/selfudon-01.webp
 ---
 
 ## TL;DR（先に知りたい人へ）

@@ -7,7 +7,7 @@ publishedAt: '2026-05-12'
 updatedAt: '2026-06-03'
 category: today-doko
 categoryName: 今日どこ行く
-hero: /img/scenes/stroller-05.webp
+hero: /img/scenes/shabushabu-01.webp
 quickInfo:
   ageRanges:
     - 0-1

@@ -9,7 +9,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-07-09T00:00:00.000Z'
 updatedAt: '2026-08-04'
-hero: /img/scenes/meal-25.webp
+hero: /img/scenes/fastfood-03.webp
 heroAlt: ケンタッキーのテーブル席で、骨なしチキンとナゲット、ポテトを子どもと分け合って食べる家族の様子（イラスト）
 area: all
 quickInfo:

@@ -14,7 +14,7 @@ quickInfo:
   ageRanges:
     - 2-3
     - 4-6
-hero: /img/scenes/indoor-play-04.webp
+hero: /img/scenes/kidspark-02.webp
 ---
 
 ## TL;DR(先に知りたい人へ)

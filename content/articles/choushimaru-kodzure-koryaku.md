@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-07-22'
 updatedAt: '2026-07-22'
-hero: /img/scenes/meal-32.webp
+hero: /img/scenes/kaiten-03.webp
 area: kanto
 quickInfo:
   ageRanges:

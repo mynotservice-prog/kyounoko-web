@@ -64,12 +64,17 @@ function scenes(scene: string, count: number): string[] {
  *   - sleep: 3枚のみ → 寝かしつけ 追加希望
  */
 /**
+ * 2026-09-03: 実写シーン50枚を追加（外食の業態別店内カット / ベビーチェア4タイプ / 授乳室 /
+ *   ベビーカー動線 / 児童館・キッズパーク・モールのキッズスペース / じゃぶじゃぶ池・ミスト）。
+ *   外食・室内遊び場・水遊びの記事は scripts/assign-new-scene-heroes.mjs で frontmatter に直接割当済み。
+ *   ここ（POOL）には、意味が壊れない baby / summer-water / stroller / medical だけを足している。
+ *
  * 2026-06-13: 追加51枚で新シーン 5種（lesson / craft / screen-time / bath / medical）が増え、
  * 既存シーンも増量（seasonal 4→10, bento 2→5, shopping 2→5, sleep 3→5, book 6→7, meal 40→41）。
  * これに合わせて POOL を最適化、流用元を本物に置き換え。
  */
 const POOL: Record<PhotoCat, string[]> = {
-  baby: [...scenes('baby-food', 5), ...scenes('nursery', 4), ...scenes('home-play', 5), ...scenes('bath', 4)],
+  baby: [...scenes('baby-food', 5), ...scenes('nursery', 4), ...scenes('home-play', 5), ...scenes('bath', 4), ...scenes('babywalk', 1), ...scenes('gaishoku-baby', 2)],
   'toddler-play': [...scenes('toy', 3), ...scenes('home-play', 25), ...scenes('craft', 4)],
   'kid-study': [...scenes('book', 7), ...scenes('home-play', 8), ...scenes('lesson', 5)],
   'kid-craft': [...scenes('craft', 4), ...scenes('home-play', 12), ...scenes('toy', 3)],
@@ -83,7 +88,7 @@ const POOL: Record<PhotoCat, string[]> = {
   nature: [...scenes('park', 14), ...scenes('outing-general', 14), ...scenes('camp', 3)],
   autumn: [...scenes('seasonal', 10), ...scenes('park', 12), ...scenes('outing-general', 10)],
   'winter-snow': [...scenes('seasonal', 10), ...scenes('outing-general', 8), ...scenes('home-play', 6)],
-  'summer-water': [...scenes('pool-water', 20)],
+  'summer-water': [...scenes('pool-water', 20), ...scenes('jabujabu', 3), ...scenes('mist', 1)],
   sakura: [...scenes('seasonal', 10), ...scenes('park', 14)],
   tokyo: [...scenes('outing-general', 12), ...scenes('shopping', 5), ...scenes('park', 6)],
   'japan-rural': [...scenes('outing-general', 14), ...scenes('park', 10), ...scenes('camp', 3)],
@@ -92,8 +97,8 @@ const POOL: Record<PhotoCat, string[]> = {
   'kid-learn': [...scenes('book', 7), ...scenes('home-play', 8), ...scenes('lesson', 4)],
   classroom: [...scenes('lesson', 10), ...scenes('nursery', 4), ...scenes('indoor-play', 6)],
   piano: [...scenes('lesson', 10), ...scenes('home-play', 6)],
-  stroller: [...scenes('stroller', 7), ...scenes('outing-general', 8)],
-  medical: [...scenes('medical', 7), ...scenes('home-play', 8)],
+  stroller: [...scenes('stroller', 7), ...scenes('outing-general', 8), ...scenes('strollerok', 3)],
+  medical: [...scenes('medical', 7), ...scenes('home-play', 8), ...scenes('boshi-techou', 1)],
   'parent-child': [...scenes('home-play', 18), ...scenes('meal', 8), ...scenes('craft', 4)],
   'screen-time': [...scenes('screen-time', 10), ...scenes('home-play', 4)],
   commerce: [...scenes('shopping', 5), ...scenes('stroller', 4), ...scenes('home-play', 6)],

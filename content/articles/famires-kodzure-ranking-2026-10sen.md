@@ -22,7 +22,7 @@ quickInfo:
     - any
   durationMin: 90
   budget: low
-hero: /img/scenes/meal-33.webp
+hero: /img/scenes/famires-03.webp
 ---
 
 ## 結論（先に知りたい人へ）
