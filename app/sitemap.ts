@@ -2,10 +2,12 @@ import type { MetadataRoute } from 'next';
 
 /**
  * Next.js metadata route として出力される /sitemap.xml。
- * urlset 形式で全URLを1ファイルに集約する（分割版は sitemap-*.xml で配信）。
+ * urlset 形式で全URLを1ファイルに集約する。
  *
- * 方針: 分割版（sitemap-articles.xml 等）と併存させて、Search Console から
- * どちらを送っても動くようにしている。
+ * 【2026-09-03 コメント修正】ここには「分割版（sitemap-articles.xml 等）と併存」と
+ * 書かれていたが、本番で sitemap-articles.xml / sitemap-stations.xml / sitemap-spots.xml /
+ * sitemap-index.xml はいずれも **404**（実測）。分割版は存在しないので信じないこと。
+ * GSC に送信されているのは /sitemap.xml の1本だけ。
  */
 
 import { getArticleIds, getCategories } from '@/lib/microcms';
@@ -20,7 +22,7 @@ import { KANSAI_STATIONS } from '@/lib/kansai-stations';
 import { KANAGAWA_STATIONS } from '@/lib/kanagawa-stations';
 import { SAICHI_STATIONS } from '@/lib/saitama-chiba-stations';
 import { TOKYO_LINES } from '@/lib/tokyo-lines';
-import { getStationWithChains } from '@/lib/station-restaurants';
+import { getStationWithChains, STATION_CHAIN_DATA_UPDATED } from '@/lib/station-restaurants';
 import { getIndieRestaurantsByStation } from '@/lib/indie-restaurants';
 import { STATION_CONDITIONS, hasMatchingItems, getConditionKind, filterChainsByCondition, filterIndiesByCondition } from '@/lib/station-conditions';
 import { getSpotsForStation, hasMatchingSpots, filterSpotsByCondition, getSpotConditionCanonicalSlug } from '@/lib/station-spots';
@@ -30,6 +32,52 @@ import { AFFILIATE_TARGET_SLUGS } from '@/lib/affiliate-products';
 import { getAllEvents, isEventEnded } from '@/lib/events';
 
 const BASE = 'https://kyounoko.jp';
+
+/**
+ * 【2026-09-03】lastmod をビルド時刻で埋めるのをやめた。
+ *
+ * 症状: GSC の sitemaps API で `lastDownloaded` が **2026-07-13 のまま52日間動いていない**
+ *       ＝ Google がサイトマップを再取得しなくなっていた。その間に追加・修正した
+ *       URL は発見されず、URL検査APIで表示0の663本を全数検査したところ
+ *       **65%(431本)が「URL が Google に認識されていません」** だった。
+ *
+ * 真因: 全3,791URLのうち **2,940本(78%)の lastmod が `new Date()` = ビルド時刻**。
+ *       デプロイするたびサイトマップが「駅もスポットも全部きょう更新した」と申告し、
+ *       実際には中身が変わっていないので lastmod がシグナルとして無価値になっていた。
+ *       Google は信頼できない lastmod を出すサイトマップの再取得頻度を落とす。
+ *
+ * 対策: lastmod は「そのURLの中身が実際に変わった日」だけを入れる。
+ *       - 駅ページ  → チェーン設備DBの更新日（STATION_CHAIN_DATA_UPDATED）
+ *       - スポット  → そのスポットの verifiedAt（無ければデータ棚卸し日）
+ *       - イベント  → 会期の開始日（会期が動けば lastmod も動く）
+ *       - 静的ハブ  → 実際に本文を直した日を定数で持つ
+ *       本当に毎日中身が変わるページ（トップ/イベント一覧/ランキング/レポート）だけ
+ *       `new Date()` を残す。ここを増やすと同じ事故が再発する。
+ */
+/** 駅・路線ページのデータ更新日（チェーン設備DBの更新日に追従）。 */
+const STATION_LASTMOD = new Date(STATION_CHAIN_DATA_UPDATED);
+/** スポットに verifiedAt が無い場合のフォールバック（最後にスポットDBを棚卸しした日）。 */
+const SPOT_DATA_LASTMOD = new Date('2026-08-19');
+/** スポット一覧・カテゴリ、特集、/data/* の最終更新日（データ追加時に手で上げる）。 */
+const CURATION_LASTMOD = new Date('2026-09-01');
+/** 静的ページの最終更新日（本文を直したときだけ上げる）。 */
+const STATIC_LASTMOD = new Date('2026-08-05');
+
+/**
+ * lastmod を「今日以前」に丸める。
+ * 未来日付の lastmod は Google に無視される（開催前イベントの startDate をそのまま
+ * 入れると 2026-09-11 のような未来日になり、そのURLの lastmod が死ぬ）。
+ */
+function clampLastMod(d: Date): Date {
+  const now = new Date();
+  return d.getTime() > now.getTime() ? now : d;
+}
+
+/** スポットの lastmod。実査日(verifiedAt)があればそれ、無ければDB棚卸し日。 */
+function spotLastMod(spot: { verification?: { verifiedAt?: string } }): Date {
+  const v = spot.verification?.verifiedAt;
+  return v ? new Date(v) : SPOT_DATA_LASTMOD;
+}
 
 // 2026-08-31: sitemapから308リダイレクト元を除外するための集合（lib/spot-redirects.ts 由来）。
 const SPOT_REDIRECT_FROM = new Set(SPOT_REDIRECTS.map((r) => r.from));
@@ -48,31 +96,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const legalLastMod = new Date('2026-04-17');
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE, lastModified: new Date(), changeFrequency: 'daily', priority: 1 },
-    { url: `${BASE}/items`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${BASE}/recipes`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${BASE}/spots`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${BASE}/tools`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${BASE}/tools/babycar-shindan`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${BASE}/tools/naraigoto-match`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${BASE}/tools/odekake-type`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${BASE}/downloads`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${BASE}/downloads/nyuuen-checklist`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${BASE}/downloads/getsurei-schedule`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${BASE}/downloads/obento-rotation`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${BASE}/downloads/bousai-list`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${BASE}/downloads/naraigoto-hikaku`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${BASE}/for-facilities`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
-    { url: `${BASE}/kura-sushi`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${BASE}/feature`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${BASE}/items`, lastModified: STATIC_LASTMOD, changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${BASE}/recipes`, lastModified: STATIC_LASTMOD, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/spots`, lastModified: STATIC_LASTMOD, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/tools`, lastModified: STATIC_LASTMOD, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/tools/babycar-shindan`, lastModified: STATIC_LASTMOD, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/tools/naraigoto-match`, lastModified: STATIC_LASTMOD, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/tools/odekake-type`, lastModified: STATIC_LASTMOD, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/downloads`, lastModified: STATIC_LASTMOD, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/downloads/nyuuen-checklist`, lastModified: STATIC_LASTMOD, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/downloads/getsurei-schedule`, lastModified: STATIC_LASTMOD, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/downloads/obento-rotation`, lastModified: STATIC_LASTMOD, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/downloads/bousai-list`, lastModified: STATIC_LASTMOD, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/downloads/naraigoto-hikaku`, lastModified: STATIC_LASTMOD, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/for-facilities`, lastModified: STATIC_LASTMOD, changeFrequency: 'monthly', priority: 0.4 },
+    { url: `${BASE}/kura-sushi`, lastModified: STATIC_LASTMOD, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/feature`, lastModified: STATIC_LASTMOD, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${BASE}/events`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.85 },
     { url: `${BASE}/ranking`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.85 },
     { url: `${BASE}/reports`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.6 },
-    { url: `${BASE}/area`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${BASE}/area`, lastModified: STATIC_LASTMOD, changeFrequency: 'weekly', priority: 0.85 },
     // 2026-07-31 剪定: /area/[slug]（23区＋都県）は30ページ生成して90日で計9クリック、
     // GSCに出た20ページ中16ページが0クリック（/area/shibuya は115imp・pos31.6・0クリック）。
     // 同じ区を扱う記事とテーマが重なるため noindex 化し、sitemap からも外す。
     // サイト内回遊の導線としてはページ自体を残す（robots は index:false / follow:true）。
-    { url: `${BASE}/kid-reports`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/kid-reports`, lastModified: STATIC_LASTMOD, changeFrequency: 'monthly', priority: 0.9 },
     // 運営者情報・編集方針・監修・商談窓口は E-E-A-T の土台なので sitemap に含める。
     // lastModified は実際に本文を直した日を入れる（legalLastMod は法務系ページ用）。
     { url: `${BASE}/about`, lastModified: new Date('2026-08-05'), changeFrequency: 'monthly', priority: 0.6 },
@@ -92,14 +140,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     if (categories.length > 0) {
       categorySlugs = categories.map(c => c.slug);
       categoryLastMod = Object.fromEntries(
-        categories.map(c => [c.slug, new Date(c.updatedAt ?? Date.now())])
+        categories.map(c => [c.slug, new Date(c.updatedAt ?? CURATION_LASTMOD)])
       );
     }
   } catch {}
 
   const categoryPages: MetadataRoute.Sitemap = categorySlugs.map(slug => ({
     url: `${BASE}/category/${slug}`,
-    lastModified: categoryLastMod[slug] ?? new Date(),
+    lastModified: categoryLastMod[slug] ?? CURATION_LASTMOD,
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }));
@@ -164,7 +212,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const article of articles) {
       articleUrlMap.set(article.slug, {
         url: `${BASE}/article/${article.slug}`,
-        lastModified: new Date(article.updatedAt ?? Date.now()),
+        lastModified: new Date(article.updatedAt ?? STATIC_LASTMOD),
         changeFrequency: getArticleChangeFreq(article.slug),
         priority: getArticlePriority(article.slug),
       });
@@ -182,7 +230,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     if (articleUrlMap.has(article.slug)) continue;
     articleUrlMap.set(article.slug, {
       url: `${BASE}/article/${article.slug}`,
-      lastModified: new Date(article.updatedAt ?? Date.now()),
+      lastModified: new Date(article.updatedAt ?? STATIC_LASTMOD),
       changeFrequency: getArticleChangeFreq(article.slug),
       priority: getArticlePriority(article.slug),
     });
@@ -196,7 +244,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       if (article.noindex || articleUrlMap.has(article.slug)) continue;
       articleUrlMap.set(article.slug, {
         url: `${BASE}/article/${article.slug}`,
-        lastModified: new Date(article.updatedAt ?? Date.now()),
+        lastModified: new Date(article.updatedAt ?? STATIC_LASTMOD),
         changeFrequency: getArticleChangeFreq(article.slug),
         priority: getArticlePriority(article.slug),
       });
@@ -212,13 +260,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // 駅別子連れランチページ（23区484駅）
   const stationIndex: MetadataRoute.Sitemap = [{
     url: `${BASE}/station`,
-    lastModified: new Date(),
+    lastModified: STATION_LASTMOD,
     changeFrequency: 'weekly' as const,
     priority: 0.7,
   }];
   const stationPages: MetadataRoute.Sitemap = TOKYO_STATIONS.map((s) => ({
     url: `${BASE}/station/${s.slug}`,
-    lastModified: new Date(),
+    lastModified: STATION_LASTMOD,
     changeFrequency: 'monthly' as const,
     priority: s.scale === 'terminal' ? 0.7 : s.scale === 'major' ? 0.6 : 0.5,
   }));
@@ -233,7 +281,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     stationHasContent(s.slug),
   ).map((s) => ({
     url: `${BASE}/station/${s.slug}`,
-    lastModified: new Date(),
+    lastModified: STATION_LASTMOD,
     changeFrequency: 'monthly' as const,
     priority: s.scale === 'terminal' ? 0.7 : s.scale === 'major' ? 0.6 : 0.5,
   }));
@@ -242,27 +290,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     stationHasContent(s.slug),
   ).map((s) => ({
     url: `${BASE}/station/${s.slug}`,
-    lastModified: new Date(),
+    lastModified: STATION_LASTMOD,
     changeFrequency: 'monthly' as const,
     priority: s.scale === 'terminal' ? 0.7 : s.scale === 'major' ? 0.6 : 0.5,
   }));
   // 埼玉・千葉駅ページ（東京通勤圏）
   const saichiStationPages: MetadataRoute.Sitemap = SAICHI_STATIONS.map((s) => ({
     url: `${BASE}/station/${s.slug}`,
-    lastModified: new Date(),
+    lastModified: STATION_LASTMOD,
     changeFrequency: 'monthly' as const,
     priority: s.scale === 'terminal' ? 0.7 : s.scale === 'major' ? 0.6 : 0.5,
   }));
   // 路線別ページ（40路線）
   const lineIndex: MetadataRoute.Sitemap = [{
     url: `${BASE}/station/line`,
-    lastModified: new Date(),
+    lastModified: STATION_LASTMOD,
     changeFrequency: 'weekly' as const,
     priority: 0.6,
   }];
   const linePages: MetadataRoute.Sitemap = TOKYO_LINES.map((l) => ({
     url: `${BASE}/station/line/${l.slug}`,
-    lastModified: new Date(),
+    lastModified: STATION_LASTMOD,
     changeFrequency: 'monthly' as const,
     priority: 0.55,
   }));
@@ -296,7 +344,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       if (!isStationConditionIndexable(s.slug, cond.slug, matchedCount, k, s.scale)) continue;
       stationConditionPages.push({
         url: `${BASE}/station/${s.slug}/${cond.slug}`,
-        lastModified: new Date(),
+        lastModified: STATION_LASTMOD,
         changeFrequency: 'monthly' as const,
         priority: 0.5, // restaurant系のみ（spot系は上で除外済み）
       });
@@ -308,9 +356,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // /data/* AIO参照用データセットページ
   const dataPages: MetadataRoute.Sitemap = [
-    { url: `${BASE}/data`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.7 },
-    { url: `${BASE}/data/restaurants`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.8 },
-    { url: `${BASE}/data/wards`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.75 },
+    { url: `${BASE}/data`, lastModified: CURATION_LASTMOD, changeFrequency: 'weekly' as const, priority: 0.7 },
+    { url: `${BASE}/data/restaurants`, lastModified: CURATION_LASTMOD, changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${BASE}/data/wards`, lastModified: CURATION_LASTMOD, changeFrequency: 'weekly' as const, priority: 0.75 },
   ];
 
   // 2026-05 再開: AdSense承認済み + matchedCount >= 3 フィルタ済みのため、
@@ -344,7 +392,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })
     .map((x) => ({
       url: `${BASE}/spot/${x.slug}`,
-      lastModified: new Date(),
+      lastModified: spotLastMod(x.spot),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     }));
@@ -354,7 +402,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .filter((c) => spotsByCategory(c.id).length > 0)
     .map((c) => ({
       url: `${BASE}/spots/${c.id}`,
-      lastModified: new Date(),
+      lastModified: CURATION_LASTMOD,
       changeFrequency: 'weekly' as const,
       priority: 0.75,
     }));
@@ -368,7 +416,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .filter((e) => !isEventEnded(e))
     .map((e) => ({
       url: `${BASE}/event/${e.slug}`,
-      lastModified: new Date(),
+      lastModified: clampLastMod(new Date(e.startDate)),
       // 会期があるので開催中は更新頻度を高めに、これからのものは週次で足りる。
       changeFrequency: 'weekly' as const,
       priority: 0.7,
@@ -377,7 +425,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // 特集ページ（Tier 3）。データドリブンでArticle+Spotを横断キュレーション。
   const featurePages: MetadataRoute.Sitemap = FEATURE_PAGES.map((f) => ({
     url: `${BASE}/feature/${f.slug}`,
-    lastModified: new Date(),
+    lastModified: CURATION_LASTMOD,
     changeFrequency: 'weekly' as const,
     priority: 0.85,
   }));

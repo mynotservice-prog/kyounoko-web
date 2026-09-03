@@ -15,7 +15,8 @@
     "format": "prettier --write .",
     "publish": "node scripts/publish.mjs",
     "links": "node scripts/check-internal-links.mjs",
-    "popular:build": "node scripts/build-popular-articles.mjs"
+    "popular:build": "node scripts/build-popular-articles.mjs",
+    "sitemap:check": "node --import ./scripts/_ts-resolve.mjs scripts/check-sitemap-health.mjs"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.1",
