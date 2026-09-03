@@ -7,7 +7,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-06-25T00:00:00.000Z'
 updatedAt: '2026-07-21'
-hero: /img/scenes/baby-food-03.webp
+hero: /img/scenes/bento-04.webp
 area: all
 quickInfo:
   ageRanges:
