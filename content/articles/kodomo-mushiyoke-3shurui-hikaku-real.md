@@ -21,7 +21,7 @@ quickInfo:
   durationMin: 5
   budget: low
 area: all
-hero: /hero-ai/kodomo-mushiyoke-3shurui-hikaku-real.jpg
+hero: /img/scenes/park-09.webp
 ---
 
 ## TL;DR（先に知りたい人へ）

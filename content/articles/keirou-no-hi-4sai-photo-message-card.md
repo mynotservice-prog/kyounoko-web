@@ -12,7 +12,7 @@ quickInfo:
   ageRanges:
     - 2-3
     - 4-6
-hero: /hero-ai/keirou-no-hi-4sai-photo-message-card.jpg
+
 ---
 
 ## TL;DR(先に知りたい人へ)

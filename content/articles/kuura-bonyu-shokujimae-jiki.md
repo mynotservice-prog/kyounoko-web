@@ -6,7 +6,6 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-08'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kuura-bonyu-shokujimae-jiki.jpg
 lede: 「冷房の効きすぎ」と「熱中症」の間で迷う夏。0〜6歳の子がいる家庭の、エアコン温度・湿度・服装の正解をシーン別にナビゲートします。
 quickInfo:
   ageRanges:

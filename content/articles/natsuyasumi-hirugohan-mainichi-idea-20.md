@@ -19,7 +19,7 @@ quickInfo:
   durationMin: 30
   budget: low
 area: all
-hero: /hero-ai/natsuyasumi-hirugohan-mainichi-idea-20.jpg
+
 ---
 
 ## TL;DR（先に知りたい人へ）

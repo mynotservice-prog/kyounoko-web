@@ -6,7 +6,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-08'
 updatedAt: '2026-06-03'
-hero: /img/scenes/stroller-05.webp
+hero: /img/scenes/strollerok-02.webp
 area: tokyo
 quickInfo:
   ageRanges:

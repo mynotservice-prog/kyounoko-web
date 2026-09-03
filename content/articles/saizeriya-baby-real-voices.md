@@ -6,7 +6,6 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-09'
 updatedAt: '2026-06-03'
-hero: /hero-ai/saizeriya-baby-real-voices.jpg
 lede: "結論、サイゼは「平日昼ならベビーカー入店成功率が高い」店。約180件の家庭の声を編集部が傾向分析し、土日17時以降の混雑感、取り分け定番、席選びの判断材料を2026年版でフラットに整理しました。子連れ初回の判断材料にどうぞ。"
 quickInfo:
   ageRanges:

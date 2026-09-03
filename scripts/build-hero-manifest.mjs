@@ -116,9 +116,10 @@ for (const slug of articleSlugs) {
     articleHero[slug] = `/hero-ai/${slug}.webp`;
   } else if (heroAiSet.has(`${slug}.jpg`)) {
     articleHero[slug] = `/hero-ai/${slug}.jpg`;
-  } else if (photosSet.has(`article-${slug}.webp`)) {
-    articleHero[slug] = `/photos/article-${slug}.webp`;
   }
+  // NOTE(2026-09-03): 旧 /photos/article-<slug>.webp（Pexels実写の自動割当）はここでは拾わない。
+  //   中身が海外ストックや無関係な写真で、記事内容と合わないものが多い。
+  //   実際に使いたい写真は記事mdの hero: に明示指定する（例: article-hoshino-morning-kosodate）。
 }
 
 // content/plans/ のplanId走査

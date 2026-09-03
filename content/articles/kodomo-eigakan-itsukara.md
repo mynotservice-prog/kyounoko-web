@@ -7,7 +7,7 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: 2026-05-28T00:00:00.000Z
 updatedAt: '2026-05-29'
-hero: /hero-ai/kodomo-eigakan-itsukara.jpg
+hero: /img/scenes/screen-time-01.webp
 area: all
 quickInfo:
   ageRanges:

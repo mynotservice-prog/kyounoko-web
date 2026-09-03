@@ -8,7 +8,6 @@ category: gyouji
 categoryName: 季節と行事
 publishedAt: 2026-04-18T00:00:00.000Z
 updatedAt: '2026-07-24'
-hero: /hero-ai/shichigosan-nenrei-junbi.jpg
 area: all
 quickInfo:
   ageRanges:

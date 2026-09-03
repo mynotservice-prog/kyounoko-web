@@ -7,7 +7,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-06-02'
-hero: /hero-ai/kodomo-hasami-itsukara.jpg
+hero: /img/scenes/craft-04.webp
 area: all
 quickInfo:
   ageRanges:

@@ -7,7 +7,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
 updatedAt: '2026-07-15'
-hero: /img/scenes/bath-03.webp
+hero: /img/scenes/bath-02.webp
 area: all
 quickInfo:
   ageRanges:

@@ -7,7 +7,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-07-20'
-hero: /hero-ai/kodomo-nuts-itsukara.jpg
+hero: /img/scenes/meal-10.webp
 area: all
 quickInfo:
   ageRanges:

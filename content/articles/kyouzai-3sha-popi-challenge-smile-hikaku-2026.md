@@ -7,7 +7,7 @@ category: narai
 categoryName: 習い事と学び
 publishedAt: '2026-06-07'
 updatedAt: '2026-06-08'
-hero: /hero-ai/kyouzai-3sha-popi-challenge-smile-hikaku-2026.jpg
+hero: /img/scenes/lesson-02.webp
 area: all
 quickInfo:
   ageRanges:

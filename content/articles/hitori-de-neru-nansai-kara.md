@@ -4,7 +4,7 @@ slug: hitori-de-neru-nansai-kara
 title: ひとりで寝るのは何歳から？寝かしつけ卒業の3ステップ
 category: yakudatsu
 categoryName: 役立つもの
-hero: /hero-ai/hitori-de-neru-nansai-kara.jpg
+hero: /img/scenes/sleep-02.webp
 metaDescription: >-
   子どもがひとりで寝るのは何歳から？寝かしつけ卒業のサインと、添い寝→ひとり寝への移行3ステップを月齢別に解説。夜泣き・夜間覚醒への対応や、上の子・下の子の事情まで実体験ベースで整理しました。
 publishedAt: 2026-05-02T00:00:00.000Z

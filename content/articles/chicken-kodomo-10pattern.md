@@ -6,7 +6,6 @@ category: today-taberu
 categoryName: 今日何食べる
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/chicken-kodomo-10pattern.jpg
 lede: 鶏肉は安くて使いやすく、幼児の食卓の主役。でも部位ごとに向き不向きがあります。もも・むね・ささみ・ひき肉を使い分ける10レシピを分量付きで紹介します。
 quickInfo:
   ageRanges:

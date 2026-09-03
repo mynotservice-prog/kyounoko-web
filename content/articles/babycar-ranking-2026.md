@@ -3,7 +3,7 @@ slug: babycar-ranking-2026
 title: ベビーカーおすすめランキング2026【0-3歳】4社比較
 category: yakudatsu
 categoryName: 役立つもの
-hero: /img/scenes/stroller-07.webp
+hero: /img/scenes/strollerok-01.webp
 metaDescription: >-
   ベビーカー選びで失敗したくないですよね。アップリカ・コンビ・サイベックス・エアバギーを価格・重量・機能・収納で比較表に整理。新生児A型からB型・軽量セカンドまで、シーン別の最適解と購入時期の目安を3分で確認できます。
 publishedAt: 2026-04-18T00:00:00.000Z

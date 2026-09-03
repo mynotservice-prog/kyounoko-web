@@ -7,7 +7,6 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-06-07'
 updatedAt: '2026-06-08'
-hero: /hero-ai/kodomogutsu-15cm-osusume-8sen-2026.jpg
 area: all
 quickInfo:
   ageRanges:

@@ -6,7 +6,6 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-05-05'
 updatedAt: '2026-06-03'
-hero: /hero-ai/natsuyasumi-jiyu-kenkyu-1nichi-10.jpg
 lede: >-
   8月終盤、自由研究がまだ手付かず。そんな時に1日で完成する自由研究10選を、低学年・高学年別に紹介。材料調達からまとめ方、写真の撮り方まで具体的にナビゲートします。
 quickInfo:

@@ -5,7 +5,7 @@ slug: hitori-hamigaki-nansai-kara
 title: ひとり歯磨き何歳から？仕上げ磨き卒業10歳までの5段階
 category: yakudatsu
 categoryName: 役立つもの
-hero: /hero-ai/hitori-hamigaki-nansai-kara.jpg
+hero: /img/scenes/bath-01.webp
 metaDescription: >-
   ひとり歯磨きは何歳から始める？仕上げ磨きはいつまで？3歳の自分磨きデビューから10歳の仕上げ磨き卒業までの5段階を年齢別に整理。むし歯予防のチェックポイントと先輩ママの工夫まで3分で確認できます。
 publishedAt: 2026-05-02T00:00:00.000Z

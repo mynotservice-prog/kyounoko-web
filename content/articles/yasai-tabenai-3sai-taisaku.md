@@ -7,7 +7,6 @@ category: today-taberu
 categoryName: 今日たべる
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/yasai-tabenai-3sai-taisaku.jpg
 lede: >-
   「昨日まで食べていたのに、今日はピーマンを全拒否」3歳の野菜嫌いは味覚の急発達が背景にあります。5つのアプローチと、定番10野菜の神レシピで突破する方法を紹介します。
 speakableSummary: >-

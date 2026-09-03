@@ -7,7 +7,6 @@ publishedAt: '2026-05-12'
 updatedAt: '2026-06-03'
 category: yakudatsu
 categoryName: 役立つもの
-hero: /hero-ai/kodomo-koushuu-genin-keacare.jpg
 quickInfo:
   ageRanges:
     - 0-1

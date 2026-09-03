@@ -6,7 +6,7 @@ metaDescription: >-
   抱っこ紐選びで肩や腰が心配ですよね。エルゴ・アップリカ・コニー・ベビービョルン・ボバを価格・重量・装着のしやすさ・対応月齢で比較表に整理。新生児から3歳まで、シーン別の使い分けと買い替えタイミングを3分で確認できます。
 category: yakudatsu
 categoryName: 役立つもの
-hero: /img/scenes/stroller-05.webp
+hero: /img/scenes/nursingroom-02.webp
 publishedAt: 2026-04-18T00:00:00.000Z
 updatedAt: '2026-06-11'
 area: all

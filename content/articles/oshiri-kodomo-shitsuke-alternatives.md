@@ -8,7 +8,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/oshiri-kodomo-shitsuke-alternatives.jpg
+hero: /img/scenes/home-play-03.webp
 lede: 「叱らない子育て」を実践したい親向けに、年齢別の声かけパターン10、怒りをコントロールする技法、代替行動の作り方を実用的にまとめました。
 quickInfo:
   ageRanges:

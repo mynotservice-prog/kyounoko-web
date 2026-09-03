@@ -18,7 +18,7 @@ quickInfo:
   durationMin: 10
   budget: free
 area: all
-hero: /hero-ai/kyoudai-kenka-naka-naoshi-natsuyasumi.jpg
+
 ---
 
 ## TL;DR（先に知りたい人へ）

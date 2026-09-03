@@ -7,7 +7,6 @@ category: today-mawasu
 categoryName: 今日まわす
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kankaku-kabin-kodomo-taisaku.jpg
 lede: "結論、感覚過敏は「わがまま」でも「育て方のせい」でもありません。服タグ・掃除機音・食感の3大困りごとに、沼った親100人が「ガチで効いた」と答えた工夫を7つに絞ってお届け。療育・受診の目安、おすすめグッズまで、2026年最新版でまとめました。"
 quickInfo:
   ageRanges:

@@ -8,7 +8,6 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-08'
 updatedAt: '2026-06-03'
-hero: /hero-ai/tokyo-23ku-family-score-ranking-2026.jpg
 lede: >-
   「23区で本当に子連れに優しいのはどこ？」食べログには載らない**独自集計3,277店データ**から、ベビーカー◎率／個室率／キッズメニュー率の3指標で出した「家族度総合スコア」TOP5を公開します。
 quickInfo:

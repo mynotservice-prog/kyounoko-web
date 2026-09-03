@@ -8,7 +8,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-08'
 updatedAt: '2026-06-03'
-hero: /hero-ai/tokyo-shimokita-koenji-asagaya-comparison.jpg
+hero: /img/scenes/outing-general-06.webp
 lede: >-
   「カルチャー系の街は子連れには向かない」――そんなイメージを覆すきょうのこ独自データ。**下北沢・高円寺・阿佐ヶ谷**の3駅を実データで比較し、意外な子連れ穴場として使えるエリア像を浮き彫りにします。
 quickInfo:

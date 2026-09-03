@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日たべる
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-06-06'
-hero: /hero-ai/mugicha-vs-mizu.jpg
+hero: /img/scenes/meal-25.webp
 area: all
 quickInfo:
   ageRanges:

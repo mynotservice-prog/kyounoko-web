@@ -7,7 +7,6 @@ category: today-doko
 categoryName: 今日どこ行く
 publishedAt: '2026-05-18'
 updatedAt: '2026-07-24'
-hero: /hero-ai/undokai-bentou-mochimono-kamigata.jpg
 quickInfo:
   ageRanges:
     - 2-3

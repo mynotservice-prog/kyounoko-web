@@ -7,7 +7,6 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: 2026-04-18T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /hero-ai/sukikirai-yasai-taisaku.jpg
 area: all
 quickInfo:
   ageRanges:

@@ -9,7 +9,6 @@ category: today-mawasu
 categoryName: 今日まわす
 publishedAt: 2026-05-02T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /hero-ai/guzu-guzu-tomaranai-yochien.jpg
 area: all
 quickInfo:
   ageRanges:

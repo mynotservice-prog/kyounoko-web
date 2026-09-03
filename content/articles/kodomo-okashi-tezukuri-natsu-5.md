@@ -6,7 +6,6 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-08'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kodomo-okashi-tezukuri-natsu-5.jpg
 lede: >-
   暑い夏は「火を使わない」「冷たい」「子と一緒に作れる」の3条件が揃ったおやつが正解。手作り感のある5レシピを、必要な道具・材料・年齢別の役割分担まで解説します。
 quickInfo:

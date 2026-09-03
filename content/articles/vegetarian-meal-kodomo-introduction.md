@@ -6,7 +6,6 @@ category: today-taberu
 categoryName: 今日何食べる
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/vegetarian-meal-kodomo-introduction.jpg
 lede: 肉や魚を毎日メインにしなくても、野菜と大豆・卵・乳製品で満足度の高い食卓は作れます。幼児も大人もおかわりしたくなる、野菜中心メニュー7品を提案します。
 quickInfo:
   ageRanges:

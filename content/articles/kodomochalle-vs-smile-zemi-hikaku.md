@@ -8,7 +8,7 @@ category: narai
 categoryName: 習い事と学び
 publishedAt: 2026-05-28T00:00:00.000Z
 updatedAt: '2026-05-29'
-hero: /hero-ai/kodomochalle-vs-smile-zemi-hikaku.jpg
+hero: /img/scenes/book-02.webp
 area: all
 quickInfo:
   ageRanges:

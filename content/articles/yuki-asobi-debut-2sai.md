@@ -7,7 +7,6 @@ category: today-doko
 categoryName: 今日どこいく
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/yuki-asobi-debut-2sai.jpg
 lede: 2歳は雪遊びデビューに最適なタイミング。防寒・持ち物・近場スポット・体調管理まで、初めての雪体験を楽しく安全にするためのガイドをまとめました。
 quickInfo:
   ageRanges:

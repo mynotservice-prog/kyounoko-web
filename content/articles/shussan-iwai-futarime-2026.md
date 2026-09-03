@@ -6,7 +6,6 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-06-11'
 updatedAt: '2026-06-11'
-hero: /hero-ai/shussan-junbi-rakuten-0sai.jpg
 area: all
 quickInfo:
   ageRanges:

@@ -7,7 +7,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-04-18T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /hero-ai/iyaiya-shuuchu-asobi.jpg
+hero: /img/scenes/toy-02.webp
 area: all
 quickInfo:
   ageRanges:

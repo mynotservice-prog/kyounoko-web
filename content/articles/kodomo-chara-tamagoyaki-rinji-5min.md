@@ -6,7 +6,6 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kodomo-chara-tamagoyaki-rinji-5min.jpg
 area: all
 quickInfo:
   ageRanges:

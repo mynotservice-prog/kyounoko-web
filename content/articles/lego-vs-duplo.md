@@ -7,7 +7,6 @@ category: today-nani
 categoryName: 今日なにする
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-06-02'
-hero: /hero-ai/lego-vs-duplo.jpg
 area: all
 quickInfo:
   ageRanges:

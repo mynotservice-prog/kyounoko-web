@@ -8,7 +8,6 @@ category: gyouji
 categoryName: 季節と行事
 publishedAt: 2026-04-30T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /hero-ai/oshogatsu-asobi-kodomo-2026.jpg
 area: all
 quickInfo:
   ageRanges:

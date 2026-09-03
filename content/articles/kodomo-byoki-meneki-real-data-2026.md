@@ -6,7 +6,6 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-08'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kodomo-byoki-meneki-real-data-2026.jpg
 area: all
 quickInfo:
   ageRanges:

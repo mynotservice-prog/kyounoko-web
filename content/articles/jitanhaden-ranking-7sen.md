@@ -9,7 +9,6 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-04-18T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /hero-ai/jitanhaden-ranking-7sen.jpg
 area: all
 quickInfo:
   ageRanges:

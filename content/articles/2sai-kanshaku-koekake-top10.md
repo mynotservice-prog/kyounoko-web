@@ -7,7 +7,7 @@ publishedAt: '2026-05-12'
 updatedAt: '2026-06-03'
 category: today-mawasu
 categoryName: 今日どう回す？
-hero: /hero-ai/2sai-kanshaku-koekake-top10.jpg
+hero: /img/scenes/home-play-11.webp
 quickInfo:
   ageRanges:
     - 2-3

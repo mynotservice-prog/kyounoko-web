@@ -8,7 +8,6 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kodomo-me-mimi-ishi-sagashikata.jpg
 lede: >-
   「鼻水は小児科？耳鼻科？」「目やには眼科でいい？」と迷う親のために、0〜6歳の症状15パターンで受診先を整理。迷ったらまずかかりつけ、という基本も含めて解説します。
 quickInfo:

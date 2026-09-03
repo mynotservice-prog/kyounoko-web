@@ -7,7 +7,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-18'
 updatedAt: '2026-06-03'
-hero: /hero-ai/akachan-hiyakedome-itsukara-erabikata.jpg
+hero: /img/scenes/medical-01.webp
 lede: >-
   赤ちゃんに日焼け止めを使い始める目安は「生後6ヶ月から」が一つの一般的な目安です。本記事では月齢別の選び方、SPF・PAの基準、避けたほうがよい成分、塗り方の手順、落とし方、敏感肌対応まで一般情報として整理しました。最終的な判断は皮膚科医や小児科医にご相談ください。
 quickInfo:

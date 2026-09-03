@@ -8,7 +8,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/iyaiya-osaete-tsukeru-shitsuke.jpg
+hero: /img/scenes/home-play-19.webp
 lede: イヤイヤ期は譲るべきか、しつけるべきか。2〜3歳の現場で役立つ「譲っていい5つ」「譲れない5つ」の判断軸、声かけ例、親の疲労を減らすコツまでまとめました。
 quickInfo:
   ageRanges:

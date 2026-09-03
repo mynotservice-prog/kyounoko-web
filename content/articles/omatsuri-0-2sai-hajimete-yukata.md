@@ -18,7 +18,7 @@ quickInfo:
   durationMin: 120
   budget: mid
 area: all
-hero: /hero-ai/omatsuri-0-2sai-hajimete-yukata.jpg
+
 ---
 
 ## TL;DR（先に知りたい人へ）

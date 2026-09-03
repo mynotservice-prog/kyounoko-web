@@ -8,7 +8,7 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-08'
 updatedAt: '2026-06-03'
-hero: /img/scenes/park-05.webp
+hero: /img/scenes/outing-general-03.webp
 area: tokyo
 quickInfo:
   ageRanges:

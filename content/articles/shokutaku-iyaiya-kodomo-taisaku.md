@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日たべる
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/shokutaku-iyaiya-kodomo-taisaku.jpg
+hero: /img/scenes/meal-41.webp
 lede: 「座らない」「食べない」「泣く」食卓でのイヤイヤに疲れたママ・パパへ。発達段階を理解した7つの工夫と、食事時間を20分に収める声かけテクを紹介します。
 quickInfo:
   ageRanges:

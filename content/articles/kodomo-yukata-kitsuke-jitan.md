@@ -6,7 +6,6 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-06'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kodomo-yukata-kitsuke-jitan.jpg
 lede: >-
   夏祭り当日、浴衣の着付けに30分以上かかって出発が遅れる…が定番のトラブル。1〜6歳の子と10分で完了する時短手順、サイズ選び、ぐずり対策、トイレ対応を年齢別にナビゲートします。
 quickInfo:

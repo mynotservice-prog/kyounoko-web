@@ -8,7 +8,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-08'
 updatedAt: '2026-06-03'
-hero: /img/scenes/nursery-01.webp
+hero: /img/scenes/nursery-03.webp
 area: all
 quickInfo:
   ageRanges:

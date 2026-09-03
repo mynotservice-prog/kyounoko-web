@@ -7,7 +7,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-05'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kodomo-mushiyoke-erabikata-2026.jpg
+hero: /img/scenes/park-11.webp
 quickInfo:
   ageRanges:
     - 0-1

@@ -7,7 +7,6 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-07-15'
-hero: /hero-ai/haru-2sai-sugoshikata.jpg
 area: all
 quickInfo:
   ageRanges:

@@ -7,7 +7,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-07-21'
-hero: /hero-ai/kodomo-tkg-itsukara.jpg
+hero: /img/scenes/baby-food-01.webp
 area: all
 quickInfo:
   ageRanges:

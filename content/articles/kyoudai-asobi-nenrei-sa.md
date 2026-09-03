@@ -8,7 +8,6 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: 2026-04-18T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /hero-ai/kyoudai-asobi-nenrei-sa.jpg
 area: all
 quickInfo:
   ageRanges:

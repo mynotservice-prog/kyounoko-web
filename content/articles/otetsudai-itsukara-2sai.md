@@ -5,7 +5,6 @@ slug: otetsudai-itsukara-2sai
 title: お手伝いいつから？2-6歳で続いた家事30選と声かけ集
 category: today-mawasu
 categoryName: 今日まわす
-hero: /hero-ai/otetsudai-itsukara-2sai.jpg
 metaDescription: >-
   お手伝いは何歳から始める？2歳の家事ごっこから6歳の本格お手伝いまで、年齢別の実践リスト30選を掲載。やる気を引き出す声かけ・続けるコツ・きょうだい対応まで先輩ママの実体験で整理しました。
 publishedAt: 2026-05-02T00:00:00.000Z

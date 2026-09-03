@@ -19,7 +19,7 @@ quickInfo:
   durationMin: 15
   budget: free
 area: all
-hero: /hero-ai/kodomo-natsu-photo-toshi-kata-5.jpg
+
 ---
 
 ## TL;DR（先に知りたい人へ）

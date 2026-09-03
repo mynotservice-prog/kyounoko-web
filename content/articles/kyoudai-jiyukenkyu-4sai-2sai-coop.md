@@ -18,7 +18,7 @@ quickInfo:
   durationMin: 90
   budget: low
 area: all
-hero: /hero-ai/kyoudai-jiyukenkyu-4sai-2sai-coop.jpg
+
 ---
 
 ## TL;DR（先に知りたい人へ）

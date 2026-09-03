@@ -8,7 +8,6 @@ category: narai
 categoryName: 習いごと
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/programming-kodomo-5-7sai.jpg
 lede: 小学校でプログラミングが必修化、早めに触れさせたい親は急増中。5〜7歳から始められる無料・低価格の教材10選と、続けるコツ、教室の選び方を解説します。
 quickInfo:
   ageRanges:

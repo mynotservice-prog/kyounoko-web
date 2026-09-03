@@ -4,7 +4,7 @@ slug: jitensha-hojorin-hazushi-nansai
 title: 自転車補助輪外し何歳？4歳3日で乗れた現実的な手順
 category: yakudatsu
 categoryName: 役立つもの
-hero: /hero-ai/jitensha-hojorin-hazushi-nansai.jpg
+hero: /img/scenes/park-02.webp
 metaDescription: >-
   自転車の補助輪外しは何歳から？4〜6歳で挑戦する家庭が多い中、3日で乗れるようになる練習手順を10ステップで解説。ストライダーからの移行・転倒対策・ヘルメット選びまで、実体験ベースで整理しました。
 publishedAt: 2026-05-02T00:00:00.000Z

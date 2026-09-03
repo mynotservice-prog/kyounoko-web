@@ -15,7 +15,7 @@ quickInfo:
     - 0-1
     - 2-3
     - 4-6
-hero: /hero-ai/highchair-4brand-toritsuke-syohi.jpg
+
 ---
 
 ## TL;DR(先に知りたい人へ)

@@ -7,7 +7,6 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kurasi-taisaku-kodomo-jidou-jiko.jpg
 lede: 子どもの事故の約7割は家の中で起きます。0〜6歳の月齢別・部屋別に、見落としがちな20の危険ポイントと具体的な対策、応急処置まで整理しました。
 quickInfo:
   ageRanges:

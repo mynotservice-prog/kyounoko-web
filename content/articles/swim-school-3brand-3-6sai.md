@@ -14,7 +14,7 @@ quickInfo:
   ageRanges:
     - 2-3
     - 4-6
-hero: /hero-ai/swim-school-3brand-3-6sai.jpg
+
 ---
 
 ## TL;DR(先に知りたい人へ)

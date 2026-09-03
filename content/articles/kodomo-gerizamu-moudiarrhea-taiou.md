@@ -8,7 +8,6 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kodomo-gerizamu-moudiarrhea-taiou.jpg
 lede: 子どもの下痢嘔吐で最も怖いのは脱水。経口補水液の与え方、食事再開の目安、ノロ・ロタの感染拡大を防ぐ消毒、受診タイミングを0〜6歳向けに整理しました。
 quickInfo:
   ageRanges:

@@ -9,7 +9,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-04-18T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /img/scenes/stroller-01.webp
+hero: /img/scenes/stroller-06.webp
 area: all
 interactive: BabyCarRouteEstimator
 quickInfo:

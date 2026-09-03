@@ -8,7 +8,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-06-15T00:00:00.000Z
 updatedAt: '2026-06-15'
-hero: /img/scenes/baby-food-01.webp
+hero: /img/scenes/meal-33.webp
 area: all
 quickInfo:
   ageRanges:

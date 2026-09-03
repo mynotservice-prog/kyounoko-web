@@ -20,7 +20,7 @@ quickInfo:
   durationMin: 5
   budget: free
 area: all
-hero: /hero-ai/kodomo-netsuchusho-3sain-real-2026.jpg
+
 ---
 
 ## TL;DR（先に知りたい人へ）

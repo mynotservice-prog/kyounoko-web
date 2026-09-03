@@ -6,7 +6,6 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-05-08'
 updatedAt: '2026-06-03'
-hero: /hero-ai/mushikago-kodomo-kankatsu.jpg
 lede: "結論、虫取りは「採集時期×場所×道具」の3点で9割決まります。カブト・クワガタ・セミの旬の時期、必須道具7選、捕獲のコツ、飼育の基本まで、4〜6歳と楽しむ視点で2026年版に整理。ながみー家が東京近郊で実践している安全配慮もあわせて共有します。"
 quickInfo:
   ageRanges:

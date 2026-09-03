@@ -6,7 +6,6 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-04-20'
 updatedAt: '2026-06-03'
-hero: /hero-ai/tokyo-shinagawa-ooimachi-weekend.jpg
 lede: >-
   品川区の大井町・武蔵小山は、23区の中でも「生活感と週末遊びが両立する」子育てエリア。しながわ水族館・大井競馬場周辺の公園・武蔵小山の商店街など、大げさすぎないファミリー向けスポットが揃います。この記事では2〜6歳の週末プランを実用目線でまとめました。
 quickInfo:

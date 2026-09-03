@@ -7,7 +7,6 @@ publishedAt: '2026-05-12'
 updatedAt: '2026-06-03'
 category: today-mawasu
 categoryName: 今日どう回す？
-hero: /hero-ai/chichinohi-3sai-dekiru-tedukuri-10.jpg
 quickInfo:
   ageRanges:
     - 2-3

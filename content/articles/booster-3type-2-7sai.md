@@ -14,7 +14,7 @@ quickInfo:
   ageRanges:
     - 2-3
     - 4-6
-hero: /hero-ai/booster-3type-2-7sai.jpg
+
 ---
 
 ## TL;DR(先に知りたい人へ)

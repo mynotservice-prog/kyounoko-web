@@ -9,7 +9,7 @@ category: today-mawasu
 categoryName: 今日まわす
 publishedAt: '2026-04-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/iyaiya-ki-taisho-2sai-7kufuu.jpg
+hero: /img/scenes/home-play-14.webp
 lede: >-
   「靴を履かない」「すべてイヤ」――地獄の2歳イヤイヤ期に沼ってる、お疲れママ・パパへ。実はやっちゃダメな声かけと、ガチで効いた7つの対処法を、SNSで話題の鉄板フレーズ集つきで完全公開します。
 speakableSummary: >-

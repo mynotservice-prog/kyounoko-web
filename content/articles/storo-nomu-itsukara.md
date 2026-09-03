@@ -4,7 +4,6 @@ slug: storo-nomu-itsukara
 title: ストロー飲みいつから？月齢別10ステップでもう挫折しない
 category: yakudatsu
 categoryName: 役立つもの
-hero: /hero-ai/storo-nomu-itsukara.jpg
 metaDescription: >-
   ストロー飲みは生後何ヶ月から？マグ卒業の3つのサイン、紙パック・スパウト・ストローマグの練習ステップを月齢別に整理。挫折しがちな赤ちゃんでも進められる10ステップを先輩ママの実体験で解説します。
 publishedAt: 2026-05-02T00:00:00.000Z

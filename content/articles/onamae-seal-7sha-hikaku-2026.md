@@ -7,7 +7,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-06-11'
 updatedAt: '2026-06-11'
-hero: /hero-ai/hoikuen-nyuuen-junbi-0-2sai-kanzen-list.jpg
+hero: /img/scenes/toy-02.webp
 area: all
 quickInfo:
   ageRanges:

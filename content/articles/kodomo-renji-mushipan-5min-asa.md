@@ -6,7 +6,6 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-12'
 updatedAt: '2026-06-03'
-hero: /hero-ai/kodomo-renji-mushipan-5min-asa.jpg
 area: all
 quickInfo:
   ageRanges:

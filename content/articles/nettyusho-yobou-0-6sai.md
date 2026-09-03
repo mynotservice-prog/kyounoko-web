@@ -8,7 +8,6 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-07'
 updatedAt: '2026-06-03'
-hero: /hero-ai/nettyusho-yobou-0-6sai.jpg
 lede: >-
   0〜6歳は体温調節が未発達で熱中症リスクが大人の2倍。WBGT指標・水分補給の量と頻度・服装の選び方・症状サインと受診目安まで、親が押さえるべき予防対策を年齢別にまとめます。
 quickInfo:

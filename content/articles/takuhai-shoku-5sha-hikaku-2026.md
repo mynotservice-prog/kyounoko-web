@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-06-07'
 updatedAt: '2026-06-08'
-hero: /hero-ai/takuhai-shoku-5sha-hikaku-2026.jpg
+hero: /img/scenes/cooking-01.webp
 area: all
 quickInfo:
   ageRanges:

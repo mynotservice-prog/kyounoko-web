@@ -7,7 +7,6 @@ category: gyouji
 categoryName: 季節と行事
 publishedAt: '2026-05-19'
 updatedAt: '2026-06-03'
-hero: /hero-ai/chichi-no-hi-purezento-2-6sai-tedukuri-15sen.jpg
 area: all
 quickInfo:
   ageRanges:

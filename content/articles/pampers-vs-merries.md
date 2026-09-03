@@ -7,7 +7,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-06-06'
-hero: /hero-ai/pampers-vs-merries.jpg
+hero: /img/scenes/stroller-01.webp
 area: all
 quickInfo:
   ageRanges:

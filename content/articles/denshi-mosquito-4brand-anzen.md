@@ -15,7 +15,7 @@ quickInfo:
     - 0-1
     - 2-3
     - 4-6
-hero: /hero-ai/denshi-mosquito-4brand-anzen.jpg
+
 ---
 
 ## TL;DR(先に知りたい人へ)

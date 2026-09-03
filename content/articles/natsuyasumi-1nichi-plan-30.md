@@ -7,7 +7,6 @@ category: today-mawasu
 categoryName: 今日どう回す
 publishedAt: '2026-05-18'
 updatedAt: '2026-06-03'
-hero: /hero-ai/natsuyasumi-1nichi-plan-30.jpg
 lede: >-
   夏休みの6〜8週間を「今日どう回すか」だけで乗り切るのは消耗します。0-6歳と無理なく過ごせる30の一日プランを、猛暑/水遊び/早朝/雨/家こもり/小旅行の6グループに分けて、朝7時〜夜19時のタイムテーブルで提示します。
 quickInfo:
