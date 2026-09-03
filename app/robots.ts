@@ -72,15 +72,35 @@ export default function robots(): MetadataRoute.Robots {
   //   クリーンURL（/today, /events 等）は引き続きクロール可。
   const aiDisallow = [...baseDisallow, '/today?', '/events?', '/ranking?', '/spots?'];
 
+  // 【2026-09-03 設計反転】列挙方式 → デフォルト拒否方式へ。
+  //
+  //   9/2 の列挙方式（AIボットを名指しでDisallow）は翌朝に破られた。
+  //   新UA `claude-searchbot` が robots の列挙に無く `*` グループ（クエリ許可）に
+  //   落ちて /today を 34K req/12h で総当たり（日次$6超・月換算$186ペース）。
+  //   ボットが増えるたび後追い列挙＝毎回1日分の課金を払ってから気づく構造だった。
+  //
+  //   反転後: `*` グループにクエリ変種Disallowを入れ、未知のボットは初手からブロック。
+  //   Googlebot だけは専用グループで従来ルール（クエリ変種をクロール可）を維持する。
+  //   robots.txt は「最も具体的にマッチする1グループだけ」が適用されるため、
+  //   Googlebot グループがある限り Google が `*` の追加Disallowを読むことはない。
+  //   → 8/17 の教訓（noindexを読ませるためクエリ変種はGoogleにクロールさせる）は不変。
+  //
+  //   なお robots.txt は紳士協定。従わない/取得ラグ中のボットは middleware.ts の
+  //   ボットUA×クエリ付きURL→301 が第2層として遮断する（そちらも参照）。
   return {
     rules: [
-      // ===== 一般クローラー（Google等）=====
-      // /_next/ を明示 Allow（CSS/JS/フォントを取得してフルレンダリング可能に）
+      // ===== 既定（未知のクローラー含む全て）=====
+      // クエリ変種（無限組合せ空間）はデフォルトで遮断。クリーンURLはクロール可。
       {
         userAgent: '*',
         allow: baseAllow,
-        disallow: baseDisallow,
+        disallow: aiDisallow,
       },
+
+      // ===== Google検索本体 =====
+      // Googlebot は `*` でなくこのグループだけに従う。クエリ変種もクロール可
+      // （noindex, follow + canonical を読ませてインデックス残骸を作らないため）。
+      { userAgent: 'Googlebot', allow: baseAllow, disallow: baseDisallow },
 
       // ===== Googleサービス =====
       { userAgent: 'Mediapartners-Google', allow: baseAllow },     // AdSense
@@ -95,10 +115,13 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'OAI-SearchBot', allow: baseAllow, disallow: aiDisallow },
       { userAgent: 'ChatGPT-User', allow: baseAllow, disallow: aiDisallow },
 
-      // Anthropic Claude（ClaudeBot / claude-web）
+      // Anthropic Claude（ClaudeBot / claude-web / Claude-SearchBot / Claude-User）
+      // Claude-SearchBot は 9/3 に /today 総当たりを実測した検索インデックス用UA
       { userAgent: 'ClaudeBot', allow: baseAllow, disallow: aiDisallow },
       { userAgent: 'anthropic-ai', allow: baseAllow, disallow: aiDisallow },
       { userAgent: 'claude-web', allow: baseAllow, disallow: aiDisallow },
+      { userAgent: 'Claude-SearchBot', allow: baseAllow, disallow: aiDisallow },
+      { userAgent: 'Claude-User', allow: baseAllow, disallow: aiDisallow },
 
       // Perplexity（AI検索で成長中）
       { userAgent: 'PerplexityBot', allow: baseAllow, disallow: aiDisallow },
