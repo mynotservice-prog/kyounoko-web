@@ -160,6 +160,103 @@ CTR が上がったか**をクエリ別に見る。順位が動いた場合は�
   語彙ギャップは実在するが、2026-07-21にこのゼロクリック情報クエリ帯でのCTR回収は
   実証済みで不発。期待値が低いので今回は見送る。
 
+---
+
+### 7. 記事本文からの文脈内部リンク（2026-09-04）★対照群あり
+
+**未発見の面に「記事本文からの文脈リンク」を張ると、クロール対象に押し上げられるか**を検証する。
+
+**なぜこの形か（前提の診断）**: 2026-09-03 の全数検査で表示0の663本のうち65%(431本)が
+「URL が Google に認識されていません」だった（[[reports/reindex-candidates-2026-09-03.md]]）。
+当初は「内部リンクが無いから発見されない」と考えたが、URL検査APIで測ると
+**`/station` 一覧は 2026-09-03 にクロールされている**。Googleは589駅へのリンクを毎日見た上で
+新宿・新橋を取りに行っていない＝**発見経路の不在ではなく、価値が低いと判断されている**。
+さらに `/article/0sai-ikuji-kanzen-map` は**340本の記事本文からリンクされていても
+「クロール済み-インデックス未登録」**で、リンク量だけでは登録されない反証もある。
+そこで検証対象を「リンクの本数」ではなく**「一覧リンクにはない文脈（アンカーテキスト＋周辺文）が
+価値シグナルになるか」**に絞った。
+
+**割付**: 未発見の駅トップ73本・スポット54本のうち、凍結記事を除いた記事本文で
+「〈駅名〉駅」「施設名」に言及があるもの＝駅31・スポット22が母集団。
+部分文字列が衝突する6件（大島駅⊂東大島駅／辻堂海浜公園⊂同ジャンボプール／新宿駅⊂西新宿駅）を除外し、
+**種別×言及本数で層化してseed固定の無作為割付**。層内で処置と対照が同数になるよう揃えた。
+
+**処置**: 記事本文の初出1箇所をリンク化（見出し・引用・コードブロック・既存リンク内は回避、
+直前が固有名を構成する文字なら別名の一部とみなしてスキップ）。**本文の記述は一切変えていない＝
+リンク化のみの単一変数**。編集した記事は47本・追加リンクは62本。
+
+#### 処置群（21面・**この面を対象にした記事編集は判定日まで避ける**）
+- 駒場東大前（駅／言及3本／実リンク3本）`/station/komaba-todaimae`
+- 荻窪（駅／言及3本／実リンク2本）`/station/ogikubo`
+- 東銀座（駅／言及2本／実リンク2本）`/station/higashi-ginza`
+- 豊島園（駅／言及2本／実リンク2本）`/station/toshimaen`
+- 桜木町（駅／言及2本／実リンク2本）`/station/sakuragicho`
+- とうきょうスカイツリー（駅／言及2本／実リンク2本）`/station/tokyo-skytree`
+- 新木場（駅／言及2本／実リンク2本）`/station/shin-kiba`
+- 赤坂（駅／言及1本／実リンク1本）`/station/akasaka`
+- 都立大学（駅／言及1本／実リンク1本）`/station/toritsu-daigaku`
+- 西永福（駅／言及1本／実リンク1本）`/station/nishi-eifuku`
+- 志茂（駅／言及1本／実リンク1本）`/station/shimo`
+- 三越前（駅／言及1本／実リンク1本）`/station/mitsukoshimae`
+- 洋光台（駅／言及1本／実リンク1本）`/station/yokodai`
+- 国営昭和記念公園（スポット／言及11本／実リンク8本）`/spot/-l2px`
+- はまぎん こども宇宙科学館（スポット／言及2本／実リンク2本）`/spot/-v5mu`
+- 県立四季の森公園 じゃぶじゃぶ池（スポット／言及2本／実リンク1本）`/spot/-lryo`
+- アーバンドック ららぽーと豊洲（スポット／言及2本／**リンク0本＝処置未達**）`/spot/-ok75`
+- ららぽーと柏の葉（スポット／言及1本／実リンク1本）`/spot/-syi3`
+- 小松沢レジャー農園（スポット／言及1本／実リンク1本）`/spot/-xj0s`
+- 東武百貨店 池袋店（スポット／言及1本／実リンク1本）`/spot/-rqcg`
+- ららぽーと海老名（スポット／言及1本／実リンク1本）`/spot/-g6eq`
+
+#### **対照群（21面・絶対にリンクを張らない）**
+- 月島（駅／言及3本／**リンク0本＝処置未達**）`/station/tsukishima`
+- 有楽町（駅／言及4本／**リンク0本＝処置未達**）`/station/yurakucho`
+- 学芸大学（駅／言及2本／**リンク0本＝処置未達**）`/station/gakugei-daigaku`
+- 根津（駅／言及2本／**リンク0本＝処置未達**）`/station/nezu`
+- 大泉学園（駅／言及2本／**リンク0本＝処置未達**）`/station/oizumi-gakuen`
+- 蔵前（駅／言及2本／**リンク0本＝処置未達**）`/station/kuramae`
+- 自由が丘（駅／言及2本／**リンク0本＝処置未達**）`/station/jiyugaoka`
+- 新馬場（駅／言及1本／**リンク0本＝処置未達**）`/station/shimbamba`
+- 東陽町（駅／言及1本／**リンク0本＝処置未達**）`/station/toyocho`
+- 海老名（駅／言及1本／**リンク0本＝処置未達**）`/station/ebina`
+- 綾瀬（駅／言及1本／**リンク0本＝処置未達**）`/station/ayase`
+- 高輪台（駅／言及1本／**リンク0本＝処置未達**）`/station/takanawadai`
+- 江戸川橋（駅／言及1本／**リンク0本＝処置未達**）`/station/edogawabashi`
+- 井の頭自然文化園（スポット／言及5本／**リンク0本＝処置未達**）`/spot/-jlzu`
+- アルカキット錦糸町（スポット／言及2本／**リンク0本＝処置未達**）`/spot/-sfnc`
+- 虎ノ門ヒルズ（スポット／言及2本／**リンク0本＝処置未達**）`/spot/-ssq8`
+- 埼玉県こども動物自然公園（スポット／言及2本／**リンク0本＝処置未達**）`/spot/-vinb`
+- 中込農園（スポット／言及1本／**リンク0本＝処置未達**）`/spot/-m64q`
+- 群馬サファリパーク（スポット／言及1本／**リンク0本＝処置未達**）`/spot/-l338`
+- 葛西海浜公園 西なぎさ（スポット／言及1本／**リンク0本＝処置未達**）`/spot/-9unv`
+- オリナス錦糸町（スポット／言及1本／**リンク0本＝処置未達**）`/spot/-cznr`
+
+#### 補助観察（対照なし・言及が突出していて層内で相手がいなかった4面）
+- 六本木（駅／言及6本／実リンク6本）`/station/roppongi`
+- 有明ガーデン（スポット／言及14本／実リンク14本）`/spot/-t04j`
+- KITTE丸の内（スポット／言及4本／実リンク4本）`/spot/KITTE-mqag`
+- 牛たん炭焼 利久（スポット／言及3本／実リンク2本）`/spot/-jte5`
+
+**判定: 2026-10-01**（scheduled task `kyounoko-zero-impression-verdict-1001` に相乗り）
+
+**主要指標は「クロールされたか」**（インデックス登録ではない）。処置前は全面が
+`lastCrawlTime` 無し＝未発見なので、**URL検査APIで `lastCrawlTime` が付いたか**を見る。
+登録（数ヶ月かかる）より感度が高く4週で読める。副次で `coverageState` の変化とGSCの表示も見る。
+
+**⚠️ 検出力の限界**: 21対21なので**大きい効果しか読めない**（クロール率20%→60%は検出できるが
+20%→35%は無理）。母集団がこれ以上無いので、「差が出なかった」は「効果が無い」ではなく
+「大きくはない」までしか言えない。それでも**効いたら残り394駅へ横展開／効かなければ内部リンク路線を
+捨ててsitemap分割とコンテンツへ寄せる**という分岐は付く。
+
+**⚠️ 交絡**: 2026-09-03 に sitemap の lastmod を是正して再送信しており、その効果が両群に乗る。
+対照群がその分を吸収する設計だが、**背景の底上げが大きいと差が圧縮される**。
+リンク文脈が無くて実験に入れなかった駅42・スポット32が「sitemap修正単独」の参照値になる。
+
+**処置未達**: `アーバンドック ららぽーと豊洲`（/spot/-ok75）は言及2件がどちらも見出し内で
+リンクを張れなかった。**主分析からは処置・対照とも1ペア除外して20対20で読むこと。**
+
+**編集した記事（47本）**: amenohi-indoor-spots-tokyo-15 / fruitgari-kanto-kodzure / hatsumoude-kodzure-kanto-15 / jabujabuike-mizuasobi-tokyo-30 / kanto-ajisai-kodzure-spot-10 / kosodate-amenohi-yokohama / kosodate-kanto-shizen-10 / kosodate-muryou-spots-tokyo / laketown-kids-menu / mizuasobi-kita-tokyo / mizuasobi-meguro-tokyo / mizuasobi-yokohama / moushobi-suzushii-spots / shitsunai-asobi-chuo-tokyo / shitsunai-asobi-itabashi-tokyo / shitsunai-asobi-kashiwa / shitsunai-asobi-kita-tokyo / shitsunai-asobi-koto-tokyo / shitsunai-asobi-meguro-tokyo / shitsunai-asobi-minato-tokyo / shitsunai-asobi-nakano-tokyo / shitsunai-asobi-nerima-tokyo / shitsunai-asobi-setagaya-tokyo / shitsunai-asobi-shinagawa-tokyo / shitsunai-asobi-shinjuku-tokyo / shitsunai-asobi-suginami-tokyo / shitsunai-asobi-sumida-tokyo / shitsunai-asobi-toshima-tokyo / shitsunai-asobi-yokohama / showa-kinen-koen-kodzure / showa-kinen-koen-stroller / tokyo-babycar-kodzure-gaishoku-50 / tokyo-fuwafuwa-park-20 / tokyo-ginza-kodzure-lunch / tokyo-hanabi-taikai-kodzure-2026 / tokyo-koto-toyosu-kodzure / tokyo-long-slide-park-20 / tokyo-meguro-weekday-hidden / tokyo-minato-roppongi-lunch / tokyo-nerima-free-park-muryou / tokyo-ogata-yugu-koen-30 / tokyo-roppongi-kodzure-lunch / tokyo-shibuya-kodzure-lunch / tokyo-station-babyroom / tokyo-station-kodzure-lunch / xmas-market-kodzure / yurakucho-kodzure-lunch
+
 ## 汚染の記録
 
 ### 年齢拡張カナリア47ファイルのデプロイに伴う凍結記事の編集（2026-09-02）
