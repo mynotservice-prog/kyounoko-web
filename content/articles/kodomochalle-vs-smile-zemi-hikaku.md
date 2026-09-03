@@ -8,7 +8,7 @@ category: narai
 categoryName: 習い事と学び
 publishedAt: 2026-05-28T00:00:00.000Z
 updatedAt: '2026-05-29'
-hero: /img/scenes/book-02.webp
+hero: /img/scenes/lesson-09.webp
 area: all
 quickInfo:
   ageRanges:

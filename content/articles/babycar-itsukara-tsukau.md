@@ -5,7 +5,7 @@ slug: babycar-itsukara-tsukau
 title: ベビーカーいつから？生後1ヶ月から使えた先輩ママ10例
 category: yakudatsu
 categoryName: 役立つもの
-hero: /img/scenes/stroller-07.webp
+hero: /img/scenes/stroller-04.webp
 metaDescription: >-
   ベビーカーは生後1ヶ月から使える？A型・B型の切り替え目安、抱っこ紐との使い分け、デビュー前にやっておく3つの準備を先輩ママ10家庭のリアル体験で整理。月齢別の判断ポイントが3分で分かります。
 publishedAt: 2026-05-02T00:00:00.000Z

@@ -7,7 +7,7 @@ category: narai
 categoryName: 習いごと
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-05-30'
-hero: /img/scenes/lesson-04.webp
+hero: /img/scenes/lesson-02.webp
 area: all
 quickInfo:
   ageRanges:

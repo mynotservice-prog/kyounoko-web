@@ -9,7 +9,7 @@ category: narai
 categoryName: 習い事と学び
 publishedAt: 2026-04-18T00:00:00.000Z
 updatedAt: '2026-06-03'
-hero: /img/scenes/lesson-04.webp
+hero: /img/scenes/kyouzai-01.webp
 area: all
 quickInfo:
   ageRanges:

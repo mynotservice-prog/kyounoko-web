@@ -7,7 +7,7 @@ category: today-mawasu
 categoryName: 今日なにする？
 publishedAt: '2026-04-24'
 updatedAt: '2026-06-03'
-hero: /img/scenes/lesson-08.webp
+hero: /img/scenes/lesson-06.webp
 area: national
 quickInfo:
   ageRanges:

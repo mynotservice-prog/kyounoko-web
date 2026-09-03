@@ -6,7 +6,7 @@ category: today-taberu
 categoryName: 今日たべる
 publishedAt: '2026-05-29T00:00:00.000Z'
 updatedAt: '2026-06-06'
-hero: /img/scenes/meal-25.webp
+hero: /img/scenes/meal-06.webp
 area: all
 quickInfo:
   ageRanges:

@@ -6,7 +6,7 @@ category: today-mawasu
 categoryName: 今日どう回す？
 publishedAt: 2026-05-28T00:00:00.000Z
 updatedAt: '2026-07-21'
-hero: /img/scenes/meal-09.webp
+hero: /img/scenes/aisu-01.webp
 area: all
 quickInfo:
   ageRanges:

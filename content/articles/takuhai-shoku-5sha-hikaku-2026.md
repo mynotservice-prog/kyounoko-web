@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-06-07'
 updatedAt: '2026-06-08'
-hero: /img/scenes/cooking-01.webp
+hero: /img/scenes/meal-10.webp
 area: all
 quickInfo:
   ageRanges:

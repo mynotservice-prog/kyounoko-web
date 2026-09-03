@@ -8,7 +8,7 @@ category: yakudatsu
 categoryName: 役立つもの
 publishedAt: 2026-04-18T00:00:00.000Z
 updatedAt: '2026-06-15'
-hero: /img/scenes/meal-09.webp
+hero: /img/scenes/aisu-01.webp
 area: all
 quickInfo:
   ageRanges:
