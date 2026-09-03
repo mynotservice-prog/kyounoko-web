@@ -79,42 +79,94 @@ edge で **302** してクリーンURLへ送る。ページ Function も HTML �
 を「Cache Everything」の対象に入れないこと。入れる場合は先に第2層を
 CF側（第3層）へ移すか、middleware の UA 分岐を廃止すること。
 
+## Cloudflare の実構成（2026-09-03 ダッシュボード実査）
+
+- **アカウント: `Service@remegift.jp's Account`**（`Mynot.service@gmail.com` の方ではない。
+  あちらはドメイン0件で kyounoko.jp が見えない）
+- **プラン: Free Website** → `cf.client.bot_score`（Bot Management）は**使えない**
+- 24時間の総リクエスト 1.14M / ユニーク訪問者 8.92k / Percent Cached 73.01%
+
+### Cache Rules（6本・全て Active）
+
+| # | 名前 | 対象 | Edge TTL |
+|---|---|---|---|
+| 1 | Bypass: admin/mypage/api/hearing | `/admin` `/mypage` `/api/` `/hearing` | Bypass |
+| 2 | Cache _next/static | `/_next/static/` | 30日 `override_origin` |
+| 3 | Cache images/fonts/css/js + OG | 拡張子マッチ | 30日 `override_origin` |
+| 4 | Cache article/column/top HTML | `/articles` `/columns` `/gifts` `/stories` `/gift-guide` `/gift-type` `/diagnosis` **`/`** `/anniversary-gift` `/birthday-gift` | **1時間 `override_origin`** |
+| 5 | Cache sitemap/robots/ads/llms/manifest | 個別ファイル | 10分 `override_origin` |
+| 6 | Cache HTML pages | `/article/` `/spot/` `/category/` `/tag/` `/station/` `/feature/` `/plan/` `/kid-reports` `/feature` | `bypass_by_default` |
+
+- **`/` が origin の `no-store` を無視して HIT する犯人はルール4**
+  （`edge_ttl: {default: 3600, mode: override_origin}`）。`override_origin` は
+  文字どおりオリジンのキャッシュ指示を上書きする。
+- **`/today` `/events` `/ranking` `/spots` `/search` はどのルールにも一致しない**
+  （全ルールの `starts_with` を総当たりで突き合わせ、前方一致の巻き込みもゼロを確認）。
+  よって第2層のUA依存応答がCFにキャッシュされる経路は**現時点で存在しない**。
+- ルール4の `/gifts` `/gift-guide` `/gift-type` `/diagnosis` `/anniversary-gift`
+  `/birthday-gift` は **remegift.jp のパス**。kyounoko ゾーンに設定がコピペされている。
+  kyounoko 側に該当パスが無いので実害は無いが、読むときの混乱の元。
+
+### WAF Custom Rules（4本使用 / Free上限5本 → **残り1枠**）
+
+1. Block /admin from non-Japan — `block`
+2. Block /admin requests from bot/script user-agents — `block`
+3. Block common file scanner paths (WP/PHP/dotfile probes) — `block`
+4. Challenge non-JP visitors on /mypage — `managed_challenge`
+
+Rate Limiting ルールセットと Managed WAF は未設定（Freeのため）。
+
 ## 第3層（未実施・要判断）: Cloudflare で Vercel 到達前に遮断
 
 現状はボットのリクエストが CF を素通りして Vercel まで届き、middleware invocation として
 課金される（ページ Function 起動よりはるかに安いが、ゼロではない）。
 CF WAF で落とせば **Vercel には1リクエストも届かない**。
 
-### 提案ルール（Security → WAF → Custom rules）
+### 提案ルール（Security → WAF → Custom rules・残り1枠を使う）
+
+Free プランのため `cf.client.bot_score` は使えない。UAベースで書く:
 
 ```
-(http.request.uri.path in {"/today" "/events" "/ranking" "/spots" "/search"}
- and http.request.uri.query ne ""
- and cf.client.bot_score lt 30
- and not cf.client.bot_score_src eq "verified_bot")
+(http.request.uri.query ne ""
+ and (starts_with(http.request.uri.path, "/today")
+   or starts_with(http.request.uri.path, "/events")
+   or starts_with(http.request.uri.path, "/ranking")
+   or starts_with(http.request.uri.path, "/spots")
+   or starts_with(http.request.uri.path, "/search"))
+ and any(lower(http.user_agent)[*] contains {"bot" "crawler" "spider" "gpt" "claude" "anthropic" "perplexity"})
+ and not any(lower(http.user_agent)[*] contains {"googlebot" "adsbot-google" "mediapartners-google" "bingbot"}))
 → Action: Block
 ```
 
-`cf.client.bot_score` は CF が独自に算出するため **UA偽装で回避できない**のが
-middleware との決定的な差。`verified_bot` 除外で Googlebot 等の検証済みクローラーは通す。
-Bot Management 未契約プランで bot_score が使えない場合は UA ベースで代替:
+### 優先度の判断（2026-09-03 時点の結論: 急がない）
 
-```
-(http.request.uri.path in {"/today" "/events" "/ranking" "/spots" "/search"}
- and http.request.uri.query ne ""
- and any(lower(http.user_agent)[*] contains {"bot" "crawler" "spider" "gptbot" "claude"})
- and not cf.client.bot_score_src eq "verified_bot")
-→ Action: Block
-```
+middleware（第2層）で**課金の本丸である Function 起動は既に約85%落ちている**。
+CF WAF を足して追加で消せるのは middleware invocation ぶんだけで、
+実測レート（/today 約6.2K req/h）から見積もると月$2〜3程度にすぎない。
+**Free枠の最後の1本を使う価値としては弱い。**
 
-### 判断が要る点
+CF側に移す意義があるのは次のいずれかに当てはまる場合:
+- ボットのレートが一段跳ね上がり、Edge Requests（Pro込み10M/月）や
+  Middleware invocations（Pro込み1M/月）の枠を脅かし始めたとき
+- UA偽装する相手が現れたとき（ただしFreeでは bot_score が無いので
+  CFに移してもUA判定のままで、検出力は上がらない。その場合はプラン変更が要る）
 
-- WAF Custom Rules は Free プランで5本まで。既存ルールの本数を確認してから追加する
-- `Block` だと link preview（Slack/X/Facebook）も落ちる。気になるなら
-  `Managed Challenge` にするか、プレビュー系UAを除外条件に足す
-- **実施には社長のCFダッシュボード操作が必要**（現行の `CLOUDFLARE_API_TOKEN` は
-  パージ専用スコープでルールの読み書き不可。API経由で入れるならトークンの
-  スコープに `Zone / Firewall Services / Edit` を追加する）
+枠を空けたいなら、既存の `/admin` 系2本（非日本ブロック＋bot UAブロック）は
+1本の `or` 条件に統合できる。
+
+### やってはいけないこと
+
+- **Bot Fight Mode を有効化しない。**過去に順位急落の原因になった実績がある。
+- **「Block AI training bots」を有効化しない**（Overview の Manage AI bot access。
+  現在は "Do not block (allow crawlers)"）。AI経由の流入は既に実在し、
+  GEO戦略上クリーンURLはクロールさせ続ける必要がある。遮断したいのは
+  「クエリ変種の総当たり」だけであって、AIクローラーそのものではない。
+
+### 実施手段
+
+現行の `CLOUDFLARE_API_TOKEN` はパージ専用スコープでルールの読み書き不可
+（zone読み取りすら 9109 Unauthorized）。API経由で入れるならトークンのスコープに
+`Zone / Firewall Services / Edit` を追加するか、ダッシュボードで手動追加する。
 
 ## 再発時の切り分け手順
 
