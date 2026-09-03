@@ -1,0 +1,752 @@
+[
+ {
+  "u": "https://kyounoko.jp/station/shin-kiba/yakiniku",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/kuhonbutsu",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/spot/-9j4o",
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/station/yazaike",
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/station/gotanno",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/jujo/famiresu",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/kuura-bonyu-shokujimae-jiki",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/tokyo-teleport/yakiniku",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/bamiyan-yoji-drinkbar",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/harajuku/baby",
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/station/asakusabashi/baby",
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/station/korakuen/private-room",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/spot/-ecz0",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/haneda-airport-t1/famiresu",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/bousai-no-hi-katei-bichiku-mininaosu",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/ningyocho/kaitenzushi",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/spot/-5lrk",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/tokyo-teleport/rainy",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/toyosu/famiresu",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/camp-akarupa-nasu-kodzure",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/togoshi-ginza",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/mita/kaitenzushi",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/spot/-2nro",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/spot/-w4e1",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/camp-pica-saiko-kodzure",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/akasaka/yakiniku",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/chitose-karasuyama/kaitenzushi",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/ueno-okachimachi/famiresu",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/nagahara",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/nippori/famiresu",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/ginza-itchome",
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/station/hamamatsucho/baby",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/ariake/kaitenzushi",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/kodomo-marshmallow-chocolate-bar-5min",
+  "cov": "クロール済み - インデックス未登録",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/station/mita/baby",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/oimachi/indie",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/minami-senju/kaitenzushi",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/tsukiji/baby",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/keisei-takasago/yakiniku",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/nishi-shinjuku",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/asakusa/private-room",
+  "cov": "クロール済み - インデックス未登録",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/event/sagamiko-illumillion-2026",
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/station/ginza/baby",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/oimachi/baby",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/chikatetsu-narimasu/kids-menu",
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/spot/-0n4j",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/line/fukutoshin",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/nerima/indie",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/kodomo-tsuyu-shokuyoku-fushin-recipe",
+  "cov": "クロール済み - インデックス未登録",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/station/nagatacho/rainy",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/osaki/indie",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/tokyo-teleport/kaitenzushi",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/akasaka-mitsuke/private-room",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/keisei-ueno/indie",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/shin-koiwa/baby",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/line/odakyu",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/ojima",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/rinyuu-youji-shoku-grid-rakuten",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/kita-ikebukuro",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/nishi-ogikubo/baby",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/haru-3-6sai-sugoshikata",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/line/namboku",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/kushikatsu-tanaka-kodomo-ryokin",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/camp-deainomori-kanuma-kodzure",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/korakuen/kaitenzushi",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/kinshicho/baby",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/mothers-day-tezukuri-kodomo-2026",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/kayabacho/private-room",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/aoto",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/tokyo/kaitenzushi",
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/station/itabashi/famiresu",
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/station/tokyo-skytree/kaitenzushi",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/omotesando/indie",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/spot/-su4f",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/ikuji-noiroze-sign",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/ichigaya/indie",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/otemachi/kaitenzushi",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/ebisu/kaitenzushi",
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/spot/-kmyp",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/toyosu/private-room",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/kanda/yakiniku",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/shimokitazawa",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/keikyu-kamata/baby",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/haneda-airport-t1",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/kameari/kaitenzushi",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/ueno/rainy",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/shibakoen",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/nagatacho/baby",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/babycar-vs-dakkohimo-tsukaiwake-data",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/kodomo-sake-hoiruyaki-oven-fuyou",
+  "cov": "クロール済み - インデックス未登録",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/spot/-5w8v",
+  "cov": "クロール済み - インデックス未登録",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/station/tokyo/baby",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/shin-okubo/famiresu",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/mukohara",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/suidobashi/yakiniku",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/naka-meguro/kaitenzushi",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/onyasai-kodomo-ryokin",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/babyfood-vs-tedukuri",
+  "cov": "クロール済み - インデックス未登録",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/station/koenji/yakiniku",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/nippori/yakiniku",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/sugamo/indie",
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/station/mita/indie",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/line/tobu-skytree",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/aoto/yakiniku",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/jimbocho/private-room",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/line/sobu",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/mitsukoshimae/private-room",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/mita/private-room",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/shimo-maruko",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/aoto/famiresu",
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/station/ningyocho/baby",
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/article/hanamarudon-kids-menu",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/spot/-hi34",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/shin-kiba/baby",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/hongo-sanchome/private-room",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/tokyo-skytree/private-room",
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/article/kodzure-yakiniku-anzen-kanzen-guide",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/mitsukoshimae/kids-menu",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/tsukishima/kaitenzushi",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/ningyocho",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/spot/-bo4a",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/tokyo-fuwafuwa-park-20",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/kinshicho/yakiniku",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/nihombashi/kaitenzushi",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/line/joban",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/center-kita",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/daimon/private-room",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/kyodo/kids-menu",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/yoyogi-uehara/kaitenzushi",
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/station/itabashi/kaitenzushi",
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/station/nishi-ogikubo/kids-menu",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/ikejiri-ohashi/indie",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/okachimachi/kaitenzushi",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/kotake-mukaihara/yakiniku",
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/otto-ikuji-shinai",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/denenchofu/kids-menu",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/spot/-n9uc",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/shin-okubo/kaitenzushi",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/yokohama-nakayama",
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/station/nogata",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/line/keiyo",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/tsuyu-obento-itamanai-kufuu-7",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/jujo/indie",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/oyama/indie",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/waseda/famiresu",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/ushigome-kagurazaka",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/article/kodomo-outo-stop",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/kobe-motomachi",
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "u": "https://kyounoko.jp/station/shin-koiwa/indie",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "u": "https://kyounoko.jp/station/sangenjaya/kaitenzushi",
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ }
+]

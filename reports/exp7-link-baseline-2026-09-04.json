@@ -1,0 +1,462 @@
+[
+ {
+  "arm": "処置",
+  "name": "駒場東大前",
+  "type": "station",
+  "target": "/station/komaba-todaimae",
+  "stratum": "station/3-4",
+  "mentions": 3,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "処置",
+  "name": "荻窪",
+  "type": "station",
+  "target": "/station/ogikubo",
+  "stratum": "station/3-4",
+  "mentions": 3,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "処置",
+  "name": "東銀座",
+  "type": "station",
+  "target": "/station/higashi-ginza",
+  "stratum": "station/2",
+  "mentions": 2,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "処置",
+  "name": "豊島園",
+  "type": "station",
+  "target": "/station/toshimaen",
+  "stratum": "station/2",
+  "mentions": 2,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "処置",
+  "name": "桜木町",
+  "type": "station",
+  "target": "/station/sakuragicho",
+  "stratum": "station/2",
+  "mentions": 2,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "処置",
+  "name": "とうきょうスカイツリー",
+  "type": "station",
+  "target": "/station/tokyo-skytree",
+  "stratum": "station/2",
+  "mentions": 2,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "処置",
+  "name": "新木場",
+  "type": "station",
+  "target": "/station/shin-kiba",
+  "stratum": "station/2",
+  "mentions": 2,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "処置",
+  "name": "赤坂",
+  "type": "station",
+  "target": "/station/akasaka",
+  "stratum": "station/1",
+  "mentions": 1,
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "arm": "処置",
+  "name": "都立大学",
+  "type": "station",
+  "target": "/station/toritsu-daigaku",
+  "stratum": "station/1",
+  "mentions": 1,
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "arm": "処置",
+  "name": "西永福",
+  "type": "station",
+  "target": "/station/nishi-eifuku",
+  "stratum": "station/1",
+  "mentions": 1,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "処置",
+  "name": "志茂",
+  "type": "station",
+  "target": "/station/shimo",
+  "stratum": "station/1",
+  "mentions": 1,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "処置",
+  "name": "三越前",
+  "type": "station",
+  "target": "/station/mitsukoshimae",
+  "stratum": "station/1",
+  "mentions": 1,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "処置",
+  "name": "洋光台",
+  "type": "station",
+  "target": "/station/yokodai",
+  "stratum": "station/1",
+  "mentions": 1,
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "arm": "処置",
+  "name": "国営昭和記念公園",
+  "type": "spot",
+  "target": "/spot/-l2px",
+  "stratum": "spot/5+",
+  "mentions": 11,
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "arm": "処置",
+  "name": "はまぎん こども宇宙科学館",
+  "type": "spot",
+  "target": "/spot/-v5mu",
+  "stratum": "spot/2",
+  "mentions": 2,
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "arm": "処置",
+  "name": "県立四季の森公園 じゃぶじゃぶ池",
+  "type": "spot",
+  "target": "/spot/-lryo",
+  "stratum": "spot/2",
+  "mentions": 2,
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "arm": "処置",
+  "name": "アーバンドック ららぽーと豊洲",
+  "type": "spot",
+  "target": "/spot/-ok75",
+  "stratum": "spot/2",
+  "mentions": 2,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "処置",
+  "name": "ららぽーと柏の葉",
+  "type": "spot",
+  "target": "/spot/-syi3",
+  "stratum": "spot/1",
+  "mentions": 1,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "処置",
+  "name": "小松沢レジャー農園",
+  "type": "spot",
+  "target": "/spot/-xj0s",
+  "stratum": "spot/1",
+  "mentions": 1,
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "arm": "処置",
+  "name": "東武百貨店 池袋店",
+  "type": "spot",
+  "target": "/spot/-rqcg",
+  "stratum": "spot/1",
+  "mentions": 1,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "処置",
+  "name": "ららぽーと海老名",
+  "type": "spot",
+  "target": "/spot/-g6eq",
+  "stratum": "spot/1",
+  "mentions": 1,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "対照",
+  "name": "月島",
+  "type": "station",
+  "target": "/station/tsukishima",
+  "stratum": "station/3-4",
+  "mentions": 3,
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "arm": "対照",
+  "name": "有楽町",
+  "type": "station",
+  "target": "/station/yurakucho",
+  "stratum": "station/3-4",
+  "mentions": 4,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "対照",
+  "name": "学芸大学",
+  "type": "station",
+  "target": "/station/gakugei-daigaku",
+  "stratum": "station/2",
+  "mentions": 2,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "対照",
+  "name": "根津",
+  "type": "station",
+  "target": "/station/nezu",
+  "stratum": "station/2",
+  "mentions": 2,
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "arm": "対照",
+  "name": "大泉学園",
+  "type": "station",
+  "target": "/station/oizumi-gakuen",
+  "stratum": "station/2",
+  "mentions": 2,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "対照",
+  "name": "蔵前",
+  "type": "station",
+  "target": "/station/kuramae",
+  "stratum": "station/2",
+  "mentions": 2,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "対照",
+  "name": "自由が丘",
+  "type": "station",
+  "target": "/station/jiyugaoka",
+  "stratum": "station/2",
+  "mentions": 2,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "対照",
+  "name": "新馬場",
+  "type": "station",
+  "target": "/station/shimbamba",
+  "stratum": "station/1",
+  "mentions": 1,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "対照",
+  "name": "東陽町",
+  "type": "station",
+  "target": "/station/toyocho",
+  "stratum": "station/1",
+  "mentions": 1,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "対照",
+  "name": "海老名",
+  "type": "station",
+  "target": "/station/ebina",
+  "stratum": "station/1",
+  "mentions": 1,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "対照",
+  "name": "綾瀬",
+  "type": "station",
+  "target": "/station/ayase",
+  "stratum": "station/1",
+  "mentions": 1,
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "arm": "対照",
+  "name": "高輪台",
+  "type": "station",
+  "target": "/station/takanawadai",
+  "stratum": "station/1",
+  "mentions": 1,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "対照",
+  "name": "江戸川橋",
+  "type": "station",
+  "target": "/station/edogawabashi",
+  "stratum": "station/1",
+  "mentions": 1,
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ },
+ {
+  "arm": "対照",
+  "name": "井の頭自然文化園",
+  "type": "spot",
+  "target": "/spot/-jlzu",
+  "stratum": "spot/5+",
+  "mentions": 5,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "対照",
+  "name": "アルカキット錦糸町",
+  "type": "spot",
+  "target": "/spot/-sfnc",
+  "stratum": "spot/2",
+  "mentions": 2,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "対照",
+  "name": "虎ノ門ヒルズ",
+  "type": "spot",
+  "target": "/spot/-ssq8",
+  "stratum": "spot/2",
+  "mentions": 2,
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "arm": "対照",
+  "name": "埼玉県こども動物自然公園",
+  "type": "spot",
+  "target": "/spot/-vinb",
+  "stratum": "spot/2",
+  "mentions": 2,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "対照",
+  "name": "中込農園",
+  "type": "spot",
+  "target": "/spot/-m64q",
+  "stratum": "spot/1",
+  "mentions": 1,
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "arm": "対照",
+  "name": "群馬サファリパーク",
+  "type": "spot",
+  "target": "/spot/-l338",
+  "stratum": "spot/1",
+  "mentions": 1,
+  "cov": "URL が Google に認識されていません",
+  "crawl": ""
+ },
+ {
+  "arm": "対照",
+  "name": "葛西海浜公園 西なぎさ",
+  "type": "spot",
+  "target": "/spot/-9unv",
+  "stratum": "spot/1",
+  "mentions": 1,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "対照",
+  "name": "オリナス錦糸町",
+  "type": "spot",
+  "target": "/spot/-cznr",
+  "stratum": "spot/1",
+  "mentions": 1,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "補助",
+  "name": "六本木",
+  "type": "station",
+  "target": "/station/roppongi",
+  "stratum": "station/5+",
+  "mentions": 6,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "補助",
+  "name": "有明ガーデン",
+  "type": "spot",
+  "target": "/spot/-t04j",
+  "stratum": "spot/5+",
+  "mentions": 14,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "補助",
+  "name": "KITTE丸の内",
+  "type": "spot",
+  "target": "/spot/KITTE-mqag",
+  "stratum": "spot/3-4",
+  "mentions": 4,
+  "cov": "検出 - インデックス未登録",
+  "crawl": ""
+ },
+ {
+  "arm": "補助",
+  "name": "牛たん炭焼 利久",
+  "type": "spot",
+  "target": "/spot/-jte5",
+  "stratum": "spot/3-4",
+  "mentions": 3,
+  "cov": "送信して登録されました",
+  "crawl": "2026-09-03"
+ }
+]
