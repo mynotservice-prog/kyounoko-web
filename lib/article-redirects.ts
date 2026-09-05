@@ -93,4 +93,6 @@ export const ARTICLE_REDIRECTS: { from: string; to: string }[] = [
   { from: 'boshitechou-toha', to: 'boshi-techou-toha' },
   //   tasogarenaki-toha(228imp/pos17.8) → tasogare-naki-toha(459imp/pos18.4) ※SBS注意は統合先に既出のため移植不要
   { from: 'tasogarenaki-toha', to: 'tasogare-naki-toha' },
+  //   kosodate-shien-toha(90日imp<300) → kosodate-shien-center-toha(1,367imp/pos5-9) ※同一タイトルの重複。サービス内容の例の表を移植 2026-09-05
+  { from: 'kosodate-shien-toha', to: 'kosodate-shien-center-toha' },
 ];

@@ -6,7 +6,7 @@ metaDescription: >-
 category: yakudatsu
 categoryName: 役立つもの
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-09-04'
+updatedAt: '2026-09-05'
 hero: /img/scenes/home-play-25.webp
 area: all
 quickInfo:
@@ -92,6 +92,17 @@ legacyHero: /hero/parent-child-01.webp
 - 親子リトミック・読み聞かせ
 - ベビーマッサージ
 - 離乳食講座・歯科相談
+
+## サービス内容の例
+
+| 内容 | 詳細 |
+| --- | --- |
+| 自由開放 | おもちゃ・絵本で自由に遊ぶ |
+| 育児相談 | 保育士・心理士・栄養士が対応 |
+| 子育て講座 | 離乳食・寝かしつけ・しつけなど |
+| 親子イベント | リズム遊び・お絵かき・季節行事 |
+| 一時預かり | 拠点によっては短時間預かりも |
+| 地域情報の提供 | 健診・予防接種・補助制度 |
 
 ## 設置場所の種類
 

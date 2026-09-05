@@ -6,7 +6,7 @@ metaDescription: >-
 category: today-nani
 categoryName: 今日なにする
 publishedAt: '2026-05-18'
-updatedAt: '2026-06-03'
+updatedAt: '2026-09-05'
 area: all
 lede: >-
   雨の日や猛暑日に頼りになる屋内遊び場4ブランド、キドキド・ファンタジーキッズリゾート・アネビートリムパーク・ボーネルンドあそびのせかいを子連れ目線の6項目で並べました。料金・対象年齢・混雑・食事・オムツ替え・付き添いを比較しています。
@@ -16,6 +16,9 @@ quickInfo:
     - 4-6
 hero: /img/scenes/kidspark-02.webp
 ---
+
+> ⚠️ ※アネビートリムパークは運営元公式サイト（aneby.co.jp）に施設の案内が無く、2026年9月5日時点で営業を確認できませんでした。本記事のアネビー欄は営業当時の記録です。現在使える屋内遊び場は[雨の日の屋内スポット15選](/article/amenohi-indoor-spots-tokyo-15)で確認してください。
+
 
 ## TL;DR(先に知りたい人へ)
 

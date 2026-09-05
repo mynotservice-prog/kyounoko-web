@@ -161,7 +161,7 @@ legacyHero: /hero/parent-child-02.webp
 - [ファミサポとは](/article/famisapo-toha)
 - [ベビーシッターとは](/article/babysitter-toha)
 - [一時保育とは](/article/ichiji-hoiku-toha)
-- [子育て支援センターとは](/article/kosodate-shien-toha)
+- [子育て支援センターとは](/article/kosodate-shien-center-toha)
 
 ---
 
