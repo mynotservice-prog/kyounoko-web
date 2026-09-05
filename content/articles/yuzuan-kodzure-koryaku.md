@@ -235,7 +235,7 @@ A. 食べ放題は**時間制（100分制が基本）**なので、0-1歳連れ�
 ### しゃぶしゃぶ・寿司で読みたい記事（最重要）
 
 - [しゃぶしゃぶチェーン子連れランキング5社](/article/shabushabu-chain-kodzure-ranking-2026-5sha)（ゆず庵はメニュー網羅性で総合3位）
-- [しゃぶ葉の子連れ攻略｜3歳以下無料・野菜バーの使い方](/article/shabuyou-kodzure-koryaku)
+- [しゃぶ葉の子連れ攻略｜未就学児無料・野菜バーの使い方](/article/shabuyou-kodzure-koryaku)
 - [しゃぶしゃぶ温野菜の子連れ攻略｜二色鍋・未就学児無料・生焼け対策](/article/onyasai-kodzure-koryaku)
 - [しゃぶしゃぶ食べ放題3チェーン子連れ比較](/article/shabushabu-yakiniku-buffet-3chain)
 - [回転寿司4チェーン子連れ比較](/article/kaiten-sushi-4chain-comparison)

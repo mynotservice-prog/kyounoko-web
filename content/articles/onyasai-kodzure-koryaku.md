@@ -223,7 +223,7 @@ A. ベルト付きのベビーチェアをソファー席に設置できる店�
 ### しゃぶしゃぶ・鍋で読みたい記事（最重要）
 
 - [しゃぶしゃぶチェーン子連れランキング5社](/article/shabushabu-chain-kodzure-ranking-2026-5sha)（温野菜は半個室と料金の明朗さで総合2位）
-- [しゃぶ葉の子連れ攻略｜3歳以下無料・野菜バーの使い方](/article/shabuyou-kodzure-koryaku)
+- [しゃぶ葉の子連れ攻略｜未就学児無料・野菜バーの使い方](/article/shabuyou-kodzure-koryaku)
 - [しゃぶしゃぶ食べ放題3チェーン子連れ比較（しゃぶ葉・温野菜・木曽路）](/article/shabushabu-yakiniku-buffet-3chain)
 - [キャベツ＋しゃぶしゃぶは包丁不要で時短](/article/kodomo-cabbage-shabushabu-houchou-fuyou)
 

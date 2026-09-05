@@ -34,6 +34,8 @@ import {
   splitBodyAtSection,
 } from '@/lib/article-product-hints';
 import { getBodySurfaceOffer } from '@/lib/surface-offers';
+import { getClusterNav } from '@/lib/article-cluster-links';
+import { ClusterNav } from '@/components/article/ClusterNav';
 import { getChainFacilitiesForArticle, FACILITY_LABELS, type FacilityKey } from '@/lib/chain-facilities';
 import { ChainFacilitiesBox } from '@/components/article/ChainFacilitiesBox';
 import { ChainComparisonTable } from '@/components/article/ChainComparisonTable';
@@ -1143,6 +1145,12 @@ function FileArticleView({ article }: { article: FileArticle }) {
               )}
             </aside>
           )}
+
+          {/* 同じお店／同じ区の姉妹記事チップ（結論を読み終えた直後の回遊。lib/article-cluster-links.ts） */}
+          {(() => {
+            const nav = getClusterNav(article.slug, getAllFileArticles());
+            return nav ? <ClusterNav nav={nav} /> : null;
+          })()}
 
           {/* 旧: TL;DR直後のインライン商品CTAはPRブロック過密(1記事9枚)の一因だった
               ため削除。物販は末尾のAffiliateLinkGroup/RelatedItemsCTAの1枠に集約。 */}

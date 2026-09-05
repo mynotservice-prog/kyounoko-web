@@ -99,6 +99,12 @@ SERPの日本語表示幅は約30字なので、それを大きく超えると�
 `doutor-kodzure-koryaku`(3,228/6.7/2.14%/77字) ／ `sanmarc-cafe-kodzure-koryaku`(1,621/7.2/2.41%/62字) ／
 `haneda-rinyushoku-milk`(1,481/7.5/2.43%/63字)
 
+**2026-09-05 適用済み（社長承認・カナリア判定を待たず前倒し）**: 上記15本のうち `bikkuri-donkey-kids-menu` を除く
+14本と、価格誤り（260円→300円）で改題が必要だった `doutor-kodzure-koryaku` の計15本に、40字前後・疑問形・
+答えを書かない型のtitleと120字以内のmetaDescriptionを適用した。**同日に本文（結論・見出し順・FAQ・確認日・出典）も
+編集しているため、この15本は「title単独効果」を測れない。** はなまる1本は凍結を維持し、純粋な短縮効果はそちらで判定する。
+15本の効果は 2026-10-05 前後にページ全体のCTR（pos を揃えて）で読む。新旧タイトルは `reports/seo-geo-sprint-2026-09-04.md`。
+
 **`bikkuri-donkey-kids-menu`（38,577imp/pos5.3/2.23%/76字）は実験2の対照群なので、
 この施策の対象から除外する。** 実験2の判定（2026-10-21）が終わるまで触らない。
 
@@ -283,6 +289,15 @@ URLを知っているがクロール順を待たせている状態。したが�
 **編集した記事（47本）**: amenohi-indoor-spots-tokyo-15 / fruitgari-kanto-kodzure / hatsumoude-kodzure-kanto-15 / jabujabuike-mizuasobi-tokyo-30 / kanto-ajisai-kodzure-spot-10 / kosodate-amenohi-yokohama / kosodate-kanto-shizen-10 / kosodate-muryou-spots-tokyo / laketown-kids-menu / mizuasobi-kita-tokyo / mizuasobi-meguro-tokyo / mizuasobi-yokohama / moushobi-suzushii-spots / shitsunai-asobi-chuo-tokyo / shitsunai-asobi-itabashi-tokyo / shitsunai-asobi-kashiwa / shitsunai-asobi-kita-tokyo / shitsunai-asobi-koto-tokyo / shitsunai-asobi-meguro-tokyo / shitsunai-asobi-minato-tokyo / shitsunai-asobi-nakano-tokyo / shitsunai-asobi-nerima-tokyo / shitsunai-asobi-setagaya-tokyo / shitsunai-asobi-shinagawa-tokyo / shitsunai-asobi-shinjuku-tokyo / shitsunai-asobi-suginami-tokyo / shitsunai-asobi-sumida-tokyo / shitsunai-asobi-toshima-tokyo / shitsunai-asobi-yokohama / showa-kinen-koen-kodzure / showa-kinen-koen-stroller / tokyo-babycar-kodzure-gaishoku-50 / tokyo-fuwafuwa-park-20 / tokyo-ginza-kodzure-lunch / tokyo-hanabi-taikai-kodzure-2026 / tokyo-koto-toyosu-kodzure / tokyo-long-slide-park-20 / tokyo-meguro-weekday-hidden / tokyo-minato-roppongi-lunch / tokyo-nerima-free-park-muryou / tokyo-ogata-yugu-koen-30 / tokyo-roppongi-kodzure-lunch / tokyo-shibuya-kodzure-lunch / tokyo-station-babyroom / tokyo-station-kodzure-lunch / xmas-market-kodzure / yurakucho-kodzure-lunch
 
 ## 汚染の記録
+
+### SEO/GEO/AIO 一括改善スプリント（2026-09-04〜05）— 凍結記事は未編集、描画層の変更は全記事に一様に適用
+
+- 凍結中の記事（実験2処置群/対照群・実験5はなまる・実験6の6本・モーニング4本・実験3/4の6本）は**1本も編集していない**（git diff で確認）。
+- ただし `lib/article-cluster-links.ts` + `components/article/ClusterNav.tsx` で、**結論ボックス直下に「同じお店／同じ区の姉妹記事」チップを描画層で追加**した。
+  対象はチェーン記事160本＋東京23区記事45本で、凍結記事（bamiyan-kids-menu / bikkuri-donkey-kids-menu / cocos-kids-menu / saizeriya-kids-menu / yayoiken-kodzure-koryaku など）にも一様に出る。
+  処置群・対照群の両方に同じ変更なので群間比較は崩れないが、**9/5前後の不連続（CTR・回遊）を判定時に確認すること**。
+- 実験7（駅・スポットへの文脈リンク）: 処置群・対照群への /station/ /spot/ リンクは追加も削除もしていない。駅ランチ5本・室内遊び場12本・都内スポット2本の編集では言及数が不変であることを各エージェントが確認した。
+
 
 ### 年齢拡張カナリア47ファイルのデプロイに伴う凍結記事の編集（2026-09-02）
 
