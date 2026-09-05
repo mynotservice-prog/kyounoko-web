@@ -248,7 +248,7 @@ legacyHero: /hero-ai/cat-family-dinner-01.webp
 - [サイゼリヤ完全攻略](/article/kodzure-saize-koryaku) — キッズメニュー・離乳食・取り分け鉄板
 - [ガスト完全攻略](/article/gusto-kodzure-koryaku) — クーポン活用と離乳食温め
 - [やよい軒完全攻略](/article/yayoiken-kodzure-koryaku) — 小ライス標準・座敷店舗
-- [しゃぶ葉完全攻略](/article/shabuyou-kodzure-koryaku) — 3歳以下無料・食べ放題
+- [しゃぶ葉完全攻略](/article/shabuyou-kodzure-koryaku) — 未就学児無料・小学生1,099円の食べ放題
 - [子連れ焼肉店20選（東京）](/article/kodzure-yakiniku-stroller-tokyo-20) — 個室＋ベビーカー入店OK
 - [子連れOKファミレス15選](/article/kodzure-famires-15sen) — サイゼ・ガスト・ジョナサン比較
 - [和食チェーン10選](/article/kodzure-washoku-chain-10) — 座敷率の高い和食店

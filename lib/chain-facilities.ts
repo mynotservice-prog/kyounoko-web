@@ -222,7 +222,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
       stepFree: V(true),
       zashiki: V(false),
       boxSeat: V(true),
-      kidsChair: V(true, '運営者が訪問した店舗では股下ベルト付きのハイチェアを使用。別店舗ではテーブル固定タイプもあった。型・ベルトの有無はチェーンとして公式に規定されておらず店舗差あり。腰すわり後が目安'),
+      kidsChair: V(true, '公式FAQで「お子様用の補助いすは全店舗にご用意」と明記（2026-09-04確認）。運営者が訪問した店舗では股下ベルト付きのハイチェアを使用。別店舗ではテーブル固定タイプもあった。型・ベルトの有無はチェーンとして公式に規定されておらず店舗差あり。腰すわり後が目安'),
       kidsMenu: V(true),
       kidsCutlery: V(false, '店舗による'),
       diaperTable: V('partial', '店舗差が大きい。商業施設内の店舗は施設のトイレ、ロードサイド店は店内トイレと条件が変わる'),
@@ -465,7 +465,8 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
       zashiki: V(false),
       boxSeat: V(true),
       kidsChair: V(true),
-      kidsMenu: V(true),
+      // 2026-09-04: 公式メニュー一覧（ootoya.com/menu_list/）に子ども向けメニューの掲載なし。店舗判断扱いに変更
+      kidsMenu: V('partial', '公式メニュー一覧に掲載なし・店舗による'),
       kidsCutlery: V(false),
       diaperTable: V(true),
       nursingRoom: V(false),

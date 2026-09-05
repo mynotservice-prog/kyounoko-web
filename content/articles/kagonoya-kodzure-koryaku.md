@@ -224,7 +224,7 @@ A. かごの屋はしゃぶしゃぶチェーン5社の中では**価格が高�
 
 - [しゃぶしゃぶチェーン子連れランキング5社](/article/shabushabu-chain-kodzure-ranking-2026-5sha)（かごの屋は座席の質で0-1歳に強く総合4位）
 - [しゃぶしゃぶ温野菜の子連れ攻略（二色鍋・未就学児無料・生焼け対策）](/article/onyasai-kodzure-koryaku)
-- [しゃぶ葉の子連れ攻略｜3歳以下無料・野菜バーの使い方](/article/shabuyou-kodzure-koryaku)
+- [しゃぶ葉の子連れ攻略｜未就学児無料・野菜バーの使い方](/article/shabuyou-kodzure-koryaku)
 - [ゆず庵の子連れ攻略（寿司＋しゃぶしゃぶ・生ものは何歳から）](/article/yuzuan-kodzure-koryaku)
 - [しゃぶしゃぶ食べ放題3チェーン子連れ比較](/article/shabushabu-yakiniku-buffet-3chain)
 - [子連れ和食チェーン10選](/article/kodzure-washoku-chain-10)

@@ -7,7 +7,7 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-06-17'
-updatedAt: '2026-06-17'
+updatedAt: '2026-09-04'
 hero: /img/scenes/famires-02.webp
 area: all
 quickInfo:
@@ -24,7 +24,7 @@ lede: >-
   「このチェーン、ベビーチェアある？」を1ページで解決。外食チェーン33店のベビーチェア事情を横断的に整理し、**何ヶ月から使えるか・チェアのタイプ・確実に確保するコツ・ベビーカー入店や離乳食持ち込みの考え方**まで、0〜3歳の家族目線でまとめました。
 ---
 
-**結論：腰がすわる生後6〜7ヶ月頃から、多くの外食チェーンでベルト付きベビーチェアが使えます。設置数は店舗差が大きいので「入店時に一声」が確保の最短ルート。首すわり前の0〜5ヶ月はソファ席やお座敷で抱っこ/寝かせる運用が現実的です。**
+**結論：ベビーチェア（子供椅子・子供用椅子）は、腰がすわる生後6〜7ヶ月頃から多くの外食チェーンでベルト付きのものが使えます。設置数は店舗差が大きいので「入店時に一声」が確保の最短ルート。首すわり前の0〜5ヶ月はソファ席やお座敷で抱っこ/寝かせる運用が現実的です。**
 
 ## 結論TL;DR（先に知りたい人へ）
 
@@ -35,7 +35,7 @@ lede: >-
 - **離乳食の持ち込み**は可としている店が多いが、最終的には店舗判断。ドリンク等は注文するのがマナー。
 - 迷ったら**サイゼリヤ・ガスト・ジョナサン・ココス・デニーズ**などファミレス系が、チェア・ソファ席・ベビーカー動線の総合点で子連れデビュー向き。
 
-## ベビーチェアは何ヶ月から使える？
+## ベビーチェア（子供椅子）は何ヶ月から使える？
 
 ベビーチェアの利用開始は、月齢よりも**「腰がすわって自力で座位を保てるか」**が基準です。
 
@@ -45,6 +45,8 @@ lede: >-
 - **2〜3歳**：チェア卒業〜キッズチェア。立ち上がり対策にベルト必須。座敷席なら動き回れて親もラク。
 
 > 💡 公式に「○ヶ月から」と明記しているチェーンは少なく、**実質は腰すわり次第**。月齢が早い子は無理せずソファ席運用に切り替えましょう。
+
+**公式に設置を明記しているチェーンの例**：はま寿司は「お子様用の補助いすは全店舗にご用意」（2026年9月4日・[公式FAQ](https://www.hamazushi.com/contact/faq/)で確認）、ガストは「キッズチェアあり」（2026年9月4日・[公式お子さま連れページ](https://www.skylark.co.jp/gusto/family/index.html)で確認）、かっぱ寿司はキッズチェア・おこさま用食器（2026年8月24日・[公式](https://www.kappasushi.jp/kappa-kids)で確認）、丸源ラーメンはお子さま用の椅子（2026年8月24日・[公式](https://www.syodai-marugen.jp/menu/kids)で確認）。いずれも利用月齢の明記はありません。
 
 ## チェアのタイプ別の選び方
 
@@ -90,7 +92,8 @@ lede: >-
 - 松屋：[ベビーチェア](/article/matsuya-baby-chair)・[キッズメニュー](/article/matsuya-kids-menu)
 - なか卯：[ベビーチェア](/article/nakau-baby-chair)・[キッズメニュー](/article/nakau-kids-menu)
 - はなまるうどん：[ベビーチェア](/article/hanamarudon-baby-chair)・[キッズメニュー](/article/hanamarudon-kids-menu)
-- 丸亀製麺：[ベビーチェア](/article/marukame-baby-chair)
+- 丸亀製麺：[ベビーチェア](/article/marukame-baby-chair)・[キッズメニュー](/article/marukame-kids-menu)
+- 丸源ラーメン：[子連れ攻略（お子さま用の椅子・離乳食メニュー）](/article/marugen-ramen-kodzure-koryaku)
 - てんや：[ベビーチェア](/article/tenya-baby-chair)・[キッズメニュー](/article/tenya-kids-menu)
 - CoCo壱番屋：[ベビーチェア](/article/cocoichi-kodzure-koryaku)・[キッズメニュー](/article/cocoichi-kids-menu)
 - リンガーハット：[ベビーチェア](/article/ringerhut-baby-chair)・[キッズメニュー](/article/ringerhut-kids-menu)
@@ -99,12 +102,13 @@ lede: >-
 - スシロー：[ベビーチェア](/article/sushiro-baby-chair)
 - はま寿司：[ベビーチェア](/article/hamasushi-baby-chair)
 - くら寿司：[ベビーチェア](/article/kurasushi-baby-chair)
+- かっぱ寿司：[子連れ攻略（キッズチェア・離乳食提供）](/article/kappa-sushi-kodzure-koryaku)
 
 **焼肉・しゃぶしゃぶ系**
 - 牛角：[ベビーチェア](/article/gyukaku-kodzure-koryaku)・[キッズメニュー](/article/gyukaku-kids-menu)
 - 焼肉キング：[ベビーチェア](/article/yakiniku-king-kodzure-koryaku)・[キッズメニュー](/article/yakiniku-king-kids-menu)
 - 安楽亭：[ベビーチェア](/article/anrakutei-baby-chair)・[キッズメニュー](/article/anrakutei-kids-menu)
-- しゃぶ葉：[ベビーチェア](/article/shabuyo-baby-chair)・[子供料金・キッズメニュー](/article/shabuyou-kodzure-koryaku)
+- しゃぶ葉：[ベビーチェア](/article/shabuyo-baby-chair)・[子供料金・キッズメニュー](/article/shabuyou-kodzure-koryaku)・[子ども料金まとめ（幼児無料・小学生1,099円）](/article/shabuyo-kodomo-ryokin)
 
 **和定食・中華系**
 - やよい軒：[ベビーチェア](/article/yayoiken-kodzure-koryaku)・[キッズメニュー](/article/yayoiken-kids-menu)
@@ -136,6 +140,18 @@ A. ファミレスや大型店は通路が広く入店しやすいです。た�
 
 A. **離乳食・ベビーフードの持ち込みは可**としている店が多いですが、最終判断は店舗ごとです。市販弁当の持ち込みは断られやすいので、子に合うメニューが無い場合の保険と考え、ドリンクや一品は注文するのがマナーです。
 
+### Q. くら寿司のベビーチェアは何ヶ月から使えますか？
+
+A. 公式に利用月齢の明記は確認できていません。目安は他チェーンと同じく腰がすわる生後6〜7ヶ月頃からで、ベルトの有無や設置数は店舗で差があるため入店時に確認してください。詳細は[くら寿司のベビーチェア](/article/kurasushi-baby-chair)へ。
+
+### Q. 吉野家にベビーチェア（子供椅子）はありますか？
+
+A. 店舗によります。郊外ロードサイド店には常備店が一定数ありますが、駅前カウンター中心店は無いことが多いので、来店前に店舗へ確認するのが確実です。詳細は[吉野家のベビーチェア](/article/yoshinoya-baby-chair)へ。
+
+### Q. ファミレスでベビーチェアを公式に案内しているのはどこですか？
+
+A. ガストは公式の「お子さま連れ」ページに「キッズチェア」「オムツ交換台」ありと明記しています（2026年9月4日確認）。他のファミレスも設置している店舗が大半ですが、公式の全店明記は確認できていないため、入店時の一声で確保してください。
+
 ### Q. 首すわり前（0〜5ヶ月）でも外食できますか？
 
 A. できます。チェアは使えないので、**ベビーカーごと横付けできるソファ席・お座敷・ボックス席**のある店を選び、寝ている間に親が交代で食べる運用がおすすめ。授乳室・おむつ替え台の有無も事前に確認すると安心です。
@@ -146,6 +162,13 @@ A. できます。チェアは使えないので、**ベビーカーごと横付
 - [子供メニュー何歳から早見表](/article/kids-menu-nansai-kara-hayami)
 - [自宅用ベビーチェア 買ってよかった10選](/article/baby-chair-ranking)
 - [外食で子が食べる工夫](/article/gaisyoku-ko-ga-taberu)
+
+## 出典
+
+- はま寿司公式「よくあるご質問」（https://www.hamazushi.com/contact/faq/ ）｜確認日 2026年9月4日 — 「お子様用の補助いすは全店舗にご用意しております」
+- ガスト公式「お子さま連れのお客様へ」（https://www.skylark.co.jp/gusto/family/index.html ）｜確認日 2026年9月4日 — キッズチェア・オムツ交換台あり、離乳食の持ち込みOK（※一部の店舗を除く）
+- かっぱ寿司公式「おこさま連れ大歓迎！あつまれかっぱキッズ！」（https://www.kappasushi.jp/kappa-kids ）｜確認日 2026年8月24日（個別記事[かっぱ寿司の子連れ攻略](/article/kappa-sushi-kodzure-koryaku)の確認を引用） — キッズチェア・おこさま用食器、離乳食の提供・温め対応
+- 丸源ラーメン公式「お子様メニュー」（https://www.syodai-marugen.jp/menu/kids ）｜確認日 2026年8月24日（個別記事[丸源ラーメンの子連れ攻略](/article/marugen-ramen-kodzure-koryaku)の確認を引用） — お子さま用の椅子・麺切り用ハサミの用意
 
 ---
 
