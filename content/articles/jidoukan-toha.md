@@ -134,7 +134,7 @@ legacyHero: /hero/classroom-01.webp
 
 ## 関連記事
 
-- [子育て支援センターとは](/article/kosodate-shien-toha)
+- [子育て支援センターとは](/article/kosodate-shien-center-toha)
 - [一時保育とは](/article/ichiji-hoiku-toha)
 - [0歳の育児 完全マップ](/article/0sai-ikuji-kanzen-map)
 - [1〜2歳の育児 完全マップ](/article/1-2sai-ikuji-kanzen-map)
