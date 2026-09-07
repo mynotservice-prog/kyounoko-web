@@ -113,9 +113,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '10月下旬〜11月末',
     checkFromMonth: 9,
-    lastChecked: '2026-08-31',
+    lastChecked: '2026-09-07',
     lastCheckedState:
-      '2026-08-31再確認: まだ2025年の情報のまま（2025-10-30〜11-30／16:30〜20:30／入園450円・中学生以下無料）。2026年版は未掲載。',
+      '2026-09-07再確認: 依然として2025年の情報のまま（2025-10-30〜11-30／16:30〜20:30）。2026年版は未掲載。',
     status: 'waiting',
   },
   {
@@ -126,8 +126,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '11月下旬〜12月上旬',
     checkFromMonth: 10,
-    lastChecked: '2026-08-27',
-    lastCheckedState: '2026年秋のライトアップの記載なし。',
+    lastChecked: '2026-09-07',
+    lastCheckedState:
+      '2026-09-07に前倒しで確認: 都立庭園公式に2026年秋のライトアップ日程の記載なし。10月以降に再確認する。',
     status: 'waiting',
   },
   {
@@ -138,20 +139,22 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'matsuri',
     typicalPeriod: '11月',
     checkFromMonth: 9,
-    lastChecked: '2026-08-31',
-    lastCheckedState: '2026-08-31再確認: 2026年秋のイベント告知は依然として記載なし。',
+    lastChecked: '2026-09-07',
+    lastCheckedState:
+      '2026-09-07再確認: 2026年秋のイベント告知は依然として記載なし。',
     status: 'waiting',
   },
   {
-    venue: '日比谷公園',
+    venue: '明治神宮外苑・芝公園',
     eventName: '東京クリスマスマーケット',
     officialUrl: 'https://tokyochristmas.net/',
     area: 'tokyo',
     category: 'market',
     typicalPeriod: '11月下旬〜12月下旬',
     checkFromMonth: 10,
-    lastChecked: '2026-08-27',
-    lastCheckedState: '2025年の開催情報のみ。2026年の期間・会場は未掲載。',
+    lastChecked: '2026-09-07',
+    lastCheckedState:
+      '2026-09-07再確認: 公式トップは2025年の情報のみ（神宮外苑11/21〜12/25・芝公園12/5〜12/25）。2026年の会場・会期は未発表。会場は2023年以降 日比谷公園ではなく明治神宮外苑＋芝公園なので venue を修正した。',
     status: 'waiting',
   },
   {
@@ -162,9 +165,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'show',
     typicalPeriod: '不定（季節ごとに企画が入れ替わる）',
     checkFromMonth: 9,
-    lastChecked: '2026-08-31',
+    lastChecked: '2026-09-07',
     lastCheckedState:
-      '2026-08-31再確認: 掲載は「すみすい花火2026」（〜2026-09-14）までのまま。9月15日以降の企画は未掲載。',
+      '2026-09-07再確認: 掲載は「すみすい花火2026」（〜2026-09-14）とVRアトラクション（2026-09-01〜、終了日の記載なし）まで。会期のある秋冬企画は未掲載。',
     status: 'waiting',
   },
   {
@@ -187,23 +190,24 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'illumination',
     typicalPeriod: '10月中旬〜2月中旬',
     checkFromMonth: 9,
-    lastChecked: '2026-08-31',
+    lastChecked: '2026-09-07',
     lastCheckedState:
-      '2026-08-31再確認: 年間案内の「10月中旬〜2月中旬 イルミネーション」の常時表記のみで変化なし。今シーズンの確定日は未掲載。',
+      '2026-09-07再確認: 年間案内の「10月中旬〜2月中旬」の常時表記のみ。今シーズンの確定日は未掲載。',
     status: 'waiting',
   },
   {
     venue: '江の島（江の島シーキャンドル）',
     eventName: '湘南の宝石',
-    officialUrl: 'https://enoshima-seacandle.com/',
+    officialUrl: 'https://enoshima-seacandle.com/event/shonannohoseki/',
     area: 'kanagawa',
     category: 'illumination',
     typicalPeriod: '11月下旬〜翌2月ごろ',
     checkFromMonth: 10,
-    lastChecked: '2026-08-27',
+    lastChecked: '2026-09-07',
     lastCheckedState:
-      '掲載は「江の島灯籠2026」（2026-08-01〜09-23）のみ。冬のイルミネーションは記載なし。',
-    status: 'waiting',
+      '2026-09-07: 公式イルミネーションページに「2026年12月1日（火）〜2027年2月28日（日）」と2026-2027シーズンの会期が掲載されたため投入した。点灯時間・料金は「詳細は随時更新します」で前年度分のみ。',
+    status: 'added',
+    addedSlug: 'shonan-no-hoseki-2026',
   },
   {
     venue: '東京ディズニーランド／東京ディズニーシー',
@@ -241,9 +245,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'illumination',
     typicalPeriod: '11月上旬〜翌2月下旬',
     checkFromMonth: 9,
-    lastChecked: '2026-08-31',
+    lastChecked: '2026-09-07',
     lastCheckedState:
-      '検索で出てくるのは2025-2026シーズン（2025-11-07〜2026-02-26）の情報まで。2026-2027シーズンの会期は未確認のため未投入。',
+      '2026-09-07再確認: イベントページに2026-2027シーズンの光の王国の会期記載なし（年間カレンダーへの導線のみ）。',
     status: 'waiting',
   },
   {
@@ -280,9 +284,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '10月または11月の土日2日間',
     checkFromMonth: 9,
-    lastChecked: '2026-08-31',
+    lastChecked: '2026-09-07',
     lastCheckedState:
-      '公式・奈良市観光協会とも2025年（2025-11-08〜09）の情報のままで2026年の日程は未掲載。検索結果に「2026-11-07〜08」とあるが公式で裏取りできないため入れない。',
+      '2026-09-07再確認: 公式は2025年（11月8日(土)・9日(日)）の情報のまま。2026年の日程は未掲載のため入れない。',
     status: 'waiting',
   },
   {
@@ -306,9 +310,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'show',
     typicalPeriod: '不定（季節ごとに企画が入れ替わる）',
     checkFromMonth: 9,
-    lastChecked: '2026-08-31',
+    lastChecked: '2026-09-07',
     lastCheckedState:
-      '掲載は「生きものスマシースクール（9月）」等の通年プログラムのみ。会期のある秋イベントは未掲載。',
+      '2026-09-07再確認: 掲載はシャチのテールバースト延長・生きものスマシースクール（9月）等の通年プログラムのみで、開始日・終了日が明記された秋イベントは未掲載。',
     status: 'waiting',
   },
 ];
