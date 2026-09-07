@@ -115,7 +115,7 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     checkFromMonth: 9,
     lastChecked: '2026-09-07',
     lastCheckedState:
-      '2026-09-07再確認: 依然として2025年の情報のまま（2025-10-30〜11-30／16:30〜20:30）。2026年版は未掲載。',
+      '2026-09-07再確認: 「秋の夜散歩」は依然として2025年の情報のまま（2025-10-30〜11-30／16:30〜20:30）で2026年版は未掲載。同園の「コスモスまつり2026」（2026-09-12〜10-25）は会期が出ていたので showa-kinen-cosmos-2026 として投入した。',
     status: 'waiting',
   },
   {
@@ -167,20 +167,22 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     checkFromMonth: 9,
     lastChecked: '2026-09-07',
     lastCheckedState:
-      '2026-09-07再確認: 掲載は「すみすい花火2026」（〜2026-09-14）とVRアトラクション（2026-09-01〜、終了日の記載なし）まで。会期のある秋冬企画は未掲載。',
+      '2026-09-07再確認: ハロウィンなど秋冬の季節企画は未掲載（検索上位に出る公式ハロウィン記事は2020年のもの。2020年も2026年も10月1日が木曜で曜日一致するため誤読しやすい）。会期の明記があったVRアトラクション（2026-09-01〜11-30）は sumida-aquarium-vr-2026 として投入した。季節企画は引き続き待ち。',
     status: 'waiting',
   },
   {
     venue: '東京ドイツ村',
     eventName: 'ウインターイルミネーション',
-    officialUrl: 'https://t-doitsumura.co.jp/illumination/',
+    officialUrl: 'https://t-doitsumura.co.jp/event/irodori2026/',
     area: 'chiba',
     category: 'illumination',
     typicalPeriod: '10月下旬〜翌3月ごろ',
     checkFromMonth: 9,
-    lastChecked: '2026-08-31',
-    lastCheckedState: '2026-08-31再確認: 「次回予告 詳細が決まり次第お知らせいたします」のまま。会期未発表。',
-    status: 'waiting',
+    lastChecked: '2026-09-07',
+    lastCheckedState:
+      '2026-09-07: /illumination/ は「次回予告 詳細が決まり次第お知らせいたします」のままだが、別URL（/event/irodori2026/）で後継企画「東京ランタンフェスティバル」の会期「2026年10月31日(土)〜2027年4月4日(日)　点灯時間：日没〜20:00」が発表されていたので投入した。ウインターイルミネーションはこのランタンイベントに置き換わった模様。',
+    status: 'added',
+    addedSlug: 'tokyo-german-village-lantern-2026',
   },
   {
     venue: 'あしかがフラワーパーク',
@@ -258,9 +260,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'illumination',
     typicalPeriod: '11月上旬〜翌3月上旬の土日祝＋年末年始',
     checkFromMonth: 9,
-    lastChecked: '2026-08-31',
+    lastChecked: '2026-09-07',
     lastCheckedState:
-      '公開されているのは2025-2026シーズン（2025-11-01〜2026-03-01の土日祝ほか）の案内まで。2026-2027シーズンは未発表。',
+      '2026-09-07再確認: 2026-2027シーズンのマザーイルミは未発表のまま（公開は2025-2026シーズンの案内まで）。秋の在庫としては「第25回 秋のこども写生大会」（2026-09-01〜11-30）を motherfarm-shasei-2026 として投入した。',
     status: 'waiting',
   },
   {
@@ -271,9 +273,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '10月上旬〜10月末',
     checkFromMonth: 9,
-    lastChecked: '2026-08-31',
+    lastChecked: '2026-09-07',
     lastCheckedState:
-      '2026年の会期・ライトアップ日程は未発表（確認できたのは2025年の10月開催情報のみ）。スポットページがある施設なので発表され次第入れる。',
+      '2026-09-07再確認: 「コキアカーニバル」本体の2026年会期は公式に未掲載（2026年用URLは403で本文を取得できず、お知らせ一覧にも会期の明記なし）。一方「コキアライトアップ2026」は会期（2026-09-18〜09-27）が発表されていたので、そちらは hitachi-kochia-lightup-2026 として投入済み。カーニバル本体は引き続き待ち。',
     status: 'waiting',
   },
   {
@@ -292,15 +294,16 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
   {
     venue: '四国水族館',
     eventName: '秋の延長営業「誰そ彼時」・秋の企画展',
-    officialUrl: 'https://shikoku-aquarium.jp/news/',
+    officialUrl: 'https://shikoku-aquarium.jp/news/archive/1519/',
     area: 'kagawa',
     category: 'show',
     typicalPeriod: '8月末〜9月末（日の入り10分後まで延長）',
     checkFromMonth: 9,
-    lastChecked: '2026-08-31',
+    lastChecked: '2026-09-07',
     lastCheckedState:
-      '公式ニュースに「秋の誰そ彼時…今年も日の入り10分後まで延長営業をします」（2026-08-25掲載）はあるが、記事本文から会期を確定できず未投入。会期の記載を確認してから入れる。',
-    status: 'waiting',
+      '2026-09-07: 公式ニュースの詳細記事に「期間：2026年8月31日（月）〜9月30日（水）」「9：00〜日没10分後まで（最終入館は17：30）」と会期が出ていたので投入した。イルカサンセットプログラムの実施はなしと注記あり。',
+    status: 'added',
+    addedSlug: 'shikoku-aquarium-tasokare-2026',
   },
   {
     venue: '神戸須磨シーワールド',
@@ -313,6 +316,74 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     lastChecked: '2026-09-07',
     lastCheckedState:
       '2026-09-07再確認: 掲載はシャチのテールバースト延長・生きものスマシースクール（9月）等の通年プログラムのみで、開始日・終了日が明記された秋イベントは未掲載。',
+    status: 'waiting',
+  },
+  // ── 2026-09-07 追加: 9月上旬時点で秋企画が未発表だった関東の主要施設 ──
+  // 過去の告知タイミングを見ると、東武動物公園は前年10/15、八景島は9月下旬にリリースが出ている。
+  // 9月下旬〜10月上旬にこの5件を回すと、あと5〜8件は拾える見込み。
+  {
+    venue: '東武動物公園',
+    eventName: 'ハロウィンナイトZOO・ウインターイルミネーション',
+    officialUrl: 'https://www.tobuzoo.com/newsrelease/',
+    area: 'saitama',
+    category: 'seasonal',
+    typicalPeriod: 'ハロウィンは10月下旬の週末、イルミは11月上旬〜翌2月下旬',
+    checkFromMonth: 9,
+    lastChecked: '2026-09-07',
+    lastCheckedState:
+      '2026-09-07: 2026年のハロウィンナイトZOOは未発表（旧イベントページは404、実在確認できるのは2025年10月25・26・31日の告知のみ）。イルミネーションのページも2025-2026シーズン（2025-11-01〜2026-02-23）のまま。前年は10/15にリリースが出ているので10月上旬に再確認する。',
+    status: 'waiting',
+  },
+  {
+    venue: '横浜・八景島シーパラダイス',
+    eventName: '秋・ハロウィン企画／冬のイルミネーション',
+    officialUrl: 'https://www.seaparadise.co.jp/',
+    area: 'kanagawa',
+    category: 'seasonal',
+    typicalPeriod: 'ハロウィンは10月、イルミは11月中旬〜翌3月',
+    checkFromMonth: 9,
+    lastChecked: '2026-09-07',
+    lastCheckedState:
+      '2026-09-07: 2026年秋の企画は1件も掲載なし。イルミ「LIGHTIA」のページは前シーズンの残置（11/15〜3/1表記）で今季の会期なし。過去は9月下旬にリリースが出ている。',
+    status: 'waiting',
+  },
+  {
+    venue: '国営武蔵丘陵森林公園',
+    eventName: '紅葉見ナイト（光と森のStory）',
+    officialUrl: 'https://www.shinrinkoen.jp/',
+    area: 'saitama',
+    category: 'illumination',
+    typicalPeriod: '11月上旬〜11月末',
+    checkFromMonth: 9,
+    lastChecked: '2026-09-07',
+    lastCheckedState:
+      '2026-09-07: 公式サイトがJavaScript描画のSPAで、イベント詳細のHTMLに本文が含まれず会期を取得できなかった（curl・WebFetchとも不可）。ブラウザ経由なら取れる可能性あり。10月に再確認する。',
+    status: 'waiting',
+  },
+  {
+    venue: 'カワスイ 川崎水族館',
+    eventName: '秋冬の季節企画',
+    officialUrl: 'https://kawa-sui.com/',
+    area: 'kanagawa',
+    category: 'seasonal',
+    typicalPeriod: '不定（季節ごとに企画が入れ替わる）',
+    checkFromMonth: 9,
+    lastChecked: '2026-09-07',
+    lastCheckedState:
+      '2026-09-07: 公式がNuxtのSPAでイベント一覧・お知らせがブラウザ描画でも空。トップのPICK UPに出るのは2025年冬の残置コンテンツ。公式ドメインで会期を確認できず。10月に再訪する。',
+    status: 'waiting',
+  },
+  {
+    venue: 'サンシャイン水族館',
+    eventName: 'ハロウィン企画',
+    officialUrl: 'https://sunshinecity.jp/aquarium/event_performance/event/',
+    area: 'tokyo',
+    category: 'seasonal',
+    typicalPeriod: '9月下旬〜10月末',
+    checkFromMonth: 9,
+    lastChecked: '2026-09-07',
+    lastCheckedState:
+      '2026-09-07: 公式イベント一覧に掲載されている現行イベントは6本のみで、ハロウィン企画は未掲載。特別展「ざんねんないきもの展３」（〜11/23）は別途投入済み。',
     status: 'waiting',
   },
 ];
