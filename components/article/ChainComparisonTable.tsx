@@ -29,9 +29,8 @@ export function ChainComparisonTable({ focus }: { focus: FacilityKey }) {
     <section aria-label={`チェーン別 ${label} 比較表`} style={{ margin: '28px 0 32px' }}>
       <h2
         style={{
-          fontFamily: 'var(--font-mincho)',
           fontSize: 18,
-          fontWeight: 600,
+          fontWeight: 800,
           margin: '0 0 4px',
         }}
       >

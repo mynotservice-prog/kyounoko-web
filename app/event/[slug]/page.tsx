@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { KkIcon } from '@/components/kk/KkIcon';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
@@ -217,7 +218,7 @@ export default async function EventPage({ params }: Props) {
               marginBottom: 10,
             }}
           >
-            📅 {formatEventPeriod(ev)}{ended ? '（終了）' : ''}
+            <KkIcon name="calendar" size={14} /> {formatEventPeriod(ev)}{ended ? '（終了）' : ''}
           </div>
           <p className="v2-page-lead" style={{ marginTop: 8 }}>
             {ev.lede}

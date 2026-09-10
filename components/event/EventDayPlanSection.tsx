@@ -4,6 +4,7 @@
  * V2 デザイン（イベント/スポットページ準拠のインラインスタイル）。
  */
 import Link from 'next/link';
+import { KkIcon } from '@/components/kk/KkIcon';
 import type { ReactNode } from 'react';
 import { V2Icon } from '@/components/v2/V2Icon';
 import type { EventDayPlan } from '@/lib/event-day-plan';
@@ -71,7 +72,7 @@ export function EventDayPlanSection({
                     {step.slot}
                   </span>
                   <span style={{ fontSize: 14.5, fontWeight: 800, color: 'var(--v2-ink)' }}>
-                    {step.icon} {step.title}
+                    <KkIcon name={step.icon as never} size={15} /> {step.title}
                   </span>
                   {step.href && <V2Icon name="chevron-right" size={16} color="#cfcfcf" />}
                 </div>
@@ -84,7 +85,7 @@ export function EventDayPlanSection({
                       marginTop: 4,
                     }}
                   >
-                    🚶 {step.move}
+                    <KkIcon name="walk" size={14} /> {step.move}
                   </div>
                 )}
                 {step.note && (

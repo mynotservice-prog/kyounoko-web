@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { trackEvent } from '@/lib/analytics';
+import { KkIcon } from '@/components/kk/KkIcon';
 import type { ChildAge } from '@/hooks/useUserSettings';
 
 /**
@@ -89,30 +90,33 @@ export function VisitedReport({ slug, name }: { slug: string; name: string }) {
       style={{
         background: 'none',
         border: 'none',
-        fontSize: set ? 26 : 16,
+        display: 'inline-flex',
         cursor: set ? 'pointer' : 'default',
         padding: set ? '2px 3px' : 0,
         lineHeight: 1,
-        filter: n <= value ? 'none' : 'grayscale(1) opacity(.35)',
+        color: n <= value ? 'var(--kk-orange)' : 'var(--kk-rule)',
       }}
     >
-      ⭐
+      <KkIcon name="popular" size={set ? 26 : 16} sw={1.6} />
     </button>
   );
 
   // 報告済み表示
   if (mine) {
     return (
-      <section className="v2-section" aria-label="行ったよ報告" style={boxStyle}>
+      <section className="v2-section sv3-visited" aria-label="行ったよ報告">
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
-          <strong style={{ fontSize: 14 }}>✅ 行ったよ報告済み</strong>
+          <strong style={{ fontSize: 14, display: 'inline-flex', alignItems: 'center', gap: 5 }}>
+            <KkIcon name="check" size={15} sw={2.2} />
+            行ったよ報告済み
+          </strong>
           <span>{[1, 2, 3, 4, 5].map((n) => star(n, mine.rating))}</span>
         </div>
         {mine.comment && (
-          <p style={{ margin: '6px 0 0', fontSize: 13, color: '#5d5246' }}>「{mine.comment}」</p>
+          <p style={{ margin: '6px 0 0', fontSize: 13, color: 'var(--kk-ink-soft)' }}>「{mine.comment}」</p>
         )}
         {sent && (
-          <p style={{ margin: '6px 0 0', fontSize: 12, color: '#8a7d6e' }}>
+          <p style={{ margin: '6px 0 0', fontSize: 12, color: 'var(--kk-ink-mute)' }}>
             ありがとうございます！レポートは確認のうえ、このページに掲載されることがあります。
           </p>
         )}
@@ -122,29 +126,25 @@ export function VisitedReport({ slug, name }: { slug: string; name: string }) {
 
   // 未報告: ワンタップ導線
   return (
-    <section className="v2-section" aria-label="行ったよ報告" style={boxStyle}>
+    <section className="v2-section sv3-visited" aria-label="行ったよ報告">
       {!open ? (
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
           <button
             type="button"
-            className="v2-btn-primary"
-            style={{ padding: '9px 16px', borderRadius: 999, fontSize: 13.5 }}
+            className="kk-btn sm"
             onClick={() => {
               setOpen(true);
               trackEvent('spot_visited_open', { spot: slug });
             }}
           >
-            🙋 ここ行ったよ！
+            <KkIcon name="pin" size={15} sw={2} />
+            ここ行ったよ！
           </button>
-          <span style={{ fontSize: 12.5, color: '#8a7d6e' }}>
-            星タップだけでOK・10秒で完了
-          </span>
+          <span className="sv3-visited-note">星タップだけでOK・10秒で完了</span>
         </div>
       ) : (
         <div>
-          <div style={{ fontSize: 13.5, fontWeight: 600, marginBottom: 4 }}>
-            {name}、どうでしたか？
-          </div>
+          <div className="sv3-visited-q">{name}、どうでしたか？</div>
           <div style={{ marginBottom: 8 }}>
             {[1, 2, 3, 4, 5].map((n) => star(n, rating, setRating))}
           </div>
@@ -157,9 +157,10 @@ export function VisitedReport({ slug, name }: { slug: string; name: string }) {
               onChange={(e) => setComment(e.target.value)}
               style={{
                 flex: '1 1 200px',
-                padding: '9px 10px',
-                borderRadius: 10,
-                border: '1px solid #e7dccd',
+                padding: '10px 12px',
+                borderRadius: 'var(--kk-r-ui)',
+                border: '1px solid var(--kk-rule)',
+                background: 'var(--kk-paper-soft)',
                 fontSize: 13.5,
               }}
             />
@@ -168,11 +169,11 @@ export function VisitedReport({ slug, name }: { slug: string; name: string }) {
               onChange={(e) => setAgeRange(e.target.value as ChildAge | '')}
               aria-label="一緒に行った子の年齢"
               style={{
-                padding: '9px 8px',
-                borderRadius: 10,
-                border: '1px solid #e7dccd',
+                padding: '10px 10px',
+                borderRadius: 'var(--kk-r-ui)',
+                border: '1px solid var(--kk-rule)',
                 fontSize: 13,
-                background: '#fff',
+                background: 'var(--kk-paper-soft)',
               }}
             >
               {AGE_OPTIONS.map((o) => (
@@ -183,14 +184,9 @@ export function VisitedReport({ slug, name }: { slug: string; name: string }) {
             </select>
             <button
               type="button"
-              className="v2-btn-primary"
+              className="kk-btn sm"
               disabled={rating < 1}
-              style={{
-                padding: '9px 16px',
-                borderRadius: 999,
-                fontSize: 13.5,
-                opacity: rating < 1 ? 0.45 : 1,
-              }}
+              style={{ opacity: rating < 1 ? 0.45 : 1 }}
               onClick={submit}
             >
               送信
@@ -201,11 +197,3 @@ export function VisitedReport({ slug, name }: { slug: string; name: string }) {
     </section>
   );
 }
-
-const boxStyle: React.CSSProperties = {
-  background: '#fffaf3',
-  border: '1px solid #f0e4d2',
-  borderRadius: 14,
-  padding: '13px 14px',
-  marginTop: 18,
-};

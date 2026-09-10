@@ -39,7 +39,7 @@ legacyHero: /hero-ai/kodzure-morning-cafe-10.webp
 - 離乳食持ち込みは可能、ただし**温め対応は店舗差**が大きい
 - 混雑回避は**午前10時前・15時前後・19時以降**が狙い目
 
-## 🪧 子連れチェックリスト
+## 子連れチェックリスト
 
 <!-- 子連れチェックリストの中身は lib/chain-facilities.ts が正本です。
      このチェーンはDBに載っているため ChainFacilitiesBox が描画され、ここに表を書いても表示されません。

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { KkIcon } from '@/components/kk/KkIcon';
 import { FavoriteButton } from '@/components/ui/FavoriteButton';
 import { getAreaName } from '@/lib/area';
 import type { AreaSlug } from '@/lib/area';
@@ -97,7 +98,9 @@ export function NextOutingCTA({
             }}
           >
             今日の流れを見る
-            <span aria-hidden="true">→</span>
+            <span aria-hidden="true" style={{ display: 'flex' }}>
+              <KkIcon name="arrow-right" size={16} />
+            </span>
           </Link>
           <FavoriteButton kind="article" id={slug} size="md" />
         </div>

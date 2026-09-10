@@ -1,0 +1,587 @@
+/* トップ `/` 固有のリニューアルCSS（docs/renewal-2026-09.md §2 第2版 / §3-3）。
+   共通部品・トークンは app/styles/kk.css（編集しない）。すべて .top-v3 配下にスコープ。
+
+   第2版の方針（社長フィードバック）:
+   - コンテンツはカードにしない。面（背景・枠・影・大きな角丸）を持てるのは操作UIだけ。
+   - 区切りは「余白 / 1px 罫線 / 写真サイズ / 文字サイズ」で作る。
+   - 見出し装飾（斜線・左バー・::before）は置かない。
+   - セクションごとにリズムを変える（全面写真の帯 / 大きな2枚組 / 罫線の行 / 静かなチップ列）。
+   - PC はスマホの引き伸ばしにしない（920px 以上で段組・写真・余白を変える）。 */
+
+.top-v3 { background: #FFFFFF; }
+/* 画像の読み込み前の下地。クリーム（紙色）を置かない＝面は完全な白のまま。 */
+.top-v3 .tv3-hero-media,
+.top-v3 .tv3-plan-img,
+.top-v3 .tv3-season,
+.top-v3 .tv3-ev-img,
+.top-v3 .tv3-feature-img { background: #F2F2F2; }
+
+/* v2.css の `.v2-root a { color: inherit }` に負けないようボタン文字色を復元 */
+.top-v3 a.kk-btn { color: #fff; }
+.top-v3 a.kk-btn.outline { color: var(--kk-ink); }
+.top-v3 a.kk-btn.soft { color: var(--kk-orange-deep); }
+
+/* 見出し装飾は一切出さない（旧版の斜線アクセントの残骸を確実に殺す） */
+.top-v3 .kk-sec-title::before,
+.top-v3 .kk-sec-title::after { content: none !important; display: none !important; }
+
+/* ===========================================================
+   1. ファーストビュー
+   写真の帯（スマホは全幅・コピーを写真に重ねる）＋ 操作UIのパネル1枚。
+   パネルの中身の順序: ステータス帯 → 駅の検索欄 → 今日/明日/週末 → 年齢・天気(小) → CTA
+   =========================================================== */
+.tv3-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+.tv3-hero-media {
+  grid-column: 1; grid-row: 1;
+  position: relative; height: 340px; overflow: hidden;
+}
+.tv3-hero-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover; object-position: 62% 42%;
+}
+.tv3-hero-scrim {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(37,32,27,.34) 0%, rgba(37,32,27,.06) 30%, rgba(37,32,27,.34) 62%, rgba(37,32,27,.60) 100%);
+}
+.tv3-hero-copy {
+  grid-column: 1; grid-row: 1;
+  align-self: end; z-index: 2;
+  padding: 0 18px 78px; color: #fff;
+}
+.tv3-hero-eyebrow {
+  display: block;
+  font-size: 12.5px; font-weight: 700; letter-spacing: .08em;
+  color: rgba(255, 255, 255, .92);
+  text-shadow: 0 1px 8px rgba(37, 32, 27, .55);
+}
+.tv3-hero-h1 {
+  /* 書体は本文と同じ Noto Sans JP に統一（2026-09-08）。太さとサイズで見出しにする。 */
+  font-family: var(--kk-body);
+  font-weight: 800;
+  /* 375px で「今日、どこ行く？」(8字) が1行に収まる上限。span で折返し制御はしない
+     （分割すると抽出テキストに空白が入り H1 が変わってしまうため）。 */
+  font-size: var(--kk-h1); line-height: 1.4; letter-spacing: -.01em;
+  margin: 10px 0 0; color: #fff;
+  text-shadow: 0 2px 20px rgba(37, 32, 27, .5);
+}
+.tv3-hero-sub {
+  font-size: 15.5px; line-height: 1.9; font-weight: 700;
+  margin: 10px 0 0; color: rgba(255, 255, 255, .93);
+  text-shadow: 0 1px 10px rgba(37, 32, 27, .6);
+}
+
+/* --- 操作UIのパネル（丸角・面を持ってよい唯一の塊） --- */
+/* 検索パネルは写真の下端に重ね、背景を半透明にして写真が透けて見えるようにする（2026-09-10 社長指示）。
+   写真そのものは上半分をしっかり見せる。入力欄・ボタンは不透明のままで可読性は落とさない。 */
+.tv3-panel {
+  grid-column: 1; grid-row: 2;
+  position: relative; z-index: 3;
+  margin: -60px 14px 0; padding: 14px 14px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .78);
+  -webkit-backdrop-filter: saturate(1.1) blur(10px);
+  backdrop-filter: saturate(1.1) blur(10px);
+  border: 1px solid rgba(255, 255, 255, .7);
+  box-shadow: 0 10px 30px rgba(37, 32, 27, .16);
+}
+.tv3-quick { margin-top: 14px; }
+
+/* ステータス帯（V2TodayHero の実データのみ。未設定ユーザーには何も出ない） */
+.tv3-status { margin: 0 0 13px; }
+.tv3-status-eyebrow {
+  display: block;
+  font-size: 12px; font-weight: 700; letter-spacing: .06em;
+  color: var(--kk-orange-deep);
+}
+.tv3-status-strip {
+  display: flex; align-items: stretch;
+  margin-top: 7px; padding-bottom: 12px;
+  border-bottom: 1px solid var(--kk-rule-soft);
+}
+.tv3-status-item {
+  flex: 1; min-width: 0; padding: 0 10px;
+  border-left: 1px solid var(--kk-rule-soft);
+}
+.tv3-status-item:first-child { padding-left: 0; border-left: 0; }
+.tv3-status-lab { display: block; font-size: 11.5px; font-weight: 700; color: var(--kk-ink-mute); letter-spacing: .04em; }
+.tv3-status-val {
+  display: flex; align-items: center; gap: 5px; flex-wrap: wrap;
+  font-size: 15px; font-weight: 700; color: var(--kk-ink); line-height: 1.45; margin-top: 4px;
+}
+.tv3-status-sub { font-size: 12px; font-weight: 700; color: var(--kk-ink-mute); }
+.tv3-status-lead { font-size: 14.5px; font-weight: 500; line-height: 1.8; color: var(--kk-ink); margin: 12px 0 10px; }
+.tv3-status-hints { margin-top: 11px; padding-top: 10px; border-top: 1px solid var(--kk-rule-soft); }
+.tv3-status-hints-lab { display: block; font-size: 12px; font-weight: 700; color: var(--kk-ink-mute); margin-bottom: 6px; letter-spacing: .04em; }
+.tv3-status-hint {
+  display: flex; align-items: flex-start; gap: 6px;
+  font-size: 14.5px; font-weight: 500; line-height: 1.75; color: var(--kk-ink); padding: 5px 0;
+}
+.tv3-status-hint svg { flex: none; margin-top: 6px; color: var(--kk-orange); }
+.tv3-status-hint:hover { color: var(--kk-orange-deep); }
+.tv3-status-edit {
+  display: block; margin: 8px 0 0 auto;
+  background: none; border: 0; padding: 2px 0;
+  font-family: inherit; font-size: 13px; font-weight: 700; color: var(--kk-ink-soft);
+  text-decoration: underline; cursor: pointer;
+}
+
+/* 未設定ユーザー向け設定ブロック（カードにしない・罫線だけ） */
+.tv3-setup { margin: 26px 18px 0; padding-top: 18px; border-top: 1px solid var(--kk-rule-soft); }
+.tv3-setup-title { font-family: var(--kk-display); font-weight: 700; font-size: var(--kk-h3); line-height: 1.5; color: var(--kk-ink); }
+.tv3-setup-lead { font-size: 14.5px; font-weight: 500; line-height: 1.9; color: var(--kk-ink); margin: 8px 0 14px; }
+.tv3-setup-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.tv3-setup-row select {
+  padding: 11px 12px; border-radius: var(--kk-r-ui);
+  border: 1px solid var(--kk-rule); background: var(--kk-paper-soft);
+  font-family: inherit; font-size: 15.5px; font-weight: 700; color: var(--kk-ink);
+}
+.tv3-setup-cancel {
+  background: none; border: 0; padding: 6px 4px;
+  font-family: inherit; font-size: 13.5px; font-weight: 700; color: var(--kk-ink-soft); cursor: pointer;
+}
+
+/* --- 検索フォーム（V2HeroForm） --- */
+.tv3-form { display: flex; flex-direction: column; gap: 11px; }
+.tv3-search { width: 100%; padding: 16px 14px; text-align: left; cursor: pointer; }
+.tv3-search-txt {
+  flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  font-size: 17px; font-weight: 700; color: var(--kk-ink);
+}
+.tv3-search.empty .tv3-search-txt { font-weight: 700; color: var(--kk-ink-mute); }
+.tv3-search.err { border-color: #C0442F; }
+.tv3-form-err { font-size: 13.5px; font-weight: 700; color: #C0442F; margin: -4px 0 0 2px; }
+
+/* 年齢・天気は「副」の扱い: ラベルを左に添えた1行ずつの小さなチップ列にする */
+.tv3-mini { display: grid; grid-template-columns: 1fr; gap: 9px; }
+.tv3-mini .v2-hf-chiprow { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.tv3-mini-lab {
+  flex: none; width: 96px;
+  font-size: 12.5px; font-weight: 700; letter-spacing: .02em; color: var(--kk-ink-soft);
+}
+.tv3-mini .kk-chips { gap: 6px; flex: 1; min-width: 0; }
+/* スマホは文字を大きくした分、ラベルを上に積んでチップを1行に収める（折返し防止） */
+@media (max-width: 599px) {
+  .tv3-mini { gap: 12px; }
+  .tv3-mini .v2-hf-chiprow { display: block; }
+  .tv3-mini-lab { display: block; width: auto; margin-bottom: 6px; }
+}
+.tv3-mini .kk-chip { padding: 7px 11px; font-size: 13.5px; }
+/* v2.css の .v2-hf-submit { margin-top: 12px } を打ち消す（.tv3-form の gap で足りる） */
+.top-v3 .v2-hf-submit { margin-top: 2px; }
+
+/* ---- v2.css の `.v2-root button { border:none; background:none; padding:0 }` の打ち消し ----
+   あちらは詳細度(0,1,1)で kk.css の操作UIクラス(0,1,0)に勝ってしまうため、
+   button に付けたクラスの面・枠・余白を .top-v3 スコープ(0,2,1)で復元する。 */
+.top-v3 button.kk-btn {
+  padding: 14px 18px; background: var(--kk-orange); border: 1px solid var(--kk-orange);
+}
+.top-v3 button.kk-btn:hover { background: var(--kk-orange-deep); border-color: var(--kk-orange-deep); }
+.top-v3 button.kk-btn.sm { padding: 8px 13px; }
+.top-v3 button.kk-seg-btn {
+  padding: 11px 8px; background: var(--kk-paper-soft); border: 1px solid var(--kk-rule);
+}
+.top-v3 button.kk-seg-btn.on { background: var(--kk-orange); border-color: var(--kk-orange); }
+.top-v3 button.kk-chip {
+  padding: 6px 12px; background: transparent; border: 1px solid var(--kk-rule);
+}
+.top-v3 button.kk-chip.on { background: var(--kk-orange); border-color: var(--kk-orange); }
+.top-v3 .tv3-mini button.kk-chip { padding: 7px 11px; }
+.top-v3 button.kk-field {
+  padding: 13px 14px; background: var(--kk-paper-soft); border: 1px solid var(--kk-rule);
+}
+.top-v3 button.tv3-search { padding: 16px 14px; }
+.top-v3 button.tv3-search.err { border-color: #C0442F; }
+.top-v3 button.tv3-pop-opt { padding: 10px 8px; border-bottom: 1px solid var(--kk-rule-soft); }
+
+/* `.v2-root a { color: inherit }` に負ける文字色の復元 */
+.top-v3 a.kk-chip { color: var(--kk-ink-soft); }
+.top-v3 a.kk-chip:hover { color: var(--kk-orange-deep); }
+.top-v3 a.kk-sec-more { color: var(--kk-ink-mute); }
+.top-v3 a.kk-sec-more:hover { color: var(--kk-orange-deep); }
+.top-v3 a.tv3-status-hint { color: var(--kk-ink); }
+.top-v3 a.tv3-status-hint:hover { color: var(--kk-orange-deep); }
+
+/* 駅ピッカー（ポップオーバーだけは影を許容＝kk.css の --v2-sh-pop） */
+.tv3-pop {
+  margin-top: 2px; padding: 12px;
+  border-radius: var(--kk-r-ui); border: 1px solid var(--kk-rule);
+  background: var(--kk-paper-soft); box-shadow: var(--v2-sh-pop);
+}
+.tv3-pop-input {
+  width: 100%; padding: 11px 12px; margin-bottom: 10px;
+  border-radius: var(--kk-r-ui); border: 1px solid var(--kk-rule);
+  background: #fff; font-family: inherit; font-size: 16px; font-weight: 700; color: var(--kk-ink);
+}
+.tv3-pop-empty { font-size: 14px; color: var(--kk-ink-mute); padding: 6px 2px; margin: 0; }
+.tv3-pop-opt {
+  display: block; width: 100%; text-align: left;
+  padding: 10px 8px; border: 0; background: transparent;
+  border-bottom: 1px solid var(--kk-rule-soft);
+  font-family: inherit; font-size: 15.5px; font-weight: 700; color: var(--kk-ink); cursor: pointer;
+}
+.tv3-pop-opt:hover { color: var(--kk-orange-deep); }
+.tv3-pop-opt-sub { margin-left: 7px; font-size: 13px; font-weight: 500; color: var(--kk-ink-mute); }
+.tv3-pop-group { margin-bottom: 12px; }
+.tv3-pop-group-lab { font-size: 12.5px; font-weight: 700; color: var(--kk-ink-soft); margin: 0 0 8px; letter-spacing: .02em; }
+
+/* --- クイック検索（静かなチップ列） --- */
+.tv3-quick { grid-column: 1; grid-row: 3; margin-top: 16px; padding: 0 18px; }
+
+/* ===========================================================
+   2. 今日のおすすめプラン（写真＋テキスト。枠も影も付けない）
+   =========================================================== */
+.tv3-plan { display: flex; flex-direction: column; gap: 12px; }
+.tv3-plan-img {
+  position: relative; display: block; aspect-ratio: 16 / 9;
+  border-radius: var(--kk-r-img); overflow: hidden;
+}
+.tv3-plan-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tv3-plan-tag {
+  position: absolute; left: 10px; top: 10px;
+  padding: 4px 11px; border-radius: var(--kk-r-pill);
+  background: var(--kk-orange); color: #fff; font-size: 12.5px; font-weight: 700;
+}
+.tv3-plan-body { display: flex; flex-direction: column; gap: 9px; }
+.tv3-plan-title { font-family: var(--kk-display); font-weight: 700; font-size: var(--kk-h3); line-height: 1.5; color: var(--kk-ink); }
+.tv3-plan-sub { font-size: 15.5px; font-weight: 500; line-height: 1.9; color: var(--kk-ink); margin: 0; }
+.tv3-plan-pick {
+  display: flex; flex-direction: column; gap: 3px;
+  padding: 12px 0; border-top: 1px solid var(--kk-rule-soft); border-bottom: 1px solid var(--kk-rule-soft);
+  color: var(--kk-ink);
+}
+.tv3-plan-pick-lab { font-size: 12px; font-weight: 700; letter-spacing: .04em; color: var(--kk-orange-deep); }
+.tv3-plan-pick-title { font-size: 17px; font-weight: 700; line-height: 1.6; }
+.tv3-plan-pick-ans { font-size: 14px; line-height: 1.8; color: var(--kk-ink-soft); }
+.tv3-plan-pick:hover .tv3-plan-pick-title { color: var(--kk-orange-deep); }
+.tv3-plan .kk-btn { margin-top: 2px; }
+
+/* ===========================================================
+   3. エリア（小さめの4枚組）＋ 旧チップ（リンクを減らさない）
+   =========================================================== */
+.tv3-area-chips { margin-top: 14px; }
+
+/* ===========================================================
+   4. スポットの種類（線画アイコン）
+   丸角カードにしない（§3-0）。1px の罫線グリッドで仕切るだけにする。
+   アイコンは KkIcon でラベルと意味を一致させている（TopSpotTypeTiles.tsx）。
+   =========================================================== */
+.tv3-types {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px; background: var(--kk-rule-soft);
+  border: 1px solid var(--kk-rule-soft);
+}
+.tv3-type {
+  display: flex; align-items: center; gap: 12px;
+  min-height: 74px; padding: 14px 12px;
+  background: #fff; color: var(--kk-ink); border-radius: 0;
+}
+.tv3-type-ico { flex: none; display: inline-flex; color: var(--kk-ink); }
+.tv3-type-label { font-size: 14.5px; font-weight: 700; line-height: 1.45; }
+.top-v3 a.tv3-type { color: var(--kk-ink); }
+.tv3-type:hover { color: var(--kk-orange-deep); }
+.tv3-type:hover .tv3-type-ico { color: var(--kk-orange-deep); }
+@media (max-width: 359px) {
+  .tv3-types { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ===========================================================
+   5. 目的別ランキング（見出しは共通のまま・行リストだけ）
+   =========================================================== */
+.tv3-purpose-more { margin-top: 10px; }
+.tv3-purpose-more > summary {
+  list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 7px;
+  font-size: 14px; font-weight: 700; color: var(--kk-ink-soft); padding: 10px 2px;
+}
+.tv3-purpose-more > summary::-webkit-details-marker { display: none; }
+/* 記号（▾▴）は使わず、線画の矢印をマスクで描く */
+.tv3-purpose-more > summary::after {
+  content: ''; width: 13px; height: 13px; background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 9.5 12 16l7-6.5' stroke='black' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 9.5 12 16l7-6.5' stroke='black' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
+  transition: transform .12s;
+}
+.tv3-purpose-more[open] > summary::after { transform: rotate(180deg); }
+.tv3-purpose-more .kk-rows { margin-top: 4px; }
+.tv3-purpose-more .kk-row-num { color: var(--kk-ink-mute); }
+
+/* ===========================================================
+   6. 季節（全幅の写真帯 — ここだけ画面いっぱいのリズムにする）
+   =========================================================== */
+.tv3-season {
+  position: relative; display: block; overflow: hidden;
+  margin: 0 -18px; min-height: 230px;
+}
+.tv3-season-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.tv3-season-body {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; gap: 5px; justify-content: flex-end;
+  min-height: 230px; padding: 22px 18px 20px;
+  background: linear-gradient(180deg, rgba(37,32,27,0) 28%, rgba(37,32,27,.24) 54%, rgba(37,32,27,.76) 100%);
+  color: #fff;
+}
+.tv3-season-eyebrow { font-size: 12.5px; font-weight: 700; letter-spacing: .08em; opacity: .95; }
+.tv3-season-title { font-family: var(--kk-display); font-weight: 700; font-size: var(--kk-h2); line-height: 1.4; }
+.tv3-season-desc { font-size: 14.5px; font-weight: 500; line-height: 1.85; opacity: .95; }
+.tv3-season-cta {
+  display: inline-flex; align-items: center; gap: 5px; margin-top: 8px;
+  font-size: 14px; font-weight: 700; color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,.6); padding-bottom: 2px; align-self: flex-start;
+}
+
+/* ===========================================================
+   7. イベント（写真＋罫線の行。カードにしない）
+   =========================================================== */
+.tv3-ev-row {
+  display: flex; gap: 14px; overflow-x: auto;
+  padding: 2px 0 6px; scroll-snap-type: x mandatory; scrollbar-width: none;
+}
+.tv3-ev-row::-webkit-scrollbar { display: none; }
+.tv3-ev {
+  flex: none; width: 210px; scroll-snap-align: start;
+  display: flex; flex-direction: column; gap: 8px; color: var(--kk-ink);
+}
+.tv3-ev-img {
+  position: relative; display: block; aspect-ratio: 16 / 10;
+  border-radius: var(--kk-r-img); overflow: hidden;
+}
+.tv3-ev-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tv3-ev-date {
+  position: absolute; left: 8px; top: 8px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-width: 44px; padding: 5px 7px; border-radius: 8px; line-height: 1.15;
+  background: rgba(255, 255, 255, .95); color: var(--kk-orange-deep);
+}
+.tv3-ev-date b { font-size: 15px; font-weight: 700; }
+.tv3-ev-date small { font-size: 11px; font-weight: 700; color: var(--kk-ink-mute); }
+.tv3-ev-badge {
+  position: absolute; right: 8px; top: 8px;
+  padding: 4px 10px; border-radius: var(--kk-r-pill);
+  font-size: 12px; font-weight: 700;
+  background: rgba(255, 255, 255, .95); color: var(--kk-ink-soft);
+}
+.tv3-ev-badge.urgent, .tv3-ev-badge.soon { background: var(--kk-orange); color: #fff; }
+.tv3-ev-badge.live, .tv3-ev-badge.week { background: var(--kk-orange-tint); color: var(--kk-orange-deep); }
+.tv3-ev-body { display: flex; flex-direction: column; gap: 4px; }
+.tv3-ev-title {
+  font-size: 15.5px; font-weight: 700; line-height: 1.6;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.tv3-ev:hover .tv3-ev-title { color: var(--kk-orange-deep); }
+.tv3-ev-meta {
+  display: flex; align-items: center; gap: 5px; min-width: 0;
+  font-size: 13px; font-weight: 700; color: var(--kk-ink-soft);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+/* ===========================================================
+   8. 飲食店（大きな写真1枚 → 大きな2枚組）
+   =========================================================== */
+.tv3-feature { display: block; color: var(--kk-ink); margin-bottom: 22px; }
+.tv3-feature-img {
+  display: block; aspect-ratio: 21 / 9;
+  border-radius: var(--kk-r-img); overflow: hidden;
+}
+.tv3-feature-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tv3-feature-body { display: flex; flex-direction: column; gap: 5px; padding: 12px 0 0; }
+.tv3-feature-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .06em; color: var(--kk-orange-deep); }
+.tv3-feature-title { font-family: var(--kk-display); font-weight: 700; font-size: var(--kk-h2); line-height: 1.45; }
+.tv3-feature-sub { font-size: 14.5px; font-weight: 500; line-height: 1.8; color: var(--kk-ink); }
+.tv3-feature-cta {
+  display: inline-flex; align-items: center; gap: 4px; margin-top: 6px;
+  font-size: 14px; font-weight: 700; color: var(--kk-orange-deep);
+}
+.tv3-feature:hover .tv3-feature-title { color: var(--kk-orange-deep); }
+
+/* ===========================================================
+   9. カテゴリ（静かなチップ列。色は持たせない）
+   =========================================================== */
+.tv3-cat-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.tv3-cat-chips .kk-chip { padding: 11px 16px; font-size: 15px; font-weight: 700; color: var(--kk-ink); }
+
+/* ===========================================================
+   10. 特集・最近見たスポット（既存 v2 部品の面を落とす）
+   =========================================================== */
+.top-v3 .kk-sec .v2-hscroll { padding-left: 0; padding-right: 0; }
+.top-v3 .v2-hscroll .v2-card-v { border-bottom: 0; }
+.top-v3 .v2-feat-chip { display: none; }
+.top-v3 .v2-card-v-body { padding: 9px 0 0; }
+.top-v3 .v2-card-v-title { font-size: 15.5px; font-weight: 700; line-height: 1.6; }
+.top-v3 .v2-feat-sub { font-size: 13px; color: var(--kk-ink-soft); line-height: 1.7; }
+.top-v3 .v2-sec-head { padding: 0 18px; margin: 40px 0 14px; }
+.top-v3 .v2-sec-title {
+  font-family: var(--kk-display); font-weight: 700; font-size: 21px;
+  letter-spacing: .02em; color: var(--kk-ink);
+}
+.top-v3 .v2-card-mini-title { font-size: 14.5px; font-weight: 700; line-height: 1.6; margin-top: 8px; }
+
+/* PWA の固定バナー（画面下）とフッターの重なり回避 */
+.top-v3 .kk-footer { padding-bottom: 96px; }
+
+/* ===========================================================
+   デスクトップ（≥920px）— スマホの引き伸ばしにしない
+   コンテナは v2.css の .v2-scroll > div（max-width 1160px / padding 24px）。
+   =========================================================== */
+@media (min-width: 920px) {
+  /* ヒーロー: 左にコピー＋パネル、右に縦長の写真の2段組 */
+  .tv3-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.02fr);
+    column-gap: 52px;
+    align-items: start;
+    margin: 26px 0 0; padding: 0 4px;
+  }
+  .tv3-hero-copy {
+    grid-column: 1; grid-row: 1;
+    align-self: end; padding: 0 0 22px; color: var(--kk-ink);
+  }
+  .tv3-hero-eyebrow { color: var(--kk-ink-mute); text-shadow: none; }
+  .tv3-hero-h1 { font-size: 40px; line-height: 1.35; margin-top: 14px; color: var(--kk-ink); text-shadow: none; }
+  .tv3-hero-sub { font-size: 17px; margin-top: 18px; color: var(--kk-ink-soft); text-shadow: none; font-weight: 700; }
+  .tv3-hero-media {
+    grid-column: 2; grid-row: 1 / span 3;
+    height: auto; min-height: 560px; align-self: stretch;
+    border-radius: var(--kk-r-img);
+  }
+  .tv3-hero-bg { object-position: 62% 28%; }
+  .tv3-hero-scrim { display: none; }
+  .tv3-panel {
+    grid-column: 1; grid-row: 2; margin: 0; padding: 20px; border-radius: 18px;
+    background: #fff; -webkit-backdrop-filter: none; backdrop-filter: none;
+    border: 1px solid var(--kk-rule); box-shadow: none;
+  }
+  .tv3-quick { grid-column: 1; grid-row: 3; padding: 0; margin-top: 18px; }
+  .tv3-quick .kk-chips { flex-wrap: wrap; overflow: visible; }
+
+  .tv3-status-val { font-size: 14px; }
+  .tv3-search { padding: 18px 16px; }
+  .tv3-search-txt { font-size: 18px; }
+  .tv3-mini { gap: 11px; }
+
+  .tv3-setup { margin: 40px 4px 0; }
+
+  /* プラン: 大きな写真 + 右にテキスト */
+  .tv3-plan { display: grid; grid-template-columns: 1.05fr 1fr; column-gap: 34px; align-items: center; }
+  .tv3-plan-img { aspect-ratio: 16 / 10; }
+  .tv3-plan-body { gap: 13px; }
+  .tv3-plan-title { font-size: 26px; }
+  .tv3-plan-sub { font-size: 15px; }
+  .tv3-plan .kk-btn { align-self: flex-start; width: auto; min-width: 280px; }
+
+  /* エリアは「小さい写真」の段。飲食店・「好き」の大きな2枚組と大きさで差をつける */
+  .tv3-area-tiles { max-width: 780px; }
+  .tv3-area-chips { margin-top: 20px; }
+
+  /* 季節: 横長のワイド帯 */
+  .tv3-season { margin: 0; min-height: 320px; border-radius: var(--kk-r-img); }
+  .tv3-season-body { min-height: 320px; padding: 36px 40px 32px; }
+  .tv3-season-title { font-size: 28px; }
+  .tv3-season-desc { font-size: 14.5px; max-width: 60ch; }
+
+  /* イベント: 3列に展開 */
+  .tv3-ev-row { flex-wrap: wrap; overflow: visible; gap: 26px 22px; }
+  .tv3-ev { width: calc((100% - 44px) / 3); }
+  .tv3-ev-title { font-size: 15px; }
+
+  /* 飲食店: 特集を横長のワイド写真に */
+  .tv3-feature { margin-bottom: 32px; }
+  .tv3-feature-img { aspect-ratio: 32 / 9; }
+  .tv3-feature-title { font-size: 26px; }
+  .tv3-feature-sub { font-size: 14.5px; }
+  .tv3-feature-body { padding-top: 16px; gap: 7px; }
+
+  .tv3-cat-chips { gap: 10px; }
+  .tv3-cat-chips .kk-chip { padding: 13px 20px; font-size: 16px; }
+
+  .top-v3 .v2-sec-head { padding: 0 4px; margin: 64px 0 20px; }
+  .top-v3 .v2-sec-title { font-size: 27px; }
+  .top-v3 .kk-footer { padding-bottom: 56px; }
+}
+
+/* 横長タブレット〜小さめのPC: 左カラムが狭いので H1 を落とす */
+@media (min-width: 920px) and (max-width: 1079px) {
+  .tv3-hero { column-gap: 34px; }
+  .tv3-hero-h1 { font-size: 46px; }
+  .tv3-hero-media { min-height: 500px; }
+}
+/* ワイド（v2.css がコンテナを 1360px に広げる帯） */
+@media (min-width: 1400px) {
+  .tv3-hero-h1 { font-size: 68px; }
+  .tv3-hero-media { min-height: 620px; }
+}
+
+/* ===========================================================
+   11. 文字を大きく・太く（2026-09-08 社長指示 §3-0）
+   共通部品（kk.css）は他ページと共有しているため、トップ側だけスコープを付けて底上げする。
+   本文 15.5〜16px / 行間 1.9 前後。細い小さな注記だけで構成しない。
+   =========================================================== */
+.top-v3 .kk-lead { font-size: 16px; line-height: 1.95; font-weight: 500; color: var(--kk-ink); }
+.top-v3 .kk-sec-title { font-size: 25px; }
+.top-v3 .kk-sec-title.sm { font-size: 21px; }
+.top-v3 .kk-sec-more { font-size: 14px; font-weight: 700; }
+
+/* 行リスト（人気スポット・ランキング・記事） */
+.top-v3 .kk-row-title { font-size: 16.5px; font-weight: 700; line-height: 1.65; }
+.top-v3 .kk-row-sub { font-size: 13.5px; font-weight: 500; color: var(--kk-ink-soft); }
+.top-v3 .kk-row-date { font-size: 13px; font-weight: 700; }
+.top-v3 .kk-row-num { font-size: 23px; width: 26px; }
+.top-v3 .kk-row { padding: 15px 0; }
+
+/* 写真タイル（エリア・飲食店・好き） */
+.top-v3 .kk-tile-label { font-size: 15px; font-weight: 700; }
+.top-v3 .kk-tiles.two .kk-tile-label { font-size: 16.5px; font-weight: 700; }
+
+/* チップ（クイック検索・エリア・カテゴリ） */
+.top-v3 .kk-chip,
+.top-v3 a.kk-chip,
+.top-v3 button.kk-chip { font-size: 14px; font-weight: 700; padding: 8px 14px; }
+.top-v3 .tv3-quick .kk-chip { padding: 9px 14px; }
+.top-v3 .tv3-mini .kk-chip,
+.top-v3 .tv3-mini button.kk-chip { font-size: 13.5px; padding: 7px 11px; }
+.top-v3 .tv3-pop .kk-chip,
+.top-v3 .tv3-pop button.kk-chip { font-size: 14px; padding: 8px 13px; }
+
+/* 日付切替・主CTA */
+.top-v3 .kk-seg-btn,
+.top-v3 button.kk-seg-btn { font-size: 15.5px; font-weight: 700; padding: 13px 8px; }
+.top-v3 .kk-btn,
+.top-v3 a.kk-btn,
+.top-v3 button.kk-btn { font-size: 16px; font-weight: 700; padding: 16px 18px; }
+.top-v3 .kk-btn.sm,
+.top-v3 button.kk-btn.sm { font-size: 14px; padding: 10px 15px; }
+
+@media (min-width: 920px) {
+  /* スポットの種類: 4列（2行）。PCでも丸角にしない */
+  .tv3-types { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .tv3-type { min-height: 92px; padding: 18px 16px; gap: 14px; }
+  .tv3-type-label { font-size: 15.5px; }
+
+  .top-v3 .kk-sec-title { font-size: 28px; }
+  .top-v3 .kk-lead { font-size: 16px; }
+  .top-v3 .kk-row-title { font-size: 17px; }
+  .top-v3 .kk-row-sub { font-size: 14px; }
+  .top-v3 .kk-tile-label { font-size: 15.5px; }
+  .top-v3 .kk-tiles.two .kk-tile-label { font-size: 17px; }
+  .top-v3 .kk-chip,
+  .top-v3 a.kk-chip,
+  .top-v3 button.kk-chip { font-size: 14.5px; padding: 9px 16px; }
+  .top-v3 .tv3-mini .kk-chip,
+  .top-v3 .tv3-mini button.kk-chip { font-size: 14px; padding: 8px 13px; }
+  .top-v3 .tv3-status-val { font-size: 16px; }
+  .top-v3 .tv3-status-hint { font-size: 15px; }
+}
+
+/* エリアタイルは5枚（渋谷・池袋・新宿・上野・東京）。2026-09-10 に東京を追加。 */
+.top-v3 .tv3-area-tiles { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.top-v3 .tv3-area-tiles .kk-tile-label { font-size: 13px; }
+@media (max-width: 400px) {
+  .top-v3 .tv3-area-tiles { gap: 6px; }
+  .top-v3 .tv3-area-tiles .kk-tile-label { font-size: 11.5px; letter-spacing: -.02em; }
+}
+
+/* 飲食タイルの提供写真クレジット */
+.top-v3 .tv3-gourmet-credit {
+  margin: 10px 0 0; font-size: 11.5px; line-height: 1.6;
+  color: var(--kk-ink-mute); text-align: right;
+}

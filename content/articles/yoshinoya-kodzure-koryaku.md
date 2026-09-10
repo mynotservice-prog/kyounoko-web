@@ -36,7 +36,7 @@ legacyHero: /hero-ai/sukiya-kodzure-koryaku.webp
 - ベビーチェアは郊外店中心、駅前店は無いことが多い
 - 離乳食持ち込みは可能な店舗が多い、事前の声がけが基本マナー
 
-## 🪧 子連れチェックリスト
+## 子連れチェックリスト
 
 <!-- 子連れチェックリストの中身は lib/chain-facilities.ts が正本です。
      このチェーンはDBに載っているため ChainFacilitiesBox が描画され、ここに表を書いても表示されません。

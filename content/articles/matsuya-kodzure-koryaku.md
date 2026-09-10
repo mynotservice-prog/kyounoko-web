@@ -36,7 +36,7 @@ legacyHero: /hero-ai/sukiya-kodzure-koryaku.webp
 - ベビーチェアは郊外ロードサイド店中心、駅前店舗は無いことも多い
 - おむつ替え台・授乳室は基本なし、商業施設内店舗を選ぶのが現実解
 
-## 🪧 子連れチェックリスト
+## 子連れチェックリスト
 
 <!-- 子連れチェックリストの中身は lib/chain-facilities.ts が正本です。
      このチェーンはDBに載っているため ChainFacilitiesBox が描画され、ここに表を書いても表示されません。

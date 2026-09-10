@@ -1,11 +1,13 @@
 'use client';
 
 import React from 'react';
+import { KkIcon } from '@/components/kk/KkIcon';
 
 /**
  * 「今日の流れ」を保存するボタン。
  * プランはURLに完全表現されているので、保存＝現在URL（path+query）+ラベルを localStorage に積む。
  * /favorites 等から後で呼び出せる（キー: kk_saved_plans）。
+ * 見た目は app/styles/today-v3.css の .td3-save（主ボタン＝オレンジ）。
  */
 type SavedPlan = { href: string; label: string; ts: number };
 const KEY = 'kk_saved_plans';
@@ -43,20 +45,10 @@ export function SavePlanButton({ label }: { label: string }) {
       type="button"
       onClick={onSave}
       aria-pressed={saved}
-      style={{
-        flex: 1,
-        textAlign: 'center',
-        fontSize: 13,
-        fontWeight: 800,
-        padding: '11px',
-        borderRadius: 11,
-        border: '1px solid var(--line)',
-        background: saved ? 'var(--clay-deep, #c9603e)' : 'var(--paper-card, #fffaf6)',
-        color: saved ? '#fff' : 'var(--ink)',
-        cursor: 'pointer',
-      }}
+      className={'kk-btn td3-save' + (saved ? ' on' : '')}
     >
-      {saved ? '♥ 保存しました' : '♡ この流れを保存'}
+      <KkIcon name={saved ? 'check' : 'heart'} size={16} sw={2} />
+      {saved ? '保存しました' : 'この流れを保存'}
     </button>
   );
 }

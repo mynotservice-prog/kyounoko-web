@@ -44,7 +44,7 @@ youtubeSearch: かっぱ寿司 子連れ ベビーカー
 
 > 出典：かっぱ寿司公式「おこさま連れ大歓迎！あつまれかっぱキッズ！」（https://www.kappasushi.jp/kappa-kids ）｜確認日 2026年8月24日
 
-## 🪧 子連れチェックリスト
+## 子連れチェックリスト
 
 <!-- 子連れチェックリストの中身は lib/chain-facilities.ts が正本です。
      このチェーンはDBに載っているため ChainFacilitiesBox が描画され、ここに表を書いても表示されません。

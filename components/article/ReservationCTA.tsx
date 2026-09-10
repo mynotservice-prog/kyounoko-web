@@ -25,73 +25,24 @@ export function ReservationCTA({ offer }: ReservationCTAProps) {
   const provider = /px\.a8\.net/.test(offer.href) ? 'a8' : 'valuecommerce';
 
   return (
-    <aside
-      aria-label={offer.heading}
-      style={{
-        margin: '24px 0',
-        border: '1px solid rgba(201,96,62,0.28)',
-        borderRadius: 16,
-        background:
-          'linear-gradient(135deg, rgba(201,96,62,0.10), rgba(235,192,106,0.06))',
-        padding: '18px 20px',
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: 8,
-          marginBottom: 8,
-        }}
-      >
+    <aside aria-label={offer.heading} className="av3-resv">
+      <div className="av3-resv-head">
         <span className="pr-label">PR</span>
-        <span
-          style={{
-            fontSize: 11,
-            fontWeight: 600,
-            letterSpacing: '0.05em',
-            color: 'var(--clay-deep)',
-          }}
-        >
-          今から行くなら・ネット予約
-        </span>
+        <span className="av3-resv-eyebrow">今から行くなら・ネット予約</span>
       </div>
-      <h4
-        style={{
-          margin: '0 0 4px',
-          fontSize: 17,
-          fontWeight: 700,
-          color: 'var(--ink)',
-          fontFamily: 'var(--font-mincho)',
-        }}
-      >
-        {offer.heading}
-      </h4>
-      <p style={{ margin: '0 0 14px', fontSize: 13, color: 'var(--ink-sub)', lineHeight: 1.7 }}>
-        {offer.note}
-      </p>
+      <h4 className="av3-resv-title">{offer.heading}</h4>
+      <p className="av3-resv-note">{offer.note}</p>
       <a
         href={offer.href}
         target="_blank"
         rel="sponsored nofollow noopener"
         data-provider={provider}
+        className="av3-resv-btn"
         onClick={() => {
           trackEvent('affiliate_click', {
             provider,
             item_id: offer.itemId,
           });
-        }}
-        style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: 6,
-          background: 'var(--clay)',
-          color: '#fff',
-          fontWeight: 700,
-          fontSize: 14.5,
-          padding: '12px 20px',
-          borderRadius: 10,
-          textDecoration: 'none',
         }}
       >
         {offer.cta}

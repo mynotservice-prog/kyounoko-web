@@ -1,3 +1,4 @@
+import '@/app/styles/article-v3.css';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -66,6 +67,111 @@ import { BabyCarRouteEstimator } from '@/components/interactive/BabyCarRouteEsti
 import { NaptimeFitFinder } from '@/components/interactive/NaptimeFitFinder';
 import { LineCta } from '@/components/common/LineCta';
 import { articleCategoryLabel } from '@/lib/article-categories';
+import { ArticleRowList } from '@/components/article/ArticleRowList';
+import { KkSectionTitle } from '@/components/kk/KkSectionTitle';
+import { KkIcon } from '@/components/kk/KkIcon';
+import { KkAddToHomeCard } from '@/components/kk/KkAddToHomeCard';
+import { KkFooter } from '@/components/kk/KkFooter';
+
+/**
+ * 本文HTML内の <table> を横スクロール用ラッパで包む（2026-09 リニューアル）。
+ * テーブル自体は width:100% のまま角丸枠で描画し、狭い画面ではラッパ側がスクロールする。
+ * テキスト・リンク・見出しには一切触れない（見た目のみ）。
+ */
+function wrapTables(html: string): string {
+  return html.replace(/<table\b/g, '<div class="av3-tbl"><table').replace(/<\/table>/g, '</table></div>');
+}
+
+/**
+ * 本文の定型セクション（H2 の文言で識別）を <section class="..."> で包む（2026-09 §3-2）。
+ * 役割ごとに見せ方を変えるための「入れ物」を足すだけで、
+ * 見出しタグ・見出し文言・本文テキスト・リンク・画像には一切触れない。
+ *   - 我が家のリアル      → 小さなラベル＋本文（編集部コメント風）
+ *   - ここまで読んだ人が…  → 次の疑問を選ぶテキスト中心のリスト
+ *   - 出典                → 末尾に静かに置く注記
+ */
+const BODY_SECTION_CLASSES: ReadonlyArray<readonly [RegExp, string]> = [
+  [/^我が家のリアル/, 'av3-mylife'],
+  [/^ここまで読んだ人/, 'av3-nextq'],
+  [/^出典/, 'av3-sources'],
+];
+
+function wrapNamedSections(html: string): string {
+  const heads: { at: number; cls: string | null }[] = [];
+  const re = /<h2\b[^>]*>([\s\S]*?)<\/h2>/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(html)) !== null) {
+    const text = m[1].replace(/<[^>]+>/g, '').trim();
+    const hit = BODY_SECTION_CLASSES.find(([pattern]) => pattern.test(text));
+    heads.push({ at: m.index, cls: hit ? hit[1] : null });
+  }
+  let out = html;
+  // 後ろから挿入して、前方のインデックスをずらさない
+  for (let i = heads.length - 1; i >= 0; i--) {
+    const cls = heads[i].cls;
+    if (!cls) continue;
+    const start = heads[i].at;
+    const end = i + 1 < heads.length ? heads[i + 1].at : out.length;
+    out = out.slice(0, start) + `<section class="${cls}">` + out.slice(start, end) + '</section>' + out.slice(end);
+  }
+  return out;
+}
+
+/**
+ * 長い段落を句点で分割して読みやすくする（2026-09-09 社長指示）。
+ *
+ * スポットページと同じ考え方。**文字は1字も足し引きしない**（`。` の位置で `</p><p>` を挟むだけ）。
+ * リンクや強調の途中で切らないよう、タグの外・インライン要素の外にある `。` でだけ分ける。
+ * 3文以上ある長い段落だけが対象で、2文ずつにまとめる。
+ */
+function splitLongParagraphs(html: string): string {
+  return html.replace(/<p>([\s\S]*?)<\/p>/g, (whole, inner: string) => {
+    const plain = inner.replace(/<[^>]+>/g, '');
+    if (plain.length < 90) return whole;
+
+    // タグの外にある `。` の位置（inner 内のインデックス）を集める
+    const cuts: number[] = [];
+    let inTag = false;
+    let depth = 0;
+    for (let i = 0; i < inner.length; i++) {
+      const c = inner[i];
+      if (c === '<') {
+        inTag = true;
+        if (inner[i + 1] === '/') depth--;
+        else if (!/^<(br|img|hr|wbr)\b/i.test(inner.slice(i))) depth++;
+        continue;
+      }
+      if (c === '>') {
+        inTag = false;
+        continue;
+      }
+      if (!inTag && depth === 0 && c === '。') cuts.push(i + 1);
+    }
+    // 末尾の `。` は分割点にしない
+    const points = cuts.filter((at) => at < inner.length);
+    if (points.length < 2) return whole;
+
+    // 2文ごとに区切る
+    const chunks: string[] = [];
+    let prev = 0;
+    for (let k = 1; k < points.length; k += 2) {
+      chunks.push(inner.slice(prev, points[k]));
+      prev = points[k];
+    }
+    if (prev < inner.length) {
+      const tail = inner.slice(prev);
+      if (tail.replace(/<[^>]+>/g, '').trim().length > 0) chunks.push(tail);
+      else if (chunks.length) chunks[chunks.length - 1] += tail;
+    }
+    if (chunks.length < 2) return whole;
+    return chunks.map((c) => `<p>${c}</p>`).join('');
+  });
+}
+
+/** 本文HTMLの共通整形（段落分け＋表の横スクロールラッパ＋定型セクションの入れ物）。 */
+function prepareBody(html: string): string {
+  return wrapNamedSections(wrapTables(splitLongParagraphs(html)));
+}
 
 // パーソナライズ枠を出すカテゴリ（今日の◯◯系のみ）
 const PERSONALIZED_HINT_CATEGORIES = new Set(['today-doko', 'today-nani', 'today-taberu']);
@@ -981,6 +1087,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
       ))}
 
       <V2Frame header="sub" active="home" backHref={article.category ? `/category/${article.category}` : '/'}>
+      <div className="article-v3">
 
       {/* Breadcrumb */}
       <div className="container-article">
@@ -992,31 +1099,6 @@ function FileArticleView({ article }: { article: FileArticle }) {
           <span>{article.title}</span>
         </nav>
       </div>
-
-      {/* Article hero image */}
-      {article.hero && (
-        <div className="article-hero" style={{ maxWidth: 920, margin: '8px auto 32px', padding: '0 var(--pad)' }}>
-          <div
-            style={{
-              width: '100%',
-              aspectRatio: '16/9',
-              borderRadius: 'var(--radius-lg)',
-              backgroundImage: `url(${article.hero})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundColor: 'var(--peach-soft)',
-            }}
-            role="img"
-            aria-label={article.title}
-          />
-          {/* 提供写真のクレジット（編集方針 5-5: 提供を受けた写真には提供元名を明記） */}
-          {article.heroCredit && (
-            <p style={{ margin: '6px 2px 0', fontSize: 11.5, color: 'var(--ink-mute)', textAlign: 'right' }}>
-              {article.heroCredit}
-            </p>
-          )}
-        </div>
-      )}
 
       <article className="article-layout">
         <div className="article-main">
@@ -1092,12 +1174,42 @@ function FileArticleView({ article }: { article: FileArticle }) {
               </span>
             </div>
 
+            {/* タグ（トピッククラスター導線）。2026-09 リニューアルで末尾からヘッダーへ移動
+                （リンク先は同じ /tag/ 。末尾の重複は削除） */}
+            {(() => {
+              const tags = getTagsForArticle(article);
+              if (tags.length === 0) return null;
+              return (
+                <div className="kk-chips av3-tags" aria-label="トピックで探す">
+                  {tags.slice(0, 8).map((t) => (
+                    <Link key={t.slug} href={`/tag/${t.slug}`} className="kk-chip">
+                      {t.name}
+                    </Link>
+                  ))}
+                </div>
+              );
+            })()}
+
+            {/* Article hero image（角丸・16:9。src は従来どおり CSS background） */}
+            {article.hero && (
+              <div className="article-hero av3-hero">
+                <div
+                  className="av3-hero-img"
+                  style={{ backgroundImage: `url(${article.hero})` }}
+                  role="img"
+                  aria-label={article.title}
+                />
+                {/* 提供写真のクレジット（編集方針 5-5: 提供を受けた写真には提供元名を明記） */}
+                {article.heroCredit && <p className="av3-hero-credit">{article.heroCredit}</p>}
+              </div>
+            )}
+
             {/* lede は markdown（太字等）をインライン描画。生テキストだと **太字** が
                 そのまま表示されてしまうため ledeHtml を使う。 */}
             <p className="lead" dangerouslySetInnerHTML={{ __html: article.ledeHtml }} />
 
             {/* お気に入り + やってみた */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 16, flexWrap: 'wrap' }}>
+            <div className="av3-actions">
               <FavoriteButton kind="article" id={article.slug} size="md" />
               <TriedButton kind="article" id={article.slug} />
             </div>
@@ -1105,7 +1217,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
 
           {/* パーソナライズ枠: 今日◯◯系カテゴリのみ表示。クライアントオンリー。 */}
           {PERSONALIZED_HINT_CATEGORIES.has(article.category) && (
-            <PersonalizedHint context="article" fallback="cta" />
+            <PersonalizedHint context="article" fallback="cta" className="av3-phint" />
           )}
 
           {/* 「今日選ぶなら、これ。」— ランキング/N選/比較記事の断定ブロック */}
@@ -1138,7 +1250,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
               {article.tldrHtml ? (
                 <div
                   className="tldr-text prose"
-                  dangerouslySetInnerHTML={{ __html: article.tldrHtml }}
+                  dangerouslySetInnerHTML={{ __html: wrapTables(article.tldrHtml) }}
                 />
               ) : (
                 <p className="tldr-text">{article.tldr}</p>
@@ -1165,23 +1277,8 @@ function FileArticleView({ article }: { article: FileArticle }) {
 
           {/* Quick Info */}
           {article.quickInfo && (article.quickInfo.ageRanges?.length || article.quickInfo.durationMin) && (
-            <section
-              style={{
-                background: 'var(--paper-card)',
-                border: '1px solid var(--line)',
-                borderRadius: 'var(--radius-lg)',
-                padding: '20px 22px',
-                margin: '32px 0 32px',
-              }}
-              aria-label="この記事のクイック情報"
-            >
-              <div
-                style={{
-                  display: 'grid',
-                  gap: 16,
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
-                }}
-              >
+            <section className="av3-quick" aria-label="この記事のクイック情報">
+              <div className="av3-quick-grid">
                 {article.quickInfo.ageRanges?.length ? (
                   <QuickItem label="年齢" value={ageLabel(article.quickInfo.ageRanges)} />
                 ) : null}
@@ -1214,7 +1311,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
             <div
               className="prose"
               style={{ marginBottom: 32 }}
-              dangerouslySetInnerHTML={{ __html: checklistSplit.checklist }}
+              dangerouslySetInnerHTML={{ __html: wrapTables(checklistSplit.checklist) }}
             />
           ) : null}
 
@@ -1233,7 +1330,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
             <>
               <div
                 className="prose"
-                dangerouslySetInnerHTML={{ __html: bodySurfaceSplit[0] }}
+                dangerouslySetInnerHTML={{ __html: prepareBody(bodySurfaceSplit[0]) }}
               />
               <InlineItemCTA
                 item={bodySurfaceOffer.item}
@@ -1241,28 +1338,31 @@ function FileArticleView({ article }: { article: FileArticle }) {
               />
               <div
                 className="prose"
-                dangerouslySetInnerHTML={{ __html: bodySurfaceSplit[1] }}
+                dangerouslySetInnerHTML={{ __html: prepareBody(bodySurfaceSplit[1]) }}
               />
             </>
           ) : (
             <div
               className="prose"
-              dangerouslySetInnerHTML={{ __html: renderBodyHtml }}
+              dangerouslySetInnerHTML={{ __html: prepareBody(renderBodyHtml) }}
             />
           )}
 
           {/* Pinterest 用の縦長Pin画像。本文内の実 <img> として描画し、
               「URLから保存」ピッカーで縦長を選べるようにする（og:imageは拾われないため）。 */}
           {pinImagePath(article.slug) && (
-            <div style={{ margin: '28px 0', textAlign: 'center' }}>
-              <p style={{ fontSize: 13, color: '#999', margin: '0 0 8px' }}>📌 Pinterest で保存</p>
+            <div className="av3-pin">
+              <p className="av3-pin-note">
+                <KkIcon name="save" size={14} />
+                Pinterest で保存
+              </p>
               <img
                 src={pinImagePath(article.slug) as string}
                 width={1000}
                 height={1500}
                 alt={article.title}
                 loading="lazy"
-                style={{ width: 280, maxWidth: '100%', height: 'auto', borderRadius: 12, display: 'inline-block' }}
+                style={{ width: 280, maxWidth: '100%', height: 'auto', borderRadius: 'var(--kk-r-img)', display: 'inline-block' }}
               />
             </div>
           )}
@@ -1314,7 +1414,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
           {/* 外食記事向け高単価ブリッジ（幼児食宅配）。endOfferが無い記事のみ1点。 */}
           {showBridge && restaurantBridge && (
             <div style={{ marginTop: 20 }}>
-              <p style={{ fontSize: 13, color: 'var(--ink-mute)', margin: '0 0 10px' }}>
+              <p style={{ fontSize: 13, color: 'var(--kk-ink-mute)', margin: '0 0 10px' }}>
                 外食が続く週は、家の食事を宅配でラクにするご家庭も増えています。
               </p>
               <InlineItemCTA
@@ -1341,52 +1441,22 @@ function FileArticleView({ article }: { article: FileArticle }) {
 
           {/* FAQ */}
           {article.faqItems.length > 0 && (
-            <section style={{ margin: '56px 0 24px' }}>
-              <h2
-                style={{
-                  fontFamily: 'var(--font-mincho)',
-                  fontWeight: 600,
-                  fontSize: 22,
-                  margin: '0 0 16px',
-                }}
-              >
-                よくある質問
-              </h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            <section className="av3-faq">
+              <KkSectionTitle as="h2" title="よくある質問" />
+              <div className="av3-faq-list">
                 {article.faqItems.map((q, i) => (
-                  <details
-                    key={i}
-                    className="faq-item"
-                    style={{
-                      background: 'var(--paper-card)',
-                      border: '1px solid var(--line)',
-                      borderRadius: 'var(--radius-md)',
-                      overflow: 'hidden',
-                    }}
-                  >
-                    <summary
-                      style={{
-                        padding: '16px 20px',
-                        fontWeight: 600,
-                        fontSize: '14.5px',
-                        cursor: 'pointer',
-                        fontFamily: 'var(--font-mincho)',
-                      }}
-                    >
-                      {q.question}
+                  <details key={i} className="faq-item">
+                    <summary>
+                      <span className="av3-faq-q">{q.question}</span>
+                      <span className="av3-faq-caret" aria-hidden="true">
+                        <KkIcon name="chevron-right" size={16} sw={2} />
+                      </span>
                     </summary>
                     <div
-                      className="prose"
-                      style={{
-                        padding: '14px 20px 18px',
-                        fontSize: 14,
-                        color: 'var(--ink-sub)',
-                        borderTop: '1px solid var(--line)',
-                        lineHeight: 1.85,
-                      }}
+                      className="prose av3-faq-a"
                       // FAQ回答は markdown 描画（太字/リンク等）。生テキストだと **太字** が
                       // そのまま表示されてしまうため answerHtml を使う。
-                      dangerouslySetInnerHTML={{ __html: q.answerHtml }}
+                      dangerouslySetInnerHTML={{ __html: wrapTables(q.answerHtml) }}
                     />
                   </details>
                 ))}
@@ -1400,32 +1470,18 @@ function FileArticleView({ article }: { article: FileArticle }) {
 
           {/* 駅ページへのCTA（東京23区記事のみ。駅検出できた場合のみ表示） */}
           {stationLink && (
-            <section style={{ margin: '48px 0 0' }}>
-              <Link href={stationLink.href} style={{
-                display: 'block',
-                background: 'linear-gradient(135deg, rgba(201,96,62,0.08), rgba(201,96,62,0.03))',
-                border: '1px solid rgba(201,96,62,0.20)',
-                borderRadius: 16,
-                padding: '20px 24px',
-                textDecoration: 'none',
-                color: 'var(--ink)',
-              }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
-                  <div style={{ flex: 1, minWidth: 220 }}>
-                    <div style={{ fontSize: 11, color: 'var(--clay-deep)', fontWeight: 600, letterSpacing: '0.05em', marginBottom: 4 }}>
-                      ALSO RECOMMENDED · 駅から探す
-                    </div>
-                    <div style={{ fontSize: 17, fontWeight: 600, marginBottom: 2 }}>
-                      {stationLink.label}
-                    </div>
-                    <div style={{ fontSize: 12, color: 'var(--ink-mute)' }}>
-                      ベビーカーOK・キッズメニュー・個室・離乳食持込まで全項目チェック
-                    </div>
-                  </div>
-                  <span style={{
-                    fontSize: 22, color: 'var(--clay-deep)', flexShrink: 0,
-                  }}>→</span>
-                </div>
+            <section className="av3-station-wrap">
+              <Link href={stationLink.href} className="av3-station">
+                <span className="av3-station-body">
+                  <span className="av3-station-eyebrow">ALSO RECOMMENDED · 駅から探す</span>
+                  <span className="av3-station-label">{stationLink.label}</span>
+                  <span className="av3-station-sub">
+                    ベビーカーOK・キッズメニュー・個室・離乳食持込まで全項目チェック
+                  </span>
+                </span>
+                <span className="av3-station-arrow" aria-hidden="true">
+                  <KkIcon name="arrow-right" size={20} />
+                </span>
               </Link>
             </section>
           )}
@@ -1434,53 +1490,11 @@ function FileArticleView({ article }: { article: FileArticle }) {
           <AdSlot placement="article-related" style={{ marginTop: 32 }} />
 
           {/* Author box */}
-          <section
-            style={{
-              background: 'var(--paper-card)',
-              border: '1px solid var(--line)',
-              borderRadius: 'var(--radius-lg)',
-              padding: 24,
-              margin: '56px 0 0',
-              display: 'grid',
-              gridTemplateColumns: '64px 1fr',
-              gap: 20,
-            }}
-          >
-            <div
-              style={{
-                width: 64,
-                height: 64,
-                borderRadius: 999,
-                background: 'var(--clay-soft)',
-                color: 'var(--clay-deep)',
-                display: 'grid',
-                placeItems: 'center',
-                fontWeight: 700,
-                fontSize: 22,
-                fontFamily: 'var(--font-mincho)',
-              }}
-            >
-              こ
-            </div>
+          <section className="av3-author">
+            <div className="av3-author-avatar">こ</div>
             <div>
-              <p
-                style={{
-                  fontFamily: 'var(--font-mincho)',
-                  fontSize: 15,
-                  fontWeight: 600,
-                  margin: '0 0 6px',
-                }}
-              >
-                ながみー（きょうのこ運営）
-              </p>
-              <p
-                style={{
-                  fontSize: 13,
-                  color: 'var(--ink-sub)',
-                  margin: 0,
-                  lineHeight: 1.85,
-                }}
-              >
+              <p className="av3-author-name">ながみー（きょうのこ運営）</p>
+              <p className="av3-author-bio">
                 共働き家庭で子育て中の運営者。「今日どうする？」を決めやすくするためのサイトを運営しています。
               </p>
             </div>
@@ -1489,28 +1503,84 @@ function FileArticleView({ article }: { article: FileArticle }) {
           {/* Share bar (author 直下) */}
           <ShareBar url={articleUrl} title={article.title} label="記事をシェアする" />
 
-          {/* タグ（トピッククラスター導線） */}
+          {/* タグはヘッダー（メタ直下）へ移動済み（2026-09 リニューアル） */}
+
+          {/* 末尾の回遊は優先順位をつける（§3-2-7）:
+              (1) 同じチェーンの記事 = メイン導線（強く）
+              (2) 他チェーン比較 / 子連れ外食の関連記事（静かなリスト）
+              (3) 今日のプラン（静かなリスト）
+              見出し文言・リンク・件数は従来どおりで、並びと視覚の強さだけを変えている。 */}
+
+          {/* (1) チェーン×子連れ記事 → 同チェーン姉妹記事・比較ハブへのクロスリンク（勝ちクラスタの内部リンク強化） */}
           {(() => {
-            const tags = getTagsForArticle(article);
-            if (tags.length === 0) return null;
-            return (
-              <section style={{ marginTop: 40 }}>
-                <span className="eyebrow">Tags · トピックで探す</span>
-                <div className="outing-chips" style={{ marginTop: 12 }}>
-                  {tags.slice(0, 8).map((t) => (
-                    <Link key={t.slug} href={`/tag/${t.slug}`} className="outing-chip">
-                      {t.name}
-                    </Link>
-                  ))}
-                </div>
-              </section>
-            );
+            const chainLinks = getChainCrossLinks(article.slug);
+            return chainLinks.length > 0 ? (
+              <CrossLinkCards
+                variant="compact"
+                tone="primary"
+                eyebrow="このお店をもっと知る"
+                heading="同じお店・チェーン比較で迷わない"
+                items={chainLinks}
+              />
+            ) : null;
           })()}
 
-          {/* この記事の悩みに使えるプラン（記事 → プランの双方向リンク） */}
+          {/* (2) 同ジャンル他チェーン×同条件への回遊（比較検討中の読者向け・PV/クラスタ評価の両取り） */}
+          {(() => {
+            const indexableSlugs = new Set(
+              getAllFileArticles()
+                .filter((a) => !a.noindex)
+                .map((a) => a.slug),
+            );
+            const rivalBlock = getGenreRivalLinks(article.slug, indexableSlugs);
+            return rivalBlock ? (
+              <CrossLinkCards
+                variant="compact"
+                tone="quiet"
+                eyebrow="チェーン比較"
+                heading={rivalBlock.heading}
+                items={rivalBlock.links}
+              />
+            ) : null;
+          })()}
+
+          {/* (2) 外食記事 → 食事系の高単価ハブ記事への回遊（集客の弱い money ページへ内部リンク） */}
+          {(() => {
+            const hubLinks = getRestaurantFoodHubLinks(
+              article.slug,
+              article.category,
+              article.title,
+            );
+            return hubLinks.length > 0 ? (
+              <CrossLinkCards
+                variant="compact"
+                tone="quiet"
+                eyebrow="あわせて読みたい"
+                heading="子どもの食事の準備に役立つ記事"
+                items={hubLinks}
+              />
+            ) : null;
+          })()}
+
+          {/* (3) 外食記事 → 「今日の流れ」ツールへの導線（お店を軸にした1日プラン） */}
+          {(() => {
+            const dayPlanCta = getDayPlanCta(article.slug, article.category, article.title);
+            return dayPlanCta ? (
+              <CrossLinkCards
+                variant="compact"
+                tone="quiet"
+                eyebrow="1日プラン"
+                heading="お店を決めたら、前後の過ごし方も"
+                items={[dayPlanCta]}
+              />
+            ) : null;
+          })()}
+
+          {/* (3) この記事の悩みに使えるプラン（記事 → プランの双方向リンク） */}
           {relatedPlans.length > 0 && (
             <CrossLinkCards
               variant="compact"
+              tone="quiet"
               eyebrow="Today's plan · この記事の悩みに使えるプラン"
               heading="今日そのまま試せる行動プラン"
               defaultEyebrow="Plan"
@@ -1524,152 +1594,26 @@ function FileArticleView({ article }: { article: FileArticle }) {
             />
           )}
 
-          {/* 外食記事 → 食事系の高単価ハブ記事への回遊（集客の弱い money ページへ内部リンク） */}
-          {(() => {
-            const hubLinks = getRestaurantFoodHubLinks(
-              article.slug,
-              article.category,
-              article.title,
-            );
-            return hubLinks.length > 0 ? (
-              <CrossLinkCards
-                variant="compact"
-                eyebrow="あわせて読みたい"
-                heading="子どもの食事の準備に役立つ記事"
-                items={hubLinks}
-              />
-            ) : null;
-          })()}
-
-          {/* チェーン×子連れ記事 → 同チェーン姉妹記事・比較ハブへのクロスリンク（勝ちクラスタの内部リンク強化） */}
-          {(() => {
-            const chainLinks = getChainCrossLinks(article.slug);
-            return chainLinks.length > 0 ? (
-              <CrossLinkCards
-                variant="compact"
-                eyebrow="このお店をもっと知る"
-                heading="同じお店・チェーン比較で迷わない"
-                items={chainLinks}
-              />
-            ) : null;
-          })()}
-
-          {/* 外食記事 → 「今日の流れ」ツールへの導線（お店を軸にした1日プラン） */}
-          {(() => {
-            const dayPlanCta = getDayPlanCta(article.slug, article.category, article.title);
-            return dayPlanCta ? (
-              <CrossLinkCards
-                variant="compact"
-                eyebrow="1日プラン"
-                heading="お店を決めたら、前後の過ごし方も"
-                items={[dayPlanCta]}
-              />
-            ) : null;
-          })()}
-
-          {/* 同ジャンル他チェーン×同条件への回遊（比較検討中の読者向け・PV/クラスタ評価の両取り） */}
-          {(() => {
-            const indexableSlugs = new Set(
-              getAllFileArticles()
-                .filter((a) => !a.noindex)
-                .map((a) => a.slug),
-            );
-            const rivalBlock = getGenreRivalLinks(article.slug, indexableSlugs);
-            return rivalBlock ? (
-              <CrossLinkCards
-                variant="compact"
-                eyebrow="チェーン比較"
-                heading={rivalBlock.heading}
-                items={rivalBlock.links}
-              />
-            ) : null;
-          })()}
-
-          {/* Related articles */}
+          {/* Related articles（行リスト。hero サムネ・タイトル・カテゴリ名は従来どおり） */}
           {relatedArticles.length > 0 && (
-            <section className="cv-auto-section" style={{ marginTop: 56 }}>
-              <h2
-                style={{
-                  fontFamily: 'var(--font-mincho)',
-                  fontWeight: 600,
-                  fontSize: 22,
-                  margin: '0 0 20px',
-                }}
-              >
-                関連する記事
-              </h2>
-              <div
-                style={{
-                  display: 'grid',
-                  gap: 20,
-                  gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
-                }}
-              >
-                {relatedArticles.map((a) => (
-                  <Link
-                    key={a.slug}
-                    href={`/article/${a.slug}`}
-                    style={{
-                      background: 'var(--paper-card)',
-                      border: '1px solid var(--line)',
-                      borderRadius: 'var(--radius-lg)',
-                      overflow: 'hidden',
-                      textDecoration: 'none',
-                      color: 'inherit',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      transition: 'transform .25s ease, box-shadow .25s ease, border-color .25s ease',
-                    }}
-                    className="related-card"
-                  >
-                    <div
-                      style={{
-                        aspectRatio: '16/10',
-                        backgroundColor: 'var(--peach-soft)',
-                        overflow: 'hidden',
-                      }}
-                    >
-                      {a.hero && (
-                        <img
-                          src={a.hero}
-                          alt={a.title}
-                          loading="lazy"
-                          decoding="async"
-                          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                        />
-                      )}
-                    </div>
-                    <div style={{ padding: '14px 16px 18px' }}>
-                      <h4
-                        style={{
-                          fontFamily: 'var(--font-mincho)',
-                          fontSize: 14.5,
-                          fontWeight: 600,
-                          margin: 0,
-                          lineHeight: 1.55,
-                        }}
-                      >
-                        {a.title}
-                      </h4>
-                      {/* カテゴリ名を出して「同ジャンルの深掘り/別軸の発見」を区別させる */}
-                      {a.category || a.categoryName ? (
-                        <p
-                          style={{
-                            fontSize: 12,
-                            color: 'var(--ink-mute)',
-                            margin: '8px 0 0',
-                            letterSpacing: '.02em',
-                          }}
-                        >
-                          {articleCategoryLabel(a.category, a.categoryName)}
-                        </p>
-                      ) : null}
-                    </div>
-                  </Link>
-                ))}
-              </div>
+            <section className="cv-auto-section av3-related">
+              <KkSectionTitle as="h2" title="関連する記事" />
+              <ArticleRowList
+                label="関連する記事"
+                items={relatedArticles.map((a) => ({
+                  href: `/article/${a.slug}`,
+                  title: a.title,
+                  img: a.hero,
+                  imgAlt: a.title,
+                  // カテゴリ名を出して「同ジャンルの深掘り/別軸の発見」を区別させる
+                  sub: a.category || a.categoryName ? articleCategoryLabel(a.category, a.categoryName) : undefined,
+                }))}
+              />
             </section>
           )}
+
+          {/* ホーム画面に追加（回遊・再訪装置。リンク追加のみ） */}
+          <KkAddToHomeCard placement="article" />
 
         </div>
 
@@ -1681,6 +1625,9 @@ function FileArticleView({ article }: { article: FileArticle }) {
         </aside>
       </article>
 
+      {/* 共通フッター（2026-09 リニューアル） */}
+      <KkFooter />
+      </div>
       </V2Frame>
     </>
   );
@@ -1694,11 +1641,9 @@ function formatJaDate(iso: string): string {
 
 function QuickItem({ label, value }: { label: string; value: string }) {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-      <span style={{ fontFamily: 'var(--font-inter)', fontSize: 10, color: 'var(--ink-mute)', fontWeight: 600, letterSpacing: '.16em', textTransform: 'uppercase' }}>
-        {label}
-      </span>
-      <span style={{ fontSize: 14, fontWeight: 600, fontFamily: 'var(--font-mincho)' }}>{value}</span>
+    <div className="av3-quick-item">
+      <span className="av3-quick-label">{label}</span>
+      <span className="av3-quick-val">{value}</span>
     </div>
   );
 }

@@ -61,7 +61,10 @@ export type OutingSlot = {
   label: string;
   /** タイムライン時刻 */
   time: string;
-  /** 絵文字アイコン */
+  /**
+   * スロットのアイコン名（`components/kk/KkIcon.tsx` の KkIconName）。
+   * 2026-09 リニューアル: 絵文字は使わない（docs/renewal-2026-09.md §3-0）。
+   */
   icon: string;
   kind: 'spot' | 'restaurant' | 'homeplan';
   spot?: Spot;
@@ -598,7 +601,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
       key: 'morning',
       label: '午前 あそぶ',
       time: '10:30',
-      icon: '🌤',
+      icon: 'sunny',
       kind: 'spot',
       spot: morning.spot,
       spotSlug: spotToSlug(morning.spot, slugArea),
@@ -615,7 +618,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
       key: 'lunch',
       label: 'お昼 たべる',
       time: '12:00',
-      icon: '🍽',
+      icon: 'lunch',
       kind: 'restaurant',
       spot: lunch.spot,
       // 個人店は /station の個人店セクションへ（/spot ページを持たない）
@@ -650,7 +653,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
       key: 'afternoon',
       label: '午後 つづき',
       time: '13:30',
-      icon: '🧸',
+      icon: 'toy',
       kind: 'spot',
       spot: afternoon.spot,
       spotSlug: spotToSlug(afternoon.spot, slugArea),
@@ -663,7 +666,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
       key: 'afternoon',
       label: preferHome ? '午後 おうちで休憩' : '午後 おうちで',
       time: '13:30',
-      icon: '🏠',
+      icon: 'home',
       kind: 'homeplan',
       plan: home ?? undefined,
       move: { text: 'おうちへ（お昼寝・休憩）', tier: 'home' },

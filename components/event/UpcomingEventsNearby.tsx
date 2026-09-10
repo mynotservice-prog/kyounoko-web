@@ -6,6 +6,7 @@
  * イベントが1件も無い期間はセクションごと描画されない＝古い情報が残らない。
  */
 import Link from 'next/link';
+import { KkIcon } from '@/components/kk/KkIcon';
 import { V2SectionHead, V2Img } from '@/components/v2/V2Base';
 import { V2Icon } from '@/components/v2/V2Icon';
 import { eventHeroImage, formatEventPeriod, type EventEntry } from '@/lib/events';
@@ -30,7 +31,7 @@ export function UpcomingEventsNearby({
             <div className="v2-art-body">
               <div className="v2-art-title">{e.title}</div>
               <div className="v2-art-sub">
-                📅 {formatEventPeriod(e)} ／ {e.venue}
+                <KkIcon name="calendar" size={13} /> {formatEventPeriod(e)} ／ {e.venue}
               </div>
             </div>
             <V2Icon name="chevron-right" size={20} color="#cfcfcf" />

@@ -1,13 +1,26 @@
 /**
- * 「今日の流れ（おでかけ1日プラン）」表示。
- * lib/outing-plan.ts の buildOutingPlan() の結果を、移動表示つきの3スロットで描画する。
+ * 「今日の流れ（おでかけ1日プラン）」表示（リニューアル 2026-09 第3版 / docs §3-4）。
+ * lib/outing-plan.ts の buildOutingPlan() の結果を「一本の縦タイムライン」で描画する。
  * /today で ?station= / ?ward= が指定されたときに通常のAnswerCardの代わりにヒーロー表示する。
+ *
+ * 構成（社長指示の順序）:
+ *   見出し＋条件 → タイムライン（左にオレンジの細い縦線と時刻／右にスポット）
+ *   → 1日の動線を地図で見る（独立した横長導線）→ ネット予約PR（十分な余白＋PR表記）
+ *   → 保存(主)/別の流れ(副) → 雨ならこっち（軽く）→ 別の条件・駅で探す
+ *
+ * 表示の規律:
+ * - 絵文字は使わない。記号はすべて KkIcon（線画・墨1色）。
+ * - スポットを丸角カードにしない。移動情報はカードにせず、スポットとスポットの間に置く。
+ * - 設備バッジは実データ（Spot.facilities の yes/no と お昼の facets）だけから作る。捏造しない。
+ * - 写真は spot データに既にあるときだけ出す（新規に作らない）。
+ * CSS は app/styles/today-v3.css（.today-v3 配下）。
  */
 import Link from 'next/link';
 import type { OutingPlan, OutingSlot } from '@/lib/outing-plan';
 import { spotToSlug, type Spot } from '@/lib/spots';
 import { ReservationCTA } from '@/components/article/ReservationCTA';
 import { getSpotReservationOffer } from '@/lib/reservation-cta';
+import { KkIcon, type KkIconName } from '@/components/kk/KkIcon';
 import { SavePlanButton } from './SavePlanButton';
 
 function spotFacets(s: Spot): string[] {
@@ -19,11 +32,78 @@ function spotFacets(s: Spot): string[] {
   return f;
 }
 
-const SLOT_ACCENT: Record<OutingSlot['key'], string> = {
-  morning: 'var(--sky, #1493d1)',
-  lunch: 'var(--clay-deep, #c9603e)',
-  afternoon: 'var(--sage, #6f9c5f)',
+/** お昼 facets 文言 → アイコン */
+const FACET_ICON: Record<string, KkIconName> = {
+  ベビーチェア: 'baby-chair',
+  キッズメニュー: 'kids-menu',
+  ベビーカーOK: 'stroller',
+  離乳食OK: 'baby',
 };
+
+/** 天気ラベル → アイコン（labelForValue の文言に対応） */
+const WEATHER_ICON: Record<string, KkIconName> = {
+  晴れ: 'sunny',
+  くもり: 'cloudy',
+  雨: 'rain',
+  猛暑: 'hot',
+  寒い: 'cold',
+};
+
+/** Spot.facilities → 表示バッジ（yes/no のみ。undefined は出さない） */
+const FACILITY_DEFS: { key: keyof NonNullable<Spot['facilities']>; label: string; icon: KkIconName }[] = [
+  { key: 'nursingRoom', label: '授乳室', icon: 'nursing' },
+  { key: 'diaperChange', label: 'おむつ替え台', icon: 'diaper' },
+  { key: 'bathroom', label: '多目的トイレ', icon: 'accessible-toilet' },
+  { key: 'strollerRental', label: 'ベビーカー貸出', icon: 'stroller' },
+  { key: 'kidsSpace', label: 'キッズスペース', icon: 'kids-space' },
+];
+
+function facilityBadges(s?: Spot): { label: string; icon: KkIconName; status: 'yes' | 'no' }[] {
+  const f = s?.facilities;
+  if (!f) return [];
+  const out: { label: string; icon: KkIconName; status: 'yes' | 'no' }[] = [];
+  for (const d of FACILITY_DEFS) {
+    const v = f[d.key];
+    if (v === 'yes' || v === 'no') out.push({ label: d.label, icon: d.icon, status: v });
+  }
+  return out;
+}
+
+/** spot データに既にある写真（images[0] → 後方互換の image）。無ければ null。 */
+function spotPhoto(s?: Spot): string | null {
+  return s?.images?.[0] ?? s?.image ?? null;
+}
+
+function FacetChips({ facets }: { facets: string[] }) {
+  if (!facets.length) return null;
+  return (
+    <div className="td3-facs">
+      {facets.map((f) => (
+        <span key={f} className="td3-fac kk-pill text">
+          <KkIcon name={FACET_ICON[f] ?? 'check'} size={14} />
+          {f}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+/** 設備（Spot.facilities の yes/no のみ）。行程表の中では箱にせず、共通の kk-pill 1行で。 */
+function FacilityTiles({ spot }: { spot?: Spot }) {
+  const badges = facilityBadges(spot);
+  if (!badges.length) return null;
+  return (
+    <div className="td3-facs td3-facs-fac">
+      {badges.map((b) => (
+        <span key={b.label} className={'td3-fac kk-pill ' + b.status}>
+          <KkIcon name={b.icon} size={14} />
+          {b.label}
+          <span className="td3-fac-st">{b.status === 'yes' ? 'あり' : 'なし'}</span>
+        </span>
+      ))}
+    </div>
+  );
+}
 
 /** スロットkey → variantを表すクエリparam名 */
 const VARIANT_PARAM: Record<OutingSlot['key'], string> = {
@@ -39,182 +119,91 @@ function buildHref(params: Record<string, string>, overrides: Record<string, str
   return `/today?${sp.toString()}`;
 }
 
+function slotHref(slot: OutingSlot): string | undefined {
+  if ((slot.href || slot.spotSlug) && slot.kind !== 'homeplan') return slot.href ?? `/spot/${slot.spotSlug}`;
+  if (slot.kind === 'homeplan' && slot.plan) return `/plan/${slot.plan.id}`;
+  return undefined;
+}
+
+/** 移動（スポットとスポットの間）。カードにしない＝歩行アイコン＋距離・所要時間の1行。 */
 function MoveRow({ slot }: { slot: OutingSlot }) {
   if (!slot.move) return null;
+  const icon: KkIconName = slot.move.tier === 'home' ? 'home' : 'walk';
   return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: 8,
-        padding: '6px 0 6px 18px',
-        color: 'var(--ink-mute)',
-        fontSize: 12,
-        fontWeight: 600,
-      }}
-    >
-      <span aria-hidden="true">🚶</span>
-      <span
-        style={{
-          background: 'var(--paper-2, #efe7d6)',
-          borderRadius: 999,
-          padding: '2px 10px',
-        }}
-      >
-        {slot.move.text}
+    <div className="td3-move">
+      <span className="td3-move-ico">
+        <KkIcon name={icon} size={16} />
       </span>
+      <span className="td3-move-text">{slot.move.text}</span>
     </div>
   );
 }
 
 function SlotCard({ slot }: { slot: OutingSlot }) {
-  const accent = SLOT_ACCENT[slot.key];
-  const title =
-    slot.spot?.name ?? slot.plan?.title ?? 'おうちでゆっくり過ごす';
+  const title = slot.spot?.name ?? slot.plan?.title ?? 'おうちでゆっくり過ごす';
   const meta =
     slot.kind === 'restaurant'
       ? slot.spot?.note ?? '子連れOKのお店'
       : slot.kind === 'homeplan'
         ? slot.plan?.shortAnswer ?? 'お昼寝・休憩タイム。おうちで軽く遊ぶ'
         : slot.spot?.note ?? '';
+  const href = slotHref(slot);
+  const photo = spotPhoto(slot.spot);
 
-  const inner = (
-    <div
-      style={{
-        background: 'var(--paper-card, #fffaf6)',
-        border: '1px solid var(--line)',
-        borderLeft: `4px solid ${accent}`,
-        borderRadius: 14,
-        padding: '12px 14px',
-        display: 'flex',
-        gap: 12,
-      }}
-    >
-      <div style={{ flex: '0 0 52px', textAlign: 'center' }}>
-        <div style={{ fontSize: 22, lineHeight: 1 }} aria-hidden="true">
-          {slot.icon}
-        </div>
-        <div
-          style={{
-            fontSize: 10,
-            fontWeight: 700,
-            color: 'var(--ink-mute)',
-            marginTop: 4,
-          }}
-        >
-          {slot.time}
-        </div>
-      </div>
-      <div style={{ flex: 1, minWidth: 0 }}>
-        <div
-          style={{
-            fontSize: 11,
-            fontWeight: 700,
-            color: accent,
-            letterSpacing: '.04em',
-          }}
-        >
-          {slot.label}
-        </div>
-        <div
-          style={{
-            fontSize: 15,
-            fontWeight: 800,
-            color: 'var(--ink)',
-            lineHeight: 1.35,
-            marginTop: 2,
-          }}
-        >
+  return (
+    <div className={'td3-slot ' + slot.key}>
+      <span className="td3-slotlab">
+        <KkIcon name={slot.icon as KkIconName} size={14} />
+        {slot.label}
+      </span>
+      {href ? (
+        <Link href={href} className="td3-slot-name">
           {title}
-        </div>
-        {meta && (
-          <div
-            style={{
-              fontSize: 12,
-              color: 'var(--ink-sub)',
-              marginTop: 3,
-              lineHeight: 1.5,
-            }}
-          >
-            {meta}
-          </div>
-        )}
-        {slot.facets && slot.facets.length > 0 && (
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5, marginTop: 7 }}>
-            {slot.facets.map((f) => (
-              <span
-                key={f}
-                className="meta-chip clay"
-                style={{ fontSize: 10.5, fontWeight: 700 }}
-              >
-                {f}
-              </span>
-            ))}
-          </div>
-        )}
-      </div>
+          <KkIcon name="chevron-right" size={16} className="td3-slot-chev" />
+        </Link>
+      ) : (
+        <span className="td3-slot-name">{title}</span>
+      )}
+      {photo && (
+        <span className="td3-slot-photo">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={photo} alt="" loading="lazy" decoding="async" />
+        </span>
+      )}
+      {meta && <p className="td3-slot-desc">{meta}</p>}
+      {slot.facets && slot.facets.length > 0 && <FacetChips facets={slot.facets} />}
+      {slot.kind !== 'homeplan' && <FacilityTiles spot={slot.spot} />}
     </div>
   );
-
-  // spot/restaurant はスポット詳細へリンク（個人店は href=駅ページの個人店セクション優先。おうちプランはリンクなし）
-  if ((slot.href || slot.spotSlug) && slot.kind !== 'homeplan') {
-    return (
-      <Link
-        href={slot.href ?? `/spot/${slot.spotSlug}`}
-        style={{ textDecoration: 'none', display: 'block' }}
-      >
-        {inner}
-      </Link>
-    );
-  }
-  if (slot.kind === 'homeplan' && slot.plan) {
-    return (
-      <Link href={`/plan/${slot.plan.id}`} style={{ textDecoration: 'none', display: 'block' }}>
-        {inner}
-      </Link>
-    );
-  }
-  return inner;
 }
 
 /** 個人店の1行（/spot ページが無いので駅ページの個人店セクションへ）。 */
 function IndieRow({ s, href }: { s: Spot; href?: string }) {
   const facets = spotFacets(s);
-  const inner = (
-    <div
-      style={{
-        background: 'var(--paper-card, #fffaf6)',
-        border: '1px solid var(--line)',
-        borderRadius: 12,
-        padding: '11px 13px',
-      }}
-    >
-      <div style={{ fontSize: 14.5, fontWeight: 800, color: 'var(--ink)' }}>{s.name}</div>
-      {s.city && (
-        <div style={{ fontSize: 11.5, fontWeight: 700, color: 'var(--ink-mute)', marginTop: 2 }}>
-          🚶 {s.city}
-        </div>
+  const body = (
+    <>
+      <span className="kk-row-body">
+        <span className="kk-row-title">{s.name}</span>
+        {s.city && (
+          <span className="kk-row-sub td3-row-walk">
+            <KkIcon name="walk" size={13} />
+            {s.city}
+          </span>
+        )}
+        {s.note && <span className="kk-row-sub">{s.note}</span>}
+        <FacetChips facets={facets} />
+      </span>
+      {href && (
+        <span className="kk-row-arrow">
+          <KkIcon name="arrow-right" size={16} />
+        </span>
       )}
-      {s.note && (
-        <div style={{ fontSize: 12, color: 'var(--ink-sub)', marginTop: 3, lineHeight: 1.5 }}>
-          {s.note}
-        </div>
-      )}
-      {facets.length > 0 && (
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5, marginTop: 7 }}>
-          {facets.map((f) => (
-            <span key={f} className="meta-chip clay" style={{ fontSize: 10.5, fontWeight: 700 }}>
-              {f}
-            </span>
-          ))}
-        </div>
-      )}
-    </div>
+    </>
   );
-  if (!href) return <div style={{ marginBottom: 8 }}>{inner}</div>;
+  if (!href) return <div className="kk-row">{body}</div>;
   return (
-    <Link href={href} style={{ textDecoration: 'none', display: 'block', marginBottom: 8 }}>
-      {inner}
+    <Link href={href} className="kk-row">
+      {body}
     </Link>
   );
 }
@@ -223,35 +212,48 @@ function IndieRow({ s, href }: { s: Spot; href?: string }) {
 function RestaurantRow({ s }: { s: Spot }) {
   const facets = spotFacets(s);
   return (
-    <Link
-      href={`/spot/${spotToSlug(s, 'tokyo')}`}
-      style={{ textDecoration: 'none', display: 'block', marginBottom: 8 }}
-    >
-      <div
-        style={{
-          background: 'var(--paper-card, #fffaf6)',
-          border: '1px solid var(--line)',
-          borderRadius: 12,
-          padding: '11px 13px',
-        }}
-      >
-        <div style={{ fontSize: 14.5, fontWeight: 800, color: 'var(--ink)' }}>{s.name}</div>
-        {s.note && (
-          <div style={{ fontSize: 12, color: 'var(--ink-sub)', marginTop: 3, lineHeight: 1.5 }}>
-            {s.note}
-          </div>
-        )}
-        {facets.length > 0 && (
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5, marginTop: 7 }}>
-            {facets.map((f) => (
-              <span key={f} className="meta-chip clay" style={{ fontSize: 10.5, fontWeight: 700 }}>
-                {f}
-              </span>
-            ))}
-          </div>
-        )}
-      </div>
+    <Link href={`/spot/${spotToSlug(s, 'tokyo')}`} className="kk-row">
+      <span className="kk-row-body">
+        <span className="kk-row-title">{s.name}</span>
+        {s.note && <span className="kk-row-sub">{s.note}</span>}
+        <FacetChips facets={facets} />
+      </span>
+      <span className="kk-row-arrow">
+        <KkIcon name="arrow-right" size={16} />
+      </span>
     </Link>
+  );
+}
+
+/** 見出し下の条件表示（駅・年齢・天気）。 */
+function CondRow({
+  anchorLabel,
+  ageLabel,
+  weatherLabel,
+}: {
+  anchorLabel: string;
+  ageLabel?: string;
+  weatherLabel?: string;
+}) {
+  return (
+    <div className="kk-chips td3-cond">
+      <span className="kk-chip">
+        <KkIcon name="station" size={14} />
+        {anchorLabel}
+      </span>
+      {ageLabel && (
+        <span className="kk-chip">
+          <KkIcon name="child" size={14} />
+          {ageLabel}
+        </span>
+      )}
+      {weatherLabel && (
+        <span className="kk-chip">
+          <KkIcon name={WEATHER_ICON[weatherLabel] ?? 'cloudy'} size={14} />
+          {weatherLabel}
+        </span>
+      )}
+    </div>
   );
 }
 
@@ -276,28 +278,26 @@ export function LunchListView({
 }) {
   const offer = getSpotReservationOffer('restaurant');
   return (
-    <section className="container" style={{ marginTop: 16 }}>
-      <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, flexWrap: 'wrap' }}>
-        <h1 style={{ fontSize: 21, fontWeight: 800, margin: 0 }}>子連れで入れるお店</h1>
-        <span className="meta-chip clay" style={{ fontSize: 12 }}>📍 {anchorLabel}</span>
-        {ageLabel && <span className="meta-chip sage" style={{ fontSize: 12 }}>👶 {ageLabel}</span>}
+    <section className="td3-wrap td3-lunch">
+      <div className="td3-head">
+        <h1 className="td3-h1">子連れで入れるお店</h1>
+        <CondRow anchorLabel={anchorLabel} ageLabel={ageLabel} />
       </div>
-      <p style={{ fontSize: 13, color: 'var(--ink-sub)', margin: '8px 0 14px', lineHeight: 1.6 }}>
-        ベビーチェア・キッズメニュー・座敷など、子連れで入りやすいお店です。
-      </p>
+      <p className="td3-lead">ベビーチェア・キッズメニュー・座敷など、子連れで入りやすいお店です。</p>
 
       {indies.length > 0 && (
         <>
-          <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-mute)', margin: '4px 0 8px' }}>
-            駅近の個人店・人気店
+          <div className="td3-sublab">駅近の個人店・人気店</div>
+          <div className="kk-rows">
+            {indies.slice(0, 8).map((s) => (
+              <IndieRow key={s.name} s={s} href={indieHref} />
+            ))}
           </div>
-          {indies.slice(0, 8).map((s) => (
-            <IndieRow key={s.name} s={s} href={indieHref} />
-          ))}
           {indieHref && (
-            <p style={{ fontSize: 12.5, margin: '2px 0 10px' }}>
-              <Link href={indieHref} style={{ color: 'var(--clay, #c9603e)', fontWeight: 700 }}>
-                → この駅の個人店をぜんぶ見る
+            <p className="td3-morelink">
+              <Link href={indieHref}>
+                この駅の個人店をぜんぶ見る
+                <KkIcon name="arrow-right" size={15} sw={2} />
               </Link>
             </p>
           )}
@@ -306,28 +306,32 @@ export function LunchListView({
 
       {wardRest.length > 0 && (
         <>
-          <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-mute)', margin: '4px 0 8px' }}>
-            {wardName}のお店
+          <div className="td3-sublab">{wardName}のお店</div>
+          <div className="kk-rows">
+            {wardRest.slice(0, 12).map((s) => (
+              <RestaurantRow key={s.name} s={s} />
+            ))}
           </div>
-          {wardRest.slice(0, 12).map((s) => (
-            <RestaurantRow key={s.name} s={s} />
-          ))}
         </>
       )}
 
       {chain.length > 0 && (
         <>
-          <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-mute)', margin: '14px 0 8px' }}>
-            どの駅でも入りやすいファミリー向けチェーン
+          <div className="td3-sublab">どの駅でも入りやすいファミリー向けチェーン</div>
+          <div className="kk-rows">
+            {chain.slice(0, 8).map((s) => (
+              <RestaurantRow key={s.name} s={s} />
+            ))}
           </div>
-          {chain.slice(0, 8).map((s) => (
-            <RestaurantRow key={s.name} s={s} />
-          ))}
         </>
       )}
 
       {offer && (
-        <div style={{ marginTop: 14 }}>
+        <div className="td3-pr">
+          <div className="td3-pr-lab">
+            <span className="pr-label">PR</span>
+            <span>広告を含みます</span>
+          </div>
           <ReservationCTA offer={offer} />
         </div>
       )}
@@ -371,194 +375,144 @@ export function OutingPlanView({
         ? `${anchor.regionLabel}内で回れる1日にしました。`
         : `${anchor.regionLabel}まわりの1日プランです（一部は少し移動あり）。`;
 
-  return (
-    <section className="container" style={{ marginTop: 16 }}>
-      {/* ヘッダ：アンカーと条件 */}
-      <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, flexWrap: 'wrap' }}>
-        <h1 style={{ fontSize: 22, fontWeight: 800, margin: 0 }}>今日の流れ</h1>
-        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-          <span className="meta-chip clay" style={{ fontSize: 12 }}>
-            📍 {anchorLabel}
-          </span>
-          {ageLabel && (
-            <span className="meta-chip sage" style={{ fontSize: 12 }}>
-              👶 {ageLabel}
-            </span>
-          )}
-          {weatherLabel && (
-            <span className="meta-chip sky" style={{ fontSize: 12 }}>
-              {weatherLabel}
-            </span>
-          )}
-        </div>
-      </div>
-      <p style={{ fontSize: 13, color: 'var(--ink-sub)', margin: '8px 0 14px', lineHeight: 1.6 }}>
-        {lead}
-      </p>
+  // 1日の動線マップ（P1-6）。3地点＋起点駅を結ぶGoogleマップ経路（APIキー不要）。
+  const points = [
+    anchor.stationName ? `${anchor.stationName}駅` : anchor.regionLabel,
+    ...slots.map((s) => s.spot?.name).filter((n): n is string => !!n),
+  ];
+  let mapUrl: string | null = null;
+  if (points.length >= 2) {
+    const origin = encodeURIComponent(points[0]);
+    const destination = encodeURIComponent(points[points.length - 1]);
+    const waypoints = points.slice(1, -1).map(encodeURIComponent).join('|');
+    mapUrl =
+      `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}` +
+      (waypoints ? `&waypoints=${waypoints}` : '') +
+      `&travelmode=walking`;
+  }
 
-      {/* スロット（間に移動表示／各スロットに「別の候補に変える」） */}
-      <div>
+  return (
+    <section className="td3-wrap td3-plan">
+      {/* ヘッダ：アンカーと条件 */}
+      <div className="td3-head">
+        <h1 className="td3-h1">今日の流れ</h1>
+        <CondRow anchorLabel={anchorLabel} ageLabel={ageLabel} weatherLabel={weatherLabel} />
+      </div>
+      <p className="td3-lead">{lead}</p>
+
+      {/* 一本の縦タイムライン（左にオレンジの細い縦線と時刻、間に移動、各スロットに小さな別候補） */}
+      <ol className="td3-tl">
         {slots.map((slot, i) => {
           const vp = VARIANT_PARAM[slot.key];
           const swapHref = buildHref(params, { [vp]: bump(vp) });
           const canSwap = slot.kind !== 'homeplan';
           return (
-            <div key={slot.key}>
+            <li key={slot.key} className={'td3-tl-item ' + slot.key}>
               {i > 0 && <MoveRow slot={slot} />}
-              <SlotCard slot={slot} />
-              <div style={{ display: 'flex', gap: 12, padding: '6px 0 4px 4px' }}>
-                {canSwap && (
-                  <Link
-                    href={swapHref}
-                    scroll={false}
-                    style={{ fontSize: 11.5, fontWeight: 700, color: 'var(--ink-sub)', textDecoration: 'none' }}
-                  >
-                    ⇄ 別の候補に変える
-                  </Link>
-                )}
-                {slot.key === 'lunch' && (
-                  <Link
-                    href={buildHref(params, { slot: 'lunch' })}
-                    style={{ fontSize: 11.5, fontWeight: 700, color: 'var(--ink-sub)', textDecoration: 'none' }}
-                  >
-                    お昼だけ一覧で見る →
-                  </Link>
-                )}
+              <div className="td3-tl-row">
+                <div className="td3-tl-time">
+                  <span className="td3-tl-clock">{slot.time}</span>
+                  <span className="td3-tl-dot" aria-hidden="true" />
+                </div>
+                <div className="td3-tl-body">
+                  <SlotCard slot={slot} />
+                  {(canSwap || slot.key === 'lunch') && (
+                    <div className="td3-acts">
+                      {canSwap && (
+                        <Link href={swapHref} scroll={false} className="td3-act">
+                          <KkIcon name="swap" size={14} />
+                          別の候補に変える
+                        </Link>
+                      )}
+                      {slot.key === 'lunch' && (
+                        <Link href={buildHref(params, { slot: 'lunch' })} className="td3-act">
+                          お昼だけ一覧で見る
+                          <KkIcon name="arrow-right" size={14} />
+                        </Link>
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
+            </li>
           );
         })}
-      </div>
+      </ol>
 
-      {/* 1日の動線マップ（P1-6）。3地点＋起点駅を結ぶGoogleマップ経路（APIキー不要）。 */}
-      {(() => {
-        const points = [
-          anchor.stationName ? `${anchor.stationName}駅` : anchor.regionLabel,
-          ...slots.map((s) => s.spot?.name).filter((n): n is string => !!n),
-        ];
-        if (points.length < 2) return null;
-        const origin = encodeURIComponent(points[0]);
-        const destination = encodeURIComponent(points[points.length - 1]);
-        const waypoints = points.slice(1, -1).map(encodeURIComponent).join('|');
-        const url =
-          `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}` +
-          (waypoints ? `&waypoints=${waypoints}` : '') +
-          `&travelmode=walking`;
-        return (
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 10,
-              marginTop: 16,
-              padding: '14px 16px',
-              borderRadius: 14,
-              border: '1px solid var(--v2-line, #ead9c2)',
-              background: 'var(--v2-c-rain-bg, #eef4fb)',
-              textDecoration: 'none',
-              color: 'var(--ink, #2a2018)',
-            }}
-          >
-            <span style={{ fontSize: 20 }}>🗺</span>
-            <span style={{ flex: 1 }}>
-              <span style={{ display: 'block', fontSize: 14, fontWeight: 800 }}>1日の動線を地図で見る</span>
-              <span style={{ display: 'block', fontSize: 11.5, color: 'var(--ink-sub)' }}>
-                {points.join(' → ')}
-              </span>
+      {/* タイムライン直後の独立導線（機能CTAなので薄い背景を使う） */}
+      {mapUrl && (
+        <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="td3-map">
+          <span className="td3-map-ico">
+            <KkIcon name="map" size={24} sw={1.6} />
+          </span>
+          <span className="td3-map-body">
+            <span className="td3-map-title">1日の動線を地図で見る</span>
+            <span className="td3-map-route">
+              {points.map((p, i) => (
+                <span key={`${p}-${i}`} className="td3-map-pt">
+                  {i > 0 && <KkIcon name="chevron-right" size={12} sw={2} />}
+                  {p}
+                </span>
+              ))}
             </span>
-            <span style={{ fontSize: 18, color: 'var(--clay-deep)' }}>→</span>
-          </a>
-        );
-      })()}
+          </span>
+          <span className="td3-map-arrow">
+            <KkIcon name="arrow-right" size={18} sw={2} />
+          </span>
+        </a>
+      )}
 
-      {/* お昼の予約CTA（env未設定なら非表示） */}
+      {/* お昼の予約PR（プラン本体と十分な余白を空け、PR表記を明確に。env未設定なら非表示） */}
       {reservationOffer && (
-        <div style={{ marginTop: 14 }}>
+        <div className="td3-pr">
+          <div className="td3-pr-lab">
+            <span className="pr-label">PR</span>
+            <span>広告を含みます</span>
+          </div>
           <ReservationCTA offer={reservationOffer} />
         </div>
       )}
 
-      {/* 保存 / 別の流れ */}
-      <div style={{ display: 'flex', gap: 8, marginTop: 16 }}>
+      {/* 保存（主）/ 別の流れ（副）。同格にしない。 */}
+      <div className="td3-btns">
         <SavePlanButton label={saveLabel} />
-        <Link
-          href={rerollHref}
-          scroll={false}
-          style={{
-            flex: 1,
-            textAlign: 'center',
-            fontSize: 13,
-            fontWeight: 800,
-            padding: '11px',
-            borderRadius: 11,
-            background: 'var(--ink, #2a2018)',
-            color: 'var(--paper, #fbf5e8)',
-            textDecoration: 'none',
-          }}
-        >
-          ↻ 別の流れを見る
+        <Link href={rerollHref} scroll={false} className="kk-btn outline td3-reroll">
+          <KkIcon name="refresh" size={16} />
+          別の流れを見る
         </Link>
       </div>
 
-      <p style={{ fontSize: 11.5, color: 'var(--ink-mute)', marginTop: 14, lineHeight: 1.6 }}>
-        ※ 各スポットをタップすると詳細（設備・アクセス）が見られます。移動が長い組み合わせは出しません。
-      </p>
-
-      {/* P0-2: 雨プランB（折りたたみ。native details なので JS 不要・CLSなし） */}
+      {/* 雨ならこっち（残すが強くしない：雨アイコン＋短い説明＋矢印） */}
       {rainPlan && rainPlan.slots.length > 0 && (
-        <details className="rain-plan-b" style={{ marginTop: 18 }}>
-          <summary
-            style={{
-              cursor: 'pointer',
-              listStyle: 'none',
-              padding: '12px 14px',
-              borderRadius: 12,
-              border: '1px solid var(--v2-line, #ead9c2)',
-              background: 'var(--v2-c-rain-bg, #eef4fb)',
-              fontSize: 14,
-              fontWeight: 800,
-              color: 'var(--ink, #2a2018)',
-              display: 'flex',
-              alignItems: 'center',
-              gap: 8,
-            }}
-          >
-            ☔ 雨ならこっち
-            <span style={{ fontSize: 11.5, fontWeight: 600, color: 'var(--ink-sub)' }}>
-              （屋内中心の代替プラン）
+        <details className="rain-plan-b td3-rain">
+          <summary className="td3-rain-sum">
+            <span className="td3-rain-ico">
+              <KkIcon name="umbrella" size={18} />
+            </span>
+            <span className="td3-rain-title">雨ならこっち</span>
+            <span className="td3-rain-sub">（屋内中心の代替プラン）</span>
+            <span className="td3-rain-arrow" aria-hidden="true">
+              <KkIcon name="chevron-down" size={16} />
             </span>
           </summary>
-          <div style={{ padding: '12px 4px 0' }}>
-            {rainPlan.slots.map((slot, i) => {
-              const label =
-                slot.spot?.name ?? slot.plan?.title ?? 'おうちでゆっくり過ごす';
+          <div className="td3-rain-list">
+            {rainPlan.slots.map((slot) => {
+              const label = slot.spot?.name ?? slot.plan?.title ?? 'おうちでゆっくり過ごす';
+              const href = (slot.href || slot.spotSlug) && slot.kind !== 'homeplan' ? slot.href ?? `/spot/${slot.spotSlug}` : undefined;
               return (
-                <div
-                  key={`rain-${slot.key}`}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: 10,
-                    padding: '9px 0',
-                    borderTop: i > 0 ? '1px solid var(--v2-line, #ead9c2)' : 'none',
-                  }}
-                >
-                  <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--ink-sub)', minWidth: 78 }}>
+                <div key={`rain-${slot.key}`} className="td3-rain-row">
+                  <span className="td3-rain-time">
                     {slot.time} {slot.label}
                   </span>
-                  {(slot.href || slot.spotSlug) && slot.kind !== 'homeplan' ? (
-                    <Link
-                      href={slot.href ?? `/spot/${slot.spotSlug}`}
-                      style={{ fontSize: 14, fontWeight: 700, color: 'var(--ink)', textDecoration: 'none' }}
-                    >
-                      {slot.icon} {label}
+                  {href ? (
+                    <Link href={href} className="td3-rain-name">
+                      <KkIcon name={slot.icon as KkIconName} size={14} />
+                      {label}
                     </Link>
                   ) : (
-                    <span style={{ fontSize: 14, fontWeight: 700 }}>
-                      {slot.icon} {label}
+                    <span className="td3-rain-name">
+                      <KkIcon name={slot.icon as KkIconName} size={14} />
+                      {label}
                     </span>
                   )}
                 </div>
@@ -568,10 +522,15 @@ export function OutingPlanView({
         </details>
       )}
 
+      <p className="td3-note">
+        ※ 各スポットをタップすると詳細（設備・アクセス）が見られます。移動が長い組み合わせは出しません。
+      </p>
+
       {/* 別の駅で組み直す導線 */}
-      <div style={{ marginTop: 10 }}>
-        <Link href="/today" className="meta-chip" style={{ fontSize: 12, textDecoration: 'none' }}>
-          ← 別の条件・駅で探す
+      <div className="td3-backrow">
+        <Link href="/today" className="td3-back">
+          <KkIcon name="search" size={16} />
+          別の条件・駅で探す
         </Link>
       </div>
     </section>
