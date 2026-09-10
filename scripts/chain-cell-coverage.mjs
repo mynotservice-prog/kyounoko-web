@@ -12,8 +12,8 @@ const axes={
   '離乳食持込':/rinyushoku|rinyuushoku/,
   '座敷個室':/koshitsu|zashiki/,
   '子連れ攻略':/kodzurekoryaku/,
-  'ベビーカー':/bebycar|babycar/,
-  'アレルギー':/allergy|arerugi|teiarerugen/,
+  'ベビーカー':/stroller|bebycar|babycar|babycar|baby-?car/,
+  'アレルギー':/allergy|arerugi|allergen|arerugen|teiarerugen/,
   'おむつ授乳':/omutsu|junyu|jyunyu/,
 };
 // エンティティ = DB43 + 記事にしか存在しないプレフィックス
