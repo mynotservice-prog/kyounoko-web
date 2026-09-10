@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { V2Icon } from '@/components/v2/V2Icon';
+import { KkIcon } from '@/components/kk/KkIcon';
 
 /**
  * 「もっと見る」開閉。
@@ -21,31 +21,14 @@ export function SpotListReveal({
   const [open, setOpen] = React.useState(false);
   return (
     <>
-      <div style={{ display: open ? 'block' : 'none' }} className="v2-vlist">
+      <div style={{ display: open ? 'block' : 'none' }} className="v2-vlist sv3-rest">
         {children}
       </div>
       {!open && remaining > 0 && (
-        <div className="v2-section" style={{ marginTop: 12, textAlign: 'center' }}>
-          <button
-            type="button"
-            className="v2-more-btn"
-            onClick={() => setOpen(true)}
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 6,
-              padding: '10px 20px',
-              borderRadius: 999,
-              border: '1px solid var(--v2-line)',
-              background: 'var(--v2-card)',
-              color: 'var(--v2-ink)',
-              fontSize: 14,
-              fontWeight: 600,
-              cursor: 'pointer',
-            }}
-          >
+        <div className="sv3-more">
+          <button type="button" className="kk-btn outline" onClick={() => setOpen(true)}>
             もっと見る（残り{remaining}件）
-            <V2Icon name="arrow-right" size={14} />
+            <KkIcon name="chevron-down" size={15} />
           </button>
         </div>
       )}

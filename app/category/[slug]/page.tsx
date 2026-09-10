@@ -1,8 +1,9 @@
+import '@/app/styles/list-v3.css';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
-import { V2SectionHead, V2Img, V2Tag } from '@/components/v2/V2Base';
+import { V2Img, V2Tag } from '@/components/v2/V2Base';
 import { V2Icon } from '@/components/v2/V2Icon';
 import { getCategory, getCategories, getArticlesByCategory } from '@/lib/microcms';
 import { getFileArticlesByCategory, type FileArticleMeta } from '@/lib/articles';
@@ -11,6 +12,11 @@ import { getPopularItemsForArticleCategory } from '@/lib/items-catalog';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { getCategoryFaqs } from '@/lib/category-faqs';
 import { articleToV2 } from '@/lib/v2-adapters';
+import { KkSectionTitle } from '@/components/kk/KkSectionTitle';
+import { KkIcon } from '@/components/kk/KkIcon';
+import { KkAddToHomeCard } from '@/components/kk/KkAddToHomeCard';
+import { KkLineCard } from '@/components/kk/KkLineCard';
+import { KkFooter } from '@/components/kk/KkFooter';
 
 export const revalidate = 86400;
 
@@ -194,157 +200,127 @@ export default async function CategoryPage({ params }: Props) {
       )}
 
       <V2Frame header="sub" active="home">
-        {/* カテゴリ用ヒーロー — 支給B系 */}
-        <div className="v2-article-hero" style={{ height: 180 }}>
-          <V2Img src={categoryHero(slug)} seed={`cat-${slug}`} alt={category.name} />
-          <div className="v2-article-hero-grad"></div>
-          {/* breadcrumb（写真の上に重ねる。spot詳細と同じ .v2-sd-hero-crumb パターン） */}
-          <div className="v2-sd-hero-crumb">
+        <div className="list-v3">
+          {/* パンくず（写真に重ねず、通常の1行として置く） */}
+          <nav className="lv3-crumb" aria-label="パンくず">
             <Link href="/" style={{ color: 'inherit', textDecoration: 'none' }}>ホーム</Link>
-            <V2Icon name="chevron-right" size={11} />
+            <KkIcon name="chevron-right" size={11} />
             <span className="cur">{category.name}</span>
-          </div>
-          {/* パンくずを左上に重ねたので、カテゴリバッジはその下へずらして重なりを回避 */}
-          <span className="v2-article-hero-cat" style={{ top: 40 }}>カテゴリ</span>
-          <h1 className="v2-fa-hero-title" style={{ margin: 0, fontSize: 'inherit', fontWeight: 'inherit' }}>{category.name}</h1>
-        </div>
-        <div className="v2-page-head" style={{ paddingTop: 14 }}>
-          {category.description && (
-            <p className="v2-page-lead" style={{ marginTop: 0 }}>{category.description}</p>
-          )}
-        </div>
+          </nav>
 
-        {/* yakudatsu の特別バナー */}
-        {slug === 'yakudatsu' && (
-          <div className="v2-section">
-            <Link
-              href="/items"
-              className="v2-banner"
-              style={{ marginLeft: 0, marginRight: 0 }}
-            >
-              <span className="v2-banner-ico">
-                <V2Icon name="cart" size={22} color="var(--v2-orange)" />
-              </span>
-              <span className="v2-banner-txt">
-                <span className="v2-banner-title">商品カタログを見る</span>
-                <span className="v2-banner-sub">
-                  抱っこ紐・ベビーカー・宅食など、カテゴリ別に比較
+          {/* カテゴリ小情報 → H1 → 導入文 → 写真（写真の上に文字を重ねない） */}
+          <header className="lv3-head">
+            <span className="lv3-eyebrow">カテゴリ</span>
+            <h1 className="lv3-h1">{category.name}</h1>
+            {category.description && <p className="lv3-lead">{category.description}</p>}
+          </header>
+          <div className="lv3-hero">
+            {/* 画像は従来と同じ支給B系のカテゴリ写真 */}
+            <V2Img src={categoryHero(slug)} seed={`cat-${slug}`} alt={category.name} />
+          </div>
+
+          {/* yakudatsu の特別バナー */}
+          {slug === 'yakudatsu' && (
+            <div className="kk-sec">
+              <Link href="/items" className="lv3-banner">
+                <span className="lv3-banner-ico">
+                  <V2Icon name="cart" size={24} color="var(--kk-orange)" />
                 </span>
-              </span>
-              <V2Icon name="chevron-right" size={20} color="#c9b9a8" />
-            </Link>
-          </div>
-        )}
-
-        {/* 記事一覧 */}
-        <V2SectionHead title={`${category.name}の記事 (${displayArticles.length})`} more="" />
-        {displayArticles.length === 0 ? (
-          <div className="v2-section">
-            <p style={{ color: 'var(--v2-ink-mute)' }}>
-              このカテゴリの記事は準備中です。
-            </p>
-          </div>
-        ) : (
-          <div className="v2-vlist">
-            {displayArticles.map((a) => (
-              <Link
-                key={a.slug}
-                href={`/article/${a.slug}`}
-                className="v2-card-row"
-              >
-                <div
-                  className="v2-imgwrap"
-                  style={{
-                    width: 118,
-                    minWidth: 118,
-                    aspectRatio: '1/1',
-                    borderRadius: 14,
-                    position: 'relative',
-                  }}
-                >
-                  <V2Img src={a.img} seed={a.slug} alt={a.title} />
-                </div>
-                <div className="v2-card-row-body">
-                  <div className="v2-card-row-title">{a.title}</div>
-                  {a.sub && (
-                    <div className="v2-art-sub">{a.sub.slice(0, 60)}</div>
-                  )}
-                  {a.tags.length > 0 && (
-                    <div className="v2-tag-row">
-                      {a.tags.slice(0, 3).map((t, i) => (
-                        <V2Tag key={i} label={t} tone={i === 0 ? 'age' : ''} />
-                      ))}
-                    </div>
-                  )}
-                </div>
+                <span className="lv3-banner-txt">
+                  <span className="lv3-banner-title">商品カタログを見る</span>
+                  <span className="lv3-banner-sub">
+                    抱っこ紐・ベビーカー・宅食など、カテゴリ別に比較
+                  </span>
+                </span>
+                <span className="lv3-banner-arrow">
+                  <KkIcon name="arrow-right" size={18} />
+                </span>
               </Link>
-            ))}
-          </div>
-        )}
-
-        {/* AdSense */}
-        <div className="v2-section" style={{ marginTop: 24 }}>
-          <AdSlot placement="article-mid" />
-        </div>
-
-        {/* 人気商品 */}
-        {popularItems.length > 0 && (
-          <>
-            <V2SectionHead title="このカテゴリで人気の商品" moreHref="/items" />
-            <div className="v2-section" style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-              {popularItems.map((it) => (
-                <AffiliateLink
-                  key={it.id}
-                  href={it.href}
-                  title={it.name}
-                  subtitle={it.subtitle}
-                  price={it.price}
-                  provider={it.provider}
-                  itemId={it.id}
-                />
-              ))}
             </div>
-          </>
-        )}
+          )}
 
-        {/* FAQ */}
-        {faqs.length > 0 && (
-          <>
-            <div className="v2-sec-head">
-              <div className="v2-sec-title">
-                <span className="v2-bar-accent"></span>よくある質問
+          {/* 記事一覧 */}
+          <section className="kk-sec">
+            <KkSectionTitle as="div" title={`${category.name}の記事 (${displayArticles.length})`} />
+            {displayArticles.length === 0 ? (
+              <p className="kk-lead">このカテゴリの記事は準備中です。</p>
+            ) : (
+              <div className="kk-rows grid2">
+                {displayArticles.map((a) => (
+                  <Link key={a.slug} href={`/article/${a.slug}`} className="kk-row lv3-row">
+                    <span className="kk-row-thumb">
+                      <V2Img src={a.img} seed={a.slug} alt={a.title} />
+                    </span>
+                    <span className="kk-row-body">
+                      <span className="kk-row-title">{a.title}</span>
+                      {a.sub && <span className="kk-row-sub">{a.sub.slice(0, 60)}</span>}
+                      {a.tags.length > 0 && (
+                        <span className="lv3-tags">
+                          {a.tags.slice(0, 3).map((t, i) => (
+                            <V2Tag key={i} label={t} tone={i === 0 ? 'age' : ''} />
+                          ))}
+                        </span>
+                      )}
+                    </span>
+                  </Link>
+                ))}
               </div>
-            </div>
-            <div
-              className="v2-section"
-              style={{ display: 'flex', flexDirection: 'column', gap: 10 }}
-            >
-              {faqs.map((f, i) => (
-                <details key={i} className="v2-faq" open={i === 0}>
-                  <summary
-                    className="v2-faq-q"
-                    style={{ listStyle: 'none', cursor: 'pointer' }}
-                  >
-                    <span className="v2-faq-mark">Q</span>
-                    {f.question}
-                    <V2Icon
-                      name="chevron-down"
-                      size={18}
-                      color="#bbb"
-                      style={{ marginLeft: 'auto', flex: 'none' }}
-                    />
-                  </summary>
-                  <div className="v2-faq-a">
-                    <span className="v2-faq-mark a">A</span>
-                    <span>{f.answer}</span>
-                  </div>
-                </details>
-              ))}
-            </div>
-          </>
-        )}
+            )}
+          </section>
 
-        <div style={{ height: 24 }}></div>
+          {/* AdSense */}
+          <div className="lv3-ad">
+            <AdSlot placement="article-mid" />
+          </div>
+
+          {/* 人気商品 */}
+          {popularItems.length > 0 && (
+            <section className="kk-sec">
+              <KkSectionTitle as="div" title="このカテゴリで人気の商品" moreHref="/items" more="もっと見る" />
+              <div className="lv3-items">
+                {popularItems.map((it) => (
+                  <AffiliateLink
+                    key={it.id}
+                    href={it.href}
+                    title={it.name}
+                    subtitle={it.subtitle}
+                    price={it.price}
+                    provider={it.provider}
+                    itemId={it.id}
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* FAQ */}
+          {faqs.length > 0 && (
+            <section className="kk-sec">
+              <KkSectionTitle as="div" title="よくある質問" />
+              <div className="lv3-faq">
+                {faqs.map((f, i) => (
+                  <details key={i} open={i === 0}>
+                    <summary>
+                      <span className="lv3-faq-mark">Q</span>
+                      {f.question}
+                      <span className="lv3-faq-chev">
+                        <KkIcon name="chevron-down" size={18} />
+                      </span>
+                    </summary>
+                    <div className="lv3-faq-a">
+                      <span className="lv3-faq-mark a">A</span>
+                      <span>{f.answer}</span>
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </section>
+          )}
+
+          <KkLineCard placement="list" />
+          <KkAddToHomeCard placement="list" />
+          <KkFooter />
+        </div>
       </V2Frame>
     </>
   );

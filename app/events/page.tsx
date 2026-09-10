@@ -1,9 +1,14 @@
+import '@/app/styles/events-v3.css';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
-import { V2Img, V2SectionHead, V2Tag } from '@/components/v2/V2Base';
-import { V2Icon } from '@/components/v2/V2Icon';
+import { V2Img } from '@/components/v2/V2Base';
 import { V2EventCalendar } from '@/components/v2/V2EventCalendar';
+import { KkIcon } from '@/components/kk/KkIcon';
+import { KkSectionTitle } from '@/components/kk/KkSectionTitle';
+import { KkLineCard } from '@/components/kk/KkLineCard';
+import { KkAddToHomeCard } from '@/components/kk/KkAddToHomeCard';
+import { KkFooter } from '@/components/kk/KkFooter';
 import {
   EVENTS,
   EVENT_CATEGORY_LABELS,
@@ -121,56 +126,55 @@ export default async function EventsPage({ searchParams }: Props) {
   return (
     <V2Frame header="sub" active="events" backHref="/">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
-      {/* イベント用ヒーロー — 支給D系 */}
-      <div className="v2-ev-hero">
-        <V2Img
-          src="/v2/events/seasonal-summer.webp"
-          seed="ev-hero"
-          alt="今週のイベント"
-        />
-        <div className="v2-ev-hero-grad"></div>
-        {/* breadcrumb（写真の上に重ねる。spot詳細と同じ .v2-sd-hero-crumb パターン） */}
-        <div className="v2-sd-hero-crumb">
-          <Link href="/" style={{ color: 'inherit', textDecoration: 'none' }}>ホーム</Link>
-          <V2Icon name="chevron-right" size={11} />
-          <span className="cur">イベント</span>
-        </div>
-        <div className="v2-ev-hero-copy">
-          <span className="v2-ev-hero-badge">
-            <V2Icon name="calendar" size={14} color="#fff" />
+      <div className="events-v3">
+
+      {/* パンくず（写真の外に出す。リンク・文言は従来どおり） */}
+      <nav className="ev3-crumb" aria-label="パンくず">
+        <Link href="/">ホーム</Link>
+        <KkIcon name="chevron-right" size={11} />
+        <span className="cur">イベント</span>
+      </nav>
+
+      {/* 見出し＋メイン写真。PC（≥920px）では横並びにする。文字は写真に重ねない。 */}
+      <div className="ev3-top">
+        <div className="ev3-head">
+          <span className="ev3-eyebrow">
+            <KkIcon name="calendar" size={14} />
             編集部が毎週チェック
           </span>
-          <h1 className="v2-ev-hero-h1">今週のイベント</h1>
-          <p className="v2-ev-hero-sub">
+          <h1 className="ev3-h1">今週のイベント</h1>
+          <p className="ev3-sub">
             親子で楽しめるイベントを、子連れOK度つきでご紹介。
           </p>
         </div>
+        <div className="ev3-hero">
+          <div className="ev3-hero-img">
+            <V2Img
+              src="/v2/events/seasonal-summer.webp"
+              seed="ev-hero"
+              alt="今週のイベント"
+              priority
+            />
+          </div>
+        </div>
       </div>
 
-      {/* リスト/カレンダー切替タブ */}
-      <div className="v2-ev-tabs">
+      {/* リスト/カレンダー切替（操作UI＝角丸） */}
+      <div className="ev3-seg">
         <Link
           href="/events"
-          className={'v2-ev-tab' + (!isCalendar ? ' on' : '')}
+          className={'ev3-seg-btn' + (!isCalendar ? ' on' : '')}
           scroll={false}
         >
-          <V2Icon
-            name="menu"
-            size={15}
-            color={!isCalendar ? '#fff' : 'var(--v2-ink-mute)'}
-          />
+          <KkIcon name="menu" size={15} />
           リスト
         </Link>
         <Link
           href="/events?view=calendar"
-          className={'v2-ev-tab' + (isCalendar ? ' on' : '')}
+          className={'ev3-seg-btn' + (isCalendar ? ' on' : '')}
           scroll={false}
         >
-          <V2Icon
-            name="calendar"
-            size={15}
-            color={isCalendar ? '#fff' : 'var(--v2-ink-mute)'}
-          />
+          <KkIcon name="calendar" size={15} />
           カレンダー
         </Link>
       </div>
@@ -180,13 +184,13 @@ export default async function EventsPage({ searchParams }: Props) {
       {!isCalendar && (<>
 
       {/* 絞り込みフィルタ */}
-      <div className="v2-ev-filters">
-        <div className="v2-filter-group">
-          <div className="v2-filter-label">エリア</div>
-          <div className="v2-filter-opts">
+      <div className="ev3-filters">
+        <div>
+          <div className="ev3-filter-label">エリア</div>
+          <div className="kk-chips">
             <Link
               href={buildHref({ area: undefined })}
-              className={'v2-filter-opt' + (!filter.area ? ' on' : '')}
+              className={'kk-chip' + (!filter.area ? ' on' : '')}
               scroll={false}
             >
               すべて
@@ -195,7 +199,7 @@ export default async function EventsPage({ searchParams }: Props) {
               <Link
                 key={a}
                 href={buildHref({ area: filter.area === a ? undefined : a })}
-                className={'v2-filter-opt' + (filter.area === a ? ' on' : '')}
+                className={'kk-chip' + (filter.area === a ? ' on' : '')}
                 scroll={false}
               >
                 {getAreaName(a)}
@@ -204,12 +208,12 @@ export default async function EventsPage({ searchParams }: Props) {
           </div>
         </div>
 
-        <div className="v2-filter-group">
-          <div className="v2-filter-label">ジャンル</div>
-          <div className="v2-filter-opts">
+        <div>
+          <div className="ev3-filter-label">ジャンル</div>
+          <div className="kk-chips">
             <Link
               href={buildHref({ cat: undefined })}
-              className={'v2-filter-opt' + (!filter.category ? ' on' : '')}
+              className={'kk-chip' + (!filter.category ? ' on' : '')}
               scroll={false}
             >
               すべて
@@ -218,7 +222,7 @@ export default async function EventsPage({ searchParams }: Props) {
               <Link
                 key={c}
                 href={buildHref({ cat: filter.category === c ? undefined : c })}
-                className={'v2-filter-opt' + (filter.category === c ? ' on' : '')}
+                className={'kk-chip' + (filter.category === c ? ' on' : '')}
                 scroll={false}
               >
                 {EVENT_CATEGORY_LABELS[c]}
@@ -227,26 +231,26 @@ export default async function EventsPage({ searchParams }: Props) {
           </div>
         </div>
 
-        <div className="v2-filter-group">
-          <div className="v2-filter-label">こだわり</div>
-          <div className="v2-filter-opts">
+        <div>
+          <div className="ev3-filter-label">こだわり</div>
+          <div className="kk-chips">
             <Link
               href={buildHref({ free: filter.free ? undefined : '1' })}
-              className={'v2-filter-opt' + (filter.free ? ' on' : '')}
+              className={'kk-chip' + (filter.free ? ' on' : '')}
               scroll={false}
             >
               無料
             </Link>
             <Link
               href={buildHref({ soon: filter.soon ? undefined : '1' })}
-              className={'v2-filter-opt' + (filter.soon ? ' on' : '')}
+              className={'kk-chip' + (filter.soon ? ' on' : '')}
               scroll={false}
             >
               今週末・まもなく
             </Link>
             <Link
               href={buildHref({ baby: filter.baby ? undefined : '1' })}
-              className={'v2-filter-opt' + (filter.baby ? ' on' : '')}
+              className={'kk-chip' + (filter.baby ? ' on' : '')}
               scroll={false}
             >
               0歳OK
@@ -258,36 +262,37 @@ export default async function EventsPage({ searchParams }: Props) {
       {/* 絞り込み結果 */}
       {hasFilter && (
         <>
-          <div className="v2-sec-head">
-            <div className="v2-sec-title">
-              絞り込み結果<span className="v2-ev-count">{filtered.length}</span>
-            </div>
-            <Link href="/events" className="v2-sec-more" scroll={false}>
-              条件をクリア
-            </Link>
+          <div className="kk-sec ev3-sec">
+            <KkSectionTitle
+              as="div"
+              title={<>絞り込み結果<span className="ev3-count">{filtered.length}</span></>}
+            >
+              <Link href="/events" className="kk-sec-more" scroll={false}>
+                条件をクリア
+              </Link>
+            </KkSectionTitle>
           </div>
           {filtered.length > 0 ? (
-            <div className="v2-vlist">
+            <div className="ev3-rows">
               {filtered.map((e) => (
                 <EventRow key={e.slug} e={e} />
               ))}
             </div>
           ) : (
-            <div className="v2-empty-state">
-              <div className="v2-empty-ill">
-                <V2Icon name="calendar" size={40} color="#e9c9ac" />
+            <div className="ev3-empty">
+              <div className="ev3-empty-ico">
+                <KkIcon name="calendar" size={40} sw={1.4} />
               </div>
-              <div className="v2-empty-title">
+              <div className="ev3-empty-title">
                 条件に合うイベントが
                 <br />
                 見つかりませんでした
               </div>
-              <div className="v2-empty-sub">
+              <div className="ev3-empty-sub">
                 条件をへらすと見つかりやすくなります。
               </div>
             </div>
           )}
-          <div style={{ height: 24 }}></div>
         </>
       )}
 
@@ -296,13 +301,13 @@ export default async function EventsPage({ searchParams }: Props) {
       {/* 開催中 */}
       {ongoing.length > 0 && (
         <>
-          <div className="v2-sec-head">
-            <div className="v2-sec-title">
-              <span className="v2-ev-dot live"></span>
-              開催中<span className="v2-ev-count">{ongoing.length}</span>
-            </div>
+          <div className="kk-sec ev3-sec">
+            <KkSectionTitle
+              as="div"
+              title={<>開催中<span className="ev3-count">{ongoing.length}</span></>}
+            />
           </div>
-          <div className="v2-vlist">
+          <div className="ev3-rows">
             {ongoing.map((e) => (
               <EventRow key={e.slug} e={e} />
             ))}
@@ -317,16 +322,20 @@ export default async function EventsPage({ searchParams }: Props) {
       {/* 今週・まもなく */}
       {week.length > ongoing.length && (
         <>
-          <div className="v2-sec-head">
-            <div className="v2-sec-title">
-              <span className="v2-ev-dot soon"></span>
-              今週末・まもなく
-              <span className="v2-ev-count">
-                {week.filter((e) => !ongoing.includes(e)).length}
-              </span>
-            </div>
+          <div className="kk-sec ev3-sec">
+            <KkSectionTitle
+              as="div"
+              title={
+                <>
+                  今週末・まもなく
+                  <span className="ev3-count">
+                    {week.filter((e) => !ongoing.includes(e)).length}
+                  </span>
+                </>
+              }
+            />
           </div>
-          <div className="v2-vlist">
+          <div className="ev3-rows">
             {week.filter((e) => !ongoing.includes(e)).map((e) => (
               <EventRow key={e.slug} e={e} />
             ))}
@@ -337,8 +346,10 @@ export default async function EventsPage({ searchParams }: Props) {
       {/* 今月 */}
       {month.length > week.length && (
         <>
-          <V2SectionHead title="今月のイベント" more="" />
-          <div className="v2-vlist">
+          <div className="kk-sec ev3-sec">
+            <KkSectionTitle as="div" title="今月のイベント" />
+          </div>
+          <div className="ev3-rows">
             {month.filter((e) => !week.includes(e)).map((e) => (
               <EventRow key={e.slug} e={e} />
             ))}
@@ -347,16 +358,16 @@ export default async function EventsPage({ searchParams }: Props) {
       )}
 
       {EVENTS.length === 0 && (
-        <div className="v2-empty-state">
-          <div className="v2-empty-ill">
-            <V2Icon name="calendar" size={40} color="#e9c9ac" />
+        <div className="ev3-empty">
+          <div className="ev3-empty-ico">
+            <KkIcon name="calendar" size={40} sw={1.4} />
           </div>
-          <div className="v2-empty-title">
+          <div className="ev3-empty-title">
             イベント情報を
             <br />
             準備中です
           </div>
-          <div className="v2-empty-sub">
+          <div className="ev3-empty-sub">
             掲載までしばらくお待ちください。
           </div>
         </div>
@@ -365,7 +376,11 @@ export default async function EventsPage({ searchParams }: Props) {
 
       </>)}
 
-      <div style={{ height: 24 }}></div>
+      {/* 回遊・再訪モジュール（リニューアル2026-09） */}
+      <KkLineCard placement="events" />
+      <KkAddToHomeCard placement="events" />
+      <KkFooter />
+      </div>
     </V2Frame>
   );
 }
@@ -377,47 +392,43 @@ function isEventCategory(v: unknown): v is EventCategory {
 function EventRow({ e }: { e: import('@/lib/events').EventEntry }) {
   const dl = deadlineBadge(e);
   const kid = kidFriendliness(e);
-  const kidColor =
-    kid.mark === '◎'
-      ? { bg: 'var(--v2-c-indoor-bg)', c: 'var(--v2-c-indoor)' }
-      : kid.mark === '○'
-      ? { bg: 'var(--v2-c-sun-bg)', c: 'var(--v2-c-sun)' }
-      : { bg: '#EEEAE4', c: 'var(--v2-ink-mute)' };
+  // 子連れOK度は「データから出る可視テキスト」なので記号（◎○△）はそのまま残す。
+  // 色を持たせるのは状態だけ（向いている＝オレンジ／それ以外＝墨の枠線）。
+  const kidGood = kid.mark === '◎' || kid.mark === '○';
   return (
-    <Link href={`/event/${e.slug}`} className="v2-ev2-card">
-      <div className="v2-ev2-img">
+    <Link href={`/event/${e.slug}`} className="ev3-row">
+      <span className="ev3-row-img">
         <V2Img
           src={eventHeroImage(e)}
           seed={e.slug}
           alt={e.title}
         />
-        <span className={`v2-ev2-dl ${dl.level}`}>{dl.text}</span>
+        <span className={`ev3-dl ${dl.level}`}>{dl.text}</span>
         {e.startDate !== e.endDate && (
-          <span className="v2-ev2-span">期間中</span>
+          <span className="ev3-span">期間中</span>
         )}
-      </div>
-      <div className="v2-ev2-body">
-        <div className="v2-ev2-cat">{EVENT_CATEGORY_LABELS[e.category]}</div>
-        <div className="v2-ev2-name">{e.title}</div>
-        <div className="v2-ev2-meta">
-          <V2Icon name="calendar" size={13} color="var(--v2-orange)" />
+      </span>
+      <span className="ev3-row-body">
+        <span className="ev3-row-cat">{EVENT_CATEGORY_LABELS[e.category]}</span>
+        <span className="ev3-row-name">{e.title}</span>
+        <span className="ev3-row-meta">
+          <KkIcon name="calendar" size={13} />
           {formatEventPeriod(e)}
-        </div>
-        <div className="v2-ev2-meta">
-          <V2Icon name="pin" size={13} color="var(--v2-orange)" />
+        </span>
+        <span className="ev3-row-meta">
+          <KkIcon name="pin" size={13} />
           {e.venue}
-        </div>
-        <div className="v2-ev2-tags">
-          {e.ageLabel && <V2Tag label={e.ageLabel} tone="age" />}
+        </span>
+        <span className="ev3-row-tags">
+          {e.ageLabel && <span className="kk-chip plain">{e.ageLabel}</span>}
           <span
-            className="v2-ev2-kid"
-            style={{ background: kidColor.bg, color: kidColor.c }}
+            className={'ev3-kid' + (kidGood ? ' good' : '')}
             title={kid.label}
           >
             子連れ{kid.mark}
           </span>
-        </div>
-      </div>
+        </span>
+      </span>
     </Link>
   );
 }

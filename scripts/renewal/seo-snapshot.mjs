@@ -30,6 +30,15 @@ const URLS = [
   '/article/ohsho-kids-menu',
   '/article/hoshino-morning-kosodate',
   '/spot/ASOBono!-a463',
+  // 第2弾（一覧・カテゴリ系）
+  '/events',
+  '/event/doraemon-friends-tokyo-2026',
+  '/spots/park',
+  '/spots/indoor',
+  '/category/today-taberu',
+  '/tag/amenohi',
+  '/station/shinjuku',
+  '/station/ueno',
 ];
 
 function decode(s) {

@@ -82,11 +82,11 @@ export function StickySectionNav({ items, showAfter = 460 }: Props) {
         left: 0,
         right: 0,
         zIndex: 50,
-        background: 'rgba(255, 250, 246, 0.95)',
+        background: 'rgba(255, 255, 255, 0.96)',
         backdropFilter: 'blur(10px)',
         WebkitBackdropFilter: 'blur(10px)',
-        borderBottom: '1px solid rgba(201,96,62,0.18)',
-        boxShadow: visible ? '0 2px 12px rgba(0,0,0,0.04)' : 'none',
+        borderBottom: '1px solid var(--kk-rule-soft, #E7E2DA)',
+        boxShadow: 'none',
         transform: visible ? 'translateY(0)' : 'translateY(-100%)',
         transition: 'transform 0.25s ease-out, box-shadow 0.25s ease-out',
         pointerEvents: visible ? 'auto' : 'none',
@@ -95,7 +95,7 @@ export function StickySectionNav({ items, showAfter = 460 }: Props) {
       <div
         ref={navRef}
         style={{
-          maxWidth: 920,
+          maxWidth: 1080,
           margin: '0 auto',
           display: 'flex',
           gap: 4,
@@ -117,11 +117,13 @@ export function StickySectionNav({ items, showAfter = 460 }: Props) {
               style={{
                 flexShrink: 0,
                 padding: '7px 14px',
-                fontSize: 12,
-                fontWeight: isActive ? 600 : 500,
-                color: isActive ? '#fff' : 'var(--ink-sub)',
-                background: isActive ? 'var(--clay-deep)' : 'transparent',
-                border: isActive ? '1px solid var(--clay-deep)' : '1px solid rgba(201,96,62,0.20)',
+                fontSize: 12.5,
+                fontWeight: 700,
+                color: isActive ? '#fff' : 'var(--kk-ink-soft, #5F5548)',
+                background: isActive ? 'var(--kk-orange, #EE7A2E)' : 'transparent',
+                border: isActive
+                  ? '1px solid var(--kk-orange, #EE7A2E)'
+                  : '1px solid var(--kk-rule, #D8D2C7)',
                 borderRadius: 999,
                 textDecoration: 'none',
                 whiteSpace: 'nowrap',
@@ -132,8 +134,9 @@ export function StickySectionNav({ items, showAfter = 460 }: Props) {
               {item.count != null && (
                 <span style={{
                   marginLeft: 5,
-                  fontSize: 10,
-                  opacity: isActive ? 0.85 : 0.6,
+                  fontSize: 11,
+                  fontVariantNumeric: 'tabular-nums',
+                  opacity: isActive ? 0.9 : 0.65,
                 }}>
                   {item.count}
                 </span>

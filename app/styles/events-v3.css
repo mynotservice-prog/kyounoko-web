@@ -1,0 +1,358 @@
+/* イベント面（/events・/event/[slug]）固有のリニューアルCSS。
+   共通部品は app/styles/kk.css。すべて .events-v3（V2Frame 直下のラッパ）配下にスコープする。
+
+   方針（docs/renewal-2026-09.md §2 / §3-0）:
+   - 白地・1書体・共通の文字スケール（H1 30/34・H2 24/28・H3 21/23・本文17）。
+   - 丸角は操作UI（リスト/カレンダー切替・チップ・ボタン・日付セル・小さなステータス）だけ。
+     イベントは「塗った丸角カード」ではなく、罫線で区切った写真つきの行として並べる。
+   - 区切りは 余白 / 1px の罫線 / 写真サイズ / 文字サイズ で作る。
+   - 絵文字は使わない（KkIcon の線画に置き換え済み）。 */
+
+.events-v3 {
+  color: var(--kk-ink);
+  font-family: var(--kk-body);
+  padding-bottom: 8px;
+}
+.events-v3 .ev3-sec { margin-top: 34px; }
+
+/* 他コンポーネント（EventDayPlanSection / V2SectionHead）が持ち込む v2 見出し装飾は出さない */
+.events-v3 .v2-bar-accent { display: none !important; }
+.events-v3 .v2-sec-head {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 14px;
+  padding: 0 18px; margin: 38px 0 14px;
+}
+.events-v3 .v2-sec-title {
+  display: block;
+  font-family: var(--kk-display);
+  font-weight: 700;
+  font-size: var(--kk-h3);
+  line-height: 1.45;
+  letter-spacing: .02em;
+  color: var(--kk-ink);
+}
+.events-v3 .v2-sec-more {
+  flex: none; white-space: nowrap;
+  color: var(--kk-ink-mute); font-size: 12.5px; font-weight: 700;
+}
+.events-v3 .v2-sec-more:hover { color: var(--kk-orange-deep); }
+/* .v2-section（左右18px）の中に .v2-sec-head（同じく18px）が入ると余白が二重になる */
+.events-v3 .v2-section > .v2-sec-head { padding-left: 0; padding-right: 0; }
+/* 1日モデルコースのリード文は 12.5px のインラインstyleを持つ。本文の読みやすさに寄せる。 */
+.events-v3 .v2-section > p { font-size: 14px !important; line-height: 1.85 !important; color: var(--kk-ink-soft) !important; }
+/* 1日モデルコース（components/event/EventDayPlanSection）は白カードのインラインstyleを持つ。
+   別ファイルの所有者がいるので、このページの中だけ紙面に戻す。 */
+.events-v3 .v2-section > div[style*="background:#fff"] {
+  background: transparent !important;
+  border: 0 !important;
+  border-top: 1px solid var(--kk-rule) !important;
+  border-radius: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* ---------- パンくず ---------- */
+.events-v3 .ev3-crumb {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 4px;
+  padding: 12px 18px 0;
+  font-size: 11.5px; font-weight: 700; color: var(--kk-ink-mute); line-height: 1.5;
+}
+.events-v3 .ev3-crumb a { color: var(--kk-ink-mute); text-decoration: none; }
+.events-v3 .ev3-crumb a:hover { color: var(--kk-orange-deep); }
+.events-v3 .ev3-crumb .cur {
+  color: var(--kk-ink-soft);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 60vw;
+}
+
+/* ---------- 見出しブロック ---------- */
+.events-v3 .ev3-head { padding: 14px 18px 0; }
+.events-v3 .ev3-eyebrow {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 700; letter-spacing: .08em;
+  color: var(--kk-orange-deep);
+}
+.events-v3 .ev3-h1 {
+  margin: 9px 0 0;
+  font-family: var(--kk-display);
+  font-size: var(--kk-h1); font-weight: 800; line-height: 1.4; letter-spacing: 0;
+  color: var(--kk-ink);
+  overflow-wrap: anywhere; text-wrap: balance;
+}
+.events-v3 .ev3-sub {
+  margin: 12px 0 0;
+  font-size: var(--kk-body-size); font-weight: 400; line-height: var(--kk-body-lh);
+  color: var(--kk-body-color);
+}
+
+/* ---------- メイン写真（文字を重ねない・軽い角丸だけ） ---------- */
+.events-v3 .ev3-hero { padding: 18px 18px 0; }
+.events-v3 .ev3-hero-img {
+  position: relative; aspect-ratio: 16 / 9;
+  border-radius: var(--kk-r-img); overflow: hidden;
+  background: var(--kk-paper-deep);
+}
+.events-v3 .ev3-hero-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.events-v3.ev3-detail .ev3-hero-img { aspect-ratio: 4 / 3; }
+
+/* ---------- リスト / カレンダー切替（操作UI＝角丸を許す） ---------- */
+.events-v3 .ev3-seg {
+  display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 8px;
+  margin: 26px 18px 0;
+}
+.events-v3 .ev3-seg-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  padding: 11px 8px; border-radius: var(--kk-r-ui);
+  border: 1px solid var(--kk-rule); background: var(--kk-paper-soft);
+  font-size: 14px; font-weight: 700; color: var(--kk-ink); text-align: center;
+  text-decoration: none;
+}
+.events-v3 .ev3-seg-btn.on { background: var(--kk-orange); border-color: var(--kk-orange); color: #fff; }
+
+/* ---------- 絞り込み ---------- */
+.events-v3 .ev3-filters {
+  margin: 28px 18px 0; padding-top: 18px;
+  border-top: 1px solid var(--kk-rule-soft);
+  display: flex; flex-direction: column; gap: 16px;
+}
+.events-v3 .ev3-filter-label {
+  font-size: 12px; font-weight: 700; letter-spacing: .08em;
+  color: var(--kk-ink-mute); margin-bottom: 8px;
+}
+
+/* ---------- 見出し（セクション） ---------- */
+.events-v3 .ev3-count {
+  margin-left: 8px;
+  font-size: 15px; font-weight: 700; color: var(--kk-orange);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- イベントの行（写真つき・カードにしない） ---------- */
+.events-v3 .ev3-rows { padding: 0 18px; border-top: 1px solid var(--kk-rule-soft); }
+.events-v3 .ev3-row {
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 16px 0; border-bottom: 1px solid var(--kk-rule-soft);
+  color: var(--kk-ink); text-decoration: none;
+}
+.events-v3 .ev3-row-img {
+  position: relative; flex: none;
+  width: 116px; aspect-ratio: 4 / 3;
+  border-radius: var(--kk-r-img); overflow: hidden; background: var(--kk-paper-deep);
+}
+.events-v3 .ev3-row-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* 締切バッジ・期間中バッジは「小さなステータス」なので角丸を許す */
+.events-v3 .ev3-dl {
+  position: absolute; left: 5px; top: 5px; z-index: 2;
+  padding: 2px 8px; border-radius: var(--kk-r-pill);
+  background: rgba(37, 32, 27, .72); color: #fff;
+  font-size: 10.5px; font-weight: 700; line-height: 1.6; letter-spacing: .02em;
+}
+.events-v3 .ev3-dl.urgent,
+.events-v3 .ev3-dl.soon { background: var(--kk-orange); }
+.events-v3 .ev3-dl.live { background: var(--kk-orange-deep); }
+.events-v3 .ev3-span {
+  position: absolute; right: 5px; bottom: 5px; z-index: 2;
+  padding: 2px 7px; border-radius: 3px;
+  background: rgba(37, 32, 27, .55); color: #fff;
+  font-size: 10px; font-weight: 700; line-height: 1.6;
+}
+.events-v3 .ev3-row-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.events-v3 .ev3-row-cat {
+  font-size: 11.5px; font-weight: 700; letter-spacing: .06em; color: var(--kk-orange-deep);
+}
+.events-v3 .ev3-row-name {
+  font-size: 16px; font-weight: 700; line-height: 1.55; color: var(--kk-ink);
+  transition: color .12s;
+}
+.events-v3 .ev3-row:hover .ev3-row-name { color: var(--kk-orange-deep); }
+.events-v3 .ev3-row-meta {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12.5px; font-weight: 600; color: var(--kk-ink-soft); line-height: 1.6;
+}
+.events-v3 .ev3-row-meta svg { flex: none; color: var(--kk-ink-mute); }
+.events-v3 .ev3-row-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.events-v3 .ev3-kid {
+  display: inline-block; padding: 2px 9px; border-radius: var(--kk-r-pill);
+  font-size: 12px; font-weight: 700; line-height: 1.5; white-space: nowrap;
+  border: 1px solid var(--kk-rule); color: var(--kk-ink-soft);
+}
+.events-v3 .ev3-kid.good { border-color: var(--kk-orange); color: var(--kk-orange-deep); }
+
+/* ---------- 空の状態 ---------- */
+.events-v3 .ev3-empty {
+  margin: 26px 18px 0; padding: 30px 18px;
+  border-top: 1px solid var(--kk-rule-soft); border-bottom: 1px solid var(--kk-rule-soft);
+  text-align: center;
+}
+.events-v3 .ev3-empty-ico { display: flex; justify-content: center; color: var(--kk-ink-mute); }
+.events-v3 .ev3-empty-title {
+  margin-top: 14px;
+  font-family: var(--kk-display); font-size: var(--kk-h3); font-weight: 700;
+  line-height: 1.6; color: var(--kk-ink);
+}
+.events-v3 .ev3-empty-sub {
+  margin-top: 8px; font-size: 14px; line-height: 1.8; color: var(--kk-ink-soft);
+}
+
+/* ---------- カレンダー（日付切替は操作UI＝角丸OK。面の色は落とす） ---------- */
+.events-v3 .v2-cal { padding: 24px 18px 0; }
+.events-v3 .v2-cal-title {
+  font-family: var(--kk-display); font-size: var(--kk-h3); font-weight: 700; color: var(--kk-ink);
+}
+.events-v3 .v2-cal-nav-btn { border-radius: var(--kk-r-ui); border: 1px solid var(--kk-rule); background: transparent; }
+.events-v3 .v2-cal-dow { font-size: 11.5px; font-weight: 700; color: var(--kk-ink-mute); }
+/* v2.css の日付セルは aspect-ratio 1/1 + min-height 56px で最小幅が 56px になり、
+   375〜390px 幅では 7 列が入りきらずに土曜が切れていた。最小幅を 0 にして必ず収める。 */
+.events-v3 .v2-cal-grid { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.events-v3 .v2-cal-cell {
+  border-radius: var(--kk-r-ui); background: transparent; border: 1px solid var(--kk-rule-soft);
+  aspect-ratio: auto; min-height: 58px; min-width: 0;
+}
+.events-v3 .v2-cal-cell.empty { border-color: transparent; }
+.events-v3 .v2-cal-cell.has { background: transparent; border-color: var(--kk-rule); }
+.events-v3 .v2-cal-cell.today { border-color: var(--kk-orange); background: transparent; }
+.events-v3 .v2-cal-day { font-size: 12.5px; font-weight: 700; color: var(--kk-ink); }
+.events-v3 .v2-cal-dot { background: var(--kk-orange); }
+.events-v3 .v2-cal-count { font-size: 10.5px; font-weight: 700; color: var(--kk-orange-deep); }
+.events-v3 .v2-cal-selected {
+  margin: 24px 0 0; padding: 18px 0 0;
+  background: transparent; border-radius: 0;
+  border-top: 1px solid var(--kk-rule);
+}
+.events-v3 .v2-cal-selected-title {
+  font-family: var(--kk-display); font-size: var(--kk-h3); font-weight: 700;
+  color: var(--kk-ink); margin-bottom: 12px;
+}
+.events-v3 .ev3-cal-empty { font-size: 14px; color: var(--kk-ink-mute); line-height: 1.8; }
+.events-v3 .ev3-cal-rows { border-top: 1px solid var(--kk-rule-soft); }
+.events-v3 .ev3-cal-row {
+  display: flex; gap: 12px; align-items: center;
+  padding: 12px 0; border-bottom: 1px solid var(--kk-rule-soft);
+  color: var(--kk-ink); text-decoration: none;
+}
+.events-v3 .ev3-cal-img {
+  flex: none; width: 64px; aspect-ratio: 1 / 1;
+  border-radius: var(--kk-r-img); overflow: hidden; background: var(--kk-paper-deep);
+}
+.events-v3 .ev3-cal-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.events-v3 .ev3-cal-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.events-v3 .ev3-cal-name { font-size: 15px; font-weight: 700; line-height: 1.5; color: var(--kk-ink); }
+.events-v3 .ev3-cal-venue { font-size: 12.5px; color: var(--kk-ink-mute); line-height: 1.5; }
+.events-v3 .ev3-cal-row:hover .ev3-cal-name { color: var(--kk-orange-deep); }
+
+/* ===========================================================
+   /event/[slug]（詳細）
+   =========================================================== */
+.events-v3 .ev3-period {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 3px 7px; margin-top: 12px;
+  font-size: 14px; font-weight: 700; color: var(--kk-ink-soft); line-height: 1.6;
+}
+.events-v3 .ev3-period svg { flex: none; color: var(--kk-orange); }
+.events-v3 .ev3-period.ended svg { color: var(--kk-ink-mute); }
+.events-v3 .ev3-venue { margin-top: 6px; align-items: flex-start; }
+.events-v3 .ev3-venue svg { color: var(--kk-ink-mute); margin-top: 3px; }
+
+/* 終了のお知らせ = 小さなステータスなので枠を許す */
+.events-v3 .ev3-banner {
+  margin: 20px 18px 0; padding: 12px 14px;
+  border: 1px solid var(--kk-rule); border-radius: var(--kk-r-ui);
+  background: transparent;
+  font-size: 13.5px; line-height: 1.85; color: var(--kk-ink-soft);
+}
+.events-v3 .ev3-banner strong { color: var(--kk-ink); font-weight: 700; }
+.events-v3 .ev3-banner a { color: var(--kk-orange-deep); font-weight: 700; }
+
+.events-v3 .ev3-body { padding: 0 18px; margin-top: 22px; }
+.events-v3 .ev3-lede {
+  margin: 0 0 var(--kk-body-gap);
+  font-size: var(--kk-body-size); font-weight: 400; line-height: var(--kk-body-lh);
+  color: var(--kk-body-color);
+}
+.events-v3 .ev3-lede:last-child { margin-bottom: 0; }
+
+.events-v3 .ev3-official { justify-content: flex-start; gap: 9px; font-weight: 700; margin-top: 16px; }
+.events-v3 .ev3-official .ev3-official-arrow { margin-left: auto; color: rgba(255, 255, 255, .8); display: flex; }
+
+/* 編集部のひとこと（塗り箱にしない・上下の罫線と余白で編集部コメントに見せる） */
+.events-v3 .ev3-note { padding-top: 16px; border-top: 1px solid var(--kk-rule-soft); }
+.events-v3 .ev3-note-lab {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 700; letter-spacing: .06em; color: var(--kk-orange-deep);
+}
+.events-v3 .ev3-note-body {
+  margin: 8px 0 0;
+  font-size: var(--kk-body-size); font-weight: 400; line-height: var(--kk-body-lh);
+  color: var(--kk-body-color);
+}
+
+.events-v3 .ev3-lead-note {
+  margin: 0 0 14px; padding: 0 18px;
+  font-size: 14px; line-height: 1.85; color: var(--kk-ink-soft);
+}
+
+/* 周辺スポット（写真タイル） */
+.events-v3 .ev3-nearby { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 12px; }
+.events-v3 .ev3-nb { display: flex; flex-direction: column; gap: 7px; color: var(--kk-ink); }
+.events-v3 .ev3-nb-img {
+  aspect-ratio: 4 / 3; border-radius: var(--kk-r-img); overflow: hidden; background: var(--kk-paper-deep);
+}
+.events-v3 .ev3-nb-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.events-v3 .ev3-nb-name { font-size: 14px; font-weight: 700; line-height: 1.5; }
+.events-v3 .ev3-nb-loc {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 11.5px; color: var(--kk-ink-mute);
+}
+.events-v3 .ev3-nb:hover .ev3-nb-name { color: var(--kk-orange-deep); }
+
+/* ---------- 本文まわりの行長 ---------- */
+.events-v3 .ev3-measure { max-width: 100%; }
+
+/* ===========================================================
+   デスクトップ（≥920px）— スマホの引き伸ばしにしない
+   =========================================================== */
+@media (min-width: 920px) {
+  .events-v3 { max-width: 1080px; margin: 0 auto; }
+  .events-v3 .ev3-crumb { padding: 20px 4px 0; }
+  .events-v3 .ev3-head { padding: 0; margin-top: 14px; }
+  .events-v3 .ev3-sec { margin-top: 56px; }
+  .events-v3 .v2-sec-head { padding: 0 4px; margin: 56px 0 20px; }
+  .events-v3 .v2-sec-title { font-size: var(--kk-h2); }
+
+  /* 一覧のファーストビュー: 左に見出し・右に写真 */
+  .events-v3 .ev3-top {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    column-gap: 48px; align-items: center; margin-top: 8px;
+  }
+  .events-v3 .ev3-top .ev3-hero { padding: 0; }
+  .events-v3 .ev3-top .ev3-hero-img { aspect-ratio: 3 / 2; }
+  .events-v3 .ev3-sub { max-width: 46ch; }
+
+  /* 詳細のファーストビュー: 左に写真・右に見出し */
+  .events-v3.ev3-detail .ev3-top {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    align-items: start;
+  }
+  .events-v3.ev3-detail .ev3-top > * { grid-column: 2; }
+  .events-v3.ev3-detail .ev3-top .ev3-hero { grid-column: 1; grid-row: 1 / span 99; }
+  .events-v3.ev3-detail .ev3-hero-img { aspect-ratio: 3 / 2; }
+  .events-v3.ev3-detail .ev3-banner { margin-left: 0; margin-right: 0; }
+
+  .events-v3 .ev3-seg { margin: 34px 4px 0; max-width: 320px; }
+  .events-v3 .ev3-filters { margin: 34px 4px 0; flex-direction: row; flex-wrap: wrap; gap: 26px 40px; }
+  .events-v3 .ev3-body { padding: 0 4px; max-width: 760px; }
+  .events-v3 .ev3-lead-note { padding: 0 4px; max-width: 760px; }
+  .events-v3 .ev3-measure { max-width: 760px; }
+
+  /* 一覧は2列の写真行に */
+  .events-v3 .ev3-rows {
+    padding: 0 4px;
+    display: grid; grid-template-columns: 1fr 1fr; column-gap: 44px;
+  }
+  .events-v3 .ev3-rows > .ev3-row:nth-child(2) { border-top: 0; }
+  .events-v3 .ev3-row-img { width: 148px; }
+  .events-v3 .ev3-row-name { font-size: 17px; }
+
+  .events-v3 .ev3-nearby { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px 18px; }
+  .events-v3 .ev3-nb-name { font-size: 14.5px; }
+
+  .events-v3 .v2-cal { padding: 34px 4px 0; max-width: 860px; }
+  .events-v3 .ev3-empty { margin: 34px 4px 0; }
+}

@@ -1,9 +1,13 @@
+import '@/app/styles/spots-v3.css';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
 import { V2SpotRow } from '@/components/v2/V2Cards';
-import { V2SectionHead } from '@/components/v2/V2Base';
-import { V2Icon, V2_ACCENT, type V2IconName } from '@/components/v2/V2Icon';
+import { KkSectionTitle } from '@/components/kk/KkSectionTitle';
+import { KkIcon } from '@/components/kk/KkIcon';
+import { KkArt, type KkArtName } from '@/components/kk/KkArt';
+import { KkAddToHomeCard } from '@/components/kk/KkAddToHomeCard';
+import { KkFooter } from '@/components/kk/KkFooter';
 import { SPOT_CATEGORY_LABEL } from '@/lib/spots';
 import { spotToV2 } from '@/lib/v2-adapters';
 import { AdSlot } from '@/components/ads/AdSlot';
@@ -20,6 +24,22 @@ export const revalidate = 3600;
 const PREVIEW = 12;
 /** 絞り込みモードの初期表示件数。 */
 const INITIAL = 24;
+
+/**
+ * カテゴリ → 社長支給のカラーイラスト（KkArt）。
+ * lib/spot-browse.ts の `icon` はラベルと意味が食い違う（動物園=葉・水族館=傘…）ので、
+ * トップの「スポットの種類」と同じ対応表をここでも明示する（docs §3-0「アイコンはテキストと意味が一致すること」）。
+ */
+const SPOT_CAT_ART: Record<string, KkArtName> = {
+  park: 'park',           // 公園・自然 → 木とベンチ
+  zoo: 'zoo',             // 動物園 → キリンとゾウ
+  aquarium: 'aquarium',   // 水族館 → 水槽と魚
+  museum: 'museum',       // 博物館・科学館 → 神殿風の建物
+  indoor: 'kids-space',   // 室内遊び場 → 屋内キッズスペース
+  amusement: 'themepark', // 遊園地 → 観覧車
+  farm: 'farm',           // 牧場 → 牛と羊
+  seasonal: 'shrine',     // 観光スポット → 鳥居
+};
 
 type Props = {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
@@ -67,28 +87,29 @@ export default async function SpotsPage({ searchParams }: Props) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
     <V2Frame header="sub" active="spots">
-      <div className="v2-page-head" style={{ paddingTop: 6 }}>
-        <h1 className="v2-page-h1" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <V2Icon name="pin" size={24} color="var(--v2-orange)" />
-          子連れスポットを探す
-        </h1>
-        <p className="v2-page-lead">
-          0〜6歳の子どもと楽しめるスポットを{totalCount}件以上、カテゴリ別・条件別に探せます。
-        </p>
+      <div className="spots-v3">
+        <div className="sv3-head">
+          {/* 見出しは装飾を付けず、文字と余白だけで成立させる（docs §2-1） */}
+          <h1 className="sv3-h1">子連れスポットを探す</h1>
+          <p className="sv3-lead">
+            0〜6歳の子どもと楽しめるスポットを{totalCount}件以上、カテゴリ別・条件別に探せます。
+          </p>
+        </div>
+
+        {/* 絞り込み・並び替え（P0-3b/c）。どちらのモードでも上部に常設。 */}
+        <div className="sv3-controls">
+          <SpotFilterBar spots={filterable} initial={filters} basePath="/spots" />
+        </div>
+
+        {filterMode ? (
+          <FilteredResults filters={filters} allDest={allDest} />
+        ) : (
+          <BrowseMode ov={ov} />
+        )}
+
+        <KkAddToHomeCard placement="spots" />
+        <KkFooter />
       </div>
-
-      {/* 絞り込み・並び替え（P0-3b/c）。どちらのモードでも上部に常設。 */}
-      <div className="v2-section" style={{ marginTop: 4 }}>
-        <SpotFilterBar spots={filterable} initial={filters} basePath="/spots" />
-      </div>
-
-      {filterMode ? (
-        <FilteredResults filters={filters} allDest={allDest} />
-      ) : (
-        <BrowseMode ov={ov} />
-      )}
-
-      <div style={{ height: 24 }}></div>
     </V2Frame>
     </>
   );
@@ -113,14 +134,17 @@ function FilteredResults({
 
   if (matched.length === 0) {
     return (
-      <div className="v2-section" style={{ marginTop: 20, textAlign: 'center' }}>
-        <p style={{ fontSize: 14, fontWeight: 700, marginBottom: 6 }}>
+      <div className="sv3-empty">
+        <span className="sv3-empty-art">
+          <KkArt name="search" size={56} />
+        </span>
+        <p className="sv3-empty-title">
           条件に合うスポットが見つかりませんでした
         </p>
-        <p style={{ fontSize: 13, color: 'var(--v2-ink-mute)', marginBottom: 12, lineHeight: 1.7 }}>
+        <p className="sv3-empty-sub">
           設備や料金の条件を1つ外すか、エリアを「首都圏」に広げると見つかりやすくなります。
         </p>
-        <Link href="/spots" className="v2-more-btn" style={resetBtnStyle}>
+        <Link href="/spots" className="kk-btn outline">
           条件をリセットして全件を見る
         </Link>
       </div>
@@ -129,10 +153,8 @@ function FilteredResults({
 
   return (
     <>
-      <p className="v2-section" style={{ fontSize: 13, fontWeight: 700, marginTop: 12 }}>
-        {matched.length}件
-      </p>
-      <div className="v2-vlist" style={{ marginTop: 4 }}>
+      <p className="sv3-count">{matched.length}件</p>
+      <div className="v2-vlist">
         {head.map((x, i) => (
           <V2SpotRow key={x.slug} spot={spotToV2(x.spot, i)} href={`/spot/${x.slug}`} />
         ))}
@@ -142,7 +164,7 @@ function FilteredResults({
           <V2SpotRow key={x.slug} spot={spotToV2(x.spot, i + INITIAL)} href={`/spot/${x.slug}`} />
         ))}
       </SpotListReveal>
-      <div className="v2-section" style={{ marginTop: 24 }}>
+      <div className="v2-section sv3-ad">
         <AdSlot placement="home-below-finder" />
       </div>
     </>
@@ -154,31 +176,31 @@ function BrowseMode({ ov }: { ov?: SpotOverridesMap }) {
   const byCat = BROWSE_CATEGORIES.map((c) => ({ c, list: spotsByCategory(c.id, ov) }));
   return (
     <>
-      {/* カテゴリショートカット */}
-      <V2SectionHead title="カテゴリから探す" more="" />
-      <div className="v2-quick-grid">
-        {BROWSE_CATEGORIES.map((c) => {
-          const a = V2_ACCENT[c.accent as keyof typeof V2_ACCENT] ?? V2_ACCENT.purple;
-          return (
-            <Link key={c.id} href={`/spots/${c.id}`} className="v2-quick-item">
-              <span className="v2-quick-ico" style={{ background: a.bg }}>
-                <V2Icon name={c.icon as V2IconName} size={26} color={a.c} />
+      {/* カテゴリショートカット。見出しタグは元の div のまま（SEO照合のため h2 にしない）。 */}
+      <section className="kk-sec">
+        <KkSectionTitle as="div" title="カテゴリから探す" />
+        <div className="sv3-types">
+          {BROWSE_CATEGORIES.map((c) => (
+            <Link key={c.id} href={`/spots/${c.id}`} className="sv3-type">
+              <span className="sv3-type-ico">
+                <KkArt name={SPOT_CAT_ART[c.id] ?? 'park'} size={44} />
               </span>
-              <span className="v2-quick-label">{c.label}</span>
+              <span className="sv3-type-label">{c.label}</span>
             </Link>
-          );
-        })}
-      </div>
+          ))}
+        </div>
+      </section>
 
-      <div className="v2-section" style={{ marginTop: 24 }}>
+      <div className="v2-section sv3-ad">
         <AdSlot placement="home-below-finder" />
       </div>
 
       {byCat.map(({ c, list }) => {
         if (!list.length) return null;
         return (
-          <section key={c.id} id={`cat-${c.id}`}>
-            <V2SectionHead
+          <section key={c.id} id={`cat-${c.id}`} className="kk-sec sv3-catsec">
+            <KkSectionTitle
+              as="div"
               title={`${SPOT_CATEGORY_LABEL[c.id]}（${c.label}）`}
               more={list.length > PREVIEW ? 'すべて見る' : ''}
               moreHref={list.length > PREVIEW ? `/spots/${c.id}` : undefined}
@@ -189,10 +211,10 @@ function BrowseMode({ ov }: { ov?: SpotOverridesMap }) {
               ))}
             </div>
             {list.length > PREVIEW && (
-              <div className="v2-section" style={{ marginTop: 12, textAlign: 'center' }}>
-                <Link href={`/spots/${c.id}`} className="v2-more-btn" style={moreBtnStyle}>
+              <div className="sv3-more">
+                <Link href={`/spots/${c.id}`} className="kk-btn outline">
                   {c.label}をすべて見る（全{list.length}件）
-                  <V2Icon name="arrow-right" size={14} />
+                  <KkIcon name="arrow-right" size={15} />
                 </Link>
               </div>
             )}
@@ -202,28 +224,3 @@ function BrowseMode({ ov }: { ov?: SpotOverridesMap }) {
     </>
   );
 }
-
-const moreBtnStyle: React.CSSProperties = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  gap: 6,
-  padding: '10px 20px',
-  borderRadius: 999,
-  border: '1px solid var(--v2-line)',
-  background: 'var(--v2-card)',
-  color: 'var(--v2-ink)',
-  fontSize: 14,
-  fontWeight: 600,
-};
-const resetBtnStyle: React.CSSProperties = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  gap: 6,
-  padding: '10px 20px',
-  borderRadius: 999,
-  border: '1px solid var(--v2-line)',
-  background: 'var(--v2-card, #fff)',
-  color: 'var(--v2-ink)',
-  fontSize: 14,
-  fontWeight: 700,
-};
