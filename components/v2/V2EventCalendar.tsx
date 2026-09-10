@@ -199,67 +199,25 @@ export function V2EventCalendar({ events }: Props) {
             {selectedEvents.length > 0 ? ` (${selectedEvents.length}件)` : ''}
           </div>
           {selectedEvents.length === 0 ? (
-            <div style={{ fontSize: 13, color: 'var(--v2-ink-mute)' }}>
+            <div className="ev3-cal-empty">
               この日のイベントはありません。
             </div>
           ) : (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            /* リニューアル2026-09: 塗った丸角カードをやめ、罫線で区切った行にする（app/styles/events-v3.css） */
+            <div className="ev3-cal-rows">
               {selectedEvents.map((e) => (
-                <Link
-                  key={e.slug}
-                  href={`/event/${e.slug}`}
-                  style={{
-                    display: 'flex',
-                    gap: 10,
-                    padding: 10,
-                    background: '#fff',
-                    borderRadius: 12,
-                    textDecoration: 'none',
-                    color: 'inherit',
-                  }}
-                >
-                  <div
-                    style={{
-                      width: 56,
-                      minWidth: 56,
-                      aspectRatio: '1/1',
-                      borderRadius: 10,
-                      overflow: 'hidden',
-                    }}
-                  >
+                <Link key={e.slug} href={`/event/${e.slug}`} className="ev3-cal-row">
+                  <span className="ev3-cal-img">
                     <V2Img
                       src={e.hero || '/v2/events/show-museum.webp'}
                       seed={e.slug}
                       alt={e.title}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     />
-                  </div>
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <div
-                      style={{
-                        fontSize: 13.5,
-                        fontWeight: 800,
-                        color: 'var(--v2-ink)',
-                        lineHeight: 1.35,
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis',
-                        display: '-webkit-box',
-                        WebkitLineClamp: 2,
-                        WebkitBoxOrient: 'vertical',
-                      }}
-                    >
-                      {e.title}
-                    </div>
-                    <div
-                      style={{
-                        fontSize: 11,
-                        color: 'var(--v2-ink-mute)',
-                        marginTop: 4,
-                      }}
-                    >
-                      {e.venue}
-                    </div>
-                  </div>
+                  </span>
+                  <span className="ev3-cal-body">
+                    <span className="ev3-cal-name">{e.title}</span>
+                    <span className="ev3-cal-venue">{e.venue}</span>
+                  </span>
                 </Link>
               ))}
             </div>

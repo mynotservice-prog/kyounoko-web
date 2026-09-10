@@ -1,8 +1,14 @@
+import '@/app/styles/list-v3.css';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
+import { V2Img } from '@/components/v2/V2Base';
 import { getTag, getAllTags, getContentForTag, getTagsByKind } from '@/lib/tags';
+import { KkIcon } from '@/components/kk/KkIcon';
+import { KkAddToHomeCard } from '@/components/kk/KkAddToHomeCard';
+import { KkLineCard } from '@/components/kk/KkLineCard';
+import { KkFooter } from '@/components/kk/KkFooter';
 
 export const revalidate = 86400;
 
@@ -88,161 +94,119 @@ export default async function TagPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCollection) }} />
 
       <V2Frame header="sub" active="home">
+        <div className="list-v3">
+          <nav className="lv3-crumb" aria-label="パンくず">
+            <Link href="/">HOME</Link>
+            <span className="sep">/</span>
+            <span>タグ</span>
+            <span className="sep">/</span>
+            <span className="cur">{tag.name}</span>
+          </nav>
 
-      <div className="container">
-        <nav className="breadcrumb" aria-label="パンくず">
-          <Link href="/">HOME</Link>
-          <span className="sep">/</span>
-          <span>タグ</span>
-          <span className="sep">/</span>
-          <span>{tag.name}</span>
-        </nav>
-      </div>
-
-      <section className="section" style={{ paddingTop: 24 }}>
-        <div className="container">
-          <header className="page-head" style={{ paddingTop: 16 }}>
-            <span className="eyebrow">Tag · {tag.kind}</span>
-            <h1>{tag.name}</h1>
-            <p className="lead">{tag.description}</p>
-            <p style={{ marginTop: 12, fontSize: 13, color: 'var(--ink-mute)' }}>
+          <header className="lv3-head">
+            <span className="lv3-eyebrow">Tag · {tag.kind}</span>
+            <h1 className="lv3-h1">{tag.name}</h1>
+            <p className="lv3-lead">{tag.description}</p>
+            <p className="lv3-count">
               この条件にマッチする記事 {articles.length} 件、プラン {plans.length} 件
             </p>
           </header>
+
+          {/* プラン一覧 */}
+          {plans.length > 0 && (
+            <section className="kk-sec">
+              <div className="kk-sec-head">
+                <div className="lv3-sec-titles">
+                  <span className="lv3-eyebrow">Plans</span>
+                  <h2 className="kk-sec-title">今日の行動プラン</h2>
+                </div>
+                <span className="lv3-hint">{plans.length} 件</span>
+              </div>
+              <div className="kk-rows grid2">
+                {plans.slice(0, 24).map((p) => (
+                  <Link key={p.id} href={`/plan/${p.id}`} className="kk-row lv3-row">
+                    {p.hero && (
+                      <span className="kk-row-thumb">
+                        <V2Img src={p.hero} seed={p.id} alt={p.title} />
+                      </span>
+                    )}
+                    <span className="kk-row-body">
+                      <h3 className="kk-row-title">{p.title}</h3>
+                      <span className="kk-row-sub">{p.shortAnswer}</span>
+                      {/* 文字列は結合しない（旧マークアップと同じテキストノードの分かれ方を保つ） */}
+                      <span className="lv3-tags">
+                        {p.ageRanges[0] && <span className="v2-tag age">{p.ageRanges[0]}歳</span>}
+                        <span className="v2-tag">{p.durationMin}分</span>
+                        {p.budget && <span className="v2-tag">{p.budget}</span>}
+                      </span>
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* 記事一覧 */}
+          {articles.length > 0 && (
+            <section className="kk-sec">
+              <div className="kk-sec-head">
+                <div className="lv3-sec-titles">
+                  <span className="lv3-eyebrow">Articles</span>
+                  <h2 className="kk-sec-title">関連する記事</h2>
+                </div>
+                <span className="lv3-hint">{articles.length} 件</span>
+              </div>
+              <div className="kk-rows grid2">
+                {articles.map((a) => (
+                  <Link key={a.slug} href={`/article/${a.slug}`} className="kk-row lv3-row">
+                    {a.hero && (
+                      <span className="kk-row-thumb">
+                        <V2Img src={a.hero} seed={a.slug} alt={a.title} />
+                      </span>
+                    )}
+                    <span className="kk-row-body">
+                      <h3 className="kk-row-title">{a.title}</h3>
+                    </span>
+                    <span className="kk-row-arrow">
+                      <KkIcon name="arrow-right" size={16} />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* 空状態 */}
+          {articles.length === 0 && plans.length === 0 && (
+            <div className="lv3-empty">
+              <p>このタグに該当するコンテンツは準備中です。</p>
+              <Link href="/" className="kk-btn outline">トップへ戻る</Link>
+            </div>
+          )}
+
+          {/* 関連タグ */}
+          {relatedTags.length > 0 && (
+            <section className="kk-sec">
+              <div className="kk-sec-head">
+                <div className="lv3-sec-titles">
+                  <span className="lv3-eyebrow">Related tags</span>
+                  <h2 className="kk-sec-title">似たタグを見る</h2>
+                </div>
+              </div>
+              <div className="lv3-tag-chips">
+                {relatedTags.map((t) => (
+                  <Link key={t.slug} href={`/tag/${t.slug}`} className="kk-chip">
+                    {t.name}
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          <KkLineCard placement="list" />
+          <KkAddToHomeCard placement="list" />
+          <KkFooter />
         </div>
-      </section>
-
-      {/* プラン一覧 */}
-      {plans.length > 0 && (
-        <section className="section" style={{ paddingTop: 0 }}>
-          <div className="container">
-            <div className="section-head">
-              <div>
-                <span className="eyebrow">Plans</span>
-                <h2>今日の行動プラン</h2>
-              </div>
-              <span className="hint">{plans.length} 件</span>
-            </div>
-            <div style={{ display: 'grid', gap: 16, gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
-              {plans.slice(0, 24).map((p) => (
-                <Link
-                  key={p.id}
-                  href={`/plan/${p.id}`}
-                  style={{
-                    background: 'var(--paper-card)',
-                    border: '1px solid var(--line)',
-                    borderRadius: 'var(--radius-lg)',
-                    overflow: 'hidden',
-                    textDecoration: 'none',
-                    color: 'inherit',
-                  }}
-                >
-                  {p.hero && (
-                    <div style={{
-                      aspectRatio: '16/10',
-                      backgroundColor: 'var(--peach-soft)',
-                      backgroundImage: `url(${p.hero})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                    }} />
-                  )}
-                  <div style={{ padding: '14px 16px 18px' }}>
-                    <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 14.5, fontWeight: 600, margin: 0, lineHeight: 1.55 }}>
-                      {p.title}
-                    </h3>
-                    <p style={{ fontSize: 12, color: 'var(--ink-sub)', margin: '6px 0 0', lineHeight: 1.7 }}>
-                      {p.shortAnswer}
-                    </p>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 10 }}>
-                      {p.ageRanges[0] && <span className="meta-chip clay">{p.ageRanges[0]}歳</span>}
-                      <span className="meta-chip ochre">{p.durationMin}分</span>
-                      {p.budget && <span className="meta-chip sage">{p.budget}</span>}
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* 記事一覧 */}
-      {articles.length > 0 && (
-        <section className="section" style={{ paddingTop: 0 }}>
-          <div className="container">
-            <div className="section-head">
-              <div>
-                <span className="eyebrow">Articles</span>
-                <h2>関連する記事</h2>
-              </div>
-              <span className="hint">{articles.length} 件</span>
-            </div>
-            <div style={{ display: 'grid', gap: 16, gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
-              {articles.map((a) => (
-                <Link
-                  key={a.slug}
-                  href={`/article/${a.slug}`}
-                  style={{
-                    background: 'var(--paper-card)',
-                    border: '1px solid var(--line)',
-                    borderRadius: 'var(--radius-lg)',
-                    overflow: 'hidden',
-                    textDecoration: 'none',
-                    color: 'inherit',
-                  }}
-                >
-                  {a.hero && (
-                    <div style={{
-                      aspectRatio: '16/10',
-                      backgroundColor: 'var(--peach-soft)',
-                      backgroundImage: `url(${a.hero})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                    }} />
-                  )}
-                  <div style={{ padding: '14px 16px 18px' }}>
-                    <h3 style={{ fontFamily: 'var(--font-mincho)', fontSize: 14.5, fontWeight: 600, margin: 0, lineHeight: 1.55 }}>
-                      {a.title}
-                    </h3>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* 空状態 */}
-      {articles.length === 0 && plans.length === 0 && (
-        <section className="section">
-          <div className="container" style={{ textAlign: 'center', color: 'var(--ink-sub)', padding: '60px 0' }}>
-            <p>このタグに該当するコンテンツは準備中です。</p>
-            <Link href="/" className="btn-primary-light" style={{ marginTop: 20, display: 'inline-flex' }}>トップへ戻る</Link>
-          </div>
-        </section>
-      )}
-
-      {/* 関連タグ */}
-      {relatedTags.length > 0 && (
-        <section className="section" style={{ paddingTop: 0 }}>
-          <div className="container">
-            <div className="section-head">
-              <div>
-                <span className="eyebrow">Related tags</span>
-                <h2>似たタグを見る</h2>
-              </div>
-            </div>
-            <div className="outing-chips">
-              {relatedTags.map((t) => (
-                <Link key={t.slug} href={`/tag/${t.slug}`} className="outing-chip">
-                  {t.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
       </V2Frame>
       
     </>
