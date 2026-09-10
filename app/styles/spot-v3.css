@@ -1,0 +1,441 @@
+/* spot ページ固有のリニューアルCSS 第2版（docs/renewal-2026-09.md §2 / 社長フィードバック反映）。
+   共通部品は app/styles/kk.css。すべて .spot-v3（V2Frame 直下ラッパ）配下にスコープする。
+
+   第2版の方針:
+   - 紙色の地の上に「余白 + 1px の細い罫線」だけでセクションを分ける。白いカードを作らない。
+   - 色は写真に持たせる。ピル・チップは塗らずに線で。
+   - 見出しは Klee One（kk-sec-title）。斜線・オレンジバー・記号装飾はすべて出さない。
+   - PC はスマホの引き伸ばしにしない（写真と要点を横並び・設備は5列・本文は読みやすい幅で止める）。 */
+
+.spot-v3 {
+  color: var(--kk-ink);
+  font-family: var(--kk-body);
+  padding-bottom: 8px;
+}
+.spot-v3 .sv3-sec { margin-top: 34px; }
+
+/* 他コンポーネント（EventDayPlanSection 等）が持ち込む v2 見出しの装飾を、このページでは出さない */
+.spot-v3 .v2-bar-accent { display: none !important; }
+.spot-v3 .v2-sec-head { padding: 0 18px; margin: 38px 0 14px; }
+.spot-v3 .v2-sec-title {
+  display: block;
+  font-family: var(--kk-display);
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.45;
+  letter-spacing: .02em;
+  color: var(--kk-ink);
+}
+
+.spot-v3 .v2-sec-more { flex: none; white-space: nowrap; color: var(--kk-ink-mute); font-size: 12.5px; font-weight: 700; }
+.spot-v3 .v2-sec-more:hover { color: var(--kk-orange-deep); }
+/* 1日の流れ（components/event/EventDayPlanSection）はインライン style の白カードを持っている。
+   ファイルの所有者が別なので、このページの中だけ紙面に戻す（他ページの見た目は変えない）。 */
+.spot-v3 .v2-section > div[style*="background:#fff"] {
+  background: transparent !important;
+  border: 0 !important;
+  border-top: 1px solid var(--kk-rule) !important;
+  border-radius: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* ---------- パンくず ---------- */
+.spot-v3 .sv3-crumb {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 4px;
+  padding: 12px 18px 0;
+  font-size: 11.5px; font-weight: 700; color: var(--kk-ink-mute); line-height: 1.5;
+}
+.spot-v3 .sv3-crumb a { color: var(--kk-ink-mute); text-decoration: none; }
+.spot-v3 .sv3-crumb a:hover { color: var(--kk-orange-deep); }
+.spot-v3 .sv3-crumb .cur { color: var(--kk-ink-soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 60vw; }
+
+/* ---------- カテゴリ・H1・所在地行 ---------- */
+.spot-v3 .sv3-head { padding: 14px 18px 0; }
+.spot-v3 .sv3-cat {
+  display: block;
+  font-size: 11.5px; font-weight: 700; letter-spacing: .12em;
+  color: var(--kk-orange-deep);
+}
+.spot-v3 .sv3-h1 {
+  margin: 9px 0 0;
+  font-family: var(--kk-display);
+  font-size: var(--kk-h1); font-weight: 800; line-height: 1.4; letter-spacing: 0;
+  color: var(--kk-ink);
+  overflow-wrap: anywhere; text-wrap: balance;
+}
+.spot-v3 .sv3-loc {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 3px 5px; margin-top: 10px;
+  font-size: 13px; font-weight: 700; color: var(--kk-ink-soft); line-height: 1.5;
+}
+.spot-v3 .sv3-loc svg { color: var(--kk-ink-mute); flex: none; }
+.spot-v3 .sv3-loc-sep { color: var(--kk-ink-mute); }
+
+/* ---------- hero 画像（写真が色を持つ。枠・影・オーバーレイなし） ---------- */
+.spot-v3 .sv3-hero { padding: 18px 18px 0; }
+.spot-v3 .sv3-hero-img {
+  position: relative; aspect-ratio: 4 / 3;
+  border-radius: var(--kk-r-img); overflow: hidden;
+  background: var(--kk-paper-deep);
+}
+.spot-v3 .sv3-hero-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.spot-v3 .sv3-hero-credit {
+  position: absolute; right: 7px; bottom: 7px; z-index: 2;
+  padding: 2px 7px; border-radius: 3px;
+  background: rgba(37, 32, 27, .55); color: #fff;
+  font-size: 10.5px; font-weight: 700; letter-spacing: .02em;
+}
+.spot-v3 .sv3-hero-img .v2-sd-hero-fav { top: 9px; right: 9px; box-shadow: none; }
+
+/* ---------- タグ・リード ---------- */
+.spot-v3 .sv3-tags { margin-top: 18px; }
+.spot-v3 .sv3-lead-wrap { margin-top: 18px; }
+.spot-v3 .sv3-lead {
+  margin: 0 0 var(--kk-body-gap); font-size: var(--kk-body-size); line-height: var(--kk-body-lh); font-weight: 400; color: var(--kk-body-color);
+}
+.spot-v3 .sv3-lead:last-child { margin-bottom: 0; }
+
+/* ---------- 状態の告知（閉館 / 休館 / 期間限定）: 小さなステータスだけ枠を許す ---------- */
+.spot-v3 .sv3-banner {
+  margin: 16px 18px 0; padding: 12px 14px;
+  border: 1px solid var(--kk-rule); border-radius: var(--kk-r-ui);
+  background: transparent;
+  font-size: 13px; line-height: 1.8; color: var(--kk-ink-soft);
+}
+.spot-v3 .sv3-banner strong { color: var(--kk-ink); font-weight: 700; }
+.spot-v3 .sv3-banner.warn { border-color: var(--kk-orange); }
+.spot-v3 .sv3-banner-lab {
+  display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .06em;
+  color: var(--kk-orange-deep); margin-bottom: 5px;
+}
+.spot-v3 .sv3-banner a { color: var(--kk-orange-deep); font-weight: 700; }
+.spot-v3 .sv3-banner-src { margin: 6px 0 0; font-size: 11.5px; color: var(--kk-ink-mute); }
+
+/* ---------- ここがうれしいポイント（§3-1 4.）----------
+   設備＝スペック / ここ＝魅力。番号だけオレンジ・本文は墨・地は白で、設備とは別のUIにする。 */
+.spot-v3 .sv3-lab {
+  font-family: var(--kk-display); font-weight: 700;
+  font-size: var(--kk-h3); line-height: 1.5; color: var(--kk-ink);
+  margin-bottom: 10px;
+}
+.spot-v3 .kk-numlist .t { font-size: var(--kk-body-size); line-height: var(--kk-body-lh); }
+.spot-v3 .kk-numlist .n { font-size: 15px; }
+
+/* ---------- 基本情報 / 料金詳細（四角で組んだデータテーブル = .kk-info）---------- */
+.spot-v3 .kk-info { font-size: 15.5px; }
+.spot-v3 .kk-info th { font-size: 14px; }
+.spot-v3 .kk-info td { line-height: 1.85; }
+.spot-v3 .sv3-pricing th { width: 40%; font-weight: 700; }
+.spot-v3 .sv3-pricing td { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+/* ---------- 年齢別の楽しみ方（§3-1 6.）----------
+   表でもカード3枚でもなく、年齢を強く出した編集本文。段落で改行して壁にしない。 */
+.spot-v3 .sv3-ages { border-top: 1px solid var(--kk-rule); }
+.spot-v3 .sv3-age-row { padding: 16px 0; border-bottom: 1px solid var(--kk-rule-soft); }
+.spot-v3 .sv3-age-lab {
+  font-family: var(--kk-display); font-weight: 700;
+  font-size: var(--kk-h3); line-height: 1.4; color: var(--kk-orange-deep);
+  margin-bottom: 6px;
+}
+.spot-v3 .sv3-age-body p { margin: 0 0 var(--kk-body-gap); font-size: var(--kk-body-size); font-weight: 400; line-height: var(--kk-body-lh); color: var(--kk-body-color); }
+.spot-v3 .sv3-age-body p:last-child { margin-bottom: 0; }
+.spot-v3 .sv3-parking { display: flex; flex-direction: column; gap: 3px; }
+.spot-v3 .sv3-parking-main { font-weight: 700; }
+.spot-v3 .sv3-parking-note { font-size: 12.5px; color: var(--kk-ink-soft); }
+.spot-v3 .sv3-parking-src { font-size: 11.5px; color: var(--kk-ink-mute); margin-top: 2px; }
+.spot-v3 .sv3-parking-src a { color: var(--kk-ink-mute); }
+
+/* ---------- 情報の鮮度（1行のただし書き） ---------- */
+.spot-v3 .sv3-fresh {
+  display: flex; align-items: flex-start; gap: 7px;
+  margin-top: 14px; padding-top: 12px;
+  border-top: 1px solid var(--kk-rule-soft);
+  font-size: 11.5px; line-height: 1.7; color: var(--kk-ink-mute);
+}
+
+/* ---------- 近くと組み合わせるなら ---------- */
+.spot-v3 .sv3-combo { padding-top: 16px; border-top: 1px solid var(--kk-rule-soft); }
+.spot-v3 .sv3-combo-lab {
+  display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .08em; color: var(--kk-ink-mute);
+}
+.spot-v3 .sv3-combo-body { margin: 10px 0 0; font-size: var(--kk-body-size); font-weight: 400; line-height: var(--kk-body-lh); color: var(--kk-body-color); }
+
+/* ---------- 追加画像（枠なし・軽い角丸だけ） ---------- */
+.spot-v3 .sv3-figure {
+  margin-top: 26px; border-radius: var(--kk-r-img); overflow: hidden;
+  aspect-ratio: 16 / 9; background: var(--kk-paper-deep);
+}
+.spot-v3 .sv3-figure img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* ---------- 公式サイト（操作UI＝角丸を許す範囲） ---------- */
+.spot-v3 .sv3-official { justify-content: flex-start; gap: 9px; font-weight: 700; }
+.spot-v3 .sv3-official .sv3-official-arrow { margin-left: auto; color: var(--kk-ink-mute); display: flex; }
+
+/* ---------- 運営者が子連れで行ってきました ---------- */
+.spot-v3 .sv3-report-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 12.5px; font-weight: 700; letter-spacing: .04em;
+  color: var(--kk-orange-deep); margin-bottom: 6px;
+}
+.spot-v3 .sv3-report { margin: 0; border-top: 1px solid var(--kk-rule); }
+.spot-v3 .sv3-report-row { padding: 13px 0; border-bottom: 1px solid var(--kk-rule-soft); }
+.spot-v3 .sv3-report-dt {
+  font-size: 11.5px; font-weight: 700; letter-spacing: .04em;
+  color: var(--kk-ink-mute); margin-bottom: 4px;
+}
+.spot-v3 .sv3-report-dd { margin: 0; }
+.spot-v3 .sv3-report-dd p { margin: 0 0 12px; font-size: var(--kk-body-size); font-weight: 400; line-height: var(--kk-body-lh); color: var(--kk-body-color); }
+.spot-v3 .sv3-report-dd p:last-child { margin-bottom: 0; }
+
+/* ---------- 利用のポイント（罫線区切りの行。面も丸もつけない） ---------- */
+.spot-v3 .sv3-tips { border-top: 1px solid var(--kk-rule); }
+.spot-v3 .sv3-tip { border-bottom: 1px solid var(--kk-rule-soft); }
+.spot-v3 .sv3-tip-q, .spot-v3 .sv3-faq-q {
+  display: flex; align-items: center; gap: 10px; padding: 14px 0; cursor: pointer; list-style: none;
+  /* Q は見出し寄り（大きめ・太字）。A は下で本文より一段小さく軽くする。2026-09-09 社長指示 */
+  font-size: 18px; font-weight: 700; color: var(--kk-ink); line-height: 1.6;
+}
+.spot-v3 .sv3-tip-q::-webkit-details-marker,
+.spot-v3 .sv3-faq-q::-webkit-details-marker { display: none; }
+.spot-v3 .sv3-tip-chev { margin-left: auto; flex: none; display: inline-flex; color: var(--kk-ink-mute); transition: transform .2s ease; }
+.spot-v3 details[open] > summary .sv3-tip-chev { transform: rotate(180deg); }
+.spot-v3 .sv3-tip-a, .spot-v3 .sv3-faq-a { padding: 0 0 16px; }
+.spot-v3 .sv3-tip-a p, .spot-v3 .sv3-faq-a p {
+  margin: 0 0 12px; font-size: 15.5px; line-height: 1.95; color: var(--kk-ink);
+}
+.spot-v3 .sv3-tip-a p:last-child, .spot-v3 .sv3-faq-a p:last-child { margin-bottom: 0; }
+
+/* ---------- FAQ（同じく罫線の行。設問だけ少し大きく） ---------- */
+.spot-v3 .sv3-faqs { border-top: 1px solid var(--kk-rule); }
+.spot-v3 .sv3-faq { border-bottom: 1px solid var(--kk-rule-soft); }
+.spot-v3 .sv3-faq-q { align-items: flex-start; gap: 9px; }
+.spot-v3 .sv3-faq-q .sv3-tip-chev { margin-top: 2px; }
+/* Q は丸バッジにせず、書体だけ変えた小さな符号として置く */
+.spot-v3 .sv3-faq-mark {
+  flex: none; font-family: var(--kk-display); font-weight: 700; font-size: 15px;
+  color: var(--kk-orange); line-height: 1.6;
+}
+.spot-v3 .sv3-faq-a { padding-left: 22px; }
+
+/* ---------- 地図 ---------- */
+.spot-v3 .sv3-map { border-radius: var(--kk-r-img); overflow: hidden; background: var(--kk-paper-deep); }
+.spot-v3 .sv3-map iframe { width: 100%; height: 210px; border: 0; display: block; }
+.spot-v3 .sv3-map-foot { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 9px; flex-wrap: wrap; }
+.spot-v3 .sv3-map-station { display: inline-flex; align-items: center; gap: 5px; font-size: 12.5px; color: var(--kk-ink-mute); font-weight: 700; }
+.spot-v3 .sv3-map-open {
+  margin-left: auto; display: inline-flex; align-items: center; gap: 5px;
+  font-size: 13.5px; font-weight: 700; color: var(--kk-orange-deep); text-decoration: none;
+}
+.spot-v3 .sv3-textlink {
+  display: inline-flex; align-items: baseline; gap: 6px;
+  color: var(--kk-orange-deep); font-weight: 700; line-height: 1.8;
+}
+.spot-v3 .sv3-textlink svg { align-self: center; flex: none; }
+.spot-v3 .sv3-stars { display: inline-flex; align-items: center; gap: 2px; color: var(--kk-orange); }
+
+/* ---------- 近くのスポット（写真タイル） ---------- */
+.spot-v3 .sv3-nearby { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 12px; }
+.spot-v3 .sv3-nb { display: flex; flex-direction: column; gap: 7px; color: var(--kk-ink); }
+.spot-v3 .sv3-nb-img {
+  aspect-ratio: 4 / 3; border-radius: var(--kk-r-img); overflow: hidden; background: var(--kk-paper-deep);
+}
+.spot-v3 .sv3-nb-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.spot-v3 .sv3-nb-name { font-size: 13.5px; font-weight: 700; line-height: 1.5; }
+.spot-v3 .sv3-nb-loc { font-size: 11.5px; color: var(--kk-ink-mute); }
+.spot-v3 .sv3-nb:hover .sv3-nb-name { color: var(--kk-orange-deep); }
+
+/* ---------- 持っていくと便利（罫線区切りの行） ---------- */
+.spot-v3 .sv3-pr-note { font-size: 11.5px; color: var(--kk-ink-mute); margin: 0 0 4px; line-height: 1.7; }
+.spot-v3 .sv3-items { border-top: 1px solid var(--kk-rule); }
+.spot-v3 .sv3-item {
+  display: flex; gap: 13px; align-items: flex-start;
+  padding: 14px 0; border-bottom: 1px solid var(--kk-rule-soft);
+  color: var(--kk-ink); text-decoration: none;
+}
+.spot-v3 .sv3-item-img {
+  width: 76px; height: 76px; flex: none; object-fit: contain;
+  border-radius: var(--kk-r-img); background: var(--kk-paper-soft);
+}
+.spot-v3 .sv3-item-body { flex: 1; min-width: 0; }
+.spot-v3 .sv3-item-head { display: flex; align-items: baseline; gap: 8px; }
+.spot-v3 .sv3-item-num {
+  flex: none; font-family: var(--kk-display); font-size: 16px; font-weight: 700;
+  color: var(--kk-orange); font-variant-numeric: tabular-nums; line-height: 1.4;
+}
+.spot-v3 .sv3-item-label { font-size: 14px; font-weight: 700; line-height: 1.5; }
+.spot-v3 .sv3-item-why { margin: 4px 0 0; font-size: 12.5px; line-height: 1.8; color: var(--kk-ink-soft); }
+.spot-v3 .sv3-item-meta { display: flex; align-items: center; gap: 10px; margin-top: 7px; flex-wrap: wrap; }
+.spot-v3 .sv3-item-price { font-size: 12px; font-weight: 700; color: var(--kk-ink-soft); }
+.spot-v3 .sv3-item-go { display: inline-flex; align-items: center; gap: 3px; font-size: 12px; font-weight: 700; color: var(--kk-orange-deep); }
+
+/* ---------- みんなの「行ったよ」 ---------- */
+.spot-v3 .sv3-reports { border-top: 1px solid var(--kk-rule); }
+.spot-v3 .sv3-report-item { padding: 12px 0; border-bottom: 1px solid var(--kk-rule-soft); font-size: 13.5px; }
+.spot-v3 .sv3-report-age { margin-left: 8px; font-size: 12px; color: var(--kk-ink-mute); }
+.spot-v3 .sv3-report-cm { margin: 5px 0 0; color: var(--kk-ink-soft); line-height: 1.8; }
+
+/* ---------- 口コミ（ReviewSection） ---------- */
+.spot-v3 .sv3-rv-head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.spot-v3 .sv3-rv-stars { display: inline-flex; align-items: center; gap: 2px; }
+.spot-v3 .sv3-rv-avg { font-size: 15px; font-weight: 700; }
+.spot-v3 .sv3-rv-count { font-size: 12.5px; color: var(--kk-ink-mute); }
+.spot-v3 .sv3-rv-empty { font-size: 13px; color: var(--kk-ink-mute); margin: 0 0 12px; line-height: 1.8; }
+.spot-v3 .sv3-rv-list { margin-top: 16px; border-top: 1px solid var(--kk-rule); }
+.spot-v3 .sv3-rv { padding: 14px 0; border-bottom: 1px solid var(--kk-rule-soft); }
+.spot-v3 .sv3-rv-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+.spot-v3 .sv3-rv-meta .s { display: inline-flex; align-items: center; gap: 2px; }
+.spot-v3 .sv3-rv-name { font-size: 13px; font-weight: 700; }
+.spot-v3 .sv3-rv-age { font-size: 11.5px; color: var(--kk-ink-mute); }
+.spot-v3 .sv3-rv-body { font-size: var(--kk-body-size); font-weight: 400; line-height: var(--kk-body-lh); margin: 0; color: var(--kk-body-color); white-space: pre-wrap; }
+.spot-v3 .sv3-rv-photos { display: flex; gap: 8px; margin-top: 9px; flex-wrap: wrap; align-items: flex-end; }
+.spot-v3 .sv3-rv-photos img { width: 88px; height: 88px; object-fit: cover; border-radius: var(--kk-r-img); }
+.spot-v3 .sv3-rv-credit { font-size: 10.5px; color: var(--kk-ink-mute); }
+
+/* ---------- 行ったよ報告（VisitedReport） ---------- */
+.spot-v3 .sv3-visited {
+  margin-top: 30px; padding-top: 16px;
+  border-top: 1px solid var(--kk-rule);
+}
+.spot-v3 .sv3-visited-note { font-size: 12.5px; color: var(--kk-ink-mute); }
+.spot-v3 .sv3-visited-q { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+
+/* ---------- 子連れ設備（§3-1 3.）----------
+   白い1本の行に横並び。項目間は細い縦線だけ。アイコンと設備名は墨、色を持つのは状態だけ。
+   指定の4項目（授乳室・おむつ替え台・多目的トイレ・ベビーカー貸し出し）は必ず1行目に並べ、
+   データにキッズスペース等がある場合だけ2行目に置く（狭い画面で語が割れるのを防ぐ）。 */
+.spot-v3 .kk-fac-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-flow: row;
+  background: #fff;
+  padding: 4px 0 6px;
+  row-gap: 16px;
+}
+.spot-v3 .kk-fac {
+  display: grid; grid-template-rows: auto 1fr auto; justify-items: center;
+  gap: 8px; padding: 4px 2px 2px;
+}
+.spot-v3 .kk-fac + .kk-fac { border-left: 1px solid var(--kk-rule-soft); }
+/* 5項目目以降は行頭に来るので左の縦線を消す */
+.spot-v3 .kk-fac:nth-child(4n + 1) { border-left: 0; }
+.spot-v3 .kk-fac-ico { color: var(--kk-ink); }
+.spot-v3 .kk-fac-label { font-size: 12.5px; color: var(--kk-ink); word-break: keep-all; }
+.spot-v3 .kk-fac .kk-pill { font-size: 12px; padding: 2px 10px; }
+@media (max-width: 380px) {
+  .spot-v3 .kk-fac-label { font-size: 11.5px; letter-spacing: -.01em; }
+}
+@media (min-width: 920px) {
+  .spot-v3 .kk-fac-label { font-size: 14px; }
+  .spot-v3 .kk-fac .kk-pill { font-size: 13px; }
+}
+
+/* ---------- 横スクロール見出しの直後は余白を詰める ---------- */
+.spot-v3 .sv3-sec-hs .kk-sec-head { margin-bottom: 4px; }
+
+/* ===========================================================
+   PC（≥920px）— スマホの引き伸ばしにしない
+   写真と要点を横並びに、設備は5列、読み物は読みやすい幅で止める。
+   =========================================================== */
+@media (min-width: 920px) {
+  .spot-v3 { max-width: 1080px; margin: 0 auto; }
+  .spot-v3 .sv3-crumb { padding: 20px 4px 0; }
+  .spot-v3 .sv3-sec { margin-top: 56px; }
+  .spot-v3 .v2-sec-head { padding: 0 4px; margin: 56px 0 20px; }
+  .spot-v3 .v2-sec-title { font-size: 27px; }
+
+  /* 上部: 左に写真、右に見出し・所在地・タグ・説明 */
+  .spot-v3 .sv3-top {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    column-gap: 48px;
+    align-items: start;
+    margin-top: 6px;
+  }
+  .spot-v3 .sv3-top > * { grid-column: 2; padding-left: 0; padding-right: 0; }
+  .spot-v3 .sv3-hero { grid-column: 1; grid-row: 1 / span 99; padding: 6px 0 0; }
+  .spot-v3 .sv3-hero-img { aspect-ratio: 3 / 2; }
+  .spot-v3 .sv3-head { padding: 0; }
+  .spot-v3 .sv3-h1 { font-size: var(--kk-h1); line-height: 1.35; }
+  .spot-v3 .sv3-cat { font-size: 12px; }
+  .spot-v3 .sv3-loc { font-size: 14px; margin-top: 12px; }
+  .spot-v3 .sv3-tags { margin-top: 20px; }
+  .spot-v3 .sv3-lead-wrap { margin-top: 20px; }
+  .spot-v3 .sv3-banner { margin-left: 0; margin-right: 0; }
+
+  /* 読み物ブロックは行長を止める（1080px を全部使わない） */
+  .spot-v3 .sv3-measure { max-width: 760px; }
+
+  /* 年齢別は PC で「左に年齢・右に本文」の2段組にする（§3-1 6.） */
+  .spot-v3 .sv3-age-row { display: grid; grid-template-columns: 7em minmax(0, 1fr); gap: 0 24px; padding: 20px 0; }
+  .spot-v3 .sv3-age-lab { font-size: var(--kk-h3); margin-bottom: 0; }
+  .spot-v3 .sv3-lab { font-size: var(--kk-h3); }
+  .spot-v3 .sv3-tip-q, .spot-v3 .sv3-faq-q { font-size: 19px; padding: 16px 0; }
+  .spot-v3 .sv3-tip-a, .spot-v3 .sv3-faq-a { padding-bottom: 18px; }
+  .spot-v3 .sv3-lead { font-size: var(--kk-body-size); }
+
+  /* 近くのスポットは4列の写真タイル */
+  .spot-v3 .sv3-nearby { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px 18px; }
+  .spot-v3 .sv3-nb-name { font-size: 14.5px; }
+
+  .spot-v3 .sv3-map { max-width: 860px; }
+  .spot-v3 .sv3-map-foot { max-width: 860px; }
+  .spot-v3 .sv3-map iframe { height: 320px; }
+  .spot-v3 .sv3-figure { margin-top: 44px; max-width: 860px; }
+  .spot-v3 .sv3-item-img { width: 92px; height: 92px; }
+}
+
+/* 運営者のひとこと（既存ブロック）。塗り箱にせず、本文と同じ読み物として置く。 */
+.spot-v3 .sv3-voice p {
+  margin: 0 0 14px;
+  font-size: var(--kk-text);
+  line-height: 1.95;
+  color: var(--kk-ink);
+}
+.spot-v3 .sv3-voice p:last-child { margin-bottom: 0; }
+
+/* 本文（2026-09-08 社長指示）: Regular・行間1.95・段落間1.7em。見出しの太さは維持。 */
+.spot-v3 .sv3-note p,
+.spot-v3 .sv3-voice p,
+.spot-v3 .sv3-body p,
+.spot-v3 .sv3-agebody p,
+.spot-v3 .sv3-tips p,
+.spot-v3 .sv3-faq-a p,
+.spot-v3 .sv3-measure > p {
+  font-size: var(--kk-body-size);
+  font-weight: 400;
+  line-height: var(--kk-body-lh);
+  letter-spacing: .01em;
+  color: var(--kk-body-color);
+  margin: 0 0 var(--kk-body-gap);
+}
+.spot-v3 .sv3-note p:last-child,
+.spot-v3 .sv3-voice p:last-child,
+.spot-v3 .sv3-body p:last-child,
+.spot-v3 .sv3-agebody p:last-child,
+.spot-v3 .sv3-tips p:last-child,
+.spot-v3 .sv3-faq-a p:last-child,
+.spot-v3 .sv3-measure > p:last-child { margin-bottom: 0; }
+@media (min-width: 920px) {
+  .spot-v3 .sv3-note p,
+  .spot-v3 .sv3-voice p,
+  .spot-v3 .sv3-body p,
+  .spot-v3 .sv3-agebody p,
+  .spot-v3 .sv3-tips p,
+  .spot-v3 .sv3-faq-a p,
+  .spot-v3 .sv3-measure > p { font-size: var(--kk-body-size); }
+}
+
+/* FAQ・利用のポイントの答えは、本文より一段小さく軽く（Qとのバランス。2026-09-09 社長指示） */
+.spot-v3 .sv3-faq-a p,
+.spot-v3 .sv3-tip-a p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.9;
+  color: var(--kk-body-color);
+  margin: 0 0 1.2em;
+}
+.spot-v3 .sv3-faq-a p:last-child,
+.spot-v3 .sv3-tip-a p:last-child { margin-bottom: 0; }
+@media (min-width: 920px) {
+  .spot-v3 .sv3-faq-a p,
+  .spot-v3 .sv3-tip-a p { font-size: 16.5px; }
+}

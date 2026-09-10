@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { trackEvent } from '@/lib/analytics';
+import { KkIcon } from '@/components/kk/KkIcon';
 
 /**
  * 記事末尾の「1日プラン検索ツール（/today）」への送客CTA（P1-7）。
@@ -29,50 +30,24 @@ export function NextPlanCTA({
   const href = qs ? `/today?${qs}` : '/today';
 
   return (
-    <section style={{ margin: '40px 0 0' }}>
+    <section className="av3-planlink">
       <Link
         href={href}
         onClick={() => trackEvent('today_cta_click', { area: area ?? 'all', age: age ?? 'none' })}
-        style={{
-          display: 'block',
-          background: 'linear-gradient(135deg, rgba(201,96,62,0.10), rgba(201,96,62,0.04))',
-          border: '1px solid rgba(201,96,62,0.22)',
-          borderRadius: 16,
-          padding: '20px 24px',
-          textDecoration: 'none',
-          color: 'var(--ink)',
-        }}
+        className="av3-planlink-link"
       >
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            flexWrap: 'wrap',
-            gap: 8,
-          }}
-        >
-          <div style={{ flex: 1, minWidth: 220 }}>
-            <div
-              style={{
-                fontSize: 11,
-                color: 'var(--clay-deep)',
-                fontWeight: 700,
-                letterSpacing: '0.05em',
-                marginBottom: 4,
-              }}
-            >
-              TODAY&apos;S PLAN · 今日の流れをつくる
-            </div>
-            <div style={{ fontSize: 17, fontWeight: 700, marginBottom: 2 }}>
-              このあと子連れで遊ぶなら、近くで「1日プラン」を作る
-            </div>
-            <div style={{ fontSize: 12, color: 'var(--ink-mute)' }}>
-              駅・年齢・天気を選ぶだけ。午前あそぶ→お昼たべる→午後 の移動少なめプランが3分で。
-            </div>
-          </div>
-          <span style={{ fontSize: 22, color: 'var(--clay-deep)', flexShrink: 0 }}>→</span>
-        </div>
+        <span className="av3-planlink-body">
+          <span className="av3-planlink-eyebrow">TODAY&apos;S PLAN · 今日の流れをつくる</span>
+          <span className="av3-planlink-title">
+            このあと子連れで遊ぶなら、近くで「1日プラン」を作る
+          </span>
+          <span className="av3-planlink-sub">
+            駅・年齢・天気を選ぶだけ。午前あそぶ→お昼たべる→午後 の移動少なめプランが3分で。
+          </span>
+        </span>
+        <span className="av3-planlink-arrow" aria-hidden="true">
+          <KkIcon name="arrow-right" size={20} />
+        </span>
       </Link>
     </section>
   );

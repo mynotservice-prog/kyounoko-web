@@ -1,11 +1,14 @@
 /* ===========================================================
    きょうのこ /v2 — Claude design プロトタイプ準拠
    ベース: design pkg `styles/theme.css` + components.css + screens.css + spot.css
-   フォント: M PLUS Rounded 1c（本文・見出し）+ Yomogi（TOPヒーロー）
+   フォント: Noto Sans JP（本文・見出しとも。2026-09-08 に1種へ統一）
    背景: 白
    =========================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Yomogi&display=swap');
+/* 2026-09 リニューアル: フォントはすべて app/layout.tsx の next/font で自己ホストする。
+   本文・見出しとも Noto Sans JP に統一（細字の書体は使わない）。
+   旧実装の `@import url(...)` はバンドル後 CSS の途中に出力され、
+   「@import は先頭以外だと無視される」ため一度も適用されていなかった。 */
 
 .v2-root {
   /* Brand */
@@ -68,8 +71,8 @@
   --v2-phone-w: 420px;
   --v2-nav-h: 64px;
 
-  --v2-sans: 'M PLUS Rounded 1c', system-ui, -apple-system, sans-serif;
-  --v2-brush: 'Yomogi', 'M PLUS Rounded 1c', cursive;
+  --v2-sans: var(--font-sans), 'Zen Kaku Gothic New', 'Hiragino Sans', Meiryo, sans-serif;
+  --v2-brush: var(--v2-sans);
 
   color: var(--v2-ink);
   font-family: var(--v2-sans);

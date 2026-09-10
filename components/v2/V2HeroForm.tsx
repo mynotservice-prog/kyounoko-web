@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import { V2Icon } from './V2Icon';
+import { KkIcon } from '@/components/kk/KkIcon';
+import { KkArt, type KkArtName } from '@/components/kk/KkArt';
 import type { FinderStation } from '@/lib/finder-stations';
 
 /**
@@ -13,6 +14,11 @@ import type { FinderStation } from '@/lib/finder-stations';
  * （駅アンカーの1日プランに一発到達。以前は area=都道府県 しか渡せず駅を選び直す断線があった）。
  *
  * P0-2: 日付タブの既定を曜日で出し分け（平日=今週末 / 土日=今日）。天気は手動選択。
+ *
+ * 2026-09 リニューアル 第2版（見た目のみ変更）:
+ * モックの並び「① 目立つ駅の検索欄 → ② 今日/明日/週末 → ③ 年齢・天気（小さく）→ ④ 全幅CTA」に合わせ、
+ * インラインstyleを app/styles/kk.css / top-v3.css のクラス（.kk-field/.kk-seg/.kk-chip/.kk-btn）へ移した。
+ * state・localStorage キー(`kk_finder_station`)・クエリの生成順は一切変えていない。
  */
 
 type DateKey = 'today' | 'tomorrow' | 'weekend';
@@ -24,10 +30,11 @@ const AGES: { v: AgeKey; t: string }[] = [
   { v: '2-3', t: '2〜3歳' },
   { v: '4-6', t: '4〜6歳' },
 ];
-const WEATHERS: { v: WeatherKey; t: string; emoji: string }[] = [
-  { v: 'sunny', t: '晴れ', emoji: '☀' },
-  { v: 'cloudy', t: 'くもり', emoji: '☁' },
-  { v: 'rain', t: '雨', emoji: '☔' },
+/** 天気は社長支給のアイコンイラスト（KkArt）で描く。絵文字は使わない。 */
+const WEATHERS: { v: WeatherKey; t: string; icon: KkArtName }[] = [
+  { v: 'sunny', t: '晴れ', icon: 'sunny' },
+  { v: 'cloudy', t: 'くもり', icon: 'cloudy' },
+  { v: 'rain', t: '雨', icon: 'rain' },
 ];
 
 /** 曜日から日付タブの既定を決める（月〜金=weekend / 土日=today）。 */
@@ -112,215 +119,123 @@ export function V2HeroForm({
   }, [q, stations]);
 
   return (
-    <div className="v2-hero-form">
-      {/* ① 日付タブ */}
-      <div className="v2-hf-datetabs" role="tablist" aria-label="いつ行く"
-        style={{ display: 'flex', gap: 6 }}>
+    <div className="tv3-form">
+      {/* ① 駅・エリア（必須）— ファーストビューで一番目立つ入力 */}
+      <button
+        type="button"
+        className={
+          'kk-field tv3-search v2-hf-stationbtn' + (station ? '' : ' empty') + (err ? ' err' : '')
+        }
+        onClick={() => setStationOpen((o) => !o)}
+        aria-expanded={stationOpen}
+        aria-label="出発する駅・エリアを選ぶ"
+      >
+        <KkIcon name="search" size={19} color="var(--kk-orange)" sw={2} />
+        <span className="tv3-search-txt">{station ? `${station.name}駅` : '駅・エリアを選ぶ'}</span>
+        <KkIcon name="chevron-down" size={17} color="var(--kk-ink-mute)" sw={2.2} />
+      </button>
+      {err && <p className="tv3-form-err">出発する駅を選んでください</p>}
+
+      {stationOpen && (
+        <div className="v2-hf-stationpop tv3-pop">
+          <input
+            type="text"
+            inputMode="search"
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder="駅名・地名で検索（例：池袋、横浜、梅田）"
+            autoFocus
+            className="tv3-pop-input"
+          />
+          {q.trim() ? (
+            <div className="v2-hf-stationlist">
+              {filtered.length === 0 ? (
+                <p className="tv3-pop-empty">該当する駅が見つかりません</p>
+              ) : (
+                filtered.map((s) => (
+                  <button
+                    key={s.slug}
+                    type="button"
+                    className="v2-hf-stationopt tv3-pop-opt"
+                    onClick={() => pick(s)}
+                  >
+                    {s.name}駅
+                    <span className="tv3-pop-opt-sub">
+                      {s.area ? `${s.regionLabel}・${s.area}` : s.regionLabel}
+                    </span>
+                  </button>
+                ))
+              )}
+            </div>
+          ) : (
+            <>
+              <StationChips label="主要ターミナル" list={terminals} onPick={pick} />
+              <StationChips label="子育て世帯に人気の駅" list={family} onPick={pick} />
+            </>
+          )}
+        </div>
+      )}
+
+      {/* ② 日付（今日 / 明日 / 今週末） */}
+      <div className="v2-hf-datetabs kk-seg" role="tablist" aria-label="いつ行く">
         {(['today', 'tomorrow', 'weekend'] as DateKey[]).map((k) => (
           <button
             key={k}
             type="button"
             role="tab"
             aria-selected={date === k}
-            className={'v2-hf-datetab' + (date === k ? ' on' : '')}
+            className={'v2-hf-datetab kk-seg-btn' + (date === k ? ' on' : '')}
             onClick={() => setDate(k)}
-            style={{
-              flex: 1,
-              padding: '8px 4px',
-              borderRadius: 10,
-              border: '1px solid ' + (date === k ? 'var(--v2-orange)' : 'var(--v2-line)'),
-              background: date === k ? 'var(--v2-orange)' : 'var(--v2-card, #fff)',
-              color: date === k ? '#fff' : 'var(--v2-ink)',
-              fontSize: 13,
-              fontWeight: 700,
-              cursor: 'pointer',
-            }}
           >
             {dateLabel(k)}
           </button>
         ))}
       </div>
 
-      {/* ② 年齢 */}
-      <div className="v2-hf-chiprow" style={{ marginTop: 10 }}>
-        <span className="v2-hf-chiplabel" style={chipLabelStyle}>お子さんの年齢</span>
-        <div className="v2-hf-chips" style={chipsRowStyle}>
-          {AGES.map((a) => (
-            <button
-              key={a.v}
-              type="button"
-              className={'v2-hf-chip' + (age === a.v ? ' on' : '')}
-              aria-pressed={age === a.v}
-              onClick={() => setAge(a.v)}
-              style={chipStyle(age === a.v)}
-            >
-              {a.t}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* ③ 駅・エリア（必須） */}
-      <div className="v2-hf-chiprow" style={{ marginTop: 10 }}>
-        <span className="v2-hf-chiplabel" style={chipLabelStyle}>どこから？（駅）</span>
-        <button
-          type="button"
-          className={'v2-hf-stationbtn' + (err ? ' err' : '')}
-          onClick={() => setStationOpen((o) => !o)}
-          aria-expanded={stationOpen}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 8,
-            width: '100%',
-            padding: '11px 12px',
-            borderRadius: 11,
-            border: '1px solid ' + (err ? '#e0574c' : 'var(--v2-line)'),
-            background: 'var(--v2-card, #fff)',
-            color: station ? 'var(--v2-ink)' : 'var(--v2-ink-mute)',
-            fontSize: 14,
-            fontWeight: station ? 700 : 500,
-            cursor: 'pointer',
-          }}
-        >
-          <V2Icon name="pin" size={16} color="var(--v2-orange)" />
-          {station ? `${station.name}駅` : '駅・エリアを選ぶ'}
-          <V2Icon name="chevron-down" size={15} color="#c4bbb0" style={{ marginLeft: 'auto' }} />
-        </button>
-        {err && (
-          <p style={{ fontSize: 12, color: '#e0574c', margin: '4px 2px 0' }}>
-            出発する駅を選んでください
-          </p>
-        )}
-
-        {stationOpen && (
-          <div
-            className="v2-hf-stationpop"
-            style={{
-              marginTop: 8,
-              padding: 12,
-              borderRadius: 12,
-              border: '1px solid var(--v2-line)',
-              background: 'var(--v2-card, #fff)',
-              boxShadow: '0 8px 24px rgba(0,0,0,.10)',
-            }}
-          >
-            <input
-              type="text"
-              inputMode="search"
-              value={q}
-              onChange={(e) => setQ(e.target.value)}
-              placeholder="🔍 駅名・地名で検索（例：池袋、横浜、梅田）"
-              autoFocus
-              style={{
-                width: '100%',
-                padding: '9px 11px',
-                borderRadius: 9,
-                border: '1px solid var(--v2-line)',
-                fontSize: 14,
-                marginBottom: 10,
-              }}
-            />
-            {q.trim() ? (
-              <div className="v2-hf-stationlist">
-                {filtered.length === 0 ? (
-                  <p style={{ fontSize: 13, color: 'var(--v2-ink-mute)', padding: '6px 2px' }}>
-                    該当する駅が見つかりません
-                  </p>
-                ) : (
-                  filtered.map((s) => (
-                    <button
-                      key={s.slug}
-                      type="button"
-                      className="v2-hf-stationopt"
-                      onClick={() => pick(s)}
-                      style={stationOptStyle}
-                    >
-                      {s.name}駅
-                      <span style={{ marginLeft: 6, fontSize: 12, fontWeight: 500, color: 'var(--v2-ink-mute, #8E867A)' }}>
-                        {s.area ? `${s.regionLabel}・${s.area}` : s.regionLabel}
-                      </span>
-                    </button>
-                  ))
-                )}
-              </div>
-            ) : (
-              <>
-                <StationChips label="主要ターミナル" list={terminals} onPick={pick} />
-                <StationChips label="子育て世帯に人気の駅" list={family} onPick={pick} />
-              </>
-            )}
+      {/* ③ 年齢・天気（従来どおりクエリに乗るが、見た目は控えめ・小さく） */}
+      <div className="tv3-mini">
+        <div className="v2-hf-chiprow">
+          <span className="v2-hf-chiplabel tv3-mini-lab">お子さんの年齢</span>
+          <div className="v2-hf-chips kk-chips">
+            {AGES.map((a) => (
+              <button
+                key={a.v}
+                type="button"
+                className={'v2-hf-chip kk-chip' + (age === a.v ? ' on' : '')}
+                aria-pressed={age === a.v}
+                onClick={() => setAge(a.v)}
+              >
+                {a.t}
+              </button>
+            ))}
           </div>
-        )}
-      </div>
-
-      {/* ④ 天気 */}
-      <div className="v2-hf-chiprow" style={{ marginTop: 10 }}>
-        <span className="v2-hf-chiplabel" style={chipLabelStyle}>お天気</span>
-        <div className="v2-hf-chips" style={chipsRowStyle}>
-          {WEATHERS.map((w) => (
-            <button
-              key={w.v}
-              type="button"
-              className={'v2-hf-chip' + (weather === w.v ? ' on' : '')}
-              aria-pressed={weather === w.v}
-              onClick={() => setWeather(w.v)}
-              style={chipStyle(weather === w.v)}
-            >
-              {w.emoji} {w.t}
-            </button>
-          ))}
+        </div>
+        <div className="v2-hf-chiprow">
+          <span className="v2-hf-chiplabel tv3-mini-lab">お天気</span>
+          <div className="v2-hf-chips kk-chips">
+            {WEATHERS.map((w) => (
+              <button
+                key={w.v}
+                type="button"
+                className={'v2-hf-chip kk-chip' + (weather === w.v ? ' on' : '')}
+                aria-pressed={weather === w.v}
+                onClick={() => setWeather(w.v)}
+              >
+                <KkArt name={w.icon} size={18} />
+                {w.t}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
-      <button
-        type="button"
-        className="v2-btn-primary v2-hf-submit"
-        onClick={onSubmit}
-        style={{ marginTop: 14 }}
-      >
-        <V2Icon name="search" size={19} color="#fff" /> この条件で1日プランを作る
+      {/* ④ CTA */}
+      <button type="button" className="v2-hf-submit kk-btn block" onClick={onSubmit}>
+        <KkIcon name="search" size={17} color="#fff" sw={2.2} /> この条件で1日プランを作る
       </button>
     </div>
   );
 }
-
-const chipLabelStyle: React.CSSProperties = {
-  display: 'block',
-  fontSize: 12,
-  fontWeight: 700,
-  color: 'var(--v2-ink-mute)',
-  marginBottom: 6,
-};
-const chipsRowStyle: React.CSSProperties = { display: 'flex', gap: 7, flexWrap: 'wrap' };
-function chipStyle(on: boolean): React.CSSProperties {
-  return {
-    flex: '1 1 0',
-    minWidth: 72,
-    padding: '9px 10px',
-    borderRadius: 10,
-    border: '1px solid ' + (on ? 'var(--v2-orange)' : 'var(--v2-line)'),
-    background: on ? 'var(--v2-orange-tint, #fff2e8)' : 'var(--v2-card, #fff)',
-    color: on ? 'var(--v2-orange-deep, #c05a1e)' : 'var(--v2-ink)',
-    fontSize: 13.5,
-    fontWeight: 700,
-    cursor: 'pointer',
-  };
-}
-
-const stationOptStyle: React.CSSProperties = {
-  display: 'block',
-  width: '100%',
-  textAlign: 'left',
-  padding: '9px 10px',
-  borderRadius: 8,
-  border: 'none',
-  background: 'transparent',
-  color: 'var(--v2-ink)',
-  fontSize: 14,
-  fontWeight: 600,
-  cursor: 'pointer',
-};
 
 function StationChips({
   label,
@@ -333,25 +248,11 @@ function StationChips({
 }) {
   if (!list.length) return null;
   return (
-    <div style={{ marginBottom: 10 }}>
-      <p style={{ fontSize: 12, color: 'var(--v2-ink-mute)', margin: '0 0 6px' }}>{label}</p>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 7 }}>
+    <div className="tv3-pop-group">
+      <p className="tv3-pop-group-lab">{label}</p>
+      <div className="kk-chips">
         {list.map((s) => (
-          <button
-            key={s.slug}
-            type="button"
-            onClick={() => onPick(s)}
-            style={{
-              padding: '6px 12px',
-              borderRadius: 999,
-              border: '1px solid var(--v2-line)',
-              background: 'var(--v2-bg, #faf6ef)',
-              color: 'var(--v2-ink)',
-              fontSize: 13,
-              fontWeight: 600,
-              cursor: 'pointer',
-            }}
-          >
+          <button key={s.slug} type="button" className="kk-chip" onClick={() => onPick(s)}>
             {s.name}
           </button>
         ))}

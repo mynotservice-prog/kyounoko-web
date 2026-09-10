@@ -1,64 +1,24 @@
 import type { Supervisor } from '@/lib/supervisors';
+import { KkIcon } from '@/components/kk/KkIcon';
 
+/**
+ * 記事監修者ラベル（E-E-A-T）。
+ * 2026-09 リニューアル第2版: 面（緑グラデーションの丸角カード）をやめ、
+ * 上下の細い罫線で挟んだ注記ブロックにした。文言・順序は不変。
+ */
 export function SupervisorLabel({ supervisor }: { supervisor: Supervisor }) {
   return (
-    <aside
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: 12,
-        padding: '12px 16px',
-        background: 'linear-gradient(135deg, rgba(80, 130, 100, .08), rgba(80, 130, 100, .03))',
-        border: '1px solid rgba(80, 130, 100, .25)',
-        borderRadius: 12,
-        margin: '16px 0',
-      }}
-      aria-label="記事監修者"
-    >
-      <span
-        aria-hidden
-        style={{
-          flex: '0 0 auto',
-          width: 36,
-          height: 36,
-          borderRadius: '50%',
-          background: 'rgb(80, 130, 100)',
-          color: '#fff',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          fontSize: 16,
-        }}
-      >
-        ✓
+    <aside className="av3-sup" aria-label="記事監修者">
+      <span aria-hidden className="av3-sup-mark">
+        <KkIcon name="check" size={15} sw={2.2} />
       </span>
-      <div style={{ flex: 1 }}>
-        <div
-          style={{
-            fontSize: 11,
-            fontFamily: 'var(--font-inter), sans-serif',
-            color: 'rgb(60, 100, 75)',
-            fontWeight: 700,
-            letterSpacing: '.08em',
-            textTransform: 'uppercase',
-          }}
-        >
-          Supervised by
-        </div>
-        <div style={{ fontSize: 14, fontWeight: 700, marginTop: 2 }}>
+      <div className="av3-sup-body">
+        <div className="av3-sup-eyebrow">Supervised by</div>
+        <div className="av3-sup-name">
           {supervisor.name}
-          <span
-            style={{
-              fontSize: 12,
-              fontWeight: 500,
-              marginLeft: 6,
-              color: 'var(--ink-sub)',
-            }}
-          >
-            （{supervisor.qualification}）
-          </span>
+          <span className="av3-sup-qual">（{supervisor.qualification}）</span>
         </div>
-        <div style={{ fontSize: 12, color: 'var(--ink-sub)', marginTop: 4, lineHeight: 1.65 }}>
+        <div className="av3-sup-bio">
           {supervisor.bio}
           {supervisor.affiliation && (
             <>

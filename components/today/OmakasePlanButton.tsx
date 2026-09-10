@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
+import { KkIcon } from '@/components/kk/KkIcon';
 
 type Candidate = { slug: string; name: string };
 
@@ -12,6 +13,7 @@ type Candidate = { slug: string; name: string };
  * 午前/お昼/午後の変種もランダムに振って /today?station=... へ遷移する。
  * これにより「まず1案だけ欲しい」層がワンタップでプランに着地できる。
  * 押すたびに駅・組み合わせが変わるので「別のを見たい」にも応える。
+ * 見た目は app/styles/today-v3.css の .td3-omakase。
  */
 export function OmakasePlanButton({
   candidates,
@@ -48,24 +50,9 @@ export function OmakasePlanButton({
       type="button"
       onClick={go}
       disabled={busy}
-      style={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        gap: 8,
-        padding: '12px 20px',
-        borderRadius: 999,
-        border: 'none',
-        background: 'var(--clay, #c9603e)',
-        color: '#fff',
-        fontSize: 14.5,
-        fontWeight: 800,
-        cursor: busy ? 'wait' : 'pointer',
-        opacity: busy ? 0.7 : 1,
-        boxShadow: '0 2px 10px rgba(201,96,62,0.28)',
-        marginBottom: 14,
-      }}
+      className={'kk-btn soft sm td3-omakase' + (busy ? ' busy' : '')}
     >
-      <span aria-hidden="true" style={{ fontSize: '1.1em' }}>🎲</span>
+      <KkIcon name="refresh" size={15} />
       {busy ? 'プランを作成中…' : 'おまかせで今日の流れを作る'}
     </button>
   );

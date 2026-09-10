@@ -9,6 +9,8 @@
 
 import * as React from 'react';
 import Link from 'next/link';
+import { KkSectionTitle } from '@/components/kk/KkSectionTitle';
+import { KkRowList } from '@/components/kk/KkRowList';
 
 export type CrossLinkItem = {
   href: string;
@@ -35,6 +37,11 @@ export type CrossLinkCardsProps = {
    * 記事末尾に複数セクション積む場合のスクロール量削減用（内部リンクは全件維持）。
    */
   variant?: 'card' | 'compact';
+  /**
+   * 回遊導線の強さ（記事末尾の優先順位付け・§3-2-7）。
+   * primary = メイン導線（同チェーン記事）、quiet = 静かなリスト。
+   */
+  tone?: 'primary' | 'quiet';
 };
 
 export function CrossLinkCards({
@@ -43,52 +50,19 @@ export function CrossLinkCards({
   items,
   defaultEyebrow,
   variant = 'card',
+  tone = 'quiet',
 }: CrossLinkCardsProps) {
   if (!items || items.length === 0) return null;
 
   if (variant === 'compact') {
+    // 記事ページ用: 装飾なしの見出し＋ KkRowList(arrow) の行リスト（リンク・見出し文言は従来どおり）
     return (
-      <section style={{ marginTop: 32 }} aria-label={heading}>
-        <h2
-          style={{
-            fontFamily: 'var(--font-mincho), "Shippori Mincho", serif',
-            fontWeight: 600,
-            fontSize: 16.5,
-            margin: '0 0 10px',
-          }}
-        >
-          {heading}
-        </h2>
-        <div
-          style={{
-            border: '1px solid var(--line)',
-            borderRadius: 'var(--radius-md)',
-            background: 'var(--paper-card)',
-            overflow: 'hidden',
-          }}
-        >
-          {items.map((it, i) => (
-            <Link
-              key={it.href}
-              href={it.href}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                gap: 10,
-                padding: '12px 14px',
-                textDecoration: 'none',
-                color: 'inherit',
-                borderTop: i === 0 ? 'none' : '1px solid var(--line)',
-                fontSize: 13.5,
-                lineHeight: 1.6,
-              }}
-            >
-              <span style={{ minWidth: 0 }}>{it.title}</span>
-              <span aria-hidden="true" style={{ color: 'var(--clay-deep)', flexShrink: 0 }}>→</span>
-            </Link>
-          ))}
-        </div>
+      <section className={'av3-xlink av3-xlink-' + tone} aria-label={heading}>
+        <KkSectionTitle as="h2" title={heading} />
+        <KkRowList
+          variant="arrow"
+          items={items.map((it) => ({ href: it.href, title: it.title }))}
+        />
       </section>
     );
   }

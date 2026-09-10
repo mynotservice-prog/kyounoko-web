@@ -1,3 +1,4 @@
+import '@/app/styles/today-v3.css';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
@@ -19,6 +20,10 @@ import {
 } from '@/lib/outing-plan';
 import { OutingPlanView, LunchListView } from '@/components/today/OutingPlanView';
 import { OmakasePlanButton } from '@/components/today/OmakasePlanButton';
+import { TodayConditionForm } from '@/components/today/TodayConditionForm';
+import { KkFooter } from '@/components/kk/KkFooter';
+import { KkIcon, type KkIconName } from '@/components/kk/KkIcon';
+import { FINDER_STATIONS, POPULAR_TERMINALS, POPULAR_FAMILY } from '@/lib/finder-stations';
 import {
   getTerminalStations,
   getFamilyFriendlyStations,
@@ -58,6 +63,20 @@ function labelForValue(key: string, value: string): string {
   return map[key]?.[value] ?? value;
 }
 
+/**
+ * lib/plans.ts の buildDayPlan が返す絵文字アイコン → KkIcon 名。
+ * 絵文字は表示しない（docs/renewal-2026-09.md §3-0）。lib 側は他ページも使うため、
+ * 表示側でだけ線画アイコンへ読み替える。
+ */
+const DAY_SLOT_ICON: Record<string, KkIconName> = {
+  '\u{1F305}': 'sunny', // 朝食
+  '\u{1F3A8}': 'art', // 午前の活動
+  '\u{1F359}': 'lunch', // 昼食
+  '\u{1F4DA}': 'book', // 午後の活動
+  '\u{1F370}': 'cafe', // おやつ
+  '\u{1F319}': 'lunch', // 夕食
+};
+
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
   const sp = await searchParams;
   const parts: string[] = [];
@@ -91,33 +110,33 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
 }
 
 function QuickMetaRow({ answer }: { answer: TodayAnswerResult }) {
-  const chips: { key: string; label: string; tone: string; emoji?: string }[] = [];
+  const chips: { key: string; label: string; tone: string; icon?: KkIconName }[] = [];
   if (answer.plan) {
     const p = answer.plan.plan;
-    if (p.ageRanges[0]) chips.push({ key: 'age', label: `${p.ageRanges[0]}歳`, tone: 'clay', emoji: '👶' });
-    if (p.place[0]) chips.push({ key: 'place', label: p.place[0] === 'home' ? '家' : p.place[0] === 'indoor' ? '屋内' : '外', tone: 'sage', emoji: p.place[0] === 'home' ? '🏠' : '🚶' });
-    chips.push({ key: 'time', label: `${p.durationMin}分`, tone: 'ochre', emoji: '⏱' });
+    if (p.ageRanges[0]) chips.push({ key: 'age', label: `${p.ageRanges[0]}歳`, tone: 'clay', icon: 'child' });
+    if (p.place[0]) chips.push({ key: 'place', label: p.place[0] === 'home' ? '家' : p.place[0] === 'indoor' ? '屋内' : '外', tone: 'sage', icon: p.place[0] === 'home' ? 'home' : 'walk' });
+    chips.push({ key: 'time', label: `${p.durationMin}分`, tone: 'ochre', icon: 'clock' });
     const bm: Record<string, string> = { free: '無料', low: '〜2,000円', mid: '〜5,000円', high: '5,000円〜' };
-    chips.push({ key: 'budget', label: bm[p.budget] ?? p.budget, tone: 'sky', emoji: '💴' });
-    if (p.area && p.area !== 'all') chips.push({ key: 'area', label: getAreaName(p.area), tone: 'clay', emoji: '📍' });
+    chips.push({ key: 'budget', label: bm[p.budget] ?? p.budget, tone: 'sky', icon: 'yen' });
+    if (p.area && p.area !== 'all') chips.push({ key: 'area', label: getAreaName(p.area), tone: 'clay', icon: 'pin' });
   } else if (answer.article) {
     const qi = answer.article.article.quickInfo;
-    if (qi?.ageRanges?.[0]) chips.push({ key: 'age', label: `${qi.ageRanges[0]}歳`, tone: 'clay', emoji: '👶' });
-    if (qi?.place?.[0]) chips.push({ key: 'place', label: qi.place[0] === 'home' ? '家' : qi.place[0] === 'indoor' ? '屋内' : '外', tone: 'sage', emoji: qi.place[0] === 'home' ? '🏠' : '🚶' });
-    if (qi?.durationMin) chips.push({ key: 'time', label: `${qi.durationMin}分`, tone: 'ochre', emoji: '⏱' });
+    if (qi?.ageRanges?.[0]) chips.push({ key: 'age', label: `${qi.ageRanges[0]}歳`, tone: 'clay', icon: 'child' });
+    if (qi?.place?.[0]) chips.push({ key: 'place', label: qi.place[0] === 'home' ? '家' : qi.place[0] === 'indoor' ? '屋内' : '外', tone: 'sage', icon: qi.place[0] === 'home' ? 'home' : 'walk' });
+    if (qi?.durationMin) chips.push({ key: 'time', label: `${qi.durationMin}分`, tone: 'ochre', icon: 'clock' });
     if (qi?.budget) {
       const bm: Record<string, string> = { free: '無料', low: '〜2,000円', mid: '〜5,000円', high: '5,000円〜' };
-      chips.push({ key: 'budget', label: bm[qi.budget] ?? qi.budget, tone: 'sky', emoji: '💴' });
+      chips.push({ key: 'budget', label: bm[qi.budget] ?? qi.budget, tone: 'sky', icon: 'yen' });
     }
     if (answer.article.article.area && answer.article.article.area !== 'all') {
-      chips.push({ key: 'area', label: getAreaName(answer.article.article.area), tone: 'clay', emoji: '📍' });
+      chips.push({ key: 'area', label: getAreaName(answer.article.article.area), tone: 'clay', icon: 'pin' });
     }
   }
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
       {chips.map((c) => (
         <span key={c.key} className={`meta-chip ${c.tone}`}>
-          {c.emoji && <span aria-hidden="true" style={{ marginRight: 4, fontSize: '1.05em' }}>{c.emoji}</span>}
+          {c.icon && <KkIcon name={c.icon} size={13} />}
           {c.label}
         </span>
       ))}
@@ -133,14 +152,14 @@ function QuickMetaRow({ answer }: { answer: TodayAnswerResult }) {
 function HighlightChips({ answer }: { answer: TodayAnswerResult }) {
   if (!answer.plan) return null;
   const p = answer.plan.plan;
-  const chips: { label: string; tone: string }[] = [];
-  if (p.durationMin <= 15) chips.push({ label: '⏱ 5分で始められる', tone: 'sage' });
-  if (p.budget === 'free') chips.push({ label: '💰 完全無料', tone: 'ochre' });
-  if (p.place.includes('home') && !p.place.includes('outdoor')) chips.push({ label: '🏠 家にあるものでOK', tone: 'sky' });
-  if (p.place.includes('outdoor') || p.place.includes('indoor')) chips.push({ label: '🚶 予約不要で行ける', tone: 'sky' });
-  if (p.weather.includes('rain')) chips.push({ label: '☔ 雨でもいける', tone: 'clay' });
-  if (p.weather.includes('heat')) chips.push({ label: '🥵 猛暑日OK', tone: 'clay' });
-  if (p.weather.includes('cold')) chips.push({ label: '❄️ 寒い日OK', tone: 'clay' });
+  const chips: { label: string; tone: string; icon: KkIconName }[] = [];
+  if (p.durationMin <= 15) chips.push({ label: '5分で始められる', tone: 'sage', icon: 'clock' });
+  if (p.budget === 'free') chips.push({ label: '完全無料', tone: 'ochre', icon: 'free' });
+  if (p.place.includes('home') && !p.place.includes('outdoor')) chips.push({ label: '家にあるものでOK', tone: 'sky', icon: 'home' });
+  if (p.place.includes('outdoor') || p.place.includes('indoor')) chips.push({ label: '予約不要で行ける', tone: 'sky', icon: 'walk' });
+  if (p.weather.includes('rain')) chips.push({ label: '雨でもいける', tone: 'clay', icon: 'rain' });
+  if (p.weather.includes('heat')) chips.push({ label: '猛暑日OK', tone: 'clay', icon: 'hot' });
+  if (p.weather.includes('cold')) chips.push({ label: '寒い日OK', tone: 'clay', icon: 'cold' });
   if (chips.length === 0) return null;
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 8, marginBottom: 4 }}>
@@ -150,6 +169,7 @@ function HighlightChips({ answer }: { answer: TodayAnswerResult }) {
           className={`meta-chip ${c.tone}`}
           style={{ fontSize: 11.5, fontWeight: 600 }}
         >
+          <KkIcon name={c.icon} size={13} />
           {c.label}
         </span>
       ))}
@@ -190,19 +210,9 @@ function PreparedBlock({ answer }: { answer: TodayAnswerResult }) {
   }
 
   return (
-    <aside
-      style={{
-        marginTop: 24,
-        padding: '18px 20px',
-        background: 'linear-gradient(135deg, rgba(20,147,209,0.06), rgba(201,96,62,0.04))',
-        border: '1px solid rgba(20,147,209,0.18)',
-        borderRadius: 14,
-      }}
-    >
-      <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', color: 'var(--clay-deep)', textTransform: 'uppercase', marginBottom: 8 }}>
-        ⚠️ やる前に3秒で確認
-      </div>
-      <ul style={{ margin: 0, paddingLeft: 18, fontSize: 13.5, color: 'var(--ink-sub)', lineHeight: 1.85 }}>
+    <aside className="td3-lg-block">
+      <div className="td3-lg-lab"><KkIcon name="info" size={13} />やる前に3秒で確認</div>
+      <ul className="td3-lg-ul">
         {tips.map((t, i) => <li key={i}>{t}</li>)}
       </ul>
     </aside>
@@ -230,50 +240,23 @@ function TodayRecommendedItems({ answer }: { answer: TodayAnswerResult }) {
   if (items.length === 0) return null;
 
   return (
-    <aside
-      style={{
-        marginTop: 24,
-        padding: '18px 20px',
-        background: 'rgba(247,122,33,0.04)',
-        border: '1px solid rgba(247,122,33,0.2)',
-        borderRadius: 14,
-      }}
-    >
-      <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', color: 'var(--clay-deep, #c9603e)', textTransform: 'uppercase', marginBottom: 4 }}>
-        🎒 持っていくと便利
-      </div>
-      <p style={{ fontSize: 11, color: 'var(--ink-mute, #8E867A)', marginTop: 0, marginBottom: 10 }}>
-        ※楽天市場のリンクです（広告 / PR）
-      </p>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+    <aside className="td3-lg-block">
+      <div className="td3-lg-lab"><KkIcon name="locker" size={13} />持っていくと便利</div>
+      <p className="td3-lg-note">※楽天市場のリンクです（広告 / PR）</p>
+      <div className="kk-rows">
         {items.map((item, i) => (
           <a
             key={i}
             href={wrapMoshimoRakuten(item.url)}
             target="_blank"
             rel="sponsored nofollow noopener"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 10,
-              padding: '10px 12px',
-              background: '#fff',
-              border: '1px solid rgba(0,0,0,0.08)',
-              borderRadius: 8,
-              textDecoration: 'none',
-              fontSize: 13,
-              color: 'var(--ink, #2A2118)',
-            }}
+            className="kk-row"
           >
-            <span style={{
-              width: 20, height: 20, borderRadius: '50%',
-              background: 'rgba(247,122,33,0.15)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              flex: 'none', fontSize: 10, fontWeight: 800,
-              color: '#c9603e',
-            }}>{i + 1}</span>
-            <span style={{ flex: 1, fontWeight: 700 }}>{item.label}</span>
-            <span style={{ fontSize: 11, color: 'var(--clay-deep, #c9603e)', fontWeight: 700 }}>楽天 ›</span>
+            <span className="kk-row-num">{i + 1}</span>
+            <span className="kk-row-body">
+              <span className="kk-row-title">{item.label}</span>
+            </span>
+            <span className="kk-row-date">楽天<KkIcon name="chevron-right" size={13} /></span>
           </a>
         ))}
       </div>
@@ -319,10 +302,7 @@ function AnswerCard({ answer, featured = false }: { answer: TodayAnswerResult; f
           <TodayRecommendedItems answer={answer} />
           <Link href={answer.href} className="answer-cta">
             {isPlan ? 'プランの詳細を見る' : '詳細を見る'}
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
+            <KkIcon name="arrow-right" size={16} sw={2} />
           </Link>
         </div>
       </article>
@@ -537,26 +517,30 @@ export default async function TodayPage({ searchParams }: Props) {
       const indieHref = anchor.stationSlug
         ? `/station/${anchor.stationSlug}#section-indies`
         : undefined;
+      const planHref = `/today?${new URLSearchParams(outingParams).toString()}`;
       return (
-        <V2Frame header="sub" active="today" backHref={`/today?${new URLSearchParams(outingParams).toString()}`}>
-          <div className="container">
-            <nav className="breadcrumb" aria-label="パンくず">
-              <Link href="/">HOME</Link>
-              <span className="sep">/</span>
-              <Link href={`/today?${new URLSearchParams(outingParams).toString()}`}>今日の流れ</Link>
-              <span className="sep">/</span>
-              <span>子連れで入れるお店</span>
-            </nav>
+        <V2Frame header="sub" active="today" backHref={planHref}>
+          <div className="today-v3">
+            <div className="td3-wrap">
+              <nav className="td3-crumb" aria-label="パンくず">
+                <Link href="/">ホーム</Link>
+                <span className="sep" aria-hidden="true"><KkIcon name="chevron-right" size={12} sw={2} /></span>
+                <Link href={planHref}>今日の流れ</Link>
+                <span className="sep" aria-hidden="true"><KkIcon name="chevron-right" size={12} sw={2} /></span>
+                <span>子連れで入れるお店</span>
+              </nav>
+            </div>
+            <LunchListView
+              anchorLabel={anchor.stationName ? `${anchor.stationName}駅` : anchor.regionLabel}
+              wardName={anchor.regionLabel}
+              wardRest={wardRest}
+              chain={chain}
+              ageLabel={ageLabel}
+              indies={indieRests}
+              indieHref={indieHref}
+            />
+            <KkFooter />
           </div>
-          <LunchListView
-            anchorLabel={anchor.stationName ? `${anchor.stationName}駅` : anchor.regionLabel}
-            wardName={anchor.regionLabel}
-            wardRest={wardRest}
-            chain={chain}
-            ageLabel={ageLabel}
-            indies={indieRests}
-            indieHref={indieHref}
-          />
         </V2Frame>
       );
     }
@@ -577,7 +561,7 @@ export default async function TodayPage({ searchParams }: Props) {
 
   if (outingPlan) {
     // P0-2: 雨プランB。晴れ/くもり時に、同条件を weather=rain で再生成した
-    // 屋内中心の代替プランを「☔ 雨ならこっち」に折りたたみ併記する。
+    // 屋内中心の代替プランを「雨ならこっち」に折りたたみ併記する。
     const rainPlan =
       query.weather === 'rain'
         ? null
@@ -592,22 +576,37 @@ export default async function TodayPage({ searchParams }: Props) {
             afternoonVariant: num(sp.va),
           });
 
+    // 「条件を変更する」: 年齢・天気を保ったまま条件入力状態へ戻る
+    const changeQs = new URLSearchParams();
+    if (query.age) changeQs.set('age', query.age);
+    if (query.weather && query.weather !== 'any') changeQs.set('weather', query.weather);
+    const changeHref = changeQs.toString() ? `/today?${changeQs.toString()}` : '/today';
+
     return (
       <V2Frame header="sub" active="today" backHref="/today">
-        <div className="container">
-          <nav className="breadcrumb" aria-label="パンくず">
-            <Link href="/">HOME</Link>
-            <span className="sep">/</span>
-            <span>今日の流れ</span>
-          </nav>
+        <div className="today-v3">
+          <div className="td3-wrap">
+            <div className="td3-crumbrow">
+              <nav className="td3-crumb" aria-label="パンくず">
+                <Link href="/">ホーム</Link>
+                <span className="sep" aria-hidden="true"><KkIcon name="chevron-right" size={12} sw={2} /></span>
+                <span>今日の流れ</span>
+              </nav>
+              <Link href={changeHref} className="td3-changepill">
+                <KkIcon name="swap" size={14} sw={2} />
+                条件を変更する
+              </Link>
+            </div>
+          </div>
+          <OutingPlanView
+            plan={outingPlan}
+            params={outingParams}
+            ageLabel={ageLabel}
+            weatherLabel={weatherLabel}
+            rainPlan={rainPlan}
+          />
+          <KkFooter />
         </div>
-        <OutingPlanView
-          plan={outingPlan}
-          params={outingParams}
-          ageLabel={ageLabel}
-          weatherLabel={weatherLabel}
-          rainPlan={rainPlan}
-        />
       </V2Frame>
     );
   }
@@ -669,86 +668,100 @@ export default async function TodayPage({ searchParams }: Props) {
   return (
     <>
       <V2Frame header="sub" active="today">
+      <div className="today-v3">
 
-      <div className="container">
-        <nav className="breadcrumb" aria-label="パンくず">
-          <Link href="/">HOME</Link>
-          <span className="sep">/</span>
-          <span>今日はこれ</span>
+      <div className="td3-wrap">
+        <nav className="td3-crumb" aria-label="パンくず">
+          <Link href="/">ホーム</Link>
+          <span className="sep" aria-hidden="true"><KkIcon name="chevron-right" size={12} sw={2} /></span>
+          <span>今日のプランをつくる</span>
         </nav>
+        <h1 className="td3-h1 td3-h1-top">今日のプランをつくる</h1>
+        <p className="td3-lead">
+          行きたいエリアと条件を選ぶだけで、子どもと楽しめる1日の流れを提案します。
+        </p>
+
+        {/* 条件入力フォーム（client）。/today?date=&age=&station=&weather= へ遷移する */}
+        <TodayConditionForm
+          stations={FINDER_STATIONS}
+          terminals={POPULAR_TERMINALS}
+          family={POPULAR_FAMILY}
+          initialAge={query.age}
+          initialWeather={query.weather}
+        />
+
+        {/* 駅が決まっていない人向けの逃げ道 */}
+        <Link href="/station" className="td3-fallback">
+          <span className="td3-fallback-ico">
+            <KkIcon name="pin" size={22} />
+          </span>
+          <span className="td3-fallback-body">
+            <span className="td3-fallback-sub">駅が決まっていない方は</span>
+            <span className="td3-fallback-title">
+              エリアから探してみる
+              <KkIcon name="arrow-right" size={16} sw={2} />
+            </span>
+          </span>
+        </Link>
       </div>
 
-      {/* 駅から「今日の流れ（おでかけ1日プラン）」を作る入口 */}
-      <div className="container" style={{ marginTop: 16 }}>
-        <div style={{ fontSize: 15, fontWeight: 800, color: 'var(--ink)', marginBottom: 4 }}>
-          駅をえらんで「今日の流れ」を作る
+      {/* 駅から「今日の流れ（おでかけ1日プラン）」を作る入口（静的リンク。従来のチップ群を維持） */}
+      <section className="td3-wrap td3-static">
+        <div className="kk-sec-head">
+          <div className="kk-sec-title">主要駅から選ぶ</div>
         </div>
-        <p style={{ fontSize: 12.5, color: 'var(--ink-sub)', margin: '0 0 10px', lineHeight: 1.5 }}>
-          選んだ駅まわりで、午前あそぶ → お昼たべる → 午後 の移動少なめ1日プランを作ります。
+        <p className="td3-lead">
+          選んだ駅まわりで、午前あそぶ・お昼たべる・午後の、移動少なめ1日プランを作ります。
         </p>
         {/* おまかせ: 何も決めていない人向け。候補駅からランダムに1つ選んで即プラン化。 */}
         <OmakasePlanButton candidates={omakaseCandidates} age={query.age} weather={query.weather} />
         {isTokyoPicker ? (
           <>
-            <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--ink-mute)', letterSpacing: '.05em', marginBottom: 6 }}>
-              主要ターミナル
-            </div>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 14 }}>
+            <div className="td3-stgroup-lab">主要ターミナル</div>
+            <div className="td3-stlist">
               {terminalChips.map((st) => (
-                <Link key={st.slug} href={`/today?${stationQs(st.slug)}`} className="meta-chip clay" style={{ fontSize: 13, textDecoration: 'none' }}>
-                  📍 {st.name}
+                <Link key={st.slug} href={`/today?${stationQs(st.slug)}`} className="td3-stitem">
+                  {st.name}
                 </Link>
               ))}
             </div>
-            <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--ink-mute)', letterSpacing: '.05em', marginBottom: 6 }}>
-              子育て世帯に人気の駅
-            </div>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+            <div className="td3-stgroup-lab">子育て世帯に人気の駅</div>
+            <div className="td3-stlist">
               {familyChips.map((st) => (
-                <Link key={st.slug} href={`/today?${stationQs(st.slug)}`} className="meta-chip sage" style={{ fontSize: 13, textDecoration: 'none' }}>
-                  📍 {st.name}
+                <Link key={st.slug} href={`/today?${stationQs(st.slug)}`} className="td3-stitem">
+                  {st.name}
                 </Link>
               ))}
             </div>
           </>
         ) : metroChips ? (
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+          <div className="td3-stlist">
             {metroChips.map((st) => (
-              <Link key={st.slug} href={`/today?${stationQs(st.slug)}`} className="meta-chip clay" style={{ fontSize: 13, textDecoration: 'none' }}>
-                📍 {st.name}
+              <Link key={st.slug} href={`/today?${stationQs(st.slug)}`} className="td3-stitem">
+                {st.name}
               </Link>
             ))}
           </div>
         ) : (
           // 駅プラン非対応エリア：駅を出さず、エリア（おでかけ先）ブラウズへ誘導
-          <p style={{ fontSize: 13, color: 'var(--ink-sub)', lineHeight: 1.7, margin: 0 }}>
+          <p className="td3-lead">
             このエリアの「駅から1日プラン」は今後対応予定です。今は{' '}
-            <Link href="/area" style={{ color: 'var(--clay-deep)', fontWeight: 700 }}>エリアからおでかけ先を探す</Link>
+            <Link href="/area" className="td3-inlink">エリアからおでかけ先を探す</Link>
             {' '}でスポットを見られます。
           </p>
         )}
-      </div>
+      </section>
 
       {activeChips.length > 0 && (
-        <div className="container" style={{ marginTop: 16 }}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'center' }}>
-            <span style={{ fontSize: 11, color: 'var(--ink-mute)', letterSpacing: '.12em', marginRight: 4 }}>
-              条件：
-            </span>
+        <div className="td3-wrap td3-lg-cond">
+          <div className="kk-chips">
+            <span className="td3-lg-cond-lab">条件：</span>
             {activeChips.map((c) => (
-              <span key={c.key} className="meta-chip clay" style={{ fontSize: 12 }}>
+              <span key={c.key} className="kk-chip">
                 {c.label}
               </span>
             ))}
-            <Link
-              href="/#finder"
-              style={{
-                fontSize: 12,
-                color: 'var(--ink-sub)',
-                textDecoration: 'underline',
-                marginLeft: 8,
-              }}
-            >
+            <Link href="/#finder" className="td3-inlink">
               条件を変える
             </Link>
           </div>
@@ -761,7 +774,7 @@ export default async function TodayPage({ searchParams }: Props) {
             // P0-1: トップへの強制送還（戻りループ）を廃止。上の駅ピッカーがそのまま入口。
             <div style={{ padding: '24px 0 8px', textAlign: 'center', color: 'var(--ink-sub)' }}>
               <p style={{ fontSize: 14, lineHeight: 1.7, margin: 0 }}>
-                ↑ 上の<strong style={{ color: 'var(--ink)' }}>駅</strong>をえらぶと、その場で「今日の流れ」を作ります。
+                上の<strong style={{ color: 'var(--ink)' }}>駅</strong>をえらぶと、その場で「今日の流れ」を作ります。
               </p>
             </div>
           ) : !top && !isEatOutside ? (
@@ -770,7 +783,7 @@ export default async function TodayPage({ searchParams }: Props) {
                 今日の条件に合う答えは、まだ準備中です。
               </p>
               <p style={{ fontSize: 13, lineHeight: 1.7, margin: 0 }}>
-                ↑ 上の<strong style={{ color: 'var(--ink)' }}>駅</strong>をえらび直すか、天気・年齢を変えてみてください。
+                上の<strong style={{ color: 'var(--ink)' }}>駅</strong>をえらび直すか、天気・年齢を変えてみてください。
               </p>
             </div>
           ) : (
@@ -785,39 +798,14 @@ export default async function TodayPage({ searchParams }: Props) {
                   下のレストラン一覧自体を主答えとして見せる。
                   代わりにヒーロー帯で意図を明示する。 */}
               {isEatOutside ? (
-                <div
-                  style={{
-                    padding: '24px 24px 22px',
-                    borderRadius: 16,
-                    background: 'linear-gradient(135deg, rgba(201,96,62,0.10), rgba(201,96,62,0.03))',
-                    border: '1px solid rgba(201,96,62,0.20)',
-                    marginBottom: 24,
-                  }}
-                >
-                  <div
-                    style={{
-                      fontSize: 11,
-                      letterSpacing: '0.08em',
-                      color: 'var(--clay-deep)',
-                      fontWeight: 600,
-                      marginBottom: 6,
-                    }}
-                  >
-                    EAT OUT · 外で食べる
-                  </div>
-                  <h2
-                    style={{
-                      fontFamily: 'var(--font-mincho)',
-                      fontSize: 22,
-                      lineHeight: 1.45,
-                      margin: '0 0 8px',
-                    }}
-                  >
+                <div className="td3-lg-hero">
+                  <div className="td3-lg-lab">EAT OUT · 外で食べる</div>
+                  <h2 className="td3-lg-h2">
                     {query.area && query.area !== 'all'
                       ? `${getAreaName(query.area)}で、子連れ歓迎の外食をする。`
                       : '今日は外で、子連れ歓迎のお店で食べる。'}
                   </h2>
-                  <p style={{ fontSize: 13, color: 'var(--ink-sub)', margin: 0, lineHeight: 1.7 }}>
+                  <p className="td3-lg-p">
                     ベビーカー入店OK・キッズメニュー・キッズチェアが揃った
                     ファミレス／カフェ／個人店から、条件に合うお店を{restaurants.length}件ピックアップ。
                     {query.area === 'tokyo'
@@ -855,7 +843,12 @@ export default async function TodayPage({ searchParams }: Props) {
                           <span dangerouslySetInnerHTML={{ __html: spot.name }} />
                         </div>
                         {spot.note && <p className="restaurant-note">{spot.note}</p>}
-                        {spot.hiddenTip && <p className="restaurant-tip">💡 {spot.hiddenTip}</p>}
+                        {spot.hiddenTip && (
+                          <p className="restaurant-tip">
+                            <KkIcon name="info" size={14} />
+                            {spot.hiddenTip}
+                          </p>
+                        )}
                         <div className="restaurant-meta">
                           {spot.ages?.length > 0 && (
                             <span>対象: {spot.ages.join(' / ')}歳</span>
@@ -873,29 +866,15 @@ export default async function TodayPage({ searchParams }: Props) {
                   「もっと細かく駅で絞りたい」ニーズに応える */}
               {query.area === 'tokyo' && (query.place !== 'home') && (
                 <section style={{ margin: '32px 0' }}>
-                  <Link href="/station" style={{
-                    display: 'block',
-                    background: 'linear-gradient(135deg, rgba(201,96,62,0.08), rgba(201,96,62,0.03))',
-                    border: '1px solid rgba(201,96,62,0.20)',
-                    borderRadius: 16,
-                    padding: '20px 24px',
-                    textDecoration: 'none',
-                    color: 'var(--ink)',
-                  }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
-                      <div style={{ flex: 1, minWidth: 220 }}>
-                        <div style={{ fontSize: 11, color: 'var(--clay-deep)', fontWeight: 600, letterSpacing: '0.05em', marginBottom: 4 }}>
-                          DEEPER · 駅から絞り込む
-                        </div>
-                        <div style={{ fontSize: 17, fontWeight: 600, marginBottom: 2 }}>
-                          東京エリアの駅から子連れOK店を探す
-                        </div>
-                        <div style={{ fontSize: 12, color: 'var(--ink-mute)' }}>
-                          23区484駅・40路線対応 / ベビーカーOK・個室・雨の日OK等で絞り込み可
-                        </div>
-                      </div>
-                      <span style={{ fontSize: 22, color: 'var(--clay-deep)', flexShrink: 0 }}>→</span>
-                    </div>
+                  <Link href="/station" className="td3-lg-cta">
+                    <span className="td3-lg-cta-body">
+                      <span className="td3-lg-lab">DEEPER · 駅から絞り込む</span>
+                      <span className="td3-lg-cta-title">東京エリアの駅から子連れOK店を探す</span>
+                      <span className="td3-lg-note">23区484駅・40路線対応 / ベビーカーOK・個室・雨の日OK等で絞り込み可</span>
+                    </span>
+                    <span className="td3-lg-cta-arrow" aria-hidden="true">
+                      <KkIcon name="arrow-right" size={20} sw={2} />
+                    </span>
                   </Link>
                 </section>
               )}
@@ -915,7 +894,9 @@ export default async function TodayPage({ searchParams }: Props) {
                     {dayPlan.map((slot, i) => (
                       <li key={i} className={`day-plan-slot ${slot.plan ? '' : 'empty'}`}>
                         <div className="day-plan-time">
-                          <span className="day-plan-icon" aria-hidden="true">{slot.icon}</span>
+                          <span className="day-plan-icon" aria-hidden="true">
+                            <KkIcon name={DAY_SLOT_ICON[slot.icon] ?? 'clock'} size={16} />
+                          </span>
                           <span className="day-plan-clock">{slot.time}</span>
                           <span className="day-plan-label">{slot.label}</span>
                         </div>
@@ -998,7 +979,8 @@ export default async function TodayPage({ searchParams }: Props) {
                     ))}
                   </div>
                   <Link href="/items" className="today-items-more">
-                    カタログ全体を見る →
+                    カタログ全体を見る
+                    <KkIcon name="arrow-right" size={15} sw={2} />
                   </Link>
                 </section>
               )}
@@ -1024,28 +1006,13 @@ export default async function TodayPage({ searchParams }: Props) {
               )}
 
               {/* 最後の回遊CTA */}
-              <section
-                style={{
-                  marginTop: 48,
-                  padding: '20px 22px',
-                  background: 'var(--paper-card)',
-                  border: '1px solid var(--line)',
-                  borderRadius: 'var(--radius-md)',
-                }}
-              >
-                <p
-                  style={{
-                    fontSize: 13.5,
-                    color: 'var(--ink-sub)',
-                    margin: '0 0 14px',
-                    lineHeight: 1.85,
-                  }}
-                >
+              <section className="td3-lg-foot">
+                <p className="td3-lg-p">
                   今日の答えはこれでOK？ 別の条件で試す or トップに戻って違うコンセプトから探す。
                 </p>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
-                  <Link href="/#finder" className="btn-primary-light">別の条件で探す</Link>
-                  <Link href="/" className="btn-light-ghost">トップに戻る</Link>
+                <div className="td3-lg-foot-btns">
+                  <Link href="/#finder" className="kk-btn sm">別の条件で探す</Link>
+                  <Link href="/" className="kk-btn outline sm">トップに戻る</Link>
                 </div>
               </section>
             </>
@@ -1053,8 +1020,9 @@ export default async function TodayPage({ searchParams }: Props) {
         </div>
       </section>
 
+      <KkFooter />
+      </div>
       </V2Frame>
-      
     </>
   );
 }
