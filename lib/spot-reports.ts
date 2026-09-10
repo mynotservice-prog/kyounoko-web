@@ -12,6 +12,17 @@ export type SpotReport = {
   publishedAt?: string;
 };
 
+/**
+ * microCMS の `spot-reports` エンドポイントを呼ぶかどうか（既定: 呼ばない）。
+ *
+ * 2026-09-11: microCMS から「spot-reports に毎時1,600〜1,800件の404」と連絡があった。
+ * エンドポイントが作られていないため、スポットページのプリレンダー（788件）と
+ * 1時間ごとの再生成のたびに必ず404を出していた（取得結果は常に空配列）。
+ * 呼ばなくても表示は変わらない。API を作ったら MICROCMS_SPOT_REPORTS_ENABLED=1 で再開する。
+ * 投稿側（app/api/spot-report/route.ts）も同じフラグで止める。
+ */
+export const SPOT_REPORTS_API_ENABLED = process.env.MICROCMS_SPOT_REPORTS_ENABLED === '1';
+
 /** 全スポット横断の新着フィード用（どのスポットの投稿かを含む） */
 export type RecentSpotReport = SpotReport & {
   spotSlug: string;
@@ -19,6 +30,7 @@ export type RecentSpotReport = SpotReport & {
 };
 
 export async function getPublishedSpotReports(slug: string): Promise<SpotReport[]> {
+  if (!SPOT_REPORTS_API_ENABLED) return [];
   const domain = process.env.MICROCMS_SERVICE_DOMAIN;
   const key = process.env.MICROCMS_API_KEY;
   if (!domain || !key) return [];
@@ -51,6 +63,7 @@ export async function getPublishedSpotReports(slug: string): Promise<SpotReport[
  * env未設定・通信失敗は空配列。
  */
 export async function getRecentSpotReports(limit = 30): Promise<RecentSpotReport[]> {
+  if (!SPOT_REPORTS_API_ENABLED) return [];
   const domain = process.env.MICROCMS_SERVICE_DOMAIN;
   const key = process.env.MICROCMS_API_KEY;
   if (!domain || !key) return [];
