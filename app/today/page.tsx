@@ -17,6 +17,7 @@ import {
   indieLunchCandidates,
   indieToLunchSpot,
   resolveOutingAnchor,
+  type OutingPlan,
 } from '@/lib/outing-plan';
 import { OutingPlanView, LunchListView } from '@/components/today/OutingPlanView';
 import { OmakasePlanButton } from '@/components/today/OmakasePlanButton';
@@ -54,7 +55,7 @@ function firstString(v: string | string[] | undefined): string | undefined {
 function labelForValue(key: string, value: string): string {
   const map: Record<string, Record<string, string>> = {
     age: { '0-1': '0〜1歳', '2-3': '2〜3歳', '4-6': '4〜6歳' },
-    weather: { sunny: '晴れ', rain: '雨', heat: '猛暑', cold: '寒い' },
+    weather: { sunny: '晴れ', cloudy: 'くもり', rain: '雨', heat: '猛暑', cold: '寒い' },
     place: { home: '家で', outside: '外で' },
     day: { weekday: '平日', holiday: '休日' },
     duration: { '15': '15分', '60': '1時間', '120': '半日', '240': '1日' },
@@ -562,7 +563,7 @@ export default async function TodayPage({ searchParams }: Props) {
   if (outingPlan) {
     // P0-2: 雨プランB。晴れ/くもり時に、同条件を weather=rain で再生成した
     // 屋内中心の代替プランを「雨ならこっち」に折りたたみ併記する。
-    const rainPlan =
+    const rainPlanRaw =
       query.weather === 'rain'
         ? null
         : buildOutingPlan({
@@ -575,6 +576,12 @@ export default async function TodayPage({ searchParams }: Props) {
             lunchVariant: num(sp.vl),
             afternoonVariant: num(sp.va),
           });
+    // 3km圏に屋内スポットが無い駅では雨プランが本プランと同一になる。
+    // 同じ中身を「☔雨ならこっち」として出すのは誤誘導なので、その場合は出さない。
+    const planKey = (p: OutingPlan) =>
+      p.slots.map((s) => s.spot?.name ?? s.plan?.title ?? s.label).join('|');
+    const rainPlan =
+      rainPlanRaw && planKey(rainPlanRaw) !== planKey(outingPlan) ? rainPlanRaw : null;
 
     // 「条件を変更する」: 年齢・天気を保ったまま条件入力状態へ戻る
     const changeQs = new URLSearchParams();

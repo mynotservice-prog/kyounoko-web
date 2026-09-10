@@ -39,7 +39,7 @@ export async function V2PurposeRanking() {
             {rest.length > 0 && (
               <details className="tv3-purpose-more">
                 <summary>6位〜{rows.length}位も見る</summary>
-                <RestRows items={rest} offset={head.length} />
+                <RankRestRows items={rest} offset={head.length} />
               </details>
             )}
           </section>
@@ -49,8 +49,8 @@ export async function V2PurposeRanking() {
   );
 }
 
-/** 6位以降: 順位番号を続きから振るため KkRowList の rank 表示を自前で再現する。 */
-function RestRows({ items, offset }: { items: KkRowItem[]; offset: number }) {
+/** 6位以降: 順位番号を続きから振るため KkRowList の rank 表示を自前で再現する（トップの人気スポットでも使う）。 */
+export function RankRestRows({ items, offset }: { items: KkRowItem[]; offset: number }) {
   return (
     <div className="kk-rows grid2">
       {items.map((it, i) => (

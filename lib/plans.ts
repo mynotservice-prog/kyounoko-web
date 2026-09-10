@@ -363,7 +363,26 @@ function scorePlan(p: PlanMeta, q: PlanQuery): PlanMatch {
   }
 
   // 天気（コア条件）
-  if (q.weather && q.weather !== 'any') {
+  if (q.weather === 'cloudy') {
+    // くもりは屋内・屋外どちらも成立する日。プランのfrontmatterに 'cloudy' は無いので
+    // ここで明示的に扱わないと、全プランが「不一致 -15」になり weather:["any"] しか残らない。
+    // 天気不問プランを最優先。sunny 指定のプランには「窓辺の影絵遊び」のように
+    // 日射しが要るものが混ざるため、くもりでは天気不問より一段下げる。
+    // 献立プラン（kind: 'meal'）は全て weather:["any"] なので、ここで +9 を与えると
+    // 外出・遊びプランを抜いて「夕食の献立」が1位になる。晴れ/雨のときと同じ +3 に揃える。
+    if (p.kind === 'meal') {
+      score += 3;
+    } else if (p.weather.includes('any' as Weather)) {
+      score += 9;
+      reasons.push('くもりでもOK');
+    } else if (p.weather.includes('sunny' as Weather)) {
+      score += 6;
+    } else if (p.weather.includes('rain' as Weather)) {
+      score += 4; // 雨向け＝屋内。くもりでも問題なく成立する
+    } else {
+      score -= 8; // 猛暑日/寒い日 専用プランはくもり向きではない
+    }
+  } else if (q.weather && q.weather !== 'any') {
     if (p.weather.includes(q.weather as Weather)) {
       const labels: Record<string, string> = { rain: '雨でもOK', heat: '猛暑日OK', cold: '寒い日OK', sunny: '晴れ向き' };
       score += 12;

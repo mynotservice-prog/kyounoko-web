@@ -122,10 +122,15 @@ function ageOk(s: Spot, age?: AgeTag): boolean {
   return s.ages.includes(age);
 }
 
-/** 雨/猛暑/寒い日は屋外スポットを避ける（屋内・mixedを優先）。 */
+/**
+ * 天気ごとの「行き先の向き」。厳格パスで使う条件で、0件なら呼び出し側が緩める。
+ * - sunny        … 屋内だけの施設は外す（outdoor / mixed を出す）
+ * - cloudy       … 制約なし（屋内も屋外も可。雨と同じ挙動にはしない）
+ * - rain/heat/cold … 屋外は外す（indoor / mixed を出す）
+ */
 function weatherOk(s: Spot, weather?: Weather): boolean {
-  if (!weather || weather === 'sunny' || weather === 'any') return true;
-  // rain / heat / cold → 屋外は不可（屋内/mixedのみ）
+  if (!weather || weather === 'any' || weather === 'cloudy') return true;
+  if (weather === 'sunny') return s.place !== 'indoor';
   return s.place !== 'outdoor';
 }
 
@@ -141,7 +146,11 @@ function pickByPopular(list: Spot[]): Spot | undefined {
 
 /**
  * 午前/午後の遊び場を、近さカスケードで1件選ぶ。
- * weather フィルタはまず厳格適用→0件なら緩める（必ず埋めるため）。
+ *
+ * weather の扱い: 以前は「各tierの中で 厳格→緩和 を試す」形だったため、
+ * 同じ駅に条件に合う遊び場が1件も無いと、その駅のtierで即座に天気を捨てていた
+ * （雨なのに公園、晴れなのに百貨店）。天気は近さより先に効かせたい条件なので、
+ * 厳格パスでカスケード全体を回し、全tierで0件のときだけ呼び出し側が緩和パスを回す。
  */
 function pickSpotCascade(
   stationSlug: string | undefined,
@@ -151,6 +160,7 @@ function pickSpotCascade(
   exclude: Set<string>,
   variant = 0,
   anchorStation?: AnyStation | null,
+  strictWeather = true,
 ): {
   spot: Spot;
   tier: CoherenceTier;
@@ -158,7 +168,7 @@ function pickSpotCascade(
   viaStationName?: string;
   distanceKm?: number;
 } | null {
-  const filt = (list: Spot[], strictWeather: boolean) =>
+  const filt = (list: Spot[]) =>
     list.filter(
       (s) =>
         NON_RESTAURANT(s) &&
@@ -172,14 +182,10 @@ function pickSpotCascade(
   // 1) 同じ駅（徒歩圏）
   if (stationSlug) {
     const atStation = getSpotsByNearestStation(stationSlug, { limit: 24 });
-    for (const strict of [true, false]) {
-      const cand = filt(atStation, strict).sort(
-        (a, b) => (a.walkMinutes ?? 99) - (b.walkMinutes ?? 99),
-      );
-      if (cand.length) {
-        const top = at(cand);
-        return { spot: top, tier: 'station', walkMinutes: top.walkMinutes };
-      }
+    const cand = filt(atStation).sort((a, b) => (a.walkMinutes ?? 99) - (b.walkMinutes ?? 99));
+    if (cand.length) {
+      const top = at(cand);
+      return { spot: top, tier: 'station', walkMinutes: top.walkMinutes };
     }
   }
 
@@ -190,30 +196,28 @@ function pickSpotCascade(
   if (anchorCoords) {
     const MAX_KM = 3.0; // これを超える提案はしない（電車1本・回遊できる現実的な範囲）
     const pool = SPOTS[areaKey as AreaSlug] ?? [];
-    for (const strict of [true, false]) {
-      const cand = filt(pool, strict)
-        .filter((s) => s.nearestStation && s.nearestStation !== stationSlug)
-        .map((s) => {
-          const c = getStationCoords(s.nearestStation!);
-          return {
-            s,
-            st: findStationBySlug(s.nearestStation!),
-            km: c ? haversineKm(anchorCoords, c) : null,
-          };
-        })
-        .filter((x) => x.km !== null && x.km <= MAX_KM)
-        // 近い順を最優先（morning=最近接, afternoon=次点）。同距離は人気順。
-        .sort((a, b) => a.km! - b.km! || popularFirst(a.s, b.s));
-      if (cand.length) {
-        const pick = at(cand);
+    const cand = filt(pool)
+      .filter((s) => s.nearestStation && s.nearestStation !== stationSlug)
+      .map((s) => {
+        const c = getStationCoords(s.nearestStation!);
         return {
-          spot: pick.s,
-          tier: 'nearby',
-          walkMinutes: pick.s.walkMinutes,
-          viaStationName: pick.st?.name,
-          distanceKm: pick.km!,
+          s,
+          st: findStationBySlug(s.nearestStation!),
+          km: c ? haversineKm(anchorCoords, c) : null,
         };
-      }
+      })
+      .filter((x) => x.km !== null && x.km <= MAX_KM)
+      // 近い順を最優先（morning=最近接, afternoon=次点）。同距離は人気順。
+      .sort((a, b) => a.km! - b.km! || popularFirst(a.s, b.s));
+    if (cand.length) {
+      const pick = at(cand);
+      return {
+        spot: pick.s,
+        tier: 'nearby',
+        walkMinutes: pick.s.walkMinutes,
+        viaStationName: pick.st?.name,
+        distanceKm: pick.km!,
+      };
     }
     // 座標アンカーで3km内に該当なし → far fallback はしない（回遊性を優先）。
     // null を返すと上位で「おうちプラン」等に切り替わる。
@@ -225,39 +229,52 @@ function pickSpotCascade(
   if (anchorStation && anchorStation.lines.length) {
     const anchorLines = new Set(anchorStation.lines);
     const pool = SPOTS[areaKey as AreaSlug] ?? [];
-    for (const strict of [true, false]) {
-      const cand = filt(pool, strict)
-        .filter((s) => s.nearestStation && s.nearestStation !== stationSlug)
-        .map((s) => ({ s, st: findStationBySlug(s.nearestStation!) }))
-        .filter((x) => x.st && x.st.lines.some((l) => anchorLines.has(l)))
-        .sort((a, b) => popularFirst(a.s, b.s));
-      if (cand.length) {
-        const pick = at(cand);
-        return {
-          spot: pick.s,
-          tier: 'nearby',
-          walkMinutes: pick.s.walkMinutes,
-          viaStationName: pick.st!.name,
-        };
-      }
+    const cand = filt(pool)
+      .filter((s) => s.nearestStation && s.nearestStation !== stationSlug)
+      .map((s) => ({ s, st: findStationBySlug(s.nearestStation!) }))
+      .filter((x) => x.st && x.st.lines.some((l) => anchorLines.has(l)))
+      .sort((a, b) => popularFirst(a.s, b.s));
+    if (cand.length) {
+      const pick = at(cand);
+      return {
+        spot: pick.s,
+        tier: 'nearby',
+        walkMinutes: pick.s.walkMinutes,
+        viaStationName: pick.st!.name,
+      };
     }
   }
 
   // 2) 同じ地域（区/市内移動）
   const regionSpots = getSpotsForRegion(areaKey, regionLabel);
-  for (const strict of [true, false]) {
-    const cand = filt(regionSpots, strict).sort(popularFirst);
-    if (cand.length) return { spot: at(cand), tier: 'ward' };
-  }
+  const regionCand = filt(regionSpots).sort(popularFirst);
+  if (regionCand.length) return { spot: at(regionCand), tier: 'ward' };
 
   // 3) エリア広域（最終フォールバック）
   const areaWide = SPOTS[areaKey as AreaSlug] ?? [];
-  for (const strict of [true, false]) {
-    const cand = filt(areaWide, strict).sort(popularFirst);
-    if (cand.length) return { spot: at(cand), tier: 'wide' };
-  }
+  const wideCand = filt(areaWide).sort(popularFirst);
+  if (wideCand.length) return { spot: at(wideCand), tier: 'wide' };
 
   return null;
+}
+
+/**
+ * 天気を効かせたカスケード（厳格）→ 全滅なら天気を捨てて再走査（緩和）。
+ * 天気を捨てたかどうかは呼び出し側では使わないが、必ず1件返す従来の性質は保つ。
+ */
+function pickSpotWithWeather(
+  stationSlug: string | undefined,
+  areaKey: string,
+  regionLabel: string,
+  q: OutingQuery,
+  exclude: Set<string>,
+  variant: number,
+  anchorStation?: AnyStation | null,
+) {
+  return (
+    pickSpotCascade(stationSlug, areaKey, regionLabel, q, exclude, variant, anchorStation, true) ??
+    pickSpotCascade(stationSlug, areaKey, regionLabel, q, exclude, variant, anchorStation, false)
+  );
 }
 
 function facetsOf(s: Spot): string[] {
@@ -594,7 +611,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
   const slots: OutingSlot[] = [];
 
   // ---- 午前: あそぶ ----
-  const morning = pickSpotCascade(stationSlug, areaKey, regionLabel, q, used, q.morningVariant ?? 0, anchorStation);
+  const morning = pickSpotWithWeather(stationSlug, areaKey, regionLabel, q, used, q.morningVariant ?? 0, anchorStation);
   if (morning) {
     used.add(morning.spot.name);
     slots.push({
@@ -645,7 +662,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
     | { spot: Spot; tier: CoherenceTier; walkMinutes?: number; viaStationName?: string; distanceKm?: number }
     | null = null;
   if (!preferHome) {
-    afternoon = pickSpotCascade(stationSlug, areaKey, regionLabel, q, used, q.afternoonVariant ?? 0, anchorStation);
+    afternoon = pickSpotWithWeather(stationSlug, areaKey, regionLabel, q, used, q.afternoonVariant ?? 0, anchorStation);
   }
   if (afternoon) {
     used.add(afternoon.spot.name);

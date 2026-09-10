@@ -5,7 +5,9 @@ import type { MicroCMSListContent, MicroCMSImage, MicroCMSObjectContent } from '
 // ==========================================================================
 
 export type AgeRange = '0-1' | '2-3' | '4-6';
-export type Weather = 'rain' | 'heat' | 'cold' | 'sunny' | 'any';
+// 'cloudy' はフォーム（/today・トップのヒーロー）が実際に送ってくる値。
+// union に無いと weatherOk() で「sunny でない＝雨扱い」に落ちるため、明示的に持つ。
+export type Weather = 'rain' | 'heat' | 'cold' | 'sunny' | 'cloudy' | 'any';
 export type PlaceType = 'home' | 'indoor' | 'outdoor';
 export type DayType = 'weekday' | 'holiday';
 export type TimeOfDay = 'morning' | 'noon' | 'evening' | 'night';

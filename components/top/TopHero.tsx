@@ -1,18 +1,8 @@
-import Link from 'next/link';
 import { V2Img } from '@/components/v2/V2Base';
-import { KkIcon, type KkIconName } from '@/components/kk/KkIcon';
 import { V2HeroForm } from '@/components/v2/V2HeroForm';
 import { V2TodayHero, type AgePick } from '@/components/v2/V2TodayHero';
 import type { ChildAge } from '@/hooks/useUserSettings';
 import { FINDER_STATIONS, POPULAR_TERMINALS, POPULAR_FAMILY } from '@/lib/finder-stations';
-
-
-export type QuickSearchItem = {
-  t: string;
-  /** 絵文字は使わない。アイコンは KkIcon（社長支給パック）の名前で、ラベルの意味と一致させる。 */
-  icon: KkIconName;
-  href: string;
-};
 
 /**
  * トップのファーストビュー（2026-09 リニューアル 第2版）。
@@ -21,7 +11,9 @@ export type QuickSearchItem = {
  *   写真の帯（スマホは全幅・コピーを写真に重ねる／PCは右カラムの縦長写真）
  *   → 手書き風の H1「今日、どこ行く？」（テキストは従来どおり）→ サブコピー
  *   → 操作UIのパネル1枚（ステータス帯 → 駅の検索欄 → 今日/明日/週末 → 年齢・天気(小) → CTA）
- *   → クイック検索の静かなチップ列
+ *
+ * 2026-09-10: パネル下のクイック検索チップ（雨の日・晴れの日・室内施設・子連れランチ・イベント・
+ * 無料スポット）は社長指示で撤去。
  *
  * 画像・H1テキスト・フォームのロジック・/today のクエリ形は従来のまま。
  *
@@ -32,10 +24,8 @@ export type QuickSearchItem = {
  * ステータス帯は V2TodayHero（登録済ユーザーのみ描画・未登録/クローラには null）が担う。
  */
 export function TopHero({
-  quick,
   agePicks,
 }: {
-  quick: QuickSearchItem[];
   agePicks?: Partial<Record<ChildAge, AgePick[]>>;
 }) {
   return (
@@ -72,17 +62,6 @@ export function TopHero({
         <V2HeroForm stations={FINDER_STATIONS} terminals={POPULAR_TERMINALS} family={POPULAR_FAMILY} />
       </div>
 
-      {/* クイック検索（/today が実際に解釈するパラメータへ直リンク） */}
-      <div className="tv3-quick">
-        <div className="kk-chips row" aria-label="クイック検索">
-          {quick.map((q) => (
-            <Link key={q.t} href={q.href} className="kk-chip">
-              <KkIcon name={q.icon} size={16} color="var(--kk-ink-soft)" />
-              {q.t}
-            </Link>
-          ))}
-        </div>
-      </div>
     </section>
   );
 }

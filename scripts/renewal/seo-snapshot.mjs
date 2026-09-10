@@ -39,6 +39,10 @@ const URLS = [
   '/tag/amenohi',
   '/station/shinjuku',
   '/station/ueno',
+  // 第3弾（特集・プラン）
+  '/feature/autumn-kids',
+  '/plan/m-asa-2-3-10m-free-01',
+  '/plan/p-out-any-2-3-240m-low-01',
 ];
 
 function decode(s) {
