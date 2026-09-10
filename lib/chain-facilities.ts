@@ -55,6 +55,16 @@ export type FacilityValue = {
   ok: boolean | 'partial';
   /** 補足(例: モール内店舗は施設の授乳室を利用) */
   note?: string;
+  /**
+   * この値の根拠になった公式ページ。セル単位で出典を持てるようにするための任意項目
+   * (2026-09-11 追加)。調査ページ(docs/strategy-2026-09.md §5-1)で
+   * 「表のどのセルが、どの公式ページの、いつ時点の記述か」を出せることが、
+   * 横断比較を出す競合に対する差になる。未設定なら従来どおりチェーン単位の
+   * verifiedAt / verifiedMethod が根拠。
+   */
+  sourceUrl?: string;
+  /** セル単位の確認日(YYYY-MM-DD)。項目ごとに改定時期が違うチェーン向け。未設定ならチェーン単位の verifiedAt */
+  verifiedAt?: string;
 };
 
 export type ChainFacilities = {
@@ -76,7 +86,16 @@ export type ChainFacilities = {
   extras?: Array<{ label: string; value: string }>;
 };
 
-const V = (ok: boolean | 'partial', note?: string): FacilityValue => (note ? { ok, note } : { ok });
+const V = (
+  ok: boolean | 'partial',
+  note?: string,
+  meta?: { sourceUrl?: string; verifiedAt?: string },
+): FacilityValue => ({
+  ok,
+  ...(note ? { note } : {}),
+  ...(meta?.sourceUrl ? { sourceUrl: meta.sourceUrl } : {}),
+  ...(meta?.verifiedAt ? { verifiedAt: meta.verifiedAt } : {}),
+});
 
 export const CHAIN_FACILITIES: ChainFacilities[] = [
   {
