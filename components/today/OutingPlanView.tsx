@@ -475,7 +475,13 @@ export function OutingPlanView({
 
       {/* 保存（主）/ 別の流れ（副）。同格にしない。 */}
       <div className="td3-btns">
-        <SavePlanButton label={saveLabel} />
+        <SavePlanButton
+          label={saveLabel}
+          sub={slots
+            .map((s) => s.spot?.name ?? s.plan?.title)
+            .filter(Boolean)
+            .join(' → ')}
+        />
         <Link href={rerollHref} scroll={false} className="kk-btn outline td3-reroll">
           <KkIcon name="refresh" size={16} />
           別の流れを見る

@@ -2,7 +2,7 @@ import '@/app/styles/top-v3.css';
 import type { Metadata } from 'next';
 import { V2Frame } from '@/components/v2/V2Frame';
 import { V2FeatureCardV } from '@/components/v2/V2Cards';
-import { V2PurposeRanking } from '@/components/v2/V2PurposeRanking';
+import { V2PurposeRanking, RankRestRows } from '@/components/v2/V2PurposeRanking';
 import { V2RecentSpots } from '@/components/v2/V2RecentSpots';
 import { V2TodayHero } from '@/components/v2/V2TodayHero';
 import { LineCta } from '@/components/common/LineCta';
@@ -11,7 +11,7 @@ import { KkSectionTitle } from '@/components/kk/KkSectionTitle';
 import { KkRowList, type KkRowItem } from '@/components/kk/KkRowList';
 import { KkAddToHomeCard } from '@/components/kk/KkAddToHomeCard';
 import { KkFooter } from '@/components/kk/KkFooter';
-import { TopHero, type QuickSearchItem } from '@/components/top/TopHero';
+import { TopHero } from '@/components/top/TopHero';
 import { TopPlanCard } from '@/components/top/TopPlanCard';
 import { TopAreaTiles, type AreaChip } from '@/components/top/TopAreaTiles';
 import { TopSpotTypeTiles } from '@/components/top/TopSpotTypeTiles';
@@ -33,19 +33,6 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
 };
-
-// 各チップは「今日の流れ(/today)」が実際に解釈するパラメータへ直接リンクする。
-// 旧実装は全て /search?... に向いていたが /search は {q,p} しか読まず、
-// weather/place/budget/category を無視 → 絞り込みゼロの全記事一覧に着地していた（壊れリンク）。
-// アイコンはラベルと意味を一致させる（KkIcon の名前・絵文字は使わない / docs §3-0）。
-const QUICK_SEARCH: QuickSearchItem[] = [
-  { t: '雨の日', icon: 'umbrella', href: '/today?weather=rain' },
-  { t: '晴れの日', icon: 'sunny', href: '/today?weather=sunny' },
-  { t: '室内施設', icon: 'indoor', href: '/today?place=indoor' },
-  { t: '子連れランチ', icon: 'lunch', href: '/today?mode=eat&mealTime=lunch' },
-  { t: 'イベント', icon: 'event', href: '/events' },
-  { t: '無料スポット', icon: 'free', href: '/today?budget=free' },
-];
 
 /**
  * エリアから探すのチップ。
@@ -106,9 +93,10 @@ export default async function HomePage() {
   ).filter((a): a is NonNullable<typeof a> => Boolean(a));
   const latestArticles = allArticles.slice(0, 6);
 
-  // 人気スポット: /ranking と同じ getSpotRanking() を使い、トップの上位5件と
-  // /ranking の順位がズレないようにする。
-  const spotRanking = await getSpotRanking({ limit: 5 });
+  // 人気スポット: /ranking と同じ getSpotRanking() を使い、トップの順位と
+  // /ranking の順位がズレないようにする。上位5件を表示し、6〜10位は折りたたみ（目的別ランキングと同じ形）。
+  // getSpotRanking は公式写真枠で limit まで埋まった後に GA4 枠が1件足すことがあるので、ここで10件に切る。
+  const spotRanking = (await getSpotRanking({ limit: 10 })).slice(0, 10);
   const spotRows: KkRowItem[] = spotRanking.map((x, i) => {
     const v = spotToV2(x.spot, i);
     return {
@@ -178,7 +166,7 @@ export default async function HomePage() {
         {/* ファーストビュー: 写真＋H1＋操作UIのパネル1枚。
             パネル先頭のステータス帯は V2TodayHero（登録済ユーザーのみ描画／未登録・クローラは null）。
             /today のクエリ形（date/age/station/weather）は従来どおり。 */}
-        <TopHero quick={QUICK_SEARCH} agePicks={agePicks} />
+        <TopHero agePicks={agePicks} />
 
         {/* 未登録ユーザー向け：設定ブロック（登録済ユーザーには出ない＝上のステータス帯が担う） */}
         <V2TodayHero agePicks={agePicks} variant="setup-only" />
@@ -208,7 +196,13 @@ export default async function HomePage() {
         {/* 5. いま人気のスポット（罫線の行リスト） */}
         <section className="kk-sec">
           <KkSectionTitle as="h2" title="いま人気のスポット" moreHref="/ranking" />
-          <KkRowList items={spotRows} variant="rank" className="grid2" label="人気スポットランキング" />
+          <KkRowList items={spotRows.slice(0, 5)} variant="rank" className="grid2" label="人気スポットランキング" />
+          {spotRows.length > 5 && (
+            <details className="tv3-purpose-more">
+              <summary>6位〜{spotRows.length}位も見る</summary>
+              <RankRestRows items={spotRows.slice(5)} offset={5} />
+            </details>
+          )}
         </section>
 
         {/* 目的別 実用ランキング（首都圏 × 目的）。5件行リスト＋6〜10位は折りたたみ */}

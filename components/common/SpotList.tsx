@@ -1,13 +1,16 @@
 import { filterSpots, type Spot, type AgeTag, type KidReport, SPOT_CATEGORY_LABEL } from '@/lib/spots';
 import { getAreaName } from '@/lib/area';
+import { KkIcon } from '@/components/kk/KkIcon';
+import { KkArt, type KkArtName } from '@/components/kk/KkArt';
 
 // 子連れ向け施設情報の表示ラベル。すべての施設で統一表示する。
-const FACILITY_LABELS: { key: keyof NonNullable<Spot['facilities']>; label: string; icon: string }[] = [
-  { key: 'bathroom', label: '多目的トイレ', icon: '🚻' },
-  { key: 'diaperChange', label: 'おむつ替え', icon: '👶' },
-  { key: 'nursingRoom', label: '授乳室', icon: '🍼' },
-  { key: 'kidsSpace', label: 'キッズスペース', icon: '🧸' },
-  { key: 'strollerRental', label: 'ベビーカー貸出', icon: '🛒' },
+// アイコンは絵文字を使わず、社長支給のイラスト（KkArt）で描く（2026-09-11）。
+const FACILITY_LABELS: { key: keyof NonNullable<Spot['facilities']>; label: string; icon: KkArtName }[] = [
+  { key: 'bathroom', label: '多目的トイレ', icon: 'accessible-toilet' },
+  { key: 'diaperChange', label: 'おむつ替え', icon: 'diaper' },
+  { key: 'nursingRoom', label: '授乳室', icon: 'nursing' },
+  { key: 'kidsSpace', label: 'キッズスペース', icon: 'kids-space' },
+  { key: 'strollerRental', label: 'ベビーカー貸出', icon: 'stroller' },
 ];
 
 type Props = {
@@ -97,9 +100,11 @@ function SpotCard({ spot }: { spot: Spot }) {
   return (
     <article
       style={{
-        background: 'var(--paper-card)',
-        border: '1px solid var(--line)',
-        borderRadius: 'var(--radius-md)',
+        // 2026-09-11: 丸角カードをやめ、罫線で区切る（サイト全体のデザイン方針）
+        background: 'transparent',
+        border: 0,
+        borderTop: '1px solid var(--kk-rule-soft, #E7E2DA)',
+        borderRadius: 0,
         padding: 0,
         display: 'flex',
         flexDirection: 'column',
@@ -124,7 +129,7 @@ function SpotCard({ spot }: { spot: Spot }) {
         <span
           style={{
             padding: '2px 8px',
-            background: 'var(--sage-pale)',
+            background: 'transparent', border: '1px solid var(--kk-rule, #D8D2C7)',
             color: 'var(--sage-deep)',
             borderRadius: 999,
             fontWeight: 600,
@@ -132,11 +137,11 @@ function SpotCard({ spot }: { spot: Spot }) {
         >
           {SPOT_CATEGORY_LABEL[spot.category]}
         </span>
-        <span style={{ padding: '2px 8px', background: 'var(--peach-soft)', color: 'var(--clay)', borderRadius: 999 }}>
+        <span style={{ padding: '2px 8px', background: 'transparent', border: '1px solid var(--kk-orange, #EE7A2E)', color: 'var(--kk-orange-deep, #C95F18)', borderRadius: 999 }}>
           {placeLabel}
         </span>
         {budgetLabel && !spot.pricing && (
-          <span style={{ padding: '2px 8px', background: '#f3efe8', color: 'var(--ink-sub)', borderRadius: 999 }}>
+          <span style={{ padding: '2px 8px', background: 'transparent', border: '1px solid var(--kk-rule, #D8D2C7)', color: 'var(--ink-sub)', borderRadius: 999 }}>
             {budgetLabel}
           </span>
         )}
@@ -144,7 +149,7 @@ function SpotCard({ spot }: { spot: Spot }) {
           <span
             style={{
               padding: '2px 8px',
-              background: spot.reservation === 'required' ? '#f5e0d4' : '#f3efe8',
+              background: 'transparent', border: '1px solid var(--kk-rule, #D8D2C7)',
               color: spot.reservation === 'required' ? '#c4704f' : 'var(--ink-sub)',
               borderRadius: 999,
               fontWeight: 600,
@@ -187,9 +192,11 @@ function SpotCard({ spot }: { spot: Spot }) {
             gridTemplateColumns: 'auto 1fr',
             gap: '2px 10px',
             fontSize: 11,
-            background: '#faf7f1',
-            padding: '8px 10px',
-            borderRadius: 6,
+            background: 'transparent',
+            padding: '8px 0',
+            borderTop: '1px solid var(--kk-rule-soft, #E7E2DA)',
+            borderBottom: '1px solid var(--kk-rule-soft, #E7E2DA)',
+            borderRadius: 0,
           }}
         >
           {spot.pricing.adult && (
@@ -219,13 +226,13 @@ function SpotCard({ spot }: { spot: Spot }) {
       {spot.hiddenTip && (
         <div
           style={{
-            background: '#fff9ef',
-            borderLeft: '3px solid #e2b39a',
-            padding: '8px 10px',
+            background: 'transparent',
+            borderLeft: 0,
+            padding: '2px 0',
             fontSize: 11,
             color: 'var(--ink)',
             lineHeight: 1.6,
-            borderRadius: '0 6px 6px 0',
+            borderRadius: 0,
           }}
         >
           <strong style={{ color: '#c4704f', fontSize: 10, letterSpacing: '.08em' }}>穴場ポイント</strong>
@@ -236,8 +243,9 @@ function SpotCard({ spot }: { spot: Spot }) {
 
       {/* 近隣セット提案 */}
       {spot.nearby && (
-        <div style={{ fontSize: 11, color: 'var(--sage-deep)', lineHeight: 1.5 }}>
-          → {spot.nearby}
+        <div style={{ fontSize: 11, color: 'var(--sage-deep)', lineHeight: 1.5, display: 'flex', gap: 4, alignItems: 'flex-start' }}>
+          <KkIcon name="arrow-right" size={12} style={{ marginTop: 3, flex: 'none' }} />
+          <span>{spot.nearby}</span>
         </div>
       )}
 
@@ -247,7 +255,8 @@ function SpotCard({ spot }: { spot: Spot }) {
       {/* 運営者の一次情報レポート（実際に子連れで訪問して記録した実体験） */}
       {spot.kidReport && <KidReportBlock report={spot.kidReport} />}
       <span style={{ marginTop: 4, fontSize: 11, color: 'var(--sage-deep)', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
-        📍 Google Mapsで開く
+        <KkIcon name="pin" size={13} />
+        Google Mapsで開く
       </span>
     </a>
     </article>
@@ -257,7 +266,7 @@ function SpotCard({ spot }: { spot: Spot }) {
 /**
  * 子連れで訪問する前に必ず確認したい設備情報を統一表示するブロック。
  * - すべての施設カードに表示する（情報の有無に関わらず）
- * - 確認済み: ✅ あり / ❌ なし
+ * - 確認済み: あり / なし（状態ピル。絵文字は使わない）
  * - 未確認: △ 公式で確認 とする（嘘の情報を載せない）
  */
 function FacilitiesBlock({ facilities }: { facilities?: Spot['facilities'] }) {
@@ -266,10 +275,11 @@ function FacilitiesBlock({ facilities }: { facilities?: Spot['facilities'] }) {
     <div
       style={{
         marginTop: 4,
-        background: '#f6f9f4',
-        border: '1px solid #d6e3cd',
-        borderRadius: 8,
-        padding: '8px 10px',
+        background: 'transparent',
+        border: 0,
+        borderTop: '1px solid var(--kk-rule-soft, #E7E2DA)',
+        borderRadius: 0,
+        padding: '10px 0 0',
       }}
     >
       <div
@@ -298,14 +308,18 @@ function FacilitiesBlock({ facilities }: { facilities?: Spot['facilities'] }) {
         {FACILITY_LABELS.map(({ key, label, icon }) => {
           const v = facilities?.[key];
           const mark =
-            v === 'yes' ? { sym: '✅', color: 'var(--sage-deep)' } :
-            v === 'no'  ? { sym: '❌', color: '#a86b6b' } :
-            { sym: '△', color: 'var(--ink-mute)' };
+            v === 'yes' ? { sym: 'あり', cls: 'kk-pill yes' } :
+            v === 'no'  ? { sym: 'なし', cls: 'kk-pill no' } :
+            { sym: '△', cls: '' };
           return (
             <li key={key} style={{ display: 'flex', alignItems: 'center', gap: 4, color: 'var(--ink-sub)' }}>
-              <span aria-hidden style={{ width: 14, textAlign: 'center' }}>{icon}</span>
+              <KkArt name={icon} size={18} style={{ flex: 'none' }} />
               <span style={{ flex: 1 }}>{label}</span>
-              <span style={{ color: mark.color, fontWeight: 600 }} title={v ? '' : '未確認 - 公式サイトでご確認ください'}>
+              <span
+                className={mark.cls || undefined}
+                style={mark.cls ? { fontSize: 10.5, padding: '1px 7px' } : { color: 'var(--ink-mute)', fontWeight: 600 }}
+                title={v ? '' : '未確認 - 公式サイトでご確認ください'}
+              >
                 {mark.sym}
               </span>
             </li>
@@ -344,10 +358,11 @@ function KidReportBlock({ report }: { report: KidReport }) {
     <div
       style={{
         marginTop: 4,
-        background: '#fbf6ee',
-        border: '1px solid #e7d9c4',
-        borderRadius: 8,
-        padding: '10px 12px',
+        background: 'transparent',
+        border: 0,
+        borderTop: '1px solid var(--kk-rule-soft, #E7E2DA)',
+        borderRadius: 0,
+        padding: '10px 0 0',
       }}
     >
       <div
@@ -358,14 +373,16 @@ function KidReportBlock({ report }: { report: KidReport }) {
           fontSize: 10,
           fontWeight: 700,
           letterSpacing: '.03em',
-          color: '#9a6b3f',
-          background: '#f1e2cb',
+          color: 'var(--kk-orange-deep, #C95F18)',
+          background: 'transparent',
+          border: '1px solid var(--kk-orange, #EE7A2E)',
           padding: '2px 8px',
           borderRadius: 999,
           marginBottom: 8,
         }}
       >
-        ✔ 運営者が実際に子連れで訪問して確認
+        <KkIcon name="check" size={12} sw={2.2} />
+        運営者が実際に子連れで訪問して確認
       </div>
       <dl style={{ margin: 0, display: 'grid', gap: 6 }}>
         {rows.map((r) => (
@@ -392,5 +409,6 @@ function KidReportBlock({ report }: { report: KidReport }) {
 }
 
 function crowdIcon(level: 'low' | 'mid' | 'high'): string {
-  return level === 'low' ? '🟢 空いてる' : level === 'mid' ? '🟡 普通' : '🔴 混雑';
+  // 以前は緑・黄・赤の丸の絵文字を前置していた。絵文字は使わない方針なので文言だけにする。
+  return level === 'low' ? '空いてる' : level === 'mid' ? '普通' : '混雑';
 }
