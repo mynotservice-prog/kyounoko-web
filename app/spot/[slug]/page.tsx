@@ -113,6 +113,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'おむつ替え',
     ],
   ];
+  // 公園の遊具情報（SPOT_PLAYGROUND）があるときは「遊具」を先頭に出す。
+  // 「〇〇公園 遊具」は施設名クエリとして継続的に表示が出ている（2026-09-12 実測）。
+  if (spot.playground) facilityHints.unshift([true, '遊具・アスレチック']);
   // 検索需要の大きい順に最大3語。SERPの表示幅（約30字）に収めるため name が長い面では出さない。
   const facilityWords = facilityHints.filter(([hit]) => hit).map(([, w]) => w).slice(0, 3);
   const titleSuffix =
@@ -703,8 +706,52 @@ export default async function SpotPage({ params }: Props) {
           </div>
         )}
 
-        {/* 遊具・特徴（playgroundFeatures があるときだけ。ラベルは JSON-LD と同じ表） */}
-        {playgroundChips.length > 0 && (
+        {/* 遊具・アスレチック（SPOT_PLAYGROUND: 公式確認の本文。lib/spot-playground.ts）。
+            「〇〇公園 遊具」クエリに答える節。事実はデータ層からのみ描画し、ここに直書きしない。 */}
+        {spot.playground && (
+          <div className="kk-sec sv3-sec">
+            <KkSectionTitle as="h2" title={`${spot.playground.park ?? spot.name}の遊具・アスレチック`} />
+            <div className="sv3-measure">
+              <p style={{ margin: '0 0 12px' }}>{spot.playground.summary}</p>
+              <div style={{ overflowX: 'auto' }}>
+                <table className="kk-table" style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
+                  <thead>
+                    <tr>
+                      <th style={{ textAlign: 'left', padding: '6px 8px' }}>遊び場</th>
+                      <th style={{ textAlign: 'left', padding: '6px 8px' }}>遊具</th>
+                      <th style={{ textAlign: 'left', padding: '6px 8px', whiteSpace: 'nowrap' }}>対象・場所</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {spot.playground.areas.map((a) => (
+                      <tr key={a.name}>
+                        <td style={{ padding: '6px 8px', verticalAlign: 'top' }}><strong>{a.name}</strong></td>
+                        <td style={{ padding: '6px 8px', verticalAlign: 'top' }}>{a.items}</td>
+                        <td style={{ padding: '6px 8px', verticalAlign: 'top', fontSize: 13 }}>
+                          {[a.ages, a.location].filter(Boolean).join('／') || '公式記載なし'}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              {spot.playground.note && <p style={{ margin: '10px 0 0', fontSize: 13 }}>※ {spot.playground.note}</p>}
+              <p style={{ margin: '8px 0 0', fontSize: 12, color: 'var(--ink-mute)' }}>
+                出典: <a href={spot.playground.sourceUrl} target="_blank" rel="noopener noreferrer">公園公式ページ</a>（{spot.playground.confirmedAt} 確認）。遊具は改修・撤去で変わるため、最新は公式でご確認ください。
+              </p>
+              {playgroundChips.length > 0 && (
+                <div className="kk-chips" style={{ marginTop: 10 }}>
+                  {playgroundChips.map((l) => (
+                    <span key={l} className="kk-chip">{l}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* 遊具・特徴（playgroundFeatures のタグだけがあるとき。ラベルは JSON-LD と同じ表） */}
+        {!spot.playground && playgroundChips.length > 0 && (
           <div className="kk-sec sv3-sec">
             <KkSectionTitle as="div" title="遊具・特徴" />
             <div className="kk-chips">
