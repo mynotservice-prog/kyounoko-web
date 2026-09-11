@@ -1,0 +1,1704 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "yumean",
+  "name": "夢庵",
+  "sourceUrl": "https://store-info.skylark.co.jp/",
+  "method": "すかいらーくグループ共通店舗検索の店舗API（/api/point/、カテゴリ=0104）で全店舗を取得し、各店舗の設備フラグ（絞り込み検索と同じ項目）を集計",
+  "total": 171,
+  "note": "「座敷」は絞り込み検索の「座敷(大・小) あり」と「小上がり(畳席) あり」のいずれかに該当する店舗を数えた。単一フラグの項目は公式絞り込み件数と一致を確認済み（車椅子入店可=81、おむつ替え台あり=161、個室・個室風席あり=96、多目的トイレあり=80、駐車場あり=166）",
+  "facilities": {
+    "stepFree": {
+      "count": 81,
+      "label": "車椅子入店可"
+    },
+    "zashiki": {
+      "count": 57,
+      "label": "座敷(大・小) あり／小上がり(畳席) あり"
+    },
+    "diaperTable": {
+      "count": 161,
+      "label": "おむつ替え台あり"
+    },
+    "privateRoom": {
+      "count": 96,
+      "label": "個室・個室風席あり"
+    },
+    "multiToilet": {
+      "count": 80,
+      "label": "多目的トイレあり"
+    },
+    "parking": {
+      "count": 166,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "夢庵 イオンモール松本店",
+      "url": "https://store-info.skylark.co.jp/map/130554/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 武蔵野西久保店",
+      "url": "https://store-info.skylark.co.jp/map/130539/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 佐倉店",
+      "url": "https://store-info.skylark.co.jp/map/130541/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 国立富士見台店",
+      "url": "https://store-info.skylark.co.jp/map/130538/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 川崎生田店",
+      "url": "https://store-info.skylark.co.jp/map/130537/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 コースカベイサイドストアーズ店",
+      "url": "https://store-info.skylark.co.jp/map/130536/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 川崎千年店",
+      "url": "https://store-info.skylark.co.jp/map/130534/",
+      "facilities": [
+        "stepFree",
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 五井店",
+      "url": "https://store-info.skylark.co.jp/map/130533/",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 茨城神栖店",
+      "url": "https://store-info.skylark.co.jp/map/130532/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 昭島店",
+      "url": "https://store-info.skylark.co.jp/map/130531/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 成増店",
+      "url": "https://store-info.skylark.co.jp/map/130527/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "夢庵 鴨居駅前店",
+      "url": "https://store-info.skylark.co.jp/map/130526/",
+      "facilities": [
+        "privateRoom",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "夢庵 交野倉治店",
+      "url": "https://store-info.skylark.co.jp/map/130523/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 早川店",
+      "url": "https://store-info.skylark.co.jp/map/130521/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 小田原駅前店",
+      "url": "https://store-info.skylark.co.jp/map/130515/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "夢庵 落合駅前店",
+      "url": "https://store-info.skylark.co.jp/map/130519/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "夢庵 埼玉ふじみ野店",
+      "url": "https://store-info.skylark.co.jp/map/130512/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 土浦富士崎店",
+      "url": "https://store-info.skylark.co.jp/map/130510/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 ひたちなか店",
+      "url": "https://store-info.skylark.co.jp/map/130509/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 愛知東海店",
+      "url": "https://store-info.skylark.co.jp/map/130504/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 稲沢店",
+      "url": "https://store-info.skylark.co.jp/map/130503/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 前田橋店",
+      "url": "https://store-info.skylark.co.jp/map/130500/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 泉北ニュータウン店",
+      "url": "https://store-info.skylark.co.jp/map/130498/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 柏駅東口店",
+      "url": "https://store-info.skylark.co.jp/map/130495/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "夢庵 南小岩店",
+      "url": "https://store-info.skylark.co.jp/map/130492/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 龍野店",
+      "url": "https://store-info.skylark.co.jp/map/130494/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 兵庫福崎店",
+      "url": "https://store-info.skylark.co.jp/map/130493/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 蕨中央店",
+      "url": "https://store-info.skylark.co.jp/map/130488/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 江東住吉店",
+      "url": "https://store-info.skylark.co.jp/map/130490/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 八王子めじろ台店",
+      "url": "https://store-info.skylark.co.jp/map/130491/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 南流山店",
+      "url": "https://store-info.skylark.co.jp/map/130484/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 成田中央通り店",
+      "url": "https://store-info.skylark.co.jp/map/130486/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 多摩センター店",
+      "url": "https://store-info.skylark.co.jp/map/130485/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 湯河原店",
+      "url": "https://store-info.skylark.co.jp/map/130483/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 横浜宮元町店",
+      "url": "https://store-info.skylark.co.jp/map/130482/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 淵野辺店",
+      "url": "https://store-info.skylark.co.jp/map/130478/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 日野石田店",
+      "url": "https://store-info.skylark.co.jp/map/130477/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 戸塚深谷店",
+      "url": "https://store-info.skylark.co.jp/map/130473/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 さいたま三橋店",
+      "url": "https://store-info.skylark.co.jp/map/130465/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 東村山駅前店",
+      "url": "https://store-info.skylark.co.jp/map/130466/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 千葉あすみが丘店",
+      "url": "https://store-info.skylark.co.jp/map/130471/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 松戸串崎店",
+      "url": "https://store-info.skylark.co.jp/map/130462/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 石和松本店",
+      "url": "https://store-info.skylark.co.jp/map/130413/",
+      "facilities": [
+        "stepFree",
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 館山バイパス店",
+      "url": "https://store-info.skylark.co.jp/map/130390/",
+      "facilities": [
+        "stepFree",
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 松戸小金原店",
+      "url": "https://store-info.skylark.co.jp/map/130436/",
+      "facilities": [
+        "stepFree",
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 千葉ニュータウン店",
+      "url": "https://store-info.skylark.co.jp/map/130421/",
+      "facilities": [
+        "stepFree",
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 羽生店",
+      "url": "https://store-info.skylark.co.jp/map/130402/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 沼津新沢田店",
+      "url": "https://store-info.skylark.co.jp/map/130414/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 綾瀬中央店",
+      "url": "https://store-info.skylark.co.jp/map/130382/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 板橋前野町店",
+      "url": "https://store-info.skylark.co.jp/map/130365/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 横須賀粟田店",
+      "url": "https://store-info.skylark.co.jp/map/130362/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 三島北店",
+      "url": "https://store-info.skylark.co.jp/map/130344/",
+      "facilities": [
+        "stepFree",
+        "zashiki",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 横浜笹下店",
+      "url": "https://store-info.skylark.co.jp/map/130350/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 日高店",
+      "url": "https://store-info.skylark.co.jp/map/130330/",
+      "facilities": [
+        "stepFree",
+        "zashiki",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 瀬谷店",
+      "url": "https://store-info.skylark.co.jp/map/130325/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 さがみ野店",
+      "url": "https://store-info.skylark.co.jp/map/130322/",
+      "facilities": [
+        "stepFree",
+        "zashiki",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 新津店",
+      "url": "https://store-info.skylark.co.jp/map/130320/",
+      "facilities": [
+        "stepFree",
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 亀田店",
+      "url": "https://store-info.skylark.co.jp/map/130319/",
+      "facilities": [
+        "stepFree",
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 常陸太田店",
+      "url": "https://store-info.skylark.co.jp/map/130315/",
+      "facilities": [
+        "stepFree",
+        "zashiki",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 渋川店",
+      "url": "https://store-info.skylark.co.jp/map/130310/",
+      "facilities": [
+        "stepFree",
+        "zashiki",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 千葉高品町店",
+      "url": "https://store-info.skylark.co.jp/map/130303/",
+      "facilities": [
+        "stepFree",
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 つくばみらい店",
+      "url": "https://store-info.skylark.co.jp/map/130301/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 長野若槻店",
+      "url": "https://store-info.skylark.co.jp/map/130298/",
+      "facilities": [
+        "stepFree",
+        "zashiki",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 東久留米弥生店",
+      "url": "https://store-info.skylark.co.jp/map/130231/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 沼田バイパス店",
+      "url": "https://store-info.skylark.co.jp/map/130290/",
+      "facilities": [
+        "stepFree",
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 入間野田店",
+      "url": "https://store-info.skylark.co.jp/map/130201/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 桶川店",
+      "url": "https://store-info.skylark.co.jp/map/130222/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 川崎小田栄店",
+      "url": "https://store-info.skylark.co.jp/map/130285/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 佐久平駅前店",
+      "url": "https://store-info.skylark.co.jp/map/130283/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 厚木小野店",
+      "url": "https://store-info.skylark.co.jp/map/130282/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 茅ヶ崎西インター店",
+      "url": "https://store-info.skylark.co.jp/map/130280/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 江戸川大杉店",
+      "url": "https://store-info.skylark.co.jp/map/130276/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 木更津東店",
+      "url": "https://store-info.skylark.co.jp/map/130275/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 府中押立町店",
+      "url": "https://store-info.skylark.co.jp/map/130273/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 大磯店",
+      "url": "https://store-info.skylark.co.jp/map/130272/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 東川口店",
+      "url": "https://store-info.skylark.co.jp/map/130269/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 横浜本郷台店",
+      "url": "https://store-info.skylark.co.jp/map/130268/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 横浜片倉町店",
+      "url": "https://store-info.skylark.co.jp/map/130265/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 長野ビッグハット前店",
+      "url": "https://store-info.skylark.co.jp/map/130263/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 葉山店",
+      "url": "https://store-info.skylark.co.jp/map/130261/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 本町田店",
+      "url": "https://store-info.skylark.co.jp/map/130260/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 鶴ヶ峰店",
+      "url": "https://store-info.skylark.co.jp/map/130259/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 静岡池田店",
+      "url": "https://store-info.skylark.co.jp/map/130258/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 元八王子店",
+      "url": "https://store-info.skylark.co.jp/map/130257/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 印旛栄町店",
+      "url": "https://store-info.skylark.co.jp/map/130254/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 我孫子北店",
+      "url": "https://store-info.skylark.co.jp/map/130249/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 カリブ梅島店",
+      "url": "https://store-info.skylark.co.jp/map/130248/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 川崎殿町店",
+      "url": "https://store-info.skylark.co.jp/map/130245/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 鴻巣店",
+      "url": "https://store-info.skylark.co.jp/map/130244/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 平塚豊田店",
+      "url": "https://store-info.skylark.co.jp/map/130243/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 敷島店",
+      "url": "https://store-info.skylark.co.jp/map/130242/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 大井松田店",
+      "url": "https://store-info.skylark.co.jp/map/130240/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 伊豆大仁店",
+      "url": "https://store-info.skylark.co.jp/map/130238/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 小田原鴨宮店",
+      "url": "https://store-info.skylark.co.jp/map/130235/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 上池台店",
+      "url": "https://store-info.skylark.co.jp/map/130234/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 東海大学前店",
+      "url": "https://store-info.skylark.co.jp/map/130232/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 三鷹北野店",
+      "url": "https://store-info.skylark.co.jp/map/130230/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 イオンタウン大須賀店",
+      "url": "https://store-info.skylark.co.jp/map/130228/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 都留店",
+      "url": "https://store-info.skylark.co.jp/map/130224/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 山梨甲西店",
+      "url": "https://store-info.skylark.co.jp/map/130221/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 船橋前原店",
+      "url": "https://store-info.skylark.co.jp/map/130219/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 朝霞本町店",
+      "url": "https://store-info.skylark.co.jp/map/130217/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 大和鶴間店",
+      "url": "https://store-info.skylark.co.jp/map/130215/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 東茂原店",
+      "url": "https://store-info.skylark.co.jp/map/130214/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 松戸和名ヶ谷店",
+      "url": "https://store-info.skylark.co.jp/map/130212/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 南足柄店",
+      "url": "https://store-info.skylark.co.jp/map/130211/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 毛呂山店",
+      "url": "https://store-info.skylark.co.jp/map/130210/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 千葉宮野木店",
+      "url": "https://store-info.skylark.co.jp/map/130208/",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 太田植木野店",
+      "url": "https://store-info.skylark.co.jp/map/130204/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 塩山店",
+      "url": "https://store-info.skylark.co.jp/map/130203/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 市川福栄店",
+      "url": "https://store-info.skylark.co.jp/map/130202/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 市川大野店",
+      "url": "https://store-info.skylark.co.jp/map/130200/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 甲府西店",
+      "url": "https://store-info.skylark.co.jp/map/130199/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 港北新羽駅前店",
+      "url": "https://store-info.skylark.co.jp/map/130197/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 佐野店",
+      "url": "https://store-info.skylark.co.jp/map/130196/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 埼玉伊奈町店",
+      "url": "https://store-info.skylark.co.jp/map/130195/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 吉川店",
+      "url": "https://store-info.skylark.co.jp/map/130194/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 秩父駅前店",
+      "url": "https://store-info.skylark.co.jp/map/130193/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 厚木林店",
+      "url": "https://store-info.skylark.co.jp/map/130189/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 春日部栄町店",
+      "url": "https://store-info.skylark.co.jp/map/130188/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 黒磯店",
+      "url": "https://store-info.skylark.co.jp/map/130183/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 前橋広瀬店",
+      "url": "https://store-info.skylark.co.jp/map/130180/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 大網白里店",
+      "url": "https://store-info.skylark.co.jp/map/130179/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 八潮店",
+      "url": "https://store-info.skylark.co.jp/map/130178/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 栃木小金井店",
+      "url": "https://store-info.skylark.co.jp/map/130176/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 水戸元吉田店",
+      "url": "https://store-info.skylark.co.jp/map/130170/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 高根台プラザ店",
+      "url": "https://store-info.skylark.co.jp/map/130168/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 大宮新堤店",
+      "url": "https://store-info.skylark.co.jp/map/130167/",
+      "facilities": [
+        "stepFree",
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 柏増尾台店",
+      "url": "https://store-info.skylark.co.jp/map/130166/",
+      "facilities": [
+        "stepFree",
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 水元公園店",
+      "url": "https://store-info.skylark.co.jp/map/130164/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 新座片山店",
+      "url": "https://store-info.skylark.co.jp/map/130163/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 厚木下荻野店",
+      "url": "https://store-info.skylark.co.jp/map/130162/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 岡谷店",
+      "url": "https://store-info.skylark.co.jp/map/130160/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 千葉おゆみ野店",
+      "url": "https://store-info.skylark.co.jp/map/130158/",
+      "facilities": [
+        "stepFree",
+        "zashiki",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 江戸川台店",
+      "url": "https://store-info.skylark.co.jp/map/130155/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 入間藤沢店",
+      "url": "https://store-info.skylark.co.jp/map/130153/",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 富士宮阿幸地店",
+      "url": "https://store-info.skylark.co.jp/map/130149/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 秋川店",
+      "url": "https://store-info.skylark.co.jp/map/130147/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 富士錦町店",
+      "url": "https://store-info.skylark.co.jp/map/130142/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 秦野インター店",
+      "url": "https://store-info.skylark.co.jp/map/130137/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 川口赤井店",
+      "url": "https://store-info.skylark.co.jp/map/130135/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 川崎水沢店",
+      "url": "https://store-info.skylark.co.jp/map/130130/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 甲府住吉店",
+      "url": "https://store-info.skylark.co.jp/map/130129/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 南加瀬店",
+      "url": "https://store-info.skylark.co.jp/map/130117/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 足立栗原店",
+      "url": "https://store-info.skylark.co.jp/map/130113/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 西船橋店",
+      "url": "https://store-info.skylark.co.jp/map/130112/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 越谷大里店",
+      "url": "https://store-info.skylark.co.jp/map/130111/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 上永谷店",
+      "url": "https://store-info.skylark.co.jp/map/130109/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 宇都宮戸祭店",
+      "url": "https://store-info.skylark.co.jp/map/130102/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 鎌ヶ谷店",
+      "url": "https://store-info.skylark.co.jp/map/130101/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 三ツ境店",
+      "url": "https://store-info.skylark.co.jp/map/130099/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 つきみ野店",
+      "url": "https://store-info.skylark.co.jp/map/130097/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 青梅店",
+      "url": "https://store-info.skylark.co.jp/map/130095/",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 上尾西店",
+      "url": "https://store-info.skylark.co.jp/map/130090/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 西国分寺店",
+      "url": "https://store-info.skylark.co.jp/map/130086/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 町田南成瀬店",
+      "url": "https://store-info.skylark.co.jp/map/130077/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 寒川店",
+      "url": "https://store-info.skylark.co.jp/map/130076/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 川崎有馬店",
+      "url": "https://store-info.skylark.co.jp/map/130071/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 我孫子若松店",
+      "url": "https://store-info.skylark.co.jp/map/130070/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 釜利谷店",
+      "url": "https://store-info.skylark.co.jp/map/130063/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 津久井湖店",
+      "url": "https://store-info.skylark.co.jp/map/130062/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 君津店",
+      "url": "https://store-info.skylark.co.jp/map/130056/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 袖ヶ浦店",
+      "url": "https://store-info.skylark.co.jp/map/130055/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 逗子店",
+      "url": "https://store-info.skylark.co.jp/map/130054/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 東金店",
+      "url": "https://store-info.skylark.co.jp/map/130052/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 土浦真鍋店",
+      "url": "https://store-info.skylark.co.jp/map/130050/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 小平店",
+      "url": "https://store-info.skylark.co.jp/map/130047/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 加須店",
+      "url": "https://store-info.skylark.co.jp/map/130045/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 日立鮎川店",
+      "url": "https://store-info.skylark.co.jp/map/130027/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 八王子西店",
+      "url": "https://store-info.skylark.co.jp/map/130018/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "夢庵 本庄店",
+      "url": "https://store-info.skylark.co.jp/map/130013/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    }
+  ]
+}

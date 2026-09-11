@@ -1,0 +1,2519 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "kourakuen",
+  "name": "幸楽苑",
+  "sourceUrl": "https://stores.kourakuen.co.jp/",
+  "method": "公式店舗検索の都道府県別結果ページ（17都道府県）に並ぶ店舗タグ（駐車場あり）を店舗ごとに集計",
+  "total": 358,
+  "note": "店名が「幸楽苑」で始まる店舗のみ。除外した別業態: 餃子の味よし 1。タグはほかに「フードコート」「ビルイン」があるが設備キーには対応づけていない",
+  "facilities": {
+    "parking": {
+      "count": 356,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "幸楽苑 青森浜田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20519",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 青森石江店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21116",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 弘前城東店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20510",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 八戸沼館店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20405",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 八戸ラピア店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20892",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 八戸尻内店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20457",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 十和田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20512",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 三沢店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20531",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオンモールつがる柏店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20927",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 青森板柳店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20508",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 盛岡上田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20469",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 盛岡津志田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20679",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 盛岡西南店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20530",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 大船渡店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21075",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 花巻店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20458",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 北上店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21062",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 一関店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20403",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 水沢店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21082",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 矢巾タウン店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21107",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 荒巻店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20336",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 中田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20616",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 柳生店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20333",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 松森店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20344",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 泉八乙女店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20622",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 免許センター前店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20592",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 泉区役所前店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20395",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 泉インター店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20227",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオンタウン仙台泉大沢店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20839",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオン仙台中山店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20881",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 仙台長町店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20360",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 西多賀店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20662",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 フォレストモール仙台茂庭店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21102",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 仙台中野店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20619",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 鶴ケ谷店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21105",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 幸町店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20099",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 六丁の目店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20695",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 古城店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20343",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 愛子店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20528",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 南吉成店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20335",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 大街道店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20048",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 蛇田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20046",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 塩釜店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=30703",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 気仙沼鹿折店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21080",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 白石店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20694",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 名取大手町店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20536",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 角田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20498",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 多賀城店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20621",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 岩沼店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20640",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオンタウン佐沼店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20826",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 登米佐沼店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21090",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 築館店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20517",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 矢本店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20657",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 古川店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20697",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 古川バイパス店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20375",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオンモール富谷店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20935",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 柴田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20356",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 亘理店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20337",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 利府森郷店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=30702",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 大和町店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20464",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオン秋田中央店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20937",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 広面店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20509",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 茨島店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20384",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオンモール秋田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20972",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 仁井田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20225",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 秋田寺内店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21029",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 土崎店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20069",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 能代店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20503",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 横手店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20478",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 秋田十文字店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20655",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 大館店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20556",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 天王店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20506",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 メルシティ潟上店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21111",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 大曲店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20524",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオンタウン鷹巣店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21099",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 山形花楯店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20614",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 西バイパス店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21036",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 山形嶋店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20561",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 白山店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20042",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 米沢店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21047",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 鶴岡店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20467",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 酒田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20468",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 新庄店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20527",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 寒河江店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21084",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 上山店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20685",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 長井店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21104",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 天童店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20037",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 東根店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21083",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオンタウン南陽店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20480",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 村山店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21117",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 安積店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20361",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 コスモス通り店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20630",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 金屋店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20615",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 郡山桑野店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21115",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 新桜通店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=30525",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 郡山インター店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20353",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 富田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20447",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 富久山店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21049",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 郡山駅東店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21020",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 久留米店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20347",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 栄町店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20359",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオン福島店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20813",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 矢野目店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20350",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 福島西口店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=30539",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 吾妻ＰＡ店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20835",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 競馬場前店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20342",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 黒岩店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20687",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 郷野目店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21114",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 南沢又店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20339",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 一箕町店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20355",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 白虎通り店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20444",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 花春店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21048",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 高田橋店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20357",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 門田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21039",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 神谷店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=30556",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 いわき好間店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20513",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオンいわき店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20932",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 谷川瀬店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=30801",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 平店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20346",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 小名浜店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21045",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 いわきエブリア店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20891",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 いわき鹿島店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20593",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 いわき泉店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21113",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑since1954＋幸楽苑のからあげ家 イオンモールいわき小名浜店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20970",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 西郷店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20332",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 内郷店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=30558",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 錦店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=30557",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 須賀川店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20340",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオンタウン須賀川店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21019",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 喜多方店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20354",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオンタウン塩川店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20502",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 相馬店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20591",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 二本松店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21038",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 船引店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20446",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 原町店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20338",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 保原店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=30524",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 梁川店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21093",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 本宮店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20351",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 川俣店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21089",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 桑折店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20504",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 道の駅国見あつかしの郷店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20971",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 猪苗代店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20445",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 坂下店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=30537",
+      "facilities": []
+    },
+    {
+      "name": "幸楽苑 白河店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20097",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 矢吹店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20511",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 棚倉店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21081",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 メガステージ石川店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21091",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 水戸末広店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20239",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 水戸柳町店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20696",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 水戸住吉店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20076",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 水戸石川店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20240",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 水戸５０号バイパス店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20637",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 日立多賀店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20207",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 日立相田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20276",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオンモール土浦店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20959",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 土浦小松店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20665",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 古河店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20006",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 石岡店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21046",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 結城店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20038",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 龍ヶ崎店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20555",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 下妻店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20554",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 常陸太田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21094",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 高萩店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20476",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 北茨城店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20505",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 笠間店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20515",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 友部店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21108",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 取手店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20305",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 牛久店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20009",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 万博記念公園店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20623",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イーアスつくば店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20854",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 那珂湊店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20526",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 ジョイフル本田ニューポートひたちなか店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20929",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 ひたちなか店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20092",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 鹿嶋宮中店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21071",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 潮来店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20500",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオンタウン守谷店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20878",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 常陸大宮店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20532",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 サンモリノ那珂店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20507",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 下館店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20522",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 神栖店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20499",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 つくばみらい店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20676",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 茨城東海店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20495",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 茨城境町店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20521",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 上戸祭店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20011",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 鶴田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20020",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 雀の宮店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20571",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 宇都宮西川田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20533",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 平松店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20029",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 御幸ケ原店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20028",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 宇都宮テクノポリス店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20538",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 足利店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20080",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 栃木城内店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20537",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 鹿沼店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20698",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 日光今市店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20604",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオンモール小山店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20856",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 小山駅南店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20014",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 真岡店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20650",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 大田原店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21052",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 黒磯店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21037",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 西那須野店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20322",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 さくら氏家店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20603",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 栃木小金井店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20628",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 壬生店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20024",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 川原店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20008",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 前橋石倉店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20053",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 パワーモール前橋みなみ店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20633",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 高崎柴崎店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21050",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 群馬町店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20016",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 連取店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20007",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 太田飯田町店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20611",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 渋川店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20677",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 藤岡店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21073",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 ジョイフル本田千代田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20969",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 浦和領家店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20608",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 指扇店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20443",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 大宮本郷店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20617",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 浦和円正寺店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20668",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 東浦和店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20259",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 さいたま大戸店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20638",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 川越木野目店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20218",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 川口上青木店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20680",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 鳩ヶ谷里店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20639",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 秩父店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20529",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 所沢美原店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20317",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 飯能店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20673",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 加須店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21079",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 東松山店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20079",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 武里店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20082",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 羽生店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20632",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 深谷東方町店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20690",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 草加店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20667",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 戸田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20463",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 和光新倉店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20226",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 新座東店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20686",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 新座店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20298",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 フォレオ菖蒲店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20653",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 北本店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20204",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 みずほ台店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20625",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 三郷中央店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21025",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 蓮田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21030",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 鶴ヶ島店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20074",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 ふじみ野店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20620",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオンタウン上里店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20848",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 杉戸店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21033",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 島忠ホームズ蘇我店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20864",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオンモール幕張新都心店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20910",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 千葉園生店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20364",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 若松店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20067",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 千葉おゆみ野店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21070",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 銚子店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21096",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 船橋市場通店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20570",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 館山店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21087",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 木更津請西店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21031",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 東松戸駅前店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20568",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 松戸古ヶ崎店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20410",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 野田山崎店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21061",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 茂原店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20089",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 佐倉鏑木町店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20562",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 旭店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21098",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオンモール津田沼North店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20866",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 酒井根店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20257",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオンモール柏店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20968",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 若柴店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20203",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑since1954＋幸楽苑のからあげ家 ユニモちはら台店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20821",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 八千代村上店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21012",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 八千代台店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20610",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 我孫子店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20477",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 君津店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20236",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 浦安店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20606",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 袖ヶ浦店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20572",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 印西店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20535",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 大網白里店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20474",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 秋葉原駅前店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21018",
+      "facilities": []
+    },
+    {
+      "name": "幸楽苑 杉並高井戸店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21068",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 足立佐野店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20631",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 足立一ツ家店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20566",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 足立東伊興店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20658",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 舎人店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21040",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 足立江北店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21026",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 葛飾南水元店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20689",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 葛飾新宿店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21057",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 江戸川篠崎店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20659",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イーアス高尾店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20960",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 青梅店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20406",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 調布深大寺店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20318",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 町田成瀬店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20271",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑since1954＋幸楽苑のからあげ家 ミスターマックス町田多摩境店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20819",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 島忠ホームズ町田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20869",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 東小金井店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20388",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 百草園店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21043",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 国立府中インター店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20393",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 田無店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21022",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオンモール日の出店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 コーナン港北インター店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20934",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イトーヨーカドー横浜別所店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20865",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 横浜港南台店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20607",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 横浜戸塚店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20311",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 島忠ホームズ川崎大師店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20859",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 川崎殿町店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20262",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 川崎千年店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20652",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 川崎宿河原店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20688",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 川崎菅生店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20660",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 城山店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20077",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 横須賀三春店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20670",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 横須賀佐原店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20602",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 鎌倉店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21069",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑since1954＋幸楽苑のからあげ家 湘南モールフィル店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20889",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 小田原ダイナシティイースト店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20882",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑since1954＋幸楽苑のからあげ家 小田原ダイナシティウエスト店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20940",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 そよら湘南茅ケ崎店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20906",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 秦野平沢店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20514",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 秦野曽屋店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20470",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 厚木中依知店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20569",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 厚木林店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20308",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオンモール大和店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20842",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 大和林間店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20627",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 伊勢原店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21044",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 海老名店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21056",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオン海老名店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20887",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 綾瀬上土棚店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21021",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 アピタ新潟亀田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20816",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 海老ケ瀬インター店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20394",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 中野山店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20025",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 白根店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20497",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 小針店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20026",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 豊栄店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20534",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 新津店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20518",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 長岡駅東店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20558",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 柏崎店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20501",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 新発田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20552",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 見附店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20523",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 村上店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20671",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 燕吉田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21110",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 上越店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20678",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 上越南高田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21054",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 塩部店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20235",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 甲府向町店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20274",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 富士吉田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20564",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 ライフガーデンにらさき店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20551",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 アルプス通り店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20228",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 イオンタウン山梨中央店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20525",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 長野北長池店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20273",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 長野徳間店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=30541",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 上田原店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20374",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 レイクウォーク岡谷店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20933",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 飯田上郷店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20605",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 駒ヶ根店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20664",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 塩尻広丘店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20286",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 佐久平店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20291",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 千曲店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=30554",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 浜松駅南店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20300",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 浜松西インター店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20369",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 志都呂店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20287",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 沼津西沢田店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20278",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 三島南町店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20214",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 富士伝法店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20370",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 掛川店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=21077",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 藤枝店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20314",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸楽苑 御殿場店",
+      "url": "https://stores.kourakuen.co.jp/store/info.html?id=20613",
+      "facilities": [
+        "parking"
+      ]
+    }
+  ]
+}

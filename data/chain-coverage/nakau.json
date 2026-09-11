@@ -1,0 +1,3373 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "nakau",
+  "name": "なか卯",
+  "sourceUrl": "https://maps.nakau.co.jp/jp/index.html",
+  "method": "公式店舗検索（maps.nakau.co.jp）の検索APIで全店舗を列挙し、「サービス・設備」チェック（お子様メニュー・駐車場）で絞り込んだ結果に含まれる店舗を店舗ごとに集計",
+  "total": 445,
+  "note": "ブランド内訳: なか卯 445",
+  "facilities": {
+    "kidsMenu": {
+      "count": 445,
+      "label": "お子様メニュー"
+    },
+    "parking": {
+      "count": 237,
+      "label": "駐車場"
+    }
+  },
+  "stores": [
+    {
+      "name": "なか卯 北見メッセ店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2097.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 函館昭和店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2130.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 札幌北24条店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2156.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 札幌南郷通店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2160.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 札幌伏古店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2163.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 札幌白石本通店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2167.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 小樽築港店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2173.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 新琴似店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2177.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 札幌駅アピア店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2178.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 川沿店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2181.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 新札幌店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2182.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 旭川シーナ店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2191.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 宮の森東店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2256.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 すすきの西店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2257.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 豊水すすきの店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2268.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 千歳店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2270.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 旭川四条通店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2280.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 札幌本町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2475.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 網走駒場店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2534.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 38号帯広西4条店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2574.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 釧路桂店",
+      "url": "https://maps.nakau.co.jp/jp/detail/5448.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 帯広西18条店",
+      "url": "https://maps.nakau.co.jp/jp/detail/6545.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 八戸八日町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2501.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 7号弘前堅田店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2545.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 盛岡大通り店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2329.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 仙台大和町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2226.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 ベガロポリス仙台南店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2312.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 仙台駅東口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2320.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 仙台北四番丁店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2491.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 仙台青葉通一番町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2512.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 ラウンドワン秋田卸町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2352.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 秋田土崎港店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2398.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 天童店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2072.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 さくらんぼ東根駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2128.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 郡山大町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2375.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 取手店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2186.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 レプサモールつくば店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2202.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 守谷店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2339.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 龍ヶ崎店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2342.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 古河上辺見店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2354.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 神栖店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2369.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 茨城石岡店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2372.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 ひたちなか高場店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2524.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 宇都宮店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2157.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 真岡上高間木店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2447.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 黒磯店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2573.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 群馬大泉店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2422.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 50号前橋朝日店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2474.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 伊勢崎韮塚店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2570.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 西川口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2126.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 東大宮店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2161.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 春日部店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2185.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 北本中丸店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2188.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 武蔵浦和駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2233.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 せんげん台店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2238.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 朝霞店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2311.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 上福岡店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2317.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 三郷駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2349.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 新座道場店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2358.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 所沢東町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2377.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 新越谷店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2382.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 上尾柏座店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2383.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 獨協大学前駅東口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2396.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 北本店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2449.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 越谷下間久里店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2451.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 行田佐間店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2511.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 戸田駅西口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2564.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 南行徳店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2083.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 稲毛海岸店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2174.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 蘇我店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2251.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 市原店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2260.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 千葉富士見店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2261.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 四街道駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2267.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 東船橋店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2330.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 西船橋駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2378.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 船橋前原東店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2408.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 天王台駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2414.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 都賀駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2453.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 五香駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2457.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 北習志野駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2464.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 船橋湊町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2528.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 船橋咲が丘店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2536.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 126号旭店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2550.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 大島店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2080.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 明大前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2091.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 亀戸店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2092.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 八丁堀店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2105.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 笹塚店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2117.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 大山店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2119.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 葛西店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2122.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 茅場町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2138.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 西葛西駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2139.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 東銀座店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2149.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 小伝馬町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2158.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 銀座七丁目店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2165.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 赤羽西口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2166.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 赤坂溜池店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2168.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 築地橋店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2169.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 壱岐坂通り店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2171.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 本郷三丁目店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2175.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 八王子店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2179.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 人形町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2180.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 南砂町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2187.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 神谷町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2193.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 江古田店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2196.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 四谷三丁目店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2198.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 赤坂七丁目店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2200.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 祖師ヶ谷大蔵店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2203.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 成増店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2206.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 阿佐ヶ谷駅北口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2216.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 茗荷谷店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2217.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 亀有店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2221.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 千駄木店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2224.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 西新宿店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2253.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 五反田店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2255.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 平井南口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2264.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 飯田橋東口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2269.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 駒込店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2279.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 要町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2290.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 中野南口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2296.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 木場店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2297.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 新小岩店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2304.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 蒲田駅西口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2315.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 三田店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2327.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 豊洲店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2334.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 泉岳寺前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2343.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 東池袋向原店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2345.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 戸越店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2348.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 瑞江駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2356.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 秋葉原昭和通り口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2362.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 調布北口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2366.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 小田急町田北口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2374.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 池袋二丁目店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2385.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 築地二丁目店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2399.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 渋谷宇田川町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2400.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 秋葉原店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2404.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 芝一丁目店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2418.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 ひばりが丘店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2434.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 大井町西口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2463.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 411号あきる野店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2465.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 稲城南多摩店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2472.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 新宿職安通り店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2483.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 秋津店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2484.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 高島平店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2490.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 ラウンドワン武蔵村山店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2504.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 神田須田町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2513.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 池袋サンシャイン前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2522.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 大森北一丁目店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2525.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 九段南店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2531.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 池袋駅東口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2533.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 代々木上原店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2546.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 南大井三丁目店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2553.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 日本橋二丁目店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2554.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 日本橋本石町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2555.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 環七南葛西店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2562.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 勝どき一丁目店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2563.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 蔵前橋店",
+      "url": "https://maps.nakau.co.jp/jp/detail/5542.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 十条駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/6229.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 川崎南町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2085.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 湘南大磯店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2113.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 横浜駒岡店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2127.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 辻堂店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2151.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 東海大学前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2159.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 関内店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2176.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 十日市場店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2207.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 橋本店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2231.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 中山店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2232.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 平塚西口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2265.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 上川井店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2338.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 平塚南金目店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2405.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 川崎水沢店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2406.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 綾瀬大上店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2409.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 相模原千代田店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2420.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 本牧店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2424.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 座間ひばりが丘店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2438.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 横須賀大矢部店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2441.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 秦野今泉台店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2487.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 座間相武台店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2506.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 藤沢駅北口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2517.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 小田原鴨宮店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2523.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 港北樽町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2539.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 武蔵中原店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2540.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 中原街道上白根店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2560.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 港北ニュータウン茅ヶ崎東店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2576.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 海老名中新田店",
+      "url": "https://maps.nakau.co.jp/jp/detail/5190.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 横浜六ツ川店",
+      "url": "https://maps.nakau.co.jp/jp/detail/5259.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 新横浜店",
+      "url": "https://maps.nakau.co.jp/jp/detail/6381.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 新潟小針台店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2461.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 新潟新和店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2547.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 富山豊田店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2073.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 富山東中野店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2423.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 472号射水店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2437.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 黒部田家店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2499.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 高岡野村店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2516.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 加賀小菅波店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2469.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 359号金沢柳橋店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2492.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 金沢入江店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2526.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 金沢駅西本町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2532.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 鯖江五郎丸店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2341.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 福井社店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2371.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 福井大宮店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2429.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 福井駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2454.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 8号福井米松店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2549.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 27号敦賀店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2575.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 甲府国母店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2340.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 富士吉田新西原店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2386.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 飯田上郷店",
+      "url": "https://maps.nakau.co.jp/jp/detail/5236.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 岐阜島店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2112.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 各務原鵜沼店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2359.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 羽島竹鼻店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2368.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 関稲口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2432.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 岐阜加納城南通店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2439.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 41号飛騨高山店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2503.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 岐阜柳津店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2507.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 岐阜大学前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2538.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 19号中津川店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2569.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 袋井店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2355.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 榛原吉田町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2373.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 湖西店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2376.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 1国清水長崎店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2393.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 藤枝大手店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2436.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 138号御殿場IC店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2467.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 静岡沓谷店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2529.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 静岡小鹿店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2530.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 浜松向宿店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2551.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 浜松萩丘店",
+      "url": "https://maps.nakau.co.jp/jp/detail/6447.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 春日井篠木店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2096.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 一宮インター店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2111.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 御器所店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2145.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 東山公園店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2146.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 西尾店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2183.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 高岳店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2273.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 鳴海店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2278.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 東新町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2285.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 中村公園店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2289.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 R22康生通店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2291.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 今池店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2302.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 大須店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2309.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 新瑞橋店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2336.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 岡崎若松東店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2395.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 東海名和店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2407.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 名古屋伏見店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2410.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 1国岡崎矢作店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2412.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 豊田陣中店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2425.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 豊川南大通店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2428.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 高浜稗田町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2450.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 広小路本町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2462.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 名東八前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2476.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 津島金柳店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2482.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 安城大山店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2495.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 港区入場店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2498.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 247号半田有楽町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2518.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 江南宮後店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2527.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 1国安城東栄店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2548.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 岡崎大西店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2556.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 稲沢石橋店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2559.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 豊橋駒形店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2571.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 春日井二子町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/5184.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 津乙部店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2387.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 菰野湯の山街道店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2389.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 四日市羽津店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2394.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 松阪大黒田店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2427.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 23号鈴鹿南玉垣店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2433.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 23号四日市店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2448.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 23号伊勢御薗店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2455.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 鈴鹿道伯店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2470.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 大津瀬田店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2155.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 東近江八日市店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2384.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 長浜八幡東町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2403.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 1国水口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2460.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 草津西大路店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2543.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 8号彦根高宮店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2552.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 守山吉身店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2565.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 烏丸今出川店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2067.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 一乗寺店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2068.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 四条壬生店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2098.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 宇治槇島店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2106.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 河原町丸太町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2108.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 龍大前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2115.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 河原町五条店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2134.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 西院店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2136.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 山科三条通店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2141.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 二条城店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2143.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 大久保BP店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2144.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 烏丸高辻店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2192.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 醍醐店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2204.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 烏丸夷川店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2205.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 久世橋通店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2236.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 京都八条口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2240.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 七条新町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2242.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 円町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2258.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 新田辺店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2284.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 JR二条駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2295.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 新堀川店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2301.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 河原町三条店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2307.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 立命館大学前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2350.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 上賀茂店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2353.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 伏見桃山店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2391.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 北野白梅町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2417.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 烏丸北大路店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2458.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 1国八幡美濃山店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2508.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 桃山西尾店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2542.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 西京極七条店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2568.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 三条帷子ノ辻店",
+      "url": "https://maps.nakau.co.jp/jp/detail/5085.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 福知山堀店",
+      "url": "https://maps.nakau.co.jp/jp/detail/5164.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 阪急桂駅東口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/5172.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 フォレストモール木津川店",
+      "url": "https://maps.nakau.co.jp/jp/detail/5193.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 フォレストモール京田辺店",
+      "url": "https://maps.nakau.co.jp/jp/detail/5559.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 千林大宮店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2069.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 桃谷駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2071.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 四ツ橋店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2076.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 上新庄店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2077.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 三国ヶ丘駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2078.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 天王寺駅北口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2081.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 新大阪駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2087.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 JR野田店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2093.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 梅田東店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2094.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 りんくう松原店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2095.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 梅田太融寺店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2101.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 みなと通店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2102.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 都島本通店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2103.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 中津一丁目店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2109.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 八尾店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2110.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 恵美須店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2116.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 門真試験場前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2121.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 摂津富田店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2124.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 新大阪店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2133.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 岸和田三田店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2135.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 堺福田店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2142.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 堺筋博労町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2162.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 江坂店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2195.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 松屋町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2197.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 交野店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2199.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 萩之茶屋店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2208.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 北花田店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2211.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 京阪守口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2214.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 肥後橋店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2215.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 中央環状堺店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2219.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 昭和町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2223.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 住之江公園店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2225.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 南巽店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2230.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 関目店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2243.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 高石羽衣店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2244.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 和泉府中店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2248.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 西田辺店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2249.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 堺筋周防町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2250.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 箕面桜井店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2266.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 喜連瓜破店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2271.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 長田東店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2272.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 桜川店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2274.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 若江東店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2277.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 横堤店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2282.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 浜寺石津店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2286.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 大阪空港前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2287.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 南堀江店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2288.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 宮之阪店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2292.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 上本町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2293.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 豊中少路店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2294.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 布施店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2298.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 茨木美沢店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2306.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 309号松原店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2310.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 阪急石橋店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2328.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 なんさん通店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2332.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 八戸ノ里店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2337.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 ハイパーアロー松ヶ丘店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2347.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 河内小阪駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2367.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 堺もず店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2370.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 外環状河内長野店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2379.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 アロー志紀店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2392.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 170号八尾大竹店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2402.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 大正千島店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2413.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 羽曳野恵我之荘店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2416.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 26号岸和田店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2426.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 大阪本町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2443.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 枚方養父店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2456.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 26号堺浜寺南店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2471.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 東大阪吉田店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2478.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 寝屋川寝屋店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2489.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 163号守口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2493.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 岸和田駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2494.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 貝塚麻生中店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2510.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 長吉長原東店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2521.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 ベガスベガス大東店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2567.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 東岸和田駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/4757.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 西淀川大野店",
+      "url": "https://maps.nakau.co.jp/jp/detail/4765.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 関西国際空港店",
+      "url": "https://maps.nakau.co.jp/jp/detail/5180.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 高槻津之江店",
+      "url": "https://maps.nakau.co.jp/jp/detail/5388.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 伊丹大鹿店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2118.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 姫路駅前店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2150.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 神戸谷上店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2218.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 垂水海岸通店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2222.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 姫路南インター店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2229.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 摂津本山店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2235.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 長田三番町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2241.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 神戸元町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2245.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 尼崎昭和通店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2246.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 姫路名古山店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2247.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 摩耶ランプ店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2254.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 南塚口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2281.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 加古川店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2300.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 三宮北口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2314.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 新開地店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2324.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 2国明石大久保店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2401.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 南武庫之荘店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2466.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 神戸伊川谷店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2477.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 250号明石魚住店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2496.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 三宮御幸通店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2557.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 JR西宮駅北口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/6089.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 神戸空港店",
+      "url": "https://maps.nakau.co.jp/jp/detail/6302.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 曲川店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2190.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 桜井店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2209.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 大和高田店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2220.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 奈良新庄店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2335.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 生駒俵口店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2558.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 米子皆生店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2435.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 鳥取安長店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2442.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 岡山浜野店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2440.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 岡山今店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2485.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 倉敷中島店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2497.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 倉敷黒崎店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2541.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 429号倉敷玉島店",
+      "url": "https://maps.nakau.co.jp/jp/detail/5665.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 呉広店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2099.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 安芸坂店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2137.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 広島大手町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2316.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 JR福山駅店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2318.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 広島幟町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2325.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 広島西十日市店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2397.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 広島的場町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2446.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "なか卯 広島五日市店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2535.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 東広島西条店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2537.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 福山三吉店",
+      "url": "https://maps.nakau.co.jp/jp/detail/5099.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 福山曙店",
+      "url": "https://maps.nakau.co.jp/jp/detail/5275.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 広島南観音店",
+      "url": "https://maps.nakau.co.jp/jp/detail/6599.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 広島緑井店",
+      "url": "https://maps.nakau.co.jp/jp/detail/6600.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 山口湯田温泉店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2519.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 下松望町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/6266.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 高松上福岡店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2444.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 松山衣山店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2123.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 西条大町店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2390.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 56号宇和島和霊店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2468.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 56号松山小栗店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2488.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 松山束本店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2509.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 32号高知葛島店",
+      "url": "https://maps.nakau.co.jp/jp/detail/2445.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 福岡小田部店",
+      "url": "https://maps.nakau.co.jp/jp/detail/4758.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なか卯 福岡半道橋店",
+      "url": "https://maps.nakau.co.jp/jp/detail/5199.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    }
+  ]
+}

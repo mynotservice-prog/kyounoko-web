@@ -1,0 +1,337 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "hanayayohei",
+  "name": "華屋与兵衛",
+  "sourceUrl": "https://maps.hanayayohei.co.jp/jp/shop.html",
+  "method": "公式店舗検索の検索API（/api/search）で全店舗を列挙し、各店舗詳細ページの「サービス・設備」「メニュー」欄のアイコン名を集計",
+  "total": 33,
+  "note": "検索結果の表示件数は33件。「スロープ／エレベーター」は公式表記のままで、スロープとエレベーターのどちらかがある店舗を指す",
+  "facilities": {
+    "stepFree": {
+      "count": 3,
+      "label": "スロープ／エレベーター"
+    },
+    "diaperTable": {
+      "count": 33,
+      "label": "ベビーシート"
+    },
+    "kidsMenu": {
+      "count": 33,
+      "label": "お子様メニュー"
+    },
+    "multiToilet": {
+      "count": 4,
+      "label": "多目的トイレ"
+    },
+    "parking": {
+      "count": 33,
+      "label": "駐車場"
+    }
+  },
+  "stores": [
+    {
+      "name": "華屋与兵衛 牛久店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3787.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 取手寺田店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3826.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 藤代店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3845.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 川口西新井宿店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3742.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 越谷蒲生店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3785.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 春日部大沼店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3803.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 所沢北原店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3842.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 富士見鶴瀬店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3856.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 川口安行店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3873.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 小川町店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3882.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 市川菅野店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3740.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 松戸高塚店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3759.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 松戸常盤平店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3795.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 松戸小金原店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3833.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 千葉誉田店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3861.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 舎人店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3747.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 杉並高井戸東店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3765.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 目黒八雲店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3775.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 東久留米店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3794.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 板橋坂下店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3796.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 練馬大泉学園店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3807.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 東小金井店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3812.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 高円寺店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3819.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 駒沢弦巻通り店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3835.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 足立江北店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3836.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 尾久店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3859.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "stepFree",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 飛田給店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3867.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 篠崎公園店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3884.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 多摩川大橋店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3889.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 葛西中央通り店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3896.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 鶴見市場店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3855.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 川崎大師店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3871.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "stepFree",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "華屋与兵衛 港南台店",
+      "url": "https://maps.hanayayohei.co.jp/jp/detail/3879.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    }
+  ]
+}

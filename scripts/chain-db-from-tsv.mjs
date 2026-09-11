@@ -6,6 +6,11 @@
  *   （公式ページを見ながら value / note / source_url を埋める）
  *   node scripts/chain-db-from-tsv.mjs reports/chain-db-worklist-2026-09-11.tsv         # 変換
  *   node scripts/chain-db-from-tsv.mjs <tsv> --out=/tmp/entries.ts                      # ファイルへ
+ *   node scripts/chain-db-from-tsv.mjs <tsv> --survey-only                              # 記事に出さない調査用として出力
+ *
+ * `--survey-only` を付けると各エントリに `surveyOnly: true` が入り、攻略記事の判定ボックスと
+ * 比較表には出ない（lib/chain-facilities.ts の surveyOnly 参照）。公式照合で埋まるセルが少ないうちは
+ * 記事の表を縮めないよう、こちらで登録する。
  *
  * 設計上の約束:
  *  - **value が空欄の項目は出力しない。** 「公式に記載がない」を `no` として書かないため
@@ -13,12 +18,17 @@
  *  - `value` を入れたのに `source_url` が無い行は **エラーにして出力を止める**。
  *    根拠なしの値がDBに入る経路を作らない。
  *  - 出力は貼り付け用のテキスト。ファイルの自動書き換えはしない（差分を目で見てから入れる）。
+ *  - **記事から消える行は extras に引き継ぐ。** DBに登録すると攻略記事の「子連れチェックリスト」
+ *    H2節は丸ごと判定ボックスに差し替わる（app/article/[slug]/page.tsx）。12キーに当たる行は
+ *    公式照合済みのDB値に置き換え、それ以外の行（子ども料金・温め・煙対策など）と
+ *    チェーン固有の「※」注記は extras として残す（2026-09-11 追加）。
  */
 import fs from 'node:fs';
 
 const args = process.argv.slice(2);
 const TSV = args.find((a) => !a.startsWith('--'));
 const OUT = (args.find((a) => a.startsWith('--out=')) || '').split('=')[1] || '';
+const SURVEY_ONLY = args.includes('--survey-only');
 const TODAY = new Date().toISOString().slice(0, 10);
 
 if (!TSV) {
@@ -61,6 +71,7 @@ lines.slice(1).forEach((line, n) => {
       koryakuSlug: row('koryaku_slug'),
       officialUrl: row('official_url'),
       items: [],
+      extras: [],
     });
   }
   if (!value) return; // 空欄 = 公式に記載なし → 書かない
@@ -80,6 +91,55 @@ lines.slice(1).forEach((line, n) => {
   });
 });
 
+// 12キーに当たる行の見出し。当たらない行（「お子さま向けメニュー」のような詳細も含む）は extras に残す
+const KEY_LABEL = [
+  /段差|バリアフリー|スロープ/,
+  /^(座敷|小上がり|掘りごたつ)/,
+  /ボックス|ソファ/,
+  /チェア|椅子|いす|イス/,
+  /^(キッズメニュー|お子様メニュー|お子さまメニュー|おこさまメニュー|子供メニュー|子どもメニュー)/,
+  /カトラリー|食器|スプーン|フォーク/,
+  /おむつ|オムツ/,
+  /授乳/,
+  /離乳食|ベビーフード/,
+  /取り分け|取り皿|小皿/,
+  /ベビーカー/,
+  /アレルゲン|アレルギー/,
+];
+const plain = (s) => s.replace(/\*\*/g, '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').trim();
+
+/** 攻略記事の「子連れチェックリスト」節のうち、DBの判定ボックスでは出なくなる行を返す */
+function extrasFromArticle(slug) {
+  const p = `content/articles/${slug}.md`;
+  if (!fs.existsSync(p)) return [];
+  const md = fs.readFileSync(p, 'utf8').split('\n');
+  const start = md.findIndex((l) => /^##\s/.test(l) && l.includes('子連れチェックリスト'));
+  if (start === -1) return [];
+  let end = start + 1;
+  while (end < md.length && !/^##\s/.test(md[end])) end++;
+  const sec = md.slice(start + 1, end);
+
+  const out = [];
+  const rows = sec
+    .filter((l) => l.trim().startsWith('|') && !/^\|\s*[-:| ]+\|?\s*$/.test(l.trim()))
+    .slice(1); // 表のヘッダ行
+  for (const r of rows) {
+    const cells = r.split('|').map((s) => s.trim()).filter(Boolean);
+    const label = plain(cells[0] || '');
+    if (!label || KEY_LABEL.some((re) => re.test(label))) continue;
+    const value = plain(cells.slice(1).join(' / '));
+    if (value) out.push({ label, value });
+  }
+  // チェーン固有の「※」注記だけ残す（判定ボックスの脚注と重なる定型文は捨てる）
+  for (const l of sec) {
+    const t = plain(l.replace(/^>\s*/, ''));
+    if (!l.trim().startsWith('>') || !t.startsWith('※')) continue;
+    if (/^※\s*店舗により差があります/.test(t)) continue;
+    out.push({ label: 'ポイント', value: t.replace(/^※\s*/, '') });
+  }
+  return out;
+}
+
 // 静的チェック
 for (const c of chains.values()) {
   if (registered.has(c.key)) errors.push(`${c.key}: すでに chain-facilities.ts に存在する`);
@@ -87,6 +147,7 @@ for (const c of chains.values()) {
     errors.push(`${c.key}: koryakuSlug "${c.koryakuSlug}" に対応する記事が無い（判定ボックスが描画されない）`);
   }
   if (!c.name) errors.push(`${c.key}: chain_name が空`);
+  c.extras = extrasFromArticle(c.koryakuSlug);
 }
 
 if (errors.length) {
@@ -112,9 +173,13 @@ const blocks = [...chains.values()]
     `    koryakuSlug: '${esc(c.koryakuSlug)}',`,
     `    verifiedAt: '${TODAY}',`,
     `    verifiedMethod: '公式サイト・店舗公開情報の照合',`,
+    SURVEY_ONLY ? '    surveyOnly: true,' : null,
     '    items: {',
     ...c.items.map(v),
     '    },',
+    ...(c.extras.length
+      ? ['    extras: [', ...c.extras.map((e) => `      { label: '${esc(e.label)}', value: '${esc(e.value)}' },`), '    ],']
+      : []),
     '  },',
   ].filter(Boolean).join('\n'));
 
@@ -128,8 +193,9 @@ if (OUT) {
   console.log(text);
 }
 
+const written = [...chains.values()].filter((c) => c.items.length);
 console.error('');
-console.error(`✅ ${blocks.length} チェーン / ${[...chains.values()].reduce((a, c) => a + c.items.length, 0)} セルを出力`);
+console.error(`✅ ${blocks.length} チェーン / ${written.reduce((a, c) => a + c.items.length, 0)} セル / extras ${written.reduce((a, c) => a + c.extras.length, 0)} 行を出力`);
 if (skipped.length) {
   console.error(`⏭  値が1つも無いためスキップ: ${skipped.map((c) => c.key).join(' ')}`);
 }

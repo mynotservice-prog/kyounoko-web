@@ -1,0 +1,1073 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "yamadaudon",
+  "name": "山田うどん食堂",
+  "sourceUrl": "https://www.yamada-udon.co.jp/shop",
+  "method": "公式店舗案内のエリア別15ページ（埼玉9エリア＋東京・神奈川・千葉・茨城・栃木・群馬）に載る店舗表の「駐車台数」行を店舗ごとに集計（台数1以上を駐車場ありとする）",
+  "total": 152,
+  "note": "店舗表の項目は 住所/テイクアウト専用ダイヤル/営業時間/駐車台数/備考 で、駐車場以外の設備属性は無い。「駐車台数」行が無い店舗4件（神保原店、西砂店、松戸高塚店、小島田町店）は駐車場なしとは限らないため count に含めていない",
+  "facilities": {
+    "parking": {
+      "count": 148,
+      "label": "駐車台数"
+    }
+  },
+  "stores": [
+    {
+      "name": "山田うどん食堂 指扇店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_saitamashi",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 大宮中川店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_saitamashi",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 さいたま丸ヶ崎店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_saitamashi",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 埼玉タンメン山田太郎",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_saitamashi",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 田島店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_saitamashi",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 北宿店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_saitamashi",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 大間木店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_saitamashi",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 大門店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_saitamashi",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 江川店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_saitamashi",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 赤井店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_nanbu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 弥平店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_nanbu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 北園店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_nanbu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 笹目店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_nanbu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 氷川町店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_nanbu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 川越インター店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_seibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 下赤坂店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_seibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 川越西町店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_seibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 川越中居店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_seibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 木野目店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_seibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 下新井店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_seibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 新所沢店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_seibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 本店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_seibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 中富店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_seibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 埼玉タンメン山田太郎",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_seibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 北中店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_seibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 堀之内店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_seibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 所沢林店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_seibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 越生店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_seibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 日高インター店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_seibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 智光山公園店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_seibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 小谷田バイパス店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_seibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 武蔵藤沢店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_seibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 笹井店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_seibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 鶴ヶ島店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_seibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 ふじみ野店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_nannsei",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 中宗岡店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_nannsei",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 あたご店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_nannsei",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 新座道場店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_nannsei",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 新座畑中店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_nannsei",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 和光北インター店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_nannsei",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 朝霞店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_nannsei",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 高田店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_nannsei",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 竹間沢店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_nannsei",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 東松山店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_hiki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 東平店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_hiki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 高坂店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_hiki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 川島店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_hiki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 埼玉タンメン山田太郎",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_hiki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 吹塚店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_hiki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 落合店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_hiki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 水上公園店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_kenou",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 上尾小泉店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_kenou",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 鴻巣吹上店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_kenou",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 埼玉タンメン山田太郎",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_hokubu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 熊谷140号バイパス店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_hokubu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 箱田店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_hokubu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 妻沼店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_hokubu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 深谷17号バイパス店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_hokubu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 花園インター店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_hokubu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 深谷店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_hokubu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 神保原店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_hokubu",
+      "facilities": []
+    },
+    {
+      "name": "山田うどん食堂 庄和町店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tobu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 豊町店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tobu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 柿木店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tobu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 原町店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tobu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 新栄町店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tobu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 谷塚店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tobu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 増林店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tobu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 大泊店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tobu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 埼玉タンメン山田太郎",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tobu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 八潮店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tobu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 木曽根店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tobu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 吉川店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tobu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 行田バイパス店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tone",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 騎西店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tone",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 大利根店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tone",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 羽生バイパス店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tone",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 久喜北店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tone",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 久喜店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tone",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 蓮田店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tone",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 高野台店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tone",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 杉戸店",
+      "url": "https://www.yamada-udon.co.jp/shop/saitama_tone",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 滝山街道店",
+      "url": "https://www.yamada-udon.co.jp/shop/tokyo",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 元八王子店",
+      "url": "https://www.yamada-udon.co.jp/shop/tokyo",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 多摩大橋店",
+      "url": "https://www.yamada-udon.co.jp/shop/tokyo",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 八王子長沼店",
+      "url": "https://www.yamada-udon.co.jp/shop/tokyo",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 幸町店",
+      "url": "https://www.yamada-udon.co.jp/shop/tokyo",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 西砂店",
+      "url": "https://www.yamada-udon.co.jp/shop/tokyo",
+      "facilities": []
+    },
+    {
+      "name": "山田うどん食堂 青梅新町店",
+      "url": "https://www.yamada-udon.co.jp/shop/tokyo",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 小平仲町店",
+      "url": "https://www.yamada-udon.co.jp/shop/tokyo",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 埼玉タンメン山田太郎",
+      "url": "https://www.yamada-udon.co.jp/shop/tokyo",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 町田図師店",
+      "url": "https://www.yamada-udon.co.jp/shop/tokyo",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 成瀬店",
+      "url": "https://www.yamada-udon.co.jp/shop/tokyo",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 東大和店",
+      "url": "https://www.yamada-udon.co.jp/shop/tokyo",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 市場通店",
+      "url": "https://www.yamada-udon.co.jp/shop/tokyo",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 東久留米南店",
+      "url": "https://www.yamada-udon.co.jp/shop/tokyo",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 村山学園店",
+      "url": "https://www.yamada-udon.co.jp/shop/tokyo",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 引田店",
+      "url": "https://www.yamada-udon.co.jp/shop/tokyo",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 福生店",
+      "url": "https://www.yamada-udon.co.jp/shop/tokyo",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 平塚大神店",
+      "url": "https://www.yamada-udon.co.jp/shop/kanagawa",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 亀井野店",
+      "url": "https://www.yamada-udon.co.jp/shop/kanagawa",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 藤沢田方町店",
+      "url": "https://www.yamada-udon.co.jp/shop/kanagawa",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 藤沢用田店",
+      "url": "https://www.yamada-udon.co.jp/shop/kanagawa",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 みどりヶ丘店",
+      "url": "https://www.yamada-udon.co.jp/shop/kanagawa",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 田名店",
+      "url": "https://www.yamada-udon.co.jp/shop/kanagawa",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 相模原中央店",
+      "url": "https://www.yamada-udon.co.jp/shop/kanagawa",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 下荻野店",
+      "url": "https://www.yamada-udon.co.jp/shop/kanagawa",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 綾瀬店",
+      "url": "https://www.yamada-udon.co.jp/shop/kanagawa",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 さつきが丘店",
+      "url": "https://www.yamada-udon.co.jp/shop/chiba",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 貝塚インター店",
+      "url": "https://www.yamada-udon.co.jp/shop/chiba",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 船橋米ヶ崎店",
+      "url": "https://www.yamada-udon.co.jp/shop/chiba",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 松戸八柱店",
+      "url": "https://www.yamada-udon.co.jp/shop/chiba",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 松戸高塚店",
+      "url": "https://www.yamada-udon.co.jp/shop/chiba",
+      "facilities": []
+    },
+    {
+      "name": "山田うどん食堂 主水店",
+      "url": "https://www.yamada-udon.co.jp/shop/chiba",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 松戸東店",
+      "url": "https://www.yamada-udon.co.jp/shop/chiba",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 芽吹店",
+      "url": "https://www.yamada-udon.co.jp/shop/chiba",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 八千代島田台店",
+      "url": "https://www.yamada-udon.co.jp/shop/chiba",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 千葉北インター店",
+      "url": "https://www.yamada-udon.co.jp/shop/chiba",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 千代田町店",
+      "url": "https://www.yamada-udon.co.jp/shop/ibaraki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 作谷店",
+      "url": "https://www.yamada-udon.co.jp/shop/ibaraki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 上横場店",
+      "url": "https://www.yamada-udon.co.jp/shop/ibaraki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 ひたちなかインター店",
+      "url": "https://www.yamada-udon.co.jp/shop/ibaraki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 結城バイパス店",
+      "url": "https://www.yamada-udon.co.jp/shop/ibaraki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 総和町店",
+      "url": "https://www.yamada-udon.co.jp/shop/ibaraki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 古河中田店",
+      "url": "https://www.yamada-udon.co.jp/shop/ibaraki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 岩瀬店",
+      "url": "https://www.yamada-udon.co.jp/shop/ibaraki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 石下バイパス店",
+      "url": "https://www.yamada-udon.co.jp/shop/ibaraki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 きぬの里店",
+      "url": "https://www.yamada-udon.co.jp/shop/ibaraki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 下館294号バイパス店",
+      "url": "https://www.yamada-udon.co.jp/shop/ibaraki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 茨城町店",
+      "url": "https://www.yamada-udon.co.jp/shop/ibaraki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 竜ヶ崎店",
+      "url": "https://www.yamada-udon.co.jp/shop/ibaraki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 佐野50号バイパス店",
+      "url": "https://www.yamada-udon.co.jp/shop/tochigi",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 佐野堀米店",
+      "url": "https://www.yamada-udon.co.jp/shop/tochigi",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 小山新4号バイパス店",
+      "url": "https://www.yamada-udon.co.jp/shop/tochigi",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 国府町店",
+      "url": "https://www.yamada-udon.co.jp/shop/tochigi",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 栃木藤岡店",
+      "url": "https://www.yamada-udon.co.jp/shop/tochigi",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 宇都宮東峰町店",
+      "url": "https://www.yamada-udon.co.jp/shop/tochigi",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 安中店",
+      "url": "https://www.yamada-udon.co.jp/shop/gunma",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 赤堀店",
+      "url": "https://www.yamada-udon.co.jp/shop/gunma",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 伊勢崎バイパス店",
+      "url": "https://www.yamada-udon.co.jp/shop/gunma",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 高崎インター店",
+      "url": "https://www.yamada-udon.co.jp/shop/gunma",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 前橋南インター店",
+      "url": "https://www.yamada-udon.co.jp/shop/gunma",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 江田町店",
+      "url": "https://www.yamada-udon.co.jp/shop/gunma",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 大渡店",
+      "url": "https://www.yamada-udon.co.jp/shop/gunma",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 小島田町店",
+      "url": "https://www.yamada-udon.co.jp/shop/gunma",
+      "facilities": []
+    },
+    {
+      "name": "山田うどん食堂 太田50号バイパス店",
+      "url": "https://www.yamada-udon.co.jp/shop/gunma",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 新田嘉祢店",
+      "url": "https://www.yamada-udon.co.jp/shop/gunma",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 新田店",
+      "url": "https://www.yamada-udon.co.jp/shop/gunma",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 新町店",
+      "url": "https://www.yamada-udon.co.jp/shop/gunma",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 仙石店",
+      "url": "https://www.yamada-udon.co.jp/shop/gunma",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 明和町店",
+      "url": "https://www.yamada-udon.co.jp/shop/gunma",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山田うどん食堂 邑楽町店",
+      "url": "https://www.yamada-udon.co.jp/shop/gunma",
+      "facilities": [
+        "parking"
+      ]
+    }
+  ]
+}

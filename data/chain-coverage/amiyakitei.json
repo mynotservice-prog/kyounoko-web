@@ -1,0 +1,704 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "amiyakitei",
+  "name": "あみやき亭",
+  "sourceUrl": "https://amiyakitei.jp/search/",
+  "method": "公式「お店を探す」が読み込む店舗データ（shops.json）の「特徴」ラベルを店舗ごとに集計",
+  "total": 88,
+  "note": "内訳: あみやき亭 81店、あみやき亭PLUS 7店（公式検索は両ブランドを1画面で扱うため両方を数えた）。ブランド別: あみやき亭 81店中 掘りごたつあり81・個室あり81／あみやき亭PLUS 7店中 掘りごたつあり0・個室あり0",
+  "facilities": {
+    "zashiki": {
+      "count": 81,
+      "label": "掘りごたつあり"
+    },
+    "privateRoom": {
+      "count": 81,
+      "label": "個室あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "あみやき亭 一宮朝日店",
+      "url": "https://amiyakitei.jp/ichinomiya_asahi/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 一宮開明店",
+      "url": "https://amiyakitei.jp/ichinomiya_kaimei/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 刈谷店",
+      "url": "https://amiyakitei.jp/kariya/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 師勝店",
+      "url": "https://amiyakitei.jp/shikatsu/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 半田店",
+      "url": "https://amiyakitei.jp/handa/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 栄店",
+      "url": "https://amiyakitei.jp/sakae/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 東別院店",
+      "url": "https://amiyakitei.jp/higashibetsuin/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 高畑店",
+      "url": "https://amiyakitei.jp/takabata/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 中川店",
+      "url": "https://amiyakitei.jp/nakagawa/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 千音寺店",
+      "url": "https://amiyakitei.jp/sennonji/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 昭和橋店",
+      "url": "https://amiyakitei.jp/shouwabashi/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 畑江通店",
+      "url": "https://amiyakitei.jp/hataedori/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 名駅西店",
+      "url": "https://amiyakitei.jp/meiekinishi/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 本陣通店",
+      "url": "https://amiyakitei.jp/honjindori/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 黒川店",
+      "url": "https://amiyakitei.jp/kurokawa/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 平安通店",
+      "url": "https://amiyakitei.jp/heiandori/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 千種店",
+      "url": "https://amiyakitei.jp/chikusa/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 千種清明山店",
+      "url": "https://amiyakitei.jp/chikusa_seimeiyama/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 南区浜田町店",
+      "url": "https://amiyakitei.jp/minamikuhamadacho",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 天白店",
+      "url": "https://amiyakitei.jp/tenpaku/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 志段味店",
+      "url": "https://amiyakitei.jp/shidami/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 守山店",
+      "url": "https://amiyakitei.jp/moriyama/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 守山瀬古店",
+      "url": "https://amiyakitei.jp/moriyama_seko/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 円上店",
+      "url": "https://amiyakitei.jp/enjyou/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 港知多店",
+      "url": "https://amiyakitei.jp/minatochita/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 港当知店",
+      "url": "https://amiyakitei.jp/minatotouchi/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 妙音通店",
+      "url": "https://amiyakitei.jp/myouondori/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 潮見が丘店",
+      "url": "https://amiyakitei.jp/shiomigaoka/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 小田井店",
+      "url": "https://amiyakitei.jp/otai/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 堀越店",
+      "url": "https://amiyakitei.jp/horikoshi/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 大府店",
+      "url": "https://amiyakitei.jp/oobuten/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 安城店",
+      "url": "https://amiyakitei.jp/anjo/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 安城箕輪店",
+      "url": "https://amiyakitei.jp/anjomiwa/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 小牧店",
+      "url": "https://amiyakitei.jp/komaki/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 岡崎店",
+      "url": "https://amiyakitei.jp/okazaki/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 岡崎北店",
+      "url": "https://amiyakitei.jp/okazakikita/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 岩倉店",
+      "url": "https://amiyakitei.jp/iwakura/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 三好店",
+      "url": "https://amiyakitei.jp/miyoshi/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 弥富店",
+      "url": "https://amiyakitei.jp/yatomi/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 扶桑店",
+      "url": "https://amiyakitei.jp/fusou/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 日進店",
+      "url": "https://amiyakitei.jp/nisshin/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 春日井本店",
+      "url": "https://amiyakitei.jp/kasugaihonten/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 東浦店",
+      "url": "https://amiyakitei.jp/higashiura/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 東海横須賀店",
+      "url": "https://amiyakitei.jp/toukaiyokosuka/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 江南店",
+      "url": "https://amiyakitei.jp/kounan/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 神守店",
+      "url": "https://amiyakitei.jp/kamori/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 津島店",
+      "url": "https://amiyakitei.jp/tsushima/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 武豊店",
+      "url": "https://amiyakitei.jp/taketoyo/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 知多新舞子店",
+      "url": "https://amiyakitei.jp/chitashinmaiko/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 知立店",
+      "url": "https://amiyakitei.jp/chiryu/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 碧南店",
+      "url": "https://amiyakitei.jp/hekinan/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 稲沢下津店",
+      "url": "https://amiyakitei.jp/inazawa_shioridu/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 西尾店",
+      "url": "https://amiyakitei.jp/nishio/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 豊川店",
+      "url": "https://amiyakitei.jp/toyokawa/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 豊明店",
+      "url": "https://amiyakitei.jp/toyoake/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 豊田寿店",
+      "url": "https://amiyakitei.jp/toyotakotobuki/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 豊田陣中店",
+      "url": "https://amiyakitei.jp/toyotajinnaka/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 豊田若林店",
+      "url": "https://amiyakitei.jp/toyotawakabayashi/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 長久手店",
+      "url": "https://amiyakitei.jp/nagakute/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 高浜店",
+      "url": "https://amiyakitei.jp/takahama",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 可児店",
+      "url": "https://amiyakitei.jp/kani/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 多治見店",
+      "url": "https://amiyakitei.jp/tajimi/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 大垣21号バイパス店",
+      "url": "https://amiyakitei.jp/oogakinijyuichigou_baipasu/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 西鶉店",
+      "url": "https://amiyakitei.jp/nishiuzura/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 岐阜北方店",
+      "url": "https://amiyakitei.jp/gifukitagata/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 瑞浪店",
+      "url": "https://amiyakitei.jp/mizunami/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 羽島店",
+      "url": "https://amiyakitei.jp/hashima/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 岐南店",
+      "url": "https://amiyakitei.jp/ginan/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 関店",
+      "url": "https://amiyakitei.jp/seki/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 伊勢店",
+      "url": "https://amiyakitei.jp/ise/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 伊賀上野店",
+      "url": "https://amiyakitei.jp/igaueno/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 名張店",
+      "url": "https://www.amiyakitei.co.jp/recurit/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 四日市久保田店",
+      "url": "https://amiyakitei.jp/yokkaichi_kubota/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 四日市日永店",
+      "url": "https://amiyakitei.jp/yokkaichi_hinaga/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 松阪店",
+      "url": "https://amiyakitei.jp/matsusaka/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 桑名江場店",
+      "url": "https://amiyakitei.jp/kuwanaeba/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 桑名大山田店",
+      "url": "https://amiyakitei.jp/kuwana_ooyamada/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 津白塚店",
+      "url": "https://amiyakitei.jp/tsushiratsuka/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 津高茶屋店",
+      "url": "https://amiyakitei.jp/tsutakatyaya/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 鈴鹿店",
+      "url": "https://amiyakitei.jp/suzuka/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭 彦根店",
+      "url": "https://amiyakitei.jp/hikone/",
+      "facilities": [
+        "privateRoom",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "あみやき亭Plus 浜松曳馬店",
+      "url": "https://amiyakitei.jp/plus_hamamatsuhikuma/",
+      "facilities": []
+    },
+    {
+      "name": "あみやき亭Plus 木場店",
+      "url": "https://amiyakitei.jp/plus_kibaten/",
+      "facilities": []
+    },
+    {
+      "name": "あみやき亭plus 稲沢店",
+      "url": "https://amiyakitei.jp/plus_inazawa/",
+      "facilities": []
+    },
+    {
+      "name": "あみやき亭Plus 豊橋北山店",
+      "url": "https://amiyakitei.jp/plus_toyohashikitayama/",
+      "facilities": []
+    },
+    {
+      "name": "あみやき亭Plus 鵜沼店",
+      "url": "https://amiyakitei.jp/plus_unuma/",
+      "facilities": []
+    },
+    {
+      "name": "あみやき亭Plus 大垣インター店",
+      "url": "https://amiyakitei.jp/plus_oogakiinta/",
+      "facilities": []
+    },
+    {
+      "name": "あみやき亭Plus 川越店",
+      "url": "https://amiyakitei.jp/plus_miekawagoe/",
+      "facilities": []
+    }
+  ]
+}

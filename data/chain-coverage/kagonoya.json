@@ -1,0 +1,760 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "kagonoya",
+  "name": "かごの屋",
+  "sourceUrl": "https://kagonoya.food-kr.com/#shoplist",
+  "method": "公式サイトの「国内店舗一覧」から店舗ページを全件取得し、各ページの「設備」「サービス」欄の記載を集計",
+  "total": 76,
+  "note": "店名に「かごの屋」を含む国内店のみ（海外店・SA/PA・同社他業態のサブサイトは一覧に無いので対象外）。設備欄・サービス欄は「あり」の項目だけが列挙される形式で、記載が無い＝設備が無い とは限らない。「バリアフリー」は1店のみに記載",
+  "facilities": {
+    "stepFree": {
+      "count": 1,
+      "label": "バリアフリー"
+    },
+    "kidsMenu": {
+      "count": 76,
+      "label": "お子様メニューあり"
+    },
+    "privateRoom": {
+      "count": 61,
+      "label": "個室・半個室あり"
+    },
+    "multiToilet": {
+      "count": 57,
+      "label": "車椅子でトイレ利用可"
+    },
+    "parking": {
+      "count": 76,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 北越谷店",
+      "url": "https://kagonoya.food-kr.com/0552/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 鳩ケ谷店",
+      "url": "https://kagonoya.food-kr.com/0553/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 朝霞台店",
+      "url": "https://kagonoya.food-kr.com/0592/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 文京千石店",
+      "url": "https://kagonoya.food-kr.com/0555/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 練馬区役所前店",
+      "url": "https://kagonoya.food-kr.com/0566/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 石神井公園駅前店",
+      "url": "https://kagonoya.food-kr.com/0574/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 多摩センター駅前店",
+      "url": "https://kagonoya.food-kr.com/0577/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 三鷹野崎店",
+      "url": "https://kagonoya.food-kr.com/0579/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 鷺宮店",
+      "url": "https://kagonoya.food-kr.com/0581/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 竹ノ塚店",
+      "url": "https://kagonoya.food-kr.com/0582/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 高島平店",
+      "url": "https://kagonoya.food-kr.com/0588/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 成増店",
+      "url": "https://kagonoya.food-kr.com/0590/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 日野多摩平店",
+      "url": "https://kagonoya.food-kr.com/0594/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 一之江店",
+      "url": "https://kagonoya.food-kr.com/0597/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 金沢文庫店",
+      "url": "https://kagonoya.food-kr.com/0557/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 藤沢辻堂店",
+      "url": "https://kagonoya.food-kr.com/0561/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 立場店",
+      "url": "https://kagonoya.food-kr.com/0564/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 大口店",
+      "url": "https://kagonoya.food-kr.com/0576/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 保土ヶ谷区役所前店",
+      "url": "https://kagonoya.food-kr.com/0578/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 古淵店",
+      "url": "https://kagonoya.food-kr.com/0583/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 綱島店",
+      "url": "https://kagonoya.food-kr.com/0585/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 大和店",
+      "url": "https://kagonoya.food-kr.com/0603/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 一社東山通店",
+      "url": "https://kagonoya.food-kr.com/0589/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 桜山滝子店",
+      "url": "https://kagonoya.food-kr.com/0595/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 草津矢倉店",
+      "url": "https://kagonoya.food-kr.com/0602/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 北大路下鴨店",
+      "url": "https://kagonoya.food-kr.com/0540/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 北野白梅町店",
+      "url": "https://kagonoya.food-kr.com/0546/",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 城陽久津川店",
+      "url": "https://kagonoya.food-kr.com/0572/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごのや 京都リサーチパーク店",
+      "url": "https://kagonoya.food-kr.com/0604/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 学園前店",
+      "url": "https://kagonoya.food-kr.com/0504/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 奈良新大宮店",
+      "url": "https://kagonoya.food-kr.com/0541/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 奈良橿原店",
+      "url": "https://kagonoya.food-kr.com/0547/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 奈良王寺店",
+      "url": "https://kagonoya.food-kr.com/0548/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 藤井寺IC南店",
+      "url": "https://kagonoya.food-kr.com/0503/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 菱屋西店",
+      "url": "https://kagonoya.food-kr.com/0506/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 大阪ドームシティ店",
+      "url": "https://kagonoya.food-kr.com/0653/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 北花田店",
+      "url": "https://kagonoya.food-kr.com/0654/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 服部店",
+      "url": "https://kagonoya.food-kr.com/0655/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 大国町店",
+      "url": "https://kagonoya.food-kr.com/0658/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 河内長野市役所前店",
+      "url": "https://kagonoya.food-kr.com/0659/",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 寝屋川店",
+      "url": "https://kagonoya.food-kr.com/0403/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 平野区役所西店",
+      "url": "https://kagonoya.food-kr.com/0404/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 岸里店",
+      "url": "https://kagonoya.food-kr.com/0405/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 門真巣本店",
+      "url": "https://kagonoya.food-kr.com/0407/",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 清水谷高校前店",
+      "url": "https://kagonoya.food-kr.com/0408/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 歌島橋店",
+      "url": "https://kagonoya.food-kr.com/0525/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 守口太子橋店",
+      "url": "https://kagonoya.food-kr.com/0526/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 岸和田店",
+      "url": "https://kagonoya.food-kr.com/0527/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 花園ラグビー場北店",
+      "url": "https://kagonoya.food-kr.com/0528/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 深江橋店",
+      "url": "https://kagonoya.food-kr.com/0529/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 阿倍野王子町店",
+      "url": "https://kagonoya.food-kr.com/0530/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 東淀川店",
+      "url": "https://kagonoya.food-kr.com/0532/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 長居西店",
+      "url": "https://kagonoya.food-kr.com/0533/",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 都島店",
+      "url": "https://kagonoya.food-kr.com/0534/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 池田市役所前店",
+      "url": "https://kagonoya.food-kr.com/0536/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 泉北泉ヶ丘店",
+      "url": "https://kagonoya.food-kr.com/0537/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 森小路インター東店",
+      "url": "https://kagonoya.food-kr.com/0538/",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 豊中少路店",
+      "url": "https://kagonoya.food-kr.com/0543/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 京橋東野田店",
+      "url": "https://kagonoya.food-kr.com/0544/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 三国本町店",
+      "url": "https://kagonoya.food-kr.com/0549/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 茨木春日店",
+      "url": "https://kagonoya.food-kr.com/0554/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 くずは店",
+      "url": "https://kagonoya.food-kr.com/0563/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 高槻城東店",
+      "url": "https://kagonoya.food-kr.com/0571/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 吹田五月が丘店",
+      "url": "https://kagonoya.food-kr.com/0586/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 JR和歌山駅前店",
+      "url": "https://kagonoya.food-kr.com/0656/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 宝塚店",
+      "url": "https://kagonoya.food-kr.com/0502/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 塚口店",
+      "url": "https://kagonoya.food-kr.com/0505/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 神戸住吉店",
+      "url": "https://kagonoya.food-kr.com/0652/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 明石店",
+      "url": "https://kagonoya.food-kr.com/0539/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 甲子園店",
+      "url": "https://kagonoya.food-kr.com/0542/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 三田ウッディタウン店",
+      "url": "https://kagonoya.food-kr.com/0550/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 姫路市民会館前店",
+      "url": "https://kagonoya.food-kr.com/0560/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 阪神春日野道駅前店",
+      "url": "https://kagonoya.food-kr.com/0573/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 川西多田店",
+      "url": "https://kagonoya.food-kr.com/0575/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 尼崎昭和通店",
+      "url": "https://kagonoya.food-kr.com/0584/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和食しゃぶしゃぶ かごの屋 加古川駅前店",
+      "url": "https://kagonoya.food-kr.com/0593/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    }
+  ]
+}

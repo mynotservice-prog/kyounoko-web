@@ -2,7 +2,9 @@
 /**
  * 流入ミックスの突合レポート（GSC × GA4 を同一期間で並べる）
  *
- * 目的: 「GSCクリック 22,830 に対し GA4セッション 74,736（3.3倍）」の内訳を確定する。
+ * 目的: GSCクリックとGA4セッションを同一期間で並べ、流入の内訳を確定する。
+ * （2026-09-11 実行で、初版戦略の「3.3倍乖離」はGSCをクエリ単位で集計した過少値による誤りと判明。
+ *   GSCの総数は必ず日付単位で出す。結果: reports/traffic-mix-2026-09-11.md）
  * 100万PVの設計は「今どこから来ているか」が分からないと組めない。ここを最初に潰す。
  *
  * 既存の gsc-report.mjs / ga4-report.mjs と同じ読み取り専用SA
@@ -111,7 +113,8 @@ const num = (n) => Math.round(Number(n) || 0);
 const fmt = (n) => num(n).toLocaleString('en-US');
 const pad = (s, n) => String(s).padStart(n);
 const rows2 = (j) => (j?.rows || []).map((r) => ({
-  key: r.dimensionValues.map((d) => d.value),
+  // ディメンション無しの集計（全体合計）は dimensionValues が付かない
+  key: (r.dimensionValues || []).map((d) => d.value),
   m: r.metricValues.map((v) => Number(v.value) || 0),
 }));
 const AI_HOSTS = /chatgpt|openai|perplexity|copilot|gemini|bard|claude|poe\.com|felo|genspark/i;

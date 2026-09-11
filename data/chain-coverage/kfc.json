@@ -1,0 +1,7519 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "kfc",
+  "name": "ケンタッキー",
+  "sourceUrl": "https://search.kfc.co.jp/",
+  "method": "公式店舗検索（goga storelocator）の geohash セル JSON（/api/points/<hash>）で日本全域を走査して全店舗を列挙し、各店舗の絞り込み条件「パーキング」の値を集計",
+  "note": "geohash 2 桁 20 セルを走査。パーキング値が未設定（\"1\"/\"0\" どちらでもない）の店舗 273 件は「なし」側に数えた。絞り込み条件のうち家族向け属性はパーキングのみ",
+  "total": 1364,
+  "facilities": {
+    "parking": {
+      "count": 1023,
+      "label": "パーキング"
+    }
+  },
+  "stores": [
+    {
+      "name": "石垣店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮古店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "糸満店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン武富店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "八重瀬店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小禄店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "壺川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "パレット久茂地店",
+      "facilities": []
+    },
+    {
+      "name": "サンエーメインプレイス店",
+      "facilities": []
+    },
+    {
+      "name": "パルコシティ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "首里末吉店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "与那原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "サンエー西原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "浦添店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西原坂田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北谷店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "嘉手納店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "美東泡瀬店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "プラザハウス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "うるま喜仲店",
+      "facilities": []
+    },
+    {
+      "name": "登川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "具志川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "サンエー石川シティ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "名護為又店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "指宿店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "グラード伊集院店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "七ツ島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "中山町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南鹿児島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン鹿児島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "JR鹿児島中央店",
+      "facilities": []
+    },
+    {
+      "name": "与次郎店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "城西店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天文館店",
+      "facilities": []
+    },
+    {
+      "name": "伊敷店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ベイサイド鹿児島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "川内店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島吉野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン姶良店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "国分店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "出水店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本人吉店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン鹿屋店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿屋店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日南店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン都城店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール都城駅前店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "都城店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "サンキュー小林店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南宮崎店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎大塚店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "JR宮崎店",
+      "facilities": []
+    },
+    {
+      "name": "宮崎高千穂通り店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎新別府店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎大島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール宮崎店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎花ケ島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "浜町中央店",
+      "facilities": []
+    },
+    {
+      "name": "長崎ゆめサイト店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "JR長崎店",
+      "facilities": []
+    },
+    {
+      "name": "長崎時津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長崎文教町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東長崎店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "諫早店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大村松並店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン天草店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "八代松江店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "八代旭中央通店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【休業中】 イオンモール宇城店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "諫早長野町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン島原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール大牟田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本富合店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【休業中】 イオンモール熊本店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本近見店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本浜線バイパス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本健軍店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン田崎店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アミュプラザくまもと店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめタウン大江店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "清水バイパス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本水前寺店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本東バイパス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本日赤通り店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本四方寄店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本玉名店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大牟田有明プラザ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大牟田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本植木店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "合志店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山鹿店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "させぼ五番街店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン大塔店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アクロスプラザ武雄店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "伊万里店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "唐津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐賀白石店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめタウン大川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ＪＲ佐賀店",
+      "facilities": []
+    },
+    {
+      "name": "佐賀南部バイパス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐賀鍋島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめタウン佐賀店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "吉野ヶ里店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめタウン八女店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "久留米上津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "JR久留米店",
+      "facilities": []
+    },
+    {
+      "name": "鳥栖店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめタウン久留米店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "久留米中央公園店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡糸島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "木の葉モール橋本店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡原バイパス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "次郎丸店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "那珂川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "油山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "片江店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大橋店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡今宿店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡姪の浜店",
+      "facilities": []
+    },
+    {
+      "name": "みずほPayPayドーム福岡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡西新店",
+      "facilities": []
+    },
+    {
+      "name": "福岡赤坂店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "JR博多店",
+      "facilities": []
+    },
+    {
+      "name": "ゆめタウン博多店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天神サザン通り店",
+      "facilities": []
+    },
+    {
+      "name": "パピヨンガーデン店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ミーナ天神店",
+      "facilities": []
+    },
+    {
+      "name": "博多デイトスアネックス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "薬院駅前店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール香椎浜店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン小郡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール筑紫野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大野城若草店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "向佐野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ららぽーと福岡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "春日店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡南バイパス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "白木原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン甘木店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール福岡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡松崎店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "トリアス久山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "和白店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "サンリブ古賀店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "飯塚秋松店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめタウン飯塚店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "飯塚かやの森店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "直方バイパス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "光の森店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本菊陽店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本大津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日向店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "延岡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン延岡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "トキハインダストリー佐伯店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "JR行橋店",
+      "facilities": []
+    },
+    {
+      "name": "ゆめタウン中津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "トキハわさだタウン店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "パークプレイス大分店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "別府若草店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アミュプラザ大分店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大分店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大分中島中央店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大分今津留店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "別府亀川バイパス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "フジグラン北宇和島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール高知店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "サニーアクシス南国店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "フジグラン野市店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール福津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "サンリブくりえいと宗像店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "サンリブくりえいと宗像店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール直方店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "中間店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ＪＲ折尾店",
+      "facilities": []
+    },
+    {
+      "name": "イオンタウン黒崎店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "若松二島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北九州徳力店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール八幡東店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "到津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ＪＲ戸畑店",
+      "facilities": []
+    },
+    {
+      "name": "小倉足立インター店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小倉競馬場店",
+      "facilities": []
+    },
+    {
+      "name": "サンリブシティ小倉店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ＪＲ小倉店",
+      "facilities": []
+    },
+    {
+      "name": "JR門司店",
+      "facilities": []
+    },
+    {
+      "name": "下関駅前店",
+      "facilities": []
+    },
+    {
+      "name": "下関綾羅木店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめタウン長府店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山陽小野田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめタウン宇部店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宇部店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小郡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "防府店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "徳山城ケ丘店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめタウン下松店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめタウン柳井店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめタウン山口店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめタウン益田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "エミフルＭＡＳＡＫＩ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松山南久米店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "フジグラン重信店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "フジグラン松山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松山山越店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南岩国店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "カジル岩国店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめタウン廿日市店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン楽々園店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "広島五日市店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン宇品店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "フジグラン安芸店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ジ・アウトレット広島店",
+      "facilities": []
+    },
+    {
+      "name": "フレスタ横川店",
+      "facilities": []
+    },
+    {
+      "name": "ゆめタウン広島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "HiroPa店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "広島紙屋町店",
+      "facilities": []
+    },
+    {
+      "name": "広島段原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "広島東雲店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "広島府中店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめテラス祇園店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "呉店",
+      "facilities": []
+    },
+    {
+      "name": "ゆめタウン呉店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "呉広店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東広島フジグラン店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめモール西条店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "今治店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "フジグラン西条店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール新居浜店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "尾道店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "尾道高須店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "広島八木店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "広島安古市店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福山ばら公園前店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福山南蔵王店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "フジグラン神辺店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "観音寺店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "丸亀店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール綾川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "フジグラン十川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめタウン高松店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高松伏石店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高松今里店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高松東ハゼ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高松屋島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "フジグラン石井店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "徳島沖浜店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめタウン徳島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "徳島藍住店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "フジグラン北島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "徳島川内店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ハローズ玉島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "倉敷笹沖店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール倉敷店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "倉敷中庄店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ナフコ岡山店",
+      "facilities": []
+    },
+    {
+      "name": "岡山総社店",
+      "facilities": []
+    },
+    {
+      "name": "岡山高柳店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岡山新保店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岡山原尾島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "マルナカ益野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめモール山陽店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "津山イーストランド店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "津山ノースランド店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン赤穂店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "網干店",
+      "facilities": []
+    },
+    {
+      "name": "MEGAドン．キホーテ姫路広畑店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "姫路リバーシティ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン高砂店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イトーヨーカドー明石店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山陽明石駅店",
+      "facilities": []
+    },
+    {
+      "name": "イズミヤ神戸玉津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン明石店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "カナート西神戸店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "玉津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "明姫別府店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アリオ加古川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "加古川店",
+      "facilities": []
+    },
+    {
+      "name": "太子店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "姫路土山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "姫路南店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "JR姫路駅店",
+      "facilities": []
+    },
+    {
+      "name": "姫路保城店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール加西北条店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン大田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "出雲店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "出雲斐川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松江乃木店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松江店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "米子米原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "米子皆生店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール日吉津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "倉吉店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鳥取駅南店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鳥取千代水店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン和田山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "兵庫豊岡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新宮店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "金沢北安江店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日ノ出町店",
+      "facilities": []
+    },
+    {
+      "name": "豊明店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "近江守山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "白梅町店",
+      "facilities": []
+    },
+    {
+      "name": "アル・プラザ水口店",
+      "facilities": []
+    },
+    {
+      "name": "浜松有玉店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "近鉄八尾店",
+      "facilities": []
+    },
+    {
+      "name": "新津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "沼津香貫店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アピタ富山東店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊田美里店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北松戸店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天保山マーケットプレース店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "今市店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "浅草店",
+      "facilities": []
+    },
+    {
+      "name": "堺百舌鳥店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "溝ノ口店",
+      "facilities": []
+    },
+    {
+      "name": "草加駅前店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小田原国府津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鎌倉店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "桜新町店",
+      "facilities": []
+    },
+    {
+      "name": "長岡川崎店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "船橋芝山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "神戸学園都市店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "槙島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "彦根大藪店",
+      "facilities": []
+    },
+    {
+      "name": "栗東店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "吉川駅前店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "泉大津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鈴鹿中央通り店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン高槻店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三島北店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アピア八日市店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新潟出来島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "本牧店",
+      "facilities": []
+    },
+    {
+      "name": "イオン豊科店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大泉学園店",
+      "facilities": []
+    },
+    {
+      "name": "箕面店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "古川橋店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宝塚インター店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "原町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ウイング上大岡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "川崎生田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "相模原中央店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール桑名店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "桐生広沢店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新座野火止店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "伊那店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長野エムウェーブ前店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "江戸崎パンプ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "上野池ノ端店",
+      "facilities": []
+    },
+    {
+      "name": "イオンタウン松ヶ崎店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "二子玉川店",
+      "facilities": []
+    },
+    {
+      "name": "荻窪店",
+      "facilities": []
+    },
+    {
+      "name": "海老名店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン小千谷店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン八街店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン郡山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宇都宮アピタ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン千葉ニュータウン店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福井幾久店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ビバシティ彦根店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "郡山西部プラザ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アピタ新潟亀田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール山形南店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "赤井店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "芦原橋店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "甲子園口店",
+      "facilities": []
+    },
+    {
+      "name": "MEGAドン・キホーテUNY掛川店",
+      "facilities": []
+    },
+    {
+      "name": "イオン六日町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "昭和バイパス飯喰店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "本一色店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "石山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "上新庄店",
+      "facilities": []
+    },
+    {
+      "name": "MEGAドン・キホーテUNY魚津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン浜松西店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南草津駅前店",
+      "facilities": []
+    },
+    {
+      "name": "新青梅街道保谷店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "町田金井店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "しおだ野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京橋店",
+      "facilities": []
+    },
+    {
+      "name": "アピタ新潟西店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西新井店",
+      "facilities": []
+    },
+    {
+      "name": "枚方バイパス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高林店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "千歳烏山店",
+      "facilities": []
+    },
+    {
+      "name": "金町店",
+      "facilities": []
+    },
+    {
+      "name": "聖蹟桜ヶ丘店",
+      "facilities": []
+    },
+    {
+      "name": "深谷店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "館林店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "加須店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "行田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "総和店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小山南店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "八王子堀之内店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "青砥駅店",
+      "facilities": []
+    },
+    {
+      "name": "宇都宮簗瀬店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福田屋ショッピングプラザ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿沼店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "秩父店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東久留米店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "綾瀬店",
+      "facilities": []
+    },
+    {
+      "name": "葛飾白鳥店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "亀有店",
+      "facilities": []
+    },
+    {
+      "name": "アル・プラザ醍醐店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アル・プラザ亀岡店",
+      "facilities": []
+    },
+    {
+      "name": "飯田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アクトアモーレ高槻店",
+      "facilities": []
+    },
+    {
+      "name": "成田ニュータウン店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐倉店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン七光台店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "檀田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アル・プラザ鯖江店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "本八幡店",
+      "facilities": []
+    },
+    {
+      "name": "池田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "百合ヶ丘店",
+      "facilities": []
+    },
+    {
+      "name": "新宿西口店",
+      "facilities": []
+    },
+    {
+      "name": "高円寺店",
+      "facilities": []
+    },
+    {
+      "name": "蘇我店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "横浜西口店",
+      "facilities": []
+    },
+    {
+      "name": "国分寺店",
+      "facilities": []
+    },
+    {
+      "name": "立川店",
+      "facilities": []
+    },
+    {
+      "name": "モリタウン昭島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南加瀬店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "練馬駅前店",
+      "facilities": []
+    },
+    {
+      "name": "千里丘店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岸谷店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "池袋西口店",
+      "facilities": []
+    },
+    {
+      "name": "越谷駅前店",
+      "facilities": []
+    },
+    {
+      "name": "洋光台店",
+      "facilities": []
+    },
+    {
+      "name": "中野駅前店",
+      "facilities": []
+    },
+    {
+      "name": "浦安店",
+      "facilities": []
+    },
+    {
+      "name": "狭山亀の甲店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "子母口店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "野庭丸山台店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "武蔵境店",
+      "facilities": []
+    },
+    {
+      "name": "浦和六辻店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "蓮田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新小岩店",
+      "facilities": []
+    },
+    {
+      "name": "小野原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三ツ境店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "成城店",
+      "facilities": []
+    },
+    {
+      "name": "相模原大野台店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大和新庄店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "所沢駅前店",
+      "facilities": []
+    },
+    {
+      "name": "伊勢佐木町店",
+      "facilities": []
+    },
+    {
+      "name": "東金バイパス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "清瀬駅前店",
+      "facilities": []
+    },
+    {
+      "name": "湘南台店",
+      "facilities": []
+    },
+    {
+      "name": "小平駅前店",
+      "facilities": []
+    },
+    {
+      "name": "君津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西川口店",
+      "facilities": []
+    },
+    {
+      "name": "緑園都市店",
+      "facilities": []
+    },
+    {
+      "name": "相模原相原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三鷹駅前店",
+      "facilities": []
+    },
+    {
+      "name": "高田馬場店",
+      "facilities": []
+    },
+    {
+      "name": "光が丘IMA店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新鎌ヶ谷店",
+      "facilities": []
+    },
+    {
+      "name": "ヨークタウン坂東店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福井ベル店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "MEGAドン.キホーテUNY会津若松店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール柏店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンフードスタイル新松戸店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リオンドール須賀川東店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "けやきウォーク前橋店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "上田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンスーパーセンター一関店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リバーサイド千秋店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン米沢店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アステ川西店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "下館店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール八千代緑が丘店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン那須塩原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "船橋駅前店",
+      "facilities": []
+    },
+    {
+      "name": "高島平店",
+      "facilities": []
+    },
+    {
+      "name": "イオン相馬店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アピタ阿久比店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "R6日立金沢町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "氏家店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "河辺店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "勝田稲田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ラザウォーク甲斐双葉店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "板宿店",
+      "facilities": []
+    },
+    {
+      "name": "水戸元吉田町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "函南店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン北上江釣子店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西鈴蘭台店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アル・プラザあまがさき店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "MEGAドン．キホーテ上水戸店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東武練馬駅前店",
+      "facilities": []
+    },
+    {
+      "name": "大宮大和田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "セラビ幸町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "仙台駅前店",
+      "facilities": []
+    },
+    {
+      "name": "名取バイパス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "古川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "八王子店",
+      "facilities": []
+    },
+    {
+      "name": "イオンタウン矢本店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "上尾駅前店",
+      "facilities": []
+    },
+    {
+      "name": "寒川町倉見店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平塚四之宮店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "愛甲石田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン洛南店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "秦野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小諸店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "トレッサ横浜店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "CoCoLo新潟店",
+      "facilities": []
+    },
+    {
+      "name": "イオン多賀城店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "茅ヶ崎西久保店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール浜松市野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "村上インター店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール久御山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新潟新通店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アル・プラザ アミ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "塩尻店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イトーヨーカドー湘南台店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "伊勢原店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモールＫＹＯＴＯ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール船橋店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "門前仲町店",
+      "facilities": []
+    },
+    {
+      "name": "モレラ岐阜店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "河原町三条店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモールナゴヤドーム前店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "前橋野中店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "巣鴨店",
+      "facilities": []
+    },
+    {
+      "name": "駒込店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール水戸内原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ライフ相模大野駅前店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール東久留米店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "名張店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール春日部店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール大阪ドームシティ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "上板橋店",
+      "facilities": []
+    },
+    {
+      "name": "仙台六丁の目店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "島忠ホームズ草加舎人店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小牧店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール東員店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール天童店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東松戸店",
+      "facilities": []
+    },
+    {
+      "name": "くずはモール店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎台店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール名古屋茶屋店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール大高店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール京都桂川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン富士南店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "上越高田インター店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "MOMOテラス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "真美ヶ丘店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岩出店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "和歌山パームシティ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京成勝田台店",
+      "facilities": []
+    },
+    {
+      "name": "ジョイフル本田ニューポートひたちなか店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アル・プラザ京田辺店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "紀三井寺店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "御坊店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "志津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "寝屋川市駅前店",
+      "facilities": []
+    },
+    {
+      "name": "エル・枚方店",
+      "facilities": []
+    },
+    {
+      "name": "コープ愛子店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南アルプスガーデン店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "青物横丁店",
+      "facilities": []
+    },
+    {
+      "name": "学芸大学店",
+      "facilities": []
+    },
+    {
+      "name": "オーストリート橋本彩の台店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "和歌山北インター店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松井山手欽明台店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鶴岡ミーナ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長命ヶ丘店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "向日市上植野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大井松田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "コープ榴ヶ岡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ユアエルム京成八千代台店",
+      "facilities": []
+    },
+    {
+      "name": "錦糸町楽天地店",
+      "facilities": []
+    },
+    {
+      "name": "阪南黒田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長野駅前店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール日根野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京急鶴見店",
+      "facilities": []
+    },
+    {
+      "name": "河内長野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "いわき泉店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "つくば研究学園店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "近鉄河内小阪駅店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール松本店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール京都五条店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "百万遍京都大学前店",
+      "facilities": []
+    },
+    {
+      "name": "碧南店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン和泉府中店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ルート286鈎取店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長野千曲店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ラゾーナ川崎プラザ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモールりんくう泉南店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "相模原小山モール店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ミスターマックス町田多摩境ショッピングセンター店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アリオ橋本店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京王永山店",
+      "facilities": []
+    },
+    {
+      "name": "幸手店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "エルミこうのす店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アリオ鷲宮店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ベニバナウォーク桶川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "R1山科店",
+      "facilities": []
+    },
+    {
+      "name": "オリナス錦糸町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "甲州塩山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西友東大宮店",
+      "facilities": []
+    },
+    {
+      "name": "桜美林学園前店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "流山おおたかの森店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール四條畷店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "サンピア光明池店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大森西口店",
+      "facilities": []
+    },
+    {
+      "name": "祐天寺店",
+      "facilities": []
+    },
+    {
+      "name": "西八王子店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "あざみ野店",
+      "facilities": []
+    },
+    {
+      "name": "渋沢駅前店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール東浦店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "武庫之荘駅前店",
+      "facilities": []
+    },
+    {
+      "name": "阪急茨木店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール熱田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "プラットプラット堺駅前店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ファボーレ富山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊山豊場店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "八王子大和田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "四日市店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鶴ケ島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "綱島店",
+      "facilities": []
+    },
+    {
+      "name": "妙蓮寺店",
+      "facilities": []
+    },
+    {
+      "name": "ザ・モール仙台長町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三鷹野崎店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール日の出店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イトーヨーカドー国領店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "津島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "カインズ滑川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "カインズ川島インター店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ピオニウォーク東松山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "羽村店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール北大路店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "中山店",
+      "facilities": []
+    },
+    {
+      "name": "ららぽーと愛知東郷店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イトーヨーカドー能見台店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "カナートモール伏見店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三浦海岸店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "横須賀武山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "9号線洛西店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高崎OPA店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン上越店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イトーヨーカドー船橋店",
+      "facilities": []
+    },
+    {
+      "name": "イトーヨーカドー大井町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "関町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "仙川店",
+      "facilities": []
+    },
+    {
+      "name": "新堀川伏見下鳥羽店",
+      "facilities": []
+    },
+    {
+      "name": "榛原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南越谷店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都リサーチパーク店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "あどがわ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ＳＭＡＲＫ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン釜石店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "保土ヶ谷店",
+      "facilities": []
+    },
+    {
+      "name": "イオン久里浜店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "田園調布店",
+      "facilities": []
+    },
+    {
+      "name": "イオン東戸塚店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "プララ杉田店",
+      "facilities": []
+    },
+    {
+      "name": "池上店",
+      "facilities": []
+    },
+    {
+      "name": "本郷台店",
+      "facilities": []
+    },
+    {
+      "name": "コースカベイサイド店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "烏丸錦小路店",
+      "facilities": []
+    },
+    {
+      "name": "稲沢店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "セブンタウン小豆沢店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ガーデンモール木津川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新京成八柱駅ビル店",
+      "facilities": []
+    },
+    {
+      "name": "アリオ鳳店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール鈴鹿店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "志段味店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ラスカ茅ケ崎店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高田馬場四丁目店",
+      "facilities": []
+    },
+    {
+      "name": "セブンパーク天美店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京急弘明寺駅前店",
+      "facilities": []
+    },
+    {
+      "name": "成増店",
+      "facilities": []
+    },
+    {
+      "name": "大和高田神楽店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大府店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新仙台泉中央店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "八王子みなみ野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大崎ニューシティ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "テラッセ納屋橋店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "本山店",
+      "facilities": []
+    },
+    {
+      "name": "ヨークベニマル新佐沼店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イトーヨーカドー和光店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "藤が丘店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "春日部ユリノキ通り店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "カメイドクロック店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "そよら西宮今津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "プレ葉ウォーク浜北店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "9号線亀岡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "金沢新神田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "関西スーパー西冠店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "阪急南茨木店",
+      "facilities": []
+    },
+    {
+      "name": "いこらもーる泉佐野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "住吉駅前店",
+      "facilities": []
+    },
+    {
+      "name": "イオン天王町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "元住吉店",
+      "facilities": []
+    },
+    {
+      "name": "吹田店",
+      "facilities": []
+    },
+    {
+      "name": "塚本駅前店",
+      "facilities": []
+    },
+    {
+      "name": "ららぽーと堺店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日生中央サピエ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イトーヨーカドー武蔵小杉駅前店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "いなげや大泉学園店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ウニクス上里店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "袋井店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "浜松三島町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "獨協大学前トーブイコート店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョイフル本田千代田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ヨークベニマル伊達店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "横須賀三春町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アビオシティ加賀店",
+      "facilities": []
+    },
+    {
+      "name": "ピアゴ植田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ららぽーと門真店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョイホンパーク吉岡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "友部スクエア店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "白根店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アリオ上尾",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "本厚木ミロードイースト店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アイテラス落合南長崎アネックス店",
+      "facilities": []
+    },
+    {
+      "name": "デリスクエア今池店",
+      "facilities": []
+    },
+    {
+      "name": "アル・プラザ香里園店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都西院店",
+      "facilities": []
+    },
+    {
+      "name": "横須賀中央店",
+      "facilities": []
+    },
+    {
+      "name": "奈良西大和店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "伊東デュオ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "可児店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岩倉店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン守口店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン伊賀上野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "調布北口店",
+      "facilities": []
+    },
+    {
+      "name": "西神中央店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "いわき平Paix Paix店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "フレンドマート大津京店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長浜店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンスタイル仙台卸町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "マックスバリュ金沢しめの店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊橋店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アピタ向山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール草津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "野田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "草加店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "竜ケ崎店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "神栖店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "八日市場店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "銚子松岸店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿嶋店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール高岡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "瀬谷南口店",
+      "facilities": []
+    },
+    {
+      "name": "逗子店",
+      "facilities": []
+    },
+    {
+      "name": "明大前店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール太田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "朝霞駅前店",
+      "facilities": []
+    },
+    {
+      "name": "三宮さんプラザ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "梅田HEP通り店",
+      "facilities": []
+    },
+    {
+      "name": "名古屋平田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大宮東口店",
+      "facilities": []
+    },
+    {
+      "name": "JR玉造駅前店",
+      "facilities": []
+    },
+    {
+      "name": "和歌山MIO店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "越谷レイクタウン1丁目店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ヨークタウン八山田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "コープ坂戸薬師町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "名古屋栄セントラルパーク店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "セブンパークアリオ柏店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウンふじみ野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アピタテラス横浜綱島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "TXアベニュー八潮店",
+      "facilities": []
+    },
+    {
+      "name": "富山荒川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン松原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "仙台鶴ケ谷バイパス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "仙台五橋店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "湘南深沢店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "王子店",
+      "facilities": []
+    },
+    {
+      "name": "天満駅前店",
+      "facilities": []
+    },
+    {
+      "name": "南浦和店",
+      "facilities": []
+    },
+    {
+      "name": "瑞江店",
+      "facilities": []
+    },
+    {
+      "name": "いずみ中央店",
+      "facilities": []
+    },
+    {
+      "name": "十三東口店",
+      "facilities": []
+    },
+    {
+      "name": "野田阪神店",
+      "facilities": []
+    },
+    {
+      "name": "経堂店",
+      "facilities": []
+    },
+    {
+      "name": "平井店",
+      "facilities": []
+    },
+    {
+      "name": "葛西店",
+      "facilities": []
+    },
+    {
+      "name": "三軒茶屋店",
+      "facilities": []
+    },
+    {
+      "name": "新百合ヶ丘店",
+      "facilities": []
+    },
+    {
+      "name": "大宮三橋町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "サンポップ町屋店",
+      "facilities": []
+    },
+    {
+      "name": "大船東口店",
+      "facilities": []
+    },
+    {
+      "name": "ノクティー溝の口店",
+      "facilities": []
+    },
+    {
+      "name": "イオン鎌取店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "武蔵新城店",
+      "facilities": []
+    },
+    {
+      "name": "玉出店",
+      "facilities": []
+    },
+    {
+      "name": "MEGAドン．キホーテ市原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "阪神甲子園店",
+      "facilities": []
+    },
+    {
+      "name": "五反田店",
+      "facilities": []
+    },
+    {
+      "name": "藤沢南口店",
+      "facilities": []
+    },
+    {
+      "name": "港北ニュータウン北山田店",
+      "facilities": []
+    },
+    {
+      "name": "上本町店",
+      "facilities": []
+    },
+    {
+      "name": "鹿島田店",
+      "facilities": []
+    },
+    {
+      "name": "東川口店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "磯子店",
+      "facilities": []
+    },
+    {
+      "name": "ビーンズ赤羽店",
+      "facilities": []
+    },
+    {
+      "name": "吉祥寺南口店",
+      "facilities": []
+    },
+    {
+      "name": "恵比寿駅前店",
+      "facilities": []
+    },
+    {
+      "name": "イトーヨーカドー川崎店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福知山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "中央環状巨摩橋店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "MEGAドン．キホーテ蓮田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イトーヨーカドー木場店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ショップス市川鬼高店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン南砂店",
+      "facilities": []
+    },
+    {
+      "name": "西宮北口店",
+      "facilities": []
+    },
+    {
+      "name": "デイリーカナート天下茶屋店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "武蔵小金井店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール伊丹店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "愛川町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン天理店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "武蔵小山店",
+      "facilities": []
+    },
+    {
+      "name": "MEGAドン．キホーテ成東店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東浦和店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "つかしん店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "旗の台店",
+      "facilities": []
+    },
+    {
+      "name": "西大寺店(ならファミリー店)",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平塚店",
+      "facilities": []
+    },
+    {
+      "name": "ミスターマックスおゆみ野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン北千里店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三ノ輪店",
+      "facilities": []
+    },
+    {
+      "name": "イズミヤ八尾店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "蒲田東口店",
+      "facilities": []
+    },
+    {
+      "name": "LICOPA東大和店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "カインズホーム青梅店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ベイシア鴨川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "土気あすみが丘店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊中駅前店",
+      "facilities": []
+    },
+    {
+      "name": "都賀店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東船橋店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "市原国分寺台店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "戸塚店",
+      "facilities": []
+    },
+    {
+      "name": "東三国店",
+      "facilities": []
+    },
+    {
+      "name": "銀座INZ店",
+      "facilities": []
+    },
+    {
+      "name": "東陽町店",
+      "facilities": []
+    },
+    {
+      "name": "羽鳥店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鎌倉大船モール店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "くるる府中店",
+      "facilities": []
+    },
+    {
+      "name": "新橋店",
+      "facilities": []
+    },
+    {
+      "name": "アピタ長津田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "R－2芦屋店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "カインズホーム館山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三宮阪急駅前店",
+      "facilities": []
+    },
+    {
+      "name": "イオン新浦安店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ひばりが丘店",
+      "facilities": []
+    },
+    {
+      "name": "ミスターマックス湘南藤沢店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ウニクス伊奈店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "秋葉原店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール浦和美園店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "センター北駅店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール鶴見緑地店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモールむさし村山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール神戸北店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "緑一丁目店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "みなとみらい東急スクエア店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "目白店",
+      "facilities": []
+    },
+    {
+      "name": "イトーヨーカドーららぽーと横浜店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ミエル川口店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョイフル本田瑞穂店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール高の原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ココロット鶴ヶ峰店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "コーナン中百舌鳥店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西武拝島店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール川口前川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アリオ川口店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール橿原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "四谷駅前店",
+      "facilities": []
+    },
+    {
+      "name": "イオン葛西店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール与野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール奈良登美ヶ丘店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン東神奈川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アリオ北砂店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール大和店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン市川妙典店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "あべのキューズモール店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "浦和仲町店",
+      "facilities": []
+    },
+    {
+      "name": "イトーヨーカドー曳舟店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン茨木店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "姉ヶ崎店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "石神井公園店",
+      "facilities": []
+    },
+    {
+      "name": "トライアル西友二俣川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "茂原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "帝京大学板橋キャンパス店",
+      "facilities": []
+    },
+    {
+      "name": "ララガーデン川口店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "外環羽曳野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アーバンドックららぽーと豊洲店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "木更津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "関西学院大学店",
+      "facilities": []
+    },
+    {
+      "name": "稲毛マリンピア店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "川越マイン店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アリオ市原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ベルク入間野田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ららぽーと富士見店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール木更津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール多摩平の森店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "フォレスタ六甲店",
+      "facilities": []
+    },
+    {
+      "name": "ららぽーとEXPOCITY店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イトーヨーカドー大宮コクーン店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ららぽーと立川立飛店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール堺鉄砲町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日本橋人形町店",
+      "facilities": []
+    },
+    {
+      "name": "センター南駅サウスウッド店",
+      "facilities": []
+    },
+    {
+      "name": "西友行徳店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "永福町店",
+      "facilities": []
+    },
+    {
+      "name": "ダイエー藤沢店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ピーコックストア芝浦アイランド店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "相鉄ローゼン成瀬店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "青葉台店",
+      "facilities": []
+    },
+    {
+      "name": "ベスタ狭山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール北戸田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "御嶽山店",
+      "facilities": []
+    },
+    {
+      "name": "西友福生店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ベイシア日高モール店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鴨居店",
+      "facilities": []
+    },
+    {
+      "name": "ららぽーと名古屋みなとアクルス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール座間店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ペリエ千葉店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "御徒町南口店",
+      "facilities": []
+    },
+    {
+      "name": "斑鳩法隆寺店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン船堀店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アクロスプラザ八尾店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン入間店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南町田グランベリーパーク店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "所沢北中店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ヨークフーズ新宿富久店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ららぽーとTOKYO-BAY",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "第二阪和高石店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "江古田南口店",
+      "facilities": []
+    },
+    {
+      "name": "五日市街道北町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ビーンズ戸田公園店",
+      "facilities": []
+    },
+    {
+      "name": "ビバモール蕨錦町店",
+      "facilities": []
+    },
+    {
+      "name": "中野五差路店",
+      "facilities": []
+    },
+    {
+      "name": "新宿東宝ビル店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール川口店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京王笹塚店",
+      "facilities": []
+    },
+    {
+      "name": "千葉中央Mio店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "砧世田谷通り店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "武蔵浦和マーレ店",
+      "facilities": []
+    },
+    {
+      "name": "南大塚３丁目店",
+      "facilities": []
+    },
+    {
+      "name": "ホームズ新山下店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "初台店",
+      "facilities": []
+    },
+    {
+      "name": "サミット横浜岡野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ピーコックストア東小金井店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小岩店",
+      "facilities": []
+    },
+    {
+      "name": "八王子めじろ台店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "サミット戸塚踊場店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南海難波駅店",
+      "facilities": []
+    },
+    {
+      "name": "赤羽スズラン通り店",
+      "facilities": []
+    },
+    {
+      "name": "稲田堤店",
+      "facilities": []
+    },
+    {
+      "name": "サミット府中西原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アオキスーパー日進店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "町田街道森野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "要町店",
+      "facilities": []
+    },
+    {
+      "name": "ヨシヅヤ名古屋名西店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ソコラ所沢店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東十条店",
+      "facilities": []
+    },
+    {
+      "name": "アズパーク千音寺店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ポートウォークみなと店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "川越的場店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "阿佐ヶ谷店",
+      "facilities": []
+    },
+    {
+      "name": "都立家政店",
+      "facilities": []
+    },
+    {
+      "name": "ヨシヅヤ清洲店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "浜田山駅前店",
+      "facilities": []
+    },
+    {
+      "name": "雑色駅前店",
+      "facilities": []
+    },
+    {
+      "name": "N.KLASS三国ヶ丘店",
+      "facilities": []
+    },
+    {
+      "name": "R26岸和田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "エキア竹ノ塚店",
+      "facilities": []
+    },
+    {
+      "name": "大須観音駅前店",
+      "facilities": []
+    },
+    {
+      "name": "春日白山通り店",
+      "facilities": []
+    },
+    {
+      "name": "西船橋駅北口店",
+      "facilities": []
+    },
+    {
+      "name": "蒲生四丁目店",
+      "facilities": []
+    },
+    {
+      "name": "遊座大山店",
+      "facilities": []
+    },
+    {
+      "name": "西荻窪駅前店",
+      "facilities": []
+    },
+    {
+      "name": "中野新橋店",
+      "facilities": []
+    },
+    {
+      "name": "東天満店",
+      "facilities": []
+    },
+    {
+      "name": "Ｒ２４６三軒茶屋店",
+      "facilities": []
+    },
+    {
+      "name": "町田駅前通り店",
+      "facilities": []
+    },
+    {
+      "name": "津田沼駅南口店",
+      "facilities": []
+    },
+    {
+      "name": "京成大久保駅前店",
+      "facilities": []
+    },
+    {
+      "name": "放出店",
+      "facilities": []
+    },
+    {
+      "name": "ホームズ川崎大師店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "早稲田駅前店",
+      "facilities": []
+    },
+    {
+      "name": "イオン相模原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京王リトナード北野店",
+      "facilities": []
+    },
+    {
+      "name": "幡ヶ谷南口店",
+      "facilities": []
+    },
+    {
+      "name": "豪徳寺店",
+      "facilities": []
+    },
+    {
+      "name": "マーケットスクエア川崎イースト店",
+      "facilities": []
+    },
+    {
+      "name": "水天宮前店",
+      "facilities": []
+    },
+    {
+      "name": "さいたま町谷店",
+      "facilities": []
+    },
+    {
+      "name": "御茶ノ水ワテラス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "杉戸店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "川越氷川町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鶴瀬東口店",
+      "facilities": []
+    },
+    {
+      "name": "東住吉湯里店",
+      "facilities": []
+    },
+    {
+      "name": "東大阪衣摺店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "四谷４丁目店",
+      "facilities": []
+    },
+    {
+      "name": "中村橋駅前店",
+      "facilities": []
+    },
+    {
+      "name": "三和麻溝店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南海春木駅店",
+      "facilities": []
+    },
+    {
+      "name": "新井薬師前店",
+      "facilities": []
+    },
+    {
+      "name": "川崎水沢店",
+      "facilities": []
+    },
+    {
+      "name": "鷺沼店",
+      "facilities": []
+    },
+    {
+      "name": "保谷駅南口店",
+      "facilities": []
+    },
+    {
+      "name": "倉賀野バイパス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "広尾店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "静岡店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール白山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "マチノマ大森店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "羽島竹鼻店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "フードスタイル庄内店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール猪名川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "うめきたグリーンプレイス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "錦ケ丘店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "中村公園店",
+      "facilities": []
+    },
+    {
+      "name": "都立大学店",
+      "facilities": []
+    },
+    {
+      "name": "ららぽーと安城店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン松阪船江店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "名谷店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモールつくば店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "調布南口店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール神戸南店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "コープかすかべテラス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ＢｉＶｉ二条店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "久喜店",
+      "facilities": []
+    },
+    {
+      "name": "足立鹿浜店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "摂津東別府店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール須坂店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール仙台上杉",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "金沢久安店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール上尾店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "仲町台店",
+      "facilities": []
+    },
+    {
+      "name": "万代シテイ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン春日井店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "貝塚清児店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン千種店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊田浄水店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "徳重店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "フォレオ大津一里山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "不動前店",
+      "facilities": []
+    },
+    {
+      "name": "ピアシティみらい平店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "守山大森店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北越谷店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "関マーゴ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岸和田田治米店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "上野毛店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新長田店",
+      "facilities": []
+    },
+    {
+      "name": "イズミヤ多田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イトーヨーカドー津久野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ニトリモール枚方店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高浜店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウンあびこ駅前店",
+      "facilities": []
+    },
+    {
+      "name": "エキア谷塚店",
+      "facilities": []
+    },
+    {
+      "name": "長吉店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "学園前店",
+      "facilities": []
+    },
+    {
+      "name": "北花田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "生駒駅前店",
+      "facilities": []
+    },
+    {
+      "name": "イオンタウン大安寺店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アピタ大和郡山店",
+      "facilities": []
+    },
+    {
+      "name": "イオン喜連瓜破店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール大和郡山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西春店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "近鉄布施駅前店",
+      "facilities": []
+    },
+    {
+      "name": "藤沢街道長後店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アイシティ２１店",
+      "facilities": []
+    },
+    {
+      "name": "イオンタウン東習志野店",
+      "facilities": []
+    },
+    {
+      "name": "高槻高槻町店",
+      "facilities": []
+    },
+    {
+      "name": "尼崎西店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンセントラルスクエア静岡店",
+      "facilities": []
+    },
+    {
+      "name": "名古屋星ヶ丘店",
+      "facilities": []
+    },
+    {
+      "name": "向ヶ丘遊園店",
+      "facilities": []
+    },
+    {
+      "name": "春日井店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール新瑞橋店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンスタイル豊田店",
+      "facilities": []
+    },
+    {
+      "name": "カインズ名古屋みなと店",
+      "facilities": []
+    },
+    {
+      "name": "ららぽーと湘南平塚店",
+      "facilities": []
+    },
+    {
+      "name": "富山インター店",
+      "facilities": []
+    },
+    {
+      "name": "武生楽市店",
+      "facilities": []
+    },
+    {
+      "name": "野並店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "刈谷店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岐阜店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "多治見店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東海店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松戸店",
+      "facilities": []
+    },
+    {
+      "name": "一宮店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大垣店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "河芸店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊川インター店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "嵯峨野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "半田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高前バイパス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "安城店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岐南店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "尾西店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "竹越店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "伊丹店",
+      "facilities": []
+    },
+    {
+      "name": "檀溪通り店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "太平通り店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "竜美ケ丘店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "相武台店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "蒲郡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "甚目寺店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長野川中島店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イトーヨーカドー幕張店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン大井店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アリオ葛西店",
+      "facilities": []
+    },
+    {
+      "name": "桐生店",
+      "facilities": []
+    },
+    {
+      "name": "リコー通り店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "藤井寺店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "生鮮市場TOP稲毛長沼店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン稲毛店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "富士店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "浜松幸町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐鳴台店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "津南郊店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "蒲田店",
+      "facilities": []
+    },
+    {
+      "name": "大和店",
+      "facilities": []
+    },
+    {
+      "name": "東寺店",
+      "facilities": []
+    },
+    {
+      "name": "草薙店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高崎小鳥店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "伊勢上地店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "焼津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大倉山店",
+      "facilities": []
+    },
+    {
+      "name": "伊勢崎店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西尾店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "金沢八景店",
+      "facilities": []
+    },
+    {
+      "name": "御殿場店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "江南店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊橋東店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大阪ドーム店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "金城店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンスーパーセンター横手南店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン東根店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "OSC湘南店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "土浦ピアタウン店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール佐久平店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン東海店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン栃木店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン山形北店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン白河店",
+      "facilities": []
+    },
+    {
+      "name": "イトーヨーカドー甲府昭和店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン成田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ダイナシティ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アピタ大仁店",
+      "facilities": []
+    },
+    {
+      "name": "カラフルタウン岐阜店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール四日市北店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アル・プラザ草津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "各務原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "MEGAドン．キホーテ柏崎店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東舞鶴店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール三川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンジェームス山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "中央林間店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール富士宮店",
+      "facilities": []
+    },
+    {
+      "name": "イオン中野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ビナウォーク店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アル･プラザ津幡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アピタ岡崎北店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "石橋ヨークタウン店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アピタ東海荒尾店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョイフル本田千葉ニュータウン店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小田原店",
+      "facilities": []
+    },
+    {
+      "name": "足利コムファースト店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アドバンスモール松阪店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール佐野新都市店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イトーヨーカドー流山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "マーサ21店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "FKDインターパーク店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン古河店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン熊谷店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "結城店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東寝屋川店",
+      "facilities": []
+    },
+    {
+      "name": "北千住ﾐﾙﾃﾞｨｽ店",
+      "facilities": []
+    },
+    {
+      "name": "イトーヨーカドー大宮宮原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アル・プラザ茨木店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "垂水店",
+      "facilities": []
+    },
+    {
+      "name": "アピタ四日市店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イトーヨーカドー四街道店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イトーヨーカドー三郷店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鎌田リオンドール店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "カインズホーム嵐山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール大日店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール高崎店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ヨークベニマル石岡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン大宮店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "筑波学園店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ギャラリエアピタ知立店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール羽生店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "会津アピオ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リオンドール船引店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "清水インター店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ベイシア安中店",
+      "facilities": []
+    },
+    {
+      "name": "イオンレイクタウン店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール小山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール下妻店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "フォーリス府中店",
+      "facilities": []
+    },
+    {
+      "name": "オリンピック新座店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール土浦店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "あびこショッピングプラザ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン三田ウッディタウン店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "神戸ハーバーランド店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール新利府北館店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール富谷店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール名取店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール石巻店",
+      "facilities": []
+    },
+    {
+      "name": "笠間ポレポレシティー店",
+      "facilities": []
+    },
+    {
+      "name": "アリオ西新井店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "港南台店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "たまプラーザテラス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ベイシア前橋みなみモール店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "フレッシュモールあらまき店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール伊丹昆陽店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊田元町店",
+      "facilities": []
+    },
+    {
+      "name": "市川駅北口店",
+      "facilities": []
+    },
+    {
+      "name": "瀬戸店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "静岡SBS通り店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "富士吉田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "スカイプラザ柏店",
+      "facilities": []
+    },
+    {
+      "name": "東刈谷店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "久米川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "堅田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "富士宮バイパス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿島街道いわき店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "土岐店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "湯の山街道店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大垣北店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "橿原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岡崎北店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "せんげん台店",
+      "facilities": []
+    },
+    {
+      "name": "美濃加茂店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牡丹山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "洛北店",
+      "facilities": []
+    },
+    {
+      "name": "宇都宮西川田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "会津若松店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新潟三条店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "中津川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福島西インター店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "川崎銀柳街店",
+      "facilities": []
+    },
+    {
+      "name": "和合店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "志木南口駅前店",
+      "facilities": []
+    },
+    {
+      "name": "川崎アゼリア店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "磐田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "蟹江店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高岡西町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "甲府東店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長居店",
+      "facilities": []
+    },
+    {
+      "name": "伊勢崎三郷店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "芥見店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "郡山荒井店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "藤枝店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "諏訪インター店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小松店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長田中央大通店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大河原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "荒川沖店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "金沢文庫店",
+      "facilities": []
+    },
+    {
+      "name": "南松本店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "足利南店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宇都宮御幸町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宇都宮宝木店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新発田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "藤岡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西京極店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "富岡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "多摩センター店",
+      "facilities": []
+    },
+    {
+      "name": "牛久店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大田原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "近江八幡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "敦賀店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南陽通り店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "真岡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "横浜今宿店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "沼田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "五香駅前店",
+      "facilities": []
+    },
+    {
+      "name": "宇治大久保店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南守谷店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊川八幡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンスタイル秋田山王店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール秋田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール大曲店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "秋田新国道店",
+      "facilities": []
+    },
+    {
+      "name": "大館店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン弘前樋の口店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "弘前城東店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモールつがる柏店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "五所川原エルム店",
+      "facilities": []
+    },
+    {
+      "name": "盛岡永井店",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール盛岡インター店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール盛岡南店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "盛岡ｍｏｎａｋａ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "八戸田面木店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "石堂店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール下田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン八戸田向店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "湊高台店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "サンロード青森店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "シーナシーナ青森店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ラ・セラ青森東バイパス店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン上磯店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "函館美原店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "函館本通店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン伊達店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "室蘭店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "苫小牧桜木店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール苫小牧店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "千歳店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "円山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮の森店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン小樽店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小樽稲穂店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール発寒店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "琴似店",
+      "facilities": []
+    },
+    {
+      "name": "八軒店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン札幌手稲駅前店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "札幌前田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北広島大曲店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "真駒内店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン札幌藻岩店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン札幌西岡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すすきのノルベサ店",
+      "facilities": []
+    },
+    {
+      "name": "平岸店",
+      "facilities": []
+    },
+    {
+      "name": "ラソラ札幌店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "白石店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "月寒店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール札幌平岡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南郷18丁目店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "サンピアザ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン札幌厚別店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "恵み野店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン札幌元町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アピアさっぽろ店",
+      "facilities": []
+    },
+    {
+      "name": "北二十四条店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン札幌桑園店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "札幌麻生店",
+      "facilities": []
+    },
+    {
+      "name": "アリオ札幌店",
+      "facilities": []
+    },
+    {
+      "name": "札幌環状通東店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "札幌元町店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール札幌苗穂店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "札幌篠路店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "シーナシーナ屯田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "江別店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン岩見沢店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン滝川店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン静内店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "帯広南の森東店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "帯広白樺店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール旭川西店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "アルティモール東神楽店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "旭川豊岡店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "旭川永山店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "名寄店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "シティもんべつ店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ザ・ビッグ春採店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "釧路十条店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "釧路愛国店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン釧路店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "中標津店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン北見店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北見とん田店",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "網走駒場店",
+      "facilities": [
+        "parking"
+      ]
+    }
+  ]
+}

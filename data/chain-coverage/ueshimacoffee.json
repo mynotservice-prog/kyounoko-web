@@ -1,0 +1,536 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "ueshimacoffee",
+  "name": "上島珈琲店",
+  "sourceUrl": "https://shop.ufs.co.jp/ufs/spot/list?category=01",
+  "method": "公式店舗検索（NAVITIME製）の一覧APIでカテゴリ「上島珈琲店」の店舗を列挙し、各店舗詳細ページ埋め込みの spotDetail.flags（アイコン項目の true/false）を集計",
+  "total": 97,
+  "note": "UCCフードサービスの他業態（カテゴリ01以外）は対象外。アイコン項目に子ども向けはキッズメニューのみで、座席・トイレ系の属性は無い",
+  "facilities": {
+    "parking": {
+      "count": 1,
+      "label": "専用駐車場有"
+    },
+    "kidsMenu": {
+      "count": 14,
+      "label": "キッズメニュー"
+    }
+  },
+  "stores": [
+    {
+      "name": "上島珈琲店 黒門市場前店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=1101",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 さんちか店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=1201",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "上島珈琲店 COREDO日本橋店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3613",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 苦楽園本店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3614",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 大阪証券取引所店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3615",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 四ツ橋店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3616",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 奥沢店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=362",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 神戸空港店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3620",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 心斎橋店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3621",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 大門店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3623",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 高円寺北口店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3625",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 京都四条烏丸店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3627",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 河原町店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3629",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 武蔵小山店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3630",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 中目黒店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3631",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 東中野店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3633",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 南大沢店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3634",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 浦和パルコ店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3635",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 霞が関コモンゲート店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3636",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 大船店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3637",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 京都寺町店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3638",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 大森店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3639",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 横浜北幸店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3646",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 東上野店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3649",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 三軒茶屋店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3650",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 元住吉店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3651",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 麻布十番店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3653",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 あざみ野店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3656",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 成城店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3658",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 OAPタワー店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3659",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 武蔵小金井店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3661",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 広尾店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3662",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 ＯＢＰ店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3663",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 阿佐ヶ谷店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3664",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 神楽坂店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3673",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 NEOPASA駿河湾沼津下り店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3678",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 NEOPASA浜松上り店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3679",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 あみプレミアム・アウトレット店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3681",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 アリオ北砂店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3683",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 狭山店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3690",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "上島珈琲店 大手町フィナンシャルシティ店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3691",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 相鉄フレッサイン東京赤坂店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3692",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 アリオ鷲宮店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3693",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 御茶ノ水ワテラス店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3694",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 阪急三番街店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3697",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 イオンモール春日部店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3700",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 エミオ石神井公園店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3702",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 札幌アピア店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3705",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 黒田記念館店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3707",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 新潟ラブラ２店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3708",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 トレッサ横浜店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3716",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "上島珈琲店 青山店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3717",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 イオンモール名取店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3719",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 日光東照宮店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3720",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 赤坂一ツ木通り店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3721",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 NEOPASA浜松下り店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3722",
+      "facilities": []
+    },
+    {
+      "name": "REAL DRIP COFFEE No.12 by上島珈琲店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3725",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 大阪国際空港店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3728",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 京都嵯峨嵐山店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3729",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 虎ノ門店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3730",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 千代田区二番町店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3731",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "上島珈琲店 SOCOLA塚口店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3732",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "上島珈琲店 ららぽーと堺店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3733",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "上島珈琲店 ふかや花園プレミアム・アウトレット店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3734",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "上島珈琲店 神谷町駅前店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3735",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 福岡新天町店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3736",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 太宰府店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3737",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "上島珈琲店 松坂屋高槻店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3738",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "上島珈琲店 CUBIC PLAZA 新横浜店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3739",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 ららぽーと新三郷店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3740",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "上島珈琲店 ららぽーとTOKYO-BAY店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3741",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 Woven City店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3742",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 神保町店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3743",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "上島珈琲店 ペアナードオダサガ店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=3745",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 アミュエスト店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=4009",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "上島珈琲店 京橋２丁目店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=4012",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 綱島店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=4013",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 港南台バーズ店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=4014",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 イオンモール浦和美園店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=4017",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 飯塚病院店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=4019",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 那須赤十字病院店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=4021",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "上島珈琲店 MARK IS みなとみらい店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=4025",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 ピオニウォーク東松山店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=4028",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 釧路赤十字病院店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=4031",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "上島珈琲店 岡山大学病院店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=4032",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 新大阪店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=4033",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 諏訪湖SA下り店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=4037",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "上島珈琲店 仙台医療センター店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=4038",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 護国寺店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=4043",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 溜池山王駅前店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=4044",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 広川SA上り店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=4045",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 明曜百貨店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=kaigai018",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 忠孝敦化店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=kaigai019",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 八徳店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=kaigai020",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 誠品站前店 4号店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=kaigai026",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 誠品板橋店 6号店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=kaigai036",
+      "facilities": []
+    },
+    {
+      "name": "上島珈琲店 誠品新板店 5号店",
+      "url": "https://shop.ufs.co.jp/ufs/spot/detail?code=kaigai030",
+      "facilities": []
+    }
+  ]
+}

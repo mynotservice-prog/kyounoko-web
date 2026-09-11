@@ -23,6 +23,7 @@ import { KANAGAWA_STATIONS } from '@/lib/kanagawa-stations';
 import { SAICHI_STATIONS } from '@/lib/saitama-chiba-stations';
 import { TOKYO_LINES } from '@/lib/tokyo-lines';
 import { getStationWithChains, STATION_CHAIN_DATA_UPDATED } from '@/lib/station-restaurants';
+import { getCoverageGeneratedAt } from '@/lib/chain-coverage';
 import { getIndieRestaurantsByStation } from '@/lib/indie-restaurants';
 import { STATION_CONDITIONS, hasMatchingItems, getConditionKind, filterChainsByCondition, filterIndiesByCondition } from '@/lib/station-conditions';
 import { getSpotsForStation, hasMatchingSpots, filterSpotsByCondition, getSpotConditionCanonicalSlug } from '@/lib/station-spots';
@@ -359,6 +360,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/data`, lastModified: CURATION_LASTMOD, changeFrequency: 'weekly' as const, priority: 0.7 },
     { url: `${BASE}/data/restaurants`, lastModified: CURATION_LASTMOD, changeFrequency: 'weekly' as const, priority: 0.8 },
     { url: `${BASE}/data/wards`, lastModified: CURATION_LASTMOD, changeFrequency: 'weekly' as const, priority: 0.75 },
+    // 調査①: 設備カバー率センサス。lastmod は集計日（data/chain-coverage.json の generatedAt）
+    { url: `${BASE}/data/chain-facility-coverage`, lastModified: new Date(getCoverageGeneratedAt()), changeFrequency: 'yearly' as const, priority: 0.8 },
   ];
 
   // 2026-05 再開: AdSense承認済み + matchedCount >= 3 フィルタ済みのため、

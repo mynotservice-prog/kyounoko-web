@@ -1,0 +1,883 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "tenya",
+  "name": "天丼てんや",
+  "sourceUrl": "https://www.tenya.co.jp/shop/",
+  "method": "公式店舗案内を都道府県→市区町村→店舗ページと辿り、各店舗ページの「店舗施設情報」アイコンを集計",
+  "total": 146,
+  "note": "国内店舗のみ（海外店舗は除外）。店舗施設情報のアイコンは 終日禁煙／駐車場あり／お子様メニューあり／朝食メニューあり／おつまみメニューあり／店舗限定メニューあり の6種",
+  "facilities": {
+    "kidsMenu": {
+      "count": 39,
+      "label": "お子様メニューあり"
+    },
+    "parking": {
+      "count": 44,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "新千歳空港店",
+      "url": "https://www.tenya.co.jp/shop/hokkaido/shinchitose.html",
+      "facilities": []
+    },
+    {
+      "name": "弘前店",
+      "url": "https://www.tenya.co.jp/shop/aomori/hirosaki.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "仙台六丁の目店",
+      "url": "https://www.tenya.co.jp/shop/miyagi/sendai-rokuchounome.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "けやきウォーク前橋店",
+      "url": "https://www.tenya.co.jp/shop/gunma/keyaki_walk_maebashi.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "前橋元総社店",
+      "url": "https://www.tenya.co.jp/shop/gunma/motosouja.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "群馬館林店",
+      "url": "https://www.tenya.co.jp/shop/gunma/tatebayashi.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール川口前川店",
+      "url": "https://www.tenya.co.jp/shop/saitama/aeonmall-kawaguchimaekawa.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "志木東口店",
+      "url": "https://www.tenya.co.jp/shop/saitama/shiki_east.html",
+      "facilities": []
+    },
+    {
+      "name": "東松山店",
+      "url": "https://www.tenya.co.jp/shop/saitama/higashimatsuyama.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "越谷レイクタウン店",
+      "url": "https://www.tenya.co.jp/shop/saitama/koshigaya_laketown.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "コクーンシティさいたま新都心店",
+      "url": "https://www.tenya.co.jp/shop/saitama/cocoon_shintoshin.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "新所沢店",
+      "url": "https://www.tenya.co.jp/shop/saitama/shintokorozawa.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "川口店",
+      "url": "https://www.tenya.co.jp/shop/saitama/kawagichi.html",
+      "facilities": []
+    },
+    {
+      "name": "浦和店",
+      "url": "https://www.tenya.co.jp/shop/saitama/urawa.html",
+      "facilities": []
+    },
+    {
+      "name": "大宮西店",
+      "url": "https://www.tenya.co.jp/shop/saitama/oomiyanishi.html",
+      "facilities": []
+    },
+    {
+      "name": "大宮東店",
+      "url": "https://www.tenya.co.jp/shop/saitama/oomiyahigashi.html",
+      "facilities": []
+    },
+    {
+      "name": "川越店（クレアモール）",
+      "url": "https://www.tenya.co.jp/shop/saitama/kawagoe.html",
+      "facilities": []
+    },
+    {
+      "name": "上里サービスエリア店",
+      "url": "https://www.tenya.co.jp/shop/saitama/kamisato.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "志津店",
+      "url": "https://www.tenya.co.jp/shop/chiba/shizu.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョイフル本田富里店",
+      "url": "https://www.tenya.co.jp/shop/chiba/tomisato.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ハーバーシティ蘇我店",
+      "url": "https://www.tenya.co.jp/shop/chiba/harborcitysoga.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "市川店",
+      "url": "https://www.tenya.co.jp/shop/chiba/ichikawa.html",
+      "facilities": []
+    },
+    {
+      "name": "下総中山店",
+      "url": "https://www.tenya.co.jp/shop/chiba/shimousanakayama.html",
+      "facilities": []
+    },
+    {
+      "name": "ペリエ西船橋店",
+      "url": "https://www.tenya.co.jp/shop/chiba/dila.html",
+      "facilities": []
+    },
+    {
+      "name": "新津田沼店",
+      "url": "https://www.tenya.co.jp/shop/chiba/shintsudanuma.html",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール八千代緑が丘店",
+      "url": "https://www.tenya.co.jp/shop/chiba/midorigaoka.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "海浜幕張店",
+      "url": "https://www.tenya.co.jp/shop/chiba/kaihinmakuhari.html",
+      "facilities": []
+    },
+    {
+      "name": "千葉シーワン店",
+      "url": "https://www.tenya.co.jp/shop/chiba/seaone.html",
+      "facilities": []
+    },
+    {
+      "name": "秋葉原店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/chiyoda/akihabara.html",
+      "facilities": []
+    },
+    {
+      "name": "八重洲店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/chuo/yaesu.html",
+      "facilities": []
+    },
+    {
+      "name": "人形町店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/chuo/ningyo.html",
+      "facilities": []
+    },
+    {
+      "name": "築地店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/chuo/tsukiji.html",
+      "facilities": []
+    },
+    {
+      "name": "銀座店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/chuo/ginza.html",
+      "facilities": []
+    },
+    {
+      "name": "赤坂見附店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/minato/akasakamitsuke.html",
+      "facilities": []
+    },
+    {
+      "name": "曙橋店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/shinjuku/akebonobashi.html",
+      "facilities": []
+    },
+    {
+      "name": "新宿イーストサイドスクエア店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/shinjuku/shinjyukueast.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "未来ダイニング 天丼てんや文京グリーンコート店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/bunkyo/bunkyogreencourt.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "白山店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/bunkyo/hakusan.html",
+      "facilities": []
+    },
+    {
+      "name": "御徒町店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/taitou/okachimachi.html",
+      "facilities": []
+    },
+    {
+      "name": "浅草店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/taitou/asakusa.html",
+      "facilities": []
+    },
+    {
+      "name": "東武曳舟駅店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/sumida/tobuhifune.html",
+      "facilities": []
+    },
+    {
+      "name": "錦糸町南店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/sumida/kinsichominami.html",
+      "facilities": []
+    },
+    {
+      "name": "錦糸町テルミナ2店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/sumida/termina2.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "カメイドクロック店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/koutou/kameidoclock.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "門前仲町店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/koutou/monzennakacho.html",
+      "facilities": []
+    },
+    {
+      "name": "亀戸店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/koutou/toyo.html",
+      "facilities": []
+    },
+    {
+      "name": "南砂町ショッピングセンターSUNAMO店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/koutou/kameidohigashi.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大崎ニューシティ店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/shinagawa/osakinew.html",
+      "facilities": []
+    },
+    {
+      "name": "目黒店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/shinagawa/meguro.html",
+      "facilities": []
+    },
+    {
+      "name": "武蔵小山店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/shinagawa/musashikoyama.html",
+      "facilities": []
+    },
+    {
+      "name": "京急大森海岸店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/shinagawa/keikyuomori.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "学芸大学店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/meguro/gakugei.html",
+      "facilities": []
+    },
+    {
+      "name": "京急蒲田駅店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/oota/keikyu_kamata.html",
+      "facilities": []
+    },
+    {
+      "name": "羽田空港第２ターミナル店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/oota/hanedaair2.html",
+      "facilities": []
+    },
+    {
+      "name": "蒲田店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/oota/kamata.html",
+      "facilities": []
+    },
+    {
+      "name": "大森店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/oota/omori.html",
+      "facilities": []
+    },
+    {
+      "name": "羽田空港第１ターミナル店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/oota/hanedaair.html",
+      "facilities": []
+    },
+    {
+      "name": "桜新町店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/setagaya/sakurashinmachi.html",
+      "facilities": []
+    },
+    {
+      "name": "千歳船橋店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/setagaya/chitose_funabashi.html",
+      "facilities": []
+    },
+    {
+      "name": "三軒茶屋店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/setagaya/sanngen.html",
+      "facilities": []
+    },
+    {
+      "name": "千歳烏山店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/setagaya/chitosekarasuyama.html",
+      "facilities": []
+    },
+    {
+      "name": "渋谷地下鉄ビル店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/shibuya/shibuyachika.html",
+      "facilities": []
+    },
+    {
+      "name": "京王クラウン街笹塚店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/shibuya/keiosasazuka.html",
+      "facilities": []
+    },
+    {
+      "name": "恵比寿店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/shibuya/ebisu.html",
+      "facilities": []
+    },
+    {
+      "name": "荻窪店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/suginami/ogikubo.html",
+      "facilities": []
+    },
+    {
+      "name": "阿佐ヶ谷店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/suginami/asagaya.html",
+      "facilities": []
+    },
+    {
+      "name": "南池袋店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/toshima/minamiikebukuro.html",
+      "facilities": []
+    },
+    {
+      "name": "サンシャイン店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/toshima/sunshine.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビーンズ赤羽店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/kita/alucard.html",
+      "facilities": []
+    },
+    {
+      "name": "十条店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/kita/jyujyo.html",
+      "facilities": []
+    },
+    {
+      "name": "町屋店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/arakawa/machiya.html",
+      "facilities": []
+    },
+    {
+      "name": "日暮里店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/arakawa/nippori.html",
+      "facilities": []
+    },
+    {
+      "name": "大山店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/itabashi/oyama.html",
+      "facilities": []
+    },
+    {
+      "name": "成増店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/itabashi/narimasu.html",
+      "facilities": []
+    },
+    {
+      "name": "東武練馬店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/itabashi/tobunerima.html",
+      "facilities": []
+    },
+    {
+      "name": "大泉学園駅店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/nerima/ooizumigakuen_eki.html",
+      "facilities": []
+    },
+    {
+      "name": "ポンテポルタ千住店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/adachi/ponteporta_senju.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "エキア北千住店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/adachi/tobukitasenjyu.html",
+      "facilities": []
+    },
+    {
+      "name": "竹ノ塚店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/adachi/takenoduka.html",
+      "facilities": []
+    },
+    {
+      "name": "北千住西口店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/adachi/kitasenjyunishi.html",
+      "facilities": []
+    },
+    {
+      "name": "綾瀬店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/adachi/ayase.html",
+      "facilities": []
+    },
+    {
+      "name": "立石店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/katsushika/tateishi.html",
+      "facilities": []
+    },
+    {
+      "name": "新小岩店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/katsushika/shinkoiwa.html",
+      "facilities": []
+    },
+    {
+      "name": "ビーンズ亀有店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/katsushika/kameari.html",
+      "facilities": []
+    },
+    {
+      "name": "葛西駅前店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/edogawa/kasaiekimae.html",
+      "facilities": []
+    },
+    {
+      "name": "西葛西店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/edogawa/nishikasai.html",
+      "facilities": []
+    },
+    {
+      "name": "調布とうきゅう店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/chofu/chofutokyu.html",
+      "facilities": []
+    },
+    {
+      "name": "八王子北口店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/hachiouji/hachioujikita.html",
+      "facilities": []
+    },
+    {
+      "name": "西八王子店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/hachiouji/nishihachiouji.html",
+      "facilities": []
+    },
+    {
+      "name": "立川南店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/tachikawa/tachikawaminami.html",
+      "facilities": []
+    },
+    {
+      "name": "立川店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/tachikawa/tachikawa.html",
+      "facilities": []
+    },
+    {
+      "name": "吉祥寺店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/musashino/kichijyouji.html",
+      "facilities": []
+    },
+    {
+      "name": "武蔵境店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/musashino/musashisakai.html",
+      "facilities": []
+    },
+    {
+      "name": "府中店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/fuchu/fuchu.html",
+      "facilities": []
+    },
+    {
+      "name": "昭島モリタウン店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/akishima/moritown.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "町田東店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/machida/machidahigashi.html",
+      "facilities": []
+    },
+    {
+      "name": "小田急マルシェ町田店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/machida/marchemachidas.html",
+      "facilities": []
+    },
+    {
+      "name": "国分寺店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/kokubunji/kokubunji.html",
+      "facilities": []
+    },
+    {
+      "name": "聖蹟桜ヶ丘店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/tama/seisekisakuragaoka.html",
+      "facilities": []
+    },
+    {
+      "name": "多摩センター店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/tama/tamacenter.html",
+      "facilities": []
+    },
+    {
+      "name": "小平大沼店",
+      "url": "https://www.tenya.co.jp/shop/tokyo/codaira/kodaira_onuma.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ヨドバシ横浜店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/yodobashi-yokohama.html",
+      "facilities": []
+    },
+    {
+      "name": "平塚田村店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/hiratukatamura.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "横須賀中央店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/yokosukachyuou.html",
+      "facilities": []
+    },
+    {
+      "name": "茅ヶ崎店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/laska_chigasaki.html",
+      "facilities": []
+    },
+    {
+      "name": "横浜瀬谷店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/kanagawa_seya.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ビーンズ新杉田店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/beans.html",
+      "facilities": []
+    },
+    {
+      "name": "溝の口店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/mizonokuchi.html",
+      "facilities": []
+    },
+    {
+      "name": "ボーノ相模大野店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/buonosagamiono.html",
+      "facilities": []
+    },
+    {
+      "name": "相模原星が丘店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/sagamiharahoshigaoka.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン秦野SC店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/aeonhadanosc.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "川崎アゼリア店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/azelia.html",
+      "facilities": []
+    },
+    {
+      "name": "シァルプラット東神奈川店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/cialplat.html",
+      "facilities": []
+    },
+    {
+      "name": "大船店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/ofuna.html",
+      "facilities": []
+    },
+    {
+      "name": "橋本店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/hashimoto.html",
+      "facilities": []
+    },
+    {
+      "name": "小田急相模原店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/odakyusagamihara.html",
+      "facilities": []
+    },
+    {
+      "name": "本厚木店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/honatsugi.html",
+      "facilities": []
+    },
+    {
+      "name": "トレッサ横浜店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/toressa.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "新横浜店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/shinyokohama.html",
+      "facilities": []
+    },
+    {
+      "name": "日吉店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/hiyoshi.html",
+      "facilities": []
+    },
+    {
+      "name": "鶴見東口店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/tsurumihigashi.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "小田原店",
+      "url": "https://www.tenya.co.jp/shop/kanagawa/odawara.html",
+      "facilities": []
+    },
+    {
+      "name": "高岡宮田町店",
+      "url": "https://www.tenya.co.jp/shop/toyama/takaoka-miyata.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "富山本郷新店",
+      "url": "https://www.tenya.co.jp/shop/toyama/toyama_hongou.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "川中島店",
+      "url": "https://www.tenya.co.jp/shop/nagano/kawanakajima.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "長野徳間店",
+      "url": "https://www.tenya.co.jp/shop/nagano/tokuma.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "佐久平店",
+      "url": "https://www.tenya.co.jp/shop/nagano/sakudaira.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "松本双葉店",
+      "url": "https://www.tenya.co.jp/shop/nagano/matsumoto_futaba.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "諏訪店",
+      "url": "https://www.tenya.co.jp/shop/nagano/suwa.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "てんや イオンタウン富士南店",
+      "url": "https://www.tenya.co.jp/shop/shizuoka/aeontown-fujiminami.html",
+      "facilities": []
+    },
+    {
+      "name": "沼津原店",
+      "url": "https://www.tenya.co.jp/shop/shizuoka/numazuhara.html",
+      "facilities": []
+    },
+    {
+      "name": "唐瀬店",
+      "url": "https://www.tenya.co.jp/shop/shizuoka/karase.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "東静岡店",
+      "url": "https://www.tenya.co.jp/shop/shizuoka/higashishizuoka.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "大垣寺内町店",
+      "url": "https://www.tenya.co.jp/shop/gifu/oogakijinaichou.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "名鉄イン名古屋金山アネックス店",
+      "url": "https://www.tenya.co.jp/shop/aichi/nagoya_kanayamaannex.html",
+      "facilities": []
+    },
+    {
+      "name": "刈谷ハイウェイオアシス近鉄パークハウス店",
+      "url": "https://www.tenya.co.jp/shop/aichi/kariyaoasis.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊田浄水店",
+      "url": "https://www.tenya.co.jp/shop/aichi/toyotajousui.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "植田焼山店",
+      "url": "https://www.tenya.co.jp/shop/aichi/uedayakiyama.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "あべのキューズモール店",
+      "url": "https://www.tenya.co.jp/shop/osaka/qs-mall.html",
+      "facilities": []
+    },
+    {
+      "name": "天六店",
+      "url": "https://www.tenya.co.jp/shop/osaka/tenroku.html",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール大日店",
+      "url": "https://www.tenya.co.jp/shop/osaka/aeon-dainichi.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "難波千日前店",
+      "url": "https://www.tenya.co.jp/shop/osaka/nambasennichimae.html",
+      "facilities": []
+    },
+    {
+      "name": "フジグラン神辺店",
+      "url": "https://www.tenya.co.jp/shop/hiroshima/fujigran_kannabe.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "福山曙店",
+      "url": "https://www.tenya.co.jp/shop/hiroshima/fukuyamaakebono.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松江店",
+      "url": "https://www.tenya.co.jp/shop/ehime/matsue.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "高知インター店",
+      "url": "https://www.tenya.co.jp/shop/kochi/kochi_inter.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    }
+  ]
+}

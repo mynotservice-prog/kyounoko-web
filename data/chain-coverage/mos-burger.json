@@ -1,0 +1,8393 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "mos-burger",
+  "name": "モスバーガー",
+  "sourceUrl": "https://www.mos.jp/shop/",
+  "method": "公式店舗検索が読む全店舗 JSON（/data/shop/shop.json）で bus_cd が MOS_ で始まる店舗を列挙し、絞り込み条件 sv07（駐車場）の on/off を集計",
+  "note": "JSON 総数 1326。他業態（マザーリーフ3・マザーリーフティースタイル5・カフェ山と海と太陽2・AEN8・MOSDO!2）は除外。モスカフェ業態（bus_name「モスカフェ」）は含む。絞り込み条件 20 項目のうち家族向け属性は駐車場のみ",
+  "total": 1306,
+  "facilities": {
+    "parking": {
+      "count": 923,
+      "label": "駐車場"
+    }
+  },
+  "stores": [
+    {
+      "name": "モスバーガー札幌伏見店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05377",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー札幌四番街店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08063",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー札幌大通西14丁目店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05065",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー桑園駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08279",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー北大正門前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08062",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー新琴似四番通店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04146",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー札幌北24条店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08060",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーイオンモール札幌苗穂店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08249",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー北12条東15丁目店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05057",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー札幌北48条店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00624",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーラソラ札幌店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08181",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーゼビオ月寒店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05403",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー札幌豊平店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05156",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー川沿ソシア店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05302",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー札幌琴似店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05466",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー札幌西野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05284",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー厚別中央店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05301",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー手稲前田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05195",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー札幌北野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08090",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーフレスポ函館戸倉店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08127",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー函館本通一丁目店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08064",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーウイングベイ小樽店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04962",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー小樽静屋通店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00502",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー旭川東光店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05363",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー旭川永山環状通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05450",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー春光ロック店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05417",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーモルエ中島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04641",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー帯広大通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05250",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー帯広白樺通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00871",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー北見店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00166",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー岩見沢店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08176",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー網走店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04226",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー留萌店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01387",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー苫小牧バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00806",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー苫小牧店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00537",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー苫小牧柳町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04840",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー稚内店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04307",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー江別野幌店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08271",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーオホーツク紋別店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04780",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー名寄店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01817",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー根室店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00912",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー千歳サーモンパーク店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04124",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー新千歳空港店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08065",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー恵庭店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01729",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー伊達店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04287",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー北広島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04426",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー七重浜店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08056",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー釧路木場店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01412",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー青森佃店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05390",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー青森大野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04286",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー青森柳川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05463",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー青森浪館店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01520",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー弘前城東店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05316",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー弘前駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05391",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー八戸三日町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01766",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー八戸石堂店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05359",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー湊高台店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05362",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー五所川原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01815",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー十和田東一番町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08151",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーむつ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00487",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオンモール下田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01462",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー盛岡マッハランド店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05220",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー盛岡南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04984",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー盛岡青山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01324",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーマリンコープ宮古店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04905",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大船渡店(岩手県)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08093",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー花巻星が丘店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05486",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーアメリカンワールド北上店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01762",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー一関店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05300",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオンタウン釜石店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08037",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー水沢店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04454",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガールート46滝沢店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04295",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー矢巾店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04745",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー仙台中山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05106",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー仙台定禅寺通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05365",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー仙台愛子店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05190",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー仙台駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08113",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーフォレオせんだい宮の杜店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05369",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー仙台東口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04862",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーイオンスタイル仙台卸町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05223",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー仙台六丁の目店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04861",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー仙台西多賀店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04099",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー仙台長町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08225",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオン泉大沢店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04822",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー仙台泉中央店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05107",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー石巻あけぼの店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08275",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー石巻大街道店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05439",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー気仙沼店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05109",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオンモール名取店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05342",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー名取パーク店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04535",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオン多賀城店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04921",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー古川南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05183",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宮城利府店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04863",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオンモール秋田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08264",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー秋田広面店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04104",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー秋田新国道店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01243",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー能代店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04521",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー秋田大館中道店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01715",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー羽後本荘店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05186",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大曲店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05187",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー山形七日町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04288",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー山形北店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01635",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー山形桜田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00446",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー山形西バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00824",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー山形駅前大通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04181",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー米沢金池店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01127",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー鶴岡店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05310",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー酒田南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04975",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー新庄店(山形県)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04793",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー寒河江店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00978",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー天童店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00669",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーさくらんぼ東根駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04158",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福島信夫ヶ丘店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01285",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福島八木田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01469",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福島矢野目店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04982",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福島鎌田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05404",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー会津千石店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04278",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー郡山安積店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05088",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー郡山富久山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05059",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー郡山新さくら通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05012",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーいわき内郷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05333",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーいわき湯本店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05415",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー白河昭和町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05254",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー須賀川東店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04457",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー会津喜多方店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00540",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー南相馬店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05336",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー本宮インター店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04465",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーグランステージ水戸店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05188",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー水戸バイパス見川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05185",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー水戸平須店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04768",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー水戸駅南口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08262",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー日立多賀店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05357",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー日立田尻店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05397",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー土浦真鍋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05247",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー神立中央店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01546",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー古河旭町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01968",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー石岡店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04238",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー結城バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01838",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー竜ヶ崎店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01318",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー下妻店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01204",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーミスターマックス取手店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04907",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー牛久店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01317",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーつくば中央店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05151",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーつくば南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01455",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガートナリエキュートつくば店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04686",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーひたちなか笹野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05285",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー守谷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05226",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー下館店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04227",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーオークビレッジかみす店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05311",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーアクロス鉾田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05014",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー東海村店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05317",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宇都宮岩曽店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01899",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宇都宮東店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01803",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宇都宮細谷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01864",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宇都宮若松原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05261",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー足利南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00759",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー足利山川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00119",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー足利鹿島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05432",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー栃木店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05294",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーフォリオ佐野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01646",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー佐野東店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00015",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー鹿沼店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05034",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー今市店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01227",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー小山城北店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05173",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー小山城南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01802",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー真岡店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01077",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー矢板店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05157",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大田原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04625",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー西那須野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01315",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー黒磯店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05252",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーさくら氏家店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04215",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガージョイフル本田宇都宮店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04833",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーおもちゃのまち店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05259",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー前橋フォリオ駒形店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01764",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー前橋南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00108",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー前橋片貝店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00973",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー北前橋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00370",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー群馬大胡店(〜9/16 休業中)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01712",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイーサイト高崎店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05140",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー群馬町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01109",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー高崎アカマル店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01683",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー高崎並榎店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00329",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー高崎中居店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01316",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー高崎豊岡店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01277",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー高崎高関店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00036",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー桐生広沢店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00864",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガースマーク伊勢崎店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04823",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー伊勢崎バイパス店(群馬県)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04229",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー伊勢崎南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01528",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー伊勢崎華蔵寺前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01948",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー太田高林店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01170",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー西太田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01029",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー沼田栄町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05374",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー館林店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00497",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー渋川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05328",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー富岡バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04960",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー安中バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05335",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大間々店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01472",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー群馬大泉店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00384",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大宮ステラタウン店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04816",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宮原東口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05024",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーさいたま三橋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08160",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大宮東口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02400",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー大宮大和田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04626",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー東大宮店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00723",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオンモール与野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05256",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー与野西口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05209",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーヨークフーズ中浦和店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05426",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー北浦和店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01410",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー北浦和西口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04802",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー南浦和店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00431",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー武蔵浦和店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04048",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーイオンモール浦和美園店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08095",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガードン・キホーテ浦和原山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01910",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーベルクス岩槻店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04444",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー岩槻バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01612",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーウニクス南古谷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04077",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー川越山田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08126",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー川越笠幡店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05324",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー川越西口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05407",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー熊谷肥塚店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04293",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー熊谷駅店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04172",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーアリオ川口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04443",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオンモール川口前川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05339",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーリプレ川口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05048",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー川口新井町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05485",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー東川口駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00899",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー西川口東口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08078",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーJR行田駅前通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01327",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー所沢西口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08193",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー東所沢駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04930",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガービバホーム加須店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04552",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー本庄朝日町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04973",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー東松山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04908",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー春日部大沼店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01788",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー春日部藤塚店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01961",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーベスタ狭山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05164",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガービバホーム鴻巣店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04127",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー上柴店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04664",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー深谷駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01952",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー上尾市民体育館前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01010",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー北上尾店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04708",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー島忠草加舎人店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05150",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー草加店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08002",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー草加新栄店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05212",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーせんげん台駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08005",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーイオンレイクタウンmori店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08107",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー北越谷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05045",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー南越谷駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05084",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー越谷レイクタウン店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08233",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー蕨西口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05222",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー戸田駅前店(埼玉県)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05202",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー入間丸広百貨店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05487",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー武蔵藤沢店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04720",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーカインズ朝霞店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05257",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー和光市駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05108",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー志木駅東口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01278",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー新座野火止店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05076",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーモラージュ菖蒲店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04887",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー久喜インター店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04752",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー国道17号北本店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08245",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー八潮店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08267",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーBLANDE三郷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08254",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガービバホーム三郷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04841",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー坂戸にっさい店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04079",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーカインズ鶴ヶ島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05112",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー吉川美南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02393",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーふじみ野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01517",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガービバホーム大井町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04224",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー嵐山バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01768",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー東武ストア東武動物公園駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05298",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーアリオ蘇我店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04836",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー千葉中央店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05447",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーマックスバリュ 幕張店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05436",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー幕張本郷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04445",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー千葉大学前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00745",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー稲毛山王町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05427",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー稲毛店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05437",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー千葉小倉町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05262",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー土気駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05322",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオンモール幕張新都心店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08016",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー稲毛海岸店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08250",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーイオンモール銚子店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04972",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー銚子店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00114",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオン市川妙典店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08211",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー市川南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05414",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー市川大野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05470",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー本八幡南口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05139",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー行徳新浜通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04643",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーイオンモール船橋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08258",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー東船橋駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04074",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー船橋本町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04441",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー船橋薬円台店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05491",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー西船橋北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05406",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー木更津桜町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04985",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー松戸六高台店(10月末 オープン予定)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08268",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー松戸駅東口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02386",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー馬橋駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00813",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー野田愛宕店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04996",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー新茂原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05189",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオンスタイル成田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05353",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー成田ニュータウン店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05276",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー佐倉ユーカリが丘店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01679",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー東金店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04500",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー旭店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00713",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーフォルテ津田沼店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05001",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーミスターマックス新習志野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08253",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーららぽーと柏の葉店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05000",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー南柏駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04968",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー東武ストア新柏店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05245",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー柏東口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02285",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー柏豊四季店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08187",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー麗澤大学前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08200",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーアリオ市原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05371",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー市原辰巳台店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04955",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーTXGA流山おおたかの森店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04947",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー南流山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05010",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー八千代中央店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01970",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー八千代緑が丘店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05242",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー我孫子駅北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05478",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー新鎌ケ谷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05295",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオン新浦安店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05331",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーマーヴ浦安店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05462",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーグラン8モール八街店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05424",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーBIGHOP印西店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05376",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーカインズモール千葉ニュータウン店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05042",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー富里店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05141",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー佐原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04101",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー水道橋西通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04923",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー秋葉原末広町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02232",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー飯田橋東店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02351",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーヤエチカ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08284",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー月島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05452",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー西銀座店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02350",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーアトレ品川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08173",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー六本木店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02411",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー東京タワー店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08074",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー芝大門店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02323",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーヨークフーズ新宿富久店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02398",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー四谷四丁目店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02352",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー市ヶ谷田町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02322",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー新宿西口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01394",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー早稲田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00554",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー西早稲田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01257",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー高田馬場四丁目店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02406",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー千駄木店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05289",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー本郷三丁目店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04815",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー茗荷谷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05375",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー合羽橋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05430",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー浅草店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00014",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー浅草橋駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08263",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー両国店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01842",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー押上店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05193",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー錦糸公園店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05265",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーアリオ北砂店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05279",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー亀戸店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05411",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー住吉店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05425",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー東大島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04876",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー森下店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05180",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー豊洲駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02407",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー門前仲町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04218",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー大崎店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02318",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー戸越公園駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08150",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー旗の台店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08185",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー武蔵小山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00833",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー阪急大井町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02385",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー青物横丁駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02357",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー目黒大鳥神社前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04570",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー都立大学店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04009",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー千鳥町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05443",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー平和島駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08203",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー梅屋敷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04300",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー池上駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05063",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー洗足池店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05338",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー羽田空港第3ターミナル店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02390",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー蒲田東店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04952",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー蒲田西口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04882",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー雑色駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08128",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー雪谷大塚店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04622",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーサミットストア成城店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04910",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー三軒茶屋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05398",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー下北沢北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05473",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー千歳船橋北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04918",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー成城学園前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08133",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー梅ヶ丘駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05281",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー烏山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05283",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー用賀店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05058",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーフレンテ笹塚店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02392",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー原宿表参道店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02404",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー幡ヶ谷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04081",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー恵比寿東店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02399",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー渋谷公園通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02380",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー渋谷円山町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08125",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー渋谷道玄坂店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02144",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー中野南口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04950",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー中野坂上店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05396",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー中野富士見町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00843",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー鷺ノ宮店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04589",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーR20桜上水店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01668",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーヤオコー杉並桃井店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05483",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー下井草駅店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05313",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー久我山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08205",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー東高円寺店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05472",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー永福町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00204",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー浜田山駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05326",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー西荻窪北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04578",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー阿佐ヶ谷北店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05475",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー高円寺パル店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05416",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー大塚北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04066",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー巣鴨店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05086",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー東武池袋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01493",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー池袋東店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01431",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー池袋西口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01946",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー要町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00403",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー東十条店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05440",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー浮間舟渡駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05438",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー王子駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04760",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー赤羽南口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04767",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー日暮里店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04170",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー荒川遊園前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05147",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーときわ台店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00335",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーイオン板橋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05315",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー上板橋北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04274",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー中板橋駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05358",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー大山駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04957",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー志村坂上店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01048",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー成増店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02001",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー西友成増店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02108",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー西台店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01266",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー高島平店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00942",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーエミオ武蔵関店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04098",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーエミオ練馬高野台店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08170",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー光が丘IMA店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05484",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー地下鉄赤塚店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05380",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー大泉学園ゆめりあ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08195",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー平和台店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05408",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー新江古田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08196",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー桜台千川通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08223",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー石神井公園北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05152",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー練馬春日町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05155",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー練馬駅店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04379",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーアリオ西新井店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08178",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーカリブ梅島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01812",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーマーヴ北綾瀬リエッタ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05388",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー北千住センター通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05056",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー島忠足立小台店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05116",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー竹ノ塚店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05085",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー綾瀬店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08172",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーお花茶屋駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08283",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー亀有北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05154",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー京成立石店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04766",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー堀切菖蒲園店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05337",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー新小岩南口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08115",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー金町南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05069",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーシャポー小岩店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08206",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー一之江駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05038",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー平井南口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01923",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー瑞江店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04486",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー船堀駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01105",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー西葛西北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04489",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーパオレ南大沢店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08210",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー八王子みなみ野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05309",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー八王子北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04087",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー多摩下柚木店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05299",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー高尾南口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05431",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー立川南口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04935",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー若葉ケヤキモール店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08285",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー三鷹北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05441",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー吉祥寺サンロード店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05474",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー武蔵境北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=03301",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー東青梅センタービル店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05110",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー河辺店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04216",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー府中フォーリス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05229",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー東府中店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04135",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーモリタウン昭島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05125",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー拝島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05490",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー国領駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04217",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー島忠仙川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05184",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー調布南口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05168",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー町田忠生店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00928",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー町田金森店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05448",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー町田駅ターミナル口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04188",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー鶴川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04577",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー武蔵小金井南口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05264",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー小平小川町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05101",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー小平駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05275",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー京王高幡SC店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08168",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー豊田旭ヶ丘店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04149",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー久米川北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04653",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー島忠東村山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04929",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー秋津店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08001",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー国立北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04484",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー国立大学通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02011",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー谷保駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05282",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー和泉多摩川駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01811",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー玉川上水店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01103",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー西友清瀬店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08182",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーイオンモール東久留米店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08167",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー島忠小平店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05070",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー東久留米滝山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05405",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー東久留米駅店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04828",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガークロスガーデン多摩店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05198",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーヴィータモールせいせき店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08274",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー京王リトナード永山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05453",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー秋川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05454",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーひばりヶ丘北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08221",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー保谷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04548",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー田無店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04821",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーウィングキッチン京急鶴見店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05461",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー鶴見本町通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00927",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー鶴見西口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04013",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーヨコハマ反町",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00974",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーヨコハマ片倉町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00674",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー横浜東口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04928",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー横浜浅間町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01743",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー相鉄ムービル店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01775",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー本牧店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00914",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー横浜桜木町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05149",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー関内店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02325",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー弘明寺店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04598",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー横浜医大前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00920",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー横浜天王町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05464",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー京急杉田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08209",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガービアレ横浜並木店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05412",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーブランチ横浜南部市場店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08220",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー金沢八景店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05161",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーイオン横浜新吉田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05196",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大倉山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01998",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー綱島西店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01874",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーイオンスタイル東戸塚店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05167",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーウィング上大岡店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05442",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー上永谷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05142",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー港南台店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04993",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガートライアル西友二俣川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05272",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー二俣川ジョイナステラス3店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05488",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー鶴ヶ峰店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04044",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー十日市場駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05455",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー横浜中山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08052",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー瀬谷駅店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08194",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー本郷台店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00731",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーいずみ中央駅店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05327",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー弥生台店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05270",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーあざみ野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05068",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーキテラプラザ青葉台店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08222",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー市が尾駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04684",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー横浜こどもの国店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01730",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーフォルテ横浜川和町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05334",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーモザイクモール港北店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05385",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー横浜佐江戸店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー港北ニュータウンセンター中央店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04271",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイトーヨーカドー川崎店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05306",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー川崎アゼリア店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08089",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー川崎東口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04394",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガークロスガーデン川崎店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04879",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー元住吉ブレーメン通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08266",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー平間店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00122",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー武蔵中原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05410",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー武蔵小杉店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00936",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー武蔵新城店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01658",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー梶ヶ谷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00525",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー溝の口中央店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04042",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー溝の口南口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04456",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガークロス向ヶ丘店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05444",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー中野島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04885",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー宮崎台店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05372",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー五月台店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04085",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー小田急マルシェ百合ヶ丘店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08244",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー橋本3丁目店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05323",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー相模原ラクーン店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08213",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオン相模原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08272",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーニトリモール相模原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05248",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーペアナードオダサガ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05027",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー原当麻店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01709",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー京急久里浜店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=03307",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー北久里浜駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04557",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー県立大学店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04716",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー衣笠店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04462",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー追浜店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04343",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー平塚パールロード店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00938",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー大船店(神奈川県)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01969",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー江ノ島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02294",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー湘南モールフィル店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05153",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー湘南台店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04433",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー鴨宮店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00177",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー茅ヶ崎北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05429",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー逗子店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04094",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー秦野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05304",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー厚木とびお店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05348",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー厚木愛甲店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00484",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー本厚木北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08135",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー中央林間北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05370",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー南林間西口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08189",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー大和店(神奈川県)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01846",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー島忠大和店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05386",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー高座渋谷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01634",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー伊勢原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00440",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーMEGAドン・キホーテUNY座間店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04826",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大井松田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00364",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー新潟河渡本町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04529",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーCoCoLo新潟店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04769",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーとやの球場前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01337",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー新潟万代シティ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05367",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー亀田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05291",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー新津店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04473",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー新潟亀貝店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05368",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー新潟大学前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04442",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー新潟黒埼店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05366",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー黒埼パーキングエリア店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04370",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー巻店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04080",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー長岡古正寺店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05292",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー長岡愛宕店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05169",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー三条店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01414",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー柏崎店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05234",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー新発田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04464",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー上越高田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04116",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー直江津店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00626",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー佐渡佐和田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00893",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガールート17六日町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05071",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー新潟中条店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05219",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー富山上飯野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05176",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー富山呉羽店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04365",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー富山天正寺店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05274",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー富山掛尾店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01706",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー富山羽根店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04872",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー高岡南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04053",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー高岡美幸町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04906",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー高岡野村店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00160",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー砺波店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01576",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー金沢中央バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01915",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー金沢杜の里店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04695",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー金沢諸江店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01513",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー七尾ベイモール店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04678",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー小松大領店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05343",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー加賀店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04262",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー松任店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00199",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー野々市押越店(〜9/18 休業中)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04054",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー野々市新庄店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01839",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福井やしろ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04562",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福井エルパ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01867",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー敦賀店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01618",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー小浜店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01213",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー鯖江店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04424",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福井春江店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05395",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー甲府和戸通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04612",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー甲府駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05136",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー甲府高畑店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01636",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー下吉田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04478",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー富士山駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00029",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー都留文大前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04594",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー韮崎東店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04834",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー敷島山の手通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01703",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー石和店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04966",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー甲州塩山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05352",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー甲府昭和通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01975",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーフォレストモール富士河口湖店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04867",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー川中島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05287",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー長野SBC前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04579",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー長野南バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01697",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー長野東和田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01440",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオンモール松本店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08119",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー松本平田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01439",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー松本庄内店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04709",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー松本横田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00652",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー松本駅ビルミドリ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08086",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーアリオ上田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05032",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー上田原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05119",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー上田東店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01372",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイルフプラザ岡谷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04719",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーそよら飯田アップルロード店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08269",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー須坂店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01877",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー伊那春近店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05273",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー信州中野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04537",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー茅野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05269",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーカインズ塩尻店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05129",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー佐久平駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04883",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーあづみ野穂高店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04431",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー佐久穂町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05288",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー伊北インター店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05465",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーアスティ岐阜店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05394",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガービバホーム柳津店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05227",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー岐阜ながもり店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01483",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー岐阜三里店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05123",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー岐阜島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05204",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー柳ヶ瀬中央店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00235",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー大垣南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04827",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大垣東店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00852",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー多治見上野町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05330",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー関緑ヶ丘店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01841",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー中津川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01632",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー美濃加茂店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01314",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガートキプレミアム・アウトレット店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05092",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー各務原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05103",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーみずほほづみ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04691",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー本巣店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05211",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーたるい店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04263",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー新静岡セノバ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05286",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー静岡松富店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04800",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー静岡竜南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05096",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー静岡国一店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00610",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー静岡小鹿店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04485",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーバロー清水高橋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01284",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー清水エンチョー店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04658",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー浜松ザザシティ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05054",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー浜松三島町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04049",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー浜松三方原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05384",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー浜松初生店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05206",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー浜松天王店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01604",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー浜松志都呂店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05458",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー浜松若林店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05238",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー浜松高丘エンチョー店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05087",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー浜北店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05134",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーららぽーと沼津店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05290",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーカインズ沼津店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04335",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー沼津五月町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01175",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー熱海下多賀店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05030",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー富士宮エンチョー店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01356",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー島田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04492",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー富士エンチョー店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00322",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー富士厚原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05165",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーららぽーと磐田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04948",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー磐田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01853",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大井川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01710",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー焼津バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01680",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー掛川緑ケ丘店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05208",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー水守店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04934",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー藤枝店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04439",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー御殿場店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05383",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー袋井店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04102",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー東急ストア下田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05480",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー菊川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04289",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー伊豆大仁店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04737",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー伊豆函南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01740",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーサントムーン柿田川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00336",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーウェルディ長泉店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05131",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー千種駅南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01704",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー本山四谷通店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05312",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー池下店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00284",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーアスティ大曽根店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04903",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーイオンモールナゴヤドーム前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05401",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー楠インター店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01521",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー黒川駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08240",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーmozoワンダーシティ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05111",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオンタウン名西店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05181",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーいわつか店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01947",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー名古屋伏見店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08215",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー栄五丁目店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00562",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー桜山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00018",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーカインズ堀田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04689",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー新瑞店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05237",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー中島新町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05297",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー名駅南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01989",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー太平通店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04712",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー戸田店(愛知県)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04561",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー当知店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01514",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガースーパービバホーム名古屋南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05127",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー守山中央店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01976",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー守山南店(愛知県)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05097",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー志段味店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05216",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーヒルズウォーク徳重店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05177",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー相原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00375",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー鳴子店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05389",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー一社駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04971",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー鴻の巣店(愛知県)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01944",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー二川湖西店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01339",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー豊橋三の輪店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01447",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー豊橋曙店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01021",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー豊橋花田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01591",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー岡崎大西店(〜10/28 休業中)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04264",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー岡崎稲熊店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01130",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー西岡崎店(昭和町)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01594",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーアスティ一宮店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05318",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーイオンモール木曽川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08041",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーテラスウォーク一宮店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08224",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー一宮妙興寺店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00761",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー一宮浅野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04192",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー一宮開明店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05378",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー尾西店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04482",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー瀬戸山口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01656",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー半田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00602",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーアピタ高蔵寺店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05364",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー勝川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04438",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー春日井出川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05044",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー春日井如意申店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01601",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー春日井市民病院前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04176",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー豊川インター店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00858",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー豊川正岡店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05175",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー津島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04027",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーR-155刈谷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05133",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー東刈谷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05346",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー洲原公園店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05194",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガートヨタ元町バイパス店(愛知県)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05459",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガートヨタ高橋店(〜9/28 休業中)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01924",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー豊田若園店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05267",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー安城南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01336",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー西尾店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00780",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーえもり店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05260",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー江南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01236",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー小牧店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00211",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー稲沢アクロスプラザ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04808",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー稲沢天池店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05221",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー東海中央店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04724",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー共和店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04024",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー知多朝倉店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05115",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー知立西店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05120",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー旭三郷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00418",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー三河高浜店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05148",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガープライムツリー赤池店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08259",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー日進竹の山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05121",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー田原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01269",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー愛西町方店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04853",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー西春店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04270",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー三好ヶ丘駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01365",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー甚目寺店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00770",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオンモール長久手店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08277",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーモリコロパーク店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04539",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーららぽーと愛知東郷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05263",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー蟹江けいさつ前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01425",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー東浦店(〜10/4 休業中)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05433",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー内海店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01218",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー三ヶ根店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00688",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー津南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05117",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー津島崎町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05217",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー四日市生桑店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04299",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー伊勢一之木店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05308",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー松阪パワーセンター店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01593",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーながしま店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04781",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーフレスポ鈴鹿店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04933",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー鈴鹿磯山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04591",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー名張店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04654",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー熊野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04846",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー志摩店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05479",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー伊賀上野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05266",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー菰野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05089",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー三重朝日店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00435",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー多気バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01938",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーフォレオ大津一里山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08218",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大津堅田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05423",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大津美崎町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04810",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー彦根日夏店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05421",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーアルプラザ長浜店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05422",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー近江八幡店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05435",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー草津中央店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01786",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーアルプラザ野洲店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04992",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーフレンドタウン日野",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08022",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイズミヤ堀川丸太町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08034",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー烏丸今出川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05481",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー京都北山駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08201",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー京都二条駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05360",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー烏丸御池店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08079",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー五条七本松店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08076",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー四条西洞院店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08207",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーイオンモール京都桂川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08106",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー近鉄東寺駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08036",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーイオンモール京都五条店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08142",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー太秦天神川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08188",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー西院店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04512",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー伏見大手筋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04267",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーマツヤスーパー山科三条店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04873",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー桂物集女店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04667",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福知山東野パーク店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05418",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー西舞鶴店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04014",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宇治半白店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08171",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー長岡京駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05100",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー京橋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08179",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー都島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04047",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーJR福島駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08047",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーJR野田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08108",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー西長堀店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08248",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー靭本町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01868",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー市岡みなと通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04545",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーあべちか店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01736",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー上六店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01363",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー豊里店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00746",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー千林大宮店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05319",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーフレンドタウン深江橋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08035",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー蒲生四丁目店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02299",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー鴫野駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08289",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーあべのキューズモール店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05345",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー昭和町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01456",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー近鉄あべの橋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04308",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー長居店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08124",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーニッセイ新大阪ビル店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02336",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー十三店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01402",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー西中島南方店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04511",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーイオンモール鶴見緑地店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08154",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー緑一丁目店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08161",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー南港ATC店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04804",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー平野南港通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05182",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーうめきたグリーンプレイス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02409",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーホワイティうめだ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02405",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー南森町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08162",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー大阪駅前第２ビル店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01739",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー扇町関西テレビ前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05102",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーNAMBAなんなん店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08261",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーなんばウォーク店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08110",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー北浜店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02240",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー森ノ宮店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01617",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー西心斎橋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05225",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー長堀橋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08042",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーイオンモール堺鉄砲町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08282",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー鳳西町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05428",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー泉北光明池店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05303",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー泉北２号豊田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04219",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーなかもず店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05210",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオンモール堺北花田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08031",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー中環大泉店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04926",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーららぽーと堺店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08256",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー(大阪府)岸和田下松店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01393",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーエトレ豊中店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05349",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー服部店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00539",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー豊中名神口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01494",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガールート176池田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00666",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーららぽーとEXPOCITY店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05118",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー千里丘ミリカ・ヒルズ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05213",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー吹田北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00802",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー江坂店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01480",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーJR高槻駅南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08152",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーカインズ高槻店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05170",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー高槻今城店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05329",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー貝塚店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04258",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー京阪守口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05033",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーくずは店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02395",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーニトリモール枚方店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08120",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー京阪枚方市駅店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08155",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー枚方茄子作店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04437",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー茨木鮎川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08270",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー阪急茨木市駅東口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05449",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー八尾かやふり店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04321",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー八尾南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01112",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーりんくうシークル店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04696",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガールート26号泉佐野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05332",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー寝屋川早子町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05434",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー萱島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00201",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー河内長野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04497",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー第2阪和和泉店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01322",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー箕面小野原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05091",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー箕面牧落店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05457",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー羽曳野西浦店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08026",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーららぽーと門真店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05314",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー京阪古川橋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08280",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー門真岸和田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04096",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー近鉄藤井寺店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04739",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーニトリモール東大阪店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05253",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー八戸ノ里店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04764",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー外環石切店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01570",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー近鉄布施店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04309",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー尾崎店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00541",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーカインズ深江浜店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04990",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー御影クラッセ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05446",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー摂津本山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05350",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーJR灘店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05251",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーフォレスタ六甲店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05460",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー神戸大開店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08230",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオン長田南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04714",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー東急プラザ新長田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08017",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーtete名谷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08257",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーカインズ垂水店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05137",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー垂水駅北口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05451",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーJR神戸店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08197",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー三ノ宮駅東店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08252",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー神戸元町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08174",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーイズミヤ神戸玉津店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08235",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーカインズ西神南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04533",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー神戸伊川谷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05393",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー神戸学園都市店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08144",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー西神プレンティ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08237",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー姫路南条店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05124",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー姫路広峰店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05008",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー姫路広畑店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05278",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー姫路辻井店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04285",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーJR尼崎店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01823",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーつかしん店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05143",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー武庫之荘南口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04419",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーピオレ明石店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08278",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー明石二見店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05325",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー明石大久保インター店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08149",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーそよら西宮今津店（旧ダイエー西宮店）",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04428",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー西宮北口店(阪急)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00981",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー阪急夙川駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05456",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー阪急伊丹店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=03308",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー加古川野口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01713",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー赤穂店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04655",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー西脇店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05268",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宝塚中山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01750",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宝塚安倉店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04631",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宝塚逆瀬川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00994",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーアイ・モール高砂店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04413",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーキセラ川西店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05420",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー三田本町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08216",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー丹波ゆめタウン店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05138",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー山崎咲ランド店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00133",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーたつの店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04735",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーJR奈良店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05347",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー奈良三条通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04651",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー奈良学園前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08212",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー奈良押熊店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08273",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー近鉄奈良店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05361",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガートナリエ大和高田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08202",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大和郡山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00963",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー近鉄郡山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01385",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガートライアル橿原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05351",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー生駒上町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08238",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー近鉄生駒店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05036",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー香芝真美ケ丘店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05445",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーラスパ西大和店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05040",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーJR王寺店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08123",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー三年坂店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04015",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー紀ノ川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05162",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー海南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01785",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー橋本彩の台店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04268",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー南紀白浜店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04421",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー(和歌山県)新宮店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04496",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー岩出店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05163",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーそよら鳥取駅南店（旧 イオン鳥取店）",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05379",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー鳥取吉成店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01637",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー鳥取安長店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00202",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー米子内浜店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01435",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー米子皆生通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05469",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー倉吉バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00295",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー境マリーナ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01544",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー東伯アプト店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01458",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宍道店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01564",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー東出雲アイパルテ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04110",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー松江乃白店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05026",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー松江西川津店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04567",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーゆうひパーク浜田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01379",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー出雲ドーム店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00153",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー出雲駅北町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04889",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーゆめタウン益田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05387",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーゆめタウン江津店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01641",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー岡山京山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04683",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー岡山花尻店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04707",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー岡山けやき通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05239",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー岡山江崎店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01761",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー東岡山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04877",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーコープ西大寺店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04235",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー岡山下中野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05258",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー岡山築港店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05051",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー倉敷中庄店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05354",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー倉敷児島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01928",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー倉敷水島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01609",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー倉敷玉島店(〜9/29 休業中)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01286",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー倉敷福田公園前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01951",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー倉敷笹沖東店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04298",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー津山城北通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01861",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーリブ総社店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05028",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーポルカ高梁店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04568",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー赤磐店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01657",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー早島インター店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01881",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーフジグラン広島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04892",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー広島八丁堀店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04272",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー広島十日市店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01203",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーJR広島駅",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08180",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーゆめタウン広島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04706",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー広島段原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01744",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーフレスタ横川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04751",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー南観音店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01408",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー広島アルパーク店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05307",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーフジグラン緑井店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04232",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー広島沼田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01693",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー祇園店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01360",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーフジグラン高陽店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04844",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーゆめタウン呉店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05399",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー呉焼山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04305",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー広本町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05340",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオン三原店(旧 三原店)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00881",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー尾道店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00149",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーゆめタウン福山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04865",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーフジグラン神辺店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04338",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福山光南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00076",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福山川口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01875",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福山御幸店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01255",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福山春日店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00620",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福山松永店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04493",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー東広島店(広島県)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05240",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー黒瀬店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05320",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー廿日市宮内店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01752",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーDCM坂店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05382",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーJR下関店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04964",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーゆめタウン長府店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01305",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー新下関コスパ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01804",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宇部インター店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01964",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宇部厚南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04231",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオンタウン小郡店(山口県)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04107",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー防府コスパ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04495",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー(山口県)下松店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01463",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー岩国店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04886",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーゆめタウン徳山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05132",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーゆめタウン新南陽店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04593",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー国府店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04411",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー徳島末広ベイサイド店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04261",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー徳島沖浜店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05022",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー鳴門店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04884",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー徳島羽ノ浦店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05205",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー阿南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01995",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーフジグラン北島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05049",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーゆめタウン徳島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05214",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー藍住店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04656",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーフレスポ高松店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04538",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー高松レインボー店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01960",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー丸亀店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00976",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宇多津店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05271",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー松山フライブルク通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00917",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー松山三津店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04273",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー松山天山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04184",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー松山東環状店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04356",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー今治バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04795",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宇和島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01933",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー新居浜喜光地店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01929",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー西条店(愛媛県)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01930",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大洲店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01932",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー伊予三島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01931",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーいよ松前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04685",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーエミフルＭＡＳＡＫＩ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04705",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー高知インター店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01958",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー高知土佐道路店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04088",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー土佐高岡店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04225",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー須崎店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01959",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宿毛店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01652",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー高知野市店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01957",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーベイサイド門司店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04472",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーイオン若松店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04057",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーフェイス高須店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04222",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガースピナ一枝店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01347",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガースピナガーデン大手町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04662",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー小倉大田町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04733",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーサンリブもりつね店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04976",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーサンリブシティ小倉店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04699",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー下曽根駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04698",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー小倉南インター店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04734",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー小倉沼本町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04697",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー皿倉テラス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08228",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー八幡小嶺店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04627",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー八幡本城店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01438",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー引野インター店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01378",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー折尾産医大前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01054",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー黒崎店(福岡県)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00080",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーJR香椎駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05419",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーガーデンズ千早東店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08236",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー二又瀬店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01351",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福岡土井店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05179",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福岡箱崎店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04236",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー博多デイトスアネックス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05373",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー博多バスターミナル店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04200",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー博多中洲店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01754",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー筑紫通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01437",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー美野島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05400",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー六本松店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00290",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー大濠公園前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08156",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー天神北店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04672",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー笹丘店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01487",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー薬院店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01407",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー赤坂けやき通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04128",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー福岡野間店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04435",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー九州大学伊都キャンパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05093",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー木の葉モール橋本店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05174",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福岡マリナ通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01624",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福重店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05231",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福岡原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01724",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー藤崎店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04777",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーイオンモール大牟田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05146",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーゆめタウン久留米店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05114",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー久留米上津店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01987",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー久留米合川バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01057",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー久留米大善寺店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01206",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー久留米小森野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01810",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー田主丸店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00533",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー西鉄久留米駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04870",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー直方バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01525",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福岡穂波店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05244",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー飯塚かやの森店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01912",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー飯塚幸袋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01771",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー田川イカリ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05246",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー柳川店(福岡県)",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01149",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福岡八女店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01104",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー筑後店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04064",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー行橋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04638",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー中間店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00345",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福岡小郡店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04179",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー天拝坂店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01366",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー筑紫野ヴィレッジ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05241",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー春日桜ケ丘店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04436",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大野城店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04033",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー牛頸店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04178",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーくりえいと赤間店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04209",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宗像店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04787",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福岡高田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05145",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーミスターマックス糸島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05305",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福岡那珂川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00904",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福岡志免店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04452",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福岡新宮中央店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05296",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福岡遠賀店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01571",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー福岡三輪店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04147",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー佐賀兵庫店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01809",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー佐賀南バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05477",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー佐賀大和バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01117",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー唐津店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05476",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー鳥栖バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05135",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー伊万里店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04136",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー武雄店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05236",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー三田川店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00139",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー佐賀江北店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04345",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー東長崎店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04429",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー長崎宝栄店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01555",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー長崎浜町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04076",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー佐世保中里店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00926",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー佐世保大野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04838",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー佐世保広田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04727",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー松浦公園前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04255",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー島原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=03304",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー諫早久山台店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05355",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー長崎大村店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04137",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー長崎対馬店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04540",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー壱岐店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01346",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー長崎時津店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01488",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー長崎佐々店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01780",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー熊本三年坂通店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05166",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー熊本東バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04131",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー熊本健軍店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01921",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー長嶺日赤通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01524",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーJR熊本店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05201",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー田崎店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05409",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーゆめタウンはません店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05178",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー熊本近見店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04168",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー熊本飛田バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05232",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー八代あまがえ通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05468",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー人吉店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04613",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーシーサイド荒尾店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05144",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー玉名店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05467",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー松橋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01058",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー天草本渡店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04553",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーゆめモール合志店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05381",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーハンズマン菊陽店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05067",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー菊陽店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05066",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガートキハわさだタウン店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01880",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大分インター店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01659",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大分光吉店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04673",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大分明野東店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04796",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大分駅前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05158",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー大分高城店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04166",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大分鶴崎店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04132",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガートキハインダストリー鶴見園店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01567",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー別府海岸通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01035",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大分別府店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00765",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー中津如水店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01883",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー日田店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04114",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー佐伯店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01444",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大分臼杵店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01742",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大分杵築店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01725",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大分三重店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01147",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宮崎ピースタウン店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00176",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宮崎ブルーアイランド店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01075",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宮崎大島バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01312",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宮崎新名爪店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01557",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宮崎橘通店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05482",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー都城大学通り店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01627",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー延岡瀬の口店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01500",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー日南店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04663",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー日向店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01999",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー高鍋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05321",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー鹿児島ベイサイド店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01757",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー鹿児島マルヤガーデンズ前店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04890",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー鹿児島与次郎店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05098",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー鹿児島中山店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05192",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー鹿児島伊敷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01265",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー鹿児島卸本町店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05055",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー鹿屋バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05224",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー出水店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04701",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー種子島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05344",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガープラッセ川内店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01368",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー隼人店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04155",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー串木野店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05094",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー奄美大島店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04460",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー姶良バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04251",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー屋久島安房店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04832",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーパレット久茂地店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08114",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー那覇国場店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00330",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー那覇壺屋店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05061",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー那覇新都心店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05249",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー那覇真嘉比店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05062",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー那覇金城店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00400",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー首里石嶺店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05043",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宜野湾大謝名店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04807",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー宜野湾野嵩店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05471",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー石垣真栄里店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01664",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー名護バイパス店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01647",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーサンエーしおざきシティ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05402",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーコザ店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04480",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー泡瀬店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05243",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー豊見城店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05199",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー安慶名店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01691",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー沖縄ひらら店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=00804",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー国道58号読谷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05105",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー北谷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05031",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー沖縄西原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01755",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー南風原店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=01526",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー大和ハウス プレミストドーム店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08057",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーエスコンフィールドHOKKAIDO店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08198",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガーキッザニア東京店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04530",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーユニバーサル・シティウォーク大阪(TM)店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04363",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガー京セラドーム大阪511R店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=08040",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスバーガー京セラドーム大阪店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=05016",
+      "facilities": []
+    },
+    {
+      "name": "モスバーガーみずほPayPayドーム福岡店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=04830",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "モスプレミアム千駄ヶ谷店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02655",
+      "facilities": []
+    },
+    {
+      "name": "モスプレミアム桜木町クロスゲート店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02657",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "MOSH Burger＆Bar 銀座ナイン店",
+      "url": "https://www.mos.jp/shop/detail/?shop_cd=02502",
+      "facilities": []
+    }
+  ]
+}

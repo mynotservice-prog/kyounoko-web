@@ -1,0 +1,5001 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "ohsho",
+  "name": "餃子の王将",
+  "sourceUrl": "https://map.ohsho.co.jp/b/ohsho/attr/?t=attr_con",
+  "method": "公式店舗検索（map.ohsho.co.jp）の店舗一覧を全ページめくり、店舗ごとの「サービス」アイコン（駐車場有・バリアフリー）を集計",
+  "total": 725,
+  "note": "内訳: 餃子の王将 721、GYOZA 4（GYOZA OHSHO 等の業態も同じ locator に載るのでそのまま含む）。「バリアフリー」の基準は公式に説明がない",
+  "facilities": {
+    "parking": {
+      "count": 464,
+      "label": "駐車場有"
+    },
+    "stepFree": {
+      "count": 379,
+      "label": "バリアフリー"
+    }
+  },
+  "stores": [
+    {
+      "name": "餃子の王将 イオン桑園店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2458/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 すすきの店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2451/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 狸小路5丁目店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2457/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 アリオ札幌店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2453/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 イオン札幌元町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2466/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 イオン東札幌店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2467/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 白石中央店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2455/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 新札幌店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2454/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 手稲前田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2456/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 清田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2459/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 イオン湯川店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2469/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 旭川末広店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2461/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 イオンモール旭川西店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2465/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 イオン帯広店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2463/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 イオン北見店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2464/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 イオンモール苫小牧店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2468/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 イオン千歳店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2460/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 イオン釧路店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2462/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 仙台一番町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2401/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 仙台六丁の目店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2402/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 4号仙台中田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2405/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 多賀城店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5802/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 水戸さくら通り店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2147/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 国道50号結城店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2205/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 県道243号龍ケ崎店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2194/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 牛久栄町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5549/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 つくば赤塚店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2150/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 124号神栖店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2182/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 宇都宮インターパークビレッジ店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2099/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 トライアル宇都宮店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2204/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 国道293号足利南店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2192/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 前橋駒形店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2088/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 前橋問屋町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2079/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 前橋三俣店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5537/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 国道17号倉賀野店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5552/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 高崎中泉店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5548/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 高前バイパス小八木町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2082/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 新里店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5557/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 伊勢崎店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2097/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 太田高林店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2093/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 太田新田小金井町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5555/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 354号館林店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2183/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 今羽駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2073/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 東大成店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2072/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 大宮駅西口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2163/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 大宮三橋店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5553/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 大宮南中野店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5539/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 与野本町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2046/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 17号さいたま町谷店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2188/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 南浦和店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2055/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 武蔵浦和駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2076/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 国道16号岩槻店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2208/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 本川越店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2104/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 熊谷駅東口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2092/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 アリオ川口フードコート店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2130/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 アリオ川口レストラン店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2131/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 東川口戸塚店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5554/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 所沢プロペ通り店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2170/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 463号バイパス所沢林店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2190/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 ヤオコー東松山店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2175/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 春日部ユリノキ通り店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5551/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 せんげん台店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5558/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 アリオ上尾店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2141/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 国道17号北上尾店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5559/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 草加店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2024/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 北越谷駅西口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2180/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 越谷駅東口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2160/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 南越谷ラクーン店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2165/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 蕨駅東口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2113/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 戸田公園五差路店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2062/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 北朝霞店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2050/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 和光店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2119/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 新座駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2095/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 久喜店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2210/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 三郷西インター店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5544/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 蓮田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5556/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 国道4号幸手店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2203/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 県道377号吉川栄店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2195/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 ふじみ野店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5535/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 千葉寒川店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2340/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 新検見川駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2069/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 花見川店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2129/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 都賀駅西口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2096/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 稲毛海岸駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2074/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 行徳駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2164/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 本八幡駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2116/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 下総中山駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2068/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 ららぽーとTOKYO-BAY 店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2155/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 新松戸店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2065/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 野田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2111/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 京成成田駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2103/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 JR佐倉駅北口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2159/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 東金店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2142/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 柏松ヶ崎店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2063/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 セブンパークアリオ柏店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2166/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 アリオ市原店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2143/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 市原店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2045/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 コトエ流山おおたかの森店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2197/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 八千代店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2091/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 イオン鎌ヶ谷店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2174/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 君津店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2052/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 イオン新浦安店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2209/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 四街道駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2085/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 印西牧の原店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2138/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 千葉ニュータウン中央店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2120/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 西白井店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2070/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 富里店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2044/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 Express アトレ秋葉原店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2185/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 神田東口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2056/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 水道橋店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2028/",
+      "facilities": []
+    },
+    {
+      "name": "GYOZA OHSHO 有楽町国際フォーラム口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2184/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 新橋駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2059/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 ジョイ・ナーホ赤坂見附店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2207/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 高田馬場店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2016/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 茗荷谷駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2094/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 浅草橋駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2075/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 御徒町駅南口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2157/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 京成曳舟駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2173/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 アリオ北砂店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2135/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 亀戸店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2211/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 門前仲町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2145/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 戸越銀座店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2042/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 学芸大前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2021/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 大岡山店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2100/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 蒲田東口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2039/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 糀谷店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2169/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 経堂店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5526/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 三軒茶屋店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2026/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 下北沢店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2033/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 ジョイ・ナーホ 池尻大橋店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2191/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 渋谷ハチ公口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2067/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 道玄坂店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2123/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 初台店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2152/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 中野店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2018/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 野方店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5543/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 荻窪駅西口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2126/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 高円寺店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2156/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 池袋東口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2133/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 駒込店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2037/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 南大塚店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5524/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 赤羽駅南口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2112/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 浮間舟渡店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2051/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 王子店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2019/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 十条店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5531/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 上板橋駅南口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2117/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 西台駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2087/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 ジョイ・ナーホ練馬高野台駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2198/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 綾瀬駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2081/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 アリオ西新井店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2144/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 五反野駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5545/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 ポンテポルタ千住店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2146/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 アリオ亀有店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2134/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 京成高砂駅南口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2168/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 アリオ葛西店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2178/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 一之江駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2161/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 小岩駅北口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2105/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 新小岩ルミエール店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2109/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 平井駅南口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2177/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 瑞江駅北口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2108/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 イーアス高尾店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2171/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 八王子駅北口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2158/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 フレスポ八王子みなみ野店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2167/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 南大沢店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2047/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 武蔵境駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2114/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 府中本町駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2107/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 鶴川駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2153/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 秋津店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2080/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 国立駅南口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5534/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 喜多見駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2057/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 新青梅武蔵村山店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2202/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 フレスポ若葉台店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2176/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 羽村小作坂上店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2206/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 保谷駅南口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2115/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 ウィングキッチン京急鶴見店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2172/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 鶴見店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2058/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 大口駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2086/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 東神奈川駅西口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2137/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 石川町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2060/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 イオン天王町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2199/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 イオン金沢八景店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2140/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 金沢文庫駅西口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5529/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 ブランチ横浜南部市場店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2186/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 綱島駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5530/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 戸塚駅西口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2122/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 上大岡京急店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2139/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 希望ヶ丘駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5550/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 二俣川駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2121/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 sanwa藤が丘店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2193/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 モザイクモール港北店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2189/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 ウィングキッチン京急川崎店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2179/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 川崎駅東口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2110/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 グランツリー武蔵小杉店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2151/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 武蔵小杉店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2049/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 武蔵新城店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2040/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 武蔵中原店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2043/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 元住吉店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5542/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 武蔵溝ノ口駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2064/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 アリオ橋本店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2162/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 橋本駅ビル店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2083/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 淵野辺店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2048/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 イトーヨーカドー古淵店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2154/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 ノジマモール横須賀店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2181/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 横須賀中央店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2118/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 平塚駅西口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2098/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 大船駅笠間口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2106/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 藤沢駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2071/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 藤沢弥勒寺店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2200/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 小田原店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2101/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 BLiX茅ヶ崎店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2212/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 小田急マルシェ秦野店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2187/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 本厚木店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2102/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 中央林間りんかんモール店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/5533/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 大和駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2089/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 海老名上郷店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2201/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 新潟近江店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2132/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 弁天橋店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2127/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 黒瀬北店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1338/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 中川原店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1377/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 高岡横田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1379/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 イータウン砺波店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1431/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 イオン金沢示野店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1350/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 金沢高柳店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1390/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 金沢東店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1416/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 杜の里店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1348/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 小松店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1401/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 松任店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1212/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 野々市新庄店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1428/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 野々市店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1131/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 福井幾久店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1352/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 福井学園前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1134/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 敦賀店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4752/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 若狭小浜店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4886/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 鯖江店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1362/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 丸岡店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1263/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 甲府国母店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2136/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 アルピコプラザ松本店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2148/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 アリオ上田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2124/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 飯田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1414/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 諏訪店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2128/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 芥見店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1266/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 岐阜県庁前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4769/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 岐阜則武店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4959/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 千手堂店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4588/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 柳津店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4920/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 大垣林町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1218/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 258号大垣新田町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1474/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 高山三福寺店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4943/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 多治見店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1238/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 中津川インター店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1251/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 岐阜羽島店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1221/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 土岐店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1382/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 各務原鵜沼店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1262/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 可児広見店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1250/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 穂積店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1222/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 岐阜真正店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1210/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 岐南店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1236/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 静岡呉服町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1432/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 清水店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1451/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 有玉店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1369/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 浜松店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1139/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 沼津店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2031/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 沼津松長店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/2196/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 焼津店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1437/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 今池店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1060/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 東大曽根店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4927/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 黒川店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1473/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 浄心店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4006/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 笹島店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1133/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 太閤通店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4871/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 大須観音店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1417/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 栄店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1063/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 新栄町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4964/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 中島店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1165/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 名古屋南店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4062/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 神の倉店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1476/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 平手店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1484/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 天白植田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4767/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 岩田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4625/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 豊橋駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1398/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 柱店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4641/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 岡崎インター店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1198/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 岡崎南店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1193/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 一宮今伊勢店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1257/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 一宮バイパス店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1223/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 苅安賀店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4039/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 半田やなべ店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4051/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 春日井店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1128/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 豊川店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4061/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 豊川南大通店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4961/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 津島店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1246/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 豊田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4873/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 三河安城店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1201/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 西尾店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1214/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 三谷北店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4937/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 イオンモール常滑店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4023/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 江南店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1483/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 小牧二重堀店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1258/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 稲沢店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4766/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 東海店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4005/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 尾張旭三郷店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4045/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 三河高浜店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1226/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 愛知岩倉店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1200/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 豊明店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1206/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "GYOZA OHSHO プライムツリー赤池店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1469/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 長久手店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1120/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 東浦店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4975/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 高茶屋店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1177/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 津南店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1174/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 三重大前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1370/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 イオンタウン四日市泊店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4046/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 富州原店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4966/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 四日市インター店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4611/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 四日市ときわ店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1443/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 四日市ふれあいモール店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4004/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 四日市緑地店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1426/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 伊勢御薗店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1351/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 松阪店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1453/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 桑名星川店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4758/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 鈴鹿白子店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1409/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 鈴鹿中央店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1185/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 名張店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1158/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 亀山2号店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4789/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 伊賀上野店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1186/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 イオンモール東員店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4057/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 三重朝日店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1436/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 皇子山店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1375/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 堅田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1119/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 国道大津店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1092/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 瀬田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1178/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 膳所店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4511/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 彦根店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1080/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 長浜店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1108/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 近江八幡駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4619/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 国道近江八幡店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4659/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 近江大橋東店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1367/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 草津駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1016/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 国道草津店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1052/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 矢橋店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4904/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 守山北店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1195/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 栗東店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1097/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 コメリ水口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1448/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 野洲店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1361/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 三雲店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1110/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 八日市店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4981/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 日野店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4796/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 EXPASA（エクスパーサ）多賀店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1394/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 烏丸北大路店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1404/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 金閣寺店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1480/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 御薗橋店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1024/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 白梅町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1457/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 北白川店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1075/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 宝ヶ池店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1091/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 百万遍店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1441/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 洛北阪急スクエア店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1486/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "GYOZA OHSHO 烏丸御池店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1458/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 河原町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1017/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 三条店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1006/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 四条大宮店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1001/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 府庁前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1027/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 七条烏丸店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1005/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 上鳥羽店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1136/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 吉祥院八条通店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1482/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 太秦店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1014/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 梅津段町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1418/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 西院店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1019/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 西大路五条店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1045/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 花園店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1043/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 大手筋店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1012/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 国道大手筋店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1034/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 城南宮店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1026/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 醍醐店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4056/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 深草竹田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1446/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 桃山店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1129/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 京都東インター店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1184/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 椥ノ辻店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1020/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 山科駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1422/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 洛西芸大前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1245/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 JR福知山駅店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1335/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 福知山店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1197/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 西舞鶴店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4044/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 東舞鶴店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4802/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 綾部店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1465/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 国道大久保店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1098/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 槇島店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1051/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 亀岡店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1055/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 篠店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1357/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 国道171号店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1068/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 東向日店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1363/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 長岡天神店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1365/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 八幡店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1072/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 新田辺店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1191/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 峰山店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4009/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 与謝野店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4958/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 京橋駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1132/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 玉川店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4697/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 野田阪神店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1403/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 福島店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1077/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 西九条店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1405/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 大阪九条店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1252/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 信濃橋本町通り店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4055/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 弁天町市岡店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1467/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 泉尾店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4539/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 大正店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4696/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 上本町ハイハイタウン店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4019/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 玉造店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1354/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 鶴橋駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1278/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 寺田町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1360/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 天王寺店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1106/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 天王寺堀越店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1253/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 新世界店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1454/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 大国町難波中店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4037/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 難波西店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1065/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 日本橋でんでんタウン店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4874/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 歌島橋店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1424/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 塚本店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1310/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 淡路西口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1378/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 上新庄店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1408/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 今里店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1411/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 鶴橋東店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1346/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 緑橋店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4032/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 森ノ宮店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1384/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 巽店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1090/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 桃谷店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1242/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 赤川店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1353/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 鴫野店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4923/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 城東今福店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1466/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 関目店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1337/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 昭和町駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1461/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 西田辺店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1349/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 我孫子観音店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4914/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 長居店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1347/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 ジョイ・ナーホ針中野店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1479/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 岸の里店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1176/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 太子店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1452/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 十三店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1372/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 西中島店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1425/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 東三国店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4029/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 三国店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1343/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 鶴見緑地店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4026/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 放出駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1332/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 住之江駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1181/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 住之江店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4668/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 玉出店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1041/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 南港ポートタウン店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4915/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 喜連瓜破店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4058/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 出戸店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4977/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 平野駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1471/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 大阪駅前第3ビル店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1433/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 大阪駅前第2ビル店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1423/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 天四店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1277/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 天六店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1067/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 阪急東通り店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1070/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 南森町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1427/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 北浜道修町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4983/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 心斎橋店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1430/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 せんば南本町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4962/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 谷町八丁目店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1472/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 天満橋OMMビル店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4053/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 なんばグランド花月店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1481/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 堺東店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1358/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 三国ヶ丘駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1261/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 八田寺店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1279/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 深井店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1244/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 福田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1333/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 堺浜寺店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1155/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 泉ヶ丘店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1247/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 堺インター店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1228/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 トナリエ栂・美木多店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4041/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 堺市駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4553/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 中環金岡店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4010/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 美原南店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1407/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 岸和田南店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1318/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 国道岸和田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1216/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 ラパーク岸和田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4805/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 岡町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1241/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 空港線豊中店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1135/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 庄内駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1273/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 服部店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1111/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 阪急池田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1096/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 阪急石橋店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1102/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 関大前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1031/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 吹田春日店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1412/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 豊津店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4583/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 泉大津北店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1317/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 上牧店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1368/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 国道高槻店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1086/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 JR高槻店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4897/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 摂津富田駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1268/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 高槻市役所前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1118/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 阪急高槻店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4855/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 京阪守口市駅店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4887/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 千林店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1048/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 南寺方店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1374/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 守口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1141/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 楠葉店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1477/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 香里ヶ丘店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1383/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 長尾店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1450/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 枚方市駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1259/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 枚方店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1121/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 茨木店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1130/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 茨木松ヶ本店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1439/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 府道143号茨木島店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1475/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 アリオ八尾店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1455/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 河内山本駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1419/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 志紀駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4034/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 八尾沼店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4947/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 国道泉佐野店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1319/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 外環富田林店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4952/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 香里園駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1463/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 寝屋川市駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1265/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 寝屋川団地前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1364/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 寝屋川店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1104/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 河内長野店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4607/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 外環高向店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4919/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 河内松原店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4908/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 松原三宅店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1342/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 大東諸福店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1410/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 和泉中央店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1243/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 和泉府中店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1183/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 箕面店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1087/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 箕面半町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1122/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 国分駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1331/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 外環藤井寺店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1217/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 門真下島店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1429/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 門真店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4676/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 京阪大和田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1264/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 摂津鳥飼店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1380/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 千里丘店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4930/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 国道高石店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1316/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 藤井寺駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4036/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 河内花園駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1269/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 久宝寺店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1107/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 鴻池新田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1373/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 小阪店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4043/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 外環横小路店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1396/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 中央大通り長田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1387/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 中環巨摩橋店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1275/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 長瀬店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1044/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 瓢箪山駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4694/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 布施店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1037/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 箕輪口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1232/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 八戸ノ里店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1123/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 若江岩田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1192/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 上田原店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1113/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 四條畷駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1270/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 亀の甲店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4879/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 阪南箱作店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1444/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 泉南熊取店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1256/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 神戸深江浜店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4979/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 御影店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1485/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 新開地店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1356/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 兵庫駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4699/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 菅原通り店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1209/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 板宿店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1064/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 白川台店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1124/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 須磨店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1371/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 名谷店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1230/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 レバンテ垂水店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1237/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 鈴蘭台店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1114/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 西鈴蘭台店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1272/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 生田川店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1196/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 春日野道店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4720/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 三宮下山手通り店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1234/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 三ノ宮東店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1188/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 元町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1145/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 大蔵谷店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4609/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 押部谷店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1208/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 学園都市店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4779/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 玉津店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1355/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 プレンティ西神中央店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1470/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 網干店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4788/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 市川橋店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4595/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 香寺店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1260/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 田寺店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4884/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 中地店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4541/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 姫路駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4617/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 姫路南条店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4047/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 ビエラ姫路駅東口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4956/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 尼崎インター店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1395/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 尼崎三和店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1042/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 尼崎西店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1140/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 JR尼崎駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4060/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 園田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4054/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 阪神尼崎店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1038/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 武庫之荘店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1081/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 明石大久保店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4798/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 明石店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1085/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 明石森田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4950/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 西明石店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4973/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 今津店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4548/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 鳴尾店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4048/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 西宮えびす前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4049/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 西宮北インター店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1159/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 西宮北口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1073/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 ビエラ甲子園口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4059/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "GYOZA OHSHO 阪神芦屋店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1468/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 尼宝線寺本店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1202/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 伊丹緑ヶ丘店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1359/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 豊岡正法寺店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4918/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 豊岡店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4756/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 加古川店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4896/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 加古川平野店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4965/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 国道加古川店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1420/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 東加古川店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4634/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 宝塚インター店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1207/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 三木店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4880/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 高砂店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4605/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 宝殿店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1341/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 川西店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1442/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 多田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1116/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 新三田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1334/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 篠山店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4022/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 氷上店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1381/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 淡路島三原店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1460/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 和田山店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4899/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 滝野社店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1267/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 たつの店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4928/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 播磨町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4866/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 福崎インター店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1227/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 国道太子店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4662/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 香住店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4052/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 押熊店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1399/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 近鉄奈良駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1459/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 富雄店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1233/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 奈良柏木店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1194/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 奈良三条店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1393/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 奈良東九条店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1271/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 奈良都跡店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1219/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 針インター店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4932/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 天理荒蒔町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1386/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 天理インター店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1415/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 橿原神宮店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1438/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 奈良橿原店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4953/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 奈良桜井店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1397/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 香芝店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1464/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 大和新庄店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1151/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 王寺店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1157/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 奈良広陵店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1421/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 海南店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1388/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 紀三井寺店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1449/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 国体道路店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1402/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 延時店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1142/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 和歌山駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4675/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 和歌山堀止店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1254/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 橋本店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1389/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 御坊店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4963/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 紀伊田辺店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1392/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 和歌山新宮店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4971/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 岩出中島店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1406/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 岩出東店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1213/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 鳥取安長店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4753/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 バイパス宮長店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4946/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 倉吉パープルタウン店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4888/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 岡山駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4007/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 岡山京山店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4823/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 岡山下中野店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4667/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 岡山平井店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4931/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 東岡山店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1456/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 イオンタウン水島店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4003/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 川崎医大前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4909/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 笹沖店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4892/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 津山店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1435/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 広島八丁堀店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3053/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 広島袋町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3062/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 安東店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3041/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 福山蔵王店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4732/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 福山松永店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4912/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 西条店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3037/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 八本松店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3044/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 廿日市店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3035/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 海田店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/6519/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 パルティ・フジ坂店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/6531/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 下関長府マリン店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/6529/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 山口小郡店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3046/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 山口店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3048/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 岩国店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3047/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 徳島駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1391/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 徳島沖浜店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4038/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 鳴門店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1478/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 小松島店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4944/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 徳島石井店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4948/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 高松春日店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1385/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 高松店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1248/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 高松南新町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1434/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 高松レインボーロード店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4925/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 丸亀店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4940/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 善通寺店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4976/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 綾川店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/1447/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 パルティ・フジ衣山店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4018/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 松山南久米店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4014/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 高知駅店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4050/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 高知御座店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/4970/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 シーサイド門司店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3036/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 3号小倉三萩野店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3065/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 チャチャタウン小倉店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3072/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 サンリブシティ小倉店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3067/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 則松店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3303/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 二又瀬店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3016/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 月隈店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3040/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 博多駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3055/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 ブランチ博多店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3071/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 野間店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/6516/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 原店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3052/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 久留米インター店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3045/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 諏訪野店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3024/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 200号飯塚西町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3066/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 大川榎津店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/6521/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 イオンなかま店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3070/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 春日店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3007/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 サンリブくりえいと宗像店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3068/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 筑紫野店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3032/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 国道202号糸島店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3069/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 新宮店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3030/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 佐賀夢咲店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3054/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 みやき店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3061/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 浜の町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3058/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 佐世保四ヶ町店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3056/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 諫早店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3059/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 大村店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3057/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 下通店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3051/",
+      "facilities": []
+    },
+    {
+      "name": "餃子の王将 西原店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3039/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 熊本駅前店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/6523/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 熊本近見店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3050/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "餃子の王将 ゆめタウンはません店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3064/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "餃子の王将 コムボックス大分店",
+      "url": "https://map.ohsho.co.jp/b/ohsho/info/3060/",
+      "facilities": [
+        "parking"
+      ]
+    }
+  ]
+}

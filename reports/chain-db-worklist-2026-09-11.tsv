@@ -1,124 +1,124 @@
 chain_key	chain_name	koryaku_slug	official_url	facility_key	facility_label	article_hint	value	note	source_url
-ajinomingei	味	ajino-mingei-kodzure-koryaku	https://www.ajinomingei.com/	stepFree	入口の段差なし	記事に記述あり			
-ajinomingei	味	ajino-mingei-kodzure-koryaku	https://www.ajinomingei.com/	zashiki	座敷席	記事に記述あり			
-ajinomingei	味	ajino-mingei-kodzure-koryaku	https://www.ajinomingei.com/	boxSeat	ボックス席	記事に記述あり			
-ajinomingei	味	ajino-mingei-kodzure-koryaku	https://www.ajinomingei.com/	kidsChair	キッズチェア	記事に記述あり			
-ajinomingei	味	ajino-mingei-kodzure-koryaku	https://www.ajinomingei.com/	kidsMenu	キッズメニュー	記事に記述あり			
-ajinomingei	味	ajino-mingei-kodzure-koryaku	https://www.ajinomingei.com/	kidsCutlery	子供用カトラリー	記事に記述あり			
-ajinomingei	味	ajino-mingei-kodzure-koryaku	https://www.ajinomingei.com/	diaperTable	おむつ替え台	記事に記述あり			
-ajinomingei	味	ajino-mingei-kodzure-koryaku	https://www.ajinomingei.com/	nursingRoom	授乳室	記事に記述あり			
-ajinomingei	味	ajino-mingei-kodzure-koryaku	https://www.ajinomingei.com/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
-ajinomingei	味	ajino-mingei-kodzure-koryaku	https://www.ajinomingei.com/	toriwake	取り分けOK	記事に記述あり			
-ajinomingei	味	ajino-mingei-kodzure-koryaku	https://www.ajinomingei.com/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-ajinomingei	味	ajino-mingei-kodzure-koryaku	https://www.ajinomingei.com/	allergenInfo	アレルゲン表示	記事に記述あり			
+ajinomingei	味の民芸	ajino-mingei-kodzure-koryaku	https://www.ajino-mingei.co.jp/	stepFree	入口の段差なし	記事に記述あり			
+ajinomingei	味の民芸	ajino-mingei-kodzure-koryaku	https://www.ajino-mingei.co.jp/	zashiki	座敷席	記事に記述あり			
+ajinomingei	味の民芸	ajino-mingei-kodzure-koryaku	https://www.ajino-mingei.co.jp/	boxSeat	ボックス席	記事に記述あり			
+ajinomingei	味の民芸	ajino-mingei-kodzure-koryaku	https://www.ajino-mingei.co.jp/	kidsChair	キッズチェア	記事に記述あり			
+ajinomingei	味の民芸	ajino-mingei-kodzure-koryaku	https://www.ajino-mingei.co.jp/	kidsMenu	キッズメニュー	記事に記述あり	yes	アレルゲン情報ページに「お子様松花堂御膳」を掲載	https://www.ajino-mingei.co.jp/menu/allergic/
+ajinomingei	味の民芸	ajino-mingei-kodzure-koryaku	https://www.ajino-mingei.co.jp/	kidsCutlery	子供用カトラリー	記事に記述あり			
+ajinomingei	味の民芸	ajino-mingei-kodzure-koryaku	https://www.ajino-mingei.co.jp/	diaperTable	おむつ替え台	記事に記述あり			
+ajinomingei	味の民芸	ajino-mingei-kodzure-koryaku	https://www.ajino-mingei.co.jp/	nursingRoom	授乳室	記事に記述あり			
+ajinomingei	味の民芸	ajino-mingei-kodzure-koryaku	https://www.ajino-mingei.co.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
+ajinomingei	味の民芸	ajino-mingei-kodzure-koryaku	https://www.ajino-mingei.co.jp/	toriwake	取り分けOK	記事に記述あり			
+ajinomingei	味の民芸	ajino-mingei-kodzure-koryaku	https://www.ajino-mingei.co.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
+ajinomingei	味の民芸	ajino-mingei-kodzure-koryaku	https://www.ajino-mingei.co.jp/	allergenInfo	アレルゲン表示	記事に記述あり	yes	公式サイトのアレルゲン情報ページ	https://www.ajino-mingei.co.jp/menu/allergic/
 amiyakitei	あみやき亭	amiyakitei-kodomo-ryokin	https://amiyakitei.jp/	stepFree	入口の段差なし				
-amiyakitei	あみやき亭	amiyakitei-kodomo-ryokin	https://amiyakitei.jp/	zashiki	座敷席				
+amiyakitei	あみやき亭	amiyakitei-kodomo-ryokin	https://amiyakitei.jp/	zashiki	座敷席		yes	掘りごたつ席・お座敷席を各店で用意（公式「あみやき亭の魅力」）	https://amiyakitei.jp/concept/
 amiyakitei	あみやき亭	amiyakitei-kodomo-ryokin	https://amiyakitei.jp/	boxSeat	ボックス席				
 amiyakitei	あみやき亭	amiyakitei-kodomo-ryokin	https://amiyakitei.jp/	kidsChair	キッズチェア				
-amiyakitei	あみやき亭	amiyakitei-kodomo-ryokin	https://amiyakitei.jp/	kidsMenu	キッズメニュー	記事に記述あり			
+amiyakitei	あみやき亭	amiyakitei-kodomo-ryokin	https://amiyakitei.jp/	kidsMenu	キッズメニュー	記事に記述あり	yes	お子様フルセット・お子様カレー等を掲載（一部店舗はメニュー構成が異なる旨の注記あり）	https://amiyakitei.jp/menu/
 amiyakitei	あみやき亭	amiyakitei-kodomo-ryokin	https://amiyakitei.jp/	kidsCutlery	子供用カトラリー				
 amiyakitei	あみやき亭	amiyakitei-kodomo-ryokin	https://amiyakitei.jp/	diaperTable	おむつ替え台				
 amiyakitei	あみやき亭	amiyakitei-kodomo-ryokin	https://amiyakitei.jp/	nursingRoom	授乳室				
 amiyakitei	あみやき亭	amiyakitei-kodomo-ryokin	https://amiyakitei.jp/	babyFoodBringIn	離乳食持ち込み				
 amiyakitei	あみやき亭	amiyakitei-kodomo-ryokin	https://amiyakitei.jp/	toriwake	取り分けOK	記事に記述あり			
 amiyakitei	あみやき亭	amiyakitei-kodomo-ryokin	https://amiyakitei.jp/	strollerToSeat	ベビーカーで席まで				
-amiyakitei	あみやき亭	amiyakitei-kodomo-ryokin	https://amiyakitei.jp/	allergenInfo	アレルゲン表示				
-anrakutei	安楽亭	anrakutei-kodzure-koryaku	https://anrakutei.jp/	stepFree	入口の段差なし	記事に記述あり			
+amiyakitei	あみやき亭	amiyakitei-kodomo-ryokin	https://amiyakitei.jp/	allergenInfo	アレルゲン表示		yes	アレルギー成分一覧表（PDF）	https://amiyakitei.jp/pdf/allergy.pdf
+anrakutei	安楽亭	anrakutei-kodzure-koryaku	https://anrakutei.jp/	stepFree	入口の段差なし	記事に記述あり	partial	店舗による（公式店舗検索で入口スロープ表示は129店中37店）	https://anrakutei.jp/map/result/
 anrakutei	安楽亭	anrakutei-kodzure-koryaku	https://anrakutei.jp/	zashiki	座敷席	記事に記述あり			
 anrakutei	安楽亭	anrakutei-kodzure-koryaku	https://anrakutei.jp/	boxSeat	ボックス席	記事に記述あり			
 anrakutei	安楽亭	anrakutei-kodzure-koryaku	https://anrakutei.jp/	kidsChair	キッズチェア	記事に記述あり			
-anrakutei	安楽亭	anrakutei-kodzure-koryaku	https://anrakutei.jp/	kidsMenu	キッズメニュー	記事に記述あり			
+anrakutei	安楽亭	anrakutei-kodzure-koryaku	https://anrakutei.jp/	kidsMenu	キッズメニュー	記事に記述あり	yes	小学生以下のお子様限定メニュー	https://anrakutei.jp/menucate/kidsmenu/
 anrakutei	安楽亭	anrakutei-kodzure-koryaku	https://anrakutei.jp/	kidsCutlery	子供用カトラリー	記事に記述あり			
-anrakutei	安楽亭	anrakutei-kodzure-koryaku	https://anrakutei.jp/	diaperTable	おむつ替え台	記事に記述あり			
+anrakutei	安楽亭	anrakutei-kodzure-koryaku	https://anrakutei.jp/	diaperTable	おむつ替え台	記事に記述あり	partial	店舗による（公式店舗検索でおむつ交換台表示は129店中45店）	https://anrakutei.jp/map/result/
 anrakutei	安楽亭	anrakutei-kodzure-koryaku	https://anrakutei.jp/	nursingRoom	授乳室	記事に記述あり			
 anrakutei	安楽亭	anrakutei-kodzure-koryaku	https://anrakutei.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
 anrakutei	安楽亭	anrakutei-kodzure-koryaku	https://anrakutei.jp/	toriwake	取り分けOK	記事に記述あり			
 anrakutei	安楽亭	anrakutei-kodzure-koryaku	https://anrakutei.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-anrakutei	安楽亭	anrakutei-kodzure-koryaku	https://anrakutei.jp/	allergenInfo	アレルゲン表示	記事に記述あり			
-bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	https://bandotaro.co.jp/	stepFree	入口の段差なし	記事に記述あり			
-bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	https://bandotaro.co.jp/	zashiki	座敷席	記事に記述あり			
-bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	https://bandotaro.co.jp/	boxSeat	ボックス席				
-bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	https://bandotaro.co.jp/	kidsChair	キッズチェア	記事に記述あり			
-bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	https://bandotaro.co.jp/	kidsMenu	キッズメニュー	記事に記述あり			
-bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	https://bandotaro.co.jp/	kidsCutlery	子供用カトラリー	記事に記述あり			
-bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	https://bandotaro.co.jp/	diaperTable	おむつ替え台	記事に記述あり			
-bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	https://bandotaro.co.jp/	nursingRoom	授乳室	記事に記述あり			
-bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	https://bandotaro.co.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
-bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	https://bandotaro.co.jp/	toriwake	取り分けOK	記事に記述あり			
-bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	https://bandotaro.co.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	https://bandotaro.co.jp/	allergenInfo	アレルゲン表示				
-choushimaru	すし銚子丸	choushimaru-kodzure-koryaku	https://www.choushimaru.co.jp/	stepFree	入口の段差なし	記事に記述あり			
+anrakutei	安楽亭	anrakutei-kodzure-koryaku	https://anrakutei.jp/	allergenInfo	アレルゲン表示	記事に記述あり	yes	アレルゲン・栄養成分一覧表	https://anrakutei.jp/allergy/
+bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	http://bandotaro.co.jp/	stepFree	入口の段差なし	記事に記述あり			
+bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	http://bandotaro.co.jp/	zashiki	座敷席	記事に記述あり	partial	店舗による（公式店舗検索で「座敷」表示は44店中42店）	https://shop.bandotaro.co.jp/
+bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	http://bandotaro.co.jp/	boxSeat	ボックス席				
+bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	http://bandotaro.co.jp/	kidsChair	キッズチェア	記事に記述あり	yes	公式店舗検索の設備表示で全44店に「お子様椅子」	https://shop.bandotaro.co.jp/
+bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	http://bandotaro.co.jp/	kidsMenu	キッズメニュー	記事に記述あり	yes	公式店舗検索の設備表示で全44店に「お子様メニュー」	https://shop.bandotaro.co.jp/
+bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	http://bandotaro.co.jp/	kidsCutlery	子供用カトラリー	記事に記述あり			
+bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	http://bandotaro.co.jp/	diaperTable	おむつ替え台	記事に記述あり	partial	店舗による（公式店舗検索で「オムツ替えシート」表示は44店中41店）	https://shop.bandotaro.co.jp/
+bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	http://bandotaro.co.jp/	nursingRoom	授乳室	記事に記述あり			
+bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	http://bandotaro.co.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
+bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	http://bandotaro.co.jp/	toriwake	取り分けOK	記事に記述あり			
+bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	http://bandotaro.co.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
+bandotaro	ばんどう太郎	bandotaro-kodzure-koryaku	http://bandotaro.co.jp/	allergenInfo	アレルゲン表示		yes	特定原材料28品目をメニューごとに調査した一覧	http://bandotaro.co.jp/allergie/
+choushimaru	すし銚子丸	choushimaru-kodzure-koryaku	https://www.choushimaru.co.jp/	stepFree	入口の段差なし	記事に記述あり	partial	店舗による（公式店舗ページでスロープ表示は92店中45店）	https://stores.choushimaru.co.jp/
 choushimaru	すし銚子丸	choushimaru-kodzure-koryaku	https://www.choushimaru.co.jp/	zashiki	座敷席	記事に記述あり			
-choushimaru	すし銚子丸	choushimaru-kodzure-koryaku	https://www.choushimaru.co.jp/	boxSeat	ボックス席	記事に記述あり			
+choushimaru	すし銚子丸	choushimaru-kodzure-koryaku	https://www.choushimaru.co.jp/	boxSeat	ボックス席	記事に記述あり	partial	一部店舗のみ（佐倉店の公式店舗ページにファミリーシート（BOX席）表示）	https://stores.choushimaru.co.jp/138
 choushimaru	すし銚子丸	choushimaru-kodzure-koryaku	https://www.choushimaru.co.jp/	kidsChair	キッズチェア	記事に記述あり			
-choushimaru	すし銚子丸	choushimaru-kodzure-koryaku	https://www.choushimaru.co.jp/	kidsMenu	キッズメニュー	記事に記述あり			
+choushimaru	すし銚子丸	choushimaru-kodzure-koryaku	https://www.choushimaru.co.jp/	kidsMenu	キッズメニュー	記事に記述あり	yes	カロリー・アレルゲン一覧表にキッズ5カンにぎり・おこさまセットを掲載	https://www.choushimaru.co.jp/pdf/cho_calorie.pdf
 choushimaru	すし銚子丸	choushimaru-kodzure-koryaku	https://www.choushimaru.co.jp/	kidsCutlery	子供用カトラリー	記事に記述あり			
 choushimaru	すし銚子丸	choushimaru-kodzure-koryaku	https://www.choushimaru.co.jp/	diaperTable	おむつ替え台	記事に記述あり			
 choushimaru	すし銚子丸	choushimaru-kodzure-koryaku	https://www.choushimaru.co.jp/	nursingRoom	授乳室	記事に記述あり			
 choushimaru	すし銚子丸	choushimaru-kodzure-koryaku	https://www.choushimaru.co.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
 choushimaru	すし銚子丸	choushimaru-kodzure-koryaku	https://www.choushimaru.co.jp/	toriwake	取り分けOK	記事に記述あり			
 choushimaru	すし銚子丸	choushimaru-kodzure-koryaku	https://www.choushimaru.co.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-choushimaru	すし銚子丸	choushimaru-kodzure-koryaku	https://www.choushimaru.co.jp/	allergenInfo	アレルゲン表示				
-doutor	ドトール	doutor-kodzure-koryaku	https://www.doutor.co.jp/	stepFree	入口の段差なし	記事に記述あり			
-doutor	ドトール	doutor-kodzure-koryaku	https://www.doutor.co.jp/	zashiki	座敷席				
-doutor	ドトール	doutor-kodzure-koryaku	https://www.doutor.co.jp/	boxSeat	ボックス席				
-doutor	ドトール	doutor-kodzure-koryaku	https://www.doutor.co.jp/	kidsChair	キッズチェア				
-doutor	ドトール	doutor-kodzure-koryaku	https://www.doutor.co.jp/	kidsMenu	キッズメニュー	記事に記述あり			
-doutor	ドトール	doutor-kodzure-koryaku	https://www.doutor.co.jp/	kidsCutlery	子供用カトラリー				
-doutor	ドトール	doutor-kodzure-koryaku	https://www.doutor.co.jp/	diaperTable	おむつ替え台	記事に記述あり			
-doutor	ドトール	doutor-kodzure-koryaku	https://www.doutor.co.jp/	nursingRoom	授乳室	記事に記述あり			
-doutor	ドトール	doutor-kodzure-koryaku	https://www.doutor.co.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
-doutor	ドトール	doutor-kodzure-koryaku	https://www.doutor.co.jp/	toriwake	取り分けOK	記事に記述あり			
-doutor	ドトール	doutor-kodzure-koryaku	https://www.doutor.co.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-doutor	ドトール	doutor-kodzure-koryaku	https://www.doutor.co.jp/	allergenInfo	アレルゲン表示	記事に記述あり			
-flyinggarden	フライングガーデン	flying-garden-kodzure-koryaku	https://www.fgarden.co.jp/	stepFree	入口の段差なし	記事に記述あり			
+choushimaru	すし銚子丸	choushimaru-kodzure-koryaku	https://www.choushimaru.co.jp/	allergenInfo	アレルゲン表示		yes	カロリー・アレルゲン一覧表（28品目・PDF）	https://www.choushimaru.co.jp/pdf/cho_calorie.pdf
+doutor	ドトールコーヒーショップ	doutor-kodzure-koryaku	https://www.doutor.co.jp/dcs/	stepFree	入口の段差なし	記事に記述あり			
+doutor	ドトールコーヒーショップ	doutor-kodzure-koryaku	https://www.doutor.co.jp/dcs/	zashiki	座敷席				
+doutor	ドトールコーヒーショップ	doutor-kodzure-koryaku	https://www.doutor.co.jp/dcs/	boxSeat	ボックス席				
+doutor	ドトールコーヒーショップ	doutor-kodzure-koryaku	https://www.doutor.co.jp/dcs/	kidsChair	キッズチェア				
+doutor	ドトールコーヒーショップ	doutor-kodzure-koryaku	https://www.doutor.co.jp/dcs/	kidsMenu	キッズメニュー	記事に記述あり			
+doutor	ドトールコーヒーショップ	doutor-kodzure-koryaku	https://www.doutor.co.jp/dcs/	kidsCutlery	子供用カトラリー				
+doutor	ドトールコーヒーショップ	doutor-kodzure-koryaku	https://www.doutor.co.jp/dcs/	diaperTable	おむつ替え台	記事に記述あり			
+doutor	ドトールコーヒーショップ	doutor-kodzure-koryaku	https://www.doutor.co.jp/dcs/	nursingRoom	授乳室	記事に記述あり			
+doutor	ドトールコーヒーショップ	doutor-kodzure-koryaku	https://www.doutor.co.jp/dcs/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
+doutor	ドトールコーヒーショップ	doutor-kodzure-koryaku	https://www.doutor.co.jp/dcs/	toriwake	取り分けOK	記事に記述あり			
+doutor	ドトールコーヒーショップ	doutor-kodzure-koryaku	https://www.doutor.co.jp/dcs/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
+doutor	ドトールコーヒーショップ	doutor-kodzure-koryaku	https://www.doutor.co.jp/dcs/	allergenInfo	アレルゲン表示	記事に記述あり	yes	アレルギー情報・栄養成分情報検索サイト	https://allergy.doutor.co.jp/
+flyinggarden	フライングガーデン	flying-garden-kodzure-koryaku	https://www.fgarden.co.jp/	stepFree	入口の段差なし	記事に記述あり	partial	店舗による（公式店舗案内でスロープ/段差なし表示は55店中54店）	https://www.fgarden.co.jp/restaurant/index.php
 flyinggarden	フライングガーデン	flying-garden-kodzure-koryaku	https://www.fgarden.co.jp/	zashiki	座敷席	記事に記述あり			
 flyinggarden	フライングガーデン	flying-garden-kodzure-koryaku	https://www.fgarden.co.jp/	boxSeat	ボックス席	記事に記述あり			
 flyinggarden	フライングガーデン	flying-garden-kodzure-koryaku	https://www.fgarden.co.jp/	kidsChair	キッズチェア	記事に記述あり			
-flyinggarden	フライングガーデン	flying-garden-kodzure-koryaku	https://www.fgarden.co.jp/	kidsMenu	キッズメニュー	記事に記述あり			
+flyinggarden	フライングガーデン	flying-garden-kodzure-koryaku	https://www.fgarden.co.jp/	kidsMenu	キッズメニュー	記事に記述あり	yes	メニューページにキッズメニュー（PDF）を掲載	https://www.fgarden.co.jp/menu/index.php
 flyinggarden	フライングガーデン	flying-garden-kodzure-koryaku	https://www.fgarden.co.jp/	kidsCutlery	子供用カトラリー	記事に記述あり			
-flyinggarden	フライングガーデン	flying-garden-kodzure-koryaku	https://www.fgarden.co.jp/	diaperTable	おむつ替え台	記事に記述あり			
+flyinggarden	フライングガーデン	flying-garden-kodzure-koryaku	https://www.fgarden.co.jp/	diaperTable	おむつ替え台	記事に記述あり	yes	公式店舗案内で全55店におむつ交換ベッド表示（女性用トイレ内）	https://www.fgarden.co.jp/restaurant/index.php
 flyinggarden	フライングガーデン	flying-garden-kodzure-koryaku	https://www.fgarden.co.jp/	nursingRoom	授乳室	記事に記述あり			
 flyinggarden	フライングガーデン	flying-garden-kodzure-koryaku	https://www.fgarden.co.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
 flyinggarden	フライングガーデン	flying-garden-kodzure-koryaku	https://www.fgarden.co.jp/	toriwake	取り分けOK	記事に記述あり			
 flyinggarden	フライングガーデン	flying-garden-kodzure-koryaku	https://www.fgarden.co.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-flyinggarden	フライングガーデン	flying-garden-kodzure-koryaku	https://www.fgarden.co.jp/	allergenInfo	アレルゲン表示	記事に記述あり			
-gattensushi	が	gatten-sushi-kodzure-koryaku	https://www.rdc.co.jp/	stepFree	入口の段差なし	記事に記述あり			
-gattensushi	が	gatten-sushi-kodzure-koryaku	https://www.rdc.co.jp/	zashiki	座敷席	記事に記述あり			
-gattensushi	が	gatten-sushi-kodzure-koryaku	https://www.rdc.co.jp/	boxSeat	ボックス席	記事に記述あり			
-gattensushi	が	gatten-sushi-kodzure-koryaku	https://www.rdc.co.jp/	kidsChair	キッズチェア	記事に記述あり			
-gattensushi	が	gatten-sushi-kodzure-koryaku	https://www.rdc.co.jp/	kidsMenu	キッズメニュー	記事に記述あり			
-gattensushi	が	gatten-sushi-kodzure-koryaku	https://www.rdc.co.jp/	kidsCutlery	子供用カトラリー				
-gattensushi	が	gatten-sushi-kodzure-koryaku	https://www.rdc.co.jp/	diaperTable	おむつ替え台	記事に記述あり			
-gattensushi	が	gatten-sushi-kodzure-koryaku	https://www.rdc.co.jp/	nursingRoom	授乳室	記事に記述あり			
-gattensushi	が	gatten-sushi-kodzure-koryaku	https://www.rdc.co.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
-gattensushi	が	gatten-sushi-kodzure-koryaku	https://www.rdc.co.jp/	toriwake	取り分けOK	記事に記述あり			
-gattensushi	が	gatten-sushi-kodzure-koryaku	https://www.rdc.co.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-gattensushi	が	gatten-sushi-kodzure-koryaku	https://www.rdc.co.jp/	allergenInfo	アレルゲン表示				
-hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku		stepFree	入口の段差なし				
-hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku		zashiki	座敷席	記事に記述あり			
-hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku		boxSeat	ボックス席				
-hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku		kidsChair	キッズチェア	記事に記述あり			
-hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku		kidsMenu	キッズメニュー				
-hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku		kidsCutlery	子供用カトラリー				
-hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku		diaperTable	おむつ替え台	記事に記述あり			
-hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku		nursingRoom	授乳室	記事に記述あり			
-hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku		babyFoodBringIn	離乳食持ち込み	記事に記述あり			
-hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku		toriwake	取り分けOK	記事に記述あり			
-hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku		strollerToSeat	ベビーカーで席まで	記事に記述あり			
-hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku		allergenInfo	アレルゲン表示	記事に記述あり			
+flyinggarden	フライングガーデン	flying-garden-kodzure-koryaku	https://www.fgarden.co.jp/	allergenInfo	アレルゲン表示	記事に記述あり	yes	メニューページにアレルゲン一覧（PDF）を掲載	https://www.fgarden.co.jp/menu/index.php
+gattensushi	がってん寿司	gatten-sushi-kodzure-koryaku	https://www.rdcgroup.co.jp/gattenbrand/gatten/	stepFree	入口の段差なし	記事に記述あり			
+gattensushi	がってん寿司	gatten-sushi-kodzure-koryaku	https://www.rdcgroup.co.jp/gattenbrand/gatten/	zashiki	座敷席	記事に記述あり			
+gattensushi	がってん寿司	gatten-sushi-kodzure-koryaku	https://www.rdcgroup.co.jp/gattenbrand/gatten/	boxSeat	ボックス席	記事に記述あり			
+gattensushi	がってん寿司	gatten-sushi-kodzure-koryaku	https://www.rdcgroup.co.jp/gattenbrand/gatten/	kidsChair	キッズチェア	記事に記述あり			
+gattensushi	がってん寿司	gatten-sushi-kodzure-koryaku	https://www.rdcgroup.co.jp/gattenbrand/gatten/	kidsMenu	キッズメニュー	記事に記述あり			
+gattensushi	がってん寿司	gatten-sushi-kodzure-koryaku	https://www.rdcgroup.co.jp/gattenbrand/gatten/	kidsCutlery	子供用カトラリー				
+gattensushi	がってん寿司	gatten-sushi-kodzure-koryaku	https://www.rdcgroup.co.jp/gattenbrand/gatten/	diaperTable	おむつ替え台	記事に記述あり			
+gattensushi	がってん寿司	gatten-sushi-kodzure-koryaku	https://www.rdcgroup.co.jp/gattenbrand/gatten/	nursingRoom	授乳室	記事に記述あり			
+gattensushi	がってん寿司	gatten-sushi-kodzure-koryaku	https://www.rdcgroup.co.jp/gattenbrand/gatten/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
+gattensushi	がってん寿司	gatten-sushi-kodzure-koryaku	https://www.rdcgroup.co.jp/gattenbrand/gatten/	toriwake	取り分けOK	記事に記述あり			
+gattensushi	がってん寿司	gatten-sushi-kodzure-koryaku	https://www.rdcgroup.co.jp/gattenbrand/gatten/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
+gattensushi	がってん寿司	gatten-sushi-kodzure-koryaku	https://www.rdcgroup.co.jp/gattenbrand/gatten/	allergenInfo	アレルゲン表示				
+hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku	https://www.hanayayohei.co.jp/	stepFree	入口の段差なし		partial	店舗による（公式店舗検索で「スロープ／エレベーター あり」は33店中3店）	https://maps.hanayayohei.co.jp/jp/index.html
+hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku	https://www.hanayayohei.co.jp/	zashiki	座敷席	記事に記述あり	yes	公式FAQ「お座敷はございます。ご予約いただく事も可能です。」	https://www.hanayayohei.co.jp/faq/
+hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku	https://www.hanayayohei.co.jp/	boxSeat	ボックス席				
+hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku	https://www.hanayayohei.co.jp/	kidsChair	キッズチェア	記事に記述あり			
+hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku	https://www.hanayayohei.co.jp/	kidsMenu	キッズメニュー		yes		https://www.hanayayohei.co.jp/menu_hanaya/okosama.html
+hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku	https://www.hanayayohei.co.jp/	kidsCutlery	子供用カトラリー				
+hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku	https://www.hanayayohei.co.jp/	diaperTable	おむつ替え台	記事に記述あり			
+hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku	https://www.hanayayohei.co.jp/	nursingRoom	授乳室	記事に記述あり			
+hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku	https://www.hanayayohei.co.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
+hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku	https://www.hanayayohei.co.jp/	toriwake	取り分けOK	記事に記述あり			
+hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku	https://www.hanayayohei.co.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
+hanayayohei	華屋与兵衛	hanaya-yohei-kodzure-koryaku	https://www.hanayayohei.co.jp/	allergenInfo	アレルゲン表示	記事に記述あり	yes	メニューごとのアレルゲン28品目一覧	https://www.hanayayohei.co.jp/allergen/
 hidakaya	日高屋	hidakaya-kodzure-koryaku	https://hidakaya.hiday.co.jp/	stepFree	入口の段差なし				
 hidakaya	日高屋	hidakaya-kodzure-koryaku	https://hidakaya.hiday.co.jp/	zashiki	座敷席	記事に記述あり			
 hidakaya	日高屋	hidakaya-kodzure-koryaku	https://hidakaya.hiday.co.jp/	boxSeat	ボックス席				
 hidakaya	日高屋	hidakaya-kodzure-koryaku	https://hidakaya.hiday.co.jp/	kidsChair	キッズチェア	記事に記述あり			
-hidakaya	日高屋	hidakaya-kodzure-koryaku	https://hidakaya.hiday.co.jp/	kidsMenu	キッズメニュー	記事に記述あり			
+hidakaya	日高屋	hidakaya-kodzure-koryaku	https://hidakaya.hiday.co.jp/	kidsMenu	キッズメニュー	記事に記述あり	partial	一部店舗のみ（お子さまセット【店舗限定】・12歳以下）	https://hidakaya.hiday.co.jp/hits/ja/menu/1/detail/139.html
 hidakaya	日高屋	hidakaya-kodzure-koryaku	https://hidakaya.hiday.co.jp/	kidsCutlery	子供用カトラリー	記事に記述あり			
 hidakaya	日高屋	hidakaya-kodzure-koryaku	https://hidakaya.hiday.co.jp/	diaperTable	おむつ替え台	記事に記述あり			
 hidakaya	日高屋	hidakaya-kodzure-koryaku	https://hidakaya.hiday.co.jp/	nursingRoom	授乳室	記事に記述あり			
 hidakaya	日高屋	hidakaya-kodzure-koryaku	https://hidakaya.hiday.co.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
 hidakaya	日高屋	hidakaya-kodzure-koryaku	https://hidakaya.hiday.co.jp/	toriwake	取り分けOK	記事に記述あり			
 hidakaya	日高屋	hidakaya-kodzure-koryaku	https://hidakaya.hiday.co.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-hidakaya	日高屋	hidakaya-kodzure-koryaku	https://hidakaya.hiday.co.jp/	allergenInfo	アレルゲン表示	記事に記述あり			
+hidakaya	日高屋	hidakaya-kodzure-koryaku	https://hidakaya.hiday.co.jp/	allergenInfo	アレルゲン表示	記事に記述あり	yes		https://hidakaya.hiday.co.jp/hits/ja/menu/allergy.html
 hottomotto	ほっともっと	hottomotto-kodzure-koryaku	https://www.hottomotto.com/	stepFree	入口の段差なし				
 hottomotto	ほっともっと	hottomotto-kodzure-koryaku	https://www.hottomotto.com/	zashiki	座敷席				
 hottomotto	ほっともっと	hottomotto-kodzure-koryaku	https://www.hottomotto.com/	boxSeat	ボックス席				
@@ -130,35 +130,35 @@ hottomotto	ほっともっと	hottomotto-kodzure-koryaku	https://www.hottomotto.
 hottomotto	ほっともっと	hottomotto-kodzure-koryaku	https://www.hottomotto.com/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
 hottomotto	ほっともっと	hottomotto-kodzure-koryaku	https://www.hottomotto.com/	toriwake	取り分けOK	記事に記述あり			
 hottomotto	ほっともっと	hottomotto-kodzure-koryaku	https://www.hottomotto.com/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-hottomotto	ほっともっと	hottomotto-kodzure-koryaku	https://www.hottomotto.com/	allergenInfo	アレルゲン表示	記事に記述あり			
+hottomotto	ほっともっと	hottomotto-kodzure-koryaku	https://www.hottomotto.com/	allergenInfo	アレルゲン表示	記事に記述あり	yes	各メニューページでアレルギー・原産国・栄養成分を確認できる（公式FAQ）	https://www.hottomotto.com/qa/
 ichiran	一蘭	ichiran-kodzure-koryaku	https://ichiran.com/	stepFree	入口の段差なし				
 ichiran	一蘭	ichiran-kodzure-koryaku	https://ichiran.com/	zashiki	座敷席	記事に記述あり			
 ichiran	一蘭	ichiran-kodzure-koryaku	https://ichiran.com/	boxSeat	ボックス席				
-ichiran	一蘭	ichiran-kodzure-koryaku	https://ichiran.com/	kidsChair	キッズチェア	記事に記述あり			
-ichiran	一蘭	ichiran-kodzure-koryaku	https://ichiran.com/	kidsMenu	キッズメニュー	記事に記述あり			
-ichiran	一蘭	ichiran-kodzure-koryaku	https://ichiran.com/	kidsCutlery	子供用カトラリー	記事に記述あり			
+ichiran	一蘭	ichiran-kodzure-koryaku	https://ichiran.com/	kidsChair	キッズチェア	記事に記述あり	partial	ほとんどの店舗で用意（公式「お子様用の食器や椅子もほとんどの店舗でご用意」）	https://ichiran.com/app/okosama.html
+ichiran	一蘭	ichiran-kodzure-koryaku	https://ichiran.com/	kidsMenu	キッズメニュー	記事に記述あり	partial	お子様ラーメンは一蘭公式アプリ会員限定・小学6年生まで無料。一部店舗は対象外	https://ichiran.com/app/okosama.html
+ichiran	一蘭	ichiran-kodzure-koryaku	https://ichiran.com/	kidsCutlery	子供用カトラリー	記事に記述あり	partial	ほとんどの店舗で用意（公式「お子様用の食器や椅子もほとんどの店舗でご用意」）	https://ichiran.com/app/okosama.html
 ichiran	一蘭	ichiran-kodzure-koryaku	https://ichiran.com/	diaperTable	おむつ替え台	記事に記述あり			
 ichiran	一蘭	ichiran-kodzure-koryaku	https://ichiran.com/	nursingRoom	授乳室	記事に記述あり			
 ichiran	一蘭	ichiran-kodzure-koryaku	https://ichiran.com/	babyFoodBringIn	離乳食持ち込み				
 ichiran	一蘭	ichiran-kodzure-koryaku	https://ichiran.com/	toriwake	取り分けOK	記事に記述あり			
 ichiran	一蘭	ichiran-kodzure-koryaku	https://ichiran.com/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-ichiran	一蘭	ichiran-kodzure-koryaku	https://ichiran.com/	allergenInfo	アレルゲン表示	記事に記述あり			
-kagonoya	かご	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	stepFree	入口の段差なし	記事に記述あり			
-kagonoya	かご	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	zashiki	座敷席	記事に記述あり			
-kagonoya	かご	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	boxSeat	ボックス席				
-kagonoya	かご	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	kidsChair	キッズチェア	記事に記述あり			
-kagonoya	かご	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	kidsMenu	キッズメニュー	記事に記述あり			
-kagonoya	かご	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	kidsCutlery	子供用カトラリー	記事に記述あり			
-kagonoya	かご	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	diaperTable	おむつ替え台	記事に記述あり			
-kagonoya	かご	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	nursingRoom	授乳室	記事に記述あり			
-kagonoya	かご	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
-kagonoya	かご	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	toriwake	取り分けOK	記事に記述あり			
-kagonoya	かご	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-kagonoya	かご	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	allergenInfo	アレルゲン表示	記事に記述あり			
+ichiran	一蘭	ichiran-kodzure-koryaku	https://ichiran.com/	allergenInfo	アレルゲン表示	記事に記述あり	yes	特定原材料8品目ほか	https://ichiran.com/ramen/allergie.html
+kagonoya	かごの屋	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	stepFree	入口の段差なし	記事に記述あり	partial	店舗による（公式店舗ページの設備欄に「バリアフリー」表示がある店舗は一部）	https://kagonoya.food-kr.com/0575/
+kagonoya	かごの屋	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	zashiki	座敷席	記事に記述あり	partial	公式「掘りごたつ風のテーブル席や、椅子タイプのお座敷など」。床に座る座敷とは限らない・店舗による	https://kagonoya.food-kr.com/about/
+kagonoya	かごの屋	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	boxSeat	ボックス席				
+kagonoya	かごの屋	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	kidsChair	キッズチェア	記事に記述あり			
+kagonoya	かごの屋	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	kidsMenu	キッズメニュー	記事に記述あり	yes	お子さまメニュー（小学生以下限定のセットあり）。公式店舗ページでも「お子様メニューあり」	https://kagonoya.food-kr.com/wp-content/uploads/2026/06/20260701_child.pdf
+kagonoya	かごの屋	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	kidsCutlery	子供用カトラリー	記事に記述あり			
+kagonoya	かごの屋	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	diaperTable	おむつ替え台	記事に記述あり			
+kagonoya	かごの屋	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	nursingRoom	授乳室	記事に記述あり			
+kagonoya	かごの屋	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
+kagonoya	かごの屋	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	toriwake	取り分けOK	記事に記述あり			
+kagonoya	かごの屋	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
+kagonoya	かごの屋	kagonoya-kodzure-koryaku	https://kagonoya.food-kr.com/	allergenInfo	アレルゲン表示	記事に記述あり	yes	特定原材料9品目	https://kagonoya.food-kr.com/menu/e-kizon_calorieallergy/
 kushikatsutanaka	串カツ田中	kushikatsu-tanaka-kodzure-koryaku	https://kushi-tanaka.com/	stepFree	入口の段差なし				
-kushikatsutanaka	串カツ田中	kushikatsu-tanaka-kodzure-koryaku	https://kushi-tanaka.com/	zashiki	座敷席	記事に記述あり			
-kushikatsutanaka	串カツ田中	kushikatsu-tanaka-kodzure-koryaku	https://kushi-tanaka.com/	boxSeat	ボックス席				
-kushikatsutanaka	串カツ田中	kushikatsu-tanaka-kodzure-koryaku	https://kushi-tanaka.com/	kidsChair	キッズチェア	記事に記述あり			
+kushikatsutanaka	串カツ田中	kushikatsu-tanaka-kodzure-koryaku	https://kushi-tanaka.com/	zashiki	座敷席	記事に記述あり	partial	一部店舗のみ（公式FAQ「一部店舗には…座敷のお席がございます」・店舗ページの席タイプ表示）	https://kushi-tanaka.com/contact/
+kushikatsutanaka	串カツ田中	kushikatsu-tanaka-kodzure-koryaku	https://kushi-tanaka.com/	boxSeat	ボックス席		partial	一部店舗のみ（公式FAQ「一部店舗には仕切りがある半個室のボックス席」）	https://kushi-tanaka.com/contact/
+kushikatsutanaka	串カツ田中	kushikatsu-tanaka-kodzure-koryaku	https://kushi-tanaka.com/	kidsChair	キッズチェア	記事に記述あり	partial	店舗による（公式店舗検索の提供サービス「子供用イス」表示）	https://restaurant.kushi-tanaka.com/
 kushikatsutanaka	串カツ田中	kushikatsu-tanaka-kodzure-koryaku	https://kushi-tanaka.com/	kidsMenu	キッズメニュー	記事に記述あり			
 kushikatsutanaka	串カツ田中	kushikatsu-tanaka-kodzure-koryaku	https://kushi-tanaka.com/	kidsCutlery	子供用カトラリー	記事に記述あり			
 kushikatsutanaka	串カツ田中	kushikatsu-tanaka-kodzure-koryaku	https://kushi-tanaka.com/	diaperTable	おむつ替え台				
@@ -166,151 +166,151 @@ kushikatsutanaka	串カツ田中	kushikatsu-tanaka-kodzure-koryaku	https://kushi
 kushikatsutanaka	串カツ田中	kushikatsu-tanaka-kodzure-koryaku	https://kushi-tanaka.com/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
 kushikatsutanaka	串カツ田中	kushikatsu-tanaka-kodzure-koryaku	https://kushi-tanaka.com/	toriwake	取り分けOK				
 kushikatsutanaka	串カツ田中	kushikatsu-tanaka-kodzure-koryaku	https://kushi-tanaka.com/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-kushikatsutanaka	串カツ田中	kushikatsu-tanaka-kodzure-koryaku	https://kushi-tanaka.com/	allergenInfo	アレルゲン表示				
+kushikatsutanaka	串カツ田中	kushikatsu-tanaka-kodzure-koryaku	https://kushi-tanaka.com/	allergenInfo	アレルゲン表示		yes	メニューページ・店頭でアレルギー一覧表を確認できる（公式FAQ）	https://kushi-tanaka.com/menu/
 marugenramen	丸源ラーメン	marugen-ramen-kodzure-koryaku	https://www.syodai-marugen.jp/	stepFree	入口の段差なし	記事に記述あり			
-marugenramen	丸源ラーメン	marugen-ramen-kodzure-koryaku	https://www.syodai-marugen.jp/	zashiki	座敷席	記事に記述あり			
-marugenramen	丸源ラーメン	marugen-ramen-kodzure-koryaku	https://www.syodai-marugen.jp/	boxSeat	ボックス席	記事に記述あり			
-marugenramen	丸源ラーメン	marugen-ramen-kodzure-koryaku	https://www.syodai-marugen.jp/	kidsChair	キッズチェア	記事に記述あり			
-marugenramen	丸源ラーメン	marugen-ramen-kodzure-koryaku	https://www.syodai-marugen.jp/	kidsMenu	キッズメニュー	記事に記述あり			
+marugenramen	丸源ラーメン	marugen-ramen-kodzure-koryaku	https://www.syodai-marugen.jp/	zashiki	座敷席	記事に記述あり	partial	一部店舗を除く（公式「お座敷席（一部店舗を除く）」）	https://www.syodai-marugen.jp/about
+marugenramen	丸源ラーメン	marugen-ramen-kodzure-koryaku	https://www.syodai-marugen.jp/	boxSeat	ボックス席	記事に記述あり	partial	店舗により異なる（公式「カウンターはもちろん、ボックス席、座敷席もある広々した店内」。店舗によりサービス内容が異なる場合ありと注記）	https://www.syodai-marugen.jp/about
+marugenramen	丸源ラーメン	marugen-ramen-kodzure-koryaku	https://www.syodai-marugen.jp/	kidsChair	キッズチェア	記事に記述あり	partial	店舗により異なる（公式「お子さま用の椅子をご用意しております」。店舗によりサービス内容が異なる場合ありと注記）	https://www.syodai-marugen.jp/menu/kids
+marugenramen	丸源ラーメン	marugen-ramen-kodzure-koryaku	https://www.syodai-marugen.jp/	kidsMenu	キッズメニュー	記事に記述あり	yes	お子さまメニューは小学生まで	https://www.syodai-marugen.jp/menu/kids
 marugenramen	丸源ラーメン	marugen-ramen-kodzure-koryaku	https://www.syodai-marugen.jp/	kidsCutlery	子供用カトラリー	記事に記述あり			
 marugenramen	丸源ラーメン	marugen-ramen-kodzure-koryaku	https://www.syodai-marugen.jp/	diaperTable	おむつ替え台	記事に記述あり			
 marugenramen	丸源ラーメン	marugen-ramen-kodzure-koryaku	https://www.syodai-marugen.jp/	nursingRoom	授乳室	記事に記述あり			
 marugenramen	丸源ラーメン	marugen-ramen-kodzure-koryaku	https://www.syodai-marugen.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
 marugenramen	丸源ラーメン	marugen-ramen-kodzure-koryaku	https://www.syodai-marugen.jp/	toriwake	取り分けOK	記事に記述あり			
 marugenramen	丸源ラーメン	marugen-ramen-kodzure-koryaku	https://www.syodai-marugen.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-marugenramen	丸源ラーメン	marugen-ramen-kodzure-koryaku	https://www.syodai-marugen.jp/	allergenInfo	アレルゲン表示	記事に記述あり			
+marugenramen	丸源ラーメン	marugen-ramen-kodzure-koryaku	https://www.syodai-marugen.jp/	allergenInfo	アレルゲン表示	記事に記述あり	yes	特定原材料8品目	https://www.monogatari.co.jp/allergy/brand/marugen.php
 onyasai	しゃぶしゃぶ温野菜	onyasai-kodzure-koryaku	https://www.onyasai.com/	stepFree	入口の段差なし				
 onyasai	しゃぶしゃぶ温野菜	onyasai-kodzure-koryaku	https://www.onyasai.com/	zashiki	座敷席	記事に記述あり			
 onyasai	しゃぶしゃぶ温野菜	onyasai-kodzure-koryaku	https://www.onyasai.com/	boxSeat	ボックス席	記事に記述あり			
 onyasai	しゃぶしゃぶ温野菜	onyasai-kodzure-koryaku	https://www.onyasai.com/	kidsChair	キッズチェア	記事に記述あり			
-onyasai	しゃぶしゃぶ温野菜	onyasai-kodzure-koryaku	https://www.onyasai.com/	kidsMenu	キッズメニュー	記事に記述あり			
-onyasai	しゃぶしゃぶ温野菜	onyasai-kodzure-koryaku	https://www.onyasai.com/	kidsCutlery	子供用カトラリー	記事に記述あり			
+onyasai	しゃぶしゃぶ温野菜	onyasai-kodzure-koryaku	https://www.onyasai.com/	kidsMenu	キッズメニュー	記事に記述あり	yes	キッズ料金（食べ放題で小学生未満無料・小学生半額）とキッズドリンクメニュー。お子様セットの記載はなし	https://www.onyasai.com/menu/menu-kids.php
+onyasai	しゃぶしゃぶ温野菜	onyasai-kodzure-koryaku	https://www.onyasai.com/	kidsCutlery	子供用カトラリー	記事に記述あり	yes	公式「お子さま用食器＆エプロン」を用意	https://www.onyasai.com/menu/menu-kids.php
 onyasai	しゃぶしゃぶ温野菜	onyasai-kodzure-koryaku	https://www.onyasai.com/	diaperTable	おむつ替え台				
 onyasai	しゃぶしゃぶ温野菜	onyasai-kodzure-koryaku	https://www.onyasai.com/	nursingRoom	授乳室	記事に記述あり			
 onyasai	しゃぶしゃぶ温野菜	onyasai-kodzure-koryaku	https://www.onyasai.com/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
 onyasai	しゃぶしゃぶ温野菜	onyasai-kodzure-koryaku	https://www.onyasai.com/	toriwake	取り分けOK	記事に記述あり			
 onyasai	しゃぶしゃぶ温野菜	onyasai-kodzure-koryaku	https://www.onyasai.com/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-onyasai	しゃぶしゃぶ温野菜	onyasai-kodzure-koryaku	https://www.onyasai.com/	allergenInfo	アレルゲン表示	記事に記述あり			
-originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://www.toshu.co.jp/	stepFree	入口の段差なし				
-originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://www.toshu.co.jp/	zashiki	座敷席				
-originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://www.toshu.co.jp/	boxSeat	ボックス席				
-originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://www.toshu.co.jp/	kidsChair	キッズチェア	記事に記述あり			
-originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://www.toshu.co.jp/	kidsMenu	キッズメニュー	記事に記述あり			
-originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://www.toshu.co.jp/	kidsCutlery	子供用カトラリー	記事に記述あり			
-originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://www.toshu.co.jp/	diaperTable	おむつ替え台				
-originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://www.toshu.co.jp/	nursingRoom	授乳室	記事に記述あり			
-originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://www.toshu.co.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
-originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://www.toshu.co.jp/	toriwake	取り分けOK	記事に記述あり			
-originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://www.toshu.co.jp/	strollerToSeat	ベビーカーで席まで				
-originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://www.toshu.co.jp/	allergenInfo	アレルゲン表示	記事に記述あり			
+onyasai	しゃぶしゃぶ温野菜	onyasai-kodzure-koryaku	https://www.onyasai.com/	allergenInfo	アレルゲン表示	記事に記述あり	yes	28品目のアレルギー情報PDF	https://www.onyasai.com/menu/information.php
+originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://kitchen-origin.toshu.co.jp/	stepFree	入口の段差なし				
+originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://kitchen-origin.toshu.co.jp/	zashiki	座敷席				
+originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://kitchen-origin.toshu.co.jp/	boxSeat	ボックス席				
+originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://kitchen-origin.toshu.co.jp/	kidsChair	キッズチェア	記事に記述あり			
+originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://kitchen-origin.toshu.co.jp/	kidsMenu	キッズメニュー	記事に記述あり			
+originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://kitchen-origin.toshu.co.jp/	kidsCutlery	子供用カトラリー	記事に記述あり			
+originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://kitchen-origin.toshu.co.jp/	diaperTable	おむつ替え台				
+originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://kitchen-origin.toshu.co.jp/	nursingRoom	授乳室	記事に記述あり			
+originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://kitchen-origin.toshu.co.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
+originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://kitchen-origin.toshu.co.jp/	toriwake	取り分けOK	記事に記述あり			
+originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://kitchen-origin.toshu.co.jp/	strollerToSeat	ベビーカーで席まで				
+originbento	オリジン弁当	origin-bento-kodzure-koryaku	https://kitchen-origin.toshu.co.jp/	allergenInfo	アレルゲン表示	記事に記述あり	yes	栄養成分・アレルギー情報をHPで公開（商品ページごとに特定原材料等を表示）	https://kitchen-origin.toshu.co.jp/about/
 ringerhut	リンガーハット	ringer-hut-kodzure-koryaku	https://www.ringerhut.jp/	stepFree	入口の段差なし	記事に記述あり			
 ringerhut	リンガーハット	ringer-hut-kodzure-koryaku	https://www.ringerhut.jp/	zashiki	座敷席	記事に記述あり			
 ringerhut	リンガーハット	ringer-hut-kodzure-koryaku	https://www.ringerhut.jp/	boxSeat	ボックス席	記事に記述あり			
 ringerhut	リンガーハット	ringer-hut-kodzure-koryaku	https://www.ringerhut.jp/	kidsChair	キッズチェア	記事に記述あり			
-ringerhut	リンガーハット	ringer-hut-kodzure-koryaku	https://www.ringerhut.jp/	kidsMenu	キッズメニュー	記事に記述あり			
+ringerhut	リンガーハット	ringer-hut-kodzure-koryaku	https://www.ringerhut.jp/	kidsMenu	キッズメニュー	記事に記述あり	yes	ちびっこセット4種（店舗により一部販売していない商品あり）	https://www.ringerhut.jp/menu/kids/
 ringerhut	リンガーハット	ringer-hut-kodzure-koryaku	https://www.ringerhut.jp/	kidsCutlery	子供用カトラリー	記事に記述あり			
 ringerhut	リンガーハット	ringer-hut-kodzure-koryaku	https://www.ringerhut.jp/	diaperTable	おむつ替え台	記事に記述あり			
 ringerhut	リンガーハット	ringer-hut-kodzure-koryaku	https://www.ringerhut.jp/	nursingRoom	授乳室	記事に記述あり			
 ringerhut	リンガーハット	ringer-hut-kodzure-koryaku	https://www.ringerhut.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
 ringerhut	リンガーハット	ringer-hut-kodzure-koryaku	https://www.ringerhut.jp/	toriwake	取り分けOK	記事に記述あり			
 ringerhut	リンガーハット	ringer-hut-kodzure-koryaku	https://www.ringerhut.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-ringerhut	リンガーハット	ringer-hut-kodzure-koryaku	https://www.ringerhut.jp/	allergenInfo	アレルゲン表示	記事に記述あり			
-sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/	stepFree	入口の段差なし	記事に記述あり			
-sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/	zashiki	座敷席				
-sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/	boxSeat	ボックス席				
-sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/	kidsChair	キッズチェア				
-sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/	kidsMenu	キッズメニュー	記事に記述あり			
-sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/	kidsCutlery	子供用カトラリー				
-sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/	diaperTable	おむつ替え台	記事に記述あり			
-sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/	nursingRoom	授乳室	記事に記述あり			
-sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
-sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/	toriwake	取り分けOK	記事に記述あり			
-sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/	allergenInfo	アレルゲン表示	記事に記述あり			
-sawayaka	炭焼きレストランさわやか	sawayaka-kodzure-koryaku	https://www.genkotsu-hb.com/	stepFree	入口の段差なし	記事に記述あり			
+ringerhut	リンガーハット	ringer-hut-kodzure-koryaku	https://www.ringerhut.jp/	allergenInfo	アレルゲン表示	記事に記述あり	yes	アレルギー表（特定原材料8品目・準ずるもの20品目）	https://www.ringerhut.jp/quality/allergy-nutrition_value/
+sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/saintmarccafe/	stepFree	入口の段差なし	記事に記述あり			
+sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/saintmarccafe/	zashiki	座敷席				
+sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/saintmarccafe/	boxSeat	ボックス席				
+sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/saintmarccafe/	kidsChair	キッズチェア				
+sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/saintmarccafe/	kidsMenu	キッズメニュー	記事に記述あり			
+sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/saintmarccafe/	kidsCutlery	子供用カトラリー				
+sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/saintmarccafe/	diaperTable	おむつ替え台	記事に記述あり			
+sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/saintmarccafe/	nursingRoom	授乳室	記事に記述あり			
+sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/saintmarccafe/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
+sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/saintmarccafe/	toriwake	取り分けOK	記事に記述あり			
+sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/saintmarccafe/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
+sanmarccafe	サンマルクカフェ	sanmarc-cafe-kodzure-koryaku	https://www.saint-marc-hd.com/saintmarccafe/	allergenInfo	アレルゲン表示	記事に記述あり	yes	グループのアレルゲン検索サイトで8品目・20品目を表示	https://www.saint-marc-hd.com/hd/company_info/sq/allergen/
+sawayaka	炭焼きレストランさわやか	sawayaka-kodzure-koryaku	https://www.genkotsu-hb.com/	stepFree	入口の段差なし	記事に記述あり	partial	店舗による（入口スロープ等は公式店舗ページの設備欄で確認。車椅子入店はスタッフが手伝う）	https://www.genkotsu-hb.com/faq/
 sawayaka	炭焼きレストランさわやか	sawayaka-kodzure-koryaku	https://www.genkotsu-hb.com/	zashiki	座敷席	記事に記述あり			
 sawayaka	炭焼きレストランさわやか	sawayaka-kodzure-koryaku	https://www.genkotsu-hb.com/	boxSeat	ボックス席	記事に記述あり			
-sawayaka	炭焼きレストランさわやか	sawayaka-kodzure-koryaku	https://www.genkotsu-hb.com/	kidsChair	キッズチェア	記事に記述あり			
-sawayaka	炭焼きレストランさわやか	sawayaka-kodzure-koryaku	https://www.genkotsu-hb.com/	kidsMenu	キッズメニュー	記事に記述あり			
+sawayaka	炭焼きレストランさわやか	sawayaka-kodzure-koryaku	https://www.genkotsu-hb.com/	kidsChair	キッズチェア	記事に記述あり	yes	7ヶ月〜5才未満のお子様用椅子を用意（落下防止ベルト付き）	https://www.genkotsu-hb.com/faq/
+sawayaka	炭焼きレストランさわやか	sawayaka-kodzure-koryaku	https://www.genkotsu-hb.com/	kidsMenu	キッズメニュー	記事に記述あり	yes	おこさまメニュー（店舗毎にメニューが一部異なる）	https://www.genkotsu-hb.com/menu/kids/
 sawayaka	炭焼きレストランさわやか	sawayaka-kodzure-koryaku	https://www.genkotsu-hb.com/	kidsCutlery	子供用カトラリー	記事に記述あり			
-sawayaka	炭焼きレストランさわやか	sawayaka-kodzure-koryaku	https://www.genkotsu-hb.com/	diaperTable	おむつ替え台	記事に記述あり			
+sawayaka	炭焼きレストランさわやか	sawayaka-kodzure-koryaku	https://www.genkotsu-hb.com/	diaperTable	おむつ替え台	記事に記述あり	partial	店舗による（多目的トイレ・おむつ交換スペースの有無は公式店舗ページの設備欄で確認）	https://www.genkotsu-hb.com/faq/
 sawayaka	炭焼きレストランさわやか	sawayaka-kodzure-koryaku	https://www.genkotsu-hb.com/	nursingRoom	授乳室	記事に記述あり			
 sawayaka	炭焼きレストランさわやか	sawayaka-kodzure-koryaku	https://www.genkotsu-hb.com/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
 sawayaka	炭焼きレストランさわやか	sawayaka-kodzure-koryaku	https://www.genkotsu-hb.com/	toriwake	取り分けOK	記事に記述あり			
-sawayaka	炭焼きレストランさわやか	sawayaka-kodzure-koryaku	https://www.genkotsu-hb.com/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-sawayaka	炭焼きレストランさわやか	sawayaka-kodzure-koryaku	https://www.genkotsu-hb.com/	allergenInfo	アレルゲン表示	記事に記述あり			
-starbucks	スタバ	starbucks-kodzure-koryaku	https://store.starbucks.co.jp/	stepFree	入口の段差なし	記事に記述あり			
-starbucks	スタバ	starbucks-kodzure-koryaku	https://store.starbucks.co.jp/	zashiki	座敷席				
-starbucks	スタバ	starbucks-kodzure-koryaku	https://store.starbucks.co.jp/	boxSeat	ボックス席				
-starbucks	スタバ	starbucks-kodzure-koryaku	https://store.starbucks.co.jp/	kidsChair	キッズチェア	記事に記述あり			
-starbucks	スタバ	starbucks-kodzure-koryaku	https://store.starbucks.co.jp/	kidsMenu	キッズメニュー	記事に記述あり			
-starbucks	スタバ	starbucks-kodzure-koryaku	https://store.starbucks.co.jp/	kidsCutlery	子供用カトラリー	記事に記述あり			
-starbucks	スタバ	starbucks-kodzure-koryaku	https://store.starbucks.co.jp/	diaperTable	おむつ替え台	記事に記述あり			
-starbucks	スタバ	starbucks-kodzure-koryaku	https://store.starbucks.co.jp/	nursingRoom	授乳室	記事に記述あり			
-starbucks	スタバ	starbucks-kodzure-koryaku	https://store.starbucks.co.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
-starbucks	スタバ	starbucks-kodzure-koryaku	https://store.starbucks.co.jp/	toriwake	取り分けOK	記事に記述あり			
-starbucks	スタバ	starbucks-kodzure-koryaku	https://store.starbucks.co.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-starbucks	スタバ	starbucks-kodzure-koryaku	https://store.starbucks.co.jp/	allergenInfo	アレルゲン表示	記事に記述あり			
+sawayaka	炭焼きレストランさわやか	sawayaka-kodzure-koryaku	https://www.genkotsu-hb.com/	strollerToSeat	ベビーカーで席まで	記事に記述あり	yes	ベビーカーでの入店可（混雑時はスタッフが手伝う）	https://www.genkotsu-hb.com/faq/
+sawayaka	炭焼きレストランさわやか	sawayaka-kodzure-koryaku	https://www.genkotsu-hb.com/	allergenInfo	アレルゲン表示	記事に記述あり	yes	アレルゲン検索（特定原材料8品目・準ずるもの20品目）	https://www.genkotsu-hb.com/arellgen
+starbucks	スターバックス コーヒー	starbucks-kodzure-koryaku	https://www.starbucks.co.jp/	stepFree	入口の段差なし	記事に記述あり			
+starbucks	スターバックス コーヒー	starbucks-kodzure-koryaku	https://www.starbucks.co.jp/	zashiki	座敷席				
+starbucks	スターバックス コーヒー	starbucks-kodzure-koryaku	https://www.starbucks.co.jp/	boxSeat	ボックス席				
+starbucks	スターバックス コーヒー	starbucks-kodzure-koryaku	https://www.starbucks.co.jp/	kidsChair	キッズチェア	記事に記述あり			
+starbucks	スターバックス コーヒー	starbucks-kodzure-koryaku	https://www.starbucks.co.jp/	kidsMenu	キッズメニュー	記事に記述あり			
+starbucks	スターバックス コーヒー	starbucks-kodzure-koryaku	https://www.starbucks.co.jp/	kidsCutlery	子供用カトラリー	記事に記述あり			
+starbucks	スターバックス コーヒー	starbucks-kodzure-koryaku	https://www.starbucks.co.jp/	diaperTable	おむつ替え台	記事に記述あり			
+starbucks	スターバックス コーヒー	starbucks-kodzure-koryaku	https://www.starbucks.co.jp/	nursingRoom	授乳室	記事に記述あり			
+starbucks	スターバックス コーヒー	starbucks-kodzure-koryaku	https://www.starbucks.co.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
+starbucks	スターバックス コーヒー	starbucks-kodzure-koryaku	https://www.starbucks.co.jp/	toriwake	取り分けOK	記事に記述あり			
+starbucks	スターバックス コーヒー	starbucks-kodzure-koryaku	https://www.starbucks.co.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
+starbucks	スターバックス コーヒー	starbucks-kodzure-koryaku	https://www.starbucks.co.jp/	allergenInfo	アレルゲン表示	記事に記述あり	yes	特定原材料8品目・準ずるもの20品目・魚介類を表示	https://www.starbucks.co.jp/allergy/
 steakmiya	ステーキ宮	steak-miya-kodzure-koryaku	https://www.miya.com/	stepFree	入口の段差なし	記事に記述あり			
 steakmiya	ステーキ宮	steak-miya-kodzure-koryaku	https://www.miya.com/	zashiki	座敷席	記事に記述あり			
-steakmiya	ステーキ宮	steak-miya-kodzure-koryaku	https://www.miya.com/	boxSeat	ボックス席	記事に記述あり			
+steakmiya	ステーキ宮	steak-miya-kodzure-koryaku	https://www.miya.com/	boxSeat	ボックス席	記事に記述あり	partial	店舗による（公式店舗ページの座席欄に「ソファー席あり」は102店中5店）	https://www.miya.com/shop/detail.php?shop_no=1299
 steakmiya	ステーキ宮	steak-miya-kodzure-koryaku	https://www.miya.com/	kidsChair	キッズチェア	記事に記述あり			
-steakmiya	ステーキ宮	steak-miya-kodzure-koryaku	https://www.miya.com/	kidsMenu	キッズメニュー	記事に記述あり			
+steakmiya	ステーキ宮	steak-miya-kodzure-koryaku	https://www.miya.com/	kidsMenu	キッズメニュー	記事に記述あり	yes	小学生以下向けキッズメニュー（下田店・羽田空港店は除く。下田店は別メニュー）	https://www.miya.com/campaign/detail.php?miya_campaign_no=376
 steakmiya	ステーキ宮	steak-miya-kodzure-koryaku	https://www.miya.com/	kidsCutlery	子供用カトラリー	記事に記述あり			
 steakmiya	ステーキ宮	steak-miya-kodzure-koryaku	https://www.miya.com/	diaperTable	おむつ替え台	記事に記述あり			
 steakmiya	ステーキ宮	steak-miya-kodzure-koryaku	https://www.miya.com/	nursingRoom	授乳室	記事に記述あり			
 steakmiya	ステーキ宮	steak-miya-kodzure-koryaku	https://www.miya.com/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
 steakmiya	ステーキ宮	steak-miya-kodzure-koryaku	https://www.miya.com/	toriwake	取り分けOK	記事に記述あり			
 steakmiya	ステーキ宮	steak-miya-kodzure-koryaku	https://www.miya.com/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-steakmiya	ステーキ宮	steak-miya-kodzure-koryaku	https://www.miya.com/	allergenInfo	アレルゲン表示				
+steakmiya	ステーキ宮	steak-miya-kodzure-koryaku	https://www.miya.com/	allergenInfo	アレルゲン表示		yes	メニュー別アレルギー一覧（特定原材料・準ずるもの）を画像で掲載	https://www.miya.com/information/detail.php?miya_information_no=215
 sukesanudon	資さんうどん	sukesan-udon-kodzure-koryaku	https://www.sukesanudon.com/	stepFree	入口の段差なし				
 sukesanudon	資さんうどん	sukesan-udon-kodzure-koryaku	https://www.sukesanudon.com/	zashiki	座敷席	記事に記述あり			
 sukesanudon	資さんうどん	sukesan-udon-kodzure-koryaku	https://www.sukesanudon.com/	boxSeat	ボックス席	記事に記述あり			
 sukesanudon	資さんうどん	sukesan-udon-kodzure-koryaku	https://www.sukesanudon.com/	kidsChair	キッズチェア	記事に記述あり			
-sukesanudon	資さんうどん	sukesan-udon-kodzure-koryaku	https://www.sukesanudon.com/	kidsMenu	キッズメニュー	記事に記述あり			
+sukesanudon	資さんうどん	sukesan-udon-kodzure-koryaku	https://www.sukesanudon.com/	kidsMenu	キッズメニュー	記事に記述あり	partial	一部店舗のみ（公式アレルゲン表でおこさまうどんはららぽーとTOKYO-BAY店限定と記載）	https://www.sukesanudon.com/wp/wp-content/uploads/2026/09/260903AWGMallergy.pdf
 sukesanudon	資さんうどん	sukesan-udon-kodzure-koryaku	https://www.sukesanudon.com/	kidsCutlery	子供用カトラリー	記事に記述あり			
 sukesanudon	資さんうどん	sukesan-udon-kodzure-koryaku	https://www.sukesanudon.com/	diaperTable	おむつ替え台	記事に記述あり			
 sukesanudon	資さんうどん	sukesan-udon-kodzure-koryaku	https://www.sukesanudon.com/	nursingRoom	授乳室	記事に記述あり			
 sukesanudon	資さんうどん	sukesan-udon-kodzure-koryaku	https://www.sukesanudon.com/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
 sukesanudon	資さんうどん	sukesan-udon-kodzure-koryaku	https://www.sukesanudon.com/	toriwake	取り分けOK	記事に記述あり			
 sukesanudon	資さんうどん	sukesan-udon-kodzure-koryaku	https://www.sukesanudon.com/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-sukesanudon	資さんうどん	sukesan-udon-kodzure-koryaku	https://www.sukesanudon.com/	allergenInfo	アレルゲン表示	記事に記述あり			
+sukesanudon	資さんうどん	sukesan-udon-kodzure-koryaku	https://www.sukesanudon.com/	allergenInfo	アレルゲン表示	記事に記述あり	yes	特定原材料8品目を表示（2026年秋冬グランドメニュー）	https://www.sukesanudon.com/wp/wp-content/uploads/2026/09/260903AWGMallergy.pdf
 tenkaippin	天下一品	tenkaippin-kodzure-koryaku	https://www.tenkaippin.co.jp/	stepFree	入口の段差なし				
 tenkaippin	天下一品	tenkaippin-kodzure-koryaku	https://www.tenkaippin.co.jp/	zashiki	座敷席	記事に記述あり			
 tenkaippin	天下一品	tenkaippin-kodzure-koryaku	https://www.tenkaippin.co.jp/	boxSeat	ボックス席	記事に記述あり			
-tenkaippin	天下一品	tenkaippin-kodzure-koryaku	https://www.tenkaippin.co.jp/	kidsChair	キッズチェア	記事に記述あり			
-tenkaippin	天下一品	tenkaippin-kodzure-koryaku	https://www.tenkaippin.co.jp/	kidsMenu	キッズメニュー	記事に記述あり			
-tenkaippin	天下一品	tenkaippin-kodzure-koryaku	https://www.tenkaippin.co.jp/	kidsCutlery	子供用カトラリー	記事に記述あり			
+tenkaippin	天下一品	tenkaippin-kodzure-koryaku	https://www.tenkaippin.co.jp/	kidsChair	キッズチェア	記事に記述あり	yes	お子様仕様の椅子を用意と記載	https://www.tenkaippin.co.jp/kotteri_kids/
+tenkaippin	天下一品	tenkaippin-kodzure-koryaku	https://www.tenkaippin.co.jp/	kidsMenu	キッズメニュー	記事に記述あり	yes	お子様ラーメン（3歳〜小学校入学前）	https://www.tenkaippin.co.jp/kotteri_kids/
+tenkaippin	天下一品	tenkaippin-kodzure-koryaku	https://www.tenkaippin.co.jp/	kidsCutlery	子供用カトラリー	記事に記述あり	yes	スプーン/フォーク/箸/麺切りはさみ等を用意と記載	https://www.tenkaippin.co.jp/kotteri_kids/
 tenkaippin	天下一品	tenkaippin-kodzure-koryaku	https://www.tenkaippin.co.jp/	diaperTable	おむつ替え台	記事に記述あり			
 tenkaippin	天下一品	tenkaippin-kodzure-koryaku	https://www.tenkaippin.co.jp/	nursingRoom	授乳室	記事に記述あり			
 tenkaippin	天下一品	tenkaippin-kodzure-koryaku	https://www.tenkaippin.co.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
-tenkaippin	天下一品	tenkaippin-kodzure-koryaku	https://www.tenkaippin.co.jp/	toriwake	取り分けOK	記事に記述あり			
+tenkaippin	天下一品	tenkaippin-kodzure-koryaku	https://www.tenkaippin.co.jp/	toriwake	取り分けOK	記事に記述あり	yes	取り皿を用意と記載	https://www.tenkaippin.co.jp/kotteri_kids/
 tenkaippin	天下一品	tenkaippin-kodzure-koryaku	https://www.tenkaippin.co.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-tenkaippin	天下一品	tenkaippin-kodzure-koryaku	https://www.tenkaippin.co.jp/	allergenInfo	アレルゲン表示	記事に記述あり			
-tenya	てんや	tenya-baby-chair	https://www.tenya.co.jp/	stepFree	入口の段差なし	記事に記述あり			
-tenya	てんや	tenya-baby-chair	https://www.tenya.co.jp/	zashiki	座敷席				
-tenya	てんや	tenya-baby-chair	https://www.tenya.co.jp/	boxSeat	ボックス席				
-tenya	てんや	tenya-baby-chair	https://www.tenya.co.jp/	kidsChair	キッズチェア	記事に記述あり			
-tenya	てんや	tenya-baby-chair	https://www.tenya.co.jp/	kidsMenu	キッズメニュー	記事に記述あり			
-tenya	てんや	tenya-baby-chair	https://www.tenya.co.jp/	kidsCutlery	子供用カトラリー	記事に記述あり			
-tenya	てんや	tenya-baby-chair	https://www.tenya.co.jp/	diaperTable	おむつ替え台	記事に記述あり			
-tenya	てんや	tenya-baby-chair	https://www.tenya.co.jp/	nursingRoom	授乳室	記事に記述あり			
-tenya	てんや	tenya-baby-chair	https://www.tenya.co.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
-tenya	てんや	tenya-baby-chair	https://www.tenya.co.jp/	toriwake	取り分けOK	記事に記述あり			
-tenya	てんや	tenya-baby-chair	https://www.tenya.co.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-tenya	てんや	tenya-baby-chair	https://www.tenya.co.jp/	allergenInfo	アレルゲン表示	記事に記述あり			
+tenkaippin	天下一品	tenkaippin-kodzure-koryaku	https://www.tenkaippin.co.jp/	allergenInfo	アレルゲン表示	記事に記述あり	yes	地域別アレルギー情報（一部店舗で扱っていない商品も記載）	https://www.tenkaippin.co.jp/allergy101/
+tenya	天丼てんや	tenya-baby-chair	https://www.tenya.co.jp/	stepFree	入口の段差なし	記事に記述あり			
+tenya	天丼てんや	tenya-baby-chair	https://www.tenya.co.jp/	zashiki	座敷席				
+tenya	天丼てんや	tenya-baby-chair	https://www.tenya.co.jp/	boxSeat	ボックス席				
+tenya	天丼てんや	tenya-baby-chair	https://www.tenya.co.jp/	kidsChair	キッズチェア	記事に記述あり			
+tenya	天丼てんや	tenya-baby-chair	https://www.tenya.co.jp/	kidsMenu	キッズメニュー	記事に記述あり			
+tenya	天丼てんや	tenya-baby-chair	https://www.tenya.co.jp/	kidsCutlery	子供用カトラリー	記事に記述あり			
+tenya	天丼てんや	tenya-baby-chair	https://www.tenya.co.jp/	diaperTable	おむつ替え台	記事に記述あり			
+tenya	天丼てんや	tenya-baby-chair	https://www.tenya.co.jp/	nursingRoom	授乳室	記事に記述あり			
+tenya	天丼てんや	tenya-baby-chair	https://www.tenya.co.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
+tenya	天丼てんや	tenya-baby-chair	https://www.tenya.co.jp/	toriwake	取り分けOK	記事に記述あり			
+tenya	天丼てんや	tenya-baby-chair	https://www.tenya.co.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
+tenya	天丼てんや	tenya-baby-chair	https://www.tenya.co.jp/	allergenInfo	アレルゲン表示	記事に記述あり	yes	店内メニューのカロリー・アレルギー一覧PDF	https://www.tenya.co.jp/pdf/allergen-shop.pdf
 tullyscoffee	タリーズコーヒー	tullys-coffee-kodzure-koryaku	https://www.tullys.co.jp/	stepFree	入口の段差なし	記事に記述あり			
 tullyscoffee	タリーズコーヒー	tullys-coffee-kodzure-koryaku	https://www.tullys.co.jp/	zashiki	座敷席				
 tullyscoffee	タリーズコーヒー	tullys-coffee-kodzure-koryaku	https://www.tullys.co.jp/	boxSeat	ボックス席				
 tullyscoffee	タリーズコーヒー	tullys-coffee-kodzure-koryaku	https://www.tullys.co.jp/	kidsChair	キッズチェア				
-tullyscoffee	タリーズコーヒー	tullys-coffee-kodzure-koryaku	https://www.tullys.co.jp/	kidsMenu	キッズメニュー	記事に記述あり			
+tullyscoffee	タリーズコーヒー	tullys-coffee-kodzure-koryaku	https://www.tullys.co.jp/	kidsMenu	キッズメニュー	記事に記述あり	yes	おやこパスタセット・キッズドリンク等	https://www.tullys.co.jp/menu/kids/
 tullyscoffee	タリーズコーヒー	tullys-coffee-kodzure-koryaku	https://www.tullys.co.jp/	kidsCutlery	子供用カトラリー				
 tullyscoffee	タリーズコーヒー	tullys-coffee-kodzure-koryaku	https://www.tullys.co.jp/	diaperTable	おむつ替え台	記事に記述あり			
 tullyscoffee	タリーズコーヒー	tullys-coffee-kodzure-koryaku	https://www.tullys.co.jp/	nursingRoom	授乳室	記事に記述あり			
 tullyscoffee	タリーズコーヒー	tullys-coffee-kodzure-koryaku	https://www.tullys.co.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
 tullyscoffee	タリーズコーヒー	tullys-coffee-kodzure-koryaku	https://www.tullys.co.jp/	toriwake	取り分けOK	記事に記述あり			
 tullyscoffee	タリーズコーヒー	tullys-coffee-kodzure-koryaku	https://www.tullys.co.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-tullyscoffee	タリーズコーヒー	tullys-coffee-kodzure-koryaku	https://www.tullys.co.jp/	allergenInfo	アレルゲン表示	記事に記述あり			
+tullyscoffee	タリーズコーヒー	tullys-coffee-kodzure-koryaku	https://www.tullys.co.jp/	allergenInfo	アレルゲン表示	記事に記述あり	yes	特定原材料8品目＋準ずるもの20品目を表示	https://www.tullys.co.jp/menu/allergy/
 ueshimacoffee	上島珈琲店	ueshima-coffee-kodzure-koryaku	https://www.ueshima-coffee-ten.jp/	stepFree	入口の段差なし	記事に記述あり			
 ueshimacoffee	上島珈琲店	ueshima-coffee-kodzure-koryaku	https://www.ueshima-coffee-ten.jp/	zashiki	座敷席				
 ueshimacoffee	上島珈琲店	ueshima-coffee-kodzure-koryaku	https://www.ueshima-coffee-ten.jp/	boxSeat	ボックス席	記事に記述あり			
@@ -322,64 +322,64 @@ ueshimacoffee	上島珈琲店	ueshima-coffee-kodzure-koryaku	https://www.ueshima
 ueshimacoffee	上島珈琲店	ueshima-coffee-kodzure-koryaku	https://www.ueshima-coffee-ten.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
 ueshimacoffee	上島珈琲店	ueshima-coffee-kodzure-koryaku	https://www.ueshima-coffee-ten.jp/	toriwake	取り分けOK	記事に記述あり			
 ueshimacoffee	上島珈琲店	ueshima-coffee-kodzure-koryaku	https://www.ueshima-coffee-ten.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-ueshimacoffee	上島珈琲店	ueshima-coffee-kodzure-koryaku	https://www.ueshima-coffee-ten.jp/	allergenInfo	アレルゲン表示	記事に記述あり			
-uobei	魚べい・元気寿司	uobei-kodzure-koryaku		stepFree	入口の段差なし				
-uobei	魚べい・元気寿司	uobei-kodzure-koryaku		zashiki	座敷席				
-uobei	魚べい・元気寿司	uobei-kodzure-koryaku		boxSeat	ボックス席	記事に記述あり			
-uobei	魚べい・元気寿司	uobei-kodzure-koryaku		kidsChair	キッズチェア	記事に記述あり			
-uobei	魚べい・元気寿司	uobei-kodzure-koryaku		kidsMenu	キッズメニュー				
-uobei	魚べい・元気寿司	uobei-kodzure-koryaku		kidsCutlery	子供用カトラリー	記事に記述あり			
-uobei	魚べい・元気寿司	uobei-kodzure-koryaku		diaperTable	おむつ替え台	記事に記述あり			
-uobei	魚べい・元気寿司	uobei-kodzure-koryaku		nursingRoom	授乳室	記事に記述あり			
-uobei	魚べい・元気寿司	uobei-kodzure-koryaku		babyFoodBringIn	離乳食持ち込み	記事に記述あり			
-uobei	魚べい・元気寿司	uobei-kodzure-koryaku		toriwake	取り分けOK	記事に記述あり			
-uobei	魚べい・元気寿司	uobei-kodzure-koryaku		strollerToSeat	ベビーカーで席まで	記事に記述あり			
-uobei	魚べい・元気寿司	uobei-kodzure-koryaku		allergenInfo	アレルゲン表示	記事に記述あり			
-washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/	stepFree	入口の段差なし				
-washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/	zashiki	座敷席	記事に記述あり			
-washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/	boxSeat	ボックス席	記事に記述あり			
-washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/	kidsChair	キッズチェア	記事に記述あり			
-washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/	kidsMenu	キッズメニュー	記事に記述あり			
-washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/	kidsCutlery	子供用カトラリー	記事に記述あり			
-washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/	diaperTable	おむつ替え台	記事に記述あり			
-washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/	nursingRoom	授乳室	記事に記述あり			
-washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
-washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/	toriwake	取り分けOK	記事に記述あり			
-washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/	allergenInfo	アレルゲン表示	記事に記述あり			
+ueshimacoffee	上島珈琲店	ueshima-coffee-kodzure-koryaku	https://www.ueshima-coffee-ten.jp/	allergenInfo	アレルゲン表示	記事に記述あり	yes	カロリー・アレルゲン一覧PDF（2026/7/30更新）	https://www.ueshima-coffee-ten.jp/fileadmin/res/ufs/allergen/calorie_allergen_ueshima260730.pdf
+uobei	魚べい	uobei-kodzure-koryaku	https://www.uobei.info/	stepFree	入口の段差なし		partial	車いすで利用できるテーブル席・カウンター席と多機能トイレあり（一部店舗除く・グループ共通FAQ）	https://faq.genki-gdc.co.jp/%E8%BB%8A%E3%81%84%E3%81%99%E3%81%AE%E5%88%A9%E7%94%A8-677ce1f7ebcdc3f8c9b40b25
+uobei	魚べい	uobei-kodzure-koryaku	https://www.uobei.info/	zashiki	座敷席				
+uobei	魚べい	uobei-kodzure-koryaku	https://www.uobei.info/	boxSeat	ボックス席	記事に記述あり			
+uobei	魚べい	uobei-kodzure-koryaku	https://www.uobei.info/	kidsChair	キッズチェア	記事に記述あり	yes	お子様用の椅子を用意（グループ共通FAQ）	https://faq.genki-gdc.co.jp/%E5%AD%90%E4%BE%9B%E7%94%A8%E3%81%AE%E6%A4%85%E5%AD%90%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B%EF%BC%9F-677ce1f7ebcdc3f8c9b40b28
+uobei	魚べい	uobei-kodzure-koryaku	https://www.uobei.info/	kidsMenu	キッズメニュー		yes	キッズセットあり（グループ共通FAQ）	https://faq.genki-gdc.co.jp/%E5%AD%90%E4%BE%9B%E7%94%A8%E3%81%AE%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B%EF%BC%9F-677ce1f72f98ffb6a7a44432
+uobei	魚べい	uobei-kodzure-koryaku	https://www.uobei.info/	kidsCutlery	子供用カトラリー	記事に記述あり			
+uobei	魚べい	uobei-kodzure-koryaku	https://www.uobei.info/	diaperTable	おむつ替え台	記事に記述あり			
+uobei	魚べい	uobei-kodzure-koryaku	https://www.uobei.info/	nursingRoom	授乳室	記事に記述あり			
+uobei	魚べい	uobei-kodzure-koryaku	https://www.uobei.info/	babyFoodBringIn	離乳食持ち込み	記事に記述あり	yes	一般の飲食物は持ち込み不可だが乳幼児のミルク・離乳食は持ち込み可（グループ共通FAQ）	https://faq.genki-gdc.co.jp/%E9%A3%B2%E9%A3%9F%E7%89%A9%E3%81%AE%E6%8C%81%E3%81%A1%E8%BE%BC%E3%81%BF%E3%81%AF%E5%8F%AF%E8%83%BD%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F-677ce1f7ebcdc3f8c9b40b2e
+uobei	魚べい	uobei-kodzure-koryaku	https://www.uobei.info/	toriwake	取り分けOK	記事に記述あり			
+uobei	魚べい	uobei-kodzure-koryaku	https://www.uobei.info/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
+uobei	魚べい	uobei-kodzure-koryaku	https://www.uobei.info/	allergenInfo	アレルゲン表示	記事に記述あり	yes	魚べい・元気寿司共通のカロリー・アレルゲン・原産地一覧PDF	https://www.genki-gdc.co.jp/sustainability/safety/
+washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/sato/	stepFree	入口の段差なし				
+washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/sato/	zashiki	座敷席	記事に記述あり			
+washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/sato/	boxSeat	ボックス席	記事に記述あり			
+washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/sato/	kidsChair	キッズチェア	記事に記述あり			
+washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/sato/	kidsMenu	キッズメニュー	記事に記述あり			
+washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/sato/	kidsCutlery	子供用カトラリー	記事に記述あり			
+washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/sato/	diaperTable	おむつ替え台	記事に記述あり			
+washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/sato/	nursingRoom	授乳室	記事に記述あり			
+washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/sato/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
+washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/sato/	toriwake	取り分けOK	記事に記述あり			
+washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/sato/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
+washokusato	和食さと	washoku-sato-kodzure-koryaku	https://sato-res.com/sato/	allergenInfo	アレルゲン表示	記事に記述あり	yes	特定原材料8品目の一覧表	https://sato-res.com/sato/allergy/
 yakinikuking	焼肉きんぐ	yakiniku-king-kodzure-koryaku	https://www.yakiniku-king.jp/	stepFree	入口の段差なし	記事に記述あり			
 yakinikuking	焼肉きんぐ	yakiniku-king-kodzure-koryaku	https://www.yakiniku-king.jp/	zashiki	座敷席	記事に記述あり			
 yakinikuking	焼肉きんぐ	yakiniku-king-kodzure-koryaku	https://www.yakiniku-king.jp/	boxSeat	ボックス席	記事に記述あり			
-yakinikuking	焼肉きんぐ	yakiniku-king-kodzure-koryaku	https://www.yakiniku-king.jp/	kidsChair	キッズチェア	記事に記述あり			
-yakinikuking	焼肉きんぐ	yakiniku-king-kodzure-koryaku	https://www.yakiniku-king.jp/	kidsMenu	キッズメニュー	記事に記述あり			
-yakinikuking	焼肉きんぐ	yakiniku-king-kodzure-koryaku	https://www.yakiniku-king.jp/	kidsCutlery	子供用カトラリー	記事に記述あり			
-yakinikuking	焼肉きんぐ	yakiniku-king-kodzure-koryaku	https://www.yakiniku-king.jp/	diaperTable	おむつ替え台	記事に記述あり			
+yakinikuking	焼肉きんぐ	yakiniku-king-kodzure-koryaku	https://www.yakiniku-king.jp/	kidsChair	キッズチェア	記事に記述あり	partial	お取り扱いのない店舗あり	https://www.yakiniku-king.jp/family/
+yakinikuking	焼肉きんぐ	yakiniku-king-kodzure-koryaku	https://www.yakiniku-king.jp/	kidsMenu	キッズメニュー	記事に記述あり	no	「専用のキッズメニューはございません」と明記（食べ放題内にお子様カレー・お子様うどん等あり）	https://www.yakiniku-king.jp/menu_all/kids/
+yakinikuking	焼肉きんぐ	yakiniku-king-kodzure-koryaku	https://www.yakiniku-king.jp/	kidsCutlery	子供用カトラリー	記事に記述あり	partial	お子様用のお皿・スプーン・フォーク等。お取り扱いのない店舗あり	https://www.yakiniku-king.jp/family/
+yakinikuking	焼肉きんぐ	yakiniku-king-kodzure-koryaku	https://www.yakiniku-king.jp/	diaperTable	おむつ替え台	記事に記述あり	partial	お取り扱いのない店舗あり	https://www.yakiniku-king.jp/family/
 yakinikuking	焼肉きんぐ	yakiniku-king-kodzure-koryaku	https://www.yakiniku-king.jp/	nursingRoom	授乳室	記事に記述あり			
 yakinikuking	焼肉きんぐ	yakiniku-king-kodzure-koryaku	https://www.yakiniku-king.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
 yakinikuking	焼肉きんぐ	yakiniku-king-kodzure-koryaku	https://www.yakiniku-king.jp/	toriwake	取り分けOK	記事に記述あり			
 yakinikuking	焼肉きんぐ	yakiniku-king-kodzure-koryaku	https://www.yakiniku-king.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-yakinikuking	焼肉きんぐ	yakiniku-king-kodzure-koryaku	https://www.yakiniku-king.jp/	allergenInfo	アレルゲン表示	記事に記述あり			
+yakinikuking	焼肉きんぐ	yakiniku-king-kodzure-koryaku	https://www.yakiniku-king.jp/	allergenInfo	アレルゲン表示	記事に記述あり	yes	特定原材料8品目の一覧表（運営会社サイト）	https://www.monogatari.co.jp/allergy/brand/king.php
 yamadaudon	山田うどん食堂	yamada-udon-kodzure-koryaku	https://www.yamada-udon.co.jp/	stepFree	入口の段差なし	記事に記述あり			
 yamadaudon	山田うどん食堂	yamada-udon-kodzure-koryaku	https://www.yamada-udon.co.jp/	zashiki	座敷席	記事に記述あり			
 yamadaudon	山田うどん食堂	yamada-udon-kodzure-koryaku	https://www.yamada-udon.co.jp/	boxSeat	ボックス席	記事に記述あり			
 yamadaudon	山田うどん食堂	yamada-udon-kodzure-koryaku	https://www.yamada-udon.co.jp/	kidsChair	キッズチェア	記事に記述あり			
-yamadaudon	山田うどん食堂	yamada-udon-kodzure-koryaku	https://www.yamada-udon.co.jp/	kidsMenu	キッズメニュー	記事に記述あり			
-yamadaudon	山田うどん食堂	yamada-udon-kodzure-koryaku	https://www.yamada-udon.co.jp/	kidsCutlery	子供用カトラリー	記事に記述あり			
+yamadaudon	山田うどん食堂	yamada-udon-kodzure-koryaku	https://www.yamada-udon.co.jp/	kidsMenu	キッズメニュー	記事に記述あり	yes	小学生以下対象（お子様うどん・そばセット等）	https://www.yamada-udon.co.jp/menu/kids
+yamadaudon	山田うどん食堂	yamada-udon-kodzure-koryaku	https://www.yamada-udon.co.jp/	kidsCutlery	子供用カトラリー	記事に記述あり	yes	お子様専用の器・フォーク・スプーン等を用意（FAQ）	https://www.yamada-udon.co.jp/qaquestionnaire
 yamadaudon	山田うどん食堂	yamada-udon-kodzure-koryaku	https://www.yamada-udon.co.jp/	diaperTable	おむつ替え台	記事に記述あり			
 yamadaudon	山田うどん食堂	yamada-udon-kodzure-koryaku	https://www.yamada-udon.co.jp/	nursingRoom	授乳室	記事に記述あり			
 yamadaudon	山田うどん食堂	yamada-udon-kodzure-koryaku	https://www.yamada-udon.co.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
 yamadaudon	山田うどん食堂	yamada-udon-kodzure-koryaku	https://www.yamada-udon.co.jp/	toriwake	取り分けOK	記事に記述あり			
 yamadaudon	山田うどん食堂	yamada-udon-kodzure-koryaku	https://www.yamada-udon.co.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-yamadaudon	山田うどん食堂	yamada-udon-kodzure-koryaku	https://www.yamada-udon.co.jp/	allergenInfo	アレルゲン表示	記事に記述あり			
-yuzuan	ゆず庵	yuzuan-kodzure-koryaku	https://www.shabu-yuzuan.jp/	stepFree	入口の段差なし				
+yamadaudon	山田うどん食堂	yamada-udon-kodzure-koryaku	https://www.yamada-udon.co.jp/	allergenInfo	アレルゲン表示	記事に記述あり	yes	アレルギー物質7品目の一覧表	https://www.yamada-udon.co.jp/allergy
+yuzuan	ゆず庵	yuzuan-kodzure-koryaku	https://www.shabu-yuzuan.jp/	stepFree	入口の段差なし		partial	スロープ・エレベーターの有無は店舗により異なる	https://www.shabu-yuzuan.jp/children/
 yuzuan	ゆず庵	yuzuan-kodzure-koryaku	https://www.shabu-yuzuan.jp/	zashiki	座敷席	記事に記述あり			
-yuzuan	ゆず庵	yuzuan-kodzure-koryaku	https://www.shabu-yuzuan.jp/	boxSeat	ボックス席				
-yuzuan	ゆず庵	yuzuan-kodzure-koryaku	https://www.shabu-yuzuan.jp/	kidsChair	キッズチェア	記事に記述あり			
+yuzuan	ゆず庵	yuzuan-kodzure-koryaku	https://www.shabu-yuzuan.jp/	boxSeat	ボックス席		partial	基本的にはソファタイプの席（公式FAQ）	https://www.shabu-yuzuan.jp/children/
+yuzuan	ゆず庵	yuzuan-kodzure-koryaku	https://www.shabu-yuzuan.jp/	kidsChair	キッズチェア	記事に記述あり	yes	生後7ヵ月～3才向け。数に限りあり・事前に店舗へ問い合わせ推奨	https://www.shabu-yuzuan.jp/children/
 yuzuan	ゆず庵	yuzuan-kodzure-koryaku	https://www.shabu-yuzuan.jp/	kidsMenu	キッズメニュー	記事に記述あり			
-yuzuan	ゆず庵	yuzuan-kodzure-koryaku	https://www.shabu-yuzuan.jp/	kidsCutlery	子供用カトラリー	記事に記述あり			
-yuzuan	ゆず庵	yuzuan-kodzure-koryaku	https://www.shabu-yuzuan.jp/	diaperTable	おむつ替え台	記事に記述あり			
+yuzuan	ゆず庵	yuzuan-kodzure-koryaku	https://www.shabu-yuzuan.jp/	kidsCutlery	子供用カトラリー	記事に記述あり	yes	お皿・スプーン・フォーク・麺切りハサミ等。数に限りあり	https://www.shabu-yuzuan.jp/children/
+yuzuan	ゆず庵	yuzuan-kodzure-koryaku	https://www.shabu-yuzuan.jp/	diaperTable	おむつ替え台	記事に記述あり	partial	多目的トイレに設置（一部店舗を除く）	https://www.shabu-yuzuan.jp/children/
 yuzuan	ゆず庵	yuzuan-kodzure-koryaku	https://www.shabu-yuzuan.jp/	nursingRoom	授乳室	記事に記述あり			
-yuzuan	ゆず庵	yuzuan-kodzure-koryaku	https://www.shabu-yuzuan.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり			
+yuzuan	ゆず庵	yuzuan-kodzure-koryaku	https://www.shabu-yuzuan.jp/	babyFoodBringIn	離乳食持ち込み	記事に記述あり	yes	離乳食の温め・ミルク用のお湯に対応と明記	https://www.shabu-yuzuan.jp/children/
 yuzuan	ゆず庵	yuzuan-kodzure-koryaku	https://www.shabu-yuzuan.jp/	toriwake	取り分けOK	記事に記述あり			
-yuzuan	ゆず庵	yuzuan-kodzure-koryaku	https://www.shabu-yuzuan.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり			
-yuzuan	ゆず庵	yuzuan-kodzure-koryaku	https://www.shabu-yuzuan.jp/	allergenInfo	アレルゲン表示	記事に記述あり			
+yuzuan	ゆず庵	yuzuan-kodzure-koryaku	https://www.shabu-yuzuan.jp/	strollerToSeat	ベビーカーで席まで	記事に記述あり	partial	ベビーカーのまま利用できるテーブル席あり（席数に限り・事前問い合わせ推奨）	https://www.shabu-yuzuan.jp/children/
+yuzuan	ゆず庵	yuzuan-kodzure-koryaku	https://www.shabu-yuzuan.jp/	allergenInfo	アレルゲン表示	記事に記述あり	yes	特定原材料8品目の一覧表（運営会社サイト）	https://www.monogatari.co.jp/allergy/brand/yuzu.php

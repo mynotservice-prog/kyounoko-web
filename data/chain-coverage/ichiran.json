@@ -1,0 +1,570 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "ichiran",
+  "name": "一蘭",
+  "sourceUrl": "https://ichiran.com/shop/",
+  "method": "公式「店舗のご案内」から国内店舗ページを全件取得し、各ページの「店舗情報」表の「席数」行（個室の有無）と「駐車場」行（台数/なし）を集計",
+  "total": 93,
+  "note": "国内店舗のみ（海外店は別サイト）。「個室」は席数行に「個室：N席」等の記載がある店、「駐車場」は駐車場行が「なし」以外の店（台数記載・提携駐車場を含む）",
+  "facilities": {
+    "privateRoom": {
+      "count": 4,
+      "label": "個室"
+    },
+    "parking": {
+      "count": 38,
+      "label": "駐車場"
+    }
+  },
+  "stores": [
+    {
+      "name": "一蘭 広島本通店",
+      "url": "https://ichiran.com/shop/chugoku/hiroshima-hondori/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "一蘭 岡山下中野店",
+      "url": "https://ichiran.com/shop/chugoku/okayama-shimonakano/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 岐阜店",
+      "url": "https://ichiran.com/shop/chubu/gifu/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 浜松店",
+      "url": "https://ichiran.com/shop/chubu/hamamatsu/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 長久手店",
+      "url": "https://ichiran.com/shop/chubu/nagakute/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 名古屋鳴海店",
+      "url": "https://ichiran.com/shop/chubu/nagoya-narumi/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 名古屋錦店",
+      "url": "https://ichiran.com/shop/chubu/nagoya-nishiki/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 名古屋栄店",
+      "url": "https://ichiran.com/shop/chubu/nagoya-sakae/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "一蘭 名古屋駅店",
+      "url": "https://ichiran.com/shop/chubu/nagoya-station/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 名古屋当知店",
+      "url": "https://ichiran.com/shop/chubu/nagoya-touchi/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 岡崎店",
+      "url": "https://ichiran.com/shop/chubu/okazaki/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 静岡駅前店",
+      "url": "https://ichiran.com/shop/chubu/shizuoka/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 静岡SBS通り店",
+      "url": "https://ichiran.com/shop/chubu/shizuoka-sbsdori/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 豊橋店",
+      "url": "https://ichiran.com/shop/chubu/toyohashi/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 キャナルシティ博多店",
+      "url": "https://ichiran.com/shop/kyushu/canalcity/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 太宰府店",
+      "url": "https://ichiran.com/shop/kyushu/dazaifu/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 太宰府参道店",
+      "url": "https://ichiran.com/shop/kyushu/dazaifu-sando/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 福岡空港店",
+      "url": "https://ichiran.com/shop/kyushu/fukuoka-airport/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 博多店(サンプラザ地下街内)",
+      "url": "https://ichiran.com/shop/kyushu/hakata/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 引野店",
+      "url": "https://ichiran.com/shop/kyushu/hikino/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 古賀SA店(下り)",
+      "url": "https://ichiran.com/shop/kyushu/kogasa-kudari/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 小倉店",
+      "url": "https://ichiran.com/shop/kyushu/kokura/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 熊本下通店",
+      "url": "https://ichiran.com/shop/kyushu/kumamoto-shimodori/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 一蘭の森 糸島店",
+      "url": "https://ichiran.com/shop/kyushu/mori/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 那覇国際通り店",
+      "url": "https://ichiran.com/shop/kyushu/naha-kokusaidori/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 那の川店",
+      "url": "https://ichiran.com/shop/kyushu/nanokawa/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 西新店",
+      "url": "https://ichiran.com/shop/kyushu/nishijin/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "一蘭 小戸店",
+      "url": "https://ichiran.com/shop/kyushu/odo/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 大分弁天店",
+      "url": "https://ichiran.com/shop/kyushu/oita-benten/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 新宮店",
+      "url": "https://ichiran.com/shop/kyushu/shingu/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 一蘭本社総本店",
+      "url": "https://ichiran.com/shop/kyushu/sohonten/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 天神店",
+      "url": "https://ichiran.com/shop/kyushu/tenjin/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 天神西通り店",
+      "url": "https://ichiran.com/shop/kyushu/tenjin-nishidori/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 札幌すすきの店",
+      "url": "https://ichiran.com/shop/hokkaido/sapporo-susukino/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 浅草店",
+      "url": "https://ichiran.com/shop/tokyo/asakusa/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 浅草六区店",
+      "url": "https://ichiran.com/shop/tokyo/asakusa-rokku/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 銀座一蘭",
+      "url": "https://ichiran.com/shop/tokyo/ginza/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 原宿店",
+      "url": "https://ichiran.com/shop/tokyo/harajuku/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "一蘭 東大和店",
+      "url": "https://ichiran.com/shop/tokyo/higashi-yamato/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 池袋店",
+      "url": "https://ichiran.com/shop/tokyo/ikebukuro/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 池袋駅前店",
+      "url": "https://ichiran.com/shop/tokyo/ikebukuro-station/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 新宿歌舞伎町店",
+      "url": "https://ichiran.com/shop/tokyo/kabukicho/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 吉祥寺店",
+      "url": "https://ichiran.com/shop/tokyo/kichijoji/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 町田店",
+      "url": "https://ichiran.com/shop/tokyo/machida/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 中野店",
+      "url": "https://ichiran.com/shop/tokyo/nakano/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 西新宿店",
+      "url": "https://ichiran.com/shop/tokyo/nishi-shinjuku/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 六本木店",
+      "url": "https://ichiran.com/shop/tokyo/roppongi/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 渋谷店",
+      "url": "https://ichiran.com/shop/tokyo/shibuya/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 渋谷スペイン坂店",
+      "url": "https://ichiran.com/shop/tokyo/shibuya-spain/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 新橋店",
+      "url": "https://ichiran.com/shop/tokyo/shimbashi/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 下北沢店",
+      "url": "https://ichiran.com/shop/tokyo/shimokitazawa/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 新宿中央東口店",
+      "url": "https://ichiran.com/shop/tokyo/shinjuku/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 立川店",
+      "url": "https://ichiran.com/shop/tokyo/tachikawa/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 アトレ上野山下口店",
+      "url": "https://ichiran.com/shop/tokyo/ueno/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 上野御徒町店",
+      "url": "https://ichiran.com/shop/tokyo/ueno-okachimachi/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 仙台駅前店",
+      "url": "https://ichiran.com/shop/tohoku/sendai/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 仙台長町インター店",
+      "url": "https://ichiran.com/shop/tohoku/sendai-nagamachi/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 あべの店",
+      "url": "https://ichiran.com/shop/kinki/abeno/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 道頓堀店本館",
+      "url": "https://ichiran.com/shop/kinki/dotonbori-main/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 道頓堀店別館",
+      "url": "https://ichiran.com/shop/kinki/dotonbori-south/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 泉大津店",
+      "url": "https://ichiran.com/shop/kinki/izumiotsu/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 門真店",
+      "url": "https://ichiran.com/shop/kinki/kadoma/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 神戸玉津店",
+      "url": "https://ichiran.com/shop/kinki/kobe-tamatsu/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 京都烏丸店",
+      "url": "https://ichiran.com/shop/kinki/kyoto-karasuma/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 京都河原町店",
+      "url": "https://ichiran.com/shop/kinki/kyoto-kawaramachi/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 京都洛西店",
+      "url": "https://ichiran.com/shop/kinki/kyoto-rakusai/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 京都八幡店",
+      "url": "https://ichiran.com/shop/kinki/kyoto-yawata/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 なんば御堂筋店",
+      "url": "https://ichiran.com/shop/kinki/namba-midosuji/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 大阪茨木店",
+      "url": "https://ichiran.com/shop/kinki/osaka-ibaraki/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 三宮店",
+      "url": "https://ichiran.com/shop/kinki/sannomiya/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 心斎橋店",
+      "url": "https://ichiran.com/shop/kinki/shinsaibashi/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 宝塚店",
+      "url": "https://ichiran.com/shop/kinki/takarazuka/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 梅田阪急東通店",
+      "url": "https://ichiran.com/shop/kinki/umeda-hankyu/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 梅田芝田店",
+      "url": "https://ichiran.com/shop/kinki/umeda-shibata/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 八尾店",
+      "url": "https://ichiran.com/shop/kinki/yao/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 四日市三ツ谷店",
+      "url": "https://ichiran.com/shop/kinki/yokkaichi/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 上尾店",
+      "url": "https://ichiran.com/shop/kanto/ageo/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 千葉店(C-one内)",
+      "url": "https://ichiran.com/shop/kanto/chiba/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 千葉出洲港店",
+      "url": "https://ichiran.com/shop/kanto/dezuminato/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 船橋店",
+      "url": "https://ichiran.com/shop/kanto/funabashi/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 東大宮店",
+      "url": "https://ichiran.com/shop/kanto/higashiomiya/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 平塚店",
+      "url": "https://ichiran.com/shop/kanto/hiratsuka/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 柏店",
+      "url": "https://ichiran.com/shop/kanto/kashiwa/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 川越クレアモール店",
+      "url": "https://ichiran.com/shop/kanto/kawagoe/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 川崎店",
+      "url": "https://ichiran.com/shop/kanto/kawasaki/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 越谷イオンレイクタウン店",
+      "url": "https://ichiran.com/shop/kanto/koshigaya/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 前橋インター店",
+      "url": "https://ichiran.com/shop/kanto/maebashi/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 水戸店",
+      "url": "https://ichiran.com/shop/kanto/mito/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 大宮駅前店",
+      "url": "https://ichiran.com/shop/kanto/omiya-station/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 相模原店",
+      "url": "https://ichiran.com/shop/kanto/sagamihara/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 横浜桜木町店",
+      "url": "https://ichiran.com/shop/kanto/sakuragicho/",
+      "facilities": []
+    },
+    {
+      "name": "一蘭 宇都宮鶴田店",
+      "url": "https://ichiran.com/shop/kanto/utsunomiya/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一蘭 横浜西口店",
+      "url": "https://ichiran.com/shop/kanto/yokohama-nishi/",
+      "facilities": []
+    }
+  ]
+}

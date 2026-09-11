@@ -1,0 +1,15 @@
+{
+  "note": "設備カバー率センサスで確認したが集計に載せなかったチェーン。理由を公開する（『載っていない＝設備が無い』と読まれないため）。scripts/chain-coverage の調査結果を手で転記。",
+  "checkedAt": "2026-09-11",
+  "chains": [
+    { "chain": "marugame", "locator": "https://stores.marugame.com/", "reason": "店舗ページの属性は取扱メニュー・麺職人在籍・持ち帰り窓口のみで、設備の属性が無い" },
+    { "chain": "doutor", "locator": "https://shop.doutor.co.jp/doutor/spot/lists", "reason": "絞り込みは Wi-Fi・コンセント・決済・喫煙区分・取扱メニューのみで、設備の属性が無い" },
+    { "chain": "starbucks", "locator": "https://store.starbucks.co.jp/", "reason": "絞り込みは Wi-Fi・ドライブスルー・決済・店舗コンセプト等で、設備の属性が無い（「Family Friendly」は店舗コンセプトで設備項目に対応しない）" },
+    { "chain": "sanmarccafe", "locator": "https://www.saint-marc-hd.com/saintmarccafe/search/", "reason": "サービス・設備の選択肢は Wi-Fi・喫煙ブース・メニュー・セルフレジ・コンセントのみ" },
+    { "chain": "veloce", "locator": "https://www.chatnoir-company.com/", "reason": "集計日に公式サイトへ接続できず未確認" },
+    { "chain": "zetteria", "locator": "https://www.zetteria.jp/shop/", "reason": "店舗一覧・詳細に営業時間と住所しかなく、設備の属性が無い" },
+    { "chain": "burger-king", "locator": "https://www.burgerking.co.jp/store", "reason": "店舗属性はモバイルオーダー・ドライブスルー・朝メニュー・決済・24時間・Wi-Fi・電源のみ" },
+    { "chain": "maido-ookini-shokudo", "locator": "https://www.fujiofood.com/shop_search/", "reason": "店舗データに意味の説明されていないフラグはあるが、画面に凡例が無く判別できない。推測で埋めない" },
+    { "chain": "marugenramen", "locator": "https://www.syodai-marugen.jp/shop/", "reason": "店舗検索の設備項目（入り口スロープ・おむつ替えシート等）は存在するが、全245店で未入力。「0店」と出すと誤りになるため集計から外した" }
+  ]
+}

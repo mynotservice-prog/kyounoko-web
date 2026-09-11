@@ -1,0 +1,1320 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "bronco-billy",
+  "name": "ブロンコビリー",
+  "sourceUrl": "https://www.bronco.co.jp/shop/",
+  "method": "公式店舗一覧の全店舗ページを取得し、店舗ページの設備アイコン（alt 表記）を集計",
+  "note": "アイコン全9種のうち家族向け5種を集計。「クレジット可」「全席禁煙」「車椅子対応駐車場」「エレベーター」は対応する設備キーが無いため数えていない",
+  "total": 128,
+  "facilities": {
+    "parking": {
+      "count": 128,
+      "label": "駐車場"
+    },
+    "diaperTable": {
+      "count": 104,
+      "label": "ベビーシート"
+    },
+    "kidsChair": {
+      "count": 127,
+      "label": "ベビーチェア"
+    },
+    "stepFree": {
+      "count": 97,
+      "label": "段差なし"
+    },
+    "multiToilet": {
+      "count": 63,
+      "label": "多目的トイレ"
+    }
+  },
+  "stores": [
+    {
+      "name": "東久留米店",
+      "url": "https://www.bronco.co.jp/shop/tokyo/higashikurume/",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsChair",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "新小岩店",
+      "url": "https://www.bronco.co.jp/shop/tokyo/shinkoiwa_ten/",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "国分寺店",
+      "url": "https://www.bronco.co.jp/shop/tokyo/kokubunji_ten/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "保木間店",
+      "url": "https://www.bronco.co.jp/shop/tokyo/hokima_ten/",
+      "facilities": [
+        "parking",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "北綾瀬店",
+      "url": "https://www.bronco.co.jp/shop/tokyo/kita_ayase_grand/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "多摩ニュータウン通り店",
+      "url": "https://www.bronco.co.jp/shop/tokyo/tama_newtown/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "昭島昭和の森店",
+      "url": "https://www.bronco.co.jp/shop/tokyo/akishima/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "町田多摩境店",
+      "url": "https://www.bronco.co.jp/shop/tokyo/machida/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "八王子大和田店",
+      "url": "https://www.bronco.co.jp/shop/tokyo/hachioujioowada/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "小仙波店",
+      "url": "https://www.bronco.co.jp/shop/saitama/kosemba/",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "羽生noNIWA店",
+      "url": "https://www.bronco.co.jp/shop/saitama/hanyu_noniwa/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "東松山店",
+      "url": "https://www.bronco.co.jp/shop/saitama/higashimatsuyama/",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "籠原店",
+      "url": "https://www.bronco.co.jp/shop/saitama/kagohara/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "stepFree",
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "鶴ヶ島インター店",
+      "url": "https://www.bronco.co.jp/shop/saitama/tsurugashimainter/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "上尾店",
+      "url": "https://www.bronco.co.jp/shop/saitama/ageo_ten/",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "大宮南中野店",
+      "url": "https://www.bronco.co.jp/shop/saitama/ohmiyaminaminakano/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "春日部店",
+      "url": "https://www.bronco.co.jp/shop/saitama/kasukabe/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "新座野火止店",
+      "url": "https://www.bronco.co.jp/shop/saitama/niizanobidome/",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsChair",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "草加松原店",
+      "url": "https://www.bronco.co.jp/shop/saitama/soukamatsubara/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "南浦和円正寺店",
+      "url": "https://www.bronco.co.jp/shop/saitama/enshoji/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "戸田駅前店",
+      "url": "https://www.bronco.co.jp/shop/saitama/todaekimae/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "大宮三橋店",
+      "url": "https://www.bronco.co.jp/shop/saitama/oomiyamihashi/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "平塚店",
+      "url": "https://www.bronco.co.jp/shop/kanagawa/hiratsuka/",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "海老名店",
+      "url": "https://www.bronco.co.jp/shop/kanagawa/ebina/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "横浜青葉インター店",
+      "url": "https://www.bronco.co.jp/shop/kanagawa/yokohamaaobainter/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "厚木及川店",
+      "url": "https://www.bronco.co.jp/shop/kanagawa/atsugioikawa/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "湘南ライフタウン店",
+      "url": "https://www.bronco.co.jp/shop/kanagawa/shonanlifetown/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "横浜鶴見店",
+      "url": "https://www.bronco.co.jp/shop/kanagawa/yokohamaturumi_ten/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "秦野店",
+      "url": "https://www.bronco.co.jp/shop/kanagawa/hadano_ten/",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "高津久末店",
+      "url": "https://www.bronco.co.jp/shop/kanagawa/takatuhisasue/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "戸塚原宿店",
+      "url": "https://www.bronco.co.jp/shop/kanagawa/totukaharajuku/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "相模原上鶴間店",
+      "url": "https://www.bronco.co.jp/shop/kanagawa/kamitsuruma/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "おおたかの森店",
+      "url": "https://www.bronco.co.jp/shop/chiba/ootakanomori_ten/",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "我孫子店",
+      "url": "https://www.bronco.co.jp/shop/chiba/abiko/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "西船橋店",
+      "url": "https://www.bronco.co.jp/shop/chiba/nishi_funabashi/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "高崎店",
+      "url": "https://www.bronco.co.jp/shop/gunma/takasaki/",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "伊勢崎店",
+      "url": "https://www.bronco.co.jp/shop/gunma/isesaki/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "太田店",
+      "url": "https://www.bronco.co.jp/shop/gunma/ota/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "前橋店",
+      "url": "https://www.bronco.co.jp/shop/gunma/maebashi/",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "岩塚店",
+      "url": "https://www.bronco.co.jp/shop/nagoya/iwatsuka/",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "檀渓通店",
+      "url": "https://www.bronco.co.jp/shop/nagoya/dankedoori_ten/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "萩野通店",
+      "url": "https://www.bronco.co.jp/shop/nagoya/haginodoori_ten/",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "南陽店",
+      "url": "https://www.bronco.co.jp/shop/nagoya/nanyouten/",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "熱田千年店",
+      "url": "https://www.bronco.co.jp/shop/nagoya/atsutachitose/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "高針店",
+      "url": "https://www.bronco.co.jp/shop/nagoya/takabari/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "笠寺店",
+      "url": "https://www.bronco.co.jp/shop/nagoya/kasadera/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "昭和橋店",
+      "url": "https://www.bronco.co.jp/shop/nagoya/showabashi/",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "大森インター店",
+      "url": "https://www.bronco.co.jp/shop/nagoya/oomori/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "守山店",
+      "url": "https://www.bronco.co.jp/shop/nagoya/moriyama/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "稲沢重本店",
+      "url": "https://www.bronco.co.jp/shop/aichi/inazawashigemoto/",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "弥富イオンタウン前店",
+      "url": "https://www.bronco.co.jp/shop/aichi/yatomi_aeontownmae/",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "日進梅森店",
+      "url": "https://www.bronco.co.jp/shop/aichi/nissinumemori_ten/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一宮バイパス店",
+      "url": "https://www.bronco.co.jp/shop/aichi/ichinomiya_bypass/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "西尾店",
+      "url": "https://www.bronco.co.jp/shop/aichi/nishio/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "大府店",
+      "url": "https://www.bronco.co.jp/shop/aichi/oobu/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "岡崎稲熊店",
+      "url": "https://www.bronco.co.jp/shop/aichi/okazaki_inaguma/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "岡崎六名店",
+      "url": "https://www.bronco.co.jp/shop/aichi/okazaki_mutsuna/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "春日店",
+      "url": "https://www.bronco.co.jp/shop/aichi/haruhi/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "春日井市民病院前店",
+      "url": "https://www.bronco.co.jp/shop/aichi/kasugai_shiminbyouinmae/",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "春日井高蔵寺店",
+      "url": "https://www.bronco.co.jp/shop/aichi/kasugai_kouzouji/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "勝川インター店",
+      "url": "https://www.bronco.co.jp/shop/aichi/kachigawa_inter/",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "蟹江インター店",
+      "url": "https://www.bronco.co.jp/shop/aichi/kanie_inter/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "蒲郡店",
+      "url": "https://www.bronco.co.jp/shop/aichi/gamagouri/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "刈谷運動公園前店",
+      "url": "https://www.bronco.co.jp/shop/aichi/kariya_undoukouenmae/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "尾西インター店",
+      "url": "https://www.bronco.co.jp/shop/aichi/bisai_inter/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "七宝店",
+      "url": "https://www.bronco.co.jp/shop/aichi/shippou/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "日進外語大前店",
+      "url": "https://www.bronco.co.jp/shop/aichi/nisshin_gaigodaimae/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "豊田元宮店",
+      "url": "https://www.bronco.co.jp/shop/aichi/toyota_motomiya/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "半田インター店",
+      "url": "https://www.bronco.co.jp/shop/aichi/handa_inter/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "東海店",
+      "url": "https://www.bronco.co.jp/shop/aichi/tokai/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "江南扶桑店",
+      "url": "https://www.bronco.co.jp/shop/aichi/kounan_fuso/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "北名古屋店",
+      "url": "https://www.bronco.co.jp/shop/aichi/kitanagoya/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "長久手図書館通店",
+      "url": "https://www.bronco.co.jp/shop/aichi/nagakute/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "西枇杷島店",
+      "url": "https://www.bronco.co.jp/shop/aichi/nishibiwajima/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "三河安城店",
+      "url": "https://www.bronco.co.jp/shop/aichi/mikawa_anjo/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "豊橋北山店",
+      "url": "https://www.bronco.co.jp/shop/aichi/toyohashi_kitayama/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "豊橋花田店",
+      "url": "https://www.bronco.co.jp/shop/aichi/toyohashi_hanada/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "岐阜正木店",
+      "url": "https://www.bronco.co.jp/shop/gifu/gifumasaki/",
+      "facilities": [
+        "kidsChair",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "岐阜薮田店",
+      "url": "https://www.bronco.co.jp/shop/gifu/gifuyabuta_ten/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "各務原店",
+      "url": "https://www.bronco.co.jp/shop/gifu/kagamigaharaten/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "羽島インター北店",
+      "url": "https://www.bronco.co.jp/shop/gifu/hashima/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "大垣楽田店",
+      "url": "https://www.bronco.co.jp/shop/gifu/oogakirakuden/",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "美濃加茂店",
+      "url": "https://www.bronco.co.jp/shop/gifu/minokamo/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "多治見インター店",
+      "url": "https://www.bronco.co.jp/shop/gifu/tajimi/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "可児店",
+      "url": "https://www.bronco.co.jp/shop/gifu/kani/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "恵那店",
+      "url": "https://www.bronco.co.jp/shop/gifu/ena/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "三重川越店",
+      "url": "https://www.bronco.co.jp/shop/mie/miekawagoe/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "kidsChair",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "桑名大山田店",
+      "url": "https://www.bronco.co.jp/shop/mie/kuwanaooyamada/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "四日市生桑店",
+      "url": "https://www.bronco.co.jp/shop/mie/yokkaichiikuwa/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "鈴鹿中央通店",
+      "url": "https://www.bronco.co.jp/shop/mie/suzukatyuoudoori/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "松阪店",
+      "url": "https://www.bronco.co.jp/shop/mie/matsuzaka/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "御殿場店",
+      "url": "https://www.bronco.co.jp/shop/shizuoka/gotenba_ten/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "沼津バイパス店",
+      "url": "https://www.bronco.co.jp/shop/shizuoka/numazu/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "浜松有玉店",
+      "url": "https://www.bronco.co.jp/shop/shizuoka/hamamatsuaritama/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "静岡安倍街道店",
+      "url": "https://www.bronco.co.jp/shop/shizuoka/shizuokaabekaido/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "富士本市場店",
+      "url": "https://www.bronco.co.jp/shop/shizuoka/fujimotoichiba/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "三島南田町店",
+      "url": "https://www.bronco.co.jp/shop/shizuoka/mishimaminamitamachi/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "吹田岸部店",
+      "url": "https://www.bronco.co.jp/shop/osaka/suitakishibe/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "河内長野店",
+      "url": "https://www.bronco.co.jp/shop/osaka/kawachinagano/",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "岸和田店",
+      "url": "https://www.bronco.co.jp/shop/osaka/kishiwada/",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ビバモール美原南インター店",
+      "url": "https://www.bronco.co.jp/shop/osaka/vivamallmiharaminami_inter/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "東大阪岸田堂店",
+      "url": "https://www.bronco.co.jp/shop/osaka/higashiosakakishidado/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "東大阪菱江店",
+      "url": "https://www.bronco.co.jp/shop/osaka/higashioosakahishie_grand/",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "高槻若松店",
+      "url": "https://www.bronco.co.jp/shop/osaka/takatsukiwakamatsu/",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "東淀川菅原店",
+      "url": "https://www.bronco.co.jp/shop/osaka/higashiyodogawasugawara/",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "豊中向丘店",
+      "url": "https://www.bronco.co.jp/shop/osaka/toyonakamukaigaoka_ten/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "枚方招提店",
+      "url": "https://www.bronco.co.jp/shop/osaka/hirakata_syodai_ten/",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "京都南店",
+      "url": "https://www.bronco.co.jp/shop/kyoto/kyotominami_ten/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "大津京店",
+      "url": "https://www.bronco.co.jp/shop/shiga/otsukyou/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "草津店",
+      "url": "https://www.bronco.co.jp/shop/shiga/kusatsu_ten/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "湖南店",
+      "url": "https://www.bronco.co.jp/shop/shiga/konan/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "近江八幡店",
+      "url": "https://www.bronco.co.jp/shop/shiga/oumihachiman/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "彦根店",
+      "url": "https://www.bronco.co.jp/shop/shiga/hikone/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "姫路神屋店",
+      "url": "https://www.bronco.co.jp/shop/hyogo/himejikamiya/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "姫路飾磨店",
+      "url": "https://www.bronco.co.jp/shop/hyogo/himejishikama/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "三田けやきプラザ店",
+      "url": "https://www.bronco.co.jp/shop/hyogo/sandakeyakiplaza/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "ステーションパーク小束山店",
+      "url": "https://www.bronco.co.jp/shop/hyogo/stationparkkozukayama/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "大蔵谷インター店",
+      "url": "https://www.bronco.co.jp/shop/hyogo/okuradaniic_ten/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "伊丹池尻店",
+      "url": "https://www.bronco.co.jp/shop/hyogo/itamiikejiri_ten/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "宝塚店",
+      "url": "https://www.bronco.co.jp/shop/hyogo/takarazuka_ten/",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "奈良橿原店",
+      "url": "https://www.bronco.co.jp/shop/nara/narakashihara/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "奈良押熊店",
+      "url": "https://www.bronco.co.jp/shop/nara/naraoshikuma/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "ゆめモール那珂川店",
+      "url": "https://www.bronco.co.jp/shop/fukuoka/yumemall_nakagawa/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "古賀店",
+      "url": "https://www.bronco.co.jp/shop/fukuoka/koga/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "飯塚カホテラス店",
+      "url": "https://www.bronco.co.jp/shop/fukuoka/iizuka_kahoterras/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "久留米店",
+      "url": "https://www.bronco.co.jp/shop/fukuoka/kurume/",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "八幡青山店",
+      "url": "https://www.bronco.co.jp/shop/fukuoka/yahataaoyama/",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "大野城御笠川店",
+      "url": "https://www.bronco.co.jp/shop/fukuoka/oonojoumikasagawa/",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree",
+        "diaperTable",
+        "multiToilet"
+      ]
+    }
+  ]
+}

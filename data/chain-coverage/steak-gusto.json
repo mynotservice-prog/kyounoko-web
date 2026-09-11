@@ -1,0 +1,592 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "steak-gusto",
+  "name": "ステーキガスト",
+  "sourceUrl": "https://store-info.skylark.co.jp/",
+  "method": "すかいらーくグループ共通店舗検索の店舗API（/api/point/、カテゴリ=0105）で全店舗を取得し、各店舗の設備フラグ（絞り込み検索と同じ項目）を集計",
+  "total": 65,
+  "note": "「座敷」は絞り込み検索の「座敷(大・小) あり」と「小上がり(畳席) あり」のいずれかに該当する店舗を数えた。単一フラグの項目は公式絞り込み件数と一致を確認済み（車椅子入店可=22、おむつ替え台あり=64、個室・個室風席あり=1、多目的トイレあり=13、駐車場あり=65）",
+  "facilities": {
+    "stepFree": {
+      "count": 22,
+      "label": "車椅子入店可"
+    },
+    "zashiki": {
+      "count": 0,
+      "label": "座敷(大・小) あり／小上がり(畳席) あり"
+    },
+    "diaperTable": {
+      "count": 64,
+      "label": "おむつ替え台あり"
+    },
+    "privateRoom": {
+      "count": 1,
+      "label": "個室・個室風席あり"
+    },
+    "multiToilet": {
+      "count": 13,
+      "label": "多目的トイレあり"
+    },
+    "parking": {
+      "count": 65,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "ステーキガスト 小牧店",
+      "url": "https://store-info.skylark.co.jp/map/018203/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 北九州則松店",
+      "url": "https://store-info.skylark.co.jp/map/018204/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 福岡新宮店",
+      "url": "https://store-info.skylark.co.jp/map/018197/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 刈谷今川町店",
+      "url": "https://store-info.skylark.co.jp/map/018198/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト ゆめまち習志野台モール店",
+      "url": "https://store-info.skylark.co.jp/map/018194/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 大津瀬田店",
+      "url": "https://store-info.skylark.co.jp/map/018191/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 宝塚店",
+      "url": "https://store-info.skylark.co.jp/map/018188/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 落合南長崎店",
+      "url": "https://store-info.skylark.co.jp/map/018166/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 秋田広面店",
+      "url": "https://store-info.skylark.co.jp/map/018183/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 高崎問屋町店",
+      "url": "https://store-info.skylark.co.jp/map/018182/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 東越谷店",
+      "url": "https://store-info.skylark.co.jp/map/018180/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 小田原東インター店",
+      "url": "https://store-info.skylark.co.jp/map/018171/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 鶴瀬店",
+      "url": "https://store-info.skylark.co.jp/map/018169/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 市原店",
+      "url": "https://store-info.skylark.co.jp/map/018159/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 伊勢原店",
+      "url": "https://store-info.skylark.co.jp/map/018162/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 豊橋藤沢店",
+      "url": "https://store-info.skylark.co.jp/map/018143/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 横浜駒岡店",
+      "url": "https://store-info.skylark.co.jp/map/018157/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 相模原店",
+      "url": "https://store-info.skylark.co.jp/map/018152/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 松山三津店",
+      "url": "https://store-info.skylark.co.jp/map/018151/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 熊本光の森店",
+      "url": "https://store-info.skylark.co.jp/map/018148/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 京都十条通店",
+      "url": "https://store-info.skylark.co.jp/map/018133/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 滋賀長浜店",
+      "url": "https://store-info.skylark.co.jp/map/018132/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 泉中田店",
+      "url": "https://store-info.skylark.co.jp/map/018141/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 神戸白川台店",
+      "url": "https://store-info.skylark.co.jp/map/018090/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 総社店",
+      "url": "https://store-info.skylark.co.jp/map/018088/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 長野柳原店",
+      "url": "https://store-info.skylark.co.jp/map/018086/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 広島可部店",
+      "url": "https://store-info.skylark.co.jp/map/018084/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 生駒南店",
+      "url": "https://store-info.skylark.co.jp/map/018083/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 本牧店",
+      "url": "https://store-info.skylark.co.jp/map/018082/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 与野店",
+      "url": "https://store-info.skylark.co.jp/map/018079/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 三郷谷口店",
+      "url": "https://store-info.skylark.co.jp/map/018077/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 福生熊川店",
+      "url": "https://store-info.skylark.co.jp/map/018075/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 木更津南インター店",
+      "url": "https://store-info.skylark.co.jp/map/018073/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 須賀川店",
+      "url": "https://store-info.skylark.co.jp/map/018072/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 鹿児島宇宿店",
+      "url": "https://store-info.skylark.co.jp/map/018070/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 浜松東田町店",
+      "url": "https://store-info.skylark.co.jp/map/018068/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 松戸梨香台店",
+      "url": "https://store-info.skylark.co.jp/map/018066/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 横須賀佐原インター店",
+      "url": "https://store-info.skylark.co.jp/map/018061/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 厚木妻田店",
+      "url": "https://store-info.skylark.co.jp/map/018060/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 宮崎旭店",
+      "url": "https://store-info.skylark.co.jp/map/018058/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 竜王店",
+      "url": "https://store-info.skylark.co.jp/map/018055/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 狭山店",
+      "url": "https://store-info.skylark.co.jp/map/018054/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 深大寺店",
+      "url": "https://store-info.skylark.co.jp/map/018053/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 門真店",
+      "url": "https://store-info.skylark.co.jp/map/018052/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 東大分店",
+      "url": "https://store-info.skylark.co.jp/map/018051/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 寒川店",
+      "url": "https://store-info.skylark.co.jp/map/018050/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 東仙台店",
+      "url": "https://store-info.skylark.co.jp/map/018049/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 太平通店",
+      "url": "https://store-info.skylark.co.jp/map/018047/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 甲府住吉店",
+      "url": "https://store-info.skylark.co.jp/map/018045/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 川崎菅生店",
+      "url": "https://store-info.skylark.co.jp/map/018043/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 岡山下中野店",
+      "url": "https://store-info.skylark.co.jp/map/018042/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 高松松繩店",
+      "url": "https://store-info.skylark.co.jp/map/018033/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 徳島応神店",
+      "url": "https://store-info.skylark.co.jp/map/018032/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 静岡ＳＢＳ通店",
+      "url": "https://store-info.skylark.co.jp/map/018031/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 西掛川店",
+      "url": "https://store-info.skylark.co.jp/map/018030/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 新潟堀之内店",
+      "url": "https://store-info.skylark.co.jp/map/018026/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 伊勢崎柳原店",
+      "url": "https://store-info.skylark.co.jp/map/018025/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 鶴ヶ島店",
+      "url": "https://store-info.skylark.co.jp/map/018021/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 天白保呂町店",
+      "url": "https://store-info.skylark.co.jp/map/018023/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 沢良宜駅前店",
+      "url": "https://store-info.skylark.co.jp/map/018019/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 諏訪店",
+      "url": "https://store-info.skylark.co.jp/map/018013/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 広島羽衣店",
+      "url": "https://store-info.skylark.co.jp/map/018012/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 栄鍛冶ヶ谷店",
+      "url": "https://store-info.skylark.co.jp/map/018009/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 小平上水本町店",
+      "url": "https://store-info.skylark.co.jp/map/018008/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキガスト 大和店",
+      "url": "https://store-info.skylark.co.jp/map/018005/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    }
+  ]
+}
