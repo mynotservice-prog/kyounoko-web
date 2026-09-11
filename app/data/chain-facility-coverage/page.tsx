@@ -7,6 +7,7 @@ import {
   COVERAGE_LABELS,
   buildCoverageCsvRows,
   coverageDisplay,
+  formatRate,
   getAllChainCoverage,
   getCoverageExcluded,
   getCoverageGeneratedAt,
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
   },
 };
 
-const pct = (v: number) => `${Math.round(v * 100)}%`;
+const pct = formatRate;
 
 /** 引用されやすい1枚の図: 設備別の全体設置率（横棒）。外部CSS不要のインラインSVG */
 function CoverageChart({ rows }: { rows: typeof summary.byFacility }) {
@@ -239,7 +240,7 @@ export default function ChainFacilityCoveragePage() {
                     {chains.map((c) => {
                       const d = coverageDisplay(c);
                       return (
-                        <tr key={c.chain}>
+                        <tr key={c.chain} id={`chain-${c.chain}`}>
                           <td style={td}><ChainName name={d.name} slug={d.koryakuSlug} /></td>
                           <td style={num}>{c.total.toLocaleString()}</td>
                           {summary.byFacility.map((f) => {

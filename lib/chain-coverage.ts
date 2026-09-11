@@ -131,6 +131,12 @@ export function getCoverageSummary(): CoverageSummary {
   };
 }
 
+/** 率の表示。1%未満の非ゼロは小数1桁で出し、「2店（0%）」のような矛盾を避ける */
+export function formatRate(v: number): string {
+  if (v > 0 && v < 0.01) return `${(v * 100).toFixed(1)}%`;
+  return `${Math.round(v * 100)}%`;
+}
+
 export type CoverageExcluded = { chain: string; name: string; locator: string; reason: string };
 
 /** 確認したが集計に載せなかったチェーン（理由つき）。「載っていない＝設備が無い」と読まれないための開示 */
