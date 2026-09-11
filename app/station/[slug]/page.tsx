@@ -38,6 +38,7 @@ import {
 } from '@/lib/station-conditions';
 import { getSpotsForStation, filterSpotsByCondition } from '@/lib/station-spots';
 import { isStationConditionIndexable } from '@/lib/station-cond-index';
+import { getAreaArticleLinks } from '@/lib/area-articles';
 import { buildRestaurantFaq, faqToJsonLd } from '@/lib/station-faq';
 import { StickySectionNav } from '@/components/station/StickySectionNav';
 import { AdSlot } from '@/components/ads/AdSlot';
@@ -153,6 +154,8 @@ export default async function StationPage({ params }: Props) {
 
   // 同じエリアの他駅（東京なら同区、関西なら同府/県）
   const sameWardStations = getSameAreaStations(station, 12);
+  // 区・市ごとのエリア記事（室内遊び場・水遊び）。駅ページから内部リンクを集める（lib/area-articles.ts）
+  const areaArticles = getAreaArticleLinks(wardName);
 
   // JSON-LD: ItemList で各チェーン+個人店を列挙
   const allItemsForLd = [
@@ -798,6 +801,25 @@ export default async function StationPage({ params }: Props) {
                       </span>
                     )}
                   </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* 区・市のエリア記事（室内遊び場・水遊び）。ランチ以外の「今日どこ行く」を同じ区で完結させる */}
+          {areaArticles.length > 0 && (
+            <section className="station-related stv3-sec ruled">
+              <header className="stv3-sechead">
+                <span className="stv3-eyebrow">AREA GUIDE · {wardName}のおでかけ</span>
+                <h2 className="stv3-h2">{wardName}で子どもと遊ぶなら</h2>
+                <p className="stv3-sublead">ランチの前後に使える、{wardName}の遊び場を公式情報で確認してまとめた記事です。</p>
+              </header>
+              <div className="stv3-stations">
+                {areaArticles.map((a) => (
+                  <Link key={a.href} href={a.href} className="stv3-station" title={a.title}>
+                    <span className="stv3-station-name">{wardName}の{a.label}</span>
+                    <span className="stv3-station-scale">記事</span>
+                  </Link>
                 ))}
               </div>
             </section>

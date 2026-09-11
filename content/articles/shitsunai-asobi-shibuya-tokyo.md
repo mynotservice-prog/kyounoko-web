@@ -1,12 +1,12 @@
 ---
 slug: shitsunai-asobi-shibuya-tokyo
-title: 渋谷区の子連れ室内遊び場8選｜ヒカリエ11階の無料スペースが正解【2026年版】
+title: 渋谷区の子連れ室内・屋内遊び場8選｜赤ちゃんOK・キッズスペース・ヒカリエ11階の無料スペースが正解【2026年版】
 metaDescription: >-
   渋谷区で子供（0〜6歳）と室内で遊べるスポット8選。渋谷ヒカリエ11階の無料スカイロビー（電車が見える・巨大レゴ模型）、電車ビューのべるべるパーク渋谷店、区立児童館・フレンズ本町まで、料金・階数・授乳室の場所を実データで2026年版に整理しました。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-09-04'
+updatedAt: '2026-09-12'
 hero: /img/scenes/kidspark-01.webp
 area: tokyo
 quickInfo:

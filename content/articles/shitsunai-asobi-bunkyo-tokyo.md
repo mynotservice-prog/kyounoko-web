@@ -1,13 +1,13 @@
 ---
 slug: shitsunai-asobi-bunkyo-tokyo
 seoRelated: shitsunai-asobi-chiyoda-tokyo
-title: 文京区の子連れ室内遊び場｜ASOBono!と区立児童館の使い分け【2026】
+title: 文京区の子連れ室内遊び場｜無料あり・赤ちゃんOK・ASOBono!と区立児童館の使い分け【2026】
 metaDescription: >-
   文京区で0〜6歳と室内で遊ぶなら、選択肢は実質2つ。東京ドームシティのASOBono!（6ヶ月〜小学生・60分950円〜）と、無料で誰でも使える区立児童館16館です。料金・営業時間・日祝の休館・ランチタイムの扱いまで公式情報で整理しました。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-09-04'
+updatedAt: '2026-09-12'
 hero: /img/scenes/jidoukan-01.webp
 area: tokyo
 quickInfo:

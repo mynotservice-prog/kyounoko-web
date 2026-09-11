@@ -1,12 +1,12 @@
 ---
 slug: shitsunai-asobi-chiba
-title: 千葉市の子供の室内遊び場7選｜雨の日もOK・年齢別完全ガイド【2026年版】
+title: 千葉市の子供の室内・屋内遊び場7選｜雨の日もOK・年齢別完全ガイド【2026年版】
 metaDescription: >-
   千葉市の子供向け室内遊び場を年齢別に厳選紹介。千葉市科学館・キッズダム・市民ミュージアム・モール内キッズスペースなど7スポットを、料金・対象年齢・混雑回避つきで完全ガイド。雨の日も安心。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-08-01'
+updatedAt: '2026-09-12'
 hero: /img/scenes/kidspark-01.webp
 area: chiba
 quickInfo:

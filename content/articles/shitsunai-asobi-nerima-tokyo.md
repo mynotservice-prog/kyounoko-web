@@ -1,12 +1,12 @@
 ---
 slug: shitsunai-asobi-nerima-tokyo
-title: 練馬区の子供の室内遊び場8選｜児童館・キッズスペース・有料施設【2026年版】
+title: 練馬区の子供の室内・屋内遊び場8選｜無料あり・赤ちゃんOK・児童館・キッズスペース【2026年版】
 metaDescription: >-
   練馬区で子供（0〜6歳）と室内で遊べるスポット8選。区立児童館・無料子育てひろば・光が丘や石神井公園の有料屋内施設、対象年齢、料金、設備（オムツ替え・授乳室）、雨の日でも安心の駐車場情報まで2026年版で完全紹介。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-09-02'
+updatedAt: '2026-09-12'
 hero: /img/scenes/mallkids-03.webp
 area: tokyo
 quickInfo:
