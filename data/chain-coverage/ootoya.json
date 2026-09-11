@@ -1,0 +1,2679 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "ootoya",
+  "name": "大戸屋",
+  "sourceUrl": "https://store.ootoya.com/",
+  "method": "公式店舗検索（MEO Cloud製）の店舗一覧API（/v2/companies/522/shops/search）で全店舗を取得し、各店舗の詳細ページ（/detail/<storeCode>/）の __NEXT_DATA__ にある絞り込み条件「サービス・施設」の checked を集計",
+  "note": "絞り込み条件「サービス・施設」の項目: 駐車場・ドリンクバー・コーヒードリンクバーのみ・禁煙・2階以上店舗・地下店舗・エレベーターあり・無料Wi-Fiあり・タッチパネル注文・スマホ注文・セルフレジ・フードコート型店舗・朝食あり。店舗一覧の businessStatus: OPEN=454。詳細ページに「サービス・施設」の値が無い店舗 132 件（設備なしとして集計）。公式の絞り込みはブラウザ側で行われサーバ側の件数が無いため、絞り込み件数との突き合わせは未実施。家族向け設備に対応する項目は駐車場のみ。「エレベーターあり」「2階以上店舗」「地下店舗」は対応する設備キーが無いため数えていない",
+  "total": 454,
+  "facilities": {
+    "parking": {
+      "count": 196,
+      "label": "駐車場"
+    }
+  },
+  "stores": [
+    {
+      "name": "大戸屋 ごはん処アリオ亀有店",
+      "url": "https://store.ootoya.com/detail/101002/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋 ウェルディ長泉店",
+      "url": "https://store.ootoya.com/detail/27457/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋 サントムーン柿田川店",
+      "url": "https://store.ootoya.com/detail/28811/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋 日立シーマークスクエア店",
+      "url": "https://store.ootoya.com/detail/27470/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 23‐パスカルショッピングセンター店",
+      "url": "https://store.ootoya.com/detail/99186/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 PIK（ピック）アヴェニュー店",
+      "url": "https://store.ootoya.com/detail/99177/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 WTCⅡ（ワールドトレードセンターツー）店",
+      "url": "https://store.ootoya.com/detail/99065/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモールBSDシティ店",
+      "url": "https://store.ootoya.com/detail/99185/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 シティウォーク スディルマン店",
+      "url": "https://store.ootoya.com/detail/99147/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 スナヤンシティ店",
+      "url": "https://store.ootoya.com/detail/99168/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 セントラルラマ９店",
+      "url": "https://store.ootoya.com/detail/99133/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 タイムズスクウェア店",
+      "url": "https://store.ootoya.com/detail/99183/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 チェルシー店",
+      "url": "https://store.ootoya.com/detail/99119/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 チュラロコン大学記念病院店",
+      "url": "https://store.ootoya.com/detail/99105/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 パシフィックプレイス店",
+      "url": "https://store.ootoya.com/detail/99175/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ユニオンスクエア店",
+      "url": "https://store.ootoya.com/detail/99100/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ロッテショッピングアヴェニュー店",
+      "url": "https://store.ootoya.com/detail/99063/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 中和環球店",
+      "url": "https://store.ootoya.com/detail/99169/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 中壢中原店",
+      "url": "https://store.ootoya.com/detail/99170/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 中環店",
+      "url": "https://store.ootoya.com/detail/99149/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 京站店",
+      "url": "https://store.ootoya.com/detail/99150/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 南京復興店",
+      "url": "https://store.ootoya.com/detail/99056/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 南港車站店",
+      "url": "https://store.ootoya.com/detail/99069/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 台中Jモール店",
+      "url": "https://store.ootoya.com/detail/99160/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 台中中友店",
+      "url": "https://store.ootoya.com/detail/99159/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 台中大魯閣新時代",
+      "url": "https://store.ootoya.com/detail/99064/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 台中老虎城店",
+      "url": "https://store.ootoya.com/detail/99171/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 台中高鐵店",
+      "url": "https://store.ootoya.com/detail/99158/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 台北凱撒店",
+      "url": "https://store.ootoya.com/detail/99058/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 台南南紡夢時代店",
+      "url": "https://store.ootoya.com/detail/99176/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 大安店",
+      "url": "https://store.ootoya.com/detail/99054/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 天母高島屋店",
+      "url": "https://store.ootoya.com/detail/99172/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 太古店",
+      "url": "https://store.ootoya.com/detail/99062/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 左営新光三越店",
+      "url": "https://store.ootoya.com/detail/99055/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 微風台北車站店",
+      "url": "https://store.ootoya.com/detail/99173/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 微風廣場店",
+      "url": "https://store.ootoya.com/detail/99165/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 忠孝復興店",
+      "url": "https://store.ootoya.com/detail/99156/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 新北投店",
+      "url": "https://store.ootoya.com/detail/99161/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 新店家楽福店",
+      "url": "https://store.ootoya.com/detail/99184/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 新竹巨城",
+      "url": "https://store.ootoya.com/detail/99067/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 新莊佳瑪店",
+      "url": "https://store.ootoya.com/detail/99073/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 東湖店",
+      "url": "https://store.ootoya.com/detail/99178/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 松山車站店",
+      "url": "https://store.ootoya.com/detail/99157/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 板橋愛買店",
+      "url": "https://store.ootoya.com/detail/99167/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 板橋遠百店",
+      "url": "https://store.ootoya.com/detail/99180/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 桃園台茂店",
+      "url": "https://store.ootoya.com/detail/99066/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 桃園家樂福經國店",
+      "url": "https://store.ootoya.com/detail/99155/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 桃園愛買店",
+      "url": "https://store.ootoya.com/detail/99070/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 桃園環球A19店",
+      "url": "https://store.ootoya.com/detail/99057/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 桃園環球A8店",
+      "url": "https://store.ootoya.com/detail/99162/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 桃園遠東店",
+      "url": "https://store.ootoya.com/detail/99179/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 比漾廣場店",
+      "url": "https://store.ootoya.com/detail/99060/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 民權東路一段店",
+      "url": "https://store.ootoya.com/detail/99068/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 漢神ドーム店",
+      "url": "https://store.ootoya.com/detail/99163/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 竹北遠百店",
+      "url": "https://store.ootoya.com/detail/99151/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 統一阪急店",
+      "url": "https://store.ootoya.com/detail/99095/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 美麗華店",
+      "url": "https://store.ootoya.com/detail/99174/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 荃灣店",
+      "url": "https://store.ootoya.com/detail/99152/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 蘆洲家樂福",
+      "url": "https://store.ootoya.com/detail/99166/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 行天宮站店",
+      "url": "https://store.ootoya.com/detail/99153/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 誠品南西店",
+      "url": "https://store.ootoya.com/detail/99164/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 銅鑼湾店",
+      "url": "https://store.ootoya.com/detail/99074/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 高雄夢時代店",
+      "url": "https://store.ootoya.com/detail/99061/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 高雄大遠百店",
+      "url": "https://store.ootoya.com/detail/99154/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 高雄漢神店",
+      "url": "https://store.ootoya.com/detail/99072/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ｾﾝﾄﾗﾙﾁｪｰﾝﾜｯﾀﾅ店",
+      "url": "https://store.ootoya.com/detail/99059/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 23スマランショッピングセンター店",
+      "url": "https://store.ootoya.com/detail/14178020455340113194/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 EQUIA(エキア)川越店",
+      "url": "https://store.ootoya.com/detail/27347/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 FKD宇都宮インターパーク店",
+      "url": "https://store.ootoya.com/detail/27304/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 Kヴィレッジ店",
+      "url": "https://store.ootoya.com/detail/99135/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 LaLaテラス南千住店",
+      "url": "https://store.ootoya.com/detail/27378/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 UNIMOちはら台店",
+      "url": "https://store.ootoya.com/detail/27220/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 けやきウォーク前橋店",
+      "url": "https://store.ootoya.com/detail/27326/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 させぼ五番街店",
+      "url": "https://store.ootoya.com/detail/27330/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 させぼ四ヶ町店",
+      "url": "https://store.ootoya.com/detail/149582/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 そよら横浜高田店",
+      "url": "https://store.ootoya.com/detail/101095/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 なんばスカイオ店",
+      "url": "https://store.ootoya.com/detail/116249/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 ひたちなかファッションクルーズ店",
+      "url": "https://store.ootoya.com/detail/27368/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 みなとみらいビジネススクエア店",
+      "url": "https://store.ootoya.com/detail/27267/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 みらい長崎ココウォーク店",
+      "url": "https://store.ootoya.com/detail/27395/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 ゆめタウンはません店",
+      "url": "https://store.ootoya.com/detail/27472/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ゆめタウン出雲店",
+      "url": "https://store.ootoya.com/detail/27403/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 ららぽーと柏の葉店",
+      "url": "https://store.ootoya.com/detail/27242/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 りんかんモール店",
+      "url": "https://store.ootoya.com/detail/149575/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 りんくうシークル店",
+      "url": "https://store.ootoya.com/detail/27233/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 アクロスモール新鎌ケ谷店",
+      "url": "https://store.ootoya.com/detail/27429/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 アズ熊谷店",
+      "url": "https://store.ootoya.com/detail/27455/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 アリオ市原店",
+      "url": "https://store.ootoya.com/detail/27277/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 アリオ橋本店",
+      "url": "https://store.ootoya.com/detail/74941/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 アルカキット錦糸町店",
+      "url": "https://store.ootoya.com/detail/27438/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 イオンタウン名西店",
+      "url": "https://store.ootoya.com/detail/27385/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンタウン山梨中央店",
+      "url": "https://store.ootoya.com/detail/27236/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンタウン東浦和店",
+      "url": "https://store.ootoya.com/detail/148910/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンタウン釜石店",
+      "url": "https://store.ootoya.com/detail/27447/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモールセンソックシティ店",
+      "url": "https://store.ootoya.com/detail/15409126269427956025/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモール与野店",
+      "url": "https://store.ootoya.com/detail/27232/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモール仙台上杉店",
+      "url": "https://store.ootoya.com/detail/135315/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモール倉敷店",
+      "url": "https://store.ootoya.com/detail/56891/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモール八千代緑が丘店",
+      "url": "https://store.ootoya.com/detail/27310/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモール北大路店",
+      "url": "https://store.ootoya.com/detail/22370/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモール北戸田店",
+      "url": "https://store.ootoya.com/detail/27229/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモール大和郡山店",
+      "url": "https://store.ootoya.com/detail/149579/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモール川口店",
+      "url": "https://store.ootoya.com/detail/110876/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモール新潟亀田インター店",
+      "url": "https://store.ootoya.com/detail/27473/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモール日の出店",
+      "url": "https://store.ootoya.com/detail/51504/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモール日吉津店",
+      "url": "https://store.ootoya.com/detail/27337/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモール札幌発寒店",
+      "url": "https://store.ootoya.com/detail/27226/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモール水戸内原店",
+      "url": "https://store.ootoya.com/detail/27285/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモール津田沼North店",
+      "url": "https://store.ootoya.com/detail/27196/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモール甲府昭和店",
+      "url": "https://store.ootoya.com/detail/27231/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモール苫小牧店",
+      "url": "https://store.ootoya.com/detail/27223/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモール須坂店",
+      "url": "https://store.ootoya.com/detail/134931/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモール高の原店",
+      "url": "https://store.ootoya.com/detail/27255/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモール高岡店",
+      "url": "https://store.ootoya.com/detail/27293/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオンモール高崎店",
+      "url": "https://store.ootoya.com/detail/31711/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオン南風原SC店",
+      "url": "https://store.ootoya.com/detail/27393/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオン天王町店",
+      "url": "https://store.ootoya.com/detail/58168/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオン市川妙典店",
+      "url": "https://store.ootoya.com/detail/27319/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオン明石店",
+      "url": "https://store.ootoya.com/detail/27263/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオン松江店",
+      "url": "https://store.ootoya.com/detail/27332/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオン相模原店",
+      "url": "https://store.ootoya.com/detail/129184/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イオン鎌取店",
+      "url": "https://store.ootoya.com/detail/27225/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イトーヨーカドー大和鶴間店",
+      "url": "https://store.ootoya.com/detail/27453/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イトーヨーカドー湘南台店",
+      "url": "https://store.ootoya.com/detail/27328/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イトーヨーカドー立場店",
+      "url": "https://store.ootoya.com/detail/27375/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イトーヨーカドー船橋店",
+      "url": "https://store.ootoya.com/detail/27217/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 イーアスつくば店",
+      "url": "https://store.ootoya.com/detail/27290/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 ウィバワディー病院店",
+      "url": "https://store.ootoya.com/detail/99103/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ウィングキッチン京急蒲田店",
+      "url": "https://store.ootoya.com/detail/27247/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 エイスクエア草津店",
+      "url": "https://store.ootoya.com/detail/27419/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 エスプラネード店",
+      "url": "https://store.ootoya.com/detail/99107/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 エトモ中央林間店",
+      "url": "https://store.ootoya.com/detail/27456/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 エトモ市が尾店",
+      "url": "https://store.ootoya.com/detail/27235/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 カインズ塩尻店",
+      "url": "https://store.ootoya.com/detail/27372/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 カエデウォーク長津田店",
+      "url": "https://store.ootoya.com/detail/27338/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 カメイドクロック店",
+      "url": "https://store.ootoya.com/detail/151426/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 カリーノ江坂店",
+      "url": "https://store.ootoya.com/detail/27245/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 クリスタル SB ラチャプルック店",
+      "url": "https://store.ootoya.com/detail/99099/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 クリスタルパーク店",
+      "url": "https://store.ootoya.com/detail/99125/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 クロスモール豊川店",
+      "url": "https://store.ootoya.com/detail/27421/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 グランデュオ立川店",
+      "url": "https://store.ootoya.com/detail/27287/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 グランドハイアットレジデンスサウスタワー",
+      "url": "https://store.ootoya.com/detail/00746312013338070899/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ゲートウェイ エカマイ店",
+      "url": "https://store.ootoya.com/detail/99106/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ゲートウェイ バンスー店",
+      "url": "https://store.ootoya.com/detail/99134/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ゲートシティ大崎店",
+      "url": "https://store.ootoya.com/detail/27275/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 ココリア多摩センター店",
+      "url": "https://store.ootoya.com/detail/27430/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 コトエ流山おおたかの森店",
+      "url": "https://store.ootoya.com/detail/67016/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 コマーシャルモール博多店",
+      "url": "https://store.ootoya.com/detail/27361/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 コーナン京葉船橋インター店",
+      "url": "https://store.ootoya.com/detail/102574/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 サイアムスクェアONE店",
+      "url": "https://store.ootoya.com/detail/99130/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 サクラマチクマモト店",
+      "url": "https://store.ootoya.com/detail/102138/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 サミティベート シーラチャー病院店",
+      "url": "https://store.ootoya.com/detail/99111/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 サミティベート病院店",
+      "url": "https://store.ootoya.com/detail/99128/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ザ・モール ガムウォンワン店",
+      "url": "https://store.ootoya.com/detail/99096/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ザ・モール コラート店",
+      "url": "https://store.ootoya.com/detail/99098/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ザ・モール タープラ店",
+      "url": "https://store.ootoya.com/detail/99139/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ザ・モール バンカピ店",
+      "url": "https://store.ootoya.com/detail/99141/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ザ・モール バンケー店",
+      "url": "https://store.ootoya.com/detail/99140/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 シァルプラット東神奈川店",
+      "url": "https://store.ootoya.com/detail/27382/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 シャポー市川店",
+      "url": "https://store.ootoya.com/detail/27244/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 シンペート医療センター店",
+      "url": "https://store.ootoya.com/detail/18305549872924960857/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 シーコンスクエア バンケー店",
+      "url": "https://store.ootoya.com/detail/06889297228059454360/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 シーコンスクエア店",
+      "url": "https://store.ootoya.com/detail/27093/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 シーロム コンプレックス店",
+      "url": "https://store.ootoya.com/detail/99113/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ジ プロムナード店",
+      "url": "https://store.ootoya.com/detail/99144/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ジャムチュリー スクエア店",
+      "url": "https://store.ootoya.com/detail/99101/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ジョイナステラス二俣川店",
+      "url": "https://store.ootoya.com/detail/27443/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 ジ･エンポリアム店",
+      "url": "https://store.ootoya.com/detail/99143/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 センチュリー オンヌット店",
+      "url": "https://store.ootoya.com/detail/99112/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 セントラル イーストヴィル店",
+      "url": "https://store.ootoya.com/detail/99121/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 セントラル ウエストゲート店",
+      "url": "https://store.ootoya.com/detail/99114/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 セントラル ウドンタニ店",
+      "url": "https://store.ootoya.com/detail/99108/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 セントラル コンケン店",
+      "url": "https://store.ootoya.com/detail/99123/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 セントラル チョンブリ店",
+      "url": "https://store.ootoya.com/detail/99142/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 セントラル ナコーンサワン店",
+      "url": "https://store.ootoya.com/detail/99116/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 セントラル ナコーンパトム店",
+      "url": "https://store.ootoya.com/detail/99146/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 セントラル ノースヴィル店",
+      "url": "https://store.ootoya.com/detail/18153548709222281092/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 セントラル バンナー店",
+      "url": "https://store.ootoya.com/detail/99124/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 セントラル ピンクラオ店",
+      "url": "https://store.ootoya.com/detail/99117/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 セントラル フェスティバル チェンマイ店",
+      "url": "https://store.ootoya.com/detail/99120/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 セントラル フェスティバル ハジャイ店",
+      "url": "https://store.ootoya.com/detail/99131/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 セントラル フェスティバル プーケット店",
+      "url": "https://store.ootoya.com/detail/99097/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 セントラル プラザ サラヤー店",
+      "url": "https://store.ootoya.com/detail/99126/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 セントラル ラプラオ店",
+      "url": "https://store.ootoya.com/detail/99132/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 セントラル ラマ２店",
+      "url": "https://store.ootoya.com/detail/99102/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 セントラル ラマ３店",
+      "url": "https://store.ootoya.com/detail/99110/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 セントラル ワールド店",
+      "url": "https://store.ootoya.com/detail/99129/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 タマサート医療センター店",
+      "url": "https://store.ootoya.com/detail/27088/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ターミナル２１店",
+      "url": "https://store.ootoya.com/detail/99137/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ダイナシティ小田原店",
+      "url": "https://store.ootoya.com/detail/101770/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 チャーン チェーンワタナ店",
+      "url": "https://store.ootoya.com/detail/99109/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 テラッソ姫路店",
+      "url": "https://store.ootoya.com/detail/27298/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 デリスクエア今池店",
+      "url": "https://store.ootoya.com/detail/27444/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 トゥルーデジタルパーク店",
+      "url": "https://store.ootoya.com/detail/27089/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 トゥンジュンガンプラザ4店",
+      "url": "https://store.ootoya.com/detail/13148077628544220435/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 トツカーナモール店",
+      "url": "https://store.ootoya.com/detail/27297/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 トレッサ横浜店",
+      "url": "https://store.ootoya.com/detail/27243/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 トーブ イコート草加松原店",
+      "url": "https://store.ootoya.com/detail/69301/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 ニッケコルトンプラザ店",
+      "url": "https://store.ootoya.com/detail/27195/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 ニッセイ札幌ビル店",
+      "url": "https://store.ootoya.com/detail/27222/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 ノースポートモール店",
+      "url": "https://store.ootoya.com/detail/27324/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 バンコク病院 チェンマイ店",
+      "url": "https://store.ootoya.com/detail/27092/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 バンコク病院店",
+      "url": "https://store.ootoya.com/detail/12851085636431418054/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 パサージオ西新井店",
+      "url": "https://store.ootoya.com/detail/27424/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 パッション ラヨーン店",
+      "url": "https://store.ootoya.com/detail/99122/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 パラダイスパーク店",
+      "url": "https://store.ootoya.com/detail/99104/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 パークプレイス大分店",
+      "url": "https://store.ootoya.com/detail/27353/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 ヒューマックス成田店",
+      "url": "https://store.ootoya.com/detail/60210/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 ビバモールさいたま新都心店",
+      "url": "https://store.ootoya.com/detail/27294/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 ビーンズ戸田公園店",
+      "url": "https://store.ootoya.com/detail/27273/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 ピオニウォーク東松山店",
+      "url": "https://store.ootoya.com/detail/27335/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 フォレオ大津一里山店",
+      "url": "https://store.ootoya.com/detail/27344/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 フューチャーパーク店",
+      "url": "https://store.ootoya.com/detail/99127/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 フレッサイン新橋店",
+      "url": "https://store.ootoya.com/detail/27371/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 フレンテ南大沢店",
+      "url": "https://store.ootoya.com/detail/27252/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ベニバナウォーク桶川店",
+      "url": "https://store.ootoya.com/detail/27314/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 ベルモール宇都宮店",
+      "url": "https://store.ootoya.com/detail/27343/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 ホリデイタウン松本店",
+      "url": "https://store.ootoya.com/detail/27270/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 ホームプロ ランシット クロン４店",
+      "url": "https://store.ootoya.com/detail/06819062778219926518/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ポーラ名古屋ビル店",
+      "url": "https://store.ootoya.com/detail/27442/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 マックスバリュ牧志店",
+      "url": "https://store.ootoya.com/detail/27311/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 マーケットプレイストンロー店",
+      "url": "https://store.ootoya.com/detail/27099/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 マーゴショッピングセンター店",
+      "url": "https://store.ootoya.com/detail/27341/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 メガバンナー店",
+      "url": "https://store.ootoya.com/detail/99118/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 モラージュ柏店",
+      "url": "https://store.ootoya.com/detail/27334/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 モレラ岐阜店",
+      "url": "https://store.ootoya.com/detail/27320/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 モレラ東戸塚店",
+      "url": "https://store.ootoya.com/detail/22364/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ヤオコー南流山店",
+      "url": "https://store.ootoya.com/detail/27301/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 ユニバーサルシティ店",
+      "url": "https://store.ootoya.com/detail/27203/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 ラソラ川西店",
+      "url": "https://store.ootoya.com/detail/27369/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ラムカムヘン病院店",
+      "url": "https://store.ootoya.com/detail/18215762855778976708/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ララガーデン川口店",
+      "url": "https://store.ootoya.com/detail/27198/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 ララガーデン長町店",
+      "url": "https://store.ootoya.com/detail/27288/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 ラ・ヴィラ店",
+      "url": "https://store.ootoya.com/detail/99115/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ロビンソン ラチャプルック店",
+      "url": "https://store.ootoya.com/detail/99145/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 ワン バンコク店",
+      "url": "https://store.ootoya.com/detail/27091/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 一宮木曽川店",
+      "url": "https://store.ootoya.com/detail/27412/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 三宮センタープラザ店",
+      "url": "https://store.ootoya.com/detail/27426/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 三田店",
+      "url": "https://store.ootoya.com/detail/27342/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 三鷹南口店",
+      "url": "https://store.ootoya.com/detail/27197/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 上大岡駅前店",
+      "url": "https://store.ootoya.com/detail/27309/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 上田住吉店",
+      "url": "https://store.ootoya.com/detail/27406/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 上福岡店",
+      "url": "https://store.ootoya.com/detail/27296/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 上越大日店",
+      "url": "https://store.ootoya.com/detail/27404/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 上越妙高駅前",
+      "url": "https://store.ootoya.com/detail/27405/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 上野公園店",
+      "url": "https://store.ootoya.com/detail/27302/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 中山駅南口店",
+      "url": "https://store.ootoya.com/detail/56197/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 中目黒店",
+      "url": "https://store.ootoya.com/detail/27295/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 中野セントラルパーク店",
+      "url": "https://store.ootoya.com/detail/27291/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 中野マルイ店",
+      "url": "https://store.ootoya.com/detail/116248/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 丸の内新東京ビル店",
+      "url": "https://store.ootoya.com/detail/27194/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 丸井草加店",
+      "url": "https://store.ootoya.com/detail/27250/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 丸井錦糸町店",
+      "url": "https://store.ootoya.com/detail/27257/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 亀戸駅前店",
+      "url": "https://store.ootoya.com/detail/27256/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 五反田東口駅前店",
+      "url": "https://store.ootoya.com/detail/27199/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 京急川崎駅前店",
+      "url": "https://store.ootoya.com/detail/27346/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 京都錦小路店",
+      "url": "https://store.ootoya.com/detail/27286/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 仙台ロフト店",
+      "url": "https://store.ootoya.com/detail/22361/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 仙台一番町店",
+      "url": "https://store.ootoya.com/detail/27367/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 代々木駅前店",
+      "url": "https://store.ootoya.com/detail/27394/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 佐久平店",
+      "url": "https://store.ootoya.com/detail/27392/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 佐賀北バイパス店",
+      "url": "https://store.ootoya.com/detail/27409/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 倉敷四十瀬店",
+      "url": "https://store.ootoya.com/detail/27454/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 元住吉駅前店",
+      "url": "https://store.ootoya.com/detail/27357/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 元総社蒼海店",
+      "url": "https://store.ootoya.com/detail/27464/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 光が丘店",
+      "url": "https://store.ootoya.com/detail/27411/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 八戸ニュータウン店",
+      "url": "https://store.ootoya.com/detail/27284/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 八戸下長店",
+      "url": "https://store.ootoya.com/detail/27312/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 八王子オクトーレ店",
+      "url": "https://store.ootoya.com/detail/27317/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 六本木店",
+      "url": "https://store.ootoya.com/detail/27254/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 円山公園店",
+      "url": "https://store.ootoya.com/detail/22355/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 北千住西口店",
+      "url": "https://store.ootoya.com/detail/27300/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 北名古屋店",
+      "url": "https://store.ootoya.com/detail/148884/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 北谷店",
+      "url": "https://store.ootoya.com/detail/27359/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 千歳烏山店",
+      "url": "https://store.ootoya.com/detail/27446/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 千葉マリンピア店",
+      "url": "https://store.ootoya.com/detail/27439/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 半田市役所リコリス店",
+      "url": "https://store.ootoya.com/detail/61688/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 南池袋店",
+      "url": "https://store.ootoya.com/detail/27262/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 南砂町SCスナモ店",
+      "url": "https://store.ootoya.com/detail/27211/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 台中漢神洲際店",
+      "url": "https://store.ootoya.com/detail/70/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 台中秀泰文心店",
+      "url": "https://store.ootoya.com/detail/69/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 台南新光小北門店",
+      "url": "https://store.ootoya.com/detail/65/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 吉祥寺南口店",
+      "url": "https://store.ootoya.com/detail/22368/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 吉祥寺店",
+      "url": "https://store.ootoya.com/detail/27183/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 名古屋栄店",
+      "url": "https://store.ootoya.com/detail/27390/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 名護宮里店",
+      "url": "https://store.ootoya.com/detail/27362/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 和戸通り店",
+      "url": "https://store.ootoya.com/detail/27292/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 和歌山カーニバル店",
+      "url": "https://store.ootoya.com/detail/27463/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 品川グランパサージュ店",
+      "url": "https://store.ootoya.com/detail/27282/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 嘉義秀泰店",
+      "url": "https://store.ootoya.com/detail/15054575007707118956/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 四日市笹川店",
+      "url": "https://store.ootoya.com/detail/27469/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 国分寺南口店",
+      "url": "https://store.ootoya.com/detail/27241/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 壺川店",
+      "url": "https://store.ootoya.com/detail/27313/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 外苑前店",
+      "url": "https://store.ootoya.com/detail/27432/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 大分トキハわさだ店",
+      "url": "https://store.ootoya.com/detail/27329/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 大分別府店",
+      "url": "https://store.ootoya.com/detail/27345/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 大垣店",
+      "url": "https://store.ootoya.com/detail/27434/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 大塚南口店",
+      "url": "https://store.ootoya.com/detail/27269/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 大宮すずらん通り店",
+      "url": "https://store.ootoya.com/detail/22358/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 大宮みくら店",
+      "url": "https://store.ootoya.com/detail/147832/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 大宮ステラタウン店",
+      "url": "https://store.ootoya.com/detail/27258/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 大森店",
+      "url": "https://store.ootoya.com/detail/27391/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 宇治徳洲会病院店",
+      "url": "https://store.ootoya.com/detail/128719/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 宇部昭和町店",
+      "url": "https://store.ootoya.com/detail/27410/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 宇都宮テラス店",
+      "url": "https://store.ootoya.com/detail/101003/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 宜野湾店",
+      "url": "https://store.ootoya.com/detail/27401/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 宮古島店",
+      "url": "https://store.ootoya.com/detail/27377/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 富山婦中店",
+      "url": "https://store.ootoya.com/detail/27333/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 小山ゆうえんハーヴェストウォーク店",
+      "url": "https://store.ootoya.com/detail/27376/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 小平店",
+      "url": "https://store.ootoya.com/detail/65939/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 小手指駅前店",
+      "url": "https://store.ootoya.com/detail/27398/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 小牧店",
+      "url": "https://store.ootoya.com/detail/27465/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 小田急マルシェ相武台店",
+      "url": "https://store.ootoya.com/detail/27248/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 小田急向ヶ丘遊園店",
+      "url": "https://store.ootoya.com/detail/27205/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 小田急新百合ヶ丘店",
+      "url": "https://store.ootoya.com/detail/27219/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 小田急町田東口店",
+      "url": "https://store.ootoya.com/detail/27264/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 小田急相模原店",
+      "url": "https://store.ootoya.com/detail/27253/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 山下公園店",
+      "url": "https://store.ootoya.com/detail/27327/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 岡山円山店",
+      "url": "https://store.ootoya.com/detail/105526/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 岡崎欠町店",
+      "url": "https://store.ootoya.com/detail/149854/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 岩手宮古店",
+      "url": "https://store.ootoya.com/detail/27289/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 島忠草加舎人店",
+      "url": "https://store.ootoya.com/detail/27259/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 川口駅東口店",
+      "url": "https://store.ootoya.com/detail/27271/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 川崎銀柳街店",
+      "url": "https://store.ootoya.com/detail/27379/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 巣鴨駅前店",
+      "url": "https://store.ootoya.com/detail/27189/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 広島本通店",
+      "url": "https://store.ootoya.com/detail/27461/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 府中北口店",
+      "url": "https://store.ootoya.com/detail/27336/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 御徒町南口店",
+      "url": "https://store.ootoya.com/detail/27445/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 微風新南山店",
+      "url": "https://store.ootoya.com/detail/13194085822144922297/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 愛知和合店",
+      "url": "https://store.ootoya.com/detail/27402/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 愛知蟹江店",
+      "url": "https://store.ootoya.com/detail/27440/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 成増駅南口店",
+      "url": "https://store.ootoya.com/detail/27435/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 所沢プロペ通り店",
+      "url": "https://store.ootoya.com/detail/27452/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 新さっぽろサンピアザ店",
+      "url": "https://store.ootoya.com/detail/27265/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 新丸の内センタービル店",
+      "url": "https://store.ootoya.com/detail/27240/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 新吉祥寺店",
+      "url": "https://store.ootoya.com/detail/118473/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 新宿イーストサイドスクエア店",
+      "url": "https://store.ootoya.com/detail/27436/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 新宿センタービル店",
+      "url": "https://store.ootoya.com/detail/27214/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 新宿フロントタワー店",
+      "url": "https://store.ootoya.com/detail/23103/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 新宿東口中央通り店",
+      "url": "https://store.ootoya.com/detail/27230/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 新宿西口大ガード店",
+      "url": "https://store.ootoya.com/detail/27202/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 新店小碧潭店",
+      "url": "https://store.ootoya.com/detail/09058774110789562348/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 新所沢店",
+      "url": "https://store.ootoya.com/detail/27246/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 新横浜2丁目店",
+      "url": "https://store.ootoya.com/detail/27216/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 新横浜駅前店",
+      "url": "https://store.ootoya.com/detail/22357/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 新潟女池店",
+      "url": "https://store.ootoya.com/detail/27422/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 新潟新津店",
+      "url": "https://store.ootoya.com/detail/27260/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 旭川永山店",
+      "url": "https://store.ootoya.com/detail/27407/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 朝霞台北口店",
+      "url": "https://store.ootoya.com/detail/27462/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 本厚木店",
+      "url": "https://store.ootoya.com/detail/27187/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 札幌清田店",
+      "url": "https://store.ootoya.com/detail/27360/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 東久留米店",
+      "url": "https://store.ootoya.com/detail/129181/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 東京オペラシティ店",
+      "url": "https://store.ootoya.com/detail/27417/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 東大和店",
+      "url": "https://store.ootoya.com/detail/81054/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 東急百貨店 日吉店",
+      "url": "https://store.ootoya.com/detail/27204/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 東武練馬駅前店",
+      "url": "https://store.ootoya.com/detail/27397/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 東海店",
+      "url": "https://store.ootoya.com/detail/147604/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 東陽町イースト21店",
+      "url": "https://store.ootoya.com/detail/27212/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 松江学園通り店",
+      "url": "https://store.ootoya.com/detail/65940/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 枚方市駅前店",
+      "url": "https://store.ootoya.com/detail/140078/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 柏駅南口店",
+      "url": "https://store.ootoya.com/detail/27348/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 横浜ジョイナス店",
+      "url": "https://store.ootoya.com/detail/27316/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 横浜ビジネスパーク店",
+      "url": "https://store.ootoya.com/detail/27276/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 横浜伊勢佐木町店",
+      "url": "https://store.ootoya.com/detail/27210/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 横浜緑園都市店",
+      "url": "https://store.ootoya.com/detail/114742/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 横浜西口店",
+      "url": "https://store.ootoya.com/detail/27352/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 横浜馬車道店",
+      "url": "https://store.ootoya.com/detail/27400/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 横須賀モアーズシティ店",
+      "url": "https://store.ootoya.com/detail/60211/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 武蔵小金井南口店",
+      "url": "https://store.ootoya.com/detail/27251/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 水沢あてるい店",
+      "url": "https://store.ootoya.com/detail/27408/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 池袋メトロポリタン通り店",
+      "url": "https://store.ootoya.com/detail/131717/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 池袋東口店",
+      "url": "https://store.ootoya.com/detail/27186/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 池袋西口店",
+      "url": "https://store.ootoya.com/detail/27188/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 泉北パンジョ店",
+      "url": "https://store.ootoya.com/detail/27303/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 泡瀬店",
+      "url": "https://store.ootoya.com/detail/27399/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 津嘉山店",
+      "url": "https://store.ootoya.com/detail/27451/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 津山の手店",
+      "url": "https://store.ootoya.com/detail/27437/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 浅草橋店",
+      "url": "https://store.ootoya.com/detail/27249/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 浦和店",
+      "url": "https://store.ootoya.com/detail/27207/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 浦添バークレーズコート店",
+      "url": "https://store.ootoya.com/detail/27315/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 海老名店",
+      "url": "https://store.ootoya.com/detail/27278/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 淵野辺店",
+      "url": "https://store.ootoya.com/detail/27425/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 渋谷道玄坂店",
+      "url": "https://store.ootoya.com/detail/142928/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 港北東急SC店",
+      "url": "https://store.ootoya.com/detail/148911/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 湘南モールフィル店",
+      "url": "https://store.ootoya.com/detail/27321/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 湘南台駅前店",
+      "url": "https://store.ootoya.com/detail/27358/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 湯吉郎店",
+      "url": "https://store.ootoya.com/detail/27471/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 溝の口店",
+      "url": "https://store.ootoya.com/detail/27279/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 熊川店",
+      "url": "https://store.ootoya.com/detail/27209/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 王子北本通り店",
+      "url": "https://store.ootoya.com/detail/27388/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 用賀SBS店",
+      "url": "https://store.ootoya.com/detail/27306/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 田無店",
+      "url": "https://store.ootoya.com/detail/106427/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 田町店",
+      "url": "https://store.ootoya.com/detail/27227/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 甲府昭和店",
+      "url": "https://store.ootoya.com/detail/22359/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 登川店",
+      "url": "https://store.ootoya.com/detail/27450/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 盛岡みたけ店",
+      "url": "https://store.ootoya.com/detail/27420/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 目白店",
+      "url": "https://store.ootoya.com/detail/27192/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 目黒権之助坂店",
+      "url": "https://store.ootoya.com/detail/27427/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 相模原高根店",
+      "url": "https://store.ootoya.com/detail/117184/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 真嘉比店",
+      "url": "https://store.ootoya.com/detail/27323/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 知寄町店",
+      "url": "https://store.ootoya.com/detail/27468/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 知立店",
+      "url": "https://store.ootoya.com/detail/150812/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 石垣島店",
+      "url": "https://store.ootoya.com/detail/27349/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 碧南市役所店",
+      "url": "https://store.ootoya.com/detail/64253/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 神田神保町店",
+      "url": "https://store.ootoya.com/detail/27201/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 福井店",
+      "url": "https://store.ootoya.com/detail/27283/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 福山店",
+      "url": "https://store.ootoya.com/detail/27448/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 福島北矢野目店",
+      "url": "https://store.ootoya.com/detail/27441/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 福田屋宇都宮店",
+      "url": "https://store.ootoya.com/detail/33004/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 福知山店",
+      "url": "https://store.ootoya.com/detail/27351/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 秋葉原駅前店",
+      "url": "https://store.ootoya.com/detail/22356/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 立川北口店",
+      "url": "https://store.ootoya.com/detail/27206/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 笹塚駅前店",
+      "url": "https://store.ootoya.com/detail/27449/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 経堂コルティ店",
+      "url": "https://store.ootoya.com/detail/27331/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 練馬駅南口店",
+      "url": "https://store.ootoya.com/detail/27416/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 美濃加茂店",
+      "url": "https://store.ootoya.com/detail/27365/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 自由が丘南口店",
+      "url": "https://store.ootoya.com/detail/27415/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 船橋フェイスビル店",
+      "url": "https://store.ootoya.com/detail/27307/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 荻窪西口店",
+      "url": "https://store.ootoya.com/detail/27191/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 西尾店",
+      "url": "https://store.ootoya.com/detail/27387/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 西荻窪北口駅前店",
+      "url": "https://store.ootoya.com/detail/27200/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 西葛西北口店",
+      "url": "https://store.ootoya.com/detail/27261/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 調布南口店",
+      "url": "https://store.ootoya.com/detail/27239/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 赤坂見附店",
+      "url": "https://store.ootoya.com/detail/27363/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 赤羽駅東口店",
+      "url": "https://store.ootoya.com/detail/27374/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 越中島店",
+      "url": "https://store.ootoya.com/detail/27428/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 越谷南町店",
+      "url": "https://store.ootoya.com/detail/83801/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 逗子店",
+      "url": "https://store.ootoya.com/detail/131032/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 那覇あっぷるタウン店",
+      "url": "https://store.ootoya.com/detail/27280/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 郡山八山田店",
+      "url": "https://store.ootoya.com/detail/27433/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 金町駅前店",
+      "url": "https://store.ootoya.com/detail/27234/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 鈴鹿店",
+      "url": "https://store.ootoya.com/detail/27339/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 銀座三越前店",
+      "url": "https://store.ootoya.com/detail/27224/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 長野南店",
+      "url": "https://store.ootoya.com/detail/27383/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 長野稲田店",
+      "url": "https://store.ootoya.com/detail/27274/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 長野長池店",
+      "url": "https://store.ootoya.com/detail/27325/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 阪急大井町ガーデン店",
+      "url": "https://store.ootoya.com/detail/27318/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 青森新町通り店",
+      "url": "https://store.ootoya.com/detail/27322/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 静岡清水店",
+      "url": "https://store.ootoya.com/detail/27355/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 須磨パティオ店",
+      "url": "https://store.ootoya.com/detail/27305/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 飯田橋店",
+      "url": "https://store.ootoya.com/detail/27238/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 飯能店",
+      "url": "https://store.ootoya.com/detail/27423/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 駒沢大学駅前店",
+      "url": "https://store.ootoya.com/detail/27467/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 高崎貝沢店",
+      "url": "https://store.ootoya.com/detail/27381/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 高幡不動SC店",
+      "url": "https://store.ootoya.com/detail/27208/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 高田馬場駅前店",
+      "url": "https://store.ootoya.com/detail/27190/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 高針店",
+      "url": "https://store.ootoya.com/detail/27386/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 鳥取湖山店",
+      "url": "https://store.ootoya.com/detail/27281/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 鳴子店",
+      "url": "https://store.ootoya.com/detail/27266/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処 鶴見西口店",
+      "url": "https://store.ootoya.com/detail/27431/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 セントラルコンケンキャンパス店",
+      "url": "https://store.ootoya.com/detail/08002306071119241855/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処 トンブリ病院店",
+      "url": "https://store.ootoya.com/detail/08777278842633559468/",
+      "facilities": []
+    },
+    {
+      "name": "大戸屋ごはん処イオンモール秋田店",
+      "url": "https://store.ootoya.com/detail/43453/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大戸屋ごはん処屏東市",
+      "url": "https://store.ootoya.com/detail/12258191650798075795/",
+      "facilities": []
+    }
+  ]
+}

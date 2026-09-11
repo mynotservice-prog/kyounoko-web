@@ -1,0 +1,676 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "sukesanudon",
+  "name": "資さんうどん",
+  "sourceUrl": "https://www.sukesanudon.com/map/",
+  "method": "公式店舗一覧（20件ずつページ送り）で全店舗を列挙し、各店舗ページの「設備」欄を集計",
+  "total": 95,
+  "note": "公式の設備属性は「駐車場あり」のみ（設備欄が無い店舗は駐車場なしとして数えた）",
+  "facilities": {
+    "parking": {
+      "count": 92,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/76/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/4/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/27/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/21/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/50/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/30/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/29/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/62/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/31/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/32/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/44/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/19/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/38/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/59/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/25/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/70/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/72/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/56/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/18/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/46/",
+      "facilities": []
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/71/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/84/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/78/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/79/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/87/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/57/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/63/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/68/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/58/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/92/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/64/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/118/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/61/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/55/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/73/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/65/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/67/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/74/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/69/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/86/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/20/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/35/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/54/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/85/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/77/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/82/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/83/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/134/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/302/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/101/",
+      "facilities": []
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/125/",
+      "facilities": []
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/103/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/110/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/130/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/117/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/126/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/105/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/98/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/305/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/128/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/131/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/119/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/107/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/97/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/307/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/311/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/120/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/313/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/106/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/309/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/116/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/113/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/121/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/108/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/109/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/314/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/133/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/306/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/89/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/52/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/102/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/112/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/95/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/129/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/132/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/96/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/308/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/304/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/51/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/310/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/312/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/127/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/99/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/111/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "店舗検索",
+      "url": "https://www.sukesanudon.com/map/branch/104/",
+      "facilities": [
+        "parking"
+      ]
+    }
+  ]
+}

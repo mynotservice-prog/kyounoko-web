@@ -1,0 +1,776 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "choushimaru",
+  "name": "すし銚子丸",
+  "sourceUrl": "https://stores.choushimaru.co.jp/",
+  "method": "公式店舗検索（Yext）のサイトマップから店舗ページを全件取得し、各ページ埋め込みデータの設備・サービス欄（c_locationFeatures）を集計",
+  "total": 94,
+  "note": "ブランド「すし銚子丸」「すし銚子丸 雅」を対象。テイクアウト専門店5件・閉店済み1件・別業態（鮨YASUKE等）5件は除外。設備欄は自由記述のため、記載が無い＝設備が無い とは限らない",
+  "facilities": {
+    "stepFree": {
+      "count": 45,
+      "label": "スロープ"
+    },
+    "multiToilet": {
+      "count": 54,
+      "label": "多目的トイレ"
+    },
+    "parking": {
+      "count": 90,
+      "label": "駐車場"
+    }
+  },
+  "stores": [
+    {
+      "name": "すし銚子丸 横浜六ツ川店",
+      "url": "https://stores.choushimaru.co.jp/180",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 雅 アリオ橋本店",
+      "url": "https://stores.choushimaru.co.jp/181",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 二俣川店",
+      "url": "https://stores.choushimaru.co.jp/182",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 Shinjuku 新宿サブナード店",
+      "url": "https://stores.choushimaru.co.jp/184",
+      "facilities": []
+    },
+    {
+      "name": "すし銚子丸パークシティ中野店",
+      "url": "https://stores.choushimaru.co.jp/185",
+      "facilities": []
+    },
+    {
+      "name": "すし銚子丸 綾瀬店",
+      "url": "https://stores.choushimaru.co.jp/109",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 浦安店",
+      "url": "https://stores.choushimaru.co.jp/51",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 宇喜田店",
+      "url": "https://stores.choushimaru.co.jp/97",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 みずえ店",
+      "url": "https://stores.choushimaru.co.jp/83",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 ひばりが丘店",
+      "url": "https://stores.choushimaru.co.jp/112",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 浦和木崎店 - 閉店",
+      "url": "https://stores.choushimaru.co.jp/113",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 花小金井店",
+      "url": "https://stores.choushimaru.co.jp/116",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 横芝店",
+      "url": "https://stores.choushimaru.co.jp/52",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 雅 アリオ亀有店",
+      "url": "https://stores.choushimaru.co.jp/173",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 雅 イオンスタイル幕張ベイパーク店",
+      "url": "https://stores.choushimaru.co.jp/172",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 鎌ケ谷店",
+      "url": "https://stores.choushimaru.co.jp/99",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 亀戸店",
+      "url": "https://stores.choushimaru.co.jp/106",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 宮野木店",
+      "url": "https://stores.choushimaru.co.jp/177",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 見沼店",
+      "url": "https://stores.choushimaru.co.jp/167",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 経堂店",
+      "url": "https://stores.choushimaru.co.jp/150",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 光が丘店",
+      "url": "https://stores.choushimaru.co.jp/101",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 行徳店",
+      "url": "https://stores.choushimaru.co.jp/128",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 高洲店",
+      "url": "https://stores.choushimaru.co.jp/57",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 高島平店",
+      "url": "https://stores.choushimaru.co.jp/100",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 狛江店",
+      "url": "https://stores.choushimaru.co.jp/165",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 佐倉店",
+      "url": "https://stores.choushimaru.co.jp/138",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 三鷹新川店",
+      "url": "https://stores.choushimaru.co.jp/159",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 桜木店",
+      "url": "https://stores.choushimaru.co.jp/60",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 三鷹店 - 閉店",
+      "url": "https://stores.choushimaru.co.jp/130",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 市原店",
+      "url": "https://stores.choushimaru.co.jp/141",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 市川店",
+      "url": "https://stores.choushimaru.co.jp/55",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 志津店",
+      "url": "https://stores.choushimaru.co.jp/183",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 酒々井プレミアム・アウトレット店",
+      "url": "https://stores.choushimaru.co.jp/152",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 所沢店",
+      "url": "https://stores.choushimaru.co.jp/139",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 松戸岩瀬店",
+      "url": "https://stores.choushimaru.co.jp/161",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 上尾店",
+      "url": "https://stores.choushimaru.co.jp/137",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 新松戸店",
+      "url": "https://stores.choushimaru.co.jp/118",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 杉並宮前店",
+      "url": "https://stores.choushimaru.co.jp/160",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 成田店",
+      "url": "https://stores.choushimaru.co.jp/107",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 西新井店",
+      "url": "https://stores.choushimaru.co.jp/98",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 西船橋店",
+      "url": "https://stores.choushimaru.co.jp/80",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 赤羽店",
+      "url": "https://stores.choushimaru.co.jp/91",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 千葉駅前店",
+      "url": "https://stores.choushimaru.co.jp/88",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 千葉ニュータウン店",
+      "url": "https://stores.choushimaru.co.jp/157",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 川越店",
+      "url": "https://stores.choushimaru.co.jp/151",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 川口店",
+      "url": "https://stores.choushimaru.co.jp/140",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 川崎中原店",
+      "url": "https://stores.choushimaru.co.jp/153",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 蘇我店",
+      "url": "https://stores.choushimaru.co.jp/33",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 草加店 - 閉店",
+      "url": "https://stores.choushimaru.co.jp/123",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 大井店",
+      "url": "https://stores.choushimaru.co.jp/146",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 大泉インター店",
+      "url": "https://stores.choushimaru.co.jp/103",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 大和田店",
+      "url": "https://stores.choushimaru.co.jp/82",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 大網白里店",
+      "url": "https://stores.choushimaru.co.jp/168",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 竹の塚店",
+      "url": "https://stores.choushimaru.co.jp/89",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 町田店",
+      "url": "https://stores.choushimaru.co.jp/131",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 調布店",
+      "url": "https://stores.choushimaru.co.jp/145",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 東金店",
+      "url": "https://stores.choushimaru.co.jp/136",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 東寺山店 -休業中",
+      "url": "https://stores.choushimaru.co.jp/59",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 東大和店",
+      "url": "https://stores.choushimaru.co.jp/163",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 南越谷店",
+      "url": "https://stores.choushimaru.co.jp/104",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 南浦和店 - 閉店",
+      "url": "https://stores.choushimaru.co.jp/129",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 南小岩店",
+      "url": "https://stores.choushimaru.co.jp/85",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 南船橋店 - 閉店",
+      "url": "https://stores.choushimaru.co.jp/148",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 南大泉店",
+      "url": "https://stores.choushimaru.co.jp/110",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 日野店",
+      "url": "https://stores.choushimaru.co.jp/156",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 日吉店",
+      "url": "https://stores.choushimaru.co.jp/124",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 柏店",
+      "url": "https://stores.choushimaru.co.jp/81",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 八王子店",
+      "url": "https://stores.choushimaru.co.jp/144",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 八街店",
+      "url": "https://stores.choushimaru.co.jp/54",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 八柱店",
+      "url": "https://stores.choushimaru.co.jp/92",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 板橋東新町店",
+      "url": "https://stores.choushimaru.co.jp/105",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 富里店",
+      "url": "https://stores.choushimaru.co.jp/149",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 武蔵小金井店",
+      "url": "https://stores.choushimaru.co.jp/158",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 武蔵小杉店",
+      "url": "https://stores.choushimaru.co.jp/162",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 豊玉南店",
+      "url": "https://stores.choushimaru.co.jp/94",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 保木間店",
+      "url": "https://stores.choushimaru.co.jp/96",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 北浦和店",
+      "url": "https://stores.choushimaru.co.jp/115",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 北習志野店",
+      "url": "https://stores.choushimaru.co.jp/84",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 茂原店",
+      "url": "https://stores.choushimaru.co.jp/142",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 木更津店",
+      "url": "https://stores.choushimaru.co.jp/147",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 木場店",
+      "url": "https://stores.choushimaru.co.jp/166",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 薬円台店",
+      "url": "https://stores.choushimaru.co.jp/53",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 立川店",
+      "url": "https://stores.choushimaru.co.jp/134",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 立石店",
+      "url": "https://stores.choushimaru.co.jp/90",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 横浜都筑店",
+      "url": "https://stores.choushimaru.co.jp/135",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 雅 習志野店",
+      "url": "https://stores.choushimaru.co.jp/171",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 雅 テラスモール松戸店",
+      "url": "https://stores.choushimaru.co.jp/174",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "すし銚子丸 多摩ニュータウン店",
+      "url": "https://stores.choushimaru.co.jp/133",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 南柏店",
+      "url": "https://stores.choushimaru.co.jp/122",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 南千住店",
+      "url": "https://stores.choushimaru.co.jp/164",
+      "facilities": [
+        "parking",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "すし銚子丸 春日部ふじ通り店",
+      "url": "https://stores.choushimaru.co.jp/178",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 コトエ流山おおたかの森店",
+      "url": "https://stores.choushimaru.co.jp/175",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 小石川店",
+      "url": "https://stores.choushimaru.co.jp/179",
+      "facilities": [
+        "multiToilet",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "すし銚子丸 草加花栗店",
+      "url": "https://stores.choushimaru.co.jp/176",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "stepFree"
+      ]
+    }
+  ]
+}

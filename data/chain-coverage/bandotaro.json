@@ -1,0 +1,578 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "bandotaro",
+  "name": "ばんどう太郎",
+  "sourceUrl": "https://shop.bandotaro.co.jp/",
+  "method": "公式店舗検索（can-ly）の検索APIでブランド「ばんどう太郎」の店舗を列挙し、各店舗詳細ページの「サービス」チェック項目を集計",
+  "total": 45,
+  "note": "グループ他業態（かつ太郎・家族レストラン坂東太郎等）は除外。閉店扱い1件（ばんどう太郎 水戸５０号店）も除外",
+  "facilities": {
+    "zashiki": {
+      "count": 43,
+      "label": "座敷"
+    },
+    "kidsChair": {
+      "count": 45,
+      "label": "お子様椅子"
+    },
+    "kidsMenu": {
+      "count": 45,
+      "label": "お子様メニュー"
+    },
+    "diaperTable": {
+      "count": 42,
+      "label": "オムツ替えシート"
+    },
+    "kidsSpace": {
+      "count": 5,
+      "label": "キッズスペース"
+    },
+    "privateRoom": {
+      "count": 31,
+      "label": "個室"
+    },
+    "multiToilet": {
+      "count": 9,
+      "label": "トイレ車椅子仕様"
+    },
+    "parking": {
+      "count": 43,
+      "label": "駐車場"
+    }
+  },
+  "stores": [
+    {
+      "name": "ばんどう太郎 つくば学園店",
+      "url": "https://shop.bandotaro.co.jp/detail/278/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable",
+        "kidsSpace",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 ひたちなか店",
+      "url": "https://shop.bandotaro.co.jp/detail/294/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 ひたちの牛久店",
+      "url": "https://shop.bandotaro.co.jp/detail/300/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 みどりの店",
+      "url": "https://shop.bandotaro.co.jp/detail/319/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable",
+        "kidsSpace",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 みらい平店",
+      "url": "https://shop.bandotaro.co.jp/detail/417/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable",
+        "kidsSpace",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 上尾店",
+      "url": "https://shop.bandotaro.co.jp/detail/281/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 下妻店",
+      "url": "https://shop.bandotaro.co.jp/detail/272/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 下館店",
+      "url": "https://shop.bandotaro.co.jp/detail/260/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 久喜店",
+      "url": "https://shop.bandotaro.co.jp/detail/415/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable",
+        "kidsSpace",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 五霞店",
+      "url": "https://shop.bandotaro.co.jp/detail/284/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 佐野店",
+      "url": "https://shop.bandotaro.co.jp/detail/292/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 加須店",
+      "url": "https://shop.bandotaro.co.jp/detail/416/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable",
+        "kidsSpace",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 北茨城店",
+      "url": "https://shop.bandotaro.co.jp/detail/311/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 友部店",
+      "url": "https://shop.bandotaro.co.jp/detail/306/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 古河店",
+      "url": "https://shop.bandotaro.co.jp/detail/297/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 大網白里店",
+      "url": "https://shop.bandotaro.co.jp/detail/312/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 学園南店",
+      "url": "https://shop.bandotaro.co.jp/detail/298/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 宇都宮店",
+      "url": "https://shop.bandotaro.co.jp/detail/296/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 小山中央店",
+      "url": "https://shop.bandotaro.co.jp/detail/309/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 小山店",
+      "url": "https://shop.bandotaro.co.jp/detail/261/",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 小山５０号店",
+      "url": "https://shop.bandotaro.co.jp/detail/262/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 小見川店",
+      "url": "https://shop.bandotaro.co.jp/detail/305/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 常陸大宮店",
+      "url": "https://shop.bandotaro.co.jp/detail/293/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 旭店",
+      "url": "https://shop.bandotaro.co.jp/detail/299/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 春日部店",
+      "url": "https://shop.bandotaro.co.jp/detail/288/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 杉戸店",
+      "url": "https://shop.bandotaro.co.jp/detail/282/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 東海店",
+      "url": "https://shop.bandotaro.co.jp/detail/301/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 栃木店",
+      "url": "https://shop.bandotaro.co.jp/detail/302/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 横芝光店",
+      "url": "https://shop.bandotaro.co.jp/detail/307/",
+      "facilities": [
+        "zashiki",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 水戸店",
+      "url": "https://shop.bandotaro.co.jp/detail/290/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 牛久中央店",
+      "url": "https://shop.bandotaro.co.jp/detail/313/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 玉造店",
+      "url": "https://shop.bandotaro.co.jp/detail/308/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 白井16号店",
+      "url": "https://shop.bandotaro.co.jp/detail/287/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 矢板店",
+      "url": "https://shop.bandotaro.co.jp/detail/310/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 神栖店",
+      "url": "https://shop.bandotaro.co.jp/detail/285/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 総本店",
+      "url": "https://shop.bandotaro.co.jp/detail/230/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 羽生店",
+      "url": "https://shop.bandotaro.co.jp/detail/280/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 菖蒲店",
+      "url": "https://shop.bandotaro.co.jp/detail/303/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 那珂店",
+      "url": "https://shop.bandotaro.co.jp/detail/295/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 那珂湊店",
+      "url": "https://shop.bandotaro.co.jp/detail/318/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 鉾田店",
+      "url": "https://shop.bandotaro.co.jp/detail/291/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 関宿店",
+      "url": "https://shop.bandotaro.co.jp/detail/279/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ばんどう太郎 鹿嶋店",
+      "url": "https://shop.bandotaro.co.jp/detail/289/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "坂東太郎 つくば店",
+      "url": "https://shop.bandotaro.co.jp/detail/418/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "坂東太郎 土浦おおつ野店",
+      "url": "https://shop.bandotaro.co.jp/detail/419/",
+      "facilities": [
+        "privateRoom",
+        "zashiki",
+        "parking",
+        "kidsChair",
+        "kidsMenu",
+        "diaperTable",
+        "multiToilet"
+      ]
+    }
+  ]
+}

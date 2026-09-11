@@ -1,0 +1,3005 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "yakinikuking",
+  "name": "焼肉きんぐ",
+  "sourceUrl": "https://www.yakiniku-king.jp/shop/",
+  "method": "公式店舗検索が呼ぶ物語コーポレーション共通の店舗API（/shops/?brandId[]=…）の全件から、店舗詳細ページ「店舗設備」の元データ shop_equipments を店舗ごとに集計",
+  "total": 372,
+  "note": "非公開フラグ0件（）は除外。店舗設備のうち設備キーに対応づけていない表記: 店内禁煙369店・車椅子対応の駐車場197店・エレベーター23店。「駐車場」欄は自由記述（台数・階数）のため集計していない",
+  "facilities": {
+    "stepFree": {
+      "count": 252,
+      "label": "入り口スロープ"
+    },
+    "diaperTable": {
+      "count": 324,
+      "label": "おむつ替えシート"
+    },
+    "multiToilet": {
+      "count": 206,
+      "label": "車椅子対応のトイレ"
+    }
+  },
+  "stores": [
+    {
+      "name": "焼肉きんぐ 北野通り店",
+      "url": "https://www.yakiniku-king.jp/shop/2089/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 東苗穂店",
+      "url": "https://www.yakiniku-king.jp/shop/2242/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 札幌新琴似店",
+      "url": "https://www.yakiniku-king.jp/shop/2266/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 札幌豊平店",
+      "url": "https://www.yakiniku-king.jp/shop/2325/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 函館桔梗店",
+      "url": "https://www.yakiniku-king.jp/shop/2156/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 旭川永山店",
+      "url": "https://www.yakiniku-king.jp/shop/2194/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 帯広店",
+      "url": "https://www.yakiniku-king.jp/shop/2335/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 北見店",
+      "url": "https://www.yakiniku-king.jp/shop/2372/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 苫小牧店",
+      "url": "https://www.yakiniku-king.jp/shop/2283/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 千歳店",
+      "url": "https://www.yakiniku-king.jp/shop/2364/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 青森観光通り店",
+      "url": "https://www.yakiniku-king.jp/shop/2253/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 弘前店",
+      "url": "https://www.yakiniku-king.jp/shop/2388/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 八戸城下店",
+      "url": "https://www.yakiniku-king.jp/shop/2117/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 盛岡盛南店",
+      "url": "https://www.yakiniku-king.jp/shop/2086/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 一関店",
+      "url": "https://www.yakiniku-king.jp/shop/2373/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 水沢店",
+      "url": "https://www.yakiniku-king.jp/shop/2243/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 仙台中野栄店",
+      "url": "https://www.yakiniku-king.jp/shop/2063/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 仙台南小泉店",
+      "url": "https://www.yakiniku-king.jp/shop/2065/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 仙台八乙女店",
+      "url": "https://www.yakiniku-king.jp/shop/2073/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 仙台西多賀店",
+      "url": "https://www.yakiniku-king.jp/shop/2196/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 仙台一番町店",
+      "url": "https://www.yakiniku-king.jp/shop/2354/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 石巻店",
+      "url": "https://www.yakiniku-king.jp/shop/2250/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 名取店",
+      "url": "https://www.yakiniku-king.jp/shop/2022/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 古川店",
+      "url": "https://www.yakiniku-king.jp/shop/2390/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 秋田広面店",
+      "url": "https://www.yakiniku-king.jp/shop/2183/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 山形南店",
+      "url": "https://www.yakiniku-king.jp/shop/2095/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 山形北店",
+      "url": "https://www.yakiniku-king.jp/shop/2186/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 米沢店",
+      "url": "https://www.yakiniku-king.jp/shop/2162/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 酒田店",
+      "url": "https://www.yakiniku-king.jp/shop/2199/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 福島泉店",
+      "url": "https://www.yakiniku-king.jp/shop/2018/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 南福島店",
+      "url": "https://www.yakiniku-king.jp/shop/2221/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 会津若松店",
+      "url": "https://www.yakiniku-king.jp/shop/2057/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 郡山朝日店",
+      "url": "https://www.yakiniku-king.jp/shop/2227/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ いわき平店",
+      "url": "https://www.yakiniku-king.jp/shop/2344/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ いわき泉店",
+      "url": "https://www.yakiniku-king.jp/shop/2379/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 須賀川店",
+      "url": "https://www.yakiniku-king.jp/shop/2258/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 水戸姫子店",
+      "url": "https://www.yakiniku-king.jp/shop/2152/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 水戸南インター店",
+      "url": "https://www.yakiniku-king.jp/shop/2182/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 日立金沢店",
+      "url": "https://www.yakiniku-king.jp/shop/2278/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 土浦店",
+      "url": "https://www.yakiniku-king.jp/shop/2116/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 古河店",
+      "url": "https://www.yakiniku-king.jp/shop/2218/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 石岡店",
+      "url": "https://www.yakiniku-king.jp/shop/2257/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 牛久店",
+      "url": "https://www.yakiniku-king.jp/shop/2119/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ つくば店",
+      "url": "https://www.yakiniku-king.jp/shop/2123/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 鹿嶋店",
+      "url": "https://www.yakiniku-king.jp/shop/2213/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 守谷店",
+      "url": "https://www.yakiniku-king.jp/shop/2056/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 那珂店",
+      "url": "https://www.yakiniku-king.jp/shop/2262/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 簗瀬店",
+      "url": "https://www.yakiniku-king.jp/shop/2030/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 宇都宮御幸店",
+      "url": "https://www.yakiniku-king.jp/shop/2146/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 宇都宮ゆいの杜店",
+      "url": "https://www.yakiniku-king.jp/shop/2303/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 宇都宮細谷店",
+      "url": "https://www.yakiniku-king.jp/shop/2402/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 足利朝倉店",
+      "url": "https://www.yakiniku-king.jp/shop/2322/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 栃木室町店",
+      "url": "https://www.yakiniku-king.jp/shop/2302/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 佐野店",
+      "url": "https://www.yakiniku-king.jp/shop/2066/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 鹿沼店",
+      "url": "https://www.yakiniku-king.jp/shop/2298/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 小山店",
+      "url": "https://www.yakiniku-king.jp/shop/2125/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 大田原店",
+      "url": "https://www.yakiniku-king.jp/shop/2190/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 前橋店",
+      "url": "https://www.yakiniku-king.jp/shop/2090/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 高崎インター店",
+      "url": "https://www.yakiniku-king.jp/shop/2154/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 伊勢崎店",
+      "url": "https://www.yakiniku-king.jp/shop/2176/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 太田店",
+      "url": "https://www.yakiniku-king.jp/shop/2141/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 館林店",
+      "url": "https://www.yakiniku-king.jp/shop/2140/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 笠懸店",
+      "url": "https://www.yakiniku-king.jp/shop/2192/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 浦和美園店",
+      "url": "https://www.yakiniku-king.jp/shop/2077/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 北大宮店",
+      "url": "https://www.yakiniku-king.jp/shop/2184/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 岩槻店",
+      "url": "https://www.yakiniku-king.jp/shop/2198/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 南与野店",
+      "url": "https://www.yakiniku-king.jp/shop/2237/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 浦和木崎店",
+      "url": "https://www.yakiniku-king.jp/shop/2343/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 月見町店",
+      "url": "https://www.yakiniku-king.jp/shop/2108/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 川口芝店",
+      "url": "https://www.yakiniku-king.jp/shop/2064/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 川口本町店",
+      "url": "https://www.yakiniku-king.jp/shop/2185/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 所沢店",
+      "url": "https://www.yakiniku-king.jp/shop/2034/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 本庄店",
+      "url": "https://www.yakiniku-king.jp/shop/2274/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 東松山店",
+      "url": "https://www.yakiniku-king.jp/shop/2331/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 春日部店",
+      "url": "https://www.yakiniku-king.jp/shop/2171/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 羽生店",
+      "url": "https://www.yakiniku-king.jp/shop/2387/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 上尾店",
+      "url": "https://www.yakiniku-king.jp/shop/2023/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 草加店",
+      "url": "https://www.yakiniku-king.jp/shop/2249/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 蒲生店",
+      "url": "https://www.yakiniku-king.jp/shop/2133/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 蕨店",
+      "url": "https://www.yakiniku-king.jp/shop/2269/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 戸田店",
+      "url": "https://www.yakiniku-king.jp/shop/2235/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 入間インター店",
+      "url": "https://www.yakiniku-king.jp/shop/2244/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 朝霞三原店",
+      "url": "https://www.yakiniku-king.jp/shop/2228/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 新座ひばりが丘店",
+      "url": "https://www.yakiniku-king.jp/shop/2222/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 新座野火止店",
+      "url": "https://www.yakiniku-king.jp/shop/2252/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 久喜店",
+      "url": "https://www.yakiniku-king.jp/shop/2304/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 二ツ家店",
+      "url": "https://www.yakiniku-king.jp/shop/2105/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 三郷店",
+      "url": "https://www.yakiniku-king.jp/shop/2129/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ ふじみ野店",
+      "url": "https://www.yakiniku-king.jp/shop/2044/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 白岡店",
+      "url": "https://www.yakiniku-king.jp/shop/2299/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 杉戸店",
+      "url": "https://www.yakiniku-king.jp/shop/2248/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 千葉若葉店",
+      "url": "https://www.yakiniku-king.jp/shop/2072/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ おゆみ野店",
+      "url": "https://www.yakiniku-king.jp/shop/2202/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 千葉青葉の森公園店",
+      "url": "https://www.yakiniku-king.jp/shop/2305/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 千葉駅前店",
+      "url": "https://www.yakiniku-king.jp/shop/2352/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 市川鬼高店",
+      "url": "https://www.yakiniku-king.jp/shop/2311/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ みやぎ台店",
+      "url": "https://www.yakiniku-king.jp/shop/2028/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 船橋宮本店",
+      "url": "https://www.yakiniku-king.jp/shop/2130/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 船橋夏見台店",
+      "url": "https://www.yakiniku-king.jp/shop/2270/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 松戸五香店",
+      "url": "https://www.yakiniku-king.jp/shop/2104/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 松戸主水店",
+      "url": "https://www.yakiniku-king.jp/shop/2267/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 松戸八ケ崎店",
+      "url": "https://www.yakiniku-king.jp/shop/2273/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 野田つつみ野店",
+      "url": "https://www.yakiniku-king.jp/shop/2261/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 茂原店",
+      "url": "https://www.yakiniku-king.jp/shop/2021/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 成田店",
+      "url": "https://www.yakiniku-king.jp/shop/2318/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 佐倉寺崎店",
+      "url": "https://www.yakiniku-king.jp/shop/2291/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 東金店",
+      "url": "https://www.yakiniku-king.jp/shop/2330/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 柏豊四季店",
+      "url": "https://www.yakiniku-king.jp/shop/2263/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 市原五井店",
+      "url": "https://www.yakiniku-king.jp/shop/2230/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 江戸川台店",
+      "url": "https://www.yakiniku-king.jp/shop/2260/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 八千代店",
+      "url": "https://www.yakiniku-king.jp/shop/2200/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 我孫子店",
+      "url": "https://www.yakiniku-king.jp/shop/2300/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 新鎌ヶ谷店",
+      "url": "https://www.yakiniku-king.jp/shop/2217/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ マーヴ浦安店",
+      "url": "https://www.yakiniku-king.jp/shop/2400/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 富里店",
+      "url": "https://www.yakiniku-king.jp/shop/2296/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 新宿西口大ガード店",
+      "url": "https://www.yakiniku-king.jp/shop/2380/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 浅草ROX店",
+      "url": "https://www.yakiniku-king.jp/shop/2312/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ カメイドクロック店",
+      "url": "https://www.yakiniku-king.jp/shop/2399/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 中目黒店",
+      "url": "https://www.yakiniku-king.jp/shop/2360/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ アトレ大森店",
+      "url": "https://www.yakiniku-king.jp/shop/2367/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 駒沢公園店",
+      "url": "https://www.yakiniku-king.jp/shop/2075/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 南池袋店",
+      "url": "https://www.yakiniku-king.jp/shop/2374/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 板橋前野町店",
+      "url": "https://www.yakiniku-king.jp/shop/2256/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 成増駅前店",
+      "url": "https://www.yakiniku-king.jp/shop/2366/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ イオン板橋店",
+      "url": "https://www.yakiniku-king.jp/shop/2389/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 練馬石神井台店",
+      "url": "https://www.yakiniku-king.jp/shop/2275/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 梅島店",
+      "url": "https://www.yakiniku-king.jp/shop/2038/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 竹ノ塚店",
+      "url": "https://www.yakiniku-king.jp/shop/2046/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 葛飾堀切店",
+      "url": "https://www.yakiniku-king.jp/shop/2376/",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 北葛西店",
+      "url": "https://www.yakiniku-king.jp/shop/2288/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 西葛西駅前店",
+      "url": "https://www.yakiniku-king.jp/shop/2401/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 八王子松木店",
+      "url": "https://www.yakiniku-king.jp/shop/2163/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 吉祥寺店",
+      "url": "https://www.yakiniku-king.jp/shop/2277/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 三鷹野崎店",
+      "url": "https://www.yakiniku-king.jp/shop/2226/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 三鷹新川店",
+      "url": "https://www.yakiniku-king.jp/shop/2320/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 府中店",
+      "url": "https://www.yakiniku-king.jp/shop/2074/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 昭島店",
+      "url": "https://www.yakiniku-king.jp/shop/2284/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 仙川店",
+      "url": "https://www.yakiniku-king.jp/shop/2068/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 調布店",
+      "url": "https://www.yakiniku-king.jp/shop/2289/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 町田店",
+      "url": "https://www.yakiniku-king.jp/shop/1007/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 町田駅前店",
+      "url": "https://www.yakiniku-king.jp/shop/2397/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 小平店",
+      "url": "https://www.yakiniku-king.jp/shop/2055/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 狛江店",
+      "url": "https://www.yakiniku-king.jp/shop/2216/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 東大和店",
+      "url": "https://www.yakiniku-king.jp/shop/2232/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 東久留米店",
+      "url": "https://www.yakiniku-king.jp/shop/2334/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 羽村店",
+      "url": "https://www.yakiniku-king.jp/shop/2004/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 横浜栄店",
+      "url": "https://www.yakiniku-king.jp/shop/2016/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 横浜港南店",
+      "url": "https://www.yakiniku-king.jp/shop/2037/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 横浜都筑店",
+      "url": "https://www.yakiniku-king.jp/shop/2178/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 金沢八景店",
+      "url": "https://www.yakiniku-king.jp/shop/2208/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 横浜別所店",
+      "url": "https://www.yakiniku-king.jp/shop/2234/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 横浜青葉台店",
+      "url": "https://www.yakiniku-king.jp/shop/2254/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 横浜丸山台店",
+      "url": "https://www.yakiniku-king.jp/shop/2282/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 横浜泉店",
+      "url": "https://www.yakiniku-king.jp/shop/2297/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 横浜六浦店",
+      "url": "https://www.yakiniku-king.jp/shop/2309/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 保土ヶ谷星川店",
+      "url": "https://www.yakiniku-king.jp/shop/2328/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 三ツ境店",
+      "url": "https://www.yakiniku-king.jp/shop/2345/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 綱島樽町店",
+      "url": "https://www.yakiniku-king.jp/shop/2347/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 川崎高津店",
+      "url": "https://www.yakiniku-king.jp/shop/2233/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 川崎駅東口店",
+      "url": "https://www.yakiniku-king.jp/shop/2315/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 相模原駅前店",
+      "url": "https://www.yakiniku-king.jp/shop/2193/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 北久里浜店",
+      "url": "https://www.yakiniku-king.jp/shop/2143/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 平塚見附町店",
+      "url": "https://www.yakiniku-king.jp/shop/2285/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 藤沢店",
+      "url": "https://www.yakiniku-king.jp/shop/2121/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 小田原酒匂店",
+      "url": "https://www.yakiniku-king.jp/shop/2080/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 小田原成田店",
+      "url": "https://www.yakiniku-king.jp/shop/2224/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 茅ヶ崎店",
+      "url": "https://www.yakiniku-king.jp/shop/2112/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 厚木店",
+      "url": "https://www.yakiniku-king.jp/shop/2120/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ つきみ野店",
+      "url": "https://www.yakiniku-king.jp/shop/2012/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 大和下和田店",
+      "url": "https://www.yakiniku-king.jp/shop/2113/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 伊勢原店",
+      "url": "https://www.yakiniku-king.jp/shop/2029/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 海老名上郷店",
+      "url": "https://www.yakiniku-king.jp/shop/2276/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 綾瀬店",
+      "url": "https://www.yakiniku-king.jp/shop/2045/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 新潟駅南店",
+      "url": "https://www.yakiniku-king.jp/shop/2033/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 新津店",
+      "url": "https://www.yakiniku-king.jp/shop/2043/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 新潟河渡店",
+      "url": "https://www.yakiniku-king.jp/shop/2115/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 新潟小新店",
+      "url": "https://www.yakiniku-king.jp/shop/2210/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 長岡店",
+      "url": "https://www.yakiniku-king.jp/shop/2259/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 上越セントラルスクエア店",
+      "url": "https://www.yakiniku-king.jp/shop/2173/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 富山豊田店",
+      "url": "https://www.yakiniku-king.jp/shop/2110/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 富山掛尾店",
+      "url": "https://www.yakiniku-king.jp/shop/2307/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 高岡店",
+      "url": "https://www.yakiniku-king.jp/shop/2099/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 砺波店",
+      "url": "https://www.yakiniku-king.jp/shop/2155/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 金沢福久店",
+      "url": "https://www.yakiniku-king.jp/shop/2165/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 金沢桜田店",
+      "url": "https://www.yakiniku-king.jp/shop/2201/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 小松店",
+      "url": "https://www.yakiniku-king.jp/shop/2158/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 御経塚店",
+      "url": "https://www.yakiniku-king.jp/shop/2017/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 福井大和田店",
+      "url": "https://www.yakiniku-king.jp/shop/2087/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 鯖江店",
+      "url": "https://www.yakiniku-king.jp/shop/2160/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 甲府飯田店",
+      "url": "https://www.yakiniku-king.jp/shop/2094/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 富士吉田店",
+      "url": "https://www.yakiniku-king.jp/shop/2386/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 笛吹石和店",
+      "url": "https://www.yakiniku-king.jp/shop/2403/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 甲府昭和店",
+      "url": "https://www.yakiniku-king.jp/shop/2164/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 川中島店",
+      "url": "https://www.yakiniku-king.jp/shop/2067/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 長野東和田店",
+      "url": "https://www.yakiniku-king.jp/shop/2070/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 松本村井店",
+      "url": "https://www.yakiniku-king.jp/shop/2191/",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 松本あがた店",
+      "url": "https://www.yakiniku-king.jp/shop/2359/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 上田店",
+      "url": "https://www.yakiniku-king.jp/shop/2238/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 佐久平店",
+      "url": "https://www.yakiniku-king.jp/shop/2204/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 岐阜茜部店",
+      "url": "https://www.yakiniku-king.jp/shop/2083/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 岐阜鷺山店",
+      "url": "https://www.yakiniku-king.jp/shop/2126/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 大垣店",
+      "url": "https://www.yakiniku-king.jp/shop/2144/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 多治見店",
+      "url": "https://www.yakiniku-king.jp/shop/2225/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 可児店",
+      "url": "https://www.yakiniku-king.jp/shop/2321/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 小黒店",
+      "url": "https://www.yakiniku-king.jp/shop/2047/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 静岡流通通り店",
+      "url": "https://www.yakiniku-king.jp/shop/2319/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 上島店",
+      "url": "https://www.yakiniku-king.jp/shop/1004/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 志都呂店",
+      "url": "https://www.yakiniku-king.jp/shop/2281/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 浜北店",
+      "url": "https://www.yakiniku-king.jp/shop/2349/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 沼津店",
+      "url": "https://www.yakiniku-king.jp/shop/2069/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 三島店",
+      "url": "https://www.yakiniku-king.jp/shop/2245/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 富士宮店",
+      "url": "https://www.yakiniku-king.jp/shop/2135/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 富士店",
+      "url": "https://www.yakiniku-king.jp/shop/2076/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 磐田店",
+      "url": "https://www.yakiniku-king.jp/shop/2393/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 焼津店",
+      "url": "https://www.yakiniku-king.jp/shop/2361/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 掛川店",
+      "url": "https://www.yakiniku-king.jp/shop/2392/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 藤枝店",
+      "url": "https://www.yakiniku-king.jp/shop/2008/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 吉田店",
+      "url": "https://www.yakiniku-king.jp/shop/2139/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 笠寺店",
+      "url": "https://www.yakiniku-king.jp/shop/2042/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 豊山店",
+      "url": "https://www.yakiniku-king.jp/shop/2082/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 名古屋森孝店",
+      "url": "https://www.yakiniku-king.jp/shop/2180/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 名古屋徳重店",
+      "url": "https://www.yakiniku-king.jp/shop/2240/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 名西康生通店",
+      "url": "https://www.yakiniku-king.jp/shop/2358/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 名古屋上飯田店",
+      "url": "https://www.yakiniku-king.jp/shop/2375/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 花田店",
+      "url": "https://www.yakiniku-king.jp/shop/1003/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 曙店",
+      "url": "https://www.yakiniku-king.jp/shop/2174/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 鴨田店",
+      "url": "https://www.yakiniku-king.jp/shop/2002/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 羽根店",
+      "url": "https://www.yakiniku-king.jp/shop/2293/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 一宮大和町店",
+      "url": "https://www.yakiniku-king.jp/shop/2337/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 瀬戸店",
+      "url": "https://www.yakiniku-king.jp/shop/2339/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 半田店",
+      "url": "https://www.yakiniku-king.jp/shop/2265/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 春日井大留店",
+      "url": "https://www.yakiniku-king.jp/shop/2036/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 豊川店",
+      "url": "https://www.yakiniku-king.jp/shop/2286/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 津島店",
+      "url": "https://www.yakiniku-king.jp/shop/1006/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 梅坪店",
+      "url": "https://www.yakiniku-king.jp/shop/2071/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 豊田浄水店",
+      "url": "https://www.yakiniku-king.jp/shop/2097/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 元町店",
+      "url": "https://www.yakiniku-king.jp/shop/2280/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 三河安城店",
+      "url": "https://www.yakiniku-king.jp/shop/2118/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 西尾店",
+      "url": "https://www.yakiniku-king.jp/shop/2236/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 蒲郡店",
+      "url": "https://www.yakiniku-king.jp/shop/2151/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 犬山店",
+      "url": "https://www.yakiniku-king.jp/shop/2329/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 江南店",
+      "url": "https://www.yakiniku-king.jp/shop/2365/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 小牧店",
+      "url": "https://www.yakiniku-king.jp/shop/2357/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 稲沢店",
+      "url": "https://www.yakiniku-king.jp/shop/2391/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 東海名和店",
+      "url": "https://www.yakiniku-king.jp/shop/2215/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 知多店",
+      "url": "https://www.yakiniku-king.jp/shop/2211/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 日進竹の山店",
+      "url": "https://www.yakiniku-king.jp/shop/2342/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 清須店",
+      "url": "https://www.yakiniku-king.jp/shop/2251/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 三好店",
+      "url": "https://www.yakiniku-king.jp/shop/2161/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 津上浜店",
+      "url": "https://www.yakiniku-king.jp/shop/2096/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 四日市日永店",
+      "url": "https://www.yakiniku-king.jp/shop/2081/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 四日市富州原店",
+      "url": "https://www.yakiniku-king.jp/shop/2290/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 松阪店",
+      "url": "https://www.yakiniku-king.jp/shop/2127/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 鈴鹿店",
+      "url": "https://www.yakiniku-king.jp/shop/1008/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 名張店",
+      "url": "https://www.yakiniku-king.jp/shop/2220/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 大津堅田店",
+      "url": "https://www.yakiniku-king.jp/shop/2314/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 大津膳所店",
+      "url": "https://www.yakiniku-king.jp/shop/2333/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 長浜店",
+      "url": "https://www.yakiniku-king.jp/shop/2313/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 草津店",
+      "url": "https://www.yakiniku-king.jp/shop/2351/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 東近江店",
+      "url": "https://www.yakiniku-king.jp/shop/2378/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 京都桂店",
+      "url": "https://www.yakiniku-king.jp/shop/2132/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 京都桃山店",
+      "url": "https://www.yakiniku-king.jp/shop/2136/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 1号線京都横大路店",
+      "url": "https://www.yakiniku-king.jp/shop/2137/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 東住吉店",
+      "url": "https://www.yakiniku-king.jp/shop/2149/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 大阪鶴見店",
+      "url": "https://www.yakiniku-king.jp/shop/2272/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 大阪都島通り店",
+      "url": "https://www.yakiniku-king.jp/shop/2340/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 大阪三津屋店",
+      "url": "https://www.yakiniku-king.jp/shop/2346/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 東加賀屋店",
+      "url": "https://www.yakiniku-king.jp/shop/2381/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ namBaHIPS店",
+      "url": "https://www.yakiniku-king.jp/shop/2394/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 石津店",
+      "url": "https://www.yakiniku-king.jp/shop/2010/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 堺百舌鳥店",
+      "url": "https://www.yakiniku-king.jp/shop/2306/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 堺美原店",
+      "url": "https://www.yakiniku-king.jp/shop/2336/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 堺小阪店",
+      "url": "https://www.yakiniku-king.jp/shop/2370/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 岸和田店",
+      "url": "https://www.yakiniku-king.jp/shop/2363/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 池田店",
+      "url": "https://www.yakiniku-king.jp/shop/2353/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 枚方店",
+      "url": "https://www.yakiniku-king.jp/shop/2356/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 鮎川店",
+      "url": "https://www.yakiniku-king.jp/shop/2011/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 八尾店",
+      "url": "https://www.yakiniku-king.jp/shop/2271/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 泉佐野店",
+      "url": "https://www.yakiniku-king.jp/shop/2159/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 寝屋川仁和寺店",
+      "url": "https://www.yakiniku-king.jp/shop/2181/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 大東店",
+      "url": "https://www.yakiniku-king.jp/shop/2324/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 和泉中央店",
+      "url": "https://www.yakiniku-king.jp/shop/2294/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 羽曳野店",
+      "url": "https://www.yakiniku-king.jp/shop/2332/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 東大阪瓢箪山店",
+      "url": "https://www.yakiniku-king.jp/shop/2172/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 神戸学院前店",
+      "url": "https://www.yakiniku-king.jp/shop/2166/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 生田川店",
+      "url": "https://www.yakiniku-king.jp/shop/2326/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 神戸東灘店",
+      "url": "https://www.yakiniku-king.jp/shop/2382/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 姫路野里店",
+      "url": "https://www.yakiniku-king.jp/shop/2188/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 姫路広畑店",
+      "url": "https://www.yakiniku-king.jp/shop/2348/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 尼崎長洲店",
+      "url": "https://www.yakiniku-king.jp/shop/2292/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 尼崎近松店",
+      "url": "https://www.yakiniku-king.jp/shop/2341/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 西宮鞍掛店",
+      "url": "https://www.yakiniku-king.jp/shop/2377/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 加古川店",
+      "url": "https://www.yakiniku-king.jp/shop/2362/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 宝塚店",
+      "url": "https://www.yakiniku-king.jp/shop/2383/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 橿原店",
+      "url": "https://www.yakiniku-king.jp/shop/2187/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 王寺店",
+      "url": "https://www.yakiniku-king.jp/shop/2385/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 国体道路店",
+      "url": "https://www.yakiniku-king.jp/shop/2205/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 和歌山北店",
+      "url": "https://www.yakiniku-king.jp/shop/2317/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 岩出店",
+      "url": "https://www.yakiniku-king.jp/shop/2179/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 米子店",
+      "url": "https://www.yakiniku-king.jp/shop/2355/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 岡山大供店",
+      "url": "https://www.yakiniku-king.jp/shop/2134/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 岡山久米店",
+      "url": "https://www.yakiniku-king.jp/shop/2371/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 倉敷沖店",
+      "url": "https://www.yakiniku-king.jp/shop/2255/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 倉敷連島店",
+      "url": "https://www.yakiniku-king.jp/shop/2398/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 広島緑井店",
+      "url": "https://www.yakiniku-king.jp/shop/2092/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 広島井口店",
+      "url": "https://www.yakiniku-king.jp/shop/2175/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 広島宇品店",
+      "url": "https://www.yakiniku-king.jp/shop/2214/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 三原店",
+      "url": "https://www.yakiniku-king.jp/shop/2310/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 福山王子店",
+      "url": "https://www.yakiniku-king.jp/shop/2207/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 福山御幸店",
+      "url": "https://www.yakiniku-king.jp/shop/2246/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 西条店",
+      "url": "https://www.yakiniku-king.jp/shop/2287/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 広島廿日市店",
+      "url": "https://www.yakiniku-king.jp/shop/2396/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 下関稗田店",
+      "url": "https://www.yakiniku-king.jp/shop/2100/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 岩国店",
+      "url": "https://www.yakiniku-king.jp/shop/2316/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 徳島応神店",
+      "url": "https://www.yakiniku-king.jp/shop/2098/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 徳島沖浜店",
+      "url": "https://www.yakiniku-king.jp/shop/2219/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 高松上天神店",
+      "url": "https://www.yakiniku-king.jp/shop/2101/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 高松屋島店",
+      "url": "https://www.yakiniku-king.jp/shop/2268/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 丸亀店",
+      "url": "https://www.yakiniku-king.jp/shop/2350/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ イオンタウン宇多津店",
+      "url": "https://www.yakiniku-king.jp/shop/2169/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 松山久米店",
+      "url": "https://www.yakiniku-king.jp/shop/2078/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 松山衣山店",
+      "url": "https://www.yakiniku-king.jp/shop/2093/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 今治店",
+      "url": "https://www.yakiniku-king.jp/shop/2308/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 新居浜店",
+      "url": "https://www.yakiniku-king.jp/shop/2368/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 高知インター店",
+      "url": "https://www.yakiniku-king.jp/shop/2247/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 八幡西店",
+      "url": "https://www.yakiniku-king.jp/shop/2025/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 北九州黒崎店",
+      "url": "https://www.yakiniku-king.jp/shop/2142/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 若松大鳥居店",
+      "url": "https://www.yakiniku-king.jp/shop/2167/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 小倉津田店",
+      "url": "https://www.yakiniku-king.jp/shop/2231/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 福岡清水店",
+      "url": "https://www.yakiniku-king.jp/shop/2079/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 福岡千早店",
+      "url": "https://www.yakiniku-king.jp/shop/2084/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 福岡原店",
+      "url": "https://www.yakiniku-king.jp/shop/2085/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 福岡伊都店",
+      "url": "https://www.yakiniku-king.jp/shop/2138/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 福岡天神店",
+      "url": "https://www.yakiniku-king.jp/shop/2369/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 大牟田店",
+      "url": "https://www.yakiniku-king.jp/shop/2301/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 久留米上津店",
+      "url": "https://www.yakiniku-king.jp/shop/2103/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 久留米合川店",
+      "url": "https://www.yakiniku-king.jp/shop/2323/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 八女インター店",
+      "url": "https://www.yakiniku-king.jp/shop/2203/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 天拝坂店",
+      "url": "https://www.yakiniku-king.jp/shop/2032/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 春日桜ヶ丘店",
+      "url": "https://www.yakiniku-king.jp/shop/2147/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 福岡志免店",
+      "url": "https://www.yakiniku-king.jp/shop/2150/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 福岡新宮店",
+      "url": "https://www.yakiniku-king.jp/shop/2102/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 佐賀日の出店",
+      "url": "https://www.yakiniku-king.jp/shop/2157/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 鳥栖店",
+      "url": "https://www.yakiniku-king.jp/shop/2124/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 佐世保大野店",
+      "url": "https://www.yakiniku-king.jp/shop/2122/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 佐世保大和町店",
+      "url": "https://www.yakiniku-king.jp/shop/2206/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 諫早貝津町店",
+      "url": "https://www.yakiniku-king.jp/shop/2295/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 時津店",
+      "url": "https://www.yakiniku-king.jp/shop/2106/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 熊本近見店",
+      "url": "https://www.yakiniku-king.jp/shop/2059/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 熊本はません店",
+      "url": "https://www.yakiniku-king.jp/shop/2088/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 熊本高平店",
+      "url": "https://www.yakiniku-king.jp/shop/2209/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 帯山店",
+      "url": "https://www.yakiniku-king.jp/shop/2338/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 八代店",
+      "url": "https://www.yakiniku-king.jp/shop/2197/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 大分森町店",
+      "url": "https://www.yakiniku-king.jp/shop/2111/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 大分光吉店",
+      "url": "https://www.yakiniku-king.jp/shop/2153/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 別府店",
+      "url": "https://www.yakiniku-king.jp/shop/2241/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 宮崎新別府店",
+      "url": "https://www.yakiniku-king.jp/shop/2177/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 宮崎恒久店",
+      "url": "https://www.yakiniku-king.jp/shop/2195/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 宮崎大工店",
+      "url": "https://www.yakiniku-king.jp/shop/2395/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 都城店",
+      "url": "https://www.yakiniku-king.jp/shop/2114/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 延岡店",
+      "url": "https://www.yakiniku-king.jp/shop/2264/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 鹿児島宇宿店",
+      "url": "https://www.yakiniku-king.jp/shop/2109/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 伊敷店",
+      "url": "https://www.yakiniku-king.jp/shop/2327/",
+      "facilities": []
+    },
+    {
+      "name": "焼肉きんぐ 鹿屋バイパス店",
+      "url": "https://www.yakiniku-king.jp/shop/2170/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 薩摩川内店",
+      "url": "https://www.yakiniku-king.jp/shop/2384/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 霧島店",
+      "url": "https://www.yakiniku-king.jp/shop/2145/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 那覇新都心店",
+      "url": "https://www.yakiniku-king.jp/shop/2107/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 那覇久茂地店",
+      "url": "https://www.yakiniku-king.jp/shop/2212/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 名護店",
+      "url": "https://www.yakiniku-king.jp/shop/2239/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 沖縄美里店",
+      "url": "https://www.yakiniku-king.jp/shop/2229/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 北谷店",
+      "url": "https://www.yakiniku-king.jp/shop/2131/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "焼肉きんぐ 一日橋店",
+      "url": "https://www.yakiniku-king.jp/shop/2128/",
+      "facilities": [
+        "diaperTable"
+      ]
+    }
+  ]
+}

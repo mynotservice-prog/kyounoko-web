@@ -5,6 +5,7 @@ import {
   type FacilityKey,
 } from '@/lib/chain-facilities';
 import { KkIcon, type KkIconName } from '@/components/kk/KkIcon';
+import { COVERAGE_KEY_ORDER, COVERAGE_LABELS, formatRate, getChainCoverage } from '@/lib/chain-coverage';
 
 /**
  * チェーン×子連れ設備の判定ボックス（lib/chain-facilities.ts からの自動生成）。
@@ -43,6 +44,17 @@ export function ChainFacilitiesBox({
 }) {
   const keys = Object.keys(FACILITY_LABELS) as FacilityKey[];
   const verified = formatYm(chain.verifiedAt);
+  // 設備カバー率センサス（公式店舗検索の全店集計）。あるチェーンだけ「店舗による」を率で補足し、
+  // 調査ハブ /data/chain-facility-coverage へ回遊させる（戦略§5-2: 調査ハブ⇄個別記事の双方向リンク）
+  const coverage = getChainCoverage(chain.key);
+  const coverageItems = coverage
+    ? COVERAGE_KEY_ORDER.filter((k) => coverage.facilities[k]).map((k) => ({
+        key: k,
+        label: COVERAGE_LABELS[k],
+        count: coverage.facilities[k]!.count,
+        total: coverage.total,
+      }))
+    : [];
 
   return (
     <section
@@ -88,6 +100,22 @@ export function ChainFacilitiesBox({
               <strong>{e.label}:</strong> {e.value}
             </div>
           ))}
+        </div>
+      )}
+
+      {coverage && coverageItems.length > 0 && (
+        <div className="av3-chain-extras" aria-label="公式店舗検索の全店集計">
+          <div className="av3-chain-extra">
+            <strong>公式店舗検索の全店集計（{coverage.total.toLocaleString()}店・{coverage.countedAt}）:</strong>{' '}
+            {coverageItems.map((it, i) => (
+              <span key={it.key}>
+                {i > 0 && '／'}
+                {it.label} {it.count.toLocaleString()}店（{formatRate(it.count / it.total)}）
+              </span>
+            ))}
+            {' '}
+            <Link href={`/data/chain-facility-coverage#chain-${chain.key}`}>他チェーンとの比較・出典</Link>
+          </div>
         </div>
       )}
 

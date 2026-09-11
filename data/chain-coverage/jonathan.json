@@ -1,0 +1,1253 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "jonathan",
+  "name": "ジョナサン",
+  "sourceUrl": "https://store-info.skylark.co.jp/",
+  "method": "すかいらーくグループ共通店舗検索の店舗API（/api/point/、カテゴリ=0103）で全店舗を取得し、各店舗の設備フラグ（絞り込み検索と同じ項目）を集計",
+  "total": 154,
+  "note": "「座敷」は絞り込み検索の「座敷(大・小) あり」と「小上がり(畳席) あり」のいずれかに該当する店舗を数えた。単一フラグの項目は公式絞り込み件数と一致を確認済み（車椅子入店可=38、おむつ替え台あり=145、個室・個室風席あり=2、多目的トイレあり=8、駐車場あり=102）",
+  "facilities": {
+    "stepFree": {
+      "count": 38,
+      "label": "車椅子入店可"
+    },
+    "zashiki": {
+      "count": 0,
+      "label": "座敷(大・小) あり／小上がり(畳席) あり"
+    },
+    "diaperTable": {
+      "count": 145,
+      "label": "おむつ替え台あり"
+    },
+    "privateRoom": {
+      "count": 2,
+      "label": "個室・個室風席あり"
+    },
+    "multiToilet": {
+      "count": 8,
+      "label": "多目的トイレあり"
+    },
+    "parking": {
+      "count": 102,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "ジョナサン そごう大宮店",
+      "url": "https://store-info.skylark.co.jp/map/020527/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 用賀店",
+      "url": "https://store-info.skylark.co.jp/map/020525/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 秋葉原駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020522/",
+      "facilities": []
+    },
+    {
+      "name": "ジョナサン 堀切店",
+      "url": "https://store-info.skylark.co.jp/map/020524/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 浦安店",
+      "url": "https://store-info.skylark.co.jp/map/020521/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 松戸八ヶ崎店",
+      "url": "https://store-info.skylark.co.jp/map/020520/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 菊名駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020518/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 春日部中央店",
+      "url": "https://store-info.skylark.co.jp/map/020516/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 清瀬駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020514/",
+      "facilities": []
+    },
+    {
+      "name": "ジョナサン 横浜ワールドポーターズ店",
+      "url": "https://store-info.skylark.co.jp/map/020513/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ジョナサン 水元店",
+      "url": "https://store-info.skylark.co.jp/map/020509/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 新宿西口大ガード店",
+      "url": "https://store-info.skylark.co.jp/map/020500/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン イオンモール多摩平の森店",
+      "url": "https://store-info.skylark.co.jp/map/020499/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 台場デックス東京ビーチ店",
+      "url": "https://store-info.skylark.co.jp/map/020496/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ジョナサン 東久留米駅前店",
+      "url": "https://store-info.skylark.co.jp/map/909507/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 浦和西口店",
+      "url": "https://store-info.skylark.co.jp/map/909503/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 狭山上広瀬店",
+      "url": "https://store-info.skylark.co.jp/map/909501/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 瀬谷駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020494/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 川崎宿河原店",
+      "url": "https://store-info.skylark.co.jp/map/020493/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 稲田堤店",
+      "url": "https://store-info.skylark.co.jp/map/020492/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 海老名中央店",
+      "url": "https://store-info.skylark.co.jp/map/020491/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 向ヶ丘遊園店",
+      "url": "https://store-info.skylark.co.jp/map/020490/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 月島店",
+      "url": "https://store-info.skylark.co.jp/map/020489/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 三鷹井口店",
+      "url": "https://store-info.skylark.co.jp/map/020488/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 藤が丘店",
+      "url": "https://store-info.skylark.co.jp/map/020487/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 鮫洲店",
+      "url": "https://store-info.skylark.co.jp/map/020485/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 横浜中山店",
+      "url": "https://store-info.skylark.co.jp/map/020483/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 新小岩店",
+      "url": "https://store-info.skylark.co.jp/map/020482/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 熱海サンビーチ店",
+      "url": "https://store-info.skylark.co.jp/map/020481/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン みずほ台駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020480/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 茅ヶ崎高田店",
+      "url": "https://store-info.skylark.co.jp/map/020479/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 函南店",
+      "url": "https://store-info.skylark.co.jp/map/020477/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 横須賀店",
+      "url": "https://store-info.skylark.co.jp/map/020475/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 下田店",
+      "url": "https://store-info.skylark.co.jp/map/020474/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 菊川店",
+      "url": "https://store-info.skylark.co.jp/map/020466/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 白金台店",
+      "url": "https://store-info.skylark.co.jp/map/020460/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ジョナサン 横浜公園店",
+      "url": "https://store-info.skylark.co.jp/map/020456/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 池袋サンシャイン前店",
+      "url": "https://store-info.skylark.co.jp/map/020454/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 豊洲店",
+      "url": "https://store-info.skylark.co.jp/map/020455/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 芝公園店",
+      "url": "https://store-info.skylark.co.jp/map/020449/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 鳩ヶ谷店",
+      "url": "https://store-info.skylark.co.jp/map/020447/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 宮前平店",
+      "url": "https://store-info.skylark.co.jp/map/020440/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 馬車道店",
+      "url": "https://store-info.skylark.co.jp/map/020438/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 東大島駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020437/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン ビアレ横浜店",
+      "url": "https://store-info.skylark.co.jp/map/020435/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 要町駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020433/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン アトレ川崎店",
+      "url": "https://store-info.skylark.co.jp/map/020921/",
+      "facilities": []
+    },
+    {
+      "name": "ジョナサン 新小岩駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020916/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "ジョナサン 武蔵中原店",
+      "url": "https://store-info.skylark.co.jp/map/020914/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 王子店",
+      "url": "https://store-info.skylark.co.jp/map/020908/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 上星川店",
+      "url": "https://store-info.skylark.co.jp/map/020425/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 北与野店",
+      "url": "https://store-info.skylark.co.jp/map/020420/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 上大岡駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020413/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 東浦和店",
+      "url": "https://store-info.skylark.co.jp/map/020409/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 都立大学駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020405/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 新御徒町店",
+      "url": "https://store-info.skylark.co.jp/map/020395/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 蒲田西口店",
+      "url": "https://store-info.skylark.co.jp/map/020388/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 水道橋店",
+      "url": "https://store-info.skylark.co.jp/map/020385/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 小田原店",
+      "url": "https://store-info.skylark.co.jp/map/020616/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 川崎塩浜店",
+      "url": "https://store-info.skylark.co.jp/map/020382/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 平和島店",
+      "url": "https://store-info.skylark.co.jp/map/020378/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 神楽坂駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020372/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 日本橋浜町店",
+      "url": "https://store-info.skylark.co.jp/map/020370/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 葛西駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020368/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 御徒町店",
+      "url": "https://store-info.skylark.co.jp/map/020363/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 山梨開国橋店",
+      "url": "https://store-info.skylark.co.jp/map/020360/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 横浜北幸店",
+      "url": "https://store-info.skylark.co.jp/map/020357/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 蓮田店",
+      "url": "https://store-info.skylark.co.jp/map/020354/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 新座駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020353/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 立川北口店",
+      "url": "https://store-info.skylark.co.jp/map/020349/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 新子安店",
+      "url": "https://store-info.skylark.co.jp/map/020348/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 神谷町店",
+      "url": "https://store-info.skylark.co.jp/map/020338/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 国領駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020332/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 大関横丁店",
+      "url": "https://store-info.skylark.co.jp/map/020331/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 溝の口駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020330/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 武蔵小山店",
+      "url": "https://store-info.skylark.co.jp/map/020322/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 鹿嶋店",
+      "url": "https://store-info.skylark.co.jp/map/020321/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 東池袋店",
+      "url": "https://store-info.skylark.co.jp/map/020317/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 伊勢原店",
+      "url": "https://store-info.skylark.co.jp/map/020314/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 花小金井店",
+      "url": "https://store-info.skylark.co.jp/map/020313/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 八街店",
+      "url": "https://store-info.skylark.co.jp/map/020312/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 秩父店",
+      "url": "https://store-info.skylark.co.jp/map/020309/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 上石神井店",
+      "url": "https://store-info.skylark.co.jp/map/020305/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 佐倉高岡店",
+      "url": "https://store-info.skylark.co.jp/map/020304/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 調布駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020301/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 相模原若松店",
+      "url": "https://store-info.skylark.co.jp/map/020297/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 愛川町店",
+      "url": "https://store-info.skylark.co.jp/map/020286/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 杉並梅里店",
+      "url": "https://store-info.skylark.co.jp/map/020281/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 西新宿店",
+      "url": "https://store-info.skylark.co.jp/map/020280/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 亀戸店",
+      "url": "https://store-info.skylark.co.jp/map/020279/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 淵野辺駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020271/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 綱島店",
+      "url": "https://store-info.skylark.co.jp/map/020268/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 藤沢石川店",
+      "url": "https://store-info.skylark.co.jp/map/020265/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 習志野台店",
+      "url": "https://store-info.skylark.co.jp/map/020262/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 京急富岡店",
+      "url": "https://store-info.skylark.co.jp/map/020259/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 瑞江店",
+      "url": "https://store-info.skylark.co.jp/map/020257/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 梅屋敷店",
+      "url": "https://store-info.skylark.co.jp/map/020254/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 川崎生田店",
+      "url": "https://store-info.skylark.co.jp/map/020251/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 新百合ヶ丘駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020247/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 成増駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020233/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 山下公園店",
+      "url": "https://store-info.skylark.co.jp/map/020228/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 中野坂上店",
+      "url": "https://store-info.skylark.co.jp/map/020226/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 北朝霞駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020222/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 護国寺店",
+      "url": "https://store-info.skylark.co.jp/map/020223/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン あざみ野駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020213/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 方南町店",
+      "url": "https://store-info.skylark.co.jp/map/020212/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 東山田店",
+      "url": "https://store-info.skylark.co.jp/map/020209/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 湯河原店",
+      "url": "https://store-info.skylark.co.jp/map/020207/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 水天宮駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020206/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 平塚田村店",
+      "url": "https://store-info.skylark.co.jp/map/020205/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 赤羽西店",
+      "url": "https://store-info.skylark.co.jp/map/020203/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 君津駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020199/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 下井草店",
+      "url": "https://store-info.skylark.co.jp/map/020192/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 東茂原店",
+      "url": "https://store-info.skylark.co.jp/map/020190/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 伊東店",
+      "url": "https://store-info.skylark.co.jp/map/020186/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 武蔵新城店",
+      "url": "https://store-info.skylark.co.jp/map/020183/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 相模原古淵店",
+      "url": "https://store-info.skylark.co.jp/map/020181/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 横浜岡津店",
+      "url": "https://store-info.skylark.co.jp/map/020177/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 行徳新浜店",
+      "url": "https://store-info.skylark.co.jp/map/020174/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン ふじみ野店",
+      "url": "https://store-info.skylark.co.jp/map/020173/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 西馬込店",
+      "url": "https://store-info.skylark.co.jp/map/020166/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 中野弥生町店",
+      "url": "https://store-info.skylark.co.jp/map/020165/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 二俣川店",
+      "url": "https://store-info.skylark.co.jp/map/020164/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 秋川店",
+      "url": "https://store-info.skylark.co.jp/map/020161/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 武蔵村山店",
+      "url": "https://store-info.skylark.co.jp/map/020160/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 岩槻店",
+      "url": "https://store-info.skylark.co.jp/map/020158/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 志茂駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020156/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 御殿場インター店",
+      "url": "https://store-info.skylark.co.jp/map/020153/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 千葉さつきが丘店",
+      "url": "https://store-info.skylark.co.jp/map/020147/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 川越笠幡店",
+      "url": "https://store-info.skylark.co.jp/map/020141/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 牛浜店",
+      "url": "https://store-info.skylark.co.jp/map/020139/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 横浜反町店",
+      "url": "https://store-info.skylark.co.jp/map/020129/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 本八幡店",
+      "url": "https://store-info.skylark.co.jp/map/020125/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 氷川台店",
+      "url": "https://store-info.skylark.co.jp/map/020121/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 横浜宮元町店",
+      "url": "https://store-info.skylark.co.jp/map/020116/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 吉川店",
+      "url": "https://store-info.skylark.co.jp/map/020115/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 上尾店",
+      "url": "https://store-info.skylark.co.jp/map/020095/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 十日市場店",
+      "url": "https://store-info.skylark.co.jp/map/020091/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 葉山店",
+      "url": "https://store-info.skylark.co.jp/map/020088/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 谷津店",
+      "url": "https://store-info.skylark.co.jp/map/020074/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 西葛西店",
+      "url": "https://store-info.skylark.co.jp/map/020072/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 草加谷塚店",
+      "url": "https://store-info.skylark.co.jp/map/020062/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 板橋大山店",
+      "url": "https://store-info.skylark.co.jp/map/020061/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 浦和田島店",
+      "url": "https://store-info.skylark.co.jp/map/020047/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 東寺尾店",
+      "url": "https://store-info.skylark.co.jp/map/020036/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 横浜芹が谷店",
+      "url": "https://store-info.skylark.co.jp/map/020034/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 富士見台店",
+      "url": "https://store-info.skylark.co.jp/map/020033/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 青梅店",
+      "url": "https://store-info.skylark.co.jp/map/020030/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 柴又店",
+      "url": "https://store-info.skylark.co.jp/map/020029/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 狛江店",
+      "url": "https://store-info.skylark.co.jp/map/020027/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 豊玉店",
+      "url": "https://store-info.skylark.co.jp/map/020021/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 矢川駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020017/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョナサン 川口駅前店",
+      "url": "https://store-info.skylark.co.jp/map/020016/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ジョナサン 練馬高松店",
+      "url": "https://store-info.skylark.co.jp/map/020001/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    }
+  ]
+}

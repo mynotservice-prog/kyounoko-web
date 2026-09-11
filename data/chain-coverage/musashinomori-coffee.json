@@ -1,0 +1,831 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "musashinomori-coffee",
+  "name": "むさしの森珈琲",
+  "sourceUrl": "https://store-info.skylark.co.jp/",
+  "method": "すかいらーくグループ共通店舗検索の店舗API（/api/point/、カテゴリ=0201）で全店舗を取得し、各店舗の設備フラグ（絞り込み検索と同じ項目）を集計",
+  "total": 83,
+  "note": "「座敷」は絞り込み検索の「座敷(大・小) あり」と「小上がり(畳席) あり」のいずれかに該当する店舗を数えた。単一フラグの項目は公式絞り込み件数と一致を確認済み（車椅子入店可=67、おむつ替え台あり=78、個室・個室風席あり=25、多目的トイレあり=50、駐車場あり=77）",
+  "facilities": {
+    "stepFree": {
+      "count": 67,
+      "label": "車椅子入店可"
+    },
+    "zashiki": {
+      "count": 0,
+      "label": "座敷(大・小) あり／小上がり(畳席) あり"
+    },
+    "diaperTable": {
+      "count": 78,
+      "label": "おむつ替え台あり"
+    },
+    "privateRoom": {
+      "count": 25,
+      "label": "個室・個室風席あり"
+    },
+    "multiToilet": {
+      "count": 50,
+      "label": "多目的トイレあり"
+    },
+    "parking": {
+      "count": 77,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "むさしの森珈琲 帯広市役所前店",
+      "url": "https://store-info.skylark.co.jp/map/198628/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 羽田空港店",
+      "url": "https://store-info.skylark.co.jp/map/198629/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 ココット彦根店",
+      "url": "https://store-info.skylark.co.jp/map/198627/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 北久里浜店",
+      "url": "https://store-info.skylark.co.jp/map/198623/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 仙川店",
+      "url": "https://store-info.skylark.co.jp/map/198626/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 都城店",
+      "url": "https://store-info.skylark.co.jp/map/198625/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 香久山店",
+      "url": "https://store-info.skylark.co.jp/map/198620/",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 佐倉ユーカリが丘店",
+      "url": "https://store-info.skylark.co.jp/map/198621/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 健軍店",
+      "url": "https://store-info.skylark.co.jp/map/198616/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 豊橋江島店",
+      "url": "https://store-info.skylark.co.jp/map/198618/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 郡山コスモス通り店",
+      "url": "https://store-info.skylark.co.jp/map/198617/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 千葉駅前店",
+      "url": "https://store-info.skylark.co.jp/map/198614/",
+      "facilities": []
+    },
+    {
+      "name": "むさしの森珈琲 東浦店",
+      "url": "https://store-info.skylark.co.jp/map/198615/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 国泰寺店",
+      "url": "https://store-info.skylark.co.jp/map/198613/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 マロニエゲート銀座２店",
+      "url": "https://store-info.skylark.co.jp/map/198612/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 田無駅前店",
+      "url": "https://store-info.skylark.co.jp/map/198611/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 新潟八千代店",
+      "url": "https://store-info.skylark.co.jp/map/198610/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 城山店",
+      "url": "https://store-info.skylark.co.jp/map/198604/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 小山本郷店",
+      "url": "https://store-info.skylark.co.jp/map/198606/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 鶴ヶ島三ツ木店",
+      "url": "https://store-info.skylark.co.jp/map/198602/",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 静岡千代田店",
+      "url": "https://store-info.skylark.co.jp/map/198596/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 茅ヶ崎若松町店",
+      "url": "https://store-info.skylark.co.jp/map/198592/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 小田原店",
+      "url": "https://store-info.skylark.co.jp/map/198277/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 相模原横山店",
+      "url": "https://store-info.skylark.co.jp/map/198590/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 世田谷オークラランド店",
+      "url": "https://store-info.skylark.co.jp/map/198275/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 武蔵野西久保店",
+      "url": "https://store-info.skylark.co.jp/map/198215/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 旭川大雪通店",
+      "url": "https://store-info.skylark.co.jp/map/198551/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 浜田山店",
+      "url": "https://store-info.skylark.co.jp/map/198589/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 甲府伊勢店",
+      "url": "https://store-info.skylark.co.jp/map/198574/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 南越谷駅前店",
+      "url": "https://store-info.skylark.co.jp/map/198568/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 守谷店",
+      "url": "https://store-info.skylark.co.jp/map/198550/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 イーアスつくば店",
+      "url": "https://store-info.skylark.co.jp/map/198557/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 久が原店",
+      "url": "https://store-info.skylark.co.jp/map/198563/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 昭島店",
+      "url": "https://store-info.skylark.co.jp/map/198564/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 東大和店",
+      "url": "https://store-info.skylark.co.jp/map/198569/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 川崎野川店",
+      "url": "https://store-info.skylark.co.jp/map/198562/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 国立富士見台店",
+      "url": "https://store-info.skylark.co.jp/map/198558/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 ひたちなか西光地店",
+      "url": "https://store-info.skylark.co.jp/map/198286/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 長津田みなみ台店",
+      "url": "https://store-info.skylark.co.jp/map/198556/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 藤沢湘南台店",
+      "url": "https://store-info.skylark.co.jp/map/198555/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 三芳藤久保店",
+      "url": "https://store-info.skylark.co.jp/map/198553/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森Ｄｉｎｅｒ ムスブ田町店",
+      "url": "https://store-info.skylark.co.jp/map/198271/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森Ｄｉｎｅｒ 新宿中央公園店",
+      "url": "https://store-info.skylark.co.jp/map/198279/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 仙台富沢店",
+      "url": "https://store-info.skylark.co.jp/map/198278/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 長野若里店",
+      "url": "https://store-info.skylark.co.jp/map/198285/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 和泉府中店",
+      "url": "https://store-info.skylark.co.jp/map/198280/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 岡山中仙道店",
+      "url": "https://store-info.skylark.co.jp/map/198274/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 市原更級公園店",
+      "url": "https://store-info.skylark.co.jp/map/198267/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 札幌北野店",
+      "url": "https://store-info.skylark.co.jp/map/198273/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 沼津香貫店",
+      "url": "https://store-info.skylark.co.jp/map/198272/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 三鷹牟礼店",
+      "url": "https://store-info.skylark.co.jp/map/198269/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 岡崎竜美丘ガーデンプレイス店",
+      "url": "https://store-info.skylark.co.jp/map/198276/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 北九州青山店",
+      "url": "https://store-info.skylark.co.jp/map/198270/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 北本店",
+      "url": "https://store-info.skylark.co.jp/map/198268/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 宇都宮八幡山公園店",
+      "url": "https://store-info.skylark.co.jp/map/198253/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 高崎問屋町店",
+      "url": "https://store-info.skylark.co.jp/map/198252/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 太宰府向佐野店",
+      "url": "https://store-info.skylark.co.jp/map/198250/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 奈良中登美ケ丘店",
+      "url": "https://store-info.skylark.co.jp/map/198240/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 松戸新田店",
+      "url": "https://store-info.skylark.co.jp/map/198239/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 流山おおたかの森店",
+      "url": "https://store-info.skylark.co.jp/map/198247/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 札幌二十四軒店",
+      "url": "https://store-info.skylark.co.jp/map/198238/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 福井若杉店",
+      "url": "https://store-info.skylark.co.jp/map/198222/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 松井山手店",
+      "url": "https://store-info.skylark.co.jp/map/198225/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 春日井篠木店",
+      "url": "https://store-info.skylark.co.jp/map/198226/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 フレスポ稲毛店",
+      "url": "https://store-info.skylark.co.jp/map/198230/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 鳥栖古賀町店",
+      "url": "https://store-info.skylark.co.jp/map/198227/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 宝塚中筋店",
+      "url": "https://store-info.skylark.co.jp/map/198228/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 二俣川店",
+      "url": "https://store-info.skylark.co.jp/map/198213/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 金沢入江店",
+      "url": "https://store-info.skylark.co.jp/map/198220/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 蕨店",
+      "url": "https://store-info.skylark.co.jp/map/198214/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 岐阜柳津店",
+      "url": "https://store-info.skylark.co.jp/map/198223/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 高松レインボーロード店",
+      "url": "https://store-info.skylark.co.jp/map/198194/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 朝霞本町店",
+      "url": "https://store-info.skylark.co.jp/map/198221/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 浦和太田窪店",
+      "url": "https://store-info.skylark.co.jp/map/198224/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 所沢住吉店",
+      "url": "https://store-info.skylark.co.jp/map/198216/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 川口元郷店",
+      "url": "https://store-info.skylark.co.jp/map/198219/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 三ツ沢店",
+      "url": "https://store-info.skylark.co.jp/map/198218/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 平塚桜ヶ丘店",
+      "url": "https://store-info.skylark.co.jp/map/198217/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 春日部店",
+      "url": "https://store-info.skylark.co.jp/map/199981/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 富山経堂店",
+      "url": "https://store-info.skylark.co.jp/map/199991/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 中央林間店",
+      "url": "https://store-info.skylark.co.jp/map/199969/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 杉並井草店",
+      "url": "https://store-info.skylark.co.jp/map/199966/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "むさしの森珈琲 六ッ川店",
+      "url": "https://store-info.skylark.co.jp/map/199965/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    }
+  ]
+}

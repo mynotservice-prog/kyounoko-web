@@ -1,0 +1,4307 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "tullyscoffee",
+  "name": "タリーズコーヒー",
+  "sourceUrl": "https://shop.tullys.co.jp/",
+  "method": "公式店舗検索（can-ly）の全件一覧ページに埋め込まれた店舗JSONの「設備」配列を店舗ごとに集計",
+  "total": 848,
+  "note": "一覧ページの表示件数は848件。設備の絞り込み項目は Tully’s Wi-Fi/ChargeSpot/禁煙/喫煙室区分/キッズスペース で、子ども向けはキッズスペースのみ。コンセプト店（&TEA 等）も一覧に含まれていれば含む",
+  "facilities": {
+    "kidsSpace": {
+      "count": 25,
+      "label": "キッズスペース"
+    }
+  },
+  "stores": [
+    {
+      "name": "タリーズコーヒー 渋谷道玄坂店",
+      "url": "https://shop.tullys.co.jp/detail/4039",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 神楽坂店",
+      "url": "https://shop.tullys.co.jp/detail/4040",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 渋谷スクランブルスクエア店",
+      "url": "https://shop.tullys.co.jp/detail/4041",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 六本木店",
+      "url": "https://shop.tullys.co.jp/detail/4042",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 目黒東口店",
+      "url": "https://shop.tullys.co.jp/detail/4043",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA ルミネ有楽町店",
+      "url": "https://shop.tullys.co.jp/detail/4045",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 六本木一丁目店",
+      "url": "https://shop.tullys.co.jp/detail/4046",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ルミネエスト新宿5F店",
+      "url": "https://shop.tullys.co.jp/detail/4047",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 渋谷ファイヤー通り店",
+      "url": "https://shop.tullys.co.jp/detail/4049",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 渋谷ソラスタ店",
+      "url": "https://shop.tullys.co.jp/detail/4050",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 溝の口店",
+      "url": "https://shop.tullys.co.jp/detail/4051",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 上田駅店",
+      "url": "https://shop.tullys.co.jp/detail/4052",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモール香椎浜店",
+      "url": "https://shop.tullys.co.jp/detail/4053",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 金沢入江店",
+      "url": "https://shop.tullys.co.jp/detail/4054",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大名古屋ビルヂング店",
+      "url": "https://shop.tullys.co.jp/detail/4055",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 平和島東京流通センター店",
+      "url": "https://shop.tullys.co.jp/detail/4056",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ゆめタウン高松店",
+      "url": "https://shop.tullys.co.jp/detail/4057",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 代々木駅北口店",
+      "url": "https://shop.tullys.co.jp/detail/4058",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＴＮＣ放送会館店",
+      "url": "https://shop.tullys.co.jp/detail/4059",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 伊豆ゲートウェイ函南店",
+      "url": "https://shop.tullys.co.jp/detail/4060",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 神田橋本郷通り店",
+      "url": "https://shop.tullys.co.jp/detail/4061",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー Emio練馬高野台店",
+      "url": "https://shop.tullys.co.jp/detail/4062",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 神田スクエア店",
+      "url": "https://shop.tullys.co.jp/detail/4063",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオン札幌麻生店",
+      "url": "https://shop.tullys.co.jp/detail/4064",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー セレオ甲府店",
+      "url": "https://shop.tullys.co.jp/detail/4065",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー Emio Style BIGBOX高田馬場店",
+      "url": "https://shop.tullys.co.jp/detail/4068",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 淡路町靖国通り店",
+      "url": "https://shop.tullys.co.jp/detail/4069",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモール筑紫野店",
+      "url": "https://shop.tullys.co.jp/detail/4070",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 宮崎台店",
+      "url": "https://shop.tullys.co.jp/detail/4071",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ヤマトヤシキ加古川店",
+      "url": "https://shop.tullys.co.jp/detail/4073",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー シティプラザ大阪店",
+      "url": "https://shop.tullys.co.jp/detail/4074",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 青葉台駅店",
+      "url": "https://shop.tullys.co.jp/detail/4075",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新丸子店",
+      "url": "https://shop.tullys.co.jp/detail/4076",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イトーヨーカドー大船店",
+      "url": "https://shop.tullys.co.jp/detail/4077",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 西鉄福岡天神駅店",
+      "url": "https://shop.tullys.co.jp/detail/4078",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 多治見駅前店",
+      "url": "https://shop.tullys.co.jp/detail/4085",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー アクロスプラザ三芳店",
+      "url": "https://shop.tullys.co.jp/detail/4092",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 九州大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/4109",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 福岡徳洲会病院店",
+      "url": "https://shop.tullys.co.jp/detail/4123",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 函館駅店",
+      "url": "https://shop.tullys.co.jp/detail/4135",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 京王高幡SC店",
+      "url": "https://shop.tullys.co.jp/detail/4148",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 倉敷美観地区店",
+      "url": "https://shop.tullys.co.jp/detail/4160",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 武蔵小山駅店",
+      "url": "https://shop.tullys.co.jp/detail/4169",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー アクロスプラザ長岡美沢店",
+      "url": "https://shop.tullys.co.jp/detail/4207",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー エミフルＭＡＳＡＫＩ店",
+      "url": "https://shop.tullys.co.jp/detail/4216",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー アリオ加古川店",
+      "url": "https://shop.tullys.co.jp/detail/4237",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー テレ東BIZカフェ店",
+      "url": "https://shop.tullys.co.jp/detail/4239",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 府中駅南口店",
+      "url": "https://shop.tullys.co.jp/detail/4243",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー サントムーン柿田川店",
+      "url": "https://shop.tullys.co.jp/detail/4253",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモール浜松志都呂店",
+      "url": "https://shop.tullys.co.jp/detail/4259",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ステアーズオブザシー 金ヶ浜店",
+      "url": "https://shop.tullys.co.jp/detail/4262",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 浦和仲町店",
+      "url": "https://shop.tullys.co.jp/detail/4268",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ルミネ池袋店",
+      "url": "https://shop.tullys.co.jp/detail/4273",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ソニーシティ内店",
+      "url": "https://shop.tullys.co.jp/detail/4275",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 月島駅前店",
+      "url": "https://shop.tullys.co.jp/detail/4279",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 高松赤十字病院店",
+      "url": "https://shop.tullys.co.jp/detail/4293",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新宿イーストサイドスクエア店",
+      "url": "https://shop.tullys.co.jp/detail/4300",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ベイドリーム清水店",
+      "url": "https://shop.tullys.co.jp/detail/4313",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 京急蒲田駅店",
+      "url": "https://shop.tullys.co.jp/detail/4338",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 浦添西海岸パルコシティ店",
+      "url": "https://shop.tullys.co.jp/detail/4358",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー OBPクリスタルタワー店",
+      "url": "https://shop.tullys.co.jp/detail/4372",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 札幌HTB創世スクエア店",
+      "url": "https://shop.tullys.co.jp/detail/4384",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 京王多摩センター駅店",
+      "url": "https://shop.tullys.co.jp/detail/4409",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー なんばEKIKAN店",
+      "url": "https://shop.tullys.co.jp/detail/4413",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 静岡パルシェ B1F店",
+      "url": "https://shop.tullys.co.jp/detail/4422",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 千葉みなと店",
+      "url": "https://shop.tullys.co.jp/detail/4462",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 草加VARIE2店",
+      "url": "https://shop.tullys.co.jp/detail/4474",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 富士市中央公園店",
+      "url": "https://shop.tullys.co.jp/detail/4517",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 江古田店",
+      "url": "https://shop.tullys.co.jp/detail/4527",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 松山銀天街店",
+      "url": "https://shop.tullys.co.jp/detail/4569",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモール常滑BOOK & CAFE店",
+      "url": "https://shop.tullys.co.jp/detail/4652",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 横浜ポルタ店",
+      "url": "https://shop.tullys.co.jp/detail/4690",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 湘南モールＦＩＬＬ店",
+      "url": "https://shop.tullys.co.jp/detail/4779",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモールつがる市立図書館店",
+      "url": "https://shop.tullys.co.jp/detail/4785",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ニューコースト新浦安店",
+      "url": "https://shop.tullys.co.jp/detail/4794",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 岡山市民病院店",
+      "url": "https://shop.tullys.co.jp/detail/5398",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー フタバ横川新館店",
+      "url": "https://shop.tullys.co.jp/detail/5399",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー キテミテマツド店",
+      "url": "https://shop.tullys.co.jp/detail/5401",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 中部国際医療センター店",
+      "url": "https://shop.tullys.co.jp/detail/5402",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー アトレ秋葉原店",
+      "url": "https://shop.tullys.co.jp/detail/5403",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー マツダ広島本社",
+      "url": "https://shop.tullys.co.jp/detail/7934",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ナイスガーデン秋田店",
+      "url": "https://shop.tullys.co.jp/detail/8336",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 阿蘇くまもと空港店",
+      "url": "https://shop.tullys.co.jp/detail/8337",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー コミュシティ高円寺マシタ店",
+      "url": "https://shop.tullys.co.jp/detail/8344",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 君津中央病院店",
+      "url": "https://shop.tullys.co.jp/detail/8347",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 学習院大学店",
+      "url": "https://shop.tullys.co.jp/detail/8348",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ららぽーと門真店",
+      "url": "https://shop.tullys.co.jp/detail/8354",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー CoCoLo長岡店",
+      "url": "https://shop.tullys.co.jp/detail/8392",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ルミネ大宮LUMINE1店",
+      "url": "https://shop.tullys.co.jp/detail/8393",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 下北沢店",
+      "url": "https://shop.tullys.co.jp/detail/8394",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー Dew阪急山田",
+      "url": "https://shop.tullys.co.jp/detail/8395",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA あべのキューズモール店",
+      "url": "https://shop.tullys.co.jp/detail/8396",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー エトモ自由が丘店",
+      "url": "https://shop.tullys.co.jp/detail/8407",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 神戸大学医学部附属病院店",
+      "url": "https://shop.tullys.co.jp/detail/8409",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＳＥＬＥＣＴ 阪急三宮店",
+      "url": "https://shop.tullys.co.jp/detail/8411",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ミソラタウン掛川店",
+      "url": "https://shop.tullys.co.jp/detail/8412",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー エスパル郡山店",
+      "url": "https://shop.tullys.co.jp/detail/8427",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 品川インターシティ店",
+      "url": "https://shop.tullys.co.jp/detail/8626",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 阪急石橋店",
+      "url": "https://shop.tullys.co.jp/detail/8627",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー がん研有明病院店",
+      "url": "https://shop.tullys.co.jp/detail/8628",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 君津駅前店",
+      "url": "https://shop.tullys.co.jp/detail/8435",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 神奈川県立こども医療センター店",
+      "url": "https://shop.tullys.co.jp/detail/8640",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 横越バイパス店",
+      "url": "https://shop.tullys.co.jp/detail/8635",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー キッズコミュ グランツリー武蔵小杉店",
+      "url": "https://shop.tullys.co.jp/detail/8647",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー 梶ヶ谷店",
+      "url": "https://shop.tullys.co.jp/detail/8637",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 御殿場プレミアム・アウトレットヒルサイド店",
+      "url": "https://shop.tullys.co.jp/detail/8586",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 日比谷シャンテ店",
+      "url": "https://shop.tullys.co.jp/detail/8625",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 阪急大阪梅田駅３F店",
+      "url": "https://shop.tullys.co.jp/detail/8624",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 戸田中央総合病院店",
+      "url": "https://shop.tullys.co.jp/detail/8632",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA センター南店",
+      "url": "https://shop.tullys.co.jp/detail/8682",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ハンズマン吉尾店",
+      "url": "https://shop.tullys.co.jp/detail/8651",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 御殿場プレミアム・アウトレットウエスト店",
+      "url": "https://shop.tullys.co.jp/detail/8646",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 函館五稜郭病院店",
+      "url": "https://shop.tullys.co.jp/detail/8661",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 防衛医大病院店",
+      "url": "https://shop.tullys.co.jp/detail/8638",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東京ダイヤビルディング店",
+      "url": "https://shop.tullys.co.jp/detail/8652",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 三井住友海上駿河台ビル店",
+      "url": "https://shop.tullys.co.jp/detail/8660",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 赤坂店",
+      "url": "https://shop.tullys.co.jp/detail/8629",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 虎ノ門桜田通り店",
+      "url": "https://shop.tullys.co.jp/detail/8654",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 昭和医科大学江東豊洲病院店",
+      "url": "https://shop.tullys.co.jp/detail/8688",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大塚店",
+      "url": "https://shop.tullys.co.jp/detail/8659",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 麹町店",
+      "url": "https://shop.tullys.co.jp/detail/8670",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＮＢＦ豊洲店",
+      "url": "https://shop.tullys.co.jp/detail/8639",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 嵐電嵐山駅店",
+      "url": "https://shop.tullys.co.jp/detail/8711",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 虎ノ門グローバルスクエア店",
+      "url": "https://shop.tullys.co.jp/detail/8656",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー フタバ図書GIGAフレスタモール岩国店",
+      "url": "https://shop.tullys.co.jp/detail/8664",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 市立釧路総合病院店",
+      "url": "https://shop.tullys.co.jp/detail/8665",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 岐阜大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/8662",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新宿コクーンタワー店",
+      "url": "https://shop.tullys.co.jp/detail/8641",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー セブンパーク天美店",
+      "url": "https://shop.tullys.co.jp/detail/8663",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 錦糸町アルカウエスト店",
+      "url": "https://shop.tullys.co.jp/detail/8631",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー セレスティン芝三井ビルディング店",
+      "url": "https://shop.tullys.co.jp/detail/8693",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 四条大宮店",
+      "url": "https://shop.tullys.co.jp/detail/8675",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー フジグラン北島店",
+      "url": "https://shop.tullys.co.jp/detail/8685",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー コムシティ黒崎店",
+      "url": "https://shop.tullys.co.jp/detail/8666",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 京急川崎駅店",
+      "url": "https://shop.tullys.co.jp/detail/8658",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 小田急マルシェ町田店",
+      "url": "https://shop.tullys.co.jp/detail/8680",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 成瀬駅前店",
+      "url": "https://shop.tullys.co.jp/detail/8713",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ラゾーナ川崎店",
+      "url": "https://shop.tullys.co.jp/detail/8657",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 豊田上郷SA上り店",
+      "url": "https://shop.tullys.co.jp/detail/8704",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ウニクス鴻巣店",
+      "url": "https://shop.tullys.co.jp/detail/8673",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 浦和パルコ店",
+      "url": "https://shop.tullys.co.jp/detail/8728",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 横浜ランドマークタワー店",
+      "url": "https://shop.tullys.co.jp/detail/8722",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー メイワンエキマチ店",
+      "url": "https://shop.tullys.co.jp/detail/8687",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 竹橋店",
+      "url": "https://shop.tullys.co.jp/detail/8644",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 軽井沢・プリンスショッピングプラザ店",
+      "url": "https://shop.tullys.co.jp/detail/8701",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオン都城店",
+      "url": "https://shop.tullys.co.jp/detail/8712",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 天神新天町店",
+      "url": "https://shop.tullys.co.jp/detail/8667",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー TSUTAYA WAY橋本店",
+      "url": "https://shop.tullys.co.jp/detail/8633",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 花川戸隅田公園店",
+      "url": "https://shop.tullys.co.jp/detail/8683",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ペリエ千葉ストリート2店",
+      "url": "https://shop.tullys.co.jp/detail/8678",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー あみプレミアム・アウトレット店",
+      "url": "https://shop.tullys.co.jp/detail/8677",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ニューポートひたちなか店",
+      "url": "https://shop.tullys.co.jp/detail/8689",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 住友不動産虎ノ門タワー店",
+      "url": "https://shop.tullys.co.jp/detail/8731",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 西鉄久留米駅店",
+      "url": "https://shop.tullys.co.jp/detail/8676",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大手町プレイス 3階店",
+      "url": "https://shop.tullys.co.jp/detail/8672",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー JRE梅田スクエアビルディング店",
+      "url": "https://shop.tullys.co.jp/detail/8700",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー フォレオ菖蒲店",
+      "url": "https://shop.tullys.co.jp/detail/8703",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー PCP丸の内店",
+      "url": "https://shop.tullys.co.jp/detail/8735",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新川崎ツインタワー店",
+      "url": "https://shop.tullys.co.jp/detail/8754",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー セレクト Ｕ＿ＰＬＡＣＥ川越駅西口店",
+      "url": "https://shop.tullys.co.jp/detail/8697",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 横浜ワールドポーターズ店",
+      "url": "https://shop.tullys.co.jp/detail/8630",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー サンストリート浜北店",
+      "url": "https://shop.tullys.co.jp/detail/8669",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー NEWoMan横浜店",
+      "url": "https://shop.tullys.co.jp/detail/8691",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 横浜元町店",
+      "url": "https://shop.tullys.co.jp/detail/8699",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東急百貨店たまプラーザ店",
+      "url": "https://shop.tullys.co.jp/detail/8739",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 友愛医療センター店",
+      "url": "https://shop.tullys.co.jp/detail/8729",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 都庁店",
+      "url": "https://shop.tullys.co.jp/detail/8513",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA さんすて岡山店",
+      "url": "https://shop.tullys.co.jp/detail/8753",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 中央林間東急スクエア店",
+      "url": "https://shop.tullys.co.jp/detail/8770",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 釧路店",
+      "url": "https://shop.tullys.co.jp/detail/8755",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー アミュプラザ長崎店",
+      "url": "https://shop.tullys.co.jp/detail/8684",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー エールエール広島駅前店",
+      "url": "https://shop.tullys.co.jp/detail/8648",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 福井大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/8674",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 京都大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/8694",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 作新学院前店",
+      "url": "https://shop.tullys.co.jp/detail/8732",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA KITTE丸の内店",
+      "url": "https://shop.tullys.co.jp/detail/8460",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ネクスト船橋店",
+      "url": "https://shop.tullys.co.jp/detail/8740",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモール岡山店",
+      "url": "https://shop.tullys.co.jp/detail/8748",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモール出雲店",
+      "url": "https://shop.tullys.co.jp/detail/8681",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 川崎ルフロン店",
+      "url": "https://shop.tullys.co.jp/detail/8730",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 札幌ステラプレイス店",
+      "url": "https://shop.tullys.co.jp/detail/8686",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ウニクス野田店",
+      "url": "https://shop.tullys.co.jp/detail/8551",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 沼津駅南口イーラｄｅ店",
+      "url": "https://shop.tullys.co.jp/detail/8714",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 高田西店",
+      "url": "https://shop.tullys.co.jp/detail/8751",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー 長岡新保店",
+      "url": "https://shop.tullys.co.jp/detail/8706",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー アトレ目黒店",
+      "url": "https://shop.tullys.co.jp/detail/8776",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 三井アウトレットパーク滋賀竜王店",
+      "url": "https://shop.tullys.co.jp/detail/8642",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー MIDORI長野店",
+      "url": "https://shop.tullys.co.jp/detail/8710",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 昭和医科大学横浜市北部病院店",
+      "url": "https://shop.tullys.co.jp/detail/8774",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー さいか屋藤沢店",
+      "url": "https://shop.tullys.co.jp/detail/8734",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 日本赤十字社名古屋第一病院店",
+      "url": "https://shop.tullys.co.jp/detail/8653",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー フタバ図書アルティ福山店",
+      "url": "https://shop.tullys.co.jp/detail/8705",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 昭和医科大学藤が丘病院店",
+      "url": "https://shop.tullys.co.jp/detail/8771",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA グランフロント大阪南館店",
+      "url": "https://shop.tullys.co.jp/detail/8784",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンスタイル東淀川店",
+      "url": "https://shop.tullys.co.jp/detail/8757",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 旭川赤十字病院店",
+      "url": "https://shop.tullys.co.jp/detail/8715",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 水戸赤十字病院店",
+      "url": "https://shop.tullys.co.jp/detail/8747",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 高崎モントレー店",
+      "url": "https://shop.tullys.co.jp/detail/8708",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー with U ルミネ池袋店",
+      "url": "https://shop.tullys.co.jp/detail/8773",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー TSUTAYA弘前店",
+      "url": "https://shop.tullys.co.jp/detail/8721",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 千葉西総合病院店",
+      "url": "https://shop.tullys.co.jp/detail/8725",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 八重瀬シティ店",
+      "url": "https://shop.tullys.co.jp/detail/8733",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 羽田空港第3ターミナル店",
+      "url": "https://shop.tullys.co.jp/detail/8519",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 長野川中島店",
+      "url": "https://shop.tullys.co.jp/detail/8616",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ルミネ立川店",
+      "url": "https://shop.tullys.co.jp/detail/8696",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 羽田空港第2ターミナル出発ゲート店",
+      "url": "https://shop.tullys.co.jp/detail/8782",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー OKB田県店",
+      "url": "https://shop.tullys.co.jp/detail/8761",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー シャポーロコ平井店",
+      "url": "https://shop.tullys.co.jp/detail/8760",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新宿第一生命ビルディング",
+      "url": "https://shop.tullys.co.jp/detail/8612",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ウニクス浦和美園店",
+      "url": "https://shop.tullys.co.jp/detail/8777",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東京日本橋タワー7階店",
+      "url": "https://shop.tullys.co.jp/detail/8719",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 龍ヶ崎店",
+      "url": "https://shop.tullys.co.jp/detail/8716",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 小田急マルシェ新百合ヶ丘店",
+      "url": "https://shop.tullys.co.jp/detail/8698",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ASTY静岡店",
+      "url": "https://shop.tullys.co.jp/detail/8645",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ワイプラザ新保店",
+      "url": "https://shop.tullys.co.jp/detail/8709",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー エビススバルビル店",
+      "url": "https://shop.tullys.co.jp/detail/8636",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 西梅田店",
+      "url": "https://shop.tullys.co.jp/detail/8695",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 昭島モリタウン店",
+      "url": "https://shop.tullys.co.jp/detail/8736",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 湘南藤沢オーパ店",
+      "url": "https://shop.tullys.co.jp/detail/8726",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東武宇都宮店",
+      "url": "https://shop.tullys.co.jp/detail/8727",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー トレアージュ白旗店",
+      "url": "https://shop.tullys.co.jp/detail/8779",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 豊田GAZA店",
+      "url": "https://shop.tullys.co.jp/detail/8746",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 上野御徒町店",
+      "url": "https://shop.tullys.co.jp/detail/8759",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大館店",
+      "url": "https://shop.tullys.co.jp/detail/8802",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 神保町三井ビルディング店",
+      "url": "https://shop.tullys.co.jp/detail/8781",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー グランエミオ大泉学園店",
+      "url": "https://shop.tullys.co.jp/detail/8791",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新宿スクエアタワー店",
+      "url": "https://shop.tullys.co.jp/detail/8634",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新宿若松河田店",
+      "url": "https://shop.tullys.co.jp/detail/8798",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ららぽーと横浜店",
+      "url": "https://shop.tullys.co.jp/detail/8763",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 築地一丁目店",
+      "url": "https://shop.tullys.co.jp/detail/8690",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 住友不動産麻布十番ビル店",
+      "url": "https://shop.tullys.co.jp/detail/8649",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー いわき市医療センター店",
+      "url": "https://shop.tullys.co.jp/detail/8743",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー セレオ甲府ANNEX店",
+      "url": "https://shop.tullys.co.jp/detail/8749",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー コースカベイサイドストアーズBOOK ＆ CAFE店",
+      "url": "https://shop.tullys.co.jp/detail/8742",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 青森空港店",
+      "url": "https://shop.tullys.co.jp/detail/8718",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大川高木病院店",
+      "url": "https://shop.tullys.co.jp/detail/8765",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 水戸エクセル店",
+      "url": "https://shop.tullys.co.jp/detail/8778",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 広島シャレオ店",
+      "url": "https://shop.tullys.co.jp/detail/8737",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 武蔵浦和駅前店",
+      "url": "https://shop.tullys.co.jp/detail/8750",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イーサイト籠原店",
+      "url": "https://shop.tullys.co.jp/detail/8786",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモール神戸南店",
+      "url": "https://shop.tullys.co.jp/detail/8780",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー with U 西宮阪急店",
+      "url": "https://shop.tullys.co.jp/detail/8738",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 国立店",
+      "url": "https://shop.tullys.co.jp/detail/8812",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 慶應日吉店",
+      "url": "https://shop.tullys.co.jp/detail/8789",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 広島緑井店",
+      "url": "https://shop.tullys.co.jp/detail/8788",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 浜松町駅北口店",
+      "url": "https://shop.tullys.co.jp/detail/8793",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 福井ベル店",
+      "url": "https://shop.tullys.co.jp/detail/8767",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 福岡空港出発ゲート店",
+      "url": "https://shop.tullys.co.jp/detail/8775",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 早稲田大学研究開発センター店",
+      "url": "https://shop.tullys.co.jp/detail/8792",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ららぽーと柏の葉北館店",
+      "url": "https://shop.tullys.co.jp/detail/8794",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 春日部駅西口店",
+      "url": "https://shop.tullys.co.jp/detail/8799",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー フォンテAKITA店",
+      "url": "https://shop.tullys.co.jp/detail/8787",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 御殿場プレミアム・アウトレットイースト店",
+      "url": "https://shop.tullys.co.jp/detail/8707",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 広島段原店",
+      "url": "https://shop.tullys.co.jp/detail/8744",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー 山口葵店",
+      "url": "https://shop.tullys.co.jp/detail/8813",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー サンリブきふね店",
+      "url": "https://shop.tullys.co.jp/detail/8790",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 浦和さくら草通り店",
+      "url": "https://shop.tullys.co.jp/detail/8434",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 銀座三越コミュ店",
+      "url": "https://shop.tullys.co.jp/detail/8806",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東北大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/8756",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー くわなメディアライヴ店",
+      "url": "https://shop.tullys.co.jp/detail/8795",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 広島本通店",
+      "url": "https://shop.tullys.co.jp/detail/8810",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー ゆめタウンはません店",
+      "url": "https://shop.tullys.co.jp/detail/8807",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー エアポートウォーク名古屋店",
+      "url": "https://shop.tullys.co.jp/detail/8762",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモール福津店",
+      "url": "https://shop.tullys.co.jp/detail/8797",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ウニクス高崎店",
+      "url": "https://shop.tullys.co.jp/detail/8804",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東武動物公園駅店",
+      "url": "https://shop.tullys.co.jp/detail/8741",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 兵庫医科大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/8724",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 福岡空港店",
+      "url": "https://shop.tullys.co.jp/detail/8785",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 青山一丁目店",
+      "url": "https://shop.tullys.co.jp/detail/8814",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 京急横浜駅店",
+      "url": "https://shop.tullys.co.jp/detail/8772",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー RAYARD Hisaya-odori Park店",
+      "url": "https://shop.tullys.co.jp/detail/8796",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー アトレ大森店",
+      "url": "https://shop.tullys.co.jp/detail/8803",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー エキュート立川店",
+      "url": "https://shop.tullys.co.jp/detail/8805",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 上野の森さくらテラス店",
+      "url": "https://shop.tullys.co.jp/detail/8811",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 高知桟橋通り店",
+      "url": "https://shop.tullys.co.jp/detail/8745",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 三田国際ビル店",
+      "url": "https://shop.tullys.co.jp/detail/8800",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 霞が関中央合同庁舎第5号館店",
+      "url": "https://shop.tullys.co.jp/detail/8801",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 宇都宮駅ビルパセオ店",
+      "url": "https://shop.tullys.co.jp/detail/8766",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大丸東京店",
+      "url": "https://shop.tullys.co.jp/detail/8816",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー TSUTAYA西明石店",
+      "url": "https://shop.tullys.co.jp/detail/8817",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＳＥＬＥＣＴ ニュウマン新宿エキナカ店",
+      "url": "https://shop.tullys.co.jp/detail/8815",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大手町プレイス 2階店",
+      "url": "https://shop.tullys.co.jp/detail/8822",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー with U みのおキューズモール店",
+      "url": "https://shop.tullys.co.jp/detail/8819",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大阪赤十字病院店",
+      "url": "https://shop.tullys.co.jp/detail/8818",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 土岐プレミアム・アウトレットサテライト店",
+      "url": "https://shop.tullys.co.jp/detail/8821",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 丸の内テラス店",
+      "url": "https://shop.tullys.co.jp/detail/8823",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンスタイル豊田店",
+      "url": "https://shop.tullys.co.jp/detail/8820",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 三井アウトレットパーク幕張店",
+      "url": "https://shop.tullys.co.jp/detail/8824",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー りんくうプレミアム・アウトレット店",
+      "url": "https://shop.tullys.co.jp/detail/8826",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 古淵店",
+      "url": "https://shop.tullys.co.jp/detail/8825",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー 古賀ＳＡ下り店",
+      "url": "https://shop.tullys.co.jp/detail/8828",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 博多駅マイング店",
+      "url": "https://shop.tullys.co.jp/detail/8525",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ウィングキッチン金沢八景店",
+      "url": "https://shop.tullys.co.jp/detail/8829",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 宇治徳洲会病院店",
+      "url": "https://shop.tullys.co.jp/detail/8838",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 南柏店",
+      "url": "https://shop.tullys.co.jp/detail/8841",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 西宝店",
+      "url": "https://shop.tullys.co.jp/detail/8836",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモールナゴヤドーム前店",
+      "url": "https://shop.tullys.co.jp/detail/8840",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ウニクス南古谷店",
+      "url": "https://shop.tullys.co.jp/detail/8849",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東京警察病院店",
+      "url": "https://shop.tullys.co.jp/detail/8827",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 札幌ＳＴＶ北２条店",
+      "url": "https://shop.tullys.co.jp/detail/8843",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 経堂コルティ店",
+      "url": "https://shop.tullys.co.jp/detail/8830",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ららぽーと海老名店",
+      "url": "https://shop.tullys.co.jp/detail/8834",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 金町駅南口店",
+      "url": "https://shop.tullys.co.jp/detail/8845",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 熊本大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/8832",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 府立総合医療センター店",
+      "url": "https://shop.tullys.co.jp/detail/8839",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 獨協医科大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/8858",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 京成日暮里駅店",
+      "url": "https://shop.tullys.co.jp/detail/8842",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー はり姫店",
+      "url": "https://shop.tullys.co.jp/detail/8859",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 亀田メディカルセンター店",
+      "url": "https://shop.tullys.co.jp/detail/8833",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新潟駅南LEXN店",
+      "url": "https://shop.tullys.co.jp/detail/8615",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 徳島大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/8835",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモール沖縄ライカム店",
+      "url": "https://shop.tullys.co.jp/detail/8844",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東福原店",
+      "url": "https://shop.tullys.co.jp/detail/8848",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東急プラザ蒲田店",
+      "url": "https://shop.tullys.co.jp/detail/8853",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー エディオン広島本店西館店",
+      "url": "https://shop.tullys.co.jp/detail/8851",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ライフガーデン茂原店",
+      "url": "https://shop.tullys.co.jp/detail/8870",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 飯田橋ガーデンエアタワー店",
+      "url": "https://shop.tullys.co.jp/detail/8878",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー with U 小田急百貨店町田店",
+      "url": "https://shop.tullys.co.jp/detail/8855",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 順天堂大学練馬病院店",
+      "url": "https://shop.tullys.co.jp/detail/8863",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 札幌日本生命ビル店",
+      "url": "https://shop.tullys.co.jp/detail/8872",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー &TEA ラスカ茅ヶ崎店",
+      "url": "https://shop.tullys.co.jp/detail/8884",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー コトニアガーデン新川崎店",
+      "url": "https://shop.tullys.co.jp/detail/8850",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 四ツ谷東口店",
+      "url": "https://shop.tullys.co.jp/detail/8856",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー tekuteながまち店",
+      "url": "https://shop.tullys.co.jp/detail/8852",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 矢板店",
+      "url": "https://shop.tullys.co.jp/detail/8894",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー セブンパーク アリオ柏店",
+      "url": "https://shop.tullys.co.jp/detail/8861",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 本庄早稲田店",
+      "url": "https://shop.tullys.co.jp/detail/8867",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 鉄鋼ビル店",
+      "url": "https://shop.tullys.co.jp/detail/8857",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東陽町イースト２１店",
+      "url": "https://shop.tullys.co.jp/detail/8871",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー Otemachi One店",
+      "url": "https://shop.tullys.co.jp/detail/8868",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンスタイル板橋前野町店",
+      "url": "https://shop.tullys.co.jp/detail/8895",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 馬車道駅店",
+      "url": "https://shop.tullys.co.jp/detail/8862",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー JCHO大阪病院店",
+      "url": "https://shop.tullys.co.jp/detail/8846",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー JRWD堂島タワー店",
+      "url": "https://shop.tullys.co.jp/detail/8574",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー フタバ図書MEGA中筋店",
+      "url": "https://shop.tullys.co.jp/detail/8864",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 横浜ジョイナス店",
+      "url": "https://shop.tullys.co.jp/detail/8847",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA イオンタウン仙台泉大沢店",
+      "url": "https://shop.tullys.co.jp/detail/8881",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー アリオ上尾店",
+      "url": "https://shop.tullys.co.jp/detail/8877",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモール広島府中店",
+      "url": "https://shop.tullys.co.jp/detail/8887",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー 東京ガーデンシアター店",
+      "url": "https://shop.tullys.co.jp/detail/8893",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモール直方店",
+      "url": "https://shop.tullys.co.jp/detail/8880",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 三鷹駅南口店",
+      "url": "https://shop.tullys.co.jp/detail/8886",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 桜新町店",
+      "url": "https://shop.tullys.co.jp/detail/8885",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東急あざみ野駅店",
+      "url": "https://shop.tullys.co.jp/detail/8873",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 阪急西宮北口店",
+      "url": "https://shop.tullys.co.jp/detail/8932",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 小出店",
+      "url": "https://shop.tullys.co.jp/detail/8614",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 金山総合駅店",
+      "url": "https://shop.tullys.co.jp/detail/8854",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 日本生命浜松町クレアタワー店",
+      "url": "https://shop.tullys.co.jp/detail/8945",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東武浅草駅店",
+      "url": "https://shop.tullys.co.jp/detail/8958",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー コースカベイサイドストアーズ店",
+      "url": "https://shop.tullys.co.jp/detail/8946",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 芝タワー店",
+      "url": "https://shop.tullys.co.jp/detail/8890",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー エミル高槻店",
+      "url": "https://shop.tullys.co.jp/detail/8965",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ららぽーと和泉店",
+      "url": "https://shop.tullys.co.jp/detail/8892",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 栄セントラルパーク店",
+      "url": "https://shop.tullys.co.jp/detail/8882",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 豊橋駅前店",
+      "url": "https://shop.tullys.co.jp/detail/8874",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー &TEA ゆめタウン光の森店",
+      "url": "https://shop.tullys.co.jp/detail/8908",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イーホテル東新宿店",
+      "url": "https://shop.tullys.co.jp/detail/8923",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 高坂SA上り店",
+      "url": "https://shop.tullys.co.jp/detail/8903",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー りんくうシークル店",
+      "url": "https://shop.tullys.co.jp/detail/8906",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ルクア イーレ 5F店",
+      "url": "https://shop.tullys.co.jp/detail/8911",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新大阪阪急ビル店",
+      "url": "https://shop.tullys.co.jp/detail/8865",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 日暮里店",
+      "url": "https://shop.tullys.co.jp/detail/8955",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 白金高輪駅店",
+      "url": "https://shop.tullys.co.jp/detail/8901",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大崎センタービル店",
+      "url": "https://shop.tullys.co.jp/detail/8915",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ららぽーと磐田店",
+      "url": "https://shop.tullys.co.jp/detail/8898",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 梅田茶屋町ＭＢＳ店",
+      "url": "https://shop.tullys.co.jp/detail/8610",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新横浜店",
+      "url": "https://shop.tullys.co.jp/detail/8902",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 宇都宮インターパークビレッジ店",
+      "url": "https://shop.tullys.co.jp/detail/8910",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東京スカイツリータウン・ソラマチ店",
+      "url": "https://shop.tullys.co.jp/detail/8879",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ニューオータニガーデンコート店",
+      "url": "https://shop.tullys.co.jp/detail/8904",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー グランデュオ蒲田店",
+      "url": "https://shop.tullys.co.jp/detail/8922",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ワイプラザ武生店",
+      "url": "https://shop.tullys.co.jp/detail/8869",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 川口市立医療センター店",
+      "url": "https://shop.tullys.co.jp/detail/8875",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新潟新通店",
+      "url": "https://shop.tullys.co.jp/detail/8613",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東銀座店",
+      "url": "https://shop.tullys.co.jp/detail/8896",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー TX守谷駅店",
+      "url": "https://shop.tullys.co.jp/detail/8431",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー グランデュオ立川店",
+      "url": "https://shop.tullys.co.jp/detail/8936",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 江ノ電江ノ島駅店",
+      "url": "https://shop.tullys.co.jp/detail/8973",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ビーンズアネックス新秋津店",
+      "url": "https://shop.tullys.co.jp/detail/8913",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 堺筋本町店",
+      "url": "https://shop.tullys.co.jp/detail/8933",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 豊田メグリア店",
+      "url": "https://shop.tullys.co.jp/detail/8900",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー 芝公園店",
+      "url": "https://shop.tullys.co.jp/detail/8925",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 日本赤十字社医療センター店",
+      "url": "https://shop.tullys.co.jp/detail/8905",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東広島店",
+      "url": "https://shop.tullys.co.jp/detail/8891",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー with U イオンモール成田店",
+      "url": "https://shop.tullys.co.jp/detail/8907",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー 仙台泉プレミアム・アウトレット店",
+      "url": "https://shop.tullys.co.jp/detail/8940",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 七尾店",
+      "url": "https://shop.tullys.co.jp/detail/8988",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー アトレ竹芝店",
+      "url": "https://shop.tullys.co.jp/detail/8948",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 高松サンシャイン通り店",
+      "url": "https://shop.tullys.co.jp/detail/8919",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 済生会東部病院店",
+      "url": "https://shop.tullys.co.jp/detail/8912",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 錦糸町テルミナ店",
+      "url": "https://shop.tullys.co.jp/detail/8957",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー 歌舞伎座店",
+      "url": "https://shop.tullys.co.jp/detail/8950",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東武曳舟駅店",
+      "url": "https://shop.tullys.co.jp/detail/8920",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー フジグラン松山店",
+      "url": "https://shop.tullys.co.jp/detail/8917",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新宿二丁目店",
+      "url": "https://shop.tullys.co.jp/detail/8942",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 祇園花見小路店",
+      "url": "https://shop.tullys.co.jp/detail/8938",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 六本木一丁目店",
+      "url": "https://shop.tullys.co.jp/detail/8987",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 富士川楽座店",
+      "url": "https://shop.tullys.co.jp/detail/8918",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 池袋サンシャインシティアルパ店",
+      "url": "https://shop.tullys.co.jp/detail/8939",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー カラフルタウン岐阜店",
+      "url": "https://shop.tullys.co.jp/detail/8889",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー 新潟中央インター店",
+      "url": "https://shop.tullys.co.jp/detail/8971",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 金沢ビーンズ店",
+      "url": "https://shop.tullys.co.jp/detail/8934",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 早大理工店",
+      "url": "https://shop.tullys.co.jp/detail/8935",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー KU白楽駅店",
+      "url": "https://shop.tullys.co.jp/detail/8899",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー サンリブくりえいと宗像店",
+      "url": "https://shop.tullys.co.jp/detail/8963",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 成田空港第２ターミナル店",
+      "url": "https://shop.tullys.co.jp/detail/8937",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 手稲渓仁会病院店",
+      "url": "https://shop.tullys.co.jp/detail/8961",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 愛媛大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/8928",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 三井アウトレットパーク ジャズドリーム長島店",
+      "url": "https://shop.tullys.co.jp/detail/8960",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ららぽーと福岡店",
+      "url": "https://shop.tullys.co.jp/detail/8909",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ハンズマン宇宿店",
+      "url": "https://shop.tullys.co.jp/detail/8897",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新宿センタービル店",
+      "url": "https://shop.tullys.co.jp/detail/8929",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 近鉄難波ビル店",
+      "url": "https://shop.tullys.co.jp/detail/8977",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 京都大学時計台店",
+      "url": "https://shop.tullys.co.jp/detail/8930",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 春日井市民病院店",
+      "url": "https://shop.tullys.co.jp/detail/8953",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー アトレ吉祥寺店",
+      "url": "https://shop.tullys.co.jp/detail/8985",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 阪急宝塚店",
+      "url": "https://shop.tullys.co.jp/detail/8952",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大宮ソニックシティー店",
+      "url": "https://shop.tullys.co.jp/detail/8943",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 広島神辺店",
+      "url": "https://shop.tullys.co.jp/detail/8531",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー with U 吹田グリーンプレイス店",
+      "url": "https://shop.tullys.co.jp/detail/8972",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 戸田店",
+      "url": "https://shop.tullys.co.jp/detail/8931",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 国立精神・神経医療研究センター店",
+      "url": "https://shop.tullys.co.jp/detail/8964",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ウニクス川越店",
+      "url": "https://shop.tullys.co.jp/detail/8954",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 宇都宮ベルモール店",
+      "url": "https://shop.tullys.co.jp/detail/8967",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 滋賀医大病院店",
+      "url": "https://shop.tullys.co.jp/detail/8611",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 海浜幕張店",
+      "url": "https://shop.tullys.co.jp/detail/8921",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー トナリエ大和高田店",
+      "url": "https://shop.tullys.co.jp/detail/8994",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 筑波大学附属病院店",
+      "url": "https://shop.tullys.co.jp/detail/8970",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー TMGあさか医療センター店",
+      "url": "https://shop.tullys.co.jp/detail/8924",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモール浜松市野店",
+      "url": "https://shop.tullys.co.jp/detail/8927",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 長泉桜堤店",
+      "url": "https://shop.tullys.co.jp/detail/8956",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 近鉄四日市店",
+      "url": "https://shop.tullys.co.jp/detail/8951",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ところざわサクラタウン店",
+      "url": "https://shop.tullys.co.jp/detail/8926",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 常盤橋タワー店",
+      "url": "https://shop.tullys.co.jp/detail/9003",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 砧世田谷通り店",
+      "url": "https://shop.tullys.co.jp/detail/8986",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 麻布十番駅前店",
+      "url": "https://shop.tullys.co.jp/detail/8992",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー たまプラーザテラス リンクプラザ店",
+      "url": "https://shop.tullys.co.jp/detail/8975",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー カワサキデルタ店",
+      "url": "https://shop.tullys.co.jp/detail/9004",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー アトレ亀戸店",
+      "url": "https://shop.tullys.co.jp/detail/8944",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イクスピアリ店",
+      "url": "https://shop.tullys.co.jp/detail/8974",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー フタバ図書TERAイオンモール福岡店",
+      "url": "https://shop.tullys.co.jp/detail/8968",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ヤマダ電機なんば店",
+      "url": "https://shop.tullys.co.jp/detail/9002",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 神保町店",
+      "url": "https://shop.tullys.co.jp/detail/8996",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 佐世保京町店",
+      "url": "https://shop.tullys.co.jp/detail/8991",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 札幌徳洲会病院店",
+      "url": "https://shop.tullys.co.jp/detail/8949",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー サッポロファクトリー店",
+      "url": "https://shop.tullys.co.jp/detail/8993",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー エスパルいわき店",
+      "url": "https://shop.tullys.co.jp/detail/8982",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 長岡花園店",
+      "url": "https://shop.tullys.co.jp/detail/8941",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 柴又駅前店",
+      "url": "https://shop.tullys.co.jp/detail/8989",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 鹿児島中町店",
+      "url": "https://shop.tullys.co.jp/detail/8969",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 成田空港第1ターミナル南ウイング店",
+      "url": "https://shop.tullys.co.jp/detail/8959",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 九段会館テラス店",
+      "url": "https://shop.tullys.co.jp/detail/8966",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 岩手医大病院店",
+      "url": "https://shop.tullys.co.jp/detail/8998",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ららぽーと沼津店",
+      "url": "https://shop.tullys.co.jp/detail/9001",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー 新宿NSビルアネックス店",
+      "url": "https://shop.tullys.co.jp/detail/8514",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 土岐プレミアム・アウトレット店",
+      "url": "https://shop.tullys.co.jp/detail/8990",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 札幌ちえりあ店",
+      "url": "https://shop.tullys.co.jp/detail/8984",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモール土岐店",
+      "url": "https://shop.tullys.co.jp/detail/8980",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東松山店",
+      "url": "https://shop.tullys.co.jp/detail/8947",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー Ｅｍｉｏ狭山市店",
+      "url": "https://shop.tullys.co.jp/detail/8978",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 鳥栖プレミアム・アウトレット店",
+      "url": "https://shop.tullys.co.jp/detail/8983",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大阪ステーションシティ店",
+      "url": "https://shop.tullys.co.jp/detail/8979",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新宿住友ビル店",
+      "url": "https://shop.tullys.co.jp/detail/8997",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA アトレヴィ巣鴨店",
+      "url": "https://shop.tullys.co.jp/detail/8962",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 石神井公園店",
+      "url": "https://shop.tullys.co.jp/detail/9000",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 淀屋橋店",
+      "url": "https://shop.tullys.co.jp/detail/8995",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新宿ＮＳビル店",
+      "url": "https://shop.tullys.co.jp/detail/8510",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー エミオ田無店",
+      "url": "https://shop.tullys.co.jp/detail/8999",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＦＫＤ宇都宮店",
+      "url": "https://shop.tullys.co.jp/detail/9007",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー セレオ国分寺店",
+      "url": "https://shop.tullys.co.jp/detail/9006",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 神戸ファッションマート店",
+      "url": "https://shop.tullys.co.jp/detail/9005",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 阪急三番街南館店",
+      "url": "https://shop.tullys.co.jp/detail/9010",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ゆめタウン別府店",
+      "url": "https://shop.tullys.co.jp/detail/9009",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 三井アウトレットパーク入間店",
+      "url": "https://shop.tullys.co.jp/detail/9008",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 朝日新聞東京本社ビル店",
+      "url": "https://shop.tullys.co.jp/detail/9011",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東京商工会議所ビル店",
+      "url": "https://shop.tullys.co.jp/detail/9012",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 横浜みなとみらいビジネススクエア店",
+      "url": "https://shop.tullys.co.jp/detail/9014",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 館林アゼリアモール店",
+      "url": "https://shop.tullys.co.jp/detail/9016",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 仙台市立病院店",
+      "url": "https://shop.tullys.co.jp/detail/9015",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 柏モディ店",
+      "url": "https://shop.tullys.co.jp/detail/9019",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 小倉店",
+      "url": "https://shop.tullys.co.jp/detail/9017",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新横浜プリンスペペ店",
+      "url": "https://shop.tullys.co.jp/detail/9018",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 会津若松店",
+      "url": "https://shop.tullys.co.jp/detail/9022",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 三井アウトレットパーク多摩南大沢店",
+      "url": "https://shop.tullys.co.jp/detail/9032",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 日本経済新聞社太陽樹店",
+      "url": "https://shop.tullys.co.jp/detail/9027",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東京ポートシティ竹芝店",
+      "url": "https://shop.tullys.co.jp/detail/9020",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 日テレプラザ店",
+      "url": "https://shop.tullys.co.jp/detail/9021",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 高知大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/9034",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 市立札幌病院店",
+      "url": "https://shop.tullys.co.jp/detail/9044",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー サンシャイン水族館店",
+      "url": "https://shop.tullys.co.jp/detail/9052",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 産業医科大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/9035",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー TX柏の葉キャンパス駅前店",
+      "url": "https://shop.tullys.co.jp/detail/8511",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 松江店",
+      "url": "https://shop.tullys.co.jp/detail/9023",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー PLiCO六甲道店",
+      "url": "https://shop.tullys.co.jp/detail/9025",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー アトレ松戸店",
+      "url": "https://shop.tullys.co.jp/detail/9026",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 南町田グランベリーパーク駅店",
+      "url": "https://shop.tullys.co.jp/detail/9028",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー トリアス久山店",
+      "url": "https://shop.tullys.co.jp/detail/9060",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 伊丹店",
+      "url": "https://shop.tullys.co.jp/detail/9029",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 天王寺公園店",
+      "url": "https://shop.tullys.co.jp/detail/9031",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 天満屋八丁堀店",
+      "url": "https://shop.tullys.co.jp/detail/9033",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー スタートラム広島店",
+      "url": "https://shop.tullys.co.jp/detail/9042",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大阪城公園駅前店",
+      "url": "https://shop.tullys.co.jp/detail/9063",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー プレイアトレ土浦店",
+      "url": "https://shop.tullys.co.jp/detail/9040",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 住友不動産秋葉原ファーストビル・テラス店",
+      "url": "https://shop.tullys.co.jp/detail/9030",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 金沢大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/9036",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー なんばパークス店",
+      "url": "https://shop.tullys.co.jp/detail/9077",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ルミネ北千住店",
+      "url": "https://shop.tullys.co.jp/detail/9056",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ウニクス伊奈店",
+      "url": "https://shop.tullys.co.jp/detail/9038",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー 汐留住友ビル店",
+      "url": "https://shop.tullys.co.jp/detail/9039",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 近鉄奈良店",
+      "url": "https://shop.tullys.co.jp/detail/9037",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 松山赤十字病院店",
+      "url": "https://shop.tullys.co.jp/detail/9046",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 羽田エアポートガーデン店",
+      "url": "https://shop.tullys.co.jp/detail/9066",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大阪城天守閣前店",
+      "url": "https://shop.tullys.co.jp/detail/9047",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモール旭川西店",
+      "url": "https://shop.tullys.co.jp/detail/9109",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大垣書店 ジ アウトレット広島店",
+      "url": "https://shop.tullys.co.jp/detail/9053",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 有松店",
+      "url": "https://shop.tullys.co.jp/detail/9048",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 横須賀中央店",
+      "url": "https://shop.tullys.co.jp/detail/9045",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA さっぽろ地下街オーロラタウン店",
+      "url": "https://shop.tullys.co.jp/detail/9041",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 所沢駅店",
+      "url": "https://shop.tullys.co.jp/detail/8518",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東京ドームシティ店",
+      "url": "https://shop.tullys.co.jp/detail/9117",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモール熊本店",
+      "url": "https://shop.tullys.co.jp/detail/9043",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東海荒尾店",
+      "url": "https://shop.tullys.co.jp/detail/9059",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 本厚木ミロードイースト店",
+      "url": "https://shop.tullys.co.jp/detail/9068",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 池尻大橋店",
+      "url": "https://shop.tullys.co.jp/detail/9080",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 富士山三島東急ホテル店",
+      "url": "https://shop.tullys.co.jp/detail/8462",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大崎オーバルコート店",
+      "url": "https://shop.tullys.co.jp/detail/9067",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新発田店",
+      "url": "https://shop.tullys.co.jp/detail/9049",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 立教大学店",
+      "url": "https://shop.tullys.co.jp/detail/9070",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 豊洲フロント店",
+      "url": "https://shop.tullys.co.jp/detail/9055",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 山形松見町店",
+      "url": "https://shop.tullys.co.jp/detail/9051",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 有明ガーデン店",
+      "url": "https://shop.tullys.co.jp/detail/9104",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ザ パーク フロント ホテル店",
+      "url": "https://shop.tullys.co.jp/detail/9050",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東京女子医科大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/9091",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモール水戸内原店",
+      "url": "https://shop.tullys.co.jp/detail/9057",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー グランドスケープ池袋店",
+      "url": "https://shop.tullys.co.jp/detail/9058",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー センター南店",
+      "url": "https://shop.tullys.co.jp/detail/9061",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 三井アウトレットパーク札幌北広島",
+      "url": "https://shop.tullys.co.jp/detail/9074",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 御堂筋本町ビル店",
+      "url": "https://shop.tullys.co.jp/detail/9098",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー マークイズみなとみらい店",
+      "url": "https://shop.tullys.co.jp/detail/9132",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー シャポー本八幡店",
+      "url": "https://shop.tullys.co.jp/detail/9079",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新宿イーストサイドスクエアアトリウム店",
+      "url": "https://shop.tullys.co.jp/detail/9073",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ピアザ神戸店",
+      "url": "https://shop.tullys.co.jp/detail/9069",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 阪急西宮ガーデンズ店",
+      "url": "https://shop.tullys.co.jp/detail/9113",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 四条烏丸 京都三井ビル店",
+      "url": "https://shop.tullys.co.jp/detail/9099",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 富山県立中央病院店",
+      "url": "https://shop.tullys.co.jp/detail/9111",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 長岡古正寺店",
+      "url": "https://shop.tullys.co.jp/detail/9122",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 信州大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/9144",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 江坂駅前店",
+      "url": "https://shop.tullys.co.jp/detail/9129",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 岩国医療センター店",
+      "url": "https://shop.tullys.co.jp/detail/9062",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 札幌厚生病院店",
+      "url": "https://shop.tullys.co.jp/detail/9075",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東京ドームシティラクーア店",
+      "url": "https://shop.tullys.co.jp/detail/9095",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー プレイアトレ土浦3階店",
+      "url": "https://shop.tullys.co.jp/detail/9064",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー フタバ図書アルティアルパーク北棟店",
+      "url": "https://shop.tullys.co.jp/detail/9137",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 宮崎高千穂通り店",
+      "url": "https://shop.tullys.co.jp/detail/8540",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 京都三条通り店",
+      "url": "https://shop.tullys.co.jp/detail/9076",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 羽田イノベーションシティ店",
+      "url": "https://shop.tullys.co.jp/detail/9094",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 日本赤十字社和歌山医療センター店",
+      "url": "https://shop.tullys.co.jp/detail/9087",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 小田原ダイナシティ店",
+      "url": "https://shop.tullys.co.jp/detail/9086",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 巣鴨地蔵通り店",
+      "url": "https://shop.tullys.co.jp/detail/9084",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 羽田空港第2ターミナル店",
+      "url": "https://shop.tullys.co.jp/detail/9088",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 石巻赤十字病院店",
+      "url": "https://shop.tullys.co.jp/detail/9135",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 立命館大学衣笠キャンパス店",
+      "url": "https://shop.tullys.co.jp/detail/9123",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 加古川中央市民病院店",
+      "url": "https://shop.tullys.co.jp/detail/9081",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ららぽーと湘南平塚店",
+      "url": "https://shop.tullys.co.jp/detail/9128",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新宿オークタワー店",
+      "url": "https://shop.tullys.co.jp/detail/9126",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 京都寺町通り店",
+      "url": "https://shop.tullys.co.jp/detail/9157",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー エミオ東久留米店",
+      "url": "https://shop.tullys.co.jp/detail/9161",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 高岡射水店",
+      "url": "https://shop.tullys.co.jp/detail/9168",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 長野赤十字病院店",
+      "url": "https://shop.tullys.co.jp/detail/9134",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大崎ガーデンタワー店",
+      "url": "https://shop.tullys.co.jp/detail/9071",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 阪急三番街北館店",
+      "url": "https://shop.tullys.co.jp/detail/9169",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー OEDO日本橋店",
+      "url": "https://shop.tullys.co.jp/detail/9097",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 三井アウトレットパーク仙台港店",
+      "url": "https://shop.tullys.co.jp/detail/9072",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー NEOPASA静岡上り店",
+      "url": "https://shop.tullys.co.jp/detail/9108",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 島根大学医学部附属病院店",
+      "url": "https://shop.tullys.co.jp/detail/9096",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 名古屋空港店",
+      "url": "https://shop.tullys.co.jp/detail/9145",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー グリナード永山店",
+      "url": "https://shop.tullys.co.jp/detail/9105",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 那覇空港店",
+      "url": "https://shop.tullys.co.jp/detail/9133",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 神戸中央市民病院店",
+      "url": "https://shop.tullys.co.jp/detail/9138",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 綾瀬駅前店",
+      "url": "https://shop.tullys.co.jp/detail/9174",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー グランフロント大阪北館９Ｆ店",
+      "url": "https://shop.tullys.co.jp/detail/9156",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 小田原トザンイースト店",
+      "url": "https://shop.tullys.co.jp/detail/9083",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 徳島駅前店",
+      "url": "https://shop.tullys.co.jp/detail/9100",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー タカシマヤ ゲートタワーモール店",
+      "url": "https://shop.tullys.co.jp/detail/9112",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 長崎大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/9114",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大手町パークビルディング店",
+      "url": "https://shop.tullys.co.jp/detail/9090",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東京ビッグサイト店",
+      "url": "https://shop.tullys.co.jp/detail/9110",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 仙台中央通り店",
+      "url": "https://shop.tullys.co.jp/detail/9160",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 仙台富沢西店",
+      "url": "https://shop.tullys.co.jp/detail/9119",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー 埼玉医科大学総合医療センター茶寮店",
+      "url": "https://shop.tullys.co.jp/detail/9120",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー アリオ倉敷店",
+      "url": "https://shop.tullys.co.jp/detail/9115",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 広島中央通り店",
+      "url": "https://shop.tullys.co.jp/detail/9089",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 栃木城内店",
+      "url": "https://shop.tullys.co.jp/detail/9180",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 丸紅ビル店",
+      "url": "https://shop.tullys.co.jp/detail/9125",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 日比谷フォートタワー店",
+      "url": "https://shop.tullys.co.jp/detail/9130",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー MSH日本橋箱崎ビル店",
+      "url": "https://shop.tullys.co.jp/detail/9127",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 元住吉駅店",
+      "url": "https://shop.tullys.co.jp/detail/9107",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 佐渡佐和田店",
+      "url": "https://shop.tullys.co.jp/detail/9092",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモールつがる柏店",
+      "url": "https://shop.tullys.co.jp/detail/9154",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 西小山駅店",
+      "url": "https://shop.tullys.co.jp/detail/9106",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大阪梅田ツインタワーズ・サウス店",
+      "url": "https://shop.tullys.co.jp/detail/9131",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 八王子みなみ野店",
+      "url": "https://shop.tullys.co.jp/detail/9093",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 鳥取大学医学部附属病院店",
+      "url": "https://shop.tullys.co.jp/detail/9162",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ららぽーと新三郷店",
+      "url": "https://shop.tullys.co.jp/detail/9116",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 銀座六丁目昭和通り店",
+      "url": "https://shop.tullys.co.jp/detail/9140",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー キッズコミュ アリオ札幌店",
+      "url": "https://shop.tullys.co.jp/detail/8532",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー 八戸八日町店",
+      "url": "https://shop.tullys.co.jp/detail/9101",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー キューポラ川口店",
+      "url": "https://shop.tullys.co.jp/detail/9165",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 丸の内永楽ビルディング店",
+      "url": "https://shop.tullys.co.jp/detail/9175",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ららぽーと柏の葉店",
+      "url": "https://shop.tullys.co.jp/detail/8440",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー 大阪梅田ツインタワーズ・ノース店",
+      "url": "https://shop.tullys.co.jp/detail/9118",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 星天qlay店",
+      "url": "https://shop.tullys.co.jp/detail/8463",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 京都アバンティ店",
+      "url": "https://shop.tullys.co.jp/detail/9103",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 昭和医科大学病院",
+      "url": "https://shop.tullys.co.jp/detail/9155",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 湘南藤沢徳洲会病院店",
+      "url": "https://shop.tullys.co.jp/detail/9142",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東京スクエアガーデン店",
+      "url": "https://shop.tullys.co.jp/detail/9153",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー シャポー本八幡西口店",
+      "url": "https://shop.tullys.co.jp/detail/9177",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー トーブ イコート店",
+      "url": "https://shop.tullys.co.jp/detail/9141",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 小手指店",
+      "url": "https://shop.tullys.co.jp/detail/9163",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 野田阪神ウイステ店",
+      "url": "https://shop.tullys.co.jp/detail/9181",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ペリエ西千葉店",
+      "url": "https://shop.tullys.co.jp/detail/9183",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 山口県立総合医療センター店",
+      "url": "https://shop.tullys.co.jp/detail/9143",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 聖隷浜松病院店",
+      "url": "https://shop.tullys.co.jp/detail/9166",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ｂｏｎｏ相模大野店",
+      "url": "https://shop.tullys.co.jp/detail/9186",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA ららぽーと立川立飛店",
+      "url": "https://shop.tullys.co.jp/detail/9124",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東邦大森病院店",
+      "url": "https://shop.tullys.co.jp/detail/9167",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 福井赤十字病院店",
+      "url": "https://shop.tullys.co.jp/detail/9149",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー KOMATSU店",
+      "url": "https://shop.tullys.co.jp/detail/9172",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー 羽田空港第1ターミナル9番ゲート店",
+      "url": "https://shop.tullys.co.jp/detail/8620",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー CIAL横浜店",
+      "url": "https://shop.tullys.co.jp/detail/9136",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 上田大屋店",
+      "url": "https://shop.tullys.co.jp/detail/9187",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 日本橋YUITOアネックス店",
+      "url": "https://shop.tullys.co.jp/detail/9148",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ウニクス秩父店",
+      "url": "https://shop.tullys.co.jp/detail/9139",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー シャポー市川店",
+      "url": "https://shop.tullys.co.jp/detail/9150",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ルミネ大宮LUMINE2 改札内店",
+      "url": "https://shop.tullys.co.jp/detail/9190",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 江ノ電長谷駅店",
+      "url": "https://shop.tullys.co.jp/detail/8617",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新潟万代店",
+      "url": "https://shop.tullys.co.jp/detail/9173",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA ふかや花園プレミアム・アウトレット BOOKS CAFE店",
+      "url": "https://shop.tullys.co.jp/detail/9146",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 西武しんきん荻窪店",
+      "url": "https://shop.tullys.co.jp/detail/9176",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 埼玉医科大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/9185",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモール宮崎店",
+      "url": "https://shop.tullys.co.jp/detail/9152",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー 静岡ペガサート店",
+      "url": "https://shop.tullys.co.jp/detail/9158",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 長野アイビースクエア店",
+      "url": "https://shop.tullys.co.jp/detail/9170",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 町田モディ店",
+      "url": "https://shop.tullys.co.jp/detail/9171",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ヤエチカ店",
+      "url": "https://shop.tullys.co.jp/detail/9193",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 山口葵TSUTAYA店",
+      "url": "https://shop.tullys.co.jp/detail/9159",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 山形七日町店",
+      "url": "https://shop.tullys.co.jp/detail/9164",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 帯広厚生病院店",
+      "url": "https://shop.tullys.co.jp/detail/9189",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 西新宿駅前店",
+      "url": "https://shop.tullys.co.jp/detail/9188",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 奥沢駅店",
+      "url": "https://shop.tullys.co.jp/detail/8461",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新さっぽろサンピアザ店",
+      "url": "https://shop.tullys.co.jp/detail/9182",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモール下田店",
+      "url": "https://shop.tullys.co.jp/detail/9184",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 長崎玉屋店",
+      "url": "https://shop.tullys.co.jp/detail/9192",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大利根店",
+      "url": "https://shop.tullys.co.jp/detail/9195",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 好仁会東大病院店",
+      "url": "https://shop.tullys.co.jp/detail/9196",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー みなとみらい東急スクエア1店",
+      "url": "https://shop.tullys.co.jp/detail/9200",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 金沢野々市店",
+      "url": "https://shop.tullys.co.jp/detail/9199",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 古川駅店",
+      "url": "https://shop.tullys.co.jp/detail/9198",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ホテル阪神大阪店",
+      "url": "https://shop.tullys.co.jp/detail/9197",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イーサイト上尾店",
+      "url": "https://shop.tullys.co.jp/detail/9201",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 三井アウトレットパーク木更津店",
+      "url": "https://shop.tullys.co.jp/detail/9202",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ルミネエスト新宿B1店",
+      "url": "https://shop.tullys.co.jp/detail/8521",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー トレッサ横浜店",
+      "url": "https://shop.tullys.co.jp/detail/9203",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー アトレ川崎店",
+      "url": "https://shop.tullys.co.jp/detail/9205",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー アリオ橋本店",
+      "url": "https://shop.tullys.co.jp/detail/9206",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 浅草新仲見世店",
+      "url": "https://shop.tullys.co.jp/detail/9210",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 花のれんタリーズコーヒー なんばグランド花月店",
+      "url": "https://shop.tullys.co.jp/detail/9209",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ダイバーシティ東京プラザ店",
+      "url": "https://shop.tullys.co.jp/detail/9208",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新潟大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/9211",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 三島日清プラザ店",
+      "url": "https://shop.tullys.co.jp/detail/9214",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新宿小滝橋通り店",
+      "url": "https://shop.tullys.co.jp/detail/9213",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 宇都宮駅東口店",
+      "url": "https://shop.tullys.co.jp/detail/9216",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ららぽーとEXPOCITY店",
+      "url": "https://shop.tullys.co.jp/detail/9212",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 盛岡駅フェザン店",
+      "url": "https://shop.tullys.co.jp/detail/9215",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 自治医大駅前店",
+      "url": "https://shop.tullys.co.jp/detail/9219",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 豊田上郷SA下り店",
+      "url": "https://shop.tullys.co.jp/detail/9218",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA エスパル仙台店",
+      "url": "https://shop.tullys.co.jp/detail/9217",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー サンエー那覇メインプレイス店",
+      "url": "https://shop.tullys.co.jp/detail/9221",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ウィング上大岡店",
+      "url": "https://shop.tullys.co.jp/detail/9220",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー Pasar幕張店",
+      "url": "https://shop.tullys.co.jp/detail/9226",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー プライムツリー赤池店",
+      "url": "https://shop.tullys.co.jp/detail/9223",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新宿エルタワー店",
+      "url": "https://shop.tullys.co.jp/detail/9222",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 聖隷三方原病院店",
+      "url": "https://shop.tullys.co.jp/detail/9224",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 宝塚北ＳＡ店",
+      "url": "https://shop.tullys.co.jp/detail/9225",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー コミュシティ エスパル仙台店",
+      "url": "https://shop.tullys.co.jp/detail/9227",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ペリエ稲毛コムスクエア店",
+      "url": "https://shop.tullys.co.jp/detail/9231",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 汐留シティセンター店",
+      "url": "https://shop.tullys.co.jp/detail/9229",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大泉学園店",
+      "url": "https://shop.tullys.co.jp/detail/9230",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー ＭＩＮＡＮＯ分倍河原店",
+      "url": "https://shop.tullys.co.jp/detail/9228",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー ヨドバシ横浜店",
+      "url": "https://shop.tullys.co.jp/detail/9236",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 博多マルイ店",
+      "url": "https://shop.tullys.co.jp/detail/9232",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー アル・プラザ高槻店",
+      "url": "https://shop.tullys.co.jp/detail/9233",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー グランフロント大阪北館１Ｆ店",
+      "url": "https://shop.tullys.co.jp/detail/9235",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 国立国際医療センター店",
+      "url": "https://shop.tullys.co.jp/detail/9238",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 日比谷公園店",
+      "url": "https://shop.tullys.co.jp/detail/9234",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ペリエ千葉店",
+      "url": "https://shop.tullys.co.jp/detail/9237",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ひたちなか新光町店",
+      "url": "https://shop.tullys.co.jp/detail/8459",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 前橋みなみモール店",
+      "url": "https://shop.tullys.co.jp/detail/8458",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ララガーデン長町店",
+      "url": "https://shop.tullys.co.jp/detail/8457",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 京都タカシマヤ店",
+      "url": "https://shop.tullys.co.jp/detail/8442",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー KUZUHA MALL店",
+      "url": "https://shop.tullys.co.jp/detail/8429",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー tete名谷店",
+      "url": "https://shop.tullys.co.jp/detail/8441",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 日本大通り店",
+      "url": "https://shop.tullys.co.jp/detail/8523",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＳＥＬＥＣＴ 神戸三田プレミアム・アウトレット店",
+      "url": "https://shop.tullys.co.jp/detail/8524",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー CIAL鶴見店",
+      "url": "https://shop.tullys.co.jp/detail/8529",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA ゆめタウン徳島店",
+      "url": "https://shop.tullys.co.jp/detail/8530",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 金沢百番街Rinto店",
+      "url": "https://shop.tullys.co.jp/detail/8544",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA ららぽーと堺店",
+      "url": "https://shop.tullys.co.jp/detail/8572",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー そよら武蔵狭山店",
+      "url": "https://shop.tullys.co.jp/detail/8601",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 住友不動産新宿ファーストタワー店",
+      "url": "https://shop.tullys.co.jp/detail/8602",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー サンリブ三ヶ森店",
+      "url": "https://shop.tullys.co.jp/detail/8603",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ハンズマン松原店",
+      "url": "https://shop.tullys.co.jp/detail/9240",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA ホワイティうめだ店",
+      "url": "https://shop.tullys.co.jp/detail/9246",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＳＥＬＥＣＴ ルミネ町田店",
+      "url": "https://shop.tullys.co.jp/detail/9247",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA エスパル福島店",
+      "url": "https://shop.tullys.co.jp/detail/9248",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA Corowa甲子園店",
+      "url": "https://shop.tullys.co.jp/detail/9249",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 広島LECT店",
+      "url": "https://shop.tullys.co.jp/detail/9270",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 自治医大病院店",
+      "url": "https://shop.tullys.co.jp/detail/9290",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新綱島スクエア店",
+      "url": "https://shop.tullys.co.jp/detail/9291",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ザ・スクエア聖蹟桜ヶ丘店",
+      "url": "https://shop.tullys.co.jp/detail/9292",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー CeeU Yokohama店",
+      "url": "https://shop.tullys.co.jp/detail/9293",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＳＥＬＥＣＴ きときと市場とやマルシェ店",
+      "url": "https://shop.tullys.co.jp/detail/9294",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ディアモール大阪店",
+      "url": "https://shop.tullys.co.jp/detail/9295",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー &TEA ペリエ千葉ペリチカ店",
+      "url": "https://shop.tullys.co.jp/detail/9296",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東京医科大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/9313",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 滑川店",
+      "url": "https://shop.tullys.co.jp/detail/9314",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 千葉大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/9341",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 札幌天使病院店",
+      "url": "https://shop.tullys.co.jp/detail/9342",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "タリーズコーヒー 福島野田町店",
+      "url": "https://shop.tullys.co.jp/detail/9363",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー スズラン百貨店高崎店",
+      "url": "https://shop.tullys.co.jp/detail/9382",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー サンリブBUONO萩原店",
+      "url": "https://shop.tullys.co.jp/detail/9393",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー フォレストモール新前橋店",
+      "url": "https://shop.tullys.co.jp/detail/9394",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＳＥＬＥＣＴ 横浜ジョイナスB1F店",
+      "url": "https://shop.tullys.co.jp/detail/9395",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー CoCoLo新潟店",
+      "url": "https://shop.tullys.co.jp/detail/9396",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA nonowa国立SOUTH店",
+      "url": "https://shop.tullys.co.jp/detail/9397",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー キャナルシティ博多店",
+      "url": "https://shop.tullys.co.jp/detail/9398",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー グランドプリンスホテル新高輪店",
+      "url": "https://shop.tullys.co.jp/detail/9399",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 京阪寝屋川市駅店",
+      "url": "https://shop.tullys.co.jp/detail/9428",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ハーバーテラス松島離宮店",
+      "url": "https://shop.tullys.co.jp/detail/9433",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 五反田ＪＰビルディング店",
+      "url": "https://shop.tullys.co.jp/detail/9434",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 横浜コネクトスクエア店",
+      "url": "https://shop.tullys.co.jp/detail/9435",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー タリーズコーヒー 鹿児島大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/9439",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー サカエチカ店",
+      "url": "https://shop.tullys.co.jp/detail/9450",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ハレザ池袋店",
+      "url": "https://shop.tullys.co.jp/detail/9451",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 水戸赤塚店",
+      "url": "https://shop.tullys.co.jp/detail/9469",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 大宮DOM店",
+      "url": "https://shop.tullys.co.jp/detail/9471",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 渋谷アクシュ店",
+      "url": "https://shop.tullys.co.jp/detail/9477",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 羽田空港第1ターミナル15番ゲート店",
+      "url": "https://shop.tullys.co.jp/detail/9492",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 名古屋ラシック店",
+      "url": "https://shop.tullys.co.jp/detail/9493",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ゆめが丘ソラトス店",
+      "url": "https://shop.tullys.co.jp/detail/9496",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー Shibuya Sakura Stage店",
+      "url": "https://shop.tullys.co.jp/detail/9497",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー KITTE大阪店",
+      "url": "https://shop.tullys.co.jp/detail/9501",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA なんばスカイオ店",
+      "url": "https://shop.tullys.co.jp/detail/9505",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 枚方モール店",
+      "url": "https://shop.tullys.co.jp/detail/9515",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー グラングリーン大阪店",
+      "url": "https://shop.tullys.co.jp/detail/9518",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー エミテラス所沢店",
+      "url": "https://shop.tullys.co.jp/detail/9526",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 住友不動産東京三田ガーデンタワー店",
+      "url": "https://shop.tullys.co.jp/detail/9529",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 成田赤十字病院店",
+      "url": "https://shop.tullys.co.jp/detail/9538",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 京阪京橋駅片町口店",
+      "url": "https://shop.tullys.co.jp/detail/9540",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 郡山安積店",
+      "url": "https://shop.tullys.co.jp/detail/9544",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー セレオ八王子店",
+      "url": "https://shop.tullys.co.jp/detail/9545",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー フォルテ富里店",
+      "url": "https://shop.tullys.co.jp/detail/9546",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー なんばウォーク店",
+      "url": "https://shop.tullys.co.jp/detail/9568",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＳＥＬＥＣＴ 三井アウトレットパーク マリンピア神戸店",
+      "url": "https://shop.tullys.co.jp/detail/9569",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA ラスカ平塚店",
+      "url": "https://shop.tullys.co.jp/detail/9570",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 福岡空港国際線ターミナル店",
+      "url": "https://shop.tullys.co.jp/detail/9571",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモール猪名川店",
+      "url": "https://shop.tullys.co.jp/detail/9572",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 長津田店",
+      "url": "https://shop.tullys.co.jp/detail/9573",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー CIAL PLAT東神奈川店",
+      "url": "https://shop.tullys.co.jp/detail/9587",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 琉球大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/9598",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 聖マリアンナ医科大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/9599",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東武ふじみ野駅店",
+      "url": "https://shop.tullys.co.jp/detail/9600",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 東京テレポート駅店",
+      "url": "https://shop.tullys.co.jp/detail/9603",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ヨークパーク郡山店",
+      "url": "https://shop.tullys.co.jp/detail/9632",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 竹尾インター店",
+      "url": "https://shop.tullys.co.jp/detail/9633",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 有明ガーデン店",
+      "url": "https://shop.tullys.co.jp/detail/9634",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー プライムファイブ グラングリーン大阪店",
+      "url": "https://shop.tullys.co.jp/detail/9649",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ミナモア広島店",
+      "url": "https://shop.tullys.co.jp/detail/9653",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 福岡東平尾公園店",
+      "url": "https://shop.tullys.co.jp/detail/9687",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 虎ノ門ヒルズ店",
+      "url": "https://shop.tullys.co.jp/detail/9689",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 高岡おとぎの森公園店",
+      "url": "https://shop.tullys.co.jp/detail/9695",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ららぽーと安城店",
+      "url": "https://shop.tullys.co.jp/detail/9701",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ワン・フクオカ・ビルディング店",
+      "url": "https://shop.tullys.co.jp/detail/9702",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 富山ファボーレ店",
+      "url": "https://shop.tullys.co.jp/detail/9703",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＳＥＬＥＣＴ ニューシャトル大宮店",
+      "url": "https://shop.tullys.co.jp/detail/9704",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー アトレ大井町店",
+      "url": "https://shop.tullys.co.jp/detail/9705",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA アトレヴィ田端店",
+      "url": "https://shop.tullys.co.jp/detail/9708",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ANAスカイコネクトなんば店",
+      "url": "https://shop.tullys.co.jp/detail/9712",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー with U 高槻グリーンプレイス店",
+      "url": "https://shop.tullys.co.jp/detail/9713",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 武蔵境かえで通り店",
+      "url": "https://shop.tullys.co.jp/detail/9718",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 名鉄神宮前店",
+      "url": "https://shop.tullys.co.jp/detail/9724",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー オルフィーカ美田園",
+      "url": "https://shop.tullys.co.jp/detail/9730",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 小田急マルシェ中央林間店",
+      "url": "https://shop.tullys.co.jp/detail/9732",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 松波総合病院店",
+      "url": "https://shop.tullys.co.jp/detail/9737",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 住友不動産麹町ガーデンタワー店",
+      "url": "https://shop.tullys.co.jp/detail/9748",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 熊谷駅店",
+      "url": "https://shop.tullys.co.jp/detail/9750",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大阪医科薬科大学病院店",
+      "url": "https://shop.tullys.co.jp/detail/9751",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 磯子駅前店",
+      "url": "https://shop.tullys.co.jp/detail/9752",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー プリンス スマート イン 熱海店",
+      "url": "https://shop.tullys.co.jp/detail/9757",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 八十二長野銀行伊那北店",
+      "url": "https://shop.tullys.co.jp/detail/9761",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオン延岡店",
+      "url": "https://shop.tullys.co.jp/detail/9763",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー いせさきガーデンズ店",
+      "url": "https://shop.tullys.co.jp/detail/9764",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 大黒PA店",
+      "url": "https://shop.tullys.co.jp/detail/9783",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA エスパル山形店",
+      "url": "https://shop.tullys.co.jp/detail/9786",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー アルファリンク茨木店",
+      "url": "https://shop.tullys.co.jp/detail/9792",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 三井アウトレットパーク岡崎店",
+      "url": "https://shop.tullys.co.jp/detail/9795",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー PMO目黒店",
+      "url": "https://shop.tullys.co.jp/detail/9799",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 長崎空港ゲート店",
+      "url": "https://shop.tullys.co.jp/detail/9800",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 武蔵野赤十字病院店",
+      "url": "https://shop.tullys.co.jp/detail/9801",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー みなとみらい駅店",
+      "url": "https://shop.tullys.co.jp/detail/9809",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 慈恵医大西部医療センター店",
+      "url": "https://shop.tullys.co.jp/detail/9810",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー さんしん裾野駅前店",
+      "url": "https://shop.tullys.co.jp/detail/9813",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ロースター相模大野中央公園店",
+      "url": "https://shop.tullys.co.jp/detail/9818",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ゆめモール那珂川店",
+      "url": "https://shop.tullys.co.jp/detail/9831",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー フレスポ桜井店",
+      "url": "https://shop.tullys.co.jp/detail/9836",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 池袋 IT tower TOKYO店",
+      "url": "https://shop.tullys.co.jp/detail/9842",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 赤坂トラストタワー店",
+      "url": "https://shop.tullys.co.jp/detail/9843",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA イオンモール津田沼South店",
+      "url": "https://shop.tullys.co.jp/detail/9847",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー プライムファイブ広尾店",
+      "url": "https://shop.tullys.co.jp/detail/9849",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ビーンズ登戸店",
+      "url": "https://shop.tullys.co.jp/detail/9850",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンタウンユーカリが丘店",
+      "url": "https://shop.tullys.co.jp/detail/9851",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー Pivot福島店",
+      "url": "https://shop.tullys.co.jp/detail/9852",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 札幌桑園北3条店",
+      "url": "https://shop.tullys.co.jp/detail/9855",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 大井町トラックス店",
+      "url": "https://shop.tullys.co.jp/detail/9858",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 埼玉医科大学毛呂山キャンパス店",
+      "url": "https://shop.tullys.co.jp/detail/9860",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 山口大学医学部附属病院店",
+      "url": "https://shop.tullys.co.jp/detail/9861",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 羽田空港第1ターミナル7番ゲート店",
+      "url": "https://shop.tullys.co.jp/detail/9862",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 御殿山トラストタワー店",
+      "url": "https://shop.tullys.co.jp/detail/9865",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー Expressりんかい線新木場駅店",
+      "url": "https://shop.tullys.co.jp/detail/9868",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー フレスポ旭川龍谷店",
+      "url": "https://shop.tullys.co.jp/detail/9869",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 神戸空港国内線ゲート店",
+      "url": "https://shop.tullys.co.jp/detail/9870",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA クレフィ三宮店",
+      "url": "https://shop.tullys.co.jp/detail/9871",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー クオーツ心斎橋店",
+      "url": "https://shop.tullys.co.jp/detail/9872",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー JR東京総合病院店",
+      "url": "https://shop.tullys.co.jp/detail/9873",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー イオンモール木更津店",
+      "url": "https://shop.tullys.co.jp/detail/9877",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー テラスモール松戸店",
+      "url": "https://shop.tullys.co.jp/detail/9882",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA イオンレイクタウン アウトレット店",
+      "url": "https://shop.tullys.co.jp/detail/9883",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 関西国際空港 第1ターミナルビル店",
+      "url": "https://shop.tullys.co.jp/detail/9884",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ASTY岡崎店",
+      "url": "https://shop.tullys.co.jp/detail/9888",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ザ・ランドマーク名古屋栄店",
+      "url": "https://shop.tullys.co.jp/detail/9889",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ミタマチテラス店",
+      "url": "https://shop.tullys.co.jp/detail/9890",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＆TEA 淀屋橋ゲートタワー店",
+      "url": "https://shop.tullys.co.jp/detail/9904",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 扇町公園関西テレビ店",
+      "url": "https://shop.tullys.co.jp/detail/9906",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー Express目白駅前店",
+      "url": "https://shop.tullys.co.jp/detail/9908",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 近鉄布施駅店",
+      "url": "https://shop.tullys.co.jp/detail/9909",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー プライムファイブ新宿サザンテラス店",
+      "url": "https://shop.tullys.co.jp/detail/9911",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー ＳＥＬＥＣＴ μPLAT豊田市店",
+      "url": "https://shop.tullys.co.jp/detail/9917",
+      "facilities": []
+    },
+    {
+      "name": "タリーズコーヒー 新鎌ヶ谷駅店",
+      "url": "https://shop.tullys.co.jp/detail/9919",
+      "facilities": []
+    }
+  ]
+}

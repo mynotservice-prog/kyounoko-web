@@ -1,0 +1,8382 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "komeda",
+  "name": "コメダ珈琲店",
+  "sourceUrl": "https://www.komeda.co.jp/shop/",
+  "method": "公式店舗検索の裏 API（eu.komeda.co.jp/v1/hp/shop）でブランド「コメダ珈琲店」の全店舗を列挙し、各店舗詳細の「店舗設備」「取扱いメニュー」の値と駐車場ありフラグを集計",
+  "note": "一覧 API の total=1048。他ブランド混入 0 件は除外。「子育て支援」（店舗サービス）は設備ではないため未集計",
+  "total": 1048,
+  "facilities": {
+    "multiToilet": {
+      "count": 217,
+      "label": "多機能トイレ"
+    },
+    "diaperTable": {
+      "count": 529,
+      "label": "トイレおむつ台"
+    },
+    "kidsMenu": {
+      "count": 585,
+      "label": "お子様メニュー"
+    },
+    "parking": {
+      "count": 826,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "本店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "高岳店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=3",
+      "facilities": []
+    },
+    {
+      "name": "松風店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=12",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "上前津店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=13",
+      "facilities": []
+    },
+    {
+      "name": "東郊通店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=17",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "刈谷店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=21",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "本町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=26",
+      "facilities": []
+    },
+    {
+      "name": "新栄店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=31",
+      "facilities": []
+    },
+    {
+      "name": "平和店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=36",
+      "facilities": []
+    },
+    {
+      "name": "庄内通店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=41",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "浦里店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=50",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "児玉店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=51",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "法華店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=55",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "野並店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=57",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "中割店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=58",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "山手店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=59",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "城北店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=61",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊田梅坪店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=63",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "安城店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=65",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "尾張旭店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=70",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "白雲店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=74",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "春日店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=77",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "滝ノ水店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=79",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日比野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=81",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南陽町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=82",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "桜台店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=85",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "植田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=86",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "岩塚店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=89",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "梅森台店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=94",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "春日井上八田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=95",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "吹上店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=97",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大府駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=98",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "葵店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=100",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "知立堀切店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=101",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "甚目寺森店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=106",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ベルコート店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=109",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "守山城下店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=110",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "春日井東谷橋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=112",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "半田宮本店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=113",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平針試験場前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=114",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大府共和店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=115",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "恵方店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=116",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "篭山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=117",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "知多寺本店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=119",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "安城末広店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=120",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "師勝店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=121",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "安井町店（旧安井店）",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=124",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "上名古屋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=125",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "如意店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=126",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "前浜店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=129",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東郷春木店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=130",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高浜店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=131",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大高店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=132",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "有松店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=134",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "一宮浜町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=135",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "姥子山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=137",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "津島愛宕店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=138",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "半田やなべ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=141",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "清須店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=142",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "春日井如意申店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=143",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "長久手図書館通店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=144",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小牧小木店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=145",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "守山口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=146",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "一宮花池店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=148",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "西尾今川店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=149",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "萱津橋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=150",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "豊明前後店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=152",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西尾道光寺店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=153",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐屋北一色店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=154",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "蟹江本町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=155",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鳥居通店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=157",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "名東藤森店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=159",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "東海荒尾店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=160",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "守山八剣店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=161",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小牧岩崎店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=162",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "岡崎大西店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=163",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "一宮小信店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=164",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岡崎若松店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=165",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "津島神守店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=167",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "各務原那加住吉店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=168",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "忠次店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=171",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "桃花台店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=172",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "一宮森本店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=173",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "小牧中央店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=174",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "刈谷稲場店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=175",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "守山白沢店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=178",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "多治見住吉店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=180",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "弥富東店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=181",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "扶桑伊勢帰店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=182",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岡崎上和田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=183",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "砂田橋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=184",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "瑞穂運動場店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=185",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "刈谷駅南口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=186",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大府インター店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=187",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "豊橋藤沢店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=189",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "四日市生桑店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=190",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "豊田前田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=191",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岐阜駅東店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=193",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "安城今村店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=194",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "江南西店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=195",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "松阪中央店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=196",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "栄鉄砲町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=197",
+      "facilities": []
+    },
+    {
+      "name": "瀬戸山口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=198",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大治店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=199",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "四日市病院前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=200",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "半田瑞穂店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=201",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "名東山の手店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=202",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "岩倉八剱店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=203",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "富士見橋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=204",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "多治見錦町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=205",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "阿久比店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=206",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "桑名広見ケ丘店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=207",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "豊橋下地店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=208",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岐阜柳津店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=211",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "犬山五郎丸店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=213",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "錦東櫻店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=214",
+      "facilities": []
+    },
+    {
+      "name": "岡崎上六名店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=215",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "本郷駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=216",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "メッツ大曽根店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=218",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "昭和橋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=219",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "春日井篠木店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=220",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大府名高山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=221",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "菰野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=223",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "岩倉川井町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=224",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "豊田本新町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=225",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岐阜笠松店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=226",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "蒲郡三谷店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=227",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "岐阜則武店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=228",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "幸田北店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=229",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "岐阜穂積店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=230",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三好インター店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=231",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "豊川末広通店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=232",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "四日市富田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=233",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "松阪花岡店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=234",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "守山瀬古店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=235",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "桑名中央通店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=236",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "伊勢楠部店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=237",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日進竹の山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=238",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "四日市笹川通店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=239",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "津みなみ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=240",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "西尾寺津店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=241",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平安通店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=243",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日置橋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=244",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東刈谷店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=245",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "横浜江田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=246",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "武豊里中店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=247",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岡崎大樹寺店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=250",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大和つきみ野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=251",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "白子稲生店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=252",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "可児坂戸店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=253",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "伊勢中川店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=254",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "伊勢上地店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=255",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "岐阜領下店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=257",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "岐阜駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=258",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "いなべ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=259",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "岐阜長良店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=262",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "橋本店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=263",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "藤沢湘南台店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=264",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "尼ヶ坂店（旧大杉店）",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=265",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "岐阜公園店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=266",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "白壁店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=267",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大垣南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=268",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日進米野木店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=269",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "池下駅前店（旧池下店）",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=270",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "久居店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=271",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "名張店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=274",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "恵那長島店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=276",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "浜松駅北店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=277",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "尾張瀬戸店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=278",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "桜橋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=279",
+      "facilities": []
+    },
+    {
+      "name": "浜松領家店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=280",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン有松店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=281",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "津中央店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=282",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "町田鶴川店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=283",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "伊賀上野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=284",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン千種店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=285",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "稲葉地店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=286",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "貴船店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=288",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大垣林町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=289",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "稲沢大塚店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=291",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "155号線常滑店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=292",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "鵜方店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=293",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "中川玉川町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=294",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "浜松原島店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=295",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "町田森野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=297",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "美濃加茂店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=298",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "碧南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=299",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "中津川店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=301",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "守山志段味店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=302",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "エスカ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=303",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大和下和田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=305",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "津・県総合文化センター前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=306",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "相模原相生店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=308",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岡崎矢作店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=309",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "平塚田村店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=311",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "奈良中央店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=312",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "本町田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=313",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "岡崎橋目店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=314",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "水口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=315",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "海老名大谷店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=316",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "栄四丁目店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=317",
+      "facilities": []
+    },
+    {
+      "name": "岐阜大学前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=318",
+      "facilities": [
+        "multiToilet",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "浜松志都呂店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=319",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "長津田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=320",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール各務原インター店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=321",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "下丸子店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=322",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "法隆寺店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=323",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "瑞浪店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=324",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "小坂井店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=325",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "伊勢一之木店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=326",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ヨシヅヤ津島北テラス店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=327",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "稲城向陽台店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=328",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "一宮神山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=329",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "厚木妻田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=330",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "静岡インター店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=331",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "野洲店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=332",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ユニモール店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=333",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "浜松三方原店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=334",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "栄三丁目店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=335",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール大高店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=336",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "リソラ大府店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=337",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "上平塚店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=339",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "鎌倉深沢店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=340",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "揖斐大野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=342",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン久里浜店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=344",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "テレピア店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=345",
+      "facilities": []
+    },
+    {
+      "name": "蒲郡競艇場前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=346",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "江南村久野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=347",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "飯田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=348",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "桜通大津店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=350",
+      "facilities": []
+    },
+    {
+      "name": "三鷹上連雀店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=352",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "豊橋平川本町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=353",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール草津店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=354",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "京都八幡店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=355",
+      "facilities": [
+        "multiToilet",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "南草津店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=356",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "生駒店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=358",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "近江八幡店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=359",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大阪本町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=360",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "清水インター店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=361",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "栄五丁目店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=362",
+      "facilities": []
+    },
+    {
+      "name": "静岡沓谷店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=363",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松阪殿町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=364",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "浜松佐鳴台店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=365",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "セントラルパーク店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=366",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "横浜中山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=367",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "沼津鳥谷店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=369",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "大阪土佐堀店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=370",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "奈良二条大路店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=371",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "海老名かしわ台店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=372",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "板橋四葉店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=373",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "こどもの国店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=374",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "焼津インター店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=376",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東村山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=377",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "枚方東インター店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=378",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "流山おおたかの森店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=379",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大津皇子が丘店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=380",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール新瑞橋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=381",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "藤枝駅南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=382",
+      "facilities": []
+    },
+    {
+      "name": "近鉄四日市店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=383",
+      "facilities": []
+    },
+    {
+      "name": "金沢松村店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=384",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "浜松浜名店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=388",
+      "facilities": [
+        "multiToilet",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "古淵駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=389",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "東静岡店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=390",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都宇治店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=392",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "新浦安店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=393",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "川崎武蔵中原店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=394",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "長浜八幡中山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=395",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "阪急茨木駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=396",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "藤枝築地店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=397",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "袋井店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=398",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "横浜西口北幸店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=400",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "箕面小野原店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=401",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "西高蔵店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=402",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊橋三本木店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=404",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン名古屋東店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=405",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "中小田井店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=406",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "天理岩室店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=408",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "星ヶ丘店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=409",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "矢場町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=410",
+      "facilities": []
+    },
+    {
+      "name": "寒川店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=411",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "京都二条駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=413",
+      "facilities": []
+    },
+    {
+      "name": "稲沢駅東店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=414",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "磐田今之浦店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=415",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "上尾上店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=416",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "東川口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=417",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "唐木田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=418",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "栄生駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=419",
+      "facilities": []
+    },
+    {
+      "name": "金沢高柳店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=420",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "京都伏見店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=421",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "桜山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=422",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "彦根駅東店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=423",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "足立竹の塚店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=424",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "八尾高美店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=425",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "金山二丁目店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=427",
+      "facilities": []
+    },
+    {
+      "name": "あべの店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=428",
+      "facilities": []
+    },
+    {
+      "name": "太田川店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=429",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新所沢店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=430",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "掛川宮脇店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=432",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "調布仙川店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=434",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "富士中央店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=435",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "池袋西口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=436",
+      "facilities": []
+    },
+    {
+      "name": "覚王山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=437",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大津堅田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=438",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "東近江八日市店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=439",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "奈良広陵店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=440",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "金沢もりの里店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=441",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "富山掛尾店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=442",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "堺東店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=443",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "甲府貢川店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=444",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ふじみ野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=445",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "鯖江店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=446",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "松本庄内店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=447",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "宇都宮下戸祭店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=448",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "湖西店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=449",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "天神橋筋六丁目店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=450",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "野々市矢作店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=451",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "藤沢亀井野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=452",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "しんしろ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=453",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東桜武平通店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=454",
+      "facilities": []
+    },
+    {
+      "name": "岸和田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=455",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "泉大津店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=456",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "カインズ伊勢崎店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=457",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "葛飾東水元店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=458",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ルーセントタワー店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=459",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "和歌山大谷店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=460",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "栗東綣店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=462",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "新潟新和店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=463",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "吉野川鴨島店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=464",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "京都洛西店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=465",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "甲府昭和店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=466",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "小松沖店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=467",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "カインズ市原店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=468",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "堺鳳店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=469",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモールナゴヤドーム前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=470",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "福井二の宮店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=471",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "東大阪渋川店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=472",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京田辺三山木店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=473",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三軒茶屋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=474",
+      "facilities": []
+    },
+    {
+      "name": "諏訪店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=475",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "加古川平野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=476",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "名古屋駅西店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=478",
+      "facilities": []
+    },
+    {
+      "name": "春日部店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=479",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "金剛東店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=480",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "荻窪南口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=481",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "富士吉田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=482",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "大東谷川店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=483",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福井木田橋通り店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=485",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "郡上八幡店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=486",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "イータウンとなみ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=487",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ドン・キホーテ新宿店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=488",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "烏丸五条店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=489",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "逢谷内インター店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=490",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "つくば店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=491",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "枚方南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=492",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=493",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "新大阪店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=494",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "阪南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=495",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "橿原北店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=496",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "武生店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=497",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール高崎店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=498",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン東雲店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=499",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "鶴ヶ島店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=500",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "さぬき高松今里店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=501",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "奈良中町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=502",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "瀬田川唐橋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=503",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール大日店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=504",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "川崎南加瀬店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=505",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "カインズ木更津金田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=506",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "奈良御所店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=507",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "花小金井店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=508",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "三条店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=509",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "長泉町桜堤店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=510",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "姫路市役所南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=511",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "広島大町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=512",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "府中白糸台店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=513",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "巣鴨店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=514",
+      "facilities": []
+    },
+    {
+      "name": "松戸北小金店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=515",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "関池田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=516",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "裾野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=518",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "西舞鶴店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=519",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "明石大久保店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=520",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "佐野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=521",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "草加店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=522",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "鶴見諸口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=523",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "石和店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=524",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "秦野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=525",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "岩出店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=526",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン新潟青山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=527",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "阪神尼崎駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=529",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "イオンモール太田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=530",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "三木平田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=531",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "富士宮店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=532",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "吉祥寺ダイヤ街店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=533",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "上田緑が丘店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=534",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "高松三名店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=535",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "りんくう羽倉崎店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=536",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "錦糸町マルイ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=537",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "千種駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=538",
+      "facilities": []
+    },
+    {
+      "name": "ＭＥＧＡドン・キホーテ成東店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=539",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長岡今朝白店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=540",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "米子車尾店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=541",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "なんばＣＩＴＹ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=542",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "香芝店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=543",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "敦賀店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=544",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "深谷店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=545",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿沼店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=546",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "南鴨宮店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=547",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "上越店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=548",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "御坊店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=549",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "鈴蘭台店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=550",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "姫路太子店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=551",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "彦根平田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=552",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "松戸駅西口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=553",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "湖南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=554",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡八田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=555",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "熊谷店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=557",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "久喜店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=558",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "福山新涯店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=559",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高知インター店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=560",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "神戸西代店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=561",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "御殿場店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=562",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "一社店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=563",
+      "facilities": []
+    },
+    {
+      "name": "塩尻広丘店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=564",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松原三宅店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=565",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピュア高山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=566",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ベイシア佐久平店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=567",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "神栖店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=568",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ベイシア白河店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=569",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚津店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=570",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "千葉ニュータウン店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=571",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "カインズモール鳥取店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=572",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "岡山大福店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=573",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン吉川美南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=574",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "長野東和田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=575",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "国分寺店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=576",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "可児広見店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=577",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめタウン筑紫野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=578",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "保谷店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=579",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "武蔵小山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=580",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "錦・伊勢町通店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=581",
+      "facilities": []
+    },
+    {
+      "name": "深江橋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=582",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "大井松田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=583",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "松江学園店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=584",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡原店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=585",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "龍ケ崎店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=586",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "福山春日店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=587",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "枚方とうかえでの道店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=588",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "東小金井店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=589",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "姫路国分寺店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=590",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "河原町三条店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=591",
+      "facilities": []
+    },
+    {
+      "name": "九大学研都市店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=592",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "北浜南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=593",
+      "facilities": []
+    },
+    {
+      "name": "南久米店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=594",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "青梅店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=595",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "神戸名谷店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=596",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "津田沼店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=597",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "尾鷲店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=598",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "八千代村上店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=599",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール和歌山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=600",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "宇都宮平松本町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=601",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール新潟亀田インター店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=602",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン木更津請西店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=604",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "丸亀土器店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=605",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "和歌山橋本店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=606",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ZENT名古屋北店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=607",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐賀兵庫店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=608",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "金沢直江店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=609",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "神戸伊川谷店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=610",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "カインズ三浦店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=611",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "岡山大安寺店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=612",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "東近江五個荘店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=613",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "刈谷恩田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=614",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめマート新宮店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=615",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "丸井中野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=616",
+      "facilities": []
+    },
+    {
+      "name": "伊丹山田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=617",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "本庄店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=618",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本桜木店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=619",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "なんば千日前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=620",
+      "facilities": []
+    },
+    {
+      "name": "ゆめモール柳川店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=621",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "鳥栖弥生が丘店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=622",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "エミフルＭＡＳＡＫＩ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=623",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "浦和松木店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=624",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "久留米大石町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=625",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "奈良五條店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=626",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "鎌倉小町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=627",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "久留米インター店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=628",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "倉敷北店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=629",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "横浜元町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=630",
+      "facilities": []
+    },
+    {
+      "name": "イオン八事店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=631",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "笠懸阿左美店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=632",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "横浜中田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=633",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "千葉旭店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=634",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "あきる野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=635",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡ももち店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=636",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "周南久米店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=637",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "我孫子天王台店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=638",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "富山呉羽店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=639",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "横浜鍛冶ケ谷店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=640",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡東那珂店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=641",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "新高岡店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=642",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "西大路八条店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=643",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "伊丹昆陽店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=644",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "土浦真鍋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=645",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "北九州桃園公園店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=646",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "船橋日大前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=647",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "米子弓ヶ浜店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=648",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "国立北口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=649",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "熊本大窪店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=650",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "成田ニュータウン店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=652",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "伊那ナイスロード店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=653",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿島神宮南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=654",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "甲子園駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=655",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "仙台富沢店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=656",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "池袋西武前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=657",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "高速長田駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=658",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "北九州上津役店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=659",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "西那須野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=660",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "前橋住吉店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=661",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "石岡旭台店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=662",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "博多駅東店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=663",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "円頓寺店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=664",
+      "facilities": []
+    },
+    {
+      "name": "館林店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=665",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "新宮緑ヶ丘店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=666",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "城陽長池店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=667",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "函南町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=668",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "島田吉田インター店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=669",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "高砂松陽店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=670",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "徳島藍住店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=671",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "阪神西宮店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=672",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "守谷高野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=673",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "神戸ハーバーランド店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=674",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ららぽーと富士見店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=675",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ひたちなか長堀店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=676",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "港栄店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=677",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "栄一丁目店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=678",
+      "facilities": []
+    },
+    {
+      "name": "西心斎橋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=679",
+      "facilities": []
+    },
+    {
+      "name": "日野多摩平店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=680",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "松山山西店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=681",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン田崎店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=682",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "松阪川井町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=683",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "亀山上野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=684",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール茨木店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=685",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール伊丹店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=686",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "瑞穂通四丁目店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=687",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "徳島北島店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=688",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "カインズモール津山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=689",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "安曇野豊科店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=690",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめタウン廿日市店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=691",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡香椎浜店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=692",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "下関綾羅木店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=693",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "布施駅東店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=694",
+      "facilities": []
+    },
+    {
+      "name": "朝霞台店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=695",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "北九州本城店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=696",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大分明野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=697",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "松戸常盤平店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=698",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "出雲姫原店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=699",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "東大阪吉田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=700",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "山形南館店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=701",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "仙台桂店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=702",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "成増駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=703",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "防府八王子店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=704",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "新越谷店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=705",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "岡山福浜店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=706",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "尼崎西立花店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=707",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大宮上小町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=708",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "今福鶴見店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=709",
+      "facilities": []
+    },
+    {
+      "name": "東広島西条店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=710",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "広島大手町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=711",
+      "facilities": []
+    },
+    {
+      "name": "八王子楢原店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=712",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "富谷店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=713",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめタウン山口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=714",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "郡山富田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=715",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "八王子駅北口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=716",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "福岡宗像店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=717",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめモール筑後店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=719",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "北千住本町センター通り店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=720",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "浅草橋駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=721",
+      "facilities": []
+    },
+    {
+      "name": "堺なかもず店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=722",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "北本地ケ原店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=723",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "豊岡店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=724",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "福間駅南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=725",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "いわき泉店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=726",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ららぽーと新三郷店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=727",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "新松戸駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=728",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "船橋芝山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=729",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "天白土原店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=730",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "高知南国店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=731",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "今治立花店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=732",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "堺深阪店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=733",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "大須スケートリンク店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=734",
+      "facilities": []
+    },
+    {
+      "name": "大分中津店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=735",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "昭島店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=736",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大宮土呂店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=737",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "なぎさモール辻堂店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=738",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ミスターマックスおゆみ野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=739",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール北大路店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=740",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊中上新田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=741",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "豊橋大清水店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=742",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "四ツ橋新町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=743",
+      "facilities": []
+    },
+    {
+      "name": "小野田バイパス店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=744",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "下関長府店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=745",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "牧之原店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=746",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "川口芝店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=747",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "小浜店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=748",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "栃木箱森店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=749",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "入間扇台店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=750",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "水戸石川店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=751",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "古河三杉町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=752",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "白島キューガーデン店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=753",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "宇部南浜町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=754",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "郡山大槻店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=755",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "海南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=756",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "神戸西神南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=758",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "倉敷中島店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=759",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "渋谷宮益坂上店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=760",
+      "facilities": []
+    },
+    {
+      "name": "イオンモールKYOTO店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=761",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "阿南富岡店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=762",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "武庫之荘店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=763",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "豊川御油店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=764",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "羽島コスモスポーツプラザ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=765",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "堺上野芝店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=766",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "阪急高槻市駅南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=767",
+      "facilities": []
+    },
+    {
+      "name": "東札幌５条店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=768",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "南与野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=769",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "会津若松白虎通り店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=770",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめタウン徳山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=771",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめタウン呉店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=772",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "平塚駅南口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=773",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "宮崎柳丸店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=775",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎恒久店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=776",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "堺筋本町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=777",
+      "facilities": []
+    },
+    {
+      "name": "アトレ亀戸店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=778",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "長崎時津店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=779",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "仙台荒井店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=780",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "唐津和多田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=781",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "大泉学園店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=782",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "河内松原駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=783",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "沼津カタクラパーク店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=784",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "柏モディ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=785",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島国分店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=786",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンスタイル笹丘店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=787",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "真岡店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=788",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "清田北野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=789",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "岡崎伊賀店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=790",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール鹿児島前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=791",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "北九州鞘ヶ谷店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=792",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "山形嶋南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=793",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール長久手店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=794",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "カインズ前橋川曲店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=795",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "宇都宮みどり野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=796",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "所沢牛沼店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=797",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "飯塚川津店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=798",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめモール五日市店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=799",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "大分志手椎迫店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=800",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ひたち野うしく店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=801",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "亀有駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=802",
+      "facilities": []
+    },
+    {
+      "name": "川越仲町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=803",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本合志店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=804",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "田端駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=805",
+      "facilities": []
+    },
+    {
+      "name": "盛岡南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=806",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "刈谷駅アカリヤ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=807",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "新宿靖国通り店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=808",
+      "facilities": []
+    },
+    {
+      "name": "鹿児島鹿屋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=809",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "滝野社インター店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=810",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "水戸元吉田町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=811",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "益田あけぼの店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=812",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "清水有東坂店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=813",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島川内店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=814",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡那珂川店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=815",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモールりんくう泉南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=816",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "半田亀崎店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=817",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "新宿御苑前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=818",
+      "facilities": []
+    },
+    {
+      "name": "山口維新公園店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=819",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "西条古川店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=820",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "広島宇品西店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=821",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "柏崎店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=822",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本菊池店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=823",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "都城前田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=824",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島七ツ島店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=825",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン姶良店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=826",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島吉野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=827",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡天神南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=828",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "福岡甘木店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=829",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "石巻蛇田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=830",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "外環八尾北店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "JR高槻駅北店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=832",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "アステ川西店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=833",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "南摂津駅南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=834",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都醍醐店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=835",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "南34条石山通り店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=836",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大分中央町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=837",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "田原町駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=838",
+      "facilities": []
+    },
+    {
+      "name": "阪急石橋駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=839",
+      "facilities": []
+    },
+    {
+      "name": "飯田座光寺店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=840",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "手稲前田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=841",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール神戸南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=842",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "センター北駅店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=843",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "二十四軒店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=844",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "丹波ゆめタウン店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=845",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "佐世保駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=846",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "松戸秋山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=847",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡行橋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=848",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島天文館店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=849",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "浜田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=850",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大森イトーヨーカドー店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=851",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "米沢徳町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=852",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "江別一番町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=853",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "北九州守恒店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=854",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "北浦和駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=855",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "新木場駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=856",
+      "facilities": []
+    },
+    {
+      "name": "鎌ヶ谷大仏店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=857",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "児島駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=858",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "福島南中央店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=859",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "エキア東武練馬店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=860",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "渋谷道玄坂上店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=861",
+      "facilities": []
+    },
+    {
+      "name": "徳島沖浜店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=862",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "南さつま加世田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=863",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "秋田八橋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=864",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "福山駅家町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=865",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "自治医大店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=866",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "土佐道路店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=867",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "松江浜乃木店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=868",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "千葉さつきが丘店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=870",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "東武下赤塚駅店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=871",
+      "facilities": []
+    },
+    {
+      "name": "鹿児島出水店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=872",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン赤穂店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=873",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール橿原店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=874",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "丸亀飯山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=875",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ライフ八戸ノ里店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=876",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鳥取立川店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=877",
+      "facilities": [
+        "multiToilet",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "徳島小松島店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=878",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "加須愛宕店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=879",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "和泉中央店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=880",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "北九州勝山公園店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=881",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "東岡山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=882",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎日向店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=883",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新琴似一番通店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=884",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "苫小牧弥生店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=885",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "七尾店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=886",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "香川三豊店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=887",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "和歌山大浦街道店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=888",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "沖縄糸満店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=889",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "河内長野本町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=890",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "北九州沼新町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=891",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福山松永店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=892",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "丸井大宮店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=893",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "松原商店街店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=894",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "松山道後店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=895",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "鶴岡南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=896",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "四条大宮店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=897",
+      "facilities": []
+    },
+    {
+      "name": "佐倉王子台店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=898",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大塚南口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=899",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "盛岡みたけ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=900",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "宇和島店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=901",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ビエラ明舞店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=903",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン明石ＳＣ２番街店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=904",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "足利朝倉店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=905",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "狸小路2丁目店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=906",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "長崎浜町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=907",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "東雁来店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=908",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "倉吉店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=909",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "アリオ八尾店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=910",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "葛西南口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=911",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サンリブわさだ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=912",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "入間新光店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=913",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "新居浜店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=914",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "横浜ランドマークプラザ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=915",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "横手ハッピータウン店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=916",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "高松東店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=917",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "水沢台町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=918",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "大崎古川店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=919",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "千葉東寺山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=920",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "呉市役所前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=921",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "北九州三郎丸店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=922",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "明石駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=923",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "大野城乙金店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=924",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール名取店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=925",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "博多バスターミナル店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=926",
+      "facilities": []
+    },
+    {
+      "name": "上越妙高駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=927",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "京都伏見稲荷店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=928",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール盛岡南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=929",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモールかほく店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=930",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "北九州戸畑店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=931",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "CiiNA CiiNA青森店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=932",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン駒岡店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=933",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "シャポー市川店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=934",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "箕面桜ケ丘店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=936",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "沖縄北谷58号店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=937",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎橘通店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=938",
+      "facilities": []
+    },
+    {
+      "name": "太田藤阿久店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=939",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "長崎諫早店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=940",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "利府店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=941",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "寝屋川南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=943",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "練馬土支田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=944",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ららぽーと沼津店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=945",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大阪メトロ今里北口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=946",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ライフガーデン水巻店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=947",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "マルナカ四万十店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=948",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "エルティ草津店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=949",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "テラスモール松戸店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=950",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "三原皆実店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=951",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "千葉富士見店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=952",
+      "facilities": []
+    },
+    {
+      "name": "高田馬場駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=953",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "松山大街道店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=954",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "沖縄宜野湾宇地泊店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=955",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン上磯店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=956",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "函館ベイエリア店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=957",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大野インター店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=958",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "もりのみやキューズモールBASE店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=959",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "江坂駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=960",
+      "facilities": [
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "福岡六本松店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=961",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "イオンモール羽生店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=962",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大宮南中野店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=963",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "駒沢公園店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=964",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "マーケットスクエアささしま店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=965",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "神戸元町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=966",
+      "facilities": []
+    },
+    {
+      "name": "BRANCH博多パピヨンガーデン店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=967",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "尾道平原店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=968",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "木津川城山台店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=969",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "丸井草加店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=970",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡室見店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=971",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール高知店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=972",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ららぽーと豊洲店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=973",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ヴィアイン広島新幹線口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=974",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "上野広小路店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=975",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "吉祥寺西口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=976",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ワイヤーズホテル品川シーサイド店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=977",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "鈴鹿中央通り店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=978",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "神戸藤原台店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=979",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "下北沢店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=980",
+      "facilities": []
+    },
+    {
+      "name": "グランエミオ所沢店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=981",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ダイワロイネットホテル横浜関内店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=982",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "東京ドームシティミーツポート店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=983",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "八戸城下店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=984",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "北12条東店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=985",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ミーツ国分寺店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=986",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "新小岩北口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=987",
+      "facilities": []
+    },
+    {
+      "name": "一之江駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=988",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "京急大森町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=989",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "亀岡千代川店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=990",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡渡辺通5丁目店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=991",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "神戸灘店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=992",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "BINO栄店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=993",
+      "facilities": []
+    },
+    {
+      "name": "伏見桃山駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=994",
+      "facilities": []
+    },
+    {
+      "name": "淡路志筑店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=995",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "羽曳野西浦店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=996",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン釧路店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=997",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "秋田東通店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=998",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン東神奈川店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=999",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール浦和美園店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1000",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "姫路駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1001",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "新三田駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1002",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "たつの店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1003",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール則武新町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1004",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "藤井寺駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1005",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "シャポー船橋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1006",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "赤羽東口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1007",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "東濃信用金庫土岐中央店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1008",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "阪急園田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1009",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "沖縄浦添経塚店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1010",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "広島緑井店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1011",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール川口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1012",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "鶴見緑地公園店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1013",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "高槻西町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1014",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "仙台幸町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1015",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "南池袋グリーン大通り店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1016",
+      "facilities": []
+    },
+    {
+      "name": "田辺いなり店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1017",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ビエラ小倉店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1018",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "東京医科大学病院店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1019",
+      "facilities": []
+    },
+    {
+      "name": "金町南口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1020",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "プラットモール長崎店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1021",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "沖縄南風原津嘉山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1022",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大和鶴間イトーヨーカドー店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1023",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大通西６丁目店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1024",
+      "facilities": []
+    },
+    {
+      "name": "ビーンズ阿佐ヶ谷店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1025",
+      "facilities": []
+    },
+    {
+      "name": "阪急三宮西口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1026",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "セブンパーク天美店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1027",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "荻窪西口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1028",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "北上本石町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1029",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "東池袋一丁目店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1030",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "高崎飯塚店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1031",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "千里丘駅東店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1032",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "イオン武蔵村山南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1033",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "酒田新橋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1034",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "セントレア店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1035",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "有楽町ビックカメラ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1036",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "福岡粕屋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1037",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "旭川買物公園通り店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1038",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "武蔵溝ノ口駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1039",
+      "facilities": []
+    },
+    {
+      "name": "狭山池店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1040",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "京急川崎駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1041",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆめタウン八代店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1042",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "桃谷駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1043",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "沖縄知花店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1044",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "浮間公園店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1045",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "姫路英賀保店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1046",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ダイワロイネットホテル東京京橋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1047",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "北見夕陽ヶ丘店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1048",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめモール西条店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1049",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "新宿三丁目店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1050",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "帯広西３条通り店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1051",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "樹モールプラザ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1052",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ウツノミヤテラス店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1053",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "小樽運河通り店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1054",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "東京営業テスト",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=9005",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "中京営業テスト",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=9006",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大阪営業テスト",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=9028",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "表示サンプル店舗(ご利用不可)",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=9071",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール土岐店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1055",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール大阪ドームシティ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1056",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ＪＲ掛川駅店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1057",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "木の葉モール橋本店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1058",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新宿ファーストウエスト店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1059",
+      "facilities": []
+    },
+    {
+      "name": "LICOPA川崎店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1060",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "沖縄泡瀬店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1061",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "茂原八千代店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1062",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "天童南小畑店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1063",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "南行徳店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1064",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "東陽町イースト２１店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1065",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "仙台マーブルロード店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1066",
+      "facilities": []
+    },
+    {
+      "name": "旭川旭神店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1067",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "安城福釜店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1069",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "鳴門店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1068",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "西荻窪店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1070",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "伊勢原岡崎店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1071",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "伊東店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1072",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "深川ギャザリア店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1073",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "群馬玉村店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1074",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "聖蹟桜ヶ丘店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1075",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "道頓堀店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1076",
+      "facilities": []
+    },
+    {
+      "name": "津山院庄店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1077",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "刈谷広小路店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1079",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "自由が丘メープル通り店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1078",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "尼崎つかしん店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1080",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "フジ南岩国店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1081",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "晴海トリトン店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1082",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "新宿文化クイントビル店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1083",
+      "facilities": []
+    },
+    {
+      "name": "鹿児島中央駅西口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1084",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "千歳北信濃店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1085",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "アトレ秋葉原店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1086",
+      "facilities": []
+    },
+    {
+      "name": "新橋烏森通り店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1087",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "枚方市駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1088",
+      "facilities": []
+    },
+    {
+      "name": "延岡城山公園店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1089",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオン港南台店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1090",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡春日惣利店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1091",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "高知福井店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1092",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "梅田ＨＥＰ通店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1093",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "高円寺北口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1094",
+      "facilities": []
+    },
+    {
+      "name": "上大岡ｃａｍｉｏ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1096",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "高槻郡家新町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1095",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "貝塚市役所前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1097",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "西梅田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1098",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "所沢プロペ通り店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1100",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "烏丸今出川店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1101",
+      "facilities": []
+    },
+    {
+      "name": "ららぽーと湘南平塚店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1103",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "磯子駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1104",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "大洲店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1105",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "京都錦小路店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1106",
+      "facilities": []
+    },
+    {
+      "name": "元住吉店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1107",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "湘南台駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1108",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "大森山王口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1109",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "幡ヶ谷駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1110",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "あびこ駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1111",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "阪急十三駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1112",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "戸塚西口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1113",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "港北東急SC店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1114",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "浦安駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1115",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "蒲田東口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1116",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "三木青山店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1117",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "納屋橋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1118",
+      "facilities": []
+    },
+    {
+      "name": "道の駅あらい店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1119",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "みなとみらいグランドセントラルタワー店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1120",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大通西２丁目店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1121",
+      "facilities": []
+    },
+    {
+      "name": "金山駅北口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1122",
+      "facilities": []
+    },
+    {
+      "name": "すすきの店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1123",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "福山駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1124",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "イオン旭川春光店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1125",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "高松オルネ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1126",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "静岡伝馬町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1127",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "伏見・日土地名古屋ビル店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1128",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール宮崎店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1129",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天満橋店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1130",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "小田急町田北口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1131",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "新発田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1132",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "長岡堺町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1133",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "豊田大林店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1135",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "みなと当知店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1136",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ＪＲ福島駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1134",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ＯＢＰツイン２１店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1138",
+      "facilities": []
+    },
+    {
+      "name": "名駅四丁目店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1137",
+      "facilities": []
+    },
+    {
+      "name": "渋川有馬店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1139",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "樟葉駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1140",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "千里中央店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1141",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "総社店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1142",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "一関中里店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1144",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "長野駅東口公園店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1145",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "芦屋ラポルテ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1146",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "新百合丘オーパ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1147",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北梅田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1148",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "近鉄学園前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1149",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "イオンモール四條畷店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1150",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "浅草ROX店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1151",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "赤坂一ツ木通り店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1152",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "京橋コムズガーデン店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1153",
+      "facilities": []
+    },
+    {
+      "name": "西鉄ホテルクルーム博多店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1154",
+      "facilities": []
+    },
+    {
+      "name": "新田辺駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1155",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "福崎店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1156",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "山形青田店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1157",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "三次店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1158",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "大船東口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1159",
+      "facilities": []
+    },
+    {
+      "name": "ＪＲ弁天町駅店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1160",
+      "facilities": []
+    },
+    {
+      "name": "ららぽーとTOKYO-BAY店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1161",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "多摩センター店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1162",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "大須大津通店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1163",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "淀屋橋南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1164",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "浜松駅エキマチウエスト店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1166",
+      "facilities": []
+    },
+    {
+      "name": "谷町四丁目店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1167",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "イオン春日井店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1168",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本下通店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1169",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "イオンモール福岡店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1170",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "南海堺駅店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1171",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "八潮駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1172",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "福岡赤坂店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1173",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール神戸北店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1174",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "佃２丁目店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1176",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "町屋駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1177",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "藤沢南口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1178",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "東土佐道路店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1179",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "蕨宿店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1180",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "本厚木東口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1181",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "西葛西店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1182",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "岡山本町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1183",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "京都駅八条口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1185",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "アルビ住道店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1186",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "西明石駅南口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1187",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "阪神今津駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1189",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ＫＩＴＴＥ大阪店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1190",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "京王八王子駅前店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1191",
+      "facilities": []
+    },
+    {
+      "name": "サンシャインシティアルパ店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1192",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "王子店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1193",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ロッテスクエア武蔵浦和店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1194",
+      "facilities": [
+        "multiToilet",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "エトモ池上店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1195",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "イオンモール堺鉄砲町店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1197",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本荒尾店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1198",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "博多リバレインモール店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1199",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "仙川駅南店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1201",
+      "facilities": [
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "金沢駅西口店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1204",
+      "facilities": []
+    },
+    {
+      "name": "東戸塚店",
+      "url": "https://www.komeda.co.jp/shop/detail.html?id=1205",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    }
+  ]
+}

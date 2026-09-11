@@ -1,0 +1,2128 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "originbento",
+  "name": "オリジン弁当",
+  "sourceUrl": "https://shop.toshu.co.jp/toshu/spot/lists",
+  "method": "公式店舗検索（NAVITIME製）が呼ぶ店舗API（/api/proxy2/shop/list）で全店舗を取得し、詳細フラグごとの絞り込み検索（c_d<番号>=1）の該当店舗を突き合わせて店舗ごとに集計",
+  "total": 403,
+  "note": "業態カテゴリ「オリジン弁当」「キッチンオリジン」に絞って集計（同じ店舗検索に載るオリジンデリカ54店・れんげ食堂Toshu81店・武蔵野うどん小麦晴れ4店・鉄鍋焼きスパ ゲッティ2店は除外）。フラグ項目のうち設備は 駐車場・イートイン・コンセント で、設備キーに対応するのは「駐車場」（絞り込み表記「駐車場がある」）のみ。子ども向け設備の属性は公開されていない。業態カテゴリ内訳: キッチンオリジン391店・オリジン弁当12店",
+  "facilities": {
+    "parking": {
+      "count": 48,
+      "label": "駐車場"
+    }
+  },
+  "stores": [
+    {
+      "name": "キッチンオリジン 高津店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000001",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 緑ヶ丘店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000002",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 調布店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000004",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 八幡山店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000005",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 練馬店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000008",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 永福町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000009",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 町田店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000010",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 南林間店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000011",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 青物横丁店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000017",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 中野店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000019",
+      "facilities": []
+    },
+    {
+      "name": "オリジン弁当 分倍河原店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000022",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 東村山店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000023",
+      "facilities": []
+    },
+    {
+      "name": "オリジン弁当 王子店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000024",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 西落合店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000025",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 平和台店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000028",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 江古田店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000031",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 西新井店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000032",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 芝浦店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000036",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 三鷹北口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000037",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 根津店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000038",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 立川店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000039",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 代々木上原店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000043",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 中野新井店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000045",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 瀬谷店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000046",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 谷保店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000047",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 下丸子店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000048",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 王子二丁目店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000049",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 下板橋店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000050",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 新高円寺店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000052",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 西新宿店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000053",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 矢向店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000054",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 西大島店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000059",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 鷺宮店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000061",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 武蔵境店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000062",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 茗荷谷店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000065",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 小田急相模原店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000066",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 船堀店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000068",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 月島店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000072",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 和光店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000073",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 荻窪南店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000074",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 聖蹟桜ヶ丘店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000076",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 南行徳店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000077",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 初台店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000078",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 東高円寺店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000080",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 東陽町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000081",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 馬橋店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000082",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 三軒茶屋店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000083",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 中板橋店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000086",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 厚木林店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000090",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 本所吾妻橋店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000093",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン ふじみ野店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000094",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 府中東口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000095",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 野方店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000097",
+      "facilities": []
+    },
+    {
+      "name": "オリジン弁当 草加店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000098",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 小平店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000099",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 日暮里店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000102",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 西荻窪店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000104",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 平井店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000105",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 長後店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000107",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 新宿靖国通り店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000108",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 京成大久保店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000109",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 三鷹南口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000110",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 清澄店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000111",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 上石神井店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000112",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 蔵前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000117",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 国領駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000121",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 目白高田店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000125",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 西川口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000126",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 根岸店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000127",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 稲田堤店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000128",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 新中野店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000129",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 住吉店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000132",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 池袋店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000134",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 妙典店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000138",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 八王子店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000139",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 東府中駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000142",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 町屋店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000144",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 本郷三丁目店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000146",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 南柏店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000147",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 白楽店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000148",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 京成立石店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000149",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 下高井戸店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000150",
+      "facilities": []
+    },
+    {
+      "name": "オリジン弁当 相模原南台店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000152",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 北大塚店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000154",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 金沢文庫店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000156",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 鶴見市場店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000157",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 中山店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000162",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン お花茶屋店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000163",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 森下店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000166",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 春日店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000167",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 駒込店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000168",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 西八王子北口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000169",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 下井草店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000171",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 衣笠店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000175",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 北越谷店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000177",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 五反野店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000180",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 東十条店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000181",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 妙蓮寺店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000183",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 千歳船橋南口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000184",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 成増店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000186",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 蒲生店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000187",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 門前仲町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000191",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 姉ヶ崎店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000193",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 西葛西六丁目店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000195",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 西巣鴨店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000196",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 立川柴崎町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000197",
+      "facilities": []
+    },
+    {
+      "name": "オリジン弁当 京急杉田店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000198",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 瑞江店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000200",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 本駒込店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000201",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 金町駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000203",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 大口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000204",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 道灌山下店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000206",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 東久留米西口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000207",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 桜新町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000208",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン つつじヶ丘駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000211",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 青葉台店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000212",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 船橋店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000216",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 蓮沼店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000217",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 八柱店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000219",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン かっぱ橋店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000220",
+      "facilities": []
+    },
+    {
+      "name": "オリジン弁当 ときわ台店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000222",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 北久里浜店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000223",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 東船橋店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000224",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 逗子店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000225",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 田無店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000226",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 潮見店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000228",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 早稲田正門前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000229",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 錦糸町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000232",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 鶴見西口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000233",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 黄金町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000237",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 築地店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000240",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 蓮根店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000241",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 赤羽岩淵店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000244",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 東浦和店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000246",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 三軒茶屋二丁目店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000247",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 中村橋店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000248",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 赤坂店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000249",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 千川店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000250",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 茅ヶ崎店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000253",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 中野新橋駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000254",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 京急汐入店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000256",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 戸塚店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000259",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 板橋本町駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000260",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 新丸子店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000261",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 鶴ヶ峰店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000268",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 向ヶ丘遊園東口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000269",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 中野南台店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000271",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 糀谷店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000272",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 東あずま店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000276",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 大倉山店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000278",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 四街道駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000279",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 蘇我店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000283",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 学芸大学店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000284",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 二子新地店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000285",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 志木店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000287",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 朝霞北口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000288",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 志茂店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000290",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 高田馬場店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000294",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 中央林間西口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000296",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 大泉学園店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000297",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 烏山駅前通り店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000299",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 生麦店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000302",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 南行徳2号店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000305",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 蕨西口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000307",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 蒔田店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000309",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 片倉店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000312",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 南流山駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000313",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 篠崎店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000314",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 馬橋東口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000316",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 東林間店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000317",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 戸越公園店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000319",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 立会川店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000320",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 鶴川店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000321",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 要町1丁目店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000324",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 市営片倉町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000325",
+      "facilities": []
+    },
+    {
+      "name": "オリジン弁当 鶴間店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000334",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 東新宿店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000336",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 吉祥寺店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000337",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 飛田給店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000342",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 反町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000343",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 西小山店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000344",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 大森山王店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000348",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 青梅店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000349",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン ひばりが丘北口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000350",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 狛江南口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000351",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 津田沼店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000353",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 西大井店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000355",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 上町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000357",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 川崎貝塚店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000358",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 川崎大師店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000361",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 薬園台店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000362",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 入間市駅店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000364",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 昭島店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000365",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン あざみ野店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000367",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 東所沢店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000368",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 板橋区役所駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000373",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 川崎小田店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000374",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 梅屋敷店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000377",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 宿河原店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000378",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 東川口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000379",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 綱島樽町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000380",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 豊田店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000383",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 武蔵新城店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000384",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 古淵店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000385",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 笹塚店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000387",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 川崎小川町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000392",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 南浦和店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000396",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 亀戸東口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000397",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 京急鶴見店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000398",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 葛西南口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000400",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 墨田石原2丁目店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000407",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 国立矢川店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000408",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 相模原駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000409",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 川崎追分店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000410",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 鶴見本町通り店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000413",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 三浦海岸店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000414",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 調布柴崎店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000417",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 平塚榎木町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000419",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 川崎神明町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000420",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 町田根岸店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000421",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 荏原町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000423",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 上永谷店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000425",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 京急南太田店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000427",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 横浜山手台店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000428",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 保谷北口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000429",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 東急溝の口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000430",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 井土ヶ谷店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000437",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 八潮店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000439",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 高島平南店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000444",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 武蔵野台店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000447",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 杉並堀ノ内店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000453",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 井荻店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000455",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 上尾二ツ宮店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000457",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "オリジン弁当 湘南江ノ島店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000458",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 谷塚店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000459",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 綱島西2丁目店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000460",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 町田成瀬街道店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000462",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 原木中山店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000464",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 茨木店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000465",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン イオン大日店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000467",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 本牧店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000468",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 城東古市店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000469",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン イオンスタイルむさし村山店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000470",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 奥沢店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000471",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン イオン鶴見緑地店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000472",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 新大阪宮原店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000474",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 洋光台店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000476",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 方南町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000480",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 練馬高野台店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000490",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 成田駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000494",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 京成佐倉店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000499",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 緑橋駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000500",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 宮前平店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000501",
+      "facilities": []
+    },
+    {
+      "name": "オリジン弁当 イオン高の原店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000502",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 都島店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000507",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 西堤本通り店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000514",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 蒲生4丁目店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000515",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 桃谷店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000517",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 阿波座店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000519",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン イオン羽生店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000520",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン イオン川口前川店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000522",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン イオンスタイル日の出店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000523",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 吹田店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000524",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン JR野田駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000525",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン イオン茨木店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000529",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン イオンスタイル奈良店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000530",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 北巽店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000532",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 若江岩田店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000535",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン イオン久里浜店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000537",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン イオンレイクタウン店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000538",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "オリジン弁当 イオン草津店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000541",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 阪神尼崎店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000543",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 淡路店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000544",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 古川橋店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000545",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 中目黒店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000546",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 仲町台店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000547",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 日本橋店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000548",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン イオン大和郡山店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000551",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 浦和店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000553",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 北堀江店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000554",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 大森海岸店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000556",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 堀切菖蒲園店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000559",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 武蔵関店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000560",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 大船店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000561",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 百合ヶ丘店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000562",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 千石店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000565",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン イオン伊丹昆陽店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000566",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 荏原中延店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000567",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 柏店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000568",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 香里園店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000571",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 三ツ沢上町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000572",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 小岩店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000573",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 寝屋川店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000575",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 吉川店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000579",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 萱島店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000582",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 神楽坂店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000584",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 天神橋7丁目店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000585",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 十三東店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000586",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 藤棚店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000590",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 京成小岩店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000592",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 大森町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000593",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 志村三丁目店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000597",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン たまプラーザ店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000598",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 立花北口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000603",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 大国町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000607",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 西宮北口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000612",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 関目店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000621",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 湘南台店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000623",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 東向島駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000625",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 西新宿五丁目店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000626",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 阪急伊丹店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000627",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 小竹向原店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000628",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 五反田店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000629",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン イオン八千代緑が丘店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000630",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 花見川店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000631",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 世田谷代田店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000636",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン イオン大宮店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000640",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "オリジン弁当 イオンスタイル幕張新都心店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000641",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 池尻大橋店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000645",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 一之江駅ビル店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000647",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 神奈川新町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000648",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 小台店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000654",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 日吉中央通り店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000655",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 湊川公園店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000656",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 大和中央通り店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000659",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 中野島店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000660",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 本八幡南口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000661",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 三ツ境店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000664",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 南鳩ヶ谷店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000665",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 花小金井店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000756",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン なにわ恵美須西店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000761",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 東三国店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000762",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 新座駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000767",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 行徳店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000768",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 京王多摩川店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000769",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 学芸大学駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000771",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 横浜和田町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000773",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 西橋本店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000774",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 伊勢佐木町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000778",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 近鉄今里店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000779",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 九条店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000785",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 新羽駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000788",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン イオン板橋店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000789",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 沼袋店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000790",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 八丁畷店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000793",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 伊勢佐木長者町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000796",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 瓢箪山店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000799",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 相模原清新店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000800",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 富士見台店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000822",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 久我山店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000829",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン イオン大阪ドームシティ店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000830",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 初芝店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000831",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 菊川駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000832",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン イオン久御山店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000837",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 元住吉店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000840",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 新小岩店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000841",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン イオン柏店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000843",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 与野本町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000857",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 大久保店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000862",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン アクロスプラザ東久留米店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000864",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 代田橋店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000871",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 北千里店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000873",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 尾山台店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000885",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 西所沢店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000889",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 高円寺店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000898",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 平間店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000901",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 生田店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000908",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン イオン京都五条店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000909",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン イオン箕面店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000912",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 上馬店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000920",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 北綾瀬店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000925",
+      "facilities": []
+    },
+    {
+      "name": "オリジン弁当 マックスバリュ習志野台店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000934",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 京王永山店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000937",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 上新庄駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000938",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 池上店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000940",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 三鷹台店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000943",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 川口駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000944",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 王子神谷店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000946",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン イオンフードスタイル瀬田店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000947",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 中河原駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000949",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 北浦和店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000952",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 浦安店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000953",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 緑地公園東口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000955",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 寺田町駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000958",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 天王町駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000960",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 守口市駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000961",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 南船場店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000962",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン みずほ台東口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000963",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 高幡不動店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000965",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン TXアベニュー八潮店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000966",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 北野駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000967",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン ダイエー泉佐野店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000973",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン 近鉄八尾駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000975",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン ジョルノ堺東店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000977",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 阪急塚口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000980",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 馬込沢駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000981",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 祖師ヶ谷大蔵店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000982",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 平塚西口店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000983",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 麹町店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000990",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 新横浜店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000000992",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン イオンタウンあびこ駅前店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000001001",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "キッチンオリジン アクロスプラザ北柏店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000001002",
+      "facilities": []
+    },
+    {
+      "name": "キッチンオリジン 下赤塚店",
+      "url": "https://shop.toshu.co.jp/toshu/spot/detail?code=0000001006",
+      "facilities": []
+    }
+  ]
+}

@@ -1,0 +1,546 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "ajinomingei",
+  "name": "味の民芸",
+  "sourceUrl": "https://www.ajino-mingei.co.jp/shop/",
+  "method": "公式店舗検索の都道府県別店舗一覧表（10都県）を全件取得し、「サービス」列のアイコン（有/無）と「席数」列の座敷席数を集計",
+  "total": 50,
+  "note": "座敷は「席数」列に「座敷席 N席」（N>0）とある店。「ベビーベッド」は公式表記のままで、設置場所（トイレ内か）は明記されていない",
+  "facilities": {
+    "stepFree": {
+      "count": 47,
+      "label": "スロープ設置"
+    },
+    "zashiki": {
+      "count": 40,
+      "label": "座敷席"
+    },
+    "diaperTable": {
+      "count": 46,
+      "label": "ベビーベッド"
+    },
+    "multiToilet": {
+      "count": 30,
+      "label": "多目的トイレ"
+    },
+    "parking": {
+      "count": 50,
+      "label": "駐車場"
+    }
+  },
+  "stores": [
+    {
+      "name": "味の民芸 岡山奉還町店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e5%b2%a1%e5%b1%b1%e5%a5%89%e9%82%84%e7%94%ba%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 岡山奥田店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e5%b2%a1%e5%b1%b1%e5%a5%a5%e7%94%b0%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 岡山国富店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e5%b2%a1%e5%b1%b1%e5%9b%bd%e5%af%8c%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 羽村店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e7%be%bd%e6%9d%91%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 多摩永山店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e5%a4%9a%e6%91%a9%e6%b0%b8%e5%b1%b1%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 アクロスプラザ東久留米店",
+      "url": "https://www.sagami-holdings.co.jp/store/%E5%91%B3%E3%81%AE%E6%B0%91%E8%8A%B8-%E3%82%A2%E3%82%AF%E3%83%AD%E3%82%B9%E3%83%97%E3%83%A9%E3%82%B6%E6%9D%B1%E4%B9%85%E7%95%99%E7%B1%B3%E5%BA%97%e3%80%80%E2%80%BB3-14%E3%82%AA%E3%83%BC%E3%83%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 葛飾奥戸店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e8%91%9b%e9%a3%be%e5%a5%a5%e6%88%b8%e5%ba%97/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 世田谷砧店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e4%b8%96%e7%94%b0%e8%b0%b7%e7%a0%a7%e5%ba%97/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 練馬高松店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e7%b7%b4%e9%a6%ac%e9%ab%98%e6%9d%be%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 吉祥寺北町店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e5%90%89%e7%a5%a5%e5%af%ba%e5%8c%97%e7%94%ba%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 三鷹牟礼店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e4%b8%89%e9%b7%b9%e7%89%9f%e7%a4%bc%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 小金井店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e5%b0%8f%e9%87%91%e4%ba%95%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "味の民芸 国分寺店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e5%9b%bd%e5%88%86%e5%af%ba%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 国立店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e5%9b%bd%e7%ab%8b%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 八王子店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e5%85%ab%e7%8e%8b%e5%ad%90%e5%ba%97/",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 八王子椚田店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e5%85%ab%e7%8e%8b%e5%ad%90%e6%a4%9a%e7%94%b0%e5%ba%97/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 本町田店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e6%9c%ac%e7%94%ba%e7%94%b0%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 町田成瀬店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e7%94%ba%e7%94%b0%e6%88%90%e7%80%ac%e5%ba%97/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 昭島中神店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e6%98%ad%e5%b3%b6%e4%b8%ad%e7%a5%9e%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 東久留米滝山東店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e6%9d%b1%e4%b9%85%e7%95%99%e7%b1%b3%e6%bb%9d%e5%b1%b1%e6%9d%b1%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 高島平店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e9%ab%98%e5%b3%b6%e5%b9%b3%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 子母口店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e5%ad%90%e6%af%8d%e5%8f%a3%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "味の民芸 川崎稲田堤店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e5%b7%9d%e5%b4%8e%e7%a8%b2%e7%94%b0%e5%a0%a4%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 川崎宮前店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e5%b7%9d%e5%b4%8e%e5%ae%ae%e5%89%8d%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 港北ニュータウン店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e6%b8%af%e5%8c%97%e3%83%8b%e3%83%a5%e3%83%bc%e3%82%bf%e3%82%a6%e3%83%b3%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "味の民芸 青葉台店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e9%9d%92%e8%91%89%e5%8f%b0%e5%ba%97/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 丸山台店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e4%b8%b8%e5%b1%b1%e5%8f%b0%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 若葉台店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e8%8b%a5%e8%91%89%e5%8f%b0%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 相模原橋本店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e7%9b%b8%e6%a8%a1%e5%8e%9f%e6%a9%8b%e6%9c%ac%e5%ba%97/",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 相模原並木店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e7%9b%b8%e6%a8%a1%e5%8e%9f%e4%b8%a6%e6%9c%a8%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 藤沢湘南台店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e8%97%a4%e6%b2%a2%e6%b9%98%e5%8d%97%e5%8f%b0%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 相模が丘店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e7%9b%b8%e6%a8%a1%e3%81%8c%e4%b8%98%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 新綱島駅前店",
+      "url": "https://www.sagami-holdings.co.jp/store/shin-tsunashima-eki/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 佐倉店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e4%bd%90%e5%80%89%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 成田ニュータウン店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e6%88%90%e7%94%b0%e3%83%8b%e3%83%a5%e3%83%bc%e3%82%bf%e3%82%a6%e3%83%b3%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 佐原店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e4%bd%90%e5%8e%9f%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 茂原店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e8%8c%82%e5%8e%9f%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 流山店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e6%b5%81%e5%b1%b1%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 八千代店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e5%85%ab%e5%8d%83%e4%bb%a3%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 柏十余二店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e6%9f%8f%e5%8d%81%e4%bd%99%e4%ba%8c%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 野田国道16号店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e9%87%8e%e7%94%b0%e5%9b%bd%e9%81%9316%e5%8f%b7%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 大田原店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e5%a4%a7%e7%94%b0%e5%8e%9f%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 足利店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e8%b6%b3%e5%88%a9%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 宇都宮帝京大前店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e5%ae%87%e9%83%bd%e5%ae%ae%e5%b8%9d%e4%ba%ac%e5%a4%a7%e5%89%8d%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 北浦和店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e5%8c%97%e6%b5%a6%e5%92%8c%e5%ba%97/",
+      "facilities": [
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 所沢小手指店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e6%89%80%e6%b2%a2%e5%b0%8f%e6%89%8b%e6%8c%87%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "multiToilet",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 守谷ふれあい通り店",
+      "url": "https://www.sagami-holdings.co.jp/store/mingei_moriya-hureaidori/",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 太田店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e5%a4%aa%e7%94%b0%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 甲府上石田店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e7%94%b2%e5%ba%9c%e4%b8%8a%e7%9f%b3%e7%94%b0%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "味の民芸 富士店",
+      "url": "https://www.sagami-holdings.co.jp/store/%e5%91%b3%e3%81%ae%e6%b0%91%e8%8a%b8-%e5%af%8c%e5%a3%ab%e5%ba%97/",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,708 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "anrakutei",
+  "name": "安楽亭",
+  "sourceUrl": "https://anrakutei.jp/map/result/",
+  "method": "公式店舗検索の全件結果に表示される取扱サービスアイコンを店舗ごとに集計",
+  "total": 129,
+  "note": "結果ページには安楽亭以外の運営業態が混在する可能性がある（店名で判別していない）",
+  "facilities": {
+    "stepFree": {
+      "count": 37,
+      "label": "入口スロープ"
+    },
+    "diaperTable": {
+      "count": 45,
+      "label": "おむつ交換台"
+    },
+    "kidsSpace": {
+      "count": 8,
+      "label": "キッズルーム"
+    },
+    "privateRoom": {
+      "count": 8,
+      "label": "個室"
+    }
+  },
+  "stores": [
+    {
+      "name": "大宮本郷店",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "大宮大和田店",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "大宮丸ヶ崎店",
+      "facilities": []
+    },
+    {
+      "name": "浦和西堀店",
+      "facilities": []
+    },
+    {
+      "name": "浦和町谷店",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "浦和三室店",
+      "facilities": []
+    },
+    {
+      "name": "江南町店",
+      "facilities": []
+    },
+    {
+      "name": "中居店",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "幸並店",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "伊刈店",
+      "facilities": []
+    },
+    {
+      "name": "赤山店",
+      "facilities": []
+    },
+    {
+      "name": "芝中田店",
+      "facilities": []
+    },
+    {
+      "name": "東本郷店",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "川口二十三夜店",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "東川口店",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "根岸店 リニューアル",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "行田押上町店 リニューアル",
+      "facilities": []
+    },
+    {
+      "name": "所沢亀ヶ谷店 リニューアル",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "加須店",
+      "facilities": []
+    },
+    {
+      "name": "本庄店",
+      "facilities": []
+    },
+    {
+      "name": "東松山店",
+      "facilities": []
+    },
+    {
+      "name": "川越下赤坂店",
+      "facilities": []
+    },
+    {
+      "name": "春日部豊町店",
+      "facilities": []
+    },
+    {
+      "name": "狭山笹井店",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "上尾向山店",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "上尾中妻店",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "草加店",
+      "facilities": []
+    },
+    {
+      "name": "草加柳島店",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "せんげん台店",
+      "facilities": [
+        "privateRoom",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "下間久里店",
+      "facilities": []
+    },
+    {
+      "name": "越谷神明店",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "戸田下前店",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "戸田氷川町店",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "入間藤沢店",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "入間二本木店",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "朝霞三原店",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "和光白子店",
+      "facilities": []
+    },
+    {
+      "name": "久喜店",
+      "facilities": []
+    },
+    {
+      "name": "栗橋店",
+      "facilities": []
+    },
+    {
+      "name": "北本中丸店",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "北本店",
+      "facilities": [
+        "kidsSpace",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "八潮店",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "みずほ台店",
+      "facilities": []
+    },
+    {
+      "name": "富士見鶴瀬店",
+      "facilities": []
+    },
+    {
+      "name": "三郷店",
+      "facilities": []
+    },
+    {
+      "name": "蓮田店",
+      "facilities": [
+        "privateRoom",
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "幸手店",
+      "facilities": []
+    },
+    {
+      "name": "鶴ヶ島店",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "吉川店",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "伊奈店",
+      "facilities": []
+    },
+    {
+      "name": "川島町店",
+      "facilities": []
+    },
+    {
+      "name": "松伏店",
+      "facilities": []
+    },
+    {
+      "name": "水戸千波町店",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "結城店",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "つくば店",
+      "facilities": []
+    },
+    {
+      "name": "神栖店",
+      "facilities": []
+    },
+    {
+      "name": "宇都宮鶴田町店",
+      "facilities": []
+    },
+    {
+      "name": "高崎貝沢店",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "太田高林店",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "行徳店",
+      "facilities": []
+    },
+    {
+      "name": "薬円台店",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "船橋法典店",
+      "facilities": []
+    },
+    {
+      "name": "木更津中央店",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "みのり台店",
+      "facilities": []
+    },
+    {
+      "name": "松戸八ヶ崎店",
+      "facilities": []
+    },
+    {
+      "name": "松戸五香店",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "野田店 リニューアル",
+      "facilities": []
+    },
+    {
+      "name": "八日市場店",
+      "facilities": []
+    },
+    {
+      "name": "沼南店",
+      "facilities": []
+    },
+    {
+      "name": "市原国分寺台店",
+      "facilities": []
+    },
+    {
+      "name": "南流山店",
+      "facilities": []
+    },
+    {
+      "name": "八千代高津店",
+      "facilities": []
+    },
+    {
+      "name": "袖ヶ浦店",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "杉並堀ノ内店",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "池袋北口店",
+      "facilities": []
+    },
+    {
+      "name": "尾久店",
+      "facilities": []
+    },
+    {
+      "name": "赤羽東口店",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "坂下店",
+      "facilities": []
+    },
+    {
+      "name": "大泉店",
+      "facilities": [
+        "privateRoom",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "平和台店",
+      "facilities": []
+    },
+    {
+      "name": "練馬関町店",
+      "facilities": []
+    },
+    {
+      "name": "上石神井店",
+      "facilities": []
+    },
+    {
+      "name": "足立入谷店",
+      "facilities": []
+    },
+    {
+      "name": "足立青井店",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "保木間店",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "亀有店",
+      "facilities": []
+    },
+    {
+      "name": "葛西店 リニューアル",
+      "facilities": [
+        "privateRoom",
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "江戸川中央店",
+      "facilities": []
+    },
+    {
+      "name": "北小岩店",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "八王子椚田店",
+      "facilities": []
+    },
+    {
+      "name": "八王子中野上町店",
+      "facilities": []
+    },
+    {
+      "name": "八王子大和田店",
+      "facilities": []
+    },
+    {
+      "name": "八王子上柚木店 リニューアル",
+      "facilities": []
+    },
+    {
+      "name": "立川店",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "青梅新町店",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "府中浅間町店",
+      "facilities": []
+    },
+    {
+      "name": "町田森野店",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "小平店",
+      "facilities": []
+    },
+    {
+      "name": "百草園店",
+      "facilities": []
+    },
+    {
+      "name": "西国分寺店",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "和泉多摩川店",
+      "facilities": []
+    },
+    {
+      "name": "東久留米店",
+      "facilities": []
+    },
+    {
+      "name": "多摩永山店",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "羽村店",
+      "facilities": []
+    },
+    {
+      "name": "田無北原店",
+      "facilities": []
+    },
+    {
+      "name": "生麦店",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "伊勢佐木町店",
+      "facilities": []
+    },
+    {
+      "name": "横浜吉野町店",
+      "facilities": [
+        "kidsSpace",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "横浜洋光台店",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "東戸塚店",
+      "facilities": []
+    },
+    {
+      "name": "今宿西店",
+      "facilities": []
+    },
+    {
+      "name": "横浜白根店",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "霧ヶ丘店",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "川崎小田店",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "川崎南町店",
+      "facilities": [
+        "privateRoom",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "川崎高津店",
+      "facilities": [
+        "privateRoom",
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "川崎初山店",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "宮前平店",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "横須賀衣笠店",
+      "facilities": []
+    },
+    {
+      "name": "平塚四之宮店 リニューアル",
+      "facilities": []
+    },
+    {
+      "name": "厚木船子店",
+      "facilities": [
+        "kidsSpace",
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "大和店",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "座間店",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "大井松田店 リニューアル",
+      "facilities": [
+        "kidsSpace",
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "相模原上溝店",
+      "facilities": []
+    },
+    {
+      "name": "相模原九沢橋店",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "浜松ささがせ店",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "浜松三方町店",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "磐田店",
+      "facilities": [
+        "kidsSpace",
+        "stepFree"
+      ]
+    }
+  ]
+}

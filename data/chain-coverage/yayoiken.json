@@ -1,0 +1,2667 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "yayoiken",
+  "name": "やよい軒",
+  "sourceUrl": "https://store.yayoiken.com/b/yayoiken/attr/?t=attr_con",
+  "method": "公式店舗検索（store.yayoiken.com）の店舗一覧を全ページめくり、店舗ごとのサービス条件アイコン（お子様メニュー・駐車場あり）を集計",
+  "total": 380,
+  "note": "一覧の件数表示 380 件。アイコンはほかに朝食メニュー販売・Uber Eats・出前館があるが設備キーには対応づけていない",
+  "facilities": {
+    "kidsMenu": {
+      "count": 261,
+      "label": "お子様メニュー"
+    },
+    "parking": {
+      "count": 220,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "やよい軒 札幌駅南口店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1754/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 東雁来店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2018/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 南郷通１９丁目店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1710/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 藻岩店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1753/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 二十四軒店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1897/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 羊ヶ丘通り店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1830/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 旭川永山店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2019/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 苫小牧明野新町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1907/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 千歳駅前店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1896/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 フレスポ恵み野店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1094/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 仙台一番町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1809/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 仙台六丁の目店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1835/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 石巻中里店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2117/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 名取増田店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1895/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 古川穂波店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1098/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 水戸米沢町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2037/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 日立多賀店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2271/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 古河店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2276/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 石岡旭台店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1703/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 牛久上柏田店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1724/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 つくば下広岡店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1002/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 ひたちなか市毛店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1842/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 鹿嶋谷原店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2071/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 守谷立沢店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1779/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 宇都宮テクノポリス店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1008/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 宇都宮御幸本町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1770/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 宇都宮鶴田町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1947/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 宇都宮大曽店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2127/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 足利朝倉町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1479/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 栃木バイパス店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1752/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 佐野高萩店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1395/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 鹿沼店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1904/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 小山東城南店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2149/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 前橋大友町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2116/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 伊勢崎宮子町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1281/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 太田西矢島店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1287/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 館林緑町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1773/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 大宮大栄橋店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2165/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 岩槻南平野店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1090/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 川越西口店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2038/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 熊谷籠原店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1698/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 川口店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1983/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 川口芝店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2092/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 所沢日吉町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1902/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 ベスタ本庄寿店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2057/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 春日部小渕店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2021/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 ベスタ狭山店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2115/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 吹上鎌塚店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1268/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 草加稲荷店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2015/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 越谷神明町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2028/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 久喜店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1346/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 幸手東店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1497/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 ライフガーデン仁戸名店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1424/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 千葉シーワン店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1998/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 稲毛山王店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1380/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 本八幡店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1274/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 南行徳店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1278/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 行徳店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1769/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 船橋店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1049/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 西船橋店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2132/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 松戸本町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1759/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 野田船形店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2063/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 成田美郷台店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2046/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 佐倉寺崎店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2047/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 東金田間店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1390/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 柏増尾台店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1491/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 大和田新田店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2027/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 富里店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1878/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 神田北口店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1048/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 水道橋白山通り店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1218/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 銀座インズ店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2148/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒外神田３丁目店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2202/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 茅場町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1756/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 新宿明治通り店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1028/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 新宿百人町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1070/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 新宿御苑店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1072/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 高田馬場店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1146/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 四谷２丁目店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1210/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 新宿小滝橋通り店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1323/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 馬場口店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1702/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 西新宿店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1881/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 早稲田店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2056/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 新宿靖国通り店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2143/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 白山店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1329/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 本郷店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2031/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 東大病院店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2217/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 蔵前店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1901/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 三ノ輪店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2072/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 浅草田原町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2077/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 東上野店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2079/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 錦糸町北口店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1165/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 木場店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1284/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 亀戸北口店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1748/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 大森店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1781/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 五反田店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2136/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 蒲田店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1335/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 三軒茶屋店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1212/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 駒沢店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1415/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 千歳烏山店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2278/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 青山学院大学前店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1421/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 代々木店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2171/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 恵比寿１丁目店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2275/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 中野北口店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1309/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 高円寺店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1174/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 阿佐ヶ谷南店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2289/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 池袋劇場通り店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1228/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 巣鴨南口店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1845/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 南池袋店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2059/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 要町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2131/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 大山店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2130/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 練馬店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1887/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 新小岩南口店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1208/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 金町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1967/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 亀有店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2048/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 小岩店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1886/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 葛西店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2014/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 西葛西店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2170/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 八王子店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1354/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 立川北店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2135/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 吉祥寺サンロード店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2279/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 吉祥寺南町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2283/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 町田店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2172/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 日野店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2091/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 秋津店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1476/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 国立店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2162/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 武蔵村山本町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1858/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 鶴見シークレイン店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2284/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 長者町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1143/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 伊勢佐木町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1957/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 日の出町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2121/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 馬車道店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2151/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 青葉台店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2030/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 川崎ことろばし店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2020/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 川崎駅西口店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2119/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 武蔵中原店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1273/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 武蔵新城店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1768/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 武蔵小杉店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2118/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 相模大野店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1084/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 横須賀大滝町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1219/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 平塚店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1009/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 大船店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1450/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 湘南藤沢店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1730/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 本厚木店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2147/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 足柄大井町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1711/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 松崎店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1709/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 亀田店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1761/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 亀貝店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1828/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 富山呉羽店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1093/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 富山山室店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1836/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 高岡横田本町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1763/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 富山滑川店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1937/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 金沢増泉店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1401/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 金沢福久店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1498/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 金沢駅西店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2023/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 小松店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1738/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 松任店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1712/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 金沢御経塚店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1495/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 福井種池店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1465/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 福井大和田店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1784/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 福井鯖江店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1762/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 甲府塩部店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1467/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 甲府和戸店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2068/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 甲府昭和店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2144/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 長野稲里店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1899/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 塩尻広丘店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1739/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 岐阜柳津店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1454/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 岐阜入舟町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1848/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 岐阜島店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2111/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 静岡ＳＢＳ通り店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2265/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 静岡吉川店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1865/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 ＪＲ浜松店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1296/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 浜松有玉店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1388/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 浜松本郷町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1433/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 浜松若林店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2103/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 三島玉川店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1682/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 富士本市場店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1079/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 磐田店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1872/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 藤枝店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1740/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 袋井店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1860/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 池下店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1340/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 今池店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2270/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 名古屋丸の内店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1440/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 栄四丁目店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1458/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 名古屋伏見店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2123/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 久屋大通駅前店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2218/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 イオンタウン熱田千年店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2051/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 名古屋小幡店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1765/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 岡崎岩津店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1696/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 岡崎若松東店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2256/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 一宮公園通店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2267/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 豊田寿町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2125/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 西尾今川町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2281/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 小牧郷中店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2039/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 扶桑店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2061/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 四日市追分店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2011/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 桑名江場店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1917/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 鈴鹿中央店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2269/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 鈴鹿南江島町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2272/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 彦根店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1721/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 草津駒井沢店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1054/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 野洲店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1459/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 イオンタウン湖南店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1477/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 八日市店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1793/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 烏丸今出川店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1882/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 京都二条店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1796/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 河原町三条店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2095/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 烏丸御池店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2145/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 五条烏丸店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1239/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 四条烏丸店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2050/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 京都吉祥院店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/02295/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 京都駅八条口店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2153/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 西院店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2255/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 京都沓掛店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1884/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 京都城陽店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2154/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 京都八幡店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1943/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 久御山店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1253/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 京橋店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1431/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 野田阪神店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1259/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 九条店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1075/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 阿波座店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1233/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 新町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2086/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 フォレオ大阪ドームシティ店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2142/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 肥後橋店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2280/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 天王寺駅前店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1930/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 難波元町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2106/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 難波中２丁目店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2138/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 新大阪東口店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2126/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 鶴橋店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1815/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 蒲生４丁目店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2114/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 阿倍野店 7/24(金)グランドオープン",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2290/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 長居店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1758/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 天下茶屋店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2139/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 西中島５丁目店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1337/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 御堂筋新大阪駅前店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1859/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 梅田東店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1162/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 阪急梅田店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1868/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 天六店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2016/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 東天満店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2029/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 中津店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2158/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 日本橋店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1083/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 本町通り店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1154/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 内本町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1235/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 堺筋本町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1360/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 大阪北浜店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2025/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 ＪＲ森ノ宮店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2150/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 堺東店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1824/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 堺大野芝店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2137/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 堺浜寺店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2069/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 岸和田三田町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1750/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 ミラモール東岸和田駅前店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2264/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 阪急池田店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1428/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 江坂店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1097/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 泉大津店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2164/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 高槻店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1797/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 京阪守口店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2012/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 守口ジャガータウン店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2268/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 枚方店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2140/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 ＪＲ茨木店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1211/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 阪急茨木店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1263/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 いこらも～る泉佐野店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2163/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 寝屋川讃良西町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2141/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 香里園店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2173/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 和泉中央店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1314/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 外環柏原店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2110/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 京阪大和田駅前店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1394/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 高石店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2065/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 布施店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2049/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 小阪店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2120/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 長田店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2169/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 三宮店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1301/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 神戸元町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2064/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 姫路花田店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1707/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 姫路保城店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1766/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 姫路飾磨店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2105/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 西明石店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2017/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 今津店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1188/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 阪神西宮店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1913/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 阪急伊丹店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1774/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 加古川平岡店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2277/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 奈良大安寺店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1373/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 奈良駅店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2152/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 天理店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2155/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 御所元町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1446/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 生駒店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1729/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 和歌山インター店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1695/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 和歌山大浦店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1735/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 紀伊橋本店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1782/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 ラ・ムー大安寺店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1747/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 岡山新保店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1160/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 倉敷平田店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1486/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 倉敷連島店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1705/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 笠岡店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2058/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 三川町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2054/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 フォレオ広島東店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1473/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 稲荷町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1464/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 長楽寺店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2096/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 五日市店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2076/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 三原店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1706/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 緑町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1804/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 神辺店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1805/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 ゆめタウン大竹店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1343/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 東広島店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1375/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 パルティフジ坂店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2097/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 下関長府店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2045/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 宇部則貞店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2082/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 山口大学前店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2013/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 防府店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2081/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 周南城ヶ丘店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1482/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 徳島川内町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2094/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 高松東バイパス店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1460/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 高松春日町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1883/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 松山福音寺店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1472/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 エミフルＭＡＳＡＫＩ店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1474/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 小倉南インター店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1463/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 小倉沼本町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1826/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 本城店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1722/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 三ヶ森店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2032/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 箱崎店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1248/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 和白店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1794/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 呉服町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1199/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 福岡空港通り店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1213/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 半道橋店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1272/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 博多祇園店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1308/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 月隈店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1803/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 光丘店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1900/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 筑紫口店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2166/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 天神２丁目店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1201/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 高砂店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2175/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 アクロス福岡店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2266/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 横手南店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1372/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 大橋店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2113/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 石丸店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1893/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 小田部店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1499/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 西新店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2055/",
+      "facilities": []
+    },
+    {
+      "name": "やよい軒 上津店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2036/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 久留米合川店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2146/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 直方店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1801/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 飯塚店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1944/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 筑後店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1780/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 コスタ行橋店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1478/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 春日店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2040/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 イオン大野城店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1336/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 宗像店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1400/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 太宰府店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2122/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 福津店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1745/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 新宮店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1195/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 粕屋仲原店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1894/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 苅田店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2102/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 高木瀬店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1905/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 南佐賀店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2035/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 唐津店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1874/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 鳥栖店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2159/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 基山店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2033/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 大野モール店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2129/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 諫早店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1867/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 長崎空港通り店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1958/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 時津店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1448/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 下通店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1058/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 桜木店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1679/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 熊本田崎店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2060/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 南高江店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2168/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "やよい軒 西合志店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1840/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 嘉島店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1363/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 大分下郡店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1461/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 生石店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1821/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 敷戸店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2044/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 明野店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2128/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 都城都北店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2075/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 吉野店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1822/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 新栄町店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2052/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 鹿児島南栄店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/2090/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 鹿屋寿店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1365/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 霧島国分店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1371/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 加治木店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/1869/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 小禄店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/43008/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 はにんす宜野湾店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/43010/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 ピーズスクエア浦添店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/43003/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 ザ・フォレストモール名護店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/43009/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 うるま江洲店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/43006/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "やよい軒 北谷美浜店",
+      "url": "https://store.yayoiken.com/b/yayoiken/info/43001/",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    }
+  ]
+}

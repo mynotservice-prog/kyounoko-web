@@ -1,0 +1,1476 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "uobei",
+  "name": "魚べい",
+  "sourceUrl": "https://www.uobei.info/store/",
+  "method": "公式店舗検索が呼ぶ店舗API（Kuroco）の全件からブランド「魚べい」を抽出し、店舗ごとの service 属性（一覧カードのアイコン）を集計",
+  "total": 185,
+  "note": "同APIに混在するグループ他業態（元気寿司6件・千両5件・うま勝3件）は除外。service の選択肢は 回転しない寿司/クレジット可/アプリ順番待ち予約可/アプリお持ち帰り予約可/駐車場/車いす対応 で、子ども向け設備の属性は無い。「車いす対応」は入口の段差なし等を明示した表記ではない",
+  "facilities": {
+    "parking": {
+      "count": 173,
+      "label": "駐車場"
+    },
+    "stepFree": {
+      "count": 177,
+      "label": "車いす対応"
+    }
+  },
+  "stores": [
+    {
+      "name": "魚べい 大山店",
+      "url": "https://www.uobei.info/store/?id=170",
+      "facilities": []
+    },
+    {
+      "name": "魚べい 大森駅山王北口店",
+      "url": "https://www.uobei.info/store/?id=204",
+      "facilities": []
+    },
+    {
+      "name": "魚べい 志都呂店",
+      "url": "https://www.uobei.info/store/?id=246",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 渋谷道玄坂店",
+      "url": "https://www.uobei.info/store/?id=312",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 春日店",
+      "url": "https://www.uobei.info/store/?id=330",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 太宰府大佐野店",
+      "url": "https://www.uobei.info/store/?id=337",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 小倉南店",
+      "url": "https://www.uobei.info/store/?id=352",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい ビバモール東松山店",
+      "url": "https://www.uobei.info/store/?id=408",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 岸和田店",
+      "url": "https://www.uobei.info/store/?id=428",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 新大久保店",
+      "url": "https://www.uobei.info/store/?id=431",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 貝塚店",
+      "url": "https://www.uobei.info/store/?id=438",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい イオンタウン豊中庄内店",
+      "url": "https://www.uobei.info/store/?id=440",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい ヒタチエ店",
+      "url": "https://www.uobei.info/store/?id=449",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 港北TOKYU S.C.店",
+      "url": "https://www.uobei.info/store/?id=452",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい minanoba相模原店",
+      "url": "https://www.uobei.info/store/?id=454",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 岩見沢店",
+      "url": "https://www.uobei.info/store/?id=283",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 手稲前田店",
+      "url": "https://www.uobei.info/store/?id=307",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 屯田店",
+      "url": "https://www.uobei.info/store/?id=318",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 北35条店",
+      "url": "https://www.uobei.info/store/?id=320",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 八軒24条通店",
+      "url": "https://www.uobei.info/store/?id=327",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 旭川東光店",
+      "url": "https://www.uobei.info/store/?id=328",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 旭川永山店",
+      "url": "https://www.uobei.info/store/?id=332",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 新琴似店",
+      "url": "https://www.uobei.info/store/?id=335",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 滝川店",
+      "url": "https://www.uobei.info/store/?id=340",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 北見店",
+      "url": "https://www.uobei.info/store/?id=355",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい クロスモール新発寒店",
+      "url": "https://www.uobei.info/store/?id=369",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 清田店",
+      "url": "https://www.uobei.info/store/?id=296",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 白石栄通店",
+      "url": "https://www.uobei.info/store/?id=302",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 千歳店",
+      "url": "https://www.uobei.info/store/?id=317",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 北斗七重浜店",
+      "url": "https://www.uobei.info/store/?id=341",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 函館本通店",
+      "url": "https://www.uobei.info/store/?id=345",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 帯広稲田店",
+      "url": "https://www.uobei.info/store/?id=351",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 帯広柏林台店",
+      "url": "https://www.uobei.info/store/?id=380",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 苫小牧店",
+      "url": "https://www.uobei.info/store/?id=381",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 苗穂店",
+      "url": "https://www.uobei.info/store/?id=384",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 室蘭店",
+      "url": "https://www.uobei.info/store/?id=420",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 平岸店",
+      "url": "https://www.uobei.info/store/?id=421",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 白河店",
+      "url": "https://www.uobei.info/store/?id=214",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 仙台泉店",
+      "url": "https://www.uobei.info/store/?id=325",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい クロスモール仙台荒井店",
+      "url": "https://www.uobei.info/store/?id=350",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 古川店",
+      "url": "https://www.uobei.info/store/?id=366",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい アクロスプラザ富沢西店",
+      "url": "https://www.uobei.info/store/?id=372",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 仙台鶴ケ谷店",
+      "url": "https://www.uobei.info/store/?id=374",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 須賀川店",
+      "url": "https://www.uobei.info/store/?id=382",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 福島黒岩店",
+      "url": "https://www.uobei.info/store/?id=401",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 利府店",
+      "url": "https://www.uobei.info/store/?id=419",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 郡山島店",
+      "url": "https://www.uobei.info/store/?id=425",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 八山田店",
+      "url": "https://www.uobei.info/store/?id=430",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 会津城南店",
+      "url": "https://www.uobei.info/store/?id=436",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 名取店",
+      "url": "https://www.uobei.info/store/?id=437",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 水戸赤塚店",
+      "url": "https://www.uobei.info/store/?id=193",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい ひたちなか店",
+      "url": "https://www.uobei.info/store/?id=253",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい ひたち野うしく店",
+      "url": "https://www.uobei.info/store/?id=285",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 土浦店",
+      "url": "https://www.uobei.info/store/?id=329",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 水戸元吉田店",
+      "url": "https://www.uobei.info/store/?id=360",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 龍ケ崎店",
+      "url": "https://www.uobei.info/store/?id=373",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 神栖店",
+      "url": "https://www.uobei.info/store/?id=375",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 石岡店",
+      "url": "https://www.uobei.info/store/?id=398",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 那珂店",
+      "url": "https://www.uobei.info/store/?id=400",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい つくばみどりの店",
+      "url": "https://www.uobei.info/store/?id=414",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 常陸太田店",
+      "url": "https://www.uobei.info/store/?id=446",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 燕三条店",
+      "url": "https://www.uobei.info/store/?id=190",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 新潟近江店",
+      "url": "https://www.uobei.info/store/?id=220",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 新通店",
+      "url": "https://www.uobei.info/store/?id=225",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい アルカディアシティ上越店",
+      "url": "https://www.uobei.info/store/?id=264",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい ライフガーデンしばた店",
+      "url": "https://www.uobei.info/store/?id=315",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 亀貝店",
+      "url": "https://www.uobei.info/store/?id=319",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 上越高田店",
+      "url": "https://www.uobei.info/store/?id=331",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい アクロスプラザ長岡七日町店",
+      "url": "https://www.uobei.info/store/?id=356",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい リップス旭岡店",
+      "url": "https://www.uobei.info/store/?id=359",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 東三条店",
+      "url": "https://www.uobei.info/store/?id=362",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "魚べい リップス愛宕店",
+      "url": "https://www.uobei.info/store/?id=364",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい アークプラザ新潟店",
+      "url": "https://www.uobei.info/store/?id=434",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 新潟赤道店",
+      "url": "https://www.uobei.info/store/?id=444",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 下川俣店",
+      "url": "https://www.uobei.info/store/?id=172",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 西川田店",
+      "url": "https://www.uobei.info/store/?id=173",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 茂呂店",
+      "url": "https://www.uobei.info/store/?id=182",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 上戸祭店",
+      "url": "https://www.uobei.info/store/?id=187",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 今市芹沼店",
+      "url": "https://www.uobei.info/store/?id=207",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 宇都宮インターパーク店",
+      "url": "https://www.uobei.info/store/?id=230",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 大田原美原店",
+      "url": "https://www.uobei.info/store/?id=262",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 鹿沼府所町店",
+      "url": "https://www.uobei.info/store/?id=313",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 平松本町店",
+      "url": "https://www.uobei.info/store/?id=323",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい さくら氏家店",
+      "url": "https://www.uobei.info/store/?id=344",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 西那須野南郷屋店",
+      "url": "https://www.uobei.info/store/?id=347",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい ゆいの杜店",
+      "url": "https://www.uobei.info/store/?id=394",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 鶴田店",
+      "url": "https://www.uobei.info/store/?id=455",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 朝倉町店",
+      "url": "https://www.uobei.info/store/?id=178",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 西城南店",
+      "url": "https://www.uobei.info/store/?id=188",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 栃木箱森店",
+      "url": "https://www.uobei.info/store/?id=378",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 佐野店",
+      "url": "https://www.uobei.info/store/?id=379",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 筑西店",
+      "url": "https://www.uobei.info/store/?id=386",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 足利花園町店",
+      "url": "https://www.uobei.info/store/?id=407",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 幸手店",
+      "url": "https://www.uobei.info/store/?id=411",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 飯塚店",
+      "url": "https://www.uobei.info/store/?id=174",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 連取店",
+      "url": "https://www.uobei.info/store/?id=194",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい パワーモールおおた店",
+      "url": "https://www.uobei.info/store/?id=301",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい パワーモール前橋みなみ店",
+      "url": "https://www.uobei.info/store/?id=308",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい ワカバウォーク店",
+      "url": "https://www.uobei.info/store/?id=322",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 吉岡店",
+      "url": "https://www.uobei.info/store/?id=324",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 館林店",
+      "url": "https://www.uobei.info/store/?id=326",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 高崎問屋町店",
+      "url": "https://www.uobei.info/store/?id=333",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 川越クレアモール店",
+      "url": "https://www.uobei.info/store/?id=396",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 川越的場店",
+      "url": "https://www.uobei.info/store/?id=415",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 深谷店",
+      "url": "https://www.uobei.info/store/?id=417",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 太田新田店",
+      "url": "https://www.uobei.info/store/?id=418",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 所沢牛沼店",
+      "url": "https://www.uobei.info/store/?id=215",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 桜木町店",
+      "url": "https://www.uobei.info/store/?id=217",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 小手指店",
+      "url": "https://www.uobei.info/store/?id=303",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 入間豊岡店",
+      "url": "https://www.uobei.info/store/?id=334",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 狭山入間川店",
+      "url": "https://www.uobei.info/store/?id=339",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 成増駅南口店",
+      "url": "https://www.uobei.info/store/?id=397",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 川口領家店",
+      "url": "https://www.uobei.info/store/?id=409",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 大宮西口店",
+      "url": "https://www.uobei.info/store/?id=432",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 岩槻店",
+      "url": "https://www.uobei.info/store/?id=263",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 八潮店",
+      "url": "https://www.uobei.info/store/?id=305",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい フレスポ稲毛店",
+      "url": "https://www.uobei.info/store/?id=316",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 成田美郷台店",
+      "url": "https://www.uobei.info/store/?id=353",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 流山おおたかの森店",
+      "url": "https://www.uobei.info/store/?id=354",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 東習志野店",
+      "url": "https://www.uobei.info/store/?id=357",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい ピアシティ稲毛海岸店",
+      "url": "https://www.uobei.info/store/?id=368",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 千葉ニュータウン店",
+      "url": "https://www.uobei.info/store/?id=377",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 市原白金通り店",
+      "url": "https://www.uobei.info/store/?id=385",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 八千代村上店",
+      "url": "https://www.uobei.info/store/?id=429",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 船橋海神店",
+      "url": "https://www.uobei.info/store/?id=451",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい ４号春日部店",
+      "url": "https://www.uobei.info/store/?id=453",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 相模原富士見店",
+      "url": "https://www.uobei.info/store/?id=189",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "魚べい 東久留米店",
+      "url": "https://www.uobei.info/store/?id=306",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい ブランチ茅ヶ崎店",
+      "url": "https://www.uobei.info/store/?id=358",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい キテラタウン調布店",
+      "url": "https://www.uobei.info/store/?id=365",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい Aコープ中田店",
+      "url": "https://www.uobei.info/store/?id=399",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい マチノマ大森店",
+      "url": "https://www.uobei.info/store/?id=406",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 学芸大学駅前店",
+      "url": "https://www.uobei.info/store/?id=416",
+      "facilities": []
+    },
+    {
+      "name": "魚べい 吉祥寺店",
+      "url": "https://www.uobei.info/store/?id=441",
+      "facilities": []
+    },
+    {
+      "name": "魚べい 半田店",
+      "url": "https://www.uobei.info/store/?id=277",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 名古屋中川店",
+      "url": "https://www.uobei.info/store/?id=363",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 豊田前田町店",
+      "url": "https://www.uobei.info/store/?id=367",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 津高茶屋店",
+      "url": "https://www.uobei.info/store/?id=388",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 松阪店",
+      "url": "https://www.uobei.info/store/?id=390",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 黒川店",
+      "url": "https://www.uobei.info/store/?id=276",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 名古屋茶屋店",
+      "url": "https://www.uobei.info/store/?id=342",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 名古屋守山店",
+      "url": "https://www.uobei.info/store/?id=361",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 岐阜県庁前店",
+      "url": "https://www.uobei.info/store/?id=371",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 岐阜正木店",
+      "url": "https://www.uobei.info/store/?id=376",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 各務原店",
+      "url": "https://www.uobei.info/store/?id=389",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 小牧店",
+      "url": "https://www.uobei.info/store/?id=392",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 春日井店",
+      "url": "https://www.uobei.info/store/?id=393",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 江南店",
+      "url": "https://www.uobei.info/store/?id=395",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 大垣店",
+      "url": "https://www.uobei.info/store/?id=427",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 多治見店",
+      "url": "https://www.uobei.info/store/?id=448",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 京都八幡店",
+      "url": "https://www.uobei.info/store/?id=336",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 東大阪店",
+      "url": "https://www.uobei.info/store/?id=343",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 寝屋川店",
+      "url": "https://www.uobei.info/store/?id=346",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 八尾光町店",
+      "url": "https://www.uobei.info/store/?id=391",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "魚べい 堺鳳店",
+      "url": "https://www.uobei.info/store/?id=404",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい あびこ店",
+      "url": "https://www.uobei.info/store/?id=423",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 羽曳野店",
+      "url": "https://www.uobei.info/store/?id=424",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい アクロスプラザ大東店",
+      "url": "https://www.uobei.info/store/?id=435",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 高槻店",
+      "url": "https://www.uobei.info/store/?id=443",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 守口店",
+      "url": "https://www.uobei.info/store/?id=450",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 姫路広畑店",
+      "url": "https://www.uobei.info/store/?id=338",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい イオンタウン姫路店",
+      "url": "https://www.uobei.info/store/?id=348",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 神戸西神南店",
+      "url": "https://www.uobei.info/store/?id=349",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 三田ウッディタウン店",
+      "url": "https://www.uobei.info/store/?id=383",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 加古川別府店",
+      "url": "https://www.uobei.info/store/?id=387",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 三宮雲井通店",
+      "url": "https://www.uobei.info/store/?id=402",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 尼崎浜田店",
+      "url": "https://www.uobei.info/store/?id=403",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 伊丹昆陽店",
+      "url": "https://www.uobei.info/store/?id=410",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい キセラ川西店",
+      "url": "https://www.uobei.info/store/?id=413",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 須磨離宮公園前店",
+      "url": "https://www.uobei.info/store/?id=422",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 西明石店",
+      "url": "https://www.uobei.info/store/?id=433",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 名古屋ミユキモール店",
+      "url": "https://www.uobei.info/store/?id=412",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 瑞穂店",
+      "url": "https://www.uobei.info/store/?id=370",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 東小金井店",
+      "url": "https://www.uobei.info/store/?id=405",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい さがみ野店",
+      "url": "https://www.uobei.info/store/?id=439",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 上尾平塚店",
+      "url": "https://www.uobei.info/store/?id=442",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい LICOPA東大和店",
+      "url": "https://www.uobei.info/store/?id=457",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい GENKI SUSHI×魚べい上野店",
+      "url": "https://www.uobei.info/store/?id=456",
+      "facilities": []
+    },
+    {
+      "name": "魚べい さいたま七里店",
+      "url": "https://www.uobei.info/store/?id=445",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 海老名店",
+      "url": "https://www.uobei.info/store/?id=458",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい ヨドバシ仙台店",
+      "url": "https://www.uobei.info/store/?id=459",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 多摩境店",
+      "url": "https://www.uobei.info/store/?id=460",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 壬生店",
+      "url": "https://www.uobei.info/store/?id=461",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 羽村店",
+      "url": "https://www.uobei.info/store/?id=462",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚べい 草加新田店",
+      "url": "https://www.uobei.info/store/?id=463",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    }
+  ]
+}
