@@ -16,6 +16,7 @@ import { SPOT_FACILITIES } from './spot-facilities';
 import { SPOT_VERIFICATION } from './spot-verification-data';
 import { SPOT_SEASON, type SpotSeasonWindow } from './spot-season';
 import { getSpotParking, type SpotParking } from './spot-parking';
+import { getSpotPlayground, type SpotPlayground } from './spot-playground';
 import { SPOT_OFFICIAL_URLS } from './spot-official-urls';
 import { SPOT_ACCESS, SPOT_ACCESS_BY_SLUG } from './spot-access';
 import { resolveStationSlugByName } from './all-stations';
@@ -276,6 +277,11 @@ export type Spot = {
    *   「ある」に倒さないため）。
    */
   parking?: SpotParking;
+  /**
+   * 遊具・アスレチック（公式確認）。SPOT_PLAYGROUND から name 一致でマージされる（lib/spot-playground.ts）。
+   * playgroundFeatures（タグ）と違い、どこに・どんな遊具が・何歳向けかを公式記載の範囲で持つ。
+   */
+  playground?: SpotPlayground;
   /**
    * 期間限定の告知（例: イベント開催で噴水が終日停止）。
    *
@@ -4890,6 +4896,11 @@ for (const { spot, slug } of allSpotsForMerge()) {
     if (!spot.parking) {
       const parking = getSpotParking(spot.name);
       if (parking) spot.parking = parking;
+    }
+    // 遊具（SPOT_PLAYGROUND）のマージ。parking と同じく上書き前の name で引いて焼き付ける。
+    if (!spot.playground) {
+      const playground = getSpotPlayground(spot.name);
+      if (playground) spot.playground = playground;
     }
     // 公式サイトURL（SPOT_OFFICIAL_URLS）のマージ。インライン値が優先。
     // 収録は取得検証済みのものだけ（lib/spot-official-urls.ts のヘッダ参照）。
