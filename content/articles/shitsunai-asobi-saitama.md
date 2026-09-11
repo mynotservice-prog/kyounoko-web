@@ -1,13 +1,13 @@
 ---
 slug: shitsunai-asobi-saitama
 seoRelated: shitsunai-asobi-kawasaki
-title: さいたま市の子連れ室内遊び場6選｜料金・休館日・室内アスレチックまで【2026】
+title: さいたま市の子連れ室内・屋内遊び場6選｜無料あり・赤ちゃんOK・キッズスペース・料金【2026】
 metaDescription: >-
   さいたま市で0〜6歳と行ける室内の遊び場を6つ、公式情報で確認した料金・対象年齢・授乳室つきで整理。鉄道博物館（3歳未満無料・火曜休館）、さいたま市宇宙劇場（3歳以下無料）、ボーネルンドあそびのせかい コクーンシティ、青少年宇宙科学館（入館無料）、ステラタウン大宮の無料スペース、室内アスレチックのNINJA PARK武蔵浦和店。雨の日・猛暑日・真冬に使えます。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-09-02'
+updatedAt: '2026-09-12'
 hero: /img/scenes/mallkids-02.webp
 area: saitama
 quickInfo:

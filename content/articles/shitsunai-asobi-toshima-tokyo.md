@@ -1,12 +1,12 @@
 ---
 slug: shitsunai-asobi-toshima-tokyo
-title: 豊島区の子供の室内遊び場8選｜児童館・キッズスペース・有料施設【2026年版】
+title: 豊島区の子供の室内遊び場8選｜赤ちゃんOK・児童館・キッズスペース・有料施設【2026年版】
 metaDescription: >-
   豊島区で子供（0〜6歳）と室内で遊べるスポット8選。サンシャインシティ アルパのベビールーム3か所（3階はベビースケール・調乳温水器つき、B1は紙オムツ自販機）と2階の無料プレイスペース、東武百貨店池袋店の6階・7階・11階を階数と設備つきで。西武池袋のキドキドは撤退済みです。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-07-31'
+updatedAt: '2026-09-12'
 hero: /img/scenes/mallkids-01.webp
 area: tokyo
 quickInfo:

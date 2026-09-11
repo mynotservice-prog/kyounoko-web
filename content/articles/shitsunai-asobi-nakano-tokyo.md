@@ -1,12 +1,12 @@
 ---
 slug: shitsunai-asobi-nakano-tokyo
-title: 中野区の子供の室内遊び場8選｜児童館・キッズスペース・有料施設【2026年版】
+title: 中野区の子供の室内・屋内遊び場8選｜赤ちゃんOK・児童館・キッズスペース・有料施設【2026年版】
 metaDescription: >-
   中野区で子供（0〜6歳）と室内で遊べるスポット8選。無料の子育てひろば9施設を曜日・時間・最寄駅の徒歩分数つきで一覧化（中野駅南口徒歩3分の「にじいろルーム」、日曜も開く「niico」など）。区立児童館と、雨の日の遠征枠まで2026年版で。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-09-04'
+updatedAt: '2026-09-12'
 hero: /img/scenes/jidoukan-01.webp
 area: tokyo
 quickInfo:

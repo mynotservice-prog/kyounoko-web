@@ -1,12 +1,12 @@
 ---
 slug: shitsunai-asobi-taito-tokyo
-title: 台東区の子供の室内遊び場8選｜児童館・キッズスペース・有料施設【2026年版】
+title: 台東区の子供の室内遊び場8選｜赤ちゃんOK・児童館・キッズスペース・有料施設【2026年版】
 metaDescription: >-
   台東区・浅草で雨に降られた子連れのための室内スポット8選。0〜3歳専用の「あそびひろば」4館（無料・月〜土10:00〜16:00）、児童館の幼児タイム、屋内アトラクションのある浅草花やしき、都営浅草線1駅のすみだ水族館まで。児童館は日曜・祝日が休館なので、日曜の雨の逃げ道も書いています。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-08-08'
+updatedAt: '2026-09-12'
 hero: /img/scenes/mallkids-02.webp
 area: tokyo
 quickInfo:

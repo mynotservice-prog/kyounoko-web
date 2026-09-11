@@ -1,13 +1,13 @@
 ---
 slug: shitsunai-asobi-kobe
 seoRelated: shitsunai-asobi-osaka
-title: 神戸市の子連れ室内遊び場5選｜無料で入れる場所と有料の使い分け【2026】
+title: 神戸市の子連れ室内遊び場5選｜キッズスペース・無料で入れる場所と有料の使い分け【2026】
 metaDescription: >-
   神戸市で0〜6歳と行ける室内の遊び場を5つ整理。神戸アンパンマンこどもミュージアムは1階のモールが無料エリア、ハーバーランドumieのフードコートには約70席の無料キッズスペース、4階の授乳室はお湯とベビーチェア完備。有料のピュアハートキッズランドとの使い分けまで。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-08-01'
+updatedAt: '2026-09-12'
 hero: /img/scenes/kidspark-01.webp
 area: hyogo
 quickInfo:
