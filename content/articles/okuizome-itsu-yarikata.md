@@ -115,6 +115,13 @@ legacyHero: /hero/food-japan-01.webp
 
 ## 関連記事
 
+- [ばんどう太郎のお食い初め・七五三の食事](/article/bandotaro-okuizome-shichigosan)
+- [かごの屋のお食い初め・七五三の食事](/article/kagonoya-okuizome-shichigosan)
+- [木曽路のお食い初め・七五三の食事（慶祝会席）](/article/kisoji-okuizome-shichigosan)
+- [梅の花のお食い初め・七五三の食事（お祝い懐石）](/article/umenohana-okuizome-shichigosan)
+- [味の民芸のお食い初め（お祝い膳5,000円）](/article/ajino-mingei-okuizome-shichigosan)
+- [和食麺処サガミのお食い初め・七五三（お祝い膳）](/article/sagami-okuizome-shichigosan)
+- [とんでんのお食い初め（祝い鯛膳・紅白一升餅）](/article/tonden-okuizome-shichigosan)
 - [0歳育児完全マップ](/article/0sai-ikuji-kanzen-map)
 - [初宮参り（お宮参り）はいつ？](/article/hatsumiya-mairi-itsu)
 - [100日祝い やり方](/article/100ka-iwai-yarikata)
