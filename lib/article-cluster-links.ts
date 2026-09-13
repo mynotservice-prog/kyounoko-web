@@ -35,6 +35,7 @@ const SUFFIX_LABELS: Array<[string, string]> = [
   ['kodomo-ryokin-guide', '子ども料金'],
   ['kodomo-muryou', '子ども無料'],
   ['tsukimi', '月見メニュー'],
+  ['okuizome-shichigosan', 'お食い初め・七五三'],
 ];
 
 /** stem（slug からsuffixを除いた部分）→ 表示名。ここに無い stem はチップを出さない。 */
@@ -84,6 +85,16 @@ const CHAIN_NAMES: Record<string, string> = {
   torikizoku: '鳥貴族',
   'ueno-zoo': '上野動物園',
   'washoku-sato': '和食さと',
+  'bandotaro': 'ばんどう太郎',
+  'kagonoya': 'かごの屋',
+  'kisoji': '木曽路',
+  'umenohana': '梅の花',
+  'hanaya-yohei': '華屋与兵衛',
+  'aiya': '藍屋',
+  'yumean': '夢庵',
+  'ajino-mingei': '味の民芸',
+  'sagami': '和食麺処サガミ',
+  'tonden': 'とんでん',
   'yakiniku-king': '焼肉きんぐ',
   yayoiken: 'やよい軒',
   yoshinoya: '吉野家',
