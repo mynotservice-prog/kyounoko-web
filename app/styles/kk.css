@@ -1,0 +1,596 @@
+/* ===========================================================
+   きょうのこ リニューアル 2026-09 / 第2版（社長フィードバック反映）
+   docs/renewal-2026-09.md §2
+
+   方針（厳守）:
+   - 地色は紙色 #FBF5E8。真っ白の面は作らない。
+   - 色は「墨 #25201B / 紙 #FBF5E8 / オレンジ #EE7A2E」の3色＋その濃淡だけ。
+     パステルの多色カード・グラデーション・影は使わない（写真に色を持たせる）。
+   - 丸角カードにしてよいのは「操作UI」だけ:
+       入力欄 / 検索・CTAボタン / 日付切替 / 小さなステータス
+     記事・ランキング・カテゴリ・設備情報・セクション全体はカード化しない。
+   - セクションの区切りは 余白 / 細い罫線 / 写真サイズ / 文字サイズ で作る。
+   - 書体は Noto Sans JP 1種に統一。見出しはサイズと太さ（700）で本文と差をつける。
+     `＼`『／』オレンジ斜線などの装飾は使わない。文字と余白だけで成立させる。
+   =========================================================== */
+
+.v2-root {
+  /* ---- 3色 + 濃淡 ---- */
+  --kk-paper:       #FFFFFF;  /* 地色は完全な白（2026-09-08 社長指示） */
+  --kk-paper-deep:  #F6F3EE;  /* 表のラベル列など、ごく控えめな面だけに使う */
+  --kk-paper-soft:  #FFFFFF;  /* 操作UIの面 */
+  --kk-ink:         #25201B;  /* 墨 */
+  --kk-ink-soft:    #5F5548;
+  --kk-ink-mute:    #91887A;
+  --kk-rule:        #D8D2C7;  /* 罫線・枠線 */
+  --kk-rule-soft:   #E7E2DA;
+  --kk-orange:      #EE7A2E;
+  --kk-orange-deep: #C6591A;
+  --kk-orange-tint: #FFF3E6;  /* 「あり」等の状態表示の下地。面の広い用途には使わない */
+  --kk-grey:        #8E8A86;  /* 「なし」等の非該当状態 */
+  --kk-grey-bg:     #F2F2F2;
+
+  --kk-r-ui:   10px;  /* 操作UIの角丸 */
+  --kk-r-pill: 999px;
+  --kk-r-img:  6px;   /* 写真の角は「軽く」だけ */
+  --kk-h1-pc: 32px;
+
+  /* 2026-09-08: 書体は1種に統一（社長指示）。細字の Klee One / Yomogi は廃止。 */
+  --kk-body: var(--font-sans), 'Zen Kaku Gothic New', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  --kk-display: var(--kk-body);
+  /* 見出しスケール: H1 28-32 / H2 24 / H3 20 / 本文 16 */
+  /* 文字の階層（2026-09-08 社長指示: タイトルは大きく、本文より小さいタイトルを作らない）
+     H1 30 / H2 24 / H3 21 / 本文（長文）19 / UIテキスト 16 / 補助 13。PCは下の 920px で拡大。 */
+  --kk-h1: 30px;
+  --kk-h2: 24px;
+  --kk-h3: 21px;
+  --kk-text: 16px;
+  /* 長文（記事本文・スポットの説明文）の指定。見出しとの強弱を作るため本文は Regular。
+     2026-09-08 社長指示: weight 400 / 20px前後 / 行間1.9-2.0 / #222-#333 / 段落間 1.5-1.8em */
+  /* 2026-09-09: 参考デザインに合わせ、長文は 17px / 行間 1.95 に。
+     見出し（H1 30 / H2 24 / H3 21）との差をはっきりさせる。 */
+  --kk-body-size: 17px;
+  --kk-body-lh: 1.95;
+  --kk-body-color: #2E2E2E;
+  --kk-body-gap: 1.7em;
+
+  /* ---- v2 デザイントークンを上書きして、既存コンポーネントごと新しい面に寄せる ---- */
+  --v2-page:  var(--kk-paper);
+  --v2-card:  var(--kk-paper);
+  --v2-cream: var(--kk-paper-deep);
+  --v2-ink:       var(--kk-ink);
+  --v2-ink-soft:  var(--kk-ink-soft);
+  --v2-ink-mute:  var(--kk-ink-mute);
+  --v2-ink-faint: #A79C8B;
+  --v2-line:      var(--kk-rule);
+  --v2-line-soft: var(--kk-rule-soft);
+  --v2-orange:      var(--kk-orange);
+  --v2-orange-deep: var(--kk-orange-deep);
+  --v2-orange-soft: var(--kk-orange-tint);
+  --v2-orange-tint: #FBF1E4;
+  /* 影は原則なし。ポップオーバー（ドロップダウン等）だけ最小限に残す。 */
+  --v2-sh-card: none;
+  --v2-sh-soft: none;
+  --v2-sh-pop:  0 10px 26px rgba(37, 32, 27, 0.16);
+  --v2-sans: var(--kk-body);
+  --v2-brush: var(--kk-body);
+
+  background: var(--kk-paper);
+  color: var(--kk-ink);
+  font-family: var(--kk-body);
+}
+/* 地色は完全な白。--kk-* は .v2-root スコープなので body ではリテラルで指定する。 */
+body { background: #FFFFFF; background-image: none; }
+.v2-phone, .v2-stage { background: var(--kk-paper); }
+@media (min-width: 920px) {
+  .v2-root { background: var(--kk-paper); }
+  .v2-phone { background: var(--kk-paper); }
+}
+
+/* ---------- 既存 v2 コンポーネントの「カード感」を落とす ----------
+   影・白いカード地・強い角丸をやめ、罫線と余白で見せる。
+   （個別ページで必要なものだけ、各ページCSSで作り直す） */
+.v2-root .v2-card-v,
+.v2-root .v2-card-row,
+.v2-root .v2-feat-row,
+.v2-root .v2-store-card,
+.v2-root .v2-ev2-card,
+.v2-root .v2-area-chip,
+.v2-root .v2-recent-box,
+.v2-root .v2-banner {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+.v2-root .v2-card-v { border: 0; border-bottom: 1px solid var(--kk-rule-soft); }
+.v2-root .v2-ev2-card { border: 0; border-bottom: 1px solid var(--kk-rule-soft); }
+.v2-root .v2-area-chip,
+.v2-root .v2-recent-box { border: 0; }
+.v2-root .v2-imgwrap.r,
+.v2-root .v2-imgwrap { border-radius: var(--kk-r-img); }
+.v2-root .v2-card-v .v2-imgwrap { border-radius: var(--kk-r-img) !important; }
+.v2-root .v2-quick-ico,
+.v2-root .v2-area-chip-ico { border-radius: var(--kk-r-img); }
+.v2-root .v2-btn-primary { border-radius: var(--kk-r-ui); box-shadow: none; }
+.v2-root .v2-app-header { background: var(--kk-paper); backdrop-filter: none; border-bottom: 1px solid var(--kk-rule-soft); }
+.v2-root .v2-dt-header { background: var(--kk-paper); backdrop-filter: none; border-bottom: 1px solid var(--kk-rule); }
+.v2-root .v2-dt-save { box-shadow: none; border-radius: var(--kk-r-ui); }
+.v2-root .v2-dt-search { background: var(--kk-paper-soft); border-radius: var(--kk-r-ui); }
+.v2-root .v2-tag { border-radius: 4px; background: var(--kk-paper-deep); color: var(--kk-ink-soft); font-weight: 700; }
+.v2-root .v2-tag.age,
+.v2-root .v2-tag.rain,
+.v2-root .v2-tag.feat { background: var(--kk-paper-deep); color: var(--kk-ink-soft); }
+.v2-root .v2-fav-btn { background: rgba(251, 245, 232, .92); box-shadow: none; }
+.v2-root .v2-rank { box-shadow: none; }
+
+/* ===========================================================
+   見出し（装飾なし・文字と余白で成立させる）
+   =========================================================== */
+.kk-sec { padding: 0 18px; margin-top: 40px; }
+.kk-sec-head {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 14px;
+  margin-bottom: 14px;
+}
+.kk-sec-title {
+  margin: 0;
+  font-family: var(--kk-display);
+  font-weight: 700;
+  font-size: var(--kk-h2);
+  line-height: 1.5;
+  letter-spacing: .01em;
+  color: var(--kk-ink);
+  text-wrap: balance;
+}
+.kk-sec-title.sm { font-size: var(--kk-h3); }
+.kk-sec-more {
+  flex: none;
+  font-family: var(--kk-body);
+  font-size: 13.5px; font-weight: 700; color: var(--kk-ink-soft);
+  white-space: nowrap;
+  display: inline-flex; align-items: center; gap: 4px;
+}
+.kk-sec-more:hover { color: var(--kk-orange-deep); }
+/* 旧仕様の斜線アクセントは廃止（残っていても描画させない） */
+.kk-sec-title::before { content: none !important; display: none !important; }
+
+.kk-lead { font-size: var(--kk-body-size); line-height: 1.95; color: var(--kk-ink); margin: 0 0 16px; font-weight: 500; }
+
+/* セクション同士の区切りは細い罫線で（連続する場合のみ） */
+.kk-rule-top { border-top: 1px solid var(--kk-rule-soft); padding-top: 34px; }
+
+/* ===========================================================
+   操作UI（丸角を使ってよい範囲）
+   =========================================================== */
+.kk-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 14px 18px; border-radius: var(--kk-r-ui);
+  background: var(--kk-orange); color: #fff;
+  font-family: var(--kk-body); font-size: 15px; font-weight: 700; line-height: 1.2;
+  border: 1px solid var(--kk-orange);
+  box-shadow: none;
+  transition: background .12s;
+}
+.kk-btn:hover { background: var(--kk-orange-deep); border-color: var(--kk-orange-deep); }
+.kk-btn.block { width: 100%; }
+.kk-btn.outline { background: transparent; color: var(--kk-ink); border-color: var(--kk-rule); }
+.kk-btn.outline:hover { background: var(--kk-paper-deep); border-color: var(--kk-rule); }
+.kk-btn.soft {
+  background: transparent; color: var(--kk-orange-deep); border-color: var(--kk-orange);
+  font-size: 12.5px; padding: 7px 13px; border-radius: var(--kk-r-pill);
+}
+.kk-btn.soft:hover { background: var(--kk-orange-tint); }
+.kk-btn.sm { padding: 8px 13px; font-size: 13px; border-radius: var(--kk-r-pill); }
+
+.kk-field {
+  display: flex; align-items: center; gap: 9px;
+  padding: 13px 14px; border-radius: var(--kk-r-ui);
+  background: var(--kk-paper-soft); border: 1px solid var(--kk-rule);
+  font-size: 14px; color: var(--kk-ink-mute); font-weight: 600;
+}
+.kk-field input, .kk-field select {
+  flex: 1; min-width: 0; border: 0; background: transparent; outline: none;
+  font-size: 16px; font-family: inherit; color: var(--kk-ink); padding: 0;
+}
+
+/* 日付切替などのセグメント */
+.kk-seg { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 8px; }
+.kk-seg-btn {
+  padding: 11px 8px; border-radius: var(--kk-r-ui);
+  border: 1px solid var(--kk-rule); background: var(--kk-paper-soft);
+  font-size: 14px; font-weight: 700; color: var(--kk-ink); text-align: center;
+  transition: background .12s, border-color .12s, color .12s;
+}
+.kk-seg-btn.on { background: var(--kk-orange); border-color: var(--kk-orange); color: #fff; }
+
+/* 小さなステータス / タグ */
+.kk-chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.kk-chips.row { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+.kk-chips.row::-webkit-scrollbar { display: none; }
+.kk-chip {
+  flex: none; display: inline-flex; align-items: center; gap: 5px;
+  padding: 6px 12px; border-radius: var(--kk-r-pill);
+  border: 1px solid var(--kk-rule); background: transparent;
+  font-size: 13.5px; font-weight: 700; color: var(--kk-ink-soft); line-height: 1.3;
+  white-space: nowrap;
+}
+a.kk-chip:hover { border-color: var(--kk-orange); color: var(--kk-orange-deep); }
+.kk-chip.on { background: var(--kk-orange); border-color: var(--kk-orange); color: #fff; }
+.kk-chip.plain { border-color: transparent; background: var(--kk-paper-deep); }
+
+.kk-pill {
+  display: inline-block; padding: 2px 9px; border-radius: var(--kk-r-pill);
+  font-size: 12.5px; font-weight: 700; line-height: 1.5; white-space: nowrap;
+}
+.kk-pill.yes { background: var(--kk-orange-tint); color: var(--kk-orange-deep); }
+.kk-pill.no  { background: var(--kk-grey-bg); color: var(--kk-grey); }
+.kk-pill.text { background: var(--kk-paper-deep); color: var(--kk-ink-soft); }
+
+/* ===========================================================
+   設備グリッド（カードにしない。細い罫線で仕切る）
+   =========================================================== */
+.kk-fac-grid {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  background: #fff;
+}
+.kk-fac {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  padding: 4px 6px 2px; text-align: center;
+  background: transparent; border: 0;
+}
+.kk-fac + .kk-fac { border-left: 1px solid var(--kk-rule-soft); }
+.kk-fac-ico { color: var(--kk-ink); display: flex; }
+.kk-fac-label { font-size: 12.5px; font-weight: 700; color: var(--kk-ink); line-height: 1.4; }
+@media (max-width: 359px) {
+  .kk-fac-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 18px; }
+  .kk-fac:nth-child(odd) { border-left: 0; }
+}
+
+/* ===========================================================
+   リスト（チェック・手順）— 面はつけず、行と記号で見せる
+   =========================================================== */
+.kk-check { padding: 0; background: transparent; border: 0; }
+.kk-check-title {
+  font-family: var(--kk-display); font-weight: 700; font-size: var(--kk-h3);
+  color: var(--kk-ink); margin: 0 0 10px; letter-spacing: .01em;
+}
+.kk-check ul, .kk-check ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.kk-check li {
+  position: relative; padding-left: 26px;
+  font-size: var(--kk-text); line-height: 1.95; color: var(--kk-ink);
+}
+.kk-check li::before {
+  content: ''; position: absolute; left: 0; top: 6px; width: 16px; height: 16px;
+  background: var(--kk-orange);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 12.5l5 5L20 6' stroke='black' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 12.5l5 5L20 6' stroke='black' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+.kk-check.num ol { counter-reset: kk; }
+.kk-check.num li { padding-left: 30px; }
+.kk-check.num li::before {
+  counter-increment: kk; content: counter(kk);
+  -webkit-mask: none; mask: none;
+  width: 21px; height: 21px; top: 4px; border-radius: 50%;
+  color: #fff; font-family: var(--kk-body); font-size: 11.5px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; line-height: 1;
+}
+/* 旧仕様の面つきバリアントは無効化 */
+.kk-check.white, .kk-check.blue { background: transparent; border: 0; }
+
+/* ===========================================================
+   番号付きリスト（「ここがうれしいポイント」など“魅力”の表現）
+   番号だけオレンジ・本文は墨・地は白。設備（仕様）とは見た目を明確に変える。
+   =========================================================== */
+.kk-numlist { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--kk-rule-soft); }
+.kk-numlist li {
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 14px 0; border-bottom: 1px solid var(--kk-rule-soft);
+}
+.kk-numlist .n {
+  flex: none; width: 26px;
+  font-family: var(--kk-body); font-variant-numeric: tabular-nums;
+  font-size: 14px; font-weight: 700; color: var(--kk-orange); line-height: 1.9;
+  letter-spacing: .02em;
+}
+.kk-numlist .t { flex: 1; min-width: 0; font-size: var(--kk-text); line-height: 1.95; color: var(--kk-ink); }
+
+/* ===========================================================
+   基本情報テーブル（角丸の箱にしない）
+   =========================================================== */
+.kk-info {
+  width: 100%; border-collapse: collapse; font-size: 15px;
+  border: 1px solid var(--kk-rule);
+  background: #fff;
+}
+.kk-info th, .kk-info td {
+  padding: 12px 14px; border: 1px solid var(--kk-rule);
+  text-align: left; vertical-align: top; line-height: 1.8;
+}
+.kk-info th {
+  width: 34%; font-weight: 700; color: var(--kk-ink); white-space: nowrap;
+  font-size: 13.5px; background: var(--kk-paper-deep);
+}
+.kk-info th .kk-info-lab { display: inline-flex; align-items: center; gap: 7px; }
+.kk-info td { color: var(--kk-ink); font-weight: 500; }
+.kk-info td a { color: var(--kk-orange-deep); text-decoration: underline; text-underline-offset: 2px; }
+
+/* ===========================================================
+   行リスト（記事・ランキング・関連）— カードにしない
+   =========================================================== */
+.kk-rows { display: flex; flex-direction: column; }
+.kk-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--kk-rule-soft);
+  background: transparent; border-radius: 0;
+  color: var(--kk-ink);
+}
+.kk-rows > .kk-row:first-child { border-top: 1px solid var(--kk-rule-soft); }
+.kk-row:hover .kk-row-title { color: var(--kk-orange-deep); }
+.kk-row-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.kk-row-title { font-size: var(--kk-text); font-weight: 700; line-height: 1.6; color: var(--kk-ink); transition: color .12s; }
+.kk-row-sub { font-size: 12.5px; color: var(--kk-ink-mute); line-height: 1.5; }
+.kk-row-date {
+  font-size: 12.5px; color: var(--kk-ink-mute); font-weight: 700;
+  font-variant-numeric: tabular-nums; letter-spacing: .02em;
+}
+.kk-row-arrow { flex: none; color: var(--kk-ink-mute); display: flex; }
+.kk-row-num {
+  flex: none; width: 24px; text-align: center;
+  font-family: var(--kk-display); font-size: 21px; font-weight: 600; line-height: 1;
+  color: var(--kk-orange); font-variant-numeric: tabular-nums;
+}
+.kk-row-thumb {
+  flex: none; width: 72px; height: 54px; border-radius: var(--kk-r-img);
+  overflow: hidden; background: var(--kk-paper-deep);
+}
+.kk-row-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* 旧クラスの互換（枠なし表示に統一） */
+.kk-rows.divided { gap: 0; }
+.kk-rows.divided .kk-row { border-radius: 0; }
+
+/* ===========================================================
+   写真タイル / アイコンタイル
+   =========================================================== */
+.kk-tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.kk-tiles.two { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 12px; }
+.kk-tile { display: flex; flex-direction: column; gap: 7px; color: var(--kk-ink); }
+.kk-tile-img {
+  position: relative; aspect-ratio: 1 / 1; border-radius: var(--kk-r-img);
+  overflow: hidden; background: var(--kk-paper-deep);
+}
+.kk-tiles.two .kk-tile-img { aspect-ratio: 4 / 3; }
+.kk-tile-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.kk-tile-label { font-size: 13.5px; font-weight: 700; text-align: center; line-height: 1.4; }
+.kk-tiles.two .kk-tile-label { font-size: 15px; text-align: left; }
+.kk-tile:hover .kk-tile-label { color: var(--kk-orange-deep); }
+
+.kk-icon-tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.kk-icon-tile {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px;
+  min-height: 92px; padding: 12px 6px;
+  border: 1px solid var(--kk-rule); border-radius: var(--kk-r-ui);
+  background: transparent;
+  font-size: 13.5px; font-weight: 700; color: var(--kk-ink); text-align: center; line-height: 1.45;
+}
+.kk-icon-tile:hover { border-color: var(--kk-orange); color: var(--kk-orange-deep); }
+
+/* ===========================================================
+   LINE / ホーム画面に追加 — スマホのみ表示（PCでは出さない）
+   =========================================================== */
+.kk-home, .kk-home-howto { display: none; }
+/* LINE友だち追加ブロック（PC・スマホとも表示。2026-09-08 社長指示） */
+/* LINEは操作を促すブロックなので、薄い緑の面＋角丸でひとまとまりに見せる（2026-09-08）。 */
+.kk-line {
+  display: flex; align-items: center; gap: 14px;
+  margin: 30px 18px 0; padding: 16px 16px 18px;
+  background: #F2FBF5;
+  border: 1px solid #CDE9D7;
+  border-radius: 14px;
+  color: var(--kk-ink);
+}
+.kk-line-badge {
+  width: 40px; height: 40px; flex: none; border-radius: var(--kk-r-img);
+  background: #06C755; color: #fff; font-size: 10px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; letter-spacing: .03em;
+}
+.kk-line-body { flex: 1; min-width: 0; }
+.kk-line-eyebrow { font-size: 11.5px; font-weight: 700; color: var(--kk-ink-mute); }
+.kk-line-title {
+  font-family: var(--kk-display); font-weight: 700; font-size: var(--kk-h3);
+  line-height: 1.45; margin-top: 3px; color: var(--kk-ink);
+}
+.kk-line-sub { font-size: 12.5px; color: var(--kk-ink-soft); line-height: 1.7; margin-top: 5px; }
+.kk-line-btn {
+  display: inline-flex; align-items: center; gap: 5px; margin-top: 12px;
+  padding: 10px 16px; border-radius: var(--kk-r-pill);
+  background: #06C755; color: #fff; font-size: 13.5px; font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 919px) {
+
+  .kk-home {
+    display: flex; align-items: center; gap: 14px; text-align: left;
+    width: calc(100% - 36px); margin: 22px 18px 0; padding: 15px 0 0;
+    border-top: 1px solid var(--kk-rule-soft);
+    background: transparent; color: var(--kk-ink); cursor: pointer;
+  }
+  .kk-home-ico { flex: none; color: var(--kk-ink); display: flex; }
+  .kk-home-body { flex: 1; min-width: 0; }
+  .kk-home-title { font-family: var(--kk-display); font-weight: 700; font-size: 17px; line-height: 1.45; }
+  .kk-home-sub { font-size: 12px; color: var(--kk-ink-mute); margin-top: 3px; line-height: 1.6; }
+  .kk-home-arrow { flex: none; color: var(--kk-ink-mute); display: flex; }
+  .kk-home-howto {
+    display: block; margin: 10px 18px 0; padding: 12px 14px;
+    border: 1px solid var(--kk-rule); border-radius: var(--kk-r-ui);
+    font-size: 12.5px; line-height: 1.9; color: var(--kk-ink-soft);
+    background: var(--kk-paper-soft);
+  }
+  .kk-home-howto b { color: var(--kk-ink); }
+}
+
+/* ===========================================================
+   フッター
+   =========================================================== */
+.kk-footer {
+  margin: 48px 0 0; padding: 26px 18px calc(40px + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--kk-rule);
+  background: var(--kk-paper);
+  position: relative; z-index: 70;
+}
+.kk-footer-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.kk-footer-brand { display: flex; flex-direction: column; gap: 6px; }
+.kk-footer-logo {
+  display: flex; align-items: center; gap: 9px;
+  font-family: var(--kk-display); font-weight: 700; font-size: 21px; color: var(--kk-ink);
+}
+.kk-footer-tag { font-size: 12px; color: var(--kk-ink-mute); font-weight: 600; }
+.kk-footer-links { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 20px; }
+.kk-footer-links a { font-size: 12.5px; font-weight: 600; color: var(--kk-ink-soft); padding: 3px 0; }
+.kk-footer-links a:hover { color: var(--kk-orange-deep); }
+.kk-footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 20px; }
+.kk-footer-sns { display: flex; gap: 14px; }
+.kk-footer-sns a { display: flex; color: var(--kk-ink-soft); }
+.kk-footer-sns a:hover { color: var(--kk-orange-deep); }
+.kk-footer-copy { font-size: 11.5px; color: var(--kk-ink-mute); }
+
+/* ===========================================================
+   デスクトップ（PCはスマホの引き伸ばしにしない）
+   =========================================================== */
+@media (min-width: 920px) {
+  .v2-root { --kk-h1: 34px; --kk-h2: 28px; --kk-h3: 23px; --kk-body-size: 17.5px; }
+  .kk-sec { padding: 0 4px; margin-top: 64px; }
+  .kk-sec-head { margin-bottom: 20px; }
+  .kk-sec-title { font-size: var(--kk-h2); }
+  .kk-sec-title.sm { font-size: var(--kk-h3); }
+  .kk-sec-more { font-size: 13.5px; }
+  .kk-lead { max-width: 68ch; }
+
+  .kk-fac-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .kk-tiles { gap: 18px; }
+  .kk-tiles.two { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .kk-icon-tiles { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .kk-icon-tile { min-height: 118px; font-size: 13.5px; }
+
+  .kk-rows.grid2 { display: grid; grid-template-columns: 1fr 1fr; column-gap: 40px; }
+  .kk-rows.grid2 > .kk-row:nth-child(2) { border-top: 1px solid var(--kk-rule-soft); }
+  .kk-row { padding: 16px 0; }
+  .kk-row-title { font-size: 16.5px; }
+  .kk-row-thumb { width: 96px; height: 66px; }
+  .kk-row-num { font-size: 24px; width: 30px; }
+
+  .kk-info { font-size: 14.5px; }
+  .kk-info th { width: 22%; font-size: 13.5px; }
+
+  /* LINEはPCでも出す（2026-09-08 社長指示）。横に広い1本の帯として置く。 */
+  .kk-line { margin: 56px 4px 0; padding: 24px 28px 26px; gap: 32px; border-radius: 16px; }
+  .kk-line-badge { width: 48px; height: 48px; font-size: 11px; }
+  .kk-line-title { font-size: 24px; }
+  .kk-line-sub { font-size: 15px; max-width: 46ch; line-height: 1.9; }
+  .kk-line-btn { font-size: 14.5px; padding: 11px 20px; }
+  .kk-line-phone { width: 132px; height: auto; }
+
+  .kk-footer { margin-top: 72px; padding: 34px 4px 56px; }
+  .kk-footer-logo { font-size: 23px; }
+}
+
+@media (min-width: 920px) {
+  .kk-footer { margin-top: 72px; padding: 34px 4px 56px; }
+  .kk-footer-logo { font-size: 23px; }
+}
+
+
+@media (min-width: 920px) {
+  .v2-root .v2-dt-link,
+  .v2-root .v2-dt-save,
+  .v2-root .v2-dt-search,
+  .v2-root .v2-dt-logo span { white-space: nowrap; }
+  .v2-root .v2-dt-nav { flex-wrap: nowrap; }
+  .v2-root .v2-dt-header { gap: 18px; padding: 0 28px; }
+}
+
+/* ===========================================================
+   詳細度の修正（2026-09-08）
+   1) v2.css の `.v2-root button { border:none; background:none; padding:0 }` は
+      詳細度 (0,1,1) で、素の `.kk-btn`(0,1,0) を上書きしてしまう。
+      → 操作UIの定義を `.v2-root` 付き (0,2,0) で再宣言して勝たせる。
+   2) Tailwind のユーティリティ `.outline`（outline-style: solid）が
+      `.kk-btn.outline` と名前衝突し、黒い輪郭が描かれる。→ outline を明示的に消す。
+   3) `.v2-root a { color: inherit }` に文字色を食われるため、a要素のボタンも復元する。
+   =========================================================== */
+.v2-root .kk-btn,
+.v2-root a.kk-btn,
+.v2-root button.kk-btn {
+  outline: none;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 14px 18px; border: 1px solid var(--kk-orange); border-radius: var(--kk-r-ui);
+  background: var(--kk-orange); color: #fff;
+  font-family: var(--kk-body); font-size: 15px; font-weight: 700; line-height: 1.2;
+  box-shadow: none;
+}
+.v2-root .kk-btn.block { width: 100%; }
+.v2-root .kk-btn.outline,
+.v2-root a.kk-btn.outline,
+.v2-root button.kk-btn.outline {
+  outline: none;
+  background: transparent; color: var(--kk-ink); border-color: var(--kk-rule);
+}
+.v2-root .kk-btn.soft,
+.v2-root a.kk-btn.soft,
+.v2-root button.kk-btn.soft {
+  background: transparent; color: var(--kk-orange-deep); border-color: var(--kk-orange);
+  font-size: 12.5px; padding: 7px 13px; border-radius: var(--kk-r-pill);
+}
+.v2-root .kk-btn.sm,
+.v2-root a.kk-btn.sm,
+.v2-root button.kk-btn.sm { padding: 8px 13px; font-size: 13px; border-radius: var(--kk-r-pill); }
+.v2-root .kk-btn:hover { background: var(--kk-orange-deep); border-color: var(--kk-orange-deep); }
+.v2-root .kk-btn.outline:hover { background: var(--kk-paper-deep); color: var(--kk-ink); border-color: var(--kk-rule); }
+.v2-root .kk-btn.soft:hover { background: var(--kk-orange-tint); color: var(--kk-orange-deep); }
+
+.v2-root .kk-seg-btn,
+.v2-root button.kk-seg-btn {
+  outline: none;
+  padding: 11px 8px; border: 1px solid var(--kk-rule); border-radius: var(--kk-r-ui);
+  background: var(--kk-paper-soft); color: var(--kk-ink);
+  font-size: 14px; font-weight: 700; text-align: center;
+}
+.v2-root .kk-seg-btn.on,
+.v2-root button.kk-seg-btn.on { background: var(--kk-orange); border-color: var(--kk-orange); color: #fff; }
+
+.v2-root .kk-chip,
+.v2-root a.kk-chip,
+.v2-root button.kk-chip {
+  outline: none;
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 6px 12px; border: 1px solid var(--kk-rule); border-radius: var(--kk-r-pill);
+  background: transparent; color: var(--kk-ink-soft);
+  font-size: 12.5px; font-weight: 700; line-height: 1.3; white-space: nowrap;
+}
+.v2-root .kk-chip.on,
+.v2-root button.kk-chip.on { background: var(--kk-orange); border-color: var(--kk-orange); color: #fff; }
+.v2-root .kk-chip.plain { border-color: transparent; background: var(--kk-paper-deep); }
+
+.v2-root .kk-icon-tile,
+.v2-root a.kk-icon-tile { color: var(--kk-ink); }
+.v2-root .kk-tile, .v2-root a.kk-tile { color: var(--kk-ink); }
+.v2-root .kk-row, .v2-root a.kk-row { color: var(--kk-ink); }
+.v2-root button.kk-home { outline: none; border: 0; border-top: 1px solid var(--kk-rule-soft); }
+
+@media (max-width: 919px) {
+  /* ホーム画面に追加: 1タップで追加画面（またはその手順）が開く */
+  .kk-home-howto ol { list-style: none; margin: 0; padding: 0; counter-reset: h; display: flex; flex-direction: column; gap: 8px; }
+  .kk-home-howto li { position: relative; padding-left: 28px; font-size: 13.5px; line-height: 1.8; color: var(--kk-ink); }
+  .kk-home-howto li::before {
+    counter-increment: h; content: counter(h);
+    position: absolute; left: 0; top: 4px; width: 20px; height: 20px; border-radius: 50%;
+    background: var(--kk-orange); color: #fff; font-size: 11.5px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; line-height: 1;
+  }
+}
+
+@media (max-width: 919px) {
+  /* LINEブロックに添えるスマホのマップ画面モック */
+  .kk-line-phone { flex: none; align-self: center; }
+}
+@media (max-width: 420px) { .kk-line-phone { width: 76px; height: auto; } .kk-line { gap: 10px; padding: 14px 12px 16px; } }

@@ -1,12 +1,12 @@
 ---
 slug: shitsunai-asobi-shinjuku-tokyo
-title: 新宿区の子供の室内遊び場8選｜児童館・キッズスペース・有料施設【2026年版】
+title: 新宿区の子供の室内・屋内遊び場8選｜無料あり・赤ちゃんOK・児童館・キッズスペース【2026年版】
 metaDescription: >-
   新宿区で子供（0〜6歳）と室内で遊べるスポット8選。新宿駅で詰まないための授乳室4か所（ルミネ1の7階／ルミネ2の4階／新宿髙島屋9階・14階）を設備つきで。髙島屋9階は調乳用のお湯と電子レンジあり。駅ビルのボーネルンドは撤退、新宿ミロードも2025年3月に閉館しています。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-09-04'
+updatedAt: '2026-09-12'
 hero: /img/scenes/kidspark-01.webp
 area: tokyo
 quickInfo:

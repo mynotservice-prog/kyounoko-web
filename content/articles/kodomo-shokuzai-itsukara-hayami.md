@@ -37,7 +37,7 @@ legacyHero: /hero/food-japan-01.webp
 
 ## 食材いつから早見表
 
-### 🥚 卵・乳・主食系
+### 卵・乳・主食系
 
 | 食材 | 目安 | 詳しく |
 |---|---|---|
@@ -47,7 +47,7 @@ legacyHero: /hero/food-japan-01.webp
 | パスタ | 中期〜（細かくカット） | [パスタはいつから](/article/kodomo-pasta-itsukara) |
 | そば（アレルギー注意） | 1歳以降に少量から慎重に | [そばはいつから](/article/kodomo-soba-itsukara) |
 
-### 🍖 肉・魚介
+### 肉・魚介
 
 | 食材 | 目安 | 詳しく |
 |---|---|---|
@@ -55,7 +55,7 @@ legacyHero: /hero/food-japan-01.webp
 | お寿司（加熱ネタ→生魚） | 加熱・卵は1歳半〜／生魚は3歳以降 | [お寿司はいつから](/article/kodomo-sushi-itsukara) |
 | 刺身（生魚） | 3歳以降が安心（食中毒・寄生虫対策） | [刺身はいつから](/article/kodomo-sashimi-itsukara) |
 
-### 🍓 果物・野菜
+### 果物・野菜
 
 | 食材 | 目安 | 詳しく |
 |---|---|---|
@@ -64,7 +64,7 @@ legacyHero: /hero/food-japan-01.webp
 | レモン | 風味づけ程度なら離乳食期から少量 | [レモンはいつから](/article/kodomo-lemon-itsukara) |
 | プチトマト | 皮をむき小さく切れば中期〜／丸ごとは誤嚥注意 | [プチトマトはいつから](/article/kodomo-petittomato-itsukara) |
 
-### 🌶 味の濃いもの・刺激物
+### 味の濃いもの・刺激物
 
 | 食材 | 目安 | 詳しく |
 |---|---|---|

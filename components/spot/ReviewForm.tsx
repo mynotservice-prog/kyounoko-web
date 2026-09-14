@@ -3,6 +3,7 @@
 import * as React from 'react';
 import Script from 'next/script';
 import { trackEvent } from '@/lib/analytics';
+import { KkIcon } from '@/components/kk/KkIcon';
 
 /**
  * 口コミ投稿フォーム（P1-8・画面D/E）。ログイン不要。
@@ -88,7 +89,8 @@ export function ReviewForm({ spotId, spotName, siteKey }: { spotId: string; spot
   if (!open) {
     return (
       <button type="button" onClick={() => setOpen(true)} style={writeBtn}>
-        ✏ 口コミを書く
+        <KkIcon name="edit" size={15} sw={2} />
+        口コミを書く
       </button>
     );
   }
@@ -97,7 +99,9 @@ export function ReviewForm({ spotId, spotName, siteKey }: { spotId: string; spot
     return (
       <div style={panel}>
         <div style={{ textAlign: 'center', padding: '12px 0' }}>
-          <div style={{ fontSize: 34 }}>✓</div>
+          <div style={{ display: 'flex', justifyContent: 'center', color: 'var(--kk-orange)' }}>
+            <KkIcon name="check" size={34} sw={2} />
+          </div>
           <p style={{ fontWeight: 800, fontSize: 15, margin: '6px 0' }}>口コミありがとうございます！</p>
           <p style={{ fontSize: 13, color: 'var(--v2-ink-mute)' }}>内容を確認のうえ、1〜2日で公開します。</p>
           <button type="button" onClick={() => setOpen(false)} style={{ ...writeBtn, marginTop: 12 }}>
@@ -113,14 +117,18 @@ export function ReviewForm({ spotId, spotName, siteKey }: { spotId: string; spot
       {siteKey && <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer />}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
         <strong style={{ fontSize: 15 }}>口コミを書く</strong>
-        <button type="button" onClick={() => setOpen(false)} aria-label="閉じる" style={{ background: 'none', border: 'none', fontSize: 18, cursor: 'pointer', color: 'var(--v2-ink-mute)' }}>✕</button>
+        <button type="button" onClick={() => setOpen(false)} aria-label="閉じる" style={{ background: 'none', border: 'none', display: 'flex', cursor: 'pointer', color: 'var(--v2-ink-mute)' }}>
+          <KkIcon name="plus" size={18} sw={2} style={{ transform: 'rotate(45deg)' }} />
+        </button>
       </div>
       <p style={{ fontSize: 12.5, color: 'var(--v2-ink-mute)', margin: '0 0 12px' }}>{spotName}</p>
 
       <Field label="評価（必須）">
         <div style={{ display: 'flex', gap: 4 }}>
           {[1, 2, 3, 4, 5].map((n) => (
-            <button key={n} type="button" onClick={() => setRating(n)} aria-label={`${n}点`} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 28, lineHeight: 1, color: n <= rating ? '#f5a623' : '#d8d0c4', padding: 0 }}>★</button>
+            <button key={n} type="button" onClick={() => setRating(n)} aria-label={`${n}点`} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', lineHeight: 1, color: n <= rating ? 'var(--kk-orange)' : 'var(--kk-rule)', padding: 0 }}>
+              <KkIcon name="popular" size={28} sw={1.6} />
+            </button>
           ))}
         </div>
       </Field>
@@ -154,18 +162,22 @@ export function ReviewForm({ spotId, spotName, siteKey }: { spotId: string; spot
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={URL.createObjectURL(f)} alt="" style={{ width: 64, height: 64, objectFit: 'cover', borderRadius: 8, border: '1px solid var(--v2-line)' }} />
               <button type="button" aria-label="削除" onClick={() => setFiles(files.filter((_, j) => j !== i))}
-                style={{ position: 'absolute', top: -6, right: -6, width: 20, height: 20, borderRadius: '50%', border: 'none', background: '#333', color: '#fff', fontSize: 12, cursor: 'pointer', lineHeight: '20px' }}>✕</button>
+                style={{ position: 'absolute', top: -6, right: -6, width: 20, height: 20, borderRadius: '50%', border: 'none', background: '#333', color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <KkIcon name="plus" size={12} sw={2.4} style={{ transform: 'rotate(45deg)' }} />
+              </button>
             </div>
           ))}
           {files.length < 3 && (
             <label style={{ ...chip(false), cursor: 'pointer' }}>
-              ＋ 写真を追加
+              <KkIcon name="plus" size={14} sw={2} />
+              写真を追加
               <input type="file" accept="image/jpeg,image/png,image/webp" multiple onChange={onPickFiles} style={{ display: 'none' }} />
             </label>
           )}
         </div>
         <p style={{ fontSize: 11.5, color: 'var(--v2-ink-mute)', margin: '6px 0 0', lineHeight: 1.6 }}>
-          ⚠ お子さんや他の方の顔が写らない構図でのご投稿にご協力ください（位置情報は自動で削除されます）。
+          <KkIcon name="info" size={13} sw={2} style={{ verticalAlign: '-2px', marginRight: 3 }} />
+          お子さんや他の方の顔が写らない構図でのご投稿にご協力ください（位置情報は自動で削除されます）。
         </p>
         {files.length > 0 && (
           <label style={{ display: 'flex', gap: 8, alignItems: 'flex-start', fontSize: 12.5, marginTop: 8, color: 'var(--v2-ink-soft)', lineHeight: 1.6 }}>

@@ -1,0 +1,1274 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "onyasai",
+  "name": "しゃぶしゃぶ温野菜",
+  "sourceUrl": "https://map.reins.co.jp/onyasai/all",
+  "method": "公式店舗検索（レインズ）の全国一覧で全店舗を列挙し、各店舗詳細ページの「備考」欄に定型で書かれる「駐車場：」「キッズルーム：」を集計",
+  "total": 205,
+  "note": "備考はチェック属性ではなく定型テキスト（駐車場／座席数／キッズルーム）。備考欄の無い3店（【公式】 しゃぶしゃぶ温野菜 千葉ニュータウン店、【公式】 しゃぶしゃぶ温野菜 ゆめタウン福山店、【公式】 【9月1日オープン】しゃぶしゃぶ温野菜 関内店）は total から除外。「個室」は11店にしか書かれていないため集計していない",
+  "facilities": {
+    "parking": {
+      "count": 113,
+      "label": "駐車場"
+    },
+    "kidsSpace": {
+      "count": 2,
+      "label": "キッズルーム"
+    }
+  },
+  "stores": [
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 三宿店",
+      "url": "https://map.reins.co.jp/onyasai/detail/357796429",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 二子玉川店",
+      "url": "https://map.reins.co.jp/onyasai/detail/357970229",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 狭山店",
+      "url": "https://map.reins.co.jp/onyasai/detail/429001529",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 阿佐ヶ谷店",
+      "url": "https://map.reins.co.jp/onyasai/detail/359292929",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 東十条店",
+      "url": "https://map.reins.co.jp/onyasai/detail/359594129",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 豊洲店",
+      "url": "https://map.reins.co.jp/onyasai/detail/335314829",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 藤沢大庭店",
+      "url": "https://map.reins.co.jp/onyasai/detail/466866129",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 馬込店",
+      "url": "https://map.reins.co.jp/onyasai/detail/357181929",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 心斎橋店",
+      "url": "https://map.reins.co.jp/onyasai/detail/662278075",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 【10月1日リニューアルオープン】しゃぶしゃぶ温野菜 新橋店",
+      "url": "https://map.reins.co.jp/onyasai/detail/335005829",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 市川鬼高店",
+      "url": "https://map.reins.co.jp/onyasai/detail/477126688",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 池袋サンシャイン通り店",
+      "url": "https://map.reins.co.jp/onyasai/detail/359572833",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 綾瀬店",
+      "url": "https://map.reins.co.jp/onyasai/detail/356979729",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 浅草店",
+      "url": "https://map.reins.co.jp/onyasai/detail/358273831",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 新高円寺店",
+      "url": "https://map.reins.co.jp/onyasai/detail/353051429",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 入間藤沢店",
+      "url": "https://map.reins.co.jp/onyasai/detail/429017729",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 千葉中央店",
+      "url": "https://map.reins.co.jp/onyasai/detail/432020229",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 経堂店",
+      "url": "https://map.reins.co.jp/onyasai/detail/354515129",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 中山店",
+      "url": "https://map.reins.co.jp/onyasai/detail/459292262",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 八王子店",
+      "url": "https://map.reins.co.jp/onyasai/detail/426550080",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 上野駅前店",
+      "url": "https://map.reins.co.jp/onyasai/detail/358126529",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 仙川店",
+      "url": "https://map.reins.co.jp/onyasai/detail/353141929",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 六本木店",
+      "url": "https://map.reins.co.jp/onyasai/detail/357755081",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 富里店",
+      "url": "https://map.reins.co.jp/onyasai/detail/476368316",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 上本町店",
+      "url": "https://map.reins.co.jp/onyasai/detail/643025220",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 元住吉店",
+      "url": "https://map.reins.co.jp/onyasai/detail/444313429",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 大井町店",
+      "url": "https://map.reins.co.jp/onyasai/detail/357461629",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 八王子大和田店",
+      "url": "https://map.reins.co.jp/onyasai/detail/426609529",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 調布店",
+      "url": "https://map.reins.co.jp/onyasai/detail/424909885",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 五反田店別館",
+      "url": "https://map.reins.co.jp/onyasai/detail/364217429",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 田町三田口店",
+      "url": "https://map.reins.co.jp/onyasai/detail/364351831",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 桜新町店",
+      "url": "https://map.reins.co.jp/onyasai/detail/354513729",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 高田馬場店",
+      "url": "https://map.reins.co.jp/onyasai/detail/369088998",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 国分寺店",
+      "url": "https://map.reins.co.jp/onyasai/detail/423593129",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 ときわ台店",
+      "url": "https://map.reins.co.jp/onyasai/detail/359141829",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 とんかつかつ慶 草加店",
+      "url": "https://map.reins.co.jp/onyasai/detail/489467429",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 三宮店",
+      "url": "https://map.reins.co.jp/onyasai/detail/783355729",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 八潮店",
+      "url": "https://map.reins.co.jp/onyasai/detail/489345831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 梅田HEP通り店",
+      "url": "https://map.reins.co.jp/onyasai/detail/647096811",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 袖ヶ浦店",
+      "url": "https://map.reins.co.jp/onyasai/detail/438602529",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 青葉台店",
+      "url": "https://map.reins.co.jp/onyasai/detail/459892929",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 川越西口店",
+      "url": "https://map.reins.co.jp/onyasai/detail/492386729",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 銀座5丁目店",
+      "url": "https://map.reins.co.jp/onyasai/detail/362746029",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 中目黒店",
+      "url": "https://map.reins.co.jp/onyasai/detail/337158318",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 東浦和店",
+      "url": "https://map.reins.co.jp/onyasai/detail/488104829",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 新宿店",
+      "url": "https://map.reins.co.jp/onyasai/detail/5017210184",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 田無店",
+      "url": "https://map.reins.co.jp/onyasai/detail/424518129",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 亀有店",
+      "url": "https://map.reins.co.jp/onyasai/detail/356290029",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 大浦街道店",
+      "url": "https://map.reins.co.jp/onyasai/detail/734310831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 大森店",
+      "url": "https://map.reins.co.jp/onyasai/detail/357671129",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 西葛西店",
+      "url": "https://map.reins.co.jp/onyasai/detail/358783929",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 松戸北小金ボウル店",
+      "url": "https://map.reins.co.jp/onyasai/detail/473120831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 稲毛山王店",
+      "url": "https://map.reins.co.jp/onyasai/detail/434200831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 本八幡店",
+      "url": "https://map.reins.co.jp/onyasai/detail/473180831",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 とんかつかつ慶 秋田仁井田店",
+      "url": "https://map.reins.co.jp/onyasai/detail/188530768",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 センター北店",
+      "url": "https://map.reins.co.jp/onyasai/detail/459100311",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 北千住店",
+      "url": "https://map.reins.co.jp/onyasai/detail/352849329",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 佐久平店",
+      "url": "https://map.reins.co.jp/onyasai/detail/267886831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 上野広小路店",
+      "url": "https://map.reins.co.jp/onyasai/detail/358166829",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 池袋西武口店",
+      "url": "https://map.reins.co.jp/onyasai/detail/368721129",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 亀戸店",
+      "url": "https://map.reins.co.jp/onyasai/detail/356283629",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 門前仲町店",
+      "url": "https://map.reins.co.jp/onyasai/detail/356462029",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 宮野木店",
+      "url": "https://map.reins.co.jp/onyasai/detail/432900831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 つくば松代店",
+      "url": "https://map.reins.co.jp/onyasai/detail/298753329",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 池袋西口公園前店",
+      "url": "https://map.reins.co.jp/onyasai/detail/369070831",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 宇都宮泉が丘店",
+      "url": "https://map.reins.co.jp/onyasai/detail/286805629",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 辻堂店",
+      "url": "https://map.reins.co.jp/onyasai/detail/466538312",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 那珂店",
+      "url": "https://map.reins.co.jp/onyasai/detail/293532929",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 プレナ幕張店",
+      "url": "https://map.reins.co.jp/onyasai/detail/432118829",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 白石店",
+      "url": "https://map.reins.co.jp/onyasai/detail/118673900",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 青森中央インター店",
+      "url": "https://map.reins.co.jp/onyasai/detail/177622917",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 伊那店",
+      "url": "https://map.reins.co.jp/onyasai/detail/265716629",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 水戸河和田店",
+      "url": "https://map.reins.co.jp/onyasai/detail/293090831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 横須賀モアーズシティ店",
+      "url": "https://map.reins.co.jp/onyasai/detail/468202555",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 大宮西口店",
+      "url": "https://map.reins.co.jp/onyasai/detail/487832926",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 新小岩店",
+      "url": "https://map.reins.co.jp/onyasai/detail/362314829",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 魚津店",
+      "url": "https://map.reins.co.jp/onyasai/detail/765323829",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 金沢駅ビル店",
+      "url": "https://map.reins.co.jp/onyasai/detail/762353029",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 宇都宮インターパーク店",
+      "url": "https://map.reins.co.jp/onyasai/detail/286883831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 仙台一番町店",
+      "url": "https://map.reins.co.jp/onyasai/detail/222118668",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 京都河原町蛸薬師店",
+      "url": "https://map.reins.co.jp/onyasai/detail/757464831",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 LABI千里中央店",
+      "url": "https://map.reins.co.jp/onyasai/detail/668720831",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 錦糸町北口店",
+      "url": "https://map.reins.co.jp/onyasai/detail/358192929",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 目黒店",
+      "url": "https://map.reins.co.jp/onyasai/detail/357954529",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 松本平田店",
+      "url": "https://map.reins.co.jp/onyasai/detail/263873429",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 新宿西口店",
+      "url": "https://map.reins.co.jp/onyasai/detail/5017263401",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 京急川崎駅前店",
+      "url": "https://map.reins.co.jp/onyasai/detail/442117070",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 赤羽店",
+      "url": "https://map.reins.co.jp/onyasai/detail/359394129",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 春日井店",
+      "url": "https://map.reins.co.jp/onyasai/detail/568824129",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 池上店",
+      "url": "https://map.reins.co.jp/onyasai/detail/357472929",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 恵比寿店",
+      "url": "https://map.reins.co.jp/onyasai/detail/357285729",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 秋葉原昭和通り口店",
+      "url": "https://map.reins.co.jp/onyasai/detail/352894455",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 荻窪店",
+      "url": "https://map.reins.co.jp/onyasai/detail/353472529",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 新百合ヶ丘店",
+      "url": "https://map.reins.co.jp/onyasai/detail/442999529",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 泡瀬ベイストリート店",
+      "url": "https://map.reins.co.jp/onyasai/detail/989231398",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 木更津店",
+      "url": "https://map.reins.co.jp/onyasai/detail/438383829",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 渋谷1st店",
+      "url": "https://map.reins.co.jp/onyasai/detail/357841129",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 岡崎柱店",
+      "url": "https://map.reins.co.jp/onyasai/detail/564572729",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 八戸店",
+      "url": "https://map.reins.co.jp/onyasai/detail/178712917",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 松江上乃木店",
+      "url": "https://map.reins.co.jp/onyasai/detail/852320831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 名古屋北店",
+      "url": "https://map.reins.co.jp/onyasai/detail/568392831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 今池駅前店",
+      "url": "https://map.reins.co.jp/onyasai/detail/527441831",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 飯田橋店",
+      "url": "https://map.reins.co.jp/onyasai/detail/353571229",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 岡山駅前店",
+      "url": "https://map.reins.co.jp/onyasai/detail/862220831",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 呉店",
+      "url": "https://map.reins.co.jp/onyasai/detail/823250831",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 防府店",
+      "url": "https://map.reins.co.jp/onyasai/detail/835280831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 石和店",
+      "url": "https://map.reins.co.jp/onyasai/detail/552698029",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 鶴ヶ島店",
+      "url": "https://map.reins.co.jp/onyasai/detail/492723929",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 高松レインボー通り店",
+      "url": "https://map.reins.co.jp/onyasai/detail/878138031",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 岐阜茜部店",
+      "url": "https://map.reins.co.jp/onyasai/detail/582160329",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 総社井手店",
+      "url": "https://map.reins.co.jp/onyasai/detail/866948314",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 三条鴨川店",
+      "url": "https://map.reins.co.jp/onyasai/detail/757620831",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 敦賀店",
+      "url": "https://map.reins.co.jp/onyasai/detail/770216831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 岡山今店",
+      "url": "https://map.reins.co.jp/onyasai/detail/862420831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 盛岡南店",
+      "url": "https://map.reins.co.jp/onyasai/detail/196135729",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 八熊通店",
+      "url": "https://map.reins.co.jp/onyasai/detail/523540831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 倉敷北畝店",
+      "url": "https://map.reins.co.jp/onyasai/detail/864768314",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 新宿東口駅前店",
+      "url": "https://map.reins.co.jp/onyasai/detail/5017261797",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 二口店",
+      "url": "https://map.reins.co.jp/onyasai/detail/764643029",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 那覇天久店",
+      "url": "https://map.reins.co.jp/onyasai/detail/988600831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 奈良葛城店",
+      "url": "https://map.reins.co.jp/onyasai/detail/745690031",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 尾張旭店",
+      "url": "https://map.reins.co.jp/onyasai/detail/561555129",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 津山店",
+      "url": "https://map.reins.co.jp/onyasai/detail/868350831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 八幡東田店",
+      "url": "https://map.reins.co.jp/onyasai/detail/936633331",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 長崎花丘店",
+      "url": "https://map.reins.co.jp/onyasai/detail/958012025",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 長崎思案橋店",
+      "url": "https://map.reins.co.jp/onyasai/detail/958957960",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 福岡和白店",
+      "url": "https://map.reins.co.jp/onyasai/detail/926053324",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 松山新空港通り店",
+      "url": "https://map.reins.co.jp/onyasai/detail/899273414",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 田富リバーサイド店",
+      "url": "https://map.reins.co.jp/onyasai/detail/552879629",
+      "facilities": [
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 大分津久見店",
+      "url": "https://map.reins.co.jp/onyasai/detail/972850788",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 大分安心院店",
+      "url": "https://map.reins.co.jp/onyasai/detail/978440308",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 那覇小禄店",
+      "url": "https://map.reins.co.jp/onyasai/detail/988580831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 中津口店",
+      "url": "https://map.reins.co.jp/onyasai/detail/935310831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 いわき泉店",
+      "url": "https://map.reins.co.jp/onyasai/detail/246850720",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 東刈谷店",
+      "url": "https://map.reins.co.jp/onyasai/detail/5017261711",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 宇部厚南店",
+      "url": "https://map.reins.co.jp/onyasai/detail/836388029",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 天神西通り店",
+      "url": "https://map.reins.co.jp/onyasai/detail/927919325",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 宜野湾店",
+      "url": "https://map.reins.co.jp/onyasai/detail/988920831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 一宮店",
+      "url": "https://map.reins.co.jp/onyasai/detail/586828318",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 下松店",
+      "url": "https://map.reins.co.jp/onyasai/detail/833430831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 倉吉店",
+      "url": "https://map.reins.co.jp/onyasai/detail/858260831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 北谷店",
+      "url": "https://map.reins.co.jp/onyasai/detail/989360831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 倉敷平田店",
+      "url": "https://map.reins.co.jp/onyasai/detail/864350831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 今治店",
+      "url": "https://map.reins.co.jp/onyasai/detail/898558830",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 岡山平井店",
+      "url": "https://map.reins.co.jp/onyasai/detail/862300831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 宇和島店",
+      "url": "https://map.reins.co.jp/onyasai/detail/895253477",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 松阪店",
+      "url": "https://map.reins.co.jp/onyasai/detail/598251515",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 ザ・フォレストモール名護店",
+      "url": "https://map.reins.co.jp/onyasai/detail/980436528",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 西条店",
+      "url": "https://map.reins.co.jp/onyasai/detail/824310831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 熊本健軍店",
+      "url": "https://map.reins.co.jp/onyasai/detail/962347960",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 高知鴨部店",
+      "url": "https://map.reins.co.jp/onyasai/detail/888028121",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 観音寺店",
+      "url": "https://map.reins.co.jp/onyasai/detail/875236670",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 八幡穴生店",
+      "url": "https://map.reins.co.jp/onyasai/detail/936161275",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 丸亀田村店",
+      "url": "https://map.reins.co.jp/onyasai/detail/877358480",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 米子店",
+      "url": "https://map.reins.co.jp/onyasai/detail/859312488",
+      "facilities": [
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 松山小坂店",
+      "url": "https://map.reins.co.jp/onyasai/detail/899320831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 豊崎店",
+      "url": "https://map.reins.co.jp/onyasai/detail/988568310",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 二又瀬店",
+      "url": "https://map.reins.co.jp/onyasai/detail/926267588",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 神辺店",
+      "url": "https://map.reins.co.jp/onyasai/detail/849620010",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 豊田下市場店",
+      "url": "https://map.reins.co.jp/onyasai/detail/5017256505",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 小倉西港店",
+      "url": "https://map.reins.co.jp/onyasai/detail/935623332",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 浦添ピーズスクエア店",
+      "url": "https://map.reins.co.jp/onyasai/detail/989172868",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 宗像王丸店",
+      "url": "https://map.reins.co.jp/onyasai/detail/940370831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 熊本大津店",
+      "url": "https://map.reins.co.jp/onyasai/detail/962943313",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 浜松有玉店",
+      "url": "https://map.reins.co.jp/onyasai/detail/535818315",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 多賀城店",
+      "url": "https://map.reins.co.jp/onyasai/detail/223611344",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 秋田本荘店",
+      "url": "https://map.reins.co.jp/onyasai/detail/184743340",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 飯塚店",
+      "url": "https://map.reins.co.jp/onyasai/detail/948434076",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 福岡金の隈店",
+      "url": "https://map.reins.co.jp/onyasai/detail/925133303",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 岡山福浜店",
+      "url": "https://map.reins.co.jp/onyasai/detail/869020831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 豊橋藤沢店",
+      "url": "https://map.reins.co.jp/onyasai/detail/532388314",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 鈴鹿中央通店",
+      "url": "https://map.reins.co.jp/onyasai/detail/593927110",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 パルティフジ坂店",
+      "url": "https://map.reins.co.jp/onyasai/detail/825164831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 名古屋栄店",
+      "url": "https://map.reins.co.jp/onyasai/detail/5017220484",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 四日市市立病院前店",
+      "url": "https://map.reins.co.jp/onyasai/detail/593591831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 福岡橋本店",
+      "url": "https://map.reins.co.jp/onyasai/detail/924074424",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 大分高城店",
+      "url": "https://map.reins.co.jp/onyasai/detail/975789831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 イオンモール桑名店",
+      "url": "https://map.reins.co.jp/onyasai/detail/594846994",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 金山駅前店",
+      "url": "https://map.reins.co.jp/onyasai/detail/5017221585",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 久留米上津バイパス店",
+      "url": "https://map.reins.co.jp/onyasai/detail/942276390",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 瑞江店",
+      "url": "https://map.reins.co.jp/onyasai/detail/356361529",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 新居浜店",
+      "url": "https://map.reins.co.jp/onyasai/detail/897668886",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 すすきの南4条店",
+      "url": "https://map.reins.co.jp/onyasai/detail/112116629",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 札幌駅前店",
+      "url": "https://map.reins.co.jp/onyasai/detail/112197729",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 北24条店",
+      "url": "https://map.reins.co.jp/onyasai/detail/117000831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 とんかつかつ慶 長束店",
+      "url": "https://map.reins.co.jp/onyasai/detail/828748314",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 蒲田西口店",
+      "url": "https://map.reins.co.jp/onyasai/detail/357118129",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 淵野辺店",
+      "url": "https://map.reins.co.jp/onyasai/detail/427042788",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 自由が丘店",
+      "url": "https://map.reins.co.jp/onyasai/detail/357318229",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 横浜西口鶴屋町店",
+      "url": "https://map.reins.co.jp/onyasai/detail/453263429",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 海老名店",
+      "url": "https://map.reins.co.jp/onyasai/detail/462444229",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 千日前店",
+      "url": "https://map.reins.co.jp/onyasai/detail/643968311",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 道頓堀店",
+      "url": "https://map.reins.co.jp/onyasai/detail/664840831",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 松江駅前店",
+      "url": "https://map.reins.co.jp/onyasai/detail/852282288",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 岡山津島店",
+      "url": "https://map.reins.co.jp/onyasai/detail/862508314",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 庚午店",
+      "url": "https://map.reins.co.jp/onyasai/detail/825070831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 西武新宿駅前店",
+      "url": "https://map.reins.co.jp/onyasai/detail/5017257356",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 渋谷文化村通り店",
+      "url": "https://map.reins.co.jp/onyasai/detail/362775029",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 藤沢駅前店",
+      "url": "https://map.reins.co.jp/onyasai/detail/466867329",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 横浜西口北幸店",
+      "url": "https://map.reins.co.jp/onyasai/detail/457557229",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 立川店",
+      "url": "https://map.reins.co.jp/onyasai/detail/425481095",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 昭島モリタウン店",
+      "url": "https://map.reins.co.jp/onyasai/detail/425191729",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 弘前土手町店",
+      "url": "https://map.reins.co.jp/onyasai/detail/172408823",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 キュエル姫路店",
+      "url": "https://map.reins.co.jp/onyasai/detail/792808314",
+      "facilities": []
+    },
+    {
+      "name": "【公式】 しゃぶしゃぶ温野菜 豊科店",
+      "url": "https://map.reins.co.jp/onyasai/detail/263504329",
+      "facilities": []
+    }
+  ]
+}

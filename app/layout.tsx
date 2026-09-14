@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Shippori_Mincho, Noto_Sans_JP, Inter } from 'next/font/google';
+import { Zen_Kaku_Gothic_New } from 'next/font/google';
 import Script from 'next/script';
 import { ADSENSE_SCRIPT_SRC, ADSENSE_CLIENT, ADSENSE_PUB_ID_CONFIGURED } from '@/lib/adsense';
 import { PWARegister } from '@/components/common/PWARegister';
@@ -10,6 +10,9 @@ import { ScrollResetOnNavigate } from '@/components/common/ScrollResetOnNavigate
 import { Suspense } from 'react';
 import './globals.css';
 import './v2/v2.css';
+import './styles/kk.css';
+// ページ固有のCSS（top/article/spot/today）は各 page.tsx 側で import する。
+// ここで読むと全ページに配信されてしまうため（2026-09-08）。
 
 // Next.js 15 では theme-color / viewport は viewport export で指定する
 export const viewport: Viewport = {
@@ -34,32 +37,17 @@ export const viewport: Viewport = {
 //   - Inter: 500 は数か所のみ → 400/600 だけにできる
 // ただし font-display: swap + preload: false なので LCP への悪影響は小さく、
 // 削減は次フェーズ（実測 + Lighthouse 指摘ベース）で対応する方針。
-const notoSans = Noto_Sans_JP({
-  weight: ['400', '500', '600', '700'],
+const notoSans = Zen_Kaku_Gothic_New({
+  weight: ['400', '500', '700', '900'],
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
-  // 本文で最も使うのでpreloadあり
+  // 本文・見出しとも唯一の書体なのでプリロードする（LCP）
 });
 // Shippori_Mincho: H1（ヒーロー）に使われるため、PSIで LCP=7.3s の主因になっていた。
 // 700 ウェイトだけ preload:true にして、H1 のフォントスワップを早期解消する。
 // 残りウェイト（500/600）は本文中の小箇所のみ → preload なしで OK。
 // adjustFontFallback で メトリクスを最適化（CLS抑制）。
-const shippori = Shippori_Mincho({
-  weight: ['500', '600', '700'],
-  subsets: ['latin'],
-  variable: '--font-mincho',
-  display: 'swap',
-  preload: true, // H1 の LCP 改善のため preload を有効化
-  adjustFontFallback: false, // 日本語サブセットは Next 側の自動調整が効きづらい
-});
-const inter = Inter({
-  weight: ['400', '500', '600'],
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-  preload: false,
-});
 
 // サイト共通メタデータ
 export const metadata: Metadata = {
@@ -150,7 +138,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="ja"
-      className={`${shippori.variable} ${notoSans.variable} ${inter.variable}`}
+      className={notoSans.variable}
     >
       <head>
         {/* Core Web Vitals: 主要サードパーティドメインへの早期接続。

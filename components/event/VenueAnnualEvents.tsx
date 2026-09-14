@@ -6,6 +6,7 @@
  * 会期が切れたイベントは消えず、「毎年◯月ごろ開催」という未来向きの情報として残る。
  */
 import Link from 'next/link';
+import { KkIcon } from '@/components/kk/KkIcon';
 import { V2SectionHead } from '@/components/v2/V2Base';
 import { V2Icon } from '@/components/v2/V2Icon';
 import type { VenueAnnualEvent } from '@/lib/annual-events';
@@ -69,7 +70,7 @@ export function VenueAnnualEvents({ events, spotName }: { events: VenueAnnualEve
                   marginTop: 6,
                 }}
               >
-                📅 {e.periodLabel}
+                <KkIcon name="calendar" size={13} /> {e.periodLabel}
               </div>
               {e.officialUrl && (
                 <a

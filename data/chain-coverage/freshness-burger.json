@@ -1,0 +1,1028 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "freshness-burger",
+  "name": "フレッシュネスバーガー",
+  "sourceUrl": "https://search.freshnessburger.co.jp/",
+  "method": "公式店舗検索（MEO Cloud製）の店舗一覧API（/v2/companies/630/shops/search）で全店舗を取得し、各店舗の詳細ページ（/detail/<storeCode>/）の __NEXT_DATA__ にある絞り込み条件「メニュー」の checked を集計",
+  "note": "絞り込み条件「メニュー」の項目: モーニング・生ビール・瓶ビール・キッズセット・ベーカリー・Plus＋カフェ・ロングポテト・ジェラート・クレープ。店舗一覧の businessStatus: OPEN=153。公式の絞り込みはブラウザ側で行われサーバ側の件数が無いため、絞り込み件数との突き合わせは未実施。絞り込み条件「設備」（FREE-WiFi・コンセントあり・完全禁煙・喫煙専用室あり・モバイル席注文・モバイルオーダー・フードコート）には家族向け項目が無い。「キッズセット」はメニュー取扱いの有無であり設備ではない",
+  "total": 153,
+  "facilities": {
+    "kidsMenu": {
+      "count": 123,
+      "label": "キッズセット"
+    }
+  },
+  "stores": [
+    {
+      "name": "フレッシュネスバーガー ららぽーと安城店",
+      "url": "https://search.freshnessburger.co.jp/detail/3041514/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "【9月16日OPEN】フレッシュネスバーガー札幌麻生店",
+      "url": "https://search.freshnessburger.co.jp/detail/3013516/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "チーズネスバーガー東山動植物園ZOOASIS",
+      "url": "https://search.freshnessburger.co.jp/detail/3042448/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー青葉台店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032045/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー曙橋店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031003/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー浅草国際通り店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032292/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー浅草橋店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033401/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー麻布十番店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031011/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー芦屋店",
+      "url": "https://search.freshnessburger.co.jp/detail/3052156/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーアトイスコート前橋店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033365/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーアミュプラザおおいた店",
+      "url": "https://search.freshnessburger.co.jp/detail/3091441/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーアリオ八尾店",
+      "url": "https://search.freshnessburger.co.jp/detail/3051493/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーイオンタウンユーカリが丘店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031451/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーイオンモール岡山店",
+      "url": "https://search.freshnessburger.co.jp/detail/3072435/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーイオンモール橿原店",
+      "url": "https://search.freshnessburger.co.jp/detail/3053250/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーイオンモール北大路店",
+      "url": "https://search.freshnessburger.co.jp/detail/3053138/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーイオンモール倉敷店",
+      "url": "https://search.freshnessburger.co.jp/detail/3071474/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーイオンモール高岡店",
+      "url": "https://search.freshnessburger.co.jp/detail/3041496/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーイオンモールつくば店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031498/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーイオンモール東浦店",
+      "url": "https://search.freshnessburger.co.jp/detail/3041491/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーイオンモール水戸内原店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031486/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー 池袋東口店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031509/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー泉Acs店",
+      "url": "https://search.freshnessburger.co.jp/detail/3022121/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー稲毛海岸駅前店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031431/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーインターパーク店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033310/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー宇都宮店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033148/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー浦和店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033119/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーエキマルシェ新大阪ソトエ店",
+      "url": "https://search.freshnessburger.co.jp/detail/3052502/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー江戸川橋店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033056/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーエミオ田無店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031453/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー エミテラス所沢店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031510/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー大塚店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031084/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー大手町店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032413/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー大森店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031406/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー荻窪店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031409/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー要町店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033029/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー鎌倉由比ガ浜店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033436/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー蒲田店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031398/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー上本町店",
+      "url": "https://search.freshnessburger.co.jp/detail/3052197/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーカラフルタウン岐阜店",
+      "url": "https://search.freshnessburger.co.jp/detail/3042122/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー川崎ルフロン店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031492/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー神田須田町店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033064/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー吉祥寺東町店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031044/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーKITTE大阪店",
+      "url": "https://search.freshnessburger.co.jp/detail/3051512/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー錦糸町店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032417/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーGRANODE広島店",
+      "url": "https://search.freshnessburger.co.jp/detail/3071495/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガーグランエミオ大泉学園店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031440/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー郡山南店",
+      "url": "https://search.freshnessburger.co.jp/detail/3021507/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーコクーンシティさいたま新都心店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032442/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー駒沢公園通り店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032033/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーサウスウッド店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032424/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーSAKURA MACHI Kumamoto店",
+      "url": "https://search.freshnessburger.co.jp/detail/3091497/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー札幌西28丁目店",
+      "url": "https://search.freshnessburger.co.jp/detail/3013038/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーサッポロファクトリー店",
+      "url": "https://search.freshnessburger.co.jp/detail/3013449/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー佐野プレミアム・アウトレット店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032454/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー三軒茶屋店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032472/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー三宮中央通り店",
+      "url": "https://search.freshnessburger.co.jp/detail/3052397/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガーサンロード店",
+      "url": "https://search.freshnessburger.co.jp/detail/3091176/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー汐留シティセンター店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031479/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー酒々井プレミアムアウトレット店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032419/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー渋谷東店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033002/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー下北沢店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031092/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー新大久保店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033373/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー新大宮バイパス店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031098/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー新川崎スクエア店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032438/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー新宿3丁目店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033118/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー新宿三井ビル店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031462/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー新千歳空港店",
+      "url": "https://search.freshnessburger.co.jp/detail/3013407/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー新綱島店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031506/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー新横浜店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032160/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガーJR西宮駅前店",
+      "url": "https://search.freshnessburger.co.jp/detail/3052386/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガージャングルカフェ店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033399/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー自由が丘店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032489/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーSUNAMO店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032416/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー成城学園前店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031404/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー聖蹟桜ヶ丘店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031010/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー聖路加タワー店 ※当面の間、土曜日・祝日のベーカリー販売を休止いたします。",
+      "url": "https://search.freshnessburger.co.jp/detail/3031460/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーセブンパークアリオ柏店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032450/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー仙川店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033198/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー千石駅前店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033318/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー仙台駅店",
+      "url": "https://search.freshnessburger.co.jp/detail/3021504/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー仙台泉プレミアムアウトレット店",
+      "url": "https://search.freshnessburger.co.jp/detail/3021463/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー千歳船橋店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031137/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー中部国際空港店",
+      "url": "https://search.freshnessburger.co.jp/detail/3043393/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーテラスモール松戸店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031499/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー天満橋OMM店",
+      "url": "https://search.freshnessburger.co.jp/detail/3051434/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー鳥栖プレミアムアウトレット店",
+      "url": "https://search.freshnessburger.co.jp/detail/3091430/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー富ヶ谷店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031001/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガートレアージュ白旗店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031216/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー中野北口店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033107/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー 中目黒店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031046/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー 中目黒駅前店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031323/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー長住店",
+      "url": "https://search.freshnessburger.co.jp/detail/3093333/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー流山おおたかの森S.C.店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032477/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー名古屋藤が丘店",
+      "url": "https://search.freshnessburger.co.jp/detail/3043344/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー那須ガーデンアウトレット店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033369/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー成田空港第3ターミナル店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032439/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー西早稲田店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033304/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー日本橋三井タワー店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031464/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー日本橋明治座前店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033349/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー練馬店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033015/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー白山駅前店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033095/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー橋本店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031428/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー浜松アクトシティ店",
+      "url": "https://search.freshnessburger.co.jp/detail/3043072/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー晴海トリトンスクエア店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031480/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー阪急三番街UMEDA FOOD HALL店",
+      "url": "https://search.freshnessburger.co.jp/detail/3051505/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー東池袋店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033027/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー東上野店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032316/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー東五反田店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031040/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー日野店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031116/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガービエラ山科店",
+      "url": "https://search.freshnessburger.co.jp/detail/3052471/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガービナウォーク海老名店",
+      "url": "https://search.freshnessburger.co.jp/detail/3132186/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガービルボードプレイス店",
+      "url": "https://search.freshnessburger.co.jp/detail/3023161/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーピオレ姫路店",
+      "url": "https://search.freshnessburger.co.jp/detail/3052445/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガーファッションクルーズ店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031482/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー福岡空港店 ※制限エリア内なのでご注意ください",
+      "url": "https://search.freshnessburger.co.jp/detail/3091511/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー府中駅前店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031508/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー船橋店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032422/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガープライムツリー赤池店",
+      "url": "https://search.freshnessburger.co.jp/detail/3041494/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーベイサイドプレイス博多店",
+      "url": "https://search.freshnessburger.co.jp/detail/3093488/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーベルモール店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032270/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー町屋店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033319/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーマリタイムプラザ店",
+      "url": "https://search.freshnessburger.co.jp/detail/3062255/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーマークイズ福岡ももち店",
+      "url": "https://search.freshnessburger.co.jp/detail/3091483/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーマークイズみなとみらい店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031473/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーみずほPayPayドーム福岡店",
+      "url": "https://search.freshnessburger.co.jp/detail/3091468/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー三鷹北口店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033331/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー三鷹南口店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033104/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー御堂筋本町店",
+      "url": "https://search.freshnessburger.co.jp/detail/3051140/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー宮前平店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033391/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー向ヶ丘遊園店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031429/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー武蔵小金井店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033433/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー武蔵小杉東急スクエア店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031418/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーメディアシップ店",
+      "url": "https://search.freshnessburger.co.jp/detail/3023420/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー元住吉店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031408/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーもりのみやキューズモール店",
+      "url": "https://search.freshnessburger.co.jp/detail/3052444/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー門前仲町店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033099/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー矢場町店 ※現在2階はご利用いただけません",
+      "url": "https://search.freshnessburger.co.jp/detail/3043308/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー山下店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033103/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガーゆめタウン高松店",
+      "url": "https://search.freshnessburger.co.jp/detail/3062476/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレュシュネスバーガー用賀店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032227/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー代々木店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033126/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー代々木八幡店",
+      "url": "https://search.freshnessburger.co.jp/detail/3033281/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーLUXS FRONT店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031501/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー楽天モバイル 最強パーク宮城店",
+      "url": "https://search.freshnessburger.co.jp/detail/3021487/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガーららぽーと立川立飛店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031465/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーららぽーとTOKYO-BAY店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031426/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーららぽーと豊洲店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031415/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーリバーウォーク北九州店",
+      "url": "https://search.freshnessburger.co.jp/detail/3091475/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネス パン工房",
+      "url": "https://search.freshnessburger.co.jp/detail/3031500/",
+      "facilities": []
+    },
+    {
+      "name": "フレッシュネスバーガー ららテラス川口店",
+      "url": "https://search.freshnessburger.co.jp/detail/3031515/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガーたまプラーザテラス店",
+      "url": "https://search.freshnessburger.co.jp/detail/3032513/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "フレッシュネスバーガー東京ガーデンテラス紀尾井町",
+      "url": "https://search.freshnessburger.co.jp/detail/3031481/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3831 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "gyukaku",
+  "name": "牛角",
+  "sourceUrl": "https://map.reins.co.jp/gyukaku",
+  "method": "公式店舗検索の全店舗一覧（/gyukaku/all）の店舗ごと data-store JSON にある「サービス」絞り込み項目を集計し、駐車場・個室・バリアフリー・キッズルームは各店舗詳細ページの「備考」欄の定型（○○：あり／なし）から集計",
+  "note": "一覧の表示件数 473。備考欄の定型が無い店舗 7 件（項目別欠落: 駐車場19・キッズルーム12・個室10・バリアフリー9）は該当項目「なし」扱い。「お子様用備品あり」は椅子・食器の別が明示されていないため kidsChair に仮置き",
+  "total": 473,
+  "facilities": {
+    "kidsChair": {
+      "count": 248,
+      "label": "お子様用備品あり"
+    },
+    "diaperTable": {
+      "count": 97,
+      "label": "おむつ交換台あり"
+    },
+    "nursingRoom": {
+      "count": 6,
+      "label": "授乳スペースあり"
+    },
+    "zashiki": {
+      "count": 193,
+      "label": "座敷あり"
+    },
+    "parking": {
+      "count": 313,
+      "label": "駐車場"
+    },
+    "privateRoom": {
+      "count": 52,
+      "label": "個室"
+    },
+    "stepFree": {
+      "count": 94,
+      "label": "バリアフリー"
+    },
+    "kidsSpace": {
+      "count": 11,
+      "label": "キッズルーム"
+    }
+  },
+  "stores": [
+    {
+      "name": "牛角 平塚四之宮店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/463253829",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 四街道店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/434201129",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 南越谷店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/489903329",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 松戸アネックス店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/473675871",
+      "facilities": [
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 越谷店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/489692782",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 青葉台店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/459894129",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 東千葉店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/432013129",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 三軒茶屋店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/357123319",
+      "facilities": [
+        "kidsChair",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 阿佐ヶ谷北口店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/353275629",
+      "facilities": [
+        "kidsChair",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 宮野木店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/432901529",
+      "facilities": [
+        "kidsChair",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 福生店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/425393929",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 笹塚店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/357908929",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 東十条店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/359594929",
+      "facilities": [
+        "kidsChair",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 八柱店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/473112929",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 用賀店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/337088929",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 さいたま東大宮店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/486690510",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 市川大野店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/477119409",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 袖ヶ浦店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/438608829",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 京成大久保店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/474038929",
+      "facilities": [
+        "kidsChair",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 市原国分寺台店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/436207629",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 岩槻店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/487932911",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 北本店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/485905355",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 瀬谷店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/453038994",
+      "facilities": [
+        "kidsChair",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 白井店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/474419229",
+      "facilities": [
+        "kidsChair",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 赤坂店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/355455029",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 相模大野店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/427678929",
+      "facilities": [
+        "kidsChair",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 品川店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/357834329",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 綾瀬店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/356737029",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 逆瀬川店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/797764429",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 市川鬼高店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/477126429",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 藤沢柄沢店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/466531129",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 千里丘店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/648614129",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 八王子大和田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/426609568",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 十三店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/661014129",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 中野新橋店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/353424129",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 五反田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/357984729",
+      "facilities": [
+        "kidsChair",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 松戸二十世紀が丘店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/473128129",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 籠原店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/485306129",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 浦安店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/473823729",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 大山店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/359173929",
+      "facilities": []
+    },
+    {
+      "name": "牛角 赤羽店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/352495529",
+      "facilities": []
+    },
+    {
+      "name": "牛角 練馬店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/359847729",
+      "facilities": []
+    },
+    {
+      "name": "牛角 白楽店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/454395629",
+      "facilities": [
+        "kidsChair",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 蒲田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/354805129",
+      "facilities": []
+    },
+    {
+      "name": "牛角 保木間店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/358311329",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 鷺沼店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/448704929",
+      "facilities": []
+    },
+    {
+      "name": "牛角 柏店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/471658929",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 高田馬場店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/353323029",
+      "facilities": []
+    },
+    {
+      "name": "牛角 所沢店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/429264129",
+      "facilities": []
+    },
+    {
+      "name": "牛角 津田沼店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/474556529",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 新百合ヶ丘店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/449692229",
+      "facilities": []
+    },
+    {
+      "name": "牛角 八潮店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/489997729",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 渋谷店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/354564129",
+      "facilities": []
+    },
+    {
+      "name": "牛角 武蔵村山店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/425900629",
+      "facilities": [
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "牛角 原宿店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/354145229",
+      "facilities": []
+    },
+    {
+      "name": "牛角 西葛西店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/356592529",
+      "facilities": [
+        "kidsChair",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 武蔵中原店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/447381729",
+      "facilities": []
+    },
+    {
+      "name": "牛角 鴨宮店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/465463329",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 明大前店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/333244129",
+      "facilities": []
+    },
+    {
+      "name": "牛角 厚木妻田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/462970229",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 妙典店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/477011129",
+      "facilities": [
+        "kidsChair",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "【8月24日オープン】牛角 歌舞伎町店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/352874129",
+      "facilities": []
+    },
+    {
+      "name": "牛角 中山店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/459352929",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 武蔵小杉店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/447381129",
+      "facilities": []
+    },
+    {
+      "name": "牛角 住吉店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/356387729",
+      "facilities": [
+        "kidsChair",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 春日部小渕店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/487601129",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "牛角 小田原店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/465215529",
+      "facilities": [
+        "zashiki",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 巣鴨店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/359075629",
+      "facilities": [
+        "kidsChair",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 町田鶴川店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/427089129",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 梅ヶ丘店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/354263129",
+      "facilities": []
+    },
+    {
+      "name": "牛角 鶴ヶ島店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/492725129",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 調布店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/424430229",
+      "facilities": []
+    },
+    {
+      "name": "牛角 上野店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/358079529",
+      "facilities": [
+        "kidsChair",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 高砂店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/338265129",
+      "facilities": [
+        "kidsChair",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 川崎店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/442301529",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 ヒューマックス成田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/476202929",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 茅ヶ崎高田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/467552929",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 町田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/427208929",
+      "facilities": [
+        "kidsChair",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 新宿東口店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/5017257035",
+      "facilities": []
+    },
+    {
+      "name": "牛角 大岡山店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/357260129",
+      "facilities": []
+    },
+    {
+      "name": "牛角 京急川崎駅前店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/442110929",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 成増店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/359683629",
+      "facilities": []
+    },
+    {
+      "name": "牛角 旗の台店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/357516629",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 平塚店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/463254129",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 立川店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/425242941",
+      "facilities": []
+    },
+    {
+      "name": "牛角 多摩センター店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/423196429",
+      "facilities": []
+    },
+    {
+      "name": "牛角 港北ニュータウンセンター南店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/459492929",
+      "facilities": [
+        "diaperTable",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 小田急町田北口店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/427094729",
+      "facilities": []
+    },
+    {
+      "name": "牛角 館山店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/470241129",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 浅草国際通り店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/358272120",
+      "facilities": []
+    },
+    {
+      "name": "牛角 浅草店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/358305929",
+      "facilities": [
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 木更津店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/438204329",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 王子店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/359025929",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 川越クレアモール店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/492287729",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 秋葉原電気街口店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/352971929",
+      "facilities": []
+    },
+    {
+      "name": "牛角 池袋サンシャイン通り店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/359570910",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 入間武蔵藤沢店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/429668929",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 新小岩駅前店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/358793829",
+      "facilities": []
+    },
+    {
+      "name": "牛角 元石川店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/459052911",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 戸田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/482294129",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 久喜店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/480281129",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 吉川店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/5017256857",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 池袋西口立教通り店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/359604429",
+      "facilities": []
+    },
+    {
+      "name": "牛角 水道橋店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/335157029",
+      "facilities": []
+    },
+    {
+      "name": "牛角 鴨川店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/470965298",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "【休業】牛角 野並店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/528994929",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 池上店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/357473429",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 八重洲日本橋店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/362021129",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 浦和店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/488264229",
+      "facilities": [
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 伊勢原店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/463983229",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 山形桜田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/236152988",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 国分寺店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/423124429",
+      "facilities": []
+    },
+    {
+      "name": "牛角 横浜関内店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/453194329",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 青砥店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/356718929",
+      "facilities": [
+        "kidsChair",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 大船店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/467422911",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 海老名店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/462360129",
+      "facilities": [
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 菊名店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/454397029",
+      "facilities": []
+    },
+    {
+      "name": "牛角 上尾浅間台店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/487700801",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 あきる野店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/425333729",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 日暮里店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/358501729",
+      "facilities": []
+    },
+    {
+      "name": "牛角 初台店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/353026329",
+      "facilities": [
+        "kidsChair",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 敦賀店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/770241129",
+      "facilities": [
+        "parking",
+        "privateRoom",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 十和田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/176226785",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 江戸川大杉店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/356614129",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 東金店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/475534129",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 日吉店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/455603729",
+      "facilities": [
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 天童店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/236520729",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 新橋店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/354083929",
+      "facilities": []
+    },
+    {
+      "name": "牛角 松戸北小金店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/473121129",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 由利本荘店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/184284129",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 渋谷3rd店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/357844129",
+      "facilities": []
+    },
+    {
+      "name": "牛角 三沢店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/176587015",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 ひたちなか店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/293542929",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 八戸ゆりの木通り店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/178412989",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 本庄南大通り店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/495231129",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 樽町店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/455401179",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 青森中央インター店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/177624129",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 自治医大店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/285400329",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 香取佐原店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/478798029",
+      "facilities": [
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 白河店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/248218229",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 愛知川店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/749428829",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 会津若松店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/242370229",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 錦糸町テルミナ店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/356255029",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 佐沼店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/220216282",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 横手店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/182352929",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 けやき台店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/293092929",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 宮古店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/193773737",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 岩沼店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/223255929",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 イオンタウン茨島店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/188381129",
+      "facilities": [
+        "kidsChair",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 郡山なかまち夢通り店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/249902901",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 春日井店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/568898088",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 いわき店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/246218929",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 河和田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/292577729",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 桂台店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/459600029",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 綾瀬深谷店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/467795501",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 福島鎌田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/245525029",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 イオンモール桑名店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/594846929",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 つるみ西口店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/455803929",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 国際通り店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/988640141",
+      "facilities": []
+    },
+    {
+      "name": "牛角 秋葉原昭和通り口店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/335266029",
+      "facilities": []
+    },
+    {
+      "name": "牛角 秋葉原3rd店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/362629429",
+      "facilities": []
+    },
+    {
+      "name": "牛角 渋川店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/279607629",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 一宮店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/586476311",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 天王洲アイル店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/357819129",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 いわき小名浜店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/246733529",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 ミューザ川崎店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/445422929",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 守谷店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/297385529",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 泉北秋田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/188934829",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 名取店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/227977709",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 西新宿店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/353387229",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 龍ヶ崎店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/297855424",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 大森店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/357188429",
+      "facilities": []
+    },
+    {
+      "name": "牛角 大館店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/186451129",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 川口店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/482406729",
+      "facilities": []
+    },
+    {
+      "name": "牛角 仙台富沢店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/223938812",
+      "facilities": [
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 鹿沼店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/289605529",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 奈良橿原店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/744211129",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 飯田橋西口駅前店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/362654929",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "【休業】牛角 伊勢病院前店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/596208329",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 松阪店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/598311029",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 吹田上山手店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/661906794",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 今池店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/527441229",
+      "facilities": []
+    },
+    {
+      "name": "牛角 兵庫南店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/952418677",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 川越霞ヶ関店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/492397500",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 八熊通店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/523215520",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 西尾店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/563538929",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 鈴鹿サーキット通り店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/593806560",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 イオン新浦安店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/473163329",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 東加古川店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/794306129",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "nursingRoom",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 府中店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/423066129",
+      "facilities": []
+    },
+    {
+      "name": "牛角 渋谷センター街店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/364553029",
+      "facilities": []
+    },
+    {
+      "name": "牛角 筑波学園北店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/298698529",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 岡崎羽根店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/564595529",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 青森店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/177185429",
+      "facilities": []
+    },
+    {
+      "name": "牛角 羽水店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/776439329",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 館林店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/276707729",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 金沢桜田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/762565829",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 太子店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/792751629",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 高岡駅南店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/766732985",
+      "facilities": [
+        "kidsChair",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 おもろまち駅前店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/988662929",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 草津店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/775695090",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 津島店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/567330505",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 福知山店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/773489029",
+      "facilities": [
+        "parking",
+        "privateRoom",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 奈良葛城店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/745690025",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 桂川街道店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/753820129",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 葛西店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/356596929",
+      "facilities": []
+    },
+    {
+      "name": "牛角 北谷店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/989360029",
+      "facilities": [
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 到津店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/935824111",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 唐津店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/955796629",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 半田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/569241129",
+      "facilities": [
+        "kidsChair",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "【9月28日リニューアルオープン】牛角 新宮店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/929632911",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 飯塚店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/948227429",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 郡山安積店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/249375653",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 福岡キャナルシティ博多前店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/927106850",
+      "facilities": []
+    },
+    {
+      "name": "牛角 京都R1下鳥羽店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/756218129",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 弘前店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/172310429",
+      "facilities": [
+        "parking",
+        "privateRoom",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 大垣店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/584814129",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 上飯野店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/764717601",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 石巻店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/225217029",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 若松二島店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/937018929",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 荒江店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/928325833",
+      "facilities": [
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "【休業】牛角 かのや店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/994427529",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 伊勢佐木モール店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/452328529",
+      "facilities": [
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 神戸北店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/785832929",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 霧島店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/995485429",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 和合153広場店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/561382929",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 衣笠店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/754652299",
+      "facilities": [
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 バークレーズコート店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/988711729",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 兵庫駅前店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/785780429",
+      "facilities": []
+    },
+    {
+      "name": "牛角 銚子店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/479215729",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 古川店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/229217337",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 大田原店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/287202020",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 福大通り店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/928743729",
+      "facilities": [
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 亀有南口店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/362407275",
+      "facilities": []
+    },
+    {
+      "name": "牛角 北花田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/722464129",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 天神西通り店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/927341129",
+      "facilities": [
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 津嘉山店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/989965029",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 北上店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/197621129",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 多賀城店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/223614561",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 名護店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/980436729",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "privateRoom",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 門前仲町店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/362403329",
+      "facilities": []
+    },
+    {
+      "name": "牛角 富谷店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/223449219",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 和歌山ガーデンパーク店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/734805529",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 貝塚店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/724320291",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 布瀬けやき通り店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/764932911",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 宇治槙島店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/774252001",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 安慶名店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/989878229",
+      "facilities": [
+        "kidsChair",
+        "nursingRoom",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 心斎橋店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/662581129",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 つくばテクノパーク桜店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/298635529",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 和歌山橋本店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/736348829",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 足利店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/284705429",
+      "facilities": [
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 有田川店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/737532911",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 日立多賀店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/294288929",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "【休業】牛角 津南店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/592534129",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 阪急三宮さんきた店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/783934129",
+      "facilities": [
+        "kidsChair",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 河口湖店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/555732941",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 アクロスプラザ幸町店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/222923929",
+      "facilities": [
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 取手店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/297632934",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 初生店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/534148929",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 豊橋大岩店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/532412929",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 能代店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/185888739",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "privateRoom",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 河原町三条店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/752569129",
+      "facilities": [
+        "kidsChair",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 梅田お初天神店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/663112939",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 小倉南葛原店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/934720086",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "牛角 垂水店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/787072983",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 伊勢崎韮塚店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/270753329",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 小樽運河通り店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/134344129",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 松本中央店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/263398929",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 なんば道頓堀えびす橋店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/664840129",
+      "facilities": []
+    },
+    {
+      "name": "牛角 佐野店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/283272529",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 神栖店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/299775554",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 美里店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/989292929",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 小諸店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/5017261446",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 宮の沢店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/116714129",
+      "facilities": [
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 むつ店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/175231129",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 梅田阪急東通り店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/663614129",
+      "facilities": []
+    },
+    {
+      "name": "牛角 真岡店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/285842929",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 京都四条河原町店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/752220029",
+      "facilities": []
+    },
+    {
+      "name": "牛角 那珂町店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/293520729",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 太宰府西店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/929183856",
+      "facilities": [
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 浜松モール街店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/534592911",
+      "facilities": []
+    },
+    {
+      "name": "牛角 四日市生桑店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/593334129",
+      "facilities": [
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 仲原店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/926268629",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 梅田はなれ阪急東通り店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/663159129",
+      "facilities": []
+    },
+    {
+      "name": "牛角 高宮店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/263284129",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 高槻店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/726833129",
+      "facilities": [
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 佐賀開成店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/952368529",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 燕三条店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/256612911",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 長良店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/582964129",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 函館本通店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/138305529",
+      "facilities": [
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 厚別店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/118990029",
+      "facilities": [
+        "kidsChair",
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 旭川パワーズ店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/166484129",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "nursingRoom",
+        "zashiki",
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 釧路昭和店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/154522989",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 東舞鶴店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/773642929",
+      "facilities": [
+        "parking",
+        "privateRoom",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 なんば千日前店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/666364129",
+      "facilities": [
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 上磯店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/138485529",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 田辺店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/739268313",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 沼津西店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/5017261474",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 アグリしののい店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/262932955",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 新発田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/254212911",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 須坂店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/5017263041",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "牛角 市野店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/534114129",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 浜松有玉店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/535453629",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 焼津店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/546211129",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 袋井店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/538453929",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 和合店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/534122929",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 上田原店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/5017262845",
+      "facilities": [
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 佐久平店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/267688929",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 菊川店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/537257529",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 山口小郡店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/839741129",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 五日市城山店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/829434129",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 黒埼店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/252012929",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 向宿店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/534019299",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 防府店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/835200429",
+      "facilities": [
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 熊本琴平店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/963755539",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 松永店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/849331129",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 萩店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/838241229",
+      "facilities": [
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 松江上乃木店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/852202929",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 松山空港通店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/899488929",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 浜街道丸亀店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/877581114",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 岩見沢店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/126241129",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 柳井店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/820240229",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 豊崎店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/988564129",
+      "facilities": [
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 松山樽味店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/899874029",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 中城店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/989431929",
+      "facilities": [
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 岩国駅前店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/827304129",
+      "facilities": [
+        "kidsChair",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 倉吉店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/858474129",
+      "facilities": [
+        "parking",
+        "privateRoom",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 和歌山北店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/734231629",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 山口湯田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/839240029",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 青木島店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/5018092762",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 宇部厚南店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/836418929",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 下松店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/833452929",
+      "facilities": [
+        "kidsChair",
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 宇部店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/836352229",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 広店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/823762929",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "privateRoom",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 高知鴨部店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/888553575",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 宜野湾店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/988904129",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 宮崎大島通線店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/985829153",
+      "facilities": [
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 松江北店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/852281129",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 徳山店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/834228929",
+      "facilities": [
+        "kidsChair",
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 高松レインボー通り店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/878153233",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 下関カモンワーフ店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/832338929",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 高田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/255272901",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 宮崎高鍋店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/983320829",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 大分森町店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/975223366",
+      "facilities": [
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 札幌元町店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/117844129",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 札幌時計台通り店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/112213277",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 狸小路4丁目店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/112804129",
+      "facilities": []
+    },
+    {
+      "name": "牛角 平岸店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/118181729",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 南郷15丁目店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/118664129",
+      "facilities": [
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 静岡SBS通り店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/542663729",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 佐和田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/259510029",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 野幌店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/113824129",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 伊那店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/265772955",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 長岡店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/258282911",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 甲府上石田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/552212911",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 岡谷店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/266241129",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 すすきの店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/115224129",
+      "facilities": []
+    },
+    {
+      "name": "牛角 稲葉バイパス店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/262670029",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "牛角 三島南店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/559833929",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 藤枝青島店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/546472929",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 清水店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/543661129",
+      "facilities": [
+        "kidsChair",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 響が丘店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/551288200",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 掛川店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/537614129",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 諏訪インター店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/266821129",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 高知御座店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/888616021",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 小野田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/836822929",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 旭川春光ドン・キホーテ店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/166554129",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 岡山駅前店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/862338929",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 信州中野店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/269240298",
+      "facilities": [
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "牛角 入野店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/534452929",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 米子しんまち店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/859384129",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 米山店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/252492917",
+      "facilities": [
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 直江津店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/255313929",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 都留店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/554434129",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 新居浜江口店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/897312226",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 鳥取湖山店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/857322911",
+      "facilities": [
+        "parking",
+        "privateRoom",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 田富リバーサイド店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/552699129",
+      "facilities": [
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "牛角 塩尻店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/263874129",
+      "facilities": []
+    },
+    {
+      "name": "牛角 中央通り店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/822428929",
+      "facilities": [
+        "zashiki",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 総社井手店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/866948929",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 海田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/828211129",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 長束店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/828501129",
+      "facilities": [
+        "zashiki",
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 苫小牧店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/144382929",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 津山店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/868201429",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 甲府丸の内店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/552242911",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 安曇野店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/263713529",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 宮崎大塚店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/985488929",
+      "facilities": [
+        "kidsChair",
+        "parking",
+        "privateRoom",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 宇都宮御幸町店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/286157299",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 筑西店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/296456321",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 リップス旭岡店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/258898929",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 彦根店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/749265529",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 行橋店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/930249029",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 横須賀モアーズシティ店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/468286629",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 天王寺店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/666265629",
+      "facilities": []
+    },
+    {
+      "name": "牛角 PLE葉WALK浜北店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/535841129",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 磐田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/538214129",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 渋谷道玄坂店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/364164029",
+      "facilities": []
+    },
+    {
+      "name": "牛角 横須賀汐入店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/468544129",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 藤沢店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/466295429",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 君津店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/439508929",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 亀岡店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/771569029",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 長浜店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/749681729",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "parking",
+        "privateRoom",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 新宿大ガード店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/359375929",
+      "facilities": []
+    },
+    {
+      "name": "牛角 大曲店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/187888629",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 ブランチ仙台店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/223461529",
+      "facilities": [
+        "kidsChair",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 川越岸町店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/492492729",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 相模原淵野辺店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/427306929",
+      "facilities": [
+        "kidsChair",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 南本宿店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/453553029",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 横浜北幸店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/453172929",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 横浜ムービル店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/453263529",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 千葉プライム8店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/432015529",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 東戸塚店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/458294129",
+      "facilities": [
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "牛角 練馬谷原店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/359107829",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 北習志野店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/474968929",
+      "facilities": [
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 逗子店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/468720029",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 錦糸町北口店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/362841729",
+      "facilities": [
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "牛角 草加駅前店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/489345929",
+      "facilities": [
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "牛角 中野北口店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/359427029",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 橋本店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/427033729",
+      "facilities": [
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "牛角 吉祥寺北口店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/422271529",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 横浜鶴屋町店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/453172955",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 プレナ幕張店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/432118629",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 成城学園前店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/354292329",
+      "facilities": []
+    },
+    {
+      "name": "牛角 千葉NT南店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/476406829",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 浜松町店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/357332129",
+      "facilities": []
+    },
+    {
+      "name": "牛角 船橋店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/474603262",
+      "facilities": []
+    },
+    {
+      "name": "牛角 塩山店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/553326229",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 北千住駅前店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/352849129",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 宮城大河原店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/224864129",
+      "facilities": [
+        "kidsChair",
+        "nursingRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 酒田バイパス店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/234255385",
+      "facilities": [
+        "kidsChair",
+        "parking",
+        "privateRoom",
+        "stepFree",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "牛角 魚津店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/765325829",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 気仙沼店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/226259429",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "nursingRoom",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 亀田インター店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/252122129",
+      "facilities": []
+    },
+    {
+      "name": "牛角 自由が丘店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/357311129",
+      "facilities": [
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "牛角 フォレオ菖蒲店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/480870129",
+      "facilities": [
+        "kidsChair",
+        "parking",
+        "stepFree",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "牛角 上大岡西口店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/458498929",
+      "facilities": [
+        "kidsChair",
+        "zashiki"
+      ]
+    },
+    {
+      "name": "牛角 聖蹟桜ヶ丘店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/424007529",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 町田木曽町店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/427107029",
+      "facilities": [
+        "diaperTable",
+        "zashiki",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "牛角 狛江店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/354381029",
+      "facilities": []
+    },
+    {
+      "name": "牛角 青梅店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/428258484",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 安謝店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/989431804",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 高崎問屋町店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/273708929",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 さいたま新都心店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/487885729",
+      "facilities": [
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "牛角 うるま石川店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/989653529",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 福井大和田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/776373529",
+      "facilities": [
+        "kidsChair",
+        "nursingRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 茂原店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/475278090",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 岐阜宇佐南店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/582133929",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 庚午店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/822734129",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 八丁堀店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/822121029",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 出雲渡橋店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/853300929",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 岡山津島店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/862504129",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 石和店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/552305129",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 綱島店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/455403029",
+      "facilities": [
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "牛角 イオンモール大日店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/669919929",
+      "facilities": [
+        "kidsChair",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 トピレックプラザ南砂町店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/366664029",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 上戸祭店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/286433911",
+      "facilities": []
+    },
+    {
+      "name": "牛角 名古屋栄店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/5017257367",
+      "facilities": [
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "牛角 西条中央店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/824242929",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 姫路駅前店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/792808129",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 御影店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/788913029",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "牛角 イオンタウン野田店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/471997129",
+      "facilities": [
+        "kidsChair",
+        "zashiki",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 岩出店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/736690029",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 山形馬見ヶ崎店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/236740629",
+      "facilities": [
+        "kidsChair",
+        "parking",
+        "privateRoom",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 八王子店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/426349029",
+      "facilities": []
+    },
+    {
+      "name": "牛角 福岡中洲店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/922924007",
+      "facilities": []
+    },
+    {
+      "name": "牛角 向ヶ丘遊園店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/449301194",
+      "facilities": []
+    },
+    {
+      "name": "牛角 フレスポうつのみや市場店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/286510829",
+      "facilities": [
+        "kidsChair",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 箱崎店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/922926829",
+      "facilities": [
+        "kidsChair",
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "牛角 湖西店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/535741129",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "【休業】牛角 平塚旭店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/463373729",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "parking",
+        "stepFree",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "【9月14日オープン】牛角 足柄開成町店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/465853729",
+      "facilities": [
+        "kidsChair",
+        "diaperTable",
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "牛角 横浜西口店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/455770529",
+      "facilities": [
+        "kidsChair",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "牛角 小杉店",
+      "url": "https://map.reins.co.jp/gyukaku/detail/766578880",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    }
+  ]
+}

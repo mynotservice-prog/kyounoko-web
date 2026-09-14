@@ -1,12 +1,12 @@
 ---
 slug: shitsunai-asobi-chuo-tokyo
-title: 中央区の子供の室内遊び場8選｜児童館・キッズスペース・有料施設【2026年版】
+title: 中央区の子供の室内遊び場8選｜赤ちゃんOK・児童館・キッズスペース・有料施設【2026年版】
 metaDescription: >-
   中央区で子供（0〜6歳）と室内で遊べるスポット8選。東京駅八重洲口直結の東京ミッドタウン八重洲B1（授乳室4部屋・おむつ台3台・キッズスペース・電子レンジ・身長体重計）と、コレド各館の授乳室を階数つきで整理。日本橋・豊洲・お台場の屋内キッズパークは現在すべて閉店しています。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-07-31'
+updatedAt: '2026-09-12'
 hero: /img/scenes/rainymall-01.webp
 area: tokyo
 quickInfo:

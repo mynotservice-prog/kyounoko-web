@@ -58,7 +58,7 @@ area: tokyo
 
 **結論：朝モーニング・離乳食・席間広め重視＝ジョナサン／配膳ロボ・低価格・賑やかOK＝ガスト。** 詳細な使い分けは [ガスト vs ジョナサン｜どっちが子連れ向き？](/article/gusto-vs-jonathan-kodzure-douchi) にまとめています。
 
-## 🪧 子連れチェックリスト
+## 子連れチェックリスト
 
 <!-- 子連れチェックリストの中身は lib/chain-facilities.ts が正本です。
      このチェーンはDBに載っているため ChainFacilitiesBox が描画され、ここに表を書いても表示されません。

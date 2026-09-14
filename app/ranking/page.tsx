@@ -1,10 +1,13 @@
+import '@/app/styles/spots-v3.css';
 import type { Metadata } from 'next';
 import { Fragment } from 'react';
 import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
 import { V2Breadcrumb } from '@/components/v2/V2Breadcrumb';
 import { V2SpotRow } from '@/components/v2/V2Cards';
-import { V2Icon } from '@/components/v2/V2Icon';
+import { KkArt } from '@/components/kk/KkArt';
+import { KkAddToHomeCard } from '@/components/kk/KkAddToHomeCard';
+import { KkFooter } from '@/components/kk/KkFooter';
 import { spotToV2 } from '@/lib/v2-adapters';
 import { getAreaName, isValidArea, type AreaSlug } from '@/lib/area';
 import type { AgeTag } from '@/lib/spots';
@@ -102,44 +105,42 @@ export default async function RankingPage({ searchParams }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
 
-      <V2Breadcrumb items={[{ label: 'ホーム', href: '/' }, { label: '人気ランキング' }]} />
-      <div className="v2-page-head" style={{ paddingTop: 6 }}>
-        <h1 className="v2-page-h1" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <V2Icon name="crown" size={24} color="var(--v2-orange)" />
-          人気スポットランキング
-        </h1>
-        <p className="v2-page-lead">
-          {isLive
-            ? 'いま子連れ家族に見られているおでかけスポットを、直近1週間の閲覧数をもとに集計しました。'
-            : '0〜6歳の子連れで定番の人気おでかけスポットを編集部が厳選しました。'}
-        </p>
-      </div>
+      <div className="spots-v3">
+        <V2Breadcrumb items={[{ label: 'ホーム', href: '/' }, { label: '人気ランキング' }]} />
+        <div className="sv3-head">
+          {/* 見出しは装飾（王冠アイコン）を付けず、文字と余白だけで成立させる（docs §2-1） */}
+          <h1 className="sv3-h1">人気スポットランキング</h1>
+          <p className="sv3-lead">
+            {isLive
+              ? 'いま子連れ家族に見られているおでかけスポットを、直近1週間の閲覧数をもとに集計しました。'
+              : '0〜6歳の子連れで定番の人気おでかけスポットを編集部が厳選しました。'}
+          </p>
+        </div>
 
-      {/* 年齢タブ */}
-      <div className="v2-ev-tabs" style={{ flexWrap: 'wrap' }}>
-        {AGE_TABS.map((t) => {
-          const on = age === t.value;
-          return (
-            <Link
-              key={t.label}
-              href={buildHref({ age: t.value ?? null })}
-              className={'v2-ev-tab' + (on ? ' on' : '')}
-              scroll={false}
-            >
-              {t.label}
-            </Link>
-          );
-        })}
-      </div>
+        {/* 年齢タブ */}
+        <div className="sv3-tabs kk-chips">
+          {AGE_TABS.map((t) => {
+            const on = age === t.value;
+            return (
+              <Link
+                key={t.label}
+                href={buildHref({ age: t.value ?? null })}
+                className={'kk-chip' + (on ? ' on' : '')}
+                scroll={false}
+              >
+                {t.label}
+              </Link>
+            );
+          })}
+        </div>
 
-      {/* エリアフィルタ */}
-      <div className="v2-ev-filters">
-        <div className="v2-filter-group">
-          <div className="v2-filter-label">エリア</div>
-          <div className="v2-filter-opts">
+        {/* エリアフィルタ */}
+        <div className="sv3-facet">
+          <p className="sv3-facet-lab">エリア</p>
+          <div className="kk-chips">
             <Link
               href={buildHref({ area: null })}
-              className={'v2-filter-opt' + (!area ? ' on' : '')}
+              className={'kk-chip' + (!area ? ' on' : '')}
               scroll={false}
             >
               全国
@@ -148,7 +149,7 @@ export default async function RankingPage({ searchParams }: Props) {
               <Link
                 key={a}
                 href={buildHref({ area: area === a ? null : a })}
-                className={'v2-filter-opt' + (area === a ? ' on' : '')}
+                className={'kk-chip' + (area === a ? ' on' : '')}
                 scroll={false}
               >
                 {getAreaName(a)}
@@ -156,43 +157,45 @@ export default async function RankingPage({ searchParams }: Props) {
             ))}
           </div>
         </div>
-      </div>
 
-      <div className="v2-sec-head">
-        <div className="v2-sec-title">
-          {scopeLabel}のランキング
-          <span className="v2-ev-count">{ranking.length}</span>
+        {/* 見出しタグは元の div のまま（SEO照合のため h2 にしない） */}
+        <div className="sv3-scope">
+          <div className="sv3-scope-title">{scopeLabel}のランキング</div>
+          <span className="sv3-scope-count">{ranking.length}</span>
         </div>
-      </div>
 
-      {ranking.length > 0 ? (
-        <div className="v2-vlist">
-          {ranking.map((it, i) => (
-            <Fragment key={it.slug}>
-              <V2SpotRow spot={spotToV2(it.spot, i)} rank={it.rank} href={`/spot/${it.slug}`} />
-              {i === 4 && (
-                <div className="v2-section" style={{ margin: '8px 0' }}>
-                  <AdSlot placement="article-mid" />
-                </div>
-              )}
-            </Fragment>
-          ))}
-        </div>
-      ) : (
-        <div className="v2-empty-state">
-          <div className="v2-empty-ill">
-            <V2Icon name="star" size={40} color="#e9c9ac" />
+        {ranking.length > 0 ? (
+          <div className="sv3-rank">
+            <div className="v2-vlist">
+              {ranking.map((it, i) => (
+                <Fragment key={it.slug}>
+                  <V2SpotRow spot={spotToV2(it.spot, i)} rank={it.rank} href={`/spot/${it.slug}`} />
+                  {i === 4 && (
+                    <div className="v2-section sv3-ad">
+                      <AdSlot placement="article-mid" />
+                    </div>
+                  )}
+                </Fragment>
+              ))}
+            </div>
           </div>
-          <div className="v2-empty-title">
-            条件に合うスポットが
-            <br />
-            見つかりませんでした
+        ) : (
+          <div className="sv3-empty">
+            <span className="sv3-empty-art">
+              <KkArt name="popular" size={56} />
+            </span>
+            <p className="sv3-empty-title">
+              条件に合うスポットが
+              <br />
+              見つかりませんでした
+            </p>
+            <p className="sv3-empty-sub">エリアや年齢の条件をへらしてお試しください。</p>
           </div>
-          <div className="v2-empty-sub">エリアや年齢の条件をへらしてお試しください。</div>
-        </div>
-      )}
+        )}
 
-      <div style={{ height: 24 }}></div>
+        <KkAddToHomeCard placement="spots" />
+        <KkFooter />
+      </div>
     </V2Frame>
   );
 }

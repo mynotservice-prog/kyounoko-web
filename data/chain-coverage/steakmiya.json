@@ -1,0 +1,742 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "steakmiya",
+  "name": "ステーキ宮",
+  "sourceUrl": "https://www.miya.com/shop/",
+  "method": "公式店舗一覧の全店舗について、店舗詳細ページの設備表（個室／半個室／座席／その他）の値を集計",
+  "total": 102,
+  "note": "公式の設備表に「お子様椅子」「おむつ交換台」等の行は無い。値「ー」は「該当なし」と「未入力」を区別できない",
+  "facilities": {
+    "privateRoom": {
+      "count": 0,
+      "label": "個室／半個室"
+    },
+    "boxSeat": {
+      "count": 5,
+      "label": "ソファー席あり"
+    },
+    "parking": {
+      "count": 101,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "青森店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=36",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "弘前店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=974",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "八戸店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=37",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール下田店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1037",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ステーキ宮秋田山王店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1366",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山形西店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=35",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "酒田店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=147",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "盛岡南店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1160",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南小泉店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=145",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "仙台泉店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=144",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "仙台八乙女店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=146",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "仙台中田店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=120",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福島太平寺店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1193",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福島店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=121",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "郡山コスモス通り店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=122",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "郡山富田店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1314",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "いわき店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=124",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "会津若松駅前店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1063",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ベイシア白河モール店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1322",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "カフェ＆ビヤレストラン 宮 羽田空港店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1299",
+      "facilities": [
+        "boxSeat",
+        "parking"
+      ]
+    },
+    {
+      "name": "八王子松木店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1251",
+      "facilities": [
+        "boxSeat",
+        "parking"
+      ]
+    },
+    {
+      "name": "町田木曽店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1197",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "横浜西口エキニア店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1393",
+      "facilities": []
+    },
+    {
+      "name": "戸塚平戸店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1196",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "行田店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=117",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "深谷店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=90",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "上福岡店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=93",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "川越店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=92",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "川口店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=176",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東大宮店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1205",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐倉店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=94",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "市原店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1358",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東金店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1139",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "木更津店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=91",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "千葉ニュータウン店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1207",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "茂原店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1064",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宇都宮店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=61",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "越戸店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=57",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "田下店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=68",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鶴田店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=55",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西川田店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=73",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ベルモール店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=69",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "簗瀬店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=85",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "栃木店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=63",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "足利南店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=64",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "足利芳町店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=81",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐野店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=62",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小山駅南店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1094",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小山城東店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=60",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大田原店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=78",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "黒磯店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=66",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "守谷店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=76",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "牛久店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=77",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "水戸インター店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=140",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "水戸店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=10",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ひたちなか店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=80",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "筑波学園店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=65",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "土浦店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=59",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "石岡店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1328",
+      "facilities": [
+        "boxSeat",
+        "parking"
+      ]
+    },
+    {
+      "name": "古河店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1097",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "下館店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=74",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "神栖店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1079",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "前橋下小出店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1208",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "前橋東部店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=125",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "上豊岡店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=116",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高崎東店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1106",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "桐生広沢店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=58",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "伊勢崎店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=67",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "太田新井町店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=79",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "館林店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=83",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "今池店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1009",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "犬山店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1059",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊田IC店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1015",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高浜店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1033",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "安城店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=192",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岐南店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=310",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北方店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=190",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "瑞浪店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=270",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鈴鹿店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1133",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "海老ヶ瀬インター店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=9",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新潟県庁前店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=118",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新潟新発田店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1401",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長岡店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=171",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "甲府昭和店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1211",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "甲府店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=180",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長野店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=301",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "上田店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=250",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊科店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=268",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "飯田インター店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1082",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "箕輪店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1083",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "金沢中央店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=261",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福井大和田店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=264",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "敦賀店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=271",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高石店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1125",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "尼崎立花店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1244",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "播磨店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1186",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都伏見店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1175",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "近江八幡店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=307",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "橿原店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1126",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宇部厚南店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1315",
+      "facilities": [
+        "boxSeat",
+        "parking"
+      ]
+    },
+    {
+      "name": "貝塚店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1235",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本浜線バイパス店",
+      "url": "https://www.miya.com/shop/detail.php?shop_no=1304",
+      "facilities": [
+        "boxSeat",
+        "parking"
+      ]
+    }
+  ]
+}

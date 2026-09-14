@@ -1,0 +1,991 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "yuzuan",
+  "name": "ゆず庵",
+  "sourceUrl": "https://www.shabu-yuzuan.jp/shop/",
+  "method": "公式店舗検索が呼ぶ物語コーポレーション共通の店舗API（/shops/?brandId[]=…）の全件から、店舗詳細ページ「店舗設備」の元データ shop_equipments を店舗ごとに集計",
+  "total": 121,
+  "note": "非公開フラグ0件（）は除外。店舗設備のうち設備キーに対応づけていない表記: 店内禁煙121店・車椅子対応の座席117店・車椅子対応の駐車場1店。「駐車場」欄は自由記述（台数・階数）のため集計していない",
+  "facilities": {
+    "stepFree": {
+      "count": 4,
+      "label": "入り口スロープ"
+    },
+    "diaperTable": {
+      "count": 121,
+      "label": "おむつ替えシート"
+    },
+    "multiToilet": {
+      "count": 115,
+      "label": "車椅子対応のトイレ"
+    }
+  },
+  "stores": [
+    {
+      "name": "ゆず庵 南郷通店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4220/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 函館美原店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4143/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 仙台八乙女店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4104/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 仙台六丁の目店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4117/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 仙台富沢店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4187/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 石巻店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4217/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 名取店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4120/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 秋田新国道店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4212/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 山形店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4150/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 米沢店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4130/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 南福島店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4189/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 福島泉店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4194/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 会津若松店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4171/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 郡山店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4169/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 水戸店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4155/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 日立店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4196/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 つくば店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4219/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 宇都宮桜通り店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4183/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 宇都宮インターパーク店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4190/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 宇都宮陽東店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4211/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 足利店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4137/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 小山店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4122/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 前橋大友店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4206/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 高崎緑町店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4127/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 伊勢崎店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4195/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 太田店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4134/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 南浦和店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4176/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 さいたま中央店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4200/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 大宮本郷店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4224/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 川口店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4102/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 所沢店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4154/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 春日部店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4129/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 新座野火止店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4166/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 幕張店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4109/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 東千葉店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4112/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 松戸秋山店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4158/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 市原店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4172/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 流山西平井店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4177/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 秋葉原店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4203/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 新宿西口大ガード店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4208/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 練馬光が丘店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4144/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 足立島根店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4124/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 江戸川船堀店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4215/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 多摩境店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4101/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 花小金井店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4115/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 武蔵村山店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4207/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 西東京泉町店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4193/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 横浜本郷台店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4147/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 三ツ境店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4167/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 横浜青葉台店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4185/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 古淵店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4161/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 北久里浜店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4175/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 小田原店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4133/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 厚木店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4188/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 新潟弁天橋店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4132/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 長岡店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4141/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 富山今泉店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4140/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 高岡店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4113/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 金沢有松店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4131/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 金沢桜田店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4142/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 小松店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4148/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 福井城東店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4192/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 甲府国母店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4118/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 長野南高田店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4121/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 長野川中島店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4165/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 松本村井店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4136/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 岐阜六条店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4111/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 大垣店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4156/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 静岡インター通店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4182/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 浜松入野店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4107/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 浜松上島店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4170/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 沼津店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4179/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 三島店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4138/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 富士青島店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4105/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 藤枝店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4108/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 名古屋平針店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4149/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 名古屋山王店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4222/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 豊橋新栄店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4205/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 岡崎店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4153/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 一宮店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4214/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 春日井店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4125/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 豊川店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4119/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 豊田豊栄店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4197/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 安城横山店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4106/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 小牧店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4128/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 東海店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4180/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 知立店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4110/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 日進店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4213/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 津店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4178/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 四日市店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4186/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 鈴鹿店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4159/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 堺泉北店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4145/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 堺鳳店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4223/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 東大阪荒本店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4201/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 神戸小束山店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4151/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 神戸森友店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4204/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 東姫路店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4210/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 加古川店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4199/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 奈良三条大路店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4202/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 桜井店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4216/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 和歌山店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4164/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 岩出店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4225/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 岡山大元店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4181/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 倉敷沖店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4209/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 広島長束店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4123/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 福山王子店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4173/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 新下関店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4135/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 高松木太町店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4163/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 松山久米店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4157/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 松山中央店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4198/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 今治店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4221/",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 高知店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4218/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 八幡西店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4191/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 博多千代店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4126/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 久留米上津店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4116/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 太宰府大佐野店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4162/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 福岡志免店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4174/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 西熊本店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4139/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 熊本帯山店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4168/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 宮崎柳丸店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4152/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ゆず庵 鹿児島宇宿店",
+      "url": "https://www.shabu-yuzuan.jp/shop/4146/",
+      "facilities": [
+        "multiToilet",
+        "diaperTable"
+      ]
+    }
+  ]
+}

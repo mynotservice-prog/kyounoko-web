@@ -1,9 +1,18 @@
+import '@/app/styles/spot-v3.css';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { V2Frame } from '@/components/v2/V2Frame';
-import { V2Img, V2SectionHead, V2Tag } from '@/components/v2/V2Base';
-import { V2Icon, V2_ACCENT, type V2IconName } from '@/components/v2/V2Icon';
+import { V2Img } from '@/components/v2/V2Base';
+import { V2Icon } from '@/components/v2/V2Icon';
+import { KkSectionTitle } from '@/components/kk/KkSectionTitle';
+import { KkFacilityGrid, type KkFacilityItem } from '@/components/kk/KkFacilityGrid';
+import { KkInfoTable, type KkInfoRow } from '@/components/kk/KkInfoTable';
+import { KkIcon, type KkIconName } from '@/components/kk/KkIcon';
+import { KkLineCard } from '@/components/kk/KkLineCard';
+import { KkAddToHomeCard } from '@/components/kk/KkAddToHomeCard';
+import { KkFooter } from '@/components/kk/KkFooter';
+import { PLAYGROUND_FEATURE_LABEL } from '@/components/spot/spot-labels';
 import {
   getAllSpotsWithSlug,
   getSpotBySlug,
@@ -104,6 +113,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'おむつ替え',
     ],
   ];
+  // 公園の遊具情報（SPOT_PLAYGROUND）があるときは「遊具」を先頭に出す。
+  // 「〇〇公園 遊具」は施設名クエリとして継続的に表示が出ている（2026-09-12 実測）。
+  if (spot.playground) facilityHints.unshift([true, '遊具・アスレチック']);
   // 検索需要の大きい順に最大3語。SERPの表示幅（約30字）に収めるため name が長い面では出さない。
   const facilityWords = facilityHints.filter(([hit]) => hit).map(([, w]) => w).slice(0, 3);
   const titleSuffix =
@@ -146,12 +158,30 @@ const AGE_LABEL: Record<string, string> = {
   '4-6': '4〜6歳',
 };
 
-const FACILITY_DEF: Array<{ key: keyof NonNullable<Spot['facilities']>; label: string; icon: V2IconName; accent: keyof typeof V2_ACCENT }> = [
-  { key: 'nursingRoom', label: '授乳室', icon: 'milk', accent: 'event' },
-  { key: 'diaperChange', label: 'おむつ替え台', icon: 'baby', accent: 'indoor' },
-  { key: 'strollerRental', label: 'ベビーカー貸出', icon: 'stroller', accent: 'rain' },
-  { key: 'bathroom', label: '多目的トイレ', icon: 'house', accent: 'purple' },
-  { key: 'kidsSpace', label: 'キッズスペース', icon: 'star', accent: 'lunch' },
+/**
+ * 本文を「文」の単位で段落に割る（§3-1 2.「文は改行して読みやすくする」）。
+ * 文字は1文字も足さない/削らない。句点の位置で段落を切るだけ。
+ * per = 1段落あたりの文数（2文で1段落＝リストに見えず、かつ壁にならない）。
+ */
+function toParagraphs(text: string, per = 2): string[] {
+  // 「アソボ〜ノ！」のように施設名へ ！ を含む表記があるため、区切りは句点だけに限る。
+  const sentences = text
+    .split(/(?<=。)/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+  if (sentences.length <= 1) return [text];
+  const out: string[] = [];
+  for (let i = 0; i < sentences.length; i += per) out.push(sentences.slice(i, i + per).join(''));
+  return out;
+}
+
+/** 子連れ設備の表示順（リニューアル2026-09: KkFacilityGrid）。文言は JSON-LD の amenityFeature と同じ。 */
+const FACILITY_DEF: Array<{ key: keyof NonNullable<Spot['facilities']>; label: string; icon: KkIconName }> = [
+  { key: 'nursingRoom', label: '授乳室', icon: 'nursing' },
+  { key: 'diaperChange', label: 'おむつ替え台', icon: 'diaper' },
+  { key: 'bathroom', label: '多目的トイレ', icon: 'accessible-toilet' },
+  { key: 'strollerRental', label: 'ベビーカー貸出', icon: 'stroller' },
+  { key: 'kidsSpace', label: 'キッズスペース', icon: 'kids-space' },
 ];
 
 export default async function SpotPage({ params }: Props) {
@@ -342,6 +372,93 @@ export default async function SpotPage({ params }: Props) {
     }),
   );
 
+  // ---- リニューアル2026-09: 表示用の派生データ（すべて既存データからのみ作る。捏造しない）----
+  // 設備: 表示条件は従来どおり 'yes' が1つ以上あるとき。'yes'=あり / 'no'=なし / 未指定=出さない。
+  const showFacilities = !!spot.facilities && FACILITY_DEF.some((f) => spot.facilities![f.key] === 'yes');
+  const facilityItems: KkFacilityItem[] = showFacilities
+    ? FACILITY_DEF.flatMap((f) => {
+        const v = spot.facilities![f.key];
+        return v === 'yes' || v === 'no' ? [{ icon: f.icon, label: f.label, status: v }] : [];
+      })
+    : [];
+  const stationWalkLabel = nearestStationName
+    ? `${nearestStationName}${spot.walkMinutes ? ` 徒歩${spot.walkMinutes}分` : ''}`
+    : null;
+  const budgetLabel =
+    spot.budget === 'free' ? '無料'
+      : spot.budget === 'low' ? '〜1,000円'
+        : spot.budget === 'mid' ? '1,000〜3,000円'
+          : spot.budget === 'high' ? '3,000円〜' : '—';
+  const placeLabel = spot.place === 'indoor' ? '屋内' : spot.place === 'outdoor' ? '屋外' : '一部屋外';
+  const rainLabel = spot.place === 'indoor' || spot.place === 'mixed' ? '◎ おすすめ' : '△';
+  // 駐車場: lib/spot-parking.ts の構造化データを忠実に出す。'unknown'（公式で確認できていない）は出さない。
+  const parking = spot.parking && spot.parking.exists !== 'unknown' ? spot.parking : null;
+  const officialHost = (() => {
+    if (!spot.officialUrl) return null;
+    try {
+      return new URL(spot.officialUrl).hostname.replace(/^www\./, '');
+    } catch {
+      return spot.officialUrl;
+    }
+  })();
+  const infoRows: KkInfoRow[] = [
+    { icon: 'age', label: '対象年齢', value: spot.ages.map((a) => AGE_LABEL[a]).join('・') },
+    { icon: 'yen', label: '料金の目安', value: budgetLabel },
+    { icon: 'home', label: '屋内/屋外', value: placeLabel },
+    { icon: 'umbrella', label: '雨の日', value: rainLabel },
+    ...(stationWalkLabel ? [{ icon: 'train' as const, label: '最寄り駅', value: stationWalkLabel }] : []),
+    ...(parking
+      ? [
+          {
+            icon: 'parking' as const,
+            label: '駐車場',
+            value: (
+              <div className="sv3-parking">
+                <div className="sv3-parking-main">
+                  {parking.exists ? `あり${parking.capacity ? `（${parking.capacity}台）` : ''}` : 'なし'}
+                </div>
+                {parking.exists && parking.hours && <div>利用時間: {parking.hours}</div>}
+                {parking.exists && parking.fee && <div>料金: {parking.fee}</div>}
+                {parking.note && <div className="sv3-parking-note">{parking.note}</div>}
+                <div className="sv3-parking-src">
+                  {parking.confirmedAt}確認・
+                  <a href={parking.sourceUrl} target="_blank" rel="noopener noreferrer">
+                    出典
+                  </a>
+                </div>
+              </div>
+            ),
+          },
+        ]
+      : []),
+    ...(spot.officialUrl
+      ? [
+          {
+            icon: 'link' as const,
+            label: '公式サイト',
+            value: (
+              <a href={spot.officialUrl} target="_blank" rel="noopener noreferrer">
+                {officialHost}
+              </a>
+            ),
+          },
+        ]
+      : []),
+  ];
+  const pricingRows: KkInfoRow[] = spot.pricing
+    ? (
+        [
+          ['大人', spot.pricing.adult],
+          ['小学生', spot.pricing.elementary],
+          ['幼児', spot.pricing.preschool],
+          ['乳児', spot.pricing.infant],
+        ] as Array<[string, string | undefined]>
+      )
+        .filter((r): r is [string, string] => !!r[1])
+        .map(([label, v]) => ({ label, value: v }))
+    : [];
+  const playgroundChips = (spot.playgroundFeatures ?? []).map((f) => PLAYGROUND_FEATURE_LABEL[f]).filter(Boolean);
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPlace) }} />
@@ -351,6 +468,7 @@ export default async function SpotPage({ params }: Props) {
       )}
 
       <V2Frame header="sub" active="area" backHref="/spots">
+        <div className="spot-v3">
         <V2RememberSpot
           slug={slug}
           name={spot.name}
@@ -358,374 +476,174 @@ export default async function SpotPage({ params }: Props) {
           area={spot.ward || spot.city}
         />
 
-        {/* オーバーレイヒーロー（2回目デザイン .v2-sd-hero） */}
-        <div className="v2-sd-hero">
-          <div className="v2-sd-hero-img">
-            <V2Img src={heroImg} seed={slug} alt={spot.name} priority />
-            <div className="v2-sd-hero-grad"></div>
+        {/* パンくず（写真の外に出す。リンク・文言は従来どおり） */}
+        <nav className="sv3-crumb" aria-label="パンくず">
+          <Link href="/">ホーム</Link>
+          <V2Icon name="chevron-right" size={11} />
+          <Link href="/spots">スポット</Link>
+          <V2Icon name="chevron-right" size={11} />
+          <span className="cur">{spot.name}</span>
+        </nav>
 
+        {/* 上部ブロック。PC（≥920px）では左に写真・右に見出し/所在地/タグ/説明の2段組にする。
+            DOM順（パンくず→H1→所在地→写真→タグ→説明）はスマホと同じまま。 */}
+        <div className="sv3-top">
+
+        {/* カテゴリ＋H1＋所在地行（DOM順: パンくず→H1→画像。JSON-LD・title は不変） */}
+        <div className="sv3-head">
+          <span className="sv3-cat">{category}</span>
+          <h1 className="sv3-h1">{spot.name}</h1>
+          {(location || stationWalkLabel) && (
+            <div className="sv3-loc">
+              <KkIcon name="pin" size={15} sw={2} />
+              {location && <span>{location}</span>}
+              {location && stationWalkLabel && <span className="sv3-loc-sep">・</span>}
+              {stationWalkLabel && <span>{stationWalkLabel}</span>}
+            </div>
+          )}
+        </div>
+
+        {/* hero 画像（写真が色を持つ。軽い角丸だけで枠・影・オーバーレイはつけない。src は従来どおり） */}
+        <div className="sv3-hero">
+          <div className="sv3-hero-img">
+            <V2Img src={heroImg} seed={slug} alt={spot.name} priority />
             {/* §5-1: 画像の種別/出典（実在施設のAI偽写真の誤認を防ぐ / UGC昇格時はクレジット） */}
             {(heroNote.image || heroNote.credit) && (
-              <span
-                style={{
-                  position: 'absolute',
-                  right: 8,
-                  bottom: 8,
-                  padding: '3px 8px',
-                  borderRadius: 6,
-                  background: 'rgba(0,0,0,0.55)',
-                  color: '#fff',
-                  fontSize: 10.5,
-                  fontWeight: 600,
-                  letterSpacing: '0.02em',
-                  zIndex: 2,
-                }}
-              >
-                {heroNote.image ? '※イメージ' : heroNote.credit}
-              </span>
+              <span className="sv3-hero-credit">{heroNote.image ? '※イメージ' : heroNote.credit}</span>
             )}
-
-            {/* breadcrumb（写真の上に重ねる） */}
-            <div className="v2-sd-hero-crumb">
-              <Link href="/" style={{ color: 'inherit', textDecoration: 'none' }}>ホーム</Link>
-              <V2Icon name="chevron-right" size={11} />
-              <Link href="/spots" style={{ color: 'inherit', textDecoration: 'none' }}>スポット</Link>
-              <V2Icon name="chevron-right" size={11} />
-              <span className="cur">{spot.name}</span>
-            </div>
-
             {/* 保存ボタン（右上） */}
             <V2SdHeroFav id={slug} />
-
-            {/* カテゴリ＋タイトル＋駅（左下） */}
-            <div className="v2-sd-hero-foot">
-              <span className="v2-sd-hero-cat">{category}</span>
-              <h1 className="v2-sd-hero-name">{spot.name}</h1>
-              {nearestStationName && (
-                <div className="v2-sd-hero-station">
-                  <V2Icon name="pin" size={14} color="#fff" />
-                  {nearestStationName}
-                  {spot.walkMinutes ? ` 徒歩${spot.walkMinutes}分` : ''}
-                </div>
-              )}
-            </div>
           </div>
         </div>
 
-        {/* 閉館バナー */}
+        {/* 閉館バナー（小さなステータスなので枠を許す。文言は従来どおり） */}
         {closedNotice && (
-          <div className="v2-section" style={{ marginTop: 14 }}>
-            <div
-              role="status"
-              style={{
-                background: 'var(--v2-ink-mute, #f3f3f3)',
-                border: '1px solid var(--v2-line)',
-                borderRadius: 'var(--v2-r-card)',
-                padding: '12px 14px',
-                fontSize: 13,
-                color: 'var(--v2-ink-sub)',
-                lineHeight: 1.65,
-              }}
-            >
-              <strong style={{ color: 'var(--v2-ink)' }}>このスポットは閉館・閉店しています。</strong>
-              <br />
-              {closedNotice}
-            </div>
+          <div className="sv3-banner" role="status">
+            <strong>このスポットは閉館・閉店しています。</strong>
+            <br />
+            {closedNotice}
           </div>
         )}
 
         {/* 一時休館バナー（期間つき。恒久閉館とは別扱いで、期間が明ければ自動で消える） */}
         {!closedNotice && tempClosure && (
-          <div className="v2-section" style={{ marginTop: 14 }}>
-            <div
-              role="status"
-              style={{
-                background: 'var(--v2-orange-soft)',
-                border: '1px solid var(--v2-orange)',
-                borderRadius: 'var(--v2-r-card)',
-                padding: '12px 14px',
-                fontSize: 13,
-                color: 'var(--v2-ink-soft)',
-                lineHeight: 1.65,
-              }}
-            >
-              <strong style={{ color: 'var(--v2-ink)' }}>現在このスポットは休館中です。</strong>
-              <br />
-              {tempClosure.note}
-              <br />
-              <a
-                href={tempClosure.source}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: 'var(--v2-orange-deep)', fontWeight: 700 }}
-              >
-                公式サイトで最新情報を見る
-              </a>
-            </div>
+          <div className="sv3-banner warn" role="status">
+            <strong>現在このスポットは休館中です。</strong>
+            <br />
+            {tempClosure.note}
+            <br />
+            <a href={tempClosure.source} target="_blank" rel="noopener noreferrer">
+              公式サイトで最新情報を見る
+            </a>
           </div>
         )}
 
-        {/* タグ */}
-        <div className="v2-section" style={{ marginTop: 14 }}>
-          <div className="v2-tag-row">
-            {location && <V2Tag label={location} />}
+        {/* タグ（文言は従来どおり） */}
+        <div className="v2-section sv3-tags">
+          <div className="kk-chips">
+            {location && <span className="kk-chip">{location}</span>}
             {spot.ages.map((age) => (
-              <V2Tag key={age} label={AGE_LABEL[age]} tone="age" />
+              <span key={age} className="kk-chip">{AGE_LABEL[age]}</span>
             ))}
-            {spot.place === 'indoor' && <V2Tag label="室内" tone="rain" />}
-            {spot.facilities?.nursingRoom === 'yes' && <V2Tag label="授乳室あり" />}
-            {spot.facilities?.strollerRental === 'yes' && <V2Tag label="ベビーカーOK" />}
+            {spot.place === 'indoor' && <span className="kk-chip">室内</span>}
+            {spot.facilities?.nursingRoom === 'yes' && <span className="kk-chip">授乳室あり</span>}
+            {spot.facilities?.strollerRental === 'yes' && <span className="kk-chip">ベビーカーOK</span>}
           </div>
         </div>
 
         {/* 期間限定の告知（until を過ぎたら出さない） */}
         {spot.notice && spot.notice.until >= new Date().toISOString().slice(0, 10) && (
-          <div style={{ padding: '14px 18px 0' }}>
-            <div
-              style={{
-                background: '#fdf2ee',
-                border: '1px solid #e8b7a3',
-                borderRadius: 12,
-                padding: '12px 14px',
-              }}
-            >
-              <div style={{ fontSize: 12, fontWeight: 800, color: '#b4553a', marginBottom: 4 }}>
-                いま行く前に確認
-              </div>
-              <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.7, color: 'var(--ink-sub)' }}>
-                {spot.notice.text}
-              </p>
-              {spot.notice.source && (
-                <p style={{ margin: '6px 0 0', fontSize: 11.5, color: 'var(--ink-mute)' }}>
-                  {spot.notice.source}
-                </p>
-              )}
-            </div>
+          <div className="sv3-banner warn">
+            <span className="sv3-banner-lab">いま行く前に確認</span>
+            <p style={{ margin: 0 }}>{spot.notice.text}</p>
+            {spot.notice.source && <p className="sv3-banner-src">{spot.notice.source}</p>}
           </div>
         )}
 
-        {/* リード */}
+        {/* リード（既存の施設説明をそのまま。文ごとに段落を分けて読みやすくする） */}
         {spot.note && (
-          <div className="v2-page-head" style={{ paddingTop: 14 }}>
-            <p className="v2-page-lead" style={{ marginTop: 0 }}>{spot.note}</p>
+          <div className="v2-section sv3-lead-wrap">
+            {toParagraphs(spot.note, 1).map((p, i) => (
+              <p key={i} className="sv3-lead">{p}</p>
+            ))}
           </div>
         )}
 
-        {/* 基本情報 */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: 11,
-            padding: '18px 18px 0',
-          }}
-        >
-          {[
-            { lab: '対象年齢', val: spot.ages.map((a) => AGE_LABEL[a]).join('・'), icon: 'baby' as V2IconName, bg: 'var(--v2-c-event-bg)', c: 'var(--v2-c-event)' },
-            { lab: '料金の目安', val: spot.budget === 'free' ? '無料' : spot.budget === 'low' ? '〜1,000円' : spot.budget === 'mid' ? '1,000〜3,000円' : spot.budget === 'high' ? '3,000円〜' : '—', icon: 'yen' as V2IconName, bg: 'var(--v2-c-sun-bg)', c: '#E8A100' },
-            { lab: '屋内/屋外', val: spot.place === 'indoor' ? '屋内' : spot.place === 'outdoor' ? '屋外' : '一部屋外', icon: 'house' as V2IconName, bg: 'var(--v2-c-indoor-bg)', c: 'var(--v2-c-indoor)' },
-            { lab: '雨の日', val: spot.place === 'indoor' || spot.place === 'mixed' ? '◎ おすすめ' : '△', icon: 'umbrella' as V2IconName, bg: 'var(--v2-c-rain-bg)', c: 'var(--v2-c-rain)' },
-          ].map((b, i) => (
-            <div
-              key={i}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 11,
-                background: '#fff',
-                border: '1px solid var(--v2-line)',
-                borderRadius: 'var(--v2-r-card)',
-                padding: '13px 14px',
-              }}
-            >
-              <span
-                style={{
-                  width: 38,
-                  height: 38,
-                  borderRadius: '50%',
-                  background: b.bg,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  flex: 'none',
-                }}
-              >
-                <V2Icon name={b.icon} size={20} color={b.c} />
-              </span>
-              <div>
-                <div style={{ fontSize: 11, color: 'var(--v2-ink-mute)', fontWeight: 700 }}>{b.lab}</div>
-                <div style={{ fontSize: 14, fontWeight: 800, color: 'var(--v2-ink)', lineHeight: 1.25 }}>{b.val}</div>
-              </div>
+        </div>{/* /.sv3-top */}
+
+        {/* 子連れ設備（KkFacilityGrid）。見出し h2「設備・サービス」と表示条件は従来どおり。
+            'no' は「なし」ピルで出す（2026-09 承認済みの追加表示）。未指定は出さない。 */}
+        {facilityItems.length > 0 && (
+          <div className="kk-sec sv3-sec">
+            <KkSectionTitle as="h2" title="設備・サービス" />
+            <KkFacilityGrid items={facilityItems} />
+          </div>
+        )}
+
+        {/* 運営者のひとこと（既存の spot.hiddenTip）。
+            2026-09-08: 「ここがうれしいポイント」という新ラベル＋番号リストは廃止し、
+            元からある「運営者のひとこと」に戻した（社長指示）。文は段落に割って読みやすくする。 */}
+        {spot.hiddenTip && (
+          <div className="kk-sec sv3-sec">
+            <div className="sv3-lab">運営者のひとこと</div>
+            <div className="sv3-voice sv3-measure">
+              {toParagraphs(spot.hiddenTip).map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
             </div>
-          ))}
+          </div>
+        )}
+
+        {/* 基本情報（KkInfoTable＝罫線だけの表）。旧2×2グリッドの4項目＋最寄り駅・駐車場・公式サイト */}
+        <div className="kk-sec sv3-sec">
+          <KkSectionTitle as="div" title="基本情報" />
+          <div className="sv3-measure">
+            <KkInfoTable rows={infoRows} />
+          </div>
         </div>
 
-        {/* 設備。'yes' が1つも無い（note だけ記録している）ときは空のグリッドになるので出さない。 */}
-        {spot.facilities && FACILITY_DEF.some((f) => spot.facilities![f.key] === 'yes') && (
-          <>
-            <div className="v2-sec-head">
-              <h2 className="v2-sec-title">
-                <span className="v2-bar-accent"></span>設備・サービス
-              </h2>
+        {/* 料金詳細（pricing が1つでも入っていれば表示。見出し h2 は従来どおり） */}
+        {pricingRows.length > 0 && (
+          <div className="kk-sec sv3-sec">
+            <KkSectionTitle as="h2" title="料金詳細" />
+            <div className="sv3-measure">
+              <KkInfoTable rows={pricingRows} className="sv3-pricing" />
             </div>
-            <div className="v2-section">
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
-                {FACILITY_DEF.filter((f) => spot.facilities![f.key] === 'yes').map((f) => {
-                  const a = V2_ACCENT[f.accent];
-                  return (
-                    <div
-                      key={f.key}
-                      style={{
-                        background: '#fff',
-                        border: '1px solid var(--v2-line)',
-                        borderRadius: 'var(--v2-r-card)',
-                        padding: '12px 8px',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        gap: 7,
-                        boxShadow: 'var(--v2-sh-soft)',
-                      }}
-                    >
-                      <div style={{ fontSize: 11.5, fontWeight: 700, color: 'var(--v2-ink-soft)' }}>
-                        {f.label}
-                      </div>
-                      <span style={{ color: a.c }}>
-                        <V2Icon name={f.icon} size={24} />
-                      </span>
-                      <div style={{ fontSize: 13, fontWeight: 800, color: 'var(--v2-ink)' }}>あり</div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </>
+          </div>
         )}
 
         {/* 情報の鮮度（最終確認日）。閉館バナーを出しているときは重複するので出さない。
             未確認は「未確認」と正直に出す＝確認していないものを確認済みに見せない。 */}
         {freshness.state !== 'closed' && (
-          <div className="v2-section" style={{ marginTop: 12 }}>
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'flex-start',
-                gap: 8,
-                padding: '10px 12px',
-                borderRadius: 'var(--v2-r-card)',
-                border: '1px solid var(--v2-line)',
-                background: freshnessNote.tone === 'ok' ? 'var(--v2-cream)' : '#fafafa',
-              }}
-            >
+          <div className="v2-section">
+            <div className="sv3-fresh sv3-measure">
               <V2Icon
                 name={freshnessNote.tone === 'ok' ? 'info' : 'clock'}
-                size={15}
-                color={freshnessNote.tone === 'ok' ? 'var(--v2-orange)' : '#999'}
-                style={{ flexShrink: 0, marginTop: 1 }}
+                size={14}
+                color="var(--kk-ink-mute)"
+                style={{ flexShrink: 0, marginTop: 2 }}
               />
-              <div style={{ fontSize: 11.5, color: 'var(--v2-ink-soft)', lineHeight: 1.6 }}>
-                {freshnessNote.text}
-              </div>
+              <div>{freshnessNote.text}</div>
             </div>
           </div>
-        )}
-
-        {/* hiddenTip / pricing */}
-        {spot.hiddenTip && (
-          <div className="v2-section" style={{ marginTop: 18 }}>
-            <div
-              style={{
-                background: 'var(--v2-cream)',
-                borderRadius: 'var(--v2-r-card)',
-                padding: '14px 16px',
-                display: 'flex',
-                gap: 10,
-                alignItems: 'flex-start',
-              }}
-            >
-              <V2Icon name="sparkle" size={20} color="var(--v2-orange)" />
-              <div style={{ fontSize: 13, color: 'var(--v2-ink-soft)', lineHeight: 1.65 }}>
-                <strong style={{ color: 'var(--v2-ink)' }}>運営者のひとこと</strong>
-                <br />
-                {spot.hiddenTip}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* 料金詳細（pricing が1つでも入っていれば表示） */}
-        {spot.pricing && Object.values(spot.pricing).some((v) => v) && (
-          <>
-            <div className="v2-sec-head">
-              <h2 className="v2-sec-title">
-                <span className="v2-bar-accent"></span>料金詳細
-              </h2>
-            </div>
-            <div className="v2-section">
-              <div
-                style={{
-                  background: '#fff',
-                  border: '1px solid var(--v2-line)',
-                  borderRadius: 'var(--v2-r-card)',
-                  overflow: 'hidden',
-                }}
-              >
-                {([
-                  ['大人', spot.pricing.adult],
-                  ['小学生', spot.pricing.elementary],
-                  ['幼児', spot.pricing.preschool],
-                  ['乳児', spot.pricing.infant],
-                ] as const)
-                  .filter(([, v]) => v)
-                  .map(([label, v], i) => (
-                    <div
-                      key={label}
-                      style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        padding: '11px 14px',
-                        borderTop: i === 0 ? 'none' : '1px solid var(--v2-line)',
-                        fontSize: 13.5,
-                      }}
-                    >
-                      <span style={{ color: 'var(--v2-ink-mute)', fontWeight: 700 }}>{label}</span>
-                      <span style={{ color: 'var(--v2-ink)', fontWeight: 800 }}>{v}</span>
-                    </div>
-                  ))}
-              </div>
-            </div>
-          </>
         )}
 
         {/* 近隣セット提案 */}
         {spot.nearby && (
-          <div className="v2-section" style={{ marginTop: 18 }}>
-            <div
-              style={{
-                background: '#fff',
-                border: '1px solid var(--v2-line)',
-                borderRadius: 'var(--v2-r-card)',
-                padding: '14px 16px',
-                display: 'flex',
-                gap: 10,
-                alignItems: 'flex-start',
-              }}
-            >
-              <V2Icon name="pin" size={20} color="var(--v2-orange)" />
-              <div style={{ fontSize: 13, color: 'var(--v2-ink-soft)', lineHeight: 1.65 }}>
-                <strong style={{ color: 'var(--v2-ink)' }}>近くと組み合わせるなら</strong>
-                <br />
-                {spot.nearby}
-              </div>
+          <div className="v2-section sv3-sec">
+            <div className="sv3-combo sv3-measure">
+              <span className="sv3-combo-lab">近くと組み合わせるなら</span>
+              {toParagraphs(spot.nearby).map((p, i) => (
+                <p key={i} className="sv3-combo-body">{p}</p>
+              ))}
             </div>
           </div>
         )}
 
         {/* 追加画像（中段） */}
         {galleryImages[1] && (
-          <div className="v2-section" style={{ marginTop: 18 }}>
-            <div style={{ borderRadius: 'var(--v2-r-card)', overflow: 'hidden', aspectRatio: '16 / 9', border: '1px solid var(--v2-line)' }}>
+          <div className="v2-section">
+            <div className="sv3-figure">
               <V2Img src={galleryImages[1]} seed={`${slug}-1`} alt={`${spot.name}の様子`} />
             </div>
           </div>
@@ -752,23 +670,13 @@ export default async function SpotPage({ params }: Props) {
               href={spot.officialUrl}
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 8,
-                padding: '11px 14px',
-                borderRadius: 'var(--v2-r-card)',
-                border: '1px solid var(--v2-line)',
-                background: '#fff',
-                textDecoration: 'none',
-                color: 'var(--v2-ink)',
-                fontSize: 13.5,
-                fontWeight: 700,
-              }}
+              className="kk-btn outline block sv3-official"
             >
-              <V2Icon name="link" size={16} color="var(--v2-orange)" />
+              <KkIcon name="link" size={16} sw={1.8} />
               公式サイトで最新情報・料金を確認
-              <V2Icon name="chevron-right" size={15} color="#bbb" style={{ marginLeft: 'auto' }} />
+              <span className="sv3-official-arrow">
+                <KkIcon name="chevron-right" size={15} sw={2} />
+              </span>
             </a>
           </div>
         )}
@@ -778,158 +686,169 @@ export default async function SpotPage({ params }: Props) {
           <AdSlot placement="article-mid" />
         </div>
 
-        {/* 年齢別の楽しみ方 */}
+        {/* 年齢別の楽しみ方（§3-1 6.）。表でもカードでもなく、年齢を左に強く出した編集本文。
+            本文は文ごとに段落へ割って、長い自動生成文が壁にならないようにする。 */}
         {enjoyByAgeBlocks.length > 0 && (
-          <>
-            <div className="v2-sec-head">
-              <h2 className="v2-sec-title">
-                <span className="v2-bar-accent"></span>年齢別の楽しみ方
-              </h2>
-            </div>
-            <div className="v2-section" style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+          <div className="kk-sec sv3-sec">
+            <KkSectionTitle as="h2" title="年齢別の楽しみ方" />
+            <div className="sv3-ages sv3-measure">
               {enjoyByAgeBlocks.map((b, i) => (
-                <div
-                  key={i}
-                  style={{
-                    background: '#fff',
-                    border: '1px solid var(--v2-line)',
-                    borderRadius: 'var(--v2-r-card)',
-                    padding: '14px 16px',
-                  }}
-                >
-                  <div style={{ fontSize: 13, fontWeight: 800, color: 'var(--v2-orange)', marginBottom: 6 }}>
-                    {b.age}
-                  </div>
-                  <div style={{ fontSize: 13.5, color: 'var(--v2-ink-soft)', lineHeight: 1.7 }}>
-                    {b.text}
+                <div key={i} className="sv3-age-row">
+                  <div className="sv3-age-lab">{b.label}</div>
+                  <div className="sv3-age-body">
+                    {toParagraphs(b.text).map((p, j) => (
+                      <p key={j}>{p}</p>
+                    ))}
                   </div>
                 </div>
               ))}
             </div>
-          </>
+          </div>
+        )}
+
+        {/* 遊具・アスレチック（SPOT_PLAYGROUND: 公式確認の本文。lib/spot-playground.ts）。
+            「〇〇公園 遊具」クエリに答える節。事実はデータ層からのみ描画し、ここに直書きしない。 */}
+        {spot.playground && (
+          <div className="kk-sec sv3-sec">
+            <KkSectionTitle as="h2" title={`${spot.playground.park ?? spot.name}の遊具・アスレチック`} />
+            <div className="sv3-measure">
+              <p style={{ margin: '0 0 12px' }}>{spot.playground.summary}</p>
+              <div style={{ overflowX: 'auto' }}>
+                <table className="kk-table" style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
+                  <thead>
+                    <tr>
+                      <th style={{ textAlign: 'left', padding: '6px 8px' }}>遊び場</th>
+                      <th style={{ textAlign: 'left', padding: '6px 8px' }}>遊具</th>
+                      <th style={{ textAlign: 'left', padding: '6px 8px', whiteSpace: 'nowrap' }}>対象・場所</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {spot.playground.areas.map((a) => (
+                      <tr key={a.name}>
+                        <td style={{ padding: '6px 8px', verticalAlign: 'top' }}><strong>{a.name}</strong></td>
+                        <td style={{ padding: '6px 8px', verticalAlign: 'top' }}>{a.items}</td>
+                        <td style={{ padding: '6px 8px', verticalAlign: 'top', fontSize: 13 }}>
+                          {[a.ages, a.location].filter(Boolean).join('／') || '公式記載なし'}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              {spot.playground.note && <p style={{ margin: '10px 0 0', fontSize: 13 }}>※ {spot.playground.note}</p>}
+              <p style={{ margin: '8px 0 0', fontSize: 12, color: 'var(--ink-mute)' }}>
+                出典: <a href={spot.playground.sourceUrl} target="_blank" rel="noopener noreferrer">公園公式ページ</a>（{spot.playground.confirmedAt} 確認）。遊具は改修・撤去で変わるため、最新は公式でご確認ください。
+              </p>
+              {playgroundChips.length > 0 && (
+                <div className="kk-chips" style={{ marginTop: 10 }}>
+                  {playgroundChips.map((l) => (
+                    <span key={l} className="kk-chip">{l}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* 遊具・特徴（playgroundFeatures のタグだけがあるとき。ラベルは JSON-LD と同じ表） */}
+        {!spot.playground && playgroundChips.length > 0 && (
+          <div className="kk-sec sv3-sec">
+            <KkSectionTitle as="div" title="遊具・特徴" />
+            <div className="kk-chips">
+              {playgroundChips.map((l) => (
+                <span key={l} className="kk-chip">{l}</span>
+              ))}
+            </div>
+          </div>
         )}
 
         {/* 運営者の一次情報レポート（実際に子連れで訪問して記録した実体験）。
             詳細ページでは cautionNote だけが「行く前に知っておきたいこと」に混ざる形だったため、
             全項目をここで独立表示する（E-E-A-T の Experience を一番見える位置に出す）。 */}
         {spot.kidReport && (
-          <>
-            <div className="v2-sec-head">
-              <h2 className="v2-sec-title">
-                <span className="v2-bar-accent"></span>運営者が子連れで行ってきました
-              </h2>
-            </div>
-            <div className="v2-section">
-              <div
-                style={{
-                  background: '#fbf6ee',
-                  border: '1px solid #e7d9c4',
-                  borderRadius: 'var(--v2-r-card)',
-                  padding: '16px 18px',
-                }}
-              >
-                <div
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: 5,
-                    fontSize: 11.5,
-                    fontWeight: 700,
-                    letterSpacing: '.03em',
-                    color: '#9a6b3f',
-                    background: '#f1e2cb',
-                    padding: '4px 10px',
-                    borderRadius: 999,
-                    marginBottom: 12,
-                  }}
-                >
-                  ✔ 運営者が実際に子連れで訪問して確認
-                </div>
-                <dl style={{ margin: 0, display: 'grid', gap: 12 }}>
-                  {[
-                    { label: '行った年齢', value: spot.kidReport.visitAge },
-                    { label: 'ベビーカー動線', value: spot.kidReport.strollerNote },
-                    { label: '土日の混雑・狙い目', value: spot.kidReport.crowdNote },
-                    { label: 'おむつ替え・授乳', value: spot.kidReport.diaperNote },
-                    { label: '滞在時間の目安', value: spot.kidReport.stayNote },
-                    { label: 'ヒヤッとした点・注意', value: spot.kidReport.cautionNote },
-                  ]
-                    .filter((r) => r.value) // 覚えていない項目は見出しごと出さない
-                    .map((r) => (
-                    <div key={r.label}>
-                      <dt
-                        style={{
-                          fontSize: 12,
-                          fontWeight: 800,
-                          color: '#c4704f',
-                          letterSpacing: '.03em',
-                          marginBottom: 3,
-                        }}
-                      >
-                        {r.label}
-                      </dt>
-                      <dd style={{ margin: 0, fontSize: 13.5, color: 'var(--v2-ink-soft)', lineHeight: 1.75 }}>
-                        {r.value}
+          <div className="kk-sec sv3-sec">
+            <KkSectionTitle as="h2" title="運営者が子連れで行ってきました" />
+            <div className="sv3-measure">
+              <span className="sv3-report-badge">
+                <KkIcon name="check" size={14} sw={2.2} />
+                運営者が実際に子連れで訪問して確認
+              </span>
+              <dl className="sv3-report">
+                {[
+                  { label: '行った年齢', value: spot.kidReport.visitAge },
+                  { label: 'ベビーカー動線', value: spot.kidReport.strollerNote },
+                  { label: '土日の混雑・狙い目', value: spot.kidReport.crowdNote },
+                  { label: 'おむつ替え・授乳', value: spot.kidReport.diaperNote },
+                  { label: '滞在時間の目安', value: spot.kidReport.stayNote },
+                  { label: 'ヒヤッとした点・注意', value: spot.kidReport.cautionNote },
+                ]
+                  .filter((r) => r.value) // 覚えていない項目は見出しごと出さない
+                  .map((r) => (
+                    <div key={r.label} className="sv3-report-row">
+                      <dt className="sv3-report-dt">{r.label}</dt>
+                      <dd className="sv3-report-dd">
+                        {toParagraphs(r.value as string).map((p, j) => (
+                          <p key={j}>{p}</p>
+                        ))}
                       </dd>
                     </div>
                   ))}
-                </dl>
-              </div>
+              </dl>
             </div>
-          </>
+          </div>
         )}
 
-        {/* 混雑回避・アクセス・事前確認 */}
+        {/* 利用のポイント: 混雑回避・アクセス・事前確認（<details> のまま、クリーム面の角丸カードに） */}
         {(crowdAvoidance || accessTips || preVisitNotes) && (
-          <div className="v2-section" style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 18 }}>
-            {crowdAvoidance && (
-              <details className="v2-faq" open>
-                <summary className="v2-faq-q" style={{ listStyle: 'none', cursor: 'pointer' }}>
-                  <span className="v2-faq-mark">
-                    <V2Icon name="crowd" size={14} />
-                  </span>
-                  混雑を避けるコツ
-                  <span className="v2-faq-chev">
-                    <V2Icon name="chevron-down" size={18} color="#bbb" />
-                  </span>
-                </summary>
-                <div className="v2-faq-a">
-                  <span style={{ fontSize: 13.5, lineHeight: 1.7 }}>{crowdAvoidance}</span>
-                </div>
-              </details>
-            )}
-            {accessTips && (
-              <details className="v2-faq">
-                <summary className="v2-faq-q" style={{ listStyle: 'none', cursor: 'pointer' }}>
-                  <span className="v2-faq-mark">
-                    <V2Icon name="train" size={14} />
-                  </span>
-                  アクセスのコツ
-                  <span className="v2-faq-chev">
-                    <V2Icon name="chevron-down" size={18} color="#bbb" />
-                  </span>
-                </summary>
-                <div className="v2-faq-a">
-                  <span style={{ fontSize: 13.5, lineHeight: 1.7 }}>{accessTips}</span>
-                </div>
-              </details>
-            )}
-            {preVisitNotes && (
-              <details className="v2-faq">
-                <summary className="v2-faq-q" style={{ listStyle: 'none', cursor: 'pointer' }}>
-                  <span className="v2-faq-mark">
-                    <V2Icon name="info" size={14} />
-                  </span>
-                  行く前に知っておきたいこと
-                  <span className="v2-faq-chev">
-                    <V2Icon name="chevron-down" size={18} color="#bbb" />
-                  </span>
-                </summary>
-                <div className="v2-faq-a">
-                  <span style={{ fontSize: 13.5, lineHeight: 1.7 }}>{preVisitNotes}</span>
-                </div>
-              </details>
-            )}
+          <div className="kk-sec sv3-sec">
+            <KkSectionTitle as="div" title="利用のポイント" />
+            <div className="sv3-tips sv3-measure">
+              {crowdAvoidance && (
+                <details className="sv3-tip" open>
+                  <summary className="sv3-tip-q">
+                    混雑を避けるコツ
+                    <span className="sv3-tip-chev">
+                      <V2Icon name="chevron-down" size={17} />
+                    </span>
+                  </summary>
+                  <div className="sv3-tip-a">
+                    {toParagraphs(crowdAvoidance).map((p, i) => (
+                      <p key={i}>{p}</p>
+                    ))}
+                  </div>
+                </details>
+              )}
+              {accessTips && (
+                <details className="sv3-tip" open>
+                  <summary className="sv3-tip-q">
+                    アクセスのコツ
+                    <span className="sv3-tip-chev">
+                      <V2Icon name="chevron-down" size={17} />
+                    </span>
+                  </summary>
+                  <div className="sv3-tip-a">
+                    {toParagraphs(accessTips).map((p, i) => (
+                      <p key={i}>{p}</p>
+                    ))}
+                  </div>
+                </details>
+              )}
+              {preVisitNotes && (
+                <details className="sv3-tip" open>
+                  <summary className="sv3-tip-q">
+                    行く前に知っておきたいこと
+                    <span className="sv3-tip-chev">
+                      <V2Icon name="chevron-down" size={17} />
+                    </span>
+                  </summary>
+                  <div className="sv3-tip-a">
+                    {toParagraphs(preVisitNotes).map((p, i) => (
+                      <p key={i}>{p}</p>
+                    ))}
+                  </div>
+                </details>
+              )}
+            </div>
           </div>
         )}
 
@@ -944,60 +863,50 @@ export default async function SpotPage({ params }: Props) {
           }
         />
 
-        {/* よくある質問（FAQ） */}
+        {/* よくある質問（FAQ）: 角丸カード */}
         {faqs.length > 0 && (
-          <>
-            <div className="v2-sec-head">
-              <h2 className="v2-sec-title">
-                <span className="v2-bar-accent"></span>よくある質問
-              </h2>
-            </div>
-            <div className="v2-section" style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          <div className="kk-sec sv3-sec">
+            <KkSectionTitle as="h2" title="よくある質問" />
+            <div className="sv3-faqs sv3-measure">
               {faqs.map((f, i) => (
-                <details key={i} className="v2-faq">
-                  <summary className="v2-faq-q" style={{ listStyle: 'none', cursor: 'pointer' }}>
-                    <span className="v2-faq-mark">Q</span>
+                <details key={i} className="sv3-faq">
+                  <summary className="sv3-faq-q">
+                    <span className="sv3-faq-mark">Q</span>
                     {f.q}
-                    <span className="v2-faq-chev">
-                      <V2Icon name="chevron-down" size={18} color="#bbb" />
+                    <span className="sv3-tip-chev">
+                      <V2Icon name="chevron-down" size={17} />
                     </span>
                   </summary>
-                  <div className="v2-faq-a">
-                    <span style={{ fontSize: 13.5, lineHeight: 1.7 }}>{f.a}</span>
+                  <div className="sv3-faq-a">
+                    {toParagraphs(f.a).map((p, j) => (
+                      <p key={j}>{p}</p>
+                    ))}
                   </div>
                 </details>
               ))}
             </div>
-          </>
+          </div>
         )}
 
         {/* 近隣スポット */}
         {nearbySpots.length > 0 && (
-          <>
-            <V2SectionHead title="近くのスポット" moreHref="/spots" />
-            <div className="v2-hscroll">
+          <div className="kk-sec sv3-sec">
+            <KkSectionTitle as="div" title="近くのスポット" moreHref="/spots" more="もっと見る" />
+            <div className="sv3-nearby">
               {nearbySpots.map((x, i) => {
                 const v = spotToV2(x.spot, i);
                 return (
-                  <Link
-                    key={x.slug}
-                    href={`/spot/${x.slug}`}
-                    className="v2-card-mini"
-                    style={{ width: 168 }}
-                  >
-                    <div className="v2-imgwrap r" style={{ aspectRatio: '16/9' }}>
+                  <Link key={x.slug} href={`/spot/${x.slug}`} className="sv3-nb">
+                    <span className="sv3-nb-img">
                       <V2Img src={v.img} seed={x.slug} alt={x.spot.name} />
-                    </div>
-                    <div className="v2-card-mini-title">{x.spot.name}</div>
-                    <div className="v2-card-v-loc" style={{ margin: 0 }}>
-                      <V2Icon name="pin" size={12} color="var(--v2-orange)" />
-                      {x.spot.ward || x.spot.city}
-                    </div>
+                    </span>
+                    <span className="sv3-nb-name">{x.spot.name}</span>
+                    <span className="sv3-nb-loc">{x.spot.ward || x.spot.city}</span>
                   </Link>
                 );
               })}
             </div>
-          </>
+          </div>
         )}
 
         {/* このスポットを軸にした1日の流れ（一次データのみ・埋まらないスロットは省く） */}
@@ -1017,12 +926,10 @@ export default async function SpotPage({ params }: Props) {
               intro={`編集部が設備・料金を確認した実在スポットだけで組んでいます。時間は目安です。混雑や子どものお昼寝にあわせて前後を入れ替えてください。`}
               footer={
                 stationSlug ? (
-                  <p style={{ fontSize: 12.5, margin: '10px 2px 0' }}>
-                    <Link
-                      href={`/today?station=${stationSlug}`}
-                      style={{ color: 'var(--v2-orange-deep)', fontWeight: 700 }}
-                    >
-                      → {stationLabel}駅を起点に、年齢・天気の条件を変えて1日プランを組み直す
+                  <p style={{ fontSize: 13.5, margin: '12px 2px 0' }}>
+                    <Link href={`/today?station=${stationSlug}`} className="sv3-textlink">
+                      <KkIcon name="arrow-right" size={15} sw={2} />
+                      {stationLabel}駅を起点に、年齢・天気の条件を変えて1日プランを組み直す
                     </Link>
                   </p>
                 ) : undefined
@@ -1039,36 +946,18 @@ export default async function SpotPage({ params }: Props) {
 
         {/* 持っていくと便利（シーン×アイテム）。P1-4: 商品画像＋価格帯つきカード */}
         {enrichedItems.length > 0 && (
-          <>
-            <div className="v2-sec-head" style={{ marginTop: 22 }}>
-              <h2 className="v2-sec-title">
-                <span className="v2-bar-accent"></span>{spot.name}に持っていくと便利
-              </h2>
-            </div>
-            <div className="v2-section">
-              <p style={{ fontSize: 12, color: 'var(--v2-ink-mute)', marginTop: 0, marginBottom: 12 }}>
+          <div className="kk-sec sv3-sec">
+            {/* 見出しテキストは従来どおり（{spot.name} と固定文の2ノードのまま＝出力差分ゼロ） */}
+            <KkSectionTitle as="h2" title={<>{spot.name}に持っていくと便利</>} />
+            <div className="sv3-measure">
+              <p className="sv3-pr-note">
                 広告 / PR ・ 楽天市場の商品です。価格・在庫は変動するため各リンク先でご確認ください。
               </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              <div className="sv3-items">
                 {enrichedItems.map(({ item, product, href }, i) => {
                   const band = product ? priceBandLabel(product.price) : '';
                   return (
-                    <a
-                      key={i}
-                      href={href}
-                      target="_blank"
-                      rel="sponsored nofollow noopener"
-                      style={{
-                        display: 'flex',
-                        gap: 12,
-                        background: '#fff',
-                        border: '1px solid var(--v2-line)',
-                        borderRadius: 'var(--v2-r-card)',
-                        padding: 12,
-                        textDecoration: 'none',
-                        alignItems: 'flex-start',
-                      }}
-                    >
+                    <a key={i} href={href} target="_blank" rel="sponsored nofollow noopener" className="sv3-item">
                       {/* 商品画像（取得できたときのみ） */}
                       {product?.image && (
                         // eslint-disable-next-line @next/next/no-img-element
@@ -1076,44 +965,22 @@ export default async function SpotPage({ params }: Props) {
                           src={product.image}
                           alt={item.label}
                           loading="lazy"
-                          width={84}
-                          height={84}
-                          style={{
-                            width: 84,
-                            height: 84,
-                            objectFit: 'contain',
-                            borderRadius: 10,
-                            border: '1px solid var(--v2-line)',
-                            background: '#fff',
-                            flex: 'none',
-                          }}
+                          width={76}
+                          height={76}
+                          className="sv3-item-img"
                         />
                       )}
-                      <div style={{ flex: 1, minWidth: 0 }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
-                          <span style={{
-                            width: 20, height: 20, borderRadius: '50%',
-                            background: 'var(--v2-orange-tint)',
-                            display: 'flex', alignItems: 'center', justifyContent: 'center',
-                            flex: 'none', fontSize: 11, fontWeight: 800,
-                            color: 'var(--v2-orange-deep)',
-                          }}>{i + 1}</span>
-                          <span style={{ fontSize: 14, fontWeight: 800, color: 'var(--v2-ink)' }}>
-                            {item.label}
-                          </span>
+                      <div className="sv3-item-body">
+                        <div className="sv3-item-head">
+                          <span className="sv3-item-num">{i + 1}</span>
+                          <span className="sv3-item-label">{item.label}</span>
                         </div>
-                        <p style={{ fontSize: 12.5, color: 'var(--v2-ink-soft)', lineHeight: 1.6, margin: 0 }}>
-                          {item.why}
-                        </p>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 8, flexWrap: 'wrap' }}>
-                          {band && (
-                            <span style={{ fontSize: 12, fontWeight: 800, color: 'var(--v2-ink)', background: 'var(--v2-cream, #fbf3e6)', padding: '2px 8px', borderRadius: 6 }}>
-                              {band}
-                            </span>
-                          )}
-                          <span style={{ display: 'inline-flex', alignItems: 'center', gap: 3, fontSize: 12, color: 'var(--v2-orange-deep)', fontWeight: 700 }}>
+                        <p className="sv3-item-why">{item.why}</p>
+                        <div className="sv3-item-meta">
+                          {band && <span className="sv3-item-price">{band}</span>}
+                          <span className="sv3-item-go">
                             楽天で見る
-                            <V2Icon name="chevron-right" size={14} color="var(--v2-orange-deep)" />
+                            <V2Icon name="chevron-right" size={13} color="var(--kk-orange-deep)" />
                           </span>
                         </div>
                       </div>
@@ -1122,71 +989,64 @@ export default async function SpotPage({ params }: Props) {
                 })}
               </div>
             </div>
-          </>
+          </div>
         )}
 
         {/* 追加画像（下段） */}
         {galleryImages[2] && (
-          <div className="v2-section" style={{ marginTop: 18 }}>
-            <div style={{ borderRadius: 'var(--v2-r-card)', overflow: 'hidden', aspectRatio: '16 / 9', border: '1px solid var(--v2-line)' }}>
+          <div className="v2-section">
+            <div className="sv3-figure">
               <V2Img src={galleryImages[2]} seed={`${slug}-2`} alt={`${spot.name}の様子`} />
             </div>
           </div>
         )}
 
-        {/* 関連記事 */}
+        {/* 関連記事（行リスト。リンク先・タイトル・サムネは従来どおり） */}
         {relatedArticles.length > 0 && (
-          <>
-            <V2SectionHead title="関連記事" moreHref="/category/today-doko" />
-            <div className="v2-section">
+          <div className="kk-sec sv3-sec">
+            <KkSectionTitle as="div" title="関連記事" moreHref="/category/today-doko" more="もっと見る" />
+            <div className="kk-rows">
               {relatedArticles.map((a) => {
                 const v = articleToV2(a);
                 return (
-                  <Link key={a.slug} href={`/article/${a.slug}`} className="v2-art-row">
-                    <div className="v2-imgwrap r" style={{ width: 76, minWidth: 76, height: 60 }}>
+                  <Link key={a.slug} href={`/article/${a.slug}`} className="kk-row">
+                    <span className="kk-row-thumb">
                       <V2Img src={v.img} seed={a.slug} alt={a.title} />
-                    </div>
-                    <div className="v2-art-body">
-                      <div className="v2-art-title">{a.title}</div>
-                      {a.lede && <div className="v2-art-sub">{a.lede.slice(0, 60)}</div>}
-                    </div>
-                    <V2Icon name="chevron-right" size={20} color="#cfcfcf" />
+                    </span>
+                    <span className="kk-row-body">
+                      <span className="kk-row-title">{a.title}</span>
+                      {a.lede && <span className="kk-row-sub">{a.lede.slice(0, 60)}</span>}
+                    </span>
+                    <span className="kk-row-arrow">
+                      <KkIcon name="arrow-right" size={16} />
+                    </span>
                   </Link>
                 );
               })}
             </div>
-          </>
+          </div>
         )}
 
         {/* 行ったよレポート（公開分の表示＋報告フォーム） */}
         {visitorReports.length > 0 && (
-          <>
-            <V2SectionHead title="みんなの「行ったよ」" moreHref="/reports" />
-            <div className="v2-section">
+          <div className="kk-sec sv3-sec">
+            <KkSectionTitle as="div" title="みんなの「行ったよ」" moreHref="/reports" more="もっと見る" />
+            <div className="sv3-reports sv3-measure">
               {visitorReports.map((r, i) => (
-                <div
-                  key={i}
-                  style={{
-                    padding: '10px 12px',
-                    borderBottom: i < visitorReports.length - 1 ? '1px solid #f3ece2' : 'none',
-                    fontSize: 13.5,
-                  }}
-                >
-                  <span aria-label={`星${r.rating}`}>
-                    {'⭐'.repeat(r.rating)}
+                <div key={i} className="sv3-report-item">
+                  <span className="sv3-stars" aria-label={`星${r.rating}`}>
+                    {Array.from({ length: r.rating }, (_, s) => (
+                      <KkIcon key={s} name="popular" size={14} sw={1.6} />
+                    ))}
                   </span>
                   {r.ageRange && (
-                    <span style={{ marginLeft: 8, fontSize: 12, color: '#8a7d6e' }}>
-                      {AGE_LABEL[r.ageRange] ?? r.ageRange}の子と
-                    </span>
+                    <span className="sv3-report-age">{AGE_LABEL[r.ageRange] ?? r.ageRange}の子と</span>
                   )}
-                  {r.comment && (
-                    <p style={{ margin: '4px 0 0', color: '#5d5246' }}>「{r.comment}」</p>
-                  )}
+                  {r.comment && <p className="sv3-report-cm">「{r.comment}」</p>}
                 </div>
               ))}
             </div>
-          </>
+          </div>
         )}
         {/* P1-8: ログイン不要の口コミ（承認済みのみ表示・★平均） */}
         <ReviewSection spotId={slug} spotName={spot.name} />
@@ -1202,7 +1062,11 @@ export default async function SpotPage({ params }: Props) {
         {/* 保存ボタン */}
         <V2SaveButton id={slug} />
 
-        <div style={{ height: 24 }}></div>
+        {/* 回遊・再訪モジュール（リニューアル2026-09） */}
+        <KkLineCard placement="spot" />
+        <KkAddToHomeCard placement="spot" />
+        <KkFooter />
+        </div>
       </V2Frame>
     </>
   );

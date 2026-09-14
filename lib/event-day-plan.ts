@@ -190,7 +190,7 @@ export function buildEventDayPlan(ev: EventEntry): EventDayPlan | null {
   // ---- 午前: イベント（軸） ----
   steps.push({
     slot: '午前',
-    icon: '🎪',
+    icon: 'themepark',
     kind: 'event',
     title: ev.title,
     note: `会場: ${ev.venue}${ev.city ? `（${ev.city}）` : ''}。開催時間・休止日は公式サイトで確認してから出発を。`,
@@ -204,7 +204,7 @@ export function buildEventDayPlan(ev: EventEntry): EventDayPlan | null {
   if (indieHit) {
     steps.push({
       slot: 'お昼',
-      icon: '🍽',
+      icon: 'lunch',
       kind: 'restaurant',
       title: `${indieHit.r.name}（${INDIE_GENRE_LABEL[indieHit.r.genre]}）`,
       note: `${indieHit.r.description} 設備・営業時間は店舗にご確認を。`,
@@ -232,7 +232,7 @@ export function buildEventDayPlan(ev: EventEntry): EventDayPlan | null {
     usedSlugs.push(lunch.slug);
     steps.push({
       slot: 'お昼',
-      icon: '🍽',
+      icon: 'lunch',
       kind: 'restaurant',
       title: lunch.spot.name,
       note: lunch.spot.note,
@@ -261,7 +261,7 @@ export function buildEventDayPlan(ev: EventEntry): EventDayPlan | null {
     usedSlugs.push(play.slug);
     steps.push({
       slot: '午後',
-      icon: '🧸',
+      icon: 'toy',
       kind: 'spot',
       title: play.spot.name,
       note: play.spot.note,

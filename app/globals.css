@@ -86,14 +86,13 @@ body {
   font-family: var(--font-sans), "Noto Sans JP", "Hiragino Sans", Meiryo, sans-serif;
   font-feature-settings: "palt", "kern";
   color: var(--ink);
+  /* 2026-09 リニューアル: グラデーションは使わない。紙色のフラットな地色のみ。 */
   background-color: var(--paper);
-  background-image:
-    radial-gradient(circle at 15% 5%, rgba(244, 183, 135, 0.18), transparent 45%),
-    radial-gradient(circle at 85% 15%, rgba(235, 192, 106, 0.12), transparent 50%),
-    radial-gradient(circle at 50% 90%, rgba(201, 96, 62, 0.06), transparent 60%);
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* 下部アンカー広告(data-overlays=bottom)に最終コンテンツが隠れないための逃げ。
+     KkFooter を持つ4ページは白地なのでこの余白は目立たない。 */
   padding-bottom: 80px;
   min-height: 100vh;
 }
@@ -111,10 +110,10 @@ input, select { font: inherit; color: inherit; }
 /* Typography utilities */
 /* フォント整理: Zen Maru Gothic / DM Serif Display は廃止し Shippori Mincho に統合。
    font-maru / font-display クラスは後方互換のため Shippori Mincho にエイリアス。 */
-.font-mincho { font-family: var(--font-mincho), "Shippori Mincho", serif; }
-.font-maru { font-family: var(--font-mincho), "Shippori Mincho", serif; }
-.font-display { font-family: var(--font-mincho), "Shippori Mincho", serif; }
-.font-inter { font-family: var(--font-inter), "Inter", sans-serif; }
+.font-mincho { font-family: var(--font-sans), sans-serif; }
+.font-maru { font-family: var(--font-sans), sans-serif; }
+.font-display { font-family: var(--font-sans), sans-serif; }
+.font-inter { font-family: var(--font-sans), sans-serif; }
 
 /* Section */
 .section { padding: 56px 0; }
@@ -127,7 +126,7 @@ input, select { font: inherit; color: inherit; }
   padding-bottom: 16px;
 }
 .section-head h2 {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: clamp(22px, 3vw, 30px);
   margin: 0;
@@ -135,13 +134,13 @@ input, select { font: inherit; color: inherit; }
 }
 .section-head .hint {
   font-size: 12px; color: var(--ink-mute); letter-spacing: .02em;
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   text-transform: uppercase; font-weight: 500;
 }
 
 .eyebrow {
   display: inline-flex; align-items: center; gap: 12px;
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 11px; font-weight: 500;
   letter-spacing: .24em; text-transform: uppercase;
   color: var(--clay-text);
@@ -167,7 +166,7 @@ input, select { font: inherit; color: inherit; }
 }
 .logo {
   display: flex; align-items: center; gap: 10px;
-  font-family: var(--font-mincho), "Shippori Mincho", serif; font-weight: 700;
+  font-family: var(--font-sans), sans-serif; font-weight: 700;
   font-size: 19px; letter-spacing: .04em;
   min-width: 0; /* flex shrink を許容 */
   max-width: 100%;
@@ -229,7 +228,7 @@ input, select { font: inherit; color: inherit; }
   margin-bottom: 4px;
 }
 .kn-section-head h2 {
-  font-family: var(--font-mincho);
+  font-family: var(--font-sans), sans-serif;
   font-size: 22px;
   font-weight: 600;
   margin: 0 0 6px;
@@ -253,7 +252,7 @@ input, select { font: inherit; color: inherit; }
 .live-chip {
   display: none; align-items: center; gap: 8px;
   font-size: 11px; color: var(--ink-sub); letter-spacing: .04em;
-  font-family: var(--font-inter), Inter, sans-serif; font-weight: 500;
+  font-family: var(--font-sans), sans-serif; font-weight: 500;
   padding: 6px 12px; background: var(--paper-card); border-radius: 999px;
   border: 1px solid var(--line);
 }
@@ -312,7 +311,7 @@ input, select { font: inherit; color: inherit; }
 }
 
 .hero h1 {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: clamp(36px, 6vw, 64px);
   line-height: 1.25;
@@ -361,12 +360,12 @@ input, select { font: inherit; color: inherit; }
   box-shadow: 0 0 0 4px var(--clay-soft);
 }
 .today-card .label {
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 10px; letter-spacing: .28em; text-transform: uppercase;
   color: var(--ink-mute); margin-bottom: 6px;
 }
 .today-card .date-line {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 20px; font-weight: 600; margin-bottom: 4px;
 }
 .today-card .date-meta {
@@ -427,7 +426,7 @@ input, select { font: inherit; color: inherit; }
 .finder-head { margin-bottom: 28px; position: relative; }
 .finder-head .eyebrow { color: var(--clay); margin-bottom: 16px; }
 .finder-head h2 {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: clamp(24px, 4vw, 36px);
   line-height: 1.35; margin: 0 0 8px;
@@ -519,7 +518,7 @@ input, select { font: inherit; color: inherit; }
 }
 .day-plan-icon { font-size: 22px; margin-bottom: 4px; }
 .day-plan-clock {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 22px; font-weight: 600; color: var(--clay); line-height: 1;
 }
 .day-plan-label { font-size: 11px; color: var(--ink-mute); letter-spacing: .14em; margin-top: 4px; text-transform: uppercase; }
@@ -598,7 +597,7 @@ input, select { font: inherit; color: inherit; }
 .field label,
 .field .field-label {
   display: block;
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
   color: var(--ink-mute); margin-bottom: 10px;
 }
@@ -705,7 +704,7 @@ input, select { font: inherit; color: inherit; }
 .pick-a .body { padding: 22px 24px 24px; }
 
 .pick h3 {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.55;
@@ -721,7 +720,7 @@ input, select { font: inherit; color: inherit; }
   border-radius: 999px;
   border: 1px solid var(--line);
   letter-spacing: .02em;
-  font-family: var(--font-inter), Inter, "Noto Sans JP", sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 500;
 }
 .meta-chip.clay { background: var(--clay-soft); color: var(--clay-deep); border-color: transparent; }
@@ -731,7 +730,7 @@ input, select { font: inherit; color: inherit; }
 
 .pick-a .ribbon {
   position: absolute; top: 18px; left: 18px; z-index: 1;
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 10px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase;
   background: var(--ink); color: var(--paper);
   padding: 5px 10px; border-radius: 999px;
@@ -762,19 +761,19 @@ input, select { font: inherit; color: inherit; }
 }
 .seasonal-head .side { display: flex; align-items: baseline; gap: 20px; }
 .seasonal-head .month-num {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-style: italic; font-weight: 500;
   font-size: 72px; line-height: 1;
   color: var(--clay-deep);
 }
 @media (min-width: 768px) { .seasonal-head .month-num { font-size: 92px; } }
 .seasonal-head .month-label {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 14px; color: var(--clay-deep);
   font-weight: 600; letter-spacing: .1em;
 }
 .seasonal-head h2 {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: clamp(20px, 2.5vw, 26px);
   margin: 0; color: var(--ink);
@@ -807,12 +806,12 @@ input, select { font: inherit; color: inherit; }
   box-shadow: var(--shadow-high);
 }
 .seasonal-card .tag-s {
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
   color: var(--clay); font-weight: 600;
 }
 .seasonal-card h3 {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: 15px; margin: 0;
   line-height: 1.5; flex: 1;
@@ -853,13 +852,13 @@ input, select { font: inherit; color: inherit; }
 .concern:hover h3 { color: var(--clay); }
 
 .concern .num {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-style: italic; font-size: 40px; line-height: 1;
   color: var(--clay); flex-shrink: 0;
   min-width: 44px;
 }
 .concern-body h3 {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: 17px; margin: 0 0 6px;
   transition: color .2s ease;
@@ -917,18 +916,18 @@ input, select { font: inherit; color: inherit; }
 .age-panel.c { background: linear-gradient(165deg, var(--sky-soft), #DDEAF0); color: var(--sky); }
 
 .age-panel .age-num {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-style: italic; font-size: 56px; line-height: 1;
   margin-bottom: 12px;
 }
 @media (min-width: 768px) { .age-panel .age-num { font-size: 72px; } }
 .age-panel .age-label {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 15px; font-weight: 600; margin-bottom: 4px;
 }
 .age-panel .age-desc {
   font-size: 12px; opacity: .8;
-  font-family: var(--font-inter), Inter, "Noto Sans JP", sans-serif;
+  font-family: var(--font-sans), sans-serif;
   letter-spacing: .02em;
 }
 
@@ -962,7 +961,7 @@ input, select { font: inherit; color: inherit; }
 @media (min-width: 860px) { .warm-text { padding: 56px 48px; } }
 .warm-text .eyebrow { margin-bottom: 18px; }
 .warm-text h2 {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: clamp(22px, 2.8vw, 30px);
   line-height: 1.5;
@@ -1022,7 +1021,7 @@ input, select { font: inherit; color: inherit; }
   position: absolute;
   bottom: 18px; left: 20px; right: 20px;
   color: #FFFBF3;
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 14px;
   line-height: 1.8;
   letter-spacing: .02em;
@@ -1053,12 +1052,12 @@ input, select { font: inherit; color: inherit; }
 .cat-item:hover { padding-left: 6px; }
 .cat-item:hover .cat-name { color: var(--clay); }
 .cat-item .cat-idx {
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 11px; font-weight: 500; letter-spacing: .1em;
   color: var(--ink-mute);
 }
 .cat-name {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: 17px;
   transition: color .2s ease;
@@ -1093,7 +1092,7 @@ input, select { font: inherit; color: inherit; }
 .footer-brand .logo { color: var(--paper); margin-bottom: 16px; }
 .footer-brand p { font-size: 13px; color: rgba(251,245,232,.6); margin: 0; max-width: 360px; line-height: 1.9; }
 .footer-col h4 {
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 10px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase;
   color: rgba(251,245,232,.5); margin: 0 0 18px;
 }
@@ -1108,7 +1107,7 @@ input, select { font: inherit; color: inherit; }
 .copy {
   display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between;
   padding-top: 28px;
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 11px; letter-spacing: .1em;
   color: rgba(251,245,232,.4);
 }
@@ -1140,7 +1139,7 @@ input, select { font: inherit; color: inherit; }
    ========================================================================== */
 .breadcrumb {
   padding: 20px 0 0; font-size: 11px; color: var(--ink-mute);
-  letter-spacing: .06em; font-family: var(--font-inter), Inter, "Noto Sans JP", sans-serif;
+  letter-spacing: .06em; font-family: var(--font-sans), sans-serif;
   font-weight: 500; text-transform: uppercase;
 }
 .breadcrumb a:hover { color: var(--clay); }
@@ -1149,7 +1148,7 @@ input, select { font: inherit; color: inherit; }
 .page-head { padding: 28px 0 36px; }
 .page-head .eyebrow { margin-bottom: 20px; }
 .page-head h1 {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: clamp(28px, 4.5vw, 42px);
   line-height: 1.4; letter-spacing: .01em;
@@ -1174,7 +1173,7 @@ input, select { font: inherit; color: inherit; }
 @media (min-width: 768px) { .prose { font-size: 16px; line-height: 2; } }
 
 .prose h2 {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: 22px;
   line-height: 1.5;
@@ -1188,7 +1187,7 @@ input, select { font: inherit; color: inherit; }
 @media (min-width: 768px) { .prose h2 { font-size: 24px; } }
 
 .prose h3 {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: 17px;
   line-height: 1.55;
@@ -1208,7 +1207,7 @@ input, select { font: inherit; color: inherit; }
 }
 
 .prose h4 {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: 15px;
   margin: 28px 0 10px;
@@ -1333,7 +1332,7 @@ input, select { font: inherit; color: inherit; }
 .prose table th {
   font-weight: 600;
   color: var(--ink);
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   letter-spacing: .02em;
 }
 .prose table tbody tr:nth-child(even) {
@@ -1350,7 +1349,7 @@ input, select { font: inherit; color: inherit; }
   align-items: center;
   gap: 10px;
   margin: 0 0 20px;
-  font-family: var(--font-inter), Inter, "Noto Sans JP", sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 12px;
   color: var(--ink-mute);
   letter-spacing: .02em;
@@ -1382,7 +1381,7 @@ input, select { font: inherit; color: inherit; }
 }
 .top-pick-box .top-pick-eyebrow {
   display: inline-block;
-  font-family: var(--font-inter), Inter, "Noto Sans JP", sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 10.5px;
   letter-spacing: .26em;
   text-transform: uppercase;
@@ -1402,7 +1401,7 @@ input, select { font: inherit; color: inherit; }
   background: var(--clay);
 }
 .top-pick-box .top-pick-title {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: clamp(20px, 2.8vw, 26px);
   line-height: 1.45;
@@ -1411,7 +1410,7 @@ input, select { font: inherit; color: inherit; }
   color: var(--ink);
 }
 .top-pick-box .top-pick-name {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 700;
   font-size: clamp(18px, 2.4vw, 22px);
   line-height: 1.5;
@@ -1454,7 +1453,7 @@ input, select { font: inherit; color: inherit; }
 }
 .tldr-box .tldr-eyebrow {
   display: inline-block;
-  font-family: var(--font-inter), Inter, "Noto Sans JP", sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 10px;
   letter-spacing: .22em;
   text-transform: uppercase;
@@ -1467,7 +1466,7 @@ input, select { font: inherit; color: inherit; }
   font-size: 14.5px;
   line-height: 1.9;
   color: var(--ink);
-  font-family: var(--font-mincho), "Noto Serif JP", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 500;
 }
 @media (min-width: 768px) {
@@ -1511,7 +1510,7 @@ input, select { font: inherit; color: inherit; }
 @media (min-width: 768px) { .answer-hero-body { padding: 44px 48px 48px; } }
 .answer-eyebrow {
   display: inline-block;
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 11px;
   letter-spacing: .28em;
   text-transform: uppercase;
@@ -1531,7 +1530,7 @@ input, select { font: inherit; color: inherit; }
   background: var(--clay);
 }
 .answer-title {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: clamp(22px, 3.6vw, 32px);
   line-height: 1.45;
@@ -1656,7 +1655,7 @@ input, select { font: inherit; color: inherit; }
 }
 .alt-card-body { flex: 1; display: flex; flex-direction: column; gap: 8px; }
 .alt-card-title {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 13.5px;
   font-weight: 600;
   margin: 0;
@@ -1676,7 +1675,7 @@ input, select { font: inherit; color: inherit; }
   gap: 8px;
 }
 .settings-label {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 15px;
   font-weight: 600;
   color: var(--ink);
@@ -1750,7 +1749,7 @@ input, select { font: inherit; color: inherit; }
   border-radius: 999px;
   font-size: 12.5px;
   color: var(--ink-sub);
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   letter-spacing: .02em;
 }
 .weather-chip-label {
@@ -1812,7 +1811,7 @@ input, select { font: inherit; color: inherit; }
 .tried-count {
   font-size: 11.5px;
   color: var(--ink-sub);
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   letter-spacing: .02em;
 }
 
@@ -1939,7 +1938,7 @@ a[href^="/plan/"]:hover > div:first-child {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: 14.5px;
   color: var(--ink);
@@ -1948,7 +1947,7 @@ a[href^="/plan/"]:hover > div:first-child {
 .toc-mobile > summary::-webkit-details-marker { display: none; }
 .toc-mobile .toc-label { flex: 1; }
 .toc-mobile .toc-count {
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 10px;
   font-weight: 500;
   letter-spacing: .14em;
@@ -1984,7 +1983,7 @@ a[href^="/plan/"]:hover > div:first-child {
   color: var(--ink);
 }
 .toc-mobile .toc-num {
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 10.5px;
   letter-spacing: .14em;
   color: var(--clay);
@@ -2003,7 +2002,7 @@ a[href^="/plan/"]:hover > div:first-child {
 }
 .toc-desktop .toc-eyebrow {
   display: block;
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 10px;
   font-weight: 600;
   letter-spacing: .24em;
@@ -2012,7 +2011,7 @@ a[href^="/plan/"]:hover > div:first-child {
   margin-bottom: 8px;
 }
 .toc-desktop .toc-title {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: 15px;
   color: var(--ink);
@@ -2044,7 +2043,7 @@ a[href^="/plan/"]:hover > div:first-child {
   padding-left: 10px;
 }
 .toc-desktop .toc-num {
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 10px;
   letter-spacing: .14em;
   color: var(--clay);
@@ -2152,7 +2151,7 @@ a[href^="/plan/"]:hover > div:first-child {
   }
 }
 .share-bar-label {
-  font-family: var(--font-inter), Inter, "Noto Sans JP", sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: .18em;
@@ -2175,7 +2174,7 @@ a[href^="/plan/"]:hover > div:first-child {
   border: 1px solid var(--line);
   background: var(--paper);
   color: var(--ink-sub);
-  font-family: var(--font-inter), Inter, "Noto Sans JP", sans-serif;
+  font-family: var(--font-sans), sans-serif;
   letter-spacing: .02em;
   transition: all .2s ease;
   cursor: pointer;
@@ -2247,7 +2246,7 @@ a[href^="/plan/"]:hover > div:first-child {
 .ad-label,
 .pr-label {
   display: inline-block;
-  font-family: var(--font-inter), Inter, "Noto Sans JP", sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 10px;
   letter-spacing: .14em;
   text-transform: uppercase;
@@ -2328,7 +2327,7 @@ span > .pr-label {
 }
 .affiliate-group-eyebrow {
   display: block;
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 10px;
   letter-spacing: .24em;
   text-transform: uppercase;
@@ -2337,7 +2336,7 @@ span > .pr-label {
   margin: 2px 0 6px;
 }
 .affiliate-group-title {
-  font-family: var(--font-mincho), serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: 18px;
   margin: 0 0 18px;
@@ -2400,7 +2399,7 @@ span > .pr-label {
 
 .affiliate-provider-tag {
   display: inline-block;
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 10.5px;
   letter-spacing: .08em;
   font-weight: 600;
@@ -2412,7 +2411,7 @@ span > .pr-label {
 }
 
 .affiliate-card-title {
-  font-family: var(--font-mincho), serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 15.5px;
   font-weight: 600;
   margin: 2px 0 0;
@@ -2437,7 +2436,7 @@ span > .pr-label {
 }
 
 .affiliate-card-price {
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 13px;
   font-weight: 600;
   color: var(--clay-deep);
@@ -2445,7 +2444,7 @@ span > .pr-label {
 }
 
 .affiliate-card-cta {
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 11.5px;
   font-weight: 600;
   letter-spacing: .04em;
@@ -2486,7 +2485,7 @@ span > .pr-label {
   line-height: 1.7;
 }
 .related-items-cta-title {
-  font-family: var(--font-mincho), serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: 16.5px;
   letter-spacing: .02em;
@@ -2529,7 +2528,7 @@ span > .pr-label {
   border: 1px solid var(--line);
   background: var(--paper-card);
   color: var(--ink-sub);
-  font-family: var(--font-inter), Inter, "Noto Sans JP", sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: .02em;
@@ -2562,7 +2561,7 @@ span > .pr-label {
   margin-bottom: 18px;
 }
 .catalog-section-head h2 {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: 22px;
   letter-spacing: .02em;
@@ -2618,7 +2617,7 @@ span > .pr-label {
   display: inline-block;
   margin-top: 6px;
   padding: 3px 10px;
-  font-family: var(--font-inter), Inter, "Noto Sans JP", sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: .04em;
@@ -2645,7 +2644,7 @@ span > .pr-label {
   flex-wrap: wrap;
 }
 .monthly-picks-head h2 {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: 22px;
   letter-spacing: .02em;
@@ -2731,7 +2730,7 @@ span > .pr-label {
   margin-bottom: 16px;
 }
 .category-popular-items-head h2 {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: 18px;
   letter-spacing: .02em;
@@ -2765,7 +2764,7 @@ span > .pr-label {
    /today 結果ページ — 関連記事・関連グッズ・代替案セクション
    ========================================================================== */
 .today-section-title {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: 19px;
   letter-spacing: .02em;
@@ -2775,7 +2774,7 @@ span > .pr-label {
   gap: 6px;
 }
 .today-section-eyebrow {
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 10.5px;
   letter-spacing: .18em;
   text-transform: uppercase;
@@ -2842,7 +2841,7 @@ span > .pr-label {
   justify-content: center;
 }
 .today-related-cat {
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 10px;
   letter-spacing: .16em;
   text-transform: uppercase;
@@ -2850,7 +2849,7 @@ span > .pr-label {
   font-weight: 600;
 }
 .today-related-title {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 13.5px;
   font-weight: 600;
   margin: 0;
@@ -2925,7 +2924,7 @@ span > .pr-label {
   box-shadow: 0 6px 20px -12px rgba(60, 40, 20, .15);
 }
 .quick-three-card .label {
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 10px;
   letter-spacing: .18em;
   text-transform: uppercase;
@@ -2934,7 +2933,7 @@ span > .pr-label {
   margin-bottom: 4px;
 }
 .quick-three-card h3 {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 16px;
   font-weight: 600;
   margin: 0;
@@ -2968,7 +2967,7 @@ span > .pr-label {
   margin: 0 auto;
 }
 .print-doc h2 {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 20px;
   font-weight: 600;
   margin: 24px 0 10px;
@@ -2976,7 +2975,7 @@ span > .pr-label {
   padding-bottom: 6px;
 }
 .print-doc h3 {
-  font-family: var(--font-mincho), serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 16px;
   font-weight: 600;
   margin: 18px 0 8px;
@@ -3118,7 +3117,7 @@ button:focus:not(:focus-visible), a:focus:not(:focus-visible) {
 }
 .plan-timeline-eyebrow {
   display: inline-block;
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 10px;
   letter-spacing: .16em;
   text-transform: uppercase;
@@ -3126,7 +3125,7 @@ button:focus:not(:focus-visible), a:focus:not(:focus-visible) {
   font-weight: 600;
 }
 .plan-timeline-heading {
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: 20px;
   margin: 6px 0 18px;
@@ -3164,7 +3163,7 @@ button:focus:not(:focus-visible), a:focus:not(:focus-visible) {
   border-radius: 999px;
   background: var(--clay);
   color: #fff;
-  font-family: var(--font-inter), Inter, sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 12px;
   font-weight: 700;
   line-height: 1;
@@ -3175,7 +3174,7 @@ button:focus:not(:focus-visible), a:focus:not(:focus-visible) {
 }
 .plan-timeline-time {
   display: inline-block;
-  font-family: var(--font-mincho), "Shippori Mincho", serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 700;
   font-size: 15px;
   color: var(--clay-deep);
@@ -3533,7 +3532,7 @@ iframe:not([class*="adsbygoogle"]):not([id*="aswift"]) {
 
 /* (N) スティッキー下部ナビとの被り対策（リンクが隠れないように） */
 @media (max-width: 767px) {
-  body { padding-bottom: 76px; } /* 既存80pxを若干圧縮 */
+  body { padding-bottom: 76px; }
   .article-layout { padding-bottom: 24px; }
 }
 

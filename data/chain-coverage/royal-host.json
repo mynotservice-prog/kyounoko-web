@@ -1,0 +1,1810 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "royal-host",
+  "name": "ロイヤルホスト",
+  "sourceUrl": "https://locations.royalhost.jp/",
+  "method": "公式店舗検索（MEO Cloud製）の店舗一覧API（/v2/companies/872/shops/search）で全店舗を取得し、各店舗の詳細ページ（/detail/<storeCode>/）の __NEXT_DATA__ にある絞り込み条件「サービス・施設」の checked を集計",
+  "note": "絞り込み条件「サービス・施設」の項目: スロープ・テイクアウト・デリバリー・ドリンクバー・ベビーシート・駐車場。店舗一覧の businessStatus: OPEN=222（一覧 222 件）。詳細ページが 404 のため除外: ロイヤルホスト千田町店、ロイヤルホスト善福寺店、ロイヤルホスト山の田店、ロイヤルホスト蛍茶屋店、ロイヤルホスト香椎店。詳細ページに「サービス・施設」の値が無い店舗 1 件（設備なしとして集計）。公式の絞り込みはブラウザ側で行われサーバ側の件数が無いため、絞り込み件数との突き合わせは未実施。「スロープ」を段差なし（stepFree）として扱った",
+  "total": 217,
+  "facilities": {
+    "stepFree": {
+      "count": 122,
+      "label": "スロープ"
+    },
+    "diaperTable": {
+      "count": 185,
+      "label": "ベビーシート"
+    },
+    "parking": {
+      "count": 185,
+      "label": "駐車場"
+    }
+  },
+  "stores": [
+    {
+      "name": "Royal Host centrair gourmet kitchen",
+      "url": "https://locations.royalhost.jp/detail/196775/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホストCELEO八王子店",
+      "url": "https://locations.royalhost.jp/detail/199524/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホストあびこ駅前店",
+      "url": "https://locations.royalhost.jp/detail/199616/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホストあみだ池店",
+      "url": "https://locations.royalhost.jp/detail/197353/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホストららテラスHARUMI FLAG店",
+      "url": "https://locations.royalhost.jp/detail/199615/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホストイオンタウン郡山店",
+      "url": "https://locations.royalhost.jp/detail/119407/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホストイオンモール仙台上杉店",
+      "url": "https://locations.royalhost.jp/detail/199618/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホストイオン八王子滝山",
+      "url": "https://locations.royalhost.jp/detail/199621/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト三国店",
+      "url": "https://locations.royalhost.jp/detail/197367/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト三篠店",
+      "url": "https://locations.royalhost.jp/detail/198039/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト三萩野店",
+      "url": "https://locations.royalhost.jp/detail/197899/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト上大岡店",
+      "url": "https://locations.royalhost.jp/detail/114006/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト上尾店",
+      "url": "https://locations.royalhost.jp/detail/103403/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト上本町店",
+      "url": "https://locations.royalhost.jp/detail/197290/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト下山手店",
+      "url": "https://locations.royalhost.jp/detail/197276/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト与野店",
+      "url": "https://locations.royalhost.jp/detail/103900/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト中野店",
+      "url": "https://locations.royalhost.jp/detail/106402/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト中間店",
+      "url": "https://locations.royalhost.jp/detail/197878/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト久留米本町店",
+      "url": "https://locations.royalhost.jp/detail/197829/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト久留米東店",
+      "url": "https://locations.royalhost.jp/detail/197822/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト九州大学病院店",
+      "url": "https://locations.royalhost.jp/detail/304085/",
+      "facilities": []
+    },
+    {
+      "name": "ロイヤルホスト九段下店",
+      "url": "https://locations.royalhost.jp/detail/108901/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト亀有店",
+      "url": "https://locations.royalhost.jp/detail/109401/",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト京都髙島屋S.C.店",
+      "url": "https://locations.royalhost.jp/detail/197724/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト仙台国見ヶ丘店",
+      "url": "https://locations.royalhost.jp/detail/119008/",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト仙台根岸店",
+      "url": "https://locations.royalhost.jp/detail/119202/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト仙台花京院店",
+      "url": "https://locations.royalhost.jp/detail/119105/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト仙川駅前店",
+      "url": "https://locations.royalhost.jp/detail/110809/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト住吉店",
+      "url": "https://locations.royalhost.jp/detail/197990/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト倉敷店",
+      "url": "https://locations.royalhost.jp/detail/197570/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト光が丘IMA店",
+      "url": "https://locations.royalhost.jp/detail/199614/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト八丁堀店",
+      "url": "https://locations.royalhost.jp/detail/116301/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト八事店",
+      "url": "https://locations.royalhost.jp/detail/197584/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト八戸の里店",
+      "url": "https://locations.royalhost.jp/detail/197297/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト別府北浜店",
+      "url": "https://locations.royalhost.jp/detail/197955/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト北山店",
+      "url": "https://locations.royalhost.jp/detail/197493/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト南バイパス店",
+      "url": "https://locations.royalhost.jp/detail/197871/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト南林間店",
+      "url": "https://locations.royalhost.jp/detail/115304/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト南熊本店",
+      "url": "https://locations.royalhost.jp/detail/198004/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト南田辺店",
+      "url": "https://locations.royalhost.jp/detail/197500/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト南葛西店",
+      "url": "https://locations.royalhost.jp/detail/109703/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト南薬院店",
+      "url": "https://locations.royalhost.jp/detail/197997/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト厚木栄町店",
+      "url": "https://locations.royalhost.jp/detail/114901/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト古賀流店",
+      "url": "https://locations.royalhost.jp/detail/197885/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト吉塚店",
+      "url": "https://locations.royalhost.jp/detail/197948/",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト名古屋星ヶ丘店",
+      "url": "https://locations.royalhost.jp/detail/365408/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト名古屋納屋橋店",
+      "url": "https://locations.royalhost.jp/detail/199619/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト味の素スタジアム店",
+      "url": "https://locations.royalhost.jp/detail/111007/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト和光駅前店",
+      "url": "https://locations.royalhost.jp/detail/103101/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト和歌山店",
+      "url": "https://locations.royalhost.jp/detail/197213/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト和白店",
+      "url": "https://locations.royalhost.jp/detail/197808/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト国立駅前店",
+      "url": "https://locations.royalhost.jp/detail/111309/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト城山店",
+      "url": "https://locations.royalhost.jp/detail/197815/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト堀川五条店",
+      "url": "https://locations.royalhost.jp/detail/197437/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト堺石津川店",
+      "url": "https://locations.royalhost.jp/detail/197150/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト堺長曽根店",
+      "url": "https://locations.royalhost.jp/detail/197423/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト塩原店",
+      "url": "https://locations.royalhost.jp/detail/197836/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト多摩センター店",
+      "url": "https://locations.royalhost.jp/detail/199558/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト大倉山店",
+      "url": "https://locations.royalhost.jp/detail/113409/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト大分空港店",
+      "url": "https://locations.royalhost.jp/detail/322949/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト大塚駅前店",
+      "url": "https://locations.royalhost.jp/detail/107701/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト大宮ステラタウン店",
+      "url": "https://locations.royalhost.jp/detail/199565/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト大森北店",
+      "url": "https://locations.royalhost.jp/detail/110302/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト大道店",
+      "url": "https://locations.royalhost.jp/detail/197941/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト天神西通り店",
+      "url": "https://locations.royalhost.jp/detail/199605/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト姪浜店",
+      "url": "https://locations.royalhost.jp/detail/197969/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト学が丘店",
+      "url": "https://locations.royalhost.jp/detail/197409/",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト宇治槇島店",
+      "url": "https://locations.royalhost.jp/detail/197185/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト安曇野インター店",
+      "url": "https://locations.royalhost.jp/detail/197696/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト宗像店",
+      "url": "https://locations.royalhost.jp/detail/197983/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト宝塚店",
+      "url": "https://locations.royalhost.jp/detail/197136/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト室見店",
+      "url": "https://locations.royalhost.jp/detail/199595/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト宮の森店",
+      "url": "https://locations.royalhost.jp/detail/116807/",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト宮元町店",
+      "url": "https://locations.royalhost.jp/detail/102709/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト富士吉田店",
+      "url": "https://locations.royalhost.jp/detail/197710/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト小倉東インター店",
+      "url": "https://locations.royalhost.jp/detail/197906/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト小嶺店",
+      "url": "https://locations.royalhost.jp/detail/197801/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト小平学園店",
+      "url": "https://locations.royalhost.jp/detail/113107/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト小平店",
+      "url": "https://locations.royalhost.jp/detail/113000/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト小田原店",
+      "url": "https://locations.royalhost.jp/detail/115100/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト尾山台店",
+      "url": "https://locations.royalhost.jp/detail/111805/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト屏風ヶ浦店",
+      "url": "https://locations.royalhost.jp/detail/114201/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト山科西野店",
+      "url": "https://locations.royalhost.jp/detail/197486/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト岡山学南店",
+      "url": "https://locations.royalhost.jp/detail/197563/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト川越店",
+      "url": "https://locations.royalhost.jp/detail/102903/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト己斐店",
+      "url": "https://locations.royalhost.jp/detail/198053/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト帝塚山店",
+      "url": "https://locations.royalhost.jp/detail/197129/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト常盤平店",
+      "url": "https://locations.royalhost.jp/detail/105309/",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト幕張店",
+      "url": "https://locations.royalhost.jp/detail/105201/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト幟町店",
+      "url": "https://locations.royalhost.jp/detail/198046/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト平塚店",
+      "url": "https://locations.royalhost.jp/detail/115002/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト平尾店",
+      "url": "https://locations.royalhost.jp/detail/197843/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト平岸店",
+      "url": "https://locations.royalhost.jp/detail/117501/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト平野店",
+      "url": "https://locations.royalhost.jp/detail/197514/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト幸町店",
+      "url": "https://locations.royalhost.jp/detail/104809/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト広島空港店",
+      "url": "https://locations.royalhost.jp/detail/165506/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト府中東店",
+      "url": "https://locations.royalhost.jp/detail/111104/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト座間店",
+      "url": "https://locations.royalhost.jp/detail/115207/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト御器所店",
+      "url": "https://locations.royalhost.jp/detail/197619/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト成田店",
+      "url": "https://locations.royalhost.jp/detail/104302/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト戸坂店",
+      "url": "https://locations.royalhost.jp/detail/198067/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト戸塚店",
+      "url": "https://locations.royalhost.jp/detail/115908/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト戸田店",
+      "url": "https://locations.royalhost.jp/detail/104001/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト戸畑店",
+      "url": "https://locations.royalhost.jp/detail/197934/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト所沢店",
+      "url": "https://locations.royalhost.jp/detail/103004/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト摩耶店",
+      "url": "https://locations.royalhost.jp/detail/197521/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト文の里店",
+      "url": "https://locations.royalhost.jp/detail/197262/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト新宿三井ビル店",
+      "url": "https://locations.royalhost.jp/detail/106305/",
+      "facilities": []
+    },
+    {
+      "name": "ロイヤルホスト新宿店",
+      "url": "https://locations.royalhost.jp/detail/106607/",
+      "facilities": []
+    },
+    {
+      "name": "ロイヤルホスト新横浜駅ビル店",
+      "url": "https://locations.royalhost.jp/detail/199597/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト新潟県庁前店",
+      "url": "https://locations.royalhost.jp/detail/118401/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト早島インター店",
+      "url": "https://locations.royalhost.jp/detail/197577/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト春日部店",
+      "url": "https://locations.royalhost.jp/detail/103501/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト昭和通店",
+      "url": "https://locations.royalhost.jp/detail/197689/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト曳舟店",
+      "url": "https://locations.royalhost.jp/detail/107107/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト朝潮橋店",
+      "url": "https://locations.royalhost.jp/detail/197304/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト本城店",
+      "url": "https://locations.royalhost.jp/detail/198018/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト本山店",
+      "url": "https://locations.royalhost.jp/detail/197346/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト東久留米店",
+      "url": "https://locations.royalhost.jp/detail/112909/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト東天満店",
+      "url": "https://locations.royalhost.jp/detail/197416/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト東新宿駅前店",
+      "url": "https://locations.royalhost.jp/detail/106704/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト東松山店",
+      "url": "https://locations.royalhost.jp/detail/102407/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト東神戸店",
+      "url": "https://locations.royalhost.jp/detail/197108/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト松戸駅前店",
+      "url": "https://locations.royalhost.jp/detail/105406/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト松本渚店",
+      "url": "https://locations.royalhost.jp/detail/197668/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト板橋店",
+      "url": "https://locations.royalhost.jp/detail/109207/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト柿田川公園店",
+      "url": "https://locations.royalhost.jp/detail/197654/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト桂店",
+      "url": "https://locations.royalhost.jp/detail/197248/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト桜堤店",
+      "url": "https://locations.royalhost.jp/detail/112607/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト桜川店",
+      "url": "https://locations.royalhost.jp/detail/197192/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト桜新町店",
+      "url": "https://locations.royalhost.jp/detail/109908/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト桜新町駅前店",
+      "url": "https://locations.royalhost.jp/detail/111708/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト森ノ宮店",
+      "url": "https://locations.royalhost.jp/detail/197381/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト検見川浜店",
+      "url": "https://locations.royalhost.jp/detail/105007/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト横浜駅前店",
+      "url": "https://locations.royalhost.jp/detail/199596/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト橘通店",
+      "url": "https://locations.royalhost.jp/detail/197976/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト武庫之荘店",
+      "url": "https://locations.royalhost.jp/detail/197388/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト武蔵境店",
+      "url": "https://locations.royalhost.jp/detail/112704/",
+      "facilities": []
+    },
+    {
+      "name": "ロイヤルホスト水城店",
+      "url": "https://locations.royalhost.jp/detail/197794/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト水戸東原店",
+      "url": "https://locations.royalhost.jp/detail/104604/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト水戸駅南店",
+      "url": "https://locations.royalhost.jp/detail/104701/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト永福町店",
+      "url": "https://locations.royalhost.jp/detail/112305/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト江古田店",
+      "url": "https://locations.royalhost.jp/detail/106500/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト池田天神店",
+      "url": "https://locations.royalhost.jp/detail/197472/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト沼津店",
+      "url": "https://locations.royalhost.jp/detail/197633/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト泉佐野店",
+      "url": "https://locations.royalhost.jp/detail/197430/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト津田沼店",
+      "url": "https://locations.royalhost.jp/detail/105902/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト津田沼駅前店",
+      "url": "https://locations.royalhost.jp/detail/106003/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト洪福寺店",
+      "url": "https://locations.royalhost.jp/detail/113808/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト浜大津店",
+      "url": "https://locations.royalhost.jp/detail/197444/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト浜松駅南店",
+      "url": "https://locations.royalhost.jp/detail/197647/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト浦和南店",
+      "url": "https://locations.royalhost.jp/detail/103608/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト浦和常盤店",
+      "url": "https://locations.royalhost.jp/detail/103802/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト浦安店",
+      "url": "https://locations.royalhost.jp/detail/105601/",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト湊川店",
+      "url": "https://locations.royalhost.jp/detail/197220/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト熊本インター店",
+      "url": "https://locations.royalhost.jp/detail/197864/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト熊本空港店",
+      "url": "https://locations.royalhost.jp/detail/196776/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト牟礼店",
+      "url": "https://locations.royalhost.jp/detail/112402/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト王寺駅前店",
+      "url": "https://locations.royalhost.jp/detail/197332/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト甚目寺店",
+      "url": "https://locations.royalhost.jp/detail/197605/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト町田店",
+      "url": "https://locations.royalhost.jp/detail/115509/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト白根店",
+      "url": "https://locations.royalhost.jp/detail/113905/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト目黒店",
+      "url": "https://locations.royalhost.jp/detail/110205/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト相模原中央店",
+      "url": "https://locations.royalhost.jp/detail/115606/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト真鍋新町店",
+      "url": "https://locations.royalhost.jp/detail/104507/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト石神井台店",
+      "url": "https://locations.royalhost.jp/detail/108006/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト神戸空港店",
+      "url": "https://locations.royalhost.jp/detail/141003/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト神楽坂店",
+      "url": "https://locations.royalhost.jp/detail/109002/",
+      "facilities": []
+    },
+    {
+      "name": "ロイヤルホスト神田神保町店",
+      "url": "https://locations.royalhost.jp/detail/108804/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト秋葉原店",
+      "url": "https://locations.royalhost.jp/detail/107409/",
+      "facilities": []
+    },
+    {
+      "name": "ロイヤルホスト稲毛海岸店",
+      "url": "https://locations.royalhost.jp/detail/105104/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト立川南店",
+      "url": "https://locations.royalhost.jp/detail/111406/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト立石店",
+      "url": "https://locations.royalhost.jp/detail/107204/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト竹の塚店",
+      "url": "https://locations.royalhost.jp/detail/107000/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト美香保店",
+      "url": "https://locations.royalhost.jp/detail/117102/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト羽田空港店",
+      "url": "https://locations.royalhost.jp/detail/168505/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト芦屋店",
+      "url": "https://locations.royalhost.jp/detail/197115/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト若林店",
+      "url": "https://locations.royalhost.jp/detail/111902/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト若柴店",
+      "url": "https://locations.royalhost.jp/detail/105503/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト茨木店",
+      "url": "https://locations.royalhost.jp/detail/197164/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト草津店",
+      "url": "https://locations.royalhost.jp/detail/197507/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト菱江店",
+      "url": "https://locations.royalhost.jp/detail/197178/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト蒲生店",
+      "url": "https://locations.royalhost.jp/detail/197227/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト藤沢本町店",
+      "url": "https://locations.royalhost.jp/detail/114707/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト衣笠インター店",
+      "url": "https://locations.royalhost.jp/detail/114502/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト西大島店",
+      "url": "https://locations.royalhost.jp/detail/109509/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト西川口店",
+      "url": "https://locations.royalhost.jp/detail/104205/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト西新井大師店",
+      "url": "https://locations.royalhost.jp/detail/106801/",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト西灘店",
+      "url": "https://locations.royalhost.jp/detail/197143/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト西葛西店",
+      "url": "https://locations.royalhost.jp/detail/109606/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト西鹿児島店",
+      "url": "https://locations.royalhost.jp/detail/197850/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト諏訪インター店",
+      "url": "https://locations.royalhost.jp/detail/197661/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト谷津坂店",
+      "url": "https://locations.royalhost.jp/detail/114308/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト豊中桜塚店",
+      "url": "https://locations.royalhost.jp/detail/197451/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト道玄坂店",
+      "url": "https://locations.royalhost.jp/detail/108405/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト那覇国際通り店",
+      "url": "https://locations.royalhost.jp/detail/199620/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト那覇空港店",
+      "url": "https://locations.royalhost.jp/detail/172804/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト都島店",
+      "url": "https://locations.royalhost.jp/detail/197269/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト銀座インズ店",
+      "url": "https://locations.royalhost.jp/detail/199598/",
+      "facilities": []
+    },
+    {
+      "name": "ロイヤルホスト鎌倉山店",
+      "url": "https://locations.royalhost.jp/detail/114600/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト長尾店",
+      "url": "https://locations.royalhost.jp/detail/197857/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト静岡インター店",
+      "url": "https://locations.royalhost.jp/detail/197640/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト音羽店",
+      "url": "https://locations.royalhost.jp/detail/107603/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト飯塚店",
+      "url": "https://locations.royalhost.jp/detail/306207/",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト馬事公苑店",
+      "url": "https://locations.royalhost.jp/detail/110604/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト馬車道店",
+      "url": "https://locations.royalhost.jp/detail/113603/",
+      "facilities": []
+    },
+    {
+      "name": "ロイヤルホスト駒沢パーククォーター店",
+      "url": "https://locations.royalhost.jp/detail/199617/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト駒沢店",
+      "url": "https://locations.royalhost.jp/detail/199572/",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト高崎駅前店",
+      "url": "https://locations.royalhost.jp/detail/102300/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト高槻店",
+      "url": "https://locations.royalhost.jp/detail/197122/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト高蔵寺店",
+      "url": "https://locations.royalhost.jp/detail/197626/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト高輪店",
+      "url": "https://locations.royalhost.jp/detail/110001/",
+      "facilities": []
+    },
+    {
+      "name": "ロイヤルホスト鶴見店",
+      "url": "https://locations.royalhost.jp/detail/113506/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト鹿児島店",
+      "url": "https://locations.royalhost.jp/detail/197780/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト鹿児島空港店",
+      "url": "https://locations.royalhost.jp/detail/124605/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "ロイヤルホスト麻生店",
+      "url": "https://locations.royalhost.jp/detail/116904/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "新千歳エアポートレストラン by ROYAL HOST",
+      "url": "https://locations.royalhost.jp/detail/196703/",
+      "facilities": [
+        "diaperTable"
+      ]
+    }
+  ]
+}

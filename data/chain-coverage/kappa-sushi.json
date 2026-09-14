@@ -1,0 +1,2624 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "kappa-sushi",
+  "name": "かっぱ寿司",
+  "sourceUrl": "https://www.kappasushi.jp/shop2/",
+  "method": "公式店舗検索（/shop2）が読み込む店舗マスタ JSON の facility フラグを、検索画面の「設備で絞り込む」チェック（入り口バリアフリー・多目的トイレ・駐車場あり）と同じ対応で店舗ごとに集計",
+  "note": "店名末尾の「※タイプA」等の注記は除去。エレベーター・その他昇降機は家族向け設備に含めていない",
+  "facilities": {
+    "stepFree": {
+      "count": 251,
+      "label": "入り口バリアフリー"
+    },
+    "multiToilet": {
+      "count": 276,
+      "label": "多目的トイレ"
+    },
+    "parking": {
+      "count": 287,
+      "label": "駐車場あり"
+    }
+  },
+  "total": 298,
+  "stores": [
+    {
+      "name": "かっぱ寿司 上高田店",
+      "url": "https://www.kappasushi.jp/shop/0003",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 更埴店",
+      "url": "https://www.kappasushi.jp/shop/0004",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 上田店",
+      "url": "https://www.kappasushi.jp/shop/0005",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 下諏訪店",
+      "url": "https://www.kappasushi.jp/shop/0010",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 南松本店",
+      "url": "https://www.kappasushi.jp/shop/0012",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 草加店",
+      "url": "https://www.kappasushi.jp/shop/0014",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 深谷店",
+      "url": "https://www.kappasushi.jp/shop/0017",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 幸手店",
+      "url": "https://www.kappasushi.jp/shop/0018",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 新三橋店",
+      "url": "https://www.kappasushi.jp/shop/0019",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 太田店",
+      "url": "https://www.kappasushi.jp/shop/0025",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 桐生店",
+      "url": "https://www.kappasushi.jp/shop/0026",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 川越店",
+      "url": "https://www.kappasushi.jp/shop/0030",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 蓮田店",
+      "url": "https://www.kappasushi.jp/shop/0031",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 富岡店",
+      "url": "https://www.kappasushi.jp/shop/0033",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 古河店",
+      "url": "https://www.kappasushi.jp/shop/0034",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 須坂店",
+      "url": "https://www.kappasushi.jp/shop/0035",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 君津店",
+      "url": "https://www.kappasushi.jp/shop/0037",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 茂原店",
+      "url": "https://www.kappasushi.jp/shop/0048",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 佐久中込店",
+      "url": "https://www.kappasushi.jp/shop/0052",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 信州中野店",
+      "url": "https://www.kappasushi.jp/shop/0055",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 上田国分店",
+      "url": "https://www.kappasushi.jp/shop/0057",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 旭店",
+      "url": "https://www.kappasushi.jp/shop/0060",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 新飯山店",
+      "url": "https://www.kappasushi.jp/shop/0062",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 鎌ケ谷店",
+      "url": "https://www.kappasushi.jp/shop/0065",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 北松本店",
+      "url": "https://www.kappasushi.jp/shop/0066",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 新相馬店",
+      "url": "https://www.kappasushi.jp/shop/0072",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 東金店",
+      "url": "https://www.kappasushi.jp/shop/0074",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 焼津店",
+      "url": "https://www.kappasushi.jp/shop/0078",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 清水店",
+      "url": "https://www.kappasushi.jp/shop/0079",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 豊科店",
+      "url": "https://www.kappasushi.jp/shop/0081",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 名取店",
+      "url": "https://www.kappasushi.jp/shop/0085",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 郡山亀田店",
+      "url": "https://www.kappasushi.jp/shop/0086",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 銚子店",
+      "url": "https://www.kappasushi.jp/shop/0088",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 本庄店",
+      "url": "https://www.kappasushi.jp/shop/0090",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 三俣店",
+      "url": "https://www.kappasushi.jp/shop/0091",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 浜松東若林店",
+      "url": "https://www.kappasushi.jp/shop/0100",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 長野稲田店",
+      "url": "https://www.kappasushi.jp/shop/0122",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 川中島店",
+      "url": "https://www.kappasushi.jp/shop/0127",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 渋川店",
+      "url": "https://www.kappasushi.jp/shop/0129",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 いわき平店",
+      "url": "https://www.kappasushi.jp/shop/0140",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 三島店",
+      "url": "https://www.kappasushi.jp/shop/0167",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 逢谷内店",
+      "url": "https://www.kappasushi.jp/shop/0181",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 半田店",
+      "url": "https://www.kappasushi.jp/shop/0198",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 福島矢野目店",
+      "url": "https://www.kappasushi.jp/shop/0205",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 横浜戸塚店",
+      "url": "https://www.kappasushi.jp/shop/0207",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 浜北店",
+      "url": "https://www.kappasushi.jp/shop/0208",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 甲府向町店",
+      "url": "https://www.kappasushi.jp/shop/0211",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 甲府アルプス通店",
+      "url": "https://www.kappasushi.jp/shop/0212",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 西京極店",
+      "url": "https://www.kappasushi.jp/shop/0213",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 鳴海店",
+      "url": "https://www.kappasushi.jp/shop/0214",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 茨木宇野辺店",
+      "url": "https://www.kappasushi.jp/shop/0215",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 泉バイパス店",
+      "url": "https://www.kappasushi.jp/shop/0216",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 豊橋飯村店",
+      "url": "https://www.kappasushi.jp/shop/0220",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 福島鎌田店",
+      "url": "https://www.kappasushi.jp/shop/0224",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 松原店",
+      "url": "https://www.kappasushi.jp/shop/0227",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 三鷹店",
+      "url": "https://www.kappasushi.jp/shop/0228",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 静岡有明店",
+      "url": "https://www.kappasushi.jp/shop/0231",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 板橋店",
+      "url": "https://www.kappasushi.jp/shop/0239",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 仙台中野栄店",
+      "url": "https://www.kappasushi.jp/shop/0244",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 香芝店",
+      "url": "https://www.kappasushi.jp/shop/0246",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 南津守店",
+      "url": "https://www.kappasushi.jp/shop/0249",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 春日井店",
+      "url": "https://www.kappasushi.jp/shop/0250",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 豊中庄内店",
+      "url": "https://www.kappasushi.jp/shop/0251",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 桑名店",
+      "url": "https://www.kappasushi.jp/shop/0255",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 尼崎店",
+      "url": "https://www.kappasushi.jp/shop/0259",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 生野店",
+      "url": "https://www.kappasushi.jp/shop/0261",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 寝屋川香里店",
+      "url": "https://www.kappasushi.jp/shop/0262",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 川崎市ノ坪店",
+      "url": "https://www.kappasushi.jp/shop/0263",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 浜松頭陀寺店",
+      "url": "https://www.kappasushi.jp/shop/0266",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 松阪三雲店",
+      "url": "https://www.kappasushi.jp/shop/0272",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 水主町店",
+      "url": "https://www.kappasushi.jp/shop/0276",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 越谷大里店",
+      "url": "https://www.kappasushi.jp/shop/0277",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 市川東大和田店",
+      "url": "https://www.kappasushi.jp/shop/0279",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 袋井店",
+      "url": "https://www.kappasushi.jp/shop/0284",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 千葉東寺山店",
+      "url": "https://www.kappasushi.jp/shop/0287",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 平塚店",
+      "url": "https://www.kappasushi.jp/shop/0292",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 貝塚店",
+      "url": "https://www.kappasushi.jp/shop/0293",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 明石店",
+      "url": "https://www.kappasushi.jp/shop/0296",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 宇治店",
+      "url": "https://www.kappasushi.jp/shop/0297",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 伊勢御薗店",
+      "url": "https://www.kappasushi.jp/shop/0299",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 練馬貫井店",
+      "url": "https://www.kappasushi.jp/shop/0302",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 瀬戸店",
+      "url": "https://www.kappasushi.jp/shop/0303",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 豊川店",
+      "url": "https://www.kappasushi.jp/shop/0308",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 堺向陵店",
+      "url": "https://www.kappasushi.jp/shop/0309",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 足立谷在家店",
+      "url": "https://www.kappasushi.jp/shop/0311",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 岐南店",
+      "url": "https://www.kappasushi.jp/shop/0315",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 流山店",
+      "url": "https://www.kappasushi.jp/shop/0316",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 上尾店",
+      "url": "https://www.kappasushi.jp/shop/0317",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 磐田店",
+      "url": "https://www.kappasushi.jp/shop/0318",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 神戸須磨店",
+      "url": "https://www.kappasushi.jp/shop/0319",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 新発田店",
+      "url": "https://www.kappasushi.jp/shop/0320",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 名古屋白壁店",
+      "url": "https://www.kappasushi.jp/shop/0321",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 岐阜又丸店",
+      "url": "https://www.kappasushi.jp/shop/0322",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 弥次ヱ店",
+      "url": "https://www.kappasushi.jp/shop/0329",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 守谷店",
+      "url": "https://www.kappasushi.jp/shop/0338",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 各務原蘇原店",
+      "url": "https://www.kappasushi.jp/shop/0341",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 大津尾花川店",
+      "url": "https://www.kappasushi.jp/shop/0342",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 穂積店",
+      "url": "https://www.kappasushi.jp/shop/0343",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 市原店",
+      "url": "https://www.kappasushi.jp/shop/0344",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 春日井大留店",
+      "url": "https://www.kappasushi.jp/shop/0345",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 鳥羽店",
+      "url": "https://www.kappasushi.jp/shop/0347",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 長岡インター店",
+      "url": "https://www.kappasushi.jp/shop/0349",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 都岡店",
+      "url": "https://www.kappasushi.jp/shop/0350",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 柏店",
+      "url": "https://www.kappasushi.jp/shop/0354",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 伊勢崎店",
+      "url": "https://www.kappasushi.jp/shop/0357",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 美濃加茂店",
+      "url": "https://www.kappasushi.jp/shop/0359",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 箕面店",
+      "url": "https://www.kappasushi.jp/shop/0361",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 安城店",
+      "url": "https://www.kappasushi.jp/shop/0366",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 岡崎大樹寺店",
+      "url": "https://www.kappasushi.jp/shop/0367",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 久喜店",
+      "url": "https://www.kappasushi.jp/shop/0368",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 いわき鹿島店",
+      "url": "https://www.kappasushi.jp/shop/0376",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 河口湖インター店",
+      "url": "https://www.kappasushi.jp/shop/0378",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 白根店",
+      "url": "https://www.kappasushi.jp/shop/0379",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 会津若松店",
+      "url": "https://www.kappasushi.jp/shop/0380",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 寝屋川太秦店",
+      "url": "https://www.kappasushi.jp/shop/0384",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 仙台長町店",
+      "url": "https://www.kappasushi.jp/shop/0385",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 郡山南店",
+      "url": "https://www.kappasushi.jp/shop/0388",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 古川店",
+      "url": "https://www.kappasushi.jp/shop/0389",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 石巻店",
+      "url": "https://www.kappasushi.jp/shop/0390",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 沼津店",
+      "url": "https://www.kappasushi.jp/shop/0391",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 鶴ヶ島店",
+      "url": "https://www.kappasushi.jp/shop/0395",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 藤岡店",
+      "url": "https://www.kappasushi.jp/shop/0396",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 東住吉店",
+      "url": "https://www.kappasushi.jp/shop/0399",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 高萩店",
+      "url": "https://www.kappasushi.jp/shop/0400",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 青梅店",
+      "url": "https://www.kappasushi.jp/shop/0401",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 黒磯店",
+      "url": "https://www.kappasushi.jp/shop/0403",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 福島黒岩店",
+      "url": "https://www.kappasushi.jp/shop/0408",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 横浜笠間店",
+      "url": "https://www.kappasushi.jp/shop/0413",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 久居店",
+      "url": "https://www.kappasushi.jp/shop/0415",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 大河原店",
+      "url": "https://www.kappasushi.jp/shop/0417",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 佐沼店",
+      "url": "https://www.kappasushi.jp/shop/0418",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 飯能店",
+      "url": "https://www.kappasushi.jp/shop/0419",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 師勝店",
+      "url": "https://www.kappasushi.jp/shop/0421",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 諏訪インター店",
+      "url": "https://www.kappasushi.jp/shop/0424",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 八幡店",
+      "url": "https://www.kappasushi.jp/shop/0427",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 北新横浜店",
+      "url": "https://www.kappasushi.jp/shop/0428",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 南アルプス店",
+      "url": "https://www.kappasushi.jp/shop/0429",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 大宮植竹店",
+      "url": "https://www.kappasushi.jp/shop/0433",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 飯田店",
+      "url": "https://www.kappasushi.jp/shop/0435",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 館林店",
+      "url": "https://www.kappasushi.jp/shop/0436",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 西那須野店",
+      "url": "https://www.kappasushi.jp/shop/0440",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 いわき植田店",
+      "url": "https://www.kappasushi.jp/shop/0443",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 盛岡北山店",
+      "url": "https://www.kappasushi.jp/shop/0445",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 寒河江店",
+      "url": "https://www.kappasushi.jp/shop/0446",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 吉田店",
+      "url": "https://www.kappasushi.jp/shop/0447",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 気仙沼店",
+      "url": "https://www.kappasushi.jp/shop/0448",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 郡山駅東ＳＣ店",
+      "url": "https://www.kappasushi.jp/shop/0449",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 上田築地店",
+      "url": "https://www.kappasushi.jp/shop/0451",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 天童店",
+      "url": "https://www.kappasushi.jp/shop/0452",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 伊那店",
+      "url": "https://www.kappasushi.jp/shop/0455",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 南陽店",
+      "url": "https://www.kappasushi.jp/shop/0458",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 和歌山店",
+      "url": "https://www.kappasushi.jp/shop/0459",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 盛岡南店",
+      "url": "https://www.kappasushi.jp/shop/0460",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 津山店",
+      "url": "https://www.kappasushi.jp/shop/0461",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 飯田インター店",
+      "url": "https://www.kappasushi.jp/shop/0462",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 さくらんぼ東根店",
+      "url": "https://www.kappasushi.jp/shop/0463",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 青森浜田店",
+      "url": "https://www.kappasushi.jp/shop/0464",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 五所川原店",
+      "url": "https://www.kappasushi.jp/shop/0465",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 北上店",
+      "url": "https://www.kappasushi.jp/shop/0466",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 大仙店",
+      "url": "https://www.kappasushi.jp/shop/0467",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 弘前八幡店",
+      "url": "https://www.kappasushi.jp/shop/0468",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 松永店",
+      "url": "https://www.kappasushi.jp/shop/0469",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 秋田将軍野店",
+      "url": "https://www.kappasushi.jp/shop/0470",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 大館店",
+      "url": "https://www.kappasushi.jp/shop/0471",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 八戸類家店",
+      "url": "https://www.kappasushi.jp/shop/0472",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 飯倉店",
+      "url": "https://www.kappasushi.jp/shop/0473",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 酒田店",
+      "url": "https://www.kappasushi.jp/shop/0474",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 富士柚木店",
+      "url": "https://www.kappasushi.jp/shop/0475",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 富里店",
+      "url": "https://www.kappasushi.jp/shop/0476",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 三沢店",
+      "url": "https://www.kappasushi.jp/shop/0477",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 総社店",
+      "url": "https://www.kappasushi.jp/shop/0478",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 イオンタウン山梨中央店",
+      "url": "https://www.kappasushi.jp/shop/0479",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 山形嶋店",
+      "url": "https://www.kappasushi.jp/shop/0480",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 秋田御所野店",
+      "url": "https://www.kappasushi.jp/shop/0481",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 会津若松南店",
+      "url": "https://www.kappasushi.jp/shop/0482",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 倉吉店",
+      "url": "https://www.kappasushi.jp/shop/0483",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 湯沢店",
+      "url": "https://www.kappasushi.jp/shop/0484",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 米沢店",
+      "url": "https://www.kappasushi.jp/shop/0485",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 児島店",
+      "url": "https://www.kappasushi.jp/shop/0486",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 和歌山六十谷店",
+      "url": "https://www.kappasushi.jp/shop/0487",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 豊岡店",
+      "url": "https://www.kappasushi.jp/shop/0489",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 新津店",
+      "url": "https://www.kappasushi.jp/shop/0491",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 横手店",
+      "url": "https://www.kappasushi.jp/shop/0492",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 東舞鶴店",
+      "url": "https://www.kappasushi.jp/shop/0493",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 十日町店",
+      "url": "https://www.kappasushi.jp/shop/0494",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 たかのす店",
+      "url": "https://www.kappasushi.jp/shop/0495",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 むつ店",
+      "url": "https://www.kappasushi.jp/shop/0496",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 黒石店",
+      "url": "https://www.kappasushi.jp/shop/0497",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 花巻店",
+      "url": "https://www.kappasushi.jp/shop/0499",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 弘前安原店",
+      "url": "https://www.kappasushi.jp/shop/0500",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 フレスポ神辺店",
+      "url": "https://www.kappasushi.jp/shop/0501",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 能代店",
+      "url": "https://www.kappasushi.jp/shop/0502",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 姫路野里店",
+      "url": "https://www.kappasushi.jp/shop/0503",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 男鹿店",
+      "url": "https://www.kappasushi.jp/shop/0505",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 八戸沼館店",
+      "url": "https://www.kappasushi.jp/shop/0506",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 水沢店",
+      "url": "https://www.kappasushi.jp/shop/0507",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 米子店",
+      "url": "https://www.kappasushi.jp/shop/0508",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 船引店",
+      "url": "https://www.kappasushi.jp/shop/0509",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 栃木店",
+      "url": "https://www.kappasushi.jp/shop/0510",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 由利本荘店",
+      "url": "https://www.kappasushi.jp/shop/0512",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 尾道店",
+      "url": "https://www.kappasushi.jp/shop/0513",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 鴨川店",
+      "url": "https://www.kappasushi.jp/shop/0514",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 野辺地店",
+      "url": "https://www.kappasushi.jp/shop/0515",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 酒田北店",
+      "url": "https://www.kappasushi.jp/shop/0516",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 伊東店",
+      "url": "https://www.kappasushi.jp/shop/0518",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 久慈店",
+      "url": "https://www.kappasushi.jp/shop/0520",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 秋田広面店",
+      "url": "https://www.kappasushi.jp/shop/0521",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 カインズモール関店",
+      "url": "https://www.kappasushi.jp/shop/0522",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 笠岡店",
+      "url": "https://www.kappasushi.jp/shop/0527",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 釜石店",
+      "url": "https://www.kappasushi.jp/shop/0528",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 岩沼店",
+      "url": "https://www.kappasushi.jp/shop/0529",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 佐倉寺崎店",
+      "url": "https://www.kappasushi.jp/shop/0531",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 青森東バイパス店",
+      "url": "https://www.kappasushi.jp/shop/0532",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 岡山大福店",
+      "url": "https://www.kappasushi.jp/shop/0533",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 新庄店",
+      "url": "https://www.kappasushi.jp/shop/0535",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 沼田店",
+      "url": "https://www.kappasushi.jp/shop/0536",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 山形元木店",
+      "url": "https://www.kappasushi.jp/shop/0537",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 別府店",
+      "url": "https://www.kappasushi.jp/shop/0538",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 秩父店",
+      "url": "https://www.kappasushi.jp/shop/0539",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 十和田店",
+      "url": "https://www.kappasushi.jp/shop/0540",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 可児店",
+      "url": "https://www.kappasushi.jp/shop/0542",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 北上尾店",
+      "url": "https://www.kappasushi.jp/shop/0543",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 福岡長丘店",
+      "url": "https://www.kappasushi.jp/shop/0544",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 葛飾立石店",
+      "url": "https://www.kappasushi.jp/shop/0545",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 倉敷店",
+      "url": "https://www.kappasushi.jp/shop/0548",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 秦野店",
+      "url": "https://www.kappasushi.jp/shop/0549",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 柏崎店",
+      "url": "https://www.kappasushi.jp/shop/0551",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 新下関店",
+      "url": "https://www.kappasushi.jp/shop/0552",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 塩尻店",
+      "url": "https://www.kappasushi.jp/shop/0553",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 大和下和田店",
+      "url": "https://www.kappasushi.jp/shop/0555",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 白河店",
+      "url": "https://www.kappasushi.jp/shop/0556",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 広島矢賀店",
+      "url": "https://www.kappasushi.jp/shop/0558",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 下松店",
+      "url": "https://www.kappasushi.jp/shop/0559",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 大町店",
+      "url": "https://www.kappasushi.jp/shop/0561",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 大野城店",
+      "url": "https://www.kappasushi.jp/shop/0563",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 広島佐伯店",
+      "url": "https://www.kappasushi.jp/shop/0564",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 村上店",
+      "url": "https://www.kappasushi.jp/shop/0565",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 川口柳崎店",
+      "url": "https://www.kappasushi.jp/shop/0571",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 山口店",
+      "url": "https://www.kappasushi.jp/shop/0572",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 鶴岡店",
+      "url": "https://www.kappasushi.jp/shop/0574",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 東淀川店",
+      "url": "https://www.kappasushi.jp/shop/0576",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 防府店",
+      "url": "https://www.kappasushi.jp/shop/0579",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 中山寺店",
+      "url": "https://www.kappasushi.jp/shop/0581",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 奈良柏木店",
+      "url": "https://www.kappasushi.jp/shop/0582",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 青森西バイパス店",
+      "url": "https://www.kappasushi.jp/shop/0583",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 鶴見諸口店",
+      "url": "https://www.kappasushi.jp/shop/0584",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 横須賀三春店",
+      "url": "https://www.kappasushi.jp/shop/0585",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 三木店",
+      "url": "https://www.kappasushi.jp/shop/0586",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 境川店",
+      "url": "https://www.kappasushi.jp/shop/0587",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 西宮前浜店",
+      "url": "https://www.kappasushi.jp/shop/0588",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 【休業中】八代店",
+      "url": "https://www.kappasushi.jp/shop/0589",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 駒ヶ根店",
+      "url": "https://www.kappasushi.jp/shop/0590",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 堺美原店",
+      "url": "https://www.kappasushi.jp/shop/0591",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 【休業中】クロス２１宇土店",
+      "url": "https://www.kappasushi.jp/shop/0593",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 魚沼小出店",
+      "url": "https://www.kappasushi.jp/shop/0594",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 浜松三方原店",
+      "url": "https://www.kappasushi.jp/shop/0595",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 奈良二名店",
+      "url": "https://www.kappasushi.jp/shop/0596",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 アクロスプラザ若葉台店",
+      "url": "https://www.kappasushi.jp/shop/0597",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 三浦店",
+      "url": "https://www.kappasushi.jp/shop/0598",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 ゆめモール柳川店",
+      "url": "https://www.kappasushi.jp/shop/0599",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 アトレ川崎店",
+      "url": "https://www.kappasushi.jp/shop/0600",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 奈良桜井店",
+      "url": "https://www.kappasushi.jp/shop/0601",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 東松山店",
+      "url": "https://www.kappasushi.jp/shop/0602",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 津藤方店",
+      "url": "https://www.kappasushi.jp/shop/0603",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 豊田毘森公園店",
+      "url": "https://www.kappasushi.jp/shop/0604",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 宇部店",
+      "url": "https://www.kappasushi.jp/shop/0605",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 新小岩ルミエール店",
+      "url": "https://www.kappasushi.jp/shop/0606",
+      "facilities": []
+    },
+    {
+      "name": "かっぱ寿司 淡路店",
+      "url": "https://www.kappasushi.jp/shop/0607",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 逗子店",
+      "url": "https://www.kappasushi.jp/shop/0608",
+      "facilities": [
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 広島呉店",
+      "url": "https://www.kappasushi.jp/shop/0609",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 越谷レイクタウン店",
+      "url": "https://www.kappasushi.jp/shop/0610",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 六日町店",
+      "url": "https://www.kappasushi.jp/shop/0611",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 洲本店",
+      "url": "https://www.kappasushi.jp/shop/0612",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 豊中上新田店",
+      "url": "https://www.kappasushi.jp/shop/0614",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 一関店",
+      "url": "https://www.kappasushi.jp/shop/0615",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 安中店",
+      "url": "https://www.kappasushi.jp/shop/0616",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 イオンモール下妻店",
+      "url": "https://www.kappasushi.jp/shop/0617",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 イオンモール与野店",
+      "url": "https://www.kappasushi.jp/shop/0618",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 上大岡ミオカ店",
+      "url": "https://www.kappasushi.jp/shop/0619",
+      "facilities": []
+    },
+    {
+      "name": "かっぱ寿司 モレラ岐阜店",
+      "url": "https://www.kappasushi.jp/shop/0620",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 横浜西口エキニア店",
+      "url": "https://www.kappasushi.jp/shop/0621",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 道頓堀戎橋店",
+      "url": "https://www.kappasushi.jp/shop/0622",
+      "facilities": []
+    },
+    {
+      "name": "かっぱ寿司 千葉駅前店",
+      "url": "https://www.kappasushi.jp/shop/0623",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 南池袋店",
+      "url": "https://www.kappasushi.jp/shop/0624",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 吉祥寺駅北口コスモビル店",
+      "url": "https://www.kappasushi.jp/shop/0625",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 アトレ亀戸店",
+      "url": "https://www.kappasushi.jp/shop/0626",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 上越土橋店",
+      "url": "https://www.kappasushi.jp/shop/0627",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 宮古店",
+      "url": "https://www.kappasushi.jp/shop/0628",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 アークスクエア御経塚店",
+      "url": "https://www.kappasushi.jp/shop/0629",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 秋葉原万世橋店",
+      "url": "https://www.kappasushi.jp/shop/0630",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 そよら成田ニュータウン店",
+      "url": "https://www.kappasushi.jp/shop/0631",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 富山黒瀬店",
+      "url": "https://www.kappasushi.jp/shop/0632",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 福井大和田店",
+      "url": "https://www.kappasushi.jp/shop/0633",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 小松店",
+      "url": "https://www.kappasushi.jp/shop/0634",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 イオン相模原店",
+      "url": "https://www.kappasushi.jp/shop/0635",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 久屋大通店",
+      "url": "https://www.kappasushi.jp/shop/0636",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 名古屋みなと店",
+      "url": "https://www.kappasushi.jp/shop/0637",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "かっぱ寿司 アイタウン射水店",
+      "url": "https://www.kappasushi.jp/shop/0638",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    }
+  ]
+}

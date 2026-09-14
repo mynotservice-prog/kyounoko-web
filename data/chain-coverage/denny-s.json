@@ -1,0 +1,2631 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "denny-s",
+  "name": "デニーズ",
+  "sourceUrl": "https://shop.dennys.jp/",
+  "method": "公式店舗検索の店舗API（/api/point/）で全店舗を取得し、各店舗の設備項目（絞り込み検索と同じ項目）を集計",
+  "total": 312,
+  "note": "各項目は公式絞り込み件数と一致を確認済み（入口段差なしまたはエレベーターあり=66、オムツ替えシート=298、パーティールームまたは個室あり=26、だれでもトイレ=74、駐車場あり=266）。「入口段差なしまたはエレベーターあり」はエレベーターのみの店舗も含む表記。「パーティールームまたは個室あり」も同様に複合表記",
+  "facilities": {
+    "stepFree": {
+      "count": 66,
+      "label": "入口段差なしまたはエレベーターあり"
+    },
+    "diaperTable": {
+      "count": 298,
+      "label": "オムツ替えシート"
+    },
+    "privateRoom": {
+      "count": 26,
+      "label": "パーティールームまたは個室あり"
+    },
+    "multiToilet": {
+      "count": 74,
+      "label": "だれでもトイレ"
+    },
+    "parking": {
+      "count": 266,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "デニーズ 赤坂駅前店",
+      "url": "https://shop.dennys.jp/map/22017/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "デニーズ 新宿西口店",
+      "url": "https://shop.dennys.jp/map/22016/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "デニーズ 町田北口店",
+      "url": "https://shop.dennys.jp/map/22015/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "デニーズ 高井戸店",
+      "url": "https://shop.dennys.jp/map/297/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 東習志野店",
+      "url": "https://shop.dennys.jp/map/283/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 奥戸店",
+      "url": "https://shop.dennys.jp/map/282/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 鎌ヶ谷初富店",
+      "url": "https://shop.dennys.jp/map/281/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 川崎菅生店",
+      "url": "https://shop.dennys.jp/map/271/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 衣笠店",
+      "url": "https://shop.dennys.jp/map/2697/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 辻堂南口店",
+      "url": "https://shop.dennys.jp/map/2694/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 大須店",
+      "url": "https://shop.dennys.jp/map/2693/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 浄心店",
+      "url": "https://shop.dennys.jp/map/2689/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 立川店 ※9月9日(水)は14:30から17:00の間閉店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/2684/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 江東枝川店",
+      "url": "https://shop.dennys.jp/map/2681/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 東岡崎店 ※9月10日(木)は8:30開店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/2679/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 大泉店",
+      "url": "https://shop.dennys.jp/map/2677/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 西八王子駅前店",
+      "url": "https://shop.dennys.jp/map/2674/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 大井松田店 ※9月18日(金)は8:00から10:00の間閉店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/2672/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 小田井店",
+      "url": "https://shop.dennys.jp/map/2670/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 新宿中央公園店",
+      "url": "https://shop.dennys.jp/map/2669/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 上野谷中店 ＊当店では、モーニングメニューを販売しておりません。",
+      "url": "https://shop.dennys.jp/map/2665/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 浜松野口町店 ※9月11日(金)は8:30開店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/2662/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 川口元郷店 ※9月17日(木)は14:30から16:30の間閉店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/2661/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 越谷東大沢店",
+      "url": "https://shop.dennys.jp/map/2660/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 平塚中里店 ※9月17日(木)は15:00から17:00の間閉店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/2655/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 西船橋店",
+      "url": "https://shop.dennys.jp/map/2649/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 竜ヶ崎藤が丘店 ※9月10日(木)は8:30から10:30の間閉店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/2648/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 津本町店",
+      "url": "https://shop.dennys.jp/map/2646/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 南加瀬店",
+      "url": "https://shop.dennys.jp/map/2639/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 大宮宮原店",
+      "url": "https://shop.dennys.jp/map/2638/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 西葛西店",
+      "url": "https://shop.dennys.jp/map/2637/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 中百舌鳥店",
+      "url": "https://shop.dennys.jp/map/2636/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 町田南口店",
+      "url": "https://shop.dennys.jp/map/2635/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "デニーズ 藤枝店",
+      "url": "https://shop.dennys.jp/map/2634/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 日立成沢店",
+      "url": "https://shop.dennys.jp/map/2633/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 座間店",
+      "url": "https://shop.dennys.jp/map/2631/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 大府店",
+      "url": "https://shop.dennys.jp/map/2630/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 群馬富岡店",
+      "url": "https://shop.dennys.jp/map/2629/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 三島玉川店",
+      "url": "https://shop.dennys.jp/map/2626/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 天王寺店",
+      "url": "https://shop.dennys.jp/map/2625/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 八王子みなみ野店",
+      "url": "https://shop.dennys.jp/map/2624/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 南砂店",
+      "url": "https://shop.dennys.jp/map/2623/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 郡山東口店",
+      "url": "https://shop.dennys.jp/map/2622/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 千葉旭店",
+      "url": "https://shop.dennys.jp/map/2620/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 町屋駅前店",
+      "url": "https://shop.dennys.jp/map/2618/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 浜松葵東店 ※9月28日(月)は15:30から17:30の間閉店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/2617/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 上田店",
+      "url": "https://shop.dennys.jp/map/2616/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 船橋二和店",
+      "url": "https://shop.dennys.jp/map/2615/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 湘南台店",
+      "url": "https://shop.dennys.jp/map/2613/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 市原国分寺台店",
+      "url": "https://shop.dennys.jp/map/2612/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 津島店",
+      "url": "https://shop.dennys.jp/map/2609/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 高田馬場店",
+      "url": "https://shop.dennys.jp/map/2606/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 掛川店",
+      "url": "https://shop.dennys.jp/map/2605/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 湯河原店",
+      "url": "https://shop.dennys.jp/map/2604/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 厚木店",
+      "url": "https://shop.dennys.jp/map/2602/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 多治見店",
+      "url": "https://shop.dennys.jp/map/2600/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 瀬戸共栄通店",
+      "url": "https://shop.dennys.jp/map/2599/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 長野更埴店",
+      "url": "https://shop.dennys.jp/map/2597/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 豊明店",
+      "url": "https://shop.dennys.jp/map/2594/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 群馬大間々店",
+      "url": "https://shop.dennys.jp/map/2593/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 岩槻インター店",
+      "url": "https://shop.dennys.jp/map/259/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 東越谷店",
+      "url": "https://shop.dennys.jp/map/2589/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 前橋東善町店",
+      "url": "https://shop.dennys.jp/map/2587/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 泉大津店",
+      "url": "https://shop.dennys.jp/map/2580/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ コクーンシティ店",
+      "url": "https://shop.dennys.jp/map/2579/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 大田原店",
+      "url": "https://shop.dennys.jp/map/2576/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 佐久平店",
+      "url": "https://shop.dennys.jp/map/2575/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 柏増尾台店",
+      "url": "https://shop.dennys.jp/map/2574/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 桑名店",
+      "url": "https://shop.dennys.jp/map/2572/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 犬山店",
+      "url": "https://shop.dennys.jp/map/2570/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 鈴鹿店",
+      "url": "https://shop.dennys.jp/map/2569/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 長野東和田店",
+      "url": "https://shop.dennys.jp/map/2568/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 長野県庁前店",
+      "url": "https://shop.dennys.jp/map/2566/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ いわき平店",
+      "url": "https://shop.dennys.jp/map/2565/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 安城店",
+      "url": "https://shop.dennys.jp/map/2564/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 浜松菅原町店",
+      "url": "https://shop.dennys.jp/map/2563/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 金沢富岡店",
+      "url": "https://shop.dennys.jp/map/2561/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 横浜都筑店",
+      "url": "https://shop.dennys.jp/map/2560/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 南足柄店 ※設備工事のため9月2日(水)6:00から9月15日(火)まで閉店とさせていただきます。9月16日(水)6:00に開店いたします。",
+      "url": "https://shop.dennys.jp/map/2556/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 二本松店",
+      "url": "https://shop.dennys.jp/map/2555/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 阿見店",
+      "url": "https://shop.dennys.jp/map/2554/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 長野若里店 ※設備工事のため9月1日(火)20:00から9月9日(水)11:00の間閉店とさていただきます。",
+      "url": "https://shop.dennys.jp/map/2552/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 市原辰巳台店",
+      "url": "https://shop.dennys.jp/map/2551/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 世田谷公園店",
+      "url": "https://shop.dennys.jp/map/2550/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 甲府昭和通り店 ※9月17日(木)は9:00開店、9月24日(木)は8:00から10:30の間閉店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/2549/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 郡山富久山店",
+      "url": "https://shop.dennys.jp/map/2547/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ いわき湯本南店",
+      "url": "https://shop.dennys.jp/map/2546/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 猪苗代インター店",
+      "url": "https://shop.dennys.jp/map/2543/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 会津花春店 ※設備工事のため、9月10日(木)21:00から9月18日(金)9:00の間閉店とさせていだきます。",
+      "url": "https://shop.dennys.jp/map/2540/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 福島西口店",
+      "url": "https://shop.dennys.jp/map/2538/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 南福島店",
+      "url": "https://shop.dennys.jp/map/2535/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 白河昭和町店",
+      "url": "https://shop.dennys.jp/map/2533/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 船堀店",
+      "url": "https://shop.dennys.jp/map/2529/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 甲府東店",
+      "url": "https://shop.dennys.jp/map/2522/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 塩尻店",
+      "url": "https://shop.dennys.jp/map/2521/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 笠寺店",
+      "url": "https://shop.dennys.jp/map/2520/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 長者町店",
+      "url": "https://shop.dennys.jp/map/2516/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 横浜日野店",
+      "url": "https://shop.dennys.jp/map/2515/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 初石店 ※9月25日(金)は14:30から16:30の間閉店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/2514/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 北池袋店",
+      "url": "https://shop.dennys.jp/map/2513/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 三郷店",
+      "url": "https://shop.dennys.jp/map/2512/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 小田原荻窪店",
+      "url": "https://shop.dennys.jp/map/2505/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 本一色店",
+      "url": "https://shop.dennys.jp/map/250/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 四街道店",
+      "url": "https://shop.dennys.jp/map/2498/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 清瀬店",
+      "url": "https://shop.dennys.jp/map/2493/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 守山店",
+      "url": "https://shop.dennys.jp/map/2489/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 秋川店",
+      "url": "https://shop.dennys.jp/map/2488/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 金沢八景店",
+      "url": "https://shop.dennys.jp/map/2483/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 墨田堤通り店",
+      "url": "https://shop.dennys.jp/map/2477/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 南平台店",
+      "url": "https://shop.dennys.jp/map/2475/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 百合ヶ丘店",
+      "url": "https://shop.dennys.jp/map/2465/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 半田店",
+      "url": "https://shop.dennys.jp/map/2461/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 東川口店 ※9月28日(月)は15:30から17:30の間閉店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/2459/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 鴨宮店",
+      "url": "https://shop.dennys.jp/map/2458/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 南柏駅前店",
+      "url": "https://shop.dennys.jp/map/2445/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 我孫子つくし野店",
+      "url": "https://shop.dennys.jp/map/2444/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 柏東台店 ※9月25日(金)は8:00から10:00の間閉店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/2438/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 平塚見附店",
+      "url": "https://shop.dennys.jp/map/2436/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 港北ニュータウン店",
+      "url": "https://shop.dennys.jp/map/2429/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 吹田寿町店",
+      "url": "https://shop.dennys.jp/map/2423/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 横浜西谷店",
+      "url": "https://shop.dennys.jp/map/2421/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 岐阜長良店",
+      "url": "https://shop.dennys.jp/map/2417/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 南八幡店",
+      "url": "https://shop.dennys.jp/map/2414/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 清澄店",
+      "url": "https://shop.dennys.jp/map/2413/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 小平小川町店",
+      "url": "https://shop.dennys.jp/map/2411/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 野方店",
+      "url": "https://shop.dennys.jp/map/2408/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 六会店",
+      "url": "https://shop.dennys.jp/map/2404/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 小金井本町店",
+      "url": "https://shop.dennys.jp/map/2401/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 成城店",
+      "url": "https://shop.dennys.jp/map/2398/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 小金井南店",
+      "url": "https://shop.dennys.jp/map/2394/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 小机店",
+      "url": "https://shop.dennys.jp/map/239/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 池上通り店",
+      "url": "https://shop.dennys.jp/map/2389/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 猪高店",
+      "url": "https://shop.dennys.jp/map/2384/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 横浜樽町店",
+      "url": "https://shop.dennys.jp/map/2382/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 春日井バイパス店",
+      "url": "https://shop.dennys.jp/map/2379/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 大網白里店",
+      "url": "https://shop.dennys.jp/map/2378/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 千歳船橋店 ※9月29日(火)は15:00から17:30の間閉店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/2376/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 豊島店",
+      "url": "https://shop.dennys.jp/map/2372/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 藤沢北口店 ※9月24日(木)は14:30から17:00の間閉店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/2371/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 姉ヶ崎店",
+      "url": "https://shop.dennys.jp/map/2352/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 千葉みつわ台店",
+      "url": "https://shop.dennys.jp/map/2351/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 秦野渋沢店",
+      "url": "https://shop.dennys.jp/map/2345/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 舟倉町店",
+      "url": "https://shop.dennys.jp/map/2343/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 谷在家店",
+      "url": "https://shop.dennys.jp/map/2340/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 相模原中央店",
+      "url": "https://shop.dennys.jp/map/2337/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 加須店",
+      "url": "https://shop.dennys.jp/map/2325/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 二宮店 ※9月16日(水)は10:30開店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/2324/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 馬橋店",
+      "url": "https://shop.dennys.jp/map/2322/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 墨田立花店",
+      "url": "https://shop.dennys.jp/map/2321/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 袖ヶ浦店",
+      "url": "https://shop.dennys.jp/map/2320/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 千葉ニュータウン店",
+      "url": "https://shop.dennys.jp/map/2318/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 佐原店 ※9月10日(木)は15:30から17:30の間閉店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/2317/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 東浅草店",
+      "url": "https://shop.dennys.jp/map/2316/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 深谷店",
+      "url": "https://shop.dennys.jp/map/2309/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 今池店",
+      "url": "https://shop.dennys.jp/map/2304/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 祐天寺店",
+      "url": "https://shop.dennys.jp/map/2297/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 茅野店",
+      "url": "https://shop.dennys.jp/map/2293/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 下諏訪店",
+      "url": "https://shop.dennys.jp/map/2290/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 東青梅店",
+      "url": "https://shop.dennys.jp/map/2289/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 南行徳店",
+      "url": "https://shop.dennys.jp/map/2284/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 黒川店",
+      "url": "https://shop.dennys.jp/map/2281/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 長居公園店",
+      "url": "https://shop.dennys.jp/map/2268/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 南阿佐谷店",
+      "url": "https://shop.dennys.jp/map/2248/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "デニーズ 南浦和店",
+      "url": "https://shop.dennys.jp/map/2246/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 米ヶ浜店",
+      "url": "https://shop.dennys.jp/map/2245/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 古河店",
+      "url": "https://shop.dennys.jp/map/2241/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 富士森公園店 ※9月14日(月)は15:30から17:30の間閉店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/2239/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 西新宿店",
+      "url": "https://shop.dennys.jp/map/2233/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 錦綾町店",
+      "url": "https://shop.dennys.jp/map/2229/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 昭和橋店 ※改装工事のため9月9日(水)18:00から10月9日(金)11:00の間閉店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/2227/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 川崎追分店",
+      "url": "https://shop.dennys.jp/map/2226/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 山中湖店 ＊11:00から18:00の間、テラス席でペットと一緒にお食事を楽しめます。",
+      "url": "https://shop.dennys.jp/map/2224/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 甲府北店",
+      "url": "https://shop.dennys.jp/map/2208/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 筑波学園都市店",
+      "url": "https://shop.dennys.jp/map/2203/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 大山東町店",
+      "url": "https://shop.dennys.jp/map/22014/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 馬喰町店",
+      "url": "https://shop.dennys.jp/map/22013/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "デニーズ 上用賀店",
+      "url": "https://shop.dennys.jp/map/22011/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 大船笠間店",
+      "url": "https://shop.dennys.jp/map/22010/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 南つくし野店 ※9月14日(月)は10:00開店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/22009/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 上北台店",
+      "url": "https://shop.dennys.jp/map/22006/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 川口新井宿店 ＊当店では、モーニングメニューを販売しておりません。",
+      "url": "https://shop.dennys.jp/map/22005/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 君津店 ＊当店では、モーニングメニューを販売しておりません。",
+      "url": "https://shop.dennys.jp/map/22003/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 名古屋鳴子店",
+      "url": "https://shop.dennys.jp/map/22002/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 久喜店 ＊当店では、モーニングメニューを販売しておりません。",
+      "url": "https://shop.dennys.jp/map/22000/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 豊橋大岩店",
+      "url": "https://shop.dennys.jp/map/21997/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 名古屋藤が丘店",
+      "url": "https://shop.dennys.jp/map/21994/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 錦糸町駅前店",
+      "url": "https://shop.dennys.jp/map/21993/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 上板橋店",
+      "url": "https://shop.dennys.jp/map/21992/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "デニーズ 大塚駅前店",
+      "url": "https://shop.dennys.jp/map/21990/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "デニーズ 前橋下小出店",
+      "url": "https://shop.dennys.jp/map/2199/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 静岡草薙店",
+      "url": "https://shop.dennys.jp/map/21989/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 平塚海岸店 ＊当店では、モーニングメニューを販売しておりません。",
+      "url": "https://shop.dennys.jp/map/21987/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ つくばみどりの店 ＊当店では、モーニングメニューを販売しておりません。",
+      "url": "https://shop.dennys.jp/map/21986/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 町田大蔵店",
+      "url": "https://shop.dennys.jp/map/21985/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 茅ヶ崎海岸店 ※9月16日(水)は10:00開店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/21982/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ エミオ田無店",
+      "url": "https://shop.dennys.jp/map/21980/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "デニーズ 武蔵小杉店",
+      "url": "https://shop.dennys.jp/map/21979/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 鶴見一国店",
+      "url": "https://shop.dennys.jp/map/21978/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 静岡二番町店",
+      "url": "https://shop.dennys.jp/map/21976/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 小茂根店",
+      "url": "https://shop.dennys.jp/map/21974/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 今宿西店",
+      "url": "https://shop.dennys.jp/map/21970/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 中村橋店",
+      "url": "https://shop.dennys.jp/map/21967/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 昭島店",
+      "url": "https://shop.dennys.jp/map/21965/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 池袋駅前店",
+      "url": "https://shop.dennys.jp/map/21964/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 溝ノ口駅前店",
+      "url": "https://shop.dennys.jp/map/21962/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 須賀川店",
+      "url": "https://shop.dennys.jp/map/21960/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 篠崎店",
+      "url": "https://shop.dennys.jp/map/21955/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 上福岡店 ※9月24日(木)は14:30から16:30の間閉店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/21954/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 池田店",
+      "url": "https://shop.dennys.jp/map/21952/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 大泉学園駅前店",
+      "url": "https://shop.dennys.jp/map/21951/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 高円寺駅前店 ※9月1日(火)から9月11日(金)まで設備工事のため閉店させていただきます。",
+      "url": "https://shop.dennys.jp/map/21950/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 竹の塚店",
+      "url": "https://shop.dennys.jp/map/2195/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 甲府中央店",
+      "url": "https://shop.dennys.jp/map/21949/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 足利芳町店 ＊11:00から20:00の間、テラス席でペットと一緒にお食事を楽しめます。",
+      "url": "https://shop.dennys.jp/map/21948/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 鶴ヶ島店 ＊11:00から20:00の間、テラス席でペットと一緒にお食事を楽しめます。",
+      "url": "https://shop.dennys.jp/map/21947/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 高島平店",
+      "url": "https://shop.dennys.jp/map/21946/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 二番町店 ※当店では、低アレルゲンメニューの販売を行っておりません。※当店では、ドリンクバーを実施しておりません。",
+      "url": "https://shop.dennys.jp/map/21942/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "デニーズ 前里町店",
+      "url": "https://shop.dennys.jp/map/21941/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 大井町駅前店",
+      "url": "https://shop.dennys.jp/map/21940/",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 池袋明治通り店",
+      "url": "https://shop.dennys.jp/map/21937/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 西川口店 ※9月14日(月)は14:30から16:30の間閉店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/21935/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 郡山西ﾉ内店",
+      "url": "https://shop.dennys.jp/map/21934/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 赤羽駅前店",
+      "url": "https://shop.dennys.jp/map/21932/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 立川南店",
+      "url": "https://shop.dennys.jp/map/21931/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 梅島店",
+      "url": "https://shop.dennys.jp/map/21930/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 千葉祐光店",
+      "url": "https://shop.dennys.jp/map/21929/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 片瀬山店",
+      "url": "https://shop.dennys.jp/map/21925/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 吉祥寺北町店",
+      "url": "https://shop.dennys.jp/map/21924/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 浜松町店",
+      "url": "https://shop.dennys.jp/map/21923/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 宇都宮陽南店",
+      "url": "https://shop.dennys.jp/map/21920/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 松原店",
+      "url": "https://shop.dennys.jp/map/2192/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 松戸日暮店",
+      "url": "https://shop.dennys.jp/map/21919/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 朝霞台店",
+      "url": "https://shop.dennys.jp/map/21918/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 千葉桜木町店",
+      "url": "https://shop.dennys.jp/map/21915/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 梶ヶ谷店",
+      "url": "https://shop.dennys.jp/map/21914/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 上池台店",
+      "url": "https://shop.dennys.jp/map/21911/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 海老名店",
+      "url": "https://shop.dennys.jp/map/21898/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 秋葉原中央口店",
+      "url": "https://shop.dennys.jp/map/21897/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 検見川店",
+      "url": "https://shop.dennys.jp/map/21886/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 津田沼駅前店",
+      "url": "https://shop.dennys.jp/map/21884/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 南千住駅前店",
+      "url": "https://shop.dennys.jp/map/21883/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 駒込駅前店",
+      "url": "https://shop.dennys.jp/map/21882/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 豊橋花田店",
+      "url": "https://shop.dennys.jp/map/21880/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 北千住駅前店",
+      "url": "https://shop.dennys.jp/map/21878/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 妙蓮寺店",
+      "url": "https://shop.dennys.jp/map/21877/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 小山駅南町店",
+      "url": "https://shop.dennys.jp/map/21874/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 大森北店",
+      "url": "https://shop.dennys.jp/map/21872/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 多摩貝取店",
+      "url": "https://shop.dennys.jp/map/21870/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 大森中店",
+      "url": "https://shop.dennys.jp/map/21867/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 横須賀平成町店",
+      "url": "https://shop.dennys.jp/map/21866/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 調布店 ＊11:00から20:00の間、テラス席でペットと一緒にお食事を楽しめます。",
+      "url": "https://shop.dennys.jp/map/21865/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 新宿山吹町店",
+      "url": "https://shop.dennys.jp/map/21864/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ ThinkPark店 ＊9:00から20:00の間、テラス席でペットと一緒にお食事を楽しめます。",
+      "url": "https://shop.dennys.jp/map/21863/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 下丸子店",
+      "url": "https://shop.dennys.jp/map/21861/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 中田町店",
+      "url": "https://shop.dennys.jp/map/2186/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 二十世紀ヶ丘店",
+      "url": "https://shop.dennys.jp/map/21855/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 新所沢店",
+      "url": "https://shop.dennys.jp/map/21852/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 東所沢店",
+      "url": "https://shop.dennys.jp/map/21848/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 西荻北店",
+      "url": "https://shop.dennys.jp/map/21846/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ おやまゆうえん店",
+      "url": "https://shop.dennys.jp/map/21845/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 浜松有玉店",
+      "url": "https://shop.dennys.jp/map/21844/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 多摩センター店",
+      "url": "https://shop.dennys.jp/map/21842/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 三島北店",
+      "url": "https://shop.dennys.jp/map/21840/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 羽村店",
+      "url": "https://shop.dennys.jp/map/2184/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 富士インター店",
+      "url": "https://shop.dennys.jp/map/21839/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 御殿場店",
+      "url": "https://shop.dennys.jp/map/21838/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 江ノ島店",
+      "url": "https://shop.dennys.jp/map/21836/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 名駅西口店",
+      "url": "https://shop.dennys.jp/map/21835/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 金山駅前店",
+      "url": "https://shop.dennys.jp/map/21834/",
+      "facilities": []
+    },
+    {
+      "name": "デニーズ あづみの店",
+      "url": "https://shop.dennys.jp/map/21830/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 高岳店",
+      "url": "https://shop.dennys.jp/map/2183/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 浦和駅前店",
+      "url": "https://shop.dennys.jp/map/21828/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 亀有駅前店",
+      "url": "https://shop.dennys.jp/map/21827/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 大和渋谷店",
+      "url": "https://shop.dennys.jp/map/21826/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 豪徳寺店",
+      "url": "https://shop.dennys.jp/map/21825/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 南岡崎店",
+      "url": "https://shop.dennys.jp/map/21820/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 綱島東店",
+      "url": "https://shop.dennys.jp/map/21816/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 西国分寺店",
+      "url": "https://shop.dennys.jp/map/21815/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 高崎大八木店",
+      "url": "https://shop.dennys.jp/map/21814/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 常滑店",
+      "url": "https://shop.dennys.jp/map/21813/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 川越東田町店",
+      "url": "https://shop.dennys.jp/map/21812/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 木更津北店",
+      "url": "https://shop.dennys.jp/map/21811/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 片倉町店",
+      "url": "https://shop.dennys.jp/map/2180/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 浅草雷門店",
+      "url": "https://shop.dennys.jp/map/21798/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 保谷柳沢店",
+      "url": "https://shop.dennys.jp/map/21797/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 八王子旭町店",
+      "url": "https://shop.dennys.jp/map/21796/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 渋谷公園通り店 ＊当店では、モーニングメニューを販売しておりません。",
+      "url": "https://shop.dennys.jp/map/21794/",
+      "facilities": []
+    },
+    {
+      "name": "デニーズ 成田店",
+      "url": "https://shop.dennys.jp/map/2179/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 名古屋東新町店 ＊当店では、モーニングメニューを販売しておりません。",
+      "url": "https://shop.dennys.jp/map/21786/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "デニーズ 東飯能店",
+      "url": "https://shop.dennys.jp/map/21785/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 岐阜加納店",
+      "url": "https://shop.dennys.jp/map/21784/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 三軒茶屋店 ※9月10日(木)は15:00から17:30の間閉店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/21783/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 国分寺駅前店",
+      "url": "https://shop.dennys.jp/map/21772/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 岐阜鏡島店",
+      "url": "https://shop.dennys.jp/map/21769/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 日進梅森店",
+      "url": "https://shop.dennys.jp/map/21767/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 南大沢店",
+      "url": "https://shop.dennys.jp/map/21765/",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 浅草国際通り店",
+      "url": "https://shop.dennys.jp/map/21763/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 市原五井店",
+      "url": "https://shop.dennys.jp/map/21761/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 綾瀬駅前店 ※9月15日(火)は11:00閉店とさせていただきます。",
+      "url": "https://shop.dennys.jp/map/21759/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 千石店",
+      "url": "https://shop.dennys.jp/map/21758/",
+      "facilities": []
+    },
+    {
+      "name": "デニーズ 西浦和店",
+      "url": "https://shop.dennys.jp/map/21757/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 蘇我店",
+      "url": "https://shop.dennys.jp/map/21756/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 朝霞駅前店",
+      "url": "https://shop.dennys.jp/map/21755/",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "デニーズ 八丁堀店",
+      "url": "https://shop.dennys.jp/map/21752/",
+      "facilities": []
+    },
+    {
+      "name": "デニーズ 北久里浜店",
+      "url": "https://shop.dennys.jp/map/2164/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 中村店",
+      "url": "https://shop.dennys.jp/map/2163/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 清水インター店",
+      "url": "https://shop.dennys.jp/map/2146/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 小田原酒匂店",
+      "url": "https://shop.dennys.jp/map/2143/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 天満通店",
+      "url": "https://shop.dennys.jp/map/2141/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 蓮田店",
+      "url": "https://shop.dennys.jp/map/2124/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 船橋馬込沢店",
+      "url": "https://shop.dennys.jp/map/2114/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "デニーズ 一宮朝日店",
+      "url": "https://shop.dennys.jp/map/2103/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    }
+  ]
+}

@@ -6,6 +6,26 @@ import { V2Img, V2SectionHead, useV2Ctx } from '@/components/v2/V2Base';
 import { V2Icon } from '@/components/v2/V2Icon';
 import { useFavorites } from '@/hooks/useFavorites';
 import { FavoriteButton } from '@/components/ui/FavoriteButton';
+import { SAVED_PLANS_KEY, type SavedPlan } from '@/components/today/SavePlanButton';
+
+/** 「今日の流れ」の保存（SavePlanButton が kk_saved_plans に積む）を読む。/today 以外の href は捨てる。 */
+function readSavedFlows(): SavedPlan[] {
+  try {
+    const list = JSON.parse(localStorage.getItem(SAVED_PLANS_KEY) || '[]');
+    if (!Array.isArray(list)) return [];
+    return list.filter(
+      (p): p is SavedPlan =>
+        !!p && typeof p.href === 'string' && p.href.startsWith('/today') && typeof p.label === 'string',
+    );
+  } catch {
+    return [];
+  }
+}
+
+function fmtSavedDate(ts: number): string {
+  const d = new Date(ts);
+  return Number.isNaN(d.getTime()) ? '' : `${d.getMonth() + 1}/${d.getDate()}に保存`;
+}
 
 type PlanLite = {
   id: string;
@@ -50,7 +70,20 @@ export function FavoritesClient({
 
   // SSR 中は空配列、クライアント側 hydrate 後に localStorage 反映
   const [mounted, setMounted] = React.useState(false);
-  React.useEffect(() => setMounted(true), []);
+  const [flows, setFlows] = React.useState<SavedPlan[]>([]);
+  React.useEffect(() => {
+    setFlows(readSavedFlows());
+    setMounted(true);
+  }, []);
+  const removeFlow = (href: string) => {
+    const next = flows.filter((f) => f.href !== href);
+    setFlows(next);
+    try {
+      localStorage.setItem(SAVED_PLANS_KEY, JSON.stringify(next));
+    } catch {
+      /* ignore */
+    }
+  };
 
   const savedSpotIds = Object.keys(savedV2);
   // slug が正。ただし2026-07-31以前は一覧カードが旧ID（日本語名）で保存していたため、
@@ -64,7 +97,11 @@ export function FavoritesClient({
   const articles = allArticles.filter((a) => favArticles.includes(a.slug));
 
   const isEmpty =
-    mounted && spots.length === 0 && plans.length === 0 && articles.length === 0;
+    mounted &&
+    flows.length === 0 &&
+    spots.length === 0 &&
+    plans.length === 0 &&
+    articles.length === 0;
 
   if (!mounted) {
     // SSR/hydrate 中はスケルトン
@@ -149,6 +186,49 @@ export function FavoritesClient({
 
   return (
     <>
+      {/* 今日の流れ（/today の「この流れを保存」。URL に条件が全部入っているので開けば同じ流れが出る） */}
+      {flows.length > 0 && (
+        <>
+          <V2SectionHead title={`保存した今日の流れ (${flows.length})`} more="" />
+          <div className="v2-vlist">
+            {flows.map((f) => (
+              <Link key={f.href} href={f.href} className="v2-art-row">
+                <div className="v2-art-body">
+                  <div
+                    style={{
+                      fontSize: 10.5,
+                      fontWeight: 800,
+                      color: 'var(--v2-orange-deep)',
+                      letterSpacing: '.02em',
+                    }}
+                  >
+                    今日の流れ
+                  </div>
+                  <div className="v2-art-title" style={{ marginTop: 2 }}>
+                    {f.label}
+                  </div>
+                  {f.sub && <div className="v2-art-sub">{f.sub}</div>}
+                  <div className="v2-art-sub">{fmtSavedDate(f.ts)}</div>
+                </div>
+                <button
+                  type="button"
+                  className="v2-fav-btn"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    removeFlow(f.href);
+                  }}
+                  aria-label="保存を解除"
+                  style={{ marginLeft: 'auto', flex: 'none' }}
+                >
+                  <V2Icon name="heart" size={18} color="var(--v2-orange)" fill />
+                </button>
+              </Link>
+            ))}
+          </div>
+        </>
+      )}
+
       {/* スポット */}
       {spots.length > 0 && (
         <>

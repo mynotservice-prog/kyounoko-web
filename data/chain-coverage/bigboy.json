@@ -1,0 +1,1351 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "bigboy",
+  "name": "ビッグボーイ",
+  "sourceUrl": "https://maps.bigboyjapan.co.jp/jp/index.html",
+  "method": "公式店舗検索の検索API（/api/search）で全店舗を列挙し、各店舗詳細ページの「サービス・設備」アイコンを集計",
+  "total": 139,
+  "note": "各項目は公式の絞り込み件数と一致を確認済み（スロープ／エレベーター=3、ベビーシート=134、お子様メニュー=139、多目的トイレ=70、駐車場=138）。詳細ページの表記は 駐車場→「駐車場あり」、ベビーシート→「ベビーシートあり」、多目的トイレ→「多目的トイレあり」、お子様メニュー→「お子様メニューあり」、スロープ／エレベーター→「スロープ／エレベーターあり」。同じ検索に載る別ブランド（ヴィクトリアステーション28件）は除外",
+  "facilities": {
+    "stepFree": {
+      "count": 3,
+      "label": "スロープ／エレベーター"
+    },
+    "diaperTable": {
+      "count": 134,
+      "label": "ベビーシート"
+    },
+    "kidsMenu": {
+      "count": 139,
+      "label": "お子様メニュー"
+    },
+    "multiToilet": {
+      "count": 70,
+      "label": "多目的トイレ"
+    },
+    "parking": {
+      "count": 138,
+      "label": "駐車場"
+    }
+  },
+  "stores": [
+    {
+      "name": "ビッグボーイ 弘前店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3328.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 八戸城下店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3362.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 青森大野店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3366.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 盛岡みたけ店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3367.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 北上有田町店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3371.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 一関店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3452.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 西多賀店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3365.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 仙台宮城野店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3449.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 多賀城町前店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3454.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 岩沼店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3458.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 古川店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3473.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 山形天童店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3380.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 山形城南町店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3479.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ いわき鹿島店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3364.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 会津若松店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3460.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 新白河店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3472.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 神栖店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3214.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ ひたちなか田彦店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3296.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 日立田尻店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3329.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 土浦木田余店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3343.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 阿見店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3357.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 西那須野店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3330.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 真岡店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3338.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 石橋店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3360.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 前橋本町店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3186.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 越谷大袋店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3176.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 久喜店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3183.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 東浦和店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3197.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 埼玉深谷店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3206.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 上里店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3211.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 入間藤沢店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3260.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 越谷七左店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3287.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 桶川下日出谷店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3333.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 東金店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3185.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 茂原店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3205.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 佐倉王子台店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3210.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 木更津朝日店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3259.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 船橋習志野店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3277.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 千葉道場北店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3301.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 千葉ニュータウン店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3302.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 成田ウイング店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3317.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 千葉畑町店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3326.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 白井冨士店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3335.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 館山店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3348.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 鎌ヶ谷道野辺店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3350.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 中山競馬場前店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3386.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ ライフガーデン新浦安店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3393.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 豊田店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3175.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 足立鹿浜店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3179.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ ダイニング早稲田店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3181.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 成増店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3184.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 練馬平和台店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3199.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 東大和店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3200.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 調布富士見町店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3202.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 大森駅前店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3289.html",
+      "facilities": [
+        "diaperTable",
+        "multiToilet",
+        "stepFree",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 二子玉川店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3293.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 町田小山ヶ丘店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3318.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 加平店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3372.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 練馬高野台店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3375.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "stepFree",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 練馬豊玉店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3384.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 昭島店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3385.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 葛飾白鳥店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3398.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 葛飾奥戸店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3401.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 宮前平店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3172.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 中山店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3174.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "stepFree",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 伊勢原店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3177.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 厚木及川店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3178.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 黒川店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3188.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 湘南台店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3198.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 釜利谷店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3208.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 横浜南本宿店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3292.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 横浜永田北店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3299.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 大和深見店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3336.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 綾瀬深谷店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3382.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 新発田店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3374.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 富山今泉店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3254.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 金沢北安江店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3273.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 金沢もりの里店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3313.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 甲府南店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3187.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 甲府竜王店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3189.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 南アルプス店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3201.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 甲府里吉店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3267.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 富士吉田店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3311.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 都留田野倉店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3354.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 佐久店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3190.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 松本女鳥羽店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3315.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 西尾張部店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3341.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 上田国分店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3344.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 岡谷店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3346.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 塩尻店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3355.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 岐阜穂積店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3244.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 各務原店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3303.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 御殿場店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3193.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 富士インター店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3261.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 掛川大池店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3309.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 一宮若竹店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3325.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 春日井店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3331.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 愛知江南店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3353.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ アクロスプラザ鈴鹿店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3314.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 滋賀草津店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3223.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 滋賀守山店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3246.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 甲賀水口店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3282.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 宇治六地蔵店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3217.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 京都八幡店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3220.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 宇多野店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3232.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 四条畷店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3218.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 大阪空港前店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3222.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 大阪狭山店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3224.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 八戸の里店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3226.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 園田店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3228.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 高石店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3229.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 岸の里店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3233.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 東香里店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3236.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 八尾店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3239.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 中百舌鳥店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3250.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 関目店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3294.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 堺大庭寺店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3306.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 尼崎名神店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3225.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ ポートアイランド店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3230.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 三田店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3241.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 東加古川店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3245.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 神戸平野店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3256.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 明石大久保店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3283.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 離宮公園店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3298.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 姫路岡田店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3323.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 宝塚鹿塩店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3378.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 奈良平城店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3242.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 天理店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3247.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 香芝五位堂店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3249.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 奈良広陵店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3253.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 米子富士見店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3281.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 鳥取安長店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3304.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 出雲今市店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3265.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 岡山絵図店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3268.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 新居浜前田店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3285.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 福岡須恵店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3251.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 戸畑一枝店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3252.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 太宰府店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3263.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビッグボーイ 福岡徳永店",
+      "url": "https://maps.bigboyjapan.co.jp/jp/detail/3272.html",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet",
+        "kidsMenu"
+      ]
+    }
+  ]
+}

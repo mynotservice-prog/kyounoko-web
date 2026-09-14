@@ -1,0 +1,285 @@
+/* ===========================================================
+   一覧ページ固有のリニューアルCSS（docs/renewal-2026-09.md §2 第2版 / §3-0）
+   対象: /articles ・ /category/[slug] ・ /tag/[slug]
+   共通トークン・部品は app/styles/kk.css（編集しない）。すべて .list-v3 配下にスコープ。
+
+   方針（社長フィードバック / §2-1・§3-0）:
+   - 地色は完全な白。記事・カテゴリ・タグの一覧はカード化しない。
+   - 区切りは「余白 / 1px 罫線 / 写真サイズ / 文字サイズ」で作る。
+   - 丸角は操作UI（ボタン・チップ・小さなステータス）と写真(6px)だけ。
+   - 見出し装飾（オレンジ斜線・左バー）は置かない。
+   - 絵文字は使わない。記号は KkIcon（線画・墨1色）へ。
+   - PC はスマホの引き伸ばしにしない（920px 以上で段組・余白・写真を変える）。
+   =========================================================== */
+
+.list-v3 {
+  background: transparent;
+  color: var(--kk-ink);
+  font-family: var(--kk-body);
+}
+
+/* ---------- パンくず ---------- */
+.list-v3 .lv3-crumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 12px 18px 0;
+  font-size: 11.5px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--kk-ink-mute);
+}
+.list-v3 .lv3-crumb a { color: inherit; text-decoration: none; }
+.list-v3 .lv3-crumb a:hover { color: var(--kk-orange-deep); }
+.list-v3 .lv3-crumb .sep { color: var(--kk-rule); }
+.list-v3 .lv3-crumb .cur { color: var(--kk-ink-soft); }
+.list-v3 .lv3-crumb svg { flex: none; color: var(--kk-rule); }
+
+/* ===========================================================
+   ページ見出し（カテゴリ小情報 → H1 → 導入文）
+   =========================================================== */
+.list-v3 .lv3-head { padding: 14px 18px 0; }
+.list-v3 .lv3-eyebrow {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  color: var(--kk-ink-mute);
+}
+.list-v3 .lv3-h1 {
+  margin: 0 0 14px;
+  font-family: var(--kk-display);
+  font-weight: 800;
+  font-size: var(--kk-h1);
+  line-height: 1.5;
+  letter-spacing: .015em;
+  color: var(--kk-ink);
+  text-wrap: balance;
+}
+.list-v3 .lv3-lead {
+  margin: 0;
+  font-size: var(--kk-body-size);
+  line-height: var(--kk-body-lh);
+  font-weight: 500;
+  color: var(--kk-ink);
+}
+.list-v3 .lv3-count {
+  margin: 12px 0 0;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--kk-ink-mute);
+}
+
+/* ---------- ヒーロー写真（カテゴリ）— 文字を重ねない ---------- */
+.list-v3 .lv3-hero { margin: 20px 18px 0; }
+.list-v3 .lv3-hero img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--kk-r-img);
+  background: #F2F2F2;
+}
+
+/* ===========================================================
+   セクション見出し（kk-sec-head を使う。装飾は付けない）
+   =========================================================== */
+.list-v3 .kk-sec-title {
+  margin: 0;
+  font-family: var(--kk-display);
+  font-weight: 700;
+  font-size: var(--kk-h2);
+  line-height: 1.5;
+  letter-spacing: .01em;
+  color: var(--kk-ink);
+}
+.list-v3 .kk-sec-title::before,
+.list-v3 .kk-sec-title::after { content: none !important; display: none !important; }
+.list-v3 .lv3-sec-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.list-v3 .lv3-sec-titles .lv3-eyebrow { margin-bottom: 0; }
+.list-v3 .lv3-hint,
+.list-v3 .lv3-more-static {
+  flex: none;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--kk-ink-mute);
+  white-space: nowrap;
+}
+.list-v3 a.kk-sec-more { color: var(--kk-ink-soft); }
+.list-v3 a.kk-sec-more:hover { color: var(--kk-orange-deep); }
+
+/* ===========================================================
+   行リスト（記事・プラン）— カードにしない。罫線と余白だけ。
+   =========================================================== */
+.list-v3 .lv3-row {
+  align-items: flex-start;
+  gap: 13px;
+  padding: 15px 0;
+}
+.list-v3 .lv3-row .kk-row-thumb {
+  width: 88px;
+  height: 66px;
+  background: #F2F2F2;
+}
+.list-v3 .kk-row-title {
+  font-size: 16.5px;
+  font-weight: 700;
+  line-height: 1.65;
+  color: var(--kk-ink);
+}
+/* タグページの見出しタグ（h3）は SEO 照合のため維持する。見た目だけ行タイトルに揃える。 */
+.list-v3 h3.kk-row-title {
+  margin: 0;
+  font-family: var(--kk-display);
+  letter-spacing: .01em;
+}
+.list-v3 .kk-row-sub {
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.75;
+  color: var(--kk-ink-soft);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.list-v3 .kk-row-num {
+  padding-top: 3px;
+  line-height: 1.2;
+}
+.list-v3 .kk-row-arrow { align-self: center; }
+.list-v3 .lv3-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 5px;
+}
+.list-v3 .lv3-tags .v2-tag {
+  font-size: 11.5px;
+  font-weight: 700;
+  border-radius: 4px;
+  background: var(--kk-paper-deep);
+  color: var(--kk-ink-soft);
+}
+
+/* セクション末尾の「すべて見る」導線（操作UIなので角丸のボタンでよい） */
+.list-v3 .lv3-sec-foot { margin-top: 16px; }
+.list-v3 .lv3-sec-foot .kk-btn,
+.list-v3 .lv3-sec-foot a.kk-btn { max-width: 100%; line-height: 1.5; text-align: left; }
+
+/* ---------- 広告枠（本文と十分に間隔を空ける） ---------- */
+.list-v3 .lv3-ad { margin-top: 34px; padding: 0 18px; }
+
+/* ===========================================================
+   カテゴリの導線バナー（商品カタログ）— 面を持たない1行の導線
+   =========================================================== */
+.list-v3 .lv3-banner {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 16px 0;
+  border-top: 1px solid var(--kk-rule-soft);
+  border-bottom: 1px solid var(--kk-rule-soft);
+  color: var(--kk-ink);
+}
+.list-v3 .lv3-banner-ico { flex: none; display: flex; color: var(--kk-orange); }
+.list-v3 .lv3-banner-txt { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.list-v3 .lv3-banner-title { font-size: 16px; font-weight: 700; line-height: 1.5; }
+.list-v3 .lv3-banner-sub { font-size: 13px; font-weight: 500; line-height: 1.7; color: var(--kk-ink-soft); }
+.list-v3 .lv3-banner-arrow { flex: none; display: flex; color: var(--kk-ink-mute); }
+.list-v3 .lv3-banner:hover .lv3-banner-title { color: var(--kk-orange-deep); }
+
+/* ---------- アフィリエイト（既存部品の面を落とす） ---------- */
+.list-v3 .lv3-items { display: flex; flex-direction: column; gap: 12px; }
+
+/* ===========================================================
+   FAQ — 罫線区切りの行。カードにしない。開閉は details のまま。
+   =========================================================== */
+.list-v3 .lv3-faq { border-top: 1px solid var(--kk-rule-soft); }
+.list-v3 .lv3-faq details { border-bottom: 1px solid var(--kk-rule-soft); }
+.list-v3 .lv3-faq summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 15px 0;
+  cursor: pointer;
+  list-style: none;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.7;
+  color: var(--kk-ink);
+}
+.list-v3 .lv3-faq summary::-webkit-details-marker { display: none; }
+.list-v3 .lv3-faq summary:hover { color: var(--kk-orange-deep); }
+.list-v3 .lv3-faq-mark {
+  flex: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.75;
+  color: var(--kk-orange);
+  font-variant-numeric: tabular-nums;
+}
+.list-v3 .lv3-faq-mark.a { color: var(--kk-ink-mute); }
+.list-v3 .lv3-faq-chev {
+  flex: none;
+  margin-left: auto;
+  display: flex;
+  color: var(--kk-ink-mute);
+  transition: transform .15s;
+}
+.list-v3 .lv3-faq details[open] .lv3-faq-chev { transform: rotate(180deg); }
+.list-v3 .lv3-faq-a {
+  display: flex;
+  gap: 10px;
+  padding: 0 0 18px;
+  font-size: var(--kk-body-size);
+  line-height: var(--kk-body-lh);
+  color: var(--kk-body-color);
+}
+
+/* ---------- 空状態 ---------- */
+.list-v3 .lv3-empty {
+  padding: 48px 18px;
+  text-align: center;
+  font-size: var(--kk-body-size);
+  line-height: var(--kk-body-lh);
+  color: var(--kk-ink-soft);
+}
+.list-v3 .lv3-empty p { margin: 0 0 20px; }
+
+/* ---------- 関連タグ ---------- */
+.list-v3 .lv3-tag-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.list-v3 .lv3-tag-chips .kk-chip { padding: 9px 15px; font-size: 14px; color: var(--kk-ink); }
+
+/* PWA の固定バナー（画面下）とフッターの重なり回避（トップと同じ） */
+.list-v3 .kk-footer { padding-bottom: 96px; }
+
+/* ===========================================================
+   デスクトップ（≥920px）— スマホの引き伸ばしにしない
+   =========================================================== */
+@media (min-width: 920px) {
+  .list-v3 .lv3-crumb { padding: 20px 4px 0; font-size: 12px; }
+  .list-v3 .lv3-head { padding: 18px 4px 0; }
+  .list-v3 .lv3-head .lv3-lead,
+  .list-v3 .lv3-head .lv3-h1 { max-width: 72ch; }
+  .list-v3 .lv3-hero { margin: 28px 4px 0; }
+  .list-v3 .lv3-hero img { aspect-ratio: 24 / 9; max-height: 340px; }
+  .list-v3 .lv3-ad { padding: 0 4px; margin-top: 48px; }
+
+  .list-v3 .lv3-row { padding: 17px 0; }
+  .list-v3 .lv3-row .kk-row-thumb { width: 108px; height: 74px; }
+  .list-v3 .kk-row-title { font-size: 17px; }
+  .list-v3 .kk-row-sub { font-size: 14px; }
+  .list-v3 .lv3-tags .v2-tag { font-size: 12px; }
+
+  .list-v3 .lv3-faq summary { font-size: 17px; padding: 18px 0; }
+  .list-v3 .lv3-tag-chips .kk-chip { padding: 10px 18px; font-size: 15px; }
+  .list-v3 .kk-footer { padding-bottom: 56px; }
+}

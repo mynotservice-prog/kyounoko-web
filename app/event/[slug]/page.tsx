@@ -1,9 +1,15 @@
+import '@/app/styles/events-v3.css';
 import type { Metadata } from 'next';
+import { KkIcon } from '@/components/kk/KkIcon';
+import { KkSectionTitle } from '@/components/kk/KkSectionTitle';
+import { KkInfoTable, type KkInfoRow } from '@/components/kk/KkInfoTable';
+import { KkLineCard } from '@/components/kk/KkLineCard';
+import { KkAddToHomeCard } from '@/components/kk/KkAddToHomeCard';
+import { KkFooter } from '@/components/kk/KkFooter';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
-import { V2Img, V2SectionHead, V2Tag } from '@/components/v2/V2Base';
-import { V2Icon } from '@/components/v2/V2Icon';
+import { V2Img } from '@/components/v2/V2Base';
 import {
   EVENTS,
   eventHeroImage,
@@ -49,6 +55,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [{ url: eventHeroImage(ev), width: 1200, height: 630 }],
     },
   };
+}
+
+/**
+ * 長い説明文を段落に割る（/spot/[slug] と同じ方式）。
+ * **文字は1文字も足さない・削らない**。句点の直後だけで区切り、2文ずつ1段落にまとめる。
+ */
+function toParagraphs(text: string, per = 2): string[] {
+  const sentences = text
+    .split(/(?<=。)/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+  if (sentences.length <= 1) return [text];
+  const out: string[] = [];
+  for (let i = 0; i < sentences.length; i += per) out.push(sentences.slice(i, i + per).join(''));
+  return out;
 }
 
 export default async function EventPage({ params }: Props) {
@@ -160,173 +181,134 @@ export default async function EventPage({ params }: Props) {
     ],
   };
 
+  // 基本情報（罫線で組んだ表 = KkInfoTable）。既存データにある項目だけを出す。
+  const infoRows: KkInfoRow[] = [
+    {
+      icon: 'pin',
+      label: '会場',
+      value: ev.city ? (
+        <>
+          {ev.venue}
+          <br />
+          {ev.city}
+        </>
+      ) : (
+        ev.venue
+      ),
+    },
+    ...(ev.ageLabel ? [{ icon: 'baby' as const, label: '対象年齢', value: ev.ageLabel }] : []),
+    ...(ev.price ? [{ icon: 'yen' as const, label: '料金', value: ev.price }] : []),
+  ];
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdEvent) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
 
       <V2Frame header="sub" active="events" backHref="/events">
-        {/* Hero */}
-        <div className="v2-article-hero" style={{ height: 220 }}>
-          <V2Img
-            src={eventHeroImage(ev)}
-            seed={ev.slug}
-            alt={ev.title}
-          />
-          <div className="v2-article-hero-grad"></div>
-          <span className="v2-article-hero-cat">イベント</span>
-          <h1 className="v2-fa-hero-title" style={{ margin: 0, fontSize: 'inherit', fontWeight: 'inherit' }}>{ev.title}</h1>
-        </div>
+        <div className="events-v3 ev3-detail">
 
-        <div className="v2-page-head" style={{ paddingTop: 16 }}>
+        {/* パンくず（JSON-LD の BreadcrumbList と同じ階層） */}
+        <nav className="ev3-crumb" aria-label="パンくず">
+          <Link href="/">ホーム</Link>
+          <KkIcon name="chevron-right" size={11} />
+          <Link href="/events">イベント</Link>
+          <KkIcon name="chevron-right" size={11} />
+          <span className="cur">{ev.title}</span>
+        </nav>
+
+        {/* 見出し＋会期・会場＋メイン写真。写真に文字を重ねない（PCでは横並び） */}
+        <div className="ev3-top">
+          <div className="ev3-head">
+            <span className="ev3-eyebrow">イベント</span>
+            <h1 className="ev3-h1">{ev.title}</h1>
+            <div className={'ev3-period' + (ended ? ' ended' : '')}>
+              <KkIcon name="calendar" size={15} sw={2} />
+              <span>{formatEventPeriod(ev)}{ended ? '（終了）' : ''}</span>
+            </div>
+            <div className="ev3-period ev3-venue">
+              <KkIcon name="pin" size={15} sw={2} />
+              <span>{ev.venue}</span>
+            </div>
+          </div>
+
+          <div className="ev3-hero">
+            <div className="ev3-hero-img">
+              <V2Img
+                src={eventHeroImage(ev)}
+                seed={ev.slug}
+                alt={ev.title}
+                priority
+              />
+            </div>
+          </div>
+
+          {/* 終了のお知らせ（小さなステータスなので枠を許す。文言は従来どおり） */}
           {ended && (
-            <div
-              style={{
-                background: 'var(--v2-ink-mute, #f3f3f3)',
-                border: '1px solid var(--v2-line)',
-                borderRadius: 'var(--v2-r-card)',
-                padding: '12px 14px',
-                marginBottom: 12,
-                fontSize: 13,
-                color: 'var(--v2-ink-sub)',
-                lineHeight: 1.6,
-              }}
-            >
-              <strong style={{ color: 'var(--v2-ink)' }}>このイベントは終了しました。</strong>
+            <div className="ev3-banner" role="status">
+              <strong>このイベントは終了しました。</strong>
               <br />
               来年も開催される場合があります。最新情報は
               {ev.officialUrl ? (
-                <a href={ev.officialUrl} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--v2-orange-deep)', fontWeight: 700 }}>公式サイト</a>
+                <a href={ev.officialUrl} target="_blank" rel="noopener noreferrer">公式サイト</a>
               ) : (
                 '公式サイト'
               )}
               でご確認ください。今ひらいている近くのイベントは{' '}
-              <Link href="/events" style={{ color: 'var(--v2-orange-deep)', fontWeight: 700 }}>イベント一覧</Link>
+              <Link href="/events">イベント一覧</Link>
               から探せます。
             </div>
           )}
-          <div
-            style={{
-              display: 'inline-block',
-              fontSize: 13,
-              fontWeight: 800,
-              color: ended ? 'var(--v2-ink-mute)' : 'var(--v2-orange-deep)',
-              background: ended ? 'transparent' : 'var(--v2-orange-soft)',
-              padding: '6px 12px',
-              borderRadius: 999,
-              marginBottom: 10,
-            }}
-          >
-            📅 {formatEventPeriod(ev)}{ended ? '（終了）' : ''}
+
+          {/* 導入文（既存の lede をそのまま。文を段落に割って読みやすくする） */}
+          <div className="ev3-body">
+            {toParagraphs(ev.lede).map((p, i) => (
+              <p key={i} className="ev3-lede">{p}</p>
+            ))}
           </div>
-          <p className="v2-page-lead" style={{ marginTop: 8 }}>
-            {ev.lede}
-          </p>
         </div>
 
-        {/* 基本情報 */}
-        <div className="v2-section">
-          <div
-            style={{
-              background: '#fff',
-              border: '1px solid var(--v2-line)',
-              borderRadius: 'var(--v2-r-card)',
-              padding: '16px 18px',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 12,
-            }}
-          >
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
-              <V2Icon name="pin" size={18} color="var(--v2-orange)" />
-              <div>
-                <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--v2-ink-mute)' }}>
-                  会場
-                </div>
-                <div style={{ fontSize: 14, fontWeight: 800 }}>{ev.venue}</div>
-                {ev.city && (
-                  <div style={{ fontSize: 12, color: 'var(--v2-ink-sub)' }}>
-                    {ev.city}
-                  </div>
-                )}
-              </div>
-            </div>
-            {ev.ageLabel && (
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
-                <V2Icon name="baby" size={18} color="var(--v2-c-event)" />
-                <div>
-                  <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--v2-ink-mute)' }}>
-                    対象年齢
-                  </div>
-                  <div style={{ fontSize: 14, fontWeight: 800 }}>{ev.ageLabel}</div>
-                </div>
-              </div>
-            )}
-            {ev.price && (
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
-                <V2Icon name="yen" size={18} color="var(--v2-c-free)" />
-                <div>
-                  <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--v2-ink-mute)' }}>
-                    料金
-                  </div>
-                  <div style={{ fontSize: 14, fontWeight: 800 }}>{ev.price}</div>
-                </div>
-              </div>
-            )}
+        {/* 基本情報（罫線で組んだデータテーブル）＋公式サイト */}
+        <div className="kk-sec ev3-sec">
+          <KkSectionTitle as="div" title="基本情報" />
+          <div className="ev3-measure">
+            <KkInfoTable rows={infoRows} />
             {ev.officialUrl && (
               <a
                 href={ev.officialUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: 8,
-                  marginTop: 4,
-                  padding: 12,
-                  border: '1.5px solid var(--v2-orange)',
-                  borderRadius: 12,
-                  fontSize: 13.5,
-                  fontWeight: 800,
-                  color: 'var(--v2-orange-deep)',
-                }}
+                className="kk-btn block ev3-official"
               >
-                <V2Icon name="link" size={15} color="var(--v2-orange)" />
+                <KkIcon name="link" size={16} />
                 公式サイトで詳細を見る
+                <span className="ev3-official-arrow">
+                  <KkIcon name="arrow-right" size={15} />
+                </span>
               </a>
             )}
           </div>
         </div>
 
-        {/* 編集部メモ */}
+        {/* 編集部メモ（塗り箱にしない。小さなラベル＋本文） */}
         {ev.note && (
-          <div className="v2-section" style={{ marginTop: 16 }}>
-            <div
-              style={{
-                background: 'var(--v2-cream)',
-                borderRadius: 'var(--v2-r-card)',
-                padding: '14px 16px',
-                display: 'flex',
-                gap: 10,
-              }}
-            >
-              <V2Icon name="sparkle" size={20} color="var(--v2-orange)" />
-              <div style={{ fontSize: 13, color: 'var(--v2-ink-soft)', lineHeight: 1.65 }}>
-                <strong style={{ color: 'var(--v2-ink)' }}>編集部のひとこと</strong>
-                <br />
-                {ev.note}
-              </div>
+          <div className="kk-sec ev3-sec">
+            <div className="ev3-note ev3-measure">
+              <span className="ev3-note-lab">
+                <KkIcon name="edit" size={14} />
+                編集部のひとこと
+              </span>
+              <p className="ev3-note-body">{ev.note}</p>
             </div>
           </div>
         )}
 
         {/* タグ */}
         {ev.tags && ev.tags.length > 0 && (
-          <div className="v2-section" style={{ marginTop: 12 }}>
-            <div className="v2-tag-row">
+          <div className="kk-sec ev3-sec">
+            <div className="kk-chips">
               {ev.tags.map((t) => (
-                <V2Tag key={t} label={t} tone="feat" />
+                <span key={t} className="kk-chip plain">{t}</span>
               ))}
             </div>
           </div>
@@ -339,46 +321,35 @@ export default async function EventPage({ params }: Props) {
 
         {/* 会場周辺の子連れスポット（一次データ） */}
         {nearbySpots.length > 0 && (
-          <>
-            <V2SectionHead
+          <div className="kk-sec ev3-sec">
+            <KkSectionTitle
+              as="div"
               title={`${nearbyAreaLabel}でついでに寄れる子連れスポット`}
               moreHref="/spots"
+              more="もっと見る"
             />
-            <p
-              style={{
-                fontSize: 12.5,
-                color: 'var(--v2-ink-sub)',
-                lineHeight: 1.7,
-                margin: '0 0 12px',
-                padding: '0 2px',
-              }}
-            >
+            <p className="ev3-lead-note">
               イベントの前後に立ち寄りやすい、編集部が設備・料金を確認した
               {nearbyAreaLabel}エリアの子連れスポットです。授乳室やおむつ替え台の有無もスポットページで確認できます。
             </p>
-            <div className="v2-hscroll">
+            <div className="ev3-nearby">
               {nearbySpots.map((x, i) => {
                 const v = spotToV2(x.spot, i);
                 return (
-                  <Link
-                    key={x.slug}
-                    href={`/spot/${x.slug}`}
-                    className="v2-card-mini"
-                    style={{ width: 168 }}
-                  >
-                    <div className="v2-imgwrap r" style={{ aspectRatio: '16/9' }}>
+                  <Link key={x.slug} href={`/spot/${x.slug}`} className="ev3-nb">
+                    <span className="ev3-nb-img">
                       <V2Img src={v.img} seed={x.slug} alt={x.spot.name} />
-                    </div>
-                    <div className="v2-card-mini-title">{x.spot.name}</div>
-                    <div className="v2-card-v-loc" style={{ margin: 0 }}>
-                      <V2Icon name="pin" size={12} color="var(--v2-orange)" />
+                    </span>
+                    <span className="ev3-nb-name">{x.spot.name}</span>
+                    <span className="ev3-nb-loc">
+                      <KkIcon name="pin" size={12} />
                       {x.spot.ward || x.spot.city}
-                    </div>
+                    </span>
                   </Link>
                 );
               })}
             </div>
-          </>
+          </div>
         )}
 
         {/* AdSense */}
@@ -388,31 +359,34 @@ export default async function EventPage({ params }: Props) {
 
         {/* 同エリアの他イベント */}
         {sameArea.length > 0 && (
-          <>
-            <V2SectionHead title="同じエリアの他のイベント" moreHref="/events" />
-            <div className="v2-vlist">
+          <div className="kk-sec ev3-sec">
+            <KkSectionTitle as="div" title="同じエリアの他のイベント" moreHref="/events" more="もっと見る" />
+            <div className="kk-rows">
               {sameArea.map((e) => (
-                <Link key={e.slug} href={`/event/${e.slug}`} className="v2-art-row">
-                  <div
-                    className="v2-imgwrap r"
-                    style={{ width: 76, minWidth: 76, height: 60 }}
-                  >
+                <Link key={e.slug} href={`/event/${e.slug}`} className="kk-row">
+                  <span className="kk-row-thumb">
                     <V2Img src={eventHeroImage(e)} seed={e.slug} alt={e.title} />
-                  </div>
-                  <div className="v2-art-body">
-                    <div className="v2-art-title">{e.title}</div>
-                    <div className="v2-art-sub">
+                  </span>
+                  <span className="kk-row-body">
+                    <span className="kk-row-title">{e.title}</span>
+                    <span className="kk-row-sub">
                       {formatEventPeriod(e)} ／ {e.venue}
-                    </div>
-                  </div>
-                  <V2Icon name="chevron-right" size={20} color="#cfcfcf" />
+                    </span>
+                  </span>
+                  <span className="kk-row-arrow">
+                    <KkIcon name="arrow-right" size={16} />
+                  </span>
                 </Link>
               ))}
             </div>
-          </>
+          </div>
         )}
 
-        <div style={{ height: 24 }}></div>
+        {/* 回遊・再訪モジュール（リニューアル2026-09） */}
+        <KkLineCard placement="events" />
+        <KkAddToHomeCard placement="events" />
+        <KkFooter />
+        </div>
       </V2Frame>
     </>
   );

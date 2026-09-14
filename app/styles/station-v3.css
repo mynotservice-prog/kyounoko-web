@@ -1,0 +1,336 @@
+/* 駅ページ（/station/[slug]）固有のリニューアルCSS。
+   docs/renewal-2026-09.md §2 / §3-0。共通部品は app/styles/kk.css。
+   すべて .station-v3（V2Frame 直下ラッパ）配下にスコープする。
+
+   方針:
+   - 地色は白。丸角は操作UI（ボタン・チップ・セクションナビ）だけ。
+   - セクションは余白と 1px の罫線で分ける。多色の枠つきカードは作らない。
+   - 設備・条件は「アイコン（墨）＋名称＋状態」。色を持つのは状態だけ。
+   - 見出しは kk のスケール（H1 30/34・H2 24/28・H3 21/23）、長文は 17px / 行間1.95。
+   - 見出しタグ・見出し文言・アンカーID（#section-*）は変更しない（スティッキーナビの依存先）。 */
+
+.station-v3 {
+  color: var(--kk-ink);
+  font-family: var(--kk-body);
+  padding-bottom: 8px;
+}
+
+/* 本文カラム（旧 .container-narrow の代わり） */
+.station-v3 .stv3-main { padding: 0 18px; }
+
+/* ---------- パンくず ---------- */
+.station-v3 .stv3-crumb {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 5px;
+  padding: 12px 18px 0;
+  font-size: 11.5px; font-weight: 700; color: var(--kk-ink-mute); line-height: 1.5;
+}
+.station-v3 .stv3-crumb a { color: var(--kk-ink-mute); text-decoration: none; }
+.station-v3 .stv3-crumb a:hover { color: var(--kk-orange-deep); }
+.station-v3 .stv3-crumb .sep { color: var(--kk-rule); }
+
+/* ---------- 見出しの共通スケール ---------- */
+.station-v3 .stv3-h1 {
+  margin: 9px 0 0;
+  font-family: var(--kk-display);
+  font-size: var(--kk-h1); font-weight: 800; line-height: 1.4;
+  color: var(--kk-ink);
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+.station-v3 .stv3-h1-sub {
+  display: block; margin-top: 10px;
+  font-size: 15px; font-weight: 500; line-height: 1.7; color: var(--kk-ink-soft);
+}
+.station-v3 .stv3-h2 {
+  margin: 0 0 12px;
+  font-family: var(--kk-display);
+  font-size: var(--kk-h2); font-weight: 700; line-height: 1.5; color: var(--kk-ink);
+  /* 「池袋駅」のような語の途中で折り返さない（｜の前後で割れるのを防ぐ） */
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+.station-v3 .stv3-h3 {
+  margin: 0 0 8px;
+  font-family: var(--kk-display);
+  font-size: var(--kk-h3); font-weight: 700; line-height: 1.5; color: var(--kk-ink);
+}
+.station-v3 .stv3-h3.sm { font-size: 18px; }
+.station-v3 .stv3-h4 {
+  margin: 0;
+  font-size: 17px; font-weight: 700; line-height: 1.5; color: var(--kk-ink);
+}
+.station-v3 .stv3-count {
+  margin-left: 8px;
+  font-size: 13px; font-weight: 700; color: var(--kk-ink-mute);
+  font-variant-numeric: tabular-nums;
+}
+.station-v3 .stv3-eyebrow {
+  display: block;
+  font-size: 11.5px; font-weight: 700; letter-spacing: .1em;
+  color: var(--kk-orange-deep);
+}
+.station-v3 .stv3-sechead { margin-bottom: 16px; }
+.station-v3 .stv3-sechead .stv3-h2 { margin: 6px 0 6px; }
+.station-v3 .stv3-sublead {
+  margin: 0;
+  font-size: 15px; line-height: 1.85; color: var(--kk-ink-soft);
+}
+.station-v3 .stv3-note {
+  margin: 0 0 10px;
+  font-size: 12.5px; line-height: 1.8; color: var(--kk-ink-mute);
+  display: flex; align-items: center; gap: 5px;
+}
+.station-v3 .stv3-src {
+  margin: 14px 0 0;
+  font-size: 11.5px; line-height: 1.7; color: var(--kk-ink-mute);
+}
+
+/* ---------- セクションの区切り（余白＋細い罫線） ---------- */
+.station-v3 .stv3-sec { margin: 40px 0 0; scroll-margin-top: 80px; }
+.station-v3 .stv3-sec.ruled { padding-top: 34px; border-top: 1px solid var(--kk-rule-soft); }
+.station-v3 .stv3-anchor { scroll-margin-top: 80px; }
+
+/* ---------- ファーストビュー ---------- */
+.station-v3 .stv3-head { padding-top: 14px; }
+.station-v3 .stv3-lead {
+  margin: 18px 0 0;
+  font-size: var(--kk-body-size); font-weight: 400;
+  line-height: var(--kk-body-lh); color: var(--kk-body-color);
+}
+.station-v3 .stv3-lead strong { font-weight: 700; color: var(--kk-ink); }
+.station-v3 .stv3-summary { margin-top: 20px; }
+.station-v3 .stv3-lines {
+  margin-top: 18px;
+  font-size: 13.5px; line-height: 1.8; color: var(--kk-ink-soft);
+}
+.station-v3 .stv3-lines strong { color: var(--kk-ink); }
+.station-v3 .stv3-cta { margin-top: 20px; text-align: left; }
+.station-v3 .stv3-cta svg { flex: none; }
+
+/* ---------- 30秒でわかる（ページ内ジャンプ） ---------- */
+.station-v3 .stv3-jump { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--kk-rule-soft); }
+.station-v3 .stv3-jump li { border-bottom: 1px solid var(--kk-rule-soft); }
+.station-v3 .stv3-jump a {
+  display: flex; align-items: center; gap: 12px;
+  padding: 13px 0;
+  color: var(--kk-ink); text-decoration: none;
+  font-size: 15px; line-height: 1.6;
+}
+.station-v3 .stv3-jump a strong { font-weight: 700; }
+.station-v3 .stv3-jump a > span { flex: 1; min-width: 0; }
+.station-v3 .stv3-jump a svg { flex: none; color: var(--kk-ink-mute); }
+.station-v3 .stv3-jump a:hover { color: var(--kk-orange-deep); }
+
+/* ---------- 箇条書き（使い方Tips・一次情報メモ・館をまたぐ注意） ---------- */
+.station-v3 .stv3-bullets { list-style: none; margin: 0; padding: 0; }
+.station-v3 .stv3-bullets li {
+  position: relative; padding: 0 0 0 18px; margin-bottom: 14px;
+  font-size: 15.5px; line-height: 1.9; color: var(--kk-body-color);
+}
+.station-v3 .stv3-bullets li:last-child { margin-bottom: 0; }
+.station-v3 .stv3-bullets li::before {
+  content: ''; position: absolute; left: 0; top: 11px;
+  width: 6px; height: 6px; border-radius: 50%; background: var(--kk-orange);
+}
+.station-v3 .stv3-bullets strong { color: var(--kk-ink); font-weight: 700; }
+
+/* ---------- 館の設備 ---------- */
+.station-v3 .stv3-hall { margin-top: 24px; }
+.station-v3 .stv3-hall .stv3-note { margin-bottom: 10px; }
+.station-v3 .stv3-hall-rules { margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--kk-rule-soft); }
+
+/* ---------- 年齢別おすすめ動線 ---------- */
+.station-v3 .stv3-ages { border-top: 1px solid var(--kk-rule); }
+.station-v3 .stv3-age { padding: 18px 0; border-bottom: 1px solid var(--kk-rule-soft); }
+.station-v3 .stv3-age-head { display: flex; align-items: flex-start; gap: 11px; }
+.station-v3 .stv3-age-head img { flex: none; }
+.station-v3 .stv3-age-lab {
+  font-family: var(--kk-display);
+  font-size: 17px; font-weight: 700; line-height: 1.5; color: var(--kk-ink);
+}
+.station-v3 .stv3-age-sub { margin-top: 3px; font-size: 12.5px; line-height: 1.6; color: var(--kk-ink-mute); }
+
+/* 店のピックアップ（番号はオレンジ・本文は墨） */
+.station-v3 .stv3-picks { list-style: none; margin: 12px 0 0; padding: 0; }
+.station-v3 .stv3-picks li {
+  display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;
+  padding: 7px 0;
+  font-size: 15px; line-height: 1.7; color: var(--kk-ink);
+}
+.station-v3 .stv3-picks li + li { border-top: 1px solid var(--kk-rule-soft); }
+.station-v3 .stv3-picks strong { font-weight: 700; }
+.station-v3 .stv3-picks-price {
+  font-size: 12px; color: var(--kk-ink-mute); font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- シーン別・条件別（アイコン＋名称＋件数） ---------- */
+.station-v3 .stv3-groups { border-top: 1px solid var(--kk-rule); }
+.station-v3 .stv3-group { padding: 18px 0; border-bottom: 1px solid var(--kk-rule-soft); scroll-margin-top: 80px; }
+.station-v3 .stv3-group-head { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+.station-v3 .stv3-group-head svg { flex: none; color: var(--kk-ink); }
+.station-v3 .stv3-group-lab { font-size: 16px; font-weight: 700; line-height: 1.5; color: var(--kk-ink); }
+.station-v3 .stv3-group-desc { margin: 6px 0 0; font-size: 12.5px; line-height: 1.75; color: var(--kk-ink-mute); }
+.station-v3 .stv3-group-list {
+  list-style: none; margin: 12px 0 0; padding: 0;
+  display: grid; gap: 2px 18px; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+}
+.station-v3 .stv3-group-list li { padding: 5px 0; font-size: 14.5px; line-height: 1.7; color: var(--kk-ink); }
+.station-v3 .stv3-group-list li strong { font-weight: 700; }
+.station-v3 .stv3-group-list .meta { margin-left: 7px; font-size: 12px; color: var(--kk-ink-mute); font-weight: 600; }
+.station-v3 .stv3-group-list .more { font-size: 12.5px; color: var(--kk-ink-mute); }
+
+/* ---------- 店（チェーン・個人店） ---------- */
+.station-v3 .stv3-shops { border-top: 1px solid var(--kk-rule); }
+.station-v3 .stv3-shop {
+  padding: 18px 0; border-bottom: 1px solid var(--kk-rule-soft);
+  background: transparent; border-radius: 0;
+}
+.station-v3 .stv3-shop-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  flex-wrap: wrap; gap: 6px 12px;
+}
+.station-v3 .stv3-shop-head .stv3-h3,
+.station-v3 .stv3-shop-head .stv3-h4 { margin: 0; }
+.station-v3 .stv3-shop-price {
+  flex: none; font-size: 12.5px; font-weight: 700; color: var(--kk-ink-mute);
+  font-variant-numeric: tabular-nums;
+}
+.station-v3 .stv3-shop-area { margin-top: 6px; font-size: 12px; color: var(--kk-ink-mute); }
+.station-v3 .stv3-shop-desc {
+  margin: 10px 0 12px;
+  font-size: var(--kk-body-size); font-weight: 400;
+  line-height: var(--kk-body-lh); color: var(--kk-body-color);
+}
+.station-v3 .stv3-shop .kk-chips { gap: 6px; }
+.station-v3 .stv3-shop .kk-pill { font-size: 12.5px; padding: 5px 11px; }
+.station-v3 .stv3-shop-note { font-size: 12px; color: var(--kk-ink-mute); line-height: 1.6; }
+.station-v3 .stv3-lead-note {
+  display: block; margin-top: 8px;
+  font-size: 12.5px; line-height: 1.75; color: var(--kk-ink-mute);
+}
+.station-v3 .stv3-faq-lead { margin-bottom: 16px; }
+.station-v3 .stv3-badge {
+  margin-left: 8px; vertical-align: middle;
+  font-size: 11.5px; font-weight: 700;
+}
+
+/* ---------- 行リスト（条件ページ・近隣スポット・他駅） ---------- */
+.station-v3 .stv3-rows { margin-top: 16px; border-top: 1px solid var(--kk-rule); }
+.station-v3 .stv3-row {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 15px 0; border-bottom: 1px solid var(--kk-rule-soft);
+  color: var(--kk-ink); text-decoration: none;
+}
+.station-v3 a.stv3-row:hover .stv3-row-title { color: var(--kk-orange-deep); }
+.station-v3 .stv3-row-body { flex: 1; min-width: 0; }
+.station-v3 .stv3-row-title { display: block; font-size: 16px; font-weight: 700; line-height: 1.6; transition: color .12s; }
+.station-v3 .stv3-row-sub { display: block; margin: 4px 0 0; font-size: 12.5px; line-height: 1.7; color: var(--kk-ink-mute); }
+.station-v3 .stv3-row-walk { flex: none; white-space: nowrap; }
+.station-v3 .stv3-row-text { margin: 7px 0 0; font-size: 14.5px; line-height: 1.85; color: var(--kk-body-color); }
+.station-v3 .stv3-row-tip {
+  display: flex; align-items: flex-start; gap: 6px;
+  margin: 7px 0 0; font-size: 13px; line-height: 1.75; color: var(--kk-ink-soft);
+}
+.station-v3 .stv3-row-tip svg { flex: none; margin-top: 3px; color: var(--kk-orange); }
+.station-v3 .stv3-row-meta {
+  flex: none; display: flex; align-items: center; gap: 8px;
+  font-size: 12.5px; font-weight: 700; color: var(--kk-ink-mute);
+  font-variant-numeric: tabular-nums;
+}
+.station-v3 .stv3-row-arrow { flex: none; color: var(--kk-ink-mute); display: flex; margin-top: 3px; }
+
+/* 他駅（2〜4列の細いリスト） */
+.station-v3 .stv3-stations {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0 20px; border-top: 1px solid var(--kk-rule);
+}
+.station-v3 .stv3-station {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 8px;
+  padding: 13px 0; border-bottom: 1px solid var(--kk-rule-soft);
+  color: var(--kk-ink); text-decoration: none;
+}
+.station-v3 .stv3-station:hover .stv3-station-name { color: var(--kk-orange-deep); }
+.station-v3 .stv3-station-name { font-size: 15px; font-weight: 700; line-height: 1.5; transition: color .12s; }
+.station-v3 .stv3-station-scale { flex: none; font-size: 11.5px; font-weight: 700; color: var(--kk-ink-mute); }
+
+/* ---------- FAQ（罫線の行・アコーディオンは維持） ---------- */
+.station-v3 .stv3-faqs { border-top: 1px solid var(--kk-rule); }
+.station-v3 .stv3-faq {
+  border-bottom: 1px solid var(--kk-rule-soft);
+  background: transparent; border-radius: 0;
+}
+.station-v3 .stv3-faq-q {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 15px 0; cursor: pointer; list-style: none;
+  font-size: 17px; font-weight: 700; line-height: 1.6; color: var(--kk-ink);
+}
+.station-v3 .stv3-faq-q::-webkit-details-marker { display: none; }
+.station-v3 .stv3-faq-q > span:first-child { flex: 1; min-width: 0; }
+.station-v3 .stv3-faq-chev { flex: none; margin-top: 4px; color: var(--kk-ink-mute); display: inline-flex; transition: transform .2s ease; }
+.station-v3 details[open] > .stv3-faq-q .stv3-faq-chev { transform: rotate(180deg); }
+.station-v3 .stv3-faq-a {
+  padding: 0 0 16px;
+  font-size: 16px; line-height: 1.9; color: var(--kk-body-color);
+}
+
+/* ---------- この情報について / 戻る導線 ---------- */
+.station-v3 .stv3-about {
+  margin-top: 34px; padding-top: 18px;
+  border-top: 1px solid var(--kk-rule-soft);
+  font-size: 13px; line-height: 1.9; color: var(--kk-ink-soft);
+}
+.station-v3 .stv3-about-lab { margin: 0; font-size: 13px; font-weight: 700; color: var(--kk-ink); }
+.station-v3 .stv3-about p + p { margin: 8px 0 0; }
+.station-v3 .stv3-back { margin-top: 36px; padding: 22px 0 0; border-top: 1px solid var(--kk-rule-soft); }
+.station-v3 .stv3-back p { margin: 0; font-size: 14.5px; color: var(--kk-ink-soft); }
+.station-v3 .stv3-back a { color: var(--kk-orange-deep); font-weight: 700; }
+
+/* ---------- 他コンポーネントが持ち込む v2 / 旧見出し装飾を出さない ---------- */
+.station-v3 .v2-bar-accent { display: none !important; }
+.station-v3 .v2-sec-head { padding: 0; margin: 34px 0 14px; }
+.station-v3 .v2-sec-title {
+  display: block;
+  font-family: var(--kk-display); font-weight: 700; font-size: var(--kk-h3);
+  line-height: 1.5; color: var(--kk-ink);
+}
+
+/* ===========================================================
+   PC（≥920px）— スマホの引き伸ばしにしない
+   =========================================================== */
+@media (min-width: 920px) {
+  .station-v3 { max-width: 1080px; margin: 0 auto; }
+  .station-v3 .stv3-crumb { padding: 20px 4px 0; }
+  .station-v3 .stv3-main { padding: 0 4px; }
+  .station-v3 .stv3-sec { margin-top: 56px; }
+  .station-v3 .stv3-sec.ruled { padding-top: 44px; }
+
+  /* 読み物と要約は行長を止める */
+  .station-v3 .stv3-lead,
+  .station-v3 .stv3-sublead,
+  .station-v3 .stv3-bullets,
+  .station-v3 .stv3-about,
+  .station-v3 .stv3-shop-desc { max-width: 68ch; }
+  .station-v3 .stv3-head { padding-top: 18px; }
+  .station-v3 .stv3-h1-sub { font-size: 17px; }
+  .station-v3 .stv3-faq-q { font-size: 18px; }
+  .station-v3 .stv3-faq-a { font-size: 16.5px; max-width: 76ch; }
+
+  /* 年齢別・シーン別・条件別は2列に（同じルールのまま密度だけ変える） */
+  .station-v3 .stv3-ages,
+  .station-v3 .stv3-groups {
+    display: grid; grid-template-columns: 1fr 1fr; column-gap: 44px;
+  }
+  .station-v3 .stv3-ages > *:nth-child(2),
+  .station-v3 .stv3-groups > *:nth-child(2) { border-top: 1px solid var(--kk-rule); }
+  .station-v3 .stv3-age, .station-v3 .stv3-group { padding: 20px 0; }
+  .station-v3 .stv3-group-list { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+
+  .station-v3 .stv3-shop { padding: 22px 0; }
+  .station-v3 .stv3-rows.two { display: grid; grid-template-columns: 1fr 1fr; column-gap: 44px; }
+  .station-v3 .stv3-rows.two > *:nth-child(2) { border-top: 1px solid var(--kk-rule); }
+  .station-v3 .stv3-stations { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0 32px; }
+}
+
+/* 狭い画面で2列グリッドが窮屈にならないように */
+@media (max-width: 400px) {
+  .station-v3 .stv3-group-list { grid-template-columns: 1fr; }
+}

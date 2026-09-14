@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
 import { getDataSummary } from '@/lib/data-aggregations';
+import { getCoverageGeneratedAt, getCoverageSummary } from '@/lib/chain-coverage';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 
 export default function DataIndexPage() {
   const summary = getDataSummary();
+  const coverage = { ...getCoverageSummary(), generatedAt: getCoverageGeneratedAt() };
 
   const datasets = [
     {
@@ -32,6 +34,14 @@ export default function DataIndexPage() {
       description:
         '23区を駅密度・ベビーカー◎率・個室率・キッズメニュー率・家族度総合スコアの9指標で横断比較。エリア選びの判断材料として、TOP5ランキング+ソート可能フル比較表+CSVダウンロード対応。',
       tags: ['Dataset', 'CSV', 'AIO参照可', '区別比較'],
+    },
+    {
+      slug: 'chain-facility-coverage',
+      title: `外食チェーン 子連れ設備カバー率調査${coverage.generatedAt.slice(0, 4)}`,
+      stats: `${coverage.chainCount}チェーン / ${coverage.storeCount.toLocaleString()}店を全数集計`,
+      description:
+        '「座敷は店舗による」を率に直した調査。各チェーンの公式店舗検索が公開する設備表示を全店舗ぶん数え、キッズチェア・座敷・おむつ替え台などの設置率をチェーン横断で比較。出典はセル単位で公式URL、年次更新。',
+      tags: ['Dataset', 'CSV', 'AIO参照可', '一次調査', '年次更新'],
     },
   ];
 

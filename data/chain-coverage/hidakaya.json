@@ -1,0 +1,2459 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "hidakaya",
+  "name": "日高屋",
+  "sourceUrl": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/list.html",
+  "method": "公式店舗検索の「店舗一覧から探す」で日高屋ブランドの全店舗を列挙し、各店舗詳細ページの「KEY WORD」ハッシュタグを集計",
+  "total": 446,
+  "note": "ブランド「日高屋」のみ（来来軒・焼鳥日高・台南等は別ブランドIDで対象外）。ハッシュタグは6種（お子様メニュー／喫煙ブース／QRコード決済／クレジット決済／電子マネー決済／駐車場あり）",
+  "facilities": {
+    "kidsMenu": {
+      "count": 57,
+      "label": "お子様メニュー"
+    },
+    "parking": {
+      "count": 57,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "日高屋 我孫子つくし野店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/589.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 アピタ戸塚店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/533.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 上尾ＰＡＰＡ店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/249.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 ビーンズ阿佐ヶ谷てくて店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/580.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 綾瀬リエッタ店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/261.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 上尾西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/023.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 朝霞東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/299.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 我孫子南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/343.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 赤羽東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/027.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 赤羽スズラン通店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/033.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 赤羽西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/402.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 秋葉原駅南店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/387.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 秋葉原駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/251.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 浅草橋店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/090.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 浅草雷門店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/105.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 青物横丁店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/465.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 昭島南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/407.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 秋津店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/104.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 赤坂一ツ木通店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/468.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 青砥店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/219.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 綾瀬西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/335.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 青葉台店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/293.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 足利八幡町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/650.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 足利助戸店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/637.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 イーサイト上尾店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/298.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 イーサイト籠原店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/503.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 市原五井店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/654.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 イーサイト高崎店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/609.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 イオンタウン稲毛長沼店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/663.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 板橋区役所前仲宿",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/614.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 ｲｵﾝﾀｳﾝふじみ野店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/569.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 伊勢崎宮子町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/668.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 入間市駅店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/480.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 岩槻インター店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/574.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 岩槻ワッツ店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/427.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 稲毛西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/198.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 市川南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/245.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 市川北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/430.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 飯田橋東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/500.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 稲荷町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/437.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 市ヶ谷八幡町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/168.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 板橋駅西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/493.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 池袋東口駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/256.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 池袋西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/094.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 池袋北口駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/314.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 稲田堤店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/358.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 石川町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/289.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 磯子駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/435.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 上野駅入谷口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/636.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 ｳｨﾝｸﾞｷｯﾁﾝ金沢八景店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/607.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 浦和太田窪店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/086.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 浦和町谷店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/155.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 浦和東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/005.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 浦和さくら草通店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/056.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 浦安店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/263.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 上野店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/058.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 鶯谷店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/308.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 牛久西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/608.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 牛久中央店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/673.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 宇都宮上大曽店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/633.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 宇都宮テラス店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/640.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 エルミ鴻巣店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/413.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 エキア新柏東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/606.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 エキア東武動物公園駅店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/190.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 エキア松原店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/385.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 江戸川橋店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/475.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 恵比寿南店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/182.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 江古田南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/535.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 小田急マルシェ愛甲石田駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/434.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 小田急マルシェ伊勢原店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/394.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 小田急相模原サウザンロード店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/473.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 小田急マルシェ相武台店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/393.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 大宮ＤＯＭ店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/085.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 小田急マルシェ永山店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/322.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 小田急マルシェ登戸店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/286.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 小田急マルシェ本厚木東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/488.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 小田急町田北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/131.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 王子駅前明治通店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/336.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 小田急マルシェ大和店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/528.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 太田内ケ島店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/639.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 大田原美原店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/659.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 大宮大成店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/553.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 大宮すずらん通店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/122.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 大宮東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/084.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 大宮西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/019.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 大宮三橋店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/051.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 大和田店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/012.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 桶川駅店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/202.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 御茶ノ水聖橋店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/136.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 御徒町南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/076.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 押上四ツ目通店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/462.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 大岡山店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/494.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 大森西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/162.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 荻窪北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/148.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 荻窪南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/276.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 大泉学園店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/498.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 お花茶屋南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/624.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 大塚北口駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/546.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 大塚南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/297.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 小田原店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/243.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 小田原飯泉店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/596.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 大倉山店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/267.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 大船仲通り店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/504.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 大船１丁目店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/165.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 上石神井南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/203.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 神楽坂外堀通店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/327.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 勝田台南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/548.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 鎌ヶ谷初富店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/568.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 ベルトーレ金町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/588.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 川口並木店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/014.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 川口駅東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/188.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 川口駅西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/197.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 川口駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/036.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 川越宮元町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/119.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 川越岸町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/015.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 川越西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/337.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 川越クレアモール店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/075.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 春日部店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/071.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 春日部東口駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/420.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 春日部東店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/157.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 上福岡店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/151.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 柏東口中央町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/449.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 柏西口駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/583.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 柏駅東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/355.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 神田西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/144.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 神田南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/216.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 蒲田東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/098.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 蒲田南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/150.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 春日駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/534.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 上板橋北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/584.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 亀戸店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/078.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 亀有南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/191.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 亀有北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/270.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 金町北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/414.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 川崎銀柳街店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/102.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 鹿島田店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/470.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 柿生駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/484.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 関内北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/118.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 上大岡西口南店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/655.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 上大岡西口北店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/648.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 鴨居南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/345.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 金沢文庫東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/344.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 鹿沼栄町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/665.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 学芸大学駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/269.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 北柏南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/328.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 キュービックプラザ新横浜店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/370.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 北本二ツ家店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/592.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 桐生相生町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/671.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 北本西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/377.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 北浦和東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/008.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 北戸田店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/207.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 北朝霞店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/064.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 北越谷ファイン店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/604.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 木更津太田店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/641.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 北松戸店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/287.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 北小金店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/133.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 北習志野駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/366.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 北赤羽店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/278.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 錦糸町南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/342.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 錦糸町北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/255.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 吉祥寺南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/068.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 吉祥寺本町通店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/081.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 清瀬南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/513.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 北千住西口駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/296.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 北千住東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/481.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 希望ヶ丘店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/421.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 行徳駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/573.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 久喜東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/587.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 熊谷桜町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/115.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 九段下店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/432.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 蔵前駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/489.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 国立南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/321.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 久米川南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/521.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 京成大久保店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/455.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 京急蒲田駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/453.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 京急川崎駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/346.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 京急久里浜駅東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/487.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 京成津田沼店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/171.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 京成船橋店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/233.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 京成八幡駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/400.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 検見川浜北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/526.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 小田急マルシェ狛江店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/635.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 古河下山店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/617.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 越谷平方南町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/634.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 越谷レイクタウン店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/306.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 コクーンシティ店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/059.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 小手指北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/379.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 越谷駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/279.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 鴻巣下忍店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/618.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 国分寺北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/326.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 後楽園白山通店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/187.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 小岩南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/226.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 駒込東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/238.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 五香西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/409.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 豪徳寺駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/467.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 五反野店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/220.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 さいたま新都心店（けやき広場側）",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/074.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 相模原ラクーン店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/613.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 坂戸北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/549.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 指扇店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/237.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 狭山北入曽店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/108.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 三軒茶屋南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/406.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 三軒茶屋茶沢通店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/582.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 笹塚観音通店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/212.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 相模原南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/410.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 相模大野店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/274.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 ＪＲ新杉田店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/282.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 新橋日比谷口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/630.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 新船橋東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/626.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 渋谷宮下公園前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/331.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 新河岸店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/222.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 志木東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/103.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 志木南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/315.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 新越谷東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/516.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 新検見川南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/415.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 新松戸店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/201.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 新八柱店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/258.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 新津田沼店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/517.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 新宿中央店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/032.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 新宿３丁目店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/211.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 新宿靖国通店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/034.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 信濃町駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/360.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 下井草駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/472.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 新高円寺店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/524.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 新宿東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/046.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 篠崎南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/612.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 新橋駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/458.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 石神井公園店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/160.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 新小岩駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/087.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 新小岩北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/600.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 新丸子東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/539.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 尻手駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/454.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 ＪＲ熊谷駅店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/169.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 ＪＲ橋本駅店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/163.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 ＪＲ馬橋東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/323.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 十条店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/170.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 杉戸高野台店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/378.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 水天宮前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/128.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 巣鴨北口駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/502.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 巣鴨地蔵通店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/555.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 西武新宿前北店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/373.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 せんげん台駅ビル店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/154.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 成城学園前駅北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/486.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 聖蹟桜ヶ丘東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/562.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 千駄ヶ谷店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/305.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 千住大橋店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/511.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 瀬谷南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/621.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 センター南駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/442.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 草加マルイ店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/585.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 草加西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/499.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 草加新田西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/597.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 蘇我東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/416.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 祖師ケ谷大蔵店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/290.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 雑色駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/611.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 田無アスタ店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/280.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 館林緑町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/646.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 高崎緑町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/645.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 多摩センター店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/518.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 高田馬場駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/268.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 高幡不動駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/444.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 高島平東口北店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/581.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 田町西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/424.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 田町東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/515.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 玉川学園前南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/340.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 立川北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/116.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 立川曙町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/317.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 立川南口駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/389.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 立川南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/101.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 竹ノ塚東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/576.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 竹ノ塚西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/339.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 ウニクス秩父店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/647.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 千葉浜野店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/595.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 千葉富士見店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/332.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 千葉中央東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/550.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 調布北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/179.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 茅ヶ崎北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/563.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 鶴見シークレイン店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/316.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 鶴ヶ島若葉店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/628.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 鶴瀬店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/173.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 鶴ヶ島西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/523.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 津田沼駅南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/505.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 津田沼北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/272.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 つつじヶ丘店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/164.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 鶴ヶ峰店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/214.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 綱島西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/333.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 鶴見西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/418.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 辻堂南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/594.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 土浦西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/547.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 つくば東2丁目店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/670.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 天王町駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/478.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 東所沢店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/436.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 所沢プロぺ通店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/577.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 戸田駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/471.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 戸田公園駅店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/167.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 所沢中富店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/145.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 所沢山口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/146.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 東金堀上店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/598.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 豊田北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/450.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 ときわ台北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/669.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 東武練馬店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/106.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 飛田給北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/593.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 戸塚西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/398.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 十日市場南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/448.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 取手東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/441.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 栃木平柳町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/672.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 成田ウイング土屋店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/615.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 成田東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/543.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 中野店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/066.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 中井駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/365.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 成増北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/254.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 成瀬店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/310.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 中村橋店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/240.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 中山北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/301.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 西五反田１丁目店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/361.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 西川口東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/113.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 西所沢駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/501.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 新座畑中店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/175.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 西千葉南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/353.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 西船橋南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/552.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 西船橋北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/348.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 人形町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/138.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 西八王子店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/338.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 西新宿１丁目店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/112.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 西荻窪南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/172.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 西葛西北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/294.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 日暮里南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/364.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 日暮里東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/232.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 西日暮里東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/490.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 西大井駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/477.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 西新井西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/362.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 沼袋北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/459.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 根岸駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/625.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 野田16号店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/578.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 阪急大井町ガーデン店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/330.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 JR拝島駅南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/652.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 秦野鈴張町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/623.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 蓮田東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/292.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 飯能駅南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/349.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 八丁堀新大橋通店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/392.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 八王子南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/324.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 八王子店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/044.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 旗の台店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/225.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 初台南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/159.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 幡ヶ谷南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/334.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 浜松町北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/605.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 羽村緑ヶ丘店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/649.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 白楽店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/446.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 バル小山店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/369.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 馬喰町西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/388.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 坂東辺田店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/627.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 東戸塚東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/579.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 平塚パールロード店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/397.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 東川口駅北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/565.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 東大宮３丁目店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/619.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 東大宮東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/466.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 日高高萩店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/153.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 東銀座店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/357.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 東十条店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/099.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 一橋学園北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/603.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 日野駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/419.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 東久留米東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/384.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 東大和店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/147.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 東村山東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/644.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 平井南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/227.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 東大島駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/591.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 ひばりヶ丘北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/542.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 平間駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/479.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 日ノ出町駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/485.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 日吉西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/127.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 ひたちなか店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/657.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 ファッションクルーズひたちなか店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/667.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 フレスポ八潮店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/538.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 ふじみ野西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/601.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 船橋本町４丁目店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/371.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 船堀南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/571.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 富士見台南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/396.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 二俣川南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/359.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 平和島駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/508.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 本川越東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/631.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 方南町駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/610.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 本厚木一番街店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/452.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 保土ヶ谷西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/506.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 マーヴ北綾瀬リエッタ店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/586.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 前橋文京町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/651.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 マーレ武蔵浦和店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/408.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 前橋荒牧店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/642.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 松戸西口駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/559.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 松戸東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/186.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 松戸新田店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/662.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 町田パークアベニュー店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/114.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 町田中央店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/318.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 町屋店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/257.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 大宮三橋６丁目店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/602.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 溝の口Ｑｉｚ店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/239.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 南流山店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/572.html",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 三郷店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/372.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 みずほ台西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/354.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 宮原東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/522.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 南浦和店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/025.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 南越谷店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/048.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 南行徳北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/445.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 南柏西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/443.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 三鷹南口中央通店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/561.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 茗荷谷店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/311.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 三鷹北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/250.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 瑞江駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/288.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 南千住店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/302.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 三河島駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/557.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 南林間店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/403.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 溝の口西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/208.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 水戸赤塚店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/661.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 武蔵藤沢グリーンガーデン店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/158.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日高屋 武蔵小金井北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/632.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 向ヶ丘遊園南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/620.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 武蔵小山店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/425.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 武蔵小金井南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/320.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 武蔵境北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/161.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 武蔵新城南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/456.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 目黒東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/431.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 本八幡北口駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/423.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 門前仲町不動前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/300.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 門前仲町店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/097.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 元住吉駅前店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/303.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 八千代台東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/638.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 矢向店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/404.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 ゆりまち袖ヶ浦店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/660.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 雪が谷大塚南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/530.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 結城バイパス店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/653.html",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日高屋 吉川北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/507.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 与野本町西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/590.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 与野駅東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/244.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 四街道北口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/622.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 四谷三丁目店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/260.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 四ツ谷店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/556.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 読売ランド前駅南口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/426.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 LICOPA川崎小田栄店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/629.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 LICOPA東大和店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/658.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 リドレ横須賀店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/463.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 両国東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/429.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 龍ケ崎市駅東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/433.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 ル・シーニュ府中店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/495.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 六本木店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/109.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 蕨東口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/016.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 蕨西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/002.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 早稲田西口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/417.html",
+      "facilities": []
+    },
+    {
+      "name": "日高屋 新潟駅万代口店",
+      "url": "https://hidakaya.hiday.co.jp/hits/ja/shop/1/detail/666.html",
+      "facilities": []
+    }
+  ]
+}

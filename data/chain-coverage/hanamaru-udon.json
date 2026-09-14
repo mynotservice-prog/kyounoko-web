@@ -1,0 +1,2927 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "hanamaru-udon",
+  "name": "はなまるうどん",
+  "sourceUrl": "https://stores.hanamaruudon.com/hanamaru/spot/lists",
+  "method": "公式店舗検索（stores.hanamaruudon.com）の一覧APIで全店舗を列挙し、「条件で探す」のチェック（お子様メニュー・駐車場）で絞り込んだ結果に含まれる店舗を店舗ごとに集計",
+  "total": 391,
+  "note": "うまげな・つるさく等の別業態は除外。業態カテゴリ内訳: はなまるうどん375店・はなまるうどん×吉野家16店",
+  "facilities": {
+    "kidsMenu": {
+      "count": 322,
+      "label": "お子様メニュー"
+    },
+    "parking": {
+      "count": 302,
+      "label": "駐車場"
+    }
+  },
+  "stores": [
+    {
+      "name": "はなまるうどん 丸亀城西店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 高松兵庫町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=10",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 渋谷公園通り店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=101",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん イトーヨーカドー湘南台店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=103",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 新宿西口店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=105",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 高田馬場店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=106",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 阿佐ヶ谷店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=109",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 伊勢原アクロスプラザ店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1101",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン横須賀久里浜店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1102",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 平塚四之宮店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1106",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 赤坂一ツ木通り店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1107",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 千葉山王町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1108",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール小山店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1109",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ジョイフル本田千葉ニュータウン店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1111",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール土浦店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1112",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ホームズ川崎大師店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1113",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イトーヨーカドー武蔵小金井店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1114",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ピオニウォーク東松山店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1116",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 宇都宮西原店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1117",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん アリオ北砂店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1118",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 中野通り店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=112",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん イオン大宮店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1120",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 草加青柳店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1122",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 新宿東口モア街店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1123",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 立川駅南口サザン店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1126",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん 横浜西口パルナード店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1128",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 虎ノ門店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1129",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 高崎店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=113",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 八丁堀店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1131",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 越谷レイクタウン店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1132",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ホームズ仙川店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1134",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん アリオ深谷店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1136",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ジョイフル本田千代田店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1137",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 秋葉原昭和通り店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1139",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 渋谷駅西口店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1140",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 日本橋永代通り店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1142",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 茅場町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1144",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん ダイバーシティ東京店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1147",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 銀座松屋通り店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1149",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん nonowa西国分寺店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1150",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん 水道橋西口店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1151",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん フォレストモール新前橋店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1154",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン市川妙典店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1155",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 神保町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1156",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 横浜ポルタ店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1159",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん イトーヨーカドー四街道店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1160",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 浦安メトロピア店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1161",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん ベニバナウォーク桶川店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1168",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン鎌取店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1169",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン橋本店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1172",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん グリナード永山店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1174",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん イトーヨーカドー古淵店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1175",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イトーヨーカドー東久留米店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1176",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん カインズホーム鶴ヶ島店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1177",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ボーノ相模大野店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1178",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンタウン成田富里店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1179",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん Echika池袋店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1181",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん イオンモール甲府昭和店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1182",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん モラージュ柏店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1184",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 北朝霞駅前店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1185",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん イオンモール銚子店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1187",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん アリオ上尾店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1188",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 京橋店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=119",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 水戸エクセル店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1190",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 東京競馬場店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1191",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん カインズホーム茂原店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1192",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 六本木六丁目店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1193",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん イオンタウンユーカリが丘店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1194",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ウニクス南古谷店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1195",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん コーナン港北インター店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1196",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん サンライズ蒲田店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1198",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん プレナ幕張店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=1199",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん 高松円座店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=12",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 宇大前店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=128",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール綾川店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=13",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 京急川崎駅前店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=135",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 大宮吉野町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=139",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ゆめタウン三豊店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=14",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 小山城南店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=140",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 吉祥寺南口店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=144",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 成増駅前店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=149",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん×吉野家 マルナカ観音寺駅南店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=15",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 大和駅前店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=157",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん×吉野家 ゆめタウン高松店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=16",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 千住ミルディス店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=161",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 草加西町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=163",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん らびすた新杉田店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=169",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん TKMT本店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=17",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン茅ヶ崎中央店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=170",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 足利駅前店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=171",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ファブ南大沢店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=173",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール北戸田店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=174",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ホームズ葛西店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=175",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 目黒駅東口店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=176",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん カエデウォーク長津田店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=183",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール千葉ニュータウン店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=184",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ミスターマックス湘南藤沢店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=186",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール高崎店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=187",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 新宿甲州街道店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=188",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 神田駅前店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=191",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん ジョイフル本田瑞穂店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=196",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ジョイフル本田宇都宮店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=197",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イトーヨーカドー川崎店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=198",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 多肥店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 岐阜関店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=204",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 名古屋北区大我麻店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=207",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ららぽーとTOKYO-BAY店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2101",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンスタイル東戸塚店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2102",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イーアス高尾店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2104",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん カインズホーム小山店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2105",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 大船駅前店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2106",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん イトーヨーカドー曳舟店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2107",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 銀座ファイブ店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2109",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん 宇都宮ベルモール店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2110",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール八千代緑が丘店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2114",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 東京イースト21店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2116",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ノースポートモール店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2117",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン品川シーサイド店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2118",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール木更津店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2119",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 上大岡店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2120",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん イオン新浦安店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2121",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん MEGAドン・キホーテ港山下総本店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2122",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール下妻店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2123",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ココリア多摩センター店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2125",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん 多摩センター店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2126",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん アピタテラス横浜綱島店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2127",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん 川口駅前店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2128",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん 浅草橋駅前店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2129",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん マチノマ大森店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2130",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イトーヨーカドー大船店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2131",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ニューコースト新浦安店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2132",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イトーヨーカドー大宮宮原店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2133",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 池袋サンシャイン通り店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2134",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん イオンスタイル南砂店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2136",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ミスターマックス新習志野店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2139",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん×吉野家 安城横山店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=214",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 府中フォーリス店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2141",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん MINANO分倍河原店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2142",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 足立花畑店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2143",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ユアエルム青戸店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2144",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん イトーヨーカドー武蔵境店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2145",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん テラスモール松戸店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2146",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん コモレ四谷店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2147",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン古河店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2148",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イトーヨーカドー松戸店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2149",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん ニトリモール相模原店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2150",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 五反田西口店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2151",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん ワンズモール店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2153",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イトーヨーカドー国領店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2155",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ウニクス伊奈店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2157",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール幕張新都心店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2158",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール浜松志都呂店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=216",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン海浜幕張店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2160",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンフードスタイル船堀店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2161",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん マルイファミリー志木店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2163",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンタウンふじみ野店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2164",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン東雲店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2165",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 新宿NSビル店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2166",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん ジョイホンパーク吉岡店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2168",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "吉野家×はなまるうどん ＴＸＧＡ流山おおたかの森店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2169",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンタウン豊橋橋良店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=217",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 深川ギャザリア店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2170",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール津田沼North店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2171",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん TXアベニュー守谷店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2172",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん 鶴見駅前店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2173",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん イオンモール太田店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2174",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん コーナン京葉船橋インター店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2175",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん リコパ東大和店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2176",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ニコモール新田店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2178",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 田町センタービル店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2179",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん アピタ千代田橋店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=218",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 浜松町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2180",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 蒲田アロマスクエア店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2181",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん モザイクモール港北店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2182",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンフードスタイル港南台店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2183",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 南池袋公園前店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2184",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん エキア越谷店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2185",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん エキア谷塚店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2186",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん ホームズ蘇我店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2187",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 横浜駅きた西口店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2190",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん イオン秦野店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2191",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん×吉野家 16号線柏大島田店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=2192",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん アピタ鳴海店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=220",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン豊川開運通店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=222",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん サンストリート浜北店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=223",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 岐阜柳津店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=225",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンタウン富士南店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=226",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん×吉野家 浜松アリーナ前店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=227",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 岡崎大樹寺店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=228",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 一宮八幡店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=231",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ラスパ御嵩店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=232",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 浜松西伊場店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=234",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 尾張旭井田町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=235",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 半田昭和町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=236",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 刈谷日高町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=237",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 長久手城屋敷店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=238",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 浜松高丘東店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=240",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 屏風山ＰＡ上り店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=242",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 春日井瑞穂通店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=243",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール大垣店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=244",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ベイドリーム清水店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=250",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンタウン千種店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=253",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモールナゴヤドーム前店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=254",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール明和店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=256",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ヴェルサウォーク西尾店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=257",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 尾張一宮ＰＡ上り店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=260",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 美合ＰＡ下り店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=261",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール常滑店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=263",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 日永カヨー店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=264",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ルビットタウン中津川店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=265",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン豊橋南店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=267",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール津南店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=268",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん サントムーン柿田川店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=269",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンセントラルスクエア静岡店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=270",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 姫路土山店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=302",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん×吉野家 飾磨浜国通り店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=303",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 広畑高浜店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=304",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 天神橋筋三丁目店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=307",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 大阪江坂店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=308",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 姫路下野田店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=309",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 滋賀東草津店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=313",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 和泉中央店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=321",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 大浦街道店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=322",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン高槻店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=326",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 東大阪御厨店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=329",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 鶴見緑地店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=330",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん アリオ加古川店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=332",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 生野勝山通り店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=335",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 東住吉湯里店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=337",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 大東新田旭町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=339",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 豊中インター店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=342",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 寝屋川葛原新町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=343",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 京都錦店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=344",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 摂津千里丘店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=345",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イトーヨーカドーあべの店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=346",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ビバモール寝屋川店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=347",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ニトリモール東大阪店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=348",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん×吉野家 大阪心斎橋店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=349",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん イオン京都洛南店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=350",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ニトリモール枚方店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=353",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール加西北条店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=354",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 難波なんさん通り店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=355",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん ビバシティ彦根店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=356",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 湖南店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=359",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イトーヨーカドー甲子園店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=362",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん フォレオ大津一里山店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=368",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん せんば心斎橋筋店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=371",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん りんくうシークル店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=372",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ミ・ナーラ店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=373",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん MEGAドン・キホーテ姫路広畑店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=374",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 元町1番街店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=375",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 高速神戸駅店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=376",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 東急プラザ新長田店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=377",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン明石２番街店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=378",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンジェームス山店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=379",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ゆめタウン姫路店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=380",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン藤井寺店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=382",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん みのおキューズモール店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=383",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 北新地店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=384",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 南本町二丁目店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=385",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん テックライフセレクト尼崎店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=386",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん Bivi二条店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=387",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん 四条烏丸店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=388",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん 田町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=4",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 松山山越店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=401",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 高知インター日の出店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=404",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 徳島沖浜店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=405",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 高知四万十店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=406",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 今治喜田村店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=407",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 今治片山店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=408",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 松山竹原店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=411",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 徳島藍住店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=412",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 徳島羽ノ浦店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=413",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 新居浜インター店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=414",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール今治新都市店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=415",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん フジグラン重信店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=416",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンスタイル松山店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=417",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 徳島国府町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=418",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 東予店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=419",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ニトリ新居浜店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=420",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール徳島店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=421",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 11号松山久米店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=422",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 松山銀天街店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=423",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 熊本下通り店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=503",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 鹿児島東千石店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=505",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 天久リウボウ店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=519",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン北谷店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=521",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン名護店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=523",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん マックスバリュとよみ店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=524",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん トキハわさだタウン店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=528",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ゆめタウン筑紫野店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=529",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 佐世保四ヶ町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=532",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん させぼ五番街店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=533",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ゆめタウン行橋店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=534",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ゆめタウン別府店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=535",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん アンビー熊本店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=536",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "吉野家×はなまるうどん 那覇空港際内ターミナルビル店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=539",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "吉野家×はなまるうどん 福岡空港国内ターミナルビル店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=541",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん イーアス沖縄豊崎店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=542",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "吉野家×はなまるうどん ミーナ天神店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=543",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "吉野家×はなまるうどん イオン浦西店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=544",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん サンリブシティ小倉店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=545",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 大分オーパ店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=546",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール直方店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=5501",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 茨木上穂積店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=5503",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール大和店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=5608",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん アリオ市原店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=5619",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール羽生店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=5806",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール和歌山店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=5807",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール堺鉄砲町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=5809",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 志度店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=6",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん×吉野家 倉敷児島店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=601",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 岡山新保店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=602",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 岡山今保店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=603",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 倉敷中島店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=604",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 福山三吉店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=606",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 岡山西市店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=607",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 倉敷市役所東店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=611",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 岡山泉田店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=617",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 倉敷東塚店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=622",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 岡山高屋店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=623",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール鳥取北店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=624",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ゆめタウン出雲店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=625",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン松江店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=626",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 広島五日市店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=627",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール日吉津店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=628",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール津山インター店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=629",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 米子夜見町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=630",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 広島立町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=632",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん ゆめタウン徳山店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=635",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンタウン防府店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=636",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ゆめタウン下松店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=638",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ゆめタウン東広島店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=639",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 高松三条店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=7",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 鶴賀店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=703",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 佐久店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=705",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 松本筑摩店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=707",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 金沢入江店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=710",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 福井開発店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=711",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 8号線鯖江店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=712",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 金沢高尾台店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=715",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール佐久平店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=720",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンもりの里店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=722",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん MIDORI長野店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=723",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 富山天正寺店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=724",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモールとなみ店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=725",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん レイクウォーク岡谷店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=726",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 富山ファボーレ店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=728",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 富山駅前店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=729",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん 長野大豆島店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=730",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "はなまるうどん 高松中央インター店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=8",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 佐渡佐和田店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=814",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール旭川西店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=815",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール下田店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=816",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 山形桧町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=818",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール盛岡南店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=819",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン福島店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=820",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん リバーサイド千秋店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=822",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンタウン仙台泉大沢店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=825",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん ザ・モール仙台長町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=826",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール大曲店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=827",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール富谷店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=828",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 新千歳空港店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=830",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 八戸ピアドゥ店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=831",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン新潟青山店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=834",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール苫小牧店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=835",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール新発田店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=836",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール札幌平岡店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=837",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 秋田川元店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=840",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 山形鉄砲町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=841",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン札幌元町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=843",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん シーナシーナ琴似店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=844",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンいわき店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=846",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん×吉野家 天童南店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=849",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール天童店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=850",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 仙台イービーンズ店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=851",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん×吉野家 十和田店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=852",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 仙台おおまち店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=853",
+      "facilities": []
+    },
+    {
+      "name": "はなまるうどん×吉野家 むつ中央店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=861",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンスタイル仙台卸町店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=862",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 盛岡向中野店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=864",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 荒巻ワンダープラザ店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=865",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 弘前ヒロロ店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=867",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん シーナシーナ青森店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=869",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 秋田トピコ店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=871",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール札幌苗穂店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=873",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオンモール新潟亀田インター店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=874",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 泉パークタウンタピオ店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=875",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん イオン上越店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=876",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん シーナシーナ屯田店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=877",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "はなまるうどん 坂出白金店",
+      "url": "https://stores.hanamaruudon.com/hanamaru/spot/detail?code=9",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    }
+  ]
+}

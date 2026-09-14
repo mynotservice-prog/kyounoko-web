@@ -1,0 +1,2535 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "uotami",
+  "name": "魚民",
+  "sourceUrl": "https://shop.monteroza.co.jp/",
+  "method": "公式店舗検索（can-ly）の検索APIでブランド「魚民」の店舗を列挙し、各店舗詳細ページの「設備」チェック項目を集計",
+  "total": 322,
+  "note": "グループ他業態（白木屋・笑笑・目利きの銀次等）は除外。開店中以外0件（）も除外。kidsSpace は「キッズルーム」181店・「キッズスペース」41店のいずれかにチェックがある店舗数",
+  "facilities": {
+    "privateRoom": {
+      "count": 268,
+      "label": "個室"
+    },
+    "parking": {
+      "count": 154,
+      "label": "駐車場"
+    },
+    "kidsSpace": {
+      "count": 189,
+      "label": "キッズルーム・キッズスペース"
+    }
+  },
+  "stores": [
+    {
+      "name": "魚民 姶良加治木店",
+      "url": "https://shop.monteroza.co.jp/detail/802973/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 青森駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802807/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 青山駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802660/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 赤坂見附駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802710/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 赤塚南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802496/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 秋川駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802701/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 昭島南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802659/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 秋田東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871076/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 秋葉原中央通り店",
+      "url": "https://shop.monteroza.co.jp/detail/802537/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 旭サンモールショッピングセンター前店",
+      "url": "https://shop.monteroza.co.jp/detail/802598/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 あざみ野西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802637/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 熱海駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802884/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 新瑞橋駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871081/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 泡瀬店",
+      "url": "https://shop.monteroza.co.jp/detail/802809/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 飯田駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802443/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "池袋 魚民 池袋西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871066/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 諫早駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802444/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 石和店",
+      "url": "https://shop.monteroza.co.jp/detail/802518/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 石岡西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802617/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 石巻駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802353/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 伊豆急下田駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802871/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 伊豆長岡駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802914/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 伊勢市南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802680/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 磯原西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802975/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 市が尾東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802963/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 市ヶ谷駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871061/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 市原ちはら台店",
+      "url": "https://shop.monteroza.co.jp/detail/802976/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 伊東駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802786/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 稲城長沼駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802894/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 伊那市駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802944/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 犬山西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802828/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 今市店",
+      "url": "https://shop.monteroza.co.jp/detail/802837/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 伊万里店",
+      "url": "https://shop.monteroza.co.jp/detail/802806/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 伊予西条駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802582/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 伊予店",
+      "url": "https://shop.monteroza.co.jp/detail/871027/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 いわき南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802521/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 磐田北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802798/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 上田お城口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802337/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 上野市駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802904/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 鵜方店",
+      "url": "https://shop.monteroza.co.jp/detail/802770/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 宇多津店",
+      "url": "https://shop.monteroza.co.jp/detail/802945/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 宇都宮東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802487/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 宇部新川駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802654/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 浦安駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802695/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 浦和西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802636/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 浦和東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802466/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 越後湯沢東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802993/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 恵比寿西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802546/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 海老名東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802690/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 近江八幡北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802947/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 大泉学園北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802549/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 大垣南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802296/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 大在駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802575/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 大曽根駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802618/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 太田南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802999/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 大館有浦店",
+      "url": "https://shop.monteroza.co.jp/detail/802971/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 大月駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802719/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 大津北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802874/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 鳳東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802965/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 大袋西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802994/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 大宮西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802868/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 大村駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802891/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 岡崎東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802981/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 岡谷本町３丁目店",
+      "url": "https://shop.monteroza.co.jp/detail/802474/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 尾道南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802445/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 小山西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802470/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 尾張一宮東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802767/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 加賀温泉駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802640/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 柿生南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802522/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 掛川南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802647/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 香椎駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802382/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 柏の葉キャンパス東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802949/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 勝どき駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802820/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 勝田東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802550/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 加東上中店",
+      "url": "https://shop.monteroza.co.jp/detail/871044/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 金沢東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871080/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 金町北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871074/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 鹿沼晃望台店",
+      "url": "https://shop.monteroza.co.jp/detail/802855/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 釜石店",
+      "url": "https://shop.monteroza.co.jp/detail/802822/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 鎌ヶ谷東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802513/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 鎌取南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802435/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 上井草南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802579/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 上諏訪東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802897/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 亀岡南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802782/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 茅場町駅前永代通り店",
+      "url": "https://shop.monteroza.co.jp/detail/802675/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 川越西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802962/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 河内長野西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802429/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 神立店",
+      "url": "https://shop.monteroza.co.jp/detail/802893/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 神田南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802484/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 学園前北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802628/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 北上駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802289/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 北戸田東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802686/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 北習志野駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802449/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 君津南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802240/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 キャッセン大船渡ショッピングセンター店",
+      "url": "https://shop.monteroza.co.jp/detail/871047/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 霧島山形屋前店",
+      "url": "https://shop.monteroza.co.jp/detail/802651/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 桐生北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802630/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 近鉄大久保駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802985/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 草津西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802475/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 久慈東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802818/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 桑名駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802463/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 京王八王子アイロード店",
+      "url": "https://shop.monteroza.co.jp/detail/802671/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 京急久里浜東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802931/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 気仙沼店",
+      "url": "https://shop.monteroza.co.jp/detail/802731/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 研究学園北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802676/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 小杉南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802717/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 小平南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871090/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 駒ヶ根店",
+      "url": "https://shop.monteroza.co.jp/detail/802890/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 高麗川駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802673/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 小松西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802709/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 西条駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802278/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 酒田駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802479/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 坂戸南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802508/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 寒河江店",
+      "url": "https://shop.monteroza.co.jp/detail/802978/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 佐賀北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871013/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 さがみ野南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802621/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 佐倉南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802233/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 さくらんぼ東根東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802451/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 篠山口西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802873/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 佐世保京町店",
+      "url": "https://shop.monteroza.co.jp/detail/802387/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "北海道 魚民 札幌南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802748/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 佐沼店",
+      "url": "https://shop.monteroza.co.jp/detail/802720/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 鯖江駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802623/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 佐原駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802570/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 山陽別府駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802987/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 塩釜駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802438/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 潮見駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802564/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 信濃町駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802790/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 渋谷神南店",
+      "url": "https://shop.monteroza.co.jp/detail/802848/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 下館北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802354/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 下関東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871065/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 白子西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802729/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 紫波店",
+      "url": "https://shop.monteroza.co.jp/detail/871046/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 新宿東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802234/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 新庄西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802407/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 新高岡南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871039/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 新所沢西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802195/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 新富士店",
+      "url": "https://shop.monteroza.co.jp/detail/802858/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 新松田北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802830/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 新松戸駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871077/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 新山口新幹線口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802428/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 上越妙高西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871056/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 須坂駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871033/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 洲本店",
+      "url": "https://shop.monteroza.co.jp/detail/802668/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 千川駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802590/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 センター北駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802641/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 善行東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802764/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 蘇我東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802572/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "大阪 魚民 園田南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802953/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 高石駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802643/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 高崎西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802080/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 高萩西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871035/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 高松駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802610/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 高山駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802974/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 宝塚花の道店",
+      "url": "https://shop.monteroza.co.jp/detail/802318/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 多賀城店",
+      "url": "https://shop.monteroza.co.jp/detail/802392/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 武生駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802727/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 立川南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802735/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 館山東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802492/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 田端北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871085/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 玉名店",
+      "url": "https://shop.monteroza.co.jp/detail/802917/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 茅ヶ崎北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802989/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 中書島北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802559/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 長後東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802699/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 銚子駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802563/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 塚口北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802813/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 築地駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871075/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 辻堂南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802532/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 筒井駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802899/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 綱島西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802571/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 燕三条燕口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871058/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 津東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802430/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 津山大手町店",
+      "url": "https://shop.monteroza.co.jp/detail/802934/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 敦賀駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802952/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 鶴ヶ島西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871088/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 鶴ヶ峰北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802634/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 鶴瀬西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802393/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 鶴橋中央口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802687/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 テキサス函館店",
+      "url": "https://shop.monteroza.co.jp/detail/802398/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 天童東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802433/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 天理駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871014/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 東金東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802535/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 東武日光駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802895/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 東武練馬北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802552/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 戸田西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802940/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 ＪＲ栃木駅店",
+      "url": "https://shop.monteroza.co.jp/detail/802611/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 友部南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802875/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 豊岡駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802653/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 豊橋東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802648/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 取手東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802162/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 十和田稲生町店",
+      "url": "https://shop.monteroza.co.jp/detail/802605/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 富田林南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871030/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 中河原駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871067/",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 中標津店",
+      "url": "https://shop.monteroza.co.jp/detail/871082/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 中津川駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802696/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 中野北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871026/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 中山北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802631/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 長崎駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802480/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 長浜東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802796/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 長町西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802412/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 流山おおたかの森東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802905/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 名取店",
+      "url": "https://shop.monteroza.co.jp/detail/802771/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 七重浜店",
+      "url": "https://shop.monteroza.co.jp/detail/802811/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 七尾駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871003/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 名張西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802472/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 鳴門駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802728/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 南海堺西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802909/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 南陽赤湯店",
+      "url": "https://shop.monteroza.co.jp/detail/802990/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 新座駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871064/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 新居浜登り道サンロード店",
+      "url": "https://shop.monteroza.co.jp/detail/802737/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 西川口西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802603/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 西新発田店",
+      "url": "https://shop.monteroza.co.jp/detail/802951/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 西那須野店",
+      "url": "https://shop.monteroza.co.jp/detail/802691/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 西府北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802906/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 西船橋北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802237/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 日暮里東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871021/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 二宮北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802977/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 二本松駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802907/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 韮崎駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802667/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 練馬駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802376/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 直方駅店",
+      "url": "https://shop.monteroza.co.jp/detail/802688/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 拝島南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802725/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 博多南駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802405/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 萩店",
+      "url": "https://shop.monteroza.co.jp/detail/871024/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 秦野北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802657/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 八戸東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871069/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 廿日市駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802450/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 花巻駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802401/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 羽生東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802152/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 浜田南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802916/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 浜松南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802789/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 阪神甲子園駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802738/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 飯能北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802402/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 原木中山南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871004/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 播州赤穂南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802762/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 東大宮東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802805/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 東久留米西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871028/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 東中野西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802424/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 東舞鶴店",
+      "url": "https://shop.monteroza.co.jp/detail/802996/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 東松山東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802670/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 東室蘭中島町店",
+      "url": "https://shop.monteroza.co.jp/detail/802704/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 東大和市駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802745/",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 肥後大津南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802955/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 久居西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802750/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 日出店",
+      "url": "https://shop.monteroza.co.jp/detail/802838/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 日田駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802561/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 常陸多賀駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871055/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 ひたち野うしく西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871006/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 ひばりヶ丘北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871051/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 氷見店",
+      "url": "https://shop.monteroza.co.jp/detail/871032/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 日向市西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802707/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 弘前駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802348/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 ビエラタウンけいはんな店",
+      "url": "https://shop.monteroza.co.jp/detail/871020/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 吹上南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871017/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 福島鎌田店",
+      "url": "https://shop.monteroza.co.jp/detail/802803/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 福島東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802642/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 福知山南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802693/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 袋井駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802834/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 富士山駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802595/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 藤野店",
+      "url": "https://shop.monteroza.co.jp/detail/802972/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 富士宮店",
+      "url": "https://shop.monteroza.co.jp/detail/802826/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 二子玉川駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802523/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 福生東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802396/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 船橋南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802316/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 船堀北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802832/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 フラワータウン駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802939/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 古川駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802554/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 本塩釜駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802663/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 松任北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802860/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 松阪南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802601/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 松山大街道２丁目店",
+      "url": "https://shop.monteroza.co.jp/detail/802538/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 馬橋西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802689/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 丸亀店",
+      "url": "https://shop.monteroza.co.jp/detail/802577/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 三沢アメリカ村店",
+      "url": "https://shop.monteroza.co.jp/detail/802645/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 水沢駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802381/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 水海道駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802866/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 水戸北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802808/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 水戸城南店",
+      "url": "https://shop.monteroza.co.jp/detail/802964/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 南草津東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802581/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 南千住西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802602/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 南彦根東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802903/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 南松本駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802722/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 美濃太田駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802403/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 都城駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802440/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 宮崎西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802715/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 宮原東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871073/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 名谷北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802566/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 武蔵浦和駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802650/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 武蔵境北口すきっぷ通り店",
+      "url": "https://shop.monteroza.co.jp/detail/802454/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 武蔵高萩北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802984/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 武蔵藤沢西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871083/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 武蔵嵐山東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802797/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 村山東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802941/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 姪浜北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802539/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 真岡西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802878/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 門司南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802703/",
+      "facilities": []
+    },
+    {
+      "name": "魚民 茂原南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802414/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 盛岡駅前開運橋店",
+      "url": "https://shop.monteroza.co.jp/detail/871057/",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 ＪＲ森ノ宮南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802877/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 守谷東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802817/",
+      "facilities": [
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 焼津南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802656/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 八乙女駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871052/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 八潮南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802892/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 八代旭中央通店",
+      "url": "https://shop.monteroza.co.jp/detail/802741/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 柳井駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802824/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 矢野口南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802956/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 山鹿昭和町店",
+      "url": "https://shop.monteroza.co.jp/detail/802946/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 大和高田駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871002/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 結城店",
+      "url": "https://shop.monteroza.co.jp/detail/871008/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 湯沢駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802733/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 湯田温泉店",
+      "url": "https://shop.monteroza.co.jp/detail/802744/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 ゆりまち袖ケ浦駅前モール店",
+      "url": "https://shop.monteroza.co.jp/detail/871053/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 横手東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871059/",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 吉塚東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802882/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 四街道北口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802380/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 米沢中央店",
+      "url": "https://shop.monteroza.co.jp/detail/871049/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 代々木八幡南口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802969/",
+      "facilities": [
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 龍ケ崎市東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802913/",
+      "facilities": [
+        "privateRoom",
+        "parking",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 両国駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871022/",
+      "facilities": [
+        "privateRoom",
+        "kidsSpace"
+      ]
+    },
+    {
+      "name": "魚民 六町駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802514/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "魚民 和歌山西口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/871050/",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "魚民 蕨東口駅前店",
+      "url": "https://shop.monteroza.co.jp/detail/802662/",
+      "facilities": [
+        "privateRoom"
+      ]
+    }
+  ]
+}

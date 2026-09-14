@@ -1,0 +1,1241 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "tenkaippin",
+  "name": "天下一品",
+  "sourceUrl": "https://www.tenkaippin.co.jp/shop/",
+  "method": "公式店舗検索の都道府県検索で全店舗を列挙し、各店舗ページの店舗詳細表「駐車場」行を集計",
+  "total": 194,
+  "note": "公式の設備属性は駐車場のみ。「駐車場」行が空欄・「なし」の店舗は無しとして数えた（近隣コインパーキング案内のみの店舗も無し扱い）",
+  "facilities": {
+    "parking": {
+      "count": 127,
+      "label": "駐車場"
+    }
+  },
+  "stores": [
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/696/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/726/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/727/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/807/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/8265/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/7441/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/6422/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/711/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/894/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/895/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/9179/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/8515/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/8451/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/7844/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/7326/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/888/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/892/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/891/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/890/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/889/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/863/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/884/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/883/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/878/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/876/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/875/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/874/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/871/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/866/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/864/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/8576/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/779/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/780/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/781/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/8840/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/810/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/811/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/758/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/759/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/815/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/906/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/814/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/907/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/788/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/722/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/723/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/724/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/7682/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/812/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/700/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/701/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/702/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/703/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/704/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/705/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/706/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/707/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/709/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/782/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/784/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/6611/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/789/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/5041/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/790/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/791/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/792/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/795/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/796/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/797/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/798/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/799/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/800/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/802/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/804/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/728/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/6036/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/732/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/733/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/735/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/736/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/737/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/738/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/739/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/740/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/741/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/742/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/745/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/746/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/749/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/750/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/8516/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/729/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/9180/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/839/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/838/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/840/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/841/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/842/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/843/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/844/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/846/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/847/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/848/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/849/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/850/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/851/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/852/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/853/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/854/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/856/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/857/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/827/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/817/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/818/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/819/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/820/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/821/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/822/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/823/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/825/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/826/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/816/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/828/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/829/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/830/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/831/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/832/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/833/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/835/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/837/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/911/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/912/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/914/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/915/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/916/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/917/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/918/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/919/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/920/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/921/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/922/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/923/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/924/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/925/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/897/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/900/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/902/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/903/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/904/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/905/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/926/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/859/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/860/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/861/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/862/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/713/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/714/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/715/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/716/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/9144/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/760/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/761/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/762/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/763/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/765/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/766/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/764/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/767/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/768/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/785/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/786/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/787/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/893/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/2702/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/769/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/771/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/772/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/774/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/775/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/928/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/929/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/930/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/776/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/908/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/909/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/756/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/757/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/858/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/805/",
+      "facilities": []
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/806/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/717/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/933/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/934/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天下一品 -鶏ガラベースのこってりラーメンが自慢!-",
+      "url": "https://www.tenkaippin.co.jp/shop/935/",
+      "facilities": [
+        "parking"
+      ]
+    }
+  ]
+}

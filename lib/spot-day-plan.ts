@@ -135,7 +135,7 @@ export function buildSpotDayPlan(entry: {
   // ---- 午前: このスポット（軸） ----
   steps.push({
     slot: '午前',
-    icon: axis.place === 'outdoor' ? '🌳' : '🧸',
+    icon: axis.place === 'outdoor' ? 'park' : 'toy',
     kind: 'spot',
     title: axis.name,
     note: '営業時間・休業日はこのページの基本情報と公式サイトで確認してから出発を。',
@@ -172,7 +172,7 @@ export function buildSpotDayPlan(entry: {
   if (indieLunch && axisStationSlug) {
     steps.push({
       slot: 'お昼',
-      icon: '🍽',
+      icon: 'lunch',
       kind: 'restaurant',
       title: `${indieLunch.name}（${INDIE_GENRE_LABEL[indieLunch.genre]}）`,
       note: `${indieLunch.description} 設備・営業時間は店舗にご確認を。`,
@@ -186,7 +186,7 @@ export function buildSpotDayPlan(entry: {
       usedSlugs.push(lunch.slug);
       steps.push({
         slot: 'お昼',
-        icon: '🍽',
+        icon: 'lunch',
         kind: 'restaurant',
         title: lunch.spot.name,
         note: lunch.spot.note,
@@ -218,7 +218,7 @@ export function buildSpotDayPlan(entry: {
     usedSlugs.push(play.slug);
     steps.push({
       slot: '午後',
-      icon: play.spot.place === 'outdoor' ? '🌳' : '🧸',
+      icon: play.spot.place === 'outdoor' ? 'park' : 'toy',
       kind: 'spot',
       title: play.spot.name,
       note: play.spot.note,

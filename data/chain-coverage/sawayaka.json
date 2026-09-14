@@ -1,0 +1,322 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "sawayaka",
+  "name": "炭焼きレストランさわやか",
+  "sourceUrl": "https://www.genkotsu-hb.com/shop/area",
+  "method": "公式「エリアからさがす」で全店舗を列挙し、各店舗詳細ページの「設備」アイコン（alt）と「席数・駐車台数」行を集計",
+  "total": 35,
+  "note": "設備アイコンはバリアフリー／多目的トイレ／AEDの3種のみ。駐車場は「駐車台数」が1台以上の店舗を数えた。お子様椅子・おむつ交換台等の属性は公式に無い",
+  "facilities": {
+    "stepFree": {
+      "count": 35,
+      "label": "バリアフリー"
+    },
+    "multiToilet": {
+      "count": 22,
+      "label": "多目的トイレ"
+    },
+    "parking": {
+      "count": 30,
+      "label": "駐車台数"
+    }
+  },
+  "stores": [
+    {
+      "name": "御殿場プレミアム・アウトレット店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/238",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "御殿場インター店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/233",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "函南店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/236",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "長泉店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/234",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "沼津学園通り店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/235",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "富士錦店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/228",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "富士鷹岡店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/224",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ベイドリーム清水店 【炭焼き野菜店】",
+      "url": "https://www.genkotsu-hb.com/shop/detail/242",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "静岡瀬名川店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/229",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "静岡池田店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/225",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "マークイズ静岡店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/243",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "静岡インター店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/223",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "焼津店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/215",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "藤枝築地店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/220",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "吉田店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/217",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "島田店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/226",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "菊川本店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/210",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "掛川インター店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/227",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "掛川本店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/202",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "袋井本店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/203",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "磐田本店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/204",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "豊田店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/214",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "浜松篠ケ瀬店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/231",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール浜松市野店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/239",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "浜松有玉店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/218",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "浜松白羽店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/219",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "浜松遠鉄店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/237",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "浜松和合店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/206",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "浜松鴨江店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/232",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "浜松富塚店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/216",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "浜松西インター店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/241",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "浜松高塚店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/221",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "浜北店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/222",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "細江本店",
+      "url": "https://www.genkotsu-hb.com/shop/detail/208",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "湖西浜名湖店 【炭焼き野菜店】",
+      "url": "https://www.genkotsu-hb.com/shop/detail/240",
+      "facilities": [
+        "stepFree",
+        "multiToilet",
+        "parking"
+      ]
+    }
+  ]
+}

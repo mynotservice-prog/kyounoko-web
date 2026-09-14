@@ -55,6 +55,16 @@ export type FacilityValue = {
   ok: boolean | 'partial';
   /** 補足(例: モール内店舗は施設の授乳室を利用) */
   note?: string;
+  /**
+   * この値の根拠になった公式ページ。セル単位で出典を持てるようにするための任意項目
+   * (2026-09-11 追加)。調査ページ(docs/strategy-2026-09.md §5-1)で
+   * 「表のどのセルが、どの公式ページの、いつ時点の記述か」を出せることが、
+   * 横断比較を出す競合に対する差になる。未設定なら従来どおりチェーン単位の
+   * verifiedAt / verifiedMethod が根拠。
+   */
+  sourceUrl?: string;
+  /** セル単位の確認日(YYYY-MM-DD)。項目ごとに改定時期が違うチェーン向け。未設定ならチェーン単位の verifiedAt */
+  verifiedAt?: string;
 };
 
 export type ChainFacilities = {
@@ -74,9 +84,26 @@ export type ChainFacilities = {
   items: Partial<Record<FacilityKey, FacilityValue>>;
   /** チェーン固有の追加行(例: ビッくらポン、低アレルゲンメニュー)。md表からの移行時に情報を落とさないため */
   extras?: Array<{ label: string; value: string }>;
+  /**
+   * true = 調査・集計用にデータだけ持ち、記事には出さない(2026-09-11 追加)。
+   * 攻略記事の判定ボックス置き換え(getChainFacilitiesForArticle)と比較表
+   * (getAllChainFacilities)から外れる。公式照合で埋まるセルが少ないチェーンを
+   * そのまま登録すると、記事の「子連れチェックリスト」節が数項目に縮むため。
+   * 調査ページは getChainFacilitiesForSurvey で全件を読む。
+   */
+  surveyOnly?: boolean;
 };
 
-const V = (ok: boolean | 'partial', note?: string): FacilityValue => (note ? { ok, note } : { ok });
+const V = (
+  ok: boolean | 'partial',
+  note?: string,
+  meta?: { sourceUrl?: string; verifiedAt?: string },
+): FacilityValue => ({
+  ok,
+  ...(note ? { note } : {}),
+  ...(meta?.sourceUrl ? { sourceUrl: meta.sourceUrl } : {}),
+  ...(meta?.verifiedAt ? { verifiedAt: meta.verifiedAt } : {}),
+});
 
 export const CHAIN_FACILITIES: ChainFacilities[] = [
   {
@@ -1096,14 +1123,575 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
       allergenInfo: V(true),
     },
   },
+  // ---- 2026-09-11 追加: 未登録32チェーンの公式照合（調査用 surveyOnly）----
+  // 出典はセル単位の sourceUrl。記入シート reports/chain-db-worklist-2026-09-11.tsv から
+  // scripts/chain-db-from-tsv.mjs --survey-only で生成。記事の表示には使わない。
+  {
+    key: 'ajinomingei',
+    name: '味の民芸',
+    officialUrl: 'https://www.ajino-mingei.co.jp/',
+    koryakuSlug: 'ajino-mingei-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      kidsMenu: V(true, 'アレルゲン情報ページに「お子様松花堂御膳」を掲載', { sourceUrl: 'https://www.ajino-mingei.co.jp/menu/allergic/', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, '公式サイトのアレルゲン情報ページ', { sourceUrl: 'https://www.ajino-mingei.co.jp/menu/allergic/', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: '温め・お湯', value: '△（店舗差が大きい・断定不可）' },
+      { label: 'ガチャ・おもちゃ', value: '△（提供のある店舗も・内容や有無は店舗による）' },
+      { label: 'ポイント', value: '味の民芸は座敷や子ども向け設備が「全店共通」というより、店舗ごとに座敷席数・バンボ・ベビーベッドの有無がかなり違うチェーンです。上の△は特に店舗差が大きい項目。事前に各店の情報を確認するのがおすすめです。' },
+    ],
+  },
+  {
+    key: 'amiyakitei',
+    name: 'あみやき亭',
+    officialUrl: 'https://amiyakitei.jp/',
+    koryakuSlug: 'amiyakitei-kodomo-ryokin',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      zashiki: V(true, '掘りごたつ席・お座敷席を各店で用意（公式「あみやき亭の魅力」）', { sourceUrl: 'https://amiyakitei.jp/concept/', verifiedAt: '2026-09-11' }),
+      kidsMenu: V(true, 'お子様フルセット・お子様カレー等を掲載（一部店舗はメニュー構成が異なる旨の注記あり）', { sourceUrl: 'https://amiyakitei.jp/menu/', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, 'アレルギー成分一覧表（PDF）', { sourceUrl: 'https://amiyakitei.jp/pdf/allergy.pdf', verifiedAt: '2026-09-11' }),
+    },
+  },
+  {
+    key: 'anrakutei',
+    name: '安楽亭',
+    officialUrl: 'https://anrakutei.jp/',
+    koryakuSlug: 'anrakutei-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      stepFree: V('partial', '店舗による（公式店舗検索で入口スロープ表示は129店中37店）', { sourceUrl: 'https://anrakutei.jp/map/result/', verifiedAt: '2026-09-11' }),
+      kidsMenu: V(true, '小学生以下のお子様限定メニュー', { sourceUrl: 'https://anrakutei.jp/menucate/kidsmenu/', verifiedAt: '2026-09-11' }),
+      diaperTable: V('partial', '店舗による（公式店舗検索でおむつ交換台表示は129店中45店）', { sourceUrl: 'https://anrakutei.jp/map/result/', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, 'アレルゲン・栄養成分一覧表', { sourceUrl: 'https://anrakutei.jp/allergy/', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: '席タイプ', value: '座敷・半個室・テーブル席の有無は店舗差あり。0-2歳は座敷、焼き場から離れた壁側に子を座らせられる席が安心' },
+      { label: '煙対策', value: 'ロースター・ダクトの仕様は店舗で差。予約時に「子連れなので煙の少ない席を」と相談を' },
+    ],
+  },
+  {
+    key: 'bandotaro',
+    name: 'ばんどう太郎',
+    officialUrl: 'http://bandotaro.co.jp/',
+    koryakuSlug: 'bandotaro-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      zashiki: V('partial', '店舗による（公式店舗検索で「座敷」表示は44店中42店）', { sourceUrl: 'https://shop.bandotaro.co.jp/', verifiedAt: '2026-09-11' }),
+      kidsChair: V(true, '公式店舗検索の設備表示で全44店に「お子様椅子」', { sourceUrl: 'https://shop.bandotaro.co.jp/', verifiedAt: '2026-09-11' }),
+      kidsMenu: V(true, '公式店舗検索の設備表示で全44店に「お子様メニュー」', { sourceUrl: 'https://shop.bandotaro.co.jp/', verifiedAt: '2026-09-11' }),
+      diaperTable: V('partial', '店舗による（公式店舗検索で「オムツ替えシート」表示は44店中41店）', { sourceUrl: 'https://shop.bandotaro.co.jp/', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, '特定原材料28品目をメニューごとに調査した一覧', { sourceUrl: 'http://bandotaro.co.jp/allergie/', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: '個室', value: '○（個室を備えた店舗が多い・公式店舗検索で絞り込み可）' },
+      { label: '温め・お湯', value: '△（店舗差・断定不可）' },
+      { label: '慶事対応（お食い初め・一升餅）', value: '○（公式メニューあり・3日前までに予約・店舗に要確認）' },
+      { label: 'キッズスペース', value: '△（総本店など一部店舗にあり・公式店舗検索で絞り込み可）' },
+      { label: 'ポイント', value: 'ばんどう太郎で子連れの一番の強みは、座敷・個室でお食い初めや一升餅といった家族行事ができることです。設備は総じて子連れに手厚い傾向ですが、慶事の対応内容や予約期限は店舗ごとに違うので、行事で使うなら早めに店舗へ確認するのが確実です。' },
+    ],
+  },
+  {
+    key: 'choushimaru',
+    name: 'すし銚子丸',
+    officialUrl: 'https://www.choushimaru.co.jp/',
+    koryakuSlug: 'choushimaru-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      stepFree: V('partial', '店舗による（公式店舗ページでスロープ表示は92店中45店）', { sourceUrl: 'https://stores.choushimaru.co.jp/', verifiedAt: '2026-09-11' }),
+      boxSeat: V('partial', '一部店舗のみ（佐倉店の公式店舗ページにファミリーシート（BOX席）表示）', { sourceUrl: 'https://stores.choushimaru.co.jp/138', verifiedAt: '2026-09-11' }),
+      kidsMenu: V(true, 'カロリー・アレルゲン一覧表にキッズ5カンにぎり・おこさまセットを掲載', { sourceUrl: 'https://www.choushimaru.co.jp/pdf/cho_calorie.pdf', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, 'カロリー・アレルゲン一覧表（28品目・PDF）', { sourceUrl: 'https://www.choushimaru.co.jp/pdf/cho_calorie.pdf', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: '温め・お湯', value: '△（粉ミルク用のお湯対応店舗も・店舗差）' },
+      { label: '子育て支援パスポート', value: '○（参加店で特典・自治体差あり）' },
+      { label: 'ポイント', value: 'すし銚子丸で子連れの一番の強みは、子育て支援パスポート参加店での特典と、生もの前の子でも皿単位で食べやすい品を少量ずつ頼めることです。設備は店舗差があるので、離乳食やお湯をあてにするなら事前に確認しておくと確実です。' },
+    ],
+  },
+  {
+    key: 'doutor',
+    name: 'ドトールコーヒーショップ',
+    officialUrl: 'https://www.doutor.co.jp/dcs/',
+    koryakuSlug: 'doutor-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      allergenInfo: V(true, 'アレルギー情報・栄養成分情報検索サイト', { sourceUrl: 'https://allergy.doutor.co.jp/', verifiedAt: '2026-09-11' }),
+    },
+  },
+  {
+    key: 'flyinggarden',
+    name: 'フライングガーデン',
+    officialUrl: 'https://www.fgarden.co.jp/',
+    koryakuSlug: 'flying-garden-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      stepFree: V('partial', '店舗による（公式店舗案内でスロープ/段差なし表示は55店中54店）', { sourceUrl: 'https://www.fgarden.co.jp/restaurant/index.php', verifiedAt: '2026-09-11' }),
+      kidsMenu: V(true, 'メニューページにキッズメニュー（PDF）を掲載', { sourceUrl: 'https://www.fgarden.co.jp/menu/index.php', verifiedAt: '2026-09-11' }),
+      diaperTable: V(true, '公式店舗案内で全55店におむつ交換ベッド表示（女性用トイレ内）', { sourceUrl: 'https://www.fgarden.co.jp/restaurant/index.php', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, 'メニューページにアレルゲン一覧（PDF）を掲載', { sourceUrl: 'https://www.fgarden.co.jp/menu/index.php', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: '温め・お湯', value: '△（店舗差・断定不可）' },
+      { label: 'おもちゃ', value: '✓ お子様メニューに「おもちゃつき」の表記あり（公式）／入店時の配布は店舗差' },
+      { label: 'ポイント', value: 'フライングガーデンは郊外型でテーブル席中心の、一般的なハンバーグレストランに近い使い方のチェーンです。名物・爆弾ハンバーグの加熱に気をつければ、子連れでも使いやすいお店です。子ども椅子や食器、おもちゃは店舗差があるので、あるものとして期待しすぎないのが無難です。' },
+    ],
+  },
+  {
+    key: 'hanayayohei',
+    name: '華屋与兵衛',
+    officialUrl: 'https://www.hanayayohei.co.jp/',
+    koryakuSlug: 'hanaya-yohei-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      stepFree: V('partial', '店舗による（公式店舗検索で「スロープ／エレベーター あり」は33店中3店）', { sourceUrl: 'https://maps.hanayayohei.co.jp/jp/index.html', verifiedAt: '2026-09-11' }),
+      zashiki: V(true, '公式FAQ「お座敷はございます。ご予約いただく事も可能です。」', { sourceUrl: 'https://www.hanayayohei.co.jp/faq/', verifiedAt: '2026-09-11' }),
+      kidsMenu: V(true, undefined, { sourceUrl: 'https://www.hanayayohei.co.jp/menu_hanaya/okosama.html', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, 'メニューごとのアレルゲン28品目一覧', { sourceUrl: 'https://www.hanayayohei.co.jp/allergen/', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: 'テーブル席', value: '✓' },
+      { label: 'ドリンクバー', value: '✓（子ども料金・無料条件は店舗で要確認）' },
+    ],
+  },
+  {
+    key: 'hidakaya',
+    name: '日高屋',
+    officialUrl: 'https://hidakaya.hiday.co.jp/',
+    koryakuSlug: 'hidakaya-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      kidsMenu: V('partial', '一部店舗のみ（お子さまセット【店舗限定】・12歳以下）', { sourceUrl: 'https://hidakaya.hiday.co.jp/hits/ja/menu/1/detail/139.html', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, undefined, { sourceUrl: 'https://hidakaya.hiday.co.jp/hits/ja/menu/allergy.html', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: '入口・通路の広さ', value: '△（駅前小型店は狭いことがある）' },
+      { label: 'テーブル席', value: '△（郊外店・大型店にはあることが多い）' },
+      { label: 'カウンター席', value: '✓（駅前店は中心のことが多い）' },
+      { label: 'お子さまセット（お子様メニュー）', value: '△（一部店舗限定・税込350円・12歳以下対象）' },
+    ],
+  },
+  {
+    key: 'hottomotto',
+    name: 'ほっともっと',
+    officialUrl: 'https://www.hottomotto.com/',
+    koryakuSlug: 'hottomotto-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      allergenInfo: V(true, '各メニューページでアレルギー・原産国・栄養成分を確認できる（公式FAQ）', { sourceUrl: 'https://www.hottomotto.com/qa/', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: 'ネット注文・時間指定', value: 'アプリ・公式サイトで対応（店舗による）。待ち時間対策に有効' },
+      { label: '受け取り方法', value: '店頭受け取り。車・抱っこ・ベビーカーのままでもスムーズ' },
+      { label: '支払い', value: 'クレジット・PayPay・d払い・電子マネー・店頭支払いなど（店舗による）' },
+      { label: 'お子さま向けメニュー', value: 'ドラえもんランチ／ドラミちゃんランチ（ふりかけ・カレー）各520円（税込・2026年9月4日公式確認）。取扱・内容は店舗・時期で変わる' },
+      { label: '食べる場所', value: '自宅・公園・車内。夏場は持ち歩き時間と保冷に注意' },
+    ],
+  },
+  {
+    key: 'ichiran',
+    name: '一蘭',
+    officialUrl: 'https://ichiran.com/',
+    koryakuSlug: 'ichiran-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      kidsChair: V('partial', 'ほとんどの店舗で用意（公式「お子様用の食器や椅子もほとんどの店舗でご用意」）', { sourceUrl: 'https://ichiran.com/app/okosama.html', verifiedAt: '2026-09-11' }),
+      kidsMenu: V('partial', 'お子様ラーメンは一蘭公式アプリ会員限定・小学6年生まで無料。一部店舗は対象外', { sourceUrl: 'https://ichiran.com/app/okosama.html', verifiedAt: '2026-09-11' }),
+      kidsCutlery: V('partial', 'ほとんどの店舗で用意（公式「お子様用の食器や椅子もほとんどの店舗でご用意」）', { sourceUrl: 'https://ichiran.com/app/okosama.html', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, '特定原材料8品目ほか', { sourceUrl: 'https://ichiran.com/ramen/allergie.html', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: 'テーブル席', value: '△（一部店舗）' },
+      { label: 'ポイント', value: '一蘭は立地（路面店・駅ナカ・商業施設内）によって店内の造りが異なります。' },
+    ],
+  },
+  {
+    key: 'kagonoya',
+    name: 'かごの屋',
+    officialUrl: 'https://kagonoya.food-kr.com/',
+    koryakuSlug: 'kagonoya-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      stepFree: V('partial', '店舗による（公式店舗ページの設備欄に「バリアフリー」表示がある店舗は一部）', { sourceUrl: 'https://kagonoya.food-kr.com/0575/', verifiedAt: '2026-09-11' }),
+      zashiki: V('partial', '公式「掘りごたつ風のテーブル席や、椅子タイプのお座敷など」。床に座る座敷とは限らない・店舗による', { sourceUrl: 'https://kagonoya.food-kr.com/about/', verifiedAt: '2026-09-11' }),
+      kidsMenu: V(true, 'お子さまメニュー（小学生以下限定のセットあり）。公式店舗ページでも「お子様メニューあり」', { sourceUrl: 'https://kagonoya.food-kr.com/wp-content/uploads/2026/06/20260701_child.pdf', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, '特定原材料9品目', { sourceUrl: 'https://kagonoya.food-kr.com/menu/e-kizon_calorieallergy/', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: '座席タイプ', value: '座敷・掘りごたつ・個室の有無は店舗差が大きい。0-1歳は「フラット座敷」が下ろしやすい' },
+      { label: 'だしの種類', value: 'まろやかなだし（寄せ鍋・豆乳など）を子ども側に。種類・名称は店舗で変わる' },
+      { label: '混雑時間帯', value: '土日昼・夜はピーク。法事・宴会で座敷が埋まることも。早めの予約が安心' },
+    ],
+  },
+  {
+    key: 'kushikatsutanaka',
+    name: '串カツ田中',
+    officialUrl: 'https://kushi-tanaka.com/',
+    koryakuSlug: 'kushikatsu-tanaka-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      zashiki: V('partial', '一部店舗のみ（公式FAQ「一部店舗には…座敷のお席がございます」・店舗ページの席タイプ表示）', { sourceUrl: 'https://kushi-tanaka.com/contact/', verifiedAt: '2026-09-11' }),
+      boxSeat: V('partial', '一部店舗のみ（公式FAQ「一部店舗には仕切りがある半個室のボックス席」）', { sourceUrl: 'https://kushi-tanaka.com/contact/', verifiedAt: '2026-09-11' }),
+      kidsChair: V('partial', '店舗による（公式店舗検索の提供サービス「子供用イス」表示）', { sourceUrl: 'https://restaurant.kushi-tanaka.com/', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, 'メニューページ・店頭でアレルギー一覧表を確認できる（公式FAQ）', { sourceUrl: 'https://kushi-tanaka.com/menu/', verifiedAt: '2026-09-11' }),
+    },
+  },
+  {
+    key: 'marugenramen',
+    name: '丸源ラーメン',
+    officialUrl: 'https://www.syodai-marugen.jp/',
+    koryakuSlug: 'marugen-ramen-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      zashiki: V('partial', '一部店舗を除く（公式「お座敷席（一部店舗を除く）」）', { sourceUrl: 'https://www.syodai-marugen.jp/about', verifiedAt: '2026-09-11' }),
+      boxSeat: V('partial', '店舗により異なる（公式「カウンターはもちろん、ボックス席、座敷席もある広々した店内」。店舗によりサービス内容が異なる場合ありと注記）', { sourceUrl: 'https://www.syodai-marugen.jp/about', verifiedAt: '2026-09-11' }),
+      kidsChair: V('partial', '店舗により異なる（公式「お子さま用の椅子をご用意しております」。店舗によりサービス内容が異なる場合ありと注記）', { sourceUrl: 'https://www.syodai-marugen.jp/menu/kids', verifiedAt: '2026-09-11' }),
+      kidsMenu: V(true, 'お子さまメニューは小学生まで', { sourceUrl: 'https://www.syodai-marugen.jp/menu/kids', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, '特定原材料8品目', { sourceUrl: 'https://www.monogatari.co.jp/allergy/brand/marugen.php', verifiedAt: '2026-09-11' }),
+    },
+  },
+  {
+    key: 'onyasai',
+    name: 'しゃぶしゃぶ温野菜',
+    officialUrl: 'https://www.onyasai.com/',
+    koryakuSlug: 'onyasai-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      kidsMenu: V(true, 'キッズ料金（食べ放題で小学生未満無料・小学生半額）とキッズドリンクメニュー。お子様セットの記載はなし', { sourceUrl: 'https://www.onyasai.com/menu/menu-kids.php', verifiedAt: '2026-09-11' }),
+      kidsCutlery: V(true, '公式「お子さま用食器＆エプロン」を用意', { sourceUrl: 'https://www.onyasai.com/menu/menu-kids.php', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, '28品目のアレルギー情報PDF', { sourceUrl: 'https://www.onyasai.com/menu/information.php', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: '座席タイプ', value: '半個室・座敷のある店舗だと取り分け・お昼寝がラク。駅前ビル型はベビーカー動線が狭いことも' },
+      { label: '二色鍋・だしの種類', value: 'まろやかなだし（寄せ鍋・豆乳だしなど）を子ども側に。だしの種類・名称は時期で変わる' },
+      { label: '子ども料金', value: '食べ放題は小学生未満無料・小学生半額が通年の基本。最新の対象・条件は要確認' },
+      { label: '混雑時間帯', value: '土日夜はピーク。早めの時間や開店直後がねらい目' },
+    ],
+  },
+  {
+    key: 'originbento',
+    name: 'オリジン弁当',
+    officialUrl: 'https://kitchen-origin.toshu.co.jp/',
+    koryakuSlug: 'origin-bento-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      allergenInfo: V(true, '栄養成分・アレルギー情報をHPで公開（商品ページごとに特定原材料等を表示）', { sourceUrl: 'https://kitchen-origin.toshu.co.jp/about/', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: '量り売り惣菜', value: '子ども用に薄味おかずを少量＋白飯小盛りで取り分けプレートを自作できる' },
+      { label: 'イートイン', value: 'キッチンオリジンの一部店舗にあり（できたてをその場で）。有無は店舗で確認' },
+      { label: '注文方法', value: '店頭注文が基本。店舗によりデリバリーアプリ（出前館・Uber Eats 等）対応。専用ネット注文の可否は店舗・ブランドで差' },
+      { label: 'キッズ向け', value: '専用キッズメニューは限定的。量り売り＋小盛り白飯で代用するのが現実的' },
+      { label: '価格', value: '弁当はワンコイン前後の品もあり、惣菜は量り売りで少量だけ買えてコスパ良' },
+      { label: '持ち歩き', value: 'テイクアウトは食中毒に注意。暑い日は保冷バッグ＋保冷剤、受け取り後は早めに' },
+    ],
+  },
+  {
+    key: 'ringerhut',
+    name: 'リンガーハット',
+    officialUrl: 'https://www.ringerhut.jp/',
+    koryakuSlug: 'ringer-hut-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      kidsMenu: V(true, 'ちびっこセット4種（店舗により一部販売していない商品あり）', { sourceUrl: 'https://www.ringerhut.jp/menu/kids/', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, 'アレルギー表（特定原材料8品目・準ずるもの20品目）', { sourceUrl: 'https://www.ringerhut.jp/quality/allergy-nutrition_value/', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: '座席タイプ', value: 'テーブル席のある店舗だと取り分けがラク。モール内・ロードサイド型はベビーカー動線が良好な傾向' },
+      { label: '減塩・野菜量', value: '減塩メニューや野菜量の選べる商品を活用。子ども用は薄味・少量を意識' },
+      { label: '混雑時間帯', value: '昼ピークは待つことも。早めの時間や開店直後がねらい目' },
+    ],
+  },
+  {
+    key: 'sanmarccafe',
+    name: 'サンマルクカフェ',
+    officialUrl: 'https://www.saint-marc-hd.com/saintmarccafe/',
+    koryakuSlug: 'sanmarc-cafe-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      allergenInfo: V(true, 'グループのアレルゲン検索サイトで8品目・20品目を表示', { sourceUrl: 'https://www.saint-marc-hd.com/hd/company_info/sq/allergen/', verifiedAt: '2026-09-11' }),
+    },
+  },
+  {
+    key: 'sawayaka',
+    name: '炭焼きレストランさわやか',
+    officialUrl: 'https://www.genkotsu-hb.com/',
+    koryakuSlug: 'sawayaka-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      stepFree: V('partial', '店舗による（入口スロープ等は公式店舗ページの設備欄で確認。車椅子入店はスタッフが手伝う）', { sourceUrl: 'https://www.genkotsu-hb.com/faq/', verifiedAt: '2026-09-11' }),
+      kidsChair: V(true, '7ヶ月〜5才未満のお子様用椅子を用意（落下防止ベルト付き）', { sourceUrl: 'https://www.genkotsu-hb.com/faq/', verifiedAt: '2026-09-11' }),
+      kidsMenu: V(true, 'おこさまメニュー（店舗毎にメニューが一部異なる）', { sourceUrl: 'https://www.genkotsu-hb.com/menu/kids/', verifiedAt: '2026-09-11' }),
+      diaperTable: V('partial', '店舗による（多目的トイレ・おむつ交換スペースの有無は公式店舗ページの設備欄で確認）', { sourceUrl: 'https://www.genkotsu-hb.com/faq/', verifiedAt: '2026-09-11' }),
+      strollerToSeat: V(true, 'ベビーカーでの入店可（混雑時はスタッフが手伝う）', { sourceUrl: 'https://www.genkotsu-hb.com/faq/', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, 'アレルゲン検索（特定原材料8品目・準ずるもの20品目）', { sourceUrl: 'https://www.genkotsu-hb.com/arellgen', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: '温め・お湯', value: '△（店舗差・断定不可）' },
+      { label: '待ち時間', value: '✕〜△（人気店は長い・受付制）' },
+      { label: 'ポイント', value: 'さわやかは静岡県を中心に展開する人気チェーンで、とにかく待ち時間が長いのが子連れでは一番のハードルです。設備は一般的なファミレスに近いですが、名物ハンバーグの加熱と待ち時間の2点を先に押さえておくと失敗しません。' },
+    ],
+  },
+  {
+    key: 'starbucks',
+    name: 'スターバックス コーヒー',
+    officialUrl: 'https://www.starbucks.co.jp/',
+    koryakuSlug: 'starbucks-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      allergenInfo: V(true, '特定原材料8品目・準ずるもの20品目・魚介類を表示', { sourceUrl: 'https://www.starbucks.co.jp/allergy/', verifiedAt: '2026-09-11' }),
+    },
+  },
+  {
+    key: 'steakmiya',
+    name: 'ステーキ宮',
+    officialUrl: 'https://www.miya.com/',
+    koryakuSlug: 'steak-miya-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      boxSeat: V('partial', '店舗による（公式店舗ページの座席欄に「ソファー席あり」は102店中5店）', { sourceUrl: 'https://www.miya.com/shop/detail.php?shop_no=1299', verifiedAt: '2026-09-11' }),
+      kidsMenu: V(true, '小学生以下向けキッズメニュー（下田店・羽田空港店は除く。下田店は別メニュー）', { sourceUrl: 'https://www.miya.com/campaign/detail.php?miya_campaign_no=376', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, 'メニュー別アレルギー一覧（特定原材料・準ずるもの）を画像で掲載', { sourceUrl: 'https://www.miya.com/information/detail.php?miya_information_no=215', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: '温め・お湯', value: '△（店舗差・断定不可）' },
+      { label: '熱い鉄板', value: '⚠️（提供直後は非常に熱い・要注意）' },
+      { label: 'ポイント', value: 'ステーキ宮で子連れの一番の注意点は、熱い鉄板とステーキの加熱です。設備面はテーブル席中心で入りやすいですが、鉄板は提供直後が非常に熱く、ソースも跳ねます。子どもの分は大人側で取り分けるのが鉄則です。' },
+    ],
+  },
+  {
+    key: 'sukesanudon',
+    name: '資さんうどん',
+    officialUrl: 'https://www.sukesanudon.com/',
+    koryakuSlug: 'sukesan-udon-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      kidsMenu: V('partial', '一部店舗のみ（公式アレルゲン表でおこさまうどんはららぽーとTOKYO-BAY店限定と記載）', { sourceUrl: 'https://www.sukesanudon.com/wp/wp-content/uploads/2026/09/260903AWGMallergy.pdf', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, '特定原材料8品目を表示（2026年秋冬グランドメニュー）', { sourceUrl: 'https://www.sukesanudon.com/wp/wp-content/uploads/2026/09/260903AWGMallergy.pdf', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: 'カウンター席', value: '✓' },
+      { label: 'うどんを切る道具', value: '✓（トング状の道具が備え付け）' },
+    ],
+  },
+  {
+    key: 'tenkaippin',
+    name: '天下一品',
+    officialUrl: 'https://www.tenkaippin.co.jp/',
+    koryakuSlug: 'tenkaippin-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      kidsChair: V(true, 'お子様仕様の椅子を用意と記載', { sourceUrl: 'https://www.tenkaippin.co.jp/kotteri_kids/', verifiedAt: '2026-09-11' }),
+      kidsMenu: V(true, 'お子様ラーメン（3歳〜小学校入学前）', { sourceUrl: 'https://www.tenkaippin.co.jp/kotteri_kids/', verifiedAt: '2026-09-11' }),
+      kidsCutlery: V(true, 'スプーン/フォーク/箸/麺切りはさみ等を用意と記載', { sourceUrl: 'https://www.tenkaippin.co.jp/kotteri_kids/', verifiedAt: '2026-09-11' }),
+      toriwake: V(true, '取り皿を用意と記載', { sourceUrl: 'https://www.tenkaippin.co.jp/kotteri_kids/', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, '地域別アレルギー情報（一部店舗で扱っていない商品も記載）', { sourceUrl: 'https://www.tenkaippin.co.jp/allergy101/', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: 'カウンター席', value: '✓（中心の店舗もある）' },
+      { label: 'KOTTERIキッズ（無料特典）', value: '✓（3歳〜入学前・条件と対象地域に注意）' },
+    ],
+  },
+  {
+    key: 'tenya',
+    name: '天丼てんや',
+    officialUrl: 'https://www.tenya.co.jp/',
+    koryakuSlug: 'tenya-baby-chair',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      allergenInfo: V(true, '店内メニューのカロリー・アレルギー一覧PDF', { sourceUrl: 'https://www.tenya.co.jp/pdf/allergen-shop.pdf', verifiedAt: '2026-09-11' }),
+    },
+  },
+  {
+    key: 'tullyscoffee',
+    name: 'タリーズコーヒー',
+    officialUrl: 'https://www.tullys.co.jp/',
+    koryakuSlug: 'tullys-coffee-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      kidsMenu: V(true, 'おやこパスタセット・キッズドリンク等', { sourceUrl: 'https://www.tullys.co.jp/menu/kids/', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, '特定原材料8品目＋準ずるもの20品目を表示', { sourceUrl: 'https://www.tullys.co.jp/menu/allergy/', verifiedAt: '2026-09-11' }),
+    },
+  },
+  {
+    key: 'ueshimacoffee',
+    name: '上島珈琲店',
+    officialUrl: 'https://www.ueshima-coffee-ten.jp/',
+    koryakuSlug: 'ueshima-coffee-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      allergenInfo: V(true, 'カロリー・アレルゲン一覧PDF（2026/7/30更新）', { sourceUrl: 'https://www.ueshima-coffee-ten.jp/fileadmin/res/ufs/allergen/calorie_allergen_ueshima260730.pdf', verifiedAt: '2026-09-11' }),
+    },
+  },
+  {
+    key: 'uobei',
+    name: '魚べい',
+    officialUrl: 'https://www.uobei.info/',
+    koryakuSlug: 'uobei-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      stepFree: V('partial', '車いすで利用できるテーブル席・カウンター席と多機能トイレあり（一部店舗除く・グループ共通FAQ）', { sourceUrl: 'https://faq.genki-gdc.co.jp/%E8%BB%8A%E3%81%84%E3%81%99%E3%81%AE%E5%88%A9%E7%94%A8-677ce1f7ebcdc3f8c9b40b25', verifiedAt: '2026-09-11' }),
+      kidsChair: V(true, 'お子様用の椅子を用意（グループ共通FAQ）', { sourceUrl: 'https://faq.genki-gdc.co.jp/%E5%AD%90%E4%BE%9B%E7%94%A8%E3%81%AE%E6%A4%85%E5%AD%90%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B%EF%BC%9F-677ce1f7ebcdc3f8c9b40b28', verifiedAt: '2026-09-11' }),
+      kidsMenu: V(true, 'キッズセットあり（グループ共通FAQ）', { sourceUrl: 'https://faq.genki-gdc.co.jp/%E5%AD%90%E4%BE%9B%E7%94%A8%E3%81%AE%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B%EF%BC%9F-677ce1f72f98ffb6a7a44432', verifiedAt: '2026-09-11' }),
+      babyFoodBringIn: V(true, '一般の飲食物は持ち込み不可だが乳幼児のミルク・離乳食は持ち込み可（グループ共通FAQ）', { sourceUrl: 'https://faq.genki-gdc.co.jp/%E9%A3%B2%E9%A3%9F%E7%89%A9%E3%81%AE%E6%8C%81%E3%81%A1%E8%BE%BC%E3%81%BF%E3%81%AF%E5%8F%AF%E8%83%BD%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F-677ce1f7ebcdc3f8c9b40b2e', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, '魚べい・元気寿司共通のカロリー・アレルゲン・原産地一覧PDF', { sourceUrl: 'https://www.genki-gdc.co.jp/sustainability/safety/', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: '高速レーン（回転しない）', value: '✓（注文品が直接届く）' },
+      { label: 'タッチパネル注文', value: '✓' },
+    ],
+  },
+  {
+    key: 'washokusato',
+    name: '和食さと',
+    officialUrl: 'https://sato-res.com/sato/',
+    koryakuSlug: 'washoku-sato-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      allergenInfo: V(true, '特定原材料8品目の一覧表', { sourceUrl: 'https://sato-res.com/sato/allergy/', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: '個室・半個室', value: '△（店舗による）' },
+      { label: 'ドリンクバー', value: '✓（さとキッズくらぶでキッズ分無料）' },
+      { label: 'タブレット注文', value: '✓（さとしゃぶ・さとすき等）' },
+    ],
+  },
+  {
+    key: 'yakinikuking',
+    name: '焼肉きんぐ',
+    officialUrl: 'https://www.yakiniku-king.jp/',
+    koryakuSlug: 'yakiniku-king-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      kidsChair: V('partial', 'お取り扱いのない店舗あり', { sourceUrl: 'https://www.yakiniku-king.jp/family/', verifiedAt: '2026-09-11' }),
+      kidsMenu: V(false, '「専用のキッズメニューはございません」と明記（食べ放題内にお子様カレー・お子様うどん等あり）', { sourceUrl: 'https://www.yakiniku-king.jp/menu_all/kids/', verifiedAt: '2026-09-11' }),
+      kidsCutlery: V('partial', 'お子様用のお皿・スプーン・フォーク等。お取り扱いのない店舗あり', { sourceUrl: 'https://www.yakiniku-king.jp/family/', verifiedAt: '2026-09-11' }),
+      diaperTable: V('partial', 'お取り扱いのない店舗あり', { sourceUrl: 'https://www.yakiniku-king.jp/family/', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, '特定原材料8品目の一覧表（運営会社サイト）', { sourceUrl: 'https://www.monogatari.co.jp/allergy/brand/king.php', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: '席タイプ', value: 'ボックス席・ソファー席・座敷の有無は店舗差あり。焼き場（網）から離れた奥側に子を座らせられる席が安心' },
+      { label: '個室・半個室', value: '家族で気兼ねなく過ごせる席がある店舗あり。土日は早めの予約が安心' },
+      { label: '煙対策', value: '各席のロースター・ダクトの仕様は店舗で差。予約時に「子連れなので煙の少ない席を」と相談を' },
+    ],
+  },
+  {
+    key: 'yamadaudon',
+    name: '山田うどん食堂',
+    officialUrl: 'https://www.yamada-udon.co.jp/',
+    koryakuSlug: 'yamada-udon-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      kidsMenu: V(true, '小学生以下対象（お子様うどん・そばセット等）', { sourceUrl: 'https://www.yamada-udon.co.jp/menu/kids', verifiedAt: '2026-09-11' }),
+      kidsCutlery: V(true, 'お子様専用の器・フォーク・スプーン等を用意（FAQ）', { sourceUrl: 'https://www.yamada-udon.co.jp/qaquestionnaire', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, 'アレルギー物質7品目の一覧表', { sourceUrl: 'https://www.yamada-udon.co.jp/allergy', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: '温め・お湯', value: '△（店舗差・断定不可）' },
+      { label: '待ち時間', value: '○（回転が速く長時間待ちは少なめの傾向）' },
+      { label: 'ポイント', value: '山田うどん食堂で子連れの最大のポイントは、設備が「店舗によって大きく違う」ことです。座敷やキッズチェアがある店舗を選べれば快適ですが、カウンター中心の店舗もあります。設備をあてにするなら事前確認が確実です。' },
+    ],
+  },
+  {
+    key: 'yuzuan',
+    name: 'ゆず庵',
+    officialUrl: 'https://www.shabu-yuzuan.jp/',
+    koryakuSlug: 'yuzuan-kodzure-koryaku',
+    verifiedAt: '2026-09-11',
+    verifiedMethod: '公式サイト・店舗公開情報の照合',
+    surveyOnly: true,
+    items: {
+      stepFree: V('partial', 'スロープ・エレベーターの有無は店舗により異なる', { sourceUrl: 'https://www.shabu-yuzuan.jp/children/', verifiedAt: '2026-09-11' }),
+      boxSeat: V('partial', '基本的にはソファタイプの席（公式FAQ）', { sourceUrl: 'https://www.shabu-yuzuan.jp/children/', verifiedAt: '2026-09-11' }),
+      kidsChair: V(true, '生後7ヵ月～3才向け。数に限りあり・事前に店舗へ問い合わせ推奨', { sourceUrl: 'https://www.shabu-yuzuan.jp/children/', verifiedAt: '2026-09-11' }),
+      kidsCutlery: V(true, 'お皿・スプーン・フォーク・麺切りハサミ等。数に限りあり', { sourceUrl: 'https://www.shabu-yuzuan.jp/children/', verifiedAt: '2026-09-11' }),
+      diaperTable: V('partial', '多目的トイレに設置（一部店舗を除く）', { sourceUrl: 'https://www.shabu-yuzuan.jp/children/', verifiedAt: '2026-09-11' }),
+      babyFoodBringIn: V(true, '離乳食の温め・ミルク用のお湯に対応と明記', { sourceUrl: 'https://www.shabu-yuzuan.jp/children/', verifiedAt: '2026-09-11' }),
+      strollerToSeat: V('partial', 'ベビーカーのまま利用できるテーブル席あり（席数に限り・事前問い合わせ推奨）', { sourceUrl: 'https://www.shabu-yuzuan.jp/children/', verifiedAt: '2026-09-11' }),
+      allergenInfo: V(true, '特定原材料8品目の一覧表（運営会社サイト）', { sourceUrl: 'https://www.monogatari.co.jp/allergy/brand/yuzu.php', verifiedAt: '2026-09-11' }),
+    },
+    extras: [
+      { label: '座席タイプ', value: 'ソファー席が中心。半個室・掘りごたつのある店舗だと取り分け・お昼寝がラク' },
+      { label: 'キッズ向けメニュー', value: 'フライドポテト・ちくわ磯辺揚げ・いなり寿司・冷やしうどんなど子どもが食べやすい品あり' },
+      { label: '子ども料金', value: '食べ放題は幼児無料・小学生半額が基本。最新の対象・条件は要確認' },
+      { label: '制限時間', value: '食べ放題は時間制（100分制が基本）。0-1歳連れは時間設計に余裕を' },
+      { label: '混雑時間帯', value: '土日夜はピーク。早めの時間や事前予約がねらい目' },
+    ],
+  },
 ];
 
 /** 攻略記事slug → チェーンDB。該当なしは null。 */
 export function getChainFacilitiesForArticle(slug: string): ChainFacilities | null {
-  return CHAIN_FACILITIES.find((c) => c.koryakuSlug === slug) ?? null;
+  return CHAIN_FACILITIES.find((c) => !c.surveyOnly && c.koryakuSlug === slug) ?? null;
 }
 
-/** 比較ハブ等での一覧利用(将来の比較表自動生成用)。 */
+/** 比較ハブ等での一覧利用(将来の比較表自動生成用)。調査用(surveyOnly)は含めない。 */
 export function getAllChainFacilities(): ChainFacilities[] {
+  return CHAIN_FACILITIES.filter((c) => !c.surveyOnly);
+}
+
+/** 調査ページ・集計用。surveyOnly を含む全チェーン。 */
+export function getChainFacilitiesForSurvey(): ChainFacilities[] {
   return CHAIN_FACILITIES;
 }

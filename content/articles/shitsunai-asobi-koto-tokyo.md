@@ -1,12 +1,12 @@
 ---
 slug: shitsunai-asobi-koto-tokyo
-title: 江東区の子供の室内遊び場8選｜児童館・キッズスペース・有料施設【2026年版】
+title: 江東区の子供の室内・屋内遊び場8選｜無料あり・赤ちゃんOK・児童館・キッズスペース【2026年版】
 metaDescription: >-
   江東区で子供（0〜6歳）と室内で遊べるスポット8選。都内に3つしか残っていないボーネルンドの遊び場のひとつ「あそびのせかい 有明ガーデン店」（4階）を平日/休日の料金表つきで解説。ららぽーと豊洲のキドキドは撤退しましたが、無料キッズスペースとベビールーム4か所は健在です。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-09-04'
+updatedAt: '2026-09-12'
 hero: /img/scenes/mallkids-02.webp
 area: tokyo
 quickInfo:

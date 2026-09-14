@@ -1,0 +1,468 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "flyinggarden",
+  "name": "フライングガーデン",
+  "sourceUrl": "https://www.fgarden.co.jp/restaurant/index.php",
+  "method": "公式店舗案内ページの全店舗一覧に付く「特長」アイコン（凡例: スロープ設置／段差なし／おむつ交換ベッド）を店舗ごとに集計",
+  "total": 56,
+  "note": "stepFree の内訳: 入口にスロープ設置 50店、入口に段差がない 5店（両方のアイコンを持つ店は無い前提で合算）。おむつ交換ベッドは女性用トイレ設置と明記",
+  "facilities": {
+    "stepFree": {
+      "count": 55,
+      "label": "入口にスロープを設置／入口に段差がない"
+    },
+    "diaperTable": {
+      "count": 56,
+      "label": "女性用トイレにおむつ交換ベッドを設置"
+    }
+  },
+  "stores": [
+    {
+      "name": "フライングガーデン 伊勢崎宮子店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 前橋文京町店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 高崎上小塙店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 高崎菅谷店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 前橋公田町店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 新桐生店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 太田強戸店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 太田飯塚店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 邑楽町店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 太田新田店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 前橋川原店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 本庄IC店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 加須店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 伊奈学園前店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 東松山IC店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 杉戸高野台店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 鶴ヶ島市役所前店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 春日部南店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 入間店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 北本店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 川越南古谷店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 岩槻店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン ふじみ野店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 狭山店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 越谷総合公園前店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 所沢下富店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン さいたま大和田店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 深谷店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 足利店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 佐野店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 鹿沼店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 栃木店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 今市店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 下戸祭店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 東簗瀬店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 若松原店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 豊郷台店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 下平出店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 氏家店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 小山犬塚店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 小山50号店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 真岡店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 結城店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 下館店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン ひたち野うしく店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 古河店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン つくば西平塚店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 境町店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 海浜公園前店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 笠松運動公園前店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 水戸米沢店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 水戸内原店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 佐倉店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 千葉ニュータウン店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 柏の葉店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "フライングガーデン 流山前ヶ崎店",
+      "url": "https://www.fgarden.co.jp/restaurant/index.php",
+      "facilities": [
+        "stepFree",
+        "diaperTable"
+      ]
+    }
+  ]
+}

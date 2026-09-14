@@ -1,12 +1,12 @@
 ---
 slug: shitsunai-asobi-minato-tokyo
-title: 港区の子供の室内遊び場8選｜児童館・キッズスペース・有料施設【2026年版】
+title: 港区の子供の室内遊び場8選｜赤ちゃんOK・児童館・キッズスペース・有料施設【2026年版】
 metaDescription: >-
   港区で子供（0〜6歳）と室内で遊べるスポット8選。麻布台ヒルズ タワープラザ4階・東京ミッドタウン ガレリア2階・虎ノ門ヒルズ ステーションタワー3階の無料ベビールームを階数と設備つきで比較。区立児童館・子育てひろばも。お台場アネビーとボーネルンド豊洲は閉店済みです。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-09-04'
+updatedAt: '2026-09-12'
 hero: /img/scenes/mallkids-01.webp
 area: tokyo
 quickInfo:

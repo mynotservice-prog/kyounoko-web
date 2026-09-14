@@ -1,0 +1,265 @@
+/* 一覧ページ（/spots・/spots/[cat]・/ranking）固有のリニューアルCSS。
+   docs/renewal-2026-09.md §2 第2版・§3-0（第3版）。
+   共通トークンと共通部品は app/styles/kk.css（編集しない）。すべて .spots-v3 配下にスコープ。
+
+   方針:
+   - 地色は白。コンテンツ（スポット行・カテゴリ・ランキング）はカードにしない。
+   - 丸角を持ってよいのは操作UIだけ = 絞り込みチップ / 並び替え / ボタン / パネル。
+   - セクションの区切りは 余白 と 1px 罫線 で作る。
+   - 絵文字・記号は使わず、線画は KkIcon・カラーイラストは KkArt に置き換える（.tsx 側）。
+   - PC はスマホの引き伸ばしにしない（920px 以上で段組・写真・余白を変える）。 */
+
+.spots-v3 { background: #FFFFFF; }
+
+/* v2.css の `.v2-root a { color: inherit }` に負けないよう文字色を復元 */
+.spots-v3 a.kk-btn { color: #fff; }
+.spots-v3 a.kk-btn.outline { color: var(--kk-ink); }
+.spots-v3 a.kk-chip { color: var(--kk-ink-soft); }
+.spots-v3 a.kk-chip.on { color: #fff; }
+.spots-v3 a.kk-chip:hover { color: var(--kk-orange-deep); }
+.spots-v3 a.kk-sec-more { color: var(--kk-ink-soft); }
+.spots-v3 a.kk-sec-more:hover { color: var(--kk-orange-deep); }
+/* v2.css の `.v2-root button { border:none; background:none; padding:0 }`(0,1,1) の打ち消し */
+.spots-v3 button.kk-btn { padding: 14px 18px; background: var(--kk-orange); border: 1px solid var(--kk-orange); }
+.spots-v3 button.kk-btn.outline { background: transparent; border-color: var(--kk-rule); }
+.spots-v3 button.kk-btn.sm { padding: 8px 13px; }
+.spots-v3 button.kk-chip { padding: 7px 13px; background: transparent; border: 1px solid var(--kk-rule); }
+.spots-v3 button.kk-chip.on { background: var(--kk-orange); border-color: var(--kk-orange); color: #fff; }
+.spots-v3 .kk-chip, .spots-v3 a.kk-chip, .spots-v3 button.kk-chip { font-size: 14px; padding: 8px 14px; }
+
+/* 見出し装飾（斜線・左のオレンジバー）は出さない */
+.spots-v3 .kk-sec-title::before,
+.spots-v3 .kk-sec-title::after { content: none !important; display: none !important; }
+.spots-v3 .v2-bar-accent { display: none !important; }
+
+/* ===========================================================
+   1. ページ見出し（文字と余白だけで成立させる）
+   =========================================================== */
+.sv3-head { padding: 14px 18px 0; }
+.sv3-crumb {
+  display: flex; align-items: center; gap: 7px; flex-wrap: wrap;
+  font-size: 12.5px; font-weight: 700; color: var(--kk-ink-mute); margin-bottom: 10px;
+}
+.spots-v3 a.sv3-crumb-link { color: var(--kk-ink-mute); }
+.spots-v3 a.sv3-crumb-link:hover { color: var(--kk-orange-deep); }
+.sv3-crumb-sep { color: var(--kk-rule); }
+
+.sv3-h1 {
+  display: flex; align-items: center; gap: 12px;
+  margin: 0;
+  font-family: var(--kk-display); font-weight: 800;
+  font-size: var(--kk-h1); line-height: 1.4; letter-spacing: .01em; color: var(--kk-ink);
+}
+.sv3-h1-art { flex: none; display: flex; }
+@media (max-width: 419px) { .sv3-h1 { gap: 10px; } .sv3-h1-art img { width: 34px; height: 34px; } }
+.sv3-lead {
+  margin: 12px 0 0;
+  font-size: var(--kk-body-size); line-height: 1.9; font-weight: 500; color: var(--kk-ink);
+}
+.sv3-lead strong { font-weight: 700; color: var(--kk-orange-deep); }
+
+/* ===========================================================
+   2. 操作UI（絞り込み・並び替え）— ここだけ丸角と面を持ってよい
+   =========================================================== */
+.sv3-controls {
+  margin: 20px 18px 0; padding-top: 18px;
+  border-top: 1px solid var(--kk-rule-soft);
+}
+.sv3-bar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.spots-v3 button.sv3-filter-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 16px; border-radius: var(--kk-r-pill);
+  border: 1px solid var(--kk-rule); background: #fff;
+  font-family: inherit; font-size: 14.5px; font-weight: 700; color: var(--kk-ink);
+  cursor: pointer;
+}
+.spots-v3 button.sv3-filter-btn.on { border-color: var(--kk-orange); color: var(--kk-orange-deep); }
+.sv3-filter-caret { display: flex; transition: transform .14s; }
+.spots-v3 button.sv3-filter-btn[aria-expanded='true'] .sv3-filter-caret { transform: rotate(180deg); }
+
+.sv3-sort { display: inline-flex; align-items: center; gap: 7px; margin-left: auto; color: var(--kk-ink-mute); }
+.sv3-sort select {
+  border: 1px solid var(--kk-rule); border-radius: var(--kk-r-ui);
+  padding: 10px 10px; background: #fff; color: var(--kk-ink);
+  font-family: inherit; font-size: 14px; font-weight: 700;
+}
+
+/* 適用中の条件（個別解除） */
+.sv3-applied { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.spots-v3 button.sv3-applied-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 12px; border-radius: var(--kk-r-pill);
+  border: 1px solid var(--kk-orange); background: #fff;
+  font-family: inherit; font-size: 13.5px; font-weight: 700; color: var(--kk-orange-deep);
+  cursor: pointer;
+}
+.sv3-applied-x { display: flex; transform: rotate(45deg); }
+
+/* 絞り込みパネル */
+.sv3-panel {
+  margin-top: 14px; padding: 18px 16px 16px;
+  border: 1px solid var(--kk-rule); border-radius: var(--kk-r-ui); background: #fff;
+}
+.sv3-group + .sv3-group { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--kk-rule-soft); }
+.sv3-group-lab {
+  margin: 0 0 10px; font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--kk-ink-soft);
+}
+.sv3-panel-foot { display: flex; align-items: center; gap: 12px; margin-top: 20px; }
+.spots-v3 button.sv3-reset {
+  padding: 12px 4px; border: 0; background: none;
+  font-family: inherit; font-size: 14px; font-weight: 700; color: var(--kk-ink-soft);
+  text-decoration: underline; text-underline-offset: 3px; cursor: pointer;
+}
+.spots-v3 button.sv3-apply { flex: 1; }
+.spots-v3 button.sv3-apply[disabled] {
+  background: var(--kk-grey-bg); border-color: var(--kk-rule-soft); color: var(--kk-grey); cursor: not-allowed;
+}
+
+/* 件数 */
+.sv3-count {
+  margin: 26px 18px 0;
+  font-size: 15px; font-weight: 700; color: var(--kk-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 該当なし */
+.sv3-empty { margin: 34px 18px 0; padding-top: 26px; border-top: 1px solid var(--kk-rule-soft); text-align: center; }
+.sv3-empty-art { display: flex; justify-content: center; margin-bottom: 14px; }
+.sv3-empty-title { margin: 0; font-family: var(--kk-display); font-size: var(--kk-h3); font-weight: 700; line-height: 1.5; color: var(--kk-ink); }
+.sv3-empty-sub { margin: 10px 0 18px; font-size: 15px; line-height: 1.9; color: var(--kk-ink-soft); }
+
+/* ===========================================================
+   3. スポットの行（カードにしない。1px の罫線で仕切る）
+   =========================================================== */
+.spots-v3 .v2-vlist { gap: 0; margin-top: 6px; }
+.spots-v3 .v2-card-row {
+  position: relative;
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 16px 0; border-radius: 0; background: transparent; box-shadow: none;
+  border-bottom: 1px solid var(--kk-rule-soft);
+}
+.spots-v3 .v2-vlist > .v2-card-row:first-child { border-top: 1px solid var(--kk-rule-soft); }
+/* 「もっと見る」で開く残りの行は直前の行に続くので、上罫線を二重にしない */
+.spots-v3 .sv3-rest > .v2-card-row:first-child { border-top: 0; }
+.spots-v3 .v2-card-row:active { transform: none; }
+.spots-v3 .v2-card-row .v2-imgwrap {
+  width: 108px !important; min-width: 108px !important;
+  aspect-ratio: 4 / 3 !important; border-radius: var(--kk-r-img) !important;
+  background: #F2F2F2;
+}
+.spots-v3 .v2-card-row-body { gap: 7px; }
+.spots-v3 .v2-card-row-cat {
+  font-size: 12px; font-weight: 700; letter-spacing: .04em; color: var(--kk-orange-deep); margin-bottom: 2px;
+}
+.spots-v3 .v2-card-row-title { font-size: 16.5px; font-weight: 700; line-height: 1.6; color: var(--kk-ink); }
+.spots-v3 .v2-card-row:hover .v2-card-row-title { color: var(--kk-orange-deep); }
+.spots-v3 .v2-tag {
+  border-radius: 4px; background: var(--kk-paper-deep); color: var(--kk-ink-soft);
+  font-size: 12px; font-weight: 700; padding: 3px 8px;
+}
+.spots-v3 .v2-card-v-loc { font-size: 13px; font-weight: 700; color: var(--kk-ink-mute); }
+.spots-v3 .v2-fav-btn.static { width: 24px; height: 24px; }
+
+/* .kk-sec と .v2-vlist の左右パディングが二重にならないようにする */
+.spots-v3 .kk-sec .v2-vlist { padding-left: 0; padding-right: 0; }
+.spots-v3 .kk-sec .sv3-more { margin-left: 0; margin-right: 0; }
+
+/* もっと見る／すべて見る */
+.sv3-more { margin: 20px 18px 0; display: flex; justify-content: center; }
+.spots-v3 .sv3-more .kk-btn { width: 100%; max-width: 420px; }
+
+/* ===========================================================
+   4. カテゴリから探す（罫線グリッド。丸角カードにしない）
+   =========================================================== */
+.sv3-types {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px; background: var(--kk-rule-soft);
+  border: 1px solid var(--kk-rule-soft);
+}
+.spots-v3 a.sv3-type {
+  display: flex; align-items: center; gap: 12px;
+  min-height: 74px; padding: 14px 12px;
+  background: #fff; color: var(--kk-ink); border-radius: 0;
+}
+.sv3-type-ico { flex: none; display: inline-flex; }
+.sv3-type-label { font-size: 14.5px; font-weight: 700; line-height: 1.45; }
+.spots-v3 a.sv3-type:hover { color: var(--kk-orange-deep); }
+@media (max-width: 359px) { .sv3-types { grid-template-columns: minmax(0, 1fr); } }
+
+/* カテゴリ節の間は余白と罫線で分ける */
+.sv3-catsec { margin-top: 46px; }
+.sv3-catsec + .sv3-catsec { padding-top: 34px; border-top: 1px solid var(--kk-rule-soft); margin-top: 34px; }
+
+/* ===========================================================
+   5. ランキング（大きなオレンジの数字 → 見出し → 写真）
+   =========================================================== */
+.spots-v3 .sv3-rank .v2-vlist { margin-top: 0; }
+.spots-v3 .sv3-rank .v2-card-row { padding: 16px 0 16px 38px; align-items: center; }
+.spots-v3 .sv3-rank .v2-card-row .v2-imgwrap {
+  order: 2; position: static !important;
+  width: 88px !important; min-width: 88px !important; aspect-ratio: 4 / 3 !important;
+}
+.spots-v3 .sv3-rank .v2-card-row-body { order: 1; }
+.spots-v3 .sv3-rank .v2-rank {
+  position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+  width: 30px; height: auto; border-radius: 0;
+  background: none; box-shadow: none;
+  font-family: var(--kk-display); font-size: 23px; font-weight: 700; line-height: 1;
+  color: var(--kk-orange); font-variant-numeric: tabular-nums; text-align: center;
+}
+
+/* ランキングの絞り込み（年齢・エリア）は静かなチップ列で */
+.sv3-tabs { margin: 22px 18px 0; }
+.sv3-facet { margin: 18px 18px 0; }
+.sv3-facet-lab { margin: 0 0 10px; font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--kk-ink-soft); }
+.sv3-scope {
+  display: flex; align-items: baseline; gap: 10px;
+  margin: 34px 18px 0; padding-top: 22px; border-top: 1px solid var(--kk-rule-soft);
+}
+.sv3-scope-title {
+  font-family: var(--kk-display); font-weight: 700; font-size: var(--kk-h2); line-height: 1.5; color: var(--kk-ink);
+}
+.sv3-scope-count { font-size: 14px; font-weight: 700; color: var(--kk-orange-deep); font-variant-numeric: tabular-nums; }
+
+/* 広告枠は前後を余白で切り離す（面は付けない） */
+.spots-v3 .sv3-ad { margin-top: 30px; }
+
+/* ===========================================================
+   6. デスクトップ（≥920px）— スマホの引き伸ばしにしない
+   =========================================================== */
+@media (min-width: 920px) {
+  .sv3-head { padding: 26px 4px 0; }
+  .sv3-lead { max-width: 68ch; margin-top: 16px; }
+  .sv3-controls { margin: 30px 4px 0; padding-top: 24px; }
+  .sv3-count { margin: 34px 4px 0; font-size: 16px; }
+  .sv3-more { margin: 28px 4px 0; }
+  .sv3-empty { margin: 44px 4px 0; }
+  .sv3-tabs, .sv3-facet { margin-left: 4px; margin-right: 4px; }
+  .sv3-scope { margin: 48px 4px 0; padding-top: 30px; }
+
+  .spots-v3 .v2-vlist { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 44px; }
+  .spots-v3 .v2-vlist > .v2-card-row:nth-child(2) { border-top: 1px solid var(--kk-rule-soft); }
+  .spots-v3 .v2-card-row { padding: 18px 0; }
+  .spots-v3 .v2-card-row .v2-imgwrap { width: 124px !important; min-width: 124px !important; }
+  .spots-v3 .v2-card-row-title { font-size: 17px; }
+
+  /* ランキングは1列。横に間延びしないよう読み幅を決める */
+  .spots-v3 .sv3-rank .v2-vlist { grid-template-columns: minmax(0, 1fr); max-width: 860px; }
+  .spots-v3 .sv3-rank .v2-vlist > .v2-card-row:nth-child(2) { border-top: 0; }
+  .spots-v3 .sv3-rank .v2-card-row { padding: 18px 0 18px 46px; }
+  .spots-v3 .sv3-rank .v2-rank { font-size: 27px; width: 34px; }
+
+  .sv3-types { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .spots-v3 a.sv3-type { min-height: 92px; padding: 18px 16px; gap: 14px; }
+  .sv3-type-label { font-size: 15.5px; }
+
+  .sv3-catsec { margin-top: 64px; }
+  .sv3-catsec + .sv3-catsec { margin-top: 48px; padding-top: 48px; }
+
+  .spots-v3 .kk-sec { padding: 0 4px; }
+  .spots-v3 .kk-chip, .spots-v3 a.kk-chip, .spots-v3 button.kk-chip { font-size: 14.5px; padding: 9px 16px; }
+}
+
+/* PWA の固定バナー（画面下）とフッターの重なり回避 */
+.spots-v3 .kk-footer { padding-bottom: 96px; }
+@media (min-width: 920px) { .spots-v3 .kk-footer { padding-bottom: 56px; } }

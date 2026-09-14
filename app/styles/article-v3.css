@@ -1,0 +1,1109 @@
+/* ===========================================================
+   article ページ固有のリニューアルCSS（docs/renewal-2026-09.md §2 第2版 / §3-1）
+   共通部品は app/styles/kk.css。globals.css の記事スタイルはここで
+   .article-v3 配下に限定して上書きする（globals / v2 / kk は編集しない）。
+   前提: .v2-root 配下（--v2-* / --kk-* トークン利用可）。
+
+   第2版の方針（社長フィードバック）:
+   - 地色は紙色。白い面を作らない。
+   - 丸角カードは操作UI（ボタン・目次トグル・小さなステータス）と写真(6px)だけ。
+     まとめ／クイック情報／設備／FAQ／回遊／著者／シェア／駅CTA は
+     「面のない、罫線と余白のブロック」にする。
+   - 見出しは Klee One（--kk-display）。本文は Noto Sans JP。表情差をつける。
+   - オレンジ斜線・左のオレンジバー・見出しの丸ドットは全廃。
+   - セクションごとにリズムを変える（まとめ=左罫線の引用ブロック / FAQ=罫線区切りの行 /
+     回遊=行リスト / 本文=読み物）。
+   =========================================================== */
+
+/* ---------- ページ地色: 紙色（body の地をそのまま見せる） ---------- */
+.article-v3 {
+  background: transparent;
+  color: var(--kk-ink);
+  font-family: var(--kk-body);
+}
+
+/* ---------- パンくず ---------- */
+.article-v3 .breadcrumb {
+  padding: 12px 0 0;
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--kk-ink-mute);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.article-v3 .breadcrumb .sep { margin: 0 6px; color: var(--kk-rule); }
+.article-v3 .breadcrumb a:hover { color: var(--kk-orange-deep); }
+
+/* ===========================================================
+   ヘッダー（カテゴリ → H1 → メタ → タグ → hero → lede）
+   =========================================================== */
+.article-v3 .page-head { padding: 14px 0 4px; }
+.article-v3 .page-head .eyebrow {
+  margin-bottom: 10px;
+  font-family: var(--kk-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-transform: none;
+  color: var(--kk-ink-mute);
+  gap: 0;
+}
+/* 旧デザインのオレンジ短線アクセントは廃止 */
+.article-v3 .page-head .eyebrow::before { content: none !important; display: none !important; }
+
+.article-v3 .page-head h1 {
+  font-family: var(--kk-display);
+  font-weight: 800;
+  font-size: var(--kk-h1);
+  line-height: 1.5;
+  letter-spacing: .015em;
+  margin: 0 0 14px;
+  color: var(--kk-ink);
+  text-wrap: balance;
+}
+
+.article-v3 .article-meta {
+  margin: 0 0 14px;
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--kk-ink-mute);
+  letter-spacing: 0;
+  gap: 4px 10px;
+  line-height: 1.6;
+}
+.article-v3 .article-meta-item svg { color: var(--kk-ink-mute); }
+.article-v3 .article-meta-item a { color: inherit; }
+.article-v3 .article-meta-item strong { color: var(--kk-ink-soft); font-weight: 700; }
+.article-v3 .article-meta-sep { color: var(--kk-rule); }
+
+.article-v3 .av3-tags { margin: 0 0 16px; }
+
+/* hero は写真。角丸は軽く（6px）だけ。 */
+.article-v3 .av3-hero { margin: 0 0 20px; }
+.article-v3 .av3-hero-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--kk-r-img);
+  background-color: var(--kk-paper-deep);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.article-v3 .av3-hero-credit {
+  margin: 7px 0 0;
+  font-size: 11px;
+  color: var(--kk-ink-mute);
+  text-align: right;
+}
+
+/* lede は本文よりわずかに大きく、ゆったり */
+.article-v3 .page-head .lead {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.95;
+  color: var(--kk-ink);
+  max-width: none;
+  margin: 0;
+}
+.article-v3 .page-head .lead strong { color: var(--kk-ink); font-weight: 700; }
+
+/* 保存・やってみた（操作UI） */
+.article-v3 .av3-actions {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  margin-top: 18px; padding-top: 16px;
+  border-top: 1px solid var(--kk-rule-soft);
+}
+
+.article-v3 .affiliate-pr-badge { margin: 10px 0 12px; }
+
+/* ===========================================================
+   「今日選ぶなら、これ。」— 面をやめ、上下の罫線で囲った断定ブロック
+   =========================================================== */
+.article-v3 .top-pick-box {
+  margin: 30px 0 26px;
+  padding: 18px 0 18px;
+  background: none;
+  border: 0;
+  border-top: 1px solid var(--kk-rule);
+  border-bottom: 1px solid var(--kk-rule);
+  border-radius: 0;
+  box-shadow: none;
+}
+.article-v3 .top-pick-box .top-pick-eyebrow {
+  font-family: var(--kk-body);
+  font-size: 11.5px; font-weight: 700; letter-spacing: .04em; text-transform: none;
+  color: var(--kk-ink-mute); padding-left: 0; margin-bottom: 8px;
+}
+.article-v3 .top-pick-box .top-pick-eyebrow::before { content: none; }
+.article-v3 .top-pick-box .top-pick-title {
+  font-family: var(--kk-display); font-weight: 700; font-size: 20px;
+  line-height: 1.5; letter-spacing: .01em; margin: 0 0 10px; color: var(--kk-ink);
+}
+.article-v3 .top-pick-box .top-pick-name {
+  font-family: var(--kk-display); font-weight: 700; font-size: 18px; line-height: 1.55;
+  color: var(--kk-orange-deep);
+  background: none; border: 0; border-radius: 0;
+  padding: 0; margin-bottom: 10px;
+}
+.article-v3 .top-pick-box .top-pick-desc {
+  font-size: 14px; line-height: 1.9; color: var(--kk-ink-soft); margin: 0 0 12px;
+}
+.article-v3 .top-pick-box .top-pick-note {
+  font-size: 11.5px; color: var(--kk-ink-mute); line-height: 1.7;
+  padding-top: 0; border-top: 0; margin: 0;
+}
+
+/* ===========================================================
+   まとめ（この記事でわかること）
+   面も枠も持たず、左の1px罫線＋インデントだけ。本文とリズムを変える。
+   =========================================================== */
+.article-v3 .tldr-box {
+  margin: 26px 0 22px;
+  padding: 2px 0 2px 18px;
+  background: none;
+  border: 0;
+  border-left: 1px solid var(--kk-rule);
+  border-radius: 0;
+}
+.article-v3 .tldr-box .tldr-eyebrow {
+  display: block;
+  font-family: var(--kk-display);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-transform: none;
+  color: var(--kk-ink);
+  margin-bottom: 10px;
+}
+.article-v3 .tldr-box .tldr-text {
+  font-family: var(--kk-body);
+  font-size: 15.5px;
+  line-height: 1.95;
+  font-weight: 500;
+  color: var(--kk-ink);
+  margin: 0;
+}
+.article-v3 .tldr-box .tldr-text.prose p { color: inherit; margin: .7em 0; }
+.article-v3 .tldr-box .tldr-text.prose h3 {
+  font-size: 15px; margin: 1em 0 .4em; padding: 0; border: 0;
+}
+.article-v3 .tldr-box .tldr-text.prose h3::before { content: none; }
+.article-v3 .tldr-box .tldr-text.prose ul,
+.article-v3 .tldr-box .tldr-text.prose ol { margin: .6em 0; padding-left: 0; }
+.article-v3 .tldr-box .tldr-text.prose li { margin-bottom: .35em; }
+.article-v3 .tldr-box .tldr-text.prose .av3-tbl { margin: .9em 0; }
+
+/* ===========================================================
+   結論直下の回遊チップ（ClusterNav）— 枠なし。見出し＋チップだけ。
+   =========================================================== */
+.article-v3 .cluster-nav {
+  margin: 0 0 26px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+.article-v3 .cluster-nav-heading {
+  font-family: var(--kk-body);
+  color: var(--kk-ink-mute);
+  font-size: 12px; font-weight: 700; letter-spacing: .03em;
+  margin-bottom: 10px;
+}
+.article-v3 .cluster-nav-list { gap: 8px; }
+.article-v3 .cluster-nav-chip {
+  display: inline-flex; align-items: center; min-height: 38px;
+  padding: 7px 14px;
+  border: 1px solid var(--kk-rule);
+  border-radius: var(--kk-r-pill);
+  background: transparent;
+  color: var(--kk-ink);
+  font-size: 13px; font-weight: 700; line-height: 1.3;
+  transition: border-color .12s, color .12s;
+}
+.article-v3 .cluster-nav-chip:hover,
+.article-v3 .cluster-nav-chip:active {
+  border-color: var(--kk-orange); background: transparent; color: var(--kk-orange-deep);
+}
+
+/* ===========================================================
+   クイック情報 — 箱をやめ、上下の細い罫線で挟んだ一行の項目列
+   =========================================================== */
+.article-v3 .av3-quick {
+  margin: 22px 0;
+  padding: 14px 0;
+  background: none;
+  border: 0;
+  border-top: 1px solid var(--kk-rule-soft);
+  border-bottom: 1px solid var(--kk-rule-soft);
+  border-radius: 0;
+}
+.article-v3 .av3-quick-grid {
+  display: grid; gap: 12px 22px;
+  grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+}
+.article-v3 .av3-quick-item { display: flex; flex-direction: column; gap: 3px; }
+.article-v3 .av3-quick-label {
+  font-size: 10.5px; font-weight: 700; color: var(--kk-ink-mute); letter-spacing: .05em;
+}
+.article-v3 .av3-quick-val { font-size: 14px; font-weight: 700; color: var(--kk-ink); line-height: 1.5; }
+
+/* ===========================================================
+   目次 — 開閉する操作UIなので角丸を許可（ただし面は紙色・影なし）
+   =========================================================== */
+.article-v3 .toc-mobile {
+  background: var(--kk-paper-soft);
+  border: 1px solid var(--kk-rule);
+  border-radius: var(--kk-r-ui);
+  margin: 20px 0 30px;
+}
+.article-v3 .toc-mobile > summary {
+  font-family: var(--kk-display); font-weight: 700; font-size: 15px;
+  padding: 13px 15px; color: var(--kk-ink);
+}
+.article-v3 .toc-mobile .toc-count {
+  font-family: var(--kk-body); letter-spacing: .02em; text-transform: none;
+  font-size: 11px; font-weight: 700; color: var(--kk-ink-mute);
+}
+.article-v3 .toc-mobile[open] > summary { border-bottom-color: var(--kk-rule-soft); }
+.article-v3 .toc-mobile .toc-item a { color: var(--kk-ink-soft); font-size: 13.5px; }
+.article-v3 .toc-mobile .toc-item a:hover { background: var(--kk-paper-deep); color: var(--kk-ink); }
+.article-v3 .toc-mobile .toc-num {
+  font-family: var(--kk-body); color: var(--kk-ink-mute); letter-spacing: .04em; font-weight: 700;
+}
+.article-v3 .toc .toc-item-h3 a { color: var(--kk-ink-mute); }
+.article-v3 .toc .toc-sub-dot { color: var(--kk-rule); }
+/* 目次（デスクトップ・サイドバー） */
+.article-v3 .toc-desktop .toc-head { border-bottom-color: var(--kk-rule); }
+.article-v3 .toc-desktop .toc-eyebrow {
+  font-family: var(--kk-body); letter-spacing: .06em; text-transform: uppercase;
+  color: var(--kk-ink-mute); font-size: 10px; font-weight: 700;
+}
+.article-v3 .toc-desktop .toc-title { font-family: var(--kk-display); font-weight: 700; font-size: 16px; }
+.article-v3 .toc-desktop .toc-item a { color: var(--kk-ink-soft); }
+.article-v3 .toc-desktop .toc-item a:hover {
+  background: var(--kk-paper-deep); color: var(--kk-ink); border-left-color: var(--kk-orange);
+}
+.article-v3 .toc-desktop .toc-num { font-family: var(--kk-body); color: var(--kk-ink-mute); font-weight: 700; }
+.article-v3 .toc-fab { background: var(--kk-orange); box-shadow: none; }
+
+/* ===========================================================
+   本文（.prose）— 本文は Noto Sans JP、見出しは Klee One
+   =========================================================== */
+/* 本文（2026-09-08 社長指示）
+   見出しは太いまま、本文だけ Regular で軽くし、段落間にしっかり余白を取る。
+   行間（1.95）と段落間（1.7em）に明確な差をつけて、スマホで長文を読んだときの圧迫感を減らす。 */
+.article-v3 .prose {
+  font-family: var(--kk-body);
+  font-size: var(--kk-body-size);
+  font-weight: 400;
+  line-height: var(--kk-body-lh);
+  letter-spacing: .01em;
+  color: var(--kk-body-color);
+  padding-bottom: 12px;
+}
+.article-v3 .prose p { color: var(--kk-body-color); margin: 0 0 var(--kk-body-gap); font-weight: 400; }
+.article-v3 .prose p:last-child { margin-bottom: 0; }
+.article-v3 .prose ul,
+.article-v3 .prose ol { margin: 0 0 var(--kk-body-gap); color: var(--kk-body-color); font-weight: 400; }
+.article-v3 .prose li { line-height: var(--kk-body-lh); margin-bottom: .7em; }
+.article-v3 .lead,
+.article-v3 .page-head .lead { font-weight: 400; color: var(--kk-body-color); }
+.article-v3 .prose strong {
+  color: var(--kk-ink);
+  font-weight: 700;
+  background: linear-gradient(transparent 64%, var(--kk-orange-tint) 64%);
+}
+.article-v3 .prose em { font-style: normal; color: var(--kk-orange-deep); font-weight: 700; }
+.article-v3 .prose a {
+  color: var(--kk-orange-deep);
+  border-bottom: 1px solid rgba(238, 122, 46, .4);
+  font-weight: 700;
+}
+.article-v3 .prose a:hover {
+  color: var(--kk-orange-deep); border-bottom-color: var(--kk-orange-deep); background: transparent;
+}
+.article-v3 .prose a.auto-internal-link { border-bottom: 1px dotted rgba(238, 122, 46, .45); }
+
+/* --- 見出し: 装飾なし。書体・サイズ・余白だけで段差をつける --- */
+.article-v3 .prose h2 {
+  font-family: var(--kk-display);
+  font-weight: 700;
+  font-size: var(--kk-h2);
+  line-height: 1.55;
+  letter-spacing: .02em;
+  color: var(--kk-ink);
+  margin: 54px 0 16px;
+  padding: 22px 0 0;
+  border: 0;
+  border-top: 1px solid var(--kk-rule-soft);
+  text-wrap: balance;
+}
+.article-v3 .prose h2::before { content: none !important; display: none !important; }
+.article-v3 .prose > h2:first-child { margin-top: 8px; padding-top: 0; border-top: 0; }
+
+.article-v3 .prose h3 {
+  font-family: var(--kk-display);
+  font-weight: 700;
+  font-size: var(--kk-h3);
+  line-height: 1.6;
+  letter-spacing: .01em;
+  margin: 34px 0 10px;
+  padding: 0;
+  border: 0;
+  color: var(--kk-ink);
+}
+.article-v3 .prose h3::before { content: none !important; display: none !important; }
+
+.article-v3 .prose h4 {
+  font-family: var(--kk-display);
+  font-weight: 700;
+  font-size: 15.5px;
+  line-height: 1.6;
+  margin: 26px 0 8px;
+  color: var(--kk-ink-soft);
+}
+
+/* --- リスト: 記号は控えめに（丸の中に白抜き数字＝カード感をやめる） --- */
+.article-v3 .prose ul,
+.article-v3 .prose ol { list-style: none; padding-left: 0; margin: 1.1em 0; color: var(--kk-ink); }
+.article-v3 .prose li { position: relative; margin-bottom: .55em; line-height: 1.9; }
+.article-v3 .prose ul > li { padding-left: 17px; }
+.article-v3 .prose ul > li::before {
+  content: '';
+  position: absolute; left: 2px; top: .82em;
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--kk-orange);
+}
+.article-v3 .prose ul ul { margin: .4em 0 .2em; }
+.article-v3 .prose ul ul > li::before {
+  width: 5px; height: 5px; background: transparent; border: 1px solid var(--kk-orange); left: 2px;
+}
+.article-v3 .prose ol { counter-reset: av3-ol; }
+.article-v3 .prose ol > li { padding-left: 26px; counter-increment: av3-ol; }
+.article-v3 .prose ol > li::before {
+  content: counter(av3-ol) '.';
+  position: absolute; left: 0; top: 0;
+  width: 22px; text-align: left;
+  background: none; border-radius: 0;
+  color: var(--kk-orange-deep);
+  font-family: var(--kk-body);
+  font-size: 13.5px; font-weight: 700; line-height: inherit;
+  font-variant-numeric: tabular-nums;
+}
+.article-v3 .prose ol ol { margin: .4em 0 .2em; }
+.article-v3 .prose ol ol > li::before { color: var(--kk-ink-mute); }
+.article-v3 .prose li > p { margin: .3em 0; }
+
+/* --- 表: 外枠の丸角箱をやめる。横スクロールと罫線だけ --- */
+.article-v3 .av3-tbl {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.4em 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+.article-v3 .av3-tbl > table {
+  display: table;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid var(--kk-rule);
+  border-radius: 0;
+  border-collapse: collapse;
+  overflow: visible;
+  background: none;
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+.article-v3 .prose table thead { background: none; }
+.article-v3 .prose table th,
+.article-v3 .prose table td {
+  padding: 10px 12px 10px 0;
+  border: 0;
+  border-bottom: 1px solid var(--kk-rule-soft);
+  background: none;
+  vertical-align: top;
+  text-align: left;
+  color: var(--kk-ink);
+  min-width: 92px;
+}
+.article-v3 .prose table thead th {
+  font-family: var(--kk-body);
+  font-weight: 700;
+  letter-spacing: .01em;
+  color: var(--kk-ink-soft);
+  background: var(--kk-paper-deep);
+  padding-left: 12px;
+  white-space: nowrap;
+  border-bottom-color: var(--kk-rule);
+}
+/* 先頭列は横スクロール時に左へ固定する（globals.css のモバイル指定）。
+   ここで `background: none` にすると固定セルが透け、隣の列の文字が重なって見える。
+   行の不透明な背景をそのまま引き継ぐこと。 */
+.article-v3 .prose table tbody th,
+.article-v3 .prose table tbody td:first-child {
+  background-color: inherit; font-weight: 700; color: var(--kk-ink);
+}
+.article-v3 .prose table tbody tr:nth-child(even) { background: #FAFAF9; }
+.article-v3 .prose table tbody tr:last-child th,
+.article-v3 .prose table tbody tr:last-child td { border-bottom: 0; }
+
+.article-v3 .prose blockquote {
+  margin: 1.5em 0;
+  padding: 2px 0 2px 16px;
+  border: 0;
+  border-left: 1px solid var(--kk-rule);
+  background: none;
+  color: var(--kk-ink-soft);
+  border-radius: 0;
+}
+.article-v3 .prose code {
+  background: var(--kk-paper-deep); color: var(--kk-orange-deep); border-color: var(--kk-rule-soft);
+}
+.article-v3 .prose pre { background: var(--kk-paper-deep); border-color: var(--kk-rule-soft); border-radius: var(--kk-r-ui); }
+.article-v3 .prose hr { border-top: 1px solid var(--kk-rule-soft); margin: 2.2em 0; }
+.article-v3 .prose img { border-radius: var(--kk-r-img); box-shadow: none; }
+
+/* --- 本文アコーディオン（.body-acc）: 罫線区切りの行に --- */
+.article-v3 .prose .body-acc {
+  border: 0;
+  border-bottom: 1px solid var(--kk-rule-soft);
+  border-radius: 0;
+  background: none;
+  margin: 0;
+}
+.article-v3 .prose .body-acc:first-of-type { border-top: 1px solid var(--kk-rule-soft); }
+.article-v3 .prose .body-acc + .body-acc { margin-top: 0; }
+.article-v3 .prose .body-acc > summary {
+  border-left: 0;
+  padding: 12px 40px 12px 0;
+}
+.article-v3 .prose .body-acc > summary > h3 { font-size: 19.5px; }
+.article-v3 .prose .body-acc > summary::after { right: 4px; border-color: var(--kk-orange); }
+.article-v3 .prose .body-acc > summary:active { background-color: transparent; }
+.article-v3 .prose .body-acc[open] > summary {
+  border-left: 0; background-color: transparent;
+}
+.article-v3 .prose .body-acc[open] > summary > h3 { color: var(--kk-orange-deep); }
+.article-v3 .prose .body-acc > summary > h3::before { content: none; }
+.article-v3 .prose .body-acc-body { border-top: 0; padding: 0 0 14px; }
+
+/* ===========================================================
+   チェーン判定ボックス — カードにしない。見出し＋罫線グリッド。
+   =========================================================== */
+.article-v3 .av3-chain {
+  margin: 26px 0 30px;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 0;
+}
+.article-v3 .av3-chain-head {
+  display: flex; align-items: baseline; gap: 6px 12px; flex-wrap: wrap; margin-bottom: 12px;
+}
+.article-v3 .av3-chain-title {
+  margin: 0;
+  font-family: var(--kk-display); font-size: 19px; font-weight: 700; line-height: 1.5;
+  letter-spacing: .01em; color: var(--kk-ink);
+  padding: 0; border: 0;
+}
+.article-v3 .av3-chain-title::before { content: none !important; display: none !important; }
+.article-v3 .av3-chain-verified { font-size: 11.5px; font-weight: 500; color: var(--kk-ink-mute); }
+.article-v3 .av3-chain .kk-fac-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.article-v3 .av3-chain .kk-fac { padding: 12px 4px 10px; }
+.article-v3 .av3-chain .kk-fac.is-no .kk-fac-ico { color: var(--kk-rule); }
+.article-v3 .av3-chain .kk-fac.is-no .kk-fac-label { color: var(--kk-ink-mute); }
+.article-v3 .av3-chain .kk-pill { min-width: 32px; text-align: center; }
+.article-v3 .av3-fac-note { font-size: 10.5px; line-height: 1.4; color: var(--kk-ink-mute); }
+.article-v3 .av3-chain-extras { margin-top: 14px; display: flex; flex-direction: column; gap: 5px; }
+.article-v3 .av3-chain-extra { font-size: 12.5px; line-height: 1.7; color: var(--kk-ink-soft); }
+.article-v3 .av3-chain-extra strong { font-weight: 700; color: var(--kk-ink); }
+.article-v3 .av3-chain-note {
+  font-size: 11.5px; color: var(--kk-ink-mute); line-height: 1.8;
+  margin: 14px 0 0; padding-top: 10px; border-top: 1px solid var(--kk-rule-soft);
+}
+.article-v3 .av3-chain-note a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+
+/* ===========================================================
+   監修者ラベル / 評価基準の開示 — 面をやめ、細い罫線の注記に
+   =========================================================== */
+.article-v3 .av3-sup {
+  display: flex; align-items: flex-start; gap: 11px;
+  margin: 18px 0; padding: 13px 0;
+  background: none; border: 0;
+  border-top: 1px solid var(--kk-rule-soft);
+  border-bottom: 1px solid var(--kk-rule-soft);
+  border-radius: 0;
+}
+.article-v3 .av3-sup-mark {
+  flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%;
+  border: 1px solid var(--kk-rule); color: var(--kk-ink-soft);
+  display: flex; align-items: center; justify-content: center; font-size: 14px;
+}
+.article-v3 .av3-sup-body { flex: 1; min-width: 0; }
+.article-v3 .av3-sup-eyebrow {
+  font-family: var(--kk-body); font-size: 10.5px; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--kk-ink-mute);
+}
+.article-v3 .av3-sup-name { font-size: 14px; font-weight: 700; color: var(--kk-ink); margin-top: 3px; }
+.article-v3 .av3-sup-qual { font-size: 12px; font-weight: 500; margin-left: 6px; color: var(--kk-ink-mute); }
+.article-v3 .av3-sup-bio { font-size: 12px; color: var(--kk-ink-soft); margin-top: 5px; line-height: 1.75; }
+
+.article-v3 .av3-disclosure {
+  margin: 18px 0 26px; padding: 12px 0;
+  background: none; border: 0;
+  border-top: 1px solid var(--kk-rule-soft);
+  border-bottom: 1px solid var(--kk-rule-soft);
+  border-radius: 0;
+  font-size: 12px; line-height: 1.8; color: var(--kk-ink-mute);
+}
+.article-v3 .av3-disclosure strong { color: var(--kk-ink-soft); font-weight: 700; }
+.article-v3 .av3-disclosure-head { color: var(--kk-orange-deep) !important; }
+
+/* ===========================================================
+   FAQ — 角丸カードをやめ、罫線区切りの <details> 行に
+   =========================================================== */
+.article-v3 .av3-faq { margin: 46px 0 8px; }
+.article-v3 .av3-faq .kk-sec-head { margin-bottom: 6px; }
+.article-v3 .av3-faq-list { display: flex; flex-direction: column; gap: 0; }
+.article-v3 .faq-item {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--kk-rule-soft);
+  border-radius: 0;
+  overflow: visible;
+}
+.article-v3 .av3-faq-list > .faq-item:first-child { border-top: 1px solid var(--kk-rule-soft); }
+.article-v3 .faq-item > summary {
+  list-style: none;
+  cursor: pointer;
+  gap: 12px;
+  padding: 15px 0;
+  min-height: 0;
+  border-left: 0;
+  font-family: var(--kk-body);
+  /* Q は見出し寄り（大きめ・太字）、A は本文より一段小さく軽く。2026-09-09 社長指示 */
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--kk-ink);
+  align-items: flex-start;
+}
+.article-v3 .faq-item > summary::-webkit-details-marker { display: none; }
+.article-v3 .av3-faq-q { flex: 1; min-width: 0; }
+.article-v3 .av3-faq-q::before {
+  content: 'Q.'; color: var(--kk-orange); font-weight: 700; margin-right: 6px;
+}
+.article-v3 .av3-faq-caret {
+  flex: none; display: flex; color: var(--kk-ink-mute);
+  transform: rotate(90deg); transition: transform .2s; margin-top: 3px;
+}
+.article-v3 .faq-item[open] > summary .av3-faq-caret { transform: rotate(-90deg); color: var(--kk-orange); }
+.article-v3 .faq-item > summary:active { background-color: transparent; }
+.article-v3 .faq-item[open] > summary {
+  color: var(--kk-ink); background-color: transparent; border-left: 0; font-weight: 700;
+}
+.article-v3 .av3-faq-a {
+  padding: 0 0 20px 24px;
+  font-size: 16px; font-weight: 400; line-height: 1.9;
+  border-top: 0;
+  color: var(--kk-ink-soft);
+}
+.article-v3 .av3-faq-a p { color: inherit; margin: 0 0 .8em; }
+.article-v3 .av3-faq-a > :last-child { margin-bottom: 0; }
+
+/* ===========================================================
+   駅ページCTA — 面のある箱をやめ、上下罫線の1行に
+   =========================================================== */
+.article-v3 .av3-station-wrap { margin: 30px 0 0; }
+.article-v3 .av3-station {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 0;
+  background: none;
+  border: 0;
+  border-top: 1px solid var(--kk-rule);
+  border-bottom: 1px solid var(--kk-rule);
+  border-radius: 0;
+  color: var(--kk-ink);
+}
+.article-v3 .av3-station-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.article-v3 .av3-station-eyebrow {
+  font-size: 10.5px; font-weight: 700; color: var(--kk-ink-mute);
+  letter-spacing: .08em; text-transform: uppercase;
+}
+.article-v3 .av3-station-label {
+  font-family: var(--kk-display); font-size: 17px; font-weight: 700; line-height: 1.5;
+}
+.article-v3 .av3-station-sub { font-size: 12px; color: var(--kk-ink-mute); line-height: 1.6; }
+.article-v3 .av3-station-arrow { flex: none; display: flex; color: var(--kk-orange); }
+.article-v3 .av3-station:hover .av3-station-label { color: var(--kk-orange-deep); }
+
+/* ===========================================================
+   著者 — カードをやめ、罫線の上のプロフィール行
+   =========================================================== */
+.article-v3 .av3-author {
+  display: grid; grid-template-columns: 48px 1fr; gap: 14px; align-items: start;
+  margin: 36px 0 0; padding: 18px 0 0;
+  background: none; border: 0; border-top: 1px solid var(--kk-rule);
+  border-radius: 0;
+}
+.article-v3 .av3-author-avatar {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: none; border: 1px solid var(--kk-rule); color: var(--kk-ink-soft);
+  display: grid; place-items: center;
+  font-family: var(--kk-display); font-weight: 700; font-size: 19px;
+}
+.article-v3 .av3-author-name {
+  margin: 0 0 5px; font-family: var(--kk-display); font-size: 15.5px; font-weight: 700; color: var(--kk-ink);
+}
+.article-v3 .av3-author-bio { margin: 0; font-size: 13px; line-height: 1.85; color: var(--kk-ink-soft); }
+
+/* ===========================================================
+   シェア — カードをやめ、罫線の上のボタン列（ボタンだけ角丸）
+   =========================================================== */
+.article-v3 .share-bar {
+  margin: 24px 0 0; padding: 16px 0 0;
+  background: none; border: 0; border-top: 1px solid var(--kk-rule-soft); border-radius: 0;
+}
+.article-v3 .share-bar-label {
+  font-family: var(--kk-body); font-size: 12px; font-weight: 700;
+  letter-spacing: .02em; text-transform: none; color: var(--kk-ink-mute);
+}
+.article-v3 .share-btn {
+  font-family: var(--kk-body); border-color: var(--kk-rule); background: transparent;
+  color: var(--kk-ink-soft); font-weight: 700; box-shadow: none;
+}
+.article-v3 .share-btn:hover {
+  border-color: var(--kk-orange); color: var(--kk-orange-deep); background: transparent;
+}
+
+/* ===========================================================
+   /today への送客リンク — 塗り＋16pxの箱をやめ、上下罫線の1行に
+   =========================================================== */
+.article-v3 .av3-planlink { margin: 40px 0 0; }
+.article-v3 .av3-planlink-link {
+  display: flex; align-items: center; gap: 14px; flex-wrap: nowrap;
+  padding: 16px 0;
+  border-top: 1px solid var(--kk-rule);
+  border-bottom: 1px solid var(--kk-rule);
+  color: var(--kk-ink);
+  text-decoration: none;
+}
+.article-v3 .av3-planlink-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.article-v3 .av3-planlink-eyebrow {
+  font-size: 10.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--kk-ink-mute);
+}
+.article-v3 .av3-planlink-title {
+  font-family: var(--kk-display); font-size: 17px; font-weight: 700; line-height: 1.5;
+}
+.article-v3 .av3-planlink-sub { font-size: 12px; color: var(--kk-ink-mute); line-height: 1.6; }
+.article-v3 .av3-planlink-arrow { flex: none; display: flex; color: var(--kk-orange); }
+.article-v3 .av3-planlink-link:hover .av3-planlink-title { color: var(--kk-orange-deep); }
+
+/* ===========================================================
+   物販CTA — 中のボタン／商品カードは操作UIなので残すが、
+   外側の「クリーム色の丸角カード」はやめて罫線ブロックにする。
+   =========================================================== */
+.article-v3 .related-items-cta {
+  margin: 46px 0 24px;
+  padding: 18px 0 4px;
+  background: none;
+  border: 0;
+  border-top: 1px solid var(--kk-rule);
+  border-radius: 0;
+}
+.article-v3 .related-items-cta-pr { color: var(--kk-ink-mute); }
+.article-v3 .related-items-cta-title {
+  font-family: var(--kk-display); font-weight: 700; font-size: 18px;
+  letter-spacing: .01em; color: var(--kk-ink);
+}
+.article-v3 .inline-item-cta {
+  margin: 30px 0 32px;
+  padding: 0 0 0 16px;
+  background: none;
+  border: 0;
+  border-left: 1px solid var(--kk-rule);
+  border-radius: 0;
+}
+.article-v3 .inline-item-cta-note { color: var(--kk-ink-mute); }
+/* 商品カード自体は操作UI（押せる面）なので角丸を残すが、白い面はやめる */
+.article-v3 .affiliate-card {
+  background: var(--kk-paper-soft);
+  border-color: var(--kk-rule);
+  border-radius: var(--kk-r-ui);
+  box-shadow: none;
+}
+.article-v3 .affiliate-card:hover { transform: none; border-color: var(--kk-orange); box-shadow: none; }
+.article-v3 .affiliate-card-thumb { border-radius: var(--kk-r-img); background: var(--kk-paper-deep); }
+
+/* ネット予約CTA（ReservationCTA / ホットペッパー・A8）
+   — グラデーションの丸角カードをやめ、罫線ブロック＋オレンジのボタンに。
+   このコンポーネントは /spot・/today でも使われるため、
+   .article-v3 にスコープせず素のクラスで定義する（トークンは .v2-root 由来）。 */
+.av3-resv {
+  margin: 26px 0;
+  padding: 16px 0;
+  background: none;
+  border: 0;
+  border-top: 1px solid var(--kk-rule, #DED2BB);
+  border-bottom: 1px solid var(--kk-rule, #DED2BB);
+  border-radius: 0;
+}
+.av3-resv-head { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.av3-resv-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: .05em; color: var(--kk-ink-mute, #91887A);
+}
+.av3-resv-title {
+  margin: 0 0 5px;
+  font-family: var(--kk-display); font-size: 18px; font-weight: 700; line-height: 1.5;
+  color: var(--kk-ink, #25201B);
+}
+.av3-resv-note { margin: 0 0 14px; font-size: 13px; color: var(--kk-ink-soft, #5F5548); line-height: 1.8; }
+.av3-resv-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 12px 20px; border-radius: var(--kk-r-ui, 10px);
+  background: var(--kk-orange, #EE7A2E); color: #fff;
+  font-size: 14.5px; font-weight: 700; text-decoration: none;
+}
+.av3-resv-btn:hover { background: var(--kk-orange-deep, #C6591A); }
+
+/* ===========================================================
+   回遊: クロスリンク行リスト／関連する記事
+   =========================================================== */
+.article-v3 .av3-xlink { margin-top: 34px; }
+.article-v3 .av3-related { margin-top: 38px; }
+.article-v3 .av3-xlink .kk-sec-head,
+.article-v3 .av3-related .kk-sec-head { margin-bottom: 4px; }
+.article-v3 .kk-sec-title { font-size: var(--kk-h2); }
+.article-v3 .kk-row-title { font-weight: 700; }
+.article-v3 .av3-row .kk-row-thumb { width: 72px; height: 54px; }
+
+/* ---------- ホーム画面に追加／LINE／フッター（コンテナ内なので左右マージンを外す） ---------- */
+.article-v3 .kk-home { margin: 30px 0 0; width: 100%; }
+.article-v3 .kk-home-howto { margin: 8px 0 0; }
+.article-v3 .kk-linecta { margin-left: 0; margin-right: 0; }
+.article-v3 .kk-footer { margin-top: 44px; }
+
+/* ---------- 広告枠まわり ---------- */
+.article-v3 .ad-label, .article-v3 .pr-label { font-family: var(--kk-body); letter-spacing: .06em; }
+
+/* ===========================================================
+   本文内の定型セクション（§3-2-3 / 3-2-5 / 3-2-6 / 3-2-9）
+   見出しタグ・文言・リンクは変えず、役割ごとに見え方だけを変える。
+   =========================================================== */
+
+/* --- 「ここまで読んだ人が、次に迷うこと」: カードにせず、次の疑問を選ぶリストに --- */
+.article-v3 .prose .av3-nextq {
+  margin: 54px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--kk-rule);
+}
+.article-v3 .prose .av3-nextq > h2 {
+  margin: 0 0 6px;
+  padding: 0;
+  border-top: 0;
+}
+.article-v3 .prose .av3-nextq > p { margin: .5em 0 14px; color: var(--kk-ink-soft); }
+.article-v3 .prose .av3-nextq > h3 {
+  position: relative;
+  margin: 0;
+  padding: 15px 0 0 27px;
+  border-top: 1px solid var(--kk-rule-soft);
+  font-family: var(--kk-body);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--kk-ink);
+}
+/* .prose h3::before は旧装飾を消すため none !important にしてあるので、
+   ここは同じ強さで上書きする。 */
+.article-v3 .prose .av3-nextq > h3::before {
+  content: 'Q' !important;
+  display: block !important;
+  position: absolute; left: 0; top: 15px;
+  font-family: var(--kk-body);
+  font-size: inherit; font-weight: 700; line-height: inherit;
+  color: var(--kk-orange);
+}
+.article-v3 .prose .av3-nextq > h3 + p { margin: 5px 0 15px; padding-left: 27px; }
+.article-v3 .prose .av3-nextq > h3 + p a { font-weight: 700; }
+.article-v3 .prose .av3-nextq > ul,
+.article-v3 .prose .av3-nextq > ol { padding-left: 27px; }
+
+/* --- 「我が家のリアル」: 小さなラベル＋本文。余白と罫線で編集部コメントに見せる --- */
+.article-v3 .prose .av3-mylife {
+  margin: 52px 0;
+  padding: 20px 0 22px;
+  border-top: 1px solid var(--kk-rule);
+  border-bottom: 1px solid var(--kk-rule);
+}
+.article-v3 .prose .av3-mylife > h2 {
+  margin: 0 0 12px;
+  padding: 0;
+  border-top: 0;
+  font-family: var(--kk-body);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1.6;
+  color: var(--kk-ink-mute);
+}
+.article-v3 .prose .av3-mylife > h3 { margin-top: 20px; font-size: 19.5px; }
+.article-v3 .prose .av3-mylife > p { margin: 0 0 1em; }
+.article-v3 .prose .av3-mylife > p:last-child { margin-bottom: 0; }
+
+/* --- 「出典」: 末尾に静かに置く（本文より小さく・墨を薄く） --- */
+.article-v3 .prose .av3-sources {
+  margin: 46px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--kk-rule-soft);
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 1.85;
+  color: var(--kk-ink-mute);
+}
+.article-v3 .prose .av3-sources > h2 {
+  margin: 0 0 8px;
+  padding: 0;
+  border-top: 0;
+  font-family: var(--kk-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--kk-ink-mute);
+}
+.article-v3 .prose .av3-sources p,
+.article-v3 .prose .av3-sources li { color: var(--kk-ink-mute); line-height: 1.85; }
+.article-v3 .prose .av3-sources li { margin-bottom: .3em; }
+.article-v3 .prose .av3-sources ul > li::before { background: var(--kk-rule); top: .78em; }
+.article-v3 .prose .av3-sources a {
+  color: var(--kk-ink-soft);
+  font-weight: 500;
+  border-bottom-color: var(--kk-rule);
+  word-break: break-all;
+}
+.article-v3 .prose .av3-sources hr { margin: 1.4em 0 1em; }
+
+/* ===========================================================
+   チェーン判定ボックスの見出しアイコン（絵文字の置き換え）
+   =========================================================== */
+.article-v3 .av3-chain-title {
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.article-v3 .av3-chain-ico { display: flex; color: var(--kk-orange); }
+
+/* ===========================================================
+   末尾の回遊 — 優先順位（§3-2-7）
+   (1) 同じチェーンの記事 = メイン導線 / (2)(3) は静かなリスト
+   =========================================================== */
+.article-v3 .av3-xlink-primary {
+  margin-top: 44px;
+  padding-top: 22px;
+  border-top: 1px solid var(--kk-ink);
+}
+.article-v3 .av3-xlink-primary .kk-sec-title { font-size: var(--kk-h2); }
+.article-v3 .av3-xlink-primary .kk-row { padding: 15px 0; }
+.article-v3 .av3-xlink-primary .kk-row-title { font-size: 16px; font-weight: 700; }
+.article-v3 .av3-xlink-primary .kk-row-arrow { color: var(--kk-orange); }
+
+.article-v3 .av3-xlink-quiet { margin-top: 26px; }
+.article-v3 .av3-xlink-quiet .kk-sec-head { margin-bottom: 0; }
+.article-v3 .av3-xlink-quiet .kk-sec-title {
+  font-family: var(--kk-body);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--kk-ink-mute);
+}
+.article-v3 .av3-xlink-quiet .kk-row { padding: 11px 0; }
+.article-v3 .av3-xlink-quiet .kk-row-title {
+  font-size: 14.5px; font-weight: 500; color: var(--kk-ink-soft);
+}
+.article-v3 .av3-xlink-quiet .kk-row:hover .kk-row-title { color: var(--kk-orange-deep); }
+
+/* ===========================================================
+   Pinterest 保存用の縦長画像
+   =========================================================== */
+.article-v3 .av3-pin { margin: 28px 0; text-align: center; }
+.article-v3 .av3-pin-note {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin: 0 0 8px;
+  font-size: 12.5px; font-weight: 700; color: var(--kk-ink-mute);
+}
+
+/* ===========================================================
+   YouTube 検索リンク（操作UIなので角丸は可・面と影はやめる）
+   =========================================================== */
+.article-v3 .av3-ytsearch { margin: 32px 0; display: flex; }
+.article-v3 .av3-ytsearch-link {
+  display: inline-flex; align-items: center; gap: 9px; max-width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--kk-rule);
+  border-radius: var(--kk-r-ui);
+  background: transparent;
+  color: var(--kk-ink);
+  font-size: 14px; font-weight: 700; text-decoration: none;
+}
+.article-v3 .av3-ytsearch-link:hover { border-color: var(--kk-orange); color: var(--kk-orange-deep); }
+.article-v3 .av3-ytsearch-ico, .article-v3 .av3-ytsearch-arrow { flex: none; display: flex; }
+.article-v3 .av3-ytsearch-arrow { color: var(--kk-orange); }
+.article-v3 .av3-ytsearch-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ===========================================================
+   困ったときの別解（MicroCMS 版の記事でのみ描画）
+   .article-v3 の外なので素のクラスで定義する。
+   =========================================================== */
+.av3-fallback {
+  margin: 56px 0 0;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--kk-rule, #D8D2C7);
+}
+.av3-fallback-title {
+  margin: 0 0 6px;
+  font-family: var(--kk-display); font-weight: 700; font-size: 19px; line-height: 1.5;
+  color: var(--kk-ink, #25201B);
+}
+.av3-fallback-lead {
+  margin: 0 0 8px; font-size: 13px; line-height: 1.8; color: var(--kk-ink-mute, #91887A);
+}
+.av3-fallback-list { list-style: none; margin: 0; padding: 0; }
+.av3-fallback-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 13px 0;
+  border-top: 1px solid var(--kk-rule-soft, #E7E2DA);
+  color: var(--kk-ink, #25201B); text-decoration: none;
+}
+.av3-fallback-label { font-size: 14.5px; font-weight: 700; }
+.av3-fallback-hint { flex: 1; min-width: 0; font-size: 12px; color: var(--kk-ink-mute, #91887A); }
+.av3-fallback-arrow { flex: none; display: flex; color: var(--kk-ink-mute, #91887A); }
+.av3-fallback-row:hover .av3-fallback-label { color: var(--kk-orange-deep, #C6591A); }
+
+/* ===========================================================
+   パーソナライズ枠（components/common/PersonalizedHint）
+   共通部品なのでインラインstyleを .article-v3 側から打ち消す（面と丸角をやめる）。
+   =========================================================== */
+.article-v3 .av3-phint {
+  margin: 20px 0 !important;
+  padding: 12px 0 !important;
+  background: none !important;
+  border: 0 !important;
+  border-top: 1px solid var(--kk-rule-soft) !important;
+  border-bottom: 1px solid var(--kk-rule-soft) !important;
+  border-radius: 0 !important;
+  font-size: 12.5px !important;
+  color: var(--kk-ink-soft) !important;
+}
+
+/* ===========================================================
+   スマホの表: globals.css がクリーム色の面＋ゼブラを敷いているので、
+   地色を完全な白に戻す（横スクロールのヒントと固定列はそのまま活かす）。
+   =========================================================== */
+@media (max-width: 767px) {
+  .article-v3 .prose table {
+    background:
+      linear-gradient(to right, #fff 30%, rgba(255, 255, 255, 0)) left center / 20px 100% no-repeat,
+      linear-gradient(to right, rgba(255, 255, 255, 0), #fff 70%) right center / 20px 100% no-repeat,
+      linear-gradient(to right, rgba(238, 122, 46, .18), rgba(238, 122, 46, 0)) left center / 8px 100% no-repeat,
+      linear-gradient(to left, rgba(238, 122, 46, .18), rgba(238, 122, 46, 0)) right center / 8px 100% no-repeat;
+    background-attachment: local, local, scroll, scroll;
+  }
+  .article-v3 .prose table tbody tr { background-color: #fff; }
+  .article-v3 .prose table tbody tr:nth-child(even) { background-color: #FAFAF9; }
+  .article-v3 .prose table thead,
+  .article-v3 .prose table thead th:first-child { background-color: var(--kk-paper-deep); }
+  .article-v3 .prose table th,
+  .article-v3 .prose table td { font-size: 13.5px; }
+  /* 固定列: 不透明な背景＋右に区切り線。透けると隣の列と文字が重なる。 */
+  .article-v3 .prose table tbody th,
+  .article-v3 .prose table tbody td:first-child {
+    background-color: inherit;
+    box-shadow: 1px 0 0 var(--kk-rule-soft);
+    padding-right: 14px;
+  }
+  .article-v3 .prose table thead th:first-child { box-shadow: 1px 0 0 var(--kk-rule); }
+}
+
+/* ===========================================================
+   タブレット
+   =========================================================== */
+@media (min-width: 768px) {
+  .article-v3 .page-head h1 { font-size: var(--kk-h1); }
+  .article-v3 .page-head .lead { font-size: var(--kk-body-size); }
+  .article-v3 .prose { line-height: 2; }
+  .article-v3 .prose h2 { font-size: var(--kk-h2); margin-top: 60px; padding-top: 24px; }
+  .article-v3 .prose h3 { font-size: var(--kk-h3); margin-top: 38px; }
+  .article-v3 .av3-chain .kk-fac-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .article-v3 .prose .av3-nextq > h3 { font-size: 20px; }
+}
+
+/* ===========================================================
+   PC — スマホの引き伸ばしにしない。余白と文字サイズを変える。
+   本文カラムは約42em の可読幅。
+   =========================================================== */
+@media (min-width: 1100px) {
+  .article-v3 .breadcrumb { padding-top: 20px; }
+  .article-v3 .page-head { padding: 22px 0 4px; }
+  .article-v3 .page-head h1 { font-size: var(--kk-h1); line-height: 1.45; margin-bottom: 18px; }
+  .article-v3 .page-head .lead { font-size: var(--kk-body-size); line-height: 2; }
+  .article-v3 .av3-hero { margin-bottom: 28px; }
+
+  .article-v3 .prose {
+    line-height: 2.05;
+    max-width: 42em;
+  }
+  .article-v3 .prose h2 {
+    font-size: var(--kk-h2); line-height: 1.5;
+    margin: 76px 0 20px; padding-top: 30px;
+  }
+  .article-v3 .prose h3 { font-size: var(--kk-h3); margin: 46px 0 12px; }
+  .article-v3 .prose h4 { font-size: 17px; margin: 32px 0 10px; }
+  .article-v3 .prose ul, .article-v3 .prose ol { margin: 1.3em 0; }
+
+  .article-v3 .tldr-box { margin: 34px 0 30px; padding-left: 24px; }
+  .article-v3 .tldr-box .tldr-eyebrow { font-size: 18px; }
+  .article-v3 .tldr-box .tldr-text { font-size: 15.5px; }
+
+  .article-v3 .av3-quick { margin: 30px 0; padding: 18px 0; }
+  .article-v3 .cluster-nav { margin-bottom: 34px; }
+  .article-v3 .top-pick-box { margin: 40px 0 34px; padding: 24px 0; }
+  .article-v3 .top-pick-box .top-pick-title { font-size: 23px; }
+
+  .article-v3 .av3-chain { margin: 34px 0 40px; }
+  .article-v3 .av3-chain-title { font-size: 21px; }
+  .article-v3 .av3-chain .kk-fac-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+
+
+  .article-v3 .av3-faq { margin-top: 64px; }
+  .article-v3 .faq-item > summary { padding: 18px 0; font-size: 19px; }
+  .article-v3 .av3-faq-a { font-size: 16.5px; padding-bottom: 24px; }
+  .article-v3 .av3-xlink { margin-top: 48px; }
+  .article-v3 .av3-related { margin-top: 52px; }
+  .article-v3 .av3-station-wrap { margin-top: 44px; }
+  .article-v3 .av3-station-label { font-size: 19px; }
+  .article-v3 .av3-author { margin-top: 52px; padding-top: 22px; }
+  .article-v3 .share-bar { margin-top: 30px; }
+  .article-v3 .kk-footer { margin-top: 64px; }
+
+  .article-v3 .av3-tbl > table { font-size: 14.5px; }
+
+  .article-v3 .prose .av3-nextq { margin-top: 76px; padding-top: 30px; }
+  .article-v3 .prose .av3-nextq > h3 { font-size: 21px; padding-top: 18px; }
+  .article-v3 .prose .av3-nextq > h3::before { top: 18px !important; }
+  .article-v3 .prose .av3-mylife { margin: 72px 0; padding: 26px 0 28px; }
+  .article-v3 .prose .av3-mylife > h2 { font-size: 13px; }
+  .article-v3 .prose .av3-sources { margin-top: 64px; font-size: 13px; }
+  .article-v3 .av3-xlink-primary { margin-top: 56px; }
+
+  .article-v3 .av3-xlink-primary .kk-row-title { font-size: 16.5px; }
+  .article-v3 .av3-xlink-quiet { margin-top: 32px; }
+  .article-v3 .av3-xlink-quiet .kk-sec-title { font-size: 13.5px; }
+}

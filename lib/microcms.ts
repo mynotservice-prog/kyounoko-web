@@ -1,4 +1,9 @@
-import { createClient, type MicroCMSListContent, type MicroCMSQueries } from 'microcms-js-sdk';
+import {
+  createClient,
+  type MicroCMSListContent,
+  type MicroCMSListResponse,
+  type MicroCMSQueries,
+} from 'microcms-js-sdk';
 import type { Article, Category, Tag, Author, Spot, SiteConfig } from './types';
 
 // クライアントは遅延初期化する。
@@ -22,7 +27,25 @@ function getClient() {
 // Articles
 // ==========================================================================
 
+/**
+ * microCMS の `articles` エンドポイントを呼ぶかどうか（既定: 呼ばない）。
+ *
+ * 2026-09-11: microCMS から「articles と spot-reports に毎時それぞれ1,600〜1,800件の404」と連絡があった。
+ * - 記事は全件 content/articles/*.md から配信しており、microCMS 側に articles API は作られていない。
+ * - microCMS の一覧取得は該当0件なら 200 と空配列を返す。404 はエンドポイントそのものが無いことを意味する。
+ * - それでも記事ページは microCMS を先に試してからファイルに落ちる作りだったため、
+ *   Vercel のビルド1回で記事1,179本ぶん、ISR 再生成のたびにも1件ずつ、必ず404を出していた。
+ * 表示は元々ファイル側しか使っていないので、呼ばなくても出力は変わらない。
+ * microCMS に articles API を作ったら、Vercel の env に MICROCMS_ARTICLES_ENABLED=1 を入れて再開する。
+ */
+const ARTICLES_API_ENABLED = process.env.MICROCMS_ARTICLES_ENABLED === '1';
+
+function emptyList<T>(limit = 0): MicroCMSListResponse<T> {
+  return { contents: [], totalCount: 0, offset: 0, limit };
+}
+
 export async function getArticles(queries?: MicroCMSQueries) {
+  if (!ARTICLES_API_ENABLED) return emptyList<Article>();
   return await getClient().getList<Article>({
     endpoint: 'articles',
     queries: {
@@ -34,6 +57,7 @@ export async function getArticles(queries?: MicroCMSQueries) {
 }
 
 export async function getArticle(slug: string): Promise<Article | null> {
+  if (!ARTICLES_API_ENABLED) return null;
   const data = await getClient().getList<Article>({
     endpoint: 'articles',
     queries: { filters: `slug[equals]${slug}`, limit: 1 },
@@ -42,6 +66,7 @@ export async function getArticle(slug: string): Promise<Article | null> {
 }
 
 export async function getArticleIds() {
+  if (!ARTICLES_API_ENABLED) return emptyList<Article>().contents;
   const data = await getClient().getList<Article>({
     endpoint: 'articles',
     queries: { fields: 'id,slug,updatedAt', limit: 1000 },
@@ -50,6 +75,7 @@ export async function getArticleIds() {
 }
 
 export async function getArticlesByCategory(categorySlug: string, limit = 20) {
+  if (!ARTICLES_API_ENABLED) return emptyList<Article>(limit);
   return await getClient().getList<Article>({
     endpoint: 'articles',
     queries: {
@@ -61,6 +87,7 @@ export async function getArticlesByCategory(categorySlug: string, limit = 20) {
 }
 
 export async function getArticlesByTag(tagSlug: string, limit = 20) {
+  if (!ARTICLES_API_ENABLED) return emptyList<Article>(limit);
   return await getClient().getList<Article>({
     endpoint: 'articles',
     queries: {
@@ -152,6 +179,7 @@ export type TodayFilter = {
 };
 
 export async function findTodayCandidates(filter: TodayFilter, limit = 10) {
+  if (!ARTICLES_API_ENABLED) return emptyList<Article>(limit);
   const filters: string[] = [];
 
   if (filter.age) filters.push(`quickInfo_ageRanges[contains]${filter.age}`);

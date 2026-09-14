@@ -29,12 +29,12 @@ const config: Config = {
         'ochre-soft': '#F2E2C5',
       },
       fontFamily: {
-        sans: ['var(--font-sans)', 'Noto Sans JP', 'Hiragino Sans', 'sans-serif'],
-        mincho: ['var(--font-mincho)', 'Shippori Mincho', 'Hiragino Mincho ProN', 'serif'],
-        // display は Shippori Mincho に統合（旧 DM Serif Display）。
-        // 既存の `font-display` クラスは mincho にエイリアスして見た目を維持。
-        display: ['var(--font-mincho)', 'Shippori Mincho', 'Hiragino Mincho ProN', 'serif'],
-        inter: ['var(--font-inter)', 'Inter', 'sans-serif'],
+        // 2026-09-08: サイト全体で1書体（Zen Kaku Gothic New）に統一。
+        // 旧 mincho / display / inter クラスは後方互換で同じ書体にエイリアスする。
+        sans: ['var(--font-sans)', 'Zen Kaku Gothic New', 'Hiragino Sans', 'sans-serif'],
+        mincho: ['var(--font-sans)', 'Zen Kaku Gothic New', 'sans-serif'],
+        display: ['var(--font-sans)', 'Zen Kaku Gothic New', 'sans-serif'],
+        inter: ['var(--font-sans)', 'Zen Kaku Gothic New', 'sans-serif'],
       },
       borderRadius: {
         card: '14px',

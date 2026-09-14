@@ -1,12 +1,12 @@
 ---
 slug: shitsunai-asobi-suginami-tokyo
-title: 杉並区の子供の室内遊び場8選｜児童館・キッズスペース・有料施設【2026年版】
+title: 杉並区の子供の室内・屋内遊び場8選｜無料あり・赤ちゃんOK・児童館・キッズスペース【2026年版】
 metaDescription: >-
   杉並区で子供（0〜6歳）と室内で遊べるスポット8選。荻窪ルミネのボーネルンドは撤退済み——今の杉並は杉並アニメーションミュージアム、子ども・子育てプラザ7か所、全児童館の乳幼児事業「ゆうキッズ」が主役です。開館時間・休館日・対象年齢を実データで2026年版に整理。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-09-04'
+updatedAt: '2026-09-12'
 hero: /img/scenes/jidoukan-02.webp
 area: tokyo
 quickInfo:

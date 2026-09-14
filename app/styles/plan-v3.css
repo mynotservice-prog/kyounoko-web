@@ -1,0 +1,279 @@
+/* プラン詳細 `/plan/[id]` 固有のリニューアルCSS。
+   共通部品は app/styles/kk.css。すべて .plan-v3（V2Frame 直下のラッパ）配下にスコープする。
+
+   方針（docs/renewal-2026-09.md §2 / §3-0）:
+   - 白地・1書体・共通の文字スケール（H1 30/34・H2 24/28・H3 21/23・本文17／行間1.95／段落間1.7em）。
+   - 丸角は操作UI（ボタン・チップ・小さなステータス）だけ。写真は軽い角丸のみ。
+   - 区切りは 余白 / 1px の罫線 / 写真サイズ / 文字サイズ で作る。カード背景で区切らない。
+   - 見出し横のオレンジバー・丸ポチ等の装飾は出さない（.prose の既定を打ち消す）。
+   - 絵文字は使わない（自ページの記号は KkIcon に置き換え済み）。
+   ※ 本ページが呼ぶ共有コンポーネント（SpotList / PlanTimeline / RelatedItemsCTA / ShareBar）は
+     別ファイルの所有者がいるため、**このページの中だけ**紙面に戻す。 */
+
+.plan-v3 {
+  color: var(--kk-ink);
+  font-family: var(--kk-body);
+  padding-bottom: 8px;
+}
+.plan-v3 .pv3-sec { margin-top: 34px; }
+.plan-v3 .v2-bar-accent { display: none !important; }
+
+/* ---------- パンくず ---------- */
+.plan-v3 .pv3-crumb {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 4px;
+  padding: 12px 18px 0;
+  font-size: 11.5px; font-weight: 700; color: var(--kk-ink-mute); line-height: 1.5;
+}
+.plan-v3 .pv3-crumb a { color: var(--kk-ink-mute); text-decoration: none; }
+.plan-v3 .pv3-crumb a:hover { color: var(--kk-orange-deep); }
+.plan-v3 .pv3-crumb svg { flex: none; }
+.plan-v3 .pv3-crumb .cur {
+  color: var(--kk-ink-soft);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 55vw;
+}
+
+/* ---------- eyebrow / H1 / リード ---------- */
+.plan-v3 .pv3-head { padding: 14px 18px 0; }
+.plan-v3 .pv3-eyebrow {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 700; letter-spacing: .08em;
+  color: var(--kk-orange-deep);
+}
+.plan-v3 .pv3-title-row {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+  margin-top: 9px;
+}
+.plan-v3 .pv3-h1 {
+  flex: 1; margin: 0;
+  font-family: var(--kk-display);
+  font-size: var(--kk-h1); font-weight: 800; line-height: 1.4; letter-spacing: 0;
+  color: var(--kk-ink);
+  overflow-wrap: anywhere; text-wrap: balance;
+}
+.plan-v3 .pv3-title-row .fav-btn { flex: none; box-shadow: none; }
+.plan-v3 .pv3-lede {
+  margin: 14px 0 0;
+  font-size: var(--kk-body-size); font-weight: 500; line-height: var(--kk-body-lh);
+  color: var(--kk-body-color);
+}
+.plan-v3 .pv3-tried { margin-top: 16px; }
+.plan-v3 .pv3-tried .tried-block { box-shadow: none; }
+
+/* ---------- メイン写真（文字を重ねない・軽い角丸だけ） ---------- */
+.plan-v3 .pv3-hero { padding: 20px 18px 0; }
+.plan-v3 .pv3-hero-img {
+  aspect-ratio: 16 / 9;
+  border-radius: var(--kk-r-img); overflow: hidden;
+  background: var(--kk-paper-deep);
+}
+.plan-v3 .pv3-hero-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* ---------- 広告枠 ---------- */
+.plan-v3 .pv3-ad { padding: 0 18px; margin-top: 30px; }
+
+/* ---------- クイック情報（データテーブル） ---------- */
+.plan-v3 .pv3-meta { font-size: 15.5px; }
+.plan-v3 .pv3-meta th { font-size: 14px; }
+.plan-v3 .pv3-meta td { line-height: 1.8; font-weight: 600; }
+
+/* ---------- タイムライン（番号リストとして見せる。カードにしない） ---------- */
+.plan-v3 .plan-timeline {
+  background: transparent; border: 0; border-radius: 0;
+  padding: 0; margin: 0;
+}
+.plan-v3 .plan-timeline-eyebrow {
+  font-family: var(--kk-body); font-size: 12px; letter-spacing: .08em;
+  text-transform: none; color: var(--kk-orange-deep); font-weight: 700;
+}
+.plan-v3 .plan-timeline-heading {
+  font-family: var(--kk-display); font-weight: 700;
+  font-size: var(--kk-h2); line-height: 1.5; color: var(--kk-ink);
+  margin: 8px 0 0;
+}
+.plan-v3 .plan-timeline-list {
+  list-style: none; margin: 16px 0 0; padding: 0;
+  border: 0; border-top: 1px solid var(--kk-rule-soft);
+}
+.plan-v3 .plan-timeline-item {
+  position: relative;
+  padding: 14px 0 14px 34px;
+  border-bottom: 1px solid var(--kk-rule-soft);
+}
+.plan-v3 .plan-timeline-item:last-child { padding-bottom: 14px; }
+.plan-v3 .plan-timeline-badge {
+  position: absolute; left: 0; top: 14px;
+  width: auto; height: auto; padding: 0;
+  background: transparent; color: var(--kk-orange); box-shadow: none; border-radius: 0;
+  font-family: var(--kk-body); font-size: 14px; font-weight: 700; line-height: 1.9;
+  font-variant-numeric: tabular-nums;
+}
+.plan-v3 .plan-timeline-time {
+  display: block; margin-bottom: 2px; padding: 0; border-radius: 0;
+  background: transparent; color: var(--kk-orange-deep);
+  font-family: var(--kk-body); font-size: 14px; font-weight: 700; line-height: 1.7;
+  font-variant-numeric: tabular-nums;
+}
+.plan-v3 .plan-timeline-text {
+  margin: 0;
+  font-size: var(--kk-text); font-weight: 400; line-height: 1.95; color: var(--kk-body-color);
+}
+
+/* ---------- 本文（.prose の既定を紙面に合わせる） ---------- */
+.plan-v3 .pv3-body { padding: 0 18px; margin-top: 34px; }
+.plan-v3 .prose {
+  font-size: var(--kk-body-size);
+  line-height: var(--kk-body-lh);
+  color: var(--kk-body-color);
+  padding-bottom: 0;
+}
+.plan-v3 .prose h2 {
+  font-family: var(--kk-display); font-weight: 700;
+  font-size: var(--kk-h2); line-height: 1.5; letter-spacing: .01em;
+  color: var(--kk-ink);
+  margin: 46px 0 16px; padding: 26px 0 0;
+  border-left: 0;
+  border-top: 1px solid var(--kk-rule-soft);
+}
+.plan-v3 .prose > h2:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.plan-v3 .prose h3 {
+  font-family: var(--kk-display); font-weight: 700;
+  font-size: var(--kk-h3); line-height: 1.5; color: var(--kk-ink);
+  margin: 32px 0 12px;
+}
+.plan-v3 .prose h3::before { content: none; display: none; }
+.plan-v3 .prose h4 {
+  font-family: var(--kk-display); font-weight: 700;
+  font-size: 17px; color: var(--kk-ink); margin: 26px 0 10px;
+}
+.plan-v3 .prose p {
+  margin: 0 0 var(--kk-body-gap);
+  font-size: var(--kk-body-size); font-weight: 400; line-height: var(--kk-body-lh);
+  letter-spacing: .01em; color: var(--kk-body-color);
+}
+.plan-v3 .prose p:last-child { margin-bottom: 0; }
+.plan-v3 .prose strong { color: var(--kk-ink); font-weight: 700; }
+.plan-v3 .prose em { color: var(--kk-ink); font-weight: 700; font-style: normal; }
+.plan-v3 .prose ul, .plan-v3 .prose ol { margin: 0 0 var(--kk-body-gap); padding-left: 1.4em; }
+.plan-v3 .prose li {
+  margin-bottom: .5em;
+  font-size: var(--kk-body-size); font-weight: 400; line-height: 1.9; color: var(--kk-body-color);
+}
+.plan-v3 .prose li::marker { color: var(--kk-orange); }
+.plan-v3 .prose a { color: var(--kk-orange-deep); text-decoration: underline; text-underline-offset: 2px; }
+.plan-v3 .prose blockquote {
+  background: transparent; border-left: 2px solid var(--kk-rule);
+  margin: 0 0 var(--kk-body-gap); padding: 2px 0 2px 16px; border-radius: 0;
+  color: var(--kk-ink-soft);
+}
+.plan-v3 .prose hr { border: 0; border-top: 1px solid var(--kk-rule-soft); margin: 34px 0; }
+.plan-v3 .prose img { border-radius: var(--kk-r-img); }
+.plan-v3 .prose table {
+  border-collapse: collapse; border: 1px solid var(--kk-rule); border-radius: 0;
+  font-size: 15px; background: #fff;
+}
+.plan-v3 .prose table th, .plan-v3 .prose table td {
+  border: 1px solid var(--kk-rule); padding: 12px 14px; line-height: 1.8;
+}
+.plan-v3 .prose table th { background: var(--kk-paper-deep); color: var(--kk-ink); font-weight: 700; }
+.plan-v3 .prose table tbody tr:nth-child(even) { background: transparent; }
+
+/* ---------- 関連スポット一覧（共有 SpotList を紙面に戻す） ---------- */
+.plan-v3 .pv3-spotlist > section { margin-top: 0 !important; }
+.plan-v3 .pv3-spotlist h2 {
+  font-family: var(--kk-display) !important; font-weight: 700 !important;
+  font-size: var(--kk-h2) !important; line-height: 1.5 !important; color: var(--kk-ink) !important;
+  margin: 0 0 10px !important;
+}
+.plan-v3 .pv3-spotlist > section > p {
+  font-size: 13.5px !important; line-height: 1.8 !important; color: var(--kk-ink-mute) !important;
+}
+.plan-v3 .pv3-spotlist article {
+  background: transparent !important;
+  border: 0 !important;
+  border-top: 1px solid var(--kk-rule-soft) !important;
+  border-radius: 0 !important;
+}
+.plan-v3 .pv3-spotlist article h3 {
+  font-family: var(--kk-body) !important; font-size: 16px !important; font-weight: 700 !important;
+  color: var(--kk-ink) !important;
+}
+
+/* ---------- あると便利なもの（PR。独立ブロックのまま静かに） ---------- */
+.plan-v3 .pv3-items .related-items-cta {
+  background: transparent; border: 0; border-top: 1px solid var(--kk-rule); border-radius: 0;
+  margin: 0; padding: 20px 0 0;
+}
+.plan-v3 .pv3-items .related-items-cta-title {
+  font-family: var(--kk-display); font-weight: 700;
+  font-size: var(--kk-h3); line-height: 1.5; color: var(--kk-ink);
+}
+.plan-v3 .pv3-items .related-items-cta-pr { font-size: 11.5px; color: var(--kk-ink-mute); line-height: 1.7; }
+
+/* ---------- タグ ---------- */
+.plan-v3 .pv3-chips { margin-top: 12px; }
+
+/* ---------- 行リスト（もっと詳しく / 役立つ記事 / 似た条件） ---------- */
+.plan-v3 .kk-row { align-items: flex-start; }
+.plan-v3 .kk-row-thumb { margin-top: 2px; }
+.plan-v3 .kk-row-arrow { align-self: center; }
+.plan-v3 .pv3-kicker {
+  font-size: 11.5px; font-weight: 700; letter-spacing: .06em; color: var(--kk-orange-deep);
+}
+.plan-v3 .pv3-row-h3, .plan-v3 .pv3-row-h4 {
+  margin: 0;
+  font-family: var(--kk-body); font-size: var(--kk-text); font-weight: 700; line-height: 1.6;
+  color: var(--kk-ink);
+}
+.plan-v3 .pv3-lead-row { padding: 16px 0; gap: 14px; }
+.plan-v3 .pv3-lead-thumb {
+  flex: none; width: 116px; aspect-ratio: 16 / 10;
+  border-radius: var(--kk-r-img); overflow: hidden; background: var(--kk-paper-deep);
+}
+.plan-v3 .pv3-lead-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.plan-v3 .pv3-lead-row .pv3-row-h3 { font-size: 16.5px; }
+
+/* ---------- シェア / フィードバック ---------- */
+.plan-v3 .pv3-share { padding: 0 18px; }
+.plan-v3 .pv3-share .share-bar {
+  background: transparent; border: 0; border-top: 1px solid var(--kk-rule-soft);
+  border-radius: 0; box-shadow: none;
+}
+.plan-v3 .pv3-feedback { padding-top: 26px; border-top: 1px solid var(--kk-rule-soft); }
+.plan-v3 .pv3-feedback-text {
+  margin: 0 0 16px;
+  font-size: 15px; line-height: 1.9; color: var(--kk-ink-soft);
+}
+
+/* ===========================================================
+   デスクトップ（≥920px）— スマホの引き伸ばしにしない
+   =========================================================== */
+@media (min-width: 920px) {
+  .plan-v3 { max-width: 1080px; margin: 0 auto; }
+  .plan-v3 .pv3-crumb { padding: 20px 4px 0; }
+  .plan-v3 .pv3-sec { margin-top: 56px; }
+
+  /* ファーストビュー: 左に写真・右に見出し */
+  .plan-v3 .pv3-top {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    column-gap: 48px; align-items: center;
+    margin-top: 10px;
+  }
+  .plan-v3 .pv3-top > * { grid-column: 2; }
+  .plan-v3 .pv3-top .pv3-hero { grid-column: 1; grid-row: 1; padding: 0; }
+  .plan-v3 .pv3-hero-img { aspect-ratio: 3 / 2; }
+  .plan-v3 .pv3-head { padding: 0; }
+  .plan-v3 .pv3-lede { max-width: 46ch; }
+
+  .plan-v3 .pv3-ad { padding: 0 4px; margin-top: 46px; }
+  .plan-v3 .pv3-body { padding: 0 4px; margin-top: 52px; max-width: 760px; }
+  .plan-v3 .pv3-meta { max-width: 760px; }
+  .plan-v3 .pv3-share { padding: 0 4px; }
+  .plan-v3 .pv3-feedback-text { max-width: 60ch; font-size: 15.5px; }
+
+  .plan-v3 .plan-timeline-text { font-size: var(--kk-text); }
+  .plan-v3 .pv3-lead-thumb { width: 148px; }
+  .plan-v3 .pv3-lead-row .pv3-row-h3 { font-size: 18px; }
+
+  .plan-v3 .pv3-spotlist section > div { gap: 0 24px !important; }
+}

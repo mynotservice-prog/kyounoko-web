@@ -1,3 +1,4 @@
+import '@/app/styles/plan-v3.css';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -5,6 +6,13 @@ import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import remarkHtml from 'remark-html';
 import { V2Frame } from '@/components/v2/V2Frame';
+import { V2Img } from '@/components/v2/V2Base';
+import { KkIcon, type KkIconName } from '@/components/kk/KkIcon';
+import { KkSectionTitle } from '@/components/kk/KkSectionTitle';
+import { KkInfoTable, type KkInfoRow } from '@/components/kk/KkInfoTable';
+import { KkLineCard } from '@/components/kk/KkLineCard';
+import { KkAddToHomeCard } from '@/components/kk/KkAddToHomeCard';
+import { KkFooter } from '@/components/kk/KkFooter';
 import { getPlan, getAllPlanIds, getAllPlanMetas } from '@/lib/plans';
 import { getFileArticle } from '@/lib/articles';
 import { getAreaName } from '@/lib/area';
@@ -14,7 +22,6 @@ import { FavoriteButton } from '@/components/ui/FavoriteButton';
 import { TriedButton } from '@/components/ui/TriedButton';
 import { SpotList } from '@/components/common/SpotList';
 import { getRelatedArticlesForPlan } from '@/lib/cross-links';
-import { CrossLinkCards } from '@/components/article/CrossLinkCards';
 import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
 import { getItemsForPlan } from '@/lib/items-catalog';
 import { PlanTimeline } from '@/components/plan/PlanTimeline';
@@ -81,6 +88,24 @@ function extractTimelineSteps(md: string): { name: string; text: string }[] {
   return steps;
 }
 
+/** 天気ラベルに合う線画アイコン（絵文字は使わない / §3-0）。 */
+const WEATHER_ICON: Record<string, KkIconName> = {
+  sunny: 'sunny',
+  rain: 'rain',
+  cold: 'cold',
+  heat: 'hot',
+  snow: 'snow',
+  wind: 'cloudy',
+  cloudy: 'cloudy',
+  humid: 'hot',
+  any: 'info',
+};
+const PLACE_ICON: Record<string, KkIconName> = {
+  home: 'home',
+  indoor: 'indoor',
+  outdoor: 'outdoor',
+};
+
 export default async function PlanPage({ params }: Props) {
   const { id } = await params;
   const plan = getPlan(id);
@@ -142,6 +167,34 @@ export default async function PlanPage({ params }: Props) {
   };
   const weatherJa = (w: string) => weatherJaLabels[w] ?? w;
 
+  // メタ情報（年齢 / 所要時間 / 予算 / エリア / 天気 / 場所）はデータテーブルで見せる（§3-0）。
+  const metaRows: KkInfoRow[] = [
+    { icon: 'age', label: '年齢', value: plan.ageRanges.join(' / ') + '歳' },
+    { icon: 'clock', label: '所要時間', value: `${plan.durationMin}分` },
+    { icon: 'yen', label: '予算', value: budgetLabels[plan.budget] ?? plan.budget },
+    ...(plan.area !== 'all'
+      ? [{ icon: 'pin' as const, label: 'エリア', value: getAreaName(plan.area) }]
+      : []),
+    ...(plan.weather.length > 0
+      ? [
+          {
+            icon: WEATHER_ICON[plan.weather[0]] ?? 'info',
+            label: '天気',
+            value: plan.weather.map(weatherJa).join(' / '),
+          },
+        ]
+      : []),
+    ...(plan.place.length > 0
+      ? [
+          {
+            icon: PLACE_ICON[plan.place[0]] ?? 'pin',
+            label: '場所',
+            value: plan.place.map((p) => placeJaLabels[p] ?? p).join(' / '),
+          },
+        ]
+      : []),
+  ];
+
   // HowTo JSON-LD
   const steps = extractTimelineSteps(plan.body);
   const jsonLdHowTo =
@@ -176,76 +229,49 @@ export default async function PlanPage({ params }: Props) {
       )}
 
       <V2Frame header="sub" active="home">
+        <div className="plan-v3">
 
-      <div className="container-article">
-        <nav className="breadcrumb" aria-label="パンくず">
+        {/* パンくず（区切りの「/」は線画アイコンに置き換え） */}
+        <nav className="pv3-crumb" aria-label="パンくず">
           <Link href="/">HOME</Link>
-          <span className="sep">/</span>
+          <KkIcon name="chevron-right" size={11} />
           <Link href="/#finder">今日の答え</Link>
-          <span className="sep">/</span>
-          <span>{plan.title}</span>
+          <KkIcon name="chevron-right" size={11} />
+          <span className="cur">{plan.title}</span>
         </nav>
-      </div>
 
-      {/* Hero image */}
-      {plan.hero && (
-        <div className="article-hero" style={{ maxWidth: 920, margin: '8px auto 32px', padding: '0 var(--pad)' }}>
-          <div
-            className="article-hero-img"
-            role="img"
-            aria-label={plan.title}
-            style={{
-              width: '100%',
-              aspectRatio: '16 / 9',
-              borderRadius: 'var(--radius-lg)',
-              backgroundImage: `url(${plan.hero})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundColor: 'var(--peach-soft)',
-            }}
-          />
+        {/* 上部ブロック。PC（≥920px）では左に写真・右に見出しの2段組にする。 */}
+        <div className="pv3-top">
+          <header className="pv3-head">
+            <span className="pv3-eyebrow">Today&apos;s plan — 今日の行動プラン</span>
+            <div className="pv3-title-row">
+              <h1 className="pv3-h1">{plan.title}</h1>
+              <FavoriteButton kind="plan" id={plan.id} size="md" />
+            </div>
+            <p className="pv3-lede">{plan.shortAnswer}</p>
+            <div className="pv3-tried">
+              <TriedButton kind="plan" id={plan.id} />
+            </div>
+          </header>
+
+          {/* メイン写真（文字を重ねない・軽い角丸だけ。src は従来どおり） */}
+          {plan.hero && (
+            <div className="pv3-hero">
+              <div className="pv3-hero-img">
+                <V2Img src={plan.hero} seed={plan.id} alt={plan.title} priority />
+              </div>
+            </div>
+          )}
         </div>
-      )}
-
-      <article className="container-article" style={{ paddingTop: 20 }}>
-        <header className="page-head">
-          <span className="eyebrow">Today&apos;s plan — 今日の行動プラン</span>
-          <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, justifyContent: 'space-between' }}>
-            <h1 style={{ flex: 1 }}>{plan.title}</h1>
-            <FavoriteButton kind="plan" id={plan.id} size="md" />
-          </div>
-          <p className="lead">{plan.shortAnswer}</p>
-          <div style={{ marginTop: 16 }}>
-            <TriedButton kind="plan" id={plan.id} />
-          </div>
-        </header>
 
         {/* AdSense: Plan hero 下 */}
-        <AdSlot placement="plan-below-hero" />
+        <div className="pv3-ad">
+          <AdSlot placement="plan-below-hero" />
+        </div>
 
-        {/* Quick info */}
-        <section
-          style={{
-            background: 'var(--paper-card)',
-            border: '1px solid var(--line)',
-            borderRadius: 'var(--radius-lg)',
-            padding: '20px 22px',
-            margin: '28px 0 32px',
-          }}
-          aria-label="このプランのクイック情報"
-        >
-          <div style={{ display: 'grid', gap: 16, gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))' }}>
-            <QuickItem label="年齢" value={plan.ageRanges.join(' / ') + '歳'} />
-            <QuickItem label="所要時間" value={`${plan.durationMin}分`} />
-            <QuickItem label="予算" value={budgetLabels[plan.budget] ?? plan.budget} />
-            {plan.area !== 'all' && <QuickItem label="エリア" value={getAreaName(plan.area)} />}
-            {plan.weather.length > 0 && (
-              <QuickItem label="天気" value={plan.weather.map(weatherJa).join(' / ')} />
-            )}
-            {plan.place.length > 0 && (
-              <QuickItem label="場所" value={plan.place.map((p) => placeJaLabels[p] ?? p).join(' / ')} />
-            )}
-          </div>
+        {/* このプランのクイック情報（データテーブル） */}
+        <section className="kk-sec pv3-sec" aria-label="このプランのクイック情報">
+          <KkInfoTable rows={metaRows} className="pv3-meta" />
         </section>
 
         {/* Timeline 可視化。
@@ -253,45 +279,53 @@ export default async function PlanPage({ params }: Props) {
             重複を回避する（ユーザー監査指摘）。markdown 側に時刻入り箇条書きが無いプランだけ
             視覚的タイムラインを補完表示する。 */}
         {steps.length >= 2 && !/^##\s.*タイムライン/m.test(plan.body) && (
-          <PlanTimeline steps={steps} />
+          <div className="kk-sec pv3-sec">
+            <PlanTimeline steps={steps} />
+          </div>
         )}
 
         {/* Body */}
-        <div className="prose" dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="pv3-body">
+          <div className="prose" dangerouslySetInnerHTML={{ __html: html }} />
+        </div>
 
         {/* エリア指定ありの外出プランならおすすめスポット提示 */}
         {plan.area !== 'all' && plan.place.some((p) => p === 'outdoor' || p === 'indoor') && (
-          <SpotList
-            area={plan.area}
-            age={plan.ageRanges[0] as '0-1' | '2-3' | '4-6' | undefined}
-            place={plan.place.includes('outdoor') ? 'outdoor' : 'indoor'}
-            budget={plan.budget === 'free' ? 'free' : plan.budget === 'low' ? 'low' : plan.budget === 'mid' ? 'mid' : undefined}
-            limit={5}
-          />
+          <div className="kk-sec pv3-sec pv3-spotlist">
+            <SpotList
+              area={plan.area}
+              age={plan.ageRanges[0] as '0-1' | '2-3' | '4-6' | undefined}
+              place={plan.place.includes('outdoor') ? 'outdoor' : 'indoor'}
+              budget={plan.budget === 'free' ? 'free' : plan.budget === 'low' ? 'low' : plan.budget === 'mid' ? 'mid' : undefined}
+              limit={5}
+            />
+          </div>
         )}
 
         {/* このプランに、あると便利なもの（アフィCTA） */}
         {planItems.length > 0 && (
-          <RelatedItemsCTA
-            label="このプランに、あると便利なもの"
-            items={planItems.map((it) => ({
-              href: it.href,
-              title: it.name,
-              subtitle: it.subtitle,
-              price: it.price,
-              provider: it.provider,
-              pr: false,
-            }))}
-          />
+          <div className="kk-sec pv3-sec pv3-items">
+            <RelatedItemsCTA
+              label="このプランに、あると便利なもの"
+              items={planItems.map((it) => ({
+                href: it.href,
+                title: it.name,
+                subtitle: it.subtitle,
+                price: it.price,
+                provider: it.provider,
+                pr: false,
+              }))}
+            />
+          </div>
         )}
 
         {/* タグ */}
         {tags.length > 0 && (
-          <section style={{ marginTop: 40 }}>
-            <span className="eyebrow">Tags · トピックで探す</span>
-            <div className="outing-chips" style={{ marginTop: 12 }}>
+          <section className="kk-sec pv3-sec">
+            <span className="pv3-eyebrow">Tags · トピックで探す</span>
+            <div className="kk-chips pv3-chips">
               {tags.slice(0, 8).map((t) => (
-                <Link key={t.slug} href={`/tag/${t.slug}`} className="outing-chip">
+                <Link key={t.slug} href={`/tag/${t.slug}`} className="kk-chip">
                   {t.name}
                 </Link>
               ))}
@@ -301,116 +335,71 @@ export default async function PlanPage({ params }: Props) {
 
         {/* 関連するSEO記事（あれば）— "もっと詳しく" */}
         {related && (
-          <section style={{ marginTop: 56 }}>
-            <h2 style={{ fontFamily: 'var(--font-mincho)', fontWeight: 600, fontSize: 22, margin: '0 0 16px' }}>
-              もっと詳しく知りたい方へ
-            </h2>
-            <Link
-              href={`/article/${related.slug}`}
-              style={{
-                display: 'block',
-                background: 'var(--paper-card)',
-                border: '1px solid var(--line)',
-                borderRadius: 'var(--radius-lg)',
-                overflow: 'hidden',
-                textDecoration: 'none',
-                color: 'inherit',
-              }}
-              className="related-card"
-            >
-              <div
-                style={{
-                  aspectRatio: '16 / 9',
-                  backgroundColor: 'var(--peach-soft)',
-                  backgroundImage: related.hero ? `url(${related.hero})` : undefined,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              />
-              <div style={{ padding: '16px 20px 20px' }}>
-                <span
-                  style={{
-                    fontFamily: 'var(--font-inter), Inter, sans-serif',
-                    fontSize: 10,
-                    letterSpacing: '.16em',
-                    textTransform: 'uppercase',
-                    color: 'var(--clay)',
-                    fontWeight: 600,
-                  }}
-                >
-                  Related article
+          <section className="kk-sec pv3-sec">
+            <KkSectionTitle as="h2" title="もっと詳しく知りたい方へ" />
+            <div className="kk-rows">
+              <Link href={`/article/${related.slug}`} className="kk-row pv3-lead-row">
+                <span className="pv3-lead-thumb">
+                  {related.hero && <V2Img src={related.hero} seed={related.slug} alt={related.title} />}
                 </span>
-                <h3
-                  style={{
-                    fontFamily: 'var(--font-mincho), "Shippori Mincho", serif',
-                    fontSize: 16,
-                    fontWeight: 600,
-                    margin: '6px 0 0',
-                    lineHeight: 1.55,
-                  }}
-                >
-                  {related.title}
-                </h3>
-              </div>
-            </Link>
+                <span className="kk-row-body">
+                  <span className="pv3-kicker">Related article</span>
+                  <h3 className="kk-row-title pv3-row-h3">{related.title}</h3>
+                </span>
+                <span className="kk-row-arrow">
+                  <KkIcon name="chevron-right" size={18} />
+                </span>
+              </Link>
+            </div>
           </section>
         )}
 
         {/* この行動に役立つ記事（プラン → 記事の双方向リンク） */}
         {crossLinkedArticles.length > 0 && (
-          <CrossLinkCards
-            eyebrow="Related articles · 実際の体験談・選び方"
-            heading="このプランに役立つ記事"
-            defaultEyebrow="Article"
-            items={crossLinkedArticles.map((a) => ({
-              href: `/article/${a.slug}`,
-              title: a.title,
-              description: a.lede || a.metaDescription,
-              hero: a.hero,
-              eyebrow: articleCategoryLabel(a.category, a.categoryName) || 'Article',
-            }))}
-          />
+          <section className="kk-sec pv3-sec" aria-label="このプランに役立つ記事">
+            <span className="pv3-eyebrow">Related articles · 実際の体験談・選び方</span>
+            <KkSectionTitle as="h2" title="このプランに役立つ記事" />
+            <div className="kk-rows">
+              {crossLinkedArticles.map((a) => {
+                const eyebrow = articleCategoryLabel(a.category, a.categoryName) || 'Article';
+                const description = a.lede || a.metaDescription;
+                return (
+                  <Link key={a.slug} href={`/article/${a.slug}`} className="kk-row">
+                    <span className="kk-row-thumb">
+                      {a.hero && <V2Img src={a.hero} seed={a.slug} alt={a.title} />}
+                    </span>
+                    <span className="kk-row-body">
+                      <span className="pv3-kicker">{eyebrow}</span>
+                      <span className="kk-row-title">{a.title}</span>
+                      {description && <span className="kk-row-sub">{description}</span>}
+                    </span>
+                    <span className="kk-row-arrow">
+                      <KkIcon name="chevron-right" size={18} />
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
         )}
 
         {/* 同じ条件で別のプラン（プラン横リンク） */}
         {siblingPlans.length > 0 && (
-          <section className="cv-auto-section" style={{ marginTop: 56 }}>
-            <h2 style={{ fontFamily: 'var(--font-mincho)', fontWeight: 600, fontSize: 22, margin: '0 0 16px' }}>
-              似た条件で別のプラン
-            </h2>
-            <div style={{ display: 'grid', gap: 14, gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))' }}>
+          <section className="kk-sec pv3-sec cv-auto-section">
+            <KkSectionTitle as="h2" title="似た条件で別のプラン" />
+            <div className="kk-rows">
               {siblingPlans.map((p) => (
-                <Link
-                  key={p.id}
-                  href={`/plan/${p.id}`}
-                  style={{
-                    background: 'var(--paper-card)',
-                    border: '1px solid var(--line)',
-                    borderRadius: 'var(--radius-md)',
-                    overflow: 'hidden',
-                    textDecoration: 'none',
-                    color: 'inherit',
-                    display: 'flex',
-                    flexDirection: 'column',
-                  }}
-                >
-                  {p.hero && (
-                    <div style={{
-                      aspectRatio: '16/10',
-                      backgroundColor: 'var(--peach-soft)',
-                      backgroundImage: `url(${p.hero})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                    }} />
-                  )}
-                  <div style={{ padding: '12px 14px 16px' }}>
-                    <h4 style={{ fontFamily: 'var(--font-mincho)', fontSize: 14, fontWeight: 600, margin: 0, lineHeight: 1.55 }}>
-                      {p.title}
-                    </h4>
-                    <p style={{ fontSize: 11.5, color: 'var(--ink-sub)', margin: '6px 0 0', lineHeight: 1.7 }}>
-                      {p.shortAnswer.slice(0, 50)}...
-                    </p>
-                  </div>
+                <Link key={p.id} href={`/plan/${p.id}`} className="kk-row">
+                  <span className="kk-row-thumb">
+                    {p.hero && <V2Img src={p.hero} seed={p.id} alt={p.title} />}
+                  </span>
+                  <span className="kk-row-body">
+                    <h4 className="kk-row-title pv3-row-h4">{p.title}</h4>
+                    <span className="kk-row-sub">{p.shortAnswer.slice(0, 50)}...</span>
+                  </span>
+                  <span className="kk-row-arrow">
+                    <KkIcon name="chevron-right" size={18} />
+                  </span>
                 </Link>
               ))}
             </div>
@@ -420,39 +409,24 @@ export default async function PlanPage({ params }: Props) {
         {/* AdSense Multiplex（ページ後半の回遊喚起） */}
         <AdSlot placement="article-related" style={{ marginTop: 48 }} />
 
-        <ShareBar url={`https://kyounoko.jp/plan/${id}`} title={plan.title} label="このプランをシェアする" />
+        <div className="pv3-share">
+          <ShareBar url={`https://kyounoko.jp/plan/${id}`} title={plan.title} label="このプランをシェアする" />
+        </div>
 
         {/* フィードバック誘導 */}
-        <section style={{ marginTop: 56, padding: '20px 22px', background: 'var(--paper-card)', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)' }}>
-          <p style={{ fontSize: 13, color: 'var(--ink-sub)', margin: '0 0 12px', lineHeight: 1.9 }}>
+        <section className="kk-sec pv3-sec pv3-feedback">
+          <p className="pv3-feedback-text">
             このプラン、役立ちましたか？ 別の条件で探すなら、トップの「条件で探す」からどうぞ。
           </p>
-          <Link href="/#finder" className="btn-primary-light">別の条件で探す</Link>
+          <Link href="/#finder" className="kk-btn outline">別の条件で探す</Link>
         </section>
-      </article>
 
+        {/* 回遊・再訪モジュール（リニューアル2026-09） */}
+        <KkLineCard placement="plan" />
+        <KkAddToHomeCard placement="plan" />
+        <KkFooter />
+        </div>
       </V2Frame>
-      
     </>
-  );
-}
-
-function QuickItem({ label, value }: { label: string; value: string }) {
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-      <span
-        style={{
-          fontFamily: 'var(--font-inter), Inter, sans-serif',
-          fontSize: 10,
-          color: 'var(--ink-mute)',
-          fontWeight: 600,
-          letterSpacing: '.16em',
-          textTransform: 'uppercase',
-        }}
-      >
-        {label}
-      </span>
-      <span style={{ fontSize: 14, fontWeight: 600, fontFamily: 'var(--font-mincho)' }}>{value}</span>
-    </div>
   );
 }

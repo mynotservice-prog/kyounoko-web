@@ -1,0 +1,1612 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "washokusato",
+  "name": "和食さと",
+  "sourceUrl": "https://store.srsholdings.com/sato/",
+  "method": "公式店舗検索（can-ly）の検索APIでブランド「和食さと」の国内店舗を列挙し、各店舗詳細ページの「設備・サービス」チェック項目を集計",
+  "total": 199,
+  "note": "海外業態（SATO DON・Washoku SATO 等）は除外。開店中以外3件（和食さと 相模原店(IS_CLOSED)、和食さと 三木店(IS_CLOSED)、和食さと 松原三宅店(IS_CLOSED)）も除外。設備・サービス欄の項目は 全席禁煙/個室あり/駐車場あり/ドリンクバーあり/セルフ式アルコールバーあり の5つで、子ども向け設備の属性は無い",
+  "facilities": {
+    "privateRoom": {
+      "count": 198,
+      "label": "個室あり"
+    },
+    "parking": {
+      "count": 199,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "和食さと 桑名東インター店",
+      "url": "https://store.srsholdings.com/sato/detail/0594253101/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 猪子石店",
+      "url": "https://store.srsholdings.com/sato/detail/0527755030/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 八潮店",
+      "url": "https://store.srsholdings.com/sato/detail/0489975845/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 川越店",
+      "url": "https://store.srsholdings.com/sato/detail/0492469030/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 三ッ境店",
+      "url": "https://store.srsholdings.com/sato/detail/0453655733/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 醍醐店",
+      "url": "https://store.srsholdings.com/sato/detail/0755740310/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 日進店",
+      "url": "https://store.srsholdings.com/sato/detail/0561731611/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 乗鞍店",
+      "url": "https://store.srsholdings.com/sato/detail/0528784572/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 紀三井寺店",
+      "url": "https://store.srsholdings.com/sato/detail/0734889960/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと パームシティ和歌山店",
+      "url": "https://store.srsholdings.com/sato/detail/0734572250/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 堺美原店",
+      "url": "https://store.srsholdings.com/sato/detail/0723691571/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 平和橋店",
+      "url": "https://store.srsholdings.com/sato/detail/0336925538/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 今宿店",
+      "url": "https://store.srsholdings.com/sato/detail/0792943744/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 高槻真上店",
+      "url": "https://store.srsholdings.com/sato/detail/0726841806/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 上更通店",
+      "url": "https://store.srsholdings.com/sato/detail/0525613264/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 木津店",
+      "url": "https://store.srsholdings.com/sato/detail/0774732912/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 杭全店",
+      "url": "https://store.srsholdings.com/sato/detail/0667584903/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 常滑店",
+      "url": "https://store.srsholdings.com/sato/detail/0569431123/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 寝屋川太秦店",
+      "url": "https://store.srsholdings.com/sato/detail/0728240813/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 瀬田店",
+      "url": "https://store.srsholdings.com/sato/detail/0775439762/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 堅田南店",
+      "url": "https://store.srsholdings.com/sato/detail/0775730579/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 大垣店",
+      "url": "https://store.srsholdings.com/sato/detail/0584747026/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 則武本通店",
+      "url": "https://store.srsholdings.com/sato/detail/0524612310/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 交野星田店",
+      "url": "https://store.srsholdings.com/sato/detail/0728910020/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 金剛東店",
+      "url": "https://store.srsholdings.com/sato/detail/0721298712/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 亀岡東店",
+      "url": "https://store.srsholdings.com/sato/detail/0771227703/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 川崎等々力店",
+      "url": "https://store.srsholdings.com/sato/detail/0447982281/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 三田ウッディタウン店",
+      "url": "https://store.srsholdings.com/sato/detail/0795658825/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 上鳥羽店",
+      "url": "https://store.srsholdings.com/sato/detail/0756728557/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 西大和店",
+      "url": "https://store.srsholdings.com/sato/detail/0745761070/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 和泉府中店",
+      "url": "https://store.srsholdings.com/sato/detail/0725452952/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 門真店",
+      "url": "https://store.srsholdings.com/sato/detail/0669094171/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 宝塚インター店",
+      "url": "https://store.srsholdings.com/sato/detail/0797812760/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 羽島店",
+      "url": "https://store.srsholdings.com/sato/detail/0583932999/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 湊川店",
+      "url": "https://store.srsholdings.com/sato/detail/0785959916/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 長原店",
+      "url": "https://store.srsholdings.com/sato/detail/0667006761/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 泉佐野店",
+      "url": "https://store.srsholdings.com/sato/detail/0724691350/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 向日店",
+      "url": "https://store.srsholdings.com/sato/detail/0759332541/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 清水大曲店",
+      "url": "https://store.srsholdings.com/sato/detail/0543610747/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 八日市店",
+      "url": "https://store.srsholdings.com/sato/detail/0748205019/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと ビエラタウン西明石店",
+      "url": "https://store.srsholdings.com/sato/detail/0789298610/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと イオンタウン弥富店",
+      "url": "https://store.srsholdings.com/sato/detail/0567660161/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 浜松西インター店",
+      "url": "https://store.srsholdings.com/sato/detail/0534300160/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 弓削店",
+      "url": "https://store.srsholdings.com/sato/detail/0729481633/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 西脇店",
+      "url": "https://store.srsholdings.com/sato/detail/0795241676/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 嵐山店",
+      "url": "https://store.srsholdings.com/sato/detail/0493627812/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 金町店",
+      "url": "https://store.srsholdings.com/sato/detail/0356993322/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 一宮店",
+      "url": "https://store.srsholdings.com/sato/detail/0586283618/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 高槻西町店",
+      "url": "https://store.srsholdings.com/sato/detail/0726937867/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 双ケ丘店",
+      "url": "https://store.srsholdings.com/sato/detail/0758828464/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 楢原店",
+      "url": "https://store.srsholdings.com/sato/detail/0426262591/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 加納店",
+      "url": "https://store.srsholdings.com/sato/detail/0729670208/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 新庄西店",
+      "url": "https://store.srsholdings.com/sato/detail/0745694871/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 船堀店",
+      "url": "https://store.srsholdings.com/sato/detail/0356071608/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 堀田通店",
+      "url": "https://store.srsholdings.com/sato/detail/0528833161/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 門真江端店",
+      "url": "https://store.srsholdings.com/sato/detail/0728877385/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 東灘店",
+      "url": "https://store.srsholdings.com/sato/detail/0784418531/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 広畑店",
+      "url": "https://store.srsholdings.com/sato/detail/0792375205/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 鵜沼店",
+      "url": "https://store.srsholdings.com/sato/detail/0583704830/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 奈良神殿店",
+      "url": "https://store.srsholdings.com/sato/detail/0742632297/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 豊田四郷店",
+      "url": "https://store.srsholdings.com/sato/detail/0565462601/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 浜北店",
+      "url": "https://store.srsholdings.com/sato/detail/0535845301/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 東生駒店",
+      "url": "https://store.srsholdings.com/sato/detail/0743739338/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 星ヶ丘店",
+      "url": "https://store.srsholdings.com/sato/detail/0728482650/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 春日井鳥居松店",
+      "url": "https://store.srsholdings.com/sato/detail/0568853100/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 伊丹北店",
+      "url": "https://store.srsholdings.com/sato/detail/0727773462/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと エルズモール加西店",
+      "url": "https://store.srsholdings.com/sato/detail/0790359111/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 八尾青山店",
+      "url": "https://store.srsholdings.com/sato/detail/0729950310/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 清瀬店",
+      "url": "https://store.srsholdings.com/sato/detail/0424927003/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 三雲店",
+      "url": "https://store.srsholdings.com/sato/detail/0748721702/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 城ノ里店",
+      "url": "https://store.srsholdings.com/sato/detail/0759552883/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 西大津店",
+      "url": "https://store.srsholdings.com/sato/detail/0775276171/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 狭山店",
+      "url": "https://store.srsholdings.com/sato/detail/0723667172/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 水主町店",
+      "url": "https://store.srsholdings.com/sato/detail/0523507411/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 和泉葛の葉店",
+      "url": "https://store.srsholdings.com/sato/detail/0725473110/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 岸和田荒木店",
+      "url": "https://store.srsholdings.com/sato/detail/0724440450/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 豊橋西高師店",
+      "url": "https://store.srsholdings.com/sato/detail/0532370500/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 豊橋大橋通店",
+      "url": "https://store.srsholdings.com/sato/detail/0532516868/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと パワーセンター松阪店",
+      "url": "https://store.srsholdings.com/sato/detail/0598222155/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと フレスト松井山手店",
+      "url": "https://store.srsholdings.com/sato/detail/0774638533/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 小牧郷中店",
+      "url": "https://store.srsholdings.com/sato/detail/0568417550/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 嵯峨店",
+      "url": "https://store.srsholdings.com/sato/detail/0758726247/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 岩倉店",
+      "url": "https://store.srsholdings.com/sato/detail/0587663375/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 百舌鳥店",
+      "url": "https://store.srsholdings.com/sato/detail/0722586612/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 若江店",
+      "url": "https://store.srsholdings.com/sato/detail/0667300310/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 東習志野店",
+      "url": "https://store.srsholdings.com/sato/detail/0474777268/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 吉田駅前店",
+      "url": "https://store.srsholdings.com/sato/detail/0729619238/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと フレスポ長田店",
+      "url": "https://store.srsholdings.com/sato/detail/0667484141/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 大久保店",
+      "url": "https://store.srsholdings.com/sato/detail/0789351510/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 府中店",
+      "url": "https://store.srsholdings.com/sato/detail/0423697788/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 洲本あいが店",
+      "url": "https://store.srsholdings.com/sato/detail/0799281255/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 名張店",
+      "url": "https://store.srsholdings.com/sato/detail/0595642441/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 静岡池田店",
+      "url": "https://store.srsholdings.com/sato/detail/0542670077/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 桜上水店",
+      "url": "https://store.srsholdings.com/sato/detail/0333044355/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 河内長野店",
+      "url": "https://store.srsholdings.com/sato/detail/0721536074/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 浦安店",
+      "url": "https://store.srsholdings.com/sato/detail/0473509359/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 秦野店",
+      "url": "https://store.srsholdings.com/sato/detail/0463835530/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 平野神社店",
+      "url": "https://store.srsholdings.com/sato/detail/0754646864/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 御幣島店",
+      "url": "https://store.srsholdings.com/sato/detail/0664738126/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 昭和橋店",
+      "url": "https://store.srsholdings.com/sato/detail/0523980581/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 亀山店",
+      "url": "https://store.srsholdings.com/sato/detail/0595831677/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 名古屋西インター店",
+      "url": "https://store.srsholdings.com/sato/detail/0524322600/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 新大宮店",
+      "url": "https://store.srsholdings.com/sato/detail/0742361080/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 岸田堂店",
+      "url": "https://store.srsholdings.com/sato/detail/0667290870/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 西大島店",
+      "url": "https://store.srsholdings.com/sato/detail/0356099390/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 招提南店",
+      "url": "https://store.srsholdings.com/sato/detail/0728672041/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 安城店",
+      "url": "https://store.srsholdings.com/sato/detail/0566745138/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 磐田見付店",
+      "url": "https://store.srsholdings.com/sato/detail/0538371310/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 橋本店",
+      "url": "https://store.srsholdings.com/sato/detail/0736268848/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 玉津店",
+      "url": "https://store.srsholdings.com/sato/detail/0789290602/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 焼津店",
+      "url": "https://store.srsholdings.com/sato/detail/0546560701/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 石神井台店",
+      "url": "https://store.srsholdings.com/sato/detail/0339294020/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 明石朝霧店",
+      "url": "https://store.srsholdings.com/sato/detail/0789122390/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 長浜店",
+      "url": "https://store.srsholdings.com/sato/detail/0749624310/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 市川菅野店",
+      "url": "https://store.srsholdings.com/sato/detail/0473295712/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 西立川店",
+      "url": "https://store.srsholdings.com/sato/detail/0425240325/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと あやべグンゼタウン店",
+      "url": "https://store.srsholdings.com/sato/detail/0773431020/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 島田店",
+      "url": "https://store.srsholdings.com/sato/detail/0547330202/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 住之江公園前店",
+      "url": "https://store.srsholdings.com/sato/detail/0666862154/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 豊明南店",
+      "url": "https://store.srsholdings.com/sato/detail/0562973277/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 水無瀬店",
+      "url": "https://store.srsholdings.com/sato/detail/0759621194/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 近江八幡店",
+      "url": "https://store.srsholdings.com/sato/detail/0748375866/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 亀岡店",
+      "url": "https://store.srsholdings.com/sato/detail/0771243710/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 堺宿院店",
+      "url": "https://store.srsholdings.com/sato/detail/0722323611/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 和歌山北インター店",
+      "url": "https://store.srsholdings.com/sato/detail/0734612500/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 勝山店",
+      "url": "https://store.srsholdings.com/sato/detail/0667411340/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 橿原北店",
+      "url": "https://store.srsholdings.com/sato/detail/0744255345/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 椥辻店",
+      "url": "https://store.srsholdings.com/sato/detail/0755024093/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 天理店",
+      "url": "https://store.srsholdings.com/sato/detail/0743671600/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 西尾店",
+      "url": "https://store.srsholdings.com/sato/detail/0563530290/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 南越谷店",
+      "url": "https://store.srsholdings.com/sato/detail/0489655338/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 伊賀上野店",
+      "url": "https://store.srsholdings.com/sato/detail/0595242477/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 下鳥羽店",
+      "url": "https://store.srsholdings.com/sato/detail/0756126451/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 西舞鶴モール店",
+      "url": "https://store.srsholdings.com/sato/detail/0773709010/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 神戸星陵台店",
+      "url": "https://store.srsholdings.com/sato/detail/0787046270/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 墨田堤通店",
+      "url": "https://store.srsholdings.com/sato/detail/0352472791/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 藤原台店",
+      "url": "https://store.srsholdings.com/sato/detail/0789871707/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 浜松上新屋店",
+      "url": "https://store.srsholdings.com/sato/detail/0535453315/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 四日市店",
+      "url": "https://store.srsholdings.com/sato/detail/0593544128/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 武庫之荘店",
+      "url": "https://store.srsholdings.com/sato/detail/0664330310/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 新金岡店",
+      "url": "https://store.srsholdings.com/sato/detail/0722599097/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと つくば店",
+      "url": "https://store.srsholdings.com/sato/detail/0298581001/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 姫路南店",
+      "url": "https://store.srsholdings.com/sato/detail/0792344680/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 牧落店",
+      "url": "https://store.srsholdings.com/sato/detail/0727212074/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 相生店",
+      "url": "https://store.srsholdings.com/sato/detail/0791243025/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 法隆寺店",
+      "url": "https://store.srsholdings.com/sato/detail/0745750552/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 伊勢店",
+      "url": "https://store.srsholdings.com/sato/detail/0596206634/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 明石二見店",
+      "url": "https://store.srsholdings.com/sato/detail/0789426524/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 上野芝店",
+      "url": "https://store.srsholdings.com/sato/detail/0722440053/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 富岡店",
+      "url": "https://store.srsholdings.com/sato/detail/0457728571/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 京田辺店",
+      "url": "https://store.srsholdings.com/sato/detail/0774685277/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 鈴鹿白子店",
+      "url": "https://store.srsholdings.com/sato/detail/0593682311/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 加古川店",
+      "url": "https://store.srsholdings.com/sato/detail/0794515860/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 立石店",
+      "url": "https://store.srsholdings.com/sato/detail/0336948966/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 大石橋店",
+      "url": "https://store.srsholdings.com/sato/detail/0756911557/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 須磨店",
+      "url": "https://store.srsholdings.com/sato/detail/0787433221/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 豊川御油店",
+      "url": "https://store.srsholdings.com/sato/detail/0533870355/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 羽田店",
+      "url": "https://store.srsholdings.com/sato/detail/0337447263/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 立花店",
+      "url": "https://store.srsholdings.com/sato/detail/0664216090/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 御殿場店",
+      "url": "https://store.srsholdings.com/sato/detail/0550803070/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 刈谷店",
+      "url": "https://store.srsholdings.com/sato/detail/0566635559/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 福知山店",
+      "url": "https://store.srsholdings.com/sato/detail/0773250597/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 岐阜城東通店",
+      "url": "https://store.srsholdings.com/sato/detail/0582757191/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 倉敷東富井店",
+      "url": "https://store.srsholdings.com/sato/detail/0864864464/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 王寺駅前店",
+      "url": "https://store.srsholdings.com/sato/detail/0745327702/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 氷上店",
+      "url": "https://store.srsholdings.com/sato/detail/0795885088/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 岡崎店",
+      "url": "https://store.srsholdings.com/sato/detail/0564218033/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 池田東店",
+      "url": "https://store.srsholdings.com/sato/detail/0727621174/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 松阪店",
+      "url": "https://store.srsholdings.com/sato/detail/0598525270/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 吹田岸部店",
+      "url": "https://store.srsholdings.com/sato/detail/0648617678/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 足立島根店",
+      "url": "https://store.srsholdings.com/sato/detail/0338604734/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 碧南店",
+      "url": "https://store.srsholdings.com/sato/detail/0566428437/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 湯里店",
+      "url": "https://store.srsholdings.com/sato/detail/0667040421/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 赤川店",
+      "url": "https://store.srsholdings.com/sato/detail/0669274626/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 豊田東インター店",
+      "url": "https://store.srsholdings.com/sato/detail/0565293100/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 大和高田神楽店",
+      "url": "https://store.srsholdings.com/sato/detail/0745252560/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 本巣北方店",
+      "url": "https://store.srsholdings.com/sato/detail/0583241150/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 杭瀬店",
+      "url": "https://store.srsholdings.com/sato/detail/0664821020/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと セノパーク津店",
+      "url": "https://store.srsholdings.com/sato/detail/0592361070/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 放出店",
+      "url": "https://store.srsholdings.com/sato/detail/0661671231/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 大宮七里店",
+      "url": "https://store.srsholdings.com/sato/detail/0486877570/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 守口店",
+      "url": "https://store.srsholdings.com/sato/detail/0669967420/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 山科店",
+      "url": "https://store.srsholdings.com/sato/detail/0755930811/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 津本町店",
+      "url": "https://store.srsholdings.com/sato/detail/0592217732/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 南彦根店",
+      "url": "https://store.srsholdings.com/sato/detail/0749263451/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと メラード大和田店",
+      "url": "https://store.srsholdings.com/sato/detail/0664781772/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 平塚田村店",
+      "url": "https://store.srsholdings.com/sato/detail/0463511680/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 城陽店",
+      "url": "https://store.srsholdings.com/sato/detail/0774543043/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 上野白鳳店",
+      "url": "https://store.srsholdings.com/sato/detail/0595241210/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 四条畷東店",
+      "url": "https://store.srsholdings.com/sato/detail/0728765017/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 竹田店",
+      "url": "https://store.srsholdings.com/sato/detail/0756436251/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 打田店",
+      "url": "https://store.srsholdings.com/sato/detail/0736783130/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 茶屋新田店",
+      "url": "https://store.srsholdings.com/sato/detail/0523033110/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 豊川インター店",
+      "url": "https://store.srsholdings.com/sato/detail/0533895715/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 霊仙寺店",
+      "url": "https://store.srsholdings.com/sato/detail/0775536010/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 倉敷北店",
+      "url": "https://store.srsholdings.com/sato/detail/0864418620/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 岡山古新田店",
+      "url": "https://store.srsholdings.com/sato/detail/0862380677/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 守山志段味店",
+      "url": "https://store.srsholdings.com/sato/detail/0527995479/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "和食さと 広島観音新町店",
+      "url": "https://store.srsholdings.com/sato/detail/0829615130/",
+      "facilities": [
+        "privateRoom",
+        "parking"
+      ]
+    }
+  ]
+}

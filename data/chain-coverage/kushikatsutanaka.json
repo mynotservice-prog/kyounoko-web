@@ -1,0 +1,2716 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "kushikatsutanaka",
+  "name": "串カツ田中",
+  "sourceUrl": "https://restaurant.kushi-tanaka.com/",
+  "method": "公式店舗検索（can-ly）の検索APIで全店舗を列挙し、各店舗詳細ページの「席タイプ」「提供サービス」チェック項目を集計",
+  "total": 354,
+  "note": "検索APIの内訳: 串カツ田中352店・串カツ田中スモール2店・串カツ田中東京ドーム1店。詳細ページに席タイプ／提供サービス欄が無い1件（串カツ田中 東京ドーム店）は total から除外",
+  "facilities": {
+    "zashiki": {
+      "count": 162,
+      "label": "座敷"
+    },
+    "boxSeat": {
+      "count": 68,
+      "label": "ボックス席"
+    },
+    "kidsChair": {
+      "count": 317,
+      "label": "子供用イス"
+    },
+    "parking": {
+      "count": 41,
+      "label": "駐車場"
+    }
+  },
+  "stores": [
+    {
+      "name": "串カツ田中 BiVi仙台東口店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0244/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 BiVi沼津店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1149/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 CIAL横浜ANNEX店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0189/",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 KITTE博多店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1213/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 TXアベニュー八潮店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0220/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 nonowa東小金井店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0161/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 tekuteながまち店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0149/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 いわき平店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1200/",
+      "facilities": [
+        "zashiki",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 すすきの店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1124/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 たまプラーザ店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0044/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 つくば研究学園店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1147/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 つつじヶ丘店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0075/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 ぷらりと京王府中店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0152/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 みのおキューズモール店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0205/",
+      "facilities": [
+        "zashiki",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 アクロスモール新鎌ヶ谷店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0171/",
+      "facilities": [
+        "zashiki",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 アスティ多治見店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0186/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 アスティ岡崎店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0243/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 アスティ藤枝店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0233/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 アパホテル上野御徒町駅前南店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0202/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 アミュプラザおおいた店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1239/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 アミュプラザ小倉店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1217/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 アメリカ村店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0038/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 ウエストコート姪浜店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1219/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 エルくずは店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0231/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 キュービックプラザ新横浜店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0130/",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 コクーンシティさいたま新都心店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0167/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 スイングモール東岡崎店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0206/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 セレオ西八王子店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0176/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 センター南店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0129/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 センテラス天文館店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1193/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 トナリエつくば店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0239/",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 プレナ幕張店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0223/",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 マークイズ福岡ももち店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1216/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 ミューザ川崎店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1212/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 一ノ関駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1256/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 一之江店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0235/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 一宮店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1141/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 三宮店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/2010/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 三年坂店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1131/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 三条木屋町店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0088/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 三軒茶屋店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0010/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 上大岡駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0218/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 上尾店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0019/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 上越高田店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1209/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 上野6丁目店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0048/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 下丸子店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0204/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 下北沢店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0015/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 下通店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1210/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 与野店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0133/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 世田谷店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0001/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 両国店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1023/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 中井店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0198/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 中村公園店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0073/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 中洲川端店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1221/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 中目黒店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0042/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 中野早稲田通り店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0141/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 久茂地店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1041/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 亀岡店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1226/",
+      "facilities": [
+        "zashiki",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 亀戸店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1011/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 五反田駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0193/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 京成大久保店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1072/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 京成曳舟店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0247/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 京王永山店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0184/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 今里店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0155/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 仙台中田店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1227/",
+      "facilities": [
+        "zashiki",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 仙台店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1252/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 代々木上原店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0030/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 仲町台店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0188/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 伏見店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1259/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 会津若松店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1253/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 佐世保店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1175/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 佐賀駅南口店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1142/",
+      "facilities": [
+        "zashiki",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 佐野店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0114/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 元住吉店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1198/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 八丁堀店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0082/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 八王子駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0215/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 六本木店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0029/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 六甲道店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1121/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 函館五稜郭店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1111/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 刈谷店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0165/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 初台店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0191/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 前橋三俣店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0102/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 勝田台店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0221/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 北仙台店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0226/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 北千住店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1040/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 北習志野駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0213/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 北越谷店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1246/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 千歳烏山店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1062/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 千種店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0147/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 千葉ニュータウン中央店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0124/",
+      "facilities": [
+        "zashiki",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 千葉店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1108/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 南大沢店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0180/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 南浦和店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0162/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 南砂町店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1234/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 南草津店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1085/",
+      "facilities": [
+        "zashiki",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 南越谷店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1245/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 古川店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1260/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 吉祥寺店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1007/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 名古屋駅西口店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0054/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 名駅2丁目店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0061/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 向ケ丘遊園店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0178/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 呉服町通り店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1054/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 周南店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1168/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 和光市駅店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0190/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 品川港南口店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0066/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 四日市駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1106/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 国分寺店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1134/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 国分町通り店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1132/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 垂水店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0203/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 塚口店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/2007/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 多摩センター店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1123/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 大井町店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1016/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 大分別府店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1235/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 大和田店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1105/",
+      "facilities": [
+        "zashiki",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 大塚店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1022/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 大宮店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0023/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 大山店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0020/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 大曲駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1248/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 大曽根店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1064/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 大橋店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1215/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 大正店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0111/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 大船店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1103/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 大須観音店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1100/",
+      "facilities": [
+        "zashiki"
+      ]
+    },
+    {
+      "name": "串カツ田中 天草店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1196/",
+      "facilities": [
+        "zashiki",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 太田川駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1165/",
+      "facilities": [
+        "zashiki"
+      ]
+    },
+    {
+      "name": "串カツ田中 姫路駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0195/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 学芸大店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1173/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 宇都宮東口店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1119/",
+      "facilities": [
+        "zashiki"
+      ]
+    },
+    {
+      "name": "串カツ田中 宗像店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0170/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 宮原店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0148/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 宮崎店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1182/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 富山駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1115/",
+      "facilities": [
+        "zashiki"
+      ]
+    },
+    {
+      "name": "串カツ田中 小伝馬町店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0074/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 小山東口店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1145/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 小手指店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0160/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 小田原店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1060/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 小田急相模原店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0103/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 尼崎店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0064/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 尾山台店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0099/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 山形駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1207/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 山科店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0225/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 岐阜横丁店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0091/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 岡山駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1206/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 岡本店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1167/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 岩倉店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0240/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 川口店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1027/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 川崎店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1030/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 巣鴨店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0216/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 市ヶ谷店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0224/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 布施店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0210/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 幡ヶ谷店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0242/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 平塚店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1091/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 平岸店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1046/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 広島店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1179/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 広島横川店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1250/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 広島橋本町店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1258/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 弘前土手町店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1190/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 御器所店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0069/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 徳島鴨島店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1249/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 志木店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0104/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 恵比寿店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1006/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 成増店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0119/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 成瀬店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0107/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 戸塚店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0122/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 戸田店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1140/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 戸畑鞘ヶ谷店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0163/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 所沢店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1116/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 所沢牛沼店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0150/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 押上店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1228/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 新大宮店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0146/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 新宿3丁目店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0026/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 新宿歌舞伎町店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1065/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 新小岩店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0018/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 新所沢店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0158/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 新松戸店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0071/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 新橋駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0081/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 新浦安店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0052/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 新潟駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1114/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 新瑞橋店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0135/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 新百合ヶ丘店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0196/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 新長田店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0137/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 方南町店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1001/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 旗の台店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0238/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 日吉店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1183/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 明大前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1126/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 明石大久保店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1189/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 星ヶ丘店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0208/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 昭島店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0084/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 有楽町店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0118/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 朝霞台店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1083/",
+      "facilities": [
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "串カツ田中 木場店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1005/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 本八幡店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1247/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 本厚木店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1014/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 本川越店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1036/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 東久留米店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0209/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 東戸塚店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0229/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 東日本橋店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0089/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 東武宇都宮店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1113/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 東武練馬店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1098/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 東神奈川店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0144/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 東銀座店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0092/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 東高円寺店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1019/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 松山大街道店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1136/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 松山小栗店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1257/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 松戸五香店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0177/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 松戸店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1237/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 松本店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1122/",
+      "facilities": [
+        "zashiki",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "串カツ田中 松江駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1162/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 板宿店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0173/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 枚方モール店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0214/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 柏西口店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0126/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 根岸店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0166/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 桜木町野毛店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1092/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 梅ヶ丘店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1024/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 梅小路店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0232/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 梅田DDハウス店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1201/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 椥辻店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0246/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 楠店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1177/",
+      "facilities": [
+        "zashiki",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 横浜西口店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1038/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 橋本店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1052/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 武蔵境店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1089/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 武蔵小山店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0132/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 武蔵小杉店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0006/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 気仙沼店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1236/",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 水沢店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1232/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 水道橋店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0041/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 江南店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0087/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 江古田店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0037/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 江戸川橋店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1093/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 池下店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0056/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 池袋サンシャイン店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/2009/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 泉中央店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0185/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 洋光台店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1139/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 津田沼店（2026年9月17日オープン予定）",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0248/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 津駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1152/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 流山おおたかの森店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0095/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 浄心店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0086/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 浜松モール街店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1159/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 浜町店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1184/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 浦和店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1090/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 浦安北口店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0228/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 浦添P'sスクエア店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1076/",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 海老名ビナウォーク店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0197/",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 海老名店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0121/",
+      "facilities": [
+        "zashiki",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 渋谷宮益坂店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0021/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 渋谷百軒店店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0032/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 溝口店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1028/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 瀬戸店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0172/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 熊本駅店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1112/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 熊谷石原店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0131/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 犬山駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0192/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 王子店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0033/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 瑞江店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0199/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 生駒店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0245/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 田無店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0068/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 田町店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0035/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 甲府中央店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1231/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 町田店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0011/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 町田駅前通り店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0125/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 盛岡店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1197/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 相模原店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1230/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 相模大野店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1074/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 矢場町店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1188/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 知立店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0222/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 石神井公園店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1056/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 神田店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0128/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 福井駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1117/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 福山店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1128/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 福岡別府店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1222/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 福岡天神店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1223/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 福岡志免店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0145/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 福岡飯倉店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0169/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 福島駅東口店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1254/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 秋津店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1133/",
+      "facilities": [
+        "zashiki"
+      ]
+    },
+    {
+      "name": "串カツ田中 秋田駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1224/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 秋葉原昭和通り店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1150/",
+      "facilities": [
+        "zashiki"
+      ]
+    },
+    {
+      "name": "串カツ田中 稲毛店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1143/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 立川店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1031/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 竹芝みなと横丁店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0139/",
+      "facilities": [
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 箕面店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0179/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 築地店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0097/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 米沢店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1238/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 経堂店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1118/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 綱島店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1017/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 綾瀬店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0043/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 練馬店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1229/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 聖蹟桜ケ丘駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0212/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 花小金井店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0157/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 苦楽園店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/2002/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 茅ヶ崎北口店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0187/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 草加店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1244/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 草津店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0127/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 草薙店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1208/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 荻窪店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1243/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 菊川店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1233/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 葛西駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0234/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 蒲田店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1003/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 薬院店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1214/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 藤が丘店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0227/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 藤井寺店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0182/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 藤崎店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1218/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 藤沢店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1158/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 西中島南方店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0076/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 西巣鴨店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1163/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 西日暮里店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1042/",
+      "facilities": [
+        "zashiki"
+      ]
+    },
+    {
+      "name": "串カツ田中 西池袋店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/2001/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 西船橋店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1043/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 西葛西店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1009/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 西鉄久留米店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1220/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 西院店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0053/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 調布店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1026/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 豊川店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1242/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 豊橋店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1153/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 豊田店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0078/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 赤坂店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0016/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 越谷レイクタウン駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0219/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 辻堂店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0175/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 近江八幡店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0236/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 近鉄八尾店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0140/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 郡山駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1255/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 都城店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1205/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 都立大店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0004/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 野々市店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1241/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair",
+        "parking"
+      ]
+    },
+    {
+      "name": "串カツ田中 金沢店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1240/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 金沢文庫店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0112/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 金町店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1148/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 錦三丁目店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1251/",
+      "facilities": [
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "串カツ田中 長岡駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1130/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 長崎駅店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1194/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 長野店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1157/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 門前仲町店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1075/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 関内店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0110/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 阪急伊丹店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0207/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 阪急園田店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0194/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 阪神西宮店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0230/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 阿波座店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0105/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 青森本町店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1225/",
+      "facilities": [
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "串カツ田中 青葉台店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1051/",
+      "facilities": []
+    },
+    {
+      "name": "串カツ田中 香椎店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1172/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 香里園店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1169/",
+      "facilities": [
+        "zashiki",
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 駒沢店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1129/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 高崎駅西口店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1137/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 高幡不動店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0237/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 高松ライオン通店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1211/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 高槻店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0136/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 高田馬場研修センター店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0211/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 高知店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1181/",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 高蔵寺店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0200/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 鳥取駅前店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0241/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 鴻池新田店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0085/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 鶯谷店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0024/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 鶴見西口店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0217/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 鹿児島ライカ店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/1185/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "串カツ田中 黒川店",
+      "url": "https://restaurant.kushi-tanaka.com/detail/0201/",
+      "facilities": [
+        "boxSeat",
+        "kidsChair"
+      ]
+    }
+  ]
+}

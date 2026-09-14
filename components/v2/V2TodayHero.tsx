@@ -6,7 +6,7 @@ import { AREAS, getAreaName, isValidArea, type AreaSlug } from '@/lib/area';
 import { PREF_GEO } from '@/lib/prefecture-geo';
 import { useUserSettings, type ChildAge } from '@/hooks/useUserSettings';
 import { trackEvent } from '@/lib/analytics';
-import { V2Icon } from './V2Icon';
+import { KkIcon, type KkIconName } from '@/components/kk/KkIcon';
 
 /**
  * トップの「今日のうちの子」パーソナライズヒーロー。
@@ -21,11 +21,12 @@ import { V2Icon } from './V2Icon';
 type WxKind = 'sunny' | 'rain' | 'heat' | 'cold';
 type Wx = { kind: WxKind; tmax: number | null };
 
-const WX_META: Record<WxKind, { emoji: string; label: string }> = {
-  sunny: { emoji: '☀️', label: '晴れ' },
-  rain: { emoji: '☔', label: '雨' },
-  heat: { emoji: '🥵', label: '猛暑' },
-  cold: { emoji: '🧣', label: '寒い' },
+/** 天気の記号は絵文字を使わず KkIcon（線画・墨1色）で描く（docs/renewal-2026-09.md §3-0）。 */
+const WX_META: Record<WxKind, { icon: KkIconName; label: string }> = {
+  sunny: { icon: 'sunny', label: '晴れ' },
+  rain: { icon: 'rain', label: '雨' },
+  heat: { icon: 'hot', label: '猛暑' },
+  cold: { icon: 'cold', label: '寒い' },
 };
 
 const WX_CACHE_PREFIX = 'kk_wx_v1_';
@@ -119,29 +120,6 @@ function birthMonthOptions(): { v: string; t: string }[] {
 
 const PREFS = AREAS.filter((a) => Boolean(PREF_GEO[a.slug]));
 
-const cardStyle: React.CSSProperties = {
-  background: '#fff',
-  border: '1px solid #f0e8de',
-  borderRadius: 16,
-  padding: '16px 16px 14px',
-  marginTop: 16,
-  boxShadow: '0 2px 10px rgba(60,40,20,.05)',
-};
-
-const ctaStyle: React.CSSProperties = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  gap: 6,
-  padding: '9px 14px',
-  borderRadius: 999,
-  background: '#fff7ee',
-  border: '1px solid #f3dec7',
-  color: '#7a4a12',
-  fontSize: 13.5,
-  fontWeight: 600,
-  textDecoration: 'none',
-};
-
 export type AgePick = { slug: string; title: string };
 
 export function V2TodayHero({
@@ -204,26 +182,16 @@ export function V2TodayHero({
   if (!configured || editing) {
     const canSave = /^\d{4}-\d{2}$/.test(draftBirth);
     return (
-      <section style={cardStyle} aria-label="今日のうちの子 設定">
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
-          <V2Icon name="sparkle" size={16} color="var(--v2-orange)" />
-          <strong style={{ fontSize: 15 }}>「うちの子の今日」を毎日表示する</strong>
-        </div>
-        <p style={{ fontSize: 12.5, color: '#8a7d6e', margin: '0 0 12px' }}>
+      <section className="tv3-setup" aria-label="今日のうちの子 設定">
+        <div className="tv3-setup-title">「うちの子の今日」を毎日表示する</div>
+        <p className="tv3-setup-lead">
           お住まいの地域とお子さんの生まれ月を選ぶと、開くたびに今日の天気×月齢に合った過ごし方を提案します。この端末にだけ保存され、会員登録は不要です。
         </p>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'center' }}>
+        <div className="tv3-setup-row">
           <select
             value={draftArea}
             onChange={(e) => setDraftArea(e.target.value as AreaSlug)}
             aria-label="お住まいの都道府県"
-            style={{
-              padding: '9px 10px',
-              borderRadius: 10,
-              border: '1px solid #e7dccd',
-              fontSize: 14,
-              background: '#fff',
-            }}
           >
             {PREFS.map((p) => (
               <option key={p.slug} value={p.slug}>
@@ -235,13 +203,6 @@ export function V2TodayHero({
             value={draftBirth}
             onChange={(e) => setDraftBirth(e.target.value)}
             aria-label="お子さんの生まれ月"
-            style={{
-              padding: '9px 10px',
-              borderRadius: 10,
-              border: '1px solid #e7dccd',
-              fontSize: 14,
-              background: '#fff',
-            }}
           >
             <option value="">お子さんの生まれ月</option>
             {birthMonthOptions().map((o) => (
@@ -252,9 +213,9 @@ export function V2TodayHero({
           </select>
           <button
             type="button"
-            className="v2-btn-primary"
+            className="kk-btn sm"
             disabled={!canSave}
-            style={{ opacity: canSave ? 1 : 0.45, padding: '9px 16px', borderRadius: 999 }}
+            style={{ opacity: canSave ? 1 : 0.45 }}
             onClick={() => {
               const mo = monthsOld(draftBirth);
               update({
@@ -272,17 +233,7 @@ export function V2TodayHero({
             今日のおすすめを表示
           </button>
           {configured && (
-            <button
-              type="button"
-              onClick={() => setEditing(false)}
-              style={{
-                background: 'none',
-                border: 'none',
-                fontSize: 12.5,
-                color: '#a09384',
-                cursor: 'pointer',
-              }}
-            >
+            <button type="button" className="tv3-setup-cancel" onClick={() => setEditing(false)}>
               キャンセル
             </button>
           )}
@@ -308,38 +259,45 @@ export function V2TodayHero({
   const dateLabel = `${today.getMonth() + 1}/${today.getDate()}(${['日', '月', '火', '水', '木', '金', '土'][today.getDay()]})`;
 
   return (
-    <section style={cardStyle} aria-label="今日のうちの子">
-      <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--v2-orange-deep)', letterSpacing: '.04em', marginBottom: 2 }}>
-        {dateLabel}・うちの子の今日
+    <section className="tv3-status" aria-label="今日のうちの子">
+      <span className="tv3-status-eyebrow">{dateLabel}・うちの子の今日</span>
+      {/* 日付・天気・月齢の帯（データがあるものだけ。天気は取得できるまで晴れ既定＝従来どおり） */}
+      <div className="tv3-status-strip">
+        <span className="tv3-status-item">
+          <span className="tv3-status-lab">きょう</span>
+          <span className="tv3-status-val">{dateLabel}</span>
+        </span>
+        <span className="tv3-status-item">
+          <span className="tv3-status-lab">{areaName}の天気</span>
+          <span className="tv3-status-val">
+            <KkIcon name={meta.icon} size={16} sw={1.9} />
+            {meta.label}
+            {wx?.tmax != null && <span className="tv3-status-sub"> 最高{wx.tmax}°C</span>}
+          </span>
+        </span>
+        <span className="tv3-status-item">
+          <span className="tv3-status-lab">うちの子</span>
+          <span className="tv3-status-val">{ageLabel(months)}</span>
+        </span>
       </div>
-      <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, flexWrap: 'wrap' }}>
-        <strong style={{ fontSize: 16.5 }}>
-          今日の{areaName}は {meta.emoji} {meta.label}
-          {wx?.tmax != null && (
-            <span style={{ fontWeight: 500, fontSize: 13.5, color: '#8a7d6e' }}>
-              ・最高{wx.tmax}°C
-            </span>
-          )}
-        </strong>
-      </div>
-      <p style={{ margin: '4px 0 12px', fontSize: 14, color: '#5d5246' }}>
+      <p className="tv3-status-lead">
         {ageLabel(months)}のお子さんと、今日はどう過ごす？
       </p>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-        <Link href={q('outside')} style={ctaStyle} onClick={() => click('outside')}>
-          <V2Icon name="tree" size={15} color="var(--v2-orange-deep)" />
+      <div className="kk-chips">
+        <Link href={q('outside')} className="kk-chip" onClick={() => click('outside')}>
+          <KkIcon name="park" size={15} color="var(--kk-orange-deep)" />
           外でおでかけ
         </Link>
-        <Link href={q('home')} style={ctaStyle} onClick={() => click('home')}>
-          <V2Icon name="house" size={15} color="var(--v2-orange-deep)" />
+        <Link href={q('home')} className="kk-chip" onClick={() => click('home')}>
+          <KkIcon name="indoor" size={15} color="var(--kk-orange-deep)" />
           おうちで遊ぶ
         </Link>
         <Link
           href={`/area/${settings.area}`}
-          style={ctaStyle}
+          className="kk-chip"
           onClick={() => click('area-spots')}
         >
-          <V2Icon name="pin" size={15} color="var(--v2-orange-deep)" />
+          <KkIcon name="pin" size={15} color="var(--kk-orange-deep)" />
           {areaName}のスポット
         </Link>
       </div>
@@ -354,45 +312,25 @@ export function V2TodayHero({
           .map((i) => pool[(start + i) % pool.length])
           .filter((p, i, arr) => arr.findIndex((x) => x.slug === p.slug) === i);
         return (
-          <div style={{ marginTop: 14, borderTop: '1px dashed #efe5d6', paddingTop: 10 }}>
-            <div style={{ fontSize: 12.5, fontWeight: 700, color: '#8a7d6e', marginBottom: 6 }}>
-              {ageLabel(months)}の今月のヒント
-            </div>
+          <div className="tv3-status-hints">
+            <span className="tv3-status-hints-lab">{ageLabel(months)}の今月のヒント</span>
             {picks.map((p) => (
               <Link
                 key={p.slug}
                 href={`/article/${p.slug}`}
                 onClick={() => click('age-pick')}
-                style={{
-                  display: 'block',
-                  fontSize: 13.5,
-                  color: '#7a4a12',
-                  padding: '5px 0',
-                  textDecoration: 'none',
-                }}
+                className="tv3-status-hint"
               >
-                ・{p.title}
+                <KkIcon name="chevron-right" size={13} sw={2.2} />
+                {p.title}
               </Link>
             ))}
           </div>
         );
       })()}
-      <div style={{ marginTop: 10, textAlign: 'right' }}>
-        <button
-          type="button"
-          onClick={() => setEditing(true)}
-          style={{
-            background: 'none',
-            border: 'none',
-            fontSize: 12,
-            color: '#a09384',
-            cursor: 'pointer',
-            textDecoration: 'underline',
-          }}
-        >
-          地域・生まれ月を変更
-        </button>
-      </div>
+      <button type="button" className="tv3-status-edit" onClick={() => setEditing(true)}>
+        地域・生まれ月を変更
+      </button>
     </section>
   );
 }

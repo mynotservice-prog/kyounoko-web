@@ -24,6 +24,90 @@
       "relatedArticleSlugs": [
         "takanawa-gateway-kodzure-lunch"
       ]
+    },
+    {
+      "name": "トフロム八重洲 タワー",
+      "category": "indoor",
+      "place": "indoor",
+      "ages": [
+        "0-1",
+        "2-3",
+        "4-6"
+      ],
+      "city": "中央区",
+      "ward": "中央区",
+      "note": "TOFROM YAESU TOWER。2026年9月10日開業の東京駅直結（八重洲地下街経由）の複合施設。1階に授乳室「赤ちゃんふらっと」（7:00〜24:00・調乳用温水器・おむつ替え台）、各階の多目的トイレにおむつ替えスペースとベビーチェア。公式の店舗一覧で「ベビーカー入店可」「未就学児童入店可」の表示がある飲食店が18店あります。",
+      "nearestStation": "東京",
+      "walkMinutes": 5,
+      "budget": "free",
+      "reservation": "none",
+      "officialUrl": "https://tofrom-yaesu.com/",
+      "facilities": {
+        "nursingRoom": "yes",
+        "diaperChange": "yes",
+        "bathroom": "yes",
+        "note": "授乳室は1階TOWER側商業エリア（7:00〜24:00）。バスターミナル利用者は地下のバスターミナルフロアの授乳室を案内（公式サービス案内・2026-09-12確認）"
+      },
+      "relatedArticleSlugs": [
+        "tofrom-yaesu-kodzure-guide",
+        "tokyo-station-babyroom",
+        "tokyo-station-kodzure-lunch"
+      ]
+    },
+    {
+      "name": "自由が丘 ミューズスクエア",
+      "category": "indoor",
+      "place": "indoor",
+      "ages": [
+        "0-1",
+        "2-3",
+        "4-6"
+      ],
+      "city": "目黒区",
+      "ward": "目黒区",
+      "note": "JIYUGAOKA MUSE SQUARE。2026年9月17日開業の自由が丘駅正面口すぐの複合施設。5階が丸ごと子育てフロア「こどもでぱーと 自由が丘」で、公式施設案内では授乳室とキッズトイレが5階、多目的トイレはB2F・B1F・2F・4F・5Fに設置。4階はレストランフロア（叙々苑・AGIO・香華園・そば処 薮伊豆など）、地下1階に明治屋。駐車場約65台（日祝12〜18時は歩行者天国で入出庫不可）。",
+      "nearestStation": "自由が丘",
+      "walkMinutes": 1,
+      "budget": "low",
+      "reservation": "none",
+      "officialUrl": "https://jiyugaoka-muse-square.jp/",
+      "facilities": {
+        "nursingRoom": "yes",
+        "bathroom": "yes",
+        "note": "授乳室・キッズトイレは5階（公式施設案内・2026-09-12確認）。おむつ替え台・ベビーカー貸出は公式記載なし"
+      },
+      "relatedArticleSlugs": [
+        "jiyugaoka-muse-square-kodzure"
+      ]
+    }
+  ],
+  "kanagawa": [
+    {
+      "name": "アソビル（ASOBUILD）",
+      "category": "indoor",
+      "place": "indoor",
+      "ages": [
+        "0-1",
+        "2-3",
+        "4-6"
+      ],
+      "city": "横浜市",
+      "note": "横浜駅みなみ東口通路直通・東口徒歩2分の複合エンタメビル（入場無料）。4階に屋内キッズパーク「ハピピランド」（10:00〜17:30・小学生以下は保護者同伴・生後6カ月未満無料・鍵付きベビーカー置き場・個室授乳スペース・調乳カウンター・キッズトイレ）、1階は18店ほどが集まる「アソビル横丁」。館の授乳・おむつ替えは1階多目的トイレのおむつ替えベッド。駐車場なし。",
+      "nearestStation": "横浜",
+      "walkMinutes": 2,
+      "budget": "mid",
+      "reservation": "none",
+      "officialUrl": "https://asobuild.com/",
+      "facilities": {
+        "diaperChange": "yes",
+        "nursingRoom": "yes",
+        "kidsSpace": "yes",
+        "bathroom": "yes",
+        "note": "館の授乳室は個室ではなく1階多目的トイレ（おむつ替えベッドを授乳室として利用可）。個室の授乳スペース・調乳カウンターは4階ハピピランド内（公式・2026-09-12確認）"
+      },
+      "relatedArticleSlugs": [
+        "asobuild-yokohama-kodzure-guide"
+      ]
     }
   ]
 }

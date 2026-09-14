@@ -1,0 +1,3445 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "ringerhut",
+  "name": "リンガーハット",
+  "sourceUrl": "https://shop.ringerhut.jp/all/",
+  "method": "公式店舗検索（can-ly）の検索APIでブランド「リンガーハット」の店舗を列挙し、各店舗詳細ページの「サービス」チェック項目（無い店舗は「駐車場」欄）を集計",
+  "total": 548,
+  "note": "公式の店舗属性は 券売機／ドライブスルー／駐車場／冷凍自販機 の4つ（＋一部店舗の「駐車場」欄）のみ。ブランド外（冷凍自動販売機5件）は除外。閉店扱い1件（リンガーハット 新橋駅前店）も除外。詳細ページの形式: 「サービス」チェック欄あり390件／「駐車場」欄（台数テキスト）のみ31件／どちらも無し127件。「駐車場」欄は台数等の記載があれば駐車場ありと数えた（表記例: 24台、19台、27台、32台、12台）。どちらも無い127件（リンガーハット MEGAドン・キホーテ広畑店、リンガーハット あまがさきキューズモール店、リンガーハット ゆめタウン別府店、リンガーハット ゆめタウン大牟田店、リンガーハット ららぽーとTOKYO-BAY店、リンガーハット アリオ上尾店、リンガーハット アリオ上田店、リンガーハット アリオ亀有店 ほか）は属性表示なし（該当なし）として数えた",
+  "facilities": {
+    "parking": {
+      "count": 344,
+      "label": "駐車場"
+    }
+  },
+  "stores": [
+    {
+      "name": "リンガーハット MARK IS 葛飾かなまち店",
+      "url": "https://shop.ringerhut.jp/detail/r1077/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット MEGAドン・キホーテ広畑店",
+      "url": "https://shop.ringerhut.jp/detail/r0952/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット MOMOテラス店",
+      "url": "https://shop.ringerhut.jp/detail/r0829/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット あべのキューズモール店",
+      "url": "https://shop.ringerhut.jp/detail/r0928/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット あまがさきキューズモール店",
+      "url": "https://shop.ringerhut.jp/detail/r0758/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット くみまちモール朝霞店",
+      "url": "https://shop.ringerhut.jp/detail/r1048/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット くりえいと宗像店",
+      "url": "https://shop.ringerhut.jp/detail/r0412/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット けやきウォーク前橋店",
+      "url": "https://shop.ringerhut.jp/detail/r0672/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット さいたま吉野店",
+      "url": "https://shop.ringerhut.jp/detail/r1055/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット たまプラーザテラス店",
+      "url": "https://shop.ringerhut.jp/detail/r0861/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ならファミリー店",
+      "url": "https://shop.ringerhut.jp/detail/r1021/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット みのおキューズモール店",
+      "url": "https://shop.ringerhut.jp/detail/r1041/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット みらい長崎店",
+      "url": "https://shop.ringerhut.jp/detail/r0664/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット もりのみやキューズモールBASE店",
+      "url": "https://shop.ringerhut.jp/detail/r0825/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ゆめシティ下関店",
+      "url": "https://shop.ringerhut.jp/detail/r0865/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ゆめタウンはません店",
+      "url": "https://shop.ringerhut.jp/detail/r0926/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ゆめタウン下松店",
+      "url": "https://shop.ringerhut.jp/detail/r0999/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ゆめタウン久留米店",
+      "url": "https://shop.ringerhut.jp/detail/r0852/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ゆめタウン佐賀店",
+      "url": "https://shop.ringerhut.jp/detail/r0907/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ゆめタウン光の森店",
+      "url": "https://shop.ringerhut.jp/detail/r0826/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ゆめタウン別府店",
+      "url": "https://shop.ringerhut.jp/detail/r0751/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット ゆめタウン博多店",
+      "url": "https://shop.ringerhut.jp/detail/r0342/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ゆめタウン呉店",
+      "url": "https://shop.ringerhut.jp/detail/r1035/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ゆめタウン夢彩都店",
+      "url": "https://shop.ringerhut.jp/detail/r0855/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ゆめタウン大牟田店",
+      "url": "https://shop.ringerhut.jp/detail/r0414/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット ゆめタウン山口店",
+      "url": "https://shop.ringerhut.jp/detail/r0837/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ゆめタウン広島店",
+      "url": "https://shop.ringerhut.jp/detail/r0967/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ゆめタウン福山店",
+      "url": "https://shop.ringerhut.jp/detail/r1017/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ゆめタウン行橋店",
+      "url": "https://shop.ringerhut.jp/detail/r0972/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ゆめタウン高松店",
+      "url": "https://shop.ringerhut.jp/detail/r1022/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ららぽーとTOKYO-BAY店",
+      "url": "https://shop.ringerhut.jp/detail/r0600/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット ららぽーと沼津店",
+      "url": "https://shop.ringerhut.jp/detail/r1025/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット アクアウォーク大垣店",
+      "url": "https://shop.ringerhut.jp/detail/r0817/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット アクアシティお台場店",
+      "url": "https://shop.ringerhut.jp/detail/r0925/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット アクロスプラザ与次郎店",
+      "url": "https://shop.ringerhut.jp/detail/r0935/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット アスティ岐阜店",
+      "url": "https://shop.ringerhut.jp/detail/r0766/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット アゼリアモール館林店",
+      "url": "https://shop.ringerhut.jp/detail/r0943/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット アピタタウン稲沢店",
+      "url": "https://shop.ringerhut.jp/detail/r0737/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット アピタテラス横浜綱島店",
+      "url": "https://shop.ringerhut.jp/detail/r0965/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット アミュプラザくまもと店",
+      "url": "https://shop.ringerhut.jp/detail/r1078/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット アリオ上尾店",
+      "url": "https://shop.ringerhut.jp/detail/r0730/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット アリオ上田店",
+      "url": "https://shop.ringerhut.jp/detail/r0634/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット アリオ亀有店",
+      "url": "https://shop.ringerhut.jp/detail/r0611/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット アリオ倉敷店",
+      "url": "https://shop.ringerhut.jp/detail/r0768/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット アリオ八尾店",
+      "url": "https://shop.ringerhut.jp/detail/r0715/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット アリオ北砂店",
+      "url": "https://shop.ringerhut.jp/detail/r0714/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット アリオ川口店",
+      "url": "https://shop.ringerhut.jp/detail/r0669/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット アリオ市原店",
+      "url": "https://shop.ringerhut.jp/detail/r0746/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット アリオ札幌店",
+      "url": "https://shop.ringerhut.jp/detail/r0609/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット アリオ橋本店",
+      "url": "https://shop.ringerhut.jp/detail/r0906/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット アリオ深谷店",
+      "url": "https://shop.ringerhut.jp/detail/r0619/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット アリオ葛西店",
+      "url": "https://shop.ringerhut.jp/detail/r0784/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット アリオ蘇我店",
+      "url": "https://shop.ringerhut.jp/detail/r0642/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット アリオ西新井店",
+      "url": "https://shop.ringerhut.jp/detail/r0742/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット アリオ鳳店",
+      "url": "https://shop.ringerhut.jp/detail/r0757/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット アリオ鷲宮店",
+      "url": "https://shop.ringerhut.jp/detail/r0709/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット アル・プラザ草津店",
+      "url": "https://shop.ringerhut.jp/detail/r0680/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンもりの里店",
+      "url": "https://shop.ringerhut.jp/detail/r0914/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンスタイル仙台卸町店",
+      "url": "https://shop.ringerhut.jp/detail/r0983/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンスタイル東戸塚店",
+      "url": "https://shop.ringerhut.jp/detail/r0908/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンスタイル板橋前野町店",
+      "url": "https://shop.ringerhut.jp/detail/r0847/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンスタイル河辺店",
+      "url": "https://shop.ringerhut.jp/detail/r0541/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンスタイル笹丘店",
+      "url": "https://shop.ringerhut.jp/detail/r0389/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンスタイル豊田店",
+      "url": "https://shop.ringerhut.jp/detail/r0937/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンタウンおゆみ野店",
+      "url": "https://shop.ringerhut.jp/detail/r0663/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンタウンとよみ店",
+      "url": "https://shop.ringerhut.jp/detail/r0875/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンタウンふじみ野店",
+      "url": "https://shop.ringerhut.jp/detail/r1049/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンタウンユーカリが丘店",
+      "url": "https://shop.ringerhut.jp/detail/r0973/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンタウン上里店",
+      "url": "https://shop.ringerhut.jp/detail/r0802/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンタウン千種店",
+      "url": "https://shop.ringerhut.jp/detail/r0536/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンタウン守谷店",
+      "url": "https://shop.ringerhut.jp/detail/r0582/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンタウン成田富里店",
+      "url": "https://shop.ringerhut.jp/detail/r0851/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンタウン武富店",
+      "url": "https://shop.ringerhut.jp/detail/r0902/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンフードスタイル港南台店",
+      "url": "https://shop.ringerhut.jp/detail/r0985/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンマリナタウン店",
+      "url": "https://shop.ringerhut.jp/detail/r0330/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンマリンピア稲毛店",
+      "url": "https://shop.ringerhut.jp/detail/r0770/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモールKYOTO店",
+      "url": "https://shop.ringerhut.jp/detail/r0652/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモールいわき小名浜店",
+      "url": "https://shop.ringerhut.jp/detail/r0974/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモールかほく店",
+      "url": "https://shop.ringerhut.jp/detail/r0822/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモールりんくう泉南店",
+      "url": "https://shop.ringerhut.jp/detail/r1067/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモールナゴヤドーム前店",
+      "url": "https://shop.ringerhut.jp/detail/r0708/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール上尾店",
+      "url": "https://shop.ringerhut.jp/detail/r1046/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール下妻店",
+      "url": "https://shop.ringerhut.jp/detail/r0575/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール下田店",
+      "url": "https://shop.ringerhut.jp/detail/r0608/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール与野店",
+      "url": "https://shop.ringerhut.jp/detail/r0612/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール久御山店",
+      "url": "https://shop.ringerhut.jp/detail/r1069/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール伊丹昆陽店",
+      "url": "https://shop.ringerhut.jp/detail/r0627/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール佐野新都市店",
+      "url": "https://shop.ringerhut.jp/detail/r0831/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール八千代緑が丘",
+      "url": "https://shop.ringerhut.jp/detail/r0528/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール八幡東店",
+      "url": "https://shop.ringerhut.jp/detail/r0720/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール北大路店",
+      "url": "https://shop.ringerhut.jp/detail/r0811/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール北戸田店",
+      "url": "https://shop.ringerhut.jp/detail/r0557/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール各務原店",
+      "url": "https://shop.ringerhut.jp/detail/r0679/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール名取店",
+      "url": "https://shop.ringerhut.jp/detail/r0602/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール名古屋茶屋店",
+      "url": "https://shop.ringerhut.jp/detail/r0879/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール四日市北店",
+      "url": "https://shop.ringerhut.jp/detail/r0636/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール土浦店",
+      "url": "https://shop.ringerhut.jp/detail/r0599/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール多摩平の森店",
+      "url": "https://shop.ringerhut.jp/detail/r0792/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール大垣店",
+      "url": "https://shop.ringerhut.jp/detail/r0527/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール大日店",
+      "url": "https://shop.ringerhut.jp/detail/r1060/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール大曲店",
+      "url": "https://shop.ringerhut.jp/detail/r0671/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール大阪ドームシティ店",
+      "url": "https://shop.ringerhut.jp/detail/r0726/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール大高店",
+      "url": "https://shop.ringerhut.jp/detail/r0924/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール天童店",
+      "url": "https://shop.ringerhut.jp/detail/r0761/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール姫路リバーシティ店",
+      "url": "https://shop.ringerhut.jp/detail/r0789/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール姫路大津店",
+      "url": "https://shop.ringerhut.jp/detail/r0913/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール富士宮店",
+      "url": "https://shop.ringerhut.jp/detail/r0886/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール小山店",
+      "url": "https://shop.ringerhut.jp/detail/r0735/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール岡崎店",
+      "url": "https://shop.ringerhut.jp/detail/r1050/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール川口前川店",
+      "url": "https://shop.ringerhut.jp/detail/r0736/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール常滑店",
+      "url": "https://shop.ringerhut.jp/detail/r0853/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール幕張新都心店",
+      "url": "https://shop.ringerhut.jp/detail/r1037/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール広島府中店",
+      "url": "https://shop.ringerhut.jp/detail/r0595/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール広島祇園店",
+      "url": "https://shop.ringerhut.jp/detail/r0584/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール座間店",
+      "url": "https://shop.ringerhut.jp/detail/r0955/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール扶桑店",
+      "url": "https://shop.ringerhut.jp/detail/r0631/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール新小松店",
+      "url": "https://shop.ringerhut.jp/detail/r1003/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール新潟亀田インター店",
+      "url": "https://shop.ringerhut.jp/detail/r0624/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール日の出店",
+      "url": "https://shop.ringerhut.jp/detail/r0548/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール日吉津店",
+      "url": "https://shop.ringerhut.jp/detail/r0799/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール明和店",
+      "url": "https://shop.ringerhut.jp/detail/r1033/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール春日部店",
+      "url": "https://shop.ringerhut.jp/detail/r0904/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール木更津店",
+      "url": "https://shop.ringerhut.jp/detail/r0846/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール東浦店",
+      "url": "https://shop.ringerhut.jp/detail/r1008/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール柏店",
+      "url": "https://shop.ringerhut.jp/detail/r0553/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール水戸内原店",
+      "url": "https://shop.ringerhut.jp/detail/r0864/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール沖縄ライカム店",
+      "url": "https://shop.ringerhut.jp/detail/r0821/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール津南店",
+      "url": "https://shop.ringerhut.jp/detail/r0989/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール津山インター店",
+      "url": "https://shop.ringerhut.jp/detail/r0753/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール津田沼店",
+      "url": "https://shop.ringerhut.jp/detail/r0547/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール浜松市野店",
+      "url": "https://shop.ringerhut.jp/detail/r0794/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール浦和美園店",
+      "url": "https://shop.ringerhut.jp/detail/r0554/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール熊本店",
+      "url": "https://shop.ringerhut.jp/detail/r0661/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール熱田店",
+      "url": "https://shop.ringerhut.jp/detail/r1020/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール猪名川店",
+      "url": "https://shop.ringerhut.jp/detail/r0579/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール甲府昭和店",
+      "url": "https://shop.ringerhut.jp/detail/r0625/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール盛岡南店",
+      "url": "https://shop.ringerhut.jp/detail/r0614/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール直方店",
+      "url": "https://shop.ringerhut.jp/detail/r0601/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール神戸南店",
+      "url": "https://shop.ringerhut.jp/detail/r0939/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール福津店",
+      "url": "https://shop.ringerhut.jp/detail/r0674/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール秋田店",
+      "url": "https://shop.ringerhut.jp/detail/r0803/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール筑紫野店",
+      "url": "https://shop.ringerhut.jp/detail/r0581/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール綾川店",
+      "url": "https://shop.ringerhut.jp/detail/r0565/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール羽生店",
+      "url": "https://shop.ringerhut.jp/detail/r0544/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール船橋店",
+      "url": "https://shop.ringerhut.jp/detail/r0675/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール苗穂店",
+      "url": "https://shop.ringerhut.jp/detail/r0610/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール茨木店",
+      "url": "https://shop.ringerhut.jp/detail/r0816/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール都城駅前店",
+      "url": "https://shop.ringerhut.jp/detail/r0580/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール鈴鹿店",
+      "url": "https://shop.ringerhut.jp/detail/r0550/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール長久手店",
+      "url": "https://shop.ringerhut.jp/detail/r1034/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール香椎浜店",
+      "url": "https://shop.ringerhut.jp/detail/r0590/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール高の原店",
+      "url": "https://shop.ringerhut.jp/detail/r0572/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール高岡店",
+      "url": "https://shop.ringerhut.jp/detail/r0810/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール高崎店",
+      "url": "https://shop.ringerhut.jp/detail/r0560/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンモール鳥取北店",
+      "url": "https://shop.ringerhut.jp/detail/r0732/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオンモール鹿児島店",
+      "url": "https://shop.ringerhut.jp/detail/r0543/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオンレイクタウンmori店",
+      "url": "https://shop.ringerhut.jp/detail/r0819/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン三好店",
+      "url": "https://shop.ringerhut.jp/detail/r1013/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン入間店",
+      "url": "https://shop.ringerhut.jp/detail/r0980/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン具志川店",
+      "url": "https://shop.ringerhut.jp/detail/r0563/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオン北谷店",
+      "url": "https://shop.ringerhut.jp/detail/r1016/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン千葉ニュータウン店",
+      "url": "https://shop.ringerhut.jp/detail/r0589/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン品川シーサイド店",
+      "url": "https://shop.ringerhut.jp/detail/r0450/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン大井店",
+      "url": "https://shop.ringerhut.jp/detail/r0707/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン大和ショッピングセンター店",
+      "url": "https://shop.ringerhut.jp/detail/r0637/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン大塔店",
+      "url": "https://shop.ringerhut.jp/detail/r0593/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン大村店",
+      "url": "https://shop.ringerhut.jp/detail/r0243/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオン天王町店",
+      "url": "https://shop.ringerhut.jp/detail/r1057/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン小郡店",
+      "url": "https://shop.ringerhut.jp/detail/r0718/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオン市川妙典店",
+      "url": "https://shop.ringerhut.jp/detail/r0832/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン延岡ショッピングセンター店",
+      "url": "https://shop.ringerhut.jp/detail/r1073/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン新浦安店",
+      "url": "https://shop.ringerhut.jp/detail/r0949/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン日向店",
+      "url": "https://shop.ringerhut.jp/detail/r0359/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオン明石店",
+      "url": "https://shop.ringerhut.jp/detail/r0656/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオン時津店",
+      "url": "https://shop.ringerhut.jp/detail/r0361/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオン東雲店",
+      "url": "https://shop.ringerhut.jp/detail/r0567/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオン松山店",
+      "url": "https://shop.ringerhut.jp/detail/r0884/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン板橋ショッピングセンター店",
+      "url": "https://shop.ringerhut.jp/detail/r0988/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン横須賀久里浜店",
+      "url": "https://shop.ringerhut.jp/detail/r0568/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオン洛南店",
+      "url": "https://shop.ringerhut.jp/detail/r0775/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオン焼津店",
+      "url": "https://shop.ringerhut.jp/detail/r0678/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン発寒店",
+      "url": "https://shop.ringerhut.jp/detail/r0617/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオン相模原ショッピングセンター店",
+      "url": "https://shop.ringerhut.jp/detail/r1076/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン秦野店",
+      "url": "https://shop.ringerhut.jp/detail/r0648/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン茅ヶ崎中央店",
+      "url": "https://shop.ringerhut.jp/detail/r0920/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン茅ヶ崎店",
+      "url": "https://shop.ringerhut.jp/detail/r0838/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン葛西店",
+      "url": "https://shop.ringerhut.jp/detail/r0562/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン那覇店",
+      "url": "https://shop.ringerhut.jp/detail/r1026/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イオン高槻店",
+      "url": "https://shop.ringerhut.jp/detail/r0836/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イオン鳥取店",
+      "url": "https://shop.ringerhut.jp/detail/r0933/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イズミヤ千里丘店",
+      "url": "https://shop.ringerhut.jp/detail/r0343/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イトーヨーカドー三郷店",
+      "url": "https://shop.ringerhut.jp/detail/r0653/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イトーヨーカドー四街道店",
+      "url": "https://shop.ringerhut.jp/detail/r0996/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イトーヨーカドー国領店",
+      "url": "https://shop.ringerhut.jp/detail/r0728/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イトーヨーカドー大和鶴間店",
+      "url": "https://shop.ringerhut.jp/detail/r0588/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イトーヨーカドー大宮宮原店",
+      "url": "https://shop.ringerhut.jp/detail/r0688/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イトーヨーカドー大森店",
+      "url": "https://shop.ringerhut.jp/detail/r0958/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イトーヨーカドー川崎店",
+      "url": "https://shop.ringerhut.jp/detail/r1009/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イトーヨーカドー曳舟店",
+      "url": "https://shop.ringerhut.jp/detail/r0733/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イトーヨーカドー東久留米店",
+      "url": "https://shop.ringerhut.jp/detail/r0820/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イトーヨーカドー松戸店",
+      "url": "https://shop.ringerhut.jp/detail/r1011/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イトーヨーカドー横浜別所店",
+      "url": "https://shop.ringerhut.jp/detail/r0944/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イトーヨーカドー武蔵境店",
+      "url": "https://shop.ringerhut.jp/detail/r0594/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イトーヨーカドー武蔵小金井店",
+      "url": "https://shop.ringerhut.jp/detail/r1002/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イトーヨーカドー津久野店",
+      "url": "https://shop.ringerhut.jp/detail/r0658/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イトーヨーカドー流山店",
+      "url": "https://shop.ringerhut.jp/detail/r0779/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イトーヨーカドー湘南台店",
+      "url": "https://shop.ringerhut.jp/detail/r0596/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イトーヨーカドー立場店",
+      "url": "https://shop.ringerhut.jp/detail/r1031/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イトーヨーカドー能見台店",
+      "url": "https://shop.ringerhut.jp/detail/r0646/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イトーヨーカドー船橋店",
+      "url": "https://shop.ringerhut.jp/detail/r1004/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イーアスつくば店",
+      "url": "https://shop.ringerhut.jp/detail/r0574/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット イーアス沖縄豊崎店",
+      "url": "https://shop.ringerhut.jp/detail/R1082/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット イーアス高尾店",
+      "url": "https://shop.ringerhut.jp/detail/r0929/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット エアポートウォーク名古屋店",
+      "url": "https://shop.ringerhut.jp/detail/r0835/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット エミフルMASAKI店",
+      "url": "https://shop.ringerhut.jp/detail/r0778/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット オリナス錦糸町店",
+      "url": "https://shop.ringerhut.jp/detail/r0618/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット カインズホーム茂原店",
+      "url": "https://shop.ringerhut.jp/detail/r0866/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット カエデウォーク長津田店",
+      "url": "https://shop.ringerhut.jp/detail/r0962/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット カラフルタウン岐阜店",
+      "url": "https://shop.ringerhut.jp/detail/r0777/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット グランエミオ大泉学園店",
+      "url": "https://shop.ringerhut.jp/detail/r0824/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット グランツリー武蔵小杉店",
+      "url": "https://shop.ringerhut.jp/detail/r0798/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット ココリア多摩センター店",
+      "url": "https://shop.ringerhut.jp/detail/r0954/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット コムシティ黒崎店",
+      "url": "https://shop.ringerhut.jp/detail/r0721/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット コロワ甲子園店",
+      "url": "https://shop.ringerhut.jp/detail/r0968/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット サンエー西原シティ店",
+      "url": "https://shop.ringerhut.jp/detail/r1083/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット サンリブシティ小倉店",
+      "url": "https://shop.ringerhut.jp/detail/r0533/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット ショップス市川店",
+      "url": "https://shop.ringerhut.jp/detail/r0681/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット シーナシーナ青森店",
+      "url": "https://shop.ringerhut.jp/detail/r1018/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット シーモール下関店",
+      "url": "https://shop.ringerhut.jp/detail/r0961/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ジョイフル本田千代田店",
+      "url": "https://shop.ringerhut.jp/detail/r0626/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ジョイフル本田千葉ニュータウン店",
+      "url": "https://shop.ringerhut.jp/detail/r0725/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ジョイフル本田宇都宮店",
+      "url": "https://shop.ringerhut.jp/detail/r0540/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット ジョイフル本田瑞穂店",
+      "url": "https://shop.ringerhut.jp/detail/r0520/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ジョイホンパーク吉岡店",
+      "url": "https://shop.ringerhut.jp/detail/r1058/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット スマーク伊勢崎店",
+      "url": "https://shop.ringerhut.jp/detail/r0577/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット セブンパークアリオ柏店",
+      "url": "https://shop.ringerhut.jp/detail/r0869/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット チャチャタウン小倉店",
+      "url": "https://shop.ringerhut.jp/detail/r0364/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット テラスウォーク一宮店",
+      "url": "https://shop.ringerhut.jp/detail/r0734/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット テラスモール松戸店",
+      "url": "https://shop.ringerhut.jp/detail/r1030/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット トキハわさだタウン店",
+      "url": "https://shop.ringerhut.jp/detail/r0899/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット トナリエキュートつくば店",
+      "url": "https://shop.ringerhut.jp/detail/r0711/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット トレッサ横浜店",
+      "url": "https://shop.ringerhut.jp/detail/r0827/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ドン・キホーテ山下公園店",
+      "url": "https://shop.ringerhut.jp/detail/r0993/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ニッケコルトンプラザ店",
+      "url": "https://shop.ringerhut.jp/detail/r0586/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット ニッケパークタウン加古川店",
+      "url": "https://shop.ringerhut.jp/detail/r0905/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ニトリモール東大阪店",
+      "url": "https://shop.ringerhut.jp/detail/r0657/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ニトリモール枚方店",
+      "url": "https://shop.ringerhut.jp/detail/r0872/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ニトリモール相模原店",
+      "url": "https://shop.ringerhut.jp/detail/r1027/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ノクティ溝の口店",
+      "url": "https://shop.ringerhut.jp/detail/r0706/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット パサール幕張上り店",
+      "url": "https://shop.ringerhut.jp/detail/r0676/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット パークプレイス大分店",
+      "url": "https://shop.ringerhut.jp/detail/r0922/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ビバモール厚木南インター店",
+      "url": "https://shop.ringerhut.jp/detail/r0918/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ビバモール寝屋川店",
+      "url": "https://shop.ringerhut.jp/detail/r0638/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ピオニウォーク東松山店",
+      "url": "https://shop.ringerhut.jp/detail/r0978/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ファッションクルーズひたちなか店",
+      "url": "https://shop.ringerhut.jp/detail/r0703/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット ファボーレ富山店",
+      "url": "https://shop.ringerhut.jp/detail/r1029/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット フォレオ大津一里山店",
+      "url": "https://shop.ringerhut.jp/detail/r0950/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット フジグラン北島店",
+      "url": "https://shop.ringerhut.jp/detail/r0754/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット フジグラン広島店",
+      "url": "https://shop.ringerhut.jp/detail/r0659/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット フジグラン松山店",
+      "url": "https://shop.ringerhut.jp/detail/r0717/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット フジグラン神辺店",
+      "url": "https://shop.ringerhut.jp/detail/r0762/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット フジグラン緑井店",
+      "url": "https://shop.ringerhut.jp/detail/r0804/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット フジグラン重信店",
+      "url": "https://shop.ringerhut.jp/detail/r0885/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット フレスポ鳥栖店",
+      "url": "https://shop.ringerhut.jp/detail/r0317/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット プレ葉ウォーク浜北店",
+      "url": "https://shop.ringerhut.jp/detail/r0781/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット プロメナ神戸店",
+      "url": "https://shop.ringerhut.jp/detail/r0488/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット ベイドリーム清水店",
+      "url": "https://shop.ringerhut.jp/detail/r0702/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット ベルファ都島店",
+      "url": "https://shop.ringerhut.jp/detail/r0622/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット ペリエ千葉店",
+      "url": "https://shop.ringerhut.jp/detail/r0976/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ボーノ相模大野店",
+      "url": "https://shop.ringerhut.jp/detail/r0716/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット マルイファミリー志木店",
+      "url": "https://shop.ringerhut.jp/detail/r1081/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット マークイズみなとみらい店",
+      "url": "https://shop.ringerhut.jp/detail/r1019/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット マークイズ福岡ももち店",
+      "url": "https://shop.ringerhut.jp/detail/r0992/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ミスターマックス湘南藤沢店",
+      "url": "https://shop.ringerhut.jp/detail/r0771/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ミスターマックス町田多摩境店",
+      "url": "https://shop.ringerhut.jp/detail/r0813/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ミスターマックス長崎ショッピングセンター店",
+      "url": "https://shop.ringerhut.jp/detail/r0403/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット ミナモア広島店",
+      "url": "https://shop.ringerhut.jp/detail/r1074/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット ミ・ナーラ店",
+      "url": "https://shop.ringerhut.jp/detail/r0966/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット モザイクモール港北店",
+      "url": "https://shop.ringerhut.jp/detail/r0882/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット モラージュ菖蒲店",
+      "url": "https://shop.ringerhut.jp/detail/r0576/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット モリタウン昭島店",
+      "url": "https://shop.ringerhut.jp/detail/r0501/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット ユニモちはら台店",
+      "url": "https://shop.ringerhut.jp/detail/r0877/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ラスパ御嵩店",
+      "url": "https://shop.ringerhut.jp/detail/r0843/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット ラスパ西大和店",
+      "url": "https://shop.ringerhut.jp/detail/r0738/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット ララガーデン川口店",
+      "url": "https://shop.ringerhut.jp/detail/r0604/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ララガーデン長町店",
+      "url": "https://shop.ringerhut.jp/detail/r0863/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット リバーサイド千秋店",
+      "url": "https://shop.ringerhut.jp/detail/r0971/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット リンガー食堂 首都高八潮PA店",
+      "url": "https://shop.ringerhut.jp/detail/r1039/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット リーフウォーク稲沢店",
+      "url": "https://shop.ringerhut.jp/detail/r0841/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット レイクウォーク岡谷店",
+      "url": "https://shop.ringerhut.jp/detail/r0889/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ワカバウォーク店",
+      "url": "https://shop.ringerhut.jp/detail/r0796/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット ヴェルサウォーク西尾店",
+      "url": "https://shop.ringerhut.jp/detail/r0756/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 三郷中央店",
+      "url": "https://shop.ringerhut.jp/detail/r1056/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 三鷹井口店",
+      "url": "https://shop.ringerhut.jp/detail/r0300/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 三鷹新川店",
+      "url": "https://shop.ringerhut.jp/detail/r0483/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 上大岡京急店",
+      "url": "https://shop.ringerhut.jp/detail/r0701/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 上熊本店",
+      "url": "https://shop.ringerhut.jp/detail/r0168/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 下関唐戸店",
+      "url": "https://shop.ringerhut.jp/detail/r0218/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 中野サンモール店",
+      "url": "https://shop.ringerhut.jp/detail/r0525/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 久留米二軒茶屋店",
+      "url": "https://shop.ringerhut.jp/detail/r0016/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 久留米千本杉店",
+      "url": "https://shop.ringerhut.jp/detail/r0026/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 久留米梅満店",
+      "url": "https://shop.ringerhut.jp/detail/r0032/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 亀戸駅前店",
+      "url": "https://shop.ringerhut.jp/detail/r0569/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 五反田東口店",
+      "url": "https://shop.ringerhut.jp/detail/r0573/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 京急ストア川崎店",
+      "url": "https://shop.ringerhut.jp/detail/r1036/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 京急鶴見店",
+      "url": "https://shop.ringerhut.jp/detail/r0647/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 京王永山店",
+      "url": "https://shop.ringerhut.jp/detail/r0700/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 京王笹塚店",
+      "url": "https://shop.ringerhut.jp/detail/r1080/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 京都ファミリー店",
+      "url": "https://shop.ringerhut.jp/detail/r0833/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 京都四条河原町店",
+      "url": "https://shop.ringerhut.jp/detail/r0666/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 伊丹瑞穂店",
+      "url": "https://shop.ringerhut.jp/detail/r1061/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 伊予松前店",
+      "url": "https://shop.ringerhut.jp/detail/r0592/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 伊勢佐木モール店",
+      "url": "https://shop.ringerhut.jp/detail/r0531/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 伊勢原石田店",
+      "url": "https://shop.ringerhut.jp/detail/r0093/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 佐世保大野店",
+      "url": "https://shop.ringerhut.jp/detail/r0213/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 佐世保早岐駅前店",
+      "url": "https://shop.ringerhut.jp/detail/r0348/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 佐倉王子台店",
+      "url": "https://shop.ringerhut.jp/detail/r0337/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 佐賀三田川店",
+      "url": "https://shop.ringerhut.jp/detail/r0220/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 佐賀伊万里店",
+      "url": "https://shop.ringerhut.jp/detail/r0044/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 佐賀南部バイパス店",
+      "url": "https://shop.ringerhut.jp/detail/r0040/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 佐賀唐津店",
+      "url": "https://shop.ringerhut.jp/detail/r0045/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 佐賀大和店",
+      "url": "https://shop.ringerhut.jp/detail/r0305/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 佐賀嬉野店",
+      "url": "https://shop.ringerhut.jp/detail/r0061/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 佐賀江北店",
+      "url": "https://shop.ringerhut.jp/detail/r0275/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 佐賀鹿島店",
+      "url": "https://shop.ringerhut.jp/detail/r0149/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 保谷本町店",
+      "url": "https://shop.ringerhut.jp/detail/r0191/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 倉敷酒津店",
+      "url": "https://shop.ringerhut.jp/detail/R1075/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 光が丘IMA店",
+      "url": "https://shop.ringerhut.jp/detail/r0951/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 八幡折尾店",
+      "url": "https://shop.ringerhut.jp/detail/r0142/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 八幡木屋瀬店",
+      "url": "https://shop.ringerhut.jp/detail/r0367/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 八幡永犬丸店",
+      "url": "https://shop.ringerhut.jp/detail/r0157/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 八潮西袋店",
+      "url": "https://shop.ringerhut.jp/detail/r0184/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 八王子楢原店",
+      "url": "https://shop.ringerhut.jp/detail/r0126/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 八王子石川店",
+      "url": "https://shop.ringerhut.jp/detail/r1051/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 北九州門司店",
+      "url": "https://shop.ringerhut.jp/detail/r0335/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 千住ミルディス店",
+      "url": "https://shop.ringerhut.jp/detail/r0640/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 千葉C-ONE店",
+      "url": "https://shop.ringerhut.jp/detail/r0607/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 千葉妙典店",
+      "url": "https://shop.ringerhut.jp/detail/r0301/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 千葉富里インター店",
+      "url": "https://shop.ringerhut.jp/detail/r0109/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 千葉海浜幕張店",
+      "url": "https://shop.ringerhut.jp/detail/r0436/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 千葉祐光店",
+      "url": "https://shop.ringerhut.jp/detail/r0177/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 南砂町ショッピングセンターSUNAMO店",
+      "url": "https://shop.ringerhut.jp/detail/r0891/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 博多デイトスアネックス店",
+      "url": "https://shop.ringerhut.jp/detail/r1066/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 厚木妻田店",
+      "url": "https://shop.ringerhut.jp/detail/r0344/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 名古屋上小田井店",
+      "url": "https://shop.ringerhut.jp/detail/r0469/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 名古屋小幡店",
+      "url": "https://shop.ringerhut.jp/detail/r0510/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 名古屋弥富通店",
+      "url": "https://shop.ringerhut.jp/detail/r0250/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 名古屋畑江通店",
+      "url": "https://shop.ringerhut.jp/detail/r0470/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 名古屋篭山店",
+      "url": "https://shop.ringerhut.jp/detail/r0456/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 和歌山北店",
+      "url": "https://shop.ringerhut.jp/detail/r0780/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 品川シーサイドフォレスト店",
+      "url": "https://shop.ringerhut.jp/detail/r0458/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 国立府中インター店",
+      "url": "https://shop.ringerhut.jp/detail/r0477/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 垂水小束山店",
+      "url": "https://shop.ringerhut.jp/detail/r0349/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 埼玉せんげん台店",
+      "url": "https://shop.ringerhut.jp/detail/r0495/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 埼玉北本店",
+      "url": "https://shop.ringerhut.jp/detail/r0201/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 埼玉和光店",
+      "url": "https://shop.ringerhut.jp/detail/r0312/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 埼玉所沢店",
+      "url": "https://shop.ringerhut.jp/detail/r0339/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 埼玉新座店",
+      "url": "https://shop.ringerhut.jp/detail/R1062/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 埼玉東松山店",
+      "url": "https://shop.ringerhut.jp/detail/r1063/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 堺百舌鳥店",
+      "url": "https://shop.ringerhut.jp/detail/r0239/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 多摩ニュータウン店",
+      "url": "https://shop.ringerhut.jp/detail/r0242/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 大分下郡店",
+      "url": "https://shop.ringerhut.jp/detail/r0429/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 大分中津店",
+      "url": "https://shop.ringerhut.jp/detail/r0073/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 大分光吉店",
+      "url": "https://shop.ringerhut.jp/detail/r0067/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 大分別府店",
+      "url": "https://shop.ringerhut.jp/detail/r0214/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 大分宇佐店",
+      "url": "https://shop.ringerhut.jp/detail/r0374/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 大和深見西店",
+      "url": "https://shop.ringerhut.jp/detail/r0428/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 大宮バイパス浦和店",
+      "url": "https://shop.ringerhut.jp/detail/r0104/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 大宮天沼店",
+      "url": "https://shop.ringerhut.jp/detail/r0046/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 大宮砂町店",
+      "url": "https://shop.ringerhut.jp/detail/r0171/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 大村公園店",
+      "url": "https://shop.ringerhut.jp/detail/r0009/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 大村松原店",
+      "url": "https://shop.ringerhut.jp/detail/r0005/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 大森店",
+      "url": "https://shop.ringerhut.jp/detail/r0744/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 大阪狭山店",
+      "url": "https://shop.ringerhut.jp/detail/r1065/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 宇都宮ベルモール店",
+      "url": "https://shop.ringerhut.jp/detail/r0750/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 宇都宮簗瀬店",
+      "url": "https://shop.ringerhut.jp/detail/r0508/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 宮崎大塚店",
+      "url": "https://shop.ringerhut.jp/detail/r0932/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 宮崎大島店",
+      "url": "https://shop.ringerhut.jp/detail/r0290/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 宮崎本郷店",
+      "url": "https://shop.ringerhut.jp/detail/r0358/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 宮崎都城店",
+      "url": "https://shop.ringerhut.jp/detail/r0128/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 富士本市場店",
+      "url": "https://shop.ringerhut.jp/detail/r0187/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 小倉富野店",
+      "url": "https://shop.ringerhut.jp/detail/r0302/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 小倉徳力店",
+      "url": "https://shop.ringerhut.jp/detail/r0110/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 小倉朝日ヶ丘店",
+      "url": "https://shop.ringerhut.jp/detail/r1059/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 小田原ダイナシティ店",
+      "url": "https://shop.ringerhut.jp/detail/r0896/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 小田原飯泉店",
+      "url": "https://shop.ringerhut.jp/detail/r0155/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 小田急マルシェ町田店",
+      "url": "https://shop.ringerhut.jp/detail/R1070/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 尼崎つかしん店",
+      "url": "https://shop.ringerhut.jp/detail/r0818/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 山形TUY通り店",
+      "url": "https://shop.ringerhut.jp/detail/r0830/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 岡山大福店",
+      "url": "https://shop.ringerhut.jp/detail/r1068/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 島原店",
+      "url": "https://shop.ringerhut.jp/detail/r0066/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 島忠ホームズ仙川店",
+      "url": "https://shop.ringerhut.jp/detail/r0616/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 川口末広店",
+      "url": "https://shop.ringerhut.jp/detail/r0051/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 川崎塩浜店",
+      "url": "https://shop.ringerhut.jp/detail/r0366/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 川崎稲田堤店",
+      "url": "https://shop.ringerhut.jp/detail/r0118/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 川崎野川店",
+      "url": "https://shop.ringerhut.jp/detail/r0129/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 川越U-PLACE店",
+      "url": "https://shop.ringerhut.jp/detail/r1043/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 川越広栄店",
+      "url": "https://shop.ringerhut.jp/detail/r0038/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 川越東洋大前店",
+      "url": "https://shop.ringerhut.jp/detail/r0442/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 平塚バイパス店",
+      "url": "https://shop.ringerhut.jp/detail/r0095/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 広尾店",
+      "url": "https://shop.ringerhut.jp/detail/r1001/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 広島庚午店",
+      "url": "https://shop.ringerhut.jp/detail/r0326/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 府中西府町店",
+      "url": "https://shop.ringerhut.jp/detail/r0476/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 府中駅南口店",
+      "url": "https://shop.ringerhut.jp/detail/r0930/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 座間相模ケ丘店",
+      "url": "https://shop.ringerhut.jp/detail/r0192/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 御影クラッセ店",
+      "url": "https://shop.ringerhut.jp/detail/r0990/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 愛知安城店",
+      "url": "https://shop.ringerhut.jp/detail/r1054/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 愛知尾張旭店",
+      "url": "https://shop.ringerhut.jp/detail/r0231/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 愛知春日井店",
+      "url": "https://shop.ringerhut.jp/detail/r0254/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 愛知東浦店",
+      "url": "https://shop.ringerhut.jp/detail/r0512/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 成田ユアエルム店",
+      "url": "https://shop.ringerhut.jp/detail/r0430/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 成田国際空港第3旅客ターミナルビル店",
+      "url": "https://shop.ringerhut.jp/detail/r0815/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 所沢航空公園店",
+      "url": "https://shop.ringerhut.jp/detail/r0140/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 新宿東宝ビル店",
+      "url": "https://shop.ringerhut.jp/detail/r0823/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 新宿神楽坂店",
+      "url": "https://shop.ringerhut.jp/detail/r0081/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 新小岩南口店",
+      "url": "https://shop.ringerhut.jp/detail/r0532/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 新横浜北口店",
+      "url": "https://shop.ringerhut.jp/detail/r0597/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 日比谷シャンテ店",
+      "url": "https://shop.ringerhut.jp/detail/r0947/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 日永カヨー店",
+      "url": "https://shop.ringerhut.jp/detail/r0909/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 春日部豊春店",
+      "url": "https://shop.ringerhut.jp/detail/r0127/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 木の葉モール橋本店",
+      "url": "https://shop.ringerhut.jp/detail/r0849/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 東京東久留米店",
+      "url": "https://shop.ringerhut.jp/detail/r0080/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 東京東大和店",
+      "url": "https://shop.ringerhut.jp/detail/r0042/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 東大阪西堤店",
+      "url": "https://shop.ringerhut.jp/detail/r0225/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 松戸八柱店",
+      "url": "https://shop.ringerhut.jp/detail/r0152/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 柏松ヶ崎店",
+      "url": "https://shop.ringerhut.jp/detail/r0198/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 栃木小山店",
+      "url": "https://shop.ringerhut.jp/detail/r0202/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 梅田店",
+      "url": "https://shop.ringerhut.jp/detail/r1015/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 横浜ノースポートモール店",
+      "url": "https://shop.ringerhut.jp/detail/r0931/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 横浜下川井店",
+      "url": "https://shop.ringerhut.jp/detail/r0398/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 横浜十日市場店",
+      "url": "https://shop.ringerhut.jp/detail/r0108/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 横浜川上インター店",
+      "url": "https://shop.ringerhut.jp/detail/r0295/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 横浜戸塚店",
+      "url": "https://shop.ringerhut.jp/detail/r0132/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 横浜港南台店",
+      "url": "https://shop.ringerhut.jp/detail/r0077/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 横須賀 Coaska Bayside Stores店",
+      "url": "https://shop.ringerhut.jp/detail/r1040/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 横須賀久里浜店",
+      "url": "https://shop.ringerhut.jp/detail/r0092/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 武蔵小山店",
+      "url": "https://shop.ringerhut.jp/detail/r0552/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 浦和中尾店",
+      "url": "https://shop.ringerhut.jp/detail/r0114/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 海老名ビナウォーク店",
+      "url": "https://shop.ringerhut.jp/detail/r0874/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 渋谷サクラステージ店",
+      "url": "https://shop.ringerhut.jp/detail/r1071/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 渋谷道玄坂店",
+      "url": "https://shop.ringerhut.jp/detail/r0620/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 港北ニュータウン店",
+      "url": "https://shop.ringerhut.jp/detail/r0274/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 熊本八代店",
+      "url": "https://shop.ringerhut.jp/detail/r0070/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 熊本大津店",
+      "url": "https://shop.ringerhut.jp/detail/r0146/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 熊本富合店",
+      "url": "https://shop.ringerhut.jp/detail/r0371/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 熊本山鹿店",
+      "url": "https://shop.ringerhut.jp/detail/r0233/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 熊本本荘店",
+      "url": "https://shop.ringerhut.jp/detail/r0065/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 熊本東バイパス店",
+      "url": "https://shop.ringerhut.jp/detail/r0078/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 熊本武蔵ヶ丘店",
+      "url": "https://shop.ringerhut.jp/detail/r0486/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 熊本浜線バイパス店",
+      "url": "https://shop.ringerhut.jp/detail/r0150/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 熊本清水バイパス店",
+      "url": "https://shop.ringerhut.jp/detail/r0054/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 熊本玉名店",
+      "url": "https://shop.ringerhut.jp/detail/r0203/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 熊本田崎店",
+      "url": "https://shop.ringerhut.jp/detail/r0319/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 熊本菊池店",
+      "url": "https://shop.ringerhut.jp/detail/r0338/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 環八通り志村店",
+      "url": "https://shop.ringerhut.jp/detail/r0131/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 田川香春店",
+      "url": "https://shop.ringerhut.jp/detail/r0308/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 田町慶応仲通店",
+      "url": "https://shop.ringerhut.jp/detail/r0473/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 甲府向町店",
+      "url": "https://shop.ringerhut.jp/detail/r0555/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 町屋サンポップ店",
+      "url": "https://shop.ringerhut.jp/detail/r0259/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 町田木曽町店",
+      "url": "https://shop.ringerhut.jp/detail/r0154/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 町田鶴川店",
+      "url": "https://shop.ringerhut.jp/detail/r0215/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 相鉄ライフ三ツ境店",
+      "url": "https://shop.ringerhut.jp/detail/r0987/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 神奈川秦野店",
+      "url": "https://shop.ringerhut.jp/detail/r0103/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 神戸鈴蘭台店",
+      "url": "https://shop.ringerhut.jp/detail/r1064/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡二日市店",
+      "url": "https://shop.ringerhut.jp/detail/r0012/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡八女店",
+      "url": "https://shop.ringerhut.jp/detail/r0056/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡前原店",
+      "url": "https://shop.ringerhut.jp/detail/r0153/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 福岡友泉亭店",
+      "url": "https://shop.ringerhut.jp/detail/r0135/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡古賀店",
+      "url": "https://shop.ringerhut.jp/detail/r0027/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡吉井店",
+      "url": "https://shop.ringerhut.jp/detail/r0323/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡和白店",
+      "url": "https://shop.ringerhut.jp/detail/r0018/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡大川店",
+      "url": "https://shop.ringerhut.jp/detail/r0262/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡大橋店",
+      "url": "https://shop.ringerhut.jp/detail/r0100/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡大池店",
+      "url": "https://shop.ringerhut.jp/detail/r0020/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡大牟田店",
+      "url": "https://shop.ringerhut.jp/detail/r0138/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡小田部店",
+      "url": "https://shop.ringerhut.jp/detail/r0021/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡志免田富店",
+      "url": "https://shop.ringerhut.jp/detail/r0296/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 福岡春日店",
+      "url": "https://shop.ringerhut.jp/detail/r0013/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡柳川店",
+      "url": "https://shop.ringerhut.jp/detail/r0151/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 福岡橋本店",
+      "url": "https://shop.ringerhut.jp/detail/r0500/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 福岡瀬高店",
+      "url": "https://shop.ringerhut.jp/detail/r0377/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 福岡甘木店",
+      "url": "https://shop.ringerhut.jp/detail/r0019/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡白木原店",
+      "url": "https://shop.ringerhut.jp/detail/r0024/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡百道店",
+      "url": "https://shop.ringerhut.jp/detail/r0303/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡福間店",
+      "url": "https://shop.ringerhut.jp/detail/r0030/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡穂波店",
+      "url": "https://shop.ringerhut.jp/detail/r0438/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡空港国内線ターミナルビル店",
+      "url": "https://shop.ringerhut.jp/detail/r1079/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡箱崎店",
+      "url": "https://shop.ringerhut.jp/detail/r0144/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡諸岡店",
+      "url": "https://shop.ringerhut.jp/detail/r0033/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 福岡那珂川店",
+      "url": "https://shop.ringerhut.jp/detail/r0216/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 福岡長者原店",
+      "url": "https://shop.ringerhut.jp/detail/r0015/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 稲毛オーツーパーク店",
+      "url": "https://shop.ringerhut.jp/detail/r0571/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 綾瀬市役所前店",
+      "url": "https://shop.ringerhut.jp/detail/r0452/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 羽田空港第1旅客ターミナルビル店",
+      "url": "https://shop.ringerhut.jp/detail/r1000/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 苅田西工大前店",
+      "url": "https://shop.ringerhut.jp/detail/r0148/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 茅ヶ崎浜竹店",
+      "url": "https://shop.ringerhut.jp/detail/r0393/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 草加松原店",
+      "url": "https://shop.ringerhut.jp/detail/r0047/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 草加谷塚店",
+      "url": "https://shop.ringerhut.jp/detail/r0050/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 葛飾新宿店",
+      "url": "https://shop.ringerhut.jp/detail/r0858/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 藤沢石川店",
+      "url": "https://shop.ringerhut.jp/detail/r0484/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 藤沢辻堂店",
+      "url": "https://shop.ringerhut.jp/detail/r0130/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 藤沢駅南口店",
+      "url": "https://shop.ringerhut.jp/detail/r0481/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 西大分店",
+      "url": "https://shop.ringerhut.jp/detail/r0068/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 西宮弓場店",
+      "url": "https://shop.ringerhut.jp/detail/r0309/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 西新宿店",
+      "url": "https://shop.ringerhut.jp/detail/r0480/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 西東京羽村店",
+      "url": "https://shop.ringerhut.jp/detail/r0090/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 西武所沢S.C.店",
+      "url": "https://shop.ringerhut.jp/detail/r1032/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 西池袋店",
+      "url": "https://shop.ringerhut.jp/detail/r0673/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 諫早バイパス店",
+      "url": "https://shop.ringerhut.jp/detail/r0004/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 諫早貝津店",
+      "url": "https://shop.ringerhut.jp/detail/r0006/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 豊田梅坪店",
+      "url": "https://shop.ringerhut.jp/detail/r0517/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 豊田若林店",
+      "url": "https://shop.ringerhut.jp/detail/r0963/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 赤坂見附店",
+      "url": "https://shop.ringerhut.jp/detail/r0524/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 赤羽店",
+      "url": "https://shop.ringerhut.jp/detail/r0297/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 越谷神明店",
+      "url": "https://shop.ringerhut.jp/detail/r0121/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 足立西新井店",
+      "url": "https://shop.ringerhut.jp/detail/r0294/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 近鉄あべのハルカス店",
+      "url": "https://shop.ringerhut.jp/detail/r0848/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 鎌倉大船店",
+      "url": "https://shop.ringerhut.jp/detail/r0133/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 長崎ハウステンボス店",
+      "url": "https://shop.ringerhut.jp/detail/r0991/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 長崎出島店",
+      "url": "https://shop.ringerhut.jp/detail/r0397/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 長崎大橋店",
+      "url": "https://shop.ringerhut.jp/detail/r0327/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 長崎宿町店",
+      "url": "https://shop.ringerhut.jp/detail/r0001/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 長崎小ケ倉店",
+      "url": "https://shop.ringerhut.jp/detail/r0008/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 長崎小浜店",
+      "url": "https://shop.ringerhut.jp/detail/r0381/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 長崎愛野店",
+      "url": "https://shop.ringerhut.jp/detail/r0164/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 長崎時津店",
+      "url": "https://shop.ringerhut.jp/detail/r0011/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 長崎東彼杵店",
+      "url": "https://shop.ringerhut.jp/detail/r0493/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 長崎長与店",
+      "url": "https://shop.ringerhut.jp/detail/r0413/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 門前仲町店",
+      "url": "https://shop.ringerhut.jp/detail/r0739/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 阪急大井町ガーデン店",
+      "url": "https://shop.ringerhut.jp/detail/r0755/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 難波千日前店",
+      "url": "https://shop.ringerhut.jp/detail/r0639/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 静岡インター店",
+      "url": "https://shop.ringerhut.jp/detail/r0226/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 静岡御殿場店",
+      "url": "https://shop.ringerhut.jp/detail/r0158/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 静岡沼津インター店",
+      "url": "https://shop.ringerhut.jp/detail/r0241/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 飯塚水江店",
+      "url": "https://shop.ringerhut.jp/detail/r0378/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 高槻上牧店",
+      "url": "https://shop.ringerhut.jp/detail/r0237/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 鳥栖田代店",
+      "url": "https://shop.ringerhut.jp/detail/r0025/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット 鶴ヶ島インター店",
+      "url": "https://shop.ringerhut.jp/detail/r0113/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 鹿児島東郡元店",
+      "url": "https://shop.ringerhut.jp/detail/r0071/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 鹿児島草牟田店",
+      "url": "https://shop.ringerhut.jp/detail/r0111/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット 鹿児島鹿屋店",
+      "url": "https://shop.ringerhut.jp/detail/r0172/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット ＪＲお茶の水店",
+      "url": "https://shop.ringerhut.jp/detail/r0494/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット ＪＲ川崎西口店",
+      "url": "https://shop.ringerhut.jp/detail/r0491/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット ＪＲ蒲田東口店",
+      "url": "https://shop.ringerhut.jp/detail/r0551/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット ＫＩＴＴＥ博多店",
+      "url": "https://shop.ringerhut.jp/detail/r0868/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "リンガーハット冷凍商品自動販売機（瀬谷駅 時遊商店敷地内）",
+      "url": "https://shop.ringerhut.jp/detail/VM0013/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット冷凍食品直売所（自動販売機）八王子八日町店",
+      "url": "https://shop.ringerhut.jp/detail/VM0014/",
+      "facilities": []
+    },
+    {
+      "name": "リンガーハット豊中利倉東店",
+      "url": "https://shop.ringerhut.jp/detail/r1053/",
+      "facilities": [
+        "parking"
+      ]
+    }
+  ]
+}

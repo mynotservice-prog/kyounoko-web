@@ -1,12 +1,12 @@
 ---
 slug: shitsunai-asobi-meguro-tokyo
-title: 目黒区の子供の室内遊び場8選｜児童館・キッズスペース・有料施設【2026年版】
+title: 目黒区の子供の室内・屋内遊び場8選｜赤ちゃんOK・児童館・キッズスペース・有料施設【2026年版】
 metaDescription: >-
   目黒区で子供（0〜6歳）と室内で遊べるスポット8選。夜8時まで開く中央町・東山児童館、駒場東大前駅徒歩1分の駒場児童館などの無料スポットから、東横線で行けるキドキド グランツリー武蔵小杉店まで、開館時間・休館日つきで2026年版で紹介。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-08-31'
+updatedAt: '2026-09-12'
 hero: /img/scenes/mallkids-01.webp
 area: tokyo
 quickInfo:

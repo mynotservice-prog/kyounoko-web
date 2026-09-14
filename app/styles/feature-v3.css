@@ -1,0 +1,189 @@
+/* 特集ページ `/feature/[slug]` 固有のリニューアルCSS。
+   共通部品は app/styles/kk.css。すべて .feature-v3（V2Frame 直下のラッパ）配下にスコープする。
+
+   方針（docs/renewal-2026-09.md §2 / §3-0）:
+   - 白地・1書体・共通の文字スケール（H1 30/34・H2 24/28・H3 21/23・本文17／行間1.95）。
+   - 丸角は操作UI（チップ・ボタン・小さなステータス）だけ。写真は軽い角丸のみ。
+   - 区切りは 余白 / 1px の罫線 / 写真サイズ / 文字サイズ で作る。カード背景で区切らない。
+   - 写真の上に文字を重ねない（旧デザインのヒーロー内タイトル・グラデーションは廃止）。
+   - 絵文字は使わない（KkIcon の線画に置き換え済み）。 */
+
+.feature-v3 {
+  color: var(--kk-ink);
+  font-family: var(--kk-body);
+  padding-bottom: 8px;
+}
+.feature-v3 .fv3-sec { margin-top: 34px; }
+
+/* 他コンポーネントが持ち込む v2 見出し装飾は、このページでは出さない */
+.feature-v3 .v2-bar-accent { display: none !important; }
+
+/* ---------- パンくず ---------- */
+.feature-v3 .fv3-crumb {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 4px;
+  padding: 12px 18px 0;
+  font-size: 11.5px; font-weight: 700; color: var(--kk-ink-mute); line-height: 1.5;
+}
+.feature-v3 .fv3-crumb a { color: var(--kk-ink-mute); text-decoration: none; }
+.feature-v3 .fv3-crumb a:hover { color: var(--kk-orange-deep); }
+.feature-v3 .fv3-crumb svg { flex: none; }
+.feature-v3 .fv3-crumb .cur {
+  color: var(--kk-ink-soft);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 55vw;
+}
+
+/* ---------- 小見出し（eyebrow）・H1・リード ---------- */
+.feature-v3 .fv3-head { padding: 14px 18px 0; }
+.feature-v3 .fv3-eyebrow {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 700; letter-spacing: .12em;
+  color: var(--kk-orange-deep);
+}
+.feature-v3 .fv3-h1 {
+  margin: 9px 0 0;
+  font-family: var(--kk-display);
+  font-size: var(--kk-h1); font-weight: 800; line-height: 1.4; letter-spacing: 0;
+  color: var(--kk-ink);
+  overflow-wrap: anywhere; text-wrap: balance;
+}
+.feature-v3 .fv3-lede {
+  margin: 14px 0 0;
+  font-size: var(--kk-body-size); font-weight: 500; line-height: var(--kk-body-lh);
+  color: var(--kk-body-color);
+}
+
+/* ---------- メイン写真（枠・影・オーバーレイなし） ---------- */
+.feature-v3 .fv3-hero { padding: 20px 18px 0; }
+.feature-v3 .fv3-hero-img {
+  aspect-ratio: 16 / 9;
+  border-radius: var(--kk-r-img); overflow: hidden;
+  background: var(--kk-paper-deep);
+}
+.feature-v3 .fv3-hero-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* ---------- 導入文（編集本文として置く） ---------- */
+.feature-v3 .fv3-body { padding: 0 18px; margin-top: 26px; }
+.feature-v3 .fv3-intro {
+  margin: 0 0 var(--kk-body-gap);
+  font-size: var(--kk-body-size); font-weight: 400; line-height: var(--kk-body-lh);
+  letter-spacing: .01em; color: var(--kk-body-color);
+}
+.feature-v3 .fv3-intro:last-child { margin-bottom: 0; }
+
+/* ---------- テーマチップ ---------- */
+.feature-v3 .fv3-tags { padding: 0 18px; margin-top: 22px; }
+
+/* ---------- 行リストの追加要素（記事・スポット共通の小タグ） ---------- */
+.feature-v3 .fv3-row-tags {
+  display: flex; flex-wrap: wrap; gap: 4px 10px; margin-top: 2px;
+}
+.feature-v3 .fv3-row-tag {
+  font-size: 11.5px; font-weight: 700; color: var(--kk-ink-mute); line-height: 1.5;
+}
+
+/* ---------- 関連記事の行 ---------- */
+.feature-v3 .kk-row { align-items: flex-start; }
+.feature-v3 .kk-row-thumb { margin-top: 2px; }
+.feature-v3 .kk-row-arrow { align-self: center; }
+
+/* ---------- おすすめスポットの行（順位バッジなし・写真＋要点） ---------- */
+.feature-v3 .fv3-spot { gap: 14px; padding: 15px 0; }
+.feature-v3 .fv3-spot-img {
+  flex: none; width: 96px; aspect-ratio: 1 / 1;
+  border-radius: var(--kk-r-img); overflow: hidden; background: var(--kk-paper-deep);
+}
+.feature-v3 .fv3-spot-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.feature-v3 .fv3-spot-cat {
+  font-size: 11.5px; font-weight: 700; letter-spacing: .06em; color: var(--kk-orange-deep);
+}
+.feature-v3 .fv3-spot .kk-row-title { font-size: 16px; line-height: 1.55; }
+.feature-v3 .fv3-spot-loc {
+  display: flex; align-items: center; gap: 4px; margin-top: 2px;
+  font-size: 12px; font-weight: 600; color: var(--kk-ink-mute); line-height: 1.5;
+}
+.feature-v3 .fv3-spot-loc svg { flex: none; }
+.feature-v3 .fv3-spot-fav { flex: none; align-self: flex-start; margin-top: 2px; }
+.feature-v3 .fv3-spot-fav .v2-fav-btn {
+  position: static; background: transparent; box-shadow: none;
+  width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center;
+}
+
+/* ---------- 関連特集（写真タイル。写真の上に文字を重ねない） ---------- */
+.feature-v3 .fv3-feats {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 12px;
+}
+.feature-v3 .fv3-feat { display: flex; flex-direction: column; gap: 8px; color: var(--kk-ink); }
+.feature-v3 .fv3-feat-img {
+  aspect-ratio: 4 / 3; border-radius: var(--kk-r-img); overflow: hidden; background: var(--kk-paper-deep);
+}
+.feature-v3 .fv3-feat-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.feature-v3 .fv3-feat-title { font-size: 14px; font-weight: 700; line-height: 1.55; }
+.feature-v3 .fv3-feat:hover .fv3-feat-title { color: var(--kk-orange-deep); }
+
+/* ---------- 広告枠（本文と十分に離す） ---------- */
+.feature-v3 .fv3-ad { margin-top: 34px; }
+
+/* ---------- FAQ（罫線で区切ったアコーディオン。カードにしない） ---------- */
+.feature-v3 .fv3-faqs { border-top: 1px solid var(--kk-rule); }
+.feature-v3 .fv3-faq { border-bottom: 1px solid var(--kk-rule-soft); }
+.feature-v3 .fv3-faq-q {
+  display: flex; align-items: flex-start; gap: 9px;
+  padding: 15px 0; cursor: pointer; list-style: none;
+  font-size: 16.5px; font-weight: 700; line-height: 1.65; color: var(--kk-ink);
+}
+.feature-v3 .fv3-faq-q::-webkit-details-marker { display: none; }
+.feature-v3 .fv3-faq-chev {
+  margin-left: auto; flex: none; display: inline-flex; margin-top: 2px;
+  color: var(--kk-ink-mute); transition: transform .2s ease;
+}
+.feature-v3 details[open] > summary .fv3-faq-chev { transform: rotate(180deg); }
+.feature-v3 .fv3-faq-mark {
+  flex: none; width: 15px;
+  font-size: 13px; font-weight: 700; color: var(--kk-orange); line-height: 1.7;
+}
+.feature-v3 .fv3-faq-a {
+  display: flex; gap: 9px; padding: 0 0 16px;
+  font-size: 16px; font-weight: 400; line-height: 1.9; color: var(--kk-body-color);
+}
+.feature-v3 .fv3-faq-a .fv3-faq-mark.a { color: var(--kk-ink-mute); }
+
+/* ---------- 読み物の行長 ---------- */
+.feature-v3 .fv3-measure { max-width: 100%; }
+
+/* ===========================================================
+   デスクトップ（≥920px）— スマホの引き伸ばしにしない
+   =========================================================== */
+@media (min-width: 920px) {
+  .feature-v3 { max-width: 1080px; margin: 0 auto; }
+  .feature-v3 .fv3-crumb { padding: 20px 4px 0; }
+  .feature-v3 .fv3-sec { margin-top: 56px; }
+
+  /* ファーストビュー: 左に写真・右に見出し */
+  .feature-v3 .fv3-top {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    column-gap: 48px; align-items: center;
+    margin-top: 10px;
+  }
+  .feature-v3 .fv3-top > * { grid-column: 2; }
+  .feature-v3 .fv3-top .fv3-hero { grid-column: 1; grid-row: 1; padding: 0; }
+  .feature-v3 .fv3-hero-img { aspect-ratio: 3 / 2; }
+  .feature-v3 .fv3-head { padding: 0; }
+  .feature-v3 .fv3-lede { max-width: 46ch; }
+
+  .feature-v3 .fv3-body { padding: 0 4px; max-width: 760px; margin-top: 40px; }
+  .feature-v3 .fv3-measure { max-width: 760px; }
+  .feature-v3 .fv3-tags { padding: 0 4px; margin-top: 26px; }
+  .feature-v3 .fv3-ad { margin-top: 48px; }
+
+  /* 記事は2列の行に */
+  .feature-v3 .fv3-sec .kk-rows.grid2 { column-gap: 40px; }
+  .feature-v3 .fv3-spot-img { width: 120px; }
+  .feature-v3 .fv3-spot .kk-row-title { font-size: 17px; }
+
+  .feature-v3 .fv3-feats { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px 18px; }
+  .feature-v3 .fv3-feat-title { font-size: 14.5px; }
+
+  .feature-v3 .fv3-faq-q { font-size: 19px; padding: 17px 0; }
+  .feature-v3 .fv3-faq-a { font-size: 16.5px; padding-bottom: 18px; }
+}

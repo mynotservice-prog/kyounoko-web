@@ -1,12 +1,12 @@
 ---
 slug: shitsunai-asobi-sumida-tokyo
-title: 墨田区の子供の室内遊び場8選｜児童館・キッズスペース・有料施設【2026年版】
+title: 墨田区の子供の室内・屋内遊び場8選｜無料あり・赤ちゃんOK・児童館・キッズスペース【2026年版】
 metaDescription: >-
   墨田区で子供（0〜6歳）と室内で遊べるスポット8選。東京ソラマチ イーストヤード5階「ソラフルパーク」（遊具・砂場・0〜2歳専用ベビーガーデン）、すみだ水族館、郵政博物館を階数と2026年最新料金つきで整理。区立児童館・子育てひろばの無料スポットも。
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-05-29T00:00:00.000Z'
-updatedAt: '2026-09-04'
+updatedAt: '2026-09-12'
 hero: /img/scenes/jidoukan-02.webp
 area: tokyo
 quickInfo:

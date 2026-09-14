@@ -1,16 +1,25 @@
 'use client';
 
 import React from 'react';
+import { KkIcon } from '@/components/kk/KkIcon';
 
 /**
  * 「今日の流れ」を保存するボタン。
  * プランはURLに完全表現されているので、保存＝現在URL（path+query）+ラベルを localStorage に積む。
- * /favorites 等から後で呼び出せる（キー: kk_saved_plans）。
+ * /favorites（保存したもの）の「保存した今日の流れ」に一覧される（キー: kk_saved_plans）。
+ * 見た目は app/styles/today-v3.css の .td3-save（主ボタン＝オレンジ）。
  */
-type SavedPlan = { href: string; label: string; ts: number };
-const KEY = 'kk_saved_plans';
+export type SavedPlan = {
+  href: string;
+  label: string;
+  ts: number;
+  /** 行き先の並び（「板橋区立こども動物園 → Kimi Natural → 戸山公園」）。2026-09-10 以前の保存には無い */
+  sub?: string;
+};
+export const SAVED_PLANS_KEY = 'kk_saved_plans';
+const KEY = SAVED_PLANS_KEY;
 
-export function SavePlanButton({ label }: { label: string }) {
+export function SavePlanButton({ label, sub }: { label: string; sub?: string }) {
   const [saved, setSaved] = React.useState(false);
 
   React.useEffect(() => {
@@ -30,7 +39,7 @@ export function SavePlanButton({ label }: { label: string }) {
       const exists = list.some((p) => p.href === href);
       const next = exists
         ? list.filter((p) => p.href !== href)
-        : [{ href, label, ts: Date.now() }, ...list].slice(0, 30);
+        : [{ href, label, sub, ts: Date.now() }, ...list].slice(0, 30);
       localStorage.setItem(KEY, JSON.stringify(next));
       setSaved(!exists);
     } catch {
@@ -43,20 +52,10 @@ export function SavePlanButton({ label }: { label: string }) {
       type="button"
       onClick={onSave}
       aria-pressed={saved}
-      style={{
-        flex: 1,
-        textAlign: 'center',
-        fontSize: 13,
-        fontWeight: 800,
-        padding: '11px',
-        borderRadius: 11,
-        border: '1px solid var(--line)',
-        background: saved ? 'var(--clay-deep, #c9603e)' : 'var(--paper-card, #fffaf6)',
-        color: saved ? '#fff' : 'var(--ink)',
-        cursor: 'pointer',
-      }}
+      className={'kk-btn td3-save' + (saved ? ' on' : '')}
     >
-      {saved ? '♥ 保存しました' : '♡ この流れを保存'}
+      <KkIcon name={saved ? 'check' : 'heart'} size={16} sw={2} />
+      {saved ? '保存しました' : 'この流れを保存'}
     </button>
   );
 }

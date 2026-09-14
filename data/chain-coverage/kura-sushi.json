@@ -1,0 +1,4043 @@
+{
+  "countedAt": "2026-09-11",
+  "chain": "kura-sushi",
+  "name": "くら寿司",
+  "sourceUrl": "https://shop.kurasushi.co.jp/all",
+  "method": "公式店舗検索の全店一覧（/all）に埋め込まれた店舗ごとの services ID を、「サービス・設備で絞り込む」チェック（スロープ対応・多機能トイレ対応）の表記に対応づけて集計",
+  "note": "店名末尾の【１皿115円～】等の価格帯注記はそのまま。駐車場の属性は locator に無い",
+  "total": 559,
+  "facilities": {
+    "stepFree": {
+      "count": 248,
+      "label": "スロープ対応"
+    },
+    "multiToilet": {
+      "count": 477,
+      "label": "多機能トイレ対応"
+    }
+  },
+  "stores": [
+    {
+      "name": "ABLOうるま店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/487",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "アイモール高砂店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/273",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "アクロスプラザ橿原店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/413",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "アクロスプラザ古島駅前店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/473",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "アクロスプラザ佐世保店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/445",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "岡山北店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/537",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "なんば日本橋店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/547",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "福岡高木店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/518",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "八女インター店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/515",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "金沢入江店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/143",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "久留米上津店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/512",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "小倉徳力店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/506",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "奈良新庄店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/244",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "関目店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/185",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "直方店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/501",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "倉敷浜ノ茶屋店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/24",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "城南片江店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/497",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "和歌山三葛店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/300",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "延岡店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/491",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "堅田店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/104",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "富山天正寺店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/254",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "広島五日市店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/489",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "西神戸店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/278",
+      "facilities": []
+    },
+    {
+      "name": "津店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/92",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "木津川店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/49",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "泉北店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/170",
+      "facilities": []
+    },
+    {
+      "name": "柴田本通店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/14",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "茜部店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/26",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "京都南インター店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/42",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "無添蔵伊丹昆陽店",
+      "url": "https://shop.kurasushi.co.jp/detail/270",
+      "facilities": []
+    },
+    {
+      "name": "無添蔵北花田店",
+      "url": "https://shop.kurasushi.co.jp/detail/434",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "無添蔵紀伊川辺店",
+      "url": "https://shop.kurasushi.co.jp/detail/301",
+      "facilities": []
+    },
+    {
+      "name": "多治見店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/28",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "岡山十日市店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/23",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "和歌山橋本店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/298",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "三田店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/274",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "名谷店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/276",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "深江浜店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/283",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "大和高田店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/245",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "菅原店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/190",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "桑名店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/89",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "岐阜正木店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/27",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "岩出店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/297",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "高尾台店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/142",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "中百舌鳥店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/435",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "王寺店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/250",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "金閣寺店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/46",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "富山婦中店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/253",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "玉津店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/280",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "二条店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/41",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "名東高針店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/15",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "姫路城店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/291",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "松任店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/145",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "北花田店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/172",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "松江店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/218",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "福井幾久店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/256",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "草津野村店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/102",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "豊橋大村店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/9",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "高岡瑞穂店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/251",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "稲沢店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/465",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "出雲店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/217",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "名張店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/467",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "米子店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/216",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "広島宇品店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/475",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "宇部厚南店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/478",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "彦根店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/106",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "博多中洲店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/482",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "豊田上原店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/472",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "小松店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/144",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "鳥取トリニティモール店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/477",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "小倉三萩野店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/484",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "高石店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/163",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "半田店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/479",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "下関山の田店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/485",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "鹿児島卸本町店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/486",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "高井田店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/199",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "茨木宇野辺店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/490",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "防府店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/449",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "一宮森本店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/499",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "宮崎大島店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/451",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "寝屋川店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/176",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "今里店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/502",
+      "facilities": []
+    },
+    {
+      "name": "大分森町店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/460",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "倉敷連島店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/504",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "広島南観音店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/470",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "となみ店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/252",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "泉佐野店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/180",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "新世界通天閣店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/509",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "沖縄名護店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/440",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "若江店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/197",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "アクロスプラザ八尾店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/511",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "南大分店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/439",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "岸田堂店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/492",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "新守山店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/516",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "鹿屋店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/429",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "名古屋有松店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/519",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "青山店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/203",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "鹿児島伊敷店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/428",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "沖縄北谷店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/425",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "南巽店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/526",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "沖縄豊崎店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/422",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "泉南店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/528",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "石原店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/168",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "各務原鵜沼店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/531",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "イオンモール沖縄ライカム店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/416",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "松原店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/533",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "平井店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/167",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ニトリモール宮崎店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/415",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "横小路店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/201",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "八王子インター店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/234",
+      "facilities": []
+    },
+    {
+      "name": "交野店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/162",
+      "facilities": []
+    },
+    {
+      "name": "福岡日赤前店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/402",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ひばりが丘店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/226",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "東広島店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/401",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "今木店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/160",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "めじろ台店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/236",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "唐津店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/400",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "小金井店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/222",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "近江八幡店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/98",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "足立江北店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/228",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "西春日井店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/6",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "橋本駅前店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/130",
+      "facilities": []
+    },
+    {
+      "name": "くみの木店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/181",
+      "facilities": []
+    },
+    {
+      "name": "武生店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/255",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "無添蔵泉北店",
+      "url": "https://shop.kurasushi.co.jp/detail/436",
+      "facilities": []
+    },
+    {
+      "name": "藤沢店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/133",
+      "facilities": []
+    },
+    {
+      "name": "原町店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/493",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "座間店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/123",
+      "facilities": []
+    },
+    {
+      "name": "富田林店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/205",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "豊川インター店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/10",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "福山東深津店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/59",
+      "facilities": []
+    },
+    {
+      "name": "東川口店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/80",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "豊中豊南町店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/206",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "貝塚脇浜店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/159",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "五領店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/164",
+      "facilities": []
+    },
+    {
+      "name": "福知山店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/48",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "藤井寺店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/202",
+      "facilities": []
+    },
+    {
+      "name": "灘南通店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/284",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "芥川店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/165",
+      "facilities": []
+    },
+    {
+      "name": "角田店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/198",
+      "facilities": []
+    },
+    {
+      "name": "青梅店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/227",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "姫路勝原店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/293",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "東海荒尾店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/464",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "津山店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/462",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "グローバル旗艦店 浅草ROX【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/530",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "神戸長田店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/282",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "枚方宮之阪店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/459",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "池袋サンシャイン60通り店【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/476",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "高浜店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/457",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "東貝塚店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/456",
+      "facilities": []
+    },
+    {
+      "name": "横浜新山下店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/503",
+      "facilities": []
+    },
+    {
+      "name": "甲賀水口店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/101",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "なんば元町店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/193",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "可児店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/469",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "成田土屋店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/151",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "春日井インター店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/4",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "守口店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/455",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "今治店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/453",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "一宮尾西店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/447",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "名古屋高畑店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/409",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "北岡崎店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/446",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ニトリモール枚方店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/441",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "松山宮西店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/438",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "豊岡店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/432",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "和歌山狐島店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/430",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "池袋東口店【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/403",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "安倉店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/295",
+      "facilities": []
+    },
+    {
+      "name": "西尾店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/426",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "大蔵谷店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/279",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "御幣島店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/411",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "亀岡店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/423",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "松山枝松店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/16",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "トナリエ南千里店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/419",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "京都八幡店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/418",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "千里丘店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/177",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "豊郷店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/100",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "西陣店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/40",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "三好町店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/1",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "長居店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/182",
+      "facilities": []
+    },
+    {
+      "name": "東岡山店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/22",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "春日野道店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/281",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "今川店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/189",
+      "facilities": []
+    },
+    {
+      "name": "田辺店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/299",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "松阪店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/91",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "箕面店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/210",
+      "facilities": []
+    },
+    {
+      "name": "天白平針店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/13",
+      "facilities": []
+    },
+    {
+      "name": "伊勢店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/88",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "小牧店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/5",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "小松里店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/161",
+      "facilities": []
+    },
+    {
+      "name": "名古屋みなと店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/12",
+      "facilities": []
+    },
+    {
+      "name": "江南店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/3",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "姫路飾磨店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/292",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "各務原店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/25",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "瀬田店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/105",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "鈴鹿店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/94",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "高松上天神店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/61",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "天理店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/246",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "長久手店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/7",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "和泉中央店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/212",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "四日市店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/90",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "丸亀店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/60",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "奈良古市店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/249",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "高知インター店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/62",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "江坂店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/178",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "津島店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/8",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "豊田錦町店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/11",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "住之江北島店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/184",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "北津守店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/187",
+      "facilities": []
+    },
+    {
+      "name": "加古川平岡店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/272",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "石津店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/360",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "長吉出戸店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/508",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "徳島川内店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/361",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "京都久世店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/43",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "福岡新宮店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/398",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "三木店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/275",
+      "facilities": []
+    },
+    {
+      "name": "岩国店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/382",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "大垣中川店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/363",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "長崎時津店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/378",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "さくら夙川店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/287",
+      "facilities": []
+    },
+    {
+      "name": "奈良大宮店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/248",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "丹波店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/367",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "和歌山花山店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/303",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "宇治大久保店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/35",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "甚目寺店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/366",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "尼崎下坂部店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/289",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "高松松島店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/371",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "明石魚住店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/296",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "滝野社店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/372",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "徳島石井店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/376",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "京都伏見店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/44",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "宇治槇島店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/379",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "奈良学園前店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/247",
+      "facilities": []
+    },
+    {
+      "name": "大津におの浜店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/103",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "泉大津店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/383",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "摂津店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/179",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "城東今福店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/186",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "岡崎法性寺店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/386",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "伊丹中央店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/271",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "伊予西条店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/387",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "橿原葛本店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/243",
+      "facilities": []
+    },
+    {
+      "name": "名古屋守山店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/389",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "西舞子店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/277",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "寝屋川打上店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/175",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "鳥取南店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/390",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "門真試験場前店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/211",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "神戸有野店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/286",
+      "facilities": []
+    },
+    {
+      "name": "天六駅前店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/394",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "諸福店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/194",
+      "facilities": []
+    },
+    {
+      "name": "京都外大前店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/37",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "西大路七条店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/38",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "瀬戸店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/395",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "醍醐店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/45",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "福山駅家店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/396",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "山科店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/39",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "大阪鶴見店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/188",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "精華町店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/47",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "宝塚インター店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/294",
+      "facilities": []
+    },
+    {
+      "name": "久御山店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/36",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "生駒店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/404",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "高知東店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/405",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "西宮今津店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/288",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "福井羽水店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/406",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "池田西店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/196",
+      "facilities": []
+    },
+    {
+      "name": "伊予松前店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/407",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "戸田駅前店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/532",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "太宰府店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/261",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "海老名店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/118",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "福岡飯倉店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/264",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "水戸酒門店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/20",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "茨城牛久店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/18",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "フレスポ鳥栖店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/64",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "茂原店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/155",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "前橋小相木店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/57",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "つくば研究学園店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/17",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "韮崎店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/97",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "東大和店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/233",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "御殿場店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/134",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "小田原下大井店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/124",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "浜松志都呂店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/139",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "三島南店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/135",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "高崎店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/56",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "セブンタウン小豆沢店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/237",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "千葉ニュータウン店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/146",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "浜松和田店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/141",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "草加谷塚店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/83",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "新座店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/76",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "たまプラーザ駅前店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/113",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "あびこショッピングプラザ店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/147",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "調布つつじヶ丘店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/231",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "井草八幡宮店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/224",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "足立青井店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/229",
+      "facilities": []
+    },
+    {
+      "name": "川崎有馬店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/126",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "川口小谷場店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/81",
+      "facilities": []
+    },
+    {
+      "name": "横浜長津田店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/117",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "港南台店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/112",
+      "facilities": []
+    },
+    {
+      "name": "町田店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/536",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "北本店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/87",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "相模原陽光台店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/131",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "鶴瀬店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/85",
+      "facilities": []
+    },
+    {
+      "name": "南千住店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/221",
+      "facilities": []
+    },
+    {
+      "name": "品川駅前店【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/220",
+      "facilities": []
+    },
+    {
+      "name": "立川店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/240",
+      "facilities": []
+    },
+    {
+      "name": "綾瀬店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/108",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "横浜泉店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/114",
+      "facilities": []
+    },
+    {
+      "name": "鶴見駒岡店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/115",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "埼玉大井店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/67",
+      "facilities": []
+    },
+    {
+      "name": "横浜磯子店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/110",
+      "facilities": []
+    },
+    {
+      "name": "鎌倉店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/119",
+      "facilities": []
+    },
+    {
+      "name": "草加店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/82",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "金沢八景店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/510",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "昭島駅前店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/223",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "川越店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/77",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "川崎宿河原店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/128",
+      "facilities": []
+    },
+    {
+      "name": "厚木店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/121",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "北上尾店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/75",
+      "facilities": []
+    },
+    {
+      "name": "江戸川店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/219",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "新柏店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/154",
+      "facilities": []
+    },
+    {
+      "name": "松戸二十世紀が丘店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/150",
+      "facilities": []
+    },
+    {
+      "name": "大和鶴間店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/132",
+      "facilities": []
+    },
+    {
+      "name": "春日部豊町店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/72",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "千葉長沼店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/152",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "東大宮店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/65",
+      "facilities": []
+    },
+    {
+      "name": "大泉インター店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/241",
+      "facilities": []
+    },
+    {
+      "name": "入間店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/86",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "川口青木店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/78",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "野田店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/156",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "坂戸店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/70",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "東向島店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/239",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "伊勢崎店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/55",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "市川インター店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/148",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "多摩ニュータウン店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/235",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "鳩ヶ谷店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/79",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "三郷店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/71",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "南与野店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/66",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "港北みなも店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/116",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "仙台泉店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/33",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "茨城土浦店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/21",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "あすと長町店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/34",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "甲府上阿原店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/95",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "甲府昭和インター店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/96",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "松戸五香店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/149",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "清水二の丸店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/137",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "宇都宮インターパーク店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/242",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "浜松有玉店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/140",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "久喜店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/68",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "茨城神栖店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/19",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "仙台中野栄店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/31",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "長野高田店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/215",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "静岡沓谷店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/136",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "流山青田店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/157",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "藤枝水守店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/138",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "前橋荒牧店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/58",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "府中店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/238",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "川崎下平間店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/362",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "世田谷馬事公苑店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/368",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "木更津金田店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/374",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "長野川中島店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/375",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "湘南台店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/377",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "世田谷喜多見店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/380",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "武蔵野西久保店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/381",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "盛岡南店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/384",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "八戸城下店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/385",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "松本平田店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/388",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "奥州水沢店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/391",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "高島平店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/392",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "宇都宮鶴田店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/393",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ららぽーとTOKYO-BAY店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/397",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "南柏店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/399",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ひたち海浜公園前店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/408",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "茨城古河店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/410",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "相模原中央店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/412",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "新潟紫竹山店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/414",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "山形馬見ヶ崎店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/417",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "横浜瀬谷店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/420",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "茅ヶ崎今宿店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/421",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "名取店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/424",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "弘前店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/427",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "越谷レイクタウン店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/437",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "青森緑店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/442",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "小田原東町店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/448",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "東葛西店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/450",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "熊谷駅前店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/452",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "辻堂店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/454",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "新潟松崎店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/458",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "八千代店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/461",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "秋田茨島店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/466",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "上越店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/468",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "米沢店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/471",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "鶴岡砂田町店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/474",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "千葉蘇我店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/480",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "秋田外旭川店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/481",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "盛岡高松店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/483",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "燕三条店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/488",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "静岡インター通り店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/494",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "モザイクモール港北店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/495",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "横浜青葉台店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/496",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "越谷下間久里店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/498",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "由利本荘店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/500",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "五所川原店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/505",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "仙台水の森店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/507",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "八戸湊高台店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/513",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "イトーヨーカドー大井町店【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/514",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "山形南館店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/517",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "佐野高萩店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/520",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "富士宮店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/521",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "国分寺恋ヶ窪店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/522",
+      "facilities": []
+    },
+    {
+      "name": "アクロスプラザ市原更級店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/523",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "相模原古淵店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/524",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "伊勢原店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/525",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "十条店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/527",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "八王子みなみ野店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/529",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "周船寺店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/257",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "光の森店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/50",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "熊本新南部店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/54",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "小倉津田店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/267",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "香椎店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/266",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "八幡則松店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/269",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "坪井店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/53",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "近見店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/52",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "大牟田店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/262",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "飯塚店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/263",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "佐賀若宮店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/63",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "九品寺店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/51",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "志免店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/260",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "霧島隼人店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/107",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "二又瀬店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/265",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "春日星見ヶ丘店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/259",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "宗像店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/258",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "大分中津店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/213",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "小倉到津店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/268",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "広島東雲店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/364",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "久留米合川店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/365",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "広島祇園店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/369",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "山口店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/370",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "南鹿児島店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/373",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "名古屋明前町店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/541",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "甲子園店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/553",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "名古屋志段味店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/554",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "都城店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/540",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "D・plaza大分店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/543",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "姶良店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/544",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "東村山店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/550",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "フレスポ東日暮里店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/535",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "いわき平店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/538",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "光が丘IMA店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/542",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "葛飾金町店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/545",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "仙台西多賀店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/549",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "東金店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/551",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "吉祥寺駅前店【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/552",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "二俣川駅前店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/555",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "渋谷駅前店【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/557",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "西新宿店【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/558",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "武蔵小杉店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/559",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "小岩駅前店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/560",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "赤羽駅東口店【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/561",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "上本町店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/556",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "名古屋新栄店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/562",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "町田ジョルナ店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/563",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "別府店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/564",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "平塚見附店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/565",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "田無駅前店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/566",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "グローバル旗艦店 道頓堀【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/567",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "高田馬場駅前店【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/568",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "掛川城店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/548",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "名古屋栄店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/571",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "フレスポ住吉店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/546",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ラソラ札幌店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/570",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "聖蹟桜ヶ丘駅前店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/572",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ミッテン府中店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/569",
+      "facilities": []
+    },
+    {
+      "name": "豊中春日町店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/573",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "名古屋本陣店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/574",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "札幌八軒店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/575",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "リコパ鶴見店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/576",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "横浜荏田店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/577",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "京橋店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/578",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "高松六条店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/579",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "瑞江駅前店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/580",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "大宮バイパス店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/581",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "大村店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/582",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "札幌菊水元町店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/584",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "グローバル旗艦店 原宿【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/583",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "調布駅前店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/585",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "朝潮橋店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/586",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "梅田OSビル店【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/587",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "イオン那覇店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/588",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "津田沼駅前店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/589",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "利府店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/590",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "足立栗原店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/591",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "富士店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/534",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "安城今本町店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/592",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "京急川崎駅前店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/593",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "グローバル旗艦店 押上（スカイツリー前）駅前２F【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/595",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "グローバル旗艦店 押上（スカイツリー前）駅前１F【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/594",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "イオン南風原店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/596",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ブランチ調布店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/597",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "プラス型店舗 京都【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/598",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "所沢有楽町店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/599",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "池袋駅西口店【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/601",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "幕張店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/602",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "帯広店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/603",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "プラス型店舗 アトレ大森【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/604",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "溝の口駅北店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/605",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "行橋店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/600",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "外環東大阪店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/607",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "豊橋新栄店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/609",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "古川南店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/610",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "佐久店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/611",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "横浜蒔田店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/613",
+      "facilities": []
+    },
+    {
+      "name": "飯田店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/612",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "千葉駅前店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/614",
+      "facilities": []
+    },
+    {
+      "name": "ららぽーと堺店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/615",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "函館東山店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/616",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ユニモちはら台店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/619",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "名古屋鳴海店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/620",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "横浜上永谷店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/621",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "札幌平岡店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/622",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "八代店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/623",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ラソラ川西店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/624",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "呉中央店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/625",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "武蔵小山店【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/626",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "室蘭店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/627",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "ラクア緑井店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/628",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "新百合ヶ丘店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/629",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "佐賀南店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/618",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "岩倉店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/630",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "天下茶屋店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/631",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "グローバル旗艦店 なんばパークスサウス【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/632",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "別府上人ケ浜店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/633",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "宇和島店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/634",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "苫小牧店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/635",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "落合南長崎駅前店【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/636",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "京都北山店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/637",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "中野駅南口店【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/638",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "福岡西新店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/639",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "成増店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/640",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "グローバル旗艦店 銀座【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/641",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "旭川4条通店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/642",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "桑名西店【１皿110円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/643",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "狭山入間川店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/644",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "札幌新琴似店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/645",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "中目黒駅前店【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/646",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "広島紙屋町店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/647",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "船橋フェイス店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/648",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "郡山ヨークパーク店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/649",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "京都洛西店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/651",
+      "facilities": [
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "無添蔵中目黒店",
+      "url": "https://shop.kurasushi.co.jp/detail/652",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "初台店【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/653",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "今池駅前店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/654",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "蒲田東店【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/655",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "プラス型店舗 ルミネ大宮【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/656",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "プラス型店舗 京都寺町通【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/657",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "御徒町店【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/658",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "下北沢店【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/659",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "メモリアル店 なんば千日前【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/660",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "長崎大波止店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/661",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "アトレ取手店【１皿115円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/662",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "無添蔵新宿店",
+      "url": "https://shop.kurasushi.co.jp/detail/663",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "新宿靖国通り店【１皿145円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/664",
+      "facilities": [
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "新鎌ヶ谷駅前店【１皿125円～】",
+      "url": "https://shop.kurasushi.co.jp/detail/665",
+      "facilities": [
+        "multiToilet"
+      ]
+    }
+  ]
+}
