@@ -113,9 +113,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '10月下旬〜11月末',
     checkFromMonth: 9,
-    lastChecked: '2026-09-07',
+    lastChecked: '2026-09-14',
     lastCheckedState:
-      '2026-09-07再確認: 「秋の夜散歩」は依然として2025年の情報のまま（2025-10-30〜11-30／16:30〜20:30）で2026年版は未掲載。同園の「コスモスまつり2026」（2026-09-12〜10-25）は会期が出ていたので showa-kinen-cosmos-2026 として投入した。',
+      '2026-09-14再確認: 専用ページ（/autumn-night-walk/）は「秋の夜散歩2025」（2025年10月30日〜11月30日）のまま。トップ・イベント一覧の秋企画はコスモスまつり2026・秋のフォトスポット2026のみで、黄葉・紅葉まつり／夜散歩の2026年版は未掲載。',
     status: 'waiting',
   },
   {
@@ -139,9 +139,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'matsuri',
     typicalPeriod: '11月',
     checkFromMonth: 9,
-    lastChecked: '2026-09-07',
+    lastChecked: '2026-09-14',
     lastCheckedState:
-      '2026-09-07再確認: 2026年秋のイベント告知は依然として記載なし。',
+      '2026-09-14再確認: 高尾登山電鉄のお知らせ一覧（2026年9月9日分まで）に告知なし。八王子観光コンベンション協会の専用ページ（hkc.or.jp/takaosan/momiji_fes/）も「2025年10月25日(土)～12月14日(日)」の残置。',
     status: 'waiting',
   },
   {
@@ -165,9 +165,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'show',
     typicalPeriod: '不定（季節ごとに企画が入れ替わる）',
     checkFromMonth: 9,
-    lastChecked: '2026-09-07',
+    lastChecked: '2026-09-14',
     lastCheckedState:
-      '2026-09-07再確認: ハロウィンなど秋冬の季節企画は未掲載（検索上位に出る公式ハロウィン記事は2020年のもの。2020年も2026年も10月1日が木曜で曜日一致するため誤読しやすい）。会期の明記があったVRアトラクション（2026-09-01〜11-30）は sumida-aquarium-vr-2026 として投入した。季節企画は引き続き待ち。',
+      '2026-09-14再確認: ニュース一覧（2026年9月9日分まで）とトップにハロウィン・クリスマスの告知なし。開催中は「すみすい花火2026」（9月24日まで延長）。9/26・27の「すみペン チアーズ！」は短時間の館内プログラムのため投入見送り。',
     status: 'waiting',
   },
   {
@@ -192,10 +192,11 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'illumination',
     typicalPeriod: '10月中旬〜2月中旬',
     checkFromMonth: 9,
-    lastChecked: '2026-09-07',
+    lastChecked: '2026-09-14',
     lastCheckedState:
-      '2026-09-07再確認: 年間案内の「10月中旬〜2月中旬」の常時表記のみ。今シーズンの確定日は未掲載。',
-    status: 'waiting',
+      '2026-09-14: 公式の入園料ページ（fee.html）に「2026年10月17日～2月14日予定 【光の花の庭】」と夜の部の時間・料金が掲載。2026/09/11のハロウィン告知にも「10/17（土）からはライトアップも開催」とあり一致。会期は「予定」表記。投入済み。',
+    status: 'added',
+    addedSlug: 'ashikaga-hikari-no-hana-no-niwa-2026',
   },
   {
     venue: '江の島（江の島シーキャンドル）',
@@ -241,16 +242,17 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
   },
   {
     venue: 'ハウステンボス',
-    eventName: '光の王国（ウインターイルミネーション）',
-    officialUrl: 'https://www.huistenbosch.co.jp/event/',
+    eventName: 'ザ・スターライト・ミリオン（旧 光の王国）',
+    officialUrl: 'https://www.huistenbosch.co.jp/event/illumination/',
     area: 'nagasaki',
     category: 'illumination',
     typicalPeriod: '11月上旬〜翌2月下旬',
     checkFromMonth: 9,
-    lastChecked: '2026-09-07',
+    lastChecked: '2026-09-14',
     lastCheckedState:
-      '2026-09-07再確認: イベントページに2026-2027シーズンの光の王国の会期記載なし（年間カレンダーへの導線のみ）。',
-    status: 'waiting',
+      '2026-09-14: /event/illumination/ の「光の王国」が「ザ・スターライト・ミリオン」に名称変更され、「2026. 11/6 Fri.― 2027. 2/25 Thu.」と会期掲載。点灯時間・料金は未掲載。投入済み。',
+    status: 'added',
+    addedSlug: 'huis-ten-bosch-starlight-million-2026',
   },
   {
     venue: 'マザー牧場',
@@ -260,9 +262,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'illumination',
     typicalPeriod: '11月上旬〜翌3月上旬の土日祝＋年末年始',
     checkFromMonth: 9,
-    lastChecked: '2026-09-07',
+    lastChecked: '2026-09-14',
     lastCheckedState:
-      '2026-09-07再確認: 2026-2027シーズンのマザーイルミは未発表のまま（公開は2025-2026シーズンの案内まで）。秋の在庫としては「第25回 秋のこども写生大会」（2026-09-01〜11-30）を motherfarm-shasei-2026 として投入した。',
+      '2026-09-14再確認: 2025年版イルミのURL（/information/illumination2025/）はトップへリダイレクトで消滅。ニュース一覧（2026/09/09分まで）とトップにマザーイルミ2026-2027の告知なし。',
     status: 'waiting',
   },
   {
@@ -273,9 +275,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '10月上旬〜10月末',
     checkFromMonth: 9,
-    lastChecked: '2026-09-07',
+    lastChecked: '2026-09-14',
     lastCheckedState:
-      '2026-09-07再確認: 「コキアカーニバル」本体の2026年会期は公式に未掲載（2026年用URLは403で本文を取得できず、お知らせ一覧にも会期の明記なし）。一方「コキアライトアップ2026」は会期（2026-09-18〜09-27）が発表されていたので、そちらは hitachi-kochia-lightup-2026 として投入済み。カーニバル本体は引き続き待ち。',
+      '2026-09-14再確認: 「コキアカーニバル」名の2026年企画はトップ・イベント一覧とも無し。公式に出ているのはコキアライトアップ2026（投入済み）と紅葉予想（10/15頃見頃）、季節料金期間（2026年10月9日〜11月3日）のお知らせのみ。名称が廃止された可能性があるので10月にもう一度だけ見て、無ければウォッチから外す。',
     status: 'waiting',
   },
   {
@@ -286,9 +288,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '10月または11月の土日2日間',
     checkFromMonth: 9,
-    lastChecked: '2026-09-07',
+    lastChecked: '2026-09-14',
     lastCheckedState:
-      '2026-09-07再確認: 公式は2025年（11月8日(土)・9日(日)）の情報のまま。2026年の日程は未掲載のため入れない。',
+      '2026-09-14再確認: 愛護会の角きりページは「2025年は11月に行います」のまま、お知らせ一覧（最新2026.09.10）にも2026年告知なし。南都銀行の観光サイトに「2026/11/7（土）・11/8（日）※予定」とあるが主催者発表ではないため入れない。',
     status: 'waiting',
   },
   {
@@ -313,9 +315,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'show',
     typicalPeriod: '不定（季節ごとに企画が入れ替わる）',
     checkFromMonth: 9,
-    lastChecked: '2026-09-07',
+    lastChecked: '2026-09-14',
     lastCheckedState:
-      '2026-09-07再確認: 掲載はシャチのテールバースト延長・生きものスマシースクール（9月）等の通年プログラムのみで、開始日・終了日が明記された秋イベントは未掲載。',
+      '2026-09-14再確認: イベント一覧・お知らせ・プレスルーム（最新2026/09/10）にハロウィン・冬の企画なし。シルバーウィークの夜間企画（2026年9月20日〜23日）は suma-seaworld-night-aqualive-2026 として投入した。季節企画は引き続き待ち。',
     status: 'waiting',
   },
   // ── 2026-09-07 追加: 9月上旬時点で秋企画が未発表だった関東の主要施設 ──
@@ -329,9 +331,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: 'ハロウィンは10月下旬の週末、イルミは11月上旬〜翌2月下旬',
     checkFromMonth: 9,
-    lastChecked: '2026-09-07',
+    lastChecked: '2026-09-14',
     lastCheckedState:
-      '2026-09-07: 2026年のハロウィンナイトZOOは未発表（旧イベントページは404、実在確認できるのは2025年10月25・26・31日の告知のみ）。イルミネーションのページも2025-2026シーズン（2025-11-01〜2026-02-23）のまま。前年は10/15にリリースが出ているので10月上旬に再確認する。',
+      '2026-09-14再確認: ニュースリリース2026年分（最新2026.09.08）・イベントカレンダー・PR TIMESにハロウィンナイトZOO／イルミ2026-2027の告知なし（一覧に残るのは2025.10.15と2025.10.10のリリース）。前年のリリース時期どおり10月上旬に再確認。',
     status: 'waiting',
   },
   {
@@ -342,9 +344,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: 'ハロウィンは10月、イルミは11月中旬〜翌3月',
     checkFromMonth: 9,
-    lastChecked: '2026-09-07',
+    lastChecked: '2026-09-14',
     lastCheckedState:
-      '2026-09-07: 2026年秋の企画は1件も掲載なし。イルミ「LIGHTIA」のページは前シーズンの残置（11/15〜3/1表記）で今季の会期なし。過去は9月下旬にリリースが出ている。',
+      '2026-09-14再確認: お知らせ元データ（api/cache/v1/infoList.jsp、最新2026年09月13日）にハロウィン項目なし。LIGHTIAページの「11/15 sat～3/1 sun」は曜日が2025年のもの（掲載日も2024年09月01日のまま）で今季の会期ではない。WebFetchは403、ブラウザ相当のUAなら取得可。',
     status: 'waiting',
   },
   {
@@ -355,10 +357,11 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'illumination',
     typicalPeriod: '11月上旬〜11月末',
     checkFromMonth: 9,
-    lastChecked: '2026-09-07',
+    lastChecked: '2026-09-14',
     lastCheckedState:
-      '2026-09-07: 公式サイトがJavaScript描画のSPAで、イベント詳細のHTMLに本文が含まれず会期を取得できなかった（curl・WebFetchとも不可）。ブラウザ経由なら取れる可能性あり。10月に再確認する。',
-    status: 'waiting',
+      '2026-09-14: ブラウザ描画で公式イベントページを確認。光と森のStory第2章「紅葉見ナイト」は「2026年11月14日(土)～29日(日)」（点灯16:30〜20:30）。第1章「森のハロウィンナイト」も「2026年10月11日(土)～10月31日(土)の土日祝のみ」で掲載があり、musashi-kyuryo-halloween-night-2026 として同時に投入。',
+    status: 'added',
+    addedSlug: 'musashi-kyuryo-momijimi-night-2026',
   },
   {
     venue: 'カワスイ 川崎水族館',
@@ -368,9 +371,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '不定（季節ごとに企画が入れ替わる）',
     checkFromMonth: 9,
-    lastChecked: '2026-09-07',
+    lastChecked: '2026-09-14',
     lastCheckedState:
-      '2026-09-07: 公式がNuxtのSPAでイベント一覧・お知らせがブラウザ描画でも空。トップのPICK UPに出るのは2025年冬の残置コンテンツ。公式ドメインで会期を確認できず。10月に再訪する。',
+      '2026-09-14再確認: 公式サイトは依然イベント一覧・お知らせが空表示（確認できた最新は2025/12/25の年末年始営業）。運営会社MOFFのPR TIMESで秋企画「ハリモグラ フェス」（2026年9月11日〜10月31日）を確認し kawasui-harimogura-fes-2026 として投入。ハロウィン・冬の企画は未発表。',
     status: 'waiting',
   },
   {
@@ -381,9 +384,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '9月下旬〜10月末',
     checkFromMonth: 9,
-    lastChecked: '2026-09-07',
+    lastChecked: '2026-09-14',
     lastCheckedState:
-      '2026-09-07: 公式イベント一覧に掲載されている現行イベントは6本のみで、ハロウィン企画は未掲載。特別展「ざんねんないきもの展３」（〜11/23）は別途投入済み。',
+      '2026-09-14再確認: 公式イベント一覧・トップ・PR TIMESにハロウィン企画なし。掲載中はSDGs WEEK（〜9/30）、朝イベント（9/19〜23）、ざんねんないきもの展３（〜11/23）、大人向け夜間営業のみ。例年の開始（9月下旬）前なので追跡を続ける。',
     status: 'waiting',
   },
 ];
