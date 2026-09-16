@@ -57,6 +57,8 @@ export const AFFILIATE_TARGET_SLUGS = [
   'nekashitsuke-ehon-10sen-2026',
   'ehon-subsc-hikaku-2026',
   'toysub-tettei-kaisetsu-2026',
+  // 2026-09-16 追加：帰省・旅行の持ち物記事（トイサブ！より商品画像の無償提供）
+  'kisei-ryokou-omocha-ikisaki-betsu',
   // 2026-06-16 追加：Z会 通信教育の本命配置先（Z会を直接比較する未登録記事）
   'benesse-vs-zkai-youji',
   'tsuushin-kyouzai-hikaku',
@@ -721,19 +723,21 @@ const MOSHIMO_PROGRAMS_2026_05: AffiliateProduct[] = expand([
       // 2026-06-11 追加
       'chiiku-omocha-subsc-5sha-hikaku-2026',
       'toysub-tettei-kaisetsu-2026',
+      // 2026-09-16 追加
+      'kisei-ryokou-omocha-ikisaki-betsu',
     ],
   },
 ]);
 
 PRODUCTS.push(...MOSHIMO_PROGRAMS_2026_05);
 
-// トイサブ解説記事にも本体サービスのカードを表示
+// トイサブ解説記事・帰省の持ち物記事にも本体サービスのカードを表示
 PRODUCTS.push(
-  ...PRODUCTS.filter((p) => p.id === 'cs-toysub' && p.slug === 'chiiku-subsc-hikaku-4sha').map(
-    (p) => ({
-      ...p,
-      slug: 'toysub-tettei-kaisetsu-2026' as AffiliateTargetSlug,
-    }),
+  ...(['toysub-tettei-kaisetsu-2026', 'kisei-ryokou-omocha-ikisaki-betsu'] as const).flatMap(
+    (slug) =>
+      PRODUCTS.filter((p) => p.id === 'cs-toysub' && p.slug === 'chiiku-subsc-hikaku-4sha').map(
+        (p) => ({ ...p, slug: slug as AffiliateTargetSlug }),
+      ),
   ),
 );
 
