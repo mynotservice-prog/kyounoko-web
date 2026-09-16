@@ -6,6 +6,9 @@ import { KkIcon } from '@/components/kk/KkIcon';
 import {
   matchesFilters,
   filtersToQuery,
+  areaFilterLabel,
+  AREA_TREE,
+  SHUTOKEN,
   type SpotFilters,
   type FilterableSpot,
   type AreaFilter,
@@ -13,6 +16,7 @@ import {
   type Budget,
   type SortKey,
 } from '@/lib/spot-filter';
+import { getRegionOfPrefecture } from '@/lib/area';
 import type { AgeTag } from '@/lib/spots';
 
 /**
@@ -30,13 +34,6 @@ const AGES: { v: AgeTag; t: string }[] = [
   { v: '0-1', t: '0〜1歳' },
   { v: '2-3', t: '2〜3歳' },
   { v: '4-6', t: '4〜6歳' },
-];
-const AREAS: { v: AreaFilter; t: string }[] = [
-  { v: 'shutoken', t: '首都圏' },
-  { v: 'tokyo', t: '東京' },
-  { v: 'kanagawa', t: '神奈川' },
-  { v: 'chiba', t: '千葉' },
-  { v: 'saitama', t: '埼玉' },
 ];
 const FACILITIES: { v: FacilityKey; t: string }[] = [
   { v: 'nursing', t: '授乳室' },
@@ -87,6 +84,20 @@ export function SpotFilterBar({
     [spots, draft],
   );
   const activeCount = countActive(initial);
+
+  /**
+   * 都道府県ごとの件数（エリア以外の条件を適用した上での実数）。
+   * 0件の県はチップを押せなくして「押しても何も出ない」空振りを防ぐ。
+   */
+  const areaCounts = React.useMemo(() => {
+    const m = new Map<string, number>();
+    const woArea: SpotFilters = { ...draft, area: undefined };
+    for (const s of spots) {
+      if (!matchesFilters(s, woArea)) continue;
+      m.set(s.area, (m.get(s.area) ?? 0) + 1);
+    }
+    return m;
+  }, [spots, draft]);
 
   const go = (f: SpotFilters) => {
     const qs = filtersToQuery(f);
@@ -150,13 +161,14 @@ export function SpotFilterBar({
       {/* パネル */}
       {open && (
         <div className="sv3-panel">
-          <Group label="エリア">
-            {AREAS.map((a) => (
-              <Chip key={a.v} on={draft.area === a.v} onClick={() => setDraft({ ...draft, area: draft.area === a.v ? undefined : a.v })}>
-                {a.t}
-              </Chip>
-            ))}
-          </Group>
+          <div className="sv3-group">
+            <p className="sv3-group-lab">エリア</p>
+            <AreaPicker
+              value={draft.area}
+              counts={areaCounts}
+              onChange={(v) => setDraft({ ...draft, area: v })}
+            />
+          </div>
           <Group label="年齢">
             {AGES.map((a) => (
               <Chip key={a.v} on={draft.ages.includes(a.v)} onClick={() => setDraft({ ...draft, ages: toggleArr(draft.ages, a.v) })}>
@@ -229,11 +241,109 @@ function Group({ label, children }: { label: string; children: React.ReactNode }
     </div>
   );
 }
-function Chip({ on, onClick, children }: { on: boolean; onClick: () => void; children: React.ReactNode }) {
+function Chip({
+  on,
+  onClick,
+  children,
+  disabled,
+}: {
+  on: boolean;
+  onClick: () => void;
+  children: React.ReactNode;
+  disabled?: boolean;
+}) {
   return (
-    <button type="button" aria-pressed={on} onClick={onClick} className={'kk-chip' + (on ? ' on' : '')}>
+    <button
+      type="button"
+      aria-pressed={on}
+      onClick={onClick}
+      disabled={disabled}
+      className={'kk-chip' + (on ? ' on' : '') + (disabled ? ' off' : '')}
+    >
       {children}
     </button>
+  );
+}
+
+/**
+ * エリア選択（全国 → 地方 → 都道府県の2段）。
+ * 47都道府県すべてを並べるとパネルが長くなりすぎるので、
+ * 上段で地方ブロックを選び、その地方の県だけを下段に出す。
+ * 地方チップ自体も絞り込み値（例: 関西＝2府5県すべて）として使える。
+ */
+function AreaPicker({
+  value,
+  counts,
+  onChange,
+}: {
+  value?: AreaFilter;
+  counts: Map<string, number>;
+  onChange: (v: AreaFilter | undefined) => void;
+}) {
+  const regionOfValue = value && value !== 'shutoken' ? getRegionOfPrefecture(value) ?? value : undefined;
+  const [openRegion, setOpenRegion] = React.useState<string | undefined>(regionOfValue);
+
+  // URLから復元した値（＝適用済みフィルタ）が変わったら、開く地方も合わせる。
+  React.useEffect(() => setOpenRegion(regionOfValue), [regionOfValue]);
+
+  const regionCount = (prefs: { slug: string }[]) =>
+    prefs.reduce((n, p) => n + (counts.get(p.slug) ?? 0), 0);
+  const shutokenCount = SHUTOKEN.reduce((n, a) => n + (counts.get(a) ?? 0), 0);
+  const current = AREA_TREE.find((r) => r.region === openRegion);
+
+  return (
+    <>
+      <div className="kk-chips">
+        <Chip on={!value} onClick={() => { onChange(undefined); setOpenRegion(undefined); }}>
+          全国
+        </Chip>
+        <Chip
+          on={value === 'shutoken'}
+          disabled={shutokenCount === 0}
+          onClick={() => { onChange(value === 'shutoken' ? undefined : 'shutoken'); setOpenRegion(undefined); }}
+        >
+          首都圏
+        </Chip>
+        {AREA_TREE.map((r) => {
+          const n = regionCount(r.prefs);
+          return (
+            <Chip
+              key={r.region}
+              on={value === r.region}
+              disabled={n === 0}
+              onClick={() => {
+                setOpenRegion(openRegion === r.region && value === r.region ? undefined : r.region);
+                onChange(value === r.region ? undefined : r.region);
+              }}
+            >
+              {r.name}
+            </Chip>
+          );
+        })}
+      </div>
+
+      {current && (
+        <div className="sv3-subgroup">
+          <p className="sv3-group-sublab">{current.name}の都道府県</p>
+          <div className="kk-chips">
+            {current.prefs.map((p) => {
+              const n = counts.get(p.slug) ?? 0;
+              return (
+                <Chip
+                  key={p.slug}
+                  on={value === p.slug}
+                  disabled={n === 0}
+                  onClick={() => onChange(value === p.slug ? current.region : p.slug)}
+                >
+                  {p.name}
+                  <span className="sv3-chip-n">{n}</span>
+                </Chip>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
@@ -241,7 +351,7 @@ function Chip({ on, onClick, children }: { on: boolean; onClick: () => void; chi
 type AppliedChip = { key: string; label: string; remove: (f: SpotFilters) => SpotFilters };
 function appliedChips(f: SpotFilters): AppliedChip[] {
   const out: AppliedChip[] = [];
-  if (f.area) out.push({ key: 'area', label: AREAS.find((a) => a.v === f.area)!.t, remove: (x) => ({ ...x, area: undefined }) });
+  if (f.area) out.push({ key: 'area', label: areaFilterLabel(f.area), remove: (x) => ({ ...x, area: undefined }) });
   for (const a of f.ages) out.push({ key: `age-${a}`, label: AGES.find((x) => x.v === a)!.t, remove: (x) => ({ ...x, ages: x.ages.filter((y) => y !== a) }) });
   if (f.place) out.push({ key: 'place', label: f.place === 'indoor' ? '屋内' : '屋外', remove: (x) => ({ ...x, place: undefined }) });
   for (const fa of f.facilities) out.push({ key: `fac-${fa}`, label: FACILITIES.find((x) => x.v === fa)!.t, remove: (x) => ({ ...x, facilities: x.facilities.filter((y) => y !== fa) }) });

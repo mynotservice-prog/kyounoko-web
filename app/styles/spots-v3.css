@@ -104,6 +104,15 @@
 .sv3-group-lab {
   margin: 0 0 10px; font-size: 13px; font-weight: 700; letter-spacing: .04em; color: var(--kk-ink-soft);
 }
+/* エリア：地方チップの下に出る都道府県の段 */
+.sv3-subgroup { margin-top: 12px; padding-left: 12px; border-left: 2px solid var(--kk-rule-soft); }
+.sv3-group-sublab {
+  margin: 0 0 8px; font-size: 12px; font-weight: 700; letter-spacing: .04em; color: var(--kk-grey);
+}
+.sv3-chip-n { margin-left: 5px; font-size: 11.5px; font-weight: 400; opacity: .7; font-variant-numeric: tabular-nums; }
+.spots-v3 button.kk-chip.off {
+  border-color: var(--kk-rule-soft); color: var(--kk-grey); background: var(--kk-grey-bg); cursor: not-allowed;
+}
 .sv3-panel-foot { display: flex; align-items: center; gap: 12px; margin-top: 20px; }
 .spots-v3 button.sv3-reset {
   padding: 12px 4px; border: 0; background: none;
