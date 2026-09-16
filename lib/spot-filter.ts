@@ -13,10 +13,25 @@
 // 型のみ import（実行時依存なし＝この module は client からも安全に使える）。
 // スポットデータを読む getFilterableSpots は server 専用の lib/spot-filter-data.ts に置く。
 import type { AgeTag, Spot, SpotPlace, SpotCategory } from './spots';
+import {
+  PREFECTURES,
+  REGIONS,
+  getPrefecturesInRegion,
+  getRegionName,
+  isRegion,
+  type AreaSlug,
+  type RegionSlug,
+} from './area';
 
 export type Budget = 'free' | 'low' | 'mid' | 'high';
 export type SortKey = 'popular' | 'price' | 'name';
-export type AreaFilter = 'shutoken' | 'tokyo' | 'kanagawa' | 'chiba' | 'saitama';
+/**
+ * エリア絞り込みの値。
+ * - 'shutoken'（1都3県）: 旧UIからの互換ショートカット。既存URLを壊さないため残す。
+ * - 地方ブロック（'kanto' 等）: その地方の都道府県すべて。
+ * - 都道府県 slug（'tokyo' 等）: 47都道府県すべて指定できる。
+ */
+export type AreaFilter = 'shutoken' | RegionSlug | AreaSlug;
 export type FacilityKey = 'nursing' | 'diaper' | 'stroller';
 
 /** 首都圏（1都3県） */
@@ -73,6 +88,8 @@ export function matchesFilters(s: FilterableSpot, f: SpotFilters): boolean {
   if (f.area) {
     if (f.area === 'shutoken') {
       if (!SHUTOKEN.includes(s.area)) return false;
+    } else if (isRegion(f.area)) {
+      if (PREF_REGION.get(s.area) !== f.area) return false;
     } else if (s.area !== f.area) {
       return false;
     }
@@ -126,7 +143,29 @@ export function hasActiveFilters(f: SpotFilters): boolean {
 const AGE_SET: AgeTag[] = ['0-1', '2-3', '4-6'];
 const PRICE_SET: Budget[] = ['free', 'low', 'mid', 'high'];
 const FAC_SET: FacilityKey[] = ['nursing', 'diaper', 'stroller'];
-const AREA_SET: AreaFilter[] = ['shutoken', 'tokyo', 'kanagawa', 'chiba', 'saitama'];
+/** 都道府県 slug → 地方ブロック（エリア判定用の逆引き）。 */
+const PREF_REGION = new Map<string, RegionSlug>(PREFECTURES.map((p) => [p.slug, p.block]));
+
+/** 受け付けるエリア値：首都圏 ＋ 6地方ブロック ＋ 47都道府県。 */
+const AREA_SET: AreaFilter[] = [
+  'shutoken',
+  ...REGIONS.map((r) => r.slug),
+  ...PREFECTURES.map((p) => p.slug),
+];
+
+/** エリア値 → 表示名（適用中チップやUIのラベル用）。 */
+export function areaFilterLabel(v: AreaFilter): string {
+  if (v === 'shutoken') return '首都圏';
+  return getRegionName(v) ?? PREFECTURES.find((p) => p.slug === v)?.name ?? String(v);
+}
+
+/** UI用：地方ブロックと、その配下の都道府県。 */
+export const AREA_TREE: { region: RegionSlug; name: string; prefs: { slug: AreaSlug; name: string }[] }[] =
+  REGIONS.map((r) => ({
+    region: r.slug,
+    name: r.name,
+    prefs: getPrefecturesInRegion(r.slug).map((p) => ({ slug: p.slug, name: p.name })),
+  }));
 
 function csv<T extends string>(v: string | string[] | undefined, allowed: readonly T[]): T[] {
   if (!v) return [];

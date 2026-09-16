@@ -142,7 +142,7 @@ function FilteredResults({
           条件に合うスポットが見つかりませんでした
         </p>
         <p className="sv3-empty-sub">
-          設備や料金の条件を1つ外すか、エリアを「首都圏」に広げると見つかりやすくなります。
+          設備や料金の条件を1つ外すか、エリアを地方ブロックや「全国」に広げると見つかりやすくなります。
         </p>
         <Link href="/spots" className="kk-btn outline">
           条件をリセットして全件を見る

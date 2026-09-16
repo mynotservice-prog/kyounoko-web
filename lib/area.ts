@@ -118,3 +118,49 @@ export function areaMatches(articleArea: string | undefined, userArea?: string |
 export function isValidArea(v: unknown): v is AreaSlug {
   return typeof v === 'string' && AREA_MAP.has(v as AreaSlug);
 }
+
+/** 地方ブロック（AreaSlug のうち都道府県ではないもの。"all" を除く）。 */
+export type RegionSlug =
+  | 'hokkaido-tohoku'
+  | 'kanto'
+  | 'chubu'
+  | 'kansai'
+  | 'chugoku-shikoku'
+  | 'kyushu-okinawa';
+
+/** 地方ブロックの表示順と表示名（北から南）。 */
+export const REGIONS: { slug: RegionSlug; name: string }[] = [
+  { slug: 'hokkaido-tohoku', name: '北海道・東北' },
+  { slug: 'kanto', name: '関東' },
+  { slug: 'chubu', name: '中部' },
+  { slug: 'kansai', name: '関西' },
+  { slug: 'chugoku-shikoku', name: '中国・四国' },
+  { slug: 'kyushu-okinawa', name: '九州・沖縄' },
+];
+
+/** 47都道府県のみ（"all" を除いた AREAS）。block は必ず入っている。 */
+export const PREFECTURES = AREAS.filter(
+  (a): a is AreaInfo & { block: RegionSlug } => a.slug !== 'all' && !!a.block,
+);
+
+const REGION_MAP = new Map(REGIONS.map((r) => [r.slug, r]));
+
+export function isRegion(v: unknown): v is RegionSlug {
+  return typeof v === 'string' && REGION_MAP.has(v as RegionSlug);
+}
+
+/** 地方ブロック slug → 表示名。不明なら undefined。 */
+export function getRegionName(slug?: string | null): string | undefined {
+  return slug ? REGION_MAP.get(slug as RegionSlug)?.name : undefined;
+}
+
+/** その地方ブロックに属する都道府県（AREAS の並び順＝北から南）。 */
+export function getPrefecturesInRegion(region: RegionSlug): (AreaInfo & { block: RegionSlug })[] {
+  return PREFECTURES.filter((p) => p.block === region);
+}
+
+/** 都道府県 slug → 属する地方ブロック。都道府県でなければ undefined。 */
+export function getRegionOfPrefecture(slug?: string | null): RegionSlug | undefined {
+  if (!slug) return undefined;
+  return (AREA_MAP.get(slug as AreaSlug)?.block as RegionSlug | undefined) ?? undefined;
+}
