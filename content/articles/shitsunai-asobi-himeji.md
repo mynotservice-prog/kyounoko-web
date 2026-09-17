@@ -173,6 +173,7 @@ A. 駅前で完結させるなら**駅前すくすくひろば**（毎日開設�
 
 ## 関連記事
 
+- [明石市の子連れ室内遊び場](/article/shitsunai-asobi-akashi)
 - [神戸市の子連れ室内遊び場](/article/shitsunai-asobi-kobe)
 - [神戸市の水遊び](/article/mizuasobi-kobe)
 - [梅雨の室内遊び完全ガイド 0-6歳](/article/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026)

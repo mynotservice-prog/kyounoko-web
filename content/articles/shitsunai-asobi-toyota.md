@@ -153,6 +153,7 @@ A. **とよた子育て総合支援センターあいあい**（T-FACE A館9F）
 
 ## 関連記事
 
+- [岡崎市の子連れ室内遊び場](/article/shitsunai-asobi-okazaki)
 - [名古屋市の子連れ室内遊び場](/article/shitsunai-asobi-nagoya)
 - [名古屋市の水遊びスポット](/article/mizuasobi-nagoya)
 - [梅雨の室内遊び完全ガイド 0-6歳](/article/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026)

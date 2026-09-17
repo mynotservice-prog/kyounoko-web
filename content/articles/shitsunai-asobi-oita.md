@@ -160,6 +160,7 @@ A. **名称が変わっています。**バンダイナムコの旧「あそび�
 
 ## 関連記事
 
+- [宮崎市の子連れ室内遊び場](/article/shitsunai-asobi-miyazaki)
 - [福岡市の子連れ室内遊び場](/article/shitsunai-asobi-fukuoka)
 - [長崎市の子連れ室内遊び場](/article/shitsunai-asobi-nagasaki)
 - [梅雨の室内遊び完全ガイド 0-6歳](/article/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026)

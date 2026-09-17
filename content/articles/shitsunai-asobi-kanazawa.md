@@ -171,6 +171,7 @@ A. 駅西こども広場スマイルパークは日曜休みです。日曜に�
 
 ## 関連記事
 
+- [富山市の子連れ室内遊び場](/article/shitsunai-asobi-toyama)
 - [名古屋市の子連れ室内遊び場](/article/shitsunai-asobi-nagoya)
 - [京都市の子連れ室内遊び場](/article/shitsunai-asobi-kyoto)
 - [梅雨の室内遊び完全ガイド 0-6歳](/article/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026)

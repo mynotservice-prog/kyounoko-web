@@ -144,6 +144,7 @@ A. モーリーファンタジー西宮店（イオン西宮門戸店2階）が�
 
 ## 関連記事
 
+- [尼崎市の子連れ室内遊び場](/article/shitsunai-asobi-amagasaki)
 - [神戸市の子連れ室内遊び場](/article/shitsunai-asobi-kobe)
 - [大阪市の子連れ室内遊び場](/article/shitsunai-asobi-osaka)
 - [京都市の子連れ室内遊び場](/article/shitsunai-asobi-kyoto)

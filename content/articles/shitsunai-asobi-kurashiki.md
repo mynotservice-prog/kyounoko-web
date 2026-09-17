@@ -159,6 +159,9 @@ A. 児童館2館は日曜も開館しています（月曜休み）。子育て�
 
 ## 関連記事
 
+- [福山市の子連れ室内遊び場](/article/shitsunai-asobi-fukuyama)
+- [高松市の子連れ室内遊び場](/article/shitsunai-asobi-takamatsu)
+- [松山市の子連れ室内遊び場](/article/shitsunai-asobi-matsuyama)
 - [姫路市の子連れ室内遊び場](/article/shitsunai-asobi-himeji)
 - [神戸市の子連れ室内遊び場](/article/shitsunai-asobi-kobe)
 - [京都市の子連れ室内遊び場](/article/shitsunai-asobi-kyoto)

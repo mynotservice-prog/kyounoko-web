@@ -158,6 +158,7 @@ A. 無料で確実なのはりぼんかん（第1月曜以外は開いていま�
 
 ## 関連記事
 
+- [宮崎市の子連れ室内遊び場](/article/shitsunai-asobi-miyazaki)
 - [福岡市の子供の室内遊び場](/article/shitsunai-asobi-fukuoka)
 - [福岡市の水遊びスポット](/article/mizuasobi-fukuoka)
 - [梅雨の室内遊び完全ガイド 0-6歳](/article/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026)

@@ -154,6 +154,7 @@ A. **屋内エリア（屋内ボールプールなど）があるので雨の日
 
 ## 関連記事
 
+- [大分市の子連れ室内遊び場](/article/shitsunai-asobi-oita)
 - [鹿児島市の子連れ室内遊び場](/article/shitsunai-asobi-kagoshima)
 - [福岡市の子供の室内遊び場](/article/shitsunai-asobi-fukuoka)
 - [梅雨の室内遊び完全ガイド 0-6歳](/article/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026)
