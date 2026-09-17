@@ -160,6 +160,7 @@ A. 大阪市立科学館のプラネタリウムは**小学校高学年から大
 
 ## 関連記事
 
+- [奈良市の子連れ室内遊び場](/article/shitsunai-asobi-nara)
 - [豊中市の子連れ室内遊び場](/article/shitsunai-asobi-toyonaka)
 - [枚方市の子連れ室内遊び場](/article/shitsunai-asobi-hirakata)
 - [尼崎市の子連れ室内遊び場](/article/shitsunai-asobi-amagasaki)

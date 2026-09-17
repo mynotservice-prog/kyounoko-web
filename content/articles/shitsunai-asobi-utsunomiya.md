@@ -175,6 +175,7 @@ A. **岡本児童館はJR岡本駅のそば**で、無料で利用できます�
 
 ## 関連記事
 
+- [高崎市の子連れ室内遊び場](/article/shitsunai-asobi-takasaki)
 - [さいたま市の子連れ室内遊び場](/article/shitsunai-asobi-saitama)
 - [川越市の子連れ室内遊び場](/article/shitsunai-asobi-kawagoe)
 - [梅雨の室内遊び完全ガイド 0-6歳](/article/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026)
