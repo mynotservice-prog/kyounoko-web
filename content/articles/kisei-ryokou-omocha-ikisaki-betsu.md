@@ -5,8 +5,8 @@ metaDescription: >-
   帰省や旅行に持っていくおもちゃを「車の中」「実家」「ホテル」の場面別に5点まとめました。音量を下げられるか・電池が要るか・落としても拾えるか・散らからないかの4点で選ぶと外しません。車内で遊ばせるときの安全面の注意も。対象年齢と仕様は各メーカー公式表記（2026年9月16日確認）。
 category: yakudatsu
 categoryName: 役立つもの
-publishedAt: '2026-09-16T00:00:00.000Z'
-updatedAt: '2026-09-16'
+publishedAt: '2026-09-17T00:00:00.000Z'
+updatedAt: '2026-09-17'
 hero: /img/scenes/car-02.webp
 heroAlt: チャイルドシートに乗せた赤ちゃんのベルトを留める母親。帰省・旅行の車移動のイメージ
 area: all
@@ -35,12 +35,12 @@ youtubeSearch: 車 おもちゃ 子供 ドライブ 飽きる
 | おもちゃ | 向く場面 | 対象年齢（公式表記） | 音 | 電池 |
 |---|---|---|---|---|
 | **"小さな太陽シリーズ" いつもいっしょ** | 車内・ホテル | 0歳1か月〜 | ひも引きオルゴール（小音量） | 不要 |
-| **Whirly Squigz** | 車内・ホテル | 10か月〜 | 鳴らない | 不要 |
+| **Whirly Squigz** | 車内・ホテル | 1歳0か月〜 | 鳴らない | 不要 |
 | **マグタブ（Magnatab）** | 車内・ホテル | 3歳〜 | 玉が動くカチカチ音のみ | 不要 |
 | **Take Along Tunes** | 実家 | 3か月〜 | クラシック7曲・音量調節あり | 単3×2 |
 | **My Own LeapTop** | 実家 | 2〜4歳 | 16曲・4モードの音声 | 単3×3 |
 
-> 出典：トイサブ！ストア商品ページ（ https://store.toysub.net/products/sunseries_baby-lullaby ）、Fat Brain Toys 公式（ https://www.fatbraintoys.com/toy_companies/fat_brain_toy_co/whirly_squigz.cfm ）、Kids2（Baby Einstein）公式（ https://www.kids2.com/products/30704-take-along-tunes-musical-toy ）、LeapFrog 公式（ https://store.leapfrog.com/en-us/store/p/my-own-leaptop/_/A-prod19150 ）｜確認日 2026年9月16日
+> 出典：トイサブ！ストア商品ページ（ https://store.toysub.net/products/sunseries_baby-lullaby ）、トイサブ！公式 Whirly Squigz 商品ページ（ https://toysub.net/nenrei/2sai/1794/ ）、Fat Brain Toys 公式（ https://www.fatbraintoys.com/toy_companies/fat_brain_toy_co/whirly_squigz.cfm ）、Kids2（Baby Einstein）公式（ https://www.kids2.com/products/30704-take-along-tunes-musical-toy ）、LeapFrog 公式（ https://store.leapfrog.com/en-us/store/p/my-own-leaptop/_/A-prod19150 ）｜確認日 2026年9月16日
 
 ## 移動用のおもちゃを選ぶ4つの基準
 
@@ -77,7 +77,7 @@ youtubeSearch: 車 おもちゃ 子供 ドライブ 飽きる
 
 シリコン製の吸盤つきスピナーが3個のセット。羽根が2枚・3枚・4枚と形が違います。片面が吸盤、もう片面は指で回す突起です。
 
-- **対象年齢**：10か月〜
+- **対象年齢**：1歳0か月〜
 - **素材**：シリコン（口に入れても割れにくい）
 - **遊び方**：窓・テーブル・お盆などの平らな面に貼って回す
 
@@ -172,7 +172,7 @@ A. 運転の妨げにならない音量であれば使えます。音量調節�
 
 ### Q. 0歳の子にはどれが向きますか？
 
-A. 公式表記で0歳から使えるのは「いつもいっしょ」（0歳1か月〜）と「Take Along Tunes」（3か月〜）です。「Whirly Squigz」は10か月〜、「マグタブ」は3歳〜が対象です。
+A. 公式表記で0歳から使えるのは「いつもいっしょ」（0歳1か月〜）と「Take Along Tunes」（3か月〜）です。「Whirly Squigz」は1歳0か月〜、「マグタブ」は3歳〜が対象です。
 
 ### Q. ホテルで遊ぶときに気をつけることは？
 
