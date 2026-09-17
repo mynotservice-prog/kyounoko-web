@@ -48,6 +48,11 @@ export type FileArticleMeta = {
    * 冒頭(チェックリスト位置)に「チェーン別早見表」が自動描画される。
    */
   chainComparison?: string;
+  /**
+   * おうち遊びDB(lib/home-play.ts)の遊びID。指定があると本文の「遊び方カード」H2の
+   * 直後にDB駆動のカード（月齢・準備/片付け分数・親の姿勢・安全の公式根拠）を描画する。
+   */
+  homePlays?: string[];
   /** エリア絞り込み用。"all" = エリア非依存、"tokyo" 等 = 地域依存。未指定はallと同等扱い。 */
   area?: string;
   /**
@@ -165,6 +170,9 @@ function parseFrontmatter(raw: string, fallbackSlug: string): { meta: FileArticl
     updatedAt: toIsoDate(d.updatedAt) ?? toIsoDate(d.publishedAt) ?? new Date().toISOString(),
     verifiedAt: toIsoDate(d.verifiedAt) ?? undefined,
     chainComparison: typeof d.chainComparison === 'string' ? d.chainComparison : undefined,
+    homePlays: Array.isArray(d.homePlays)
+      ? (d.homePlays as unknown[]).filter((x): x is string => typeof x === 'string')
+      : undefined,
     // hero の優先順位（v7: 2026-06-13 完全実写化）:
     //   1. frontmatter が /img/scenes/ /photos/ /v2/ /img/kk/ なら最優先（信頼パス）
     //   2. frontmatter が /hero-ai/* (イラスト) なら pickHeroForSlug でシーン置換

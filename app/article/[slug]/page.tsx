@@ -39,6 +39,8 @@ import { getClusterNav } from '@/lib/article-cluster-links';
 import { ClusterNav } from '@/components/article/ClusterNav';
 import { getChainFacilitiesForArticle, FACILITY_LABELS, type FacilityKey } from '@/lib/chain-facilities';
 import { ChainFacilitiesBox } from '@/components/article/ChainFacilitiesBox';
+import { HomePlayCards } from '@/components/article/HomePlayCards';
+import { getHomePlays } from '@/lib/home-play';
 import { ChainComparisonTable } from '@/components/article/ChainComparisonTable';
 import {
   getRestaurantReservationOffer,
@@ -849,6 +851,13 @@ function FileArticleView({ article }: { article: FileArticle }) {
     ? splitBodyAtSection(renderBodyHtml, bodySurfaceOffer.headingPattern)
     : null;
 
+  // おうち遊び記事: frontmatter homePlays の遊びを、本文の「遊び方カード」H2セクション末尾に
+  // DB駆動カード(lib/home-play.ts)として差し込む。該当H2が無ければ本文末尾に出す。
+  const homePlays = article.homePlays?.length ? getHomePlays(article.homePlays) : [];
+  const homePlaySplit = homePlays.length
+    ? splitBodyAtSection(renderBodyHtml, /遊び方カード|遊びカード/) ?? [renderBodyHtml, '']
+    : null;
+
   // 末尾CTA用の関連商品。本文中へ1枚移動した治療群は残り2点に減らす（純増ゼロ）。
   const endRelatedItemsAll = getRelatedItemsForArticle(
     article.slug,
@@ -1326,7 +1335,21 @@ function FileArticleView({ article }: { article: FileArticle }) {
           {/* Body（チェックリスト前出し時は抽出後の残り本文を描画）。
               レバー1治療群は意図ピークH2セクション末尾で分割し、間に InlineItemCTA を
               1枚だけ差し込む（末尾CTA側を2点に減らして枠の純増ゼロ）。 */}
-          {bodySurfaceSplit && bodySurfaceOffer ? (
+          {homePlaySplit ? (
+            <>
+              <div
+                className="prose"
+                dangerouslySetInnerHTML={{ __html: prepareBody(homePlaySplit[0]) }}
+              />
+              <HomePlayCards plays={homePlays} />
+              {homePlaySplit[1] && (
+                <div
+                  className="prose"
+                  dangerouslySetInnerHTML={{ __html: prepareBody(homePlaySplit[1]) }}
+                />
+              )}
+            </>
+          ) : bodySurfaceSplit && bodySurfaceOffer ? (
             <>
               <div
                 className="prose"
