@@ -119,6 +119,18 @@ A. 遊びだけでは解決しませんが、順番を変えると楽になり�
 ### Q. 授乳中だけ動画を見せるのはありですか？
 A. 日本小児科医会は「2歳までのテレビ・ビデオ視聴は控えましょう」「1日2時間までを目安」としています。上の子が2歳を過ぎていて「授乳中の10分だけ」と決めて使うなら目安の中です。毎回ではなく、遊びを用意する余裕がない回の逃げ道にします。
 
+## 出典
+
+- 出典：[消費者庁 子ども安全メール Vol.544（子どもの口の大きさ）](https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20210225/)
+- 出典：[東京消防庁「乳幼児の窒息や誤飲に注意！」](https://www.tfd.metro.tokyo.lg.jp/lfe/nichijo/children_tissoku.html)
+- 出典：[こども家庭庁 事故防止ハンドブック（窒息・誤飲）](https://www.cfa.go.jp/policies/child-safety-actions/handbook/content-1)
+- 出典：[消費者庁「子どもの転落事故に注意！」](https://www.caa.go.jp/policies/policy/consumer_safety/caution/caution_061/assets/consumer_safety_cms205_220720_01.pdf)
+- 出典：[こども家庭庁 事故防止ハンドブック（転落・転倒）](https://www.cfa.go.jp/policies/child-safety-actions/handbook/content-4)
+- 出典：[厚生労働省「平成22年乳幼児身体発育調査」（首すわり・寝返り・ひとりすわり・はいはい・つかまり立ち・ひとり歩きの90%通過月齢）](https://www.mhlw.go.jp/toukei/list/dl/73-22-01.pdf)
+- 出典：[こども家庭庁 母子健康手帳 府令様式（令和8年4月施行）](https://www.cfa.go.jp/policies/boshihoken/techou)
+- 出典：[厚生労働省 保育所保育指針](https://www.mhlw.go.jp/web/t_doc?dataId=00010450&dataType=0&pageNo=1)
+- 出典：Yahoo!知恵袋ほかQ&Aサイトの質問・回答（2026年9月時点で確認。本文中で「Q&Aサイトの回答」と示した箇所）
+
 ## 関連記事
 
 - [2歳を家の中で疲れさせる遊び｜家にあるものだけ、動→静の順で](/article/2sai-ouchi-asobi-tsukaresaseru)

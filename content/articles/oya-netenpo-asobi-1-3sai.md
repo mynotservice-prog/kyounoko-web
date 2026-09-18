@@ -132,6 +132,19 @@ A. Q&Aの回答では「1歳前半は10分が限界」とされ、この記事�
 
 A. 保育所保育指針が1〜3歳の内容として挙げているのは「つまむ、めくるなどの指先の機能」「様々な素材に触れて楽しむ」で、親が横になっていても成り立つ遊びです。発達について心配が続く場合は、乳幼児健診やかかりつけの小児科で相談してください。
 
+## 出典
+
+- 出典：[消費者庁 子ども安全メール Vol.544（子どもの口の大きさ）](https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20210225/)
+- 出典：[こども家庭庁 事故防止ハンドブック（窒息・誤飲）](https://www.cfa.go.jp/policies/child-safety-actions/handbook/content-1)
+- 出典：[国民生活センター（ボタン電池）](https://www.kokusen.go.jp/news/data/n-20240731_4.html)
+- 出典：[消費者庁 子ども安全メール Vol.547（ボタン電池）](https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20210318/)
+- 出典：[消費者庁 子ども安全メール Vol.640（就寝時の窒息）](https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20231102/)
+- 出典：[消費者庁 子ども安全メール Vol.566（窒息時の応急処置）](https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20210928/)
+- 出典：[厚生労働省「平成22年乳幼児身体発育調査」（首すわり・寝返り・ひとりすわり・はいはい・つかまり立ち・ひとり歩きの90%通過月齢）](https://www.mhlw.go.jp/toukei/list/dl/73-22-01.pdf)
+- 出典：[こども家庭庁 母子健康手帳 府令様式（令和8年4月施行）](https://www.cfa.go.jp/policies/boshihoken/techou)
+- 出典：[厚生労働省 保育所保育指針](https://www.mhlw.go.jp/web/t_doc?dataId=00010450&dataType=0&pageNo=1)
+- 出典：Yahoo!知恵袋ほかQ&Aサイトの質問・回答（2026年9月時点で確認。本文中で「Q&Aサイトの回答」と示した箇所）
+
 ## 関連記事
 
 - [2歳を家の中で疲れさせる遊び](/article/2sai-ouchi-asobi-tsukaresaseru)

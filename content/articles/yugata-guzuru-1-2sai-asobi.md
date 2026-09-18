@@ -131,6 +131,18 @@ A. Q&Aで効いたと報告されているのは、風呂と夕食を「その�
 ### Q. 夕方に動画を見せてもいいですか？
 A. 2歳以降なら、5〜10分の体操動画を1本だけ、親も一緒に踊る使い方にします。日本小児科医会の目安は「2歳までのテレビ・ビデオ視聴は控える」「1日2時間まで」です。家事中に見せる場合は「ご飯ができるまで」と終わりを先に伝えます。
 
+## 出典
+
+- 出典：[こども家庭庁「水の危険は近くにあります」](https://www.cfa.go.jp/policies/child-safety-actions/cases/dekisui)
+- 出典：[消費者庁「入浴中の事故に注意」](https://www.caa.go.jp/policies/policy/consumer_safety/caution/caution_052)
+- 出典：[こども家庭庁 事故防止ハンドブック（窒息・誤飲）](https://www.cfa.go.jp/policies/child-safety-actions/handbook/content-1)
+- 出典：[消費者庁 子ども安全メール Vol.547（ボタン電池）](https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20210318/)
+- 出典：[こども家庭庁 事故防止ハンドブック（やけど）](https://www.cfa.go.jp/policies/child-safety-actions/handbook/content-3)
+- 出典：[厚生労働省「平成22年乳幼児身体発育調査」（首すわり・寝返り・ひとりすわり・はいはい・つかまり立ち・ひとり歩きの90%通過月齢）](https://www.mhlw.go.jp/toukei/list/dl/73-22-01.pdf)
+- 出典：[こども家庭庁 母子健康手帳 府令様式（令和8年4月施行）](https://www.cfa.go.jp/policies/boshihoken/techou)
+- 出典：[厚生労働省 保育所保育指針](https://www.mhlw.go.jp/web/t_doc?dataId=00010450&dataType=0&pageNo=1)
+- 出典：Yahoo!知恵袋ほかQ&Aサイトの質問・回答（2026年9月時点で確認。本文中で「Q&Aサイトの回答」と示した箇所）
+
 ## 関連記事
 
 - [2歳を家の中で疲れさせる遊び｜買わずに家にあるもので、動→静で昼寝まで](/article/2sai-ouchi-asobi-tsukaresaseru)

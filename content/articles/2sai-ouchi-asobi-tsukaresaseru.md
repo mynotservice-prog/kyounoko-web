@@ -130,6 +130,20 @@ A. この記事の12の遊びのうち、親が立つのは室内運動・布団
 ### Q. 雨が続いてネタが尽きました。同じ物で何度も遊べますか？
 A. 各カードの「飽きたら」欄は、同じ道具で遊び方を変える手です。新聞紙は破る→玉入れ→大玉→島ジャンプ、テープは道路→剥がす→川ジャンプと続きます。雨が3日続いた日の組み方は[雨が3日続いた2歳の1日](/article/ame-tsuzuki-2sai-ichinichi)にまとめています。
 
+## 出典
+
+- 出典：[日本小児科学会 Injury Alert No.48（風船・ビニール袋）](https://www.jpeds.or.jp/uploads/files/injuryalert/0048.pdf)
+- 出典：[消費者庁 子ども安全メール Vol.544（子どもの口の大きさ）](https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20210225/)
+- 出典：[こども家庭庁 事故防止ハンドブック（転落・転倒）](https://www.cfa.go.jp/policies/child-safety-actions/handbook/content-4)
+- 出典：[消費者庁「子どもの転落事故に注意！」](https://www.caa.go.jp/policies/policy/consumer_safety/caution/caution_061/assets/consumer_safety_cms205_220720_01.pdf)
+- 出典：[消費者庁 子ども安全メール Vol.547（ボタン電池）](https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20210318/)
+- 出典：[こども家庭庁 事故防止ハンドブック（窒息・誤飲）](https://www.cfa.go.jp/policies/child-safety-actions/handbook/content-1)
+- 出典：[消費者庁 子ども安全メール Vol.566（窒息時の応急処置）](https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20210928/)
+- 出典：[厚生労働省「平成22年乳幼児身体発育調査」（首すわり・寝返り・ひとりすわり・はいはい・つかまり立ち・ひとり歩きの90%通過月齢）](https://www.mhlw.go.jp/toukei/list/dl/73-22-01.pdf)
+- 出典：[こども家庭庁 母子健康手帳 府令様式（令和8年4月施行）](https://www.cfa.go.jp/policies/boshihoken/techou)
+- 出典：[厚生労働省 保育所保育指針](https://www.mhlw.go.jp/web/t_doc?dataId=00010450&dataType=0&pageNo=1)
+- 出典：Yahoo!知恵袋ほかQ&Aサイトの質問・回答（2026年9月時点で確認。本文中で「Q&Aサイトの回答」と示した箇所）
+
 ## 関連記事
 
 - [夕方ぐずる1〜2歳の16時からの30分](/article/yugata-guzuru-1-2sai-asobi)

@@ -120,6 +120,22 @@ A. 発散度が高いのは[新聞紙びりびり](#play-shinbun-biribiri)、[�
 ### Q. 12か月ですがまだ歩きません。歩く遊びはやらせたほうがいいですか？
 A. ひとり歩きは1歳3〜4か月で90%以上（厚労省 乳幼児身体発育調査）なので、12か月で歩かないのは目安の範囲内です。はいはいで通る[段ボールトンネル](#play-danboru-tunnel)や、座ってつまむ[ぽっとん落とし](#play-potton-otoshi)で十分です。相談の時期は[1歳児が歩かない｜いつまで様子見？](/article/1sai-arukanai-itsumade)を参照してください。
 
+### Q. 1歳の一人遊びは何分くらい続きますか？
+A. Q&Aサイトの回答では「1歳前半の一人遊びは10分が限界」とされ、この記事のぽっとん落とし・無限ティッシュ・センサリーバッグも集中の目安はそれぞれ10分です。10分で親のところへ戻ってくるのを前提に、カードの「飽きたら」欄で同じ物の遊び方を変えるか、次の遊びを1つだけ決めておくと切り替えが楽です。
+
+## 出典
+
+- 出典：[消費者庁 子ども安全メール Vol.544（子どもの口の大きさ）](https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20210225/)
+- 出典：[東京消防庁「乳幼児の窒息や誤飲に注意！」](https://www.tfd.metro.tokyo.lg.jp/lfe/nichijo/children_tissoku.html)
+- 出典：[こども家庭庁 事故防止ハンドブック（窒息・誤飲）](https://www.cfa.go.jp/policies/child-safety-actions/handbook/content-1)
+- 出典：[こども家庭庁 事故防止ハンドブック（転落・転倒）](https://www.cfa.go.jp/policies/child-safety-actions/handbook/content-4)
+- 出典：[消費者庁 子ども安全メール Vol.547（ボタン電池）](https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20210318/)
+- 出典：[消費者庁 子ども安全メール Vol.566（窒息時の応急処置）](https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20210928/)
+- 出典：[厚生労働省「平成22年乳幼児身体発育調査」（首すわり・寝返り・ひとりすわり・はいはい・つかまり立ち・ひとり歩きの90%通過月齢）](https://www.mhlw.go.jp/toukei/list/dl/73-22-01.pdf)
+- 出典：[こども家庭庁 母子健康手帳 府令様式（令和8年4月施行）](https://www.cfa.go.jp/policies/boshihoken/techou)
+- 出典：[厚生労働省 保育所保育指針](https://www.mhlw.go.jp/web/t_doc?dataId=00010450&dataType=0&pageNo=1)
+- 出典：Yahoo!知恵袋ほかQ&Aサイトの質問・回答（2026年9月時点で確認。本文中で「Q&Aサイトの回答」と示した箇所）
+
 ## 関連記事
 
 - [2歳を家の中で疲れさせる遊び](/article/2sai-ouchi-asobi-tsukaresaseru)

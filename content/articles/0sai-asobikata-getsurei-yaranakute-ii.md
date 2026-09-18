@@ -131,6 +131,19 @@ A. Q&Aで支持された回答は「赤ちゃんは暇と思っていない」�
 
 A. Q&Aの回答は「買い足し不要」で一致していて、この記事で使うのもハンカチ、ジップロック、ペットボトル、ティッシュ箱と布、段ボール、絵本だけです。買うなら、口に入る大きさ（直径約4cm未満・消費者庁）の部品がない物を選びます。
 
+## 出典
+
+- 出典：[こども家庭庁 関係府省庁連絡会議資料（2022-03-23）](https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/67dba719-175b-4d93-8f8c-32ecd4ea36a6/e5098069/20220323_child_safety_actions_review_meetings_2022_doc_02_1.pdf)
+- 出典：[東京消防庁「乳幼児の窒息や誤飲に注意！」](https://www.tfd.metro.tokyo.lg.jp/lfe/nichijo/children_tissoku.html)
+- 出典：[こども家庭庁 事故防止ハンドブック（窒息・誤飲）](https://www.cfa.go.jp/policies/child-safety-actions/handbook/content-1)
+- 出典：[消費者庁 子ども安全メール Vol.544（子どもの口の大きさ）](https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20210225/)
+- 出典：[消費者庁 子ども安全メール Vol.640（就寝時の窒息）](https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20231102/)
+- 出典：[消費者庁 子ども安全メール Vol.566（窒息時の応急処置）](https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20210928/)
+- 出典：[厚生労働省「平成22年乳幼児身体発育調査」（首すわり・寝返り・ひとりすわり・はいはい・つかまり立ち・ひとり歩きの90%通過月齢）](https://www.mhlw.go.jp/toukei/list/dl/73-22-01.pdf)
+- 出典：[こども家庭庁 母子健康手帳 府令様式（令和8年4月施行）](https://www.cfa.go.jp/policies/boshihoken/techou)
+- 出典：[厚生労働省 保育所保育指針](https://www.mhlw.go.jp/web/t_doc?dataId=00010450&dataType=0&pageNo=1)
+- 出典：Yahoo!知恵袋ほかQ&Aサイトの質問・回答（2026年9月時点で確認。本文中で「Q&Aサイトの回答」と示した箇所）
+
 ## 関連記事
 
 - [1歳のおうち遊び 月齢別](/article/1sai-ouchi-asobi-getsurei)
