@@ -7,7 +7,7 @@ category: today-nani
 categoryName: 今日何する？
 publishedAt: '2026-09-18T00:00:00.000Z'
 updatedAt: '2026-09-18'
-hero: /img/scenes/home-play-04.webp
+hero: /img/scenes/home-play-15.webp
 area: all
 homePlays:
   - ehon-netenpo
