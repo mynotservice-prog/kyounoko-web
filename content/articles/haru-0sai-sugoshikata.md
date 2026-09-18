@@ -110,7 +110,7 @@ legacyHero: /hero/park-02.webp
 - [0歳育児 完全マップ](/article/0sai-ikuji-kanzen-map)
 - [赤ちゃんのおでかけ 3か月〜1歳](/article/akachan-odekake-3months-1year)
 - [赤ちゃん 日焼け止め いつから・選び方](/article/akachan-hiyakedome-itsukara-erabikata)
-- [0〜1歳 家あそび10分](/article/0-1sai-ie-asobi-10pun)
+- [0〜1歳 家あそび10分](/article/0sai-asobikata-getsurei-yaranakute-ii)
 
 ---
 ※本記事は一般的な情報提供を目的としており、医学的助言ではありません。気になる症状や疑問は、必ずかかりつけの小児科医にご相談ください。

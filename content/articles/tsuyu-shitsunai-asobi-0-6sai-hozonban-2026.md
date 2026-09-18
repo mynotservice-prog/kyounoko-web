@@ -22,7 +22,7 @@ quickInfo:
   budget: low
 lede: >-
   梅雨は親が一番疲れる季節。雨で外に出られない、子はエネルギーが余る、食欲も落ちる、家にずっといると喧嘩する。本記事は0〜6歳の子連れ家族に向けて、6月の梅雨を乗り切るための「室内遊び・屋内スポット・工作・運動・食事」をまとめた保存版です。毎週末ブックマークから開けるよう、年齢×時間×目的別で引きやすくしました。
-seoRelated: amenohi-ie-asobi-2-3sai
+seoRelated: ame-tsuzuki-2sai-ichinichi
 ---
 
 [著者: ながみー（4歳娘・2歳息子の父／東京23区在住）](/authors/nagamy)・最終更新 2026年5月
@@ -213,8 +213,7 @@ A. 「乳児スペース（0〜2歳）」と「キッズスペース（3歳以�
 ## 関連記事
 
 - [雨の日のベビーカーOK東京スポット30選](/article/amenohi-stroller-spots-tokyo)
-- [雨の日 室内遊び 2〜3歳向け15パターン](/article/amenohi-ie-asobi-2-3sai)
-- [雨の日 室内遊び 4〜6歳向け15パターン](/article/amenohi-ie-asobi-4-6sai)
+- [雨の日 室内遊び 2〜3歳向け15パターン](/article/ame-tsuzuki-2sai-ichinichi)
 - [雨の日でも遊べる東京の屋内スポット15選](/article/amenohi-indoor-spots-tokyo-15)
 - [子どもの梅雨食欲不振レシピ](/article/kodomo-tsuyu-shokuyoku-fushin-recipe)
 - [雨の日の遊び場（駅別検索）](/station)

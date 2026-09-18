@@ -130,7 +130,7 @@ legacyHero: /hero-ai/cat-home-cozy-01.webp
 - **リビング入口**：突っ張り型（ペット兼用も）
 - **玄関**：飛び出し防止に突っ張り型
 
-家全体の安全対策は[一人遊びの安全な環境作り](/article/kodomo-hitori-asobi-anzen-kankyou)も参考に。
+家全体の安全対策は[一人遊びの安全な環境作り](/article/shitanoko-junyu-uenoko-asobi)も参考に。
 
 ## よくある質問（FAQ）
 
@@ -177,7 +177,7 @@ A. **使用年数3年以内・部品欠損なし・SGマーク有効**なら候�
 
 ## 関連記事
 
-- [赤ちゃんの一人遊び 安全な環境作り](/article/kodomo-hitori-asobi-anzen-kankyou)
+- [赤ちゃんの一人遊び 安全な環境作り](/article/shitanoko-junyu-uenoko-asobi)
 - [ベビーカーランキング2026](/article/babycar-ranking-2026)
 - [ベビーチェアランキング](/article/baby-chair-ranking)
 - [ベビーカーやらかし50集](/article/babycar-yarakashi-50-keikenshudan)

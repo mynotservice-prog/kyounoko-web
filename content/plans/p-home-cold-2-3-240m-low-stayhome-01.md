@@ -10,7 +10,7 @@ durationMin: 240
 budget: "low"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 寒くて外に出たくない日、2-3歳と暖かい部屋で4時間じっくり遊ぶプラン。

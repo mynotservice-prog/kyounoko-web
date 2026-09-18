@@ -10,7 +10,7 @@ durationMin: 30
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "amenohi-ie-asobi-2-3sai"
+seoRelated: "ame-tsuzuki-2sai-ichinichi"
 ---
 
 風船を落とさずに打ち合う、寒い日の室内運動30分プラン。
@@ -56,5 +56,5 @@ seoRelated: "amenohi-ie-asobi-2-3sai"
 
 - [ぬいぐるみ病院ごっこ](/plan/p-home-any-2-3-30m-free-02)
 - [天気不問の家こもり1日（2-3歳）：定番ローテで飽きさせない4時間](/plan/p-home-any-2-3-240m-free-stayhome-01)
-- [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
+- [家でできる知育遊び10選](/article/1sai-ouchi-asobi-getsurei)
 

@@ -169,7 +169,7 @@ speakableSummary: >-
 - [お手伝いいつから 2歳](/article/otetsudai-itsukara-2sai)
 - [習い事いつから 0-6歳](/article/naraigoto-itsukara-0-6sai)
 - [ストロー飲みいつから](/article/storo-nomu-itsukara)
-- [一人遊びの環境作り](/article/youtube-kawari-ie-asobi)
+- [一人遊びの環境作り](/article/ame-tsuzuki-2sai-ichinichi)
 
 ## おすすめグッズ・必要なもの
 

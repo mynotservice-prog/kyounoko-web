@@ -200,7 +200,7 @@ lede: 0〜6歳のクリスマスプレゼントを年齢別に合計30アイテ�
 - [クリスマスマーケット子連れ4会場](/article/xmas-market-kodzure)
 - [年齢別おもちゃ選び](/article/omocha-year-by-age)
 - [幼児習い事6パターン](/article/youji-naraigoto-nansai-kara)
-- [YouTubeの代わりになる家遊び10選](/article/youtube-kawari-ie-asobi)
+- [YouTubeの代わりになる家遊び10選](/article/ame-tsuzuki-2sai-ichinichi)
 
 ## よくある質問
 

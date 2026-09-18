@@ -10,7 +10,7 @@ durationMin: 15
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-01.webp
-seoRelated: "iyaiya-shuuchu-asobi"
+seoRelated: "2sai-ouchi-asobi-tsukaresaseru"
 ---
 
 身の回りの音を当てる耳トレ型の15分静かな遊び。

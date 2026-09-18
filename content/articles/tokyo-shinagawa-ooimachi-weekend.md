@@ -168,4 +168,4 @@ area: tokyo
 
 ## 関連記事
 
-- [雨の日の家遊び10選（2〜3歳向け）](/article/amenohi-ie-asobi-2-3sai)
+- [雨の日の家遊び10選（2〜3歳向け）](/article/ame-tsuzuki-2sai-ichinichi)

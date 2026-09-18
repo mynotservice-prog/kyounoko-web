@@ -10,7 +10,7 @@ durationMin: 60
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-02.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 積み木やブロックで迷路を作りビー玉を転がして遊ぶ60分プランです。

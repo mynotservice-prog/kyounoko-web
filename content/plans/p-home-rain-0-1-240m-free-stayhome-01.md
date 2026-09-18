@@ -10,7 +10,7 @@ durationMin: 240
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-01.webp
-seoRelated: "akachan-15pun-asobi"
+seoRelated: "0sai-asobikata-getsurei-yaranakute-ii"
 ---
 
 雨で出られない日に、ふれあい遊びとお昼寝中心で0-1歳と4時間を静かに過ごすプラン。

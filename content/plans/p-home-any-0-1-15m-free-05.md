@@ -10,7 +10,7 @@ durationMin: 15
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-01.webp
-seoRelated: "akachan-15pun-asobi"
+seoRelated: "0sai-asobikata-getsurei-yaranakute-ii"
 ---
 
 童謡や手遊び歌に合わせて、体を触れ合う15分のスキンシップです。

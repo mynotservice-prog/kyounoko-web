@@ -10,7 +10,7 @@ durationMin: 60
 budget: "low"
 area: "all"
 hero: /hero/home-cozy-01.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 紙皿と割りピンで動く時計を作り時間の読み方を学ぶ60分プランです。

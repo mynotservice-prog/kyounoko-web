@@ -10,7 +10,7 @@ durationMin: 15
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-02.webp
-seoRelated: "iyaiya-shuuchu-asobi"
+seoRelated: "2sai-ouchi-asobi-tsukaresaseru"
 ---
 
 散らかったおもちゃをタイマー15分で片付けるゲーム型プラン。

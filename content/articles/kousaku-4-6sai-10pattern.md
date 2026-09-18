@@ -354,11 +354,11 @@ youtubeSearch: '幼児 工作 簡単 家にあるもの'
 
 ## この遊びの後におすすめ
 
-- **2〜3歳の弟妹も** → [雨の日の家遊び10選（2〜3歳向け）](/article/amenohi-ie-asobi-2-3sai)
-- **兄弟で協力工作** → [兄弟で一緒に楽しめる家遊び7選](/article/kyoudai-asobi-nenrei-sa)
-- **モンテッソーリで体系化** → [モンテッソーリの家庭遊び年齢別ガイド](/article/monte-asobi-nenrei-betsu)
-- **YouTubeから離す日に** → [YouTubeの代わりになる家遊び10選](/article/youtube-kawari-ie-asobi)
-- **雨の日に集中** → [雨の日の家遊び10選（4〜6歳向け）](/article/amenohi-ie-asobi-4-6sai)
+- **2〜3歳の弟妹も** → [雨の日の家遊び10選（2〜3歳向け）](/article/ame-tsuzuki-2sai-ichinichi)
+- **兄弟で協力工作** → [兄弟で一緒に楽しめる家遊び7選](/article/shitanoko-junyu-uenoko-asobi)
+- **モンテッソーリで体系化** → [モンテッソーリの家庭遊び年齢別ガイド](/article/1sai-ouchi-asobi-getsurei)
+- **YouTubeから離す日に** → [YouTubeの代わりになる家遊び10選](/article/ame-tsuzuki-2sai-ichinichi)
+- **雨の日に集中** → [雨の日の家遊び10選（4〜6歳向け）](/article/ame-tsuzuki-2sai-ichinichi)
 
 ## 30秒チェックリスト
 
@@ -391,7 +391,7 @@ A. **撮影して捨てる**が結論。**飾り期間は1週間**とルール�
 
 ### Q. 兄弟（2〜3歳）が邪魔します
 
-A. **下の子に別の材料（シール・ぬりえ）を与えて同じテーブルで**。または**役割分担（下：シール貼り、上：組み立て）**で巻き込むと平和に作業できます。詳しくは[兄弟で一緒に楽しめる家遊び7選](/article/kyoudai-asobi-nenrei-sa)で。
+A. **下の子に別の材料（シール・ぬりえ）を与えて同じテーブルで**。または**役割分担（下：シール貼り、上：組み立て）**で巻き込むと平和に作業できます。詳しくは[兄弟で一緒に楽しめる家遊び7選](/article/shitanoko-junyu-uenoko-asobi)で。
 
 ### Q. 集中せずすぐ席を離れます
 
@@ -557,10 +557,8 @@ A. **01 けん玉・03 TPロケット・06 折り紙カブト＆手裏剣・04 �
 
 ## 関連記事
 
-- [0〜1歳と家でできる10分遊び8パターン](/article/0-1sai-ie-asobi-10pun)
-- [雨の日の家遊び10選（2〜3歳向け）](/article/amenohi-ie-asobi-2-3sai)
-- [雨の日の家遊び10選（4〜6歳向け）](/article/amenohi-ie-asobi-4-6sai)
-- [兄弟で一緒に楽しめる家遊び7選（年齢差別）](/article/kyoudai-asobi-nenrei-sa)
-- [モンテッソーリの家庭遊び年齢別ガイド](/article/monte-asobi-nenrei-betsu)
-- [YouTubeの代わりになる家遊び10選](/article/youtube-kawari-ie-asobi)
+- [0〜1歳と家でできる10分遊び8パターン](/article/0sai-asobikata-getsurei-yaranakute-ii)
+- [雨の日の家遊び10選（2〜3歳向け）](/article/ame-tsuzuki-2sai-ichinichi)
+- [兄弟で一緒に楽しめる家遊び7選（年齢差別）](/article/shitanoko-junyu-uenoko-asobi)
+- [モンテッソーリの家庭遊び年齢別ガイド](/article/1sai-ouchi-asobi-getsurei)
 - [絵本の読み聞かせコツ](/article/ehon-yomikikase-kotsu)

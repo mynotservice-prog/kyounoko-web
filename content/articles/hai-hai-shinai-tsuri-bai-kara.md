@@ -294,8 +294,7 @@ A. 1歳でハイハイをしないで立った子が、3歳・5歳・小学生�
 
 - [歩き出しが早い遅いの目安｜0〜1歳の月齢別チェックと相談タイミング](/article/aitei-ashi-shinpai-hayai-osoi)
 - [発達マイルストーン0〜6歳チェックリスト｜運動・言葉・社会性30項目の目安](/article/hatattsu-mileage-0-6sai-checklist)
-- [0〜1歳と家でできる10分遊び8パターン（道具なし・準備なし）](/article/0-1sai-ie-asobi-10pun)
-- [0歳の赤ちゃんと遊ぶ15分パターン10選（月齢別・発達促進）](/article/akachan-15pun-asobi)
+- [0〜1歳と家でできる10分遊び8パターン（道具なし・準備なし）](/article/0sai-asobikata-getsurei-yaranakute-ii)
 - [発達で気になる兆候・専門家相談の目安｜1〜6歳サイン15と相談フロー](/article/gotsugo-hattaku-muchi-kodomo)
 
 ## FAQ｜よくある質問

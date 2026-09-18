@@ -10,7 +10,7 @@ durationMin: 15
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "amenohi-ie-asobi-2-3sai"
+seoRelated: "ame-tsuzuki-2sai-ichinichi"
 ---
 
 ハンドソープの泡で手のひらアートを楽しむ15分の感覚遊び。

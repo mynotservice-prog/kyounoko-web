@@ -10,7 +10,7 @@ durationMin: 15
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-02.webp
-seoRelated: "akachan-15pun-asobi"
+seoRelated: "0sai-asobikata-getsurei-yaranakute-ii"
 ---
 
 首すわり前後の赤ちゃんと楽しむ、短時間のうつぶせタイムです。

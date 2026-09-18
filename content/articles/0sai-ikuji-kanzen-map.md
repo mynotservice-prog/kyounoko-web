@@ -66,7 +66,7 @@ legacyHero: /hero/baby-01.webp
 **この時期の重要記事**：
 - [人見知り・後追いはいつまで？](/article/hitomishiri-atooi-itsumade)
 - [ハイハイしない、つたい歩きから心配](/article/hai-hai-shinai-tsuri-bai-kara)
-- [赤ちゃん 15分遊び ネタ集](/article/akachan-15pun-asobi)
+- [赤ちゃん 15分遊び ネタ集](/article/0sai-asobikata-getsurei-yaranakute-ii)
 
 ### 10〜12ヶ月：つかまり立ち・初語期
 
@@ -105,7 +105,6 @@ legacyHero: /hero/baby-01.webp
 
 ### 遊び
 
-- [赤ちゃん 15分遊び ネタ集](/article/akachan-15pun-asobi)
 - [プールデビュー 6ヶ月〜2歳](/article/puuru-mizuasobi-debut)
 - [1歳プールデビュー 持ち物](/article/1sai-pool-debut-motimono)
 

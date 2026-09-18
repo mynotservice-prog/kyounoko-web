@@ -10,7 +10,7 @@ durationMin: 120
 budget: "mid"
 area: "all"
 hero: /hero/home-cozy-01.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 生地から作る手作りピザを焼いて家族で食べる120分のクッキングプランです。

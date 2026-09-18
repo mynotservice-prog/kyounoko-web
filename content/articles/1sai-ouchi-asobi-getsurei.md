@@ -143,7 +143,7 @@ A. Q&Aサイトの回答では「1歳前半の一人遊びは10分が限界」�
 - [親が寝転んだままできる遊び｜1〜3歳](/article/oya-netenpo-asobi-1-3sai)
 - [下の子の授乳中に上の子が10分もつ遊び](/article/shitanoko-junyu-uenoko-asobi)
 - [1歳児が歩かない｜いつまで様子見？](/article/1sai-arukanai-itsumade)
-- [0〜1歳と家でできる10分遊び](/article/0-1sai-ie-asobi-10pun)
+- [0〜1歳と家でできる10分遊び](/article/0sai-asobikata-getsurei-yaranakute-ii)
 - [夏の1歳児 過ごし方](/article/natsu-1sai-sugoshikata)
 - [梅雨の室内遊び 0〜6歳](/article/tsuyu-shitsunai-asobi-0-6sai-hozonban-2026)
 - [埼玉の室内遊び場](/article/shitsunai-asobi-saitama)

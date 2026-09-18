@@ -10,7 +10,7 @@ durationMin: 30
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "kyoudai-asobi-nenrei-sa"
+seoRelated: "shitanoko-junyu-uenoko-asobi"
 ---
 
 トランプやUNOで家族対戦する30分のゲームプランです。

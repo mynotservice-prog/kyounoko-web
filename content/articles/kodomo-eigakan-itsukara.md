@@ -199,7 +199,7 @@ A. 厳密には禁止。劇場で買うのがマナー。少量の飴・ラム�
 ## 関連記事
 
 - [3〜6歳の育児 完全マップ](/article/3-6sai-ikuji-kanzen-map)
-- [子供と過ごす雨の日の過ごし方](/article/akachan-15pun-asobi)
+- [子供と過ごす雨の日の過ごし方](/article/0sai-asobikata-getsurei-yaranakute-ii)
 - [子供にタブレットはいつから？](/article/kodomo-tablet-itsukara)
 - [1〜2歳の育児 完全マップ](/article/1-2sai-ikuji-kanzen-map)
 - [夏の子育て完全マップ](/article/natsu-kosodate-kanzen-map)

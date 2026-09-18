@@ -10,7 +10,7 @@ durationMin: 15
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "akachan-15pun-asobi"
+seoRelated: "0sai-asobikata-getsurei-yaranakute-ii"
 ---
 
 ビニール袋やガラガラの音を聞かせて、目で音源を追う追視遊びです。

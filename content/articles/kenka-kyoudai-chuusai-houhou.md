@@ -392,7 +392,7 @@ area: all
 
 ## 関連データ・記事
 
-- [兄弟で一緒に楽しめる家遊び7選](/article/kyoudai-asobi-nenrei-sa)
+- [兄弟で一緒に楽しめる家遊び7選](/article/shitanoko-junyu-uenoko-asobi)
 - [子どもの自己肯定感が上がる声かけ10選](/article/kodomo-suki-suki-oya-jiko-kouka)
 - [「もう疲れた」夜の30分の使い方50](/article/kosodate-tsukareta-jikan-no-tsukaikata-50)
 - [今日まわすカテゴリ](/category/today-mawasu)

@@ -10,7 +10,7 @@ durationMin: 30
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-02.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 年齢に合ったパズルを完成させる、集中力を育てる30分プラン。

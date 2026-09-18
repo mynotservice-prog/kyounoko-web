@@ -175,6 +175,6 @@ A. **疲れ・空腹・眠気**が原因のことも多めです。声かけよ�
 ## 関連記事
 
 - [2歳イヤイヤ期対処法7選](/article/iyaiya-ki-taisho-2sai-7kufuu)
-- [イヤイヤ期に集中して遊べるあそび](/article/iyaiya-shuuchu-asobi)
+- [イヤイヤ期に集中して遊べるあそび](/article/2sai-ouchi-asobi-tsukaresaseru)
 - [イヤイヤ期おさえて躾けるコツ](/article/iyaiya-osaete-tsukeru-shitsuke)
 - [兄弟げんかの仲裁方法](/article/kenka-kyoudai-chuusai-houhou)

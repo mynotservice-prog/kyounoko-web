@@ -10,7 +10,7 @@ durationMin: 60
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 おもちゃの食材でランチセットを作って食べるごっこ60分プラン。

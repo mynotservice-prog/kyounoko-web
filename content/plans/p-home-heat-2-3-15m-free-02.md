@@ -10,7 +10,7 @@ durationMin: 15
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "amenohi-ie-asobi-2-3sai"
+seoRelated: "ame-tsuzuki-2sai-ichinichi"
 ---
 
 洗面器1つで楽しむ、暑い日の15分ミニ水遊びプラン。
@@ -58,5 +58,5 @@ seoRelated: "amenohi-ie-asobi-2-3sai"
 
 - [ぬいぐるみ病院ごっこ](/plan/p-home-any-2-3-30m-free-02)
 - [お風呂でお湯すくい遊び](/plan/p-home-any-2-3-15m-free-02)
-- [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
+- [家でできる知育遊び10選](/article/1sai-ouchi-asobi-getsurei)
 

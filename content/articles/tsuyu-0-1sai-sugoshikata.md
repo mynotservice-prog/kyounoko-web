@@ -116,8 +116,8 @@ WHO等の指針では2歳未満のスクリーンタイムは推奨されない�
 
 ## 関連データ・記事
 
-- [0-1歳家遊び10分8パターン](/article/0-1sai-ie-asobi-10pun)
-- [雨の日家遊び2-3歳](/article/amenohi-ie-asobi-2-3sai)
+- [0-1歳家遊び10分8パターン](/article/0sai-asobikata-getsurei-yaranakute-ii)
+- [雨の日家遊び2-3歳](/article/ame-tsuzuki-2sai-ichinichi)
 - [ワンオペ夜切り抜け方](/article/wanope-yoru-kirinukekata)
 - [夜泣き対策0-1歳](/article/yonaki-taisaku-0-1sai)
 

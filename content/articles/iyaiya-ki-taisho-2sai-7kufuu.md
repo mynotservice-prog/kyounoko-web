@@ -293,7 +293,7 @@ X育児漫画・Instagramで話題になったイヤイヤ期あるある。
 ## 関連データ・記事
 
 - [イヤイヤ期しつけ線引き](/article/iyaiya-osaete-tsukeru-shitsuke)
-- [イヤイヤ期に集中する遊び5つ](/article/iyaiya-shuuchu-asobi)
+- [イヤイヤ期に集中する遊び5つ](/article/2sai-ouchi-asobi-tsukaresaseru)
 - [子どもの自己肯定感が上がる声かけ10選](/article/kodomo-suki-suki-oya-jiko-kouka)
 - [「もう疲れた」夜の30分の使い方50](/article/kosodate-tsukareta-jikan-no-tsukaikata-50)
 

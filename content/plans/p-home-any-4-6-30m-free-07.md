@@ -10,7 +10,7 @@ durationMin: 30
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-02.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 家のおもちゃに値札を付けて買い物ごっこでお金を学ぶ30分プランです。

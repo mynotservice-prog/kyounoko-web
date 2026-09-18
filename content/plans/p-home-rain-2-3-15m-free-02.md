@@ -10,7 +10,7 @@ durationMin: 15
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-02.webp
-seoRelated: "amenohi-ie-asobi-2-3sai"
+seoRelated: "ame-tsuzuki-2sai-ichinichi"
 ---
 
 新聞紙を思いきり破って、感覚とストレス発散を同時に楽しむ15分遊び。

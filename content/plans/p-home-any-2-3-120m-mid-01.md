@@ -10,7 +10,7 @@ durationMin: 120
 budget: "mid"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "youtube-kawari-ie-asobi"
+seoRelated: "ame-tsuzuki-2sai-ichinichi"
 ---
 
 大きなダンボールで子専用の基地を作って遊ぶ120分のじっくりプラン。

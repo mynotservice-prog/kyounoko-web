@@ -334,7 +334,7 @@ DUPLOは大粒で**誤飲の心配がなく、握力弱めの1.5歳でも組め�
 ## 関連データ・記事
 
 - [シールブックおすすめ5選](/article/seal-book-ranking)
-- [おうちおもちゃ年齢別](/article/youtube-kawari-ie-asobi)
+- [おうちおもちゃ年齢別](/article/ame-tsuzuki-2sai-ichinichi)
 - [出産準備リスト30品](/article/shussan-junbi-rakuten-0sai)
 - [通信教材の比較ガイド](/article/tsuushin-kyouzai-hikaku)
 

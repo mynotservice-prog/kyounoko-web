@@ -23,7 +23,7 @@
  *     durationMin: 15
  *     budget: "free"
  *     area: "all" | "tokyo" ...
- *     seoRelated: "chiiku-asobi-ie-de-10"  # 任意、記事slugを参照
+ *     seoRelated: "1sai-ouchi-asobi-getsurei"  # 任意、記事slugを参照
  *   本文: マークダウン（What to do / タイムライン / 必要なもの / つまずき対処）
  */
 

@@ -259,4 +259,4 @@ A. **担当変更を申し出れば対応してもらえる社が多い**とさ�
 - [子育てサブスク3社比較：絵本・おもちゃ・服どれが続く？](/article/kosodate-subsc-3sha-hikaku)
 - [買ってよかった幼児向けおもちゃ10選（年齢別：0〜6歳）](/article/omocha-year-by-age)
 - [通信教育比較：こどもちゃれんじ・ポピー・Z会・スマイルゼミ](/article/tsuushin-kyouzai-hikaku)
-- [モンテッソーリ遊びの年齢別ガイド](/article/monte-asobi-nenrei-betsu)
+- [モンテッソーリ遊びの年齢別ガイド](/article/1sai-ouchi-asobi-getsurei)

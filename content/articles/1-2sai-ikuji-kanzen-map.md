@@ -111,7 +111,7 @@ legacyHero: /hero/baby-02.webp
 - [プールデビュー 6ヶ月〜2歳](/article/puuru-mizuasobi-debut)
 - [1歳プールデビュー 持ち物](/article/1sai-pool-debut-motimono)
 - [知育おもちゃ 2〜3歳 5選](/article/chiiku-toys-2-3sai-5sen)
-- [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
+- [家でできる知育遊び10選](/article/1sai-ouchi-asobi-getsurei)
 
 ### 体調・トラブル
 

@@ -10,7 +10,7 @@ durationMin: 15
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-02.webp
-seoRelated: "amenohi-ie-asobi-2-3sai"
+seoRelated: "ame-tsuzuki-2sai-ichinichi"
 ---
 
 クッションと布団で作った安全ジャンプゾーンで15分の体力発散。

@@ -188,7 +188,7 @@ export function NewPlanClient() {
         </div>
         <div style={grid2}>
           <Field label="関連記事slug（任意）">
-            <input value={f.seoRelated} onChange={(e) => set('seoRelated', e.target.value)} placeholder="chiiku-asobi-ie-de-10" style={{ ...inputStyle, fontFamily: 'var(--font-mono)' }} />
+            <input value={f.seoRelated} onChange={(e) => set('seoRelated', e.target.value)} placeholder="1sai-ouchi-asobi-getsurei" style={{ ...inputStyle, fontFamily: 'var(--font-mono)' }} />
           </Field>
           <Field label="hero画像（任意）">
             <input value={f.hero} onChange={(e) => set('hero', e.target.value)} placeholder="/img/... または https://…" style={{ ...inputStyle, fontFamily: 'var(--font-mono)', fontSize: 12 }} />

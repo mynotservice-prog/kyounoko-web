@@ -10,7 +10,7 @@ durationMin: 60
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-01.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 スマホやアルバムの写真を一緒に見て思い出を共有する60分プランです。

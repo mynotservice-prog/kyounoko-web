@@ -10,7 +10,7 @@ durationMin: 30
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 塩水に卵を浮かべる実験で「なぜ？」を体験する30分の学習プランです。

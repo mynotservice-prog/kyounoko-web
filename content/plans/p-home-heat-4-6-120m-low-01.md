@@ -10,7 +10,7 @@ durationMin: 120
 budget: "low"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 ジップロックで振って作る手作りアイスを楽しむ120分のクッキングプランです。

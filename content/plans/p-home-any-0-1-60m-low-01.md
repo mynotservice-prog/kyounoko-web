@@ -10,7 +10,7 @@ durationMin: 60
 budget: "low"
 area: "all"
 hero: /hero/home-cozy-02.webp
-seoRelated: "akachan-15pun-asobi"
+seoRelated: "0sai-asobikata-getsurei-yaranakute-ii"
 ---
 
 木のおもちゃの重みと木目の感触を使って感覚を育てる60分プランです。

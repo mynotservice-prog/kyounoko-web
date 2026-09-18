@@ -10,7 +10,7 @@ durationMin: 120
 budget: "low"
 area: "all"
 hero: /hero/home-cozy-01.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 お弁当を一緒に作ってベランダや窓辺でピクニック気分を楽しむ120分プランです。

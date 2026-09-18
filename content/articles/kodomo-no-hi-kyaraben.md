@@ -875,8 +875,7 @@ GW中、寝坊・体調不良・疲労などで「もう手の込んだことは
 ### 雨の日・梅雨の家あそび（GW後の連動）
 
 - [梅雨の家あそび 0-6歳 15パターン](/article/tsuyu-ie-asobi-0-6sai-15pattern)
-- [雨の日の家あそび 2-3歳](/article/amenohi-ie-asobi-2-3sai)
-- [雨の日の家あそび 4-6歳](/article/amenohi-ie-asobi-4-6sai)
+- [雨の日の家あそび 2-3歳](/article/ame-tsuzuki-2sai-ichinichi)
 
 ## まとめ｜こどもの日 弁当・キャラ弁は「1つだけこだわる」が現実解
 

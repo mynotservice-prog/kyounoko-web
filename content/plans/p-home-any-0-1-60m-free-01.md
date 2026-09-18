@@ -10,7 +10,7 @@ durationMin: 60
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-01.webp
-seoRelated: "akachan-15pun-asobi"
+seoRelated: "0sai-asobikata-getsurei-yaranakute-ii"
 ---
 
 家にあるスプーン・ボウル・布で、赤ちゃんと60分の感覚遊び。お風呂前にぴったり。

@@ -205,7 +205,7 @@ SNS・公開ブログ・口コミサイトに集まる声を集約すると、�
 ## 関連データ・記事
 
 - [公文 vs 学研教室【2-6歳】](/article/kumon-vs-gakken-hikaku)
-- [モンテッソーリの家庭遊び年齢別ガイド](/article/monte-asobi-nenrei-betsu)
+- [モンテッソーリの家庭遊び年齢別ガイド](/article/1sai-ouchi-asobi-getsurei)
 - [子育てサブスク比較【0-6歳】](/article/kosodate-subsc-3sha-hikaku)
 - [習い事カテゴリ](/category/narai)
 

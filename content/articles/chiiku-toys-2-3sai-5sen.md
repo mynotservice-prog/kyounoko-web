@@ -340,7 +340,7 @@ area: all
 
 ## 関連データ・記事
 
-- [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
+- [家でできる知育遊び10選](/article/1sai-ouchi-asobi-getsurei)
 - [知育玩具サブスク4社比較](/article/chiiku-subsc-hikaku-4sha)
 - [知育系習い事3社比較](/article/chiku-naraigoto-kumon-shichida-monte)
 - [/items 知育おもちゃカタログ](/items)
@@ -479,7 +479,7 @@ A. 既存の玩具で遊ばなくなった、子の興味の領域が広がっ�
 - [絵本読み聞かせのコツ](/article/ehon-yomikikase-kotsu)
 - [シールブックランキング](/article/seal-book-ranking)
 - [くもん vs 学研 比較](/article/kumon-vs-gakken-hikaku)
-- [YouTube代わりの家遊び](/article/youtube-kawari-ie-asobi)
+- [YouTube代わりの家遊び](/article/ame-tsuzuki-2sai-ichinichi)
 
 ## あわせて読みたい：最新の知育玩具サブスク
 

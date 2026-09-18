@@ -10,7 +10,7 @@ durationMin: 240
 budget: "low"
 area: "all"
 hero: /hero/home-cozy-02.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 雨寒暑どんな天気でも使える、4-6歳と家で4時間を充実させる定番プラン。

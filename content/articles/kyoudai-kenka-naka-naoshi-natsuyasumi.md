@@ -88,7 +88,7 @@ area: all
 ## 関連記事
 
 - [兄弟喧嘩の仲裁方法｜ケガなくきょうだいが仲良くなる7つのコツ](/article/kenka-kyoudai-chuusai-houhou)
-- [兄弟で年齢差がある時の遊び方](/article/kyoudai-asobi-nenrei-sa)
+- [兄弟で年齢差がある時の遊び方](/article/shitanoko-junyu-uenoko-asobi)
 - [「もう疲れた」夜の30分の使い方50](/article/kosodate-tsukareta-jikan-no-tsukaikata-50)
 
 ## よくある質問

@@ -10,7 +10,7 @@ durationMin: 240
 budget: "low"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "amenohi-ie-asobi-2-3sai"
+seoRelated: "ame-tsuzuki-2sai-ichinichi"
 ---
 
 雨で外に出られない日、2-3歳と小麦粉ねんどや工作で4時間飽きずに過ごすプラン。

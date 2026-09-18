@@ -135,7 +135,7 @@ area: all
 ## 関連記事
 
 - [小学生の1日でできる自由研究10選](/article/natsuyasumi-jiyu-kenkyu-1nichi-10)
-- [兄弟で年齢差がある時の遊び方](/article/kyoudai-asobi-nenrei-sa)
+- [兄弟で年齢差がある時の遊び方](/article/shitanoko-junyu-uenoko-asobi)
 - [夏休み 家遊び20選](/article/natsu-yasumi-kodomo-asobi-ie-de)
 
 ## よくある質問

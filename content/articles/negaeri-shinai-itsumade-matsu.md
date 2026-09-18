@@ -302,7 +302,7 @@ A. 寝返りの遅れは、親のメンタルに大きな影響を与える場�
 - [歩き出しが早い遅いの目安｜0〜1歳の月齢別チェックと相談タイミング](/article/aitei-ashi-shinpai-hayai-osoi)
 - [ハイハイしない、ずり這いから立つは異常？月齢別の発達目安](/article/hai-hai-shinai-tsuri-bai-kara)
 - [発達マイルストーン0〜6歳チェックリスト｜運動・言葉・社会性30項目の目安](/article/hatattsu-mileage-0-6sai-checklist)
-- [0歳の赤ちゃんと遊ぶ15分パターン10選（月齢別・発達促進）](/article/akachan-15pun-asobi)
+- [0歳の赤ちゃんと遊ぶ15分パターン10選（月齢別・発達促進）](/article/0sai-asobikata-getsurei-yaranakute-ii)
 - [夜泣き対策【0-1歳】軽減する5つの方法・親もラク](/article/yonaki-taisaku-0-1sai)
 
 ## FAQ｜よくある質問

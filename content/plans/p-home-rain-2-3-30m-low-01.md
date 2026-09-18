@@ -10,7 +10,7 @@ durationMin: 30
 budget: "low"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "amenohi-ie-asobi-2-3sai"
+seoRelated: "ame-tsuzuki-2sai-ichinichi"
 ---
 
 床にマステで線路を貼って、ミニカーを走らせる30分プラン。

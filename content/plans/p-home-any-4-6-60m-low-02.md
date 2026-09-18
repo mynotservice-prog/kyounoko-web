@@ -10,7 +10,7 @@ durationMin: 60
 budget: "low"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 親子でホットケーキを混ぜて焼いて食べる60分のクッキングプランです。

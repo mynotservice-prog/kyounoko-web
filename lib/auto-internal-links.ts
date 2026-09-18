@@ -72,7 +72,6 @@ const LINK_RULES: LinkRule[] = [
   { keyword: '絵本', targetSlug: 'ehon-yomikikase-kotsu', priority: 8 },
   { keyword: '読み聞かせ', targetSlug: 'ehon-yomikikase-kotsu', priority: 9 },
   { keyword: 'シールブック', targetSlug: 'seal-book-ranking', priority: 9 },
-  { keyword: '知育', targetSlug: 'chiiku-asobi-ie-de-10', priority: 7 },
   { keyword: '知育玩具', targetSlug: 'chiiku-toys-2-3sai-5sen', priority: 8 },
   { keyword: '知育サブスク', targetSlug: 'chiiku-subsc-hikaku-4sha', priority: 10 },
   { keyword: 'おもちゃのサブスク', targetSlug: 'chiiku-subsc-hikaku-4sha', priority: 10 },
@@ -116,7 +115,7 @@ const LINK_RULES: LinkRule[] = [
   { keyword: '運動会', targetSlug: 'undoukai-motimono-list', priority: 9 },
 
   // ===== おでかけ =====
-  { keyword: '雨の日', targetSlug: 'amenohi-ie-asobi-2-3sai', priority: 7 },
+  { keyword: '雨の日', targetSlug: 'ame-tsuzuki-2sai-ichinichi', priority: 7 },
   { keyword: '水遊び', targetSlug: 'puuru-mizuasobi-debut', priority: 8 },
   { keyword: 'じゃぶじゃぶ池', targetSlug: 'jabujabuike-mizuasobi-tokyo-30', priority: 10 },
   { keyword: '舎人公園', targetSlug: 'toneri-koen-jabujabuike', priority: 10 },
@@ -144,7 +143,7 @@ const LINK_RULES: LinkRule[] = [
   { keyword: '少食', targetSlug: '3sai-shoushoku-taisaku', priority: 8 },
 
   // ▼ 習い事の追加
-  { keyword: 'モンテッソーリ', targetSlug: 'monte-asobi-nenrei-betsu', priority: 9 },
+  { keyword: 'モンテッソーリ', targetSlug: 'chiku-naraigoto-kumon-shichida-monte', priority: 9 },
   { keyword: 'プログラミング', targetSlug: 'programming-kodomo-5-7sai', priority: 9 },
   { keyword: '七田', targetSlug: 'chiku-naraigoto-kumon-shichida-monte', priority: 8 },
   { keyword: '習い事をやめたい', targetSlug: 'naraigoto-yametai-taiou', priority: 10 },
@@ -178,7 +177,7 @@ const LINK_RULES: LinkRule[] = [
 
   // ▼ しつけ・対応の補強
   { keyword: '兄弟げんか', targetSlug: 'kenka-kyoudai-chuusai-houhou', priority: 9 },
-  { keyword: 'きょうだい', targetSlug: 'kyoudai-asobi-nenrei-sa', priority: 6 },
+  { keyword: 'きょうだい', targetSlug: 'shitanoko-junyu-uenoko-asobi', priority: 6 },
   { keyword: '言葉の遅れ', targetSlug: 'kotoba-okureru-taiou-2sai', priority: 9 },
   { keyword: 'スマホルール', targetSlug: 'kodomo-smartphone-ruleset-age-betsu', priority: 9 },
 

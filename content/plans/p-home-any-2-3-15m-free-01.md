@@ -10,7 +10,7 @@ durationMin: 15
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-02.webp
-seoRelated: "iyaiya-shuuchu-asobi"
+seoRelated: "2sai-ouchi-asobi-tsukaresaseru"
 ---
 
 服を脱ぐ動作を歌でルーティン化する15分のお風呂前プラン。

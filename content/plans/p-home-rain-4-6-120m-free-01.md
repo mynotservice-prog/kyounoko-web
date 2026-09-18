@@ -10,7 +10,7 @@ durationMin: 120
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 お話を決めて衣装と小道具を準備し家族で劇を演じる120分プランです。
