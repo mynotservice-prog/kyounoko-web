@@ -10,7 +10,7 @@ durationMin: 60
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 家の間取りや近所を思い出しながら地図を描く60分の学習プランです。
@@ -51,5 +51,5 @@ seoRelated: "chiiku-asobi-ie-de-10"
 
 - [誕生日パーティ家族開催（4-6歳・2時間プラン）](/plan/p-event-birthday-4-6-120m-mid-20)
 - [しりとり100本勝負](/plan/p-home-any-4-6-30m-free-03)
-- [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
+- [家でできる知育遊び10選](/article/1sai-ouchi-asobi-getsurei)
 

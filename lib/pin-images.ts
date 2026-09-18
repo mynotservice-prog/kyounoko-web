@@ -9,7 +9,6 @@ export const PIN_IMAGE_SLUGS = new Set<string>([
   'babyfood-vs-tedukuri',
   'bebycar-ok-cafe-15',
   'bamiyan-kodzure-koryaku',
-  '0-1sai-ie-asobi-10pun',
 ]);
 
 /** 縦長Pin画像のパス（無ければ null）。本文 <img src> 用。 */

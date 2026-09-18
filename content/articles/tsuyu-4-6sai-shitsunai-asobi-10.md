@@ -111,10 +111,9 @@ YouTubeのキッズダンス動画やNHKの体操動画を流して一緒に踊�
 
 ## 関連データ・記事
 
-- [YouTubeの代わりになる家遊び10選](/article/youtube-kawari-ie-asobi)
-- [雨の日家遊び4-6歳](/article/amenohi-ie-asobi-4-6sai)
+- [YouTubeの代わりになる家遊び10選](/article/ame-tsuzuki-2sai-ichinichi)
 - [4-6歳工作10パターン](/article/kousaku-4-6sai-10pattern)
-- [兄弟で楽しめる家遊び7選](/article/kyoudai-asobi-nenrei-sa)
+- [兄弟で楽しめる家遊び7選](/article/shitanoko-junyu-uenoko-asobi)
 
 ## よくある質問（FAQ）
 
@@ -138,4 +137,3 @@ YouTubeのキッズダンス動画やNHKの体操動画を流して一緒に踊�
 
 - [【0〜1歳】梅雨の1日の過ごし方](/article/tsuyu-0-1sai-sugoshikata)
 - [雨の日の屋内スポット15選（東京）](/article/amenohi-indoor-spots-tokyo-15)
-- [子供の一人遊び・安全な環境作り](/article/kodomo-hitori-asobi-anzen-kankyou)

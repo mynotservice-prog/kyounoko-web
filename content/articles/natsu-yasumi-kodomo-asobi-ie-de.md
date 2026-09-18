@@ -320,7 +320,7 @@ YouTube「子供向け体操」動画でダンス。室内運動として効果�
 
 - [夏休み計画2026](/article/natsuyasumi-keikaku-2026-kodzure)
 - [梅雨4-6歳 室内遊び10選](/article/tsuyu-4-6sai-shitsunai-asobi-10)
-- [YouTube代わりの家遊び](/article/youtube-kawari-ie-asobi)
+- [YouTube代わりの家遊び](/article/ame-tsuzuki-2sai-ichinichi)
 - [夏休み予定表テンプレ2026](/article/natsuyasumi-yotei-table-2026)
 
 ## よくある質問（FAQ）｜夏休み 家での過ごし方
@@ -419,7 +419,6 @@ WHOガイドライン等では2-4歳は1日1時間以内が目安とされます
 - [七夕飾り 手作り10選【0-6歳】折り紙・短冊で楽しむ](/article/tanabata-kazari-tedukuri-kodomo)
 - [プール・水遊びデビュー｜2歳から始める準備](/article/puuru-mizuasobi-debut)
 - [猛暑日に行ける涼しいスポット](/article/moushobi-suzushii-spots)
-- [雨の日 家遊び 4-6歳｜室内で楽しむ20選](/article/amenohi-ie-asobi-4-6sai)
 - [お盆 帰省 子どもと過ごす実家での遊び10選](/article/oboniito-asobi-kodomo-3sai)
 
 ## 夏休みの自由研究アイデア｜2-6歳でもできるシンプル系

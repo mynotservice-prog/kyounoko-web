@@ -10,7 +10,7 @@ durationMin: 60
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "amenohi-ie-asobi-2-3sai"
+seoRelated: "ame-tsuzuki-2sai-ichinichi"
 ---
 
 ベビーバスと水風船で涼しく遊ぶ60分のインドアプールプラン。
@@ -58,5 +58,5 @@ seoRelated: "amenohi-ie-asobi-2-3sai"
 
 - [こどもの日：兜と鯉のぼりの親子工作タイム](/plan/p-event-kodomonohi-2-3-60m-low-03)
 - [お風呂でお湯すくい遊び](/plan/p-home-any-2-3-15m-free-02)
-- [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
+- [家でできる知育遊び10選](/article/1sai-ouchi-asobi-getsurei)
 

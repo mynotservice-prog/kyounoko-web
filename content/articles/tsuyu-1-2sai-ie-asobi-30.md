@@ -135,7 +135,7 @@ A. 雨でも[雨の日のベビーカーOK屋内スポット](/article/amenohi-s
 
 ## 関連記事
 
-- [1〜2歳おしゃべり少なめ子と楽しい遊び](/article/1-2sai-oshaberi-sukunai-asobi)
-- [雨の日の家あそび2〜3歳向け](/article/amenohi-ie-asobi-2-3sai)
+- [1〜2歳おしゃべり少なめ子と楽しい遊び](/article/1sai-ouchi-asobi-getsurei)
+- [雨の日の家あそび2〜3歳向け](/article/ame-tsuzuki-2sai-ichinichi)
 - [梅雨0〜1歳の過ごし方](/article/tsuyu-0-1sai-sugoshikata)
-- [赤ちゃん15分遊びレパートリー](/article/akachan-15pun-asobi)
+- [赤ちゃん15分遊びレパートリー](/article/0sai-asobikata-getsurei-yaranakute-ii)

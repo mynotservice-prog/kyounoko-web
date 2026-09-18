@@ -10,7 +10,7 @@ durationMin: 240
 budget: "mid"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "amenohi-ie-asobi-4-6sai"
+seoRelated: "ame-tsuzuki-2sai-ichinichi"
 ---
 
 雨で出られない日、4-6歳と工作用品を買って本格的な1日を4時間楽しむ充実プラン。

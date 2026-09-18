@@ -337,7 +337,7 @@ A. 公共の場でのぐずりは親にとって辛い場面ですが、同じ�
 
 - [2歳イヤイヤ期 対処法7選【声かけフレーズ集】親もラク](/article/iyaiya-ki-taisho-2sai-7kufuu)
 - [イヤイヤ期しつけ線引き【2-3歳】譲る5つ・譲らない5つ](/article/iyaiya-osaete-tsukeru-shitsuke)
-- [イヤイヤ期の子が集中する遊び5つ（2〜3歳）機嫌回復にも効く](/article/iyaiya-shuuchu-asobi)
+- [イヤイヤ期の子が集中する遊び5つ（2〜3歳）機嫌回復にも効く](/article/2sai-ouchi-asobi-tsukaresaseru)
 - [叱らない子育て【0-6歳】声かけ10パターン・代替行動](/article/oshiri-kodomo-shitsuke-alternatives)
 - [ワンオペ夜の切り抜け方｜2〜6歳の18:30〜20:30を1人で回す10の工夫](/article/wanope-yoru-kirinukekata)
 

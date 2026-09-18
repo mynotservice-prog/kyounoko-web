@@ -248,7 +248,7 @@ speakableSummary: >-
 
 - [幼児習い事6パターン](/article/youji-naraigoto-nansai-kara)
 - [習い事は何歳から0-6歳](/article/naraigoto-itsukara-0-6sai)
-- [YouTubeの代わりになる家遊び10選](/article/youtube-kawari-ie-asobi)
+- [YouTubeの代わりになる家遊び10選](/article/ame-tsuzuki-2sai-ichinichi)
 - [幼稚園入園準備リスト](/article/youchien-nyuuen-junbi-list)
 
 ## よくある質問

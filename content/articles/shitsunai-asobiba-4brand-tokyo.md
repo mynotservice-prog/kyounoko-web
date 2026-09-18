@@ -96,8 +96,7 @@ hero: /img/scenes/kidspark-02.webp
 ## 関連記事もチェック
 
 - [雨の日の屋内おでかけスポット【東京15選】](/article/amenohi-indoor-spots-tokyo-15)
-- [雨の日の家遊び【2-3歳】](/article/amenohi-ie-asobi-2-3sai)
-- [雨の日の家遊び【4-6歳】](/article/amenohi-ie-asobi-4-6sai)
+- [雨の日の家遊び【2-3歳】](/article/ame-tsuzuki-2sai-ichinichi)
 
 ## よくある質問
 

@@ -10,7 +10,7 @@ durationMin: 120
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "0-1sai-ie-asobi-10pun"
+seoRelated: "0sai-asobikata-getsurei-yaranakute-ii"
 ---
 
 雨の休日に、家の中で4つの遊びを切り替えながら過ごす2時間プランです。

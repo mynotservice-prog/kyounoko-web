@@ -24,6 +24,8 @@ import { OmakasePlanButton } from '@/components/today/OmakasePlanButton';
 import { TodayConditionForm } from '@/components/today/TodayConditionForm';
 import { KkFooter } from '@/components/kk/KkFooter';
 import { KkIcon, type KkIconName } from '@/components/kk/KkIcon';
+import { pickHomePlaysForToday, POSTURE_LABEL, ENERGY_LABEL, formatAgeMonths, type PlayNeed } from '@/lib/home-play';
+import { getArticleForHomePlay } from '@/lib/home-play-articles';
 import { FINDER_STATIONS, POPULAR_TERMINALS, POPULAR_FAMILY } from '@/lib/finder-stations';
 import {
   getTerminalStations,
@@ -434,6 +436,19 @@ export default async function TodayPage({ searchParams }: Props) {
   //  出てしまっていた問題への対応：花見・クリスマスマーケット等の無関係な top に着地しないよう
   //  isEatOutside の時は top をスキップして restaurant 一覧をヒーローにする）
   const isEatOutside = query.mode === 'eat' && query.place === 'outside';
+
+  // 今日のおうち遊び(lib/home-play.ts): 「家で過ごす」モード、または雨・猛暑・寒い日に
+  // 年齢帯に合う遊びを日替わりで3件。平日の家遊び需要（毎日来る仕込み）の受け口。
+  const homePlayNeeds: PlayNeed[] = [];
+  if (query.weather === 'rain' || query.weather === 'heat' || query.weather === 'cold') homePlayNeeds.push('rainy');
+  if (query.mode === 'home') homePlayNeeds.push('tired', 'bored', 'alone10');
+  const homePlays =
+    !isEatOutside && (query.mode === 'home' || homePlayNeeds.length > 0)
+      ? pickHomePlaysForToday({ ageRange: query.age, needs: homePlayNeeds }).map((p) => ({
+          play: p,
+          article: getArticleForHomePlay(p.id),
+        }))
+      : [];
   let restaurants: { area: AreaSlug; spot: Spot }[] = [];
   if (isEatOutside) {
     restaurants = getKidFriendlyRestaurants(query.area, {
@@ -442,6 +457,47 @@ export default async function TodayPage({ searchParams }: Props) {
       limit: 12,
     });
   }
+
+  // 今日のおうち遊びの節。答え(top)が無い日でも家遊びは出す（平日の家遊び需要の受け口）。
+  const homePlaysSection =
+    homePlays.length > 0 ? (
+<section className="home-plays">
+      <h3 className="today-section-title">
+        <span className="today-section-eyebrow">Play at home</span>
+        今日のおうち遊び（家にあるもので）
+      </h3>
+      <p className="today-section-lede">
+        準備の分数・片付けの分数・親が座っていられるかまで書いた遊びを、日替わりで3つ。
+      </p>
+      <ul className="home-play-list">
+        {homePlays.map(({ play, article }) => {
+          const inner = (
+            <>
+              <div className="home-play-title">{play.name}</div>
+              <div className="home-play-summary">{play.summary}</div>
+              <div className="home-play-meta">
+                <span>{formatAgeMonths(play.ageMonths)}</span>
+                <span>準備{play.prepMin}分・片付け{play.cleanupMin}分</span>
+                <span>{POSTURE_LABEL[play.parentPosture]}</span>
+                <span>{ENERGY_LABEL[play.energy]}</span>
+              </div>
+            </>
+          );
+          return (
+            <li key={play.id}>
+              {article ? (
+                <Link href={`/article/${article.slug}#play-${play.id}`} className="home-play-card">
+                  {inner}
+                </Link>
+              ) : (
+                <div className="home-play-card">{inner}</div>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+    ) : null;
 
   const activeChips: { key: string; label: string }[] = [];
   if (query.age) activeChips.push({ key: 'age', label: labelForValue('age', query.age) });
@@ -785,6 +841,7 @@ export default async function TodayPage({ searchParams }: Props) {
               </p>
             </div>
           ) : !top && !isEatOutside ? (
+            <>
             <div style={{ padding: '32px 0 8px', textAlign: 'center', color: 'var(--ink-sub)' }}>
               <p style={{ marginBottom: 8, fontSize: 15 }}>
                 今日の条件に合う答えは、まだ準備中です。
@@ -793,6 +850,8 @@ export default async function TodayPage({ searchParams }: Props) {
                 上の<strong style={{ color: 'var(--ink)' }}>駅</strong>をえらび直すか、天気・年齢を変えてみてください。
               </p>
             </div>
+            {homePlaysSection}
+            </>
           ) : (
             <>
               {fallbackUsed && !isEatOutside && (
@@ -885,6 +944,8 @@ export default async function TodayPage({ searchParams }: Props) {
                   </Link>
                 </section>
               )}
+
+              {homePlaysSection}
 
               {/* 「家で過ごす」モードの1日通しプラン（朝食〜夕食） */}
               {dayPlan && (

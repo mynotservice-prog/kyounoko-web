@@ -10,7 +10,7 @@ durationMin: 15
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-01.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 製氷皿の氷を触って観察する、暑い日の15分ひんやり実験。
@@ -57,5 +57,5 @@ seoRelated: "chiiku-asobi-ie-de-10"
 
 - [ダンボール秘密基地づくり](/plan/p-home-any-2-3-120m-mid-01)
 - [こどもの日：兜と鯉のぼりの親子工作タイム](/plan/p-event-kodomonohi-2-3-60m-low-03)
-- [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
+- [家でできる知育遊び10選](/article/1sai-ouchi-asobi-getsurei)
 

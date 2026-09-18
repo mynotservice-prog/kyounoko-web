@@ -57,5 +57,5 @@ seoRelated: "kousaku-4-6sai-10pattern"
 
 - [パズル集中タイム](/plan/p-home-any-2-3-30m-free-03)
 - [お風呂でお湯すくい遊び](/plan/p-home-any-2-3-15m-free-02)
-- [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
+- [家でできる知育遊び10選](/article/1sai-ouchi-asobi-getsurei)
 

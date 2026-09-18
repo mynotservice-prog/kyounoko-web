@@ -56,5 +56,5 @@ seoRelated: "ko-ga-nenai-5kufuu"
 
 - [ダンボール秘密基地づくり](/plan/p-home-any-2-3-120m-mid-01)
 - [こどもの日：兜と鯉のぼりの親子工作タイム](/plan/p-event-kodomonohi-2-3-60m-low-03)
-- [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
+- [家でできる知育遊び10選](/article/1sai-ouchi-asobi-getsurei)
 

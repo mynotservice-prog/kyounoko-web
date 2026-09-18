@@ -122,7 +122,7 @@ legacyHero: /hero/park-02.webp
 - [1〜2歳育児 完全マップ](/article/1-2sai-ikuji-kanzen-map)
 - [2歳 癇癪 声かけTop10](/article/2sai-kanshaku-koekake-top10)
 - [3歳 偏食 対策](/article/3sai-shoushoku-taisaku)
-- [1〜2歳 おしゃべり少ない遊び](/article/1-2sai-oshaberi-sukunai-asobi)
+- [1〜2歳 おしゃべり少ない遊び](/article/1sai-ouchi-asobi-getsurei)
 
 ---
 ※本記事は一般的な情報提供を目的としており、医学的助言ではありません。気になる症状や疑問は、必ずかかりつけの小児科医にご相談ください。

@@ -304,11 +304,11 @@ speakableSummary: >-
 
 ## この遊びの後におすすめ
 
-- **0歳の月齢別** → [0歳の赤ちゃんと遊ぶ15分パターン10選](/article/akachan-15pun-asobi)
-- **0〜1歳ワンオペ救済** → [0〜1歳と家でできる10分遊び8パターン](/article/0-1sai-ie-asobi-10pun)
-- **モンテッソーリで体系化** → [モンテッソーリの家庭遊び年齢別ガイド](/article/monte-asobi-nenrei-betsu)
-- **2〜3歳の他の遊びと組み合わせ** → [雨の日の家遊び10選（2〜3歳向け）](/article/amenohi-ie-asobi-2-3sai)
-- **兄弟で読み聞かせ** → [兄弟で一緒に楽しめる家遊び7選](/article/kyoudai-asobi-nenrei-sa)
+- **0歳の月齢別** → [0歳の赤ちゃんと遊ぶ15分パターン10選](/article/0sai-asobikata-getsurei-yaranakute-ii)
+- **0〜1歳ワンオペ救済** → [0〜1歳と家でできる10分遊び8パターン](/article/0sai-asobikata-getsurei-yaranakute-ii)
+- **モンテッソーリで体系化** → [モンテッソーリの家庭遊び年齢別ガイド](/article/1sai-ouchi-asobi-getsurei)
+- **2〜3歳の他の遊びと組み合わせ** → [雨の日の家遊び10選（2〜3歳向け）](/article/ame-tsuzuki-2sai-ichinichi)
+- **兄弟で読み聞かせ** → [兄弟で一緒に楽しめる家遊び7選](/article/shitanoko-junyu-uenoko-asobi)
 
 ## 30秒チェックリスト
 
@@ -320,9 +320,8 @@ speakableSummary: >-
 
 ## 関連データ・記事
 
-- [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
+- [家でできる知育遊び10選](/article/1sai-ouchi-asobi-getsurei)
 - [家でできる英語遊び4〜6歳向け10選](/article/eigo-asobi-ie-de-4-6sai)
-- [1〜2歳おしゃべり少ない子と遊ぶ鉄板パターン](/article/1-2sai-oshaberi-sukunai-asobi)
 - [/items 絵本カタログ](/items)
 
 ## よくある質問
@@ -345,7 +344,7 @@ speakableSummary: >-
 
 ### Q. 兄弟に同時に読み聞かせするコツは？
 
-**下の子の年齢に合わせる**のが基本。上の子には後で1対1で10分読む時間を作ります。**兄弟共通で楽しめる「ぐりとぐら」「はらぺこあおむし」**などの定番絵本を5〜10冊持っておくと便利。詳しくは[兄弟で一緒に楽しめる家遊び7選](/article/kyoudai-asobi-nenrei-sa)で。
+**下の子の年齢に合わせる**のが基本。上の子には後で1対1で10分読む時間を作ります。**兄弟共通で楽しめる「ぐりとぐら」「はらぺこあおむし」**などの定番絵本を5〜10冊持っておくと便利。詳しくは[兄弟で一緒に楽しめる家遊び7選](/article/shitanoko-junyu-uenoko-asobi)で。
 
 ### Q. 読み聞かせで語彙力・国語力は伸びる？
 
@@ -526,11 +525,6 @@ A. **0-1歳は買い切り定番5冊→2歳以降サブスク併用**が現実�
 
 ## 関連記事
 
-- [0〜1歳と家でできる10分遊び8パターン（道具なし・準備なし）](/article/0-1sai-ie-asobi-10pun)
-- [0歳の赤ちゃんと遊ぶ15分パターン10選（月齢別・発達促進）](/article/akachan-15pun-asobi)
-- [家でできる知育遊び10選｜1〜3歳の指先・記憶力・考える力](/article/chiiku-asobi-ie-de-10)
-- [モンテッソーリの家庭遊び年齢別ガイド](/article/monte-asobi-nenrei-betsu)
-- [雨の日の家遊び10選（2〜3歳向け）](/article/amenohi-ie-asobi-2-3sai)
-- [雨の日の家遊び10選（4〜6歳向け）](/article/amenohi-ie-asobi-4-6sai)
-- [兄弟で一緒に楽しめる家遊び7選（年齢差別）](/article/kyoudai-asobi-nenrei-sa)
-- [YouTubeの代わりになる家遊び10選](/article/youtube-kawari-ie-asobi)
+- [0〜1歳と家でできる10分遊び8パターン（道具なし・準備なし）](/article/0sai-asobikata-getsurei-yaranakute-ii)
+- [雨の日の家遊び10選（2〜3歳向け）](/article/ame-tsuzuki-2sai-ichinichi)
+- [兄弟で一緒に楽しめる家遊び7選（年齢差別）](/article/shitanoko-junyu-uenoko-asobi)

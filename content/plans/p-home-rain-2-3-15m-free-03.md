@@ -10,7 +10,7 @@ durationMin: 15
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-01.webp
-seoRelated: "iyaiya-shuuchu-asobi"
+seoRelated: "2sai-ouchi-asobi-tsukaresaseru"
 ---
 
 リビングだけで楽しむ、2-3歳の集中力に合った15分かくれんぼ。

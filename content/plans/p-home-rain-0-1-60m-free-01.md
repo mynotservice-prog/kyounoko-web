@@ -10,7 +10,7 @@ durationMin: 60
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-02.webp
-seoRelated: "0-1sai-ie-asobi-10pun"
+seoRelated: "0sai-asobikata-getsurei-yaranakute-ii"
 ---
 
 雨で外出できない日に、家の中を探検しながら言葉かけする60分です。

@@ -199,7 +199,7 @@ lede: 3〜6歳のハロウィン仮装・飾り・フードを15アイデアで�
 - [ハロウィン子連れイベント2026東京10選](/article/halloween-kodzure-events-2026)
 - [/items クラフト・工作カタログ](/items)
 - [行事・季節カテゴリ](/category/gyouji)
-- [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
+- [家でできる知育遊び10選](/article/1sai-ouchi-asobi-getsurei)
 
 ## よくある質問
 

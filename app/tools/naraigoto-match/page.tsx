@@ -166,7 +166,7 @@ const RECOMMENDATIONS: ShindanRecommendation<Tag>[] = [
     reason: '「自分で選んで取り組む」自主性を尊重する教育法。集中・観察・自己選択力が育つ。家庭で実践できる本も多数。',
     pros: ['自主性・集中力', '家でも実践可能', '世界的評価'],
     cons: ['正規教室は数が少ない', '月謝高め'],
-    href: '/article/monte-asobi-nenrei-betsu',
+    href: '/article/1sai-ouchi-asobi-getsurei',
     hrefLabel: '関連記事を読む',
     meta: [{ label: '月謝', value: '10-15千円' }, { label: '対象', value: '1-6歳' }],
     scoreTags: ['rich', 'quiet', 'creative', 'logical', 'age02', 'age34'],

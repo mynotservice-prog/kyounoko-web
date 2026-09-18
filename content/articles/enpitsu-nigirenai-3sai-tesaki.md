@@ -301,16 +301,14 @@ A. 米とぎ・洗濯物のたたみ・テーブル拭きなど、**実用的な
 ## 関連データ・記事
 
 - [ハサミ使えない、いつから練習？](/article/hasami-tsukaenai-itsukara-renshu)
-- [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
+- [家でできる知育遊び10選](/article/1sai-ouchi-asobi-getsurei)
 - [発達マイルストーン0〜6歳チェックリスト](/article/hatattsu-mileage-0-6sai-checklist)
 - [/items 手先知育用品カタログ](/items)
 
 ## 関連記事
 
 - [幼児用工作（4〜6歳）10パターン｜家にある材料で創造力アップ](/article/kousaku-4-6sai-10pattern)
-- [モンテッソーリ的おうち遊び｜年齢別の取り入れ方ガイド](/article/monte-asobi-nenrei-betsu)
 - [子どもがハサミ使えない、いつから練習？安全な始め方](/article/hasami-tsukaenai-itsukara-renshu)
-- [おうちで知育遊び10選｜0〜6歳の発達促進・親もラク](/article/chiiku-asobi-ie-de-10)
 - [発達マイルストーン0〜6歳チェックリスト｜運動・言葉・社会性30項目の目安](/article/hatattsu-mileage-0-6sai-checklist)
 
 ## FAQ｜よくある質問

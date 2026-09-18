@@ -286,7 +286,7 @@ YouTube・アニメは魅力的ですが、1日30分超えると目・集中力�
 ## 関連データ・記事
 
 - [英語の習い事いつから](/article/eigo-naraigoto-nansai-kara)
-- [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
+- [家でできる知育遊び10選](/article/1sai-ouchi-asobi-getsurei)
 - [幼児習い事何歳から](/article/youji-naraigoto-nansai-kara)
 - [/items 英語教材カタログ](/items)
 
@@ -346,6 +346,6 @@ A. 一旦止めて2〜4週間休む。その間も英語の歌をBGMで流して
 - [通信教材4社比較](/article/tsuushin-kyouzai-hikaku)
 - [くもん vs 学研 比較](/article/kumon-vs-gakken-hikaku)
 - [知育サブスク4社比較](/article/chiiku-subsc-hikaku-4sha)
-- [YouTube代わりの家遊び](/article/youtube-kawari-ie-asobi)
+- [YouTube代わりの家遊び](/article/ame-tsuzuki-2sai-ichinichi)
 - [絵本読み聞かせのコツ](/article/ehon-yomikikase-kotsu)
 - [シールブックランキング](/article/seal-book-ranking)

@@ -10,7 +10,7 @@ durationMin: 30
 budget: "low"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 ベランダで家族みんなでシャボン玉を飛ばす30分の晴れの日プラン。
@@ -57,5 +57,5 @@ seoRelated: "chiiku-asobi-ie-de-10"
 
 - [こどもの日：兜と鯉のぼりの親子工作タイム](/plan/p-event-kodomonohi-2-3-60m-low-03)
 - [パズル集中タイム](/plan/p-home-any-2-3-30m-free-03)
-- [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
+- [家でできる知育遊び10選](/article/1sai-ouchi-asobi-getsurei)
 

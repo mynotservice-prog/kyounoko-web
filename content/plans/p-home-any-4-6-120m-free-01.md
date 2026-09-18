@@ -10,7 +10,7 @@ durationMin: 120
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 家族のできごとをニュース番組風に撮影編集する120分の休日プランです。

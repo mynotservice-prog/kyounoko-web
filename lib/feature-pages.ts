@@ -116,8 +116,7 @@ export const FEATURE_PAGES: FeaturePage[] = [
       '雨の日はおでかけ先の選択肢が一気に減り、家で過ごす時間も長くなります。きょうのこ編集部では、ベビーカーで濡れずに入れる屋内施設、家で短時間で盛り上がる遊び、雨用のレイングッズなど、雨の日の「困った」を解消する情報をまとめました。屋内施設は土日に集中するため、開店直後または平日午後が狙い目。家遊びは「動く系・座る系・親子協同系」の3タイプをローテーションすると飽きません。',
     articleSlugs: [
       'amenohi-indoor-spots-tokyo-15',
-      'amenohi-ie-asobi-2-3sai',
-      'amenohi-ie-asobi-4-6sai',
+      'ame-tsuzuki-2sai-ichinichi',
       'amenohi-stroller-spots-tokyo',
     ],
     spotFilter: (s) => isIndoor(s),
@@ -191,7 +190,7 @@ export const FEATURE_PAGES: FeaturePage[] = [
       '0〜1歳の赤ちゃんとのお出かけは、授乳・おむつ替え・お昼寝のリズムを優先しつつ、滞在時間も短めに。きょうのこ編集部では、ベビーカーで館内まで入れる、授乳室とおむつ替え台が両方ある、短時間（1〜2時間）で満足できる、騒音・人混みが少ない、という4条件を満たすスポットを集めました。「行ってみて困った」が起きないよう、編集部の現地メモも合わせて掲載しています。',
     articleSlugs: [
       'akachan-odekake-3months-1year',
-      'akachan-15pun-asobi',
+      '0sai-asobikata-getsurei-yaranakute-ii',
       'amenohi-stroller-spots-tokyo',
     ],
     spotFilter: (s) =>

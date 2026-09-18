@@ -305,7 +305,7 @@ speakableSummary: >-
 - [ワンオペ夜の切り抜け方](/article/wanope-yoru-kirinukekata)
 - [寝かしつけ後の親時間](/article/oyasumi-ato-oya-jikan)
 - [予防接種スケジュール0-6歳](/article/yobou-sesshu-schedule-0-6sai)
-- [0-1歳家遊び10分8パターン](/article/0-1sai-ie-asobi-10pun)
+- [0-1歳家遊び10分8パターン](/article/0sai-asobikata-getsurei-yaranakute-ii)
 
 ## よくある質問
 

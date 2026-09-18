@@ -177,4 +177,4 @@ A. キットにより、水・容器・はさみ・のりなどが別途必要�
 - [自由研究 1日で終わるネタ30選](/article/jiyukenkyu-1nichi-kodomo-30)
 - [兄弟でできる自由研究（4歳・2歳）](/article/kyoudai-jiyukenkyu-4sai-2sai-coop)
 - [夏休み1日プラン30選](/article/natsuyasumi-1nichi-plan-30)
-- [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
+- [家でできる知育遊び10選](/article/1sai-ouchi-asobi-getsurei)

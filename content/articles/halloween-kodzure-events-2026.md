@@ -210,4 +210,4 @@ lede: >-
 - [秋の2歳児の過ごし方](/article/aki-2sai-sugoshikata)
 - [秋の3〜6歳児の過ごし方](/article/aki-3-6sai-sugoshikata)
 - [雨の日にベビーカーで行ける都内の屋内スポット7選](/article/amenohi-stroller-spots-tokyo)
-- [0〜1歳と家でできる10分遊び8パターン（道具なし・準備なし）](/article/0-1sai-ie-asobi-10pun)
+- [0〜1歳と家でできる10分遊び8パターン（道具なし・準備なし）](/article/0sai-asobikata-getsurei-yaranakute-ii)

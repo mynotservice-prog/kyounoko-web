@@ -193,7 +193,7 @@ A. 月3,000〜4,000円で5〜6個レンタル。新品買うより安い計算�
 
 ## 関連記事
 
-- [赤ちゃん 15分遊び ネタ集](/article/akachan-15pun-asobi)
+- [赤ちゃん 15分遊び ネタ集](/article/0sai-asobikata-getsurei-yaranakute-ii)
 - [知育おもちゃ 2〜3歳 5選](/article/chiiku-toys-2-3sai-5sen)
 - [赤ちゃんのおしゃぶりはいつまで？](/article/akachan-oshaburi-itsumade)
 - [0歳の育児 完全マップ](/article/0sai-ikuji-kanzen-map)

@@ -1107,3 +1107,65 @@
   .article-v3 .av3-xlink-quiet { margin-top: 32px; }
   .article-v3 .av3-xlink-quiet .kk-sec-title { font-size: 13.5px; }
 }
+
+/* ===========================================================
+   おうち遊びカード（lib/home-play.ts 駆動）— 罫線とラベルで見せる
+   =========================================================== */
+.article-v3 .av3-plays { margin: 22px 0 34px; display: flex; flex-direction: column; gap: 26px; }
+.article-v3 .av3-play { padding: 0 0 22px; border-bottom: 1px solid var(--kk-rule-soft); }
+.article-v3 .av3-play-head { display: flex; gap: 12px; align-items: flex-start; }
+.article-v3 .av3-play-num {
+  flex: 0 0 auto; font-family: var(--kk-display); font-size: 22px; font-weight: 700;
+  line-height: 1; color: var(--kk-ink-mute); padding-top: 4px;
+}
+.article-v3 .av3-play-title {
+  margin: 0; padding: 0; border: 0; font-family: var(--kk-display);
+  font-size: 18px; font-weight: 700; line-height: 1.5; color: var(--kk-ink);
+}
+.article-v3 .av3-play-title::before { content: none !important; display: none !important; }
+.article-v3 .av3-play-summary { margin: 4px 0 0; font-size: 14px; line-height: 1.8; color: var(--kk-ink-soft); }
+.article-v3 .av3-play-spec {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 16px;
+  margin: 14px 0 0; padding: 12px 0; border-top: 1px solid var(--kk-rule-soft); border-bottom: 1px solid var(--kk-rule-soft);
+}
+.article-v3 .av3-play-spec > div { display: flex; flex-direction: column; gap: 2px; }
+.article-v3 .av3-play-spec dt {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 11px; font-weight: 700; letter-spacing: .06em; color: var(--kk-ink-mute);
+}
+.article-v3 .av3-play-spec dd { margin: 0; font-size: 14px; font-weight: 600; color: var(--kk-ink); }
+.article-v3 .av3-play-items { margin: 12px 0 0; font-size: 14px; line-height: 1.8; color: var(--kk-ink); }
+.article-v3 .av3-play-items strong, .article-v3 .av3-play-next strong {
+  display: inline-block; margin-right: 8px; font-size: 11.5px; font-weight: 700;
+  letter-spacing: .06em; color: var(--kk-ink-mute);
+}
+.article-v3 .av3-play-items-note { font-size: 12px; color: var(--kk-ink-mute); }
+.article-v3 .av3-play-photo { margin: 14px 0 0; }
+.article-v3 .av3-play-photo img { width: 100%; height: auto; border-radius: var(--kk-r-img); display: block; }
+.article-v3 .av3-play-photo figcaption { font-size: 11.5px; color: var(--kk-ink-mute); margin-top: 6px; }
+.article-v3 .av3-play-steps { margin: 12px 0 0; padding-left: 1.4em; font-size: 14.5px; line-height: 1.85; }
+.article-v3 .av3-play-steps li { margin: 4px 0; }
+.article-v3 .av3-play-next { margin: 10px 0 0; font-size: 13.5px; line-height: 1.8; color: var(--kk-ink-soft); }
+.article-v3 .av3-play-story {
+  margin: 14px 0 0; padding: 12px 14px; border-left: 3px solid var(--kk-rule);
+  background: transparent; font-size: 14px; line-height: 1.85; color: var(--kk-ink);
+}
+.article-v3 .av3-play-story-lab {
+  display: block; font-size: 11px; font-weight: 700; letter-spacing: .08em; color: var(--kk-ink-mute); margin-bottom: 4px;
+}
+.article-v3 .av3-play-safety {
+  margin: 12px 0 0; padding: 10px 0 0 1.2em; border-top: 1px dashed var(--kk-rule-soft);
+  font-size: 12.5px; line-height: 1.75; color: var(--kk-ink-soft);
+}
+.article-v3 .av3-play-safety li { margin: 3px 0; }
+.article-v3 .av3-play-safety a, .article-v3 .av3-play-evidence a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.article-v3 .av3-play-evidence { margin: 8px 0 0; font-size: 11.5px; line-height: 1.7; color: var(--kk-ink-mute); }
+.article-v3 .av3-play-foot { font-size: 11.5px; line-height: 1.8; color: var(--kk-ink-mute); margin: 0; }
+@media (max-width: 480px) {
+  .article-v3 .av3-play-spec { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.article-v3 .av3-play-photo-grid { display: grid; gap: 8px; }
+.article-v3 .av3-play-photo-grid.n2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.article-v3 .av3-play-photo-grid img { width: 100%; height: auto; border-radius: var(--kk-r-img); display: block; }
+@media (max-width: 480px) { .article-v3 .av3-play-photo-grid.n2 { grid-template-columns: 1fr; } }

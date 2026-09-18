@@ -283,12 +283,11 @@ A. 保健師さんに話を聞いてもらうだけで、「自分が悪いん�
 - [2歳ジャンプできない、運動発達は心配？](/article/2sai-jump-dekinai-shinpai)
 - [発達マイルストーン0〜6歳チェックリスト](/article/hatattsu-mileage-0-6sai-checklist)
 - [発達で気になる兆候・専門家相談の目安](/article/gotsugo-hattaku-muchi-kodomo)
-- [1〜2歳おしゃべり少ない子と遊ぶ鉄板パターン](/article/1-2sai-oshaberi-sukunai-asobi)
+- [1〜2歳おしゃべり少ない子と遊ぶ鉄板パターン](/article/1sai-ouchi-asobi-getsurei)
 
 ## 関連記事
 
 - [2歳で言葉が遅い時の対応｜発語ゼロ・単語のみの家庭ケア10と相談目安](/article/kotoba-okureru-taiou-2sai)
-- [おしゃべりが少ない1〜2歳の子と遊ぶ鉄板パターン7つ](/article/1-2sai-oshaberi-sukunai-asobi)
 - [発達マイルストーン0〜6歳チェックリスト｜運動・言葉・社会性30項目の目安](/article/hatattsu-mileage-0-6sai-checklist)
 - [発達で気になる兆候・専門家相談の目安｜1〜6歳サイン15と相談フロー](/article/gotsugo-hattaku-muchi-kodomo)
 - [絵本の読み聞かせコツ｜0〜6歳年齢別に子が聞かない・飽きる時の5つの工夫](/article/ehon-yomikikase-kotsu)

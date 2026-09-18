@@ -282,7 +282,7 @@ tags:
 - [シールブックおすすめランキング](/article/seal-book-ranking)
 - [絵本の読み聞かせのコツ](/article/ehon-yomikikase-kotsu)
 - [楽天で揃える出産準備リスト（0歳）完全版](/article/shussan-junbi-rakuten-0sai)
-- [モンテッソーリ 年齢別 遊び](/article/monte-asobi-nenrei-betsu)
+- [モンテッソーリ 年齢別 遊び](/article/1sai-ouchi-asobi-getsurei)
 
 ## あわせて読みたい：最新の知育玩具サブスク
 

@@ -37,7 +37,7 @@ export const AFFILIATE_TARGET_SLUGS = [
   // 2026-05 追加：知育玩具・プレゼント系（トイサブ等サブスクの高単価導線を併載）
   'chiiku-toys-2-3sai-5sen',
   'omocha-year-by-age',
-  'chiiku-asobi-ie-de-10',
+  '1sai-ouchi-asobi-getsurei',
   'xmas-present-nenrei-0-6',
   'christmas-present-kodomo-nenrei-betsu',
   // 2026-06-11 追加：収益重点記事のうちカード未登録だった10本（監査で発覚）
@@ -508,7 +508,7 @@ const A8_PROGRAMS_2026_05: AffiliateProduct[] = expand([
       // 2026-05 追加：知育玩具・プレゼント記事にも高単価教材の導線を併載
       'chiiku-toys-2-3sai-5sen',
       'omocha-year-by-age',
-      'chiiku-asobi-ie-de-10',
+      '1sai-ouchi-asobi-getsurei',
       'xmas-present-nenrei-0-6',
       'christmas-present-kodomo-nenrei-betsu',
       // 2026-06-11 追加：教材比較・サブスク比較の収益重点記事
@@ -717,7 +717,7 @@ const MOSHIMO_PROGRAMS_2026_05: AffiliateProduct[] = expand([
       // 2026-05 追加：知育玩具・プレゼント記事にも高単価サブスク導線を併載
       'chiiku-toys-2-3sai-5sen',
       'omocha-year-by-age',
-      'chiiku-asobi-ie-de-10',
+      '1sai-ouchi-asobi-getsurei',
       'xmas-present-nenrei-0-6',
       'christmas-present-kodomo-nenrei-betsu',
       // 2026-06-11 追加

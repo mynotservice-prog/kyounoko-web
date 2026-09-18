@@ -259,7 +259,7 @@ speakableSummary: >-
 ## 関連データ・記事
 
 - [2歳イヤイヤ期 対処法7選](/article/iyaiya-ki-taisho-2sai-7kufuu)
-- [一人遊びできる環境作り](/article/kodomo-hitori-asobi-anzen-kankyou)
+- [一人遊びできる環境作り](/article/shitanoko-junyu-uenoko-asobi)
 - [「もう疲れた」夜の30分の使い方50](/article/kosodate-tsukareta-jikan-no-tsukaikata-50)
 - [今日まわすカテゴリ](/category/today-mawasu)
 

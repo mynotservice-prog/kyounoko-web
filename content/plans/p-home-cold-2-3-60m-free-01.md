@@ -10,7 +10,7 @@ durationMin: 60
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-02.webp
-seoRelated: "youtube-kawari-ie-asobi"
+seoRelated: "ame-tsuzuki-2sai-ichinichi"
 ---
 
 リビングにテント風の空間を作って60分のインドアキャンプ。

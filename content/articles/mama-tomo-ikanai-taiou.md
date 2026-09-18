@@ -407,6 +407,6 @@ SNSの切り取りと自分の日常を比較しない。
 - [週末の過ごし方](/article/shumatsu-1nichi-mawashikata)
 - [ワンオペ夜の切り抜け方](/article/wanope-yoru-kirinukekata)
 - [お休み後の親時間](/article/oyasumi-ato-oya-jikan)
-- [赤ちゃん15分遊び](/article/akachan-15pun-asobi)
+- [赤ちゃん15分遊び](/article/0sai-asobikata-getsurei-yaranakute-ii)
 - [家でできる英語遊び4〜6歳](/article/eigo-asobi-ie-de-4-6sai)
 - [知育玩具2〜3歳おすすめ5選](/article/chiiku-toys-2-3sai-5sen)

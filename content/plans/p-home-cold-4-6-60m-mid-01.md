@@ -10,7 +10,7 @@ durationMin: 60
 budget: "mid"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 ホットチョコやミルクを作ってカフェ店員ごっこを楽しむ60分プランです。

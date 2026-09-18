@@ -271,8 +271,8 @@ speakableSummary: >-
 
 ## 関連データ・記事
 
-- [雨の日の家遊び10選（4〜6歳）](/article/amenohi-ie-asobi-4-6sai)
-- [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
+- [雨の日の家遊び10選（4〜6歳）](/article/ame-tsuzuki-2sai-ichinichi)
+- [家でできる知育遊び10選](/article/1sai-ouchi-asobi-getsurei)
 - [/items クラフト・知育用品カタログ](/items)
 - [今日なにする？カテゴリ](/category/today-nani)
 

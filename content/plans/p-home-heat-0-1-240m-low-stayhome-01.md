@@ -10,7 +10,7 @@ durationMin: 240
 budget: "low"
 area: "all"
 hero: /hero/home-cozy-02.webp
-seoRelated: "akachan-15pun-asobi"
+seoRelated: "0sai-asobikata-getsurei-yaranakute-ii"
 ---
 
 危険な暑さの日に、冷房の効いた部屋で0-1歳と4時間涼しく快適に過ごすプラン。

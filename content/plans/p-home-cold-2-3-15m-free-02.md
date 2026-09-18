@@ -57,5 +57,5 @@ seoRelated: "ehon-yomikikase-kotsu"
 
 - [ぬいぐるみ病院ごっこ](/plan/p-home-any-2-3-30m-free-02)
 - [パズル集中タイム](/plan/p-home-any-2-3-30m-free-03)
-- [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
+- [家でできる知育遊び10選](/article/1sai-ouchi-asobi-getsurei)
 

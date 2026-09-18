@@ -10,7 +10,7 @@ durationMin: 240
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-01.webp
-seoRelated: "youtube-kawari-ie-asobi"
+seoRelated: "ame-tsuzuki-2sai-ichinichi"
 ---
 
 危険な暑さの日、2-3歳と冷房の効いた家で4時間涼しく過ごす手抜きプラン。

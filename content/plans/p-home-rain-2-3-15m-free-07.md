@@ -10,7 +10,7 @@ durationMin: 15
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "iyaiya-shuuchu-asobi"
+seoRelated: "2sai-ouchi-asobi-tsukaresaseru"
 ---
 
 タオルや靴下を一緒にたたむ、家事参加型の15分プラン。

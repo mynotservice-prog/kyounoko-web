@@ -10,7 +10,7 @@ durationMin: 60
 budget: "low"
 area: "all"
 hero: /hero/home-cozy-02.webp
-seoRelated: "0-1sai-ie-asobi-10pun"
+seoRelated: "0sai-asobikata-getsurei-yaranakute-ii"
 ---
 
 新聞紙を使って破る・丸める・舞わせる60分の感覚遊びです。

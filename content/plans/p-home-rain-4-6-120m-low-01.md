@@ -10,7 +10,7 @@ durationMin: 120
 budget: "low"
 area: "all"
 hero: /hero/home-cozy-01.webp
-seoRelated: "kyoudai-asobi-nenrei-sa"
+seoRelated: "shitanoko-junyu-uenoko-asobi"
 ---
 
 ボードゲームを複数プレイして家族で盛り上がる120分のプランです。

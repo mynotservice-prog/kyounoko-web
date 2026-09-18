@@ -10,7 +10,7 @@ durationMin: 120
 budget: "low"
 area: "all"
 hero: /hero/home-cozy-01.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 場所や条件を変えて氷の溶け方を調べる120分の観察プランです。

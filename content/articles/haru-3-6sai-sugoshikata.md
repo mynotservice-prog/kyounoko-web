@@ -122,7 +122,7 @@ legacyHero: /hero/park-02.webp
 
 - [3〜6歳育児 完全マップ](/article/3-6sai-ikuji-kanzen-map)
 - [3歳 偏食 対策](/article/3sai-shoushoku-taisaku)
-- [雨の日 家あそび 4〜6歳](/article/amenohi-ie-asobi-4-6sai)
+- [雨の日 家あそび 4〜6歳](/article/ame-tsuzuki-2sai-ichinichi)
 - [秋祭り 子連れ攻略](/article/aki-matsuri-kodzure-koryaku)
 
 ---

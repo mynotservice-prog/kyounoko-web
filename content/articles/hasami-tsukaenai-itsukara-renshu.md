@@ -310,7 +310,7 @@ A. **ハサミ専用の小さな箱・引き出し**を作って、使う時だ�
 ## 関連データ・記事
 
 - [鉛筆握れない3歳、手先の発達サポート](/article/enpitsu-nigirenai-3sai-tesaki)
-- [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
+- [家でできる知育遊び10選](/article/1sai-ouchi-asobi-getsurei)
 - [発達マイルストーン0〜6歳チェックリスト](/article/hatattsu-mileage-0-6sai-checklist)
 - [/items 工作・クラフトおもちゃカタログ](/items)
 
@@ -318,8 +318,6 @@ A. **ハサミ専用の小さな箱・引き出し**を作って、使う時だ�
 
 - [鉛筆握れない3歳、手先の発達サポート7工夫](/article/enpitsu-nigirenai-3sai-tesaki)
 - [幼児用工作（4〜6歳）10パターン｜家にある材料で創造力アップ](/article/kousaku-4-6sai-10pattern)
-- [モンテッソーリ的おうち遊び｜年齢別の取り入れ方ガイド](/article/monte-asobi-nenrei-betsu)
-- [おうちで知育遊び10選｜0〜6歳の発達促進・親もラク](/article/chiiku-asobi-ie-de-10)
 - [発達マイルストーン0〜6歳チェックリスト｜運動・言葉・社会性30項目の目安](/article/hatattsu-mileage-0-6sai-checklist)
 
 ## FAQ｜よくある質問

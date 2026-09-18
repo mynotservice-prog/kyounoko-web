@@ -10,7 +10,7 @@ durationMin: 60
 budget: "low"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 小麦粉と水でねんどを作り、動物を作って遊ぶ60分のじっくりプラン。

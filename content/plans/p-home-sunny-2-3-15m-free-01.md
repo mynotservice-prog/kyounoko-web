@@ -10,7 +10,7 @@ durationMin: 15
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-03.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 太陽光で影を作って動かして遊ぶ、晴れた日の15分プラン。
@@ -56,5 +56,5 @@ seoRelated: "chiiku-asobi-ie-de-10"
 
 - [お風呂でお湯すくい遊び](/plan/p-home-any-2-3-15m-free-02)
 - [パズル集中タイム](/plan/p-home-any-2-3-30m-free-03)
-- [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
+- [家でできる知育遊び10選](/article/1sai-ouchi-asobi-getsurei)
 

@@ -304,7 +304,7 @@ A. 体重がしっかりめで「跳ぶのに不利かも」と思っていた�
 - [発達マイルストーン0〜6歳チェックリスト｜運動・言葉・社会性30項目の目安](/article/hatattsu-mileage-0-6sai-checklist)
 - [体操教室の選び方（2〜5歳）｜コナミ・ジャクパ・セントラル比較](/article/taisou-kyoushitsu-2-5sai)
 - [発達で気になる兆候・専門家相談の目安｜1〜6歳サイン15と相談フロー](/article/gotsugo-hattaku-muchi-kodomo)
-- [0〜1歳と家でできる10分遊び8パターン（道具なし・準備なし）](/article/0-1sai-ie-asobi-10pun)
+- [0〜1歳と家でできる10分遊び8パターン（道具なし・準備なし）](/article/0sai-asobikata-getsurei-yaranakute-ii)
 
 ## FAQ｜よくある質問
 

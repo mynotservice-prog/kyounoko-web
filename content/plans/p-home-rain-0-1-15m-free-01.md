@@ -10,7 +10,7 @@ durationMin: 15
 budget: "free"
 area: "all"
 hero: /hero/home-cozy-01.webp
-seoRelated: "0-1sai-ie-asobi-10pun"
+seoRelated: "0sai-asobikata-getsurei-yaranakute-ii"
 ---
 
 窓越しに見える雨や景色を、抱っこしながら実況して楽しみます。

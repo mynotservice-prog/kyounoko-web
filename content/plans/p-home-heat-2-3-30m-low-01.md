@@ -10,7 +10,7 @@ durationMin: 30
 budget: "low"
 area: "all"
 hero: /hero/home-cozy-01.webp
-seoRelated: "chiiku-asobi-ie-de-10"
+seoRelated: "1sai-ouchi-asobi-getsurei"
 ---
 
 ペットボトルと食紅で色水を作って混ぜる30分の実験プラン。
@@ -58,5 +58,5 @@ seoRelated: "chiiku-asobi-ie-de-10"
 
 - [お風呂前の脱衣タイム歌](/plan/p-home-any-2-3-15m-free-01)
 - [ダンボール秘密基地づくり](/plan/p-home-any-2-3-120m-mid-01)
-- [家でできる知育遊び10選](/article/chiiku-asobi-ie-de-10)
+- [家でできる知育遊び10選](/article/1sai-ouchi-asobi-getsurei)
 

@@ -236,7 +236,7 @@ lede: シールブックは1〜5歳の子の集中力と手先を伸ばす最強
 - [おもちゃ年齢別ベスト10](/article/omocha-year-by-age)
 - [梅雨の室内遊び10選](/article/tsuyu-4-6sai-shitsunai-asobi-10)
 - [お正月家での過ごし方10選](/article/oshogatsu-asobi-kodomo-2026)
-- [YouTube代わりの家遊び](/article/youtube-kawari-ie-asobi)
+- [YouTube代わりの家遊び](/article/ame-tsuzuki-2sai-ichinichi)
 
 ## よくある質問
 
@@ -262,5 +262,5 @@ lede: シールブックは1〜5歳の子の集中力と手先を伸ばす最強
 
 ## 関連記事
 
-- [家でできる知育遊び10選｜1〜3歳の指先・記憶力・考える力を育てる](/article/chiiku-asobi-ie-de-10)
+- [家でできる知育遊び10選｜1〜3歳の指先・記憶力・考える力を育てる](/article/1sai-ouchi-asobi-getsurei)
 - [七夕の飾り・短冊作り｜3歳から作れる折り紙アイデア10](/article/tanabata-kazari-sakusei)

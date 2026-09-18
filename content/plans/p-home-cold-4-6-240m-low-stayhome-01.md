@@ -10,7 +10,7 @@ durationMin: 240
 budget: "low"
 area: "all"
 hero: /hero/home-cozy-02.webp
-seoRelated: "amenohi-ie-asobi-4-6sai"
+seoRelated: "ame-tsuzuki-2sai-ichinichi"
 ---
 
 寒くて出たくない日、4-6歳と暖房の効いた家で4時間じっくり遊ぶ充実プラン。

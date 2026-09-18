@@ -198,7 +198,7 @@ speakableSummary: >-
 - [赤ちゃんとお出かけ持ち物リスト【生後3ヶ月〜1歳】](/article/akachan-odekake-3months-1year)
 - [公園で他の子に近づけない時の対応](/article/kouen-tomodachi-chikadukenai)
 - [子育て向け関東自然スポット10選](/article/kosodate-kanto-shizen-10)
-- [雨の日のおうち遊び2-3歳](/article/amenohi-ie-asobi-2-3sai)
+- [雨の日のおうち遊び2-3歳](/article/ame-tsuzuki-2sai-ichinichi)
 
 ## FAQ｜よくある質問
 
