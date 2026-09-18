@@ -79,6 +79,31 @@
       "relatedArticleSlugs": [
         "jiyugaoka-muse-square-kodzure"
       ]
+    },
+    {
+      "name": "東京地球農園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "あきる野市",
+      "note": "武蔵引田駅から歩ける栗拾い体験農園。2026年は9月16日に栗拾い体験がスタート（公式）。大人2,000円・3〜12歳1,000円、開始は10:00と13:00の2回、定員20名、じゃらんで要予約。雨天中止。子連れ設備の公式記載なし。",
+      "budget": "low",
+      "officialUrl": "https://www.taiyonoie-vc.com/terrafarm/",
+      "reservation": "required",
+      "nearestStation": "武蔵引田",
+      "walkMinutes": 10,
+      "pricing": {
+        "adult": "2,000円（栗拾い体験）",
+        "elementary": "1,000円（3〜12歳）"
+      },
+      "accessTips": "JR五日市線武蔵引田駅から徒歩6〜10分（公式サイト内で表記に幅あり）。開始時間10:00〜／13:00〜。",
+      "hiddenTip": "終了日は公式に未記載。長袖・長靴があると安心（栗のイガ）。",
+      "relatedArticleSlugs": [
+        "kurihiroi-kanto-kodzure"
+      ]
     }
   ],
   "kanagawa": [
@@ -107,6 +132,823 @@
       },
       "relatedArticleSlugs": [
         "asobuild-yokohama-kodzure-guide"
+      ]
+    },
+    {
+      "name": "田村果樹園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "川崎市",
+      "note": "JR中野島駅から徒歩約3分の梨園。豊水・二十世紀のもぎ取りを受け入れ（要事前予約）。8月中旬〜9月下旬の10:00〜15:00。車椅子対応トイレあり。駐車場10台（要相談）。料金は公式記載なし。",
+      "budget": "low",
+      "officialUrl": "https://www.k-kankou.jp/kankounouen/",
+      "reservation": "required",
+      "nearestStation": "中野島",
+      "walkMinutes": 3,
+      "ward": "多摩区",
+      "facilities": {
+        "bathroom": "yes",
+        "note": "川崎市観光協会の観光農園ページに「車椅子対応のトイレもあります」の記載（2026-09-18確認）。おむつ替え・授乳室は記載なし。"
+      },
+      "accessTips": "JR南武線中野島駅から徒歩約3分。会期8月中旬〜9月下旬、10:00〜15:00。要事前予約。",
+      "hiddenTip": "7種類以上の梨の直売あり。料金・予約方法は川崎市観光協会ページに記載がないため電話で確認。",
+      "relatedArticleSlugs": [
+        "nashigari-kawasaki-tokyo-kodzure"
+      ]
+    },
+    {
+      "name": "中㋑園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "川崎市",
+      "note": "JR中野島駅から徒歩約10分の梨園。8月中旬〜9月中旬の土日、9:00〜17:00。もぎ取りは事前予約可（平日不可）。駐車場5台。料金・トイレは公式記載なし。",
+      "budget": "low",
+      "officialUrl": "https://www.k-kankou.jp/kankounouen/",
+      "reservation": "recommended",
+      "nearestStation": "中野島",
+      "walkMinutes": 10,
+      "ward": "多摩区",
+      "accessTips": "JR南武線中野島駅から徒歩約10分。会期8月中旬〜9月中旬の土・日曜。団体は20名まで。",
+      "hiddenTip": "料金は川崎市観光協会ページに記載なし（電話で確認）。",
+      "relatedArticleSlugs": [
+        "nashigari-kawasaki-tokyo-kodzure"
+      ]
+    },
+    {
+      "name": "かしや梨園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "川崎市",
+      "note": "登戸駅から徒歩約15分の梨・ぶどう園。梨・ブドウは8月〜9月中旬、柿は10月中旬〜11月中旬。9:00〜12:00／13:00〜16:00。駐車場3台。料金・予約・トイレは公式記載なし。",
+      "budget": "low",
+      "officialUrl": "https://www.k-kankou.jp/kankounouen/",
+      "nearestStation": "登戸",
+      "walkMinutes": 15,
+      "ward": "多摩区",
+      "accessTips": "JR・小田急登戸駅から徒歩約15分。",
+      "hiddenTip": "料金・予約は川崎市観光協会ページに記載なし（電話で確認）。",
+      "relatedArticleSlugs": [
+        "nashigari-kawasaki-tokyo-kodzure",
+        "budougari-kanto-kodzure"
+      ]
+    },
+    {
+      "name": "三平果樹園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "川崎市",
+      "note": "登戸駅・向ヶ丘遊園駅から徒歩約7分の果樹園。幸水や長十郎など約20品種の梨（8〜9月）、柿・ミカン（10〜12月）。9:30〜16:00。団体受付あり。料金・トイレは公式記載なし。",
+      "budget": "low",
+      "officialUrl": "https://www.k-kankou.jp/kankounouen/",
+      "nearestStation": "登戸",
+      "walkMinutes": 7,
+      "ward": "多摩区",
+      "accessTips": "JR・小田急登戸駅、小田急向ヶ丘遊園駅から徒歩約7分。",
+      "hiddenTip": "夏野菜狩りもあり。料金は川崎市観光協会ページに記載なし。",
+      "relatedArticleSlugs": [
+        "nashigari-kawasaki-tokyo-kodzure"
+      ]
+    },
+    {
+      "name": "ヤマモ園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "川崎市",
+      "note": "向ヶ丘遊園駅・登戸駅・宿河原駅から徒歩約7分の梨園。幸水・豊水と、神奈川生まれの品種「カオリ」。8月中旬〜9月上旬の12:00〜16:00。駐車場あり。料金・トイレは公式記載なし。",
+      "budget": "low",
+      "officialUrl": "https://www.k-kankou.jp/kankounouen/",
+      "nearestStation": "向ヶ丘遊園",
+      "walkMinutes": 7,
+      "ward": "多摩区",
+      "accessTips": "小田急向ヶ丘遊園駅・登戸駅・JR宿河原駅から徒歩約7分。会期8月中旬〜9月上旬、12:00〜16:00。",
+      "hiddenTip": "料金は川崎市観光協会ページに記載なし。",
+      "relatedArticleSlugs": [
+        "nashigari-kawasaki-tokyo-kodzure"
+      ]
+    },
+    {
+      "name": "黒川東芋掘会",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "川崎市",
+      "note": "黒川駅・若葉台駅から徒歩約10分の芋掘り農園。9月初旬（土日祝）〜10月（毎日）、10:00〜16:00。手ぶらで来園OK、個人は予約不要（団体はFAXで要予約）。30年以上続く農園。料金・トイレは公式記載なし。",
+      "budget": "low",
+      "officialUrl": "https://www.k-kankou.jp/kankounouen/",
+      "reservation": "none",
+      "nearestStation": "黒川",
+      "walkMinutes": 10,
+      "ward": "麻生区",
+      "accessTips": "小田急多摩線黒川駅・京王相模原線若葉台駅から徒歩約10分。電話問い合わせは受け付けておらずFAXのみ（公式）。",
+      "hiddenTip": "学校行事の収穫体験も受け入れ。料金は川崎市観光協会ページに記載なし。",
+      "relatedArticleSlugs": [
+        "imohori-kanagawa-kodzure"
+      ]
+    },
+    {
+      "name": "鈴木園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "茅ヶ崎市",
+      "note": "入園料なし・駐車場無料の果樹園。低樹高で平坦なため小さな子でも楽しめると公式明記。栗拾いは2026年9月5日から（10:30の完全予約制、国見1,300円/kg）。梨・ぶどうは9月時点で終了。月曜・金曜休。茅ヶ崎駅からバス。",
+      "budget": "low",
+      "officialUrl": "https://sumikoq.jimdoweb.com/",
+      "reservation": "required",
+      "facilities": {
+        "note": "公式に「入園料もありません」「駐車場は無料」「低樹高栽培と平坦の果樹園」の記載（2026-09-18確認）。トイレ・おむつ替え・授乳室は記載なし。"
+      },
+      "accessTips": "JR茅ヶ崎駅北口からバス「小出二本松」下車徒歩15〜20分ほか。月曜・金曜休（祝日の場合は翌日）。",
+      "hiddenTip": "栗は9月上旬〜10月上旬（国見1,300円/kg）。ぶどうは藤稔8月中旬〜9月上旬（1,800円/kg）、梨は幸水800円/kg・豊水700円/kg（量り売り）。",
+      "relatedArticleSlugs": [
+        "kurihiroi-kanto-kodzure",
+        "budougari-kanto-kodzure"
+      ]
+    },
+    {
+      "name": "ワイワイ栗園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "厚木市",
+      "note": "車で行く栗拾い園（県央厚木IC・相模原愛川ICから約10分）。2026年度は9月中旬から、日・火・木曜の9〜12時のみ。1kg800円。メールで要予約。駐車場10台。トイレ等の公式記載なし。",
+      "budget": "low",
+      "officialUrl": "https://kuri.yyberry.com/",
+      "reservation": "required",
+      "accessTips": "車のみ（駅の記載なし）。営業は日・火・木曜 9時〜12時。",
+      "hiddenTip": "終了日は公式未記載。",
+      "relatedArticleSlugs": [
+        "kurihiroi-kanto-kodzure"
+      ]
+    }
+  ],
+  "yamanashi": [
+    {
+      "name": "理想園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "甲州市",
+      "note": "勝沼のぶどう園。シャインマスカット食べ放題（畑内40分）は大人3,300円・幼児1,300円・2歳以下無料（税込）。多機能トイレにおむつ替えシート、ベビーカー用のカヤ貸出（要予約・数量限定）、雨具貸出あり。無料駐車場40台。",
+      "budget": "low",
+      "officialUrl": "https://www.risouen.net/",
+      "reservation": "recommended",
+      "nearestStation": "勝沼ぶどう郷",
+      "pricing": {
+        "adult": "3,300円（シャイン食べ放題・税込）",
+        "elementary": "2,000円（1〜2年生1,300円）",
+        "preschool": "1,300円",
+        "infant": "無料（2歳以下）"
+      },
+      "facilities": {
+        "bathroom": "yes",
+        "diaperChange": "yes",
+        "note": "公式に「多機能トイレにおむつ替えシート」「ベビーカー用のカヤ（要事前予約・数量限定）」「雨具貸出」の記載（2026-09-18確認）。授乳室は公式記載なし。"
+      },
+      "accessTips": "JR勝沼ぶどう郷駅からタクシー約10分（公式目安約1,300円）、中央道勝沼ICから車約5分。平日9:00〜15:00・土日祝7:30〜15:00。支払いは現金のみ。",
+      "hiddenTip": "公式の品種カレンダーでシャインマスカットは8月下旬〜9月下旬、甲州は10月初旬〜11月初旬。デラウェア狩りは2026年は終了と公式に明記（9月10日更新）。",
+      "relatedArticleSlugs": [
+        "budougari-yamanashi-kodzure"
+      ]
+    },
+    {
+      "name": "里見農園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "笛吹市",
+      "note": "一宮町のぶどう園。30分食べ放題でシャインマスカットは大人2,500円〜・小人（3才〜小6）2,000円〜。段差のないバリアフリー、ドーム型の屋根で雨天でも食べ放題可と公式に明記。予約制でなく当日順番。普通車30台。",
+      "budget": "low",
+      "officialUrl": "https://www.satominouen.com/",
+      "reservation": "none",
+      "pricing": {
+        "adult": "2,500円〜（シャイン30分食べ放題）",
+        "elementary": "2,000円〜（3才〜小6）"
+      },
+      "facilities": {
+        "note": "公式に「段差がないよう工夫」「車いすの方も楽しめるよう整備」「ドーム型の屋根があり雨天でも食べ放題」の記載（2026-09-18確認）。トイレ・授乳室・おむつ替えの個別記載なし。"
+      },
+      "accessTips": "勝沼IC・一宮御坂ICから車約5分（駅からのアクセスは公式記載なし）。8時〜17時、開園期間中無休。",
+      "hiddenTip": "2026年のぶどう狩り・食べ放題は8月20日から（公式）。品種カレンダーでデラウェア7月下旬〜8月中旬、シャインマスカット8月下旬〜9月下旬。ペットはリード付きで同伴可。",
+      "relatedArticleSlugs": [
+        "budougari-yamanashi-kodzure"
+      ]
+    },
+    {
+      "name": "あすなろ園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "甲州市",
+      "note": "勝沼の大規模ぶどう園。60分食べ放題でシャインマスカットは大人2,500円・幼児（3〜5歳）1,300円・3歳未満無料。シャイン狩りはハウス内で雨に濡れない。予約不要。駐車場は乗用車100台・大型バス10台。",
+      "budget": "low",
+      "officialUrl": "https://asunaroen.com/",
+      "reservation": "none",
+      "nearestStation": "勝沼ぶどう郷",
+      "pricing": {
+        "adult": "2,500円（シャイン60分食べ放題）",
+        "preschool": "1,300円（3〜5歳）",
+        "infant": "無料（3歳未満）"
+      },
+      "facilities": {
+        "note": "公式に「シャインマスカット狩りはハウスの為雨に濡れず」の記載。トイレ・おむつ替え・授乳室・ベビーカー可否は公式記載なし（2026-09-18確認）。"
+      },
+      "accessTips": "JR勝沼ぶどう郷駅より5分、中央道勝沼ICより5分（公式表記。徒歩・車の区別なし）。9:00〜17:00。2026年9月時点は建て替え工事のためテント営業。",
+      "hiddenTip": "2026年のぶどう狩りは7月17日〜11月15日予定と公式に年つきで明記。26品種の時期一覧あり（デラウェア7月下旬〜、巨峰8月中旬〜、シャイン8月下旬〜）。",
+      "relatedArticleSlugs": [
+        "budougari-yamanashi-kodzure"
+      ]
+    },
+    {
+      "name": "久保田園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "甲州市",
+      "note": "勝沼ぶどう郷駅から無料送迎（要電話）のぶどう園。量り売り（甲州800円/kg、巨峰・シャイン2,500円/kg等）で入園・試食無料、予約不要。バリアフリートイレと子ども用補助便座、屋根付き休憩所120席。",
+      "budget": "low",
+      "officialUrl": "https://kubotaen.net/",
+      "reservation": "none",
+      "nearestStation": "勝沼ぶどう郷",
+      "facilities": {
+        "bathroom": "yes",
+        "note": "公式に「バリアフリートイレとお子様用設備」「子供用補助便座」「屋根あり休憩所（120席以上）」の記載（2026-09-18確認）。授乳室・ベビーカー可否は記載なし。"
+      },
+      "accessTips": "JR勝沼ぶどう郷駅より無料送迎（駅から電話）。8:30〜16:00。第一駐車場30台。畑内は傘がさせないためカッパ（100円）。",
+      "hiddenTip": "食べ放題ではなく量り売り。品種は月別（7〜8月サニールージュ、9月甲斐キング等、10月甲州）。ペット同伴可。",
+      "relatedArticleSlugs": [
+        "budougari-yamanashi-kodzure"
+      ]
+    },
+    {
+      "name": "古寿園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "甲州市",
+      "note": "勝沼のぶどう園。40分食べ放題は年齢別料金が明確（Aコース大人1,000円・小学生800円・幼児500円、シャインは大人2,800円・小学生2,200円・幼児1,500円）。ぶどう棚は約160cmと公式明記。予約不要。",
+      "budget": "low",
+      "officialUrl": "https://www.kojuen-budou.com/",
+      "reservation": "none",
+      "nearestStation": "勝沼ぶどう郷",
+      "pricing": {
+        "adult": "1,000円〜（Aコース40分）／シャイン2,800円",
+        "elementary": "800円〜／シャイン2,200円",
+        "preschool": "500円〜／シャイン1,500円"
+      },
+      "facilities": {
+        "note": "公式に「ぶどう棚は160センチ程度」「畑の中では傘がさせません」「雨天中止あり」「ガーデンレストランは屋根あり」の記載。トイレ等は記載なし（2026-09-18確認）。"
+      },
+      "accessTips": "勝沼ぶどう郷駅からタクシー5分（徒歩は約30分）。9:00〜17:00、不定休。大型駐車場あり（バス5台）。",
+      "hiddenTip": "品種カレンダー: デラウェア7月下旬〜8月下旬、シャインマスカット8月下旬〜9月下旬。犬連れ歓迎。",
+      "relatedArticleSlugs": [
+        "budougari-yamanashi-kodzure"
+      ]
+    },
+    {
+      "name": "一古園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "甲州市",
+      "note": "勝沼のぶどう園。45分食べ放題でシャインマスカットは大人2,500円・小学生以下2,000円、巨峰1,500円（4才〜小学生1,000円）。駐車場は乗用車150台・大型バス40台。子連れ設備の公式記載なし。",
+      "budget": "low",
+      "officialUrl": "https://www.ichikoen.com/",
+      "nearestStation": "勝沼ぶどう郷",
+      "pricing": {
+        "adult": "2,500円（シャイン45分食べ放題）",
+        "elementary": "2,000円（小学生以下）"
+      },
+      "accessTips": "勝沼ICより約10分、勝沼ぶどう郷駅よりタクシー約7〜8分。8:30〜17:00。クーラーボックス・リュック等の持込はご遠慮（公式）。",
+      "hiddenTip": "収穫時期一覧: 巨峰8月中旬〜10月上旬、甲州10月上旬〜11月上旬。BBQ等の食事は要予約。",
+      "relatedArticleSlugs": [
+        "budougari-yamanashi-kodzure"
+      ]
+    },
+    {
+      "name": "ヤマサ農園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "甲州市",
+      "note": "勝沼ぶどう郷駅から徒歩約10分で行けるぶどう園。量り売り（デラウェア1,000円/kg、巨峰1,500円/kg等）で予約不要。公式に「傾斜の畑はベビーカー・車椅子には難しい」と明記。雨具は無料貸出。",
+      "budget": "low",
+      "officialUrl": "http://www.budou-yamasa.com/",
+      "reservation": "none",
+      "nearestStation": "勝沼ぶどう郷",
+      "walkMinutes": 10,
+      "facilities": {
+        "note": "公式に「トイレは畑にはなく売店にあり」「傾斜の畑はベビーカー・車椅子の方は難しい」「畑は蚊がいます」の記載（2026-09-18確認）。"
+      },
+      "accessTips": "JR勝沼ぶどう郷駅より徒歩約10分。8:00〜18:00（シーズン時）。駐車場は最大10台ほど＋近隣無料駐車場。",
+      "hiddenTip": "26品種の一覧あり（デラウェア8月上旬〜、シャイン9月上旬〜、甲州10月中旬〜）。5名以上は事前連絡推奨。",
+      "relatedArticleSlugs": [
+        "budougari-yamanashi-kodzure"
+      ]
+    },
+    {
+      "name": "ぶどうの国のくぬぎ園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "甲州市",
+      "note": "ぶどうの丘頂上にあるぶどう園。食べ放題はなく量り売り（1kg1,100〜2,500円）、入園無料、予約なし。簡易トイレあり。シャインマスカット区画には屋根がない。市営無料駐車場を案内。",
+      "budget": "low",
+      "officialUrl": "http://farm-kunugi.com/",
+      "reservation": "none",
+      "facilities": {
+        "note": "公式に「簡易トイレ有り」「シャインマスカット狩りの部分には屋根がありません」の記載（2026-09-18確認）。おむつ替え・授乳室・ベビーカー可否は記載なし。"
+      },
+      "accessTips": "車のみの案内（駅・徒歩の公式記載なし）。8:00〜16:30頃。",
+      "hiddenTip": "2026年は7月18日オープン、9月中旬〜下旬は在庫次第で終了（9月17日時点「9/19迄は営業できそう」）。ペット入園可。",
+      "relatedArticleSlugs": [
+        "budougari-yamanashi-kodzure"
+      ]
+    },
+    {
+      "name": "ツチと実",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "山梨市",
+      "note": "牧丘町のぶどう園。巨峰・シャインマスカット狩りは時間無制限で、ネット予約が割安（巨峰 大人3,000円／予約なし3,500円、小学生2,000円／2,500円）。ハウス内で雨天も可。公式に「駐車場はバリアフリー非対応」と明記。",
+      "budget": "low",
+      "officialUrl": "https://budou-nashi.com/",
+      "reservation": "recommended",
+      "pricing": {
+        "adult": "3,000円（巨峰・ネット予約）／シャイン+巨峰3,600円",
+        "elementary": "2,000円（ネット予約）"
+      },
+      "facilities": {
+        "note": "公式に「トイレ2か所＋遠い畑は簡易トイレ」「ビニールハウス内で楽しめる」「駐車場はバリアフリー非対応」の記載（2026-09-18確認）。"
+      },
+      "accessTips": "勝沼ICから車15〜20分、塩山駅からタクシー15〜20分（公式サイト内で表記に幅あり）。8:30〜18:00。無料駐車場（第一〜第八）。",
+      "hiddenTip": "巨峰・シャイン狩りは9月5日〜10月12日と料金ページに記載（年の表記なし。出発前に公式で確認）。魚つかみ取りは着替え必須。",
+      "relatedArticleSlugs": [
+        "budougari-yamanashi-kodzure"
+      ]
+    },
+    {
+      "name": "まるいわぶどう園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "笛吹市",
+      "note": "八代町のぶどう園。食べ放題＋お土産付きで大人（小学生以上）2,300円税込、小学生未満は食べ放題可でお土産なし。子連れ設備・営業時間の公式記載なし。無料駐車場あり。",
+      "budget": "low",
+      "officialUrl": "http://maruiwafarm.jp/",
+      "pricing": {
+        "adult": "2,300円（食べ放題＋お土産・税込）"
+      },
+      "accessTips": "一宮御坂IC・甲府南ICから約10分、石和温泉駅からタクシー約15分。",
+      "hiddenTip": "公式サイトの会期は「2025年8月上旬〜10月上旬」のまま（2026年は未発表）。品種カレンダー: デラウェア7月、シャイン8〜9月、甲州9〜11月。",
+      "relatedArticleSlugs": [
+        "budougari-yamanashi-kodzure"
+      ]
+    },
+    {
+      "name": "芳王遊覧園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "甲州市",
+      "note": "勝沼のぶどう園。コース制でBコース（もぎ取り食べ放題）600円〜Dコース（土産付）2,000円、年齢区分なし。トイレ・車椅子トイレあり、ベビーシート付トイレは無しと公式明記。駅から送迎あり（要電話）。",
+      "budget": "low",
+      "officialUrl": "https://www.houou-yuranen.com/",
+      "nearestStation": "勝沼ぶどう郷",
+      "facilities": {
+        "bathroom": "yes",
+        "diaperChange": "no",
+        "note": "公式に「トイレ貸出 有り」「車椅子トイレ 有り」「ベビーシート付トイレ 無し」「車椅子で果物狩り 可」の記載（2026-09-18確認）。"
+      },
+      "accessTips": "勝沼ICから車5分。勝沼ぶどう郷駅まで送迎あり（要電話）。9時〜17時30分、ぶどう狩り時期は基本無休。駐車場30台・バス3台。",
+      "hiddenTip": "例年の開始〜終了は8月1日〜10月30日（年つきの発表なし）。品種カレンダーにシャインマスカットの記載なし（デラウェア7月下旬〜、巨峰8月下旬〜、甲斐路9月中旬〜）。",
+      "relatedArticleSlugs": [
+        "budougari-yamanashi-kodzure"
+      ]
+    }
+  ],
+  "saitama": [
+    {
+      "name": "保谷農園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "飯能市",
+      "note": "梨狩りとぶどう狩りの量り売り農園（梨1kg800円、ぶどう1kg1,800円）。バリアフリートイレとおむつ交換台があり、車いす・ベビーカーで楽に移動できる多段栽培と公式に明記。車のみ（入間IC約20分）。駐車場約10台。",
+      "budget": "low",
+      "officialUrl": "https://www.hoya-fruitsfarm.jp/",
+      "reservation": "recommended",
+      "facilities": {
+        "bathroom": "yes",
+        "diaperChange": "yes",
+        "note": "公式に「バリアフリーのトイレと、赤ちゃんのおむつ交換台をご用意」「車いすやベビーカーでもらくらく移動」「多段栽培で小さな子どもでも手が届く」の記載（2026-09-18確認）。授乳室・雨天対応は記載なし。"
+      },
+      "accessTips": "圏央道入間ICから約20分、狭山日高ICから約10分（最寄り駅の公式記載なし）。9:00〜14:00、不定休。予約はじゃらんのみ（予約なし来園も可、土日祝は予約客優先）。",
+      "hiddenTip": "梨は喜水・幸水8月上旬〜下旬、彩玉・豊水8月中旬〜9月下旬、新興10月上旬〜下旬。ぶどうは巨峰8月上旬〜、シャインマスカット8月下旬〜9月中旬、ピオーネ9月上旬〜下旬（公式・年の表記なし）。",
+      "relatedArticleSlugs": [
+        "budougari-kanto-kodzure",
+        "nashigari-chiba-kodzure"
+      ]
+    },
+    {
+      "name": "宮信観光ぶどう園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "狭山市",
+      "note": "駅から歩けるぶどう園（武蔵藤沢駅東口徒歩約15分）。食べ放題は時間無制限で中学生以上3,000円・小学生2,000円・幼稚園児1,500円・幼児500円（税込）。完全予約制（じゃらん）。ベビーカー可、授乳室・ベビーベッドはなしと公式明記。雨天も営業。",
+      "budget": "low",
+      "officialUrl": "https://miyashin.com/",
+      "reservation": "required",
+      "nearestStation": "武蔵藤沢",
+      "walkMinutes": 15,
+      "pricing": {
+        "adult": "3,000円（中学生以上・食べ放題）",
+        "elementary": "2,000円",
+        "preschool": "1,500円（幼稚園児）",
+        "infant": "500円（幼児）"
+      },
+      "facilities": {
+        "bathroom": "yes",
+        "nursingRoom": "no",
+        "note": "公式FAQに「多目的のお手洗い」「ベビーカーの利用可」「授乳室・ベビーベッドはございません」「雨天時も営業（畑に雨除けなし、直売所エリアに休憩所）」の記載（2026-09-18確認）。ゴザ無料貸出。"
+      },
+      "accessTips": "西武池袋線武蔵藤沢駅東口徒歩約15分・西武新宿線入曽駅西口徒歩約18分。車は圏央道入間ICより約20分。無料駐車場あり（大型バス不可）。9:00〜17:00（受付16:30）、火曜休。",
+      "hiddenTip": "2026年は9月5日から開催（公式・8月26日付で期間延長の告知）。品種はシャインマスカット・巨峰・シナノスマイル・クインニーナ・BKシードレス・ゴルビー。収穫物の持ち帰りは不可（直売所で購入）。",
+      "relatedArticleSlugs": [
+        "budougari-kanto-kodzure"
+      ]
+    },
+    {
+      "name": "たいら栗園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "飯能市",
+      "note": "東吾野駅から徒歩15分の栗拾い園。2026年は9月10日〜9月27日（延長後・公式）。入園料は税込で小学生以上800円・小学生未満300円・1歳未満無料、持ち帰り150円/100g。洋式ウォシュレットのトイレ、多目的トイレにおむつ交換台、駐車場40台無料。個人は予約不要、火曜休。",
+      "budget": "low",
+      "officialUrl": "https://tairakurien.com/",
+      "reservation": "none",
+      "nearestStation": "東吾野",
+      "walkMinutes": 15,
+      "pricing": {
+        "adult": "800円（小学生以上・税込）",
+        "preschool": "300円（小学生未満）",
+        "infant": "無料（1歳未満）"
+      },
+      "facilities": {
+        "bathroom": "yes",
+        "diaperChange": "yes",
+        "note": "公式FAQに「男性も女性も洋式のウォシュレット付き」「おむつ交換台は園内の多目的トイレ内」の記載（2026-09-18確認）。授乳室・雨天対応は記載なし。"
+      },
+      "accessTips": "西武池袋線東吾野駅から徒歩15分。車は狭山・日高ICから30分。栗ひろいは9:30〜15:00（受付14:00終了）、火曜・年末年始休。",
+      "hiddenTip": "帽子（イガ対策）・虫よけ・軍手を公式が推奨。手提げ・リュックの持込禁止。BBQ・ピザガーデンも併設。",
+      "relatedArticleSlugs": [
+        "kurihiroi-kanto-kodzure"
+      ]
+    },
+    {
+      "name": "恵農園・伊奈ファーム",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "伊奈町",
+      "note": "蓮田駅から歩ける芋掘り農園。10月上旬〜11月上旬（なくなり次第終了）、1株300円で年齢区分なし。紅はるかがメインでシルクスイートも。シャベル・長靴・軍手のレンタルがあり手ぶらOK、ベビーカーで来園可と公式明記。トイレ男女別2台。",
+      "budget": "low",
+      "officialUrl": "https://meguminouen.com/pages/potato_digging",
+      "reservation": "recommended",
+      "nearestStation": "蓮田",
+      "walkMinutes": 15,
+      "pricing": {
+        "adult": "1株300円（区分なし）"
+      },
+      "facilities": {
+        "bathroom": "yes",
+        "note": "公式の農園ガイドに「トイレ男女別2台」「ベビーカーで来園可」「畝間1m」の記載（2026-09-18確認）。おむつ替え・授乳室は記載なし。"
+      },
+      "accessTips": "JR宇都宮線蓮田駅西口から直進15分ほど。車は蓮田スマートICから約15分、砂利駐車場13台。受付9:00〜17:00。",
+      "hiddenTip": "予約はBookThatAppの申込リンクから。ペットは要連絡。",
+      "relatedArticleSlugs": [
+        "imohori-chiba-saitama-ibaraki-kodzure"
+      ]
+    }
+  ],
+  "chiba": [
+    {
+      "name": "小川園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "鎌ケ谷市",
+      "note": "ぶどう狩りと梨狩りの食べ放題農園。時間無制限で大人・小学生以上1,600円・幼児（3歳〜）800円、現金のみ。予約不可。駐車場約50台、水洗トイレ（洋式3）、手洗い・足洗い場、テーブル・椅子あり。車のみの案内。",
+      "budget": "low",
+      "officialUrl": "https://ogawaen.shopinfo.jp/",
+      "reservation": "none",
+      "pricing": {
+        "adult": "1,600円（食べ放題・小学生以上）",
+        "preschool": "800円（3歳〜）"
+      },
+      "facilities": {
+        "bathroom": "yes",
+        "note": "公式の施設案内に「水洗トイレ、男女別（洋式×3）」「手洗い・足洗い場」「園内にテーブル・椅子」「飲食物持込自由」の記載（2026-09-18確認）。おむつ替え・授乳室・ベビーカー可否は記載なし。"
+      },
+      "accessTips": "車のみの案内（「セブンイレブンくぬぎ山4丁目店」で検索と公式）。平日10:00〜16:00・土日祝9:00〜16:00（15:00受付終了）。全会計が現金のみ。",
+      "hiddenTip": "2026年（令和8年度）のぶどう狩りは9月18日時点でOPEN（公式の日次告知）。狩れる品種は日ごとに告知される。虫除け・ウェットティッシュ・タオルが必需品と公式。",
+      "relatedArticleSlugs": [
+        "budougari-kanto-kodzure",
+        "nashigari-chiba-kodzure"
+      ]
+    },
+    {
+      "name": "小川梨園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "白井市",
+      "note": "駅からバスで行ける梨園（新鎌ヶ谷駅からバス「第二小学校」下車徒歩1分）。入園料200円・3歳未満無料＋収穫分の量り売り。要予約。園内にトイレの貸出なしと公式明記。雨天も可（傘不可・カッパ）。駐車場約15台。",
+      "budget": "low",
+      "officialUrl": "http://ogawa-nashien.com/",
+      "reservation": "required",
+      "nearestStation": "新鎌ヶ谷",
+      "pricing": {
+        "adult": "入園料200円＋収穫分（幸水1kg900円・豊水/新高850円）",
+        "infant": "入園無料（3歳未満）"
+      },
+      "facilities": {
+        "bathroom": "no",
+        "note": "公式に「お手洗いは貸し出ししておりません」（事前に済ませて来園）の記載。雨天は梨狩り可だが傘は使えず雨カッパ着用（2026-09-18確認）。おむつ替え・授乳室・ベビーカー可否は記載なし。"
+      },
+      "accessTips": "北総線・新京成線・東武アーバンパークライン新鎌ヶ谷駅からバス（第二工場団地行き／白井車庫行き）「第二小学校」下車徒歩1分。10:00〜16:00（8〜10月のみ営業）。当日キャンセルは入園料100%。",
+      "hiddenTip": "2026年の梨狩りは8月15日から（公式）。幸水8月上旬〜下旬、豊水8月下旬〜9月中旬、新高9月中旬〜10月上旬。マイバッグ持参、大きいバッグ・傘は園内持込不可。",
+      "relatedArticleSlugs": [
+        "nashigari-chiba-kodzure"
+      ]
+    },
+    {
+      "name": "高代園観光梨園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "松戸市",
+      "note": "入園無料・予約不要の梨もぎ取り園（1kg950円）。例年8月中旬〜10月上旬、天候にかかわらず毎日10:00〜17:00（臨時休園あり）。JR松戸駅東口からバス「梨香台団地」終点徒歩5分。子連れ設備の公式記載なし。",
+      "budget": "low",
+      "officialUrl": "http://www.takadai.ne.jp/",
+      "reservation": "none",
+      "nearestStation": "松戸",
+      "pricing": {
+        "adult": "もぎ取り1kg950円（入園無料）"
+      },
+      "accessTips": "JR松戸駅東口からバス「梨香台団地」行き終点徒歩5分・駐車場あり（関連ページの記載。本体サイトには駅・駐車場の記載なし）。10:00〜17:00。",
+      "hiddenTip": "2026年は8月20日時点で開園中（公式）。幸水8月中旬〜下旬、豊水8月下旬〜9月上中旬、菊水・新星・二十世紀9月上旬〜中旬、新高9月中旬〜10月上旬。もぎ取った梨の発送は不可。",
+      "relatedArticleSlugs": [
+        "nashigari-chiba-kodzure"
+      ]
+    },
+    {
+      "name": "成田ファームランド",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "成田市",
+      "note": "さつまいも掘り（1株480円・3株1,200円、大人子ども同額、幼児は1株無料）の完全予約制農園。品種はシルクスイート→紅はるか。千葉交通バス「赤坂台」徒歩5分。駐車場計100台。荒天は臨時休業あり。",
+      "budget": "low",
+      "officialUrl": "https://narita-farmland.com/tsumu-hori/satsumaimo/",
+      "reservation": "required",
+      "pricing": {
+        "adult": "1株480円／3株1,200円（大人・子ども同額）",
+        "infant": "幼児は1株無料"
+      },
+      "facilities": {
+        "note": "トイレ・おむつ替え・授乳室・ベビーカー可否は公式記載なし（2026-09-18確認）。軍手は受付で販売。"
+      },
+      "accessTips": "千葉交通バス「赤坂台」停留所より徒歩5分。車は成田空港から約20分。収穫体験は10:00〜、受付は10〜15時の毎正時、不定休。",
+      "hiddenTip": "芋掘りの平日限定割引（大人・子ども1,000円・3株/1時間）は「10/12〜11月中旬（予定）」。体験自体は「毎年9月〜11月頃まで」と併記（公式）。持ち物: 軍手・長靴・スコップ。",
+      "relatedArticleSlugs": [
+        "imohori-chiba-saitama-ibaraki-kodzure"
+      ]
+    }
+  ],
+  "ibaraki": [
+    {
+      "name": "さんろく果樹園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "かすみがうら市",
+      "note": "巨峰の1時間食べ放題（大人1,500円・3歳以上1,100円）。2026年は8月22日開園、9月21日頃まで開園予定（公式・天候次第）。予約不可の先着順。土浦駅から関鉄バス「下佐谷」徒歩3分。休憩所は屋根あり、トイレ洋式2。雨天は屋根がなく難しい。",
+      "budget": "low",
+      "officialUrl": "https://www.sanroku-kajuen.jp/",
+      "reservation": "none",
+      "nearestStation": "土浦",
+      "pricing": {
+        "adult": "1,500円（中学生以上・1時間食べ放題）",
+        "preschool": "1,100円（3歳以上）"
+      },
+      "facilities": {
+        "bathroom": "yes",
+        "note": "公式の施設案内に「駐車場 大型3台・乗用50台」「休憩所 屋根有」「トイレ 洋式2」の記載（2026-09-18確認）。おむつ替え・授乳室・ベビーカー可否は記載なし。飲み物販売なし（持参推奨）。"
+      },
+      "accessTips": "JR常磐線土浦駅から関鉄バス（柿岡車庫行）30〜40分「下佐谷」下車徒歩3分。車は千代田石岡ICから約15分。受付9〜15時。満車時は約1時間待ち。",
+      "hiddenTip": "ぶどう狩りは巨峰のみ。直売はシャインマスカット（9月中下旬〜）など。持ち帰りは別途1,500円/kg。園内禁煙、ペット入園可（自己責任）。",
+      "relatedArticleSlugs": [
+        "budougari-kanto-kodzure"
+      ]
+    },
+    {
+      "name": "岡野果樹園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "かすみがうら市",
+      "note": "梨狩り1時間食べ放題（おとな800円・小学生600円・幼児3歳以上400円）と、時間指定制のシャインマスカット狩り、栗拾いがある果樹園。個人は予約不要。月曜定休。売店・駐車場あり。ペット可。子連れ設備の公式記載なし。",
+      "budget": "low",
+      "officialUrl": "https://ibaraki.okanokajuen.com/",
+      "reservation": "none",
+      "pricing": {
+        "adult": "800円（梨狩り1時間食べ放題・中学生以上）",
+        "elementary": "600円",
+        "preschool": "400円（3歳以上）"
+      },
+      "accessTips": "「都心から約1時間」のみ公式記載（駅・車ルートの詳細なし）。火〜金10:00〜16:00、土日祝9:00〜17:00、月曜定休（祝日の場合は火曜）。くだもの狩りの最終受付15:00。",
+      "hiddenTip": "梨の品種: なつしずく8月上旬、幸水8月上〜中旬、豊水8月下旬〜、恵水・あきづき9月上旬〜、かおり9月中旬〜、新高9月下旬〜、甘太10月上旬〜、にっこり10月中旬〜、秋峰11月上旬〜。2026年9月4日の公式お知らせでシャインマスカット狩り開催（10時/11時/13時/14時の時間指定）。栗拾いは運動靴・長靴推奨。",
+      "relatedArticleSlugs": [
+        "budougari-kanto-kodzure",
+        "nashigari-chiba-kodzure",
+        "kurihiroi-kanto-kodzure"
+      ]
+    },
+    {
+      "name": "福田グリーン農園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "かすみがうら市",
+      "note": "栗拾い（早生は9月12日〜、目安9月上旬〜10月中旬）の農園。入園料は大人550円・小学生440円・園児3歳以上330円（税別）、持ち帰り1,500円/kg。車いす対応の水洗トイレ、駐車場50台。車のみ（土浦北ICから約6km）。",
+      "budget": "low",
+      "officialUrl": "http://fukuda-green.jp/",
+      "pricing": {
+        "adult": "550円（税別・栗拾い入園料）",
+        "elementary": "440円",
+        "preschool": "330円（3歳以上）"
+      },
+      "facilities": {
+        "bathroom": "yes",
+        "note": "公式の施設案内に「車いすでも使用できるトイレ」「水洗式身障者トイレ完備」「乗用車50台・バス6台」の記載（2026-09-18確認）。おむつ替え・授乳室・雨天対応は記載なし。"
+      },
+      "accessTips": "土浦北I.C.より約6km、千代田・石岡I.C.より約4.5km（車のみ）。10:00〜16:00（晩秋は早閉め）、最終受付15:00。",
+      "hiddenTip": "早生（丹沢・国見・大峰）9月上旬〜、中生（筑波・銀寄・紫峰）9月下旬〜、晩生（石鎚・岸根）10月上旬〜。焼き栗700円/200g。",
+      "relatedArticleSlugs": [
+        "kurihiroi-kanto-kodzure"
+      ]
+    },
+    {
+      "name": "かねこ農園",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "笠間市",
+      "note": "栗の産地・笠間の完全予約制の栗拾い（大人550円・小人440円・幼児3歳以上330円、持ち帰り1kg2,000円）。2026年は9月26日から観光果樹園を開園（10/17・18休）。体験場所は予約確定後に案内。トイレなし・雨天中止と公式明記。",
+      "budget": "low",
+      "officialUrl": "https://kaneko-kuri.jp/",
+      "reservation": "required",
+      "pricing": {
+        "adult": "550円（栗拾い体験）",
+        "elementary": "440円（小〜高）",
+        "preschool": "330円（3歳以上）"
+      },
+      "facilities": {
+        "bathroom": "no",
+        "note": "公式に「トイレはございませんので、済ませてからお越しください」「雨天は中止」「蚊が多い」「稀にイガや栗が落ちてくる」の記載（2026-09-18確認）。"
+      },
+      "accessTips": "体験場所は予約確定時に連絡（住所非公開）。個人は体験予約フォーム、平日は10名以上の団体のみ。",
+      "hiddenTip": "長袖長ズボン・帽子・軍手、長靴か厚底スニーカー推奨（公式）。",
+      "relatedArticleSlugs": [
+        "kurihiroi-kanto-kodzure"
+      ]
+    },
+    {
+      "name": "らぽっぽ なめがたファーマーズヴィレッジ",
+      "category": "seasonal",
+      "place": "outdoor",
+      "ages": [
+        "2-3",
+        "4-6"
+      ],
+      "city": "行方市",
+      "note": "さつまいものテーマパークで、2026年10月10日〜11月23日に「大さつまいも掘りフェスティバル」を開催（公式）。いばらきゴールド＆安納芋の30分掘り放題・2株持ち帰り・やきいも試食で3,300円/名（平日は事前予約制）。授乳室あり。車のみ（東京駅から約80分）。",
+      "budget": "low",
+      "officialUrl": "https://www.namegata-fv.jp/event/satsumaimo-festival-2026/",
+      "reservation": "recommended",
+      "pricing": {
+        "adult": "3,300円/名（30分掘り放題・2株・やきいも試食）"
+      },
+      "facilities": {
+        "nursingRoom": "yes",
+        "note": "公式FAQに「授乳室は1階インフォメーション横」「車いす貸出3台」「ベビーカーの貸出はなし（持参は可）」の記載（2026-09-18確認）。トイレ・おむつ替えの個別記載・駐車台数は記載なし。"
+      },
+      "accessTips": "車のみの案内（東京駅から約80分・成田空港から約50分）。バス路線「鹿行北浦ライン」は2026年3月31日で運行終了。予約・キャンセルは前々日17時まで。",
+      "hiddenTip": "ガチャで選ぶランダム収穫体験（1株・2,000円/名）は11月7日〜23日の土日祝限定。雨天は室内実施または中止（中止時のみ返金）。",
+      "relatedArticleSlugs": [
+        "imohori-chiba-saitama-ibaraki-kodzure"
       ]
     }
   ]

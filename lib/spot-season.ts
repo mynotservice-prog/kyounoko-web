@@ -133,6 +133,23 @@ export const SPOT_SEASON: Record<string, SpotSeasonWindow[]> = {
       note: '場所は西口近く。おむつ規定と水深は公式サイトにテキスト記載がない。確認記録は lib/spot-facilities.ts からの移送。',
     },
   ],
+  // ───────── 2026年秋・果物狩り／栗拾い／芋掘り ─────────
+  // 2026-09-18 に各園公式サイトの生HTMLで確認した年つきの会期のみ。終了日が公式未記載の園は載せない。
+  '理想園': [
+    { activity: 'budougari', opensAt: '2026-08-20', closesAt: '2026-10-10', source: '理想園公式サイト', checkedAt: '2026-09-18' },
+  ],
+  'あすなろ園': [
+    { activity: 'budougari', opensAt: '2026-07-17', closesAt: '2026-11-15', source: 'あすなろ園公式サイト', checkedAt: '2026-09-18' },
+  ],
+  'さんろく果樹園': [
+    { activity: 'budougari', opensAt: '2026-08-22', closesAt: '2026-09-21', source: 'さんろく果樹園公式サイト', checkedAt: '2026-09-18' },
+  ],
+  'らぽっぽ なめがたファーマーズヴィレッジ': [
+    { activity: 'imohori', opensAt: '2026-10-10', closesAt: '2026-11-23', source: 'なめがたファーマーズヴィレッジ公式サイト', checkedAt: '2026-09-18' },
+  ],
+  'たいら栗園': [
+    { activity: 'kurihiroi', opensAt: '2026-09-10', closesAt: '2026-09-27', hours: '9:30〜15:00（受付14:00まで）', closedDays: ['火曜'], source: 'たいら栗園公式サイト', checkedAt: '2026-09-18', note: '2026年は延長後の会期。持ち帰りは150円/100g。' },
+  ],
 };
 
 /** 'YYYY-MM-DD' → Date（UTC正午基準。タイムゾーンで日付がずれないように）。 */
