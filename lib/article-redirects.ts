@@ -95,4 +95,18 @@ export const ARTICLE_REDIRECTS: { from: string; to: string }[] = [
   { from: 'tasogarenaki-toha', to: 'tasogare-naki-toha' },
   //   kosodate-shien-toha(90日imp<300) → kosodate-shien-center-toha(1,367imp/pos5-9) ※同一タイトルの重複。サービス内容の例の表を移植 2026-09-05
   { from: 'kosodate-shien-toha', to: 'kosodate-shien-center-toha' },
+  // 2026-09-18 おうち遊び刷新: 2026-04公開の家遊び〇選12本は2か月表示0で noindex 済み（2026-06-25）。
+  //   「年齢×困りごと」型の新記事（lib/home-play.ts のDBカード付き）へ301統合し、内部リンクを集約する。
+  //   eigo-asobi-ie-de-4-6sai（英語）と oboniito-asobi-kodomo-3sai（帰省）は主題が違うため据え置き。
+  { from: '0-1sai-ie-asobi-10pun', to: '0sai-asobikata-getsurei-yaranakute-ii' },
+  { from: 'akachan-15pun-asobi', to: '0sai-asobikata-getsurei-yaranakute-ii' },
+  { from: '1-2sai-oshaberi-sukunai-asobi', to: '1sai-ouchi-asobi-getsurei' },
+  { from: 'chiiku-asobi-ie-de-10', to: '1sai-ouchi-asobi-getsurei' },
+  { from: 'monte-asobi-nenrei-betsu', to: '1sai-ouchi-asobi-getsurei' },
+  { from: 'amenohi-ie-asobi-2-3sai', to: 'ame-tsuzuki-2sai-ichinichi' },
+  { from: 'amenohi-ie-asobi-4-6sai', to: 'ame-tsuzuki-2sai-ichinichi' },
+  { from: 'youtube-kawari-ie-asobi', to: 'ame-tsuzuki-2sai-ichinichi' },
+  { from: 'iyaiya-shuuchu-asobi', to: '2sai-ouchi-asobi-tsukaresaseru' },
+  { from: 'kodomo-hitori-asobi-anzen-kankyou', to: 'shitanoko-junyu-uenoko-asobi' },
+  { from: 'kyoudai-asobi-nenrei-sa', to: 'shitanoko-junyu-uenoko-asobi' },
 ];
