@@ -41,7 +41,30 @@ export type SeasonActivity =
   | 'imohori'      // 芋掘り・収穫体験（秋）
   | 'playpark'     // プレーパーク・冒険遊び場（通年・開催曜日が限られる）
   | 'sori'         // ソリゲレンデ・雪遊び（冬）
-  | 'mushitori';   // 昆虫採集が公式に認められている場所（夏）
+  | 'mushitori'    // 昆虫採集が公式に認められている場所（夏）
+  | 'budougari'    // ぶどう狩り（8〜10月。デラウェア・巨峰・シャインマスカット等は note に品種カレンダーを書く）
+  | 'nashigari'    // 梨狩り（8〜10月）
+  | 'kurihiroi'    // 栗拾い（9〜10月）
+  | 'ichigogari'   // いちご狩り（12〜5月）
+  | 'ringogari'    // りんご狩り（9〜11月）
+  | 'mikangari';   // みかん狩り（10〜12月）
+
+/** 表示用ラベル。spot ページの会期ブロックと title の語彙に使う（検索語と一致させる）。 */
+export const SEASON_ACTIVITY_LABEL: Record<SeasonActivity, string> = {
+  mizuasobi: '水遊び・じゃぶじゃぶ池',
+  pool: '屋外プール',
+  'onsui-pool': '温水プール',
+  imohori: '芋掘り',
+  playpark: 'プレーパーク',
+  sori: 'そり・雪遊び',
+  mushitori: '虫取り',
+  budougari: 'ぶどう狩り',
+  nashigari: '梨狩り',
+  kurihiroi: '栗拾い',
+  ichigogari: 'いちご狩り',
+  ringogari: 'りんご狩り',
+  mikangari: 'みかん狩り',
+};
 
 export type SpotSeasonWindow = {
   activity: SeasonActivity;

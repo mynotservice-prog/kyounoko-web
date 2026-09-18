@@ -6,6 +6,8 @@ import { V2Frame } from '@/components/v2/V2Frame';
 import { V2Img } from '@/components/v2/V2Base';
 import { V2Icon } from '@/components/v2/V2Icon';
 import { KkSectionTitle } from '@/components/kk/KkSectionTitle';
+import { SpotSeasonBox } from '@/components/spot/SpotSeasonBox';
+import { SEASON_ACTIVITY_LABEL, getSeasonState } from '@/lib/spot-season';
 import { KkFacilityGrid, type KkFacilityItem } from '@/components/kk/KkFacilityGrid';
 import { KkInfoTable, type KkInfoRow } from '@/components/kk/KkInfoTable';
 import { KkIcon, type KkIconName } from '@/components/kk/KkIcon';
@@ -116,6 +118,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // 公園の遊具情報（SPOT_PLAYGROUND）があるときは「遊具」を先頭に出す。
   // 「〇〇公園 遊具」は施設名クエリとして継続的に表示が出ている（2026-09-12 実測）。
   if (spot.playground) facilityHints.unshift([true, '遊具・アスレチック']);
+  // 季節営業（SPOT_SEASON）があるときは、その活動名（ぶどう狩り・じゃぶじゃぶ池 等）を先頭に出す。
+  // 「〇〇農園 ぶどう狩り」「〇〇公園 じゃぶじゃぶ池」は施設名クエリの主形（2026-09-18 実測: 舎人公園58,029表示）。
+  // 年が古い会期（stale-year）は語彙にしない（今年もやっているか未確認のため）。
+  const seasonWords = Array.from(
+    new Set((spot.season ?? []).filter((w) => getSeasonState(w) !== 'stale-year').map((w) => SEASON_ACTIVITY_LABEL[w.activity])),
+  );
+  for (const w of seasonWords.reverse()) facilityHints.unshift([true, w]);
   // 検索需要の大きい順に最大3語。SERPの表示幅（約30字）に収めるため name が長い面では出さない。
   const facilityWords = facilityHints.filter(([hit]) => hit).map(([, w]) => w).slice(0, 3);
   const titleSuffix =
@@ -705,6 +714,9 @@ export default async function SpotPage({ params }: Props) {
             </div>
           </div>
         )}
+
+        {/* 季節営業の会期（SPOT_SEASON: 年つき。lib/spot-season.ts）。「〇〇農園 ぶどう狩り」クエリに答える節。 */}
+        {spot.season && spot.season.length > 0 && <SpotSeasonBox spotName={spot.name} windows={spot.season} />}
 
         {/* 遊具・アスレチック（SPOT_PLAYGROUND: 公式確認の本文。lib/spot-playground.ts）。
             「〇〇公園 遊具」クエリに答える節。事実はデータ層からのみ描画し、ここに直書きしない。 */}
