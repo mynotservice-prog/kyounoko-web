@@ -22,6 +22,7 @@ import { ReservationCTA } from '@/components/article/ReservationCTA';
 import { getSpotReservationOffer } from '@/lib/reservation-cta';
 import { KkIcon, type KkIconName } from '@/components/kk/KkIcon';
 import { SavePlanButton } from './SavePlanButton';
+import { optimizedImgAttrs } from '@/lib/img-optimize';
 
 function spotFacets(s: Spot): string[] {
   const f: string[] = [];
@@ -167,7 +168,7 @@ function SlotCard({ slot }: { slot: OutingSlot }) {
       {photo && (
         <span className="td3-slot-photo">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={photo} alt="" loading="lazy" decoding="async" />
+          <img {...optimizedImgAttrs(photo)} alt="" loading="lazy" decoding="async" />
         </span>
       )}
       {meta && <p className="td3-slot-desc">{meta}</p>}

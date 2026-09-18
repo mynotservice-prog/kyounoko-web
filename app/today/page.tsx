@@ -41,6 +41,7 @@ import { ShareBar } from '@/components/article/ShareBar';
 import { AffiliateLink } from '@/components/affiliate/AffiliateLink';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { articleCategoryLabel } from '@/lib/article-categories';
+import { optimizedImgAttrs } from '@/lib/img-optimize';
 
 export const revalidate = 3600;
 
@@ -317,7 +318,7 @@ function AnswerCard({ answer, featured = false }: { answer: TodayAnswerResult; f
       <div className="alt-card-thumb" style={{ overflow: 'hidden' }}>
         {answer.hero && (
           <img
-            src={answer.hero}
+            {...optimizedImgAttrs(answer.hero)}
             alt={answer.title}
             loading="lazy"
             decoding="async"

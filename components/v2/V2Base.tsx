@@ -2,6 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
+import { optimizedImgAttrs } from '@/lib/img-optimize';
 import Link from 'next/link';
 import { V2Icon, V2_ACCENT } from './V2Icon';
 
@@ -115,16 +116,22 @@ type ImgProps = {
    * 既定は lazy のまま（カード一覧などページ内に大量に並ぶ用途がほとんどのため）。
    */
   priority?: boolean;
+  /** 表示幅のヒント（Blob画像の srcset 選択用）。未指定時は priority=ヒーロー幅／それ以外=カード幅 */
+  sizes?: string;
 };
-export function V2Img({ src, seed, alt = '', className, style, priority }: ImgProps) {
+export function V2Img({ src, seed, alt = '', className, style, priority, sizes }: ImgProps) {
   const fallback = KK_PLACEHOLDER;
   const [actual, setActual] = React.useState(src || fallback);
   React.useEffect(() => {
     setActual(src || fallback);
   }, [src, fallback]);
+  const attrs =
+    actual === fallback
+      ? { src: actual }
+      : optimizedImgAttrs(actual, sizes ?? (priority ? '(max-width: 1100px) 100vw, 1100px' : undefined));
   return (
     <img
-      src={actual}
+      {...attrs}
       alt={alt}
       loading={priority ? 'eager' : 'lazy'}
       fetchPriority={priority ? 'high' : undefined}
