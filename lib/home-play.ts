@@ -74,7 +74,7 @@ export type HomePlay = {
   evidence: Evidence[];
   needs: PlayNeed[];
   /** 運営者の実写（/img/ouchi/…）。無ければ省略 */
-  photo?: string;
+  photos?: string[];
   /** 運営者の体験談（年齢・持った時間・親の位置・失敗）。無ければ省略 */
   story?: string;
 };
@@ -260,6 +260,9 @@ export const HOME_PLAYS: HomePlay[] = [
       { media: 'instagram', label: '@renamama_asobi 34万再生／@yuri_chiiku 29万再生' },
       { media: 'youtube', label: 'おりん「ムニムニバッグ」300万回' },
     ],
+    photos: ['/img/ouchi/sensory-bag-1.webp', '/img/ouchi/sensory-bag-2.webp'],
+    story:
+      '1歳6か月で約10分。私は隣で夕飯の献立をスマホで考えながら見守れました。袋を1枚だけにしたら少し液漏れしたので、次から二重にしています。',
     needs: ['parentLying', 'siblingFeeding', 'alone10', 'evening'],
   },
   {
@@ -343,6 +346,9 @@ export const HOME_PLAYS: HomePlay[] = [
       { media: 'articles', label: '上位記事15本に登場（0〜2歳で最多クラス）' },
       { media: 'qa', label: '知恵袋の雨の日スレッド8件中4件で回答者が推奨' },
     ],
+    photos: ['/img/ouchi/shinbun-biribiri-1.webp', '/img/ouchi/shinbun-biribiri-2.webp'],
+    story:
+      '1歳8か月で約25分もちました。私は横のダイニングで洗濯物を畳みながら見守れました。細かく破りすぎて、最後の片付けに思ったより時間がかかったので、次は大きめに破る係を親がやるつもりです。',
     needs: ['tired', 'rainy', 'bored', 'evening'],
   },
   {
@@ -372,6 +378,9 @@ export const HOME_PLAYS: HomePlay[] = [
       { media: 'instagram', label: 'トピック「ぽっとん落とし」リール2.8万本／@macopi_asobi 140万再生／@mukun_mama 82万再生／@shachi_asobi 57万再生／@rii_asobi 35万再生' },
       { media: 'articles', label: '上位記事7本に登場' },
     ],
+    photos: ['/img/ouchi/potton-otoshi-1.webp', '/img/ouchi/potton-otoshi-2.webp'],
+    story:
+      '1歳3か月で約15分。私はすぐ横でコーヒーを飲みながら見守っていました。最初は穴を小さく作りすぎて入らず、すぐ怒ってしまったので、穴は落とす物より一回り大きくしてからが本番でした。',
     needs: ['alone10', 'siblingFeeding', 'parentLying', 'evening'],
   },
   {
@@ -423,6 +432,9 @@ export const HOME_PLAYS: HomePlay[] = [
       { media: 'youtube', label: '八朗園長TV「養生テープだけで出来るおもちゃ」39万回「10秒で出来る」' },
       { media: 'articles', label: '上位記事4本に登場（テープ迷路・ジャンプチャレンジ）' },
     ],
+    photos: ['/img/ouchi/yojo-tape-michi-1.webp', '/img/ouchi/yojo-tape-michi-2.webp'],
+    story:
+      '1歳11か月で約15分。私はキッチンで簡単な片付けをしながら時々声をかけていました。最初に道を複雑にしすぎたので、一本の線にした方がよく遊びました。',
     needs: ['tired', 'rainy', 'alone10', 'bored'],
   },
   {
@@ -450,6 +462,9 @@ export const HOME_PLAYS: HomePlay[] = [
       { media: 'articles', label: '上位記事15本に登場' },
       { media: 'qa', label: '知恵袋「体力が余って寝ない」スレッドで風船ラリーが推奨' },
     ],
+    photos: ['/img/ouchi/balloon-rally-1.webp', '/img/ouchi/balloon-rally-2.webp'],
+    story:
+      '風船ベッドは1歳9か月で約20分。私はソファに座って休みながら見守れました。パンパンに膨らませすぎて1個割れ、びっくりして一度中断したので、少しゆるめに膨らませるのがコツでした。',
     needs: ['tired', 'rainy', 'bored'],
   },
   {
@@ -482,6 +497,9 @@ export const HOME_PLAYS: HomePlay[] = [
       { media: 'instagram', label: '@marika_0asobi 室内運動9選 120万再生' },
       { media: 'qa', label: '知恵袋「雨で体力が余る」スレッドで布団トンネル・お馬さんが推奨' },
     ],
+    photos: ['/img/ouchi/futon-yama-1.webp', '/img/ouchi/futon-yama-2.webp'],
+    story:
+      '1歳10か月で約30分。私は同じ部屋で布団を畳みながら見守っていました。山を高くしすぎると登れず、低めに作り直したら夢中になりました。',
     needs: ['tired', 'rainy', 'bored'],
   },
   {
@@ -538,6 +556,9 @@ export const HOME_PLAYS: HomePlay[] = [
       { media: 'articles', label: '「2歳を疲れさせる」上位2本で「大人は座ったまま」の遊びとして紹介' },
       { media: 'instagram', label: 'ほいくる「かげ絵」ほか影絵投稿多数' },
     ],
+    photos: ['/img/ouchi/kaichudento-oikake-1.webp', '/img/ouchi/kaichudento-oikake-2.webp'],
+    story:
+      '1歳8か月で約10分。私はソファに座ってライトを動かす係でした。速く動かしすぎると見失ってしまい、ゆっくり動かした方が楽しそうに追いかけました。',
     needs: ['tired', 'evening', 'parentLying', 'rainy'],
   },
   {
@@ -564,6 +585,9 @@ export const HOME_PLAYS: HomePlay[] = [
       { media: 'instagram', label: '@shizuku_asobi ストロー毛糸釣り 88万再生／@chiii_asobi ロケット 6.2万再生' },
       { media: 'articles', label: '上位記事6本（タワー・ボウリング・ロケット）' },
     ],
+    photos: ['/img/ouchi/kamikoppu-1.webp', '/img/ouchi/kamikoppu-2.webp'],
+    story:
+      '紙コップ積みは1歳7か月で約20分。私は隣で食器を片付けながら見守っていました。積むより壊す方に夢中で、きれいなタワーを作ろうとした親の方が必死になってしまいました。',
     needs: ['alone10', 'siblingFeeding', 'bored', 'evening'],
   },
   {
@@ -648,6 +672,9 @@ export const HOME_PLAYS: HomePlay[] = [
       { media: 'youtube', label: 'りぃ「捨ててたアレで作るきらきら氷」571万回／おりん「ひんやり氷遊び」201万回「材料2つ準備5分」' },
       { media: 'instagram', label: '@kana_mama1010 氷遊び3選 2.3万再生ほか多数' },
     ],
+    photos: ['/img/ouchi/kori-asobi-1.webp', '/img/ouchi/kori-asobi-2.webp'],
+    story:
+      '卵パックの色氷は1歳11か月で約15分。私は横でタオルを用意しながら見守っていました。室内でそのまま遊ばせたら床がかなり濡れたので、次から大きめのトレーを敷いています。',
     needs: ['rainy', 'bored', 'alone10'],
   },
   {
@@ -723,6 +750,9 @@ export const HOME_PLAYS: HomePlay[] = [
       { media: 'youtube', label: 'Yahoo!ニュース ぽん先生（保育士）「お風呂で遊べる家にある4つのもの」', url: 'https://news.yahoo.co.jp/expert/articles/b778d0fce491314545aaa6f696b9a1e2119d3d69' },
       { media: 'articles', label: '「お風呂遊び 家にあるもの」上位9本に登場（溺水の注意を書いた記事は0本）' },
     ],
+    photos: ['/img/ouchi/ofuro-rejibukuro-1.webp', '/img/ouchi/ofuro-rejibukuro-2.webp'],
+    story:
+      '1歳10か月で約25分。私は浴室内で髪や体を洗いながら一緒に見守っていました。ペットボトルの穴を大きくしすぎて水が一瞬でなくなったので、穴は小さめの方が長く遊べました。',
     needs: ['bath', 'evening', 'tired'],
   },
   {

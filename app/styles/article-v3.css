@@ -1164,3 +1164,8 @@
 @media (max-width: 480px) {
   .article-v3 .av3-play-spec { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+.article-v3 .av3-play-photo-grid { display: grid; gap: 8px; }
+.article-v3 .av3-play-photo-grid.n2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.article-v3 .av3-play-photo-grid img { width: 100%; height: auto; border-radius: var(--kk-r-img); display: block; }
+@media (max-width: 480px) { .article-v3 .av3-play-photo-grid.n2 { grid-template-columns: 1fr; } }

@@ -83,10 +83,14 @@ export function HomePlayCards({ plays }: { plays: HomePlay[] }) {
             {p.itemsFrom === 'home+100' && <span className="av3-play-items-note">（100均で足すと広がる）</span>}
           </p>
 
-          {p.photo && (
+          {p.photos && p.photos.length > 0 && (
             <figure className="av3-play-photo">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={p.photo} alt={`${p.name}（運営者撮影）`} loading="lazy" />
+              <div className={`av3-play-photo-grid n${Math.min(p.photos.length, 2)}`}>
+                {p.photos.slice(0, 2).map((src, j) => (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img key={src} src={src} alt={`${p.name}（運営者撮影 ${j + 1}）`} loading="lazy" width={1200} height={900} />
+                ))}
+              </div>
               <figcaption>運営者宅で撮影</figcaption>
             </figure>
           )}
