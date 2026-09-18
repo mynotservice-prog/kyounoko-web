@@ -511,6 +511,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       // 秋の味覚狩り面。イベント（会期もの）ではなく永続スポットとして持つ。
       // 芋掘りは毎年の季節営業なので、年ごとの日付ではなく「毎年◯月〜◯月」で表現する。
       name: '荒幡農園（川越いもほり）', category: 'seasonal', place: 'outdoor', ages: ['2-3', '4-6'], city: '川越市',
+      relatedArticleSlugs: ['imohori-chiba-saitama-ibaraki-kodzure'],
       note: '毎年9月中旬〜11月上旬に営業する川越のいも掘り農園。10:00〜16:00で、予約制なので当日行って掘れないということがない。', budget: 'low',
       reservation: 'required',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -519,6 +520,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '小松沢レジャー農園', category: 'seasonal', place: 'mixed', ages: ['2-3', '4-6'], city: '横瀬町',
+      relatedArticleSlugs: ['imohori-chiba-saitama-ibaraki-kodzure'],
       note: '秩父・横瀬町の観光農園。椎茸狩りが通年の体験メニューとして用意されていて、他の収穫体験と組み合わせられる。', budget: 'low',
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -527,6 +529,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '@FARM（アット・ファーム）', category: 'seasonal', place: 'mixed', ages: ['2-3', '4-6'], city: '川越市',
+      relatedArticleSlugs: ['imohori-chiba-saitama-ibaraki-kodzure'],
       note: '川越でいちご狩り・さつまいも掘りができる農園。直売所とカフェが併設されていて、収穫のあとそのまま食事にできる。', budget: 'low',
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -680,6 +683,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
       {
       name: '東京ドイツ村', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '袖ケ浦市', note: '冬のイルミネーションが関東有数', budget: 'mid',
+      relatedArticleSlugs: ['imohori-chiba-saitama-ibaraki-kodzure'],
       pricing: { adult: '1,000円（入園・車1台）', elementary: '500円', preschool: '無料（4歳未満）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
@@ -2085,8 +2089,9 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       // 通年で味覚狩りが切り替わる永続スポット（いちご→さつまいも→みかん）。
       // 会期ものではないのでイベントのように失効しない。
       name: '津久井浜観光農園', category: 'seasonal', place: 'outdoor', ages: ['2-3', '4-6'], city: '横須賀市',
+      relatedArticleSlugs: ['imohori-kanagawa-kodzure'],
       note: '季節で「いちご狩り・さつまいも掘り・みかん狩り」が切り替わる横須賀の観光農園。同じ場所で年に3回ちがう収穫体験ができる。', budget: 'low',
-      pricing: { adult: 'いちご狩り 2,000〜2,500円／みかん狩り 1,200円', elementary: 'みかん狩り 600円（3歳以上）', preschool: 'みかん狩り 600円（3歳以上）', infant: 'さつまいも掘りは1人5株 1,500円' },
+      pricing: { adult: 'さつまいも掘り 5株1,500円（JAよこすか葉山公式・2026-09-18確認）／いちご狩り 2,000〜2,500円／みかん狩り 1,200円', elementary: 'みかん狩り 600円（3歳以上）', preschool: 'みかん狩り 600円（3歳以上）', infant: 'さつまいも掘りは1人5株 1,500円' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'いちご狩りは1/1〜5/5で4/6以降は2,000円に値下がり。さつまいも掘り・みかん狩りは秋。行く前に事務局 046-849-4506（平日9〜15時）で今どれをやっているか確認するのが確実',
@@ -2814,6 +2819,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       // 6月初旬〜12月初旬の半年、9種類の果物狩りがリレーする長期営業の農園。
       // 単発イベントではないので失効しない、季節をまたぐ資産。
       name: '中込農園', category: 'seasonal', place: 'outdoor', ages: ['2-3', '4-6'], city: '南アルプス市',
+      relatedArticleSlugs: ['budougari-yamanashi-kodzure'],
       note: '約11ヘクタールの観光果樹園。6月初旬〜12月初旬の半年間、9種類の果物狩りが入れ替わりで楽しめる。', budget: 'low',
       reservation: 'required',
       crowdLevel: { weekday: 'low', holiday: 'mid' },

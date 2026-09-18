@@ -17,6 +17,11 @@ export type AreaArticleLink = { href: string; label: string; title: string };
 const SERIES: Array<{ re: RegExp; label: string; order: number }> = [
   { re: /^shitsunai-asobi-/, label: '室内遊び場', order: 0 },
   { re: /^mizuasobi-/, label: '水遊び・じゃぶじゃぶ池', order: 1 },
+  { re: /^budougari-/, label: 'ぶどう狩り', order: 2 },
+  { re: /^nashigari-/, label: '梨狩り', order: 3 },
+  { re: /^imohori-/, label: '芋掘り', order: 4 },
+  { re: /^kurihiroi-/, label: '栗拾い', order: 5 },
+  { re: /^ichigogari-/, label: 'いちご狩り', order: 6 },
 ];
 
 let cache: Map<string, AreaArticleLink[]> | null = null;
