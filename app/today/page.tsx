@@ -458,6 +458,47 @@ export default async function TodayPage({ searchParams }: Props) {
     });
   }
 
+  // 今日のおうち遊びの節。答え(top)が無い日でも家遊びは出す（平日の家遊び需要の受け口）。
+  const homePlaysSection =
+    homePlays.length > 0 ? (
+<section className="home-plays">
+      <h3 className="today-section-title">
+        <span className="today-section-eyebrow">Play at home</span>
+        今日のおうち遊び（家にあるもので）
+      </h3>
+      <p className="today-section-lede">
+        準備の分数・片付けの分数・親が座っていられるかまで書いた遊びを、日替わりで3つ。
+      </p>
+      <ul className="home-play-list">
+        {homePlays.map(({ play, article }) => {
+          const inner = (
+            <>
+              <div className="home-play-title">{play.name}</div>
+              <div className="home-play-summary">{play.summary}</div>
+              <div className="home-play-meta">
+                <span>{formatAgeMonths(play.ageMonths)}</span>
+                <span>準備{play.prepMin}分・片付け{play.cleanupMin}分</span>
+                <span>{POSTURE_LABEL[play.parentPosture]}</span>
+                <span>{ENERGY_LABEL[play.energy]}</span>
+              </div>
+            </>
+          );
+          return (
+            <li key={play.id}>
+              {article ? (
+                <Link href={`/article/${article.slug}#play-${play.id}`} className="home-play-card">
+                  {inner}
+                </Link>
+              ) : (
+                <div className="home-play-card">{inner}</div>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+    ) : null;
+
   const activeChips: { key: string; label: string }[] = [];
   if (query.age) activeChips.push({ key: 'age', label: labelForValue('age', query.age) });
   if (query.area && query.area !== 'all') activeChips.push({ key: 'area', label: getAreaName(query.area) });
@@ -800,6 +841,7 @@ export default async function TodayPage({ searchParams }: Props) {
               </p>
             </div>
           ) : !top && !isEatOutside ? (
+            <>
             <div style={{ padding: '32px 0 8px', textAlign: 'center', color: 'var(--ink-sub)' }}>
               <p style={{ marginBottom: 8, fontSize: 15 }}>
                 今日の条件に合う答えは、まだ準備中です。
@@ -808,6 +850,8 @@ export default async function TodayPage({ searchParams }: Props) {
                 上の<strong style={{ color: 'var(--ink)' }}>駅</strong>をえらび直すか、天気・年齢を変えてみてください。
               </p>
             </div>
+            {homePlaysSection}
+            </>
           ) : (
             <>
               {fallbackUsed && !isEatOutside && (
@@ -901,45 +945,7 @@ export default async function TodayPage({ searchParams }: Props) {
                 </section>
               )}
 
-              {/* 今日のおうち遊び（家にあるもの・日替わり3件）。lib/home-play.ts 駆動 */}
-              {homePlays.length > 0 && (
-                <section className="home-plays">
-                  <h3 className="today-section-title">
-                    <span className="today-section-eyebrow">Play at home</span>
-                    今日のおうち遊び（家にあるもので）
-                  </h3>
-                  <p className="today-section-lede">
-                    準備の分数・片付けの分数・親が座っていられるかまで書いた遊びを、日替わりで3つ。
-                  </p>
-                  <ul className="home-play-list">
-                    {homePlays.map(({ play, article }) => {
-                      const inner = (
-                        <>
-                          <div className="home-play-title">{play.name}</div>
-                          <div className="home-play-summary">{play.summary}</div>
-                          <div className="home-play-meta">
-                            <span>{formatAgeMonths(play.ageMonths)}</span>
-                            <span>準備{play.prepMin}分・片付け{play.cleanupMin}分</span>
-                            <span>{POSTURE_LABEL[play.parentPosture]}</span>
-                            <span>{ENERGY_LABEL[play.energy]}</span>
-                          </div>
-                        </>
-                      );
-                      return (
-                        <li key={play.id}>
-                          {article ? (
-                            <Link href={`/article/${article.slug}#play-${play.id}`} className="home-play-card">
-                              {inner}
-                            </Link>
-                          ) : (
-                            <div className="home-play-card">{inner}</div>
-                          )}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </section>
-              )}
+              {homePlaysSection}
 
               {/* 「家で過ごす」モードの1日通しプラン（朝食〜夕食） */}
               {dayPlan && (

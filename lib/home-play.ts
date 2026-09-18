@@ -1018,9 +1018,16 @@ export function pickHomePlaysForToday(opts: {
     return true;
   });
   if (pool.length === 0) pool = HOME_PLAYS.filter((p) => !months || overlaps(p.ageMonths, months));
-  // 日付シードで回転させ、動（energy 3）と静（energy 1）が混ざるように並べ替える
+  // 0〜1歳は「体力発散」より寝転び・座りの遊びが主。ヘトヘト系と1歳以降専用の遊びは外す
+  if (ageRange === '0-1') {
+    const calm = pool.filter((p) => p.energy < 3 && p.ageMonths.min <= 12);
+    if (calm.length >= 3) pool = calm;
+  }
+  // 根拠（SNS再生数・上位記事・Q&A）が厚い順に並べ、上位を日付シードで回転させる。
+  // 動（energy 3）と静（energy 1）が混ざるように先頭2件を選ぶ。
+  pool = [...pool].sort((a, b) => b.evidence.length - a.evidence.length);
   const seed = Number(`${date.getFullYear()}${String(date.getMonth() + 1).padStart(2, '0')}${String(date.getDate()).padStart(2, '0')}`);
-  const rotated = pool.map((p, i) => ({ p, k: (i * 7919 + seed) % pool.length })).sort((a, b) => a.k - b.k).map((x) => x.p);
+  const rotated = pool.map((p, i) => ({ p, k: (i * 7 + seed) % pool.length })).sort((a, b) => a.k - b.k).map((x) => x.p);
   const out: HomePlay[] = [];
   const active = rotated.find((p) => p.energy === 3);
   const calm = rotated.find((p) => p.energy === 1);
