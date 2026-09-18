@@ -66,13 +66,13 @@ Q&Aで雨続きの相談に多いのが「午前に公園へ行けないと昼�
 
 ## 3日分のローテーション表
 
-午前は「動」、午後は「静」、夕方はお風呂で切り替えて寝転んで絵本、という骨組みは3日とも同じです。変えるのは物の使い方だけです。
+午前は「動」、午後は「静」、夕方はお風呂で切り替えて寝転んで絵本、という骨組みは3日とも同じです。物ごとの遊び方の変化は上の表のとおりです。
 
 | 日 | 午前（動） | 午後（静） | 夕方（切り替え） | 仕込み |
 | --- | --- | --- | --- | --- |
-| 1日目 | [室内運動](#play-shitsunai-undo)15分→[新聞紙](#play-shinbun-biribiri)20分（破る・雪・玉入れ） | [片栗粉スライム](#play-katakuriko-slime)20分（トレーで） | [お風呂でレジ袋の水](#play-ofuro-rejibukuro)→[絵本](#play-ehon-netenpo) | なし |
-| 2日目 | [布団の山](#play-futon-yama)20分→[段ボールトンネル](#play-danboru-tunnel)15分 | [小麦粉粘土](#play-komugiko-nendo)20分（作る・ちぎる・へび） | [ペットボトルシャワー](#play-ofuro-rejibukuro)→[絵本](#play-ehon-netenpo) | 朝に段ボール5分。夜に[寒天](#play-kanten-hakkutsu)を5分で仕込み冷蔵庫へ。粘土は塩多めで冷蔵 |
-| 3日目 | [動画体操を一緒に](#play-youtube-issho)15分→[新聞紙](#play-shinbun-biribiri)20分（島ジャンプ→テント）→[段ボール](#play-danboru-tunnel)15分（電車→ハウス） | [寒天の発掘](#play-kanten-hakkutsu)20分→[粘土の残りで型抜き](#play-komugiko-nendo)20分 | [タオルくらげ](#play-ofuro-rejibukuro)→[絵本](#play-ehon-netenpo) | なし（前夜の寒天だけ） |
+| 1日目 | [室内運動](#play-shitsunai-undo)15分→[新聞紙](#play-shinbun-biribiri)20分 | [片栗粉スライム](#play-katakuriko-slime)20分 | [お風呂でレジ袋の水](#play-ofuro-rejibukuro)→[絵本](#play-ehon-netenpo) | なし |
+| 2日目 | [布団の山](#play-futon-yama)20分→[段ボールトンネル](#play-danboru-tunnel)15分 | [小麦粉粘土](#play-komugiko-nendo)20分 | [ペットボトルシャワー](#play-ofuro-rejibukuro)→[絵本](#play-ehon-netenpo) | 朝に段ボール5分。夜に[寒天](#play-kanten-hakkutsu)を5分で仕込み冷蔵庫へ。粘土は塩多めで冷蔵 |
+| 3日目 | [動画体操を一緒に](#play-youtube-issho)15分→[新聞紙](#play-shinbun-biribiri)20分→[段ボール](#play-danboru-tunnel)15分 | [寒天の発掘](#play-kanten-hakkutsu)20分→[粘土の残りで型抜き](#play-komugiko-nendo)20分 | [タオルくらげ](#play-ofuro-rejibukuro)→[絵本](#play-ehon-netenpo) | なし（前夜の寒天だけ） |
 
 4日目以降は1日目に戻ります。片栗粉は袋に入れる版に、新聞紙は大玉から、と入口だけ変えればもう1周回せます。
 
@@ -144,6 +144,23 @@ A. 日本小児科医会の目安は「2歳までは控える」「1日2時間�
 
 ### Q. 雨が3日続いてネタが尽きました。同じ物で何度も遊べますか？
 A. 遊べます。新聞紙は破る→大玉→島ジャンプ→テント、段ボールはトンネル→電車→ハウス、片栗粉はトレー→袋→風船、粘土は作る→残りで型抜き、と各カードの「飽きたら」欄の順に変えれば3日回ります。上の「3日分のローテーション表」にまとめています。
+
+### Q. 雨の日に2歳を家で疲れさせるには、どの遊びが効きますか？
+A. 道具ゼロの[室内運動（動物歩き）](#play-shitsunai-undo)と[布団の山](#play-futon-yama)が最も体を使います。ただし雨続きの日は「疲れさせる」より「午前に動いて午後は静かにする」並びのほうが昼寝と夜の寝つきが崩れにくく、Q&Aサイトの回答でも「指先遊びの日ほどよく寝る」が支持されています。疲れさせることが主目的の日の組み方は[2歳を家の中で疲れさせる遊び](/article/2sai-ouchi-asobi-tsukaresaseru)にまとめています。
+
+## 出典
+
+- 出典：[日本玩具協会 STガイドライン改定（小麦粘土）](https://toys.or.jp/st/pdf/2018/st_guide_tuika_20181003.pdf)
+- 出典：[消費者庁 子ども安全メール Vol.544（子どもの口の大きさ）](https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20210225/)
+- 出典：[こども家庭庁 事故防止ハンドブック（転落・転倒）](https://www.cfa.go.jp/policies/child-safety-actions/handbook/content-4)
+- 出典：[消費者庁 子ども安全メール Vol.640（就寝時の窒息）](https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20231102/)
+- 出典：[こども家庭庁「水の危険は近くにあります」](https://www.cfa.go.jp/policies/child-safety-actions/cases/dekisui)
+- 出典：[消費者庁「入浴中の事故に注意」](https://www.caa.go.jp/policies/policy/consumer_safety/caution/caution_052)
+- 出典：[消費者庁 子ども安全メール Vol.566（窒息時の応急処置）](https://www.caa.go.jp/policies/policy/consumer_safety/child/project_001/mail/20210928/)
+- 出典：[厚生労働省「平成22年乳幼児身体発育調査」（首すわり・寝返り・ひとりすわり・はいはい・つかまり立ち・ひとり歩きの90%通過月齢）](https://www.mhlw.go.jp/toukei/list/dl/73-22-01.pdf)
+- 出典：[こども家庭庁 母子健康手帳 府令様式（令和8年4月施行）](https://www.cfa.go.jp/policies/boshihoken/techou)
+- 出典：[厚生労働省 保育所保育指針](https://www.mhlw.go.jp/web/t_doc?dataId=00010450&dataType=0&pageNo=1)
+- 出典：Yahoo!知恵袋ほかQ&Aサイトの質問・回答（2026年9月時点で確認。本文中で「Q&Aサイトの回答」と示した箇所）
 
 ## 関連記事
 
