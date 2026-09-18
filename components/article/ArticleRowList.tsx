@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { KkIcon } from '@/components/kk/KkIcon';
+import { optimizedImgAttrs } from '@/lib/img-optimize';
 
 export type ArticleRowItem = {
   href: string;
@@ -24,7 +25,7 @@ export function ArticleRowList({ items, label }: { items: ArticleRowItem[]; labe
         <Link key={it.href + i} href={it.href} className="kk-row av3-row">
           {it.img && (
             <span className="kk-row-thumb">
-              <img src={it.img} alt={it.imgAlt ?? it.title} loading="lazy" decoding="async" />
+              <img {...optimizedImgAttrs(it.img, '160px')} alt={it.imgAlt ?? it.title} loading="lazy" decoding="async" />
             </span>
           )}
           <span className="kk-row-body">

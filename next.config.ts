@@ -19,7 +19,14 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'images.microcms-assets.io',
       },
+      // 管理画面アップロード画像（Vercel Blob）。原寸 2〜4MB のため lib/img-optimize.ts で縮小配信する。
+      {
+        protocol: 'https',
+        hostname: '*.public.blob.vercel-storage.com',
+      },
     ],
+    // Blob の URL はアップロード毎にタイムスタンプ付きで不変なので長期キャッシュでよい（変換回数も抑える）。
+    minimumCacheTTL: 2678400,
   },
 
   async headers() {

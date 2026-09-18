@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import sharp from 'sharp';
 import { isBlobConfigured, uploadToBlob } from '@/lib/blob-store';
 
 /**
@@ -21,7 +22,11 @@ import { isBlobConfigured, uploadToBlob } from '@/lib/blob-store';
  * セキュリティ:
  *  - 開発時は無条件許可、本番は ALLOW_ADMIN_EDIT≠'0' + /admin 配下 referer
  *  - slug は [a-z0-9_-]+、画像のみ（webp/jpeg/png/gif）、最大 5MB
+ *
+ * 圧縮（2026-09-18）: 原寸 2〜4MB の PNG/JPG がそのまま配信されページが重かったため、
+ *  gif 以外は長辺1600px・webp(q82) に変換してから保存する（口コミ写真と同じ処理）。
  */
+export const runtime = 'nodejs';
 
 const ROOT = process.cwd();
 // 保存先ディレクトリ。呼び出し元が dir で指定（spot編集=spots / 記事・プランのhero=articles / イベント=events）。
@@ -104,17 +109,34 @@ export async function POST(req: NextRequest) {
   if (!isValidSlug(slug)) return NextResponse.json({ error: 'invalid slug' }, { status: 400 });
   if (!(file instanceof File)) return NextResponse.json({ error: 'file required' }, { status: 400 });
 
-  const ext = EXT_BY_TYPE[file.type];
-  if (!ext) {
+  if (!EXT_BY_TYPE[file.type]) {
     return NextResponse.json(
       { error: '対応形式は webp / jpeg / png / gif です' },
       { status: 400 },
     );
   }
-  const buf = Buffer.from(await file.arrayBuffer());
-  if (buf.length === 0) return NextResponse.json({ error: 'empty file' }, { status: 400 });
-  if (buf.length > MAX_BYTES) {
+  const raw = Buffer.from(await file.arrayBuffer());
+  if (raw.length === 0) return NextResponse.json({ error: 'empty file' }, { status: 400 });
+  if (raw.length > MAX_BYTES) {
     return NextResponse.json({ error: '画像は5MBまでです' }, { status: 400 });
+  }
+
+  // gif はアニメーションを壊さないよう原本のまま。それ以外は縮小＋webp化（EXIFも除去される）。
+  let buf = raw;
+  let ext = EXT_BY_TYPE[file.type];
+  let contentType = file.type;
+  if (file.type !== 'image/gif') {
+    try {
+      buf = await sharp(raw)
+        .rotate()
+        .resize({ width: 1600, height: 1600, fit: 'inside', withoutEnlargement: true })
+        .webp({ quality: 82 })
+        .toBuffer();
+      ext = 'webp';
+      contentType = 'image/webp';
+    } catch {
+      return NextResponse.json({ error: '画像の処理に失敗しました' }, { status: 400 });
+    }
   }
 
   // 衝突しないファイル名（slug + 短いタイムスタンプ）
@@ -126,7 +148,7 @@ export async function POST(req: NextRequest) {
 
   // Blob 設定時: Blob にアップロードして公開URLを返す（git commit不要・デプロイ不要）。
   if (isBlobConfigured()) {
-    const url = await uploadToBlob(`${dir}/${filename}`, buf, file.type);
+    const url = await uploadToBlob(`${dir}/${filename}`, buf, contentType);
     if (!url) return NextResponse.json({ error: 'blob upload failed' }, { status: 500 });
     return NextResponse.json({ ok: true, mode: 'blob', path: url });
   }
