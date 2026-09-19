@@ -79,6 +79,12 @@
   background: var(--kk-paper-deep);
 }
 .spot-v3 .sv3-hero-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* 画像全体を表示（切り取らない）。背面に同じ画像をぼかして敷き、余白を目立たせない */
+.spot-v3 .sv3-hero-img img.sv3-hero-backdrop {
+  position: absolute; inset: 0;
+  filter: blur(18px) brightness(.92); transform: scale(1.12);
+}
+.spot-v3 .sv3-hero-img img.sv3-hero-main { position: relative; object-fit: contain; }
 .spot-v3 .sv3-hero-credit {
   position: absolute; right: 7px; bottom: 7px; z-index: 2;
   padding: 2px 7px; border-radius: 3px;

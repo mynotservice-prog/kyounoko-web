@@ -515,7 +515,10 @@ export default async function SpotPage({ params }: Props) {
         {/* hero 画像（写真が色を持つ。軽い角丸だけで枠・影・オーバーレイはつけない。src は従来どおり） */}
         <div className="sv3-hero">
           <div className="sv3-hero-img">
-            <V2Img src={heroImg} seed={slug} alt={spot.name} priority />
+            {/* 画像は切らずに全体を見せる（contain）。余白は同じ画像のぼかしで埋める。
+                同じ src/srcset なのでダウンロードは1回・枠の比率も不変（CLSなし）。 */}
+            <V2Img src={heroImg} seed={slug} alt="" className="sv3-hero-backdrop" priority />
+            <V2Img src={heroImg} seed={slug} alt={spot.name} className="sv3-hero-main" priority />
             {/* §5-1: 画像の種別/出典（実在施設のAI偽写真の誤認を防ぐ / UGC昇格時はクレジット） */}
             {(heroNote.image || heroNote.credit) && (
               <span className="sv3-hero-credit">{heroNote.image ? '※イメージ' : heroNote.credit}</span>
