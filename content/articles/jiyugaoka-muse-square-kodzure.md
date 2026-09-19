@@ -7,8 +7,8 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-08-28'
 updatedAt: '2026-09-19'
-hero: /img/scenes/mallkids-02.webp
-heroAlt: 新しい商業施設で子どもと過ごす家族の様子（イラスト）
+hero: /photos/spot-jiyugaoka-muse-square-exterior-2026-09.webp
+heroAlt: 自由が丘駅前のJIYUGAOKA MUSE SQUARE（自由が丘 ミューズスクエア）の外観
 area: tokyo
 quickInfo:
   ageRanges:
