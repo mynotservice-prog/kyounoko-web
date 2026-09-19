@@ -350,7 +350,13 @@ export async function DELETE(req: NextRequest) {
   const map = await readArticleOverridesMap();
   const raw = map[slug];
   if (!raw) {
-    return NextResponse.json({ ok: true, flushed: false, note: 'KV override なし（既に md 正）' });
+    // KV に無くても unstable_cache（Vercel Data Cache・デプロイを跨いで残る）が古い上書きを
+    // 握っていることがある（2026-09-19 jiyugaoka-muse-square-kodzure で md 更新が出なかった）。
+    // ここでもキャッシュを捨てて、md を確実に正にする。
+    revalidateTag(ARTICLE_OVERRIDES_TAG);
+    revalidatePath(`/article/${slug}`);
+    await purgeCfUrls([`/article/${slug}`]);
+    return NextResponse.json({ ok: true, flushed: false, note: 'KV override なし（キャッシュを更新し md 正に揃えました）' });
   }
 
   // 1) KV 版（画像込みの最新）を md に書き戻す

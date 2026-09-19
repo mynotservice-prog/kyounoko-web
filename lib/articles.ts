@@ -970,7 +970,9 @@ export const getRuntimeArticleOverrides = unstable_cache(
     }
     return {};
   },
-  ['runtime-article-overrides'],
+  // キー名を v2 に更新（2026-09-19）: 旧キーのキャッシュが KV から消えた上書きを保持し続け、
+  // md 更新が本番に出なかったため。新キーは初回アクセスで KV を読み直す。
+  ['runtime-article-overrides-v2'],
   { tags: [ARTICLE_OVERRIDES_TAG] },
 );
 
