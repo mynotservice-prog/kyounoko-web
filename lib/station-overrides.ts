@@ -176,7 +176,7 @@ export const STATION_OVERRIDES: Record<string, StationOverride> = {
       {
         href: '/article/jiyugaoka-muse-square-kodzure',
         label: '自由が丘ミューズスクエア 子連れガイド',
-        value: '9/17開業・5階まるごと子育てフロア（開業前版）',
+        value: '9/17開業・授乳室/おむつ替えは5階・キッズメニューの店',
       },
     ],
   },
