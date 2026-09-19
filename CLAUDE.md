@@ -22,7 +22,8 @@
 
 ## 本番に出ない／変わらない罠
 
-- 記事mdは `git push` では本番に出ない（ignore-build）。正規手順は `./scripts/deploy-md.sh`（= `npm run deploy:md`。`--archive=tgz`・ビルド15〜18分なのでバックグラウンド実行）。**`vercel --prod` は作業ツリーをそのまま出す**ので、デプロイ前に `git status` を見る。`.vercelignore` を消さない（CLIは `.gitignore` を読まない）。
+- **main への push／マージでビルドが走るのは、コード・設定・`content/`（.md の新規も編集も）を変えたとき**。`docs/`・README・この CLAUDE.md だけの変更はビルドをスキップする（`scripts/vercel-ignore-build.sh` が正。main 以外のブランチはデプロイされない）。つまり**記事mdを main に入れる＝本番ビルド（15〜18分・Vercel費が発生）**。
+- CLIで明示デプロイするときは `./scripts/deploy-md.sh`（= `npm run deploy:md`。`--archive=tgz`・バックグラウンド実行）。**`vercel --prod` は作業ツリーをそのまま出す**ので、デプロイ前に `git status` を見る。`.vercelignore` を消さない（CLIは `.gitignore` を読まない）。
 - 記事・スポットの本文は **md／KV上書き／chain-facilities の3経路**。mdを直しても本番が変わらないときは `node scripts/kv-article-overrides.mjs --list`。スポット本文はKVが正で、override は消せない。
 - CloudflareのCDN TTLは24時間。パージは**本番の `POST /api/admin/purge-cf` が唯一動く経路**（1回最大200パス。ローカルのCFトークンはゾーンを見られず `scripts/cf-purge.mjs`／`npm run cf:purge` は通らない。手順は memory `kyounoko-cf-purge-via-prod-api-2026-08-07`）。確認はCFを通らないVercelデプロイURLで。**デプロイ待ちのURLポーリングはしない**（CFが404をキャッシュする）。
 - 301統合済みのslugで新記事を書くと到達不能になる（`lib/article-redirects.ts` を先に見る）。
