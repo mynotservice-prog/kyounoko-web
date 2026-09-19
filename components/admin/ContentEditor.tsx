@@ -129,19 +129,28 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
   // KV上書きを解除して md を正に戻す（DELETE /api/admin/edit-content）。
   // サーバ側は「KV版mdをファイルへ書き戻す → KV削除 → revalidate + CFパージ」を行う。
   // 破壊的（本番の配信ソースが切り替わる）なので確認ダイアログを挟む。
-  const onReleaseOverride = async () => {
-    const ok = window.confirm(
-      `【KV上書きを解除します】\n\n${slug}\n\n` +
-        '・現在KVにある内容を content/articles/*.md に書き戻します\n' +
-        '・その後KV上書きを削除し、以後この記事は md 編集が本番に反映されます\n' +
-        '・未保存の編集内容は反映されません（先に保存してください）\n\n実行しますか？',
-    );
+  // writeback=false: KV の内容を捨てて md をそのまま正にする（md 側が新しいとき用）。
+  // 書き戻し（GitHub commit）を経由しないので、GitHub トークン失効時でも動く。
+  const onReleaseOverride = async (writeback = true) => {
+    const ok = writeback
+      ? window.confirm(
+          `【KV上書きを解除します】\n\n${slug}\n\n` +
+            '・現在KVにある内容を content/articles/*.md に書き戻します\n' +
+            '・その後KV上書きを削除し、以後この記事は md 編集が本番に反映されます\n' +
+            '・未保存の編集内容は反映されません（先に保存してください）\n\n実行しますか？',
+        )
+      : window.confirm(
+          `【KVの内容を捨てて md を正にします】\n\n${slug}\n\n` +
+            '・KVにある内容は md に書き戻さず、削除します（KV側の編集は失われます）\n' +
+            '・本番は content/articles/*.md の内容に切り替わります\n' +
+            '・md の方が新しいと分かっているときだけ使ってください\n\n実行しますか？',
+        );
     if (!ok) return;
     setReleasing(true);
     setMessage(null);
     try {
       const res = await fetch(
-        `/api/admin/edit-content?kind=${kind}&slug=${encodeURIComponent(slug)}`,
+        `/api/admin/edit-content?kind=${kind}&slug=${encodeURIComponent(slug)}${writeback ? '' : '&writeback=0'}`,
         { method: 'DELETE' },
       );
       const data = await res.json();
@@ -263,7 +272,7 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
           </p>
           <button
             type="button"
-            onClick={onReleaseOverride}
+            onClick={() => onReleaseOverride(true)}
             disabled={releasing}
             style={{
               padding: '10px 14px',
@@ -281,6 +290,28 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
           </button>
           <p style={{ fontSize: 11, margin: '8px 0 0', opacity: 0.85 }}>
             解除すると、現在のKVの内容がそのまま md に書き戻されます（内容は失われません）。
+          </p>
+          <button
+            type="button"
+            onClick={() => onReleaseOverride(false)}
+            disabled={releasing}
+            style={{
+              marginTop: 12,
+              padding: '8px 12px',
+              fontSize: 12,
+              fontWeight: 700,
+              background: 'transparent',
+              color: 'var(--warn-fg)',
+              border: '1px dashed var(--warn-dot)',
+              borderRadius: 'var(--r-md)',
+              cursor: releasing ? 'wait' : 'pointer',
+              touchAction: 'manipulation',
+            }}
+          >
+            KVの内容を捨てて md を正にする
+          </button>
+          <p style={{ fontSize: 11, margin: '6px 0 0', opacity: 0.85 }}>
+            md の方が新しいとき用。KVの内容は書き戻さずに削除されます。
           </p>
         </div>
       )}
