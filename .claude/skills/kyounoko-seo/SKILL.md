@@ -7,6 +7,8 @@ description: kyounoko-web のデータ駆動SEO作業。GSC実データ分析→
 
 実データ（Google Search Console）から「いま効いていること」を読み取り、**勝っているページ・上位ページのパターンを横展開**して順位とCTRを伸ばすための手順と判断基準。憶測でなく必ずGSC実数で判断する。
 
+> **2026-09-19 追記**: 新規面・改稿・タイトル変更の「やる/やらない」の判断ゲートと、3事業共通の計器の罠、Google/AI検索の外部環境（FAQリッチリザルト終了・fan-out量産のスパム明記・Cloudflare AIボット設定の仕様変更・生成AIパフォーマンスレポート等）は、横断スキル `~/.claude/skills/search-growth/` が正。AI経由流入は `node ~/.claude/skills/geo-max/scripts/ai-referrals.mjs --site=kyounoko`（このrepoの `scripts/geo-ai-report.mjs` は参照元を完全一致で数えるため `openai`・`copilot.com` 名義を落として過小に出る）。このファイルはきょうのこ固有の手順を持つ。
+
 ## ⚠️ 記事を書く・書き換える前に必ず `docs/writing-rules.md` を読む
 
 **このファイルが無かったせいで、1,109本に同じ構造の誤りが入った。** 実在しない施設・架空の店名・
@@ -121,13 +123,23 @@ imp≥1,500 の98本を順位帯で平均すると、**7.5〜9位の帯は表25.
 
 ## 5. 編集と検証
 
+### ⚠️ 着手前にKV上書きの有無を判定する（2026-09-19/20に2回踏んだ）
+管理画面で一度でも保存した記事は KV `article:overrides` が残り、**md を直して main にマージしても本番はKV版を配信し続ける**（`lib/articles.ts` がKV優先）。ミューズスクエア・トフロム八重洲の2本で、更新が本番に出ないまま気づかずビルドを重ねた。
+
+1. **titleの一致で判定しない。** 管理画面保存版はtitleが.mdと同じことがある（トフロム八重洲がこれ）。**本文中の一意な文字列**（確認日・固有の数字・新設した見出し）を本番HTMLで grep する。ISRキャッシュに騙されないよう、確認は `x-vercel-cache: PRERENDER` が返る Vercel デプロイURL（`vercel ls` の最新Production）で行う。
+2. 上書きがあったら、**mdを書き換える前に**社長に解除を依頼する。md側が新しいときは管理画面の記事編集画面にある「**KVの内容を捨てて md を正にする**」（writeback=0・GitHub不使用）を押してもらう。**隣の「上書きを解除して md に戻す」は押さない**（KV版をGitHubへ書き戻す動作で、GITHUB_TOKENが2026-07から失効しているため500で失敗する）。
+3. 押したと言われたら**必ずログで成否を確認**する: `vercel logs --environment production --no-branch --since 30m -q edit-content -j` の `responseStatusCode`。
+4. 詳細は memory [[kyounoko-kv-override-blocks-md-2026-09-19]]。全体棚卸しは `node scripts/kv-article-overrides.mjs --list`（ローカルはKV資格情報が無く読めないので本番HTML照合で代用）。
+
 - 記事は `content/articles/<slug>.md`。frontmatter `title` が `<title>` と og/h1 を駆動。
 - 編集後、frontmatterが壊れていないか `gray-matter` でパース検証する。
 - タイトル変更は **既存記事の安全な改善**。大量編集時も before/after を提示してから適用。
 
 ## 6. デプロイ（記事md専用の正規手順）
 
-`content/articles/*.md` はビルド時バンドル。通常の git push は ignore-build でスキップされるため**本番に出ない**。
+`content/articles/*.md` はビルド時バンドル。
+
+> **2026-09-19 訂正**: 以前ここに「通常の git push は ignore-build でスキップされ本番に出ない」と書いてあったが、今は誤り。`scripts/vercel-ignore-build.sh` は **`content/` の .md 変更（新規・編集とも）でビルドを実行**し、スキップするのは docs/README 等の補助ファイルだけ（main 以外のブランチはデプロイされない）。main に記事mdを入れる＝本番ビルド。下の `deploy-md.sh` は CLI で明示デプロイしたいとき用。
 
 ```bash
 ./scripts/deploy-md.sh        # vercel --prod --force（フルビルド）→ Cloudflareパージ
