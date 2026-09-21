@@ -194,6 +194,18 @@ macaroni・朝時間.jp・note・個人ブログ・ねとらぼ・東洋経済�
 
 ## 6. 公開後にやること
 
+### ⚠️ 関連記事リンクを張る前に、必ずこれを実行する
+
+```bash
+git fetch && git merge origin/main      # ガードを取り込む（古いブランチだと走らない）
+node scripts/check-frozen.mjs           # 凍結面への被リンク増を検出する
+```
+
+**凍結記事を「編集しない」だけでは足りない。** 新記事から凍結面へリンクを張る行為も処置であり、
+測定中の実験を壊す。2026-09-21 にこれで6回目の汚染を出した（`docs/experiments-active.md` の汚染の記録）。
+意図的に張るなら、**同じPRで「## 汚染の記録」に追記する**（ガードの唯一の逃げ道）。
+
+
 - `node scripts/check-fabricated-claims.mjs` / `check-cross-article-facts.mjs` / `check-internal-links.mjs`
 - 記事mdを main に入れる＝本番ビルド（15〜18分・Vercel費が発生）。**まとめて1PRにする。**
 - 判定：公開60日後・90日後に、対象チェーン名を含むクエリの imp と順位を GSC で測る。

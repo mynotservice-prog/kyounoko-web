@@ -328,7 +328,15 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
     "komeda-morning-kosodate",
     "gusto-morning-kosodate",
     "dennys-morning-kosodate",
-    "hoshino-morning-kosodate"
+    "hoshino-morning-kosodate",
+    "bikkuri-donkey-morning-kosodate",
+    "royalhost-morning-kosodate",
+    "yayoiken-morning-kosodate",
+    "sukiya-morning-kosodate",
+    "bigboy-morning-kosodate",
+    "mos-burger-morning-kosodate",
+    "ootoya-morning-kosodate",
+    "bamiyan-morning-kosodate"
   ],
   "comparisonBaselines": [
     "imohori-kanto-kodzure"
@@ -338,7 +346,7 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
     "/spot/-xj0s"
   ],
   "released": [],
-  "_memo": "frozenSlugs = 実験5（はなまる1本）・実験6（6本）・モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）。いずれも lib/auto-internal-links.ts のリストに載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。frozenUrls = 実験7の処置群・対照群のうち2026-09-18に実際に汚染された2面（節からも拾うが取りこぼし防止に二重化）。released = 判定が終わって凍結が解けたslug（ガードの対象から外れる）。"
+  "_memo": "frozenSlugs = 実験5（はなまる1本）・実験6（6本）・モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）。いずれも lib/auto-internal-links.ts のリストに載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。frozenUrls = 実験7の処置群・対照群のうち2026-09-18に実際に汚染された2面（節からも拾うが取りこぼし防止に二重化）。released = 判定が終わって凍結が解けたslug（ガードの対象から外れる）。 2026-09-21追加: 実験8のチェーン系モーニング新規面7本＋バーミヤン1本（判定 2026-11-20 / 2026-12-20）。新規面なので対照群は無く、判定は「立ち上がったか」だけ。"
 }
 ```
 
