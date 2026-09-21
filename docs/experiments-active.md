@@ -288,6 +288,24 @@ URLを知っているがクロール順を待たせている状態。したが�
 
 **編集した記事（47本）**: amenohi-indoor-spots-tokyo-15 / fruitgari-kanto-kodzure / hatsumoude-kodzure-kanto-15 / jabujabuike-mizuasobi-tokyo-30 / kanto-ajisai-kodzure-spot-10 / kosodate-amenohi-yokohama / kosodate-kanto-shizen-10 / kosodate-muryou-spots-tokyo / laketown-kids-menu / mizuasobi-kita-tokyo / mizuasobi-meguro-tokyo / mizuasobi-yokohama / moushobi-suzushii-spots / shitsunai-asobi-chuo-tokyo / shitsunai-asobi-itabashi-tokyo / shitsunai-asobi-kashiwa / shitsunai-asobi-kita-tokyo / shitsunai-asobi-koto-tokyo / shitsunai-asobi-meguro-tokyo / shitsunai-asobi-minato-tokyo / shitsunai-asobi-nakano-tokyo / shitsunai-asobi-nerima-tokyo / shitsunai-asobi-setagaya-tokyo / shitsunai-asobi-shinagawa-tokyo / shitsunai-asobi-shinjuku-tokyo / shitsunai-asobi-suginami-tokyo / shitsunai-asobi-sumida-tokyo / shitsunai-asobi-toshima-tokyo / shitsunai-asobi-yokohama / showa-kinen-koen-kodzure / showa-kinen-koen-stroller / tokyo-babycar-kodzure-gaishoku-50 / tokyo-fuwafuwa-park-20 / tokyo-ginza-kodzure-lunch / tokyo-hanabi-taikai-kodzure-2026 / tokyo-koto-toyosu-kodzure / tokyo-long-slide-park-20 / tokyo-meguro-weekday-hidden / tokyo-minato-roppongi-lunch / tokyo-nerima-free-park-muryou / tokyo-ogata-yugu-koen-30 / tokyo-roppongi-kodzure-lunch / tokyo-shibuya-kodzure-lunch / tokyo-station-babyroom / tokyo-station-kodzure-lunch / xmas-market-kodzure / yurakucho-kodzure-lunch
 
+### 8. チェーン系モーニングの新規面7本（2026-09-21 公開 / PR #255・#256）
+
+未カバーだった7チェーンにモーニング記事を新設し、**新規面が立ち上がるか**を見る。
+**判定: 2026-11-20（60日）/ 2026-12-20（90日）**。計画の正本は `reports/chain-morning/measurement-plan.md`。
+
+- 対象（判定日まで内容を変えない）:
+  `bikkuri-donkey-morning-kosodate` `royalhost-morning-kosodate` `yayoiken-morning-kosodate`
+  `sukiya-morning-kosodate` `bigboy-morning-kosodate` `mos-burger-morning-kosodate`
+  `ootoya-morning-kosodate`
+- **対照群は無い**（新規面のコールドスタート。公開前ベースラインは7チェーン合計で90日49imp・0clk）。
+  したがって**因果は主張できない**。判定は「面が立ち上がったか」だけ。
+- 主指標: 対象7チェーンのモーニング系クエリ合計imp（✅10,000以上 / ⚠️1,000〜9,999 / ❌1,000未満）
+- 副指標: 加重平均順位7.0位以内／imp500以上に届いた記事の本数
+
+⚠️ **例外的に触ってよいのは、事実誤り・安全・法令の修正と、公式の変更への追従だけ**
+（この面は公式データが核なので、古いまま放置するほうが害が大きい）。
+触ったら `reports/chain-morning/measurement-plan.md` の「汚染の記録」に必ず追記する。
+
 ## 機械可読ブロック（`scripts/check-frozen.mjs` が読む正本）
 
 CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的に拾う。
@@ -310,7 +328,15 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
     "komeda-morning-kosodate",
     "gusto-morning-kosodate",
     "dennys-morning-kosodate",
-    "hoshino-morning-kosodate"
+    "hoshino-morning-kosodate",
+    "bikkuri-donkey-morning-kosodate",
+    "royalhost-morning-kosodate",
+    "yayoiken-morning-kosodate",
+    "sukiya-morning-kosodate",
+    "bigboy-morning-kosodate",
+    "mos-burger-morning-kosodate",
+    "ootoya-morning-kosodate",
+    "bamiyan-morning-kosodate"
   ],
   "comparisonBaselines": [
     "imohori-kanto-kodzure"
@@ -320,11 +346,59 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
     "/spot/-xj0s"
   ],
   "released": [],
-  "_memo": "frozenSlugs = 実験5（はなまる1本）・実験6（6本）・モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）。いずれも lib/auto-internal-links.ts のリストに載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。frozenUrls = 実験7の処置群・対照群のうち2026-09-18に実際に汚染された2面（節からも拾うが取りこぼし防止に二重化）。released = 判定が終わって凍結が解けたslug（ガードの対象から外れる）。"
+  "_memo": "frozenSlugs = 実験5（はなまる1本）・実験6（6本）・モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）。いずれも lib/auto-internal-links.ts のリストに載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。frozenUrls = 実験7の処置群・対照群のうち2026-09-18に実際に汚染された2面（節からも拾うが取りこぼし防止に二重化）。released = 判定が終わって凍結が解けたslug（ガードの対象から外れる）。 2026-09-21追加: 実験8のチェーン系モーニング新規面7本＋バーミヤン1本（判定 2026-11-20 / 2026-12-20）。新規面なので対照群は無く、判定は「立ち上がったか」だけ。"
 }
 ```
 
 ## 汚染の記録
+
+### チェーン系モーニング拡張による凍結面へのリンク増（2026-09-21 PR #255 / #256 / #257）— **6回目。うち#255・#256は本番反映後に発覚**
+
+**またしても「新しい記事から凍結面へリンクを張った」型**（#241 と同じ経路）。
+未カバー7チェーンのモーニング記事を新設した際、各記事の「ほかのチェーンのモーニング」節から
+**測定中のモーニング4本へリンクを張った**。凍結記事のファイルは1行も編集していない。
+
+#### A: 測定中のモーニング4本への被リンクが増えた（**PR #255・#256 で本番反映済み**）
+
+`scripts/check-frozen.mjs` は main 側にあり、当方のブランチは分岐が古くて取り込めていなかったため、
+**#255・#256 のマージ時にガードが走らず、本番に出てから #257 のマージ競合解決で気づいた。**
+
+| 凍結slug | 被リンク元の記事数 | 実験 |
+|---|---|---|
+| `komeda-morning-kosodate` | **10本 → 14本** | モーニング4本（2026-08-27〜29の完答撤回の効果を測定中） |
+| `gusto-morning-kosodate` | **6本 → 8本**（#257 でさらに+2） | 同上 |
+| `dennys-morning-kosodate` | **5本 → 8本** | 同上 |
+| `hoshino-morning-kosodate` | 12本 → 12本（**増減なし**） | 同上 |
+
+→ **この4本の判定時には、2026-09-21 に被リンクが増えた事実を必ず併記する。**
+順位が上がっていても、完答撤回の効果と被リンク増を分離できない。
+**とくに `dennys`（5→8＝+60%）と `komeda`（10→14＝+40%）は増加率が大きく、単独での因果主張は不可。**
+`hoshino` だけは増減がないので、**4本の中では hoshino が唯一きれいに読める**。
+
+#### B: `mos-burger-kids-menu`（実験6の処置群・判定 2026-09-30）— **取り消し済み**
+
+PR #256 で関連記事に内部リンクを1行追加してしまった。実験6は
+**「タイトルのみ変更・本文は一切触っていない＝単一変数」**が成立条件なので、これは致命的な汚染。
+
+→ **PR #257 で 275d420 時点の内容に完全復元した（差分ゼロを確認）。**
+本番に出ていた時間は約40分（2026-09-21 のデプロイ〜復元まで）。
+判定日が9日後なので、**この40分の露出をもって実験6を無効とはしない**が、判定文に事実として残す。
+
+#### C: `bamiyan-kids-menu` / `bamiyan-kodzure-koryaku`（実験2・判定 2026-10-21）— **マージ前に回避**
+
+新記事 `bamiyan-morning-kosodate` から発リンクを張ろうとしたが、
+`check-frozen.mjs` が検出したため**マージ前に削除した。本番には一度も出ていない。**
+→ **2026-10-21 の凍結解除後に相互リンクを張る。** 張ったらこの節に実施日を追記する。
+
+#### 再発防止
+
+- **原因は「凍結記事を編集しない」だけを見ていたこと。** 被リンクを増やす行為も処置である、という
+  当たり前のことが、新記事を書く側の手順に入っていなかった。
+- `docs/chain-morning-spec-2026-09.md` の記事の型に、
+  **「関連記事リンクを張る前に `node scripts/check-frozen.mjs` を実行する」**を追加した。
+- **ブランチが古いとガードが走らない。** 作業前に `git fetch && git merge origin/main` で
+  ガードを取り込んでから着手する（`docs/experiments-active.md` の「作業前に origin/main との関係を確認する」を実行に移す）。
+
 
 ### 実験7の対照群と実験4の比較基準へのリンク追加（2026-09-18 `7f1cf2b` / PR #241）— **記録が7日遅れた。5回目の汚染**
 

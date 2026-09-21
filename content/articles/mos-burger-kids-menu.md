@@ -120,7 +120,6 @@ A. 2026年8月31日時点の公式メニューでは、**ワイワイバーガ�
 
 ## 関連記事
 
-- [モスバーガーの朝モスは何時まで？こどモスとの重なりは366店](/article/mos-burger-morning-kosodate)
 - [モスバーガーの子連れ完全攻略](/article/mos-burger-kodzure-koryaku)
 - [マクドナルドのハッピーセットは何歳から](/article/mcdonalds-kids-menu)
 - [キッズメニュー充実チェーン15社比較](/article/kids-menu-chain-15-hikaku)
