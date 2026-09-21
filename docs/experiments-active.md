@@ -288,6 +288,24 @@ URLを知っているがクロール順を待たせている状態。したが�
 
 **編集した記事（47本）**: amenohi-indoor-spots-tokyo-15 / fruitgari-kanto-kodzure / hatsumoude-kodzure-kanto-15 / jabujabuike-mizuasobi-tokyo-30 / kanto-ajisai-kodzure-spot-10 / kosodate-amenohi-yokohama / kosodate-kanto-shizen-10 / kosodate-muryou-spots-tokyo / laketown-kids-menu / mizuasobi-kita-tokyo / mizuasobi-meguro-tokyo / mizuasobi-yokohama / moushobi-suzushii-spots / shitsunai-asobi-chuo-tokyo / shitsunai-asobi-itabashi-tokyo / shitsunai-asobi-kashiwa / shitsunai-asobi-kita-tokyo / shitsunai-asobi-koto-tokyo / shitsunai-asobi-meguro-tokyo / shitsunai-asobi-minato-tokyo / shitsunai-asobi-nakano-tokyo / shitsunai-asobi-nerima-tokyo / shitsunai-asobi-setagaya-tokyo / shitsunai-asobi-shinagawa-tokyo / shitsunai-asobi-shinjuku-tokyo / shitsunai-asobi-suginami-tokyo / shitsunai-asobi-sumida-tokyo / shitsunai-asobi-toshima-tokyo / shitsunai-asobi-yokohama / showa-kinen-koen-kodzure / showa-kinen-koen-stroller / tokyo-babycar-kodzure-gaishoku-50 / tokyo-fuwafuwa-park-20 / tokyo-ginza-kodzure-lunch / tokyo-hanabi-taikai-kodzure-2026 / tokyo-koto-toyosu-kodzure / tokyo-long-slide-park-20 / tokyo-meguro-weekday-hidden / tokyo-minato-roppongi-lunch / tokyo-nerima-free-park-muryou / tokyo-ogata-yugu-koen-30 / tokyo-roppongi-kodzure-lunch / tokyo-shibuya-kodzure-lunch / tokyo-station-babyroom / tokyo-station-kodzure-lunch / xmas-market-kodzure / yurakucho-kodzure-lunch
 
+### 8. チェーン系モーニングの新規面7本（2026-09-21 公開 / PR #255・#256）
+
+未カバーだった7チェーンにモーニング記事を新設し、**新規面が立ち上がるか**を見る。
+**判定: 2026-11-20（60日）/ 2026-12-20（90日）**。計画の正本は `reports/chain-morning/measurement-plan.md`。
+
+- 対象（判定日まで内容を変えない）:
+  `bikkuri-donkey-morning-kosodate` `royalhost-morning-kosodate` `yayoiken-morning-kosodate`
+  `sukiya-morning-kosodate` `bigboy-morning-kosodate` `mos-burger-morning-kosodate`
+  `ootoya-morning-kosodate`
+- **対照群は無い**（新規面のコールドスタート。公開前ベースラインは7チェーン合計で90日49imp・0clk）。
+  したがって**因果は主張できない**。判定は「面が立ち上がったか」だけ。
+- 主指標: 対象7チェーンのモーニング系クエリ合計imp（✅10,000以上 / ⚠️1,000〜9,999 / ❌1,000未満）
+- 副指標: 加重平均順位7.0位以内／imp500以上に届いた記事の本数
+
+⚠️ **例外的に触ってよいのは、事実誤り・安全・法令の修正と、公式の変更への追従だけ**
+（この面は公式データが核なので、古いまま放置するほうが害が大きい）。
+触ったら `reports/chain-morning/measurement-plan.md` の「汚染の記録」に必ず追記する。
+
 ## 汚染の記録
 
 ### SEO/GEO/AIO 一括改善スプリント（2026-09-04〜05）— 凍結記事は未編集、描画層の変更は全記事に一様に適用
