@@ -142,6 +142,7 @@ A. どちらもキッズメニュー＋バー類で充実。ビッグボーイ�
 
 ## 関連記事
 
+- [ビッグボーイのモーニングは何時まで？朝からキッズメニューが頼めます](/article/bigboy-morning-kosodate)
 - [子連れで行く焼肉の安全完全ガイド](/article/kodzure-yakiniku-anzen-kanzen-guide)
 - [子連れで行く焼肉・しゃぶしゃぶ7選](/article/kodzure-yakiniku-shabu-7)
 - [0歳育児完全マップ](/article/0sai-ikuji-kanzen-map)
