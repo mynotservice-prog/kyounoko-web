@@ -288,7 +288,72 @@ URLを知っているがクロール順を待たせている状態。したが�
 
 **編集した記事（47本）**: amenohi-indoor-spots-tokyo-15 / fruitgari-kanto-kodzure / hatsumoude-kodzure-kanto-15 / jabujabuike-mizuasobi-tokyo-30 / kanto-ajisai-kodzure-spot-10 / kosodate-amenohi-yokohama / kosodate-kanto-shizen-10 / kosodate-muryou-spots-tokyo / laketown-kids-menu / mizuasobi-kita-tokyo / mizuasobi-meguro-tokyo / mizuasobi-yokohama / moushobi-suzushii-spots / shitsunai-asobi-chuo-tokyo / shitsunai-asobi-itabashi-tokyo / shitsunai-asobi-kashiwa / shitsunai-asobi-kita-tokyo / shitsunai-asobi-koto-tokyo / shitsunai-asobi-meguro-tokyo / shitsunai-asobi-minato-tokyo / shitsunai-asobi-nakano-tokyo / shitsunai-asobi-nerima-tokyo / shitsunai-asobi-setagaya-tokyo / shitsunai-asobi-shinagawa-tokyo / shitsunai-asobi-shinjuku-tokyo / shitsunai-asobi-suginami-tokyo / shitsunai-asobi-sumida-tokyo / shitsunai-asobi-toshima-tokyo / shitsunai-asobi-yokohama / showa-kinen-koen-kodzure / showa-kinen-koen-stroller / tokyo-babycar-kodzure-gaishoku-50 / tokyo-fuwafuwa-park-20 / tokyo-ginza-kodzure-lunch / tokyo-hanabi-taikai-kodzure-2026 / tokyo-koto-toyosu-kodzure / tokyo-long-slide-park-20 / tokyo-meguro-weekday-hidden / tokyo-minato-roppongi-lunch / tokyo-nerima-free-park-muryou / tokyo-ogata-yugu-koen-30 / tokyo-roppongi-kodzure-lunch / tokyo-shibuya-kodzure-lunch / tokyo-station-babyroom / tokyo-station-kodzure-lunch / xmas-market-kodzure / yurakucho-kodzure-lunch
 
+## 機械可読ブロック（`scripts/check-frozen.mjs` が読む正本）
+
+CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的に拾う。
+ただし**「比較基準」（実験4の「同じ土俵で比較する」相手など）は文章からは推定できない**ので、
+ここに明示する。**比較基準にリンクを足すと処置群だけが強化され、比較が壊れる。**
+
+**凍結slugの土台は `lib/auto-internal-links.ts` の `EXPERIMENT_FROZEN_SLUGS`**（すでに保守されている機械可読リスト）。
+ここには**そこに載っていない凍結slug**と、**比較基準**、**凍結URL**だけを足す。判定が終わったら `released` に移す。
+
+```json frozen-check
+{
+  "frozenSlugs": [
+    "hanamaru-udon-kodzure-koryaku",
+    "cocoichi-kids-menu",
+    "ichiran-kodzure-koryaku",
+    "shabuyou-kodzure-koryaku",
+    "mos-burger-kids-menu",
+    "yakiniku-king-kodzure-koryaku",
+    "gusto-kids-menu",
+    "komeda-morning-kosodate",
+    "gusto-morning-kosodate",
+    "dennys-morning-kosodate",
+    "hoshino-morning-kosodate"
+  ],
+  "comparisonBaselines": [
+    "imohori-kanto-kodzure"
+  ],
+  "frozenUrls": [
+    "/spot/-m64q",
+    "/spot/-xj0s"
+  ],
+  "released": [],
+  "_memo": "frozenSlugs = 実験5（はなまる1本）・実験6（6本）・モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）。いずれも lib/auto-internal-links.ts のリストに載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。frozenUrls = 実験7の処置群・対照群のうち2026-09-18に実際に汚染された2面（節からも拾うが取りこぼし防止に二重化）。released = 判定が終わって凍結が解けたslug（ガードの対象から外れる）。"
+}
+```
+
 ## 汚染の記録
+
+### 実験7の対照群と実験4の比較基準へのリンク追加（2026-09-18 `7f1cf2b` / PR #241）— **記録が7日遅れた。5回目の汚染**
+
+**これまでの4回と経路が違う。凍結記事のファイルは1行も触っていない。「新しい記事から凍結面へリンクを張った」型である。**
+
+- **A: 実験7の対照群「中込農園」`/spot/-m64q` に、文脈つきの内部リンクが1本張られた。**
+  張った側は新記事 `budougari-yamanashi-kodzure.md`（82〜84行目）。台帳に「**絶対にリンクを張らない**」と書いた面に、
+  **実験7の処置そのもの**が入った。→ **実験7（判定 2026-10-01）の対照群からこの1面を除外し、20面で判定する。**
+- **B: 実験4の比較基準 `imohori-kanto-kodzure` へ、新記事3本から内部リンクが計3本張られた**
+  （`imohori-chiba-saitama-ibaraki-kodzure` / `imohori-kanagawa-kodzure` / `kurihiroi-kanto-kodzure`）。
+  **比較基準側だけが強化された。** → **実験4（判定 2026-10-05）の判定文に、比較基準が3リンク分強化された事実を必ず併記する。**
+- **C: 実験7の処置群 `/spot/-xj0s`（小松沢レジャー農園）のリンクが1本→3本に増えた**（`imohori-chiba-saitama-ibaraki-kodzure` から）。
+  **処置の強度が群内で不均一になった。** 判定文に明記する。
+- **過去4回より深刻**: 過去4回は見出しの絵文字1字・hero画像の差し替えで、**本文の意味は変わっていなかった**。
+  今回は**実験の処置変数そのもの（リンク）**が対照群に入っている。
+
+### 過去4回の汚染（2026-09-21 にまとめて追記。発生時に書かれていなかった）
+
+| # | commit | 日 | 何が起きたか | 実験への影響 |
+|---|---|---|---|---|
+| 1 | `5a15ff3` | 2026-09-03 | 画像の再割当が凍結記事に及んだ | 本文の意味は不変。影響小 |
+| 2 | `fad8d6a` | 2026-09-12 | `komeda-morning-kosodate` のタイトル完答表現の撤回 | モーニング面は4回連続不合格で停止中。この変更自体が判定設計の対象 |
+| 3 | `7b20aa1` | 2026-09-10 | サイトリニューアル（記事md 99本の一括編集）が**凍結中の実験記事7本**に及んだ。実験2の対照群 `yayoiken-kodzure-koryaku` を含む | 中身は見出しの絵文字1字のみ（実物確認済み）。**なお9/16の実験2判定では、この対照群のCTRは 3.67%→4.60% と改善しており、汚染は「対照を良く見せる」方向に働いた＝合格判定は保守的な側** |
+| 4 | `7d316fe` | 2026-09-12 | 521駅の駅ページに「〇〇区で子どもと遊ぶなら」節を追加 | **実験7の処置群21面・対照群21面の両方に付いたかは未検証（2026-09-21 時点）。** 本番描画で突合すること |
+
+**5回とも経路が違う**（画像差し替え3回、リニューアルPR 1回、新記事からのリンク1回）。
+**共通しているのは「別のセッションのPRが、凍結リストを見ずに出ている」ことだけ**なので、
+ガードは全PRが必ず通る場所（CI）に置き、判定条件を「凍結ファイルの変更」ではなく
+**「凍結面へのリンクの増減」まで広げた**（`scripts/check-frozen.mjs` / `.github/workflows/frozen-check.yml`・2026-09-21）。
 
 ### SEO/GEO/AIO 一括改善スプリント（2026-09-04〜05）— 凍結記事は未編集、描画層の変更は全記事に一様に適用
 
