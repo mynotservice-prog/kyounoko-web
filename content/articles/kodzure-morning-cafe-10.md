@@ -388,6 +388,9 @@ A. ガスト・ジョナサンは朝食メニュー内にキッズプレート�
 - [ロイヤルホストのモーニングは何時まで？キッズメニューは10:30から・朝食ビュッフェ7店](/article/royalhost-morning-kosodate)
 - [やよい軒のモーニングは何時まで？朝食がある店は381店中304店](/article/yayoiken-morning-kosodate)
 - [すき家のモーニングは何時まで？公式は午前4:00〜11:00・ごはんミニ300円から](/article/sukiya-morning-kosodate)
+- [ビッグボーイのモーニングは何時まで？公式一覧は43店・朝からキッズメニューが頼めます](/article/bigboy-morning-kosodate)
+- [モスバーガーの朝モスは何時まで？実施960店/全1,326店・こどモスとの重なりは366店](/article/mos-burger-morning-kosodate)
+- [大戸屋のモーニングはどこ？全454店中5店・全部東京・値段は600〜1,000円](/article/ootoya-morning-kosodate)
 
 **子連れ外食まとめ**
 

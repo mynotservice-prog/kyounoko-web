@@ -113,6 +113,7 @@ A. 自己申告ベースの運用が一般的です。年長さん（6歳）は�
 
 ## 関連記事
 
+- [ビッグボーイのモーニングは何時まで？公式一覧は43店](/article/bigboy-morning-kosodate)
 - [食べ放題の子ども料金比較｜幼児無料はどこ？小学生はいくら？](/article/tabehoudai-kodomo-ryokin-hikaku)
 
 - [ビッグボーイのキッズメニュー＆サラダバーは？年齢別の選び方完全ガイド](/article/bigboy-kids-menu)
