@@ -184,6 +184,7 @@ A. 公式メニューページはテイクアウト可否を明記していな�
 
 ## 関連記事
 
+- [やよい軒のモーニングは何時まで？朝食がある店は381店中304店](/article/yayoiken-morning-kosodate)
 - [やよい軒 子連れ攻略ガイド](/article/yayoiken-kodzure-koryaku)
 - [やよい軒 vs サイゼリヤ 子連れどっち？](/article/yayoiken-vs-saize-kodzure-douchi)
 - [子連れ和食・定食チェーンまとめ](/article/kodzure-famires-15sen)
