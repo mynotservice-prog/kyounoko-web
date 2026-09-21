@@ -88,6 +88,7 @@ legacyHero: /hero-ai/cat-food-fruit-02.jpg
 
 ## 関連記事
 
+- [すき家のモーニングは何時まで？公式は午前4:00〜11:00](/article/sukiya-morning-kosodate)
 - [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
 - [すき家のおむつ替え台ガイド｜店舗別の有無・授乳室](/article/sukiya-kodzure-koryaku)
 - [サイゼリヤはベビーカーOK？子連れ完全攻略](/article/kodzure-saize-koryaku)

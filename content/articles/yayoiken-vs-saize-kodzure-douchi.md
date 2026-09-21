@@ -143,6 +143,7 @@ A. **両社とも公式サイトで全メニューのアレルゲン情報を開
 
 **単独攻略を深掘り**
 
+- [やよい軒のモーニングは何時まで？](/article/yayoiken-morning-kosodate)
 - [やよい軒は子連れOK？ベビーチェア・取り分けメニュー・キッズ対応【2026】](/article/yayoiken-kodzure-koryaku)
 - [サイゼリヤは子連れOK？ベビーカー・キッズメニュー・離乳食・取り分け実例【2026】](/article/kodzure-saize-koryaku)
 

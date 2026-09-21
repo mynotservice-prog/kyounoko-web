@@ -118,6 +118,7 @@ A型ベビーカーで娘(8ヶ月)を連れ、土曜12時半に郊外ロード�
 
 ## 関連記事
 
+- [ロイヤルホストのモーニングは何時まで？](/article/royalhost-morning-kosodate)
 - [ロイヤルホスト子連れ完全攻略](/article/royal-host-kodzure-koryaku)
 - [子連れファミレスランキング2026 10選](/article/famires-kodzure-ranking-2026-10sen)
 - [キッズメニューありチェーン15比較](/article/kids-menu-chain-15-hikaku)
