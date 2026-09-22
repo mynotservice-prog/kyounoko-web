@@ -112,27 +112,10 @@ export function SpotsEditClient({
     return () => clearTimeout(t);
   }, [q, router]);
 
-  // サーバーから渡る overrides はビルド時のスナップショットで、保存直後（再デプロイ前）
-  // はまだ反映されていない。マウント時に API（本番は GitHub を直読み）から最新を取得し、
-  // 「保存したのに編集欄が空に戻る」誤解を防ぐ。
-  const [liveOverrides, setLiveOverrides] = React.useState<SpotOverridesMap>(overrides);
-  const [loaded, setLoaded] = React.useState(false);
-  React.useEffect(() => {
-    let alive = true;
-    fetch('/api/admin/spot-overrides')
-      .then((r) => (r.ok ? r.json() : null))
-      .then((d: { overrides?: SpotOverridesMap } | null) => {
-        if (alive && d?.overrides) {
-          setLiveOverrides(d.overrides);
-          setLoaded(true);
-        }
-      })
-      .catch(() => {});
-    return () => {
-      alive = false;
-    };
-  }, []);
-
+  // overrides はサーバが KV を直読みした最新値（force-dynamic）。以前はビルド時の
+  // バンドルJSONを渡して、マウント後に /api/admin/spot-overrides（全件2.5MB）を
+  // 取り直していたが、その取り直しが効かないと「保存したのに編集欄が未編集に戻る」
+  // 状態になった（2026-09-22 佐賀5件）。サーバ側で揃えたので取り直しは不要。
 
   return (
     <>
@@ -156,7 +139,6 @@ export function SpotsEditClient({
         <div style={{ fontSize: 11, color: 'var(--ink-400)', marginTop: 6 }}>
           {matchedCount} / {totalCount} 件
           {matchedCount > windowSize ? `（先頭${windowSize}件を表示）` : ''} · 編集済 {editedCount} 件
-          {loaded ? ' · 最新の保存内容を反映済み' : ' · 最新の保存内容を読込中…'}
           {pending ? ' · 絞り込み中…' : ''}
         </div>
       </div>
@@ -164,10 +146,9 @@ export function SpotsEditClient({
       <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
         {entries.map((e) => (
           <SpotRow
-            // loaded が変わったら remount して、最新 override でフォームを再初期化する
-            key={`${e.slug}-${loaded ? 'live' : 'init'}`}
+            key={e.slug}
             entry={e}
-            override={liveOverrides[e.slug] ?? {}}
+            override={overrides[e.slug] ?? {}}
             spotIndex={spotIndex}
             isOpen={openSlug === e.slug}
             onToggle={() => setOpenSlug(openSlug === e.slug ? null : e.slug)}
@@ -358,9 +339,11 @@ function SpotRow({
         setMsg(`❌ ${data.error || 'failed'}`);
       } else {
         setMsg(
-          data.mode === 'github'
-            ? '✅ commit 完了。Vercel が自動デプロイ中（数分で本番反映）'
-            : '✅ ローカル保存',
+          data.mode === 'kv'
+            ? '✅ 保存しました（本番に即時反映。再読み込みしても保持されます）'
+            : data.mode === 'github'
+              ? '✅ commit 完了。Vercel が自動デプロイ中（数分で本番反映）'
+              : '✅ ローカル保存',
         );
       }
     } catch (e) {
