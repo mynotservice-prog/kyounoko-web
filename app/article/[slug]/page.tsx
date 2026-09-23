@@ -68,6 +68,7 @@ import { AgeMonthCalculator } from '@/components/interactive/AgeMonthCalculator'
 import { BabyCarRouteEstimator } from '@/components/interactive/BabyCarRouteEstimator';
 import { NaptimeFitFinder } from '@/components/interactive/NaptimeFitFinder';
 import { LineCta } from '@/components/common/LineCta';
+import { KkLineInline } from '@/components/kk/KkLineInline';
 import { articleCategoryLabel } from '@/lib/article-categories';
 import { ArticleRowList } from '@/components/article/ArticleRowList';
 import { KkSectionTitle } from '@/components/kk/KkSectionTitle';
@@ -1331,6 +1332,11 @@ function FileArticleView({ article }: { article: FileArticle }) {
           {(article.slug.includes('ranking') || article.slug.includes('hikaku') || article.title.includes('ランキング') || article.title.includes('比較')) && (
             <EditorialDisclosure variant="ranking" />
           )}
+
+          {/* LINE小型CTA（2026-09-23）。末尾の LineCta は広告・FAQの下で読者の数%にしか
+              見えていなかった（28日でクリック0）ため、判定ボックス＝「答え」の直後・本文の
+              手前に1行の帯を置き、placement 別に表示とクリックを比べる。末尾カードは残す。 */}
+          <KkLineInline placement="article-mid" />
 
           {/* Body（チェックリスト前出し時は抽出後の残り本文を描画）。
               レバー1治療群は意図ピークH2セクション末尾で分割し、間に InlineItemCTA を

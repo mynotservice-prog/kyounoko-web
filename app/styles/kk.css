@@ -406,6 +406,30 @@ a.kk-chip:hover { border-color: var(--kk-orange); color: var(--kk-orange-deep); 
   background: #06C755; color: #fff; font-size: 13.5px; font-weight: 700;
   white-space: nowrap;
 }
+/* LINE小型CTA（1行の帯）。記事の判定ボックス直後・本文手前に置く（2026-09-23）。
+   末尾の .kk-line と同じ緑の面で「同じ導線」と分かるようにしつつ、本文を押し下げない高さに抑える。 */
+.kk-line-inline {
+  display: flex; align-items: center; gap: 10px;
+  margin: 0 0 28px; padding: 10px 12px;
+  background: #F2FBF5;
+  border: 1px solid #CDE9D7;
+  border-radius: 12px;
+  color: var(--kk-ink);
+}
+.kk-line-inline-badge {
+  width: 34px; height: 34px; flex: none; border-radius: 9px;
+  background: #06C755; color: #fff; font-size: 9px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; letter-spacing: .03em;
+}
+.kk-line-inline-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.kk-line-inline-title { font-weight: 700; font-size: 13.5px; line-height: 1.45; color: var(--kk-ink); }
+.kk-line-inline-sub { font-size: 11.5px; line-height: 1.55; color: var(--kk-ink-soft); }
+.kk-line-inline-btn {
+  display: inline-flex; align-items: center; gap: 2px; flex: none;
+  padding: 8px 12px 8px 14px; border-radius: var(--kk-r-pill);
+  background: #06C755; color: #fff; font-size: 13px; font-weight: 700;
+  white-space: nowrap;
+}
 
 @media (max-width: 919px) {
 
