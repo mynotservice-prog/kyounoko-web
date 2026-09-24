@@ -24,6 +24,8 @@ import {
 } from '@/lib/station-restaurants';
 import {
   getIndieRestaurantsByStation,
+  isHotpepperStation,
+  HOTPEPPER_GENERATED_AT,
   INDIE_GENRE_LABEL,
   type IndieRestaurant,
   type IndieGenre,
@@ -45,6 +47,7 @@ import { AdSlot } from '@/components/ads/AdSlot';
 import { RelatedItemsCTA } from '@/components/article/RelatedItemsCTA';
 import { getCatalogItems } from '@/lib/items-catalog';
 import { PersonalizedHint } from '@/components/common/PersonalizedHint';
+import { hotpepperShopHref } from '@/lib/reservation-cta';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400; // 24h
@@ -78,7 +81,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     `${station.name}駅 子連れランチおすすめ｜ベビーカーOK・キッズメニュー店ガイド【${wardName}】`;
   const description =
     seoOverride?.description ??
-    `${station.name}駅周辺で子連れOK・ベビーカー入店OKのファミレス・カフェ・チェーン店に加え、雑誌やSNSで話題の個人店・人気店も厳選。キッズメニュー・キッズチェア・個室・離乳食持込可など子連れ目線で全項目チェック。${wardName}で子どもとランチ・カフェに困らない実用ガイド。`;
+    `${station.name}駅周辺で子連れOK・ベビーカー入店OKのファミレス・カフェ・チェーン店に加え、${isHotpepperStation(slug) ? 'ホットペッパーで「お子様連れOK」と掲載された駅近のお店も掲載' : '雑誌やSNSで話題の個人店・人気店も厳選'}。キッズメニュー・キッズチェア・個室・離乳食持込可など子連れ目線で全項目チェック。${wardName}で子どもとランチ・カフェに困らない実用ガイド。`;
   // 2026-08-31: 全ページ監査で og:image 欠落 2,061本のうち 2,049本が /station/ だと判明した。
   // /station/ は3週で唯一プラス成長している面（+6.8%／週1,945クリック）なのに、
   // SNS・LINE共有とDiscoverで画像が出ない状態だった。spot/[slug] と同じ /api/og を配線する。
@@ -216,7 +219,7 @@ export default async function StationPage({ params }: Props) {
     ...(override?.hallFacilities ? [{ href: '#section-hall-facilities', label: '館の設備' }] : []),
     { href: '#section-tips', label: '使い方' },
     { href: '#section-chains', label: 'チェーン', count: chains.length },
-    ...(indies.length > 0 ? [{ href: '#section-indies', label: '個人店', count: indies.length }] : []),
+    ...(indies.length > 0 ? [{ href: '#section-indies', label: isHotpepperStation(slug) ? '子連れOK店' : '個人店', count: indies.length }] : []),
     ...(nearbySpots.length > 0 ? [{ href: '#section-nearby-spots', label: '近隣スポット', count: nearbySpots.length }] : []),
   ];
 
@@ -250,7 +253,11 @@ export default async function StationPage({ params }: Props) {
               {override?.hero?.lead ?? (
                 <>
                   {station.name}駅から徒歩5〜10分圏内にある、子連れOKのファミレス・カフェ・チェーン店に加え、
-                  雑誌やSNSで話題の<strong>個人店・人気店</strong>も厳選してご紹介。
+                  {isHotpepperStation(slug) ? (
+                    <>ホットペッパーグルメで「お子様連れOK」と掲載されている<strong>駅近のお店</strong>もご紹介。</>
+                  ) : (
+                    <>雑誌やSNSで話題の<strong>個人店・人気店</strong>も厳選してご紹介。</>
+                  )}
                   ベビーカー入店可否、キッズメニュー、キッズチェア、個室、離乳食持込OKまで全項目チェックしました。
                   {wardName}で子連れランチ場所に迷ったらまずココから。
                 </>
@@ -260,7 +267,7 @@ export default async function StationPage({ params }: Props) {
             <div className="station-summary stv3-summary kk-chips">
               <span className="kk-chip">{station.lines.length}路線</span>
               <span className="kk-chip">チェーン{chains.length}店</span>
-              {indies.length > 0 && <span className="kk-chip">個人店{indies.length}店</span>}
+              {indies.length > 0 && <span className="kk-chip">{isHotpepperStation(slug) ? '駅近の子連れOK店' : '個人店'}{indies.length}店</span>}
               {station.scale === 'terminal' && <span className="kk-chip">ターミナル駅</span>}
               {station.scale === 'major' && <span className="kk-chip">主要駅</span>}
               {station.familyFriendly && <span className="kk-chip">ファミリー多め</span>}
@@ -295,7 +302,7 @@ export default async function StationPage({ params }: Props) {
               {indies.length > 0 && (
                 <li>
                   <a href="#section-indies">
-                    <span><strong>{override?.indieLabels?.tldrLabel ?? '個人店・話題店'}</strong>: {indies.length}店（{override?.indieLabels?.tldrNote ?? '雑誌・SNS掲載・人気店'}）</span>
+                    <span><strong>{override?.indieLabels?.tldrLabel ?? (isHotpepperStation(slug) ? '駅近の子連れOK店' : '個人店・話題店')}</strong>: {indies.length}店（{override?.indieLabels?.tldrNote ?? (isHotpepperStation(slug) ? 'ホットペッパーでお子様連れOKと掲載' : '雑誌・SNS掲載・人気店')}）</span>
                     <KkIcon name="chevron-right" size={15} />
                   </a>
                 </li>
@@ -669,20 +676,27 @@ export default async function StationPage({ params }: Props) {
             <section id="section-indies" className="station-indies stv3-sec ruled">
               <header className="stv3-sechead">
                 <span className="stv3-eyebrow">
-                  {override?.indieLabels?.eyebrow ?? 'チェーンじゃない、ローカルの実力店'}
+                  {override?.indieLabels?.eyebrow ?? (isHotpepperStation(slug) ? 'ホットペッパー掲載・お子様連れOK' : 'チェーンじゃない、ローカルの実力店')}
                 </span>
                 <h2 className="stv3-h2">
-                  {override?.indieLabels?.heading ?? `${station.name}駅の個人店・話題店`} <span className="stv3-count">{indies.length}店</span>
+                  {override?.indieLabels?.heading ?? (isHotpepperStation(slug) ? `${station.name}駅近くの子連れOKのお店` : `${station.name}駅の個人店・話題店`)} <span className="stv3-count">{indies.length}店</span>
                 </h2>
                 <p className="stv3-sublead">
-                  {override?.indieLabels?.lead ?? (
+                  {override?.indieLabels?.lead ?? (isHotpepperStation(slug) ? (
+                    <>
+                      ホットペッパーグルメの店舗情報で「お子様連れOK・歓迎」かつランチ営業ありと掲載されている、{station.name}駅から近いお店です（上の一覧にあるファミレス等のチェーンと、周辺に複数店舗ある店は除いています）。
+                      店名・アクセス・個室の有無は各店の掲載情報をそのまま載せています。
+                    </>
+                  ) : (
                     <>
                       雑誌・TV・SNSで取り上げられた{station.name}エリアの実力店から、子連れで利用しやすい店舗を厳選。
                       チェーン店だけでなく、ご当地ならではの一軒で家族の食事をワンランク豊かに。
                     </>
-                  )}
+                  ))}
                   <small className="stv3-lead-note">
-                    ※ 設備情報は公式・取材情報ベース。お子様連れ利用は店舗への事前確認をおすすめします。
+                    {isHotpepperStation(slug)
+                      ? `※ ホットペッパーグルメの店舗掲載情報（${HOTPEPPER_GENERATED_AT}取得）。ベビーカーでの入店可否やキッズメニューは掲載がないため、店舗へ事前確認をおすすめします。`
+                      : '※ 設備情報は公式・取材情報ベース。お子様連れ利用は店舗への事前確認をおすすめします。'}
                   </small>
                 </p>
               </header>
@@ -707,18 +721,42 @@ export default async function StationPage({ params }: Props) {
                           {r.description}
                         </p>
                         <div className="kk-chips">
+                          {r.childNote && <span className="kk-chip">{r.childNote}</span>}
                           {r.strollerOk && <span className="kk-chip">ベビーカー◎</span>}
                           {r.kidsMenu && <span className="kk-chip">キッズメニュー</span>}
-                          {r.privateRoom && <span className="kk-chip">個室・座敷</span>}
-                          {!r.strollerOk && !r.kidsMenu && !r.privateRoom && (
+                          {r.privateRoom && <span className="kk-chip">{r.source === 'hotpepper' ? '個室あり' : '個室・座敷'}</span>}
+                          {r.barrierFree && <span className="kk-chip">バリアフリー</span>}
+                          {!r.childNote && !r.strollerOk && !r.kidsMenu && !r.privateRoom && (
                             <span className="stv3-shop-note">※ 子連れ利用は要事前確認</span>
                           )}
                         </div>
+                        {r.childComment && <p className="stv3-shop-note">お店より（子連れについて）: {r.childComment}</p>}
+                        {r.source === 'hotpepper' && r.url && (() => {
+                          const { href, affiliate } = hotpepperShopHref(r.url);
+                          return (
+                            <p className="stv3-shop-link">
+                              <a
+                                href={href}
+                                target="_blank"
+                                rel={affiliate ? 'sponsored noopener' : 'nofollow noopener'}
+                              >
+                                ホットペッパーで店舗情報・予約を見る →
+                              </a>
+                            </p>
+                          );
+                        })()}
                       </article>
                     ))}
                   </div>
                 </section>
               ))}
+              {isHotpepperStation(slug) && (
+                <p className="stv3-credit">
+                  <a href="http://webservice.recruit.co.jp/" target="_blank" rel="nofollow noopener">
+                    Powered by ホットペッパーグルメ Webサービス
+                  </a>
+                </p>
+              )}
             </section>
           )}
 

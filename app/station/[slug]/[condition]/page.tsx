@@ -13,8 +13,11 @@ import {
   type Chain,
   type ChainCategory,
 } from '@/lib/station-restaurants';
+import { hotpepperShopHref } from '@/lib/reservation-cta';
 import {
   getIndieRestaurantsByStation,
+  isHotpepperStation,
+  HOTPEPPER_GENERATED_AT,
   INDIE_GENRE_LABEL,
   type IndieRestaurant,
   type IndieGenre,
@@ -533,14 +536,18 @@ export default async function StationConditionPage({ params }: Props) {
               borderTop: '2px dashed rgba(201,96,62,0.18)',
             }}>
               <header style={{ marginBottom: 24 }}>
-                <span className="eyebrow" style={{ color: 'var(--clay-deep)' }}>チェーンじゃない、ローカルの実力店</span>
+                <span className="eyebrow" style={{ color: 'var(--clay-deep)' }}>{isHotpepperStation(slug) ? 'ホットペッパー掲載・お子様連れOK' : 'チェーンじゃない、ローカルの実力店'}</span>
                 <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 24, marginTop: 6, marginBottom: 8 }}>
-                  {station.name}駅の個人店・話題店 <span style={{ fontSize: 14, color: 'var(--ink-mute)', fontWeight: 400 }}>{indies.length}店</span>
+                  {isHotpepperStation(slug) ? `${station.name}駅近くの子連れOKのお店` : `${station.name}駅の個人店・話題店`} <span style={{ fontSize: 14, color: 'var(--ink-mute)', fontWeight: 400 }}>{indies.length}店</span>
                 </h2>
                 <p style={{ fontSize: 14, color: 'var(--ink-sub)', lineHeight: 1.7, margin: 0 }}>
-                  雑誌・TV・SNSで取り上げられた{station.name}エリアの実力店から、{cond.label}条件に合う店舗を厳選。
+                  {isHotpepperStation(slug)
+                    ? `ホットペッパーグルメの店舗情報で「お子様連れOK・歓迎」かつランチ営業ありと掲載されている、${station.name}駅から近いお店のうち、${cond.label}条件に合う店舗です。`
+                    : `雑誌・TV・SNSで取り上げられた${station.name}エリアの実力店から、${cond.label}条件に合う店舗を厳選。`}
                   <small style={{ display: 'block', marginTop: 6, fontSize: 12, color: 'var(--ink-mute)' }}>
-                    ※ 設備情報は公式・取材情報ベース。お子様連れ利用は店舗への事前確認をおすすめします。
+                    {isHotpepperStation(slug)
+                      ? `※ ホットペッパーグルメの店舗掲載情報（${HOTPEPPER_GENERATED_AT}取得）。ベビーカーでの入店可否やキッズメニューは掲載がないため、店舗へ事前確認をおすすめします。`
+                      : '※ 設備情報は公式・取材情報ベース。お子様連れ利用は店舗への事前確認をおすすめします。'}
                   </small>
                 </p>
               </header>
@@ -575,16 +582,36 @@ export default async function StationConditionPage({ params }: Props) {
                         <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', fontSize: 11.5 }}>
                           {r.strollerOk && <span style={{ background: '#E8F5E9', color: '#2E7D32', padding: '3px 9px', borderRadius: 999 }}>ベビーカー◎</span>}
                           {r.kidsMenu && <span style={{ background: '#E3F2FD', color: '#1565C0', padding: '3px 9px', borderRadius: 999 }}>キッズメニュー</span>}
-                          {r.privateRoom && <span style={{ background: '#FFF3E0', color: '#E65100', padding: '3px 9px', borderRadius: 999 }}>個室・座敷</span>}
-                          {!r.strollerOk && !r.kidsMenu && !r.privateRoom && (
+                          {r.childNote && <span style={{ background: '#E8F5E9', color: '#2E7D32', padding: '3px 9px', borderRadius: 999 }}>{r.childNote}</span>}
+                          {r.privateRoom && <span style={{ background: '#FFF3E0', color: '#E65100', padding: '3px 9px', borderRadius: 999 }}>{r.source === 'hotpepper' ? '個室あり' : '個室・座敷'}</span>}
+                          {r.barrierFree && <span style={{ background: '#F3E5F5', color: '#6A1B9A', padding: '3px 9px', borderRadius: 999 }}>バリアフリー</span>}
+                          {!r.childNote && !r.strollerOk && !r.kidsMenu && !r.privateRoom && (
                             <span style={{ color: 'var(--ink-mute)', fontSize: 11 }}>※ 子連れ利用は要事前確認</span>
                           )}
                         </div>
+                        {r.childComment && <p style={{ margin: '8px 0 0', fontSize: 12, color: 'var(--ink-mute)' }}>お店より（子連れについて）: {r.childComment}</p>}
+                        {r.source === 'hotpepper' && r.url && (() => {
+                          const { href, affiliate } = hotpepperShopHref(r.url);
+                          return (
+                            <p style={{ margin: '8px 0 0', fontSize: 13, fontWeight: 700 }}>
+                              <a href={href} target="_blank" rel={affiliate ? 'sponsored noopener' : 'nofollow noopener'} style={{ color: 'var(--clay-deep)' }}>
+                                ホットペッパーで店舗情報・予約を見る →
+                              </a>
+                            </p>
+                          );
+                        })()}
                       </article>
                     ))}
                   </div>
                 </section>
               ))}
+              {isHotpepperStation(slug) && (
+                <p style={{ margin: '16px 0 0', fontSize: 11, color: 'var(--ink-mute)', textAlign: 'right' }}>
+                  <a href="http://webservice.recruit.co.jp/" target="_blank" rel="nofollow noopener" style={{ color: 'inherit' }}>
+                    Powered by ホットペッパーグルメ Webサービス
+                  </a>
+                </p>
+              )}
             </section>
           )}
 

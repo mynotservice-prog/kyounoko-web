@@ -96,7 +96,7 @@ export const STATION_CONDITIONS: readonly StationCondition[] = [
     titlePart: '個人店・話題店だけ',
     metaPart: 'チェーン以外の個人店・話題店',
     description:
-      'チェーン店を除外し、雑誌・SNSで話題の個人店・実力店だけを掲載。ご当地ならではの一軒で、家族の食事をワンランク豊かにしたい人向け。',
+      'チェーン店を除外し、駅近の個人店だけを掲載。ご当地ならではの一軒で、家族の食事をワンランク豊かにしたい人向け。',
     tagline: 'チェーン以外、ご当地の実力店・人気店だけ',
   },
   {

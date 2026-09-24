@@ -80,6 +80,23 @@ export type IndieRestaurant = {
   priceLunch?: '〜1,000円' | '〜2,000円' | '〜3,500円' | '〜5,000円' | '5,000円〜';
   /** メディア掲載・SNSで話題等の人気フラグ */
   popular?: boolean;
+  // ===== 出典つきデータ（2026-09 追加）=====
+  /** 出典。'hotpepper' はホットペッパーグルメ Webサービスの店舗掲載情報。未設定は旧AI生成データ（出典なし） */
+  source?: 'hotpepper';
+  /** ホットペッパーの店舗ID */
+  hpId?: string;
+  /** 店舗ページURL（出典） */
+  url?: string;
+  /** 住所（店舗掲載情報） */
+  address?: string;
+  /** 「お子様連れ」欄の表記そのまま（例: お子様連れ歓迎） */
+  childNote?: string;
+  /** 「お子様連れ」欄に店が添えたコメント（例: お子様用の椅子あります。） */
+  childComment?: string;
+  /** バリアフリー「あり」の掲載（車椅子基準。ベビーカー可とは別扱い） */
+  barrierFree?: boolean;
+  /** 駅座標からの直線距離(m) */
+  distanceM?: number;
 };
 
 /**
