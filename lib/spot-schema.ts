@@ -41,7 +41,9 @@ const TYPE_BY_CATEGORY: Record<Spot['category'], string[]> = {
   indoor: ['TouristAttraction', 'Place'],
   // 牧場
   farm: ['TouristAttraction', 'Place'],
-  // 季節体験（いちご狩り等）
+  // 農場・農園（収穫体験）
+  harvest: ['TouristAttraction', 'Place'],
+  // 観光スポット
   seasonal: ['TouristAttraction', 'Place'],
 };
 

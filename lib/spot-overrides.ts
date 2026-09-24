@@ -77,7 +77,7 @@ export type SpotAgeGuideField = (typeof SPOT_AGE_GUIDE_FIELDS)[number];
 
 /** 上書き可能なカテゴリ（lib/spots.ts の SpotCategory と一致させる）。 */
 export const SPOT_CATEGORY_VALUES = [
-  'zoo', 'aquarium', 'park', 'museum', 'amusement', 'indoor', 'farm', 'seasonal', 'restaurant',
+  'zoo', 'aquarium', 'park', 'museum', 'amusement', 'indoor', 'farm', 'harvest', 'seasonal', 'restaurant',
 ] as const;
 
 /** 上書き可能な屋内/屋外区分（SpotPlace と一致）。 */

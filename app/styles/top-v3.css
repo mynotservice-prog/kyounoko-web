@@ -264,14 +264,17 @@
    丸角カードにしない（§3-0）。1px の罫線グリッドで仕切るだけにする。
    アイコンは KkIcon でラベルと意味を一致させている（TopSpotTypeTiles.tsx）。
    =========================================================== */
+/* 罫線はタイル側に持たせる（隣と重ねて1pxにする）。カテゴリ数が列数で割り切れなくても
+   最終行の空きマスに色が付かない（2026-09 農場・農園の追加で9タイルになった）。 */
 .tv3-types {
   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px; background: var(--kk-rule-soft);
-  border: 1px solid var(--kk-rule-soft);
+  padding: 1px 0 0 1px;
 }
 .tv3-type {
   display: flex; align-items: center; gap: 12px;
   min-height: 74px; padding: 14px 12px;
+  margin: -1px 0 0 -1px;
+  border: 1px solid var(--kk-rule-soft);
   background: #fff; color: var(--kk-ink); border-radius: 0;
 }
 .tv3-type-ico { flex: none; display: inline-flex; color: var(--kk-ink); }
@@ -545,7 +548,7 @@
 .top-v3 button.kk-btn.sm { font-size: 14px; padding: 10px 15px; }
 
 @media (min-width: 920px) {
-  /* スポットの種類: 4列（2行）。PCでも丸角にしない */
+  /* スポットの種類: 4列（3行）。PCでも丸角にしない */
   .tv3-types { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .tv3-type { min-height: 92px; padding: 18px 16px; gap: 14px; }
   .tv3-type-label { font-size: 15.5px; }

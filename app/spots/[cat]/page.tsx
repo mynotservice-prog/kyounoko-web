@@ -34,6 +34,7 @@ const SPOT_CAT_ART: Record<string, KkArtName> = {
   indoor: 'kids-space',   // 室内遊び場 → 屋内キッズスペース
   amusement: 'themepark', // 遊園地 → 観覧車
   farm: 'farm',           // 牧場 → 牛と羊
+  harvest: 'nature-trees', // 農場・農園 → 木々（収穫体験の専用イラストは未支給）
   seasonal: 'shrine',     // 観光スポット → 鳥居
 };
 

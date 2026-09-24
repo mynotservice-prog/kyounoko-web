@@ -12,6 +12,7 @@ const CATEGORY_OPTIONS = [
   { v: 'museum', label: '博物館・科学館' },
   { v: 'amusement', label: '遊園地' },
   { v: 'farm', label: '牧場' },
+  { v: 'harvest', label: '農場・農園' },
   { v: 'seasonal', label: '観光スポット' },
   { v: 'restaurant', label: '子連れOKレストラン' },
 ];
