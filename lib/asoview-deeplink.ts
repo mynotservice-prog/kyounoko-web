@@ -40,6 +40,8 @@ export const ASOVIEW_GENRE_PATHS = {
   zoo: '/leisure/212/',
   /** 遊園地・テーマパーク */
   themepark: '/leisure/191/',
+  /** 果物狩り・フルーツ狩り（2026-09-24 実在確認） */
+  fruit: '/leisure/144/',
 } as const;
 
 export type AsoviewGenre = keyof typeof ASOVIEW_GENRE_PATHS;
@@ -161,6 +163,9 @@ export function asoviewGenreForSpotCategory(category: string): AsoviewGenre {
       return 'zoo';
     case 'amusement':
       return 'themepark';
+    // 農場・農園は梨・ぶどう・栗などの果物狩りが大半（芋掘りも果物狩り一覧の農園と重なる）
+    case 'harvest':
+      return 'fruit';
     default:
       return 'kidspark';
   }

@@ -27,6 +27,7 @@ const CAT_LABEL: Record<string, string> = {
   amusement: 'テーマパーク',
   indoor: '室内あそび場',
   farm: '牧場',
+  harvest: '農場・農園',
   seasonal: '観光スポット',
   restaurant: 'レストラン',
 };
@@ -44,6 +45,7 @@ const HERO_POOLS_BY_CAT: Record<string, string[]> = {
   amusement:  ['cat-outdoor', 'cat-tokyo', 'cat-kid'],
   indoor:     ['cat-home', 'cat-kid', 'cat-toddler'],
   farm:       ['cat-nature', 'cat-outdoor'],
+  harvest:    ['cat-autumn', 'cat-nature', 'cat-outdoor'],
   seasonal:   ['cat-summer', 'cat-autumn', 'cat-sakura'],
   restaurant: ['cat-food', 'cat-family', 'cat-commerce'],
 };
@@ -127,6 +129,7 @@ const CATEGORY_HERO_E: Record<string, string> = {
   museum: '/v2/spot-categories/museum-kids.webp',
   amusement: '/v2/spot-categories/indoor-playground.webp',
   farm: '/v2/spot-categories/zoo-family.webp',
+  harvest: '/v2/spot-categories/park-family.webp',
   seasonal: '/v2/spot-categories/park-family.webp',
   restaurant: '/v2/spot-categories/indoor-playground.webp',
 };
@@ -152,6 +155,7 @@ const SCENE_POOLS_BY_CAT: Record<string, string[]> = {
   amusement: [...scenePool('indoor-play', 6), ...scenePool('park', 16)],
   indoor: scenePool('indoor-play', 6),
   farm: [...scenePool('zoo', 5), ...scenePool('park', 16)],
+  harvest: scenePool('park', 16),
   seasonal: [...scenePool('pool-water', 20), ...scenePool('seasonal', 4)],
   restaurant: scenePool('meal', 40),
 };

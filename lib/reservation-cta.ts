@@ -476,7 +476,7 @@ export function getRestaurantReservationOffer(
  *
  * メモリ「最大の未開拓面」= /spot/[slug] はアフィゼロ。流入文脈に合わせて出し分ける:
  *   - restaurant → ホットペッパーグルメ予約（NEXT_PUBLIC_VC_HOTPEPPER_URL）
- *   - aquarium / amusement / zoo / museum / farm / seasonal / indoor
+ *   - aquarium / amusement / zoo / museum / farm / harvest / seasonal / indoor
  *       → アソビュー！のレジャーチケット（NEXT_PUBLIC_VC_ASOVIEW_URL）
  *   - park → 予約導線なし（基本無料施設）
  *
@@ -488,6 +488,7 @@ const ASOVIEW_CATEGORIES = new Set([
   'zoo',
   'museum',
   'farm',
+  'harvest',
   'seasonal',
   'indoor',
 ]);
@@ -513,6 +514,16 @@ export function getSpotReservationOffer(category: string): ReservationOffer | nu
       base,
       buildAsoviewLanding(asoviewGenreForSpotCategory(category)),
     );
+    if (category === 'harvest') {
+      // このスポット自体の予約ではなく、アソビュー掲載の果物狩り・収穫体験の一覧へ送る
+      return {
+        href,
+        heading: 'ほかの果物狩り・収穫体験も探す',
+        note: 'アソビュー！では、事前予約できる果物狩りや収穫体験の農園を探せます。',
+        cta: 'アソビュー！で果物狩りを探す →',
+        itemId: 'asoview-harvest-spot',
+      };
+    }
     return {
       href,
       heading: 'チケット・前売りをチェック',

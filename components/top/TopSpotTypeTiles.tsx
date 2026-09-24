@@ -12,7 +12,7 @@ import { BROWSE_CATEGORIES } from '@/lib/spot-browse';
  * - 絵は社長支給のアイコンイラスト（KkArt / public/img/icons/kk）を使う。
  * - 丸角カードにしない（罫線だけのグリッド。CSS は .tv3-types）。
  * - リンク先は既存の /spots/[cat]（BROWSE_CATEGORIES で静的生成される実在ルート）のみ。
- *   表示は全8カテゴリ（従来は先頭6件。牧場・観光スポットへの導線を足すだけで、既存リンクは減らさない）。
+ *   表示は全9カテゴリ（2026-09 農場・農園を追加）（従来は先頭6件。牧場・観光スポットへの導線を足すだけで、既存リンクは減らさない）。
  */
 const TYPE_ICON: Record<string, KkArtName> = {
   park: 'park',           // 公園・自然 → 木とベンチ
@@ -22,6 +22,7 @@ const TYPE_ICON: Record<string, KkArtName> = {
   indoor: 'kids-space',   // 室内遊び場 → 屋内キッズスペース
   amusement: 'themepark', // 遊園地 → 観覧車
   farm: 'farm',           // 牧場 → 牛と羊
+  harvest: 'nature-trees', // 農場・農園 → 木々（収穫体験の専用イラストは未支給）
   seasonal: 'shrine',     // 観光スポット → 鳥居
 };
 

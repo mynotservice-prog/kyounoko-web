@@ -83,7 +83,7 @@
     },
     {
       "name": "東京地球農園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -137,7 +137,7 @@
     },
     {
       "name": "田村果樹園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -163,7 +163,7 @@
     },
     {
       "name": "中㋑園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -185,7 +185,7 @@
     },
     {
       "name": "かしや梨園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -207,7 +207,7 @@
     },
     {
       "name": "三平果樹園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -228,7 +228,7 @@
     },
     {
       "name": "ヤマモ園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -249,7 +249,7 @@
     },
     {
       "name": "黒川東芋掘会",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -271,7 +271,7 @@
     },
     {
       "name": "鈴木園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -294,7 +294,7 @@
     },
     {
       "name": "ワイワイ栗園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -315,7 +315,7 @@
   "yamanashi": [
     {
       "name": "理想園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -346,7 +346,7 @@
     },
     {
       "name": "里見農園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -372,7 +372,7 @@
     },
     {
       "name": "あすなろ園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -400,7 +400,7 @@
     },
     {
       "name": "久保田園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -424,7 +424,7 @@
     },
     {
       "name": "古寿園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -452,7 +452,7 @@
     },
     {
       "name": "一古園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -475,7 +475,7 @@
     },
     {
       "name": "ヤマサ農園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -499,7 +499,7 @@
     },
     {
       "name": "ぶどうの国のくぬぎ園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -521,7 +521,7 @@
     },
     {
       "name": "ツチと実",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -547,7 +547,7 @@
     },
     {
       "name": "まるいわぶどう園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -568,7 +568,7 @@
     },
     {
       "name": "芳王遊覧園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -594,7 +594,7 @@
   "saitama": [
     {
       "name": "保谷農園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -619,7 +619,7 @@
     },
     {
       "name": "宮信観光ぶどう園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -651,7 +651,7 @@
     },
     {
       "name": "たいら栗園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -682,7 +682,7 @@
     },
     {
       "name": "恵農園・伊奈ファーム",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -712,7 +712,7 @@
   "chiba": [
     {
       "name": "小川園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -740,7 +740,7 @@
     },
     {
       "name": "小川梨園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -768,7 +768,7 @@
     },
     {
       "name": "高代園観光梨園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -791,7 +791,7 @@
     },
     {
       "name": "成田ファームランド",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -819,7 +819,7 @@
   "ibaraki": [
     {
       "name": "さんろく果樹園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -847,7 +847,7 @@
     },
     {
       "name": "岡野果樹園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -873,7 +873,7 @@
     },
     {
       "name": "福田グリーン農園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -900,7 +900,7 @@
     },
     {
       "name": "かねこ農園",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",
@@ -928,7 +928,7 @@
     },
     {
       "name": "らぽっぽ なめがたファーマーズヴィレッジ",
-      "category": "seasonal",
+      "category": "harvest",
       "place": "outdoor",
       "ages": [
         "2-3",

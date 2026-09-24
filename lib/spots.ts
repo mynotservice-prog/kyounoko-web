@@ -30,8 +30,9 @@ export type SpotCategory =
   | 'museum'       // 博物館・科学館
   | 'amusement'    // 遊園地・テーマパーク
   | 'indoor'       // 屋内遊戯施設（雨の日）
-  | 'farm'         // 牧場
-  | 'seasonal'     // 観光スポット（旧: 季節体験。いちご狩り等も含む）
+  | 'farm'         // 牧場（動物ふれあい・乳搾り）
+  | 'harvest'      // 農場・農園（芋掘り・栗拾い・果物狩り・きのこ狩りなどの収穫体験）
+  | 'seasonal'     // 観光スポット（洞窟・温泉街・寺社・展望など）
   | 'restaurant';  // 子連れOKレストラン
 
 export type SpotPlace = 'indoor' | 'outdoor' | 'mixed';
@@ -510,7 +511,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     {
       // 秋の味覚狩り面。イベント（会期もの）ではなく永続スポットとして持つ。
       // 芋掘りは毎年の季節営業なので、年ごとの日付ではなく「毎年◯月〜◯月」で表現する。
-      name: '荒幡農園（川越いもほり）', category: 'seasonal', place: 'outdoor', ages: ['2-3', '4-6'], city: '川越市',
+      name: '荒幡農園（川越いもほり）', category: 'harvest', place: 'outdoor', ages: ['2-3', '4-6'], city: '川越市',
       relatedArticleSlugs: ['imohori-chiba-saitama-ibaraki-kodzure'],
       note: '毎年9月中旬〜11月上旬に営業する川越のいも掘り農園。10:00〜16:00で、予約制なので当日行って掘れないということがない。', budget: 'low',
       reservation: 'required',
@@ -519,6 +520,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       accessTips: '西武新宿線 南大塚駅 南口から徒歩15〜20分。車は関越自動車道 川越ICから5分で駐車場あり。畑は足元が土なので、ベビーカーより抱っこ紐が動きやすいです。',
     },
     {
+      // 実験7（判定 2026-10-01、docs/experiments-active.md）の凍結面。判定後に category を 'harvest' へ移す
       name: '小松沢レジャー農園', category: 'seasonal', place: 'mixed', ages: ['2-3', '4-6'], city: '横瀬町',
       relatedArticleSlugs: ['imohori-chiba-saitama-ibaraki-kodzure'],
       note: '秩父・横瀬町の観光農園。椎茸狩りが通年の体験メニューとして用意されていて、他の収穫体験と組み合わせられる。', budget: 'low',
@@ -528,7 +530,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       accessTips: '埼玉県秩父郡横瀬町大字横瀬1408。料金・営業時間は年により変わるため公式サイトで確認してください。',
     },
     {
-      name: '@FARM（アット・ファーム）', category: 'seasonal', place: 'mixed', ages: ['2-3', '4-6'], city: '川越市',
+      name: '@FARM（アット・ファーム）', category: 'harvest', place: 'mixed', ages: ['2-3', '4-6'], city: '川越市',
       relatedArticleSlugs: ['imohori-chiba-saitama-ibaraki-kodzure'],
       note: '川越でいちご狩り・さつまいも掘りができる農園。直売所とカフェが併設されていて、収穫のあとそのまま食事にできる。', budget: 'low',
       reservation: 'recommended',
@@ -673,7 +675,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   ],
   chiba: [
       {
-      name: '佐倉きのこ園', category: 'seasonal', place: 'indoor', ages: ['2-3', '4-6'], city: '佐倉市',
+      name: '佐倉きのこ園', category: 'harvest', place: 'indoor', ages: ['2-3', '4-6'], city: '佐倉市',
       note: '入園無料・通年でしいたけ狩りができる農園。採った分だけの量り売りなので、子どもが10分で飽きても損しない。', budget: 'free',
       pricing: { adult: '入園無料＋しいたけ100gあたり324円（持ち帰り）／330円（BBQ）', elementary: '入園無料', preschool: '入園無料', infant: '入園無料' },
       reservation: 'none',
@@ -861,7 +863,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       // 通年・ハウス内の味覚狩り面。芋掘り（9〜11月の数週間）と違い雨でも季節外でも成立する。
-      name: '東京きのこランド', category: 'seasonal', place: 'indoor', ages: ['2-3', '4-6'], city: '練馬区', ward: '練馬区',
+      name: '東京きのこランド', category: 'harvest', place: 'indoor', ages: ['2-3', '4-6'], city: '練馬区', ward: '練馬区',
       note: '東京23区内でしいたけ狩りができる珍しい農園。ハウス内なので雨でも行けて、収穫体験は1グループ単位の料金設定。', budget: 'low',
       pricing: { adult: '1グループ 2,000円（体験料＋400g分込み・人数制限なし）', elementary: '同上（グループ料金）', preschool: '同上（グループ料金）', infant: '同上（グループ料金）' },
       reservation: 'required',
@@ -2088,7 +2090,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     {
       // 通年で味覚狩りが切り替わる永続スポット（いちご→さつまいも→みかん）。
       // 会期ものではないのでイベントのように失効しない。
-      name: '津久井浜観光農園', category: 'seasonal', place: 'outdoor', ages: ['2-3', '4-6'], city: '横須賀市',
+      name: '津久井浜観光農園', category: 'harvest', place: 'outdoor', ages: ['2-3', '4-6'], city: '横須賀市',
       relatedArticleSlugs: ['imohori-kanagawa-kodzure'],
       note: '季節で「いちご狩り・さつまいも掘り・みかん狩り」が切り替わる横須賀の観光農園。同じ場所で年に3回ちがう収穫体験ができる。', budget: 'low',
       pricing: { adult: 'さつまいも掘り 5株1,500円（JAよこすか葉山公式・2026-09-18確認）／いちご狩り 2,000〜2,500円／みかん狩り 1,200円', elementary: 'みかん狩り 600円（3歳以上）', preschool: 'みかん狩り 600円（3歳以上）', infant: 'さつまいも掘りは1人5株 1,500円' },
@@ -2818,6 +2820,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     {
       // 6月初旬〜12月初旬の半年、9種類の果物狩りがリレーする長期営業の農園。
       // 単発イベントではないので失効しない、季節をまたぐ資産。
+      // 実験7（判定 2026-10-01、docs/experiments-active.md）の凍結面。判定後に category を 'harvest' へ移す
       name: '中込農園', category: 'seasonal', place: 'outdoor', ages: ['2-3', '4-6'], city: '南アルプス市',
       relatedArticleSlugs: ['budougari-yamanashi-kodzure'],
       note: '約11ヘクタールの観光果樹園。6月初旬〜12月初旬の半年間、9種類の果物狩りが入れ替わりで楽しめる。', budget: 'low',
@@ -3740,6 +3743,7 @@ export const SPOT_CATEGORY_LABEL: Record<SpotCategory, string> = {
   amusement: '遊園地',
   indoor: '屋内施設',
   farm: '牧場',
+  harvest: '農場・農園',
   seasonal: '観光スポット',
   restaurant: '子連れOKレストラン',
 };

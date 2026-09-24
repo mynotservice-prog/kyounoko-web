@@ -32,6 +32,7 @@ export const BROWSE_CATEGORIES: BrowseCategory[] = [
   { id: 'indoor', label: '室内遊び場', accent: 'lunch', icon: 'house' },
   { id: 'amusement', label: '遊園地', accent: 'event', icon: 'party' },
   { id: 'farm', label: '牧場', accent: 'sun', icon: 'leaf' },
+  { id: 'harvest', label: '農場・農園', accent: 'sun', icon: 'leaf' },
   { id: 'seasonal', label: '観光スポット', accent: 'sun', icon: 'sun' },
 ];
 

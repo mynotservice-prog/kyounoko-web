@@ -38,13 +38,14 @@ export type { SpotVerification };
  * カテゴリ別の「確認の有効期限」（日数）。
  * 閉店・撤退のリスクが高いほど短くする。
  *  - restaurant / indoor: 商業施設内のテナントが多く入れ替わりが早い（実測で事故が出た層）
- *  - seasonal / amusement: 季節営業・イベント終了・会期変更がある
+ *  - seasonal / harvest / amusement: 季節営業・イベント終了・会期変更がある
  *  - park / zoo / aquarium / museum / farm: 公営・大型が中心で寿命が長い
  */
 const TTL_DAYS: Record<SpotCategory, number> = {
   restaurant: 180,
   indoor: 180,
   seasonal: 270,
+  harvest: 270,
   amusement: 270,
   aquarium: 365,
   zoo: 365,
@@ -158,7 +159,7 @@ export function recheckPriority(spot: Spot, f: Freshness): number {
   else if (f.state === 'aging') p += 30;
   // 閉店リスクの高いカテゴリを優先
   if (spot.category === 'restaurant' || spot.category === 'indoor') p += 60;
-  else if (spot.category === 'seasonal' || spot.category === 'amusement') p += 25;
+  else if (spot.category === 'seasonal' || spot.category === 'harvest' || spot.category === 'amusement') p += 25;
   // 露出があるほど実害が大きい
   if (spot.popular) p += 40;
   if (spot.kidReport) p += 20; // 一次情報を載せている＝看板ページ
