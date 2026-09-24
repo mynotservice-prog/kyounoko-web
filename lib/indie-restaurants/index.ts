@@ -48,6 +48,7 @@ import { CHUNK_KANSAI } from './chunk-kansai';
 import { CHUNK_41 } from './chunk-41';
 import { CHUNK_42 } from './chunk-42';
 import { CHUNK_43 } from './chunk-43';
+import HOTPEPPER from './hotpepper.json';
 import type { StationIndieMap, IndieRestaurant, IndieGenre } from './types';
 
 export type { IndieRestaurant, IndieGenre, StationIndieMap } from './types';
@@ -115,6 +116,32 @@ export const STATION_INDIE_MAP: StationIndieMap = mergeIndieMaps(
   CHUNK_42,
   CHUNK_43,
 );
+
+/**
+ * ホットペッパーグルメ Webサービスで取得した実店舗（scripts/hotpepper-indie-import.mjs が生成）。
+ * この駅のデータがあれば、出典のない旧AI生成データ（chunk-*.ts）を駅単位で丸ごと置き換える。
+ * 取れなかった駅の旧データは出さない（2026-09-24 社長決定）。
+ */
+const HOTPEPPER_STATIONS = (HOTPEPPER as { stations: Record<string, IndieRestaurant[]> }).stations;
+export const HOTPEPPER_GENERATED_AT: string = (HOTPEPPER as { generatedAt: string }).generatedAt;
+/**
+ * 旧 chunk-*.ts のうち、各館の公式ショップリストで1店ずつ確認した駅（station-overrides の indieLabels を持つ）。
+ * これ以外の旧データは出典のないAI生成で架空店を含むため、ホットペッパーで取れなかった駅でも表示しない。
+ */
+const MANUALLY_VERIFIED_STATIONS = new Set(['koshigaya-laketown']);
+for (const slug of Object.keys(STATION_INDIE_MAP)) {
+  const hp = HOTPEPPER_STATIONS[slug];
+  if (hp && hp.length > 0) STATION_INDIE_MAP[slug] = hp;
+  else if (!MANUALLY_VERIFIED_STATIONS.has(slug)) STATION_INDIE_MAP[slug] = [];
+}
+for (const [slug, list] of Object.entries(HOTPEPPER_STATIONS)) {
+  if (list.length > 0) STATION_INDIE_MAP[slug] = list;
+}
+
+/** この駅の個人店がホットペッパー由来か（見出し・リード文と出典表記の出し分け用） */
+export function isHotpepperStation(slug: string): boolean {
+  return (HOTPEPPER_STATIONS[slug]?.length ?? 0) > 0;
+}
 
 /**
  * 駅slugから個人店リストを取得。未登録駅は空配列。

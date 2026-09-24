@@ -433,6 +433,17 @@ export function buildVcDeepLink(myLink: string, landingUrl: string): string {
 }
 
 /**
+ * ホットペッパーの個別店舗ページへのリンク。VCのMyLinkがあれば計測付きの深リンクにする
+ * （buildVcDeepLink は承認マーチャント外のホストなら元リンクを返すので、壊れたリンクは出ない）。
+ */
+export function hotpepperShopHref(shopUrl: string): { href: string; affiliate: boolean } {
+  const base = process.env.NEXT_PUBLIC_VC_HOTPEPPER_URL?.trim();
+  if (!isValidUrl(base)) return { href: shopUrl, affiliate: false };
+  const href = buildVcDeepLink(base, shopUrl);
+  return { href, affiliate: href !== base };
+}
+
+/**
  * 外食文脈の記事に出す「ネット予約」CTA（ホットペッパーグルメ / VC）。
  *
  * - 非外食文脈、または env 未設定なら null（=描画しない）。
