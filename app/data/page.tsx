@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
 import { getDataSummary } from '@/lib/data-aggregations';
 import { getCoverageGeneratedAt, getCoverageSummary } from '@/lib/chain-coverage';
+import { getRinyushokuSurvey } from '@/lib/rinyushoku-survey';
 
 export const dynamic = 'force-static';
 export const revalidate = 86400;
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
 export default function DataIndexPage() {
   const summary = getDataSummary();
   const coverage = { ...getCoverageSummary(), generatedAt: getCoverageGeneratedAt() };
+  const rinyushoku = getRinyushokuSurvey();
 
   const datasets = [
     {
@@ -41,6 +43,14 @@ export default function DataIndexPage() {
       stats: `${coverage.chainCount}チェーン / ${coverage.storeCount.toLocaleString()}店を全数集計`,
       description:
         '「座敷は店舗による」を率に直した調査。各チェーンの公式店舗検索が公開する設備表示を全店舗ぶん数え、キッズチェア・座敷・おむつ替え台などの設置率をチェーン横断で比較。出典はセル単位で公式URL、年次更新。',
+      tags: ['Dataset', 'CSV', 'AIO参照可', '一次調査', '年次更新'],
+    },
+    {
+      slug: 'rinyushoku-official',
+      title: `外食チェーン 離乳食対応の公式記載 実態調査${rinyushoku.generatedAt.slice(0, 4)}`,
+      stats: `${rinyushoku.summary.chainCount}チェーン中 持ち込み明記${rinyushoku.summary.mochikomi.stated}社`,
+      description:
+        '離乳食の持ち込み・温め・調乳用のお湯・ベビーフード販売を、各チェーンの公式サイトが明記しているかを照合。「明記している／記載がない」の二層で集計（記載なし＝不可ではない）。出典はセル単位で公式URL、年次更新。',
       tags: ['Dataset', 'CSV', 'AIO参照可', '一次調査', '年次更新'],
     },
   ];

@@ -8,6 +8,10 @@
  *   A: 凍結slug の content/articles/<slug>.md が変更された
  *   B: 凍結slug・凍結URL への**リンクが増減した**（別のファイルからでも）
  *   C: 実験の「比較基準」記事へのリンクが増減した
+ *   B/C/D（描画層）: md に現れない描画時のリンク（本文キーワード自動リンク・回遊チップ・駅リンク）を
+ *      base と作業ツリーの全記事でシミュレーションし、凍結面・比較基準への被リンク（B/C）と
+ *      凍結記事から出るリンク（D）が増減した（7回目の汚染の再発防止。lib/・content/articles/ に差分がある時だけ走る。約20秒）
+ *   S: lib/auto-internal-links.ts の FROZEN_TARGET_SLUGS がレジストリの凍結slug全件とずれている（汚染の記録では通らない）
  *
  * 逃げ道は1つだけ: 同じPRで docs/experiments-active.md の「## 汚染の記録」節に
  * 追記していれば通す（判定時にその面を除外できる状態になるため）。
@@ -20,11 +24,16 @@
  *   node scripts/check-frozen.mjs                       # origin/main...HEAD を検査
  *   node scripts/check-frozen.mjs --base origin/main    # 明示
  *   node scripts/check-frozen.mjs --list                # 読み取った凍結対象を表示して終了
+ *   node scripts/check-frozen.mjs --force-render        # 差分が無くても描画層シミュレーションを回す（--no-render で省略）
+ *   ※ 描画層は --head 省略時「作業ツリー」を見る（未コミットの新記事も対象）。要 npm ci（remark 等）。
  *   FROZEN_CHECK_ALLOW=1 node scripts/check-frozen.mjs  # 緊急時の強制通過（理由をPRに書くこと）
  */
 
-import { execFileSync } from 'node:child_process';
-import { readFileSync } from 'node:fs';
+import { execFileSync, spawn } from 'node:child_process';
+import { copyFileSync, existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join, resolve as resolvePath } from 'node:path';
+import { pathToFileURL } from 'node:url';
 
 const REGISTRY = 'docs/experiments-active.md';
 const CODE_LIST = 'lib/auto-internal-links.ts';
@@ -36,6 +45,8 @@ const argVal = (name, def) => {
   return i >= 0 && args[i + 1] ? args[i + 1] : def;
 };
 const LIST_ONLY = args.includes('--list');
+const NO_RENDER = args.includes('--no-render');
+const FORCE_RENDER = args.includes('--force-render');
 const BASE = argVal('--base', process.env.FROZEN_CHECK_BASE || 'origin/main');
 const HEAD = argVal('--head', process.env.FROZEN_CHECK_HEAD || 'HEAD');
 
@@ -178,10 +189,210 @@ function recordedContamination(base, lines) {
 }
 
 /* ------------------------------------------------------------------ *
+ * 2.5 描画層シミュレーション（2026-09-25・7回目の汚染の再発防止）
+ *
+ * md の差分に現れない「描画時に張られるリンク」を base と HEAD の両方で計算して比べる。
+ *   auto    : lib/auto-internal-links.ts  injectInternalLinks（本文キーワード→記事）
+ *   cluster : lib/article-cluster-links.ts getClusterNav（チェーン／区の姉妹チップ）
+ *   station : lib/article-station-link.ts  buildStationLinkForArticle（本文の駅名→/station/...）
+ * 本文HTMLは md 全体（TL;DR・FAQ節も含む）を remark で描画したもの。本番は TL;DR・FAQ を
+ * 抜いてから注入するので、ここは「本番より多めに拾う」側に倒れている（両側同じ扱いなので差分には効かない）。
+ * KV 上書き・chain-facilities 経由の本文は見ない（リポジトリに無いため）。
+ * ------------------------------------------------------------------ */
+
+const REPO_ROOT = resolvePath(git('rev-parse', '--show-toplevel').trim());
+const RENDER_PATHS = ['lib', 'content/articles'];
+
+/** lib/auto-internal-links.ts の FROZEN_TARGET_SLUGS（作業ツリー版）を静的に読む */
+function readFrozenTargetSlugs() {
+  try {
+    const lib = readFileSync(join(REPO_ROOT, CODE_LIST), 'utf8');
+    const m = lib.match(/FROZEN_TARGET_SLUGS\s*=\s*new Set\(\[([\s\S]*?)\]\)/);
+    if (!m) return null;
+    return new Set([...m[1].matchAll(/'([a-z0-9][a-z0-9-]+)'/g)].map(([, s]) => s));
+  } catch {
+    return null;
+  }
+}
+
+/** base（と --head 指定時の head）を一時ディレクトリに展開する。lib と記事だけで足りる。 */
+function extractTree(ref) {
+  const dir = mkdtempSync(join(tmpdir(), 'frozen-check-'));
+  const want = [...RENDER_PATHS, 'package.json'].filter((p) => {
+    try {
+      git('cat-file', '-e', `${ref}:${p}`);
+      return true;
+    } catch {
+      return false;
+    }
+  });
+  const tar = execFileSync('git', ['archive', '--format=tar', ref, '--', ...want], { maxBuffer: 1024 * 1024 * 1024 });
+  execFileSync('tar', ['-x', '-C', dir], { input: tar, maxBuffer: 1024 * 1024 * 1024 });
+  // 解決フックは HEAD 版を使う（ROOT を自分の位置から決めるので、コピー先の lib を解決する）
+  mkdirSync(join(dir, 'scripts'), { recursive: true });
+  copyFileSync(join(REPO_ROOT, 'scripts/_ts-resolve.mjs'), join(dir, 'scripts/_ts-resolve.mjs'));
+  const nm = join(REPO_ROOT, 'node_modules');
+  if (existsSync(nm)) symlinkSync(nm, join(dir, 'node_modules'), 'dir');
+  return dir;
+}
+
+/** lib/articles.ts の toIsoDate と同じ規則（本番の publishedAt と同じ文字列にする） */
+function toIsoDate(v) {
+  if (!v) return null;
+  if (v instanceof Date) return v.toISOString();
+  if (typeof v === 'string') {
+    const d = new Date(v);
+    return Number.isNaN(d.getTime()) ? v : d.toISOString();
+  }
+  return null;
+}
+
+async function makeRenderer() {
+  const [{ remark }, gfm, cjk, html, matter] = await Promise.all([
+    import('remark'),
+    import('remark-gfm').then((m) => m.default),
+    import('remark-cjk-friendly').then((m) => m.default),
+    import('remark-html').then((m) => m.default),
+    import('gray-matter').then((m) => m.default),
+  ]);
+  // lib/articles.ts の renderMarkdownToHtml と同じプラグイン構成
+  const proc = remark().use(gfm).use(cjk).use(html, { sanitize: false });
+  const cache = new Map(); // 本文 → HTML（base と HEAD で同じ本文は1回だけ描画する）
+  return async function readArticles(root) {
+    const dir = join(root, 'content/articles');
+    const out = [];
+    for (const f of readdirSync(dir).filter((x) => x.endsWith('.md'))) {
+      const raw = readFileSync(join(dir, f), 'utf8');
+      const { data: d, content } = matter(raw);
+      let h = cache.get(content);
+      if (h === undefined) {
+        h = String(await proc.process(content));
+        cache.set(content, h);
+      }
+      const qi = d.quickInfo && typeof d.quickInfo === 'object' ? d.quickInfo : undefined;
+      const arr = (v) => (Array.isArray(v) ? v.map(String) : undefined);
+      out.push({
+        file: f,
+        slug: typeof d.slug === 'string' ? d.slug : f.replace(/\.md$/, ''),
+        title: typeof d.title === 'string' ? d.title : '',
+        metaDescription: typeof d.metaDescription === 'string' ? d.metaDescription : '',
+        // publishedAt が無い記事は本番では「今」になる（= カットオフ以降の新記事扱い）
+        publishedAt: toIsoDate(d.publishedAt) ?? new Date().toISOString(),
+        noindex: typeof d.noindex === 'boolean' ? d.noindex : undefined,
+        quickInfo: qi ? { place: arr(qi.place), weather: arr(qi.weather), ageRanges: arr(qi.ageRanges) } : undefined,
+        html: h,
+      });
+    }
+    return out;
+  };
+}
+
+function runWorker(tree, articles, label) {
+  const work = mkdtempSync(join(tmpdir(), `frozen-sim-${label}-`));
+  const inPath = join(work, 'in.json');
+  const outPath = join(work, 'out.json');
+  writeFileSync(inPath, JSON.stringify({ articles }));
+  const nodeArgs = ['--no-warnings'];
+  const [maj, min] = process.versions.node.split('.').map(Number);
+  if (maj < 23 || (maj === 23 && min < 6)) nodeArgs.push('--experimental-strip-types');
+  nodeArgs.push('--import', pathToFileURL(join(tree, 'scripts/_ts-resolve.mjs')).href);
+  nodeArgs.push(join(REPO_ROOT, 'scripts/_frozen-render-sim.mjs'), tree, inPath, outPath);
+  return new Promise((res, rej) => {
+    const p = spawn(process.execPath, nodeArgs, { cwd: tree, stdio: ['ignore', 'inherit', 'pipe'] });
+    let err = '';
+    p.stderr.on('data', (c) => (err += c));
+    p.on('close', (code) => {
+      try {
+        if (code !== 0) throw new Error(`描画層シミュレーション(${label})が失敗: exit ${code}\n${err.slice(-2000)}`);
+        res(JSON.parse(readFileSync(outPath, 'utf8')));
+      } catch (e) {
+        rej(e);
+      } finally {
+        rmSync(work, { recursive: true, force: true });
+      }
+    });
+  });
+}
+
+/** base と作業ツリーで、描画層に効くファイル（lib・記事md）に差があるか */
+function renderInputsChanged(base) {
+  if (HEAD !== 'HEAD') return git('diff', '--name-only', base, HEAD, '--', ...RENDER_PATHS).trim() !== '';
+  if (git('diff', '--name-only', base, '--', ...RENDER_PATHS).trim() !== '') return true;
+  return git('ls-files', '--others', '--exclude-standard', '--', ...RENDER_PATHS).trim() !== '';
+}
+
+/**
+ * 描画層のリンクのうち「測定中の面に関係するもの」を key → 表示用 にして返す。
+ *   in-frozen   : 凍結slug・凍結URL への描画リンク（リンク元の集合）
+ *   in-baseline : 比較基準への描画リンク
+ *   out-frozen  : 凍結記事から出る描画リンク
+ */
+function relevantEdges(edges, { frozenSlugs, frozenUrls, comparisonBaselines }) {
+  const urlHit = (href) => [...frozenUrls].find((u) => href === u || href.startsWith(`${u}/`) || href.startsWith(`${u}?`) || href.startsWith(`${u}#`));
+  const artSlug = (href) => href.match(/^\/article\/([^/?#]+)/)?.[1];
+  const m = new Map();
+  for (const e of edges) {
+    const s = artSlug(e.to);
+    const hits = [];
+    if (s && frozenSlugs.has(s)) hits.push({ kind: 'B', cat: '凍結記事への被リンク', target: `/article/${s}` });
+    const u = urlHit(e.to);
+    if (u) hits.push({ kind: 'B', cat: '凍結URLへの被リンク', target: u });
+    if (s && comparisonBaselines.has(s)) hits.push({ kind: 'C', cat: '比較基準への被リンク', target: `/article/${s}` });
+    if (frozenSlugs.has(e.from)) hits.push({ kind: 'D', cat: '凍結記事から出るリンク', target: `/article/${e.from}` });
+    for (const h of hits) m.set(`${h.kind}\t${h.target}\t${e.via}\t${e.from}\t${e.to}`, { ...h, ...e });
+  }
+  return m;
+}
+
+async function simulateRenderLayer(base, registry) {
+  const t0 = Date.now();
+  const readArticles = await makeRenderer();
+  const baseDir = extractTree(base);
+  const headDir = HEAD === 'HEAD' ? REPO_ROOT : extractTree(HEAD);
+  try {
+    const [baseArts, headArts] = [await readArticles(baseDir), await readArticles(headDir)];
+    const tRender = Date.now();
+    const [b, h] = await Promise.all([runWorker(baseDir, baseArts, 'base'), runWorker(headDir, headArts, 'head')]);
+    const be = relevantEdges(b.edges, registry);
+    const he = relevantEdges(h.edges, registry);
+    const added = [...he].filter(([k]) => !be.has(k)).map(([, v]) => ({ ...v, sign: '+' }));
+    const removed = [...be].filter(([k]) => !he.has(k)).map(([, v]) => ({ ...v, sign: '-' }));
+    return {
+      changes: [...added, ...removed],
+      stats: {
+        articles: { base: baseArts.length, head: headArts.length },
+        edges: { base: b.edges.length, head: h.edges.length },
+        relevant: { base: be.size, head: he.size },
+        paths: h.paths,
+        ms: { render: tRender - t0, total: Date.now() - t0 },
+      },
+      headFrozenTargetSlugs: h.frozenTargetSlugs,
+    };
+  } finally {
+    rmSync(baseDir, { recursive: true, force: true });
+    if (headDir !== REPO_ROOT) rmSync(headDir, { recursive: true, force: true });
+  }
+}
+
+/* ------------------------------------------------------------------ *
  * 3. 検査
  * ------------------------------------------------------------------ */
 
-const { frozenSlugs, frozenUrls, comparisonBaselines, hasBlock, drift } = readRegistry();
+const registry = readRegistry();
+const { frozenSlugs, frozenUrls, comparisonBaselines, hasBlock, drift } = registry;
+
+// --- S: lib の FROZEN_TARGET_SLUGS とレジストリの凍結slug全件の一致 ---
+// 描画層のガード（mayLinkToFrozen）はこの写しを見る。ずれると新記事から凍結面へのリンクが素通りする。
+const frozenTargetSlugs = readFrozenTargetSlugs();
+const syncProblems = [];
+if (!frozenTargetSlugs) {
+  syncProblems.push(`${CODE_LIST} に FROZEN_TARGET_SLUGS が見つかりません`);
+} else {
+  const missing = [...frozenSlugs].filter((s) => !frozenTargetSlugs.has(s)).sort();
+  const extra = [...frozenTargetSlugs].filter((s) => !frozenSlugs.has(s)).sort();
+  if (missing.length) syncProblems.push(`FROZEN_TARGET_SLUGS に無い凍結slug（新記事からのリンクが止まらない）: ${missing.join(' ')}`);
+  if (extra.length) syncProblems.push(`FROZEN_TARGET_SLUGS にあるがレジストリでは凍結でないslug（判定済みなら外す）: ${extra.join(' ')}`);
+}
 
 if (LIST_ONLY) {
   console.log(`凍結slug ${frozenSlugs.size}件:\n  ${[...frozenSlugs].sort().join('\n  ')}`);
@@ -192,6 +403,11 @@ if (LIST_ONLY) {
     console.log(`\n△ 本文に出てくるが凍結として扱っていないslug ${drift.size}件（凍結すべきものが混じっていないか、たまに見ること）:`);
     console.log(`  ${[...drift].sort().join('\n  ')}`);
   }
+  console.log(
+    syncProblems.length
+      ? `\n✗ ${CODE_LIST} の FROZEN_TARGET_SLUGS とずれています:\n  ${syncProblems.join('\n  ')}`
+      : `\n✓ ${CODE_LIST} の FROZEN_TARGET_SLUGS（${frozenTargetSlugs.size}件）と一致`,
+  );
   process.exit(0);
 }
 
@@ -237,16 +453,57 @@ for (const l of lines) {
   }
 }
 
+// --- B/C/D（描画層）: 自動リンク・回遊チップ・駅リンクの増減 ---
+const VIA_LABEL = { auto: '本文キーワード自動リンク', cluster: '回遊チップ', station: '駅リンク' };
+let renderSummary;
+if (NO_RENDER) {
+  renderSummary = '△ 描画層シミュレーションは --no-render で省略しました（自動リンク・回遊チップ・駅リンクは未検査）';
+} else if (!FORCE_RENDER && !renderInputsChanged(base)) {
+  renderSummary = '描画層: lib/・content/articles/ に差分が無いので省略（--force-render で強制）';
+} else {
+  let sim;
+  try {
+    sim = await simulateRenderLayer(base, registry);
+  } catch (e) {
+    console.error(`✗ ${e.message}`);
+    console.error('  描画層を検査できませんでした。npm ci 済みか確認するか、理由をPRに書いて --no-render で回してください。');
+    process.exit(2);
+  }
+  const s = sim.stats;
+  renderSummary =
+    `描画層: 記事 base ${s.articles.base}/head ${s.articles.head} ・描画リンク ${s.edges.base}→${s.edges.head} ` +
+    `・測定面に関係するもの ${s.relevant.base}→${s.relevant.head}（${(s.ms.total / 1000).toFixed(1)}秒）`;
+  const off = Object.entries(s.paths).filter(([, v]) => !v).map(([k]) => k);
+  if (off.length) renderSummary += `\n△ HEAD で見つからない経路: ${off.join(', ')}`;
+  for (const c of sim.changes.sort((x, y) => x.kind.localeCompare(y.kind) || x.target.localeCompare(y.target))) {
+    violations.push({
+      type: c.kind,
+      target: `${c.cat} ${c.target}`,
+      where: `描画層/${VIA_LABEL[c.via] ?? c.via}: /article/${c.from} → ${c.to}${c.note ? `（${c.note}）` : ''}`,
+      detail: c.sign === '+' ? '描画時のリンクが増えます（md の差分には出ない経路）' : '描画時のリンクが消えます（md の差分には出ない経路）',
+    });
+  }
+}
+
 /* ------------------------------------------------------------------ *
  * 4. 結果
  * ------------------------------------------------------------------ */
 
 console.log(`凍結ガード: base=${base.slice(0, 8)} head=${HEAD} / 凍結slug ${frozenSlugs.size} ・凍結URL ${frozenUrls.size} ・比較基準 ${comparisonBaselines.size}`);
+console.log(renderSummary);
 if (!hasBlock) {
   console.log(`△ ${REGISTRY} に \`\`\`json frozen-check ブロックがありません。比較基準（実験4のような「同じ土俵で比較する」相手）は検査できていません。`);
 }
 
+// S は「汚染の記録」では通さない（記録しても描画層のガードは直らないため）
+if (syncProblems.length) {
+  console.error(`\n✗ [S] ${CODE_LIST} の FROZEN_TARGET_SLUGS がレジストリの凍結slug全件とずれています:`);
+  for (const p of syncProblems) console.error(`        ${p}`);
+  console.error('        `node scripts/check-frozen.mjs --list` の凍結slugと同じ集合にしてください。');
+}
+
 if (violations.length === 0) {
+  if (syncProblems.length && !process.env.FROZEN_CHECK_ALLOW) process.exit(1);
   console.log('✓ 測定中の面に触っている差分はありません。');
   process.exit(0);
 }
@@ -256,6 +513,11 @@ for (const v of violations) {
   console.error(`  [${v.type}] ${v.target}`);
   console.error(`        ${v.where}`);
   console.error(`        ${v.detail}`);
+}
+
+if (syncProblems.length && !process.env.FROZEN_CHECK_ALLOW) {
+  console.error('\n（[S] が残っているので、汚染の記録があっても通しません）');
+  process.exit(1);
 }
 
 if (recordedContamination(base, lines)) {

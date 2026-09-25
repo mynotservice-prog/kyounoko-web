@@ -1,0 +1,2125 @@
+{
+  "title": "外食チェーン 離乳食対応の公式記載 実態調査2026",
+  "generatedAt": "2026-09-25",
+  "surveyPeriod": "2026-09-25",
+  "generator": "scripts/build-rinyushoku-survey.mjs",
+  "inputs": [
+    "reports/rinyushoku-official-2026-09-25/{A..H}.tsv",
+    "reports/chain-onboarding-2026-09-25/{G1..G7,H1..H7}.tsv（babyFood列・参考）",
+    "scripts/build-rinyushoku-survey.mjs の CORRECTIONS / ADDITIONS / SUPPLEMENT"
+  ],
+  "summary": {
+    "chainCount": 57,
+    "mochikomi": {
+      "stated": 3,
+      "denominator": 54,
+      "total": 57,
+      "counts": {
+        "記載なし": 51,
+        "未確認": 3,
+        "明記OK": 3
+      },
+      "chains": [
+        "shabuyou",
+        "kourakuen",
+        "gusto"
+      ]
+    },
+    "atatame": {
+      "stated": 2,
+      "denominator": 54,
+      "total": 57,
+      "counts": {
+        "記載なし": 52,
+        "明記あり": 2,
+        "未確認": 3
+      },
+      "chains": [
+        "kappa-sushi",
+        "yuzuan"
+      ]
+    },
+    "oyu": {
+      "stated": 3,
+      "denominator": 53,
+      "total": 57,
+      "counts": {
+        "記載なし": 50,
+        "明記あり": 3,
+        "未確認": 3,
+        "未照合": 1
+      },
+      "chains": [
+        "royal-host",
+        "yuzuan",
+        "marugenramen"
+      ]
+    },
+    "hanbai": {
+      "stated": 7,
+      "denominator": 50,
+      "total": 57,
+      "counts": {
+        "記載なし": 43,
+        "明記あり": 7,
+        "未確認": 3,
+        "未照合": 4
+      },
+      "chains": [
+        "cocos",
+        "royal-host",
+        "kappa-sushi",
+        "marugenramen",
+        "bigboy",
+        "sawayaka",
+        "dennys"
+      ]
+    },
+    "allergyOnlyMochikomi": [
+      "yuzuan",
+      "marugenramen"
+    ],
+    "anyStated": [
+      "cocos",
+      "royal-host",
+      "kappa-sushi",
+      "shabuyou",
+      "yuzuan",
+      "kourakuen",
+      "marugenramen",
+      "bigboy",
+      "sawayaka",
+      "gusto",
+      "dennys"
+    ]
+  },
+  "chains": [
+    {
+      "key": "ohsho",
+      "name": "餃子の王将",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/A.tsv",
+      "quote": "（該当記載なし。公式サイトにFAQ無し・店舗ページの設備項目はバリアフリー/席数/禁煙のみ）",
+      "sourceUrl": "https://www.ohsho.co.jp/inquiry/",
+      "positiveControl": "FAQ無し（参考: https://map.ohsho.co.jp/b/ohsho/info/1031/ ）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "ohsho-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "bamiyan",
+      "name": "バーミヤン",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/A.tsv",
+      "quote": "（該当記載なし。ガストの /gusto/family/ 相当ページは /bamiyan/family/ が404。グループFAQ検索「離乳食」0件）",
+      "sourceUrl": "https://www.skylark.co.jp/bamiyan/",
+      "positiveControl": "https://faq.skylark.co.jp/faq/show/70?site_domain=faq / https://www.skylark.co.jp/gusto/family/index.html",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": null,
+      "articleKind": null
+    },
+    {
+      "key": "jonathan",
+      "name": "ジョナサン",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/A.tsv",
+      "quote": "（該当記載なし。/jonathan/family/ は404。グループFAQ検索「離乳食」0件）",
+      "sourceUrl": "https://www.skylark.co.jp/jonathan/",
+      "positiveControl": "https://faq.skylark.co.jp/faq/show/70?site_domain=faq / https://www.skylark.co.jp/gusto/family/index.html",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "jonathan-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "cocos",
+      "name": "ココス",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/A.tsv",
+      "quote": "生後7ヶ月頃からの離乳食です。温めて提供いたします。（店内販売品「しらすの雑炊」。持ち込みの記載なし）",
+      "sourceUrl": "https://www.cocos-jpn.co.jp/menu/kids/jr_zosui2109.html",
+      "positiveControl": "https://www.cocos-jpn.co.jp/faq/",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし",
+          "note": "店内販売品を「温めて提供いたします」の記載はある（持ち込み品の温めの記載ではない）"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "明記あり"
+        }
+      },
+      "correction": "「温めて提供いたします」は店内販売品（しらすの雑炊）の提供方法。持ち込み品の温めではない。",
+      "articleSlug": "cocos-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "royal-host",
+      "name": "ロイヤルホスト",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/A.tsv",
+      "quote": "※哺乳瓶のお湯をご用意しています。※食器に入れ、温めてお持ちします。（店内販売品ベビーフード。持ち込みの記載なし）",
+      "sourceUrl": "https://www.royalhost.jp/menu/kids/post_854.html",
+      "positiveControl": "https://www.royalhost.jp/infomation/faq/",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし",
+          "note": "店内販売のベビーフードを「食器に入れ、温めてお持ちします」の記載はある（持ち込み品の温めの記載ではない）"
+        },
+        "oyu": {
+          "value": "明記あり"
+        },
+        "hanbai": {
+          "value": "明記あり"
+        }
+      },
+      "correction": "「温めてお持ちします」は店内で販売するベビーフードの提供方法の説明。持ち込んだ離乳食の温めの記載ではないため、温めは「記載なし」のまま。",
+      "articleSlug": "royal-host-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "yayoiken",
+      "name": "やよい軒",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/A.tsv",
+      "quote": "（該当記載なし。公式Q&Aにお子様メニューの項目はあるが離乳食の項目なし）",
+      "sourceUrl": "https://www.yayoiken.com/qa/",
+      "positiveControl": "https://www.yayoiken.com/qa/",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": null,
+      "articleKind": null
+    },
+    {
+      "key": "sushiro",
+      "name": "スシロー",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/B.tsv",
+      "quote": "お茶用のお湯での調乳について掲載…そのお湯が70℃を下回る温度になるなど…掲載の取り下げをいたしました［持ち込みの記載なし］",
+      "sourceUrl": "https://www.akindo-sushiro.co.jp/news/detail.php?id=3517",
+      "positiveControl": "https://www.akindo-sushiro.co.jp/faq/ （Q「子供椅子、おむつ台はありますか？」A「設置しております。」）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし",
+          "note": "「テーブルに備え付けのお茶用のお湯での調乳」の掲載を取り下げた旨のお知らせあり（調乳用のお湯の用意を案内する記載ではない）"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "correction": "公式の記述は「お茶用のお湯での調乳」の掲載を取り下げた旨のお知らせで、調乳用のお湯を用意しているという記載ではない。お湯は「記載なし」とし、お知らせを注記に残す。",
+      "articleSlug": "sushiro-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "kura-sushi",
+      "name": "くら寿司",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/B.tsv",
+      "quote": "（該当記載なし）公式サイトにFAQ無し（/faq/ はソフト404）。店舗ページ「提供サービス」はスロープ/多機能トイレ等のみで子連れ項目なし。お子さまランチ等の告知ページにも該当語なし",
+      "sourceUrl": "https://www.kurasushi.co.jp/contact/",
+      "positiveControl": "https://shop.kurasushi.co.jp/detail/665",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし",
+          "note": "FAQ無し"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "kura-sushi-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "kappa-sushi",
+      "name": "かっぱ寿司",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/B.tsv",
+      "quote": "お寿司が食べられないおこさまも安心! 離乳食あります! 温めも承ります［画像内の文言。店の離乳食の案内で、持ち込みの記載なし］",
+      "sourceUrl": "https://www.kappasushi.jp/kappa-kids",
+      "positiveControl": "https://www.kappasushi.jp/kappa-kids （同ページ画像に「キッズチェアあります!」「おむつ替え台…完備!※一部店舗では設置がございません」）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "明記あり",
+          "note": "店の離乳食の案内に続く「温めも承ります」。持ち込んだ離乳食が対象かは文言から判別できない"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "明記あり"
+        }
+      },
+      "correction": "「離乳食あります! 温めも承ります」は店の離乳食の案内に続く文言。温めを引き受ける旨は明記されているため「明記あり」とするが、持ち込み品が対象かは文言から判別できないことを注記する。",
+      "articleSlug": "kappa-sushi-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "uobei",
+      "name": "魚べい",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/B.tsv",
+      "quote": "（該当記載なし）uobei.infoにFAQ無し（/faq/ 404）。店舗API全199件のservice項目は回転しない寿司/駐車場/車いす対応等のみ。メニューAPIにも該当語なし。genkisushi.co.jpは当環境から接続不可",
+      "sourceUrl": "https://www.uobei.info/",
+      "positiveControl": "FAQ無し（参考: https://www.uobei.info/store/ ）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし",
+          "note": "FAQ無し"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "uobei-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "choushimaru",
+      "name": "すし銚子丸",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/B.tsv",
+      "quote": "（該当記載なし）公式FAQ /question/ は当環境から403（2024-11のアーカイブではパスワード保護）。店舗ページ「営業サービス・施設情報」はベビールーム等を記録するが離乳食の項目なし",
+      "sourceUrl": "https://stores.choushimaru.co.jp/138",
+      "positiveControl": "https://stores.choushimaru.co.jp/138 （「ベビールーム」「ファミリーシート（BOX席）」を記録）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "未確認"
+        },
+        "atatame": {
+          "value": "未確認"
+        },
+        "oyu": {
+          "value": "未確認"
+        },
+        "hanbai": {
+          "value": "未確認"
+        }
+      },
+      "correction": "公式FAQ（/question/）が当調査環境から403で本文を取得できなかった。店舗ページに離乳食の項目は無いが、FAQを読めていないため未確認とする。",
+      "articleSlug": "choushimaru-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "ootoya",
+      "name": "大戸屋",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/B.tsv",
+      "quote": "（該当記載なし）FAQ実在（メニュー/アプリ/POINT+/e-Gift）だが子連れ項目なし。店舗検索の「サービス・施設」分類（駐車場/ドリンクバー/禁煙等13種）にも子連れ項目なし",
+      "sourceUrl": "https://www.ootoya.com/faq/",
+      "positiveControl": "https://www.ootoya.com/faq/ （陽性対照は不成立：公式に子連れ項目を記録する面が無い）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "ootoya-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "yoshinoya",
+      "name": "吉野家",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/C.tsv",
+      "quote": "（該当記載なし）FAQ実在（商品/店舗・出店/株主優待/通販/アプリ）に子連れ項目なし。サイト内検索(WP API)で「離乳食」「ベビーフード」0件",
+      "sourceUrl": "https://www.yoshinoya.com/contact/",
+      "positiveControl": "https://www.yoshinoya.com/menu/pokemori/pokemori-kids-gyu-don/",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "yoshinoya-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "matsuya",
+      "name": "松屋",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/C.tsv",
+      "quote": "（該当記載なし）運営元FAQページは枠のみで設問が描画されない（ulAiWidgetが空・読込スクリプト無し）。matsuyafoods.co.jp側にFAQ無し",
+      "sourceUrl": "https://www.matsuyafoods-holdings.co.jp/faq/",
+      "positiveControl": "https://www.matsuyafoods-holdings.co.jp/faq/",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし",
+          "note": "FAQ無し"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "matsuya-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "sukiya",
+      "name": "すき家",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/C.tsv",
+      "quote": "（該当記載なし）FAQに「お子様セットがあるお店を教えてください。」はあるが離乳食の項目なし。sitemap内83ページ走査でも該当語なし",
+      "sourceUrl": "https://www.sukiya.jp/faq.html",
+      "positiveControl": "https://www.sukiya.jp/faq.html",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "sukiya-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "nakau",
+      "name": "なか卯",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/C.tsv",
+      "quote": "（該当記載なし）公式サイトにFAQページ無し（/jp/faq/はS3 AccessDenied）。お問い合わせページは窓口案内のみ",
+      "sourceUrl": "https://www.nakau.co.jp/jp/contact/index.html",
+      "positiveControl": "https://maps.nakau.co.jp/jp/index.html",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし",
+          "note": "FAQ無し"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "nakau-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "tenya",
+      "name": "天丼てんや",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/C.tsv",
+      "quote": "（該当記載なし）FAQ実在（5問：優待券/決済/たれ/弁当レンジ/揚げ玉）だが子連れ項目は一切なし。店舗ページ・sitemap掲載ページにも子連れ記載なし",
+      "sourceUrl": "https://www.tenya.co.jp/faq/",
+      "positiveControl": "https://www.tenya.co.jp/faq/",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "tenya-baby-chair",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "hanamaru-udon",
+      "name": "はなまるうどん",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/C.tsv",
+      "quote": "（該当記載なし）FAQ実在（23問）に子連れ項目なし。/about/の「離乳食として…好まれています」は持ち込みの記述ではない",
+      "sourceUrl": "https://www.hanamaruudon.com/faq/",
+      "positiveControl": "https://www.hanamaruudon.com/menu/03_5.html",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": null,
+      "articleKind": null
+    },
+    {
+      "key": "mcdonalds",
+      "name": "マクドナルド",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/D.tsv",
+      "sourceUrl": "https://www.mcdonalds.co.jp/cservice/faq/",
+      "positiveControl": "https://www.mcdonalds.co.jp/cservice/list.shop/",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "mcdonalds-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "mos-burger",
+      "name": "モスバーガー",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/D.tsv",
+      "sourceUrl": "https://www.mos.jp/faq/",
+      "positiveControl": "https://www.mos.jp/faq/shop/service/#q53",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "mos-burger-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "kfc",
+      "name": "ケンタッキー",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/D.tsv",
+      "sourceUrl": "https://faq.kfc.co.jp/",
+      "positiveControl": "https://faq.kfc.co.jp/低アレルゲン対応メニューはありますか？-6961b51f1c19e1840fcfc762",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "kfc-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "burger-king",
+      "name": "バーガーキング",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/D.tsv",
+      "sourceUrl": "https://www.burgerking.co.jp/customer/qa_list",
+      "positiveControl": "https://www.burgerking.co.jp/customer/qa_list",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "burger-king-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "freshness-burger",
+      "name": "フレッシュネスバーガー",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/D.tsv",
+      "sourceUrl": "https://www.freshnessburger.co.jp/qa",
+      "positiveControl": "https://www.freshnessburger.co.jp/qa",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "freshness-burger-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "zetteria",
+      "name": "ゼッテリア",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/D.tsv",
+      "sourceUrl": "https://www.zetteria.jp/sitemap.xml",
+      "positiveControl": "https://www.zetteria.jp/menu/wakuwaku.html",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "zetteria-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "komeda",
+      "name": "コメダ珈琲店",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/E.tsv",
+      "quote": "（該当記載なし）/faq/ は「ご質問はチャットでご案内しています」のみで静的FAQ無し（ChatPlus）。sitemap全57URLに「離乳食/ベビーフード/持ち込み/お湯」0件",
+      "sourceUrl": "https://www.komeda.co.jp/faq/",
+      "positiveControl": "https://eu.komeda.co.jp/v1/hp/shop?prefecture=%E6%9D%B1%E4%BA%AC%E9%83%BD&brand_type=1 （店舗APIが「トイレおむつ台」「お子様メニュー」「子育て支援」を項目として記録）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし",
+          "note": "FAQ無し"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "komeda-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "starbucks",
+      "name": "スターバックス",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/E.tsv",
+      "quote": "（未確定）FAQはSalesforce製（648記事）でJS描画のみ、curl/WebFetchとも本文取得不可。www側sitemap344URLには0件。要確認記事「店外で購入した商品を持ち込みできますか？」",
+      "sourceUrl": "https://starbucks-japan.my.site.com/s/a/2759",
+      "positiveControl": "https://starbucks-japan.my.site.com/s/a/2892 （FAQに「ROASTERY TOKYOはベビーカー…」の子連れ項目が実在※タイトルは検索結果で確認・本文未読）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "未確認"
+        },
+        "atatame": {
+          "value": "未確認"
+        },
+        "oyu": {
+          "value": "未確認"
+        },
+        "hanbai": {
+          "value": "未確認"
+        }
+      },
+      "correction": "公式FAQ（Salesforce製）がJavaScript描画で本文を取得できず、該当しうる記事「店外で購入した商品を持ち込みできますか？」を読めていない。「記載なし」とは言えないため未確認とする。",
+      "articleSlug": "starbucks-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "doutor",
+      "name": "ドトールコーヒーショップ",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/E.tsv",
+      "quote": "（該当記載なし）/faq/ はお問い合わせフォームへ転送（チャットボットのみ）。sitemapからメニュー詳細等を除く258URLに「離乳食/ベビーフード/哺乳」0件。店舗APIに子連れ項目なし",
+      "sourceUrl": "https://www.doutor.co.jp/inquiry/dtr/other/index.html",
+      "positiveControl": "FAQ無し（参考: https://www.doutor.co.jp/dcs/ ）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし",
+          "note": "FAQ無し"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "doutor-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "tullyscoffee",
+      "name": "タリーズコーヒー",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/E.tsv",
+      "quote": "（該当記載なし）FAQ全259記事のタイトル（sitemap-topicarticle）に離乳食・ベビー・持ち込み・お湯の項目なし。www側437URLにも0件",
+      "sourceUrl": "https://tullyscoffeejapan.my.site.com/faq/s/",
+      "positiveControl": "https://tullyscoffeejapan.my.site.com/faq/s/article/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E3%82%B9%E3%82%AF%E3%83%BC%E3%83%AB%E3%81%B8%E3%81%AE%E5%AD%90%E4%BE%9B%E3%81%AE%E5%8F%82%E5%8A%A0-%E5%90%8C%E4%BC%B4%E3%81%AF%E5%8F%AF%E8%83%BD%E3%81%A7%E3%81%99%E3%81%8B （FAQに子ども関連項目「コーヒースクールへの子供の参加・同伴は可能ですか」が実在）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "tullys-coffee-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "misdo",
+      "name": "ミスタードーナツ",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/E.tsv",
+      "quote": "（該当記載なし）FAQ実在（23問：決済/ポイント/商品券/禁煙等）に子連れ項目なし。トップ直下80URLにも「離乳食/ベビーフード/持ち込み」0件",
+      "sourceUrl": "https://www.misterdonut.jp/information/faq/index.html",
+      "positiveControl": "https://www.misterdonut.jp/businessinfo/news_release/index.html （公式がお子様向け「キッズセット」を記録。FAQ自体は子連れ項目なし）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "misdo-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "baskin-robbins-31",
+      "name": "サーティワン",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/E.tsv",
+      "quote": "（該当記載なし）FAQ実在（はちみつ・カフェイン・洋酒の含有等）。全文に「離乳/ベビー/赤ちゃん/子ども/お子」0件",
+      "sourceUrl": "https://www.br31.jp/contents/faq/",
+      "positiveControl": "https://www.br31.jp/contents/faq/ （同FAQが「はちみつが入っているアイスクリームはありますか？」「カフェインは…」を記録）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "baskin-robbins-31-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "gyukaku",
+      "name": "牛角",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/F.tsv",
+      "quote": "（該当記載なし。FAQ無し。公式サイトmap全25URL＋こども牛角LPに「離乳」0件。LPの設備欄は「お子様用イス お子様用エプロン お子様用食器」）",
+      "sourceUrl": "https://www.gyukaku.ne.jp/lp/202412_kids/",
+      "positiveControl": "https://www.gyukaku.ne.jp/lp/202412_kids/ （お子様用イス等を記載）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "gyukaku-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "shabuyou",
+      "name": "しゃぶ葉",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/F.tsv",
+      "quote": "離乳食のお持ち込みＯＫ　離乳食はご自由にお持ち込みください。",
+      "sourceUrl": "https://www.skylark.co.jp/syabuyo/child/",
+      "positiveControl": "https://www.skylark.co.jp/syabuyo/child/ （同ページにキッズチェア・おむつ交換台を記載）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "明記OK"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "shabuyou-rinyushoku-mochikomi",
+      "articleKind": "rinyushoku"
+    },
+    {
+      "key": "yakinikuking",
+      "name": "焼肉きんぐ",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/F.tsv",
+      "quote": "（該当記載なし。お子様連れページ・page-sitemap全85URLに「離乳」0件。/faq/はアプリのFAQのみ）",
+      "sourceUrl": "https://www.yakiniku-king.jp/family/",
+      "positiveControl": "https://www.yakiniku-king.jp/family/ （お子様イス・おむつ交換台を記載）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": null,
+      "articleKind": null
+    },
+    {
+      "key": "onyasai",
+      "name": "しゃぶしゃぶ温野菜",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/F.tsv",
+      "quote": "（該当記載なし。FAQ無し。sitemap全195URL＋家族向けPDFに「離乳」0件）",
+      "sourceUrl": "https://www.onyasai.com/menu/menu-kids.php",
+      "positiveControl": "https://map.reins.co.jp/onyasai/detail/357796429 （店舗ページが「キッズルーム：なし」等の子連れ項目を記録）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "onyasai-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "yuzuan",
+      "name": "ゆず庵",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/F.tsv",
+      "quote": "ミルクのお湯、離乳食の温め、お任せください。（別項：食物アレルギーをお持ちのお子様用には、遠慮なさらずにお食事をお持ち込みください。）",
+      "sourceUrl": "https://www.shabu-yuzuan.jp/children/",
+      "positiveControl": "https://www.shabu-yuzuan.jp/children/ （同ページにお子様用の椅子・おむつ交換台を記載）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし",
+          "note": "食物アレルギーのお子様向けの持ち込みのみ明記（「食物アレルギーをお持ちのお子様用には、遠慮なさらずにお食事をお持ち込みください。」）"
+        },
+        "atatame": {
+          "value": "明記あり"
+        },
+        "oyu": {
+          "value": "明記あり"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "correction": "公式ページの持ち込みの一文は「食物アレルギーをお持ちのお子様用」が対象。一般の離乳食の持ち込み可否は書かれていないため、持ち込みは「記載なし」とする（温め・お湯は明記あり）。",
+      "articleSlug": "yuzuan-rinyushoku-mochikomi",
+      "articleKind": "rinyushoku"
+    },
+    {
+      "key": "anrakutei",
+      "name": "安楽亭",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/F.tsv",
+      "quote": "（該当記載なし。FAQ無し。page-sitemap全127URLに「離乳」0件）",
+      "sourceUrl": "https://anrakutei.jp/",
+      "positiveControl": "https://anrakutei.jp/map/ （店舗検索の設備絞込に「おむつ交換台」「キッズルーム」）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "anrakutei-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "cocoichi",
+      "name": "CoCo壱番屋",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/G.tsv",
+      "quote": "（該当なし。お客様Q&A全101件をAPIで全件取得、離乳食・子連れ項目なし）",
+      "sourceUrl": "https://ichibanya.sc.01core.app/faq/",
+      "positiveControl": "https://www.ichibanya.co.jp/menu/list.html?cid=7",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "cocoichi-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "kourakuen",
+      "name": "幸楽苑",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/G.tsv",
+      "quote": "幸楽苑以外の商品の持込は原則お断りしています。 ただし、当社で食事をされる場合、赤ちゃんのミルクや離乳食は持ち込みできます。",
+      "sourceUrl": "https://www.kourakuen.co.jp/faq/about-store-service",
+      "positiveControl": "https://www.kourakuen.co.jp/faq",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "明記OK"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "kourakuen-rinyushoku-mochikomi",
+      "articleKind": "rinyushoku"
+    },
+    {
+      "key": "ringerhut",
+      "name": "リンガーハット",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/G.tsv",
+      "quote": "（該当なし。よくあるご質問4区分に離乳食・子連れ項目なし）",
+      "sourceUrl": "https://www.ringerhut.jp/customer_support/faq/",
+      "positiveControl": "https://www.ringerhut.jp/menu/kids/",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "ringer-hut-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "hidakaya",
+      "name": "日高屋",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/G.tsv",
+      "quote": "（FAQ無し。公式サイトマップにFAQ・子連れ案内なし）",
+      "sourceUrl": "https://hidakaya.hiday.co.jp/info/sitemap.html",
+      "positiveControl": "https://hidakaya.hiday.co.jp/hits/ja/menu/1/detail/139.html",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "hidakaya-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "marugenramen",
+      "name": "丸源ラーメン",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/G.tsv",
+      "quote": "ミルクのお湯をご用意しております。／離乳食【7ヶ月〜】（別項：食物アレルギーをお持ちのお客様は遠慮なさらずにお食事をお持ち込みください。）",
+      "sourceUrl": "https://www.syodai-marugen.jp/menu/kids",
+      "positiveControl": "https://www.syodai-marugen.jp/faq",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし",
+          "note": "食物アレルギーの方向けの持ち込みのみ明記"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "明記あり"
+        },
+        "hanbai": {
+          "value": "明記あり"
+        }
+      },
+      "correction": "持ち込みの一文は「食物アレルギーをお持ちのお客様」が対象。一般の離乳食の持ち込みは記載なし。お湯（「ミルクのお湯をご用意しております。」）と店内の離乳食（税込429円）は同ページに明記。",
+      "articleSlug": "marugenramen-rinyushoku-mochikomi",
+      "articleKind": "rinyushoku"
+    },
+    {
+      "key": "tenkaippin",
+      "name": "天下一品",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/G.tsv",
+      "quote": "（FAQ無し。KOTTERIキッズページは子ども椅子・お子様メニューのみ）",
+      "sourceUrl": "https://www.tenkaippin.co.jp/sitemap/",
+      "positiveControl": "https://www.tenkaippin.co.jp/kotteri_kids/",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "tenkaippin-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "bronco-billy",
+      "name": "ブロンコビリー",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/H.tsv",
+      "quote": "（該当記載なし）FAQ（/request/：メニュー・サービス・アプリ）とキッズクラブQ&Aに離乳食・持ち込みの項目なし。店舗ページ設備欄はベビーチェア・ベビーシートを記録",
+      "sourceUrl": "https://www.bronco.co.jp/request/",
+      "positiveControl": "https://www.bronco.co.jp/shop/tokyo/machida/",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "bronco-billy-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "bigboy",
+      "name": "ビッグボーイ",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/H.tsv",
+      "quote": "ベビーフード ¥150（税込¥165）［キッズメニュー掲載。持ち込みはFAQ（メニュー/決済/アプリ）に子連れ・持ち込み項目なし］",
+      "sourceUrl": "https://www.bigboyjapan.co.jp/faq/",
+      "positiveControl": "https://www.bigboyjapan.co.jp/menu/kids/",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "明記あり"
+        }
+      },
+      "articleSlug": "bigboy-kids-menu",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "steakmiya",
+      "name": "ステーキ宮",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/H.tsv",
+      "quote": "（該当記載なし）miya.com・サイトマップに顧客向けFAQ無し（/faq/ 404）。運営元アトムのFAQは株主優待のみ。メニューにキッズメニューあり",
+      "sourceUrl": "https://www.miya.com/sitemap/index.php",
+      "positiveControl": "https://www.miya.com/menu/",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし",
+          "note": "FAQ無し"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "steak-miya-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "sawayaka",
+      "name": "炭焼きレストランさわやか",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/H.tsv",
+      "quote": "離乳食は「しらすの雑炊」をご用意しております。［持ち込みの記載なし。同FAQに7ヶ月～5才未満のお子様用椅子の記載あり］",
+      "sourceUrl": "https://www.genkotsu-hb.com/faq/",
+      "positiveControl": "https://www.genkotsu-hb.com/menu/kids/",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "明記あり"
+        }
+      },
+      "articleSlug": "sawayaka-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "flyinggarden",
+      "name": "フライングガーデン",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/H.tsv",
+      "quote": "（離乳食の記載なし。参考：ケーキの持ち込みは「食品衛生の観点からお断り」と明記。離乳食に拡張しない）FAQにお子様メニュー・車椅子の項目あり",
+      "sourceUrl": "https://www.fgarden.co.jp/inquiry/index.php",
+      "positiveControl": "https://www.fgarden.co.jp/inquiry/index.php",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "flying-garden-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "washokusato",
+      "name": "和食さと",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/H.tsv",
+      "quote": "（該当記載なし）sato-res.com のsitemapにFAQ無し（/faq/ 404）。店舗検索の設備・サービス項目は禁煙・個室・駐車場・ドリンクバー等で離乳食項目なし",
+      "sourceUrl": "https://sato-res.com/sato/",
+      "positiveControl": "https://store.srsholdings.com/sato/",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし",
+          "note": "FAQ無し"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "washoku-sato-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "kagonoya",
+      "name": "かごの屋",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/H.tsv",
+      "quote": "（該当記載なし）公式Q&A PDF（2026.04.01現在：アプリ/ポイント/店舗・予約/喫煙/ギフト券）に子連れ項目なし",
+      "sourceUrl": "https://kagonoya.food-kr.com/wp-content/uploads/2026/03/QA_20260401.pdf",
+      "positiveControl": "https://kagonoya.food-kr.com/",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "kagonoya-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "bandotaro",
+      "name": "ばんどう太郎",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/H.tsv",
+      "quote": "（該当記載なし）FAQ無し。店舗ページにお子様椅子・お子様メニュー・キッズスペースの項目あり（https は証明書エラーのため http で取得）",
+      "sourceUrl": "http://bandotaro.co.jp/",
+      "positiveControl": "http://bandotaro.co.jp/shop/bandotaro/",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし",
+          "note": "FAQ無し"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "bandotaro-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "sukesanudon",
+      "name": "資さんうどん",
+      "group": "main",
+      "sourceFile": "reports/rinyushoku-official-2026-09-25/H.tsv",
+      "quote": "（該当記載なし）FAQ無し（/faq/ 404）。サイト内検索「離乳食」0件。店舗ページ設備欄は駐車場の有無のみ",
+      "sourceUrl": "https://www.sukesanudon.com/",
+      "positiveControl": "https://www.sukesanudon.com/map/branch/134/",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし",
+          "note": "FAQ無し"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "sukesan-udon-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "gusto",
+      "name": "ガスト",
+      "group": "main",
+      "sourceFile": "scripts/build-rinyushoku-survey.mjs#ADDITIONS",
+      "quote": "離乳食の持ち込みOK（※一部の店舗を除く）",
+      "sourceUrl": "https://www.skylark.co.jp/gusto/family/index.html",
+      "positiveControl": "https://www.skylark.co.jp/gusto/family/index.html （同じ一覧に「キッズチェアがある」「オムツ交換台がある」）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "明記OK",
+          "note": "「※一部の店舗を除く」の注記つき（キッズチェア・オムツ交換台と共通の注記）"
+        },
+        "atatame": {
+          "value": "記載なし",
+          "note": "同ページ・すかいらーくグループFAQに温めの記載なし"
+        },
+        "oyu": {
+          "value": "記載なし",
+          "note": "同ページ・すかいらーくグループFAQに調乳用のお湯の記載なし"
+        },
+        "hanbai": {
+          "value": "未照合"
+        }
+      },
+      "articleSlug": "gusto-rinyushoku-mochikomi",
+      "articleKind": "rinyushoku"
+    },
+    {
+      "key": "saizeriya",
+      "name": "サイゼリヤ",
+      "group": "main",
+      "sourceFile": "scripts/build-rinyushoku-survey.mjs#ADDITIONS",
+      "quote": "（該当記載なし）公式サイトにFAQページ無し。トップ・企業情報・お問い合わせに離乳食・ベビーフードの記載なし",
+      "sourceUrl": "https://www.saizeriya.co.jp/",
+      "positiveControl": "（FAQ無し）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "未照合"
+        },
+        "hanbai": {
+          "value": "未照合"
+        }
+      },
+      "articleSlug": "saizeriya-rinyushoku-mochikomi",
+      "articleKind": "rinyushoku"
+    },
+    {
+      "key": "dennys",
+      "name": "デニーズ",
+      "group": "main",
+      "sourceFile": "scripts/build-rinyushoku-survey.mjs#ADDITIONS",
+      "quote": "乳児向けベビーフード しらすの雑炊（生後7～8ヶ月頃）300円（税込330円）［おこさまメニュー。持ち込みの記載なし］",
+      "sourceUrl": "https://www.dennys.jp/service/",
+      "positiveControl": "https://www.dennys.jp/menu/kids/ （おこさまメニューに乳児向けベビーフードを掲載）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし",
+          "sourceUrl": "https://www.dennys.jp/service/"
+        },
+        "atatame": {
+          "value": "記載なし",
+          "sourceUrl": "https://www.dennys.jp/service/"
+        },
+        "oyu": {
+          "value": "記載なし",
+          "sourceUrl": "https://www.dennys.jp/service/"
+        },
+        "hanbai": {
+          "value": "明記あり",
+          "sourceUrl": "https://www.dennys.jp/menu/kids/",
+          "note": "乳児向けベビーフード しらすの雑炊（生後7～8ヶ月頃）"
+        }
+      },
+      "articleSlug": "dennys-rinyushoku-mochikomi",
+      "articleKind": "rinyushoku"
+    },
+    {
+      "key": "bikkuri-donkey",
+      "name": "びっくりドンキー",
+      "group": "main",
+      "sourceFile": "scripts/build-rinyushoku-survey.mjs#ADDITIONS",
+      "quote": "（未確認）お子様連れ向けページ /lp/kids/ に離乳食の記載なし。公式FAQは当調査環境から403で本文を取得できず",
+      "sourceUrl": "https://www.bikkuri-donkey.com/lp/kids/",
+      "positiveControl": "https://www.bikkuri-donkey.com/lp/kids/ （お子様メニュー・アレルギー対応メニューを記載）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "未確認"
+        },
+        "atatame": {
+          "value": "未確認"
+        },
+        "oyu": {
+          "value": "未確認"
+        },
+        "hanbai": {
+          "value": "未確認"
+        }
+      },
+      "correction": "お子様連れ向けページには記載が無いが、FAQを読めていないため未確認とする。",
+      "articleSlug": "bikkuri-donkey-rinyushoku-mochikomi",
+      "articleKind": "rinyushoku"
+    },
+    {
+      "key": "hamasushi",
+      "name": "はま寿司",
+      "group": "main",
+      "sourceFile": "scripts/build-rinyushoku-survey.mjs#ADDITIONS",
+      "quote": "（該当記載なし）FAQの子連れ項目は「子供用補助いすはありますか？」のみ",
+      "sourceUrl": "https://www.hamazushi.com/contact/faq/",
+      "positiveControl": "https://www.hamazushi.com/contact/faq/ （Q「子供用補助いすはありますか？」）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "未照合"
+        }
+      },
+      "articleSlug": "hamasushi-rinyushoku-mochikomi",
+      "articleKind": "rinyushoku"
+    },
+    {
+      "key": "marukame",
+      "name": "丸亀製麺",
+      "group": "main",
+      "sourceFile": "scripts/build-rinyushoku-survey.mjs#ADDITIONS",
+      "quote": "（該当記載なし）FAQ全項目（アレルギー・カロリー・持ち帰り・アプリ等）に離乳食・持ち込み・お湯の項目なし",
+      "sourceUrl": "https://jp.marugame.com/faq/",
+      "positiveControl": "https://jp.marugame.com/faq/ （アレルギー情報の項目を記録）",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "記載なし"
+        },
+        "hanbai": {
+          "value": "未照合"
+        }
+      },
+      "articleSlug": "marukame-rinyushoku-mochikomi",
+      "articleKind": "rinyushoku"
+    }
+  ],
+  "supplement": [
+    {
+      "key": "capricciosa",
+      "name": "カプリチョーザ",
+      "group": "supplement",
+      "sourceFile": "reports/chain-onboarding-2026-09-25/G1.tsv",
+      "quote": "離乳食はお持ち込みいただけます（62/95店）・ミルク用のお湯をご用意しております（69/95店）",
+      "sourceUrl": "https://capricciosa.com/location/",
+      "positiveControl": "",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "条件付きOK",
+          "note": "店舗ページに「離乳食はお持ち込みいただけます」の表示がある店舗のみ（95店中62店）"
+        },
+        "atatame": {
+          "value": "未照合"
+        },
+        "oyu": {
+          "value": "一部店舗で明記",
+          "note": "店舗ページに「ミルク用のお湯をご用意しております」の表示（95店中69店）"
+        },
+        "hanbai": {
+          "value": "未照合"
+        }
+      },
+      "articleSlug": "capricciosa-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "steak-no-don",
+      "name": "ステーキのどん",
+      "group": "supplement",
+      "sourceFile": "reports/chain-onboarding-2026-09-25/G5.tsv",
+      "quote": "離乳食をご用意 ベビーフード 290円（税込319円）※持ち込み・温めは記載なし",
+      "sourceUrl": "https://www.steak-don.jp/children.html",
+      "positiveControl": "",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "未照合"
+        },
+        "hanbai": {
+          "value": "明記あり",
+          "note": "ベビーフード 290円（税込319円）"
+        }
+      },
+      "articleSlug": "steak-no-don-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "volks",
+      "name": "フォルクス",
+      "group": "supplement",
+      "sourceFile": "reports/chain-onboarding-2026-09-25/G5.tsv",
+      "quote": "ベビーフード3点セット 330円（税込363円）※持ち込み・温めは記載なし",
+      "sourceUrl": "https://www.volks-steak.jp/fmenu_list.html?fmenu_categ_id=31",
+      "positiveControl": "",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "記載なし"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "未照合"
+        },
+        "hanbai": {
+          "value": "明記あり",
+          "note": "ベビーフード3点セット 330円（税込363円）"
+        }
+      },
+      "articleSlug": "volks-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "jujukarubi",
+      "name": "じゅうじゅうカルビ",
+      "group": "supplement",
+      "sourceFile": "reports/chain-onboarding-2026-09-25/H1.tsv",
+      "quote": "FAQ「市販の離乳食を持ち込みいただくことも可能です」（販売・温めは記載なし）",
+      "sourceUrl": "https://www.tomato-a.co.jp/jyujyukarubi/faq/",
+      "positiveControl": "",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "明記OK",
+          "note": "FAQ「市販の離乳食を持ち込みいただくことも可能です」"
+        },
+        "atatame": {
+          "value": "記載なし"
+        },
+        "oyu": {
+          "value": "未照合"
+        },
+        "hanbai": {
+          "value": "記載なし"
+        }
+      },
+      "articleSlug": "jujukarubi-kodzure-koryaku",
+      "articleKind": "koryaku"
+    },
+    {
+      "key": "sekai-no-yamachan",
+      "name": "世界の山ちゃん",
+      "group": "supplement",
+      "sourceFile": "reports/chain-onboarding-2026-09-25/H3.tsv",
+      "quote": "（キッズルーム利用時）ベビーフード・保護者の方の手作りのお弁当の持ち込みOK",
+      "sourceUrl": "https://www.yamachan.co.jp/info/kidsroom.php",
+      "positiveControl": "",
+      "checkedAt": "2026-09-25",
+      "cells": {
+        "mochikomi": {
+          "value": "条件付きOK",
+          "note": "キッズルーム利用時のベビーフード持ち込みOK"
+        },
+        "atatame": {
+          "value": "未照合"
+        },
+        "oyu": {
+          "value": "未照合"
+        },
+        "hanbai": {
+          "value": "未照合"
+        }
+      },
+      "articleSlug": "sekai-no-yamachan-kodzure-koryaku",
+      "articleKind": "koryaku"
+    }
+  ],
+  "supplementSummary": {
+    "mochikomi": {
+      "stated": 3,
+      "denominator": 5,
+      "total": 5,
+      "counts": {
+        "条件付きOK": 2,
+        "記載なし": 2,
+        "明記OK": 1
+      },
+      "chains": [
+        "capricciosa",
+        "jujukarubi",
+        "sekai-no-yamachan"
+      ]
+    },
+    "atatame": {
+      "stated": 0,
+      "denominator": 3,
+      "total": 5,
+      "counts": {
+        "未照合": 2,
+        "記載なし": 3
+      },
+      "chains": []
+    },
+    "oyu": {
+      "stated": 1,
+      "denominator": 1,
+      "total": 5,
+      "counts": {
+        "一部店舗で明記": 1,
+        "未照合": 4
+      },
+      "chains": [
+        "capricciosa"
+      ]
+    },
+    "hanbai": {
+      "stated": 2,
+      "denominator": 3,
+      "total": 5,
+      "counts": {
+        "未照合": 2,
+        "明記あり": 2,
+        "記載なし": 1
+      },
+      "chains": [
+        "steak-no-don",
+        "volks"
+      ]
+    }
+  },
+  "supplementExcluded": [
+    {
+      "key": "joyfull",
+      "name": "ジョイフル",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "jolly-pasta",
+      "name": "ジョリーパスタ",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "yomenya-goemon",
+      "name": "洋麺屋五右衛門",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "fujiya-restaurant",
+      "name": "不二家レストラン",
+      "reason": "公式に「離乳食無料サービス」は一時休止と記載。無料提供の休止で、持ち込み/温め/お湯/販売のどれにも当てはめられない"
+    },
+    {
+      "key": "osaka-ohsho",
+      "name": "大阪王将",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "gyoza-no-mansyu",
+      "name": "ぎょうざの満洲",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "sugakiya",
+      "name": "スガキヤ",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "hachiban-ramen",
+      "name": "8番らーめん",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "rairaitei",
+      "name": "来来亭",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "kairikiya",
+      "name": "魁力屋",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "ippudo",
+      "name": "一風堂",
+      "reason": "公式noteに「離乳食を食べさせてから提供タイミングを相談できる」旨の記述のみ。持ち込みの可否としては書かれていない"
+    },
+    {
+      "key": "yakiniku-like",
+      "name": "焼肉ライク",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "pietro",
+      "name": "ピエトロ",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "kineya",
+      "name": "杵屋（グルメ杵屋）",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "katsuya",
+      "name": "かつや",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "shinjuku-saboten",
+      "name": "とんかつ新宿さぼてん",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "matsunoya",
+      "name": "松のや",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "karayama",
+      "name": "からやま",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "sutadonya",
+      "name": "伝説のすた丼屋",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "ikinari-steak",
+      "name": "いきなり！ステーキ",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "yappari-steak",
+      "name": "やっぱりステーキ",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "mo-mo-paradise",
+      "name": "MO-MO-PARADISE（モーモーパラダイス）",
+      "reason": "店舗タグ「離乳食可」のみで、持ち込みか店内提供かを公式が区別していない"
+    },
+    {
+      "key": "takakuramachi-coffee",
+      "name": "高倉町珈琲",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "coffeekan",
+      "name": "珈琲館（C-United）",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "subway",
+      "name": "サブウェイ",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "gindaco",
+      "name": "築地銀だこ",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "wendys-first-kitchen",
+      "name": "ウェンディーズ・ファーストキッチン（ファーストキッチン）",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "aiya",
+      "name": "藍屋",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "tonkatsu-wako",
+      "name": "とんかつ和幸",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "kaitenzushi-misaki",
+      "name": "回転寿司みさき",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "daiki-suisan",
+      "name": "大起水産回転寿司",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "heiroku-sushi",
+      "name": "平禄寿司",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "sutamina-taro",
+      "name": "すたみな太郎",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "one-karubi",
+      "name": "ワンカルビ",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "kamimura-bokujo",
+      "name": "かみむら牧場",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "jukusei-yakiniku-ichiban",
+      "name": "熟成焼肉いちばん",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "kushiya-monogatari",
+      "name": "串家物語",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "sweets-paradise",
+      "name": "スイーツパラダイス",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "shabusai",
+      "name": "しゃぶ菜",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "shakeys",
+      "name": "シェーキーズ",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "gyushige",
+      "name": "牛繁",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "dohtonbori",
+      "name": "お好み焼 道とん堀",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "chibo",
+      "name": "千房",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "botejyu",
+      "name": "ぼてぢゅう",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "yabaton",
+      "name": "矢場とん",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "kamakura-pasta",
+      "name": "鎌倉パスタ",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "popolamama",
+      "name": "ポポラマーマ",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "kobeya-restaurant",
+      "name": "神戸屋レストラン",
+      "reason": "離乳食の項目が未調査"
+    },
+    {
+      "key": "gogo-curry",
+      "name": "ゴーゴーカレー",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "negishi",
+      "name": "牛たん とろろ 麦めし ねぎし",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "shichirinbo",
+      "name": "七輪房",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "yakiniku-watami",
+      "name": "焼肉の和民",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "heijoen",
+      "name": "平城苑",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "jojoen",
+      "name": "叙々苑",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "hamakatsu",
+      "name": "とんかつ濵かつ（浜勝株式会社）",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "551-horai",
+      "name": "551蓬莱",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "benitora-gyozabo",
+      "name": "紅虎餃子房",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "totomaru",
+      "name": "魚魚丸（廻鮮江戸前すし）",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "isomaru-suisan",
+      "name": "磯丸水産",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "furaibou",
+      "name": "手羽先唐揚げ 風来坊",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "excelsior-caffe",
+      "name": "エクセルシオール カフェ",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "pronto",
+      "name": "プロント",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "kurashiki-coffee",
+      "name": "倉式珈琲店",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    },
+    {
+      "key": "cold-stone",
+      "name": "コールド・ストーン・クリーマリー",
+      "reason": "離乳食の項目が未調査"
+    },
+    {
+      "key": "krispy-kreme",
+      "name": "クリスピー・クリーム・ドーナツ",
+      "reason": "照合範囲（メニュー・アレルゲン・店舗ページ中心）で記載を確認できず。本調査と範囲が違うため「記載なし」に数えない"
+    }
+  ]
+}
