@@ -1,0 +1,1500 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "kairikiya",
+  "name": "魁力屋",
+  "sourceUrl": "https://shop.kairikiya.co.jp/",
+  "method": "公式店舗検索（shop.kairikiya.co.jp）のページに埋め込まれた国内店舗データ（__NUXT_DATA__ の stores_domestic）から、ブランド「ラーメン魁力屋」の営業中店舗の「店舗情報」（駐車場あり）と「BOX席」欄を店舗ごとに集計",
+  "total": 193,
+  "note": "他ブランド除外: からたま屋3・とりサブロー6・タンメンと餃子KIBARU1。開業前等で除外: 京都北白川ラーメン魁力屋 四条室町店(before_open)。「BOX席」は店舗ページの席数欄（例「BOX席（4人掛）：5卓」）に1卓以上の記載がある店舗を数えた（欄が無い店舗はフードコート店等）。「テーブル席あり」は対応する設備項目が無いため数えない",
+  "facilities": {
+    "parking": {
+      "count": 183,
+      "label": "駐車場あり"
+    },
+    "boxSeat": {
+      "count": 139,
+      "label": "BOX席"
+    }
+  },
+  "stores": [
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール名古屋茶屋店",
+      "url": "https://shop.kairikiya.co.jp/stores/208",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 ジョイフル本田千葉ニュータウン店",
+      "url": "https://shop.kairikiya.co.jp/stores/203",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 池袋西口店",
+      "url": "https://shop.kairikiya.co.jp/stores/198",
+      "facilities": [
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 京都東インター店",
+      "url": "https://shop.kairikiya.co.jp/stores/199",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール大垣店",
+      "url": "https://shop.kairikiya.co.jp/stores/136",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール各務原店",
+      "url": "https://shop.kairikiya.co.jp/stores/132",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール浦和美園店",
+      "url": "https://shop.kairikiya.co.jp/stores/107",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 豊川店",
+      "url": "https://shop.kairikiya.co.jp/stores/12",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 南行徳店",
+      "url": "https://shop.kairikiya.co.jp/stores/11",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 茅ヶ崎店",
+      "url": "https://shop.kairikiya.co.jp/stores/10",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 広島祇園店",
+      "url": "https://shop.kairikiya.co.jp/stores/207",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 大船店",
+      "url": "https://shop.kairikiya.co.jp/stores/202",
+      "facilities": [
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモールいわき小名浜店",
+      "url": "https://shop.kairikiya.co.jp/stores/158",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 府中白糸台店",
+      "url": "https://shop.kairikiya.co.jp/stores/157",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール常滑店",
+      "url": "https://shop.kairikiya.co.jp/stores/135",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 四条烏丸店",
+      "url": "https://shop.kairikiya.co.jp/stores/129",
+      "facilities": [
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 京都南インター店",
+      "url": "https://shop.kairikiya.co.jp/stores/119",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモールナゴヤドーム前店",
+      "url": "https://shop.kairikiya.co.jp/stores/114",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 港北インター店",
+      "url": "https://shop.kairikiya.co.jp/stores/112",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール水戸内原店",
+      "url": "https://shop.kairikiya.co.jp/stores/103",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 岸里店",
+      "url": "https://shop.kairikiya.co.jp/stores/98",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール岡崎店",
+      "url": "https://shop.kairikiya.co.jp/stores/94",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 五反田店",
+      "url": "https://shop.kairikiya.co.jp/stores/91",
+      "facilities": [
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 都筑中原街道店",
+      "url": "https://shop.kairikiya.co.jp/stores/86",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 多摩ニュータウン通り店",
+      "url": "https://shop.kairikiya.co.jp/stores/80",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 中川店",
+      "url": "https://shop.kairikiya.co.jp/stores/72",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 本店",
+      "url": "https://shop.kairikiya.co.jp/stores/41",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 上郷店",
+      "url": "https://shop.kairikiya.co.jp/stores/36",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 鈴鹿矢橋店",
+      "url": "https://shop.kairikiya.co.jp/stores/33",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 茂原店",
+      "url": "https://shop.kairikiya.co.jp/stores/30",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 豊橋浜道店",
+      "url": "https://shop.kairikiya.co.jp/stores/27",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 烏丸七条店",
+      "url": "https://shop.kairikiya.co.jp/stores/206",
+      "facilities": [
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 モラージュ菖蒲店",
+      "url": "https://shop.kairikiya.co.jp/stores/151",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール太田店",
+      "url": "https://shop.kairikiya.co.jp/stores/150",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール豊川店",
+      "url": "https://shop.kairikiya.co.jp/stores/134",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 アリオ八尾店",
+      "url": "https://shop.kairikiya.co.jp/stores/113",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール沖縄ライカム店",
+      "url": "https://shop.kairikiya.co.jp/stores/101",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 鶴見店",
+      "url": "https://shop.kairikiya.co.jp/stores/77",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 岸田堂店",
+      "url": "https://shop.kairikiya.co.jp/stores/64",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 奈良北之庄店",
+      "url": "https://shop.kairikiya.co.jp/stores/35",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 浜松店",
+      "url": "https://shop.kairikiya.co.jp/stores/29",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 足立六町店",
+      "url": "https://shop.kairikiya.co.jp/stores/209",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモールKAGOSHIMA BAY店",
+      "url": "https://shop.kairikiya.co.jp/stores/152",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール宮崎店",
+      "url": "https://shop.kairikiya.co.jp/stores/148",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール広島府中店",
+      "url": "https://shop.kairikiya.co.jp/stores/133",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモールむさし村山店",
+      "url": "https://shop.kairikiya.co.jp/stores/124",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール東員店",
+      "url": "https://shop.kairikiya.co.jp/stores/106",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 東大阪中央大通店",
+      "url": "https://shop.kairikiya.co.jp/stores/85",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール鈴鹿店",
+      "url": "https://shop.kairikiya.co.jp/stores/127",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール木更津店",
+      "url": "https://shop.kairikiya.co.jp/stores/111",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 三郷店",
+      "url": "https://shop.kairikiya.co.jp/stores/74",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 朝比奈店",
+      "url": "https://shop.kairikiya.co.jp/stores/32",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 大井松田店",
+      "url": "https://shop.kairikiya.co.jp/stores/93",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 堺新金岡店",
+      "url": "https://shop.kairikiya.co.jp/stores/14",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 吉祥寺店",
+      "url": "https://shop.kairikiya.co.jp/stores/197",
+      "facilities": []
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 けやきウォーク前橋店",
+      "url": "https://shop.kairikiya.co.jp/stores/130",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 茨木店",
+      "url": "https://shop.kairikiya.co.jp/stores/120",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 我孫子店",
+      "url": "https://shop.kairikiya.co.jp/stores/4",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 杭全店",
+      "url": "https://shop.kairikiya.co.jp/stores/116",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 四日市生桑店",
+      "url": "https://shop.kairikiya.co.jp/stores/62",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 北谷店",
+      "url": "https://shop.kairikiya.co.jp/stores/34",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 三鷹大沢店",
+      "url": "https://shop.kairikiya.co.jp/stores/17",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 野田店",
+      "url": "https://shop.kairikiya.co.jp/stores/159",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 堺海山町店",
+      "url": "https://shop.kairikiya.co.jp/stores/50",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 土浦店",
+      "url": "https://shop.kairikiya.co.jp/stores/23",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 東久留米店",
+      "url": "https://shop.kairikiya.co.jp/stores/7",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 練馬インター店",
+      "url": "https://shop.kairikiya.co.jp/stores/57",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 茨木宮島店",
+      "url": "https://shop.kairikiya.co.jp/stores/200",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 大宮東口店",
+      "url": "https://shop.kairikiya.co.jp/stores/204",
+      "facilities": [
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 岐阜島店",
+      "url": "https://shop.kairikiya.co.jp/stores/155",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール川口店",
+      "url": "https://shop.kairikiya.co.jp/stores/122",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 北与野店",
+      "url": "https://shop.kairikiya.co.jp/stores/88",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 幕張インター店",
+      "url": "https://shop.kairikiya.co.jp/stores/76",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 宝塚店",
+      "url": "https://shop.kairikiya.co.jp/stores/71",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 瑞穂店",
+      "url": "https://shop.kairikiya.co.jp/stores/56",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 藤枝PA下り線店",
+      "url": "https://shop.kairikiya.co.jp/stores/49",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 八尾店",
+      "url": "https://shop.kairikiya.co.jp/stores/38",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 鴫野店",
+      "url": "https://shop.kairikiya.co.jp/stores/24",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 焼津インター店",
+      "url": "https://shop.kairikiya.co.jp/stores/9",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 霧が丘店",
+      "url": "https://shop.kairikiya.co.jp/stores/3",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 寝屋川店",
+      "url": "https://shop.kairikiya.co.jp/stores/189",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 リーフウォーク稲沢店",
+      "url": "https://shop.kairikiya.co.jp/stores/160",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 習志野台店",
+      "url": "https://shop.kairikiya.co.jp/stores/154",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 竹ノ塚店",
+      "url": "https://shop.kairikiya.co.jp/stores/99",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 三島店",
+      "url": "https://shop.kairikiya.co.jp/stores/83",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 富士青島店",
+      "url": "https://shop.kairikiya.co.jp/stores/65",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 西大路西ノ京店",
+      "url": "https://shop.kairikiya.co.jp/stores/58",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 越谷店",
+      "url": "https://shop.kairikiya.co.jp/stores/100",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 木更津店",
+      "url": "https://shop.kairikiya.co.jp/stores/81",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 海老名店",
+      "url": "https://shop.kairikiya.co.jp/stores/55",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 宮前店",
+      "url": "https://shop.kairikiya.co.jp/stores/22",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 鶴ヶ島店",
+      "url": "https://shop.kairikiya.co.jp/stores/147",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 あけの平店",
+      "url": "https://shop.kairikiya.co.jp/stores/128",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 国分寺並木町店",
+      "url": "https://shop.kairikiya.co.jp/stores/69",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 東千葉店",
+      "url": "https://shop.kairikiya.co.jp/stores/26",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 川西店",
+      "url": "https://shop.kairikiya.co.jp/stores/5",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 高槻店",
+      "url": "https://shop.kairikiya.co.jp/stores/53",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 川口末広店",
+      "url": "https://shop.kairikiya.co.jp/stores/42",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 山科小野店",
+      "url": "https://shop.kairikiya.co.jp/stores/21",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 足立鹿浜店",
+      "url": "https://shop.kairikiya.co.jp/stores/18",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 千里丘店",
+      "url": "https://shop.kairikiya.co.jp/stores/15",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 白井店",
+      "url": "https://shop.kairikiya.co.jp/stores/46",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 弘明寺店",
+      "url": "https://shop.kairikiya.co.jp/stores/109",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 守山大森インター店",
+      "url": "https://shop.kairikiya.co.jp/stores/84",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 丹波口店",
+      "url": "https://shop.kairikiya.co.jp/stores/73",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 西宮店",
+      "url": "https://shop.kairikiya.co.jp/stores/61",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 北越谷店",
+      "url": "https://shop.kairikiya.co.jp/stores/43",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 葛飾南水元店",
+      "url": "https://shop.kairikiya.co.jp/stores/39",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 座間店",
+      "url": "https://shop.kairikiya.co.jp/stores/78",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 相模原中央店",
+      "url": "https://shop.kairikiya.co.jp/stores/20",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 西大須店",
+      "url": "https://shop.kairikiya.co.jp/stores/16",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 北山店",
+      "url": "https://shop.kairikiya.co.jp/stores/66",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 市原五井店",
+      "url": "https://shop.kairikiya.co.jp/stores/63",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 取手店",
+      "url": "https://shop.kairikiya.co.jp/stores/47",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 一之江店",
+      "url": "https://shop.kairikiya.co.jp/stores/118",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 六丁の目店",
+      "url": "https://shop.kairikiya.co.jp/stores/117",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 さいたま大和田店",
+      "url": "https://shop.kairikiya.co.jp/stores/104",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 市が尾店",
+      "url": "https://shop.kairikiya.co.jp/stores/48",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 センター南店",
+      "url": "https://shop.kairikiya.co.jp/stores/125",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 防府店",
+      "url": "https://shop.kairikiya.co.jp/stores/195",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 御殿場店",
+      "url": "https://shop.kairikiya.co.jp/stores/108",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 鎌倉手広店",
+      "url": "https://shop.kairikiya.co.jp/stores/6",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール筑紫野店",
+      "url": "https://shop.kairikiya.co.jp/stores/193",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 川崎銀座街店",
+      "url": "https://shop.kairikiya.co.jp/stores/194",
+      "facilities": [
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール新利府店",
+      "url": "https://shop.kairikiya.co.jp/stores/196",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 岸和田荒木町店",
+      "url": "https://shop.kairikiya.co.jp/stores/44",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 天理店",
+      "url": "https://shop.kairikiya.co.jp/stores/188",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 二条駅前店",
+      "url": "https://shop.kairikiya.co.jp/stores/187",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール木曽川店",
+      "url": "https://shop.kairikiya.co.jp/stores/92",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 大宮桜木町店",
+      "url": "https://shop.kairikiya.co.jp/stores/186",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 ららぽーと堺店",
+      "url": "https://shop.kairikiya.co.jp/stores/185",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール和歌山店",
+      "url": "https://shop.kairikiya.co.jp/stores/184",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール福岡店",
+      "url": "https://shop.kairikiya.co.jp/stores/183",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール羽生店",
+      "url": "https://shop.kairikiya.co.jp/stores/181",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール大牟田店",
+      "url": "https://shop.kairikiya.co.jp/stores/182",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 郡山桑野店",
+      "url": "https://shop.kairikiya.co.jp/stores/180",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール高知店",
+      "url": "https://shop.kairikiya.co.jp/stores/161",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール大阪ドームシティ店",
+      "url": "https://shop.kairikiya.co.jp/stores/123",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール四條畷店",
+      "url": "https://shop.kairikiya.co.jp/stores/179",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール須坂店",
+      "url": "https://shop.kairikiya.co.jp/stores/176",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 千葉我孫子店",
+      "url": "https://shop.kairikiya.co.jp/stores/177",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 相模原緑が丘店",
+      "url": "https://shop.kairikiya.co.jp/stores/178",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール浜松志都呂店",
+      "url": "https://shop.kairikiya.co.jp/stores/174",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 門真店",
+      "url": "https://shop.kairikiya.co.jp/stores/175",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 mozoワンダーシティ店",
+      "url": "https://shop.kairikiya.co.jp/stores/89",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 大府店",
+      "url": "https://shop.kairikiya.co.jp/stores/173",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 鶴川店",
+      "url": "https://shop.kairikiya.co.jp/stores/68",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 徳重店",
+      "url": "https://shop.kairikiya.co.jp/stores/59",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール京都桂川店",
+      "url": "https://shop.kairikiya.co.jp/stores/96",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 園田店",
+      "url": "https://shop.kairikiya.co.jp/stores/95",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 蕨店",
+      "url": "https://shop.kairikiya.co.jp/stores/82",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 南砂店",
+      "url": "https://shop.kairikiya.co.jp/stores/52",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 吉祥院店",
+      "url": "https://shop.kairikiya.co.jp/stores/51",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 浜松有玉店",
+      "url": "https://shop.kairikiya.co.jp/stores/87",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 船橋成田街道店",
+      "url": "https://shop.kairikiya.co.jp/stores/79",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 美原店",
+      "url": "https://shop.kairikiya.co.jp/stores/75",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 豊田店",
+      "url": "https://shop.kairikiya.co.jp/stores/70",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 仙台南店",
+      "url": "https://shop.kairikiya.co.jp/stores/67",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 狩場店",
+      "url": "https://shop.kairikiya.co.jp/stores/60",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 日野万願寺店",
+      "url": "https://shop.kairikiya.co.jp/stores/54",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 草加店",
+      "url": "https://shop.kairikiya.co.jp/stores/45",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 鶴見駒岡店",
+      "url": "https://shop.kairikiya.co.jp/stores/40",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 八潮店",
+      "url": "https://shop.kairikiya.co.jp/stores/37",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 篠崎店",
+      "url": "https://shop.kairikiya.co.jp/stores/31",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 川崎新城店",
+      "url": "https://shop.kairikiya.co.jp/stores/25",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 藤沢石川店",
+      "url": "https://shop.kairikiya.co.jp/stores/19",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 富士宮店",
+      "url": "https://shop.kairikiya.co.jp/stores/13",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 静岡インター店",
+      "url": "https://shop.kairikiya.co.jp/stores/8",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 堀川五条店",
+      "url": "https://shop.kairikiya.co.jp/stores/2",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 河原町三条店",
+      "url": "https://shop.kairikiya.co.jp/stores/1",
+      "facilities": [
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール下田店",
+      "url": "https://shop.kairikiya.co.jp/stores/172",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール徳島店",
+      "url": "https://shop.kairikiya.co.jp/stores/171",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 プレ葉ウォーク浜北店",
+      "url": "https://shop.kairikiya.co.jp/stores/169",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール新小松店",
+      "url": "https://shop.kairikiya.co.jp/stores/168",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 八王子万町店",
+      "url": "https://shop.kairikiya.co.jp/stores/167",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール盛岡南店",
+      "url": "https://shop.kairikiya.co.jp/stores/166",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 豊明店",
+      "url": "https://shop.kairikiya.co.jp/stores/165",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 渋谷宮益坂店",
+      "url": "https://shop.kairikiya.co.jp/stores/164",
+      "facilities": [
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール津南店",
+      "url": "https://shop.kairikiya.co.jp/stores/163",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 堺鳳店",
+      "url": "https://shop.kairikiya.co.jp/stores/153",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 豊田インター店",
+      "url": "https://shop.kairikiya.co.jp/stores/162",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 町田中町店",
+      "url": "https://shop.kairikiya.co.jp/stores/156",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 所沢小手指店",
+      "url": "https://shop.kairikiya.co.jp/stores/149",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンタウンユーカリが丘店",
+      "url": "https://shop.kairikiya.co.jp/stores/131",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 ピオニウォーク東松山店",
+      "url": "https://shop.kairikiya.co.jp/stores/126",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール神戸南店",
+      "url": "https://shop.kairikiya.co.jp/stores/121",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 ゆめタウン久留米店",
+      "url": "https://shop.kairikiya.co.jp/stores/115",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 遠州豊田PA上り線店",
+      "url": "https://shop.kairikiya.co.jp/stores/110",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 1号線茅ヶ崎店",
+      "url": "https://shop.kairikiya.co.jp/stores/105",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール日の出店",
+      "url": "https://shop.kairikiya.co.jp/stores/102",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール伊丹店",
+      "url": "https://shop.kairikiya.co.jp/stores/97",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 イオンモール橿原店",
+      "url": "https://shop.kairikiya.co.jp/stores/90",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都北白川ラーメン魁力屋 明石大久保店",
+      "url": "https://shop.kairikiya.co.jp/stores/170",
+      "facilities": [
+        "parking",
+        "boxSeat"
+      ]
+    }
+  ]
+}

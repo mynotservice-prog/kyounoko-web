@@ -1,0 +1,4271 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "joyfull",
+  "name": "ジョイフル",
+  "sourceUrl": "https://www.joyfull.co.jp/shop",
+  "method": "公式店舗検索の都道府県別結果ページで、各店舗のサービス番号（data-service-ids。「サービスから探す」の絞り込みと同じ）から「駐車場あり」を店舗ごとに集計",
+  "total": 608,
+  "note": "店舗検索のサービス項目は駐車場・24時間営業・テイクアウト・決済・Wi-Fi・デリバリーのみで、子ども向け設備の項目は無い",
+  "facilities": {
+    "parking": {
+      "count": 607,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "宮城佐沼店",
+      "url": "https://www.joyfull.co.jp/shop/426",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "石巻インター店",
+      "url": "https://www.joyfull.co.jp/shop/425",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮城小牛田店",
+      "url": "https://www.joyfull.co.jp/shop/424",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮城インター店",
+      "url": "https://www.joyfull.co.jp/shop/423",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "気仙沼松川前店",
+      "url": "https://www.joyfull.co.jp/shop/315",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮城築館店",
+      "url": "https://www.joyfull.co.jp/shop/50",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "仙台東照宮店",
+      "url": "https://www.joyfull.co.jp/shop/49",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "名取バイパス店",
+      "url": "https://www.joyfull.co.jp/shop/48",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "仙台岩切店",
+      "url": "https://www.joyfull.co.jp/shop/47",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "古川店",
+      "url": "https://www.joyfull.co.jp/shop/46",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "郡山鶴見坦店",
+      "url": "https://www.joyfull.co.jp/shop/350",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東京八王子店",
+      "url": "https://www.joyfull.co.jp/shop/605",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東京稲城店",
+      "url": "https://www.joyfull.co.jp/shop/352",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "青梅店",
+      "url": "https://www.joyfull.co.jp/shop/1",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "埼玉春日部店",
+      "url": "https://www.joyfull.co.jp/shop/607",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "狭山店",
+      "url": "https://www.joyfull.co.jp/shop/346",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "桶川店",
+      "url": "https://www.joyfull.co.jp/shop/335",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "八潮店",
+      "url": "https://www.joyfull.co.jp/shop/333",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "羽生店",
+      "url": "https://www.joyfull.co.jp/shop/330",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幸手店",
+      "url": "https://www.joyfull.co.jp/shop/329",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "越谷レイクタウン店",
+      "url": "https://www.joyfull.co.jp/shop/320",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鶴ヶ島一本松店",
+      "url": "https://www.joyfull.co.jp/shop/256",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "坂戸入西店",
+      "url": "https://www.joyfull.co.jp/shop/7",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊谷店",
+      "url": "https://www.joyfull.co.jp/shop/4",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "上尾店",
+      "url": "https://www.joyfull.co.jp/shop/3",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "千葉おゆみの店",
+      "url": "https://www.joyfull.co.jp/shop/597",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "木更津店",
+      "url": "https://www.joyfull.co.jp/shop/344",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "茂原店",
+      "url": "https://www.joyfull.co.jp/shop/339",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "四街道めいわ店",
+      "url": "https://www.joyfull.co.jp/shop/328",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "白井店",
+      "url": "https://www.joyfull.co.jp/shop/73",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "四街道店",
+      "url": "https://www.joyfull.co.jp/shop/71",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小見川店",
+      "url": "https://www.joyfull.co.jp/shop/70",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "群馬玉村店",
+      "url": "https://www.joyfull.co.jp/shop/604",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "伊勢崎除ヶ町店",
+      "url": "https://www.joyfull.co.jp/shop/598",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "桐生店",
+      "url": "https://www.joyfull.co.jp/shop/404",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大泉店",
+      "url": "https://www.joyfull.co.jp/shop/402",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "館林店",
+      "url": "https://www.joyfull.co.jp/shop/341",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "太田藤阿久店",
+      "url": "https://www.joyfull.co.jp/shop/337",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高崎店",
+      "url": "https://www.joyfull.co.jp/shop/6",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "藤岡店",
+      "url": "https://www.joyfull.co.jp/shop/2",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "真岡店",
+      "url": "https://www.joyfull.co.jp/shop/403",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宇都宮鶴田店",
+      "url": "https://www.joyfull.co.jp/shop/318",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宇都宮テクノポリス店",
+      "url": "https://www.joyfull.co.jp/shop/317",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小山店",
+      "url": "https://www.joyfull.co.jp/shop/5",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "つくば桜店",
+      "url": "https://www.joyfull.co.jp/shop/595",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "古河坂間店",
+      "url": "https://www.joyfull.co.jp/shop/433",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "土浦神立店",
+      "url": "https://www.joyfull.co.jp/shop/324",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "結城店",
+      "url": "https://www.joyfull.co.jp/shop/323",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ひたちなか店",
+      "url": "https://www.joyfull.co.jp/shop/321",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "土浦店",
+      "url": "https://www.joyfull.co.jp/shop/72",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高松店",
+      "url": "https://www.joyfull.co.jp/shop/427",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東蚊爪店",
+      "url": "https://www.joyfull.co.jp/shop/56",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "横川店",
+      "url": "https://www.joyfull.co.jp/shop/54",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小松店",
+      "url": "https://www.joyfull.co.jp/shop/53",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "粟津店",
+      "url": "https://www.joyfull.co.jp/shop/51",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "立山通り店",
+      "url": "https://www.joyfull.co.jp/shop/430",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "呉羽店",
+      "url": "https://www.joyfull.co.jp/shop/429",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "富山インター店",
+      "url": "https://www.joyfull.co.jp/shop/428",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "富山魚津店",
+      "url": "https://www.joyfull.co.jp/shop/348",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高岡インター店",
+      "url": "https://www.joyfull.co.jp/shop/55",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "富山大泉店",
+      "url": "https://www.joyfull.co.jp/shop/52",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北名古屋沖村店",
+      "url": "https://www.joyfull.co.jp/shop/606",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "愛知蒲郡店",
+      "url": "https://www.joyfull.co.jp/shop/603",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊橋平川本町店",
+      "url": "https://www.joyfull.co.jp/shop/596",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一宮萩原店",
+      "url": "https://www.joyfull.co.jp/shop/413",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "扶桑犬山店",
+      "url": "https://www.joyfull.co.jp/shop/412",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "尾西木曽川店",
+      "url": "https://www.joyfull.co.jp/shop/410",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊田高岡店",
+      "url": "https://www.joyfull.co.jp/shop/407",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊橋清須店",
+      "url": "https://www.joyfull.co.jp/shop/406",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "安城桜井店",
+      "url": "https://www.joyfull.co.jp/shop/405",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "愛知江南店",
+      "url": "https://www.joyfull.co.jp/shop/356",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊川コロナワールド店",
+      "url": "https://www.joyfull.co.jp/shop/354",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "愛知西尾店",
+      "url": "https://www.joyfull.co.jp/shop/349",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "愛知瀬戸店",
+      "url": "https://www.joyfull.co.jp/shop/343",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊川八幡店",
+      "url": "https://www.joyfull.co.jp/shop/326",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "愛西店",
+      "url": "https://www.joyfull.co.jp/shop/316",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一宮千秋店",
+      "url": "https://www.joyfull.co.jp/shop/271",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "知多東浦店",
+      "url": "https://www.joyfull.co.jp/shop/23",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "幡豆一色店",
+      "url": "https://www.joyfull.co.jp/shop/22",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "知多武豊店",
+      "url": "https://www.joyfull.co.jp/shop/21",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊橋浜道店",
+      "url": "https://www.joyfull.co.jp/shop/19",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三河幸田店",
+      "url": "https://www.joyfull.co.jp/shop/17",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "刈谷築地店",
+      "url": "https://www.joyfull.co.jp/shop/16",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "尾張旭栄店",
+      "url": "https://www.joyfull.co.jp/shop/15",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊田インター店",
+      "url": "https://www.joyfull.co.jp/shop/13",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一宮音羽店",
+      "url": "https://www.joyfull.co.jp/shop/11",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊田貞宝店",
+      "url": "https://www.joyfull.co.jp/shop/10",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊田福受店",
+      "url": "https://www.joyfull.co.jp/shop/9",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "豊田梅坪店",
+      "url": "https://www.joyfull.co.jp/shop/8",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "飛騨高山店",
+      "url": "https://www.joyfull.co.jp/shop/411",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "美濃加茂西店",
+      "url": "https://www.joyfull.co.jp/shop/409",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岐阜高富店",
+      "url": "https://www.joyfull.co.jp/shop/408",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岐阜北方店",
+      "url": "https://www.joyfull.co.jp/shop/353",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "多治見美坂町店",
+      "url": "https://www.joyfull.co.jp/shop/313",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岐阜瑞穂店",
+      "url": "https://www.joyfull.co.jp/shop/310",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岐阜柳津店",
+      "url": "https://www.joyfull.co.jp/shop/309",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "土岐肥田店",
+      "url": "https://www.joyfull.co.jp/shop/30",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "関赤土坂店",
+      "url": "https://www.joyfull.co.jp/shop/29",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "下呂萩原店",
+      "url": "https://www.joyfull.co.jp/shop/24",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "美濃加茂店",
+      "url": "https://www.joyfull.co.jp/shop/20",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "静岡焼津店",
+      "url": "https://www.joyfull.co.jp/shop/602",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "藤枝高柳店",
+      "url": "https://www.joyfull.co.jp/shop/600",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "浜松三島店",
+      "url": "https://www.joyfull.co.jp/shop/599",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "浜松子安店",
+      "url": "https://www.joyfull.co.jp/shop/594",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "袋井北店",
+      "url": "https://www.joyfull.co.jp/shop/592",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "浜松天王店",
+      "url": "https://www.joyfull.co.jp/shop/355",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "静岡島田店",
+      "url": "https://www.joyfull.co.jp/shop/340",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "磐田福田店",
+      "url": "https://www.joyfull.co.jp/shop/28",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小笠浜岡店",
+      "url": "https://www.joyfull.co.jp/shop/25",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "磐田豊田店",
+      "url": "https://www.joyfull.co.jp/shop/18",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "浜名舞阪店",
+      "url": "https://www.joyfull.co.jp/shop/14",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "浜松半田店",
+      "url": "https://www.joyfull.co.jp/shop/12",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松阪店",
+      "url": "https://www.joyfull.co.jp/shop/322",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鈴鹿旭が丘店",
+      "url": "https://www.joyfull.co.jp/shop/312",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "四日市野田店",
+      "url": "https://www.joyfull.co.jp/shop/311",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "伊賀上野店",
+      "url": "https://www.joyfull.co.jp/shop/65",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鈴鹿箕田店",
+      "url": "https://www.joyfull.co.jp/shop/27",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三重員弁店",
+      "url": "https://www.joyfull.co.jp/shop/26",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョイフルEXPRESS イオンモール神戸南店",
+      "url": "https://www.joyfull.co.jp/shop/608",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西宮山口店",
+      "url": "https://www.joyfull.co.jp/shop/584",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "但馬豊岡店",
+      "url": "https://www.joyfull.co.jp/shop/580",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "姫路新在家店",
+      "url": "https://www.joyfull.co.jp/shop/579",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西二見駅前店",
+      "url": "https://www.joyfull.co.jp/shop/573",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "砥堀店",
+      "url": "https://www.joyfull.co.jp/shop/421",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "兵庫加東店",
+      "url": "https://www.joyfull.co.jp/shop/345",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高砂阿弥陀店",
+      "url": "https://www.joyfull.co.jp/shop/298",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "朝来和田山店",
+      "url": "https://www.joyfull.co.jp/shop/293",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "赤穂野中店",
+      "url": "https://www.joyfull.co.jp/shop/285",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "加西中央店",
+      "url": "https://www.joyfull.co.jp/shop/281",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "加古川店",
+      "url": "https://www.joyfull.co.jp/shop/254",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "兵庫伊川谷店",
+      "url": "https://www.joyfull.co.jp/shop/63",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "兵庫西脇店",
+      "url": "https://www.joyfull.co.jp/shop/62",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "兵庫三木店",
+      "url": "https://www.joyfull.co.jp/shop/60",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "勝原店",
+      "url": "https://www.joyfull.co.jp/shop/43",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "堺美原店",
+      "url": "https://www.joyfull.co.jp/shop/342",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "りんくうタウン店",
+      "url": "https://www.joyfull.co.jp/shop/338",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "貝塚半田店",
+      "url": "https://www.joyfull.co.jp/shop/336",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "綾部店",
+      "url": "https://www.joyfull.co.jp/shop/301",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都精華町店",
+      "url": "https://www.joyfull.co.jp/shop/64",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京都新田辺店",
+      "url": "https://www.joyfull.co.jp/shop/57",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "能登川店",
+      "url": "https://www.joyfull.co.jp/shop/601",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大津坂本店",
+      "url": "https://www.joyfull.co.jp/shop/431",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "草津店",
+      "url": "https://www.joyfull.co.jp/shop/327",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大津萱野浦店",
+      "url": "https://www.joyfull.co.jp/shop/314",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "滋賀栗東店",
+      "url": "https://www.joyfull.co.jp/shop/69",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "滋賀水口店",
+      "url": "https://www.joyfull.co.jp/shop/59",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "奈良香芝店",
+      "url": "https://www.joyfull.co.jp/shop/432",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "奈良田原本店",
+      "url": "https://www.joyfull.co.jp/shop/332",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン富雄南店",
+      "url": "https://www.joyfull.co.jp/shop/325",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大和高田店",
+      "url": "https://www.joyfull.co.jp/shop/300",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "奈良七条店",
+      "url": "https://www.joyfull.co.jp/shop/58",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョイフルkitchen イオンモール和歌山店",
+      "url": "https://www.joyfull.co.jp/shop/609",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岩出店",
+      "url": "https://www.joyfull.co.jp/shop/593",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "橋本彩の台店",
+      "url": "https://www.joyfull.co.jp/shop/581",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "橋本高野口店",
+      "url": "https://www.joyfull.co.jp/shop/351",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "和歌山貴志川店",
+      "url": "https://www.joyfull.co.jp/shop/68",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "和歌山かつらぎ店",
+      "url": "https://www.joyfull.co.jp/shop/67",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "和歌山西ノ庄店",
+      "url": "https://www.joyfull.co.jp/shop/66",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "和歌山粉河店",
+      "url": "https://www.joyfull.co.jp/shop/61",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "下関長府店",
+      "url": "https://www.joyfull.co.jp/shop/564",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山口朝田店",
+      "url": "https://www.joyfull.co.jp/shop/562",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山口柳井店",
+      "url": "https://www.joyfull.co.jp/shop/552",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新南陽野村店",
+      "url": "https://www.joyfull.co.jp/shop/533",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "下松河内店",
+      "url": "https://www.joyfull.co.jp/shop/532",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山口美祢店",
+      "url": "https://www.joyfull.co.jp/shop/526",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "下松宮前店",
+      "url": "https://www.joyfull.co.jp/shop/513",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山口厚狭店",
+      "url": "https://www.joyfull.co.jp/shop/484",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宇部西岐波店",
+      "url": "https://www.joyfull.co.jp/shop/478",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山口平井店",
+      "url": "https://www.joyfull.co.jp/shop/475",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "萩店",
+      "url": "https://www.joyfull.co.jp/shop/473",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長門店",
+      "url": "https://www.joyfull.co.jp/shop/472",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "下関店",
+      "url": "https://www.joyfull.co.jp/shop/466",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "下関ホテル内店",
+      "url": "https://www.joyfull.co.jp/shop/398",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宇部黒石店",
+      "url": "https://www.joyfull.co.jp/shop/291",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南岩国店",
+      "url": "https://www.joyfull.co.jp/shop/264",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山口宮野店",
+      "url": "https://www.joyfull.co.jp/shop/258",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山口小郡店",
+      "url": "https://www.joyfull.co.jp/shop/238",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "防府駅南町店",
+      "url": "https://www.joyfull.co.jp/shop/232",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "光小周防店",
+      "url": "https://www.joyfull.co.jp/shop/222",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山口豊浦店",
+      "url": "https://www.joyfull.co.jp/shop/213",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山口大畠店",
+      "url": "https://www.joyfull.co.jp/shop/209",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宇部神原店",
+      "url": "https://www.joyfull.co.jp/shop/203",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新下関店",
+      "url": "https://www.joyfull.co.jp/shop/197",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "防府田島店",
+      "url": "https://www.joyfull.co.jp/shop/196",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "下関彦島店",
+      "url": "https://www.joyfull.co.jp/shop/190",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "光浅江店",
+      "url": "https://www.joyfull.co.jp/shop/186",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小野田中川店",
+      "url": "https://www.joyfull.co.jp/shop/181",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山口周東店",
+      "url": "https://www.joyfull.co.jp/shop/174",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岩国装束店",
+      "url": "https://www.joyfull.co.jp/shop/148",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山口平生店",
+      "url": "https://www.joyfull.co.jp/shop/147",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "下関清末店",
+      "url": "https://www.joyfull.co.jp/shop/145",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "綾羅木店",
+      "url": "https://www.joyfull.co.jp/shop/140",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西防府店",
+      "url": "https://www.joyfull.co.jp/shop/137",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小野田店",
+      "url": "https://www.joyfull.co.jp/shop/135",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福山駅家店",
+      "url": "https://www.joyfull.co.jp/shop/582",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "安芸高田店",
+      "url": "https://www.joyfull.co.jp/shop/567",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三次店",
+      "url": "https://www.joyfull.co.jp/shop/560",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "神辺店",
+      "url": "https://www.joyfull.co.jp/shop/416",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西新涯店",
+      "url": "https://www.joyfull.co.jp/shop/415",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東深津店",
+      "url": "https://www.joyfull.co.jp/shop/414",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "呉駅前店",
+      "url": "https://www.joyfull.co.jp/shop/303",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "江田島店",
+      "url": "https://www.joyfull.co.jp/shop/279",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "世羅店",
+      "url": "https://www.joyfull.co.jp/shop/275",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "可部店",
+      "url": "https://www.joyfull.co.jp/shop/253",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "舟入店",
+      "url": "https://www.joyfull.co.jp/shop/44",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "広店",
+      "url": "https://www.joyfull.co.jp/shop/42",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山本店",
+      "url": "https://www.joyfull.co.jp/shop/41",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "引野店",
+      "url": "https://www.joyfull.co.jp/shop/35",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東尾道店",
+      "url": "https://www.joyfull.co.jp/shop/34",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "真庭落合店",
+      "url": "https://www.joyfull.co.jp/shop/571",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "井原店",
+      "url": "https://www.joyfull.co.jp/shop/561",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "玉野高崎店",
+      "url": "https://www.joyfull.co.jp/shop/559",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "倉敷中畝店",
+      "url": "https://www.joyfull.co.jp/shop/557",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "万成店",
+      "url": "https://www.joyfull.co.jp/shop/422",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "倉敷本店",
+      "url": "https://www.joyfull.co.jp/shop/420",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "水江店",
+      "url": "https://www.joyfull.co.jp/shop/419",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福成店",
+      "url": "https://www.joyfull.co.jp/shop/418",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "児島駅前店",
+      "url": "https://www.joyfull.co.jp/shop/286",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "倉敷連島店",
+      "url": "https://www.joyfull.co.jp/shop/277",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鴨方店",
+      "url": "https://www.joyfull.co.jp/shop/274",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高梁店",
+      "url": "https://www.joyfull.co.jp/shop/270",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岡山平島店",
+      "url": "https://www.joyfull.co.jp/shop/267",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新見店",
+      "url": "https://www.joyfull.co.jp/shop/266",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岡山益野店",
+      "url": "https://www.joyfull.co.jp/shop/262",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "雄町店",
+      "url": "https://www.joyfull.co.jp/shop/255",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "玉島店",
+      "url": "https://www.joyfull.co.jp/shop/45",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新保店",
+      "url": "https://www.joyfull.co.jp/shop/38",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東川原店",
+      "url": "https://www.joyfull.co.jp/shop/37",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "総社店",
+      "url": "https://www.joyfull.co.jp/shop/33",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "津山店",
+      "url": "https://www.joyfull.co.jp/shop/32",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "倉敷店",
+      "url": "https://www.joyfull.co.jp/shop/31",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "米子福原店",
+      "url": "https://www.joyfull.co.jp/shop/587",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鳥取安長店",
+      "url": "https://www.joyfull.co.jp/shop/583",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "米子両三柳店",
+      "url": "https://www.joyfull.co.jp/shop/568",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鳥取琴浦店",
+      "url": "https://www.joyfull.co.jp/shop/276",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松江東朝日店",
+      "url": "https://www.joyfull.co.jp/shop/577",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "島根斐川店",
+      "url": "https://www.joyfull.co.jp/shop/570",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "出雲大津店",
+      "url": "https://www.joyfull.co.jp/shop/566",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "石見大田店",
+      "url": "https://www.joyfull.co.jp/shop/296",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "浜田周布店",
+      "url": "https://www.joyfull.co.jp/shop/284",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "安来今津店",
+      "url": "https://www.joyfull.co.jp/shop/282",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "出雲塩冶原店",
+      "url": "https://www.joyfull.co.jp/shop/280",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松山別府店",
+      "url": "https://www.joyfull.co.jp/shop/588",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "愛媛東温店",
+      "url": "https://www.joyfull.co.jp/shop/586",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西条東予店",
+      "url": "https://www.joyfull.co.jp/shop/585",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "愛媛砥部店",
+      "url": "https://www.joyfull.co.jp/shop/578",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "今治新屋敷店",
+      "url": "https://www.joyfull.co.jp/shop/576",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新居浜萩生店",
+      "url": "https://www.joyfull.co.jp/shop/575",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西条大町店",
+      "url": "https://www.joyfull.co.jp/shop/574",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "愛媛保内店",
+      "url": "https://www.joyfull.co.jp/shop/541",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "愛媛東大洲店",
+      "url": "https://www.joyfull.co.jp/shop/538",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "愛媛御荘店",
+      "url": "https://www.joyfull.co.jp/shop/520",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宇和島祝森店",
+      "url": "https://www.joyfull.co.jp/shop/515",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "愛媛宇和店",
+      "url": "https://www.joyfull.co.jp/shop/514",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "愛媛南大洲店",
+      "url": "https://www.joyfull.co.jp/shop/510",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松山夏目店",
+      "url": "https://www.joyfull.co.jp/shop/297",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松山平田店",
+      "url": "https://www.joyfull.co.jp/shop/289",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "愛媛広見店",
+      "url": "https://www.joyfull.co.jp/shop/230",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "川之江店",
+      "url": "https://www.joyfull.co.jp/shop/40",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョイフルEXPRESS イオンモール高知店",
+      "url": "https://www.joyfull.co.jp/shop/610",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高知金田店",
+      "url": "https://www.joyfull.co.jp/shop/591",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高知東中村店",
+      "url": "https://www.joyfull.co.jp/shop/527",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "土佐道路店",
+      "url": "https://www.joyfull.co.jp/shop/308",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高知大津店",
+      "url": "https://www.joyfull.co.jp/shop/307",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高知宿毛店",
+      "url": "https://www.joyfull.co.jp/shop/227",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョイフルkitchen イオンモール綾川店＜2026年9月29日オープン＞",
+      "url": "https://www.joyfull.co.jp/shop/611",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高松扇町店",
+      "url": "https://www.joyfull.co.jp/shop/589",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "多度津店",
+      "url": "https://www.joyfull.co.jp/shop/565",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "琴平店",
+      "url": "https://www.joyfull.co.jp/shop/558",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三条店",
+      "url": "https://www.joyfull.co.jp/shop/417",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高松東山崎店",
+      "url": "https://www.joyfull.co.jp/shop/304",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "善通寺店",
+      "url": "https://www.joyfull.co.jp/shop/302",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小豆島店",
+      "url": "https://www.joyfull.co.jp/shop/294",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東かがわ大内店",
+      "url": "https://www.joyfull.co.jp/shop/278",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "観音寺中央店",
+      "url": "https://www.joyfull.co.jp/shop/273",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "坂出駅前店",
+      "url": "https://www.joyfull.co.jp/shop/268",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三名店",
+      "url": "https://www.joyfull.co.jp/shop/39",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "丸亀店",
+      "url": "https://www.joyfull.co.jp/shop/36",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "徳島上板店",
+      "url": "https://www.joyfull.co.jp/shop/563",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "吉野川店",
+      "url": "https://www.joyfull.co.jp/shop/288",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "徳島小松島店",
+      "url": "https://www.joyfull.co.jp/shop/287",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "徳島島田店",
+      "url": "https://www.joyfull.co.jp/shop/283",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鳴門撫養店",
+      "url": "https://www.joyfull.co.jp/shop/272",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北九州枝光店",
+      "url": "https://www.joyfull.co.jp/shop/549",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡大刀洗店",
+      "url": "https://www.joyfull.co.jp/shop/547",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北九州八重洲店",
+      "url": "https://www.joyfull.co.jp/shop/545",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "太宰府高雄店",
+      "url": "https://www.joyfull.co.jp/shop/542",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "久留米白山店",
+      "url": "https://www.joyfull.co.jp/shop/531",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡入部店",
+      "url": "https://www.joyfull.co.jp/shop/528",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "筑紫野天山店",
+      "url": "https://www.joyfull.co.jp/shop/524",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "筑後西牟田店",
+      "url": "https://www.joyfull.co.jp/shop/518",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "中間蓮花寺店",
+      "url": "https://www.joyfull.co.jp/shop/516",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北九州香月店",
+      "url": "https://www.joyfull.co.jp/shop/511",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "柳川西浜武店",
+      "url": "https://www.joyfull.co.jp/shop/505",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "太宰府大佐野店",
+      "url": "https://www.joyfull.co.jp/shop/502",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小倉高尾店",
+      "url": "https://www.joyfull.co.jp/shop/498",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "田川香春店",
+      "url": "https://www.joyfull.co.jp/shop/495",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡大川店",
+      "url": "https://www.joyfull.co.jp/shop/494",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "筑紫野桜台店",
+      "url": "https://www.joyfull.co.jp/shop/493",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北九州沼店",
+      "url": "https://www.joyfull.co.jp/shop/490",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡拾六町店",
+      "url": "https://www.joyfull.co.jp/shop/479",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三苫店",
+      "url": "https://www.joyfull.co.jp/shop/474",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "城野店",
+      "url": "https://www.joyfull.co.jp/shop/471",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "筑後店",
+      "url": "https://www.joyfull.co.jp/shop/469",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "到津店",
+      "url": "https://www.joyfull.co.jp/shop/468",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "門司店",
+      "url": "https://www.joyfull.co.jp/shop/464",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "古賀店",
+      "url": "https://www.joyfull.co.jp/shop/460",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "寺塚店",
+      "url": "https://www.joyfull.co.jp/shop/457",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "篠栗店",
+      "url": "https://www.joyfull.co.jp/shop/452",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "椎田店",
+      "url": "https://www.joyfull.co.jp/shop/446",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "苅原店",
+      "url": "https://www.joyfull.co.jp/shop/445",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "甘木店",
+      "url": "https://www.joyfull.co.jp/shop/440",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡宗像ホテル内店",
+      "url": "https://www.joyfull.co.jp/shop/399",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小倉店",
+      "url": "https://www.joyfull.co.jp/shop/396",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡和白店",
+      "url": "https://www.joyfull.co.jp/shop/395",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡宮若店",
+      "url": "https://www.joyfull.co.jp/shop/347",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡新宮店",
+      "url": "https://www.joyfull.co.jp/shop/334",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡警固公園前店",
+      "url": "https://www.joyfull.co.jp/shop/306",
+      "facilities": []
+    },
+    {
+      "name": "福岡福津店",
+      "url": "https://www.joyfull.co.jp/shop/305",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北九州曽根店",
+      "url": "https://www.joyfull.co.jp/shop/290",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "若松小石店",
+      "url": "https://www.joyfull.co.jp/shop/269",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "門司稲積店",
+      "url": "https://www.joyfull.co.jp/shop/260",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡吉塚店",
+      "url": "https://www.joyfull.co.jp/shop/250",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北九州黒崎店",
+      "url": "https://www.joyfull.co.jp/shop/248",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北九州永犬丸店",
+      "url": "https://www.joyfull.co.jp/shop/246",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北九州海老津店",
+      "url": "https://www.joyfull.co.jp/shop/241",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南姪浜店",
+      "url": "https://www.joyfull.co.jp/shop/237",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "久留米長門石店",
+      "url": "https://www.joyfull.co.jp/shop/236",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北九州高須店",
+      "url": "https://www.joyfull.co.jp/shop/235",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "八女忠見店",
+      "url": "https://www.joyfull.co.jp/shop/225",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宗像徳重店",
+      "url": "https://www.joyfull.co.jp/shop/224",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "穂波弁分店",
+      "url": "https://www.joyfull.co.jp/shop/223",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "田川伊田店",
+      "url": "https://www.joyfull.co.jp/shop/210",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "飯塚目尾店",
+      "url": "https://www.joyfull.co.jp/shop/207",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡稲築店",
+      "url": "https://www.joyfull.co.jp/shop/204",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "那珂川片縄店",
+      "url": "https://www.joyfull.co.jp/shop/202",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北遠賀店",
+      "url": "https://www.joyfull.co.jp/shop/200",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡戸切店",
+      "url": "https://www.joyfull.co.jp/shop/177",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大牟田白金店",
+      "url": "https://www.joyfull.co.jp/shop/173",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北九州水巻店",
+      "url": "https://www.joyfull.co.jp/shop/169",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福岡大野城店",
+      "url": "https://www.joyfull.co.jp/shop/166",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東古賀店",
+      "url": "https://www.joyfull.co.jp/shop/163",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "久留米合川店",
+      "url": "https://www.joyfull.co.jp/shop/160",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "直方神正店",
+      "url": "https://www.joyfull.co.jp/shop/159",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "田川川崎店",
+      "url": "https://www.joyfull.co.jp/shop/156",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "久留米御井町店",
+      "url": "https://www.joyfull.co.jp/shop/152",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "八女店",
+      "url": "https://www.joyfull.co.jp/shop/150",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "甘木駅前店",
+      "url": "https://www.joyfull.co.jp/shop/149",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "柳川店",
+      "url": "https://www.joyfull.co.jp/shop/141",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宇美店",
+      "url": "https://www.joyfull.co.jp/shop/139",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "片島店",
+      "url": "https://www.joyfull.co.jp/shop/136",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大谷店",
+      "url": "https://www.joyfull.co.jp/shop/131",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "木屋瀬店",
+      "url": "https://www.joyfull.co.jp/shop/130",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "前田店",
+      "url": "https://www.joyfull.co.jp/shop/129",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小倉熊本店",
+      "url": "https://www.joyfull.co.jp/shop/127",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宗像店",
+      "url": "https://www.joyfull.co.jp/shop/126",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "原田店",
+      "url": "https://www.joyfull.co.jp/shop/125",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三ケ森店",
+      "url": "https://www.joyfull.co.jp/shop/123",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大牟田店",
+      "url": "https://www.joyfull.co.jp/shop/122",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "直方店",
+      "url": "https://www.joyfull.co.jp/shop/121",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "安武店",
+      "url": "https://www.joyfull.co.jp/shop/119",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "檜原店",
+      "url": "https://www.joyfull.co.jp/shop/118",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "広川店",
+      "url": "https://www.joyfull.co.jp/shop/117",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "志免店",
+      "url": "https://www.joyfull.co.jp/shop/116",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "折尾店",
+      "url": "https://www.joyfull.co.jp/shop/115",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "空港店",
+      "url": "https://www.joyfull.co.jp/shop/114",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "善導寺店",
+      "url": "https://www.joyfull.co.jp/shop/113",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "本城店",
+      "url": "https://www.joyfull.co.jp/shop/112",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "野間店",
+      "url": "https://www.joyfull.co.jp/shop/110",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "飯塚店",
+      "url": "https://www.joyfull.co.jp/shop/107",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "行橋店",
+      "url": "https://www.joyfull.co.jp/shop/106",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "苅田店",
+      "url": "https://www.joyfull.co.jp/shop/105",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "田主丸店",
+      "url": "https://www.joyfull.co.jp/shop/90",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宇島店",
+      "url": "https://www.joyfull.co.jp/shop/88",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "若松店",
+      "url": "https://www.joyfull.co.jp/shop/86",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "前原店",
+      "url": "https://www.joyfull.co.jp/shop/84",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "那珂川店",
+      "url": "https://www.joyfull.co.jp/shop/83",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東合川店",
+      "url": "https://www.joyfull.co.jp/shop/81",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐賀西与賀店",
+      "url": "https://www.joyfull.co.jp/shop/539",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐賀千代田店",
+      "url": "https://www.joyfull.co.jp/shop/534",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "伊万里大坪店",
+      "url": "https://www.joyfull.co.jp/shop/529",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐賀開成店",
+      "url": "https://www.joyfull.co.jp/shop/509",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐賀上峰店",
+      "url": "https://www.joyfull.co.jp/shop/501",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐賀有田店",
+      "url": "https://www.joyfull.co.jp/shop/491",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐賀大町店",
+      "url": "https://www.joyfull.co.jp/shop/487",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐賀牛津店",
+      "url": "https://www.joyfull.co.jp/shop/482",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐賀鳥栖店",
+      "url": "https://www.joyfull.co.jp/shop/481",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高木瀬店",
+      "url": "https://www.joyfull.co.jp/shop/465",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "諸富店",
+      "url": "https://www.joyfull.co.jp/shop/463",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鳥栖中央店",
+      "url": "https://www.joyfull.co.jp/shop/233",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "伊万里中央店",
+      "url": "https://www.joyfull.co.jp/shop/218",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿島浜町店",
+      "url": "https://www.joyfull.co.jp/shop/211",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐賀嬉野店",
+      "url": "https://www.joyfull.co.jp/shop/208",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "唐津鏡店",
+      "url": "https://www.joyfull.co.jp/shop/193",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐賀鹿島店",
+      "url": "https://www.joyfull.co.jp/shop/170",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南佐賀店",
+      "url": "https://www.joyfull.co.jp/shop/162",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐賀武雄店",
+      "url": "https://www.joyfull.co.jp/shop/154",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三日月店",
+      "url": "https://www.joyfull.co.jp/shop/120",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐賀店",
+      "url": "https://www.joyfull.co.jp/shop/111",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "唐津店",
+      "url": "https://www.joyfull.co.jp/shop/108",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長崎矢上店",
+      "url": "https://www.joyfull.co.jp/shop/378",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長崎長与店",
+      "url": "https://www.joyfull.co.jp/shop/377",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐世保矢峰店",
+      "url": "https://www.joyfull.co.jp/shop/376",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "針尾店",
+      "url": "https://www.joyfull.co.jp/shop/375",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "島原店",
+      "url": "https://www.joyfull.co.jp/shop/374",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "諫早店",
+      "url": "https://www.joyfull.co.jp/shop/373",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐世保中央公園店",
+      "url": "https://www.joyfull.co.jp/shop/372",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐世保日野店",
+      "url": "https://www.joyfull.co.jp/shop/371",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長崎築町店",
+      "url": "https://www.joyfull.co.jp/shop/370",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長崎五島店",
+      "url": "https://www.joyfull.co.jp/shop/367",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長崎福田店",
+      "url": "https://www.joyfull.co.jp/shop/366",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大村今津店",
+      "url": "https://www.joyfull.co.jp/shop/365",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長崎佐々店",
+      "url": "https://www.joyfull.co.jp/shop/364",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "諫早小豆崎店",
+      "url": "https://www.joyfull.co.jp/shop/363",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長崎有家店",
+      "url": "https://www.joyfull.co.jp/shop/362",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長崎城山店",
+      "url": "https://www.joyfull.co.jp/shop/361",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長崎時津店",
+      "url": "https://www.joyfull.co.jp/shop/360",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長崎畝刈店",
+      "url": "https://www.joyfull.co.jp/shop/359",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長崎愛野店",
+      "url": "https://www.joyfull.co.jp/shop/358",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長崎波佐見店",
+      "url": "https://www.joyfull.co.jp/shop/240",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大分賀来店",
+      "url": "https://www.joyfull.co.jp/shop/590",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大分新貝店",
+      "url": "https://www.joyfull.co.jp/shop/569",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大分松岡店",
+      "url": "https://www.joyfull.co.jp/shop/556",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大分湯布院店",
+      "url": "https://www.joyfull.co.jp/shop/553",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "臼杵インター店",
+      "url": "https://www.joyfull.co.jp/shop/551",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大分古国府店",
+      "url": "https://www.joyfull.co.jp/shop/544",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大分玖珠店",
+      "url": "https://www.joyfull.co.jp/shop/504",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日田天神店",
+      "url": "https://www.joyfull.co.jp/shop/503",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "別府鶴見店",
+      "url": "https://www.joyfull.co.jp/shop/500",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大分国東店",
+      "url": "https://www.joyfull.co.jp/shop/499",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "稙田店",
+      "url": "https://www.joyfull.co.jp/shop/467",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "明野店",
+      "url": "https://www.joyfull.co.jp/shop/462",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "青山店",
+      "url": "https://www.joyfull.co.jp/shop/461",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日出店",
+      "url": "https://www.joyfull.co.jp/shop/459",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "亀川店",
+      "url": "https://www.joyfull.co.jp/shop/454",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日田店",
+      "url": "https://www.joyfull.co.jp/shop/451",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "中津店",
+      "url": "https://www.joyfull.co.jp/shop/448",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宇佐店",
+      "url": "https://www.joyfull.co.jp/shop/444",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "下郡店",
+      "url": "https://www.joyfull.co.jp/shop/438",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "やまなみ店",
+      "url": "https://www.joyfull.co.jp/shop/437",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南大分店",
+      "url": "https://www.joyfull.co.jp/shop/435",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西大分店",
+      "url": "https://www.joyfull.co.jp/shop/434",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "安心院店",
+      "url": "https://www.joyfull.co.jp/shop/400",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "津久見店",
+      "url": "https://www.joyfull.co.jp/shop/394",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鶴崎店",
+      "url": "https://www.joyfull.co.jp/shop/392",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ジョイフルEXPRESS アミュプラザおおいた店",
+      "url": "https://www.joyfull.co.jp/shop/357",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大分戸次店",
+      "url": "https://www.joyfull.co.jp/shop/331",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "パークプレイス大分店",
+      "url": "https://www.joyfull.co.jp/shop/319",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北中津店",
+      "url": "https://www.joyfull.co.jp/shop/263",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大分光吉インター店",
+      "url": "https://www.joyfull.co.jp/shop/261",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大分大手町店",
+      "url": "https://www.joyfull.co.jp/shop/259",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大分野津原店",
+      "url": "https://www.joyfull.co.jp/shop/257",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐伯駅前店",
+      "url": "https://www.joyfull.co.jp/shop/251",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宇佐法鏡寺店",
+      "url": "https://www.joyfull.co.jp/shop/234",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日田友田店",
+      "url": "https://www.joyfull.co.jp/shop/231",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大分竹田店",
+      "url": "https://www.joyfull.co.jp/shop/219",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大分杵築店",
+      "url": "https://www.joyfull.co.jp/shop/175",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大分挾間店",
+      "url": "https://www.joyfull.co.jp/shop/172",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大分坂ノ市店",
+      "url": "https://www.joyfull.co.jp/shop/168",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大分横田店",
+      "url": "https://www.joyfull.co.jp/shop/167",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南中津店",
+      "url": "https://www.joyfull.co.jp/shop/144",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "臼杵店",
+      "url": "https://www.joyfull.co.jp/shop/99",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三重町店",
+      "url": "https://www.joyfull.co.jp/shop/92",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三川店",
+      "url": "https://www.joyfull.co.jp/shop/87",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐伯店",
+      "url": "https://www.joyfull.co.jp/shop/80",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京町店",
+      "url": "https://www.joyfull.co.jp/shop/79",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "別府店",
+      "url": "https://www.joyfull.co.jp/shop/75",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "萩原店",
+      "url": "https://www.joyfull.co.jp/shop/74",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本旭志店",
+      "url": "https://www.joyfull.co.jp/shop/572",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本矢部店",
+      "url": "https://www.joyfull.co.jp/shop/550",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本御領店",
+      "url": "https://www.joyfull.co.jp/shop/548",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本長洲店",
+      "url": "https://www.joyfull.co.jp/shop/546",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本帯山店",
+      "url": "https://www.joyfull.co.jp/shop/543",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本東野店",
+      "url": "https://www.joyfull.co.jp/shop/537",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本玉名店",
+      "url": "https://www.joyfull.co.jp/shop/530",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松橋インター店",
+      "url": "https://www.joyfull.co.jp/shop/522",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宇土住吉店",
+      "url": "https://www.joyfull.co.jp/shop/517",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本東大津店",
+      "url": "https://www.joyfull.co.jp/shop/506",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本浜線バイパス店",
+      "url": "https://www.joyfull.co.jp/shop/497",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本河内店",
+      "url": "https://www.joyfull.co.jp/shop/492",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本不知火店",
+      "url": "https://www.joyfull.co.jp/shop/486",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "黒髪店",
+      "url": "https://www.joyfull.co.jp/shop/458",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松橋店",
+      "url": "https://www.joyfull.co.jp/shop/450",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "植木店",
+      "url": "https://www.joyfull.co.jp/shop/447",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "人吉店",
+      "url": "https://www.joyfull.co.jp/shop/443",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "江津店",
+      "url": "https://www.joyfull.co.jp/shop/436",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本合志北バイパスホテル内店",
+      "url": "https://www.joyfull.co.jp/shop/397",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本大津店",
+      "url": "https://www.joyfull.co.jp/shop/393",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "上熊本店",
+      "url": "https://www.joyfull.co.jp/shop/295",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "八代西片店",
+      "url": "https://www.joyfull.co.jp/shop/292",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本城南店",
+      "url": "https://www.joyfull.co.jp/shop/265",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "阿蘇一の宮店",
+      "url": "https://www.joyfull.co.jp/shop/245",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本新土河原店",
+      "url": "https://www.joyfull.co.jp/shop/242",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本菊水店",
+      "url": "https://www.joyfull.co.jp/shop/229",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本免田店",
+      "url": "https://www.joyfull.co.jp/shop/228",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "八代宮原店",
+      "url": "https://www.joyfull.co.jp/shop/226",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "荒尾宮内店",
+      "url": "https://www.joyfull.co.jp/shop/198",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本鹿本店",
+      "url": "https://www.joyfull.co.jp/shop/191",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本渡鹿店",
+      "url": "https://www.joyfull.co.jp/shop/185",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊本西合志店",
+      "url": "https://www.joyfull.co.jp/shop/161",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "菊池店",
+      "url": "https://www.joyfull.co.jp/shop/143",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "武蔵ヶ丘店",
+      "url": "https://www.joyfull.co.jp/shop/138",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "川尻店",
+      "url": "https://www.joyfull.co.jp/shop/134",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "荒尾店",
+      "url": "https://www.joyfull.co.jp/shop/133",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大矢野店",
+      "url": "https://www.joyfull.co.jp/shop/132",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "本渡店",
+      "url": "https://www.joyfull.co.jp/shop/128",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南八代店",
+      "url": "https://www.joyfull.co.jp/shop/124",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山鹿店",
+      "url": "https://www.joyfull.co.jp/shop/104",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "二本木店",
+      "url": "https://www.joyfull.co.jp/shop/102",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "八代店",
+      "url": "https://www.joyfull.co.jp/shop/100",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大津店",
+      "url": "https://www.joyfull.co.jp/shop/93",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "菊陽店",
+      "url": "https://www.joyfull.co.jp/shop/91",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "秋津店",
+      "url": "https://www.joyfull.co.jp/shop/82",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日向都町店",
+      "url": "https://www.joyfull.co.jp/shop/555",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎西清武店",
+      "url": "https://www.joyfull.co.jp/shop/540",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎本郷南方店",
+      "url": "https://www.joyfull.co.jp/shop/535",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎佐土原店",
+      "url": "https://www.joyfull.co.jp/shop/507",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎串間店",
+      "url": "https://www.joyfull.co.jp/shop/489",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎高城店",
+      "url": "https://www.joyfull.co.jp/shop/485",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎上北方店",
+      "url": "https://www.joyfull.co.jp/shop/483",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西都城店",
+      "url": "https://www.joyfull.co.jp/shop/439",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高鍋店",
+      "url": "https://www.joyfull.co.jp/shop/401",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "延岡愛宕店",
+      "url": "https://www.joyfull.co.jp/shop/247",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小林細野店",
+      "url": "https://www.joyfull.co.jp/shop/244",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎永楽店",
+      "url": "https://www.joyfull.co.jp/shop/243",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "延岡幸店",
+      "url": "https://www.joyfull.co.jp/shop/239",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日向江良店",
+      "url": "https://www.joyfull.co.jp/shop/217",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎田野店",
+      "url": "https://www.joyfull.co.jp/shop/215",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎高千穂店",
+      "url": "https://www.joyfull.co.jp/shop/214",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "都城志和池店",
+      "url": "https://www.joyfull.co.jp/shop/206",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎えびの店",
+      "url": "https://www.joyfull.co.jp/shop/205",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎霧島店",
+      "url": "https://www.joyfull.co.jp/shop/187",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎大塚店",
+      "url": "https://www.joyfull.co.jp/shop/183",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎三股店",
+      "url": "https://www.joyfull.co.jp/shop/182",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "都城鷹尾店",
+      "url": "https://www.joyfull.co.jp/shop/180",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎油津店",
+      "url": "https://www.joyfull.co.jp/shop/178",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎高岡店",
+      "url": "https://www.joyfull.co.jp/shop/176",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎日南店",
+      "url": "https://www.joyfull.co.jp/shop/171",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎西都店",
+      "url": "https://www.joyfull.co.jp/shop/155",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎一ツ葉店",
+      "url": "https://www.joyfull.co.jp/shop/153",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "都城神之山店",
+      "url": "https://www.joyfull.co.jp/shop/151",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大島店",
+      "url": "https://www.joyfull.co.jp/shop/103",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日向店",
+      "url": "https://www.joyfull.co.jp/shop/97",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小林店",
+      "url": "https://www.joyfull.co.jp/shop/96",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新富店",
+      "url": "https://www.joyfull.co.jp/shop/94",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "恒久店",
+      "url": "https://www.joyfull.co.jp/shop/89",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南延岡店",
+      "url": "https://www.joyfull.co.jp/shop/78",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎店",
+      "url": "https://www.joyfull.co.jp/shop/77",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "都城店",
+      "url": "https://www.joyfull.co.jp/shop/76",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島和田店",
+      "url": "https://www.joyfull.co.jp/shop/554",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "川内大小路店",
+      "url": "https://www.joyfull.co.jp/shop/536",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島郡山店",
+      "url": "https://www.joyfull.co.jp/shop/525",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "伊集院下谷口店",
+      "url": "https://www.joyfull.co.jp/shop/523",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島坂之上店",
+      "url": "https://www.joyfull.co.jp/shop/521",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "国分清水店",
+      "url": "https://www.joyfull.co.jp/shop/519",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島川辺店",
+      "url": "https://www.joyfull.co.jp/shop/512",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南隼人店",
+      "url": "https://www.joyfull.co.jp/shop/508",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "川内平佐店",
+      "url": "https://www.joyfull.co.jp/shop/496",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島市来店",
+      "url": "https://www.joyfull.co.jp/shop/488",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島中央店",
+      "url": "https://www.joyfull.co.jp/shop/480",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "加治木店",
+      "url": "https://www.joyfull.co.jp/shop/477",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "磯庭園前店",
+      "url": "https://www.joyfull.co.jp/shop/476",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北鹿屋店",
+      "url": "https://www.joyfull.co.jp/shop/470",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "国分店",
+      "url": "https://www.joyfull.co.jp/shop/456",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南鹿児島店",
+      "url": "https://www.joyfull.co.jp/shop/455",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "指宿店",
+      "url": "https://www.joyfull.co.jp/shop/453",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "川内店",
+      "url": "https://www.joyfull.co.jp/shop/449",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "姶良店",
+      "url": "https://www.joyfull.co.jp/shop/442",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "加世田店",
+      "url": "https://www.joyfull.co.jp/shop/441",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "徳之島店",
+      "url": "https://www.joyfull.co.jp/shop/391",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "種子島西之表店",
+      "url": "https://www.joyfull.co.jp/shop/390",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "奄美入舟店",
+      "url": "https://www.joyfull.co.jp/shop/389",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "奄美空港店",
+      "url": "https://www.joyfull.co.jp/shop/388",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "奄美龍郷店",
+      "url": "https://www.joyfull.co.jp/shop/387",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "奄美長浜店",
+      "url": "https://www.joyfull.co.jp/shop/386",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島肝付店",
+      "url": "https://www.joyfull.co.jp/shop/299",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島中央駅前店",
+      "url": "https://www.joyfull.co.jp/shop/252",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島東市来店",
+      "url": "https://www.joyfull.co.jp/shop/249",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島大根占店",
+      "url": "https://www.joyfull.co.jp/shop/221",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島頴娃店",
+      "url": "https://www.joyfull.co.jp/shop/220",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島岩川店",
+      "url": "https://www.joyfull.co.jp/shop/212",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島高山店",
+      "url": "https://www.joyfull.co.jp/shop/201",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西加治木店",
+      "url": "https://www.joyfull.co.jp/shop/199",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島吉野店",
+      "url": "https://www.joyfull.co.jp/shop/195",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北阿久根店",
+      "url": "https://www.joyfull.co.jp/shop/194",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島空港店",
+      "url": "https://www.joyfull.co.jp/shop/192",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "指宿山川店",
+      "url": "https://www.joyfull.co.jp/shop/189",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "国分府中店",
+      "url": "https://www.joyfull.co.jp/shop/188",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島中山店",
+      "url": "https://www.joyfull.co.jp/shop/184",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島大口店",
+      "url": "https://www.joyfull.co.jp/shop/179",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島志布志店",
+      "url": "https://www.joyfull.co.jp/shop/165",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島末吉店",
+      "url": "https://www.joyfull.co.jp/shop/164",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿児島宮之城店",
+      "url": "https://www.joyfull.co.jp/shop/158",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西出水店",
+      "url": "https://www.joyfull.co.jp/shop/157",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小松原店",
+      "url": "https://www.joyfull.co.jp/shop/146",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鷹師店",
+      "url": "https://www.joyfull.co.jp/shop/142",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西鹿児島店",
+      "url": "https://www.joyfull.co.jp/shop/109",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "垂水店",
+      "url": "https://www.joyfull.co.jp/shop/101",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "枕崎店",
+      "url": "https://www.joyfull.co.jp/shop/98",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "出水店",
+      "url": "https://www.joyfull.co.jp/shop/95",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿屋店",
+      "url": "https://www.joyfull.co.jp/shop/85",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "喜友名店",
+      "url": "https://www.joyfull.co.jp/shop/385",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宜野湾コンベンションシティ店",
+      "url": "https://www.joyfull.co.jp/shop/384",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "古謝店",
+      "url": "https://www.joyfull.co.jp/shop/383",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "まえはら店",
+      "url": "https://www.joyfull.co.jp/shop/382",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮古店",
+      "url": "https://www.joyfull.co.jp/shop/381",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "しおざき店",
+      "url": "https://www.joyfull.co.jp/shop/380",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "おもろまち店",
+      "url": "https://www.joyfull.co.jp/shop/379",
+      "facilities": [
+        "parking"
+      ]
+    }
+  ]
+}

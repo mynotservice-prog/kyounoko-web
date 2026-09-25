@@ -1,7 +1,42 @@
 {
-  "generatedAt": "2026-09-11",
+  "generatedAt": "2026-09-25",
   "method": "各チェーンの公式店舗検索が店舗ごとに公開する設備属性を全店舗分取得し、設備ごとに「表示のある店舗数 / 数えた店舗数」を集計",
   "chains": [
+    {
+      "countedAt": "2026-09-25",
+      "chain": "aiya",
+      "name": "藍屋",
+      "sourceUrl": "https://store-info.skylark.co.jp/",
+      "method": "すかいらーくグループ共通店舗検索の店舗API（/api/point/、カテゴリ=0107）で全店舗を取得し、各店舗の設備フラグ（絞り込み検索と同じ項目）を集計",
+      "total": 31,
+      "note": "「座敷」は絞り込み検索の「座敷(大・小) あり」と「小上がり(畳席) あり」のいずれかに該当する店舗を数えた。単一フラグの項目は公式絞り込み件数と一致を確認済み（車椅子入店可=3、おむつ替え台あり=31、個室・個室風席あり=24、多目的トイレあり=1、駐車場あり=31）",
+      "facilities": {
+        "stepFree": {
+          "count": 3,
+          "label": "車椅子入店可"
+        },
+        "zashiki": {
+          "count": 11,
+          "label": "座敷(大・小) あり／小上がり(畳席) あり"
+        },
+        "diaperTable": {
+          "count": 31,
+          "label": "おむつ替え台あり"
+        },
+        "privateRoom": {
+          "count": 24,
+          "label": "個室・個室風席あり"
+        },
+        "multiToilet": {
+          "count": 1,
+          "label": "多目的トイレあり"
+        },
+        "parking": {
+          "count": 31,
+          "label": "駐車場あり"
+        }
+      }
+    },
     {
       "countedAt": "2026-09-11",
       "chain": "ajinomingei",
@@ -266,6 +301,29 @@
       }
     },
     {
+      "countedAt": "2026-09-25",
+      "chain": "capricciosa",
+      "name": "カプリチョーザ",
+      "sourceUrl": "https://capricciosa.com/location/",
+      "method": "公式の店舗一覧から全店舗ページを取得し、各ページの【お子様連れのお客様へ】欄にある定型文（キッズチェア・お子様用の食器／離乳食の持ち込み）の有無を店舗ごとに集計",
+      "total": 95,
+      "note": "【お子様連れのお客様へ】の定型文が無い店舗 5 件（該当なしとして集計）。見出しが無く定型文だけ載る店舗もあるため、店舗詳細の表の全幅行を読んだ。「ミルク用のお湯をご用意しております」は 69 店に記載（対応する設備キーが無いため集計表には入れない）。「キッズチェア、お子様用の食器」は1文なので、キッズチェアと子供用カトラリーの両方に同じ店舗数が入る。「駐車場」欄は自由記述（有料・提携・近隣等が混在）のため数えない",
+      "facilities": {
+        "kidsChair": {
+          "count": 86,
+          "label": "キッズチェア、お子様用の食器をご用意しております"
+        },
+        "kidsCutlery": {
+          "count": 86,
+          "label": "キッズチェア、お子様用の食器をご用意しております"
+        },
+        "babyFoodBringIn": {
+          "count": 62,
+          "label": "離乳食はお持ち込みいただけます"
+        }
+      }
+    },
+    {
       "countedAt": "2026-09-11",
       "chain": "choushimaru",
       "name": "すし銚子丸",
@@ -339,6 +397,36 @@
       }
     },
     {
+      "countedAt": "2026-09-25",
+      "chain": "coffeekan",
+      "name": "珈琲館",
+      "sourceUrl": "https://c-united.co.jp/search/khk/",
+      "method": "公式店舗検索が読む店舗データ（/store/request_search/、日本全域）から珈琲館ブランドの店舗を取り出し、駐車場欄（台数）に1台以上の値がある店舗を集計",
+      "total": 197,
+      "note": "珈琲館 蔵・CAFE DI ESPRESSO 珈琲館等の別ブランドは除外。駐車場欄が「0」の店舗 3 件は数えない（公式画面の絞り込みでは値があれば該当扱いのため、画面上の件数はこの分多くなる）",
+      "facilities": {
+        "parking": {
+          "count": 88,
+          "label": "駐車場"
+        }
+      }
+    },
+    {
+      "countedAt": "2026-09-25",
+      "chain": "daiki-suisan",
+      "name": "大起水産回転寿司",
+      "sourceUrl": "https://shop.daiki-suisan.co.jp/",
+      "method": "公式店舗検索（can-ly製）の店舗一覧API（/v2/directories/86/shops/search、ブランド絞り込み）で全店舗を取得し、各店舗の詳細ページ（/detail/<storeCode>/）の __NEXT_DATA__ にある絞り込み条件「サービス/設備」の checked を集計",
+      "note": "グループの他業態（街のみなと・海鮮丼と干物定食専門店等）は除外。絞り込み条件「サービス/設備」の項目: お持ち帰り・お寿司バイキング・鮮魚販売・デリバリーあり・駐車場あり・駅から近い・テーブル席あり・イートイン・クレジット決済可・二次元バーコード決済可。公式の絞り込みはブラウザ側で行われサーバ側の件数が無いため、絞り込み件数との突き合わせは未実施",
+      "total": 35,
+      "facilities": {
+        "parking": {
+          "count": 27,
+          "label": "駐車場あり"
+        }
+      }
+    },
+    {
       "countedAt": "2026-09-11",
       "chain": "denny-s",
       "name": "デニーズ",
@@ -404,6 +492,21 @@
       }
     },
     {
+      "countedAt": "2026-09-25",
+      "chain": "gindaco",
+      "name": "築地銀だこ",
+      "sourceUrl": "https://stores.gindaco.com/",
+      "method": "公式店舗検索（can-ly製）の店舗一覧API（/v2/directories/7/shops/search、ブランド絞り込み）で全店舗を取得し、各店舗の詳細ページ（/detail/<storeCode>/）の __NEXT_DATA__ にある絞り込み条件「設備/サービス」の checked を集計",
+      "note": "銀だこハイボール酒場・銀だこ点心酒場は別ブランドとして除外。持ち帰り中心の店舗も「築地銀だこ」ブランドなら含む。「個室有」は築地銀だこ全店で0件のため未入力と区別できず数えない。絞り込み条件「設備/サービス」の項目: テイクアウト・イートイン・駐車場・デリバリー・6個入りのみ取扱・8個入りのみ取扱・店舗限定たこ焼取扱・だんらんパック16個入り取扱・だんらんパック24個入り取扱・各種ドリンク取扱・クロワッサンたい焼取扱・クロワッサンたい焼取扱（平日限定）・薄皮たい焼取扱・焼そば取扱（平日限定）・焼そば取扱・アルコール提供・ドライブスルー・ランチ取扱・居酒屋・カウンター席・立飲み・喫煙BOX有・予約可・個室有・テーブル席。閉店扱い1件（築地銀だこ 泉パークタウンタピオ店）を除外。詳細ページに「設備/サービス」の値が無い店舗 3 件（設備なしとして集計）。公式の絞り込みはブラウザ側で行われサーバ側の件数が無いため、絞り込み件数との突き合わせは未実施",
+      "total": 416,
+      "facilities": {
+        "parking": {
+          "count": 307,
+          "label": "駐車場"
+        }
+      }
+    },
+    {
       "countedAt": "2026-09-11",
       "chain": "gusto",
       "name": "ガスト",
@@ -435,6 +538,25 @@
         "parking": {
           "count": 1009,
           "label": "駐車場あり"
+        }
+      }
+    },
+    {
+      "countedAt": "2026-09-25",
+      "chain": "gyoza-no-mansyu",
+      "name": "ぎょうざの満洲",
+      "sourceUrl": "https://www.mansyu.co.jp/shop/",
+      "method": "公式店舗一覧が読む店舗データ（/shop/shop.json）の店舗ごとの「駐車場あり」表示とパーティールームの記載を集計",
+      "total": 102,
+      "note": "一覧 104 件のうち飲食店でない 2 件（江坂工場直売店、ギャラリーマンシュウ（貸教室・貸ギャラリー））を除外。パーティールームは個室として集計",
+      "facilities": {
+        "parking": {
+          "count": 20,
+          "label": "駐車場あり"
+        },
+        "privateRoom": {
+          "count": 5,
+          "label": "パーティールーム"
         }
       }
     },
@@ -478,6 +600,33 @@
         "kidsSpace": {
           "count": 11,
           "label": "キッズルーム"
+        }
+      }
+    },
+    {
+      "countedAt": "2026-09-25",
+      "chain": "hachiban-ramen",
+      "name": "8番らーめん",
+      "sourceUrl": "https://www.hachiban.jp/shop/",
+      "method": "公式店舗情報ページに埋め込まれた国内全店舗データ（dataShop）の店舗ごとの設備コード（option。店舗検索の絞り込み条件と同じ）を集計",
+      "total": 113,
+      "note": "公式の条件: お座敷あり・入口スロープあり・お子様椅子あり・ベビーシートあり・ドライブスルー（ドライブスルーは対象外）。「ベビーシートあり」は用途の説明文が無いが、公式アイコンが乳児を寝かせる台の図柄のためおむつ替え台として集計",
+      "facilities": {
+        "zashiki": {
+          "count": 44,
+          "label": "お座敷あり"
+        },
+        "stepFree": {
+          "count": 66,
+          "label": "入口スロープあり"
+        },
+        "kidsChair": {
+          "count": 104,
+          "label": "お子様椅子あり"
+        },
+        "diaperTable": {
+          "count": 30,
+          "label": "ベビーシートあり"
         }
       }
     },
@@ -555,6 +704,21 @@
       }
     },
     {
+      "countedAt": "2026-09-25",
+      "chain": "heiroku-sushi",
+      "name": "平禄寿司",
+      "sourceUrl": "https://ys-holdings.co.jp/shop/?f&shop-prefectures&shop-brand%5B0%5D=heiroku-sushi",
+      "method": "グループ店舗検索のブランド「平禄寿司」の結果一覧（全ページ）の店舗カードにある「駐車場」アイコン（絞り込み「サービス」と同じ項目）を店舗ごとに集計",
+      "total": 36,
+      "note": "一覧 44 件のうち海外店（都道府県「海外」の検索結果）8 件を除外。「多目的トイレ」はグループ共通の検索条件で平禄寿司の該当が0件のため、未入力と区別できず数えない",
+      "facilities": {
+        "parking": {
+          "count": 26,
+          "label": "駐車場"
+        }
+      }
+    },
+    {
       "countedAt": "2026-09-11",
       "chain": "hidakaya",
       "name": "日高屋",
@@ -608,6 +772,71 @@
       }
     },
     {
+      "countedAt": "2026-09-25",
+      "chain": "ikinari-steak",
+      "name": "いきなり！ステーキ",
+      "sourceUrl": "https://ikinaristeak.com/shopinfo/",
+      "method": "公式店舗検索の都道府県別一覧（/store_pref/<都道府県>/、30ページ）に並ぶ店舗カードのサービスアイコン（「サービスから探す」の絞り込み条件と同じ項目）を店舗ごとに集計",
+      "total": 168,
+      "note": "アイコンの内訳: クレジットカード可168・QRコード決済可125・デリバリーあり143・子供用椅子あり134・駐車場あり102・車いす可107・ベンチシートあり86。「ベンチシートあり」は対応する設備項目が無いため数えない。「車いす可」は入口の段差なし（stepFree）に対応づけた",
+      "facilities": {
+        "kidsChair": {
+          "count": 134,
+          "label": "子供用椅子あり"
+        },
+        "parking": {
+          "count": 102,
+          "label": "駐車場あり"
+        },
+        "stepFree": {
+          "count": 107,
+          "label": "車いす可"
+        }
+      }
+    },
+    {
+      "countedAt": "2026-09-25",
+      "chain": "ippudo",
+      "name": "一風堂",
+      "sourceUrl": "https://stores.ippudo.com/",
+      "method": "公式店舗ページ（stores.ippudo.com）のサイトマップから国内の日本語版店舗ページを全件取得し、各ページの「サービス」欄の項目を集計",
+      "total": 156,
+      "note": "RAMEN EXPRESS 博多一風堂・一風堂KAY 等を含む。海外店（英字コードのページ）と多言語版ページは除外。「サービス」欄の項目: 店舗限定ラーメンあり58・クレジットカード利用可能142・交通系ICカード利用可能129・駐車場あり54・外国語メニューあり89・お子様用椅子あり112・お子様メニューあり62・駐車サービスあり39・プラントベースラーメンあり7。「駐車サービスあり」（提携駐車場の割引）は自店の駐車場ではないため数えない。「サービス」欄が無い店舗 7 件（該当項目なしとして集計）",
+      "facilities": {
+        "kidsChair": {
+          "count": 112,
+          "label": "お子様用椅子あり"
+        },
+        "kidsMenu": {
+          "count": 62,
+          "label": "お子様メニューあり"
+        },
+        "parking": {
+          "count": 54,
+          "label": "駐車場あり"
+        }
+      }
+    },
+    {
+      "countedAt": "2026-09-25",
+      "chain": "jolly-pasta",
+      "name": "ジョリーパスタ",
+      "sourceUrl": "https://maps.jolly-pasta.co.jp/jp/index.html",
+      "method": "公式店舗検索の検索APIで全店舗を列挙し、各店舗詳細ページの「サービス・設備」「メニュー」欄のアイコン（駐車場あり・お子様メニューあり）を集計",
+      "total": 322,
+      "note": "詳細ページの表記: 駐車場あり→「駐車場あり」、お子様メニューあり→「お子様メニューあり」。駐車場は公式の絞り込み件数（ジョリーパスタ分）と一致を確認。同じ検索に載る別ブランド（ジョリーパスタ（img_jolly-ox）1件。ブランドアイコンで判別）は除外。検索条件「ベビーシートあり」「多目的トイレあり」「エレベーターあり」は該当 0・0・1 件（全323件中）で未入力と判断し集計しない",
+      "facilities": {
+        "parking": {
+          "count": 319,
+          "label": "駐車場あり"
+        },
+        "kidsMenu": {
+          "count": 322,
+          "label": "お子様メニューあり"
+        }
+      }
+    },
+    {
       "countedAt": "2026-09-11",
       "chain": "jonathan",
       "name": "ジョナサン",
@@ -638,6 +867,21 @@
         },
         "parking": {
           "count": 102,
+          "label": "駐車場あり"
+        }
+      }
+    },
+    {
+      "countedAt": "2026-09-25",
+      "chain": "joyfull",
+      "name": "ジョイフル",
+      "sourceUrl": "https://www.joyfull.co.jp/shop",
+      "method": "公式店舗検索の都道府県別結果ページで、各店舗のサービス番号（data-service-ids。「サービスから探す」の絞り込みと同じ）から「駐車場あり」を店舗ごとに集計",
+      "total": 608,
+      "note": "店舗検索のサービス項目は駐車場・24時間営業・テイクアウト・決済・Wi-Fi・デリバリーのみで、子ども向け設備の項目は無い",
+      "facilities": {
+        "parking": {
+          "count": 607,
           "label": "駐車場あり"
         }
       }
@@ -674,6 +918,25 @@
       }
     },
     {
+      "countedAt": "2026-09-25",
+      "chain": "kairikiya",
+      "name": "魁力屋",
+      "sourceUrl": "https://shop.kairikiya.co.jp/",
+      "method": "公式店舗検索（shop.kairikiya.co.jp）のページに埋め込まれた国内店舗データ（__NUXT_DATA__ の stores_domestic）から、ブランド「ラーメン魁力屋」の営業中店舗の「店舗情報」（駐車場あり）と「BOX席」欄を店舗ごとに集計",
+      "total": 193,
+      "note": "他ブランド除外: からたま屋3・とりサブロー6・タンメンと餃子KIBARU1。開業前等で除外: 京都北白川ラーメン魁力屋 四条室町店(before_open)。「BOX席」は店舗ページの席数欄（例「BOX席（4人掛）：5卓」）に1卓以上の記載がある店舗を数えた（欄が無い店舗はフードコート店等）。「テーブル席あり」は対応する設備項目が無いため数えない",
+      "facilities": {
+        "parking": {
+          "count": 183,
+          "label": "駐車場あり"
+        },
+        "boxSeat": {
+          "count": 139,
+          "label": "BOX席"
+        }
+      }
+    },
+    {
       "countedAt": "2026-09-11",
       "chain": "kappa-sushi",
       "name": "かっぱ寿司",
@@ -695,6 +958,36 @@
         }
       },
       "total": 298
+    },
+    {
+      "countedAt": "2026-09-25",
+      "chain": "karayama",
+      "name": "からやま",
+      "sourceUrl": "https://shop.arclandservice.co.jp/ae-shop/spot/lists",
+      "method": "公式店舗検索（shop.arclandservice.co.jp/ae-shop）の一覧APIでカテゴリ「からやま」の全店舗を列挙し、「施設情報」の条件「駐車場あり」で絞り込んだ結果に含まれる店舗を店舗ごとに集計（国内店のみ）",
+      "total": 131,
+      "note": "海外店は除外。店舗検索の設備に当たる条件は「駐車場あり」のみで、子ども用の椅子・おむつ替え台等の項目は無い。国内住所（都道府県で始まる住所）に当たらない14件を除外（一覧 145 件）。業態カテゴリ内訳: からやま131店",
+      "facilities": {
+        "parking": {
+          "count": 119,
+          "label": "駐車場あり"
+        }
+      }
+    },
+    {
+      "countedAt": "2026-09-25",
+      "chain": "katsuya",
+      "name": "かつや",
+      "sourceUrl": "https://shop.arclandservice.co.jp/ae-shop/spot/lists",
+      "method": "公式店舗検索（shop.arclandservice.co.jp/ae-shop）の一覧APIでカテゴリ「かつや」の全店舗を列挙し、「施設情報」の条件「駐車場あり」で絞り込んだ結果に含まれる店舗を店舗ごとに集計（国内店のみ）",
+      "total": 513,
+      "note": "海外店は除外。店舗検索の設備に当たる条件は「駐車場あり」のみで、子ども用の椅子・おむつ替え台等の項目は無い。国内住所（都道府県で始まる住所）に当たらない78件を除外（一覧 591 件）。業態カテゴリ内訳: かつや513店",
+      "facilities": {
+        "parking": {
+          "count": 457,
+          "label": "駐車場あり"
+        }
+      }
     },
     {
       "countedAt": "2026-09-11",
@@ -796,6 +1089,25 @@
         "parking": {
           "count": 41,
           "label": "駐車場"
+        }
+      }
+    },
+    {
+      "countedAt": "2026-09-25",
+      "chain": "matsunoya",
+      "name": "松のや",
+      "sourceUrl": "https://pkg.navitime.co.jp/matsuyafoods/spot/lists",
+      "method": "公式店舗検索（pkg.navitime.co.jp/matsuyafoods）の一覧APIでカテゴリ「松のや」の全店舗を列挙し、「条件で探す」のチェック（駐車場あり・バリアフリー）で絞り込んだ結果に含まれる店舗を店舗ごとに集計",
+      "total": 681,
+      "note": "松屋・マイカリー食堂等の別業態は除外（松屋併設店は松のやとしても数える）。バリアフリーは公式注記「当社基準によります」。「テーブル席あり」は対応する設備項目が無いため数えない。業態カテゴリ内訳: 松のや681店",
+      "facilities": {
+        "parking": {
+          "count": 442,
+          "label": "駐車場あり"
+        },
+        "stepFree": {
+          "count": 121,
+          "label": "バリアフリー"
         }
       }
     },
@@ -990,6 +1302,44 @@
       }
     },
     {
+      "countedAt": "2026-09-25",
+      "chain": "osaka-ohsho",
+      "name": "大阪王将",
+      "sourceUrl": "https://www.osaka-ohsho.com/store/",
+      "method": "公式店舗検索が使う店舗API（GraphQL）で都道府県別に国内全店舗を取得し、「条件から探す」の「駐車場あり」で絞り込んだ結果に含まれる店舗を店舗ごとに集計",
+      "total": 326,
+      "note": "海外店舗（国別検索）は除外。「駐車場あり」の絞り込み結果のうち都道府県別一覧に無い 1 件（桃園遠東店（トウエンエントウ））は数えない。店舗データの parking 欄と絞り込み結果は一致。店舗別メニューのキッズプレート等は「子ども向け」の属性が無く商品名の読み取りになるため数えない",
+      "facilities": {
+        "parking": {
+          "count": 177,
+          "label": "駐車場あり"
+        }
+      }
+    },
+    {
+      "countedAt": "2026-09-25",
+      "chain": "pietro",
+      "name": "ピエトロ",
+      "sourceUrl": "https://www.pietro.co.jp/restaurant/all/",
+      "method": "公式の全国店舗一覧（/restaurant/all/）の店舗カードに表示される項目（店舗検索の絞り込み条件と同じ）を店舗ごとに集計",
+      "total": 42,
+      "note": "一覧 43 件。閉店表示1件（PIETRO A DAY 浦和パルコ店 ※閉店）を除外。PASTA & TAPAS PIETRO・洋麺屋ピエトロ・PREMIO ピエトロ等の業態を含む",
+      "facilities": {
+        "kidsMenu": {
+          "count": 36,
+          "label": "キッズメニュー"
+        },
+        "stepFree": {
+          "count": 30,
+          "label": "バリアフリー"
+        },
+        "parking": {
+          "count": 31,
+          "label": "駐車場あり"
+        }
+      }
+    },
+    {
       "countedAt": "2026-09-11",
       "chain": "ringerhut",
       "name": "リンガーハット",
@@ -1136,6 +1486,33 @@
       }
     },
     {
+      "countedAt": "2026-09-25",
+      "chain": "steak-no-don",
+      "name": "ステーキのどん",
+      "sourceUrl": "https://www.steak-don.jp/shop_list.html?pref=0",
+      "method": "公式店舗一覧（全国）の表の各店舗行にある施設アイコン（駐車場・おむつ替え台・スロープ・多目的トイレ）を店舗ごとに集計",
+      "total": 62,
+      "note": "一覧の凡例: 駐車場・おむつ替え台・スロープ・多目的トイレ・店内無料Wi-Fi（店内無料Wi-Fi等は対象外）。「スロープ」は入口の段差なし（stepFree）に対応づけた",
+      "facilities": {
+        "parking": {
+          "count": 60,
+          "label": "駐車場"
+        },
+        "diaperTable": {
+          "count": 58,
+          "label": "おむつ替え台"
+        },
+        "stepFree": {
+          "count": 53,
+          "label": "スロープ"
+        },
+        "multiToilet": {
+          "count": 22,
+          "label": "多目的トイレ"
+        }
+      }
+    },
+    {
       "countedAt": "2026-09-11",
       "chain": "steakmiya",
       "name": "ステーキ宮",
@@ -1155,6 +1532,21 @@
         "parking": {
           "count": 101,
           "label": "駐車場あり"
+        }
+      }
+    },
+    {
+      "countedAt": "2026-09-25",
+      "chain": "subway",
+      "name": "サブウェイ",
+      "sourceUrl": "https://subway.co.jp/shop/search/",
+      "method": "公式店舗検索ページに並ぶ全店舗カードの絞り込みタグ（data-tags。画面の絞り込み条件と同じ番号）から「キッズセット」の有無を店舗ごとに集計",
+      "total": 238,
+      "note": "絞り込み条件: 朝サブ・昼営業あり・キッズセット・イートインスペースあり・完全禁煙・クレカ・QRコード・電子マネー。設備キーに対応するのはキッズセットのみ",
+      "facilities": {
+        "kidsMenu": {
+          "count": 210,
+          "label": "キッズセット"
         }
       }
     },
@@ -1246,6 +1638,25 @@
         "parking": {
           "count": 44,
           "label": "駐車場あり"
+        }
+      }
+    },
+    {
+      "countedAt": "2026-09-25",
+      "chain": "tonkatsu-wako",
+      "name": "とんかつ和幸",
+      "sourceUrl": "https://wako-group.co.jp/shop/result/?brand=0&type=0",
+      "method": "公式店舗検索のブランド「とんかつ和幸」×業態「レストラン」の一覧（15ページ）の店舗カードにあるアイコン（表示あり／グレー表示）を店舗ごとに集計",
+      "total": 145,
+      "note": "公式サイトは正常なページも HTTP 404 で返すため本文の内容で取得成否を判定。アイコン列: 惣菜・駐車場・子供椅子・ランチメニュー・喫煙室・クレジット・電子マネー・ＱＲコード・スタンプカード・予備。グレー表示（class=is-not）は「なし」、非表示（is-hidden）は該当なしとして扱った。テイクアウト売店のみの店舗・海外店は含まない",
+      "facilities": {
+        "kidsChair": {
+          "count": 129,
+          "label": "子供椅子"
+        },
+        "parking": {
+          "count": 134,
+          "label": "駐車場"
         }
       }
     },
@@ -1349,6 +1760,33 @@
       }
     },
     {
+      "countedAt": "2026-09-25",
+      "chain": "volks",
+      "name": "フォルクス",
+      "sourceUrl": "https://www.volks-steak.jp/shop_list.html?pref=0",
+      "method": "公式店舗一覧（全国）の表の各店舗行にある施設アイコン（駐車場・おむつ替え台・スロープ・多目的トイレ）を店舗ごとに集計",
+      "total": 40,
+      "note": "一覧の凡例: 駐車場・おむつ替え台・スロープ・多目的トイレ・店内無料Wi-Fi・モーニング（店内無料Wi-Fi等は対象外）。「スロープ」は入口の段差なし（stepFree）に対応づけた",
+      "facilities": {
+        "parking": {
+          "count": 38,
+          "label": "駐車場"
+        },
+        "diaperTable": {
+          "count": 39,
+          "label": "おむつ替え台"
+        },
+        "stepFree": {
+          "count": 34,
+          "label": "スロープ"
+        },
+        "multiToilet": {
+          "count": 26,
+          "label": "多目的トイレ"
+        }
+      }
+    },
+    {
       "countedAt": "2026-09-11",
       "chain": "washokusato",
       "name": "和食さと",
@@ -1364,6 +1802,21 @@
         "parking": {
           "count": 199,
           "label": "駐車場あり"
+        }
+      }
+    },
+    {
+      "countedAt": "2026-09-25",
+      "chain": "wendys-first-kitchen",
+      "name": "ウェンディーズ・ファーストキッチン",
+      "sourceUrl": "https://wendys-firstkitchen.co.jp/shop/",
+      "method": "公式店舗一覧のエリア別結果ページの表で、「サービス」欄にキッズセットのアイコン（「条件から探す」のキッズセットと同じ）がある店舗を集計",
+      "total": 74,
+      "note": "店名に【WFK】とある店舗だけを数えた。開業前のため除外: 甚目寺【WFK】（2026-10-08オープン）",
+      "facilities": {
+        "kidsMenu": {
+          "count": 45,
+          "label": "キッズセット"
         }
       }
     },
@@ -1406,6 +1859,33 @@
       }
     },
     {
+      "countedAt": "2026-09-25",
+      "chain": "yappari-steak",
+      "name": "やっぱりステーキ",
+      "sourceUrl": "https://yapparigroup.jp/shop.html",
+      "method": "公式店舗案内の地域別ページ（shop/<地域>.html）の店舗カードに並ぶ「あり／なし」アイコンを店舗ごとに集計",
+      "total": 64,
+      "note": "除外: やっぱりグループ姉妹店舗10件・海外店舗23件。「チャイルドシート」は店内の子ども用の椅子の意としてキッズチェアに対応づけた",
+      "facilities": {
+        "kidsMenu": {
+          "count": 21,
+          "label": "キッズメニューあり"
+        },
+        "kidsChair": {
+          "count": 55,
+          "label": "チャイルドシートあり"
+        },
+        "parking": {
+          "count": 41,
+          "label": "駐車場あり"
+        },
+        "stepFree": {
+          "count": 27,
+          "label": "バリアフリーあり"
+        }
+      }
+    },
+    {
       "countedAt": "2026-09-11",
       "chain": "yayoiken",
       "name": "やよい軒",
@@ -1421,6 +1901,21 @@
         "parking": {
           "count": 220,
           "label": "駐車場あり"
+        }
+      }
+    },
+    {
+      "countedAt": "2026-09-25",
+      "chain": "yomenya-goemon",
+      "name": "洋麺屋五右衛門",
+      "sourceUrl": "https://www.yomenya-goemon.com/store/",
+      "method": "公式の店舗一覧（国内の地方別ページ）の各店舗の備考欄に「お子様メニュー」とある店舗を集計",
+      "total": 242,
+      "note": "海外店舗は除外。HTMLコメントで非表示の店舗 1 件（画面に出ないため数えない）。備考欄の記載の内訳: 「お子様メニュー」148・「お得な販促」9・「サラダバー」1・「FREE Wi-Fi」8・「お子様メニュー・サラダバー」2・「お子様メニュー お得な販促」6・「お子様メニュー、全席禁煙」1・「お子様メニュｰ」3・「お子様メニュー・全席禁煙」1",
+      "facilities": {
+        "kidsMenu": {
+          "count": 161,
+          "label": "お子様メニュー"
         }
       }
     },

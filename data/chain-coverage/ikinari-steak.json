@@ -1,0 +1,1357 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "ikinari-steak",
+  "name": "いきなり！ステーキ",
+  "sourceUrl": "https://ikinaristeak.com/shopinfo/",
+  "method": "公式店舗検索の都道府県別一覧（/store_pref/<都道府県>/、30ページ）に並ぶ店舗カードのサービスアイコン（「サービスから探す」の絞り込み条件と同じ項目）を店舗ごとに集計",
+  "total": 168,
+  "note": "アイコンの内訳: クレジットカード可168・QRコード決済可125・デリバリーあり143・子供用椅子あり134・駐車場あり102・車いす可107・ベンチシートあり86。「ベンチシートあり」は対応する設備項目が無いため数えない。「車いす可」は入口の段差なし（stepFree）に対応づけた",
+  "facilities": {
+    "kidsChair": {
+      "count": 134,
+      "label": "子供用椅子あり"
+    },
+    "parking": {
+      "count": 102,
+      "label": "駐車場あり"
+    },
+    "stepFree": {
+      "count": 107,
+      "label": "車いす可"
+    }
+  },
+  "stores": [
+    {
+      "name": "いきなりステーキ 札幌南店 【閉店】",
+      "url": "https://ikinaristeak.com/store_pref/hokkaido/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール札幌発寒店",
+      "url": "https://ikinaristeak.com/store_pref/hokkaido/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオン釧路店",
+      "url": "https://ikinaristeak.com/store_pref/hokkaido/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール盛岡店",
+      "url": "https://ikinaristeak.com/store_pref/iwate/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 岩手北上店",
+      "url": "https://ikinaristeak.com/store_pref/iwate/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 仙台吉成台店",
+      "url": "https://ikinaristeak.com/store_pref/miyagi/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 仙台店",
+      "url": "https://ikinaristeak.com/store_pref/miyagi/",
+      "facilities": []
+    },
+    {
+      "name": "いきなりステーキ イオンモールいわき小名浜店",
+      "url": "https://ikinaristeak.com/store_pref/fukushima/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 水戸インター店",
+      "url": "https://ikinaristeak.com/store_pref/ibaraki/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ つくば研究学園店",
+      "url": "https://ikinaristeak.com/store_pref/ibaraki/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 神栖店",
+      "url": "https://ikinaristeak.com/store_pref/ibaraki/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール土浦店",
+      "url": "https://ikinaristeak.com/store_pref/ibaraki/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ ひたち野うしく店",
+      "url": "https://ikinaristeak.com/store_pref/ibaraki/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 宇都宮竹林店",
+      "url": "https://ikinaristeak.com/store_pref/tochigi/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ フレスポ藤岡店",
+      "url": "https://ikinaristeak.com/store_pref/gunma/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 太田店",
+      "url": "https://ikinaristeak.com/store_pref/gunma/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 越谷レイクタウンｋａｚｅ店",
+      "url": "https://ikinaristeak.com/store_pref/saitama/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 八潮ロード店",
+      "url": "https://ikinaristeak.com/store_pref/saitama/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール川口前川店",
+      "url": "https://ikinaristeak.com/store_pref/saitama/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 大宮西口店",
+      "url": "https://ikinaristeak.com/store_pref/saitama/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 川口駅前店",
+      "url": "https://ikinaristeak.com/store_pref/saitama/",
+      "facilities": []
+    },
+    {
+      "name": "いきなりステーキ アリオ川口店",
+      "url": "https://ikinaristeak.com/store_pref/saitama/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール北戸田店",
+      "url": "https://ikinaristeak.com/store_pref/saitama/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ ららぽーと新三郷店",
+      "url": "https://ikinaristeak.com/store_pref/saitama/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 草加新田店",
+      "url": "https://ikinaristeak.com/store_pref/saitama/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 加須店",
+      "url": "https://ikinaristeak.com/store_pref/saitama/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 川越バイパス店",
+      "url": "https://ikinaristeak.com/store_pref/saitama/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ さいたま美園店",
+      "url": "https://ikinaristeak.com/store_pref/saitama/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 西武所沢ＳＣ店",
+      "url": "https://ikinaristeak.com/store_pref/saitama/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 南行徳店",
+      "url": "https://ikinaristeak.com/store_pref/chiba/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "いきなりステーキ セブンパークアリオ柏店",
+      "url": "https://ikinaristeak.com/store_pref/chiba/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 柏店",
+      "url": "https://ikinaristeak.com/store_pref/chiba/",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオン新浦安店",
+      "url": "https://ikinaristeak.com/store_pref/chiba/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 穴川東インター店",
+      "url": "https://ikinaristeak.com/store_pref/chiba/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 船橋店",
+      "url": "https://ikinaristeak.com/store_pref/chiba/",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 木更津店",
+      "url": "https://ikinaristeak.com/store_pref/chiba/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 成田飯仲店",
+      "url": "https://ikinaristeak.com/store_pref/chiba/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 市川店",
+      "url": "https://ikinaristeak.com/store_pref/chiba/",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ プレナ幕張店",
+      "url": "https://ikinaristeak.com/store_pref/chiba/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモールNorth津田沼店",
+      "url": "https://ikinaristeak.com/store_pref/chiba/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 神田北口店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": []
+    },
+    {
+      "name": "いきなりステーキ 六本木店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": []
+    },
+    {
+      "name": "いきなりステーキ 赤坂通り店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": []
+    },
+    {
+      "name": "いきなりステーキ 吉祥寺店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ ヤエチカ店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 錦糸町店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": []
+    },
+    {
+      "name": "いきなりステーキ 渋谷センター街店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": []
+    },
+    {
+      "name": "いきなりステーキ 池袋西口店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 浅草雷門店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 蒲田店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 新宿２丁目店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 八王子店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 目黒上大崎店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 三軒茶屋店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 門前仲町店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": []
+    },
+    {
+      "name": "いきなりステーキ あけぼのばし店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 町田店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 王子店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": []
+    },
+    {
+      "name": "いきなりステーキ 三田店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 駒込店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": []
+    },
+    {
+      "name": "いきなりステーキ 大塚店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 北千住店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 立川北口店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 五反田店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 府中駅前店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 大森ララ店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 勝どき店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ アリオ亀有店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ オリナス錦糸町店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 三鷹東八道路店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イトーヨーカドー大井町店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "いきなりステーキ マチノマ大森店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 下北沢店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール東久留米店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 調布店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 亀戸駅前店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 大山店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 新橋日比谷口店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": []
+    },
+    {
+      "name": "いきなりステーキ 学芸大学店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 小川町店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 保谷駅前店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 高円寺南口店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 高田馬場店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 大久保店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 有楽町店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": []
+    },
+    {
+      "name": "いきなりステーキ 末広町店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 東中野店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": []
+    },
+    {
+      "name": "いきなりステーキ 池袋東口店",
+      "url": "https://ikinaristeak.com/store_pref/tokyo/",
+      "facilities": []
+    },
+    {
+      "name": "いきなりステーキ 相模大野店",
+      "url": "https://ikinaristeak.com/store_pref/kanagawa/",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 京急久里浜店",
+      "url": "https://ikinaristeak.com/store_pref/kanagawa/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 上大岡店",
+      "url": "https://ikinaristeak.com/store_pref/kanagawa/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 藤沢店",
+      "url": "https://ikinaristeak.com/store_pref/kanagawa/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ アリオ橋本店",
+      "url": "https://ikinaristeak.com/store_pref/kanagawa/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 横浜西口店",
+      "url": "https://ikinaristeak.com/store_pref/kanagawa/",
+      "facilities": []
+    },
+    {
+      "name": "いきなりステーキ コーナン港北インター店 【閉店】",
+      "url": "https://ikinaristeak.com/store_pref/kanagawa/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール座間店",
+      "url": "https://ikinaristeak.com/store_pref/kanagawa/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 湘南モールフィル店",
+      "url": "https://ikinaristeak.com/store_pref/kanagawa/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 小田急マルシェ大和店",
+      "url": "https://ikinaristeak.com/store_pref/kanagawa/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 綱島店",
+      "url": "https://ikinaristeak.com/store_pref/kanagawa/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 元住吉店",
+      "url": "https://ikinaristeak.com/store_pref/kanagawa/",
+      "facilities": []
+    },
+    {
+      "name": "いきなりステーキ 横須賀中央店",
+      "url": "https://ikinaristeak.com/store_pref/kanagawa/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ ダイナシティ小田原店",
+      "url": "https://ikinaristeak.com/store_pref/kanagawa/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール高岡店",
+      "url": "https://ikinaristeak.com/store_pref/toyama/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ ファボーレ富山店",
+      "url": "https://ikinaristeak.com/store_pref/toyama/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール新小松店",
+      "url": "https://ikinaristeak.com/store_pref/ishikawa/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 金沢福久店",
+      "url": "https://ikinaristeak.com/store_pref/ishikawa/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール甲府昭和店",
+      "url": "https://ikinaristeak.com/store_pref/yamanashi/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 長野高田店",
+      "url": "https://ikinaristeak.com/store_pref/nagano/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 松本村井店",
+      "url": "https://ikinaristeak.com/store_pref/nagano/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 浜松湖東町店",
+      "url": "https://ikinaristeak.com/store_pref/shizuoka/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 袋井店",
+      "url": "https://ikinaristeak.com/store_pref/shizuoka/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 名古屋大須店",
+      "url": "https://ikinaristeak.com/store_pref/aichi/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ リーフウォーク稲沢店",
+      "url": "https://ikinaristeak.com/store_pref/aichi/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 桶狭間店",
+      "url": "https://ikinaristeak.com/store_pref/aichi/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 岡崎上和田店",
+      "url": "https://ikinaristeak.com/store_pref/aichi/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール熱田店",
+      "url": "https://ikinaristeak.com/store_pref/aichi/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 豊田四郷店",
+      "url": "https://ikinaristeak.com/store_pref/aichi/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ ニトリ近江八幡店",
+      "url": "https://ikinaristeak.com/store_pref/shiga/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 京都河原町三条店",
+      "url": "https://ikinaristeak.com/store_pref/kyoto/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモールＫＹＯＴＯ店",
+      "url": "https://ikinaristeak.com/store_pref/kyoto/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール北大路店",
+      "url": "https://ikinaristeak.com/store_pref/kyoto/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 法善寺店",
+      "url": "https://ikinaristeak.com/store_pref/osaka/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ あべのルシアス店",
+      "url": "https://ikinaristeak.com/store_pref/osaka/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール四條畷店",
+      "url": "https://ikinaristeak.com/store_pref/osaka/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 梅田堂山店",
+      "url": "https://ikinaristeak.com/store_pref/osaka/",
+      "facilities": []
+    },
+    {
+      "name": "いきなりステーキ 八尾店",
+      "url": "https://ikinaristeak.com/store_pref/osaka/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール堺鉄砲町店",
+      "url": "https://ikinaristeak.com/store_pref/osaka/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ ＬＡＢＩ千里店",
+      "url": "https://ikinaristeak.com/store_pref/osaka/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ ニトリモール枚方店",
+      "url": "https://ikinaristeak.com/store_pref/osaka/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 大阪羽曳野店",
+      "url": "https://ikinaristeak.com/store_pref/osaka/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 大阪福島店",
+      "url": "https://ikinaristeak.com/store_pref/osaka/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ カリーノ江坂店",
+      "url": "https://ikinaristeak.com/store_pref/osaka/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール伊丹店",
+      "url": "https://ikinaristeak.com/store_pref/hyogo/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 神戸三宮生田ロード店",
+      "url": "https://ikinaristeak.com/store_pref/hyogo/",
+      "facilities": []
+    },
+    {
+      "name": "いきなりステーキ イオンモール神戸南店",
+      "url": "https://ikinaristeak.com/store_pref/hyogo/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 加古川店",
+      "url": "https://ikinaristeak.com/store_pref/hyogo/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオン明石ショッピングセンター店",
+      "url": "https://ikinaristeak.com/store_pref/hyogo/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ ドンキホーテ西宮店",
+      "url": "https://ikinaristeak.com/store_pref/hyogo/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ ホテルモントレ姫路店",
+      "url": "https://ikinaristeak.com/store_pref/hyogo/",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール橿原店",
+      "url": "https://ikinaristeak.com/store_pref/nara/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール大和郡山店",
+      "url": "https://ikinaristeak.com/store_pref/nara/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 出雲斐川町店",
+      "url": "https://ikinaristeak.com/store_pref/shimane/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 福山駅家店",
+      "url": "https://ikinaristeak.com/store_pref/hiroshima/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール広島府中店",
+      "url": "https://ikinaristeak.com/store_pref/hiroshima/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 広島中央通り店",
+      "url": "https://ikinaristeak.com/store_pref/hiroshima/",
+      "facilities": []
+    },
+    {
+      "name": "いきなりステーキ ゆめタウン廿日市店",
+      "url": "https://ikinaristeak.com/store_pref/hiroshima/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "いきなりステーキ ジアウトレット広島店",
+      "url": "https://ikinaristeak.com/store_pref/hiroshima/",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 東広島店",
+      "url": "https://ikinaristeak.com/store_pref/hiroshima/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ BRANCH博多パピヨンガーデン店",
+      "url": "https://ikinaristeak.com/store_pref/fukuoka/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 福岡天神店",
+      "url": "https://ikinaristeak.com/store_pref/fukuoka/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 小倉魚町店",
+      "url": "https://ikinaristeak.com/store_pref/fukuoka/",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 久留米店",
+      "url": "https://ikinaristeak.com/store_pref/fukuoka/",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール直方店",
+      "url": "https://ikinaristeak.com/store_pref/fukuoka/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ ナフコツーワンスタイル宗像店",
+      "url": "https://ikinaristeak.com/store_pref/fukuoka/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ ホームプラザナフコ苅田店",
+      "url": "https://ikinaristeak.com/store_pref/fukuoka/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 小倉南店",
+      "url": "https://ikinaristeak.com/store_pref/fukuoka/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ キャナルシティ博多店",
+      "url": "https://ikinaristeak.com/store_pref/fukuoka/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 太宰府店",
+      "url": "https://ikinaristeak.com/store_pref/fukuoka/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 佐賀基山店",
+      "url": "https://ikinaristeak.com/store_pref/saga/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ みらい長崎ココウォーク店",
+      "url": "https://ikinaristeak.com/store_pref/nagasaki/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ ホームプラザナフコ東諫早店",
+      "url": "https://ikinaristeak.com/store_pref/nagasaki/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 宮原ＳＡ下り店",
+      "url": "https://ikinaristeak.com/store_pref/kumamoto/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ ゆめタウン光の森店",
+      "url": "https://ikinaristeak.com/store_pref/kumamoto/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール宇城店",
+      "url": "https://ikinaristeak.com/store_pref/kumamoto/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモール宮崎店",
+      "url": "https://ikinaristeak.com/store_pref/miyazaki/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンモールKAGOSHIMA BAY店",
+      "url": "https://ikinaristeak.com/store_pref/kagoshima/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ 鹿児島ベイサイド店",
+      "url": "https://ikinaristeak.com/store_pref/kagoshima/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "いきなりステーキ イオンタウン姶良店",
+      "url": "https://ikinaristeak.com/store_pref/kagoshima/",
+      "facilities": [
+        "parking",
+        "stepFree",
+        "kidsChair"
+      ]
+    }
+  ]
+}

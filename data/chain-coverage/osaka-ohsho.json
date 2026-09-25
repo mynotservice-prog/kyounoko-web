@@ -1,0 +1,2001 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "osaka-ohsho",
+  "name": "大阪王将",
+  "sourceUrl": "https://www.osaka-ohsho.com/store/",
+  "method": "公式店舗検索が使う店舗API（GraphQL）で都道府県別に国内全店舗を取得し、「条件から探す」の「駐車場あり」で絞り込んだ結果に含まれる店舗を店舗ごとに集計",
+  "total": 326,
+  "note": "海外店舗（国別検索）は除外。「駐車場あり」の絞り込み結果のうち都道府県別一覧に無い 1 件（桃園遠東店（トウエンエントウ））は数えない。店舗データの parking 欄と絞り込み結果は一致。店舗別メニューのキッズプレート等は「子ども向け」の属性が無く商品名の読み取りになるため数えない",
+  "facilities": {
+    "parking": {
+      "count": 177,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "北9条店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=6",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "函館桔梗店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=8",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "函館TEXAS店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=9",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "青森観光通り店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=10",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン弘前樋の口店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=11",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "エルム店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=12",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "盛岡駅フェザン店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=13",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一関店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=14",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール盛岡南店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=15",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "盛岡上堂店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=16",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆっこ盛岡店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=535",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮城気仙沼店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=20",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "仙台南吉成店（株式会社テイザンフーズ）",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=22",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール石巻店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=569",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール仙台上杉店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=593",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "秋田ドンキホーテ店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=23",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福島南バイパス店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=28",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鹿嶋店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=30",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "神栖店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=31",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "潮来店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=453",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "久喜店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=34",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "志木店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=35",
+      "facilities": []
+    },
+    {
+      "name": "ららぽーと新三郷店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=512",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "TXアベニュー八潮店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=571",
+      "facilities": []
+    },
+    {
+      "name": "イオンレイクタウンmori店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=607",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南柏店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=36",
+      "facilities": []
+    },
+    {
+      "name": "津田沼北口店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=37",
+      "facilities": []
+    },
+    {
+      "name": "南行徳店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=38",
+      "facilities": []
+    },
+    {
+      "name": "本八幡店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=39",
+      "facilities": []
+    },
+    {
+      "name": "イオン銚子店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=40",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "穴川インター店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=41",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "習志野店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=42",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "富里インター店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=43",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "千葉中央店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=44",
+      "facilities": []
+    },
+    {
+      "name": "柏店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=45",
+      "facilities": []
+    },
+    {
+      "name": "TXGAおおたかの森店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=503",
+      "facilities": []
+    },
+    {
+      "name": "松戸西口店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=515",
+      "facilities": []
+    },
+    {
+      "name": "新宿店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=46",
+      "facilities": []
+    },
+    {
+      "name": "エキア曳舟店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=48",
+      "facilities": []
+    },
+    {
+      "name": "イオンフードスタイル船堀店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=49",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東高円寺店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=50",
+      "facilities": []
+    },
+    {
+      "name": "昭島モリタウン店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=51",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "調布店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=54",
+      "facilities": []
+    },
+    {
+      "name": "御徒町駅前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=58",
+      "facilities": []
+    },
+    {
+      "name": "広尾店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=60",
+      "facilities": []
+    },
+    {
+      "name": "西葛西店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=61",
+      "facilities": []
+    },
+    {
+      "name": "平和島店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=63",
+      "facilities": []
+    },
+    {
+      "name": "学芸大学店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=64",
+      "facilities": []
+    },
+    {
+      "name": "岩本町店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=65",
+      "facilities": []
+    },
+    {
+      "name": "新宿ワシントンホテル店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=66",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "飯田橋店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=67",
+      "facilities": []
+    },
+    {
+      "name": "末広町店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=68",
+      "facilities": []
+    },
+    {
+      "name": "南千住店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=69",
+      "facilities": []
+    },
+    {
+      "name": "青梅店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=70",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "門前仲町店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=71",
+      "facilities": []
+    },
+    {
+      "name": "イオンモールむさし村山店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=72",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ビーンズ赤羽店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=73",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "五反田店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=75",
+      "facilities": []
+    },
+    {
+      "name": "荏原中延店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=84",
+      "facilities": []
+    },
+    {
+      "name": "大井町店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=87",
+      "facilities": []
+    },
+    {
+      "name": "西葛西南口店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=88",
+      "facilities": []
+    },
+    {
+      "name": "菊川店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=91",
+      "facilities": []
+    },
+    {
+      "name": "西五反田店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=95",
+      "facilities": []
+    },
+    {
+      "name": "浜田山店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=382",
+      "facilities": []
+    },
+    {
+      "name": "尾山台店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=385",
+      "facilities": []
+    },
+    {
+      "name": "三河島店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=391",
+      "facilities": []
+    },
+    {
+      "name": "荏原町駅前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=397",
+      "facilities": []
+    },
+    {
+      "name": "下丸子店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=427",
+      "facilities": []
+    },
+    {
+      "name": "小平駅前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=430",
+      "facilities": []
+    },
+    {
+      "name": "カメイドクロック店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=451",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "フレスポひばりが丘店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=454",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "糀谷駅前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=457",
+      "facilities": []
+    },
+    {
+      "name": "桜台店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=463",
+      "facilities": []
+    },
+    {
+      "name": "用賀店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=464",
+      "facilities": []
+    },
+    {
+      "name": "亀有店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=476",
+      "facilities": []
+    },
+    {
+      "name": "両国店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=477",
+      "facilities": []
+    },
+    {
+      "name": "エミオ保谷店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=479",
+      "facilities": []
+    },
+    {
+      "name": "祖師谷大蔵店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=481",
+      "facilities": []
+    },
+    {
+      "name": "千歳船橋店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=483",
+      "facilities": []
+    },
+    {
+      "name": "東松原店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=487",
+      "facilities": []
+    },
+    {
+      "name": "下高井戸店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=488",
+      "facilities": []
+    },
+    {
+      "name": "練馬店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=489",
+      "facilities": []
+    },
+    {
+      "name": "千住ミルディス",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=501",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "上板橋店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=506",
+      "facilities": []
+    },
+    {
+      "name": "新高円寺店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=517",
+      "facilities": []
+    },
+    {
+      "name": "新宿エルタワー店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=532",
+      "facilities": []
+    },
+    {
+      "name": "市ヶ谷店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=533",
+      "facilities": []
+    },
+    {
+      "name": "中野セントラルパーク店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=534",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東京日本橋店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=555",
+      "facilities": []
+    },
+    {
+      "name": "東長崎店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=565",
+      "facilities": []
+    },
+    {
+      "name": "稲荷町駅前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=570",
+      "facilities": []
+    },
+    {
+      "name": "仙川ハーモニーロード店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=572",
+      "facilities": []
+    },
+    {
+      "name": "大森東口店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=579",
+      "facilities": []
+    },
+    {
+      "name": "品川シーサイドフォレスト店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=588",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ららテラス北綾瀬店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=591",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "巣鴨店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=598",
+      "facilities": []
+    },
+    {
+      "name": "トツカーナモール店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=96",
+      "facilities": []
+    },
+    {
+      "name": "湘南台駅前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=99",
+      "facilities": []
+    },
+    {
+      "name": "川崎駅東口店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=100",
+      "facilities": []
+    },
+    {
+      "name": "エトモ中央林間店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=101",
+      "facilities": []
+    },
+    {
+      "name": "吉野町店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=102",
+      "facilities": []
+    },
+    {
+      "name": "菊名店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=104",
+      "facilities": []
+    },
+    {
+      "name": "天王町駅前",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=105",
+      "facilities": []
+    },
+    {
+      "name": "イオン久里浜店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=106",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "センター南店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=399",
+      "facilities": []
+    },
+    {
+      "name": "武蔵小杉東急スクエア店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=452",
+      "facilities": []
+    },
+    {
+      "name": "そよら横浜高田店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=519",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鷺沼駅前通り店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=522",
+      "facilities": []
+    },
+    {
+      "name": "横須賀中央店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=558",
+      "facilities": []
+    },
+    {
+      "name": "横浜岡野店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=573",
+      "facilities": []
+    },
+    {
+      "name": "小田急相模原店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=597",
+      "facilities": []
+    },
+    {
+      "name": "向ヶ丘遊園店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=600",
+      "facilities": []
+    },
+    {
+      "name": "出来島店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=107",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "富山五福店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=109",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "金沢高柳店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=110",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "野々市店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=111",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福井二の宮店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=112",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長野若里店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=113",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松本駅前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=114",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール須坂店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=594",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "富士店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=118",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ららぽーと沼津店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=582",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "知立店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=120",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "池下店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=429",
+      "facilities": []
+    },
+    {
+      "name": "黒川店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=478",
+      "facilities": []
+    },
+    {
+      "name": "大津サービスエリア店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=524",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "阪急桂駅前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=121",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール久御山店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=122",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "京田辺店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=123",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "木津川台店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=125",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "園部店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=436",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "龍大聞思館店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=585",
+      "facilities": []
+    },
+    {
+      "name": "道頓堀本店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=126",
+      "facilities": []
+    },
+    {
+      "name": "天満橋店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=128",
+      "facilities": []
+    },
+    {
+      "name": "梅田太融寺店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=130",
+      "facilities": []
+    },
+    {
+      "name": "天六店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=131",
+      "facilities": []
+    },
+    {
+      "name": "十三店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=132",
+      "facilities": []
+    },
+    {
+      "name": "江口橋店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=133",
+      "facilities": []
+    },
+    {
+      "name": "上新庄店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=134",
+      "facilities": []
+    },
+    {
+      "name": "淡路店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=135",
+      "facilities": []
+    },
+    {
+      "name": "京橋店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=136",
+      "facilities": []
+    },
+    {
+      "name": "都島店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=137",
+      "facilities": []
+    },
+    {
+      "name": "地下鉄関目店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=138",
+      "facilities": []
+    },
+    {
+      "name": "新緑橋店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=140",
+      "facilities": []
+    },
+    {
+      "name": "玉造店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=141",
+      "facilities": []
+    },
+    {
+      "name": "玉出店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=142",
+      "facilities": []
+    },
+    {
+      "name": "寺田町店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=144",
+      "facilities": []
+    },
+    {
+      "name": "西九条店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=147",
+      "facilities": []
+    },
+    {
+      "name": "福島店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=148",
+      "facilities": []
+    },
+    {
+      "name": "野田店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=149",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "上本町店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=151",
+      "facilities": []
+    },
+    {
+      "name": "心斎橋アメリカ村店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=152",
+      "facilities": []
+    },
+    {
+      "name": "恵美須町店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=154",
+      "facilities": []
+    },
+    {
+      "name": "なんば千日前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=155",
+      "facilities": []
+    },
+    {
+      "name": "千里丘店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=157",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "南茨木店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=159",
+      "facilities": []
+    },
+    {
+      "name": "阪急富田店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=161",
+      "facilities": []
+    },
+    {
+      "name": "高槻南店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=163",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "守口店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=164",
+      "facilities": []
+    },
+    {
+      "name": "大和田店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=167",
+      "facilities": []
+    },
+    {
+      "name": "長尾店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=169",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "香里団地店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=170",
+      "facilities": []
+    },
+    {
+      "name": "くずは朝日店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=171",
+      "facilities": []
+    },
+    {
+      "name": "牧野店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=172",
+      "facilities": []
+    },
+    {
+      "name": "枚方公園前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=173",
+      "facilities": []
+    },
+    {
+      "name": "交野駅前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=174",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "石切店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=175",
+      "facilities": []
+    },
+    {
+      "name": "八戸ノ里店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=177",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "布施店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=178",
+      "facilities": []
+    },
+    {
+      "name": "瓢箪山店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=179",
+      "facilities": []
+    },
+    {
+      "name": "JR八尾駅前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=183",
+      "facilities": []
+    },
+    {
+      "name": "大日ベアーズ店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=184",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "荒本店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=185",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "古市店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=186",
+      "facilities": []
+    },
+    {
+      "name": "中百舌鳥店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=188",
+      "facilities": []
+    },
+    {
+      "name": "深井店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=190",
+      "facilities": []
+    },
+    {
+      "name": "北信太店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=191",
+      "facilities": []
+    },
+    {
+      "name": "和泉府中店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=192",
+      "facilities": []
+    },
+    {
+      "name": "和泉中央店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=193",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "泉佐野店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=194",
+      "facilities": []
+    },
+    {
+      "name": "河内天美店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=195",
+      "facilities": []
+    },
+    {
+      "name": "中環千里店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=196",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "和泉納花店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=197",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "古川橋店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=199",
+      "facilities": []
+    },
+    {
+      "name": "鶴見諸口店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=202",
+      "facilities": []
+    },
+    {
+      "name": "北野田駅前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=203",
+      "facilities": []
+    },
+    {
+      "name": "香里園店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=204",
+      "facilities": []
+    },
+    {
+      "name": "阪急石橋店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=207",
+      "facilities": []
+    },
+    {
+      "name": "光明池店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=209",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "新大阪店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=210",
+      "facilities": []
+    },
+    {
+      "name": "とれび天下茶屋店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=211",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "萱島店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=213",
+      "facilities": []
+    },
+    {
+      "name": "泉佐野安松店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=216",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "茨木豊原店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=217",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ららぽーと和泉店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=218",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "住道駅前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=219",
+      "facilities": []
+    },
+    {
+      "name": "近畿大学前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=222",
+      "facilities": []
+    },
+    {
+      "name": "長居店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=223",
+      "facilities": []
+    },
+    {
+      "name": "堺新金岡店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=225",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日本橋店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=226",
+      "facilities": []
+    },
+    {
+      "name": "高井田店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=406",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "長堀橋店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=437",
+      "facilities": []
+    },
+    {
+      "name": "上野芝店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=459",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンタウン松原店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=500",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "枚方市駅店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=521",
+      "facilities": []
+    },
+    {
+      "name": "関大前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=530",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール四條畷",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=580",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岸和田店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=601",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高石店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=602",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "柏原外環店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=605",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "王子公園店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=227",
+      "facilities": []
+    },
+    {
+      "name": "六甲道店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=228",
+      "facilities": []
+    },
+    {
+      "name": "ティオ舞子店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=230",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ウエステ垂水店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=231",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "阪急伊丹店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=234",
+      "facilities": []
+    },
+    {
+      "name": "西野バス停前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=235",
+      "facilities": []
+    },
+    {
+      "name": "川西久代店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=236",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ブルメール舞多聞店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=237",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "阪急仁川駅前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=238",
+      "facilities": []
+    },
+    {
+      "name": "阪神今津駅前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=240",
+      "facilities": []
+    },
+    {
+      "name": "大池マックスバリュ店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=241",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "JR尼崎南店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=243",
+      "facilities": []
+    },
+    {
+      "name": "阪神甲子園店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=245",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "神戸ハーバーランド店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=247",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "阪神尼崎駅前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=248",
+      "facilities": []
+    },
+    {
+      "name": "西脇店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=389",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "スーパーkinki志筑店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=486",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三宮駅前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=528",
+      "facilities": []
+    },
+    {
+      "name": "そよら西宮今津店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=529",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天理店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=250",
+      "facilities": []
+    },
+    {
+      "name": "橿原店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=251",
+      "facilities": []
+    },
+    {
+      "name": "大和高田店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=252",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "尺土店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=253",
+      "facilities": []
+    },
+    {
+      "name": "奈良下田店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=254",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東生駒店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=257",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "JR奈良駅前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=260",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール奈良登美ヶ丘店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=603",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール橿原店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=604",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "橋本店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=261",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "御坊店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=264",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "和歌山カーニバル店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=265",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "有田川店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=267",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "串本店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=268",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鳥取吉成店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=269",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "米子店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=270",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール鳥取北店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=271",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鳥取千代水店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=272",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "倉吉店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=273",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "日吉津店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=581",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松江浜乃木店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=274",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松江北店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=275",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "浜田店（島根県）",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=276",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大田店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=277",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "益田駅前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=278",
+      "facilities": []
+    },
+    {
+      "name": "松江黒田店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=493",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三刀屋店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=599",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松江山代町店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=613",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "倉敷水島店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=281",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "倉敷老松店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=282",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "笠岡店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=283",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "総社店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=284",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "津山店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=285",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "倉敷玉島店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=287",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岡山大安寺ラ・ムー店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=288",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "早島インター店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=289",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "院庄店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=527",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福山平成大学前店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=290",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福山川口店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=291",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "三原宮浦店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=292",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西風新都店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=293",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西条御薗宇店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=295",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "呉焼山店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=296",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福山SA店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=299",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "呉ゆめタウン店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=300",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "廿日市ゆめタウン店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=301",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "イオンモール広島府中店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=302",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福山南本庄店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=303",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "広島可部店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=402",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "広島大町店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=492",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "福山駅店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=564",
+      "facilities": []
+    },
+    {
+      "name": "イオンタウン楽々園店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=574",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "下関長府店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=304",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "下関椋野店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=305",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "岩国新港店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=306",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "山口ゆめタウン店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=307",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめシティ店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=308",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "防府店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=396",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "徳島田宮店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=309",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "徳島ゆめタウン店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=310",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高松上福岡店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=314",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "香川観音寺店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=316",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "高松国分寺店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=317",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "丸亀店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=520",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "エミフルMASAKI店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=319",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大洲インター店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=321",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "フジグラン北宇和島店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=322",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大牟田ゆめタウン店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=324",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "筑紫野ゆめタウン店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=325",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "博多ゆめタウン店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=326",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "行橋ゆめタウン店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=328",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北九州黒崎店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=329",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "久留米ゆめタウン店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=330",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "天神新天町店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=331",
+      "facilities": []
+    },
+    {
+      "name": "北九州若松店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=332",
+      "facilities": []
+    },
+    {
+      "name": "六本松店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=405",
+      "facilities": []
+    },
+    {
+      "name": "西新店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=455",
+      "facilities": []
+    },
+    {
+      "name": "ゆめタウン飯塚店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=494",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "佐賀ゆめタウン店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=334",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "武雄ゆめタウン店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=336",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめマート玉名店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=340",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "ゆめマート大江店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=341",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "菊陽店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=342",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大分別府店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=343",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "中津ゆめタウン店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=344",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮崎青葉店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=345",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "草牟田店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=346",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "具志川メインシティ店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=347",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "西原シティ店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=348",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "つかざんシティ店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=349",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "北谷はまがわ店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=350",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宜野湾コンベンションシティ店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=351",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "那覇メインプレイス店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=352",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "大湾シティ店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=353",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "浦添西海岸パルコシティ店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=354",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "石川シティ店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=525",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "宮古島シティ店",
+      "url": "https://www.osaka-ohsho.com/store/store_detail.php?shop_id=526",
+      "facilities": [
+        "parking"
+      ]
+    }
+  ]
+}

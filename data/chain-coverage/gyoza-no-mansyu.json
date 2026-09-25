@@ -1,0 +1,578 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "gyoza-no-mansyu",
+  "name": "ぎょうざの満洲",
+  "sourceUrl": "https://www.mansyu.co.jp/shop/",
+  "method": "公式店舗一覧が読む店舗データ（/shop/shop.json）の店舗ごとの「駐車場あり」表示とパーティールームの記載を集計",
+  "total": 102,
+  "note": "一覧 104 件のうち飲食店でない 2 件（江坂工場直売店、ギャラリーマンシュウ（貸教室・貸ギャラリー））を除外。パーティールームは個室として集計",
+  "facilities": {
+    "parking": {
+      "count": 20,
+      "label": "駐車場あり"
+    },
+    "privateRoom": {
+      "count": 5,
+      "label": "パーティールーム"
+    }
+  },
+  "stores": [
+    {
+      "name": "新所沢東口店(本店)",
+      "url": "https://www.mansyu.co.jp/shop/#t-shintokoh",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "東村山西口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-higashimurayama",
+      "facilities": []
+    },
+    {
+      "name": "久米川北口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-kumegawa",
+      "facilities": []
+    },
+    {
+      "name": "新所沢西口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-shintokon",
+      "facilities": []
+    },
+    {
+      "name": "航空公園駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-koukuukoen",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鶴瀬東口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-tsuruse",
+      "facilities": []
+    },
+    {
+      "name": "所沢東口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-tokorozawahi",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "みずほ台東口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-mizuhodai",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鶴ヶ島脚折店",
+      "url": "https://www.mansyu.co.jp/shop/#t-suneori",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "鶴ヶ島駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-tsurugashima",
+      "facilities": [
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "高坂駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-takasaka",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "上福岡北口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-kamifukuoka",
+      "facilities": []
+    },
+    {
+      "name": "志木東口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-shikihi",
+      "facilities": []
+    },
+    {
+      "name": "北浦和西口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-kitaurawa",
+      "facilities": []
+    },
+    {
+      "name": "宮原駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-miyahara",
+      "facilities": []
+    },
+    {
+      "name": "大泉学園南口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-ooizumi",
+      "facilities": []
+    },
+    {
+      "name": "清瀬北口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-kiyose",
+      "facilities": []
+    },
+    {
+      "name": "川越西口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-kawagoenishi",
+      "facilities": []
+    },
+    {
+      "name": "新狭山駅店",
+      "url": "https://www.mansyu.co.jp/shop/#t-shinsayama",
+      "facilities": []
+    },
+    {
+      "name": "坂戸駅店",
+      "url": "https://www.mansyu.co.jp/shop/#t-sakado",
+      "facilities": []
+    },
+    {
+      "name": "与野西口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-yono",
+      "facilities": []
+    },
+    {
+      "name": "千川駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-senkawa",
+      "facilities": []
+    },
+    {
+      "name": "下赤塚駅店",
+      "url": "https://www.mansyu.co.jp/shop/#t-shimoakatsuka",
+      "facilities": []
+    },
+    {
+      "name": "練馬富士見台店",
+      "url": "https://www.mansyu.co.jp/shop/#t-nerima",
+      "facilities": []
+    },
+    {
+      "name": "飯能駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-hano",
+      "facilities": []
+    },
+    {
+      "name": "朝霞本町店",
+      "url": "https://www.mansyu.co.jp/shop/#t-asaka",
+      "facilities": []
+    },
+    {
+      "name": "川越クレアモール店",
+      "url": "https://www.mansyu.co.jp/shop/#t-kurea",
+      "facilities": []
+    },
+    {
+      "name": "羽村駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-hamura",
+      "facilities": []
+    },
+    {
+      "name": "上尾東口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-ageo",
+      "facilities": []
+    },
+    {
+      "name": "若葉駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-wakaba",
+      "facilities": []
+    },
+    {
+      "name": "東松山駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-higashimatsuyama",
+      "facilities": []
+    },
+    {
+      "name": "東久留米駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-kurume",
+      "facilities": []
+    },
+    {
+      "name": "北与野駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-kitayono",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東久留米西口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-kurumenishi",
+      "facilities": []
+    },
+    {
+      "name": "狭山ヶ丘駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-sayamagaoka",
+      "facilities": []
+    },
+    {
+      "name": "武蔵境北口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-musashisakai",
+      "facilities": []
+    },
+    {
+      "name": "霞ヶ関駅店",
+      "url": "https://www.mansyu.co.jp/shop/#t-kasumigaseki",
+      "facilities": []
+    },
+    {
+      "name": "常盤台北口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-tokiwadai",
+      "facilities": []
+    },
+    {
+      "name": "坂戸にっさい店",
+      "url": "https://www.mansyu.co.jp/shop/#t-nissai",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東武練馬南口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-toubunerima",
+      "facilities": []
+    },
+    {
+      "name": "小平南口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-kodaira",
+      "facilities": []
+    },
+    {
+      "name": "志木南口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-shikim",
+      "facilities": []
+    },
+    {
+      "name": "東大宮東口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-higashioomiya",
+      "facilities": []
+    },
+    {
+      "name": "田無北口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-tanashi",
+      "facilities": []
+    },
+    {
+      "name": "蕨東口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-warabi",
+      "facilities": []
+    },
+    {
+      "name": "小手指南口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-kotesashi",
+      "facilities": []
+    },
+    {
+      "name": "ひばりヶ丘北口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-hibari",
+      "facilities": []
+    },
+    {
+      "name": "東小金井南口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-higashikoganei",
+      "facilities": []
+    },
+    {
+      "name": "荻窪南店",
+      "url": "https://www.mansyu.co.jp/shop/#t-ogikubo",
+      "facilities": []
+    },
+    {
+      "name": "朝霞台南口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-asakadai",
+      "facilities": []
+    },
+    {
+      "name": "河辺北口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-kabe",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "東明館",
+      "url": "https://www.mansyu.co.jp/shop/#t-oigami",
+      "facilities": [
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "花小金井北口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-hanakoganei",
+      "facilities": []
+    },
+    {
+      "name": "狭山市駅店",
+      "url": "https://www.mansyu.co.jp/shop/#t-sayama",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "熊谷駅店",
+      "url": "https://www.mansyu.co.jp/shop/#t-kumagaya",
+      "facilities": []
+    },
+    {
+      "name": "福生西口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-fussa",
+      "facilities": []
+    },
+    {
+      "name": "上石神井南口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-kamishakujii",
+      "facilities": [
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "蒲生駅店",
+      "url": "https://www.mansyu.co.jp/shop/#t-gamou",
+      "facilities": []
+    },
+    {
+      "name": "U_PLACE小江戸館",
+      "url": "https://www.mansyu.co.jp/shop/#t-koedo",
+      "facilities": []
+    },
+    {
+      "name": "野方南口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-nogata",
+      "facilities": []
+    },
+    {
+      "name": "高円寺北口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-kouenji",
+      "facilities": []
+    },
+    {
+      "name": "越谷東口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-koshigaya",
+      "facilities": []
+    },
+    {
+      "name": "JR京橋駅店",
+      "url": "https://www.mansyu.co.jp/shop/#t-kyoubashi",
+      "facilities": []
+    },
+    {
+      "name": "戸田公園西口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-todakouen",
+      "facilities": []
+    },
+    {
+      "name": "JR長居駅店",
+      "url": "https://www.mansyu.co.jp/shop/#t-nagai",
+      "facilities": []
+    },
+    {
+      "name": "春日部東口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-kasukabe",
+      "facilities": []
+    },
+    {
+      "name": "せんげん台駅店",
+      "url": "https://www.mansyu.co.jp/shop/#t-sengendai",
+      "facilities": []
+    },
+    {
+      "name": "聖蹟桜ヶ丘駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-seiseki",
+      "facilities": []
+    },
+    {
+      "name": "中野南口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-nakano",
+      "facilities": []
+    },
+    {
+      "name": "阪急茨木東口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-ibaraki",
+      "facilities": []
+    },
+    {
+      "name": "阪急塚口南口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-tsukaguchi",
+      "facilities": []
+    },
+    {
+      "name": "本庄早稲田駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-honjo",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "久喜西口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-kuki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "武蔵藤沢西口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-musasifujisawa",
+      "facilities": []
+    },
+    {
+      "name": "鳩ヶ谷駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-hatogaya",
+      "facilities": []
+    },
+    {
+      "name": "桶川西口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-okegawa",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "前橋南モール店",
+      "url": "https://www.mansyu.co.jp/shop/#t-maebashi",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "野田阪神店",
+      "url": "https://www.mansyu.co.jp/shop/#t-noda",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "和光南口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-wako",
+      "facilities": []
+    },
+    {
+      "name": "草加西口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-soka",
+      "facilities": []
+    },
+    {
+      "name": "中河原駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-nakagawara",
+      "facilities": []
+    },
+    {
+      "name": "豊中駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-toyonaka",
+      "facilities": []
+    },
+    {
+      "name": "蓮田東口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-hasuda",
+      "facilities": []
+    },
+    {
+      "name": "西中島南方店",
+      "url": "https://www.mansyu.co.jp/shop/#t-nishinagajima",
+      "facilities": []
+    },
+    {
+      "name": "つつじヶ丘北口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-tsutsuji",
+      "facilities": []
+    },
+    {
+      "name": "伊勢崎駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-isesaki",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "八幡山駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-hachimanyama",
+      "facilities": []
+    },
+    {
+      "name": "川越的場店",
+      "url": "https://www.mansyu.co.jp/shop/#t-matoba",
+      "facilities": [
+        "parking",
+        "privateRoom"
+      ]
+    },
+    {
+      "name": "東長崎南口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-higashinagasaki",
+      "facilities": []
+    },
+    {
+      "name": "東大和市駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-higashiyamato",
+      "facilities": []
+    },
+    {
+      "name": "八王子店",
+      "url": "https://www.mansyu.co.jp/shop/#t-hachioji",
+      "facilities": []
+    },
+    {
+      "name": "千歳船橋駅前店",
+      "url": "https://www.mansyu.co.jp/shop/#t-chitosefunabashi",
+      "facilities": []
+    },
+    {
+      "name": "川西能勢口駅店",
+      "url": "https://www.mansyu.co.jp/shop/#t-kawanishi",
+      "facilities": []
+    },
+    {
+      "name": "イーサイト高崎店",
+      "url": "https://www.mansyu.co.jp/shop/#t-takasaki",
+      "facilities": []
+    },
+    {
+      "name": "おおたモール店",
+      "url": "https://www.mansyu.co.jp/shop/#t-ootamall",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "町田パリオ店",
+      "url": "https://www.mansyu.co.jp/shop/#t-machida",
+      "facilities": []
+    },
+    {
+      "name": "京王橋本駅店",
+      "url": "https://www.mansyu.co.jp/shop/#t-hashimoto",
+      "facilities": []
+    },
+    {
+      "name": "伊勢崎西部モール宮子店",
+      "url": "https://www.mansyu.co.jp/shop/#t-isesakiseibu",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "エキア谷塚駅店",
+      "url": "https://www.mansyu.co.jp/shop/#t-yatsuka",
+      "facilities": []
+    },
+    {
+      "name": "獨協大学前東口店",
+      "url": "https://www.mansyu.co.jp/shop/#t-dokkyo",
+      "facilities": []
+    },
+    {
+      "name": "さいたま中央店",
+      "url": "https://www.mansyu.co.jp/shop/#t-saitamachuo",
+      "facilities": []
+    },
+    {
+      "name": "浦和美園駅店",
+      "url": "https://www.mansyu.co.jp/shop/#t-urawamisono",
+      "facilities": []
+    }
+  ]
+}

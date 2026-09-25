@@ -1,0 +1,945 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "hachiban-ramen",
+  "name": "8番らーめん",
+  "sourceUrl": "https://www.hachiban.jp/shop/",
+  "method": "公式店舗情報ページに埋め込まれた国内全店舗データ（dataShop）の店舗ごとの設備コード（option。店舗検索の絞り込み条件と同じ）を集計",
+  "total": 113,
+  "note": "公式の条件: お座敷あり・入口スロープあり・お子様椅子あり・ベビーシートあり・ドライブスルー（ドライブスルーは対象外）。「ベビーシートあり」は用途の説明文が無いが、公式アイコンが乳児を寝かせる台の図柄のためおむつ替え台として集計",
+  "facilities": {
+    "zashiki": {
+      "count": 44,
+      "label": "お座敷あり"
+    },
+    "stepFree": {
+      "count": 66,
+      "label": "入口スロープあり"
+    },
+    "kidsChair": {
+      "count": 104,
+      "label": "お子様椅子あり"
+    },
+    "diaperTable": {
+      "count": 30,
+      "label": "ベビーシートあり"
+    }
+  },
+  "stores": [
+    {
+      "name": "珠洲店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1170",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "輪島店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1149",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "能登柳田店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1302",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "七尾店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1006",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "七尾西店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1139",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "田鶴浜店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1143",
+      "facilities": [
+        "zashiki"
+      ]
+    },
+    {
+      "name": "鹿島店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1254",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "高浜店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1068",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "富来店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1186",
+      "facilities": []
+    },
+    {
+      "name": "羽咋店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1019",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "宇ノ気店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1128",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "高松店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1145",
+      "facilities": [
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "津幡店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1294",
+      "facilities": [
+        "zashiki",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "内灘店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1052",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "森本店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1005",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "入江店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1040",
+      "facilities": []
+    },
+    {
+      "name": "諸江店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1041",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "泉ヶ丘店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1095",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "笠舞店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1127",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "犀川大橋店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1157",
+      "facilities": []
+    },
+    {
+      "name": "古府南店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1159",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "大徳店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1190",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "城北南店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1257",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "横川店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1268",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "鞍月店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1269",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "駅西本町店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1277",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "安原店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1278",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "みなと大橋店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1282",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "もりの里店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1297",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "御影店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1305",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "金沢駅店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1309",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "福久店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1312",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "専福寺店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1234",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "野々市粟田店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1298",
+      "facilities": [
+        "zashiki",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "金沢工大前店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1325",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "松任店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1002",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "鶴来店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1205",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "横江店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1320",
+      "facilities": []
+    },
+    {
+      "name": "松任駅北口店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1322",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "美川インター店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1324",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "今江店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1135",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "城南末広店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1158",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "小松店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1211",
+      "facilities": []
+    },
+    {
+      "name": "平面店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1304",
+      "facilities": [
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "手取店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1122",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "辰口店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1196",
+      "facilities": [
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "本店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1001",
+      "facilities": [
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "大聖寺店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1185",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "入善店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1054",
+      "facilities": [
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "黒部店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1142",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "魚津店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1053",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "滑川店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1131",
+      "facilities": [
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "奥田店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1134",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "中川原店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1151",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "黒瀬店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1201",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "新庄店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1243",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "八尾店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1260",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "呉羽本郷店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1273",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "羽根店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1284",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "飯野あらや店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1287",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "安養寺店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1296",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "富山呉羽店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1300",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "大沢野店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1306",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "富山駅店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1311",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "太郎丸店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1318",
+      "facilities": [
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "小杉店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1046",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "新湊店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1048",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "太閤山店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1163",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "氷見朝日丘店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1146",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "戸出店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1050",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "高岡熊野店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1100",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "中川店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1101",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "北島店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1258",
+      "facilities": [
+        "zashiki",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "赤祖父店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1275",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "佐野店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1290",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "高岡万葉店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1307",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "砺波店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1192",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "福光店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1270",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "小矢部店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1037",
+      "facilities": [
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "勝山店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1059",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "大野店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1056",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "羽崎店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1121",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "丸岡店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1171",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "イーザ三国店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1314",
+      "facilities": [
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "足羽店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1023",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "金津店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1060",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "若杉店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1063",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "御幸店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1092",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "花堂店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1113",
+      "facilities": [
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "米松店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1124",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "春江店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1125",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "堀の宮店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1141",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "福井大学前店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1207",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "くるふ福井駅店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1250",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "新保店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1281",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "開発店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1303",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "二の宮店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1319",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "下馬店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1323",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "織田店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1156",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "鯖江店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1109",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "神明店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1153",
+      "facilities": [
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "鯖江東店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1227",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "武生店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1075",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "国高店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1129",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "小浜店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1274",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "敦賀木崎店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1308",
+      "facilities": [
+        "zashiki",
+        "stepFree",
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "飯田インター店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1249",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "広江店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1077",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "下庄店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1197",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "玉島店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1238",
+      "facilities": [
+        "zashiki",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "連島店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1288",
+      "facilities": [
+        "stepFree",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "金澤豚骨醤油８番らーめん アクロスプラザ児島店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1317",
+      "facilities": [
+        "kidsChair",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "里庄店",
+      "url": "https://www.hachiban.jp/shop/detail/?id=1088",
+      "facilities": []
+    }
+  ]
+}

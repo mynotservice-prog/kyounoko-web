@@ -1,0 +1,821 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "capricciosa",
+  "name": "カプリチョーザ",
+  "sourceUrl": "https://capricciosa.com/location/",
+  "method": "公式の店舗一覧から全店舗ページを取得し、各ページの【お子様連れのお客様へ】欄にある定型文（キッズチェア・お子様用の食器／離乳食の持ち込み）の有無を店舗ごとに集計",
+  "total": 95,
+  "note": "【お子様連れのお客様へ】の定型文が無い店舗 5 件（該当なしとして集計）。見出しが無く定型文だけ載る店舗もあるため、店舗詳細の表の全幅行を読んだ。「ミルク用のお湯をご用意しております」は 69 店に記載（対応する設備キーが無いため集計表には入れない）。「キッズチェア、お子様用の食器」は1文なので、キッズチェアと子供用カトラリーの両方に同じ店舗数が入る。「駐車場」欄は自由記述（有料・提携・近隣等が混在）のため数えない",
+  "facilities": {
+    "kidsChair": {
+      "count": 86,
+      "label": "キッズチェア、お子様用の食器をご用意しております"
+    },
+    "kidsCutlery": {
+      "count": 86,
+      "label": "キッズチェア、お子様用の食器をご用意しております"
+    },
+    "babyFoodBringIn": {
+      "count": 62,
+      "label": "離乳食はお持ち込みいただけます"
+    }
+  },
+  "stores": [
+    {
+      "name": "小樽店",
+      "url": "https://capricciosa.com/location/%e5%b0%8f%e6%a8%bd%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "札幌北1条店",
+      "url": "https://capricciosa.com/location/%e6%9c%ad%e5%b9%8c%e5%8c%971%e6%9d%a1%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "イオンモール下田店",
+      "url": "https://capricciosa.com/location/%e3%82%a4%e3%82%aa%e3%83%b3%e3%83%a2%e3%83%bc%e3%83%ab%e4%b8%8b%e7%94%b0%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "青森ELM店",
+      "url": "https://capricciosa.com/location/%e9%9d%92%e6%a3%aeelm%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "青森THREE店",
+      "url": "https://capricciosa.com/location/%e9%9d%92%e6%a3%aethree%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "ザ・モール仙台長町店",
+      "url": "https://capricciosa.com/location/%e3%82%b6%e3%83%bb%e3%83%a2%e3%83%bc%e3%83%ab%e4%bb%99%e5%8f%b0%e9%95%b7%e7%94%ba%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "山形エスパル店",
+      "url": "https://capricciosa.com/location/%e5%b1%b1%e5%bd%a2%e3%82%a8%e3%82%b9%e3%83%91%e3%83%ab%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "西友守谷店",
+      "url": "https://capricciosa.com/location/%e8%a5%bf%e5%8f%8b%e5%ae%88%e8%b0%b7%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "宇都宮インターパークショッピングビレッジ店",
+      "url": "https://capricciosa.com/location/%e5%ae%87%e9%83%bd%e5%ae%ae%e3%82%a4%e3%83%b3%e3%82%bf%e3%83%bc%e3%83%91%e3%83%bc%e3%82%af%e3%82%b7%e3%83%a7%e3%83%83%e3%83%94%e3%83%b3%e3%82%b0%e3%83%93%e3%83%ac%e3%83%83%e3%82%b8%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "佐野プレミアム・アウトレット店",
+      "url": "https://capricciosa.com/location/%e4%bd%90%e9%87%8e%e3%83%97%e3%83%ac%e3%83%9f%e3%82%a2%e3%83%a0%e3%83%bb%e3%82%a2%e3%82%a6%e3%83%88%e3%83%ac%e3%83%83%e3%83%88%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "けやきウォーク前橋店",
+      "url": "https://capricciosa.com/location/%e3%81%91%e3%82%84%e3%81%8d%e3%82%a6%e3%82%a9%e3%83%bc%e3%82%af%e5%89%8d%e6%a9%8b%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "イオンモール太田店",
+      "url": "https://capricciosa.com/location/%e3%82%a4%e3%82%aa%e3%83%b3%e3%83%a2%e3%83%bc%e3%83%ab%e5%a4%aa%e7%94%b0%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "さいたま新都心店",
+      "url": "https://capricciosa.com/location/%e3%81%95%e3%81%84%e3%81%9f%e3%81%be%e6%96%b0%e9%83%bd%e5%bf%83%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "ワカバウォーク店",
+      "url": "https://capricciosa.com/location/%e3%83%af%e3%82%ab%e3%83%90%e3%82%a6%e3%82%a9%e3%83%bc%e3%82%af%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "熊谷ティアラ店",
+      "url": "https://capricciosa.com/location/%e7%86%8a%e8%b0%b7%e3%83%86%e3%82%a3%e3%82%a2%e3%83%a9%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "所沢西口店",
+      "url": "https://capricciosa.com/location/%e6%89%80%e6%b2%a2%e8%a5%bf%e5%8f%a3%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "ららぽーと富士見店",
+      "url": "https://capricciosa.com/location/%e3%82%89%e3%82%89%e3%81%bd%e3%83%bc%e3%81%a8%e5%af%8c%e5%a3%ab%e8%a6%8b%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "トマト&#038;ガーリック イオンモール成田店",
+      "url": "https://capricciosa.com/location/%e3%83%88%e3%83%9e%e3%83%88%e3%82%ac%e3%83%bc%e3%83%aa%e3%83%83%e3%82%af-%e3%82%a4%e3%82%aa%e3%83%b3%e3%83%a2%e3%83%bc%e3%83%ab%e6%88%90%e7%94%b0%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "プレナ幕張店",
+      "url": "https://capricciosa.com/location/%e3%83%97%e3%83%ac%e3%83%8a%e5%b9%95%e5%bc%b5%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "テラスモール松戸店",
+      "url": "https://capricciosa.com/location/%e3%83%86%e3%83%a9%e3%82%b9%e3%83%a2%e3%83%bc%e3%83%ab%e6%9d%be%e6%88%b8%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "千葉ニュータウン店",
+      "url": "https://capricciosa.com/location/%e5%8d%83%e8%91%89%e3%83%8b%e3%83%a5%e3%83%bc%e3%82%bf%e3%82%a6%e3%83%b3%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "酒々井プレミアム・アウトレット店",
+      "url": "https://capricciosa.com/location/%e9%85%92%e3%80%85%e4%ba%95%e3%83%97%e3%83%ac%e3%83%9f%e3%82%a2%e3%83%a0%e3%83%bb%e3%82%a2%e3%82%a6%e3%83%88%e3%83%ac%e3%83%83%e3%83%88%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "カプリチョーザ ららぽーとTOKYO-BAY店",
+      "url": "https://capricciosa.com/location/3989/",
+      "facilities": []
+    },
+    {
+      "name": "新宿ワシントンホテル店",
+      "url": "https://capricciosa.com/location/%e6%96%b0%e5%ae%bf%e3%83%af%e3%82%b7%e3%83%b3%e3%83%88%e3%83%b3%e3%83%9b%e3%83%86%e3%83%ab%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "渋谷本店",
+      "url": "https://capricciosa.com/location/%e6%b8%8b%e8%b0%b7%e6%9c%ac%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "コピス吉祥寺店",
+      "url": "https://capricciosa.com/location/%e3%82%b3%e3%83%94%e3%82%b9%e5%90%89%e7%a5%a5%e5%af%ba%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "ピッツァ&#038;ビュッフェ アトレ大森店",
+      "url": "https://capricciosa.com/location/%e3%83%94%e3%83%83%e3%83%84%e3%82%a1%e3%83%93%e3%83%a5%e3%83%83%e3%83%95%e3%82%a7-%e3%82%a2%e3%83%88%e3%83%ac%e5%a4%a7%e6%a3%ae%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "イオン板橋ショッピングセンター店",
+      "url": "https://capricciosa.com/location/%e3%82%a4%e3%82%aa%e3%83%b3%e6%9d%bf%e6%a9%8b%e3%82%b7%e3%83%a7%e3%83%83%e3%83%94%e3%83%b3%e3%82%b0%e3%82%bb%e3%83%b3%e3%82%bf%e3%83%bc%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "駒沢大学店",
+      "url": "https://capricciosa.com/location/%e9%a7%92%e6%b2%a2%e5%a4%a7%e5%ad%a6%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "池上店",
+      "url": "https://capricciosa.com/location/%e6%b1%a0%e4%b8%8a%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "西葛西店",
+      "url": "https://capricciosa.com/location/%e8%a5%bf%e8%91%9b%e8%a5%bf%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "オリナス錦糸町店",
+      "url": "https://capricciosa.com/location/%e3%82%aa%e3%83%aa%e3%83%8a%e3%82%b9%e9%8c%a6%e7%b3%b8%e7%94%ba%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "町田モディ店",
+      "url": "https://capricciosa.com/location/%e7%94%ba%e7%94%b0%e3%83%a2%e3%83%87%e3%82%a3%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "御徒町吉池本店ビル店",
+      "url": "https://capricciosa.com/location/%e5%be%a1%e5%be%92%e7%94%ba-%e5%90%89%e6%b1%a0%e6%9c%ac%e5%ba%97%e3%83%93%e3%83%ab%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "御茶ノ水ソラシティ店",
+      "url": "https://capricciosa.com/location/%e5%be%a1%e8%8c%b6%e3%83%8e%e6%b0%b4%e3%82%bd%e3%83%a9%e3%82%b7%e3%83%86%e3%82%a3%e5%ba%97/",
+      "facilities": []
+    },
+    {
+      "name": "YMスクウェア原宿店",
+      "url": "https://capricciosa.com/location/3843/",
+      "facilities": []
+    },
+    {
+      "name": "ららテラス北綾瀬店",
+      "url": "https://capricciosa.com/location/%e3%82%89%e3%82%89%e3%83%86%e3%83%a9%e3%82%b9%e5%8c%97%e7%b6%be%e7%80%ac%e5%ba%97/",
+      "facilities": []
+    },
+    {
+      "name": "池袋IT tower TOKYO店",
+      "url": "https://capricciosa.com/location/%e6%b1%a0%e8%a2%8bit-tower-tokyo%e5%ba%97/",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール大和店",
+      "url": "https://capricciosa.com/location/%e3%82%a4%e3%82%aa%e3%83%b3%e3%83%a2%e3%83%bc%e3%83%ab%e5%a4%a7%e5%92%8c%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "ウイング上大岡店",
+      "url": "https://capricciosa.com/location/%e3%82%a6%e3%82%a4%e3%83%b3%e3%82%b0%e4%b8%8a%e5%a4%a7%e5%b2%a1%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "トマト&#038;ガーリック ラゾーナ川崎店",
+      "url": "https://capricciosa.com/location/%e3%83%88%e3%83%9e%e3%83%88%e3%82%ac%e3%83%bc%e3%83%aa%e3%83%83%e3%82%af-%e3%83%a9%e3%82%be%e3%83%bc%e3%83%8a%e5%b7%9d%e5%b4%8e%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "トマト&#038;ガーリック 横須賀モアーズ店",
+      "url": "https://capricciosa.com/location/%e3%83%88%e3%83%9e%e3%83%88%e3%82%ac%e3%83%bc%e3%83%aa%e3%83%83%e3%82%af-%e6%a8%aa%e9%a0%88%e8%b3%80%e3%83%a2%e3%82%a2%e3%83%bc%e3%82%ba%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "マルイファミリー溝口店",
+      "url": "https://capricciosa.com/location/%e3%83%9e%e3%83%ab%e3%82%a4%e3%83%95%e3%82%a1%e3%83%9f%e3%83%aa%e3%83%bc%e6%ba%9d%e5%8f%a3%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "横浜みなとみらい店",
+      "url": "https://capricciosa.com/location/%e6%a8%aa%e6%b5%9c%e3%81%bf%e3%81%aa%e3%81%a8%e3%81%bf%e3%82%89%e3%81%84%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "ウィングキッチン金沢八景店",
+      "url": "https://capricciosa.com/location/%e3%82%a6%e3%82%a3%e3%83%b3%e3%82%b0%e3%82%ad%e3%83%83%e3%83%81%e3%83%b3%e9%87%91%e6%b2%a2%e5%85%ab%e6%99%af%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "戸塚店",
+      "url": "https://capricciosa.com/location/%e6%88%b8%e5%a1%9a%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "江ノ島店",
+      "url": "https://capricciosa.com/location/%e6%b1%9f%e3%83%8e%e5%b3%b6%e5%ba%97/",
+      "facilities": [
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "ノースポート・モール店",
+      "url": "https://capricciosa.com/location/%e3%83%8e%e3%83%bc%e3%82%b9%e3%83%9d%e3%83%bc%e3%83%88%e3%83%bb%e3%83%a2%e3%83%bc%e3%83%ab%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "新潟万代シティ店",
+      "url": "https://capricciosa.com/location/%e6%96%b0%e6%bd%9f%e4%b8%87%e4%bb%a3%e3%82%b7%e3%83%86%e3%82%a3%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "新潟鳥屋野潟店",
+      "url": "https://capricciosa.com/location/%e6%96%b0%e6%bd%9f%e9%b3%a5%e5%b1%8b%e9%87%8e%e6%bd%9f%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "イオンモール高岡店",
+      "url": "https://capricciosa.com/location/%e3%82%a4%e3%82%aa%e3%83%b3%e3%83%a2%e3%83%bc%e3%83%ab%e9%ab%98%e5%b2%a1%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "富山ファボーレ店",
+      "url": "https://capricciosa.com/location/%e5%af%8c%e5%b1%b1%e3%83%95%e3%82%a1%e3%83%9c%e3%83%bc%e3%83%ac%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "イオンモール白山店",
+      "url": "https://capricciosa.com/location/%e3%82%a4%e3%82%aa%e3%83%b3%e3%83%a2%e3%83%bc%e3%83%ab%e7%99%bd%e5%b1%b1%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "トラットリア カプリチョーザ イオンモール岡崎店",
+      "url": "https://capricciosa.com/location/%e3%82%a4%e3%82%aa%e3%83%b3%e3%83%a2%e3%83%bc%e3%83%ab%e5%b2%a1%e5%b4%8e%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "イオンモール鈴鹿店",
+      "url": "https://capricciosa.com/location/%e3%82%a4%e3%82%aa%e3%83%b3%e3%83%a2%e3%83%bc%e3%83%ab%e9%88%b4%e9%b9%bf%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "イオンモール草津店",
+      "url": "https://capricciosa.com/location/%e3%82%a4%e3%82%aa%e3%83%b3%e3%83%a2%e3%83%bc%e3%83%ab%e8%8d%89%e6%b4%a5%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "ピエリ守山店",
+      "url": "https://capricciosa.com/location/%e3%83%94%e3%82%a8%e3%83%aa%e5%ae%88%e5%b1%b1%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "近江八幡店",
+      "url": "https://capricciosa.com/location/%e8%bf%91%e6%b1%9f%e5%85%ab%e5%b9%a1%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "ブランチ大津京店",
+      "url": "https://capricciosa.com/location/3776/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "BiVi二条店",
+      "url": "https://capricciosa.com/location/bivi%e4%ba%8c%e6%9d%a1%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "イオンモールKYOTO店",
+      "url": "https://capricciosa.com/location/%e3%82%a4%e3%82%aa%e3%83%b3%e3%83%a2%e3%83%bc%e3%83%abkyoto%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "河原町VOX店",
+      "url": "https://capricciosa.com/location/%e6%b2%b3%e5%8e%9f%e7%94%bavox%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "河原町オーパ店",
+      "url": "https://capricciosa.com/location/%e6%b2%b3%e5%8e%9f%e7%94%ba%e3%82%aa%e3%83%bc%e3%83%91%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "城陽店",
+      "url": "https://capricciosa.com/location/%e5%9f%8e%e9%99%bd%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "伏見桃山店",
+      "url": "https://capricciosa.com/location/%e4%bc%8f%e8%a6%8b%e6%a1%83%e5%b1%b1%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "イオンモール高の原店",
+      "url": "https://capricciosa.com/location/%e3%82%a4%e3%82%aa%e3%83%b3%e3%83%a2%e3%83%bc%e3%83%ab%e9%ab%98%e3%81%ae%e5%8e%9f%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "リンクスウメダ店",
+      "url": "https://capricciosa.com/location/%e3%83%aa%e3%83%b3%e3%82%af%e3%82%b9%e3%82%a6%e3%83%a1%e3%83%80%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "あべのキューズモール店",
+      "url": "https://capricciosa.com/location/%e3%81%82%e3%81%b9%e3%81%ae%e3%82%ad%e3%83%a5%e3%83%bc%e3%82%ba%e3%83%a2%e3%83%bc%e3%83%ab%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "なんばCITY店",
+      "url": "https://capricciosa.com/location/%e3%81%aa%e3%82%93%e3%81%b0city%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "ららぽーと和泉店",
+      "url": "https://capricciosa.com/location/%e3%82%89%e3%82%89%e3%81%bd%e3%83%bc%e3%81%a8%e5%92%8c%e6%b3%89%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "イオンモールりんくう泉南店",
+      "url": "https://capricciosa.com/location/%e3%82%a4%e3%82%aa%e3%83%b3%e3%83%a2%e3%83%bc%e3%83%ab%e3%82%8a%e3%82%93%e3%81%8f%e3%81%86%e6%b3%89%e5%8d%97%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "アザール桃山台店",
+      "url": "https://capricciosa.com/location/%e3%82%a2%e3%82%b6%e3%83%bc%e3%83%ab%e6%a1%83%e5%b1%b1%e5%8f%b0%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "イオンモール茨木店",
+      "url": "https://capricciosa.com/location/%e3%82%a4%e3%82%aa%e3%83%b3%e3%83%a2%e3%83%bc%e3%83%ab%e8%8c%a8%e6%9c%a8%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "ニトリモール枚方店",
+      "url": "https://capricciosa.com/location/%e3%83%8b%e3%83%88%e3%83%aa%e3%83%a2%e3%83%bc%e3%83%ab%e6%9e%9a%e6%96%b9%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "ミューズ高槻店",
+      "url": "https://capricciosa.com/location/%e3%83%9f%e3%83%a5%e3%83%bc%e3%82%ba%e9%ab%98%e6%a7%bb%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "みのおキューズモール店",
+      "url": "https://capricciosa.com/location/%e3%81%bf%e3%81%ae%e3%81%8a%e3%82%ad%e3%83%a5%e3%83%bc%e3%82%ba%e3%83%a2%e3%83%bc%e3%83%ab%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "セブンパーク天美店",
+      "url": "https://capricciosa.com/location/%e3%82%bb%e3%83%96%e3%83%b3%e3%83%91%e3%83%bc%e3%82%af%e5%a4%a9%e7%be%8e%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "ららぽーとEXPOCITY店",
+      "url": "https://capricciosa.com/location/%e3%82%89%e3%82%89%e3%81%bd%e3%83%bc%e3%81%a8expocity%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "ＫＩＴＴＥ大阪店",
+      "url": "https://capricciosa.com/location/3885/",
+      "facilities": []
+    },
+    {
+      "name": "ブルメールHAT神戸店",
+      "url": "https://capricciosa.com/location/%e3%83%96%e3%83%ab%e3%83%a1%e3%83%bc%e3%83%abhat%e7%a5%9e%e6%88%b8%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "神戸モザイク店",
+      "url": "https://capricciosa.com/location/%e7%a5%9e%e6%88%b8%e3%83%a2%e3%82%b6%e3%82%a4%e3%82%af%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "あまがさきキューズモール店",
+      "url": "https://capricciosa.com/location/%e3%81%82%e3%81%be%e3%81%8c%e3%81%95%e3%81%8d%e3%82%ad%e3%83%a5%e3%83%bc%e3%82%ba%e3%83%a2%e3%83%bc%e3%83%ab%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "イオンモール橿原店",
+      "url": "https://capricciosa.com/location/%e3%82%a4%e3%82%aa%e3%83%b3%e3%83%a2%e3%83%bc%e3%83%ab%e6%a9%bf%e5%8e%9f%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "ならファミリー店",
+      "url": "https://capricciosa.com/location/%e5%a5%88%e8%89%af%e3%83%95%e3%82%a1%e3%83%9f%e3%83%aa%e3%83%bc%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "なら桜井大福店",
+      "url": "https://capricciosa.com/location/%e3%81%aa%e3%82%89%e6%a1%9c%e4%ba%95%e5%a4%a7%e7%a6%8f%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery"
+      ]
+    },
+    {
+      "name": "イオンモール倉敷店",
+      "url": "https://capricciosa.com/location/%e3%82%a4%e3%82%aa%e3%83%b3%e3%83%a2%e3%83%bc%e3%83%ab%e5%80%89%e6%95%b7%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "フジグラン北島店",
+      "url": "https://capricciosa.com/location/%e3%83%95%e3%82%b8%e3%82%b0%e3%83%a9%e3%83%b3%e5%8c%97%e5%b3%b6%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "徳島店",
+      "url": "https://capricciosa.com/location/%e5%be%b3%e5%b3%b6%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "イオンモール新居浜店",
+      "url": "https://capricciosa.com/location/%e3%82%a4%e3%82%aa%e3%83%b3%e3%83%a2%e3%83%bc%e3%83%ab%e6%96%b0%e5%b1%85%e6%b5%9c%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "イオンモール高知店",
+      "url": "https://capricciosa.com/location/%e3%82%a4%e3%82%aa%e3%83%b3%e3%83%a2%e3%83%bc%e3%83%ab%e9%ab%98%e7%9f%a5%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "熊本上通り店",
+      "url": "https://capricciosa.com/location/%e7%86%8a%e6%9c%ac%e4%b8%8a%e9%80%9a%e3%82%8a%e5%ba%97/",
+      "facilities": []
+    },
+    {
+      "name": "宮崎大島通り店",
+      "url": "https://capricciosa.com/location/%e5%ae%ae%e5%b4%8e%e5%a4%a7%e5%b3%b6%e9%80%9a%e3%82%8a%e5%ba%97/",
+      "facilities": []
+    },
+    {
+      "name": "サザンプレックス南風原店",
+      "url": "https://capricciosa.com/location/%e3%82%b5%e3%82%b6%e3%83%b3%e3%83%97%e3%83%ac%e3%83%83%e3%82%af%e3%82%b9%e5%8d%97%e9%a2%a8%e5%8e%9f%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "天久店",
+      "url": "https://capricciosa.com/location/%e5%a4%a9%e4%b9%85%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    },
+    {
+      "name": "北谷美浜店",
+      "url": "https://capricciosa.com/location/%e5%8c%97%e8%b0%b7%e7%be%8e%e6%b5%9c%e5%ba%97/",
+      "facilities": [
+        "kidsChair",
+        "kidsCutlery",
+        "babyFoodBringIn"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,406 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "volks",
+  "name": "フォルクス",
+  "sourceUrl": "https://www.volks-steak.jp/shop_list.html?pref=0",
+  "method": "公式店舗一覧（全国）の表の各店舗行にある施設アイコン（駐車場・おむつ替え台・スロープ・多目的トイレ）を店舗ごとに集計",
+  "total": 40,
+  "note": "一覧の凡例: 駐車場・おむつ替え台・スロープ・多目的トイレ・店内無料Wi-Fi・モーニング（店内無料Wi-Fi等は対象外）。「スロープ」は入口の段差なし（stepFree）に対応づけた",
+  "facilities": {
+    "parking": {
+      "count": 38,
+      "label": "駐車場"
+    },
+    "diaperTable": {
+      "count": 39,
+      "label": "おむつ替え台"
+    },
+    "stepFree": {
+      "count": 34,
+      "label": "スロープ"
+    },
+    "multiToilet": {
+      "count": 26,
+      "label": "多目的トイレ"
+    }
+  },
+  "stores": [
+    {
+      "name": "高石店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=200",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "足立加平店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=207",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "所沢店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=205",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "芦屋店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=145",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "イースト21店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=156",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "市川ニッケ店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=127",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "到津店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=149",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "稲毛店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=125",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "江坂店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=143",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "青梅店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=165",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "小倉店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=148",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "葛西店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=155",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "柏店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=129",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "上新庄店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=141",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "上野毛店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=160",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "川口店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=167",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "川口中央店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=166",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "北山通店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=139",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "黒崎店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=150",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "港南台店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=133",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "港北ニュータウン店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=131",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "相模原店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=137",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "座間店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=136",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "新橋店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=154",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "世田谷代田店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=159",
+      "facilities": [
+        "parking",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "高井戸東店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=161",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "田無店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=162",
+      "facilities": [
+        "parking",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "中環千里店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=144",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "鶴見寺尾店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=132",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "戸塚西店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=134",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "豊洲店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=157",
+      "facilities": [
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "名島店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=151",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "成田店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=130",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "西参道店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=158",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "西宮店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=146",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "博多駅南店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=152",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "針中野店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=142",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "晴海トリトン店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=176",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "伏見下鳥羽店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=140",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "大和店",
+      "url": "https://www.volks-steak.jp/shop_detail.html?snum=138",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    }
+  ]
+}
