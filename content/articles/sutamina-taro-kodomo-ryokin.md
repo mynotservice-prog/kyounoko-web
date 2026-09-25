@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-09-25T00:00:00.000Z'
 hero: /img/scenes/famires-02.webp
-heroAlt: ビュッフェレストランのテーブル席に子ども用の椅子と子ども用の食器が用意されている様子（イラスト）
+heroAlt: レストランのボックス席に、ベルト付きの子ども用ハイチェアと子ども用の食器が用意されている様子（イラスト）
 area: all
 quickInfo:
   ageRanges:

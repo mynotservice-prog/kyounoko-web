@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-09-25T00:00:00.000Z'
 hero: /img/scenes/famires-01.webp
-heroAlt: ステーキレストランのテーブル席で、家族がステーキとサラダを前に、子どもがキッズプレートを食べている様子（イラスト）
+heroAlt: レストランのボックス席に、子ども用の木製ハイチェアと子ども用の食器が用意されている様子（イラスト）
 area: all
 quickInfo:
   ageRanges:

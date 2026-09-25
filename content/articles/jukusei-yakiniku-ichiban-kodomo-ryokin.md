@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-09-25T00:00:00.000Z'
 hero: /img/scenes/yakiniku-01.webp
-heroAlt: 焼肉店のテーブル席で、家族が食べ放題の肉を焼きながら、子どもがおこさまメニューを食べている様子（イラスト）
+heroAlt: 焼肉店のテーブル席で、家族が網で肉を焼きながら、子どもたちが笑っている様子（イラスト）
 area: all
 quickInfo:
   ageRanges:

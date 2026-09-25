@@ -7,7 +7,7 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-09-25T00:00:00.000Z'
 hero: /img/scenes/yakiniku-01.webp
-heroAlt: 焼肉食べ放題の店で、家族がテーブルの無煙ロースターを囲み、親が子どもの分の肉を取り分けている様子（イラスト）
+heroAlt: 焼肉店のテーブル席で、家族がロースターを囲み、子どもも一緒にトングで肉を焼いている様子（イラスト）
 area: all
 quickInfo:
   ageRanges:
