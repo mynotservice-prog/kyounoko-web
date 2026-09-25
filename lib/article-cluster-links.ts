@@ -17,6 +17,7 @@
  */
 import type { FileArticleMeta } from './articles';
 import { WARD_NAMES } from './tokyo-stations';
+import { mayLinkToFrozen } from './auto-internal-links';
 
 export type ClusterLink = { href: string; label: string };
 export type ClusterNav = { heading: string; items: ClusterLink[] };
@@ -99,6 +100,18 @@ const CHAIN_NAMES: Record<string, string> = {
   yayoiken: 'やよい軒',
   yoshinoya: '吉野家',
   yuzuan: 'ゆず庵',
+  // 2026-09-25 新設（料金記事・離乳食記事と攻略記事を束ねる）
+  'sutamina-taro': 'すたみな太郎',
+  'one-karubi': 'ワンカルビ',
+  'kamimura-bokujo': 'かみむら牧場',
+  'jukusei-yakiniku-ichiban': '熟成焼肉いちばん',
+  jujukarubi: 'じゅうじゅうカルビ',
+  'kushiya-monogatari': '串家物語',
+  'sweets-paradise': 'スイーツパラダイス',
+  shabusai: 'しゃぶ菜',
+  'steak-miya': 'ステーキ宮',
+  kourakuen: '幸楽苑',
+  'marugen-ramen': '丸源ラーメン',
 };
 
 /** slug の表記ゆれを正規 stem に寄せる（丸亀 marugame/marukame、はま寿司 hama-sushi 等）。 */
@@ -110,6 +123,7 @@ const STEM_ALIASES: Record<string, string> = {
   'hanamaru-udon': 'hanamarudon',
   shabuyou: 'shabuyo',
   saize: 'saizeriya',
+  marugenramen: 'marugen-ramen',
 };
 
 /** suffix 規則に乗らない slug の所属を明示する。 */
@@ -143,10 +157,13 @@ function suffixOrder(suffix: string): number {
 export function getChainClusterNav(slug: string, all: FileArticleMeta[]): ClusterNav | null {
   const me = parseChainSlug(slug);
   if (!me) return null;
+  const myPublishedAt = all.find((a) => a.slug === slug)?.publishedAt;
   const items: Array<ClusterLink & { order: number }> = [];
   const seenSuffix = new Set<string>();
   for (const a of all) {
     if (a.slug === slug || a.noindex) continue;
+    // 凍結面と、カットオフ以降に公開した記事の間にはチップを張らない（どちら向きも）
+    if (!mayLinkToFrozen(a.slug, myPublishedAt) || !mayLinkToFrozen(slug, a.publishedAt)) continue;
     const p = parseChainSlug(a.slug);
     if (!p || p.stem !== me.stem) continue;
     // 同じ意図の記事が2本ある場合（丸亀の marugame/marukame 等）は先に見つかった1本だけ

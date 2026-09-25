@@ -1044,7 +1044,7 @@ async function buildArticleFromRaw(raw: string, fallbackSlug: string): Promise<F
   const howto = extractHowTo(bodyMd);
   const itemList = extractItemList(meta.title, bodyMd);
   const rawHtml = await renderMarkdownToHtml(tldr.body);
-  const htmlWithLinks = injectInternalLinks(rawHtml, meta.slug);
+  const htmlWithLinks = injectInternalLinks(rawHtml, meta.slug, { publishedAt: meta.publishedAt });
   const { html: bodyWithIds, toc } = injectHeadingIdsAndExtractToc(htmlWithLinks);
   const bodyHtml = wrapDenseH3Sections(bodyWithIds);
   const tldrHtml = tldr.sectionMd ? await renderMarkdownToHtml(tldr.sectionMd) : null;
