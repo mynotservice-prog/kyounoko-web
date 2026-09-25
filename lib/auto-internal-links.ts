@@ -28,6 +28,12 @@ type LinkRule = {
    * 実験の判定が終わったらフラグを外す。
    */
   addedAfterFreeze?: true;
+  /**
+   * ルールを足した日（YYYY-MM-DD）。FROZEN_INBOUND_CUTOFF 以降に足したルールは、
+   * FROZEN_TARGET_SLUGS（凍結slug全件）の記事では発火させない。
+   * addedAfterFreeze は EXPERIMENT_FROZEN_SLUGS（一部の実験だけ）しか見ていないため。
+   */
+  addedAt?: string;
 };
 
 /**
@@ -53,6 +59,40 @@ const EXPERIMENT_FROZEN_SLUGS = new Set([
   'mogitori-nerima-aki-kodzure',
   'fureai-nouen-setagaya-aki-kodzure',
 ]);
+
+/**
+ * 凍結面へ「新しい記事から」リンクを増やさないためのガード（2026-09-25 追加・7回目の汚染の再発防止）。
+ *
+ * EXPERIMENT_FROZEN_SLUGS は「凍結記事の中に新ルールを注入しない」側のガードで、
+ * 逆向き（新しく公開した記事の本文キーワードから凍結面へリンクが張られる＝凍結面の被リンクが増える）
+ * は止めていなかった。2026-09-25 公開の料金記事等が「しゃぶ葉」「焼肉きんぐ」から
+ * 実験6の処置群へ自動リンクを張り、描画層なので check-frozen.mjs にも検出されなかった。
+ *
+ * ここには docs/experiments-active.md の凍結slug全件（`node scripts/check-frozen.mjs --list`）を置く。
+ * publishedAt が FROZEN_INBOUND_CUTOFF 以降の記事は、これらの面へ自動リンク・回遊チップを張らない。
+ * 既存記事（カットオフ前の公開）の既存リンクは測定開始前から効いているので変えない。
+ * 実験の判定が終わったら該当slugを外す。
+ */
+export const FROZEN_INBOUND_CUTOFF = '2026-09-25';
+export const FROZEN_TARGET_SLUGS = new Set([
+  'bamiyan-kids-menu', 'bamiyan-kodzure-koryaku', 'bamiyan-morning-kosodate', 'bigboy-morning-kosodate',
+  'bikkuri-donkey-kids-menu', 'bikkuri-donkey-kodzure-koryaku', 'bikkuri-donkey-morning-kosodate',
+  'cocoichi-kids-menu', 'cocos-kids-menu', 'dennys-morning-kosodate', 'fureai-nouen-setagaya-aki-kodzure',
+  'gusto-kids-menu', 'gusto-morning-kosodate', 'hanamaru-udon-kodzure-koryaku', 'hoshino-morning-kosodate',
+  'ichiran-kodzure-koryaku', 'komazawa-koen-jabujabuike', 'komeda-morning-kosodate',
+  'mikangari-musashimurayama-kodzure', 'mizumoto-koen-jabujabuike', 'mogitori-nerima-aki-kodzure',
+  'mos-burger-kids-menu', 'mos-burger-morning-kosodate', 'ootoya-morning-kosodate',
+  'royalhost-morning-kosodate', 'saizeriya-kids-menu', 'shabuyou-kodzure-koryaku',
+  'sukiya-morning-kosodate', 'yakiniku-king-kodzure-koryaku', 'yayoiken-kodzure-koryaku',
+  'yayoiken-morning-kosodate',
+]);
+
+/** 公開日がカットオフ以降の記事から凍結面へリンクしてよいか。 */
+export function mayLinkToFrozen(targetSlug: string, sourcePublishedAt?: string): boolean {
+  if (!FROZEN_TARGET_SLUGS.has(targetSlug)) return true;
+  if (!sourcePublishedAt) return true;
+  return sourcePublishedAt.slice(0, 10) < FROZEN_INBOUND_CUTOFF;
+}
 
 const LINK_RULES: LinkRule[] = [
   // ===== 商品・アイテム系 =====
@@ -220,6 +260,71 @@ const LINK_RULES: LinkRule[] = [
   { keyword: '半熟卵', targetSlug: 'kodomo-onsen-tamago-itsukara', priority: 9, addedAfterFreeze: true },
   { keyword: 'しゃぶ葉', targetSlug: 'shabuyou-kodzure-koryaku', priority: 8, addedAfterFreeze: true },
   { keyword: '焼肉きんぐ', targetSlug: 'yakiniku-king-kodzure-koryaku', priority: 8, addedAfterFreeze: true },
+  // ▼ エンティティ拡張（2026-09-25 新設の中堅チェーン攻略へ、本文中のチェーン名から被リンクを集める）
+  //    曖昧になりうる短い語（かつや・ねぎし・からやま・五右衛門・和幸 等）は正式名だけを登録する。
+  { keyword: 'ジョイフル', targetSlug: 'joyfull-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'ジョリーパスタ', targetSlug: 'jolly-pasta-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '洋麺屋五右衛門', targetSlug: 'yomenya-goemon-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'カプリチョーザ', targetSlug: 'capricciosa-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '不二家レストラン', targetSlug: 'fujiya-restaurant-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '大阪王将', targetSlug: 'osaka-ohsho-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'ぎょうざの満洲', targetSlug: 'gyoza-no-mansyu-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'スガキヤ', targetSlug: 'sugakiya-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '8番らーめん', targetSlug: 'hachiban-ramen-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '来来亭', targetSlug: 'rairaitei-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '魁力屋', targetSlug: 'kairikiya-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '一風堂', targetSlug: 'ippudo-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '焼肉ライク', targetSlug: 'yakiniku-like-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'ピエトロ', targetSlug: 'pietro-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '藍屋', targetSlug: 'aiya-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'とんかつ和幸', targetSlug: 'tonkatsu-wako-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '新宿さぼてん', targetSlug: 'shinjuku-saboten-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '伝説のすた丼屋', targetSlug: 'sutadonya-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'いきなり!ステーキ', targetSlug: 'ikinari-steak-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'いきなり！ステーキ', targetSlug: 'ikinari-steak-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'いきなりステーキ', targetSlug: 'ikinari-steak-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'やっぱりステーキ', targetSlug: 'yappari-steak-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'ステーキのどん', targetSlug: 'steak-no-don-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'フォルクス', targetSlug: 'volks-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '高倉町珈琲', targetSlug: 'takakuramachi-coffee-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '珈琲館', targetSlug: 'coffeekan-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'サブウェイ', targetSlug: 'subway-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '築地銀だこ', targetSlug: 'gindaco-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '回転寿司みさき', targetSlug: 'kaitenzushi-misaki-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '大起水産', targetSlug: 'daiki-suisan-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '平禄寿司', targetSlug: 'heiroku-sushi-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'すたみな太郎', targetSlug: 'sutamina-taro-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'ワンカルビ', targetSlug: 'one-karubi-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'かみむら牧場', targetSlug: 'kamimura-bokujo-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '熟成焼肉いちばん', targetSlug: 'jukusei-yakiniku-ichiban-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'じゅうじゅうカルビ', targetSlug: 'jujukarubi-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '串家物語', targetSlug: 'kushiya-monogatari-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'スイーツパラダイス', targetSlug: 'sweets-paradise-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'しゃぶ菜', targetSlug: 'shabusai-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'シェーキーズ', targetSlug: 'shakeys-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '牛繁', targetSlug: 'gyushige-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '道とん堀', targetSlug: 'dohtonbori-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '千房', targetSlug: 'chibo-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'ぼてぢゅう', targetSlug: 'botejyu-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '矢場とん', targetSlug: 'yabaton-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '世界の山ちゃん', targetSlug: 'sekai-no-yamachan-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '鎌倉パスタ', targetSlug: 'kamakura-pasta-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'ポポラマーマ', targetSlug: 'popolamama-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'ゴーゴーカレー', targetSlug: 'gogo-curry-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '七輪房', targetSlug: 'shichirinbo-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '焼肉の和民', targetSlug: 'yakiniku-watami-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '平城苑', targetSlug: 'heijoen-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '叙々苑', targetSlug: 'jojoen-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '濵かつ', targetSlug: 'hamakatsu-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '551蓬莱', targetSlug: '551-horai-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '紅虎餃子房', targetSlug: 'benitora-gyozabo-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '魚魚丸', targetSlug: 'totomaru-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '磯丸水産', targetSlug: 'isomaru-suisan-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '風来坊', targetSlug: 'furaibou-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'エクセルシオール', targetSlug: 'excelsior-caffe-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'プロント', targetSlug: 'pronto-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: '倉式珈琲', targetSlug: 'kurashiki-coffee-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
+  { keyword: 'クリスピー・クリーム', targetSlug: 'krispy-kreme-kodzure-koryaku', priority: 8, addedAfterFreeze: true, addedAt: '2026-09-25' },
 ];
 
 // 長いキーワード優先（「知育玩具」>「知育」）、priority 高い順
@@ -235,7 +340,11 @@ const SORTED_RULES = [...LINK_RULES].sort((a, b) => {
  * @param currentSlug 現在の記事slug（自己リンク防止用）
  * @returns リンク注入後のHTML
  */
-export function injectInternalLinks(html: string, currentSlug: string): string {
+export function injectInternalLinks(
+  html: string,
+  currentSlug: string,
+  opts: { publishedAt?: string } = {},
+): string {
   let result = html;
   const usedKeywords = new Set<string>();
 
@@ -246,6 +355,10 @@ export function injectInternalLinks(html: string, currentSlug: string): string {
     if (usedKeywords.has(rule.keyword)) continue;
     // 実験の判定が終わるまで、凍結記事には新しいルールを足さない
     if (isFrozen && rule.addedAfterFreeze) continue;
+    // 新しく公開した記事から凍結面への被リンクを増やさない
+    if (!mayLinkToFrozen(rule.targetSlug, opts.publishedAt)) continue;
+    // カットオフ以降に足したルールは、凍結面（全件）では発火させない
+    if (FROZEN_TARGET_SLUGS.has(currentSlug) && rule.addedAt && rule.addedAt >= FROZEN_INBOUND_CUTOFF) continue;
 
     const escapedKeyword = escapeRegExp(rule.keyword);
     // マッチ: そのキーワードが既に<a>タグ内でない、見出し内でない、コードブロック内でない場所

@@ -352,6 +352,44 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
 
 ## 汚染の記録
 
+### 新設記事の本文キーワード・回遊チップから凍結面への自動リンク（2026-09-25 PR #266 / #267 / #268）— **7回目。本番反映後に発覚**
+
+**経路が新しい: md のリンクではなく描画層（`lib/auto-internal-links.ts` のキーワード自動リンクと
+`lib/article-cluster-links.ts` の回遊チップ）。`check-frozen.mjs` は md の差分しか見ないので検出できなかった。**
+凍結記事のファイルは1行も編集していない。
+
+#### A: 実験6の処置群への被リンク増（本番反映 2026-09-25 PR #266 〜 修正PRのデプロイまで）
+
+2026-09-25 公開の子ども料金記事・離乳食記事が本文で「しゃぶ葉」「焼肉きんぐ」に触れ、
+既存のキーワードルール（2026-08-27 追加）で凍結面へ自動リンクされた。
+
+| 凍結slug | 被リンクを張った新記事 |
+|---|---|
+| `shabuyou-kodzure-koryaku` | `kushiya-monogatari-kodomo-ryokin` `shabusai-kodomo-ryokin` `sutamina-taro-kodomo-ryokin` `shabuyou-rinyushoku-mochikomi` `yuzuan-rinyushoku-mochikomi`（キーワード）＋ `shabuyou-rinyushoku-mochikomi`（回遊チップ・双方向） |
+| `yakiniku-king-kodzure-koryaku` | `jujukarubi-kodomo-ryokin` `jukusei-yakiniku-ichiban-kodomo-ryokin` `kamimura-bokujo-kodomo-ryokin` `kushiya-monogatari-kodomo-ryokin` `one-karubi-kodomo-ryokin` `sutamina-taro-kodomo-ryokin` |
+
+→ **修正PRで描画層にガードを入れて取り消す**（`FROZEN_TARGET_SLUGS` / `FROZEN_INBOUND_CUTOFF` / `mayLinkToFrozen`）。
+公開日が 2026-09-25 以降の記事は凍結面へ自動リンク・回遊チップを張らない。カットオフ前の記事の既存リンクは変えない。
+露出は PR #266 のデプロイから修正PRのデプロイまで（**当日中・1日未満**）。実験6（タイトル単一変数・CTRで判定）の
+判定日 2026-09-30 の判定文に「2026-09-25に最大1日、新記事からの内部被リンクが最大6本増えた」事実を併記する。
+CTRへの直接の影響は小さいと見込むが、順位が動いていた場合は交絡として扱う。
+
+#### B: 凍結面の中に新ルールが発火する穴（本番未発生・修正PRで同時に塞いだ）
+
+新設チェーン63語のキーワードルールを足す際、`addedAfterFreeze` が `EXPERIMENT_FROZEN_SLUGS`（実験2〜4のみ）しか
+見ておらず、実験5〜8の凍結面（`shabuyou-kodzure-koryaku` 等）の本文にも新ルールが発火することをテストで確認した。
+→ ルールに `addedAt` を持たせ、カットオフ以降に足したルールは `FROZEN_TARGET_SLUGS`（凍結slug全件）で発火しないようにした。
+
+#### 駅ページへの自動リンク（`lib/article-station-link.ts`）
+
+2026-09-25 に追加・変更した全記事でシミュレーションし、凍結中の駅URL（実験7）に当たるものは0件だった。
+
+#### 再発防止
+
+- `FROZEN_TARGET_SLUGS`（`lib/auto-internal-links.ts`）は凍結slug全件の写し。**実験を足したら・判定が終わったら
+  ここも更新する**（`node scripts/check-frozen.mjs --list` と一致させる）。
+- 描画層（自動リンク・回遊チップ・駅リンク）のシミュレーションを `check-frozen.mjs` に組み込むのが本筋（未着手）。
+
 ### チェーン系モーニング拡張による凍結面へのリンク増（2026-09-21 PR #255 / #256 / #257）— **6回目。うち#255・#256は本番反映後に発覚**
 
 **またしても「新しい記事から凍結面へリンクを張った」型**（#241 と同じ経路）。
