@@ -365,13 +365,18 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
 
 | 凍結slug | 被リンクを張った新記事 |
 |---|---|
-| `shabuyou-kodzure-koryaku` | `kushiya-monogatari-kodomo-ryokin` `shabusai-kodomo-ryokin` `sutamina-taro-kodomo-ryokin` `shabuyou-rinyushoku-mochikomi` `yuzuan-rinyushoku-mochikomi`（キーワード）＋ `shabuyou-rinyushoku-mochikomi`（回遊チップ・双方向） |
-| `yakiniku-king-kodzure-koryaku` | `jujukarubi-kodomo-ryokin` `jukusei-yakiniku-ichiban-kodomo-ryokin` `kamimura-bokujo-kodomo-ryokin` `kushiya-monogatari-kodomo-ryokin` `one-karubi-kodomo-ryokin` `sutamina-taro-kodomo-ryokin` |
+| `shabuyou-kodzure-koryaku` | `shabuyou-rinyushoku-mochikomi`（本文キーワード1本＋回遊チップ・双方向） |
+| `yakiniku-king-kodzure-koryaku` | なし |
+
+> 訂正（2026-09-25・描画層シミュレーションで実測）: 初出では、しゃぶ葉・焼肉きんぐの語を含む新記事を単純な文字列一致で数え
+> 「最大6本」と書いたが、他の新記事ではこれらの語が既存の md リンク（関連記事一覧）の中にしか無く、本番の自動リンクは
+> `<a>` 内の語をスキップするため発火していなかった。**実際に増えたのは `shabuyou-kodzure-koryaku` への1記事分（キーワード1本＋チップ）と、
+> 同記事から出るチップ1本の計3リンク**（`node scripts/check-frozen.mjs --base d909ed50b` 相当の再現で確認）。
 
 → **修正PRで描画層にガードを入れて取り消す**（`FROZEN_TARGET_SLUGS` / `FROZEN_INBOUND_CUTOFF` / `mayLinkToFrozen`）。
 公開日が 2026-09-25 以降の記事は凍結面へ自動リンク・回遊チップを張らない。カットオフ前の記事の既存リンクは変えない。
 露出は PR #266 のデプロイから修正PRのデプロイまで（**当日中・1日未満**）。実験6（タイトル単一変数・CTRで判定）の
-判定日 2026-09-30 の判定文に「2026-09-25に最大1日、新記事からの内部被リンクが最大6本増えた」事実を併記する。
+判定日 2026-09-30 の判定文に「2026-09-25に最大1日、`shabuyou-kodzure-koryaku` に新記事1本からの内部被リンク（キーワード1本＋回遊チップ）が増え、同記事から新記事へのチップが1本出ていた」事実を併記する。`yakiniku-king-kodzure-koryaku` は影響なし。
 CTRへの直接の影響は小さいと見込むが、順位が動いていた場合は交絡として扱う。
 
 #### B: 凍結面の中に新ルールが発火する穴（本番未発生・修正PRで同時に塞いだ）
@@ -388,7 +393,9 @@ CTRへの直接の影響は小さいと見込むが、順位が動いていた�
 
 - `FROZEN_TARGET_SLUGS`（`lib/auto-internal-links.ts`）は凍結slug全件の写し。**実験を足したら・判定が終わったら
   ここも更新する**（`node scripts/check-frozen.mjs --list` と一致させる）。
-- 描画層（自動リンク・回遊チップ・駅リンク）のシミュレーションを `check-frozen.mjs` に組み込むのが本筋（未着手）。
+- 描画層（自動リンク・回遊チップ・駅リンク）のシミュレーションを `check-frozen.mjs` に組み込んだ（2026-09-25）。
+  `node scripts/check-frozen.mjs` が base と作業ツリーの全記事で3経路のリンク先を計算し、凍結面・比較基準への被リンクと
+  凍結記事から出るリンクの増減で落ちる（約20秒。`FROZEN_TARGET_SLUGS` と凍結slug全件のずれも [S] で落ちる）。
 
 ### チェーン系モーニング拡張による凍結面へのリンク増（2026-09-21 PR #255 / #256 / #257）— **6回目。うち#255・#256は本番反映後に発覚**
 
