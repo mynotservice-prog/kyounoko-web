@@ -1,0 +1,7 @@
+key	name	判定	温め	お湯	ベビーフード販売	公式の文言（原文そのまま・80字以内）	sourceUrl	陽性対照URL	作成slug
+yoshinoya	吉野家	記載なし	記載なし	記載なし	記載なし	（該当記載なし）FAQ実在（商品/店舗・出店/株主優待/通販/アプリ）に子連れ項目なし。サイト内検索(WP API)で「離乳食」「ベビーフード」0件	https://www.yoshinoya.com/contact/	https://www.yoshinoya.com/menu/pokemori/pokemori-kids-gyu-don/	
+matsuya	松屋	記載なし（FAQ無し）	記載なし	記載なし	記載なし	（該当記載なし）運営元FAQページは枠のみで設問が描画されない（ulAiWidgetが空・読込スクリプト無し）。matsuyafoods.co.jp側にFAQ無し	https://www.matsuyafoods-holdings.co.jp/faq/	https://www.matsuyafoods-holdings.co.jp/faq/	
+sukiya	すき家	記載なし	記載なし	記載なし	記載なし	（該当記載なし）FAQに「お子様セットがあるお店を教えてください。」はあるが離乳食の項目なし。sitemap内83ページ走査でも該当語なし	https://www.sukiya.jp/faq.html	https://www.sukiya.jp/faq.html	
+nakau	なか卯	記載なし（FAQ無し）	記載なし	記載なし	記載なし	（該当記載なし）公式サイトにFAQページ無し（/jp/faq/はS3 AccessDenied）。お問い合わせページは窓口案内のみ	https://www.nakau.co.jp/jp/contact/index.html	https://maps.nakau.co.jp/jp/index.html	
+tenya	天丼てんや	記載なし	記載なし	記載なし	記載なし	（該当記載なし）FAQ実在（5問：優待券/決済/たれ/弁当レンジ/揚げ玉）だが子連れ項目は一切なし。店舗ページ・sitemap掲載ページにも子連れ記載なし	https://www.tenya.co.jp/faq/	https://www.tenya.co.jp/faq/	
+hanamaru-udon	はなまるうどん	記載なし	記載なし	記載なし	記載なし	（該当記載なし）FAQ実在（23問）に子連れ項目なし。/about/の「離乳食として…好まれています」は持ち込みの記述ではない	https://www.hanamaruudon.com/faq/	https://www.hanamaruudon.com/menu/03_5.html	

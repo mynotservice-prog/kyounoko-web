@@ -1,0 +1,7 @@
+key	name	判定	温め	お湯	ベビーフード販売	公式の文言（原文そのまま・80字以内）	sourceUrl	陽性対照URL	作成slug
+cocoichi	CoCo壱番屋	記載なし	記載なし	記載なし	記載なし	（該当なし。お客様Q&A全101件をAPIで全件取得、離乳食・子連れ項目なし）	https://ichibanya.sc.01core.app/faq/	https://www.ichibanya.co.jp/menu/list.html?cid=7	
+kourakuen	幸楽苑	明記OK	記載なし	記載なし	記載なし	幸楽苑以外の商品の持込は原則お断りしています。 ただし、当社で食事をされる場合、赤ちゃんのミルクや離乳食は持ち込みできます。	https://www.kourakuen.co.jp/faq/about-store-service	https://www.kourakuen.co.jp/faq	kourakuen-rinyushoku-mochikomi
+ringerhut	リンガーハット	記載なし	記載なし	記載なし	記載なし	（該当なし。よくあるご質問4区分に離乳食・子連れ項目なし）	https://www.ringerhut.jp/customer_support/faq/	https://www.ringerhut.jp/menu/kids/	
+hidakaya	日高屋	記載なし	記載なし	記載なし	記載なし	（FAQ無し。公式サイトマップにFAQ・子連れ案内なし）	https://hidakaya.hiday.co.jp/info/sitemap.html	https://hidakaya.hiday.co.jp/hits/ja/menu/1/detail/139.html	
+marugenramen	丸源ラーメン	条件付きOK	記載なし	明記あり	明記あり	食物アレルギーをお持ちのお客様は遠慮なさらずにお食事をお持ち込みください。	https://www.syodai-marugen.jp/menu/kids	https://www.syodai-marugen.jp/faq	marugenramen-rinyushoku-mochikomi
+tenkaippin	天下一品	記載なし	記載なし	記載なし	記載なし	（FAQ無し。KOTTERIキッズページは子ども椅子・お子様メニューのみ）	https://www.tenkaippin.co.jp/sitemap/	https://www.tenkaippin.co.jp/kotteri_kids/	
