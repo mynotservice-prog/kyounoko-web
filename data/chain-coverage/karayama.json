@@ -1,0 +1,910 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "karayama",
+  "name": "からやま",
+  "sourceUrl": "https://shop.arclandservice.co.jp/ae-shop/spot/lists",
+  "method": "公式店舗検索（shop.arclandservice.co.jp/ae-shop）の一覧APIでカテゴリ「からやま」の全店舗を列挙し、「施設情報」の条件「駐車場あり」で絞り込んだ結果に含まれる店舗を店舗ごとに集計（国内店のみ）",
+  "total": 131,
+  "note": "海外店は除外。店舗検索の設備に当たる条件は「駐車場あり」のみで、子ども用の椅子・おむつ替え台等の項目は無い。国内住所（都道府県で始まる住所）に当たらない14件を除外（一覧 145 件）。業態カテゴリ内訳: からやま131店",
+  "facilities": {
+    "parking": {
+      "count": 119,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "からやま さいたま宮原店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1531",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 横須賀佐原インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1532",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 元住吉店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1533",
+      "facilities": []
+    },
+    {
+      "name": "からやま 相模原上鶴間店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1535",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 木更津店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1538",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 多摩永山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1539",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 武石インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1541",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 静岡草薙店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1542",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 金沢御影店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1544",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 埼玉杉戸店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1545",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 船橋市場通り店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1547",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 八王子並木町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1548",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 姫路中地店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1549",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 埼玉深谷店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1550",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 市原白金通り店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1551",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 長岡店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1552",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 金沢久安店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1553",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 調布深大寺店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1554",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま ふじみ野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1555",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 所沢北野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1556",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 前橋元総社店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1557",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 岐阜茜部店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1558",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 船橋薬円台店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1560",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 大阪生野小路店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1562",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 青森大野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1563",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 小金井前原店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1564",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 群馬太田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1566",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 岐阜各務原店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1567",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま ムサシ金沢店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1570",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 茨城ひたちなか店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1571",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 上越店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1572",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 石川小松店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1573",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 千葉祐光店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1574",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 岡崎伊賀店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1577",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 水戸城南店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1578",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 東住吉今川店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1579",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 福井二の宮店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1581",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 門真柳町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1582",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 柏崎店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1583",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 河内長野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1584",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 新潟小新店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1585",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 尼崎下坂部店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1586",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 茨木耳原店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1589",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 浜松幸店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1590",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 栃木小山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1591",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 埼玉本庄店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1594",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 富山飯野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1599",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 三条店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1600",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 岸和田土生店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1605",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 春日部ユリノキ通り店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1606",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 西葛西店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1613",
+      "facilities": []
+    },
+    {
+      "name": "からやま 青梅新町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1615",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 南越谷店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1616",
+      "facilities": []
+    },
+    {
+      "name": "からやま 高知潮江店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1618",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 寝屋川宇谷店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1621",
+      "facilities": []
+    },
+    {
+      "name": "からやま 越谷４号バイパス店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1623",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 堺長曽根店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1625",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 藤沢石川店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1634",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 前橋天川大島店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1638",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 福山新涯店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1641",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 長野丹波島店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1645",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 大東赤井店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1647",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 亀田インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1648",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 仙台中田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1649",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 泉大津春日町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1650",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 千歳店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1651",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 大阪狭山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1655",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 伊丹野間店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1656",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 愛知刈谷店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2004",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 川崎宿河原店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2007",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 川崎馬絹店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2010",
+      "facilities": []
+    },
+    {
+      "name": "からやま 藤沢柄沢店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2012",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 愛知高浜店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2013",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 横浜仲町台店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2014",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 保谷店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2016",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 手稲富丘店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2019",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 川口長蔵店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2021",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 東松戸店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2024",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 名古屋弥富通店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2027",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 川崎アゼリア店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2034",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 練馬駅前店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2036",
+      "facilities": []
+    },
+    {
+      "name": "からやま 埼玉上尾店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2042",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 横浜十日市場店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2044",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま横浜新羽店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2045",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 愛知北名古屋店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2047",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 札幌東雁来店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2048",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 四日市北店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2049",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 博多東那珂店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2051",
+      "facilities": []
+    },
+    {
+      "name": "からやま 岐阜長良店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2056",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 相模原店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=594",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 新橋店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=595",
+      "facilities": []
+    },
+    {
+      "name": "からやま 浦和美園店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=596",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 溝の口店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=599",
+      "facilities": []
+    },
+    {
+      "name": "からやま 武蔵村山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=608",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 南橋本店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=610",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 札幌白石店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=617",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 名古屋太平通店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=620",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 江別弥生町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=621",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま さいたま太田窪店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=625",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 伊奈店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=626",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 川口西青木店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=627",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 愛知岩倉店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=632",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 海老名店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=634",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま さいたま町谷店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=635",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 愛知小牧店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=636",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 愛知蟹江店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=637",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 川越古市場店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=638",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 名古屋森孝店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=639",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 昭島店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=643",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 日野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=644",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 岐阜入舟町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=646",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 豊田元宮店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=647",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 北赤羽店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=648",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 埼玉戸田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=650",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 千葉流山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=651",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 足立鹿浜店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=654",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 野田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=655",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 武蔵小杉店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=657",
+      "facilities": []
+    },
+    {
+      "name": "からやま 日吉店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=658",
+      "facilities": []
+    },
+    {
+      "name": "からやま 愛知大府店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=659",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 横浜長津田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=663",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 石神井公園店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=664",
+      "facilities": []
+    },
+    {
+      "name": "からやま 岐阜羽島店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=665",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 愛知西尾店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=669",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 千葉印西店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=670",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 春日井篠木町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=681",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 戸塚深谷町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=683",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 名古屋平針店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=684",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 神奈川綾瀬店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=688",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 横浜日野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=689",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "からやま 札幌新琴似店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=696",
+      "facilities": [
+        "parking"
+      ]
+    }
+  ]
+}

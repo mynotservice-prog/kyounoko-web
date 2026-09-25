@@ -1,0 +1,477 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "wendys-first-kitchen",
+  "name": "ウェンディーズ・ファーストキッチン",
+  "sourceUrl": "https://wendys-firstkitchen.co.jp/shop/",
+  "method": "公式店舗一覧のエリア別結果ページの表で、「サービス」欄にキッズセットのアイコン（「条件から探す」のキッズセットと同じ）がある店舗を集計",
+  "total": 74,
+  "note": "店名に【WFK】とある店舗だけを数えた。開業前のため除外: 甚目寺【WFK】（2026-10-08オープン）",
+  "facilities": {
+    "kidsMenu": {
+      "count": 45,
+      "label": "キッズセット"
+    }
+  },
+  "stores": [
+    {
+      "name": "中目黒駅前【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=214",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ココリア多摩センター【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=213",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "吉祥寺【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=25",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "京王フレンテ新宿3丁目【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=20",
+      "facilities": []
+    },
+    {
+      "name": "ぷらりと京王府中【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=28",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "アクアシティお台場【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=207",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "錦糸町【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=7",
+      "facilities": []
+    },
+    {
+      "name": "nonowa西国分寺【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=202",
+      "facilities": []
+    },
+    {
+      "name": "京王聖蹟桜ヶ丘ショッピングセンター【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=101",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "代々木駅前【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=15",
+      "facilities": []
+    },
+    {
+      "name": "笹塚【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=16",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "五反田東口【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=10",
+      "facilities": []
+    },
+    {
+      "name": "新宿南口【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=22",
+      "facilities": []
+    },
+    {
+      "name": "立川フロム中武【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=30",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "下北沢【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=18",
+      "facilities": []
+    },
+    {
+      "name": "町田パークアベニュー【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=33",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "用賀【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=19",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "飯田橋ラムラ【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=23",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "池袋北口【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=24",
+      "facilities": []
+    },
+    {
+      "name": "外苑前【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=5",
+      "facilities": []
+    },
+    {
+      "name": "曙橋【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=165",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日比谷シャンテ前【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=1",
+      "facilities": []
+    },
+    {
+      "name": "赤坂見附【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=4",
+      "facilities": []
+    },
+    {
+      "name": "六本木【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=3",
+      "facilities": []
+    },
+    {
+      "name": "上野浅草口【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=6",
+      "facilities": []
+    },
+    {
+      "name": "自由が丘【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=17",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "東陽町西友【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=34",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "町田多摩境ミスターマックスショッピングセンター【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=36",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "稲城アメリアショッピングセンター【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=37",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "川崎【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=39",
+      "facilities": []
+    },
+    {
+      "name": "129平塚田村【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=211",
+      "facilities": []
+    },
+    {
+      "name": "戸塚まるい食遊館【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=46",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "新横浜【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=42",
+      "facilities": []
+    },
+    {
+      "name": "西武東戸塚S.C.【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=62",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "港北ノースポート・モール【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=57",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "平塚【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=52",
+      "facilities": []
+    },
+    {
+      "name": "大船【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=47",
+      "facilities": []
+    },
+    {
+      "name": "鶴見ミナール【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=43",
+      "facilities": []
+    },
+    {
+      "name": "横浜パルナード【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=41",
+      "facilities": []
+    },
+    {
+      "name": "日吉【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=40",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "港南台バーズ【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=45",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "伊勢原イトーヨーカドー【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=53",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "藤が丘【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=160",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "スーパービバホーム長津田【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=58",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "金沢シーサイドイオン【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=60",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "横浜四季の森フォレオ【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=61",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "海老名ビナウォーク【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=63",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "そよら湘南茅ヶ崎【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=152",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "桶川ベニバナウォーク【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=147",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "菖蒲モラージュ【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=81",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "川越アトレ【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=71",
+      "facilities": []
+    },
+    {
+      "name": "アリオ川口【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=161",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "大宮西口【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=68",
+      "facilities": []
+    },
+    {
+      "name": "マルエツ三郷中央【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=77",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "稲毛駅前【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=84",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "蘇我駅前【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=83",
+      "facilities": []
+    },
+    {
+      "name": "浦安西友【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=86",
+      "facilities": []
+    },
+    {
+      "name": "鎌ヶ谷イオンショッピングセンター【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=91",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ちはら台ユニモ【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=94",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "高崎【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=209",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "26泉佐野安松【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=212",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "寝屋川ビバモール【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=131",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "岩出【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=208",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ブルメール舞多聞【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=114",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "梅田芝田町【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=100",
+      "facilities": []
+    },
+    {
+      "name": "京都新京極【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=105",
+      "facilities": []
+    },
+    {
+      "name": "天保山マーケットプレース【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=109",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "難波戎橋【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=102",
+      "facilities": []
+    },
+    {
+      "name": "京都大丸前【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=104",
+      "facilities": []
+    },
+    {
+      "name": "富山ファボーレ【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=206",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "長野駅前店【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=216",
+      "facilities": []
+    },
+    {
+      "name": "清水エスパルスドリームプラザ店【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=215",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "アピタ安城南【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=118",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "鳴海なるぱーく【WFK】",
+      "url": "https://wendys-firstkitchen.co.jp/shop/map.php?shopid=168",
+      "facilities": [
+        "kidsMenu"
+      ]
+    }
+  ]
+}

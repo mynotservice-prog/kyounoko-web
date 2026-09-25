@@ -1,0 +1,2711 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "gindaco",
+  "name": "築地銀だこ",
+  "sourceUrl": "https://stores.gindaco.com/",
+  "method": "公式店舗検索（can-ly製）の店舗一覧API（/v2/directories/7/shops/search、ブランド絞り込み）で全店舗を取得し、各店舗の詳細ページ（/detail/<storeCode>/）の __NEXT_DATA__ にある絞り込み条件「設備/サービス」の checked を集計",
+  "note": "銀だこハイボール酒場・銀だこ点心酒場は別ブランドとして除外。持ち帰り中心の店舗も「築地銀だこ」ブランドなら含む。「個室有」は築地銀だこ全店で0件のため未入力と区別できず数えない。絞り込み条件「設備/サービス」の項目: テイクアウト・イートイン・駐車場・デリバリー・6個入りのみ取扱・8個入りのみ取扱・店舗限定たこ焼取扱・だんらんパック16個入り取扱・だんらんパック24個入り取扱・各種ドリンク取扱・クロワッサンたい焼取扱・クロワッサンたい焼取扱（平日限定）・薄皮たい焼取扱・焼そば取扱（平日限定）・焼そば取扱・アルコール提供・ドライブスルー・ランチ取扱・居酒屋・カウンター席・立飲み・喫煙BOX有・予約可・個室有・テーブル席。閉店扱い1件（築地銀だこ 泉パークタウンタピオ店）を除外。詳細ページに「設備/サービス」の値が無い店舗 3 件（設備なしとして集計）。公式の絞り込みはブラウザ側で行われサーバ側の件数が無いため、絞り込み件数との突き合わせは未実施",
+  "total": 416,
+  "facilities": {
+    "parking": {
+      "count": 307,
+      "label": "駐車場"
+    }
+  },
+  "stores": [
+    {
+      "name": "銀だこハイボール酒場 E・ZO店",
+      "url": "https://stores.gindaco.com/detail/14011141/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ BiVi仙台駅東口店",
+      "url": "https://stores.gindaco.com/detail/1010424/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ CIAL鶴見店",
+      "url": "https://stores.gindaco.com/detail/1010963/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ I.CITY21店",
+      "url": "https://stores.gindaco.com/detail/1010191/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ JR高槻駅店",
+      "url": "https://stores.gindaco.com/detail/1010584/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ LUSCA小田原店",
+      "url": "https://stores.gindaco.com/detail/1010717/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ MARK IS 福岡ももち店",
+      "url": "https://stores.gindaco.com/detail/1010897/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ MEGAドン・キホーテUNY会津若松店",
+      "url": "https://stores.gindaco.com/detail/1010490/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ MEGAドン・キホーテUNY佐原東店",
+      "url": "https://stores.gindaco.com/detail/1010081/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ MEGAドン・キホーテUNY石和店",
+      "url": "https://stores.gindaco.com/detail/1010464/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ MEGAドン･キホーテUNY伊勢崎東店",
+      "url": "https://stores.gindaco.com/detail/1010025/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ MIDORI長野店",
+      "url": "https://stores.gindaco.com/detail/1010770/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ Mav行徳店",
+      "url": "https://stores.gindaco.com/detail/1011049/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ THE OUTLETS SHONAN HIRATSUKA店",
+      "url": "https://stores.gindaco.com/detail/1011090/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ THEMALL仙台長町店",
+      "url": "https://stores.gindaco.com/detail/1011127/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ THEMALL郡山店",
+      "url": "https://stores.gindaco.com/detail/1010213/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ TXグランドアベニューおおたかの森店",
+      "url": "https://stores.gindaco.com/detail/1011134/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ZOZOマリンスタジアム店（2F コンコース）",
+      "url": "https://stores.gindaco.com/detail/1019034/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ あべのキューズモール店",
+      "url": "https://stores.gindaco.com/detail/1011045/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ あまがさきキューズモール店",
+      "url": "https://stores.gindaco.com/detail/1011058/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ あみプレミアム・アウトレット店",
+      "url": "https://stores.gindaco.com/detail/1010859/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ けやきウォーク前橋店",
+      "url": "https://stores.gindaco.com/detail/1010514/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ させぼ五番街店",
+      "url": "https://stores.gindaco.com/detail/1010728/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ たまプラーザテラス店",
+      "url": "https://stores.gindaco.com/detail/1010997/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ つくば谷田部ドライブイン店",
+      "url": "https://stores.gindaco.com/detail/1011026/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ まるい食遊館戸塚店",
+      "url": "https://stores.gindaco.com/detail/1010300/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ みずほPayPayドーム福岡店（3階 ホーム・3塁エリア）",
+      "url": "https://stores.gindaco.com/detail/1019513/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ みのおキューズモール店",
+      "url": "https://stores.gindaco.com/detail/1011125/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ みらい長崎ココウォーク店",
+      "url": "https://stores.gindaco.com/detail/1010557/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ ゆめタウン丸亀店",
+      "url": "https://stores.gindaco.com/detail/1010790/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ゆめタウン光の森店",
+      "url": "https://stores.gindaco.com/detail/1010839/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ ゆめタウン別府店",
+      "url": "https://stores.gindaco.com/detail/1010762/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ ゆめタウン広島店",
+      "url": "https://stores.gindaco.com/detail/1010742/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ゆめタウン廿日市店",
+      "url": "https://stores.gindaco.com/detail/1010751/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ゆめタウン徳島店",
+      "url": "https://stores.gindaco.com/detail/1011128/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ ゆめタウン福山店",
+      "url": "https://stores.gindaco.com/detail/1010958/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ゆめタウン高松店",
+      "url": "https://stores.gindaco.com/detail/1011081/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ ららぽーとTOKYO-BAY西館店",
+      "url": "https://stores.gindaco.com/detail/1010724/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ららぽーと名古屋みなとアクルス店",
+      "url": "https://stores.gindaco.com/detail/1010894/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ららぽーと安城店",
+      "url": "https://stores.gindaco.com/detail/1011074/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ ららぽーと富士見店",
+      "url": "https://stores.gindaco.com/detail/1010752/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ららぽーと新三郷店",
+      "url": "https://stores.gindaco.com/detail/1010795/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ららぽーと柏の葉店",
+      "url": "https://stores.gindaco.com/detail/1010573/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ららぽーと沼津店",
+      "url": "https://stores.gindaco.com/detail/1010934/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ららぽーと海老名店",
+      "url": "https://stores.gindaco.com/detail/1010764/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ららぽーと湘南平塚店",
+      "url": "https://stores.gindaco.com/detail/1010807/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ららぽーと磐田店",
+      "url": "https://stores.gindaco.com/detail/1010583/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ららぽーと豊洲店",
+      "url": "https://stores.gindaco.com/detail/1010972/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アクアウォーク大垣店",
+      "url": "https://stores.gindaco.com/detail/1010530/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アトレ大森店",
+      "url": "https://stores.gindaco.com/detail/1010639/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アトレ松戸店",
+      "url": "https://stores.gindaco.com/detail/1010527/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アピタ大仁店",
+      "url": "https://stores.gindaco.com/detail/1010179/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アピタ宇都宮店",
+      "url": "https://stores.gindaco.com/detail/1010174/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アピタ富山東店",
+      "url": "https://stores.gindaco.com/detail/1010021/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ アピタ島田店",
+      "url": "https://stores.gindaco.com/detail/1010041/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アピタ新潟亀田店",
+      "url": "https://stores.gindaco.com/detail/1010204/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ アピタ新潟西店",
+      "url": "https://stores.gindaco.com/detail/1010374/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ アピタ木更津店",
+      "url": "https://stores.gindaco.com/detail/1010220/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アピタ東海荒尾店",
+      "url": "https://stores.gindaco.com/detail/1010343/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アピタ松任店",
+      "url": "https://stores.gindaco.com/detail/1010285/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ アピタ松阪三雲店",
+      "url": "https://stores.gindaco.com/detail/1010214/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アピタ福井大和田店",
+      "url": "https://stores.gindaco.com/detail/1010193/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ アピタ金沢文庫店",
+      "url": "https://stores.gindaco.com/detail/1011027/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アミュプラザおおいた店",
+      "url": "https://stores.gindaco.com/detail/1010772/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ アミュプラザくまもと店",
+      "url": "https://stores.gindaco.com/detail/1010981/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アミュプラザ鹿児島店",
+      "url": "https://stores.gindaco.com/detail/1010432/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アメリア町田根岸店",
+      "url": "https://stores.gindaco.com/detail/1010636/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アリオ上尾店",
+      "url": "https://stores.gindaco.com/detail/1010711/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アリオ亀有店",
+      "url": "https://stores.gindaco.com/detail/1010666/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アリオ北砂店",
+      "url": "https://stores.gindaco.com/detail/1010609/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アリオ川口店",
+      "url": "https://stores.gindaco.com/detail/1010763/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アリオ市原店",
+      "url": "https://stores.gindaco.com/detail/1010726/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アリオ札幌店",
+      "url": "https://stores.gindaco.com/detail/1010624/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ アリオ橋本店",
+      "url": "https://stores.gindaco.com/detail/1010844/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アリオ深谷店",
+      "url": "https://stores.gindaco.com/detail/1010311/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アリオ葛西店",
+      "url": "https://stores.gindaco.com/detail/1010896/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アリオ蘇我店",
+      "url": "https://stores.gindaco.com/detail/1010888/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アリオ西新井店",
+      "url": "https://stores.gindaco.com/detail/1010571/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ アル・プラザベル店",
+      "url": "https://stores.gindaco.com/detail/1010479/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ アル・プラザ草津店",
+      "url": "https://stores.gindaco.com/detail/1011048/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオンいわき店",
+      "url": "https://stores.gindaco.com/detail/1010150/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンスタイル仙台卸町店",
+      "url": "https://stores.gindaco.com/detail/1010913/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンスーパーセンター十和田店",
+      "url": "https://stores.gindaco.com/detail/1010469/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンスーパーセンター鈎取店",
+      "url": "https://stores.gindaco.com/detail/1010495/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンセントラルスクエア静岡店",
+      "url": "https://stores.gindaco.com/detail/1011116/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンタウンさくら店",
+      "url": "https://stores.gindaco.com/detail/1010492/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンタウンユーカリが丘店",
+      "url": "https://stores.gindaco.com/detail/1011119/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオンタウン姶良店",
+      "url": "https://stores.gindaco.com/detail/1010812/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンタウン守谷店",
+      "url": "https://stores.gindaco.com/detail/1010544/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンタウン津城山店",
+      "url": "https://stores.gindaco.com/detail/1010605/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンタウン野田七光台店",
+      "url": "https://stores.gindaco.com/detail/1010414/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンタウン黒崎店",
+      "url": "https://stores.gindaco.com/detail/1010749/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオンモールKYOTO店",
+      "url": "https://stores.gindaco.com/detail/1010852/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモールいわき小名浜店",
+      "url": "https://stores.gindaco.com/detail/1010905/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモールかほく店",
+      "url": "https://stores.gindaco.com/detail/1010562/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオンモールつくば店",
+      "url": "https://stores.gindaco.com/detail/1010699/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモールとなみ店",
+      "url": "https://stores.gindaco.com/detail/1010788/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオンモールむさし村山店",
+      "url": "https://stores.gindaco.com/detail/1010706/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモールりんくう泉南店",
+      "url": "https://stores.gindaco.com/detail/1010437/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモールナゴヤドーム前店",
+      "url": "https://stores.gindaco.com/detail/1010686/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール三川店",
+      "url": "https://stores.gindaco.com/detail/1010314/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール上尾店",
+      "url": "https://stores.gindaco.com/detail/1010992/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール下田店",
+      "url": "https://stores.gindaco.com/detail/1010520/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール与野店",
+      "url": "https://stores.gindaco.com/detail/1010441/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール久御山店",
+      "url": "https://stores.gindaco.com/detail/1010664/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール京都五条店",
+      "url": "https://stores.gindaco.com/detail/1010410/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール京都桂川店",
+      "url": "https://stores.gindaco.com/detail/1011004/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール伊丹昆陽店",
+      "url": "https://stores.gindaco.com/detail/1010634/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール佐久平店",
+      "url": "https://stores.gindaco.com/detail/1010645/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール佐野新都市店",
+      "url": "https://stores.gindaco.com/detail/1010372/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール倉敷店",
+      "url": "https://stores.gindaco.com/detail/1010874/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール北大路店",
+      "url": "https://stores.gindaco.com/detail/1010813/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール北戸田店",
+      "url": "https://stores.gindaco.com/detail/1010005/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール千葉ニュータウン店",
+      "url": "https://stores.gindaco.com/detail/1010491/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール各務原店",
+      "url": "https://stores.gindaco.com/detail/1010740/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール名取店",
+      "url": "https://stores.gindaco.com/detail/1010954/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール四日市北店",
+      "url": "https://stores.gindaco.com/detail/1010863/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール四條畷店",
+      "url": "https://stores.gindaco.com/detail/1010766/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール土浦店",
+      "url": "https://stores.gindaco.com/detail/1010581/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール大和郡山1F店",
+      "url": "https://stores.gindaco.com/detail/1011130/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール大和郡山3F店",
+      "url": "https://stores.gindaco.com/detail/1010810/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール大日店",
+      "url": "https://stores.gindaco.com/detail/1010505/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール大曲店",
+      "url": "https://stores.gindaco.com/detail/1010559/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール大阪ドームシティ店",
+      "url": "https://stores.gindaco.com/detail/1010707/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール大高店",
+      "url": "https://stores.gindaco.com/detail/1010741/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール天童店",
+      "url": "https://stores.gindaco.com/detail/1010734/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール太田店",
+      "url": "https://stores.gindaco.com/detail/1010525/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール宮崎店",
+      "url": "https://stores.gindaco.com/detail/1010457/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール富士宮店",
+      "url": "https://stores.gindaco.com/detail/1010273/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール富谷店",
+      "url": "https://stores.gindaco.com/detail/1010366/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール小山店",
+      "url": "https://stores.gindaco.com/detail/1010561/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール山形南店",
+      "url": "https://stores.gindaco.com/detail/1010316/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール岡山店",
+      "url": "https://stores.gindaco.com/detail/1010754/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオンモール岡崎店",
+      "url": "https://stores.gindaco.com/detail/1010756/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール川口前川店",
+      "url": "https://stores.gindaco.com/detail/1010195/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール川口店",
+      "url": "https://stores.gindaco.com/detail/1011008/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール常滑店",
+      "url": "https://stores.gindaco.com/detail/1010796/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール幕張新都心店",
+      "url": "https://stores.gindaco.com/detail/1010730/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール広島府中3F店",
+      "url": "https://stores.gindaco.com/detail/1011063/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオンモール広島祇園店",
+      "url": "https://stores.gindaco.com/detail/1010577/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール座間店",
+      "url": "https://stores.gindaco.com/detail/1010875/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール徳島店",
+      "url": "https://stores.gindaco.com/detail/1010861/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール成田店",
+      "url": "https://stores.gindaco.com/detail/1010306/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール扶桑店",
+      "url": "https://stores.gindaco.com/detail/1010391/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオンモール新利府北館店",
+      "url": "https://stores.gindaco.com/detail/1011012/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール新利府南館店",
+      "url": "https://stores.gindaco.com/detail/1010998/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール新小松店",
+      "url": "https://stores.gindaco.com/detail/1010858/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオンモール新潟亀田インター店",
+      "url": "https://stores.gindaco.com/detail/1010531/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオンモール新瑞橋店",
+      "url": "https://stores.gindaco.com/detail/1010598/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール新発田店",
+      "url": "https://stores.gindaco.com/detail/1010765/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオンモール日の出1F店",
+      "url": "https://stores.gindaco.com/detail/1010969/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール日の出3F店",
+      "url": "https://stores.gindaco.com/detail/1010729/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール旭川西店",
+      "url": "https://stores.gindaco.com/detail/1010630/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール旭川駅前店",
+      "url": "https://stores.gindaco.com/detail/1010774/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール明和店",
+      "url": "https://stores.gindaco.com/detail/1010722/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール春日部店",
+      "url": "https://stores.gindaco.com/detail/1010696/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール木更津店",
+      "url": "https://stores.gindaco.com/detail/1010755/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール木曽川店",
+      "url": "https://stores.gindaco.com/detail/1010814/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール札幌発寒店",
+      "url": "https://stores.gindaco.com/detail/1010653/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール札幌苗穂店",
+      "url": "https://stores.gindaco.com/detail/1010552/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオンモール東久留米店",
+      "url": "https://stores.gindaco.com/detail/1010953/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール東員店",
+      "url": "https://stores.gindaco.com/detail/1010725/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール東浦店",
+      "url": "https://stores.gindaco.com/detail/1010955/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール松本店",
+      "url": "https://stores.gindaco.com/detail/1010881/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール柏店",
+      "url": "https://stores.gindaco.com/detail/1010497/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール橿原店",
+      "url": "https://stores.gindaco.com/detail/1010880/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール水戸内原店",
+      "url": "https://stores.gindaco.com/detail/1010940/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール沖縄ライカム店",
+      "url": "https://stores.gindaco.com/detail/1010768/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール津南店",
+      "url": "https://stores.gindaco.com/detail/1010909/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール津田沼North店",
+      "url": "https://stores.gindaco.com/detail/1010396/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール浜松市野店",
+      "url": "https://stores.gindaco.com/detail/1010627/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール浜松志都呂店",
+      "url": "https://stores.gindaco.com/detail/1010443/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール浦和美園店",
+      "url": "https://stores.gindaco.com/detail/1010496/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール熱田店",
+      "url": "https://stores.gindaco.com/detail/1010951/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール甲府昭和1F店",
+      "url": "https://stores.gindaco.com/detail/1010890/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール白山店",
+      "url": "https://stores.gindaco.com/detail/1011010/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオンモール盛岡南店",
+      "url": "https://stores.gindaco.com/detail/1010503/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール盛岡店",
+      "url": "https://stores.gindaco.com/detail/1010793/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール直方店",
+      "url": "https://stores.gindaco.com/detail/1010451/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオンモール石巻店",
+      "url": "https://stores.gindaco.com/detail/1010515/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール福岡伊都店",
+      "url": "https://stores.gindaco.com/detail/1010777/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール福岡店",
+      "url": "https://stores.gindaco.com/detail/1010831/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール福津店",
+      "url": "https://stores.gindaco.com/detail/1010670/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオンモール筑紫野店",
+      "url": "https://stores.gindaco.com/detail/1010568/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール羽生店",
+      "url": "https://stores.gindaco.com/detail/1010532/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール船橋店",
+      "url": "https://stores.gindaco.com/detail/1010669/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール苫小牧店",
+      "url": "https://stores.gindaco.com/detail/1010453/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール茨木店",
+      "url": "https://stores.gindaco.com/detail/1010292/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール草津店",
+      "url": "https://stores.gindaco.com/detail/1010769/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール豊川店",
+      "url": "https://stores.gindaco.com/detail/1011104/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオンモール鈴鹿店",
+      "url": "https://stores.gindaco.com/detail/1010746/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール銚子店",
+      "url": "https://stores.gindaco.com/detail/1010600/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール須坂店",
+      "url": "https://stores.gindaco.com/detail/1011098/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオンモール香椎浜店",
+      "url": "https://stores.gindaco.com/detail/1011037/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール高の原店",
+      "url": "https://stores.gindaco.com/detail/1010521/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール高岡東館店",
+      "url": "https://stores.gindaco.com/detail/1010659/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオンモール高岡西館店",
+      "url": "https://stores.gindaco.com/detail/1011086/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオンモール高崎店",
+      "url": "https://stores.gindaco.com/detail/1010506/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンモール鹿児島店",
+      "url": "https://stores.gindaco.com/detail/1010529/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンレイクタウンkaze店",
+      "url": "https://stores.gindaco.com/detail/1010851/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオンレイクタウンmori店",
+      "url": "https://stores.gindaco.com/detail/1010556/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン一関店",
+      "url": "https://stores.gindaco.com/detail/1010575/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン上田店",
+      "url": "https://stores.gindaco.com/detail/1010428/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン上越店",
+      "url": "https://stores.gindaco.com/detail/1010268/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオン久里浜店",
+      "url": "https://stores.gindaco.com/detail/1010794/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン入間店",
+      "url": "https://stores.gindaco.com/detail/1010389/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン北見店",
+      "url": "https://stores.gindaco.com/detail/1010172/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン北谷店",
+      "url": "https://stores.gindaco.com/detail/1010295/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン千歳店",
+      "url": "https://stores.gindaco.com/detail/1010245/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン古河店",
+      "url": "https://stores.gindaco.com/detail/1010014/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン品川シーサイド店",
+      "url": "https://stores.gindaco.com/detail/1010340/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン大井店",
+      "url": "https://stores.gindaco.com/detail/1010020/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン山形北店",
+      "url": "https://stores.gindaco.com/detail/1010550/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン市川妙典店",
+      "url": "https://stores.gindaco.com/detail/1010044/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン帯広店",
+      "url": "https://stores.gindaco.com/detail/1010281/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン御所野店",
+      "url": "https://stores.gindaco.com/detail/1010242/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン戸畑店",
+      "url": "https://stores.gindaco.com/detail/1010167/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオン新浦安店",
+      "url": "https://stores.gindaco.com/detail/1010578/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン春日井店",
+      "url": "https://stores.gindaco.com/detail/1010336/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン札幌元町ショッピングセンター店",
+      "url": "https://stores.gindaco.com/detail/1010319/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン札幌桑園店",
+      "url": "https://stores.gindaco.com/detail/1010342/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン札幌藻岩店",
+      "url": "https://stores.gindaco.com/detail/1010713/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン東神奈川店",
+      "url": "https://stores.gindaco.com/detail/1010231/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン東雲店",
+      "url": "https://stores.gindaco.com/detail/1010703/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン板橋店",
+      "url": "https://stores.gindaco.com/detail/1010140/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン橋本店",
+      "url": "https://stores.gindaco.com/detail/1010105/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン江別店",
+      "url": "https://stores.gindaco.com/detail/1010247/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン焼津店",
+      "url": "https://stores.gindaco.com/detail/1010344/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン相模原ショッピングセンター店",
+      "url": "https://stores.gindaco.com/detail/1011095/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン県央店",
+      "url": "https://stores.gindaco.com/detail/1010250/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオン福島店",
+      "url": "https://stores.gindaco.com/detail/1010112/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン秋田中央店",
+      "url": "https://stores.gindaco.com/detail/1010331/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン米沢店",
+      "url": "https://stores.gindaco.com/detail/1010123/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン茅ヶ崎店",
+      "url": "https://stores.gindaco.com/detail/1010056/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン豊川開運通店",
+      "url": "https://stores.gindaco.com/detail/1010015/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン那覇店",
+      "url": "https://stores.gindaco.com/detail/1010276/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン金沢店",
+      "url": "https://stores.gindaco.com/detail/1010121/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオン釧路店",
+      "url": "https://stores.gindaco.com/detail/1010971/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イオン長岡店",
+      "url": "https://stores.gindaco.com/detail/1010753/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イオン青森店",
+      "url": "https://stores.gindaco.com/detail/1010184/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イクスピアリ店",
+      "url": "https://stores.gindaco.com/detail/1010408/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イズミヤ和歌山店",
+      "url": "https://stores.gindaco.com/detail/1010185/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イトーヨーカドー三郷店",
+      "url": "https://stores.gindaco.com/detail/1010850/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イトーヨーカドー四街道店",
+      "url": "https://stores.gindaco.com/detail/1010930/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イトーヨーカドー国領店",
+      "url": "https://stores.gindaco.com/detail/1010855/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イトーヨーカドー大和鶴間店",
+      "url": "https://stores.gindaco.com/detail/1010991/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イトーヨーカドー曳舟店",
+      "url": "https://stores.gindaco.com/detail/1010750/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イトーヨーカドー武蔵境店",
+      "url": "https://stores.gindaco.com/detail/1010228/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イトーヨーカドー武蔵小金井店",
+      "url": "https://stores.gindaco.com/detail/1010801/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イトーヨーカドー立場店",
+      "url": "https://stores.gindaco.com/detail/1011102/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ イーアスつくば店",
+      "url": "https://stores.gindaco.com/detail/1011059/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ イーアス高尾店",
+      "url": "https://stores.gindaco.com/detail/1010975/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ウィング上大岡店",
+      "url": "https://stores.gindaco.com/detail/1010252/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ エキア朝霞店",
+      "url": "https://stores.gindaco.com/detail/1010604/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ エクセル水戸みなみ店",
+      "url": "https://stores.gindaco.com/detail/1010887/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ エスコンフィールド店（1階 1塁側）",
+      "url": "https://stores.gindaco.com/detail/1011031/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ エミオ練馬店",
+      "url": "https://stores.gindaco.com/detail/1010224/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ エミフルMASAKI店",
+      "url": "https://stores.gindaco.com/detail/1010547/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ エルムショッピングセンター店",
+      "url": "https://stores.gindaco.com/detail/1010400/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ カラフルタウン岐阜店",
+      "url": "https://stores.gindaco.com/detail/1010201/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ カリーノ菊陽店",
+      "url": "https://stores.gindaco.com/detail/1010999/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ キャナルシティ博多店",
+      "url": "https://stores.gindaco.com/detail/1010548/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ グッデイ宮崎店",
+      "url": "https://stores.gindaco.com/detail/1010361/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ グランツリー武蔵小杉店",
+      "url": "https://stores.gindaco.com/detail/1010760/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ コクーン新都心店",
+      "url": "https://stores.gindaco.com/detail/1010538/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ サンエー具志川メインシティー店",
+      "url": "https://stores.gindaco.com/detail/1010835/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ サンエー経塚シティ店",
+      "url": "https://stores.gindaco.com/detail/1011089/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ サンエー西原シティ店",
+      "url": "https://stores.gindaco.com/detail/1011120/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ サントムーン柿田川店",
+      "url": "https://stores.gindaco.com/detail/1010791/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ サンピアザ新さっぽろ店",
+      "url": "https://stores.gindaco.com/detail/1010838/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ シーナシーナ屯田店",
+      "url": "https://stores.gindaco.com/detail/1010798/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ジョイフル本田千代田店",
+      "url": "https://stores.gindaco.com/detail/1010929/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ジョイフル本田宇都宮店",
+      "url": "https://stores.gindaco.com/detail/1010866/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ジョイフル本田瑞穂店",
+      "url": "https://stores.gindaco.com/detail/1010873/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ジョイホンパーク吉岡店",
+      "url": "https://stores.gindaco.com/detail/1011050/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ スマーク伊勢崎店",
+      "url": "https://stores.gindaco.com/detail/1010563/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ スーパーアークス中島店",
+      "url": "https://stores.gindaco.com/detail/1010518/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ スーパーアークス北野店",
+      "url": "https://stores.gindaco.com/detail/1010128/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ スーパーアークス菊水店",
+      "url": "https://stores.gindaco.com/detail/1010508/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ セブンパークアリオ柏店",
+      "url": "https://stores.gindaco.com/detail/1010809/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ダイバーシティ東京プラザ店",
+      "url": "https://stores.gindaco.com/detail/1010668/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ テラスモール湘南店",
+      "url": "https://stores.gindaco.com/detail/1010658/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ トナリエつくばスクエア店",
+      "url": "https://stores.gindaco.com/detail/1010449/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ トレッサ横浜店",
+      "url": "https://stores.gindaco.com/detail/1010542/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ニッケコルトンプラザ店",
+      "url": "https://stores.gindaco.com/detail/1010579/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ニトリモール枚方店",
+      "url": "https://stores.gindaco.com/detail/1010806/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ヒルズウォーク徳重ガーデンズ店",
+      "url": "https://stores.gindaco.com/detail/1010617/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ビバシティ彦根店",
+      "url": "https://stores.gindaco.com/detail/1010886/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ビバモール厚木南インター店",
+      "url": "https://stores.gindaco.com/detail/1010865/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ビバモール赤間店",
+      "url": "https://stores.gindaco.com/detail/1011000/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ ビーンズ武蔵浦和店",
+      "url": "https://stores.gindaco.com/detail/1010758/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ ピオニウォーク東松山店",
+      "url": "https://stores.gindaco.com/detail/1010601/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ フォリオ吉岡店",
+      "url": "https://stores.gindaco.com/detail/1010386/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ フォレオ大津一里山店",
+      "url": "https://stores.gindaco.com/detail/1010932/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ フジグラン北島店",
+      "url": "https://stores.gindaco.com/detail/1010274/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ フジグラン松山店",
+      "url": "https://stores.gindaco.com/detail/1010127/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ フジグラン重信店",
+      "url": "https://stores.gindaco.com/detail/1010294/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ フジグラン野市店",
+      "url": "https://stores.gindaco.com/detail/1010321/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ フレスポスズランプラザ帯広店",
+      "url": "https://stores.gindaco.com/detail/1011115/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ フロム中武店",
+      "url": "https://stores.gindaco.com/detail/1010058/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ ブレイス新田店",
+      "url": "https://stores.gindaco.com/detail/1010299/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ プライムツリー赤池店",
+      "url": "https://stores.gindaco.com/detail/1010884/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ プレ葉ウォーク浜北店",
+      "url": "https://stores.gindaco.com/detail/1010565/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ベルモール宇都宮店",
+      "url": "https://stores.gindaco.com/detail/1011034/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ベルーナドーム店（駅前広場、1塁側、3塁側）",
+      "url": "https://stores.gindaco.com/detail/1019200/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ ホクレン新発寒店",
+      "url": "https://stores.gindaco.com/detail/1010348/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ マックスバリュグランド千種若宮大通店",
+      "url": "https://stores.gindaco.com/detail/1010458/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ マルイファミリー志木店",
+      "url": "https://stores.gindaco.com/detail/1010103/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ マルエツかまた店",
+      "url": "https://stores.gindaco.com/detail/1010145/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ マーケットシティ桐生店",
+      "url": "https://stores.gindaco.com/detail/1010477/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ マーサ21店",
+      "url": "https://stores.gindaco.com/detail/1011046/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ ミスターマックス藤沢店",
+      "url": "https://stores.gindaco.com/detail/1010499/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ モザイクモール港北店",
+      "url": "https://stores.gindaco.com/detail/1010594/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ モラージュ佐賀店",
+      "url": "https://stores.gindaco.com/detail/1010368/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ モラージュ菖蒲店",
+      "url": "https://stores.gindaco.com/detail/1010827/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ モリタウン店",
+      "url": "https://stores.gindaco.com/detail/1010435/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ユアエルム八千代台店",
+      "url": "https://stores.gindaco.com/detail/1010597/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ユニモちはら台店",
+      "url": "https://stores.gindaco.com/detail/1010811/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ヨシヅヤ名西店",
+      "url": "https://stores.gindaco.com/detail/1010509/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ヨドバシAKIBA店",
+      "url": "https://stores.gindaco.com/detail/1010808/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ヨークフーズ石神井公園店",
+      "url": "https://stores.gindaco.com/detail/1010719/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ ラクーア店",
+      "url": "https://stores.gindaco.com/detail/1010378/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ラザウォーク甲斐双葉店",
+      "url": "https://stores.gindaco.com/detail/1010576/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ラゾーナ川崎プラザ店",
+      "url": "https://stores.gindaco.com/detail/1010931/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ラピア八戸店",
+      "url": "https://stores.gindaco.com/detail/1010060/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ リコパ東大和店",
+      "url": "https://stores.gindaco.com/detail/1011075/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ リバーサイド千秋店",
+      "url": "https://stores.gindaco.com/detail/1010516/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ リーフウォーク稲沢店",
+      "url": "https://stores.gindaco.com/detail/1010574/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ ルミネ大宮店",
+      "url": "https://stores.gindaco.com/detail/1010170/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ワカバウォーク店",
+      "url": "https://stores.gindaco.com/detail/1010423/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ ヴェルサウォーク西尾店",
+      "url": "https://stores.gindaco.com/detail/1010739/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 三井アウトレットパーク岡崎店",
+      "url": "https://stores.gindaco.com/detail/1011092/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 三井アウトレットパーク札幌北広島店",
+      "url": "https://stores.gindaco.com/detail/1010988/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 三和座間東原店",
+      "url": "https://stores.gindaco.com/detail/1010657/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 三宮店",
+      "url": "https://stores.gindaco.com/detail/1010660/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 三軒茶屋店",
+      "url": "https://stores.gindaco.com/detail/1010595/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 中京競馬場店",
+      "url": "https://stores.gindaco.com/detail/1019461/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 中央林間店",
+      "url": "https://stores.gindaco.com/detail/1010797/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 中山競馬場（場内）店",
+      "url": "https://stores.gindaco.com/detail/1019479/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 中延店",
+      "url": "https://stores.gindaco.com/detail/1010115/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 丸井溝口店",
+      "url": "https://stores.gindaco.com/detail/1010468/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 京都競馬場店",
+      "url": "https://stores.gindaco.com/detail/1019515/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 佐野プレミアム・アウトレット店",
+      "url": "https://stores.gindaco.com/detail/1010365/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 入谷駅前店",
+      "url": "https://stores.gindaco.com/detail/1010778/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 八王子北口店",
+      "url": "https://stores.gindaco.com/detail/1010416/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 函館昭和店",
+      "url": "https://stores.gindaco.com/detail/1010275/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 北千住マルイ店",
+      "url": "https://stores.gindaco.com/detail/1010411/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 南大沢店",
+      "url": "https://stores.gindaco.com/detail/1010592/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 南町田グランベリーパーク店",
+      "url": "https://stores.gindaco.com/detail/1010928/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 国立競技場店",
+      "url": "https://stores.gindaco.com/detail/1011131/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 土岐プレミアム・アウトレット店",
+      "url": "https://stores.gindaco.com/detail/1010447/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 大井競馬場店",
+      "url": "https://stores.gindaco.com/detail/1019041/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 大分D-プラザ店",
+      "url": "https://stores.gindaco.com/detail/1010415/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 大分トキハわさだ店",
+      "url": "https://stores.gindaco.com/detail/1010221/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 大宮ステラタウン店",
+      "url": "https://stores.gindaco.com/detail/1010603/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 大須商店街店",
+      "url": "https://stores.gindaco.com/detail/1010173/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 天台ドライブイン店",
+      "url": "https://stores.gindaco.com/detail/1011011/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 富山ファボーレ店",
+      "url": "https://stores.gindaco.com/detail/1010332/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 小倉競馬場店",
+      "url": "https://stores.gindaco.com/detail/1019516/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 小山ドライブスルー店",
+      "url": "https://stores.gindaco.com/detail/1011023/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 小田原ダイナシティ店",
+      "url": "https://stores.gindaco.com/detail/1010358/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 岡山表町店",
+      "url": "https://stores.gindaco.com/detail/1010675/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 市川店",
+      "url": "https://stores.gindaco.com/detail/1010996/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 希望ヶ丘ドライブイン店",
+      "url": "https://stores.gindaco.com/detail/1011015/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 平塚河内ドライブイン店",
+      "url": "https://stores.gindaco.com/detail/1011007/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 広島段原SC店",
+      "url": "https://stores.gindaco.com/detail/1010667/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 府中ル・シーニュ店",
+      "url": "https://stores.gindaco.com/detail/1010466/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 成田空港店",
+      "url": "https://stores.gindaco.com/detail/1010900/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 手稲店",
+      "url": "https://stores.gindaco.com/detail/1011047/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 新潟競馬場店",
+      "url": "https://stores.gindaco.com/detail/1019471/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 新静岡セノバ店",
+      "url": "https://stores.gindaco.com/detail/1010655/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 本厚木ミロード店",
+      "url": "https://stores.gindaco.com/detail/1010661/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 札幌すすきの店",
+      "url": "https://stores.gindaco.com/detail/1010488/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 東京サマーランド店",
+      "url": "https://stores.gindaco.com/detail/1019048/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 東京ソラマチ店",
+      "url": "https://stores.gindaco.com/detail/1010673/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 東京ド―ム店（1階外野）・大衆酒場（4階内野）",
+      "url": "https://stores.gindaco.com/detail/1011117/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 東京競馬場店",
+      "url": "https://stores.gindaco.com/detail/1019453/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 東刈谷ドライブスルー店",
+      "url": "https://stores.gindaco.com/detail/1010687/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 東急スクエア青葉台店",
+      "url": "https://stores.gindaco.com/detail/1010259/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 東越谷店",
+      "url": "https://stores.gindaco.com/detail/1010923/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 柏の葉公園ドライブイン店",
+      "url": "https://stores.gindaco.com/detail/1011016/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 森下駅前店",
+      "url": "https://stores.gindaco.com/detail/1010640/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 楽天モバイル 最強パーク宮城店 （３階バックネット裏）・ライト側店（１塁側外周）",
+      "url": "https://stores.gindaco.com/detail/1019042/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 楽市街道店",
+      "url": "https://stores.gindaco.com/detail/1010286/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 洛北阪急スクエア店",
+      "url": "https://stores.gindaco.com/detail/1010968/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 浜田山店",
+      "url": "https://stores.gindaco.com/detail/1011038/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 浦和コルソ店",
+      "url": "https://stores.gindaco.com/detail/1010535/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 浦添PARCO CITY店",
+      "url": "https://stores.gindaco.com/detail/1010941/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 清水西高町ドライブイン店",
+      "url": "https://stores.gindaco.com/detail/1011017/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 熊谷ニットーモール店",
+      "url": "https://stores.gindaco.com/detail/1010692/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 町田マルイ店",
+      "url": "https://stores.gindaco.com/detail/1010804/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 目黒不動前店",
+      "url": "https://stores.gindaco.com/detail/1010917/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 相模原中央店",
+      "url": "https://stores.gindaco.com/detail/1010990/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 相模大野ステーションスクエア店",
+      "url": "https://stores.gindaco.com/detail/1010536/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 神宮球場 TOKYO STADIUM店（GATE1）",
+      "url": "https://stores.gindaco.com/detail/1019486/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 神宮球場店（GATE4）",
+      "url": "https://stores.gindaco.com/detail/1019191/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 神戸ハーバーランドumie店",
+      "url": "https://stores.gindaco.com/detail/1010704/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 神戸三田プレミアム・アウトレット店",
+      "url": "https://stores.gindaco.com/detail/1010949/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 福田屋ショッピングプラザ宇都宮店",
+      "url": "https://stores.gindaco.com/detail/1011088/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 築地本店",
+      "url": "https://stores.gindaco.com/detail/1010868/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 経堂店",
+      "url": "https://stores.gindaco.com/detail/1010585/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 草加ヴァリエ店",
+      "url": "https://stores.gindaco.com/detail/1011060/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 葛西店",
+      "url": "https://stores.gindaco.com/detail/1010695/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 西友浦安店",
+      "url": "https://stores.gindaco.com/detail/1010106/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 西鉄久留米店",
+      "url": "https://stores.gindaco.com/detail/1011084/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 調布パルコ店",
+      "url": "https://stores.gindaco.com/detail/1010194/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 豊田メグリア店",
+      "url": "https://stores.gindaco.com/detail/1010261/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 那覇メインプレイス店",
+      "url": "https://stores.gindaco.com/detail/1011061/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 那須ガーデンアウトレット店",
+      "url": "https://stores.gindaco.com/detail/1010682/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "築地銀だこ 金町駅前店",
+      "url": "https://stores.gindaco.com/detail/1010979/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 長崎屋柏店",
+      "url": "https://stores.gindaco.com/detail/1010008/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 阪神甲子園球場店（3階1塁側内野、3階3塁側内野、3階レフト側外野）",
+      "url": "https://stores.gindaco.com/detail/1010698/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 阪神競馬場店",
+      "url": "https://stores.gindaco.com/detail/1019470/",
+      "facilities": []
+    },
+    {
+      "name": "築地銀だこ 鳥栖プレミアム・アウトレット店",
+      "url": "https://stores.gindaco.com/detail/1010412/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "銀だこKITCHEN 名古屋mozoワンダーシティ店",
+      "url": "https://stores.gindaco.com/detail/1016204/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "銀だこKITCHEN イオンモール広島府中1F店",
+      "url": "https://stores.gindaco.com/detail/1010462/",
+      "facilities": [
+        "parking"
+      ]
+    }
+  ]
+}

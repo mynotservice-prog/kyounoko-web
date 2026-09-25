@@ -1,0 +1,1149 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "ippudo",
+  "name": "一風堂",
+  "sourceUrl": "https://stores.ippudo.com/",
+  "method": "公式店舗ページ（stores.ippudo.com）のサイトマップから国内の日本語版店舗ページを全件取得し、各ページの「サービス」欄の項目を集計",
+  "total": 156,
+  "note": "RAMEN EXPRESS 博多一風堂・一風堂KAY 等を含む。海外店（英字コードのページ）と多言語版ページは除外。「サービス」欄の項目: 店舗限定ラーメンあり58・クレジットカード利用可能142・交通系ICカード利用可能129・駐車場あり54・外国語メニューあり89・お子様用椅子あり112・お子様メニューあり62・駐車サービスあり39・プラントベースラーメンあり7。「駐車サービスあり」（提携駐車場の割引）は自店の駐車場ではないため数えない。「サービス」欄が無い店舗 7 件（該当項目なしとして集計）",
+  "facilities": {
+    "kidsChair": {
+      "count": 112,
+      "label": "お子様用椅子あり"
+    },
+    "kidsMenu": {
+      "count": 62,
+      "label": "お子様メニューあり"
+    },
+    "parking": {
+      "count": 54,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "一風堂 金沢FORUS店",
+      "url": "https://stores.ippudo.com/1136",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 桶川店",
+      "url": "https://stores.ippudo.com/1137",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 ゆめタウン飯塚店",
+      "url": "https://stores.ippudo.com/1138",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 イオンタウン松原店",
+      "url": "https://stores.ippudo.com/1139",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 銀座インズ店",
+      "url": "https://stores.ippudo.com/1140",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 新綱島スクエア店",
+      "url": "https://stores.ippudo.com/1141",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 イオンモールKYOTO店",
+      "url": "https://stores.ippudo.com/1142",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 みのおキューズモール店",
+      "url": "https://stores.ippudo.com/1143",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 梅田店 はなれ",
+      "url": "https://stores.ippudo.com/1454",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 SOCOLA所沢店",
+      "url": "https://stores.ippudo.com/1146",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 ハラカド店",
+      "url": "https://stores.ippudo.com/1144",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 モレラ岐阜店",
+      "url": "https://stores.ippudo.com/1145",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 淀屋橋店",
+      "url": "https://stores.ippudo.com/1828",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 原宿竹下通り店",
+      "url": "https://stores.ippudo.com/1147",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 銀座東店",
+      "url": "https://stores.ippudo.com/1149",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 アトレ亀戸店",
+      "url": "https://stores.ippudo.com/1150",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 イーアスつくば店",
+      "url": "https://stores.ippudo.com/1148",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 ニトリモール相模原店",
+      "url": "https://stores.ippudo.com/1151",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 福岡空港店（大名本店別館）",
+      "url": "https://stores.ippudo.com/1153",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 前橋店",
+      "url": "https://stores.ippudo.com/1154",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 安城店",
+      "url": "https://stores.ippudo.com/1829",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 博多駅店",
+      "url": "https://stores.ippudo.com/1057",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 上野広小路店",
+      "url": "https://stores.ippudo.com/1826",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 池袋店",
+      "url": "https://stores.ippudo.com/1035",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 湘南SEASIDE",
+      "url": "https://stores.ippudo.com/1037",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 クロスガーデン川崎店",
+      "url": "https://stores.ippudo.com/1058",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 大宮店",
+      "url": "https://stores.ippudo.com/1817",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 千葉店",
+      "url": "https://stores.ippudo.com/1812",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 なんば店",
+      "url": "https://stores.ippudo.com/1811",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 堀江店",
+      "url": "https://stores.ippudo.com/1830",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 池田店",
+      "url": "https://stores.ippudo.com/1039",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 姫路店",
+      "url": "https://stores.ippudo.com/1056",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 岡山店",
+      "url": "https://stores.ippudo.com/1814",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 広島袋町店",
+      "url": "https://stores.ippudo.com/1048",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 名古屋平針店",
+      "url": "https://stores.ippudo.com/1815",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 刈谷店",
+      "url": "https://stores.ippudo.com/1827",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 松山店",
+      "url": "https://stores.ippudo.com/1034",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 金山店",
+      "url": "https://stores.ippudo.com/1816",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 新潟店",
+      "url": "https://stores.ippudo.com/1038",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 金沢香林坊店",
+      "url": "https://stores.ippudo.com/1030",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 盛岡店",
+      "url": "https://stores.ippudo.com/1152",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 仙台西口店",
+      "url": "https://stores.ippudo.com/1128",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 札幌狸小路店",
+      "url": "https://stores.ippudo.com/1804",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 山王店",
+      "url": "https://stores.ippudo.com/1008",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 恵比寿店",
+      "url": "https://stores.ippudo.com/1005",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 銀座店",
+      "url": "https://stores.ippudo.com/1123",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 六本木店",
+      "url": "https://stores.ippudo.com/1809",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 高田馬場店",
+      "url": "https://stores.ippudo.com/1124",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 明大前店",
+      "url": "https://stores.ippudo.com/1018",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 駒沢公園店",
+      "url": "https://stores.ippudo.com/1019",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 吉祥寺店",
+      "url": "https://stores.ippudo.com/1106",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "一風堂 ルミネ立川店",
+      "url": "https://stores.ippudo.com/1099",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 セレオ八王子店",
+      "url": "https://stores.ippudo.com/1098",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 横浜ポルタ店",
+      "url": "https://stores.ippudo.com/1016",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 みなとみらい東急スクエア店",
+      "url": "https://stores.ippudo.com/1021",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 たまプラーザ店",
+      "url": "https://stores.ippudo.com/1044",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 川越インター店",
+      "url": "https://stores.ippudo.com/1093",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 成田空港店",
+      "url": "https://stores.ippudo.com/1096",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 梅田店",
+      "url": "https://stores.ippudo.com/1022",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 京都ポルタ店",
+      "url": "https://stores.ippudo.com/1095",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 西宮北口店",
+      "url": "https://stores.ippudo.com/1047",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 倉敷店",
+      "url": "https://stores.ippudo.com/1046",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 ekie広島店",
+      "url": "https://stores.ippudo.com/1097",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 札幌平岡店",
+      "url": "https://stores.ippudo.com/1802",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 浜松町スタンド",
+      "url": "https://stores.ippudo.com/1088",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 五反田東口店",
+      "url": "https://stores.ippudo.com/1087",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 太宰府インター店",
+      "url": "https://stores.ippudo.com/1808",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 大名本店",
+      "url": "https://stores.ippudo.com/1001",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 ルミネエスト新宿店",
+      "url": "https://stores.ippudo.com/1127",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 新宿アイランドタワー店",
+      "url": "https://stores.ippudo.com/1075",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 二子玉川ライズS.C.店",
+      "url": "https://stores.ippudo.com/1084",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 浅草雷門通り店",
+      "url": "https://stores.ippudo.com/1155",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 豊洲店",
+      "url": "https://stores.ippudo.com/1079",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 キュービックプラザ新横浜店",
+      "url": "https://stores.ippudo.com/1122",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 本厚木ミロードイースト店",
+      "url": "https://stores.ippudo.com/1076",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 ラスカ茅ヶ崎店",
+      "url": "https://stores.ippudo.com/1085",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 ららぽーとTOKYO-BAY店",
+      "url": "https://stores.ippudo.com/1073",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 イクスピアリ店",
+      "url": "https://stores.ippudo.com/1077",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 三宮店",
+      "url": "https://stores.ippudo.com/1089",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 名古屋本店",
+      "url": "https://stores.ippudo.com/1821",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 名古屋驛麺通り店",
+      "url": "https://stores.ippudo.com/1503",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 JR浜松駅店",
+      "url": "https://stores.ippudo.com/1502",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 JR静岡駅店",
+      "url": "https://stores.ippudo.com/1501",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 諏訪インター店",
+      "url": "https://stores.ippudo.com/1071",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 武石インター店",
+      "url": "https://stores.ippudo.com/1179",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 沖縄パルコシティ店",
+      "url": "https://stores.ippudo.com/1102",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 東京ドームシティ ラクーア店",
+      "url": "https://stores.ippudo.com/1104",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 佐野プレミアム・アウトレット店",
+      "url": "https://stores.ippudo.com/3032",
+      "facilities": []
+    },
+    {
+      "name": "RAMEN EXPRESS 博多一風堂 三井アウトレットパーク仙台港店",
+      "url": "https://stores.ippudo.com/3041",
+      "facilities": []
+    },
+    {
+      "name": "IPPUDO RAMEN EXPRESS 静岡SA",
+      "url": "https://stores.ippudo.com/1064",
+      "facilities": []
+    },
+    {
+      "name": "RAMEN EXPRESS 博多一風堂 ららぽーと名古屋みなとアクルス店",
+      "url": "https://stores.ippudo.com/3047",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 イオンモール京都桂川店",
+      "url": "https://stores.ippudo.com/3027",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 アスティ岐阜店",
+      "url": "https://stores.ippudo.com/1110",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 プライムツリー赤池店",
+      "url": "https://stores.ippudo.com/3040",
+      "facilities": []
+    },
+    {
+      "name": "RAMEN EXPRESS 博多一風堂 ららぽーと沼津店",
+      "url": "https://stores.ippudo.com/3052",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 鳥栖プレミアム・アウトレット店",
+      "url": "https://stores.ippudo.com/3022",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 神戸三田プレミアム・アウトレット店",
+      "url": "https://stores.ippudo.com/3044",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 りんくうプレミアム・アウトレット店",
+      "url": "https://stores.ippudo.com/3055",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 南町田グランベリーパーク店",
+      "url": "https://stores.ippudo.com/3054",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 ゆめタウン廿日市店",
+      "url": "https://stores.ippudo.com/3030",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 ゆめタウン徳島店",
+      "url": "https://stores.ippudo.com/3046",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 LECT広島店",
+      "url": "https://stores.ippudo.com/3035",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 エミフルMASAKI",
+      "url": "https://stores.ippudo.com/3026",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 ゆめタウン高松店",
+      "url": "https://stores.ippudo.com/3051",
+      "facilities": []
+    },
+    {
+      "name": "RAMEN EXPRESS 博多一風堂 東京ソラマチ店",
+      "url": "https://stores.ippudo.com/1065",
+      "facilities": []
+    },
+    {
+      "name": "RAMEN EXPRESS 博多一風堂 三井アウトレットパーク木更津店",
+      "url": "https://stores.ippudo.com/3025",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 越谷レイクタウン店",
+      "url": "https://stores.ippudo.com/3028",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 コクーンシティ店",
+      "url": "https://stores.ippudo.com/3029",
+      "facilities": []
+    },
+    {
+      "name": "RAMEN EXPRESS 博多一風堂 ららぽーと柏の葉店",
+      "url": "https://stores.ippudo.com/3049",
+      "facilities": []
+    },
+    {
+      "name": "RAMEN EXPRESS 博多 一風堂 ららぽーと愛知東郷店",
+      "url": "https://stores.ippudo.com/3056",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 イオンモール高知店",
+      "url": "https://stores.ippudo.com/3057",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 浅草橋本舗",
+      "url": "https://stores.ippudo.com/1107",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 ららぽーと横浜店",
+      "url": "https://stores.ippudo.com/1166",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 モザイクモール港北店",
+      "url": "https://stores.ippudo.com/1156",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 minamoa広島店",
+      "url": "https://stores.ippudo.com/1157",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 ルミネ大宮店",
+      "url": "https://stores.ippudo.com/1158",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 ウツノミヤテラス店",
+      "url": "https://stores.ippudo.com/1159",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 天王寺ミオ店",
+      "url": "https://stores.ippudo.com/1160",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 コースカベイサイドストアーズ横須賀店",
+      "url": "https://stores.ippudo.com/1161",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 COMMONS立川立飛店",
+      "url": "https://stores.ippudo.com/1162",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 高松松島店",
+      "url": "https://stores.ippudo.com/1163",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 イオンモール須坂店",
+      "url": "https://stores.ippudo.com/1164",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 イオンモール仙台上杉店",
+      "url": "https://stores.ippudo.com/1165",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 イオンモールKAGOSHIMA BAY店",
+      "url": "https://stores.ippudo.com/1168",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 アミュプラザ鹿児島店",
+      "url": "https://stores.ippudo.com/1167",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 小松店",
+      "url": "https://stores.ippudo.com/1169",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 カインズ太田丸山店",
+      "url": "https://stores.ippudo.com/1170",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 イオンモール津田沼South店",
+      "url": "https://stores.ippudo.com/1171",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 流山おおたかの森SC店",
+      "url": "https://stores.ippudo.com/1172",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一風堂 沖縄国際通り店",
+      "url": "https://stores.ippudo.com/1173",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 イオン八王子滝山店",
+      "url": "https://stores.ippudo.com/1174",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 MIREO仙台六丁の目店",
+      "url": "https://stores.ippudo.com/1175",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 神保町店",
+      "url": "https://stores.ippudo.com/1176",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 名駅３丁目店",
+      "url": "https://stores.ippudo.com/1832",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 ekubo京成 新鎌ケ谷店",
+      "url": "https://stores.ippudo.com/1177",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 minanoba川口店",
+      "url": "https://stores.ippudo.com/1178",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 亀有店",
+      "url": "https://stores.ippudo.com/1109",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 横浜泉店",
+      "url": "https://stores.ippudo.com/1111",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "一風堂 松本店",
+      "url": "https://stores.ippudo.com/1114",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂KAY 札幌ステラプレイス店",
+      "url": "https://stores.ippudo.com/1819",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 堺インター店",
+      "url": "https://stores.ippudo.com/1117",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 ゆめタウン久留米店",
+      "url": "https://stores.ippudo.com/1119",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 SMARK伊勢崎店",
+      "url": "https://stores.ippudo.com/1121",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "一風堂 THE OUTLETS KITAKYUSHU店",
+      "url": "https://stores.ippudo.com/1120",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 姪浜店",
+      "url": "https://stores.ippudo.com/1820",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 イオンモール福津店",
+      "url": "https://stores.ippudo.com/1126",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 サンリブシティ小倉店",
+      "url": "https://stores.ippudo.com/1118",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂KAY 千歳店",
+      "url": "https://stores.ippudo.com/1823",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 白山店",
+      "url": "https://stores.ippudo.com/1129",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 ゆめモール西条店",
+      "url": "https://stores.ippudo.com/1130",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 健軍東町店",
+      "url": "https://stores.ippudo.com/1131",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 四条烏丸店",
+      "url": "https://stores.ippudo.com/1132",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂KAY 発寒店",
+      "url": "https://stores.ippudo.com/1824",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 名古屋大須店",
+      "url": "https://stores.ippudo.com/1825",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "一風堂 THE OUTLETS SHONAN HIRATSUKA店",
+      "url": "https://stores.ippudo.com/1134",
+      "facilities": []
+    },
+    {
+      "name": "一風堂 樹モールプラザ川口店",
+      "url": "https://stores.ippudo.com/1133",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    }
+  ]
+}

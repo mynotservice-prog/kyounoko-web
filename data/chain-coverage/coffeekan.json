@@ -1,0 +1,1178 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "coffeekan",
+  "name": "珈琲館",
+  "sourceUrl": "https://c-united.co.jp/search/khk/",
+  "method": "公式店舗検索が読む店舗データ（/store/request_search/、日本全域）から珈琲館ブランドの店舗を取り出し、駐車場欄（台数）に1台以上の値がある店舗を集計",
+  "total": 197,
+  "note": "珈琲館 蔵・CAFE DI ESPRESSO 珈琲館等の別ブランドは除外。駐車場欄が「0」の店舗 3 件は数えない（公式画面の絞り込みでは値があれば該当扱いのため、画面上の件数はこの分多くなる）",
+  "facilities": {
+    "parking": {
+      "count": 88,
+      "label": "駐車場"
+    }
+  },
+  "stores": [
+    {
+      "name": "珈琲館 小岩南口店",
+      "url": "https://c-united.co.jp/store/detail/065004/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 飯能店",
+      "url": "https://c-united.co.jp/store/detail/065008/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 小岩北口店",
+      "url": "https://c-united.co.jp/store/detail/065009/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 川越新富町店",
+      "url": "https://c-united.co.jp/store/detail/065021/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 日立店",
+      "url": "https://c-united.co.jp/store/detail/065023/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 豊洲店",
+      "url": "https://c-united.co.jp/store/detail/065024/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 新板橋店",
+      "url": "https://c-united.co.jp/store/detail/065026/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 根津店",
+      "url": "https://c-united.co.jp/store/detail/065027/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 亀有店",
+      "url": "https://c-united.co.jp/store/detail/065031/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 三ノ輪店",
+      "url": "https://c-united.co.jp/store/detail/065032/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 菊川店",
+      "url": "https://c-united.co.jp/store/detail/065033/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 北千住東口店",
+      "url": "https://c-united.co.jp/store/detail/065034/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 町屋店",
+      "url": "https://c-united.co.jp/store/detail/065049/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 ユーカリが丘店",
+      "url": "https://c-united.co.jp/store/detail/065053/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 大宮西店",
+      "url": "https://c-united.co.jp/store/detail/065054/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 砂町銀座店",
+      "url": "https://c-united.co.jp/store/detail/065057/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 浜田山店",
+      "url": "https://c-united.co.jp/store/detail/065060/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 祐天寺店",
+      "url": "https://c-united.co.jp/store/detail/065061/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 大山店",
+      "url": "https://c-united.co.jp/store/detail/065062/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 戸越銀座店",
+      "url": "https://c-united.co.jp/store/detail/065068/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 宮原店",
+      "url": "https://c-united.co.jp/store/detail/065074/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 青砥店",
+      "url": "https://c-united.co.jp/store/detail/065080/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 王子西口店",
+      "url": "https://c-united.co.jp/store/detail/065084/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 鹿島店",
+      "url": "https://c-united.co.jp/store/detail/065089/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 行徳店",
+      "url": "https://c-united.co.jp/store/detail/065095/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 五香店",
+      "url": "https://c-united.co.jp/store/detail/065098/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 住吉店",
+      "url": "https://c-united.co.jp/store/detail/065105/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 新座店",
+      "url": "https://c-united.co.jp/store/detail/065108/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 旗の台店",
+      "url": "https://c-united.co.jp/store/detail/065110/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 浜松アクトプラザ店",
+      "url": "https://c-united.co.jp/store/detail/065118/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 いわき駅前ラトブ店",
+      "url": "https://c-united.co.jp/store/detail/065123/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 ららぽーと磐田店",
+      "url": "https://c-united.co.jp/store/detail/065125/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 戸塚西口店",
+      "url": "https://c-united.co.jp/store/detail/065126/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 内神田店",
+      "url": "https://c-united.co.jp/store/detail/065128/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 ＭＥＧＡドン・キホーテＵＮＹ本庄店",
+      "url": "https://c-united.co.jp/store/detail/065129/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 神田北口店",
+      "url": "https://c-united.co.jp/store/detail/065132/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 根津駅前店",
+      "url": "https://c-united.co.jp/store/detail/065135/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 北本店",
+      "url": "https://c-united.co.jp/store/detail/065136/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 大岡山店",
+      "url": "https://c-united.co.jp/store/detail/065139/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 木更津店",
+      "url": "https://c-united.co.jp/store/detail/065141/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 イーアスつくば店",
+      "url": "https://c-united.co.jp/store/detail/065142/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 大島店",
+      "url": "https://c-united.co.jp/store/detail/065144/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 イトーヨーカドー四つ木店",
+      "url": "https://c-united.co.jp/store/detail/065145/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 初台オペラ通り店",
+      "url": "https://c-united.co.jp/store/detail/065147/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 アピタ金沢文庫店",
+      "url": "https://c-united.co.jp/store/detail/065148/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 作新学院前店",
+      "url": "https://c-united.co.jp/store/detail/065149/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 アピタ飯田店",
+      "url": "https://c-united.co.jp/store/detail/065152/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 花蔵ビルＡＮＮＥＸ行田店",
+      "url": "https://c-united.co.jp/store/detail/065154/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 上北沢店",
+      "url": "https://c-united.co.jp/store/detail/065155/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 久喜イトーヨーカドー店",
+      "url": "https://c-united.co.jp/store/detail/065156/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 大井町店",
+      "url": "https://c-united.co.jp/store/detail/065157/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 メルサ自由が丘店",
+      "url": "https://c-united.co.jp/store/detail/065158/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 川崎富士見公園店",
+      "url": "https://c-united.co.jp/store/detail/065159/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 専大前本店",
+      "url": "https://c-united.co.jp/store/detail/066001/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 飯田橋店",
+      "url": "https://c-united.co.jp/store/detail/066002/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 神楽坂店",
+      "url": "https://c-united.co.jp/store/detail/066003/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 渋谷店",
+      "url": "https://c-united.co.jp/store/detail/066004/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 アピタ戸塚店",
+      "url": "https://c-united.co.jp/store/detail/066006/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 入間店",
+      "url": "https://c-united.co.jp/store/detail/066011/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 西川口並木店",
+      "url": "https://c-united.co.jp/store/detail/066013/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 南浦和店",
+      "url": "https://c-united.co.jp/store/detail/066015/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 川口北園町店",
+      "url": "https://c-united.co.jp/store/detail/066018/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 アリオ葛西店",
+      "url": "https://c-united.co.jp/store/detail/066026/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 浅草店",
+      "url": "https://c-united.co.jp/store/detail/066027/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 伊勢佐木町店",
+      "url": "https://c-united.co.jp/store/detail/066029/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 東浦和店",
+      "url": "https://c-united.co.jp/store/detail/066031/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 モラージュ柏店",
+      "url": "https://c-united.co.jp/store/detail/066038/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 イオンモール八千代緑が丘店",
+      "url": "https://c-united.co.jp/store/detail/066039/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 門前仲町店",
+      "url": "https://c-united.co.jp/store/detail/066043/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 春日部武里店",
+      "url": "https://c-united.co.jp/store/detail/066046/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 トナリエふじみ野店",
+      "url": "https://c-united.co.jp/store/detail/066047/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 太田南店",
+      "url": "https://c-united.co.jp/store/detail/066048/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 二子新地駅店",
+      "url": "https://c-united.co.jp/store/detail/066049/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 静岡パルシェ店",
+      "url": "https://c-united.co.jp/store/detail/066050/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 南行徳店",
+      "url": "https://c-united.co.jp/store/detail/066053/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 アトレ取手店",
+      "url": "https://c-united.co.jp/store/detail/066055/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 ビバモールさいたま新都心店",
+      "url": "https://c-united.co.jp/store/detail/066056/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 ベニバナウォーク桶川店",
+      "url": "https://c-united.co.jp/store/detail/066057/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 志村坂上店",
+      "url": "https://c-united.co.jp/store/detail/066059/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 浦和仲町店",
+      "url": "https://c-united.co.jp/store/detail/066061/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 ダイナシティ小田原店",
+      "url": "https://c-united.co.jp/store/detail/066062/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 大宮ステラモール店",
+      "url": "https://c-united.co.jp/store/detail/066063/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 グランデュオ蒲田店",
+      "url": "https://c-united.co.jp/store/detail/066064/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 祖師ヶ谷大蔵店",
+      "url": "https://c-united.co.jp/store/detail/066065/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 アトレ竹芝店",
+      "url": "https://c-united.co.jp/store/detail/066066/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 トーセイホテルココネ浅草蔵前店",
+      "url": "https://c-united.co.jp/store/detail/066067/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 トーセイホテルココネ上野御徒町店",
+      "url": "https://c-united.co.jp/store/detail/066068/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 茅ヶ崎今宿店",
+      "url": "https://c-united.co.jp/store/detail/066069/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 利府店",
+      "url": "https://c-united.co.jp/store/detail/066070/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 セレオ八王子店",
+      "url": "https://c-united.co.jp/store/detail/066071/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 イオンモール津田沼 North店",
+      "url": "https://c-united.co.jp/store/detail/066072/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 用賀駅ビル店",
+      "url": "https://c-united.co.jp/store/detail/066073/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 イオンスタイル新百合ヶ丘店",
+      "url": "https://c-united.co.jp/store/detail/066074/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 下北沢店",
+      "url": "https://c-united.co.jp/store/detail/066075/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 千歳烏山店",
+      "url": "https://c-united.co.jp/store/detail/066076/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 鶴見店",
+      "url": "https://c-united.co.jp/store/detail/066077/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 調布店",
+      "url": "https://c-united.co.jp/store/detail/066078/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 池袋東口グリーン大通り店",
+      "url": "https://c-united.co.jp/store/detail/066079/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 向ヶ丘遊園店",
+      "url": "https://c-united.co.jp/store/detail/066080/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 横浜日本大通り駅前店",
+      "url": "https://c-united.co.jp/store/detail/066081/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 銀座インズ店",
+      "url": "https://c-united.co.jp/store/detail/066082/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 大宮東口店",
+      "url": "https://c-united.co.jp/store/detail/066083/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 銀座中央通り二丁目店",
+      "url": "https://c-united.co.jp/store/detail/066084/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 仙台東口店",
+      "url": "https://c-united.co.jp/store/detail/066085/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 青葉台店",
+      "url": "https://c-united.co.jp/store/detail/066086/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 国立店",
+      "url": "https://c-united.co.jp/store/detail/066087/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 吉祥寺北口駅前店",
+      "url": "https://c-united.co.jp/store/detail/066088/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 アリオ川口店",
+      "url": "https://c-united.co.jp/store/detail/066089/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 横浜元町店",
+      "url": "https://c-united.co.jp/store/detail/066090/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 仙台青葉通店",
+      "url": "https://c-united.co.jp/store/detail/066091/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 藤沢駅北口店",
+      "url": "https://c-united.co.jp/store/detail/066092/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 新青梅街道田無店",
+      "url": "https://c-united.co.jp/store/detail/066093/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 千代田区一番町店",
+      "url": "https://c-united.co.jp/store/detail/066344/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 立川南口店",
+      "url": "https://c-united.co.jp/store/detail/066401/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 高崎小鳥町店",
+      "url": "https://c-united.co.jp/store/detail/067102/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 足利南店",
+      "url": "https://c-united.co.jp/store/detail/067104/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 太田北店",
+      "url": "https://c-united.co.jp/store/detail/067105/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 伊勢崎西店",
+      "url": "https://c-united.co.jp/store/detail/067108/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 宇都宮店",
+      "url": "https://c-united.co.jp/store/detail/067109/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 熊谷店",
+      "url": "https://c-united.co.jp/store/detail/067110/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 籠原店",
+      "url": "https://c-united.co.jp/store/detail/067111/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 前橋南部大橋店",
+      "url": "https://c-united.co.jp/store/detail/067112/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 多賀城店",
+      "url": "https://c-united.co.jp/store/detail/067117/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 渋川店",
+      "url": "https://c-united.co.jp/store/detail/067126/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 アリオ深谷店",
+      "url": "https://c-united.co.jp/store/detail/067133/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 けやきウォーク前橋店",
+      "url": "https://c-united.co.jp/store/detail/067135/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 ＦＫＤインターパーク店",
+      "url": "https://c-united.co.jp/store/detail/067136/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 イオン江別店",
+      "url": "https://c-united.co.jp/store/detail/067203/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 イオン帯広店",
+      "url": "https://c-united.co.jp/store/detail/067204/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 イオン千歳店",
+      "url": "https://c-united.co.jp/store/detail/067205/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 イオン西新井店",
+      "url": "https://c-united.co.jp/store/detail/067208/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 エトレ豊中店",
+      "url": "https://c-united.co.jp/store/detail/085006/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 玉造店",
+      "url": "https://c-united.co.jp/store/detail/085009/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 イオンモール茨木店",
+      "url": "https://c-united.co.jp/store/detail/085019/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 関目店",
+      "url": "https://c-united.co.jp/store/detail/085021/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 心斎橋店",
+      "url": "https://c-united.co.jp/store/detail/085029/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 春日野道店",
+      "url": "https://c-united.co.jp/store/detail/085034/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 大和田店",
+      "url": "https://c-united.co.jp/store/detail/085036/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 甲子園口店",
+      "url": "https://c-united.co.jp/store/detail/085038/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 茶屋町アプローズ店",
+      "url": "https://c-united.co.jp/store/detail/085039/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 寺田町店",
+      "url": "https://c-united.co.jp/store/detail/085043/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 伊丹店",
+      "url": "https://c-united.co.jp/store/detail/085046/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 南草津店",
+      "url": "https://c-united.co.jp/store/detail/085070/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 草津近鉄店",
+      "url": "https://c-united.co.jp/store/detail/085076/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 天満橋店",
+      "url": "https://c-united.co.jp/store/detail/085081/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 藤阪駅前店",
+      "url": "https://c-united.co.jp/store/detail/085087/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 岡南店",
+      "url": "https://c-united.co.jp/store/detail/085103/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 原尾島店",
+      "url": "https://c-united.co.jp/store/detail/085108/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 萱島店",
+      "url": "https://c-united.co.jp/store/detail/085110/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 北巽店",
+      "url": "https://c-united.co.jp/store/detail/085114/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 森ノ宮店",
+      "url": "https://c-united.co.jp/store/detail/085116/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 阪急三国駅店",
+      "url": "https://c-united.co.jp/store/detail/085117/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 枚方けやき通り店",
+      "url": "https://c-united.co.jp/store/detail/085118/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 ＭＯＭＯテラス店",
+      "url": "https://c-united.co.jp/store/detail/085119/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 アルプラザ茨木店",
+      "url": "https://c-united.co.jp/store/detail/085120/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 高槻阪急スクエア店",
+      "url": "https://c-united.co.jp/store/detail/085121/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 アクタ西宮北口店",
+      "url": "https://c-united.co.jp/store/detail/085122/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 新倉敷店",
+      "url": "https://c-united.co.jp/store/detail/085123/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 神戸旧居留地店",
+      "url": "https://c-united.co.jp/store/detail/085124/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 大阪本店",
+      "url": "https://c-united.co.jp/store/detail/086001/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 あべのベルタ店",
+      "url": "https://c-united.co.jp/store/detail/086003/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 名張店",
+      "url": "https://c-united.co.jp/store/detail/086005/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 奈良三条店",
+      "url": "https://c-united.co.jp/store/detail/086008/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 天王寺店",
+      "url": "https://c-united.co.jp/store/detail/086009/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 岸和田店",
+      "url": "https://c-united.co.jp/store/detail/086012/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 熊取店",
+      "url": "https://c-united.co.jp/store/detail/086016/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 河内長野店",
+      "url": "https://c-united.co.jp/store/detail/086017/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 南彦根店",
+      "url": "https://c-united.co.jp/store/detail/086018/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 近江八幡店",
+      "url": "https://c-united.co.jp/store/detail/086020/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 長浜店",
+      "url": "https://c-united.co.jp/store/detail/086021/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 明石店",
+      "url": "https://c-united.co.jp/store/detail/086025/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 天下茶屋店",
+      "url": "https://c-united.co.jp/store/detail/086028/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 イオン久御山店",
+      "url": "https://c-united.co.jp/store/detail/086029/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 なんばＣＩＴＹ店",
+      "url": "https://c-united.co.jp/store/detail/086033/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 堂島ビルヂング店",
+      "url": "https://c-united.co.jp/store/detail/086035/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 紀の川打田店",
+      "url": "https://c-united.co.jp/store/detail/086036/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 フレスト松井山手店",
+      "url": "https://c-united.co.jp/store/detail/086037/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 堺筋本町店",
+      "url": "https://c-united.co.jp/store/detail/086038/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 あびこ店",
+      "url": "https://c-united.co.jp/store/detail/086039/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 京都錦高倉通店",
+      "url": "https://c-united.co.jp/store/detail/086040/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 京都東本願寺前店",
+      "url": "https://c-united.co.jp/store/detail/086041/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 まつちか店",
+      "url": "https://c-united.co.jp/store/detail/087101/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 ゆめタウン高松店",
+      "url": "https://c-united.co.jp/store/detail/087103/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 広島本通中央店",
+      "url": "https://c-united.co.jp/store/detail/087104/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 東広島店",
+      "url": "https://c-united.co.jp/store/detail/087106/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 八丁堀店",
+      "url": "https://c-united.co.jp/store/detail/087111/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 総社店",
+      "url": "https://c-united.co.jp/store/detail/087121/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 ＴＳＵＴＡＹＡ山陽店",
+      "url": "https://c-united.co.jp/store/detail/087127/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 イオンタウン水島店",
+      "url": "https://c-united.co.jp/store/detail/087130/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 西大寺グリーンテラス店",
+      "url": "https://c-united.co.jp/store/detail/087131/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 プラッツ雄町店",
+      "url": "https://c-united.co.jp/store/detail/087132/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 永犬丸店",
+      "url": "https://c-united.co.jp/store/detail/087202/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 大橋店",
+      "url": "https://c-united.co.jp/store/detail/087204/",
+      "facilities": []
+    },
+    {
+      "name": "珈琲館 次郎丸店",
+      "url": "https://c-united.co.jp/store/detail/087210/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 ゆめタウン中津店",
+      "url": "https://c-united.co.jp/store/detail/087211/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 ゆめタウン博多店",
+      "url": "https://c-united.co.jp/store/detail/087212/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "珈琲館 ゆめタウン行橋店",
+      "url": "https://c-united.co.jp/store/detail/087214/",
+      "facilities": [
+        "parking"
+      ]
+    }
+  ]
+}

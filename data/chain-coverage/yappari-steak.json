@@ -1,0 +1,551 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "yappari-steak",
+  "name": "やっぱりステーキ",
+  "sourceUrl": "https://yapparigroup.jp/shop.html",
+  "method": "公式店舗案内の地域別ページ（shop/<地域>.html）の店舗カードに並ぶ「あり／なし」アイコンを店舗ごとに集計",
+  "total": 64,
+  "note": "除外: やっぱりグループ姉妹店舗10件・海外店舗23件。「チャイルドシート」は店内の子ども用の椅子の意としてキッズチェアに対応づけた",
+  "facilities": {
+    "kidsMenu": {
+      "count": 21,
+      "label": "キッズメニューあり"
+    },
+    "kidsChair": {
+      "count": 55,
+      "label": "チャイルドシートあり"
+    },
+    "parking": {
+      "count": 41,
+      "label": "駐車場あり"
+    },
+    "stepFree": {
+      "count": 27,
+      "label": "バリアフリーあり"
+    }
+  },
+  "stores": [
+    {
+      "name": "8th 久茂地店",
+      "url": "https://yapparigroup.jp/shop/naha.html",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "6th 首里りうぼう店",
+      "url": "https://yapparigroup.jp/shop/naha.html",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "真嘉比店",
+      "url": "https://yapparigroup.jp/shop/naha.html",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "4th 国際通り店",
+      "url": "https://yapparigroup.jp/shop/naha.html",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "3rd 国際通りがじゅまる店",
+      "url": "https://yapparigroup.jp/shop/naha.html",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "公設市場近店",
+      "url": "https://yapparigroup.jp/shop/naha.html",
+      "facilities": []
+    },
+    {
+      "name": "2nd 松山店 らぶ唐併設店",
+      "url": "https://yapparigroup.jp/shop/naha.html",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "1st カクテルプラザ店",
+      "url": "https://yapparigroup.jp/shop/naha.html",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "バークレーズコート店",
+      "url": "https://yapparigroup.jp/shop/urasoe.html",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "港川ピーズタウン店",
+      "url": "https://yapparigroup.jp/shop/urasoe.html",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "浦添パイプライン店",
+      "url": "https://yapparigroup.jp/shop/urasoe.html",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "イオン名護店",
+      "url": "https://yapparigroup.jp/shop/nago.html",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "イオンタウン知花店",
+      "url": "https://yapparigroup.jp/shop/okinawa.html",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "7th 豊見城店",
+      "url": "https://yapparigroup.jp/shop/tomigusuku.html",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "5th あしびなー店",
+      "url": "https://yapparigroup.jp/shop/tomigusuku.html",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "イオン具志川店",
+      "url": "https://yapparigroup.jp/shop/uruma.html",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "EXPRESS イオンタウン南城大里店 らぶ唐併設店",
+      "url": "https://yapparigroup.jp/shop/nanjo.html",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "イオン北谷店",
+      "url": "https://yapparigroup.jp/shop/chatan.html",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "北谷美浜店",
+      "url": "https://yapparigroup.jp/shop/chatan.html",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "9th 津嘉山店 らぶ唐併設店",
+      "url": "https://yapparigroup.jp/shop/haebaru.html",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "琉大北口店",
+      "url": "https://yapparigroup.jp/shop/nakagusuku.html",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "石垣島店",
+      "url": "https://yapparigroup.jp/shop/ishigaki.html",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "宮古島店",
+      "url": "https://yapparigroup.jp/shop/miyakojima.html",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "イオン札幌桑園店",
+      "url": "https://yapparigroup.jp/shop/hokkaido.html",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "仙台一番町店",
+      "url": "https://yapparigroup.jp/shop/miyagi.html",
+      "facilities": [
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "イオンモール新利府南館店",
+      "url": "https://yapparigroup.jp/shop/miyagi.html",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "蒲田店",
+      "url": "https://yapparigroup.jp/shop/tokyo.html",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "門前仲町店",
+      "url": "https://yapparigroup.jp/shop/tokyo.html",
+      "facilities": []
+    },
+    {
+      "name": "神田店",
+      "url": "https://yapparigroup.jp/shop/tokyo.html",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "町田駅中央口店",
+      "url": "https://yapparigroup.jp/shop/tokyo.html",
+      "facilities": []
+    },
+    {
+      "name": "芝大門店",
+      "url": "https://yapparigroup.jp/shop/tokyo.html",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "吉祥寺店",
+      "url": "https://yapparigroup.jp/shop/tokyo.html",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "厚木オータワールドビル店",
+      "url": "https://yapparigroup.jp/shop/kanagawa.html",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "アピタ松任店",
+      "url": "https://yapparigroup.jp/shop/ishikawa.html",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "あづみの店",
+      "url": "https://yapparigroup.jp/shop/nagano.html",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "静岡インター店",
+      "url": "https://yapparigroup.jp/shop/shizuoka.html",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "三島店",
+      "url": "https://yapparigroup.jp/shop/shizuoka.html",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "楽市街道中之郷店",
+      "url": "https://yapparigroup.jp/shop/aichi.html",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "知立駅前店 らぶ唐併設店",
+      "url": "https://yapparigroup.jp/shop/aichi.html",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "メガ・ドンキホーテ豊橋店",
+      "url": "https://yapparigroup.jp/shop/aichi.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "大須まねき猫前店",
+      "url": "https://yapparigroup.jp/shop/aichi.html",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "守山店",
+      "url": "https://yapparigroup.jp/shop/aichi.html",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "京都三条店",
+      "url": "https://yapparigroup.jp/shop/kyoto.html",
+      "facilities": []
+    },
+    {
+      "name": "京都府庁前店",
+      "url": "https://yapparigroup.jp/shop/kyoto.html",
+      "facilities": []
+    },
+    {
+      "name": "イオンモール茨木店",
+      "url": "https://yapparigroup.jp/shop/osaka.html",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "あべのウォーク店",
+      "url": "https://yapparigroup.jp/shop/osaka.html",
+      "facilities": [
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "池田駅前店 らぶ唐併設店",
+      "url": "https://yapparigroup.jp/shop/osaka.html",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "イオンモールりんくう泉南店",
+      "url": "https://yapparigroup.jp/shop/osaka.html",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "イオンモール大日店",
+      "url": "https://yapparigroup.jp/shop/osaka.html",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "イオンモール伊丹昆陽店",
+      "url": "https://yapparigroup.jp/shop/hyogo.html",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "広島本通店",
+      "url": "https://yapparigroup.jp/shop/hiroshima.html",
+      "facilities": []
+    },
+    {
+      "name": "イオンタウン防府店",
+      "url": "https://yapparigroup.jp/shop/yamaguchi.html",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "イオンモール今治新都市店 らぶ唐併設店",
+      "url": "https://yapparigroup.jp/shop/ehime.html",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "イオンモール新居浜店 らぶ唐併設店",
+      "url": "https://yapparigroup.jp/shop/ehime.html",
+      "facilities": [
+        "parking",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "垣生店 らぶ唐併設店",
+      "url": "https://yapparigroup.jp/shop/ehime.html",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "アクロスモール春日店 らぶ唐併設店",
+      "url": "https://yapparigroup.jp/shop/fukuoka.html",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "小倉北店",
+      "url": "https://yapparigroup.jp/shop/fukuoka.html",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "サニーサイドモール小倉店",
+      "url": "https://yapparigroup.jp/shop/fukuoka.html",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "イオン戸畑店",
+      "url": "https://yapparigroup.jp/shop/fukuoka.html",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "八幡本城店",
+      "url": "https://yapparigroup.jp/shop/fukuoka.html",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "行橋店",
+      "url": "https://yapparigroup.jp/shop/fukuoka.html",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "EXPRESSトキハわさだタウン店",
+      "url": "https://yapparigroup.jp/shop/oita.html",
+      "facilities": [
+        "parking",
+        "kidsMenu",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "セントポルタ中央町店",
+      "url": "https://yapparigroup.jp/shop/oita.html",
+      "facilities": [
+        "kidsChair",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "天文館店",
+      "url": "https://yapparigroup.jp/shop/kagoshima.html",
+      "facilities": [
+        "kidsChair"
+      ]
+    }
+  ]
+}

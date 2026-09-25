@@ -1,0 +1,324 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "aiya",
+  "name": "藍屋",
+  "sourceUrl": "https://store-info.skylark.co.jp/",
+  "method": "すかいらーくグループ共通店舗検索の店舗API（/api/point/、カテゴリ=0107）で全店舗を取得し、各店舗の設備フラグ（絞り込み検索と同じ項目）を集計",
+  "total": 31,
+  "note": "「座敷」は絞り込み検索の「座敷(大・小) あり」と「小上がり(畳席) あり」のいずれかに該当する店舗を数えた。単一フラグの項目は公式絞り込み件数と一致を確認済み（車椅子入店可=3、おむつ替え台あり=31、個室・個室風席あり=24、多目的トイレあり=1、駐車場あり=31）",
+  "facilities": {
+    "stepFree": {
+      "count": 3,
+      "label": "車椅子入店可"
+    },
+    "zashiki": {
+      "count": 11,
+      "label": "座敷(大・小) あり／小上がり(畳席) あり"
+    },
+    "diaperTable": {
+      "count": 31,
+      "label": "おむつ替え台あり"
+    },
+    "privateRoom": {
+      "count": 24,
+      "label": "個室・個室風席あり"
+    },
+    "multiToilet": {
+      "count": 1,
+      "label": "多目的トイレあり"
+    },
+    "parking": {
+      "count": 31,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "藍屋 落合南長崎店",
+      "url": "https://store-info.skylark.co.jp/map/130479/",
+      "facilities": [
+        "stepFree",
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 静岡東千代田店",
+      "url": "https://store-info.skylark.co.jp/map/130267/",
+      "facilities": [
+        "stepFree",
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 鶴見二国店",
+      "url": "https://store-info.skylark.co.jp/map/130145/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 横浜戸部店",
+      "url": "https://store-info.skylark.co.jp/map/130143/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 浜田山店",
+      "url": "https://store-info.skylark.co.jp/map/130141/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 大月店",
+      "url": "https://store-info.skylark.co.jp/map/130138/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 湘南ライフタウン店",
+      "url": "https://store-info.skylark.co.jp/map/130134/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 京葉谷河内店",
+      "url": "https://store-info.skylark.co.jp/map/130123/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 御殿場インター店",
+      "url": "https://store-info.skylark.co.jp/map/130120/",
+      "facilities": [
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 世田谷八幡山店",
+      "url": "https://store-info.skylark.co.jp/map/130118/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 幕張店",
+      "url": "https://store-info.skylark.co.jp/map/130091/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 王子店",
+      "url": "https://store-info.skylark.co.jp/map/130085/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 弥生台店",
+      "url": "https://store-info.skylark.co.jp/map/130080/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 諏訪店",
+      "url": "https://store-info.skylark.co.jp/map/130079/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 綾瀬店",
+      "url": "https://store-info.skylark.co.jp/map/130064/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 海老名上河内店",
+      "url": "https://store-info.skylark.co.jp/map/130058/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 大井店",
+      "url": "https://store-info.skylark.co.jp/map/130049/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 横須賀佐原店",
+      "url": "https://store-info.skylark.co.jp/map/130048/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 東大和店",
+      "url": "https://store-info.skylark.co.jp/map/130044/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 松戸八柱店",
+      "url": "https://store-info.skylark.co.jp/map/130035/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 蕨中央店",
+      "url": "https://store-info.skylark.co.jp/map/130034/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 羽村店",
+      "url": "https://store-info.skylark.co.jp/map/130029/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 春日部店",
+      "url": "https://store-info.skylark.co.jp/map/130028/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 平塚大野店",
+      "url": "https://store-info.skylark.co.jp/map/130024/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 大宮公園店",
+      "url": "https://store-info.skylark.co.jp/map/130023/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 新横浜店",
+      "url": "https://store-info.skylark.co.jp/map/130015/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 新所沢店",
+      "url": "https://store-info.skylark.co.jp/map/130012/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 東松山店",
+      "url": "https://store-info.skylark.co.jp/map/130010/",
+      "facilities": [
+        "zashiki",
+        "diaperTable",
+        "privateRoom",
+        "multiToilet",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 富士吉田店",
+      "url": "https://store-info.skylark.co.jp/map/130008/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 練馬光が丘店",
+      "url": "https://store-info.skylark.co.jp/map/130007/",
+      "facilities": [
+        "stepFree",
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    },
+    {
+      "name": "藍屋 与野バイパス店",
+      "url": "https://store-info.skylark.co.jp/map/130001/",
+      "facilities": [
+        "diaperTable",
+        "privateRoom",
+        "parking"
+      ]
+    }
+  ]
+}

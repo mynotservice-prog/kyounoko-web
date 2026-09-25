@@ -1,0 +1,4444 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "matsunoya",
+  "name": "松のや",
+  "sourceUrl": "https://pkg.navitime.co.jp/matsuyafoods/spot/lists",
+  "method": "公式店舗検索（pkg.navitime.co.jp/matsuyafoods）の一覧APIでカテゴリ「松のや」の全店舗を列挙し、「条件で探す」のチェック（駐車場あり・バリアフリー）で絞り込んだ結果に含まれる店舗を店舗ごとに集計",
+  "total": 681,
+  "note": "松屋・マイカリー食堂等の別業態は除外（松屋併設店は松のやとしても数える）。バリアフリーは公式注記「当社基準によります」。「テーブル席あり」は対応する設備項目が無いため数えない。業態カテゴリ内訳: 松のや681店",
+  "facilities": {
+    "parking": {
+      "count": 442,
+      "label": "駐車場あり"
+    },
+    "stepFree": {
+      "count": 121,
+      "label": "バリアフリー"
+    }
+  },
+  "stores": [
+    {
+      "name": "松のや 山口店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010716",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 仙台大和町店 （松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010718",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 浜松高林店 （松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011914",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 倉敷水島店 （松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011942",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 丸亀中府店（松屋・マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012051",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 守口佐太中町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012052",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや アクロスプラザ盛岡店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012054",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 三重川越町店（松屋・マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012055",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 黒部店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012056",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 王子神谷店（松屋・マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012077",
+      "facilities": []
+    },
+    {
+      "name": "松のや 今治片山店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012205",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 西新宿店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001202",
+      "facilities": []
+    },
+    {
+      "name": "松のや 津田沼南口店 （マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001203",
+      "facilities": []
+    },
+    {
+      "name": "松のや 仙台中央店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001207",
+      "facilities": []
+    },
+    {
+      "name": "松のや 川口店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001208",
+      "facilities": []
+    },
+    {
+      "name": "松のや 町田店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001209",
+      "facilities": []
+    },
+    {
+      "name": "松のや 練馬店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001213",
+      "facilities": []
+    },
+    {
+      "name": "松のや 三鷹店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001214",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 大宮店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001215",
+      "facilities": []
+    },
+    {
+      "name": "松のや 川崎銀座街店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001216",
+      "facilities": []
+    },
+    {
+      "name": "松のや 中野店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001219",
+      "facilities": []
+    },
+    {
+      "name": "松のや 松戸店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001220",
+      "facilities": []
+    },
+    {
+      "name": "松のや 幕張本郷店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001221",
+      "facilities": []
+    },
+    {
+      "name": "松のや 綾瀬店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001224",
+      "facilities": []
+    },
+    {
+      "name": "松のや 朝霞台店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001225",
+      "facilities": []
+    },
+    {
+      "name": "松のや ひばりが丘店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001226",
+      "facilities": []
+    },
+    {
+      "name": "松のや 天王町店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001228",
+      "facilities": []
+    },
+    {
+      "name": "松のや 錦糸町店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001231",
+      "facilities": []
+    },
+    {
+      "name": "松のや 下赤塚店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001232",
+      "facilities": []
+    },
+    {
+      "name": "松のや 野方店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001233",
+      "facilities": []
+    },
+    {
+      "name": "松のや 千歳烏山店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001234",
+      "facilities": []
+    },
+    {
+      "name": "松のや 蕨店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001235",
+      "facilities": []
+    },
+    {
+      "name": "松のや 新秋津店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001236",
+      "facilities": []
+    },
+    {
+      "name": "松のや 菊名店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001237",
+      "facilities": []
+    },
+    {
+      "name": "松のや 千歳船橋店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001239",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 用賀店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001240",
+      "facilities": []
+    },
+    {
+      "name": "松のや 勝どき店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001242",
+      "facilities": []
+    },
+    {
+      "name": "松のや 赤羽店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001244",
+      "facilities": []
+    },
+    {
+      "name": "松のや 武蔵新城店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001246",
+      "facilities": []
+    },
+    {
+      "name": "松のや なんさん通り店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001248",
+      "facilities": []
+    },
+    {
+      "name": "松のや 本蓮沼店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001249",
+      "facilities": []
+    },
+    {
+      "name": "松のや 茅ヶ崎店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001250",
+      "facilities": []
+    },
+    {
+      "name": "松のや 下永谷店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001251",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 行徳店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001253",
+      "facilities": []
+    },
+    {
+      "name": "松のや 武蔵新田店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001254",
+      "facilities": []
+    },
+    {
+      "name": "松のや 武蔵境店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001255",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 平井店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001256",
+      "facilities": []
+    },
+    {
+      "name": "松のや 板橋区役所前店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001257",
+      "facilities": []
+    },
+    {
+      "name": "松のや 上田店 （マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001258",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 梅田店 ※9月6日15時より一時閉店、9月28日15時オープン",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001259",
+      "facilities": []
+    },
+    {
+      "name": "松のや 東新宿店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001260",
+      "facilities": []
+    },
+    {
+      "name": "松のや 瓢箪山店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001264",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 石橋店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001267",
+      "facilities": []
+    },
+    {
+      "name": "松のや 野毛店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001268",
+      "facilities": []
+    },
+    {
+      "name": "松のや 堂島店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001269",
+      "facilities": []
+    },
+    {
+      "name": "松のや 新橋店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001270",
+      "facilities": []
+    },
+    {
+      "name": "松のや 南行徳店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001272",
+      "facilities": []
+    },
+    {
+      "name": "松のや 本厚木店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001273",
+      "facilities": []
+    },
+    {
+      "name": "松のや 中野新橋店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001274",
+      "facilities": []
+    },
+    {
+      "name": "松のや 南森町店 （マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001275",
+      "facilities": []
+    },
+    {
+      "name": "松のや 今福鶴見店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001277",
+      "facilities": []
+    },
+    {
+      "name": "松のや 方南町店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001278",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 草加店（草加駅前）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001279",
+      "facilities": []
+    },
+    {
+      "name": "松のや 向日町店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001280",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 橋本店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001281",
+      "facilities": []
+    },
+    {
+      "name": "松のや 武蔵小金井店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001282",
+      "facilities": []
+    },
+    {
+      "name": "松のや 南越谷店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001283",
+      "facilities": []
+    },
+    {
+      "name": "松のや 長良町店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001284",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 池田店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001285",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや JR尼崎店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001286",
+      "facilities": []
+    },
+    {
+      "name": "松のや 尼崎店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001287",
+      "facilities": []
+    },
+    {
+      "name": "松のや 戸塚店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001289",
+      "facilities": []
+    },
+    {
+      "name": "松のや 北小金店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001290",
+      "facilities": []
+    },
+    {
+      "name": "松のや 奈良駅前店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001292",
+      "facilities": []
+    },
+    {
+      "name": "松のや 名谷店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001293",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 四天王寺前夕陽ケ丘店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001294",
+      "facilities": []
+    },
+    {
+      "name": "松のや 大阪駅前第3ビル店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001295",
+      "facilities": []
+    },
+    {
+      "name": "松のや 板宿店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001296",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 椥辻店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001297",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 中野坂上店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001298",
+      "facilities": []
+    },
+    {
+      "name": "松のや 上板橋店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001299",
+      "facilities": []
+    },
+    {
+      "name": "松のや 花園町店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001310",
+      "facilities": []
+    },
+    {
+      "name": "松のや すすきの店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001311",
+      "facilities": []
+    },
+    {
+      "name": "松のや 大和高田店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001312",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 堀田店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001313",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 金岡店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001314",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや だいどう豊里店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001315",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 長久手店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001316",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 十三店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001318",
+      "facilities": []
+    },
+    {
+      "name": "松のや 西神南店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001319",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 相模原陽光台店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001320",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 深江橋店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001321",
+      "facilities": []
+    },
+    {
+      "name": "松のや 武庫之荘店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001322",
+      "facilities": []
+    },
+    {
+      "name": "松のや 沼袋店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001323",
+      "facilities": []
+    },
+    {
+      "name": "松のや 札幌駅前通店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001324",
+      "facilities": []
+    },
+    {
+      "name": "松のや 相模原店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001325",
+      "facilities": []
+    },
+    {
+      "name": "松のや 松原店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001328",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 清須店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001330",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 名駅西口店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001331",
+      "facilities": []
+    },
+    {
+      "name": "松のや 湘南台店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001333",
+      "facilities": []
+    },
+    {
+      "name": "松のや 明石店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001334",
+      "facilities": []
+    },
+    {
+      "name": "松のや 紙屋町店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001335",
+      "facilities": []
+    },
+    {
+      "name": "松のや 姫島店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001336",
+      "facilities": []
+    },
+    {
+      "name": "松のや 川越西口店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001337",
+      "facilities": []
+    },
+    {
+      "name": "松のや 江戸川橋店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001338",
+      "facilities": []
+    },
+    {
+      "name": "松のや 貝塚店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001339",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 浮間舟渡店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001340",
+      "facilities": []
+    },
+    {
+      "name": "松のや 姫路野里店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001341",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 京王八王子店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001342",
+      "facilities": []
+    },
+    {
+      "name": "松のや 魚住店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001343",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 西宮西田町店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001344",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 瀬戸店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001345",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 岩塚本通店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001346",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 相模大野店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001348",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 半田店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001349",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 徳島南昭和町店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001350",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 桂川店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001352",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 中延店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001353",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや ル・シーニュ府中店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001354",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 岡山厚生町店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001355",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 茂原店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001356",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 服部店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001357",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや つくば東大通り店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001358",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 高槻千代田町店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001359",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 鷺沼店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001364",
+      "facilities": []
+    },
+    {
+      "name": "松のや 富士インター店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001365",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 西川口店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001367",
+      "facilities": []
+    },
+    {
+      "name": "松のや 西東京新町店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001369",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや グリーンモール山室店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001370",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 松井山手店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001372",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 西鈴蘭台店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001374",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 千鳥橋店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001376",
+      "facilities": []
+    },
+    {
+      "name": "松のや 青物横丁店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001377",
+      "facilities": []
+    },
+    {
+      "name": "松のや 長岡天神店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001378",
+      "facilities": []
+    },
+    {
+      "name": "松のや 和歌山太田店 （マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001379",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 志染店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001380",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや ふじみ野店 （マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001381",
+      "facilities": []
+    },
+    {
+      "name": "松のや 松戸新田店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001382",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 高松瓦町店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001384",
+      "facilities": []
+    },
+    {
+      "name": "松のや 杉田店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001386",
+      "facilities": []
+    },
+    {
+      "name": "松のや 阪東橋店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001388",
+      "facilities": []
+    },
+    {
+      "name": "松のや 堺東店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001389",
+      "facilities": []
+    },
+    {
+      "name": "松のや 上牧店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001390",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 南浦和店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001392",
+      "facilities": []
+    },
+    {
+      "name": "松のや 大和店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001394",
+      "facilities": []
+    },
+    {
+      "name": "松のや フォーポイント フレックス by シェラトン 横浜駅西店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001397",
+      "facilities": []
+    },
+    {
+      "name": "松のや 西巣鴨店 ※9月24日15時より一時閉店、10月2日15時オープン",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001398",
+      "facilities": []
+    },
+    {
+      "name": "松のや 赤坂店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001509",
+      "facilities": []
+    },
+    {
+      "name": "松のや 豊田店 （マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001515",
+      "facilities": []
+    },
+    {
+      "name": "松のや 鶴見東口店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000001629",
+      "facilities": []
+    },
+    {
+      "name": "松のや 岐阜茜部店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002503",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 三田ウッディタウン店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002507",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 少路店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002510",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 春日店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002511",
+      "facilities": []
+    },
+    {
+      "name": "松のや 千葉都町店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002512",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 千川店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002515",
+      "facilities": []
+    },
+    {
+      "name": "松のや 市川店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002517",
+      "facilities": []
+    },
+    {
+      "name": "松のや 元町店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002518",
+      "facilities": []
+    },
+    {
+      "name": "松のや 高松今里店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002519",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 神栖店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002522",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 板橋店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002523",
+      "facilities": []
+    },
+    {
+      "name": "松のや 香里園店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002524",
+      "facilities": []
+    },
+    {
+      "name": "松のや 藤阪店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002525",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 京都南インター店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002526",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 権現湖PA（下り線）店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002528",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 相武台前店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002531",
+      "facilities": []
+    },
+    {
+      "name": "松のや 中洲店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002532",
+      "facilities": []
+    },
+    {
+      "name": "松のや 伊川谷店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002533",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 草津木川町店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002534",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 今津店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002536",
+      "facilities": []
+    },
+    {
+      "name": "松のや 小阪店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002537",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 三宮東店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002538",
+      "facilities": []
+    },
+    {
+      "name": "松のや 掛川PA（下り線）店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002540",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 平塚店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002541",
+      "facilities": []
+    },
+    {
+      "name": "松のや 千葉店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002544",
+      "facilities": []
+    },
+    {
+      "name": "松のや 麹町店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002552",
+      "facilities": []
+    },
+    {
+      "name": "松のや 静岡北脇新田店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002553",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 豊洲IHIビル店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002555",
+      "facilities": []
+    },
+    {
+      "name": "松のや 萱島店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002556",
+      "facilities": []
+    },
+    {
+      "name": "松のや 蕨西口店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002558",
+      "facilities": []
+    },
+    {
+      "name": "松のや 志村坂上店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002559",
+      "facilities": []
+    },
+    {
+      "name": "松のや 江坂店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002560",
+      "facilities": []
+    },
+    {
+      "name": "松のや 伊勢佐木町店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002562",
+      "facilities": []
+    },
+    {
+      "name": "松のや 上大岡西店 （マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002565",
+      "facilities": []
+    },
+    {
+      "name": "松のや 仙川店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002566",
+      "facilities": []
+    },
+    {
+      "name": "松のや 新大阪東口店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002567",
+      "facilities": []
+    },
+    {
+      "name": "松のや 阪神西宮店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002568",
+      "facilities": []
+    },
+    {
+      "name": "松のや 田無店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002569",
+      "facilities": []
+    },
+    {
+      "name": "松のや 摂津富田店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002571",
+      "facilities": []
+    },
+    {
+      "name": "松のや 川西能勢口店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002572",
+      "facilities": []
+    },
+    {
+      "name": "松のや 西荻窪店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002573",
+      "facilities": []
+    },
+    {
+      "name": "松のや 関大前店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002575",
+      "facilities": []
+    },
+    {
+      "name": "松のや 千船店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002576",
+      "facilities": []
+    },
+    {
+      "name": "松のや 阿佐ヶ谷南店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002577",
+      "facilities": []
+    },
+    {
+      "name": "松のや 谷町二丁目店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002578",
+      "facilities": []
+    },
+    {
+      "name": "松のや 西船橋店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002579",
+      "facilities": []
+    },
+    {
+      "name": "松のや 石神井公園店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002580",
+      "facilities": []
+    },
+    {
+      "name": "松のや 四日市芝田店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002581",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 新長田店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002582",
+      "facilities": []
+    },
+    {
+      "name": "松のや 大垣島里店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002583",
+      "facilities": []
+    },
+    {
+      "name": "松のや 高円寺店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002584",
+      "facilities": []
+    },
+    {
+      "name": "松のや 浦安駅前店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002585",
+      "facilities": []
+    },
+    {
+      "name": "松のや 調布南店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002586",
+      "facilities": []
+    },
+    {
+      "name": "松のや 安城店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002587",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや TOFROM八重洲店（マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002588",
+      "facilities": []
+    },
+    {
+      "name": "松のや 北浦和店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002589",
+      "facilities": []
+    },
+    {
+      "name": "松のや 喜多見店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002591",
+      "facilities": []
+    },
+    {
+      "name": "松のや 本八幡北口店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002604",
+      "facilities": []
+    },
+    {
+      "name": "松のや 伏見店",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002609",
+      "facilities": []
+    },
+    {
+      "name": "松のや 淵野辺店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010057",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 草加店（草加バイパス／松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010070",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 大山店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010078",
+      "facilities": []
+    },
+    {
+      "name": "松のや 多摩ニュータウン店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010082",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 白山店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010126",
+      "facilities": []
+    },
+    {
+      "name": "松のや 納屋橋店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010186",
+      "facilities": []
+    },
+    {
+      "name": "松のや 本郷三丁目店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010189",
+      "facilities": []
+    },
+    {
+      "name": "松のや 熊谷バイパス店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010190",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 亀島店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010200",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 神立店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010220",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや あびこ店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010230",
+      "facilities": []
+    },
+    {
+      "name": "松のや 京成大久保店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010231",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 今池店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010247",
+      "facilities": []
+    },
+    {
+      "name": "松のや 春日井店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010268",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 西所沢店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010286",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 桜美林学園店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010306",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 上石神井店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010338",
+      "facilities": []
+    },
+    {
+      "name": "松のや 北松戸店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010339",
+      "facilities": []
+    },
+    {
+      "name": "松のや 三河安城店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010340",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 東十条店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010348",
+      "facilities": []
+    },
+    {
+      "name": "松のや 今里店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010387",
+      "facilities": []
+    },
+    {
+      "name": "松のや 豊田山之手店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010390",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 上鶴間店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010406",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 新検見川店 （松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010408",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 多摩愛宕店 （松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010424",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 豊田十塚店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010429",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 南柏店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010466",
+      "facilities": []
+    },
+    {
+      "name": "松のや JR茨木店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010470",
+      "facilities": []
+    },
+    {
+      "name": "松のや 神戸新開地店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010476",
+      "facilities": []
+    },
+    {
+      "name": "松のや 東大宮駅前店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010498",
+      "facilities": []
+    },
+    {
+      "name": "松のや 静岡池田店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010520",
+      "facilities": []
+    },
+    {
+      "name": "松のや 本川越店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010530",
+      "facilities": []
+    },
+    {
+      "name": "松のや 東久留米下里店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010535",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 蕨北町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010536",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 岡山駅前店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010540",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 蓮田関山店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010542",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 谷町九丁目店 （松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010548",
+      "facilities": []
+    },
+    {
+      "name": "松のや 沼津店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010554",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 富士ラウンドワン店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010557",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 稲城矢野口店 （松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010562",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 立川柴崎町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010565",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 東大和清水店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010569",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 青梅新町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010571",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 青砥店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010575",
+      "facilities": []
+    },
+    {
+      "name": "松のや 与野店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010576",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 布施寿町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010582",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 穴川オーツーパーク店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010590",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 天神橋六丁目店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010591",
+      "facilities": []
+    },
+    {
+      "name": "松のや 和光白子店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010598",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 野火止店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010604",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 糀谷店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010606",
+      "facilities": []
+    },
+    {
+      "name": "松のや 浦和太田窪店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010607",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 浦和町谷店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010608",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 大津店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010612",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや エイトタウン本宮店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010618",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 本内店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010619",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 前橋上小出町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010624",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 五個荘店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010634",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 小倉片野店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010636",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 一宮店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010638",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 広島矢野店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010642",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 伊勢崎上泉町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010643",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 伊勢崎宮子町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010647",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 柏崎店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010652",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 館林店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010657",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 川越インター店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010658",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 上尾緑丘店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010659",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 取手店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010666",
+      "facilities": []
+    },
+    {
+      "name": "松のや 高崎駅前店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010670",
+      "facilities": []
+    },
+    {
+      "name": "松のや 入間店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010673",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 富山田中町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010677",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 神戸玉津店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010682",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 千林大宮店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010685",
+      "facilities": []
+    },
+    {
+      "name": "松のや 大宮吉野町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010686",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 福山東店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010688",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 周南店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010692",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 御幸本町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010697",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 二又瀬店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010702",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 大宮奈良町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010705",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 岩出店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010710",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 入間東藤沢店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010714",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 山形深町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010717",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 金沢増泉店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010719",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 三島店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010725",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 山梨竜王店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010728",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 富山掛尾店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010732",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 浦和所沢バイパス店 （松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010735",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 金沢工大前店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010736",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 佐野店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010740",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 北44条店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010742",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 岡山十日市店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010747",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 南郷通店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010748",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 大宮桜木町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010750",
+      "facilities": []
+    },
+    {
+      "name": "松のや 上越藤野店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010752",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 宇都宮簗瀬町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010753",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 長野柳原店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010761",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 春日部豊町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010765",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 川越城下町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010774",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 金沢示野店 （松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010786",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 植田一本松店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010788",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 石神井台店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010789",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 前橋元総社町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010793",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 門真店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010809",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 小倉駅前店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010821",
+      "facilities": []
+    },
+    {
+      "name": "松のや 越谷下間久里店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010843",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 新潟万代シテイ店 （松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010848",
+      "facilities": []
+    },
+    {
+      "name": "松のや 末広街道店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010853",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 外環八尾店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010897",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 豊島園店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010909",
+      "facilities": []
+    },
+    {
+      "name": "松のや 旭店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010914",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 東久留米南町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010915",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 曽根店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010932",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 市原白金通店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010934",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 姪浜店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010954",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 塩尻店 (松屋併設)",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010976",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 大宮南中丸店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010978",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 川島店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010980",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 日野神明店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010982",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 佐原店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010989",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 東大阪川田店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010990",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 北野店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010991",
+      "facilities": []
+    },
+    {
+      "name": "松のや 上溝店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010992",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 諏訪店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010993",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 浜寺店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010995",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 梅屋敷店（松屋併設 弁当専門店）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010996",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 九品仏店（松屋併設 弁当専門店）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000010998",
+      "facilities": []
+    },
+    {
+      "name": "松のや 防府店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011266",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 仙台扇町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011332",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 周船寺店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011347",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 熊本新市街店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011362",
+      "facilities": []
+    },
+    {
+      "name": "松のや 干隈店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011368",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 雑色店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011375",
+      "facilities": []
+    },
+    {
+      "name": "松のや 鹿児島宇宿店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011393",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 倉敷玉島店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011396",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 清瀬店（松屋・マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011652",
+      "facilities": []
+    },
+    {
+      "name": "松のや 穴生店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011701",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 豊明店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011703",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 蟹江店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011705",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 八千代台西口店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011706",
+      "facilities": []
+    },
+    {
+      "name": "松のや 森孝店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011712",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 廿日市店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011715",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 手稲前田店 （松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011717",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 富山婦中店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011720",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 千里丘店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011721",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 川崎京町店 （松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011723",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 青梅河辺町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011725",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 甲府国母店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011729",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 佐久店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011731",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 韮崎店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011742",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 深谷市役所前店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011745",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 大泉学園町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011746",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 宇部店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011751",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 国分寺西元町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011756",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 山梨昭和店 （松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011764",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 寒川倉見店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011767",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 小田原酒匂店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011768",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 奈良三条大路店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011776",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 篠崎店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011781",
+      "facilities": []
+    },
+    {
+      "name": "松のや 富士吉田店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011786",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 中の島店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011788",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 八街店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011790",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 春日井南下原町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011792",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 郡山コスモス通店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011794",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 東松山上野本店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011795",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 北方町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011796",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 仙台中野栄店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011798",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 岐阜則武店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011799",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 津南店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011810",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 朝霞膝折店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011811",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 立命館大前店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011817",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや たつの店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011824",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 福生志茂店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011826",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 桜川店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011830",
+      "facilities": []
+    },
+    {
+      "name": "松のや 鈴鹿中央通店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011836",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 箕輪町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011838",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 上山店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011846",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 笠寺店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011847",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 茅ヶ崎赤松町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011857",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 松山萱町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011858",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 清瀬野塩店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011859",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 大口店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011874",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 金沢神谷内店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011884",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 東中野2丁目店（松屋併設 弁当専門店）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011888",
+      "facilities": []
+    },
+    {
+      "name": "松のや 徳島鮎喰店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011903",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 新潟見附店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011906",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 南草津店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011920",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや うるま石川店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011931",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 大分駅前店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011943",
+      "facilities": []
+    },
+    {
+      "name": "松のや 浦和仲町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011944",
+      "facilities": []
+    },
+    {
+      "name": "松のや 甲賀水口店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011945",
+      "facilities": []
+    },
+    {
+      "name": "松のや 浅草橋南店 （松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011950",
+      "facilities": []
+    },
+    {
+      "name": "松のや 幕張インター店（松屋・マイカリー食堂併設） ※10月4日15時より一時閉店、10月9日15時オープン",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011953",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 入場店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011956",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 越前千福店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011958",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 平針店（松屋・マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011960",
+      "facilities": []
+    },
+    {
+      "name": "松のや 天理店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011963",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 新柏店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011965",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 北谷美浜店 （松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011966",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 徳島南矢三店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011972",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 福井若杉店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011973",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 松阪大黒田店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011978",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 海老名河原口店 （松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011981",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 和歌山加納店 （松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011984",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 忍ヶ丘駅前店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011985",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 日田店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011986",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや うるま赤道店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011991",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 姶良加治木店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011992",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 市が尾店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000011993",
+      "facilities": []
+    },
+    {
+      "name": "松のや 大分大在店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012011",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 弘前高田店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012012",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 行橋中央店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012013",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 豊中熊野町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012015",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 広島三原店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012016",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 新発田店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012023",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 高松松島店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012024",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 堺大野芝店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012025",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 瀬谷店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012026",
+      "facilities": []
+    },
+    {
+      "name": "松のや 大正千島店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012029",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 水戸東原店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012030",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 藤井寺駅前店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012031",
+      "facilities": []
+    },
+    {
+      "name": "松のや 越谷店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012033",
+      "facilities": []
+    },
+    {
+      "name": "松のや 山口平川店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012034",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 川崎大師店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012036",
+      "facilities": []
+    },
+    {
+      "name": "松のや 八尾南太子堂店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012037",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 須賀川店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012038",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 一関店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012039",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 北九州高須東店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012040",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 都城店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012041",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 尼崎武庫の里店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012043",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 堺美原店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012044",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 高崎南大類店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012045",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 吹田店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012046",
+      "facilities": []
+    },
+    {
+      "name": "松のや 高石店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012047",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 新琴似店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012048",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 鹿児島新栄店（松屋・マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012053",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 中津店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012057",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 相模原相原店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012058",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 神戸有野店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012059",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 那珂川店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012060",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 恵庭店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012061",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 茨城東海店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012062",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 松戸古ヶ崎店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012063",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 酒田店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012064",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 鶴岡店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012065",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 新潟大学前店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012066",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 水戸河和田店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012067",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 明大前店（松屋・マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012069",
+      "facilities": []
+    },
+    {
+      "name": "松のや 延岡店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012070",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 住吉店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012072",
+      "facilities": []
+    },
+    {
+      "name": "松のや 常陸太田店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012073",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 有田インター店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012074",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 高知朝倉店（松屋・マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012075",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 浜松初生町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012076",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 狛江店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012079",
+      "facilities": []
+    },
+    {
+      "name": "松のや 中河原店（松屋併設 弁当専門店）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012080",
+      "facilities": []
+    },
+    {
+      "name": "松のや 八戸城下店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012081",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 広島西原店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012082",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 旭川大町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012083",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 朝霞泉水店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012084",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 坂戸にっさい店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012085",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 南国店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012086",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 泉大津店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012087",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 相模原ラクーン店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012088",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 西武柳沢店（松屋併設 弁当専門店）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012089",
+      "facilities": []
+    },
+    {
+      "name": "松のや 佐賀大財店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012090",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 蒲郡店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012091",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 新潟大形店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012092",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや そよら古川橋駅前店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012093",
+      "facilities": []
+    },
+    {
+      "name": "松のや 三郷戸ヶ崎店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012094",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 古川店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012095",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 小山店 （松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012096",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 野田店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012098",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 米沢店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012099",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 音更店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012100",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや フェニックスガーデンうきのじょう店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012101",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 上越高田店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012103",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 武蔵中原店（松屋・マイカリー食堂併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012104",
+      "facilities": []
+    },
+    {
+      "name": "松のや 豊見城店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012105",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 旭川四条店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012106",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 阿見店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012107",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 塩尻吉田店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012109",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 芝一丁目店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012110",
+      "facilities": []
+    },
+    {
+      "name": "松のや 聖蹟桜ヶ丘店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012111",
+      "facilities": []
+    },
+    {
+      "name": "松のや 稲毛海岸店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012112",
+      "facilities": []
+    },
+    {
+      "name": "松のや 横須賀中央店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012114",
+      "facilities": []
+    },
+    {
+      "name": "松のや 日立鹿島町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012115",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 南彦根店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012116",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 柏松葉町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012117",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 熊本長嶺南店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012118",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 越谷大道店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012119",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 伊予西条店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012120",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 北茨城店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012121",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 山陽小野田店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012122",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 苫小牧店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012123",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 伊勢崎宮前町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012124",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 高知南御座店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012125",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 東大阪七軒家店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012126",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 足立六町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012127",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 本庄店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012128",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 新高岡店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012129",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 長津田店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012131",
+      "facilities": []
+    },
+    {
+      "name": "松のや 長野篠ノ井店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012132",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 宇都宮平松店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012133",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 茅場町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012134",
+      "facilities": []
+    },
+    {
+      "name": "松のや 垂井店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012135",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 橿原新賀店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012136",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 三郷下彦川戸店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012137",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや つくば研究学園店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012138",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 札幌北野店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012139",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 西尾店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012140",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 稲沢店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012141",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 久留米国分バイパス店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012142",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 苅田店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012143",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 東金店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012144",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 島田店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012145",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 大野城横峰店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012146",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 藤岡店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012147",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 太田別所店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012149",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 京成臼井店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012150",
+      "facilities": []
+    },
+    {
+      "name": "松のや 知多店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012151",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 岐阜東栄町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012153",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 磐田岩井店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012154",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 石巻恵み野店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012155",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 栃木インター店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012156",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 近江八幡店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012157",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや エル枚方店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012158",
+      "facilities": []
+    },
+    {
+      "name": "松のや 仙台東口店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012159",
+      "facilities": []
+    },
+    {
+      "name": "松のや 足利店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012162",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 桶川西口店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012163",
+      "facilities": []
+    },
+    {
+      "name": "松のや 下総中山店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012164",
+      "facilities": []
+    },
+    {
+      "name": "松のや 東鎌ヶ谷店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012165",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 各務原店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012166",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 富田林店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012167",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 柏青葉台店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012169",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 焼津インター店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012170",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 綾瀬寺尾西店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012171",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや さいたま見沼店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012172",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 敦賀店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012173",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 千歳店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012174",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 岸和田西之内店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012175",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 都筑池辺町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012176",
+      "facilities": []
+    },
+    {
+      "name": "松のや 薩摩川内店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012177",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 草津駅西口店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012178",
+      "facilities": []
+    },
+    {
+      "name": "松のや 帯広白樺通り店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012180",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 武蔵境南口（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012181",
+      "facilities": []
+    },
+    {
+      "name": "松のや 筑後店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012182",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 宮崎門川店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012183",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 長野SBC通り店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012184",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 溝の口店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012185",
+      "facilities": []
+    },
+    {
+      "name": "松のや 堺山本店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012186",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 飯塚片島店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012187",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 大府店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012188",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 八日市店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012189",
+      "facilities": [
+        "parking",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "松のや 船橋芝山店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012190",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 宮崎錦本町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012191",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 松戸五香店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012193",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 大村店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012195",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 鹿屋寿店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012196",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 武石店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012197",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 八千代店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012198",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 野々市中央通り店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012199",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 16号柏店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012201",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 青森観光通り店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012202",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 函館亀田店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012203",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや そよら長原駅前店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012204",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 宇都宮細谷町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012206",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 栗東霊仙寺店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012207",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 千葉古市場店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012208",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 宮崎台店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012209",
+      "facilities": []
+    },
+    {
+      "name": "松のや 寒河江店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012210",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 総社店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012211",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや みよし店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012212",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 茨城那珂店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012213",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 都島友渕町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012214",
+      "facilities": []
+    },
+    {
+      "name": "松のや 函館鍛治店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012215",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 藍住店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012216",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 霧島隼人店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012217",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 秋田広面店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012218",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 八王子山田店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012219",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 朝倉甘木店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012220",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 小松日の出町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012221",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 豊川店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012222",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 群馬吉岡店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012223",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 8号長浜店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012224",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 野田山崎新町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012225",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 栗東市役所前店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012226",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 宇治小倉店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012227",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 藤沢石川店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012228",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 大分猪野店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012229",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 盛岡みたけ店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012230",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 入間市駅前店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012231",
+      "facilities": []
+    },
+    {
+      "name": "松のや 札幌美しが丘店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012232",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 江別店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012233",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 久喜本町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012234",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 奈良押熊店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012235",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 松山市駅前店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012238",
+      "facilities": []
+    },
+    {
+      "name": "松のや 熊本桜木店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012239",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 熊本光の森店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012240",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 鵜の木店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012241",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 東予丹原店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012242",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 滑川店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012243",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 今治喜田村店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012244",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 射水太閤山店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012245",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 東根店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012246",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 佐倉白銀店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012247",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 静岡呉服町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012248",
+      "facilities": []
+    },
+    {
+      "name": "松のや 南大分店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012249",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 渋谷宮益坂店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012250",
+      "facilities": []
+    },
+    {
+      "name": "松のや 武蔵小杉南口店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012251",
+      "facilities": []
+    },
+    {
+      "name": "松のや 北見常盤店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012252",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 南風原店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012253",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 犬山店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012254",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 浜松高塚店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012255",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 津山店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012256",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 太田下田島店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012257",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 袋井店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012258",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 岡山表町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012259",
+      "facilities": []
+    },
+    {
+      "name": "松のや 仙台一番町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012260",
+      "facilities": []
+    },
+    {
+      "name": "松のや 九条店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012261",
+      "facilities": []
+    },
+    {
+      "name": "松のや 横手店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012262",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 八戸田向店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012263",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 徳島松茂広島ランプ店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012264",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 太田丸山店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012266",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 広島八木店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012267",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 藤枝築地店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012268",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 那覇古島店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012269",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 出雲大塚店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012270",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 沼津東椎路店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012271",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 獨協大学前店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012272",
+      "facilities": []
+    },
+    {
+      "name": "松のや 調布柴崎店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012273",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 岩本町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012274",
+      "facilities": []
+    },
+    {
+      "name": "松のや 奥州水沢店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012275",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 新山口駅前店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012276",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 豊川八幡店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012279",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 羽田イノベーションシティ店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012280",
+      "facilities": []
+    },
+    {
+      "name": "松のや 石岡店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012281",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 福岡荒江店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012282",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 柏豊四季店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012283",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 龍ケ崎店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012284",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 靱本町店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012285",
+      "facilities": []
+    },
+    {
+      "name": "松のや 新宿住友ビル店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012286",
+      "facilities": []
+    },
+    {
+      "name": "松のや 西浦和駅店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012287",
+      "facilities": []
+    },
+    {
+      "name": "松のや 御前通御池店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012290",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 諫早店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012292",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 富里インター店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012293",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 壬生店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012297",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 松阪鎌田町店（松屋併設） ※10月1日10時オープン",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012299",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 関店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012301",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 宜野湾店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012302",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 狭山台店（松屋併設） ※9月30日10時オープン",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012304",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 青梅今寺店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012306",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 一宮尾西店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012307",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 沖縄比屋根店（松屋併設） ※10月2日10時オープン",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012311",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 小山喜沢店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012313",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 熊谷石原店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012314",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 武蔵村山店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012319",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 蒲生四丁目店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012320",
+      "facilities": []
+    },
+    {
+      "name": "松のや 新百合ヶ丘店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012321",
+      "facilities": []
+    },
+    {
+      "name": "松のや 新松戸店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012323",
+      "facilities": []
+    },
+    {
+      "name": "松のや 宇治弐番店（松屋併設） ※10月10日10時オープン",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012328",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 下関長府店（松屋併設） ※10月1日10時オープン",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012329",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 長岡店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012504",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 四国中央店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012506",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 久留米新合川店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012508",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 近鉄八尾駅前店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012514",
+      "facilities": []
+    },
+    {
+      "name": "松のや 沖縄知花店 （松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012520",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 新居浜店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012521",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 那覇小禄店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012530",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 野崎店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012563",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 新潟紫竹山店 （松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012574",
+      "facilities": []
+    },
+    {
+      "name": "松のや 八代店（松屋併設） ※10月15日10時オープン",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012607",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "松のや 鹿児島天文館店（松屋併設）",
+      "url": "https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000012614",
+      "facilities": []
+    }
+  ]
+}

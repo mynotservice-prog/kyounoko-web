@@ -1,0 +1,1627 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "subway",
+  "name": "サブウェイ",
+  "sourceUrl": "https://subway.co.jp/shop/search/",
+  "method": "公式店舗検索ページに並ぶ全店舗カードの絞り込みタグ（data-tags。画面の絞り込み条件と同じ番号）から「キッズセット」の有無を店舗ごとに集計",
+  "total": 238,
+  "note": "絞り込み条件: 朝サブ・昼営業あり・キッズセット・イートインスペースあり・完全禁煙・クレカ・QRコード・電子マネー。設備キーに対応するのはキッズセットのみ",
+  "facilities": {
+    "kidsMenu": {
+      "count": 210,
+      "label": "キッズセット"
+    }
+  },
+  "stores": [
+    {
+      "name": "サブウェイ イオン千歳店",
+      "url": "https://subway.co.jp/shop/5832/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ帯広稲田店",
+      "url": "https://subway.co.jp/shop/5861/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオンモール旭川駅前店",
+      "url": "https://subway.co.jp/shop/5903/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ 札幌ドーム1Fコンコース西店",
+      "url": "https://subway.co.jp/shop/5809/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 東光ストア豊平店",
+      "url": "https://subway.co.jp/shop/5811/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 札幌ドーム1Fコンコース北店",
+      "url": "https://subway.co.jp/shop/5686/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 大通 ル・トロワ店",
+      "url": "https://subway.co.jp/shop/5777/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 札幌時計台ビル店",
+      "url": "https://subway.co.jp/shop/5807/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 東光ストアあいの里店",
+      "url": "https://subway.co.jp/shop/5690/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 釧路北大通店",
+      "url": "https://subway.co.jp/shop/5819/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 青森浜田ドリームタウンALi店",
+      "url": "https://subway.co.jp/shop/5744/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 秋田いとく新国道店",
+      "url": "https://subway.co.jp/shop/5789/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオンモール新利府北館店",
+      "url": "https://subway.co.jp/shop/5801/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオンモール富谷店",
+      "url": "https://subway.co.jp/shop/5824/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオンモール石巻店",
+      "url": "https://subway.co.jp/shop/5767/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオンモール天童店",
+      "url": "https://subway.co.jp/shop/5886/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ ヨークベニマル成島店",
+      "url": "https://subway.co.jp/shop/5766/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ ジョイフル本田ニューポートひたちなか店",
+      "url": "https://subway.co.jp/shop/5877/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ イーアスつくば店",
+      "url": "https://subway.co.jp/shop/5720/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオンモールつくば店",
+      "url": "https://subway.co.jp/shop/5901/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ イオンモール水戸内原店",
+      "url": "https://subway.co.jp/shop/5868/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 宇都宮簗瀬店",
+      "url": "https://subway.co.jp/shop/5649/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 宇都宮ベルモール店",
+      "url": "https://subway.co.jp/shop/5731/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 宇都宮インターパーク店",
+      "url": "https://subway.co.jp/shop/5746/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 前橋けやきウォーク店",
+      "url": "https://subway.co.jp/shop/5813/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオンモール羽生店",
+      "url": "https://subway.co.jp/shop/5771/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ アリオ川口店",
+      "url": "https://subway.co.jp/shop/5852/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イトーヨーカドー大宮宮原店",
+      "url": "https://subway.co.jp/shop/5667/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ マルイファミリー志木店",
+      "url": "https://subway.co.jp/shop/5763/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ エミテラス所沢店",
+      "url": "https://subway.co.jp/shop/5828/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ ピオニウォーク東松山店",
+      "url": "https://subway.co.jp/shop/5695/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 東武草加ヴァリエ店",
+      "url": "https://subway.co.jp/shop/5870/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ レイクピア臼井店",
+      "url": "https://subway.co.jp/shop/5653/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ フルルガーデン八千代店",
+      "url": "https://subway.co.jp/shop/5821/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ ユアエルム八千代台店",
+      "url": "https://subway.co.jp/shop/5839/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 京成千葉駅店",
+      "url": "https://subway.co.jp/shop/5802/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 稲毛マリンピア店",
+      "url": "https://subway.co.jp/shop/5658/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ ニッケコルトンプラザ店",
+      "url": "https://subway.co.jp/shop/5717/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 成田空港第1ターミナル南ウイング店",
+      "url": "https://subway.co.jp/shop/5674/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 松戸駅西口店",
+      "url": "https://subway.co.jp/shop/5752/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ ららぽーと柏の葉店",
+      "url": "https://subway.co.jp/shop/5693/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ スカイプラザ柏店",
+      "url": "https://subway.co.jp/shop/5843/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 流山おおたかの森ショッピングセンター店",
+      "url": "https://subway.co.jp/shop/5734/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオン新浦安店",
+      "url": "https://subway.co.jp/shop/5703/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イクスピアリ店",
+      "url": "https://subway.co.jp/shop/5880/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ イオンモール津田沼North店",
+      "url": "https://subway.co.jp/shop/5666/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 船橋東武店",
+      "url": "https://subway.co.jp/shop/5659/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ekubo京成 新鎌ヶ谷店【9月10日オープン】",
+      "url": "https://subway.co.jp/shop/5925/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ アトレヴィ三鷹店",
+      "url": "https://subway.co.jp/shop/5708/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 晴海トリトン店",
+      "url": "https://subway.co.jp/shop/5672/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 日本橋兜町店",
+      "url": "https://subway.co.jp/shop/5751/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ ぐりーんうぉーく多摩店",
+      "url": "https://subway.co.jp/shop/5735/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ サザンスカイタワー八王子店",
+      "url": "https://subway.co.jp/shop/5783/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 御茶ノ水駅前ファミリーマート店",
+      "url": "https://subway.co.jp/shop/5677/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 秋葉原タイムズタワー店",
+      "url": "https://subway.co.jp/shop/5704/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 上智大学店",
+      "url": "https://subway.co.jp/shop/5784/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 日本大学法学部神田三崎町キャンパス店",
+      "url": "https://subway.co.jp/shop/5750/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 野村不動産天王洲ビル店",
+      "url": "https://subway.co.jp/shop/5725/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 天王洲シーフォートスクエア店",
+      "url": "https://subway.co.jp/shop/5798/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 五反田西口店",
+      "url": "https://subway.co.jp/shop/5682/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 国分寺マルイ店",
+      "url": "https://subway.co.jp/shop/5770/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 国立富士見台店",
+      "url": "https://subway.co.jp/shop/5769/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 錦糸町オリナス店",
+      "url": "https://subway.co.jp/shop/5790/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 錦糸町店",
+      "url": "https://subway.co.jp/shop/5692/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イトーヨーカドー曳舟店",
+      "url": "https://subway.co.jp/shop/5862/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ ザ・スクエア聖蹟桜ヶ丘店",
+      "url": "https://subway.co.jp/shop/5834/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ サンライズ蒲田店",
+      "url": "https://subway.co.jp/shop/5648/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 大森駅北口山王店",
+      "url": "https://subway.co.jp/shop/5805/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 羽田空港第1ターミナル店",
+      "url": "https://subway.co.jp/shop/5765/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 大鳥居店",
+      "url": "https://subway.co.jp/shop/5645/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 京急ST羽田空港第3ターミナル店",
+      "url": "https://subway.co.jp/shop/5892/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ フォーリス府中店",
+      "url": "https://subway.co.jp/shop/5830/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 東洋大学白山キャンパス店",
+      "url": "https://subway.co.jp/shop/5808/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 東京大学工学部2号館店",
+      "url": "https://subway.co.jp/shop/5669/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 新宿野村ビル店",
+      "url": "https://subway.co.jp/shop/5651/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 東京オペラシティビル店",
+      "url": "https://subway.co.jp/shop/5656/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 早稲田駅前店",
+      "url": "https://subway.co.jp/shop/5676/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 新宿文化センター通り店",
+      "url": "https://subway.co.jp/shop/5679/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 新宿パークタワー店",
+      "url": "https://subway.co.jp/shop/5694/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 飯田橋東口店",
+      "url": "https://subway.co.jp/shop/5701/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 新宿東口店",
+      "url": "https://subway.co.jp/shop/5722/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ ヨークフーズ新宿富久店",
+      "url": "https://subway.co.jp/shop/5865/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 新宿NSビル店",
+      "url": "https://subway.co.jp/shop/5884/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ 新宿御苑前店",
+      "url": "https://subway.co.jp/shop/5668/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 高田馬場店",
+      "url": "https://subway.co.jp/shop/5845/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 新宿西口ハルク店",
+      "url": "https://subway.co.jp/shop/5847/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 荻窪駅南口店",
+      "url": "https://subway.co.jp/shop/5838/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオン板橋店",
+      "url": "https://subway.co.jp/shop/5740/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 帝京大学板橋キャンパス店",
+      "url": "https://subway.co.jp/shop/5733/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオンモールむさし村山店",
+      "url": "https://subway.co.jp/shop/5688/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 武蔵境イトーヨーカドー店",
+      "url": "https://subway.co.jp/shop/5662/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ コピス吉祥寺店",
+      "url": "https://subway.co.jp/shop/5804/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ TFT有明店",
+      "url": "https://subway.co.jp/shop/5812/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 門前仲町店",
+      "url": "https://subway.co.jp/shop/5685/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ カメイドクロック店",
+      "url": "https://subway.co.jp/shop/5876/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ アリオ北砂店",
+      "url": "https://subway.co.jp/shop/5867/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 恵比寿店",
+      "url": "https://subway.co.jp/shop/5650/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 北参道駅前店",
+      "url": "https://subway.co.jp/shop/5671/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 千駄ヶ谷店",
+      "url": "https://subway.co.jp/shop/5709/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 渋谷桜丘店",
+      "url": "https://subway.co.jp/shop/5785/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 渋谷マークシティ店",
+      "url": "https://subway.co.jp/shop/5793/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 代々木店",
+      "url": "https://subway.co.jp/shop/5816/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 赤坂メトロピア店",
+      "url": "https://subway.co.jp/shop/5721/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 青山一丁目ツインビル店",
+      "url": "https://subway.co.jp/shop/5678/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 芝大門ファミリーマート店",
+      "url": "https://subway.co.jp/shop/5787/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 明治学院大学白金キャンパス店",
+      "url": "https://subway.co.jp/shop/5823/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 町田モディ店",
+      "url": "https://subway.co.jp/shop/5822/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 自由が丘店",
+      "url": "https://subway.co.jp/shop/5773/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 立川髙島屋ショッピングセンター店",
+      "url": "https://subway.co.jp/shop/5814/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ ユアエルム青戸店",
+      "url": "https://subway.co.jp/shop/5779/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ アリオ亀有店",
+      "url": "https://subway.co.jp/shop/5826/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 調布パルコ店",
+      "url": "https://subway.co.jp/shop/5782/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 南池袋あずま通り店",
+      "url": "https://subway.co.jp/shop/5687/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 池袋西口店",
+      "url": "https://subway.co.jp/shop/5737/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 池袋サンシャインシティアルパ店",
+      "url": "https://subway.co.jp/shop/5921/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 千住ミルディス店",
+      "url": "https://subway.co.jp/shop/5732/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ アリオ西新井店",
+      "url": "https://subway.co.jp/shop/5871/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ グランツリー武蔵小杉店",
+      "url": "https://subway.co.jp/shop/5792/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 専修大学生田キャンパス店",
+      "url": "https://subway.co.jp/shop/5904/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ 川崎ルフロン店",
+      "url": "https://subway.co.jp/shop/5848/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 川崎アゼリア店",
+      "url": "https://subway.co.jp/shop/5863/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ ノクティプラザ溝口店",
+      "url": "https://subway.co.jp/shop/5652/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 三和座間東原店",
+      "url": "https://subway.co.jp/shop/5726/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 横浜ベイクォーター店",
+      "url": "https://subway.co.jp/shop/5894/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ ヨコハマベイサイド本店",
+      "url": "https://subway.co.jp/shop/5846/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 新横浜店",
+      "url": "https://subway.co.jp/shop/5663/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 横浜センター北店",
+      "url": "https://subway.co.jp/shop/5702/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ アピタテラス横浜綱島店",
+      "url": "https://subway.co.jp/shop/5898/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ カエデウォーク長津田店",
+      "url": "https://subway.co.jp/shop/5713/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ クイーンズスクエア横浜店",
+      "url": "https://subway.co.jp/shop/5657/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 横須賀モアーズシティ店",
+      "url": "https://subway.co.jp/shop/5660/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ コースカベイサイドストアーズ店",
+      "url": "https://subway.co.jp/shop/5882/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ ららぽーと海老名店",
+      "url": "https://subway.co.jp/shop/5760/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオン橋本店",
+      "url": "https://subway.co.jp/shop/5727/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオン相模原店",
+      "url": "https://subway.co.jp/shop/5759/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオン茅ケ崎中央店",
+      "url": "https://subway.co.jp/shop/5872/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 藤沢駅南口店",
+      "url": "https://subway.co.jp/shop/5661/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 慶應大学SFC店",
+      "url": "https://subway.co.jp/shop/5665/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオンモール甲府昭和店",
+      "url": "https://subway.co.jp/shop/5712/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ アイシティ21店",
+      "url": "https://subway.co.jp/shop/5874/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ ネオパーク松本店",
+      "url": "https://subway.co.jp/shop/5684/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ ルート153南箕輪店",
+      "url": "https://subway.co.jp/shop/5803/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ ツルヤ軽井沢店",
+      "url": "https://subway.co.jp/shop/5673/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 長野二線路通り店",
+      "url": "https://subway.co.jp/shop/5699/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 富山黒瀬店",
+      "url": "https://subway.co.jp/shop/5745/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 富山ファボーレ店",
+      "url": "https://subway.co.jp/shop/5833/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ マリエとやま店",
+      "url": "https://subway.co.jp/shop/5844/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオン小松店",
+      "url": "https://subway.co.jp/shop/5794/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 野々市若松店",
+      "url": "https://subway.co.jp/shop/5761/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 浜松遠鉄店",
+      "url": "https://subway.co.jp/shop/5827/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 静岡パルシェ店",
+      "url": "https://subway.co.jp/shop/5705/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオンモール木曽川店",
+      "url": "https://subway.co.jp/shop/5754/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 豊田T-FACE店",
+      "url": "https://subway.co.jp/shop/5875/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ アスナル金山店",
+      "url": "https://subway.co.jp/shop/5799/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 名古屋パルコ店",
+      "url": "https://subway.co.jp/shop/5815/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 栄スカイル店",
+      "url": "https://subway.co.jp/shop/5829/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ エスカ店",
+      "url": "https://subway.co.jp/shop/5800/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 名古屋グローバルゲート店",
+      "url": "https://subway.co.jp/shop/5835/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 名駅地下街ユニモール店",
+      "url": "https://subway.co.jp/shop/5776/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ アピタ千代田橋店",
+      "url": "https://subway.co.jp/shop/5706/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 栄ブロッサ店",
+      "url": "https://subway.co.jp/shop/5736/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオンモールナゴヤドーム前店",
+      "url": "https://subway.co.jp/shop/5806/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 中部国際空港店",
+      "url": "https://subway.co.jp/shop/5781/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ プライムツリー赤池店",
+      "url": "https://subway.co.jp/shop/5841/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ エアポートウォーク名古屋店",
+      "url": "https://subway.co.jp/shop/5707/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ フォレストモール東海太田川店",
+      "url": "https://subway.co.jp/shop/5900/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ リーフウォーク稲沢店",
+      "url": "https://subway.co.jp/shop/5683/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ アピタ長久手店",
+      "url": "https://subway.co.jp/shop/5723/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオンモール鈴鹿店",
+      "url": "https://subway.co.jp/shop/5655/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ VIVA CITY彦根店",
+      "url": "https://subway.co.jp/shop/5654/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ アル・プラザ草津店",
+      "url": "https://subway.co.jp/shop/5837/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 洛北阪急スクエア店",
+      "url": "https://subway.co.jp/shop/5899/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ イオンモールKYOTO店",
+      "url": "https://subway.co.jp/shop/5817/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 江坂駅前店",
+      "url": "https://subway.co.jp/shop/5885/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ 阪大病院店",
+      "url": "https://subway.co.jp/shop/5742/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ JR堺市駅店",
+      "url": "https://subway.co.jp/shop/5879/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ イオンモール堺鉄砲町店",
+      "url": "https://subway.co.jp/shop/5836/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 北心斎橋店",
+      "url": "https://subway.co.jp/shop/5681/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 天保山マーケットプレース店",
+      "url": "https://subway.co.jp/shop/5696/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ OBPツイン21店",
+      "url": "https://subway.co.jp/shop/5747/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ なんばCITY店",
+      "url": "https://subway.co.jp/shop/5896/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ なんばウォーク一番街店",
+      "url": "https://subway.co.jp/shop/5795/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 淀屋橋ゲートタワー店",
+      "url": "https://subway.co.jp/shop/5916/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ 堂島アバンザ店",
+      "url": "https://subway.co.jp/shop/5697/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 野菜ラボグランフロント大阪店",
+      "url": "https://subway.co.jp/shop/5755/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 梅田富国生命ビル店",
+      "url": "https://subway.co.jp/shop/5772/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ LINKS UMEDA店",
+      "url": "https://subway.co.jp/shop/5878/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ エキマルシェ大阪店【9月4日オープン!】",
+      "url": "https://subway.co.jp/shop/5923/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ ディアモール大阪店",
+      "url": "https://subway.co.jp/shop/5902/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ 上本町YUFURA店",
+      "url": "https://subway.co.jp/shop/5700/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 天王寺ミオ店",
+      "url": "https://subway.co.jp/shop/5810/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ セブンパーク天美店",
+      "url": "https://subway.co.jp/shop/5797/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 枚方モール店",
+      "url": "https://subway.co.jp/shop/5883/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ 千里中央店",
+      "url": "https://subway.co.jp/shop/5866/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ JR高槻駅店",
+      "url": "https://subway.co.jp/shop/5743/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ アリオ加古川店",
+      "url": "https://subway.co.jp/shop/5796/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イーグレひめじ店",
+      "url": "https://subway.co.jp/shop/5664/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ ソリオ宝塚店",
+      "url": "https://subway.co.jp/shop/5729/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ あまがさきキューズモール店",
+      "url": "https://subway.co.jp/shop/5780/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 須磨パティオ店",
+      "url": "https://subway.co.jp/shop/5873/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ ビバタウン板宿店",
+      "url": "https://subway.co.jp/shop/5728/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 神戸ハーバーランドumie店",
+      "url": "https://subway.co.jp/shop/5756/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 神戸さんちか店",
+      "url": "https://subway.co.jp/shop/5897/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ 神戸マルイ店",
+      "url": "https://subway.co.jp/shop/5851/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 近鉄西大寺駅前店",
+      "url": "https://subway.co.jp/shop/5675/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ パラディ学園前店",
+      "url": "https://subway.co.jp/shop/5724/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 宮街道トヨタカローラシーズ店",
+      "url": "https://subway.co.jp/shop/5680/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオンモール倉敷店",
+      "url": "https://subway.co.jp/shop/5691/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオンモール岡山店",
+      "url": "https://subway.co.jp/shop/5768/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 広島中央通り店",
+      "url": "https://subway.co.jp/shop/5778/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 紙屋町シャレオ店",
+      "url": "https://subway.co.jp/shop/5840/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 広島段原ショッピングセンター店",
+      "url": "https://subway.co.jp/shop/5741/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ ゆめタウン廿日市店",
+      "url": "https://subway.co.jp/shop/5820/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ ゆめタウン福山店",
+      "url": "https://subway.co.jp/shop/5864/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ ゆめタウン下松店",
+      "url": "https://subway.co.jp/shop/5825/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ おのだサンパーク店",
+      "url": "https://subway.co.jp/shop/5730/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 中万々店",
+      "url": "https://subway.co.jp/shop/5757/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 小倉駅店",
+      "url": "https://subway.co.jp/shop/5739/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオン小郡店",
+      "url": "https://subway.co.jp/shop/5764/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオンモール直方店",
+      "url": "https://subway.co.jp/shop/5791/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 福岡PayPayドーム店",
+      "url": "https://subway.co.jp/shop/5719/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 六本松店",
+      "url": "https://subway.co.jp/shop/5738/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 福岡赤坂店",
+      "url": "https://subway.co.jp/shop/5831/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 地下鉄博多駅店",
+      "url": "https://subway.co.jp/shop/5895/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ イオンモール香椎浜店",
+      "url": "https://subway.co.jp/shop/5905/",
+      "facilities": []
+    },
+    {
+      "name": "サブウェイ 木の葉モール橋本店",
+      "url": "https://subway.co.jp/shop/5714/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオンモール佐賀大和店",
+      "url": "https://subway.co.jp/shop/5869/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ みらい長崎ココウォーク店",
+      "url": "https://subway.co.jp/shop/5818/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオンモール熊本店",
+      "url": "https://subway.co.jp/shop/5786/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ ゆめタウン光の森店",
+      "url": "https://subway.co.jp/shop/5710/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ ゆめタウン別府店",
+      "url": "https://subway.co.jp/shop/5788/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ アミュプラザおおいた店",
+      "url": "https://subway.co.jp/shop/5775/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオンモール宮崎店",
+      "url": "https://subway.co.jp/shop/5715/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ アミュプラザ鹿児島店",
+      "url": "https://subway.co.jp/shop/5774/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ イオンモール KAGOSHIMA BAY店",
+      "url": "https://subway.co.jp/shop/5920/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 那覇新都心店",
+      "url": "https://subway.co.jp/shop/5748/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 首里りうぼう店",
+      "url": "https://subway.co.jp/shop/5749/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "サブウェイ 波の上ビーチ店",
+      "url": "https://subway.co.jp/shop/5753/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    }
+  ]
+}

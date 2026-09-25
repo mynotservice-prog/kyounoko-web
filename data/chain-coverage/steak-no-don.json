@@ -1,0 +1,594 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "steak-no-don",
+  "name": "ステーキのどん",
+  "sourceUrl": "https://www.steak-don.jp/shop_list.html?pref=0",
+  "method": "公式店舗一覧（全国）の表の各店舗行にある施設アイコン（駐車場・おむつ替え台・スロープ・多目的トイレ）を店舗ごとに集計",
+  "total": 62,
+  "note": "一覧の凡例: 駐車場・おむつ替え台・スロープ・多目的トイレ・店内無料Wi-Fi（店内無料Wi-Fi等は対象外）。「スロープ」は入口の段差なし（stepFree）に対応づけた",
+  "facilities": {
+    "parking": {
+      "count": 60,
+      "label": "駐車場"
+    },
+    "diaperTable": {
+      "count": 58,
+      "label": "おむつ替え台"
+    },
+    "stepFree": {
+      "count": 53,
+      "label": "スロープ"
+    },
+    "multiToilet": {
+      "count": 22,
+      "label": "多目的トイレ"
+    }
+  },
+  "stores": [
+    {
+      "name": "アルーサ北与野店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=197",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "川崎生田店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=199",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "小山犬塚店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=201",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "富里インター店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=198",
+      "facilities": [
+        "parking",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "古市場店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=204",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "環七梅島店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=196",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "赤羽東口店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=195",
+      "facilities": [
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "秋川店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=6",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "荒牧店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=41",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "入間店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=33",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "宇治店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=54",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "浦和三室店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=13",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "太田店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=43",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "大宮西口店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=10",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "岡山店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=70",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "加須店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=22",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "春日部店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=21",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "上尾店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=38",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "川越北店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=25",
+      "facilities": [
+        "parking",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "北本店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=39",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "清瀬店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=7",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "公田店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=44",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "熊谷店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=37",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "倉敷店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=71",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "堺七道店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=63",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "坂戸店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=24",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "佐久店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=51",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "指扇店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=11",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "幸手店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=17",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "狭山店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=27",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "下曽根店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=72",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "十条新千本店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=52",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "城東古市店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=55",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "新前橋店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=42",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "千間台店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=19",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "草加店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=16",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "高崎北店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=40",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "高槻店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=60",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "茅ヶ崎店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=50",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "中環柴原店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=57",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "鶴ヶ島店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=29",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "所沢東店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=34",
+      "facilities": [
+        "parking",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "戸田店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=12",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "中百舌鳥店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=64",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "新座店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=30",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "西明石店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=67",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "蓮田店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=23",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "羽村店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=8",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "東浅川店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=2",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "東大宮店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=14",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "東松山店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=32",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "東大和中央店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=9",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "姫路店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=66",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "富士見店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=31",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "星の宮店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=36",
+      "facilities": [
+        "parking",
+        "diaperTable"
+      ]
+    },
+    {
+      "name": "的場店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=26",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "三郷店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=18",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "三鷹店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=1",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "門真店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=61",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "大和郡山店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=69",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "与野店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=15",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree",
+        "multiToilet"
+      ]
+    },
+    {
+      "name": "若葉店",
+      "url": "https://www.steak-don.jp/shop_detail.html?snum=28",
+      "facilities": [
+        "parking",
+        "diaperTable",
+        "stepFree"
+      ]
+    }
+  ]
+}

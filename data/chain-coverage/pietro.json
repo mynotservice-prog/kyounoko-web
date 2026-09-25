@@ -1,0 +1,371 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "pietro",
+  "name": "ピエトロ",
+  "sourceUrl": "https://www.pietro.co.jp/restaurant/all/",
+  "method": "公式の全国店舗一覧（/restaurant/all/）の店舗カードに表示される項目（店舗検索の絞り込み条件と同じ）を店舗ごとに集計",
+  "total": 42,
+  "note": "一覧 43 件。閉店表示1件（PIETRO A DAY 浦和パルコ店 ※閉店）を除外。PASTA & TAPAS PIETRO・洋麺屋ピエトロ・PREMIO ピエトロ等の業態を含む",
+  "facilities": {
+    "kidsMenu": {
+      "count": 36,
+      "label": "キッズメニュー"
+    },
+    "stepFree": {
+      "count": 30,
+      "label": "バリアフリー"
+    },
+    "parking": {
+      "count": 31,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "ピエトロ イオンモール札幌発寒店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/79",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ イオンモール名取店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/89",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ イオンモール浦和美園店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/75",
+      "facilities": [
+        "kidsMenu",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "ピエトロ 国立店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/36",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ 東京ドームシティ ラクーア店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/80",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "PASTA & TAPAS PIETRO 池袋店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/68",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ 横浜ワールドポーターズ店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/86",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ イオンモール新潟亀田インター店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/78",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ イオンモール須坂店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/91",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ イオンモール浜松市野店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/83",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ 名古屋則武新町店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/72",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ イオンモール堺北花田店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/88",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ イオンモール四條畷店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/92",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "洋麺屋ピエトロ 千里中央店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/65",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "洋麺屋ピエトロ 米子店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/26",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ 松江店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/27",
+      "facilities": [
+        "kidsMenu",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "ピエトロ イオンモール広島府中店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/66",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ フジグラン松山店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/70",
+      "facilities": [
+        "kidsMenu",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "ピエトロ本店 セントラーレ",
+      "url": "https://www.pietro.co.jp/restaurant/detail/4",
+      "facilities": []
+    },
+    {
+      "name": "PASTA & TAPAS PIETRO 福岡パルコ店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/73",
+      "facilities": [
+        "stepFree"
+      ]
+    },
+    {
+      "name": "洋麺屋ピエトロ ソラリア店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/5",
+      "facilities": []
+    },
+    {
+      "name": "ピエトロ キャナルシティ店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/8",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ 長尾店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/10",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ 次郎丸店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/9",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ イオンモール福岡店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/12",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ イオンモール筑紫野店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/13",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ イオンモール直方店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/84",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "PREMIO ピエトロ KITTE博多店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/21",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ 永犬丸店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/14",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "洋麺屋ピエトロ 小倉砂津店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/15",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ THE OUTLETS KITAKYUSHU店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/76",
+      "facilities": [
+        "kidsMenu",
+        "stepFree"
+      ]
+    },
+    {
+      "name": "洋麺屋ピエトロ 久留米上津店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/18",
+      "facilities": [
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "洋麺屋ピエトロ 久留米篠山店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/16",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ ミオミオ みずほPayPayドーム店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/43",
+      "facilities": []
+    },
+    {
+      "name": "ピエトロ 鳥栖プレミアムアウトレット店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/29",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "洋麺屋ピエトロ モラージュ佐賀店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/28",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ アミュプラザ長崎店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/87",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ イオン時津店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/30",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "洋麺屋ピエトロ 長崎チトセピア店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/31",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ピエトロ アミュプラザくまもと店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/69",
+      "facilities": [
+        "kidsMenu",
+        "stepFree",
+        "parking"
+      ]
+    },
+    {
+      "name": "洋麺屋ピエトロ はません店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/34",
+      "facilities": [
+        "kidsMenu",
+        "parking"
+      ]
+    },
+    {
+      "name": "ピエトロ 鹿児島センテラス店",
+      "url": "https://www.pietro.co.jp/restaurant/detail/74",
+      "facilities": [
+        "kidsMenu",
+        "stepFree"
+      ]
+    }
+  ]
+}

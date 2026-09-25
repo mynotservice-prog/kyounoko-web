@@ -1,0 +1,1549 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "yomenya-goemon",
+  "name": "洋麺屋五右衛門",
+  "sourceUrl": "https://www.yomenya-goemon.com/store/",
+  "method": "公式の店舗一覧（国内の地方別ページ）の各店舗の備考欄に「お子様メニュー」とある店舗を集計",
+  "total": 242,
+  "note": "海外店舗は除外。HTMLコメントで非表示の店舗 1 件（画面に出ないため数えない）。備考欄の記載の内訳: 「お子様メニュー」148・「お得な販促」9・「サラダバー」1・「FREE Wi-Fi」8・「お子様メニュー・サラダバー」2・「お子様メニュー お得な販促」6・「お子様メニュー、全席禁煙」1・「お子様メニュｰ」3・「お子様メニュー・全席禁煙」1",
+  "facilities": {
+    "kidsMenu": {
+      "count": 161,
+      "label": "お子様メニュー"
+    }
+  },
+  "stores": [
+    {
+      "name": "札幌アピア店",
+      "url": "https://www.yomenya-goemon.com/store/hokkaido/",
+      "facilities": []
+    },
+    {
+      "name": "札幌北野店",
+      "url": "https://www.yomenya-goemon.com/store/hokkaido/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "札幌オーロラタウン店",
+      "url": "https://www.yomenya-goemon.com/store/hokkaido/",
+      "facilities": []
+    },
+    {
+      "name": "新発寒店",
+      "url": "https://www.yomenya-goemon.com/store/hokkaido/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "札幌厚別店",
+      "url": "https://www.yomenya-goemon.com/store/hokkaido/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "仙台吉成店",
+      "url": "https://www.yomenya-goemon.com/store/tohoku/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "仙台名掛丁店",
+      "url": "https://www.yomenya-goemon.com/store/tohoku/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "仙台太白店",
+      "url": "https://www.yomenya-goemon.com/store/tohoku/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "郡山店",
+      "url": "https://www.yomenya-goemon.com/store/tohoku/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "代官山店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "MAGNET by SHIBUYA109店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "渋谷本店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "スペイン通り店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "原宿店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "原宿2号店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "渋谷桜丘店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "広尾店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "新宿小田急エース店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "新宿サブナード店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "西新宿店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "新宿東口店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "新宿アイランド店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "新宿ミニム店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "高田馬場店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "市ヶ谷店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "飯田橋ラムラ店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "池袋東武店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "池袋パルコ店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "池袋サンシャインシティ店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "池袋東口店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "巣鴨店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "阿佐ヶ谷店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "荻窪店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "中野店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "南青山店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "赤坂店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "麻布十番店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "ヤエチカ店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "八重洲一丁目店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "水道橋店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "日比谷店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "お茶の水駅前店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "数寄屋橋店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "ウイング新橋店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "三田店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "武蔵小山店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "大井町店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "五反田駅前店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "目黒店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "自由が丘店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "下北沢店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "経堂店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "エキア曳舟店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "錦糸町テルミナ店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "亀有店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "金町店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "上野広小路店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "北千住ルミネ店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "茗荷谷店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "シャポー小岩店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "練馬店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "光が丘店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "吉祥寺サンロード店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "聖蹟桜ケ丘店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "稲城店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "グランデュオ立川店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "立川若葉町店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "立川高島屋店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日野旭が丘店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "八王子堀之内店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "セレオ八王子店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "町田木曽町店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "小田急町田店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "エミオ田無店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "花小金井店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "イオンモールむさし村山店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "横浜ポルタ店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "横浜ハマボール店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "横浜ジョイナス店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "横浜ランドマーク店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ビブレ店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "磯子店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "青葉台店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "美しが丘店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "センター北店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "港北店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ららぽーと横浜店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "トレッサ横浜店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "横浜霧が丘店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "希望ヶ丘店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "東戸塚店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "ラゾーナ川崎店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ららテラス武蔵小杉店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "川崎アゼリア店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "大和店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "相模大野店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "相模原店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "アリオ橋本店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "海老名マルイ店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "本厚木ミロード店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "綾瀬店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "辻堂店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "茅ヶ崎店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "BLiX茅ヶ崎店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "大船ルミネウイング店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "THE OUTLETS SHONAN HIRATSUKA店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "茂原店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "成田空港店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "千葉都町店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "千葉シーワン店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "稲毛店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "千葉若松町店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "イオンモール幕張新都心店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "おゆみ野店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "新浦安店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "マーヴ浦安",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ニッケコルトンプラザ店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "東武船橋店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "習志野台店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ららぽーとTOKYO-BAY店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "津田沼店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "柏高島屋店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "流山青田店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "松戸きよしヶ丘店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "八千代店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "野田店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "コクーンシティーさいたま新都心店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "さいたま三橋店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ルミネ大宮店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "東岩槻店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "東浦和店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "EQUiA志木店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "西川越店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "与野本町店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "蕨店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "朝霞台店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "新座店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "入間店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ふじみ野店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "鶴ヶ島店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "東松山店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "新越谷ヴァリエ店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "せんげん台店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "越谷店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "東越谷店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "越谷レイクタウン店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "草加店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "草加駅前店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "熊谷店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "北本店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": []
+    },
+    {
+      "name": "つくば店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "守谷店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "水戸店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "栃木店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "宇都宮鶴田店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "宇都宮若松原店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "前橋店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "伊勢崎店",
+      "url": "https://www.yomenya-goemon.com/store/kanto/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "新潟女池店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "甲府昭和店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "松本村井店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "岐阜県庁前店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "浜松西伊場店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "浜松有玉店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "浜松遠鉄店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "静岡曲金店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "名古屋タワーズプラザ店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "メルサ栄店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": []
+    },
+    {
+      "name": "名古屋ユニモール店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": []
+    },
+    {
+      "name": "名古屋伏見店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": []
+    },
+    {
+      "name": "名古屋栄店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": []
+    },
+    {
+      "name": "緑区池上台店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "名古屋競馬場前店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "天白島田店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "名古屋名東店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "藤が丘エフ店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "小田井店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "名古屋矢田店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "一宮店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "江南店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "稲沢店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "日進岩崎店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "春日井店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "イオンモール岡崎店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "岡崎店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "岡崎羽根店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": []
+    },
+    {
+      "name": "豊川店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "豊橋店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "三河安城店",
+      "url": "https://www.yomenya-goemon.com/store/chubu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ホワイティうめだ店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": []
+    },
+    {
+      "name": "大阪駅店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ルクアサウス店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "阪急32番街店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": []
+    },
+    {
+      "name": "アルデ新大阪",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "大阪NAMBAなんなん店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": []
+    },
+    {
+      "name": "天王寺ミオ店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": []
+    },
+    {
+      "name": "京橋店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": []
+    },
+    {
+      "name": "鶴見店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "大阪今宮店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ヒビエ堺東店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "岸和田店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "茨木店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "阪急茨木店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "吹田店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "東大阪店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "堺高島屋店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "高石店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "高槻店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "四条河原町店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": []
+    },
+    {
+      "name": "京都ポルタ店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": []
+    },
+    {
+      "name": "ゼスト御池店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "イオンモール京都桂川店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "京都伏見店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "神戸元町店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "三宮店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "イオンモール神戸北店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "神戸西店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "モンテメール芦屋店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": []
+    },
+    {
+      "name": "伊丹店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "西宮店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "奈良古市店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "奈良店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "イオンモール橿原店",
+      "url": "https://www.yomenya-goemon.com/store/kansai/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "イオンモール岡山店",
+      "url": "https://www.yomenya-goemon.com/store/chugoku/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "広島シャレオ店",
+      "url": "https://www.yomenya-goemon.com/store/chugoku/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "広島五日市店",
+      "url": "https://www.yomenya-goemon.com/store/chugoku/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ミナモア広島店",
+      "url": "https://www.yomenya-goemon.com/store/chugoku/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "高松田村店",
+      "url": "https://www.yomenya-goemon.com/store/shikoku/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "福岡ソラリア店",
+      "url": "https://www.yomenya-goemon.com/store/kyushu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "福岡和白店",
+      "url": "https://www.yomenya-goemon.com/store/kyushu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "福岡早良店",
+      "url": "https://www.yomenya-goemon.com/store/kyushu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "福岡黒崎店",
+      "url": "https://www.yomenya-goemon.com/store/kyushu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "春日店",
+      "url": "https://www.yomenya-goemon.com/store/kyushu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "筑紫野店",
+      "url": "https://www.yomenya-goemon.com/store/kyushu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "アミュプラザ小倉店",
+      "url": "https://www.yomenya-goemon.com/store/kyushu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "小倉中井店",
+      "url": "https://www.yomenya-goemon.com/store/kyushu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "佐賀兵庫店",
+      "url": "https://www.yomenya-goemon.com/store/kyushu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "長崎時津店",
+      "url": "https://www.yomenya-goemon.com/store/kyushu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "熊本近見店",
+      "url": "https://www.yomenya-goemon.com/store/kyushu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "熊本鶴屋店",
+      "url": "https://www.yomenya-goemon.com/store/kyushu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "熊本光の森店",
+      "url": "https://www.yomenya-goemon.com/store/kyushu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "鹿児島新栄店",
+      "url": "https://www.yomenya-goemon.com/store/kyushu/",
+      "facilities": [
+        "kidsMenu"
+      ]
+    }
+  ]
+}

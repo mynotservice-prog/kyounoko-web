@@ -1,0 +1,249 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "heiroku-sushi",
+  "name": "平禄寿司",
+  "sourceUrl": "https://ys-holdings.co.jp/shop/?f&shop-prefectures&shop-brand%5B0%5D=heiroku-sushi",
+  "method": "グループ店舗検索のブランド「平禄寿司」の結果一覧（全ページ）の店舗カードにある「駐車場」アイコン（絞り込み「サービス」と同じ項目）を店舗ごとに集計",
+  "total": 36,
+  "note": "一覧 44 件のうち海外店（都道府県「海外」の検索結果）8 件を除外。「多目的トイレ」はグループ共通の検索条件で平禄寿司の該当が0件のため、未入力と区別できず数えない",
+  "facilities": {
+    "parking": {
+      "count": 26,
+      "label": "駐車場"
+    }
+  },
+  "stores": [
+    {
+      "name": "平禄寿司 銀座店",
+      "url": "https://ys-holdings.co.jp/shop/15490/",
+      "facilities": []
+    },
+    {
+      "name": "平禄寿司 札幌サンピアザ店",
+      "url": "https://ys-holdings.co.jp/shop/14589/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 北海道イオンモール旭川西店",
+      "url": "https://ys-holdings.co.jp/shop/14590/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 青森八戸店",
+      "url": "https://ys-holdings.co.jp/shop/14591/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 岩手二戸店",
+      "url": "https://ys-holdings.co.jp/shop/14592/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 仙台政岡通店",
+      "url": "https://ys-holdings.co.jp/shop/14593/",
+      "facilities": []
+    },
+    {
+      "name": "平禄寿司 仙台クリスロード店",
+      "url": "https://ys-holdings.co.jp/shop/14594/",
+      "facilities": []
+    },
+    {
+      "name": "平禄寿司 仙台一番町店",
+      "url": "https://ys-holdings.co.jp/shop/14595/",
+      "facilities": []
+    },
+    {
+      "name": "平禄寿司 仙台新田東店",
+      "url": "https://ys-holdings.co.jp/shop/14625/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 仙台泉パークタウンタピオ店",
+      "url": "https://ys-holdings.co.jp/shop/14602/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 仙台本店",
+      "url": "https://ys-holdings.co.jp/shop/14601/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 仙台榴岡店",
+      "url": "https://ys-holdings.co.jp/shop/14600/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 仙台西多賀店",
+      "url": "https://ys-holdings.co.jp/shop/14599/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 仙台南仙台店",
+      "url": "https://ys-holdings.co.jp/shop/14598/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 仙台愛子店",
+      "url": "https://ys-holdings.co.jp/shop/14597/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 仙台八幡町店",
+      "url": "https://ys-holdings.co.jp/shop/14596/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 石巻東中里店",
+      "url": "https://ys-holdings.co.jp/shop/14603/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 宮城白石店",
+      "url": "https://ys-holdings.co.jp/shop/14605/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 宮城大崎古川南店",
+      "url": "https://ys-holdings.co.jp/shop/14604/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 宮城美里小牛田店",
+      "url": "https://ys-holdings.co.jp/shop/14612/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 宮城大河原店",
+      "url": "https://ys-holdings.co.jp/shop/14614/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 宮城船岡店",
+      "url": "https://ys-holdings.co.jp/shop/14615/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 宮城涌谷店",
+      "url": "https://ys-holdings.co.jp/shop/14613/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 仙台広瀬通店",
+      "url": "https://ys-holdings.co.jp/shop/14616/",
+      "facilities": []
+    },
+    {
+      "name": "平禄寿司 宮城加美中新田店",
+      "url": "https://ys-holdings.co.jp/shop/14611/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 宮城富谷明石台店",
+      "url": "https://ys-holdings.co.jp/shop/14610/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 宮城大和吉岡店",
+      "url": "https://ys-holdings.co.jp/shop/14609/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 宮城築館店",
+      "url": "https://ys-holdings.co.jp/shop/14608/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 宮城岩沼店",
+      "url": "https://ys-holdings.co.jp/shop/14607/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 宮城多賀城西店",
+      "url": "https://ys-holdings.co.jp/shop/14606/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 郡山八山田店",
+      "url": "https://ys-holdings.co.jp/shop/14617/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "平禄寿司 東京大久保店",
+      "url": "https://ys-holdings.co.jp/shop/14618/",
+      "facilities": []
+    },
+    {
+      "name": "平禄寿司 東京表参道店",
+      "url": "https://ys-holdings.co.jp/shop/14619/",
+      "facilities": []
+    },
+    {
+      "name": "平禄寿司 東京赤羽店",
+      "url": "https://ys-holdings.co.jp/shop/14620/",
+      "facilities": []
+    },
+    {
+      "name": "平禄寿司 東京亀有店",
+      "url": "https://ys-holdings.co.jp/shop/14621/",
+      "facilities": []
+    },
+    {
+      "name": "平禄寿司 横浜伊勢佐木町店",
+      "url": "https://ys-holdings.co.jp/shop/14622/",
+      "facilities": []
+    }
+  ]
+}

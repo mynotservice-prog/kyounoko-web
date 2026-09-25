@@ -1,0 +1,2594 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "jolly-pasta",
+  "name": "ジョリーパスタ",
+  "sourceUrl": "https://maps.jolly-pasta.co.jp/jp/index.html",
+  "method": "公式店舗検索の検索APIで全店舗を列挙し、各店舗詳細ページの「サービス・設備」「メニュー」欄のアイコン（駐車場あり・お子様メニューあり）を集計",
+  "total": 322,
+  "note": "詳細ページの表記: 駐車場あり→「駐車場あり」、お子様メニューあり→「お子様メニューあり」。駐車場は公式の絞り込み件数（ジョリーパスタ分）と一致を確認。同じ検索に載る別ブランド（ジョリーパスタ（img_jolly-ox）1件。ブランドアイコンで判別）は除外。検索条件「ベビーシートあり」「多目的トイレあり」「エレベーターあり」は該当 0・0・1 件（全323件中）で未入力と判断し集計しない",
+  "facilities": {
+    "parking": {
+      "count": 319,
+      "label": "駐車場あり"
+    },
+    "kidsMenu": {
+      "count": 322,
+      "label": "お子様メニューあり"
+    }
+  },
+  "stores": [
+    {
+      "name": "ジョリーパスタ 江別店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5171.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 札幌本町店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5181.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 小樽築港店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5185.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 旭川永山店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5210.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 帯広西店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5212.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 札幌発寒店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5267.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 北見店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5393.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 釧路店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5404.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 奥州水沢店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3708.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 北上藤沢店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3713.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 盛岡本宮店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/6230.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 大崎古川店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3722.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 石巻あゆみ野店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3729.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 仙台中野店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/4743.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 仙台泉店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/4754.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 名取杜せきのした店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5246.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 仙台大和町店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5306.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 山形南館店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5683.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 郡山富田店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5241.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ いわき平店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/6054.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 水戸南店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3562.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 竜ヶ崎店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3727.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ ひたちなか東石川店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5186.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 宇都宮平松本町店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5228.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 真岡店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5240.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 太田飯塚店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5474.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 西浦和店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3550.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 浦和大門店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3551.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 東門前店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3552.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 朝霞台店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3553.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 入間店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3554.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 並木元町店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3555.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 川越店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3556.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 熊谷店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3557.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 南越谷店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3558.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 草加店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3559.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 所沢店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3560.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 下戸田店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3561.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 草加市立病院前店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5595.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 千葉寺店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3537.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 千葉登戸店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3538.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 稲毛海岸店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3539.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 若松店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3540.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 我孫子店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3541.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 市川店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3542.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 市原白金店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3543.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 柏店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3544.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 鎌ヶ谷店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3545.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 王子台店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3546.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 南流山店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3547.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 八柱店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3548.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 八千代店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3549.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ ライフガーデン新浦安店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3706.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 茂原店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5338.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 市川北方店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5466.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 扇店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3493.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 千住堀切橋店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3494.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 小松川店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3497.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 葛飾新宿店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3498.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 新小岩店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3499.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 十条店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3500.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 三軒茶屋店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3501.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 深沢店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3502.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 小平店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3503.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 花小金井店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3504.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 北野店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3505.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ めじろ台店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3506.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 南大沢店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3507.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 東大和店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3508.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 府中西原店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3509.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 羽村店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5191.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 昭島店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5274.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 東久留米店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5298.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 足立六町店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5305.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 町田成瀬店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/6448.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 足柄店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3512.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 厚木店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3513.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 厚木林店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3514.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 武蔵小杉店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3516.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 相模原店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3518.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 茅ヶ崎店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3519.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 大磯店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3520.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 秦野店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3521.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 四之宮店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3522.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 湘南ライフタウン店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3523.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 上和田店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3524.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 久里浜店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3525.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ あざみ野店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3526.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 青葉台店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3527.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 今宿店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3528.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 南本宿店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3529.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 港南台店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3530.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 瀬谷店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3531.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 荏田店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3532.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 北山田店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3533.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 鶴見中央店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3534.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 本牧店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3535.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 中山店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3536.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 戸塚立場店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3711.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 川崎生田店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3723.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 相模原城山店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5336.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 藤沢柄沢店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5372.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 戸塚平戸店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5534.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 新潟松崎店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5264.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 長岡今朝白店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5307.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 富山二口店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5196.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 高岡店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5515.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 富山上赤江店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5652.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 七尾店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3726.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 白山店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/4770.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 小松店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5195.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 金沢三馬店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5379.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 敦賀店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3719.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 坂井春江店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3731.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 鯖江店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5109.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 甲府和戸通り店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3563.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 富士吉田店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3564.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 甲府昭和通り店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3565.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 甲府千塚店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5343.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 飯田店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5265.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 諏訪店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5467.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 松本なぎさ店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/6149.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 岐阜東店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3577.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 高山店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3730.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 岐阜北方店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5220.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 大垣加賀野店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5389.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 可児店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5497.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 清水鳥坂店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3566.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 中田本町店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3567.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 中吉田店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3568.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 磐田店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3569.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 掛川インター店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3570.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 浜松西インター店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3571.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 浜松中沢店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3572.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 袋井店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3573.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 富士インター店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3574.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 藤枝店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3575.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 焼津店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3576.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 御殿場店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3717.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 大仁店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5110.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ アクロスプラザ富士宮店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5616.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 静岡平和店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5645.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 大治店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5188.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 一宮尾西店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5216.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 瀬戸店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5217.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 岡崎三崎町店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5239.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 豊川店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5269.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 蒲郡店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5283.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 名古屋東茶屋店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5327.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 小牧店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5328.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 高浜店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5623.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 豊橋小松店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5627.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 東海店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5646.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 鈴鹿店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3578.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 三重川越店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3579.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 四日市羽津店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3721.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 近江大橋店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3580.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 栗東小柿店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3720.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 長浜インター店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5249.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 彦根店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5299.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 桂店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3587.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 伏見店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3588.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 西九条店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3589.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 山科店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3590.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 木幡店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3591.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 亀岡店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3592.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 向日店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3593.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 天王寺店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3594.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 生野店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3595.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 大正店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3596.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 鶴見店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3597.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 東住吉店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3598.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 平野店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3599.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 池田店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3600.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 泉大津店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3601.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 和泉店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3602.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 茨木店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3603.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 沢良宜店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3604.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 岩室店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3605.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 都島店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3606.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 門真店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3608.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 岸和田店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3609.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 中百舌鳥店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3610.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 三宝町店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3611.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 大仙店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3612.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 泉北店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3613.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 福田店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3614.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 吹田岸部店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3615.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 大東店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3616.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 高槻店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3617.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 阪南店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3618.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 東大阪店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3619.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 今米店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3620.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 横小路店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3621.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 枚方招提店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3622.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 松原店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3623.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 箕面店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3624.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 佐太中町店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3625.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 八尾店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3626.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 高槻西町店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5450.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 有野インター店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3627.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 鈴蘭台店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3628.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 須磨店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3629.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 離宮公園店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3630.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 六甲店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3632.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 学園都市店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3633.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 伊川谷店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3634.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 東灘店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3635.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 西明石店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3636.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 芦屋店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3637.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 尼崎浜田店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3638.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 荒牧店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3639.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 加古川店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3640.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 川西店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3641.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 日生中央店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3642.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 三田店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3643.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 宝塚南店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3644.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 西宮店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3645.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 姫路中地店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3646.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 姫路辻井店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3647.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 三木店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3648.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 播磨店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3649.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 塚口店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3704.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 押熊店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3582.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 生駒店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3583.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 香芝インター店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3584.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 橿原店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3585.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 葛城店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3586.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 榎原店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3581.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 田辺新庄店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/4734.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ フォレストモール岩出店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5550.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 和歌山小雑賀店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/6303.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 米子米原店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5277.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 出雲姫原店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/4747.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 松江学園店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/4750.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 青江店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3650.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 大野辻店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3653.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 原尾島店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3654.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 堀南店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3655.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 倉敷店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3656.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 岡山平島店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/4759.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 津山店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5615.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 岡山津島京町店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/6231.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 五日市インター店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3657.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 祇園新道店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3658.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 舟入南店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3660.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 庚午店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3661.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 段原店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3662.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 皆実町店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3663.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 呉店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3664.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 西条店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3665.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 駅家店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3666.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 野上店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3667.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 蔵王店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3668.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 海田店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3669.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 府中店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3670.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 東尾道店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3712.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 三原店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5505.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 広島楽々園店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5628.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 山口店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3671.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 下関店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3672.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 徳山店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3673.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 光店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3674.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 防府店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3675.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 宇部店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3702.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 柳井店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3703.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 山陽小野田店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5741.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 徳島住吉店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5660.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 高松レインボーロード店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5624.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 今治喜田村店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3718.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 新居浜西喜光地店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3724.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 二又瀬店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3676.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 月隈店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3677.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 和白店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3678.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 大橋店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3679.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 白萩店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3680.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 葛原店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3681.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 徳力店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3682.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 門司店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3683.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 陣原店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3684.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 折尾店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3685.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 久留米中央公園店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3686.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 行橋店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3715.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 福岡石丸店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/4755.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 飯塚柏の森店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5247.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 福岡中尾店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5250.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 直方店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5304.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 筑紫野店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5326.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 福岡清水店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5329.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 八女店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5392.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ トリアス久山店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/6541.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 佐賀西店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3688.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 鳥栖店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5335.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 唐津店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/6304.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 文教町店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3690.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 上熊本店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3692.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 上水前寺店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3693.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 熊本インター店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3694.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 南高江店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3695.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 八代店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5221.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 熊本武蔵ケ丘店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5588.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 萩原店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3696.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 森町店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3698.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 別府北浜店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3699.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 中津店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3707.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 浮之城店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3700.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 宮崎日向店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3710.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 南延岡店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3728.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 都城店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/4766.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 谷山店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3701.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 薩摩川内店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3714.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 鹿屋寿店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3716.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 霧島隼人店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3725.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 鹿児島宇宿店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5268.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 鹿児島ベイサイド店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5284.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 鹿児島天文館店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5482.html",
+      "facilities": [
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 糸満店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3732.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ ABLOうるま店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/3733.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 北谷店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/4769.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 名護店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5248.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 那覇真嘉比店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/5405.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    },
+    {
+      "name": "ジョリーパスタ 坂田店",
+      "url": "https://maps.jolly-pasta.co.jp/jp/detail/6088.html",
+      "facilities": [
+        "parking",
+        "kidsMenu"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1147 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "tonkatsu-wako",
+  "name": "とんかつ和幸",
+  "sourceUrl": "https://wako-group.co.jp/shop/result/?brand=0&type=0",
+  "method": "公式店舗検索のブランド「とんかつ和幸」×業態「レストラン」の一覧（15ページ）の店舗カードにあるアイコン（表示あり／グレー表示）を店舗ごとに集計",
+  "total": 145,
+  "note": "公式サイトは正常なページも HTTP 404 で返すため本文の内容で取得成否を判定。アイコン列: 惣菜・駐車場・子供椅子・ランチメニュー・喫煙室・クレジット・電子マネー・ＱＲコード・スタンプカード・予備。グレー表示（class=is-not）は「なし」、非表示（is-hidden）は該当なしとして扱った。テイクアウト売店のみの店舗・海外店は含まない",
+  "facilities": {
+    "kidsChair": {
+      "count": 129,
+      "label": "子供椅子"
+    },
+    "parking": {
+      "count": 134,
+      "label": "駐車場"
+    }
+  },
+  "stores": [
+    {
+      "name": "和幸ステラプレイス札幌店（時短営業中）",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3128/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ポールタウン札幌店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3179/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸アリオ札幌店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3139/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ラソラ札幌店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3185/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール旭川西店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3187/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール苫小牧店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3178/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール盛岡南店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1157/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール石巻店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3173/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸エキナカ郡山駅店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1134/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール水戸内原店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3168/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸エクセル水戸店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1013/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール土浦店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2143/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール下妻店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1139/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモールつくば店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2155/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸あみプレミアム・アウトレット店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3180/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール高崎店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2132/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール太田店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1137/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸コクーンシティさいたま新都心店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1124/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール与野店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3137/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸伊勢丹浦和店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2011/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール浦和美園店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3142/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸アトレ川越店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3120/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸丸広川越店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3008/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸アズイースト熊谷店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1125/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール川口前川店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3111/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール羽生店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1170/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール上尾店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1172/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸トスカせんげん台店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3171/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ビーンズ戸田公園店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2045/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸入間東町店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3181/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸モラージュ菖蒲店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3174/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸富士見羽沢店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3188/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンタウンおゆみ野店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3154/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸シャポー本八幡店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2044/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸松戸西口店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1169/",
+      "facilities": []
+    },
+    {
+      "name": "和幸イオンモール成田店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1179/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール津田沼North店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1120/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸セブンパークアリオ柏店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3186/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸髙島屋ステーションモール柏店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2006/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸流山おおたかの森店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2133/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸アトレ新浦安店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1042/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "和幸イクスピアリ舞浜店（改装工事中）",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2109/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール千葉ニュータウン店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1173/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸カンファレンスセンター大手町店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1140/",
+      "facilities": []
+    },
+    {
+      "name": "和幸とんかつ輝富国生命ビル日比谷店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1009/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "和幸ヨドバシＡｋｉｂａ店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1176/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸聖路加ガーデン築地店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1052/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸トリトン晴海店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3136/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ヤエチカ店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3064/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸アイランド新宿店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1098/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "和幸伊勢丹会館新宿店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2171/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸サブナード新宿店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2076/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸日土地ビル西新宿店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1118/",
+      "facilities": []
+    },
+    {
+      "name": "和幸メトロエム後楽園店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2051/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸シーサイドフォレスト品川店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3126/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ニューシティ大崎店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3010/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸アトレ大森店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3060/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "和幸第２ターミナル羽田空港店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2120/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸経堂コルティ店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1167/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸マークシティ渋谷店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3104/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸メトロプラザビル渋谷店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1102/",
+      "facilities": []
+    },
+    {
+      "name": "和幸タウンセブン荻窪店（7/28リニューアルオープン）",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2148/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸サンシャインシティ池袋店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1006/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸パルコ池袋店（時短営業中）",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1122/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ビーンズ赤羽店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2090/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ＪＲ王子駅前店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2128/",
+      "facilities": []
+    },
+    {
+      "name": "和幸サンポップ町屋店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1065/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ＩＭＡ光が丘店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3147/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸エミオ練馬店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3113/",
+      "facilities": []
+    },
+    {
+      "name": "和幸マーヴ北綾瀬リエッタ店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1175/",
+      "facilities": []
+    },
+    {
+      "name": "和幸ビーンズ亀有店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1074/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸シャポー小岩店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1135/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸セレオ八王子店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2015/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸八王子堀之内店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2166/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸伊勢丹立川店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2094/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸多摩境店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1147/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸東急ツインズ町田店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3052/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸京王高幡不動店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1127/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "和幸セレオ国分寺店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2152/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ニトリ狛江ショッピングセンター店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2164/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸玉川上水店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1162/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸アクロスプラザ若葉台店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1158/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸アスタ田無店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1058/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール日の出店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2136/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸シァル鶴見店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3169/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ジョイナス横浜店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2105/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ポルタ横浜店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1008/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ランドマーク横浜店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2048/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ビーンズ保土ケ谷店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3032/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "和幸ビーンズ新杉田店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3086/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸トレッサ横浜店（改装工事中）",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2138/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸京急百貨店上大岡店（8/10リニューアルオープン）",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3066/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸あかね台店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1131/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸あざみ野ガーデンズ店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2157/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸あゆみが丘店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2098/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸東急ＳＣ港北店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3084/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ノースポートモール港北センター北店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3146/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸アトレ川崎店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1001/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸川崎アゼリア本店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2023/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "和幸ソリッドスクエア川崎店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1146/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "和幸ビーンズ武蔵中原店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3108/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸丸井溝口店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2079/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸鷺沼店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1164/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ステーションスクエア相模大野店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1072/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ウィング久里浜店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3040/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸コースカベイサイドストアーズ横須賀店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3030/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸リエール藤沢店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2170/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ミロード本厚木店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1142/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール大和店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3155/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸伊勢丹新潟店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2018/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール新潟亀田インター店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3151/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール新小松店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1165/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール甲府昭和店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1174/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール各務原インター店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1149/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸伊勢丹静岡店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2030/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸メイワン浜松店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1022/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール浜松市野店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1138/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ユニモール名古屋店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1160/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸パルコ名古屋店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1028/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール熱田店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1119/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール新瑞橋店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3163/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール大高店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3160/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸カルミア豊橋店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1078/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール木曽川店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1123/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸中部国際空港店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2123/",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "和幸イオンモール扶桑店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1153/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール草津店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2141/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ゼスト御池京都店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1084/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ＪＲ伊勢丹京都店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2077/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸LINKS UMEDA店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1180/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸クリスタ長堀店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1082/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール堺北花田店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3135/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ららぽーとＥＸＰＯＣＩＴＹ店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1161/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール大日店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2131/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール茨木店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2093/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール神戸北店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2169/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸プレンティ神戸店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2033/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸あまがさきキューズモール店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2147/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール伊丹店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3123/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸ビエラ加古川店（改装工事中）",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2124/",
+      "facilities": [
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール橿原店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_2115/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール岡山店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1159/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール倉敷店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1156/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸福屋広島駅前店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_1091/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    },
+    {
+      "name": "和幸イオンモール広島府中店",
+      "url": "https://wako-group.co.jp/shop/detai/shop_3133/",
+      "facilities": [
+        "parking",
+        "kidsChair"
+      ]
+    }
+  ]
+}

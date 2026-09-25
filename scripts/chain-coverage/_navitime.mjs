@@ -34,17 +34,21 @@ async function listAll(api, referer, extra = '') {
  * @param {string} [o.extraParams]  検索画面が既定で付ける追加クエリ（例 'c_d1=0'）。全件・絞り込みの両方に付く
  * @param {string} [o.method]
  * @param {string} [o.note]
+ * @param {{ test: (item: any) => boolean, label: string }} [o.filter]  数える店舗の条件（例: 国内住所のみ）。
+ *   外れた店舗は total から除き、件数を note に書く。絞り込み件数との突き合わせも同じ条件で行う
  */
-export async function crawlNavitime({ chain, name, site, flags, categories, extraParams, method, note }) {
+export async function crawlNavitime({ chain, name, site, flags, categories, extraParams, method, note, filter }) {
   const api = `${site}api/proxy2/shop/list`;
   const referer = `${site}spot/lists`;
   // extraParams: 検索画面が既定で付けている追加条件（例 吉野家の c_d1=0「店舗ページに表示しない」店の除外）
   const cat = (categories?.length ? `&category=${categories.join('.')}` : '') + (extraParams ? `&${extraParams}` : '');
-  const all = await listAll(api, referer, cat);
+  const fetched = await listAll(api, referer, cat);
+  const all = filter ? fetched.filter(filter.test) : fetched;
+  const dropped = fetched.length - all.length;
   const flagged = {};
   for (const [key, { param }] of Object.entries(flags)) {
     const hit = await listAll(api, referer, `${cat}&c_${param}=1`);
-    flagged[key] = new Set(hit.map((s) => s.code));
+    flagged[key] = new Set((filter ? hit.filter(filter.test) : hit).map((s) => s.code));
   }
   const stores = all.map((s) => ({
     name: s.name.replace(/[\s　]+/g, ' ').trim(),
@@ -68,7 +72,7 @@ export async function crawlNavitime({ chain, name, site, flags, categories, extr
     sourceUrl: referer,
     method: method || `公式店舗検索（NAVITIME製）が呼ぶ店舗API（/api/proxy2/shop/list）で全店舗を取得し、詳細フラグごとの絞り込み検索（c_d<番号>=1）の該当店舗を突き合わせて店舗ごとに集計`,
     total: stores.length,
-    note: [note, `業態カテゴリ内訳: ${Object.entries(cats).map(([n, c]) => `${n}${c}店`).join('・')}`].filter(Boolean).join('。'),
+    note: [note, dropped ? `${filter.label}に当たらない${dropped}件を除外（一覧 ${fetched.length} 件）` : null, `業態カテゴリ内訳: ${Object.entries(cats).map(([n, c]) => `${n}${c}店`).join('・')}`].filter(Boolean).join('。'),
     facilities,
     stores,
   };

@@ -1,0 +1,3496 @@
+{
+  "countedAt": "2026-09-25",
+  "chain": "katsuya",
+  "name": "かつや",
+  "sourceUrl": "https://shop.arclandservice.co.jp/ae-shop/spot/lists",
+  "method": "公式店舗検索（shop.arclandservice.co.jp/ae-shop）の一覧APIでカテゴリ「かつや」の全店舗を列挙し、「施設情報」の条件「駐車場あり」で絞り込んだ結果に含まれる店舗を店舗ごとに集計（国内店のみ）",
+  "total": 513,
+  "note": "海外店は除外。店舗検索の設備に当たる条件は「駐車場あり」のみで、子ども用の椅子・おむつ替え台等の項目は無い。国内住所（都道府県で始まる住所）に当たらない78件を除外（一覧 591 件）。業態カテゴリ内訳: かつや513店",
+  "facilities": {
+    "parking": {
+      "count": 457,
+      "label": "駐車場あり"
+    }
+  },
+  "stores": [
+    {
+      "name": "かつや 中野南口店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1001",
+      "facilities": []
+    },
+    {
+      "name": "かつや イオンレイクタウンmori店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1002",
+      "facilities": []
+    },
+    {
+      "name": "かつや 横浜高田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1003",
+      "facilities": []
+    },
+    {
+      "name": "かつや 所沢北中店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1004",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 大磯店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1005",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや アリオ亀有店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1006",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 幕張西店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1007",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 千葉鎌ケ谷店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1008",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 東陽町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1009",
+      "facilities": []
+    },
+    {
+      "name": "かつや 府中緑町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1010",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 秦野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1011",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 足立入谷店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1012",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 札幌石山2条店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1013",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 名古屋植田南店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=1014",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 相模原上溝店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=104",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 堺石津店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=108",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 名古屋名駅店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=110",
+      "facilities": []
+    },
+    {
+      "name": "かつや 宇都宮簗瀬店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=111",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 千葉行徳店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=112",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 富山上飯野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=114",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 神奈川座間店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=115",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 町田鶴川店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=116",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 明石二見店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=117",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 金沢新神田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=122",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知勝川インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=123",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 岐阜芥見店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=125",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 滋賀栗東インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=127",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知岡崎北店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=128",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 長野七瀬店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=136",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 札幌西区西町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=137",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 東京平和島店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=138",
+      "facilities": []
+    },
+    {
+      "name": "かつや 大阪枚方店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=140",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 高知インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=141",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 埼玉上尾店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=145",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知岡崎インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=146",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 横浜長津田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=147",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 三重鈴鹿店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=150",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 山形荒楯店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=152",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 兵庫姫路西店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=154",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 川崎溝の口店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=158",
+      "facilities": []
+    },
+    {
+      "name": "かつや 徳島川内店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=159",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 茨城ひたちなか市毛店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=160",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 札幌すすきの店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=162",
+      "facilities": []
+    },
+    {
+      "name": "かつや 山梨甲府店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=166",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 静岡富士店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=170",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 名古屋鳴海店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=171",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 埼玉朝霞台店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=172",
+      "facilities": []
+    },
+    {
+      "name": "かつや 神奈川厚木船子店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=174",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 東京武蔵村山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=175",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 川中島店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=180",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知小牧南インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=183",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 札幌手稲前田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=184",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 富山インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=185",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 金沢久安店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=186",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 千歳店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=187",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 神奈川大和店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=188",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 東大阪中央大通店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=189",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 栃木小山城南店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=192",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 宇都宮長岡店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=193",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 兵庫東加古川店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=195",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 金沢神谷内店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=196",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 大宮中丸店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=197",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 神奈川平塚大神店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=201",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 湘南藤沢石川店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=202",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 八王子南大沢店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=203",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 徳島沖浜店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=204",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 町田忠生店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=206",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 相模原橋本店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=208",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 甲府昭和インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=209",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 八王子大和田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=210",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 静岡三島店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=212",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知前後店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=213",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 岡山富田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=214",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 松山久万ノ台店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=215",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 茅ヶ崎今宿店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=216",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 静岡富士宮店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=217",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 鹿児島卸本町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=219",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 名岐バイパス春日店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=220",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 国分広瀬店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=221",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 千葉富里店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=222",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 福井新保店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=223",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 北九州上の原店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=226",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 東京西葛西店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=227",
+      "facilities": []
+    },
+    {
+      "name": "かつや 戸田美女木店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=229",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知豊川インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=230",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 横浜鶴見東口店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=231",
+      "facilities": []
+    },
+    {
+      "name": "かつや 川越渋井店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=232",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 堺鳳中町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=233",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 福島郡山インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=234",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 静岡沼津店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=236",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 京都新堀川店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=237",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 大阪松原三宅店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=238",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 山形江俣店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=239",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 仙台六丁の目店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=240",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 静岡浜松入野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=241",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 名岐バイパス一宮店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=244",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 大阪四條畷店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=245",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 宇都宮インターパーク店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=246",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 宇都宮御幸本町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=247",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 大阪住之江粉浜店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=248",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 北名古屋店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=249",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 小金井前原店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=250",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 小倉明和町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2501",
+      "facilities": []
+    },
+    {
+      "name": "かつや 広島安東店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2502",
+      "facilities": []
+    },
+    {
+      "name": "かつや 神戸摩耶店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2503",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 山口防府店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2504",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや イオンモール日の出店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2505",
+      "facilities": []
+    },
+    {
+      "name": "かつや 岩手北上店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2506",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 千葉茂原店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2507",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 薩摩川内店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2508",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや イオンモールナゴヤドーム前店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2509",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 埼玉本庄店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=251",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 福岡小田部店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2510",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 大阪博労町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2511",
+      "facilities": []
+    },
+    {
+      "name": "かつや 福岡糸島店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2512",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 岩手花巻店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2513",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 京都上桂店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2514",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 福山御幸店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2515",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 四日市河原田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2516",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 長野大豆島店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2517",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 仙台錦ケ丘店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2518",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 北熊本サービスエリア下り店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2519",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 静岡インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=252",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 宮城富谷店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2520",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 岡山久米店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2521",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 高槻南店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2522",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 富山五福店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2523",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 山形酒田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2524",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 佐賀唐津店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2525",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 栃木さくら店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2526",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 奈良天理店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2527",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 京都北山通店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2528",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 三重伊勢店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2529",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知新舞子店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=253",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 大阪弁天町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=2530",
+      "facilities": []
+    },
+    {
+      "name": "かつや 愛知日進店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=254",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知津島店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=255",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知大府店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=256",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知名四弥富店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=257",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 名古屋丸の内店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=258",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 茨城神栖店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=259",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 奈良大和郡山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=260",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 堺大野芝店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=261",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知知立店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=262",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知豊橋新栄店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=264",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 茨城つくば店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=265",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 群馬太田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=266",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 福山手城店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=268",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 水戸住吉店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=269",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 尼崎西難波店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=270",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 埼玉羽生店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=271",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 横浜希望が丘店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=272",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 京都向日店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=273",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 和歌山小雑賀店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=275",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 静岡磐田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=276",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 浜松有玉店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=277",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 姫路てがらやま店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=279",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 横須賀佐原インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=280",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 前橋元総社店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=281",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや いわき鹿島街道店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=282",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 高崎問屋町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=284",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 旭川4条通店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=285",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 美原ロータリー羽曳野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=286",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 和歌山岩出店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=287",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 北海道苫小牧店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=288",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 千葉市原白金店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=289",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 姫路野里店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=290",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 千葉君津店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=291",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 仙台西中田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=292",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 藤沢湘南台店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=293",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 富山高岡店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=294",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 盛岡西バイパス店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=295",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 静岡聖一色店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=296",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 奈良橿原店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=297",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 高槻緑町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=298",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 多賀城店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=299",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 名取店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=300",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 仙台泉インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=301",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 泉大津店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=302",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 安城横山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=303",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 埼玉行田桜町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=304",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 札幌伏古店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=305",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや さいたま宮原店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=306",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 宮崎東大宮店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=307",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 茨城土浦店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=308",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 岸和田三田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=309",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知刈谷恩田町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=310",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 博多東光寺店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=311",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 前橋荒牧店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=312",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 国立府中インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=313",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 青森西バイパス店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=314",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや さいたま円正寺店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=315",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 福島矢野目店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=316",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 大阪平野馬場店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=317",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 大阪泉佐野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=318",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 奈良尼辻店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=319",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 群馬館林店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=320",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 広島石内バイパス店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=321",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 福山春日店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=322",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 長野佐久店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=323",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 山口徳山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=324",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 山口吉敷店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=325",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 千葉東金店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=326",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 熊本浜線バイパス店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=327",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 秋田東通店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=329",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 松山久米店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=330",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 金沢南店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=331",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 大分光吉インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=332",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 静岡御殿場店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=333",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 大分中津店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=334",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 広島祇園店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=335",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 佐賀本庄店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=336",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 弘前城東店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=337",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 岐阜正木店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=338",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 東大阪瓢箪山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=339",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 石川松任店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=340",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知岩倉店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=341",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 宇都宮鶴田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=342",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 水戸桜ノ牧店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=343",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知一宮尾西店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=344",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 千葉木更津店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=345",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 静岡七ツ新屋店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=347",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 滋賀長浜店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=348",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知１号線弥富店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=350",
+      "facilities": []
+    },
+    {
+      "name": "かつや 神奈川綾瀬店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=351",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 大阪本町通店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=352",
+      "facilities": []
+    },
+    {
+      "name": "かつや 大阪住之江北加賀屋店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=355",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 広島曙店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=356",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 旭川東光店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=357",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 金沢示野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=358",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 広島八木店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=359",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 福岡行橋店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=360",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 明石小久保店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=361",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 岩手一関店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=362",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 福島競馬場前店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=363",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 守谷中央店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=364",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや つくば大曽根店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=365",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 岐阜美濃加茂店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=366",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 福岡インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=367",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 豊田前田町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=368",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 茨城牛久店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=369",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 三重松阪店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=370",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 浜松西インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=371",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 東大阪西堤店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=372",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 東広島店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=373",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 倉敷浜ノ茶屋店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=374",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 東岡山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=375",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 河内長野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=376",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 喜連瓜破店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=377",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 京都醍醐店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=378",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 旭川大町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=379",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 栃木西那須野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=380",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 羽曳野西浦店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=381",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 立川北口店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=382",
+      "facilities": []
+    },
+    {
+      "name": "かつや 海浜幕張店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=384",
+      "facilities": []
+    },
+    {
+      "name": "かつや 宮城岩沼店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=385",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 栃木佐野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=386",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 大津瀬田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=387",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 埼玉杉戸店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=388",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 神奈川つきみ野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=389",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 稲城矢野口店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=390",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 宮崎一の宮店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=391",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 静岡藤枝店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=392",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 長野柳原店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=393",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 和歌山北インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=394",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知西尾店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=395",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 栃木大田原店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=396",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 御徒町南口店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=397",
+      "facilities": []
+    },
+    {
+      "name": "かつや 郡山香久池店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=398",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 茨城荒川沖店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=399",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 八戸城下店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=400",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 高松東バイパス店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=403",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 沼津香貫店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=404",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 太宰府大佐野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=405",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 宝塚店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=406",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 日立鮎川店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=407",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 岐阜大垣店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=408",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 鹿沼店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=409",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 東仙台店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=410",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 船橋芝山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=411",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 福岡香椎店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=412",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 奈良香芝店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=413",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛媛今治店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=414",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや イオンモール津南店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=415",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 埼玉深谷店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=416",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 青梅河辺店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=417",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 千曲店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=418",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 神奈川葉山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=419",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知尾張旭店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=421",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知瀬戸店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=422",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 福島須賀川店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=423",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 岩手水沢店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=424",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 日立川尻店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=425",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや ファッションクルーズひたちなか店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=427",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 松本平田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=428",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 群馬渋川店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=429",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 四日市北町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=430",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 島根出雲店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=431",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 大阪大東店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=432",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 埼玉加須店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=433",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 和歌山海南店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=434",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知みよし店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=435",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 小倉田原店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=436",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 横浜日野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=437",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 香川観音寺店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=438",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 鈴鹿中央通店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=439",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 福井運動公園前店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=440",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 宮城石巻店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=441",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 茨木真砂店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=442",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 会津若松店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=443",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや いわき泉店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=444",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 福岡野多目店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=445",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 豊川御油店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=446",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 三鷹上連雀店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=447",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 熊本近見店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=448",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 石川小松店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=449",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 福井敦賀店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=450",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 八尾山賀店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=451",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 熊本益城インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=452",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 小倉西港店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=453",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 金沢杜の里店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=454",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 長野安曇野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=455",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 水戸袴塚店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=456",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 鳥取米子店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=457",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 名古屋十番町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=458",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 千葉八千代店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=459",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 郡山富久山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=460",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 宮崎都城店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=461",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 宮城古川店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=462",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 広島中央通店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=463",
+      "facilities": []
+    },
+    {
+      "name": "かつや 宮崎恒久店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=464",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 山形大野目店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=465",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 福井鯖江店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=466",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 宮城気仙沼店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=467",
+      "facilities": []
+    },
+    {
+      "name": "かつや 滝川店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=468",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 岸和田八阪店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=469",
+      "facilities": []
+    },
+    {
+      "name": "かつや 愛知高浜店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=470",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 岐阜恵那店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=471",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 久留米上津店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=472",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 寝屋川秦町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=473",
+      "facilities": []
+    },
+    {
+      "name": "かつや 下関垢田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=474",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 豊中利倉東店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=475",
+      "facilities": []
+    },
+    {
+      "name": "かつや 白河店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=476",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 島根松江店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=477",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 伊勢崎宮子町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=478",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 長野上田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=479",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 登別店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=480",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 和歌山橋本店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=481",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 横浜和泉町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=482",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 尼崎つかしん店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=483",
+      "facilities": []
+    },
+    {
+      "name": "かつや 宮崎大橋店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=484",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 大和高田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=485",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 神戸高丸インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=486",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 友部旭町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=487",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 南福島店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=488",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 長野飯田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=489",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 十日町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=490",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 岩見沢店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=491",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 奈良曲川店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=492",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 札幌北44条店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=493",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 佐世保椎木店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=494",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 伊丹山田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=495",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや イオンモール木曽川店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=496",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 甲斐敷島店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=497",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 岐阜多治見店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=498",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 大分わさだ店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=499",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 相模大野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=701",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 花小金井店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=702",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 海老名店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=703",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 東大和店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=704",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 小田原店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=705",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 川越店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=706",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 相模原店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=707",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 京浜川崎店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=709",
+      "facilities": []
+    },
+    {
+      "name": "かつや 成増店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=710",
+      "facilities": []
+    },
+    {
+      "name": "かつや 柏東口店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=713",
+      "facilities": []
+    },
+    {
+      "name": "かつや 瑞江店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=718",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 神田東口店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=719",
+      "facilities": []
+    },
+    {
+      "name": "かつや 千葉穴川店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=724",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 一之江店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=728",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや せんげん台店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=729",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 蕨塚越店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=730",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 亀田インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=733",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 大井松田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=735",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 長岡店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=736",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 越谷店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=737",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 三郷店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=738",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 南柏店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=739",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 代々木駅前店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=740",
+      "facilities": []
+    },
+    {
+      "name": "かつや 池上駅前店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=741",
+      "facilities": []
+    },
+    {
+      "name": "かつや 稲毛海岸店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=742",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 北千住西口店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=744",
+      "facilities": []
+    },
+    {
+      "name": "かつや 川口石神店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=745",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 足立江北店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=746",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 新橋店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=748",
+      "facilities": []
+    },
+    {
+      "name": "かつや 川越砂店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=749",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 高円寺北口店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=750",
+      "facilities": []
+    },
+    {
+      "name": "かつや 川崎戸手店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=751",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 池袋西口店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=752",
+      "facilities": []
+    },
+    {
+      "name": "かつや 千葉末広店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=753",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 浅草店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=755",
+      "facilities": []
+    },
+    {
+      "name": "かつや 札幌白石店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=756",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 東松山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=757",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 新潟坂井店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=758",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 東京昭島店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=759",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 田町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=760",
+      "facilities": []
+    },
+    {
+      "name": "かつや 草加谷塚店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=761",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 藤沢南口店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=762",
+      "facilities": []
+    },
+    {
+      "name": "かつや 札幌福住店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=764",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 新潟牡丹山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=767",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 飯能店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=768",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 浅草橋店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=770",
+      "facilities": []
+    },
+    {
+      "name": "かつや 新座野火止店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=771",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 札幌美園店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=772",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 札幌石山通店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=773",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 狭山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=774",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや さいたま町谷店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=775",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 赤羽店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=777",
+      "facilities": []
+    },
+    {
+      "name": "かつや 京成船橋店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=779",
+      "facilities": []
+    },
+    {
+      "name": "かつや 鶴ヶ島インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=780",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 新宿南口店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=781",
+      "facilities": []
+    },
+    {
+      "name": "かつや 蒲田西口店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=782",
+      "facilities": []
+    },
+    {
+      "name": "かつや 三条店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=783",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 佐倉店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=784",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 秋葉原店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=786",
+      "facilities": []
+    },
+    {
+      "name": "かつや 伊奈店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=787",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 所沢牛沼店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=788",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 横浜市沢町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=789",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 板橋小茂根店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=791",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 本八幡店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=793",
+      "facilities": []
+    },
+    {
+      "name": "かつや 新発田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=795",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 東久留米店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=796",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 秋葉原中央改札口店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=797",
+      "facilities": []
+    },
+    {
+      "name": "かつや さいたま深作店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=798",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 横浜上白根店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=800",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 江別野幌店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=803",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 東松戸駅前店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=804",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 北本店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=806",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 戸塚原宿店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=807",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 東葛西店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=808",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 羽村店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=809",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 南流山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=810",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 千葉印西店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=811",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 埼玉鴻巣店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=812",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 川崎梶ヶ谷店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=813",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 上越店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=814",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 千葉若松町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=815",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 見附店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=817",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 横浜和田町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=818",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 和光白子店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=819",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 新潟白根店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=821",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 名古屋柴田本通店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=822",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 松戸二十世紀が丘店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=823",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 野田宮崎店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=824",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 名古屋名四港店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=828",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 新潟堀之内店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=829",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 名古屋小幡店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=831",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知半田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=833",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 岐阜岐南町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=836",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 名古屋弥富通店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=838",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知小牧原店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=839",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知大口町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=840",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 名古屋本陣通店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=841",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 川口南鳩ヶ谷店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=842",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知春日井インター店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=843",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 岐阜羽島店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=844",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 岐阜瑞穂店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=846",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 千葉おゆみ野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=850",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや さいたま岩槻店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=851",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 岐阜関店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=853",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 岐阜南鶉店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=854",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 熊谷新島店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=855",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 川越的場店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=856",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知蟹江店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=857",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 福生店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=859",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 名東新宿店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=861",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 横浜荏田東店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=862",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 各務原鵜沼店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=863",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 足立一ツ家店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=864",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 札幌新川店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=865",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや さいたま南与野店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=866",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 愛知稲沢店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=867",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 埼玉日高店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=868",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 川越上寺山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=869",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 札幌北23条店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=870",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 新潟県庁前店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=871",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 埼玉八潮店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=872",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 三重桑名店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=873",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 柏沼南店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=874",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 蕨北町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=875",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 北広島店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=876",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 厚木妻田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=878",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 豊洲店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=879",
+      "facilities": []
+    },
+    {
+      "name": "かつや 春日部ユリノキ通り店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=880",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 八王子店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=881",
+      "facilities": []
+    },
+    {
+      "name": "かつや 市川駅前店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=882",
+      "facilities": []
+    },
+    {
+      "name": "かつや 千葉浦安店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=883",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 札幌清田店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=884",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 経堂店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=885",
+      "facilities": []
+    },
+    {
+      "name": "かつや 練馬関町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=886",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 伊勢原店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=887",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 千歳烏山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=888",
+      "facilities": []
+    },
+    {
+      "name": "かつや 所沢林店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=889",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 五反田東口店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=890",
+      "facilities": []
+    },
+    {
+      "name": "かつや 名古屋笠寺店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=891",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 横浜瀬谷店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=892",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 埼玉久喜",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=893",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 御茶ノ水ソラシティ店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=894",
+      "facilities": []
+    },
+    {
+      "name": "かつや アリオ西新井店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=895",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 成田東町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=896",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 407号東松山店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=897",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや さいたま西大宮店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=898",
+      "facilities": [
+        "parking"
+      ]
+    },
+    {
+      "name": "かつや 八王子並木町店",
+      "url": "https://shop.arclandservice.co.jp/ae-shop/spot/detail?code=899",
+      "facilities": []
+    }
+  ]
+}
