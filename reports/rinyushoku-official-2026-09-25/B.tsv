@@ -1,0 +1,7 @@
+key	name	判定	温め	お湯	ベビーフード販売	公式の文言（原文そのまま・80字以内）	sourceUrl	陽性対照URL	作成slug
+sushiro	スシロー	記載なし	記載なし	明記あり	記載なし	お茶用のお湯での調乳について掲載…そのお湯が70℃を下回る温度になるなど…掲載の取り下げをいたしました［持ち込みの記載なし］	https://www.akindo-sushiro.co.jp/news/detail.php?id=3517	https://www.akindo-sushiro.co.jp/faq/ （Q「子供椅子、おむつ台はありますか？」A「設置しております。」）	
+kura-sushi	くら寿司	記載なし（FAQ無し）	記載なし	記載なし	記載なし	（該当記載なし）公式サイトにFAQ無し（/faq/ はソフト404）。店舗ページ「提供サービス」はスロープ/多機能トイレ等のみで子連れ項目なし。お子さまランチ等の告知ページにも該当語なし	https://www.kurasushi.co.jp/contact/	https://shop.kurasushi.co.jp/detail/665	
+kappa-sushi	かっぱ寿司	記載なし	明記あり	記載なし	明記あり	お寿司が食べられないおこさまも安心! 離乳食あります! 温めも承ります［画像内の文言。店の離乳食の案内で、持ち込みの記載なし］	https://www.kappasushi.jp/kappa-kids	https://www.kappasushi.jp/kappa-kids （同ページ画像に「キッズチェアあります!」「おむつ替え台…完備!※一部店舗では設置がございません」）	
+uobei	魚べい	記載なし（FAQ無し）	記載なし	記載なし	記載なし	（該当記載なし）uobei.infoにFAQ無し（/faq/ 404）。店舗API全199件のservice項目は回転しない寿司/駐車場/車いす対応等のみ。メニューAPIにも該当語なし。genkisushi.co.jpは当環境から接続不可	https://www.uobei.info/	FAQ無し（参考: https://www.uobei.info/store/ ）	
+choushimaru	すし銚子丸	記載なし（FAQ取得不可）	記載なし	記載なし	記載なし	（該当記載なし）公式FAQ /question/ は当環境から403（2024-11のアーカイブではパスワード保護）。店舗ページ「営業サービス・施設情報」はベビールーム等を記録するが離乳食の項目なし	https://stores.choushimaru.co.jp/138	https://stores.choushimaru.co.jp/138 （「ベビールーム」「ファミリーシート（BOX席）」を記録）	
+ootoya	大戸屋	記載なし	記載なし	記載なし	記載なし	（該当記載なし）FAQ実在（メニュー/アプリ/POINT+/e-Gift）だが子連れ項目なし。店舗検索の「サービス・施設」分類（駐車場/ドリンクバー/禁煙等13種）にも子連れ項目なし	https://www.ootoya.com/faq/	https://www.ootoya.com/faq/ （陽性対照は不成立：公式に子連れ項目を記録する面が無い）	
