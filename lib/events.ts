@@ -70,6 +70,16 @@ export type EventEntry = {
    * scripts/events-maintenance.mjs が繰り上げ候補として一覧化する。
    */
   recurring?: 'annual';
+  /**
+   * その回の開催日を公式で確認できていない（startDate/endDate は例年の時期からの目安）。
+   * true のときは具体的な日付を表示せず「例年◯月ごろ（開催日は公式で未確認）」とだけ出し、
+   * 開催中・今週・今月の一覧からも外す。公式で日程を確認したら外して日付を入れ直す。
+   * 2026-09-26: 登録時の仮期間（のとじま）や手作業の年繰り上げ（愛染まつり）が
+   * 「2026年は7/1〜9/30」「今年は開催中」と本番に出ていた事故への対策。
+   */
+  datesUnverified?: boolean;
+  /** 施設・イベント自体が公式で営業終了・廃止になった。「来年も開催される場合があります」を出さない。 */
+  closed?: boolean;
 };
 
 /**
@@ -244,6 +254,7 @@ const BASE_EVENTS: EventEntry[] = [
     tags: ['プール', '夏', '屋外'],
     note: '立川駅徒歩10分。幼児用プールは水深30cm、浮き輪持参可。【2026-09-26 公式で確認】公式の施設ページ（https://www.showakinen-koen.jp/facility/facility-615/）は「レインボープール（営業終了）」となっており、「水あそび広場」および「レインボープール」は施設の老朽化や昭島口周辺エリアの再整備などのため営業を終了したと掲載されています。今後は再整備で通年の「親水空間」にする予定と案内されています。',
     // recurring: 'annual' は外した（2026-09-26: 公式でレインボープールは営業終了。翌年への繰り上げを止める）
+    closed: true,
   },
   {
     slug: 'mizumoto-park-aji-festival',
@@ -864,6 +875,7 @@ const BASE_EVENTS: EventEntry[] = [
     tags: ['水族館', '夜', '室内'],
     note: '2026-09-26 に公式ページを確認したところ、掲載されている開催日は令和5年（2023年）の7〜9月の計8日間のみで、2026年の開催日は公式に記載を確認できませんでした。この期間は例年の開催時期の目安です。行く前に必ず公式サイトで最新の開催状況を確認してください。',
     recurring: 'annual',
+    datesUnverified: true,
   },
   {
     slug: 'angelland-tanabata-2026',
@@ -956,6 +968,7 @@ const BASE_EVENTS: EventEntry[] = [
     tags: ['祭り', '屋台', '屋外'],
     recurring: 'annual',
     note: '毎年6/30〜7/2の固定日開催（大阪三大夏祭りの先陣）。2026-09-26 に公式 festival.htm を確認したところ、掲載は2026年開催分（愛染娘2026・6月30日〜7月2日）までで、2027年の開催日は公式に記載を確認できませんでした。この日付は例年の開催日の目安です。開催が近づいたら公式 festival.htm で最終確認。',
+    datesUnverified: true,
   },
   {
     slug: 'tenjin-matsuri-2026',
@@ -3054,6 +3067,29 @@ export function isEventEnded(e: EventEntry): boolean {
   return e.endDate < todayString();
 }
 
+/** 日付を「開催日」として出してよいか（公式で未確認・営業終了のものは出さない）。 */
+export function isEventDateReliable(e: EventEntry): boolean {
+  return !e.datesUnverified && !e.closed;
+}
+
+function junShun(day: number): string {
+  if (day <= 10) return '上旬';
+  if (day <= 20) return '中旬';
+  return '下旬';
+}
+
+/** 「8月上旬〜中旬」「6月中旬〜7月上旬」のような、年に依存しない期間表現。 */
+export function formatEventSeason(e: EventEntry): string {
+  const [, sm, sd] = e.startDate.split('-').map(Number);
+  const [, tm, td] = e.endDate.split('-').map(Number);
+  if (sm === tm) {
+    const a = junShun(sd);
+    const b = junShun(td);
+    return a === b ? `${sm}月${a}` : `${sm}月${a}〜${b}`;
+  }
+  return `${sm}月${junShun(sd)}〜${tm}月${junShun(td)}`;
+}
+
 /** 全イベント（overrides マージ済） */
 export function getAllEvents(ovMap?: EventOverridesMap): EventEntry[] {
   return getMergedEvents(ovMap);
@@ -3062,7 +3098,9 @@ export function getAllEvents(ovMap?: EventOverridesMap): EventEntry[] {
 /** 現在開催中のイベント（startDate <= today <= endDate） */
 export function getOngoingEvents(): EventEntry[] {
   const today = todayString();
-  return getMergedEvents().filter((e) => e.startDate <= today && today <= e.endDate);
+  return getMergedEvents().filter(
+    (e) => isEventDateReliable(e) && e.startDate <= today && today <= e.endDate,
+  );
 }
 
 /** 今週開催中 or 開催予定のイベント（今日から 7 日以内に始まる or 開催中） */
@@ -3070,7 +3108,7 @@ export function getThisWeekEvents(): EventEntry[] {
   const today = todayString();
   const weekLater = addDays(today, 7);
   return getMergedEvents()
-    .filter((e) => e.endDate >= today && e.startDate <= weekLater)
+    .filter((e) => isEventDateReliable(e) && e.endDate >= today && e.startDate <= weekLater)
     .sort((a, b) => a.startDate.localeCompare(b.startDate));
 }
 
@@ -3079,7 +3117,7 @@ export function getThisMonthEvents(): EventEntry[] {
   const today = todayString();
   const monthLater = addDays(today, 30);
   return getMergedEvents()
-    .filter((e) => e.endDate >= today && e.startDate <= monthLater)
+    .filter((e) => isEventDateReliable(e) && e.endDate >= today && e.startDate <= monthLater)
     .sort((a, b) => a.startDate.localeCompare(b.startDate));
 }
 
@@ -3100,7 +3138,7 @@ export function getUpcomingEventsNear(
 ): { events: EventEntry[]; cityMatched: boolean } {
   const today = todayString();
   const alive = getMergedEvents()
-    .filter((e) => e.area === area && e.endDate >= today)
+    .filter((e) => e.area === area && isEventDateReliable(e) && e.endDate >= today)
     .sort((a, b) => a.startDate.localeCompare(b.startDate));
   if (!cityLike) return { events: alive.slice(0, limit), cityMatched: false };
   const cityMatch = alive.filter(
@@ -3174,7 +3212,7 @@ export function filterEvents(f: EventFilter): EventEntry[] {
     .filter((e) => (f.area ? e.area === f.area : true))
     .filter((e) => (f.category ? e.category === f.category : true))
     .filter((e) => (f.free ? isFreeEvent(e) : true))
-    .filter((e) => (f.soon ? e.startDate <= weekLater : true))
+    .filter((e) => (f.soon ? isEventDateReliable(e) && e.startDate <= weekLater : true))
     .filter((e) => (f.baby ? isBabyFriendlyEvent(e) : true))
     .sort((a, b) => a.startDate.localeCompare(b.startDate));
 }
@@ -3211,6 +3249,9 @@ export function daysUntilStart(e: EventEntry): number {
 
 /** 残り日数バッジ表記（"あと3日" / "今週末" / "本日最終" / "開催中" 等） */
 export function deadlineBadge(e: EventEntry): { text: string; level: 'urgent' | 'soon' | 'week' | 'normal' | 'live' } {
+  // 開催日が公式で未確認の回に「開催中」「あと◯日」を付けない（2026-09-26）
+  if (e.datesUnverified) return { text: '日程未確認', level: 'normal' };
+  if (e.closed) return { text: '営業終了', level: 'normal' };
   const today = todayString();
   if (e.startDate <= today && today <= e.endDate) {
     // 開催中。終了までの日数を出す
@@ -3405,6 +3446,8 @@ function hashEventSlug(s: string): number {
 
 /** 開催期間を「3/15(土)」「3/20〜4/7」のような表示文字列に */
 export function formatEventPeriod(e: EventEntry): string {
+  // 公式で開催日を確認できていない回は、具体的な日付・曜日を出さない（2026-09-26）
+  if (e.datesUnverified) return `例年${formatEventSeason(e)}ごろ（開催日は公式で未確認）`;
   const fmt = (d: string) => {
     const dt = new Date(d);
     const m = dt.getMonth() + 1;
