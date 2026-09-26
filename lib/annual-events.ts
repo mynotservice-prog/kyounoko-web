@@ -37,6 +37,11 @@ export type VenueAnnualEvent = {
   periodLabel: string;
   /** 会期が終了しているか */
   ended: boolean;
+  /**
+   * 表示用の状態。'ongoing'=会期中 / 'upcoming'=これから（公式で日程確認済み）/
+   * 'ended'=今年は終了 / 'unverified'=開催日が公式で未確認（2026-09-26）
+   */
+  status: 'ongoing' | 'upcoming' | 'ended' | 'unverified';
   officialUrl?: string;
   venue: string;
 };
@@ -119,6 +124,7 @@ export function getVenueAnnualEvents(spotName: string, limit = 4): VenueAnnualEv
       title: e.title,
       kind,
       ended,
+      status: e.datesUnverified ? 'unverified' : ended ? 'ended' : upcoming ? 'upcoming' : 'ongoing',
       officialUrl: e.officialUrl,
       venue: e.venue,
       periodLabel,

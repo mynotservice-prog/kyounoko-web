@@ -49,11 +49,17 @@ export function VenueAnnualEvents({ events, spotName }: { events: VenueAnnualEve
                     fontWeight: 800,
                     padding: '3px 9px',
                     borderRadius: 999,
-                    color: e.ended ? 'var(--v2-ink-sub)' : 'var(--v2-orange-deep)',
-                    background: e.ended ? 'var(--v2-cream)' : 'var(--v2-orange-soft)',
+                    color: e.status === 'ongoing' ? 'var(--v2-orange-deep)' : 'var(--v2-ink-sub)',
+                    background: e.status === 'ongoing' ? 'var(--v2-orange-soft)' : 'var(--v2-cream)',
                   }}
                 >
-                  {e.ended ? '今年は終了' : '開催中'}
+                  {e.status === 'ongoing'
+                    ? '開催中'
+                    : e.status === 'upcoming'
+                      ? '開催予定'
+                      : e.status === 'unverified'
+                        ? '日程未確認'
+                        : '今年は終了'}
                 </span>
                 <Link
                   href={`/event/${e.slug}`}
