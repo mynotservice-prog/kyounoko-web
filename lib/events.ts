@@ -234,7 +234,7 @@ const BASE_EVENTS: EventEntry[] = [
   {
     slug: 'showa-kinen-park-summer-water',
     title: '昭和記念公園 レインボープール',
-    lede: '都内最大級の屋外プール。流れるプール・幼児プール・ウォータースライダーなど多彩。',
+    lede: '【営業終了】国営昭和記念公園の公式サイトで、レインボープールと水あそび広場は施設の老朽化や再整備のため営業を終了したと案内されています（2026-09-26確認）。2026年夏に営業したかは公式で確認できませんでした。掲載の期間・料金は過去の営業時の目安で、現在は利用できません。',
     category: 'seasonal',
     startDate: '2026-07-12', endDate: '2026-09-07',
     venue: '国営昭和記念公園', area: 'tokyo', city: '立川市',
@@ -243,7 +243,7 @@ const BASE_EVENTS: EventEntry[] = [
     hero: '/hero-ai/cat-summer-01.webp',
     tags: ['プール', '夏', '屋外'],
     note: '立川駅徒歩10分。幼児用プールは水深30cm、浮き輪持参可。【2026-09-26 公式で確認】公式の施設ページ（https://www.showakinen-koen.jp/facility/facility-615/）は「レインボープール（営業終了）」となっており、「水あそび広場」および「レインボープール」は施設の老朽化や昭島口周辺エリアの再整備などのため営業を終了したと掲載されています。今後は再整備で通年の「親水空間」にする予定と案内されています。',
-    recurring: 'annual',
+    // recurring: 'annual' は外した（2026-09-26: 公式でレインボープールは営業終了。翌年への繰り上げを止める）
   },
   {
     slug: 'mizumoto-park-aji-festival',
