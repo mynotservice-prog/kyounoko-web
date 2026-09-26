@@ -6,8 +6,8 @@ metaDescription: >-
 category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-09-26T00:00:00.000Z'
-hero: /img/scenes/zoo-04.webp
-heroAlt: ゾウのいる動物園の柵の前で、地面に座った母親がリュックからおしりふきを取り出し、隣に座った小さな男の子が見ている様子（イラスト）
+hero: /img/scenes/park-08.webp
+heroAlt: 紅葉した公園でレジャーシートに座った母親が赤ちゃんと笑い合い、そばにベビーカーとトートバッグ、水筒が置かれている様子（イラスト）
 area: tokyo
 quickInfo:
   ageRanges:

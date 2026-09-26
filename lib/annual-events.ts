@@ -14,7 +14,7 @@
  *   翌年の具体的な日付は絶対に書かない（公式発表前の日付を作らない）。
  */
 
-import { getAllEvents, isEventEnded, type EventEntry } from './events';
+import { getAllEvents, isEventEnded, formatEventSeason, type EventEntry } from './events';
 
 /**
  * タイトルから年次と言い切れる語。祭り・花火大会・七夕などは本質的に毎年ひらかれる行事で、
@@ -41,39 +41,33 @@ export type VenueAnnualEvent = {
   venue: string;
 };
 
-function junShun(day: number): string {
-  if (day <= 10) return '上旬';
-  if (day <= 20) return '中旬';
-  return '下旬';
-}
-
 /** '2026-08-08' → { m: 8, d: 8 } */
 function parse(d: string) {
   const [y, m, day] = d.split('-').map(Number);
   return { y, m, d: day };
 }
 
-/** 「8月上旬〜中旬」「6月中旬〜7月上旬」のような、年に依存しない期間表現。 */
-function seasonRange(e: EventEntry): string {
+/**
+ * 「2026年は8/8〜8/16に開催」のような、公式で確認した開催日の表現。
+ * まだ始まっていない回は「開催予定」と書く（未来の回を過去形で書かない）。
+ */
+function actualRange(e: EventEntry, upcoming = false): string {
   const s = parse(e.startDate);
   const t = parse(e.endDate);
-  if (s.m === t.m) {
-    const a = junShun(s.d);
-    const b = junShun(t.d);
-    return a === b ? `${s.m}月${a}` : `${s.m}月${a}〜${b}`;
-  }
-  return `${s.m}月${junShun(s.d)}〜${t.m}月${junShun(t.d)}`;
+  const verb = upcoming ? 'に開催予定' : 'に開催';
+  if (e.startDate === e.endDate) return `${s.y}年は${s.m}/${s.d}${verb}`;
+  return `${s.y}年は${s.m}/${s.d}〜${t.m}/${t.d}${verb}`;
 }
 
-/** 「2026年は8/8〜8/16」のような、実際に開催された事実の表現。 */
-function actualRange(e: EventEntry): string {
-  const s = parse(e.startDate);
-  const t = parse(e.endDate);
-  if (e.startDate === e.endDate) return `${s.y}年は${s.m}/${s.d}に開催`;
-  return `${s.y}年は${s.m}/${s.d}〜${t.m}/${t.d}に開催`;
+/** 今日の日付（YYYY-MM-DD）。 */
+function today(): string {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
 
 function classify(e: EventEntry): 'annual' | 'observed' | null {
+  // 営業終了した施設・廃止されたイベントは「毎年ひらかれる」と書かない
+  if (e.closed) return null;
   if (e.recurring === 'annual') return 'annual';
   if (e.category === 'matsuri') return 'annual';
   if (ANNUAL_STRONG_RE.test(e.title)) return 'annual';
@@ -109,6 +103,17 @@ export function getVenueAnnualEvents(spotName: string, limit = 4): VenueAnnualEv
     const kind = classify(e);
     if (!kind) continue;
     const ended = isEventEnded(e);
+    const upcoming = !ended && e.startDate > today();
+    let periodLabel: string;
+    if (e.datesUnverified) {
+      // 開催日を公式で確認できていない回: 日付も「開催中」も書かない（2026-09-26）
+      periodLabel = `例年${formatEventSeason(e)}ごろ（開催日は公式で未確認）`;
+    } else if (kind === 'annual') {
+      const status = ended ? actualRange(e) : upcoming ? actualRange(e, true) : '今年は開催中';
+      periodLabel = `毎年${formatEventSeason(e)}ごろ（${status}）`;
+    } else {
+      periodLabel = actualRange(e, upcoming);
+    }
     out.push({
       slug: e.slug,
       title: e.title,
@@ -116,10 +121,7 @@ export function getVenueAnnualEvents(spotName: string, limit = 4): VenueAnnualEv
       ended,
       officialUrl: e.officialUrl,
       venue: e.venue,
-      periodLabel:
-        kind === 'annual'
-          ? `毎年${seasonRange(e)}ごろ${ended ? `（${actualRange(e)}）` : '（今年は開催中）'}`
-          : actualRange(e),
+      periodLabel,
     });
   }
   // 開催中を先に、次に「毎年」と言い切れるものを優先

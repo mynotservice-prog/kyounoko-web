@@ -70,6 +70,16 @@ export type EventEntry = {
    * scripts/events-maintenance.mjs が繰り上げ候補として一覧化する。
    */
   recurring?: 'annual';
+  /**
+   * その回の開催日を公式で確認できていない（startDate/endDate は例年の時期からの目安）。
+   * true のときは具体的な日付を表示せず「例年◯月ごろ（開催日は公式で未確認）」とだけ出し、
+   * 開催中・今週・今月の一覧からも外す。公式で日程を確認したら外して日付を入れ直す。
+   * 2026-09-26: 登録時の仮期間（のとじま）や手作業の年繰り上げ（愛染まつり）が
+   * 「2026年は7/1〜9/30」「今年は開催中」と本番に出ていた事故への対策。
+   */
+  datesUnverified?: boolean;
+  /** 施設・イベント自体が公式で営業終了・廃止になった。「来年も開催される場合があります」を出さない。 */
+  closed?: boolean;
 };
 
 /**
@@ -234,7 +244,7 @@ const BASE_EVENTS: EventEntry[] = [
   {
     slug: 'showa-kinen-park-summer-water',
     title: '昭和記念公園 レインボープール',
-    lede: '都内最大級の屋外プール。流れるプール・幼児プール・ウォータースライダーなど多彩。',
+    lede: '【営業終了】国営昭和記念公園の公式サイトで、レインボープールと水あそび広場は施設の老朽化や再整備のため営業を終了したと案内されています（2026-09-26確認）。2026年夏に営業したかは公式で確認できませんでした。掲載の期間・料金は過去の営業時の目安で、現在は利用できません。',
     category: 'seasonal',
     startDate: '2026-07-12', endDate: '2026-09-07',
     venue: '国営昭和記念公園', area: 'tokyo', city: '立川市',
@@ -242,8 +252,9 @@ const BASE_EVENTS: EventEntry[] = [
     officialUrl: 'https://www.showakinen-koen.jp/',
     hero: '/hero-ai/cat-summer-01.webp',
     tags: ['プール', '夏', '屋外'],
-    note: '立川駅徒歩10分。幼児用プールは水深30cm、浮き輪持参可。',
-    recurring: 'annual',
+    note: '立川駅徒歩10分。幼児用プールは水深30cm、浮き輪持参可。【2026-09-26 公式で確認】公式の施設ページ（https://www.showakinen-koen.jp/facility/facility-615/）は「レインボープール（営業終了）」となっており、「水あそび広場」および「レインボープール」は施設の老朽化や昭島口周辺エリアの再整備などのため営業を終了したと掲載されています。今後は再整備で通年の「親水空間」にする予定と案内されています。',
+    // recurring: 'annual' は外した（2026-09-26: 公式でレインボープールは営業終了。翌年への繰り上げを止める）
+    closed: true,
   },
   {
     slug: 'mizumoto-park-aji-festival',
@@ -864,6 +875,7 @@ const BASE_EVENTS: EventEntry[] = [
     tags: ['水族館', '夜', '室内'],
     note: '2026-09-26 に公式ページを確認したところ、掲載されている開催日は令和5年（2023年）の7〜9月の計8日間のみで、2026年の開催日は公式に記載を確認できませんでした。この期間は例年の開催時期の目安です。行く前に必ず公式サイトで最新の開催状況を確認してください。',
     recurring: 'annual',
+    datesUnverified: true,
   },
   {
     slug: 'angelland-tanabata-2026',
@@ -947,7 +959,7 @@ const BASE_EVENTS: EventEntry[] = [
   {
     slug: 'aizen-matsuri-2027',
     title: '愛染まつり',
-    lede: '大阪三大夏祭りの先陣を切る、勝鬘院・愛染堂のお祭り。色とりどりの浴衣をまとった愛染娘を乗せた宝恵駕籠パレードが街を練り歩き、夏の到来を告げます。露店もにぎわい家族で初夏の風情を楽しめます。',
+    lede: '大阪三大夏祭りの先陣を切る、勝鬘院・愛染堂のお祭り（2027年の開催日は公式で未確認。例年6月30日〜7月2日）。色とりどりの浴衣をまとった愛染娘を乗せた宝恵駕籠パレードが街を練り歩き、夏の到来を告げます。露店もにぎわい家族で初夏の風情を楽しめます。',
     category: 'matsuri',
     startDate: '2027-06-30', endDate: '2027-07-02',
     venue: '勝鬘院 愛染堂', area: 'osaka', city: '大阪市天王寺区',
@@ -955,7 +967,8 @@ const BASE_EVENTS: EventEntry[] = [
     officialUrl: 'https://www.aizendo.com/festival.htm',
     tags: ['祭り', '屋台', '屋外'],
     recurring: 'annual',
-    note: '毎年6/30〜7/2の固定日開催（大阪三大夏祭りの先陣）。開催が近づいたら公式 festival.htm で最終確認。',
+    note: '毎年6/30〜7/2の固定日開催（大阪三大夏祭りの先陣）。2026-09-26 に公式 festival.htm を確認したところ、掲載は2026年開催分（愛染娘2026・6月30日〜7月2日）までで、2027年の開催日は公式に記載を確認できませんでした。この日付は例年の開催日の目安です。開催が近づいたら公式 festival.htm で最終確認。',
+    datesUnverified: true,
   },
   {
     slug: 'tenjin-matsuri-2026',
@@ -1192,6 +1205,7 @@ const BASE_EVENTS: EventEntry[] = [
     ageLabel: '全年齢', price: 'パスポート制（大人3,600円〜）',
     officialUrl: 'https://www.harmonyland.jp/',
     tags: ['テーマパーク', 'キャラクター', '水遊び'],
+    note: '2026-09-26 に公式の特設ページ（https://www.harmonyland.jp/sp/summerparty/）を確認。日別スケジュール表は7/3から9/15まで。あわせて公式お知らせ（2026年8月25日掲載）で、令和8年熊本地震の被災地支援として夏イベントを延長した「まだまだアツい!はちゃめちゃサマーパーリー!」を2026年9月18日(金)〜9月27日(日)に開催すると発表されています（https://www.harmonyland.jp/sp/summerparty/extend.html）。',
     recurring: 'annual',
   },
   {
@@ -1262,6 +1276,7 @@ const BASE_EVENTS: EventEntry[] = [
     ageLabel: '幼児〜小学生', price: '入園料別途（1DAYパスポート）',
     officialUrl: 'https://www.legoland.jp/operation/events-timeline/',
     tags: ['テーマパーク', '水遊び', '夏'],
+    note: '2026-09-26 に公式の2026年特設ページ（https://www.legoland.jp/operation/seasonal-events/summer/2026/）を確認。公式は「コンテンツによって開催期間が異なります」としており、シャクササイズは7/10(金)〜9/13(日)（9/6以降は土・日のみ）、スプラッシュ・パッドのオープン期間は5/30(土)〜9/27(日)、ウォーター・メイズⅡは「開催期間を終了いたしました」と表示。あわせて「まだまだびしょぬれかくご！」として2026/9/1(火)〜9/27(日)の期間も案内されています。',
     recurring: 'annual',
   },
   {
@@ -1464,9 +1479,9 @@ const BASE_EVENTS: EventEntry[] = [
     startDate: '2026-10-10', endDate: '2026-10-11',
     venue: '静岡市立日本平動物園', area: 'shizuoka', city: '静岡市駿河区',
     ageLabel: '0歳〜小学生', price: '公式サイトをご確認ください',
-    officialUrl: 'https://www.nhdzoo.jp/',
+    officialUrl: 'https://www.nhdzoo.jp/event/naka.php?id=621',
     tags: ['動物園', '夜', '屋外', '秋'],
-    note: '2026年10月10日(土)・11日(日)の17:30〜20:30（最終入園19:30）。昼夜完全入れ替え制で16:30に一度閉園します（公式イベントページで2026年8月31日に確認）。駐車場は整理券の事前申込制、前売券はコンビニ販売と案内されています。',
+    note: '2026年10月10日(土)・11日(日)の17:30〜20:30（最終入園19:30）。昼夜完全入れ替え制で16:30に一度閉園します（公式イベントページで2026年8月31日に確認、2026-09-26再確認）。駐車場は整理券の事前申込制、前売券はコンビニ販売と案内されています。',
     recurring: 'annual',
   },
   {
@@ -2517,7 +2532,7 @@ const BASE_EVENTS: EventEntry[] = [
     ageLabel: '幼児〜', price: '入館料（大人550円・子ども210円・3歳以下無料）のみ',
     officialUrl: 'https://cosmoland.miyabunkyo.com/event-info/science_festival2026',
     tags: ['科学館', '実験', '室内', '雨の日OK'],
-    note: '公式イベントページに「令和8年9月19日（土）、20日（日）9：30～16：00」と掲載（2026-09-14確認）。整理券は午前と午後の2回配布。',
+    note: '公式イベントページに「令和8年9月19日（土）、20日（日）9：30～16：00」と掲載（2026-09-14確認）。整理券は午前と午後の2回配布。2026-09-26 時点では開催後のため公式イベントページは404（削除済み）で、2027年の開催情報は公式で未確認です。',
     recurring: 'annual',
   },
   // ── 2026-09-21 週次 ───────────────────────────────────────────────────
@@ -2672,9 +2687,9 @@ const BASE_EVENTS: EventEntry[] = [
     startDate: '2026-10-10', endDate: '2026-10-11',
     venue: '海の中道海浜公園', area: 'fukuoka', city: '福岡市東区',
     ageLabel: '2歳〜小学生', price: '観覧無料・凧づくり500円（各日先着80名）。入園料は別途（中学生以下無料・大人450円）',
-    officialUrl: 'https://uminaka-park.jp/event/sports/',
+    officialUrl: 'https://uminaka-park.jp/event/sports/post_522.html',
     tags: ['凧', '広場', '屋外', '秋'],
-    note: '公式イベント一覧に「10月10日（土）・11日（日）」と掲載（2026-09-21確認）。クジラのバルーンカイトは①10:30〜12:30、②13:30〜16:00。凧づくりは10:00〜16:00で各日先着80名。会場は大芝生広場。雨天中止で、公式は風の影響でバルーンカイトが飛ばない可能性にも触れています。',
+    note: '公式イベント一覧に「10月10日（土）・11日（日）」と掲載（2026-09-21確認。2026-09-26に公式の個別ページでも同じ日程を確認）。クジラのバルーンカイトは①10:30〜12:30、②13:30〜16:00。凧づくりは10:00〜16:00で各日先着80名。会場は大芝生広場。雨天中止で、公式は風の影響でバルーンカイトが飛ばない可能性にも触れています。',
     recurring: 'annual',
   },
   {
@@ -3052,6 +3067,29 @@ export function isEventEnded(e: EventEntry): boolean {
   return e.endDate < todayString();
 }
 
+/** 日付を「開催日」として出してよいか（公式で未確認・営業終了のものは出さない）。 */
+export function isEventDateReliable(e: EventEntry): boolean {
+  return !e.datesUnverified && !e.closed;
+}
+
+function junShun(day: number): string {
+  if (day <= 10) return '上旬';
+  if (day <= 20) return '中旬';
+  return '下旬';
+}
+
+/** 「8月上旬〜中旬」「6月中旬〜7月上旬」のような、年に依存しない期間表現。 */
+export function formatEventSeason(e: EventEntry): string {
+  const [, sm, sd] = e.startDate.split('-').map(Number);
+  const [, tm, td] = e.endDate.split('-').map(Number);
+  if (sm === tm) {
+    const a = junShun(sd);
+    const b = junShun(td);
+    return a === b ? `${sm}月${a}` : `${sm}月${a}〜${b}`;
+  }
+  return `${sm}月${junShun(sd)}〜${tm}月${junShun(td)}`;
+}
+
 /** 全イベント（overrides マージ済） */
 export function getAllEvents(ovMap?: EventOverridesMap): EventEntry[] {
   return getMergedEvents(ovMap);
@@ -3060,7 +3098,9 @@ export function getAllEvents(ovMap?: EventOverridesMap): EventEntry[] {
 /** 現在開催中のイベント（startDate <= today <= endDate） */
 export function getOngoingEvents(): EventEntry[] {
   const today = todayString();
-  return getMergedEvents().filter((e) => e.startDate <= today && today <= e.endDate);
+  return getMergedEvents().filter(
+    (e) => isEventDateReliable(e) && e.startDate <= today && today <= e.endDate,
+  );
 }
 
 /** 今週開催中 or 開催予定のイベント（今日から 7 日以内に始まる or 開催中） */
@@ -3068,7 +3108,7 @@ export function getThisWeekEvents(): EventEntry[] {
   const today = todayString();
   const weekLater = addDays(today, 7);
   return getMergedEvents()
-    .filter((e) => e.endDate >= today && e.startDate <= weekLater)
+    .filter((e) => isEventDateReliable(e) && e.endDate >= today && e.startDate <= weekLater)
     .sort((a, b) => a.startDate.localeCompare(b.startDate));
 }
 
@@ -3077,7 +3117,7 @@ export function getThisMonthEvents(): EventEntry[] {
   const today = todayString();
   const monthLater = addDays(today, 30);
   return getMergedEvents()
-    .filter((e) => e.endDate >= today && e.startDate <= monthLater)
+    .filter((e) => isEventDateReliable(e) && e.endDate >= today && e.startDate <= monthLater)
     .sort((a, b) => a.startDate.localeCompare(b.startDate));
 }
 
@@ -3098,7 +3138,7 @@ export function getUpcomingEventsNear(
 ): { events: EventEntry[]; cityMatched: boolean } {
   const today = todayString();
   const alive = getMergedEvents()
-    .filter((e) => e.area === area && e.endDate >= today)
+    .filter((e) => e.area === area && isEventDateReliable(e) && e.endDate >= today)
     .sort((a, b) => a.startDate.localeCompare(b.startDate));
   if (!cityLike) return { events: alive.slice(0, limit), cityMatched: false };
   const cityMatch = alive.filter(
@@ -3172,7 +3212,7 @@ export function filterEvents(f: EventFilter): EventEntry[] {
     .filter((e) => (f.area ? e.area === f.area : true))
     .filter((e) => (f.category ? e.category === f.category : true))
     .filter((e) => (f.free ? isFreeEvent(e) : true))
-    .filter((e) => (f.soon ? e.startDate <= weekLater : true))
+    .filter((e) => (f.soon ? isEventDateReliable(e) && e.startDate <= weekLater : true))
     .filter((e) => (f.baby ? isBabyFriendlyEvent(e) : true))
     .sort((a, b) => a.startDate.localeCompare(b.startDate));
 }
@@ -3209,6 +3249,9 @@ export function daysUntilStart(e: EventEntry): number {
 
 /** 残り日数バッジ表記（"あと3日" / "今週末" / "本日最終" / "開催中" 等） */
 export function deadlineBadge(e: EventEntry): { text: string; level: 'urgent' | 'soon' | 'week' | 'normal' | 'live' } {
+  // 開催日が公式で未確認の回に「開催中」「あと◯日」を付けない（2026-09-26）
+  if (e.datesUnverified) return { text: '日程未確認', level: 'normal' };
+  if (e.closed) return { text: '営業終了', level: 'normal' };
   const today = todayString();
   if (e.startDate <= today && today <= e.endDate) {
     // 開催中。終了までの日数を出す
@@ -3403,6 +3446,8 @@ function hashEventSlug(s: string): number {
 
 /** 開催期間を「3/15(土)」「3/20〜4/7」のような表示文字列に */
 export function formatEventPeriod(e: EventEntry): string {
+  // 公式で開催日を確認できていない回は、具体的な日付・曜日を出さない（2026-09-26）
+  if (e.datesUnverified) return `例年${formatEventSeason(e)}ごろ（開催日は公式で未確認）`;
   const fmt = (d: string) => {
     const dt = new Date(d);
     const m = dt.getMonth() + 1;

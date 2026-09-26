@@ -42,7 +42,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!ev) return { title: 'イベントが見つかりません' };
   const ended = isEventEnded(ev);
   return {
-    title: `${ended ? '【終了】' : ''}${ev.title}｜${formatEventPeriod(ev)} ${ev.venue}`,
+    // 開催日が公式で未確認の回・営業終了は、タイトルに日付を入れない（2026-09-26）
+    title: ev.datesUnverified || ev.closed
+      ? `${ev.closed ? '【営業終了】' : ''}${ev.title}｜${ev.venue}`
+      : `${ended ? '【終了】' : ''}${ev.title}｜${formatEventPeriod(ev)} ${ev.venue}`,
     description: ev.lede,
     alternates: { canonical: `/event/${slug}` },
     // 会期終了後は検索対象から外す（古い情報の流入を防ぐ）。リンク切れ回避のためページ自体は残す。
@@ -88,7 +91,8 @@ export default async function EventPage({ params }: Props) {
   // 同一エリア内のスポットのうち、会場の市区町村と一致するものを優先して提示する。
   // 「イベントのついでに寄れる実在スポット」を編集部の確認済みデータから案内する。
   // イベント起点の1日モデルコース（一次データのみ・終了イベントでは出さない）
-  const dayPlan = ended ? null : buildEventDayPlan(ev);
+  // 開催日が未確認・営業終了の回は「今日の1日プラン」を出さない（実在しない会期でプランを組まない）
+  const dayPlan = ended || ev.datesUnverified || ev.closed ? null : buildEventDayPlan(ev);
   const planUsed = new Set(dayPlan?.usedSlugs ?? []);
 
   const { spots: nearbySpots, cityMatched: nearbyCityMatched } = (() => {
@@ -224,7 +228,7 @@ export default async function EventPage({ params }: Props) {
             <h1 className="ev3-h1">{ev.title}</h1>
             <div className={'ev3-period' + (ended ? ' ended' : '')}>
               <KkIcon name="calendar" size={15} sw={2} />
-              <span>{formatEventPeriod(ev)}{ended ? '（終了）' : ''}</span>
+              <span>{ev.closed ? '営業終了' : `${formatEventPeriod(ev)}${ended ? '（終了）' : ''}`}</span>
             </div>
             <div className="ev3-period ev3-venue">
               <KkIcon name="pin" size={15} sw={2} />
@@ -244,7 +248,22 @@ export default async function EventPage({ params }: Props) {
           </div>
 
           {/* 終了のお知らせ（小さなステータスなので枠を許す。文言は従来どおり） */}
-          {ended && (
+          {ended && ev.closed && (
+            <div className="ev3-banner" role="status">
+              <strong>この施設は営業を終了しました。</strong>
+              <br />
+              公式サイトで営業終了が案内されています。詳しくは
+              {ev.officialUrl ? (
+                <a href={ev.officialUrl} target="_blank" rel="noopener noreferrer">公式サイト</a>
+              ) : (
+                '公式サイト'
+              )}
+              をご確認ください。今ひらいている近くのイベントは{' '}
+              <Link href="/events">イベント一覧</Link>
+              から探せます。
+            </div>
+          )}
+          {ended && !ev.closed && (
             <div className="ev3-banner" role="status">
               <strong>このイベントは終了しました。</strong>
               <br />
