@@ -1830,10 +1830,11 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '羽村市動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '羽村市', note: 'コンパクトな動物園、入園料安い', budget: 'low',
-      pricing: { adult: '400円', elementary: '50円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-09-26 公式（ヒノトントンZOO）で確認: 18才以上65才未満500円・65才以上200円・18才未満無料
+      pricing: { adult: '500円', elementary: '無料（18才未満）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'low' },
-      hiddenTip: '400円で1時間程度で回れる規模、未就学児無料。羽村駅徒歩15分',
+      hiddenTip: '1時間程度で回れる規模、18才未満は入園無料。愛称はヒノトントンZOO',
     },
     {
       name: '井の頭自然文化園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '武蔵野市', note: '井の頭公園内、リスの小径が人気', budget: 'low',
@@ -2615,7 +2616,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   tochigi: [
     {
       name: '那須どうぶつ王国', category: 'zoo', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '那須町', note: '室内外で動物と触れ合える、雨天も楽しい', budget: 'mid',
-      pricing: { adult: '2,600円', elementary: '1,200円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-09-26 公式で確認: 大人（中学生以上）2,900円・こども（3歳〜小学生）1,300円・3歳未満無料
+      pricing: { adult: '2,900円', elementary: '1,300円', preschool: '1,300円（3歳以上）', infant: '無料（3歳未満）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '王国ファーム（屋内）と王国タウン（屋外）、園内バス移動あり。雨天でも楽しめる',

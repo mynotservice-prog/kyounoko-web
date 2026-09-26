@@ -1,12 +1,21 @@
 import { ImageResponse } from 'next/og';
-import { COVERAGE_LABELS, getCoverageGeneratedAt, getCoverageSummary } from '@/lib/chain-coverage';
+import {
+  COVERAGE_LABELS,
+  formatRate,
+  getCoverageFigureRows,
+  getCoverageGeneratedAt,
+  getCoverageHeadline,
+  getCoverageSummary,
+} from '@/lib/chain-coverage';
 
 /**
- * 調査ページのOGP画像。本文の図1（設備別の設置率）と同じ内容を1枚にする
+ * 調査ページのOGP画像 = 結論の1文 + 本文の図1（設備別の設置率）と同じ行（getCoverageFigureRows）。
  * （戦略§5-1 要件5: 引用されやすいのは表ではなく1枚の図。OGPと本文に同じ図を置く）。
+ * 率の表記も本文と同じ formatRate を使う。
  *
  * 日本語フォントは Google Fonts の CSS API に text= で必要文字だけ渡し、
  * 返ってきた TTF を埋め込む（全グリフだと数MBになるため）。ビルド時に1回だけ取得される。
+ * 画像に出す文字列はすべて TEXTS に集めてから text= に渡す（漏れた字は豆腐になる）。
  */
 export const alt = '外食チェーン 子連れ設備カバー率調査';
 export const size = { width: 1200, height: 630 };
@@ -26,23 +35,28 @@ async function loadFont(text: string): Promise<ArrayBuffer | null> {
   }
 }
 
-const pct = (v: number) => `${Math.round(v * 100)}%`;
+const pct = formatRate;
 
 export default async function Image() {
   const summary = getCoverageSummary();
+  const headline = getCoverageHeadline();
   const year = getCoverageGeneratedAt().slice(0, 4);
-  const rows = summary.byFacility
-    .filter((f) => f.chains >= 2 && f.key !== 'parking')
-    .sort((a, b) => b.rate - a.rate)
-    .slice(0, 7);
+  const rows = getCoverageFigureRows();
 
+  const eyebrow = 'きょうのこ調査 / 年次更新';
   const title = `外食チェーン 子連れ設備カバー率調査${year}`;
   const sub = `公式店舗検索 ${summary.chainCount}チェーン・${summary.storeCount.toLocaleString()}店を全数集計`;
-  const foot = `出典: きょうのこ kyounoko.jp/data/chain-facility-coverage`;
-  const labels = rows.map((r) => `${COVERAGE_LABELS[r.key]}${pct(r.rate)}${r.chains}チェーン`).join('');
-  const font = await loadFont(title + sub + foot + labels + '設備の表示がある店舗の割合0123456789%,・');
+  const lead = headline
+    ? `${COVERAGE_LABELS[headline.key]}：公開は${summary.chainCount}チェーン中${headline.chains}社、その${headline.stores.toLocaleString()}店のうち表示ありは${pct(headline.rate)}`
+    : '';
+  const chartTitle = '設備の表示がある店舗の割合（その設備を公開しているチェーンのみ集計）';
+  const foot = '出典: きょうのこ kyounoko.jp/data/chain-facility-coverage';
+  const rowTexts = rows.map((r) => [COVERAGE_LABELS[r.key], pct(r.rate), `${r.chains}チェーン`]);
+  const TEXTS = [eyebrow, title, sub, lead, chartTitle, foot, ...rowTexts.flat()];
+  const font = await loadFont([...new Set(TEXTS.join(''))].join(''));
 
-  const barW = 620;
+  const barW = 600;
+  const rowH = rows.length > 8 ? 34 : 40;
   return new ImageResponse(
     (
       <div
@@ -53,29 +67,32 @@ export default async function Image() {
           flexDirection: 'column',
           background: '#FFFBF3',
           color: '#2E2620',
-          padding: '44px 56px',
+          padding: '36px 56px',
           fontFamily: 'NotoSansJP, sans-serif',
         }}
       >
-        <div style={{ display: 'flex', fontSize: 20, color: '#C9603E', letterSpacing: 2 }}>きょうのこ調査 / 年次更新</div>
-        <div style={{ display: 'flex', fontSize: 44, fontWeight: 700, marginTop: 6 }}>{title}</div>
-        <div style={{ display: 'flex', fontSize: 24, color: '#6B5E55', marginTop: 4 }}>{sub}</div>
-        <div style={{ display: 'flex', fontSize: 18, color: '#6B5E55', marginTop: 22 }}>設備の表示がある店舗の割合（公開しているチェーンのみ集計）</div>
-        <div style={{ display: 'flex', flexDirection: 'column', marginTop: 8 }}>
-          {rows.map((r) => (
-            <div key={r.key} style={{ display: 'flex', alignItems: 'center', height: 44 }}>
-              <div style={{ display: 'flex', width: 190, justifyContent: 'flex-end', paddingRight: 14, fontSize: 21 }}>{COVERAGE_LABELS[r.key]}</div>
-              <div style={{ display: 'flex', width: barW, height: 24, background: '#F3ECE2', borderRadius: 6 }}>
-                <div style={{ display: 'flex', width: Math.max(4, barW * r.rate), height: 24, background: '#C9603E', borderRadius: 6 }} />
+        <div style={{ display: 'flex', fontSize: 18, color: '#C9603E', letterSpacing: 2 }}>{eyebrow}</div>
+        <div style={{ display: 'flex', fontSize: 38, fontWeight: 700, marginTop: 4 }}>{title}</div>
+        <div style={{ display: 'flex', fontSize: 20, color: '#6B5E55', marginTop: 2 }}>{sub}</div>
+        {lead && (
+          <div style={{ display: 'flex', fontSize: 25, fontWeight: 700, color: '#C9603E', marginTop: 14, lineHeight: 1.35 }}>{lead}</div>
+        )}
+        <div style={{ display: 'flex', fontSize: 16, color: '#6B5E55', marginTop: 14 }}>{chartTitle}</div>
+        <div style={{ display: 'flex', flexDirection: 'column', marginTop: 4 }}>
+          {rows.map((r, i) => (
+            <div key={r.key} style={{ display: 'flex', alignItems: 'center', height: rowH }}>
+              <div style={{ display: 'flex', width: 200, justifyContent: 'flex-end', paddingRight: 14, fontSize: 19 }}>{rowTexts[i][0]}</div>
+              <div style={{ display: 'flex', width: barW, height: 20, background: '#F3ECE2', borderRadius: 6 }}>
+                <div style={{ display: 'flex', width: Math.max(4, barW * r.rate), height: 20, background: r.key === headline?.key ? '#C9603E' : '#DD9A80', borderRadius: 6 }} />
               </div>
-              <div style={{ display: 'flex', paddingLeft: 12, fontSize: 20 }}>
-                {pct(r.rate)}
-                <span style={{ color: '#8A8078', fontSize: 16, marginLeft: 8 }}>{r.chains}チェーン</span>
+              <div style={{ display: 'flex', alignItems: 'baseline', paddingLeft: 12, fontSize: 19 }}>
+                {rowTexts[i][1]}
+                <span style={{ color: '#8A8078', fontSize: 15, marginLeft: 8 }}>{rowTexts[i][2]}</span>
               </div>
             </div>
           ))}
         </div>
-        <div style={{ display: 'flex', marginTop: 'auto', fontSize: 16, color: '#8A8078' }}>{foot}</div>
+        <div style={{ display: 'flex', marginTop: 'auto', fontSize: 15, color: '#8A8078' }}>{foot}</div>
       </div>
     ),
     {

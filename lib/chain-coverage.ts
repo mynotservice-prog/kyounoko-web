@@ -148,9 +148,97 @@ export function getCoverageExcluded(): CoverageExcluded[] {
   }));
 }
 
-/** CSV配布用の縦持ち行（チェーン×設備） */
-export function buildCoverageCsvRows(): CoverageRow[] {
-  const rows: CoverageRow[] = [];
-  for (const key of COVERAGE_KEY_ORDER) rows.push(...rankByFacility(key).map((r) => ({ ...r, label: `${COVERAGE_LABELS[key]}（公式表記: ${r.label}）` })));
+/** CSV配布用の縦持ち行（チェーン×設備。公開しているセルだけ）。label は公式表記のまま */
+export function buildCoverageCsvRows(): Array<CoverageRow & { key: CoverageKey }> {
+  const rows: Array<CoverageRow & { key: CoverageKey }> = [];
+  for (const key of COVERAGE_KEY_ORDER) rows.push(...rankByFacility(key).map((r) => ({ ...r, key })));
   return rows;
+}
+
+/**
+ * 子ども向けの設備・サービスとして扱う項目。結論の「子ども向け属性を1つも公開していない」判定に使う。
+ * 入口の段差なし・個室・多目的トイレ・駐車場は子連れ以外の来店者にも向けた一般設備なので含めない。
+ */
+export const KIDS_COVERAGE_KEYS: CoverageKey[] = [
+  'kidsChair', 'kidsMenu', 'zashiki', 'boxSeat', 'diaperTable', 'nursingRoom', 'strollerToSeat',
+  'kidsSpace', 'kidsCutlery', 'babyFoodBringIn', 'toriwake',
+];
+
+/** 子ども向け項目（KIDS_COVERAGE_KEYS）を1つも公開していないチェーン。公開しているのは一般設備だけ */
+export function getChainsWithoutKidsAttributes(): ChainCoverage[] {
+  return FILE.chains.filter((c) => !KIDS_COVERAGE_KEYS.some((k) => c.facilities[k]));
+}
+
+/** 集計期間（各チェーンの集計日の最小〜最大） */
+export function getCoveragePeriod(): { from: string; to: string } {
+  const dates = FILE.chains.map((c) => c.countedAt).sort();
+  return { from: dates[0], to: dates[dates.length - 1] };
+}
+
+export type FacilityStat = {
+  key: CoverageKey;
+  /** その設備を公式店舗検索で公開しているチェーン数（母数） */
+  chains: number;
+  stores: number;
+  count: number;
+  /** 公開チェーンの全店合算の率（表示あり店舗数の合計 ÷ 数えた店舗数の合計） */
+  rate: number;
+  /** チェーン別の率の中央値（大規模チェーンに引っぱられない見方） */
+  medianRate: number;
+  top: CoverageRow;
+  bottom: CoverageRow;
+  /** 項目は公開しているが表示が0店のチェーン数（「公開していない」とは別） */
+  zeroChains: number;
+  /** 全店に表示があるチェーン数 */
+  fullChains: number;
+  /** 数えた公式表記（チェーンごとに違う） */
+  labels: string[];
+};
+
+function median(xs: number[]): number {
+  const s = [...xs].sort((a, b) => a - b);
+  const m = Math.floor(s.length / 2);
+  return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+}
+
+/** 設備ごとの比較表（公開しているチェーンだけを母数にする） */
+export function getFacilityStats(): FacilityStat[] {
+  return getCoverageSummary().byFacility.map((f) => {
+    const rows = rankByFacility(f.key);
+    return {
+      ...f,
+      medianRate: median(rows.map((r) => r.rate)),
+      top: rows[0],
+      bottom: rows[rows.length - 1],
+      zeroChains: rows.filter((r) => r.count === 0).length,
+      fullChains: rows.filter((r) => r.total > 0 && r.count === r.total).length,
+      labels: [...new Set(rows.map((r) => r.label))],
+    };
+  });
+}
+
+/**
+ * 図1（本文）とOGP画像に共通で載せる行。2チェーン以上が公開している子連れ関連の設備を率の降順で。
+ * 駐車場は子連れ設備ではない一般設備で、公開チェーン数も桁違いなので図からは外す（表とCSVには載せる）。
+ */
+export function getCoverageFigureRows(): CoverageSummary['byFacility'] {
+  return getCoverageSummary()
+    .byFacility.filter((f) => f.chains >= 2 && f.key !== 'parking')
+    .sort((a, b) => b.rate - a.rate);
+}
+
+/**
+ * 更新履歴（ページの「更新履歴」欄）。集計結果ではなく出来事の記録なので、ここだけは手で追記する。
+ * 数字はコミット 97200a322（2026-09-11）・a0128d307（2026-09-25）の data/chain-coverage.json と一致。
+ */
+export const COVERAGE_HISTORY: Array<{ date: string; text: string }> = [
+  { date: '2026-09-11', text: '65チェーンを集計して公開' },
+  { date: '2026-09-25', text: '25チェーンを追加集計（計90チェーン）' },
+];
+
+/** 結論の見出しに使う設備（子ども用椅子）。数字は getFacilityStats から引く */
+export const HEADLINE_KEY: CoverageKey = 'kidsChair';
+
+export function getCoverageHeadline(): FacilityStat | null {
+  return getFacilityStats().find((f) => f.key === HEADLINE_KEY) ?? null;
 }
