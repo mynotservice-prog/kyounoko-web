@@ -1,0 +1,38 @@
+name: frozen-check
+
+# 測定中の面（凍結記事・凍結URL・実験の比較基準）を壊すPRを止める。
+# 正本は docs/experiments-active.md。判定条件はスクリプト冒頭のコメントを参照。
+#
+# 【重要】このワークフローはリポジトリのCIだけで動き、Vercelのビルド設定には一切触らない
+# （Vercel費のガードに影響させないため）。
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  frozen-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # マージベースを取るため全履歴が必要
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      # 描画層の検査（本文キーワード自動リンク・回遊チップ・駅リンクのシミュレーション）に remark 等が要る
+      - name: 依存パッケージ
+        run: npm ci --ignore-scripts
+
+      - name: 凍結対象を表示（落ちたときに何が凍結中か分かるように）
+        run: node scripts/check-frozen.mjs --list
+
+      - name: 測定中の面に触っていないか検査
+        run: node scripts/check-frozen.mjs --base "origin/${{ github.base_ref }}"
