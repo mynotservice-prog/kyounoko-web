@@ -5,8 +5,8 @@ metaDescription: お好み焼 ぼてぢゅうに子連れで行くなら、ど�
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-09-25T00:00:00.000Z'
-hero: /img/scenes/meal-28.webp
-heroAlt: 鉄板付きのテーブル席で、よだれかけをした小さな子が木製の子ども用椅子に座り、仕切り皿の料理をフォークで食べ、隣で父親が見守っている様子（イラスト）
+hero: /img/scenes/meal-20.webp
+heroAlt: 木のテーブル席で、小さな女の子が料理のプレートを前に笑顔を見せ、隣で母親が見守っている様子（イメージ）
 area: all
 quickInfo:
   ageRanges:

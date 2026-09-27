@@ -7,8 +7,8 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-09-25T00:00:00.000Z'
 updatedAt: '2026-09-27'
-hero: /img/scenes/baby-food-03.webp
-heroAlt: 木製のハイチェアに座った赤ちゃんに、大人が器からスプーンで離乳食を食べさせている様子（イラスト）
+hero: /img/scenes/chuka-02.webp
+heroAlt: 木のテーブルの上に、しょうゆラーメンの丼が置かれている様子（イメージ）
 area: all
 quickInfo:
   ageRanges:
