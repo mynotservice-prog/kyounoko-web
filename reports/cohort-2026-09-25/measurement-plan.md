@@ -175,3 +175,13 @@ node scripts/gsc-report.mjs --days=7 --json=/tmp/gsc7.json   # 目安。判定�
 - tennoji-zoo-kosodate
 - yumemigasaki-zoo-kosodate
 - zoorasia-kosodate
+
+## 汚染・交絡の記録
+
+### 2026-09-27 16本をリライト（社長指示「優先度 高・中は書き直す」）
+
+9/27 に作った確認リストの優先度 高・中の16本を、公式の店舗検索の全店集計・公式メニュー・アレルゲン表・自社の設備調査データ（/data/chain-facility-coverage）で書き直した（PR は下のコミット）。「公式に記載なし」の繰り返しは1つの節にまとめ、答えが記載なしだけのFAQを削除、空の見出し「我が家のリアル」を削除、題名を答えられる内容に合わせて付け直した。凍結面へのリンクの増減はなし（check-frozen 386→386）。
+
+- 対象: botejyu-kodzure-koryaku / gindaco-kodzure-koryaku / hinoya-curry-kodzure-koryaku / sutamina-taro-kodzure-koryaku / takakuramachi-coffee-kodzure-koryaku / yakiniku-like-kodzure-koryaku / notojima-aquarium-kosodate / karayama-kodzure-koryaku / katsuya-kodzure-koryaku / miraizaka-kodzure-koryaku / torimero-kodzure-koryaku / steak-miya-kodomo-ryokin / marugenramen-rinyushoku-mochikomi / kourakuen-rinyushoku-mochikomi / shabuyou-rinyushoku-mochikomi / yuzuan-rinyushoku-mochikomi
+- **11/24 の判定では、この16本を「9/27にリライトした群」として分けて併記する**（残り121本と混ぜて読まない）。
+- 10/10 の大量公開リスク判定（スパム更新との重なり）でも、この16本の変更を交絡として書く。
