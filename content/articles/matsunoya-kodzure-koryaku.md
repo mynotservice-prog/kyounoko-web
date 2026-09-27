@@ -194,7 +194,7 @@ A. 商品ページに「はちみつを使用しております。乳児ボツ�
 ## 関連記事
 
 - [松屋は子連れOK？ベビーカー・離乳食・牛丼ミニ・小皿取り分け](/article/matsuya-kodzure-koryaku)
-- [新宿さぼてんは子連れOK？お子様メニュー・子供椅子・おむつ替え台](/article/shinjuku-saboten-kodzure-koryaku)
-- [かつやは子連れOK？キッズメニュー・子供椅子・おむつ替え台](/article/katsuya-kodzure-koryaku)
+- [新宿さぼてんは子連れOK？お子様メニューの中身とアレルゲン](/article/shinjuku-saboten-kodzure-koryaku)
+- [かつやに子連れで行ける？ご飯少なめ丼・席数・駐車場](/article/katsuya-kodzure-koryaku)
 - [大戸屋は子連れOK？ベビーカー・お子様メニュー・離乳食・取り分け定食](/article/ootoya-kodzure-koryaku)
 - [子連れOKチェーン店のキッズメニュー比較15選](/article/kids-menu-chain-15-hikaku)

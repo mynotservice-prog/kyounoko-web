@@ -171,7 +171,7 @@ A. 87店中82店の店舗ページに、「22:00以降にご来店のお客様�
 ## 関連記事
 
 - [鳥メロで子どもは何を頼む？単品価格・お子様飲み放題・禁煙店](/article/torimero-kodzure-koryaku)
-- [焼肉の和民は子連れOK？食べ放題の子ども料金・子供椅子](/article/yakiniku-watami-kodzure-koryaku)
+- [焼肉の和民は子連れOK？子ども料金・席・アレルゲン](/article/yakiniku-watami-kodzure-koryaku)
 - [鳥貴族は子連れOK？ベビーカー・キッズ向け・座敷席](/article/torikizoku-kodzure-koryaku)
 - [魚民に子連れで行くならキッズルーム](/article/uotami-kodzure-koryaku)
 - [子連れ外食に授乳室はある？](/article/kodzure-gaishoku-junyushitsu-guide)

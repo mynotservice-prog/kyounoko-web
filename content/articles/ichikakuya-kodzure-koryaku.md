@@ -172,5 +172,5 @@ A. 食物アレルギー一覧表（2026年9月10日更新）の「お子様セ�
 - [ラーメン・中華麺チェーン子連れランキング5社](/article/ramen-chain-kodzure-ranking-2026-5sha)
 - [子連れラーメンを安全に楽しむ完全ガイド](/article/kodzure-ramen-anzen-kanzen-guide)
 - [赤ちゃん・子供にラーメンはいつから？](/article/kodomo-ramen-itsukara)
-- [一風堂は子連れOK？お子様メニュー販売店舗・子供椅子・取り分けサービス](/article/ippudo-kodzure-koryaku)
+- [一風堂のお子様ラーメンはどの店？子供椅子・アレルゲン](/article/ippudo-kodzure-koryaku)
 - [8番らーめんは子連れOK？お子さまらーめん・子供椅子・座敷](/article/hachiban-ramen-kodzure-koryaku)

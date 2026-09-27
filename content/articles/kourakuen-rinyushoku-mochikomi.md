@@ -186,6 +186,6 @@ A. **公式FAQでは「幸楽苑以外の商品の持込は原則お断りして
 
 - [離乳食持ち込みOKのチェーン比較](/article/rinyuushoku-mochikomi-chain-15)
 - [幸楽苑は子連れOK？お子様セット・中華そばは何歳から](/article/kourakuen-kodzure-koryaku)
-- [丸源ラーメンは離乳食を持ち込める？ミルクのお湯や店内の離乳食は？](/article/marugenramen-rinyushoku-mochikomi)
+- [丸源ラーメンに離乳食は持ち込める？お湯と店の離乳食](/article/marugenramen-rinyushoku-mochikomi)
 - [ラーメン・中華麺チェーン子連れランキング5社](/article/ramen-chain-kodzure-ranking-2026-5sha)
 - [ガストは離乳食の持ち込みOK｜公式が明記しています](/article/gusto-rinyushoku-mochikomi)

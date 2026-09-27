@@ -223,7 +223,7 @@ A. 毎日10時に開く店が22店あります。モーニングは相模原店�
 
 ## 関連記事
 
-- [ステーキのどんは子連れOK？キッズメニュー・離乳食・おむつ替え台](/article/steak-no-don-kodzure-koryaku)
+- [ステーキのどんは子連れOK？キッズメニュー・おむつ替え台](/article/steak-no-don-kodzure-koryaku)
 - [ブロンコビリーは子連れOK？](/article/bronco-billy-kodzure-koryaku)
 - [ステーキガストの子連れ攻略](/article/steak-gusto-kodzure-koryaku)
 - [ステーキ宮の子連れ攻略](/article/steak-miya-kodzure-koryaku)

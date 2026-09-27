@@ -194,4 +194,4 @@ A. 公式のサービス紹介に、御飯・味噌汁・キャベツのお替�
 - [和食さとは子連れOK？座敷・離乳食・おこさまメニュー](/article/washoku-sato-kodzure-koryaku)
 - [子連れOKチェーン店のキッズメニュー比較15選](/article/kids-menu-chain-15-hikaku)
 - [かつやに子連れで行ける？ご飯少なめ丼・席数・駐車場](/article/katsuya-kodzure-koryaku)
-- [松のやは子連れOK？お子様プレート・子供椅子・おむつ替え台](/article/matsunoya-kodzure-koryaku)
+- [松のやは子連れOK？お子様プレート・テーブル席・駐車場](/article/matsunoya-kodzure-koryaku)

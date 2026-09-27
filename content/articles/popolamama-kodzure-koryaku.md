@@ -187,8 +187,8 @@ A. 78店の店舗ページでは、70店が11:00開店でした。10時台に開
 
 ## 関連記事
 
-- [ジョリーパスタは子連れOK？キッズメニューの値段・子供椅子・離乳食](/article/jolly-pasta-kodzure-koryaku)
-- [カプリチョーザは子連れOK？子供椅子・離乳食・キッズメニュー](/article/capricciosa-kodzure-koryaku)
-- [ピエトロは子連れOK？キッズプレートの値段・低アレルゲンパスタ・子供椅子](/article/pietro-kodzure-koryaku)
+- [ジョリーパスタは子連れOK？キッズの量・値段・アレルゲン](/article/jolly-pasta-kodzure-koryaku)
+- [カプリチョーザは子連れOK？子供椅子・離乳食・駐車場](/article/capricciosa-kodzure-koryaku)
+- [ピエトロは子連れOK？キッズプレートの値段・アレルゲン](/article/pietro-kodzure-koryaku)
 - [子どもはいつからパスタを食べられる？](/article/kodomo-pasta-itsukara)
 - [チェーンのキッズメニュー15社比較](/article/kids-menu-chain-15-hikaku)

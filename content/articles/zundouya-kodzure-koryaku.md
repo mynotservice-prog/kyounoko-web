@@ -206,7 +206,7 @@ A. 「駐車場あり」の表示がある店は112店中98店で、そのうち
 
 - [ラーメン・中華麺チェーン子連れランキング5社](/article/ramen-chain-kodzure-ranking-2026-5sha)
 - [子連れラーメンを安全に楽しむ完全ガイド](/article/kodzure-ramen-anzen-kanzen-guide)
-- [一風堂は子連れOK？お子様メニュー販売店舗・子供椅子・取り分けサービス](/article/ippudo-kodzure-koryaku)
+- [一風堂のお子様ラーメンはどの店？子供椅子・アレルゲン](/article/ippudo-kodzure-koryaku)
 - [8番らーめんの子連れ情報](/article/hachiban-ramen-kodzure-koryaku)
 - [天下一品は子連れOK？KOTTERIキッズでお子様ラーメン無料](/article/tenkaippin-kodzure-koryaku)
 - [丸源ラーメンは子連れOK？座敷・子ども椅子・肉そばの取り分け](/article/marugen-ramen-kodzure-koryaku)

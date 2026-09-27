@@ -185,3 +185,20 @@ node scripts/gsc-report.mjs --days=7 --json=/tmp/gsc7.json   # 目安。判定�
 - 対象: botejyu-kodzure-koryaku / gindaco-kodzure-koryaku / hinoya-curry-kodzure-koryaku / sutamina-taro-kodzure-koryaku / takakuramachi-coffee-kodzure-koryaku / yakiniku-like-kodzure-koryaku / notojima-aquarium-kosodate / karayama-kodzure-koryaku / katsuya-kodzure-koryaku / miraizaka-kodzure-koryaku / torimero-kodzure-koryaku / steak-miya-kodomo-ryokin / marugenramen-rinyushoku-mochikomi / kourakuen-rinyushoku-mochikomi / shabuyou-rinyushoku-mochikomi / yuzuan-rinyushoku-mochikomi
 - **11/24 の判定では、この16本を「9/27にリライトした群」として分けて併記する**（残り121本と混ぜて読まない）。
 - 10/10 の大量公開リスク判定（スパム更新との重なり）でも、この16本の変更を交絡として書く。
+
+### 2026-09-27 残り97本もリライト（社長指示「下記のお店も同じレベルでリライトして欲しい」）
+
+上の16本と同じ型で、A群の残り97本を書き直した。これで **A群112本はすべて 9/27 版に入れ替わった**（B群は `notojima-aquarium-kosodate` の1本だけ書き直し）。題名もほぼ全本で付け直している（「子供椅子・おむつ替え台」など公式に記載のない語を外し、答えられる内容の語へ）。
+
+| 回 | 本数 | PR | main マージ（JST） |
+|---|---|---|---|
+| 先行16本 | 16（A群15・B群1） | #275 | 2026-09-27 11:54 |
+| 第1〜2回 | 32 | #276 | 2026-09-27 16:41 |
+| 第3〜4回 | 32 | #277 | 2026-09-27 18:03 |
+| 第5〜6回 | 33 | 本PR | 2026-09-27 夜 |
+
+- 各回で検証役が新しい数字を公式と照合（修正は1回8〜9件）。check-frozen は全回 386→386（凍結面へのリンク増減なし）。
+- 第5〜6回のPRで、ほかの記事に残っていた**旧題名のリンク文言61か所**（44ファイル）を新しい題名に合わせた。リンク先は変えていない。
+- **11/24 の判定への影響**: A群の公開前の版が出ていたのは 9/25〜9/27 の約2日だけ。判定は実質「9/27 版の112本」の成績として読む。先行16本と残り97本の差は数時間〜半日なので、群を分けて比べる意味は小さい（併記はするが結論に使わない）。
+- **10/10 の大量公開リスク判定への影響**: 9/26 に「薄い層」とした6本（`gindaco` `sutamina-taro-kodzure-koryaku` `yakiniku-like` `takakuramachi-coffee` `hinoya-curry` `botejyu`）はすでに書き直し済み。悪化が出た場合の noindex 候補は、9/26 の薄さの指標ではなく、書き直し後の中身で選び直す。
+- 題名の変更は page 次元の集計には影響しないが、クエリ次元では 9/27 前後で出る語が変わる（「子供椅子」「おむつ替え台」を含むクエリは減り、「駐車場」「アレルゲン」「料金」などが増える見込み）。

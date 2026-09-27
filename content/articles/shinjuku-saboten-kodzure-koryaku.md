@@ -192,7 +192,7 @@ A. さぼてんデリカの「さぼキッズ」に、さぼキッズBOX（税�
 ## 関連記事
 
 - [大戸屋は子連れOK？ベビーカー・お子様メニュー・離乳食・取り分け定食](/article/ootoya-kodzure-koryaku)
-- [松のやは子連れOK？お子様プレート・子供椅子・おむつ替え台](/article/matsunoya-kodzure-koryaku)
-- [かつやは子連れOK？キッズメニュー・子供椅子・おむつ替え台](/article/katsuya-kodzure-koryaku)
+- [松のやは子連れOK？お子様プレート・テーブル席・駐車場](/article/matsunoya-kodzure-koryaku)
+- [かつやに子連れで行ける？ご飯少なめ丼・席数・駐車場](/article/katsuya-kodzure-koryaku)
 - [子連れOKチェーン店のキッズメニュー比較15選](/article/kids-menu-chain-15-hikaku)
 - [子連れ和食チェーン10選](/article/kodzure-washoku-chain-10)

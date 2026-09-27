@@ -187,5 +187,5 @@ A. どちらの料金表にも「65歳以上」の行があります。すたみ
 - [子連れOK焼肉・しゃぶしゃぶ7選｜焼肉キング・しゃぶ葉・牛角の攻略法](/article/kodzure-yakiniku-shabu-7)
 - [焼肉きんぐの子ども料金｜幼児は無料？小学生はいくら？](/article/yakiniku-king-kodomo-ryokin)
 - [牛角の子ども料金｜食べ放題は幼児無料？小学生はいくら？](/article/gyukaku-kodomo-ryokin)
-- [かみむら牧場の子ども料金｜幼児は無料？小学生はいくら？](/article/kamimura-bokujo-kodomo-ryokin)
+- [かみむら牧場の子ども料金は？幼児・小学生・ドリンクバー](/article/kamimura-bokujo-kodomo-ryokin)
 - [子供メニュー何歳から？年齢制限・無料/有料早見表](/article/kids-menu-nansai-kara-hayami)

@@ -187,7 +187,7 @@ A. 公式の全店舗紹介ページに「｢お席の予約｣を2025年11月�
 ## 関連記事
 
 - [大戸屋は子連れOK？ベビーカー・お子様メニュー・離乳食・取り分け定食](/article/ootoya-kodzure-koryaku)
-- [とんかつ和幸は子連れOK？お子様メニュー・子供椅子・おかわり自由](/article/tonkatsu-wako-kodzure-koryaku)
-- [新宿さぼてんは子連れOK？お子様メニュー・子供椅子・おむつ替え台](/article/shinjuku-saboten-kodzure-koryaku)
+- [とんかつ和幸は子連れOK？子供椅子のある店・お子様メニュー](/article/tonkatsu-wako-kodzure-koryaku)
+- [新宿さぼてんは子連れOK？お子様メニューの中身とアレルゲン](/article/shinjuku-saboten-kodzure-koryaku)
 - [定食チェーン子連れランキング4社](/article/teishoku-chain-kodzure-ranking-4sha)
 - [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)

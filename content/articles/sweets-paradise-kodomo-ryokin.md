@@ -169,5 +169,5 @@ A. 入れません。公式に「小学生以下のお子様のみでのご入�
 - [スイパラは子連れOK？甘くないフード・駐車場・席数](/article/sweets-paradise-kodzure-koryaku)
 - [食べ放題の子ども料金比較｜幼児無料はどこ？小学生はいくら？](/article/tabehoudai-kodomo-ryokin-hikaku)
 - [すたみな太郎の子ども料金｜幼児は無料？小学生はいくら？](/article/sutamina-taro-kodomo-ryokin)
-- [串家物語の子ども料金｜幼児は無料？小学生はいくら？](/article/kushiya-monogatari-kodomo-ryokin)
+- [串家物語の幼児は無料？小学生料金・時間・店ごとの差](/article/kushiya-monogatari-kodomo-ryokin)
 - [子供メニュー何歳から？年齢制限・無料/有料早見表](/article/kids-menu-nansai-kara-hayami)

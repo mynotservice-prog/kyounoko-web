@@ -191,7 +191,7 @@ A. 各品のページでは、お子さまカレーとお子さまうどんの�
 ## 関連記事
 
 - [リンガーハットは子連れにラク？ちびっこメニュー・取り分け](/article/ringer-hut-kodzure-koryaku)
-- [かつやは子連れOK？キッズメニュー・子供椅子・おむつ替え台](/article/katsuya-kodzure-koryaku)
+- [かつやに子連れで行ける？ご飯少なめ丼・席数・駐車場](/article/katsuya-kodzure-koryaku)
 - [さぼて（とんかつ）は子連れOK？お子様メニュー・子供椅子](/article/shinjuku-saboten-kodzure-koryaku)
 - [とんかつ和幸は子連れOK？お子様メニュー・子供椅子](/article/tonkatsu-wako-kodzure-koryaku)
 - [松のやは子連れOK？](/article/matsunoya-kodzure-koryaku)

@@ -212,6 +212,6 @@ A. 公式のアレルギー表で確認できます。たとえばお子様う�
 - [食べ放題の子ども料金比較｜幼児無料はどこ？小学生はいくら？](/article/tabehoudai-kodomo-ryokin-hikaku)
 - [子連れ焼肉を安全に楽しむ完全ガイド](/article/kodzure-yakiniku-anzen-kanzen-guide)
 - [牛角は子連れOK？ベビーカー・ベビーチェア・離乳食・煙対策と席選び](/article/gyukaku-kodzure-koryaku)
-- [ワンカルビは子連れOK？お子様メニュー・半個室・子供椅子・おむつ替え台](/article/one-karubi-kodzure-koryaku)
+- [ワンカルビは子連れOK？お子様メニュー・半個室・駐車場](/article/one-karubi-kodzure-koryaku)
 - [七輪房は子連れOK？お子様メニュー・子ども料金・座敷](/article/shichirinbo-kodzure-koryaku)
 - [安楽亭は子連れにラク？](/article/anrakutei-kodzure-koryaku)

@@ -175,4 +175,4 @@ A. 公式店舗一覧の64店すべてに「予約する」ボタンがあり、
 - [食べ放題の子ども料金比較｜幼児無料はどこ？小学生はいくら？](/article/tabehoudai-kodomo-ryokin-hikaku)
 - [子連れ焼肉を安全に楽しむ完全ガイド](/article/kodzure-yakiniku-anzen-kanzen-guide)
 - [牛角は子連れOK？ベビーカー・ベビーチェア・離乳食・煙対策と席選び](/article/gyukaku-kodzure-koryaku)
-- [焼肉ライクは子連れOK？キッズサービス・テーブル席・子供の座り方](/article/yakiniku-like-kodzure-koryaku)
+- [焼肉ライクは子連れOK？キッズサービスとテーブル席の店数](/article/yakiniku-like-kodzure-koryaku)
