@@ -174,6 +174,6 @@ A. 公式グランドメニューに「アレルギー対応は致しかねま�
 
 - [回転寿司4チェーン子連れ比較｜スシロー・くら・はま・かっぱ8項目](/article/kaiten-sushi-4chain-comparison)
 - [キッズメニューのある回転寿司はどこ？大手4社を比較](/article/kaitenzushi-kids-menu)
-- [根室花まるは子連れOK？子供椅子・離乳食持ち込み・ベビーカー](/article/nemuro-hanamaru-kodzure-koryaku)
-- [回転寿司みさきは子連れOK？子供椅子・キッズメニュー・禁煙](/article/kaitenzushi-misaki-kodzure-koryaku)
+- [根室花まるは子連れOK？子供椅子・離乳食・ベビーカー](/article/nemuro-hanamaru-kodzure-koryaku)
+- [回転寿司みさきは子連れで行ける？子供椅子・禁煙・予約](/article/kaitenzushi-misaki-kodzure-koryaku)
 - [赤ちゃん・子供にお寿司はいつから？月齢別の目安](/article/kodomo-sushi-itsukara)

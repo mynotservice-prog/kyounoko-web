@@ -183,5 +183,5 @@ A. 店舗ページのお支払い方法が「現金のみ」の店が104店中36
 - [ココイチは子連れOK？](/article/cocoichi-kodzure-koryaku)
 - [日乃屋カレーは子連れOK？](/article/hinoya-curry-kodzure-koryaku)
 - [チェーンのキッズメニュー15社比較](/article/kids-menu-chain-15-hikaku)
-- [とんかつ和幸は子連れOK？お子様メニュー・子供椅子・おかわり自由](/article/tonkatsu-wako-kodzure-koryaku)
+- [とんかつ和幸は子連れOK？子供椅子のある店・お子様メニュー](/article/tonkatsu-wako-kodzure-koryaku)
 - [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)

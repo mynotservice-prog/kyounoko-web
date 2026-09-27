@@ -148,7 +148,7 @@ A. 半蔵門店・初台店・神谷町店・茅場町店・九段下店・溜�
 ## 関連記事
 
 - [赤ちゃん・子供にカレーはいつから？](/article/kodomo-curry-itsukara)
-- [ゴーゴーカレーは子連れOK？お子様カレー・子供椅子・テーブル席](/article/gogo-curry-kodzure-koryaku)
+- [ゴーゴーカレーは子連れOK？お子様メニューの店・駐車場](/article/gogo-curry-kodzure-koryaku)
 - [ココイチは子連れOK？離乳食・ベビーフード持ち込みと1歳からのカレー](/article/cocoichi-kodzure-koryaku)
 - [チェーンのキッズメニュー比較15選](/article/kids-menu-chain-15-hikaku)
 - [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)

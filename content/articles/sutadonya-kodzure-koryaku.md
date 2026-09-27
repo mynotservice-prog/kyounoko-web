@@ -170,4 +170,4 @@ A. 店内で食べられる国内99店のうち、店舗ページに駐車場の
 - [吉野家は子連れOK？ベビーカー・取り分け・牛皿/ミニ盛り・離乳食](/article/yoshinoya-kodzure-koryaku)
 - [松屋は子連れOK？ベビーカー・離乳食・牛丼ミニ・小皿取り分け](/article/matsuya-kodzure-koryaku)
 - [子連れOKチェーン店のキッズメニュー比較15選](/article/kids-menu-chain-15-hikaku)
-- [かつやは子連れOK？キッズメニュー・子供椅子・おむつ替え台](/article/katsuya-kodzure-koryaku)
+- [かつやに子連れで行ける？ご飯少なめ丼・席数・駐車場](/article/katsuya-kodzure-koryaku)

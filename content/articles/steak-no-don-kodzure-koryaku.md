@@ -163,7 +163,7 @@ youtubeSearch: ステーキのどん 子連れ キッズメニュー
 - ステーキのどんの多目的トイレの割合は、フォルクス・ブロンコビリーより低く、ステーキガストより高い水準です。
 - この4チェーンの集計で、子ども用の椅子を店舗ごとに数えられたのはブロンコビリー（128店中127店に「ベビーチェア」の表示）だけです。ステーキのどんは店舗ごとの表示はありませんが、公式ページに「キッズチェアー」があると書かれています。
 
-同じアークミールのフォルクスは[フォルクスは子連れOK？キッズメニュー・ベビーフード・おむつ替え台](/article/volks-kodzure-koryaku)、ブロンコビリーは[ブロンコビリーの子連れ情報](/article/bronco-billy-kodzure-koryaku)にまとめています。
+同じアークミールのフォルクスは[フォルクスは子連れOK？キッズメニュー・おむつ替え台の店数](/article/volks-kodzure-koryaku)、ブロンコビリーは[ブロンコビリーの子連れ情報](/article/bronco-billy-kodzure-koryaku)にまとめています。
 
 ## 公式に記載がない項目（行く前に店舗へ確認）
 
@@ -222,7 +222,7 @@ A. 未就学児は家族が料理を注文すれば無料、小学3年生まで�
 
 ## 関連記事
 
-- [フォルクスは子連れOK？キッズメニュー・ベビーフード・おむつ替え台](/article/volks-kodzure-koryaku)
+- [フォルクスは子連れOK？キッズメニュー・おむつ替え台の店数](/article/volks-kodzure-koryaku)
 - [ステーキガストの子連れ攻略](/article/steak-gusto-kodzure-koryaku)
 - [ステーキ宮の子連れ攻略](/article/steak-miya-kodzure-koryaku)
 - [離乳食を持ち込めるチェーン15選](/article/rinyuushoku-mochikomi-chain-15)

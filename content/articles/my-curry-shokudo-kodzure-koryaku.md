@@ -167,6 +167,6 @@ A. 公式のメニューページには、22時から翌朝5時のあいだは�
 ## 関連記事
 
 - [松屋は子連れOK？](/article/matsuya-kodzure-koryaku)
-- [松のやは子連れOK？お子様プレート・子供椅子・おむつ替え台](/article/matsunoya-kodzure-koryaku)
-- [ゴーゴーカレーは子連れOK？お子様カレー・子供椅子・テーブル席](/article/gogo-curry-kodzure-koryaku)
+- [松のやは子連れOK？お子様プレート・テーブル席・駐車場](/article/matsunoya-kodzure-koryaku)
+- [ゴーゴーカレーは子連れOK？お子様メニューの店・駐車場](/article/gogo-curry-kodzure-koryaku)
 - [赤ちゃん・子供にカレーはいつから？](/article/kodomo-curry-itsukara)

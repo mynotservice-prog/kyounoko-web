@@ -202,7 +202,7 @@ A. 公式の「匠のこだわり」ページには、テーブルにあるタ�
 
 - [食べ放題の子ども料金比較｜幼児無料はどこ？小学生はいくら？](/article/tabehoudai-kodomo-ryokin-hikaku)
 - [子連れ焼肉を安全に楽しむ完全ガイド](/article/kodzure-yakiniku-anzen-kanzen-guide)
-- [熟成焼肉いちばんは子連れOK？お子様メニュー・ベビーシート・ベビーカー](/article/jukusei-yakiniku-ichiban-kodzure-koryaku)
-- [じゅうじゅうカルビは子連れOK？子供椅子・おむつ交換台・離乳食・座敷](/article/jujukarubi-kodzure-koryaku)
-- [ワンカルビは子連れOK？お子様メニュー・半個室・子供椅子・おむつ替え台](/article/one-karubi-kodzure-koryaku)
+- [熟成焼肉いちばんは子連れOK？お子様メニュー・ベビーシート](/article/jukusei-yakiniku-ichiban-kodzure-koryaku)
+- [じゅうじゅうカルビは子連れOK？おむつ交換台・座敷がある店](/article/jujukarubi-kodzure-koryaku)
+- [ワンカルビは子連れOK？お子様メニュー・半個室・駐車場](/article/one-karubi-kodzure-koryaku)
 - [牛角は子連れOK？](/article/gyukaku-kodzure-koryaku)

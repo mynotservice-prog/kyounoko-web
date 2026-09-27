@@ -181,8 +181,8 @@ A. 営業中の58店すべてに「テイクアウトあり」のアイコンが
 
 ## 関連記事
 
-- [ステーキのどんは子連れOK？キッズメニュー・離乳食・おむつ替え台](/article/steak-no-don-kodzure-koryaku)
-- [いきなり！ステーキは子連れOK？子供用椅子・キッズメニューの有無](/article/ikinari-steak-kodzure-koryaku)
+- [ステーキのどんは子連れOK？キッズメニュー・おむつ替え台](/article/steak-no-don-kodzure-koryaku)
+- [いきなり！ステーキにキッズメニューは？ある店・子供椅子の数](/article/ikinari-steak-kodzure-koryaku)
 - [ステーキガストの子連れ攻略](/article/steak-gusto-kodzure-koryaku)
 - [ステーキ宮の子連れ攻略](/article/steak-miya-kodzure-koryaku)
 - [ブロンコビリーは子連れOK？](/article/bronco-billy-kodzure-koryaku)

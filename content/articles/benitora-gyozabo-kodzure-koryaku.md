@@ -170,5 +170,5 @@ A. 紅虎餃子房は毎年4月15日を「よいこの日」としています�
 
 - [餃子の王将は子連れOK？ベビーカー・ベビーチェア・離乳食・取り分け中華](/article/ohsho-kodzure-koryaku)
 - [大阪王将は子連れOK？キッズメニュー・子ども用取り皿・座席](/article/osaka-ohsho-kodzure-koryaku)
-- [ぎょうざの満洲は子連れOK？お子様ラーメン・子供椅子・おむつ替え台](/article/gyoza-no-mansyu-kodzure-koryaku)
+- [ぎょうざの満洲は子連れOK？お子様ラーメン・駐車場のある店](/article/gyoza-no-mansyu-kodzure-koryaku)
 - [子連れ外食に授乳室はある？ファミレス・チェーン店で授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)

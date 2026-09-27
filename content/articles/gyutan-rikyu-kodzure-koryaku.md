@@ -164,7 +164,7 @@ A. 公式の「持ち帰り（テイクアウト）宅配（デリバリー）�
 
 ## 関連記事
 
-- [ねぎしは子連れOK？キッズメニュー・子供椅子・麦めしおかわり](/article/negishi-kodzure-koryaku)
+- [ねぎしは子連れOK？1枚から頼める肉・アレルゲン・店の階](/article/negishi-kodzure-koryaku)
 - [個室で子連れランチ完全ガイド](/article/koshitsu-kodzure-lunch)
 - [定食チェーン子連れランキング4社](/article/teishoku-chain-kodzure-ranking-4sha)
 - [牛角は子連れOK？](/article/gyukaku-kodzure-koryaku)

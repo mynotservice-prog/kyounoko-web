@@ -190,6 +190,6 @@ A. できます。公式の「テイクアウト」ページでは、店舗に�
 - [鳥貴族は子連れOK？ベビーカー・キッズ向け・座敷席](/article/torikizoku-kodzure-koryaku)
 - [串カツ田中の子連れ攻略｜小学生以下の無料サービス・全席禁煙](/article/kushikatsu-tanaka-kodzure-koryaku)
 - [魚民に子連れで行くならキッズルーム｜個室とオープン席の違い](/article/uotami-kodzure-koryaku)
-- [手羽先の風来坊は子連れOK？キッズメニュー・禁煙・個室](/article/furaibou-kodzure-koryaku)
-- [世界の山ちゃんは子連れOK？キッズルーム・お子様メニュー・座敷](/article/sekai-no-yamachan-kodzure-koryaku)
+- [手羽先の風来坊は子連れで行ける？禁煙の店・開店時刻](/article/furaibou-kodzure-koryaku)
+- [世界の山ちゃんは子連れOK？キッズルーム・禁煙・昼営業](/article/sekai-no-yamachan-kodzure-koryaku)
 - [子連れ外食に授乳室はある？](/article/kodzure-gaishoku-junyushitsu-guide)

@@ -185,6 +185,6 @@ A. 店舗検索の条件「個室あり」で98店中40店が出ます。座敷�
 ## 関連記事
 
 - [ミライザカは子連れで使える？子供の飲み放題・個室・禁煙店](/article/miraizaka-kodzure-koryaku)
-- [焼肉の和民は子連れOK？食べ放題の子ども料金・子供椅子](/article/yakiniku-watami-kodzure-koryaku)
+- [焼肉の和民は子連れOK？子ども料金・席・アレルゲン](/article/yakiniku-watami-kodzure-koryaku)
 - [鳥貴族は子連れOK？ベビーカー・キッズ向け・座敷席](/article/torikizoku-kodzure-koryaku)
 - [子連れ外食に授乳室はある？](/article/kodzure-gaishoku-junyushitsu-guide)

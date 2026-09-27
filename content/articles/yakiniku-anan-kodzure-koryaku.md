@@ -230,4 +230,4 @@ A. 土日祝のいずれかで12時までに開店する店は155店中113店、
 - [子連れ焼肉を安全に楽しむ完全ガイド](/article/kodzure-yakiniku-anzen-kanzen-guide)
 - [七輪房は子連れOK？お子様メニュー・子ども料金・座敷](/article/shichirinbo-kodzure-koryaku)
 - [牛角は子連れOK？ベビーカー・ベビーチェア・離乳食・煙対策と席選び](/article/gyukaku-kodzure-koryaku)
-- [じゅうじゅうカルビは子連れOK？子供椅子・おむつ交換台・離乳食・座敷](/article/jujukarubi-kodzure-koryaku)
+- [じゅうじゅうカルビは子連れOK？おむつ交換台・座敷がある店](/article/jujukarubi-kodzure-koryaku)

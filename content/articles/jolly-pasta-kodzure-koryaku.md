@@ -198,5 +198,5 @@ A. 322店のうち319店の店舗ページに「駐車場あり」の表示が�
 - [子どもはいつからパスタを食べられる？](/article/kodomo-pasta-itsukara)
 - [チェーンのキッズメニュー15社比較](/article/kids-menu-chain-15-hikaku)
 - [外食先に授乳室はある？子連れで授乳する方法](/article/kodzure-gaishoku-junyushitsu-guide)
-- [カプリチョーザは子連れOK？子供椅子・離乳食・キッズメニュー](/article/capricciosa-kodzure-koryaku)
+- [カプリチョーザは子連れOK？子供椅子・離乳食・駐車場](/article/capricciosa-kodzure-koryaku)
 - [ピエトロは子連れOK？キッズプレートの値段・低アレルゲンパスタ](/article/pietro-kodzure-koryaku)

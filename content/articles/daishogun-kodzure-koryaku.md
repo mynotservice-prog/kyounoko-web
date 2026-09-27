@@ -176,7 +176,7 @@ A. 2026年9月27日時点の公式メニューに、食べ放題のコースは�
 
 ## 関連記事
 
-- [くいどんは子連れOK？お子様メニュー・子ども料金・個室・子供椅子](/article/kuidon-kodzure-koryaku)
+- [焼肉くいどんは子連れOK？お子様メニュー・幼児料金・個室](/article/kuidon-kodzure-koryaku)
 - [子連れ焼肉を安全に楽しむ完全ガイド](/article/kodzure-yakiniku-anzen-kanzen-guide)
 - [牛角は子連れOK？ベビーカー・ベビーチェア・離乳食・煙対策と席選び](/article/gyukaku-kodzure-koryaku)
 - [安楽亭は子連れにラク？](/article/anrakutei-kodzure-koryaku)

@@ -205,6 +205,6 @@ A. 公式の「アレルギー成分一覧」で、卵・乳・そば・小麦�
 - [食べ放題の子ども料金比較｜幼児無料はどこ？小学生はいくら？](/article/tabehoudai-kodomo-ryokin-hikaku)
 - [子連れ焼肉を安全に楽しむ完全ガイド](/article/kodzure-yakiniku-anzen-kanzen-guide)
 - [牛角は子連れOK？ベビーカー・ベビーチェア・離乳食・煙対策と席選び](/article/gyukaku-kodzure-koryaku)
-- [ワンカルビは子連れOK？お子様メニュー・半個室・子供椅子・おむつ替え台](/article/one-karubi-kodzure-koryaku)
+- [ワンカルビは子連れOK？お子様メニュー・半個室・駐車場](/article/one-karubi-kodzure-koryaku)
 - [安楽亭は子連れにラク？](/article/anrakutei-kodzure-koryaku)
 - [すたみな太郎は子連れOK？幼児料金・時間・アレルゲン](/article/sutamina-taro-kodzure-koryaku)

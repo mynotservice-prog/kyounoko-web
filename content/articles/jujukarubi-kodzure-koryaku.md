@@ -212,4 +212,4 @@ A. 公式のアレルギー情報（2026年9月17日現在）では、特定原�
 - [子連れ焼肉を安全に楽しむ完全ガイド](/article/kodzure-yakiniku-anzen-kanzen-guide)
 - [牛角は子連れOK？ベビーカー・ベビーチェア・離乳食・煙対策と席選び](/article/gyukaku-kodzure-koryaku)
 - [安楽亭の子連れ攻略](/article/anrakutei-kodzure-koryaku)
-- [熟成焼肉いちばんは子連れOK？お子様メニュー・ベビーシート・ベビーカー](/article/jukusei-yakiniku-ichiban-kodzure-koryaku)
+- [熟成焼肉いちばんは子連れOK？お子様メニュー・ベビーシート](/article/jukusei-yakiniku-ichiban-kodzure-koryaku)

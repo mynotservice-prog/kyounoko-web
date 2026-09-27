@@ -192,6 +192,6 @@ A. 20店のうち、店舗ページに駐車場の記載があるのは、たま
 
 - [回転寿司4チェーン子連れ比較｜スシロー・くら・はま・かっぱ8項目](/article/kaiten-sushi-4chain-comparison)
 - [キッズメニューのある回転寿司はどこ？大手4社を比較](/article/kaitenzushi-kids-menu)
-- [平禄寿司は子連れOK？キッズメニュー・子供椅子・アレルゲン・禁煙](/article/heiroku-sushi-kodzure-koryaku)
-- [根室花まるは子連れOK？子供椅子・離乳食持ち込み・ベビーカー](/article/nemuro-hanamaru-kodzure-koryaku)
+- [平禄寿司は子連れで行ける？駐車場・禁煙・アレルゲン](/article/heiroku-sushi-kodzure-koryaku)
+- [根室花まるは子連れOK？子供椅子・離乳食・ベビーカー](/article/nemuro-hanamaru-kodzure-koryaku)
 - [赤ちゃん・子供にお寿司はいつから？月齢別の目安](/article/kodomo-sushi-itsukara)

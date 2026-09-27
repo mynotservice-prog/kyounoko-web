@@ -216,4 +216,4 @@ A. 店舗ページでは85店が10:00開店、4店が7:00開店で、89店すべ
 - [食べ放題の子ども料金比較｜幼児無料はどこ？小学生はいくら？](/article/tabehoudai-kodomo-ryokin-hikaku)
 - [子連れ焼肉を安全に楽しむ完全ガイド](/article/kodzure-yakiniku-anzen-kanzen-guide)
 - [牛角は子連れOK？ベビーカー・ベビーチェア・離乳食・煙対策と席選び](/article/gyukaku-kodzure-koryaku)
-- [じゅうじゅうカルビは子連れOK？子供椅子・おむつ交換台・離乳食・座敷](/article/jujukarubi-kodzure-koryaku)
+- [じゅうじゅうカルビは子連れOK？おむつ交換台・座敷がある店](/article/jujukarubi-kodzure-koryaku)
