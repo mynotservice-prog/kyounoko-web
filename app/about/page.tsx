@@ -266,7 +266,7 @@ export default function AboutPage() {
               <tbody>
                 <tr>
                   <th>公開記事数</th>
-                  <td>{SITE_FACTS.articles} 本</td>
+                  <td>{SITE_FACTS.articles.toLocaleString()} 本</td>
                 </tr>
                 <tr>
                   <th>掲載駅数</th>
