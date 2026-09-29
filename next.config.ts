@@ -2,6 +2,7 @@ import type { NextConfig } from 'next';
 import { SPOT_REDIRECTS } from './lib/spot-redirects';
 import { CHAIN_SPOT_REDIRECTS } from './lib/chain-spot-redirects';
 import { ARTICLE_REDIRECTS } from './lib/article-redirects';
+import { getStationConditionRedirects } from './lib/station-cond-redirects';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -358,6 +359,11 @@ const nextConfig: NextConfig = {
       { source: '/article/yakiniku-chain-kodzure-5sha-hikaku', destination: '/article/kodzure-yakiniku-shabu-7', permanent: true },
       { source: '/article/yojishoku-kanryouki-1week-rota', destination: '/article/yojishoku-reitou-tsukurioki', permanent: true },
       { source: '/article/furusato-nouzei-kosodate-ikuji', destination: '/category/today-mawasu', permanent: true },
+
+      // ===== 駅×条件: 配信しないが GSC で表示実績のある面 → 駅トップ（2026-09-26） =====
+      // PR#261 の個人店置換で matched<3 に落ちて 404 になった個室・雨の日・個人店の面の救済。
+      // 判定とルール生成は lib/station-cond-redirects.ts（ビルド時に計算）。
+      ...getStationConditionRedirects(),
 
       // ===== 旧 /plans, /plan ルート救済 =====
       { source: '/plans', destination: '/', permanent: true },
