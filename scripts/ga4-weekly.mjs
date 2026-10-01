@@ -10,6 +10,11 @@
  * 使い方:
  *   node scripts/ga4-weekly.mjs                       # 直近9週を表示
  *   node scripts/ga4-weekly.mjs --md=reports/weekly-traffic/2026-09-15.md
+ *   node scripts/ga4-weekly.mjs --end=yesterday       # 終端を変える（既定は3日前）
+ *
+ * 終端日（2026-10-01）: GA4は直近2日が処理途中で、エンゲージ率が低く出る（月曜実行で未処理の
+ * 日曜が混ざり、週のERが 73%→59〜63% に壊れた）。既定の終端を3日前にして未処理日を窓から外す。
+ * そのぶん月曜実行では前週が7日そろわず、判定は木曜以降の実行で前週に進む。
  *
  * 認証は scripts/gsc-report.mjs と同じ読み取り専用SA（credentials/google-indexing.json）。
  */
@@ -21,6 +26,7 @@ const arg = (k, d) => { const m = process.argv.find((a) => a.startsWith(`--${k}=
 const MD_OUT = arg('md', '');
 const WEEKS = Number(arg('weeks', '9'));
 const PROPERTY = arg('property', '533628127');
+const END = arg('end', '3daysAgo');
 
 function loadCreds() {
   if (process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON) return JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON);
@@ -48,7 +54,7 @@ const weekKey = (yyyymmdd) => {
   return new Date(d - ((d.getUTCDay() + 6) % 7) * 864e5).toISOString().slice(0, 10);
 };
 const start = new Date(); start.setUTCDate(start.getUTCDate() - 7 * WEEKS - 7);
-const range = { startDate: start.toISOString().slice(0, 10), endDate: 'yesterday' };
+const range = { startDate: start.toISOString().slice(0, 10), endDate: END };
 
 async function weekly(filter) {
   const rows = await ga4({ dateRanges: [range], dimensions: [{ name: 'date' }], metrics: [{ name: 'sessions' }, { name: 'screenPageViews' }, { name: 'engagedSessions' }, { name: 'averageSessionDuration' }], ...(filter ? { dimensionFilter: filter } : {}), limit: 400 });
@@ -69,7 +75,7 @@ const f0 = (n) => Math.round(n).toLocaleString('en-US');
 const f2 = (n) => n.toFixed(2);
 const pct = (n) => `${(n * 100).toFixed(1)}%`;
 
-say(`# 週次トラフィック定点（GA4）${range.startDate}〜昨日`);
+say(`# 週次トラフィック定点（GA4）${range.startDate}〜${END === '3daysAgo' ? '3日前' : END}`);
 say('');
 say('| 週(月曜〜) | 日数 | セッション/日 | PV/日 | PV/セッション | エンゲージ率 | 平均滞在 |');
 say('|---|---:|---:|---:|---:|---:|---:|');
