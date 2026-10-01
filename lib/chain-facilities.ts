@@ -140,7 +140,11 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
       zashiki: V(false),
       boxSeat: V(true),
       kidsChair: V(true),
-      kidsMenu: V(true),
+      // 2026-10-02: 公式アレルゲン情報128品にキッズ・お子様と名の付く商品なし。V(true) は誤りだった
+      kidsMenu: V(false, '専用のキッズメニューは現在なし（取り分けが基本）', {
+        sourceUrl: 'https://allergy.saizeriya.co.jp/',
+        verifiedAt: '2026-10-02',
+      }),
       kidsCutlery: V(true),
       diaperTable: V(true),
       nursingRoom: V(false, 'モール内店舗は施設の授乳室を利用'),
@@ -162,7 +166,10 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
       zashiki: V(false),
       boxSeat: V(true),
       kidsChair: V(true),
-      kidsMenu: V(true),
+      kidsMenu: V(true, 'キッズメニュー7品（税込362〜824円・お子さまドリンクバー付き・小学生以下）', {
+        sourceUrl: 'https://www.skylark.co.jp/gusto/menu/menu_category.html?cid=270',
+        verifiedAt: '2026-10-02',
+      }),
       kidsCutlery: V(true),
       diaperTable: V(true),
       nursingRoom: V(false),
@@ -281,7 +288,10 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
       zashiki: V(false),
       boxSeat: V(true),
       kidsChair: V(true),
-      kidsMenu: V(true),
+      kidsMenu: V(true, '「ぷちローセット」（グッズつき）と注文画面の「こどもメニュー」タブ', {
+        sourceUrl: 'https://www.akindo-sushiro.co.jp/kodomosushiro/',
+        verifiedAt: '2026-10-02',
+      }),
       kidsCutlery: V(false, '店舗による'),
       diaperTable: V(true),
       nursingRoom: V(false),
@@ -524,7 +534,11 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
       stepFree: V('partial', '店舗による'),
       zashiki: V(false, '椅子席メイン'),
       kidsChair: V('partial', '店舗による'),
-      kidsMenu: V(true, 'グッズ付きキッズセットあり'),
+      // 2026-10-02: 公式「グッズ情報」に現行のキッズセット掲載なし。「あり」とは書けない
+      kidsMenu: V('partial', '公式サイトに現行のキッズセット掲載なし（店頭で確認）', {
+        sourceUrl: 'https://www.misterdonut.jp/m_menu/goods/',
+        verifiedAt: '2026-10-02',
+      }),
       kidsCutlery: V('partial', '店舗による'),
       diaperTable: V('partial', '店舗による'),
       nursingRoom: V(false, '基本なし'),
