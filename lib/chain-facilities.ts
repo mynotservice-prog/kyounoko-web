@@ -352,7 +352,10 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
       zashiki: V(false),
       boxSeat: V(false),
       kidsChair: V(true),
-      kidsMenu: V(true),
+      kidsMenu: V(true, 'お子さま まんぷくセット290円（小学6年生まで・一部店舗は販売なし）', {
+        sourceUrl: 'https://jp.marugame.com/campaign/manpukuset/',
+        verifiedAt: '2026-10-01',
+      }),
       kidsCutlery: V(false),
       diaperTable: V(false),
       nursingRoom: V(false),
@@ -492,8 +495,12 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
       zashiki: V(false),
       boxSeat: V(true),
       kidsChair: V(true),
-      // 2026-09-04: 公式メニュー一覧（ootoya.com/menu_list/）に子ども向けメニューの掲載なし。店舗判断扱いに変更
-      kidsMenu: V('partial', '公式メニュー一覧に掲載なし・店舗による'),
+      // 2026-10-01: 9/04の「掲載なし」は誤り。公式メニューは店舗を選ぶと表示される仕組みで、
+      // 店舗別メニュー41店舗すべてにお子様メニュー4品の掲載を確認（価格は店舗により2通り）。
+      kidsMenu: V(true, 'お子様メニュー4品（460〜750円・小学生以下。価格は店舗による）', {
+        sourceUrl: 'https://www.ootoya.com/menu_list/index/142928',
+        verifiedAt: '2026-10-01',
+      }),
       kidsCutlery: V(false),
       diaperTable: V(true),
       nursingRoom: V(false),
