@@ -6,6 +6,7 @@ metaDescription: >-
 category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-09-25T00:00:00.000Z'
+updatedAt: '2026-10-01'
 hero: /img/scenes/kaiten-01.webp
 heroAlt: 回転レーンを流れるふた付きの皿のまぐろ・サーモン・いくら軍艦・玉子と、奥に寿司の写真が並ぶ注文用の画面が置かれた回転寿司店のカウンター（イメージ）
 area: all
@@ -179,11 +180,11 @@ A. 20店のうち、店舗ページに駐車場の記載があるのは、たま
 
 - 金沢まいもん寿司公式「店舗紹介」（https://www.maimon-susi.com/shop/ ）｜確認日 2026年9月27日 — エリア別・スタイル別の店舗一覧、「回転寿司」の22件（うち台湾2店）
 - 金沢まいもん寿司公式 各店舗ページ（例：渋谷パルコ https://www.maimon-susi.com/shop/sibuya_parco/ 、まるひろ上尾SC店 https://www.maimon-susi.com/shop/maruhiroageo/ 、たまプラーザ店 https://www.maimon-susi.com/shop/tamapla/ 、吹田グリーンプレイス店 https://www.maimon-susi.com/shop/suita/ 、本店 https://www.maimon-susi.com/shop/ekinishi-2/ 、那覇国際通り県庁前店 https://www.maimon-susi.com/shop/naha_kenchomae/ ）｜確認日 2026年9月27日 — 予約の扱い、順番待ちのバナー、駐車場、メニューとアレルギー情報へのリンク
-- 金沢まいもん寿司公式 グランドメニューA（https://www.maimon-susi.com/cms/wp/wp-content/uploads/2025/12/2609est_gm.pdf ）｜確認日 2026年9月27日 — 「お子様にも人気」欄、品名・価格
+- 金沢まいもん寿司公式 グランドメニューA（https://www.maimon-susi.com/cms/wp/wp-content/uploads/2018/02/est_gm2609.pdf ）｜確認日 2026年10月1日（掲載URLが変わったため差し替え） — 「お子様にも人気」欄、品名・価格
 - 金沢まいもん寿司公式 グランドメニューB（https://www.maimon-susi.com/cms/wp/wp-content/uploads/2019/01/2609hok_gm.pdf ）｜確認日 2026年9月27日
 - 金沢まいもん寿司公式 グランドメニューC（https://www.maimon-susi.com/cms/wp/wp-content/uploads/2019/01/2609luk_kyoto_nago_gm.pdf ）｜確認日 2026年9月27日
 - 金沢まいもん寿司公式 グランドメニューD（https://www.maimon-susi.com/cms/wp/wp-content/uploads/2018/02/2609sui_syuk_hako_hiro_gm.pdf ）｜確認日 2026年9月27日
-- 金沢まいもん寿司公式 グランドメニューE（https://www.maimon-susi.com/cms/wp/wp-content/uploads/2025/06/2609naha_gm.pdf ）｜確認日 2026年9月27日
+- 金沢まいもん寿司公式 グランドメニューE（https://www.maimon-susi.com/cms/wp/wp-content/uploads/2025/06/naha_gm2609.pdf ）｜確認日 2026年10月1日（掲載URLが変わったため差し替え）
 - 金沢まいもん寿司公式 アレルゲン情報（Aの9店・2026/5/29現在）（https://www.maimon-susi.com/cms/wp/wp-content/uploads/2018/02/est_allergen2606.pdf ）｜確認日 2026年9月27日 — 8品目の表示、備考、注記
 - 金沢まいもん寿司公式 アレルゲン情報（B・C・Dの10店・2026年6月11日更新）（https://www.maimon-susi.com/cms/wp/wp-content/uploads/2025/07/nisinihon_allergen2606.pdf ）｜確認日 2026年9月27日 — 8品目の表示
 - きょうのこ調べ「チェーン店の設備カバー率調査」（/data/chain-facility-coverage ）｜集計 2026年9月 — スシロー・はま寿司・大起水産回転寿司の駐車場の表示の割合
