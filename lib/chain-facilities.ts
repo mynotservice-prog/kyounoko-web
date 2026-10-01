@@ -330,7 +330,10 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
       zashiki: V(false),
       boxSeat: V(true),
       kidsChair: V(true),
-      kidsMenu: V(true),
+      kidsMenu: V(true, 'おこさまメニュー（税込494円〜・小学生以下・10:30〜）', {
+        sourceUrl: 'https://www.skylark.co.jp/jonathan/menu/menu_category.html?cid=191',
+        verifiedAt: '2026-10-01',
+      }),
       kidsCutlery: V(true),
       diaperTable: V(true),
       nursingRoom: V(false),
@@ -723,7 +726,10 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
       zashiki: V(false),
       boxSeat: V(true),
       kidsChair: V(true),
-      kidsMenu: V(true),
+      kidsMenu: V(true, 'お子様メニュー（だいすきプレート600〜680円・キッズドリンク。小学生以下・店舗により販売状況が異なる）', {
+        sourceUrl: 'https://www.komeda.co.jp/menu/category.html?cat=1-6',
+        verifiedAt: '2026-10-01',
+      }),
       kidsCutlery: V(false),
       diaperTable: V(true),
       nursingRoom: V(false),
@@ -1968,7 +1974,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     verifiedMethod: '公式サイト・店舗公開情報の照合',
     surveyOnly: true,
     items: {
-      kidsMenu: V(true, '公式FAQの子ども向けメニューのあるブランドに藍屋（小学生以下）', { sourceUrl: 'https://faq.skylark.co.jp/faq/show/70?site_domain=faq', verifiedAt: '2026-09-25' }),
+      kidsMenu: V(true, 'お子様メニュー5品（税込274円〜1,330円・小学生以下・おもちゃつき）', { sourceUrl: 'https://www.skylark.co.jp/aiya/menu/menu_category.html?cid=108', verifiedAt: '2026-10-01' }),
       allergenInfo: V(true, 'アレルギー情報サイトでメニュー別に公開', { sourceUrl: 'https://allergy.skylark.co.jp/', verifiedAt: '2026-09-25' }),
     },
   },
