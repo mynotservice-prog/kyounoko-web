@@ -121,7 +121,7 @@ youtubeSearch: 華屋与兵衛 子連れ 座敷 おこさまメニュー
 ## 関連記事
 
 - [子連れ和食チェーン10選（大戸屋・やよい軒・和食さとほか）](/article/kodzure-washoku-chain-10)
-- [和食さとは子連れOK？座敷・離乳食無料・おこさまメニューの攻略ガイド](/article/washoku-sato-kodzure-koryaku)
+- [和食さとは子連れOK？座敷・離乳食・おこさまメニューの攻略ガイド](/article/washoku-sato-kodzure-koryaku)
 - [夢庵は子連れOK？座敷・おこさまメニューの攻略ガイド](/article/yumean-kodzure-koryaku)
 - [【2026年版】子連れファミレスTOP10ランキング](/article/famires-kodzure-ranking-2026-10sen)
 - [子連れOKファミレス王道15選](/article/kodzure-famires-15sen)
