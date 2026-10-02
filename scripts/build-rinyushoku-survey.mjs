@@ -108,6 +108,14 @@ const CORRECTIONS = {
       atatame: { value: '記載なし', note: '店内販売品を「温めて提供いたします」の記載はある（持ち込み品の温めの記載ではない）' },
     },
   },
+  washokusato: {
+    reason: '2026-10-02 再照合: 公式メニューページから開くグランドメニューPDF（画像）のキッズ面に「離乳食無料 1歳未満のおこさまひとりにつき1個サービス！」「生後7ヶ月ごろから」とある。PDFが画像のためサイト内検索に出ず、9/25 の照合では見落としていた。「全店」とは書かれていない。',
+    quote: '離乳食無料 1歳未満のおこさまひとりにつき1個サービス！（生後7ヶ月ごろから）',
+    sourceUrl: 'https://cdn.shopify.com/s/files/1/0619/9155/1031/files/26-GrandMenu_260928.pdf',
+    cells: {
+      hanbai: { value: '明記あり', note: '販売ではなく1歳未満に1個無料提供（グランドメニューのキッズ面）' },
+    },
+  },
   'kappa-sushi': {
     reason: '「離乳食あります! 温めも承ります」は店の離乳食の案内に続く文言。温めを引き受ける旨は明記されているため「明記あり」とするが、持ち込み品が対象かは文言から判別できないことを注記する。',
     cells: {
@@ -328,7 +336,7 @@ for (const f of mainFiles) {
       group: 'main',
       sourceFile: `reports/rinyushoku-official-2026-09-25/${f}`,
       quote: corr?.quote ?? r['公式の文言（原文そのまま・80字以内）'],
-      sourceUrl: r.sourceUrl,
+      sourceUrl: corr?.sourceUrl ?? r.sourceUrl,
       positiveControl: r['陽性対照URL'],
       checkedAt: SURVEY_DATE,
       cells,

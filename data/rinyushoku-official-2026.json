@@ -56,12 +56,12 @@
       ]
     },
     "hanbai": {
-      "stated": 7,
+      "stated": 8,
       "denominator": 50,
       "total": 57,
       "counts": {
-        "記載なし": 43,
-        "明記あり": 7,
+        "記載なし": 42,
+        "明記あり": 8,
         "未確認": 3,
         "未照合": 4
       },
@@ -72,6 +72,7 @@
         "marugenramen",
         "bigboy",
         "sawayaka",
+        "washokusato",
         "dennys"
       ]
     },
@@ -89,6 +90,7 @@
       "marugenramen",
       "bigboy",
       "sawayaka",
+      "washokusato",
       "gusto",
       "dennys"
     ]
@@ -1336,8 +1338,8 @@
       "name": "和食さと",
       "group": "main",
       "sourceFile": "reports/rinyushoku-official-2026-09-25/H.tsv",
-      "quote": "（該当記載なし）sato-res.com のsitemapにFAQ無し（/faq/ 404）。店舗検索の設備・サービス項目は禁煙・個室・駐車場・ドリンクバー等で離乳食項目なし",
-      "sourceUrl": "https://sato-res.com/sato/",
+      "quote": "離乳食無料 1歳未満のおこさまひとりにつき1個サービス！（生後7ヶ月ごろから）",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/0619/9155/1031/files/26-GrandMenu_260928.pdf",
       "positiveControl": "https://store.srsholdings.com/sato/",
       "checkedAt": "2026-09-25",
       "cells": {
@@ -1352,9 +1354,11 @@
           "value": "記載なし"
         },
         "hanbai": {
-          "value": "記載なし"
+          "value": "明記あり",
+          "note": "販売ではなく1歳未満に1個無料提供（グランドメニューのキッズ面）"
         }
       },
+      "correction": "2026-10-02 再照合: 公式メニューページから開くグランドメニューPDF（画像）のキッズ面に「離乳食無料 1歳未満のおこさまひとりにつき1個サービス！」「生後7ヶ月ごろから」とある。PDFが画像のためサイト内検索に出ず、9/25 の照合では見落としていた。「全店」とは書かれていない。",
       "articleSlug": "washoku-sato-kodzure-koryaku",
       "articleKind": "koryaku"
     },

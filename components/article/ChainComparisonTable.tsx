@@ -96,7 +96,7 @@ export function ChainComparisonTable({ focus }: { focus: FacilityKey }) {
         </table>
       </div>
       <p style={{ fontSize: 11.5, color: 'var(--ink-mute)', margin: '10px 0 0', lineHeight: 1.7 }}>
-        ※ 店舗により異なる場合があります。編集部調査(実訪問・公式サイト照合)の集約。誤りに気づいた方は
+        ※ 店舗により異なる場合があります。公式サイト・店舗公開情報の照合の集約（項目ごとの確認日は各チェーンの攻略記事を参照）。誤りに気づいた方は
         <Link href="/contact" style={{ color: 'inherit' }}>
           修正依頼
         </Link>
