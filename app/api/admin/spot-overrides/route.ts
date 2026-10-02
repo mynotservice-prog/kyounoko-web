@@ -299,7 +299,11 @@ export async function GET(req: NextRequest) {
 
   // KV 設定時は KV を正とする（無ければバンドルにフォールバック）。
   if (isKvConfigured()) {
-    return NextResponse.json({ overrides: await readSpotOverridesForWrite() });
+    try {
+      return NextResponse.json({ overrides: await readSpotOverridesForWrite() });
+    } catch (e) {
+      return NextResponse.json({ error: e instanceof Error ? e.message : String(e) }, { status: 503 });
+    }
   }
 
   if (process.env.NODE_ENV !== 'development' && process.env.GITHUB_TOKEN) {

@@ -73,3 +73,32 @@ export async function kvGetStrict<T>(key: string): Promise<{ ok: true; value: T 
     return { ok: false, error };
   }
 }
+
+/**
+ * unstable_cache の中から呼ぶ読み込み。
+ *
+ * - 失敗は例外にする。unstable_cache は戻り値をデータキャッシュに保存するので、失敗時に
+ *   バンドルを返すと「古いバンドル」がキャッシュに残り、KV が復旧しても表示が戻らない。
+ *   フォールバックはキャッシュの外（呼び出し側の catch）で行う。
+ * - `next build` 中はプロセス内で1キー1回だけ読む。ビルドでは unstable_cache がページ間で
+ *   効かず、スポット詳細・記事など数千ページがそれぞれ 1MB 超の上書きマップを読み直していた
+ *   （2026-10 に Upstash Free の月間転送量 10GB を超えて停止。日別転送量がデプロイ回数と連動）。
+ */
+const IS_BUILD = process.env.NEXT_PHASE === 'phase-production-build';
+const buildMemo = new Map<string, Promise<unknown>>();
+
+export async function kvGetForCache<T>(key: string): Promise<T | null> {
+  const read = async (): Promise<T | null> => {
+    const r = await kvGetStrict<T>(key);
+    if (!r.ok) throw new Error(`KV read failed: ${r.error}`);
+    return r.value;
+  };
+  if (!IS_BUILD) return read();
+  let p = buildMemo.get(key) as Promise<T | null> | undefined;
+  if (!p) {
+    p = read();
+    buildMemo.set(key, p);
+    p.catch(() => buildMemo.delete(key));
+  }
+  return p;
+}

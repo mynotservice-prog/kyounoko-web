@@ -3,7 +3,7 @@ import { revalidatePath, revalidateTag } from 'next/cache';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import matter from 'gray-matter';
-import { isKvConfigured } from '@/lib/kv-store';
+import { isKvConfigured, getLastKvSetError } from '@/lib/kv-store';
 import {
   ARTICLE_OVERRIDES_TAG,
   readArticleOverridesMap,
@@ -148,7 +148,13 @@ export async function GET(req: NextRequest) {
 
   // 記事 + KV設定時: KV の編集済みを正とする（無ければ下の FS/GitHub にフォールバック）
   if (kind === 'article' && isKvConfigured()) {
-    const map = await readArticleOverridesMap();
+    let map: Record<string, string>;
+    try {
+      map = await readArticleOverridesMap();
+    } catch (e) {
+      // KV が読めないと md 版を編集画面に出してしまい、保存で KV 上の編集を上書きしうる
+      return NextResponse.json({ ok: false, error: e instanceof Error ? e.message : String(e) }, { status: 503 });
+    }
     const ov = map[slug];
     if (ov) {
       const { data, content } = matter(ov);
@@ -209,8 +215,13 @@ export async function POST(req: NextRequest) {
 
   // ----- 記事 + KV設定時: デプロイ不要で KV に保存し、該当ページだけ revalidate -----
   if (kind === 'article' && isKvConfigured()) {
-    const ok = await writeArticleOverride(body.slug!, out);
-    if (!ok) return NextResponse.json({ ok: false, error: 'kv write failed' }, { status: 500 });
+    let ok: boolean;
+    try {
+      ok = await writeArticleOverride(body.slug!, out);
+    } catch (e) {
+      return NextResponse.json({ ok: false, error: `保存を中止しました（${e instanceof Error ? e.message : String(e)}）` }, { status: 503 });
+    }
+    if (!ok) return NextResponse.json({ ok: false, error: `kv write failed: ${getLastKvSetError() ?? 'unknown'}` }, { status: 500 });
     revalidateTag(ARTICLE_OVERRIDES_TAG);
     revalidatePath(`/article/${body.slug}`);
     revalidatePath('/sitemap.xml'); // 新規記事をサイトマップに即反映（SEO発見性）
@@ -347,7 +358,12 @@ export async function DELETE(req: NextRequest) {
   }
 
   // KV に override が無ければ既に md 正（冪等に成功を返す）
-  const map = await readArticleOverridesMap();
+  let map: Record<string, string>;
+  try {
+    map = await readArticleOverridesMap();
+  } catch (e) {
+    return NextResponse.json({ ok: false, error: e instanceof Error ? e.message : String(e) }, { status: 503 });
+  }
   const raw = map[slug];
   if (!raw) {
     // KV に無くても unstable_cache（Vercel Data Cache・デプロイを跨いで残る）が古い上書きを

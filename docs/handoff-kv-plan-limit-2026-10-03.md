@@ -50,3 +50,41 @@
 - `reports/kv-fix-list-2026-10-02.{md,xlsx}`: KV で直す料金の修正リスト（23件）。**KV 復旧までは保存できない**。「今の表示」列は本番の表示から取ったもので、KV が読めずバンドルにフォールバックした表示が混ざっている可能性あり。復旧後に KV の実値と照合してから使う。
 - `docs/spot-authoring-standard.md`: スポット新規作成の粒度基準（お手本 Kids Base）。
 - 予約済み: `trig_013UP8ydNrFGtC41VpE8zkps`（10/3 12:30 JST、PR #289 の IndexNow 送信。KV とは無関係）。
+
+---
+
+## 追記（2026-10-03 ローカルセッション）
+
+### 上限の特定（Upstash Console で確認済み）
+
+- プランは **Free**。停止理由は **月間 Bandwidth 上限**（`Database is suspended due to monthly bandwidth limit`）。
+- 使用量: Bandwidth **18GB / 10GB**、Commands 4万 / 50万（Reads 40,190・Writes 3）、Storage 6MB / 256MB。
+  → 1回の読み込みが平均約450KB。小さい rating/reviews の読み込みに混じって、1MB超の上書きマップの読み込みが大量にある。
+- 日別転送量（UTC、目盛りからの目視）: 9/28(月) 約11GB・9/29(火) 約5GB・9/30(水) ほぼ0・10/1(木) 約8GB・10/2(金) 約2.5GB（途中で停止）。
+  本番デプロイ数（UTC）: 9/28=2・9/29=1・9/30=0・10/1=4・10/2=2。**デプロイ0回の水曜は転送ほぼ0**＝転送はアクセス数でなくデプロイに連動。
+- Free の上限はコンソール表示で Bandwidth 10GB/月。Pay as You Go は Bandwidth 欄が Unlimited、$0.2/10万コマンド。リセット日はコンソールに表示がなく未確認。
+
+### 見立ての更新
+
+- 主因は「1キー1.4MB」そのものより、**`next build` の静的生成で unstable_cache がページ間で効かず、数千ページが上書きマップを1ページずつ KV から読み直していた**こと（スポット詳細は generateMetadata と本体で2回）。1デプロイあたり4〜5GB と合う。**ビルド中の読み込み回数そのものは未計測**（ローカルに KV 資格情報が無いため）。
+- 停止後の本番ログ（2日分・失敗2,000行）の内訳は get rating 1,294・get reviews 376・ugcImage 21（/spot/*）と、管理画面の spot:overrides get 160・set 80。/spot/* からの spot:overrides 読み込み失敗は出ていない＝実行時はデータキャッシュが効いている。
+- もう1つの穴: unstable_cache の中で KV 失敗→バンドルを返すと、**その古い値がデータキャッシュに残り、KV が復旧しても戻らない**（データキャッシュはデプロイを跨いで残る）。
+
+### この回で入れた修正（未コミット・worktree `../kyounoko-kv`）
+
+- `lib/kv-store.ts` `kvGetForCache()`: unstable_cache の中から使う読み込み。失敗は例外（フォールバック値をキャッシュに残さない）。`NEXT_PHASE=phase-production-build` の間はプロセス内で1キー1回だけ読む（失敗は記憶しない）。偽KVサーバーで確認: ビルド時は10回呼んでKVコマンド1回、通常時は従来どおり、失敗後は復旧時に読み直す。
+- `lib/spot-overrides.ts` / `lib/event-overrides.ts` / `lib/articles.ts`: 実行時取得を「キャッシュ内は kvGetForCache、失敗時のフォールバックはキャッシュの外」に変更。イベント・記事の保存用読み込みも strict 化（読めなければ例外）。
+- 管理API（spot-overrides GET / event-overrides GET・POST / edit-content GET・POST・flush）: 読めないときは 503 で保存中止。書き込み失敗は理由を返す。
+- `lib/reviews.ts` `computeRating`: 口コミが読めないときは rating を書かない。
+- `tsc --noEmit` 通過。`next build` は未実施。
+
+### Hash 分割（旧 推奨3）は保留にした理由
+
+ビルド時の読み直しを止めれば、1デプロイあたりの読み込みはワーカー数×数キー程度（数十MB）に下がる見込みで、データ移行を伴う Hash 化より小さい変更で済む。デプロイ後の Upstash 日別転送量で効果を確かめ、下がらなければ Hash 化に進む。
+
+### 復旧時の手順
+
+1. KV 再開（Pay as You Go へ切替＝社長判断、または月次リセット待ち）。
+2. すぐバックアップ（spot:overrides / event:overrides / article:overrides / reviews:* ほか全キー。リポジトリ外へ。口コミは個人情報を含みうる）。
+3. 停止中に古いバンドルがデータキャッシュに入った可能性があるので、管理画面でスポット・イベント・記事をそれぞれ1件ずつ保存して revalidateTag を発火させる（デプロイではデータキャッシュは入れ替わらない）。
+4. この修正を main へ。コミットメッセージの費用影響の見立て（案）: 「Vercel: 変更なし（ISR・revalidate・キャッシュ設定は不変、関数呼び出し回数も不変）。Upstash: ビルド中の上書きマップ読み込みを1ページ1回→1プロセス1回にし、1デプロイあたり約4〜5GB→数十MBの見込み。KV停止中は実行時にキャッシュされず毎回KVを試すが、失敗応答は数百バイト」。デプロイ後72時間以内に Upstash の Daily Bandwidth と Vercel Usage を突合する。

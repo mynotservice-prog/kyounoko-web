@@ -11,7 +11,7 @@
  * KV未設定（ローカル等）では投稿は受け付けず、表示は空（ページを壊さない）。
  */
 import { createHash } from 'node:crypto';
-import { kvGet, kvSet, isKvConfigured } from './kv-store';
+import { kvGet, kvGetStrict, kvSet, isKvConfigured } from './kv-store';
 
 export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 export type ChildAgeBand = '0-1' | '2-3' | '4-6';
@@ -188,9 +188,12 @@ export async function getRating(spotId: string): Promise<Rating> {
 }
 
 async function computeRating(spotId: string): Promise<Rating> {
-  const approved = (await kvGet<Review[]>(`reviews:${spotId}`))?.filter((r) => r.status === 'approved') ?? [];
+  // 口コミが読めないときは書かない（KV停止中に表示のたび set を試み、0件を書き込んでしまうため）
+  const r = await kvGetStrict<Review[]>(`reviews:${spotId}`);
+  if (!r.ok) return { avg: 0, count: 0 };
+  const approved = r.value?.filter((x) => x.status === 'approved') ?? [];
   const count = approved.length;
-  const avg = count ? Math.round((approved.reduce((s, r) => s + r.rating, 0) / count) * 10) / 10 : 0;
+  const avg = count ? Math.round((approved.reduce((s, x) => s + x.rating, 0) / count) * 10) / 10 : 0;
   const rating = { avg, count };
   await kvSet(`rating:${spotId}`, rating);
   return rating;

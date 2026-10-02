@@ -38,7 +38,7 @@
 import { unstable_cache } from 'next/cache';
 import overridesJson from './spot-overrides.json';
 import type { Spot } from './spots';
-import { isKvConfigured, kvGet, kvGetStrict, kvSet } from './kv-store';
+import { isKvConfigured, kvGetForCache, kvGetStrict, kvSet } from './kv-store';
 
 /** 上書き可能なトップレベルのフィールド（文字列/enum）。 */
 export const SPOT_TEXT_FIELDS = [
@@ -130,14 +130,15 @@ export function mergeSpot(spot: Spot, slug: string, ovMap: SpotOverridesMap = BU
 
 /**
  * 実行時の override マップを取得。
- * - KV 設定済み: KV から読む（無ければバンドルにフォールバック）
+ * - KV 設定済み: KV から読む（キーが無ければバンドル）
  * - 未設定: バンドルJSON
  * unstable_cache でタグ付きキャッシュし、保存時に revalidateTag で更新する。
+ * KV の読み込み失敗はキャッシュの外でバンドルに落とす（失敗時の値をキャッシュに残さない）。
  */
-export const getRuntimeSpotOverrides = unstable_cache(
+const getCachedSpotOverrides = unstable_cache(
   async (): Promise<SpotOverridesMap> => {
     if (isKvConfigured()) {
-      const fromKv = await kvGet<SpotOverridesMap>(SPOT_OVERRIDES_KV_KEY);
+      const fromKv = await kvGetForCache<SpotOverridesMap>(SPOT_OVERRIDES_KV_KEY);
       if (fromKv) return fromKv;
     }
     return BUNDLED_SPOT_OVERRIDES;
@@ -145,6 +146,15 @@ export const getRuntimeSpotOverrides = unstable_cache(
   ['runtime-spot-overrides'],
   { tags: [SPOT_OVERRIDES_TAG] },
 );
+
+export async function getRuntimeSpotOverrides(): Promise<SpotOverridesMap> {
+  try {
+    return await getCachedSpotOverrides();
+  } catch (e) {
+    console.error('[spot-overrides] fallback to bundle:', e instanceof Error ? e.message : e);
+    return BUNDLED_SPOT_OVERRIDES;
+  }
+}
 
 /**
  * 保存用に「現在の全 override」を取得（キャッシュを通さない直読み）。
