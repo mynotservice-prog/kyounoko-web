@@ -25,7 +25,7 @@
 import { unstable_cache } from 'next/cache';
 import overridesJson from './event-overrides.json';
 import type { EventEntry } from './events';
-import { isKvConfigured, kvGet, kvSet } from './kv-store';
+import { isKvConfigured, kvGetForCache, kvGetStrict, kvSet } from './kv-store';
 
 /** 上書き可能なフィールドのサブセット（id 系は不変） */
 export type EventOverride = Partial<
@@ -71,11 +71,11 @@ export function mergeEvent(e: EventEntry, ovMap: EventOverridesMap = BUNDLED_EVE
   return { ...e, ...ov };
 }
 
-/** 実行時の override マップ（KV設定時はKV、無ければバンドル）。 */
-export const getRuntimeEventOverrides = unstable_cache(
+/** 実行時の override マップ（KV設定時はKV、無ければバンドル）。読み込み失敗はキャッシュの外でバンドルに落とす。 */
+const getCachedEventOverrides = unstable_cache(
   async (): Promise<EventOverridesMap> => {
     if (isKvConfigured()) {
-      const fromKv = await kvGet<EventOverridesMap>(EVENT_OVERRIDES_KV_KEY);
+      const fromKv = await kvGetForCache<EventOverridesMap>(EVENT_OVERRIDES_KV_KEY);
       if (fromKv) return fromKv;
     }
     return BUNDLED_EVENT_OVERRIDES;
@@ -84,11 +84,24 @@ export const getRuntimeEventOverrides = unstable_cache(
   { tags: [EVENT_OVERRIDES_TAG] },
 );
 
-/** 保存用に現在の全 override を直読み（KV空ならバンドルをシード）。 */
+export async function getRuntimeEventOverrides(): Promise<EventOverridesMap> {
+  try {
+    return await getCachedEventOverrides();
+  } catch (e) {
+    console.error('[event-overrides] fallback to bundle:', e instanceof Error ? e.message : e);
+    return BUNDLED_EVENT_OVERRIDES;
+  }
+}
+
+/**
+ * 保存用に現在の全 override を直読み（キーが無ければバンドルをシード）。
+ * 読み込み失敗は例外（バンドルで代用して保存すると KV 上の編集が消えるため）。
+ */
 export async function readEventOverridesForWrite(): Promise<EventOverridesMap> {
   if (isKvConfigured()) {
-    const fromKv = await kvGet<EventOverridesMap>(EVENT_OVERRIDES_KV_KEY);
-    return fromKv ?? { ...BUNDLED_EVENT_OVERRIDES };
+    const r = await kvGetStrict<EventOverridesMap>(EVENT_OVERRIDES_KV_KEY);
+    if (!r.ok) throw new Error(`KV read failed: ${r.error}`);
+    return r.value ?? { ...BUNDLED_EVENT_OVERRIDES };
   }
   return { ...BUNDLED_EVENT_OVERRIDES };
 }

@@ -10,7 +10,7 @@ import {
   type EditableField,
   type EventOverride,
 } from '@/lib/event-overrides';
-import { isKvConfigured } from '@/lib/kv-store';
+import { isKvConfigured, getLastKvSetError } from '@/lib/kv-store';
 
 /**
  * /admin/events/edit から呼ばれるイベント上書き保存 API。
@@ -180,7 +180,11 @@ export async function GET(req: NextRequest) {
   if (!auth.ok) return NextResponse.json({ error: auth.reason }, { status: 403 });
 
   if (isKvConfigured()) {
-    return NextResponse.json({ overrides: await readEventOverridesForWrite() });
+    try {
+      return NextResponse.json({ overrides: await readEventOverridesForWrite() });
+    } catch (e) {
+      return NextResponse.json({ error: e instanceof Error ? e.message : String(e) }, { status: 503 });
+    }
   }
   if (process.env.NODE_ENV !== 'development' && process.env.GITHUB_TOKEN) {
     const gh = await ghGetFile();
@@ -225,7 +229,12 @@ export async function POST(req: NextRequest) {
   let current: Overrides = {};
   let sha: string | undefined;
   if (useKv) {
-    current = (await readEventOverridesForWrite()) as Overrides;
+    try {
+      current = (await readEventOverridesForWrite()) as Overrides;
+    } catch (e) {
+      // 読めないまま保存すると他イベントの上書きが消えるので中止する
+      return NextResponse.json({ error: `保存を中止しました（${e instanceof Error ? e.message : String(e)}）` }, { status: 503 });
+    }
   } else if (process.env.NODE_ENV !== 'development' && process.env.GITHUB_TOKEN) {
     const gh = await ghGetFile();
     if (gh) {
@@ -263,7 +272,7 @@ export async function POST(req: NextRequest) {
   // KV: デプロイ不要で保存し、該当イベントページだけ revalidate
   if (useKv) {
     const ok = await writeEventOverridesToKv(current);
-    if (!ok) return NextResponse.json({ error: 'kv write failed' }, { status: 500 });
+    if (!ok) return NextResponse.json({ error: `kv write failed: ${getLastKvSetError() ?? 'unknown'}` }, { status: 500 });
     revalidateTag(EVENT_OVERRIDES_TAG);
     revalidatePath(`/event/${slug}`);
     return NextResponse.json({ ok: true, mode: 'kv', slug, patch });

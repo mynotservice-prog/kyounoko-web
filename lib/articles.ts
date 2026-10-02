@@ -7,7 +7,7 @@ import remarkHtml from 'remark-html';
 import remarkCjkFriendly from 'remark-cjk-friendly';
 import { unstable_cache } from 'next/cache';
 import { injectInternalLinks } from './auto-internal-links';
-import { isKvConfigured, kvGet, kvSet } from './kv-store';
+import { isKvConfigured, kvGetForCache, kvGetStrict, kvSet } from './kv-store';
 import HERO_MANIFEST from './hero-manifest.json';
 import { pickHeroForSlug } from './hero-photos';
 import type { AgeRange, Budget, PlaceType, Weather } from './types';
@@ -961,11 +961,11 @@ export function getAllFileArticles(): FileArticleMeta[] {
 export const ARTICLE_OVERRIDES_KV_KEY = 'article:overrides';
 export const ARTICLE_OVERRIDES_TAG = 'article-overrides';
 
-/** 実行時の記事上書きマップ（KV設定時のみ。未設定なら空）。 */
-export const getRuntimeArticleOverrides = unstable_cache(
+/** 実行時の記事上書きマップ（KV設定時のみ。未設定なら空）。読み込み失敗はキャッシュの外で空に落とす。 */
+const getCachedArticleOverrides = unstable_cache(
   async (): Promise<Record<string, string>> => {
     if (isKvConfigured()) {
-      const fromKv = await kvGet<Record<string, string>>(ARTICLE_OVERRIDES_KV_KEY);
+      const fromKv = await kvGetForCache<Record<string, string>>(ARTICLE_OVERRIDES_KV_KEY);
       if (fromKv) return fromKv;
     }
     return {};
@@ -975,6 +975,15 @@ export const getRuntimeArticleOverrides = unstable_cache(
   ['runtime-article-overrides-v2'],
   { tags: [ARTICLE_OVERRIDES_TAG] },
 );
+
+export async function getRuntimeArticleOverrides(): Promise<Record<string, string>> {
+  try {
+    return await getCachedArticleOverrides();
+  } catch (e) {
+    console.error('[article-overrides] fallback to md:', e instanceof Error ? e.message : e);
+    return {};
+  }
+}
 
 /**
  * getAllFileArticles() に KV 上書き（article:overrides）をマージしたメタ一覧。
@@ -1011,7 +1020,10 @@ export async function getAllFileArticlesWithOverrides(): Promise<FileArticleMeta
 /** 記事上書きマップを直読み（キャッシュ非経由・保存用）。 */
 export async function readArticleOverridesMap(): Promise<Record<string, string>> {
   if (isKvConfigured()) {
-    return (await kvGet<Record<string, string>>(ARTICLE_OVERRIDES_KV_KEY)) ?? {};
+    // 読み込み失敗を空扱いにすると、保存で他記事の上書きが全部消える。例外にして保存を止める。
+    const r = await kvGetStrict<Record<string, string>>(ARTICLE_OVERRIDES_KV_KEY);
+    if (!r.ok) throw new Error(`KV read failed: ${r.error}`);
+    return r.value ?? {};
   }
   return {};
 }
