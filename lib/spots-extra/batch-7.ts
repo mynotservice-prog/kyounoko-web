@@ -291,7 +291,8 @@ export const SPOTS_EXTRA_7: Partial<Record<AreaSlug, Spot[]>> = {
       city: '藤沢市', ward: '藤沢市',
       note: '流れるプール・波のプール・スライダーが揃う県立公園内の大型レジャープール。',
       budget: 'low',
-      pricing: { adult: '850円', elementary: '210円', preschool: '無料(未就学児)' },
+      // 2026-10-02 公式で確認: おとな（高校生以上）850円（15:30以降520円）・中人（中学生）520円・子ども（小学生以下）210円
+      pricing: { adult: '850円', elementary: '210円', preschool: '210円（子ども＝小学生以下）' },
       waterPlay: true,
       waterDepth: '幼児プール約20cm',
       hiddenTip: '7月中旬〜9月中旬の9:00-18:00。15:30以降は大人520円の午後割あり。水温22℃未満は休業',

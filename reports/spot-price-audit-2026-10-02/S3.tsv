@@ -1,0 +1,5 @@
+area	name	slug	判定	旧pricing	新pricing	公式URL
+okinawa	沖縄美ら海水族館	-gj65	一致	大人2,180円/小中710円/6歳未満無料（hiddenTip: 16時以降1,510円）	料金据え置き（hiddenTipの「4時からチケット」は2023-03-31販売終了のため削除）	https://churaumi.okinawa/guide/info/
+okinawa	沖縄こどもの国	-r47n	修正	大人500円/小学生200円/4歳以上100円/3歳以下無料	16歳以上1,000円/15歳以下無料	https://www.okzm.jp/fee/
+okinawa	ネオパークオキナワ	-6iuf	修正	大人1,300円/小学生700円/4歳以上500円/3歳以下無料（hiddenTip: 餌やり100円）	大人（13歳以上）1,600円/小人（4〜12歳）800円/3歳以下は公式記載なし（hiddenTipの100円を削除）	https://www.neopark.co.jp/contact/
+okinawa	DMMかりゆし水族館	DMM-q8sa	修正	大人2,400円/中高2,000円/4歳以上1,500円/3歳以下無料	大人2,800〜3,200円/小人（4〜12歳）1,700〜2,100円/3歳以下無料（2026-10-15〜大人3,100〜3,500円/小人2,000〜2,400円）	https://kariyushi-aquarium.com/fee-ticket/

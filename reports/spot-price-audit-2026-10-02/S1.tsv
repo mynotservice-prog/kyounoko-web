@@ -1,0 +1,87 @@
+area	name	slug	判定	旧pricing	新pricing	公式URL
+tokyo	東京きのこランド	-zap0	一致	adult=1グループ 2,000円（体験料＋400g分込み・人数制限なし） / elementary=同上（グループ料金） / preschool=同上（グループ料金） / infant=同上（グループ料金）	(変更なし)	https://tol-app.jp/s/tokyokinokoland/
+tokyo	上野動物園	-xuw1	上書きあり	adult=600円 / elementary=無料（中学生以下） / preschool=無料 / infant=無料	(変更なし) ※override: adult=600円(65歳以上300円、中学生200円) / elementary=無料（中学生以下） / preschool=無料 / infant=無料	
+tokyo	多摩動物公園	-phb0	上書きあり	adult=600円 / elementary=無料（中学生以下） / preschool=無料 / infant=無料	(変更なし) ※override: adult=600円（中学生200円） / elementary=無料（中学生以下） / preschool=無料 / infant=無料	
+tokyo	葛西臨海水族園	-ysyk	上書きあり	adult=700円 / elementary=無料（中学生以下） / preschool=無料 / infant=無料	(変更なし) ※override: adult=700円(中学生250円) / elementary=無料（中学生以下） / preschool=無料 / infant=無料	
+tokyo	サンシャイン水族館	-cyxc	上書きあり	adult=2,600〜2,800円 / elementary=1,300〜1,400円 / preschool=800〜900円（4歳〜） / infant=無料（3歳以下）	(変更なし) ※override: adult=2,600〜3,200円（変動料金） / elementary=1,300円(中学生同様) / preschool=800円（4歳〜） / infant=無料（3歳以下）	
+tokyo	キッザニア東京	-0i2w	上書きあり	adult=2,000〜3,500円 / elementary=4,500〜7,000円 / preschool=4,500〜7,000円 / infant=無料（2歳以下）	(変更なし) ※override: adult=2,000〜3,500円 / elementary=4,500〜7,000円 / preschool=4,500〜7,000円 / infant=無料（2歳以下）	
+tokyo	井の頭恩賜公園	-xb3c	修正	adult=無料（公園入場） / elementary=無料 / preschool=無料 / infant=無料	(変更なし) ※hiddenTipのボート料金を修正	https://www.tokyo-park.or.jp/park/inokashira/facility/
+tokyo	国立科学博物館	-2h6l	一致	adult=630円 / elementary=無料（高校生以下） / preschool=無料 / infant=無料	(変更なし)	https://www.kahaku.go.jp/riyou/nyukan-annai/
+tokyo	有明ガーデン	-t04j	一致	adult=無料（入館） / elementary=無料 / preschool=無料 / infant=無料	(変更なし) ※商業施設（入館料の設定なし）	https://ariake.shopping-sumitomo-rd.com/
+tokyo	大井町トラックス（OIMACHI TRACKS）	-l7q0	一致	adult=無料（入館） / elementary=無料 / preschool=無料 / infant=無料	(変更なし) ※商業施設（入館料の設定なし）	https://www.oimachi-tracks.com/
+tokyo	ASOBono!（東京ドームシティ アソボーノ）	ASOBono!-a463	上書きあり	adult=1,000円 / preschool=1,000円（6ヶ月〜小学生） / infant=無料（6ヶ月未満）	(変更なし) ※override: adult=950~1,300円 / elementary=950~1300円 / preschool=950~1300円 / infant=無料（6ヶ月未満）	
+tokyo	東京おもちゃ美術館	-gnt3	修正	adult=1,100円 / elementary=800円 / preschool=800円（6ヶ月〜） / infant=無料（6ヶ月未満）	adult=1,100円（オンライン）／1,300円（窓口） / elementary=800円（オンライン）／1,000円（窓口） / preschool=800円（オンライン）／1,000円（窓口）（6ヶ月〜） / infant=無料（6ヶ月未満）	https://art-play.or.jp/ttm/info/
+tokyo	レゴランド・ディスカバリー・センター東京	-pauu	上書きあり	adult=2,800円 / elementary=2,800円 / preschool=2,800円（3歳以上） / infant=無料（2歳以下）	(変更なし) ※override: adult=2350円〜（変動制） / elementary=2350円〜（変動制） / preschool=2350円〜（変動制） / infant=無料（2歳以下）	
+tokyo	サンリオピューロランド	-96gw	上書きあり	adult=3,600〜4,900円 / elementary=2,500〜3,800円 / preschool=2,500〜3,800円（3歳以上） / infant=無料（2歳以下）	(変更なし) ※override: adult=3,600〜4,900円 / elementary=2,500〜3,800円 / preschool=2,500〜3,800円（3歳以上） / infant=無料（2歳以下）	
+tokyo	ファンタジーキッズリゾート お台場	-n26s	上書きあり	adult=1,200〜1,800円 / preschool=1,200〜1,800円（6ヶ月〜） / infant=無料（6ヶ月未満）	(変更なし) ※override: adult=変動制 / elementary=変動制 / preschool=変動制 / infant=変動制	
+tokyo	キドキドよみうりランド店	-diob	上書きあり	adult=600円 / preschool=1,500円（30分＋延長） / infant=600円（6ヶ月〜）	(変更なし) ※override: adult=700円 / elementary=800~1000円 / preschool=800~1000円 / infant=400~600円（6ヶ月〜11ヶ月）	
+tokyo	スモールワールズTOKYO	TOKYO-xq8o	修正	adult=2,700円 / elementary=1,900円 / preschool=1,900円（4歳以上） / infant=無料（3歳以下）	adult=3,200円 / elementary=1,700円（4〜11歳） / preschool=1,700円（4歳以上） / infant=無料（3歳以下）	https://smallworlds.jp/#ticket
+tokyo	科学技術館（北の丸公園）	-ufp8	修正	adult=950円 / elementary=500円 / preschool=500円（3歳以上） / infant=無料（2歳以下）	adult=950円 / elementary=500円 / preschool=500円（4歳以上） / infant=無料（3歳以下）	https://www.jsf.or.jp/guide/
+tokyo	日本科学未来館	-ib4p	一致	adult=630円 / elementary=210円 / preschool=無料（未就学児） / infant=無料	(変更なし)	https://www.miraikan.jst.go.jp/visit/admission/
+tokyo	がすてなーに ガスの科学館	-fzk8	一致	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし)	https://www.gas-kagakukan.com/
+tokyo	東京都現代美術館 こどもアトリエ	-5dg2	一致	adult=500円（コレクション展） / elementary=無料（中学生以下） / preschool=無料 / infant=無料	(変更なし)	https://www.mot-art-museum.jp/guide/museum-info/
+tokyo	すみだ水族館	-w6hr	修正	adult=2,500円 / elementary=1,200円 / preschool=800円（3歳以上） / infant=無料（2歳以下）	adult=2,700円 / elementary=1,400円 / preschool=900円（3歳以上） / infant=無料（2歳以下）	https://www.sumida-aquarium.com/about/price/
+tokyo	マクセル アクアパーク品川	-5gmr	上書きあり	adult=2,500円 / elementary=1,300円 / preschool=800円（4歳以上） / infant=無料（3歳以下）	(変更なし) ※override: adult=2,800円(学生料金はFAQ記載) / elementary=1,300円 / preschool=800円（4歳以上） / infant=無料（3歳以下）	
+tokyo	カワスイ 川崎水族館	-2wza	上書きあり	adult=2,000円 / elementary=1,200円 / preschool=600円（未就学児） / infant=無料（3歳未満）	(変更なし) ※override: adult=2,200円(高校生1,700円、中学生1,400円) / elementary=1,400円 / preschool=800円（未就学児） / infant=無料（3歳未満）	
+tokyo	トリックアートミュージアム高尾山	-152r	修正	adult=1,400円 / elementary=800円 / preschool=500円（4歳以上） / infant=無料（3歳以下）	adult=1,650円 / elementary=800円 / preschool=600円（4歳以上） / infant=無料（3歳以下）	https://www.trickart.jp/info/
+tokyo	東京都水の科学館	-qjev	一致	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし)	https://www.mizunokagaku.jp/
+tokyo	東京消防庁 消防博物館	-lrwk	一致	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし)	https://www.tfd.metro.tokyo.lg.jp/taiken/hkkan/index.html
+tokyo	地下鉄博物館（葛西）	-kwlo	修正	adult=220円 / elementary=100円 / preschool=無料（未就学児） / infant=無料	adult=220円 / elementary=100円 / preschool=100円（4歳以上） / infant=無料（3歳以下）	https://www.chikahaku.jp/about/
+tokyo	砧公園	-wuua	一致	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし)	https://www.tokyo-park.or.jp/park/kinuta/
+tokyo	駒沢オリンピック公園	-rl1c	確認不可	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし) ※公式に入園料の記載なし（有料は運動施設のみ）。値は変更せず	https://www.tef.or.jp/kopgp/
+tokyo	小金井公園	-pb7s	上書きあり	adult=無料（公園入場） / elementary=無料 / preschool=無料 / infant=無料	(変更なし) ※override: adult=無料 / elementary=無料 / preschool=無料 / infant=無料	
+tokyo	木場公園	-scx8	上書きあり	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし) ※override: adult=無料 / elementary=無料 / preschool=無料 / infant=無料	
+tokyo	国営昭和記念公園	-l2px	凍結	adult=450円 / elementary=無料（中学生以下） / preschool=無料 / infant=無料	(変更なし)	
+tokyo	葛西臨海公園	-9fgj	修正	adult=無料（公園） / elementary=無料 / preschool=無料 / infant=無料	(変更なし) ※pricingは一致、hiddenTipの観覧車料金を修正	https://www.senyo.co.jp/kasai/fee.html
+tokyo	浮間公園	-6v9p	一致	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし)	https://www.tokyo-park.or.jp/park/ukima/
+tokyo	善福寺公園	-imps	修正	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし) ※pricingは一致、hiddenTipのボート料金を修正	https://www.tokyo-park.or.jp/park/zenpukuji/facility/
+tokyo	光が丘公園	-p5xx	一致	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし)	https://www.tokyo-park.or.jp/park/hikarigaoka/
+tokyo	水元公園	-8e8q	一致	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし)	https://www.tokyo-park.or.jp/park/mizumoto/
+tokyo	舎人公園	-7dim	一致	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし)	https://www.tokyo-park.or.jp/park/toneri/
+tokyo	東京港野鳥公園	-phow	上書きあり	adult=300円 / elementary=無料（中学生以下） / preschool=無料 / infant=無料	(変更なし) ※override: elementary=無料（中学生未満）	
+tokyo	夢の島公園	-j37e	確認不可	adult=250円（熱帯植物館） / elementary=無料（中学生以下） / preschool=無料 / infant=無料	(変更なし) ※公園入園無料は公式で一致。熱帯植物館250円は公式ページが本文を返さず未照合。値は変更せず	https://www.tokyo-park.or.jp/park/yumenoshima/
+tokyo	清澄庭園	-8qfa	修正	adult=150円 / elementary=無料（中学生以下） / preschool=無料 / infant=無料	adult=150円 / elementary=無料（小学生以下・都内在住/在学の中学生） / preschool=無料 / infant=無料	https://www.tokyo-park.or.jp/park/kiyosumi/
+tokyo	小石川後楽園	-mma1	修正	adult=300円 / elementary=無料（中学生以下） / preschool=無料 / infant=無料	adult=300円 / elementary=無料（小学生以下・都内在住/在学の中学生） / preschool=無料 / infant=無料	https://www.tokyo-park.or.jp/park/koishikawakorakuen/index.html
+tokyo	新宿御苑	-zsp0	一致	adult=500円 / elementary=無料（中学生以下） / preschool=無料 / infant=無料	(変更なし)	https://policies.env.go.jp/national-garden/shinjukugyoen/guide/information/
+tokyo	高尾山	-pbaf	上書きあり	adult=950円（ケーブルカー往復） / elementary=480円 / preschool=無料（未就学児） / infant=無料	(変更なし) ※override: adult=980円（ケーブルカー往復） / elementary=500円（ケーブルカー往復）	
+tokyo	等々力渓谷	-dogk	確認不可	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし) ※公式（世田谷区）ページ未取得。値は変更せず	
+tokyo	お台場海浜公園	-25jw	確認不可	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし) ※公式ページに料金の記載なし（入園ゲートのない海上公園）。値は変更せず	https://www.tptc.co.jp/park/01_02
+tokyo	浅草寺・仲見世	-5cv5	確認不可	adult=無料（参拝） / elementary=無料 / preschool=無料 / infant=無料	(変更なし) ※公式未照合（参拝無料は一般的だが公式記載を取得せず）。値は変更せず	
+tokyo	東京都美術館 アートスタディルーム	-63ut	一致	adult=無料（常設） / elementary=無料 / preschool=無料 / infant=無料	(変更なし)	https://www.tobikan.jp/guide/index.html
+tokyo	東京国立博物館	-his7	上書きあり	adult=1,000円 / elementary=無料（高校生以下） / preschool=無料 / infant=無料	(変更なし) ※override: adult=1000 / elementary=無料 / preschool=無料 / infant=無料	
+tokyo	東京タワー	-4ulo	上書きあり	adult=1,500〜3,300円 / elementary=900〜2,200円 / preschool=700〜1,500円（4歳以上） / infant=無料（3歳以下）	(変更なし) ※override: adult=1,500円 / elementary=900円 / preschool=600円（4歳以上）	
+tokyo	東京スカイツリー展望デッキ	-xur8	上書きあり	adult=2,100〜3,100円 / elementary=950〜1,400円 / preschool=550〜850円（4歳以上） / infant=無料（3歳以下）	(変更なし) ※override: adult=3,600〜1,800円（変動制）高校生以上 / elementary=1,800〜900円（変動制）6~14歳 / preschool=無料（5歳以下・6歳の未就学児も対象） / infant=無料	
+tokyo	城南島海浜公園	-or13	確認不可	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし) ※公式（seaside-park.jp）がプロキシ502で取得不可。値は変更せず	
+tokyo	チームラボプラネッツTOKYO DMM	TOKYO-DMM-x9xg	上書きあり	adult=3,800円 / elementary=1,500円 / preschool=無料（4歳以下） / infant=無料	(変更なし) ※override: adult=3,800円 / elementary=1,500円 / preschool=無料（4歳以下） / infant=無料	
+tokyo	チームラボボーダレス（麻布台ヒルズ）	-4a6c	上書きあり	adult=3,800円 / elementary=1,500円 / preschool=無料（4歳以下） / infant=無料	(変更なし) ※override: adult=3,800円〜 / elementary=1,500円 / preschool=無料（4歳以下） / infant=無料	
+tokyo	羽村市動物公園	-qhss	上書きあり	adult=500円 / elementary=無料（18才未満） / preschool=無料 / infant=無料	(変更なし) ※override: adult=500円（65歳〜200円） / elementary=無料 / preschool=無料 / infant=無料	
+tokyo	井の頭自然文化園	-jlzu	凍結	adult=400円 / elementary=無料（中学生以下） / preschool=無料 / infant=無料	(変更なし)	
+tokyo	よみうりランド	-3pd4	上書きあり	adult=3,900〜5,800円 / elementary=3,100〜4,600円 / preschool=2,200〜3,400円（3歳以上） / infant=無料（2歳以下）	(変更なし) ※override: adult=1,600〜1,800円※よみらんCLUB（公式オンライン）で割引あり / elementary=800〜1,000円※よみらんCLUB（公式オンライン）で割引あり / preschool=800〜1,000円（3歳以上）※よみらんCLUB（公式オンライン）で割引あり） / infant=無料（2歳以下）	
+tokyo	池袋防災館	-5u8i	上書きあり	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし) ※override: adult=無料 / elementary=無料 / preschool=無料 / infant=無料	
+tokyo	本所防災館（墨田区）	-p2pj	上書きあり	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし) ※override: adult=無料 / elementary=無料 / preschool=無料 / infant=無料	
+tokyo	リトルプラネット（複数）	-ij98	修正	adult=600〜1,200円 / preschool=600〜1,200円（時間制） / infant=無料（2歳以下）	adult=800〜1,100円（60分） / elementary=1,200〜1,600円（60分） / preschool=1,000〜1,600円（2歳以上・60分） / infant=無料（1歳以下）	https://litpla.com/space/litpla_divercity_tokyo/
+tokyo	グランパーク田町・キッズスペース	-zisq	確認不可	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし) ※公式で施設の実在を確認できず（検索でもヒットなし）。値は変更せず・要実在確認	
+tokyo	東京競馬場（パドックひろば）	-huf2	修正	adult=200円 / elementary=無料（小学生以下） / preschool=無料 / infant=無料	adult=200円（競馬開催日。平日・場外発売日は無料） / elementary=無料（15歳未満） / preschool=無料 / infant=無料	https://www.jra.go.jp/facilities/race/tokyo/access/hours.html
+tokyo	上野恩賜公園	-r8ls	一致	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし)	https://www.tokyo-park.or.jp/park/ueno/
+tokyo	日比谷公園	-mmzy	一致	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし)	https://www.tokyo-park.or.jp/park/hibiya/
+tokyo	代々木公園	-r3xk	上書きあり	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし) ※override: adult=無料 / elementary=無料 / preschool=無料 / infant=無料	
+tokyo	お台場 シンボルプロムナード公園	-m11d	上書きあり	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし) ※override: adult=無料 / elementary=無料 / preschool=無料 / infant=無料	
+tokyo	東京地球農園	-wqdg	一致	adult=2,000円（栗拾い体験） / elementary=1,000円（3〜12歳）	(変更なし)	https://www.taiyonoie-vc.com/terrafarm/
+tokyo	Kids Base（キッズベース）	Kids-Base-9vb4	一致	adult=990円（時間制限なし・税込） / preschool=1,100円（1時間・延長15分220円・税込） / infant=6か月未満は無料・6か月〜1歳未満は半額	(変更なし)	https://www.kidsbase.club/
+hokkaido	旭山動物園	-jxpu	上書きあり	adult=1,000円 / elementary=無料（中学生以下） / preschool=無料 / infant=無料	(変更なし) ※override: adult=1000（市内特別料金700） / elementary=無料（中学生以下） / preschool=無料 / infant=無料	
+hokkaido	札幌市円山動物園	-9jfd	一致	adult=800円 / elementary=無料（中学生以下） / preschool=無料 / infant=無料	(変更なし)	https://www.city.sapporo.jp/zoo/info/riyo/kaienjikan.html
+hokkaido	のぼりべつクマ牧場	-g3qb	修正	adult=3,000円（ロープウェイ込） / elementary=1,500円 / preschool=無料（未就学児） / infant=無料	adult=3,200円（ロープウェイ込） / elementary=1,600円 / preschool=1,600円（4歳以上） / infant=無料（3歳以下）	https://bearpark.jp/information/
+hokkaido	サンピアザ水族館	-ecz0	修正	adult=1,000円 / elementary=400円 / preschool=200円（3歳以上） / infant=無料（2歳以下）	adult=1,200円 / elementary=400円 / preschool=400円（3歳以上） / infant=無料（2歳以下）	https://www.sunpiazza-aquarium.com/access/
+hokkaido	北海道こどもの国	-cwkr	一致	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし) ※hiddenTipの有料遊具100-200円は未照合	https://www.pref.hokkaido.lg.jp/kn/tkn/hana/place/c078.html
+aomori	浅虫水族館	-o4ws	修正	adult=1,030円 / elementary=510円 / preschool=無料（未就学児） / infant=無料	adult=1,200円 / elementary=無料（高校生以下） / preschool=無料 / infant=無料	https://asamushi-aqua.com/userguide/fee
+iwate	盛岡市動物公園 ZOOMO	ZOOMO-8ry2	修正	adult=500円 / elementary=200円 / preschool=無料（未就学児） / infant=無料	adult=1,000円 / elementary=500円 / preschool=無料（未就学児） / infant=無料	https://zoomo.co.jp/guide/
+iwate	岩手県立児童館 いわて子どもの森	-k352	一致	adult=無料 / elementary=無料 / preschool=無料 / infant=無料	(変更なし)	https://www.iwatekodomonomori.jp/
+miyagi	仙台うみの杜水族館	-47ns	一致	adult=2,400円 / elementary=1,200円 / preschool=700円（4歳以上） / infant=無料（3歳以下）	(変更なし)	https://www.uminomori.jp/umino/info/
+miyagi	八木山動物公園 フジサキの杜	-6abk	修正	adult=480円 / elementary=無料（中学生以下） / preschool=無料 / infant=無料	adult=480円 / elementary=120円（小・中学生） / preschool=無料 / infant=無料	https://www.city.sendai.jp/zoo/information/1-guide.html
+miyagi	仙台アンパンマンこどもミュージアム	-4xd2	修正	adult=2,000〜2,400円 / elementary=2,000〜2,400円 / preschool=2,000〜2,400円（1歳以上全員） / infant=無料（1歳未満）	adult=2,000〜2,200円 / elementary=2,000〜2,200円 / preschool=2,000〜2,200円（1歳以上全員） / infant=無料（1歳未満）	https://www.sendai-anpanman.jp/guide/
+miyagi	仙台市科学館	-mh03	修正	adult=550円 / elementary=200円 / preschool=無料（未就学児） / infant=無料	adult=550円 / elementary=210円 / preschool=無料（未就学児） / infant=無料	https://www.kagakukan.sendai-c.ed.jp/access/
+akita	秋田市大森山動物園	-opge	修正	adult=730円 / elementary=無料（高校生以下） / preschool=無料 / infant=無料	adult=1,000円 / elementary=無料（高校生以下） / preschool=無料 / infant=無料	https://www.city.akita.lg.jp/zoo/guide/1003691.html
+akita	男鹿水族館 GAO	GAO-owbc	一致	adult=1,300円 / elementary=500円 / preschool=無料（未就学児） / infant=無料	(変更なし)	https://www.gao-aqua.jp/about/price/
+yamagata	加茂水族館	-65lh	修正	adult=1,500円 / elementary=750円 / preschool=無料（未就学児） / infant=無料	adult=1,500円 / elementary=500円 / preschool=無料（未就学児） / infant=無料	https://kamo-kurage.jp/nyukan/
+fukushima	アクアマリンふくしま	-ouas	一致	adult=1,850円 / elementary=900円 / preschool=無料（未就学児） / infant=無料	(変更なし)	https://www.aquamarine.or.jp/guide/info/
+fukushima	スパリゾートハワイアンズ	-v5de	修正	adult=3,570円 / elementary=2,250円 / preschool=1,640円（3歳以上） / infant=無料（2歳以下）	adult=3,570円〜（変動価格） / elementary=2,250円〜（変動価格） / preschool=1,640円〜（3歳以上・変動価格） / infant=無料（2歳以下）	https://www.hawaiians.co.jp/sys/calendar/prices/202610

@@ -327,14 +327,16 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'のぼりべつクマ牧場', category: 'zoo', place: 'outdoor', ages: ['4-6'], city: '登別市', note: 'ロープウェイで山頂へ、ヒグマに餌やり体験', budget: 'mid',
-      pricing: { adult: '3,000円（ロープウェイ込）', elementary: '1,500円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 大人3,200円・小人（4歳〜小学6年）1,600円（ロープウェイ往復込）・3歳以下無料
+      pricing: { adult: '3,200円（ロープウェイ込）', elementary: '1,600円', preschool: '1,600円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '登別温泉と組み合わせて1泊コース。天気悪いとロープウェイ運休の可能性あり、事前確認を',
     },
     {
       name: 'サンピアザ水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '札幌市', note: '駅直結、コンパクトで小さい子も疲れない', budget: 'low',
-      pricing: { adult: '1,000円', elementary: '400円', preschool: '200円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 大人（高校生以上）1,200円・子供（3歳以上中学生まで）400円
+      pricing: { adult: '1,200円', elementary: '400円', preschool: '400円（3歳以上）', infant: '無料（2歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '新さっぽろ駅直結、1時間で回れる手頃なサイズ。小さい子連れで疲れない',
@@ -352,7 +354,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   aomori: [
     {
       name: '浅虫水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '青森市', note: 'イルカショーとトンネル水槽', budget: 'low',
-      pricing: { adult: '1,030円', elementary: '510円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 一般1,200円・こども（高校生以下）無料（2025-04-01改定）
+      pricing: { adult: '1,200円', elementary: '無料（高校生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '本州最北の水族館、イルカパフォーマンスは1日3回。青森駅から青い森鉄道で20分',
@@ -382,7 +385,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   iwate: [
     {
       name: '盛岡市動物公園 ZOOMO', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '盛岡市', note: '自然豊かでゾウ・キリンも', budget: 'low',
-      pricing: { adult: '500円', elementary: '200円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 大人（高校生以上）1,000円・小中学生500円（料金区分は小学生以上）
+      pricing: { adult: '1,000円', elementary: '500円', preschool: '無料（未就学児）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '2023年リニューアルで体験型に進化、盛岡駅からバス35分',
@@ -408,14 +412,16 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '八木山動物公園 フジサキの杜', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '仙台市', note: '地下鉄でアクセス良好、アフリカ園が人気', budget: 'low',
-      pricing: { adult: '480円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
+      // 2026-10-02 公式で確認（料金表画像）: 一般（高校生以上）480円・小中学生120円・未就学児無料
+      pricing: { adult: '480円', elementary: '120円（小・中学生）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '地下鉄東西線八木山動物公園駅直結、駅からスムーズ。園内は坂多めベビーカー必須',
     },
     {
       name: '仙台アンパンマンこどもミュージアム', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3'], city: '仙台市', note: '0〜3歳に最適、雨天OK', budget: 'mid',
-      pricing: { adult: '2,000〜2,400円', elementary: '2,000〜2,400円', preschool: '2,000〜2,400円（1歳以上全員）', infant: '無料（1歳未満）' },
+      // 2026-10-02 公式で確認: ミュージアムチケット こども（1歳以上）・おとな（中学生以上）とも2,000〜2,200円（税込）
+      pricing: { adult: '2,000〜2,200円', elementary: '2,000〜2,200円', preschool: '2,000〜2,200円（1歳以上全員）', infant: '無料（1歳未満）' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '日時指定入館券制、休日は事前購入必須。1階のショッピングモール部分は無料で入れる',
@@ -423,17 +429,19 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '仙台市科学館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '仙台市', note: '体験型展示で4歳以上が楽しめる', budget: 'low',
-      pricing: { adult: '550円', elementary: '200円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 一般550円・高校生320円・小中学生210円。公式の入館料ページにプラネタリウムの記載なし、最寄りは南北線旭ヶ丘駅
+      pricing: { adult: '550円', elementary: '210円', preschool: '無料（未就学児）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '地下鉄東西線旭ヶ丘駅から徒歩5分。プラネタリウム別料金250円、小学生以上がおすすめ',
+      hiddenTip: '地下鉄南北線旭ヶ丘駅から徒歩約5分。体験型展示は小学生以上がおすすめ',
       summerCool: true,
     },
   ],
   akita: [
     {
       name: '秋田市大森山動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '秋田市', note: 'ゾウ・キリンに近づける設計', budget: 'low',
-      pricing: { adult: '730円', elementary: '無料（高校生以下）', preschool: '無料', infant: '無料' },
+      // 2026-10-02 公式で確認: 大人1,000円・高校生以下無料
+      pricing: { adult: '1,000円', elementary: '無料（高校生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'キリンと近接できる数少ない動物園。秋田駅からバスで25分',
@@ -451,7 +459,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   yamagata: [
     {
       name: '加茂水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '鶴岡市', note: 'クラゲ展示数世界一、幻想的で静か', budget: 'low',
-      pricing: { adult: '1,500円', elementary: '750円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 一般1,500円・小中学生500円・幼児無料
+      pricing: { adult: '1,500円', elementary: '500円', preschool: '無料（未就学児）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'クラゲ展示種類数世界一、ギネス記録、直径5mのクラゲ水槽が圧巻',
@@ -478,7 +487,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'スパリゾートハワイアンズ', category: 'amusement', place: 'indoor', ages: ['2-3', '4-6'], city: 'いわき市', note: '年中温水プール、雨天・冬もOK', budget: 'high',
-      pricing: { adult: '3,570円', elementary: '2,250円', preschool: '1,640円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 変動価格制。通常料金 大人（中学生以上）3,570円・小人2,250円・幼児（3歳以上）1,640円、10月の土日は大人4,120円
+      pricing: { adult: '3,570円〜（変動価格）', elementary: '2,250円〜（変動価格）', preschool: '1,640円〜（3歳以上・変動価格）', infant: '無料（2歳以下）' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'ウォーターパーク「ウォーターパーク パレス」は小さい子向けプールあり、温泉と組み合わせ1泊2日が王道',
@@ -610,7 +620,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '小動物園と児童遊園地（乗り物各150-200円）が無料、桜の名所',
+      hiddenTip: '小動物園と児童遊園地（飛行塔 大人300円・小人（2歳以上）200円、バッテリーカー100円）が無料、桜の名所',
     },
     {
       name: '川越まつり会館＆菓子屋横丁', category: 'seasonal', place: 'outdoor', ages: ['2-3', '4-6'], city: '川越市', note: '小江戸川越散策、駄菓子屋巡り', budget: 'low',
@@ -619,7 +629,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: '菓子屋横丁の駄菓子・芋スイーツが安く、子どもが喜ぶ。蔵造りの街並み散策',
     },
     {
-      name: '所沢航空発祥記念館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '所沢市', note: '航空公園駅前、実機展示と大型映像', budget: 'low',
+      name: '所沢航空発祥記念館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '所沢市', note: '【長期休館中】大規模リニューアル工事のため2025年9月1日〜2027年3月末（予定）まで休館・記念館駐車場も閉鎖（2026-10-02 公式で確認）。航空公園駅前、実機展示と大型映像', budget: 'low',
       pricing: { adult: '520円', elementary: '100円', preschool: '無料（未就学児）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -628,10 +638,11 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'むさしの村', category: 'amusement', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '加須市', note: '幼児向け遊園地と動物ふれあい', budget: 'mid',
-      pricing: { adult: '1,400円（入園）', elementary: '750円', preschool: '無料（2歳以下）', infant: '無料' },
+      // 2026-10-02 公式で確認: 入園料 おとな（中学生以上）1,200円・こども（3歳〜小学生）650円、入園＋乗物フリーパス おとな3,200円・こども2,600円
+      pricing: { adult: '1,200円（入園）', elementary: '650円', preschool: '650円（3歳以上）', infant: '無料（2歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '未就学児向けに特化、絶叫マシンなし。フリーパス2,800円が断然お得',
+      hiddenTip: '未就学児向けに特化、絶叫マシンなし。入園＋乗物フリーパスのセット（おとな3,200円・こども2,600円）あり',
     },
     // ===== さいたま市大宮区 子連れOKレストラン（大宮駅の大型商業施設・デパート。実在施設のみ） =====
     {
@@ -775,7 +786,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'カンドゥー（イオンモール幕張新都心）', category: 'indoor', place: 'indoor', ages: ['4-6'], city: '千葉市', note: 'キッザニア類似の職業体験', budget: 'mid',
-      pricing: { adult: '2,400円', elementary: '4,400円', preschool: '3,400円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: WEB入場券 大人（16歳以上）2,000〜2,500円・小人（3〜15歳）3,250〜4,500円・3歳未満無料（料金カレンダーで日により変動）
+      pricing: { adult: '2,000〜2,500円', elementary: '3,250〜4,500円', preschool: '3,250〜4,500円（3歳以上）', infant: '無料（3歳未満・アクティビティ体験不可）' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: 'キッザニア東京より予約取りやすい、平日午後がベスト',
@@ -783,15 +795,17 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '航空科学博物館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '芝山町', note: '成田空港隣接、飛行機の離発着が見える', budget: 'low',
-      pricing: { adult: '700円', elementary: '300円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 2025-10-01改定 大人900円・中高生400円・こども（4歳以上）300円・3歳以下無料。シミュレーター等の体験は別料金
+      pricing: { adult: '900円', elementary: '300円', preschool: '300円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '展望台から成田空港の滑走路一望、フライトシミュレータ体験（300円）も',
+      hiddenTip: '展望台から成田空港の滑走路一望、フライトシミュレーター等の体験（有料・要整理券）も',
       summerCool: true,
     },
     {
       name: '千葉市動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '千葉市', note: '立ちポーズで有名な「風太」のいる動物園', budget: 'low',
-      pricing: { adult: '700円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
+      // 2026-10-02 公式で確認: 大人（高校生以上）800円・中学生以下無料
+      pricing: { adult: '800円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'モノレール「動物公園駅」直結、レッサーパンダ「風太」が今もいる',
@@ -959,7 +973,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       pricing: { adult: '無料（公園入場）', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
-      hiddenTip: '桜シーズンは朝7-9時が狙い目。ボート（別料金700〜800円/30分）は休日混雑',
+      // 2026-10-02 公式で確認: 入園無料。ボートはローボート800円・サイクル/スワンボート1,000円（各30分）
+      hiddenTip: '桜シーズンは朝7-9時が狙い目。ボート（別料金800〜1,000円/30分）は休日混雑',
       nearby: '吉祥寺駅徒歩5分、ランチは駅前のアトレでベビーカーOKの店多数',
       kidReport: {
         source: 'visited',
@@ -1254,7 +1269,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '東京おもちゃ美術館', category: 'museum', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '新宿区', ward: '新宿区', note: '木のおもちゃで遊べる体験型ミュージアム', budget: 'mid',
-      pricing: { adult: '1,100円', elementary: '800円', preschool: '800円（6ヶ月〜）', infant: '無料（6ヶ月未満）' },
+      // 2026-10-02 公式で確認: オンライン 大人（中学生以上）1,100円・子ども（6ヶ月〜小学生）800円／窓口は各1,300円・1,000円。6ヶ月未満無料
+      pricing: { adult: '1,100円（オンライン）／1,300円（窓口）', elementary: '800円（オンライン）／1,000円（窓口）', preschool: '800円（オンライン）／1,000円（窓口）（6ヶ月〜）', infant: '無料（6ヶ月未満）' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '四谷の旧校舎を活用、木のぬくもりに包まれた空間。日時指定予約制で混雑が緩やか',
@@ -1307,7 +1323,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'スモールワールズTOKYO', category: 'indoor', place: 'indoor', ages: ['2-3', '4-6'], city: '江東区', ward: '江東区', note: '世界最大級のミニチュア・テーマパーク', budget: 'mid',
-      pricing: { adult: '2,700円', elementary: '1,900円', preschool: '1,900円（4歳以上）', infant: '無料（3歳以下）' },
+      // 2026-10-02 公式で確認: 入場パスポート 大人（18歳以上）3,200円・中人（12〜17歳）2,100円・小人（4〜11歳）1,700円・3歳以下無料（税込）
+      pricing: { adult: '3,200円', elementary: '1,700円（4〜11歳）', preschool: '1,700円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '有明、写真映え抜群。完全屋内で雨天OK、ベビーカー入場可',
@@ -1317,7 +1334,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       name: '科学技術館（北の丸公園）', category: 'museum', place: 'indoor', ages: ['4-6'], city: '千代田区', ward: '千代田区', note: '体験型展示で4歳以上が楽しめる科学館', budget: 'low',
       nearestStation: 'kudanshita',
       walkMinutes: 7,
-      pricing: { adult: '950円', elementary: '500円', preschool: '500円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 大人950円・中高生600円・子ども（4歳以上）500円（一般料金・税込）
+      pricing: { adult: '950円', elementary: '500円', preschool: '500円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '北の丸公園内、皇居散歩と組み合わせやすい。ボタン・ハンドル操作の体験展示が多い',
@@ -1366,7 +1384,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       name: 'すみだ水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '墨田区', ward: '墨田区', note: 'スカイツリータウン内、ベビーカー入場可', budget: 'mid',
       nearestStation: 'oshiage',
       walkMinutes: 7,
-      pricing: { adult: '2,500円', elementary: '1,200円', preschool: '800円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 一般料金 大人2,700円・高校生2,000円・中小学生1,400円・幼児（3歳以上）900円
+      pricing: { adult: '2,700円', elementary: '1,400円', preschool: '900円（3歳以上）', infant: '無料（2歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: 'ベビーカーのまま入場OK、屋内型で雨天最適。ペンギン水槽が大人気',
@@ -1411,7 +1430,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'トリックアートミュージアム高尾山', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '八王子市', note: '高尾山口駅前、屋内で写真映え', budget: 'low',
-      pricing: { adult: '1,400円', elementary: '800円', preschool: '500円（4歳以上）', infant: '無料（3歳以下）' },
+      // 2026-10-02 公式で確認（trickart.jp）: 通常料金 大人1,650円・中高生1,150円・小学生800円・幼児（未就学児、4才以上）600円
+      pricing: { adult: '1,650円', elementary: '800円', preschool: '600円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '高尾山ハイキング前後の雨宿りスポットとして最適',
@@ -1441,7 +1461,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       name: '地下鉄博物館（葛西）', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '江戸川区', ward: '江戸川区', note: '葛西駅高架下、運転シミュレータあり', budget: 'low',
       nearestStation: 'kasai',
       walkMinutes: 1,
-      pricing: { adult: '220円', elementary: '100円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 大人220円・こども（満4歳以上中学生まで）100円
+      pricing: { adult: '220円', elementary: '100円', preschool: '100円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '電車好きキッズの聖地、運転シミュレータ無料、220円で1日遊べる',
@@ -1605,7 +1626,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       pricing: { adult: '無料（公園）', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '葛西臨海水族園とセット、観覧車（700円）は0歳から乗れる',
+      // 2026-10-02 公式で確認: 入園無料。ダイヤと花の大観覧車は一般（3歳以上）800円（泉陽興業）
+      hiddenTip: '葛西臨海水族園とセット、観覧車は3歳以上800円',
       nearby: '葛西臨海水族園',
     },
     {
@@ -1620,7 +1642,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '井の頭公園より空いている、ボート（700円/60分）でゆったり過ごせる',
+      // 2026-10-02 公式で確認: 入園無料。ボート場は土日祝のみ（12〜2月は冬季休業）、ローボート800円・サイクル/アニマルボート1,000円（各30分）
+      hiddenTip: '井の頭公園より空いている、ボート（土日祝のみ・800〜1,000円/30分）でゆったり過ごせる',
     },
     {
       name: '光が丘公園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '練馬区', ward: '練馬区', note: '都内有数の広さ、芝生広場とアスレチック', budget: 'free',
@@ -1672,16 +1695,18 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       name: '清澄庭園', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '江東区', ward: '江東区', note: '回遊式庭園、池に大きな鯉と亀', budget: 'low',
       nearestStation: 'kiyosumi-shirakawa',
       walkMinutes: 3,
-      pricing: { adult: '150円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
+      // 2026-10-02 公式で確認: 一般150円・65歳以上70円（小学生以下及び都内在住・在学の中学生は無料）。鯉の餌の記載は公式に無し
+      pricing: { adult: '150円', elementary: '無料（小学生以下・都内在住/在学の中学生）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '150円で本格庭園、鯉の餌（自販機100円）あげで子どもが喜ぶ',
+      hiddenTip: '150円で本格庭園、池の大きな鯉や亀に子どもが喜ぶ',
     },
     {
       name: '小石川後楽園', category: 'park', place: 'outdoor', ages: ['4-6'], city: '文京区', ward: '文京区', note: '東京ドーム隣接、季節の花が見事', budget: 'low',
       nearestStation: 'iidabashi',
       walkMinutes: 8,
-      pricing: { adult: '300円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
+      // 2026-10-02 公式で確認: 一般300円・65歳以上150円（小学生以下及び都内在住・在学の中学生は無料）
+      pricing: { adult: '300円', elementary: '無料（小学生以下・都内在住/在学の中学生）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '東京ドームシティ・後楽園遊園地とセットで半日コース',
@@ -1876,7 +1901,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'リトルプラネット（複数）', category: 'indoor', place: 'indoor', ages: ['2-3', '4-6'], city: '複数', note: '次世代型テーマパーク、デジタル遊び場', budget: 'mid',
-      pricing: { adult: '600〜1,200円', preschool: '600〜1,200円（時間制）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認（ダイバーシティ東京 プラザ／ららぽーと立川立飛）: 60分 おとな800円（平日）〜1,100円（休日）・こども（4〜12歳）1,200〜1,600円・幼児（2,3歳）1,000〜1,400円、1歳以下無料。別途会員登録1家族600円。料金は施設ごとに異なる
+      pricing: { adult: '800〜1,100円（60分）', elementary: '1,200〜1,600円（60分）', preschool: '1,000〜1,600円（2歳以上・60分）', infant: '無料（1歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '砂遊びARや投影お絵かきなどデジタル＋アナログのハイブリッド体験',
@@ -1906,7 +1932,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '東京競馬場（パドックひろば）', category: 'park', place: 'mixed', ages: ['2-3', '4-6'], city: '府中市', note: '入場200円で家族で楽しめる', budget: 'low',
-      pricing: { adult: '200円', elementary: '無料（小学生以下）', preschool: '無料', infant: '無料' },
+      // 2026-10-02 公式で確認: 東京競馬開催日は原則200円（15歳未満無料）、平日・場外発売日は無料
+      pricing: { adult: '200円（競馬開催日。平日・場外発売日は無料）', elementary: '無料（15歳未満）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '200円で大型遊具・芝生・噴水・ポニー（土日のみ）が楽しめる穴場',
@@ -2082,10 +2109,11 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       {
       name: '崎陽軒 横浜工場', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '横浜市',
       note: 'シウマイとシウマイ弁当の製造ラインを見学できる工場。無料で、最後にできたてのシウマイの試食がある。', budget: 'free',
-      pricing: { adult: '見学無料', elementary: '見学無料', preschool: '見学無料（3歳以上）', infant: '3歳未満は入場不可' },
+      // 2026-10-02 公式で確認: 参加費無料。工場ページ・予約ページに「15歳以下のみの参加不可」「ベビーカー不可」の記載はあるが、3歳未満の入場不可の記載は確認できず
+      pricing: { adult: '見学無料', elementary: '見学無料', preschool: '見学無料', infant: '見学無料' },
       reservation: 'required',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
-      hiddenTip: '3歳未満は入場できない。開催は火・水・金・土の1日4回、定員45名・所要約90分と枠が小さく、予約は見学日の3か月前の同日0時から始まるので争奪戦になりやすい',
+      hiddenTip: '15歳以下だけでは参加できず大人の同伴が必要で、見学中はベビーカーを使えない（公式）。開催は火・水・金・土の1日4回、定員45名・所要約90分と枠が小さく、予約は見学日の3か月前の同日0時から始まるので争奪戦になりやすい',
       accessTips: '神奈川県横浜市。完全予約制で、土曜の枠は特に埋まりやすいです。3歳未満のきょうだいは同伴できないため、事前に預け先を決めてから予約してください。',
     },
     {
@@ -2094,7 +2122,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       name: '津久井浜観光農園', category: 'harvest', place: 'outdoor', ages: ['2-3', '4-6'], city: '横須賀市',
       relatedArticleSlugs: ['imohori-kanagawa-kodzure'],
       note: '季節で「いちご狩り・さつまいも掘り・みかん狩り」が切り替わる横須賀の観光農園。同じ場所で年に3回ちがう収穫体験ができる。', budget: 'low',
-      pricing: { adult: 'さつまいも掘り 5株1,500円（JAよこすか葉山公式・2026-09-18確認）／いちご狩り 2,000〜2,500円／みかん狩り 1,200円', elementary: 'みかん狩り 600円（3歳以上）', preschool: 'みかん狩り 600円（3歳以上）', infant: 'さつまいも掘りは1人5株 1,500円' },
+      // 2026-10-02 公式で確認: いちご狩り 1/1〜4/5 2,800円・4/6〜5/5 2,000円、みかん狩り 大人（小学生以上）1,200円・3歳以上の幼児600円
+      pricing: { adult: 'さつまいも掘り 5株1,500円（JAよこすか葉山公式・2026-09-18確認）／いちご狩り 2,000〜2,800円／みかん狩り 1,200円', elementary: 'みかん狩り 1,200円（小学生以上）', preschool: 'みかん狩り 600円（3歳以上）', infant: 'さつまいも掘りは1人5株 1,500円' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'いちご狩りは1/1〜5/5で4/6以降は2,000円に値下がり。さつまいも掘り・みかん狩りは秋。行く前に事務局 046-849-4506（平日9〜15時）で今どれをやっているか確認するのが確実',
@@ -2111,10 +2140,11 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '横浜・八景島シーパラダイス', category: 'aquarium', place: 'mixed', ages: ['2-3', '4-6'], city: '横浜市', note: '水族館＋遊園地＋海、1日コース', budget: 'high',
-      pricing: { adult: '3,300円（水族館のみ）〜5,600円（全施設）', elementary: '2,000〜4,000円', preschool: '1,150〜2,300円（4歳以上）', infant: '無料（3歳以下）' },
+      // 2026-10-02 公式で確認: アクアリゾーツパス 大人・高校生3,500円・小中2,200円・幼児（4才以上）1,200円、ワンデーパス 5,900円・4,300円・2,600円、3才以下チケット不要（FAQ）
+      pricing: { adult: '3,500円（水族館のみ）〜5,900円（ワンデーパス）', elementary: '2,200〜4,300円', preschool: '1,200〜2,600円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
-      hiddenTip: 'ワンデーパス（全施設）が割安。夕方17時以降のナイトパスはさらにお得',
+      hiddenTip: 'ワンデーパス（全施設）が割安。16時以降の楽園ナイトパスもある',
       nearby: '八景島駅直結、1日フルで遊べる',
       popular: true,
       summerCool: true,
@@ -2137,15 +2167,17 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       name: '横浜アンパンマンこどもミュージアム', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3'], city: '横浜市', note: 'みなとみらい直結、0-3歳の定番', budget: 'mid',
       nearestStation: 'minato-mirai',
       walkMinutes: 5,
-      pricing: { adult: '2,200〜2,600円', elementary: '2,200〜2,600円', preschool: '2,200〜2,600円（1歳以上全員）', infant: '無料（1歳未満）' },
+      // 2026-10-02 公式で確認: 日時指定WEBチケット 1歳以上2,200〜2,800円（日により変動）
+      pricing: { adult: '2,200〜2,800円', elementary: '2,200〜2,800円', preschool: '2,200〜2,800円（1歳以上全員）', infant: '無料（1歳未満）' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
-      hiddenTip: '日時指定入館券制、土日は1ヶ月前に売切れも。平日17時以降の半額タイムが狙い目',
+      hiddenTip: '日時指定入館券制、土日は1ヶ月前に売切れも。1Fのショップ・レストランは入場無料',
       summerCool: true,
     },
     {
       name: '新江ノ島水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '藤沢市', note: '相模湾大水槽とクラゲ展示', budget: 'mid',
-      pricing: { adult: '2,800円', elementary: '1,400円', preschool: '1,000円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 大人2,800円・高校生1,800円・中学生1,300円・小学生1,300円・幼児（3歳以上）900円
+      pricing: { adult: '2,800円', elementary: '1,300円', preschool: '900円（3歳以上）', infant: '無料（2歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'イルカショー最終回（16時台）が空いている。江ノ島観光と組み合わせ',
@@ -2155,7 +2187,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '箱根彫刻の森美術館', category: 'museum', place: 'outdoor', ages: ['2-3', '4-6'], city: '箱根町', note: '野外彫刻＋子ども向けアート遊具', budget: 'mid',
-      pricing: { adult: '2,000円', elementary: '1,000円（小中）', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 当日窓口 一般2,000円・大学高校生1,600円・中小学生800円・未就学児無料
+      pricing: { adult: '2,000円', elementary: '800円（小中）', preschool: '無料（未就学児）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '「ネットの森」（巨大ハンモック型遊具）が子どもに大人気。箱根登山鉄道彫刻の森駅から徒歩2分',
@@ -2221,7 +2254,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       name: '原鉄道模型博物館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '横浜市', note: '世界最大級のジオラマ、電車好き必訪', budget: 'mid',
       nearestStation: 'yokohama',
       walkMinutes: 5,
-      pricing: { adult: '1,200円', elementary: '700円', preschool: '500円（4歳以上）', infant: '無料（3歳以下）' },
+      // 2026-10-02 公式で確認: 大人1,500円・中学高校生1,000円・小人（4歳以上）750円
+      pricing: { adult: '1,500円', elementary: '750円', preschool: '750円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '横浜駅徒歩5分、世界最大級の鉄道模型ジオラマ。日時指定推奨',
@@ -2241,7 +2275,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       name: '川崎市 藤子・F・不二雄ミュージアム', category: 'museum', place: 'mixed', ages: ['2-3', '4-6'], city: '川崎市', note: 'ドラえもんの世界観、登戸駅シャトルバス', budget: 'mid',
       nearestStation: 'noborito',
       walkMinutes: 16,
-      pricing: { adult: '1,000円', elementary: '500円', preschool: '400円（4歳以上）', infant: '無料（3歳以下）' },
+      // 2026-10-02 公式で確認: 大人・大学生1,000円・高校中学生700円・子ども（4歳以上）500円・3歳以下無料
+      pricing: { adult: '1,000円', elementary: '500円', preschool: '500円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'required',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '完全予約制（10時/12時/14時/16時の4回入場）、ローソンで前売り購入',
@@ -2257,7 +2292,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       name: 'シルク博物館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '横浜市', note: '横浜開港の歴史、繭から糸取り体験', budget: 'low',
       nearestStation: 'kannai',
       walkMinutes: 8,
-      pricing: { adult: '500円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
+      // 2026-10-02 公式で確認: 一般500円・大学生300円・高校生・小中学生100円。未就学児の料金は公式に記載なし（幼児区分を削除）
+      pricing: { adult: '500円', elementary: '100円（小・中・高校生）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'low' },
       hiddenTip: '繭から糸取り体験（要予約・無料）が珍しい、馬車道駅徒歩3分',
@@ -2276,7 +2312,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '入園無料、汽車（300円/3歳〜）と自然遊具で1日遊べる',
+      hiddenTip: '入園無料、列車・ロードトレイン（大人300円・小学生100円/片道、未就学児無料）と自然遊具で1日遊べる',
     },
     {
       name: 'こどもの国（横浜）', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '横浜市', note: '広大な丘陵公園、牧場・プール・SL', budget: 'low',
@@ -2300,11 +2336,12 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       waterPlay: true,
     },
     {
-      name: '湘南台文化センターこども館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '藤沢市', note: '湘南台駅直結、無料の科学体験', budget: 'low',
-      pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
+      name: '湘南台文化センターこども館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '藤沢市', note: '湘南台駅直結、体験型の科学展示とプラネタリウム', budget: 'low',
+      // 2026-10-02 公式で確認: 展示ホール おとな300円・こども（小中学生）100円・幼児無料、宇宙劇場 おとな500円・こども200円（座席を使う幼児はこども料金）
+      pricing: { adult: '300円（展示ホール）', elementary: '100円（小・中学生）', preschool: '無料（展示ホール・大人の同伴が必要）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '入館無料、プラネタリウム別料金（大人400円）。雨天時の救世主',
+      hiddenTip: '展示ホールは大人300円・小中学生100円、宇宙劇場（プラネタリウム）は大人500円・小中学生200円。雨天時の救世主',
       summerCool: true,
     },
     {
@@ -2333,7 +2370,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       name: '生田緑地', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '川崎市', note: '日本民家園・科学館・プラネタリウム', budget: 'low',
       nearestStation: 'noborito',
       walkMinutes: 12,
-      pricing: { adult: '500円（民家園）', elementary: '無料（高校生以下）', preschool: '無料', infant: '無料' },
+      // 2026-10-02 公式で確認: 日本民家園 一般550円・高校大学生330円・中学生以下無料
+      pricing: { adult: '550円（日本民家園）', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '広大な丘陵公園と複数施設の複合、藤子・F・不二雄ミュージアムも隣接',
@@ -2423,7 +2461,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'マリンピア日本海', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '新潟市', note: '日本海側最大級、イルカショー', budget: 'low',
-      pricing: { adult: '1,500円', elementary: '600円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 大人（高校生以上）1,500円・小人（小中学生）600円・幼児（4歳から）200円・乳児（3歳まで）無料
+      pricing: { adult: '1,500円', elementary: '600円', preschool: '200円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '日本海側最大級、イルカパフォーマンスは1日3-4回',
@@ -2434,7 +2473,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   toyama: [
     {
       name: '魚津水族館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '魚津市', note: '富山湾の深海魚展示', budget: 'low',
-      pricing: { adult: '1,100円', elementary: '550円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 一般（高校生以上）1,000円・小中学生500円・幼児（3歳以上）200円。3歳未満の料金は公式に記載なし
+      pricing: { adult: '1,000円', elementary: '500円', preschool: '200円（3歳以上）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '富山湾特有のホタルイカやミラージュランド隣接',
@@ -2443,7 +2483,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'ミラージュランド', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '魚津市', note: '小規模で0-6歳に丁度良い遊園地', budget: 'low',
-      pricing: { adult: '無料（入園）', elementary: '乗り物各300-500円', preschool: '乗り物各300-500円', infant: '無料（一部乗り物）' },
+      // 2026-10-02 公式で確認: 入園料無料、のりもの券1枚200円・遊具ごとに2〜4枚、遊具は3歳以上有料・0〜2歳無料
+      pricing: { adult: '無料（入園）', elementary: '乗り物各400〜800円（のりもの券200円×2〜4枚）', preschool: '乗り物各400〜800円（3歳以上）', infant: '遊具無料（0〜2歳）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '入園無料、乗り物のみ別料金。小さい子向けアトラクションが揃う',
@@ -2452,7 +2493,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   ishikawa: [
     {
       name: 'のとじま水族館', category: 'aquarium', place: 'mixed', ages: ['2-3', '4-6'], city: '七尾市', note: 'ジンベエザメ展示、能登半島の景色も', budget: 'mid',
-      pricing: { adult: '1,890円', elementary: '510円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 一般（高校生以上）1,890円・中学生以下（3歳以上）510円・3歳未満無料
+      pricing: { adult: '1,890円', elementary: '510円', preschool: '510円（3歳以上）', infant: '無料（3歳未満）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'ジンベエザメが日本海側で唯一見られる水族館、能登和倉温泉と組み合わせ',
@@ -2477,7 +2519,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '越前松島水族館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '坂井市', note: 'イルカにタッチできる', budget: 'mid',
-      pricing: { adult: '2,200円', elementary: '1,100円', preschool: '600円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 一般2,200円・小中学生1,200円・幼児（3歳以上）600円・3歳未満無料
+      pricing: { adult: '2,200円', elementary: '1,200円', preschool: '600円（3歳以上）', infant: '無料（2歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'イルカタッチ＆給餌体験（別料金）、東尋坊から車10分',
@@ -2488,7 +2531,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   shizuoka: [
     {
       name: '富士サファリパーク', category: 'zoo', place: 'mixed', ages: ['2-3', '4-6'], city: '裾野市', note: '車から動物観察＋ふれあい', budget: 'mid',
-      pricing: { adult: '3,200円', elementary: '2,000円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 一般 大人3,200円・子供（4歳〜中学生）2,000円・幼児（3歳以下）無料。ジャングルバス1,500円/人
+      pricing: { adult: '3,200円', elementary: '2,000円', preschool: '2,000円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'マイカーorジャングルバス（別料金1,500円/人）、天気悪いとライオン等が屋内、朝一10時開園直後が見応えあり',
@@ -2518,7 +2562,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'ぐりんぱ（富士山2合目）', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '裾野市', note: 'シルバニアビレッジ等、小さい子向け', budget: 'mid',
-      pricing: { adult: '1,300円（入園のみ）', elementary: '850円', preschool: '無料（3歳以下）', infant: '無料' },
+      // 2026-10-02 公式で確認: 入園料 大人（中学生〜59歳）平日1,100円・土休日1,300円・特定日1,500円、小人（3歳〜小学生）700〜1,100円
+      pricing: { adult: '1,100〜1,500円（入園のみ）', elementary: '700〜1,100円', preschool: '700〜1,100円（3歳以上）', infant: '無料（2歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'シルバニアビレッジがあり0-6歳に最適、冬季休業あり要確認',
@@ -2536,7 +2581,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   gifu: [
     {
       name: '世界淡水魚園水族館 アクア・トトぎふ', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '各務原市', note: '世界最大級の淡水魚水族館', budget: 'mid',
-      pricing: { adult: '1,780円', elementary: '880円', preschool: '440円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 大人1,780円・中高生1,400円・小学生900円・幼児（3歳以上）500円
+      pricing: { adult: '1,780円', elementary: '900円', preschool: '500円（3歳以上）', infant: '無料（2歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'オアシスパーク（無料遊具広場）隣接、水族館は所要90分',
@@ -2555,7 +2601,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   shiga: [
     {
       name: '琵琶湖博物館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '草津市', note: '淡水魚展示と琵琶湖の歴史、広い', budget: 'low',
-      pricing: { adult: '800円', elementary: '無料（高校生以下）', preschool: '無料', infant: '無料' },
+      // 2026-10-02 公式で確認: 常設展示 一般840円・大学生470円・高校生以下無料
+      pricing: { adult: '840円', elementary: '無料（高校生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '体験型展示「ディスカバリールーム」が人気、水族館と博物館の中間的な施設',
@@ -2589,16 +2636,18 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '志摩スペイン村', category: 'amusement', place: 'mixed', ages: ['2-3', '4-6'], city: '志摩市', note: 'スペイン村パルケエスパーニャ', budget: 'high',
-      pricing: { adult: '5,400円', elementary: '3,600円', preschool: '3,000円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: パスポート 大人5,900円・中人4,700円・小人（3〜11歳）4,100円、2歳以下は有料大人1名につき2名まで無料
+      pricing: { adult: '5,900円', elementary: '4,100円', preschool: '4,100円（3歳以上）', infant: '無料（2歳以下・有料の大人1名につき2名まで）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '他テーマパークに比べて空いていて乗り物に乗りやすい、ナイトチケット（15時〜）2,900円がお得',
+      hiddenTip: '他テーマパークに比べて空いていて乗り物に乗りやすい、ナイター営業日以外は14時以降のアフタヌーンパスポート（大人3,000円・電子チケット限定）もある',
     },
   ],
   kagoshima: [
     {
       name: 'いおワールドかごしま水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '鹿児島市', note: 'ジンベエザメ展示、桜島も望める', budget: 'mid',
-      pricing: { adult: '1,500円', elementary: '750円', preschool: '350円（4歳以上）', infant: '無料（3歳以下）' },
+      // 2026-10-02 公式で確認: 入館料 大人（高校生以上）市外2,000円・市内1,500円、小人（小中学生）市外1,000円・市内750円。料金区分は大人・小人のみ
+      pricing: { adult: '2,000円（鹿児島市外）／1,500円（市内）', elementary: '1,000円（市外）／750円（市内）', preschool: '無料（未就学児）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '桜島をバックにジンベエザメ、イルカパフォーマンスは1日4回',
@@ -2607,10 +2656,11 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '平川動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '鹿児島市', note: 'コアラ舎と遊園地併設', budget: 'low',
-      pricing: { adult: '500円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
+      // 2026-10-02 公式で確認: 2025年改定 一般（高校生以上）市外1,000円・市内750円、小中学生 市外200円・市内150円、幼児無料
+      pricing: { adult: '1,000円（鹿児島市外）／750円（市内）', elementary: '200円（市外）／150円（市内）', preschool: '無料（幼児）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '桜島を望む絶景動物園、遊園地（乗り物100-200円）併設',
+      hiddenTip: '桜島を望む絶景動物園、遊園地（大型遊具はのりもの券1枚100円）併設',
     },
   ],
   tochigi: [
@@ -2631,30 +2681,34 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '那須ハイランドパーク', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '那須町', note: '小さい子向けアトラクションも多い', budget: 'high',
-      pricing: { adult: '1,800円（入園）', elementary: '1,300円', preschool: '800円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 入園のみ おとな（中学生以上）1,600円・こども（3歳〜小学生）800円、入園＋1日乗り放題のファンタジーパスセットは時期により別料金
+      pricing: { adult: '1,600円（入園）', elementary: '800円', preschool: '800円（3歳以上）', infant: '無料（2歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
-      hiddenTip: '身長制限のない幼児向けアトラクション多数、1DAYパスポート（5,600円）がお得',
+      hiddenTip: '身長制限のない幼児向けアトラクション多数、入園＋1日乗り放題のファンタジーパスセットあり（料金は時期で異なる）',
     },
     {
       name: '宇都宮動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '宇都宮市', note: '遊園地併設、動物との距離が近い', budget: 'low',
-      pricing: { adult: '1,400円（遊園地セット）', elementary: '700円', preschool: '700円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 動物園・遊園地 大人（中学生以上）1,600円・小人（3才〜小学生）800円、0〜2歳無料
+      pricing: { adult: '1,600円（動物園・遊園地）', elementary: '800円', preschool: '800円（3歳以上）', infant: '無料（2歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: 'キリンの餌やり100円、動物に近づける小規模動物園の良さ',
+      hiddenTip: '園内で販売するエサを動物に直接あげられる、動物に近づける小規模動物園の良さ',
     },
     // ===== 体験・季節（栃木）=====
     {
       name: 'あしかがフラワーパーク', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '足利市', note: '大藤と冬のイルミネーションが有名', budget: 'mid',
-      pricing: { adult: '400〜2,300円（時期変動）', elementary: '200〜1,200円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 大人400〜2,300円・子供（4才〜小学生）200〜1,200円（花の咲き具合で当日決定、夜の部は大人1,500円・子供800円）
+      pricing: { adult: '400〜2,300円（時期変動）', elementary: '200〜1,200円', preschool: '200〜1,200円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
-      hiddenTip: '4月下旬〜5月上旬の大藤が世界的に有名、未就学児無料。冬のイルミネーション「光の花の庭」も',
+      hiddenTip: '4月下旬〜5月上旬の大藤が世界的に有名、子供料金は4歳から。冬のイルミネーション「光の花の庭」も',
       popular: true,
     },
     {
       name: 'ツインリンクもてぎ（モビリティリゾートもてぎ）', category: 'amusement', place: 'mixed', ages: ['2-3', '4-6'], city: '茂木町', note: '森と自然のアスレチック、ホンダコレクションホール', budget: 'mid',
-      pricing: { adult: '2,000円（入場）', elementary: '1,200円', preschool: '600円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 入場料（ゲート）大人（中学生以上）2,000円・子ども（小学生）1,000円・幼児（3歳〜未就学児）1,000円。日程により料金設定あり
+      pricing: { adult: '2,000円（入場）', elementary: '1,000円', preschool: '1,000円（3歳以上）', infant: '無料（2歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '森のアスレチック「ITADAKI」「DOKIDOKI」が大人気、ホンダの歴代車展示も',
@@ -2708,14 +2762,16 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     // ===== 体験・季節（茨城）=====
     {
       name: '茨城県フラワーパーク', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '石岡市', note: 'バラとダリアの名所、つくば山麓', budget: 'low',
-      pricing: { adult: '900〜1,200円（時期変動）', elementary: '400円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 大人900〜1,800円・小人300〜600円（時期別）・未就学児無料
+      pricing: { adult: '900〜1,800円（時期変動）', elementary: '300〜600円（時期変動）', preschool: '無料（未就学児）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '春秋のバラ祭りが圧巻、未就学児無料。アクティブパーク（無料遊具）も併設',
     },
     {
       name: 'つくばエキスポセンター', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: 'つくば市', note: 'つくば駅徒歩5分、プラネタリウムと体験', budget: 'low',
-      pricing: { adult: '500円', elementary: '250円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 入館料 おとな（18歳以上）600円・こども（4歳以上）300円・3歳以下無料。プラネタリウムは別途同額
+      pricing: { adult: '600円', elementary: '300円', preschool: '300円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'プラネタリウム別料金、屋外にH-II ロケット実物大模型',
@@ -2726,19 +2782,21 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '完全無料、実物大ロケット屋外展示。施設見学ツアー（要予約・無料）あり',
+      hiddenTip: '入場無料、実物大ロケット屋外展示。ガイド付き見学ツアー（要予約・18歳以上〈高校生除く〉は有料）あり',
       summerCool: true,
     },
     {
       name: '国営ひたち海浜公園 大観覧車', category: 'amusement', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: 'ひたちなか市', note: 'プレジャーガーデン内のミニ遊園地', budget: 'low',
-      pricing: { adult: '500円（観覧車）', elementary: '300円', preschool: '300円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 大観覧車 600円（3才以上）、入園料は別
+      pricing: { adult: '600円（観覧車）', elementary: '600円', preschool: '600円（3歳以上）', infant: '無料（2歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '園内別エリア、未就学児向け乗り物多数。海浜公園とセット',
     },
     {
       name: '大洗わくわく科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '大洗町', note: '小規模だが体験型展示が充実', budget: 'low',
-      pricing: { adult: '350円', elementary: '100円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 大人（高校生を含む）200円・小中学生100円・小学生未満無料
+      pricing: { adult: '200円', elementary: '100円', preschool: '無料（未就学児）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'low' },
       hiddenTip: '大洗水族館の帰りに寄りやすい、未就学児無料',
@@ -2758,7 +2816,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       },
       {
       name: '軽井沢おもちゃ王国', category: 'amusement', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '嬬恋村', note: '室内プレイスペースとミニ遊園地', budget: 'mid',
-      pricing: { adult: '1,300円（入園）', elementary: '900円', preschool: '900円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 入園 大人（中学生以上）1,300円・小人（2歳〜小学生）1,000円・0歳1歳無料
+      pricing: { adult: '1,300円（入園）', elementary: '1,000円', preschool: '1,000円（2歳以上）', infant: '無料（0・1歳）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '11エリアの室内おもちゃ部屋、雨天OK、乗り放題パス（3,300円）が断然お得',
@@ -2772,16 +2831,18 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'ぐんまこどもの国', category: 'park', place: 'mixed', ages: ['2-3', '4-6'], city: '太田市', note: '大型遊具と体験施設、入園無料', budget: 'free',
+      // 2026-10-02 公式で確認: 児童会館は入場料・駐車場無料（旧hiddenTipの「児童館200円」は公式と不一致のため削除）
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '入園・駐車場無料、有料施設（児童館200円、乗り物100円）のみ別料金',
+      hiddenTip: '入場・駐車場無料（児童会館の公式に明記）。乗り物などの有料施設は別料金',
       playgroundFeatures: ['athletic'],
     },
     // ===== 体験・温泉・季節（群馬）=====
     {
       name: '伊香保おもちゃと人形 自動車博物館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '渋川市', note: '昭和レトロな世界観、駄菓子屋復元', budget: 'mid',
-      pricing: { adult: '1,300円', elementary: '900円', preschool: '450円（4歳以上）', infant: '無料（3歳以下）' },
+      // 2026-10-02 公式で確認: 大人1,500円・中高生1,000円・幼児（4歳から）と小学生500円（3歳以下の料金記載なし）
+      pricing: { adult: '1,500円', elementary: '500円', preschool: '500円（4歳以上）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '伊香保温泉から車5分、おもちゃ・人形・名車の複合館。雨天時の救世主',
@@ -2797,15 +2858,17 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '群馬県立 ぐんま昆虫の森', category: 'museum', place: 'mixed', ages: ['2-3', '4-6'], city: '桐生市', note: '昆虫観察と里山体験', budget: 'low',
-      pricing: { adult: '410円', elementary: '無料（高校生以下）', preschool: '無料', infant: '無料' },
+      // 2026-10-02 公式で確認: 一般410円・大学生高校生200円・中学生以下無料
+      pricing: { adult: '410円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '高校生以下無料、温室の生きたチョウ観察と里山散策で1日',
+      hiddenTip: '中学生以下無料（高校・大学生は200円）、温室の生きたチョウ観察と里山散策で1日',
       summerCool: true,
     },
     {
       name: '富岡製糸場', category: 'museum', place: 'mixed', ages: ['4-6'], city: '富岡市', note: '世界遺産、4歳以上の歴史学習', budget: 'low',
-      pricing: { adult: '1,000円', elementary: '250円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 大人1,000円・高校大学生250円・小中学生150円・未就学児無料
+      pricing: { adult: '1,000円', elementary: '150円', preschool: '無料（未就学児）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '世界遺産だがコンパクトで未就学児無料、1時間程度で回れる',
@@ -2833,10 +2896,11 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '富士急ハイランド', category: 'amusement', place: 'outdoor', ages: ['4-6'], city: '富士吉田市', note: 'トーマスランドは0-6歳向け', budget: 'high',
-      pricing: { adult: '6,000〜8,000円', elementary: '4,400〜6,000円', preschool: '2,100〜3,000円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 入園無料。ワンデイパスは日により変動 大人（18〜64歳）6,000〜7,900円・小学生4,400〜5,100円・幼児（1歳〜）2,100〜2,600円。トーマスランドパス 大人3,000〜3,500円・小学生2,500〜2,800円・幼児2,000〜2,300円
+      pricing: { adult: '6,000〜7,900円（ワンデイパス）', elementary: '4,400〜5,100円', preschool: '2,100〜2,600円（1歳以上）', infant: '入園無料（パスは1歳から）' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
-      hiddenTip: 'トーマスランドエリアのフリーパスのみ（2,500円）があり、絶叫マシン苦手な家族にも',
+      hiddenTip: 'トーマスランドだけ乗り放題の「トーマスランドパス」（大人3,000〜3,500円・小学生2,500〜2,800円・幼児2,000〜2,300円）があり、絶叫マシン苦手な家族にも',
     },
     {
       name: '山梨県立富士湧水の里水族館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '忍野村', note: '淡水魚の水族館、入館料安い', budget: 'low',
@@ -2851,7 +2915,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   aichi: [
     {
       name: 'レゴランド・ジャパン', category: 'amusement', place: 'mixed', ages: ['2-3', '4-6'], city: '名古屋市', note: '2-12歳ターゲット、駅直結', budget: 'high',
-      pricing: { adult: '5,000〜7,900円', elementary: '3,700〜5,800円', preschool: '無料（3歳以下の一部）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 1DAYパスポートは来場日で変動 おとな（19歳以上）4,900円〜・こども（3〜18歳）3,700円〜（2歳以下の記載は料金ページになし）
+      pricing: { adult: '4,900円〜（来場日で変動）', elementary: '3,700円〜（3〜18歳）', preschool: '3,700円〜（3歳以上）' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '公式サイトで前売り券（最大30%オフ）推奨。平日は待ち時間ほぼなし',
@@ -2876,7 +2941,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '東山動植物園', category: 'zoo', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '名古屋市', note: 'コアラ・イケメンゴリラ、遊園地併設', budget: 'low',
-      pricing: { adult: '500円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
+      // 2026-10-02 公式で確認: 大人（高校生以上）800円・中学生以下無料
+      pricing: { adult: '800円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '園内は広大で坂多し、抱っこ紐推奨。イケメンゴリラ「シャバーニ」を見るなら午前中',
@@ -2884,15 +2950,17 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'モリコロパーク', category: 'park', place: 'outdoor', ages: ['2-3', '4-6'], city: '長久手市', note: '愛・地球博記念公園、広大で無料', budget: 'free',
+      // 2026-10-02 公式で確認: 公園は入場無料。サツキとメイの家はジブリパーク「どんどこ森」のチケット（大人1,000円・子ども500円）
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: 'サツキとメイの家（有料520円、ジブリ好き必見）は事前予約制。芝生広場は自由にピクニック可',
+      hiddenTip: 'サツキとメイの家はジブリパーク「どんどこ森」のチケット（大人1,000円・子ども500円）で入場時間指定。芝生広場は自由にピクニック可',
       nearby: 'ジブリパークと組み合わせ、1日フル',
     },
     {
       name: 'ジブリパーク', category: 'amusement', place: 'mixed', ages: ['4-6'], city: '長久手市', note: 'モリコロパーク内、予約制', budget: 'mid',
-      pricing: { adult: '1,500〜3,500円', elementary: '750〜1,750円', preschool: '無料（3歳以下）', infant: '無料' },
+      // 2026-10-02 公式で確認: 券種と平日／土日休で異なる 大人1,000〜7,800円・子ども（4歳〜小学生）500〜3,900円・3歳以下は入場無料
+      pricing: { adult: '1,000〜7,800円（券種・曜日で異なる）', elementary: '500〜3,900円', preschool: '500〜3,900円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'required',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '日時指定の完全予約制。各エリア別々のチケットが必要、人気エリアは2-3ヶ月前に抑える',
@@ -2903,7 +2971,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   kyoto: [
     {
       name: '京都水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '京都市', note: 'オオサンショウウオ、梅小路公園直結', budget: 'mid',
-      pricing: { adult: '2,400円', elementary: '1,200円', preschool: '800円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 大人2,600円・高校生2,000円・中小学生1,400円・幼児（3歳以上）900円（2歳以下の料金記載なし）
+      pricing: { adult: '2,600円', elementary: '1,400円', preschool: '900円（3歳以上）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'イルカLIVE「キラメキ」は1日3-4回、開園直後が混雑前で狙い目',
@@ -2961,7 +3030,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '海遊館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '大阪市', note: 'ジンベエザメの大水槽、世界最大級', budget: 'mid',
-      pricing: { adult: '2,700円', elementary: '1,400円', preschool: '700円（3歳以上）', infant: '無料（3歳未満）' },
+      // 2026-10-02 公式で確認: 価格変動制。2026年10〜11月は大人（16歳以上）2,800〜3,500円・こども（小中学生）1,400〜1,800円・幼児（3歳以上）700〜900円、2歳以下無料
+      pricing: { adult: '2,800〜3,500円（日付で変動）', elementary: '1,400〜1,800円', preschool: '700〜900円（3歳以上）', infant: '無料（2歳以下）' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '閉館2時間前（15時以降）が狙い目、ジンベエザメ給餌タイム狙いなら11時/14時半頃',
@@ -2978,7 +3048,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'ニフレル', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '吹田市', note: '「生きるミュージアム」、動物と間近', budget: 'mid',
-      pricing: { adult: '2,200円', elementary: '1,100円', preschool: '650円（3歳以上）', infant: '無料（3歳未満）' },
+      // 2026-10-02 公式で確認: 大人（16歳以上）2,400円・こども（小中学生）1,200円・幼児（3歳以上）700円・2歳以下無料
+      pricing: { adult: '2,400円', elementary: '1,200円', preschool: '700円（3歳以上）', infant: '無料（2歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '万博記念公園駅直結、ベビーカー可。ホワイトタイガーの展示が圧巻',
@@ -2988,7 +3059,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'キッズプラザ大阪', category: 'indoor', place: 'indoor', ages: ['2-3', '4-6'], city: '大阪市', note: '体験型のこども博物館、雨天OK', budget: 'low',
-      pricing: { adult: '1,400円', elementary: '800円', preschool: '500円（3歳以上）', infant: '無料（3歳未満）' },
+      // 2026-10-02 公式で確認: 大人（16歳以上）1,500円・小人（6〜15歳）800円・幼児（3〜5歳）500円・0〜2歳無料
+      pricing: { adult: '1,500円', elementary: '800円', preschool: '500円（3歳以上）', infant: '無料（0〜2歳）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '5階「こどもタウン」の実際の店舗そっくりな作りが子どもに大ヒット。平日が圧倒的におすすめ',
@@ -2996,7 +3068,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '天王寺動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '大阪市', note: '都心の動物園、駅近', budget: 'low',
-      pricing: { adult: '500円', elementary: '200円', preschool: '無料', infant: '無料' },
+      // 2026-10-02 公式で確認: 大人800円・小中学生200円・未就学児無料
+      pricing: { adult: '800円', elementary: '200円', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'あべのハルカス徒歩圏、JR天王寺駅から直結。春秋の朝夕が動物活発で狙い目',
@@ -3004,14 +3077,16 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'ひらかたパーク', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '枚方市', note: '0-3歳向けエリアもある老舗遊園地', budget: 'mid',
-      pricing: { adult: '1,900円（入園）', elementary: '1,100円', preschool: '無料（2歳以下）', infant: '無料' },
+      // 2026-10-02 公式で確認: 入園券は日により おとな（中学生以上）1,900〜2,000円・小学生1,100〜1,200円・キッズ（2歳以上の未就学児）1,100〜1,200円（2歳未満の料金記載なし）
+      pricing: { adult: '1,900〜2,000円（入園）', elementary: '1,100〜1,200円', preschool: '1,100〜1,200円（2歳以上）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '身長90cm以下でも乗れる0-3歳向けアトラクション「ちーたのゆうえんち」が充実。平日なら乗り放題パスなしでも十分',
     },
     {
       name: '万博記念公園', category: 'park', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '吹田市', note: '太陽の塔と広大な自然文化園', budget: 'low',
-      pricing: { adult: '260円', elementary: '80円', preschool: '無料', infant: '無料' },
+      // 2026-10-02 公式で確認: 自然文化園・日本庭園共通入園券 大人（高校生以上）450円・小人（中学生以下）無料
+      pricing: { adult: '450円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '広大すぎるため端から端まで徒歩30分超。ベビーカー必須、無料のドッグラン併設',
@@ -3067,7 +3142,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   hyogo: [
     {
       name: '神戸どうぶつ王国', category: 'zoo', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '神戸市', note: '全天候型、動物と距離が近い', budget: 'mid',
-      pricing: { adult: '2,500円', elementary: '1,500円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 大人（中学生以上）2,400円・小学生1,200円・幼児（4歳・5歳）500円（3歳以下の料金記載なし）
+      pricing: { adult: '2,400円', elementary: '1,200円', preschool: '500円（4・5歳）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '屋内展示多く雨の日もOK。カピバラやハシビロコウが近い',
@@ -3075,7 +3151,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '姫路セントラルパーク', category: 'zoo', place: 'mixed', ages: ['2-3', '4-6'], city: '姫路市', note: 'サファリ＋遊園地＋プール', budget: 'mid',
-      pricing: { adult: '3,800円', elementary: '2,000円', preschool: '1,200円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 入園券は入園日で変動 大人（中学生以上）4,200〜4,600円・小学生2,400〜2,800円・幼児（3歳〜小学生未満）1,300〜1,500円
+      pricing: { adult: '4,200〜4,600円（入園日で変動）', elementary: '2,400〜2,800円', preschool: '1,300〜1,500円（3歳以上）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'マイカーサファリ（自家用車で巡回）が人気。夏はプール、冬はアイススケートも併設',
@@ -3083,7 +3160,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '須磨シーワールド', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '神戸市', note: '2024年リニューアル、西日本初のシャチ展示', budget: 'mid',
-      pricing: { adult: '3,700円', elementary: '1,800円', preschool: '1,100円（4歳以上）', infant: '無料（3歳以下）' },
+      // 2026-10-02 公式で確認: 1DAYは時期で変動 大人（高校生以上）2,900〜3,700円・小人（小中学生）1,700〜1,800円・幼児（4〜6歳）1,700〜1,800円（3歳以下の料金記載なし）
+      pricing: { adult: '2,900〜3,700円（時期で変動）', elementary: '1,700〜1,800円', preschool: '1,700〜1,800円（4〜6歳）' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: '2024年6月リニューアル、シャチパフォーマンス人気で事前予約必須',
@@ -3093,7 +3171,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'ニジゲンノモリ（淡路島）', category: 'amusement', place: 'outdoor', ages: ['4-6'], city: '淡路市', note: 'クレヨンしんちゃんアドベンチャーパーク等', budget: 'mid',
-      pricing: { adult: '1,000-3,500円（エリア別）', elementary: '500-2,000円', preschool: '無料〜1,000円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 入園料無料、アトラクションごとに有料。主要4エリアの基本チケットは時期で変動 大人（中学生以上）2,800〜4,500円・小人（5〜11歳）1,800〜2,500円
+      pricing: { adult: '入園無料・アトラクション別2,800〜4,500円', elementary: '1,800〜2,500円（小人5〜11歳）', preschool: '5歳以上は小人料金' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'エリアごとのチケット制、小さい子は「クレヨンしんちゃん」と「ドラゴンクエストアイランド」が楽しめる',
@@ -3115,7 +3194,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '生駒山上遊園地', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '生駒市', note: '小さい子向けレトロ遊園地', budget: 'low',
-      pricing: { adult: '無料（入園）', elementary: '乗り物各400円', preschool: '乗り物各400円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 遊園地の入園料は無料、アトラクションは有料（乗り物ごとに300〜600円）
+      pricing: { adult: '無料（入園）', elementary: '乗り物ごと300〜600円', preschool: '乗り物ごと300〜600円', infant: '無料（入園）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '入園無料、生駒ケーブルで山頂へ。大阪を一望できる絶景遊園地',
@@ -3124,7 +3204,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   wakayama: [
     {
       name: 'アドベンチャーワールド', category: 'zoo', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '白浜町', note: 'パンダ・サファリ・遊園地の複合型', budget: 'high',
-      pricing: { adult: '5,300円', elementary: '3,300円', preschool: '2,000円（4歳以上）', infant: '無料（3歳以下）' },
+      // 2026-10-02 公式で確認: 大人（18歳以上）5,300円・中人（12〜17歳）4,300円・小人（4〜11歳＝幼児・小学生）3,300円
+      pricing: { adult: '5,300円', elementary: '3,300円', preschool: '3,300円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
       hiddenTip: 'ジャイアントパンダ3頭飼育（全国最多）、動物園＋水族館＋サファリ＋遊園地の複合型',
@@ -3149,7 +3230,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '鳥取砂丘こどもの国', category: 'park', place: 'mixed', ages: ['2-3', '4-6'], city: '鳥取市', note: 'アスレチックと体験工房', budget: 'low',
-      pricing: { adult: '500円', elementary: '200円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 2026年4月1日改定 おとな800円・高校生600円・小中学生300円・幼児（3歳以上）200円・0〜2歳無料
+      pricing: { adult: '800円', elementary: '300円', preschool: '200円（3歳以上）', infant: '無料（0〜2歳）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '砂丘隣接、大型遊具と屋内プレイエリアの複合',
@@ -3159,7 +3241,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   shimane: [
     {
       name: '島根県立しまね海洋館アクアス', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '浜田市', note: 'シロイルカのバブルリングが名物', budget: 'low',
-      pricing: { adult: '1,550円', elementary: '500円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 大人1,700円・小中高校生500円・幼児（未就学児童）無料
+      pricing: { adult: '1,700円', elementary: '500円', preschool: '無料（未就学児）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'シロイルカのバブルリングは1日4-5回公演、無料で見られる',
@@ -3170,10 +3253,11 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   okayama: [
     {
       name: 'おもちゃ王国（岡山）', category: 'amusement', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '玉野市', note: 'おもちゃの部屋が多数、0-6歳に最適', budget: 'mid',
-      pricing: { adult: '800円（入園）', elementary: '800円', preschool: '800円（2歳以上）', infant: '無料（1歳以下）' },
+      // 2026-10-02 公式で確認: 入園券 おとな（中学生以上）1,000円・こども（2歳以上）800円・1歳以下無料。フリーパスセット券 おとな3,500円・こども3,300円
+      pricing: { adult: '1,000円（入園）', elementary: '800円', preschool: '800円（2歳以上）', infant: '無料（1歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '室内おもちゃ部屋が11以上、雨天OK、乗り放題パス（3,300円）推奨',
+      hiddenTip: '室内おもちゃ部屋が11以上、雨天OK、フリーパスセット券（入園＋乗り放題、おとな3,500円・こども3,300円）がある',
       popular: true,
       facilities: {
         bathroom: 'yes',
@@ -3184,7 +3268,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '渋川動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '玉野市', note: '動物にエサやり、リーズナブル', budget: 'low',
-      pricing: { adult: '900円', elementary: '400円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 大人1,500円・中人（小中学生）1,000円・小人（2歳以上）600円
+      pricing: { adult: '1,500円', elementary: '1,000円', preschool: '600円（2歳以上）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '動物との距離が近く、餌やり（100円）が豊富。渋川海岸に近い',
@@ -3193,17 +3278,19 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   hiroshima: [
     {
       name: '安佐動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '広島市', note: '起伏ある園内、キリン舎が見どころ', budget: 'low',
-      pricing: { adult: '510円', elementary: '170円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 大人510円・高校生等170円・乳幼児と小中学生は無料
+      pricing: { adult: '510円', elementary: '無料（中学生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '園内坂多し、ベビーカー＋抱っこ紐併用推奨。広島駅から車30分',
     },
     {
       name: 'みろくの里', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '福山市', note: '昭和レトロなミニ遊園地', budget: 'mid',
-      pricing: { adult: '1,400円', elementary: '900円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 入園券（通常料金）は期間で変動 おとな1,500〜1,800円・こども（3歳〜小学生）1,200〜1,500円。フリーパス おとな3,600〜4,100円
+      pricing: { adult: '1,500〜1,800円（入園・時期で変動）', elementary: '1,200〜1,500円', preschool: '1,200〜1,500円（3歳以上）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: 'いつか来た道エリア（昭和30年代再現）が大人も懐かしい。乗り放題パス（4,000円程度）がお得',
+      hiddenTip: 'いつか来た道エリア（昭和30年代再現）が大人も懐かしい。フリーパス（入園込み、おとな3,600〜4,100円・期間で変動）がある',
     },
     {
       name: '広島市こども文化科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '広島市', note: 'プラネタリウムと体験展示、入館無料', budget: 'free',
@@ -3217,14 +3304,16 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   yamaguchi: [
     {
       name: '秋吉台サファリランド', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '美祢市', note: 'マイカーサファリと遊園地', budget: 'mid',
-      pricing: { adult: '2,700円', elementary: '1,700円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 入園料 大人（中学生以上）2,600円・小人（3才以上）1,600円
+      pricing: { adult: '2,600円', elementary: '1,600円', preschool: '1,600円（3歳以上）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'マイカー入園可（動物たちが間近）、遊園地もあり1日コース',
     },
     {
       name: '下関市立しものせき水族館 海響館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '下関市', note: 'フグ展示種類世界一', budget: 'mid',
-      pricing: { adult: '2,090円', elementary: '940円', preschool: '410円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 大人（高校生含む）2,500円・小中学生1,200円・幼児（3歳以上）500円
+      pricing: { adult: '2,500円', elementary: '1,200円', preschool: '500円（3歳以上）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'フグ展示種類世界一、イルカ・アシカショーは1日3回。下関駅から徒歩7分',
@@ -3235,24 +3324,27 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   tokushima: [
     {
       name: '徳島県立あすたむらんど', category: 'park', place: 'mixed', ages: ['2-3', '4-6'], city: '板野町', note: '科学館と大型遊具、無料エリアあり', budget: 'free',
+      // 2026-10-02 公式で確認: 入園料・駐車料金無料。子ども科学館の常設展示場は一般510円・小中学生200円
       pricing: { adult: '無料（入園）', elementary: '科学館別料金', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '入園完全無料、大型遊具「子ども科学館」（別料金600円）と芝生広場',
+      hiddenTip: '入園完全無料、大型遊具「子ども科学館」（常設展示 一般510円・小中学生200円）と芝生広場',
       playgroundFeatures: ['athletic'],
     },
   ],
   kagawa: [
     {
       name: 'NEWレオマワールド', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '丸亀市', note: '0-6歳向けアトラクション充実', budget: 'mid',
-      pricing: { adult: '1,800円（入園）', elementary: '1,200円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 入園券 大人（中学生以上）2,000円・小人（3歳〜小学生）1,500円・2歳以下無料
+      pricing: { adult: '2,000円（入園）', elementary: '1,500円', preschool: '1,500円（3歳以上）', infant: '無料（2歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '0-6歳向けアトラクション「ドキドキタウン」が充実、フリーパス4,300円',
     },
     {
       name: '四国水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '宇多津町', note: '2020年開業、瀬戸内海の生き物', budget: 'mid',
-      pricing: { adult: '2,400円', elementary: '1,300円', preschool: '600円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 大人（高校生・16歳以上）2,600円・こども1,400円・幼児（3歳以上）700円・3歳未満無料
+      pricing: { adult: '2,600円', elementary: '1,400円', preschool: '700円（3歳以上）', infant: '無料（3歳未満）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '2020年開業で綺麗、夕方は夕日シルエットの演出が美しい',
@@ -3263,7 +3355,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   ehime: [
     {
       name: 'とべ動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '砥部町', note: '西日本有数の動物園、ホッキョクグマ', budget: 'low',
-      pricing: { adult: '500円', elementary: '100円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 大人600円・高校生200円・小中学生100円・幼児（6歳未満）無料
+      pricing: { adult: '600円', elementary: '100円', preschool: '無料（6歳未満）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '西日本最大級、ホッキョクグマ「ピース」が人気。松山駅から車40分',
@@ -3280,14 +3373,16 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   kochi: [
     {
       name: 'のいち動物公園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '香南市', note: '展示のクオリティ高さで評価高い', budget: 'low',
-      pricing: { adult: '470円', elementary: '無料（18歳以下）', preschool: '無料', infant: '無料' },
+      // 2026-10-02 公式で確認: 大人470円・18歳未満／高校生以下無料
+      pricing: { adult: '470円', elementary: '無料（18歳未満・高校生以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '全国ランキング常連の動物園、展示の質が高く小規模でも見応え十分',
     },
     {
       name: '桂浜水族館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '高知市', note: '小規模だが見せ方が独創的', budget: 'low',
-      pricing: { adult: '1,500円', elementary: '750円', preschool: '400円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 大人1,600円・小中学生600円・幼児（3才より）400円
+      pricing: { adult: '1,600円', elementary: '600円', preschool: '400円（3歳以上）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '桂浜の海辺、レトロな昭和水族館の味わい、坂本龍馬像とセット',
@@ -3300,7 +3395,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   fukuoka: [
     {
       name: 'マリンワールド海の中道', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '福岡市', note: 'イルカ・アシカショーとパノラマ水槽', budget: 'mid',
-      pricing: { adult: '2,500円', elementary: '1,200円', preschool: '700円（4歳以上）', infant: '無料（3歳以下）' },
+      // 2026-10-02 公式で確認: 大人2,500円・小中学生1,200円・幼児（3才以上小学生未満）700円（旧データの「4歳以上」「3歳以下無料」は誤り）
+      pricing: { adult: '2,500円', elementary: '1,200円', preschool: '700円（3歳以上）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'イルカショー後の17時前が比較的空いている。九州の海再現水槽が大人も楽しい',
@@ -3344,7 +3440,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   saga: [
     {
       name: '佐賀県立宇宙科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '武雄市', note: 'プラネタリウムと体験展示', budget: 'low',
-      pricing: { adult: '520円', elementary: '310円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 展示観覧 大人520円・高校生310円・小中学生200円・幼児（4歳以上）100円・0〜3歳児は免除
+      pricing: { adult: '520円', elementary: '200円', preschool: '100円（4歳以上）', infant: '無料（0〜3歳）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'プラネタリウム別料金（大人520円）、武雄温泉と組み合わせ',
@@ -3352,7 +3449,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '神野公園こども遊園地', category: 'amusement', place: 'outdoor', ages: ['2-3', '4-6'], city: '佐賀市', note: '入園無料の昔ながらの遊園地', budget: 'low',
-      pricing: { adult: '無料（入園）', elementary: '乗り物各150-250円', preschool: '乗り物各150-250円', infant: '無料（一部）' },
+      // 2026-10-02 公式で確認: 入園料無料、アトラクションは1歳から有料（1人用フリーパス1,800円・親子用2,800円）
+      pricing: { adult: '無料（入園）', elementary: 'アトラクション有料（1人用フリーパス1,800円）', preschool: 'アトラクション有料（1人用フリーパス1,800円）', infant: '入園無料（アトラクションは1歳から有料）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '入園無料、乗り物のみ別料金。懐かしいレトロ遊具',
@@ -3361,7 +3459,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   nagasaki: [
     {
       name: 'ハウステンボス', category: 'amusement', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '佐世保市', note: 'ヨーロッパ風テーマパーク、1日コース', budget: 'high',
-      pricing: { adult: '7,400円', elementary: '4,800円', preschool: '4,100円（4歳以上）', infant: '無料（3歳以下）' },
+      // 2026-10-02 公式で確認: 1DAYパスポート 大人7,600円〜・中人6,600円〜・小人5,000円〜・未就学児（4歳〜）3,800円〜・3歳以下無料
+      pricing: { adult: '7,600円〜（1DAY・日付で変動）', elementary: '5,000円〜', preschool: '3,800円〜（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '夜のイルミネーション「光の王国」は17時以降のナイトチケットがお得。佐世保駅から直通バス1時間',
@@ -3369,14 +3468,16 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '長崎バイオパーク', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '西海市', note: 'カバや鹿に直接触れられる', budget: 'mid',
-      pricing: { adult: '1,900円', elementary: '1,100円', preschool: '800円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 入園料 大人2,100円・中高生1,500円・3歳〜小学生1,100円
+      pricing: { adult: '2,100円', elementary: '1,100円', preschool: '1,100円（3歳以上）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'フリーフライングエリアで鳥が肩に乗る体験。餌やり（エサ代200-300円）が大人気',
     },
     {
       name: '長崎ペンギン水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '長崎市', note: 'ペンギン種類数日本一', budget: 'low',
-      pricing: { adult: '520円', elementary: '310円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 一般800円・小学生〜高校生400円・未就学児無料
+      pricing: { adult: '800円', elementary: '400円', preschool: '無料（未就学児）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '世界最多9種類のペンギン展示、ふれあいビーチでペンギン散歩（土日祝）',
@@ -3394,7 +3495,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '阿蘇カドリー・ドミニオン', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '阿蘇市', note: 'クマ牧場とミニブタショー', budget: 'mid',
-      pricing: { adult: '2,600円', elementary: '1,600円', preschool: '1,000円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: 大人（高校生以上）平日2,600円・土日祝特定日2,900円・子供（小中学生）1,400円・幼児（3歳以上）800円
+      pricing: { adult: '2,600円（土日祝・特定日2,900円）', elementary: '1,400円', preschool: '800円（3歳以上）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'みやざわ劇場のミニブタ・犬のパフォーマンスが大人気。阿蘇山観光とセットで1日コース',
@@ -3404,7 +3506,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   oita: [
     {
       name: 'うみたまご', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '大分市', note: 'セイウチショーとタッチプール', budget: 'mid',
-      pricing: { adult: '2,600円', elementary: '1,300円', preschool: '850円（4歳以上）', infant: '無料（3歳以下）' },
+      // 2026-10-02 公式で確認: 大人3,000円・小中学生1,500円・幼児（4才以上）1,000円・3才以下無料
+      pricing: { adult: '3,000円', elementary: '1,500円', preschool: '1,000円（4歳以上）', infant: '無料（3歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'セイウチとのふれあい、タッチプール、高崎山と隣接で1日コース',
@@ -3413,7 +3516,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '高崎山自然動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '大分市', note: '野生の猿の群れが来る、うみたまご隣接', budget: 'low',
-      pricing: { adult: '520円', elementary: '260円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 一般500円・高校生等（18歳到達年度末まで）250円・小学生未満無料
+      pricing: { adult: '500円', elementary: '250円', preschool: '無料（小学生未満）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '野生の猿1000頭以上が山から下りてくる、エサやりタイム11時/14時',
@@ -3421,7 +3525,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'ハーモニーランド', category: 'amusement', place: 'outdoor', ages: ['0-1', '2-3', '4-6'], city: '日出町', note: 'サンリオの屋外テーマパーク', budget: 'mid',
-      pricing: { adult: '3,600円', elementary: '2,600円', preschool: '2,600円（3歳以上）', infant: '無料（2歳以下）' },
+      // 2026-10-02 公式で確認: デイパスポートは年齢共通で3,600円・4,200円（日により異なる）・4歳未満無料
+      pricing: { adult: '3,600〜4,200円（デイパスポート）', elementary: '3,600〜4,200円', preschool: '3,600〜4,200円（4歳以上）', infant: '無料（4歳未満）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: 'サンリオの屋外テーマパーク、小さい子向けアトラクション充実、アフタヌーンパス（昼以降割引）も',
@@ -3430,7 +3535,8 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   miyazaki: [
     {
       name: '宮崎市フェニックス自然動物園', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '宮崎市', note: '遊園地併設、フラミンゴショー', budget: 'low',
-      pricing: { adult: '840円', elementary: '420円', preschool: '無料（未就学児）', infant: '無料' },
+      // 2026-10-02 公式で確認: 大人（高校生以上）840円・中学生420円・小学生310円・未就学児無料
+      pricing: { adult: '840円', elementary: '310円', preschool: '無料（未就学児）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: 'フラミンゴショーが珍しい、遊園地乗り物も別料金100-400円',
@@ -3440,10 +3546,11 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
   okinawa: [
     {
       name: '沖縄美ら海水族館', category: 'aquarium', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '本部町', note: 'ジンベエザメとマンタの大水槽', budget: 'mid',
+      // 2026-10-02 公式で確認: 大人2,180円・高校生1,440円・小中学生710円・6歳未満（未就学児）無料。「4時からチケット」（1,510円）は2023-03-31で販売終了のため hiddenTip から削除
       pricing: { adult: '2,180円', elementary: '710円（小中）', preschool: '無料（6歳未満）', infant: '無料' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'mid', holiday: 'high' },
-      hiddenTip: '16時以降の夕方入館券（1,510円、8割価格）が狙い目。那覇から車で約2時間、日帰り強行はキツイ',
+      hiddenTip: '那覇から車で約2時間、日帰り強行はキツイ',
       nearby: '海洋博公園内にエメラルドビーチ（無料）、オキちゃん劇場（イルカショー）で1日フル',
       popular: true,
       summerCool: true,
@@ -3457,22 +3564,25 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '沖縄こどもの国', category: 'zoo', place: 'mixed', ages: ['0-1', '2-3', '4-6'], city: '沖縄市', note: '動物園＋こどもの遊具、リーズナブル', budget: 'low',
-      pricing: { adult: '500円', elementary: '200円', preschool: '100円（4歳以上）', infant: '無料（3歳以下）' },
+      // 2026-10-02 公式で確認: 一般入園料 16才以上1,000円・15才以下無料（学生割引 高校生等500円）
+      pricing: { adult: '1,000円（16歳以上）', elementary: '無料（15歳以下）', preschool: '無料', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '那覇から車で45分、リーズナブルで1日遊べる。チルドレンズセンター（屋内）も併設',
     },
     {
       name: 'ネオパークオキナワ', category: 'zoo', place: 'outdoor', ages: ['2-3', '4-6'], city: '名護市', note: '鳥類メイン、放し飼いで近い', budget: 'low',
-      pricing: { adult: '1,300円', elementary: '700円', preschool: '500円（4歳以上）', infant: '無料（3歳以下）' },
+      // 2026-10-02 公式で確認: 入園料 大人（13歳以上）1,600円・小人（4歳〜12歳）800円。3歳以下の入園料は公式料金表に記載なし（区分が4歳から）。おやつあげ体験の金額は公式に記載なしのため hiddenTip から削除
+      pricing: { adult: '1,600円（13歳以上）', elementary: '800円（4〜12歳）', preschool: '800円（4歳以上）', infant: '公式の料金表は4歳以上のみ記載' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: 'フラミンゴ・オウムが放し飼いで大接近。餌やり体験（100円）が人気',
+      hiddenTip: 'フラミンゴ・オウムが放し飼いで大接近。おやつあげ体験が人気',
       nearby: '名護市内、許田ICから20分。美ら海水族館と組み合わせやすい',
     },
     {
       name: 'DMMかりゆし水族館', category: 'aquarium', place: 'indoor', ages: ['2-3', '4-6'], city: '豊見城市', note: '2020年開業、プロジェクションマッピング演出', budget: 'mid',
-      pricing: { adult: '2,400円', elementary: '2,000円（中高）', preschool: '1,500円（4歳以上）', infant: '無料（3歳以下）' },
+      // 2026-10-02 公式で確認: 個人料金は日により バリュー/レギュラー/ピーク の3段階。大人（18歳以上）2,800/2,950/3,200円・中人（13〜17歳）2,200/2,350/2,600円・小人（4〜12歳）1,700/1,850/2,100円・3歳以下無料。2026-10-15から大人3,100/3,250/3,500円・中人2,500/2,650/2,900円・小人2,000/2,150/2,400円に改定
+      pricing: { adult: '2,800〜3,200円（18歳以上・日により変動。2026/10/15〜3,100〜3,500円）', elementary: '1,700〜2,100円（4〜12歳。2026/10/15〜2,000〜2,400円）', preschool: '1,700〜2,100円（4歳以上。2026/10/15〜2,000〜2,400円）', infant: '無料（3歳以下）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
       hiddenTip: '那覇空港から車で20分、イーアス沖縄豊崎内で買い物とセット。雨天時の強い味方',
