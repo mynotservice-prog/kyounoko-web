@@ -15,7 +15,7 @@ import {
   writeSpotOverridesToKv,
   type SpotOverride,
 } from '@/lib/spot-overrides';
-import { isKvConfigured } from '@/lib/kv-store';
+import { isKvConfigured, getLastKvSetError } from '@/lib/kv-store';
 import { purgeCfUrls } from '@/lib/cf-purge';
 
 /**
@@ -345,7 +345,13 @@ export async function POST(req: NextRequest) {
   let current: Overrides = {};
   let sha: string | undefined;
   if (useKv) {
-    current = (await readSpotOverridesForWrite()) as Overrides;
+    try {
+      current = (await readSpotOverridesForWrite()) as Overrides;
+    } catch (e) {
+      // 読めないまま保存すると他スポットの上書きが消えるので中止する
+      const msg = e instanceof Error ? e.message : String(e);
+      return NextResponse.json({ error: `保存を中止しました（${msg}）` }, { status: 503 });
+    }
   } else if (process.env.NODE_ENV !== 'development' && process.env.GITHUB_TOKEN) {
     const gh = await ghGetFile();
     if (gh) {
@@ -378,7 +384,13 @@ export async function POST(req: NextRequest) {
   // KV: デプロイ不要で保存し、該当ページだけ revalidate
   if (useKv) {
     const ok = await writeSpotOverridesToKv(current);
-    if (!ok) return NextResponse.json({ error: 'kv write failed' }, { status: 500 });
+    if (!ok) {
+      const bytes = Buffer.byteLength(JSON.stringify(current), 'utf8');
+      return NextResponse.json(
+        { error: `kv write failed: ${getLastKvSetError() ?? 'unknown'}（保存データ ${Math.round(bytes / 1024)}KB）` },
+        { status: 500 },
+      );
+    }
     revalidateTag(SPOT_OVERRIDES_TAG);
     revalidatePath(`/spot/${slug}`);
     // CFエッジキャッシュも該当URL群をパージ（画像差替はトップ/一覧/ランキングにも出るため）。

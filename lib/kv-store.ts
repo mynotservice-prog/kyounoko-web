@@ -37,14 +37,39 @@ export async function kvGet<T>(key: string): Promise<T | null> {
   }
 }
 
+/** 直近の kvSet 失敗理由（admin 画面にそのまま出して原因を切り分けるため）。 */
+let lastSetError: string | null = null;
+export function getLastKvSetError(): string | null {
+  return lastSetError;
+}
+
 export async function kvSet(key: string, value: unknown): Promise<boolean> {
   const c = getClient();
   if (!c) return false;
   try {
     await c.set(key, value as never);
+    lastSetError = null;
     return true;
   } catch (e) {
-    console.error('[kv] set failed', key, e instanceof Error ? e.message : e);
+    lastSetError = e instanceof Error ? e.message : String(e);
+    console.error('[kv] set failed', key, lastSetError);
     return false;
+  }
+}
+
+/**
+ * 読み込み失敗と「キーが無い」を区別する get。
+ * 全体を1キーで上書き保存するデータ（spot/event overrides 等）は、読み込みに失敗したまま
+ * 保存するとバンドルの古い値で KV を上書きして編集内容が消えるため、こちらを使う。
+ */
+export async function kvGetStrict<T>(key: string): Promise<{ ok: true; value: T | null } | { ok: false; error: string }> {
+  const c = getClient();
+  if (!c) return { ok: false, error: 'KV not configured' };
+  try {
+    return { ok: true, value: ((await c.get<T>(key)) as T | null) ?? null };
+  } catch (e) {
+    const error = e instanceof Error ? e.message : String(e);
+    console.error('[kv] get failed', key, error);
+    return { ok: false, error };
   }
 }

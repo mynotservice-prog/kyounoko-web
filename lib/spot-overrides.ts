@@ -38,7 +38,7 @@
 import { unstable_cache } from 'next/cache';
 import overridesJson from './spot-overrides.json';
 import type { Spot } from './spots';
-import { isKvConfigured, kvGet, kvSet } from './kv-store';
+import { isKvConfigured, kvGet, kvGetStrict, kvSet } from './kv-store';
 
 /** 上書き可能なトップレベルのフィールド（文字列/enum）。 */
 export const SPOT_TEXT_FIELDS = [
@@ -152,8 +152,11 @@ export const getRuntimeSpotOverrides = unstable_cache(
  */
 export async function readSpotOverridesForWrite(): Promise<SpotOverridesMap> {
   if (isKvConfigured()) {
-    const fromKv = await kvGet<SpotOverridesMap>(SPOT_OVERRIDES_KV_KEY);
-    return fromKv ?? { ...BUNDLED_SPOT_OVERRIDES };
+    // 読み込み失敗時にバンドルで代用すると、保存でKV上の編集内容が古いバンドルに置き換わる。
+    // 失敗は例外にして保存を止める（キーが無いときだけバンドルをシードにする）。
+    const r = await kvGetStrict<SpotOverridesMap>(SPOT_OVERRIDES_KV_KEY);
+    if (!r.ok) throw new Error(`KV read failed: ${r.error}`);
+    return r.value ?? { ...BUNDLED_SPOT_OVERRIDES };
   }
   return { ...BUNDLED_SPOT_OVERRIDES };
 }
