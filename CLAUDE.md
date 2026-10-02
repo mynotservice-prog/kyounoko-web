@@ -9,6 +9,7 @@
 |---|---|
 | 事業の現在地・進行中の判定・やらないと決めたこと | `~/.claude/company/divisions/kyounoko.md`（GMが毎週更新） |
 | 記事を書く・書き換える | **`docs/writing-rules.md`**（捏造ガード。無かったせいで1,109本に同じ誤りが入った） |
+| スポットを新規作成する | **`docs/spot-authoring-standard.md`**（項目ごとの情報粒度。お手本は Kids Base） |
 | 既存記事を編集する | **`docs/experiments-active.md`**（凍結記事と対照群。判定日まで触らない。特に対照群） |
 | SEOの判断（新規面・改稿・タイトル） | スキル `search-growth`（着手前ゲート）→ `.claude/skills/kyounoko-seo`（固有手順） |
 | AI検索からの流入・robots・AIボット | スキル `geo-max`、`docs/bot-cost-defense.md` |
