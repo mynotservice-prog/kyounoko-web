@@ -30,7 +30,7 @@ legacyHero: /hero-ai/kodzure-morning-cafe-10.webp
 
 **結論：外食57チェーンの運営元公式サイトを照合したところ、離乳食の持ち込みを公式に明記していたのはガスト（※一部の店舗を除く）・しゃぶ葉・幸楽苑の3社でした。「持ち込み不可」と書いたチェーンは0社で、ほとんどは何も書いていません。書いていない＝不可ではないので、行く店に「離乳食を持ち込んでもいいですか」と確認してから出かけるのが確実です。**
 
-> ※ この記事の上にある「早見表」は、編集部の訪問や利用報告を集めたもので、**公式サイトの記載とは別のものです**。各チェーンの公式サイトに何が書いてあるかは、下の表で確認してください。
+> ※ この記事の上にある「早見表」は、2026年9月25日の公式照合にあわせて直している途中です。公式に記載を確認できなかったチェーンは外していますが、**一部のチェーンには照合前の値が残っており、公式サイトの記載と一致しない行があります**。各チェーンの公式サイトに何が書いてあるかは、下の表で確認してください。
 
 チェーン別の個別ガイド（公式の記載と確認のしかた）: [ガスト](/article/gusto-rinyushoku-mochikomi)／[サイゼリヤ](/article/saizeriya-rinyushoku-mochikomi)／[デニーズ](/article/dennys-rinyushoku-mochikomi)／[びっくりドンキー](/article/bikkuri-donkey-rinyushoku-mochikomi)／[はま寿司](/article/hamasushi-rinyushoku-mochikomi)／[丸亀製麺](/article/marukame-rinyushoku-mochikomi)／[しゃぶ葉](/article/shabuyou-rinyushoku-mochikomi)／[ゆず庵](/article/yuzuan-rinyushoku-mochikomi)／[幸楽苑](/article/kourakuen-rinyushoku-mochikomi)／[丸源ラーメン](/article/marugenramen-rinyushoku-mochikomi)
 
