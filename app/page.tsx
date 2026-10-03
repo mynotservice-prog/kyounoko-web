@@ -22,6 +22,7 @@ import { TopLikeTiles } from '@/components/top/TopLikeTiles';
 import { TopCategoryGrid, type TopCategory } from '@/components/top/TopCategoryGrid';
 import { getFileArticlesByCategory, getAllFileArticlesWithOverrides } from '@/lib/articles';
 import { getThisWeekEvents } from '@/lib/events';
+import { getRuntimeEventOverrides } from '@/lib/event-overrides';
 import { getSpotRanking } from '@/lib/spot-ranking';
 import { getTopFeaturePages } from '@/lib/feature-pages';
 import { POPULAR_ARTICLE_SLUGS } from '@/lib/popular-articles';
@@ -142,8 +143,10 @@ export default async function HomePage() {
     return { href: `/article/${a.slug}`, title: a.title, sub: v.tags?.slice(0, 2).join('・') || undefined, date: fmtDate(a.publishedAt), img: v.img, seed: a.slug };
   });
 
-  // 今週のイベント（編集部キュレーション）。0件なら表示しない
-  const weekEvents = getThisWeekEvents().slice(0, 6);
+  // 今週のイベント（編集部キュレーション）。0件なら表示しない。
+  // 管理画面の上書き（画像・会期）は KV にあるので、スポットと同様に実行時マップを渡す。
+  // 渡さないとバンドルの event-overrides.json だけになり、/admin/events/edit で差し替えた画像が出ない。
+  const weekEvents = getThisWeekEvents(await getRuntimeEventOverrides()).slice(0, 6);
   // 季節と行事カテゴリの新着記事は別セクション
   const seasonalRows: KkRowItem[] = getFileArticlesByCategory('gyouji')
     .filter((a) => !a.noindex)

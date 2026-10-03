@@ -275,6 +275,10 @@ export async function POST(req: NextRequest) {
     if (!ok) return NextResponse.json({ error: `kv write failed: ${getLastKvSetError() ?? 'unknown'}` }, { status: 500 });
     revalidateTag(EVENT_OVERRIDES_TAG);
     revalidatePath(`/event/${slug}`);
+    // トップ「今週末のイベント」と /events もこの上書きを描画する（ISR 1h を待たせない）。
+    // kyounoko.jp は CF が最大24時間キャッシュするので、すぐ見るなら purge-cf で '/' と '/events' を消す。
+    revalidatePath('/');
+    revalidatePath('/events');
     return NextResponse.json({ ok: true, mode: 'kv', slug, patch });
   }
 

@@ -18,6 +18,7 @@ import {
   formatEventPeriod,
   getActiveEventAreas,
   getActiveEventCategories,
+  getAllEvents,
   getOngoingEvents,
   getThisMonthEvents,
   getThisWeekEvents,
@@ -26,6 +27,7 @@ import {
   type EventFilter,
 } from '@/lib/events';
 import { getAreaName, isValidArea, type AreaSlug } from '@/lib/area';
+import { getRuntimeEventOverrides } from '@/lib/event-overrides';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { INDEXABLE_ROBOTS } from '@/lib/robots-meta';
 
@@ -98,12 +100,14 @@ export default async function EventsPage({ searchParams }: Props) {
     return qs ? `/events?${qs}` : '/events';
   };
 
-  const ongoing = getOngoingEvents();
-  const week = getThisWeekEvents();
-  const month = getThisMonthEvents();
+  // 管理画面の上書き（画像・会期）は KV にあるので実行時マップを渡す（渡さないと差し替え画像が出ない）
+  const eventOv = await getRuntimeEventOverrides();
+  const ongoing = getOngoingEvents(eventOv);
+  const week = getThisWeekEvents(eventOv);
+  const month = getThisMonthEvents(eventOv);
 
   // カレンダー用：今月＋翌月分（最大2ヶ月先まで先送り表示できるよう、全イベントを渡す）
-  const calEvents = EVENTS.map((e) => ({
+  const calEvents = getAllEvents(eventOv).map((e) => ({
     slug: e.slug,
     title: e.title,
     startDate: e.startDate,
