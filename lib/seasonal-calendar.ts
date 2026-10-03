@@ -143,14 +143,20 @@ export const SEASONAL_CALENDAR: SeasonalEntry[] = [
   },
   {
     month: '10',
-    label: 'ハロウィン・運動会後半',
-    themes: ['ハロウィン', '秋のお出かけ', '七五三準備', '冬支度'],
+    label: 'いも掘り・紅葉・ハロウィン',
+    themes: ['いも掘り', '果物狩り', '紅葉', 'ハロウィン', '七五三準備'],
     slugs: [
+      'imohori-kanto-kodzure',
+      'imohori-kanagawa-kodzure',
+      'imohori-chiba-saitama-ibaraki-kodzure',
+      'kurihiroi-kanto-kodzure',
+      'koyou-kanto-kodzure-20',
+      'halloween-kodzure-events-2026',
       'undokai-bentou-mochimono-kamigata',
       'shichigosan-nenrei-junbi',
     ],
     prepStart: '08',
-    description: 'ハロウィン仮装と七五三の準備。秋のお出かけシーズン。',
+    description: 'いも掘り・栗拾いの収穫体験と紅葉狩り。ハロウィンと七五三の準備も。',
   },
   {
     month: '11',

@@ -361,6 +361,22 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
 
 ## 汚染の記録
 
+### トップの「よく読まれています」を2か月ぶりに更新（2026-10-03）— 実験2の同一面1本からトップのリンクが外れた
+
+`lib/popular-articles.json` を 2026-07-28 版（6/28〜7/25のクリック）から 2026-10-03 版（9/3〜9/30）へ再生成した。
+トップに出るのは上位5件だけなので、リンクの増減は次のとおり。
+
+- **外れた**: `kodzure-saize-koryaku`（旧4位 → 新12位）。実験2の凍結記事と同一面でカニバる相手（台帳「除外した対象」に記載）。
+  凍結記事そのものではないが、**10/21 の実験2判定では、10/03 以降この記事へのトップからのリンクが無い事実を併記する。**
+- **入らなかった（意図的に保留）**: `saizeriya-kids-menu`（新5位）は実験2の処置群なので、`app/page.tsx` の
+  `POPULAR_HOLD_SLUGS` で判定（10/21）までトップから外した。**判定後に `POPULAR_HOLD_SLUGS` を空にすること。**
+- **不変**: `hoshino-morning-kosodate`（旧3位 → 新4位・測定中のモーニング4本）はトップからのリンクが続いている。
+- 新しい上位5件: ohsho-kids-menu / kurasushi-kids-menu / sukesan-udon-kodzure-koryaku / hoshino-morning-kosodate / sushiro-kids-menu。
+
+同じPRで特集 `autumn-kids` の関連記事に収穫体験の地域記事などを追加したが、実験4の処置群3本
+（mikangari / mogitori / fureai-nouen）と比較基準 `imohori-kanto-kodzure` へのリンク本数は変えていない
+（imohori-kanto-kodzure は従来どおり特集の先頭に残っているだけ）。
+
 ### `yakiniku-5chain-kodomo-2026` の事実訂正で凍結面リンクの周辺文が変わった（2026-10-02）— **本数は不変**
 
 焼肉5チェーン比較の事実訂正（安安・カルビ大将の子ども料金、焼肉きんぐの設備を公式の記載に置換）で、
