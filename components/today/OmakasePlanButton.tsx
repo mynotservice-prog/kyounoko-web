@@ -3,6 +3,7 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { KkIcon } from '@/components/kk/KkIcon';
+import { trackEvent } from '@/lib/analytics';
 
 type Candidate = { slug: string; name: string };
 
@@ -40,6 +41,7 @@ export function OmakasePlanButton({
     qs.set('vm', rnd());
     qs.set('vl', rnd());
     qs.set('va', rnd());
+    trackEvent('today_plan_create', { method: 'omakase', station_slug: pick.slug });
     router.push(`/today?${qs.toString()}`);
   };
 

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
+import { trackEvent } from '@/lib/analytics';
 import { KkIcon } from '@/components/kk/KkIcon';
 import { KkArt, type KkArtName } from '@/components/kk/KkArt';
 import type { FinderStation } from '@/lib/finder-stations';
@@ -92,6 +93,7 @@ export function V2HeroForm({
       /* ignore */
     }
     const params = new URLSearchParams({ date, age, station: station.slug, weather });
+    trackEvent('today_entry_click', { link_url: '/today', method: 'hero_form' });
     router.push(`/today?${params.toString()}`);
   };
 

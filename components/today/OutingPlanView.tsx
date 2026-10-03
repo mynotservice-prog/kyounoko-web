@@ -158,7 +158,7 @@ function SlotCard({ slot }: { slot: OutingSlot }) {
         {slot.label}
       </span>
       {href ? (
-        <Link href={href} className="td3-slot-name">
+        <Link href={href} className="td3-slot-name" data-ev="today_slot_click" data-ev-slot={slot.key}>
           {title}
           <KkIcon name="chevron-right" size={16} className="td3-slot-chev" />
         </Link>
@@ -203,7 +203,7 @@ function IndieRow({ s, href }: { s: Spot; href?: string }) {
   );
   if (!href) return <div className="kk-row">{body}</div>;
   return (
-    <Link href={href} className="kk-row">
+    <Link href={href} className="kk-row" data-ev="today_slot_click" data-ev-slot="lunch_list">
       {body}
     </Link>
   );
@@ -213,7 +213,7 @@ function IndieRow({ s, href }: { s: Spot; href?: string }) {
 function RestaurantRow({ s }: { s: Spot }) {
   const facets = spotFacets(s);
   return (
-    <Link href={`/spot/${spotToSlug(s, 'tokyo')}`} className="kk-row">
+    <Link href={`/spot/${spotToSlug(s, 'tokyo')}`} className="kk-row" data-ev="today_slot_click" data-ev-slot="lunch_list">
       <span className="kk-row-body">
         <span className="kk-row-title">{s.name}</span>
         {s.note && <span className="kk-row-sub">{s.note}</span>}
@@ -420,13 +420,13 @@ export function OutingPlanView({
                   {(canSwap || slot.key === 'lunch') && (
                     <div className="td3-acts">
                       {canSwap && (
-                        <Link href={swapHref} scroll={false} className="td3-act">
+                        <Link href={swapHref} scroll={false} className="td3-act" data-ev="today_swap" data-ev-slot={slot.key}>
                           <KkIcon name="swap" size={14} />
                           別の候補に変える
                         </Link>
                       )}
                       {slot.key === 'lunch' && (
-                        <Link href={buildHref(params, { slot: 'lunch' })} className="td3-act">
+                        <Link href={buildHref(params, { slot: 'lunch' })} className="td3-act" data-ev="today_lunch_list">
                           お昼だけ一覧で見る
                           <KkIcon name="arrow-right" size={14} />
                         </Link>
@@ -442,7 +442,7 @@ export function OutingPlanView({
 
       {/* タイムライン直後の独立導線（機能CTAなので薄い背景を使う） */}
       {mapUrl && (
-        <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="td3-map">
+        <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="td3-map" data-ev="today_map_click">
           <span className="td3-map-ico">
             <KkIcon name="map" size={24} sw={1.6} />
           </span>
@@ -483,7 +483,7 @@ export function OutingPlanView({
             .filter(Boolean)
             .join(' → ')}
         />
-        <Link href={rerollHref} scroll={false} className="kk-btn outline td3-reroll">
+        <Link href={rerollHref} scroll={false} className="kk-btn outline td3-reroll" data-ev="today_reroll">
           <KkIcon name="refresh" size={16} />
           別の流れを見る
         </Link>
@@ -512,7 +512,7 @@ export function OutingPlanView({
                     {slot.time} {slot.label}
                   </span>
                   {href ? (
-                    <Link href={href} className="td3-rain-name">
+                    <Link href={href} className="td3-rain-name" data-ev="today_slot_click" data-ev-slot={`rain_${slot.key}`}>
                       <KkIcon name={slot.icon as KkIconName} size={14} />
                       {label}
                     </Link>
