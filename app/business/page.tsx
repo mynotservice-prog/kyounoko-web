@@ -1,18 +1,18 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { V2Frame } from '@/components/v2/V2Frame';
-import { SITE_FACTS, CONTACT_EMAIL, INSTAGRAM_URL, INSTAGRAM_HANDLE } from '@/lib/site-facts';
+import { SITE_FACTS, SITE_FACTS_APPROX, CONTACT_EMAIL, INSTAGRAM_URL, INSTAGRAM_HANDLE } from '@/lib/site-facts';
 
 export const metadata: Metadata = {
   // layout の title.template が「%s｜きょうのこ」を付けるので、ここでは媒体名を重ねない
   title: 'タイアップ・広告掲載のご案内（媒体資料）',
   description:
-    '子育て家庭向けおでかけメディア「きょうのこ」のタイアップ・広告掲載窓口。月間105,242PV（2026年8月）・読者の9割以上がスマホの子育て世帯。取材なしでも制作できるPR記事、トップページや関連記事のPR枠、商品モニターに対応します。PR表記・編集権の方針、お受けできないご依頼、進め方も明記しています。',
+    '子育て家庭向けおでかけメディア「きょうのこ」のタイアップ・広告掲載窓口。月間13万PV超（2026年9月）・読者の9割以上がスマホの子育て世帯。取材なしでも制作できるPR記事、トップページや関連記事のPR枠、商品モニターに対応します。PR表記・編集権の方針、お受けできないご依頼、進め方も明記しています。',
   alternates: { canonical: '/business' },
   openGraph: {
     title: 'タイアップ・広告掲載のご案内（媒体資料）｜きょうのこ',
     description:
-      '月間105,242PV（2026年8月）の子育ておでかけメディア。PR記事（取材なし／実訪問取材つき）・PR枠・商品モニターに対応。媒体データと進め方を公開しています。',
+      '月間13万PV超（2026年9月）の子育ておでかけメディア。PR記事（取材なし／実訪問取材つき）・PR枠・商品モニターに対応。媒体データと進め方を公開しています。',
     url: 'https://kyounoko.jp/business',
     type: 'website',
     images: [{ url: '/img/ogp-default-v2.webp', width: 1200, height: 630 }],
@@ -164,9 +164,9 @@ export default function BusinessPage() {
             {/* ============ 媒体データ ============ */}
             <h2 id="media-data">媒体データ</h2>
             <p>
-              {SITE_FACTS.asOfLabel}時点で確定している{SITE_FACTS.monthlyPvLabel}実績の実測値です
+              {SITE_FACTS.asOfLabel}時点で確定している{SITE_FACTS.monthlyPvLabel}実績です
               （アクセス数は Google アナリティクス4、検索の数字は Google Search Console）。
-              ご希望があれば管理画面のスクリーンショットもご提示します。
+              このページでは切り捨てで丸めた値を載せています。正確な実測値と内訳は媒体資料でお送りしますので、お問い合わせください。
             </p>
             <table className="table-wrap">
               <tbody>
@@ -179,33 +179,31 @@ export default function BusinessPage() {
                 <tr>
                   <th>月間ページビュー</th>
                   <td>
-                    <strong>{SITE_FACTS.monthlyPv.toLocaleString()} PV</strong>（
+                    <strong>{SITE_FACTS_APPROX.monthlyPv}PV超</strong>（
                     {SITE_FACTS.monthlyPvLabel}実績）
                     <br />
                     <span style={{ fontSize: 13, color: 'var(--ink-sub)' }}>
-                      前月（{SITE_FACTS.prevMonthlyPvLabel}）{SITE_FACTS.prevMonthlyPv.toLocaleString()} PV から
-                      {Math.round((SITE_FACTS.monthlyPv / SITE_FACTS.prevMonthlyPv - 1) * 100)}% 増
+                      前月（{SITE_FACTS.prevMonthlyPvLabel}）比 +{SITE_FACTS_APPROX.pvGrowthPct}%
                     </span>
                   </td>
                 </tr>
                 <tr>
                   <th>月間セッション数</th>
                   <td>
-                    {SITE_FACTS.monthlySessions.toLocaleString()} セッション（{SITE_FACTS.monthlyPvLabel}実績）
+                    {SITE_FACTS_APPROX.monthlySessions}セッション超（{SITE_FACTS.monthlyPvLabel}実績）
                   </td>
                 </tr>
                 <tr>
                   <th>月間ユーザー数</th>
                   <td>
-                    {SITE_FACTS.monthlyUsers.toLocaleString()} 人（{SITE_FACTS.monthlyPvLabel}実績）
+                    {SITE_FACTS_APPROX.monthlyUsers}人超（{SITE_FACTS.monthlyPvLabel}実績）
                   </td>
                 </tr>
                 <tr>
                   <th>Google 検索</th>
                   <td>
-                    月間クリック {SITE_FACTS.searchClicks.toLocaleString()} 回 ／ 表示{' '}
-                    {SITE_FACTS.searchImpressions.toLocaleString()} 回 ／ 平均掲載順位{' '}
-                    {SITE_FACTS.searchAvgPosition} 位（{SITE_FACTS.monthlyPvLabel}実績）
+                    月間クリック {SITE_FACTS_APPROX.searchClicks}回超 ／ 表示 {SITE_FACTS_APPROX.searchImpressions}回超 ／
+                    平均掲載順位 {SITE_FACTS.searchAvgPosition} 位（{SITE_FACTS.monthlyPvLabel}実績）
                   </td>
                 </tr>
                 <tr>
@@ -214,19 +212,19 @@ export default function BusinessPage() {
                 </tr>
                 <tr>
                   <th>閲覧端末</th>
-                  <td>スマートフォン {SITE_FACTS.mobileShare}%</td>
+                  <td>スマートフォン {SITE_FACTS_APPROX.mobileShare}%超</td>
                 </tr>
                 <tr>
                   <th>読者の地域</th>
                   <td>
-                    関東1都6県 {SITE_FACTS.kantoShare}%（うち東京 {SITE_FACTS.tokyoShare}%）／ 関西2府4県{' '}
-                    {SITE_FACTS.kansaiShare}%
+                    関東1都6県 約{SITE_FACTS_APPROX.kantoShare}%（うち東京 約{SITE_FACTS_APPROX.tokyoShare}%）／ 関西2府4県 約
+                    {SITE_FACTS_APPROX.kansaiShare}%
                   </td>
                 </tr>
                 <tr>
                   <th>流入構成</th>
                   <td>
-                    自然検索 {SITE_FACTS.organicShare.toFixed(1)}%
+                    自然検索 {SITE_FACTS_APPROX.organicShare}%超
                     <br />
                     <span style={{ fontSize: 13, color: 'var(--ink-sub)' }}>
                       広告出稿・記事の買い付けは行っていません。検索から自力で集めた読者です。
@@ -236,7 +234,7 @@ export default function BusinessPage() {
                 </tr>
                 <tr>
                   <th>エンゲージメント率</th>
-                  <td>{SITE_FACTS.engagementRate}%</td>
+                  <td>{SITE_FACTS_APPROX.engagementRate}%超</td>
                 </tr>
                 <tr>
                   <th>コンテンツ規模</th>
@@ -294,28 +292,28 @@ export default function BusinessPage() {
               </thead>
               <tbody>
                 <tr>
-                  <td>くら寿司 子供椅子</td>
-                  <td>1.0 位</td>
-                </tr>
-                <tr>
-                  <td>サイゼリヤ キッズメニュー 2026</td>
-                  <td>1.1 位</td>
-                </tr>
-                <tr>
-                  <td>はま寿司 ベビーチェア</td>
-                  <td>1.4 位</td>
+                  <td>くら寿司 ベビーカー</td>
+                  <td>1.2 位</td>
                 </tr>
                 <tr>
                   <td>くら寿司 キッズメニュー</td>
-                  <td>1.9 位</td>
+                  <td>2.0 位</td>
                 </tr>
                 <tr>
                   <td>餃子の王将 キッズメニュー</td>
-                  <td>1.9 位</td>
+                  <td>2.0 位</td>
                 </tr>
                 <tr>
                   <td>スシロー キッズメニュー</td>
                   <td>2.1 位</td>
+                </tr>
+                <tr>
+                  <td>はま寿司 子供メニュー</td>
+                  <td>2.3 位</td>
+                </tr>
+                <tr>
+                  <td>資さんうどん キッズメニュー</td>
+                  <td>2.6 位</td>
                 </tr>
               </tbody>
             </table>
