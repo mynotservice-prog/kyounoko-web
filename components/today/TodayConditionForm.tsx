@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
+import { trackEvent } from '@/lib/analytics';
 import type { FinderStation } from '@/lib/finder-stations';
 import { KkIcon, type KkIconName } from '@/components/kk/KkIcon';
 import { KkArt, type KkArtName } from '@/components/kk/KkArt';
@@ -210,6 +211,7 @@ export function TodayConditionForm({
       return;
     }
     writeRecent(target.slug);
+    trackEvent('today_plan_create', { method: 'form', station_slug: target.slug });
     const params = new URLSearchParams({ date, age, station: target.slug, weather });
     router.push(`/today?${params.toString()}`);
   };

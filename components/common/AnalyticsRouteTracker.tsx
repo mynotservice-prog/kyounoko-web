@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
-import { trackPageView } from '@/lib/analytics';
+import { trackEvent, trackPageView } from '@/lib/analytics';
 
 /**
  * Next.js App Router の SPA 遷移で page_view を手動送信するトラッカー。
@@ -17,6 +17,13 @@ import { trackPageView } from '@/lib/analytics';
  * - 初回マウントも含めて送信（gtag('config') と二重になるが、GA4 はクライアント側で
  *   重複排除しないので、ここでは初回送信を skip するロジックを入れて二重送信を防ぐ）。
  * - GA 未設定 / gtag 未ロード時は dataLayer.push にフォールバック（analytics.ts側）。
+ *
+ * クリック計測（2026-10 「今日の流れ」利用計測）:
+ * - `data-ev="イベント名"` を持つ要素のクリックを委譲で拾って送る（Server Component の
+ *   Link にも属性だけで計測を付けられる）。`data-ev-xxx` はそのままパラメータ xxx になる。
+ * - /today の外にある /today 行きリンクのクリックは、属性なしでも `today_entry_click` を送る
+ *   （ヘッダー・下部ナビ・フッター内は `today_entry_nav_click`）。
+ *   どの面が /today へ送客したかは GA4 の pagePath（クリックが起きたページ）で分かる。
  */
 export function AnalyticsRouteTracker() {
   const pathname = usePathname();
@@ -43,6 +50,31 @@ export function AnalyticsRouteTracker() {
     trackPageView(pathname, searchStr || undefined);
     // ESLint: pathname と search のみ依存
   }, [pathname, search]);
+
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      const target = e.target as Element | null;
+      if (!target?.closest) return;
+      const el = target.closest<HTMLElement>('[data-ev]');
+      if (el?.dataset.ev) {
+        const params: Record<string, string> = {};
+        for (const [k, v] of Object.entries(el.dataset)) {
+          if (k.startsWith('ev') && k.length > 2 && v) params[k.slice(2).toLowerCase()] = v;
+        }
+        trackEvent(el.dataset.ev, params);
+      }
+      const a = target.closest<HTMLAnchorElement>('a[href^="/today"]');
+      if (a && !window.location.pathname.startsWith('/today')) {
+        // ヘッダー・下部ナビ・フッターの常設リンクは、本文中の導線と分けて数える
+        const inNav = !!a.closest('header, nav, footer');
+        trackEvent(inNav ? 'today_entry_nav_click' : 'today_entry_click', {
+          link_url: a.getAttribute('href') ?? '',
+        });
+      }
+    };
+    document.addEventListener('click', onClick, true);
+    return () => document.removeEventListener('click', onClick, true);
+  }, []);
 
   return null;
 }
