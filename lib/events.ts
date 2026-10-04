@@ -3149,28 +3149,35 @@ export function getAllEvents(ovMap?: EventOverridesMap): EventEntry[] {
   return getMergedEvents(ovMap);
 }
 
-/** 現在開催中のイベント（startDate <= today <= endDate） */
-export function getOngoingEvents(): EventEntry[] {
+/**
+ * 現在開催中のイベント（startDate <= today <= endDate）。
+ *
+ * ovMap: 実行時の上書き（`getRuntimeEventOverrides()`＝KV）。省略するとバンドルの
+ * event-overrides.json だけがマージされ、**管理画面で保存した画像・会期は反映されない**
+ * （2026-10-03: トップ「今週末のイベント」の画像差し替えが出なかった原因）。
+ * ページから呼ぶときは必ず渡すこと。
+ */
+export function getOngoingEvents(ovMap?: EventOverridesMap): EventEntry[] {
   const today = todayString();
-  return getMergedEvents().filter(
+  return getMergedEvents(ovMap).filter(
     (e) => isEventDateReliable(e) && e.startDate <= today && today <= e.endDate,
   );
 }
 
-/** 今週開催中 or 開催予定のイベント（今日から 7 日以内に始まる or 開催中） */
-export function getThisWeekEvents(): EventEntry[] {
+/** 今週開催中 or 開催予定のイベント（今日から 7 日以内に始まる or 開催中）。ovMap は getOngoingEvents と同じ */
+export function getThisWeekEvents(ovMap?: EventOverridesMap): EventEntry[] {
   const today = todayString();
   const weekLater = addDays(today, 7);
-  return getMergedEvents()
+  return getMergedEvents(ovMap)
     .filter((e) => isEventDateReliable(e) && e.endDate >= today && e.startDate <= weekLater)
     .sort((a, b) => a.startDate.localeCompare(b.startDate));
 }
 
-/** 今月開催のイベント */
-export function getThisMonthEvents(): EventEntry[] {
+/** 今月開催のイベント。ovMap は getOngoingEvents と同じ */
+export function getThisMonthEvents(ovMap?: EventOverridesMap): EventEntry[] {
   const today = todayString();
   const monthLater = addDays(today, 30);
-  return getMergedEvents()
+  return getMergedEvents(ovMap)
     .filter((e) => isEventDateReliable(e) && e.endDate >= today && e.startDate <= monthLater)
     .sort((a, b) => a.startDate.localeCompare(b.startDate));
 }
@@ -3189,9 +3196,10 @@ export function getUpcomingEventsNear(
   area: AreaSlug | string,
   cityLike?: string,
   limit = 3,
+  ovMap?: EventOverridesMap,
 ): { events: EventEntry[]; cityMatched: boolean } {
   const today = todayString();
-  const alive = getMergedEvents()
+  const alive = getMergedEvents(ovMap)
     .filter((e) => e.area === area && isEventDateReliable(e) && e.endDate >= today)
     .sort((a, b) => a.startDate.localeCompare(b.startDate));
   if (!cityLike) return { events: alive.slice(0, limit), cityMatched: false };
@@ -3456,15 +3464,11 @@ function scenePickFrom(scene: string, slug: string, fallback?: string): string {
 }
 
 export function eventHeroImage(e: EventEntry): string {
-  // 1) /admin/event-images 経由の上書き（lib/event-overrides.json）が最優先
-  // 動的import で循環依存を避ける
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const overrides = (require('./event-overrides.json') as Record<string, { hero?: string }>);
-  const ov = overrides[e.slug];
-  if (ov?.hero) return ov.hero;
-
-  // 2) hero が信頼できるパス（v2/ 配下や photos/ 等 ＝ /img/scenes/, /img/facilities/ もここ）ならそのまま使用
-  //    管理画面からアップロードした Vercel Blob のURL（KV override 経由で e.hero に載る）もここで通す
+  // 1) hero が信頼できるパス（v2/ 配下や photos/ 等 ＝ /img/scenes/, /img/facilities/ もここ）ならそのまま使用
+  //    管理画面からアップロードした Vercel Blob のURL（KV override 経由で e.hero に載る）もここで通す。
+  //    2026-10-03: 以前はバンドルの event-overrides.json を先に見ていたため、KV（実行時）の上書きが
+  //    バンドルに同じ slug の古い hero があると負けていた（すみだ水族館の差し替え画像が出なかった）。
+  //    実行時マージ済みの e.hero を先に採用し、バンドルは e.hero が信頼できないときの保険に下げる。
   if (
     e.hero &&
     (TRUSTED_HERO_PREFIXES.some((p) => e.hero!.startsWith(p)) ||
@@ -3472,6 +3476,13 @@ export function eventHeroImage(e: EventEntry): string {
   ) {
     return e.hero;
   }
+
+  // 2) /admin/event-images 経由の上書き（lib/event-overrides.json・バンドル）
+  // 動的import で循環依存を避ける
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const overrides = (require('./event-overrides.json') as Record<string, { hero?: string }>);
+  const ov = overrides[e.slug];
+  if (ov?.hero) return ov.hero;
 
   // 2.5) 公共施設キーワード（葛西水族館・美ら海・サンシャイン水族館 等）→ /img/facilities/ の実写
   const searchStr = `${e.title} ${e.venue ?? ''}`;

@@ -22,8 +22,9 @@ import { TopLikeTiles } from '@/components/top/TopLikeTiles';
 import { TopCategoryGrid, type TopCategory } from '@/components/top/TopCategoryGrid';
 import { getFileArticlesByCategory, getAllFileArticlesWithOverrides } from '@/lib/articles';
 import { getThisWeekEvents } from '@/lib/events';
+import { getRuntimeEventOverrides } from '@/lib/event-overrides';
 import { getSpotRanking } from '@/lib/spot-ranking';
-import { FEATURE_PAGES } from '@/lib/feature-pages';
+import { getTopFeaturePages } from '@/lib/feature-pages';
 import { POPULAR_ARTICLE_SLUGS } from '@/lib/popular-articles';
 import { pickTopPlan } from '@/lib/plans';
 import { spotToV2, featureToV2, articleToV2 } from '@/lib/v2-adapters';
@@ -50,6 +51,13 @@ const POPULAR_AREAS: AreaChip[] = [
   { t: '東京23区の駅から', href: '/station' },
   { t: '関東のスポット', href: '/spots' },
 ];
+/**
+ * 「よく読まれています」から一時的に外す slug。
+ * 2026-10-03 の人気記事更新で `saizeriya-kids-menu` が上位5件に入ったが、実験2の処置群
+ * （docs/experiments-active.md・順位判定 2026-10-21）なので、判定までトップからの新規リンクを増やさない。
+ * **2026-10-21 の判定後にこのセットを空にすること。**
+ */
+const POPULAR_HOLD_SLUGS: ReadonlySet<string> = new Set(['saizeriya-kids-menu']);
 /**
  * 既存サイトの全カテゴリ。SEO 主要導線として TOP に固定表示。
  * 順序は『きょうのこ』編集方針の重要度順。
@@ -88,9 +96,9 @@ export default async function HomePage() {
   // KV 上書き（admin で差し替えた hero 等）をマージしたメタを使う。
   // これでトップの「人気の記事」「新着記事」カードも編集後の画像を反映する。
   const allArticles = await getAllFileArticlesWithOverrides();
-  const popularArticles = POPULAR_ARTICLE_SLUGS.map((slug) =>
-    allArticles.find((a) => a.slug === slug),
-  ).filter((a): a is NonNullable<typeof a> => Boolean(a));
+  const popularArticles = POPULAR_ARTICLE_SLUGS.filter((slug) => !POPULAR_HOLD_SLUGS.has(slug))
+    .map((slug) => allArticles.find((a) => a.slug === slug))
+    .filter((a): a is NonNullable<typeof a> => Boolean(a));
   const latestArticles = allArticles.slice(0, 6);
 
   // 人気スポット: /ranking と同じ getSpotRanking() を使い、トップの順位と
@@ -122,7 +130,8 @@ export default async function HomePage() {
     ]),
   );
 
-  const featureCards = FEATURE_PAGES.slice(0, 4).map(featureToV2);
+  // 今の季節の特集を先頭に（夏休み特集が10月まで先頭に出ていたのを是正）
+  const featureCards = getTopFeaturePages(new Date().getMonth() + 1).map(featureToV2);
 
   // 実績上位5件（社長指示 2026-09-08: 6件目以降は出さない）。
   const popularRows: KkRowItem[] = popularArticles.slice(0, 5).map((a) => {
@@ -134,8 +143,10 @@ export default async function HomePage() {
     return { href: `/article/${a.slug}`, title: a.title, sub: v.tags?.slice(0, 2).join('・') || undefined, date: fmtDate(a.publishedAt), img: v.img, seed: a.slug };
   });
 
-  // 今週のイベント（編集部キュレーション）。0件なら表示しない
-  const weekEvents = getThisWeekEvents().slice(0, 6);
+  // 今週のイベント（編集部キュレーション）。0件なら表示しない。
+  // 管理画面の上書き（画像・会期）は KV にあるので、スポットと同様に実行時マップを渡す。
+  // 渡さないとバンドルの event-overrides.json だけになり、/admin/events/edit で差し替えた画像が出ない。
+  const weekEvents = getThisWeekEvents(await getRuntimeEventOverrides()).slice(0, 6);
   // 季節と行事カテゴリの新着記事は別セクション
   const seasonalRows: KkRowItem[] = getFileArticlesByCategory('gyouji')
     .filter((a) => !a.noindex)

@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 /**
- * 駅×条件ページの「需要実績 allowlist」を GSC 実データから再生成する。
+ * 駅×条件ページの「直近の需要実績」リストを GSC 実データから再生成する。
  * 出力: lib/station-cond-demand.ts（STATION_COND_DEMAND: Set<"slug/condition">）。
  *
- * 薄ページ剪定の二段ゲート（lib/station-cond-index.ts）が、これを「需要実証済み＝無条件index」
- * の判定に使う。GSC 90日で表示回数 >0 だった station×条件 combo を収集する。
+ * GSC 90日で表示回数 >0 だった station×条件 combo を収集する。lib/station-cond-index.ts の
+ * shouldRedirectStationCondition が「配信しない面を 404 でなく駅トップへ301するか」の判定に使う。
+ * index の判定には使わない（index 救済は凍結リスト lib/station-cond-index-allowlist.ts。
+ * 404 にした面の残存表示で剪定済みの面が index に戻るのを防ぐため。2026-09-26 に役割を分けた）。
+ * 何度再生成しても配信する面の数（ビルドページ数）は変わらず、変わるのはリダイレクトの対象だけ。
  *
  * 使い方: node scripts/gen-station-cond-demand.mjs [--days=90] [--lag=3]
  * 認証: scripts/gsc-report.mjs と同じ読み取り専用SA（credentials/google-indexing.json）。
@@ -76,7 +79,8 @@ for (const r of rows) {
 const arr = [...demand].sort();
 const body = `// 自動生成: node scripts/gen-station-cond-demand.mjs（最終更新は手動コミット日を参照）
 // GSC 直近${DAYS}日(${iso(start)}〜${iso(end)})で表示回数>0 だった station×条件 combo（"slug/condition"）。
-// 薄ページ剪定の二段ゲート(lib/station-cond-index.ts)で「需要実績あり=無条件index」に使う。
+// lib/station-cond-index.ts の shouldRedirectStationCondition で「配信しない面を駅トップへ301するか」に使う。
+// index の判定には使わない（index 救済は凍結リスト lib/station-cond-index-allowlist.ts）。
 export const STATION_COND_DEMAND: ReadonlySet<string> = new Set([
 ${arr.map((s) => `  ${JSON.stringify(s)},`).join('\n')}
 ]);

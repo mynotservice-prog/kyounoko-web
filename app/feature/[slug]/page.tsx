@@ -189,7 +189,7 @@ export default async function FeaturePage({ params }: Props) {
           <div className="kk-sec fv3-sec">
             <KkSectionTitle as="div" title="関連記事" />
             <div className="kk-rows">
-              {articles.slice(0, 8).map((a) => {
+              {articles.slice(0, 12).map((a) => {
                 const v = articleToV2(a);
                 return (
                   <Link key={a.slug} href={`/article/${a.slug}`} className="kk-row">

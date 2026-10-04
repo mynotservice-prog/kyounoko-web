@@ -153,7 +153,7 @@ youtubeSearch: 子連れ 焼肉 何歳から 安全 やけど 生焼け 誤嚥 �
 - **0-1歳・寝かせたい／下ろしたい**：フラットな座敷が便利。ただし座敷は網・コンロが子どもの手の高さに来やすいので、座る位置と見守りに注意。
 - **動き回る1-3歳**：抜け出しにくいベビーチェア＋テーブル席か、半個室が安心。掘りごたつは段差からの転落に注意し、段差のないフラット座敷を選べるとより安全です。
 - **声が気になる・ゆっくり食べたい**：個室・半個室が便利。[個室・座敷で子連れランチが安心なチェーン](/article/koshitsu-kodzure-lunch)も参考に。
-- **煙が気になる**：無煙ロースター＋ダクト直下席を予約時に相談。ベビーカーで入りたいときは[子連れ焼肉 ベビーカー入店 東京20選](/article/kodzure-yakiniku-stroller-tokyo-20)が役立ちます。
+- **煙が気になる**：無煙ロースター＋ダクト直下席を予約時に相談。ベビーカーで入りたいときは[子連れ焼肉、ベビーカーで入れる店は？東京10店](/article/kodzure-yakiniku-stroller-tokyo-20)が役立ちます。
 
 席のタイプや設備は店舗で差が大きいため、予約時に「子連れである」ことを伝えて相談するのがいちばん確実です。
 
@@ -255,7 +255,7 @@ A. 主要な焼肉チェーンは公式でアレルゲン情報を提供して�
 - [牛角の子連れ攻略（焼肉・煙対策）](/article/gyukaku-kodzure-koryaku)
 - [安楽亭の子連れ攻略（自然肉・無添加・座敷でゆっくり）](/article/anrakutei-kodzure-koryaku)
 - [子連れOK焼肉・しゃぶしゃぶ7選](/article/kodzure-yakiniku-shabu-7)
-- [子連れ焼肉 ベビーカー入店 東京20選](/article/kodzure-yakiniku-stroller-tokyo-20)
+- [子連れ焼肉、ベビーカーで入れる店は？東京10店](/article/kodzure-yakiniku-stroller-tokyo-20)
 - [しゃぶしゃぶ食べ放題3チェーン子連れ比較](/article/shabushabu-yakiniku-buffet-3chain)
 - [しゃぶしゃぶチェーン子連れランキング5社](/article/shabushabu-chain-kodzure-ranking-2026-5sha)
 

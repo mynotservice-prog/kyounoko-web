@@ -304,7 +304,7 @@ function AnswerCard({ answer, featured = false }: { answer: TodayAnswerResult; f
           <QuickMetaRow answer={answer} />
           <PreparedBlock answer={answer} />
           <TodayRecommendedItems answer={answer} />
-          <Link href={answer.href} className="answer-cta">
+          <Link href={answer.href} className="answer-cta" data-ev="today_answer_click">
             {isPlan ? 'プランの詳細を見る' : '詳細を見る'}
             <KkIcon name="arrow-right" size={16} sw={2} />
           </Link>
@@ -487,7 +487,7 @@ export default async function TodayPage({ searchParams }: Props) {
           return (
             <li key={play.id}>
               {article ? (
-                <Link href={`/article/${article.slug}#play-${play.id}`} className="home-play-card">
+                <Link href={`/article/${article.slug}#play-${play.id}`} className="home-play-card" data-ev="today_homeplay_click">
                   {inner}
                 </Link>
               ) : (
@@ -656,7 +656,7 @@ export default async function TodayPage({ searchParams }: Props) {
                 <span className="sep" aria-hidden="true"><KkIcon name="chevron-right" size={12} sw={2} /></span>
                 <span>今日の流れ</span>
               </nav>
-              <Link href={changeHref} className="td3-changepill">
+              <Link href={changeHref} className="td3-changepill" data-ev="today_change_condition">
                 <KkIcon name="swap" size={14} sw={2} />
                 条件を変更する
               </Link>
@@ -784,7 +784,7 @@ export default async function TodayPage({ searchParams }: Props) {
             <div className="td3-stgroup-lab">主要ターミナル</div>
             <div className="td3-stlist">
               {terminalChips.map((st) => (
-                <Link key={st.slug} href={`/today?${stationQs(st.slug)}`} className="td3-stitem">
+                <Link key={st.slug} href={`/today?${stationQs(st.slug)}`} className="td3-stitem" data-ev="today_plan_create" data-ev-method="chip" data-ev-station_slug={st.slug}>
                   {st.name}
                 </Link>
               ))}
@@ -792,7 +792,7 @@ export default async function TodayPage({ searchParams }: Props) {
             <div className="td3-stgroup-lab">子育て世帯に人気の駅</div>
             <div className="td3-stlist">
               {familyChips.map((st) => (
-                <Link key={st.slug} href={`/today?${stationQs(st.slug)}`} className="td3-stitem">
+                <Link key={st.slug} href={`/today?${stationQs(st.slug)}`} className="td3-stitem" data-ev="today_plan_create" data-ev-method="chip" data-ev-station_slug={st.slug}>
                   {st.name}
                 </Link>
               ))}
@@ -801,7 +801,7 @@ export default async function TodayPage({ searchParams }: Props) {
         ) : metroChips ? (
           <div className="td3-stlist">
             {metroChips.map((st) => (
-              <Link key={st.slug} href={`/today?${stationQs(st.slug)}`} className="td3-stitem">
+              <Link key={st.slug} href={`/today?${stationQs(st.slug)}`} className="td3-stitem" data-ev="today_plan_create" data-ev-method="chip" data-ev-station_slug={st.slug}>
                 {st.name}
               </Link>
             ))}

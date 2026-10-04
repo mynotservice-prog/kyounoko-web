@@ -127,7 +127,7 @@ legacyHero: /hero-ai/cat-family-dinner-01.webp
 
 **どこで確認するか**: 食べログ「席・設備」の「ボックス席」「個室あり」、または予約サイトでの席指定。
 
-**強いチェーン**: [子連れ焼肉店20選（東京）](/article/kodzure-yakiniku-stroller-tokyo-20)で紹介する個室焼肉、ジョナサン、ロイヤルホスト、しゃぶしゃぶチェーン、個室居酒屋。
+**強いチェーン**: [子連れ焼肉、ベビーカーで入れる店（東京10店）](/article/kodzure-yakiniku-stroller-tokyo-20)で紹介する個室焼肉、ジョナサン、ロイヤルホスト、しゃぶしゃぶチェーン、個室居酒屋。
 
 ### 1-12. アレルゲン表示（公式メニューでの確認）
 
@@ -186,7 +186,7 @@ legacyHero: /hero-ai/cat-family-dinner-01.webp
 | 2-3歳のお祝い | ロイヤルホスト / ジョナサン | 落ち着いた雰囲気＋デザートあり |
 | 4-6歳の冒険ご飯 | くら寿司 / スシロー | 子供が選んで楽しめる＋ビッくらポン等の達成感 |
 | 雨の日 | 駅直結モールのフードコート | 移動少なく段差なし、選択肢が多い |
-| 焼肉デビュー | [子連れ焼肉店20選](/article/kodzure-yakiniku-stroller-tokyo-20) | 個室・煙吸引・キッズメニュー揃った店を厳選 |
+| 焼肉デビュー | [子連れ焼肉、ベビーカーで入れる店（東京10店）](/article/kodzure-yakiniku-stroller-tokyo-20) | ベビーカー・個室・座敷・キッズメニューの公式の記載で整理 |
 | しゃぶしゃぶ | [しゃぶ葉](/article/shabuyou-kodzure-koryaku) | 食べ放題で年齢別の食欲差を吸収 |
 | 定食でしっかり | [やよい軒](/article/yayoiken-kodzure-koryaku) | 小ライス標準・座敷店舗あり |
 | 取り分け節約 | [サイゼリヤ](/article/kodzure-saize-koryaku) | 家族3人2,000円台、ミラノ風ドリア取り分け鉄板 |
@@ -249,7 +249,7 @@ legacyHero: /hero-ai/cat-family-dinner-01.webp
 - [ガスト完全攻略](/article/gusto-kodzure-koryaku) — クーポン活用と離乳食温め
 - [やよい軒完全攻略](/article/yayoiken-kodzure-koryaku) — 小ライス標準・座敷店舗
 - [しゃぶ葉完全攻略](/article/shabuyou-kodzure-koryaku) — 未就学児無料・小学生1,099円の食べ放題
-- [子連れ焼肉店20選（東京）](/article/kodzure-yakiniku-stroller-tokyo-20) — 個室＋ベビーカー入店OK
+- [子連れ焼肉、ベビーカーで入れる店（東京10店）](/article/kodzure-yakiniku-stroller-tokyo-20) — 個室＋ベビーカー入店OK
 - [子連れOKファミレス15選](/article/kodzure-famires-15sen) — サイゼ・ガスト・ジョナサン比較
 - [和食チェーン10選](/article/kodzure-washoku-chain-10) — 座敷率の高い和食店
 - [外食で子が食べる店の見極め方](/article/gaisyoku-ko-ga-taberu) — 5つのチェック項目と10選

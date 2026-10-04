@@ -1,0 +1,104 @@
+area	name	slug	判定	旧pricing	新pricing	公式URL
+saitama	明治なるほどファクトリー坂戸	-38w7	一致	adult=入館無料; elementary=入館無料; preschool=入館無料（4歳以上）; infant=4歳未満は入場不可		https://www.meiji.co.jp/learned/factory/faq/
+saitama	グリコピア・イースト	-2nro	一致	adult=見学無料（有料体験コーナーあり）; elementary=見学無料; preschool=見学無料; infant=見学無料		https://www.glico.com/jp/enjoy/experience/glicopia/east/
+saitama	東武動物公園	-fkqw	上書きあり	adult=1,900円（入園のみ）; elementary=1,000円; preschool=無料（未就学児）; infant=無料		（lib/spot-overrides.json に pricing 上書きあり・未編集）
+saitama	鉄道博物館	-qgf2	上書きあり	adult=1,600円; elementary=600円; preschool=300円（3歳以上）; infant=無料（2歳以下）		（lib/spot-overrides.json に pricing 上書きあり・未編集）
+saitama	トーベ・ヤンソンあけぼの子どもの森公園	-tbkb	一致	adult=無料; elementary=無料; preschool=無料; infant=無料		https://www.city.hanno.lg.jp/akebono/annai/2113.html
+saitama	ムーミンバレーパーク	-kses	上書きあり	adult=2,800円（1デーパス）; elementary=1,600円; preschool=無料（4歳未満）; infant=無料		（lib/spot-overrides.json に pricing 上書きあり・未編集）
+saitama	西武園ゆうえんち	-i2hd	上書きあり	adult=4,400円（1日券）; elementary=3,300円; preschool=2,200円（3歳以上）; infant=無料（2歳以下）		（lib/spot-overrides.json に pricing 上書きあり・未編集）
+saitama	埼玉県こども動物自然公園	-vinb	凍結	adult=700円; elementary=200円; preschool=無料（未就学児）; infant=無料		
+saitama	武蔵丘陵森林公園	-kfbn	一致	adult=450円; elementary=無料（中学生以下）; preschool=無料; infant=無料		https://www.shinrinkoen.jp/（JS描画のため公式ドメインの検索インデックスで大人450円・中学生以下無料を確認）
+saitama	NACK5スタジアム大宮・大宮公園	NACK5-uby5	修正	adult=無料; elementary=無料; preschool=無料; infant=無料		https://www.pref.saitama.lg.jp/omiya-park/shisetsu.html（pricingは一致、hiddenTipの乗り物料金を修正）
+saitama	所沢航空発祥記念館	-mgtu	確認不可	adult=520円; elementary=100円; preschool=無料（未就学児）; infant=無料		https://tam-web.jsf.or.jp/info20250708/（2025-09-01〜2027年3月末リニューアル休館中）
+saitama	むさしの村	-kbr7	修正	adult=1,400円（入園）; elementary=750円; preschool=無料（2歳以下）; infant=無料	adult=1,200円（入園）; elementary=650円; preschool=650円（3歳以上）; infant=無料（2歳以下）	https://www.musashinomura.co.jp/charge/
+saitama	ルミネ大宮	-7q7v	対象外（予算目安）	adult=ランチ1,200円〜; preschool=キッズメニューのある店あり		https://www.lumine.ne.jp/omiya/
+saitama	大宮タカシマヤ	-zs0f	対象外（予算目安）	preschool=キッズメニューのある店あり		https://www.takashimaya.co.jp/omiya/
+saitama	そごう大宮	-ss7v	対象外（予算目安）	preschool=キッズメニューのある店あり		https://www.sogo-seibu.jp/omiya/
+saitama	宮信観光ぶどう園	-7xbe	一致	adult=3,000円（中学生以上・食べ放題）; elementary=2,000円; preschool=1,500円（幼稚園児）; infant=500円（幼児）		https://miyashin.com/grape-picking/
+saitama	たいら栗園	-poi1	一致	adult=800円（小学生以上・税込）; preschool=300円（小学生未満）; infant=無料（1歳未満）		https://tairakurien.com/chesnut/
+saitama	恵農園・伊奈ファーム	-idpw	一致	adult=1株300円（区分なし）		https://meguminouen.com/pages/potato_digging
+chiba	佐倉きのこ園	-eem9	一致	adult=入園無料＋しいたけ100gあたり324円（持ち帰り）／330円（BBQ）; elementary=入園無料; preschool=入園無料; infant=入園無料		https://www.kinokoen.jp/kinokogari/
+chiba	東京ドイツ村	-l5nt	上書きあり	adult=1,000円（入園・車1台）; elementary=500円; preschool=無料（4歳未満）; infant=無料		（lib/spot-overrides.json に pricing 上書きあり・未編集）
+chiba	鴨川シーワールド	-812n	一致	adult=3,300円; elementary=2,000円; preschool=1,300円（4歳以上）; infant=無料（3歳以下）		https://www.kamogawa-seaworld.jp/price_ticket/admission/
+chiba	マザー牧場	-bv97	上書きあり	adult=1,500円; elementary=800円; preschool=無料（未就学児）; infant=無料		（lib/spot-overrides.json に pricing 上書きあり・未編集）
+chiba	ふなばしアンデルセン公園	-1e1o	一致	adult=900円; elementary=200円; preschool=100円（4歳以上）; infant=無料（3歳以下）		https://www.park-funabashi.or.jp/and/guide.html
+chiba	東京ディズニーランド	-nnnr	上書きあり	adult=7,900〜10,900円; elementary=4,700〜6,500円; preschool=4,700〜6,500円（4歳以上）; infant=無料（3歳以下）		（lib/spot-overrides.json に pricing 上書きあり・未編集）
+chiba	東京ディズニーシー	-e5gd	上書きあり	adult=7,900〜10,900円; elementary=4,700〜6,500円; preschool=4,700〜6,500円（4歳以上）; infant=無料（3歳以下）		（lib/spot-overrides.json に pricing 上書きあり・未編集）
+chiba	カンドゥー（イオンモール幕張新都心）	-2r1b	修正	adult=2,400円; elementary=4,400円; preschool=3,400円（3歳以上）; infant=無料（2歳以下）	adult=2,000〜2,500円; elementary=3,250〜4,500円; preschool=3,250〜4,500円（3歳以上）; infant=無料（3歳未満・アクティビティ体験不可）	https://www.kandu.co.jp/ticket/
+chiba	航空科学博物館	-8263	修正	adult=700円; elementary=300円; preschool=無料（未就学児）; infant=無料	adult=900円; elementary=300円; preschool=300円（4歳以上）; infant=無料（3歳以下）	https://www.aeromuseum.or.jp/guide/ ／ https://www.aeromuseum.or.jp/news/20250601/
+chiba	千葉市動物公園	-dojn	修正	adult=700円; elementary=無料（中学生以下）; preschool=無料; infant=無料	adult=800円; elementary=無料（中学生以下）; preschool=無料; infant=無料	https://www.city.chiba.jp/zoo/guide/index.html
+chiba	そごう千葉（千葉そごう）	-0xdp	対象外（予算目安）	preschool=キッズメニューのある店あり		https://www.sogo-seibu.jp/chiba/
+chiba	ペリエ千葉	-zl4c	対象外（予算目安）	adult=ランチ1,200円〜; preschool=キッズメニューのある店あり		https://www.perie.co.jp/chiba/
+chiba	三井ショッピングパーク ららぽーとTOKYO-BAY	TOKYO-BAY-va2l	対象外（予算目安）	adult=ランチ1,000円〜; preschool=キッズメニュー多数		https://mitsui-shopping-park.com/lalaport/tokyo-bay/
+chiba	ふなばしアンデルセン公園 にじの池	-7bh1	一致	adult=900円; elementary=200円; preschool=100円(4歳〜)		https://www.park-funabashi.or.jp/and/guide.html
+chiba	小川園	-xc0v	一致	adult=1,600円（食べ放題・小学生以上）; preschool=800円（3歳〜）		https://ogawaen.shopinfo.jp/pages/2932235/static
+chiba	小川梨園	-1a73	一致	adult=入園料200円＋収穫分（幸水1kg900円・豊水/新高850円）; infant=入園無料（3歳未満）		http://ogawa-nashien.com/?page_id=54
+chiba	高代園観光梨園	-4u4m	一致	adult=もぎ取り1kg950円（入園無料）		http://www.takadai.ne.jp/jiki/jiki.html
+chiba	成田ファームランド	-dnno	一致	adult=1株480円／3株1,200円（大人・子ども同額）; infant=幼児は1株無料		https://narita-farmland.com/tsumu-hori/satsumaimo/
+kanagawa	崎陽軒 横浜工場	-1spt	修正	adult=見学無料; elementary=見学無料; preschool=見学無料（3歳以上）; infant=3歳未満は入場不可	adult=見学無料; elementary=見学無料; preschool=見学無料; infant=見学無料	https://kiyoken.com/factory/ ／ https://kiyoken-yokohamafactory.resv.jp/
+kanagawa	津久井浜観光農園	-hi34	修正	adult=さつまいも掘り 5株1,500円（JAよこすか葉山公式・2026-09-18確認）／いちご狩り 2,000〜2,500円／みかん狩り 1,200円; elementary=みかん狩り 600円（3歳以上）; preschool=みかん狩り 600円（3歳以上）; infant=さつまいも掘りは1人5株 1,500円	adult=さつまいも掘り 5株1,500円（JAよこすか葉山公式・2026-09-18確認）／いちご狩り 2,000〜2,800円／みかん狩り 1,200円; elementary=みかん狩り 1,200円（小学生以上）; preschool=みかん狩り 600円（3歳以上）; infant=さつまいも掘りは1人5株 1,500円	https://ja-yokosukahayama.or.jp/tourism/
+kanagawa	日本民家園	-1cks	上書きあり	adult=500円; elementary=無料（高校生以下）; preschool=無料; infant=無料		（lib/spot-overrides.json に pricing 上書きあり・未編集）
+kanagawa	横浜・八景島シーパラダイス	-n9uc	修正	adult=3,300円（水族館のみ）〜5,600円（全施設）; elementary=2,000〜4,000円; preschool=1,150〜2,300円（4歳以上）; infant=無料（3歳以下）	adult=3,500円（水族館のみ）〜5,900円（ワンデーパス）; elementary=2,200〜4,300円; preschool=1,200〜2,600円（4歳以上）; infant=無料（3歳以下）	https://www.seaparadise.co.jp/price/ ／ https://www.seaparadise.co.jp/faq/
+kanagawa	よこはま動物園ズーラシア	-0q1d	一致	adult=800円; elementary=200円; preschool=無料; infant=無料		https://www.hama-midorinokyokai.or.jp/zoo/zoorasia/fee.php
+kanagawa	横浜アンパンマンこどもミュージアム	-3lg7	修正	adult=2,200〜2,600円; elementary=2,200〜2,600円; preschool=2,200〜2,600円（1歳以上全員）; infant=無料（1歳未満）	adult=2,200〜2,800円; elementary=2,200〜2,800円; preschool=2,200〜2,800円（1歳以上全員）; infant=無料（1歳未満）	https://www.yokohama-anpanman.jp/guide/
+kanagawa	新江ノ島水族館	-83v5	修正	adult=2,800円; elementary=1,400円; preschool=1,000円（3歳以上）; infant=無料（2歳以下）	adult=2,800円; elementary=1,300円; preschool=900円（3歳以上）; infant=無料（2歳以下）	https://www.enosui.com/basicinfo.php
+kanagawa	箱根彫刻の森美術館	-oib6	修正	adult=2,000円; elementary=1,000円（小中）; preschool=無料（未就学児）; infant=無料	adult=2,000円; elementary=800円（小中）; preschool=無料（未就学児）; infant=無料	https://www.hakone-oam.or.jp/info/
+kanagawa	原鉄道模型博物館	-im0s	修正	adult=1,200円; elementary=700円; preschool=500円（4歳以上）; infant=無料（3歳以下）	adult=1,500円; elementary=750円; preschool=750円（4歳以上）; infant=無料（3歳以下）	https://www.hara-mrm.com/guide/
+kanagawa	カップヌードルミュージアム横浜	-0dnc	一致	adult=500円; elementary=無料（高校生以下）; preschool=無料; infant=無料		https://www.cupnoodles-museum.jp/ja/yokohama/ ／ https://www.cupnoodles-museum.jp/ja/yokohama/attractions/mc-factory/
+kanagawa	川崎市 藤子・F・不二雄ミュージアム	F-414c	修正	adult=1,000円; elementary=500円; preschool=400円（4歳以上）; infant=無料（3歳以下）	adult=1,000円; elementary=500円; preschool=500円（4歳以上）; infant=無料（3歳以下）	https://fujiko-museum.com/access.html#ticket
+kanagawa	シルク博物館	-yp1b	修正	adult=500円; elementary=無料（中学生以下）; preschool=無料; infant=無料	adult=500円; elementary=100円（小・中・高校生）	https://www.silkcenter-kbkk.jp/museum/museum-visit/
+kanagawa	神奈川県立 生命の星・地球博物館	-zb2v	一致	adult=520円; elementary=無料（中学生以下）; preschool=無料; infant=無料		https://nh.kanagawa-museum.jp/visit/information.html
+kanagawa	小田原こどもの森公園わんぱくらんど	-45ei	修正	adult=無料; elementary=無料; preschool=無料; infant=無料		https://odawara-jigyo-kyokai.jp/wanpaku/wanpakuland（pricingは一致、hiddenTipの汽車料金を修正）
+kanagawa	こどもの国（横浜）	-seao	上書きあり	adult=600円; elementary=200円; preschool=200円（3歳以上）; infant=無料（2歳以下）		（lib/spot-overrides.json に pricing 上書きあり・未編集）
+kanagawa	辻堂海浜公園	-xmrt	一致	adult=無料（公園）; elementary=無料; preschool=無料; infant=無料		https://www.kanagawa-park.or.jp/tujidou/kotukoen.html
+kanagawa	湘南台文化センターこども館	-vp4m	修正	adult=無料; elementary=無料; preschool=無料; infant=無料	adult=300円（展示ホール）; elementary=100円（小・中学生）; preschool=無料（展示ホール・大人の同伴が必要）	https://www.kodomokan.jp/userguide/fee.html
+kanagawa	はまぎん こども宇宙科学館	-v5mu	凍結	adult=400円; elementary=200円; preschool=無料（未就学児）; infant=無料		
+kanagawa	江ノ島水族館前ビーチ・片瀬東浜	-ihyr	一致	adult=無料; elementary=無料; preschool=無料; infant=無料		（公共の海水浴場。入場料の設定なし）
+kanagawa	生田緑地	-ulqk	修正	adult=500円（民家園）; elementary=無料（高校生以下）; preschool=無料; infant=無料	adult=550円（日本民家園）; elementary=無料（中学生以下）; preschool=無料; infant=無料	https://www.nihonminkaen.jp/information.html
+kanagawa	横浜タカシマヤ レストラン（横浜駅西口）	-w0as	対象外（予算目安）	preschool=キッズメニューのある店あり		https://www.takashimaya.co.jp/yokohama/
+kanagawa	そごう横浜 レストラン街（横浜駅東口）	-943z	対象外（予算目安）	preschool=キッズメニューのある店あり		https://www.sogo-seibu.jp/yokohama/
+kanagawa	ランドマークプラザ（みなとみらい）	-iope	対象外（予算目安）	adult=ランチ1,200円〜; preschool=キッズメニューのある店あり		https://yokohama-landmark.jp/
+kanagawa	クイーンズスクエア横浜（みなとみらい）	-219s	対象外（予算目安）	adult=ランチ1,200円〜; preschool=キッズメニューのある店あり		https://www.qsy-tqc.jp/
+kanagawa	ジョイナス（横浜駅西口）	-lhes	対象外（予算目安）	adult=ランチ1,000円〜; preschool=キッズメニューのある店あり		https://www.sotetsu-joinus.com/
+kanagawa	辻堂海浜公園 ジャンボプール	-yrt1	修正	adult=850円; elementary=210円; preschool=無料(未就学児)	adult=850円; elementary=210円; preschool=210円（子ども＝小学生以下）	https://www.kanagawa-park.or.jp/tujidou/pool.html
+niigata	新潟県立自然科学館	-ogh5	一致	adult=580円; elementary=100円; preschool=無料（未就学児）; infant=無料		https://www.sciencemuseum.jp/
+niigata	マリンピア日本海	-vrzb	修正	adult=1,500円; elementary=600円; preschool=無料（未就学児）; infant=無料	adult=1,500円; elementary=600円; preschool=200円（4歳以上）; infant=無料（3歳以下）	https://www.marinepia.or.jp/info/
+toyama	魚津水族館	-xydk	修正	adult=1,100円; elementary=550円; preschool=無料（未就学児）; infant=無料	adult=1,000円; elementary=500円; preschool=200円（3歳以上）	https://www.uozu-aquarium.jp/ （料金案内PDF）
+toyama	ミラージュランド	-b09s	修正	adult=無料（入園）; elementary=乗り物各300-500円; preschool=乗り物各300-500円; infant=無料（一部乗り物）	adult=無料（入園）; elementary=乗り物各400〜800円（のりもの券200円×2〜4枚）; preschool=乗り物各400〜800円（3歳以上）; infant=遊具無料（0〜2歳）	https://www.mirageland.net/cost/ ／ https://www.mirageland.net/facility/attractions/
+ishikawa	のとじま水族館	-ow9l	修正	adult=1,890円; elementary=510円; preschool=無料（未就学児）; infant=無料	adult=1,890円; elementary=510円; preschool=510円（3歳以上）; infant=無料（3歳未満）	https://www.notoaqua.jp/guide/
+fukui	福井県立恐竜博物館	-hklq	一致	adult=1,000円; elementary=500円; preschool=無料（未就学児）; infant=無料		https://www.dinosaur.pref.fukui.jp/guide/fee.html
+fukui	越前松島水族館	-dbll	修正	adult=2,200円; elementary=1,100円; preschool=600円（3歳以上）; infant=無料（2歳以下）	adult=2,200円; elementary=1,200円; preschool=600円（3歳以上）; infant=無料（2歳以下）	https://www.echizen-aquarium.com/information/price-general.html
+shizuoka	富士サファリパーク	-8edw	修正	adult=3,200円; elementary=2,000円; preschool=無料（未就学児）; infant=無料	adult=3,200円; elementary=2,000円; preschool=2,000円（4歳以上）; infant=無料（3歳以下）	https://www.fujisafari.co.jp/ticket/
+shizuoka	伊豆アニマルキングダム	-h2vd	確認不可	adult=2,800円; elementary=1,400円; preschool=700円（4歳以上）; infant=無料（3歳以下）		（公式サイトにこの環境から到達できず。izu-kingdom.jp等はDNS解決不可）
+shizuoka	東海大学海洋科学博物館	-ymw3	閉館	adult=1,800円（共通券）; elementary=900円; preschool=無料（未就学児）; infant=無料		https://www.umi.muse-tokai.jp/（2024年10月末で本館の一般公開を終了）
+shizuoka	ぐりんぱ（富士山2合目）	-fmyc	修正	adult=1,300円（入園のみ）; elementary=850円; preschool=無料（3歳以下）; infant=無料	adult=1,100〜1,500円（入園のみ）; elementary=700〜1,100円; preschool=700〜1,100円（3歳以上）; infant=無料（2歳以下）	https://www.grinpa.com/hoursPrice.html
+nagano	茶臼山動物園	-mnbk	一致	adult=600円; elementary=100円（小中）; preschool=無料（未就学児）; infant=無料		https://www.chausuyama.com/institution.html
+gifu	世界淡水魚園水族館 アクア・トトぎふ	-yogo	修正	adult=1,780円; elementary=880円; preschool=440円（3歳以上）; infant=無料（2歳以下）	adult=1,780円; elementary=900円; preschool=500円（3歳以上）; infant=無料（2歳以下）	https://aquatotto.com/about/open/
+gifu	各務原市民公園	-59c0	一致	adult=無料; elementary=無料; preschool=無料; infant=無料		https://www.city.kakamigahara.lg.jp/kankobunka/kankou/1002755.html（入園料の記載なし＝料金設定なし）
+shiga	琵琶湖博物館	-fwjg	修正	adult=800円; elementary=無料（高校生以下）; preschool=無料; infant=無料	adult=840円; elementary=無料（高校生以下）; preschool=無料; infant=無料	https://www.biwahaku.jp/guide/price.html
+shiga	ブルーメの丘	-kp2f	上書きあり	adult=1,000円; elementary=600円; preschool=300円（4歳以上）; infant=無料（3歳以下）		（lib/spot-overrides.json に pricing 上書きあり・未編集）
+mie	鳥羽水族館	-nz74	一致	adult=2,800円; elementary=1,600円; preschool=800円（3歳以上）; infant=無料（2歳以下）		https://aquarium.co.jp/ryoukin/
+mie	志摩スペイン村	-5lrk	修正	adult=5,400円; elementary=3,600円; preschool=3,000円（3歳以上）; infant=無料（2歳以下）	adult=5,900円; elementary=4,100円; preschool=4,100円（3歳以上）; infant=無料（2歳以下・有料の大人1名につき2名まで）	https://www.parque-net.com/ticket/
+kagoshima	いおワールドかごしま水族館	-sh35	修正	adult=1,500円; elementary=750円; preschool=350円（4歳以上）; infant=無料（3歳以下）	adult=2,000円（鹿児島市外）／1,500円（市内）; elementary=1,000円（市外）／750円（市内）; preschool=無料（未就学児）; infant=無料	https://ioworld.jp/information（料金表画像）
+kagoshima	平川動物公園	-bkil	修正	adult=500円; elementary=無料（中学生以下）; preschool=無料; infant=無料	adult=1,000円（鹿児島市外）／750円（市内）; elementary=200円（市外）／150円（市内）; preschool=無料（幼児）; infant=無料	https://hirakawazoo.jp/importantinformation/20250901kakakukaitei/ ／ https://hirakawazoo.jp/info/amusement/
+tochigi	那須どうぶつ王国	-lrt8	一致	adult=2,900円; elementary=1,300円; preschool=1,300円（3歳以上）; infant=無料（3歳未満）		https://nasu-oukoku.com/?p=1122
+tochigi	那須ハイランドパーク	-m6fd	修正	adult=1,800円（入園）; elementary=1,300円; preschool=800円（3歳以上）; infant=無料（2歳以下）	adult=1,600円（入園）; elementary=800円; preschool=800円（3歳以上）; infant=無料（2歳以下）	https://www.nasuhai.co.jp/charge/
+tochigi	宇都宮動物園	-ydv5	修正	adult=1,400円（遊園地セット）; elementary=700円; preschool=700円（3歳以上）; infant=無料（2歳以下）	adult=1,600円（動物園・遊園地）; elementary=800円; preschool=800円（3歳以上）; infant=無料（2歳以下）	https://utsunomiya-zoo.com/営業時間・料金/
+tochigi	あしかがフラワーパーク	-zfbo	修正	adult=400〜2,300円（時期変動）; elementary=200〜1,200円; preschool=無料（未就学児）; infant=無料	adult=400〜2,300円（時期変動）; elementary=200〜1,200円; preschool=200〜1,200円（4歳以上）; infant=無料（3歳以下）	https://www.ashikaga.co.jp/fee.html
+tochigi	ツインリンクもてぎ（モビリティリゾートもてぎ）	-wwam	修正	adult=2,000円（入場）; elementary=1,200円; preschool=600円（3歳以上）; infant=無料（2歳以下）	adult=2,000円（入場）; elementary=1,000円; preschool=1,000円（3歳以上）; infant=無料（2歳以下）	https://www.mr-motegi.jp/fee_m/
+tochigi	日光江戸村	-jc4b	上書きあり	adult=1,300〜5,800円（施設別）; elementary=650〜3,000円; preschool=無料（未就学児）; infant=無料		（lib/spot-overrides.json に pricing 上書きあり・未編集）
+tochigi	りんどう湖ファミリー牧場	-eb58	上書きあり	adult=1,600円; elementary=800円; preschool=600円（3歳以上）; infant=無料（2歳以下）		（lib/spot-overrides.json に pricing 上書きあり・未編集）
+tochigi	宇都宮市子ども総合科学館	-fyee	確認不可	adult=550円; elementary=220円; preschool=無料（未就学児）; infant=無料		（運営元公式 tsm.utsunomiya.tochigi.jp にこの環境から到達できず。県条例の基準額は大人620円・小人230円で、現行値550円/220円と不一致の疑い。施設名も正式には「栃木県子ども総合科学館」）
+ibaraki	アクアワールド茨城県大洗水族館	-9xdq	一致	adult=2,300円; elementary=1,100円; preschool=400円（3歳以上）; infant=無料（2歳以下）		https://www.aquaworld-oarai.com/guide/price01/
+ibaraki	国営ひたち海浜公園	-kkom	一致	adult=450円; elementary=無料（中学生以下）; preschool=無料; infant=無料		https://www.hitachikaihin.jp/guide/ticket.html
+ibaraki	茨城県フラワーパーク	-is1o	修正	adult=900〜1,200円（時期変動）; elementary=400円; preschool=無料（未就学児）; infant=無料	adult=900〜1,800円（時期変動）; elementary=300〜600円（時期変動）; preschool=無料（未就学児）; infant=無料	https://www.flowerpark.or.jp/time-price/
+ibaraki	つくばエキスポセンター	-nmlf	修正	adult=500円; elementary=250円; preschool=無料（未就学児）; infant=無料	adult=600円; elementary=300円; preschool=300円（4歳以上）; infant=無料（3歳以下）	https://www.expocenter.or.jp/information/price_list/
+ibaraki	JAXA筑波宇宙センター	JAXA-3t16	修正	adult=無料; elementary=無料; preschool=無料; infant=無料		https://visit-tsukuba.jaxa.jp/guideline.html（pricingは一致、hiddenTipの見学ツアー無料を修正）
+ibaraki	国営ひたち海浜公園 大観覧車	-w4e1	修正	adult=500円（観覧車）; elementary=300円; preschool=300円（3歳以上）; infant=無料（2歳以下）	adult=600円（観覧車）; elementary=600円; preschool=600円（3歳以上）; infant=無料（2歳以下）	https://www.hitachikaihin.jp/pleasure/attraction.php
+ibaraki	大洗わくわく科学館	-hze2	修正	adult=350円; elementary=100円; preschool=無料（未就学児）; infant=無料	adult=200円; elementary=100円; preschool=無料（未就学児）; infant=無料	https://www.jaea.go.jp/09/wakuwaku/information/index.html
+ibaraki	地図と測量の科学館	-d67n	一致	adult=無料; elementary=無料; preschool=無料; infant=無料		https://www.gsi.go.jp/MUSEUM/p02.html
+ibaraki	さんろく果樹園	-407e	一致	adult=1,500円（中学生以上・1時間食べ放題）; preschool=1,100円（3歳以上）		https://www.sanroku-kajuen.jp/
+ibaraki	岡野果樹園	-zdrr	一致	adult=800円（梨狩り1時間食べ放題・中学生以上）; elementary=600円; preschool=400円（3歳以上）		https://ibaraki.okanokajuen.com/
+ibaraki	福田グリーン農園	-y3oh	一致	adult=550円（税別・栗拾い入園料）; elementary=440円; preschool=330円（3歳以上）		http://fukuda-green.jp/charge/
+ibaraki	かねこ農園	-w6al	修正	adult=550円（栗拾い体験）; elementary=440円（小〜高）; preschool=330円（3歳以上）		https://kaneko-kuri.jp/experience（pricingは一致、noteの持ち帰り価格2,000→2,200円をadmin-created.jsonで修正）
+ibaraki	らぽっぽ なめがたファーマーズヴィレッジ	-5xze	一致	adult=3,300円/名（30分掘り放題・2株・やきいも試食）		https://www.namegata-fv.jp/event/satsumaimo-festival-2026/

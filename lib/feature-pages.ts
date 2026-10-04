@@ -224,15 +224,29 @@ export const FEATURE_PAGES: FeaturePage[] = [
   },
   {
     slug: 'autumn-kids',
-    title: '【2026年】秋の子連れおでかけ・行事まとめ｜いも掘り・運動会・七五三・秋祭り',
+    title: '【2026年】秋の子連れおでかけ・行事まとめ｜いも掘り・果物狩り・紅葉・ハロウィン・七五三',
     hero: '/v2/seasons/autumn-banner.webp',
-    lede: 'いも掘り・運動会・七五三・秋祭りと、0〜6歳の秋の過ごし方を年齢別にまとめました。',
+    lede: 'いも掘り・栗拾い・ぶどう狩り・紅葉・ハロウィン・七五三と、0〜6歳の秋の過ごし方をまとめました。',
     intro:
       '秋は、夏の暑さがゆるんで子どもと外に出やすくなる一方、いも掘り・運動会・七五三・秋祭りと行事が一気に重なる季節です。0〜6歳は月齢差で「できること」が大きく変わるので、同じ行事でも0歳と5歳では準備も過ごし方も別物になります。きょうのこ編集部では、年齢別の過ごし方、行事ごとの持ち物と服装、当日の段取り、屋外が寒くなってきたときの切り替え先まで、秋に必要な情報を1ページに集めました。予定を詰め込みすぎず、行事の翌日は「動かない日」を置くと最後まで崩れません。',
+    // 2026-10-03: 9月に公開した収穫体験の地域記事（芋掘り3県・栗拾い・ぶどう/梨狩り）と
+    // 紅葉・ハロウィン・七五三の食事会を追加。10月に読まれる順に並べる（特集ページは先頭12本を表示）。
+    // ※ 実験4の処置群（mikangari-musashimurayama / mogitori-nerima / fureai-nouen-setagaya）は
+    //    判定（10/05・12/01）まで被リンクを増やさないため入れていない。
     articleSlugs: [
       'imohori-kanto-kodzure',
-      'undokai-bentou-mochimono-kamigata',
+      'imohori-kanagawa-kodzure',
+      'imohori-chiba-saitama-ibaraki-kodzure',
+      'imohori-kodzure-mochimono-fukusou',
+      'kurihiroi-kanto-kodzure',
+      'budougari-kanto-kodzure',
+      'nashigari-chiba-kodzure',
+      'koyou-kanto-kodzure-20',
+      'halloween-kodzure-events-2026',
+      'halloween-kasou-junbi',
       'shichigosan-nenrei-junbi',
+      'shichigosan-shokujikai-dokode',
+      'undokai-bentou-mochimono-kamigata',
       'aki-matsuri-kodzure-koryaku',
       'aki-0sai-sugoshikata',
       'aki-1sai-sugoshikata',
@@ -244,7 +258,7 @@ export const FEATURE_PAGES: FeaturePage[] = [
     // （北海道が先頭）で北の施設ばかりが並ぶ。秋に行く前提の首都圏スポットを名前で明示する。
     spotFilter: (s) => AUTUMN_SPOT_NAMES.has(s.name),
     maxSpots: 12,
-    themeTags: ['いも掘り', '運動会', '七五三', '秋祭り', '秋のおでかけ'],
+    themeTags: ['いも掘り', '果物狩り', '紅葉', 'ハロウィン', '七五三', '運動会'],
     faq: [
       {
         question: 'いも掘りは何歳から楽しめますか？',
@@ -272,4 +286,34 @@ export const FEATURE_PAGES: FeaturePage[] = [
 
 export function getFeaturePageBySlug(slug: string): FeaturePage | undefined {
   return FEATURE_PAGES.find((f) => f.slug === slug);
+}
+
+export type Season = 'spring' | 'summer' | 'autumn' | 'winter';
+
+export function seasonOf(month: number): Season {
+  if (month >= 3 && month <= 5) return 'spring';
+  if (month >= 6 && month <= 8) return 'summer';
+  if (month >= 9 && month <= 11) return 'autumn';
+  return 'winter';
+}
+
+/** 季節ごとの特集 slug（無い季節は undefined。トップの季節バナーと特集カードが共有する） */
+export const SEASON_FEATURE: Partial<Record<Season, string>> = {
+  autumn: 'autumn-kids',
+  summer: 'summer-vacation-kids',
+};
+
+/**
+ * トップの「特集」カードに出す特集を、今の季節を先頭にして返す。
+ * 2026-10-03: それまで `FEATURE_PAGES.slice(0, 4)` 固定だったため、秋になっても
+ * 先頭の夏休み特集が出続け、5番目の秋特集はトップに一度も出ていなかった。
+ * 今の季節の特集を先頭に置き、他の季節の特集は外す（通年の特集は配列順のまま）。
+ */
+export function getTopFeaturePages(month: number, limit = 4): FeaturePage[] {
+  const season = seasonOf(month);
+  const seasonSlugs = new Set(Object.values(SEASON_FEATURE));
+  const current = SEASON_FEATURE[season];
+  const head = current ? FEATURE_PAGES.filter((f) => f.slug === current) : [];
+  const evergreen = FEATURE_PAGES.filter((f) => !seasonSlugs.has(f.slug));
+  return [...head, ...evergreen].slice(0, limit);
 }

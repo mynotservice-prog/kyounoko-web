@@ -51,6 +51,7 @@ import { getSpotReservationOffer, getSpotTravelOffer } from '@/lib/reservation-c
 import { ReservationCTA } from '@/components/article/ReservationCTA';
 import { ShareBar } from '@/components/article/ShareBar';
 import { getUpcomingEventsNear } from '@/lib/events';
+import { getRuntimeEventOverrides } from '@/lib/event-overrides';
 import { UpcomingEventsNearby } from '@/components/event/UpcomingEventsNearby';
 import { getVenueAnnualEvents } from '@/lib/annual-events';
 import { VenueAnnualEvents } from '@/components/event/VenueAnnualEvents';
@@ -256,6 +257,7 @@ export default async function SpotPage({ params }: Props) {
     entry.area,
     spot.ward ?? spot.city,
     4,
+    await getRuntimeEventOverrides(),
   );
   const nearEvents = nearEventsRaw.filter((e) => !venueEventSlugs.has(e.slug)).slice(0, 3);
   const nearEventsTitle = nearEventsCityMatched

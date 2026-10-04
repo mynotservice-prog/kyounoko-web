@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { KkIcon } from '@/components/kk/KkIcon';
+import { trackEvent } from '@/lib/analytics';
 
 /**
  * 「今日の流れ」を保存するボタン。
@@ -42,6 +43,7 @@ export function SavePlanButton({ label, sub }: { label: string; sub?: string }) 
         : [{ href, label, sub, ts: Date.now() }, ...list].slice(0, 30);
       localStorage.setItem(KEY, JSON.stringify(next));
       setSaved(!exists);
+      if (!exists) trackEvent('today_plan_save');
     } catch {
       /* ignore */
     }
