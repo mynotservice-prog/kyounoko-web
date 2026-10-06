@@ -38,7 +38,7 @@
 import { unstable_cache } from 'next/cache';
 import overridesJson from './spot-overrides.json';
 import type { Spot } from './spots';
-import { isKvConfigured, kvGetForCache, kvGetStrict, kvSet } from './kv-store';
+import { isKvConfigured, kvGetForCache, kvGetStrict, kvSet, logOverridesCacheMiss } from './kv-store';
 
 /** 上書き可能なトップレベルのフィールド（文字列/enum）。 */
 export const SPOT_TEXT_FIELDS = [
@@ -139,7 +139,10 @@ const getCachedSpotOverrides = unstable_cache(
   async (): Promise<SpotOverridesMap> => {
     if (isKvConfigured()) {
       const fromKv = await kvGetForCache<SpotOverridesMap>(SPOT_OVERRIDES_KV_KEY);
-      if (fromKv) return fromKv;
+      if (fromKv) {
+        logOverridesCacheMiss(SPOT_OVERRIDES_KV_KEY, fromKv);
+        return fromKv;
+      }
     }
     return BUNDLED_SPOT_OVERRIDES;
   },

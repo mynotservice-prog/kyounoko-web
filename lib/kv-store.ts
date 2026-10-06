@@ -102,3 +102,15 @@ export async function kvGetForCache<T>(key: string): Promise<T | null> {
   }
   return p;
 }
+
+/**
+ * 調査用ログ（2026-10-06）。unstable_cache の内側＝キャッシュに無かったときだけ通る場所から呼ぶ。
+ * 同じデプロイで何度も出るなら、その値はデータキャッシュに保存できていない
+ * （1件 2MB 上限。Next の判定は文字数なので、日本語が多い値はバイト数で超えても警告が出ない）。
+ * ビルド中は全ページが内側を通るので出さない。原因が確定したら消す。
+ */
+export function logOverridesCacheMiss(key: string, value: unknown): void {
+  if (IS_BUILD) return;
+  const json = JSON.stringify(value);
+  console.log(`[kv] cache miss ${key} chars=${json.length} bytes=${Buffer.byteLength(json)}`);
+}
