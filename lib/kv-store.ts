@@ -88,19 +88,91 @@ const IS_BUILD = process.env.NEXT_PHASE === 'phase-production-build';
 const buildMemo = new Map<string, Promise<unknown>>();
 
 export async function kvGetForCache<T>(key: string): Promise<T | null> {
-  const read = async (): Promise<T | null> => {
+  return readForCache(key, async () => {
     const r = await kvGetStrict<T>(key);
     if (!r.ok) throw new Error(`KV read failed: ${r.error}`);
     return r.value;
-  };
+  });
+}
+
+function readForCache<V>(memoKey: string, read: () => Promise<V>): Promise<V> {
   if (!IS_BUILD) return read();
-  let p = buildMemo.get(key) as Promise<T | null> | undefined;
+  let p = buildMemo.get(memoKey) as Promise<V> | undefined;
   if (!p) {
     p = read();
-    buildMemo.set(key, p);
-    p.catch(() => buildMemo.delete(key));
+    buildMemo.set(memoKey, p);
+    p.catch(() => buildMemo.delete(memoKey));
   }
   return p;
+}
+
+// ── Hash（1キーに field ごとの値を持つ）────────────────────────────
+// スポット上書きを slug ごとに分けて持つために使う。値は @vercel/kv が JSON で出し入れする。
+
+type KvRead<V> = { ok: true; value: V | null } | { ok: false; error: string };
+
+/** Hash 全体を読む。読み込み失敗と「キーが無い」（value: null）を区別する。 */
+export async function kvHGetAllStrict<T>(key: string): Promise<KvRead<Record<string, T>>> {
+  const c = getClient();
+  if (!c) return { ok: false, error: 'KV not configured' };
+  try {
+    return { ok: true, value: ((await c.hgetall(key)) as Record<string, T> | null) ?? null };
+  } catch (e) {
+    const error = e instanceof Error ? e.message : String(e);
+    console.error('[kv] hgetall failed', key, error);
+    return { ok: false, error };
+  }
+}
+
+/** unstable_cache の中から呼ぶ Hash 読み込み（kvGetForCache と同じ約束: 失敗は例外・ビルド中は1回）。 */
+export async function kvHGetAllForCache<T>(key: string): Promise<Record<string, T> | null> {
+  return readForCache(`hash:${key}`, async () => {
+    const r = await kvHGetAllStrict<T>(key);
+    if (!r.ok) throw new Error(`KV read failed: ${r.error}`);
+    return r.value;
+  });
+}
+
+/** Hash の1 field を読む。読み込み失敗と「field が無い」（value: null）を区別する。 */
+export async function kvHGetStrict<T>(key: string, field: string): Promise<KvRead<T>> {
+  const c = getClient();
+  if (!c) return { ok: false, error: 'KV not configured' };
+  try {
+    return { ok: true, value: ((await c.hget<T>(key, field)) as T | null) ?? null };
+  } catch (e) {
+    const error = e instanceof Error ? e.message : String(e);
+    console.error('[kv] hget failed', key, field, error);
+    return { ok: false, error };
+  }
+}
+
+async function kvWrite(label: string, key: string, run: (c: VercelKV) => Promise<unknown>): Promise<boolean> {
+  const c = getClient();
+  if (!c) return false;
+  try {
+    await run(c);
+    lastSetError = null;
+    return true;
+  } catch (e) {
+    lastSetError = e instanceof Error ? e.message : String(e);
+    console.error(`[kv] ${label} failed`, key, lastSetError);
+    return false;
+  }
+}
+
+/** Hash に field をまとめて書く。失敗理由は getLastKvSetError() で取れる。 */
+export function kvHSet(key: string, fields: Record<string, unknown>): Promise<boolean> {
+  return kvWrite('hset', key, (c) => c.hset(key, fields));
+}
+
+/** Hash から field を消す。 */
+export function kvHDel(key: string, field: string): Promise<boolean> {
+  return kvWrite('hdel', key, (c) => c.hdel(key, field));
+}
+
+/** キーごと消す（移行のやり直しで Hash を空にするため）。 */
+export function kvDel(key: string): Promise<boolean> {
+  return kvWrite('del', key, (c) => c.del(key));
 }
 
 /**
