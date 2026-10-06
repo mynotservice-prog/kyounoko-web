@@ -76,7 +76,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const entry = getSpotBySlug(slug, await getRuntimeSpotOverrides());
   if (!entry) return { title: 'スポットが見つかりません' };
   const { spot } = entry;
-  const category = SPOT_CATEGORY_LABEL[spot.category] ?? spot.category;
+  const category = spot.categoryLabel ?? SPOT_CATEGORY_LABEL[spot.category] ?? spot.category;
   const location = spot.ward ?? spot.city ?? '';
   // タイトル長の適応（2026-07-31）:
   // spot.name 自体にキャッチコピーが入っている登録が多く、そこへ固定の接尾辞
@@ -200,7 +200,7 @@ export default async function SpotPage({ params }: Props) {
   const entry = getSpotBySlug(slug, ovMap);
   if (!entry) notFound();
   const { spot } = entry;
-  const category = SPOT_CATEGORY_LABEL[spot.category] ?? spot.category;
+  const category = spot.categoryLabel ?? SPOT_CATEGORY_LABEL[spot.category] ?? spot.category;
   const location = spot.ward ?? spot.city ?? '';
 
   // スポット種別に応じたネット予約/チケットCTA（VC）。env 未設定なら null（非表示）。

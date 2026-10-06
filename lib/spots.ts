@@ -124,6 +124,8 @@ export type Spot = {
   imageKind?: '実写' | '提供' | 'streetview' | 'UGC' | 'イメージ';
   /** 画像の出典/クレジット（例: '◯◯市提供' / 'by ゆうママ'）。 */
   imageCredit?: string;
+  /** カテゴリの表示名をスポット単位で差し替える（例: 喫茶店を「子連れOKカフェ」と表示）。絞り込みや集計は category のまま */
+  categoryLabel?: string;
   budget?: 'free' | 'low' | 'mid' | 'high';  // 入園料目安
   // ---- Instagram人気アカウントから学んだ情報密度UP項目 ----
   pricing?: {
