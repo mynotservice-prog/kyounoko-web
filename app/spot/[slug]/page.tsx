@@ -395,7 +395,7 @@ export default async function SpotPage({ params }: Props) {
   const stationWalkLabel = nearestStationName
     ? `${nearestStationName}${spot.walkMinutes ? ` 徒歩${spot.walkMinutes}分` : ''}`
     : null;
-  const budgetLabel =
+  const budgetLabel = spot.budgetLabel ? spot.budgetLabel :
     spot.budget === 'free' ? '無料'
       : spot.budget === 'low' ? '〜1,000円'
         : spot.budget === 'mid' ? '1,000〜3,000円'

@@ -127,6 +127,8 @@ export type Spot = {
   /** カテゴリの表示名をスポット単位で差し替える（例: 喫茶店を「子連れOKカフェ」と表示）。絞り込みや集計は category のまま */
   categoryLabel?: string;
   budget?: 'free' | 'low' | 'mid' | 'high';  // 入園料目安
+  /** 「料金の目安」の表示をスポット単位で差し替える（例: '〜1,500円'）。絞り込みは budget のまま */
+  budgetLabel?: string;
   // ---- Instagram人気アカウントから学んだ情報密度UP項目 ----
   pricing?: {
     adult?: string;      // '2,300円'
