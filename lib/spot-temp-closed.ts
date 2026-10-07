@@ -28,6 +28,12 @@ export type TempClosure = {
 };
 
 export const SPOT_TEMP_CLOSED: Record<string, TempClosure> = {
+  所沢航空発祥記念館: {
+    from: '2025-09-01',
+    to: '2027-03-31',
+    note: '大規模リニューアル工事のため長期休館中です（2025年9月1日〜2027年3月末予定。記念館の駐車場も閉鎖）。再開日は公式サイトでご確認ください。',
+    source: 'https://tam-web.jsf.or.jp/',
+  },
   日本科学未来館: {
     from: '2026-10-01',
     to: '2027-04-22',

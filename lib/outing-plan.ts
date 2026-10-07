@@ -38,6 +38,11 @@ import type { AreaSlug } from './area';
 import { pickTopPlan, type PlanMeta } from './plans';
 import type { Weather } from './types';
 import { getVerifiedStores, type VerifiedStore } from './station-verified-stores';
+import { getSpotHours, isSpotOpenOn, spotHoursLine } from './spot-hours';
+import { isSpotAvailableNow } from './spot-temp-closed';
+import { SPOT_CLOSED } from './spot-closed';
+import { getTokyoNow } from './date';
+import { getSeasonState, getSpotSeason } from './spot-season';
 import {
   getIndieRestaurantsByStation,
   INDIE_GENRE_LABEL,
@@ -76,6 +81,8 @@ export type OutingSlot = {
   plan?: PlanMeta;
   /** お昼スロットの子連れ設備（ベビーチェア等） */
   facets?: string[];
+  /** 午前・午後の行き先の、公式の休み・営業時間（lib/spot-hours.ts にあるスポットだけ） */
+  hoursLine?: string;
   /** 前スロットからの移動表示 */
   move?: OutingMove;
   tier: CoherenceTier;
@@ -117,6 +124,26 @@ function areaKeyOf(st: AnyStation): string {
 }
 
 const NON_RESTAURANT = (s: Spot) => s.category !== 'restaurant';
+
+const WATER_PLAY_NAME = /じゃぶじゃぶ|ジャブジャブ|水遊び場|プール$/;
+
+/**
+ * 季節ものを、時期外に案内しない。
+ * - 会期データ（lib/spot-season.ts）があるスポットは、いま会期中の窓が1つも無ければ外す。
+ * - 収穫体験・季節カテゴリ（梨狩り・じゃぶじゃぶ池など）は、会期データか営業期間（lib/spot-hours.ts の
+ *   openSeason）で「いま営業中」と分かるものだけ出す。時期が分からないものは勧めない。
+ */
+function inSeasonNow(s: Spot): boolean {
+  const windows = getSpotSeason(s.name);
+  if (windows.length) return windows.some((w) => getSeasonState(w) === 'open');
+  if (s.category === 'harvest' || s.category === 'seasonal') return Boolean(getSpotHours(s.name)?.openSeason);
+  // 名前が水遊び場で、営業期間のデータが無いもの（公式で期間を読めなかった池）は、6〜9月の外では出さない
+  if (WATER_PLAY_NAME.test(s.name) && !getSpotHours(s.name)?.openSeason) {
+    const m = getTokyoNow().month;
+    return m >= 6 && m <= 9;
+  }
+  return true;
+}
 
 function ageOk(s: Spot, age?: AgeTag): boolean {
   if (!age) return true;
@@ -169,10 +196,18 @@ function pickSpotCascade(
   viaStationName?: string;
   distanceKm?: number;
 } | null {
+  // 今日（JST）が定休日・営業期間外のスポット、長期休館中・閉館済みのスポットは案内しない。
+  // 休みのデータが無いスポットは外さない（開いているとも休みとも分からない）。
+  const today = getTokyoNow();
+  const todayIso = `${today.year}-${String(today.month).padStart(2, '0')}-${String(today.day).padStart(2, '0')}`;
   const filt = (list: Spot[]) =>
     list.filter(
       (s) =>
         NON_RESTAURANT(s) &&
+        !SPOT_CLOSED[s.name] &&
+        isSpotAvailableNow(s.name, todayIso) &&
+        isSpotOpenOn(s.name, today) &&
+        inSeasonNow(s) &&
         ageOk(s, q.age) &&
         (!strictWeather || weatherOk(s, q.weather)) &&
         !exclude.has(s.name),
@@ -712,6 +747,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
       kind: 'spot',
       spot: morning.spot,
       spotSlug: spotToSlug(morning.spot, slugArea),
+      hoursLine: spotHoursLine(morning.spot.name) ?? undefined,
       move: moveTextForSpot(morning.tier, stationName, regionLabel, morning.spot, morning.walkMinutes, morning.viaStationName, morning.distanceKm),
       tier: morning.tier,
     });
@@ -764,6 +800,7 @@ export function buildOutingPlan(q: OutingQuery): OutingPlan | null {
       kind: 'spot',
       spot: afternoon.spot,
       spotSlug: spotToSlug(afternoon.spot, slugArea),
+      hoursLine: spotHoursLine(afternoon.spot.name) ?? undefined,
       move: moveTextForSpot(afternoon.tier, stationName, regionLabel, afternoon.spot, afternoon.walkMinutes, afternoon.viaStationName, afternoon.distanceKm),
       tier: afternoon.tier,
     });

@@ -172,6 +172,7 @@ function SlotCard({ slot }: { slot: OutingSlot }) {
         </span>
       )}
       {meta && <p className="td3-slot-desc">{meta}</p>}
+      {slot.hoursLine && <p className="td3-slot-hours">{slot.hoursLine}（公式サイトの記載。臨時の休みは公式でご確認ください）</p>}
       {slot.facets && slot.facets.length > 0 && <FacetChips facets={slot.facets} />}
       {slot.kind !== 'homeplan' && <FacilityTiles spot={slot.spot} />}
     </div>

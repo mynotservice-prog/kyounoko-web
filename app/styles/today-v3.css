@@ -273,6 +273,7 @@
   display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover;
 }
 .today-v3 .td3-slot-desc { margin: 8px 0 0; font-size: 15px; line-height: 1.9; color: var(--kk-ink); }
+.today-v3 .td3-slot-hours { margin: 6px 0 0; font-size: 12.5px; line-height: 1.7; color: var(--kk-ink-mute); }
 
 /* 設備・子連れ条件のバッジ（オレンジ/墨/白のみ） */
 .today-v3 .td3-facs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
