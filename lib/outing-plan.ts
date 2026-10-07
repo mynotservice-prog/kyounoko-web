@@ -37,6 +37,7 @@ import {
 import type { AreaSlug } from './area';
 import { pickTopPlan, type PlanMeta } from './plans';
 import type { Weather } from './types';
+import { getVerifiedStores, type VerifiedStore } from './station-verified-stores';
 import {
   getIndieRestaurantsByStation,
   INDIE_GENRE_LABEL,
@@ -401,10 +402,76 @@ export function lunchCandidates(
   // 近接の登録店が無い駅向け。「家族で入れるファミレス」を先頭に出す（IKEA等の特殊店は降格）。
   // 駅ごとに先頭を回転させ、どの空白駅でも同じ店ばかりにならないようにする。
   const chainRank = chainRankFor(anchorSlug);
-  const chain = TOKYO_RESTAURANTS.filter((s) => isRest(s) && s.ward === '複数').sort(
+  const chainAll = TOKYO_RESTAURANTS.filter((s) => isRest(s) && s.ward === '複数').sort(
     (a, b) => chainRank(a) - chainRank(b) || byFacets(a, b),
   );
+  // 照合済みの駅では、徒歩10分圏に実在を確認できたチェーンだけを、店名・距離つきで返す。
+  // （以前は実在を確かめずに「どの駅にもある」前提で出していた。2026-10 の照合で、駅ページに
+  //  表示していたチェーンのうち実在したのは3〜4割だった。）
+  const chain = isStationChainVerified(anchorSlug)
+    ? chainAll.flatMap((s) => {
+        const store = nearestVerifiedStore(anchorSlug, s.name);
+        return store ? [withVerifiedStore(s, store)] : [];
+      })
+    : chainAll;
   return { ward, chain };
+}
+
+// 「どの駅にもある」前提のチェーン枠（TOKYO_RESTAURANTS の ward:'複数'）→ 駅ページのチェーンslug。
+// 駅ごとの実在確認（lib/station-verified-stores.ts）と突き合わせるための対応表。
+// ここに無いチェーン（IKEA・ビッグボーイ・和食さと 等）は実在を確かめる手段が無いので、
+// 照合済みの駅では候補に出さない。
+const CHAIN_SPOT_TO_SLUG: Record<string, string> = {
+  ココス: 'cocos',
+  ガスト: 'gusto',
+  サイゼリヤ: 'saizeriya',
+  くら寿司: 'kura-sushi',
+  スシロー: 'sushiro',
+  ジョナサン: 'jonathan',
+  デニーズ: 'denny-s',
+  バーミヤン: 'bamiyan',
+  ロイヤルホスト: 'royal-host',
+  びっくりドンキー: 'bikkuri-donkey',
+  マクドナルド: 'mcdonalds',
+  モスバーガー: 'mos-burger',
+  ケンタッキーフライドチキン: 'kfc',
+  フレッシュネスバーガー: 'freshness-burger',
+  リンガーハット: 'ringer-hut',
+  丸亀製麺: 'marugame',
+  なか卯: 'nakau',
+  松屋: 'matsuya',
+  すき家: 'sukiya',
+  吉野家: 'yoshinoya',
+  ミスタードーナツ: 'mister-donut',
+  焼肉きんぐ: 'yakiniku-king',
+  しゃぶ葉: 'shabu-yo',
+  かっぱ寿司: 'kappa-sushi',
+  はま寿司: 'hama-sushi',
+  コメダ珈琲店: 'komeda',
+};
+
+/** 照合済みの駅で、そのチェーンのいちばん近い実在店（無ければ undefined）。 */
+function nearestVerifiedStore(anchorSlug: string | undefined, chainSpotName: string): VerifiedStore | undefined {
+  if (!anchorSlug) return undefined;
+  const chainSlug = CHAIN_SPOT_TO_SLUG[chainSpotName];
+  if (!chainSlug) return undefined;
+  // stores はチェーンごとに駅から近い順で並んでいる（scripts/station-verify/gen_ts.py）
+  return getVerifiedStores(anchorSlug)?.stores.find((st) => st.chain === chainSlug);
+}
+
+/** その駅が公式店舗検索で照合済みか（照合済みなら、実在を確認できたチェーンだけを候補にする）。 */
+export function isStationChainVerified(anchorSlug: string | undefined): boolean {
+  return Boolean(anchorSlug && getVerifiedStores(anchorSlug));
+}
+
+/** 実在店の店名・距離を添えたチェーン枠（スポット名は変えない＝/spot へのリンクはそのまま）。 */
+function withVerifiedStore(s: Spot, store: VerifiedStore): Spot {
+  return {
+    ...s,
+    city: `${store.name}（${store.distance}）`,
+    // 設備の表示（ベビーチェア等）はチェーン共通の目安で、この店で確かめたものではない
+    note: `${store.name}（${store.distance}・${store.address}）。設備は店舗によって違うので、行く前に公式ページでご確認を。`,
+  };
 }
 
 // チェーンフォールバックの優先順（家族で入れる定番ファミレス・回転寿司・麺類）。
@@ -488,19 +555,37 @@ function pickLunch(
   anchorSlug?: string,
 ): { spot: Spot; tier: CoherenceTier; href?: string; moveText?: string } | null {
   const at = <T,>(list: T[]) => list[((variant % list.length) + list.length) % list.length];
-  // ① 駅近の個人店（駅×個人店データ・子連れ設備スコア順）。チェーンより先に出す。
+  const { ward, chain } = lunchCandidates(areaKey, regionLabel, q, anchorSlug);
+  const verified = isStationChainVerified(anchorSlug);
+  // 照合済みの駅のチェーンは「この駅の徒歩10分圏に実在する店」なので、駅近の候補として扱える。
+  const stationChains = verified ? chain : [];
+  type Pick = { spot: Spot; tier: CoherenceTier; href?: string; moveText?: string };
+  const chainPick = (sp: Spot): Pick => ({
+    spot: sp,
+    tier: 'station',
+    href: `/station/${anchorSlug}#section-chains`,
+    moveText: sp.city,
+  });
+  // ① 駅近の個人店（駅×個人店データ・子連れ設備スコア順）。最初の候補は個人店のまま。
+  //    「別の候補」を押したときは、実在を確認した駅近のファミリー向けチェーンと交互に出す。
   const indies = indieLunchCandidates(anchorSlug);
   if (indies.length) {
-    const r = at(indies);
-    return {
+    const indiePicks: Pick[] = indies.map((r) => ({
       spot: indieToLunchSpot(r),
       tier: 'station',
       href: `/station/${anchorSlug}#section-indies`,
       moveText: r.area,
-    };
+    }));
+    const chainPicks = stationChains.slice(0, 6).map(chainPick);
+    const mixed: Pick[] = [];
+    for (let i = 0; i < Math.max(indiePicks.length, chainPicks.length); i++) {
+      if (indiePicks[i]) mixed.push(indiePicks[i]);
+      if (chainPicks[i]) mixed.push(chainPicks[i]);
+    }
+    return at(mixed);
   }
-  // ② 区/市内の実店舗スポット → ③ 全国ファミリー向けチェーン
-  const { ward, chain } = lunchCandidates(areaKey, regionLabel, q, anchorSlug);
+  // ② 駅近に実在を確認したチェーン → ③ 区/市内の実店舗スポット → ④ 全国ファミリー向けチェーン（未照合の駅のみ）
+  if (stationChains.length) return chainPick(at(stationChains));
   if (ward.length) return { spot: at(ward), tier: 'ward' };
   if (chain.length) return { spot: at(chain), tier: 'chain' };
   return null;

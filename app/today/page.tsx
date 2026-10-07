@@ -19,6 +19,7 @@ import {
   resolveOutingAnchor,
   type OutingPlan,
 } from '@/lib/outing-plan';
+import { getVerifiedStores } from '@/lib/station-verified-stores';
 import { OutingPlanView, LunchListView } from '@/components/today/OutingPlanView';
 import { OmakasePlanButton } from '@/components/today/OmakasePlanButton';
 import { TodayConditionForm } from '@/components/today/TodayConditionForm';
@@ -596,6 +597,8 @@ export default async function TodayPage({ searchParams }: Props) {
               ageLabel={ageLabel}
               indies={indieRests}
               indieHref={indieHref}
+              chainVerifiedAt={anchor.stationSlug ? getVerifiedStores(anchor.stationSlug)?.verifiedAt : undefined}
+              chainHref={anchor.stationSlug ? `/station/${anchor.stationSlug}#section-chains` : undefined}
             />
             <KkFooter />
           </div>
