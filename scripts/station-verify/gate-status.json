@@ -1,0 +1,422 @@
+{
+ "starbucks|グランスタ東京B1店": {
+  "gate": "inside",
+  "evidence": "B1 : スクエア ゼロエリア 改札内",
+  "source": "https://www.gransta.jp/shop/search.html?po=di_ca"
+ },
+ "starbucks|グランスタ八重洲店": {
+  "gate": "outside",
+  "evidence": "B1 改札外",
+  "source": "https://www.gransta.jp/shop/search.html?po=di_ca"
+ },
+ "starbucks|エチカフィット銀座店": {
+  "gate": "outside",
+  "evidence": "Starbucks Coffee … フロア： 改札外",
+  "source": "https://www.metropro-sc.jp/echikafit-ginza/"
+ },
+ "kushikatsu-tanaka|串カツ田中 東京ドーム店": {
+  "gate": "unknown",
+  "evidence": "住所「東京ドーム内1Fコンコース」。鉄道の改札ではなく球場内。入場券の要否を書いた原文は未確認",
+  "source": "https://www.tokyo-dome.co.jp/dome/floor/modal/tanaka.html"
+ },
+ "starbucks|飯田橋メトロピア店": {
+  "gate": "inside",
+  "evidence": "図からの読み取り: 構内立体図でMP「スターバックスコーヒー」の引出線が改札内（黄色）のB1Fを指す",
+  "source": "https://www.tokyometro.jp/station/yardmap_img/figure_yardmap_iidabashi_all.jpg"
+ },
+ "starbucks|都営神保町駅店": {
+  "gate": "inside",
+  "evidence": "神保町駅（都営地下鉄三田線・新宿線）改札内にあります",
+  "source": "https://store.starbucks.co.jp/detail-1775/"
+ },
+ "doutor|ドトールコーヒーショップ 霞ケ関メトロピア店": {
+  "gate": "unknown",
+  "evidence": "構内立体図にドトールの印が2つ（桜田通り方面改札の外側＝灰色と内側＝黄色）。どちらが本店舗か図で特定できず",
+  "source": "https://www.tokyometro.jp/station/yardmap_img/figure_yardmap_kasumigaseki_all.jpg"
+ },
+ "subway|サブウェイ 赤坂メトロピア店": {
+  "gate": "outside",
+  "evidence": "図からの読み取り: MP「サブウェイ」の引出線が改札の外側（灰色）を指す。住所は赤坂BizタワーB2F",
+  "source": "https://www.tokyometro.jp/station/yardmap_img/figure_yardmap_akasaka_all.jpg"
+ },
+ "saint-marc-cafe|サンマルクカフェ 本郷三丁目メトロピア店": {
+  "gate": "outside",
+  "evidence": "図からの読み取り: MP「サンマルクカフェ」が出口1側の改札外（灰色）1Fにある",
+  "source": "https://www.tokyometro.jp/station/yardmap_img/figure_yardmap_hongo-sanchome_all.jpg"
+ },
+ "tully-coffee|朝日新聞東京本社ビル店": {
+  "gate": "outside",
+  "evidence": "住所「朝日新聞東京本社ビル2Fコンコース内」＝駅施設ではなくオフィスビル（鉄道の改札なし）。ビルの入館制限は未確認",
+  "source": "https://shop.tullys.co.jp/detail/4570443"
+ },
+ "cocoichi|東京メトロ新宿御苑前駅店": {
+  "gate": "outside",
+  "evidence": "住所「ライオンズマンション新宿御苑前1F」＝駅の外の建物。東京メトロの駅構内店舗一覧・構内図に掲載なし",
+  "source": "https://tenpo.ichibanya.co.jp/map/1682"
+ },
+ "tully-coffee|京成日暮里駅店": {
+  "gate": "inside",
+  "evidence": "タリーズコーヒー京成日暮里駅店 … 場所 改札内",
+  "source": "https://www.keisei.co.jp/keisei/tetudou/accessj/nippori.php"
+ },
+ "saint-marc-cafe|サンマルクカフェ Echikafit上野店": {
+  "gate": "inside",
+  "evidence": "サンマルクカフェ … フロア： 改札内",
+  "source": "https://www.metropro-sc.jp/echikafit-ueno/"
+ },
+ "starbucks|エキュート上野 公園口店": {
+  "gate": "outside",
+  "evidence": "フロア 公園改札外2F",
+  "source": "https://www.ecute.jp/ueno/shop/2778"
+ },
+ "tully-coffee|東武浅草駅店": {
+  "gate": "unknown",
+  "evidence": "住所「東武浅草駅構内2Fコンコース内」のみ。内外の記載なし",
+  "source": "https://shop.tullys.co.jp/detail/1000666"
+ },
+ "starbucks|錦糸町メトロピア店": {
+  "gate": "outside",
+  "evidence": "図からの読み取り: MP「スターバックスコーヒー」が出口1・2側の改札外（灰色）通路にある",
+  "source": "https://www.tokyometro.jp/station/yardmap_img/figure_yardmap_kinshicho_all.jpg"
+ },
+ "goemon|エキア曳舟店": {
+  "gate": "outside",
+  "evidence": "図からの読み取り: エキア曳舟1Fフロア図で5「洋麺屋五右衛門」は改札口の外側",
+  "source": "https://www.tobu-equia.com/hikifune/"
+ },
+ "osaka-ohsho|エキア曳舟店": {
+  "gate": "outside",
+  "evidence": "図からの読み取り: エキア曳舟1Fフロア図で9「大阪王将」は改札口の外側（改札口の手前）",
+  "source": "https://www.tobu-equia.com/hikifune/"
+ },
+ "tenya|東武曳舟駅店": {
+  "gate": "outside",
+  "evidence": "図からの読み取り: エキア曳舟1Fフロア図で2「天丼てんや」は改札口の外側（西口側）",
+  "source": "https://www.tobu-equia.com/hikifune/"
+ },
+ "tully-coffee|東武曳舟駅店": {
+  "gate": "outside",
+  "evidence": "図からの読み取り: エキア曳舟1Fフロア図で4「タリーズコーヒー」は改札口の外側（東口側）",
+  "source": "https://www.tobu-equia.com/hikifune/"
+ },
+ "doutor|ドトールコーヒーショップ 新木場メトロピア店": {
+  "gate": "outside",
+  "evidence": "図からの読み取り: MP「ドトールコーヒー」の引出線が改札の外側（灰色）を指す",
+  "source": "https://www.tokyometro.jp/station/yardmap_img/figure_yardmap_shin-kiba_all.jpg"
+ },
+ "tully-coffee|Expressりんかい線新木場駅店": {
+  "gate": "unknown",
+  "evidence": "住所欄「新木場1-6 改札駅構内」のみで内外が読めない。りんかい線公式は店名の掲載のみ",
+  "source": "https://www.twr.co.jp/route/tabid/106/Default.aspx"
+ },
+ "subway|サブウェイ 大鳥居店": {
+  "gate": "unknown",
+  "evidence": "住所「大鳥居駅構内1階」のみ。京急公式の駅ページに店舗の内外記載なし",
+  "source": "https://subway.co.jp/shop/5645/"
+ },
+ "starbucks|明治神宮前メトロピア店": {
+  "gate": "outside",
+  "evidence": "千代田線 明治神宮前駅、明治神宮･原宿駅方面の改札出口正面（構内立体図でも改札外＝灰色）",
+  "source": "https://store.starbucks.co.jp/detail-873/"
+ },
+ "starbucks|中野坂上メトロピア店": {
+  "gate": "outside",
+  "evidence": "図からの読み取り: MP「スターバックス」の引出線が出口1側の改札外（灰色）B1Fを指す",
+  "source": "https://www.tokyometro.jp/station/yardmap_img/figure_yardmap_nakano-sakaue_all.jpg"
+ },
+ "doutor|ドトールコーヒーショップ 西武池袋駅店": {
+  "gate": "inside",
+  "evidence": "依頼文の検算結果（西武の構内図で改札よりホーム側）。今回の再確認では西武公式の構内図・店舗一覧に店舗表示がなく再現できず",
+  "source": "https://www.seiburailway.jp/railway/station/ikebukuro/"
+ },
+ "hanamaru-udon|はなまるうどん Echika池袋店": {
+  "gate": "outside",
+  "evidence": "はなまるうどん … フロア： 改札外",
+  "source": "https://www.metropro-sc.jp/echika-ikebukuro/"
+ },
+ "pronto|PRONTO エキア池袋店": {
+  "gate": "outside",
+  "evidence": "図からの読み取り: エキア池袋フロア図で11「プロント」は北口側、どの改札口よりも外側",
+  "source": "https://www.tobu-equia.com/ikebukuro/"
+ },
+ "starbucks|エチカ池袋店": {
+  "gate": "outside",
+  "evidence": "スターバックスコーヒー … フロア： 改札外",
+  "source": "https://www.metropro-sc.jp/echika-ikebukuro/"
+ },
+ "mister-donut|王子メトロピア ショップ": {
+  "gate": "outside",
+  "evidence": "アクセス 東京メトロ 南北線 王子駅 改札前（構内立体図でMP「ミスタードーナツ」は改札外＝灰色のB1F。図からの読み取りを含む）",
+  "source": "https://md.mapion.co.jp/b/misterdonut/info/2103/"
+ },
+ "komeda|エキア東武練馬店": {
+  "gate": "outside",
+  "evidence": "所在地 東武東上線「東武練馬」駅南口出てすぐ（2F・コメダ珈琲店）",
+  "source": "https://www.tobu-equia.com/tobunerima/"
+ },
+ "komeda|東武下赤塚駅店": {
+  "gate": "unknown",
+  "evidence": "住所「東武下赤塚ビル201」。公式ページに内外の記載なし",
+  "source": "https://www.komeda.co.jp/shop/detail.html?id=871"
+ },
+ "starbucks|エキア成増店": {
+  "gate": "outside",
+  "evidence": "図からの読み取り: エキア成増1Fフロア図で改札口の外側からエスカレーターで上がる2Fに3「スターバックスコーヒー」",
+  "source": "https://www.tobu-equia.com/narimasu/"
+ },
+ "doutor|ドトールコーヒーショップ 西武大泉学園駅店": {
+  "gate": "unknown",
+  "evidence": "西武の店舗一覧に店名はあるが内外の記載なし。西武公式構内図は店舗を描いていない",
+  "source": "http://www.seibu-shop.jp/floorguide/station/?station=st11"
+ },
+ "tenya|大泉学園駅店": {
+  "gate": "unknown",
+  "evidence": "西武の店舗一覧に店名はあるが内外の記載なし。西武公式構内図は店舗を描いていない",
+  "source": "http://www.seibu-shop.jp/floorguide/station/?station=st11"
+ },
+ "doutor|ドトールコーヒーショップ エキア北千住店": {
+  "gate": "inside",
+  "evidence": "図からの読み取り: エキア北千住2Fフロア図で7「ドトールコーヒーショップ」は中央改札口より内側（駅構内側）",
+  "source": "https://www.tobu-equia.com/kitasenju/"
+ },
+ "marugame|丸亀製麺EQUiA北千住": {
+  "gate": "inside",
+  "evidence": "図からの読み取り: エキア北千住2Fフロア図で25「丸亀製麺」は中央改札口と南改札口の間＝改札内側",
+  "source": "https://www.tobu-equia.com/kitasenju/"
+ },
+ "pronto|PRONTO エキア北千住店": {
+  "gate": "inside",
+  "evidence": "図からの読み取り: エキア北千住2Fフロア図で13「プロント」は中央改札口と南改札口の間＝改札内側",
+  "source": "https://www.tobu-equia.com/kitasenju/"
+ },
+ "saint-marc-cafe|サンマルクカフェ エキア北千住店": {
+  "gate": "inside",
+  "evidence": "図からの読み取り: エキア北千住B1F「南地下」13。ホーム行き階段に直結し、ホーム階と同じ駅構内色。改札の表示なし",
+  "source": "https://www.tobu-equia.com/kitasenju/"
+ },
+ "starbucks|エキア北千住店": {
+  "gate": "inside",
+  "evidence": "図からの読み取り: エキア北千住B1F「北地下」7。ホーム行き階段に直結し、ホーム階と同じ駅構内色。スタバ公式は「千代田線、東武伊勢崎線北側連絡通路途中」",
+  "source": "https://www.tobu-equia.com/kitasenju/"
+ },
+ "tenya|エキア北千住店": {
+  "gate": "inside",
+  "evidence": "図からの読み取り: エキア北千住2Fフロア図で9「天丼てんや」は中央改札口より内側",
+  "source": "https://www.tobu-equia.com/kitasenju/"
+ },
+ "yoshinoya|吉野家 エキア北千住店": {
+  "gate": "inside",
+  "evidence": "図からの読み取り: エキア北千住2Fフロア図で8「吉野家」は中央改札口より内側",
+  "source": "https://www.tobu-equia.com/kitasenju/"
+ },
+ "kfc|エキア竹ノ塚店": {
+  "gate": "outside",
+  "evidence": "所在地「竹ノ塚」駅改札出てすぐ（フロア図で5「ケンタッキーフライドチキン」は駅構内の外）",
+  "source": "https://www.tobu-equia.com/takenotsuka/"
+ },
+ "marugame|丸亀製麺エキア竹ノ塚": {
+  "gate": "outside",
+  "evidence": "所在地「竹ノ塚」駅改札出てすぐ（フロア図で3「丸亀製麺」は駅構内の外）",
+  "source": "https://www.tobu-equia.com/takenotsuka/"
+ },
+ "mcdonalds|エキア竹ノ塚店": {
+  "gate": "outside",
+  "evidence": "所在地「竹ノ塚」駅改札出てすぐ（フロア図で7「マクドナルド」は駅構内の外）",
+  "source": "https://www.tobu-equia.com/takenotsuka/"
+ },
+ "mister-donut|エキア竹ノ塚 ショップ": {
+  "gate": "outside",
+  "evidence": "所在地「竹ノ塚」駅改札出てすぐ（フロア図で6「ミスタードーナツ」は駅構内の外）",
+  "source": "https://www.tobu-equia.com/takenotsuka/"
+ },
+ "starbucks|エキア竹ノ塚店": {
+  "gate": "outside",
+  "evidence": "所在地「竹ノ塚」駅改札出てすぐ（フロア図で24「スターバックス」は自由通路の先の別棟）",
+  "source": "https://www.tobu-equia.com/takenotsuka/"
+ },
+ "pronto|PRONTO 京成金町駅店": {
+  "gate": "outside",
+  "evidence": "プロント京成金町駅店 … 場所 改札外",
+  "source": "https://www.keisei.co.jp/keisei/tetudou/accessj/keisei-kanamachi.php"
+ },
+ "starbucks|JR大阪駅北店": {
+  "gate": "unknown",
+  "evidence": "住所「JR大阪駅構内 JR大阪駅1階」のみ。JR西日本の構内図PDFは店名を読み取れず",
+  "source": "https://store.starbucks.co.jp/detail-2313/"
+ },
+ "kfc|南海難波駅店": {
+  "gate": "unknown",
+  "evidence": "公式ページは住所のみ。南海公式の構内図PDFは店名を読み取れず",
+  "source": "https://search.kfc.co.jp/map/4366"
+ },
+ "mcdonalds|南海難波駅中央口店": {
+  "gate": "unknown",
+  "evidence": "住所「難波駅構内2F」のみ。南海公式の構内図PDFは店名を読み取れず",
+  "source": "https://map.mcdonalds.co.jp/map/27143"
+ },
+ "saint-marc-cafe|サンマルクカフェ 南海なんば駅店": {
+  "gate": "unknown",
+  "evidence": "住所「南海なんば駅3F」のみ。南海公式の構内図PDFは店名を読み取れず",
+  "source": "https://www.saint-marc-hd.com/saintmarccafe/shop/514/"
+ },
+ "lotteria|京阪渡辺橋駅店": {
+  "gate": "unknown",
+  "evidence": "公式ページは住所のみ。京阪公式で該当記載を見つけられず",
+  "source": "https://maps.zetteria.jp/shop/shop3713.html"
+ },
+ "hoshino-coffee|アスティ京都店": {
+  "gate": "outside",
+  "evidence": "フロア 1F東エリア アスティロード（改札内は別区分「2F新幹線改札構内エリア」。アクセス欄は「新幹線八条口改札外直結エリア」）",
+  "source": "https://www.asty-kyoto.co.jp/asty_kyoto/store/156/"
+ },
+ "starbucks|JR京都駅 新幹線中央口店": {
+  "gate": "outside",
+  "evidence": "2F新幹線改札外エリア",
+  "source": "https://www.asty-kyoto.co.jp/asty_kyoto/store/"
+ },
+ "starbucks|京阪祇園四条駅店": {
+  "gate": "unknown",
+  "evidence": "住所「京阪祇園四条駅 構内 103区画」のみ。京阪公式の構内図PDFは文字を読み取れず",
+  "source": "https://www.keihan.co.jp/traffic/station/162/info.html"
+ },
+ "tully-coffee|みなとみらい駅店": {
+  "gate": "inside",
+  "evidence": "場 所：みなとみらい線みなとみらい駅改札内",
+  "source": "https://www.mm21railway.co.jp/info/news/uploads/Press%20Release_20251223.pdf"
+ },
+ "starbucks|JR東海 小田原駅店": {
+  "gate": "unknown",
+  "evidence": "公式ページは「新幹線停車駅の駅ビルの店舗です」のみ。内外の明記なし",
+  "source": "https://store.starbucks.co.jp/detail-2123/"
+ },
+ "starbucks|エキュート大宮ノース店": {
+  "gate": "inside",
+  "evidence": "フロア 中央改札（北）内",
+  "source": "https://www.ecute.jp/omiyanorth/shop/2807"
+ },
+ "starbucks|JR大宮駅 西口店": {
+  "gate": "unknown",
+  "evidence": "住所「JR大宮駅構内 西口」のみ。エキュート大宮・大宮ノースの店舗一覧に該当なし",
+  "source": "https://store.starbucks.co.jp/detail-2302/"
+ },
+ "hoshino-coffee|エキア川越店": {
+  "gate": "outside",
+  "evidence": "図からの読み取り: エキア川越3Fフロア図の7「星乃珈琲店」。3Fは改札口（2F）の外側からエスカレーターで上がる階",
+  "source": "https://www.tobu-equia.com/kawagoe/"
+ },
+ "ootoya|大戸屋ごはん処 EQUIA(エキア)川越店": {
+  "gate": "outside",
+  "evidence": "図からの読み取り: エキア川越3Fフロア図の4「大戸屋」。3Fは改札口（2F）の外側からエスカレーターで上がる階",
+  "source": "https://www.tobu-equia.com/kawagoe/"
+ },
+ "starbucks|エキア川越店": {
+  "gate": "outside",
+  "evidence": "図からの読み取り: エキア川越のスターバックスは2F・3Fの2区画とも改札口の外側",
+  "source": "https://www.tobu-equia.com/kawagoe/"
+ },
+ "hanamaru-udon|はなまるうどん エキア越谷店": {
+  "gate": "outside",
+  "evidence": "所在地「越谷」駅改札出てすぐ（フロア図の14。図では駅構内に隣接して描かれ、入口の向きは読み取れない）",
+  "source": "https://www.tobu-equia.com/koshigaya/"
+ },
+ "mcdonalds|エキア越谷店": {
+  "gate": "outside",
+  "evidence": "所在地「越谷」駅改札出てすぐ（フロア図の6「マクドナルド」は自由通路を挟んだ別棟）",
+  "source": "https://www.tobu-equia.com/koshigaya/"
+ },
+ "mister-donut|エキア越谷 ショップ": {
+  "gate": "outside",
+  "evidence": "所在地「越谷」駅改札出てすぐ（フロア図の5「ミスタードーナツ」は自由通路を挟んだ別棟）",
+  "source": "https://www.tobu-equia.com/koshigaya/"
+ },
+ "starbucks|エキア越谷店": {
+  "gate": "outside",
+  "evidence": "所在地「越谷」駅改札出てすぐ（フロア図の8「スターバックスコーヒー」は改札口の外側・東口側）",
+  "source": "https://www.tobu-equia.com/koshigaya/"
+ },
+ "yoshinoya|吉野家 エキア越谷店": {
+  "gate": "outside",
+  "evidence": "所在地「越谷」駅改札出てすぐ（フロア図の12。図では駅構内に隣接して描かれ、入口の向きは読み取れない）",
+  "source": "https://www.tobu-equia.com/koshigaya/"
+ },
+ "hoshino-coffee|朝霞駅店": {
+  "gate": "outside",
+  "evidence": "図からの読み取り: エキア朝霞2Fフロア図で1「星乃珈琲店」は改札口の外側（南口側）",
+  "source": "https://www.tobu-equia.com/asaka/"
+ },
+ "starbucks|エキア プレミエ 和光店": {
+  "gate": "outside",
+  "evidence": "図からの読み取り: エキアプレミエ和光B1F（改札階）フロア図で6「スターバックス コーヒー」は改札口の外側の通路に面する",
+  "source": "https://www.tobu-equia.com/wako/"
+ },
+ "goemon|EQUiA志木店": {
+  "gate": "outside",
+  "evidence": "図からの読み取り: エキア志木2Fフロア図で11「洋麺屋五右衛門」は改札口の外側（東口側）",
+  "source": "https://www.tobu-equia.com/shiki/"
+ },
+ "lotteria|EQUiA志木店": {
+  "gate": "outside",
+  "evidence": "図からの読み取り: エキア志木1Fフロア図で6「ゼッテリア」は東口側の地上階（改札口は2F）",
+  "source": "https://www.tobu-equia.com/shiki/"
+ },
+ "starbucks|エキア志木店": {
+  "gate": "outside",
+  "evidence": "図からの読み取り: エキア志木2Fフロア図で7「スターバックスコーヒー」は改札口の外側の通路沿い",
+  "source": "https://www.tobu-equia.com/shiki/"
+ },
+ "pronto|PRONTO 千葉そごう前店": {
+  "gate": "unknown",
+  "evidence": "住所「千葉そごう京成千葉駅構内」のみ。京成公式の駅構内店舗一覧（全店「改札外」）に店名なし",
+  "source": "https://www.keisei.co.jp/keisei/tetudou/accessj/keisei-chiba.php"
+ },
+ "subway|サブウェイ 京成千葉駅店": {
+  "gate": "unknown",
+  "evidence": "公式ページは住所のみ。京成公式の駅構内店舗一覧（全店「改札外」）に店名なし",
+  "source": "https://www.keisei.co.jp/keisei/tetudou/accessj/keisei-chiba.php"
+ },
+ "doutor|ドトールコーヒーショップ 東武船橋駅店": {
+  "gate": "unknown",
+  "evidence": "住所「船橋駅 東武アーバンパークライン2F」のみ。内外の記載なし",
+  "source": "https://shop.doutor.co.jp/doutor/spot/detail?code=1011356"
+ },
+ "hanamaru-udon|はなまるうどん 浦安メトロピア店": {
+  "gate": "inside",
+  "evidence": "図からの読み取り: 構内立体図でMP「はなまるうどん」の引出線が改札内（黄色）の2Fを指す",
+  "source": "https://www.tokyometro.jp/station/yardmap_img/figure_yardmap_urayasu_all.jpg"
+ },
+ "starbucks|西船橋メトロピア店": {
+  "gate": "inside",
+  "evidence": "図からの読み取り: 構内立体図でMP「ココプレス／スターバックス」の引出線が改札内（黄色）の2Fを指す",
+  "source": "https://www.tokyometro.jp/station/yardmap_img/figure_yardmap_nishi-funabashi_all.jpg"
+ },
+ "starbucks|JR弁天町駅店": {
+  "gate": "unknown",
+  "evidence": "公式ページは住所のみ。JR西日本の構内図は未読",
+  "source": "https://store.starbucks.co.jp/detail-4441/"
+ },
+ "pronto|PRONTO エキュート立川店": {
+  "gate": "outside",
+  "evidence": "図からの読み取り: エキュート立川1Fフロア図でプロントはロータリー・ホテルメッツ入口に面する地上階。ショップ一覧で改札内店は「（改札内）」と付記されるが本店舗には無い",
+  "source": "https://www.ecute.jp/tachikawa/shop/223"
+ },
+ "starbucks|エキュート立川店": {
+  "gate": "outside",
+  "evidence": "フロア 3F。同じ3Fのタリーズが「ホテルメッツのエレベーターで3Fに」と案内（図・推論を含む）。ショップ一覧で改札内店は「（改札内）」と付記されるが本店舗には無い",
+  "source": "https://www.ecute.jp/tachikawa/shop/1052"
+ },
+ "tully-coffee|エキュート立川店": {
+  "gate": "outside",
+  "evidence": "朝7：00～10：00にご来店の際には、ホテルメッツのエレベーターで3Fにお越しください（＝改札を通らず入れる。フロア 3F）",
+  "source": "https://www.ecute.jp/tachikawa/shop/1181"
+ },
+ "subway|サブウェイ アトレヴィ三鷹店": {
+  "gate": "inside",
+  "evidence": "三鷹 改札内 4F ファストフード サブウェイ",
+  "source": "https://www.atre.co.jp/mitaka/floorguide/21/93"
+ },
+ "cocoichi|西武武蔵境駅店": {
+  "gate": "unknown",
+  "evidence": "公式ページは住所のみ。西武の店舗一覧は「エミオ武蔵境」のみで内外の記載なし",
+  "source": "http://www.seibu-shop.jp/floorguide/station/?station=st85"
+ }
+}

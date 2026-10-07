@@ -23,6 +23,7 @@ def show_addr(a):
     a=re.sub(r'〒\s*(\d{3}-?\d{4})?','',a)
     a=re.sub(r'^(東京都|北海道|(?:京都|大阪)府|.{2,3}県)\s*\1',r'\1',a)
     a=re.sub(r'(?<=\d)[‐‑–—―ー−](?=\d)','-',a)
+    a=re.sub(r'\s*[※*].*$','',a)   # 住所欄の注記（「※郵送の際には…」）
     return re.sub(r'\s+',' ',a).strip()
 def geo_key(a):
     a=norm_addr(a)
@@ -49,7 +50,42 @@ def same_city(a,title):
 def save_geo():
     data=json.dumps(dict(geo),ensure_ascii=False)
     open(GEO,'w').write(data)
-EXCL=re.compile(r'休店中|MOSH |むさしの森Diner|ポケットキッチン|大学$|大学 |ドーム内|コンコース|東京ドーム店|都営神保町駅店|グランドオープン|NEW OPEN|オープン[!！]|エキュート|ecute|グランスタ東京|エキナカ|ラチ内|弁当専門|施設内|【休業】|休業中|長期休業|テイクアウト専門|テイクアウト・デリバリー専門|デリバリー専門|持ち帰り専門|病院|医療センター|防衛省|庁舎内|社員|関係者|一般.{0,6}(不可|利用できません)|オープン予定|開店予定|OPEN予定|\d+月\d+日\s*(オープン|OPEN|開店)|\d+/\d+\s*(オープン|OPEN|開店)|近日|(?<!一時)閉店|仮設|競馬場|球場内|スタジアム内|改札内|冷凍自動販売機|大学.{0,12}(キャンパス|号館|構内|生協|学内)|キャンパス店|(?<!学芸)(?<!都立)(?<!駒沢)大学(店|病院|内)')
+# ── 載せない店の決まり ─────────────────────────────────────────────
+# 業態・営業状態（店名・注記・住所の語で判定）
+EXCL=re.compile(r'パーキングエリア|サービスエリア|合同庁舎|休店中|MOSH |むさしの森Diner|ポケットキッチン|王将\s*Express|ドーム内|東京ドーム店|グランドオープン|NEW OPEN|オープン[!！]|弁当専門|施設内|【休業】|休業中|長期休業|テイクアウト専門|テイクアウト・デリバリー専門|デリバリー専門|持ち帰り専門|病院|医療センター|防衛省|庁舎内|社員|関係者|一般.{0,6}(不可|利用できません)|オープン予定|開店予定|OPEN予定|\d+月\d+日\s*(オープン|OPEN|開店)|\d+/\d+\s*(オープン|OPEN|開店)|近日|(?<!一時)閉店|仮設|競馬場|球場内|スタジアム内|冷凍自動販売機|キャンパス(?!駅|前)|(?<!学芸)(?<!都立)(?<!駒沢)(?<!成城)大学(?!前|駅|通)')
+# 改札の内外。店名・住所の語だけでは両方向に外すので（エキュート上野には改札外の店もある）、
+# 駅の構内・駅ナカ施設の店は gate-status.json に公式で確かめた結果を持ち、無いものは載せない側に倒す。
+GATE=re.compile(r'改札内|ラチ内|エキュート|ecute|グランスタ|エキナカ|駅ナカ|構内|コンコース|メトロピア|[Ee]chika|エチカ(?!.*八重洲)|エキア|EQUiA')
+GATE_OK=re.compile(r'改札外|ヤエチカ|八重洲地下街')
+try: GATE_STATUS=json.load(open(os.path.join(B,'gate-status.json')))
+except Exception: GATE_STATUS={}
+def _dates(txt,year):
+    out=[]
+    for m in re.finditer(r'(?:(\d{4})年)?(\d{1,2})月(\d{1,2})日',txt): out.append((m.start(),int(m.group(1) or 0),int(m.group(2)),int(m.group(3))))
+    return out
+def long_closed(txt,today):
+    """「2026年7月27日～11月17日まで改装のため一時閉店」「一時休業 2026年9月28日～2026年10月29日」のような
+    日付の範囲つきの休業で、基準日が休業中かつ再開まで7日以上あるものを載せない（短い休業は載せる）。"""
+    import datetime
+    if not re.search(r'休業|閉店|休店',txt): return False
+    for m in re.finditer(r'((?:\d{4}年)?\d{1,2}月\d{1,2}日)[^～~〜\-–]{0,12}[～~〜\-–]\s*((?:\d{4}年)?\d{1,2}月\d{1,2}日)',txt):
+        a=_dates(m.group(1),0)[0]; b=_dates(m.group(2),0)[0]
+        ya=a[1] or today.year; yb=b[1] or ya
+        try:
+            da=datetime.date(ya,a[2],a[3]); db=datetime.date(yb,b[2],b[3])
+            if db<da: db=datetime.date(yb+1,b[2],b[3])
+        except ValueError: continue
+        if da<=today+datetime.timedelta(days=3) and db>=today+datetime.timedelta(days=7): return True
+    return False
+def excluded_reason(chain,name,note,addr,today):
+    txt=(name or '')+' '+(note or '')+' '+(addr or '')
+    if EXCL.search(txt): return '業態・営業状態'
+    if long_closed((name or '')+' '+(note or ''),today): return '長期休業中'
+    g=GATE_STATUS.get(chain+'|'+(name or ''))
+    if g:
+        return None if g.get('gate')=='outside' else ('改札内' if g.get('gate')=='inside' else '改札の内外が不明')
+    if GATE.search(txt) and not GATE_OK.search(txt): return '改札の内外が未確認'
+    return None
 def clean_store_name(n):
     n=unicodedata.normalize('NFKC',n or '')
     n=re.sub(r'\s*[※*].*$','',n)                                  # 「※10月19日より一時閉店…」などの告知
@@ -64,8 +100,13 @@ def load():
         for s in json.load(open(f)): stores.append(s)
     return stores,meta
 def main():
+    global TODAY
+    import datetime
+    args=[a for a in sys.argv[1:] if not a.startswith('--date=')]
+    dt=[a for a in sys.argv[1:] if a.startswith('--date=')]
+    TODAY=datetime.date.fromisoformat(dt[0][7:]) if dt else datetime.date.today()
     stations=json.load(open(os.path.join(B,'stations.json')))
-    only=set(sys.argv[1:])
+    only=set(args)
     if only: stations=[s for s in stations if s['slug'] in only]
     stores,meta=load()
     out={};n=0
@@ -139,7 +180,7 @@ def main():
             a=s['_addr']; src=s['_src']
             txt=(s.get('name') or '')+' '+(s.get('note') or '')+' '+(s.get('address') or '')
             res.append({'chain':s['chain'],'name':clean_store_name(s['name']) or s['name'],'rawname':s['name'],'address':a,'show':s['_show'],'precise':s['_precise'],'m':int(d),'src':src,'url':s.get('url'),'note':s.get('note') or '',
-                        'excluded':bool(EXCL.search(txt)),'border':d>800,'uncertain':(not s['_precise']) and 500<d<=1000,'mis':s.get('_mis')})
+                        'excluded':bool(excluded_reason(s['chain'],s['name'],s.get('note'),s.get('address'),TODAY)),'why':excluded_reason(s['chain'],s['name'],s.get('note'),s.get('address'),TODAY),'border':d>800,'uncertain':(not s['_precise']) and 500<d<=1000,'mis':s.get('_mis')})
         out[st['slug']]=sorted(res,key=lambda x:(x['chain'],x['m']))
     save_geo()
     json.dump(out,open(os.path.join(B,'matched.json'),'w'),ensure_ascii=False,indent=0)
