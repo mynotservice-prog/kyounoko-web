@@ -7,7 +7,7 @@
  * - 既存の東京/関西/神奈川の駅機能を一切変更しない
  */
 
-export type SaiChiPrefecture = 'saitama' | 'chiba';
+export type SaiChiPrefecture = 'saitama' | 'chiba' | 'tokyo-tama';
 
 export type SaiChiStation = {
   /** スラグ（URL用、英字小文字＋ハイフン） */
@@ -367,6 +367,108 @@ export const SAICHI_STATIONS: SaiChiStation[] = [
     familyFriendly: true,
     description: '我孫子市の中心駅。アビイクオーレ・イトーヨーカドー我孫子南口店にベビールーム完備。手賀沼観光も近い。',
   },
+
+  // ===== 東京都・多摩地域（2026-10 追加。チェーン店は lib/station-verified-stores.ts の照合結果だけを表示）=====
+  {
+    slug: 'tachikawa',
+    name: '立川',
+    kana: 'たちかわ',
+    prefecture: 'tokyo-tama',
+    area: '立川市',
+    lines: ['JR中央線', 'JR青梅線', 'JR南武線'],
+    scale: 'terminal',
+    familyFriendly: true,
+  },
+  {
+    slug: 'machida',
+    name: '町田',
+    kana: 'まちだ',
+    prefecture: 'tokyo-tama',
+    area: '町田市',
+    lines: ['小田急小田原線', 'JR横浜線'],
+    scale: 'terminal',
+    familyFriendly: true,
+  },
+  {
+    slug: 'hachioji',
+    name: '八王子',
+    kana: 'はちおうじ',
+    prefecture: 'tokyo-tama',
+    area: '八王子市',
+    lines: ['JR中央線', 'JR横浜線', 'JR八高線'],
+    scale: 'terminal',
+    familyFriendly: true,
+  },
+  {
+    slug: 'kichijoji',
+    name: '吉祥寺',
+    kana: 'きちじょうじ',
+    prefecture: 'tokyo-tama',
+    area: '武蔵野市',
+    lines: ['JR中央線', 'JR総武線', '京王井の頭線'],
+    scale: 'terminal',
+    familyFriendly: true,
+  },
+  {
+    slug: 'chofu',
+    name: '調布',
+    kana: 'ちょうふ',
+    prefecture: 'tokyo-tama',
+    area: '調布市',
+    lines: ['京王線', '京王相模原線'],
+    scale: 'major',
+    familyFriendly: true,
+  },
+  {
+    slug: 'fuchu',
+    name: '府中',
+    kana: 'ふちゅう',
+    prefecture: 'tokyo-tama',
+    area: '府中市',
+    lines: ['京王線'],
+    scale: 'major',
+    familyFriendly: true,
+  },
+  {
+    slug: 'kokubunji',
+    name: '国分寺',
+    kana: 'こくぶんじ',
+    prefecture: 'tokyo-tama',
+    area: '国分寺市',
+    lines: ['JR中央線', '西武国分寺線', '西武多摩湖線'],
+    scale: 'major',
+    familyFriendly: true,
+  },
+  {
+    slug: 'tama-center',
+    name: '多摩センター',
+    kana: 'たませんたー',
+    prefecture: 'tokyo-tama',
+    area: '多摩市',
+    lines: ['京王相模原線', '小田急多摩線', '多摩都市モノレール'],
+    scale: 'major',
+    familyFriendly: true,
+  },
+  {
+    slug: 'mitaka',
+    name: '三鷹',
+    kana: 'みたか',
+    prefecture: 'tokyo-tama',
+    area: '三鷹市',
+    lines: ['JR中央線', 'JR総武線'],
+    scale: 'major',
+    familyFriendly: true,
+  },
+  {
+    slug: 'musashi-sakai',
+    name: '武蔵境',
+    kana: 'むさしさかい',
+    prefecture: 'tokyo-tama',
+    area: '武蔵野市',
+    lines: ['JR中央線', '西武多摩川線'],
+    scale: 'major',
+    familyFriendly: true,
+  },
 ];
 
 /** slug から駅情報を取得。 */
@@ -385,10 +487,12 @@ export function getSaiChiStationsByPrefecture(p: SaiChiPrefecture): SaiChiStatio
 export const SAICHI_PREFECTURE_NAMES: Record<SaiChiPrefecture, string> = {
   saitama: '埼玉県',
   chiba: '千葉県',
+  'tokyo-tama': '東京都',
 };
 
 /** 表示用の地域ラベル。 */
 export const SAICHI_PREFECTURE_LABEL: Record<SaiChiPrefecture, string> = {
   saitama: '埼玉',
   chiba: '千葉',
+  'tokyo-tama': '多摩',
 };
