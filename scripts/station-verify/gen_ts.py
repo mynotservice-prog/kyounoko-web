@@ -6,6 +6,12 @@ out_path,list_path,date=sys.argv[1],sys.argv[2],sys.argv[3]
 slugs=[l.strip() for l in open(list_path) if l.strip()]
 m=json.load(open(os.path.join(B,'matched.json')))
 def q(s): return json.dumps(s,ensure_ascii=False)
+sys.path.insert(0,B)
+from match import geo_key
+def show_addr(a):
+    # 照合用に空白を落とした住所を、番地と建物名の間だけ空けて読みやすくする
+    k=geo_key(a); rest=a[len(k):] if a.startswith(k) else ''
+    return k+(' '+rest if rest else '') if rest else a
 def clean_name(n): return re.sub(r'\s+',' ',unicodedata.normalize('NFKC',n)).strip()
 head='''/**
  * 駅ごとの「公式店舗検索で実在を確認したチェーン店」。
@@ -58,7 +64,7 @@ for s in slugs:
     for x in rows:
         d='駅前' if x['m']<=300 else '徒歩圏'
         u=f", url: {q(x['url'])}" if x.get('url') else ''
-        L.append(f"      {{ chain: {q(x['chain'])}, name: {q(clean_name(x['name']))}, address: {q(x['address'])}, distance: {q(d)}{u} }},")
+        L.append(f"      {{ chain: {q(x['chain'])}, name: {q(clean_name(x['name']))}, address: {q(x.get('show') or x['address'])}, distance: {q(d)}{u} }},")
     L.append('    ],'+(f"\n    more: {json.dumps(more,ensure_ascii=False)}," if more else '')+'\n  },')
     rows=allrows
     stat.append((s,len(rows),len({x['chain'] for x in rows})))
