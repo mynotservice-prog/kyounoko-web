@@ -205,6 +205,7 @@
 .station-v3 .stv3-shop-note { font-size: 12px; color: var(--kk-ink-mute); line-height: 1.6; }
 .station-v3 .stv3-shop-stores { margin: 6px 0 8px; padding-left: 1.1em; font-size: 13px; line-height: 1.7; color: var(--kk-ink-mute); }
 .station-v3 .stv3-shop-stores a, .station-v3 .stv3-shop-stores strong { color: var(--kk-ink); font-weight: 600; }
+.station-v3 .stv3-shop-fac { display: block; font-size: 12px; color: var(--kk-ink-mute); }
 .station-v3 .stv3-shop-link { margin: 8px 0 0; font-size: 13px; font-weight: 700; }
 .station-v3 .stv3-shop-link a { color: var(--kk-orange-deep); text-decoration: underline; text-underline-offset: 2px; }
 .station-v3 .stv3-credit { margin: 16px 0 0; font-size: 11px; color: var(--kk-ink-mute); text-align: right; }

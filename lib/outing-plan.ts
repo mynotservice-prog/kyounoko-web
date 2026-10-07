@@ -469,8 +469,13 @@ function withVerifiedStore(s: Spot, store: VerifiedStore): Spot {
   return {
     ...s,
     city: `${store.name}（${store.distance}）`,
-    // 設備の表示（ベビーチェア等）はチェーン共通の目安で、この店で確かめたものではない
-    note: `${store.name}（${store.distance}・${store.address}）。設備は店舗によって違うので、行く前に公式ページでご確認を。`,
+    // タグ（ベビーチェア等）はチェーン共通の目安。store.fac は、その店について公式の店舗検索が
+    // 「あり」と表示している項目（無い項目は「無い」ではなく、公式に表示が無いだけ）。
+    note:
+      `${store.name}（${store.distance}・${store.address}）。` +
+      (store.fac && store.fac.length
+        ? `この店の公式ページにある設備: ${store.fac.join('・')}。ほかの設備は店舗によって違うので、行く前に公式ページでご確認を。`
+        : '設備は店舗によって違うので、行く前に公式ページでご確認を。'),
   };
 }
 
