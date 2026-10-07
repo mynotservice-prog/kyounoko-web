@@ -159,7 +159,6 @@ export const SPOT_ACCESS: Record<string, SpotAccess> = {
   "とちのきファミリーランド": { nearestStation: "西川田駅", walkMinutes: 15, accessNote: "東武宇都宮線「西川田駅」から徒歩約15分" },
   "とっとり花回廊": { nearestStation: "米子駅", accessNote: "JR米子駅から無料シャトルバスで約25分。" },
   "とべ動物園": { nearestStation: "松山市駅", accessNote: "伊予鉄道松山市駅からバス約35分、とべ動物園前下車徒歩約5分。徒歩圏外でバス利用。" },
-  "トリックアートミュージアム高尾山": { nearestStation: "高尾山口駅", walkMinutes: 1, accessNote: "京王高尾線 高尾山口駅から徒歩約1分" },
   "トリムパークかなづ": { nearestStation: "芦原温泉駅", walkMinutes: 15, accessNote: "JR芦原温泉駅から徒歩約15分（車で約5分）。" },
   "トンデミ愛媛": { nearestStation: "古泉駅", walkMinutes: 12, accessNote: "伊予鉄道郡中線「古泉駅」から徒歩約12分。駅から無料巡回バスもあり" },
   "なかがわ水遊園": { nearestStation: "西那須野駅", accessNote: "JR宇都宮線・西那須野駅から関東バス約40分、「田宿」下車徒歩5分" },
