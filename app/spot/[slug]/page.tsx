@@ -175,8 +175,10 @@ const AGE_LABEL: Record<string, string> = {
  */
 function toParagraphs(text: string, per = 2): string[] {
   // 「アソボ〜ノ！」のように施設名へ ！ を含む表記があるため、区切りは句点だけに限る。
+  // 「…したい。」のように句点の直後に閉じかっこが来る場合は、かっこまでを同じ文に含める
+  // （句点だけで切ると、次の段落が「」」で始まってしまう）。
   const sentences = text
-    .split(/(?<=。)/)
+    .split(/(?<=。)(?![」』）])|(?<=。[」』）])/)
     .map((s) => s.trim())
     .filter(Boolean);
   if (sentences.length <= 1) return [text];
@@ -373,7 +375,10 @@ export default async function SpotPage({ params }: Props) {
 
   // P1-4: おすすめアイテムを楽天商品API（RAKUTEN_APP_ID）で実商品に解決。
   // env未設定なら product=null で従来の検索リンクにフォールバック（もしも変換は共通適用）。
-  const recommendedItems = getRecommendedItems(spot.category, spot.place, spot.ages, 6);
+  const excludedItems = spot.excludeRecommendedItems ?? [];
+  const recommendedItems = getRecommendedItems(spot.category, spot.place, spot.ages, 6 + excludedItems.length)
+    .filter((item) => !excludedItems.includes(item.label))
+    .slice(0, 6);
   const enrichedItems = await Promise.all(
     recommendedItems.map(async (item) => {
       const kw = keywordFromRakutenSearchUrl(item.url);

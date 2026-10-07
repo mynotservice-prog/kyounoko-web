@@ -129,6 +129,8 @@ export type Spot = {
   budget?: 'free' | 'low' | 'mid' | 'high';  // 入園料目安
   /** 「料金の目安」の表示をスポット単位で差し替える（例: '〜1,500円'）。絞り込みは budget のまま */
   budgetLabel?: string;
+  /** 「持ち物のおすすめ」から外す商品のラベル（施設のルールに合わないもの。例: 靴下必須の施設で室内シューズ） */
+  excludeRecommendedItems?: string[];
   // ---- Instagram人気アカウントから学んだ情報密度UP項目 ----
   pricing?: {
     adult?: string;      // '2,300円'
