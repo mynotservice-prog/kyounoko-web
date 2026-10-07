@@ -150,15 +150,6 @@ export const KID_REPORTS: Record<string, KidReport> = {
     stayNote: '2〜4時間くらい。途中でランチを挟む人も多い。',
     cautionNote: 'ハイハイ期は休日少し気を使う。木のおもちゃを口に入れたがる時期は親がかなり付き添う感じになる。',
   },
-  'リトルプラネット（複数）': {
-    source: 'visited',
-    visitAge: '2歳以降にかなり反応が良い',
-    strollerNote: '基本は押せる。',
-    crowdNote: '午後にかなり人が増える。',
-    diaperNote: 'モールの設備が使えるので安心。',
-    stayNote: '1〜2時間。',
-    cautionNote: '暗い演出を怖がる子もいる。',
-  },
   多摩六都科学館: {
     source: 'visited',
     visitAge: '2〜6歳ごろがかなり楽しい（0〜1歳だと少し早め）',
