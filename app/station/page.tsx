@@ -317,12 +317,12 @@ export default function StationIndexPage() {
             首都圏（東京23区以外） <span style={{ fontSize: 13, color: 'var(--ink-mute)', fontWeight: 400 }}>{KANAGAWA_STATIONS.length + SAICHI_STATIONS.length}駅</span>
           </h2>
           <p style={{ fontSize: 13, color: 'var(--ink-sub)', marginTop: 0, marginBottom: 24 }}>
-            神奈川・埼玉・千葉の主要駅。ベビーカー入店・キッズメニュー・離乳食持込の可否を駅ごとに整理しています。
+            神奈川・埼玉・千葉と東京・多摩の主要駅。ベビーカー入店・キッズメニュー・離乳食持込の可否を駅ごとに整理しています。
           </p>
 
           {([
             { key: 'kanagawa', label: '神奈川', stations: KANAGAWA_STATIONS },
-            { key: 'saichi', label: '埼玉・千葉', stations: SAICHI_STATIONS },
+            { key: 'saichi', label: '埼玉・千葉・多摩', stations: SAICHI_STATIONS },
           ] as const).map((group) => {
             if (group.stations.length === 0) return null;
             const sorted = [...group.stations].sort((a, b) => a.name.localeCompare(b.name, 'ja'));
