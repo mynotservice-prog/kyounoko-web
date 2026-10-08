@@ -59,6 +59,7 @@ import { buildSpotDayPlan, resolveSpotStationSlug } from '@/lib/spot-day-plan';
 import { EventDayPlanSection } from '@/components/event/EventDayPlanSection';
 import { getAreaName } from '@/lib/area';
 import { getTempClosure } from '@/lib/spot-temp-closed';
+import { getSpotHours } from '@/lib/spot-hours';
 import { INDEXABLE_ROBOTS } from '@/lib/robots-meta';
 
 export const revalidate = 86400;
@@ -412,6 +413,7 @@ export default async function SpotPage({ params }: Props) {
       return spot.officialUrl;
     }
   })();
+  const spotHours = getSpotHours(spot.name);
   const infoRows: KkInfoRow[] = [
     { icon: 'age', label: '対象年齢', value: spot.ages.map((a) => AGE_LABEL[a]).join('・') },
     { icon: 'yen', label: '料金の目安', value: budgetLabel },
@@ -434,6 +436,30 @@ export default async function SpotPage({ params }: Props) {
                 <div className="sv3-parking-src">
                   {parking.confirmedAt}確認・
                   <a href={parking.sourceUrl} target="_blank" rel="noopener noreferrer">
+                    出典
+                  </a>
+                </div>
+              </div>
+            ),
+          },
+        ]
+      : []),
+    ...(spotHours && (spotHours.closedText || spotHours.hoursText || spotHours.status === 'always-open')
+      ? [
+          {
+            icon: 'calendar' as const,
+            label: '休み・時間',
+            value: (
+              <div className="sv3-parking">
+                {spotHours.closedText ? (
+                  <div>休み: {spotHours.closedText}</div>
+                ) : spotHours.status === 'always-open' ? (
+                  <div>休み: 公式サイトに定休日の記載はありません</div>
+                ) : null}
+                {spotHours.hoursText && <div>時間: {spotHours.hoursText}</div>}
+                <div className="sv3-parking-src">
+                  {spotHours.checkedAt}確認・公式サイトの記載（臨時の休みは公式でご確認ください）・
+                  <a href={spotHours.source} target="_blank" rel="noopener noreferrer">
                     出典
                   </a>
                 </div>

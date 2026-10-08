@@ -31,6 +31,7 @@ import {
   type IndieGenre,
 } from '@/lib/indie-restaurants';
 import { getStationOverride } from '@/lib/station-overrides';
+import { getVerifiedStores, STORE_FACILITY_CHECKED_RANGE } from '@/lib/station-verified-stores';
 import { getSpotsByNearestStation, SPOT_CATEGORY_LABEL } from '@/lib/spots';
 import {
   STATION_CONDITIONS,
@@ -147,6 +148,9 @@ export default async function StationPage({ params }: Props) {
   }
 
   const wardName = station.regionLabel;
+
+  // 公式店舗検索で実在を確認した店（登録がある駅だけ。lib/station-verified-stores.ts）
+  const verifiedStores = getVerifiedStores(slug);
 
   // カテゴリ別グルーピング
   const byCategory = new Map<ChainCategory, Chain[]>();
@@ -636,6 +640,11 @@ export default async function StationPage({ params }: Props) {
 
           {/* チェーン店リスト（カテゴリ別） — anchor target */}
           <div id="section-chains" className="stv3-anchor" />
+          {verifiedStores && (
+            <p className="stv3-shop-note">
+              ※ この駅のチェーン店は、各チェーンの公式店舗検索で{station.name}駅から徒歩10分圏（直線およそ800m以内）に実在を確認できた店だけを載せています（確認日 {verifiedStores.verifiedAt}）。店名・住所は公式の表記です。閉店・移転は反映が遅れることがあるため、行く前に各店の公式ページで営業状況をご確認ください。店名の下の「公式ページの設備」は、その店について公式の店舗検索が「あり」と表示している項目です（{STORE_FACILITY_CHECKED_RANGE}時点。項目を持たないチェーンもあります）。書かれていない設備は、無いという意味ではありません。色つきのタグはチェーン共通の目安で、店ごとに確かめたものではありません。
+            </p>
+          )}
           {Array.from(byCategory.entries()).map(([cat, list]) => (
             <section key={cat} className="station-category stv3-sec ruled">
               <h2 className="stv3-h2">
@@ -651,6 +660,26 @@ export default async function StationPage({ params }: Props) {
                     <p className="stv3-shop-desc">
                       {c.description}
                     </p>
+                    {verifiedStores && (
+                      <ul className="stv3-shop-stores">
+                        {verifiedStores.stores.filter((st) => st.chain === c.slug).map((st) => (
+                          <li key={st.name + st.address}>
+                            {st.url ? (
+                              <a href={st.url} target="_blank" rel="noopener noreferrer">{st.name}</a>
+                            ) : (
+                              <strong>{st.name}</strong>
+                            )}
+                            （{st.distance}）{st.address}
+                            {st.fac && st.fac.length > 0 && (
+                              <span className="stv3-shop-fac">公式ページの設備: {st.fac.join('・')}</span>
+                            )}
+                          </li>
+                        ))}
+                        {verifiedStores.more?.[c.slug] ? (
+                          <li>ほか{verifiedStores.more[c.slug]}店（徒歩10分圏・公式の店舗検索でご確認ください）</li>
+                        ) : null}
+                      </ul>
+                    )}
                     <div className="station-chain-meta kk-chips">
                       <span title={STROLLER_DESC[c.stroller]} className={'kk-pill ' + (c.stroller === 'good' ? 'yes' : 'text')}>
                         ベビーカー {STROLLER_LABEL[c.stroller]}

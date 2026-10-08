@@ -137,6 +137,9 @@ const nextConfig: NextConfig = {
       // 常に同一結果なので、他の静的HTMLページと同様に CDN キャッシュ可。クエリ文字列違いは
       // Cloudflare 側で別キャッシュキーになるため条件別ページも正しく分離される。
       // 24h edge / 7日 SWR。
+      // 【2026-10-08】「今日の流れ」が定休日で候補を外すようになり、時刻依存なしの前提が崩れた。
+      // 実際の保存期間は middleware.ts の todayDayBoundedCache が「次の日本時間0時まで」に上書きする
+      // （ここの値は middleware を通らない場合の保険として残す）。
       {
         source: '/today',
         headers: [

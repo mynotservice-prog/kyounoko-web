@@ -28,6 +28,18 @@ export type TempClosure = {
 };
 
 export const SPOT_TEMP_CLOSED: Record<string, TempClosure> = {
+  ヤンマーミュージアム: {
+    from: '2026-12-07',
+    to: '2027-01-02',
+    note: 'リニューアル改装のため休館します（2026年12月7日〜2027年1月2日）。再開日は公式サイトの開館カレンダーでご確認ください。',
+    source: 'https://www.yanmar.com/jp/museum/',
+  },
+  所沢航空発祥記念館: {
+    from: '2025-09-01',
+    to: '2027-03-31',
+    note: '大規模リニューアル工事のため長期休館中です（2025年9月1日〜2027年3月末予定。記念館の駐車場も閉鎖）。再開日は公式サイトでご確認ください。',
+    source: 'https://tam-web.jsf.or.jp/',
+  },
   日本科学未来館: {
     from: '2026-10-01',
     to: '2027-04-22',

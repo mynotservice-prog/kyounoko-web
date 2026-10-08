@@ -1,0 +1,6 @@
+cache/
+stores/
+matched.json
+gen_stat.json
+__pycache__/
+*.log
