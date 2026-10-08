@@ -8,6 +8,7 @@
  * 【決まり】
  *  - データ（lib/spot-hours-data.ts）は運営元の公式サイトで読めたものだけ。文言は公式の表記のまま持つ。
  *  - 機械で判定するのは「毎週◯曜」「祝日は開館して翌日／翌平日に休み」「年末年始」「営業する季節」だけ。
+ *    公式が「年末年始」とだけ書いて日付を出していない施設は、12月29日〜1月3日を休みとして扱う（案内しない側に倒す）。
  *    「第2・第4月曜」「不定休」「施設カレンダーによる」は判定せず、文言を表示して読者に確かめてもらう。
  *  - 載っていないスポットは「分からない」。開いているとも休みとも言わない。
  *  - 祝日の表（lib/jp-holidays.ts）の範囲を過ぎた日は、祝日の例外を当てられないので判定しない
@@ -25,6 +26,8 @@ export type SpotHours = {
   holidayOpen?: boolean;
   /** 祝日に開けた代わりに休む日 */
   shiftTo?: 'next-day' | 'next-weekday';
+  /** 毎週の定休を当てない期間（MM-DD）。公式に「10月・11月は無休」「8月は休まず開館」などとある期間 */
+  weeklyExempt?: Array<{ from: string; to: string }>;
   /** 年末年始などの休み（MM-DD。年をまたぐ範囲は from > to） */
   closedRanges?: Array<{ from: string; to: string }>;
   /** 営業する季節（MM-DD）。この外の日は営業していない */
@@ -71,6 +74,7 @@ export function regularClosureOn(spotName: string, d: Ymd): string | null {
   if (h.closedRanges?.some((r) => inMonthDayRange(d, r))) return '年末年始などの休み';
   if (h.status !== 'ok' || !h.closedWeekdays?.length) return null;
   if (toIso(d) > JP_HOLIDAYS_UNTIL) return null;
+  if (h.weeklyExempt?.some((r) => inMonthDayRange(d, r))) return null;
 
   const isHol = (x: Ymd) => isJpHoliday(toIso(x));
   const closedDay = (x: Ymd) => h.closedWeekdays!.includes(weekdayOf(x));

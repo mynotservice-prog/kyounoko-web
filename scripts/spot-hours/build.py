@@ -49,7 +49,7 @@ def season(x):
     m=re.search(Y+r'([6-7])月(\d{1,2})日(?:\([^)]*\))?\s*(?:~|〜|から|-)\s*'+Y+r'([8-9]|10)月(\d{1,2})日',t)
     return {'from':md(m.group(1),m.group(2)),'to':md(m.group(3),m.group(4))} if m else None
 def q(s): return json.dumps(s,ensure_ascii=False)
-L=[];stat={};unparsed_ye=[];seas=[];noseason=[]
+L=[];stat={};unparsed_ye=[];seas=[];noseason=[];ye_default=[]
 for x in sorted(rows,key=lambda x:x['name']):
     x={**x,**fix.get(x['name'],{})}
     st=x['status']
@@ -67,8 +67,13 @@ for x in sorted(rows,key=lambda x:x['name']):
         if x.get('holidayOpen'): f.append('holidayOpen: true')
         if x.get('shiftTo') in ('next-day','next-weekday') and x.get('holidayOpen'): f.append(f"shiftTo: {q(x['shiftTo'])}")
     ye=x.get('closedRanges') or (year_end(x.get('yearEnd') or '') if (x.get('yearEnd') or '').strip() and st!='always-open' else None)
+    # 公式が「年末年始」とだけ書いて日付を出していない施設は、12/29〜1/3 を休みとして扱う（案内しない側に倒す）
+    yt=nk(x.get('yearEnd') or '')
+    if not ye and st!='always-open' and re.search(r'年末年始|Year-end',yt) and not re.search(r'営業|開館時間表',yt):
+        ye=[{'from':'12-29','to':'01-03'}]; ye_default.append(x['name'])
     if (x.get('yearEnd') or '').strip() and not ye and st=='ok': unparsed_ye.append((x['name'],x['yearEnd'][:60]))
     if ye: f.append('closedRanges: '+json.dumps(ye))
+    if x.get('weeklyExempt'): f.append('weeklyExempt: '+json.dumps(x['weeklyExempt']))
     se=x.get('openSeason') or season(x)
     if se: f.append('openSeason: '+json.dumps(se)); seas.append((x['name'],se))
     elif SEASONAL.search(x['name']): noseason.append(x['name'])
@@ -109,5 +114,6 @@ export const SPOT_HOURS_ALIASES: Record<string, string> = {
 open(out,'w').write(head+'\n'.join(sorted(L))+'\n'+tail)
 print(len(rows),'rows',stat,'written',len(L))
 print('year-end not parsed:',unparsed_ye)
+print('year-end defaulted to 12-29..01-03:',ye_default)
 print('season:',seas)
 print('seasonal name without season:',noseason)
