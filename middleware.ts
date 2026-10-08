@@ -81,6 +81,29 @@ function botQueryGuard(req: NextRequest): NextResponse | null {
   return res;
 }
 
+// ===== /today のCDNキャッシュを日本時間の0時で切る =====
+//
+// /today の「今日の流れ」は、その日が定休日・営業期間外のスポットを候補から外す
+// （lib/spot-hours.ts・2026-10）。next.config.ts は /today に「24時間キャッシュ＋7日間は古い版を返す」
+// を付けているので、そのままだと月曜に作った版が火曜にも配られ、火曜休館の施設を案内しうる。
+// ここで保存期間を「次の日本時間0時まで」に上書きし、古い版を返す指定（stale-while-revalidate）を外す。
+//
+// 費用: 同じURLの再生成は今までどおり1日1回まで（24時間→最長24時間）。増えるのは、0時を過ぎた
+// 最初のアクセスが古い版を受け取らずに再生成を待つ分だけ。ボットのクエリ総当たりは上の遮断がそのまま効く。
+// キャッシュ自体を外す変更ではない（外すと毎アクセスで Function が起動する。next.config.ts の注記参照）。
+function todayDayBoundedCache(): NextResponse {
+  const JST_OFFSET_MS = 9 * 60 * 60 * 1000;
+  const DAY_MS = 24 * 60 * 60 * 1000;
+  const jstNow = Date.now() + JST_OFFSET_MS;
+  // 0時ちょうどの境目で前日の版が残らないよう、最短60秒は置く
+  const ttl = Math.max(60, Math.floor((DAY_MS - (jstNow % DAY_MS)) / 1000));
+  const res = NextResponse.next();
+  res.headers.set('Cache-Control', `public, max-age=0, must-revalidate, s-maxage=${ttl}`);
+  res.headers.set('CDN-Cache-Control', `public, max-age=${ttl}`);
+  res.headers.set('Cloudflare-CDN-Cache-Control', `public, max-age=${ttl}`);
+  return res;
+}
+
 /**
  * /admin 配下を Basic 認証で保護する。
  *
@@ -94,6 +117,8 @@ function botQueryGuard(req: NextRequest): NextResponse | null {
 export function middleware(req: NextRequest) {
   const blocked = botQueryGuard(req);
   if (blocked) return blocked;
+
+  if (req.nextUrl.pathname === '/today') return todayDayBoundedCache();
 
   if (!req.nextUrl.pathname.startsWith('/admin')) {
     return NextResponse.next();
