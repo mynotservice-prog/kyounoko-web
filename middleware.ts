@@ -1,4 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
+import {
+  buildAdminSessionSetCookie,
+  constantTimeEqual,
+  createAdminSessionValue,
+  readAdminSessionCookie,
+  verifyAdminSessionValue,
+} from '@/lib/admin-session';
 
 /**
  * 1) ボットのクエリ総当たりからコストを守るハード遮断
@@ -112,13 +119,17 @@ function isSecretAuthApiPath(pathname: string): boolean {
  * 未設定時は 503 を返し、誤って公開されないようにする。
  * HTTPS 前提（Vercel 本番は常時 HTTPS）なので Basic Auth で十分。
  *
- * 管理画面（/admin/*）のブラウザ fetch は同一オリジンなので、/admin で入力した
- * 認証情報（同じ realm）をブラウザが /api/admin/* にも付ける（/api/admin/reviews が
- * 以前からこの前提で動いている）。手元のスクリプトから叩く場合は
- * scripts/publish.mjs 等のように .env.local の ADMIN_USER / ADMIN_PASSWORD で
- * Authorization: Basic を付ける。
+ * 管理画面（/admin/*）のブラウザ fetch が /api/admin/* を呼ぶとき、「/admin で入力した
+ * Basic 資格情報を同じ realm の 401 にブラウザが自動再送する」のはブラウザ実装依存で、
+ * 保存操作が 401 で止まりうる。そこで 2026-10-10 から、Basic 認証に成功した応答に
+ * 署名付き HttpOnly クッキー（lib/admin-session.ts・12 時間で失効）を付け、
+ * /admin/* と /api/admin/* は「Basic 成功 → 通す（クッキー発行）／Basic 無し・不正 →
+ * 有効なクッキーがあれば通す／どちらも無ければ 401」の順で判定する。
+ * クッキーは Basic 成功の証明なので認証の弱体化ではない。
+ * 手元のスクリプトから叩く場合は scripts/publish.mjs 等のように .env.local の
+ * ADMIN_USER / ADMIN_PASSWORD で Authorization: Basic を付ける（従来どおり）。
  */
-export function middleware(req: NextRequest) {
+export async function middleware(req: NextRequest) {
   const blocked = botQueryGuard(req);
   if (blocked) return blocked;
 
@@ -152,9 +163,24 @@ export function middleware(req: NextRequest) {
       const user = decoded.slice(0, idx);
       const pass = decoded.slice(idx + 1);
       if (constantTimeEqual(user, expectedUser) && constantTimeEqual(pass, expectedPass)) {
-        return NextResponse.next();
+        const res = NextResponse.next();
+        // Basic 成功時にセッションクッキーを発行。鍵材料が無い場合（理論上ここでは
+        // ADMIN_USER/PASSWORD が揃っているので起きない）はクッキー無しで通す。
+        const value = await createAdminSessionValue();
+        if (value) {
+          res.headers.append(
+            'Set-Cookie',
+            buildAdminSessionSetCookie(value, req.nextUrl.protocol === 'https:'),
+          );
+        }
+        return res;
       }
     }
+  }
+
+  // Basic が無い／不正 → 一度 Basic に成功して発行されたクッキーが有効なら通す
+  if (await verifyAdminSessionValue(readAdminSessionCookie(req.headers))) {
+    return NextResponse.next();
   }
 
   return new NextResponse('Authentication required', {
@@ -170,13 +196,3 @@ export const config = {
   // ＋ Basic 認証の対象（/admin と /api/admin。secret 認証ルートは middleware 内で素通し）
   matcher: ['/admin/:path*', '/api/admin/:path*', '/today', '/events', '/ranking', '/spots', '/search'],
 };
-
-/** タイミング攻撃を弱めるための定数時間比較（Edge Runtime 互換） */
-function constantTimeEqual(a: string, b: string): boolean {
-  if (a.length !== b.length) return false;
-  let diff = 0;
-  for (let i = 0; i < a.length; i++) {
-    diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
-  }
-  return diff === 0;
-}
