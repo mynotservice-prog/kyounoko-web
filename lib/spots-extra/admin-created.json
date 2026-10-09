@@ -104,7 +104,12 @@
       "hiddenTip": "終了日は公式に未記載。長袖・長靴があると安心（栗のイガ）。",
       "relatedArticleSlugs": [
         "kurihiroi-kanto-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "Kids Base（キッズベース）",
@@ -193,7 +198,12 @@
       "hiddenTip": "7種類以上の梨の直売あり。料金・予約方法は川崎市観光協会ページに記載がないため電話で確認。",
       "relatedArticleSlugs": [
         "nashigari-kawasaki-tokyo-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "中㋑園",
@@ -215,7 +225,12 @@
       "hiddenTip": "料金は川崎市観光協会ページに記載なし（電話で確認）。",
       "relatedArticleSlugs": [
         "nashigari-kawasaki-tokyo-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "かしや梨園",
@@ -237,7 +252,12 @@
       "relatedArticleSlugs": [
         "nashigari-kawasaki-tokyo-kodzure",
         "budougari-kanto-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "三平果樹園",
@@ -258,7 +278,12 @@
       "hiddenTip": "夏野菜狩りもあり。料金は川崎市観光協会ページに記載なし。",
       "relatedArticleSlugs": [
         "nashigari-kawasaki-tokyo-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "ヤマモ園",
@@ -279,7 +304,12 @@
       "hiddenTip": "料金は川崎市観光協会ページに記載なし。",
       "relatedArticleSlugs": [
         "nashigari-kawasaki-tokyo-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "黒川東芋掘会",
@@ -301,7 +331,12 @@
       "hiddenTip": "学校行事の収穫体験も受け入れ。料金は川崎市観光協会ページに記載なし。",
       "relatedArticleSlugs": [
         "imohori-kanagawa-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "鈴木園",
@@ -324,7 +359,12 @@
       "relatedArticleSlugs": [
         "kurihiroi-kanto-kodzure",
         "budougari-kanto-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "ワイワイ栗園",
@@ -343,7 +383,12 @@
       "hiddenTip": "終了日は公式未記載。",
       "relatedArticleSlugs": [
         "kurihiroi-kanto-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     }
   ],
   "yamanashi": [
@@ -376,7 +421,12 @@
       "hiddenTip": "公式の品種カレンダーでシャインマスカットは8月下旬〜9月下旬、甲州は10月初旬〜11月初旬。デラウェア狩りは2026年は終了と公式に明記（9月10日更新）。",
       "relatedArticleSlugs": [
         "budougari-yamanashi-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "里見農園",
@@ -402,7 +452,12 @@
       "hiddenTip": "2026年のぶどう狩り・食べ放題は8月20日から（公式）。品種カレンダーでデラウェア7月下旬〜8月中旬、シャインマスカット8月下旬〜9月下旬。ペットはリード付きで同伴可。",
       "relatedArticleSlugs": [
         "budougari-yamanashi-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "あすなろ園",
@@ -430,7 +485,12 @@
       "hiddenTip": "2026年のぶどう狩りは7月17日〜11月15日予定と公式に年つきで明記。26品種の時期一覧あり（デラウェア7月下旬〜、巨峰8月中旬〜、シャイン8月下旬〜）。",
       "relatedArticleSlugs": [
         "budougari-yamanashi-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "久保田園",
@@ -454,7 +514,12 @@
       "hiddenTip": "食べ放題ではなく量り売り。品種は月別（7〜8月サニールージュ、9月甲斐キング等、10月甲州）。ペット同伴可。",
       "relatedArticleSlugs": [
         "budougari-yamanashi-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "古寿園",
@@ -482,7 +547,12 @@
       "hiddenTip": "品種カレンダー: デラウェア7月下旬〜8月下旬、シャインマスカット8月下旬〜9月下旬。犬連れ歓迎。",
       "relatedArticleSlugs": [
         "budougari-yamanashi-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "一古園",
@@ -505,7 +575,12 @@
       "hiddenTip": "収穫時期一覧: 巨峰8月中旬〜10月上旬、甲州10月上旬〜11月上旬。BBQ等の食事は要予約。",
       "relatedArticleSlugs": [
         "budougari-yamanashi-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "ヤマサ農園",
@@ -529,7 +604,12 @@
       "hiddenTip": "26品種の一覧あり（デラウェア8月上旬〜、シャイン9月上旬〜、甲州10月中旬〜）。5名以上は事前連絡推奨。",
       "relatedArticleSlugs": [
         "budougari-yamanashi-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "ぶどうの国のくぬぎ園",
@@ -551,7 +631,12 @@
       "hiddenTip": "2026年は7月18日オープン、9月中旬〜下旬は在庫次第で終了（9月17日時点「9/19迄は営業できそう」）。ペット入園可。",
       "relatedArticleSlugs": [
         "budougari-yamanashi-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "ツチと実",
@@ -577,7 +662,12 @@
       "hiddenTip": "巨峰・シャイン狩りは9月5日〜10月12日と料金ページに記載（年の表記なし。出発前に公式で確認）。魚つかみ取りは着替え必須。",
       "relatedArticleSlugs": [
         "budougari-yamanashi-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "まるいわぶどう園",
@@ -598,7 +688,12 @@
       "hiddenTip": "公式サイトの会期は「2025年8月上旬〜10月上旬」のまま（2026年は未発表）。品種カレンダー: デラウェア7月、シャイン8〜9月、甲州9〜11月。",
       "relatedArticleSlugs": [
         "budougari-yamanashi-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "芳王遊覧園",
@@ -622,7 +717,12 @@
       "hiddenTip": "例年の開始〜終了は8月1日〜10月30日（年つきの発表なし）。品種カレンダーにシャインマスカットの記載なし（デラウェア7月下旬〜、巨峰8月下旬〜、甲斐路9月中旬〜）。",
       "relatedArticleSlugs": [
         "budougari-yamanashi-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     }
   ],
   "saitama": [
@@ -649,7 +749,12 @@
       "relatedArticleSlugs": [
         "budougari-kanto-kodzure",
         "nashigari-chiba-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "宮信観光ぶどう園",
@@ -681,7 +786,12 @@
       "hiddenTip": "2026年は9月5日から開催（公式・8月26日付で期間延長の告知）。品種はシャインマスカット・巨峰・シナノスマイル・クインニーナ・BKシードレス・ゴルビー。収穫物の持ち帰りは不可（直売所で購入）。",
       "relatedArticleSlugs": [
         "budougari-kanto-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "たいら栗園",
@@ -692,7 +802,7 @@
         "4-6"
       ],
       "city": "飯能市",
-      "note": "東吾野駅から徒歩15分の栗拾い園。2026年は9月10日〜9月27日（延長後・公式）。入園料は税込で小学生以上800円・小学生未満300円・1歳未満無料、持ち帰り150円/100g。洋式ウォシュレットのトイレ、多目的トイレにおむつ交換台、駐車場40台無料。個人は予約不要、火曜休。",
+      "note": "東吾野駅から徒歩15分の栗拾い園。2026年は9月10日〜10月11日（再延長後・公式）。入園料は税込で小学生以上800円・小学生未満300円・1歳未満無料、持ち帰り140円/100g。洋式ウォシュレットのトイレ、多目的トイレにおむつ交換台、駐車場40台無料。個人は予約不要、火曜休。",
       "budget": "low",
       "officialUrl": "https://tairakurien.com/",
       "reservation": "none",
@@ -708,11 +818,16 @@
         "diaperChange": "yes",
         "note": "公式FAQに「男性も女性も洋式のウォシュレット付き」「おむつ交換台は園内の多目的トイレ内」の記載（2026-09-18確認）。授乳室・雨天対応は記載なし。"
       },
-      "accessTips": "西武池袋線東吾野駅から徒歩15分。車は狭山・日高ICから30分。栗ひろいは9:30〜15:00（受付14:00終了）、火曜・年末年始休。",
+      "accessTips": "西武池袋線東吾野駅から徒歩15分。車は狭山・日高ICから30分。栗ひろいは9:30〜15:00（受付14:30終了）、火曜・年末年始休。",
       "hiddenTip": "帽子（イガ対策）・虫よけ・軍手を公式が推奨。手提げ・リュックの持込禁止。BBQ・ピザガーデンも併設。",
       "relatedArticleSlugs": [
         "kurihiroi-kanto-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-10-09",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "恵農園・伊奈ファーム",
@@ -740,7 +855,12 @@
       "hiddenTip": "予約はBookThatAppの申込リンクから。ペットは要連絡。",
       "relatedArticleSlugs": [
         "imohori-chiba-saitama-ibaraki-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     }
   ],
   "chiba": [
@@ -770,7 +890,12 @@
       "relatedArticleSlugs": [
         "budougari-kanto-kodzure",
         "nashigari-chiba-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "小川梨園",
@@ -798,7 +923,12 @@
       "hiddenTip": "2026年の梨狩りは8月15日から（公式）。幸水8月上旬〜下旬、豊水8月下旬〜9月中旬、新高9月中旬〜10月上旬。マイバッグ持参、大きいバッグ・傘は園内持込不可。",
       "relatedArticleSlugs": [
         "nashigari-chiba-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "高代園観光梨園",
@@ -821,7 +951,12 @@
       "hiddenTip": "2026年は8月20日時点で開園中（公式）。幸水8月中旬〜下旬、豊水8月下旬〜9月上中旬、菊水・新星・二十世紀9月上旬〜中旬、新高9月中旬〜10月上旬。もぎ取った梨の発送は不可。",
       "relatedArticleSlugs": [
         "nashigari-chiba-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "成田ファームランド",
@@ -847,7 +982,12 @@
       "hiddenTip": "芋掘りの平日限定割引（大人・子ども1,000円・3株/1時間）は「10/12〜11月中旬（予定）」。体験自体は「毎年9月〜11月頃まで」と併記（公式）。持ち物: 軍手・長靴・スコップ。",
       "relatedArticleSlugs": [
         "imohori-chiba-saitama-ibaraki-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     }
   ],
   "ibaraki": [
@@ -860,7 +1000,7 @@
         "4-6"
       ],
       "city": "かすみがうら市",
-      "note": "巨峰の1時間食べ放題（大人1,500円・3歳以上1,100円）。2026年は8月22日開園、9月21日頃まで開園予定（公式・天候次第）。予約不可の先着順。土浦駅から関鉄バス「下佐谷」徒歩3分。休憩所は屋根あり、トイレ洋式2。雨天は屋根がなく難しい。",
+      "note": "巨峰の1時間食べ放題（大人1,500円・3歳以上1,100円）。2026年のぶどう狩りは終了（8月22日〜9月23日、10月3日・4日のみ再開・公式）。予約不可の先着順。土浦駅から関鉄バス「下佐谷」徒歩3分。休憩所は屋根あり、トイレ洋式2。雨天は屋根がなく難しい。",
       "budget": "low",
       "officialUrl": "https://www.sanroku-kajuen.jp/",
       "reservation": "none",
@@ -877,7 +1017,12 @@
       "hiddenTip": "ぶどう狩りは巨峰のみ。直売はシャインマスカット（9月中下旬〜）など。持ち帰りは別途1,500円/kg。園内禁煙、ペット入園可（自己責任）。",
       "relatedArticleSlugs": [
         "budougari-kanto-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-10-09",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "岡野果樹園",
@@ -903,7 +1048,12 @@
         "budougari-kanto-kodzure",
         "nashigari-chiba-kodzure",
         "kurihiroi-kanto-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "福田グリーン農園",
@@ -930,7 +1080,12 @@
       "hiddenTip": "早生（丹沢・国見・大峰）9月上旬〜、中生（筑波・銀寄・紫峰）9月下旬〜、晩生（石鎚・岸根）10月上旬〜。焼き栗700円/200g。",
       "relatedArticleSlugs": [
         "kurihiroi-kanto-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "かねこ農園",
@@ -958,7 +1113,12 @@
       "hiddenTip": "長袖長ズボン・帽子・軍手、長靴か厚底スニーカー推奨（公式）。",
       "relatedArticleSlugs": [
         "kurihiroi-kanto-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     },
     {
       "name": "らぽっぽ なめがたファーマーズヴィレッジ",
@@ -984,7 +1144,12 @@
       "hiddenTip": "ガチャで選ぶランダム収穫体験（1株・2,000円/名）は11月7日〜23日の土日祝限定。雨天は室内実施または中止（中止時のみ返金）。",
       "relatedArticleSlugs": [
         "imohori-chiba-saitama-ibaraki-kodzure"
-      ]
+      ],
+      "verification": {
+        "verifiedAt": "2026-09-18",
+        "method": "official",
+        "note": "各園の公式サイトで会期・料金・設備を確認"
+      }
     }
   ]
 }
