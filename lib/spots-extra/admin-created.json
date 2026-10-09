@@ -728,7 +728,6 @@
         "infant": "キッズスペースは0才から保護者同伴で利用できます。平日1時間500円、土日祝1時間1,000円です。"
       },
       "facilities": {
-        "bathroom": "yes",
         "diaperChange": "yes",
         "nursingRoom": "yes",
         "kidsSpace": "yes",
@@ -2338,7 +2337,6 @@
         "infant": "6か月未満は入場無料"
       },
       "facilities": {
-        "bathroom": "yes",
         "diaperChange": "yes",
         "nursingRoom": "yes",
         "kidsSpace": "yes",
