@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 /**
  * 1) ボットのクエリ総当たりからコストを守るハード遮断
- * 2) /admin 配下の Basic 認証
+ * 2) /admin 配下と /api/admin 配下の Basic 認証
  */
 
 // ===== 1) ボット×クエリ変種の遮断 =====
@@ -81,8 +81,29 @@ function botQueryGuard(req: NextRequest): NextResponse | null {
   return res;
 }
 
+// ===== 2) /admin・/api/admin の Basic 認証 =====
+//
+// /api/admin/* のうち、Basic 認証ではなく body の ADMIN_REVALIDATE_SECRET で認証するルート。
+// これらは Basic 認証の外に置く（素通し）。理由:
+//   - /api/admin/revalidate は edit-content が本番内から fetch で呼ぶ（Authorization 無し）
+//   - /api/admin/purge-cf は scripts/publish.mjs と定期タスクが secret だけで呼ぶ
+// ここで Basic を二重にかけると、その経路が全部 401 で止まる。
+// 自前 Basic 認証を持つ /api/admin/reviews は同じ Authorization ヘッダを見るだけなので
+// 二重にかけても壊れず、除外しない。
+const API_ADMIN_SECRET_AUTH_PATHS = ['/api/admin/purge-cf', '/api/admin/revalidate'];
+
+function isSecretAuthApiPath(pathname: string): boolean {
+  return API_ADMIN_SECRET_AUTH_PATHS.some((p) => pathname === p || pathname.startsWith(p + '/'));
+}
+
 /**
- * /admin 配下を Basic 認証で保護する。
+ * /admin 配下と /api/admin 配下を Basic 認証で保護する。
+ *
+ * 2026-10-09 まで matcher が /admin/:path* だけで、/api/admin/* は各 route の
+ * 「Referer に /admin/ を含むか」判定しか無かった。Referer は誰でも付けられるため、
+ * 本番で curl -H "Referer: https://kyounoko.jp/admin/" だけで metrics の読み取り
+ * （200）や GitHub commit / KV 書き込みが通る状態だった（Phase 0 監査 §7）。
+ * 各 route の Referer 判定は多層防御として残す。
  *
  * 環境変数:
  *   ADMIN_USER     ... 管理ユーザー名（Vercel env で設定）
@@ -90,12 +111,21 @@ function botQueryGuard(req: NextRequest): NextResponse | null {
  *
  * 未設定時は 503 を返し、誤って公開されないようにする。
  * HTTPS 前提（Vercel 本番は常時 HTTPS）なので Basic Auth で十分。
+ *
+ * 管理画面（/admin/*）のブラウザ fetch は同一オリジンなので、/admin で入力した
+ * 認証情報（同じ realm）をブラウザが /api/admin/* にも付ける（/api/admin/reviews が
+ * 以前からこの前提で動いている）。手元のスクリプトから叩く場合は
+ * scripts/publish.mjs 等のように .env.local の ADMIN_USER / ADMIN_PASSWORD で
+ * Authorization: Basic を付ける。
  */
 export function middleware(req: NextRequest) {
   const blocked = botQueryGuard(req);
   if (blocked) return blocked;
 
-  if (!req.nextUrl.pathname.startsWith('/admin')) {
+  const { pathname } = req.nextUrl;
+  const isAdminPage = pathname.startsWith('/admin');
+  const isAdminApi = pathname.startsWith('/api/admin/') && !isSecretAuthApiPath(pathname);
+  if (!isAdminPage && !isAdminApi) {
     return NextResponse.next();
   }
 
@@ -136,8 +166,9 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  // botQueryGuard の対象パス（BOT_QUERY_BLOCKED_PATHS と一致させること）＋ /admin
-  matcher: ['/admin/:path*', '/today', '/events', '/ranking', '/spots', '/search'],
+  // botQueryGuard の対象パス（BOT_QUERY_BLOCKED_PATHS と一致させること）
+  // ＋ Basic 認証の対象（/admin と /api/admin。secret 認証ルートは middleware 内で素通し）
+  matcher: ['/admin/:path*', '/api/admin/:path*', '/today', '/events', '/ranking', '/spots', '/search'],
 };
 
 /** タイミング攻撃を弱めるための定数時間比較（Edge Runtime 互換） */

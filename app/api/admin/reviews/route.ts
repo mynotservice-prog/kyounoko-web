@@ -3,7 +3,8 @@ import { listPendingReviews, moderateReview, promoteReviewPhoto } from '@/lib/re
 
 /**
  * 口コミモデレーション API（P1-8・画面F）。
- * middleware の Basic Auth は /admin 配下のみなので、/api/admin/* はここで自前に検証する。
+ * middleware の Basic Auth は 2026-10-09 から /api/admin/* にもかかるが、
+ * 多層防御としてここでも同じ Authorization ヘッダを自前に検証する（二重でも壊れない）。
  */
 export const runtime = 'nodejs';
 
