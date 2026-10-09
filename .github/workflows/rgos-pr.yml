@@ -1,0 +1,116 @@
+name: rgos-pr
+# rgos-ops（Revenue Growth OS）W4 が生成した配布用ワークフロー。COO がこのサイト repo の .github/workflows/rgos-pr.yml として PR で置く。
+# 役割: routine pr-builder が push する rgos/<initiative-id> ブランチに対して、検査を実行してから **ドラフト PR** を作る。
+# 【注意】GITHUB_TOKEN が作った PR では pull_request 起点のワークフロー（この repo では .github/workflows/frozen-check.yml）が自動起動しない（GitHub の再帰防止仕様）。
+#        そのため frozen-check.yml と同じ検査（check-frozen.mjs --list / --base origin/main・npm ci --ignore-scripts・Node 22）をこのワークフロー内で先に回す。
+# 前提: (1) リポジトリ設定 Settings → Actions → General → "Allow GitHub Actions to create and approve pull requests" を ON
+#       (2) data/rgos-frozen-urls.json（rgos-ops dist/frozen-urls.<site>.json）を同じ PR で配布
+#       (3) ラベル rgos があれば付ける（無ければ付けない。作成は任意）
+# マージ・デプロイは人（社長/COO）。このワークフローは本番を変えない（deploy・vercel を呼ばない）。
+# きょうのこは既存の scripts/check-frozen.mjs（docs/experiments-active.md が正本）が凍結 slug・凍結 URL・比較基準へのリンク増減・描画層を検査する。
+# rgos-ops 配布の data/rgos-frozen-urls.json はそれに加えて二重に検査する（台帳の移行期間の保険）。
+on:
+  push:
+    branches: ['rgos/**']
+permissions:
+  contents: read
+  pull-requests: write
+concurrency:
+  group: rgos-pr-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  check-and-pr:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: git fetch --no-tags origin main
+      - name: 依存パッケージ（描画層シミュレーションに remark 等が要る）
+        run: npm ci --ignore-scripts
+      - name: 凍結対象を表示
+        run: node scripts/check-frozen.mjs --list
+      - name: 測定中の面に触っていないか（check-frozen）
+        run: node scripts/check-frozen.mjs --base origin/main
+      # 3 本とも scripts/ に実在（2026-10-10 確認）。引数なしで全記事を見て、parking / cross-article は data/*-baseline.json 差分の新規混入だけを落とす
+      - name: 事実の捏造ガード（check-fabricated-claims）
+        run: node scripts/check-fabricated-claims.mjs
+      - name: 駐車場断定の営業時間ガード（check-parking-claims）
+        run: node scripts/check-parking-claims.mjs
+      - name: 記事間の事実不整合ガード（check-cross-article-facts）
+        run: node scripts/check-cross-article-facts.mjs
+      - name: 内部リンク（オフライン）
+        run: node scripts/check-internal-links.mjs --offline
+      - name: 題・H1・description を変えていないか（initiative の処置が title/description のときだけ許可）
+        run: |
+          node - <<'JS'
+          const { execSync } = require("node:child_process");
+          const fs = require("node:fs");
+          const ini = fs.existsSync(".rgos/initiative.json") ? JSON.parse(fs.readFileSync(".rgos/initiative.json", "utf8")) : { treatment: [] };
+          const allow = new Set(ini.treatment ?? []);
+          const diff = execSync("git diff -U0 origin/main...HEAD -- 'content/articles/*.md'", { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 });
+          const lines = diff.split("\n").filter((l) => /^[+-]/.test(l) && !/^(\+\+\+|---)/.test(l));
+          const bad = [];
+          for (const l of lines) {
+            if (/^[+-]title:\s/.test(l) && !allow.has("title")) bad.push(l);
+            // きょうのこの front-matter は metaDescription（1402/1402 本）。description / excerpt は念のため残す
+            if (/^[+-](description|metaDescription|excerpt):\s/.test(l) && !allow.has("description")) bad.push(l);
+            if (/^[+-]#{1,2} /.test(l) && !allow.has("body")) bad.push(l);
+          }
+          if (bad.length) { console.error("::error::題・description・H1/H2 が変更されている（initiative.treatment に無い処置）:\n" + bad.slice(0, 10).join("\n")); process.exit(1); }
+          console.log("title/description/H1-2: 変更なし（または処置として許可）");
+          JS
+      - name: 凍結URLに触れていないか（rgos-ops 配布の data/rgos-frozen-urls.json・until ≥ 今日）
+        run: |
+          node - <<'JS'
+          const fs = require("node:fs");
+          const { execSync } = require("node:child_process");
+          const P = "data/rgos-frozen-urls.json";
+          if (!fs.existsSync(P)) { console.error(`::error::${P} が無い（rgos-ops dist/frozen-urls.<site>.json を COO が配布する。無い間は rgos/** の PR を作らない）`); process.exit(1); }
+          const today = new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);
+          const frozen = JSON.parse(fs.readFileSync(P, "utf8")).frozen.filter((f) => f.until >= today);
+          const changed = execSync("git diff --name-only origin/main...HEAD", { encoding: "utf8" }).split("\n").filter(Boolean).filter((f) => !f.startsWith(".rgos/"));
+          const diff = execSync("git diff -U0 origin/main...HEAD -- . ':(exclude).rgos'", { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 }).split("\n").filter((l) => /^[+-]/.test(l) && !/^(\+\+\+|---)/.test(l));
+          let bad = 0;
+          for (const f of frozen) {
+            const slug = f.path.replace(/\/$/, "").split("/").pop();
+            if (!slug || slug === "") continue;
+            const hitFiles = changed.filter((c) => c.includes(`/${slug}.`) || c.includes(`/${slug}/`) || c.endsWith(`/${slug}`));
+            if (hitFiles.length) { bad++; console.error(`::error::凍結URL ${f.url}（${f.experiment_id}・${f.until} まで）の本体に見えるファイルが変更されている: ${hitFiles.join(", ")}`); }
+            const hitLinks = diff.filter((l) => l.includes(f.path + '"') || l.includes(f.path + "'") || l.includes(f.path + ")") || l.includes(f.path + " ") || l.includes(f.url));
+            if (hitLinks.length) { bad++; console.error(`::error::凍結URL ${f.url} へのリンクが増減している（${hitLinks.length} 行）。別ファイルからでも不可`); }
+          }
+          console.log(`frozen check: 凍結 ${frozen.length} URL・変更 ${changed.length} ファイル・違反 ${bad}`);
+          process.exit(bad ? 1 : 0);
+          JS
+      - name: PR 本文（.rgos/pr-body.md・12 項目）があるか
+        run: |
+          test -f .rgos/pr-body.md || { echo "::error::.rgos/pr-body.md が無い（routine pr-builder が置く）"; exit 1; }
+          n=$(grep -cE '^[0-9]{1,2}\. ' .rgos/pr-body.md || true)
+          if [ "$n" -lt 12 ]; then echo "::error::PR 本文の番号付き項目が ${n} 件（12 件必要: 対象・問題・根拠・提案・期待効果・推定増益・不確実性・実装・テスト・判定指標・判定日・ロールバック）"; exit 1; fi
+          echo "pr-body: ${n} 項目"
+      - name: ドラフト PR を作る（既にあれば本文を更新）
+        # GITHUB_TOKEN で PR を作るには Settings → Actions → General → "Allow GitHub Actions to create and approve pull requests" が ON であること
+        # （2026-10-10 時点: can_approve_pull_request_reviews=false のため、ON にするまでこのステップは失敗する）。
+        # ラベル rgos は 2026-10-10 時点で未作成のため、存在するときだけ付ける。
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          title=$(head -1 .rgos/pr-body.md | sed 's/^# *//')
+          label_opt=""
+          if gh label list --json name --jq '.[].name' | grep -qx rgos; then label_opt="--label rgos"; fi
+          existing=$(gh pr list --head "$BRANCH" --base main --state open --json number --jq '.[0].number')
+          if [ -n "$existing" ]; then
+            gh pr edit "$existing" --body-file .rgos/pr-body.md
+            echo "PR #$existing の本文を更新"
+          else
+            gh pr create --draft --base main --head "$BRANCH" --title "$title" --body-file .rgos/pr-body.md $label_opt
+            echo "ドラフト PR を作成: $BRANCH"
+          fi
