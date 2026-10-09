@@ -418,7 +418,7 @@ export default async function SpotPage({ params }: Props) {
     }
   })();
   const infoRows: KkInfoRow[] = [
-    { icon: 'age', label: '対象年齢', value: spot.ages.map((a) => AGE_LABEL[a]).join('・') },
+    { icon: 'age', label: '対象年齢', value: spot.agesLabel ?? spot.ages.map((a) => AGE_LABEL[a]).join('・') },
     { icon: 'yen', label: '料金の目安', value: budgetLabel },
     { icon: 'home', label: '屋内/屋外', value: placeLabel },
     { icon: 'umbrella', label: '雨の日', value: rainLabel },
@@ -465,6 +465,7 @@ export default async function SpotPage({ params }: Props) {
     ? (
         [
           ['大人', spot.pricing.adult],
+          ['子ども', spot.pricing.child],
           ['小学生', spot.pricing.elementary],
           ['幼児', spot.pricing.preschool],
           ['乳児', spot.pricing.infant],

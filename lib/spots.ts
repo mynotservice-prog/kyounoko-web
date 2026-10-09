@@ -127,6 +127,8 @@ export type Spot = {
   /** カテゴリの表示名をスポット単位で差し替える（例: 喫茶店を「子連れOKカフェ」と表示）。絞り込みや集計は category のまま */
   categoryLabel?: string;
   budget?: 'free' | 'low' | 'mid' | 'high';  // 入園料目安
+  /** 「対象年齢」の表示をスポット単位で差し替える（例: '0歳〜12歳'）。絞り込みやタグは ages のまま */
+  agesLabel?: string;
   /** 「料金の目安」の表示をスポット単位で差し替える（例: '〜1,500円'）。絞り込みは budget のまま */
   budgetLabel?: string;
   /** 「持ち物のおすすめ」から外す商品のラベル（施設のルールに合わないもの。例: 靴下必須の施設で室内シューズ） */
@@ -134,6 +136,8 @@ export type Spot = {
   // ---- Instagram人気アカウントから学んだ情報密度UP項目 ----
   pricing?: {
     adult?: string;      // '2,300円'
+    /** 小学生と幼児を分けずに「子ども」1行で書く施設用（施設が年齢で料金を分けていないとき） */
+    child?: string;
     elementary?: string; // '1,100円'
     preschool?: string;  // '400円（3歳以上）'
     infant?: string;     // '無料（3歳未満）'
