@@ -10,6 +10,7 @@
  * 使い方:
  *   node scripts/ga4-weekly.mjs                       # 直近9週を表示
  *   node scripts/ga4-weekly.mjs --md=reports/weekly-traffic/2026-09-15.md
+ *   node scripts/ga4-weekly.mjs --end=yesterday      # 既定は 2daysAgo（直近2日のエンゲージ率は未確定で低く出る）
  *
  * 認証は scripts/gsc-report.mjs と同じ読み取り専用SA（credentials/google-indexing.json）。
  */
@@ -47,8 +48,12 @@ const weekKey = (yyyymmdd) => {
   const d = new Date(`${yyyymmdd.slice(0, 4)}-${yyyymmdd.slice(4, 6)}-${yyyymmdd.slice(6, 8)}T00:00:00Z`);
   return new Date(d - ((d.getUTCDay() + 6) % 7) * 864e5).toISOString().slice(0, 10);
 };
+// 終端日（2026-10-10 修正）: 既定は「2日前」。GA4 はエンゲージ系の指標が48時間ほど遅れて確定するので、
+// 月曜の朝に『昨日＝日曜』まで含めると、その週のエンゲージ率だけ 10〜15pt 低く出る
+// （2026-09-28 週で 59.8% と出て計器の誤りだった）。日曜まで入れたいときは --end=yesterday。
+const END = arg('end', '2daysAgo');
 const start = new Date(); start.setUTCDate(start.getUTCDate() - 7 * WEEKS - 7);
-const range = { startDate: start.toISOString().slice(0, 10), endDate: 'yesterday' };
+const range = { startDate: start.toISOString().slice(0, 10), endDate: END };
 
 async function weekly(filter) {
   const rows = await ga4({ dateRanges: [range], dimensions: [{ name: 'date' }], metrics: [{ name: 'sessions' }, { name: 'screenPageViews' }, { name: 'engagedSessions' }, { name: 'averageSessionDuration' }], ...(filter ? { dimensionFilter: filter } : {}), limit: 400 });
@@ -69,7 +74,7 @@ const f0 = (n) => Math.round(n).toLocaleString('en-US');
 const f2 = (n) => n.toFixed(2);
 const pct = (n) => `${(n * 100).toFixed(1)}%`;
 
-say(`# 週次トラフィック定点（GA4）${range.startDate}〜昨日`);
+say(`# 週次トラフィック定点（GA4）${range.startDate}〜${END === 'yesterday' ? '昨日' : END === '2daysAgo' ? '一昨日（直近2日は未確定のため除外）' : END}`);
 say('');
 say('| 週(月曜〜) | 日数 | セッション/日 | PV/日 | PV/セッション | エンゲージ率 | 平均滞在 |');
 say('|---|---:|---:|---:|---:|---:|---:|');

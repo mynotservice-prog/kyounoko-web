@@ -54,7 +54,10 @@
   その前に**10/1（いも掘り②）**も公開されるので、10/1にも加筆する（当初計画になかったが、
   記事本文に「10月1日更新予定」と書いてある以上、放置すると同じ未回収の約束になる）。
 
-### 5. 過長タイトルの短縮（2026-09-02）★はなまる1本をカナリアにする
+### 5. 過長タイトルの短縮（2026-09-02）★はなまる1本をカナリアにする → **判定済み: 判定不能（2026-10-01）**
+
+**判定（2026-10-01・判定文 `reports/verdicts-2026-10-01/exp5-title-shortening-hanamaru.md`）**: ページCTRは 4.35%→5.62% だが順位も 4.60→4.36 と動き、順位帯を揃えた期待クリック180に対し実績185（+3%）＝**順位を揃えるとCTRの上昇はほぼゼロ**。事前に予測した「お子様」系だけは 2.85%→5.01%（16→30clk・p≒0.06）だが件数不足。**台帳ベースラインの CTR 1.26% は page contains による #見出しURL合算の誤りで、正しくは 4.03%**（[[gsc-page-contains-fragment-inflation-2026-10-01]]）。15本への適用は 9/05 に前倒し済みで未執行の行動は無い。`hanamaru-udon-kodzure-koryaku` の凍結は解除（2026-10-10・`released`）。
+
 
 **pos5前後なのにCTRが1〜2%しか出ない面の原因が「タイトルが60〜90字」であるか**を検証する。
 SERPの日本語表示幅は約30字なので、それを大きく超えるとフックが切り捨てられる。
@@ -110,7 +113,10 @@ SERPの日本語表示幅は約30字なので、それを大きく超えると�
 
 抽出条件の再現: 記事の frontmatter title が60字以上 かつ GSC 90日で pos≤8・imp≥800・CTR<3.5%。
 
-### 6. 語彙不一致の是正（2026-09-02）— タイトルに検索者の語を併記する
+### 6. 語彙不一致の是正（2026-09-02）— タイトルに検索者の語を併記する → **判定済み: 不合格（2026-10-01）**
+
+**判定（2026-10-01・判定文 `reports/verdicts-2026-10-01/exp6-vocabulary-titles.md`）**: 判定対象3本のうち順位を揃えてCTRが上がったのは `cocoichi-kids-menu` のみ（3.5〜4.5位で 2.72%→4.75%・p≒0.003）。`mos-burger-kids-menu` は順位不変で 0.88%→1.20%（15→14clk）、`gusto-kids-menu` は 4.5〜5.5位で 1.21%→0.78%。**1/3で不合格。「完答をやめる／語彙併記」の横展開は根拠なしのまま保留。** 基準外の観察: 足した語のクエリの順位は cocoichi 5.10→3.72・gusto 5.78→4.69 と上がった（対照なし・因果は主張しない）。台帳の gusto ベースライン（541imp）は再現せず（実測 9,471imp）。対象6本（判定除外の `ichiran` `shabuyou` `yakiniku-king` を含む）の凍結は解除（2026-10-10・`released`）。`gusto-kids-menu` の公式不一致（品名・価格帯）は凍結中の 2026-10-02 に社長指示で先に訂正済み（下の「汚染の記録」）。
+
 
 **pos5〜9で表示は取れているのにCTRが0.0〜2.8%しか出ない面の一部は、原因が「タイトルが
 検索者の語彙を持っていない」ことであるか**を検証する。量産期に社内語彙（キッズメニュー／
@@ -168,7 +174,10 @@ CTR が上がったか**をクエリ別に見る。順位が動いた場合は�
 
 ---
 
-### 7. 記事本文からの文脈内部リンク（2026-09-04）★対照群あり
+### 7. 記事本文からの文脈内部リンク（2026-09-04）★対照群あり → **判定済み: 不合格（2026-10-01）**
+
+**判定（2026-10-01・判定文 `reports/verdicts-2026-10-01/exp7-context-links.md`・検査JSON `exp7-inspect-2026-10-01.json`）**: URL検査APIで全数再検査。9/04に未クロールだった面のうち `lastCrawlTime` が付いたのは **処置 7/16（44%）対 対照 14/19（74%）**（20対20・Fisher p=0.094・差は逆向き）。登録は処置4→10・対照1→15。処置群の参照元ページに記事は0面。**事前に決めた行動どおり、文脈リンクの394駅横展開はしない。sitemap分割とコンテンツへ寄せる。** 張った62本のリンクは読者導線として害が無いので剥がさない。処置21面・対照21面と `frozenUrls` の2面は凍結解除（2026-10-10・`releasedUrls`。下の小見出しから「処置群／対照群」の語を外してガードの収集対象から出した）。対照2面（`/spot/-vinb` `/spot/-9unv`）は開始前から記事リンク1本あり（台帳の「0本」は不正確）。
+
 
 **未発見の面に「記事本文からの文脈リンク」を張ると、クロール対象に押し上げられるか**を検証する。
 
@@ -191,7 +200,7 @@ CTR が上がったか**をクエリ別に見る。順位が動いた場合は�
 直前が固有名を構成する文字なら別名の一部とみなしてスキップ）。**本文の記述は一切変えていない＝
 リンク化のみの単一変数**。編集した記事は47本・追加リンクは62本。
 
-#### 処置群（21面・**この面を対象にした記事編集は判定日まで避ける**）
+#### 処置の面（21面・判定済み 2026-10-01・凍結解除）
 - 駒場東大前（駅／言及3本／実リンク3本）`/station/komaba-todaimae`
 - 荻窪（駅／言及3本／実リンク2本）`/station/ogikubo`
 - 東銀座（駅／言及2本／実リンク2本）`/station/higashi-ginza`
@@ -214,7 +223,7 @@ CTR が上がったか**をクエリ別に見る。順位が動いた場合は�
 - 東武百貨店 池袋店（スポット／言及1本／実リンク1本）`/spot/-rqcg`
 - ららぽーと海老名（スポット／言及1本／実リンク1本）`/spot/-g6eq`
 
-#### **対照群（21面・絶対にリンクを張らない）**
+#### **対照の面（21面・判定済み 2026-10-01・凍結解除）**
 - 月島（駅／言及3本／**リンク0本＝処置未達**）`/station/tsukishima`
 - 有楽町（駅／言及4本／**リンク0本＝処置未達**）`/station/yurakucho`
 - 学芸大学（駅／言及2本／**リンク0本＝処置未達**）`/station/gakugei-daigaku`
@@ -288,6 +297,10 @@ URLを知っているがクロール順を待たせている状態。したが�
 
 **編集した記事（47本）**: amenohi-indoor-spots-tokyo-15 / fruitgari-kanto-kodzure / hatsumoude-kodzure-kanto-15 / jabujabuike-mizuasobi-tokyo-30 / kanto-ajisai-kodzure-spot-10 / kosodate-amenohi-yokohama / kosodate-kanto-shizen-10 / kosodate-muryou-spots-tokyo / laketown-kids-menu / mizuasobi-kita-tokyo / mizuasobi-meguro-tokyo / mizuasobi-yokohama / moushobi-suzushii-spots / shitsunai-asobi-chuo-tokyo / shitsunai-asobi-itabashi-tokyo / shitsunai-asobi-kashiwa / shitsunai-asobi-kita-tokyo / shitsunai-asobi-koto-tokyo / shitsunai-asobi-meguro-tokyo / shitsunai-asobi-minato-tokyo / shitsunai-asobi-nakano-tokyo / shitsunai-asobi-nerima-tokyo / shitsunai-asobi-setagaya-tokyo / shitsunai-asobi-shinagawa-tokyo / shitsunai-asobi-shinjuku-tokyo / shitsunai-asobi-suginami-tokyo / shitsunai-asobi-sumida-tokyo / shitsunai-asobi-toshima-tokyo / shitsunai-asobi-yokohama / showa-kinen-koen-kodzure / showa-kinen-koen-stroller / tokyo-babycar-kodzure-gaishoku-50 / tokyo-fuwafuwa-park-20 / tokyo-ginza-kodzure-lunch / tokyo-hanabi-taikai-kodzure-2026 / tokyo-koto-toyosu-kodzure / tokyo-long-slide-park-20 / tokyo-meguro-weekday-hidden / tokyo-minato-roppongi-lunch / tokyo-nerima-free-park-muryou / tokyo-ogata-yugu-koen-30 / tokyo-roppongi-kodzure-lunch / tokyo-shibuya-kodzure-lunch / tokyo-station-babyroom / tokyo-station-kodzure-lunch / xmas-market-kodzure / yurakucho-kodzure-lunch
 
+### 7b. 記事中段のLINE小型CTA（2026-09-23 公開 / PR #260）→ **判定済み: 不合格（2026-10-01）・撤去（2026-10-10）**
+
+記事の判定ボックス直後に1行の帯（`KkLineInline placement="article-mid"`）を置き、表示（`line_cta_view`）÷クリック（`line_add_click`）を見た。合格ライン 1%以上・0.3%未満なら文言か位置の問題。**判定（判定文 `reports/verdicts-2026-10-01/line-inline-cta.md`）: GA4 9/24〜9/28 で表示 11,948・クリック 0（0.00%）。記事PVの59%で表示されており位置の問題は解消、押されない。** 段階2（全国チェーン早見表）へは進まない。2026-10-05 社長裁可 D-3=A で撤去（コードは `app/article/[slug]/page.tsx` から帯を外した。末尾の LINE カードは残す）。空いた位置の使い道は別の判定として起こす。凍結対象なし。
+
 ### 8. チェーン系モーニングの新規面7本（2026-09-21 公開 / PR #255・#256）
 
 未カバーだった7チェーンにモーニング記事を新設し、**新規面が立ち上がるか**を見る。
@@ -327,13 +340,6 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
 ```json frozen-check
 {
   "frozenSlugs": [
-    "hanamaru-udon-kodzure-koryaku",
-    "cocoichi-kids-menu",
-    "ichiran-kodzure-koryaku",
-    "shabuyou-kodzure-koryaku",
-    "mos-burger-kids-menu",
-    "yakiniku-king-kodzure-koryaku",
-    "gusto-kids-menu",
     "komeda-morning-kosodate",
     "gusto-morning-kosodate",
     "dennys-morning-kosodate",
@@ -350,12 +356,21 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
   "comparisonBaselines": [
     "imohori-kanto-kodzure"
   ],
-  "frozenUrls": [
+  "frozenUrls": [],
+  "released": [
+    "hanamaru-udon-kodzure-koryaku",
+    "cocoichi-kids-menu",
+    "ichiran-kodzure-koryaku",
+    "shabuyou-kodzure-koryaku",
+    "mos-burger-kids-menu",
+    "yakiniku-king-kodzure-koryaku",
+    "gusto-kids-menu"
+  ],
+  "releasedUrls": [
     "/spot/-m64q",
     "/spot/-xj0s"
   ],
-  "released": [],
-  "_memo": "frozenSlugs = 実験5（はなまる1本）・実験6（6本）・モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）。いずれも lib/auto-internal-links.ts のリストに載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。frozenUrls = 実験7の処置群・対照群のうち2026-09-18に実際に汚染された2面（節からも拾うが取りこぼし防止に二重化）。released = 判定が終わって凍結が解けたslug（ガードの対象から外れる）。 2026-09-21追加: 実験8のチェーン系モーニング新規面7本＋バーミヤン1本（判定 2026-11-20 / 2026-12-20）。新規面なので対照群は無く、判定は「立ち上がったか」だけ。"
+  "_memo": "frozenSlugs = モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）＋実験8のチェーン系モーニング新規面7本＋バーミヤン1本（判定 2026-11-20 / 2026-12-20。新規面なので対照群は無く、判定は「立ち上がったか」だけ）。いずれも lib/auto-internal-links.ts の EXPERIMENT_FROZEN_SLUGS に載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。released / releasedUrls = 2026-10-01 に判定が終わった実験5（はなまる1本）・実験6（6本）・実験7（処置21面・対照21面。frozenUrls にあった2面はここへ）。2026-10-10 に移した。"
 }
 ```
 
