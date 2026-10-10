@@ -531,6 +531,8 @@ export default async function SpotPage({ params }: Props) {
             {/* 保存ボタン（右上） */}
             <V2SdHeroFav id={slug} />
           </div>
+          {/* 写真についての注記（施設からの依頼で入れる。例: 家具・設備が写真と異なる場合がある） */}
+          {spot.imageNote && <p className="sv3-hero-note">{spot.imageNote}</p>}
         </div>
 
         {/* 閉館バナー（小さなステータスなので枠を許す。文言は従来どおり） */}
