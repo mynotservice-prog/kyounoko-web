@@ -1,12 +1,19 @@
 name: rgos-pr
-# rgos-ops（Revenue Growth OS）W4 が生成した配布用ワークフロー。COO がこのサイト repo の .github/workflows/rgos-pr.yml として PR で置く。
+# rgos-ops（Revenue Growth OS）W4/W5 が生成した配布用ワークフロー。COO がこのサイト repo の .github/workflows/rgos-pr.yml として PR で置く。
 # 役割: routine pr-builder が push する rgos/<initiative-id> ブランチに対して、検査を実行してから **ドラフト PR** を作る。
 # 【注意】GITHUB_TOKEN が作った PR では pull_request 起点のワークフロー（この repo では .github/workflows/frozen-check.yml）が自動起動しない（GitHub の再帰防止仕様）。
 #        そのため frozen-check.yml と同じ検査（check-frozen.mjs --list / --base origin/main・npm ci --ignore-scripts・Node 22）をこのワークフロー内で先に回す。
 # 前提: (1) リポジトリ設定 Settings → Actions → General → "Allow GitHub Actions to create and approve pull requests" を ON
 #       (2) data/rgos-frozen-urls.json（rgos-ops dist/frozen-urls.<site>.json）を同じ PR で配布
 #       (3) ラベル rgos があれば付ける（無ければ付けない。作成は任意）
-# マージ・デプロイは人（社長/COO）。このワークフローは本番を変えない（deploy・vercel を呼ばない）。
+# マージは人（社長/COO）が原則。このワークフローは deploy・vercel を呼ばない。
+# W5（2026-10-10 社長指示・安全基準 2026-10-10.1＝rgos-ops data/auto-exec-policy.json）: .rgos/<initiative-id>/initiative.json の auto が true の PR だけ、下の条件内で Ready → マージまで行う。auto でない PR はドラフトのまま（マージは人）。
+#   条件: 全検査通過／変更ファイル 3 以内（.rgos/ 除く）／差分の行に title:・description・metaDescription・<h1・行頭「## 」・adsbygoogle・google-adsense-account・robots・noindex が無い／
+#         同じ repo で当日（JST）に rgos の PR が 1 件もマージされていない（1日1サイト1件）。外れたら auto-merge-held ラベルとコメントを付けてドラフトのまま止める。
+#   権限: マージには contents: write が要る（GitHub の Merge a pull request は Contents 書き込み）。検査ジョブ（ブランチのコードを実行する）は contents: read のまま、
+#         マージ専用ジョブ auto-merge（ブランチのコードを実行しない）だけに contents: write を与える。
+#   注意: GITHUB_TOKEN のマージで main に入ったコミットは、この repo の push 起点ワークフローを起動しない（GitHub の再帰防止）。Vercel の Git 連携は別経路。
+#   .rgos/ の置き場: .rgos/<initiative-id>/{pr-body.md,initiative.json}（同時に開いた PR が同じファイルで衝突しないよう id 別）。旧配置 .rgos/ 直下も読む。
 # きょうのこは既存の scripts/check-frozen.mjs（docs/experiments-active.md が正本）が凍結 slug・凍結 URL・比較基準へのリンク増減・描画層を検査する。
 # rgos-ops 配布の data/rgos-frozen-urls.json はそれに加えて二重に検査する（台帳の移行期間の保険）。
 on:
@@ -21,6 +28,9 @@ concurrency:
 jobs:
   check-and-pr:
     runs-on: ubuntu-latest
+    outputs:
+      auto: ${{ steps.rgos.outputs.auto }}
+      rgos_dir: ${{ steps.rgos.outputs.dir }}
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
@@ -31,6 +41,18 @@ jobs:
           node-version: '22'
           cache: npm
       - run: git fetch --no-tags origin main
+      - name: .rgos の置き場と auto フラグ（W5）
+        id: rgos
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          id="${BRANCH#rgos/}"
+          if [ -d ".rgos/$id" ]; then dir=".rgos/$id"; else dir=".rgos"; fi
+          auto=$(node -e 'const fs=require("fs");const p=process.argv[1]+"/initiative.json";let a=false;try{a=JSON.parse(fs.readFileSync(p,"utf8")).auto===true}catch{};console.log(a)' "$dir")
+          echo "RGOS_DIR=$dir" >> "$GITHUB_ENV"
+          echo "dir=$dir" >> "$GITHUB_OUTPUT"
+          echo "auto=$auto" >> "$GITHUB_OUTPUT"
+          echo "rgos dir: $dir / auto: $auto"
       - name: 依存パッケージ（描画層シミュレーションに remark 等が要る）
         run: npm ci --ignore-scripts
       - name: 凍結対象を表示
@@ -51,7 +73,8 @@ jobs:
           node - <<'JS'
           const { execSync } = require("node:child_process");
           const fs = require("node:fs");
-          const ini = fs.existsSync(".rgos/initiative.json") ? JSON.parse(fs.readFileSync(".rgos/initiative.json", "utf8")) : { treatment: [] };
+          const iniPath = `${process.env.RGOS_DIR ?? ".rgos"}/initiative.json`;
+          const ini = fs.existsSync(iniPath) ? JSON.parse(fs.readFileSync(iniPath, "utf8")) : { treatment: [] };
           const allow = new Set(ini.treatment ?? []);
           const diff = execSync("git diff -U0 origin/main...HEAD -- 'content/articles/*.md'", { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 });
           const lines = diff.split("\n").filter((l) => /^[+-]/.test(l) && !/^(\+\+\+|---)/.test(l));
@@ -88,10 +111,10 @@ jobs:
           console.log(`frozen check: 凍結 ${frozen.length} URL・変更 ${changed.length} ファイル・違反 ${bad}`);
           process.exit(bad ? 1 : 0);
           JS
-      - name: PR 本文（.rgos/pr-body.md・12 項目）があるか
+      - name: PR 本文（.rgos/<id>/pr-body.md・12 項目）があるか
         run: |
-          test -f .rgos/pr-body.md || { echo "::error::.rgos/pr-body.md が無い（routine pr-builder が置く）"; exit 1; }
-          n=$(grep -cE '^[0-9]{1,2}\. ' .rgos/pr-body.md || true)
+          test -f "$RGOS_DIR/pr-body.md" || { echo "::error::$RGOS_DIR/pr-body.md が無い（routine pr-builder が置く）"; exit 1; }
+          n=$(grep -cE '^[0-9]{1,2}\. ' "$RGOS_DIR/pr-body.md" || true)
           if [ "$n" -lt 12 ]; then echo "::error::PR 本文の番号付き項目が ${n} 件（12 件必要: 対象・問題・根拠・提案・期待効果・推定増益・不確実性・実装・テスト・判定指標・判定日・ロールバック）"; exit 1; fi
           echo "pr-body: ${n} 項目"
       - name: ドラフト PR を作る（既にあれば本文を更新）
@@ -103,14 +126,92 @@ jobs:
           GH_REPO: ${{ github.repository }}
           BRANCH: ${{ github.ref_name }}
         run: |
-          title=$(head -1 .rgos/pr-body.md | sed 's/^# *//')
+          title=$(head -1 "$RGOS_DIR/pr-body.md" | sed 's/^# *//')
           label_opt=""
           if gh label list --json name --jq '.[].name' | grep -qx rgos; then label_opt="--label rgos"; fi
           existing=$(gh pr list --head "$BRANCH" --base main --state open --json number --jq '.[0].number')
           if [ -n "$existing" ]; then
-            gh pr edit "$existing" --body-file .rgos/pr-body.md
+            gh pr edit "$existing" --body-file "$RGOS_DIR/pr-body.md"
             echo "PR #$existing の本文を更新"
           else
-            gh pr create --draft --base main --head "$BRANCH" --title "$title" --body-file .rgos/pr-body.md $label_opt
+            gh pr create --draft --base main --head "$BRANCH" --title "$title" --body-file "$RGOS_DIR/pr-body.md" $label_opt
             echo "ドラフト PR を作成: $BRANCH"
           fi
+  # ── W5: 安全基準内の自動マージ（auto===true の PR だけ。ブランチのコードは実行しない）──
+  auto-merge:
+    needs: check-and-pr
+    if: needs.check-and-pr.outputs.auto == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write # gh pr merge に必要（このジョブだけ）
+      pull-requests: write
+    concurrency:
+      group: rgos-auto-merge # repo で直列（1日1サイト1件の判定が競合しないように）
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.sha }}
+      - run: git fetch --no-tags origin main
+      - name: 条件を検査して Ready → merge（外れたら auto-merge-held で止める）
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          BRANCH: ${{ github.ref_name }}
+          HEAD_SHA: ${{ github.sha }}
+          RGOS_DIR: ${{ needs.check-and-pr.outputs.rgos_dir }}
+          SITE: kyounoko
+        run: |
+          node - <<'JS'
+          const { execSync, execFileSync } = require("node:child_process");
+          const fs = require("node:fs");
+          const POLICY = "2026-10-10.1"; // 安全基準 2026-10-10.1（rgos-ops data/auto-exec-policy.json auto_merge と同じ値）
+          const MODULES = ["affiliate", "health"], TREATMENTS = ["affiliate", "links", "tech"], EXCLUDED_SITES = ["serennoa"];
+          const MAX_FILES = 3, MAX_PER_DAY = 1;
+          const BLOCKED_PATH = /^\.github\/|layout\.tsx$|robots|sitemap|lib\/spot-|chain-facilities/;
+          const BLOCKED_DIFF = /title:|description|metaDescription|<h1|adsbygoogle|google-adsense-account|robots|noindex/i;
+          const { BRANCH, HEAD_SHA, RGOS_DIR, SITE } = process.env;
+          const gh = (args) => execFileSync("gh", args, { encoding: "utf8" });
+          const ini = JSON.parse(fs.readFileSync(`${RGOS_DIR}/initiative.json`, "utf8"));
+          if (ini.auto !== true) { console.log("auto ではない → ドラフトのまま（マージは人）"); process.exit(0); }
+          const pr = JSON.parse(gh(["pr", "list", "--head", BRANCH, "--base", "main", "--state", "open", "--json", "number,isDraft,headRefOid"]))[0];
+          if (!pr) { console.error("::error::open の PR が見つからない（check-and-pr が作っているはず）"); process.exit(1); }
+          const hold = [];
+          // 1) initiative の静的条件（rgos-ops の auto-approve と同じ。写しが書き換えられていても通さない）
+          if (EXCLUDED_SITES.includes(SITE)) hold.push(`site=${SITE} は自動マージの対象外`);
+          if (ini.site && ini.site !== SITE) hold.push(`initiative の site（${ini.site}）がこの repo（${SITE}）と違う`);
+          if (!MODULES.includes(ini.module)) hold.push(`module=${ini.module} は対象外（${MODULES.join("/")}）`);
+          const tr = ini.treatment ?? [];
+          if (!tr.length || tr.some((t) => !TREATMENTS.includes(t))) hold.push(`treatment=[${tr.join(", ")}] は対象外（${TREATMENTS.join("/")} のみ）`);
+          if (pr.headRefOid !== HEAD_SHA) hold.push(`PR の先頭（${pr.headRefOid.slice(0, 8)}）が検査したコミット（${HEAD_SHA.slice(0, 8)}）と違う`);
+          // 2) 変更ファイル（.rgos/ 除く）
+          const changed = execSync("git diff --name-only origin/main...HEAD", { encoding: "utf8" }).split("\n").filter(Boolean).filter((f) => !f.startsWith(".rgos/"));
+          if (changed.length === 0) hold.push("変更ファイルが 0（.rgos/ 以外）");
+          if (changed.length > MAX_FILES) hold.push(`変更ファイル ${changed.length}（上限 ${MAX_FILES}）: ${changed.slice(0, 6).join(", ")}`);
+          const badPath = changed.filter((f) => BLOCKED_PATH.test(f));
+          if (badPath.length) hold.push(`自動マージ不可のファイル: ${badPath.join(", ")}`);
+          // 3) 差分の行（題・description・見出し・広告タグ・robots）
+          const lines = execSync("git diff -U0 origin/main...HEAD -- . ':(exclude).rgos'", { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 }).split("\n").filter((l) => /^[+-]/.test(l) && !/^(\+\+\+|---)/.test(l));
+          const badLines = lines.filter((l) => BLOCKED_DIFF.test(l) || /^[+-]## /.test(l));
+          if (badLines.length) hold.push(`差分に題・description・見出し・広告タグ・robots/noindex を含む行が ${badLines.length} 行: ${badLines.slice(0, 3).map((l) => l.slice(0, 80)).join(" ｜ ")}`);
+          // 4) 1日1サイト1件（JST）
+          const jst = (iso) => new Date(new Date(iso).getTime() + 9 * 3600 * 1000).toISOString().slice(0, 10);
+          const today = jst(new Date().toISOString());
+          const mergedToday = JSON.parse(gh(["pr", "list", "--state", "merged", "--base", "main", "--limit", "50", "--json", "number,headRefName,labels,mergedAt"]))
+            .filter((p) => (p.headRefName.startsWith("rgos/") || p.labels.some((l) => l.name === "rgos")) && p.mergedAt && jst(p.mergedAt) === today);
+          if (mergedToday.length >= MAX_PER_DAY) hold.push(`当日（JST ${today}）に rgos の PR ${mergedToday.map((p) => `#${p.number}`).join(", ")} がマージ済み（1日1サイト${MAX_PER_DAY}件。翌日以降に再実行するか人がマージ）`);
+
+          if (hold.length) {
+            try { gh(["label", "create", "auto-merge-held", "--color", "FBCA04", "--description", "自動マージを止めた（安全基準の条件外・1日1サイト1件）", "--force"]); gh(["pr", "edit", String(pr.number), "--add-label", "auto-merge-held"]); }
+            catch (e) { console.log(`::warning::auto-merge-held ラベルを付けられなかった: ${String(e.message).slice(0, 160)}`); }
+            gh(["pr", "comment", String(pr.number), "--body", `**自動マージを止めました（安全基準 ${POLICY}）**: ドラフトのままです。\n\n${hold.map((h) => `- ${h}`).join("\n")}\n\n人が内容を確認してマージするか、条件を満たす形に直して push し直してください。`]);
+            console.log(`::warning::auto-merge-held: ${hold.join(" / ")}`);
+            process.exit(0);
+          }
+          if (pr.isDraft) gh(["pr", "ready", String(pr.number)]);
+          gh(["pr", "merge", String(pr.number), "--merge", "--match-head-commit", HEAD_SHA]);
+          gh(["pr", "comment", String(pr.number), "--body", `**自動マージしました（安全基準 ${POLICY}）**: 変更 ${changed.length} ファイル（${changed.join(", ")}）・題/description/見出し/広告タグ/robots に触れる行なし・当日（JST ${today}）の rgos マージはこの 1 件。\n\nロールバックはこの PR の revert（PR 本文 12）。rgos-ops の routine pr-builder が main への取り込みを確認して配信後検証（判定日 = 取り込み + 14 日）を台帳に載せます。`]);
+          console.log(`merged PR #${pr.number}（${changed.length} files）`);
+          JS
