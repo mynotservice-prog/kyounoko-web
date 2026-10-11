@@ -292,7 +292,7 @@ export function RestaurantsTable({ rows, initialWard = 'all', wards, categories 
           >
             <option value="all">全て</option>
             <option value="chain">チェーン店</option>
-            <option value="indie">個人店</option>
+            <option value="indie">駅近の子連れOK店</option>
           </select>
         </label>
         <label style={{ fontSize: 12, display: 'flex', gap: 6, alignItems: 'center', flex: '1 1 200px', minWidth: 160 }}>

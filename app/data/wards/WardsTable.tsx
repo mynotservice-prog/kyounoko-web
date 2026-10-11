@@ -94,7 +94,7 @@ export function WardsTable({ rows }: Props) {
               チェーン<SortIndicator active={sortKey === 'chainCount'} />
             </th>
             <th style={{ ...headerStyle, textAlign: 'right' }} onClick={() => onSort('indieCount')}>
-              個人店<SortIndicator active={sortKey === 'indieCount'} />
+              駅近の子連れOK店<SortIndicator active={sortKey === 'indieCount'} />
             </th>
             <th style={{ ...headerStyle, textAlign: 'right' }} onClick={() => onSort('strollerGoodRatio')}>
               ベビーカー◎率<SortIndicator active={sortKey === 'strollerGoodRatio'} />
