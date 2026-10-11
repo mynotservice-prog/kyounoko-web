@@ -1,11 +1,13 @@
 {
-  "note": "根拠のない点数・順位／出所のない比率・回数・年数／記録のない調査の体裁の、既知の未処置分。scripts/check-fabricated-claims.mjs は、ここに無い「記事×型」だけを exit 1 にする。記事を直したら、その行を消す（消し忘れは検査が「もう当たっていない行」として表示する）。until は直す予定日で、過ぎると目立つ警告になる（--fail-on-expired で exit 1）。行を足すのは「見逃しの追認」なので、理由を note に書くこと。直す順番と根拠: ~/.claude/company/reports/2026-10-10/kyounoko-unfounded-scores-audit.md",
-  "updatedAt": "2026-10-10",
+  "note": "根拠のない点数・順位／出所のない比率・回数・年数・店舗数／記録のない調査・集計の体裁／名前を伏せた他人の声の、既知の未処置分（体験の節・一人称の文は data/experience-claims-baseline.json）。scripts/check-fabricated-claims.mjs は、ここに無い「記事×型」だけを exit 1 にする。記事を直したら、その行を消す（消し忘れは検査が「もう当たっていない行」として表示する）。until は直す予定日で、過ぎると目立つ警告になる（--fail-on-expired で exit 1）。行を足すのは「見逃しの追認」なので、理由を note に書くこと。直す順番と根拠: ~/.claude/company/reports/2026-10-10/kyounoko-unfounded-scores-audit.md",
+  "updatedAt": "2026-10-11",
   "rules": {
     "score": "点数（◯軸×◯点・◯点満点・NN/50・採点）",
     "rank": "順位（見出し・表の「N位」・本文の「総合N位」）",
-    "ratio": "出所のない比率・回数・年数",
-    "survey": "記録のない調査の体裁（ママ◯人に聞いた 等）"
+    "ratio": "出所のない比率・回数・年数・店舗数（年間N回・N店舗を実地確認・複数店舗を利用 を 2026-10-11 に追加）",
+    "survey": "記録のない調査の体裁（ママ◯人に聞いた 等）",
+    "aggregate": "集計の記録が見当たらない「約N件の声を分析」「〜という声が約N%」「編集部に届いた声（約N件集計）」",
+    "anon-voice": "名前を伏せた他人の声の引用（Aさん（30代・1歳児）…）"
   },
   "visitBacked": {},
   "ignore": [
@@ -28,6 +30,12 @@
   "entries": [
     {
       "slug": "2sai-kanshaku-koekake-top10",
+      "rule": "aggregate",
+      "until": "2027-03-04",
+      "note": "2026-10-11 の検査の強化で検出（集計の記録が見当たらない「約N件の声を分析／〜という声が約N%」）。便の案 未割当"
+    },
+    {
+      "slug": "2sai-kanshaku-koekake-top10",
       "rule": "rank",
       "until": "2027-01-31",
       "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
@@ -37,6 +45,12 @@
       "rule": "survey",
       "until": "2027-01-31",
       "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
+    },
+    {
+      "slug": "baby-jama-iwareta",
+      "rule": "anon-voice",
+      "until": "2027-01-07",
+      "note": "2026-10-11 の検査の強化で検出（名前を伏せた他人の声の引用）。便の案 K3/K4"
     },
     {
       "slug": "baby-senzai-ranking",
@@ -57,6 +71,18 @@
       "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
     },
     {
+      "slug": "bamiyan-kodzure-koryaku",
+      "rule": "aggregate",
+      "until": "2026-10-22",
+      "note": "2026-10-11 の検査の強化で検出。下書きPR #317 で節を外す（反映は 10/22 の案）。#317 が先に入れば、この行は「もう当たっていない行」になる"
+    },
+    {
+      "slug": "bamiyan-kodzure-koryaku",
+      "rule": "ratio",
+      "until": "2027-03-04",
+      "note": "2026-10-11 の検査の強化で検出（「年間N回」「N店舗を実地確認」「複数店舗を利用」／節の単位に狭めたことで当たった利用頻度）。便の案 保留・凍結（KY-E2-1021(treated)・〜2026-10-21）"
+    },
+    {
       "slug": "bento-takeout-chain-kodzure-4sha",
       "rule": "rank",
       "until": "2026-11-12",
@@ -115,12 +141,24 @@
       "rule": "score",
       "until": "2026-12-03",
       "note": "便3・採点12本の1つ"
+    },
+    {
+      "slug": "cocos-kodzure-koryaku",
+      "rule": "aggregate",
+      "until": "2026-10-22",
+      "note": "2026-10-11 の検査の強化で検出。下書きPR #317 で節を外す（反映は 10/22 の案）。#317 が先に入れば、この行は「もう当たっていない行」になる"
     },
     {
       "slug": "dakkohimo-ranking-2026",
       "rule": "rank",
       "until": "2027-03-31",
       "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "denny-s-kodzure-koryaku",
+      "rule": "aggregate",
+      "until": "2026-10-22",
+      "note": "2026-10-11 の検査の強化で検出。下書きPR #317 で節を外す（反映は 10/22 の案）。#317 が先に入れば、この行は「もう当たっていない行」になる"
     },
     {
       "slug": "doutor-kodzure-koryaku",
@@ -153,6 +191,30 @@
       "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
     },
     {
+      "slug": "futaime-timing",
+      "rule": "anon-voice",
+      "until": "2026-11-10",
+      "note": "2026-10-11 の検査の強化で検出（名前を伏せた他人の声の引用）。便の案 K2"
+    },
+    {
+      "slug": "gijikka-stress-kaisho",
+      "rule": "anon-voice",
+      "until": "2026-10-30",
+      "note": "2026-10-11 の検査の強化で検出（名前を伏せた他人の声の引用）。便の案 K1"
+    },
+    {
+      "slug": "gusto-kodzure-koryaku",
+      "rule": "aggregate",
+      "until": "2026-10-22",
+      "note": "2026-10-11 の検査の強化で検出。下書きPR #317 で節を外す（反映は 10/22 の案）。#317 が先に入れば、この行は「もう当たっていない行」になる"
+    },
+    {
+      "slug": "gusto-kodzure-koryaku",
+      "rule": "ratio",
+      "until": "2027-03-04",
+      "note": "2026-10-11 の検査の強化で検出（「年間N回」「N店舗を実地確認」「複数店舗を利用」／節の単位に狭めたことで当たった利用頻度）。便の案 保留・R1（10/27案）の母集団に当たる可能性（判定 11/25）"
+    },
+    {
       "slug": "gyudon-4chain-kodzure-hayami",
       "rule": "rank",
       "until": "2026-12-03",
@@ -183,6 +245,18 @@
       "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
     },
     {
+      "slug": "hitorikko-sodateru",
+      "rule": "anon-voice",
+      "until": "2026-11-10",
+      "note": "2026-10-11 の検査の強化で検出（名前を伏せた他人の声の引用）。便の案 K2"
+    },
+    {
+      "slug": "hoikuen-fuan-kaisho",
+      "rule": "anon-voice",
+      "until": "2026-11-10",
+      "note": "2026-10-11 の検査の強化で検出（名前を伏せた他人の声の引用）。便の案 K2"
+    },
+    {
       "slug": "hottomotto-kodzure-koryaku",
       "rule": "rank",
       "until": "2026-11-12",
@@ -195,10 +269,40 @@
       "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
     },
     {
+      "slug": "ikuji-noiroze-sign",
+      "rule": "anon-voice",
+      "until": "2026-11-10",
+      "note": "2026-10-11 の検査の強化で検出（名前を伏せた他人の声の引用）。便の案 K2"
+    },
+    {
+      "slug": "ikukyu-fukuki-junbi",
+      "rule": "anon-voice",
+      "until": "2026-11-10",
+      "note": "2026-10-11 の検査の強化で検出（名前を伏せた他人の声の引用）。便の案 K2"
+    },
+    {
       "slug": "jitanhaden-ranking-7sen",
       "rule": "rank",
       "until": "2027-03-31",
       "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "jonathan-kodzure-koryaku",
+      "rule": "ratio",
+      "until": "2027-01-07",
+      "note": "2026-10-11 の検査の強化で検出（「年間N回」「N店舗を実地確認」「複数店舗を利用」／節の単位に狭めたことで当たった利用頻度）。便の案 K3/K4"
+    },
+    {
+      "slug": "jonathan-morning-kosodate",
+      "rule": "aggregate",
+      "until": "2026-11-10",
+      "note": "2026-10-11 の検査の強化で検出（集計の記録が見当たらない「約N件の声を分析／〜という声が約N%」）。便の案 K2"
+    },
+    {
+      "slug": "jonathan-morning-real",
+      "rule": "aggregate",
+      "until": "2027-03-04",
+      "note": "2026-10-11 の検査の強化で検出（集計の記録が見当たらない「約N件の声を分析／〜という声が約N%」）。便の案 未割当"
     },
     {
       "slug": "kagonoya-kodzure-koryaku",
@@ -237,6 +341,12 @@
       "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
     },
     {
+      "slug": "kobanare-dekinai-oya",
+      "rule": "anon-voice",
+      "until": "2026-11-10",
+      "note": "2026-10-11 の検査の強化で検出（名前を伏せた他人の声の引用）。便の案 K2"
+    },
+    {
       "slug": "kodomo-gyuniku-itsukara",
       "rule": "ratio",
       "until": "2027-03-31",
@@ -268,6 +378,12 @@
     },
     {
       "slug": "kodzure-famires-15sen",
+      "rule": "ratio",
+      "until": "2027-01-14",
+      "note": "2026-10-11 の検査の強化で検出（「年間N回」「N店舗を実地確認」「複数店舗を利用」／節の単位に狭めたことで当たった利用頻度）。便の案 採点の便5・採点の型の便（承認済み・便1 11/12(根拠2文)・便5 2027-01-14）"
+    },
+    {
+      "slug": "kodzure-famires-15sen",
       "rule": "score",
       "until": "2027-01-14",
       "note": "便5・28日1,265クリック。用途別の順位表と出所不明の根拠2か所"
@@ -285,16 +401,58 @@
       "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
     },
     {
+      "slug": "kodzure-saize-koryaku",
+      "rule": "ratio",
+      "until": "2027-03-04",
+      "note": "2026-10-11 の検査の強化で検出（「年間N回」「N店舗を実地確認」「複数店舗を利用」／節の単位に狭めたことで当たった利用頻度）。便の案 K5/K6"
+    },
+    {
+      "slug": "koromogae-kodomofuku-shuunou-shobun",
+      "rule": "aggregate",
+      "until": "2027-03-04",
+      "note": "2026-10-11 の検査の強化で検出（集計の記録が見当たらない「約N件の声を分析／〜という声が約N%」）。便の案 未割当"
+    },
+    {
       "slug": "koromogae-kodomofuku-shuunou-shobun",
       "rule": "survey",
       "until": "2027-01-31",
       "note": "2026-10-10 の全記事スキャンで検出。個別の監査は未実施"
     },
     {
+      "slug": "kosodate-amenohi-nagoya",
+      "rule": "ratio",
+      "until": "2027-03-04",
+      "note": "2026-10-11 の検査の強化で検出（「年間N回」「N店舗を実地確認」「複数店舗を利用」／節の単位に狭めたことで当たった利用頻度）。便の案 未割当"
+    },
+    {
+      "slug": "kosodate-muryou-spots-tokyo",
+      "rule": "ratio",
+      "until": "2027-01-07",
+      "note": "2026-10-11 の検査の強化で検出（「年間N回」「N店舗を実地確認」「複数店舗を利用」／節の単位に狭めたことで当たった利用頻度）。便の案 K3/K4"
+    },
+    {
+      "slug": "kouen-mamatomo-nigate",
+      "rule": "anon-voice",
+      "until": "2026-11-10",
+      "note": "2026-10-11 の検査の強化で検出（名前を伏せた他人の声の引用）。便の案 K2"
+    },
+    {
       "slug": "kourakuen-kodzure-koryaku",
       "rule": "rank",
       "until": "2026-12-10",
       "note": "便4・ラーメンの採点の順位を1文で引用"
+    },
+    {
+      "slug": "kura-sushi-bikkurapon-real",
+      "rule": "aggregate",
+      "until": "2027-03-04",
+      "note": "2026-10-11 の検査の強化で検出（集計の記録が見当たらない「約N件の声を分析／〜という声が約N%」）。便の案 未割当"
+    },
+    {
+      "slug": "kyoudai-sa-katsuyu",
+      "rule": "anon-voice",
+      "until": "2026-11-10",
+      "note": "2026-10-11 の検査の強化で検出（名前を伏せた他人の声の引用）。便の案 K2"
     },
     {
       "slug": "maido-ookini-shokudo-kodzure-koryaku",
@@ -307,6 +465,12 @@
       "rule": "score",
       "until": "2026-11-26",
       "note": "便2・定食の採点の順位を1文で引用（noindex）"
+    },
+    {
+      "slug": "mamatomo-trouble-taisho",
+      "rule": "anon-voice",
+      "until": "2027-01-07",
+      "note": "2026-10-11 の検査の強化で検出（名前を伏せた他人の声の引用）。便の案 K3/K4"
     },
     {
       "slug": "mochikaeri-sushi-chain-kodzure-4sha",
@@ -387,6 +551,42 @@
       "note": "便4・ラーメンの採点の順位を1文で引用"
     },
     {
+      "slug": "saizeriya-baby-real-voices",
+      "rule": "aggregate",
+      "until": "2027-03-04",
+      "note": "2026-10-11 の検査の強化で検出（集計の記録が見当たらない「約N件の声を分析／〜という声が約N%」）。便の案 未割当"
+    },
+    {
+      "slug": "sango-haircare",
+      "rule": "anon-voice",
+      "until": "2026-11-10",
+      "note": "2026-10-11 の検査の強化で検出（名前を伏せた他人の声の引用）。便の案 K2"
+    },
+    {
+      "slug": "sango-mental-care",
+      "rule": "anon-voice",
+      "until": "2026-11-10",
+      "note": "2026-10-11 の検査の強化で検出（名前を伏せた他人の声の引用）。便の案 K2"
+    },
+    {
+      "slug": "sango-nukege-taisaku",
+      "rule": "anon-voice",
+      "until": "2026-11-10",
+      "note": "2026-10-11 の検査の強化で検出（名前を伏せた他人の声の引用）。便の案 K2"
+    },
+    {
+      "slug": "sango-sex-less",
+      "rule": "anon-voice",
+      "until": "2027-01-07",
+      "note": "2026-10-11 の検査の強化で検出（名前を伏せた他人の声の引用）。便の案 K3/K4"
+    },
+    {
+      "slug": "sango-taikei-modoshi",
+      "rule": "anon-voice",
+      "until": "2026-11-10",
+      "note": "2026-10-11 の検査の強化で検出（名前を伏せた他人の声の引用）。便の案 K2"
+    },
+    {
       "slug": "sanmarc-cafe-kodzure-koryaku",
       "rule": "rank",
       "until": "2026-12-03",
@@ -441,10 +641,22 @@
       "note": "「我が家は月1〜2回利用」。実験6の凍結slug（10/01判定済み・解除はCOO待ち）・休止リスト。凍結が解けるまで触らない"
     },
     {
+      "slug": "shigoto-fukuki-fuan",
+      "rule": "anon-voice",
+      "until": "2026-11-10",
+      "note": "2026-10-11 の検査の強化で検出（名前を伏せた他人の声の引用）。便の案 K2"
+    },
+    {
       "slug": "shitsunai-asobiba-4brand-tokyo",
       "rule": "ratio",
       "until": "2027-03-31",
       "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
+    },
+    {
+      "slug": "shizen-spot-tokyo-youji",
+      "rule": "ratio",
+      "until": "2027-03-04",
+      "note": "2026-10-11 の検査の強化で検出（「年間N回」「N店舗を実地確認」「複数店舗を利用」／節の単位に狭めたことで当たった利用頻度）。便の案 未割当"
     },
     {
       "slug": "shokumotsu-allergy-toha-kanzen-guide",
@@ -555,6 +767,12 @@
       "note": "2026-10-10 の全記事スキャンで検出（noindex）。noindex を解く前に必ず直す"
     },
     {
+      "slug": "tomobataraki-kaji-bunkatsu",
+      "rule": "anon-voice",
+      "until": "2026-11-10",
+      "note": "2026-10-11 の検査の強化で検出（名前を伏せた他人の声の引用）。便の案 K2"
+    },
+    {
       "slug": "tullys-coffee-kodzure-koryaku",
       "rule": "rank",
       "until": "2026-12-03",
@@ -607,6 +825,12 @@
       "rule": "rank",
       "until": "2027-01-31",
       "note": "「総合1位」の理由（公式の案内の有無）は本文に書いてある。順位の表現を残すかは未判断。2026-10-02 に事実訂正済み"
+    },
+    {
+      "slug": "yayoiken-kodzure-koryaku",
+      "rule": "aggregate",
+      "until": "2026-10-22",
+      "note": "2026-10-11 の検査の強化で検出。下書きPR #317 で節を外す（反映は 10/22 の案）。#317 が先に入れば、この行は「もう当たっていない行」になる"
     },
     {
       "slug": "yuzuan-kodzure-koryaku",

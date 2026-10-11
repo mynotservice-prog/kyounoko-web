@@ -41,6 +41,22 @@
  *   「## この記事から外したもの」節の中は、開示なので拾わない。
  *   目で見て誤検知と決めた記事×型は、一覧ファイルの ignore に理由つきで書く（恒久的に外れる）。
  *
+ * ── 2026-10-11 追加: 規則の定義を lib/claim-rules.mjs に移し、型を足し、一人称の体験を失敗に上げた ──
+ *   - 規則はこのファイルに置かない。**lib/claim-rules.mjs の 1 か所**を、この検査・法人営業の送信前の監査
+ *     （scripts/tieup-preflight.mjs）・管理画面の保存（app/api/admin/edit-content）が読む。
+ *   - 足した型（どれも [GATE]）: 集計の体裁（「約150件の声を傾向分析」「〜という声が約78%」「編集部に届いた声
+ *     （約N件集計）」。題・説明文の行も見る）／名前を伏せた他人の声（「Aさん（30代・1歳児）」）／
+ *     「年間100回以上通って」「30店舗以上を実地確認」「複数店舗を利用」（比率・回数の型に追加）／
+ *     体験の節の見出し（我が家のリアル・うちの場合・体験談・編集部の失敗談 ほか）／
+ *     書き手の家族を主語にした文（我が家・うちの子・友人ファミリーに同行 ほか）。
+ *   - [WARN] のまま: 「実際に食べる」「助けられた」など、体験とも一般論とも読める言い回し。
+ *   - 体験の型（exp-section・first-person）の既知の一覧は data/experience-claims-baseline.json。
+ *     記事ごとに、扱い（verify＝事実確認／revise＝修正／remove＝節の削除）と便（K1〜K6）と件数 n を持つ。
+ *     **一覧に無い記事に体験の節・文が入る、または既知の記事で件数が n より増えると exit 1。**
+ *     一覧の行は「記録なし・確認待ち」の意味で、事実でないと決めたものではない。
+ *     社長の確認が取れた節は records に店舗・年月つきで書くと、検査から外れる。
+ *   - 「実訪問の記録がある」扱いを、記事の単位から**節の単位**に狭めた（詳細は lib/claim-rules.mjs の 3）。
+ *
  * 使い方:
  *   node scripts/check-fabricated-claims.mjs           # 違反があれば exit 1
  *   node scripts/check-fabricated-claims.mjs --public  # 公開記事のみ検査
@@ -49,119 +65,88 @@
  *   node scripts/check-fabricated-claims.mjs --print-baseline  # 現状の GATE を一覧の形（JSON）で標準出力に出す
  *   node scripts/check-fabricated-claims.mjs --fail-on-expired # 期限切れの既知の行があれば exit 1
  *   node scripts/check-fabricated-claims.mjs --json            # 追加した検査の結果を JSON で出す（集計用）
+ *   node scripts/check-fabricated-claims.mjs --dir=<フォルダ>   # content/articles の代わりに、別の場所の md を検査する
+ *                                                              #（KV の上書きを scripts/kv-article-overrides.mjs --dump で書き出したもの 等）
+ *   node scripts/check-fabricated-claims.mjs --only=a,b        # slug を絞る
+ *   node scripts/check-fabricated-claims.mjs --tighten         # 体験の一覧の n を現状まで下げ、もう当たらない行を消す（増やす方向には書かない）
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import { OFFICIAL_CLAIM_LABEL, RULE_META, parseVisitRecords, scanArticle } from '../lib/claim-rules.mjs';
 
-const DIR = 'content/articles';
-const publicOnly = process.argv.includes('--public');
+const argv = process.argv.slice(2);
+const flag = (name) => argv.includes(name);
+const opt = (name) => argv.find((a) => a.startsWith(`${name}=`))?.slice(name.length + 1);
 
-/** 見出しレベルの検出（セクションまるごと捏造のパターン） */
-const HEADING_RULES = [
-  ['編集部の独自視点', /^##.*編集部の独自視点/m],
-  ['きょうのこ独自データ', /^##.*独自データ/m],
-  ['先輩ママ・パパの声', /^##.*先輩ママ・パパの声/m],
-  ['専門家から見たポイント', /^##.*専門家から見た/m],
-];
+const DIR = opt('--dir') ?? 'content/articles';
+const ONLY = opt('--only') ? new Set(opt('--only').split(',').map((s) => s.trim()).filter(Boolean)) : null;
+const publicOnly = flag('--public');
+const AS_JSON = flag('--json');
+const SHOW_ALL = flag('--all');
+const NO_BASELINE = flag('--no-baseline');
+const PRINT_BASELINE = flag('--print-baseline');
+const FAIL_ON_EXPIRED = flag('--fail-on-expired');
+const TIGHTEN = flag('--tighten');
 
-/** 本文中の主張の検出 */
-const BODY_RULES = [
-  ['編集部の専門家監修の主張', /編集部[^。]{0,40}(監修のもと|医\d*名?(と|に)[^。]{0,20}取材)/],
-  ['実地調査・実踏の主張', /編集部[^。]{0,40}(実地調査|実踏|現地調査|全店舗調査)/],
-  ['パネル調査の主張', /編集部が[^。]{0,30}\d[\d,]*\s*(人|世帯|家庭|組|名)(に|を|から)/],
-  ['読者への聞き取りの主張', /読者\d+世帯|読者への聞き取り/],
-  ['ストップウォッチ実測の主張', /ストップウォッチで測/],
-  ['全店確認の主張', /編集部が確認した店/],
-  ['子連れ歴の年数主張', /(外食歴|利用|通い)\s*\d+年以上/],
-  ['訪問頻度の主張', /月\d+〜\d+回ペース|週\d+〜\d+回ペース|延べ\d+店舗以上/],
-  ['公表年齢を超える一次記述', /(5歳の娘|6歳の娘|長女5歳|長女6歳|長女は5歳|長女は6歳)/],
-  // ── 外部の一次情報を「公式が言っている」と誤って引用する型 ────────────────────
-  // 2026-07-28 に発覚。自称の一次調査（上の各ルール）とは別クラスで、当時この検査を
-  // 通過していた。実害の出方はむしろこちらの方が重い（チェーン本部から指摘され得る）。
-  //
-  // 実測した反例:
-  //   - `hamasushi-rinyushoku-mochikomi` は「はま寿司は公式に『離乳食やアレルギー対応食の
-  //     持ち込みOK』と案内」と書いていたが、hamazushi.com / hama-sushi.co.jp の
-  //     公式FAQに該当記載は無い（あるのは「お子様用の補助いすは全店舗にご用意」だけ）。
-  //   - すかいらーく系記事が引用していた https://www.skylark.co.jp/menu/baby/ は 404。
-  //     すかいらーく公式に「離乳食」の文字列は 0 件。
-  //
-  // 「公式に記載がない」「確認できていない」と**否定形**で書いているものは正しい書き方
-  // なので弾かない。断定（案内/明記/OK/可能/認め）だけを拾う。
-  [
-    '公式が言っているという未検証の断定',
-    /公式[^。\n]{0,30}(?!.{0,20}(記載がな|確認できて|明記はな|判断できな|見当たら))[^。\n]{0,20}(案内し|明記し|案内あり|明記あり|と案内|と明記)/,
-  ],
-];
+/** 点数・順位・比率・調査・集計・他人の声の既知の一覧（記事×型） */
+const BASELINE_PATH = 'data/unfounded-claims-baseline.json';
+/** 体験の節・一人称の文の既知の一覧（記事ごと。扱い・便・件数つき） */
+const EXPERIENCE_PATH = 'data/experience-claims-baseline.json';
+const EXPERIENCE_RULES = ['exp-section', 'first-person'];
 
-/**
- * 否定形（公式に記載がない旨）は正しい書き方なので除外する。
- * 「明記されているわけではありません」「明記してはいません」のように、
- * 否定が肯定語の**後ろ**に来る日本語の形を取りこぼさないこと。
- */
-const OFFICIAL_NEGATION =
-  /(記載がな|記載はな|確認できて|明記はな|明記されていな|判断できな|見当たら|載っていな|わけではあり|ものではあり|してはいませ|されてはいませ|とは限らな|ではありませ)/;
+const say = (...a) => { if (!AS_JSON) console.log(...a); };
+const warn = (...a) => { if (!AS_JSON) console.error(...a); };
+const readJson = (p, fallback) => (fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : fallback);
+const readText = (p) => { try { return fs.readFileSync(p, 'utf8'); } catch { return ''; } };
 
-/**
- * 「仮想ケース」「想定例」と明示された見出し配下は、架空であることが
- * 読者に開示されているので違反ではない。そこだけを除いた本文を返す。
- * （2026-07-27 に kosodate-spots-hokkaido-natsu で実際に誤検出したため追加）
- */
-const stripDisclosedFiction = (raw) => {
-  const lines = raw.split('\n');
-  const keep = [];
-  let skipUntilLevel = 0;
-  for (const l of lines) {
-    const h = l.match(/^(#{2,6})\s+(.*)$/);
-    if (h) {
-      const lvl = h[1].length;
-      if (skipUntilLevel && lvl <= skipUntilLevel) skipUntilLevel = 0;
-      if (!skipUntilLevel && /仮想|想定例|架空|サンプル例/.test(h[2])) { skipUntilLevel = lvl; continue; }
-    }
-    if (!skipUntilLevel) keep.push(l);
-  }
-  return keep.join('\n');
-};
+/* ------------------------------------------------------------------ *
+ * 読み込み
+ * ------------------------------------------------------------------ */
+const records = parseVisitRecords(readText('lib/kid-reports.ts'), readText('lib/chain-reports.ts'));
+const baselineFile = readJson(BASELINE_PATH, {});
+const experienceFile = readJson(EXPERIENCE_PATH, {});
+// --no-baseline は「既知の行」だけを無視する。目で見て誤検知と決めた行（ignore）と、
+// 記録のある節（records・visitBacked）は、棚卸しのときも効かせる。
+const baselineEntries = NO_BASELINE ? [] : (baselineFile.entries ?? []);
+const experienceEntries = NO_BASELINE ? [] : (experienceFile.entries ?? []);
+const ignored = new Set([...(baselineFile.ignore ?? []), ...(experienceFile.ignore ?? [])].map((e) => `${e.slug}\t${e.rule}`));
+/** slug → [{ heading? }]。visitBacked（2026-10-10 の形）は記事全体として扱う。 */
+const backedBySlug = new Map();
+for (const slug of Object.keys(baselineFile.visitBacked ?? {})) backedBySlug.set(slug, [{}]);
+for (const r of experienceFile.records ?? []) {
+  if (!backedBySlug.has(r.slug)) backedBySlug.set(r.slug, []);
+  backedBySlug.get(r.slug).push({ heading: r.heading });
+}
 
-let hits = [];
-for (const f of fs.readdirSync(DIR)) {
+/* ------------------------------------------------------------------ *
+ * 全記事を検査
+ * ------------------------------------------------------------------ */
+const legacyHits = []; // { file, label, noindex, excerpt }
+const found = []; // { slug, rule, label, severity, noindex, count, excerpt }
+let scanned = 0;
+for (const f of fs.readdirSync(DIR).sort()) {
   if (!f.endsWith('.md')) continue;
+  const slug = f.replace(/\.md$/, '');
+  if (ONLY && !ONLY.has(slug)) continue;
   const raw = fs.readFileSync(path.join(DIR, f), 'utf8');
-  const noindex = /^noindex:\s*true/m.test(raw.slice(0, 1500));
-  if (publicOnly && noindex) continue;
-  const scoped = stripDisclosedFiction(raw);
-  for (const [label, re] of [...HEADING_RULES, ...BODY_RULES]) {
-    if (re.test(scoped)) {
-      const m = scoped.match(re);
-      const excerpt = (m?.[0] ?? '').replace(/\n/g, ' ');
-      // 「公式に記載がない／明記されているわけではない」と否定形で書いているのは
-      // 正しい書き方なので違反にしない。**否定語は一致部分の直後に来る**ので、
-      // マッチした断片だけを見ると取りこぼす。前後に窓を取って判定する。
-      if (label === '公式が言っているという未検証の断定') {
-        const at = m?.index ?? -1;
-        const window = at >= 0 ? scoped.slice(at, at + 160).replace(/\n/g, ' ') : excerpt;
-        if (OFFICIAL_NEGATION.test(window)) continue;
-      }
-      hits.push({ file: f, label, noindex, excerpt: excerpt.slice(0, 70) });
-    }
+  const r = scanArticle(raw, { records, backedSections: backedBySlug.get(slug) ?? [] });
+  if (publicOnly && r.noindex) continue;
+  scanned++;
+  for (const h of r.legacy) legacyHits.push({ file: f, label: h.label, noindex: r.noindex, excerpt: h.excerpt });
+  for (const x of r.findings) {
+    if (ignored.has(`${slug}\t${x.rule}`)) continue;
+    found.push({ slug, rule: x.rule, label: x.label, severity: x.severity, noindex: r.noindex, count: x.count, excerpt: x.excerpt });
   }
 }
 
-
 /* ------------------------------------------------------------------ *
- * 従来の検査（自称の一次調査・未検証の「公式が〜」）の報告。終了コードを返す。
+ * 2026-07-28 の型（自称の一次調査・未検証の「公式が〜」）の報告。終了コードを返す。
  * ------------------------------------------------------------------ */
-const AS_JSON = process.argv.includes('--json');
-const say = (...a) => { if (!AS_JSON) console.log(...a); };
-const warn = (...a) => { if (!AS_JSON) console.error(...a); };
-
 function reportLegacy() {
-  const WARN_LABEL = '公式が言っているという未検証の断定';
-  // 新ルールは「捏造が確定した」ではなく「一次情報の裏取りが必要」を意味する。
-  // 公式サイトに実在する記述を正しく引用しているケースも同じ形になるため、
-  // 機械では真偽を判定できない。よってこれは**警告**として出し、exit 1 にはしない。
-  const warns = hits.filter((h) => h.label === WARN_LABEL);
-  const errs = hits.filter((h) => h.label !== WARN_LABEL);
+  // 「公式が〜」は「一次情報の裏取りが必要」を意味する。公式サイトに実在する記述を正しく引用して
+  // いるケースも同じ形になるため、機械では真偽を判定できない。よって**警告**として出し、exit 1 にはしない。
+  const warns = legacyHits.filter((h) => h.label === OFFICIAL_CLAIM_LABEL);
+  const errs = legacyHits.filter((h) => h.label !== OFFICIAL_CLAIM_LABEL);
   if (warns.length) {
     warn(`⚠ 一次情報の裏取りが必要な「公式が〜」の断定 ${warns.length} 件（exit 1 にはしない）`);
     for (const h of warns) warn(`  ${h.noindex ? '[noindex] ' : '[公開]    '}${h.file}  ${h.excerpt}`);
@@ -169,12 +154,12 @@ function reportLegacy() {
     warn('      確認できなければ「公式に記載はなく店舗判断」と書き直す。\n');
   }
   if (!errs.length) {
-    say(`✓ 捏造主張なし（${publicOnly ? '公開記事のみ' : '全記事'}）`);
+    say(`✓ 自称の一次調査の型（2026-07-28 の掃討の型）なし（${publicOnly ? '公開記事のみ' : '全記事'}・${scanned}本）`);
     return 0;
   }
   const byLabel = {};
   for (const h of errs) (byLabel[h.label] ??= []).push(h);
-  warn(`✗ 捏造の疑いがある主張 ${errs.length} 件\n`);
+  warn(`✗ 出典・記録の確認が要る主張（2026-07-28 の掃討の型） ${errs.length} 件\n`);
   for (const [label, list] of Object.entries(byLabel)) {
     warn(`【${label}】${list.length}件`);
     for (const h of list.slice(0, 8)) {
@@ -189,191 +174,79 @@ function reportLegacy() {
 }
 
 /* ------------------------------------------------------------------ *
- * 2026-10-10 追加: 根拠のない点数・順位／出所のない比率・回数・年数／一人称の体験
+ * 点数・順位・比率・集計・調査の体裁・一人称の体験の報告
  * ------------------------------------------------------------------ */
-const BASELINE_PATH = 'data/unfounded-claims-baseline.json';
-const SHOW_ALL = process.argv.includes('--all');
-const NO_BASELINE = process.argv.includes('--no-baseline');
-const PRINT_BASELINE = process.argv.includes('--print-baseline');
-const FAIL_ON_EXPIRED = process.argv.includes('--fail-on-expired');
-
-const NUM = '[0-9０-９]';
-
-/** 一人称（だれの体験・だれの数字か）を示す語。比率・回数・年数の型はこれと同じ文にあるときだけ拾う。 */
-const FIRST_PERSON = /(我が家|わが家|ながみー家|ながみー|うちの子|うちでは|編集部|編集長|筆者|私(?:は|が|の|たち))/;
-
-/**
- * 文の単位で当てる型（否定の文は拾わない）。[id, 表示名, 重さ, 判定]
- * 重さ: 'gate' = 既知の一覧に無ければ exit 1 ／ 'warn' = 常に警告
- */
-const SENTENCE_RULES = [
-  [
-    'score',
-    '根拠の示されていない点数（◯軸×◯点・◯点満点・NN/50・採点）',
-    'gate',
-    (s) =>
-      new RegExp(`${NUM}+\\s*軸\\s*[×xX✕＊*]\\s*${NUM}+\\s*点`).test(s) ||
-      new RegExp(`${NUM}{1,3}\\s*点満点`).test(s) ||
-      // 「43/50」「（45点）」のような合計点。日付（10/10・5/30）と紛れない分母だけを見る。
-      /(?<![0-9０-９.\/])[1-9][0-9]\s*[\/／]\s*(?:50|100)(?![0-9０-９\/])/.test(s) ||
-      new RegExp(`${NUM}\\s*[\\/／]\\s*(?:10|30)\\s*点`).test(s) ||
-      /スコア(?:化|で採点|ランキング|順)|総合スコア|で採点|採点(?:しました|した|方法|結果|基準)/.test(s),
-  ],
-  [
-    'ratio',
-    '出所のない比率・回数・年数（利用比率 4:3:2:1・延べ◯店舗・月◯回・◯年）',
-    'gate',
-    (s, ctx) =>
-      // 「セブン4：ローソン3：ファミマ2」「丸亀50%・はなまる30%・…」
-      new RegExp(`(?:[^\\s：:、。|0-9０-９]{1,14}${NUM}[0-9０-９.]*\\s*[：:]\\s*){2,}[^\\s：:、。|0-9０-９]{1,14}${NUM}`).test(s) ||
-      (/比率/.test(s) && new RegExp(`(?:${NUM}+\\s*[%％][^。]{0,14}){2,}`).test(s)) ||
-      new RegExp(`延べ\\s*${NUM}[0-9０-９,，]*\\s*(?:店舗|店|軒|回|か所|ヶ所|カ所|箇所|施設|園)`).test(s) ||
-      // 「我が家では月2〜3回」「5年やってきた」。実訪問の記録がある記事では拾わない（本物の利用頻度を書けるようにする）
-      (!ctx.visitBacked &&
-        FIRST_PERSON.test(s) &&
-        (new RegExp(`(?:週|月|年)\\s*${NUM}+\\s*(?:[〜~～\\-－]\\s*${NUM}+)?\\s*回`).test(s) ||
-          new RegExp(`${NUM}+\\s*年(?:以上|間)?\\s*(?:やってきた|通っ|利用し|使い続け|にわたり)`).test(s))),
-  ],
-  [
-    'survey',
-    '記録のない調査の体裁（ママ◯人に聞いた・◯人の声・◯人投票）',
-    'gate',
-    (s) =>
-      new RegExp(
-        `(?:ママ|パパ|ママ友|先輩ママ|先輩パパ|保護者|読者|ママネットワーク)\\s*${NUM}[0-9０-９,，]*\\s*(?:人|名|世帯|家庭)(?:に(?:きいた|聞い|聞き|アンケート|調査)|へ(?:の)?(?:任意)?(?:質問|アンケート)|の声|が?投票|の投票|アンケート)`,
-      ).test(s),
-  ],
-  [
-    'first-person',
-    '一人称の体験（実訪問の記録が見当たらない記事）',
-    'warn',
-    (s) =>
-      /(我が家|わが家|ながみー家|うちの子|うちでは|私ながみー|実利用|実訪問|実体験|一次データ|一次体験|体験ベース|取材ベース|実際に(?:行っ|訪れ|通っ|食べ|使っ|利用し|試し)|行ってきました|助けられ|救われ|救世主|お世話になって)/.test(s),
-  ],
-];
-
-/** 行の形で当てる型（見出し・表の「N位」）。採点の順位はここで拾う。 */
-const RANK_LINE = new RegExp(`^(?:#{2,4}\\s*(?:第\\s*)?(?:No\\.?\\s*)?\\**${NUM}+\\s*位|\\|\\s*\\**\\s*${NUM}+\\s*位\\**\\s*\\||#{2,4}.*総合ランキング)`);
-
-/** 他の記事の採点の順位を本文で引く形（「幸楽苑は総合1位です」「ランキング6社では6位（24/50点）」）。 */
-const RANK_PROSE = new RegExp(`総合\\s*${NUM}+\\s*位|ランキング[^。]{0,60}では\\s*${NUM}+\\s*位|は第\\s*${NUM}+\\s*位）`);
-
-/** 「付けていません」「削除しました」のような否定・撤回の文は開示なので拾わない。 */
-const WITHDRAWN =
-  /(付けていません|付けていない|つけていません|削除しました|削除し、|外しました|載せていません|載せない方針|無くなった|なくなった|残っていません|ありませんでした|廃止しました|していません|避け、)/;
-
-/** 「## この記事から外したもの」のような、撤回を説明する見出しの配下は拾わない。 */
-const stripWithdrawnSections = (raw) => {
-  const keep = [];
-  let skip = 0;
-  for (const l of raw.split('\n')) {
-    const h = l.match(/^(#{2,6})\s+(.*)$/);
-    if (h) {
-      const lvl = h[1].length;
-      if (skip && lvl <= skip) skip = 0;
-      if (!skip && /外したもの|削除したもの|取り下げたもの|訂正の記録/.test(h[2])) { skip = lvl; continue; }
-    }
-    if (!skip) keep.push(l);
-  }
-  return keep.join('\n');
-};
-
-/** 題の「ランキング／TOP」に、順位の決め方・出典の記載が本文に無いもの（警告）。 */
-const RANKING_TITLE = /^title:.*(?:ランキング|TOP\s*[0-9０-９]+|ＴＯＰ|ベスト[0-9０-９]+)/im;
-const RANKING_BASIS = /(集計の方法|順位の(?:決め方|根拠|基準)|選定基準|評価基準の開示|ランキングの(?:根拠|基準|出典|決め方)|出典[：:])/;
-
-/** 実訪問の記録（lib/kid-reports.ts のスポット名・lib/chain-reports.ts の店舗名）。 */
-function loadVisitEvidence() {
-  /** それぞれ「全部の語が本文に出てくれば、その記事には実訪問の記録がある」とみなす語の組 */
-  const groups = [];
-  try {
-    const kr = fs.readFileSync('lib/kid-reports.ts', 'utf8');
-    // 短すぎる名前（2文字以下）は別の語に紛れるので使わない
-    for (const m of kr.matchAll(/^ {2}(?:'([^']+)'|([^\s':]+)):\s*\{/gm)) {
-      const n = m[1] ?? m[2];
-      if (n && n.length >= 3) groups.push([n]);
-    }
-  } catch { /* 無ければ除外なしで続ける */ }
-  try {
-    const cr = fs.readFileSync('lib/chain-reports.ts', 'utf8');
-    // 「草加店」だけだと別のチェーンの記事にも当たるので、チェーン名と店舗名の両方が出てくる記事に限る
-    for (const m of cr.matchAll(/chain:\s*'([^']+)',\s*\n\s*store:\s*'([^']+)'/g)) groups.push([m[1], m[2]]);
-  } catch { /* 同上 */ }
-  return groups;
-}
-
-function loadBaseline() {
-  if (!fs.existsSync(BASELINE_PATH)) return { entries: [], visitBacked: {}, ignore: [] };
-  const j = JSON.parse(fs.readFileSync(BASELINE_PATH, 'utf8'));
-  // --no-baseline は「既知の行」だけを無視する。目で見て誤検知と決めた行（ignore）と、
-  // 実訪問の記録がある記事（visitBacked）は、棚卸しのときも効かせる。
-  return { entries: NO_BASELINE ? [] : (j.entries ?? []), visitBacked: j.visitBacked ?? {}, ignore: j.ignore ?? [] };
-}
-
-function scanUnfounded() {
-  const evidence = loadVisitEvidence();
-  const baseline = loadBaseline();
-  const found = []; // { slug, rule, label, severity, noindex, count, excerpt }
-  for (const f of fs.readdirSync(DIR)) {
-    if (!f.endsWith('.md')) continue;
-    const slug = f.replace(/\.md$/, '');
-    const raw = fs.readFileSync(path.join(DIR, f), 'utf8');
-    const noindex = /^noindex:\s*true/m.test(raw.slice(0, 1500));
-    if (publicOnly && noindex) continue;
-    const text = stripWithdrawnSections(stripDisclosedFiction(raw));
-    const visitBacked = slug in baseline.visitBacked || evidence.some((g) => g.every((n) => raw.includes(n)));
-    const sentences = text
-      .split(/(?<=。)|\n/)
-      .map((s) => s.trim())
-      .filter((s) => s && !WITHDRAWN.test(s));
-    for (const [rule, label, severity, test] of SENTENCE_RULES) {
-      if (rule === 'first-person' && visitBacked) continue;
-      const m = sentences.filter((s) => test(s, { visitBacked }));
-      if (m.length) found.push({ slug, rule, label, severity, noindex, count: m.length, excerpt: m[0].slice(0, 90) });
-    }
-    const rankLines = [
-      ...text.split('\n').filter((l) => RANK_LINE.test(l) && !WITHDRAWN.test(l)),
-      ...sentences.filter((s) => !RANK_LINE.test(s) && RANK_PROSE.test(s)),
-    ];
-    if (rankLines.length) {
-      found.push({
-        slug, rule: 'rank', label: '根拠の示されていない順位（見出し・表の「N位」／総合ランキング）', severity: 'gate',
-        noindex, count: rankLines.length, excerpt: rankLines[0].slice(0, 90),
-      });
-    }
-    if (RANKING_TITLE.test(raw.slice(0, 600)) && !RANKING_BASIS.test(text)) {
-      found.push({
-        slug, rule: 'ranking-title', label: '題が「ランキング／TOP」で、順位の決め方・出典の記載が無い', severity: 'warn',
-        noindex, count: 1, excerpt: (raw.match(/^title:\s*(.*)$/m)?.[1] ?? '').slice(0, 90),
-      });
-    }
-  }
-  const ignored = new Set(baseline.ignore.map((e) => `${e.slug}\t${e.rule}`));
-  return { found: found.filter((h) => !ignored.has(`${h.slug}\t${h.rule}`)), baseline };
-}
-
 function reportUnfounded() {
-  const { found, baseline } = scanUnfounded();
   const today = new Date().toISOString().slice(0, 10);
   const key = (e) => `${e.slug}\t${e.rule}`;
-  const base = new Map(baseline.entries.map((e) => [key(e), e]));
+  const base = new Map(baselineEntries.map((e) => [key(e), e]));
+  const exp = new Map(experienceEntries.map((e) => [e.slug, e]));
+  /** 既知の行（どちらの一覧でも）を { until, n, action, batch } の形で返す。無ければ null。 */
+  const knownRow = (h) => {
+    if (EXPERIENCE_RULES.includes(h.rule)) {
+      const e = exp.get(h.slug);
+      return e && e.n && h.rule in e.n ? { until: e.until ?? null, n: e.n[h.rule], action: e.action, batch: e.batch } : null;
+    }
+    const e = base.get(key(h));
+    return e ? { until: e.until ?? null, n: typeof e.n === 'number' ? e.n : null } : null;
+  };
+
   const gate = found.filter((h) => h.severity === 'gate');
   const warns = found.filter((h) => h.severity === 'warn');
-  const fresh = gate.filter((h) => !base.has(key(h)));
-  const known = gate.filter((h) => base.has(key(h)));
-  const expired = known.filter((h) => (base.get(key(h)).until ?? '9999') < today);
+  const fresh = gate.filter((h) => !knownRow(h));
+  const known = gate.filter((h) => knownRow(h));
+  // 既知の記事でも、件数が一覧の n より増えたら新しい混入として扱う（体験の型と、n を書いた行）
+  const grown = known.filter((h) => knownRow(h).n != null && h.count > knownRow(h).n);
+  const shrunk = known.filter((h) => knownRow(h).n != null && h.count < knownRow(h).n);
+  const expired = known.filter((h) => (knownRow(h).until ?? '9999') < today);
   const hitKeys = new Set(gate.map(key));
-  const stale = baseline.entries.filter((e) => !hitKeys.has(key(e)));
+  const stale = [
+    ...baselineEntries.filter((e) => !hitKeys.has(key(e))).map((e) => ({ slug: e.slug, rule: e.rule })),
+    ...experienceEntries.flatMap((e) => Object.keys(e.n ?? {}).filter((rule) => !hitKeys.has(`${e.slug}\t${rule}`)).map((rule) => ({ slug: e.slug, rule }))),
+  ];
+  // --only のときは、絞った外の行を「もう当たっていない」と数えない。--dir は別の場所の一部の記事を
+  // 見る使い方（KV の書き出し 等）なので、数えない。
+  const staleShown = opt('--dir') ? [] : ONLY ? stale.filter((e) => ONLY.has(e.slug)) : stale;
 
-  if (PRINT_BASELINE) {
-    console.log(JSON.stringify(gate.map((h) => ({ slug: h.slug, rule: h.rule, until: '', note: '' })), null, 2));
+  if (TIGHTEN) {
+    const counts = new Map(gate.map((h) => [key(h), h.count]));
+    let lowered = 0;
+    let removed = 0;
+    const next = [];
+    for (const e of experienceFile.entries ?? []) {
+      const n = {};
+      for (const [rule, was] of Object.entries(e.n ?? {})) {
+        const now = counts.get(`${e.slug}\t${rule}`) ?? 0;
+        if (now === 0) continue;
+        if (now < was) lowered++;
+        n[rule] = Math.min(was, now);
+      }
+      if (Object.keys(n).length) next.push({ ...e, n });
+      else removed++;
+    }
+    experienceFile.entries = next;
+    experienceFile.updatedAt = today;
+    fs.writeFileSync(EXPERIENCE_PATH, stringifyExperience(experienceFile));
+    console.log(`${EXPERIENCE_PATH}: n を下げた ${lowered} か所・消した行 ${removed}・残り ${next.length} 行`);
     return 0;
   }
+  if (PRINT_BASELINE) {
+    console.log(JSON.stringify(gate.map((h) => ({ slug: h.slug, rule: h.rule, n: h.count, until: '', note: '' })), null, 2));
+    return 0;
+  }
+  const byRuleCount = {};
+  for (const h of found) {
+    const o = (byRuleCount[h.rule] ??= { severity: h.severity, articles: 0, public: 0, places: 0 });
+    o.articles++;
+    if (!h.noindex) o.public++;
+    o.places += h.count;
+  }
+  const failing = fresh.length + grown.length;
   if (AS_JSON) {
-    console.log(JSON.stringify({ today, counts: {
-      gate: gate.length, fresh: fresh.length, known: known.length, expired: expired.length, stale: stale.length, warn: warns.length,
-    }, fresh, known, expired, stale, warns }, null, 2));
-    return fresh.length || (FAIL_ON_EXPIRED && expired.length) ? 1 : 0;
+    console.log(JSON.stringify({ today, scanned, counts: {
+      gate: gate.length, fresh: fresh.length, grown: grown.length, known: known.length, expired: expired.length, stale: staleShown.length, warn: warns.length,
+    }, byRule: byRuleCount, fresh, grown, known, expired, stale: staleShown, warns }, null, 2));
+    return failing || (FAIL_ON_EXPIRED && expired.length) ? 1 : 0;
   }
 
   const tag = (h) => `${h.noindex ? '[noindex] ' : '[公開]    '}${h.slug}  （${h.count}か所）${h.excerpt}`;
@@ -390,40 +263,70 @@ function reportUnfounded() {
       for (const h of SHOW_ALL ? list : list.slice(0, 5)) warn(`  ${tag(h)}`);
       if (!SHOW_ALL && list.length > 5) warn(`  …他 ${list.length - 5} 本（--all で全件）`);
     }
-    warn('対処: 実訪問の記録（lib/kid-reports.ts・lib/chain-reports.ts）が無い体験の記述は削る。');
-    warn('      記録がある記事は、一覧ファイルの visitBacked に slug と根拠を書けば警告から外れる。');
   }
   if (known.length) {
-    warn(`\n⚠ 既知の「根拠のない点数・順位・比率」 ${known.length} 件（${BASELINE_PATH} に記載。直すまで警告）`);
+    warn(`\n⚠ 既知の「記録なし・確認待ち」 ${known.length} 件（${BASELINE_PATH}・${EXPERIENCE_PATH} に記載。直すか、記録を登録するまで警告）`);
     for (const [label, list] of byRule(known)) {
       warn(`【${label}】${list.length}本`);
-      for (const h of SHOW_ALL ? list : list.slice(0, 5)) warn(`  ${tag(h)}  ［期限 ${base.get(key(h)).until ?? 'なし'}］`);
+      for (const h of SHOW_ALL ? list : list.slice(0, 5)) {
+        const row = knownRow(h);
+        warn(`  ${tag(h)}  ［${row.action ? `${ACTION_LABEL[row.action] ?? row.action}・` : ''}期限 ${row.until ?? 'なし'}］`);
+      }
       if (!SHOW_ALL && list.length > 5) warn(`  …他 ${list.length - 5} 本（--all で全件）`);
+    }
+    const byAction = {};
+    for (const e of experienceEntries) byAction[e.action] = (byAction[e.action] ?? 0) + 1;
+    if (Object.keys(byAction).length) {
+      warn(`  体験の一覧の内訳（記事数）: ${Object.entries(byAction).map(([a, n]) => `${ACTION_LABEL[a] ?? a} ${n}`).join('／')}`);
     }
   }
   if (expired.length) {
     warn(`\n⚠⚠ 期限を過ぎた既知の行が ${expired.length} 件あります（直すか、理由を書いて期限を延ばす）`);
-    for (const h of expired) warn(`  ${h.slug}  ${h.rule}  期限 ${base.get(key(h)).until}`);
+    for (const h of expired) warn(`  ${h.slug}  ${h.rule}  期限 ${knownRow(h).until}`);
   }
-  if (stale.length) {
-    warn(`\n・もう当たっていない既知の行 ${stale.length} 件（${BASELINE_PATH} から消してよい）`);
-    for (const e of stale) warn(`  ${e.slug}  ${e.rule}`);
+  if (staleShown.length) {
+    warn(`\n・もう当たっていない既知の行 ${staleShown.length} 件（一覧から消してよい。体験の一覧は --tighten で消える）`);
+    for (const e of SHOW_ALL ? staleShown : staleShown.slice(0, 20)) warn(`  ${e.slug}  ${e.rule}`);
+    if (!SHOW_ALL && staleShown.length > 20) warn(`  …他 ${staleShown.length - 20} 件（--all で全件）`);
   }
-  if (fresh.length) {
-    warn(`\n✗ 根拠のない点数・順位・比率の新しい混入 ${fresh.length} 件`);
-    for (const [label, list] of byRule(fresh)) {
-      warn(`【${label}】${list.length}本`);
-      for (const h of list) warn(`  ${tag(h)}`);
+  if (shrunk.length) {
+    warn(`\n・一覧の件数より減った行 ${shrunk.length} 件（--tighten で n を現状まで下げると、同じ記事への戻りも失敗になる）`);
+  }
+  if (failing) {
+    if (fresh.length) {
+      warn(`\n✗ 既知の一覧に無い、記録の確認が要る書き方 ${fresh.length} 件`);
+      for (const [label, list] of byRule(fresh)) {
+        warn(`【${label}】${list.length}本`);
+        for (const h of list) warn(`  ${tag(h)}`);
+      }
     }
-    warn('\n対処: 点数・順位・比率は、いつ・どこで・どう数えたかの記録が無ければ載せない。');
-    warn('      公式で確認できる事実の比較表（確認日・出典つき）に置き換える。');
-    warn(`      既存記事を直す順番を待っているだけなら、${BASELINE_PATH} に期限つきで追記する（理由を書く）。`);
+    if (grown.length) {
+      warn(`\n✗ 既知の記事で件数が増えた ${grown.length} 件（一覧の n より多い）`);
+      for (const h of grown) warn(`  ${tag(h)}  ［一覧の n=${knownRow(h).n} → いま ${h.count}］`);
+    }
+    warn('\n対処:');
+    warn('  点数・順位・比率・集計 … いつ・どこで・どう数えたかの記録が無ければ載せない。公式で確認できる事実の比較表（確認日・出典つき）に置き換える。');
+    warn('  体験の節・一人称の文 … 記録（lib/kid-reports.ts・lib/chain-reports.ts）のある実訪問だけを書く。節の見出しか本文に、記録の店舗名・スポット名と年月を書く。');
+    warn(`                         記録の置き場が無い体験（注文・席・待ち時間など）は、${EXPERIENCE_PATH} の records に 店舗・年月・根拠 を書くと外れる。`);
+    warn('  読んで誤検知と決めたもの … どちらかの一覧の ignore に、理由つきで書く。');
+    warn(`  既存記事を直す順番を待っているだけ … 一覧に期限つきで追記する（理由を書く。体験は扱い verify／revise／remove も）。`);
+    warn('  ※ この検査の検出は「記録の確認が要る」の意味で、事実でないと決めたものではありません。');
     return 1;
   }
-  say(`✓ 根拠のない点数・順位・比率の新しい混入なし（既知 ${known.length} 件・警告 ${warns.length} 件）`);
+  say(`✓ 記録の確認が要る書き方の新しい混入なし（既知 ${known.length} 件・警告 ${warns.length} 件・${scanned}本）`);
   return FAIL_ON_EXPIRED && expired.length ? 1 : 0;
 }
 
-const legacyCode = PRINT_BASELINE || AS_JSON ? 0 : reportLegacy();
+const ACTION_LABEL = { verify: '事実確認', revise: '修正', remove: '節の削除' };
+
+/** 体験の一覧は 1 行 1 記事で書き出す（差分を読めるように）。 */
+function stringifyExperience(j) {
+  const { entries = [], records: recs = [], ignore = [], ...rest } = j;
+  const head = JSON.stringify(rest, null, 2).replace(/\n\}$/, '');
+  const block = (name, list) => `  "${name}": [${list.length ? `\n${list.map((e) => `    ${JSON.stringify(e)}`).join(',\n')}\n  ` : ''}]`;
+  return `${head},\n${block('records', recs)},\n${block('ignore', ignore)},\n${block('entries', entries)}\n}\n`;
+}
+
+const legacyCode = PRINT_BASELINE || AS_JSON || TIGHTEN ? 0 : reportLegacy();
 const unfoundedCode = reportUnfounded();
 process.exit(legacyCode || unfoundedCode ? 1 : 0);
