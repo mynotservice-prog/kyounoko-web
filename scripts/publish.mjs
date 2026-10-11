@@ -73,6 +73,8 @@
  * 必要な env（すべて .env.local から自動読込。トークンは絶対に直書きしない）:
  *   KV_REST_API_URL / KV_REST_API_TOKEN     … KV上書きの厳密検査（無い場合は劣化モード）
  *   CLOUDFLARE_API_TOKEN / CLOUDFLARE_ZONE_ID … CFパージ（無い場合は警告して継続）
+ *   ADMIN_REVALIDATE_SECRET                 … 本番 /api/admin/purge-cf（secret 認証）
+ *   ADMIN_USER / ADMIN_PASSWORD             … 本番 /api/admin/edit-content の Basic 認証（KV上書き解除）
  */
 
 import { spawn, spawnSync } from 'node:child_process';
@@ -183,6 +185,18 @@ function loadEnvLocal() {
   return true;
 }
 const HAS_ENV_LOCAL = loadEnvLocal();
+
+/**
+ * /api/admin/* は 2026-10-09 から middleware の Basic 認証の内側（Referer だけでは 401）。
+ * .env.local の ADMIN_USER / ADMIN_PASSWORD（本番と同じ値）から Authorization を組み立てる。
+ * 値はログに出さない。
+ */
+function adminBasicAuthHeader() {
+  const u = process.env.ADMIN_USER;
+  const p = process.env.ADMIN_PASSWORD;
+  if (!u || !p) return {};
+  return { Authorization: `Basic ${Buffer.from(`${u}:${p}`, 'utf8').toString('base64')}` };
+}
 
 /**
  * frontmatter から1フィールドを取り出す。
@@ -544,8 +558,8 @@ async function flattenOverrides(slugs) {
     try {
       const res = await fetch(u, {
         method: 'DELETE',
-        // isAllowed() が referer に /admin/ を要求する（CSRF対策）
-        headers: { Referer: `${SITE}/admin/articles/${slug}/edit` },
+        // isAllowed() が referer に /admin/ を要求する（CSRF対策）＋ middleware の Basic 認証
+        headers: { Referer: `${SITE}/admin/articles/${slug}/edit`, ...adminBasicAuthHeader() },
         cache: 'no-store',
       });
       status = res.status;

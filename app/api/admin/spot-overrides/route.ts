@@ -10,9 +10,8 @@ import {
   SPOT_CATEGORY_VALUES,
   SPOT_PLACE_VALUES,
   SPOT_AGE_VALUES,
-  SPOT_OVERRIDES_TAG,
   readSpotOverridesForWrite,
-  writeSpotOverridesToKv,
+  saveSpotOverrideToKv,
   type SpotOverride,
 } from '@/lib/spot-overrides';
 import { isKvConfigured, getLastKvSetError } from '@/lib/kv-store';
@@ -344,19 +343,53 @@ export async function POST(req: NextRequest) {
   }
   const { patch, clear } = sanitized;
 
-  // 既存読み込み（KV優先 → GitHub → ローカル）
-  const useKv = isKvConfigured();
-  let current: Overrides = {};
-  let sha: string | undefined;
-  if (useKv) {
+  /** patch を既存の上書きにマージ。clear に入ったキーは削除。空になったら null（上書きごと消す）。 */
+  const applyPatch = (existing: SpotOverride | null): SpotOverride | null => {
+    const merged: Record<string, unknown> = { ...(existing || {}) };
+    for (const k of Object.keys(patch as Record<string, unknown>)) {
+      merged[k] = (patch as Record<string, unknown>)[k];
+    }
+    for (const k of clear) {
+      delete merged[k];
+    }
+    return Object.keys(merged).length === 0 ? null : (merged as SpotOverride);
+  };
+
+  // KV: デプロイ不要で保存し、該当ページだけ revalidate
+  if (isKvConfigured()) {
+    let saved: SpotOverride | null = null;
+    let result: { ok: boolean; tag: string };
     try {
-      current = (await readSpotOverridesForWrite()) as Overrides;
+      result = await saveSpotOverrideToKv(slug, (existing) => (saved = applyPatch(existing)));
     } catch (e) {
       // 読めないまま保存すると他スポットの上書きが消えるので中止する
       const msg = e instanceof Error ? e.message : String(e);
       return NextResponse.json({ error: `保存を中止しました（${msg}）` }, { status: 503 });
     }
-  } else if (process.env.NODE_ENV !== 'development' && process.env.GITHUB_TOKEN) {
+    if (!result.ok) {
+      const bytes = Buffer.byteLength(JSON.stringify(saved), 'utf8');
+      return NextResponse.json(
+        { error: `kv write failed: ${getLastKvSetError() ?? 'unknown'}（保存データ ${Math.round(bytes / 1024)}KB）` },
+        { status: 500 },
+      );
+    }
+    revalidateTag(result.tag);
+    revalidatePath(`/spot/${slug}`);
+    // CFエッジキャッシュも該当URL群をパージ（画像差替はトップ/一覧/ランキングにも出るため）。
+    // ビルド不要・数秒で反映。env未設定なら no-op。
+    const purge = await purgeCfUrls([`/spot/${slug}`, '/', '/spots', '/ranking']);
+    return NextResponse.json({
+      ok: true,
+      mode: 'kv',
+      slug,
+      cfPurged: purge.purged,
+    });
+  }
+
+  // 既存読み込み（GitHub → ローカル）
+  let current: Overrides = {};
+  let sha: string | undefined;
+  if (process.env.NODE_ENV !== 'development' && process.env.GITHUB_TOKEN) {
     const gh = await ghGetFile();
     if (gh) {
       try {
@@ -370,43 +403,9 @@ export async function POST(req: NextRequest) {
     current = await readOverrides();
   }
 
-  // patch を current[slug] にマージ。clear に入ったキーは削除。
-  const merged: Record<string, unknown> = { ...(current[slug] || {}) };
-  for (const k of Object.keys(patch as Record<string, unknown>)) {
-    merged[k] = (patch as Record<string, unknown>)[k];
-  }
-  for (const k of clear) {
-    delete merged[k];
-  }
-
-  if (Object.keys(merged).length === 0) {
-    delete current[slug];
-  } else {
-    current[slug] = merged as SpotOverride;
-  }
-
-  // KV: デプロイ不要で保存し、該当ページだけ revalidate
-  if (useKv) {
-    const ok = await writeSpotOverridesToKv(current);
-    if (!ok) {
-      const bytes = Buffer.byteLength(JSON.stringify(current), 'utf8');
-      return NextResponse.json(
-        { error: `kv write failed: ${getLastKvSetError() ?? 'unknown'}（保存データ ${Math.round(bytes / 1024)}KB）` },
-        { status: 500 },
-      );
-    }
-    revalidateTag(SPOT_OVERRIDES_TAG);
-    revalidatePath(`/spot/${slug}`);
-    // CFエッジキャッシュも該当URL群をパージ（画像差替はトップ/一覧/ランキングにも出るため）。
-    // ビルド不要・数秒で反映。env未設定なら no-op。
-    const purge = await purgeCfUrls([`/spot/${slug}`, '/', '/spots', '/ranking']);
-    return NextResponse.json({
-      ok: true,
-      mode: 'kv',
-      slug,
-      cfPurged: purge.purged,
-    });
-  }
+  const next = applyPatch(current[slug] ?? null);
+  if (next) current[slug] = next;
+  else delete current[slug];
 
   const newText = JSON.stringify(current, null, 2) + '\n';
 

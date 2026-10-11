@@ -25,7 +25,7 @@
 import { unstable_cache } from 'next/cache';
 import overridesJson from './event-overrides.json';
 import type { EventEntry } from './events';
-import { isKvConfigured, kvGetForCache, kvGetStrict, kvSet } from './kv-store';
+import { isKvConfigured, kvGetForCache, kvGetStrict, kvSet, logOverridesCacheMiss } from './kv-store';
 
 /** 上書き可能なフィールドのサブセット（id 系は不変） */
 export type EventOverride = Partial<
@@ -76,7 +76,11 @@ const getCachedEventOverrides = unstable_cache(
   async (): Promise<EventOverridesMap> => {
     if (isKvConfigured()) {
       const fromKv = await kvGetForCache<EventOverridesMap>(EVENT_OVERRIDES_KV_KEY);
-      if (fromKv) return fromKv;
+      if (fromKv) {
+        // 対照: こちらは 1.4KB で上限に遠い。spot 側だけ繰り返し出れば大きさが原因。
+        logOverridesCacheMiss(EVENT_OVERRIDES_KV_KEY, fromKv);
+        return fromKv;
+      }
     }
     return BUNDLED_EVENT_OVERRIDES;
   },

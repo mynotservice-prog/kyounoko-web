@@ -1352,17 +1352,6 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       summerCool: true,
     },
     {
-      name: 'がすてなーに ガスの科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '江東区', ward: '江東区', note: '豊洲、入館無料の体験型科学館', budget: 'free',
-      nearestStation: 'toyosu',
-      walkMinutes: 6,
-      pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
-      reservation: 'none',
-      crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '完全無料、豊洲駅徒歩6分。ららぽーと豊洲と組み合わせて雨天1日コース',
-      nearby: 'ららぽーと豊洲＋アネビートリムパークと組み合わせ',
-      summerCool: true,
-    },
-    {
       name: 'ベビーパーク KIDS PARK（複数）', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3'], city: '複数', note: '0-3歳特化の屋内遊び場', budget: 'mid',
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -1427,15 +1416,6 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       walkMinutes: 5,
       reservation: 'none',
       hiddenTip: '中央の噴水広場は休憩に最適。チネチッタで子ども向け上映も。飲食店が多くランチ難民になりにくい',
-    },
-    {
-      name: 'トリックアートミュージアム高尾山', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '八王子市', note: '高尾山口駅前、屋内で写真映え', budget: 'low',
-      // 2026-10-02 公式で確認（trickart.jp）: 通常料金 大人1,650円・中高生1,150円・小学生800円・幼児（未就学児、4才以上）600円
-      pricing: { adult: '1,650円', elementary: '800円', preschool: '600円（4歳以上）', infant: '無料（3歳以下）' },
-      reservation: 'none',
-      crowdLevel: { weekday: 'low', holiday: 'mid' },
-      hiddenTip: '高尾山ハイキング前後の雨宿りスポットとして最適',
-      summerCool: true,
     },
     {
       name: '東京都水の科学館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '江東区', ward: '江東区', note: '有明、入館無料の体験型施設', budget: 'free',
@@ -1897,22 +1877,6 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
       hiddenTip: '完全無料、4歳以上の防災体験。事前予約でツアー型見学',
-      summerCool: true,
-    },
-    {
-      name: 'リトルプラネット（複数）', category: 'indoor', place: 'indoor', ages: ['2-3', '4-6'], city: '複数', note: '次世代型テーマパーク、デジタル遊び場', budget: 'mid',
-      // 2026-10-02 公式で確認（ダイバーシティ東京 プラザ／ららぽーと立川立飛）: 60分 おとな800円（平日）〜1,100円（休日）・こども（4〜12歳）1,200〜1,600円・幼児（2,3歳）1,000〜1,400円、1歳以下無料。別途会員登録1家族600円。料金は施設ごとに異なる
-      pricing: { adult: '800〜1,100円（60分）', elementary: '1,200〜1,600円（60分）', preschool: '1,000〜1,600円（2歳以上・60分）', infant: '無料（1歳以下）' },
-      reservation: 'none',
-      crowdLevel: { weekday: 'low', holiday: 'high' },
-      hiddenTip: '砂遊びARや投影お絵かきなどデジタル＋アナログのハイブリッド体験',
-      summerCool: true,
-    },
-    {
-      name: 'モーリーファンタジー（複数イオン内）', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '複数', note: 'イオン併設の屋内遊園地', budget: 'low',
-      reservation: 'none',
-      crowdLevel: { weekday: 'low', holiday: 'high' },
-      hiddenTip: '時間制プレイ（30分300円〜）と乗り物別料金、無料の試遊コーナーも',
       summerCool: true,
     },
     {
