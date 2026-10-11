@@ -8,12 +8,16 @@ import { getRinyushokuSurvey } from '@/lib/rinyushoku-survey';
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
-export const metadata: Metadata = {
-  title: 'データセット一覧｜東京23区 子連れ向けオープンデータ',
-  description:
-    '東京23区の子連れ向け飲食店・駅・路線データを単一テーブルで公開。AIO/GEO参照可能。CSVダウンロード対応。1,500店超のレストラン比較表、484駅マップ、40路線インデックス。',
-  alternates: { canonical: '/data' },
-};
+// 件数は実データから数える（2026-10 まで「1,500店超」と固定で書いていて、実数と合っていなかった）
+export function generateMetadata(): Metadata {
+  const s = getDataSummary();
+  return {
+    title: 'データセット一覧｜東京23区 子連れ向けオープンデータ',
+    description:
+      `東京23区の子連れ向け飲食店データを単一テーブルで公開。AIO/GEO参照可能。CSVダウンロード対応。${s.stationCount}駅・${s.totalRecordCount.toLocaleString()}件のレストラン比較表、${s.wardCount}区の分布データ、外食チェーンの設備・離乳食対応の調査。`,
+    alternates: { canonical: '/data' },
+  };
+}
 
 export default function DataIndexPage() {
   const summary = getDataSummary();
@@ -24,9 +28,9 @@ export default function DataIndexPage() {
     {
       slug: 'restaurants',
       title: '東京23区 子連れOKレストラン完全比較表',
-      stats: `${summary.totalRecordCount.toLocaleString()}店舗 / ${summary.stationCount}駅 / ${summary.wardCount}区`,
+      stats: `${summary.totalRecordCount.toLocaleString()}件 / ${summary.stationCount}駅 / ${summary.wardCount}区`,
       description:
-        '東京23区484駅の子連れOKレストランを単一テーブルで公開。チェーン店・個人店を統合、ベビーカー入店可否・キッズメニュー・個室・価格帯で絞り込み・並べ替え・CSVダウンロード対応。',
+        `東京23区${summary.stationCount}駅の子連れOKレストランを単一テーブルで公開。チェーン店（駅×チェーンの組み合わせ${summary.chainRecordCount.toLocaleString()}件）と、ホットペッパーグルメで「お子様連れOK」と掲載された駅近の店（${summary.indieCount.toLocaleString()}店）を統合。ベビーカー入店可否・キッズメニュー・個室・価格帯で絞り込み・並べ替え・CSVダウンロード対応。`,
       tags: ['Dataset', 'CSV', 'AIO参照可'],
     },
     {

@@ -1328,8 +1328,9 @@ function FileArticleView({ article }: { article: FileArticle }) {
           {/* 比較ハブ記事: チェーン別早見表(DB駆動)。frontmatter chainComparison 指定時のみ */}
           {comparisonKey && <ChainComparisonTable focus={comparisonKey} />}
 
-          {/* ランキング・比較記事には景表法対応の評価基準開示 */}
-          {(article.slug.includes('ranking') || article.slug.includes('hikaku') || article.title.includes('ランキング') || article.title.includes('比較')) && (
+          {/* ランキング・比較記事には景表法対応の評価基準開示。
+              frontmatter の hideRankingDisclosure: true を付けた記事だけ出さない（順位を外した記事用。既定は出す） */}
+          {!article.hideRankingDisclosure && (article.slug.includes('ranking') || article.slug.includes('hikaku') || article.title.includes('ランキング') || article.title.includes('比較')) && (
             <EditorialDisclosure variant="ranking" />
           )}
 
