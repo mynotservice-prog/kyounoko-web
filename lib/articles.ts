@@ -1028,9 +1028,17 @@ export async function readArticleOverridesMap(): Promise<Record<string, string>>
   return {};
 }
 
-/** 1記事の編集後生Markdown（frontmatter込み）を KV に保存。 */
-export async function writeArticleOverride(slug: string, rawMd: string): Promise<boolean> {
-  const map = await readArticleOverridesMap();
+/**
+ * 1記事の編集後生Markdown（frontmatter込み）を KV に保存。
+ * knownMap は、呼び出し側が同じリクエストの中で直前に readArticleOverridesMap() で読んだ結果。
+ * 渡すと読み直さない（保存前の検査で 1 回読むので、KV の読み取りを 2 回にしないため）。
+ */
+export async function writeArticleOverride(
+  slug: string,
+  rawMd: string,
+  knownMap?: Record<string, string>,
+): Promise<boolean> {
+  const map = knownMap ?? (await readArticleOverridesMap());
   map[slug] = rawMd;
   return kvSet(ARTICLE_OVERRIDES_KV_KEY, map);
 }
