@@ -9,12 +9,16 @@
  *   引数の記事（URL か slug）の本文に、全記事の検査と**同じ規則**（lib/claim-rules.mjs）を当て、
  *   記事ごとに「送ってよい／確認が要る」を 1 行で出す。確認が要る記事が 1 本でもあれば exit 1。
  *     数値       … 集計・割合・比率・回数・店舗数・「◯人に聞いた」
- *     体験       … 体験の節・書き手の家族を主語にした文・名前を伏せた他人の声・体験とも読める言い回し
+ *     体験       … 体験の節・書き手の家族を主語にした文・名前を伏せた他人の声・「実際に行って」などの言い回し
+ *                  （「救世主」「助けられた」「うちの子」のような弱い言い回しは判定に入れず、参考として出す）
  *     ランキング … 点数・順位・題の「ランキング／TOP」
  *   全記事の検査（scripts/check-fabricated-claims.mjs）とちがい、**既知の一覧（直す順番待ち）に載っている
  *   記事でも「確認が要る」になる。** 相手に見せてよいかは、直す予定があるかどうかと関係がないため。
- *   記録を登録した節（data/experience-claims-baseline.json の records）と、読んで誤検知と決めた
- *   記事×型（ignore）は外れる。
+ *   記録を登録した範囲（data/experience-claims-baseline.json の records。社長が実体験と確認した節・文 など）は
+ *   「記録あり」として判定から外し、その旨を 1 行出す。ただし登録したときより体験の見出し・文が増えていれば
+ *   「確認が要る」になる。読んで誤検知と決めた記事×型（ignore）も外れる。
+ *   一覧のファイルは、見る版（既定は origin/main）にあればそれを、無ければ手元の作業ツリーのものを読む
+ *   （どちらを読んだかを出力に書く）。
  *
  * 判定の意味:
  *   「確認が要る」は、記録（いつ・どこで・だれが・どう数えたか）を人が確かめる必要がある、という意味。
@@ -43,7 +47,7 @@ import { execFileSync, spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { GROUP_LABEL, OFFICIAL_CLAIM_LABEL, parseVisitRecords, scanArticle } from '../lib/claim-rules.mjs';
+import { GROUP_LABEL, OFFICIAL_CLAIM_LABEL, RULE_META, parseVisitRecords, registeredScopeFor, scanArticle } from '../lib/claim-rules.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const argv = process.argv.slice(2);
@@ -117,13 +121,29 @@ function toSlug(input) {
 /* ---- 記録・誤検知の一覧・凍結の一覧（見る版から読む） ---- */
 const records = parseVisitRecords(readAt('lib/kid-reports.ts') ?? '', readAt('lib/chain-reports.ts') ?? '');
 const parseJson = (s) => { try { return s ? JSON.parse(s) : {}; } catch { return {}; } };
-const experienceFile = parseJson(readAt('data/experience-claims-baseline.json'));
-const baselineFile = parseJson(readAt('data/unfounded-claims-baseline.json'));
+/** 一覧のファイルは、見る版にあればそれを、無ければ手元の作業ツリーのものを読む（マージ前でも記録が効くように）。 */
+const listSources = {};
+const readList = (rel) => {
+  const atRef = readAt(rel);
+  if (atRef != null) { listSources[rel] = source.kind === 'worktree' ? '作業ツリー' : source.ref; return parseJson(atRef); }
+  try {
+    const local = fs.readFileSync(path.join(ROOT, rel), 'utf8');
+    listSources[rel] = '作業ツリー（見る版には無い）';
+    return parseJson(local);
+  } catch {
+    listSources[rel] = '無し';
+    return {};
+  }
+};
+const experienceFile = readList('data/experience-claims-baseline.json');
+const baselineFile = readList('data/unfounded-claims-baseline.json');
 const ignored = new Set([...(baselineFile.ignore ?? []), ...(experienceFile.ignore ?? [])].map((e) => `${e.slug}\t${e.rule}`));
-const backedFor = (slug) => [
-  ...(slug in (baselineFile.visitBacked ?? {}) ? [{}] : []),
-  ...(experienceFile.records ?? []).filter((r) => r.slug === slug).map((r) => ({ heading: r.heading })),
-];
+const experienceRecords = experienceFile.records ?? [];
+const scopeFor = (slug) => {
+  const scope = registeredScopeFor(experienceRecords, slug);
+  if (slug in (baselineFile.visitBacked ?? {})) scope.backedSections.push({});
+  return scope;
+};
 const experienceEntry = new Map((experienceFile.entries ?? []).map((e) => [e.slug, e]));
 
 /** scripts/check-frozen.mjs --list の出力から、凍結 slug と比較基準を読む（読めなければ null）。 */
@@ -160,13 +180,35 @@ for (const input of [...new Set(inputs)]) {
     });
     continue;
   }
-  const r = scanArticle(raw, { records, backedSections: backedFor(slug) });
+  const scope = scopeFor(slug);
+  const r = scanArticle(raw, { records, backedSections: scope.backedSections });
+  const notes = [];
+  // 弱い言い回し（救世主・助けられた・うちの子）は判定に入れず、参考として出す
+  for (const f of r.findings.filter((x) => x.rule === 'soft-wording')) {
+    notes.push(`参考（判定に入れない）: ${f.label} ${f.count} か所。例「${f.sentences[0].slice(0, 60)}」`);
+  }
   const findings = r.findings
+    .filter((f) => f.rule !== 'soft-wording')
     .filter((f) => !ignored.has(`${slug}\t${f.rule}`))
     .filter((f) => !(GATE_ONLY && f.severity === 'warn'))
     .map((f) => ({ group: f.group, rule: f.rule, label: f.label, severity: f.severity, count: f.count, excerpts: f.sentences.slice(0, 3).map((s) => (r.sectionLeads[s] ? `${s} → ${r.sectionLeads[s]}` : s).slice(0, 160)) }));
+  // 記録を登録した範囲の体験（社長の確認など）は「記録あり」。登録したときより増えていれば「確認が要る」
+  const registered = { count: 0, grown: 0, basis: [...new Set(experienceRecords.filter((x) => x.slug === slug).map((x) => x.basis).filter(Boolean))] };
+  for (const x of r.registered) {
+    registered.count += x.count;
+    const was = scope.n ? (scope.n[x.rule] ?? 0) : null;
+    if (was != null && x.count > was) {
+      registered.grown += x.count - was;
+      findings.push({
+        group: 'experience', rule: `registered-grown:${x.rule}`, label: `記録を登録した範囲で、登録のあとに増えた（${RULE_META[x.rule].label}）`, severity: 'gate',
+        count: x.count - was, excerpts: x.sentences.slice(-3).map((s) => s.slice(0, 160)),
+      });
+    }
+  }
+  if (registered.count) {
+    notes.push(`記録あり ${registered.count} か所（${registered.basis.join('／') || '体験の一覧の records'}）${registered.grown ? `。ただし登録のあとに ${registered.grown} か所増えている` : ''}`);
+  }
   // 2026-07-28 の型（自称の一次調査）は数値の側に入れる。「公式が〜と案内」は判定に入れず、注記にとどめる
-  const notes = [];
   for (const h of r.legacy) {
     if (h.label === OFFICIAL_CLAIM_LABEL) {
       notes.push(`「公式が〜と案内」の書き方あり（出典の URL と確認日が本文にあるか見る）: ${h.excerpt}`);
@@ -191,12 +233,12 @@ for (const input of [...new Set(inputs)]) {
   if (fz?.frozen) notes.push('凍結中の記事（測定中。直す場合は docs/experiments-active.md の手順で）');
   if (fz?.comparisonBaseline) notes.push('実験の比較基準の記事（リンクの増減を避ける）');
   const plan = experienceEntry.get(slug);
-  if (plan) notes.push(`体験の一覧に記載あり（扱いの案: ${{ verify: '事実確認', revise: '修正', remove: '節の削除' }[plan.action] ?? plan.action}・便 ${plan.batch}・期限 ${plan.until ?? 'なし'}）`);
+  if (plan) notes.push(`体験の一覧に「確認待ち」の記載あり（扱いの案〔社長の確認前〕: ${{ verify: '事実確認', revise: '修正', remove: '節の削除' }[plan.proposed] ?? plan.proposed}・便の案 ${plan.batch}・日付の案 ${plan.until ?? 'なし'}）`);
   const review = findings.length > 0;
   articles.push({
     input, slug, url: `https://kyounoko.jp/article/${slug}`, title: r.title,
     verdict: review ? 'review' : 'ok', verdictLabel: review ? '確認が要る' : '送ってよい',
-    counts, excerpts, findings, frozen: fz, noindex: r.noindex, updatedAt, daysSinceUpdate, notes,
+    counts, excerpts, findings, registered, frozen: fz, noindex: r.noindex, updatedAt, daysSinceUpdate, notes,
   });
 }
 
@@ -215,12 +257,17 @@ const caveats = [
 const exitCode = summary.review + summary.unchecked > 0 ? 1 : 0;
 
 if (AS_JSON) {
-  console.log(JSON.stringify({ generatedAt: today.toISOString(), source, gateOnly: GATE_ONLY, groups: GROUP_LABEL, summary, sendable: exitCode === 0, articles, caveats }, null, 2));
-  process.exit(exitCode);
+  console.log(JSON.stringify({ generatedAt: today.toISOString(), source, listSources, gateOnly: GATE_ONLY, groups: GROUP_LABEL, summary, sendable: exitCode === 0, articles, caveats }, null, 2));
 }
 
+// process.exit() は使わない（--json の出力をパイプで読むとき、書き出しの途中で切れるため）
+process.exitCode = exitCode;
+if (!AS_JSON) printHuman();
+
+function printHuman() {
 const GROUP_SHORT = { number: '数値', experience: '体験', ranking: 'ランキング' };
 console.log(`法人営業の送信前の監査 — 本文: ${source.label}${GATE_ONLY ? '・警告の型は判定に入れない' : ''}`);
+console.log(`記録・誤検知の一覧: ${listSources['data/experience-claims-baseline.json']}`);
 console.log('');
 for (const a of articles) {
   if (a.verdict === 'unchecked') {
@@ -237,4 +284,4 @@ console.log('');
 console.log(`結果: ${summary.total} 本中 送ってよい ${summary.ok}・確認が要る ${summary.review}・検査できない ${summary.unchecked} → ${exitCode === 0 ? '送ってよい（exit 0）' : '送る前に確認が要る（exit 1）'}`);
 console.log('注意:');
 for (const c of caveats) console.log(`  - ${c}`);
-process.exit(exitCode);
+}

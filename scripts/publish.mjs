@@ -1159,7 +1159,7 @@ async function main() {
       console.error(`${NG} 検査を実行できませんでした（exit=${claims.status}）: ${(claims.stderr || claims.stdout || '').slice(0, 300)}`);
       if (!DRY_RUN) process.exit(2);
     } else {
-      const bad = [...claimsJson.fresh, ...claimsJson.grown];
+      const bad = [...claimsJson.fresh, ...claimsJson.grown, ...(claimsJson.registeredGrown ?? [])];
       if (bad.length === 0) {
         console.log(`   ${OK} 新しい混入なし（対象 ${claimsJson.scanned} 本・既知 ${claimsJson.counts.known} 件・警告 ${claimsJson.counts.warn} 件）`);
       } else {

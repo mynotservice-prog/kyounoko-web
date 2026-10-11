@@ -11,7 +11,7 @@ import {
   deleteArticleOverride,
 } from '@/lib/articles';
 import { purgeCfUrls } from '@/lib/cf-purge';
-import { newFindings } from '@/lib/claim-rules.mjs';
+import { newFindings, registeredScopeFor } from '@/lib/claim-rules.mjs';
 import { KID_REPORTS } from '@/lib/kid-reports';
 import { CHAIN_REPORTS } from '@/lib/chain-reports';
 import experienceBaseline from '@/data/experience-claims-baseline.json';
@@ -172,9 +172,9 @@ function findNewClaims(slug: string, prevRaw: string, nextRaw: string): ClaimNot
       const p = matter(prevRaw);
       prev = matter.stringify(p.content, p.data);
     }
-    const backedSections = (experienceBaseline.records as { slug: string; heading?: string }[])
-      .filter((r) => r.slug === slug)
-      .map((r) => ({ heading: r.heading }));
+    // 記録を登録した範囲（records）。その中に足した文も、newFindings は新しい文として返す
+    // （登録は「そのときあった文」の確認なので、足した文には改めて確認を求める）。
+    const { backedSections } = registeredScopeFor(experienceBaseline.records, slug);
     const added = newFindings(prev, nextRaw, { records: VISIT_RECORDS, backedSections });
     return added.flatMap((f) =>
       f.sentences.map((s) => ({ rule: f.rule, label: f.label, severity: f.severity, excerpt: s.slice(0, 120) })),

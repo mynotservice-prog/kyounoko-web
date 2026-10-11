@@ -51,10 +51,12 @@
  *     書き手の家族を主語にした文（我が家・うちの子・友人ファミリーに同行 ほか）。
  *   - [WARN] のまま: 「実際に食べる」「助けられた」など、体験とも一般論とも読める言い回し。
  *   - 体験の型（exp-section・first-person）の既知の一覧は data/experience-claims-baseline.json。
- *     記事ごとに、扱い（verify＝事実確認／revise＝修正／remove＝節の削除）と便（K1〜K6）と件数 n を持つ。
+ *     entries（確認待ち）は記事ごとに、扱いの案（proposed: verify＝事実確認／revise＝修正／remove＝節の削除。
+ *     監査の機械的な分類による案で、社長の確認前）と便の案（K1〜K6）と件数 n を持つ。
  *     **一覧に無い記事に体験の節・文が入る、または既知の記事で件数が n より増えると exit 1。**
- *     一覧の行は「記録なし・確認待ち」の意味で、事実でないと決めたものではない。
- *     社長の確認が取れた節は records に店舗・年月つきで書くと、検査から外れる。
+ *     entries の行は「記録なし・確認待ち」の意味で、事実でないと決めたものではない。
+ *     確認が取れた体験は records（記録あり）に移す。登録した範囲の見出し・文は「記録あり」と読まれ、
+ *     登録したときの件数 n より増えると exit 1（登録は、そのときあった文の確認）。
  *   - 「実訪問の記録がある」扱いを、記事の単位から**節の単位**に狭めた（詳細は lib/claim-rules.mjs の 3）。
  *
  * 使い方:
@@ -68,11 +70,11 @@
  *   node scripts/check-fabricated-claims.mjs --dir=<フォルダ>   # content/articles の代わりに、別の場所の md を検査する
  *                                                              #（KV の上書きを scripts/kv-article-overrides.mjs --dump で書き出したもの 等）
  *   node scripts/check-fabricated-claims.mjs --only=a,b        # slug を絞る
- *   node scripts/check-fabricated-claims.mjs --tighten         # 体験の一覧の n を現状まで下げ、もう当たらない行を消す（増やす方向には書かない）
+ *   node scripts/check-fabricated-claims.mjs --tighten         # 体験の一覧の n（entries・records）を現状まで下げ、もう当たらない entries の行を消す（増やす方向には書かない）
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { OFFICIAL_CLAIM_LABEL, RULE_META, parseVisitRecords, scanArticle } from '../lib/claim-rules.mjs';
+import { OFFICIAL_CLAIM_LABEL, RULE_META, parseVisitRecords, registeredScopeFor, scanArticle } from '../lib/claim-rules.mjs';
 
 const argv = process.argv.slice(2);
 const flag = (name) => argv.includes(name);
@@ -110,12 +112,15 @@ const experienceFile = readJson(EXPERIENCE_PATH, {});
 const baselineEntries = NO_BASELINE ? [] : (baselineFile.entries ?? []);
 const experienceEntries = NO_BASELINE ? [] : (experienceFile.entries ?? []);
 const ignored = new Set([...(baselineFile.ignore ?? []), ...(experienceFile.ignore ?? [])].map((e) => `${e.slug}\t${e.rule}`));
-/** slug → [{ heading? }]。visitBacked（2026-10-10 の形）は記事全体として扱う。 */
-const backedBySlug = new Map();
-for (const slug of Object.keys(baselineFile.visitBacked ?? {})) backedBySlug.set(slug, [{}]);
-for (const r of experienceFile.records ?? []) {
-  if (!backedBySlug.has(r.slug)) backedBySlug.set(r.slug, []);
-  backedBySlug.get(r.slug).push({ heading: r.heading });
+/**
+ * 記録を登録した範囲（体験の一覧の records）。slug → { backedSections: [{ heading? }], n: { 型: 登録したときの件数 } | null }
+ * visitBacked（2026-10-10 の形）は記事全体として扱う（件数は持たない）。
+ */
+const experienceRecords = experienceFile.records ?? [];
+const scopeBySlug = new Map();
+for (const slug of new Set(experienceRecords.map((r) => r.slug))) scopeBySlug.set(slug, registeredScopeFor(experienceRecords, slug));
+for (const slug of Object.keys(baselineFile.visitBacked ?? {})) {
+  if (!scopeBySlug.has(slug)) scopeBySlug.set(slug, { backedSections: [{}], n: null });
 }
 
 /* ------------------------------------------------------------------ *
@@ -123,15 +128,21 @@ for (const r of experienceFile.records ?? []) {
  * ------------------------------------------------------------------ */
 const legacyHits = []; // { file, label, noindex, excerpt }
 const found = []; // { slug, rule, label, severity, noindex, count, excerpt }
+/** 記録を登録した範囲の中にある体験の見出し・文（記録あり）。{ slug, rule, label, noindex, count, n, excerpt } */
+const registered = [];
 let scanned = 0;
 for (const f of fs.readdirSync(DIR).sort()) {
   if (!f.endsWith('.md')) continue;
   const slug = f.replace(/\.md$/, '');
   if (ONLY && !ONLY.has(slug)) continue;
   const raw = fs.readFileSync(path.join(DIR, f), 'utf8');
-  const r = scanArticle(raw, { records, backedSections: backedBySlug.get(slug) ?? [] });
+  const scope = scopeBySlug.get(slug);
+  const r = scanArticle(raw, { records, backedSections: scope?.backedSections ?? [] });
   if (publicOnly && r.noindex) continue;
   scanned++;
+  for (const x of r.registered) {
+    registered.push({ slug, rule: x.rule, label: x.label, noindex: r.noindex, count: x.count, n: scope?.n ? (scope.n[x.rule] ?? 0) : null, excerpt: x.excerpt });
+  }
   for (const h of r.legacy) legacyHits.push({ file: f, label: h.label, noindex: r.noindex, excerpt: h.excerpt });
   for (const x of r.findings) {
     if (ignored.has(`${slug}\t${x.rule}`)) continue;
@@ -185,7 +196,7 @@ function reportUnfounded() {
   const knownRow = (h) => {
     if (EXPERIENCE_RULES.includes(h.rule)) {
       const e = exp.get(h.slug);
-      return e && e.n && h.rule in e.n ? { until: e.until ?? null, n: e.n[h.rule], action: e.action, batch: e.batch } : null;
+      return e && e.n && h.rule in e.n ? { until: e.until ?? null, n: e.n[h.rule], proposed: e.proposed, batch: e.batch, experience: true } : null;
     }
     const e = base.get(key(h));
     return e ? { until: e.until ?? null, n: typeof e.n === 'number' ? e.n : null } : null;
@@ -197,6 +208,8 @@ function reportUnfounded() {
   const known = gate.filter((h) => knownRow(h));
   // 既知の記事でも、件数が一覧の n より増えたら新しい混入として扱う（体験の型と、n を書いた行）
   const grown = known.filter((h) => knownRow(h).n != null && h.count > knownRow(h).n);
+  // 記録を登録した範囲で、登録したときの件数より増えたもの（登録は「そのときあった文」の確認）
+  const registeredGrown = registered.filter((h) => h.n != null && h.count > h.n);
   const shrunk = known.filter((h) => knownRow(h).n != null && h.count < knownRow(h).n);
   const expired = known.filter((h) => (knownRow(h).until ?? '9999') < today);
   const hitKeys = new Set(gate.map(key));
@@ -212,6 +225,15 @@ function reportUnfounded() {
     const counts = new Map(gate.map((h) => [key(h), h.count]));
     let lowered = 0;
     let removed = 0;
+    // records の件数も現状まで下げる（行は消さない。1 記事に records が 1 行のときだけ）
+    const regCounts = new Map(registered.map((h) => [key(h), h.count]));
+    for (const rec of experienceFile.records ?? []) {
+      if (!rec.n || experienceRecords.filter((x) => x.slug === rec.slug).length !== 1) continue;
+      for (const [rule, was] of Object.entries(rec.n)) {
+        const now = regCounts.get(`${rec.slug}\t${rule}`) ?? 0;
+        if (now < was) { rec.n[rule] = now; lowered++; }
+      }
+    }
     const next = [];
     for (const e of experienceFile.entries ?? []) {
       const n = {};
@@ -241,11 +263,13 @@ function reportUnfounded() {
     if (!h.noindex) o.public++;
     o.places += h.count;
   }
-  const failing = fresh.length + grown.length;
+  const failing = fresh.length + grown.length + registeredGrown.length;
+  const registeredSummary = { articles: new Set(registered.map((h) => h.slug)).size, places: registered.reduce((a, h) => a + h.count, 0) };
   if (AS_JSON) {
     console.log(JSON.stringify({ today, scanned, counts: {
-      gate: gate.length, fresh: fresh.length, grown: grown.length, known: known.length, expired: expired.length, stale: staleShown.length, warn: warns.length,
-    }, byRule: byRuleCount, fresh, grown, known, expired, stale: staleShown, warns }, null, 2));
+      gate: gate.length, fresh: fresh.length, grown: grown.length, registeredGrown: registeredGrown.length, known: known.length, expired: expired.length, stale: staleShown.length, warn: warns.length,
+      registeredArticles: registeredSummary.articles, registeredPlaces: registeredSummary.places,
+    }, byRule: byRuleCount, fresh, grown, registeredGrown, known, expired, stale: staleShown, warns, registered }, null, 2));
     return failing || (FAIL_ON_EXPIRED && expired.length) ? 1 : 0;
   }
 
@@ -270,19 +294,32 @@ function reportUnfounded() {
       warn(`【${label}】${list.length}本`);
       for (const h of SHOW_ALL ? list : list.slice(0, 5)) {
         const row = knownRow(h);
-        warn(`  ${tag(h)}  ［${row.action ? `${ACTION_LABEL[row.action] ?? row.action}・` : ''}期限 ${row.until ?? 'なし'}］`);
+        warn(row.experience
+          ? `  ${tag(h)}  ［扱いの案（社長の確認前）: ${ACTION_LABEL[row.proposed] ?? row.proposed}・便の案 ${row.batch}・日付の案 ${row.until ?? 'なし'}］`
+          : `  ${tag(h)}  ［期限 ${row.until ?? 'なし'}］`);
       }
       if (!SHOW_ALL && list.length > 5) warn(`  …他 ${list.length - 5} 本（--all で全件）`);
     }
     const byAction = {};
-    for (const e of experienceEntries) byAction[e.action] = (byAction[e.action] ?? 0) + 1;
+    for (const e of experienceEntries) byAction[e.proposed] = (byAction[e.proposed] ?? 0) + 1;
     if (Object.keys(byAction).length) {
-      warn(`  体験の一覧の内訳（記事数）: ${Object.entries(byAction).map(([a, n]) => `${ACTION_LABEL[a] ?? a} ${n}`).join('／')}`);
+      warn(`  体験の一覧（確認待ち）の扱いの案の内訳（記事数。案であって決定ではない）: ${Object.entries(byAction).map(([a, n]) => `${ACTION_LABEL[a] ?? a} ${n}`).join('／')}`);
     }
   }
-  if (expired.length) {
-    warn(`\n⚠⚠ 期限を過ぎた既知の行が ${expired.length} 件あります（直すか、理由を書いて期限を延ばす）`);
-    for (const h of expired) warn(`  ${h.slug}  ${h.rule}  期限 ${knownRow(h).until}`);
+  if (registered.length) {
+    warn(`\n・記録あり（${EXPERIENCE_PATH} の records に登録。社長の確認ほか） ${registeredSummary.articles} 本・${registeredSummary.places} か所（登録したときより増えると失敗）`);
+  }
+  const expiredExperience = expired.filter((h) => knownRow(h).experience);
+  const expiredOther = expired.filter((h) => !knownRow(h).experience);
+  if (expiredOther.length) {
+    warn(`\n⚠⚠ 期限を過ぎた既知の行が ${expiredOther.length} 件あります（直すか、理由を書いて期限を延ばす）`);
+    for (const h of expiredOther) warn(`  ${h.slug}  ${h.rule}  期限 ${knownRow(h).until}`);
+  }
+  if (expiredExperience.length) {
+    warn(`\n⚠⚠ 便の案の日付を過ぎた「確認待ち」の体験の行が ${expiredExperience.length} 件あります`);
+    warn('   社長の確認がまだ済んでいない行です（扱いは案のまま）。確認を取って records に移すか直す。確認を待つなら、便の案の日付を書き換える。');
+    for (const h of SHOW_ALL ? expiredExperience : expiredExperience.slice(0, 20)) warn(`  ${h.slug}  ${h.rule}  便の案 ${knownRow(h).batch}・日付の案 ${knownRow(h).until}`);
+    if (!SHOW_ALL && expiredExperience.length > 20) warn(`  …他 ${expiredExperience.length - 20} 件（--all で全件）`);
   }
   if (staleShown.length) {
     warn(`\n・もう当たっていない既知の行 ${staleShown.length} 件（一覧から消してよい。体験の一覧は --tighten で消える）`);
@@ -304,12 +341,17 @@ function reportUnfounded() {
       warn(`\n✗ 既知の記事で件数が増えた ${grown.length} 件（一覧の n より多い）`);
       for (const h of grown) warn(`  ${tag(h)}  ［一覧の n=${knownRow(h).n} → いま ${h.count}］`);
     }
+    if (registeredGrown.length) {
+      warn(`\n✗ 記録を登録した範囲で、体験の見出し・文が増えた ${registeredGrown.length} 件（登録は、そのときあった文の確認）`);
+      for (const h of registeredGrown) warn(`  ${tag(h)}  ［登録したときの件数 ${h.n} → いま ${h.count}］`);
+      warn('  足した文も確認が取れているなら、records の n を書き換えて、確かめ方（basis）に追記する。');
+    }
     warn('\n対処:');
     warn('  点数・順位・比率・集計 … いつ・どこで・どう数えたかの記録が無ければ載せない。公式で確認できる事実の比較表（確認日・出典つき）に置き換える。');
     warn('  体験の節・一人称の文 … 記録（lib/kid-reports.ts・lib/chain-reports.ts）のある実訪問だけを書く。節の見出しか本文に、記録の店舗名・スポット名と年月を書く。');
     warn(`                         記録の置き場が無い体験（注文・席・待ち時間など）は、${EXPERIENCE_PATH} の records に 店舗・年月・根拠 を書くと外れる。`);
     warn('  読んで誤検知と決めたもの … どちらかの一覧の ignore に、理由つきで書く。');
-    warn(`  既存記事を直す順番を待っているだけ … 一覧に期限つきで追記する（理由を書く。体験は扱い verify／revise／remove も）。`);
+    warn(`  既存記事を直す順番を待っているだけ … 一覧に追記する（理由を書く。体験は、扱いの案 proposed と便の案も）。`);
     warn('  ※ この検査の検出は「記録の確認が要る」の意味で、事実でないと決めたものではありません。');
     return 1;
   }
@@ -329,4 +371,5 @@ function stringifyExperience(j) {
 
 const legacyCode = PRINT_BASELINE || AS_JSON || TIGHTEN ? 0 : reportLegacy();
 const unfoundedCode = reportUnfounded();
-process.exit(legacyCode || unfoundedCode ? 1 : 0);
+// process.exit() は使わない（--json の出力をパイプで読むとき、書き出しの途中で切れるため）
+process.exitCode = legacyCode || unfoundedCode ? 1 : 0;
