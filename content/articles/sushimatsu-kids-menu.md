@@ -48,6 +48,7 @@ youtubeSearch: すし松 お子様セット
 - **価格は公式メニューに表示されている金額**です。千川店の卓上メニューの税込価格（まぐろ1貫 税込77円など）は公式メニューと同じ数字でした（下の照合を参照）。
 - **5貫盛りの5貫の内訳、ガチャコインの使い方は、公式の説明文に書かれていません**（商品写真だけが載っています）。
 - 公式メニューには「店舗により、お取り扱いメニュー・価格が異なる場合がございます」とあります。
+- **公式サイトには、価格の違う別のページも残っています。** メニューの一覧からはリンクされていない「セット」というページ（https://www.matsuyafoods.co.jp/sushimatsu/menu/set_hp/index.html ）には、「お子様にぎりセット 590円」「お子様うどんセット 490円」と表示されています（2026年10月11日確認）。このページは、いまの店舗一覧に無い店名（蕨店）が注記に入っていて、ほかのセットの価格もメニューの一覧からたどれる「握りセット」のページと違います。この記事の表は、メニューの一覧からたどれる「握りセット」のページをもとにしています。お子様セットの価格は、店舗のタブレットで確かめてください。
 
 ### お子様セットを販売していない店舗
 
@@ -167,6 +168,7 @@ A. 公式の店舗案内で「駐車場あり」の表示があるのは、23店
 
 - 松屋フーズ公式 すし松「握りセット」（https://www.matsuyafoods.co.jp/sushimatsu/menu/set/index.html ）｜確認日 2026年10月11日 — お子様セット4種の名前・価格・対象・説明、販売していない店舗の注記
 - 松屋フーズ公式 すし松「握り単品」（https://www.matsuyafoods.co.jp/sushimatsu/menu/nigiri/index.html ）・「軍艦単品」（https://www.matsuyafoods.co.jp/sushimatsu/menu/gunkan/index.html ）・「巻物単品」（https://www.matsuyafoods.co.jp/sushimatsu/menu/makimono/index.html ）・「一品料理」（https://www.matsuyafoods.co.jp/sushimatsu/menu/ippin/index.html ）・「デザート」（https://www.matsuyafoods.co.jp/sushimatsu/menu/sweet/index.html ）・「酒・ドリンク」（https://www.matsuyafoods.co.jp/sushimatsu/menu/drink/index.html ）｜確認日 2026年10月11日 — 単品の価格、卓上メニューとの照合
+- 松屋フーズ公式 すし松「セット」（https://www.matsuyafoods.co.jp/sushimatsu/menu/set_hp/index.html ）｜確認日 2026年10月11日 — メニューの一覧からリンクされていない別のページの、お子様セットの表示
 - 松屋フーズ公式 店舗案内「すし松店舗一覧」（https://pkg.navitime.co.jp/matsuyafoods/spot/list?category=0301 ）｜確認日 2026年10月11日 — 店舗数、所在地、店舗サービスの表示
 - 松屋フーズ公式 店舗案内「すし松 千川店」（https://pkg.navitime.co.jp/matsuyafoods/spot/detail?code=0000002602 ）｜確認日 2026年10月11日 — 所在地、営業時間、最寄り駅
 - きょうのこ運営者がすし松 千川店で撮影した写真3枚（お子様セットの皿・卓上メニュー・外観）｜撮影日 2026年10月10日
