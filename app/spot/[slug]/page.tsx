@@ -76,7 +76,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const entry = getSpotBySlug(slug, await getRuntimeSpotOverrides());
   if (!entry) return { title: 'スポットが見つかりません' };
   const { spot } = entry;
-  const category = SPOT_CATEGORY_LABEL[spot.category] ?? spot.category;
+  const category = spot.categoryLabel ?? SPOT_CATEGORY_LABEL[spot.category] ?? spot.category;
   const location = spot.ward ?? spot.city ?? '';
   // タイトル長の適応（2026-07-31）:
   // spot.name 自体にキャッチコピーが入っている登録が多く、そこへ固定の接尾辞
@@ -175,8 +175,10 @@ const AGE_LABEL: Record<string, string> = {
  */
 function toParagraphs(text: string, per = 2): string[] {
   // 「アソボ〜ノ！」のように施設名へ ！ を含む表記があるため、区切りは句点だけに限る。
+  // 「…したい。」のように句点の直後に閉じかっこが来る場合は、かっこまでを同じ文に含める
+  // （句点だけで切ると、次の段落が「」」で始まってしまう）。
   const sentences = text
-    .split(/(?<=。)/)
+    .split(/(?<=。)(?![」』）])|(?<=。[」』）])/)
     .map((s) => s.trim())
     .filter(Boolean);
   if (sentences.length <= 1) return [text];
@@ -200,7 +202,7 @@ export default async function SpotPage({ params }: Props) {
   const entry = getSpotBySlug(slug, ovMap);
   if (!entry) notFound();
   const { spot } = entry;
-  const category = SPOT_CATEGORY_LABEL[spot.category] ?? spot.category;
+  const category = spot.categoryLabel ?? SPOT_CATEGORY_LABEL[spot.category] ?? spot.category;
   const location = spot.ward ?? spot.city ?? '';
 
   // スポット種別に応じたネット予約/チケットCTA（VC）。env 未設定なら null（非表示）。
@@ -373,7 +375,10 @@ export default async function SpotPage({ params }: Props) {
 
   // P1-4: おすすめアイテムを楽天商品API（RAKUTEN_APP_ID）で実商品に解決。
   // env未設定なら product=null で従来の検索リンクにフォールバック（もしも変換は共通適用）。
-  const recommendedItems = getRecommendedItems(spot.category, spot.place, spot.ages, 6);
+  const excludedItems = spot.excludeRecommendedItems ?? [];
+  const recommendedItems = getRecommendedItems(spot.category, spot.place, spot.ages, 6 + excludedItems.length)
+    .filter((item) => !excludedItems.includes(item.label))
+    .slice(0, 6);
   const enrichedItems = await Promise.all(
     recommendedItems.map(async (item) => {
       const kw = keywordFromRakutenSearchUrl(item.url);
@@ -395,7 +400,7 @@ export default async function SpotPage({ params }: Props) {
   const stationWalkLabel = nearestStationName
     ? `${nearestStationName}${spot.walkMinutes ? ` 徒歩${spot.walkMinutes}分` : ''}`
     : null;
-  const budgetLabel =
+  const budgetLabel = spot.budgetLabel ? spot.budgetLabel :
     spot.budget === 'free' ? '無料'
       : spot.budget === 'low' ? '〜1,000円'
         : spot.budget === 'mid' ? '1,000〜3,000円'
@@ -413,7 +418,7 @@ export default async function SpotPage({ params }: Props) {
     }
   })();
   const infoRows: KkInfoRow[] = [
-    { icon: 'age', label: '対象年齢', value: spot.ages.map((a) => AGE_LABEL[a]).join('・') },
+    { icon: 'age', label: '対象年齢', value: spot.agesLabel ?? spot.ages.map((a) => AGE_LABEL[a]).join('・') },
     { icon: 'yen', label: '料金の目安', value: budgetLabel },
     { icon: 'home', label: '屋内/屋外', value: placeLabel },
     { icon: 'umbrella', label: '雨の日', value: rainLabel },
@@ -460,6 +465,7 @@ export default async function SpotPage({ params }: Props) {
     ? (
         [
           ['大人', spot.pricing.adult],
+          ['子ども', spot.pricing.child],
           ['小学生', spot.pricing.elementary],
           ['幼児', spot.pricing.preschool],
           ['乳児', spot.pricing.infant],
@@ -525,6 +531,8 @@ export default async function SpotPage({ params }: Props) {
             {/* 保存ボタン（右上） */}
             <V2SdHeroFav id={slug} />
           </div>
+          {/* 写真についての注記（施設からの依頼で入れる。例: 家具・設備が写真と異なる場合がある） */}
+          {spot.imageNote && <p className="sv3-hero-note">{spot.imageNote}</p>}
         </div>
 
         {/* 閉館バナー（小さなステータスなので枠を許す。文言は従来どおり） */}
