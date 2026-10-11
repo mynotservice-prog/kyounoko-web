@@ -21,6 +21,10 @@
  *    1日プラン（/plan/…）は全ページ noindex なので、一覧も本数も載せない。
  *  - 駅ページの「チェーン以外の店」は 2026-09-24 にホットペッパーグルメの店舗掲載情報へ
  *    置き換えた（lib/indie-restaurants）。出どころと取得日をデータから書く。
+ *  - スポットとイベントも、検索に出しているページだけを数える（2026-10-11）。
+ *    スポット: 閉館・情報の薄いページ（noindex）と、チェーンの記事へ 308 で転送している /spot/ は数えない
+ *    （app/sitemap.ts・app/spot/[slug]/page.tsx と同じ条件）。
+ *    イベント: 会期が終わったページ（noindex）は数えない（app/sitemap.ts・app/event/[slug]/page.tsx と同じ条件）。
  */
 
 import { getAllFileArticles } from '@/lib/articles';
@@ -31,11 +35,14 @@ import {
   isHotpepperStation,
   HOTPEPPER_GENERATED_AT,
 } from '@/lib/indie-restaurants';
-import { getAllSpotsWithSlug, SPOT_CATEGORY_LABEL, type SpotCategory } from '@/lib/spots';
+import { getAllSpotsWithSlug, isSpotIndexable, SPOT_CATEGORY_LABEL, type SpotCategory } from '@/lib/spots';
+import { isChainRedirected } from '@/lib/spot-verification';
+import { SPOT_REDIRECTS } from '@/lib/spot-redirects';
+import { SPOT_CLOSED } from '@/lib/spot-closed';
 import { KID_REPORTS } from '@/lib/kid-reports';
 import { SPOT_FACILITIES } from '@/lib/spot-facilities';
 import { SPOT_VERIFICATION } from '@/lib/spot-verification-data';
-import { getAllEvents } from '@/lib/events';
+import { getAllEvents, isEventEnded } from '@/lib/events';
 import { ARTICLE_CATEGORY_NAME } from '@/lib/article-categories';
 
 export const revalidate = 3600;
@@ -92,7 +99,15 @@ export async function GET() {
       ? `。残り${n(otherIndies.length)}店（${n(otherStationCount)}駅）は、施設の公式ショップリストで営業を確認した店`
       : '');
 
-  const allSpots = getAllSpotsWithSlug();
+  // 検索に出しているスポットページだけ（app/sitemap.ts の spotPages と同じ条件）
+  const spotRedirectFrom = new Set(SPOT_REDIRECTS.map((r) => r.from));
+  const allSpots = getAllSpotsWithSlug().filter(
+    (x) =>
+      !isChainRedirected(x.slug) &&
+      !spotRedirectFrom.has(x.slug) &&
+      !SPOT_CLOSED[x.spot.name] &&
+      isSpotIndexable(x.spot),
+  );
   const spotCount = allSpots.length;
   const spotByCat = {} as Record<SpotCategory, number>;
   for (const { spot } of allSpots) {
@@ -107,7 +122,8 @@ export async function GET() {
   const facilityCount = Object.keys(SPOT_FACILITIES).length; // 公式ソース照合済み設備
   const verificationCount = Object.keys(SPOT_VERIFICATION).length; // 最終確認日の記録
 
-  const eventCount = getAllEvents().length;
+  // 会期が終わっていないイベントだけ（終わったページは noindex）
+  const eventCount = getAllEvents().filter((e) => !isEventEnded(e)).length;
 
   const categoryLines = Object.entries(ARTICLE_CATEGORY_NAME)
     .map(([slug, name]) => {
@@ -150,9 +166,9 @@ export async function GET() {
 - **路線カバー**: ${n(ds.lineCount)}路線（JR / 東京メトロ / 都営 / 私鉄）
 - **チェーン店データ**: ${n(ds.chainBrandCount)}ブランド、駅×チェーンの組み合わせ${n(ds.chainRecordCount)}件
 - **駅近の子連れOK店（チェーン店データとは別）**: ${indieLine}
-- **おでかけスポット**: ${n(spotCount)}件（${spotCatLine}）
+- **おでかけスポット**: ${n(spotCount)}件（検索に出している個別ページの数。${spotCatLine}）
 - **実訪問レポート**: ${n(kidReportCount)}施設 / **公式照合済み設備データ**: ${n(facilityCount)}施設 / **最終確認日の記録**: ${n(verificationCount)}施設
-- **子連れイベント**: ${n(eventCount)}件
+- **子連れイベント**: ${n(eventCount)}件（開催中・これから開催。会期が終わったものは数えない）
 
 ## 主要な面（インデックス）
 
@@ -160,7 +176,7 @@ export async function GET() {
 - [駅別子連れランチガイド](https://kyounoko.jp/station): ${n(stationTotal)}駅のメインインデックス。個別駅は /station/駅slug
 - [路線別子連れランチガイド](https://kyounoko.jp/station/line): ${n(ds.lineCount)}路線のおすすめ駅と使い方Tips
 - [おでかけスポット一覧](https://kyounoko.jp/spots): ${n(spotCount)}件。個別スポットは /spot/スポットslug
-- [子連れイベント一覧](https://kyounoko.jp/events): ${n(eventCount)}件。個別イベントは /event/イベントslug
+- [子連れイベント一覧](https://kyounoko.jp/events): 開催中・これから開催の${n(eventCount)}件。個別イベントは /event/イベントslug
 
 ## カテゴリ（記事の分類）
 
