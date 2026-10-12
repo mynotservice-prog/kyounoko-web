@@ -372,15 +372,15 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
   },
   {
     venue: 'カワスイ 川崎水族館',
-    eventName: '秋冬の季節企画',
-    officialUrl: 'https://kawa-sui.com/',
+    eventName: '冬・クリスマスの季節企画',
+    officialUrl: 'https://prtimes.jp/companyrdf.php?company_id=102762',
     area: 'kanagawa',
     category: 'seasonal',
-    typicalPeriod: '不定（季節ごとに企画が入れ替わる）',
-    checkFromMonth: 9,
-    lastChecked: '2026-10-05',
+    typicalPeriod: '冬企画は12月開催（発表は11月下旬〜12月中旬）',
+    checkFromMonth: 11,
+    lastChecked: '2026-10-12',
     lastCheckedState:
-      '2026-10-05確認: 運営元MOFFのPR TIMES（RSS company_id=102762）の最新は9/25「MOFFネコ総選挙」のままで新規リリースなし。公式サイトの /events は描画しても一覧が空。ハロウィン・クリスマス・冬企画の発表なし。',
+      '2026-10-12確認: 冬・クリスマスは未発表。※前週の記録を2点訂正する。(1)「/events は描画しても一覧が空」は誤り。kawa-sui.com は STUDIO製の完全クライアントレンダリングSPAで、curl・WebFetchは本文ゼロ、内蔵ブラウザもレンダラが落ちるため、描画結果が空なのはこちら側の失敗で「掲載なし」の証拠にならない。実際CMSにはイベント14件が入っている。(2)「秋企画の発表なし」も誤りで、秋季企画「ハリモグラ フェス」（2026年9月11日〜10月31日）は2026-09-01に発表済みで kawasui-harimogura-fes-2026 として既に投入されていた。今回は公式CMSを直接読んでニュース108件・イベント14件を全件取得し、「ハロウィ／クリスマス／イルミネーション／冬季／冬限定／ウィンター／サンタ／Xmas」で全文検索＝クリスマス・イルミネーションは0件。ニュース最新は2026-10-09の4件。イベントCMSの14件はすべて常設プログラムで、季節企画は /events ではなく /news に出る運用。新規のREALITYコラボ（2026年10月12日〜10月25日）はVTuberアプリのコラボで子連れ向けでないため見送り。※運用の変更3点: (a) ハロウィンは監視対象から外した — ニュース108件とPR TIMES 94件（2023-12まで遡及）に「ハロウィン」が0件で、この施設はハロウィン企画をやっていない。(b) 冬企画の発表は11月下旬〜12月中旬（前年は2025-11-21にラグジュアリークリスマス、2025-12-12に開運カメ展）なので checkFromMonth を9→11にした。(c) 終了分は公式ニュースから消される運用なので、冬企画の検知はMOFFのPR TIMES RSSを主にする（確認先URLをそちらに変更）。公式サイトを見る必要があるときはCMS APIを直接叩く: HTML内のNuxtペイロードから publishedUid と resources.cmsProjectId（7A3Snn20ATQLG77bFkoW）を取り、schema_key（ニュース hY_6bHAU / イベント PZo2Zwv3）とあわせてbase64化したクエリを api.cms.studiodesignapp.com/v2/search?q= に渡す。',
     status: 'waiting',
   },
   {
