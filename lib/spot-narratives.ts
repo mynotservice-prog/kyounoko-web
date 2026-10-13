@@ -194,6 +194,7 @@ export function buildAccessTipsText(spot: Spot): string | null {
  * 行く前に知っておきたい注意点。facilities の欠落点 + kidReport から組成。
  */
 export function buildPreVisitNotes(spot: Spot): string | null {
+  if (spot.preVisitNote) return spot.preVisitNote;
   const parts: string[] = [];
   if (spot.facilities?.diaperChange === 'no') {
     parts.push(
