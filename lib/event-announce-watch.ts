@@ -113,10 +113,11 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '10月下旬〜11月末',
     checkFromMonth: 9,
-    lastChecked: '2026-09-21',
+    lastChecked: '2026-10-05',
     lastCheckedState:
-      '2026-09-21再確認: 専用ページ（/autumn-night-walk/）は「秋の夜散歩2025」（2025年10月30日〜11月30日・曜日も2025年の暦）のまま。トップのイベント一覧はコスモスまつり2026（9/12〜10/25）・秋のフォトスポット2026・秋のフードコンテストのみで、黄葉／紅葉まつりと夜散歩の2026年版は未掲載。前週から変化なし。',
-    status: 'waiting',
+      '2026-10-05確認: /autumn-night-walk/ が「秋の夜散歩2026」に更新され「2026年10月29日(木) - 11月29日(日)」「点灯時間 16：30〜20：30（最終入園20：30・閉園21：00）」と明記。料金欄は公園入園券 大人￥450、日本庭園観賞券（事前販売）大人￥1,200・小中学生￥600、窓口券 大人￥1,300・小中学生￥700。同ページに前年以前の残置文（夜間バスの日付など）が混じるので日付と料金以外は採っていない。投入した。',
+    status: 'added',
+    addedSlug: 'showa-kinen-aki-no-yosanpo-2026',
   },
   {
     venue: '六義園（都立庭園）',
@@ -126,36 +127,39 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '11月下旬〜12月上旬',
     checkFromMonth: 10,
-    lastChecked: '2026-09-07',
+    lastChecked: '2026-10-05',
     lastCheckedState:
-      '2026-09-07に前倒しで確認: 都立庭園公式に2026年秋のライトアップ日程の記載なし。10月以降に再確認する。',
-    status: 'waiting',
+      '2026-10-05確認: 六義園お知らせ（2026/09/03付）に「庭紅葉の六義園 夜間特別観賞」「令和 8 年 11 月 25 日(水)～12 月 6 日(日) 18時～20時30分（最終入園は19時30分まで）」、前売券1,000円・当日券1,200円と明記。チケット発売日は未発表。投入した。同時期の「秋の六義園」（10/17〜12/6）はパネル展の終了日が「12 月６日（土）」と暦に合わない表記のため見送り。次回から公園トップでなく /news/ を見る（9/7は見落としていた）。',
+    status: 'added',
+    addedSlug: 'rikugien-niwamomiji-night-2026',
   },
   {
     venue: '高尾山（高尾登山電鉄）',
     eventName: '高尾山もみじまつり',
-    officialUrl: 'https://www.takaotozan.co.jp/',
+    officialUrl: 'https://hkc.or.jp/takaosan/momiji_fes/',
     area: 'tokyo',
     category: 'matsuri',
-    typicalPeriod: '11月',
+    typicalPeriod: '10月下旬〜12月中旬',
     checkFromMonth: 9,
-    lastChecked: '2026-09-21',
+    lastChecked: '2026-10-12',
     lastCheckedState:
-      '2026-09-21再確認: 高尾登山電鉄のお知らせ最新は2026年9月20日の台風25号運行案内で、もみじまつりの告知なし。八王子観光コンベンション協会の専用ページ（hkc.or.jp/takaosan/momiji_fes/）は「2025年10月25日(土)〜12月14日(日)」の残置（曜日が2025年の暦と一致）。前週から変化なし。',
-    status: 'waiting',
+      '2026-10-12確認: 発表済み。協会の専用ページに「日時 2026年10月24日(土)～12月13日(日)」「場所 高尾山」と明記され、同じ会期がくじ引き・インスタキャンペーン欄にも出て計3か所で一致、曜日も2026年の暦と一致＝takaosan-momiji-matsuri-2026 として投入。料金の記載はページ上になし。※確認先URLを差し替えた: 旧 www.hachioji-kankoukyoukai.or.jp はDNSが引けなくなっており、同一パスが hkc.or.jp（協会の観光情報サイト「いこうよ八王子・高尾山」）に移っている。高尾登山電鉄側（最新のお知らせ2026年10月6日）にはもみじまつりの告知がなく、紅葉ライトアップは一次情報が出ていないため未投入＝ライトアップは引き続きウォッチ。同ページの「秋の高尾山を盛りあげる関連イベント」節は曜日が2026年と合わず前年の残存と判断し採らなかった。',
+    status: 'added',
+    addedSlug: 'takaosan-momiji-matsuri-2026',
   },
   {
-    venue: '明治神宮外苑・芝公園',
+    venue: '新豊洲・芝公園',
     eventName: '東京クリスマスマーケット',
     officialUrl: 'https://tokyochristmas.net/',
     area: 'tokyo',
     category: 'market',
     typicalPeriod: '11月下旬〜12月下旬',
     checkFromMonth: 10,
-    lastChecked: '2026-09-07',
+    lastChecked: '2026-10-05',
     lastCheckedState:
-      '2026-09-07再確認: 公式トップは2025年の情報のみ（神宮外苑11/21〜12/25・芝公園12/5〜12/25）。2026年の会場・会期は未発表。会場は2023年以降 日比谷公園ではなく明治神宮外苑＋芝公園なので venue を修正した。',
-    status: 'waiting',
+      '2026-10-05確認: 公式トップが「東京クリスマスマーケット2026」に更新。「in 新豊洲 2026年11月20日(金)〜12月25日(金)」「in 芝公園（御成門駅前広場） 2026年12月4日(金)〜12月25日(金)」と明記し、2026年は明治神宮外苑ではなく新豊洲が会場（venue を修正）。チケットは10月1日発売。2会場を tokyo-christmas-market-shintoyosu-2026 / tokyo-christmas-market-shiba-2026 として投入。トップ下部のアクセス欄は日比谷時代の残置なので採っていない。',
+    status: 'added',
+    addedSlug: 'tokyo-christmas-market-shintoyosu-2026',
   },
   {
     venue: 'すみだ水族館',
@@ -165,9 +169,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'show',
     typicalPeriod: '不定（季節ごとに企画が入れ替わる）',
     checkFromMonth: 9,
-    lastChecked: '2026-09-21',
+    lastChecked: '2026-10-05',
     lastCheckedState:
-      '2026-09-21再確認: ニュース一覧の最新は2026.09.19（アオウミガメの命名）で、ハロウィン・クリスマス・秋冬の特別展示の告知はニュース一覧・イベントページとも掲載なし。前週から変化なし。',
+      '2026-10-12確認: クリスマス・冬は未発表。ニュース最新は2026.10.09（登録博物館への登録）で前週の2026.09.29から1本進んだが季節企画ではない。トップ・ニュース一覧・/event/ の3ページで「クリスマス」「イルミネーション」「冬」「12月」の文字列がいずれも0件。※前年の冬展示（1,111匹のチンアナゴのクリスマスツリー・「設置期間：2025年11月18日（火）～2026年1月12日（月）」）は初報が2025.11.18＝会期の開始当日で、事前告知がなかった。したがって10月の確認では出ない型で、11月第3週の確認が本命。既投入の sumida-aquarium-chinanago-2026（〜11/16）はそのまま。',
     status: 'waiting',
   },
   {
@@ -262,9 +266,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'illumination',
     typicalPeriod: '11月上旬〜翌3月上旬の土日祝＋年末年始',
     checkFromMonth: 9,
-    lastChecked: '2026-09-21',
+    lastChecked: '2026-10-05',
     lastCheckedState:
-      '2026-09-21再確認: インフォメーション一覧（/information/news/）の最新は2026/09/20の臨時休園案内で、1・2ページ目とトップのいずれにも「イルミ」を含む記事は0件。旧URL /information/illumination2025/ と /illumination/ はトップへ302リダイレクトのまま。2026-2027の告知はなし。',
+      '2026-10-12確認: マザーイルミ2026-2027は未発表。インフォメーション一覧（全20件）に「イルミ」「ウィンター」「冬」の文字列が0件で、最新は2026/10/07の台風25号によるアクセス案内。/illumination/・/event/・/information/illumination2026/ はいずれもトップへ302。前シーズンの公式ページ /information/illumination2025/ も現在はトップへ302＝撤去済み。営業時間ページの冬季にイルミ期の夜間延長営業の記載もなく、sitemap.xml（1,000URL）にもイルミ系URLなし。一方、2026/10/05の「紅葉コキア」のお知らせ内に会期つきの体験（「◆開催期間◆ 11月7日（土）～11月29日（月） 土日祝限定」）があり motherfarm-kokia-houki-2026 として投入（公式は末日を「（月）」と誤記しているが2026-11-29は日曜なので日付だけ採った）。マザーイルミは引き続きウォッチ。次回は /information/illumination2026/ を直接叩くのが最短（前シーズンが /illumination2025/ だった）。',
     status: 'waiting',
   },
   {
@@ -317,9 +321,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'show',
     typicalPeriod: '不定（季節ごとに企画が入れ替わる）',
     checkFromMonth: 9,
-    lastChecked: '2026-09-21',
+    lastChecked: '2026-10-05',
     lastCheckedState:
-      '2026-09-21確認: お知らせに2026年9月16日付「水族館で楽しむハロウィン！秋の装いで限定メニューが登場」(/news/10273/)が新規掲載、会期2026年10月1日(木)〜10月31日(土)。suma-seaworld-halloween-2026 として投入した。クリスマス・冬の企画はお知らせ一覧・イベント情報ページとも依然なし＝引き続きウォッチ。/pressroom/ は404なので監視先はお知らせ一覧 /news/ に一本化する。',
+      '2026-10-12確認: クリスマス・冬は未発表。お知らせ一覧の最新は2026/10/07の2件で前週の2026/10/02から進んだが、いずれも秋の企画。一覧5ページ分（2026/02/10まで遡れる全件）とプレスルームを「クリスマス／イルミ／冬／ウィンター／サンタ／年末／お正月」で全文検索してヒット0。イベント情報（/guide/event/）も全3件で冬なし。HTMLコメントを除去して確認し、コメント内に隠れた会期はなかった。※新規の「ペンギンの散歩」（「【期間】2026年10月16日（金）～2027年3月31日（水）」「【参加費】無料 ※別途、水族館の入館券の購入が必要です」）を suma-seaworld-penguin-walk-2026 として投入。もう1件のSUMArt DAYS 2026（2026年10月17日〜11月3日）は須磨海岸・須磨海浜公園一帯の実行委員会イベントで会場がシーワールド単独ではないため見送り。※前年型の初報は2024/11/26付のクリスマスイルミネーション（会期11/28〜12/25）、2025シーズンで公式に残る最古は2025/12/10付＝初報は11月下旬〜12月上旬の館。10月中旬の未発表は想定どおりで、11月第4週が本番。',
     status: 'waiting',
   },
   // ── 2026-09-07 追加: 9月上旬時点で秋企画が未発表だった関東の主要施設 ──
@@ -333,10 +337,11 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: 'ハロウィンは10月下旬の週末、イルミは11月上旬〜翌2月下旬',
     checkFromMonth: 9,
-    lastChecked: '2026-09-21',
+    lastChecked: '2026-10-05',
     lastCheckedState:
-      '2026-09-21再確認: ニュースリリース一覧の最新は2026.09.08で前週から更新なし。ハロウィンナイトZOO・ウインターイルミネーションの2026年分リリースは0件（残るのは2025.10.15と2025.10.10の前年分）。別企画の「オータムナイトZOO 2026」は公式イベントページに9/19〜23と10/10〜12の日付があり、今後の分を tobu-zoo-autumn-night-zoo-2026 として投入した。前年のリリース時期どおり10月上旬に再確認する。',
-    status: 'waiting',
+      '2026-10-05確認: 2026.10.01付リリースとイベントページ（/event/13759.html）に「2026年10月24日（土）～2027年2月28日（日）」「開催時間 17：00～20：00」、イルミネーション入園券 大人1,700円・小人800円と明記＝tobu-zoo-winter-illumination-2026 として投入。『ハロウィンゆうえんち2026』（2026年10月1日（木）～10月31日（土））も tobu-zoo-halloween-yuenchi-2026 として投入。「ハロウィンナイトZOOパレード」「仮装パレード」は年の記載が無いページのままで見送り。国際ジャガーの日コラボ（11/1〜11/30）はイベントページ本文を未読のため見送り。',
+    status: 'added',
+    addedSlug: 'tobu-zoo-winter-illumination-2026',
   },
   {
     venue: '横浜・八景島シーパラダイス',
@@ -346,9 +351,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: 'ハロウィンは10月、イルミは11月中旬〜翌3月',
     checkFromMonth: 9,
-    lastChecked: '2026-09-21',
+    lastChecked: '2026-10-05',
     lastCheckedState:
-      '2026-09-21確認: お知らせ元データに2026年09月18日付「秋パラ！」が新規追加され、運営の株式会社横浜八景島のリリースでも会期2026年10月1日〜11月13日を確認、seaparadise-akipara-2026 として投入。冬のLIGHTIAは単独項目が2024年09月01日付のままで会期未発表（秋パラのページ内も「土日祝日のみ」で日付なし）＝引き続きウォッチ。取得は api/cache/v1/infoList.jsp?site=ha に Referer を付ける（site 指定がないと "require (site)" だけが返る）。WebFetchは403。',
+      '2026-10-12確認: 冬イルミ・クリスマスは未発表。お知らせ一覧API（infoList.jsp?site=ha）は全38件で最新が2026年10月11日「花火シンフォニア開催！」。前週以降に増えた3件（10/11 花火シンフォニア、10/09 LIGHTIA限定観覧席、10/09 Animal Life Live!限定観覧席）に冬の会期は含まれない。LIGHTIA公式ページの表示は「日時：土日祝＆特定日にて開催」のみ。花火シンフォニアの公式日程表も10月・11月・2027年3月の日付だけで12〜2月の記載なし。**罠**: LIGHTIAページのHTMLには約3万字のコメントブロックとして前シーズン（2025年）のクリスマス一式（「11/15 sat～12/25 thu」「点灯式 11/15(土)」、既に過ぎた12/20公演の中止告知まで）が丸ごと残存しているが、全体がHTMLコメント内＝ページ上は非表示なので未発表として扱った。テキスト化の前にHTMLコメントを除去すること。次回はこのコメントが解除されたか（top-second__event__schedule と「点灯式」がコメント外に出たか）を見るのが最短。昨季の点灯式が11/15だったので発表は10月後半〜11月初旬の見込み。',
     status: 'waiting',
   },
   {
@@ -367,15 +372,15 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
   },
   {
     venue: 'カワスイ 川崎水族館',
-    eventName: '秋冬の季節企画',
-    officialUrl: 'https://kawa-sui.com/',
+    eventName: '冬・クリスマスの季節企画',
+    officialUrl: 'https://prtimes.jp/companyrdf.php?company_id=102762',
     area: 'kanagawa',
     category: 'seasonal',
-    typicalPeriod: '不定（季節ごとに企画が入れ替わる）',
-    checkFromMonth: 9,
-    lastChecked: '2026-09-21',
+    typicalPeriod: '冬企画は12月開催（発表は11月下旬〜12月中旬）',
+    checkFromMonth: 11,
+    lastChecked: '2026-10-12',
     lastCheckedState:
-      '2026-09-21再確認: 公式はNuxt+STUDIOのクライアント描画で /news/・/event/ ともHTMLから項目を取得できない状態が継続、sitemap.xmlは404。運営元 株式会社MOFF のPR TIMESは最新が2026年09月01日の「ハリモグラ フェス」（投入済み kawasui-harimogura-fes-2026）で、以降ハロウィン・クリスマス・冬企画のリリースなし。',
+      '2026-10-12確認: 冬・クリスマスは未発表。※前週の記録を2点訂正する。(1)「/events は描画しても一覧が空」は誤り。kawa-sui.com は STUDIO製の完全クライアントレンダリングSPAで、curl・WebFetchは本文ゼロ、内蔵ブラウザもレンダラが落ちるため、描画結果が空なのはこちら側の失敗で「掲載なし」の証拠にならない。実際CMSにはイベント14件が入っている。(2)「秋企画の発表なし」も誤りで、秋季企画「ハリモグラ フェス」（2026年9月11日〜10月31日）は2026-09-01に発表済みで kawasui-harimogura-fes-2026 として既に投入されていた。今回は公式CMSを直接読んでニュース108件・イベント14件を全件取得し、「ハロウィ／クリスマス／イルミネーション／冬季／冬限定／ウィンター／サンタ／Xmas」で全文検索＝クリスマス・イルミネーションは0件。ニュース最新は2026-10-09の4件。イベントCMSの14件はすべて常設プログラムで、季節企画は /events ではなく /news に出る運用。新規のREALITYコラボ（2026年10月12日〜10月25日）はVTuberアプリのコラボで子連れ向けでないため見送り。※運用の変更3点: (a) ハロウィンは監視対象から外した — ニュース108件とPR TIMES 94件（2023-12まで遡及）に「ハロウィン」が0件で、この施設はハロウィン企画をやっていない。(b) 冬企画の発表は11月下旬〜12月中旬（前年は2025-11-21にラグジュアリークリスマス、2025-12-12に開運カメ展）なので checkFromMonth を9→11にした。(c) 終了分は公式ニュースから消される運用なので、冬企画の検知はMOFFのPR TIMES RSSを主にする（確認先URLをそちらに変更）。公式サイトを見る必要があるときはCMS APIを直接叩く: HTML内のNuxtペイロードから publishedUid と resources.cmsProjectId（7A3Snn20ATQLG77bFkoW）を取り、schema_key（ニュース hY_6bHAU / イベント PZo2Zwv3）とあわせてbase64化したクエリを api.cms.studiodesignapp.com/v2/search?q= に渡す。',
     status: 'waiting',
   },
   {
@@ -386,9 +391,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '9月下旬〜10月末',
     checkFromMonth: 9,
-    lastChecked: '2026-09-21',
+    lastChecked: '2026-10-05',
     lastCheckedState:
-      '2026-09-21再確認: 水族館のイベント実データ（aquarium/js/event.js）全8件にハロウィンの語は0件で、水族館単独のハロウィン企画は未発表（新規は会員向けのアクアリウムクラブ感謝祭10/17-18のみ）。一方サンシャインシティ全館の「FUN! FUN! HALLOWEEN 2026」（10/1〜10/31）は公式特設ページと9/17のリリースで確認でき、sunshine-city-halloween-2026 として別レコードで投入した。水族館はそのラリーの立寄り施設として名前が出るだけ。',
+      '2026-10-12確認: クリスマス・冬は未発表。aquarium/js/event.js（本日配信分）の水族館イベントは前週と同じ6件で増減なし、ハロウィン・クリスマス・冬は0件。水族館のお知らせ最新は2026/09/30、重要なお知らせは2026.09.11。サンシャインシティ全館の js（sunshinecity.jp/js/event.js・全40件）にも「クリスマス」「イルミネーション」「冬」「サンタ」「ウィンター」が0件で、会期が最も先まであるのは12/06まで＝全館でもクリスマス2026は未発表。/file/official/christmas/ は200だが中身は日付のない旧スタブページ。水族館お知らせの「マリンガーデン イルミネーション」は2025/09/17付の通年の常設演出で会期の記載がなく冬イルミには使えない。※前週の取りこぼし: 全館企画「Sunshine City FUN! FUN! HALLOWEEN 2026」（2026-10-01〜2026-10-31・会場に水族館を含む）は水族館側の js に入らないため見えていなかった。ただし水族館の関与はおばけカード配布1箇所のみで、会期も残り僅かなため投入は見送った。次週以降は全館 js も取得し venue 配列に「水族館」を含む行を抽出すること（クリスマスもこちらに出る公算が高い）。',
     status: 'waiting',
   },
 
@@ -410,15 +415,16 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
   {
     venue: '東京ミッドタウン',
     eventName: 'MIDTOWN CHRISTMAS（イルミネーション）',
-    officialUrl: 'https://www.tokyo-midtown.com/jp/event/',
+    officialUrl: 'https://www.tokyo-midtown.com/jp/news/',
     area: 'tokyo',
     category: 'illumination',
-    typicalPeriod: '11月中旬〜12月25日',
+    typicalPeriod: '11月下旬〜12月25日（光の散歩道とアイスリンクは翌2月下旬まで）',
     checkFromMonth: 10,
-    lastChecked: '2026-09-22',
+    lastChecked: '2026-10-12',
     lastCheckedState:
-      '2026-09-22確認: イベント一覧の最遠は「LOUVRE meets TOKYO MIDTOWN 2026/9/9(水)〜12/13(日)」でクリスマス項目なし。MIDTOWN CHRISTMASページ（/jp/event/7657/）は「2025/11/13(木)〜12/25(木)」＝前年分の残置。2026年版は未発表。',
-    status: 'waiting',
+      '2026-10-12確認: 発表済み。公式お知らせ（掲載日2026/10/9・前週の確認後に出た）に「2026年11月26日(木)から12月25日(金)の期間、「MIDTOWN CHRISTMAS 2026（ミッドタウン クリスマス）」を開催いたします」と明記。プレスリリースPDF（pressrelease_261007.pdf）でも同じ会期で、「※光の散歩道は2027年2月23日（火・祝）まで」「RALPH LAUREN MIDTOWN ICE RINK【期間】2026年12月5日（土）～2027年2月23日（火・祝）」も確認＝midtown-christmas-2026 / midtown-ice-rink-2026 として投入。※確認先URLを差し替えた: /jp/information/ は実体のない空ページ（データ元JSONが空配列）で、/jp/event/ 系にもまだ個別ページがない。公式お知らせの正は /jp/news/ で、今回の発表もそこにしか出ていなかった。※会期が前年と違う（2025年は11/13開始、2026年は11/26開始＝13日遅い。アイスリンクも11/21→12/5）ので前年日付の流用は今年は全部外れる。アイスリンクのオフィシャルサイトは公式に「11月12日（木）に公開予定」とあり、料金は公開後に再照合する。',
+    status: 'added',
+    addedSlug: 'midtown-christmas-2026',
   },
   {
     venue: '六本木ヒルズ（けやき坂）',
@@ -428,10 +434,11 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'illumination',
     typicalPeriod: '11月上旬〜12月25日',
     checkFromMonth: 10,
-    lastChecked: '2026-09-22',
+    lastChecked: '2026-10-05',
     lastCheckedState:
-      '2026-09-22確認: 六本木ヒルズのイベント一覧にクリスマス項目なし。特設サイト christmas.hills-site.com は「11.4 tue - 12.25 thu」＝2025年の暦（2025-11-04が火曜）と一致する前年分の残置。2026年版は未発表。',
-    status: 'waiting',
+      '2026-10-05確認: 森ビル2026年9月30日付リリース「CHRISTMAS HILLS 2026」（PDF）に、けやき坂イルミネーション「日程：11月5日（木）～12月25日（金）時間：17:00～22:00」、六本木ヒルズ クリスマスマーケット 2026「日程：11月21日（土）～12月25日（金）時間：11:00～21:00場所：大屋根プラザ」と明記。roppongi-keyakizaka-illumination-2026 / roppongi-hills-christmas-market-2026 として投入。特設サイトの詳細は10月22日公開予定。',
+    status: 'added',
+    addedSlug: 'roppongi-keyakizaka-illumination-2026',
   },
   {
     venue: '東京スカイツリータウン',
@@ -441,9 +448,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'illumination',
     typicalPeriod: '11月中旬〜12月25日',
     checkFromMonth: 10,
-    lastChecked: '2026-09-22',
+    lastChecked: '2026-10-05',
     lastCheckedState:
-      '2026-09-22確認: 公式プレスリリース最新は2026-09-02で、秋イベントが「2026年9月4日（金）～10月26日（月）」まで。ドリームクリスマス2026の発表なし。',
+      '2026-10-12確認: ドリームクリスマス2026は未発表（ただし今週は確認経路が片方落ちていた）。tokyo-skytree.jp/press/ の最新は2026.09.02のままで、press・news・event・トップのいずれにもクリスマス／イルミネーション／ドリームの文字列が0件。**重要**: 東京ソラマチ公式（tokyo-solamachi.jp/news/）がサーバー障害で一覧ごと落ちており、トップへリダイレクトされて臨時1枚ページ（「現在、サーバー事業者におけるシステム不具合の影響により…」）しか返らない。タウン公式 tokyo-skytreetown.jp もTCP接続タイムアウト。タウン全体のリリースはソラマチ側に先に載るため、障害中にソラマチ側だけに出た告知を取りこぼしている可能性が残る＝復旧後に遡って確認すること。※前年版プレス（/press/post/681/）の掲載日は2025.10.15で会期は「２０２５年１１月１日（土）～１２月２５日（木）」＝告知は10月中旬の実績。来週（10/19）は発表済みの見込みで優先確認。',
     status: 'waiting',
   },
   {
@@ -453,10 +460,10 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     area: 'kanagawa',
     category: 'seasonal',
     typicalPeriod: '12月（クリスマス前後）',
-    checkFromMonth: 10,
-    lastChecked: '2026-09-22',
+    checkFromMonth: 12,
+    lastChecked: '2026-10-12',
     lastCheckedState:
-      '2026-09-22確認: トピックス最新は2026-09-16（秋のカード）。クリスマス関連の掲載は2025-12-18/12-31の投稿のみ＝前年分。2026年版は未発表。',
+      '2026-10-12確認: トピックス最新は2026.10.10（パンプキンカステラ）。前週から2本増えたが2026.10.09の新テニスの王子様コラボ（2026年10月9日〜11月4日）＝秋のコラボで、冬企画ではない。営業カレンダーにも12月の日付は0件。クリスマス関連の投稿は一覧100件中2025.12.18の1本のみで画像パスも /uploads/2025/12/ ＝前年分。2026年版は未発表。前年の初報が2025.12.08・2025.12.18だったことから、この会場は12月に入ってから告知する型と判断し checkFromMonth を10→12に変更（10〜11月の週次確認は空振りする）。',
     status: 'waiting',
   },
   {
@@ -467,9 +474,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '11月中旬〜12月下旬',
     checkFromMonth: 10,
-    lastChecked: '2026-09-22',
+    lastChecked: '2026-10-05',
     lastCheckedState:
-      '2026-09-22確認: お知らせ最新は2026-09-18（秋のイベント）。クリスマス関連の最新は2025-11-11「ノスタルジック・クリスマス 2025」＝前年分。2026年版は未発表。',
+      '2026-10-12確認: ノスタルジック・クリスマス2026は未発表。お知らせ最新は2026.10.08の3本（休止情報／阿波おどり／アイドルマスター SideM）。お知らせ一覧のクリスマス関連リンクは /event/nostalgic-christmas2025/ の1本だけで前年版が200で現存、推測URL /event/nostalgic-christmas2026/ は404。公式イベント一覧（全75件）の最新のクリスマスも「ノスタルジック・クリスマス 2025」のまま。※新規に会期つきの子連れ向け企画「阿波おどり in 西武園ゆうえんち 〜2026秋〜」（「開催日時 2026年11月8日(日)」）を seibuen-awaodori-2026 として投入。アイドルマスター SideM（2026/10/30〜12/01）は子連れ向けでないため見送り。※前年の初報は2025.11.11（会期開始11/21の10日前）、前々年は2024.10.24（会期開始11/8の15日前）＝初報は10月下旬〜11月中旬が実績。今週の未発表は前年どおりで異常ではなく、11月第1〜2週が本命。',
     status: 'waiting',
   },
   {
@@ -508,9 +515,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '不定（周年は2026-10-19、クリスマスは12月）',
     checkFromMonth: 9,
-    lastChecked: '2026-09-22',
+    lastChecked: '2026-10-05',
     lastCheckedState:
-      '2026-09-22確認: 周年ページ（/news/events/29136）は「しながわ水族館は2026年10月19日（月）に開館35周年を迎えます。」「1年を通して、四季折々の表情を見せる季節のイベントや特別展の開催を予定しています。」にとどまり、会期を持つ周年イベントは未発表。ハロウィン・クリスマスも未発表で、2025年版「しな水のクリスマス2025」（/news/events/17380）は404＝削除済みなので流用不可。「秋の大運動祭」は全体の会期欄が無くコラボ2日（10/3・10/17）だけが確定のため、会期レコードとしては見送った。既存の特別展 shinagawa-aquarium-eric-carle-2026（〜2026-12-25）は投入済み。',
+      '2026-10-12確認: ハロウィン・クリスマスは未発表。イベント系お知らせ（/news/events/）の最新は依然2026.10.02で前週から進んでおらず、RSSのlastBuildDateも Fri, 02 Oct 2026 まで＝イベント投稿は増えていない。進んだのはトップの重要なお知らせ2026.10.10（10月18日の営業案内）のみで会期レコードにならない。公式サイト内検索で「クリスマス」「ハロウィン」ともに0件。「開館35周年イヤー」ページは「各イベント詳細については、公式サイトにて順次発表してまいります。」と書くのみで会期なし。35周年セレモニー（10月18日10:15〜10:40）と「しな水秋の大運動祭」（10月3日・10月17日）はいずれも単日で対象外。HTMLコメントも全ページ検査して会期の残存は0件。※既投入の shinagawa-aquarium-eric-carle-2026（特別展「エリック・カールと いのちの色」2026-07-25〜2026-12-25）は公式と一致しており変更なし。※前年の冬企画の初報日はお知らせのアーカイブが刈り込まれていて公式から特定できなかった（推測は書かない）。開館35周年当日が2026-10-19で季節企画は「順次発表」と明言されているため、次週（10/19前後）に /news/events/ を再確認する。',
     status: 'waiting',
   },
   {
@@ -549,9 +556,9 @@ export const ANNOUNCE_WATCH: AnnounceWatch[] = [
     category: 'seasonal',
     typicalPeriod: '不定（10月・12月）',
     checkFromMonth: 10,
-    lastChecked: '2026-09-22',
+    lastChecked: '2026-10-05',
     lastCheckedState:
-      '2026-09-22確認: 企画展2本（お仕事展 2026-09-03〜11-08／虫から見る外来種 2026-09-09〜11-15）を公式の常設展・企画展ページで確認し投入した。お知らせ一覧は最新2026-09-20分まで見て、2026年秋冬のハロウィン・クリスマス告知はゼロ＝未発表。注意: イベントページ（/event/event.html）はJavaScript描画で、WebFetchだとテンプレート変数しか返らないためブラウザでのDOM取得が必要。',
+      '2026-10-12確認: ハロウィン・クリスマス・生きものアートキャンペーンのいずれも来園者向けの会期告知はなく未発表。お知らせの最新は2026/10/02で前週から変化なし。直近60件に「ハロウィン」「クリスマス」の語が0件。イベントの当日申込フィード最新は2026/11/01（保護猫譲渡会）、事前申込は2026年11月23日のみで12月の告知はゼロ。生きものアートキャンペーンの日付は依然として出店者募集ページ1枚（/special/art_campaign/syutten.html）にしかなく、「期　間：2027年1月16日（土）～3月14日（日）の土日祝のいずれか」は出店可能日の範囲という文脈。来園者向けページは /special/art_campaign/index.html が404、sitemap.xmlにも syutten.html の1本だけ＝投入不可。HTMLコメントも全列挙したが会期の残存は0件（日付入りコメントは休園日カレンダーの運用メモのみ）。※手法メモ: このサイトはBiND製でお知らせ・イベント一覧が全てJS描画のため curl の生HTMLは本文ゼロ。ページ内の js-press JSON に blog sid があり、https://press.bindcloud.jp/posts?b=<sid>&limit=60 で画面と同じ一次データが全件取れる（sid: お知らせ 3U4nEb-MqAqO / 当日申込 U2TUCFli7Mic / 定期 rXZA2hQCdbJ）。ブラウザ描画より速く取りこぼしがない。',
     status: 'waiting',
   },
 ];

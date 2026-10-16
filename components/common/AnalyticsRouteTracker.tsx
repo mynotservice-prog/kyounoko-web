@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { trackEvent, trackPageView } from '@/lib/analytics';
+import { installAffiliateReferrer } from '@/lib/affiliate-referrer';
 
 /**
  * Next.js App Router の SPA 遷移で page_view を手動送信するトラッカー。
@@ -75,6 +76,9 @@ export function AnalyticsRouteTracker() {
     document.addEventListener('click', onClick, true);
     return () => document.removeEventListener('click', onClick, true);
   }, []);
+
+  // アフィリエイト送客リンクのクリック時だけ、ページ URL を ASP に渡す（サーバーが返す HTML は変えない）。
+  useEffect(() => installAffiliateReferrer(), []);
 
   return null;
 }
