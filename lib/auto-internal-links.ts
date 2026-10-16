@@ -77,13 +77,13 @@ export const FROZEN_INBOUND_CUTOFF = '2026-09-25';
 export const FROZEN_TARGET_SLUGS = new Set([
   'bamiyan-kids-menu', 'bamiyan-kodzure-koryaku', 'bamiyan-morning-kosodate', 'bigboy-morning-kosodate',
   'bikkuri-donkey-kids-menu', 'bikkuri-donkey-kodzure-koryaku', 'bikkuri-donkey-morning-kosodate',
-  'cocoichi-kids-menu', 'cocos-kids-menu', 'dennys-morning-kosodate', 'fureai-nouen-setagaya-aki-kodzure',
-  'gusto-kids-menu', 'gusto-morning-kosodate', 'hanamaru-udon-kodzure-koryaku', 'hoshino-morning-kosodate',
-  'ichiran-kodzure-koryaku', 'komazawa-koen-jabujabuike', 'komeda-morning-kosodate',
+  'cocos-kids-menu', 'dennys-morning-kosodate', 'fureai-nouen-setagaya-aki-kodzure',
+  'gusto-morning-kosodate', 'hoshino-morning-kosodate',
+  'komazawa-koen-jabujabuike', 'komeda-morning-kosodate',
   'mikangari-musashimurayama-kodzure', 'mizumoto-koen-jabujabuike', 'mogitori-nerima-aki-kodzure',
-  'mos-burger-kids-menu', 'mos-burger-morning-kosodate', 'ootoya-morning-kosodate',
-  'royalhost-morning-kosodate', 'saizeriya-kids-menu', 'shabuyou-kodzure-koryaku',
-  'sukiya-morning-kosodate', 'yakiniku-king-kodzure-koryaku', 'yayoiken-kodzure-koryaku',
+  'mos-burger-morning-kosodate', 'ootoya-morning-kosodate',
+  'royalhost-morning-kosodate', 'saizeriya-kids-menu',
+  'sukiya-morning-kosodate', 'yayoiken-kodzure-koryaku',
   'yayoiken-morning-kosodate',
 ]);
 
