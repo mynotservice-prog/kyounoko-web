@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import { claimsConfirmText } from '@/components/admin/ContentEditor';
 
 const CATEGORY_OPTIONS = [
   { value: 'today-doko', name: '今日どこ行く？' },
@@ -153,12 +154,27 @@ A. 回答3。
     const close = markdown.indexOf('---', 3);
     const body = close >= 0 ? markdown.slice(close + 3).replace(/^\s+/, '') : '';
     try {
-      const res = await fetch('/api/admin/edit-content', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ kind: 'article', slug, frontmatter, body }),
-      });
-      const data = (await res.json()) as { ok?: boolean; error?: string; source?: string; deployed?: string };
+      type SaveResult = {
+        ok?: boolean; error?: string; source?: string; deployed?: string;
+        needsConfirm?: boolean; claims?: Parameters<typeof claimsConfirmText>[0];
+      };
+      const post = async (confirmClaims: boolean) => {
+        const res = await fetch('/api/admin/edit-content', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ kind: 'article', slug, frontmatter, body, confirmClaims }),
+        });
+        return { res, data: (await res.json()) as SaveResult };
+      };
+      let { res, data } = await post(false);
+      // 保存前の検査で止まったとき（記録の確認が要る書き方）。編集画面と同じ確認を出す。
+      if (!data.ok && data.needsConfirm) {
+        if (!window.confirm(claimsConfirmText(data.claims || []))) {
+          setCreateMsg('作成していません。該当の書き方を直すか、記録（店舗・年月）を本文に書いてから作成してください。');
+          return;
+        }
+        ({ res, data } = await post(true));
+      }
       if (!res.ok || !data.ok) {
         setCreateMsg('❌ ' + (data.error || 'failed'));
       } else if (data.source === 'kv') {
