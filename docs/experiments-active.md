@@ -503,7 +503,7 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
 
 ### 実験17の処置の実施（2026-10-18・サンマルクカフェのPR）— 汚染ではなく処置そのもの
 
-同じPRで `sanmarc-cafe-kodzure-koryaku`（処置）と `tullys-coffee-kodzure-koryaku`（対照）を凍結登録し、処置の記事に節1つ・FAQ 2問の追加と「490円」の事実修正を入れた。title・既存の節の構成は不変。
+同じPRで `sanmarc-cafe-kodzure-koryaku`（処置）と `tullys-coffee-kodzure-koryaku`（対照）を凍結登録し、処置の記事に節1つ・FAQ 2問の追加と「490円」の事実修正を入れた。title・既存の節の構成は不変。本文に「茗荷谷駅前店」が入るため、描画層の駅リンク（/station/myogadani/baby）が1本自動で増える（処置ページから出るリンクで、凍結面・137本コホートへのリンクではない）。
 
 ### 実験16の処置の実施（2026-10-18・焼肉トラジのPR）— 汚染ではなく処置そのもの
 
