@@ -85,6 +85,8 @@ export const FROZEN_TARGET_SLUGS = new Set([
   'royalhost-morning-kosodate', 'saizeriya-kids-menu',
   'sukiya-morning-kosodate', 'yayoiken-kodzure-koryaku',
   'yayoiken-morning-kosodate',
+  // 実験12（五右衛門型の先行2本・2026-10-17）
+  'machida-shoten-kodzure-koryaku', 'tadokoro-shoten-kodzure-koryaku',
 ]);
 
 /** 公開日がカットオフ以降の記事から凍結面へリンクしてよいか。 */
