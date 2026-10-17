@@ -27,6 +27,8 @@ export type FileArticleQuickInfo = {
 export type FileArticleMeta = {
   slug: string;
   title: string;
+  /** <title> タグだけに使う検索向けタイトル（任意）。H1・OG・JSON-LD は title のまま。2026-10-17 実験11 */
+  seoTitle?: string;
   metaDescription: string;
   category: string;
   categoryName?: string;
@@ -163,6 +165,7 @@ function parseFrontmatter(raw: string, fallbackSlug: string): { meta: FileArticl
   const meta: FileArticleMeta = {
     slug: typeof d.slug === 'string' ? d.slug : fallbackSlug,
     title: typeof d.title === 'string' ? d.title : '',
+    seoTitle: typeof d.seoTitle === 'string' && d.seoTitle.trim() ? d.seoTitle : undefined,
     metaDescription: typeof d.metaDescription === 'string' ? d.metaDescription : '',
     category: typeof d.category === 'string' ? d.category : '',
     categoryName: typeof d.categoryName === 'string' ? d.categoryName : undefined,
