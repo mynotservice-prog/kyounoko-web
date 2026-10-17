@@ -376,6 +376,23 @@ URLを知っているがクロール順を待たせている状態。したが�
 - **合格**: 同順位帯の CTR が対照比で **+25% 以上**。**不合格**: 未満（`seoTitle` を外して旧 title に戻す）。順位が ±1.0 以上動いた場合は順位帯を揃え直して読む。
 - **判定日**: 本番反映日 **+38日**。
 - 事実修正・公式追従は可（「汚染の記録」に書く）。
+### 14. 滞留記事の title 語彙併記 第1陣（大戸屋・鳥貴族・ハッピーセット・`<title>` のみ）（2026-10-17 登録・社長承認 PR-B / 本番反映日＝このPRのマージ日・一蘭/先行2本/デニーズ/牛角CoCo壱とは別日）★対照群あり
+
+設計書: `reports/stall-pushup-research-2026-10-17.md` §2・§5（PR #335）。4〜10位で滞留し、最大クエリの語が title に無いページに、frontmatter `seoTitle`（実験11で新設・`<title>` だけに効く）で語を併記する。**H1・lede・本文・FAQ は不変**（`title` 行は触らない）。
+
+| 処置 | 28日 clk/imp/順位 | 根拠クエリ（imp・順位） | `<title>` | 対照（同型・変更しない） |
+|---|---|---|---|---|
+| `ootoya-kodzure-koryaku` | 1,003 / 18,516 / 4.3 | 大戸屋 キッズメニュー 2,531・6.8／子供メニュー 1,261・5.0／お子様メニュー 800・7.3 | 「大戸屋は子連れOK？キッズメニュー（お子様メニュー）・ベビーカー・離乳食・取り分け定食【2026】」 | `washoku-sato-kodzure-koryaku`（223 / 12,384 / 5.8） |
+| `torikizoku-kids-menu` | 616 / 23,150 / 6.6 | 鳥貴族 子供 872・6.9／子供連れ 726・8.5／子供 メニュー 540・3.0 | 「鳥貴族は子連れOK？キッズメニュー「お子様プレート」390円を徹底解説【2026】」 | `marukame-kids-menu`（202 / 16,977 / 6.6） |
+| `mcdonalds-kids-menu` | 126 / 25,393 / 6.9 | マック 何歳から 1,800・7／ハッピーセット 何歳から 384・5.3 | 「マック（マクドナルド）のハッピーセットは何歳から何歳まで？年齢制限・値段・おもちゃの選び方【2026】」 | `hottomotto-kodzure-koryaku`（119 / 9,920 / 6.3） |
+
+- **主指標**: 各処置ページの検索クリック（page equals・final・28日）を、対照ページの同期間の変化率で差し引く。3本は別々に判定。
+- **補助指標**: 根拠クエリの平均順位（**小さいほど改善**）と CTR、表示回数、広告収益（AdSense ページ別・同曜日比・手動）。
+- **窓**: 基準＝反映日の前28日（final）。比較＝反映日 +8〜35日の28日（final）。
+- **合格**: 対照差し引きでクリック **+15% 以上**、かつ根拠クエリの順位が **−1.0 以上改善**（どちらか一方だけなら「探索」として合否を作らない）。**不合格**: クリック −10% 以下（seoTitle を外して戻す）。
+- **判定日**: 反映日 **+38日**。
+- 凍結: 処置3本・対照3本（事実修正は汚染の記録へ）。KV 上書きが無いことを本番 `<title>` で確認済み（6本とも md と一致）。
+
 ## 機械可読ブロック（`scripts/check-frozen.mjs` が読む正本）
 
 CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的に拾う。
@@ -406,7 +423,13 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
     "yakiniku-king-kids-menu",
     "yakiniku-king-kodomo-ryokin",
     "machida-shoten-kodzure-koryaku",
-    "tadokoro-shoten-kodzure-koryaku"
+    "tadokoro-shoten-kodzure-koryaku",
+    "ootoya-kodzure-koryaku",
+    "torikizoku-kids-menu",
+    "mcdonalds-kids-menu",
+    "washoku-sato-kodzure-koryaku",
+    "marukame-kids-menu",
+    "hottomotto-kodzure-koryaku"
   ],
   "comparisonBaselines": [
     "imohori-kanto-kodzure"
@@ -424,12 +447,16 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
     "/spot/-m64q",
     "/spot/-xj0s"
   ],
-  "_memo": "frozenSlugs の dennys-kids-menu・royal-host-kids-menu = 実験11（デニーズ title 語彙併記・2026-10-17）の処置と対照。／frozenSlugs = モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）＋実験8のチェーン系モーニング新規面7本＋バーミヤン1本（判定 2026-11-20 / 2026-12-20。新規面なので対照群は無く、判定は「立ち上がったか」だけ）。いずれも lib/auto-internal-links.ts の EXPERIMENT_FROZEN_SLUGS に載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。released / releasedUrls = 2026-10-01 に判定が終わった実験5（はなまる1本）・実験6（6本）・実験7（処置21面・対照21面。frozenUrls にあった2面はここへ）。2026-10-10 に移した。",
+  "_memo": "実験14（2026-10-17）: 処置 ootoya-kodzure-koryaku・torikizoku-kids-menu・mcdonalds-kids-menu、対照 washoku-sato-kodzure-koryaku・marukame-kids-menu・hottomotto-kodzure-koryaku。／frozenSlugs の dennys-kids-menu・royal-host-kids-menu = 実験11（デニーズ title 語彙併記・2026-10-17）の処置と対照。／frozenSlugs = モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）＋実験8のチェーン系モーニング新規面7本＋バーミヤン1本（判定 2026-11-20 / 2026-12-20。新規面なので対照群は無く、判定は「立ち上がったか」だけ）。いずれも lib/auto-internal-links.ts の EXPERIMENT_FROZEN_SLUGS に載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。released / releasedUrls = 2026-10-01 に判定が終わった実験5（はなまる1本）・実験6（6本）・実験7（処置21面・対照21面。frozenUrls にあった2面はここへ）。2026-10-10 に移した。",
   "_memo": "released から ichiran-kodzure-koryaku を外した（実験6で解除後、実験10で再凍結・2026-10-17）。frozenSlugs 末尾3本 = 実験10（一蘭301・2026-10-17）の処置 ichiran-kodzure-koryaku と対照ペア 焼肉きんぐ2本。／frozenSlugs = モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）＋実験8のチェーン系モーニング新規面7本＋バーミヤン1本（判定 2026-11-20 / 2026-12-20。新規面なので対照群は無く、判定は「立ち上がったか」だけ）。いずれも lib/auto-internal-links.ts の EXPERIMENT_FROZEN_SLUGS に載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。released / releasedUrls = 2026-10-01 に判定が終わった実験5（はなまる1本）・実験6（6本）・実験7（処置21面・対照21面。frozenUrls にあった2面はここへ）。2026-10-10 に移した。 ／ frozenSlugs の machida-shoten / tadokoro-shoten = 実験12（五右衛門型の先行2本・2026-10-17・公開後は事実修正のみ）"
 }
 ```
 
 ## 汚染の記録
+
+### 実験14の処置の実施（2026-10-17・title 第1陣のPR）— 汚染ではなく処置そのもの
+
+同じPRで処置3本・対照3本を凍結登録し、処置3本に frontmatter `seoTitle` を追加した（`<title>` のみ変更・H1/本文/FAQ 不変）。対照3本は未変更。反映後は事実修正以外で触らない。
 
 ### 実験10の処置の実施（2026-10-17・一蘭301のPR）— 汚染ではなく処置そのもの
 
