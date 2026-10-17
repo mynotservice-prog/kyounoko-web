@@ -90,7 +90,7 @@ youtubeSearch: 食べ放題 子ども料金 幼児 無料 小学生 半額 比�
 
 ## 食べ放題以外の「子ども無料」施策
 
-- [一蘭](/article/ichiran-kodomo-muryou)：小学6年生までお子様ラーメン無料（公式アプリの引換券・国内全店舗）
+- [一蘭](/article/ichiran-kodzure-koryaku)：小学6年生までお子様ラーメン無料（公式アプリの引換券・国内全店舗）
 - [串カツ田中](/article/kushikatsu-tanaka-kodomo-ryokin)：小学生以下は手作りたこ焼きセットとソフトクリームチャレンジが無料
 
 ## よくある質問

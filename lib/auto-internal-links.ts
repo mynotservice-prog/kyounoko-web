@@ -87,6 +87,10 @@ export const FROZEN_TARGET_SLUGS = new Set([
   'yayoiken-morning-kosodate',
   // 実験11（デニーズ title 語彙併記・2026-10-17）: 処置1本＋対照1本
   'dennys-kids-menu', 'royal-host-kids-menu',
+  // 実験10（一蘭301・2026-10-17）: 処置1本＋対照ペア2本
+  'ichiran-kodzure-koryaku', 'yakiniku-king-kids-menu', 'yakiniku-king-kodomo-ryokin',
+  // 実験12（五右衛門型の先行2本・2026-10-17）
+  'machida-shoten-kodzure-koryaku', 'tadokoro-shoten-kodzure-koryaku',
 ]);
 
 /** 公開日がカットオフ以降の記事から凍結面へリンクしてよいか。 */
