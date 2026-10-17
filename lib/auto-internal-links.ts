@@ -89,6 +89,8 @@ export const FROZEN_TARGET_SLUGS = new Set([
   'ichiran-kodzure-koryaku', 'yakiniku-king-kids-menu', 'yakiniku-king-kodomo-ryokin',
   // 実験12（五右衛門型の先行2本・2026-10-17）
   'machida-shoten-kodzure-koryaku', 'tadokoro-shoten-kodzure-koryaku',
+  // 実験15（五右衛門型 第2陣・2026-10-17）
+  'akakara-kodzure-koryaku', 'kamukura-kodzure-koryaku',
 ]);
 
 /** 公開日がカットオフ以降の記事から凍結面へリンクしてよいか。 */
