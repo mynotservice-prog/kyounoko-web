@@ -328,6 +328,22 @@ URLを知っているがクロール順を待たせている状態。したが�
 - **凍結はしない**（事実修正・公式追従は可）。改題・統合・noindex・大幅改稿は判定日までしない。行ったら下の「汚染の記録」に書く
 - 公開ペース上限（月60〜80本）を守るため、判定日までこの2つの型の新規追加はしない
 
+### 10. 一蘭の2URL統合（301）— 自己カニバリの解消（2026-10-17 登録・社長承認 / 本番反映日＝このPRのマージ日）★対照群あり
+
+設計書: `reports/ichiran-shabuyo-301-plan-2026-10-16.md`（PR #329）。背景: 「一蘭 子供 無料」が攻略記事 518imp／料金記事 505imp・順位どちらも 7.0 で二分していた（28日・page equals）。
+
+- **処置**: `ichiran-kodomo-muryou`（2026-09-02 公開・28日 20clk/3,576imp/7.1位）を削除し `ichiran-kodzure-koryaku` へ 301（`lib/article-redirects.ts`）。料金記事にしか無かった節（語彙の意味・何人まで・アプリなし・海外店舗）を攻略記事の料金節に1小節として集約、FAQ に「何人まで」を1問追加。**title・H1・lede・見出し順は不変。** 料金記事への内部リンク2本（食べ放題比較ハブ・攻略記事自身）は攻略記事へ付け替え。
+- **凍結（処置）**: `ichiran-kodzure-koryaku`
+- **凍結（対照）**: 統合しない同型ペア 焼肉きんぐ `yakiniku-king-kids-menu`（28日 85clk/7,831imp/7.0位）＋ `yakiniku-king-kodomo-ryokin`（79clk/10,108imp/5.4位）。期間中 title・本文を変更しない。
+- **主指標**: 統合元＋統合先の**2URL合算 検索クリック**（page equals ×2・dataState=final・28日）。対照ペアの同期間の合算変化率を差し引いて評価する。
+- **補助指標**: 合算の表示回数。主語クエリ「一蘭 子供 無料」「一蘭 子ども」「一蘭 子供ラーメン」の平均順位（**数値が小さいほど改善**。順位は理由の説明に使い、順位だけで合否を決めない）。広告収益: AdSense 管理画面のページ別レポートで `ichiran-kodzure-koryaku` の収益・ページRPM を同じ窓で比較（手動・RPM は月初段差を避け同曜日比で読む）。
+- **基準値（9/16〜10/13・28日・final）**: 処置合算 **154clk / 18,430imp**（A 134/14,854/6.7位、B 20/3,576/7.1位）。対照合算 **164clk / 17,939imp**。
+- **窓**: 基準＝本番反映日の前28日（final）。比較＝反映日 +15〜42日の28日（final）。同曜日で揃える。速報値は使わない。
+- **合格**: 対照差し引きで合算クリック **+15% 以上**。**不合格**: **−10% 以下**（301 は戻さず、料金記事相当の節を攻略記事にさらに足す）。その間は測定不能（探索扱い・合否を作らない）。
+- **判定日**: 本番反映日 **+45日**（final が揃う日）。
+- 事実修正・公式追従は可（「汚染の記録」に書く）。デニーズの title 実験（§11）とは別PR・別日に反映する。
+- **既知の副作用（併記）**: 凍結登録により、凍結カットオフ以降に公開された記事からの本文キーワード自動リンク「一蘭」が止まり、新設コホートの `ichikakuya-kodzure-koryaku`・`ippudo-kodzure-koryaku` から攻略記事への描画リンク2本が反映日に消える（対照ペアには同種の変化なし）。処置側に不利な方向の交絡として判定文に書く。
+
 ## 機械可読ブロック（`scripts/check-frozen.mjs` が読む正本）
 
 CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的に拾う。
@@ -351,7 +367,10 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
     "bigboy-morning-kosodate",
     "mos-burger-morning-kosodate",
     "ootoya-morning-kosodate",
-    "bamiyan-morning-kosodate"
+    "bamiyan-morning-kosodate",
+    "ichiran-kodzure-koryaku",
+    "yakiniku-king-kids-menu",
+    "yakiniku-king-kodomo-ryokin"
   ],
   "comparisonBaselines": [
     "imohori-kanto-kodzure"
@@ -360,7 +379,6 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
   "released": [
     "hanamaru-udon-kodzure-koryaku",
     "cocoichi-kids-menu",
-    "ichiran-kodzure-koryaku",
     "shabuyou-kodzure-koryaku",
     "mos-burger-kids-menu",
     "yakiniku-king-kodzure-koryaku",
@@ -370,11 +388,15 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
     "/spot/-m64q",
     "/spot/-xj0s"
   ],
-  "_memo": "frozenSlugs = モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）＋実験8のチェーン系モーニング新規面7本＋バーミヤン1本（判定 2026-11-20 / 2026-12-20。新規面なので対照群は無く、判定は「立ち上がったか」だけ）。いずれも lib/auto-internal-links.ts の EXPERIMENT_FROZEN_SLUGS に載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。released / releasedUrls = 2026-10-01 に判定が終わった実験5（はなまる1本）・実験6（6本）・実験7（処置21面・対照21面。frozenUrls にあった2面はここへ）。2026-10-10 に移した。"
+  "_memo": "released から ichiran-kodzure-koryaku を外した（実験6で解除後、実験10で再凍結・2026-10-17）。frozenSlugs 末尾3本 = 実験10（一蘭301・2026-10-17）の処置 ichiran-kodzure-koryaku と対照ペア 焼肉きんぐ2本。／frozenSlugs = モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）＋実験8のチェーン系モーニング新規面7本＋バーミヤン1本（判定 2026-11-20 / 2026-12-20。新規面なので対照群は無く、判定は「立ち上がったか」だけ）。いずれも lib/auto-internal-links.ts の EXPERIMENT_FROZEN_SLUGS に載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。released / releasedUrls = 2026-10-01 に判定が終わった実験5（はなまる1本）・実験6（6本）・実験7（処置21面・対照21面。frozenUrls にあった2面はここへ）。2026-10-10 に移した。"
 }
 ```
 
 ## 汚染の記録
+
+### 実験10の処置の実施（2026-10-17・一蘭301のPR）— 汚染ではなく処置そのもの
+
+同じPRで `ichiran-kodzure-koryaku` を凍結登録し、同時に処置（料金節への1小節追加・FAQ1問・`ichiran-kodomo-muryou` からの301と内部リンク付け替え）を入れた。凍結ガードは「凍結slugのmd変更」として検出するが、これは実験の開始点で、基準値は反映前28日・比較は反映後で取るため判定からの除外は不要。反映後は事実修正以外で触らない。
 
 ### トップの「よく読まれています」を2か月ぶりに更新（2026-10-03）— 実験2の同一面1本からトップのリンクが外れた
 
