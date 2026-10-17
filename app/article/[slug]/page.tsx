@@ -299,7 +299,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? [...ogImages, { url: pinImg, width: 1000, height: 1500 }]
     : ogImages;
   return {
-    title: article.title,
+    // seoTitle は <title> だけに効かせる（H1・OG・JSON-LD は title のまま）。実験11（docs/experiments-active.md §11）
+    title: article.seoTitle ?? article.title,
     description,
     openGraph: {
       title: article.title,
