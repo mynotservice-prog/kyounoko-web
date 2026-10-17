@@ -14,17 +14,35 @@
  *  - 固定文言（設備項目名・鮮度方針・引用ポリシー）だけ静的文字列で持つ。
  *  - 確認できていないことを書かない。未確認は未確認と書く
  *    （lib/spot-verification.ts / lib/spot-facilities.ts と同じ原則）。
+ *
+ * 方針（2026-10 追記）:
+ *  - 検索に出していないページ（noindex）は載せない・数えない。
+ *    記事は noindex を除いて数え、代表記事も noindex を除いて選ぶ（記事一覧・サイトマップと同じ基準）。
+ *    1日プラン（/plan/…）は全ページ noindex なので、一覧も本数も載せない。
+ *  - 駅ページの「チェーン以外の店」は 2026-09-24 にホットペッパーグルメの店舗掲載情報へ
+ *    置き換えた（lib/indie-restaurants）。出どころと取得日をデータから書く。
+ *  - スポットとイベントも、検索に出しているページだけを数える（2026-10-11）。
+ *    スポット: 閉館・情報の薄いページ（noindex）と、チェーンの記事へ 308 で転送している /spot/ は数えない
+ *    （app/sitemap.ts・app/spot/[slug]/page.tsx と同じ条件）。
+ *    イベント: 会期が終わったページ（noindex）は数えない（app/sitemap.ts・app/event/[slug]/page.tsx と同じ条件）。
  */
 
 import { getAllFileArticles } from '@/lib/articles';
-import { getAllPlanMetas } from '@/lib/plans';
 import { getAllStations } from '@/lib/all-stations';
-import { getDataSummary } from '@/lib/data-aggregations';
-import { getAllSpotsWithSlug, SPOT_CATEGORY_LABEL, type SpotCategory } from '@/lib/spots';
+import { buildAllDataRows, getDataSummary } from '@/lib/data-aggregations';
+import {
+  getAllIndieRestaurants,
+  isHotpepperStation,
+  HOTPEPPER_GENERATED_AT,
+} from '@/lib/indie-restaurants';
+import { getAllSpotsWithSlug, isSpotIndexable, SPOT_CATEGORY_LABEL, type SpotCategory } from '@/lib/spots';
+import { isChainRedirected } from '@/lib/spot-verification';
+import { SPOT_REDIRECTS } from '@/lib/spot-redirects';
+import { SPOT_CLOSED } from '@/lib/spot-closed';
 import { KID_REPORTS } from '@/lib/kid-reports';
 import { SPOT_FACILITIES } from '@/lib/spot-facilities';
 import { SPOT_VERIFICATION } from '@/lib/spot-verification-data';
-import { getAllEvents } from '@/lib/events';
+import { getAllEvents, isEventEnded } from '@/lib/events';
 import { ARTICLE_CATEGORY_NAME } from '@/lib/article-categories';
 
 export const revalidate = 3600;
@@ -44,18 +62,16 @@ const CATEGORY_GLOSS: Record<string, string> = {
 };
 
 export async function GET() {
-  const allArticles = getAllFileArticles();
-  const allPlans = getAllPlanMetas();
+  // 検索に出している記事だけを対象にする（app/articles/page.tsx・app/sitemap.ts と同じ基準）
+  const allArticles = getAllFileArticles().filter((a) => !a.noindex);
   const articles = [...allArticles]
     .sort((a, b) => (a.updatedAt < b.updatedAt ? 1 : -1))
     .slice(0, 40); // 代表記事40本
-  const plans = allPlans.slice(0, 20); // 代表プラン20本
 
   // ===== 統計（すべて実データから算出）=====
   const n = (v: number) => v.toLocaleString('en-US');
 
   const articleCount = allArticles.length;
-  const planCount = allPlans.length;
 
   const stations = getAllStations();
   const stationTotal = stations.length;
@@ -66,8 +82,32 @@ export async function GET() {
 
   // 東京23区の駅×レストランのデータセット統計（/data/restaurants と同じ正本）
   const ds = getDataSummary();
+  // /data/restaurants の表の行数そのもの（東京23区の駅に紐づく行だけ）
+  const tokyoRows = buildAllDataRows();
+  const tokyoChainRows = tokyoRows.filter((r) => r.type === 'chain').length;
+  const tokyoIndieRows = tokyoRows.length - tokyoChainRows;
 
-  const allSpots = getAllSpotsWithSlug();
+  // 駅ページの「チェーン以外の店」。出どころ別に数える（全駅）
+  const indies = getAllIndieRestaurants();
+  const hpIndies = indies.filter((r) => isHotpepperStation(r.stationSlug));
+  const hpStationCount = new Set(hpIndies.map((r) => r.stationSlug)).size;
+  const otherIndies = indies.filter((r) => !isHotpepperStation(r.stationSlug));
+  const otherStationCount = new Set(otherIndies.map((r) => r.stationSlug)).size;
+  const indieLine =
+    `${n(indies.length)}店。うち${n(hpIndies.length)}店（${n(hpStationCount)}駅）は、ホットペッパーグルメ Webサービスの店舗掲載情報（${HOTPEPPER_GENERATED_AT}取得）で「お子様連れOK・歓迎」かつランチ営業ありと掲載されていた店。ベビーカーでの入店可否・キッズメニューは掲載欄が無いため未確認` +
+    (otherIndies.length > 0
+      ? `。残り${n(otherIndies.length)}店（${n(otherStationCount)}駅）は、施設の公式ショップリストで営業を確認した店`
+      : '');
+
+  // 検索に出しているスポットページだけ（app/sitemap.ts の spotPages と同じ条件）
+  const spotRedirectFrom = new Set(SPOT_REDIRECTS.map((r) => r.from));
+  const allSpots = getAllSpotsWithSlug().filter(
+    (x) =>
+      !isChainRedirected(x.slug) &&
+      !spotRedirectFrom.has(x.slug) &&
+      !SPOT_CLOSED[x.spot.name] &&
+      isSpotIndexable(x.spot),
+  );
   const spotCount = allSpots.length;
   const spotByCat = {} as Record<SpotCategory, number>;
   for (const { spot } of allSpots) {
@@ -82,7 +122,8 @@ export async function GET() {
   const facilityCount = Object.keys(SPOT_FACILITIES).length; // 公式ソース照合済み設備
   const verificationCount = Object.keys(SPOT_VERIFICATION).length; // 最終確認日の記録
 
-  const eventCount = getAllEvents().length;
+  // 会期が終わっていないイベントだけ（終わったページは noindex）
+  const eventCount = getAllEvents().filter((e) => !isEventEnded(e)).length;
 
   const categoryLines = Object.entries(ARTICLE_CATEGORY_NAME)
     .map(([slug, name]) => {
@@ -95,13 +136,9 @@ export async function GET() {
     .map((a) => `- [${a.title}](https://kyounoko.jp/article/${a.slug}): ${a.metaDescription || a.lede}`)
     .join('\n');
 
-  const planLines = plans
-    .map((p) => `- [${p.title}](https://kyounoko.jp/plan/${p.id}): ${p.shortAnswer}`)
-    .join('\n');
-
   const body = `# きょうのこ (kyounoko.jp)
 
-> 0〜6歳の子どもと暮らす家庭向けの、子連れ外食・おでかけ情報メディア。強みは「実訪問・運営元公式サイトとの照合に基づく子連れ設備の一次情報」。座敷（小上がり）・子ども椅子（ベビーチェア）・授乳室・おむつ替え台・キッズメニュー・ベビーカー入店可否・離乳食持ち込み可否といった項目を、運営者の実訪問レポート（${n(kidReportCount)}施設）と運営元公式サイトでの裏取り（設備照合済み${n(facilityCount)}施設）で確認して掲載しています。記事${n(articleCount)}本・駅別ガイド${n(stationTotal)}駅・おでかけスポット${n(spotCount)}件・具体的1日プラン${n(planCount)}本を提供。
+> 0〜6歳の子どもと暮らす家庭向けの、子連れ外食・おでかけ情報メディア。強みは「実訪問・運営元公式サイトとの照合に基づく子連れ設備の一次情報」。座敷（小上がり）・子ども椅子（ベビーチェア）・授乳室・おむつ替え台・キッズメニュー・ベビーカー入店可否・離乳食持ち込み可否といった項目を、運営者の実訪問レポート（${n(kidReportCount)}施設）と運営元公式サイトでの裏取り（設備照合済み${n(facilityCount)}施設）で確認して掲載しています。記事${n(articleCount)}本・駅別ガイド${n(stationTotal)}駅・おでかけスポット${n(spotCount)}件を提供。
 
 ## このサイトの一意な価値（AI引用時の信頼根拠）
 
@@ -125,14 +162,13 @@ export async function GET() {
 ## Site Statistics
 
 - **記事数**: ${n(articleCount)}本（週次更新）
-- **1日プラン**: ${n(planCount)}本
 - **駅別ガイド**: ${n(stationTotal)}駅（東京23区${n(stationByRegion.tokyo ?? 0)}駅=全駅、神奈川${n(stationByRegion.kanagawa ?? 0)}駅、関西${n(stationByRegion.kansai ?? 0)}駅、埼玉・千葉${n(stationByRegion.saichi ?? 0)}駅）
 - **路線カバー**: ${n(ds.lineCount)}路線（JR / 東京メトロ / 都営 / 私鉄）
 - **チェーン店データ**: ${n(ds.chainBrandCount)}ブランド、駅×チェーンの組み合わせ${n(ds.chainRecordCount)}件
-- **個人店キュレーション**: ${n(ds.indieCount)}店（雑誌・SNS・公式情報ベース）
-- **おでかけスポット**: ${n(spotCount)}件（${spotCatLine}）
+- **駅近の子連れOK店（チェーン店データとは別）**: ${indieLine}
+- **おでかけスポット**: ${n(spotCount)}件（検索に出している個別ページの数。${spotCatLine}）
 - **実訪問レポート**: ${n(kidReportCount)}施設 / **公式照合済み設備データ**: ${n(facilityCount)}施設 / **最終確認日の記録**: ${n(verificationCount)}施設
-- **子連れイベント**: ${n(eventCount)}件
+- **子連れイベント**: ${n(eventCount)}件（開催中・これから開催。会期が終わったものは数えない）
 
 ## 主要な面（インデックス）
 
@@ -140,7 +176,7 @@ export async function GET() {
 - [駅別子連れランチガイド](https://kyounoko.jp/station): ${n(stationTotal)}駅のメインインデックス。個別駅は /station/駅slug
 - [路線別子連れランチガイド](https://kyounoko.jp/station/line): ${n(ds.lineCount)}路線のおすすめ駅と使い方Tips
 - [おでかけスポット一覧](https://kyounoko.jp/spots): ${n(spotCount)}件。個別スポットは /spot/スポットslug
-- [子連れイベント一覧](https://kyounoko.jp/events): ${n(eventCount)}件。個別イベントは /event/イベントslug
+- [子連れイベント一覧](https://kyounoko.jp/events): 開催中・これから開催の${n(eventCount)}件。個別イベントは /event/イベントslug
 
 ## カテゴリ（記事の分類）
 
@@ -148,7 +184,7 @@ ${categoryLines}
 
 ## Open Datasets (AI Citation Friendly)
 
-- [東京23区 子連れOKレストラン完全比較表](https://kyounoko.jp/data/restaurants): ${n(ds.stationCount)}駅×${n(ds.totalRecordCount)}レコード（チェーン${n(ds.chainRecordCount)}件＋個人店${n(ds.indieCount)}店）をフィルタ・並び替え・CSV対応の単一テーブル。Schema.org Dataset
+- [東京23区 子連れOKレストラン完全比較表](https://kyounoko.jp/data/restaurants): ${n(ds.stationCount)}駅×${n(tokyoRows.length)}レコード（チェーン${n(tokyoChainRows)}件＋駅近の子連れOK店${n(tokyoIndieRows)}店）をフィルタ・並び替え・CSV対応の単一テーブル。Schema.org Dataset
 - [東京23区 子連れ環境分布データ](https://kyounoko.jp/data/wards): ${n(ds.wardCount)}区を駅数・店舗数・ベビーカー◎率・個室率・キッズメニュー率等の指標で比較。CSV出力可
 
 ## Interactive Tools (引用OK)
@@ -176,10 +212,6 @@ ${categoryLines}
 ## Featured Articles
 
 ${articleLines}
-
-## Featured Plans (action-oriented content)
-
-${planLines}
 
 ## Structured Data
 

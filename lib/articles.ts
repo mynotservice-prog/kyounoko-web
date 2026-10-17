@@ -49,6 +49,13 @@ export type FileArticleMeta = {
    */
   chainComparison?: string;
   /**
+   * true のとき、題や slug に「比較」「ランキング」を含む記事に自動で出る「評価基準の開示」の注記
+   * （「本記事のランキング・No.1等の表記は…主観的に評価した順位です」）を出さない。
+   * 順位・採点を本文から外した記事で、注記だけが残るのを防ぐための指定。
+   * 未指定（既定）は従来どおり自動で出す。順位や No.1 の表記が残る記事には付けない。
+   */
+  hideRankingDisclosure?: boolean;
+  /**
    * おうち遊びDB(lib/home-play.ts)の遊びID。指定があると本文の「遊び方カード」H2の
    * 直後にDB駆動のカード（月齢・準備/片付け分数・親の姿勢・安全の公式根拠）を描画する。
    */
@@ -170,6 +177,7 @@ function parseFrontmatter(raw: string, fallbackSlug: string): { meta: FileArticl
     updatedAt: toIsoDate(d.updatedAt) ?? toIsoDate(d.publishedAt) ?? new Date().toISOString(),
     verifiedAt: toIsoDate(d.verifiedAt) ?? undefined,
     chainComparison: typeof d.chainComparison === 'string' ? d.chainComparison : undefined,
+    hideRankingDisclosure: d.hideRankingDisclosure === true ? true : undefined,
     homePlays: Array.isArray(d.homePlays)
       ? (d.homePlays as unknown[]).filter((x): x is string => typeof x === 'string')
       : undefined,
