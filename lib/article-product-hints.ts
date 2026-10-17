@@ -547,12 +547,10 @@ const CHAIN_DISPLAY_NAMES: Record<string, string> = {
   anrakutei: '安楽亭',
   bamiyan: 'バーミヤン',
   bigboy: 'ビッグボーイ',
-  cocoichi: 'CoCo壱番屋',
   cocos: 'ココス',
   dennys: 'デニーズ',
   disney: '東京ディズニーランド',
   gusto: 'ガスト',
-  gyukaku: '牛角',
   hanamarudon: 'はなまるうどん',
   jonathan: 'ジョナサン',
   legoland: 'レゴランド・ジャパン',
@@ -583,7 +581,8 @@ const THEME_PARK_CHAINS = new Set(['disney', 'legoland']);
  * スラッグ命名が一致する16チェーンのみ列挙（denny-s/dennys 等の不一致stemは対象外）。
  */
 const CHAINS_WITH_KIDS_MENU = new Set([
-  'anrakutei', 'bamiyan', 'cocoichi', 'cocos', 'gusto', 'gyukaku', 'jonathan',
+  'anrakutei', 'bamiyan', 'cocos', 'gusto', 'jonathan',
+  // 2026-10-17 実験13: cocoichi（攻略→kids-menu統合）・gyukaku（kids-menu→攻略統合）は姉妹ページが無くなったので除外
   'matsuya', 'nakau', 'ohsho', 'royal-host', 'sukiya', 'sushiro',
   'yakiniku-king', 'yayoiken', 'yoshinoya',
 ]);

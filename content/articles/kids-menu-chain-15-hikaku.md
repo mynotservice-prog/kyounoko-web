@@ -231,12 +231,12 @@ legacyHero: /hero-ai/kodzure-famires-15sen.webp
 - はなまるうどん：[キッズメニュー](/article/hanamarudon-kids-menu)・[ベビーチェア](/article/hanamarudon-baby-chair)
 - 丸亀製麺：[子ども向けメニュー事情](/article/marukame-kids-menu)・[ベビーチェア](/article/marukame-baby-chair)
 - てんや：[キッズメニュー](/article/tenya-kids-menu)・[ベビーチェア](/article/tenya-baby-chair)
-- CoCo壱番屋：[キッズメニュー](/article/cocoichi-kids-menu)・[ベビーチェア](/article/cocoichi-kodzure-koryaku)
+- CoCo壱番屋：[キッズメニュー](/article/cocoichi-kids-menu)・[ベビーチェア](/article/cocoichi-kids-menu)
 - リンガーハット：[キッズメニュー](/article/ringerhut-kids-menu)・[ベビーチェア](/article/ringerhut-baby-chair)
 - 餃子の王将：[キッズメニュー](/article/ohsho-kids-menu)・[ベビーチェア](/article/ohsho-baby-chair)
 
 **焼肉・しゃぶしゃぶ系**
-- 牛角：[キッズメニュー](/article/gyukaku-kids-menu)・[ベビーチェア](/article/gyukaku-kodzure-koryaku)
+- 牛角：[キッズメニュー](/article/gyukaku-kodzure-koryaku)・[ベビーチェア](/article/gyukaku-kodzure-koryaku)
 - 焼肉キング：[キッズメニュー](/article/yakiniku-king-kids-menu)・[ベビーチェア](/article/yakiniku-king-kodzure-koryaku)
 - 安楽亭：[キッズメニュー](/article/anrakutei-kids-menu)・[ベビーチェア](/article/anrakutei-baby-chair)
 - しゃぶ葉：[子供料金・キッズメニュー](/article/shabuyou-kodzure-koryaku)・[ベビーチェア](/article/shabuyo-baby-chair)

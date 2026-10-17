@@ -91,6 +91,8 @@ export const FROZEN_TARGET_SLUGS = new Set([
   'machida-shoten-kodzure-koryaku', 'tadokoro-shoten-kodzure-koryaku',
   // 実験15（五右衛門型 第2陣・2026-10-17）
   'akakara-kodzure-koryaku', 'kamukura-kodzure-koryaku',
+  // 実験13（牛角・CoCo壱の301・2026-10-17）: 処置2本＋対照ペア2本
+  'gyukaku-kodzure-koryaku', 'cocoichi-kids-menu', 'kfc-kids-menu', 'kfc-kodzure-koryaku',
 ]);
 
 /** 公開日がカットオフ以降の記事から凍結面へリンクしてよいか。 */
