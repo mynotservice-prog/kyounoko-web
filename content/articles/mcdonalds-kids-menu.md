@@ -2,6 +2,7 @@
 slug: mcdonalds-kids-menu
 seoRelated: mcdonalds-kodzure-koryaku
 title: ハッピーセットは何歳から何歳まで？年齢制限・値段・おもちゃの選び方【2026】
+seoTitle: マック（マクドナルド）のハッピーセットは何歳から何歳まで？年齢制限・値段・おもちゃの選び方【2026】
 metaDescription: >-
   マクドナルドのハッピーセットに年齢制限はある？何歳から・何歳まで頼めるか、値段の目安、おもちゃとメニューの選び方を公式情報と実体験で解説。
 category: today-doko
