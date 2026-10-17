@@ -758,7 +758,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     key: 'cocoichi',
     name: 'CoCo壱番屋',
     officialUrl: 'https://www.ichibanya.co.jp/',
-    koryakuSlug: 'cocoichi-kodzure-koryaku',
+    koryakuSlug: 'cocoichi-kids-menu',
     verifiedAt: '2026-07-02',
     verifiedMethod: '公式サイト・店舗公開情報の照合',
     items: {

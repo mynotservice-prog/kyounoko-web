@@ -333,7 +333,7 @@ A. **ゆず庵・丸源ラーメン**は、食物アレルギーのお子さま�
 - [すき家子連れ攻略法](/article/sukiya-kodzure-koryaku)
 - [松屋子連れ攻略法](/article/matsuya-kodzure-koryaku)
 - [なか卯子連れ攻略法](/article/nakau-kodzure-koryaku)
-- [CoCo壱番屋子連れ攻略法](/article/cocoichi-kodzure-koryaku)
+- [CoCo壱番屋子連れ攻略法](/article/cocoichi-kids-menu)
 
 ## 出典
 
