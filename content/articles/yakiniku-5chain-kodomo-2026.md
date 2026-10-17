@@ -81,7 +81,7 @@ hero: /img/scenes/meal-04.webp
 ## 内部リンク
 
 - 焼肉キング1社の詳しい子連れ攻略は[焼肉きんぐ（焼肉キング）子連れ攻略](/article/yakiniku-king-kodzure-koryaku)。テーブルオーダー食べ放題・幼児無料・生焼け対策まで深掘りしています。
-- 単独攻略は[牛角 子連れ攻略](/article/gyukaku-kodzure-koryaku)が詳しいです。子ども料金の公式確認値は[牛角の子供料金（幼児無料・小学生半額）](/article/gyukaku-kodomo-ryokin)・[焼肉きんぐの子ども料金](/article/yakiniku-king-kodomo-ryokin)・[安楽亭の子ども料金](/article/anrakutei-kodomo-ryokin-guide)、牛角のキッズメニュー・ベビーカー・個室は[牛角のキッズメニュー](/article/gyukaku-kids-menu)・[牛角のベビーカー入店](/article/gyukaku-stroller)・[牛角の個室](/article/gyukaku-koshitsu)へ。
+- 単独攻略は[牛角 子連れ攻略](/article/gyukaku-kodzure-koryaku)が詳しいです。子ども料金の公式確認値は[牛角の子供料金（幼児無料・小学生半額）](/article/gyukaku-kodomo-ryokin)・[焼肉きんぐの子ども料金](/article/yakiniku-king-kodomo-ryokin)・[安楽亭の子ども料金](/article/anrakutei-kodomo-ryokin-guide)、牛角のキッズメニュー・ベビーカー・個室は[牛角のキッズメニュー](/article/gyukaku-kodzure-koryaku)・[牛角のベビーカー入店](/article/gyukaku-stroller)・[牛角の個室](/article/gyukaku-koshitsu)へ。
 - コスパ・座敷でゆっくり派の単独攻略は[安楽亭 子連れ攻略（自然肉・無添加／座敷）](/article/anrakutei-kodzure-koryaku)。自然肉100％・無添加で「子に食べさせる肉」を選びやすい点や、座敷×焼き網の安全まで深掘りしています。
 - 七輪焼肉安安の幼児料金と、座敷・個室のある店の数は[七輪焼肉安安は子連れOK？](/article/yakiniku-anan-kodzure-koryaku)。
 - 焼肉×しゃぶの広い比較は[子連れOK焼肉・しゃぶしゃぶ7選](/article/kodzure-yakiniku-shabu-7)。

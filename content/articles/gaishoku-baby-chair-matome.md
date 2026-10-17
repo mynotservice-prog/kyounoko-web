@@ -95,7 +95,7 @@ lede: >-
 - 丸亀製麺：[ベビーチェア](/article/marukame-baby-chair)・[キッズメニュー](/article/marukame-kids-menu)
 - 丸源ラーメン：[子連れ攻略（お子さま用の椅子・離乳食メニュー）](/article/marugen-ramen-kodzure-koryaku)
 - てんや：[ベビーチェア](/article/tenya-baby-chair)・[キッズメニュー](/article/tenya-kids-menu)
-- CoCo壱番屋：[ベビーチェア](/article/cocoichi-kodzure-koryaku)・[キッズメニュー](/article/cocoichi-kids-menu)
+- CoCo壱番屋：[ベビーチェア](/article/cocoichi-kids-menu)・[キッズメニュー](/article/cocoichi-kids-menu)
 - リンガーハット：[ベビーチェア](/article/ringerhut-baby-chair)・[キッズメニュー](/article/ringerhut-kids-menu)
 
 **回転寿司系**
@@ -105,7 +105,7 @@ lede: >-
 - かっぱ寿司：[子連れ攻略（キッズチェア・離乳食提供）](/article/kappa-sushi-kodzure-koryaku)
 
 **焼肉・しゃぶしゃぶ系**
-- 牛角：[ベビーチェア](/article/gyukaku-kodzure-koryaku)・[キッズメニュー](/article/gyukaku-kids-menu)
+- 牛角：[ベビーチェア](/article/gyukaku-kodzure-koryaku)・[キッズメニュー](/article/gyukaku-kodzure-koryaku)
 - 焼肉キング：[ベビーチェア](/article/yakiniku-king-kodzure-koryaku)・[キッズメニュー](/article/yakiniku-king-kids-menu)
 - 安楽亭：[ベビーチェア](/article/anrakutei-baby-chair)・[キッズメニュー](/article/anrakutei-kids-menu)
 - しゃぶ葉：[ベビーチェア](/article/shabuyo-baby-chair)・[子供料金・キッズメニュー](/article/shabuyou-kodzure-koryaku)・[子ども料金まとめ（幼児無料・小学生1,099円）](/article/shabuyo-kodomo-ryokin)
