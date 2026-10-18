@@ -97,6 +97,8 @@ export const FROZEN_TARGET_SLUGS = new Set([
   'toraji-kodzure-koryaku',
   // 実験17（サンマルクカフェ 店舗別キッズセット・2026-10-18）: 処置1本＋対照1本
   'sanmarc-cafe-kodzure-koryaku', 'tullys-coffee-kodzure-koryaku',
+  // 実験19（華屋与兵衛 title 語彙併記・2026-10-18）: 処置1本＋対照2本
+  'hanaya-yohei-kodzure-koryaku', 'washoku-sato-kodzure-koryaku', 'nakau-kodzure-koryaku',
   // 実験13（牛角・CoCo壱の301・2026-10-17）: 処置2本＋対照ペア2本
   'gyukaku-kodzure-koryaku', 'cocoichi-kids-menu', 'kfc-kids-menu', 'kfc-kodzure-koryaku',
 ]);
