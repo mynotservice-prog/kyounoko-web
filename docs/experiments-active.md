@@ -415,6 +415,19 @@ URLを知っているがクロール順を待たせている状態。したが�
 - **判定日**: 本番反映日 **+38日**。
 - **影響範囲の確認（登録時）**: 新しい節と FAQ には他チェーン名・137本コホートや凍結面の語を書いていない（自動リンクの対象語を増やさない。check-frozen で確認）。このページへの被リンク8本（カフェ系記事）は変更しない。`laketown-kids-menu` のレイクタウン店 490円は集計と一致（修正不要）。
 
+### 19. 華屋与兵衛攻略の title 語彙併記（title タグのみ・1変数）（2026-10-18 登録・社長承認「GSC の主要クエリと title の不一致を再確認した上で、1変数の title 実験PRを作成。対照群・判定期間・合否基準を事前固定」 / 本番反映日＝このPRのマージ日・別途承認）★対照群あり
+
+根拠（GSC・page equals・28日 2026-09-19〜10-16）: `hanaya-yohei-kodzure-koryaku` は 50clk／1,180表示・4.9位。表示の57%（668表示）が「華屋与兵衛 キッズメニュー」214・「華 屋 与兵衛 メニュー 子供」140・「お子様メニュー」115・「子供メニュー」69 などのメニュー語で、平均5.1位・**CTR 1.2%**。一方 title は公式表記の「おこさまメニュー」だけで、検索語の「キッズメニュー」「お子様メニュー」を含まない。「離乳食」は2.3位・CTR 20.7%で取れている。`reports/pushup-5chains-2026-10-18.md` 案F。
+
+- **処置**: `<title>` だけを「華屋与兵衛は子連れOK？キッズメニュー（お子様メニュー）・座敷・離乳食を実体験で解説【2026】」へ（frontmatter `seoTitle`）。現在は「華屋与兵衛は子連れOK？座敷・おこさまメニュー・離乳食・ベビーカーを実体験で解説【2026】」。**H1（＝title 文字列）・metaDescription・本文・FAQ・updatedAt は不変。** 体験の記述は社長確認済み（2026-10-18）のため「実体験で解説」は残す。「ベビーカー」は文字数のため title から外す（クエリ「華屋与兵衛 ベビーカー」は28日0表示）。
+- **対照**: `washoku-sato-kodzure-koryaku`（和食ファミレス・title も公式表記「おこさまメニュー」のみ・メニュー語 28日 1,194表示・6.0位・CTR 1.4%。#337 の実験14 でも対照に指定済み＝両実験とも「触らない」だけなので両立する）＋`nakau-kodzure-koryaku`（title にメニュー語なし・メニュー語 864表示・6.0位・CTR 0.2%）。判定日まで触らない。
+- **語のセット（メニュー語）**: 「<チェーン名>」を含み、かつ「キッズ／お子様／子供／こども／おこさま」と「メニュー」を含むクエリ（空白・語順の違いを含む）。
+- **主指標**: メニュー語の CTR の変化率（基準→比較）。処置の変化率 − 対照（2本合算）の変化率。
+- **合格（反映前に固定）**: 差が **+30% 以上**、かつ処置のメニュー語のクリックが基準より **+5回以上**、かつ処置のメニュー語の平均順位の悪化が **1.0位以内**。基準のクリックが28日で8回と少ないため、実験14（+15%）より高い線と、絶対数の条件を足した。
+- **不合格**: 差が **−10% 以下**、または処置の全クリックが基準比 **−20% 以上**、または「離乳食」語のクリックが基準比 **−30% 以上**。どちらでもなければ探索扱い（合否を作らない）。
+- **窓**: 基準＝反映日の前28日（final）、比較＝反映日 +8〜+35日（final）。**判定日＝反映日 +38日。**
+- **補助**: メニュー語の平均順位（**小さいほど改善**）、広告収益（AdSense ページ別。取れなければクリック × 1.24 × ページRPM の推定と明記）、処置・対照の被関連リンクの増減（登録時の再現では基準・比較とも大きな変化なし）。
+- **他の実験との関係**: 実験11・#337（実験14）・実験18（ステーキガスト）と別日に反映する。
 ### 18. ステーキガスト料金記事の title から「キッズメニュー」を外す（title タグのみ・1変数）（2026-10-18 登録・社長承認「既存設計に従い実装PRの作成まで。title のみ、本文・H1・FAQ は触らない。対照のビッグボーイは変更しない」 / 本番反映日＝このPRのマージ日・別途承認）★対照群あり
 
 設計書: `reports/steakgusto-title-experiment-design-2026-10-18.md`（PR #343）。主力 `steakgusto-kids-menu` と料金記事 `steak-gusto-kodomo-ryokin` が「ステーキガスト キッズメニュー」で同時に出ている（28日 主力 316表示・6.2位／料金記事 62表示・9.7位）。料金記事の title から語を外して、主力に寄せる。
@@ -495,6 +508,9 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
     "toraji-kodzure-koryaku",
     "sanmarc-cafe-kodzure-koryaku",
     "tullys-coffee-kodzure-koryaku",
+    "hanaya-yohei-kodzure-koryaku",
+    "washoku-sato-kodzure-koryaku",
+    "nakau-kodzure-koryaku",
     "steak-gusto-kodomo-ryokin",
     "steakgusto-kids-menu",
     "bigboy-kids-menu",
@@ -523,7 +539,7 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
   "_memo": "frozenSlugs の dennys-kids-menu・royal-host-kids-menu = 実験11（デニーズ title 語彙併記・2026-10-17）の処置と対照。／frozenSlugs = モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）＋実験8のチェーン系モーニング新規面7本＋バーミヤン1本（判定 2026-11-20 / 2026-12-20。新規面なので対照群は無く、判定は「立ち上がったか」だけ）。いずれも lib/auto-internal-links.ts の EXPERIMENT_FROZEN_SLUGS に載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。released / releasedUrls = 2026-10-01 に判定が終わった実験5（はなまる1本）・実験6（6本）・実験7（処置21面・対照21面。frozenUrls にあった2面はここへ）。2026-10-10 に移した。",
   "_memo": "released から ichiran-kodzure-koryaku を外した（実験6で解除後、実験10で再凍結・2026-10-17）。frozenSlugs 末尾3本 = 実験10（一蘭301・2026-10-17）の処置 ichiran-kodzure-koryaku と対照ペア 焼肉きんぐ2本。／frozenSlugs = モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）＋実験8のチェーン系モーニング新規面7本＋バーミヤン1本（判定 2026-11-20 / 2026-12-20。新規面なので対照群は無く、判定は「立ち上がったか」だけ）。いずれも lib/auto-internal-links.ts の EXPERIMENT_FROZEN_SLUGS に載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。released / releasedUrls = 2026-10-01 に判定が終わった実験5（はなまる1本）・実験6（6本）・実験7（処置21面・対照21面。frozenUrls にあった2面はここへ）。2026-10-10 に移した。 ／ frozenSlugs の machida-shoten / tadokoro-shoten = 実験12（五右衛門型の先行2本・2026-10-17・公開後は事実修正のみ）",
   "_memo": "実験15（2026-10-17）: akakara-kodzure-koryaku・kamukura-kodzure-koryaku（五右衛門型 第2陣・公開後は事実修正のみ）。／released から ichiran-kodzure-koryaku を外した（実験6で解除後、実験10で再凍結・2026-10-17）。frozenSlugs 末尾3本 = 実験10（一蘭301・2026-10-17）の処置 ichiran-kodzure-koryaku と対照ペア 焼肉きんぐ2本。／frozenSlugs = モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）＋実験8のチェーン系モーニング新規面7本＋バーミヤン1本（判定 2026-11-20 / 2026-12-20。新規面なので対照群は無く、判定は「立ち上がったか」だけ）。いずれも lib/auto-internal-links.ts の EXPERIMENT_FROZEN_SLUGS に載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。released / releasedUrls = 2026-10-01 に判定が終わった実験5（はなまる1本）・実験6（6本）・実験7（処置21面・対照21面。frozenUrls にあった2面はここへ）。2026-10-10 に移した。 ／ frozenSlugs の machida-shoten / tadokoro-shoten = 実験12（五右衛門型の先行2本・2026-10-17・公開後は事実修正のみ）",
-  "_memo": "実験18（2026-10-18）: steak-gusto-kodomo-ryokin（処置・seoTitle）と steakgusto-kids-menu（主力・不変だが測定対象）、対照 bigboy-kids-menu・bigboy-kodomo-ryokin。／実験20（2026-10-18）: yamanakaya-kodzure-koryaku（五右衛門型 第4陣・公開後は事実修正のみ）。／実験17（2026-10-18）: sanmarc-cafe-kodzure-koryaku（処置・店舗別キッズセット節の追加）と tullys-coffee-kodzure-koryaku（対照）。／実験16（2026-10-18）: toraji-kodzure-koryaku（五右衛門型 第3陣・公開後は事実修正のみ）。／実験13（2026-10-17）: gyukaku-kodzure-koryaku・cocoichi-kids-menu（処置）と kfc-kids-menu・kfc-kodzure-koryaku（対照）を追加。cocoichi-kids-menu は released から外した（実験6で解除後に再凍結）。／released から ichiran-kodzure-koryaku を外した（実験6で解除後、実験10で再凍結・2026-10-17）。frozenSlugs 末尾3本 = 実験10（一蘭301・2026-10-17）の処置 ichiran-kodzure-koryaku と対照ペア 焼肉きんぐ2本。／frozenSlugs = モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）＋実験8のチェーン系モーニング新規面7本＋バーミヤン1本（判定 2026-11-20 / 2026-12-20。新規面なので対照群は無く、判定は「立ち上がったか」だけ）。いずれも lib/auto-internal-links.ts の EXPERIMENT_FROZEN_SLUGS に載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。released / releasedUrls = 2026-10-01 に判定が終わった実験5（はなまる1本）・実験6（6本）・実験7（処置21面・対照21面。frozenUrls にあった2面はここへ）。2026-10-10 に移した。 ／ frozenSlugs の machida-shoten / tadokoro-shoten = 実験12（五右衛門型の先行2本・2026-10-17・公開後は事実修正のみ）"
+  "_memo": "実験19（2026-10-18）: hanaya-yohei-kodzure-koryaku（処置・seoTitle）、対照 washoku-sato-kodzure-koryaku（実験14と共用）・nakau-kodzure-koryaku。／実験18（2026-10-18）: steak-gusto-kodomo-ryokin（処置・seoTitle）と steakgusto-kids-menu（主力・不変だが測定対象）、対照 bigboy-kids-menu・bigboy-kodomo-ryokin。／実験20（2026-10-18）: yamanakaya-kodzure-koryaku（五右衛門型 第4陣・公開後は事実修正のみ）。／実験17（2026-10-18）: sanmarc-cafe-kodzure-koryaku（処置・店舗別キッズセット節の追加）と tullys-coffee-kodzure-koryaku（対照）。／実験16（2026-10-18）: toraji-kodzure-koryaku（五右衛門型 第3陣・公開後は事実修正のみ）。／実験13（2026-10-17）: gyukaku-kodzure-koryaku・cocoichi-kids-menu（処置）と kfc-kids-menu・kfc-kodzure-koryaku（対照）を追加。cocoichi-kids-menu は released から外した（実験6で解除後に再凍結）。／released から ichiran-kodzure-koryaku を外した（実験6で解除後、実験10で再凍結・2026-10-17）。frozenSlugs 末尾3本 = 実験10（一蘭301・2026-10-17）の処置 ichiran-kodzure-koryaku と対照ペア 焼肉きんぐ2本。／frozenSlugs = モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）＋実験8のチェーン系モーニング新規面7本＋バーミヤン1本（判定 2026-11-20 / 2026-12-20。新規面なので対照群は無く、判定は「立ち上がったか」だけ）。いずれも lib/auto-internal-links.ts の EXPERIMENT_FROZEN_SLUGS に載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。released / releasedUrls = 2026-10-01 に判定が終わった実験5（はなまる1本）・実験6（6本）・実験7（処置21面・対照21面。frozenUrls にあった2面はここへ）。2026-10-10 に移した。 ／ frozenSlugs の machida-shoten / tadokoro-shoten = 実験12（五右衛門型の先行2本・2026-10-17・公開後は事実修正のみ）"
 }
 ```
 
@@ -540,6 +556,9 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
 
 `lib/article-product-hints.ts` のチェーン横断チップ（「同じお店・チェーン比較で迷わない」）が、統合で消えた `gyukaku-kids-menu`（牛角攻略から）と `cocoichi-baby-chair`（CoCo壱 kids-menu から・301で自分自身へ戻る）へのリンクを描画し続けていたため、両チェーンを `CHAIN_DISPLAY_NAMES`・`CHAINS_WITH_KIDS_MENU` から外した。凍結中の処置ページ2本の描画リンクが各1本減る（実験13の処置の一部。対照 kfc は不変）。
 
+### 実験19の処置の実施（2026-10-18・華屋与兵衛のPR）— 汚染ではなく処置そのもの
+
+同じPRで `hanaya-yohei-kodzure-koryaku`（処置）・`washoku-sato-kodzure-koryaku`・`nakau-kodzure-koryaku`（対照）を凍結登録し、処置の記事に `seoTitle` だけを足した。H1・本文・updatedAt は不変。
 ### 実験18の処置の実施（2026-10-18・ステーキガストのPR）— 汚染ではなく処置そのもの
 
 同じPRで `steak-gusto-kodomo-ryokin`（処置）・`steakgusto-kids-menu`（測定対象）・`bigboy-kids-menu`・`bigboy-kodomo-ryokin`（対照）を凍結登録し、処置の記事に `seoTitle` だけを足した。H1・本文・updatedAt は不変。
