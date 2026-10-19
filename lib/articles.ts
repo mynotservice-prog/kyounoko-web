@@ -97,6 +97,13 @@ export type FileArticleMeta = {
    * ヒーロー画像が提供写真の場合に設定し、画像直下にキャプションとして表示される。
    */
   heroCredit?: string;
+  /**
+   * 有償タイアップ（PR記事）の提供元名（施設名・ブランド名）。編集方針 5-3〜5-5 の「タイアップ（有償PR）」区分。
+   * 設定すると記事冒頭に「PR」バッジ（提供元名＋対価を受けた広告である旨）が表示される。
+   */
+  sponsor?: string;
+  /** 提供元の公式サイトURL。本文中の同一ホストへのリンクに rel="sponsored" を付ける。 */
+  sponsorUrl?: string;
 };
 
 export type FileArticleFaq = {
@@ -231,6 +238,11 @@ function parseFrontmatter(raw: string, fallbackSlug: string): { meta: FileArticl
         : undefined,
     heroCredit:
       typeof d.heroCredit === 'string' && d.heroCredit.trim() ? d.heroCredit.trim() : undefined,
+    sponsor: typeof d.sponsor === 'string' && d.sponsor.trim() ? d.sponsor.trim() : undefined,
+    sponsorUrl:
+      typeof d.sponsorUrl === 'string' && /^https?:\/\//.test(d.sponsorUrl.trim())
+        ? d.sponsorUrl.trim()
+        : undefined,
   };
 
   return { meta, content };
@@ -432,6 +444,20 @@ function ensureRelAndTarget(aTagOpen: string): string {
     s = s.replace(/<a\s/i, '<a target="_blank" ');
   }
   return s;
+}
+
+/** タイアップ記事: 提供元サイト（同一ホスト）へのリンクに rel="sponsored" を付ける。 */
+function markSponsorLinks(html: string, sponsorUrl: string | undefined): string {
+  if (!sponsorUrl) return html;
+  let host: string;
+  try {
+    host = new URL(sponsorUrl).host;
+  } catch {
+    return html;
+  }
+  return html.replace(/<a\s[^>]*href=["']https?:\/\/([^"'/]+)[^>]*>/gi, (tag, h: string) =>
+    h === host ? ensureRelAndTarget(tag) : tag,
+  );
 }
 
 // 見出しテキストから URL 安全な id を生成する軽量 slugify。
@@ -1064,7 +1090,7 @@ async function buildArticleFromRaw(raw: string, fallbackSlug: string): Promise<F
   const rawHtml = await renderMarkdownToHtml(tldr.body);
   const htmlWithLinks = injectInternalLinks(rawHtml, meta.slug, { publishedAt: meta.publishedAt });
   const { html: bodyWithIds, toc } = injectHeadingIdsAndExtractToc(htmlWithLinks);
-  const bodyHtml = wrapDenseH3Sections(bodyWithIds);
+  const bodyHtml = markSponsorLinks(wrapDenseH3Sections(bodyWithIds), meta.sponsorUrl);
   const tldrHtml = tldr.sectionMd ? await renderMarkdownToHtml(tldr.sectionMd) : null;
   const readingTimeMin = estimateReadingTime(bodyMd);
   // FAQ回答はプレーンテキストではなく markdown として描画する（太字/リンク等）。

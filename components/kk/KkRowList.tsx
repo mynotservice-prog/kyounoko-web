@@ -11,6 +11,8 @@ export type KkRowItem = {
   img?: string;
   /** 画像フォールバック用シード */
   seed?: string;
+  /** rank 型で順位の代わりに出すラベル（有償PR枠の「PR」。順位には数えない） */
+  badge?: string;
 };
 
 /**
@@ -40,7 +42,12 @@ export function KkRowList({
     <div className={'kk-rows' + (divided ? ' divided' : '') + (className ? ' ' + className : '')} aria-label={label}>
       {items.map((it, i) => (
         <Link key={it.href + i} href={it.href} className="kk-row">
-          {variant === 'rank' && <span className="kk-row-num">{i + 1}</span>}
+          {variant === 'rank' &&
+            (it.badge ? (
+              <span className="kk-row-num pr-label" style={{ fontSize: 12, alignSelf: 'center' }}>{it.badge}</span>
+            ) : (
+              <span className="kk-row-num">{i + 1}</span>
+            ))}
           {variant === 'date' && (
             <span className="kk-row-thumb">
               <V2Img src={it.img} seed={it.seed ?? it.href} alt="" />
