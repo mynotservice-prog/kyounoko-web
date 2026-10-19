@@ -1034,7 +1034,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
       : undefined;
 
   // 記事から関連する東京23区内の駅を推定し、駅ページへのCTAを生成
-  const stationLink = buildStationLinkForArticle({
+  const stationLink = article.noStationLink ? undefined : buildStationLinkForArticle({
     title: article.title,
     metaDescription: article.metaDescription,
     body: article.body,
