@@ -29,6 +29,8 @@ export type FileArticleMeta = {
   title: string;
   /** <title> タグだけに使う検索向けタイトル（任意）。H1・OG・JSON-LD は title のまま。2026-10-17 実験11 */
   seoTitle?: string;
+  /** true のとき、本文の駅名の弱い一致による「◯◯駅の子連れOK店をもっと見る」リンクを出さない（地方チェーンの店名が23区の駅名を含む場合の誤検出よけ）。 */
+  noStationLink?: boolean;
   metaDescription: string;
   category: string;
   categoryName?: string;
@@ -166,6 +168,7 @@ function parseFrontmatter(raw: string, fallbackSlug: string): { meta: FileArticl
     slug: typeof d.slug === 'string' ? d.slug : fallbackSlug,
     title: typeof d.title === 'string' ? d.title : '',
     seoTitle: typeof d.seoTitle === 'string' && d.seoTitle.trim() ? d.seoTitle : undefined,
+    noStationLink: d.noStationLink === true ? true : undefined,
     metaDescription: typeof d.metaDescription === 'string' ? d.metaDescription : '',
     category: typeof d.category === 'string' ? d.category : '',
     categoryName: typeof d.categoryName === 'string' ? d.categoryName : undefined,
