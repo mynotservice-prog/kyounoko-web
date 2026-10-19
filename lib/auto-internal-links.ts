@@ -99,6 +99,8 @@ export const FROZEN_TARGET_SLUGS = new Set([
   'sanmarc-cafe-kodzure-koryaku', 'tullys-coffee-kodzure-koryaku',
   // 実験18（ステーキガスト料金記事の title・2026-10-18）: 処置1本＋測定対象1本＋対照2本
   'steak-gusto-kodomo-ryokin', 'steakgusto-kids-menu', 'bigboy-kids-menu', 'bigboy-kodomo-ryokin',
+  // 実験20（五右衛門型 第4陣・やまなか家・2026-10-18）
+  'yamanakaya-kodzure-koryaku',
   // 実験13（牛角・CoCo壱の301・2026-10-17）: 処置2本＋対照ペア2本
   'gyukaku-kodzure-koryaku', 'cocoichi-kids-menu', 'kfc-kids-menu', 'kfc-kodzure-koryaku',
 ]);
