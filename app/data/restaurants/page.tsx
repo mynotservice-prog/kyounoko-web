@@ -5,6 +5,7 @@ import { WARD_NAMES, type TokyoWard } from '@/lib/tokyo-stations';
 import {
   buildAllDataRows,
   getDataSummary,
+  indieSourceNote,
   CHAIN_CATEGORY_LABEL,
   INDIE_GENRE_LABEL,
   type DataRow,
@@ -16,19 +17,25 @@ import { AdSlot } from '@/components/ads/AdSlot';
 export const dynamic = 'force-static';
 export const revalidate = 86400;
 
-export const metadata: Metadata = {
-  title: '東京23区 子連れOKレストラン完全比較表｜全1,500店データセット【2026年版】',
-  description:
-    '東京23区484駅の子連れOKレストラン1,500店超の全データを単一比較表で公開。区・駅・ジャンル・ベビーカー入店可否・キッズメニュー・個室・価格帯で絞り込み・並べ替え・CSVダウンロードまで対応。AIO/GEO参照用データセット。',
-  alternates: { canonical: '/data/restaurants' },
-  openGraph: {
-    title: '東京23区 子連れOKレストラン完全比較表｜全1,500店データセット',
+// 件数は表の行そのものから数える（2026-10 まで題・説明文に「全1,500店」と固定で書いていて、
+// 表の行数と合っていなかった）。
+export function generateMetadata(): Metadata {
+  const s = getDataSummary();
+  const total = s.totalRecordCount.toLocaleString();
+  return {
+    title: `東京23区 子連れOKレストラン完全比較表｜全${total}件データセット【2026年版】`,
     description:
-      '23区484駅×1,500店超のオープンデータ。ベビーカー入店・キッズメニュー・個室の可否で全店舗フィルタ・CSV出力。',
-    type: 'article',
-    url: 'https://kyounoko.jp/data/restaurants',
-  },
-};
+      `東京23区${s.stationCount}駅の子連れOKレストラン${total}件の全データを単一比較表で公開。区・駅・ジャンル・ベビーカー入店可否・キッズメニュー・個室・価格帯で絞り込み・並べ替え・CSVダウンロードまで対応。AIO/GEO参照用データセット。`,
+    alternates: { canonical: '/data/restaurants' },
+    openGraph: {
+      title: `東京23区 子連れOKレストラン完全比較表｜全${total}件データセット`,
+      description:
+        `23区${s.stationCount}駅×${total}件のオープンデータ。ベビーカー入店・キッズメニュー・個室の可否で全件フィルタ・CSV出力。`,
+      type: 'article',
+      url: 'https://kyounoko.jp/data/restaurants',
+    },
+  };
+}
 
 export default function DataRestaurantsPage() {
   const rows = buildAllDataRows();
@@ -78,7 +85,7 @@ export default function DataRestaurantsPage() {
   ];
   const csvRows = rows.map((r) => [
     r.name,
-    r.type === 'chain' ? 'チェーン' : '個人店',
+    r.type === 'chain' ? 'チェーン' : '駅近の子連れOK店',
     r.category,
     r.station,
     r.ward,
@@ -106,12 +113,12 @@ export default function DataRestaurantsPage() {
     '@type': 'Dataset',
     name: '東京23区 子連れOKレストラン完全比較データセット',
     description:
-      '東京23区484駅の子連れ歓迎レストラン1,500店超のオープンデータ。チェーン店・個人店の両方を含み、ベビーカー入店可否・キッズメニュー・個室・価格帯などの設備情報を統一フォーマットで提供。',
+      `東京23区${summary.stationCount}駅の子連れ歓迎レストラン${rows.length.toLocaleString()}件のオープンデータ。チェーン店（駅×チェーンの組み合わせ${summary.chainRecordCount.toLocaleString()}件）と、ホットペッパーグルメで「お子様連れOK」と掲載された駅近の店（${summary.indieCount.toLocaleString()}店）を含み、ベビーカー入店可否・キッズメニュー・個室・価格帯などの設備情報を統一フォーマットで提供。`,
     url: 'https://kyounoko.jp/data/restaurants',
     license: 'https://kyounoko.jp/terms',
     keywords: [
       '東京', '23区', '子連れ', 'ランチ', 'ベビーカー', 'キッズメニュー',
-      '個室', 'レストラン', 'ファミレス', '個人店',
+      '個室', 'レストラン', 'ファミレス', '駅近の子連れOK店',
     ],
     creator: {
       '@type': 'Organization',
@@ -169,23 +176,23 @@ export default function DataRestaurantsPage() {
             <h1>
               東京23区 子連れOKレストラン完全比較表
               <small style={{ display: 'block', fontSize: '0.5em', fontWeight: 400, color: 'var(--ink-sub)', marginTop: 8 }}>
-                全{rows.length.toLocaleString()}店舗｜2026年版データセット
+                全{rows.length.toLocaleString()}件｜2026年版データセット
               </small>
             </h1>
             <p className="lead">
-              東京23区484駅の<strong>子連れOKレストラン{rows.length.toLocaleString()}店超</strong>を
-              単一テーブルで公開。チェーン店{summary.chainRecordCount.toLocaleString()}店＋個人店{summary.indieCount.toLocaleString()}店を
+              東京23区{summary.stationCount}駅の<strong>子連れOKレストラン{rows.length.toLocaleString()}件</strong>を
+              単一テーブルで公開。チェーン店（駅×チェーンの組み合わせ）{summary.chainRecordCount.toLocaleString()}件＋駅近の子連れOK店{summary.indieCount.toLocaleString()}店を
               ベビーカー入店可否・キッズメニュー・個室・価格帯で絞り込み・並べ替え可能。
               CSVダウンロードもワンクリック。
             </p>
 
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 18, fontSize: 13 }}>
-              <span className="meta-chip clay">{rows.length.toLocaleString()}店舗</span>
+              <span className="meta-chip clay">{rows.length.toLocaleString()}件</span>
               <span className="meta-chip clay">{summary.stationCount}駅カバー</span>
               <span className="meta-chip clay">{summary.wardCount}区</span>
-              <span className="meta-chip clay">ベビーカー◎ {strollerGoodCount}店</span>
-              <span className="meta-chip clay">キッズメニュー {kidsMenuCount}店</span>
-              <span className="meta-chip clay">個室 {privateRoomCount}店</span>
+              <span className="meta-chip clay">ベビーカー◎ {strollerGoodCount}件</span>
+              <span className="meta-chip clay">キッズメニュー {kidsMenuCount}件</span>
+              <span className="meta-chip clay">個室 {privateRoomCount}件</span>
             </div>
           </header>
 
@@ -200,8 +207,8 @@ export default function DataRestaurantsPage() {
           }}>
             <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 12 }}>データセット概要</h2>
             <ul style={{ paddingLeft: 20, margin: 0 }}>
-              <li><strong>収録範囲</strong>: 東京都23区内の子連れ向けレストラン全{rows.length.toLocaleString()}店舗</li>
-              <li><strong>店舗種別</strong>: チェーン店{summary.chainRecordCount.toLocaleString()}店（{summary.chainBrandCount}ブランドのマッピング済）、個人店・話題店{summary.indieCount.toLocaleString()}店（雑誌・SNS掲載）</li>
+              <li><strong>収録範囲</strong>: 東京都23区内の子連れ向けレストラン全{rows.length.toLocaleString()}件</li>
+              <li><strong>店舗種別</strong>: チェーン店{summary.chainRecordCount.toLocaleString()}件（駅×チェーンの組み合わせ。{summary.chainBrandInTableCount}ブランド）、駅近の子連れOK店{summary.indieCount.toLocaleString()}店（{summary.indieStationCount}駅。{indieSourceNote(summary)}）</li>
               <li><strong>カバー駅数</strong>: 23区内 {summary.stationCount}駅</li>
               <li><strong>収録項目</strong>: 店名・最寄り駅・区・ジャンル・ベビーカー入店可否・キッズメニュー・個室の有無・ランチ価格帯・路線情報・店舗紹介</li>
               <li><strong>更新方針</strong>: 月次更新（営業状況・新店追加・閉店反映）</li>
@@ -238,9 +245,17 @@ export default function DataRestaurantsPage() {
               添えてください。商用利用・大規模再配布についてはお問い合わせください。
             </p>
             <p style={{ fontSize: 12, color: 'var(--ink-mute)', marginTop: 12 }}>
-              ※ 設備情報は店舗公式・取材記事ベース。実際のご利用前には店舗への確認をおすすめします。
+              ※ 駅近の子連れOK店は、ホットペッパーグルメの店舗掲載情報（{summary.indieSource.hotpepperGeneratedAt}取得）。ベビーカーでの入店可否やキッズメニューは掲載がないため、表では「—」（未確認）です。
+              チェーン店の設備はチェーン単位の情報で、店舗によって異なります。実際のご利用前には店舗への確認をおすすめします。
               閉店・営業時間変更等の情報は<Link href="/contact" style={{ color: 'var(--clay-deep)' }}>お問い合わせ</Link>からご連絡ください。
             </p>
+            {summary.indieSource.hotpepperCount > 0 && (
+              <p style={{ fontSize: 12, color: 'var(--ink-mute)', marginTop: 8 }}>
+                <a href="http://webservice.recruit.co.jp/" target="_blank" rel="nofollow noopener" style={{ color: 'inherit' }}>
+                  Powered by ホットペッパーグルメ Webサービス
+                </a>
+              </p>
+            )}
           </section>
 
           {/* 関連リンク */}
@@ -248,8 +263,8 @@ export default function DataRestaurantsPage() {
             <h2 style={{ fontFamily: 'var(--font-mincho)', fontSize: 18, marginBottom: 12 }}>関連データ・ページ</h2>
             <ul style={{ paddingLeft: 20, lineHeight: 2, fontSize: 14 }}>
               <li><Link href="/kura-sushi">くら寿司 子連れガイド（全国47都道府県）</Link></li>
-              <li><Link href="/station">駅別子連れランチガイド（484駅）</Link></li>
-              <li><Link href="/station/line">路線別子連れランチガイド（40路線）</Link></li>
+              <li><Link href="/station">駅別子連れランチガイド（{summary.stationCount}駅）</Link></li>
+              <li><Link href="/station/line">路線別子連れランチガイド（{summary.lineCount}路線）</Link></li>
               <li><Link href="/data">データセット一覧（/data）</Link></li>
             </ul>
           </section>
