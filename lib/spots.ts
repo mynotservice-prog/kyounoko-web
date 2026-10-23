@@ -883,6 +883,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     {
       // 工場見学。未就学児を含むコースがあり、授乳室・おむつ替えも完備の数少ない例。
       name: 'キユーピー マヨテラス', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '調布市',
+      agesLabel: '小学生以上（公式。小学生以下は保護者同伴で見学）', // 2026-10-23 公式で確認（data/tokyo-facility-official-ages-2026-10.json）
       note: 'マヨネーズができるまでを体験しながら学べるキユーピーの見学施設。未就学児を含むコースが用意されている。', budget: 'free',
       reservation: 'required',
       crowdLevel: { weekday: 'mid', holiday: 'low' },
@@ -974,6 +975,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'キッザニア東京', category: 'indoor', place: 'indoor', ages: ['4-6'], city: '江東区', note: '100種以上の職業体験、人気で予約推奨', budget: 'high',
+      agesLabel: '3〜15歳（公式。2歳以下は入場無料・仕事体験は対象外）', // 2026-10-23 公式で確認（data/tokyo-facility-official-ages-2026-10.json）
       nearestStation: 'toyosu',
       walkMinutes: 8,
       pricing: { adult: '2,000〜3,500円', elementary: '4,500〜7,000円', preschool: '4,500〜7,000円', infant: '無料（2歳以下）' },
@@ -1263,6 +1265,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     // ===== 屋内遊び場（東京）=====
     {
       name: 'ASOBono!（東京ドームシティ アソボーノ）', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '文京区', ward: '文京区', note: '都内最大級の屋内遊び場、雨の日の鉄板', budget: 'mid',
+      agesLabel: '6ヶ月〜小学生（公式）', // 2026-10-23 公式で確認（data/tokyo-facility-official-ages-2026-10.json）
       nearestStation: 'korakuen',
       walkMinutes: 3,
       pricing: { adult: '1,000円', preschool: '1,000円（6ヶ月〜小学生）', infant: '無料（6ヶ月未満）' },
@@ -1292,6 +1295,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'レゴランド・ディスカバリー・センター東京', category: 'indoor', place: 'indoor', ages: ['2-3', '4-6'], city: '港区', ward: '港区', note: 'お台場、3-10歳向けの屋内レゴ施設', budget: 'mid',
+      agesLabel: '3〜10歳（公式）', // 2026-10-23 公式で確認（data/tokyo-facility-official-ages-2026-10.json）
       pricing: { adult: '2,800円', elementary: '2,800円', preschool: '2,800円（3歳以上）', infant: '無料（2歳以下）' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'high' },
@@ -1329,6 +1333,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: 'キドキドよみうりランド店', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '稲城市', note: 'ボーネルンド運営、よみうりランド内', budget: 'mid',
+      agesLabel: '6ヶ月〜12歳（公式）', // 2026-10-23 公式で確認（data/tokyo-facility-official-ages-2026-10.json）
       pricing: { adult: '600円', preschool: '1,500円（30分＋延長）', infant: '600円（6ヶ月〜）' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'high' },
@@ -1574,6 +1579,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '杉並アニメーションミュージアム', category: 'museum', place: 'indoor', ages: ['4-6'], city: '杉並区', ward: '杉並区', note: '日本のアニメの歴史を学べる体験型ミュージアム、入館無料', budget: 'free',
+      agesLabel: '小さな子どもから大人まで（公式）', // 2026-10-23 公式で確認（data/tokyo-facility-official-ages-2026-10.json）
       summerCool: true,
     },
     {
@@ -1582,6 +1588,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '京王あそびの森 HUGHUG', category: 'indoor', place: 'indoor', ages: ['0-1', '2-3', '4-6'], city: '日野市', note: '高幡不動駅前の屋内遊び場、大型ネット遊具が名物', budget: 'mid',
+      agesLabel: '6ヶ月〜小学生向けの遊具が中心（公式）', // 2026-10-23 公式で確認（data/tokyo-facility-official-ages-2026-10.json）
       summerCool: true,
     },
     {
@@ -1879,6 +1886,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '池袋防災館', category: 'museum', place: 'indoor', ages: ['4-6'], city: '豊島区', ward: '豊島区', note: '池袋駅徒歩5分、無料の防災体験', budget: 'free',
+      agesLabel: '体験ごとに年齢制限あり（地震体験は3歳以上・公式）', // 2026-10-23 公式で確認（data/tokyo-facility-official-ages-2026-10.json）
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
@@ -1887,6 +1895,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
     },
     {
       name: '本所防災館（墨田区）', category: 'museum', place: 'indoor', ages: ['4-6'], city: '墨田区', ward: '墨田区', note: '東京消防庁、無料防災体験ツアー', budget: 'free',
+      agesLabel: '体験ごとに年齢制限あり（地震体験は満3歳以上・公式）', // 2026-10-23 公式で確認（data/tokyo-facility-official-ages-2026-10.json）
       pricing: { adult: '無料', elementary: '無料', preschool: '無料', infant: '無料' },
       reservation: 'recommended',
       crowdLevel: { weekday: 'low', holiday: 'mid' },
