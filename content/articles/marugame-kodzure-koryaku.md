@@ -6,7 +6,9 @@ category: today-taberu
 categoryName: 今日何食べる？
 publishedAt: '2026-05-14'
 updatedAt: '2026-10-01'
-hero: /img/scenes/selfudon-01.webp
+hero: /photos/article-marugame-kodzure-koryaku-hero.webp
+heroAlt: 丸亀製麺の注文口の上に並ぶメニュー。釜揚げうどん並390円、かけうどん並440円・小340円、お子さま まんぷくセット290円などの価格が書かれている
+heroCredit: 写真：編集部撮影（丸亀製麺の店頭メニュー）
 area: tokyo
 quickInfo:
   ageRanges:
@@ -72,6 +74,9 @@ legacyHero: /hero-ai/cat-food-sweet-03.webp
 ## お子さま まんぷくセットと、うどんの取り分けのコツ
 
 丸亀製麺のキッズメニューは**「お子さま まんぷくセット」税込290円**です（[公式](https://jp.marugame.com/campaign/manpukuset/)・2026年10月1日確認）。小サイズのうどん（かけ〈温〉／ぶっかけ〈温・冷〉）に、店頭の天ぷらから好きな1品と果汁100%ジュース（りんご／ぶどう）が付き、対象は小学6年生まで。公式に「一部店舗では販売していない場合がございます」「お持ち帰りはできません」とあるので、行く店舗の取り扱いは公式の商品ページの「販売店舗をみる」で確かめてください。下限の年齢は公式に記載がありません。
+
+
+![お子さま まんぷくセットの小うどん（かけ）。わかめ・かまぼこ・玉子焼きがのっている。編集部が訪れた店舗の店頭メニューでもセットは290円・小学6年生まで限定だった（編集部撮影）](/photos/article-marukame-manpukuset-udon-202610.webp)
 
 セットがまだ早い年齢の子は、**かけうどん（小）税込340円**（[公式](https://jp.marugame.com/menu/udon/kake/)・2026年10月1日確認）の取り分けが基本で、短く切って出汁を薄めれば1歳半ごろから食べやすくなります。メニューの詳しい使い方は[丸亀製麺のキッズメニュー・取り分けガイド](/article/marukame-kids-menu)を参照してください。
 
