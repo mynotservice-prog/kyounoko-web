@@ -1,0 +1,3464 @@
+{
+ "title": "東京の子ども向け施設 公式の対象年齢・年齢別料金・設備（2026-10-23確認）",
+ "note": "各施設の運営元公式サイトの記載のみ。null は公式の見たページに記載なし（ない、の意味ではない）。年齢記事5本（実験24）の一次情報。スポットDB（agesLabel）への取り込みは別PR。",
+ "checkedAt": "2026-10-23",
+ "facilities": [
+  {
+   "name": "ASOBono!（東京ドームシティ）",
+   "status": "営業中",
+   "statusNote": "公式の料金カレンダー（2026年10月6日更新）に10月の営業時間が載っている。例：10/23は10:00～18:00、料金区分A。お知らせ一覧は「現在、お知らせはありません。」",
+   "ages": {
+    "text": "「こども：6ヶ月～小学生／おとな：中学生以上」「保護者の方が必ずお子様（小学生以下）と一緒にご入館ください」「お子様のみ、または大人のみのご入館はできません」「5ヶ月以下のお子様は入場無料です」",
+    "url": "https://www.tokyo-dome.co.jp/asobono/schedule-price"
+   },
+   "fees": {
+    "age0": "5ヶ月以下は無料。6ヶ月以上はこども料金：60分950円（区分A）",
+    "age1": "こども60分950円（区分A）＋延長30分ごと450円",
+    "age2": "こども60分950円（区分A）＋延長30分ごと450円",
+    "age3": "こども60分950円（区分A）＋延長30分ごと450円",
+    "age4": "こども60分950円（区分A）＋延長30分ごと450円",
+    "adult": "おとな入館料950円（区分A）",
+    "condition": "当日窓口・税込。料金は日ごとの区分で変わる。こども60分はA950／B1,100／C1,200／D1,300円、延長30分ごとはA450／B550／C600／D650円、おとなはA950〜D1,300円。こども1日フリーパスはA日のみ2,100円。区分Aは2026年10月の平日（例：10/23）。5ヶ月以下無料の根拠は guide ページ",
+    "url": "https://www.tokyo-dome.co.jp/asobono/schedule-price"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "ベビー専用エリア「ハイハイガーデン」：「赤ちゃん（0～24ヶ月）のためだけの専用エリア」",
+     "url": "https://www.tokyo-dome.co.jp/asobono/area/area05"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり：「ベビールーム　オムツ交換台、授乳室、給湯設備を備えています。」ハイハイガーデンのページに「ベビールームも隣接」",
+    "url": "https://www.tokyo-dome.co.jp/asobono/guide"
+   },
+   "diaper": {
+    "text": "公式に記載あり：ベビールームに「オムツ交換台」",
+    "url": "https://www.tokyo-dome.co.jp/asobono/guide"
+   },
+   "stroller": {
+    "text": "「ベビーカー置き場　多くのお客様にご利用いただけるよう、ベビーカーを折りたたんで置いてください。」館内でベビーカーを使えるか・貸出があるかは、このページに記載なし",
+    "url": "https://www.tokyo-dome.co.jp/asobono/guide"
+   },
+   "reservation": {
+    "text": "FAQ：「入館予約はできません。混雑状況により入館をお待ちいただく場合がございます。」混雑時は整理券を配る（guide）。別にオンライン限定の日付指定チケット（モーニング／イブニング等）がある（schedule-price）",
+    "url": "https://www.tokyo-dome.co.jp/faq/asobono/1289"
+   },
+   "access": {
+    "text": "最寄り駅：都営地下鉄水道橋駅A2出口／JR水道橋駅（東口）／東京メトロ後楽園駅。徒歩分の記載なし（アクセスページ、FAQ /faq/asobono/5475 とも）",
+    "url": "https://www.tokyo-dome.co.jp/asobono/access"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "住所：文京区後楽1-3-61。飲食不可（離乳食のみ可）。大人1名につき子ども5名まで。",
+   "group": "indoor"
+  },
+  {
+   "name": "キッザニア東京",
+   "status": "営業中",
+   "statusNote": "公式予約ページに2026年10月〜冬休みのプランと料金が載っている。10月以降のイベントも掲載あり",
+   "ages": {
+    "text": "FAQ：「キッザニアの対象年齢は3～15歳です。」乳幼児ページ：「仕事・サービス体験は3～15歳が対象です。」",
+    "url": "https://www.kidzania.jp/guide/faq"
+   },
+   "fees": {
+    "age0": "無料（2歳以下は予約不要・入場無料。ただし幼児と大人（16歳以上）だけでの入場は不可）",
+    "age1": "無料（同上）",
+    "age2": "無料（同上）",
+    "age3": "小人(3-12歳) 5,000円（平日第1部・通常営業日の予約）",
+    "age4": "小人(3-12歳) 5,000円（平日第1部）",
+    "adult": "大人(16歳以上) 2,600円（平日第1部）",
+    "condition": "「通常営業日の予約」プラン。小人は平日第1部5,000／休日第1部5,500／H.S.第1部7,900／平日第2部3,800／休日第2部4,500／H.S.第2部5,200円。大人は2,600／2,700／3,400／2,300／2,400／2,600円。第1部9:00〜15:00、第2部16:00〜21:00の入替制。「12月～2027年3月は3・4さい おうえんキャンペーン実施中！3・4歳のお子さまが含まれるグループは特別価格で予約可能」。2歳以下の扱いはFAQ（https://www.kidzania.jp/guide/faq）による",
+    "url": "https://www.kidzania.jp/membersite/reserve/fee"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "身長制限あり（東京）：110cm以上＝運転免許試験場・レンタカー・ホースセンター（乗馬体験）／120cm以上＝ホースセンター（アシスタントトレーナー。最後の騎乗体験のみ）・マンション建設現場（マンション管理技術者）",
+     "url": "https://www.kidzania.jp/guide/faq"
+    },
+    {
+     "text": "乳幼児エリア「ミルクハウス」：「5歳以下のお子さまとその保護者が、いっしょにお過ごしいただけるエリア」",
+     "url": "https://www.kidzania.jp/guide/infant"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり：「授乳室　ソファを設置した半個室があり…手洗い場も併設」。ミルクハウスに離乳食用の電子レンジと調乳用温水器あり。授乳室の東京での具体的な場所は、このページに記載なし",
+    "url": "https://www.kidzania.jp/guide/infant"
+   },
+   "diaper": {
+    "text": "公式に記載あり：「一部のトイレにおむつ交換台やおむつ交換ができるベッドがございます」。男性も使える場所（東京）は「ベーカリー横バリアフリートイレ」",
+    "url": "https://www.kidzania.jp/guide/infant"
+   },
+   "stroller": {
+    "text": "「道幅の狭い場所があるため、ベビーカー置き場のご利用をおすすめしています」「キッザニア東京のみ、利用可能時間が設けられている場合があります」。貸出は記載なし",
+    "url": "https://www.kidzania.jp/guide/infant"
+   },
+   "reservation": {
+    "text": "予約制（Web予約。第1部は当日12時まで、第2部は当日18時まで予約可）。当日券は「Webまたは施設で購入できます。いずれも数に限りがあるため、完売する場合があります」。小人のみ・大人のみの予約は不可",
+    "url": "https://www.kidzania.jp/guide/faq"
+   },
+   "access": {
+    "text": "東京メトロ有楽町線「豊洲」駅の最寄出口「2番」より徒歩8分／ゆりかもめ「豊洲」駅より徒歩8分",
+    "url": "https://www.kidzania.jp/tokyo/access"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "0〜2歳は無料で入れるが、体験（アクティビティ）の対象外。年齢別記事では「3歳未満は見守り・ミルクハウス利用のみ」という扱いになる。",
+   "group": "indoor"
+  },
+  {
+   "name": "レゴランド・ディスカバリー・センター東京",
+   "status": "営業中",
+   "statusNote": "公式サイトの告知：10月1日(木)は「デックス東京ビーチの停電による臨時休業」。4Dシネマは2026年11月30日～12月4日に定期点検で休止。休館日は「デックス東京ビーチの休館日を除き、年中無休」（FAQ）",
+   "ages": {
+    "text": "FAQ：「対象は3歳～10歳のお子様です。」「15歳以下のお子様には16歳以上の付き添いの方が必要です。」チケットページ：「大人(16歳以上)のみ、お子様(15歳以下)のみのご入場はご遠慮いただいております。」",
+    "url": "https://www.legolanddiscoverycenter.com/tokyo/plan/information/faqs/facility/"
+   },
+   "fees": {
+    "age0": null,
+    "age1": null,
+    "age2": null,
+    "age3": "日時指定チケット ￥2,350～￥3,300（変動価格。「3歳以上」の表示）",
+    "age4": "日時指定チケット ￥2,350～￥3,300（同上）",
+    "adult": "大人も同じ「3歳以上」のチケット（￥2,350～￥3,300）。ページに「大人のチケットにはデジタルフォト付き」と記載",
+    "condition": "オンライン事前購入（料金は変動制）。平日14時以降限定チケットは￥2,240～￥2,800。2歳以下の料金・無料かどうかは、tickets-passes ページ・FAQ・トップページのいずれにも記載なし",
+    "url": "https://www.legolanddiscoverycenter.com/tokyo/tickets-passes/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "キングダムクエスト：一人で座れる方のみ。130cm未満は中学生以上の付き添いが必要",
+     "url": "https://www.legolanddiscoverycenter.com/tokyo/plan/information/faqs/facility/"
+    },
+    {
+     "text": "マーリン・アプレンティス：90cm未満は利用不可。90cm以上120cm未満は18歳以上の付き添いが必要",
+     "url": "https://www.legolanddiscoverycenter.com/tokyo/plan/information/faqs/facility/"
+    },
+    {
+     "text": "レゴ®スタジオ4Dシネマ：6歳以下は中学生以上の付き添いが必要／レゴ®シティ・プレイゾーン：148cm未満のお子様のみ",
+     "url": "https://www.legolanddiscoverycenter.com/tokyo/plan/information/faqs/facility/"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり：「施設内のトイレ横（7F）にベビールームがございます。授乳場所中心にご案内しております。」※アクセスページの所在地は「アイランドモール 3階」で、階の表記が食い違う",
+    "url": "https://www.legolanddiscoverycenter.com/tokyo/plan/information/faqs/facility/"
+   },
+   "diaper": {
+    "text": "公式に記載あり：「おむつ替え等は各トイレにて行うことが可能となっております。」",
+    "url": "https://www.legolanddiscoverycenter.com/tokyo/plan/information/faqs/facility/"
+   },
+   "stroller": {
+    "text": "「持ち込みいただけます。アトラクション内にはベビーカーのご用意がございませんが、デックス東京ビーチ シーサイドモール3Ｆのインフォメーションカウンターにて無料で貸出しをしています。」",
+    "url": "https://www.legolanddiscoverycenter.com/tokyo/plan/information/faqs/facility/"
+   },
+   "reservation": {
+    "text": "「窓口での当日券の販売はございません。オンラインにて前売りチケットを事前にご購入ください。」FAQ（ticket）：「公式サイトにて当日券を販売しております」。週末・祝日の混雑時は利用時間を最大3時間程度で案内",
+    "url": "https://www.legolanddiscoverycenter.com/tokyo/tickets-passes/"
+   },
+   "access": {
+    "text": "ゆりかもめ：「お台場海浜公園」駅下車 徒歩2分／りんかい線：「東京テレポート」駅下車 徒歩5分（デックス東京ビーチ アイランドモール3階）",
+    "url": "https://www.legolanddiscoverycenter.com/tokyo/plan/before-you-visit/how-to-get-here/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "FAQ（ticket）は https://www.legolanddiscoverycenter.com/tokyo/plan/information/faqs/ticket/ 。2歳以下の扱いが公式で確認できないので、記事に「2歳以下無料」とは書けない。",
+   "group": "indoor"
+  },
+  {
+   "name": "ファンタジーキッズリゾート お台場",
+   "status": "不明",
+   "statusNote": "運営元の公式店舗一覧（fantasyresort.jp/shop/）にお台場店は載っていない。東京都の店舗は武蔵村山店・多摩店のみ。https://fantasyresort.jp/odaiba/ は404。閉店の告知は公式で見つけられず、閉店とも営業中とも確認できない",
+   "ages": {
+    "text": null,
+    "url": "https://fantasyresort.jp/shop/"
+   },
+   "fees": {
+    "age0": null,
+    "age1": null,
+    "age2": null,
+    "age3": null,
+    "age4": null,
+    "adult": null,
+    "condition": "お台場店のページが公式サイトに存在しないため取得できず",
+    "url": "https://fantasyresort.jp/shop/"
+   },
+   "ageRestrictedAreas": [],
+   "nursingRoom": {
+    "text": "お台場店の公式ページなし（https://fantasyresort.jp/shop/ に掲載なし）",
+    "url": "https://fantasyresort.jp/shop/"
+   },
+   "diaper": {
+    "text": "同上",
+    "url": "https://fantasyresort.jp/shop/"
+   },
+   "stroller": {
+    "text": "同上",
+    "url": "https://fantasyresort.jp/shop/"
+   },
+   "reservation": {
+    "text": "同上（チェーン共通：完全会員制・初回は年会費400円）",
+    "url": "https://fantasyresort.jp/shop/"
+   },
+   "access": {
+    "text": null,
+    "url": "https://fantasyresort.jp/shop/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "記事に載せるなら、営業状況を確認できるまで外すのが安全。",
+   "group": "indoor"
+  },
+  {
+   "name": "キドキド よみうりランド店（ボーネルンド）",
+   "status": "営業中",
+   "statusNote": "店舗ページに「通常営業（10：00～18：00 ※17：30受付終了）10月23日 13:36現在」。定休日は「不定休 年2回 2026年9月9日㊌/3月」",
+   "ages": {
+    "text": "「赤ちゃん 6ヶ月～11ヶ月」「子ども 1歳〜12歳」。料金ページ：「5ヶ月以下のお子様は、入場料金はかかりません（大人は利用料金が発生します）」「よみうりランド店…は、5ヶ月以下のお子様と保護者の方のみでのご入場はできません」。FAQ：「お子様だけでのご入場はできません」",
+    "url": "https://kidokid.bornelund.co.jp/yomiuriland/"
+   },
+   "fees": {
+    "age0": "6ヶ月～11ヶ月：最初の60分 平日¥400／休日¥600、延長10分ごと¥200。5ヶ月以下は無料（ただし当店は5ヶ月以下の子と保護者だけでは入場不可）",
+    "age1": "子ども：最初の30分 平日¥800／休日¥1,000、延長10分ごと¥200",
+    "age2": "同上（平日¥800／休日¥1,000＋延長10分¥200）",
+    "age3": "同上",
+    "age4": "同上",
+    "adult": "おとな ¥700（延長料金なし、保護者の交代可）",
+    "condition": "基本料金（時間制）。ほかに1DAYパスと、15:00～18:00のイブニングパスあり（価格は料金ページ）。5ヶ月以下の扱いは料金ページ https://kidokid.bornelund.co.jp/price/ による",
+    "url": "https://kidokid.bornelund.co.jp/yomiuriland/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "ベビーガーデン：「6ヶ月〜18ヶ月までの赤ちゃん専用ゾーン」",
+     "url": "https://kidokid.bornelund.co.jp/yomiuriland/"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり：「キドキド場内には、浄水のお湯の出る授乳室…を完備」「授乳室：離乳食用の電子レンジ完備」",
+    "url": "https://kidokid.bornelund.co.jp/yomiuriland/"
+   },
+   "diaper": {
+    "text": "公式に記載あり：「おむつ替えスペースを完備」",
+    "url": "https://kidokid.bornelund.co.jp/yomiuriland/"
+   },
+   "stroller": {
+    "text": "「ベビーカーを置く専用のスペースもあります」。館内で使えるか・貸出は記載なし",
+    "url": "https://kidokid.bornelund.co.jp/yomiuriland/"
+   },
+   "reservation": {
+    "text": "「当店はあそび場受付サイト未導入店舗のため、ご利用当日に受付にお越しいただいてのご案内となります。」",
+    "url": "https://kidokid.bornelund.co.jp/yomiuriland/"
+   },
+   "access": {
+    "text": "京王よみうりランド駅下車→ゴンドラ（10分前後）もしくはバス（10分前後）／読売ランド駅下車→バス（10分前後）／新百合ヶ丘駅下車→バス（20分前後）。徒歩分の記載なし。ゴンドラは遊園地の営業時間のみ運行",
+    "url": "https://kidokid.bornelund.co.jp/yomiuriland/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "所在地は東京都稲城市矢野口4015-1。専用駐車場（B・D）は利用で7時間無料。遊園地とは別施設で、入園しなくても利用できる。",
+   "group": "indoor"
+  },
+  {
+   "name": "スモールワールズTOKYO",
+   "status": "営業中",
+   "statusNote": "公式トップに10月23日更新の告知あり（フィギュア生産状況）。スペースシャトル・サターンロケットの打ち上げ演出は「メンテナンスのため、打ち上げを中止」。日ごとの営業カレンダーは未確認",
+   "ages": {
+    "text": "FAQ：「4歳以上からチケットが必要となります。」料金表：「3歳以下 無料」",
+    "url": "https://smallworlds.jp/"
+   },
+   "fees": {
+    "age0": "無料（3歳以下）",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "小人（4〜11歳）1,700円",
+    "adult": "大人（18歳以上）3,200円／中人（12〜17歳）2,100円",
+    "condition": "入場パスポート（税込）",
+    "url": "https://smallworlds.jp/"
+   },
+   "ageRestrictedAreas": [],
+   "nursingRoom": {
+    "text": "公式に記載あり：「授乳室 2F, 3F　2F女性専用（女子トイレ内）、3F男女共用」。授乳室内のウォーターサーバーは93℃のお湯が出る",
+    "url": "https://smallworlds.jp/"
+   },
+   "diaper": {
+    "text": "公式に記載あり：「多目的トイレ 2F, 3F　オムツ替えの台を設置」。FAQ：「おむつ交換台の設置はありますか？→授乳室内にございます」",
+    "url": "https://smallworlds.jp/"
+   },
+   "stroller": {
+    "text": "FAQ：「車いす/ベビーカーでの入場は可能ですか？→ご入場いただけます。」「ギャラリー(3Fおよび2F)への移動はエレベーターをご利用ください」。ベビーカー貸出は記載なし（車いす貸出は1台あり）",
+    "url": "https://smallworlds.jp/"
+   },
+   "reservation": {
+    "text": "「前売りパスポートをご購入の方は、ローソンチケットまたは電子チケットよりご購入ください。ミュージアム窓口にて当日券もご購入できます。」",
+    "url": "https://smallworlds.jp/"
+   },
+   "access": {
+    "text": "ゆりかもめ「有明テニスの森駅」徒歩3分／りんかい線「国際展示場駅」徒歩9分",
+    "url": "https://smallworlds.jp/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "飲食物の持込は不可（アレルギーの方以外）。",
+   "group": "indoor"
+  },
+  {
+   "name": "0123吉祥寺（武蔵野市）",
+   "status": "営業中",
+   "statusNote": "運営元（公益財団法人武蔵野市子ども協会）の公式ページで2026/5/26付の案内が出ている。令和8年7月から入退館は二次元コード方式",
+   "ages": {
+    "text": "「原則として武蔵野市在住の0歳から3歳(4歳になる年度の3月まで)の子どもとその家族」",
+    "url": "https://www.city.musashino.lg.jp/shisetsu_annai/kosodate/ichiran/1000395.html"
+   },
+   "fees": {
+    "age0": "無料",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "対象は「4歳になる年度の3月まで」（料金は無料）",
+    "adult": "無料",
+    "condition": "「利用料 無料」。初回は二次元コードを発行。発行時に子どもの名前・住所が確認できるもの（母子健康手帳・マイナンバーカード等）を提示",
+    "url": "http://mu-kodomo.kids.coocan.jp/0123/kichijyoji/annai.html"
+   },
+   "ageRestrictedAreas": [],
+   "nursingRoom": {
+    "text": "公式に記載あり：「授乳室（2階／兼相談室）をご利用ください。ミルク用のお湯が必要な方、授乳ケープの貸出しはスタッフまで。」",
+    "url": "http://mu-kodomo.kids.coocan.jp/0123/kichijyoji/annai.html"
+   },
+   "diaper": {
+    "text": "公式に記載あり：「おむつの交換は、1階・2階トイレおよび相談室（授乳室）をご利用ください。」使用済みおむつは持ち帰り",
+    "url": "http://mu-kodomo.kids.coocan.jp/0123/kichijyoji/annai.html"
+   },
+   "stroller": {
+    "text": "「駐車場はありません。（駐輪場・ベビーカー置き場はあります。）」館内で使えるか・貸出は記載なし",
+    "url": "http://mu-kodomo.kids.coocan.jp/0123/kichijyoji/annai.html"
+   },
+   "reservation": {
+    "text": "予約の記載なし。「親子でいつでも自由に来館し」（市の施設案内）",
+    "url": "https://www.city.musashino.lg.jp/shisetsu_annai/kosodate/ichiran/1000395.html"
+   },
+   "access": {
+    "text": "吉祥寺駅北口から徒歩12分／関東バス「東町1丁目」バス停下車（徒歩3分）",
+    "url": "http://mu-kodomo.kids.coocan.jp/0123/kichijyoji/access.html"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "開館は火曜日～土曜日の午前9時～午後4時（6/1～8/31は午後5時まで）。日・月曜日、こどもの日を除く祝日、年末年始は休み。市外在住者が使えるかは「原則として武蔵野市在住」とだけ書かれている。",
+   "group": "indoor"
+  },
+  {
+   "name": "0123はらっぱ（武蔵野市）",
+   "status": "営業中",
+   "statusNote": "運営元（武蔵野市子ども協会）の公式ページで2026年5月付の案内が出ている",
+   "ages": {
+    "text": "「原則として武蔵野市在住の0歳から3歳(4歳になる年度の3月まで)の子どもとその家族」",
+    "url": "https://www.city.musashino.lg.jp/shisetsu_annai/kosodate/ichiran/1000397.html"
+   },
+   "fees": {
+    "age0": "無料",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "対象は「4歳になる年度の3月まで」（料金は無料）",
+    "adult": "無料",
+    "condition": "「利用料：無料」。初回は二次元コードを発行（本人確認書類が必要）",
+    "url": "http://mu-kodomo.kids.coocan.jp/0123/harappa/annai.html"
+   },
+   "ageRestrictedAreas": [],
+   "nursingRoom": {
+    "text": "公式に記載あり：「保育室（1階）・多目的室３（2階）をご利用ください。ミルク用のお湯が必要な方は事務所スタッフまで。授乳ケープも事務所でお貸ししています。」",
+    "url": "http://mu-kodomo.kids.coocan.jp/0123/harappa/annai.html"
+   },
+   "diaper": {
+    "text": "公式に記載あり：「ベビーシートをご利用ください。トイレにあります。」",
+    "url": "http://mu-kodomo.kids.coocan.jp/0123/harappa/annai.html"
+   },
+   "stroller": {
+    "text": "「駐車場はありません（駐輪場・ベビーカー置き場はあります）。」館内で使えるか・貸出は記載なし",
+    "url": "http://mu-kodomo.kids.coocan.jp/0123/harappa/annai.html"
+   },
+   "reservation": {
+    "text": "予約の記載なし。「親子でいつでも自由に来館し」（市の施設案内）",
+    "url": "https://www.city.musashino.lg.jp/shisetsu_annai/kosodate/ichiran/1000397.html"
+   },
+   "access": {
+    "text": "駅から徒歩の記載なし（バスのみ）。三鷹駅北口関東バス2番のりばから柳沢駅行きまたは東伏見駅北口行き「緑町２丁目」下車徒歩4分／吉祥寺駅北口関東バス2番のりばから柳沢駅行き「緑町2丁目」下車徒歩4分／武蔵境駅北口から「関前三丁目」または「第五小学校」下車徒歩7分",
+    "url": "http://mu-kodomo.kids.coocan.jp/0123/harappa/access.html"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "開館は日曜日～木曜日の午前9時～午後4時（6/1～8/31は午後5時まで）。金・土曜日、こどもの日を除く祝日、年末年始は休み。武蔵境駅北口の関東バスのりばが資料で食い違う（協会ページは3番、市の施設案内（2022年12月更新）は5番）。",
+   "group": "indoor"
+  },
+  {
+   "name": "京王あそびの森 HUGHUG",
+   "status": "営業中",
+   "statusNote": "公式トップに2026年10〜12月のフリーパス販売カレンダーと営業時間9:30〜17:30（最終入館17:00）が載っている。休館日は水曜日（祝日の場合は翌木曜日）と1月1日",
+   "ages": {
+    "text": "「保護者（扶養者、または18歳以上のそれに準ずる方）が必ずお子さま（小学生以下）と一緒にご入館ください」「大人（中学生以上）のみ、お子さまのみでのご入館はできません」。FAQ：「6ヵ月〜小学生までのお子さま対象の遊具が中心」",
+    "url": "https://www.keio-hughug.jp/guide/"
+   },
+   "fees": {
+    "age0": "1歳未満は無料",
+    "age1": "平日フリーパス1日1,400円／土休日フリーパス1日1,900円／夕方パス（15:00～）1,000円",
+    "age2": "同上",
+    "age3": "同上",
+    "age4": "同上",
+    "adult": "大人（中学生以上）は子どもと同一料金（平日1,400円／土休日1,900円）",
+    "condition": "「※1歳未満のお子さまは無料です。※大人（中学生以上）と子ども（1歳～小学生）は同一料金です。」各種パスは繁忙期など販売しない日がある。ハグハグトレインは別料金で1回200円",
+    "url": "https://www.keio-hughug.jp/guide/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "「ハグハグのき」（ネット遊具）：「1歳以上を目安として自立歩行ができるお子さま」。保護者が付き添えば自立歩行前でも可。抱っこ紐を付けたままは不可",
+     "url": "https://www.keio-hughug.jp/faq/"
+    },
+    {
+     "text": "「ハグハグトレイン」：「2歳以上を目安として、一人で着席してバーを握ることができるお子さま」",
+     "url": "https://www.keio-hughug.jp/faq/"
+    },
+    {
+     "text": "「はいはいパーク」や「もりのひろば」内の特別スペースは乳児向けの遊び場",
+     "url": "https://www.keio-hughug.jp/faq/"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり：「授乳、おむつ換えができるベビー休憩室が、1階と、2階ハグハグカフェにございます。粉ミルクをお使いのお客様は、1階休憩室内の調乳用温水器をお使いいただけます。」",
+    "url": "https://www.keio-hughug.jp/faq/"
+   },
+   "diaper": {
+    "text": "公式に記載あり：ベビー休憩室（1階・2階ハグハグカフェ）でおむつ替えができる。施設紹介ページには「おむつ交換台のあるベビー休憩室（1階）」",
+    "url": "https://www.keio-hughug.jp/faq/"
+   },
+   "stroller": {
+    "text": "「館内でのご利用はご遠慮いただいております。入口付近のベビーカー置き場をご利用ください。」",
+    "url": "https://www.keio-hughug.jp/faq/"
+   },
+   "reservation": {
+    "text": "「事前予約可能です」（アソビュー！で購入）。予約が必須という記載はない",
+    "url": "https://www.keio-hughug.jp/faq/"
+   },
+   "access": {
+    "text": "京王線 多摩動物公園駅下車すぐ",
+    "url": "https://www.keio-hughug.jp/access/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "所在地は日野市程久保3丁目36番60。持込は離乳食・アレルギー対応食・水分補給用の飲み物のみ。",
+   "group": "indoor"
+  },
+  {
+   "name": "東京おもちゃ美術館（新宿区四谷）",
+   "status": "営業中",
+   "statusNote": "開館時間は10：00～16：00（15：30最終入館）、休館日は木曜日（2・9月にメンテナンス休館、年末年始休館あり）。2026年11月1日から前売券制度の導入と料金改定がある（2026.10.04のお知らせ）",
+   "ages": {
+    "text": "「子ども（6ヶ月～小学生）小学生以下は保護者同伴」「大人（中学生以上）」「6ヶ月未満…無料」",
+    "url": "https://art-play.or.jp/ttm/info/"
+   },
+   "fees": {
+    "age0": "6ヶ月未満は無料。6ヶ月以上は子ども料金（10/31まで：オンライン800円／窓口1,000円。11/1から：前売900円／当日1,100円）",
+    "age1": "10/31まで：オンライン800円／窓口1,000円。11/1から：前売900円／当日1,100円",
+    "age2": "同上",
+    "age3": "同上",
+    "age4": "同上",
+    "adult": "大人（中学生以上）10/31まで：オンライン1,100円／窓口1,300円。11/1から：前売1,200円／当日1,500円",
+    "condition": "11/1以降の前売券はオンラインのみで、来館前日の23:59まで購入可。当日券はオンライン・窓口で販売し、混雑時は販売終了の場合あり",
+    "url": "https://art-play.or.jp/ttm/info/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "「赤ちゃん木育ひろば」：「２歳以下限定のお部屋です。安全面から3歳以上のお子さま（兄弟・姉妹含む）は入室できません。予約時の時間指定。1時間入替制となります。」",
+     "url": "https://art-play.or.jp/ttm/info/"
+    },
+    {
+     "text": "電動イトノコ専用ルーム「いとのこや」：「小学４年生～、大人もOK」",
+     "url": "https://art-play.or.jp/ttm/guide/"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり：FAQ「赤ちゃん木育ひろばの中に、授乳スペースがございます」「ケープの貸出しもおこなっております」。来館案内：「おむつ替え、授乳スペースは予約時間外でも利用いただけます」",
+    "url": "https://art-play.or.jp/ttm/faq/"
+   },
+   "diaper": {
+    "text": "公式に記載あり：「エントランス横におむつ替え台が完備された『だれでもトイレ』（1階）」",
+    "url": "https://art-play.or.jp/ttm/guide/"
+   },
+   "stroller": {
+    "text": "「建物入口にベビーカー置き場がございます。畳んで置いていただきますようお願いします。赤ちゃんが眠っている場合や…バギーでのお越しの方は、受付にお声がけください。」エレベーターで受付（A-2階）へ",
+    "url": "https://art-play.or.jp/ttm/guide/"
+   },
+   "reservation": {
+    "text": "11/1から「前売券制度」を導入（「赤ちゃん木育ひろば」は日にちに加えて時間指定も必要。定員が少ないので前売を推奨）。当日券はオンライン・受付で購入可",
+    "url": "https://art-play.or.jp/ttm/news/news-8842/"
+   },
+   "access": {
+    "text": "東京メトロ丸ノ内線「四谷三丁目駅」2番出口より徒歩5分／都営新宿線「曙橋駅」Ａ１出口より徒歩約８分",
+    "url": "https://art-play.or.jp/ttm/info/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "館内は飲食できない（水・お茶のみ、廊下のベンチで可）。土日祝は再入館不可。トップページの隠し告知（2月休館・完売表示など）は過去の残骸で、今の情報ではない。",
+   "group": "indoor"
+  },
+  {
+   "name": "チームラボプラネッツ TOKYO",
+   "status": "営業中",
+   "statusNote": "会期は「2018.7.07(土) – 2027年末」。時間は8:00 - 22:00（最終入館は閉館の1時間前）。休みは11月5日(木)、12月3日(木)",
+   "ages": {
+    "text": "「13歳未満のお子様のみでの入場はお断りしています。必ず18歳以上の保護者の方とご入場下さい」「無料のお子様含め、子ども3名につき保護者様1名が必要です。」",
+    "url": "https://www.teamlab.art/jp/e/planets/"
+   },
+   "fees": {
+    "age0": "無料（3歳以下）",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "子ども（4歳~12歳）1,500円",
+    "adult": "大人（18歳以上）3,800円／中学生・高校生2,800円",
+    "condition": "エントランスパス（入場時間指定あり・変動価格制。表示額は公式ページの記載額）",
+    "url": "https://www.teamlab.art/jp/e/planets/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "《人と共に踊る鯉によって描かれる水面のドローイング - Infinity》：「股下40cm未満のお客様は体験ができません。保護者（18歳以上）の方が抱っこ紐や抱っこをすることで一緒に体験していただけます。」",
+     "url": "https://www.teamlab.art/jp/e/planets/"
+    },
+    {
+     "text": "「大人の方でも膝丈まで水に濡れる場所がございます」。館内は裸足で回る",
+     "url": "https://www.teamlab.art/jp/e/planets/"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり：「授乳や休憩をご希望の際は館内の救護室をご利用いただけます。」",
+    "url": "https://www.teamlab.art/jp/e/planets/"
+   },
+   "diaper": {
+    "text": "公式に記載あり：「施設のお手洗いにはオムツ台の用意がございます。」",
+    "url": "https://www.teamlab.art/jp/e/planets/"
+   },
+   "stroller": {
+    "text": "「ベビーカーは所定の位置に置きご入場下さい。」「赤ちゃんをお連れのお客様は、抱っこひもなどを装着してご入場できます。」",
+    "url": "https://www.teamlab.art/jp/e/planets/"
+   },
+   "reservation": {
+    "text": "入場時間指定のWEBチケット。「現地でチケット販売は行っておりません。」",
+    "url": "https://www.teamlab.art/jp/e/planets/"
+   },
+   "access": {
+    "text": "新豊洲駅より1A出口から徒歩3分（ゆりかもめ）／市場前駅、豊洲市場より徒歩５分（ゆりかもめ）／豊洲駅より7番出口徒歩10分（東京メトロ有楽町線）",
+    "url": "https://www.teamlab.art/jp/e/planets/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "館内の店「Glass House 螢花菴」は12歳以下入店不可。会期終了は「2027年末」と書かれている。",
+   "group": "indoor"
+  },
+  {
+   "name": "チームラボボーダレス（麻布台ヒルズ）",
+   "status": "営業中",
+   "statusNote": "会期は「2024.2.09(金) - 常設」。通常営業8:30-21:00（10月の22時閉館日あり）。休みは10.20（火）、11.24（火）、12.8（火）。旧URL /jp/e/borderless-azabudai/ は /jp/e/tokyo/ に転送される",
+   "ages": {
+    "text": "「子ども（小学生以下）の方のご利用には、18歳以上の保護者様の同伴が必要です。無料のお子様含め、子ども5名につき保護者様1名が必要です。」「3歳以下は無料です。」",
+    "url": "https://www.teamlab.art/jp/e/tokyo/"
+   },
+   "fees": {
+    "age0": "無料（3歳以下）",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "子ども（4 - 12歳）1,500円",
+    "adult": "大人（18歳以上）3,400円／中学・高校生2,800円",
+    "condition": "エントランスパス（入場時間指定あり）。大人と障がいのある方向けは変動価格制。「現地での購入の場合、下記価格に+200円の追加料金がかかります」",
+    "url": "https://www.teamlab.art/jp/e/tokyo/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "年齢や身長で制限のあるエリアの記載はない。「安全のため、子ども用ハーネスのご使用はご遠慮ください。」館内は暗く、足場の不安定な場所や天井の低い箇所がある",
+     "url": "https://www.teamlab.art/jp/e/tokyo/"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり：「授乳室は館内にございません。麻布台ヒルズ内の授乳室をご利用ください。」休憩室は2か所",
+    "url": "https://www.teamlab.art/jp/e/tokyo/"
+   },
+   "diaper": {
+    "text": null,
+    "url": "https://www.teamlab.art/jp/e/tokyo/"
+   },
+   "stroller": {
+    "text": "手荷物の注意事項に「ベビーカー：荷物置場をご利用ください」",
+    "url": "https://www.teamlab.art/jp/e/tokyo/"
+   },
+   "reservation": {
+    "text": "「チケットは事前日時指定予約となっており、完売する場合がございます。」「現地での販売はございません　在庫が残っている場合のみ販売があります」",
+    "url": "https://www.teamlab.art/jp/e/tokyo/"
+   },
+   "access": {
+    "text": "東京メトロ日比谷線『神谷町駅』直結 5番出口 徒歩2分／東京メトロ南北線『六本木一丁目駅』直結 4番出口 徒歩6分",
+    "url": "https://www.teamlab.art/jp/e/tokyo/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "おむつ替え台の記載は、このページ（https://www.teamlab.art/jp/e/tokyo/）に見当たらなかった。",
+   "group": "indoor"
+  },
+  {
+   "name": "サンリオピューロランド",
+   "status": "営業中",
+   "statusNote": "公式の2026年10月カレンダー（JSON更新 2026/10/23）で営業中。例：10/23は9:00〜18:00",
+   "ages": {
+    "text": "「3歳のお客様からパスポートが必要です。2歳以下のお子様は無料でお楽しみいただけます。」「大人：18〜64歳、小人：3～17歳･高校生、シニア：65歳以上」",
+    "url": "https://www.puroland.jp/passport/"
+   },
+   "fees": {
+    "age0": "無料（2歳以下）",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "小人：10/23のデイパスポートは3,800円（日により変動）",
+    "age4": "同上（10/23は3,800円）",
+    "adult": "大人：10/23のデイパスポートは4,900円（日により変動）",
+    "condition": "料金は来場日で変わる。公式カレンダーの10/23表示はデイ 大人4,900円／小人・シニア3,800円、アフタヌーン（14時から入場）大人3,400円／小人・シニア3,100円。当日窓口のデイパスポートは大人3,900〜6,900円・小人2,800〜5,800円の段階制。ほかに公式eパスポートあり。カレンダーの金額は公式ページを内蔵ブラウザで読んだ値",
+    "url": "https://www.puroland.jp/passport/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "エンターテイメントホール（ふわふわキッズランド）は小学生までのお子様が対象。CHALLENGE PUROは3歳～15歳が対象。小学生未満のアトラクション利用は中学生以上の保護者の同伴が必要",
+     "url": "https://www.puroland.jp/qa/"
+    },
+    {
+     "text": "ディスカバリーシアター：「身長110㎝以下のお子様」は「動かないシート」を利用",
+     "url": "https://www.puroland.jp/ride-amusement/cinnamon_adventure/"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり：ベビーセンター（1F）。設備はファミリー授乳室・授乳室・調乳・離乳食専用キッチン・はいはいスペースなど",
+    "url": "https://www.puroland.jp/guide/baby/"
+   },
+   "diaper": {
+    "text": "公式に記載あり：ベビーセンター（1F）にオムツ交換台・つかまり立ち交換台。「オムツ交換台は、女性用お手洗い、男性用お手洗い(一部)、多目的トイレにもございます。」",
+    "url": "https://www.puroland.jp/guide/baby/"
+   },
+   "stroller": {
+    "text": "「土日祝日及び18時閉館の平日は、1･2階ではベビーカーをご利用いただけません。」各階の移動はエレベーターで。ベビーセンターには持ち込めない。抱っこ紐の貸出はない。ベビーカー貸出の記載なし",
+    "url": "https://www.puroland.jp/guide/baby/"
+   },
+   "reservation": {
+    "text": "「ピューロランドのご入場には、来場予約とパスポートが必要です。」「来場予約無くお越しいただいた場合は…入場をお断りさせていただきます。」来場予約は空きがあれば当日も取れる",
+    "url": "https://www.puroland.jp/passport/"
+   },
+   "access": {
+    "text": "「京王線・小田急線・多摩モノレール「多摩センター駅」から徒歩5分です。」",
+    "url": "https://www.puroland.jp/qa/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "ベビーカー・車椅子の人は遊歩道を使い、3Fの入場口へ（アクセスページ https://www.puroland.jp/access/ ）。",
+   "group": "indoor"
+  },
+  {
+   "name": "東京タワー（メインデッキ）",
+   "status": "営業中",
+   "statusNote": "料金・営業時間ページの表記：メインデッキ 9:00～23:00・最終入場22:30。混雑状況により最終入場が早まることがある",
+   "ages": {
+    "text": "料金区分は「大人／高校生／子供（小中学生）／幼児（４歳以上）」。3歳以下の扱いはこのページに記載なし",
+    "url": "https://www.tokyotower.co.jp/fee/"
+   },
+   "fees": {
+    "age0": null,
+    "age1": null,
+    "age2": null,
+    "age3": null,
+    "age4": "幼児（４歳以上）600円",
+    "adult": "大人1,500円（高校生1,200円、子供（小中学生）900円）",
+    "condition": "メインデッキ（150m）。3歳以下の料金・無料の記載は fee ページと FAQ（/access/faq/）に見当たらない",
+    "url": "https://www.tokyotower.co.jp/fee/"
+   },
+   "ageRestrictedAreas": [],
+   "nursingRoom": {
+    "text": "公式に記載あり：「授乳室を設置しております」（利用時間9:00～22:30）。ただし「展望台には授乳室がございませんので、ご注意下さい。」",
+    "url": "https://www.tokyotower.co.jp/access/child/"
+   },
+   "diaper": {
+    "text": "公式に記載あり：「各所の『多目的トイレ』または、『女性用トイレ』『男性トイレ（一部）』にはおむつ交換台を設置しています。」",
+    "url": "https://www.tokyotower.co.jp/access/child/"
+   },
+   "stroller": {
+    "text": "貸出あり：「インフォメーションにてベビーカーの貸出し」「新生児～4歳未満(20kg)まで」「事前予約は承っておりません」。置き場はフットタウン1階インフォメーション横付近。「ベビーカーはフットタウン全館・メインデッキにてご利用頂けます。」一方でFAQには「途中に階段がございますので、フットタウン1Fオペレーションセンターにお預けいただくことをおすすめいたします。」",
+    "url": "https://www.tokyotower.co.jp/access/child/"
+   },
+   "reservation": {
+    "text": "「WEBでのチケット販売とフットタウン１階チケットカウンターにて販売しております。」「電話での予約は承っておりません。」",
+    "url": "https://www.tokyotower.co.jp/access/faq/"
+   },
+   "access": {
+    "text": "大江戸線 赤羽橋駅/赤羽橋口 徒歩5分／日比谷線 神谷町駅/1 徒歩7分／三田線 御成門駅/A1 徒歩6分／三田線 芝公園駅/A4 徒歩10分／浅草線 大門駅/A6 徒歩10分／JR 浜松町駅/北口 徒歩15分",
+    "url": "https://www.tokyotower.co.jp/access/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "ベビーカーの扱いは、こども向けページ（メインデッキで利用可）とFAQ（預けを推奨）で書き方が違う。記事では両方の文言を出すか、預け推奨側に寄せる。",
+   "group": "indoor"
+  },
+  {
+   "name": "東京スカイツリー展望デッキ",
+   "status": "営業中",
+   "statusNote": "公式チケットページで販売中。営業日ごとの例外は未確認",
+   "ages": {
+    "text": "「大人(15歳以上)」「こども(6〜14歳)」「5歳以下の幼児、6歳以下の未就学児無料」",
+    "url": "https://www.tokyo-skytree.jp/ticket/"
+   },
+   "fees": {
+    "age0": "無料（5歳以下の幼児）",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "無料",
+    "adult": "天望デッキ（350m）大人（15歳以上）1,800円～。天望デッキ＋天望回廊セットは3,000円～",
+    "condition": "天望デッキ（350m）のこども（6〜14歳）は900円～（料金は「～」表記で日時により変動）。「4Fチケットカウンター・券売機での購入は、窓口発券料として１枚あたり500円が加算されます。」",
+    "url": "https://www.tokyo-skytree.jp/ticket/"
+   },
+   "ageRestrictedAreas": [],
+   "nursingRoom": {
+    "text": "公式に記載あり：フロアガイド「ベビーケアルーム　おむつ替えや授乳などにご利用ください。場所：東京スカイツリー1F団体東ロビー／東京スカイツリー4F正面エントランス内」。FAQ：「展望台内にお部屋のご用意がございます。」",
+    "url": "https://www.tokyo-skytree.jp/floor/guide/"
+   },
+   "diaper": {
+    "text": "公式に記載あり：ベビーケアルーム（1F団体東ロビー、4F正面エントランス内）で「おむつ替えや授乳など」ができる",
+    "url": "https://www.tokyo-skytree.jp/floor/guide/"
+   },
+   "stroller": {
+    "text": "FAQ：「ベビーカーの貸出しを行っております。ただし、数に限りがございます。」「４階にベビーカー置き場がございます」",
+    "url": "https://www.tokyo-skytree.jp/inquiry/faq/"
+   },
+   "reservation": {
+    "text": "WEB購入・コンビニ購入・4Fチケットカウンター（窓口は1枚500円加算）。「繁忙日はチケットカウンターでの入場券販売を中止する場合がございます。」",
+    "url": "https://www.tokyo-skytree.jp/ticket/admission/"
+   },
+   "access": {
+    "text": "「押上駅直結」。東武スカイツリーライン「とうきょうスカイツリー駅」または半蔵門線「押上（スカイツリー前）駅」が便利。徒歩分の記載なし",
+    "url": "https://www.tokyo-skytree.jp/access/public-transport/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "6歳の未就学児も無料。ベビーケアルームの場所が、FAQ（展望台内）とフロアガイド（1F・4F）で食い違う。",
+   "group": "indoor"
+  },
+  {
+   "name": "日本科学未来館",
+   "status": "休館",
+   "statusNote": "2026年10月1日から2027年4月22日まで、施設整備工事のため全館休館しており、2027年4月23日にリニューアルオープン予定。公式の文言は「2026年10月1日から2027年4月22日までの約半年間、施設整備工事のため全館休館しています。」（https://www.miraikan.jst.go.jp/visit/admission/）と「本年10月1日(木)からの全館休館を経て、2027年4月23日(金)にリニューアルオープン」（https://www.miraikan.jst.go.jp/news/general/202608264719.html）。リニューアル内容に「“おや？”っこひろば」のリニューアルが含まれる。",
+   "ages": {
+    "text": "館全体の対象年齢の記載なし。入館をお断りする例として「適当な付添人や指導者を伴わない6歳未満のお子様」とある。依頼文の「おやこの広場」に当たる施設の公式名は「“おや？”っこひろば」で、説明は「科学的な「モノの見方」を親子で一緒に体験するスペース」。表示される本文に対象年齢の記載なし。ページのHTMLには「推奨3歳以上」という文字列があるが、HTMLコメント内（画面には出ない）なので根拠にしていない。",
+    "url": "https://www.miraikan.jst.go.jp/visit/kids/"
+   },
+   "fees": {
+    "age0": "無料（常設展・未就学児）",
+    "age1": "無料（常設展・未就学児）",
+    "age2": "無料（常設展・未就学児）",
+    "age3": "無料（常設展・未就学児）",
+    "age4": "無料（常設展・未就学児）",
+    "adult": "常設展630円（小学生〜18歳以下210円）",
+    "condition": "休館前の料金表。ドームシアターのセット券は未就学児100円・大人940円。「“おや？”っこひろば」の利用料金は「無料」。「毎週土曜日及びこどもの日は18歳以下の方…常設展の観覧が無料」。リニューアル後の料金は未確認。",
+    "url": "https://www.miraikan.jst.go.jp/visit/admission/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "「“おや？”っこひろば」：「かならず親子（または保護者・引率者同伴）でご利用ください」「保護者1名につき、子ども4人までのご利用をお願いします」。45分間の入れ替え制で、土日祝と混雑日は整理券制。",
+     "url": "https://www.miraikan.jst.go.jp/visit/kids/"
+    },
+    {
+     "text": "ドームシアター：「小さいお子様や、光や音に敏感な方の鑑賞にはご注意ください」（年齢制限の記載はない）",
+     "url": "https://www.miraikan.jst.go.jp/exhibitions/dometheater/"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。「5階に授乳室があります。男性も利用可能です。（鍵つき個室2、共有スペースあり）」。共有スペースに調乳用ウォーターサーバーあり。",
+    "url": "https://www.miraikan.jst.go.jp/visit/accessibility/"
+   },
+   "diaper": {
+    "text": "公式に記載あり。授乳室の各個室に「おむつ替えベッド1台」「おむつ替え台1台」。また「館内各階の多目的トイレ内におむつ替え台を設置しています。」",
+    "url": "https://www.miraikan.jst.go.jp/visit/accessibility/"
+   },
+   "stroller": {
+    "text": "貸出あり。「1階エントランスで貸し出しをしています…(ただし、台数には限りがあります)」。館内でベビーカーを使えるかどうか、置き場については、見たページに記載なし。",
+    "url": "https://www.miraikan.jst.go.jp/visit/accessibility/"
+   },
+   "reservation": {
+    "text": "常設展は事前オンライン購入か当日窓口。「ご来館の1週間前からご購入いただけます」。ドームシアターは「全席指定制です。あらかじめオンラインでのご予約・ご購入をお願いいたします」。",
+    "url": "https://www.miraikan.jst.go.jp/visit/admission/"
+   },
+   "access": {
+    "text": "「新交通ゆりかもめ「東京国際クルーズターミナル駅」下車、徒歩約5分／「テレコムセンター駅」下車、徒歩約4分」「東京臨海高速鉄道りんかい線「東京テレポート駅」下車、徒歩約15分」",
+    "url": "https://www.miraikan.jst.go.jp/visit/location-directions/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "2027年4月22日まで休館中のため、記事でおでかけ先として案内する場合は休館中であることの明記が必要。休館中のページには休館前の料金と整理券の案内が残っている。",
+   "group": "museum"
+  },
+  {
+   "name": "科学技術館",
+   "status": "不明",
+   "statusNote": "公式サイト www.jsf.or.jp のどのURLも、メンテナンスページ（http://133.167.90.240/html/maintenance_jsf.html）へ302で転送される。表示は「現在サービスをご利用いただけません。」。2026-10-23に時間をあけて複数回試したが、すべて同じだった。",
+   "ages": {
+    "text": null,
+    "url": null
+   },
+   "fees": {
+    "age0": null,
+    "age1": null,
+    "age2": null,
+    "age3": null,
+    "age4": null,
+    "adult": null,
+    "condition": "公式サイトが停止中で取得できなかった",
+    "url": null
+   },
+   "ageRestrictedAreas": [],
+   "nursingRoom": {
+    "text": null,
+    "url": null
+   },
+   "diaper": {
+    "text": null,
+    "url": null
+   },
+   "stroller": {
+    "text": null,
+    "url": null
+   },
+   "reservation": {
+    "text": null,
+    "url": null
+   },
+   "access": {
+    "text": null,
+    "url": null
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "運営元（日本科学技術振興財団）のサイトがメンテナンス中で、一次情報を取れなかった。再公開後に取り直しが必要。営業中かどうかも確認できていない。",
+   "group": "museum"
+  },
+  {
+   "name": "国立科学博物館（上野本館）",
+   "status": "営業中",
+   "statusNote": "通常開館（休館日は毎週月曜と12/28〜1/1）。一部の展示室は閉鎖中で、「※地球館２階の一部展示室は、現在閉鎖中です。」「※地球館地下３階を 2026年9月8日(火)から展示改修のために閉鎖します。」とある。",
+   "ages": {
+    "text": "「親と子のたんけんひろば コンパス」：「コンパスはお子様（0歳～小学6年生の方）と保護者の方（18歳以上の方）が一緒に楽しむ展示室です。お子様だけ、大人の方だけではご利用いただけません。」「主に4歳から6歳のお子様と保護者の方が対象ですが、0歳から小学6年生のお子様と保護者の方もご利用いただけます。」",
+    "url": "https://www.kahaku.go.jp/learning/compass/index.php"
+   },
+   "fees": {
+    "age0": "常設展は無料（18歳未満無料）。コンパスは無料だが予約が必要",
+    "age1": "常設展は無料。コンパスは無料だが予約が必要",
+    "age2": "常設展は無料。コンパスは300円（要予約）",
+    "age3": "常設展は無料。コンパスは300円（要予約）",
+    "age4": "常設展は無料。コンパスは300円（要予約）",
+    "adult": "常設展：一般・大学生630円。コンパスを使う場合は保護者（18歳以上）も300円が別に必要",
+    "condition": "「65歳以上の方および18歳未満の方」は入館無料（「年齢が分かる証明書等を提示してください」）。コンパスの料金区分は「2歳～小学6年生までのお子様 おひとり 300円」「0歳～1歳までのお子様 無料（ただし予約が必要です）」。「別途、国立科学博物館への入館料が必要です。（一般・大学生630円、高校生以下・65歳以上は無料）」。特別展は別料金。",
+    "url": "https://www.kahaku.go.jp/riyou/nyukan-annai/index.html ／ https://www.kahaku.go.jp/learning/compass/ticket.php"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "コンパス：対象は0歳〜小学6年生とその保護者（18歳以上）。「定員は各回60名」「毎時00分から45分までの45分間。完全入れ替え制」「保護者の方1名につきお子様は最大3名まで」。",
+     "url": "https://www.kahaku.go.jp/learning/compass/index.php ／ https://www.kahaku.go.jp/learning/compass/ticket.php"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。「授乳室が日本館地下１階（ラウンジ奥・シアター３６〇付近）および地球館3階（エスカレーター側）にあります。」",
+    "url": "https://www.kahaku.go.jp/riyou/kannai-guide/accessibility.html"
+   },
+   "diaper": {
+    "text": "公式に記載あり。「地球館B1Fを除く各階（多目的トイレ）、日本館地下1階・1階・2階（多目的トイレ）および日本館地下ラウンジ内授乳室にあります。」",
+    "url": "https://www.kahaku.go.jp/riyou/kannai-guide/accessibility.html"
+   },
+   "stroller": {
+    "text": "貸出あり。「貸出用の車いす（2台）、ベビーカー（2台）を用意しています。ご利用希望の方は入口の総合案内にお申し出ください。」。館内での使用可否と置き場は見たページに記載なし。",
+    "url": "https://www.kahaku.go.jp/riyou/kannai-guide/accessibility.html"
+   },
+   "reservation": {
+    "text": "常設展：入館案内ページに予約が必要という記載なし（「電子チケットの事前購入」の導線はある）。コンパス：「0歳のお子様から大人の方まで ご利用する全ての方の日時予約と料金のお支払いが必要です」。予約はART PASS経由で、キャンセルは前日23:59まで（有料の人は1名100円のキャンセル料）。",
+    "url": "https://www.kahaku.go.jp/learning/compass/index.php"
+   },
+   "access": {
+    "text": "「JR 上野駅（公園口）から 徒歩5分」「東京メトロ日比谷線 上野駅（公園口）から 徒歩10分」「京成線 京成上野駅（正面口）から 徒歩10分」",
+    "url": "https://www.kahaku.go.jp/riyou/access.html"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "コンパスの予約ページでは11月分の予約受付中と表示されていた。",
+   "group": "museum"
+  },
+  {
+   "name": "東京都水の科学館",
+   "status": "営業中",
+   "statusNote": "公式サイトは公開停止中（HTTP 503）だが、停止ページに開館中と書かれている。文言は「不正アクセス等予防措置として公式ホームページの公開を一時停止しております。なお、現時点での再公開時期は未定です。」「※サイトは公開停止中ですが、通常通り開館中です。」",
+   "ages": {
+    "text": null,
+    "url": "https://www.mizunokagaku.jp/（503の停止ページ。対象年齢の記載なし）"
+   },
+   "fees": {
+    "age0": null,
+    "age1": null,
+    "age2": null,
+    "age3": null,
+    "age4": null,
+    "adult": null,
+    "condition": "停止ページに料金の記載なし",
+    "url": "https://www.mizunokagaku.jp/（503）"
+   },
+   "ageRestrictedAreas": [],
+   "nursingRoom": {
+    "text": null,
+    "url": "https://www.mizunokagaku.jp/（503の停止ページに記載なし）"
+   },
+   "diaper": {
+    "text": null,
+    "url": "https://www.mizunokagaku.jp/（503の停止ページに記載なし）"
+   },
+   "stroller": {
+    "text": null,
+    "url": "https://www.mizunokagaku.jp/（503の停止ページに記載なし）"
+   },
+   "reservation": {
+    "text": null,
+    "url": "https://www.mizunokagaku.jp/（503の停止ページに記載なし）"
+   },
+   "access": {
+    "text": "「りんかい線 「国際展示場駅」下車徒歩約10分」「ゆりかもめ 「東京ビッグサイト駅」下車徒歩約10分」「都バス 「武蔵野大学前」下車徒歩約5分」（開館時間9:30〜17:00、入館は16:30まで。休館日は月曜（休日の場合は翌日）と12/28〜1/4）",
+    "url": "https://www.mizunokagaku.jp/（HTTP 503の停止ページ本文）"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "ここで使った出典はHTTP 503で返る停止ページで、「200で取れたURLだけ」という条件を満たしていない。営業状況とアクセスはその本文からの引用。東京都水道局のサイトは水の科学館へリンクを張っているだけで、別の案内ページはなかった。料金・年齢・設備は未取得。",
+   "group": "museum"
+  },
+  {
+   "name": "東京消防庁 消防博物館（四谷）",
+   "status": "休館",
+   "statusNote": "確認日（10/23）は臨時休館中。文言は「消防博物館は2026年10月19日(月)から26日(月)まで、博物館内の整備を行うため休館いたします。」（2026年10月18日更新）。この期間以外の通常休館日は毎週月曜（祝日の場合は直後の平日）と12/29〜1/3。",
+   "ages": {
+    "text": "対象年齢の記載なし（見た場所：館トップとよくある質問）",
+    "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/hkkan/index.html"
+   },
+   "fees": {
+    "age0": "無料",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "無料",
+    "adult": "無料",
+    "condition": "「入館料 無料」",
+    "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/hkkan/index.html"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "年齢制限の記載なし。よくある質問に「B１階の車両は見学のみ。３F、５Fに展示してあるヘリコプターは乗車可能です。」とある。屋外（5階）の消防ヘリコプターは雨・強風・熱中症警戒アラートのときなどは閉鎖。",
+     "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/hkkan/mus-qa.html"
+    }
+   ],
+   "nursingRoom": {
+    "text": null,
+    "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/hkkan/index.html と https://www.tfd.metro.tokyo.lg.jp/taiken/hkkan/mus-qa.html に記載なし"
+   },
+   "diaper": {
+    "text": null,
+    "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/hkkan/index.html と https://www.tfd.metro.tokyo.lg.jp/taiken/hkkan/mus-qa.html に記載なし"
+   },
+   "stroller": {
+    "text": "持ち込める。入館時の禁止事項「自転車、三輪車、ストライダー、スケボーなどの乗り入れ」に対して「【例外】ベビーカー、車いす」とある。貸出と置き場は記載なし。",
+    "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/hkkan/index.html"
+   },
+   "reservation": {
+    "text": "個人は予約不要。「個人でのご見学 予約の必要はありません。ご自由に見学していただくことが出来ます。」。団体（10人以上）のガイドと図書資料室は予約制。",
+    "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/hkkan/index.html"
+   },
+   "access": {
+    "text": "「東京メトロ丸ノ内線…「四谷三丁目駅」2番出口」（徒歩分の記載なし）、「JR中央本線…「信濃町駅」・「四ツ谷駅」から徒歩各約12分」「都営新宿線…「曙橋駅」から徒歩約7分」。駐車場はない。",
+    "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/hkkan/index.html"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "旧URL（/hp-hakubutukan/）は404で、現在のURLは /taiken/hkkan/。丸ノ内線の行のHTMLに「直結」という語があるが、コメントアウトされていて画面には出ないため採用していない。食事ができるのは10階の防災ラウンジだけ。",
+   "group": "museum"
+  },
+  {
+   "name": "地下鉄博物館（葛西）",
+   "status": "不明",
+   "statusNote": "公式サイト www.chikahaku.jp（https・httpとも）に接続できなかった（Connection refused）。ブラウザでも開けず、2026-10-23に時間をあけて再試行しても同じだった。",
+   "ages": {
+    "text": null,
+    "url": null
+   },
+   "fees": {
+    "age0": null,
+    "age1": null,
+    "age2": null,
+    "age3": null,
+    "age4": null,
+    "adult": null,
+    "condition": "公式サイトに接続できず未取得",
+    "url": null
+   },
+   "ageRestrictedAreas": [],
+   "nursingRoom": {
+    "text": null,
+    "url": null
+   },
+   "diaper": {
+    "text": null,
+    "url": null
+   },
+   "stroller": {
+    "text": null,
+    "url": null
+   },
+   "reservation": {
+    "text": null,
+    "url": null
+   },
+   "access": {
+    "text": null,
+    "url": null
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "運営元（メトロ文化財団）のサイトにも接続できなかった。東京メトロの葛西駅ページには博物館へのリンクが見当たらなかった。後日の取り直しが必要。",
+   "group": "museum"
+  },
+  {
+   "name": "多摩六都科学館",
+   "status": "不明",
+   "statusNote": "公式サイトは2026年10月22日14:30から全ページ閉鎖中（HTTP 503）。文言は「当館ホームページを一時的にクローズします」「■休止期間 2026年10月22日（木）14:30 より ※期間未定」。停止ページに館の営業状況の記載はない。",
+   "ages": {
+    "text": null,
+    "url": null
+   },
+   "fees": {
+    "age0": null,
+    "age1": null,
+    "age2": null,
+    "age3": null,
+    "age4": null,
+    "adult": null,
+    "condition": "公式サイト閉鎖中で未取得",
+    "url": null
+   },
+   "ageRestrictedAreas": [],
+   "nursingRoom": {
+    "text": null,
+    "url": null
+   },
+   "diaper": {
+    "text": null,
+    "url": null
+   },
+   "stroller": {
+    "text": null,
+    "url": null
+   },
+   "reservation": {
+    "text": "停止ページに「■団体予約 FAXにて受け付けます」とあるだけ。個人の予約要否は未取得。",
+    "url": "https://www.tamarokuto.or.jp/（503）"
+   },
+   "access": {
+    "text": null,
+    "url": null
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "閉鎖理由はPHPの脆弱性への対応で、最新情報は公式SNS（X @pegaroku、Instagram）で出すとしている。今回SNSとアーカイブは根拠にしていない。サイト再開後に取り直しが必要。",
+   "group": "museum"
+  },
+  {
+   "name": "京王れーるランド",
+   "status": "営業中",
+   "statusNote": "通常営業。休館日は「水曜日（祝日の場合は翌木曜日休館）、1月1日」。営業時間は9:30〜17:15（最終入館17:00）。",
+   "ages": {
+    "text": "館全体の対象年齢の記載なし。料金区分は「（1歳以上）」で「※1歳未満は無料です。」。アスれーるチックは「※対象年齢：未就学児」。",
+    "url": "https://www.keio-rail-land.jp/guide/"
+   },
+   "fees": {
+    "age0": "無料（「※1歳未満は無料です。」）",
+    "age1": "400円",
+    "age2": "400円",
+    "age3": "400円",
+    "age4": "400円",
+    "adult": "400円",
+    "condition": "「400円（1歳以上）」で、本館・アネックス・車両展示場を一日中利用できる。別料金のコンテンツあり：運転体験1回300円、ジオラマ運転1回100円/5分、ミニ電車1回100円、プラレールペイント工房1100円、謎解き300〜500円。HUGHUGとの共通券は1歳以上で平日1,600円・土休日2,100円。",
+    "url": "https://www.keio-rail-land.jp/guide/ ／ https://www.keio-rail-land.jp/area/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "アスれーるチック：「安全管理上、対象年齢は未就学児となります」。整理券制で20分。",
+     "url": "https://www.keio-rail-land.jp/guide/ ／ https://www.keio-rail-land.jp/area/"
+    },
+    {
+     "text": "運転体験：「※小学生以上推奨」「単独で操縦ができる方」「付添いや抱いての運転は出来ません」（1回300円）",
+     "url": "https://www.keio-rail-land.jp/area/"
+    },
+    {
+     "text": "ミニ電車：「自身で電車の座席にまたがって乗車できる方であればどなたでもご利用いただけます。ただし、抱っこしたままでの乗車はご遠慮いただいております。」。雨天時は運休。",
+     "url": "https://www.keio-rail-land.jp/faq/"
+    },
+    {
+     "text": "プラレールで遊ぼう：整理券制で30分（年齢制限の記載なし）",
+     "url": "https://www.keio-rail-land.jp/area/"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。「おむつの交換台と授乳室のご用意がございます。」「授乳室はございます。」（場所の記載なし）",
+    "url": "https://www.keio-rail-land.jp/guide/ ／ https://www.keio-rail-land.jp/faq/"
+   },
+   "diaper": {
+    "text": "公式に記載あり。「トイレにはおむつ換えができるベビーベットも用意しております。」",
+    "url": "https://www.keio-rail-land.jp/faq/"
+   },
+   "stroller": {
+    "text": "本館内では使えない。「館内でのベビーカーのご利用はご遠慮ください。」「本館でのご利用はご遠慮いただいております。入り口付近にあるベビーカー置き場をご利用ください。屋外展示場はベビーカーで入館することが出来ます。」。貸出の記載なし。",
+    "url": "https://www.keio-rail-land.jp/guide/ ／ https://www.keio-rail-land.jp/faq/"
+   },
+   "reservation": {
+    "text": "任意。「事前予約可能です」（アソビューでチケットを購入）。予約が必須という記載なし。",
+    "url": "https://www.keio-rail-land.jp/faq/"
+   },
+   "access": {
+    "text": "「京王線 多摩動物公園駅下車すぐ」。提携駐車場・駐輪場はない。",
+    "url": "https://www.keio-rail-land.jp/guide/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "京王電鉄本体のURL（keio.co.jp/train/keio-rail-land/）は503だったため、公式サイト keio-rail-land.jp を使った。",
+   "group": "museum"
+  },
+  {
+   "name": "江戸東京たてもの園",
+   "status": "不明",
+   "statusNote": "公式サイト www.tatemonoen.jp は公開停止中（HTTP 503）。文言は「不正アクセス等を未然に防止する観点から、予防措置として公式サイトの公開を一時停止しております。」。運営元の東京都歴史文化財団（www.rekibun.or.jp）も503。停止ページに園の営業状況の記載はない。",
+   "ages": {
+    "text": null,
+    "url": null
+   },
+   "fees": {
+    "age0": null,
+    "age1": null,
+    "age2": null,
+    "age3": null,
+    "age4": null,
+    "adult": null,
+    "condition": "公式サイト公開停止中で未取得",
+    "url": null
+   },
+   "ageRestrictedAreas": [],
+   "nursingRoom": {
+    "text": null,
+    "url": null
+   },
+   "diaper": {
+    "text": null,
+    "url": null
+   },
+   "stroller": {
+    "text": null,
+    "url": null
+   },
+   "reservation": {
+    "text": null,
+    "url": null
+   },
+   "access": {
+    "text": null,
+    "url": null
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "サイト再公開後に取り直しが必要。",
+   "group": "museum"
+  },
+  {
+   "name": "キユーピー マヨテラス",
+   "status": "営業中",
+   "statusNote": "休館日は「土・日・祝日・その他臨時休館日」（「※土曜日は臨時開館する場合がございます。」）。開館日は実質平日。",
+   "ages": {
+    "text": "「本施設は、小学生以上を対象としております。」「小学生以下のお子さまは、保護者同伴のご見学をお願いします。」",
+    "url": "https://www.kewpie.co.jp/entertainment/mayoterrace/reservation/"
+   },
+   "fees": {
+    "age0": "無料（入館料無料）",
+    "age1": "無料（入館料無料）",
+    "age2": "無料（入館料無料）",
+    "age3": "無料（入館料無料）",
+    "age4": "無料（入館料無料）",
+    "adult": "無料",
+    "condition": "「入館料 無料」。ただし施設の対象は小学生以上。",
+    "url": "https://www.kewpie.co.jp/entertainment/mayoterrace/access/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "施設全体が「小学生以上を対象」。未就学児が入館できるかどうかの明記はない（「小学生以下のお子さまは、保護者同伴」という文言だけ）。",
+     "url": "https://www.kewpie.co.jp/entertainment/mayoterrace/reservation/"
+    }
+   ],
+   "nursingRoom": {
+    "text": null,
+    "url": "マヨテラストップ・アクセス・予約・施設紹介の各ページ（https://www.kewpie.co.jp/entertainment/mayoterrace/ 以下）に記載なし"
+   },
+   "diaper": {
+    "text": null,
+    "url": "同上の各ページに記載なし"
+   },
+   "stroller": {
+    "text": null,
+    "url": "同上の各ページに記載なし"
+   },
+   "reservation": {
+    "text": "「完全予約制」。予約はインターネットか電話（03-5384-7770）。「20分前より館内にお入りいただけます」。7名以上の団体は電話で予約。",
+    "url": "https://www.kewpie.co.jp/entertainment/mayoterrace/reservation/ ／ https://www.kewpie.co.jp/entertainment/mayoterrace/access/"
+   },
+   "access": {
+    "text": "「京王線「仙川駅」から徒歩7分」（住所：東京都調布市仙川町2-5-7 仙川キユーポート）",
+    "url": "https://www.kewpie.co.jp/entertainment/mayoterrace/access/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "アクセスページに「※来場時は守衛所にお立ち寄りください。（予約不要）」とあるが、守衛所への立ち寄りについての注記と読める。見学自体は予約ページに「完全予約制」と明記されている。施設紹介ページ（/attraction/）は本文を取得できず、所要時間とコース内容は未確認。",
+   "group": "museum"
+  },
+  {
+   "name": "府中市郷土の森博物館",
+   "status": "営業中",
+   "statusNote": "通常開館。開館時間は9時〜17時（入場は16時まで）。休館日は月曜（祝日の場合は翌日）と12/29〜1/3。直近の休館日として10月26日（月）、11月13日（金）が表示されていた。「当館は園内含めて博物館です。休館日は、園内もご利用いただけません。」",
+   "ages": {
+    "text": "館全体の対象年齢の記載なし。「未就学児の入場及びプラネタリウムの観覧は、保護者（高校生以上）の同伴が必要となります。」",
+    "url": "https://www.fuchu-cpf.or.jp/museum/access/1000071.html"
+   },
+   "fees": {
+    "age0": "無料（4歳未満無料）",
+    "age1": "無料（4歳未満無料）",
+    "age2": "無料（4歳未満無料）",
+    "age3": "無料（4歳未満無料）",
+    "age4": "150円（中学生以下）",
+    "adult": "300円",
+    "condition": "博物館入場料は「大人 300円／中学生以下 150円／4歳未満 無料」。プラネタリウム観覧料は「大人600円、中学生以下300円、4歳未満無料（博物館入場料が別に必要です）」。館内の支払いは現金のみ。",
+    "url": "https://www.fuchu-cpf.or.jp/museum/access/1000071.html ／ https://www.fuchu-cpf.or.jp/museum/1000077/index.html"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "プラネタリウム：「未就学児のみの入場及びプラネタリウムの観覧はできません。高校生以上の方と一緒にご観覧ください。」「混雑時、4歳未満のお子様はお膝の上での観覧にご協力ください。」「投映開始時刻を過ぎてのご入場は、安全上できません。」",
+     "url": "https://www.fuchu-cpf.or.jp/museum/1000077/index.html"
+    },
+    {
+     "text": "特別投映ベビープラネタリウム：「小さなお子様とご家族のための真っ暗にならないプラネタリウム」。各回30分で、直近は11月1日・11月22日（日）の10時15分から。対象年齢の数字は記載なし。",
+     "url": "https://www.fuchu-cpf.or.jp/museum/1000077/1007375/index.html"
+    }
+   ],
+   "nursingRoom": {
+    "text": null,
+    "url": "利用案内・よくある質問・体の不自由な方へ（https://www.fuchu-cpf.or.jp/museum/access/1000071.html ／ https://www.fuchu-cpf.or.jp/museum/1000595/faq.html ／ https://www.fuchu-cpf.or.jp/museum/about/1000090/1000126.html）のHTML本文に記載なし。本館マップPDFの凡例に授乳室らしき項目があるが、画像からは判読しきれず未確定。"
+   },
+   "diaper": {
+    "text": "「だれでもトイレ」について「車椅子使用者・高齢者・妊婦・乳児等をお連れのお客様にもご利用いただけるトイレを次の6か所に設置」とある（園内3か所、やすらぎ亭1か所、本館2か所）。「おむつ替え台」という語は記載なし。",
+    "url": "https://www.fuchu-cpf.or.jp/museum/about/1000090/1000126.html"
+   },
+   "stroller": {
+    "text": "持ち込みも貸出もできる。「ベビーカーの持込はできますか／お持込できます。また、貸出ベビーカー（有料1回：100円）の用意もありますので、ご利用ください。」",
+    "url": "https://www.fuchu-cpf.or.jp/museum/1000595/faq.html"
+   },
+   "reservation": {
+    "text": "博物館の入場に予約が必要という記載なし。プラネタリウム観覧券は「WEBで事前購入できる回があります」「座席指定はできません。入場は先着順」。平日は学校団体の予約が入ると一般の通常投映が中止になることがある。",
+    "url": "https://www.fuchu-cpf.or.jp/museum/1000077/index.html"
+   },
+   "access": {
+    "text": "徒歩の場合「武蔵野線・南武線、府中本町駅から20分」「京王線・南武線、分倍河原駅より20分」「西武多摩川線、是政駅より20分」。バスは「郷土の森総合体育館（郷土の森博物館東）」か「南町二丁目（郷土の森博物館西）」で下車し、徒歩約7分。無料駐車場は約400台。",
+    "url": "https://www.fuchu-cpf.or.jp/museum/access/1000442.html"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "4歳の誕生日から有料（中学生以下150円）になる点が、1〜3歳と4歳の差になる。",
+   "group": "museum"
+  },
+  {
+   "name": "池袋防災館（池袋都民防災教育センター）",
+   "status": "営業中",
+   "statusNote": "通常開館。開館時間は9時〜17時（毎週金曜は21時まで）。休館日は毎月第1火曜・第3火曜と第3火曜の翌日、12/29〜1/3。",
+   "ages": {
+    "text": "体験ごとの年齢制限：「地震体験 3歳以上」「消火体験 小学校3年生以上」「救急体験 小学校4年生以上」「VR防災体験 小学校2年生以上」「図上訓練 小学生以上」「※防災動画視聴と煙体験は、年齢制限はありません。」",
+    "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/ikebukuro/index.html"
+   },
+   "fees": {
+    "age0": "無料",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "無料",
+    "adult": "無料",
+    "condition": "「入館料 無料」",
+    "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/ikebukuro/index.html"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "地震コーナー「満3歳以上」、消火コーナー「小学3年生以上」、救急コーナー「小学4年生以上」、VR防災体験「小学２年生以上」。「小学生以下が単独で体験コーナーを利用することはできません。必ず保護者等の引率が必要です（自由見学コーナーの利用は可能です）。」",
+     "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/ikebukuro/index.html"
+    },
+    {
+     "text": "「利用年齢に達していない子どもを連れて参加できますか／ご一緒にツアーに参加していただき、体験できないコーナーは見学してください。」",
+     "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/tokyo_bskan/faq.html"
+    }
+   ],
+   "nursingRoom": {
+    "text": null,
+    "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/ikebukuro/index.html と https://www.tfd.metro.tokyo.lg.jp/taiken/tokyo_bskan/faq.html に記載なし"
+   },
+   "diaper": {
+    "text": null,
+    "url": "同上の2ページに記載なし"
+   },
+   "stroller": {
+    "text": null,
+    "url": "同上の2ページに記載なし"
+   },
+   "reservation": {
+    "text": "個人も予約が推奨されている。「ホームページ右上「ご利用申し込み」からご予約をお願いいたします」「予約なしで来館された場合は、団体予約等で、ご希望の体験ができない場合や長時間お待ちいただく場合がございますので、事前にご予約のうえご来館いただきますようお願いいたします。」。Web予約は利用日の5日前まで。",
+    "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/ikebukuro/index.html"
+   },
+   "access": {
+    "text": "「池袋駅（西口（南）・メトロポリタン口）から徒歩５分」。駐車場は「なし（自転車を含む）」。",
+    "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/ikebukuro/index.html"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "体験はインストラクター同行のツアー形式。基本ツアーは1時間40分、ショートツアー（地震体験＋動画または図上訓練）は50分で11:00から。館内での飲食は原則不可。",
+   "group": "museum"
+  },
+  {
+   "name": "本所防災館（本所都民防災教育センター）",
+   "status": "営業中",
+   "statusNote": "通常開館。開館時間は9時〜17時（入館受付は16時45分まで）。休館日は毎週水曜・第3木曜（祝日の場合は直後の平日）と12/29〜1/3。",
+   "ages": {
+    "text": "体験ごとの年齢制限：「地震体験 満3歳以上」「暴風雨体験 小学校1年生以上」「VR体験 小学2年生以上かつ身長100cm以上」「消火体験 小学校3年生以上」「応急手当 小学校4年生以上」「浸水体験 小学校５年生以上」「救出救助体験 中学校1年生以上」「※煙体験、都市型水害体験は特に年齢制限は設けておりません。」",
+    "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/honjo/index.html"
+   },
+   "fees": {
+    "age0": "無料",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "無料",
+    "adult": "無料",
+    "condition": "「見学・体験すべて無料！」「入館料 無料」。駐車場も無料（車高2.0mまで）。",
+    "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/honjo/index.html"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "地震体験コーナー「対象：満3歳以上」。暴風雨体験は小学1年生以上で「小学生は30mm/hの雨と、10m/sの風との体験になります」。VRは小学2年生以上かつ身長100cm以上。消火体験は小学3年生以上（「保護者の方と一緒の場合は1、2年生もできる場合があります」）。",
+     "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/honjo/index.html"
+    }
+   ],
+   "nursingRoom": {
+    "text": null,
+    "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/honjo/index.html と https://www.tfd.metro.tokyo.lg.jp/taiken/tokyo_bskan/faq.html に記載なし"
+   },
+   "diaper": {
+    "text": null,
+    "url": "同上の2ページに記載なし"
+   },
+   "stroller": {
+    "text": null,
+    "url": "同上の2ページに記載なし"
+   },
+   "reservation": {
+    "text": "個人は予約なしでも空きがあれば体験できるが、予約が確実。「個人利用の方 空きがあれば予約なしで体験ができますが、団体予約の状況などにより、ご希望の体験ができない場合や、お待ちいただく場合もありますので、事前に電話で予約すると確実です。」。Web予約は利用日の5日前まで。",
+    "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/honjo/index.html"
+   },
+   "access": {
+    "text": "「JR総武線錦糸町駅北口、半蔵門線錦糸町駅4番出口から徒歩10分」「京成押上線・都営浅草線・東武スカイツリーライン・半蔵門線 押上駅 B1、B2出口から徒歩10分（B1の方が便利です）」",
+    "url": "https://www.tfd.metro.tokyo.lg.jp/taiken/honjo/index.html"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "暴風雨体験をする人はタオル持参と書かれている（よくある質問）。",
+   "group": "museum"
+  },
+  {
+   "name": "よみうりランド（遊園地）",
+   "status": "営業中",
+   "statusNote": "営業中。10月29日からジュエルミネーション開催で、トップページに告知あり。CAR factoryの「ev-グランプリ」「マイレーシング」「カスタムガレージ」は「9/4(金)～10月下旬まで、CAR factoryリニューアルのため運休」。",
+   "ages": {
+    "text": "「3歳になられたお子様から料金が必要となります。」「📍アトラクションは誕生日起算で3歳から有料、2歳以下は無料」",
+    "url": "https://yldfaq.yomiuri.co.jp/yomiurilandfaq/yldfaq/10 ／ https://www.yomiuriland.com/page/enjoy_new03/"
+   },
+   "fees": {
+    "age0": "無料（3歳から有料）",
+    "age1": "無料（3歳から有料）",
+    "age2": "無料（3歳から有料）",
+    "age3": "入園料1,000円（オンライン800円）、ワンデーパス2,500円（オンライン2,100円）",
+    "age4": "入園料1,000円（オンライン800円）、ワンデーパス2,500円（オンライン2,100円）",
+    "adult": "入園料1,800円（オンライン1,600円）、ワンデーパス5,900円（オンライン5,500円）。おとなは18〜64歳。",
+    "condition": "未就学児の区分は「（3歳以上～小学生未満）」。「※のりものは3歳以上が有料となります。」アトラクションごとの利用券は300〜1200円。ゴンドラは片道300円・往復500円（「※3歳以上」）。アフターパス（15時〜）は未就学児1,500円（オンライン1,200円）。料金ページのエクスプレスワンデーパス欄に「2026年10月29日のチケットから価格が変更となります。」とある。",
+    "url": "https://www.yomiuriland.com/charge/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "2歳から乗れるもの：「スピンドライブ 2歳以上・2歳または身長90cm未満要付添」「ゴーゴートロッコ 2歳以上、6歳未満要付添」「ディノランナー 2歳以上 身長90cm以上 身長110cm未満の方は1名までにつき、中学生以上の方1名の付添が必要です」",
+     "url": "https://www.yomiuriland.com/attraction/"
+    },
+    {
+     "text": "年齢・身長の条件がないもの（付添条件のみ）：「メリーゴーランドドッグ」「スイーツカップ」「Sky-Go-LAND」「ちびっこ消防隊けしっぴー」「アニマルレスキュー」「お化け屋敷ひゅ～どろ」はいずれも「5歳未満要付添」。「プテラノドンとお空の大冒険」は「身長110cm未満の方は2名までにつき、中学生以上の方1名の付添が必要です」。「プレイパーク」「アシカショー」は「どなたでもご利用になれます」。",
+     "url": "https://www.yomiuriland.com/attraction/"
+    },
+    {
+     "text": "3歳以上のもの：「ちえくらべ「たまゴロー」3歳以上、6歳未満要付添」「ヒーロートレーニングセンター”ミッション8” 3歳以上、小学生未満要付添」「ぶんぶんスイング／フロッグホッパー／ミラクルわんルーム／わんわんコースターわんデット 身長90cm以上 3歳以上、5歳未満要付添」「ぐるぐるドライブ 身長90～130cm未満 3歳以上」",
+     "url": "https://www.yomiuriland.com/attraction/"
+    },
+    {
+     "text": "4歳以上・身長条件のもの：「スピンランウェイ 身長110cm以上、130cm未満要付添 4歳以上 6歳未満要付添」「くるくるコンパス 身長90cm以上、120cm未満要付添」「シーチキン GO！ 90㎝以上、120cm未満要付添」「U.F.O.ソースシューティング 90㎝以上…5歳未満要付添」「カスタムガレージ 身長90cm以上 110cm未満要付添 小学生未満要付添」「ファイト イッパーツ！ 身長105cm以上…6歳未満要付添」「のぼっタワー 身長110cm以上」「リポビタンロケット☆ルナ／スプラッシュU.F.O. 身長110cm以上、130cm未満要付添」「ミルキーウェイ ペアシート：身長100 cm以上、120 cm未満要保護者付添」「ジャイアントスカイリバー 5歳以上、10歳未満要付添」",
+     "url": "https://www.yomiuriland.com/attraction/"
+    },
+    {
+     "text": "大型コースター類：「バンデット／ルーピングスターシップ 身長120cm以上 小学生以上」「クレージーヒュー／クレージーストン 身長130cm以上 小学生以上」「ハシビロGO！ 身長120cm以上」「バンジージャンプ 12歳以上」",
+     "url": "https://www.yomiuriland.com/attraction/"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式FAQに記載あり。「園内に2ヶ所ございます。（グッジョバエリア、キドキド裏）カーテン付きの場所もございますので、授乳も可能です。お湯、電子レンジのご用意もございます。」",
+    "url": "https://yldfaq.yomiuri.co.jp/yomiurilandfaq/yldfaq/02"
+   },
+   "diaper": {
+    "text": "おむつ替え台の有無は、見たページ（FAQのベビールームの回答と、小さなお子さま向けページ）に記載なし。FAQに「オムツは販売していますか？」という項目はあるが、その回答は未取得。",
+    "url": "https://yldfaq.yomiuri.co.jp/yomiurilandfaq/yldfaq/02 ／ https://www.yomiuriland.com/page/enjoy_new03/"
+   },
+   "stroller": {
+    "text": "貸出あり。「入園後、入園口付近にございますインフォメーションにて1台につき500円で貸出ししております。※ご予約はできません。※台数に限りがあります」。ゴンドラは「おたたみになられた状態でお願いいたします」（扉の開放幅48cmまで）。レストランGooddayとラ・ピシーヌは「屋外にベビーカー置き場もございます」。自転車・三輪車・キックボードなど自走する乗り物は持ち込み不可。",
+    "url": "https://yldfaq.yomiuri.co.jp/yomiurilandfaq/yldfaq/06 ／ https://yldfaq.yomiuri.co.jp/yomiurilandfaq/08 ／ https://www.yomiuriland.com/page/enjoy_new03/ ／ https://yldfaq.yomiuri.co.jp/yomiurilandfaq/yldfaq/19"
+   },
+   "reservation": {
+    "text": "入園に予約が必要という記載なし。チケットは窓口の通常価格と、公式オンライン価格（安い）の2種類。エクスプレスワンデーパスは「よみランCLUB限定。窓口での販売はございません」。",
+    "url": "https://www.yomiuriland.com/charge/"
+   },
+   "access": {
+    "text": "「京王線「京王よみうりランド駅」よりゴンドラ「スカイシャトル」をご利用いただくとスムーズにご来園いただけます」。小田急線は「読売ランド前駅」か「新百合ヶ丘駅」から小田急バスで「よみうりランド」下車（「入園口は目の前」）。駅からの徒歩分は交通アクセスページの本文に記載なし。",
+    "url": "https://www.yomiuriland.com/traffic/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "所在地は東京都稲城市矢野口4015-1。料金ページの未就学児区分は「3歳以上～小学生未満」で、3歳未満は無料（FAQで確認）。運休中のアトラクションは10月下旬まで。",
+   "group": "museum"
+  },
+  {
+   "name": "杉並アニメーションミュージアム（東京工芸大学 杉並アニメーションミュージアム）",
+   "status": "営業中",
+   "statusNote": "通常開館。開館時間は10:00〜18:00。休館日は「毎週月曜、年末年始(12/28～1/4)」で「月曜祝日は開館し、翌平日が休館」。10月は「シンエイ動画50周年展」を開催中。次回は「南家こうじの世界展」で、会期は「2026/11/11〜2027/4/4（会期中年末年始休館、展示入れ替え日あり）」。",
+   "ages": {
+    "text": "「何歳くらいが対象の施設ですか？／小さなお子様から、ご年配の方までが対象です。」",
+    "url": "https://sam.or.jp/faq/"
+   },
+   "fees": {
+    "age0": "無料",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "無料",
+    "adult": "無料",
+    "condition": "「シアター上映等も含めて、料金は無料です。ただし、ワークショップなどに参加した場合、材料費などがかかることがあります。」",
+    "url": "https://sam.or.jp/faq/"
+   },
+   "ageRestrictedAreas": [],
+   "nursingRoom": {
+    "text": "公式に記載あり。「授乳室 乳児への授乳やおむつ替えを行う部屋です。」（場所はFAQに「４階授乳室」）",
+    "url": "https://sam.or.jp/guide ／ https://sam.or.jp/faq/"
+   },
+   "diaper": {
+    "text": "公式に記載あり。「おむつ換えできる場所はありますか？／３階女子トイレ、または、４階授乳室をご利用ください。」",
+    "url": "https://sam.or.jp/faq/"
+   },
+   "stroller": {
+    "text": "貸出なし。「ベビーカーの貸出しはありますか？／ミュージアムでの貸出しは行っておりません。」。館内での使用可否と置き場は記載なし。",
+    "url": "https://sam.or.jp/faq/"
+   },
+   "reservation": {
+    "text": "個人の予約要否は記載なし。団体は「ご予約をお願いします」。ライブラリーの書籍を確実に見たい場合はメールフォームで事前予約。",
+    "url": "https://sam.or.jp/faq/"
+   },
+   "access": {
+    "text": "「「荻窪駅北口」より関東バス…約5分⇒「荻窪警察署前」下車⇒ 徒歩2分」「「荻窪駅北口」より徒歩約20分」「「西荻窪駅北口」より徒歩約16分」。専用駐車場はない。",
+    "url": "https://sam.or.jp/access"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "杉並区の施設。",
+   "group": "museum"
+  },
+  {
+   "name": "上野動物園",
+   "status": "営業中",
+   "statusNote": "2026年10月時点で休園の告知はなし。公式の記載は「開園時間 9時30分～17時00分」「休園日 月曜日（月曜日が国民の祝日や振替休日の場合はその翌日が休園日）」「年末年始（12月29日～翌年1月1日）」で、2026年4月〜2027年3月の開園日カレンダーも掲載されている。",
+   "ages": {
+    "text": "園全体の対象年齢は公式に記載なし。「モルモットとなかよし」は「対象年齢 3歳～12歳 ※年齢制限はありませんが、お子さまを対象としたプログラム内容となっています。」「※1歳未満のお子さまはモルモットにはふれずご覧いただくのみでお願いします。」",
+    "url": "https://www.tokyo-zoo.net/ueno/events/guinea-pig/index.html"
+   },
+   "fees": {
+    "age0": "無料",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "無料",
+    "adult": "一般600円（団体480円）。65歳以上300円、中学生200円（都内在住・在学の中学生は無料）",
+    "condition": "「小学6年生まで 無料」「無料の方は入園券を購入せず、そのまま券売機先の改札口にお進みください。」",
+    "url": "https://www.tokyo-zoo.net/ueno/visitor-info/tickets/index.html"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "モルモットとなかよし（子ども動物園すてっぷ すてっぷ館1階）：土日祝を除く開園日に13:30／14:00／14:30の1日3回、各回6組（1組3名まで）。「対象年齢 3歳～12歳」「※小学校3年生以下のお子さまは、保護者同伴でご参加ください。」「※1歳未満のお子さまはモルモットにはふれずご覧いただくのみ」。開催期間は2026年4月21日(火)～2027年3月19日(金)（4/28～5/1と10/1をのぞく）",
+     "url": "https://www.tokyo-zoo.net/ueno/events/guinea-pig/index.html"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。「授乳室は園内に3ヵ所あります。授乳用チェア、ミルク用のお湯、ベビーベッドがあります。」場所は東園 さるやまキッチンベビールーム（女性専用スペース以外は男性も利用可）、西園 弁天門ベビールーム（同）、西園 休憩所内ベビールーム。ほかに東園の総合案内所前に屋外型簡易授乳室「mamaro」（ミルク用温水器なし）",
+    "url": "https://www.tokyo-zoo.net/ueno/visitor-info/infant-care/index.html"
+   },
+   "diaper": {
+    "text": "公式に記載あり。「おむつ替えができるベビーベッド 園内のトイレ（一部の男性トイレにはありません）、授乳ができるスペース内」。子ども用トイレは1ヵ所（西園 子ども動物園すてっぷ内）",
+    "url": "https://www.tokyo-zoo.net/ueno/visitor-info/infant-care/index.html"
+   },
+   "stroller": {
+    "text": "貸出あり（3ヵ所）。貸出場所は東園 正門前、西園 弁天門前・池之端門脇（池之端門脇は土日祝のみ）。料金は「1台1日500円（※現金のみ）」で、タイプはB型ベビーカー（リクライニング機能付き）、対象は「生後7ヵ月〜4歳くらい（体重18kgくらいまで）」。「ベビーカーなどの大型手荷物用ロッカーを数台ご用意しております。」台数は公式に記載なし",
+    "url": "https://www.tokyo-zoo.net/ueno/visitor-info/infant-care/index.html"
+   },
+   "reservation": {
+    "text": "入園は予約不要（公式の文言は「入口で入園券を購入」→「改札から入園」）。日付指定のオンラインチケットもある。モルモット体験は「先着順の予約制です。※予約は開催日当日の10:00から受け付けます。」",
+    "url": "https://www.tokyo-zoo.net/ueno/visitor-info/access/index.html"
+   },
+   "access": {
+    "text": "東園・正門：「JR上野駅『公園口』から徒歩5分」。西園・弁天門：「JR上野駅『不忍口』から徒歩5分」「京成電鉄上野駅から徒歩4分」「東京メトロ銀座線・日比谷線上野駅から徒歩8分」「都営地下鉄大江戸線上野御徒町駅から徒歩10分」。西園・池之端門：「東京メトロ千代田線根津駅から徒歩5分」。専用駐車場なし",
+    "url": "https://www.tokyo-zoo.net/ueno/visitor-info/access/index.html"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "FAQ（https://www.tokyo-zoo.net/ueno/visitor-info/faq/index.html）にも「小学生以下のお子様は都内外問わず全員無料」と記載あり。無料開園日は3/20・5/4・10/1。",
+   "group": "zoo-aquarium-park"
+  },
+  {
+   "name": "多摩動物公園",
+   "status": "営業中",
+   "statusNote": "休園の告知はなし。「開園時間 9時30分～17時00分」「入園および入園券・年間パスポートの販売は16時まで」「休園日 水曜日（祝日・振替休日の場合は翌日）」、年末年始（12/29～1/1）。",
+   "ages": {
+    "text": "園全体の対象年齢は公式に記載なし。体験プログラム「おしえて！モルモット博士！」は「対象年齢 3歳以上（座ってお話を聞くことができるお子さまから）が対象です。」",
+    "url": "https://www.tokyo-zoo.net/tama/events/moruhakase/index.html"
+   },
+   "fees": {
+    "age0": "無料",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "無料",
+    "adult": "一般600円（団体480円）。中学生200円、65歳以上300円",
+    "condition": "「小学生以下、都内在住・在学の中学生は無料です。」",
+    "url": "https://www.tokyo-zoo.net/tama/visitor-info/tickets/index.html"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "ライオンバス（有料・時間指定制）：大人（高校生以上～64歳）500円、こども（3歳～中学生）150円、65歳以上150円、「0歳～2歳 無料」。発券は9時30分から（売切れしだい終了）、運行は10時～16時",
+     "url": "https://www.tokyo-zoo.net/tama/exhibits/lion-bus-highlight/index.html"
+    },
+    {
+     "text": "おしえて！モルモット博士！（どんぐり広場）：13:15から1日4回、各20分程度。参加券が必要（開園時間からどんぐり広場横で配布、なくなり次第終了）。各回6組・1組4名まで。「対象年齢 3歳以上」「未就学児のお子さまは保護者同伴が必要です。」2026年11月7日(土)は中止",
+     "url": "https://www.tokyo-zoo.net/tama/events/moruhakase/index.html"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。「授乳室は、ウォッチングセンター、昆虫園本館、コアラ館下売店休憩所内、アフリカ園無料休憩所内の4ヵ所にあります。入室できるのは女性の方のみです。」ウォッチングセンター内とアフリカ園無料休憩所の授乳室には調乳用温水器を設置",
+    "url": "https://www.tokyo-zoo.net/tama/visitor-info/infant-care/index.html"
+   },
+   "diaper": {
+    "text": "公式に記載あり。「おむつ替えができるベビーベッドは、昆虫園本館2階トイレ、サバンナキッチン前休憩所隣のトイレ、オランウータンの森トイレを除くすべての男子トイレ・女子トイレおよび授乳室にあります。」",
+    "url": "https://www.tokyo-zoo.net/tama/visitor-info/infant-care/index.html"
+   },
+   "stroller": {
+    "text": "貸出あり。場所はウォッチングセンター前（返却も同じ）、料金は「1台1日500円」。タイプはB型（リクライニング機能付き）、対象は「生後7ヵ月〜4歳児（体重18kg）くらいまで」。「昆虫生態園、コアラ館、もぐらのいえなど、ベビーカーを持ち込めない施設があります。」「シャトルバスには、ベビーカーを折りたたみ手に提げてご乗車ください。」台数は公式に記載なし",
+    "url": "https://www.tokyo-zoo.net/tama/visitor-info/infant-care/index.html"
+   },
+   "reservation": {
+    "text": "入園の予約要否は、tickets・accessページに記載なし。ライオンバスは時間指定制の乗車券を「ライオンバスステーション乗車券うりば」で購入する方式。モルモット博士は当日配布の参加券制",
+    "url": "https://www.tokyo-zoo.net/tama/exhibits/lion-bus-highlight/index.html"
+   },
+   "access": {
+    "text": "「京王線、多摩モノレール『多摩動物公園駅』下車、徒歩1分」。一般用駐車場なし",
+    "url": "https://www.tokyo-zoo.net/tama/visitor-info/access/index.html"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "FAQ（https://www.tokyo-zoo.net/tama/visitor-info/faq/index.html）では授乳室の4ヵ所目を「サバンナキッチン無料休憩所内」と書いており、infant-careページの「アフリカ園無料休憩所内」と表記が異なる。",
+   "group": "zoo-aquarium-park"
+  },
+  {
+   "name": "板橋区立こども動物園（東板橋公園内／板橋こども動物園）",
+   "status": "営業中",
+   "statusNote": "区のページ（2026年8月4日更新）に、開園時間は3～11月が午前10時～午後4時30分、12～2月が午前10時～午後4時と記載。休園日は「月曜日（月曜日が祝日の場合は、祝日明けの日）」「12月29日から1月3日まで」「2月の第3火曜日」。指定管理者は公益財団法人ハーモニィセンター。指定管理者のサイトに2026年11月のお知らせも掲載されている。",
+   "ages": {
+    "text": "ポニー引馬は「対象 2歳から小学6年生まで」（区・2026年8月更新）。指定管理者のサイトは「【対象】満２歳から小学６年生（５歳以下は要保護者同伴）」。モルモットだっこ、ヤギ・ヒツジのふれあいは「どなたでもご利用いただけます」",
+    "url": "https://www.city.itabashi.tokyo.jp/bousai/kouen/kouen/doubutsuen/1006627.html"
+   },
+   "fees": {
+    "age0": "無料",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "無料",
+    "adult": "無料",
+    "condition": "「入園料 無料」",
+    "url": "https://www.city.itabashi.tokyo.jp/bousai/kouen/kouen/doubutsuen/1006627.html"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "ポニー乗馬（引馬）：午前10時～11時20分、午後1時30分～3時20分。「参加できるのは、午前・午後１人１回ずつ」「悪天候の場合は中止」「満２歳から小学６年生（５歳以下は要保護者同伴）」。利用方法は「直接、馬場の列にお並びください」",
+     "url": "https://itabashi-park-zoo.com/honen/"
+    },
+    {
+     "text": "モルモットの抱っこ（午前10時～11時20分、午後1時30分～3時20分、雨天中止）とヤギ・ヒツジのふれあい（午前10時～11時、午後1時30分～3時）は「どなたでもご利用いただけます」",
+     "url": "https://www.city.itabashi.tokyo.jp/bousai/kouen/kouen/doubutsuen/1006627.html"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。施設機能に「授乳室」があり、「個室2部屋をご用意しております。」「【調乳器】ミルク用にご利用ください。」",
+    "url": "https://www.city.itabashi.tokyo.jp/bousai/kouen/kouen/doubutsuen/1006627.html"
+   },
+   "diaper": {
+    "text": "公式に記載あり。施設機能に「おむつ交換スペース」「親子トイレ」「幼児用トイレ」。指定管理者のFAQにも「板橋こども動物園（本園）には授乳室、おむつ交換台があります。」",
+    "url": "https://itabashi-park-zoo.com/faq/"
+   },
+   "stroller": {
+    "text": null,
+    "url": "区のページ（https://www.city.itabashi.tokyo.jp/bousai/kouen/kouen/doubutsuen/1006627.html）、指定管理者の本園ページ・FAQ（https://itabashi-park-zoo.com/honen/ ・ https://itabashi-park-zoo.com/faq/）のいずれにもベビーカーの記載なし"
+   },
+   "reservation": {
+    "text": "個人の予約要否は公式に記載なし。ふれあいプログラムは「直接、馬場の列にお並びください」などの当日並び方式。「大人・子ども含め10人以上で来園される場合は事前予約が必要です。」",
+    "url": "https://itabashi-park-zoo.com/faq/"
+   },
+   "access": {
+    "text": "「都営三田線 板橋区役所前駅より 徒歩8分」。区のページも「都営三田線『板橋区役所前』下車 徒歩8分」。公園内に駐車場なし",
+    "url": "https://itabashi-park-zoo.com/about/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "ポニーの対象年齢は公式ページ間で食い違う。区シティプロモーションの古いページ（https://www.city.itabashi.tokyo.jp/1014983/1015442/1014984/1019517.html、2021年3月22日更新）は「(注意)3歳から小学生対象」。区の施設ページ（2026年8月更新）と指定管理者のサイトは「2歳（満2歳）から小学6年生」。記事には新しいほうの2歳を推奨。",
+   "group": "zoo-aquarium-park"
+  },
+  {
+   "name": "江戸川区自然動物園（行船公園内）",
+   "status": "営業中",
+   "statusNote": "区の施設ページと広報えどがわ（2026年5月1日号）に、開園時間「10時～16時30分（土曜日・日曜日・祝日・振替休日は9時30分から。11～2月は16時まで）」、休園日「月曜日（祝日・振替休日の場合は翌日）」、年末年始（12/29～1/1）と記載。台風などで警報レベル3が出たときは閉園。",
+   "ages": {
+    "text": "園の対象年齢は公式に記載なし。ふれあいコーナーは「モルモットなどの小動物と触れ合うことができます」とあり、年齢指定の記載なし",
+    "url": "https://www.city.edogawa.tokyo.jp/e004/kuseijoho/kohokocho/kohoedogawa/2026/0501/tokushu.html"
+   },
+   "fees": {
+    "age0": "無料",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "無料",
+    "adult": "無料",
+    "condition": "「入園料 無料」",
+    "url": "https://www.city.edogawa.tokyo.jp/e066/kuseijoho/gaiyo/shisetsuguide/bunya/koendobutsuen/shizen.html"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "ふれあいコーナー（年齢制限の記載なし）：「水曜日～日曜日 10時20分・10時45分・11時10分・13時30分・13時55分・14時20分から」「各30人（現地先着順）」「当日、午前の部は9時45分から、午後の部は13時から自然動物園サービスセンターで入場券を配布」",
+     "url": "https://www.city.edogawa.tokyo.jp/e004/kuseijoho/kohokocho/kohoedogawa/2026/0501/tokushu.html"
+    }
+   ],
+   "nursingRoom": {
+    "text": null,
+    "url": "区の施設ページ（https://www.city.edogawa.tokyo.jp/e066/kuseijoho/gaiyo/shisetsuguide/bunya/koendobutsuen/shizen.html）と広報特集ページに授乳室の記載なし"
+   },
+   "diaper": {
+    "text": "動物園単体の記載はない。区の「おむつ替えできる公園」（2025年3月11日更新）の一覧に「行船公園 北葛西3丁目2番1号 3（か所）」とある。動物園内かどうかは書かれていない",
+    "url": "https://www.city.edogawa.tokyo.jp/e066/kuseijoho/gaiyo/shisetsuguide/bunya/koendobutsuen/omutugaenodekirukouen.html"
+   },
+   "stroller": {
+    "text": null,
+    "url": "区の施設ページと広報特集ページにベビーカーの記載なし"
+   },
+   "reservation": {
+    "text": "個人の予約要否は公式に記載なし。ふれあいコーナーは「現地先着順」で当日入場券を配布。遠足などの団体がバスで来る場合は、区に確認したうえで公園占用の申請が必要",
+    "url": "https://www.city.edogawa.tokyo.jp/e066/kuseijoho/gaiyo/shisetsuguide/bunya/koendobutsuen/shizen.html"
+   },
+   "access": {
+    "text": "「東京メトロ東西線『西葛西駅』より徒歩15分」。バスは都営バス〔新小21〕西葛西駅行で「宇喜田」または「北葛西2丁目」下車すぐ（新小岩駅・船堀駅から）",
+    "url": "https://www.city.edogawa.tokyo.jp/e066/kuseijoho/gaiyo/shisetsuguide/bunya/koendobutsuen/shizen.html"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "運営元のえどがわ環境財団のサイト（https://www.edogawa-kankyozaidan.jp/zoo/）は、curl・WebFetch・ブラウザのいずれでも接続拒否（ECONNREFUSED）で開けなかった。このため授乳室・おむつ・ベビーカーは財団サイトで確認できていない。根拠は区公式の2ページのみ。",
+   "group": "zoo-aquarium-park"
+  },
+  {
+   "name": "足立区生物園",
+   "status": "営業中",
+   "statusNote": "開園時間は11月-1月が9:30-16:30、2月-10月が9:30-17:00（最終入場は閉園30分前）。「ふれあいコーナーとオーストラリアドームは、15:30に閉門」。休園日は月曜日と年末年始（12/29～1/1）。「※祝日及び都民の日(10月1日)は開園し、翌平日に休園」。長期休館の告知はなし。",
+   "ages": {
+    "text": "園の対象年齢は公式に記載なし。モルモットのふれあいは「対象 どなたでも」",
+    "url": "http://seibutuen.jp/event/periodic_event/2025-01-15.html"
+   },
+   "fees": {
+    "age0": "無料",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "無料",
+    "adult": "大人（高校生以上）300円。子供（小・中学生）150円",
+    "condition": "「未就学（幼児など）：無料」。70歳以上も無料。1日券は当日に限り再入園できる",
+    "url": "http://www.seibutuen.jp/guidance/information.html"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "モルモットのふれあい（ふれあいコーナー）：10:00～12:00、13:30～15:30。「モルモットを膝にのせて、ふれあいができます。」「対象 どなたでも」「参加費 入園料のみ」「※夏休み等の混雑が予想される時期は、台に乗ったモルモットの背中をなでる形式で実施」",
+     "url": "http://seibutuen.jp/event/periodic_event/2025-01-15.html"
+    },
+    {
+     "text": "園内マップに「⑦ネコの部屋(ふれあい中止)」と記載",
+     "url": "http://www.seibutuen.jp/exhibition/josetsu_map.html"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。「授乳時は、2階オムツ、おむつ替え室奥の授乳室をご利用ください。」",
+    "url": "http://www.seibutuen.jp/guidance/information_c.html"
+   },
+   "diaper": {
+    "text": "公式に記載あり。オムツ交換用のベビーシートは「2階おむつ替え室」と「1階トイレ（折り畳み式）」。子ども用トイレは「1階男子トイレ、女子トイレに設置」",
+    "url": "http://www.seibutuen.jp/guidance/information_c.html"
+   },
+   "stroller": {
+    "text": "「ベビーカーは園内でご利用いただけます。」「入口にベビーカー置き場を設置しております。鍵等はございません」。貸出は公式に記載なし",
+    "url": "http://www.seibutuen.jp/guidance/information_c.html"
+   },
+   "reservation": {
+    "text": "個人の予約要否は公式に記載なし。団体は「人数に関わらず事前に団体予約のお申込みをお願いいたします。」",
+    "url": "http://www.seibutuen.jp/guidance/information.html"
+   },
+   "access": {
+    "text": "「竹ノ塚駅の東口から徒歩約20分（1.5km）」。バスは竹の塚駅東口から「保木間仲通り」下車徒歩10分、綾瀬駅西口から「保木間二丁目」下車徒歩8分など",
+    "url": "http://www.seibutuen.jp/guidance/information.html"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "https://www.seibutuen.jp はSSL証明書のホスト名が一致せず（*.sakura.ne.jp）、curlが失敗した。http:// では200で取れたため、出典URLはhttpで記載。モルモットのページはJavaScriptで描画されるため、ブラウザで読み取った。",
+   "group": "zoo-aquarium-park"
+  },
+  {
+   "name": "羽村市動物公園（ヒノトントンZOO）",
+   "status": "営業中",
+   "statusNote": "営業時間は「【3月～10月】9:00～16:30（最終入園時間16:00）」「【11月～2月】9:00～16:00（最終入園時間15:30）」。「休園日 毎週月曜日と1月1日 ※ただし月曜日が国民の休日に当たるときや繁忙期には開園します。」令和8年度は毎月第3月曜日が特別開園日（「はむずーマンデー」）。",
+   "ages": {
+    "text": "「入園料は何才からかかりますか？ 18才から有料です。」モルモット教室は「4歳未満の方はご参加いただけません。」",
+    "url": "https://hamurazoo.jp/faq/"
+   },
+   "fees": {
+    "age0": "無料",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "無料",
+    "adult": "18才以上65才未満 500円。65才以上 200円",
+    "condition": "「18才未満 無料」「年齢が確認できるものをご提示ください」",
+    "url": "https://hamurazoo.jp/info/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "モルモット教室：毎週日曜日11:00～11:30、スタディホール内。参加費「1名500円」、定員20名、受付はサービスセンターで9:00～10:50。「4歳未満の方はご参加いただけません。」",
+     "url": "https://hamurazoo.jp/event/detail.html?CN=366709"
+    },
+    {
+     "text": "モルモットのおやつタイム（年齢の記載なし）：参加費100円。平日13:30～14:00など",
+     "url": "https://hamurazoo.jp/event/detail.html?CN=336168"
+    },
+    {
+     "text": "さるのエサ（年齢の記載なし）：参加費100円、9:00～13:00",
+     "url": "https://hamurazoo.jp/event/detail.html?CN=336163"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。「管理事務所・スタディホールにご用意がございます。お湯や電子レンジなどのご用意はございません。お湯が必要な場合はお持ちください。」",
+    "url": "https://hamurazoo.jp/info/"
+   },
+   "diaper": {
+    "text": "公式に記載あり。「おむつ交換ベッドについて 園内数ヵ所にご用意がございます。詳しくはイラストマップをご覧ください。」",
+    "url": "https://hamurazoo.jp/info/"
+   },
+   "stroller": {
+    "text": "貸出あり。「200円にてお貸出しいたします。」「※リクライニング無・対象年齢7ヶ月頃～2才。」「＊予約は承っておりません。」「＊数に限りがある為、ご利用いただけない場合がございます。」台数は公式に記載なし",
+    "url": "https://hamurazoo.jp/info/"
+   },
+   "reservation": {
+    "text": "予約要否は公式に明記なし。前売券（WEB入園チケット）の購入リンクがある。ベビーカー・車イスの貸出は「予約は承っておりません」",
+    "url": "https://hamurazoo.jp/info/"
+   },
+   "access": {
+    "text": "「JR青梅線 羽村駅東口下車 徒歩20分」。バスは立川バスで「羽村団地」下車、または羽村市コミュニティバスはむらん羽村東コースで「動物公園前」下車",
+    "url": "https://hamurazoo.jp/access/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "旧公式URL（http://www.t-net.ne.jp/~hamura-z/）は https://hamurazoo.jp/ へ転送されることを確認した。ポニー乗馬は公式の営業案内・イベント一覧・FAQのいずれにも記載がない。",
+   "group": "zoo-aquarium-park"
+  },
+  {
+   "name": "井の頭自然文化園",
+   "status": "営業中",
+   "statusNote": "開園時間は9時30分～17時00分（入園・券販売は16時まで）。「休園日 月曜日（祝日・振替休日の場合は翌日）」、年末年始。動物園（本園）と水生物園（分園）に分かれていて、「両園の間を行き来するためには、いったん出口から出て…徒歩約5分」。「1枚のチケットで本園と分園の両方に入園できます。」",
+   "ages": {
+    "text": "園全体の対象年齢は公式に記載なし。ふれあいプログラム「こんにちはモルモット」は「お話の内容 2～4歳向け（どなたでも参加することができます）」",
+    "url": "https://www.tokyo-zoo.net/inokashira/events/moru/index.html"
+   },
+   "fees": {
+    "age0": "無料",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "無料",
+    "adult": "一般400円（団体320円）。中学生150円、65歳以上200円",
+    "condition": "「小学生以下、都内在住・在学の中学生は無料です。」",
+    "url": "https://www.tokyo-zoo.net/inokashira/visitor-info/tickets/index.html"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "こんにちはモルモット（モルモットふれあいコーナー）：日曜以外の開園日に13時30分から15分ずつ4回、1回6組（1組4名まで）。「2～4歳向け（どなたでも参加することができます）」。「カゴに入ったモルモットの背中をなでるふれあい方式」",
+     "url": "https://www.tokyo-zoo.net/inokashira/events/moru/index.html"
+    },
+    {
+     "text": "スポーツランド（園内のミニ遊園地、東京都公園協会が運営）：コイン式遊具・メリーゴーランド・ミニカーが各100円。動物行進とティーカップは「当面の間、運休を継続」。年齢・身長制限は公式ページに記載なし",
+     "url": "https://www.tokyo-park.or.jp/park/inokashira/facility/"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。「授乳室（２か所）」は動物園（本園）管理事務所内（「女性の方のみ入室・ご利用いただけます」、お湯・電子レンジは係員に声かけ、ベビーカーは建物内に持ち込めず入口手前の置場を利用）と、動物園（本園）資料館1階のベビーケアルーム「mamaro」1台",
+    "url": "https://www.tokyo-zoo.net/inokashira/visitor-info/infant-care/index.html"
+   },
+   "diaper": {
+    "text": "公式に記載あり。「おむつ替えシートは、動物園（本園）の資料館トイレを除くすべてのトイレにあります。なお、授乳室ではおむつ交換はできません。」",
+    "url": "https://www.tokyo-zoo.net/inokashira/visitor-info/infant-care/index.html"
+   },
+   "stroller": {
+    "text": "「ベビーカーの貸出はおこなっていません。」通行できる園路は「車いす・ベビーカー利用者マップ」を参照するよう案内あり。管理事務所の入口手前にベビーカー置場あり",
+    "url": "https://www.tokyo-zoo.net/inokashira/visitor-info/infant-care/index.html"
+   },
+   "reservation": {
+    "text": "入園は券売窓口で購入できる。日付指定のオンラインチケットもある。こんにちはモルモットは事前ウェブ予約制で、「参加希望日の1週間前の正午からウェブ予約申込受付を開始」「園内での整理券配布は終了しました」",
+    "url": "https://www.tokyo-zoo.net/inokashira/events/moru/index.html"
+   },
+   "access": {
+    "text": "「JR中央線・総武線、京王井の頭線『吉祥寺駅』公園口（南口）から徒歩約10分」。出入口は正門・弁天門（動物園＝本園側）と七井門（水生物園＝分園側）の3か所。ゲート別の徒歩分数は記載なし",
+    "url": "https://www.tokyo-zoo.net/inokashira/visitor-info/access/index.html"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "",
+   "group": "zoo-aquarium-park"
+  },
+  {
+   "name": "葛西臨海水族園",
+   "status": "営業中",
+   "statusNote": "現在の施設で営業中。「葛西臨海水族園は2028年（令和10年）にリニューアルオープンする予定です。」2026年10月14日のお知らせでは、新施設への引っ越しを控えて「現時点では新たなクロマグロの導入を控えており、群れの数が徐々に減ってきています」。現施設の休園時期は、確認したページに記載なし。開園時間は9時30分～17時00分、休園日は水曜日（祝日なら翌日）と年末年始。",
+   "ages": {
+    "text": "園全体の対象年齢は公式に記載なし。「当面のあいだ、ふれあいプログラムを休止します。再開は未定です。」",
+    "url": "https://www.tokyo-zoo.net/kasai/visitor-info/faq/index.html"
+   },
+   "fees": {
+    "age0": "無料",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "無料",
+    "adult": "一般700円（団体560円）。中学生250円、65歳以上350円",
+    "condition": "「小学6年生まで 無料」「小学生以下、都内在住・在学の中学生は無料です。」",
+    "url": "https://www.tokyo-zoo.net/kasai/visitor-info/tickets/index.html"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "ふれあいプログラムは当面休止（再開未定）",
+     "url": "https://www.tokyo-zoo.net/kasai/visitor-info/faq/index.html"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。「授乳室（2か所）」は正門横レストハウス（「入室できるのは女性の方のみ」）と、本館2階のベビーケアルーム「mamaro」3台。お湯は案内カウンター・レストラン・チケット売り場事務所のスタッフに、電子レンジはレストランのスタッフに依頼",
+    "url": "https://www.tokyo-zoo.net/kasai/visitor-info/infant-care/index.html"
+   },
+   "diaper": {
+    "text": "公式に記載あり。「おむつ交換台 園内のすべてのトイレに設置しています。」子ども用補助便座は本館のすべての洋式トイレに設置",
+    "url": "https://www.tokyo-zoo.net/kasai/visitor-info/infant-care/index.html"
+   },
+   "stroller": {
+    "text": "「ベビーカーの貸出はおこなっておりません。」「ベビーカーでご入館いただけますが、館内にベビーカー置き場はございません。ベビーカー置き場はチケット売り場のみです。」館内には階段を使う展示がある（「ペンギンの生態」エリア階段下の水槽、「東京の海」エリアの階段上通路、「発光生物」）",
+    "url": "https://www.tokyo-zoo.net/kasai/visitor-info/infant-care/index.html"
+   },
+   "reservation": {
+    "text": "入園の予約要否は公式に明記なし。日付指定のオンラインチケットがある（「インターネット上のオンライン決済による日付指定の入場券です」）",
+    "url": "https://www.tokyo-zoo.net/kasai/visitor-info/tickets/index.html"
+   },
+   "access": {
+    "text": "「JR 京葉線『葛西臨海公園』駅下車、徒歩5分」。バスは都バス「葛西臨海公園駅前」停留所、京成バス「葛西臨海公園駅」停留所から徒歩5分。専用駐車場なし（葛西臨海公園駐車場を利用）",
+    "url": "https://www.tokyo-zoo.net/kasai/visitor-info/access/index.html"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "リニューアルのお知らせ：https://www.tokyo-zoo.net/kasai/news/13576/index.html （2026年10月14日）。リニューアル特設サイト（https://kasai.metro.tokyo.lg.jp/）はJavaScript描画で本文が取れず未確認。",
+   "group": "zoo-aquarium-park"
+  },
+  {
+   "name": "サンシャイン水族館",
+   "status": "営業中",
+   "statusNote": "営業中。お知らせに「【9/24(木)～11/4(水)】『サンシャインアクアリング』水槽 保守点検工事に伴う展示休止」「休館日のお知らせ 2026/11/12(木),2027/1/14(木)」とある。料金ページHTML内の「緊急事態宣言…臨時休館」の文言はコメントアウトされた旧表示で、画面には出ない。",
+   "ages": {
+    "text": "「Q 入場チケットは何才から必要ですか？ 4才以上から入場チケットが必要です。3才以下は入場チケット不要です。」",
+    "url": "https://sunshinecity.jp/aquarium/information/faq.html"
+   },
+   "fees": {
+    "age0": "入場チケット不要（3才以下）",
+    "age1": "入場チケット不要（3才以下）",
+    "age2": "入場チケット不要（3才以下）",
+    "age3": "入場チケット不要（3才以下）",
+    "age4": "800円（幼児 4才以上）",
+    "adult": "大人（高校生以上）2,600～3,200円。こども（小・中学生）1,300円",
+    "condition": "「入場日によりチケット料金が異なります。」料金カレンダーはPDF（https://sunshinecity.jp/file/aquarium/pdf/aquarium_calendar.pdf）",
+    "url": "https://sunshinecity.jp/aquarium/ticket/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "探検ガイドツアー（約40分・1名1,000円）：「推奨年齢：小学生以上(大人区分の付添で小学生以下のお客様も参加可能）」「小学生以下は大人区分の付添者(有料)が必要です。」",
+     "url": "https://sunshinecity.jp/aquarium/event_performance/performance/guidetour.html"
+    },
+    {
+     "text": "サンシャインラグーン プレミアムエサやり体験（約20分・1名1,000円）：推奨年齢と付添の条件は探検ガイドツアーと同じ文言",
+     "url": "https://sunshinecity.jp/aquarium/event_performance/performance/lagoon-feeding.html"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。「ベビールーム（授乳室）について 水族館 本館2階に設置しております。オムツ替えベッド、授乳用個室、ミルク用のお湯のサービスがございます。」",
+    "url": "https://sunshinecity.jp/aquarium/information/child.html"
+   },
+   "diaper": {
+    "text": "公式に記載あり。本館2階のベビールームに「オムツ替えベッド」",
+    "url": "https://sunshinecity.jp/aquarium/information/child.html"
+   },
+   "stroller": {
+    "text": "「水族館 本館入口にベビーカー置場があります。」「水族館ではベビーカーの貸し出しは行っておりません」（サンシャインシティ内のアルパで貸出あり）。FAQには「ベビーカーでご入場いただけますが、水族館内は幅が狭い通路があるため、ベビーカー置場のご利用を推奨」",
+    "url": "https://sunshinecity.jp/aquarium/information/child.html"
+   },
+   "reservation": {
+    "text": "「土日祝日および特定日(B・C・D日程)は、入場制限を行う場合がございますので、事前予約(日時指定) をおすすめします。」FAQは「Q 予約が必要な日を教えてください。 料金カレンダーのB・C・D日程です。」。再入場は「ご遠慮いただいております」",
+    "url": "https://sunshinecity.jp/aquarium/information/faq.html"
+   },
+   "access": {
+    "text": "サンシャインシティ公式の表記：「池袋駅（JR・東京メトロ・西武線・東武線）35番出口より徒歩約8分」「東池袋駅（東京メトロ有楽町線）6・7番出口より地下通路で徒歩約3分」「東池袋四丁目（サンシャイン前）停留場（都電荒川線）徒歩約4分」。いずれも「サンシャインシティ入口までの目安」。水族館はワールドインポートマートビル屋上（10F）",
+    "url": "https://sunshinecity.jp/information/access_train.html"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "水族館のアクセスページ（https://sunshinecity.jp/aquarium/access/）には徒歩分数がなく、サンシャインシティ公式へ誘導している。",
+   "group": "zoo-aquarium-park"
+  },
+  {
+   "name": "すみだ水族館",
+   "status": "営業中",
+   "statusNote": "「休館日 なし（年中無休）」「水族館のメンテナンスやイベント等により、ご入場ができない場合があります」。営業時間はFAQで平日10時～20時、土日祝9時～21時。告知に「オットセイエリアの改修工事に伴い、10/18（日）〜10/29日（木）の期間、オットセイの展示を休止」とある。",
+   "ages": {
+    "text": "「入場チケットは何歳から必要ですか？ 3歳から入場チケットが必要です。」",
+    "url": "https://www.sumida-aquarium.com/faq/"
+   },
+   "fees": {
+    "age0": "入場チケット不要（3歳から必要）",
+    "age1": "入場チケット不要（3歳から必要）",
+    "age2": "入場チケット不要（3歳から必要）",
+    "age3": "900円（幼児 3歳以上）",
+    "age4": "900円（幼児 3歳以上）",
+    "adult": "大人2,700円。高校生2,000円、中・小学生1,400円",
+    "condition": "一般料金。年間パスポートは大人6,000円、幼児2,000円など",
+    "url": "https://www.sumida-aquarium.com/about/price/"
+   },
+   "ageRestrictedAreas": [],
+   "nursingRoom": {
+    "text": "公式に記載あり。「給湯シンクと授乳室をそなえたベビー休憩室が、館内に計2カ所ございます。授乳室への男性の入室はできません。」「各フロアに1カ所ずつ」（FAQでは5F・6Fに各1カ所）",
+    "url": "https://www.sumida-aquarium.com/about/support/"
+   },
+   "diaper": {
+    "text": null,
+    "url": "ご利用サポート（https://www.sumida-aquarium.com/about/support/）とFAQ（https://www.sumida-aquarium.com/faq/）に「おむつ」「オムツ」の語は記載なし。書かれているのはベビー休憩室（給湯シンク・授乳室）と多目的ルーム／多目的トイレのみ"
+   },
+   "stroller": {
+    "text": "「貸し出し用のベビーカーはありますか？ ございません。東京スカイツリータウン内のサービスをご利用ください。」「5F水族館エントランス（館外）にベビーカー置き場がございます。」館内は「スロープやエレベーターで、車椅子やベビーカーを押したままでも問題なく進めます。」",
+    "url": "https://www.sumida-aquarium.com/faq/"
+   },
+   "reservation": {
+    "text": "「Webチケットは日にち指定もしくは日時指定(繁忙期のみ)となります。」予約必須とは書かれていない。再入場は再入場スタンプで可能",
+    "url": "https://www.sumida-aquarium.com/about/ticket/"
+   },
+   "access": {
+    "text": "「東武スカイツリーライン『とうきょうスカイツリー』駅 すぐ」「東武スカイツリーライン・東京メトロ半蔵門線・京成押上線・都営地下鉄浅草線『押上（スカイツリー前）』駅 直通徒歩5分」",
+    "url": "https://www.sumida-aquarium.com/about/access/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "年齢・身長制限のある体験は、確認したページ（料金・サポート・FAQ）に記載なし。",
+   "group": "zoo-aquarium-park"
+  },
+  {
+   "name": "マクセル アクアパーク品川",
+   "status": "営業中",
+   "statusNote": "2026年9月24日(木)～11月30日(月)の水族館の営業時間は10:00～20:00（最終入場19:00）。「※2026年12月1日(火)以降の営業時間についてはお問合せください。」",
+   "ages": {
+    "text": "「入場券は何才から必要ですか？ 4才から必要となります。(3才以下のお子さまは無料です)」",
+    "url": "https://www.aqua-park.jp/aqua/faq/"
+   },
+   "fees": {
+    "age0": "無料",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "800円（幼児 4才以上）",
+    "adult": "おとな2,800円（高校生は割引あり）。小・中学生1,300円",
+    "condition": "入場券（当日・前売）の料金。アトラクションと有料プログラムは別料金",
+    "url": "https://www.aqua-park.jp/aqua/info/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "ドルフィンパーティー（メリーゴーラウンド）：「500円(5才以下無料)」「6才以上 ※5才以下のお子さまは18才以上の保護者の付添い(有料)が必要です。」「5才以下のお子さまには必ず保護者の方が乗り物の横に立ち、両手で支えてください。」身長制限なし",
+     "url": "https://www.aqua-park.jp/aqua/guide/attraction.html"
+    },
+    {
+     "text": "ポート・オブ・パイレーツ：500円、「身長 120cm以上」、年齢制限なし",
+     "url": "https://www.aqua-park.jp/aqua/guide/attraction.html"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。「授乳室 ザ スタジアム(2F)内 給湯シンク・電子レンジの備え付けがございます。」「授乳室の入室・ご利用は女性の方のみ」",
+    "url": "https://www.aqua-park.jp/aqua/guide/service/"
+   },
+   "diaper": {
+    "text": "公式に記載あり。「おむつ替えスペース 館内に6ヵ所ございます。」場所はコーラルカフェバー(1F)奥＜多目的トイレ、女性トイレ＞と、ザスタジアム内(2F)＜多目的トイレ、男性・女性トイレ、授乳室＞",
+    "url": "https://www.aqua-park.jp/aqua/guide/service/"
+   },
+   "stroller": {
+    "text": "「ベビーカーのお貸出しはございません」。ベビーカー置き場は館内3ヵ所（1Fエントランス、2Fザスタジアム内の柱B-C・柱J-K）。FAQでは、入場は可能だが「一部順路と逆にお進みいただくエリアがございます」「ベビーカーでのエスカレーターの利用はご遠慮ください」",
+    "url": "https://www.aqua-park.jp/aqua/guide/service/"
+   },
+   "reservation": {
+    "text": "入場券はチケットセンター(1F)と券売機(1F)で販売。「チケット窓口に並ばずに入場可能！WEB前売り入場券」もある。予約必須とは書かれていない。当日中なら入場券の提示で何度でも再入場できる",
+    "url": "https://www.aqua-park.jp/aqua/info/"
+   },
+   "access": {
+    "text": "「品川駅(高輪口)から徒歩約2分。」（新幹線・JR線・京急線の品川駅）",
+    "url": "https://www.aqua-park.jp/aqua/access/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "",
+   "group": "zoo-aquarium-park"
+  },
+  {
+   "name": "しながわ水族館",
+   "status": "営業中",
+   "statusNote": "現在地（品川区勝島3-2-1、しながわ区民公園内）で営業中。営業時間は10:00～17:00（入館は16:30まで）。「11月11日(水)～11月13日(金) 特別展 展示変更に伴う会場閉鎖」のお知らせあり。水族館公式サイト（トップ・お知らせ・施設概要）には、移転・休館・建て替えの告知は見当たらない。品川区のリニューアル計画は、区の資料PDFが404で一次確認できず未検証。",
+   "ages": {
+    "text": "館の対象年齢は公式に記載なし。料金表の幼児区分は「幼児（4歳以上）」。えさやり体験と裏側潜入ツアーは「対象 4才以上」",
+    "url": "https://www.aquarium.gr.jp/price"
+   },
+   "fees": {
+    "age0": "料金表に区分なし（「幼児（4歳以上）」からの記載で、3歳以下の料金は明記なし）",
+    "age1": "料金表に区分なし（同上）",
+    "age2": "料金表に区分なし（同上）",
+    "age3": "料金表に区分なし（同上）",
+    "age4": "300円（幼児 4歳以上）",
+    "adult": "大人（高校生以上）1,350円。小・中学生600円、シルバー（65歳以上）1,200円",
+    "condition": "品川区民・在勤・在学は割引料金（大人800円、幼児200円など。窓口のみ・証明書必要）。障がい者手帳を提示すると本人と付添1名が減免料金",
+    "url": "https://www.aquarium.gr.jp/price"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "カワウソのえさやり体験など（有料600円/名、別途入館料）：「★対象 4才以上 ※段差やせまい場所を通る為、ご自身で歩ける方が対象です。」「未就学児の方は、保護者の方の付添が必要です。付き添いは1名様までとさせていただきます。」",
+     "url": "https://www.aquarium.gr.jp/news/events/1995"
+    },
+    {
+     "text": "裏側潜入ツアー：「★対象 4才以上 ・段差やせまい場所を通る為、自力歩行ができる方を対象とさせていただきます。」",
+     "url": "https://www.aquarium.gr.jp/news/events/2040"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。「授乳室、調乳用温水器 ※搾乳でのご利用も可能です。」イルカルーム内にも調乳用温水器と電子レンジ（ミルク・離乳食に限りイルカルーム内で飲食可）",
+    "url": "https://www.aquarium.gr.jp/guide/baby"
+   },
+   "diaper": {
+    "text": "公式に記載あり。「トイレ（B1F/1F） おむつ替えシート(男女トイレ各1台ずつ)」。ほかに個室トイレのベビーキープ。紙おむつ（Lサイズ）はマリンショップシーガル（水族館別棟）で販売",
+    "url": "https://www.aquarium.gr.jp/guide/baby"
+   },
+   "stroller": {
+    "text": "「ベビーカーを使用したまま館内をご見学いただけます（エレベーター(館内2ヶ所)、各所スロープなどバリアフリー対応）。ただし、土日祝などの多客時は水族館入口前のベビーカー置場をご利用いただくことをおすすめしております。」「※ベビーカーの貸出は行なっておりません。」",
+    "url": "https://www.aquarium.gr.jp/guide/baby"
+   },
+   "reservation": {
+    "text": "入館の予約要否は公式に明記なし（WEBチケットあり）。有料体験は「WEB販売」で、当日分が残っていれば館内受付カウンターでも購入可",
+    "url": "https://www.aquarium.gr.jp/news/events/1995"
+   },
+   "access": {
+    "text": "「京浜急行『大森海岸駅』下車 徒歩約8分」「JR京浜東北線『大森駅』下車、北口改札より徒歩約15分 (注意：エレベーターがありません)」。無料送迎バスあり",
+    "url": "https://www.aquarium.gr.jp/guide/baby"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "移転・リニューアルについて、検索結果には品川区の『しながわ水族館リニューアル事業計画』（2026年4月付）の要約が出たが、区のPDF（https://www.city.shinagawa.tokyo.jp/ct/pdf/hpg000000320_1〜10.pdf）はすべて404で開けず、内容（イルカショー終了・開業時期など）は一次確認できていない。記事に書く場合は品川区公式で別途確認が必要。休館日は営業カレンダーがJavaScript描画のため未取得。",
+   "group": "zoo-aquarium-park"
+  },
+  {
+   "name": "国営昭和記念公園",
+   "status": "不明",
+   "statusNote": "公式サイト https://www.showakinen-koen.jp/ が2026-10-23の確認時に終始 504 Gateway Timeout（CloudFront）または接続失敗。curl・WebFetch・ブラウザのいずれでも、数分おきの再試行で取得できなかった。",
+   "ages": {
+    "text": null,
+    "url": "https://www.showakinen-koen.jp/ （504で取得不可）"
+   },
+   "fees": {
+    "age0": null,
+    "age1": null,
+    "age2": null,
+    "age3": null,
+    "age4": null,
+    "adult": null,
+    "condition": "公式サイトが504のため未確認",
+    "url": "https://www.showakinen-koen.jp/"
+   },
+   "ageRestrictedAreas": [],
+   "nursingRoom": {
+    "text": null,
+    "url": "公式サイト504で未確認"
+   },
+   "diaper": {
+    "text": null,
+    "url": "公式サイト504で未確認"
+   },
+   "stroller": {
+    "text": null,
+    "url": "公式サイト504で未確認"
+   },
+   "reservation": {
+    "text": null,
+    "url": "公式サイト504で未確認"
+   },
+   "access": {
+    "text": null,
+    "url": "公式サイト504で未確認"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "「こどもの森」「わんぱくゆうぐ」の対象年齢は未取得。国交省 国営昭和記念公園事務所のページ（https://www.ktr.mlit.go.jp/showa/）は200で取れたが、料金・遊具・アクセスの記載はなかった。時間をおいて公式サイトを再取得する必要がある。",
+   "group": "zoo-aquarium-park"
+  },
+  {
+   "name": "葛西臨海公園",
+   "status": "営業中",
+   "statusNote": "「開園日 常時開園 ※サービスセンター及び各施設は年末年始は休業となります。」葛西臨海水族園や大観覧車などの園内施設には、それぞれ定休日がある。",
+   "ages": {
+    "text": "公園全体の対象年齢は公式に記載なし",
+    "url": "https://www.tokyo-park.or.jp/park/kasairinkai/"
+   },
+   "fees": {
+    "age0": "無料",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "無料",
+    "adult": "無料",
+    "condition": "「入園料 無料（一部有料施設あり）」",
+    "url": "https://www.tokyo-park.or.jp/park/kasairinkai/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "パークトレイン（園内を走る汽車型の乗り物、約25分）：「大人(中学生以上70才未満) 1回/400円」「70才以上 1回/200円」「3才以上 1回/200円」「※ 乳幼児及び障害者手帳をお持ちの方は無料（介助者含む）」。運休日は水曜日（祝日なら翌日）、年末年始、天候などによる運休あり。12～2月は10:00発の便が運休",
+     "url": "https://www.tokyo-park.or.jp/park/kasairinkai/facility/"
+    },
+    {
+     "text": "ダイヤと花の大観覧車：施設内に「お子様向けのミニ急流くだり『マーメイドパラダイス』、ゲームコーナー『シーサイドファンタジア』」がある。年齢・身長制限と料金は公園協会ページに記載なし（運営は泉陽興業）",
+     "url": "https://www.tokyo-park.or.jp/park/kasairinkai/facility/"
+    }
+   ],
+   "nursingRoom": {
+    "text": null,
+    "url": "公園トップ（https://www.tokyo-park.or.jp/park/kasairinkai/）と施設ページ（https://www.tokyo-park.or.jp/park/kasairinkai/facility/）に授乳室の記載なし。園内マップPDFはフォントの問題で文字を抽出できず未確認"
+   },
+   "diaper": {
+    "text": null,
+    "url": "同上の2ページにおむつ替えの記載なし"
+   },
+   "stroller": {
+    "text": null,
+    "url": "同上の2ページにベビーカーの記載なし"
+   },
+   "reservation": {
+    "text": "入園は無料で常時開園のため予約の記載なし。バーベキュー広場は「完全予約制（60日前から受付）」",
+    "url": "https://www.tokyo-park.or.jp/park/kasairinkai/facility/"
+   },
+   "access": {
+    "text": "「JR京葉線『葛西臨海公園』下車 徒歩1分」。東京メトロ東西線「西葛西」「葛西」から都バスで葛西臨海公園行き約20分。駐車場は有料",
+    "url": "https://www.tokyo-park.or.jp/park/kasairinkai/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "幼児向け遊具（遊具広場）は、公園協会の公園トップ・施設ページに記載なし。授乳室ありとする記載は東京観光財団のサイトやウォーカープラスにあるが、運営元の公式ではないため採用していない。",
+   "group": "zoo-aquarium-park"
+  },
+  {
+   "name": "舎人公園",
+   "status": "営業中",
+   "statusNote": "「開園日 常時開園 ※サービスセンター及び各施設は年末年始は休業となります。」遊具広場「冒険の丘」の開放時間は4月～10月が9:00～17:00、11月～3月が9:00～16:00（年末年始は閉場。雨天・荒天・高温・積雪時、保守点検日などに閉場あり）。",
+   "ages": {
+    "text": "公園全体の対象年齢は公式に記載なし。ソリゲレンデは「3歳から12歳のお子様が、ご利用できます。3歳から6歳のお子様は、一人では利用できません。保護者と一緒に滑ってください。」",
+    "url": "https://www.tokyo-park.or.jp/park/toneri/facility/"
+   },
+   "fees": {
+    "age0": "無料",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "無料",
+    "adult": "無料",
+    "condition": "「入園料 無料（一部有料施設あり）」",
+    "url": "https://www.tokyo-park.or.jp/park/toneri/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "ソリゲレンデ（人工芝、ソリは貸出）：「3歳から12歳のお子様が、ご利用できます。3歳から6歳のお子様は、一人では利用できません。保護者と一緒に滑ってください。」利用時間は10時から16時（12時～13時は休憩で整理券配布もなし）。「整理券配布時には、保護者とお子様は一緒にお並びください」",
+     "url": "https://www.tokyo-park.or.jp/park/toneri/facility/"
+    },
+    {
+     "text": "冒険の丘（遊具広場、C地区）：年齢制限の記載なし。「ユニバーサルデザインのぶらんこや複合遊具などもあります。」「自転車、三輪車、ストライダー、スケートボード類の走行はできません。」同じページに「幼児のあそび場」の名称も出るが、対象年齢の記載なし",
+     "url": "https://www.tokyo-park.or.jp/park/toneri/facility/"
+    }
+   ],
+   "nursingRoom": {
+    "text": null,
+    "url": "公園トップ（https://www.tokyo-park.or.jp/park/toneri/）と施設ページに授乳室の記載なし。バリアフリーマップPDF（https://www.tokyo-park.or.jp/park/toneri/assets/files/toneri.bf.pdf、2026年2月更新）はあるが、文字を抽出できず、画像も判読できずに未確認"
+   },
+   "diaper": {
+    "text": null,
+    "url": "同上（ページ本文に記載なし。PDFは判読できず未確認）"
+   },
+   "stroller": {
+    "text": null,
+    "url": "公園トップと施設ページにベビーカーの記載なし"
+   },
+   "reservation": {
+    "text": "入園は無料で常時開園のため予約の記載なし。ソリゲレンデは整理券制（時間帯の記載あり）",
+    "url": "https://www.tokyo-park.or.jp/park/toneri/facility/"
+   },
+   "access": {
+    "text": "「日暮里・舎人ライナー『舎人公園駅』下車」（徒歩分数の記載なし）。東武スカイツリーライン竹ノ塚駅西口から東武バス「入谷循環」または「入谷舎人循環」で「中入谷」下車。駐車場は有料",
+    "url": "https://www.tokyo-park.or.jp/park/toneri/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "じゃぶじゃぶ池は2026年7月17日に「利用のルール大幅変更」のお知らせあり（夏季の施設のため10月は対象外と思われるが、利用期間は未確認）。",
+   "group": "zoo-aquarium-park"
+  },
+  {
+   "name": "あらかわ遊園（荒川区立）",
+   "status": "営業中",
+   "statusNote": "区公式トップに10/24・25の『オグトーバーフェスト2026』の告知あり。休園日は「毎週火曜（火曜が祝日の場合は翌日）、年末年始（12月29日から1月1日）、※学校の春・夏・冬休み期間は無休」。営業時間は「9時から17時まで（夜間開園日は20時まで）」。冬季休業の記載は見当たらない。ただし、くじらスライダー・アニマルハウス（ふわふわ遊具）は「6月から12月迄休止します。再開は令和9年1月を予定」とあり、2026年10月時点では休止中（guide_07）。子どもプールは「令和6年度廃止」。",
+   "fees": {
+    "age0": "無料（料金表の区分「2歳以下」は入園料もフリーパスも無料）",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "入園料は無料（区分「未就学児（3歳以上）」）。フリーパスは500円",
+    "age4": "入園料は無料（区分「未就学児（3歳以上）」）。フリーパスは500円",
+    "adult": "入園料800円、フリーパス1,800円（65歳以上は400円と1,400円、中学生は400円と1,000円、小学生は200円と700円）",
+    "ridePass": "のりもの券は1枚100円（回数券は5枚つづり500円、10枚つづり1,000円）。乗り物ごとの枚数は、観覧車が中学生以上4枚・小学生以下2枚、メリーゴーランドと豆汽車が中学生以上2枚・小学生以下1枚で、いずれも2歳以下は無料。ライドパス（入園料を含まない乗り放題）は大人1,000円、未就学児（3歳以上）500円、2歳以下無料。アフター4料金（16時以降）もあり",
+    "condition": "「未就学児は、お一人でアトラクションの利用が可能とスタッフが判断させていただいた方でも、高校生以上の付き添いが必要です（付き添いの方も有料となります）」。フリーパスの乗り放題は「硬貨投入式小型遊具、釣り堀、動物のえさ、ポニー乗馬は対象外」",
+    "url": "https://www.city.arakawa.tokyo.jp/a038/yuuen/ryokin.html"
+   },
+   "rides": [
+    {
+     "name": "観覧車",
+     "rule": "利用制限表の年齢・身長はともに「なし」。のりもの券は2歳以下無料。未就学児は大人の付き添い（有料）が必要",
+     "url": "https://www.city.arakawa.tokyo.jp/a038/yuuen/riyo.html"
+    },
+    {
+     "name": "メリーゴーランド",
+     "rule": "年齢・身長「なし」。「赤ちゃんを抱っこ・おんぶされている方、妊娠中の方は、未就学児の横に立ってのお付き添いができません。ご乗車の際、馬車のみのご案内となります」",
+     "url": "https://www.city.arakawa.tokyo.jp/a038/yuuen/guide/guide_01.html"
+    },
+    {
+     "name": "豆汽車",
+     "rule": "年齢・身長「なし」。2歳以下はのりもの券が無料",
+     "url": "https://www.city.arakawa.tokyo.jp/a038/yuuen/riyo.html"
+    },
+    {
+     "name": "ファミリーコースター",
+     "rule": "「3歳以上」「80cm以上」。2歳以下は「利用不可」。「未就学児1名につき大人1名の付き添い（有料）が必要」",
+     "url": "https://www.city.arakawa.tokyo.jp/a038/yuuen/ryokin.html"
+    },
+    {
+     "name": "ウォーターシューティングライド",
+     "rule": "「3歳以上」、身長制限なし。未就学児1名につき大人1名の付き添い（有料）が必要",
+     "url": "https://www.city.arakawa.tokyo.jp/a038/yuuen/riyo.html"
+    },
+    {
+     "name": "スカイサイクル",
+     "rule": "「3歳以上」。「付き添いなしの小学生（1人利用時）は130cm以上」。未就学児1名につき大人1名の付き添い（有料）が必要",
+     "url": "https://www.city.arakawa.tokyo.jp/a038/yuuen/riyo.html"
+    },
+    {
+     "name": "ふわふわドーム",
+     "rule": "「年齢 3～12歳」「身長制限 なし」。のりもの券1枚（時間制限あり）",
+     "url": "https://www.city.arakawa.tokyo.jp/a038/yuuen/guide/guide_03.html"
+    },
+    {
+     "name": "アニマルハウス（ふわふわ遊具）",
+     "rule": "「2～4歳」「70cm以上」「※アニマルハウスは2歳児無料です」。ただし2026年6〜12月は休止中",
+     "url": "https://www.city.arakawa.tokyo.jp/a038/yuuen/guide/guide_07.html"
+    },
+    {
+     "name": "くじらスライダー（ふわふわ遊具）",
+     "rule": "「5～12歳」「100cm以上」。2026年6〜12月は休止中",
+     "url": "https://www.city.arakawa.tokyo.jp/a038/yuuen/guide/guide_07.html"
+    },
+    {
+     "name": "ポニー乗馬",
+     "rule": "「対象年齢：3歳から10歳」。のりもの券1枚または現金100円",
+     "url": "https://www.city.arakawa.tokyo.jp/a038/yuuen/riyo.html"
+    }
+   ],
+   "toddlerArea": {
+    "text": "わくわくハウス2階の室内遊び場「わくわくパーク」。1時間単位の入れ替え制で、整理券が必要。料金は子ども（3歳から小学生）がのりもの券3枚、大人（中学生以上）が2枚で、「2歳以下のお子様は無料」。フリーパスとライドパスでも利用できる。対象年齢の記載はページ内で揺れており、紹介文は「0歳から12歳まで」、同じページの注意事項と利用案内の制限表は「6か月から12歳まで」。「大人の付き添い（有料）が必要です（子ども3名に対し、大人1名以上）」",
+    "url": "https://www.city.arakawa.tokyo.jp/a038/yuuen/guide/guide_13.html"
+   },
+   "nursingRoom": {
+    "text": "公式に記載あり。「授乳室 もぐもぐハウス 1階：ベビールーム 2階：ベビールーム／わくわくハウス 1階：ベビールーム 2階：ベビールーム」。荒川区の「あらかわベビーステーション」に登録されている",
+    "url": "https://www.city.arakawa.tokyo.jp/a038/yuuen/guide/guide_12.html"
+   },
+   "diaper": {
+    "text": "公式に記載あり。おむつ交換場所は、もぐもぐハウスとわくわくハウスの各1・2階のベビールーム、ふれあいハウスの1階バリアフリートイレ前と2階トイレ前。「授乳室でもおむつの交換ができます」",
+    "url": "https://www.city.arakawa.tokyo.jp/a038/yuuen/guide/guide_12.html"
+   },
+   "stroller": {
+    "text": "貸し出しはあるが、対象の書き方が2ページで食い違っている。ベビーステーションのページは「2歳未満のお子さまをお連れの方には、ベビーカーの貸し出しを行っています。設置台数 ベビーカー（B型）20台 申込場所 メインゲート … 事前予約はできません」。FAQは「生後1ヶ月から4歳(48ヶ月)までのお子様に無料でお貸しします。タイプはB型…※体重制限18kgまで」。持ち込みベビーカーでの園内通行や置き場については、見たページ（guide_12、FAQのservice_q5）に記載が見当たらない",
+    "url": "https://www.city.arakawa.tokyo.jp/a038/yuuen/guide/guide_12.html ／ https://www.city.arakawa.tokyo.jp/a038/yuuen/faq/service_q5.html"
+   },
+   "access": {
+    "text": "「都電荒川線『荒川遊園地前』下車、徒歩3分」「JR高崎線・東北本線『尾久駅』下車、徒歩12分」。地下駐車場あり（平日は30分100円・1日最大500円、土日祝は1時間300円）",
+    "url": "https://www.city.arakawa.tokyo.jp/a038/yuuen/guide/access.html"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "出典はすべて荒川区公式サイト（city.arakawa.tokyo.jp）で、curlで200を確認した。令和8年度営業カレンダー（PDF：/documents/225/r8calendar.pdf）は取得できたが、PDFを読む手段がなく中身は未確認。ベビーカー貸し出しの対象年齢はページ間で食い違っている（上記）。",
+   "group": "amusement"
+  },
+  {
+   "name": "浅草花やしき",
+   "status": "営業中",
+   "statusNote": "公式の営業カレンダーのデータ（/businesshours/json/2026/schedule.json）では、2026年10月と11月は全日「10:00〜18:00」で休園日の登録はない。休園日は不定期で、データ上は12/1〜12/4と12/15が休園日、ほかに6/3と9/21の臨時休園の記録もある。定休日の記載はなく、FAQは「休園日はいつですか？→『営業カレンダー』をご確認ください」。冬季休業の記載は見当たらない。お知らせ（2026/9/15）は『お花見茶屋』と『NAKED花景色』の営業終了のみで、休園・閉園の告知は見当たらない。",
+   "fees": {
+    "age0": "入園無料（区分「幼児(0〜4歳)」）。乗り物も無料だが一部有料",
+    "age1": "入園無料。乗り物も無料（一部有料）",
+    "age2": "入園無料。乗り物も無料（一部有料）",
+    "age3": "入園無料。乗り物も無料だが、にんにんパークは3歳から有料（のりもの5枚＝500円）",
+    "age4": "入園無料。乗り物も無料（一部有料）",
+    "adult": "入園料：大人（中学生以上〜64歳）1,600円、小人（5歳〜小学生）800円、シニア（65歳以上）800円。ワンデーパス（入園＋乗り放題）：大人4,600円、小人3,400円、シニア3,400円",
+    "ridePass": "乗り放題パス：大人3,000円、小人2,600円、シニア2,600円（幼児の区分はない）。のりもの券は1枚100円、11枚1,000円",
+    "condition": "「4歳以下のお子様は乗り物無料！ 安全上4歳以下のお子様に、中学生以上の付き添い乗車をお願いしております。その際、お付き添いの方は有料です」。例外として「ローラーコースター、ディスク・オー、リトルスターは4歳以下でも規定の身長に達していれば有料でご利用いただけます」「にんにんパークは3歳から有料です。（6か月～2歳は無料）」",
+    "url": "https://www.hanayashiki.net/fee/"
+   },
+   "rides": [
+    {
+     "name": "メリーゴーランド",
+     "rule": "身長制限なし、年齢制限なし。「5歳からおひとりでご乗車いただけます。4歳までのお子様は中学生以上の付き添いが必要です。」公式の絞り込み条件では「0～1歳が乗車可能」に分類",
+     "url": "https://www.hanayashiki.net/archives/238/"
+    },
+    {
+     "name": "スワン",
+     "rule": "身長・年齢制限なし。「5歳からおひとりでご乗車いただけます。4歳までのお子様は中学生以上の付き添いが必要です。」「0～1歳が乗車可能」に分類",
+     "url": "https://www.hanayashiki.net/archives/554/"
+    },
+    {
+     "name": "ちびっ子タクシー",
+     "rule": "身長・年齢制限なし。5歳からひとりで乗れ、4歳までは中学生以上の付き添いが必要。「0～1歳が乗車可能」に分類",
+     "url": "https://www.hanayashiki.net/archives/546/"
+    },
+    {
+     "name": "スカイシップ",
+     "rule": "身長・年齢制限なし。5歳からひとりで乗れ、4歳までは中学生以上の付き添いが必要。「0～1歳が乗車可能」に分類",
+     "url": "https://www.hanayashiki.net/archives/543/"
+    },
+    {
+     "name": "ぴょんぴょん",
+     "rule": "「年齢制限 2歳からご乗車できます。」「5歳からおひとりでご乗車いただけます。4歳までのお子様は16歳以上の付き添いが必要です。」",
+     "url": "https://www.hanayashiki.net/archives/573/"
+    },
+    {
+     "name": "ヘリコプター",
+     "rule": "「2歳からご乗車できます。」「8歳からおひとりでご乗車いただけます。7歳までのお子様は中学生以上の付き添いが必要です。」",
+     "url": "https://www.hanayashiki.net/archives/570/"
+    },
+    {
+     "name": "シラサギ",
+     "rule": "「身長制限 90cm以上」「120cmからおひとりでご乗車いただけます。120cmに満たない方は中学生以上の付き添いが必要で、規定の身長に満たない方は付き添いの方がご一緒でもご乗車できません。」",
+     "url": "https://www.hanayashiki.net/archives/576/"
+    },
+    {
+     "name": "ローラーコースター",
+     "rule": "「身長制限 110cm以上」「規定の身長に満たない方は付き添いの方がご一緒でもご乗車できません。」",
+     "url": "https://www.hanayashiki.net/archives/243/"
+    },
+    {
+     "name": "スリラーカー、お化け屋敷～首づかの呪い～、パノラマ時間旅行",
+     "rule": "公式アトラクション一覧のデータで身長制限「なし」、絞り込み条件で「0～1歳が乗車可能」に分類。個別ページの付き添い文言は未取得",
+     "url": "https://www.hanayashiki.net/attraction/list.json"
+    },
+    {
+     "name": "ディスク・オー／リトルスター",
+     "rule": "一覧データで身長制限はディスク・オー「120cm以上」、リトルスター「130cm以上」",
+     "url": "https://www.hanayashiki.net/attraction/list.json"
+    }
+   ],
+   "toddlerArea": {
+    "text": "(1)キッズスペース（無料）：「お子様が靴を脱いで楽しめる室内休憩スペース！0～18ヶ月のお子様が遊べる『あかちゃんひろば』や『授乳室』もご用意。※小学生未満のお子様が対象です。」(2)こども忍者やしき『にんにんパーク』：「生後6か月～小学生」が対象で、30分の入れ替え制（整理券あり）。料金は6か月〜2歳が無料、お子さま（3歳〜小学生）と保護者がそれぞれのりもの5枚（500円）。「保護者(20歳以上による付き添いが必要) ※付き添いの方も料金が必要」",
+    "url": "https://www.hanayashiki.net/archives/1018/ ／ https://www.hanayashiki.net/archives/7863/"
+   },
+   "nursingRoom": {
+    "text": "公式FAQに記載あり。「授乳室が2ヶ所(3階キッズスペースに1部屋、マリオンクレープ前に2部屋)ございます。」「※マリオンクレープ前の授乳室2部屋は女性専用となっております」",
+    "url": "https://www.hanayashiki.net/faq/"
+   },
+   "diaper": {
+    "text": "公式FAQに記載あり。「おむつ替えが出来る場所は7カ所(うち3か所は女性用トイレ内・2ヶ所は男性用トイレ内)」「オムツはキッズスペースに自動販売機がございます」。お湯はインフォメーションで提供",
+    "url": "https://www.hanayashiki.net/faq/"
+   },
+   "stroller": {
+    "text": "FAQ「ベビーカーの貸し出しはありますか？→貸し出しは行っておりません。」「ベビーカーは預けられますか？→インフォメーションにて、たたんだ状態でお預かりいたします。」園内でのベビーカー通行の可否は、FAQに記載が見当たらない",
+    "url": "https://www.hanayashiki.net/faq/"
+   },
+   "access": {
+    "text": "「つくばエクスプレス『浅草』駅から徒歩5分」「地下鉄銀座線・地下鉄浅草線・東武スカイツリーライン『浅草』駅から徒歩10分」。「当園は駐車場・駐輪場をご用意しておりません」",
+    "url": "https://www.hanayashiki.net/access/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "アトラクション一覧はJavaScriptで描画されるため、元データの/attraction/list.json（200）と個別ページ（/archives/番号/）から取った。営業日はschedule.json（200）から取った。いずれも運営元・株式会社花やしきの公式サイト。",
+   "group": "amusement"
+  },
+  {
+   "name": "東京ドームシティ アトラクションズ",
+   "status": "営業中",
+   "statusNote": "旧ドメインat-raku.comは東京ドームシティ公式（tokyo-dome.co.jp/at-raku）へ統合済み。料金カレンダー（2026年10月15日更新）では10月は10:00〜20:00または10:00〜21:00で営業。定休日・冬季休業の記載は見当たらない。乗り物単位の休止はある。10/20〜29の休止予定では、パワータワーとコズミックトラベラーが毎日「終日」休止。ほかにホッピンどらっぴーが10/27終日、ピクシーカップとコロッコが一部時間帯で休止。",
+   "fees": {
+    "age0": "入園無料（「フリーゲート（入園無料）」）。2歳以下の乗り物料金・パスポート料金の記載は見当たらない",
+    "age1": "入園無料。乗り物料金の記載は見当たらない（age0と同じ）",
+    "age2": "入園無料。乗り物料金の記載は見当たらない（age0と同じ）",
+    "age3": "入園無料。ワンデーパスポート「幼児（3歳～小学校入学前）」は2,600円・3,000円・3,500円（料金区分A・B・Cで日により変動）",
+    "age4": "入園無料。ワンデーパスポート（幼児）は2,600円・3,000円・3,500円",
+    "adult": "入園無料。ワンデーパスポート（大人＝18歳以上）は4,900円・5,300円・5,800円",
+    "ridePass": "ワンデーパスポート（1日乗り放題）は、大人4,900〜5,800円、シニア・中高生4,300〜5,200円、小学生3,600〜4,500円、幼児2,600〜3,500円。ナイト割引パスポートの幼児は1,900〜2,500円。乗り物ごとの券は1回600円〜1,800円（例：ピクシーカップ700円、ホッピンどらっぴー600円、ヴィーナスラグーン700円）",
+    "condition": "「大人：18歳以上 シニア：60歳以上 中高生：中学生・高校生 幼児：3歳～小学校入学前」。料金区分はカレンダーの日付ごとにA・B・C",
+    "url": "https://www.tokyo-dome.co.jp/at-raku/schedule-price"
+   },
+   "rides": [
+    {
+     "name": "ヴィーナスラグーン",
+     "rule": "「年齢制限なし／身長制限なし／3歳まで要付添」",
+     "url": "https://www.tokyo-dome.co.jp/at-raku/rule"
+    },
+    {
+     "name": "ホッピンどらっぴー",
+     "rule": "「年齢制限なし／90cm以上／3歳まで要付添」",
+     "url": "https://www.tokyo-dome.co.jp/at-raku/rule"
+    },
+    {
+     "name": "ピクシーカップ",
+     "rule": "「年齢制限なし／身長制限なし／5歳まで要付添、100cm未満要付添」",
+     "url": "https://www.tokyo-dome.co.jp/at-raku/rule"
+    },
+    {
+     "name": "ウォーターキャノン",
+     "rule": "「年齢制限なし／身長制限なし／5歳まで要付添」",
+     "url": "https://www.tokyo-dome.co.jp/at-raku/rule"
+    },
+    {
+     "name": "フラッシュラッシュ",
+     "rule": "「年齢制限なし／身長制限なし／5歳まで要付添」",
+     "url": "https://www.tokyo-dome.co.jp/at-raku/rule"
+    },
+    {
+     "name": "レーザーミッション ～秘密金庫へ潜入せよ！～",
+     "rule": "「年齢制限なし／身長制限なし／5歳まで要付添」",
+     "url": "https://www.tokyo-dome.co.jp/at-raku/rule"
+    },
+    {
+     "name": "ビッグ・オー（観覧車）",
+     "rule": "「年齢制限なし／身長制限なし／7歳まで要付添」",
+     "url": "https://www.tokyo-dome.co.jp/at-raku/rule"
+    },
+    {
+     "name": "コロッコ",
+     "rule": "「年齢制限なし／90cm以上／5歳まで要付添」",
+     "url": "https://www.tokyo-dome.co.jp/at-raku/rule"
+    },
+    {
+     "name": "ZOOターボ！ZOOカート！",
+     "rule": "「3歳以上／運転操作ができること／5歳まで要付添」",
+     "url": "https://www.tokyo-dome.co.jp/at-raku/rule"
+    },
+    {
+     "name": "ガンガンバトラーズ",
+     "rule": "「年齢制限なし／90cm以上／6歳まで要付添」。付添者の定義は「13歳以上かつ1人でご利用いただける方」",
+     "url": "https://www.tokyo-dome.co.jp/at-raku/rule"
+    }
+   ],
+   "toddlerArea": {
+    "text": null,
+    "url": "アトラクションズのトップ・料金・利用規定・お子様連れページ（https://www.tokyo-dome.co.jp/guest/child）に、アトラクションズ内の幼児専用エリアの記載は見当たらない"
+   },
+   "nursingRoom": {
+    "text": "公式に記載あり（お子様連れのお客様へ）。アトラクションズ内では「ジオポリス 1F『ベビーケアルーム mamaro(ママロ)』」と「バイキングゾーン 1F『ベビールーム』」。利用時間はいずれも「東京ドームシティ アトラクションズ営業時間に準ずる」。ほかに敷地内では、ラクーア3F、後楽園ホールビル1F、東京ドームホテル2Fにもある",
+    "url": "https://www.tokyo-dome.co.jp/guest/child"
+   },
+   "diaper": {
+    "text": "公式に記載あり。アトラクションズ内では、スプラッシュガーデン（2F）「女性トイレ・バリアフリートイレ」、バイキングゾーン（1F）「ベビールーム」、ジオポリス 1F「ベビールーム」、ジオポリス B1「バリアフリートイレ」",
+    "url": "https://www.tokyo-dome.co.jp/guest/child"
+   },
+   "stroller": {
+    "text": "東京ドームシティとしての無料貸し出し（100円硬貨リターン方式）がある。後楽園ホールビル1F「ベビールーム」（10:00～23:00）の分は「生後1ヶ月以上4歳まで、体重18kgまで」、ラクーア1F・2Fの分は「生後4ヶ月～48ヶ月未満（身長100cmまで）」。利用範囲は「東京ドームシティ敷地内 ただし、東京ドーム場内にはお持ち込みいただけません」。アトラクションズ内のベビーカー置き場の記載は、見たページに見当たらない",
+    "url": "https://www.tokyo-dome.co.jp/guest/child"
+   },
+   "access": {
+    "text": "最寄り駅は「JR水道橋駅（東口）」「都営地下鉄水道橋駅A2出口」「東京メトロ後楽園駅」（アトラクションズのアクセスページ）。徒歩分の記載はなく、道順の説明のみ。東京ドームシティ全体の電車案内ページには都営地下鉄春日駅とJR水道橋駅西口も載っている",
+    "url": "https://www.tokyo-dome.co.jp/at-raku/access"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "運営元は株式会社東京ドーム。利用規定ページの定義は「付添者→13歳以上かつ1人でご利用いただける方／同伴者→1人でアトラクションをご利用いただける方／保護者→親、または親にかわる18歳以上の方」。乗り物の休止予定は https://www.tokyo-dome.co.jp/at-raku/stop 。",
+   "group": "amusement"
+  },
+  {
+   "name": "ナンジャタウン（池袋サンシャインシティ）",
+   "status": "営業中",
+   "statusNote": "チケットページに「年中無休です」「やむを得ない事情により休園する場合がございます」「●営業時間10:00-20:00（最終入園19:30）※11/20のみ、10:00-17:30（最終入園17:00）」とある。2026年9月1日から閉園が20:00に変わった（お知らせ 2026/7/21）。ただし公式トップのヘッダーは「10:00-21:00（最終入園 20:00）」のままで、ページ間で食い違っている。2026年11月9日（月）以降は入園券（ナンジャエントリー）も変動価格制になる（お知らせ 2026/10/16）。",
+   "fees": {
+    "age0": "入園無料（「４歳未満のお子様は入園無料です」）",
+    "age1": "入園無料",
+    "age2": "入園無料",
+    "age3": "入園無料。アトラクションは別途料金（「アトラクション等の利用については別途料金が必要です」）",
+    "age4": "ナンジャエントリー（入園のみ）の「こども（4歳～12歳）」800円。ナンジャパスポートの「小学生以下（4歳～12歳）」はA料金2,400円・B料金2,600円・C料金2,800円",
+    "adult": "ナンジャエントリーの大人（13歳以上）1,200円。ナンジャパスポートの大人（19歳以上）はA4,000円・B4,200円・C4,500円、中高生（13〜18歳）は3,200円〜3,600円",
+    "ridePass": "ナンジャパスポートは入園とアトラクション遊び放題のセットで、変動価格制（A・B・C料金）。入園のみの場合、アトラクションはナンジャコイン（1枚200円）で支払う",
+    "condition": "料金は2026年7月27日以降のもの（お知らせ 2026/7/21）。11/9以降は入園券も変動価格制になるため、金額が変わる可能性がある",
+    "url": "https://bandainamco-am.co.jp/tp/namja/NEWS/important/20260721.html ／ https://bandainamco-am.co.jp/tp/namja/ticket/"
+   },
+   "rides": [
+    {
+     "name": "共通ルール",
+     "rule": "「※小学生未満の方がご利用の場合は、13歳以上の方の付添（無料）または同行（有料）が必要です。一部アトラクションを除く。」",
+     "url": "https://bandainamco-am.co.jp/tp/namja/ticket/restriction.html"
+    },
+    {
+     "name": "ナジャヴの爆釣りスピリッツ",
+     "rule": "600円（コイン3枚）、パスポート対象。身長制限「―」。「小学生未満の方は13歳以上の付添が必要です。」年齢下限の記載はない",
+     "url": "https://bandainamco-am.co.jp/tp/namja/ticket/restriction.html"
+    },
+    {
+     "name": "幸せの青い鳥",
+     "rule": "800円（コイン4枚）、パスポート対象。身長制限「―」。「小学生未満の方は13歳以上の付添が必要です。」",
+     "url": "https://bandainamco-am.co.jp/tp/namja/ticket/restriction.html"
+    },
+    {
+     "name": "太鼓の達人 ドーンとでっかいお祭りだドン",
+     "rule": "「小学生未満の方がご利用の場合は、13歳以上の付添が必要です。4歳以上からご利用いただけます。」",
+     "url": "https://bandainamco-am.co.jp/tp/namja/ticket/restriction.html"
+    },
+    {
+     "name": "ニンジャ訓練所 手裏剣体験／弓術体験／隠れ身の術体験／水蜘蛛の術体験",
+     "rule": "「小学生未満の方がご利用の場合は、13歳以上の保護者の同行を推奨します。4歳以上からご利用いただけます。」",
+     "url": "https://bandainamco-am.co.jp/tp/namja/ticket/restriction.html"
+    },
+    {
+     "name": "忍灯 SHINO-BI 養成試験～科学NINJAアカデミー～",
+     "rule": "「小学生未満の方がご利用の場合は、13歳以上の保護者の付添が必要です。」年齢下限の記載はない",
+     "url": "https://bandainamco-am.co.jp/tp/namja/ticket/restriction.html"
+    },
+    {
+     "name": "モジャヴのオバケハンターＡＲ",
+     "rule": "「小学生未満の方がご利用の場合は、13歳以上の保護者の同行を推奨します。4歳以上からご利用いただけます。」（パスポート対象外）",
+     "url": "https://bandainamco-am.co.jp/tp/namja/ticket/restriction.html"
+    },
+    {
+     "name": "未来遊戯ガンガンナー",
+     "rule": "身長「90cm～」。「利用者の年齢にかかわらず、110cm未満の方がご利用の場合は 16歳以上の付添が必要です。」",
+     "url": "https://bandainamco-am.co.jp/tp/namja/ticket/restriction.html"
+    },
+    {
+     "name": "銭湯クイズ どんぶらQ",
+     "rule": "身長制限「―」。「利用者の年齢にかかわらず、120cm未満の方がご利用の場合は 16歳以上の付添が必要です。」",
+     "url": "https://bandainamco-am.co.jp/tp/namja/ticket/restriction.html"
+    },
+    {
+     "name": "爆裂！蚊取り大作戦",
+     "rule": "身長「110cm～」",
+     "url": "https://bandainamco-am.co.jp/tp/namja/ticket/restriction.html"
+    }
+   ],
+   "toddlerArea": {
+    "text": null,
+    "url": "チケット・アクセスページとご利用制限一覧（https://bandainamco-am.co.jp/tp/namja/ticket/restriction.html）に、幼児専用エリアの記載は見当たらない"
+   },
+   "nursingRoom": {
+    "text": "園内の授乳室の記載はない。公式FAQの回答は「再入園の手続き後、サンシャインシティ3階広小路のベビールームをご利用ください。」",
+    "url": "https://bnam-customer.my.site.com/AmusementSpot/s/article/%E6%8E%88%E4%B9%B3%E5%AE%A4%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B"
+   },
+   "diaper": {
+    "text": "公式FAQ「園内の女性用トイレ(3ヵ所)と、多目的トイレ(1ヵ所)にベビーベッドが設置されておりますのでご利用ください。」",
+    "url": "https://bnam-customer.my.site.com/AmusementSpot/s/article/%E3%82%AA%E3%83%A0%E3%83%84%E3%82%92%E4%BA%A4%E6%8F%9B%E3%81%99%E3%82%8B%E5%A0%B4%E6%89%80%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B"
+   },
+   "stroller": {
+    "text": "公式FAQは3件。入園の可否は「ご入園いただけます。」。貸し出しは「ナンジャタウンで貸し出しはしておりませんが、サンシャインシティ内のインフォメーションにて貸し出しサービスがございます。」。預かりは「お預かりはおこなっておりませんが、ベビーカー置き場がございます。ご利用の際は、インフォメーションカウンターにてご相談ください。」",
+    "url": "https://bnam-customer.my.site.com/AmusementSpot/s/article/%E3%83%99%E3%83%93%E3%83%BC%E3%82%AB%E3%83%BC-%E8%BB%8A%E6%A4%85%E5%AD%90%E3%81%A7%E5%85%A5%E5%9C%92%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%81%8B"
+   },
+   "access": {
+    "text": "チケット・アクセスページの路線図画像による。JR・東武東上線・西武池袋線・東京メトロ丸ノ内線・副都心線の「池袋駅 35番出口よりサンシャインシティへ 徒歩約8分」、東京メトロ有楽町線「東池袋駅 徒歩約3分」、都電荒川線「東池袋4丁目駅 徒歩約4分」。所在地はサンシャインシティ ワールドインポートマートビル2F",
+    "url": "https://bandainamco-am.co.jp/tp/namja/ticket/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "運営元はバンダイナムコアミューズメント（Bandai Namco Experience）。FAQは同社のSalesforceサイト（ナンジャタウン公式トップの「よくある質問」からのリンク先）にあり、JavaScriptで描画されるため自分専用のブラウザタブで読み取った（curlでは中身が空）。FAQ記事のHTTPステータスはcurlで確認していないが、ページは正常に表示され、各記事に「ナンジャタウン」のラベルが付いていることを確認した。チケットページの料金表はJavaScriptで描画されるため、金額は2026/7/21のお知らせから取った。駅からの徒歩分は画像内の文字。",
+   "group": "amusement"
+  },
+  {
+   "name": "東京ジョイポリス（お台場）",
+   "status": "営業中",
+   "statusNote": "カレンダーページに休館の告知はない。「現在長期休止中のアトラクションはございません」。進撃の巨人は10/7・8に機械調整で運休（終了済み）。「12月1日以降の営業時間は決まり次第お知らせいたします」。定休日・冬季休業の記載は見当たらない。日ごとの営業時間は画像かJavaScriptで表示され、テキストでは取れなかった。",
+   "fees": {
+    "age0": "入場無料（「●未就学児」は入場無料の対象）",
+    "age1": "入場無料",
+    "age2": "入場無料",
+    "age3": "入場無料。身長110cm未満なら、利用できるアトラクションの料金も無料",
+    "age4": "入場無料。110cm未満ならアトラクション料金も無料、110cm以上なら「入場は無料ですが、アトラクション料金は有料です」",
+    "adult": "入場券は大人（18歳以上）1,700円、小・中・高生1,400円。パスポート（入場＋乗り放題）は大人6,000円、小・中・高生5,000円",
+    "ridePass": "パスポートは「小学生未満はスタッフへご相談ください」。館内での販売価格は入場料を引いた額（大人4,300円、小・中・高生3,600円）。イブニングパスポートは大人5,000円、小・中・高生4,000円。アトラクションは1回700〜1,000円",
+    "condition": "「身長110cm未満のかた アトラクションのご利用には保護者の同伴が必要です。ご利用いただけるアトラクションは限られますが、アトラクション料金も無料です。チケットは必要ございません。」保護者は16歳以上",
+    "url": "https://tokyo-joypolis.com/ticket/index.html"
+   },
+   "rides": [
+    {
+     "name": "共通ルール",
+     "rule": "「身長110cm未満の方は保護者の同伴が必要です。※上記保護者とは16歳以上の方を指します。※110cm未満の方のアトラクション料金は無料です。」",
+     "url": "https://tokyo-joypolis.com/attraction/index.html"
+    },
+    {
+     "name": "逆転裁判 in ジョイポリス",
+     "rule": "利用制限表で、90cm未満・90〜110cm未満・ベビーカーの方のいずれも「●」（利用可）",
+     "url": "https://tokyo-joypolis.com/attraction/index.html"
+    },
+    {
+     "name": "フォーチュンフォレスト",
+     "rule": "90cm未満・90〜110cm未満・ベビーカーの方のいずれも「●」",
+     "url": "https://tokyo-joypolis.com/attraction/index.html"
+    },
+    {
+     "name": "ローラとカーラの美嬢面接",
+     "rule": "90cm未満・90〜110cm未満・ベビーカーの方のいずれも「●」",
+     "url": "https://tokyo-joypolis.com/attraction/index.html"
+    },
+    {
+     "name": "NARUTO ミュージックダンサー",
+     "rule": "90cm未満・90〜110cm未満が「●」、ベビーカーの方は「×」",
+     "url": "https://tokyo-joypolis.com/attraction/index.html"
+    },
+    {
+     "name": "進撃の巨人 THE ATTRACTION ～決断～",
+     "rule": "90cm未満・90〜110cm未満が「●」、ベビーカーの方は「×」。「※1…小さなお子さまを抱いてのご利用はご遠慮ください。」",
+     "url": "https://tokyo-joypolis.com/attraction/index.html"
+    },
+    {
+     "name": "MISSION SPARK",
+     "rule": "90cm未満・90〜110cm未満は「※11…保護者の同伴が必要です。」ベビーカーの方は「×」",
+     "url": "https://tokyo-joypolis.com/attraction/index.html"
+    },
+    {
+     "name": "Pirate's Plunder～ブラッディモーガンの宝～",
+     "rule": "「※10…3歳未満の方はご利用いただけません。」と「※1」（抱いての利用不可）",
+     "url": "https://tokyo-joypolis.com/attraction/index.html"
+    },
+    {
+     "name": "Spicy Taxi",
+     "rule": "身長制限90cm以上。90cm未満は「×」、90〜110cm未満は「※7…乗り物の動きを止めての運行とさせていただきます。」",
+     "url": "https://tokyo-joypolis.com/attraction/index.html"
+    },
+    {
+     "name": "ハウス・オブ・ザ・デッド ～スカーレット・ドーン～",
+     "rule": "90cm未満は「×」、90〜110cm未満は「※2…乗り物の動きを止めての運行とさせていただきます。銃を操作できない場合は、充分にお楽しみいただけない場合がございます。」",
+     "url": "https://tokyo-joypolis.com/attraction/index.html"
+    },
+    {
+     "name": "MURDER LODGE",
+     "rule": "「※6…7歳未満の方はご利用いただけません。7歳以上11歳未満の方は保護者の同伴が必要です。」このほか、ワイルドウイング、ワイルドジャングル、妖屋敷、ソニック アスレチックス、LASER SHOOTINGは110cm未満が「×」",
+     "url": "https://tokyo-joypolis.com/attraction/index.html"
+    }
+   ],
+   "toddlerArea": {
+    "text": null,
+    "url": "チケット・アトラクション・FAQページ（https://tokyo-joypolis.com/qa/index.html）に、幼児専用エリアの記載は見当たらない"
+   },
+   "nursingRoom": {
+    "text": "公式FAQ「授乳室のほか、お湯・おむつ交換台もご用意しております。ご希望のお客さまは、お近くのスタッフにお申し付けください。」場所の記載はない",
+    "url": "https://tokyo-joypolis.com/qa/index.html"
+   },
+   "diaper": {
+    "text": "公式FAQにおむつ交換台ありと記載（授乳室と同じ回答）。場所の記載はない",
+    "url": "https://tokyo-joypolis.com/qa/index.html"
+   },
+   "stroller": {
+    "text": "FAQ「ベビーカーの貸し出しはありますか？→ご用意しております。1st Floor『インフォメーションカウンター』のスタッフにお申し付けください。」「ベビーカーはつかえますか？→ベビーカーのままご入場いただけます。ただし、アトラクションの利用は一部制限がございます。また、各階への移動の際は、業務用のエレベーターをご案内いたします」",
+    "url": "https://tokyo-joypolis.com/qa/index.html"
+   },
+   "access": {
+    "text": "「ゆりかもめ『お台場海浜公園』から徒歩2分」「りんかい線『東京テレポート駅』から徒歩5分」。DECKS Tokyo Beach 3F～5F",
+    "url": "https://tokyo-joypolis.com/access/index.html"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "運営元はCA Sega Joypolis Ltd.。ページにはHTMLコメントで残った古い記述（ワイルドリバー運休、撃音ライブコースター休止など）があったため、コメントを除いた表示テキストだけを採用した。",
+   "group": "amusement"
+  },
+  {
+   "name": "よみうりランド",
+   "status": "営業中",
+   "statusNote": "所在地は東京都稲城市矢野口4015-1（公式フッター）。公式営業カレンダーのデータでは、2026年10月の非営業日は10/7・8・14・15・21・22（水・木）、11月は11/12。営業時間は日により異なり、10月は10:00〜17:00、18:00、20:00などで、10/29以降は〜20:30（ジュエルミネーション期）。CAR factory（ev-グランプリ、マイレーシング、カスタムガレージ）は「9/4(金)～10月下旬まで、CAR factoryリニューアルのため運休」。",
+   "fees": {
+    "age0": "無料。料金表の幼児区分は「未就学児（3歳以上～小学生未満）」からで、FAQは「3歳になられたお子様から料金が必要となります。」",
+    "age1": "無料（同上）",
+    "age2": "無料（同上）。小さなお子さまページにも「アトラクションは誕生日起算で3歳から有料、2歳以下は無料」",
+    "age3": "入園料1,000円（公式オンライン800円）、ワンデーパス2,500円（同2,100円）",
+    "age4": "入園料1,000円（オンライン800円）、ワンデーパス2,500円（同2,100円）",
+    "adult": "おとな（18〜64歳）は入園料1,800円（オンライン1,600円）、ワンデーパス5,900円（同5,500円）",
+    "ridePass": "ワンデーパス（入園＋乗り放題＋HANA・BIYORI入園）の未就学児は2,500円（オンライン2,100円）。アフターパス（15:00〜）の未就学児は1,500円（同1,200円）。のりもの券は各アトラクション300〜1,200円で「※のりものは3歳以上が有料となります」。ゴンドラは片道300円・往復500円（3歳以上）",
+    "condition": "ワンデーパスの対象外は、バンジージャンプ、ev-グランプリ、ゴンドラ、各種ワークショップなど",
+    "url": "https://www.yomiuriland.com/charge/"
+   },
+   "rides": [
+    {
+     "name": "共通ルール",
+     "rule": "「『要付添』と記載のあるアトラクションを対象のお子様がご利用される場合には、中学生以上の方のご同乗が必要です」「身長・年齢制限のあるアトラクションはお子様の身長・年齢が規定に満たない場合、中学生以上の方のご同乗があってもアトラクションはご利用になれません」",
+     "url": "https://www.yomiuriland.com/page/attraction_precaution/"
+    },
+    {
+     "name": "スピンドライブ",
+     "rule": "「■2歳以上 ■2歳は要付添 ■身長90cm未満要付添」「※おとなは1台につき1名まで」",
+     "url": "https://www.yomiuriland.com/page/enjoy_new03/"
+    },
+    {
+     "name": "ゴーゴートロッコ",
+     "rule": "「■2歳以上 ■6歳未満要付添」",
+     "url": "https://www.yomiuriland.com/page/enjoy_new03/"
+    },
+    {
+     "name": "ディノランナー",
+     "rule": "「■2歳以上 ■恐竜車両：身長 90㎝以上 トロッコ：なし ※身長110cm未満の方は1名までにつき、中学生以上の方1名の付添が必要です。」",
+     "url": "https://www.yomiuriland.com/page/enjoy_new03/"
+    },
+    {
+     "name": "プテラノドンとお空の大冒険",
+     "rule": "「■一人座りができる方 ※身長110cm未満の方は2名までにつき、中学生以上の方1名の付添が必要です。」",
+     "url": "https://www.yomiuriland.com/page/enjoy_new03/"
+    },
+    {
+     "name": "メリーゴーランドドッグ／スイーツカップ／ちびっこ消防隊けしっぴー／アニマルレスキュー／お化け屋敷ひゅ～どろ／Sky-Go-LAND",
+     "rule": "「■5歳未満要付添 ※5歳未満の方は中学生以上の同乗が必要です。」",
+     "url": "https://www.yomiuriland.com/page/enjoy_new03/"
+    },
+    {
+     "name": "ぐるぐるドライブ",
+     "rule": "「■3歳以上 ■身長90～130cm未満」。アトラクション一覧では「お子さま一人で乗れる自動車型アトラクション」",
+     "url": "https://www.yomiuriland.com/attraction/"
+    },
+    {
+     "name": "ぶんぶんスイング／フロッグホッパー",
+     "rule": "「■3歳以上 ■5歳未満要付添 ■身長90cm以上」",
+     "url": "https://www.yomiuriland.com/page/enjoy_new03/"
+    },
+    {
+     "name": "ミラクルわんルーム～チュロス島の大冒険～／わんわんコースターわんデット",
+     "rule": "「■3歳以上 ■5歳未満要付添 ■身長90cm以上」",
+     "url": "https://www.yomiuriland.com/page/enjoy_new03/"
+    },
+    {
+     "name": "ちえくらべ「たまゴロー」",
+     "rule": "「3歳以上、6歳未満要付添」",
+     "url": "https://www.yomiuriland.com/attraction/"
+    },
+    {
+     "name": "くるくるコンパス／シーチキン GO！",
+     "rule": "「■身長90cm以上 ■身長120cm未満要付添」（くるくるコンパスは「おとなは1台につき1名まで」）",
+     "url": "https://www.yomiuriland.com/page/enjoy_new03/"
+    }
+   ],
+   "toddlerArea": {
+    "text": "遊園地内の幼児専用エリアの記載は見当たらない。園内外施設のページには、園外施設として屋内遊戯施設「KID-O-KID（キドキド）」の記載がある（「親子一緒に運動やあそびを楽しめ…屋内遊戯施設」）。キドキドの対象年齢と料金は、よみうりランド公式サイトに記載がない（キドキドは別運営のサイトにリンクしている）",
+    "url": "https://www.yomiuriland.com/page/institution/"
+   },
+   "nursingRoom": {
+    "text": "公式FAQ「ベビールームはありますか？→園内に2ヶ所ございます。（グッジョバエリア、キドキド裏）カーテン付きの場所もございますので、授乳も可能です。お湯、電子レンジのご用意もございます。」",
+    "url": "https://yldfaq.yomiuri.co.jp/yomiurilandfaq/yldfaq/02"
+   },
+   "diaper": {
+    "text": "おむつ交換台の場所を明記した記載は、見たFAQ（ベビールームの02、オムツ販売の03）に見当たらない。オムツ販売は「園内売店の『Shop Gets(ショップ ゲッツ)』と『YOMIURI本舗』で販売しております。」",
+    "url": "https://yldfaq.yomiuri.co.jp/yomiurilandfaq/yldfaq/03"
+   },
+   "stroller": {
+    "text": "FAQ「入園後、入園口付近にございますインフォメーションにて1台につき500円で貸出ししております。※ご予約はできません。※台数に限りがあります」。レストランGooddayとラ・ピシーヌには「屋外にベビーカー置き場もございます」。ゴンドラは「おたたみになられた状態で」（扉の開放幅48cmまで）",
+    "url": "https://yldfaq.yomiuri.co.jp/yomiurilandfaq/yldfaq/06"
+   },
+   "access": {
+    "text": "京王線「京王よみうりランド駅」から、ゴンドラ「スカイシャトル」（約5〜10分）で入園口「スカイゲート」へ。小田急バス読01系統（京王よみうりランド駅⇔読売ランド前駅）や新07系統（新百合ヶ丘駅南口）で「よみうりランド」下車すると「入園口は目の前」。交通アクセスページに徒歩分の記載はない",
+    "url": "https://www.yomiuriland.com/traffic/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "FAQは公式サイトのフッター「よくある質問」からリンクされた yldfaq.yomiuri.co.jp のもの。営業日は公式ページのNuxtデータ（/_nuxt/static/1792729880/information/payload.js、200）を読み取った。",
+   "group": "amusement"
+  },
+  {
+   "name": "サンリオピューロランド",
+   "status": "営業中",
+   "statusNote": "公式カレンダーのデータ（/common_v2/json/202610.json）では、2026年10月の休館日は10/21と10/22（「本日は休館日です。」）。ほかの日は8:30〜18:00、9:00〜18:00、9:30〜17:00など、日により異なる。FAQは「定休日はありますか？→休館日がございます。」。入場には来場予約とパスポートの両方が必要。ボートライドのホラーバージョン（10月の土日祝の16時以降）実施中は、通常版が休止する。",
+   "fees": {
+    "age0": "無料（「2歳以下のお子様は無料でお楽しみいただけます」）",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "小人（3〜17歳・高校生）料金。2026年10月の当日窓口のデイパスポートは3,200円〜5,200円（日により変動）",
+    "age4": "小人料金。10月の当日窓口デイパスポートは3,200円〜5,200円",
+    "adult": "大人（18〜64歳）。10月の当日窓口デイパスポートは4,300円〜6,300円（日により変動）",
+    "ridePass": "デイパスポートは入場とアトラクションのセット（FAQ「パスポートのみでお楽しみいただけるアトラクションが10個と、参加券(有料)の必要なアトラクションが1つ」）。アフタヌーンパスポート（14時から入場）は10月が大人3,000円〜4,200円、小人・シニア2,700円〜3,900円。待ち時間短縮のPUROPASSは別売り",
+    "condition": "金額は10月カレンダーのデータにある料金区分A・B・C・S・T・U・Vの当日窓口価格から出した（Cが大人4,300円・小人3,200円、Vが大人6,300円・小人5,200円）。公式eパスポートは別価格",
+    "url": "https://www.puroland.jp/passport/ ／ https://www.puroland.jp/common_v2/json/202610.json"
+   },
+   "rides": [
+    {
+     "name": "共通ルール",
+     "rule": "FAQ「小学生未満(未就学児)のお客様には、中学生以上の保護者様のご同伴をお願いいたします。」「アトラクションで年齢制限のあるものはありますか？→エンターテイメントホール(ふわふわキッズランド)は、小学生までのお子様が対象のアトラクションです。CHALLENGE PUROは、3歳～15歳が対象のアトラクションです。上記アトラクション以外は年齢制限はございません。なお ディスカバリーシアターには身長制限がございます。」",
+     "url": "https://www.puroland.jp/qa/"
+    },
+    {
+     "name": "サンリオキャラクターボートライド（通常版）",
+     "rule": "年齢・身長制限の記載なし。「※アトラクションご利用時、未就学児のお客様には中学生以上の保護者の方のご同伴をお願いいたします。」",
+     "url": "https://www.puroland.jp/ride-amusement/boatride/"
+    },
+    {
+     "name": "ボートライド ホラーバージョン「ノロワレピエロ」",
+     "rule": "「中学生以上の方のみご乗船いただけます。」「小学生以下の方はご乗船いただけません。」10月は3・4・10〜12・17・18・24・25・31日の16:00以降。実施中は通常版が休止",
+     "url": "https://www.puroland.jp/ride-amusement/2026_halloween_boatride/"
+    },
+    {
+     "name": "～マイメロディ＆クロミ～マイメロードドライブ",
+     "rule": "年齢・身長制限の記載なし。未就学児は中学生以上の保護者の同伴",
+     "url": "https://www.puroland.jp/ride-amusement/mymeroaddrive/"
+    },
+    {
+     "name": "シナモロールの小さな大冒険（ディスカバリーシアター）",
+     "rule": "「安全のため、以下の方は『動かないシート』のご利用をお願いいたします。・身長110㎝以下のお子様 … ・1人で座って安定した姿勢を保てない方」「※動かないシートでは魔法のステッキを使用したシューティングゲームにはご参加いただけません。」",
+     "url": "https://www.puroland.jp/ride-amusement/cinnamon_adventure/"
+    },
+    {
+     "name": "ふわふわキッズランド",
+     "rule": "「対象：1歳～小学生まで ※1歳～小学生未満のお子さまには、必ず保護者の方がお付添いください。※安全の為、1歳未満のお子さまと中学生以上の方は、ふわふわの中ではお遊びいただけません。」",
+     "url": "https://www.puroland.jp/ride-amusement/fuwafuwa/"
+    },
+    {
+     "name": "CHALLENGE PURO",
+     "rule": "「3歳～15歳」が対象（事前購入）。「※参加者が未就学児の場合、中学生以上の保護者の方には体験が終わるまで見学エリア内にてお待ちいただきますようお願いいたします。」",
+     "url": "https://www.puroland.jp/ride-amusement/challenge_puro/"
+    },
+    {
+     "name": "BUDDYEDDY WONDERFUL CLUB",
+     "rule": "参加券が必要（「2024年10月19日(土)より、参加料金(500円)が無料になりました」）。年齢制限の記載なし。未就学児は中学生以上の保護者の同伴",
+     "url": "https://www.puroland.jp/ride-amusement/buddyeddy_wonderful_club/"
+    }
+   ],
+   "toddlerArea": {
+    "text": "ふわふわキッズランド（エンターテイメントホール）の中に「リトルキッズエリア」がある。「ゆっくりおやすみしたりゴロゴロしたり、のんびりお過ごしください。対象：小学生未満のお子さま、保護者の方 ※安全の為、お子さまには必ず保護者の方がお付添いください。」パスポートの範囲内か別料金かの明記は、このページに見当たらない",
+    "url": "https://www.puroland.jp/ride-amusement/fuwafuwa/"
+   },
+   "nursingRoom": {
+    "text": "公式に記載あり。「ベビーセンターにファミリー授乳室(1室)、女性専用の個室授乳室(4室)がございます。」ベビーセンターの場所は「1F ピューロビレッジ」。はいはいスペース、調乳・離乳食専用キッチン、ベビー用品の自動販売機（現金のみ）もある",
+    "url": "https://www.puroland.jp/guide/babycenter/"
+   },
+   "diaper": {
+    "text": "公式に記載あり。「女性用お手洗い・男性用お手洗い(一部)・多目的トイレ・ベビーセンターにおむつ交換台をご用意しています。」つかまり立ち交換台もある",
+    "url": "https://www.puroland.jp/qa/"
+   },
+   "stroller": {
+    "text": "「土日祝日及び18時閉館の平日は、1･2階ではベビーカーをご利用いただけません。」「各階へのご移動はエレベーターをご利用ください」「スペースの都合上、ベビーセンターにはベビーカーをお持ち込みいただけません」「ベビーカー置き場をご利用の際は…畳んで置くようご協力ください」「抱っこ紐などの貸し出しはございません」。ベビーカー自体の貸し出しは、小さなお子様ページとFAQに記載が見当たらない",
+    "url": "https://www.puroland.jp/guide/baby/"
+   },
+   "access": {
+    "text": "FAQ「京王線・小田急線・多摩モノレール『多摩センター駅』から徒歩5分です。」アクセスページは「ベビーカー・車椅子ご利用の方は遊歩道をご利用の上、直接入場口（ピューロランド入口は3Fです）へお越しください。」",
+    "url": "https://www.puroland.jp/qa/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "パスポートページの料金表と日別カレンダーはJavaScript（Vue）で描画されるため、元データの /common_v2/json/202610.json（200）から営業日と料金区分を取った。公式の乗り物一覧ページ（/ride-amusement/）に載っている個別ページだけを確認した。",
+   "group": "amusement"
+  },
+  {
+   "name": "こどもの国（横浜市青葉区）",
+   "status": "営業中",
+   "statusNote": "公式トップに「今日のお知らせ：10月23日(金) 開園時間 9:30～16:30 (最終入園15:30)」。休園日は「● 毎週水曜日（水曜が祝日の場合開園）●12/31、1/1」。開園時間は通年「9:30～16:30」で、「※7～8月は17:00まで開園」。冬季休業の記載はない。運営主体は社会福祉法人こどもの国協会、所在地は神奈川県横浜市青葉区奈良町700。「町田市境」については公式サイトで確認していない。",
+   "fees": {
+    "age0": "無料（「※幼児は3歳以上です。0～2歳は無料です。」）",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "幼児200円",
+    "age4": "幼児200円",
+    "adult": "おとな800円、高校生600円、中学生・小学生300円（2026年4月1日改定）",
+    "ridePass": "乗り物は個別料金。のりもの回数券は1,000円（100円券×12枚）で、自転車・ボート・ミニSL・園内バスに共通して使え、有効期限なし。ミニSLは1回300円、園内バス「あかポッポ号」は1人300円（いずれも3歳以上一律）。自転車は大人300円、子ども（3歳〜中学生）200円。サイクルボート1隻700円、ローボート1隻500円。こどもF1とバッテリーカーは現金200円。平日のみ使える入園パスポート券もあり（料金は別ページ）",
+    "condition": "駐車料金は普通車1,000円（先払い）",
+    "url": "https://www.kodomonokuni.org/price/"
+   },
+   "rides": [
+    {
+     "name": "ミニSL「たいよう号」",
+     "rule": "1回300円（3歳以上一律）。「●5歳から1人で乗れます。4歳以下は大人（高校生以上）の付添が必要です。(付添有料)」",
+     "url": "https://www.kodomonokuni.org/norimono/"
+    },
+    {
+     "name": "園内バス「あかポッポ号」",
+     "rule": "「1人300円（3歳以上一律、1回1周まで、下車前途無効）」「ベビーカーは折りたたんで乗せられます」",
+     "url": "https://www.kodomonokuni.org/norimono/"
+    },
+    {
+     "name": "おもしろじてんしゃ",
+     "rule": "「・1人での利用は5才から利用可。・3～4才は大人が付添（有料）で利用可」「1回10分（3歳から利用可）」",
+     "url": "https://www.kodomonokuni.org/norimono/"
+    },
+    {
+     "name": "サイクリングコース（チャイルドシート付き自転車）",
+     "rule": "1人乗りは小学1年から。「チャイルドシート付きの自転車（前シートまたは後シート）があり、幼児も大人と一緒に利用可（チャイルドシート自転車は大人の利用券のみ必要で、子どもは不要）」",
+     "url": "https://www.kodomonokuni.org/norimono/"
+    },
+    {
+     "name": "ローリングサイクル",
+     "rule": "「※1人で乗れるのは小学1年から（小学生未満は大人と一緒にお乗りください）」",
+     "url": "https://www.kodomonokuni.org/norimono/"
+    },
+    {
+     "name": "ヘリサイクル",
+     "rule": "「定員：2人（幼児を含めて3人まで可）」「※1人で乗れるのは小学4年から（小学3年以下は小学4年以上と一緒にお乗りください）」",
+     "url": "https://www.kodomonokuni.org/norimono/"
+    },
+    {
+     "name": "チャレンジサイクル",
+     "rule": "「定員：2人（大人の場合1人乗り、大人1人＋幼児2人まで可、1台につき最大重量100キロ）」「1人で乗れるのは小学4年から」",
+     "url": "https://www.kodomonokuni.org/norimono/"
+    },
+    {
+     "name": "こどもF1",
+     "rule": "「1人乗り（利用できるのは4～12歳）」。現金200円",
+     "url": "https://www.kodomonokuni.org/norimono/"
+    },
+    {
+     "name": "バッテリーカー",
+     "rule": "「2人乗り（幼児向け）」。現金200円",
+     "url": "https://www.kodomonokuni.org/norimono/"
+    },
+    {
+     "name": "ボート（サイクルボート／ローボート）",
+     "rule": "「●小学4年以下の子どもだけでは利用できません。ボート1隻につき小学5年以上が1人乗ることが必要です。」",
+     "url": "https://www.kodomonokuni.org/norimono/"
+    }
+   ],
+   "toddlerArea": {
+    "text": "「なかよし広場 すくすくアイランド」。乳幼児連れページの説明は「0～3歳用遊具があるフェンスで囲まれた育遊空間があり、ヨチヨチ歩きでも安心して遊べます」。ゆうぐ・ひろばページは「3歳未満の子どものための遊具で、フェンスによりエリア分けをしているので安心感があります。その他、3～6歳用、6～12歳用の遊具があります」。料金は、営業時間・料金ページで「ゆうぐひろば、ローラーすべりだいなどの無料遊具」と案内されているが、すくすくアイランドを名指しした料金の記載はない",
+    "url": "https://www.kodomonokuni.org/infants/ ／ https://www.kodomonokuni.org/yugu/"
+   },
+   "nursingRoom": {
+    "text": "公式に記載あり。「授乳室は園内に4ヵ所設置しています。」場所は、遊具広場（母乳ブース・粉ミルク用給湯器）、白鳥湖（粉ミルク用給湯器）、自転車のりば（母乳ブース・粉ミルク用給湯器）、ミルクプラント（電子レンジ・お湯）",
+    "url": "https://www.kodomonokuni.org/infants/"
+   },
+   "diaper": {
+    "text": "公式に記載あり。授乳室4ヵ所すべてに「オムツ換えシート」。「園内の主要なトイレには赤ちゃん用オムツ替えベッドや、車いす用トイレが整備されています。」",
+    "url": "https://www.kodomonokuni.org/infants/"
+   },
+   "stroller": {
+    "text": "ベビーカーマップ（PDF）が公開されている。貸し出しは2種類。A型は「1回1,000円…※うち500円は保証料、返却時に返金」で「対象月齢）生後1か月～4才（48か月）まで 体重限度）18kgまで」「※雨天時の貸出中止」。B型は「1回300円…※うち100円は保証料」で「対象月齢）生後7か月頃～」。貸し出し場所は正面入口改札（牧場口改札は臨時開場時のみ）。「※改札の外への持ち出しはできません」「在庫数に限りがございます」",
+    "url": "https://www.kodomonokuni.org/infants/"
+   },
+   "access": {
+    "text": "FAQ「横浜高速鉄道の『こどもの国駅』です。…長津田駅からこどもの国線に乗り換えて行けます。こどもの国駅に到着しましたら、そこから約3分で正面入口です。」アクセスページには、小田急線「鶴川」駅から小田急バス「奈良北団地」行（鶴07系統）で約15分の案内もある",
+    "url": "https://www.kodomonokuni.org/faq/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "東京都外（神奈川県横浜市青葉区）。牧場・どうぶつえんは株式会社雪印こどもの国牧場の経営と公式に明記されており、のりもの回数券は「こどもどうぶつえん」「ポニーぼくじょう」では使えない。2026/10/17付で「サイクルボート 定員数変更のお知らせ」が出ているが、本文は未確認（のりものページの記載は「700円（2人乗り）」のまま）。",
+   "group": "amusement"
+  },
+  {
+   "name": "東京あそびマーレ（八王子市・ビア長池新館）",
+   "status": "営業中",
+   "statusNote": "公式トップに「営業時間／10：00〜18：00 年中無休」とある。閉店・休業・移転の告知は見当たらない。ただし公式内で営業時間が食い違う（料金・FAQ・トップは18:00まで、「大切なお願い」ページのフッターは「10：00〜19：00」）。FAQには「施設内点検日には臨時休業…年１～２回を予定」とある。",
+   "ages": {
+    "text": "「対象年齢は保護者同伴の０～１２歳のお子様（小学生まで）となります。」（FAQでは「保護者同伴の、0歳～12歳のお子様（小学生まで）」）",
+    "url": "https://asobimare.jp/tokyo/charge/"
+   },
+   "fees": {
+    "age0": "無料（「0～1歳 無料」）",
+    "age1": "無料（「0～1歳 無料」）",
+    "age2": "通常（10:00〜18:00）は平日1,200円／休日1,800円／ハイシーズン1,980円。ナイト（16:00〜18:00）は1,000円／1,200円／1,400円。1時間プランは平日600円（10分ごとに延長100円、上限1,200円）／休日900円（延長150円、上限1,800円）／ハイシーズン1,000円（延長170円、上限1,980円）で、このプランは一時退出できない",
+    "age3": "2歳と同じ",
+    "age4": "2歳と同じ",
+    "adult": "子どもと同じ料金（表の見出しが「室内遊園地＋スノータウン入場料金/1名 （2歳〜大人）」）",
+    "condition": "区分は「休日（土・日・祝・祭 当店が定める特別営業期間）」と「ハイシーズン（ゴールデンウィーク、夏休み期間、年末年始）」。ただし同じページの注記には「ハイシーズンとは土・日・祝祭・正月・GW・お盆他」とあり、定義が食い違う。「一部、有料のものがございます」（ミニエクスプレス電車・ゴーカートは有料、ビルダーズは1回100円）。障がい者手帳の本人は700円",
+    "url": "https://asobimare.jp/tokyo/charge/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "FAQに「年齢制限のあるコーナーもございますのでご了承下さい」とあるが、どのコーナーが何歳からかは書かれていない。遊具紹介ページに「キッズゾーン」の名前はあるが、対象年齢の記載はない",
+     "url": "https://asobimare.jp/tokyo/faq/"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。FAQの答えは「ベビールームをご用意しております。」「※施設内の為、当園ご利用のお客様に限ります。」。ミルク用のお湯もベビールームにある。遊具紹介ページにも「授乳室」がある",
+    "url": "https://asobimare.jp/tokyo/faq/"
+   },
+   "diaper": {
+    "text": "公式に記載あり。「おむつ交換台もございますのでご利用下さい。」。紙おむつは「販売しております。」",
+    "url": "https://asobimare.jp/tokyo/faq/"
+   },
+   "stroller": {
+    "text": "「ベビーカー置き場をご用意しておりますが、数に限りがございます。尚、あそびエリアではベビーカーの利用はできません。」",
+    "url": "https://asobimare.jp/tokyo/faq/"
+   },
+   "rules": {
+    "text": "子どもだけ・大人だけでは入場できない。大人の交代はできない。再入場はできる（混雑時は待つ場合あり）。子どもを残して保護者だけ退出することはできない。食べ物・飲み物は持ち込める。アクセサリーやヘアピンは外す。スノータウンでは長靴（13〜29cm）を無料で貸し出し、室温は18度前後（スノータウンのページ。FAQでは長靴「12〜29cm」と書かれていて食い違う）。手袋・靴下・Tシャツを販売している。予約は団体予約だけが案内されている（平日のみ）。靴下が必須かどうかは書かれていない",
+    "url": "https://asobimare.jp/tokyo/faq/"
+   },
+   "access": {
+    "text": "アクセスページの地図画像のaltテキストが「京王堀之内駅南口 直結「ビア長池」新館」。徒歩分数の記載はない。屋上のタイムズビア長池第1・第2駐車場は利用者なら最大4時間無料",
+    "url": "https://asobimare.jp/tokyo/access/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "住所は東京都八王子市別所2丁目1番 ビア長池新館。補足の出典として、スノータウンのページ https://asobimare.jp/tokyo/snowtown/、遊具紹介 https://asobimare.jp/tokyo/asobimare/、大切なお願い https://asobimare.jp/tokyo/important/ も200で取れた。運営会社の表記はTOKYO ASOBIMARE CO.,LTD.（あそびマーレ全体のトップページはYAMAZAKIYA Co., Ltd.）",
+   "group": "kidspark"
+  },
+  {
+   "name": "キッズランドUS mini 東京大森店（西友大森店3階）",
+   "status": "営業中",
+   "statusNote": "公式の店舗一覧（東京都）に載っていて、店舗ページの営業時間は10:00-19:00。閉店・休業の告知は見当たらない",
+   "ages": {
+    "text": "店舗ページは「対象年齢:0歳~小学4年生(10歳)まで」。FAQは「※キッズランドUS mini店舗では、小学4年生(10歳)までとなります。※全店舗、0歳のお子様は無料です。」",
+    "url": "https://kidslandus.com/shop/tokyo-omori/"
+   },
+   "fees": {
+    "age0": "無料（「０歳のお子様は無料です。」）",
+    "age1": "平日は1時間パック700円か1日パック900円。休日は1時間パック700円か3時間パック1,200円",
+    "age2": "1歳と同じ",
+    "age3": "1歳と同じ",
+    "age4": "1歳と同じ",
+    "adult": "保護者様1日パック600円（平日・休日とも）",
+    "condition": "「休日とは「土日祝日、国民の休日および当社指定の休日料金期間中」です。」「時間制限があるパックは退出時間を超えると差額が発生します。」価格はすべて税込。子ども（1歳以上）の障がい者手帳を見せると、付き添いの保護者1名まで無料",
+    "url": "https://kidslandus.com/shop/tokyo-omori/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "遊具・設備一覧に「ベビーコーナー」があるが、対象年齢の記載はない。ご利用案内（料金ページ）には「コーナーによっては年齢制限がある場合がございます。」とだけある",
+     "url": "https://kidslandus.com/shop/tokyo-omori/"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。店舗ページの遊具・設備一覧に「授乳室」がある（場所は書かれていない）。入居先の西友大森店の公式店舗ページでも、利用できるサービスに「ベビー休憩室」がある",
+    "url": "https://kidslandus.com/shop/tokyo-omori/"
+   },
+   "diaper": {
+    "text": null,
+    "url": "店舗ページ https://kidslandus.com/shop/tokyo-omori/ とFAQ https://kidslandus.com/faq に記載なし"
+   },
+   "stroller": {
+    "text": null,
+    "url": "店舗ページ https://kidslandus.com/shop/tokyo-omori/ 、FAQ https://kidslandus.com/faq 、料金ページ https://kidslandus.com/price のいずれにも記載なし"
+   },
+   "rules": {
+    "text": "「ご予約なしでも当日受付でご利用いただけます。」保護者（18歳以上）の同伴が必要で、子どもを残して保護者が施設の外へ出ることはできない。利用時間内は出入り自由。保護者は1名分の料金で交代できる。飲食物は飲食スペースで食べるなら持ち込める（アルコールは不可）。mini店舗には中学生以上は入場できない。利用規約は「マット設置箇所…は土足厳禁」。靴下が必須かどうかは書かれていない",
+    "url": "https://kidslandus.com/faq"
+   },
+   "access": {
+    "text": "キッズランドUSの店舗ページには最寄り駅の記載がない。入居先の西友大森店の公式店舗ページは「JR京浜東北線 大森駅 東口から徒歩4分」。駐車場は151台（2,000円以上買えば2時間無料、と店舗ページにある）",
+    "url": "https://www.seiyu.co.jp/shop/%E8%A5%BF%E5%8F%8B%E5%A4%A7%E6%A3%AE%E5%BA%97/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "どの料金が平日・休日かは、HTMLのタブ（tab-weekday / tab-holiday）で確かめた。運営はユーエスマート株式会社（利用規約は2026/4/20制定）。料金ページ https://kidslandus.com/price も200で取れた",
+   "group": "kidspark"
+  },
+  {
+   "name": "キッズランドUS 東京青梅店（トライアル西友3階）",
+   "status": "営業中",
+   "statusNote": "公式の店舗一覧（東京都）に載っていて、営業時間は10:00~19:00。閉店・休業の告知は見当たらない。公式には「東京青梅店グランドオープン」の記事リンクがある",
+   "ages": {
+    "text": "店舗ページには対象年齢の記載がない。FAQと利用規約では、mini以外の店舗は「0歳~小学6年生までのお子様が対象です。」",
+    "url": "https://kidslandus.com/faq"
+   },
+   "fees": {
+    "age0": "無料（「０歳のお子様は無料です。」）",
+    "age1": "平日は1時間パック800円か1日パック1,000円。休日は1時間パック800円か3時間パック1,300円。イブニングパックは平日15時〜・休日17時〜で800円",
+    "age2": "1歳と同じ",
+    "age3": "1歳と同じ",
+    "age4": "1歳と同じ",
+    "adult": "保護者様1日パック700円",
+    "condition": "休日の定義は大森店と同じ。価格は税込",
+    "url": "https://kidslandus.com/shop/tokyo-ome/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "遊具・設備一覧に「ベビーコーナー」があるが、対象年齢の記載はない",
+     "url": "https://kidslandus.com/shop/tokyo-ome/"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。遊具・設備一覧に「授乳室」がある（場所は書かれていない）",
+    "url": "https://kidslandus.com/shop/tokyo-ome/"
+   },
+   "diaper": {
+    "text": null,
+    "url": "店舗ページ https://kidslandus.com/shop/tokyo-ome/ に記載なし"
+   },
+   "stroller": {
+    "text": null,
+    "url": "店舗ページ https://kidslandus.com/shop/tokyo-ome/ に記載なし"
+   },
+   "rules": {
+    "text": "大森店と同じく、FAQ・利用規約の共通ルールが適用される（予約不要、保護者同伴、マット部分は土足厳禁など）",
+    "url": "https://kidslandus.com/faq"
+   },
+   "access": {
+    "text": null,
+    "url": "店舗ページ https://kidslandus.com/shop/tokyo-ome/ に最寄り駅の記載なし。住所は東京都青梅市河辺町10丁目9-1 トライアル西友３階。駐車場は買い物1円〜999円で1時間、1,000円以上で3時間無料。入居先の公式アクセスページは見つけられなかった（駅からの距離は報道記事にしかなかった）"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "都内のキッズランドUSは、公式では東京青梅店・mini 東京ひばりヶ丘店・mini 東京大森店・mini 東京浅草店・mini 東京吉祥寺店の5店",
+   "group": "kidspark"
+  },
+  {
+   "name": "べるべるパーク上野公園前店（パセラリゾーツ上野公園前店7F）",
+   "status": "営業中",
+   "statusNote": "営業時間は「月、水～日・祝 10:00～20:00／火 10:00～18:00」。直近2週間の営業表で、10/24〜11/3の多くの日に★印があり、注記は「★印はエリアを縮小してのご案内となります」。広い遊び場のほうには「※貸切使用時はエリア縮小あり」とある",
+   "ages": {
+    "text": null,
+    "url": "店舗ページ https://www.pasela.co.jp/mamakai/beruberu-park/shop/ueno/ に対象年齢の記載なし（料金の条件として「小学生以下のお子様」とあるだけ）"
+   },
+   "fees": {
+    "age0": "無料（「大人1名につき、小学生以下のお子様2名まで無料」。3人目からは大人料金の半額）",
+    "age1": "0歳と同じ",
+    "age2": "0歳と同じ",
+    "age3": "0歳と同じ",
+    "age4": "0歳と同じ",
+    "adult": "大人が払う料金で、子ども2名まではこれに含まれる。基本料金は30分ごとに月〜金380円／土日祝580円。ソフトドリンク飲み放題付きは750円／950円、スタンダード飲み放題付きは950円／1,150円。フリータイムパックは3時間2,980円／3,980円、5時間4,480円／5,980円（ソフトドリンク40種とポップコーン・アイスが食べ放題・飲み放題）",
+    "condition": "料金はキッズスペースとカラオケ個室の両方を使える前提。パックの延長は17時まで750円／30分、17時以降1,000円／30分。食事は単品で頼め、小学生以下は半額",
+    "url": "https://www.pasela.co.jp/mamakai/beruberu-park/shop/ueno/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "上野公園前店のページに、年齢を限定したエリアの記載はない（0歳児コーナーがあると書かれているのは秋葉原電気街店と横浜関内店で、上野ではない）。上野の遊具は「ワンフロア全てキッズパーク」「天使のゲームコーナー」「天使のかくれんぼ広場」",
+     "url": "https://www.pasela.co.jp/mamakai/beruberu-park/shop/ueno/"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。「店内には清潔で使いやすい授乳室とおむつ替えスペースを完備しております。男性の方はスタッフまでお声がけください。」電子レンジ、ウォーターサーバー（温水）も無料",
+    "url": "https://www.pasela.co.jp/mamakai/beruberu-park/shop/ueno/"
+   },
+   "diaper": {
+    "text": "公式に記載あり。おむつ替えスペースは上と同じ文言。「サイズ別のおむつ・おしり拭きを無料でご用意しています。」",
+    "url": "https://www.pasela.co.jp/mamakai/beruberu-park/shop/ueno/"
+   },
+   "stroller": {
+    "text": "「ベビーカーでのご来店も安心！カラオケ個室の外にベビーカー置き場を用意しております。」（キッズスペースに入れるかどうかは書かれていない）",
+    "url": "https://www.pasela.co.jp/mamakai/beruberu-park/shop/ueno/"
+   },
+   "rules": {
+    "text": "「WEB予約は24時間受付中です。」電話予約は0120-759-878。予約が必須とは書かれていない。受付はパセラリゾーツ上野公園前店４Ｆ。離乳食は持ち込める。靴下が必要かどうかは書かれていない",
+    "url": "https://www.pasela.co.jp/mamakai/beruberu-park/shop/ueno/"
+   },
+   "access": {
+    "text": "「京成上野駅 池の端口より徒歩1分」「【ベビーカー対応】…上野駅 不忍口より徒歩3分」「【ベビーカー対応】…上野駅 広小路口より徒歩5分」",
+    "url": "https://www.pasela.co.jp/mamakai/beruberu-park/shop/ueno/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "運営はパセラリゾーツ（NEWTON Corporation）。カラオケ店に併設されたキッズスペースで、料金は大人だけにかかる。ブランド全体のページ https://www.pasela.co.jp/mamakai/beruberu-park/ でも、東京・横浜エリアの料金は同じ数字だった（大阪エリアは別料金）",
+   "group": "kidspark"
+  },
+  {
+   "name": "べるべるパーク渋谷店（パセラリゾーツ渋谷店2F）",
+   "status": "営業中",
+   "statusNote": "営業時間は「月～木 10:00～17:00／金・土・祝前日 10:00～16:00／日・祝日 10:00～17:00」。直近2週間の営業表では、10月23日（金）は「休業日」、10月24日（土）は「10:00～14:30※」（時短）",
+   "ages": {
+    "text": null,
+    "url": "店舗ページ https://www.pasela.co.jp/mamakai/beruberu-park/shop/shibuya/ に対象年齢の記載なし"
+   },
+   "fees": {
+    "age0": "無料（大人1名につき小学生以下2名まで。3人目からは大人料金の半額）",
+    "age1": "0歳と同じ",
+    "age2": "0歳と同じ",
+    "age3": "0歳と同じ",
+    "age4": "0歳と同じ",
+    "adult": "上野公園前店と同じ（30分ごとに月〜金380円／土日祝580円、フリータイム3時間2,980円／3,980円、5時間4,480円／5,980円ほか）",
+    "condition": "延長は17時まで750円／30分、17時以降1,000円／30分",
+    "url": "https://www.pasela.co.jp/mamakai/beruberu-park/shop/shibuya/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "年齢を限定したエリアの記載はない（遊具は「キッズスペース（2F）」「トレインスポット」「粉ミルクバイキング」など）",
+     "url": "https://www.pasela.co.jp/mamakai/beruberu-park/shop/shibuya/"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。「授乳室・おむつ交換台は6階にございます。男性の方は1階のおむつ替えスペースをご利用ください。」粉ミルクバイキングは無料",
+    "url": "https://www.pasela.co.jp/mamakai/beruberu-park/shop/shibuya/"
+   },
+   "diaper": {
+    "text": "公式に記載あり。授乳室と同じ文言（6階と1階）。サイズ別のおむつ・おしり拭きは無料",
+    "url": "https://www.pasela.co.jp/mamakai/beruberu-park/shop/shibuya/"
+   },
+   "stroller": {
+    "text": "「カラオケ個室の外にベビーカー置き場を用意しております。」",
+    "url": "https://www.pasela.co.jp/mamakai/beruberu-park/shop/shibuya/"
+   },
+   "rules": {
+    "text": "WEB予約は24時間受付。電話は0120-428-875。予約が必須とは書かれていない。受付はパセラリゾーツ渋谷店１Ｆ。離乳食は持ち込める。ママ会バッグを無料で貸し出し。靴下については書かれていない",
+    "url": "https://www.pasela.co.jp/mamakai/beruberu-park/shop/shibuya/"
+   },
+   "access": {
+    "text": "「JR渋谷駅 ハチ公口より徒歩5分」「東京メトロ各線・東急東横線・田園都市線 渋谷駅より徒歩3分」「京王井の頭線 渋谷駅より徒歩6分」。ベビーカーや車いすで来る場合は、渋谷駅B5出口（ヒカリエ直結・エレベーターあり）からの道順が案内されている",
+    "url": "https://www.pasela.co.jp/mamakai/beruberu-park/shop/shibuya/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "",
+   "group": "kidspark"
+  },
+  {
+   "name": "PLAY! PARK（立川・GREEN SPRINGS W3棟3F）",
+   "status": "営業中",
+   "statusNote": "2026/10/23は「短縮営業です 13:00-17:00」「午前中は団体貸切のため、短縮営業です。」通常は平日10:00-17:00（入場は16:00まで）、土日祝10:00-18:00（入場は17:00まで）。休館日は原則なし（団体貸切・メンテナンスの日はある）",
+   "ages": {
+    "text": "「0歳から12歳の子どもが対象です。年齢に合わせたエリアを選んで遊ぶことができます。」",
+    "url": "https://play2020.jp/faq/?section=park"
+   },
+   "fees": {
+    "age0": "無料（「1歳未満の子どもは入場無料」。年齢がわかる書類を受付で見せる）",
+    "age1": "子ども（1-2歳）は平日1日券1,700円。休日は1日券2,000円か3時間券1,800円（再入場不可、延長は15分ごとに200円）",
+    "age2": "1歳と同じ",
+    "age3": "子ども（3-12歳）は平日1日券2,200円。休日は1日券2,500円か3時間券2,300円（延長は15分ごとに200円）",
+    "age4": "3歳と同じ",
+    "adult": "大人（中学生以上）は平日1日券1,100円。休日は1日券1,500円か3時間券1,300円",
+    "condition": "すべて税込。当日なら入退場自由（休日の3時間券は除く）。グループ全員が同じ券種を買う。2026/12/29〜12/31は休日料金。立川割・団体割引・PARK割（MUSEUMのレシートを見せると子どもの当日券が200円引き）があり、併用はできない",
+    "url": "https://play2020.jp/park/visit/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "〈小さなお皿〉は「保護者と一緒に過ごせる3歳未満の専用エリア。」毎日2歳までが対象のワークショップがあり、ワークショップによって対象年齢が違う（例：0-2歳、3-12歳）",
+     "url": "https://play2020.jp/park/playground/"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。「授乳室・おむつ替えスペース 〈小さなお皿〉横に設置。授乳室にはお湯の出るウォーターサーバーがあり、調乳ができます。」",
+    "url": "https://play2020.jp/park/playground/"
+   },
+   "diaper": {
+    "text": "公式に記載あり。場所は上と同じ。おむつは受付で販売している（「サイズ：M・L、1個売り」）",
+    "url": "https://play2020.jp/faq/?section=park"
+   },
+   "stroller": {
+    "text": "「ベビーカーで遊具エリアへの入場はできません。受付奧にベビーカー置き場がありますのでご利用ください。」",
+    "url": "https://play2020.jp/faq/?section=park"
+   },
+   "rules": {
+    "text": "保護者（20歳以上）の同伴が必要で、保護者1名につき子ども3名まで。大人だけでは入場できない。保護者は交代できるが、それぞれに料金がかかる。靴を脱いで入場する（専用の靴箱あり）。館内で食事はできないが、離乳食は〈小さなお皿〉横の休憩スペースで食べられる。飲み物は持ち込める。当日券と入場予約（事前決済）があり、オンラインチケットは来場日の3週間前の10:00から販売。土日祝や大型連休は早めの予約がすすめられている。靴下が必須かどうかは書かれていない",
+    "url": "https://play2020.jp/faq/?section=park"
+   },
+   "access": {
+    "text": "「JR立川駅北口・多摩モノレール立川北駅（国営昭和記念公園方面）より徒歩約10分」。専用駐車場はなく、GREEN SPRINGSの共同駐車場（有料）を使う",
+    "url": "https://play2020.jp/park/visit/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "依頼文では「PLAY! MUSEUMの子ども向けエリア」とされていたが、公式ではPLAY! PARKは3Fにある別の屋内キッズパークで、料金も2FのPLAY! MUSEUMとは別。営業時間・料金ページの下部には「PLAY! PARKは別料金で、当日券のみの販売です」という古い文言が残っていて、同じページの「当日券と入場予約があります」と矛盾する。トップ https://play2020.jp/park/ も200で取れた",
+   "group": "kidspark"
+  },
+  {
+   "name": "The Kids（ザキッズ）お台場デックス東京ビーチ店（アイランドモール3F）",
+   "status": "営業中",
+   "statusNote": "公式の店舗一覧で、東京都はこの1店だけ。営業時間は【平日】11:00-19:00（最終受付18:30）、【休日】11:00-20:00（最終受付19:30）",
+   "ages": {
+    "text": "FAQは「0歳児～12歳です」。利用規約は「施設の対象年齢は0歳児から小学生までの方」",
+    "url": "https://thekids.co.jp/faq"
+   },
+   "fees": {
+    "age0": null,
+    "age1": "平日は「1日遊び放題 お一人様 1,300円」、休日は「3時間〜最大5時間遊び放題 お一人様 1,500円」。お試し30分は平日700円・休日800円（年齢別の料金区分は店舗ページにない）",
+    "age2": "1歳と同じ",
+    "age3": "1歳と同じ",
+    "age4": "1歳と同じ",
+    "adult": "店舗ページの料金表は「お一人様」の表記だけ。利用規約第2条は「利用料金を施設に入場する人数分支払う」",
+    "condition": "「【休日※】土日祝、国民の休日および保育園・幼稚園・学校が長期休暇となる春・夏・冬休みの期間中など当施設が定める特定日」。ナイトパックはない。0歳の料金は店舗ページ https://thekids.co.jp/shop/tokyo-odaiba/ に記載なし",
+    "url": "https://thekids.co.jp/shop/tokyo-odaiba/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": null,
+     "url": "店舗ページ https://thekids.co.jp/shop/tokyo-odaiba/ と遊具ページ https://thekids.co.jp/attractions に年齢制限エリアの記載なし（店舗の遊具一覧にベビーコーナーは載っていない）"
+    }
+   ],
+   "nursingRoom": {
+    "text": null,
+    "url": "店舗ページ https://thekids.co.jp/shop/tokyo-odaiba/ とFAQ https://thekids.co.jp/faq に記載なし"
+   },
+   "diaper": {
+    "text": null,
+    "url": "店舗ページ https://thekids.co.jp/shop/tokyo-odaiba/ とFAQ https://thekids.co.jp/faq に記載なし"
+   },
+   "stroller": {
+    "text": null,
+    "url": "店舗ページ https://thekids.co.jp/shop/tokyo-odaiba/ とFAQ https://thekids.co.jp/faq に記載なし（車いすは「ご利用ができないスペースがございます」）"
+   },
+   "rules": {
+    "text": "保護者（20歳以上、または20歳未満でも親権者）の同伴が必要。受付のあとは何回でも出入り自由。飲食物は持ち込めてテーブル席で食べる（アルコールは不可）。「事前チケットはご来店されたお時間に入場できまので、時間のご予約は不要です。」利用規約は「土足厳禁箇所については靴を脱いだ上で」。アクセサリーは外す。靴下については書かれていない。手帳割引は、店舗FAQでは「対応しておりません」、ご利用案内（https://thekids.co.jp/information）では「付添の保護者様1名様は無料」とあり、公式内で矛盾している",
+    "url": "https://thekids.co.jp/faq"
+   },
+   "access": {
+    "text": "店舗ページには最寄り駅の記載がない。入居先のデックス東京ビーチの公式アクセスページでは「お台場海浜公園駅より徒歩2分」「東京テレポート駅より徒歩5分」（施設全体まで）",
+    "url": "https://www.odaiba-decks.com/access/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "運営は株式会社The Kids。住所は東京都港区台場1-6-1 デックス東京ビーチ アイランドモール3F。デックスのフロアページはJavaScriptで描画されていて、店舗別の設備は取れなかった（ブラウザは使っていない）",
+   "group": "kidspark"
+  },
+  {
+   "name": "CROSPO（クロスポ）八王子店（万町モール2F・3F）",
+   "status": "営業中",
+   "statusNote": "営業時間は平日9:00〜22:00、土日祝8:00〜22:00。お知らせに「10/28（水）貸切営業のお知らせ」がある。2026.10.01に5周年",
+   "ages": {
+    "text": "施設全体の対象年齢は書かれていない。遊具ごとに書かれていて、多くは「対象年齢：何歳からでもOK」。FAQには「小学生だけでも入場可能ですか？ 可能です。」とある",
+    "url": "https://cro-spo.com/concept-hours-play-price-plan-howto-service-facilities-access/"
+   },
+   "fees": {
+    "age0": "無料（料金表の画像に「３歳以下は無料」）",
+    "age1": "無料",
+    "age2": "無料",
+    "age3": "無料",
+    "age4": "4〜6歳の料金。平日は1時間500円、2時間900円、3時間1,100円、4時間1,400円。ハイシーズンは700円、1,300円、1,800円、2,200円。5時間とフリータイムは、通常が平日1,700円・2,100円、ハイシーズン2,700円・3,200円のところ、キャンペーン中はどちらも平日1,400円・ハイシーズン2,200円",
+    "adult": "料金表は「7歳以上」の区分（平日1時間900円〜、ハイシーズン1時間1,100円〜。キャンペーン中のフリータイムは平日2,700円・ハイシーズン3,500円）。FAQは「大人の方の付き添い料金はございません。通常のご利用となります。」表に「大人」とは明記されていない",
+    "condition": "料金表は画像で、注記は「※画像はキャンペーン期間【10/1（木）～10/31（土）】までの料金体系となります」。ハイシーズンは「土日祝日、夏休み、冬休み、春休み」。料金は後払いで、入館から退店までの時間で自動精算。入館レシートは「4歳以上の方、人数分を発行」。夜割（17時から3時間で平日1,500円・土日祝2,000円、SNSフォローが条件）と子育て応援キャンペーン（平日16時までに0〜6歳を連れて入店）がある。ボウリングシューズ400円・スケートパーク500円は別料金。支払いは現金とICチップ付きクレジットカードだけ",
+    "url": "https://cro-spo.com/concept-hours-play-price-plan-howto-service-facilities-access/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "「キッズランド…対象年齢：10歳まで」「ボールプール…対象年齢：10歳まで」「スケートパーク…対象年齢：4歳以上 ※靴下必須」「ボウリング…対象年齢：足サイズ16cm以上 ※靴下必須」「ファミリーカラオケ…小学生未満のお子様連れ限定のお部屋です。」",
+     "url": "https://cro-spo.com/concept-hours-play-price-plan-howto-service-facilities-access/"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。「授乳室・女性専用更衣室 ２F女子トイレ脇にございます。」",
+    "url": "https://cro-spo.com/concept-hours-play-price-plan-howto-service-facilities-access/"
+   },
+   "diaper": {
+    "text": "公式に記載あり。「おむつ交換台 2Ｆキッズランド手前にございます。」キッズトイレも2Fキッズランドの手前",
+    "url": "https://cro-spo.com/concept-hours-play-price-plan-howto-service-facilities-access/"
+   },
+   "stroller": {
+    "text": "「ベビーカー置場 2Ｆキッズランド手前にございます。」",
+    "url": "https://cro-spo.com/concept-hours-play-price-plan-howto-service-facilities-access/"
+   },
+   "rules": {
+    "text": "来店予約は当日1時間前までWEBで受け付ける。「ご予約していない方は当日入場できない場合がございます。」週末は11〜14時が入店のピーク。靴下が必須なのはアスレチックトランポリン・スケートパーク・ボウリング。飲食物は持ち込める（アルコールは不可）。一時退店はできるが、時間課金は止まらない。屋内シューズ・ハーフパンツ・ブランケットを貸し出している",
+    "url": "https://cro-spo.com/reserve-faq-recruit/"
+   },
+   "access": {
+    "text": "「JR八王子駅南口より徒歩約10分」「京王八王子駅より徒歩約18分」「京王線片倉駅より徒歩約15分」。施設を利用すると駐車場が5時間無料",
+    "url": "https://cro-spo.com/concept-hours-play-price-plan-howto-service-facilities-access/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "公式サイトは cro-spo.com（運営は株式会社ヒューマックスエンタテインメント）。crospo.jp は福岡の別会社なので注意。料金は画像 https://cro-spo.com/wp-content/uploads/2026/10/クロスポ八王子店キャンペーン料金表.webp（200）を見て読んだ。11月以降はキャンペーンのない料金に戻る可能性があるが、通常料金の全体は公式には出ていない（5時間とフリータイムの通常料金だけが打ち消し線つきで読める）",
+   "group": "kidspark"
+  },
+  {
+   "name": "ボーネルンド あそびのせかい 有明ガーデン店（キドキド併設）",
+   "status": "営業中",
+   "statusNote": "営業時間は10:00〜19:00（18:30受付終了）、定休日は「館に準ずる」。重要なお知らせに「10/16(金)・10/24（土）は貸切営業のため、12：15オープン」。10月4・11・18・25日は、パルクールスクールのため11-12時・13-14時・15-16時に一部エリアが使えない",
+   "ages": {
+    "text": "「●お子様の対象年齢は6ヶ月～12歳までです。」（ご利用にあたってのお願い）。ただし料金ページには「5ヵ月以下のお子様と保護者の方のご入場も可能です。」ともある",
+    "url": "https://kidokid.bornelund.co.jp/guide/"
+   },
+   "fees": {
+    "age0": "5ヶ月以下は入場料なし（料金ページ）。6ヶ月～11ヶ月は最初の60分が平日400円・休日600円、延長10分ごとに200円",
+    "age1": "子ども（1歳〜12歳）は平日800円・休日1,000円、延長10分ごとに200円。表の見出しは「最初の30分」。1DAYパスは平日2,600円・休日3,400円（2人目からは平日1,300円・休日1,700円）",
+    "age2": "1歳と同じ",
+    "age3": "1歳と同じ",
+    "age4": "1歳と同じ",
+    "adult": "おとな700円（延長料金はかからず、保護者の交代もできる）。1DAYパスでもおとなは700円",
+    "condition": "子どもの欄の見出しが「最初の30分」で、赤ちゃん（最初の60分）とそろっていない。サイトの記載どおりに転記した。1DAYパスは平日2時間以上、休日2時間30分以上遊ぶならお得。平日マンスリーパスもある。保護者1名につき子ども3名まで",
+    "url": "https://kidokid.bornelund.co.jp/ariake/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "「ベビーガーデン 6ヶ月〜18ヶ月までの赤ちゃん専用ゾーン。」（「保護者の方やプレイリーダーの安全管理のもと、どのゾーンでも自由にあそんでいただけます」）",
+     "url": "https://kidokid.bornelund.co.jp/ariake/"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。「キドキド場内には、授乳室や、オムツ替え室、飲み物の自動販売機を完備。」設備一覧にも「授乳室※」がある",
+    "url": "https://kidokid.bornelund.co.jp/ariake/"
+   },
+   "diaper": {
+    "text": "公式に記載あり。授乳室と同じ文言。注記に「※トイレ・おむつ替え：場外の場合、親子揃って一時退場が必要となります。」",
+    "url": "https://kidokid.bornelund.co.jp/ariake/"
+   },
+   "stroller": {
+    "text": "「ベビーカーを置く専用のスペースもあります。」",
+    "url": "https://kidokid.bornelund.co.jp/ariake/"
+   },
+   "rules": {
+    "text": "入場前に「あそび場受付・事前購入サイト」でアカウント登録と入場手続きが必要。保護者（扶養者または20歳以上）が必ず一緒に入場する。食べ物は持ち込めず、飲み物はフタ付きのみ。時間制の場合、途中で出られるのはトイレのときだけ。「場内にトイレを併設していない場合がございます。」靴下が必要かどうかはご利用にあたってのお願い・FAQに書かれていない",
+    "url": "https://kidokid.bornelund.co.jp/guide/"
+   },
+   "access": {
+    "text": "「・りんかい線国際展示場駅 徒歩15分 ・ゆりかもめ 有明駅 12分」",
+    "url": "https://kidokid.bornelund.co.jp/ariake/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "住所は東京都江東区有明2丁目1-8 4階。公式によると都内は有明ガーデン店・よみうりランド店・イオンモールむさし村山店の3店（東京エリアのページの本文に「セレオ八王子店」の名前が出てくるが、店舗リストには載っていない。閉店かどうかは公式では確かめていない）。料金ページ https://kidokid.bornelund.co.jp/price/ とFAQ https://kidokid.bornelund.co.jp/faq/ も200で取れた",
+   "group": "kidspark"
+  },
+  {
+   "name": "ボーネルンド あそびのせかい イオンモールむさし村山店（キドキド併設）",
+   "status": "営業中",
+   "statusNote": "店舗ページの営業時間が2通りある。1つは「10:00〜19:00（18:30受付終了）」、もう1つは「平日10:00～17：00 (キドキド最終入場16：30)／休日10:00～19：00 (キドキド最終入場18：30)」。2025.9.12にリニューアルオープンの告知がある",
+   "ages": {
+    "text": "共通ルールは「お子様の対象年齢は6ヶ月～12歳までです。」",
+    "url": "https://kidokid.bornelund.co.jp/guide/"
+   },
+   "fees": {
+    "age0": "5ヶ月以下は入場料なし（料金ページの共通注記。この店は除外店舗に入っていない）。6ヶ月～11ヶ月は最初の60分が平日400円・休日600円、延長10分ごとに200円",
+    "age1": "子ども（1歳〜12歳）は平日800円・休日1,000円。見出しは「最初の30分」で、延長は有明と同じく10分ごとに200円と読める表",
+    "age2": "1歳と同じ",
+    "age3": "1歳と同じ",
+    "age4": "1歳と同じ",
+    "adult": "おとな700円（延長料金なし、交代できる）",
+    "condition": "1DAYパス・マンスリーパスの条件は有明ガーデン店と同じ共通料金",
+    "url": "https://kidokid.bornelund.co.jp/musashimurayama/"
+   },
+   "ageRestrictedAreas": [
+    {
+     "text": "「ベビーガーデン 6ヶ月〜18ヶ月までの赤ちゃん専用ゾーン。」",
+     "url": "https://kidokid.bornelund.co.jp/musashimurayama/"
+    }
+   ],
+   "nursingRoom": {
+    "text": "公式に記載あり。「キドキド場内には、授乳室や、おむつ替えスペースを完備」",
+    "url": "https://kidokid.bornelund.co.jp/musashimurayama/"
+   },
+   "diaper": {
+    "text": "公式に記載あり。授乳室と同じ文言。トイレは「イオンモールのお手洗いをご利用ください。親子揃っての一時退場が必要となります。」",
+    "url": "https://kidokid.bornelund.co.jp/musashimurayama/"
+   },
+   "stroller": {
+    "text": "設備一覧に「ベビーカー置き場」のアイコンがある（説明文はない）",
+    "url": "https://kidokid.bornelund.co.jp/musashimurayama/"
+   },
+   "rules": {
+    "text": "「ご入場にはあそび場受付サイトでのアカウント登録・入場受付が必要になります。アカウント登録とご入場手続きをお済ませの上、３０分以内にお越しください。」それ以外は共通ルールと同じ（食べ物の持ち込み不可、飲み物はフタ付きのみなど）",
+    "url": "https://kidokid.bornelund.co.jp/musashimurayama/"
+   },
+   "access": {
+    "text": "「イオンモール直結。または村山医療センター入口より徒歩約10分。」「玉川上水駅、立川駅、昭島駅、東大和市駅より、イオンモール行きのバスあり。」駐車場は終日無料（約4,000台）",
+    "url": "https://kidokid.bornelund.co.jp/musashimurayama/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "住所は東京都武蔵村山市榎1丁目1-3 イオンモールむさし村山1階。FAQでは「関東は むさし村山店」が一番広いキドキド。よみうりランド店は依頼どおり対象外にした",
+   "group": "kidspark"
+  },
+  {
+   "name": "ハレニワ（おふろcafé ハレニワの湯）",
+   "status": "不明",
+   "statusNote": "東京都内の店舗はないため除外した。運営会社（ONDOホールディングス／温泉道場）のブランド一覧ページにはハレニワの公式サイトが ofurocafe-hareniwanoyu.com の1つだけ載っていて、そのサイトの住所は「埼玉県熊谷市久保島939」",
+   "ages": {
+    "text": null,
+    "url": ""
+   },
+   "fees": {
+    "age0": null,
+    "age1": null,
+    "age2": null,
+    "age3": null,
+    "age4": null,
+    "adult": null,
+    "condition": "",
+    "url": ""
+   },
+   "ageRestrictedAreas": [],
+   "nursingRoom": {
+    "text": null,
+    "url": ""
+   },
+   "diaper": {
+    "text": null,
+    "url": ""
+   },
+   "stroller": {
+    "text": null,
+    "url": ""
+   },
+   "rules": {
+    "text": null,
+    "url": ""
+   },
+   "access": {
+    "text": "熊谷の施設（JR高崎線熊谷駅からバス35分）",
+    "url": "https://ofurocafe-hareniwanoyu.com/"
+   },
+   "checkedAt": "2026-10-23",
+   "notes": "根拠のページ：https://ondoholdings.com/brand/（200、旧ドメイン onsendojo.com から転送）と https://ofurocafe-hareniwanoyu.com/（200）。なお館内の「キッズパーク」は温浴施設の一部",
+   "group": "kidspark"
+  }
+ ]
+}
