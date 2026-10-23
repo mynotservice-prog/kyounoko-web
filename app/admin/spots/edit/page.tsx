@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllSpotsWithSlug, SPOT_CATEGORY_LABEL, type Spot } from '@/lib/spots';
-import { getAllSpotOverrides } from '@/lib/spot-overrides';
+import { readSpotOverridesForWrite } from '@/lib/spot-overrides';
 import { SpotsEditClient } from './SpotsEditClient';
 import { PageHeader } from '@/components/admin/ui';
 
@@ -19,13 +19,16 @@ export const metadata: Metadata = {
  * 子連れ設備）を編集可能。施設からの返信に合わせて即修正できる。
  *
  * 保存:
- *   - lib/spot-overrides.json に slug → 差分 patch を保存
- *   - ローカル開発: ファイル直接書き込み
- *   - 本番: GitHub Contents API で commit → Vercel 自動デプロイ
+ *   - 本番: KV `spot:overrides` に slug → 差分 patch を保存（デプロイ不要・即時反映）
+ *   - ローカル開発（KV未設定）: lib/spot-overrides.json に直接書き込み
  *
- * 表示時のマージ:
- *   - getAllSpotsWithSlug() が spot-overrides.json を slug 算出後に自動マージ。
- *     施設名・市区町村を変えても slug（URL）は不変なのでリンク切れしない。
+ * 表示:
+ *   - **本番の正は KV**。バンドルされた lib/spot-overrides.json は KV の写しに過ぎず、
+ *     管理画面で保存した直後は JSON 側が古い。ここで JSON を読むと「公開ページには
+ *     反映されているのに編集欄が未編集に戻る」（2026-09-22 佐賀5件で発生）ので、
+ *     公開ページと同じ KV を直読みして描画する（force-dynamic なので毎回最新）。
+ *   - getAllSpotsWithSlug(overrides) が slug 算出後にマージするため、
+ *     施設名・市区町村を変えても slug（URL）は不変でリンク切れしない。
  */
 /** 一度に返す件数。全件ぶんの本文（穴場メモ等）を送るとHTMLが2.2MBになるため窓を切る。 */
 const WINDOW = 40;
@@ -48,8 +51,10 @@ export default async function SpotsEditPage({
   searchParams: Promise<{ q?: string }>;
 }) {
   const q = ((await searchParams).q ?? '').trim();
-  const all = getAllSpotsWithSlug();
-  const overrides = getAllSpotOverrides();
+  // KV を直読み（unstable_cache を通さない）。公開ページが読む KV と同じ内容で、
+  // 施設名・市区町村の上書きも一覧・検索に効く。
+  const overrides = await readSpotOverridesForWrite();
+  const all = getAllSpotsWithSlug(overrides);
 
   // 絞り込みをサーバ側でやり、クライアントには表示ぶんの実データだけ渡す。
   // 全723件の spot をそのまま渡していた頃はHTMLが2.2MBあり、その大半が
@@ -75,7 +80,7 @@ export default async function SpotsEditPage({
 
       <p style={{ fontSize: 13, color: 'var(--ink-600)', margin: '0 0 20px', lineHeight: 1.7 }}>
         施設名・料金・予約・穴場・子連れ設備などを修正できます。<br />
-        保存すると GitHub に commit → Vercel が自動デプロイで本番反映（数分）。<br />
+        保存すると本番に即時反映されます（デプロイ不要）。この画面は公開ページと同じ保存先（KV）を毎回読みます。<br />
         施設名や市区町村を変えても URL（slug）は変わらないため、リンク切れは起きません。
       </p>
 
