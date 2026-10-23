@@ -37,6 +37,27 @@ type LoadState =
 const PRIMARY_FIELDS = ['title', 'metaDescription', 'lede', 'hero', 'category', 'categoryName', 'publishedAt', 'updatedAt'] as const;
 type PrimaryKey = (typeof PRIMARY_FIELDS)[number];
 
+type ClaimNote = { rule: string; label: string; severity: string; excerpt: string };
+
+/** 保存前の検査で止まったときの確認文（window.confirm 用）。 */
+export function claimsConfirmText(claims: ClaimNote[]): string {
+  const lines = claims.slice(0, 6).map((c) => `・${c.label}\n　「${c.excerpt}」`);
+  const more = claims.length > 6 ? `\n…ほか ${claims.length - 6} か所` : '';
+  return (
+    `【記録の確認が要る書き方が、この保存で ${claims.length} か所 新しく入っています】\n\n` +
+    `${lines.join('\n')}${more}\n\n` +
+    '記録（いつ・どこで・だれが・どう数えたか）がある事実なら「OK」で保存します。\n' +
+    '記録が無い・分からない場合は「キャンセル」で戻って、該当の文を外すか、公式で確かめられる事実に直してください。\n' +
+    '（この確認は「記録が要る」という意味で、内容が事実でないと決めるものではありません）'
+  );
+}
+
+/** 保存できたあとに添える、確認の一言。 */
+export function claimsNoteText(claims: ClaimNote[]): string {
+  if (!claims.length) return '';
+  return ` ／ 確認: 記録の確認が要る書き方が ${claims.length} か所あります（例「${claims[0].excerpt.slice(0, 40)}」）`;
+}
+
 export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
   const [state, setState] = useState<LoadState>({ phase: 'loading' });
   const [primary, setPrimary] = useState<Record<PrimaryKey, string>>({
@@ -194,27 +215,41 @@ export function ContentEditor({ kind, slug, backHref, publicHref }: Props) {
       frontmatter.updatedAt = today;
     }
     try {
-      const res = await fetch('/api/admin/edit-content', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ kind, slug, frontmatter, body }),
-      });
-      const data = await res.json();
+      const post = async (confirmClaims: boolean) => {
+        const res = await fetch('/api/admin/edit-content', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ kind, slug, frontmatter, body, confirmClaims }),
+        });
+        return res.json();
+      };
+      let data = await post(false);
+      // 保存前の検査（サーバー側・lib/claim-rules.mjs）: この保存で新しく入った「記録の確認が要る書き方」が
+      // あると、サーバーは保存せずに needsConfirm を返す。一覧を見せて、記録がある事実だと確認できたときだけ送り直す。
+      if (!data.ok && data.needsConfirm) {
+        const proceed = window.confirm(claimsConfirmText(data.claims || []));
+        if (!proceed) {
+          setMessage({ type: 'info', text: '保存していません。該当の書き方を直すか、記録（店舗・年月）を本文に書いてから保存してください。' });
+          return;
+        }
+        data = await post(true);
+      }
       if (!data.ok) throw new Error(data.error || 'save failed');
+      const claimNote = claimsNoteText(data.claimWarnings || []);
       if (data.source === 'github') {
         setMessage({
           type: 'ok',
-          text: `保存しました（commit: ${(data.commit || '').slice(0, 7)}）。${data.deployed || 'Vercel が自動デプロイします'}`,
+          text: `保存しました（commit: ${(data.commit || '').slice(0, 7)}）。${data.deployed || 'Vercel が自動デプロイします'}${claimNote}`,
           url: data.commitUrl,
         });
       } else if (data.source === 'kv') {
         // KV保存はデプロイ不要でそのまま本番反映（git push 不要）。
         // 同時にこの記事は「KV上書き状態」になる＝以後 md 編集が効かなくなるので表示も切り替える。
         setSource('kv');
-        setMessage({ type: 'ok', text: data.deployed || 'KVに保存しました（デプロイ不要・数秒で本番反映）' });
+        setMessage({ type: 'ok', text: (data.deployed || 'KVに保存しました（デプロイ不要・数秒で本番反映）') + claimNote });
       } else {
         // source === 'fs'（ローカル開発のみ）: git push で本番反映が必要。
-        setMessage({ type: 'ok', text: `ローカル保存（${data.path}）。git push で本番反映` });
+        setMessage({ type: 'ok', text: `ローカル保存（${data.path}）。git push で本番反映${claimNote}` });
       }
       setDirty(false);
     } catch (err) {
