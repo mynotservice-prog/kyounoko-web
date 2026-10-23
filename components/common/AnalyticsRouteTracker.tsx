@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { trackEvent, trackPageView } from '@/lib/analytics';
 import { installAffiliateReferrer } from '@/lib/affiliate-referrer';
+import { INTERNAL_LINK_CLICK_EVENT, classifyInternalLink } from '@/lib/internal-link-click';
 
 /**
  * Next.js App Router の SPA 遷移で page_view を手動送信するトラッカー。
@@ -25,6 +26,11 @@ import { installAffiliateReferrer } from '@/lib/affiliate-referrer';
  * - /today の外にある /today 行きリンクのクリックは、属性なしでも `today_entry_click` を送る
  *   （ヘッダー・下部ナビ・フッター内は `today_entry_nav_click`）。
  *   どの面が /today へ送客したかは GA4 の pagePath（クリックが起きたページ）で分かる。
+ *
+ * 内部リンクの部品別クリック（2026-10）:
+ * - サイト内へのリンクのクリックは `internal_link_click` を送る。`placement` が部品の種類、
+ *   `link_url` がリンク先のパス。分類の表は lib/internal-link-click.ts。
+ *   上の `today_entry_click` などとは別のイベントなので、/today 行きは両方に 1 回ずつ載る。
  */
 export function AnalyticsRouteTracker() {
   const pathname = usePathname();
@@ -71,6 +77,13 @@ export function AnalyticsRouteTracker() {
         trackEvent(inNav ? 'today_entry_nav_click' : 'today_entry_click', {
           link_url: a.getAttribute('href') ?? '',
         });
+      }
+      // 内部リンクは、押された部品の種類（戻る・パンくず・タグ・兄弟チップ・本文・下部のカード…）を
+      // 付けて送る。判定は既存の class 名から行い、HTML には何も足さない。
+      const link = target.closest<HTMLAnchorElement>('a[href]');
+      if (link) {
+        const hit = classifyInternalLink(link);
+        if (hit) trackEvent(INTERNAL_LINK_CLICK_EVENT, hit);
       }
     };
     document.addEventListener('click', onClick, true);
