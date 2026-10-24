@@ -14,9 +14,14 @@ import {
  * 各行から攻略記事へ内部リンクし、ハブ→個別のクラスタ導線も兼ねる。
  */
 export function ChainComparisonTable({ focus }: { focus: FacilityKey }) {
-  const rank = (ok: boolean | 'partial') => (ok === true ? 0 : ok === 'partial' ? 1 : 2);
-  const chains = getAllChainFacilities()
-    .filter((c) => c.items[focus])
+  const rank = (ok: boolean | 'partial' | 'unknown') => (ok === true ? 0 : ok === 'partial' ? 1 : 2);
+  const withFocus = getAllChainFacilities().filter((c) => c.items[focus]);
+  // 公式に記載のないチェーンは表に入れず、表の下に名前だけ並べる（✓/—を付けない）
+  const unknownChains = withFocus
+    .filter((c) => c.items[focus]!.ok === 'unknown')
+    .sort((a, b) => a.name.localeCompare(b.name, 'ja'));
+  const chains = withFocus
+    .filter((c) => c.items[focus]!.ok !== 'unknown')
     .sort((a, b) => {
       const d = rank(a.items[focus]!.ok) - rank(b.items[focus]!.ok);
       return d !== 0 ? d : a.name.localeCompare(b.name, 'ja');
@@ -37,7 +42,7 @@ export function ChainComparisonTable({ focus }: { focus: FacilityKey }) {
         チェーン別「{label}」早見表【全{chains.length}チェーン】
       </h2>
       <p style={{ fontSize: 12, color: 'var(--ink-mute)', margin: '0 0 12px' }}>
-        ✓=あり / △=店舗・条件による / —=基本なし。チェーン名から詳細記事へ飛べます。
+        ✓=公式にあり / △=店舗・条件による / —=公式になしと明記。チェーン名から詳細記事へ飛べます。
       </p>
       <div style={{ overflowX: 'auto' }}>
         <table
@@ -61,7 +66,14 @@ export function ChainComparisonTable({ focus }: { focus: FacilityKey }) {
           <tbody>
             {chains.map((c) => {
               const v = c.items[focus]!;
-              const mark = v.ok === true ? '✓' : v.ok === 'partial' ? '△' : '—';
+              const counted = v.stores !== undefined && v.storesTotal !== undefined;
+              const mark = counted
+                ? `${v.stores!.toLocaleString()}／${v.storesTotal!.toLocaleString()}店`
+                : v.ok === true
+                  ? '✓'
+                  : v.ok === 'partial'
+                    ? '△'
+                    : '—';
               return (
                 <tr key={c.key} style={{ borderBottom: '1px solid var(--line)' }}>
                   <td style={{ padding: '8px 12px' }}>
@@ -95,6 +107,19 @@ export function ChainComparisonTable({ focus }: { focus: FacilityKey }) {
           </tbody>
         </table>
       </div>
+      {unknownChains.length > 0 && (
+        <p style={{ fontSize: 12, color: 'var(--ink-sub)', margin: '10px 0 0', lineHeight: 1.7 }}>
+          公式に{label}の記載がないチェーン（店舗へ確認）：
+          {unknownChains.map((c, i) => (
+            <span key={c.key}>
+              {i > 0 && '・'}
+              <Link href={`/article/${c.koryakuSlug}`} style={{ color: 'inherit' }}>
+                {c.name}
+              </Link>
+            </span>
+          ))}
+        </p>
+      )}
       <p style={{ fontSize: 11.5, color: 'var(--ink-mute)', margin: '10px 0 0', lineHeight: 1.7 }}>
         ※ 店舗により異なる場合があります。公式サイト・店舗公開情報の照合の集約（項目ごとの確認日は各チェーンの攻略記事を参照）。誤りに気づいた方は
         <Link href="/contact" style={{ color: 'inherit' }}>
