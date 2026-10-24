@@ -504,6 +504,52 @@ URLを知っているがクロール順を待たせている状態。したが�
 - **他の実験との関係**: 5本は137本コホート・ほかの実験の処置・対照に含まれない。本文から137本のページ（東京の動物園・水族館ガイド7本ほか）と凍結面へリンクしない。
 - **関連記事欄**: 公開前後に本番で凍結面・137本・ガードレール2本の関連欄を取得し、入れ替わりを「汚染の記録」に残す。
 
+### 25. R1 事実だけの更新便（24対・対ごとに処置と対照）（2026-10-24 登録・社長承認 10/24「R1を10/27に出してよい」→ CA「YES。R1は24対・合格線は比の比の中央値1.25以上かつ24対中17対以上・判定12/04で、10/27公開に向けて準備を始めて」 / **反映予定日 2026-10-27**／**判定日 2026-12-04**・基準窓 09/25〜10/22・比較窓 11/04〜12/01）★対照群あり
+
+根拠: `~/.claude/company/reports/2026-10-11/kyounoko-rank-levers.md` §6-1、`reports/2026-10-10/kyounoko-adsense-growth-plan.md`（R1）。10/01〜02 に事実だけ直した19本は 9/08〜15→10/13〜20 で 1.14倍（未更新119本 1.01倍。無作為ではない）。対照つきで確かめる。
+
+- **処置（24本）**: 公式を開いて、名称・品数・価格・対象年齢・提供時間などを確かめ、違いがあれば直し、本文中の確認日（「2026年X月X日時点」・出典欄の「確認日」）を照合した日に更新する。**題・seoTitle・H1・見出し・説明文・内部リンクの本数・節の構成は変えない。updatedAt も据え置く**（関連記事欄は updatedAt が新しい記事に加点するため、上げると処置だけ被関連が増え、対照の関連欄も動く。`kyounoko-related-articles-drift-2026-10-18`）。違いが無く確認日だけ更新した記事はその旨を下の処置記録に書く。
+- **対照（24本・凍結）**: 何もしない。事実誤りの訂正だけは可（汚染の記録に書き、判定でその対を別に示す）。
+- **割り付け**: 下の母集団48本を基準窓のクリック順に並べ、上から2本ずつ対にし、対の中で処置・対照を決めた（`sha256("R1-2026-10-27-pair" + 対番号2桁)` の先頭バイトが偶数なら上位側が処置）。
+- **母集団の条件**: slug が `-kids-menu`／`-kodzure-koryaku`、基準窓（page equals・final）のクリック15以上、origin/main で 10/01 以降に md の変更なし、凍結（58本）・新設137本・未マージPRの記事（#317・#337・#315/#318・#321）・採点の便・301・noindex を除く。**承認時の想定「28日100クリック以上」を満たすのは28本しかなく、24対にするため下限を15クリックまで下げた**（下位の対ほどばらつきが大きく、検出力は下がる。偶然で「24対中17対以上」を満たす確率は、対の中の割り付けが無作為なので約3%のまま）。
+- **主指標**: 対ごとの比 r ＝（処置の比較窓クリック ÷ 処置の基準窓クリック）÷（対照の同じ比）。GSC page equals・final。
+- **合格（公開前に固定）**: r の中央値が **1.25以上**、かつ **r>1 の対が24対中17対以上**。
+- **不合格**: r の中央値が1.10未満、または r>1 の対が12対以下。
+- **判定不能**: その間。比較窓を28日延ばして（12/02〜12/29・判定 2027-01-01 以降）同じ線でもう1度読む。それでも間なら社長が判断。
+- **広告（副指標）**: 対ごとの PV の比の比の中央値が1.20以上。収益は PV × 型の RPM（キッズメニュー 224円・攻略 206円）の推定と明記。
+- **安全の線**: 反映15〜28日目（11/11〜11/24）に、処置の記事のクリックが「基準窓 × 対の相手の比 × 0.7」を下回ったら、その記事だけ元に戻し事後に報告する。
+- **説明用**: 対ごとの順位差の中央値（何もしない場合の5%〜95%は±0.4位）。
+- **凍結ガード**: 48本を `frozenSlugs` と `FROZEN_TARGET_SLUGS` に登録した。カットオフは slug ごとに 2026-10-27（`FROZEN_CUTOFF_BY_SLUG`）。既定の 9/25 を当てると、9/25〜10/26 に公開した記事（137本ほか）から張られている既存リンクと、9/25以降に足したルールのリンクが登録の時点で消え、処置・対照・137本の描画が変わるため。10/27 以降に公開する記事からはこの48本へ自動リンクを張らない。
+- **他の実験との関係**: 48本は137本コホート・ほかの実験の処置・対照に含まれない。`mos-burger-kids-menu`・`hanamaru-udon-kodzure-koryaku`・`shabuyou-kodzure-koryaku`・`yakiniku-king-kodzure-koryaku` は過去の実験で released 済み。
+- **関連記事欄**: 反映前後に本番で48本の関連欄を取得し、入れ替わりがあれば「汚染の記録」に残す（updatedAt 据え置きのため、処置による入れ替わりは起きない見込み）。
+
+| 対 | 処置 | 基準窓clk | 対照 | 基準窓clk |
+|---|---|---|---|---|
+| 1 | `sukesan-udon-kodzure-koryaku` | 1516 | `kurasushi-kids-menu` | 1705 |
+| 2 | `hamasushi-kids-menu` | 1034 | `burger-king-kids-menu` | 1246 |
+| 3 | `burger-king-kodzure-koryaku` | 556 | `hama-sushi-kodzure-koryaku` | 720 |
+| 4 | `sushiro-kodzure-koryaku` | 384 | `royal-host-kodzure-koryaku` | 493 |
+| 5 | `tenya-kids-menu` | 321 | `tenkaippin-kodzure-koryaku` | 360 |
+| 6 | `komeda-kodzure-koryaku` | 278 | `hanamaru-udon-kodzure-koryaku` | 276 |
+| 7 | `mos-burger-kodzure-koryaku` | 227 | `hidakaya-kodzure-koryaku` | 233 |
+| 8 | `ringerhut-kids-menu` | 188 | `shabuyou-kodzure-koryaku` | 170 |
+| 9 | `kappa-sushi-kids-menu` | 166 | `yoshinoya-kodzure-koryaku` | 168 |
+| 10 | `marugen-ramen-kodzure-koryaku` | 162 | `yakiniku-king-kodzure-koryaku` | 165 |
+| 11 | `uobei-kodzure-koryaku` | 156 | `kappa-sushi-kodzure-koryaku` | 149 |
+| 12 | `starbucks-kodzure-koryaku` | 133 | `kaitenzushi-kids-menu` | 130 |
+| 13 | `bandotaro-kodzure-koryaku` | 127 | `costco-kodzure-koryaku` | 113 |
+| 14 | `choushimaru-kodzure-koryaku` | 106 | `yayoiken-kids-menu` | 109 |
+| 15 | `hottomotto-kodzure-koryaku` | 97 | `gatten-sushi-kodzure-koryaku` | 93 |
+| 16 | `mos-burger-kids-menu` | 92 | `kushikatsu-tanaka-kodzure-koryaku` | 88 |
+| 17 | `steak-miya-kodzure-koryaku` | 73 | `yoshinoya-kids-menu` | 79 |
+| 18 | `matsuya-kodzure-koryaku` | 60 | `flying-garden-kodzure-koryaku` | 64 |
+| 19 | `yamada-udon-kodzure-koryaku` | 52 | `nakau-kids-menu` | 60 |
+| 20 | `ajino-mingei-kodzure-koryaku` | 43 | `ohsho-kodzure-koryaku` | 46 |
+| 21 | `sawayaka-kodzure-koryaku` | 35 | `uotami-kodzure-koryaku` | 39 |
+| 22 | `sukiya-kodzure-koryaku` | 27 | `ringer-hut-kodzure-koryaku` | 21 |
+| 23 | `mcdonalds-kodzure-koryaku` | 17 | `disney-kids-menu` | 19 |
+| 24 | `anrakutei-kids-menu` | 16 | `hanamarudon-kids-menu` | 16 |
+
 ### 13. 牛角・CoCo壱の2URL統合（301）— 自己カニバリの解消 第2陣（2026-10-17 登録・社長承認 / **本番反映日 2026-10-17**（PR #336 マージ 17:29 JST・本番 Ready 約17:57 JST。Vercel別名URLで旧URL2本＋CoCo壱の受け皿4本が308で統合先へ・統合先200・集約節・サイトマップ除外・内部リンク付け替えを確認）／**判定日 2026-12-01（+45日）**・比較窓 11/01〜11/28）★対照群あり
 
 設計書: `reports/stall-pushup-research-2026-10-17.md` §1・§5（PR #335）。抽出法: 表示50以上のクエリで表示の20%以上を取る記事URLが2本以上、かつ共有クエリで両方が4位以下＝有害な競合。
@@ -578,17 +624,61 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
     "3sai-odekake-tokyo",
     "4sai-odekake-tokyo",
     "akachan-odekake-3months-1year",
-    "kosodate-muryou-spots-tokyo"
+    "kosodate-muryou-spots-tokyo",
+    "sukesan-udon-kodzure-koryaku",
+    "kurasushi-kids-menu",
+    "hamasushi-kids-menu",
+    "burger-king-kids-menu",
+    "burger-king-kodzure-koryaku",
+    "hama-sushi-kodzure-koryaku",
+    "sushiro-kodzure-koryaku",
+    "royal-host-kodzure-koryaku",
+    "tenya-kids-menu",
+    "tenkaippin-kodzure-koryaku",
+    "komeda-kodzure-koryaku",
+    "mos-burger-kodzure-koryaku",
+    "hidakaya-kodzure-koryaku",
+    "ringerhut-kids-menu",
+    "kappa-sushi-kids-menu",
+    "yoshinoya-kodzure-koryaku",
+    "marugen-ramen-kodzure-koryaku",
+    "uobei-kodzure-koryaku",
+    "kappa-sushi-kodzure-koryaku",
+    "starbucks-kodzure-koryaku",
+    "kaitenzushi-kids-menu",
+    "bandotaro-kodzure-koryaku",
+    "costco-kodzure-koryaku",
+    "choushimaru-kodzure-koryaku",
+    "yayoiken-kids-menu",
+    "hottomotto-kodzure-koryaku",
+    "gatten-sushi-kodzure-koryaku",
+    "kushikatsu-tanaka-kodzure-koryaku",
+    "steak-miya-kodzure-koryaku",
+    "yoshinoya-kids-menu",
+    "matsuya-kodzure-koryaku",
+    "flying-garden-kodzure-koryaku",
+    "yamada-udon-kodzure-koryaku",
+    "nakau-kids-menu",
+    "ajino-mingei-kodzure-koryaku",
+    "ohsho-kodzure-koryaku",
+    "sawayaka-kodzure-koryaku",
+    "uotami-kodzure-koryaku",
+    "sukiya-kodzure-koryaku",
+    "ringer-hut-kodzure-koryaku",
+    "mcdonalds-kodzure-koryaku",
+    "disney-kids-menu",
+    "anrakutei-kids-menu",
+    "hanamarudon-kids-menu",
+    "hanamaru-udon-kodzure-koryaku",
+    "shabuyou-kodzure-koryaku",
+    "mos-burger-kids-menu",
+    "yakiniku-king-kodzure-koryaku"
   ],
   "comparisonBaselines": [
     "imohori-kanto-kodzure"
   ],
   "frozenUrls": [],
   "released": [
-    "hanamaru-udon-kodzure-koryaku",
-    "shabuyou-kodzure-koryaku",
-    "mos-burger-kids-menu",
-    "yakiniku-king-kodzure-koryaku",
     "gusto-kids-menu"
   ],
   "releasedUrls": [

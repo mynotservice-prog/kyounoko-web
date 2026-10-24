@@ -112,13 +112,60 @@ export const FROZEN_TARGET_SLUGS = new Set([
   'akachan-odekake-3months-1year', 'kosodate-muryou-spots-tokyo',
   // 実験13（牛角・CoCo壱の301・2026-10-17）: 処置2本＋対照ペア2本
   'gyukaku-kodzure-koryaku', 'cocoichi-kids-menu', 'kfc-kids-menu', 'kfc-kodzure-koryaku',
+  // R1（事実だけの更新便・24対・2026-10-27反映・判定 2026-12-04）: 処置24本＋対照24本。
+  // カットオフは FROZEN_CUTOFF_BY_SLUG で 2026-10-27（登録前から効いているリンクは変えない）
+  'sukesan-udon-kodzure-koryaku', 'hamasushi-kids-menu', 'burger-king-kodzure-koryaku',
+  'sushiro-kodzure-koryaku', 'tenya-kids-menu', 'komeda-kodzure-koryaku', 'mos-burger-kodzure-koryaku',
+  'ringerhut-kids-menu', 'kappa-sushi-kids-menu', 'marugen-ramen-kodzure-koryaku', 'uobei-kodzure-koryaku',
+  'starbucks-kodzure-koryaku', 'bandotaro-kodzure-koryaku', 'choushimaru-kodzure-koryaku',
+  'hottomotto-kodzure-koryaku', 'mos-burger-kids-menu', 'steak-miya-kodzure-koryaku',
+  'matsuya-kodzure-koryaku', 'yamada-udon-kodzure-koryaku', 'ajino-mingei-kodzure-koryaku',
+  'sawayaka-kodzure-koryaku', 'sukiya-kodzure-koryaku', 'mcdonalds-kodzure-koryaku', 'anrakutei-kids-menu',
+  'kurasushi-kids-menu', 'burger-king-kids-menu', 'hama-sushi-kodzure-koryaku', 'royal-host-kodzure-koryaku',
+  'tenkaippin-kodzure-koryaku', 'hanamaru-udon-kodzure-koryaku', 'hidakaya-kodzure-koryaku',
+  'shabuyou-kodzure-koryaku', 'yoshinoya-kodzure-koryaku', 'yakiniku-king-kodzure-koryaku',
+  'kappa-sushi-kodzure-koryaku', 'kaitenzushi-kids-menu', 'costco-kodzure-koryaku', 'yayoiken-kids-menu',
+  'gatten-sushi-kodzure-koryaku', 'kushikatsu-tanaka-kodzure-koryaku', 'yoshinoya-kids-menu',
+  'flying-garden-kodzure-koryaku', 'nakau-kids-menu', 'ohsho-kodzure-koryaku', 'uotami-kodzure-koryaku',
+  'ringer-hut-kodzure-koryaku', 'disney-kids-menu', 'hanamarudon-kids-menu',
 ]);
+
+/**
+ * slug ごとのカットオフ（無ければ FROZEN_INBOUND_CUTOFF）。
+ * すでにリンクを受けている既存記事を凍結するときは登録日を置く。
+ * 9/25 のままだと、9/25〜登録日に公開した記事から張られているリンクと、
+ * 9/25 以降に足したルールのリンクが登録の時点で消え、処置・対照・137本の描画が変わる。
+ */
+const R1_CUTOFF = '2026-10-27';
+const FROZEN_CUTOFF_BY_SLUG: Record<string, string> = Object.fromEntries(
+  [
+    'sukesan-udon-kodzure-koryaku', 'hamasushi-kids-menu', 'burger-king-kodzure-koryaku',
+    'sushiro-kodzure-koryaku', 'tenya-kids-menu', 'komeda-kodzure-koryaku', 'mos-burger-kodzure-koryaku',
+    'ringerhut-kids-menu', 'kappa-sushi-kids-menu', 'marugen-ramen-kodzure-koryaku', 'uobei-kodzure-koryaku',
+    'starbucks-kodzure-koryaku', 'bandotaro-kodzure-koryaku', 'choushimaru-kodzure-koryaku',
+    'hottomotto-kodzure-koryaku', 'mos-burger-kids-menu', 'steak-miya-kodzure-koryaku',
+    'matsuya-kodzure-koryaku', 'yamada-udon-kodzure-koryaku', 'ajino-mingei-kodzure-koryaku',
+    'sawayaka-kodzure-koryaku', 'sukiya-kodzure-koryaku', 'mcdonalds-kodzure-koryaku', 'anrakutei-kids-menu',
+    'kurasushi-kids-menu', 'burger-king-kids-menu', 'hama-sushi-kodzure-koryaku',
+    'royal-host-kodzure-koryaku', 'tenkaippin-kodzure-koryaku', 'hanamaru-udon-kodzure-koryaku',
+    'hidakaya-kodzure-koryaku', 'shabuyou-kodzure-koryaku', 'yoshinoya-kodzure-koryaku',
+    'yakiniku-king-kodzure-koryaku', 'kappa-sushi-kodzure-koryaku', 'kaitenzushi-kids-menu',
+    'costco-kodzure-koryaku', 'yayoiken-kids-menu', 'gatten-sushi-kodzure-koryaku',
+    'kushikatsu-tanaka-kodzure-koryaku', 'yoshinoya-kids-menu', 'flying-garden-kodzure-koryaku',
+    'nakau-kids-menu', 'ohsho-kodzure-koryaku', 'uotami-kodzure-koryaku', 'ringer-hut-kodzure-koryaku',
+    'disney-kids-menu', 'hanamarudon-kids-menu',
+  ].map((s) => [s, R1_CUTOFF]),
+);
+
+export function frozenCutoff(slug: string): string {
+  return FROZEN_CUTOFF_BY_SLUG[slug] ?? FROZEN_INBOUND_CUTOFF;
+}
 
 /** 公開日がカットオフ以降の記事から凍結面へリンクしてよいか。 */
 export function mayLinkToFrozen(targetSlug: string, sourcePublishedAt?: string): boolean {
   if (!FROZEN_TARGET_SLUGS.has(targetSlug)) return true;
   if (!sourcePublishedAt) return true;
-  return sourcePublishedAt.slice(0, 10) < FROZEN_INBOUND_CUTOFF;
+  return sourcePublishedAt.slice(0, 10) < frozenCutoff(targetSlug);
 }
 
 const LINK_RULES: LinkRule[] = [
@@ -385,7 +432,7 @@ export function injectInternalLinks(
     // 新しく公開した記事から凍結面への被リンクを増やさない
     if (!mayLinkToFrozen(rule.targetSlug, opts.publishedAt)) continue;
     // カットオフ以降に足したルールは、凍結面（全件）では発火させない
-    if (FROZEN_TARGET_SLUGS.has(currentSlug) && rule.addedAt && rule.addedAt >= FROZEN_INBOUND_CUTOFF) continue;
+    if (FROZEN_TARGET_SLUGS.has(currentSlug) && rule.addedAt && rule.addedAt >= frozenCutoff(currentSlug)) continue;
 
     const escapedKeyword = escapeRegExp(rule.keyword);
     // マッチ: そのキーワードが既に<a>タグ内でない、見出し内でない、コードブロック内でない場所
