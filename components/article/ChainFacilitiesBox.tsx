@@ -88,7 +88,7 @@ export function ChainFacilitiesBox({
                 ? '△'
                 : '—';
           const pill = v.ok === true ? 'yes' : v.ok === 'partial' || counted ? 'text' : 'no';
-          const note = counted ? `公式店舗検索・${v.verifiedAt ?? chain.verifiedAt}集計` : v.note;
+          const note = counted ? `公式店舗検索・${formatYmd(v.verifiedAt ?? chain.verifiedAt)}集計` : v.note;
           return (
             <div key={k} className={'kk-fac' + (v.ok === false && !counted ? ' is-no' : '')}>
               <span className="kk-fac-ico">
@@ -161,4 +161,9 @@ export function ChainFacilitiesBox({
 function formatYm(iso: string): string {
   const [y, m] = iso.split('-');
   return `${y}年${Number(m)}月`;
+}
+
+function formatYmd(d: string): string {
+  const [y, m, day] = d.split('-').map(Number);
+  return `${y}年${m}月${day}日`;
 }
