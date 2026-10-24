@@ -1503,7 +1503,7 @@ export const CHAIN_FACILITIES: ChainFacilities[] = [
     verifiedMethod: '公式サイト・店舗公開情報の照合',
     surveyOnly: true,
     items: {
-      kidsMenu: V('partial', '一部店舗のみ（公式アレルゲン表でおこさまうどんはららぽーとTOKYO-BAY店限定と記載）', { sourceUrl: 'https://www.sukesanudon.com/wp/wp-content/uploads/2026/09/260903AWGMallergy.pdf', verifiedAt: '2026-09-11' }),
+      kidsMenu: V(true, '公式アレルゲン表に（温）お子さまうどん・（冷）お子さまぶっかけうどん・お子さまカレーの単品とセット。ららぽーとTOKYO-BAY店限定はおこさま肉うどん・おこさまきつねうどん', { sourceUrl: 'https://www.sukesanudon.com/wp/wp-content/uploads/2026/09/260903AWGMallergy.pdf', verifiedAt: '2026-10-24' }),
       allergenInfo: V(true, '特定原材料8品目を表示（2026年秋冬グランドメニュー）', { sourceUrl: 'https://www.sukesanudon.com/wp/wp-content/uploads/2026/09/260903AWGMallergy.pdf', verifiedAt: '2026-09-11' }),
     },
     extras: [
