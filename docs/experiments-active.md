@@ -506,6 +506,9 @@ URLを知っているがクロール順を待たせている状態。したが�
 
 ### 25. R1 事実だけの更新便（24対・対ごとに処置と対照）（2026-10-24 登録・社長承認 10/24「R1を10/27に出してよい」→ CA「YES。R1は24対・合格線は比の比の中央値1.25以上かつ24対中17対以上・判定12/04で、10/27公開に向けて準備を始めて」 / **反映予定日 2026-10-27**／**判定日 2026-12-04**・基準窓 09/25〜10/22・比較窓 11/04〜12/01）★対照群あり
 
+**2026-10-24 社長判断：判定しない・観察のみ。** 同じ反映（PR #373）で設備のチェックリストと未確認の断定の訂正が処置・対照の両方に入り、変更なしの対が24対中2対（対15・16）だけになったため、本来の施策（事実だけの更新）の効果を測れない。12/04 の判定は行わず、10/27 以降のクリックを観察として記録するだけにする。48本は凍結を解除した（`released` へ移動・`FROZEN_TARGET_SLUGS` から削除）。事実の更新便は、PR #373 で触っていない記事で母集団を作り直す（`reports/r1b-design-2026-10-24.md`）。
+
+
 根拠: `~/.claude/company/reports/2026-10-11/kyounoko-rank-levers.md` §6-1、`reports/2026-10-10/kyounoko-adsense-growth-plan.md`（R1）。10/01〜02 に事実だけ直した19本は 9/08〜15→10/13〜20 で 1.14倍（未更新119本 1.01倍。無作為ではない）。対照つきで確かめる。
 
 - **処置（24本）**: 公式を開いて、名称・品数・価格・対象年齢・提供時間などを確かめ、違いがあれば直し、本文中の確認日（「2026年X月X日時点」・出典欄の「確認日」）を照合した日に更新する。**題・seoTitle・H1・見出し・説明文・内部リンクの本数・節の構成は変えない。updatedAt も据え置く**（関連記事欄は updatedAt が新しい記事に加点するため、上げると処置だけ被関連が増え、対照の関連欄も動く。`kyounoko-related-articles-drift-2026-10-18`）。違いが無く確認日だけ更新した記事はその旨を下の処置記録に書く。
@@ -626,7 +629,14 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
     "3sai-odekake-tokyo",
     "4sai-odekake-tokyo",
     "akachan-odekake-3months-1year",
-    "kosodate-muryou-spots-tokyo",
+    "kosodate-muryou-spots-tokyo"
+  ],
+  "comparisonBaselines": [
+    "imohori-kanto-kodzure"
+  ],
+  "frozenUrls": [],
+  "released": [
+    "gusto-kids-menu",
     "sukesan-udon-kodzure-koryaku",
     "kurasushi-kids-menu",
     "hamasushi-kids-menu",
@@ -638,12 +648,15 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
     "tenya-kids-menu",
     "tenkaippin-kodzure-koryaku",
     "komeda-kodzure-koryaku",
+    "hanamaru-udon-kodzure-koryaku",
     "mos-burger-kodzure-koryaku",
     "hidakaya-kodzure-koryaku",
     "ringerhut-kids-menu",
+    "shabuyou-kodzure-koryaku",
     "kappa-sushi-kids-menu",
     "yoshinoya-kodzure-koryaku",
     "marugen-ramen-kodzure-koryaku",
+    "yakiniku-king-kodzure-koryaku",
     "uobei-kodzure-koryaku",
     "kappa-sushi-kodzure-koryaku",
     "starbucks-kodzure-koryaku",
@@ -654,6 +667,7 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
     "yayoiken-kids-menu",
     "hottomotto-kodzure-koryaku",
     "gatten-sushi-kodzure-koryaku",
+    "mos-burger-kids-menu",
     "kushikatsu-tanaka-kodzure-koryaku",
     "steak-miya-kodzure-koryaku",
     "yoshinoya-kids-menu",
@@ -670,26 +684,12 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
     "mcdonalds-kodzure-koryaku",
     "disney-kids-menu",
     "anrakutei-kids-menu",
-    "hanamarudon-kids-menu",
-    "hanamaru-udon-kodzure-koryaku",
-    "shabuyou-kodzure-koryaku",
-    "mos-burger-kids-menu",
-    "yakiniku-king-kodzure-koryaku"
-  ],
-  "comparisonBaselines": [
-    "imohori-kanto-kodzure"
-  ],
-  "frozenUrls": [],
-  "released": [
-    "gusto-kids-menu"
+    "hanamarudon-kids-menu"
   ],
   "releasedUrls": [
     "/spot/-m64q",
     "/spot/-xj0s"
   ],
-  "_memo": "frozenSlugs の dennys-kids-menu・royal-host-kids-menu = 実験11（デニーズ title 語彙併記・2026-10-17）の処置と対照。／frozenSlugs = モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）＋実験8のチェーン系モーニング新規面7本＋バーミヤン1本（判定 2026-11-20 / 2026-12-20。新規面なので対照群は無く、判定は「立ち上がったか」だけ）。いずれも lib/auto-internal-links.ts の EXPERIMENT_FROZEN_SLUGS に載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。released / releasedUrls = 2026-10-01 に判定が終わった実験5（はなまる1本）・実験6（6本）・実験7（処置21面・対照21面。frozenUrls にあった2面はここへ）。2026-10-10 に移した。",
-  "_memo": "released から ichiran-kodzure-koryaku を外した（実験6で解除後、実験10で再凍結・2026-10-17）。frozenSlugs 末尾3本 = 実験10（一蘭301・2026-10-17）の処置 ichiran-kodzure-koryaku と対照ペア 焼肉きんぐ2本。／frozenSlugs = モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）＋実験8のチェーン系モーニング新規面7本＋バーミヤン1本（判定 2026-11-20 / 2026-12-20。新規面なので対照群は無く、判定は「立ち上がったか」だけ）。いずれも lib/auto-internal-links.ts の EXPERIMENT_FROZEN_SLUGS に載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。released / releasedUrls = 2026-10-01 に判定が終わった実験5（はなまる1本）・実験6（6本）・実験7（処置21面・対照21面。frozenUrls にあった2面はここへ）。2026-10-10 に移した。 ／ frozenSlugs の machida-shoten / tadokoro-shoten = 実験12（五右衛門型の先行2本・2026-10-17・公開後は事実修正のみ）",
-  "_memo": "実験15（2026-10-17）: akakara-kodzure-koryaku・kamukura-kodzure-koryaku（五右衛門型 第2陣・公開後は事実修正のみ）。／released から ichiran-kodzure-koryaku を外した（実験6で解除後、実験10で再凍結・2026-10-17）。frozenSlugs 末尾3本 = 実験10（一蘭301・2026-10-17）の処置 ichiran-kodzure-koryaku と対照ペア 焼肉きんぐ2本。／frozenSlugs = モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）＋実験8のチェーン系モーニング新規面7本＋バーミヤン1本（判定 2026-11-20 / 2026-12-20。新規面なので対照群は無く、判定は「立ち上がったか」だけ）。いずれも lib/auto-internal-links.ts の EXPERIMENT_FROZEN_SLUGS に載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。released / releasedUrls = 2026-10-01 に判定が終わった実験5（はなまる1本）・実験6（6本）・実験7（処置21面・対照21面。frozenUrls にあった2面はここへ）。2026-10-10 に移した。 ／ frozenSlugs の machida-shoten / tadokoro-shoten = 実験12（五右衛門型の先行2本・2026-10-17・公開後は事実修正のみ）",
   "_memo": "実験24（2026-10-23登録）: 1sai/1sai-han/2sai/3sai/4sai-odekake-tokyo（処置・新規面5本・公開後は事実修正のみ）と akachan-odekake-3months-1year・kosodate-muryou-spots-tokyo（ガードレール・不変）。／実験22（2026-10-23）: youjishoku-1sai-kondate-1week（処置・新規面・公開後は事実修正のみ）と youjishoku-kanryouki-1week-rota（ガードレール・不変）。／実験21（2026-10-19）: yokozuna-ramen-kodzure-koryaku（五右衛門型 第5陣・公開後は事実修正のみ）。／実験19（2026-10-18）: hanaya-yohei-kodzure-koryaku（処置・seoTitle）、対照 washoku-sato-kodzure-koryaku（実験14と共用）・nakau-kodzure-koryaku。／実験18（2026-10-18）: steak-gusto-kodomo-ryokin（処置・seoTitle）と steakgusto-kids-menu（主力・不変だが測定対象）、対照 bigboy-kids-menu・bigboy-kodomo-ryokin。／実験20（2026-10-18）: yamanakaya-kodzure-koryaku（五右衛門型 第4陣・公開後は事実修正のみ）。／実験17（2026-10-18）: sanmarc-cafe-kodzure-koryaku（処置・店舗別キッズセット節の追加）と tullys-coffee-kodzure-koryaku（対照）。／実験16（2026-10-18）: toraji-kodzure-koryaku（五右衛門型 第3陣・公開後は事実修正のみ）。／実験13（2026-10-17）: gyukaku-kodzure-koryaku・cocoichi-kids-menu（処置）と kfc-kids-menu・kfc-kodzure-koryaku（対照）を追加。cocoichi-kids-menu は released から外した（実験6で解除後に再凍結）。／released から ichiran-kodzure-koryaku を外した（実験6で解除後、実験10で再凍結・2026-10-17）。frozenSlugs 末尾3本 = 実験10（一蘭301・2026-10-17）の処置 ichiran-kodzure-koryaku と対照ペア 焼肉きんぐ2本。／frozenSlugs = モーニング4本（2026-08-27〜29に完答撤回で改修済み・測定中）＋実験8のチェーン系モーニング新規面7本＋バーミヤン1本（判定 2026-11-20 / 2026-12-20。新規面なので対照群は無く、判定は「立ち上がったか」だけ）。いずれも lib/auto-internal-links.ts の EXPERIMENT_FROZEN_SLUGS に載っていないが docs 上は凍結中。comparisonBaselines = 実験4の比較基準（2026-08-01公開）。released / releasedUrls = 2026-10-01 に判定が終わった実験5（はなまる1本）・実験6（6本）・実験7（処置21面・対照21面。frozenUrls にあった2面はここへ）。2026-10-10 に移した。 ／ frozenSlugs の machida-shoten / tadokoro-shoten = 実験12（五右衛門型の先行2本・2026-10-17・公開後は事実修正のみ）"
 }
 ```
