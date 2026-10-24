@@ -504,7 +504,7 @@ URLを知っているがクロール順を待たせている状態。したが�
 - **他の実験との関係**: 5本は137本コホート・ほかの実験の処置・対照に含まれない。本文から137本のページ（東京の動物園・水族館ガイド7本ほか）と凍結面へリンクしない。
 - **関連記事欄**: 公開前後に本番で凍結面・137本・ガードレール2本の関連欄を取得し、入れ替わりを「汚染の記録」に残す。
 
-### 25. R1 事実だけの更新便（24対・対ごとに処置と対照）（2026-10-24 登録・社長承認 10/24「R1を10/27に出してよい」→ CA「YES。R1は24対・合格線は比の比の中央値1.25以上かつ24対中17対以上・判定12/04で、10/27公開に向けて準備を始めて」 / **反映予定日 2026-10-27**／**判定日 2026-12-04**・基準窓 09/25〜10/22・比較窓 11/04〜12/01）★対照群あり
+### 25. R1 事実だけの更新便（24対・対ごとに処置と対照）（2026-10-24 登録・社長承認 10/24「R1を10/27に出してよい」→ CA「YES。R1は24対・合格線は比の比の中央値1.25以上かつ24対中17対以上・判定12/04で、10/27公開に向けて準備を始めて」 / **本番反映日 2026-10-24**（PR #373 マージ 14:24 JST・本番 Ready 約14:33 JST。社長指示で 10/27 から前倒し）／~~判定日 2026-12-04~~（観察のみ）・基準窓 09/25〜10/22・比較窓 11/04〜12/01）★対照群あり
 
 **2026-10-24 社長判断：判定しない・観察のみ。** 同じ反映（PR #373）で設備のチェックリストと未確認の断定の訂正が処置・対照の両方に入り、変更なしの対が24対中2対（対15・16）だけになったため、本来の施策（事実だけの更新）の効果を測れない。12/04 の判定は行わず、10/27 以降のクリックを観察として記録するだけにする。48本は凍結を解除した（`released` へ移動・`FROZEN_TARGET_SLUGS` から削除）。事実の更新便は、PR #373 で触っていない記事で母集団を作り直す（`reports/r1b-design-2026-10-24.md`）。
 
@@ -572,6 +572,54 @@ URLを知っているがクロール順を待たせている状態。したが�
 - **判定日**: 本番反映日 **+45日**。
 - 一蘭（実験10）・デニーズ（実験11）・先行2本（実験12）とは別日に反映する。CoCo壱の統合元へのリンクは新設コホートの `hinoya-curry-kodzure-koryaku`・`gogo-curry-kodzure-koryaku` にも残るが、コホート記事は触らない（301で到達する）。
 
+### 26. R1b 事実だけの更新便・作り直し（24対・対ごとに処置と対照）（2026-10-24 登録・社長指示 10/24「R1b：対象48記事の選定、ペアリング、無作為割り付け、公式照合、事前データ確保を優先」「実験の精度を損なわない最短の公開日を再計算」「11/11に固定する必要はありません」「K3・K4など他施策との重複を避けてください」 / **反映 2026-10-24**（本番反映の時刻はこの節に追記）／**判定日 2026-12-02**・基準窓 09/25〜10/22・比較窓 11/02〜11/29）★対照群あり
+
+設計の正本：`reports/r1b-design-2026-10-24.md`（母集団の条件・割り付けの方法）。この節は確定した内容。
+
+- **母集団**：PR #373 で触っていない・9/25以降に md の変更がない・未確認の断定が見つからない記事のうち、基準窓 50 クリック以上の上位48本（設計書 §2）。断定が見つかった31本は母集団から外し、同じ PR で「正確さの底上げ便」として直した（実験外。汚染の記録の「正確さの底上げ便」節）。
+- **割り付け**：クリック順に隣同士で対にし、対の中は sha256 の偶奇で処置・対照を決めた（設計書 §6）。**対16（`disney-kosodate-attractions`／`kumon-vs-gakken`）は外した**：処置の照合で、ディズニーの記事に乳幼児の利用条件の誤り（題の「0歳〜OK」「身長制限なし・親同伴で乗れる15選」）が見つかり、題から書き直す安全上の訂正になったため（実験外の訂正として同じ PR で反映）。代わりに母集団の49・50本目で対25を作った（処置 `kodomo-kamareta-taisho` 52／対照 `junior-seat-2-3sai-hikaku-15` 52。同じ方法で割り付け）。
+- **処置（24本）**：公式を開いて事実を照合し、違いを直し、照合した箇所の確認日を 2026年10月24日 にした。**題・seoTitle・説明文・内部リンクの本数・updatedAt は変えていない**。見出しは、本文と食い違う事実（数・徒歩分数・確認日）だけ直した（`haneda-t1-babyroom`・`karuizawa-shopping-mall`・`reitou-shokuhin-ranking`・`fuji-safari-park-kosodate`・`fujiq-thomas-land-kosodate`・`tokyo-kichijoji-kodzure-lunch`）。体験の記述は変えず、公式と食い違うものだけ記事から外して保留した（原文は `reports/held-experience-2026-10-24.md`）（`fujiq-thomas-land-kosodate` の我が家のリアル2段落：公式に無いアトラクション名・レストラン名）。
+- **処置が空の対**：対2（処置 `gyuuniku-ryouri-kodomo-okiniiri`）と対12（処置 `dessert-kodomo-tezukuri-5`）は家庭レシピの記事で、照合できる公式の事実が無く、変更なし。**主判定から外し、参考として示す**。
+- **対照（24本）**：何もしない。ただし対17の対照 `ikea-smaland` の表の「都市型店舗は基本なし」（出典のない一般化）を「都市型店舗」に直した（正確さを優先）。**対17は主判定から外す**。
+- **主判定の対**：21対（対1〜25 のうち、欠番の16と、2・12・17 を除く）。24対すべての結果も参考として併記する。
+- **主指標**：対ごとの比 r ＝（処置の比較窓クリック÷基準窓クリック）÷（対照の同じ比）。GSC page equals・final。基準窓のデータは `reports/r1b-baseline-2026-10-24.json` に保存済み（final・09/01〜10/22 の日別つき）。
+- **合格（反映前に固定）**：r の中央値 1.25 以上、かつ r>1 の対が21対中15対以上（何もしなくても15対以上になる確率 約3.9%。CA の「24対中17対以上」約3.2% と同じ水準）。
+- **不合格**：r の中央値 1.10 未満、または r>1 の対が21対中10対以下。
+- **判定不能**：その間。28日延ばして（11/30〜12/27）同じ線でもう1度読む。順位とCTRも併記する。
+- **安全の線**：反映15〜28日目（11/08〜11/21）に、処置の記事のクリックが「基準窓×対の相手の比×0.7」を下回ったら、その記事だけ元に戻す。
+- **日程を早めた理由**：基準窓（09/25〜10/22）は 10/24 時点で final になっている。PR #373（10/24 反映）は48本に触れていないので、両群に共通の出来事として扱う。照合・登録・事前データの確保が済んだ時点で出すのが最短（設計書の 11/11 案から 18 日前倒し）。
+- **凍結**：48本を frozen-check に登録した（処置24・対照24）。既定のカットオフ（9/25）を当てると既存リンクが外れるので、slug ごとのカットオフ 2026-10-25 を `lib/auto-internal-links.ts`（`FROZEN_CUTOFF_BY_SLUG`）に足した。描画シミュレーションで全記事の自動リンク数が登録前後で不変（7,675→7,675）。
+- **他の便との重複**：48本は判定日（12/02）まで K3・K4 の対象から外す（凍結で機械的に止まる）。A1（`shitsunai-*`）・採点の便・攻めの便とは重ならない。
+- **限界**：R1 の母集団（チェーンの攻略）と型が違い、育児の「いつから」・商品比較・施設ガイド・エリアのランチが中心。50〜100クリックの対は比のばらつきが大きい。
+
+| 対 | 処置 | 基準窓clk | 対照 | 基準窓clk | 主判定 |
+|---|---|---|---|---|---|
+| 1 | `reitou-shokuhin-ranking` | 587 | `kodomo-grape-itsukara` | 350 | ○ |
+| 2 | `gyuuniku-ryouri-kodomo-okiniiri` | 347 | `babyfuku-tatami` | 292 | 参考（処置が空） |
+| 3 | `kodzure-deli-takeout-10` | 292 | `tokyo-kodomo-mushiyoke-spot` | 237 | ○ |
+| 4 | `jiyugaoka-muse-square-kodzure` | 215 | `kurasushi-stroller` | 221 | ○ |
+| 5 | `kodomo-nuts-itsukara` | 202 | `puroland-kosodate-guide` | 183 | ○ |
+| 6 | `haneda-t1-babyroom` | 182 | `takaosan-kodzure-route` | 167 | ○ |
+| 7 | `karuizawa-shopping-mall` | 152 | `kasai-aquarium-kosodate` | 162 | ○ |
+| 8 | `hamasushi-rinyushoku-mochikomi` | 146 | `moony-vs-goon` | 151 | ○ |
+| 9 | `pampers-vs-merries` | 132 | `tokyo-babycar-kodzure-gaishoku-50` | 140 | ○ |
+| 10 | `sakana-kodomo-tabete-kureru` | 117 | `shinjuku-gyoen-kodzure` | 121 | ○ |
+| 11 | `yurakucho-kodzure-lunch` | 115 | `costco-kodzure-koryaku` | 113 | ○ |
+| 12 | `dessert-kodomo-tezukuri-5` | 110 | `yayoiken-kids-menu` | 109 | 参考（処置が空） |
+| 13 | `fuji-safari-park-kosodate` | 107 | `shabuyo-koshitsu` | 106 | ○ |
+| 14 | `tokyo-station-kodzure-lunch` | 98 | `kodomo-lemon-itsukara` | 94 | ○ |
+| 15 | `kodomo-tkg-itsukara` | 91 | `takanawa-gateway-kodzure-lunch` | 88 | ○ |
+| 17 | `chichinohi-3sai-dekiru-tedukuri-10` | 79 | `ikea-smaland` | 79 | 外す（対照を訂正） |
+| 18 | `tobu-zoo-kodzure` | 79 | `kodomo-ramen-itsukara` | 79 | ○ |
+| 19 | `haneda-rinyushoku-milk` | 76 | `yoshinoya-kids-menu` | 79 | ○ |
+| 20 | `fujiq-thomas-land-kosodate` | 74 | `ergo-vs-aprica-dakkohimo` | 75 | ○ |
+| 21 | `tokyo-station-babyroom` | 68 | `kodomo-renji-mushipan-5min-asa` | 65 | ○ |
+| 22 | `tokyo-kichijoji-kodzure-lunch` | 64 | `kodomo-shokuji-tachiaruki-taisho` | 62 | ○ |
+| 23 | `okashi-tezukuri-oyatsu-kodomo` | 58 | `showa-kinen-koen-kodzure` | 60 | ○ |
+| 24 | `rinyuushoku-frozen-gekkabetsu` | 58 | `tokyo-fuwafuwa-park-20` | 56 | ○ |
+| 25 | `kodomo-kamareta-taisho` | 52 | `junior-seat-2-3sai-hikaku-15` | 52 | ○ |
+
+
 ## 機械可読ブロック（`scripts/check-frozen.mjs` が読む正本）
 
 CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的に拾う。
@@ -629,7 +677,55 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
     "3sai-odekake-tokyo",
     "4sai-odekake-tokyo",
     "akachan-odekake-3months-1year",
-    "kosodate-muryou-spots-tokyo"
+    "kosodate-muryou-spots-tokyo",
+    "reitou-shokuhin-ranking",
+    "kodomo-grape-itsukara",
+    "gyuuniku-ryouri-kodomo-okiniiri",
+    "babyfuku-tatami",
+    "kodzure-deli-takeout-10",
+    "tokyo-kodomo-mushiyoke-spot",
+    "jiyugaoka-muse-square-kodzure",
+    "kurasushi-stroller",
+    "kodomo-nuts-itsukara",
+    "puroland-kosodate-guide",
+    "haneda-t1-babyroom",
+    "takaosan-kodzure-route",
+    "karuizawa-shopping-mall",
+    "kasai-aquarium-kosodate",
+    "hamasushi-rinyushoku-mochikomi",
+    "moony-vs-goon",
+    "pampers-vs-merries",
+    "tokyo-babycar-kodzure-gaishoku-50",
+    "sakana-kodomo-tabete-kureru",
+    "shinjuku-gyoen-kodzure",
+    "yurakucho-kodzure-lunch",
+    "costco-kodzure-koryaku",
+    "dessert-kodomo-tezukuri-5",
+    "yayoiken-kids-menu",
+    "fuji-safari-park-kosodate",
+    "shabuyo-koshitsu",
+    "tokyo-station-kodzure-lunch",
+    "kodomo-lemon-itsukara",
+    "kodomo-tkg-itsukara",
+    "takanawa-gateway-kodzure-lunch",
+    "chichinohi-3sai-dekiru-tedukuri-10",
+    "ikea-smaland",
+    "tobu-zoo-kodzure",
+    "kodomo-ramen-itsukara",
+    "haneda-rinyushoku-milk",
+    "yoshinoya-kids-menu",
+    "fujiq-thomas-land-kosodate",
+    "ergo-vs-aprica-dakkohimo",
+    "tokyo-station-babyroom",
+    "kodomo-renji-mushipan-5min-asa",
+    "tokyo-kichijoji-kodzure-lunch",
+    "kodomo-shokuji-tachiaruki-taisho",
+    "okashi-tezukuri-oyatsu-kodomo",
+    "showa-kinen-koen-kodzure",
+    "rinyuushoku-frozen-gekkabetsu",
+    "tokyo-fuwafuwa-park-20",
+    "kodomo-kamareta-taisho",
+    "junior-seat-2-3sai-hikaku-15"
   ],
   "comparisonBaselines": [
     "imohori-kanto-kodzure"
@@ -662,15 +758,12 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
     "starbucks-kodzure-koryaku",
     "kaitenzushi-kids-menu",
     "bandotaro-kodzure-koryaku",
-    "costco-kodzure-koryaku",
     "choushimaru-kodzure-koryaku",
-    "yayoiken-kids-menu",
     "hottomotto-kodzure-koryaku",
     "gatten-sushi-kodzure-koryaku",
     "mos-burger-kids-menu",
     "kushikatsu-tanaka-kodzure-koryaku",
     "steak-miya-kodzure-koryaku",
-    "yoshinoya-kids-menu",
     "matsuya-kodzure-koryaku",
     "flying-garden-kodzure-koryaku",
     "yamada-udon-kodzure-koryaku",
@@ -696,17 +789,27 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
 
 ## 汚染の記録
 
-### 未確認の断定の横断監査（2026-10-24・2026-10-27 反映予定・社長指示「PR #373 品質改善・SEO/GEO最適化」）— 汚染（R1・実験2・13・18・19に横断）
+### 正確さの底上げ便・R1b の処置・ディズニーの安全上の訂正（2026-10-24・R1b と同じ PR で反映）— 実験外の訂正（R1b の処置は汚染ではなく処置そのもの）
+- **何を（底上げ便・31本）**：R1b の母集団から外した、未確認の断定が残る31本（チェーン別のベビーチェア・離乳食の持ち込み・個室・エリアのランチ等。設計書 §5）を、PR #373 と同じ手順で公式と照合し、裏付けのない断定を公式の件数（集計日つき）か「公式に記載なし（店舗へ確認）」に直した（約530か所。題を変えた記事：`kurasushi-baby-chair`・`sukiya-baby-chair`・`shabuyo-baby-chair`・`bikkuri-donkey-rinyushoku-mochikomi`・`tds-baby-chair`・`steakgusto-baby-chair`・`nakau-baby-chair`・`yoshinoya-baby-chair`）。`kodomo-tofu-hamburger-rinyuushoku-otona` は家庭レシピで変更なし。updatedAt は据え置き。
+- **公式と逆だったもの（訂正）**：バーガーキングのキッズセット（公式FAQで大人も購入可・ピクルス抜き可）、びっくりドンキーの離乳食持ち込み（公式FAQで可）、焼肉きんぐの子ども用イス・食器（公式に「お取り扱いのない店舗もございます」）、TDS のベビーチェア（公式は「一部のレストラン」・66件中19店。ベビーセンターはメディテレーニアンハーバー）、コストコの倉庫店別の授乳室・おむつ交換台（公式37倉庫店の表と逆の行）、サイゼリヤの取り分け小皿・割れないカップ（公式に記載あり）／専用キッズメニュー（公式になし）、スシローのぷちローセット、個室ランチ記事の焼肉きんぐ（100分・幼児無料・小学生半額・専用キッズメニューなし）・リンガーハット・大戸屋、しゃぶ葉の料金（全日一律）、木曽路の「お子様御膳」、丸亀のまんぷくセット、KFC のキッズセット、IKEA のスモーランドの対象（満4歳以上11歳未満）、キドキドの対象年齢、がってん寿司の公式URL。
+- **ディズニー（`disney-kosodate-attractions`・R1b 対16から除外）**：公式の全37施設の利用条件を取り直し、題・説明文・lede・一覧・FAQ を「公式で『ひざの上で利用可』は11施設＋カルーセル」に書き直した（旧題の「0歳〜OK」「身長制限なし・親同伴で乗れる15選」は、ピーターパン空の旅・ベイマックスなど公式に「ひざに乗せた状態ではご利用になれません」とある施設を含んでいた）。安全に関わるため題も変えた。updatedAt は据え置き。
+- **体験の記述の保留（非表示）**：公式と食い違う体験の段落を記事から外し、原文を `reports/held-experience-2026-10-24.md` に移した（HTML コメントでは RSC のペイロードに文が残るため）（`fujiq-thomas-land-kosodate` 2段落、`tds-baby-chair` 1段落、`costco-omutsu` 1段落、`shabushabu-yakiniku-buffet-3chain` 2行、`kids-space-lunch-10` 1段落）。社長の確認後に書き直す。
+- **凍結面への明示リンクの周辺文**：底上げ便の7本（`costco-omutsu`・`hamasushi-baby-chair`・`kodzure-deli-takeout-10`・`kurasushi-baby-chair`・`saizeriya-baby-chair`・`steakgusto-baby-chair`・`tokyo-shinagawa-kodzure-lunch`）と R1b 処置の `tokyo-kichijoji-kodzure-lunch` で、凍結面（`costco-kodzure-koryaku`・`hamasushi-rinyushoku-mochikomi`・`kfc-kids-menu`（実験13の対照）・`kurasushi-stroller`・`saizeriya-kids-menu`・`steakgusto-kids-menu`（実験18）・`bamiyan-kodzure-koryaku`）へのリンクを含む行の文が変わった。**リンクの本数とリンク先は全件で不変**（origin/main と照合）。
+- **R1・実験13 への影響**：`kurasushi-kids-menu`・`burger-king-kids-menu`（R1 の対照だった。R1 は観察のみ）は訂正だけ。実験13・18・19 の処置・対照には触っていない。
+- **R1b への影響**：対照 `ikea-smaland` の表を2か所訂正（「都市型店舗は基本なし」→「都市型店舗」、店名「IKEA港北」→公式の現名称「IKEA横浜（旧IKEA港北）」・2026-10-24 公式店舗一覧で確認）。対17を主判定から外す。その他の対照は未変更。実験外の `ikea-omutsu` の表の店名も同じく直した。
+- **R1b の処置への被リンク1本増（描画層）**：底上げ便の `koshitsu-kodzure-lunch` に公式の引用（和食さとの「離乳食無料」、しゃぶ葉の「離乳食はご自由にお持ち込みください」）が入り、本文キーワード自動リンク「離乳食」で `/article/koshitsu-kodzure-lunch → /article/rinyuushoku-frozen-gekkabetsu`（対24の処置）が1本増えた。公式の文言なので言い換えない。対24は判定時にこの1本を併記する（被リンクが他の経路でも動くので主判定からは外さない）。処置の文言で自動リンクが動いた他の5か所は、言い換えて登録前と同じ本数に戻した。
+
+### 未確認の断定の横断監査（2026-10-24・2026-10-24 反映（PR #373）・社長指示「PR #373 品質改善・SEO/GEO最適化」）— 汚染（R1・実験2・13・18・19に横断）
 - **何を**: PR #373 で触った記事・設備DBが表示される攻略記事43本・比較記事3本（計94本）の題・説明文・lede・見出し・本文・表・FAQを横断し、「基本なし」「ほぼ全店」「多くの店舗」「店舗が多い」「少なめ」などの断定を、公式（lib/chain-facilities.ts の照合済みの値・data/chain-coverage.json の公式店舗検索の件数・2026-10-24 に取得した公式ページ）で裏付けられる内容に直した。裏付けのないものは「公式に記載なし（店舗へ確認）」にした。差し替えは約1,400か所（6班の照合1,357件＋ココス攻略48件＋はま寿司の対象年齢6件＋題4件）。体験の記述（我が家のリアル・編集長/編集部の利用記録）は変えずに保留した。
 - **公式と逆だったもの（訂正）**: 幸楽苑の離乳食・ミルクの持ち込み（公式FAQで持ち込み可）、魚べいの離乳食の持ち込み（元気寿司公式FAQで可）→離乳食持ち込み一覧は3社→4社（data/rinyushoku-official-2026.json は魚べいの行と集計だけ更新。生成スクリプトに CORRECTIONS を追加。凍結登録で記事リンクが外れないよう、各行の記事リンクは元のまま）、はま寿司の「対象年齢：3歳以上」（カプセルトイの景品の表示で、セットは「お子様から大人までどなたでも」）、華屋与兵衛のおむつ替え台（公式店舗検索で33店中33店）、山田うどんの子ども用食器（公式に用意あり）、まいどおおきに食堂の子ども椅子（公式に用意あり）、ガストの家族向けページの記載（離乳食持ち込みOK・キッズチェア・オムツ交換台）、ココスのおこさまメニューの年齢（小学6年生まで）と誕生日のサービス内容、夢庵の比較表のバーミヤンの座敷と価格、ステーキ宮の「ソファ席が中心」（公式店舗検索で102店中5店）。
 - **題を変えた記事**: ココス攻略・松屋攻略・てんやのキッズメニュー・てんやのベビーチェア・てんやのおむつ・丸亀製麺攻略・サイゼリヤのおむつ・ステーキ宮・ジョナサン・味の民芸・バーガーキング・フレッシュネスバーガー・上島珈琲店・山田うどん食堂。
 - **R1（実験25）への影響**: 処置・対照のどちらかでチェックリストか本文が変わった対は **24対中22対**（変更なしは **対15・16 の2対だけ**）。処置側には事実の更新に加えて設備表示・断定の訂正が、対照側にも同じ種類の訂正が入ったため、**R1 本来の施策（事実だけの更新）の効果は、今回の修正の効果と切り分けられない**。判定日（12/04）の読み方は社長判断（完了報告で提案）。
 - **実験2**: `bamiyan-kodzure-koryaku`・`bikkuri-donkey-kodzure-koryaku`（チェックリスト＋本文）、`cocos-kids-menu`（本文）、`yayoiken-kodzure-koryaku`（チェックリスト）が変わった。実験2の判定日（10/21）は過ぎているので、以後の読みはこの日を境に分ける。
 - **実験13**（判定 12/01・比較窓 11/01〜11/28）: 処置 `gyukaku-kodzure-koryaku`（チェックリスト＋本文）・`cocoichi-kids-menu`（チェックリスト＋本文）、対照 `kfc-kodzure-koryaku`（チェックリスト）が変わった。対照 `kfc-kids-menu` は変わっていない。判定では `kfc-kids-menu` だけを対照にした比較を併記する。
-- **実験18**（判定 11/26・比較窓 10/27〜11/23）: 対照 `bigboy-kids-menu` のチェックリストが変わった（処置の title と主力・もう1本の対照は不変）。比較窓の初日に重なる。
-- **実験19**（判定 11/26・比較窓 10/27〜11/23）: 処置 `hanaya-yohei-kodzure-koryaku` の説明文・lede・本文・FAQ、対照 `washoku-sato-kodzure-koryaku`（本文）・`nakau-kodzure-koryaku`（チェックリスト＋本文）が変わった。title だけの1変数の実験だったが、10/27 以降は1変数ではなくなる。判定は「影響あり」と明記して読む。
+- **実験18**（判定 11/26・比較窓 10/27〜11/23）: 対照 `bigboy-kids-menu` のチェックリストが変わった（処置の title と主力・もう1本の対照は不変）。比較窓（10/27〜）の3日前に反映（10/24）。
+- **実験19**（判定 11/26・比較窓 10/27〜11/23）: 処置 `hanaya-yohei-kodzure-koryaku` の説明文・lede・本文・FAQ、対照 `washoku-sato-kodzure-koryaku`（本文）・`nakau-kodzure-koryaku`（チェックリスト＋本文）が変わった。title だけの1変数の実験だったが、10/24 の反映以降は1変数ではなくなる。判定は「影響あり」と明記して読む。
 
-### チェーン設備DBの公式照合と「基本なし」の訂正（2026-10-24・2026-10-27 反映予定・社長「47記事の『基本なし』と chain-facilities の出典なしの値も公式で確かめて直して」「行は消さず『公式に記載なし（店舗へ確認）』と表示する形で。R1と実験13は影響した対を判定で分けて示して」）— 汚染（全実験に横断）
+### チェーン設備DBの公式照合と「基本なし」の訂正（2026-10-24・2026-10-24 反映（PR #373）・社長「47記事の『基本なし』と chain-facilities の出典なしの値も公式で確かめて直して」「行は消さず『公式に記載なし（店舗へ確認）』と表示する形で。R1と実験13は影響した対を判定で分けて示して」）— 汚染（全実験に横断）
 - **何を**: `lib/chain-facilities.ts` の、記事に表示される43チェーン・434セルを公式（FAQ・キッズ/メニュー/アレルギーのページ・公式店舗検索）で照合した。公式店舗検索の全店集計（data/chain-coverage.json）で58セル、公式ページで79セルを裏付けた。残り287セルは公式に記載がないので `ok: 'unknown'` にした。表示部品 `ChainFacilitiesBox` は、確認済みの項目だけをグリッドに並べ（集計がある項目は「n／total店」）、記載のない項目は下に1行「公式に記載なし（店舗へ確認）: …」でまとめる。`ChainComparisonTable`（比較記事3本の早見表）は、記載のないチェーンを表から外して表の下に名前を並べる。あわせて記事本文の「基本なし」（チェーン店の設備）約50か所を、公式の件数か「公式に記載なし（店舗へ確認）」にした。
 - **なぜ**: 出典のない ✓/— を「公式で確認」の体裁で出していた。正確さを測定より優先した（社長判断）。
 - **チェックリストが変わる記事**: DBに載る43チェーンの攻略記事すべて（コード上は `koryakuSlug`）と、`chainComparison` を持つ3本（gaishoku-baby-chair-matome・kids-menu-chain-15-hikaku・rinyuushoku-mochikomi-chain-15）。
@@ -723,7 +826,7 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
 - **対照の訂正（汚染）**: 対照 `kaitenzushi-kids-menu`（対12）の かっぱ寿司「おこさまプレート 290円・セット540円」を公式の297円・594円に直した（表1行・FAQ 2か所）。事実誤りの訂正として行った。判定では対12を除いた値も併記する。
 - **R1 の外の記事（実験に関係なし）**: `matsuya-kids-menu`（キッズセット480円・ライスは並盛200円・牛めし小盛・半熟玉子・みそ汁は店内飲食でサービス）、`gyudon-4chain-kodzure-hayami`・`gyudon-chain-kodzure-ranking-2026-4sha`（松屋のキッズセット480円）、`kids-menu-chain-15-hikaku`（松屋480円・てんやの行）、`tenya-baby-chair`（てんやのお子様メニューは国内39店）、`tempura-makino-kodzure-koryaku`（137本コホート・てんや記事へのリンクの文言を新しい題に。リンク先と本数は不変）。`lib/station-restaurants.ts` のてんやの説明文、`lib/chain-facilities.ts` の資さんうどん kidsMenu（surveyOnly・公式PDFの読み違いを訂正）。
 
-### 実験25（R1）の処置の実施（2026-10-24 照合・2026-10-27 反映予定）— 汚染ではなく処置そのもの
+### 実験25（R1）の処置の実施（2026-10-24 照合・2026-10-24 反映（PR #373））— 汚染ではなく処置そのもの
 処置24本を2026-10-24に公式と照合した。題・seoTitle・説明文・見出しの構成・内部リンクの本数・updatedAt は変えていない（例外は松屋の見出しの数字1か所と lede の数字1か所）。
 - **事実の訂正あり（9本）**: `matsuya-kodzure-koryaku`（キッズセット450→480円。小皿の価格と品名を公式に合わせた〔小ライス→ライス200円・冷奴140円・ポテサラ100円・半熟玉子100円・生玉子100円・牛めしミニ→牛めし小盛450円・みそ汁は店内飲食の牛めし等に無料／単品90円〕。見出し「小皿(150円〜)」と lede の同じ数字を「100円〜」に直した。題の「牛丼ミニ」は題なので変えていない）、`kappa-sushi-kids-menu`（セット540→594円・プレート/うどん290→297円・ポテトプレート340→352円）、`burger-king-kodzure-koryaku`（本文の「410円〜」を公式の460円〜に・店舗数を10/23公式発表の385店に）、`starbucks-kodzure-koryaku`（キッズ ココア220→231円）、`mcdonalds-kodzure-koryaku`（ハッピーセット510〜540円・メインの品名・プレイプレイス（旧プレイランド）・えだまめコーンの公式の注意書き〔3歳頃まで控える〕を追記）、`mos-burger-kodzure-koryaku`（セットの選択肢「くだものと野菜」→公式の「りんごジュース（125ml紙パック）」・アレルギーの公式文言の引用を原文どおりに）、`sawayaka-kodzure-koryaku`（離乳食「しらすの雑炊」が公式に掲載・子ども椅子は公式FAQで7ヶ月〜5才未満・落下防止ベルト付き）、`uobei-kodzure-koryaku`（公式FAQで離乳食・ミルクの持ち込み可と明記）、`marugen-ramen-kodzure-koryaku`（店舗数238→246）。
 - **確認日だけ更新（13本）**: `hottomotto-kodzure-koryaku`・`sukesan-udon-kodzure-koryaku`・`ringerhut-kids-menu`・`bandotaro-kodzure-koryaku`・`yamada-udon-kodzure-koryaku`・`steak-miya-kodzure-koryaku`・`sukiya-kodzure-koryaku`・`komeda-kodzure-koryaku`・`mos-burger-kids-menu`・`hamasushi-kids-menu`・`sushiro-kodzure-koryaku`・`anrakutei-kids-menu`・`tenya-kids-menu`。てんやは公式メニューPDF・アレルギー一覧に「お子様天丼」が載っていないため、その点を書いた結論と出典の2か所は日付を据え置いた。見出し・frontmatter に入っている確認日（はま寿司・モス キッズメニュー・リンガーハット）は変えていないので、本文の日付とずれる。
