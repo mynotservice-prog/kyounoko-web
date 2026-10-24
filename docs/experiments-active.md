@@ -694,6 +694,14 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
 
 ## 汚染の記録
 
+### 実験25（R1）の処置の実施（2026-10-24 照合・2026-10-27 反映予定）— 汚染ではなく処置そのもの
+処置24本を2026-10-24に公式と照合した。題・seoTitle・説明文・見出しの構成・内部リンクの本数・updatedAt は変えていない（例外は松屋の見出しの数字1か所と lede の数字1か所）。
+- **事実の訂正あり（9本）**: `matsuya-kodzure-koryaku`（キッズセット450→480円。小皿の価格と品名を公式に合わせた〔小ライス→ライス200円・冷奴140円・ポテサラ100円・半熟玉子100円・生玉子100円・牛めしミニ→牛めし小盛450円・みそ汁は店内飲食の牛めし等に無料／単品90円〕。見出し「小皿(150円〜)」と lede の同じ数字を「100円〜」に直した。題の「牛丼ミニ」は題なので変えていない）、`kappa-sushi-kids-menu`（セット540→594円・プレート/うどん290→297円・ポテトプレート340→352円）、`burger-king-kodzure-koryaku`（本文の「410円〜」を公式の460円〜に・店舗数を10/23公式発表の385店に）、`starbucks-kodzure-koryaku`（キッズ ココア220→231円）、`mcdonalds-kodzure-koryaku`（ハッピーセット510〜540円・メインの品名・プレイプレイス（旧プレイランド）・えだまめコーンの公式の注意書き〔3歳頃まで控える〕を追記）、`mos-burger-kodzure-koryaku`（セットの選択肢「くだものと野菜」→公式の「りんごジュース（125ml紙パック）」・アレルギーの公式文言の引用を原文どおりに）、`sawayaka-kodzure-koryaku`（離乳食「しらすの雑炊」が公式に掲載・子ども椅子は公式FAQで7ヶ月〜5才未満・落下防止ベルト付き）、`uobei-kodzure-koryaku`（公式FAQで離乳食・ミルクの持ち込み可と明記）、`marugen-ramen-kodzure-koryaku`（店舗数238→246）。
+- **確認日だけ更新（13本）**: `hottomotto-kodzure-koryaku`・`sukesan-udon-kodzure-koryaku`・`ringerhut-kids-menu`・`bandotaro-kodzure-koryaku`・`yamada-udon-kodzure-koryaku`・`steak-miya-kodzure-koryaku`・`sukiya-kodzure-koryaku`・`komeda-kodzure-koryaku`・`mos-burger-kids-menu`・`hamasushi-kids-menu`・`sushiro-kodzure-koryaku`・`anrakutei-kids-menu`・`tenya-kids-menu`。てんやは公式メニューPDF・アレルギー一覧に「お子様天丼」が載っていないため、その点を書いた結論と出典の2か所は日付を据え置いた。見出し・frontmatter に入っている確認日（はま寿司・モス キッズメニュー・リンガーハット）は変えていないので、本文の日付とずれる。
+- **公式サイトが止まっていて照合できず（2本）**: `choushimaru-kodzure-koryaku`（公式サイトが10/22から緊急メンテナンス・再開日未定）は変更なし。`ajino-mingei-kodzure-koryaku`（公式サイトが503）は、記事の公式URLのドメインが存在しないため運営元ドメインへ直しただけ。反映日までに再照合し、照合できなければ「処置できず」のまま、割り付けどおりに判定に含める。
+- **凍結面へのリンクの行**: `komeda-kodzure-koryaku` の60行目（`komeda-morning-kosodate` へのリンクを含む行）は確認日の数字だけを変えた。リンク先と本数は不変。
+- **対照側で見つけた誤り（訂正していない）**: 対照 `kaitenzushi-kids-menu` の かっぱ寿司「おこさまプレート 290円」（公式は297円）。対照は判定日まで触らない方針なので、12/04 の後に直す。
+
 ### 木曽路のお祝い記事の事実訂正（2026-10-18 PR作成・**2026-10-19 本番反映**・実験外）— SEO実験ではない
 
 **反映**: PR #348 を 2026-10-19 10:58 JST にマージ、11:34 JST に本番で確認。マージ直前に公式「お子様料理」ページを再取得し、訂正した価格・予約条件がすべて一致することを確認。反映前後の本番HTMLで title・H1・canonical・robots・description・JSON-LD headline・dateModified が同一、誤っていた記述（「お食い初め膳…公式に確認できませんでした」）が消えたことを確認。
