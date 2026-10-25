@@ -828,6 +828,11 @@ CIの凍結ガードは、上の各節から凍結slug・凍結URLを機械的�
 
 ## 汚染の記録
 
+### がんこのお食い初め記事の公開と関連記事欄（2026-10-25・PR #378）— 凍結面への新記事の流入なし／6面は日付の再生成で入れ替わり（観測の記録）
+- **何を**: 新規記事 `ganko-okuizome-shichigosan` を公開（PR #378 マージ 09:01 JST・同日の #316 と合わせた本番 Ready を Vercel 別名URLで確認。title・canonical 自己参照・robots index, follow・FAQPage・サイトマップ掲載を確認。CF は記事と /sitemap.xml をパージ）。実験外。
+- **関連記事欄の確認**: 凍結slug 106面（frozen-check の94＋FROZEN_TARGET_SLUGS のみの12）の「関連する記事」欄を、公開前（10/24 22:35 の本番ビルド）と公開後で比べた。**新記事はどの凍結面の欄にも入っていない**（入ったのは非凍結の兄弟記事 木曽路・ばんどう太郎・かごの屋・サガミ・とんでん・味の民芸のお食い初め6本）。
+- **欄が変わった凍結面（6面・新記事とは無関係の入れ替わり）**: `machida-shoten-kodzure-koryaku`（toraji→kamukura）、`kamukura-kodzure-koryaku`（yamaokaya→benitora-gyozabo）、`hanaya-yohei-kodzure-koryaku`（実験19の処置・nemuro-hanamaru→ootoya）、`washoku-sato-kodzure-koryaku`（実験19の対照・shichirinbo→ootoya）、`toraji-kodzure-koryaku`・`tokyo-fuwafuwa-park-20`（実験26 対24の対照）は並び順だけ。日付で毎日再生成される欄の変動（記録「関連記事欄の入れ替わり」参照）とみられる。判定時は欄の変動として併記する。
+
 ### IKEA の記事の公式訂正（2026-10-24・社長指示「IKEAの記事に残っている公式情報との不一致を修正」）— 実験26（R1b）対17の対照に及ぶ
 - **何を**: IKEA の5本（`ikea-restaurant-kodzure-koryaku`・`ikea-smaland`・`ikea-omutsu`・`ikea-baby-chair`・`ikea-stroller`）を IKEA 日本の公式と照合し、98か所を訂正。ほかに IKEA に触れる3本（`bebycar-ok-cafe-15`・`kodzure-restaurant-erabikata-kanzen-guide`・`rinyuushoku-mochikomi-ok-tokyo-15`）の同じ誤りを5か所訂正。
 - **公式と逆だったもの**: 「離乳食の無料提供」（公式は「ベビーフードの無料提供」を店舗在庫限りで終了と告知）、スモーランドの対象「3〜10歳」（公式は満4歳以上満11歳未満・おむつを使わず自分でトイレに行けること）、キッズメニュー「100円〜」と公式に無い品名（公式は12歳以下限定でキッズカレー200円〜・IKEA Tokyo-Bay のメニューで確認）、原宿・新宿を現存店として掲載（公式は2025-08-29に営業終了を発表）、おむつは「販売なし・持参」（公式は紙おむつを無料で用意）、授乳室は「カーテン区切り」（公式は個室）、アンティロープの対象「9〜36ヶ月」（公式は6〜36カ月・ひとりでお座りできてから）。題を変えた記事: `ikea-restaurant-kodzure-koryaku`・`ikea-omutsu`・`ikea-baby-chair`（updatedAt は据え置き）。
