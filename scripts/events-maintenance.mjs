@@ -39,7 +39,8 @@ for (const a of AREAS) areaName[a.slug] = a.name;
 const ended = EVENTS.filter((e) => e.endDate < today);
 const upcoming = EVENTS.filter((e) => e.endDate >= today);
 const endedAnnual = ended.filter(isAnnual);
-const endedOneOff = ended.filter((e) => !isAnnual(e));
+// closed: true は「営業終了」の告知ページとして意図的に残しているもの（検索流入がある）。削除候補に出さない
+const endedOneOff = ended.filter((e) => !isAnnual(e) && !e.closed);
 
 let md = `# イベント メンテナンス・レビュー\n\n> 基準日: ${today} ／ 全${EVENTS.length}件（開催予定${upcoming.length} / 終了${ended.length}）\n\n`;
 

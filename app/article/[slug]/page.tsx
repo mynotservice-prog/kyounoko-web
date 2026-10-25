@@ -34,7 +34,6 @@ import {
   allowsFoodBridgeAlongsideCoop,
   splitBodyAtSection,
 } from '@/lib/article-product-hints';
-import { getBodySurfaceOffer } from '@/lib/surface-offers';
 import { getClusterNav } from '@/lib/article-cluster-links';
 import { ClusterNav } from '@/components/article/ClusterNav';
 import { getChainFacilitiesForArticle, FACILITY_LABELS, type FacilityKey } from '@/lib/chain-facilities';
@@ -68,7 +67,6 @@ import { AgeMonthCalculator } from '@/components/interactive/AgeMonthCalculator'
 import { BabyCarRouteEstimator } from '@/components/interactive/BabyCarRouteEstimator';
 import { NaptimeFitFinder } from '@/components/interactive/NaptimeFitFinder';
 import { LineCta } from '@/components/common/LineCta';
-import { KkLineInline } from '@/components/kk/KkLineInline';
 import { articleCategoryLabel } from '@/lib/article-categories';
 import { ArticleRowList } from '@/components/article/ArticleRowList';
 import { KkSectionTitle } from '@/components/kk/KkSectionTitle';
@@ -301,7 +299,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? [...ogImages, { url: pinImg, width: 1000, height: 1500 }]
     : ogImages;
   return {
-    title: article.title,
+    // seoTitle は <title> だけに効かせる（H1・OG・JSON-LD は title のまま）。実験11（docs/experiments-active.md §11）
+    title: article.seoTitle ?? article.title,
     description,
     openGraph: {
       title: article.title,
@@ -837,20 +836,10 @@ function FileArticleView({ article }: { article: FileArticle }) {
   // 抽出してヒーロー直下(クイック情報の隣)へ移動。無い記事は従来どおり。
   const checklistSplit = extractChecklistSection(article.body);
 
-  // レバー1 移植物3（2026-08-04・設計 §3）: 治療群（venue-chair / venue-rinyushoku 面）
-  // のみ、意図ピークH2セクションの末尾で本文を分割し InlineItemCTA を1枚差し込む。
-  // 同時に末尾 RelatedItemsCTA を items[1..2] の2点へ減らし、ページあたりの
-  // もしもリンク総数（3本）とPR枠数を純増させない（L720-728 の「純増ゼロ」原則を踏襲）。
-  // 一致H2が無い記事は bodySurfaceSplit=null → 従来どおり末尾3点のまま。
-  const bodySurfaceOffer = getBodySurfaceOffer(
-    article.slug,
-    article.category,
-    article.title,
-  );
+  // 本文HTML（チェックリスト前出し時は抽出後の残り）。
+  // レバー1（2026-08-04 PR#149）の治療群8本だけ本文中へ InlineItemCTA を1枚差し込む配線は、
+  // 本判定（2026-09-15・PV比0.411%＜1.2%で収益不合格）の事前凍結どおり撤去した（2026-10-10）。
   const renderBodyHtml = checklistSplit ? checklistSplit.rest : article.body;
-  const bodySurfaceSplit = bodySurfaceOffer
-    ? splitBodyAtSection(renderBodyHtml, bodySurfaceOffer.headingPattern)
-    : null;
 
   // おうち遊び記事: frontmatter homePlays の遊びを、本文の「遊び方カード」H2セクション末尾に
   // DB駆動カード(lib/home-play.ts)として差し込む。該当H2が無ければ本文末尾に出す。
@@ -859,15 +848,12 @@ function FileArticleView({ article }: { article: FileArticle }) {
     ? splitBodyAtSection(renderBodyHtml, /遊び方カード|遊びカード/) ?? [renderBodyHtml, '']
     : null;
 
-  // 末尾CTA用の関連商品。本文中へ1枚移動した治療群は残り2点に減らす（純増ゼロ）。
-  const endRelatedItemsAll = getRelatedItemsForArticle(
+  // 末尾CTA用の関連商品（3点）。
+  const endRelatedItems = getRelatedItemsForArticle(
     article.slug,
     article.category,
     article.title,
   );
-  const endRelatedItems = bodySurfaceSplit
-    ? endRelatedItemsAll.slice(1)
-    : endRelatedItemsAll;
 
   // チェーンDB(lib/chain-facilities.ts)に載っている攻略記事は、md手書き表の
   // 代わりにDB駆動の判定ボックスを描画する(単一データソース化)。
@@ -1048,7 +1034,7 @@ function FileArticleView({ article }: { article: FileArticle }) {
       : undefined;
 
   // 記事から関連する東京23区内の駅を推定し、駅ページへのCTAを生成
-  const stationLink = buildStationLinkForArticle({
+  const stationLink = article.noStationLink ? undefined : buildStationLinkForArticle({
     title: article.title,
     metaDescription: article.metaDescription,
     body: article.body,
@@ -1328,19 +1314,16 @@ function FileArticleView({ article }: { article: FileArticle }) {
           {/* 比較ハブ記事: チェーン別早見表(DB駆動)。frontmatter chainComparison 指定時のみ */}
           {comparisonKey && <ChainComparisonTable focus={comparisonKey} />}
 
-          {/* ランキング・比較記事には景表法対応の評価基準開示 */}
-          {(article.slug.includes('ranking') || article.slug.includes('hikaku') || article.title.includes('ランキング') || article.title.includes('比較')) && (
+          {/* ランキング・比較記事には景表法対応の評価基準開示。
+              frontmatter の hideRankingDisclosure: true を付けた記事だけ出さない（順位を外した記事用。既定は出す） */}
+          {!article.hideRankingDisclosure && (article.slug.includes('ranking') || article.slug.includes('hikaku') || article.title.includes('ランキング') || article.title.includes('比較')) && (
             <EditorialDisclosure variant="ranking" />
           )}
 
-          {/* LINE小型CTA（2026-09-23）。末尾の LineCta は広告・FAQの下で読者の数%にしか
-              見えていなかった（28日でクリック0）ため、判定ボックス＝「答え」の直後・本文の
-              手前に1行の帯を置き、placement 別に表示とクリックを比べる。末尾カードは残す。 */}
-          <KkLineInline placement="article-mid" />
+          {/* 記事中段のLINE小型CTA（2026-09-23 PR#260）は、表示11,948回・クリック0（基準1%）で
+              不合格（2026-10-01判定・2026-10-05 D-3=A）につき撤去。末尾の LINE カードは残す。 */}
 
-          {/* Body（チェックリスト前出し時は抽出後の残り本文を描画）。
-              レバー1治療群は意図ピークH2セクション末尾で分割し、間に InlineItemCTA を
-              1枚だけ差し込む（末尾CTA側を2点に減らして枠の純増ゼロ）。 */}
+          {/* Body（チェックリスト前出し時は抽出後の残り本文を描画） */}
           {homePlaySplit ? (
             <>
               <div
@@ -1354,21 +1337,6 @@ function FileArticleView({ article }: { article: FileArticle }) {
                   dangerouslySetInnerHTML={{ __html: prepareBody(homePlaySplit[1]) }}
                 />
               )}
-            </>
-          ) : bodySurfaceSplit && bodySurfaceOffer ? (
-            <>
-              <div
-                className="prose"
-                dangerouslySetInnerHTML={{ __html: prepareBody(bodySurfaceSplit[0]) }}
-              />
-              <InlineItemCTA
-                item={bodySurfaceOffer.item}
-                note={bodySurfaceOffer.note}
-              />
-              <div
-                className="prose"
-                dangerouslySetInnerHTML={{ __html: prepareBody(bodySurfaceSplit[1]) }}
-              />
             </>
           ) : (
             <div
@@ -1433,7 +1401,9 @@ function FileArticleView({ article }: { article: FileArticle }) {
               items={affiliateProducts}
             />
           ) : (
-            <RelatedItemsCTA items={endRelatedItems} />
+            <RelatedItemsCTA
+              items={getRelatedItemsForArticle(article.slug, article.category, article.title)}
+            />
           )}
 
           {/* 読了後の高単価CTAは1枚だけ（生協 > 宿予約）。ネット予約の再掲は

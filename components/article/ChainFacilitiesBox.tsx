@@ -43,6 +43,9 @@ export function ChainFacilitiesBox({
   anchorId?: string;
 }) {
   const keys = Object.keys(FACILITY_LABELS) as FacilityKey[];
+  // 2026-10-24: 公式で確認できた項目だけを判定グリッドに並べ、記載のない項目は下に1行でまとめる
+  const confirmedKeys = keys.filter((k) => chain.items[k] && chain.items[k]!.ok !== 'unknown');
+  const unknownKeys = keys.filter((k) => chain.items[k]?.ok === 'unknown');
   const verified = formatYm(chain.verifiedAt);
   // 設備カバー率センサス（公式店舗検索の全店集計）。あるチェーンだけ「店舗による」を率で補足し、
   // 調査ハブ /data/chain-facility-coverage へ回遊させる（戦略§5-2: 調査ハブ⇄個別記事の双方向リンク）
@@ -73,13 +76,21 @@ export function ChainFacilitiesBox({
       </div>
 
       <div className="kk-fac-grid">
-        {keys.map((k) => {
-          const v = chain.items[k];
-          if (!v) return null;
-          const mark = v.ok === true ? '✓' : v.ok === 'partial' ? '△' : '—';
-          const pill = v.ok === true ? 'yes' : v.ok === 'partial' ? 'text' : 'no';
+        {confirmedKeys.map((k) => {
+          const v = chain.items[k]!;
+          // 公式店舗検索の全店集計がある項目は、✓/△ でなく「n／total店」で示す
+          const counted = v.stores !== undefined && v.storesTotal !== undefined;
+          const mark = counted
+            ? `${v.stores!.toLocaleString()}／${v.storesTotal!.toLocaleString()}店`
+            : v.ok === true
+              ? '✓'
+              : v.ok === 'partial'
+                ? '△'
+                : '—';
+          const pill = v.ok === true ? 'yes' : v.ok === 'partial' || counted ? 'text' : 'no';
+          const note = counted ? `公式店舗検索・${formatYmd(v.verifiedAt ?? chain.verifiedAt)}集計` : v.note;
           return (
-            <div key={k} className={'kk-fac' + (v.ok === false ? ' is-no' : '')}>
+            <div key={k} className={'kk-fac' + (v.ok === false && !counted ? ' is-no' : '')}>
               <span className="kk-fac-ico">
                 <KkIcon name={FACILITY_ICONS[k]} size={24} />
               </span>
@@ -87,11 +98,19 @@ export function ChainFacilitiesBox({
               <span className={'kk-pill ' + pill} aria-hidden="true">
                 {mark}
               </span>
-              {v.note && <span className="av3-fac-note">（{v.note}）</span>}
+              {note && <span className="av3-fac-note">（{note}）</span>}
             </div>
           );
         })}
       </div>
+
+      {unknownKeys.length > 0 && (
+        <div className="av3-chain-extras">
+          <div className="av3-chain-extra">
+            <strong>公式に記載なし（店舗へ確認）:</strong> {unknownKeys.map((k) => FACILITY_LABELS[k]).join('・')}
+          </div>
+        </div>
+      )}
 
       {chain.extras && chain.extras.length > 0 && (
         <div className="av3-chain-extras">
@@ -142,4 +161,9 @@ export function ChainFacilitiesBox({
 function formatYm(iso: string): string {
   const [y, m] = iso.split('-');
   return `${y}年${Number(m)}月`;
+}
+
+function formatYmd(d: string): string {
+  const [y, m, day] = d.split('-').map(Number);
+  return `${y}年${m}月${day}日`;
 }

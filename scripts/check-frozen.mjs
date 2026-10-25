@@ -280,6 +280,7 @@ async function makeRenderer() {
         publishedAt: toIsoDate(d.publishedAt) ?? new Date().toISOString(),
         noindex: typeof d.noindex === 'boolean' ? d.noindex : undefined,
         quickInfo: qi ? { place: arr(qi.place), weather: arr(qi.weather), ageRanges: arr(qi.ageRanges) } : undefined,
+        noStationLink: d.noStationLink === true,
         html: h,
       });
     }
