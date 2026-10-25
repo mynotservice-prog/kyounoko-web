@@ -1,23 +1,19 @@
 'use client';
 
 import { useEffect } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
-import { trackEvent, trackPageView } from '@/lib/analytics';
+import { trackEvent } from '@/lib/analytics';
 import { installAffiliateReferrer } from '@/lib/affiliate-referrer';
 
 /**
- * Next.js App Router の SPA 遷移で page_view を手動送信するトラッカー。
+ * 計測まわりのクライアント処理（クリック計測・アフィリエイトのリファラ）。
  *
- * 背景:
- * - gtag('config', GA_ID) は初回 HTML 読み込み時にしか page_view を発火しない。
- * - Next.js のクライアント遷移（router.push / Link クリック）では URL は
- *   変わるが page_view は発火しない。これにより SPA 内回遊の計測がゼロになる。
- *
- * 仕様:
- * - usePathname / useSearchParams を監視し、変更時に trackPageView を呼ぶ。
- * - 初回マウントも含めて送信（gtag('config') と二重になるが、GA4 はクライアント側で
- *   重複排除しないので、ここでは初回送信を skip するロジックを入れて二重送信を防ぐ）。
- * - GA 未設定 / gtag 未ロード時は dataLayer.push にフォールバック（analytics.ts側）。
+ * page_view はここでは送らない（2026-10-25）:
+ * - 文書の読み込み時は gtag('config') が送る。
+ * - 画面を読み直さない遷移（router.push / Link）は、GA4 の拡張計測「ページの変更（ブラウザの履歴）」
+ *   （データストリーム設定で有効）が送る。
+ * - 以前はここでも page_view を手動送信していたため、2 ページ目以降は遷移の種類にかかわらず
+ *   page_view が 2 回送られていた（2026-05-19〜10-25。本番で送信を数えて確認）。
+ *   拡張計測の「ページの変更」を管理画面で切る場合は、ここに手動送信を戻すこと。
  *
  * クリック計測（2026-10 「今日の流れ」利用計測）:
  * - `data-ev="イベント名"` を持つ要素のクリックを委譲で拾って送る（Server Component の
@@ -27,31 +23,6 @@ import { installAffiliateReferrer } from '@/lib/affiliate-referrer';
  *   どの面が /today へ送客したかは GA4 の pagePath（クリックが起きたページ）で分かる。
  */
 export function AnalyticsRouteTracker() {
-  const pathname = usePathname();
-  const search = useSearchParams();
-
-  useEffect(() => {
-    if (!pathname) return;
-    // 初回マウントは gtag('config', ...) が page_view を送っているのでスキップ。
-    // useEffect は SSR では走らないため、ここに来たら必ずクライアント。
-    // 「初回かどうか」を判定するため sessionStorage に1回マークを置く。
-    let firstLoad = false;
-    try {
-      const marker = sessionStorage.getItem('__ga_initial_pv');
-      if (!marker) {
-        sessionStorage.setItem('__ga_initial_pv', '1');
-        firstLoad = true;
-      }
-    } catch {
-      // sessionStorage が使えない環境では二重送信を許容（致命ではない）
-    }
-    if (firstLoad) return;
-
-    const searchStr = search?.toString() || '';
-    trackPageView(pathname, searchStr || undefined);
-    // ESLint: pathname と search のみ依存
-  }, [pathname, search]);
-
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
       const target = e.target as Element | null;
