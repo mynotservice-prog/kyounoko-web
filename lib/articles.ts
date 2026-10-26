@@ -53,6 +53,13 @@ export type FileArticleMeta = {
    */
   chainComparison?: string;
   /**
+   * true のとき、題や slug に「比較」「ランキング」を含む記事に自動で出る「評価基準の開示」の注記
+   * （「本記事のランキング・No.1等の表記は…主観的に評価した順位です」）を出さない。
+   * 順位・採点を本文から外した記事で、注記だけが残るのを防ぐための指定。
+   * 未指定（既定）は従来どおり自動で出す。順位や No.1 の表記が残る記事には付けない。
+   */
+  hideRankingDisclosure?: boolean;
+  /**
    * おうち遊びDB(lib/home-play.ts)の遊びID。指定があると本文の「遊び方カード」H2の
    * 直後にDB駆動のカード（月齢・準備/片付け分数・親の姿勢・安全の公式根拠）を描画する。
    */
@@ -183,6 +190,7 @@ function parseFrontmatter(raw: string, fallbackSlug: string): { meta: FileArticl
     updatedAt: toIsoDate(d.updatedAt) ?? toIsoDate(d.publishedAt) ?? new Date().toISOString(),
     verifiedAt: toIsoDate(d.verifiedAt) ?? undefined,
     chainComparison: typeof d.chainComparison === 'string' ? d.chainComparison : undefined,
+    hideRankingDisclosure: d.hideRankingDisclosure === true ? true : undefined,
     homePlays: Array.isArray(d.homePlays)
       ? (d.homePlays as unknown[]).filter((x): x is string => typeof x === 'string')
       : undefined,
@@ -973,11 +981,21 @@ function extractFaq(
 // 公開 API
 // ------------------------------------------------------------
 
+/** getAllFileArticles() の結果（本番ビルド・本番実行時のみ保持）。 */
+let allFileArticlesCache: FileArticleMeta[] | null = null;
+
 /**
- * コンテンツディレクトリの全記事メタ情報を返す（本文は含まない・高速）。
+ * コンテンツディレクトリの全記事メタ情報を返す（本文は含まない）。
  * publishedAt 降順でソート。
+ *
+ * 本番ビルド・本番実行時は content/articles が変わらないので、1プロセスで1回だけ読む。
+ * 記事ページ1枚の描画で何度も呼ばれ、毎回全mdを読み直すと記事数の二乗でビルドが遅くなり、
+ * Vercel のビルド上限45分を超えた（2026-10-23・reports/build-time-diagnosis-2026-10-23.md）。
+ * 呼び出し側が並べ替えても保持分が崩れないよう、毎回配列の複製を返す。dev は毎回読む（md編集を即反映）。
  */
 export function getAllFileArticles(): FileArticleMeta[] {
+  const memo = process.env.NODE_ENV === 'production';
+  if (memo && allFileArticlesCache) return allFileArticlesCache.slice();
   const files = readArticlesDir();
   const metas: FileArticleMeta[] = files.map((filename) => {
     const filePath = path.join(ARTICLES_DIR, filename);
@@ -986,7 +1004,9 @@ export function getAllFileArticles(): FileArticleMeta[] {
     const { meta } = parseFrontmatter(raw, fallbackSlug);
     return meta;
   });
-  return metas.sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1));
+  const sorted = metas.sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1));
+  if (memo) allFileArticlesCache = sorted;
+  return sorted.slice();
 }
 
 /** 記事本文の上書き（KV）。slug → 編集後の生Markdown（frontmatter込み）。 */

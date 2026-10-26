@@ -7,7 +7,9 @@ category: today-doko
 categoryName: 今日どこ行く？
 publishedAt: '2026-06-18T00:00:00.000Z'
 updatedAt: '2026-10-01'
-hero: /img/scenes/selfudon-03.webp
+hero: /photos/article-marukame-kids-menu-hero.webp
+heroAlt: 丸亀製麺のお子さま まんぷくセットの小うどん（かけ）。わかめ・かまぼこ・玉子焼きがのっている
+heroCredit: 写真：編集部撮影（丸亀製麺 お子さま まんぷくセット）
 area: all
 quickInfo:
   ageRanges:
@@ -53,6 +55,13 @@ legacyHero: /hero/food-japan-01.webp
 | ジュース | 果汁100%ジュース1本（りんご／ぶどう。店舗の在庫状況により選べない場合あり） |
 | 対象 | 小学6年生まで |
 | 注意 | 一部店舗では販売していない場合あり。持ち帰り不可（店内メニュー） |
+
+
+![丸亀製麺の店頭メニューの「お子さま まんぷくセット」290円。「小学6年生まで限定」「小うどん かけ（温）・ぶっかけ（温・冷）」「お好きな天ぷらから1品 ※対象外商品は価格札をご確認ください」「選べるジュース りんご・ぶどう」と書かれている（編集部撮影）](/photos/article-marukame-menu-board-manpukuset-202610.webp)
+
+編集部が訪れた店舗の店頭メニューでも、お子さま まんぷくセットは**290円・小学6年生まで限定**で、中身は「小うどん（かけ温・ぶっかけ温冷）＋お好きな天ぷらから1品＋選べるジュース（りんご・ぶどう）」でした。天ぷらは「対象外商品は価格札をご確認ください」と書かれているので、選ぶ前に天ぷらの価格札を見ておくと迷いません。
+
+![お子さま まんぷくセットの小うどん（かけ）。わかめ・かまぼこ・玉子焼きがのっている（編集部撮影）](/photos/article-marukame-manpukuset-udon-202610.webp)
 
 - **かけうどん（小）単品より安い**：かけうどん（小）は単品340円、セットは天ぷらとジュースが付いて290円です（どちらも公式の税込価格・2026年10月1日確認。店舗により価格が異なる場合があります）
 - **販売店舗の確かめ方**：公式の商品ページ（[かけ](https://jp.marugame.com/menu/udon/okosamamanpukusetkake/)／[ぶっかけ](https://jp.marugame.com/menu/udon/okosamamanpukusetbukkake/)）にある「販売店舗をみる」から、行く店舗で扱っているかを確認できます
