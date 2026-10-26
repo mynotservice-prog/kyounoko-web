@@ -3854,6 +3854,16 @@ function pickEventSceneByCategoryAndTitle(e: EventEntry): string | undefined {
   if (/城/.test(tv) && (night || /紅葉/.test(tv))) return scenePickFrom('castle-night', e.slug);
   if (/紅葉|もみじ|モミジ|秋/.test(tv) && /ライトアップ|夜|ナイト|灯/.test(tv)) return scenePickFrom('autumn-night', e.slug);
   if (/紅葉|もみじ|モミジ/.test(tv) && /山|高原|ロープウェイ|渓谷|峡/.test(tv)) return scenePickFrom('momiji-mountain', e.slug);
+  // 2026-10-26 冬・クリスマスの8枚。水族館・動物園の冬企画は施設の絵のまま
+  const facility = /水族館|アクアリウム|アクアマリン|シーワールド|海遊館|動物園|動物公園|ZOO|zoo/.test(tv);
+  if (/プロジェクションマッピング/.test(tv)) return scenePickFrom('projection', e.slug);
+  if (/雪あかり|雪明かり|雪灯|かまくら|スノーキャンドル/.test(tv)) return scenePickFrom('snow-lantern', e.slug);
+  if (/雪遊び|そり|ソリ|スノーパーク|スノーランド|雪まつり/.test(tv)) return scenePickFrom('snow-play', e.slug);
+  if (/クリスマス|christmas|x'mas|サンタ/i.test(tv) && !facility) {
+    if (/マーケット|market/i.test(tv) || e.category === 'market') return scenePickFrom('christmas-market', e.slug);
+    if (/工作|ワークショップ|クラフト/.test(tv) || e.category === 'workshop') return scenePickFrom('christmas-craft', e.slug);
+    if (!/イルミ/.test(tv)) return scenePickFrom('christmas-tree', e.slug);
+  }
   if (/イルミ/.test(tv) || e.category === 'illumination') return scenePickFrom('illumination', e.slug);
   if (/展望|天望/.test(tv) || e.venue === '東京スカイツリー') return scenePickFrom('observatory', e.slug);
   // 水族館・動物園のハロウィンは施設の絵のほうが合うので下の判定に任せる
@@ -3913,8 +3923,10 @@ function scenePickFrom(scene: string, slug: string, fallback?: string): string {
     'train': 3, 'toy': 3, 'rain': 3, 'car': 3, 'camp': 3,
     // 2026-10-26 イベント用の追加
     'science': 2, 'jellyfish': 1, 'planetarium': 1, 'insect': 1, 'observatory': 1,
-    'castle-night': 1, 'autumn-night': 1, 'momiji-mountain': 1, 'illumination': 1,
+    'castle-night': 1, 'autumn-night': 1, 'momiji-mountain': 1, 'illumination': 3,
     'halloween': 1, 'autumn-field': 1, 'park-train': 1,
+    'christmas-tree': 1, 'christmas-market': 1, 'christmas-craft': 1, 'projection': 1,
+    'snow-lantern': 1, 'snow-play': 1,
   };
   const h = hashEventSlug(slug);
   const c = counts[scene] ?? 0;
