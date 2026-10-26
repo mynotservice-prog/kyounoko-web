@@ -3844,6 +3844,27 @@ const EVENT_FACILITY_MAP: Array<[RegExp, string]> = [
  */
 function pickEventSceneByCategoryAndTitle(e: EventEntry): string | undefined {
   const t = `${e.title} ${e.venue ?? ''} ${e.lede ?? ''}`;
+  // 2026-10-26: イベント用の季節・施設シーン14枚を追加。説明文の言葉で外れた絵が出ないよう、
+  //   ここの判定はタイトル＋会場だけを見る（例: 歯の企画展の説明文にある「標本」で昆虫の絵が出る）。
+  const tv = `${e.title} ${e.venue ?? ''}`;
+  const night = /ライトアップ|イルミ|夜|ナイト|灯/.test(tv) || e.category === 'illumination';
+  if (/クラゲ|くらげ/.test(tv)) return scenePickFrom('jellyfish', e.slug);
+  if (/プラネタリウム|星空|天体|観望/.test(tv)) return scenePickFrom('planetarium', e.slug);
+  if (/昆虫|カブトムシ|クワガタ|蝶|ちょうちょ|虫展|むし展/.test(tv)) return scenePickFrom('insect', e.slug);
+  if (/城/.test(tv) && (night || /紅葉/.test(tv))) return scenePickFrom('castle-night', e.slug);
+  if (/紅葉|もみじ|モミジ|秋/.test(tv) && /ライトアップ|夜|ナイト|灯/.test(tv)) return scenePickFrom('autumn-night', e.slug);
+  if (/紅葉|もみじ|モミジ/.test(tv) && /山|高原|ロープウェイ|渓谷|峡/.test(tv)) return scenePickFrom('momiji-mountain', e.slug);
+  if (/イルミ/.test(tv) || e.category === 'illumination') return scenePickFrom('illumination', e.slug);
+  if (/展望|天望/.test(tv) || e.venue === '東京スカイツリー') return scenePickFrom('observatory', e.slug);
+  // 水族館・動物園のハロウィンは施設の絵のほうが合うので下の判定に任せる
+  if (/ハロウィ/.test(tv) && !/水族館|アクアリウム|アクアマリン|シーワールド|海遊館|動物園|動物公園|ZOO|zoo/.test(tv)) {
+    if (/工作|ワークショップ|クラフト/.test(tv) || e.category === 'workshop') return scenePickFrom('halloween', e.slug);
+    if (/牧場|農園|公園|ガーデン|フラワー|ファーム|丘/.test(tv)) return scenePickFrom('autumn-field', e.slug);
+    return hashEventSlug(e.slug) % 2 ? scenePickFrom('halloween', e.slug) : '/img/scenes/seasonal-07.webp';
+  }
+  if (/かぼちゃ|カボチャ|コスモス/.test(tv)) return scenePickFrom('autumn-field', e.slug);
+  if (/ちびっ子新幹線|ミニSL|豆汽車|のりもの|乗り物/.test(tv)) return scenePickFrom('park-train', e.slug);
+  if (/科学館|科学博物館|サイエンス|実験/.test(tv)) return scenePickFrom('science', e.slug);
   // タイトル・会場文字列ベースで具体スポット推定
   if (/水族館|アクアリウム|クラゲ/.test(t)) return scenePickFrom('aquarium', e.slug);
   if (/動物園|サファリ|牧場|ふれあい/.test(t)) return scenePickFrom('zoo', e.slug);
@@ -3872,7 +3893,6 @@ function pickEventSceneByCategoryAndTitle(e: EventEntry): string | undefined {
     case 'market': return scenePickFrom('shopping', e.slug);
     case 'workshop': return scenePickFrom('indoor-play', e.slug);
     case 'sport': return scenePickFrom('park', e.slug);
-    case 'illumination':
     case 'seasonal': return scenePickFrom('seasonal', e.slug, 'park');
     case 'show': return scenePickFrom('indoor-play', e.slug);
     default: return undefined;
@@ -3888,9 +3908,13 @@ function scenePickFrom(scene: string, slug: string, fallback?: string): string {
     'screen-time': 10, 'seasonal': 10, 'lesson': 10,
     'book': 7, 'stroller': 7, 'medical': 7,
     'indoor-play': 6,
-    'bento': 5, 'shopping': 5, 'sleep': 5, 'zoo': 5, 'baby-food': 5,
-    'bath': 4, 'nursery': 4, 'cooking': 4, 'aquarium': 4, 'airplane': 4, 'craft': 4,
+    'bento': 5, 'shopping': 5, 'sleep': 5, 'zoo': 5, 'baby-food': 5, 'aquarium': 5,
+    'bath': 4, 'nursery': 4, 'cooking': 4, 'airplane': 4, 'craft': 4,
     'train': 3, 'toy': 3, 'rain': 3, 'car': 3, 'camp': 3,
+    // 2026-10-26 イベント用の追加
+    'science': 2, 'jellyfish': 1, 'planetarium': 1, 'insect': 1, 'observatory': 1,
+    'castle-night': 1, 'autumn-night': 1, 'momiji-mountain': 1, 'illumination': 1,
+    'halloween': 1, 'autumn-field': 1, 'park-train': 1,
   };
   const h = hashEventSlug(slug);
   const c = counts[scene] ?? 0;
