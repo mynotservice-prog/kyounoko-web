@@ -528,9 +528,11 @@ export function getSpotOwnReservation(reservationUrl: string | undefined): SpotO
         kind: 'affiliate',
         offer: {
           href,
-          heading: 'このお店をネット予約',
-          note: 'ホットペッパーグルメのこのお店のページで、空席と予約の条件を確認できます。',
-          cta: 'ホットペッパーでこのお店を予約 →',
+          // ホットペッパーの店舗ページがあってもネット予約を受けていない店がある（2026-10-27 の調査で
+          // ひよこのカフェハウス・ひょうたん寿司がそう）。「予約できる」とは書かず、店のページへの案内にとどめる。
+          heading: 'このお店のページ（ホットペッパーグルメ）',
+          note: 'このお店のページで、ネット予約の受付状況や空席を確認できます。',
+          cta: 'ホットペッパーでこのお店を見る →',
           itemId: 'hotpepper-reservation-spot',
         },
       };

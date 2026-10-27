@@ -13,6 +13,12 @@
 import type { AreaSlug } from './area';
 import { KID_REPORTS } from './kid-reports';
 import { SPOT_FACILITIES } from './spot-facilities';
+import {
+  FACILITY_KEYS,
+  RESTAURANT_AMENITY_EVIDENCE,
+  RESTAURANT_VENUE,
+  type AmenityEvidenceMap,
+} from './spot-restaurant-amenities';
 import { SPOT_VERIFICATION } from './spot-verification-data';
 import { SPOT_SEASON, type SpotSeasonWindow } from './spot-season';
 import { getSpotParking, type SpotParking } from './spot-parking';
@@ -228,6 +234,16 @@ export type Spot = {
    * 一般の検索結果・特集一覧（他店が並ぶページ）のURLは入れない。
    */
   reservationUrl?: string;
+  /**
+   * restaurant の種別（lib/spot-restaurant-amenities.ts の RESTAURANT_VENUE から name 一致でマージ）。
+   * shop=個別店 / chain=チェーン総称 / complex=商業施設・飲食店の集まり。complex はテナント単位の設備を表示しない。
+   */
+  venueType?: 'shop' | 'chain' | 'complex';
+  /**
+   * restaurant の設備ごとの出典（公式サイト・公式SNS・店からの回答・公式裏取り台帳）。
+   * restaurant のページは、出典がある設備だけを表示する（lib/spot-restaurant-amenities.ts の gateRestaurantAmenities）。
+   */
+  amenityEvidence?: import('./spot-restaurant-amenities').AmenityEvidenceMap;
   // ---- 夏季向けフラグ ----
   /** 水遊び可（じゃぶじゃぶ池/噴水/プール/水族館タッチプール等） */
   waterPlay?: boolean;
@@ -5007,6 +5023,26 @@ for (const { spot, slug } of allSpotsForMerge()) {
     }
     if (!spot.facilities && SPOT_FACILITIES[spot.name]) {
       spot.facilities = SPOT_FACILITIES[spot.name];
+    }
+    // restaurant: 公式裏取り台帳（SPOT_FACILITIES）と値が一致する設備は、その設備の出典として記録する（2026-10-27）。
+    // インラインの facilities でも、台帳に同じ値があれば台帳が出典になる。台帳に無い・値が違うものは出典なし扱い。
+    if (spot.category === 'restaurant' && spot.facilities && SPOT_FACILITIES[spot.name]) {
+      const reg = SPOT_FACILITIES[spot.name];
+      const ev: AmenityEvidenceMap = { ...(spot.amenityEvidence ?? {}) };
+      const ver = SPOT_VERIFICATION[spot.name];
+      const checkedAt = ver?.method === 'official' ? ver.verifiedAt : undefined;
+      for (const k of FACILITY_KEYS) {
+        if (spot.facilities[k] !== undefined && spot.facilities[k] === reg[k] && !ev[k]) {
+          ev[k] = { kind: 'official-registry', ref: 'lib/spot-facilities.ts', checkedAt };
+        }
+      }
+      spot.amenityEvidence = ev;
+    }
+    // restaurant の種別と設備ごとの出典（lib/spot-restaurant-amenities.ts）。上書き前の name で引いて焼き付ける。
+    if (spot.category === 'restaurant') {
+      if (!spot.venueType && RESTAURANT_VENUE[spot.name]) spot.venueType = RESTAURANT_VENUE[spot.name].type;
+      const own = RESTAURANT_AMENITY_EVIDENCE[spot.name];
+      if (own) spot.amenityEvidence = { ...(spot.amenityEvidence ?? {}), ...own };
     }
     // 最終確認記録（SPOT_VERIFICATION）のマージ。overrides で表示名を変えても
     // 鮮度判定が外れないよう、上書き前の name で引いてスポットに焼き付ける。

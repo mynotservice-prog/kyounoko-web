@@ -48,6 +48,7 @@ import { getRecommendedItems } from '@/lib/recommended-items';
 import { getRakutenProduct, keywordFromRakutenSearchUrl, priceBandLabel } from '@/lib/rakuten-products';
 import { wrapMoshimoRakuten } from '@/lib/moshimo';
 import { getSpotOwnReservation, getSpotReservationOffer, getSpotTravelOffer } from '@/lib/reservation-cta';
+import { gateRestaurantAmenities } from '@/lib/spot-restaurant-amenities';
 import { ReservationCTA } from '@/components/article/ReservationCTA';
 import { ShareBar } from '@/components/article/ShareBar';
 import { getUpcomingEventsNear } from '@/lib/events';
@@ -75,7 +76,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const entry = getSpotBySlug(slug, await getRuntimeSpotOverrides());
   if (!entry) return { title: 'スポットが見つかりません' };
-  const { spot } = entry;
+  // restaurant は出典のある設備だけを表示に使う（2026-10-27）。索引の判定は元データで行う（下の robots）。
+  const rawSpot = entry.spot;
+  const spot = gateRestaurantAmenities(rawSpot);
   const category = spot.categoryLabel ?? SPOT_CATEGORY_LABEL[spot.category] ?? spot.category;
   const location = spot.ward ?? spot.city ?? '';
   // タイトル長の適応（2026-07-31）:
@@ -146,7 +149,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     alternates: { canonical: `/spot/${slug}` },
     // 閉館スポットと中身の薄いスポットは noindex（不正確・低品質な情報を検索結果に残さない）。
-    robots: SPOT_CLOSED[spot.name] || !isSpotIndexable(spot) ? { index: false } : INDEXABLE_ROBOTS,
+    robots: SPOT_CLOSED[spot.name] || !isSpotIndexable(rawSpot) ? { index: false } : INDEXABLE_ROBOTS,
     openGraph: {
       title,
       description,
@@ -227,7 +230,10 @@ export default async function SpotPage({ params }: Props) {
   const ovMap = await getRuntimeSpotOverrides();
   const entry = getSpotBySlug(slug, ovMap);
   if (!entry) notFound();
-  const { spot } = entry;
+  // restaurant は、出典（公式サイト・公式SNS・店からの回答・公式裏取り台帳）がある設備だけを表示する。
+  // 商業施設はテナント単位の設備（キッズメニュー等）を出さない。データの値は消さない（表示だけ絞る）。
+  // restaurant 以外は同じオブジェクトが返る＝表示は従来どおり（lib/spot-restaurant-amenities.ts）。
+  const spot = gateRestaurantAmenities(entry.spot);
   const category = spot.categoryLabel ?? SPOT_CATEGORY_LABEL[spot.category] ?? spot.category;
   const location = spot.ward ?? spot.city ?? '';
 
@@ -430,7 +436,10 @@ export default async function SpotPage({ params }: Props) {
     spot.category === 'restaurant'
       ? RESTAURANT_FEATURE_DEF.flatMap((f) =>
           spot[f.key] === true
-            ? [f.text ? { icon: f.icon, label: f.label, status: 'text' as const, text: f.text } : { icon: f.icon, label: f.label, status: 'yes' as const }]
+            ? (() => {
+                const text = spot.amenityEvidence?.[f.key]?.displayText ?? f.text;
+                return [text ? { icon: f.icon, label: f.label, status: 'text' as const, text } : { icon: f.icon, label: f.label, status: 'yes' as const }];
+              })()
             : [],
         )
       : [];
@@ -650,6 +659,11 @@ export default async function SpotPage({ params }: Props) {
           <div className="kk-sec sv3-sec">
             <KkSectionTitle as="h2" title="設備・サービス" />
             <KkFacilityGrid items={facilityItems} />
+            {spot.category === 'restaurant' && spot.venueType === 'complex' && (
+              <p className="sv3-lead" style={{ fontSize: 13, marginTop: 8 }}>
+                館内の共用設備です。キッズメニューや子ども用の椅子など、お店ごとの設備は各店舗にご確認ください。
+              </p>
+            )}
           </div>
         )}
 
