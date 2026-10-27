@@ -13,6 +13,12 @@
 import type { AreaSlug } from './area';
 import { KID_REPORTS } from './kid-reports';
 import { SPOT_FACILITIES } from './spot-facilities';
+import {
+  FACILITY_KEYS,
+  RESTAURANT_AMENITY_EVIDENCE,
+  RESTAURANT_VENUE,
+  type AmenityEvidenceMap,
+} from './spot-restaurant-amenities';
 import { SPOT_VERIFICATION } from './spot-verification-data';
 import { SPOT_SEASON, type SpotSeasonWindow } from './spot-season';
 import { getSpotParking, type SpotParking } from './spot-parking';
@@ -210,6 +216,34 @@ export type Spot = {
   kidsMenu?: boolean;        // キッズメニューあり
   privateRoom?: boolean;     // 個室あり
   babyFood?: boolean;        // 離乳食持ち込みOK / 提供あり
+  /** 座敷・小上がりあり（privateRoom＝個室とは別）。公式に記載があるときだけ true にする */
+  zashiki?: boolean;
+  /**
+   * 営業時間・定休日（公式の記載どおりの短い文。例: '月〜土 10:00〜17:00（LO 16:30）・日祝定休'）。
+   * スポットページの「基本情報」に、値があるときだけ出す。
+   */
+  businessHours?: string;
+  /**
+   * 喫煙の扱い（公式に記載があるときだけ）。'no-smoking'=全席禁煙 / 'separated'=分煙（喫煙室・喫煙席あり）/ 'allowed'=喫煙可。
+   * 「基本情報」に値があるときだけ出す。
+   */
+  smoking?: 'no-smoking' | 'separated' | 'allowed';
+  /**
+   * その店自身の予約ページURL（公式の予約フォーム・LINE予約・ホットペッパー等の**その店の個別ページ**）。
+   * restaurant のスポットページは、これがあるときだけ予約導線を出す（無ければ出さない）。
+   * 一般の検索結果・特集一覧（他店が並ぶページ）のURLは入れない。
+   */
+  reservationUrl?: string;
+  /**
+   * restaurant の種別（lib/spot-restaurant-amenities.ts の RESTAURANT_VENUE から name 一致でマージ）。
+   * shop=個別店 / chain=チェーン総称 / complex=商業施設・飲食店の集まり。complex はテナント単位の設備を表示しない。
+   */
+  venueType?: 'shop' | 'chain' | 'complex';
+  /**
+   * restaurant の設備ごとの出典（公式サイト・公式SNS・店からの回答・公式裏取り台帳）。
+   * restaurant のページは、出典がある設備だけを表示する（lib/spot-restaurant-amenities.ts の gateRestaurantAmenities）。
+   */
+  amenityEvidence?: import('./spot-restaurant-amenities').AmenityEvidenceMap;
   // ---- 夏季向けフラグ ----
   /** 水遊び可（じゃぶじゃぶ池/噴水/プール/水族館タッチプール等） */
   waterPlay?: boolean;
@@ -4344,6 +4378,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     note: '東京駅丸の内側直結、ベビーカー入店OK・個室あり・禁煙',
     pricing: { adult: 'アフタヌーンティー6,000円〜', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, privateRoom: true,
+    reservationUrl: 'https://www.tablecheck.com/ja/shops/lobbylounge/reserve',
     hiddenTip: '東京駅地下から雨に濡れずアクセス、滞在1.5〜2時間。新幹線待ちにも',
     popular: true,
       summerCool: true,
@@ -4989,6 +5024,26 @@ for (const { spot, slug } of allSpotsForMerge()) {
     }
     if (!spot.facilities && SPOT_FACILITIES[spot.name]) {
       spot.facilities = SPOT_FACILITIES[spot.name];
+    }
+    // restaurant: 公式裏取り台帳（SPOT_FACILITIES）と値が一致する設備は、その設備の出典として記録する（2026-10-27）。
+    // インラインの facilities でも、台帳に同じ値があれば台帳が出典になる。台帳に無い・値が違うものは出典なし扱い。
+    if (spot.category === 'restaurant' && spot.facilities && SPOT_FACILITIES[spot.name]) {
+      const reg = SPOT_FACILITIES[spot.name];
+      const ev: AmenityEvidenceMap = { ...(spot.amenityEvidence ?? {}) };
+      const ver = SPOT_VERIFICATION[spot.name];
+      const checkedAt = ver?.method === 'official' ? ver.verifiedAt : undefined;
+      for (const k of FACILITY_KEYS) {
+        if (spot.facilities[k] !== undefined && spot.facilities[k] === reg[k] && !ev[k]) {
+          ev[k] = { kind: 'official-registry', ref: 'lib/spot-facilities.ts', checkedAt, value: reg[k] };
+        }
+      }
+      spot.amenityEvidence = ev;
+    }
+    // restaurant の種別と設備ごとの出典（lib/spot-restaurant-amenities.ts）。上書き前の name で引いて焼き付ける。
+    if (spot.category === 'restaurant') {
+      if (!spot.venueType && RESTAURANT_VENUE[spot.name]) spot.venueType = RESTAURANT_VENUE[spot.name].type;
+      const own = RESTAURANT_AMENITY_EVIDENCE[spot.name];
+      if (own) spot.amenityEvidence = { ...(spot.amenityEvidence ?? {}), ...own };
     }
     // 最終確認記録（SPOT_VERIFICATION）のマージ。overrides で表示名を変えても
     // 鮮度判定が外れないよう、上書き前の name で引いてスポットに焼き付ける。
