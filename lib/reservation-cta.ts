@@ -493,6 +493,53 @@ const ASOVIEW_CATEGORIES = new Set([
   'indoor',
 ]);
 
+/**
+ * restaurant のスポットページ向け: **その店自身の予約ページ**への導線（2026-10-27）。
+ *
+ * 旧実装はスポットページでも getSpotReservationOffer('restaurant') を使い、
+ * 「このお店をネット予約」の見出しでホットペッパーの子連れ特集一覧（他店が並ぶページ）へ送っていた。
+ * 無料掲載した店のページで他店の予約に誘導することになるため、スポットページでは
+ * spot.reservationUrl（その店の個別ページ）があるときだけ導線を出し、無ければ出さない。
+ *
+ * - ホットペッパーの店舗ページ（/strJ…/）で VC の MyLink があれば、計測付きの深リンクを
+ *   ReservationCTA（PR・sponsored・affiliate_click）で出す → { kind: 'affiliate' }。
+ * - それ以外（公式の予約フォーム・LINE等、または VC 未設定）はアフィリでない通常リンク → { kind: 'direct' }。
+ * - ホットペッパーの店舗ページ以外（特集・検索結果の一覧）は他店が並ぶので出さない → null。
+ */
+export type SpotOwnReservation =
+  | { kind: 'affiliate'; offer: ReservationOffer }
+  | { kind: 'direct'; href: string };
+
+export function getSpotOwnReservation(reservationUrl: string | undefined): SpotOwnReservation | null {
+  if (!isValidUrl(reservationUrl)) return null;
+  const url = reservationUrl.trim();
+  let parsed: URL;
+  try {
+    parsed = new URL(url);
+  } catch {
+    return null;
+  }
+  if (/(^|\.)hotpepper\.jp$/i.test(parsed.hostname)) {
+    // 店舗の個別ページ（https://www.hotpepper.jp/strJ001234567/ 等）だけを許す。
+    if (!/^\/strJ\d+\//.test(parsed.pathname)) return null;
+    const { href, affiliate } = hotpepperShopHref(url);
+    if (affiliate) {
+      return {
+        kind: 'affiliate',
+        offer: {
+          href,
+          heading: 'このお店をネット予約',
+          note: 'ホットペッパーグルメのこのお店のページで、空席と予約の条件を確認できます。',
+          cta: 'ホットペッパーでこのお店を予約 →',
+          itemId: 'hotpepper-reservation-spot',
+        },
+      };
+    }
+    return { kind: 'direct', href: url };
+  }
+  return { kind: 'direct', href: url };
+}
+
 export function getSpotReservationOffer(category: string): ReservationOffer | null {
   if (category === 'restaurant') {
     const base = process.env.NEXT_PUBLIC_VC_HOTPEPPER_URL?.trim();

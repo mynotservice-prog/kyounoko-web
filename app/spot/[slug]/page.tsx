@@ -47,7 +47,7 @@ import { V2SaveButton, V2SdHeroFav } from '@/components/v2/V2SaveButton';
 import { getRecommendedItems } from '@/lib/recommended-items';
 import { getRakutenProduct, keywordFromRakutenSearchUrl, priceBandLabel } from '@/lib/rakuten-products';
 import { wrapMoshimoRakuten } from '@/lib/moshimo';
-import { getSpotReservationOffer, getSpotTravelOffer } from '@/lib/reservation-cta';
+import { getSpotOwnReservation, getSpotReservationOffer, getSpotTravelOffer } from '@/lib/reservation-cta';
 import { ReservationCTA } from '@/components/article/ReservationCTA';
 import { ShareBar } from '@/components/article/ShareBar';
 import { getUpcomingEventsNear } from '@/lib/events';
@@ -196,6 +196,32 @@ const FACILITY_DEF: Array<{ key: keyof NonNullable<Spot['facilities']>; label: s
   { key: 'kidsSpace', label: 'キッズスペース', icon: 'kids-space' },
 ];
 
+/**
+ * restaurant 専用の子連れ設備（2026-10-27）。Spot 直下の boolean フラグで、JSON-LD の amenityFeature
+ * には以前から出ていたのにページに表示されていなかったもの。**true のときだけ**出す
+ * （false・未指定は出さない＝「なし」と推測で書かない）。文言は JSON-LD の name に合わせる。
+ */
+const RESTAURANT_FEATURE_DEF: Array<{
+  key: 'kidsMenu' | 'babyChair' | 'babyFood' | 'strollerAccess' | 'privateRoom' | 'zashiki';
+  label: string;
+  icon: KkIconName;
+  /** 'あり' 以外の短い表示にするとき */
+  text?: string;
+}> = [
+  { key: 'kidsMenu', label: 'キッズメニュー', icon: 'kids-menu' },
+  { key: 'babyChair', label: 'ベビーチェア', icon: 'baby-chair' },
+  { key: 'babyFood', label: '離乳食', icon: 'babyfood', text: 'OK' },
+  { key: 'strollerAccess', label: 'ベビーカー入店', icon: 'stroller', text: 'OK' },
+  { key: 'privateRoom', label: '個室', icon: 'home' },
+  { key: 'zashiki', label: '座敷・小上がり', icon: 'rest-space' },
+];
+
+const SMOKING_LABEL: Record<NonNullable<Spot['smoking']>, string> = {
+  'no-smoking': '全席禁煙',
+  separated: '分煙（喫煙スペースあり）',
+  allowed: '喫煙可',
+};
+
 export default async function SpotPage({ params }: Props) {
   const { slug } = await params;
   const ovMap = await getRuntimeSpotOverrides();
@@ -206,7 +232,16 @@ export default async function SpotPage({ params }: Props) {
   const location = spot.ward ?? spot.city ?? '';
 
   // スポット種別に応じたネット予約/チケットCTA（VC）。env 未設定なら null（非表示）。
-  const reservationOffer = getSpotReservationOffer(spot.category);
+  // restaurant は「その店自身の予約ページ」（spot.reservationUrl）があるときだけ出す。
+  // 一般の特集・検索結果（他店が並ぶ一覧）へは送らない（2026-10-27）。
+  const ownReservation = spot.category === 'restaurant' ? getSpotOwnReservation(spot.reservationUrl) : null;
+  const reservationOffer =
+    spot.category === 'restaurant'
+      ? ownReservation?.kind === 'affiliate'
+        ? ownReservation.offer
+        : null
+      : getSpotReservationOffer(spot.category);
+  const directReservationHref = ownReservation?.kind === 'direct' ? ownReservation.href : null;
 
   // レジャースポット向け子連れ宿予約CTA（じゃらん/A8・park/restaurant除く）。env 未設定なら null。
   const travelOffer = getSpotTravelOffer(spot.category);
@@ -390,12 +425,28 @@ export default async function SpotPage({ params }: Props) {
 
   // ---- リニューアル2026-09: 表示用の派生データ（すべて既存データからのみ作る。捏造しない）----
   // 設備: 表示条件は従来どおり 'yes' が1つ以上あるとき。'yes'=あり / 'no'=なし / 未指定=出さない。
-  const showFacilities = !!spot.facilities && FACILITY_DEF.some((f) => spot.facilities![f.key] === 'yes');
+  // restaurant は Spot 直下のフラグ（キッズメニュー等）も、true のものだけ足す（施設側は従来と同じ）。
+  const restaurantFeatureItems: KkFacilityItem[] =
+    spot.category === 'restaurant'
+      ? RESTAURANT_FEATURE_DEF.flatMap((f) =>
+          spot[f.key] === true
+            ? [f.text ? { icon: f.icon, label: f.label, status: 'text' as const, text: f.text } : { icon: f.icon, label: f.label, status: 'yes' as const }]
+            : [],
+        )
+      : [];
+  const showFacilities =
+    (!!spot.facilities && FACILITY_DEF.some((f) => spot.facilities![f.key] === 'yes')) ||
+    restaurantFeatureItems.length > 0;
   const facilityItems: KkFacilityItem[] = showFacilities
-    ? FACILITY_DEF.flatMap((f) => {
-        const v = spot.facilities![f.key];
-        return v === 'yes' || v === 'no' ? [{ icon: f.icon, label: f.label, status: v }] : [];
-      })
+    ? [
+        ...(spot.facilities
+          ? FACILITY_DEF.flatMap((f): KkFacilityItem[] => {
+              const v = spot.facilities![f.key];
+              return v === 'yes' || v === 'no' ? [{ icon: f.icon, label: f.label, status: v }] : [];
+            })
+          : []),
+        ...restaurantFeatureItems,
+      ]
     : [];
   const stationWalkLabel = nearestStationName
     ? `${nearestStationName}${spot.walkMinutes ? ` 徒歩${spot.walkMinutes}分` : ''}`
@@ -420,6 +471,9 @@ export default async function SpotPage({ params }: Props) {
   const infoRows: KkInfoRow[] = [
     { icon: 'age', label: '対象年齢', value: spot.agesLabel ?? spot.ages.map((a) => AGE_LABEL[a]).join('・') },
     { icon: 'yen', label: '料金の目安', value: budgetLabel },
+    // 営業時間・喫煙は値があるときだけ（2026-10-27 追加。既存データには無い＝既存ページは不変）
+    ...(spot.businessHours ? [{ icon: 'clock' as const, label: '営業時間', value: spot.businessHours }] : []),
+    ...(spot.smoking ? [{ icon: 'smoking' as const, label: '喫煙', value: SMOKING_LABEL[spot.smoking] }] : []),
     { icon: 'home', label: '屋内/屋外', value: placeLabel },
     { icon: 'umbrella', label: '雨の日', value: rainLabel },
     ...(stationWalkLabel ? [{ icon: 'train' as const, label: '最寄り駅', value: stationWalkLabel }] : []),
@@ -672,6 +726,24 @@ export default async function SpotPage({ params }: Props) {
         {reservationOffer && (
           <div className="v2-section" style={{ marginTop: 18 }}>
             <ReservationCTA offer={reservationOffer} />
+          </div>
+        )}
+
+        {/* restaurant: その店自身の予約ページ（アフィリでない通常リンク）。spot.reservationUrl があるときだけ */}
+        {directReservationHref && (
+          <div className="v2-section" style={{ marginTop: 18 }}>
+            <a
+              href={directReservationHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="kk-btn outline block sv3-official"
+            >
+              <KkIcon name="calendar" size={16} sw={1.8} />
+              このお店の予約ページを開く
+              <span className="sv3-official-arrow">
+                <KkIcon name="chevron-right" size={15} sw={2} />
+              </span>
+            </a>
           </div>
         )}
 

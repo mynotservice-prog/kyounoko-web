@@ -210,6 +210,24 @@ export type Spot = {
   kidsMenu?: boolean;        // キッズメニューあり
   privateRoom?: boolean;     // 個室あり
   babyFood?: boolean;        // 離乳食持ち込みOK / 提供あり
+  /** 座敷・小上がりあり（privateRoom＝個室とは別）。公式に記載があるときだけ true にする */
+  zashiki?: boolean;
+  /**
+   * 営業時間・定休日（公式の記載どおりの短い文。例: '月〜土 10:00〜17:00（LO 16:30）・日祝定休'）。
+   * スポットページの「基本情報」に、値があるときだけ出す。
+   */
+  businessHours?: string;
+  /**
+   * 喫煙の扱い（公式に記載があるときだけ）。'no-smoking'=全席禁煙 / 'separated'=分煙（喫煙室・喫煙席あり）/ 'allowed'=喫煙可。
+   * 「基本情報」に値があるときだけ出す。
+   */
+  smoking?: 'no-smoking' | 'separated' | 'allowed';
+  /**
+   * その店自身の予約ページURL（公式の予約フォーム・LINE予約・ホットペッパー等の**その店の個別ページ**）。
+   * restaurant のスポットページは、これがあるときだけ予約導線を出す（無ければ出さない）。
+   * 一般の検索結果・特集一覧（他店が並ぶページ）のURLは入れない。
+   */
+  reservationUrl?: string;
   // ---- 夏季向けフラグ ----
   /** 水遊び可（じゃぶじゃぶ池/噴水/プール/水族館タッチプール等） */
   waterPlay?: boolean;
