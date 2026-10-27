@@ -4378,6 +4378,7 @@ export const TOKYO_RESTAURANTS: Spot[] = [
     note: '東京駅丸の内側直結、ベビーカー入店OK・個室あり・禁煙',
     pricing: { adult: 'アフタヌーンティー6,000円〜', elementary: '取り分け可', preschool: '取り分け可' },
     strollerAccess: true, babyChair: true, privateRoom: true,
+    reservationUrl: 'https://www.tablecheck.com/ja/shops/lobbylounge/reserve',
     hiddenTip: '東京駅地下から雨に濡れずアクセス、滞在1.5〜2時間。新幹線待ちにも',
     popular: true,
       summerCool: true,

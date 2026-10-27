@@ -59,7 +59,10 @@ export type AmenityEvidenceMap = Partial<Record<AmenityKey, AmenityEvidence>>;
 export function isValidEvidence(e: AmenityEvidence | undefined): e is AmenityEvidence {
   if (!e) return false;
   if (e.kind === 'official-site' || e.kind === 'official-sns') return !!e.url && /^https?:\/\//.test(e.url);
-  if (e.kind === 'owner-reply' || e.kind === 'official-registry') return !!e.ref;
+  if (e.kind === 'owner-reply') return !!e.ref;
+  // 台帳は「確認方法（公式で裏取り）と確認日」が記録されている場合に限り出典とする（2026-10-27 社長決定）。
+  // checkedAt は spots.ts で SPOT_VERIFICATION の method === 'official' のときだけ入る。
+  if (e.kind === 'official-registry') return !!e.ref && !!e.checkedAt && /^\d{4}-\d{2}-\d{2}$/.test(e.checkedAt);
   return false;
 }
 
