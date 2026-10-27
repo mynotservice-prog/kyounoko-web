@@ -14,13 +14,14 @@
  *   - キーは lib/spots.ts の name と完全一致
  *   - 期間中はおすすめ枠から除外し、スポットページに休館バナーを出す
  *   - 期間が明けたらデータを触らなくても自動で通常表示に戻る
+ *   - 公式が「再開未定」なら to を書かない（推測の再開日を入れない）。外すときは手で消す
  */
 
 export type TempClosure = {
   /** 休館開始日（YYYY-MM-DD、この日を含む） */
   from: string;
-  /** 休館終了日（YYYY-MM-DD、この日を含む） */
-  to: string;
+  /** 休館終了日（YYYY-MM-DD、この日を含む）。再開未定なら省略 */
+  to?: string;
   /** 表示する説明文 */
   note: string;
   /** 出典（公式サイト） */
@@ -34,6 +35,12 @@ export const SPOT_TEMP_CLOSED: Record<string, TempClosure> = {
     note: '施設整備のため全館休館します（2026年10月1日〜2027年4月22日）。再開日は公式サイトでご確認ください。',
     source: 'https://www.miraikan.jst.go.jp/',
   },
+  // 熊本県八代市（lib/spots-extra/batch-8.ts）。公式は「閉店」でなく「休業中」の表記。
+  'キッズユーエスランド 熊本八代店': {
+    from: '2026-07-28',
+    note: '運営元の公式サイトに「2026年7月28日から休業中・営業再開は未定」と掲載されています（2026年10月27日確認）。',
+    source: 'https://kidslandus.com/shop/kumamoto-yatsushiro/',
+  },
 };
 
 function todayString(): string {
@@ -46,7 +53,7 @@ export function getTempClosure(spotName: string, on?: string): TempClosure | nul
   const c = SPOT_TEMP_CLOSED[spotName];
   if (!c) return null;
   const d = on ?? todayString();
-  return c.from <= d && d <= c.to ? c : null;
+  return c.from <= d && (!c.to || d <= c.to) ? c : null;
 }
 
 /** おすすめ枠に出してよいか（休館中なら false）。 */
