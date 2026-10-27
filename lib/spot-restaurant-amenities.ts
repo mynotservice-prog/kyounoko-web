@@ -46,6 +46,11 @@ export type AmenityEvidence = {
   quote?: string;
   /** 設備グリッドの表示文言を「あり」「OK」から差し替える（条件つきのとき。例: '席に余裕があれば可'） */
   displayText?: string;
+  /**
+   * 出典が裏づける facilities の値（'yes' / 'no'）。指定があると、表示時の値（KV の上書き後）が
+   * これと一致するときだけ出典として扱う（管理画面で値が変わったのに古い出典が付いたままになるのを防ぐ）。
+   */
+  value?: 'yes' | 'no';
 };
 
 export type AmenityEvidenceMap = Partial<Record<AmenityKey, AmenityEvidence>>;
@@ -309,7 +314,8 @@ export function gateRestaurantAmenities(spot: Spot): Spot {
     const f = { ...spot.facilities };
     for (const k of FACILITY_KEYS) {
       if (f[k] === undefined) continue;
-      if (!isValidEvidence(ev[k])) delete f[k];
+      const e = ev[k];
+      if (!isValidEvidence(e) || (e.value !== undefined && e.value !== f[k])) delete f[k];
     }
     out.facilities = f;
   }

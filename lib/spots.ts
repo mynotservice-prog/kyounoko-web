@@ -5033,7 +5033,7 @@ for (const { spot, slug } of allSpotsForMerge()) {
       const checkedAt = ver?.method === 'official' ? ver.verifiedAt : undefined;
       for (const k of FACILITY_KEYS) {
         if (spot.facilities[k] !== undefined && spot.facilities[k] === reg[k] && !ev[k]) {
-          ev[k] = { kind: 'official-registry', ref: 'lib/spot-facilities.ts', checkedAt };
+          ev[k] = { kind: 'official-registry', ref: 'lib/spot-facilities.ts', checkedAt, value: reg[k] };
         }
       }
       spot.amenityEvidence = ev;
