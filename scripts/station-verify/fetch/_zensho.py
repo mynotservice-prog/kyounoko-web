@@ -17,7 +17,8 @@ def _search(base, addr, ns):
     ck = (h.get('set-cookie') or '').split(';')[0]
     d = json.loads(body)
     m = re.search(r'検索結果：<strong>(\d+)</strong>', d['list'])
-    if m and int(m.group(1)) > 50:
+    # 全国（条件なし）は件数を見るだけ。すき家は全国が1,700店を超え、morelist で500が返る（2026-10-28）
+    if m and int(m.group(1)) > 50 and addr:
         assert ck, 'セッションcookieが取れない'
         body = http(base + '/jp/api/search', data='morelist=1700', headers=dict(H, Cookie=ck), key=key, ns=ns)
         return json.loads(body)

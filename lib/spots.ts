@@ -635,7 +635,7 @@ export const SPOTS: Partial<Record<AreaSlug, Spot[]>> = {
       hiddenTip: '菓子屋横丁の駄菓子・芋スイーツが安く、子どもが喜ぶ。蔵造りの街並み散策',
     },
     {
-      name: '所沢航空発祥記念館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '所沢市', note: '【長期休館中】大規模リニューアル工事のため2025年9月1日〜2027年3月末（予定）まで休館・記念館駐車場も閉鎖（2026-10-02 公式で確認）。航空公園駅前、実機展示と大型映像', budget: 'low',
+      name: '所沢航空発祥記念館', category: 'museum', place: 'indoor', ages: ['2-3', '4-6'], city: '所沢市', note: '【長期休館中】大規模改修工事のため2025年9月1日から休館・2027年5月1日リニューアルオープン予定（2026-10-28 公式で確認）。航空公園駅前、実機展示と大型映像', budget: 'low',
       pricing: { adult: '520円', elementary: '100円', preschool: '無料（未就学児）', infant: '無料' },
       reservation: 'none',
       crowdLevel: { weekday: 'low', holiday: 'mid' },

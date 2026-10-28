@@ -174,7 +174,7 @@ export const SPOT_FACILITIES: Record<string, Facilities> = {
 
   // 関東（その他）
   '鉄道博物館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式FAQに多目的トイレ、キッズプラザ・車両ステーション等のおむつ替え台、授乳室、屋内キッズプラザ、ベビーカー貸出「ベビカル」の記載。' },
-  '所沢航空発祥記念館': { bathroom: 'yes', diaperChange: 'yes', strollerRental: 'yes', note: '公式バリアフリー情報に1階ロビーの多目的トイレ（オストメイト対応）、全トイレ・展示館女子トイレのオムツ交換台、貸出用ベビーカーの記載。※2025年9月〜2027年3月末予定で大規模改修のため長期休館中。' },
+  '所沢航空発祥記念館': { bathroom: 'yes', diaperChange: 'yes', strollerRental: 'yes', note: '公式バリアフリー情報に1階ロビーの多目的トイレ（オストメイト対応）、全トイレ・展示館女子トイレのオムツ交換台、貸出用ベビーカーの記載。※大規模改修のため2025年9月から休館中（2027年5月1日リニューアルオープン予定）。' },
   '航空科学博物館': { nursingRoom: 'yes', note: '公式「展示物・館内のご案内」に明るい雰囲気の授乳室を設置との記載。' },
   'アクアワールド茨城県大洗水族館': { bathroom: 'yes', diaperChange: 'yes', nursingRoom: 'yes', kidsSpace: 'yes', strollerRental: 'yes', note: '公式バリアフリー/キッズサービスに多目的トイレ6か所、おむつ交換台、3階の授乳室＋個室ベビーケアルームmamaro、5階キッズランド、ベビーカー無料貸出13台の記載。' },
   'とちのきファミリーランド': { diaperChange: 'yes', nursingRoom: 'yes', strollerRental: 'yes', note: '公式FAQに正面入口トイレ内のおむつ換え台、案内所裏の赤ちゃんルーム（授乳可）、案内所でのベビーカー無料貸出（B型10台）の記載。' },

@@ -79,7 +79,8 @@ def long_closed(txt,today):
     return False
 def excluded_reason(chain,name,note,addr,today):
     txt=(name or '')+' '+(note or '')+' '+(addr or '')
-    if EXCL.search(txt): return '業態・営業状態'
+    # ミスタードーナツの「10月28日は休店中」は取得した日だけの表示（短い休業）なので外す理由にしない（2026-10-28）
+    if EXCL.search(re.sub(r'\d{1,2}月\d{1,2}日は休店中','',txt)): return '業態・営業状態'
     if long_closed((name or '')+' '+(note or ''),today): return '長期休業中'
     g=GATE_STATUS.get(chain+'|'+(name or ''))
     if g:
